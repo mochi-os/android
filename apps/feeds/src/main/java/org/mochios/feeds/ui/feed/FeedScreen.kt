@@ -71,6 +71,8 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Button
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -78,6 +80,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -101,6 +104,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -852,9 +856,12 @@ fun FeedScreen(
         val suggestedInterests by viewModel.suggestedInterests.collectAsState()
         if (suggestedInterests.isNotEmpty() && !suggestionsDismissed) {
             InterestSuggestionsDialog(
+                feedName = feedInfo?.name.orEmpty(),
                 suggestions = suggestedInterests,
-                onAdd = { viewModel.addInterest(it) },
-                onDismissOne = { viewModel.dismissInterest(it) },
+                onAdd = { selected ->
+                    viewModel.addInterests(selected)
+                    suggestionsDismissed = true
+                },
                 onDismiss = { suggestionsDismissed = true },
             )
         }
@@ -1461,51 +1468,86 @@ private fun PostActionBar(
 }
 
 
+/**
+ * Post-subscribe prompt offering the feed's topics as interests. Every topic
+ * starts selected; the viewer unchecks any they don't want, then "Add N
+ * interests" commits the selection in one pass or "Skip" dismisses the prompt.
+ */
 @Composable
 private fun InterestSuggestionsDialog(
+    feedName: String,
     suggestions: List<InterestSuggestion>,
-    onAdd: (InterestSuggestion) -> Unit,
-    onDismissOne: (InterestSuggestion) -> Unit,
+    onAdd: (List<InterestSuggestion>) -> Unit,
     onDismiss: () -> Unit,
 ) {
+    // qid -> selected. Seeded to all-on so the common "take everything" path is
+    // a single tap; the map is keyed by qid so it survives recomposition.
+    val selected = remember(suggestions) {
+        mutableStateMapOf<String, Boolean>().apply {
+            suggestions.forEach { put(it.qid, true) }
+        }
+    }
+    val selectedCount = selected.count { it.value }
+
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_suggested_interests)) },
+        title = {
+            Text(
+                if (feedName.isNotEmpty()) {
+                    stringResource(R.string.feeds_suggested_interests_title, feedName)
+                } else {
+                    stringResource(R.string.feeds_suggested_interests)
+                }
+            )
+        },
         text = {
             if (suggestions.isEmpty()) {
                 Text(stringResource(R.string.feeds_suggested_interests_empty))
             } else {
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(300.dp),
-                    verticalArrangement = Arrangement.spacedBy(4.dp),
-                ) {
-                    items(suggestions, key = { it.qid }) { s ->
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 4.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            Column(modifier = Modifier.weight(1f)) {
-                                Text(s.label, style = MaterialTheme.typography.bodyMedium)
+                Column {
+                    Text(
+                        stringResource(R.string.feeds_suggested_interests_subtitle),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                    LazyColumn(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(max = 300.dp),
+                    ) {
+                        items(suggestions, key = { it.qid }) { s ->
+                            val checked = selected[s.qid] ?: false
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .clickable { selected[s.qid] = !checked }
+                                    .padding(vertical = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Checkbox(
+                                    checked = checked,
+                                    onCheckedChange = { selected[s.qid] = it },
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text(
+                                    s.label,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    modifier = Modifier.weight(1f),
+                                )
                                 if (s.count > 0) {
+                                    Spacer(modifier = Modifier.width(8.dp))
                                     Text(
-                                        stringResource(
-                                            R.string.feeds_suggested_interests_count,
-                                            s.count
+                                        pluralStringResource(
+                                            R.plurals.feeds_suggested_interests_post_count,
+                                            s.count,
+                                            s.count,
                                         ),
-                                        style = MaterialTheme.typography.labelSmall,
+                                        style = MaterialTheme.typography.bodyMedium,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                 }
-                            }
-                            TextButton(onClick = { onAdd(s) }) {
-                                Text(stringResource(R.string.feeds_suggested_interests_add))
-                            }
-                            TextButton(onClick = { onDismissOne(s) }) {
-                                Text(stringResource(R.string.feeds_suggested_interests_dismiss))
                             }
                         }
                     }
@@ -1513,8 +1555,22 @@ private fun InterestSuggestionsDialog(
             }
         },
         confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_close))
+            Button(
+                onClick = { onAdd(suggestions.filter { selected[it.qid] == true }) },
+                enabled = selectedCount > 0,
+            ) {
+                Text(
+                    pluralStringResource(
+                        R.plurals.feeds_suggested_interests_add_count,
+                        selectedCount,
+                        selectedCount,
+                    )
+                )
+            }
+        },
+        dismissButton = {
+            OutlinedButton(onClick = onDismiss) {
+                Text(stringResource(R.string.feeds_suggested_interests_skip))
             }
         },
     )

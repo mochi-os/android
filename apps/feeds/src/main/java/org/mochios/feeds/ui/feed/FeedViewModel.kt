@@ -889,6 +889,24 @@ class FeedViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Adds every selected suggestion in one pass (the prompt's "Add N interests"
+     * action) and clears the suggestion list so the dialog dismisses.
+     */
+    fun addInterests(suggestions: List<InterestSuggestion>) {
+        if (suggestions.isEmpty()) return
+        viewModelScope.launch {
+            suggestions.forEach { suggestion ->
+                try {
+                    repository.adjustInterest(feedId, qid = suggestion.qid, label = null, direction = "up")
+                } catch (_: Exception) {
+                    // Silent — user can retry from feed settings
+                }
+            }
+            _suggestedInterests.value = emptyList()
+        }
+    }
+
     fun dismissInterest(suggestion: InterestSuggestion) {
         _suggestedInterests.value = _suggestedInterests.value - suggestion
     }
