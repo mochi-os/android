@@ -306,7 +306,7 @@ private fun FeedDiscoveryCard(
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
-                feed.server?.let { server ->
+                (feed.server ?: feed.location)?.let { server ->
                     if (server.isNotEmpty()) {
                         Text(
                             text = server,

@@ -139,7 +139,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun searchDirectory(query: String): List<Feed> {
         return try {
-            api.searchDirectory(query).unwrap().feeds
+            api.searchDirectory(query).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

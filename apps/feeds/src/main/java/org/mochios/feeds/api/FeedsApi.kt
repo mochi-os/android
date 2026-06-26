@@ -72,10 +72,6 @@ data class SuccessResponse(
     val success: Boolean = false
 )
 
-data class DirectorySearchResponse(
-    val feeds: List<Feed> = emptyList()
-)
-
 data class RecommendationsResponse(
     val feeds: List<Feed> = emptyList()
 )
@@ -165,10 +161,11 @@ interface FeedsApi {
         @Field("memories") memories: Boolean
     ): Response<ApiResponse<FeedCreateResponse>>
 
+    // directory/search returns a bare array of feeds in `data`, not a {feeds:[...]} object.
     @GET("-/directory/search")
     suspend fun searchDirectory(
         @Query("search") query: String
-    ): Response<ApiResponse<DirectorySearchResponse>>
+    ): Response<ApiResponse<List<Feed>>>
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<RecommendationsResponse>>
