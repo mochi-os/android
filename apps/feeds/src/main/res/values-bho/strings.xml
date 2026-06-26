@@ -16,8 +16,6 @@
     <string name="feeds_settings">सेटिंग सब</string>
     <string name="feeds_no_posts_yet">अबहीं तक कौनो पोस्ट नइखे</string>
     <string name="feeds_default_sort">डिफ़ॉल्ट छंटाई</string>
-    <string name="feeds_suggested_interests_add">जोड़ीं</string>
-    <string name="feeds_suggested_interests_dismiss">छिपाईं</string>
     <string name="feeds_unread">अनपढ़ल</string>
     <string name="feeds_filter_all">सब</string>
     <string name="feeds_sort_label">क्रमबद्ध करीं</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">सर्वर: %1$s</string>
     <string name="feeds_suggested_interests">सुझावल रुचि</string>
     <string name="feeds_suggested_interests_empty">अबही ले कवनो सुझाव नइखे</string>
-    <string name="feeds_suggested_interests_count">%1$d पोस्ट</string>
+    <string name="feeds_suggested_interests_title">%1$s से रुचि जोड़ल जाव?</string>
+    <string name="feeds_suggested_interests_subtitle">ई फीड इ विषयन के समेटेला। निजीकृत रैंकिंग खातिर आपन रुचि में कवन सब जोड़ल चाहत बानी ओकरा के चुनीं।</string>
+    <string name="feeds_suggested_interests_skip">छोड़ीं</string>
     <string name="feeds_tag_more">रुचि सेट करीं</string>
     <string name="feeds_tag_more_up">एकरा जइसन अउर देखाईं</string>
     <string name="feeds_tag_more_down">एकरा जइसन कम देखाईं</string>

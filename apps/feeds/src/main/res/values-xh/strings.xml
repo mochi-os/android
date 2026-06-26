@@ -16,8 +16,6 @@
     <string name="feeds_settings">Iisetingi</string>
     <string name="feeds_no_posts_yet">Akukho miyalezo okwangoku</string>
     <string name="feeds_default_sort">Ukuhlela koqobo</string>
-    <string name="feeds_suggested_interests_add">Yongeza</string>
-    <string name="feeds_suggested_interests_dismiss">Fihla</string>
     <string name="feeds_unread">Engafundwanga</string>
     <string name="feeds_filter_all">Konke</string>
     <string name="feeds_sort_label">Hlela</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Iseva: %1$s</string>
     <string name="feeds_suggested_interests">Izinto ezicetyiswayo</string>
     <string name="feeds_suggested_interests_empty">Akukabikho zicebiso</string>
-    <string name="feeds_suggested_interests_count">%1$d iiposti</string>
+    <string name="feeds_suggested_interests_title">Yongeza umdla osuka ku-%1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Le feed iquka ezi zihloko. Khetha ezo ufuna ukuzongeza kwimidla yakho ukuze ufumane ulungelelaniso lobuqu.</string>
+    <string name="feeds_suggested_interests_skip">Tsiba</string>
     <string name="feeds_tag_more">Lungelelanisa umdla</string>
     <string name="feeds_tag_more_up">Bonisa ezininzi ezinjengale</string>
     <string name="feeds_tag_more_down">Bonisa ezimbalwa ezinjengale</string>

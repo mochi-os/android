@@ -16,8 +16,6 @@
     <string name="feeds_settings">الإعدادات</string>
     <string name="feeds_no_posts_yet">لا توجد منشورات بعد</string>
     <string name="feeds_default_sort">الترتيب الافتراضي</string>
-    <string name="feeds_suggested_interests_add">إضافة</string>
-    <string name="feeds_suggested_interests_dismiss">إخفاء</string>
     <string name="feeds_unread">غير مقروء</string>
     <string name="feeds_filter_all">الكل</string>
     <string name="feeds_sort_label">ترتيب</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">الخادم: %1$s</string>
     <string name="feeds_suggested_interests">اهتمامات مقترحة</string>
     <string name="feeds_suggested_interests_empty">لا توجد اقتراحات بعد</string>
-    <string name="feeds_suggested_interests_count">%1$d منشور</string>
+    <string name="feeds_suggested_interests_title">إضافة اهتمامات من %1$s؟</string>
+    <string name="feeds_suggested_interests_subtitle">تتناول هذه التغذية هذه المواضيع. اختر أيها تريد إضافته إلى اهتماماتك للحصول على ترتيب مخصص.</string>
+    <string name="feeds_suggested_interests_skip">تخطّي</string>
     <string name="feeds_tag_more">ضبط الاهتمام</string>
     <string name="feeds_tag_more_up">أظهر المزيد مثل هذا</string>
     <string name="feeds_tag_more_down">أظهر أقل مثل هذا</string>

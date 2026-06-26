@@ -16,8 +16,6 @@
     <string name="feeds_settings">सेटिङहरू</string>
     <string name="feeds_no_posts_yet">अहिलेसम्म कुनै पोस्ट छैन</string>
     <string name="feeds_default_sort">पूर्वनिर्धारित क्रमबद्ध</string>
-    <string name="feeds_suggested_interests_add">थप्नुहोस्</string>
-    <string name="feeds_suggested_interests_dismiss">लुकाउनुहोस्</string>
     <string name="feeds_unread">नपढिएको</string>
     <string name="feeds_filter_all">सबै</string>
     <string name="feeds_sort_label">क्रमबद्ध गर्नुहोस्</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">सर्भर: %1$s</string>
     <string name="feeds_suggested_interests">सुझाव गरिएका रुचिहरू</string>
     <string name="feeds_suggested_interests_empty">अहिलेसम्म कुनै सुझाव छैन</string>
-    <string name="feeds_suggested_interests_count">%1$d पोस्टहरू</string>
+    <string name="feeds_suggested_interests_title">%1$s बाट रुचिहरू थप्ने?</string>
+    <string name="feeds_suggested_interests_subtitle">यो फिडले यी विषयहरू समेट्छ। व्यक्तिगत श्रेणीकरणका लागि आफ्ना रुचिहरूमा कुन-कुन थप्ने भनेर छनौट गर्नुहोस्।</string>
+    <string name="feeds_suggested_interests_skip">छाड्नुहोस्</string>
     <string name="feeds_tag_more">रुचि मिलाउनुहोस्</string>
     <string name="feeds_tag_more_up">यस्तै अरू देखाउनुहोस्</string>
     <string name="feeds_tag_more_down">यस्तै कम देखाउनुहोस्</string>

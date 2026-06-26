@@ -16,8 +16,6 @@
     <string name="feeds_settings">Stillingar</string>
     <string name="feeds_no_posts_yet">Engar færslur ennþá</string>
     <string name="feeds_default_sort">Sjálfgefin röðun</string>
-    <string name="feeds_suggested_interests_add">Bæta við</string>
-    <string name="feeds_suggested_interests_dismiss">Fela</string>
     <string name="feeds_unread">Ólesið</string>
     <string name="feeds_filter_all">Allt</string>
     <string name="feeds_sort_label">Raða</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Þjónn: %1$s</string>
     <string name="feeds_suggested_interests">Tillögð áhugamál</string>
     <string name="feeds_suggested_interests_empty">Engar tillögur enn</string>
-    <string name="feeds_suggested_interests_count">%1$d færslur</string>
+    <string name="feeds_suggested_interests_title">Bæta við áhugamálum frá %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Þessi straumur fjallar um þessi efni. Veldu hver þeirra á að bæta við áhugamálin þín fyrir sérsniðna röðun.</string>
+    <string name="feeds_suggested_interests_skip">Sleppa</string>
     <string name="feeds_tag_more">Stilla áhuga</string>
     <string name="feeds_tag_more_up">Sýna meira af svona</string>
     <string name="feeds_tag_more_down">Sýna minna af svona</string>

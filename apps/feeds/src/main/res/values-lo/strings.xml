@@ -16,8 +16,6 @@
     <string name="feeds_settings">ການຕັ້ງຄ່າ</string>
     <string name="feeds_no_posts_yet">ຍັງບໍ່ມີໂພສ</string>
     <string name="feeds_default_sort">ການຈັດລຽງເລີ່ມຕົ້ນ</string>
-    <string name="feeds_suggested_interests_add">ເພີ່ມ</string>
-    <string name="feeds_suggested_interests_dismiss">ເຊື່ອງ</string>
     <string name="feeds_unread">ຍັງບໍ່ໄດ້ອ່ານ</string>
     <string name="feeds_filter_all">ທັງໝົດ</string>
     <string name="feeds_sort_label">ຈັດລຽງ</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">ເຊີບເວີ: %1$s</string>
     <string name="feeds_suggested_interests">ຄວາມສົນໃຈທີ່ແນະນຳ</string>
     <string name="feeds_suggested_interests_empty">ຍັງບໍ່ມີຄຳແນະນຳ</string>
-    <string name="feeds_suggested_interests_count">%1$d ໂພສ</string>
+    <string name="feeds_suggested_interests_title">ເພີ່ມຄວາມສົນໃຈຈາກ %1$s ບໍ?</string>
+    <string name="feeds_suggested_interests_subtitle">ຟີດນີ້ກວມເອົາຫົວຂໍ້ເຫຼົ່ານີ້. ເລືອກວ່າຈະເພີ່ມຫົວຂໍ້ໃດເຂົ້າໃນຄວາມສົນໃຈຂອງທ່ານ ສຳລັບການຈັດອັນດັບແບບສ່ວນຕົວ.</string>
+    <string name="feeds_suggested_interests_skip">ຂ້າມ</string>
     <string name="feeds_tag_more">ປັບແຕ່ງຄວາມສົນໃຈ</string>
     <string name="feeds_tag_more_up">ສະແດງເພີ່ມຄືກັນນີ້</string>
     <string name="feeds_tag_more_down">ສະແດງໜ້ອຍຄືກັນນີ້</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Настройки</string>
     <string name="feeds_no_posts_yet">Публикаций пока нет</string>
     <string name="feeds_default_sort">Сортировка по умолчанию</string>
-    <string name="feeds_suggested_interests_add">Добавить</string>
-    <string name="feeds_suggested_interests_dismiss">Скрыть</string>
     <string name="feeds_unread">Непрочитанные</string>
     <string name="feeds_filter_all">Все</string>
     <string name="feeds_sort_label">Сортировка</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Сервер: %1$s</string>
     <string name="feeds_suggested_interests">Предлагаемые интересы</string>
     <string name="feeds_suggested_interests_empty">Пока нет предложений</string>
-    <string name="feeds_suggested_interests_count">%1$d публикаций</string>
+    <string name="feeds_suggested_interests_title">Добавить интересы из %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Эта лента охватывает эти темы. Выберите, какие из них добавить в ваши интересы для персонализированного ранжирования.</string>
+    <string name="feeds_suggested_interests_skip">Пропустить</string>
     <string name="feeds_tag_more">Настроить интерес</string>
     <string name="feeds_tag_more_up">Показывать больше подобного</string>
     <string name="feeds_tag_more_down">Показывать меньше подобного</string>

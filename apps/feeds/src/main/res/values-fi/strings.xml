@@ -16,8 +16,6 @@
     <string name="feeds_settings">Asetukset</string>
     <string name="feeds_no_posts_yet">Ei vielä julkaisuja</string>
     <string name="feeds_default_sort">Oletuslajittelu</string>
-    <string name="feeds_suggested_interests_add">Lisää</string>
-    <string name="feeds_suggested_interests_dismiss">Piilota</string>
     <string name="feeds_unread">Lukematon</string>
     <string name="feeds_filter_all">Kaikki</string>
     <string name="feeds_sort_label">Lajittele</string>
@@ -125,7 +123,9 @@
     <string name="feeds_identity_server">Palvelin: %1$s</string>
     <string name="feeds_suggested_interests">Ehdotetut kiinnostuksen kohteet</string>
     <string name="feeds_suggested_interests_empty">Ei vielä ehdotuksia</string>
-    <string name="feeds_suggested_interests_count">%1$d julkaisua</string>
+    <string name="feeds_suggested_interests_title">Lisätäänkö kiinnostuksen kohteet syötteestä %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Tämä syöte käsittelee näitä aiheita. Valitse, mitkä niistä lisätään kiinnostuksen kohteisiisi henkilökohtaista järjestystä varten.</string>
+    <string name="feeds_suggested_interests_skip">Ohita</string>
     <string name="feeds_tag_more">Säädä kiinnostusta</string>
     <string name="feeds_tag_more_up">Näytä lisää tällaisia</string>
     <string name="feeds_tag_more_down">Näytä vähemmän tällaisia</string>

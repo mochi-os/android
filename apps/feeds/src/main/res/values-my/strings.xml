@@ -16,8 +16,6 @@
     <string name="feeds_settings">ဆက်တင်များ</string>
     <string name="feeds_no_posts_yet">ပို့စ်များ မရှိသေးပါ</string>
     <string name="feeds_default_sort">မူရင်း sort</string>
-    <string name="feeds_suggested_interests_add">ထည့်မည်</string>
-    <string name="feeds_suggested_interests_dismiss">ဝှက်</string>
     <string name="feeds_unread">မဖတ်ရသေး</string>
     <string name="feeds_filter_all">အားလုံး</string>
     <string name="feeds_sort_label">စီမည်</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">ဆာဗာ - %1$s</string>
     <string name="feeds_suggested_interests">အကြံပြုထားသော စိတ်ဝင်စားမှုများ</string>
     <string name="feeds_suggested_interests_empty">အကြံပြုချက်များ မရှိသေးပါ</string>
-    <string name="feeds_suggested_interests_count">ပို့စ် %1$d ခု</string>
+    <string name="feeds_suggested_interests_title">%1$s မှ စိတ်ဝင်စားမှုများ ထည့်မလား?</string>
+    <string name="feeds_suggested_interests_subtitle">ဤဖိဒ်သည် ဤခေါင်းစဉ်များကို လွှမ်းခြုံသည်။ ပုဂ္ဂိုလ်ရေးသီးသန့် အဆင့်သတ်မှတ်မှုအတွက် သင့်စိတ်ဝင်စားမှုများတွင် မည်သည်တို့ကို ထည့်မည်ကို ရွေးပါ။</string>
+    <string name="feeds_suggested_interests_skip">ကျော်ပါ</string>
     <string name="feeds_tag_more">စိတ်ဝင်စားမှု ချိန်ညှိပါ</string>
     <string name="feeds_tag_more_up">ဤကဲ့သို့ ပိုပြပါ</string>
     <string name="feeds_tag_more_down">ဤကဲ့သို့ လျှော့ပြပါ</string>

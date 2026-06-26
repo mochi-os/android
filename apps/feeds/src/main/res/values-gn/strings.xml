@@ -16,8 +16,6 @@
     <string name="feeds_settings">Ñemboheko</string>
     <string name="feeds_no_posts_yet">Ndaipóri marandu gueteri</string>
     <string name="feeds_default_sort">Default sort</string>
-    <string name="feeds_suggested_interests_add">Embojuaju</string>
-    <string name="feeds_suggested_interests_dismiss">Emokañy</string>
     <string name="feeds_unread">Ñemoñe\'ẽ\'ỹva</string>
     <string name="feeds_filter_all">Opaite</string>
     <string name="feeds_sort_label">Embojo\'a</string>
@@ -121,7 +119,9 @@
     <string name="feeds_identity_server">Mohendaha: %1$s</string>
     <string name="feeds_suggested_interests">Mba\'eporãrã oñemoñe\'ẽva</string>
     <string name="feeds_suggested_interests_empty">Ndaipóri gueteri ñemoñe\'ẽ</string>
-    <string name="feeds_suggested_interests_count">%1$d marandu</string>
+    <string name="feeds_suggested_interests_title">¿Embojuaju mba\'eporãrã %1$s-gui?</string>
+    <string name="feeds_suggested_interests_subtitle">Ko feed oñe\'ẽ ko\'ã téma rehe. Eiporavo mávapa rembojuajúta nde mba\'eporãrãme ñemohenda personalizadorã g̃uarã.</string>
+    <string name="feeds_suggested_interests_skip">Ehasa</string>
     <string name="feeds_tag_more">Embohekopyahu mba\'eporãrã</string>
     <string name="feeds_tag_more_up">Ehechauka hetave kóicha</string>
     <string name="feeds_tag_more_down">Ehechauka sa\'ive kóicha</string>

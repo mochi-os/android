@@ -16,8 +16,6 @@
     <string name="feeds_settings">Setări</string>
     <string name="feeds_no_posts_yet">Încă nicio postare</string>
     <string name="feeds_default_sort">Sortare implicită</string>
-    <string name="feeds_suggested_interests_add">Adaugă</string>
-    <string name="feeds_suggested_interests_dismiss">Ascunde</string>
     <string name="feeds_unread">Necitit</string>
     <string name="feeds_filter_all">Toate</string>
     <string name="feeds_sort_label">Sortează</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Interese sugerate</string>
     <string name="feeds_suggested_interests_empty">Nicio sugestie încă</string>
-    <string name="feeds_suggested_interests_count">%1$d postări</string>
+    <string name="feeds_suggested_interests_title">Adăugați interese din %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Acest flux acoperă aceste subiecte. Selectați pe care doriți să le adăugați la interesele dvs. pentru o clasificare personalizată.</string>
+    <string name="feeds_suggested_interests_skip">Omite</string>
     <string name="feeds_tag_more">Ajustați interesul</string>
     <string name="feeds_tag_more_up">Afișați mai multe similare</string>
     <string name="feeds_tag_more_down">Afișați mai puține similare</string>

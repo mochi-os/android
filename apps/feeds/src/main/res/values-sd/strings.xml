@@ -16,8 +16,6 @@
     <string name="feeds_settings">سيٽنگون</string>
     <string name="feeds_no_posts_yet">اڃا ڪا پوسٽ نه آهي</string>
     <string name="feeds_default_sort">ڊفالٽ ترتيب</string>
-    <string name="feeds_suggested_interests_add">شامل ڪريو</string>
-    <string name="feeds_suggested_interests_dismiss">لڪايو</string>
     <string name="feeds_unread">اڻ پڙهيل</string>
     <string name="feeds_filter_all">سڀ</string>
     <string name="feeds_sort_label">ترتيب</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">سرور: %1$s</string>
     <string name="feeds_suggested_interests">تجويز ڪيل دلچسپيون</string>
     <string name="feeds_suggested_interests_empty">اڃا ڪا تجويز ناهي</string>
-    <string name="feeds_suggested_interests_count">%1$d پوسٽون</string>
+    <string name="feeds_suggested_interests_title">%1$s مان دلچسپيون شامل ڪجن؟</string>
+    <string name="feeds_suggested_interests_subtitle">هي فيڊ انهن موضوعن تي مشتمل آهي. ذاتي درجابندي لاءِ پنهنجي دلچسپين ۾ شامل ڪرڻ لاءِ چونڊيو ته ڪهڙا شامل ڪجن.</string>
+    <string name="feeds_suggested_interests_skip">ڇڏي ڏيو</string>
     <string name="feeds_tag_more">دلچسپي ترتيب ڏيو</string>
     <string name="feeds_tag_more_up">هن جهڙا وڌيڪ ڏيکاريو</string>
     <string name="feeds_tag_more_down">هن جهڙا گهٽ ڏيکاريو</string>

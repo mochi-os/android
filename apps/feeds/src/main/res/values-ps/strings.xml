@@ -16,8 +16,6 @@
     <string name="feeds_settings">ترتیبات</string>
     <string name="feeds_no_posts_yet">تر اوسه هیڅ لیکنې نشته</string>
     <string name="feeds_default_sort">ډیفالټ ترتیب</string>
-    <string name="feeds_suggested_interests_add">اضافه کړئ</string>
-    <string name="feeds_suggested_interests_dismiss">پټ کړه</string>
     <string name="feeds_unread">نه لوستل شوی</string>
     <string name="feeds_filter_all">ټول</string>
     <string name="feeds_sort_label">ترتیب</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">سرور: %1$s</string>
     <string name="feeds_suggested_interests">وړاندیز شوې علاقې</string>
     <string name="feeds_suggested_interests_empty">تر اوسه هیڅ وړاندیزونه نشته</string>
-    <string name="feeds_suggested_interests_count">%1$d لیکنې</string>
+    <string name="feeds_suggested_interests_title">له %1$s څخه علاقې اضافه کړئ؟</string>
+    <string name="feeds_suggested_interests_subtitle">دا فیډ دا موضوعات پوښي. وټاکئ چې کوم یې د شخصي درجه بندۍ لپاره خپلو علاقو ته اضافه کړئ.</string>
+    <string name="feeds_suggested_interests_skip">تېر شه</string>
     <string name="feeds_tag_more">علاقه سمه کړئ</string>
     <string name="feeds_tag_more_up">د دې په څیر نور وښیه</string>
     <string name="feeds_tag_more_down">د دې په څیر لږ وښیه</string>

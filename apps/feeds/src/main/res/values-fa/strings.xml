@@ -16,8 +16,6 @@
     <string name="feeds_settings">تنظیمات</string>
     <string name="feeds_no_posts_yet">هنوز پستی وجود ندارد</string>
     <string name="feeds_default_sort">مرتب‌سازی پیش‌فرض</string>
-    <string name="feeds_suggested_interests_add">افزودن</string>
-    <string name="feeds_suggested_interests_dismiss">پنهان کردن</string>
     <string name="feeds_unread">خوانده‌نشده</string>
     <string name="feeds_filter_all">همه</string>
     <string name="feeds_sort_label">مرتب‌سازی</string>
@@ -125,7 +123,9 @@
     <string name="feeds_identity_server">سرور: %1$s</string>
     <string name="feeds_suggested_interests">علاقه‌مندی‌های پیشنهادی</string>
     <string name="feeds_suggested_interests_empty">هنوز پیشنهادی نیست</string>
-    <string name="feeds_suggested_interests_count">%1$d نوشته</string>
+    <string name="feeds_suggested_interests_title">علاقه‌مندی‌ها از %1$s افزوده شود؟</string>
+    <string name="feeds_suggested_interests_subtitle">این فید این موضوعات را پوشش می‌دهد. انتخاب کنید کدام‌یک به علاقه‌مندی‌های شما برای رتبه‌بندی شخصی‌سازی‌شده افزوده شوند.</string>
+    <string name="feeds_suggested_interests_skip">رد کردن</string>
     <string name="feeds_tag_more">تنظیم علاقه‌مندی</string>
     <string name="feeds_tag_more_up">موارد مشابه بیشتری نشان بده</string>
     <string name="feeds_tag_more_down">موارد مشابه کمتری نشان بده</string>

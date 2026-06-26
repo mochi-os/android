@@ -16,8 +16,6 @@
     <string name="feeds_settings">Ρυθμίσεις</string>
     <string name="feeds_no_posts_yet">Δεν υπάρχουν ακόμη αναρτήσεις</string>
     <string name="feeds_default_sort">Προεπιλεγμένη ταξινόμηση</string>
-    <string name="feeds_suggested_interests_add">Προσθήκη</string>
-    <string name="feeds_suggested_interests_dismiss">Απόκρυψη</string>
     <string name="feeds_unread">Μη αναγνωσμένα</string>
     <string name="feeds_filter_all">Όλα</string>
     <string name="feeds_sort_label">Ταξινόμηση</string>
@@ -125,7 +123,9 @@
     <string name="feeds_identity_server">Διακομιστής: %1$s</string>
     <string name="feeds_suggested_interests">Προτεινόμενα ενδιαφέροντα</string>
     <string name="feeds_suggested_interests_empty">Δεν υπάρχουν προτάσεις ακόμη</string>
-    <string name="feeds_suggested_interests_count">%1$d αναρτήσεις</string>
+    <string name="feeds_suggested_interests_title">Προσθήκη ενδιαφερόντων από %1$s;</string>
+    <string name="feeds_suggested_interests_subtitle">Αυτή η ροή καλύπτει αυτά τα θέματα. Επιλέξτε ποια θέλετε να προσθέσετε στα ενδιαφέροντά σας για εξατομικευμένη κατάταξη.</string>
+    <string name="feeds_suggested_interests_skip">Παράλειψη</string>
     <string name="feeds_tag_more">Ρύθμιση ενδιαφέροντος</string>
     <string name="feeds_tag_more_up">Εμφάνιση περισσότερων σαν αυτό</string>
     <string name="feeds_tag_more_down">Εμφάνιση λιγότερων σαν αυτό</string>

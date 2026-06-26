@@ -3,7 +3,6 @@
 
     <string name="feeds_create_feed">Creá un feed</string>
     <string name="feeds_mark_all_read">Marcá todo como leído</string>
-    <string name="feeds_suggested_interests_add">Agregá</string>
     <string name="feeds_delete_post">Eliminá el posteo</string>
     <string name="feeds_delete_comment">Eliminá el comentario</string>
     <string name="feeds_remove">Quitá</string>
@@ -43,7 +42,6 @@
     <string name="feeds_no_posts_yet">Todavía no hay publicaciones</string>
     <string name="feeds_tag_clear">Quitar filtro</string>
     <string name="feeds_identity_fingerprint">Huella digital: %1$s</string>
-    <string name="feeds_suggested_interests_dismiss">Ocultar</string>
     <string name="feeds_sort_interests">Intereses</string>
     <string name="feeds_sort_hot">Populares</string>
     <string name="feeds_sort_top">Mejores</string>
@@ -97,7 +95,9 @@
     <string name="feeds_identity_server">Servidor: %1$s</string>
     <string name="feeds_suggested_interests">Intereses sugeridos</string>
     <string name="feeds_suggested_interests_empty">Aún no hay sugerencias</string>
-    <string name="feeds_suggested_interests_count">%1$d publicaciones</string>
+    <string name="feeds_suggested_interests_title">¿Agregar intereses de %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Este feed cubre estos temas. Elegí cuáles agregar a tus intereses para un orden personalizado.</string>
+    <string name="feeds_suggested_interests_skip">Omitir</string>
     <string name="feeds_tag_more">Ajustar interés</string>
     <string name="feeds_tag_more_up">Mostrar más como esto</string>
     <string name="feeds_tag_more_down">Mostrar menos como esto</string>

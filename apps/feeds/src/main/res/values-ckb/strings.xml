@@ -16,8 +16,6 @@
     <string name="feeds_settings">ڕێکخستنەکان</string>
     <string name="feeds_no_posts_yet">هێشتا هیچ پۆستێک نییە</string>
     <string name="feeds_default_sort">ڕیزکردنی بنەڕەت</string>
-    <string name="feeds_suggested_interests_add">زیادکردن</string>
-    <string name="feeds_suggested_interests_dismiss">شاردنەوە</string>
     <string name="feeds_unread">نەخوێندراوە</string>
     <string name="feeds_filter_all">هەموو</string>
     <string name="feeds_sort_label">ڕیزکردن</string>
@@ -152,7 +150,9 @@
     <string name="feeds_identity_server">ڕاژەکار: %1$s</string>
     <string name="feeds_suggested_interests">بەرژەوەندیە پێشنیارکراوەکان</string>
     <string name="feeds_suggested_interests_empty">هێشتا هیچ پێشنیارێک نییە</string>
-    <string name="feeds_suggested_interests_count">%1$d بابەت</string>
+    <string name="feeds_suggested_interests_title">بەرژەوەندی لە %1$s زیاد بکرێت؟</string>
+    <string name="feeds_suggested_interests_subtitle">ئەم فیدە ئەم بابەتانە دەگرێتەوە. ئەوانە هەڵبژێرە کە دەتەوێت بیانخەیتە سەر بەرژەوەندییەکانت بۆ ڕیزبەندی کەسیکراو.</string>
+    <string name="feeds_suggested_interests_skip">تێپەڕاندن</string>
     <string name="feeds_tag_more">ڕێکخستنی بەرژەوەندی</string>
     <string name="feeds_tag_more_up">زیاتر لەمە پیشان بدە</string>
     <string name="feeds_tag_more_down">کەمتر لەمە پیشان بدە</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Roghainnean</string>
     <string name="feeds_no_posts_yet">Chan eil postaichean ann fhathast</string>
     <string name="feeds_default_sort">Seòrsachadh bunaiteach</string>
-    <string name="feeds_suggested_interests_add">Cuir ris</string>
-    <string name="feeds_suggested_interests_dismiss">Falaich</string>
     <string name="feeds_unread">Gun leughadh</string>
     <string name="feeds_filter_all">Na h-uile</string>
     <string name="feeds_sort_label">Seòrsaich</string>
@@ -121,7 +119,9 @@
     <string name="feeds_identity_server">Frithealaiche: %1$s</string>
     <string name="feeds_suggested_interests">Ùidhean a thathar a\' moladh</string>
     <string name="feeds_suggested_interests_empty">Chan eil moladh ann fhathast</string>
-    <string name="feeds_suggested_interests_count">%1$d postaichean</string>
+    <string name="feeds_suggested_interests_title">A bheil thu airson ùidhean o %1$s a chur ris?</string>
+    <string name="feeds_suggested_interests_subtitle">Tha an t-inbhir seo a\' còmhdach nan cuspairean seo. Tagh cò an fheadhainn a chuireas tu ris na h-ùidhean agad airson rangachadh pearsanaichte.</string>
+    <string name="feeds_suggested_interests_skip">Leum thairis</string>
     <string name="feeds_tag_more">Gleus ùidh</string>
     <string name="feeds_tag_more_up">Seall barrachd dhen leithid seo</string>
     <string name="feeds_tag_more_down">Seall nas lugha dhen leithid seo</string>

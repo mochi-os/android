@@ -16,8 +16,6 @@
     <string name="feeds_settings">Nustatymai</string>
     <string name="feeds_no_posts_yet">Dar nėra įrašų</string>
     <string name="feeds_default_sort">Numatytasis rūšiavimas</string>
-    <string name="feeds_suggested_interests_add">Pridėti</string>
-    <string name="feeds_suggested_interests_dismiss">Slėpti</string>
     <string name="feeds_unread">Neperskaityta</string>
     <string name="feeds_filter_all">Visi</string>
     <string name="feeds_sort_label">Rūšiuoti</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Serveris: %1$s</string>
     <string name="feeds_suggested_interests">Siūlomi interesai</string>
     <string name="feeds_suggested_interests_empty">Pasiūlymų dar nėra</string>
-    <string name="feeds_suggested_interests_count">%1$d įrašų</string>
+    <string name="feeds_suggested_interests_title">Pridėti interesų iš %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Šis srautas apima šias temas. Pasirinkite, kurias pridėti prie savo interesų, kad reitingavimas būtų suasmenintas.</string>
+    <string name="feeds_suggested_interests_skip">Praleisti</string>
     <string name="feeds_tag_more">Pritaikyti interesą</string>
     <string name="feeds_tag_more_up">Rodyti daugiau panašių</string>
     <string name="feeds_tag_more_down">Rodyti mažiau panašių</string>

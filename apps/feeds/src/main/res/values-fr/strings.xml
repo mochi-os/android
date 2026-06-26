@@ -16,8 +16,6 @@
     <string name="feeds_settings">Paramètres</string>
     <string name="feeds_no_posts_yet">Aucun message pour le moment</string>
     <string name="feeds_default_sort">Tri par défaut</string>
-    <string name="feeds_suggested_interests_add">Ajouter</string>
-    <string name="feeds_suggested_interests_dismiss">Masquer</string>
     <string name="feeds_unread">Non lus</string>
     <string name="feeds_filter_all">Tout</string>
     <string name="feeds_sort_label">Trier</string>
@@ -125,7 +123,9 @@
     <string name="feeds_identity_server">Serveur : %1$s</string>
     <string name="feeds_suggested_interests">Centres d\'intérêt suggérés</string>
     <string name="feeds_suggested_interests_empty">Aucune suggestion pour le moment</string>
-    <string name="feeds_suggested_interests_count">%1$d publications</string>
+    <string name="feeds_suggested_interests_title">Ajouter des centres d\'intérêt de %1$s ?</string>
+    <string name="feeds_suggested_interests_subtitle">Ce flux aborde ces sujets. Sélectionnez ceux à ajouter à vos centres d\'intérêt pour un classement personnalisé.</string>
+    <string name="feeds_suggested_interests_skip">Ignorer</string>
     <string name="feeds_tag_more">Ajuster l\'intérêt</string>
     <string name="feeds_tag_more_up">Afficher plus de ce type</string>
     <string name="feeds_tag_more_down">Afficher moins de ce type</string>

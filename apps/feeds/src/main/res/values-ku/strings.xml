@@ -16,8 +16,6 @@
     <string name="feeds_settings">Mîheng</string>
     <string name="feeds_no_posts_yet">Hêj tu poste tune</string>
     <string name="feeds_default_sort">Rêzkirina standard</string>
-    <string name="feeds_suggested_interests_add">Zêde bike</string>
-    <string name="feeds_suggested_interests_dismiss">Veşêre</string>
     <string name="feeds_unread">Nexwendî</string>
     <string name="feeds_filter_all">Hemû</string>
     <string name="feeds_sort_label">Rêz bike</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Berjewendiyên pêşniyazkirî</string>
     <string name="feeds_suggested_interests_empty">Hîn pêşniyaz tune</string>
-    <string name="feeds_suggested_interests_count">%1$d şandî</string>
+    <string name="feeds_suggested_interests_title">Berjewendiyan ji %1$s zêde bikî?</string>
+    <string name="feeds_suggested_interests_subtitle">Ev feed van mijaran vedigire. Hilbijêre ka kîjan ji bo rêzkirina kesanekirî li berjewendiyên te werin zêdekirin.</string>
+    <string name="feeds_suggested_interests_skip">Derbas bike</string>
     <string name="feeds_tag_more">Berjewendiyê mîheng bike</string>
     <string name="feeds_tag_more_up">Bêtir wek vê nîşan bide</string>
     <string name="feeds_tag_more_down">Kêmtir wek vê nîşan bide</string>

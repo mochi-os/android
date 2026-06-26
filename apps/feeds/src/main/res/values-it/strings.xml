@@ -16,8 +16,6 @@
     <string name="feeds_settings">Impostazioni</string>
     <string name="feeds_no_posts_yet">Ancora nessun post</string>
     <string name="feeds_default_sort">Ordinamento predefinito</string>
-    <string name="feeds_suggested_interests_add">Aggiungi</string>
-    <string name="feeds_suggested_interests_dismiss">Nascondi</string>
     <string name="feeds_unread">Non letti</string>
     <string name="feeds_filter_all">Tutti</string>
     <string name="feeds_sort_label">Ordina</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Interessi suggeriti</string>
     <string name="feeds_suggested_interests_empty">Nessun suggerimento</string>
-    <string name="feeds_suggested_interests_count">%1$d post</string>
+    <string name="feeds_suggested_interests_title">Aggiungere interessi da %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Questo feed tratta questi argomenti. Seleziona quali aggiungere ai tuoi interessi per una classificazione personalizzata.</string>
+    <string name="feeds_suggested_interests_skip">Salta</string>
     <string name="feeds_tag_more">Regola interesse</string>
     <string name="feeds_tag_more_up">Mostra di più di questo tipo</string>
     <string name="feeds_tag_more_down">Mostra di meno di questo tipo</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Nastavitve</string>
     <string name="feeds_no_posts_yet">Še ni objav</string>
     <string name="feeds_default_sort">Privzeto razvrščanje</string>
-    <string name="feeds_suggested_interests_add">Dodaj</string>
-    <string name="feeds_suggested_interests_dismiss">Skrij</string>
     <string name="feeds_unread">Neprebrano</string>
     <string name="feeds_filter_all">Vse</string>
     <string name="feeds_sort_label">Razvrsti</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Strežnik: %1$s</string>
     <string name="feeds_suggested_interests">Predlagani interesi</string>
     <string name="feeds_suggested_interests_empty">Še ni predlogov</string>
-    <string name="feeds_suggested_interests_count">%1$d objav</string>
+    <string name="feeds_suggested_interests_title">Dodam interese iz %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Ta vir pokriva te teme. Izberite, katere želite dodati med svoje interese za prilagojeno razvrščanje.</string>
+    <string name="feeds_suggested_interests_skip">Preskoči</string>
     <string name="feeds_tag_more">Prilagodi interes</string>
     <string name="feeds_tag_more_up">Prikaži več podobnega</string>
     <string name="feeds_tag_more_down">Prikaži manj podobnega</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Instellings</string>
     <string name="feeds_no_posts_yet">Nog geen plasings nie</string>
     <string name="feeds_default_sort">Verstek sortering</string>
-    <string name="feeds_suggested_interests_add">Voeg by</string>
-    <string name="feeds_suggested_interests_dismiss">Versteek</string>
     <string name="feeds_unread">Ongelees</string>
     <string name="feeds_filter_all">Alle</string>
     <string name="feeds_sort_label">Sorteer</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">Bediener: %1$s</string>
     <string name="feeds_suggested_interests">Voorgestelde belangstellings</string>
     <string name="feeds_suggested_interests_empty">Nog geen voorstelle nie</string>
-    <string name="feeds_suggested_interests_count">%1$d plasings</string>
+    <string name="feeds_suggested_interests_title">Voeg belangstellings van %1$s by?</string>
+    <string name="feeds_suggested_interests_subtitle">Hierdie feed dek hierdie onderwerpe. Kies watter jy by jou belangstellings wil voeg vir persoonlike rangskikking.</string>
+    <string name="feeds_suggested_interests_skip">Slaan oor</string>
     <string name="feeds_tag_more">Verfyn belangstelling</string>
     <string name="feeds_tag_more_up">Wys meer soos hierdie</string>
     <string name="feeds_tag_more_down">Wys minder soos hierdie</string>

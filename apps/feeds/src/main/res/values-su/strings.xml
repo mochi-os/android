@@ -16,8 +16,6 @@
     <string name="feeds_settings">Setélan</string>
     <string name="feeds_no_posts_yet">Tacan aya pos</string>
     <string name="feeds_default_sort">Urutan standar</string>
-    <string name="feeds_suggested_interests_add">Tambah</string>
-    <string name="feeds_suggested_interests_dismiss">Sumputkeun</string>
     <string name="feeds_unread">Tacan dibaca</string>
     <string name="feeds_filter_all">Sadaya</string>
     <string name="feeds_sort_label">Sortir</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Karesep nu disarankeun</string>
     <string name="feeds_suggested_interests_empty">Tacan aya saran</string>
-    <string name="feeds_suggested_interests_count">%1$d kintunan</string>
+    <string name="feeds_suggested_interests_title">Tambahkeun karesep ti %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Feed ieu nyangkup topik-topik ieu. Pilih nu mana anu badé ditambahkeun kana karesep anjeun pikeun pemeringkatan nu dipersonalisasi.</string>
+    <string name="feeds_suggested_interests_skip">Liwat</string>
     <string name="feeds_tag_more">Setél karesep</string>
     <string name="feeds_tag_more_up">Témbongkeun nu sarupa deui</string>
     <string name="feeds_tag_more_down">Kurangan nu sarupa kieu</string>

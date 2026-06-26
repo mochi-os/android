@@ -16,8 +16,6 @@
     <string name="feeds_settings">Iestatījumi</string>
     <string name="feeds_no_posts_yet">Vēl nav ierakstu</string>
     <string name="feeds_default_sort">Noklusētā kārtošana</string>
-    <string name="feeds_suggested_interests_add">Pievienot</string>
-    <string name="feeds_suggested_interests_dismiss">Slēpt</string>
     <string name="feeds_unread">Nelasīts</string>
     <string name="feeds_filter_all">Visi</string>
     <string name="feeds_sort_label">Kārtot</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Serveris: %1$s</string>
     <string name="feeds_suggested_interests">Ieteiktās intereses</string>
     <string name="feeds_suggested_interests_empty">Vēl nav ieteikumu</string>
-    <string name="feeds_suggested_interests_count">%1$d ieraksti</string>
+    <string name="feeds_suggested_interests_title">Pievienot intereses no %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Šī plūsma aptver šīs tēmas. Atlasiet, kuras pievienot savām interesēm, lai ranžēšana būtu personalizēta.</string>
+    <string name="feeds_suggested_interests_skip">Izlaist</string>
     <string name="feeds_tag_more">Pielāgot interesi</string>
     <string name="feeds_tag_more_up">Rādīt vairāk līdzīga</string>
     <string name="feeds_tag_more_down">Rādīt mazāk līdzīga</string>

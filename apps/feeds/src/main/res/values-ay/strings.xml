@@ -16,8 +16,6 @@
     <string name="feeds_settings">Configuración</string>
     <string name="feeds_no_posts_yet">Janira qillqatanaka</string>
     <string name="feeds_default_sort">Default ch\'ulluwi</string>
-    <string name="feeds_suggested_interests_add">Yapxataña</string>
-    <string name="feeds_suggested_interests_dismiss">Imantaña</string>
     <string name="feeds_unread">Jan yatxatat charge</string>
     <string name="feeds_filter_all">Taqpach</string>
     <string name="feeds_sort_label">Sumaña</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">Servidor: %1$s</string>
     <string name="feeds_suggested_interests">Iwxat\'ata munañanaka</string>
     <string name="feeds_suggested_interests_empty">Janïraw iwxañanakax utjkiti</string>
-    <string name="feeds_suggested_interests_count">%1$d qillqatanaka</string>
+    <string name="feeds_suggested_interests_title">¿%1$s ukat munañanak yapxatañ?</string>
+    <string name="feeds_suggested_interests_subtitle">Aka feedax aka tuqinakat parli. Jumar uñt\'ata wakichañataki munañanakamar khitinak yapxatañ munta uk ajllim.</string>
+    <string name="feeds_suggested_interests_skip">Jaltaña</string>
     <string name="feeds_tag_more">Munaña askichaña</string>
     <string name="feeds_tag_more_up">Akham juk\'amp uñacht\'ayaña</string>
     <string name="feeds_tag_more_down">Akham juk\'a uñacht\'ayaña</string>
