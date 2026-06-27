@@ -13,7 +13,10 @@ data class CrmObject(
     @SerializedName("class") val objectClass: String = "",
     val number: Int = 0,
     val parent: String = "",
-    val rank: Int = 0,
+    // Fractional-index text key (#53): an opaque, ASCII-sortable ordering key
+    // (e.g. "a0"), not a dense integer — compare/sort it as a string. Moves send
+    // an integer drop position (server computes the new key); see MoveObjectSheet.
+    val rank: String = "",
     val created: Long = 0,
     val updated: Long = 0,
     val readable: String = "",
