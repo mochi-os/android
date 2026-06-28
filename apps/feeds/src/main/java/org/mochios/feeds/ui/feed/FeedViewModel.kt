@@ -328,10 +328,15 @@ class FeedViewModel @Inject constructor(
                         unreadOnly = _unreadOnly.value
                     )
                 } else {
-                    val lastPost = _posts.value.lastOrNull() ?: return@launch
+                    // The chronological `before` cursor is the last post's
+                    // `created` timestamp (the server filters `created < before`),
+                    // which it hands back as nextCursor. We were sending the post
+                    // id instead, so `created < <id>` matched nothing and the feed
+                    // dead-ended after the first page — looking like a premature
+                    // "bottom" once the reader swiped ~20 posts deep.
                     repository.getPosts(
                         feedId = feedId,
-                        before = lastPost.id,
+                        before = nextCursor.toString(),
                         sort = _currentSort.value,
                         tag = _currentTag.value,
                         unreadOnly = _unreadOnly.value
