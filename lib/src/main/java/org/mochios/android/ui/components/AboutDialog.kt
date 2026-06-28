@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -31,6 +32,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.work.WorkInfo
+import kotlinx.coroutines.flow.takeWhile
 import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.update.UpdateChecker
@@ -41,8 +44,11 @@ private sealed interface CheckUi {
     data object Idle : CheckUi
     data object Checking : CheckUi
     data object UpToDate : CheckUi
-    /** A newer [version] was found and is downloading in the background. */
-    data class Downloading(val version: String) : CheckUi
+    /**
+     * A newer [version] was found and is downloading in the background.
+     * [progress] is the percent complete, or null while it's still unknown.
+     */
+    data class Downloading(val version: String, val progress: Int?) : CheckUi
     data object Offline : CheckUi
     data object DownloadFailed : CheckUi
 }
@@ -98,10 +104,22 @@ fun AboutDialog(onDismiss: () -> Unit) {
                                     is UpdateStatus.Offline -> state = CheckUi.Offline
                                     is UpdateStatus.Ready -> promptInstall()
                                     is UpdateStatus.Downloading -> {
-                                        state = CheckUi.Downloading(result.version)
-                                        // Wait for the background download, then prompt
-                                        // to install the instant it stages. If the dialog
-                                        // is closed first this is cancelled — the download
+                                        state = CheckUi.Downloading(result.version, null)
+                                        // Reflect the background download's progress as a
+                                        // determinate bar until the work reaches a terminal
+                                        // state…
+                                        UpdateChecker.observeOneShotDownload(context)
+                                            .takeWhile { it == null || !it.state.isFinished }
+                                            .collect { info ->
+                                                if (info?.state == WorkInfo.State.RUNNING) {
+                                                    val done = info.progress.getLong(UpdateChecker.PROGRESS_DOWNLOADED, 0L)
+                                                    val total = info.progress.getLong(UpdateChecker.PROGRESS_TOTAL, 0L)
+                                                    val pct = if (total > 0L) ((done * 100L) / total).toInt().coerceIn(0, 100) else null
+                                                    state = CheckUi.Downloading(result.version, pct)
+                                                }
+                                            }
+                                        // …then prompt to install the instant it stages.
+                                        // Closing the dialog cancels this; the download
                                         // keeps running and the next foreground entry's
                                         // promptIfPending still catches it.
                                         if (UpdateChecker.awaitOneShotDownload(context)) {
@@ -117,7 +135,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                     ) {
                         Text(stringResource(R.string.about_check_updates))
                     }
-                    if (state is CheckUi.Checking || state is CheckUi.Downloading) {
+                    if (state is CheckUi.Checking) {
                         Spacer(modifier = Modifier.size(12.dp))
                         CircularProgressIndicator(
                             modifier = Modifier.size(20.dp),
@@ -128,8 +146,31 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 // Status line below the button — spells out whether a new version
                 // was found and that it's downloading, so a tap is never silent.
                 when (val s = state) {
-                    is CheckUi.Downloading ->
+                    is CheckUi.Downloading -> {
                         AboutStatus(stringResource(R.string.about_check_downloading, s.version), isError = false)
+                        Spacer(modifier = Modifier.height(8.dp))
+                        val pct = s.progress
+                        if (pct != null) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                LinearProgressIndicator(
+                                    progress = { pct / 100f },
+                                    modifier = Modifier.weight(1f),
+                                )
+                                Spacer(modifier = Modifier.size(8.dp))
+                                Text(
+                                    text = "$pct%",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                        } else {
+                            // Total size not known yet — indeterminate sweep.
+                            LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                        }
+                    }
                     is CheckUi.UpToDate ->
                         AboutStatus(stringResource(R.string.about_up_to_date), isError = false)
                     is CheckUi.Offline ->

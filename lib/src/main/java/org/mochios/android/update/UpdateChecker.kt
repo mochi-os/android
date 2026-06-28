@@ -18,6 +18,7 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import androidx.work.workDataOf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
@@ -25,6 +26,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okio.Buffer
 import okio.appendingSink
 import okio.buffer
 import okio.sink
@@ -52,7 +54,12 @@ class UpdateChecker(
 ) : CoroutineWorker(context, params) {
 
     override suspend fun doWork(): Result =
-        when (checkNow(applicationContext)) {
+        when (checkNow(applicationContext) { downloaded, total ->
+            // Publish download progress so an observing UI (the About dialog)
+            // can render a determinate bar. Fire-and-forget — the okio read
+            // loop that calls this isn't a suspend context.
+            setProgressAsync(workDataOf(PROGRESS_DOWNLOADED to downloaded, PROGRESS_TOTAL to total))
+        }) {
             CheckOutcome.UpToDate, CheckOutcome.UpdateStaged -> Result.success()
             CheckOutcome.NetworkError, CheckOutcome.DownloadFailed -> Result.retry()
         }
@@ -62,6 +69,9 @@ class UpdateChecker(
         private const val WORK_NAME = "mochi_update_check"
         // One-shot background download kicked off by the About dialog's button.
         private const val ONESHOT_WORK = "mochi_update_check_oneshot"
+        // WorkInfo progress keys (bytes downloaded / total) for the dialog's bar.
+        const val PROGRESS_DOWNLOADED = "downloaded"
+        const val PROGRESS_TOTAL = "total"
         const val PREFS = "mochi_update"
         const val KEY_PENDING = "pending_version"
         const val KEY_PENDING_PATH = "pending_path"
@@ -162,6 +172,16 @@ class UpdateChecker(
         }
 
         /**
+         * Live WorkInfo for the one-shot background download (null until it's
+         * enqueued). The dialog reads [WorkInfo.progress] — PROGRESS_DOWNLOADED /
+         * PROGRESS_TOTAL — to render a determinate progress bar.
+         */
+        fun observeOneShotDownload(context: Context): kotlinx.coroutines.flow.Flow<WorkInfo?> =
+            WorkManager.getInstance(context.applicationContext)
+                .getWorkInfosForUniqueWorkFlow(ONESHOT_WORK)
+                .map { it.firstOrNull() }
+
+        /**
          * Run one check-and-stage cycle inline (no WorkManager). The full path —
          * version poll AND the resumable APK download — used by the periodic and
          * one-shot workers via [doWork]. Heavy: not for the UI thread's button
@@ -173,7 +193,10 @@ class UpdateChecker(
          * synchronous execute() is blocking. CoroutineWorker.doWork runs
          * off-main on its own, but this entry point may not.
          */
-        suspend fun checkNow(context: Context): CheckOutcome = withContext(Dispatchers.IO) {
+        suspend fun checkNow(
+            context: Context,
+            onProgress: (downloaded: Long, total: Long) -> Unit = { _, _ -> },
+        ): CheckOutcome = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
             if (InstallSource.isStoreInstalled(ctx)) {
                 // The store is responsible for updates here. About-dialog
@@ -218,7 +241,7 @@ class UpdateChecker(
             var staged = false
             for (attempt in 1..DOWNLOAD_ATTEMPTS) {
                 try {
-                    if (download(target)) {
+                    if (download(target, onProgress)) {
                         staged = true
                         break
                     }
@@ -265,7 +288,10 @@ class UpdateChecker(
          * length matches the server's reported total); a mid-stream drop throws,
          * leaving the partial in place for the next attempt to resume from.
          */
-        private fun download(target: File): Boolean {
+        private fun download(
+            target: File,
+            onProgress: (downloaded: Long, total: Long) -> Unit,
+        ): Boolean {
             target.parentFile?.mkdirs()
             val have = if (target.exists()) target.length() else 0L
             val builder = Request.Builder().url(APK_URL).get()
@@ -288,10 +314,31 @@ class UpdateChecker(
                 // Server resent the whole file despite our Range — drop the
                 // partial so we don't append a full body onto it.
                 if (!resuming && have > 0) target.delete()
-                // Stream straight to disk — append when resuming, truncate when
-                // starting fresh. The APK is ~40 MB, so never buffer in memory.
-                val out = if (resuming) target.appendingSink() else target.sink()
-                out.buffer().use { sink -> body.source().use { src -> sink.writeAll(src) } }
+                // Stream straight to disk in chunks — append when resuming,
+                // truncate when starting fresh — reporting progress as we go (the
+                // APK is ~40 MB, so never buffer it all in memory). `total` is the
+                // full file size, so downloaded starts at `have` on a resume.
+                val out = (if (resuming) target.appendingSink() else target.sink()).buffer()
+                out.use { sink ->
+                    body.source().use { src ->
+                        val chunk = Buffer()
+                        var downloaded = if (resuming) have else 0L
+                        var lastReported = downloaded
+                        while (true) {
+                            val read = src.read(chunk, 64L * 1024)
+                            if (read == -1L) break
+                            sink.write(chunk, read)
+                            downloaded += read
+                            // Throttle so we don't write the WorkManager progress
+                            // row on every 64 KB chunk.
+                            if (total != null && downloaded - lastReported >= 512L * 1024) {
+                                lastReported = downloaded
+                                onProgress(downloaded, total)
+                            }
+                        }
+                        if (total != null) onProgress(downloaded, total)
+                    }
+                }
                 // Complete only when we know the total AND the file matches it —
                 // never stage a truncated APK as if it were ready to install.
                 return total != null && target.length() == total
