@@ -244,6 +244,7 @@
     <string name="about_version">Verzió: %1$s</string>
     <string name="about_check_updates">Frissítések keresése</string>
     <string name="about_up_to_date">Naprakész</string>
+    <string name="about_check_downloading">%1$s verzió elérhető, letöltés…</string>
     <string name="about_check_network_error">A frissítési kiszolgáló nem érhető el</string>
     <string name="about_check_download_failed">A letöltés sikertelen</string>
     <string name="notifications_clear_all_title">Törli az összes értesítést?</string>

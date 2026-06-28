@@ -243,6 +243,7 @@
     <string name="about_version">Inguqulelo %1$s</string>
     <string name="about_check_updates">Khangela uhlaziyo</string>
     <string name="about_up_to_date">Ihlaziyiwe</string>
+    <string name="about_check_downloading">Inguqulo %1$s iyafumaneka, iyalandwa…</string>
     <string name="about_check_network_error">Akukwazekanga ukufikelela kwiseva yohlaziyo</string>
     <string name="about_check_download_failed">Ukukhuphela akuphumelelanga</string>
     <string name="notifications_clear_all_title">Sula zonke izaziso?</string>

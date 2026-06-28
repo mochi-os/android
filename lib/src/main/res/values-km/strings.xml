@@ -243,6 +243,7 @@
     <string name="about_version">កំណែ %1$s</string>
     <string name="about_check_updates">ពិនិត្យរកការធ្វើបច្ចុប្បន្នភាព</string>
     <string name="about_up_to_date">ថ្មីបំផុត</string>
+    <string name="about_check_downloading">កំណែ %1$s មាន កំពុងទាញយក…</string>
     <string name="about_check_network_error">មិនអាចភ្ជាប់ទៅម៉ាស៊ីនមេធ្វើបច្ចុប្បន្នភាពបានទេ</string>
     <string name="about_check_download_failed">ការទាញយកបានបរាជ័យ</string>
     <string name="notifications_clear_all_title">សម្អាតការជូនដំណឹងទាំងអស់?</string>

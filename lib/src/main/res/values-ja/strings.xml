@@ -243,6 +243,7 @@
     <string name="about_version">バージョン %1$s</string>
     <string name="about_check_updates">アップデートを確認</string>
     <string name="about_up_to_date">最新です</string>
+    <string name="about_check_downloading">バージョン %1$s が利用可能、ダウンロード中…</string>
     <string name="about_check_network_error">アップデートサーバーに接続できませんでした</string>
     <string name="about_check_download_failed">ダウンロードに失敗しました</string>
     <string name="notifications_clear_all_title">すべての通知を消去しますか?</string>

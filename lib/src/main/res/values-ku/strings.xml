@@ -243,6 +243,7 @@
     <string name="about_version">Guherto %1$s</string>
     <string name="about_check_updates">Li nûvekirinan bigere</string>
     <string name="about_up_to_date">Nûjen e</string>
+    <string name="about_check_downloading">Guhertoya %1$s heye, tê daxistin…</string>
     <string name="about_check_network_error">Nekarî bigihîje servera nûvekirinê</string>
     <string name="about_check_download_failed">Daxistin têk çû</string>
     <string name="notifications_clear_all_title">Hemû agahdarî bên paqijkirin?</string>

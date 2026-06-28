@@ -243,6 +243,7 @@
     <string name="about_version">Phiên bản %1$s</string>
     <string name="about_check_updates">Kiểm tra cập nhật</string>
     <string name="about_up_to_date">Đã là phiên bản mới nhất</string>
+    <string name="about_check_downloading">Đã có phiên bản %1$s, đang tải xuống…</string>
     <string name="about_check_network_error">Không thể kết nối tới máy chủ cập nhật</string>
     <string name="about_check_download_failed">Tải xuống thất bại</string>
     <string name="notifications_clear_all_title">Xóa tất cả thông báo?</string>

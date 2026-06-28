@@ -243,6 +243,7 @@
     <string name="about_version">Versija %1$s</string>
     <string name="about_check_updates">Pārbaudīt atjauninājumus</string>
     <string name="about_up_to_date">Aktuāls</string>
+    <string name="about_check_downloading">Versija %1$s pieejama, lejupielādē…</string>
     <string name="about_check_network_error">Neizdevās sasniegt atjauninājumu serveri</string>
     <string name="about_check_download_failed">Lejupielāde neizdevās</string>
     <string name="notifications_clear_all_title">Notīrīt visus paziņojumus?</string>

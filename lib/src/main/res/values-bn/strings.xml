@@ -242,6 +242,7 @@
     <string name="about_version">সংস্করণ %1$s</string>
     <string name="about_check_updates">আপডেট খুঁজুন</string>
     <string name="about_up_to_date">হালনাগাদ আছে</string>
+    <string name="about_check_downloading">সংস্করণ %1$s উপলব্ধ, ডাউনলোড হচ্ছে…</string>
     <string name="about_check_network_error">আপডেট সার্ভারে পৌঁছানো যায়নি</string>
     <string name="about_check_download_failed">ডাউনলোড ব্যর্থ হয়েছে</string>
     <string name="notifications_clear_all_title">সব বিজ্ঞপ্তি মুছবেন?</string>

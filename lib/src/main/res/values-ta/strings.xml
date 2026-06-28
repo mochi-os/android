@@ -243,6 +243,7 @@
     <string name="about_version">பதிப்பு %1$s</string>
     <string name="about_check_updates">புதுப்பிப்புகளைச் சரிபார்க்கவும்</string>
     <string name="about_up_to_date">புதுப்பித்த நிலையில் உள்ளது</string>
+    <string name="about_check_downloading">பதிப்பு %1$s கிடைக்கிறது, பதிவிறக்குகிறது…</string>
     <string name="about_check_network_error">புதுப்பிப்பு சேவையகத்தை அடைய முடியவில்லை</string>
     <string name="about_check_download_failed">பதிவிறக்கம் தோல்வியடைந்தது</string>
     <string name="notifications_clear_all_title">அனைத்து அறிவிப்புகளையும் அழிக்கவா?</string>

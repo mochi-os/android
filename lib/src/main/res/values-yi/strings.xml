@@ -243,6 +243,7 @@
     <string name="about_version">ווערסיע %1$s</string>
     <string name="about_check_updates">זוכט אויפדאַטירונגען</string>
     <string name="about_up_to_date">אויפן נייַעסטן</string>
+    <string name="about_check_downloading">ווערסיע %1$s פֿאַראַן, אַראָפּלאָדן…</string>
     <string name="about_check_network_error">האָט נישט געקענט דערגרייכן דעם אויפדאַטירונג סערווער</string>
     <string name="about_check_download_failed">אַראָפּלאָדן איז דורכגעפאַלן</string>
     <string name="notifications_clear_all_title">באַזייטיקט אַלע מעלדונגען?</string>

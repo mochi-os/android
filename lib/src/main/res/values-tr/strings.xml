@@ -243,6 +243,7 @@
     <string name="about_version">Sürüm %1$s</string>
     <string name="about_check_updates">Güncellemeleri denetle</string>
     <string name="about_up_to_date">Güncel</string>
+    <string name="about_check_downloading">%1$s sürümü mevcut, indiriliyor…</string>
     <string name="about_check_network_error">Güncelleme sunucusuna ulaşılamadı</string>
     <string name="about_check_download_failed">İndirme başarısız oldu</string>
     <string name="notifications_clear_all_title">Tüm bildirimler temizlensin mi?</string>

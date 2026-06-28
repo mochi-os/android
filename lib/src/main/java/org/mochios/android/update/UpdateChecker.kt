@@ -8,13 +8,20 @@ package org.mochios.android.update
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
+import androidx.work.Constraints
 import androidx.work.CoroutineWorker
 import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.ExistingWorkPolicy
+import androidx.work.NetworkType
+import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -53,6 +60,8 @@ class UpdateChecker(
     companion object {
         private const val TAG = "MochiUpdateCheck"
         private const val WORK_NAME = "mochi_update_check"
+        // One-shot background download kicked off by the About dialog's button.
+        private const val ONESHOT_WORK = "mochi_update_check_oneshot"
         const val PREFS = "mochi_update"
         const val KEY_PENDING = "pending_version"
         const val KEY_PENDING_PATH = "pending_path"
@@ -93,10 +102,70 @@ class UpdateChecker(
         }
 
         /**
-         * Run one check-and-stage cycle inline (no WorkManager). Same logic
-         * the periodic worker uses; callable from a Compose coroutine so the
-         * About dialog's button can show fresh status without waiting for the
-         * next scheduled fire. Idempotent and safe to call from any context.
+         * Fast on-demand check for the About dialog's "Check for updates" button.
+         * Polls ONLY versions.json (never the ~40 MB APK, which would block the
+         * button — and on mobile data spin for minutes), reports whether a newer
+         * version exists, and when one does that isn't downloaded yet, kicks off
+         * a resumable WorkManager download in the background and returns at once.
+         * The caller renders the status and, on [UpdateStatus.Ready], prompts the
+         * installer; on [UpdateStatus.Downloading] it can [awaitOneShotDownload].
+         */
+        suspend fun checkForUpdate(context: Context): UpdateStatus = withContext(Dispatchers.IO) {
+            val ctx = context.applicationContext
+            if (InstallSource.isStoreInstalled(ctx)) return@withContext UpdateStatus.UpToDate
+            val current = currentVersionName(ctx) ?: return@withContext UpdateStatus.UpToDate
+            val latest = try {
+                fetchLatest()
+            } catch (e: Exception) {
+                Log.i(TAG, "Fetch versions.json failed: ${e.message}")
+                return@withContext UpdateStatus.Offline
+            } ?: return@withContext UpdateStatus.UpToDate
+            if (compareVersions(latest, current) <= 0) {
+                clearPending(ctx)
+                return@withContext UpdateStatus.UpToDate
+            }
+            // KEY_PENDING is only written after a complete download, so it == latest
+            // means the APK is fully staged and ready to install right now.
+            val target = apkFile(ctx, latest)
+            val pending = prefs(ctx).getString(KEY_PENDING, "") ?: ""
+            if (pending == latest && target.exists() && target.length() > 0) {
+                return@withContext UpdateStatus.Ready(latest)
+            }
+            enqueueOneShotDownload(ctx)
+            UpdateStatus.Downloading(latest)
+        }
+
+        private fun enqueueOneShotDownload(context: Context) {
+            val request = OneTimeWorkRequestBuilder<UpdateChecker>()
+                .setConstraints(
+                    Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
+                )
+                .build()
+            // KEEP: repeated taps (or an in-flight daily check) don't stack downloads.
+            WorkManager.getInstance(context).enqueueUniqueWork(
+                ONESHOT_WORK, ExistingWorkPolicy.KEEP, request,
+            )
+        }
+
+        /**
+         * Suspend until the background download reaches a terminal state; true if
+         * it staged an APK. Cancellation-safe — the dialog can stop awaiting when
+         * dismissed and the download keeps running (the next foreground entry's
+         * [UpdateInstaller.promptIfPending] still catches it).
+         */
+        suspend fun awaitOneShotDownload(context: Context): Boolean {
+            val info = WorkManager.getInstance(context.applicationContext)
+                .getWorkInfosForUniqueWorkFlow(ONESHOT_WORK)
+                .map { it.firstOrNull() }
+                .first { it != null && it.state.isFinished }
+            return info?.state == WorkInfo.State.SUCCEEDED
+        }
+
+        /**
+         * Run one check-and-stage cycle inline (no WorkManager). The full path —
+         * version poll AND the resumable APK download — used by the periodic and
+         * one-shot workers via [doWork]. Heavy: not for the UI thread's button
+         * (that uses [checkForUpdate]); kept callable directly for the workers.
          *
          * Wrapped in Dispatchers.IO so callers can invoke from the main
          * dispatcher (the dialog uses rememberCoroutineScope, which is Main)
@@ -307,13 +376,24 @@ class UpdateChecker(
 }
 
 /**
- * Outcome of one [UpdateChecker.checkNow] cycle. The About dialog renders
- * different status text per outcome; the worker just maps these to
- * Result.success / Result.retry.
+ * Outcome of one [UpdateChecker.checkNow] cycle (the worker's full check +
+ * download). The worker maps these to Result.success / Result.retry.
  */
 enum class CheckOutcome {
     UpToDate,
     UpdateStaged,
     NetworkError,
     DownloadFailed,
+}
+
+/** Outcome of an on-demand [UpdateChecker.checkForUpdate], for the About dialog. */
+sealed interface UpdateStatus {
+    /** Already on the latest version (or store-managed). */
+    data object UpToDate : UpdateStatus
+    /** Couldn't reach the version endpoint. */
+    data object Offline : UpdateStatus
+    /** Newer [version] is already downloaded and ready to install. */
+    data class Ready(val version: String) : UpdateStatus
+    /** Newer [version] found and now downloading in the background. */
+    data class Downloading(val version: String) : UpdateStatus
 }

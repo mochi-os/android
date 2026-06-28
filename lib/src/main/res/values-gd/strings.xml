@@ -244,6 +244,7 @@
     <string name="about_version">Tionndadh %1$s</string>
     <string name="about_check_updates">Thoir sùil airson ùrachaidhean</string>
     <string name="about_up_to_date">Cho ùr \'s a ghabhas</string>
+    <string name="about_check_downloading">Tha tionndadh %1$s ri làimh, ’ga luchdadh a-nuas…</string>
     <string name="about_check_network_error">Cha b\' urrainn ruigsinn air an fhrithealaiche ùrachaidh</string>
     <string name="about_check_download_failed">Dh\'fhàillig an luchdadh a-nuas</string>
     <string name="notifications_clear_all_title">A bheil thu airson gach brath fhalmhachadh?</string>

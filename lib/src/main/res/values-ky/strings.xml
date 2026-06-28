@@ -243,6 +243,7 @@
     <string name="about_version">Версия %1$s</string>
     <string name="about_check_updates">Жаңыртууларды текшерүү</string>
     <string name="about_up_to_date">Жаңыртылган</string>
+    <string name="about_check_downloading">%1$s версиясы жеткиликтүү, жүктөлүүдө…</string>
     <string name="about_check_network_error">Жаңыртуу серверине жетүү мүмкүн болбоду</string>
     <string name="about_check_download_failed">Жүктөп алуу ишке ашкан жок</string>
     <string name="notifications_clear_all_title">Бардык билдирүүлөр тазалансынбы?</string>

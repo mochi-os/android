@@ -243,6 +243,7 @@
     <string name="about_version">Vérsi %1$s</string>
     <string name="about_check_updates">Pariksa apdet</string>
     <string name="about_up_to_date">Énggal kénéh</string>
+    <string name="about_check_downloading">Vérsi %1$s sayagi, ngundeur…</string>
     <string name="about_check_network_error">Teu tiasa nyambung ka server apdet</string>
     <string name="about_check_download_failed">Unduhan gagal</string>
     <string name="notifications_clear_all_title">Bersihan sadaya béwara?</string>

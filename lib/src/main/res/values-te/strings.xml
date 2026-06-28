@@ -243,6 +243,7 @@
     <string name="about_version">వెర్షన్ %1$s</string>
     <string name="about_check_updates">నవీకరణల కోసం తనిఖీ చేయండి</string>
     <string name="about_up_to_date">తాజాగా ఉంది</string>
+    <string name="about_check_downloading">వెర్షన్ %1$s అందుబాటులో ఉంది, డౌన్‌లోడ్ అవుతోంది…</string>
     <string name="about_check_network_error">నవీకరణ సర్వర్‌ను చేరుకోలేకపోయింది</string>
     <string name="about_check_download_failed">డౌన్‌లోడ్ విఫలమైంది</string>
     <string name="notifications_clear_all_title">అన్ని నోటిఫికేషన్‌లను క్లియర్ చేయాలా?</string>

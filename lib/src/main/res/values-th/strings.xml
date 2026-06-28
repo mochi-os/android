@@ -243,6 +243,7 @@
     <string name="about_version">เวอร์ชัน %1$s</string>
     <string name="about_check_updates">ตรวจหาการอัปเดต</string>
     <string name="about_up_to_date">เป็นเวอร์ชันล่าสุดแล้ว</string>
+    <string name="about_check_downloading">เวอร์ชัน %1$s พร้อมใช้งาน กำลังดาวน์โหลด…</string>
     <string name="about_check_network_error">ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์อัปเดตได้</string>
     <string name="about_check_download_failed">ดาวน์โหลดล้มเหลว</string>
     <string name="notifications_clear_all_title">ล้างการแจ้งเตือนทั้งหมด?</string>

@@ -244,6 +244,7 @@
     <string name="about_version">Versión %1$s</string>
     <string name="about_check_updates">Buscar actualizaciones</string>
     <string name="about_up_to_date">Actualizado</string>
+    <string name="about_check_downloading">Versión %1$s disponible, descargando…</string>
     <string name="about_check_network_error">No se pudo conectar al servidor de actualizaciones</string>
     <string name="about_check_download_failed">Error al descargar</string>
     <string name="notifications_clear_all_title">¿Borrar todas las notificaciones?</string>

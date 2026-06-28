@@ -242,6 +242,7 @@
     <string name="about_version">संस्करण %1$s</string>
     <string name="about_check_updates">अपडेट खोजीं</string>
     <string name="about_up_to_date">अद्यतन बा</string>
+    <string name="about_check_downloading">वर्जन %1$s उपलब्ध बा, डाउनलोड हो रहल बा…</string>
     <string name="about_check_network_error">अपडेट सर्वर ले नइखे पहुँचल जा सकत</string>
     <string name="about_check_download_failed">डाउनलोड विफल भइल</string>
     <string name="notifications_clear_all_title">सब सूचना मिटाईं?</string>

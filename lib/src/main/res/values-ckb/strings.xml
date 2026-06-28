@@ -242,6 +242,7 @@
     <string name="about_version">وەشانی %1$s</string>
     <string name="about_check_updates">پشکنینی نوێکردنەوەکان</string>
     <string name="about_up_to_date">نوێترین وەشان</string>
+    <string name="about_check_downloading">وەشانی %1$s بەردەستە، داگرتن…</string>
     <string name="about_check_network_error">نەتوانرا بگاتە سێرڤەری نوێکردنەوە</string>
     <string name="about_check_download_failed">داگرتن سەرکەوتوو نەبوو</string>
     <string name="notifications_clear_all_title">هەموو ئاگادارکردنەوەکان بسڕیتەوە؟</string>

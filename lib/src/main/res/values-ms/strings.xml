@@ -243,6 +243,7 @@
     <string name="about_version">Versi %1$s</string>
     <string name="about_check_updates">Semak kemas kini</string>
     <string name="about_up_to_date">Terkini</string>
+    <string name="about_check_downloading">Versi %1$s tersedia, memuat turun…</string>
     <string name="about_check_network_error">Tidak dapat menghubungi pelayan kemas kini</string>
     <string name="about_check_download_failed">Muat turun gagal</string>
     <string name="notifications_clear_all_title">Kosongkan semua pemberitahuan?</string>

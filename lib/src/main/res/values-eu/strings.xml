@@ -244,6 +244,7 @@
     <string name="about_version">%1$s bertsioa</string>
     <string name="about_check_updates">Egiaztatu eguneraketak</string>
     <string name="about_up_to_date">Egunean</string>
+    <string name="about_check_downloading">%1$s bertsioa eskuragarri, deskargatzen…</string>
     <string name="about_check_network_error">Ezin izan da eguneraketa-zerbitzarira iritsi</string>
     <string name="about_check_download_failed">Deskargak huts egin du</string>
     <string name="notifications_clear_all_title">Jakinarazpen guztiak garbitu?</string>

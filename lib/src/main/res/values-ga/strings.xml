@@ -244,6 +244,7 @@
     <string name="about_version">Leagan %1$s</string>
     <string name="about_check_updates">Seiceáil le haghaidh nuashonruithe</string>
     <string name="about_up_to_date">Cothrom le dáta</string>
+    <string name="about_check_downloading">Tá leagan %1$s ar fáil, á íoslódáil…</string>
     <string name="about_check_network_error">Níorbh fhéidir teagmháil a dhéanamh leis an bhfreastalaí nuashonraithe</string>
     <string name="about_check_download_failed">Theip ar an íoslódáil</string>
     <string name="notifications_clear_all_title">Glan gach fógra?</string>

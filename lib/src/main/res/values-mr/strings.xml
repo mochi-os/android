@@ -243,6 +243,7 @@
     <string name="about_version">आवृत्ती %1$s</string>
     <string name="about_check_updates">अद्यतनांसाठी तपासा</string>
     <string name="about_up_to_date">अद्ययावत आहे</string>
+    <string name="about_check_downloading">आवृत्ती %1$s उपलब्ध आहे, डाउनलोड होत आहे…</string>
     <string name="about_check_network_error">अद्यतन सर्व्हरपर्यंत पोहोचू शकलो नाही</string>
     <string name="about_check_download_failed">डाउनलोड अयशस्वी</string>
     <string name="notifications_clear_all_title">सर्व सूचना साफ करायच्या?</string>

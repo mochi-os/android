@@ -243,6 +243,7 @@
     <string name="about_version">Хувилбар %1$s</string>
     <string name="about_check_updates">Шинэчлэлт шалгах</string>
     <string name="about_up_to_date">Шинэчлэгдсэн</string>
+    <string name="about_check_downloading">%1$s хувилбар боломжтой, татаж байна…</string>
     <string name="about_check_network_error">Шинэчлэлтийн серверт холбогдож чадсангүй</string>
     <string name="about_check_download_failed">Татаж авч чадсангүй</string>
     <string name="notifications_clear_all_title">Бүх мэдэгдлийг арилгах уу?</string>

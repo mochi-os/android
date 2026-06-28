@@ -244,6 +244,7 @@
     <string name="about_version">Versio %1$s</string>
     <string name="about_check_updates">Tarkista päivitykset</string>
     <string name="about_up_to_date">Ajan tasalla</string>
+    <string name="about_check_downloading">Versio %1$s saatavilla, ladataan…</string>
     <string name="about_check_network_error">Päivityspalvelimeen ei saatu yhteyttä</string>
     <string name="about_check_download_failed">Lataus epäonnistui</string>
     <string name="notifications_clear_all_title">Tyhjennetäänkö kaikki ilmoitukset?</string>

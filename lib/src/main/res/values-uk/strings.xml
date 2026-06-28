@@ -243,6 +243,7 @@
     <string name="about_version">Версія %1$s</string>
     <string name="about_check_updates">Перевірити оновлення</string>
     <string name="about_up_to_date">Актуальна версія</string>
+    <string name="about_check_downloading">Версія %1$s доступна, завантаження…</string>
     <string name="about_check_network_error">Не вдалося звʼязатися із сервером оновлень</string>
     <string name="about_check_download_failed">Не вдалося завантажити</string>
     <string name="notifications_clear_all_title">Очистити всі сповіщення?</string>

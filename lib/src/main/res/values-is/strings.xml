@@ -243,6 +243,7 @@
     <string name="about_version">Útgáfa %1$s</string>
     <string name="about_check_updates">Leita að uppfærslum</string>
     <string name="about_up_to_date">Allt uppfært</string>
+    <string name="about_check_downloading">Útgáfa %1$s er tiltæk, sæki…</string>
     <string name="about_check_network_error">Náðist ekki samband við uppfærsluþjón</string>
     <string name="about_check_download_failed">Niðurhal mistókst</string>
     <string name="notifications_clear_all_title">Hreinsa allar tilkynningar?</string>

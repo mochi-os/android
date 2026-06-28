@@ -243,6 +243,7 @@
     <string name="about_version">Versjon %1$s</string>
     <string name="about_check_updates">Sjå etter oppdateringar</string>
     <string name="about_up_to_date">Oppdatert</string>
+    <string name="about_check_downloading">Versjon %1$s er tilgjengeleg, lastar ned…</string>
     <string name="about_check_network_error">Nådde ikkje oppdateringstenaren</string>
     <string name="about_check_download_failed">Nedlasting feila</string>
     <string name="notifications_clear_all_title">Fjerne alle varslingar?</string>

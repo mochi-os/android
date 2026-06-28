@@ -244,6 +244,7 @@
     <string name="about_version">Sigar %1$s</string>
     <string name="about_check_updates">Duba sabuntawa</string>
     <string name="about_up_to_date">Yana nan a kwanannan</string>
+    <string name="about_check_downloading">Sigar %1$s na samuwa, ana sauke…</string>
     <string name="about_check_network_error">An kasa isa ga sabar sabuntawa</string>
     <string name="about_check_download_failed">Sauke ya gaza</string>
     <string name="notifications_clear_all_title">A share dukkan sanarwa?</string>

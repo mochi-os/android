@@ -152,6 +152,7 @@
     <string name="about_version">Versió %1$s</string>
     <string name="about_check_updates">Comprova si hi ha actualitzacions</string>
     <string name="about_up_to_date">Al dia</string>
+    <string name="about_check_downloading">Versió %1$s disponible, baixant…</string>
     <string name="about_check_network_error">No s\'ha pogut connectar amb el servidor d\'actualitzacions</string>
     <string name="about_check_download_failed">La descàrrega ha fallat</string>
     <string name="notifications_clear_all_title">Voleu esborrar totes les notificacions?</string>

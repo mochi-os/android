@@ -243,6 +243,7 @@
     <string name="about_version">Versi %1$s</string>
     <string name="about_check_updates">Periksa pembaruan</string>
     <string name="about_up_to_date">Versi terbaru</string>
+    <string name="about_check_downloading">Versi %1$s tersedia, mengunduh…</string>
     <string name="about_check_network_error">Tidak dapat menjangkau server pembaruan</string>
     <string name="about_check_download_failed">Unduhan gagal</string>
     <string name="notifications_clear_all_title">Hapus semua notifikasi?</string>

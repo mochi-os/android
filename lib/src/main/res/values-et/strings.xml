@@ -244,6 +244,7 @@
     <string name="about_version">Versioon %1$s</string>
     <string name="about_check_updates">Otsi uuendusi</string>
     <string name="about_up_to_date">Ajakohane</string>
+    <string name="about_check_downloading">Versioon %1$s on saadaval, allalaadimine…</string>
     <string name="about_check_network_error">Uuendusserveriga ei õnnestunud ühendust luua</string>
     <string name="about_check_download_failed">Allalaadimine ebaõnnestus</string>
     <string name="notifications_clear_all_title">Kustutada kõik teavitused?</string>

@@ -226,6 +226,7 @@
     <string name="about_close">Close</string>
     <string name="about_check_updates">Check for updates</string>
     <string name="about_up_to_date">Up to date</string>
+    <string name="about_check_downloading">Version %1$s available, downloading…</string>
     <string name="about_check_network_error">Couldn\'t reach update server</string>
     <string name="about_check_download_failed">Download failed</string>
 

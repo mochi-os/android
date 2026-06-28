@@ -244,6 +244,7 @@
     <string name="about_version">Տարբերակ %1$s</string>
     <string name="about_check_updates">Ստուգել թարմացումները</string>
     <string name="about_up_to_date">Արդիական է</string>
+    <string name="about_check_downloading">%1$s տարբերակը հասանելի է, ներբեռնում…</string>
     <string name="about_check_network_error">Չհաջողվեց կապվել թարմացման սերվերի հետ</string>
     <string name="about_check_download_failed">Ներբեռնումը ձախողվեց</string>
     <string name="notifications_clear_all_title">Մաքրե՞լ բոլոր ծանուցումները։</string>

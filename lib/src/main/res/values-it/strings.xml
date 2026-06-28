@@ -243,6 +243,7 @@
     <string name="about_version">Versione %1$s</string>
     <string name="about_check_updates">Verifica aggiornamenti</string>
     <string name="about_up_to_date">Aggiornato</string>
+    <string name="about_check_downloading">Versione %1$s disponibile, download in corso…</string>
     <string name="about_check_network_error">Impossibile raggiungere il server degli aggiornamenti</string>
     <string name="about_check_download_failed">Download non riuscito</string>
     <string name="notifications_clear_all_title">Cancellare tutte le notifiche?</string>

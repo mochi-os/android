@@ -243,6 +243,7 @@
     <string name="about_version">Verżjoni %1$s</string>
     <string name="about_check_updates">Iċċekkja għal aġġornamenti</string>
     <string name="about_up_to_date">Aġġornat</string>
+    <string name="about_check_downloading">Verżjoni %1$s disponibbli, tniżżel…</string>
     <string name="about_check_network_error">Ma rnexxiex jilħaq is-server tal-aġġornamenti</string>
     <string name="about_check_download_failed">It-tniżżil falla</string>
     <string name="notifications_clear_all_title">Tnaddaf in-notifiki kollha?</string>

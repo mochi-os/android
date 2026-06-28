@@ -244,6 +244,7 @@
     <string name="about_version">આવૃત્તિ %1$s</string>
     <string name="about_check_updates">અપડેટ્સ માટે તપાસો</string>
     <string name="about_up_to_date">અદ્યતન છે</string>
+    <string name="about_check_downloading">સંસ્કરણ %1$s ઉપલબ્ધ છે, ડાઉનલોડ થઈ રહ્યું છે…</string>
     <string name="about_check_network_error">અપડેટ સર્વર સુધી પહોંચી શકાયું નહીં</string>
     <string name="about_check_download_failed">ડાઉનલોડ નિષ્ફળ ગયું</string>
     <string name="notifications_clear_all_title">બધી સૂચનાઓ સાફ કરવી છે?</string>

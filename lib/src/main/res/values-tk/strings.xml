@@ -243,6 +243,7 @@
     <string name="about_version">Wersiýa %1$s</string>
     <string name="about_check_updates">Täzelenmeleri barla</string>
     <string name="about_up_to_date">Iň soňky wersiýa</string>
+    <string name="about_check_downloading">%1$s wersiýasy elýeterli, ýüklenýär…</string>
     <string name="about_check_network_error">Täzeleniş serweri elýeterli däl</string>
     <string name="about_check_download_failed">Ýükläp almak başartmady</string>
     <string name="notifications_clear_all_title">Ähli bildirişleri arassalamalymy?</string>

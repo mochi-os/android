@@ -196,6 +196,7 @@
     <string name="about_version">版本 %1$s</string>
     <string name="about_check_updates">檢查更新</string>
     <string name="about_up_to_date">已係最新版本</string>
+    <string name="about_check_downloading">版本 %1$s 可用，下載緊…</string>
     <string name="about_check_network_error">無法連接更新伺服器</string>
     <string name="about_check_download_failed">下載失敗</string>
     <string name="notifications_empty">冇通知</string>
