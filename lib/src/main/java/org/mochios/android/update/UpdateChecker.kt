@@ -15,14 +15,10 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import androidx.work.workDataOf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -54,12 +50,7 @@ class UpdateChecker(
 ) : CoroutineWorker(context, params) {
 
     override suspend fun doWork(): Result =
-        when (checkNow(applicationContext) { downloaded, total ->
-            // Publish download progress so an observing UI (the About dialog)
-            // can render a determinate bar. Fire-and-forget — the okio read
-            // loop that calls this isn't a suspend context.
-            setProgressAsync(workDataOf(PROGRESS_DOWNLOADED to downloaded, PROGRESS_TOTAL to total))
-        }) {
+        when (checkNow(applicationContext)) {
             CheckOutcome.UpToDate, CheckOutcome.UpdateStaged -> Result.success()
             CheckOutcome.NetworkError, CheckOutcome.DownloadFailed -> Result.retry()
         }
@@ -67,11 +58,9 @@ class UpdateChecker(
     companion object {
         private const val TAG = "MochiUpdateCheck"
         private const val WORK_NAME = "mochi_update_check"
-        // One-shot background download kicked off by the About dialog's button.
+        // Background download used to finish an update if the dialog is closed
+        // mid-download (the foreground inline path is the primary one).
         private const val ONESHOT_WORK = "mochi_update_check_oneshot"
-        // WorkInfo progress keys (bytes downloaded / total) for the dialog's bar.
-        const val PROGRESS_DOWNLOADED = "downloaded"
-        const val PROGRESS_TOTAL = "total"
         const val PREFS = "mochi_update"
         const val KEY_PENDING = "pending_version"
         const val KEY_PENDING_PATH = "pending_path"
@@ -114,11 +103,12 @@ class UpdateChecker(
         /**
          * Fast on-demand check for the About dialog's "Check for updates" button.
          * Polls ONLY versions.json (never the ~40 MB APK, which would block the
-         * button — and on mobile data spin for minutes), reports whether a newer
-         * version exists, and when one does that isn't downloaded yet, kicks off
-         * a resumable WorkManager download in the background and returns at once.
-         * The caller renders the status and, on [UpdateStatus.Ready], prompts the
-         * installer; on [UpdateStatus.Downloading] it can [awaitOneShotDownload].
+         * button) and reports whether a newer version exists. The actual download
+         * is left to the caller so it can run it in the FOREGROUND with live
+         * progress: a WorkManager background job's network is throttled as
+         * background data on many phones (slow even on fast wifi), so the dialog
+         * downloads inline via [checkNow] instead. On [UpdateStatus.Ready] the APK
+         * is already staged; on [UpdateStatus.Available] the caller downloads it.
          */
         suspend fun checkForUpdate(context: Context): UpdateStatus = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
@@ -141,11 +131,16 @@ class UpdateChecker(
             if (pending == latest && target.exists() && target.length() > 0) {
                 return@withContext UpdateStatus.Ready(latest)
             }
-            enqueueOneShotDownload(ctx)
-            UpdateStatus.Downloading(latest)
+            UpdateStatus.Available(latest)
         }
 
-        private fun enqueueOneShotDownload(context: Context) {
+        /**
+         * Continue the APK download in the background (resuming any partial).
+         * The dialog calls this only when it's dismissed mid-download, so the
+         * foreground inline download isn't simply abandoned — the next time the
+         * app comes forward, [UpdateInstaller.promptIfPending] offers to install.
+         */
+        fun enqueueBackgroundDownload(context: Context) {
             val request = OneTimeWorkRequestBuilder<UpdateChecker>()
                 .setConstraints(
                     Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
@@ -158,40 +153,17 @@ class UpdateChecker(
         }
 
         /**
-         * Suspend until the background download reaches a terminal state; true if
-         * it staged an APK. Cancellation-safe — the dialog can stop awaiting when
-         * dismissed and the download keeps running (the next foreground entry's
-         * [UpdateInstaller.promptIfPending] still catches it).
-         */
-        suspend fun awaitOneShotDownload(context: Context): Boolean {
-            val info = WorkManager.getInstance(context.applicationContext)
-                .getWorkInfosForUniqueWorkFlow(ONESHOT_WORK)
-                .map { it.firstOrNull() }
-                .first { it != null && it.state.isFinished }
-            return info?.state == WorkInfo.State.SUCCEEDED
-        }
-
-        /**
-         * Live WorkInfo for the one-shot background download (null until it's
-         * enqueued). The dialog reads [WorkInfo.progress] — PROGRESS_DOWNLOADED /
-         * PROGRESS_TOTAL — to render a determinate progress bar.
-         */
-        fun observeOneShotDownload(context: Context): kotlinx.coroutines.flow.Flow<WorkInfo?> =
-            WorkManager.getInstance(context.applicationContext)
-                .getWorkInfosForUniqueWorkFlow(ONESHOT_WORK)
-                .map { it.firstOrNull() }
-
-        /**
          * Run one check-and-stage cycle inline (no WorkManager). The full path —
-         * version poll AND the resumable APK download — used by the periodic and
-         * one-shot workers via [doWork]. Heavy: not for the UI thread's button
-         * (that uses [checkForUpdate]); kept callable directly for the workers.
+         * version poll AND the resumable APK download (reporting [onProgress]) —
+         * used by the periodic worker via [doWork] AND by the About dialog, which
+         * runs it in the foreground for full-speed download with a live progress
+         * bar.
          *
-         * Wrapped in Dispatchers.IO so callers can invoke from the main
-         * dispatcher (the dialog uses rememberCoroutineScope, which is Main)
-         * without tripping NetworkOnMainThreadException — OkHttp's
-         * synchronous execute() is blocking. CoroutineWorker.doWork runs
-         * off-main on its own, but this entry point may not.
+         * Heavy (blocking IO), so wrapped in Dispatchers.IO — callers can invoke
+         * from the main dispatcher (the dialog uses rememberCoroutineScope, which
+         * is Main) without tripping NetworkOnMainThreadException; OkHttp's
+         * synchronous execute() is blocking. CoroutineWorker.doWork runs off-main
+         * on its own, but this entry point may not.
          */
         suspend fun checkNow(
             context: Context,
@@ -441,6 +413,6 @@ sealed interface UpdateStatus {
     data object Offline : UpdateStatus
     /** Newer [version] is already downloaded and ready to install. */
     data class Ready(val version: String) : UpdateStatus
-    /** Newer [version] found and now downloading in the background. */
-    data class Downloading(val version: String) : UpdateStatus
+    /** Newer [version] is available; the caller should download it. */
+    data class Available(val version: String) : UpdateStatus
 }

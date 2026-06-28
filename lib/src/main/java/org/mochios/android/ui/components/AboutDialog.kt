@@ -32,10 +32,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.work.WorkInfo
-import kotlinx.coroutines.flow.takeWhile
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import org.mochios.android.R
+import org.mochios.android.update.CheckOutcome
 import org.mochios.android.update.UpdateChecker
 import org.mochios.android.update.UpdateInstaller
 import org.mochios.android.update.UpdateStatus
@@ -103,29 +103,29 @@ fun AboutDialog(onDismiss: () -> Unit) {
                                     is UpdateStatus.UpToDate -> state = CheckUi.UpToDate
                                     is UpdateStatus.Offline -> state = CheckUi.Offline
                                     is UpdateStatus.Ready -> promptInstall()
-                                    is UpdateStatus.Downloading -> {
+                                    is UpdateStatus.Available -> {
                                         state = CheckUi.Downloading(result.version, null)
-                                        // Reflect the background download's progress as a
-                                        // determinate bar until the work reaches a terminal
-                                        // state…
-                                        UpdateChecker.observeOneShotDownload(context)
-                                            .takeWhile { it == null || !it.state.isFinished }
-                                            .collect { info ->
-                                                if (info?.state == WorkInfo.State.RUNNING) {
-                                                    val done = info.progress.getLong(UpdateChecker.PROGRESS_DOWNLOADED, 0L)
-                                                    val total = info.progress.getLong(UpdateChecker.PROGRESS_TOTAL, 0L)
-                                                    val pct = if (total > 0L) ((done * 100L) / total).toInt().coerceIn(0, 100) else null
-                                                    state = CheckUi.Downloading(result.version, pct)
-                                                }
+                                        // Download in the FOREGROUND so it runs at full
+                                        // network speed (a WorkManager background job's
+                                        // network is throttled as background data on many
+                                        // phones — slow even on fast wifi), updating the
+                                        // bar straight from the progress callback.
+                                        val outcome = try {
+                                            UpdateChecker.checkNow(context) { done, total ->
+                                                val pct = if (total > 0L) ((done * 100L) / total).toInt().coerceIn(0, 100) else null
+                                                state = CheckUi.Downloading(result.version, pct)
                                             }
-                                        // …then prompt to install the instant it stages.
-                                        // Closing the dialog cancels this; the download
-                                        // keeps running and the next foreground entry's
-                                        // promptIfPending still catches it.
-                                        if (UpdateChecker.awaitOneShotDownload(context)) {
-                                            promptInstall()
-                                        } else {
-                                            state = CheckUi.DownloadFailed
+                                        } catch (cancel: CancellationException) {
+                                            // Dialog closed mid-download — finish the
+                                            // partial in the background so it isn't lost.
+                                            UpdateChecker.enqueueBackgroundDownload(context)
+                                            throw cancel
+                                        }
+                                        when (outcome) {
+                                            CheckOutcome.UpdateStaged -> promptInstall()
+                                            CheckOutcome.UpToDate -> state = CheckUi.UpToDate
+                                            CheckOutcome.NetworkError -> state = CheckUi.Offline
+                                            CheckOutcome.DownloadFailed -> state = CheckUi.DownloadFailed
                                         }
                                     }
                                 }
