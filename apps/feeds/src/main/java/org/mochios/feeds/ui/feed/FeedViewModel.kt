@@ -47,6 +47,22 @@ sealed interface InterestFeedback {
 }
 
 /**
+ * One-shot side effect from a feed overflow-menu action, which the screen turns
+ * into a clipboard write, a toast, or navigation.
+ */
+sealed interface FeedActionEvent {
+
+    /** An RSS feed URL is ready for the screen to copy to the clipboard. */
+    data class RssUrlReady(val url: String) : FeedActionEvent
+
+    /** Unsubscribe succeeded; the screen should leave this feed. */
+    data object Unsubscribed : FeedActionEvent
+
+    /** An action failed; [error] carries the user-facing message. */
+    data class Failure(val error: MochiError?) : FeedActionEvent
+}
+
+/**
  * The post (and optional parent comment) the comment-composer bottom sheet is
  * targeting. [parentId] non-null means the sheet is composing a reply to that
  * comment; [parentName] is the author shown in the sheet's "Replying to…" line.
@@ -101,6 +117,10 @@ class FeedViewModel @Inject constructor(
     // One-shot interest-thumb feedback (boosted/reduced/removed, or the error).
     private val _interestFeedback = MutableSharedFlow<InterestFeedback>(extraBufferCapacity = 8)
     val interestFeedback: SharedFlow<InterestFeedback> = _interestFeedback.asSharedFlow()
+
+    // One-shot overflow-menu side effects (RSS URL ready, unsubscribed, errors).
+    private val _actionEvents = MutableSharedFlow<FeedActionEvent>(extraBufferCapacity = 4)
+    val actionEvents: SharedFlow<FeedActionEvent> = _actionEvents.asSharedFlow()
 
     private val _suggestedInterests = MutableStateFlow<List<InterestSuggestion>>(emptyList())
     val suggestedInterests: StateFlow<List<InterestSuggestion>> = _suggestedInterests.asStateFlow()
@@ -171,6 +191,47 @@ class FeedViewModel @Inject constructor(
         observePendingInterestSuggestions()
         viewModelScope.launch { savedRepository.load() }
         viewModelScope.launch { _currentUserId.value = sessionManager.getBoundIdentity() }
+    }
+
+    /**
+     * Generate an RSS feed URL for [mode] (`"posts"` or `"all"`) and hand it to
+     * the screen to copy to the clipboard. The "All feeds" aggregate uses the
+     * class-level RSS endpoint; a single feed uses its own.
+     */
+    fun copyRssUrl(mode: String) {
+        viewModelScope.launch {
+            try {
+                val url = if (isAllFeeds) {
+                    val token = repository.getRssToken("*", mode)
+                    "$serverUrl/feeds/-/rss?token=$token"
+                } else {
+                    val token = repository.getRssToken(feedId, mode)
+                    "$serverUrl/feeds/$feedId/-/rss?token=$token"
+                }
+                _actionEvents.emit(FeedActionEvent.RssUrlReady(url))
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
+    }
+
+    /** Unsubscribe the viewer from this feed, then signal the screen to leave it. */
+    fun unsubscribe() {
+        viewModelScope.launch {
+            try {
+                val feed = feedInfo.value
+                val ident = when {
+                    feed == null -> feedId
+                    feed.id.isNotEmpty() -> feed.id
+                    feed.fingerprint.isNotEmpty() -> feed.fingerprint
+                    else -> feedId
+                }
+                repository.unsubscribeFeed(ident)
+                _actionEvents.emit(FeedActionEvent.Unsubscribed)
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
     }
 
     // Show interest suggestions raised by a just-completed subscribe exactly

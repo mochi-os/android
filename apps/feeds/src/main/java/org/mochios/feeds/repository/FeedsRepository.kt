@@ -8,8 +8,11 @@ package org.mochios.feeds.repository
 import android.content.ContentResolver
 import android.net.Uri
 import com.google.gson.Gson
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -122,6 +125,12 @@ class FeedsRepository @Inject constructor(
         _pendingInterestSuggestion.value = null
     }
 
+    // Emits whenever the viewer's subscriptions change (subscribe/unsubscribe),
+    // so the feed-list drawer can reload even without a navigation that would
+    // otherwise recreate its ViewModel. Replay-less: only live collectors react.
+    private val _subscriptionChanges = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    val subscriptionChanges: SharedFlow<Unit> = _subscriptionChanges.asSharedFlow()
+
     fun getCachedPosts(feedId: String, sort: String?, tag: String?, unreadOnly: Boolean): PostListResult? {
         val cached = postCache[feedId] ?: return null
         if (System.currentTimeMillis() - cached.timestamp > cacheMaxAge) return null
@@ -199,6 +208,7 @@ class FeedsRepository @Inject constructor(
         try {
             // Server hint omitted from the request body for now.
             api.subscribe(SubscribeRequest(feed = feed)).unwrap()
+            _subscriptionChanges.emit(Unit)
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -208,6 +218,7 @@ class FeedsRepository @Inject constructor(
         try {
             // Server hint omitted from the request body for now.
             api.unsubscribe(UnsubscribeRequest(feed = feed)).unwrap()
+            _subscriptionChanges.emit(Unit)
         } catch (e: Exception) {
             throw e.toMochiError()
         }

@@ -41,6 +41,8 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.AutoAwesome
@@ -54,7 +56,6 @@ import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Refresh
@@ -208,6 +209,36 @@ fun FeedScreen(
     val interestRemoved = stringResource(R.string.feeds_interest_removed)
     val interestFailed = stringResource(R.string.feeds_interest_failed)
     val caughtUpMessage = stringResource(R.string.feeds_caught_up)
+    val rssCopiedMessage = stringResource(R.string.feeds_rss_url_copied)
+    val rssClipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
+    val unsubscribedMessage = stringResource(R.string.feeds_unsubscribed)
+    // Turn one-shot overflow-menu actions into a clipboard write, a toast, or a
+    // jump back to the "All feeds" aggregate after unsubscribing.
+    LaunchedEffect(Unit) {
+        viewModel.actionEvents.collect { event ->
+            when (event) {
+                is FeedActionEvent.RssUrlReady -> {
+                    val clipboard =
+                        context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                    clipboard.setPrimaryClip(
+                        ClipData.newPlainText(rssClipboardLabel, event.url)
+                    )
+                    Toast.makeText(context, rssCopiedMessage, Toast.LENGTH_SHORT).show()
+                }
+
+                is FeedActionEvent.Unsubscribed -> {
+                    Toast.makeText(context, unsubscribedMessage, Toast.LENGTH_SHORT).show()
+                    onSelectFeed(LastViewedStore.ALL)
+                }
+
+                is FeedActionEvent.Failure -> {
+                    event.error?.userMessage()?.let { message ->
+                        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+    }
     LaunchedEffect(Unit) {
         viewModel.interestFeedback.collectLatest { fb ->
             val msg = when (fb) {
@@ -259,6 +290,10 @@ fun FeedScreen(
 
 
     var showOverflowMenu by remember { mutableStateOf(false) }
+    // Whether the overflow menu is showing its nested "RSS feed" submenu.
+    var showRssSubmenu by remember { mutableStateOf(false) }
+    // True while the unsubscribe confirmation dialog is open.
+    var pendingUnsubscribe by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
     // Set once the viewer closes the one-shot post-subscribe suggestions prompt,
     // so it doesn't reopen while the suggestions are still being acted on.
@@ -455,7 +490,9 @@ fun FeedScreen(
                     onLogout()
                 },
                 headlineContent = { Text(stringResource(R.string.feeds_logout)) },
-                leadingContent = { Icon(Icons.Default.Logout, contentDescription = null) },
+                leadingContent = {
+                    Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null)
+                },
                 colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
@@ -508,77 +545,152 @@ fun FeedScreen(
                                 )
                             }
                         }
-                        if (permissions.manage) {
-                            Box {
-                                IconButton(onClick = { showOverflowMenu = true }) {
-                                    Icon(
-                                        Icons.Default.MoreVert,
-                                        contentDescription = stringResource(MochiR.string.common_more_options)
-                                    )
+                        Box {
+                            IconButton(onClick = { showOverflowMenu = true }) {
+                                Icon(
+                                    Icons.Default.MoreVert,
+                                    contentDescription = stringResource(MochiR.string.common_more_options)
+                                )
+                            }
+                            DropdownMenu(
+                                expanded = showOverflowMenu,
+                                onDismissRequest = {
+                                    showOverflowMenu = false
+                                    showRssSubmenu = false
                                 }
-                                DropdownMenu(
-                                    expanded = showOverflowMenu,
-                                    onDismissRequest = { showOverflowMenu = false }
-                                ) {
-                                    // Edit/delete act on the post currently in view;
-                                    // its feed comes from the post (cards span feeds
-                                    // in the all-feeds aggregate).
-                                    val currentPost = posts.getOrNull(pagerState.currentPage)
-                                    if (currentPost != null) {
-                                        val postFeedId = currentPost.feedFingerprint
-                                            .ifEmpty { currentPost.feed }
-                                            .ifEmpty { viewModel.feedId }
-                                        DropdownMenuItem(
-                                            text = { Text(stringResource(MochiR.string.common_edit)) },
-                                            leadingIcon = {
-                                                Icon(Icons.Default.Edit, contentDescription = null)
-                                            },
-                                            onClick = {
-                                                onNavigateToEditPost(postFeedId, currentPost.id)
-                                                showOverflowMenu = false
-                                            }
-                                        )
-                                        DropdownMenuItem(
-                                            text = { Text(stringResource(MochiR.string.common_delete)) },
-                                            leadingIcon = {
-                                                Icon(
-                                                    Icons.Default.Delete,
-                                                    contentDescription = null
+                            ) {
+                                if (showRssSubmenu) {
+                                    // Header row taps back to the main menu.
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_rss_feed)) },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.AutoMirrored.Filled.ArrowBack,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        onClick = { showRssSubmenu = false }
+                                    )
+                                    HorizontalDivider()
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(stringResource(R.string.feeds_rss_mode_posts))
+                                        },
+                                        onClick = {
+                                            viewModel.copyRssUrl("posts")
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        }
+                                    )
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(
+                                                stringResource(
+                                                    R.string.feeds_rss_mode_posts_comments
                                                 )
+                                            )
+                                        },
+                                        onClick = {
+                                            viewModel.copyRssUrl("all")
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        }
+                                    )
+                                } else {
+                                    // Manager-only post and source actions act on the
+                                    // post currently in view; its feed comes from the
+                                    // post (cards span feeds in the all-feeds aggregate).
+                                    if (permissions.manage) {
+                                        val currentPost = posts.getOrNull(pagerState.currentPage)
+                                        if (currentPost != null) {
+                                            val postFeedId = currentPost.feedFingerprint
+                                                .ifEmpty { currentPost.feed }
+                                                .ifEmpty { viewModel.feedId }
+                                            DropdownMenuItem(
+                                                text = { Text(stringResource(MochiR.string.common_edit)) },
+                                                leadingIcon = {
+                                                    Icon(Icons.Default.Edit, contentDescription = null)
+                                                },
+                                                onClick = {
+                                                    onNavigateToEditPost(postFeedId, currentPost.id)
+                                                    showOverflowMenu = false
+                                                }
+                                            )
+                                            DropdownMenuItem(
+                                                text = { Text(stringResource(MochiR.string.common_delete)) },
+                                                leadingIcon = {
+                                                    Icon(
+                                                        Icons.Default.Delete,
+                                                        contentDescription = null
+                                                    )
+                                                },
+                                                onClick = {
+                                                    pendingDelete = currentPost
+                                                    showOverflowMenu = false
+                                                }
+                                            )
+                                        }
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                            leadingIcon = {
+                                                Icon(Icons.Default.RssFeed, contentDescription = null)
                                             },
                                             onClick = {
-                                                pendingDelete = currentPost
+                                                // Pass the source of the post the user is
+                                                // currently on so the Sources list opens
+                                                // scrolled to it.
+                                                onNavigateToSources(
+                                                    viewModel.feedId,
+                                                    posts.getOrNull(pagerState.currentPage)?.source?.url,
+                                                )
                                                 showOverflowMenu = false
                                             }
                                         )
                                         HorizontalDivider()
                                     }
+                                    // Per-feed actions are hidden on the "All feeds"
+                                    // aggregate, which isn't a real feed to configure
+                                    // or unsubscribe from.
+                                    if (!viewModel.isAllFeeds) {
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(R.string.feeds_settings)) },
+                                            leadingIcon = {
+                                                Icon(Icons.Default.Settings, contentDescription = null)
+                                            },
+                                            onClick = {
+                                                onNavigateToSettings(viewModel.feedId)
+                                                showOverflowMenu = false
+                                            }
+                                        )
+                                    }
                                     DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                        text = { Text(stringResource(R.string.feeds_rss_feed)) },
                                         leadingIcon = {
                                             Icon(Icons.Default.RssFeed, contentDescription = null)
                                         },
-                                        onClick = {
-                                            // Pass the source of the post the user is
-                                            // currently on so the Sources list opens
-                                            // scrolled to it.
-                                            onNavigateToSources(
-                                                viewModel.feedId,
-                                                posts.getOrNull(pagerState.currentPage)?.source?.url,
+                                        trailingIcon = {
+                                            Icon(
+                                                Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                                                contentDescription = null
                                             )
-                                            showOverflowMenu = false
-                                        }
-                                    )
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_settings)) },
-                                        leadingIcon = {
-                                            Icon(Icons.Default.Settings, contentDescription = null)
                                         },
-                                        onClick = {
-                                            onNavigateToSettings(viewModel.feedId)
-                                            showOverflowMenu = false
-                                        }
+                                        onClick = { showRssSubmenu = true }
                                     )
+                                    if (!viewModel.isAllFeeds) {
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(R.string.feeds_unsubscribe)) },
+                                            leadingIcon = {
+                                                Icon(
+                                                    Icons.AutoMirrored.Filled.Logout,
+                                                    contentDescription = null
+                                                )
+                                            },
+                                            onClick = {
+                                                pendingUnsubscribe = true
+                                                showOverflowMenu = false
+                                            }
+                                        )
+                                    }
                                 }
                             }
                         }
@@ -886,6 +998,32 @@ fun FeedScreen(
                 },
                 dismissButton = {
                     TextButton(onClick = { pendingDelete = null }) {
+                        Text(stringResource(MochiR.string.common_cancel))
+                    }
+                }
+            )
+        }
+
+        if (pendingUnsubscribe) {
+            AlertDialog(
+                onDismissRequest = { pendingUnsubscribe = false },
+                title = { Text(stringResource(R.string.feeds_unsubscribe_confirm)) },
+                text = { Text(stringResource(R.string.feeds_unsubscribe_confirm_message)) },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            viewModel.unsubscribe()
+                            pendingUnsubscribe = false
+                        }
+                    ) {
+                        Text(
+                            stringResource(R.string.feeds_unsubscribe),
+                            color = MaterialTheme.colorScheme.error
+                        )
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = { pendingUnsubscribe = false }) {
                         Text(stringResource(MochiR.string.common_cancel))
                     }
                 }

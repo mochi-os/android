@@ -70,6 +70,17 @@ class FeedListViewModel @Inject constructor(
     init {
         loadFeeds()
         loadGlobalSort()
+        observeSubscriptionChanges()
+    }
+
+    // Reload the drawer whenever the viewer subscribes to or unsubscribes from a
+    // feed, so the list stays correct even when no navigation recreates this VM.
+    private fun observeSubscriptionChanges() {
+        viewModelScope.launch {
+            repository.subscriptionChanges.collect {
+                loadFeeds()
+            }
+        }
     }
 
     private fun loadGlobalSort() {
