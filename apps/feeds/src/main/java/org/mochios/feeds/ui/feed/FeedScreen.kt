@@ -51,10 +51,10 @@ import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.DoneAll
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
@@ -66,6 +66,7 @@ import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
@@ -125,6 +126,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import android.widget.Toast
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -597,9 +599,9 @@ fun FeedScreen(
                                         }
                                     )
                                 } else {
-                                    // Manager-only post and source actions act on the
-                                    // post currently in view; its feed comes from the
-                                    // post (cards span feeds in the all-feeds aggregate).
+                                    // Manager-only post actions act on the post
+                                    // currently in view; its feed comes from the post
+                                    // (cards span feeds in the all-feeds aggregate).
                                     if (permissions.manage) {
                                         val currentPost = posts.getOrNull(pagerState.currentPage)
                                         if (currentPost != null) {
@@ -619,26 +621,27 @@ fun FeedScreen(
                                             DropdownMenuItem(
                                                 text = { Text(stringResource(MochiR.string.common_delete)) },
                                                 leadingIcon = {
-                                                    Icon(
-                                                        Icons.Default.Delete,
-                                                        contentDescription = null
-                                                    )
+                                                    Icon(Icons.Default.Delete, contentDescription = null)
                                                 },
                                                 onClick = {
                                                     pendingDelete = currentPost
                                                     showOverflowMenu = false
                                                 }
                                             )
+                                            HorizontalDivider()
                                         }
+                                    }
+                                    // Per-feed actions are hidden on the "All
+                                    // feeds" aggregate, which isn't a real feed.
+                                    if (!viewModel.isAllFeeds) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_tab_sources)) },
                                             leadingIcon = {
-                                                Icon(Icons.Default.RssFeed, contentDescription = null)
+                                                Icon(Icons.Default.Link, contentDescription = null)
                                             },
                                             onClick = {
-                                                // Pass the source of the post the user is
-                                                // currently on so the Sources list opens
-                                                // scrolled to it.
+                                                // Open the Sources list scrolled to the
+                                                // source of the post currently in view.
                                                 onNavigateToSources(
                                                     viewModel.feedId,
                                                     posts.getOrNull(pagerState.currentPage)?.source?.url,
@@ -646,11 +649,7 @@ fun FeedScreen(
                                                 showOverflowMenu = false
                                             }
                                         )
-                                        HorizontalDivider()
                                     }
-                                    // Per-feed actions are hidden on the "All feeds"
-                                    // aggregate, which isn't a real feed to configure
-                                    // or unsubscribe from.
                                     if (!viewModel.isAllFeeds) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_settings)) },
@@ -676,7 +675,9 @@ fun FeedScreen(
                                         },
                                         onClick = { showRssSubmenu = true }
                                     )
-                                    if (!viewModel.isAllFeeds) {
+                                    // Unsubscribe only for member feeds — owners/admins
+                                    // manage (and delete) the feed instead.
+                                    if (!viewModel.isAllFeeds && !permissions.manage) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_unsubscribe)) },
                                             leadingIcon = {
@@ -1599,8 +1600,8 @@ private fun PostActionBar(
                 .size(24.dp),
             tint = MaterialTheme.colorScheme.onSurfaceVariant
         )
-        // Flexible space trails the action group, keeping reaction + tag +
-        // comment + save left-aligned and adjacent rather than spread apart.
+        // Flexible space trails the action group, keeping the buttons
+        // left-aligned and adjacent rather than spread apart.
         Spacer(modifier = Modifier.weight(1f))
     }
 }

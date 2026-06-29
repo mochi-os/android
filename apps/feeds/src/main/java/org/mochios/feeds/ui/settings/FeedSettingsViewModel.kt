@@ -23,6 +23,7 @@ import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
+import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
@@ -39,6 +40,11 @@ class FeedSettingsViewModel @Inject constructor(
     // General tab
     private val _feedInfo = MutableStateFlow<Feed?>(null)
     val feedInfo: StateFlow<Feed?> = _feedInfo.asStateFlow()
+
+    // The viewer's permissions on this feed. `manage` true means an owner/admin
+    // view (Settings + Access tabs); false means a plain subscriber view.
+    private val _permissions = MutableStateFlow(Permissions())
+    val permissions: StateFlow<Permissions> = _permissions.asStateFlow()
 
     private val _feedName = MutableStateFlow("")
     val feedName: StateFlow<String> = _feedName.asStateFlow()
@@ -126,6 +132,7 @@ class FeedSettingsViewModel @Inject constructor(
             try {
                 val info = repository.getFeedInfo(feedId)
                 _feedInfo.value = info.feed
+                _permissions.value = info.permissions
                 _feedName.value = info.feed.name
                 _aiMode.value = info.feed.aiMode ?: ""
                 _aiAccount.value = info.feed.aiAccount
@@ -161,6 +168,25 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteFeed(feedId)
+                onSuccess()
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            }
+        }
+    }
+
+    /** Unsubscribe the viewer from this feed, then leave the settings screen. */
+    fun unsubscribe(onSuccess: () -> Unit) {
+        viewModelScope.launch {
+            try {
+                val info = _feedInfo.value
+                val ident = when {
+                    info == null -> feedId
+                    info.id.isNotEmpty() -> info.id
+                    info.fingerprint.isNotEmpty() -> info.fingerprint
+                    else -> feedId
+                }
+                repository.unsubscribeFeed(ident)
                 onSuccess()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -320,12 +346,47 @@ class FeedSettingsViewModel @Inject constructor(
 
     // --- Access ---
 
+    // The access API is keyed by the feed's entity id (the `id` field), not the
+    // fingerprint used for routing. Falls back to the routing id until the feed
+    // info has loaded.
+    private fun accessFeedId(): String {
+        val info = _feedInfo.value
+        return if (info != null && info.id.isNotEmpty()) info.id else feedId
+    }
+
+    // Collapse a subject's rules to the single one to display: the highest
+    // operation it is granted (grant == 1). If nothing is granted, surface a
+    // "no access" row so the subject is still listed.
+    private fun deriveAccessRule(group: List<AccessRule>): AccessRule {
+        val granted = group
+            .filter { rule -> rule.grant == 1 }
+            .maxByOrNull { rule -> operationRank(rule.operation) }
+        if (granted != null) return granted
+        val base = group.maxByOrNull { rule -> rule.created } ?: group.first()
+        return base.copy(operation = "none", grant = 0)
+    }
+
+    private fun operationRank(operation: String): Int = when (operation) {
+        "*", "manage" -> 5
+        "comment" -> 4
+        "react" -> 3
+        "view" -> 2
+        "none" -> 1
+        else -> 0
+    }
+
     fun loadAccessRules() {
         viewModelScope.launch {
             _isLoadingAccess.value = true
             try {
-                _accessRules.value = repository.getAccessRules(feedId)
-                    .sortedWith(compareBy(NaturalCompare) { it.name ?: it.subject })
+                // A subject can carry multiple rules; its effective level is the
+                // highest operation it is *granted* (grant == 1). With nothing
+                // granted, the subject has no access.
+                _accessRules.value = repository.getAccessRules(accessFeedId())
+                    .groupBy { rule -> rule.subject }
+                    .values
+                    .map { group -> deriveAccessRule(group) }
+                    .sortedWith(compareBy(NaturalCompare) { rule -> rule.name ?: rule.subject })
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -337,7 +398,7 @@ class FeedSettingsViewModel @Inject constructor(
     fun setAccess(subject: String, level: String) {
         viewModelScope.launch {
             try {
-                repository.setAccess(feedId, subject, level)
+                repository.setAccess(accessFeedId(), subject, level)
                 _actionMessage.value = R.string.feeds_settings_access_updated
                 loadAccessRules()
             } catch (e: Exception) {
@@ -349,7 +410,7 @@ class FeedSettingsViewModel @Inject constructor(
     fun revokeAccess(subject: String) {
         viewModelScope.launch {
             try {
-                repository.revokeAccess(feedId, subject)
+                repository.revokeAccess(accessFeedId(), subject)
                 _actionMessage.value = R.string.feeds_settings_access_revoked
                 loadAccessRules()
             } catch (e: Exception) {

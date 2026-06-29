@@ -192,6 +192,42 @@
     <string name="feeds_unsubscribe_confirm_message">You will stop receiving updates from this feed. You can re-subscribe at any time.</string>
     <string name="feeds_unsubscribed">Unsubscribed</string>
 
+    <!-- Role-based feed settings: identity card, subscriber unsubscribe, delete -->
+    <string name="feeds_settings_title">%1$s settings</string>
+    <string name="feeds_settings_section_identity">Identity</string>
+    <string name="feeds_settings_field_name">Name</string>
+    <string name="feeds_settings_field_entity_id">Entity ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Edit name</string>
+    <string name="feeds_settings_name_save_cd">Save name</string>
+    <string name="feeds_settings_name_cancel_cd">Cancel editing</string>
+    <string name="feeds_settings_unsubscribe_section">Unsubscribe from feed</string>
+    <string name="feeds_delete_feed_description">Permanently delete this feed and all its content.</string>
+
+    <!-- Access tab: management card, table headers, special subjects, level labels -->
+    <string name="feeds_access_management">Access Management</string>
+    <string name="feeds_access_management_desc">Control who can view and interact with this feed</string>
+    <string name="feeds_access_subject_anyone">Anyone</string>
+    <string name="feeds_access_subject_authenticated">Authenticated users</string>
+    <string name="feeds_access_level_comment_full">Comment, react, and view</string>
+    <string name="feeds_access_level_react_full">React and view</string>
+    <string name="feeds_access_level_view_full">View only</string>
+    <string name="feeds_access_level_none_full">No access</string>
+
+    <!-- Add access dialog -->
+    <string name="feeds_access_add_title">Add access</string>
+    <string name="feeds_access_add_subtitle">Select a user, group, or other rule to grant access.</string>
+    <string name="feeds_access_segment_user">User</string>
+    <string name="feeds_access_segment_group">Group</string>
+    <string name="feeds_access_segment_other">Other</string>
+    <string name="feeds_access_search_users">Search users</string>
+    <string name="feeds_access_select_group">Select group</string>
+    <string name="feeds_access_select_rule">Select access rule</string>
+    <string name="feeds_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="feeds_access_anyone_desc">Including anonymous users</string>
+    <string name="feeds_access_selected">Selected: %1$s</string>
+
     <!-- Settings: members -->
     <string name="feeds_add_member">Add member</string>
     <string name="feeds_no_members">No members</string>

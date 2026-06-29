@@ -25,6 +25,8 @@ import org.mochios.android.model.PlaceData
 import org.mochios.android.model.User
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.InterestSuggestion
+import org.mochios.feeds.api.AccessRevokeRequest
+import org.mochios.feeds.api.AccessSetRequest
 import org.mochios.feeds.api.SubscribeRequest
 import org.mochios.feeds.api.UnsubscribeRequest
 import org.mochios.feeds.model.Feed
@@ -587,7 +589,10 @@ class FeedsRepository @Inject constructor(
 
     suspend fun setAccess(feedId: String, subject: String, level: String) {
         try {
-            api.setAccess(feedId, subject, level).unwrap()
+            api.setAccess(
+                feedId,
+                AccessSetRequest(feed = feedId, subject = subject, level = level)
+            ).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -595,7 +600,10 @@ class FeedsRepository @Inject constructor(
 
     suspend fun revokeAccess(feedId: String, subject: String) {
         try {
-            api.revokeAccess(feedId, subject).unwrap()
+            api.revokeAccess(
+                feedId,
+                AccessRevokeRequest(feed = feedId, subject = subject)
+            ).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

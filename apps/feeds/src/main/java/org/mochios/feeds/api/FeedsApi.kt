@@ -83,6 +83,17 @@ data class UnsubscribeRequest(
     val server: String? = null
 )
 
+data class AccessSetRequest(
+    val feed: String,
+    val subject: String,
+    val level: String
+)
+
+data class AccessRevokeRequest(
+    val feed: String,
+    val subject: String
+)
+
 data class RecommendationsResponse(
     val feeds: List<Feed> = emptyList()
 )
@@ -360,19 +371,16 @@ interface FeedsApi {
         @Path("feedId") feedId: String
     ): Response<ApiResponse<AccessListResponse>>
 
-    @FormUrlEncoded
     @POST("{feedId}/-/access/set")
     suspend fun setAccess(
         @Path("feedId") feedId: String,
-        @Field("subject") subject: String,
-        @Field("level") level: String
+        @Body body: AccessSetRequest
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{feedId}/-/access/revoke")
     suspend fun revokeAccess(
         @Path("feedId") feedId: String,
-        @Field("subject") subject: String
+        @Body body: AccessRevokeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     // --- Sources ---
