@@ -23,9 +23,12 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -42,14 +45,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -62,6 +63,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Source
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -149,6 +151,7 @@ fun SourcesTab(
 
     if (showAddDialog) {
         AddSourceDialog(
+            hasMemoriesSource = sources.any { it.type == "feed/memories" },
             onDismiss = { showAddDialog = false },
             onAdd = { url, type ->
                 viewModel.addSource(url, type)
@@ -195,26 +198,73 @@ private fun SourceCard(
     onRemove: () -> Unit,
     onPoll: () -> Unit
 ) {
-    val format = LocalFormat.current
+    // Leading glyph + human label per source type, mirroring the web client's
+    // sources list (calendar for memories, link for a Mochi feed, RSS glyph).
+    val typeIcon = when (source.type) {
+        "rss" -> Icons.Default.RssFeed
+        "feed/posts" -> Icons.Default.Link
+        "feed/memories" -> Icons.Default.CalendarMonth
+        else -> Icons.Default.RssFeed
+    }
+    val typeLabel = when (source.type) {
+        "rss" -> stringResource(R.string.feeds_source_type_rss)
+        "feed/posts" -> stringResource(R.string.feeds_source_type_feed_posts)
+        "feed/memories" -> stringResource(R.string.feeds_source_type_feed_memories)
+        else -> source.type
+    }
+    val lastChecked = if (source.fetched > 0) {
+        stringResource(
+            R.string.feeds_source_last_checked,
+            LocalFormat.current.formatRelativeTime(source.fetched)
+        )
+    } else {
+        stringResource(R.string.feeds_source_never_fetched)
+    }
+    // Metadata stacked under the name: type, last-checked time, and finally the
+    // source identifier — shown only when the name isn't already the URL.
+    val showIdentifier = source.name.isNotEmpty() && source.url.isNotEmpty()
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = source.name.ifEmpty { source.url },
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.Medium,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = typeIcon,
+                contentDescription = typeLabel,
+                modifier = Modifier.size(22.dp),
+                tint = MaterialTheme.colorScheme.primary
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = source.name.ifEmpty { source.url },
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.SemiBold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Text(
+                    text = typeLabel,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Text(
+                    text = lastChecked,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                if (showIdentifier) {
                     Text(
                         text = source.url,
                         style = MaterialTheme.typography.bodySmall,
@@ -223,54 +273,24 @@ private fun SourceCard(
                         overflow = TextOverflow.Ellipsis
                     )
                 }
-                Text(
-                    text = when (source.type) {
-                        "rss" -> stringResource(R.string.feeds_source_type_rss)
-                        "feed/posts" -> stringResource(R.string.feeds_source_type_feed_posts)
-                        "feed/memories" -> stringResource(R.string.feeds_source_type_feed_memories)
-                        else -> source.type
-                    },
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.primary
-                )
             }
-
-            Spacer(modifier = Modifier.height(4.dp))
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                if (source.fetched > 0) {
-                    Text(
-                        text = stringResource(R.string.feeds_source_last_fetched, format.formatDateTime(source.fetched)),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                } else {
-                    Text(
-                        text = stringResource(R.string.feeds_source_never_fetched),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+            // Only memories sources support an on-demand poll; other types are
+            // fetched on their own schedule, so the refresh action is hidden.
+            if (source.type == "feed/memories") {
+                IconButton(onClick = onPoll, modifier = Modifier.size(36.dp)) {
+                    Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(20.dp))
                 }
-                Row {
-                    IconButton(onClick = onPoll, modifier = Modifier.size(32.dp)) {
-                        Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(18.dp))
-                    }
-                    IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
-                        Icon(Icons.Default.Edit, contentDescription = stringResource(MochiR.string.common_edit), modifier = Modifier.size(18.dp))
-                    }
-                    IconButton(onClick = onRemove, modifier = Modifier.size(32.dp)) {
-                        Icon(
-                            Icons.Default.Delete,
-                            contentDescription = stringResource(R.string.feeds_remove),
-                            modifier = Modifier.size(18.dp),
-                            tint = MaterialTheme.colorScheme.error
-                        )
-                    }
-                }
+            }
+            IconButton(onClick = onEdit, modifier = Modifier.size(36.dp)) {
+                Icon(Icons.Default.Edit, contentDescription = stringResource(MochiR.string.common_edit), modifier = Modifier.size(20.dp))
+            }
+            IconButton(onClick = onRemove, modifier = Modifier.size(36.dp)) {
+                Icon(
+                    Icons.Default.Delete,
+                    contentDescription = stringResource(R.string.feeds_remove),
+                    modifier = Modifier.size(20.dp),
+                    tint = MaterialTheme.colorScheme.error
+                )
             }
         }
     }
@@ -279,6 +299,7 @@ private fun SourceCard(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AddSourceDialog(
+    hasMemoriesSource: Boolean,
     onDismiss: () -> Unit,
     onAdd: (String, String) -> Unit
 ) {
@@ -286,13 +307,23 @@ private fun AddSourceDialog(
     var type by remember { mutableStateOf("rss") }
     var typeExpanded by remember { mutableStateOf(false) }
 
-    val typeOptions = listOf(
-        "rss" to stringResource(R.string.feeds_source_type_rss),
-        "feed/posts" to stringResource(R.string.feeds_source_type_feed_posts),
-        "feed/memories" to stringResource(R.string.feeds_source_type_feed_memories),
-    )
+    // A feed can only have one memories source, so drop that option once one
+    // already exists (matching web, which hides it from the add menu).
+    val typeOptions = buildList {
+        add("rss" to stringResource(R.string.feeds_source_type_rss))
+        add("feed/posts" to stringResource(R.string.feeds_source_type_feed_posts))
+        if (!hasMemoriesSource) {
+            add("feed/memories" to stringResource(R.string.feeds_source_type_feed_memories))
+        }
+    }
     val typeLabel = typeOptions.firstOrNull { it.first == type }?.second ?: type
     val urlRequired = type != "feed/memories"
+    // Placeholder mirrors the web client's per-type add dialogs.
+    val urlHint = when (type) {
+        "rss" -> stringResource(R.string.feeds_source_url_hint_rss)
+        "feed/posts" -> stringResource(R.string.feeds_source_url_hint_feed)
+        else -> ""
+    }
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -304,6 +335,7 @@ private fun AddSourceDialog(
                         value = url,
                         onValueChange = { url = it },
                         label = { Text(stringResource(R.string.feeds_source_url)) },
+                        placeholder = { Text(urlHint) },
                         modifier = Modifier.fillMaxWidth(),
                         singleLine = true
                     )
@@ -363,9 +395,10 @@ private fun EditSourceDialog(
     onDismiss: () -> Unit,
     onSave: (String?, Int?, String?) -> Unit
 ) {
+    // Every source can be renamed; non-memories sources also expose an AI
+    // transform expression applied to their imported content.
+    val isMemories = source.type == "feed/memories"
     var name by remember { mutableStateOf(source.name) }
-    val initialCredibility = source.credibility.toInt()
-    var credibility by remember { mutableFloatStateOf(initialCredibility.toFloat()) }
     var transform by remember { mutableStateOf(source.transform) }
 
     AlertDialog(
@@ -380,36 +413,26 @@ private fun EditSourceDialog(
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true
                 )
-                Spacer(modifier = Modifier.height(16.dp))
-
-                Text(
-                    text = stringResource(R.string.feeds_source_credibility, credibility.toInt().toString()),
-                    style = MaterialTheme.typography.bodySmall
-                )
-                Slider(
-                    value = credibility,
-                    onValueChange = { credibility = it },
-                    valueRange = 0f..100f,
-                    steps = 99
-                )
-
-                Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
-                    value = transform,
-                    onValueChange = { transform = it },
-                    label = { Text(stringResource(R.string.feeds_source_transform)) },
-                    modifier = Modifier.fillMaxWidth(),
-                    singleLine = true
-                )
+                if (!isMemories) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    OutlinedTextField(
+                        value = transform,
+                        onValueChange = { transform = it },
+                        label = { Text(stringResource(R.string.feeds_source_transform)) },
+                        placeholder = { Text(stringResource(R.string.feeds_source_transform_hint)) },
+                        supportingText = { Text(stringResource(R.string.feeds_source_transform_help)) },
+                        modifier = Modifier.fillMaxWidth(),
+                        minLines = 3
+                    )
+                }
             }
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    val credInt = credibility.toInt()
                     onSave(
                         name.takeIf { it != source.name },
-                        credInt.takeIf { it != initialCredibility },
+                        null,
                         transform.takeIf { it != source.transform }
                     )
                 }
