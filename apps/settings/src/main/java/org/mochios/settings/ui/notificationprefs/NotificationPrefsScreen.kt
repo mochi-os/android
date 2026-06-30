@@ -275,7 +275,7 @@ private fun DestinationRows(
     val rows = buildList {
         add(DestinationRow(type = "web", target = ""))
         for (acc in available.accounts) {
-            add(DestinationRow(type = "account", target = acc.id.toString()))
+            add(DestinationRow(type = "account", target = acc.id))
         }
         for (feed in available.feeds) {
             add(DestinationRow(type = "rss", target = feed.id))
@@ -285,7 +285,7 @@ private fun DestinationRows(
     for (row in rows) {
         val label = when (row.type) {
             "web" -> stringResource(R.string.notifprefs_dest_web)
-            "account" -> available.accounts.firstOrNull { it.id.toString() == row.target }
+            "account" -> available.accounts.firstOrNull { it.id == row.target }
                 ?.let { if (it.label.isNotBlank()) it.label else if (it.identifier.isNotBlank()) it.identifier else it.type }
                 ?: row.target
             "rss" -> available.feeds.firstOrNull { it.id == row.target }?.name ?: row.target

@@ -78,8 +78,8 @@ class FeedSettingsViewModel @Inject constructor(
     private val _aiMode = MutableStateFlow("")
     val aiMode: StateFlow<String> = _aiMode.asStateFlow()
 
-    private val _aiAccount = MutableStateFlow(0)
-    val aiAccount: StateFlow<Int> = _aiAccount.asStateFlow()
+    private val _aiAccount = MutableStateFlow("")
+    val aiAccount: StateFlow<String> = _aiAccount.asStateFlow()
 
     private val _aiAccounts = MutableStateFlow<List<org.mochios.android.model.Account>>(emptyList())
     val aiAccounts: StateFlow<List<org.mochios.android.model.Account>> = _aiAccounts.asStateFlow()
@@ -433,7 +433,7 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun setAiAccount(accountId: Int) {
+    fun setAiAccount(accountId: String) {
         _aiAccount.value = accountId
         viewModelScope.launch {
             try {

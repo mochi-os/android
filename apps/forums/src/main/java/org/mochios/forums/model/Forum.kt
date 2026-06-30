@@ -20,7 +20,7 @@ data class Forum(
     @SerializedName("banner_html") val bannerHtml: String = "",
     val sort: String = "",
     @SerializedName("ai_mode") val aiMode: String = "",
-    @SerializedName("ai_account") val aiAccount: Int = 0,
+    @SerializedName("ai_account") val aiAccount: String = "",
 )
 
 data class Member(

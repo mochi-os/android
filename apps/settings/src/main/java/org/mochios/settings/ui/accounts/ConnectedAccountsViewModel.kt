@@ -67,28 +67,28 @@ class ConnectedAccountsViewModel @Inject constructor(
         api.add(payload).bodyOrThrow()
     }
 
-    fun remove(id: Int) = mutate { api.remove(id).bodyOrThrow() }
+    fun remove(id: String) = mutate { api.remove(id).bodyOrThrow() }
 
-    fun update(id: Int, fields: Map<String, String>) = mutate {
+    fun update(id: String, fields: Map<String, String>) = mutate {
         val payload = HashMap<String, String>(fields.size + 1)
-        payload["id"] = id.toString()
+        payload["id"] = id
         payload.putAll(fields)
         api.update(payload).bodyOrThrow()
     }
 
-    fun toggleNotifyDefault(id: Int, enabled: Boolean) = mutate {
-        api.update(mapOf("id" to id.toString(), "enabled" to if (enabled) "1" else "0")).bodyOrThrow()
+    fun toggleNotifyDefault(id: String, enabled: Boolean) = mutate {
+        api.update(mapOf("id" to id, "enabled" to if (enabled) "1" else "0")).bodyOrThrow()
     }
 
-    fun setAiDefault(id: Int) = mutate {
+    fun setAiDefault(id: String) = mutate {
         api.setDefault(account = id, type = "ai").bodyOrThrow()
     }
 
-    fun clearAiDefault(id: Int) = mutate {
+    fun clearAiDefault(id: String) = mutate {
         api.setDefault(account = id, type = "").bodyOrThrow()
     }
 
-    fun verify(id: Int, code: String) {
+    fun verify(id: String, code: String) {
         viewModelScope.launch {
             try {
                 val resp = api.verify(id = id, code = code).bodyOrThrow()
@@ -101,7 +101,7 @@ class ConnectedAccountsViewModel @Inject constructor(
         }
     }
 
-    fun resend(id: Int) {
+    fun resend(id: String) {
         viewModelScope.launch {
             try {
                 api.verify(id = id, code = null).bodyOrThrow()
@@ -112,7 +112,7 @@ class ConnectedAccountsViewModel @Inject constructor(
         }
     }
 
-    fun test(id: Int) {
+    fun test(id: String) {
         viewModelScope.launch {
             try {
                 val result = api.test(id).bodyOrThrow()

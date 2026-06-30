@@ -88,7 +88,7 @@ fun AiTab(viewModel: ForumSettingsViewModel) {
                     DropdownMenuItem(
                         text = { Text(label) },
                         onClick = {
-                            viewModel.setAiSettings(code, settings.account.toIntOrNull() ?: 0)
+                            viewModel.setAiSettings(code, settings.account)
                             modeExpanded = false
                         },
                     )
@@ -102,9 +102,9 @@ fun AiTab(viewModel: ForumSettingsViewModel) {
             Text(stringResource(R.string.forums_ai_account), style = MaterialTheme.typography.titleSmall)
             Spacer(Modifier.height(8.dp))
             var accountExpanded by remember { mutableStateOf(false) }
-            val currentAccountId = settings.account.toIntOrNull() ?: 0
-            val accountLabel = when (currentAccountId) {
-                0 -> stringResource(R.string.forums_ai_account_default)
+            val currentAccountId = settings.account
+            val accountLabel = when {
+                currentAccountId.isEmpty() -> stringResource(R.string.forums_ai_account_default)
                 else -> aiAccounts.firstOrNull { it.id == currentAccountId }?.displayLabel
                     ?: stringResource(R.string.forums_ai_account_default)
             }
@@ -123,7 +123,7 @@ fun AiTab(viewModel: ForumSettingsViewModel) {
                     DropdownMenuItem(
                         text = { Text(stringResource(R.string.forums_ai_account_default)) },
                         onClick = {
-                            viewModel.setAiSettings(settings.mode, 0)
+                            viewModel.setAiSettings(settings.mode, "")
                             accountExpanded = false
                         },
                     )

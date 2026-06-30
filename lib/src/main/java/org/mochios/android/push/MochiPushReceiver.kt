@@ -163,7 +163,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         auth: String,
         p256dh: String,
         endpoint: String,
-    ): Int? {
+    ): String? {
         val token = runCatching {
             tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
         }.getOrNull() ?: return null
@@ -186,7 +186,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             }
             val body = resp.body?.string().orEmpty()
             return try {
-                JSONObject(body).optJSONObject("data")?.optInt("id")?.takeIf { it > 0 }
+                JSONObject(body).optJSONObject("data")?.optString("id")?.takeIf { it.isNotBlank() }
             } catch (_: Exception) {
                 Log.w(TAG, "Could not parse /notifications/-/push/register response")
                 null
@@ -198,13 +198,13 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         client: OkHttpClient,
         tokenApi: TokenApi,
         server: String,
-        accountId: Int,
+        accountId: String,
     ) {
         val token = runCatching {
             tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
         }.getOrNull() ?: return
         val url = server.trimEnd('/') + "/notifications/-/push/accounts/remove"
-        val form = FormBody.Builder().add("id", accountId.toString()).build()
+        val form = FormBody.Builder().add("id", accountId).build()
         val request = Request.Builder()
             .url(url)
             .header("Authorization", "Bearer $token")
@@ -213,18 +213,24 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         client.newCall(request).execute().close()
     }
 
-    private fun storeAccountId(context: Context, instance: String, accountId: Int) {
+    private fun storeAccountId(context: Context, instance: String, accountId: String) {
         context.applicationContext
             .getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE)
             .edit()
-            .putInt(prefKey(instance), accountId)
+            .putString(prefKey(instance), accountId)
             .apply()
     }
 
-    private fun readAccountId(context: Context, instance: String): Int? {
+    private fun readAccountId(context: Context, instance: String): String? {
         val prefs = context.applicationContext.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE)
-        val v = prefs.getInt(prefKey(instance), -1)
-        return if (v > 0) v else null
+        // Tolerate the legacy integer-typed value written by builds that
+        // predate the string-uid account id: getString throws if the stored
+        // entry is still an Int, so fall back to reading it as an Int.
+        return try {
+            prefs.getString(prefKey(instance), null)?.takeIf { it.isNotBlank() }
+        } catch (_: ClassCastException) {
+            prefs.getInt(prefKey(instance), -1).takeIf { it > 0 }?.toString()
+        }
     }
 
     private fun clearAccountId(context: Context, instance: String) {

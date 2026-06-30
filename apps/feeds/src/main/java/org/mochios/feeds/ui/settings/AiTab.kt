@@ -108,8 +108,8 @@ fun AiTab(
             )
             Spacer(modifier = Modifier.height(8.dp))
             var accountExpanded by remember { mutableStateOf(false) }
-            val selectedLabel = when (aiAccount) {
-                0 -> stringResource(R.string.feeds_ai_account_default)
+            val selectedLabel = when {
+                aiAccount.isEmpty() -> stringResource(R.string.feeds_ai_account_default)
                 else -> aiAccounts.firstOrNull { it.id == aiAccount }?.displayLabel
                     ?: stringResource(R.string.feeds_ai_account_default)
             }
@@ -133,7 +133,7 @@ fun AiTab(
                     DropdownMenuItem(
                         text = { Text(stringResource(R.string.feeds_ai_account_default)) },
                         onClick = {
-                            viewModel.setAiAccount(0)
+                            viewModel.setAiAccount("")
                             accountExpanded = false
                         },
                     )
