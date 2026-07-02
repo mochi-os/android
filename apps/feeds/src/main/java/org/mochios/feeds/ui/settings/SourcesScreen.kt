@@ -5,7 +5,6 @@
 
 package org.mochios.feeds.ui.settings
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -64,8 +63,10 @@ fun SourcesScreen(
             )
         },
     ) { padding ->
-        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            SourcesTab(viewModel = viewModel, scrollToSourceUrl = highlightSource)
-        }
+        SourcesTab(
+            viewModel = viewModel,
+            scrollToSourceUrl = highlightSource,
+            modifier = Modifier.fillMaxSize().padding(padding),
+        )
     }
 }

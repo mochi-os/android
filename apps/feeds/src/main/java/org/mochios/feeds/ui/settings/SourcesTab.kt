@@ -44,7 +44,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -71,6 +70,7 @@ import org.mochios.android.R as MochiR
 fun SourcesTab(
     viewModel: FeedSettingsViewModel,
     scrollToSourceUrl: String? = null,
+    modifier: Modifier = Modifier,
 ) {
     val sources by viewModel.sources.collectAsState()
     val isLoading by viewModel.isLoadingSources.collectAsState()
@@ -97,19 +97,11 @@ fun SourcesTab(
         }
     }
 
-    Scaffold(
-        floatingActionButton = {
-            FloatingActionButton(onClick = { showAddDialog = true }) {
-                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.feeds_add_source))
-            }
-        }
-    ) { innerPadding ->
+    Box(modifier = modifier) {
         when {
             isLoading && sources.isEmpty() -> {
                 Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(innerPadding),
+                    modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator()
@@ -117,9 +109,7 @@ fun SourcesTab(
             }
             sources.isEmpty() -> {
                 Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(innerPadding),
+                    modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
@@ -132,7 +122,7 @@ fun SourcesTab(
             else -> {
                 LazyColumn(
                     state = listState,
-                    modifier = Modifier.padding(innerPadding),
+                    modifier = Modifier.fillMaxSize(),
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
@@ -146,6 +136,14 @@ fun SourcesTab(
                     }
                 }
             }
+        }
+        FloatingActionButton(
+            onClick = { showAddDialog = true },
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(16.dp)
+        ) {
+            Icon(Icons.Default.Add, contentDescription = stringResource(R.string.feeds_add_source))
         }
     }
 
