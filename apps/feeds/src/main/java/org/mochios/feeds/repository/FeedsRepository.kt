@@ -221,7 +221,7 @@ class FeedsRepository @Inject constructor(
                 posts = response.posts,
                 hasMore = response.hasMore,
                 nextCursor = response.nextCursor,
-                permissions = response.permissions
+                permissions = response.permissions ?: Permissions()
             )
             if (isFirstPage) {
                 postCache[feedId] = CachedPosts(result, sort, tag, unreadOnly)
@@ -254,7 +254,7 @@ class FeedsRepository @Inject constructor(
                 posts = response.posts,
                 hasMore = response.hasMore,
                 nextCursor = response.nextCursor,
-                permissions = response.permissions
+                permissions = response.permissions ?: Permissions()
             )
         } catch (e: Exception) {
             throw e.toMochiError()

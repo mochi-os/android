@@ -47,7 +47,10 @@ data class PostListResponse(
     val posts: List<Post> = emptyList(),
     val hasMore: Boolean = false,
     val nextCursor: Long = 0,
-    val permissions: Permissions = Permissions(),
+    // Nullable: the "All feeds" aggregate endpoint (-/posts) has no single feed
+    // to scope permissions to and returns null. A non-null type would let Gson
+    // set the field to null and then NPE when constructing PostListResult.
+    val permissions: Permissions? = null,
     val owner: Boolean = false
 )
 
