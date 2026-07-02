@@ -212,4 +212,6 @@
         <item quantity="one">%d нова публикация</item>
         <item quantity="other">%d нови публикации</item>
     </plurals>
+    <string name="feeds_all_caught_up">Всичко прегледано</string>
+    <string name="feeds_view_all_posts">Виж всички публикации</string>
 </resources>

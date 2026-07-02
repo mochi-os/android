@@ -212,4 +212,6 @@
         <item quantity="one">%d nouvelle publication</item>
         <item quantity="other">%d nouvelles publications</item>
     </plurals>
+    <string name="feeds_all_caught_up">Tout est lu</string>
+    <string name="feeds_view_all_posts">Voir toutes les publications</string>
 </resources>

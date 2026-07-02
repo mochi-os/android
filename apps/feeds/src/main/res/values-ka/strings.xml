@@ -212,4 +212,6 @@
         <item quantity="one">%d ახალი პოსტი</item>
         <item quantity="other">%d ახალი პოსტი</item>
     </plurals>
+    <string name="feeds_all_caught_up">ყველაფერი ნანახი</string>
+    <string name="feeds_view_all_posts">ყველა შეტყობინების ნახვა</string>
 </resources>

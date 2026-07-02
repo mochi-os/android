@@ -212,4 +212,6 @@
         <item quantity="one">%d uus postitus</item>
         <item quantity="other">%d uut postitust</item>
     </plurals>
+    <string name="feeds_all_caught_up">Kõik järje peal</string>
+    <string name="feeds_view_all_posts">Vaata kõiki postitusi</string>
 </resources>

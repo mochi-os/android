@@ -47,6 +47,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ImportExport
@@ -73,7 +74,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -601,11 +604,39 @@ fun FeedScreen(
                                     .padding(48.dp),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Text(
-                                    text = stringResource(R.string.feeds_no_posts_yet),
-                                    style = MaterialTheme.typography.bodyLarge,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
+                                Column(
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = if (unreadOnly) Icons.Default.DoneAll else Icons.Default.RssFeed,
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        modifier = Modifier.size(40.dp)
+                                    )
+                                    Text(
+                                        text = stringResource(
+                                            if (unreadOnly) R.string.feeds_all_caught_up
+                                            else R.string.feeds_no_posts_yet
+                                        ),
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                    // Mirror the web's "All caught up" state: when the
+                                    // unread filter has emptied the list, offer a way back
+                                    // to every post instead of dead-ending on "no posts".
+                                    if (unreadOnly) {
+                                        OutlinedButton(onClick = { viewModel.setUnreadOnly(false) }) {
+                                            Icon(
+                                                Icons.AutoMirrored.Filled.ArrowForward,
+                                                contentDescription = null,
+                                                modifier = Modifier.size(ButtonDefaults.IconSize)
+                                            )
+                                            Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                                            Text(stringResource(R.string.feeds_view_all_posts))
+                                        }
+                                    }
+                                }
                             }
                         } else {
                             // Magazine-style vertical pager: one post per page.

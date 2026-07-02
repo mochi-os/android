@@ -212,4 +212,6 @@
         <item quantity="one">%d nuovo post</item>
         <item quantity="other">%d nuovi post</item>
     </plurals>
+    <string name="feeds_all_caught_up">Tutto aggiornato</string>
+    <string name="feeds_view_all_posts">Visualizza tutti i post</string>
 </resources>

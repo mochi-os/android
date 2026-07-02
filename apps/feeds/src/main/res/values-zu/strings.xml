@@ -212,4 +212,6 @@
         <item quantity="one">%d umbhalo omusha</item>
         <item quantity="other">%d imibhalo emisha</item>
     </plurals>
+    <string name="feeds_all_caught_up">Konke kufinyelelekile</string>
+    <string name="feeds_view_all_posts">Buka zonke izithombe</string>
 </resources>

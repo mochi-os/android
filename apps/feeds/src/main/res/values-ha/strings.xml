@@ -212,4 +212,6 @@
         <item quantity="one">%d sabon wasiƙa</item>
         <item quantity="other">%d sababbin wasiƙu</item>
     </plurals>
+    <string name="feeds_all_caught_up">An kammala duka</string>
+    <string name="feeds_view_all_posts">Kalli duk saƙonnin</string>
 </resources>

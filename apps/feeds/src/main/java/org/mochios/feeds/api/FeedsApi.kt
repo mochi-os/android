@@ -243,6 +243,18 @@ interface FeedsApi {
         @Query("unread") unread: String? = null
     ): Response<ApiResponse<PostListResponse>>
 
+    // "All feeds" aggregate: posts merged across every subscribed feed in one
+    // indexed query, paginated by the same before/offset cursors as a single
+    // feed. Class-level (no entity) — there's no single feed to scope it to.
+    @GET("-/posts")
+    suspend fun getAllPosts(
+        @Query("before") before: String? = null,
+        @Query("offset") offset: Long? = null,
+        @Query("limit") limit: Int = 20,
+        @Query("sort") sort: String? = null,
+        @Query("unread") unread: String? = null
+    ): Response<ApiResponse<PostListResponse>>
+
     @FormUrlEncoded
     @POST("{feedId}/-/delete")
     suspend fun deleteFeed(

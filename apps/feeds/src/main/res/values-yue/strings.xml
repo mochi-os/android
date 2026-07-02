@@ -65,6 +65,8 @@
     <string name="feeds_feed_title_default">資訊串</string>
     <string name="feeds_mark_all_read">全部標示為已讀</string>
     <string name="feeds_no_posts_yet">仲未有貼文</string>
+    <string name="feeds_all_caught_up">全部已讀完</string>
+    <string name="feeds_view_all_posts">檢視所有貼文</string>
     <string name="feeds_tag_clear">清除篩選</string>
     <string name="feeds_default_sort">預設排序</string>
     <string name="feeds_identity_fingerprint">指紋：%1$s</string>

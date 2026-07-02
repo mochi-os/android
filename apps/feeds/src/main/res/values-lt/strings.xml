@@ -214,4 +214,6 @@
         <item quantity="many">%d naujo įrašo</item>
         <item quantity="other">%d naujų įrašų</item>
     </plurals>
+    <string name="feeds_all_caught_up">Viskas perskaityta</string>
+    <string name="feeds_view_all_posts">Peržiūrėti visus įrašus</string>
 </resources>

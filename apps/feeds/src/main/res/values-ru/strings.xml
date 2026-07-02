@@ -214,4 +214,6 @@
         <item quantity="many">%d новых публикаций</item>
         <item quantity="other">%d новой публикации</item>
     </plurals>
+    <string name="feeds_all_caught_up">Всё прочитано</string>
+    <string name="feeds_view_all_posts">Просмотреть все публикации</string>
 </resources>

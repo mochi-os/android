@@ -212,4 +212,6 @@
         <item quantity="one">%d nuwe plasing</item>
         <item quantity="other">%d nuwe plasings</item>
     </plurals>
+    <string name="feeds_all_caught_up">Alles ingehaal</string>
+    <string name="feeds_view_all_posts">Bekyk alle plasings</string>
 </resources>

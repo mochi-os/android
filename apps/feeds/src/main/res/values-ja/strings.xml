@@ -211,4 +211,6 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d 件の新着投稿</item>
     </plurals>
+    <string name="feeds_all_caught_up">未読はありません</string>
+    <string name="feeds_view_all_posts">すべての投稿を表示</string>
 </resources>

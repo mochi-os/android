@@ -212,4 +212,6 @@
         <item quantity="one">%d chapisho jipya</item>
         <item quantity="other">%d machapisho mapya</item>
     </plurals>
+    <string name="feeds_all_caught_up">Umemaliza yote</string>
+    <string name="feeds_view_all_posts">Tazama machapisho yote</string>
 </resources>

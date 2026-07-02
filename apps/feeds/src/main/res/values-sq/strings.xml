@@ -212,4 +212,6 @@
         <item quantity="one">%d postim i ri</item>
         <item quantity="other">%d postime të reja</item>
     </plurals>
+    <string name="feeds_all_caught_up">Të gjitha të arrira</string>
+    <string name="feeds_view_all_posts">Shiko të gjitha postimet</string>
 </resources>

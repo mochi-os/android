@@ -41,6 +41,7 @@
     <string name="feeds_new_post">Nueva publicación</string>
     <string name="feeds_add_to_home_screen">Agregar a la pantalla de inicio</string>
     <string name="feeds_no_posts_yet">Todavía no hay publicaciones</string>
+    <string name="feeds_all_caught_up">Todo al día</string>
     <string name="feeds_tag_clear">Quitar filtro</string>
     <string name="feeds_identity_fingerprint">Huella digital: %1$s</string>
     <string name="feeds_suggested_interests_dismiss">Ocultar</string>
@@ -200,4 +201,5 @@
     <string name="feeds_saved_menu">Guardado</string>
     <string name="feeds_saved_remove">Quitar de guardados</string>
     <string name="feeds_saved_clear_all">Borrar todo</string>
+    <string name="feeds_view_all_posts">Mirá todos los posteos</string>
 </resources>

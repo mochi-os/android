@@ -214,4 +214,6 @@
         <item quantity="many">%d nového příspěvku</item>
         <item quantity="other">%d nových příspěvků</item>
     </plurals>
+    <string name="feeds_all_caught_up">Vše přečteno</string>
+    <string name="feeds_view_all_posts">Zobrazit všechny příspěvky</string>
 </resources>

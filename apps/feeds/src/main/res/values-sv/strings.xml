@@ -212,4 +212,6 @@
         <item quantity="one">%d nytt inlägg</item>
         <item quantity="other">%d nya inlägg</item>
     </plurals>
+    <string name="feeds_all_caught_up">Allt är ikapp</string>
+    <string name="feeds_view_all_posts">Visa alla inlägg</string>
 </resources>

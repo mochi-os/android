@@ -212,4 +212,6 @@
         <item quantity="one">%d publicación nova</item>
         <item quantity="other">%d publicacións novas</item>
     </plurals>
+    <string name="feeds_all_caught_up">Todo ao día</string>
+    <string name="feeds_view_all_posts">Ver todas as publicacións</string>
 </resources>

@@ -232,6 +232,35 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    // Posts merged across every subscribed feed for the "All feeds" aggregate.
+    // Paginated server-side by the same before/offset cursors as a single feed;
+    // not cached (the merged view changes as any feed updates).
+    suspend fun getAllPosts(
+        before: String? = null,
+        offset: Long? = null,
+        limit: Int = 20,
+        sort: String? = null,
+        unreadOnly: Boolean = false
+    ): PostListResult {
+        return try {
+            val response = api.getAllPosts(
+                before = before,
+                offset = offset,
+                limit = limit,
+                sort = sort,
+                unread = if (unreadOnly) "1" else null
+            ).unwrap()
+            PostListResult(
+                posts = response.posts,
+                hasMore = response.hasMore,
+                nextCursor = response.nextCursor,
+                permissions = response.permissions
+            )
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun deleteFeed(feedId: String) {
         try {
             api.deleteFeed(feedId).unwrap()

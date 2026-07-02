@@ -82,6 +82,8 @@
     <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_mark_all_read">Mark all read</string>
     <string name="feeds_no_posts_yet">No posts yet</string>
+    <string name="feeds_all_caught_up">All caught up</string>
+    <string name="feeds_view_all_posts">View all posts</string>
     <string name="feeds_default_sort">Default sort</string>
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Suggested interests</string>

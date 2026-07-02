@@ -213,4 +213,6 @@
         <item quantity="one">%d jauns ieraksts</item>
         <item quantity="other">%d jauni ieraksti</item>
     </plurals>
+    <string name="feeds_all_caught_up">Viss apstrādāts</string>
+    <string name="feeds_view_all_posts">Skatīt visas ziņas</string>
 </resources>

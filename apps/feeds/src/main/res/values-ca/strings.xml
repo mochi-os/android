@@ -214,4 +214,6 @@
         <item quantity="one">%d publicació nova</item>
         <item quantity="other">%d publicacions noves</item>
     </plurals>
+    <string name="feeds_all_caught_up">Tot al dia</string>
+    <string name="feeds_view_all_posts">Mostra tots els missatges</string>
 </resources>

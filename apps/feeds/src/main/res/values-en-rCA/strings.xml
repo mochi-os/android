@@ -26,6 +26,8 @@
     <string name="feeds_new_post">New post</string>
     <string name="feeds_add_to_home_screen">Add to home screen</string>
     <string name="feeds_no_posts_yet">No posts yet</string>
+    <string name="feeds_all_caught_up">All caught up</string>
+    <string name="feeds_view_all_posts">View all posts</string>
     <string name="feeds_tag_clear">Clear filter</string>
     <string name="feeds_identity_fingerprint">Fingerprint: %1$s</string>
     <string name="feeds_sort_interests">Interests</string>

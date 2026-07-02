@@ -211,4 +211,6 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d bài viết mới</item>
     </plurals>
+    <string name="feeds_all_caught_up">Đã xem hết</string>
+    <string name="feeds_view_all_posts">Xem tất cả bài đăng</string>
 </resources>

@@ -212,4 +212,6 @@
         <item quantity="one">%d نئی پوسٹ</item>
         <item quantity="other">%d نئی پوسٹس</item>
     </plurals>
+    <string name="feeds_all_caught_up">سب کچھ دیکھ لیا</string>
+    <string name="feeds_view_all_posts">تمام پوسٹس دیکھیں</string>
 </resources>

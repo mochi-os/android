@@ -215,4 +215,6 @@
         <item quantity="many">%d bpostáil nua</item>
         <item quantity="other">%d postáil nua</item>
     </plurals>
+    <string name="feeds_all_caught_up">Tá gach rud déanta</string>
+    <string name="feeds_view_all_posts">Féach ar gach postáil</string>
 </resources>

@@ -212,4 +212,6 @@
         <item quantity="one">%d új bejegyzés</item>
         <item quantity="other">%d új bejegyzés</item>
     </plurals>
+    <string name="feeds_all_caught_up">Mindennel végeztél</string>
+    <string name="feeds_view_all_posts">Összes bejegyzés megtekintése</string>
 </resources>

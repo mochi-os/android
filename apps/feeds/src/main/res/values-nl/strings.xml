@@ -212,4 +212,6 @@
         <item quantity="one">%d nieuw bericht</item>
         <item quantity="other">%d nieuwe berichten</item>
     </plurals>
+    <string name="feeds_all_caught_up">Helemaal bij</string>
+    <string name="feeds_view_all_posts">Alle berichten bekijken</string>
 </resources>

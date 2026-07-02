@@ -212,4 +212,6 @@
         <item quantity="one">%d musuq willakuy</item>
         <item quantity="other">%d musuq willakuykuna</item>
     </plurals>
+    <string name="feeds_all_caught_up">Llapan tariqasqa</string>
+    <string name="feeds_view_all_posts">Llapan postkunata qhaway</string>
 </resources>

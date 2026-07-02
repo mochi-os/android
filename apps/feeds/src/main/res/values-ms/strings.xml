@@ -212,4 +212,6 @@
         <item quantity="one">%d siaran baharu</item>
         <item quantity="other">%d siaran baharu</item>
     </plurals>
+    <string name="feeds_all_caught_up">Semua sudah dibaca</string>
+    <string name="feeds_view_all_posts">Lihat semua siaran</string>
 </resources>

@@ -212,4 +212,6 @@
         <item quantity="one">%d yangi post</item>
         <item quantity="other">%d yangi post</item>
     </plurals>
+    <string name="feeds_all_caught_up">Hammasi koʻrildi</string>
+    <string name="feeds_view_all_posts">Barcha postlarni koʻrish</string>
 </resources>

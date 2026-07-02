@@ -216,4 +216,6 @@
         <item quantity="many">%d новых допісаў</item>
         <item quantity="other">%d новага допісу</item>
     </plurals>
+    <string name="feeds_all_caught_up">Усё прачытана</string>
+    <string name="feeds_view_all_posts">Паглядзець усе публікацыі</string>
 </resources>

@@ -212,4 +212,6 @@
         <item quantity="one">%d nytt innlegg</item>
         <item quantity="other">%d nye innlegg</item>
     </plurals>
+    <string name="feeds_all_caught_up">Alt er à jour</string>
+    <string name="feeds_view_all_posts">Vis alle innlegg</string>
 </resources>

@@ -212,4 +212,6 @@
         <item quantity="one">%d жаңа жазба</item>
         <item quantity="other">%d жаңа жазба</item>
     </plurals>
+    <string name="feeds_all_caught_up">Барлығы оқылды</string>
+    <string name="feeds_view_all_posts">Барлық жазбаларды көру</string>
 </resources>

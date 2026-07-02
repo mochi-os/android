@@ -204,4 +204,6 @@
     <string name="feeds_saved_title">Lagra</string>
     <string name="feeds_saved_menu">Lagra</string>
     <string name="feeds_saved_remove">Fjern frå lagra</string>
+    <string name="feeds_all_caught_up">Alt er ajour</string>
+    <string name="feeds_view_all_posts">Vis alle innlegg</string>
 </resources>

@@ -212,4 +212,6 @@
         <item quantity="one">%d புதிய இடுகை</item>
         <item quantity="other">%d புதிய இடுகைகள்</item>
     </plurals>
+    <string name="feeds_all_caught_up">எல்லாம் முடிந்தது</string>
+    <string name="feeds_view_all_posts">அனைத்து பதிவுகளையும் காட்டு</string>
 </resources>
