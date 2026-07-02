@@ -48,6 +48,10 @@ import androidx.compose.ui.unit.dp
  * @param description Optional one-line description in `bodySmall` muted style.
  * @param action      Optional trailing composable (typically a small button)
  *                    aligned to the end of the header row.
+ * @param headerAlignment Vertical alignment of the title column and the
+ *                    [action] within the header row. Defaults to
+ *                    [Alignment.Top]; use [Alignment.CenterVertically] to
+ *                    centre a lone action button against a single-line title.
  * @param content     The section body — typically a list of [FieldRow]s.
  */
 @Composable
@@ -56,6 +60,7 @@ fun Section(
     modifier: Modifier = Modifier,
     description: String? = null,
     action: (@Composable () -> Unit)? = null,
+    headerAlignment: Alignment.Vertical = Alignment.Top,
     content: @Composable ColumnScope.() -> Unit,
 ) {
     Card(
@@ -65,7 +70,7 @@ fun Section(
         Column(modifier = Modifier.padding(16.dp)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.Top,
+                verticalAlignment = headerAlignment,
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(

@@ -29,7 +29,9 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
+import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
@@ -43,6 +45,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -55,8 +59,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.feeds.R
@@ -64,6 +70,9 @@ import org.mochios.feeds.model.Source
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.R as MochiR
+
+/** Brand orange for the RSS glyph, matching the web sources list. */
+private val RssOrange = Color(0xFFEE802F)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -75,6 +84,7 @@ fun SourcesTab(
     val sources by viewModel.sources.collectAsState()
     val isLoading by viewModel.isLoadingSources.collectAsState()
     val suggestedCredibility by viewModel.suggestedCredibility.collectAsState()
+    val pendingPermission by viewModel.pendingPermission.collectAsState()
 
     var showAddDialog by remember { mutableStateOf(false) }
     var showEditDialog by remember { mutableStateOf<Source?>(null) }
@@ -187,6 +197,76 @@ fun SourcesTab(
             onDismiss = { viewModel.dismissSuggestedCredibility() }
         )
     }
+
+    pendingPermission?.let { pending ->
+        PermissionRequestDialog(
+            appId = pending.app,
+            permissionName = pending.name,
+            onAllow = { viewModel.allowPendingPermission() },
+            onDeny = { viewModel.denyPendingPermission() }
+        )
+    }
+}
+
+/**
+ * Permission-request dialog shown when adding a source returns
+ * `permission_required`: the requesting app, the resolved permission name, and
+ * Deny/Allow actions. Mirrors the web shell's permission prompt.
+ */
+@Composable
+private fun PermissionRequestDialog(
+    appId: String,
+    permissionName: String,
+    onAllow: () -> Unit,
+    onDeny: () -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDeny,
+        icon = {
+            Icon(
+                Icons.Outlined.Shield,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.primary
+            )
+        },
+        title = {
+            Text(
+                text = stringResource(R.string.feeds_permission_request_title),
+                textAlign = TextAlign.Center
+            )
+        },
+        text = {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = stringResource(R.string.feeds_permission_request_message, appId),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+                    Text(
+                        text = permissionName,
+                        style = MaterialTheme.typography.bodyLarge,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp)
+                    )
+                }
+            }
+        },
+        confirmButton = {
+            Button(onClick = onAllow) {
+                Text(stringResource(R.string.feeds_permission_allow))
+            }
+        },
+        dismissButton = {
+            OutlinedButton(onClick = onDeny) {
+                Text(stringResource(R.string.feeds_permission_deny))
+            }
+        }
+    )
 }
 
 @Composable
@@ -210,6 +290,8 @@ private fun SourceCard(
         "feed/memories" -> stringResource(R.string.feeds_source_type_feed_memories)
         else -> source.type
     }
+    // RSS keeps its brand orange; other source types use the theme accent.
+    val typeTint = if (source.type == "rss") RssOrange else MaterialTheme.colorScheme.primary
     val lastChecked = if (source.fetched > 0) {
         stringResource(
             R.string.feeds_source_last_checked,
@@ -237,7 +319,7 @@ private fun SourceCard(
                 imageVector = typeIcon,
                 contentDescription = typeLabel,
                 modifier = Modifier.size(22.dp),
-                tint = MaterialTheme.colorScheme.primary
+                tint = typeTint
             )
             Spacer(modifier = Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
@@ -272,9 +354,9 @@ private fun SourceCard(
                     )
                 }
             }
-            // Only memories sources support an on-demand poll; other types are
-            // fetched on their own schedule, so the refresh action is hidden.
-            if (source.type == "feed/memories") {
+            // RSS and memories sources support an on-demand poll; Mochi feeds
+            // sync on their own schedule, so the refresh action is hidden there.
+            if (source.type == "rss" || source.type == "feed/memories") {
                 IconButton(onClick = onPoll, modifier = Modifier.size(36.dp)) {
                     Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(20.dp))
                 }

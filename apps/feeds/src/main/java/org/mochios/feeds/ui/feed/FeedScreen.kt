@@ -633,7 +633,9 @@ fun FeedScreen(
                                     }
                                     // Per-feed actions are hidden on the "All
                                     // feeds" aggregate, which isn't a real feed.
-                                    if (!viewModel.isAllFeeds) {
+                                    // Sources are only editable by managers, so
+                                    // hide the entry for plain subscribers.
+                                    if (!viewModel.isAllFeeds && permissions.manage) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_tab_sources)) },
                                             leadingIcon = {

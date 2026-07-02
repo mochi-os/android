@@ -17,14 +17,17 @@ import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import org.mochios.android.api.ApiError
+import org.mochios.android.api.ApiException
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
-import org.mochios.android.model.User
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.InterestSuggestion
+import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
 import org.mochios.feeds.api.SubscribeRequest
@@ -36,6 +39,7 @@ import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.model.User
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -76,6 +80,23 @@ data class AddSourceResult(
     val suggestedCredibility: Int? = null
 )
 
+/** Parsed body of a `permission_required` 403 from `sources/add`. */
+private data class PermissionRequiredBody(
+    val app: String? = null,
+    val error: String? = null,
+    val permission: String? = null
+)
+
+/**
+ * Thrown when `sources/add` returns `permission_required`: the app must first
+ * be granted [permission] before the source can be added. Carries the
+ * requesting [app] entity id so the caller can resolve a name and grant it.
+ */
+class PermissionRequiredException(
+    val app: String,
+    val permission: String
+) : Exception("permission_required: $permission")
+
 /**
  * A one-shot interest-suggestion prompt raised by subscribing to a feed, to be
  * shown once on that feed's screen. Held in the [@Singleton][Singleton]
@@ -89,7 +110,8 @@ data class PendingInterestSuggestion(
 
 @Singleton
 class FeedsRepository @Inject constructor(
-    private val api: FeedsApi
+    private val api: FeedsApi,
+    private val menuApi: MenuApi
 ) {
 
     // In-memory cache: feedId -> (posts, hasMore, timestamp)
@@ -237,6 +259,24 @@ class FeedsRepository @Inject constructor(
     suspend fun searchUsers(query: String): List<User> {
         return try {
             api.searchUsers(query).unwrap().results
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    /** Resolve a permission key to its human label. */
+    suspend fun permissionName(permission: String): String {
+        return try {
+            menuApi.permissionName(permission).unwrap().name
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    /** Grant [app] the given [permission], returning the resulting status. */
+    suspend fun grantPermission(app: String, permission: String): String {
+        return try {
+            menuApi.grantPermission(app, permission).unwrap().status
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -620,12 +660,40 @@ class FeedsRepository @Inject constructor(
     }
 
     suspend fun addSource(feedId: String, url: String, type: String): AddSourceResult {
-        return try {
-            val response = api.addSource(feedId, url, type).unwrap()
-            AddSourceResult(source = response.source, suggestedCredibility = response.suggestedCredibility)
-        } catch (e: Exception) {
-            throw e.toMochiError()
+        val response = api.addSource(feedId, url, type)
+        if (response.isSuccessful) {
+            val data = response.body()?.data
+                ?: throw MochiError.Unknown()
+            return AddSourceResult(source = data.source, suggestedCredibility = data.suggestedCredibility)
         }
+        // A `permission_required` 403 carries the requesting app + permission
+        // key in its body — surface it distinctly so the caller can offer to
+        // grant it; every other failure maps to the standard error.
+        val body = response.errorBody()?.string()
+        if (response.code() == 403 && !body.isNullOrBlank()) {
+            val permission = runCatching {
+                Gson().fromJson(body, PermissionRequiredBody::class.java)
+            }.getOrNull()
+            if (permission?.error == "permission_required" &&
+                !permission.app.isNullOrEmpty() && !permission.permission.isNullOrEmpty()) {
+                throw PermissionRequiredException(permission.app, permission.permission)
+            }
+        }
+        throw errorFromBody(response.code(), body)
+    }
+
+    // Map a non-success body to a MochiError, mirroring lib's unwrap() handling:
+    // a JSON `{error, message}` becomes an ApiException, anything else (empty or
+    // an HTML gateway page) is treated as a network failure.
+    private fun errorFromBody(code: Int, body: String?): Throwable {
+        val trimmed = body?.trimStart()
+        if (trimmed.isNullOrEmpty() || !trimmed.startsWith("{")) {
+            return MochiError.NetworkError()
+        }
+        val apiError = runCatching {
+            Gson().fromJson(trimmed, ApiError::class.java)
+        }.getOrNull() ?: return MochiError.NetworkError()
+        return ApiException(code, apiError).toMochiError()
     }
 
     suspend fun editSource(

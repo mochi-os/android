@@ -265,7 +265,9 @@ private fun NameEditor(
         }
     } else {
         Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
-            Text(currentName)
+            // Weight so a long, multi-line name wraps instead of shoving the
+            // edit button off the end of the row.
+            Text(currentName, modifier = Modifier.weight(1f))
             Spacer(modifier = Modifier.width(4.dp))
             IconButton(onClick = {
                 editValue = currentName

@@ -227,6 +227,7 @@ private fun SubscriberSettings(
                     Text(stringResource(R.string.feeds_unsubscribe))
                 }
             },
+            headerAlignment = Alignment.CenterVertically,
             content = {},
         )
     }

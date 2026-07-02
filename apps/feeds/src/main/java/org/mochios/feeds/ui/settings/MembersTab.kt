@@ -187,13 +187,11 @@ private fun AddMemberDialog(
             Column {
                 OutlinedTextField(
                     value = if (selectedName.isNotEmpty()) selectedName else query,
-                    onValueChange = {
-                        query = it
+                    onValueChange = { value ->
+                        query = value
                         selectedSubject = ""
                         selectedName = ""
-                        if (it.length >= 2) {
-                            viewModel.searchUsers(it)
-                        }
+                        viewModel.searchUsers(value)
                     },
                     label = { Text(stringResource(R.string.feeds_user)) },
                     modifier = Modifier.fillMaxWidth(),
@@ -212,7 +210,7 @@ private fun AddMemberDialog(
                             searchResults.take(5).forEach { user ->
                                 TextButton(
                                     onClick = {
-                                        selectedSubject = user.fingerprint ?: user.id.toString()
+                                        selectedSubject = user.id
                                         selectedName = user.name
                                     },
                                     modifier = Modifier.fillMaxWidth()

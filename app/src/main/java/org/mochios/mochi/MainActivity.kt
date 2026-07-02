@@ -783,6 +783,6 @@ class MainActivity : ComponentActivity() {
          * API call — only the cold-start alias's app would otherwise get its
          * token minted.
          */
-        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff")
+        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "menu")
     }
 }

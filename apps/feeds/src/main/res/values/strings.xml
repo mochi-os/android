@@ -246,6 +246,10 @@
     <string name="feeds_source_last_checked">Last checked %1$s</string>
     <string name="feeds_source_never_fetched">Never fetched</string>
     <string name="feeds_source_poll">Poll</string>
+    <string name="feeds_permission_request_title">Permission request</string>
+    <string name="feeds_permission_request_message">%1$s is requesting the following permission:</string>
+    <string name="feeds_permission_allow">Allow</string>
+    <string name="feeds_permission_deny">Deny</string>
     <string name="feeds_edit_source">Edit source</string>
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>

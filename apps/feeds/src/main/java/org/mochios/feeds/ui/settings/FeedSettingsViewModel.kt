@@ -17,7 +17,6 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.AccessRule
-import org.mochios.android.model.User
 import org.mochios.android.util.NaturalCompare
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
@@ -25,7 +24,9 @@ import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Source
+import org.mochios.feeds.model.User
 import org.mochios.feeds.repository.FeedsRepository
+import org.mochios.feeds.repository.PermissionRequiredException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -72,6 +73,12 @@ class FeedSettingsViewModel @Inject constructor(
     // the user accepts or dismisses.
     private val _suggestedCredibility = MutableStateFlow<SuggestedCredibility?>(null)
     val suggestedCredibility: StateFlow<SuggestedCredibility?> = _suggestedCredibility.asStateFlow()
+
+    // When addSource hits a `permission_required` 403, this holds the resolved
+    // permission name plus the details needed to grant it and retry the add.
+    // Cleared once the user allows or denies.
+    private val _pendingPermission = MutableStateFlow<PendingPermission?>(null)
+    val pendingPermission: StateFlow<PendingPermission?> = _pendingPermission.asStateFlow()
 
     // Access tab
     private val _accessRules = MutableStateFlow<List<AccessRule>>(emptyList())
@@ -286,10 +293,52 @@ class FeedSettingsViewModel @Inject constructor(
                         suggested = suggested
                     )
                 }
+            } catch (e: PermissionRequiredException) {
+                // Not a failure to surface — the add can succeed once the app is
+                // granted the permission. Resolve its human name and stash the
+                // retry details for the approval dialog.
+                handlePermissionRequired(e, url, type)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             }
         }
+    }
+
+    private suspend fun handlePermissionRequired(
+        error: PermissionRequiredException,
+        url: String,
+        type: String
+    ) {
+        val name = try {
+            repository.permissionName(error.permission)
+        } catch (_: Exception) {
+            error.permission
+        }
+        _pendingPermission.value = PendingPermission(
+            app = error.app,
+            permission = error.permission,
+            name = name,
+            retryUrl = url,
+            retryType = type
+        )
+    }
+
+    /** Grant the pending permission, then retry the source add that triggered it. */
+    fun allowPendingPermission() {
+        val pending = _pendingPermission.value ?: return
+        _pendingPermission.value = null
+        viewModelScope.launch {
+            try {
+                repository.grantPermission(pending.app, pending.permission)
+                addSource(pending.retryUrl, pending.retryType)
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            }
+        }
+    }
+
+    fun denyPendingPermission() {
+        _pendingPermission.value = null
     }
 
     fun acceptSuggestedCredibility() {
@@ -420,6 +469,12 @@ class FeedSettingsViewModel @Inject constructor(
     }
 
     fun searchUsers(query: String) {
+        // Below two characters there's nothing to search — clear any prior
+        // results so an emptied field doesn't keep showing stale matches.
+        if (query.length < 2) {
+            _userSearchResults.value = emptyList()
+            return
+        }
         viewModelScope.launch {
             try {
                 _userSearchResults.value = repository.searchUsers(query)
@@ -568,4 +623,17 @@ class FeedSettingsViewModel @Inject constructor(
 data class SuggestedCredibility(
     val sourceId: String,
     val suggested: Int
+)
+
+/**
+ * A pending `permission_required` prompt raised while adding a source: the
+ * requesting [app] entity id, the [permission] key and its resolved [name],
+ * and the [retryUrl]/[retryType] so the add can be retried once granted.
+ */
+data class PendingPermission(
+    val app: String,
+    val permission: String,
+    val name: String,
+    val retryUrl: String,
+    val retryType: String
 )

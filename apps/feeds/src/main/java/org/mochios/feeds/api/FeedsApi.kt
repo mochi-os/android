@@ -10,7 +10,6 @@ import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
-import org.mochios.android.model.User
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
@@ -20,6 +19,7 @@ import org.mochios.feeds.model.SavedListResponse
 import org.mochios.feeds.model.SavedToggleResponse
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.model.User
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field

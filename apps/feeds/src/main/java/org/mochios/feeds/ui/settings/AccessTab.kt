@@ -365,7 +365,7 @@ private fun AddAccessDialog(
                                 userQuery = value
                                 selectedSubject = ""
                                 selectedName = ""
-                                if (value.length >= 2) viewModel.searchUsers(value)
+                                viewModel.searchUsers(value)
                             },
                             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                             singleLine = true,
@@ -375,7 +375,7 @@ private fun AddAccessDialog(
                             Spacer(modifier = Modifier.height(8.dp))
                             OutlinedCard(modifier = Modifier.fillMaxWidth()) {
                                 searchResults.take(6).forEach { user ->
-                                    val subject = user.fingerprint ?: user.id.toString()
+                                    val subject = user.id
                                     SubjectOption(
                                         icon = Icons.Default.Person,
                                         title = user.name,
