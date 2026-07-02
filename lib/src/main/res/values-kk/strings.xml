@@ -243,6 +243,7 @@
     <string name="about_version">Нұсқа %1$s</string>
     <string name="about_check_updates">Жаңартуларды тексеру</string>
     <string name="about_up_to_date">Соңғы нұсқа</string>
+    <string name="about_check_downloading">%1$s нұсқасы қолжетімді, жүктелуде…</string>
     <string name="about_check_network_error">Жаңарту серверіне қосыла алмады</string>
     <string name="about_check_download_failed">Жүктеу сәтсіз аяқталды</string>
     <string name="notifications_clear_all_title">Барлық хабарландырулар тазалансын ба?</string>

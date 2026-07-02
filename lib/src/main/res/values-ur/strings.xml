@@ -243,6 +243,7 @@
     <string name="about_version">ورژن %1$s</string>
     <string name="about_check_updates">اپڈیٹس چیک کریں</string>
     <string name="about_up_to_date">تازہ ترین ہے</string>
+    <string name="about_check_downloading">ورژن %1$s دستیاب ہے، ڈاؤن لوڈ ہو رہا ہے…</string>
     <string name="about_check_network_error">اپڈیٹ سرور تک پہنچنا ممکن نہ ہوا</string>
     <string name="about_check_download_failed">ڈاؤن لوڈ ناکام ہوا</string>
     <string name="notifications_clear_all_title">تمام اطلاعات صاف کریں؟</string>

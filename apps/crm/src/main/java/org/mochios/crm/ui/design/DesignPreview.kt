@@ -582,7 +582,9 @@ private fun buildSampleObjects(
                 2 -> "preview-1"
                 else -> ""
             },
-            rank = index,
+            // Sample objects only — a zero-padded index keeps them in order under
+            // the string-keyed rank sort (#53).
+            rank = index.toString().padStart(4, '0'),
             readable = name,
             values = values
         )

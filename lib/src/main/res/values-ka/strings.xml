@@ -243,6 +243,7 @@
     <string name="about_version">ვერსია %1$s</string>
     <string name="about_check_updates">განახლებების შემოწმება</string>
     <string name="about_up_to_date">უახლესი ვერსიაა</string>
+    <string name="about_check_downloading">ვერსია %1$s ხელმისაწვდომია, მიმდინარეობს ჩამოტვირთვა…</string>
     <string name="about_check_network_error">განახლების სერვერთან დაკავშირება ვერ მოხერხდა</string>
     <string name="about_check_download_failed">ჩამოტვირთვა ვერ მოხერხდა</string>
     <string name="notifications_clear_all_title">გსურთ ყველა შეტყობინების გასუფთავება?</string>

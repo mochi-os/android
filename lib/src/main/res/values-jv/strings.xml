@@ -243,6 +243,7 @@
     <string name="about_version">Versi %1$s</string>
     <string name="about_check_updates">Priksa nganyari</string>
     <string name="about_up_to_date">Wis paling anyar</string>
+    <string name="about_check_downloading">Versi %1$s kasedhiya, ngundhuh…</string>
     <string name="about_check_network_error">Ora bisa nyambung server nganyari</string>
     <string name="about_check_download_failed">Ngundhuh gagal</string>
     <string name="notifications_clear_all_title">Resiki kabeh notifikasi?</string>

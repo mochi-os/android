@@ -244,6 +244,7 @@
     <string name="about_version">Pyahuve %1$s</string>
     <string name="about_check_updates">Eheka pyahuve</string>
     <string name="about_up_to_date">Ipyahúma</string>
+    <string name="about_check_downloading">Versión %1$s oĩ, oñemboguejy…</string>
     <string name="about_check_network_error">Ndaikatúi og̃uahẽ pyahuve mohendahápe</string>
     <string name="about_check_download_failed">Ñemboguejy ndaikatúi</string>
     <string name="notifications_clear_all_title">¿Embogue opa marandukauka?</string>

@@ -479,7 +479,7 @@ interface FeedsApi {
     suspend fun setAiSettings(
         @Path("feedId") feedId: String,
         @Field("mode") mode: String,
-        @Field("account") account: Int = 0,
+        @Field("account") account: String = "",
     ): Response<ApiResponse<SuccessResponse>>
 
     @GET("{feedId}/-/ai/prompts/get")

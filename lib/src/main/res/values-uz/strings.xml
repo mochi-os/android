@@ -243,6 +243,7 @@
     <string name="about_version">Versiya %1$s</string>
     <string name="about_check_updates">Yangilanishlarni tekshirish</string>
     <string name="about_up_to_date">Yangilangan</string>
+    <string name="about_check_downloading">%1$s versiyasi mavjud, yuklab olinmoqda…</string>
     <string name="about_check_network_error">Yangilanish serveriga ulanib bo\'lmadi</string>
     <string name="about_check_download_failed">Yuklab olish amalga oshmadi</string>
     <string name="notifications_clear_all_title">Barcha bildirishnomalar tozalansinmi?</string>

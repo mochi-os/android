@@ -21,7 +21,7 @@ data class Feed(
     val read: Int = 0,
     val unread: Int = 0,
     @SerializedName("ai_mode") val aiMode: String? = null,
-    @SerializedName("ai_account") val aiAccount: Int = 0,
+    @SerializedName("ai_account") val aiAccount: String = "",
     val sort: String = ""
 )
 

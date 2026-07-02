@@ -242,6 +242,7 @@
     <string name="about_version">ስሪት %1$s</string>
     <string name="about_check_updates">ዝመናዎችን ይፈትሹ</string>
     <string name="about_up_to_date">ወቅታዊ ነው</string>
+    <string name="about_check_downloading">ስሪት %1$s ይገኛል፣ በማውረድ ላይ…</string>
     <string name="about_check_network_error">የዝመና አገልጋይ ላይ መድረስ አልተቻለም</string>
     <string name="about_check_download_failed">ማውረድ አልተሳካም</string>
     <string name="notifications_clear_all_title">ሁሉንም ማሳወቂያዎች ይጥረጉ?</string>

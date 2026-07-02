@@ -35,6 +35,7 @@ import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
@@ -140,26 +141,51 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                     val startApp = targetApp
-                    // While the activity is backgrounded, cover its content
-                    // with the theme background. When it's brought forward to
-                    // launch a different app (this singleTop instance is reused
-                    // via onNewIntent), the OS would otherwise flash the
-                    // previous app's last frame before onNewIntent swaps in the
-                    // new one. Cover on ON_STOP — after the recents snapshot is
-                    // already taken, so the recents thumbnail still shows real
-                    // content — and clear on ON_RESUME, by which point
-                    // onNewIntent has set the new target app.
+                    // While the activity is backgrounded, cover its content with
+                    // the theme background so that a launcher-icon switch (this
+                    // singleTop instance is reused via onNewIntent) doesn't flash
+                    // the previous app's frozen last frame before the new app
+                    // draws. Set on ON_STOP — after the recents snapshot is taken,
+                    // so the thumbnail still shows real content. Nothing paints
+                    // while stopped, so the cover is actually drawn on the first
+                    // resume frame, which is exactly when it's needed to hide the
+                    // stale frame. (The previous version cleared it on ON_RESUME,
+                    // i.e. before the new app painted, so the cover was never
+                    // visible and the old frame still flashed.)
                     var backgroundedCover by remember { mutableStateOf(false) }
+                    // The feature on screen when we backgrounded — lets us tell a
+                    // same-app resume from a switch to a different app.
+                    var coveredFromApp by remember { mutableStateOf<String?>(null) }
                     DisposableEffect(Unit) {
                         val observer = LifecycleEventObserver { _, event ->
                             when (event) {
-                                Lifecycle.Event.ON_STOP -> backgroundedCover = true
-                                Lifecycle.Event.ON_RESUME -> backgroundedCover = false
+                                Lifecycle.Event.ON_STOP -> {
+                                    backgroundedCover = true
+                                    coveredFromApp = targetApp
+                                }
+                                // onNewIntent (which sets targetApp) runs before
+                                // onResume, so a switch already reads here as
+                                // targetApp != coveredFromApp — keep its cover and
+                                // let the effect below lift it once the new app
+                                // paints. A same-app resume lifts it immediately
+                                // (its frame is already on the surface).
+                                Lifecycle.Event.ON_RESUME ->
+                                    if (targetApp == coveredFromApp) backgroundedCover = false
                                 else -> {}
                             }
                         }
                         this@MainActivity.lifecycle.addObserver(observer)
                         onDispose { this@MainActivity.lifecycle.removeObserver(observer) }
+                    }
+                    // Switch case: hold the cover until the new target app has
+                    // composed and painted one frame, then lift it — so the swap
+                    // reads old → theme background → new, never a frame of the old
+                    // app frozen on top of the new.
+                    LaunchedEffect(startApp) {
+                        if (backgroundedCover && startApp != coveredFromApp) {
+                            withFrameNanos {}
+                            backgroundedCover = false
+                        }
                     }
                     AppBootstrapHost(
                         appName = startApp ?: "feeds",
@@ -314,10 +340,13 @@ class MainActivity : ComponentActivity() {
      * the post-install relaunch case: when the system installer hands the
      * upgraded APK back to Android, Android relaunches the package via the
      * default LAUNCHER intent — which picks one alias out of the five
-     * (settings, on our manifest), regardless of which feature the user
-     * was actually in when they tapped Update. Detect that window via
-     * [PackageInfo.lastUpdateTime] and prefer the last-active feature
-     * saved by [onPause] instead, so the user lands back where they were.
+     * (settings, on our manifest), regardless of which feature the user was
+     * actually in when they tapped Update. We detect that by the running
+     * `versionName` differing from the one seen on the previous cold start and
+     * prefer the last-active feature saved by [onPause] instead, so the user
+     * lands back where they were. Keying on the version actually changing (not
+     * a `lastUpdateTime` time-window) makes this robust however long the user
+     * takes to reopen the app after accepting the update.
      */
     private fun resolveStartTargetApp(intent: Intent?, savedInstanceState: Bundle?): String? {
         val resolved = resolveTargetApp(intent)
@@ -326,16 +355,19 @@ class MainActivity : ComponentActivity() {
         if (savedInstanceState != null) return resolved
         // Explicit shortcut hint: user picked a specific feature, honour it.
         if (intent?.getStringExtra(EXTRA_APP_HINT) != null) return resolved
-        val timeSinceUpdate = try {
-            System.currentTimeMillis() -
-                packageManager.getPackageInfo(packageName, 0).lastUpdateTime
+        val current = try {
+            packageManager.getPackageInfo(packageName, 0).versionName
         } catch (_: PackageManager.NameNotFoundException) {
-            Long.MAX_VALUE
+            null
         }
-        if (timeSinceUpdate > POST_INSTALL_RELAUNCH_WINDOW_MS) return resolved
-        val saved = lastActiveAppPrefs().getString(KEY_LAST_ACTIVE_APP, null)
-        if (saved == null) return resolved
-        Log.i(TAG, "Post-install relaunch (${timeSinceUpdate}ms ago); restoring last-active=$saved over alias=$resolved")
+        val prefs = lastActiveAppPrefs()
+        val lastSeen = prefs.getString(KEY_LAST_SEEN_VERSION, null)
+        // Record what we're running now for the next cold start to compare against.
+        if (current != null) prefs.edit().putString(KEY_LAST_SEEN_VERSION, current).apply()
+        val upgraded = lastSeen != null && current != null && lastSeen != current
+        if (!upgraded) return resolved
+        val saved = prefs.getString(KEY_LAST_ACTIVE_APP, null) ?: return resolved
+        Log.i(TAG, "Upgrade relaunch ($lastSeen -> $current); restoring last-active=$saved over alias=$resolved")
         return saved
     }
 
@@ -730,14 +762,12 @@ class MainActivity : ComponentActivity() {
         private const val KEY_PENDING_DEEP_LINK = "pending_deep_link"
 
         /**
-         * How long after a package update we treat a fresh launch as a
-         * post-install relaunch (and restore the previously-active feature
-         * instead of trusting the alias the system happened to pick).
-         * Tight window so a legitimate launcher-icon tap 30+ seconds later
-         * isn't second-guessed: by then the install dialog is long gone
-         * and the tap is a deliberate user choice.
+         * SharedPreferences key holding the app `versionName` observed on the
+         * previous cold start. When the next cold start sees a different running
+         * version, an in-place upgrade happened and we restore the last-active
+         * feature rather than the LAUNCHER alias the system picked.
          */
-        private const val POST_INSTALL_RELAUNCH_WINDOW_MS = 30_000L
+        private const val KEY_LAST_SEEN_VERSION = "last_seen_version"
 
         // Notifications / Settings / Profile routes moved into the Settings
         // app module (`apps/settings`). The bell in each feature's TopAppBar

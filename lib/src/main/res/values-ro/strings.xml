@@ -243,6 +243,7 @@
     <string name="about_version">Versiunea %1$s</string>
     <string name="about_check_updates">Verifică actualizările</string>
     <string name="about_up_to_date">La zi</string>
+    <string name="about_check_downloading">Versiunea %1$s este disponibilă, se descarcă…</string>
     <string name="about_check_network_error">Serverul de actualizări nu a putut fi contactat</string>
     <string name="about_check_download_failed">Descărcare eșuată</string>
     <string name="notifications_clear_all_title">Ștergeți toate notificările?</string>

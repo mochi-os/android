@@ -23,7 +23,7 @@ import javax.inject.Singleton
 // calls the settings app's `-/accounts/*` endpoints (which proxy to mochi.account.*).
 
 data class ConnectedAccount(
-    val id: Int = 0,
+    val id: String = "",
     val type: String = "",
     val label: String = "",
     val identifier: String = "",
@@ -71,23 +71,23 @@ interface ConnectedAccountsApi {
 
     @FormUrlEncoded
     @POST("settings/-/accounts/remove")
-    suspend fun remove(@Field("id") id: Int): Response<Unit>
+    suspend fun remove(@Field("id") id: String): Response<Unit>
 
     @FormUrlEncoded
     @POST("settings/-/accounts/verify")
     suspend fun verify(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("code") code: String? = null,
     ): Response<Map<String, Any?>>
 
     @FormUrlEncoded
     @POST("settings/-/accounts/test")
-    suspend fun test(@Field("id") id: Int): Response<AccountTestResult>
+    suspend fun test(@Field("id") id: String): Response<AccountTestResult>
 
     @FormUrlEncoded
     @POST("settings/-/accounts/default")
     suspend fun setDefault(
-        @Field("account") account: Int,
+        @Field("account") account: String,
         @Field("type") type: String,
     ): Response<Unit>
 }

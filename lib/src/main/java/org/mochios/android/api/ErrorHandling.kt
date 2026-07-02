@@ -5,6 +5,7 @@
 
 package org.mochios.android.api
 
+import android.util.Log
 import org.mochios.android.R
 import org.mochios.android.i18n.AppContext
 import retrofit2.HttpException
@@ -37,13 +38,24 @@ fun Throwable.toMochiError(): MochiError {
             401 -> MochiError.AuthError()
             403 -> MochiError.ForbiddenError()
             404 -> MochiError.NotFoundError()
-            in 500..599 -> MochiError.ServerError(code(), message())
-            else -> MochiError.Unknown(message())
+            // Don't pass message() — it's the raw HTTP reason phrase, not a
+            // user-facing string. userMessage() renders a clean localised line.
+            in 500..599 -> MochiError.ServerError(code())
+            else -> MochiError.Unknown()
         }
         is UnknownHostException -> MochiError.NetworkError(this)
         is SocketTimeoutException -> MochiError.NetworkError(this)
         is IOException -> MochiError.NetworkError(this)
-        else -> MochiError.Unknown(message)
+        // Any other throwable is a client-side fault — a Gson parse failure on a
+        // model/schema mismatch (e.g. a NumberFormatException when the server
+        // changes a field's type), an NPE, an IllegalState, etc. Its `message` is
+        // a raw Java/Gson string ("java.lang.NumberFormatException: ...") that
+        // must NEVER reach the screen. Log it for debugging and surface the
+        // generic localised fallback instead.
+        else -> {
+            Log.w("MochiError", "Unmapped client-side error: ${this.javaClass.name}: $message", this)
+            MochiError.Unknown()
+        }
     }
 }
 

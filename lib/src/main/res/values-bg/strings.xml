@@ -242,6 +242,7 @@
     <string name="about_version">Версия %1$s</string>
     <string name="about_check_updates">Проверка за актуализации</string>
     <string name="about_up_to_date">Актуална версия</string>
+    <string name="about_check_downloading">Версия %1$s е налична, изтегляне…</string>
     <string name="about_check_network_error">Сървърът за актуализации е недостъпен</string>
     <string name="about_check_download_failed">Изтеглянето е неуспешно</string>
     <string name="notifications_clear_all_title">Изчистване на всички известия?</string>

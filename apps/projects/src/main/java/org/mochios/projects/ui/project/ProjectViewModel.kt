@@ -560,18 +560,22 @@ class ProjectViewModel @Inject constructor(
     fun sortObjects(objects: List<ProjectObject>): List<ProjectObject> {
         val field = getActiveSortField()
         val multiplier = if (getActiveSortDirection() == "desc") -1 else 1
-        val numericFields = setOf("rank", "number", "created", "updated")
+        // rank is a fractional-index text key whose ASCII (binary) order is the
+        // intended order (#53), so compare the keys as strings — matching the
+        // web's rankCompare. The remaining built-ins are still numeric.
+        if (field == "rank") {
+            return objects.sortedWith(Comparator { a, b -> a.rank.compareTo(b.rank) * multiplier })
+        }
+        val numericFields = setOf("number", "created", "updated")
         return if (field in numericFields) {
             objects.sortedWith(Comparator { a, b ->
                 val av = when (field) {
-                    "rank" -> a.rank.toLong()
                     "number" -> a.number.toLong()
                     "created" -> a.created
                     "updated" -> a.updated
                     else -> 0L
                 }
                 val bv = when (field) {
-                    "rank" -> b.rank.toLong()
                     "number" -> b.number.toLong()
                     "created" -> b.created
                     "updated" -> b.updated

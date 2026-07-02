@@ -243,6 +243,7 @@
     <string name="about_version">Bersyon %1$s</string>
     <string name="about_check_updates">Tingnan kung may update</string>
     <string name="about_up_to_date">Pinakabago na</string>
+    <string name="about_check_downloading">Available ang bersyon %1$s, dina-download…</string>
     <string name="about_check_network_error">Hindi maabot ang update server</string>
     <string name="about_check_download_failed">Nabigo ang pag-download</string>
     <string name="notifications_clear_all_title">I-clear ang lahat ng abiso?</string>

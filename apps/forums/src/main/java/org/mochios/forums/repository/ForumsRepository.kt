@@ -332,7 +332,7 @@ class ForumsRepository @Inject constructor(
         }
     }
 
-    suspend fun setAiSettings(forumId: String, mode: String, account: Int = 0) {
+    suspend fun setAiSettings(forumId: String, mode: String, account: String = "") {
         api.setAiSettings(forumId, mode, account).unwrap()
     }
 

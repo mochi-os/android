@@ -243,6 +243,7 @@
     <string name="about_version">버전 %1$s</string>
     <string name="about_check_updates">업데이트 확인</string>
     <string name="about_up_to_date">최신 버전입니다</string>
+    <string name="about_check_downloading">버전 %1$s 사용 가능, 다운로드 중…</string>
     <string name="about_check_network_error">업데이트 서버에 연결할 수 없습니다</string>
     <string name="about_check_download_failed">다운로드 실패</string>
     <string name="notifications_clear_all_title">모든 알림을 지우시겠습니까?</string>

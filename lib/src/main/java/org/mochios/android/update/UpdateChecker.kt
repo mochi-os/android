@@ -8,8 +8,12 @@ package org.mochios.android.update
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
+import androidx.work.Constraints
 import androidx.work.CoroutineWorker
 import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.ExistingWorkPolicy
+import androidx.work.NetworkType
+import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
@@ -18,6 +22,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okio.Buffer
 import okio.appendingSink
 import okio.buffer
 import okio.sink
@@ -53,6 +58,9 @@ class UpdateChecker(
     companion object {
         private const val TAG = "MochiUpdateCheck"
         private const val WORK_NAME = "mochi_update_check"
+        // Background download used to finish an update if the dialog is closed
+        // mid-download (the foreground inline path is the primary one).
+        private const val ONESHOT_WORK = "mochi_update_check_oneshot"
         const val PREFS = "mochi_update"
         const val KEY_PENDING = "pending_version"
         const val KEY_PENDING_PATH = "pending_path"
@@ -93,18 +101,74 @@ class UpdateChecker(
         }
 
         /**
-         * Run one check-and-stage cycle inline (no WorkManager). Same logic
-         * the periodic worker uses; callable from a Compose coroutine so the
-         * About dialog's button can show fresh status without waiting for the
-         * next scheduled fire. Idempotent and safe to call from any context.
-         *
-         * Wrapped in Dispatchers.IO so callers can invoke from the main
-         * dispatcher (the dialog uses rememberCoroutineScope, which is Main)
-         * without tripping NetworkOnMainThreadException — OkHttp's
-         * synchronous execute() is blocking. CoroutineWorker.doWork runs
-         * off-main on its own, but this entry point may not.
+         * Fast on-demand check for the About dialog's "Check for updates" button.
+         * Polls ONLY versions.json (never the ~40 MB APK, which would block the
+         * button) and reports whether a newer version exists. The actual download
+         * is left to the caller so it can run it in the FOREGROUND with live
+         * progress: a WorkManager background job's network is throttled as
+         * background data on many phones (slow even on fast wifi), so the dialog
+         * downloads inline via [checkNow] instead. On [UpdateStatus.Ready] the APK
+         * is already staged; on [UpdateStatus.Available] the caller downloads it.
          */
-        suspend fun checkNow(context: Context): CheckOutcome = withContext(Dispatchers.IO) {
+        suspend fun checkForUpdate(context: Context): UpdateStatus = withContext(Dispatchers.IO) {
+            val ctx = context.applicationContext
+            if (InstallSource.isStoreInstalled(ctx)) return@withContext UpdateStatus.UpToDate
+            val current = currentVersionName(ctx) ?: return@withContext UpdateStatus.UpToDate
+            val latest = try {
+                fetchLatest()
+            } catch (e: Exception) {
+                Log.i(TAG, "Fetch versions.json failed: ${e.message}")
+                return@withContext UpdateStatus.Offline
+            } ?: return@withContext UpdateStatus.UpToDate
+            if (compareVersions(latest, current) <= 0) {
+                clearPending(ctx)
+                return@withContext UpdateStatus.UpToDate
+            }
+            // KEY_PENDING is only written after a complete download, so it == latest
+            // means the APK is fully staged and ready to install right now.
+            val target = apkFile(ctx, latest)
+            val pending = prefs(ctx).getString(KEY_PENDING, "") ?: ""
+            if (pending == latest && target.exists() && target.length() > 0) {
+                return@withContext UpdateStatus.Ready(latest)
+            }
+            UpdateStatus.Available(latest)
+        }
+
+        /**
+         * Continue the APK download in the background (resuming any partial).
+         * The dialog calls this only when it's dismissed mid-download, so the
+         * foreground inline download isn't simply abandoned — the next time the
+         * app comes forward, [UpdateInstaller.promptIfPending] offers to install.
+         */
+        fun enqueueBackgroundDownload(context: Context) {
+            val request = OneTimeWorkRequestBuilder<UpdateChecker>()
+                .setConstraints(
+                    Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
+                )
+                .build()
+            // KEEP: repeated taps (or an in-flight daily check) don't stack downloads.
+            WorkManager.getInstance(context).enqueueUniqueWork(
+                ONESHOT_WORK, ExistingWorkPolicy.KEEP, request,
+            )
+        }
+
+        /**
+         * Run one check-and-stage cycle inline (no WorkManager). The full path —
+         * version poll AND the resumable APK download (reporting [onProgress]) —
+         * used by the periodic worker via [doWork] AND by the About dialog, which
+         * runs it in the foreground for full-speed download with a live progress
+         * bar.
+         *
+         * Heavy (blocking IO), so wrapped in Dispatchers.IO — callers can invoke
+         * from the main dispatcher (the dialog uses rememberCoroutineScope, which
+         * is Main) without tripping NetworkOnMainThreadException; OkHttp's
+         * synchronous execute() is blocking. CoroutineWorker.doWork runs off-main
+         * on its own, but this entry point may not.
+         */
+        suspend fun checkNow(
+            context: Context,
+            onProgress: (downloaded: Long, total: Long) -> Unit = { _, _ -> },
+        ): CheckOutcome = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
             if (InstallSource.isStoreInstalled(ctx)) {
                 // The store is responsible for updates here. About-dialog
@@ -149,7 +213,7 @@ class UpdateChecker(
             var staged = false
             for (attempt in 1..DOWNLOAD_ATTEMPTS) {
                 try {
-                    if (download(target)) {
+                    if (download(target, onProgress)) {
                         staged = true
                         break
                     }
@@ -196,7 +260,10 @@ class UpdateChecker(
          * length matches the server's reported total); a mid-stream drop throws,
          * leaving the partial in place for the next attempt to resume from.
          */
-        private fun download(target: File): Boolean {
+        private fun download(
+            target: File,
+            onProgress: (downloaded: Long, total: Long) -> Unit,
+        ): Boolean {
             target.parentFile?.mkdirs()
             val have = if (target.exists()) target.length() else 0L
             val builder = Request.Builder().url(APK_URL).get()
@@ -219,10 +286,31 @@ class UpdateChecker(
                 // Server resent the whole file despite our Range — drop the
                 // partial so we don't append a full body onto it.
                 if (!resuming && have > 0) target.delete()
-                // Stream straight to disk — append when resuming, truncate when
-                // starting fresh. The APK is ~40 MB, so never buffer in memory.
-                val out = if (resuming) target.appendingSink() else target.sink()
-                out.buffer().use { sink -> body.source().use { src -> sink.writeAll(src) } }
+                // Stream straight to disk in chunks — append when resuming,
+                // truncate when starting fresh — reporting progress as we go (the
+                // APK is ~40 MB, so never buffer it all in memory). `total` is the
+                // full file size, so downloaded starts at `have` on a resume.
+                val out = (if (resuming) target.appendingSink() else target.sink()).buffer()
+                out.use { sink ->
+                    body.source().use { src ->
+                        val chunk = Buffer()
+                        var downloaded = if (resuming) have else 0L
+                        var lastReported = downloaded
+                        while (true) {
+                            val read = src.read(chunk, 64L * 1024)
+                            if (read == -1L) break
+                            sink.write(chunk, read)
+                            downloaded += read
+                            // Throttle so we don't write the WorkManager progress
+                            // row on every 64 KB chunk.
+                            if (total != null && downloaded - lastReported >= 512L * 1024) {
+                                lastReported = downloaded
+                                onProgress(downloaded, total)
+                            }
+                        }
+                        if (total != null) onProgress(downloaded, total)
+                    }
+                }
                 // Complete only when we know the total AND the file matches it —
                 // never stage a truncated APK as if it were ready to install.
                 return total != null && target.length() == total
@@ -307,13 +395,24 @@ class UpdateChecker(
 }
 
 /**
- * Outcome of one [UpdateChecker.checkNow] cycle. The About dialog renders
- * different status text per outcome; the worker just maps these to
- * Result.success / Result.retry.
+ * Outcome of one [UpdateChecker.checkNow] cycle (the worker's full check +
+ * download). The worker maps these to Result.success / Result.retry.
  */
 enum class CheckOutcome {
     UpToDate,
     UpdateStaged,
     NetworkError,
     DownloadFailed,
+}
+
+/** Outcome of an on-demand [UpdateChecker.checkForUpdate], for the About dialog. */
+sealed interface UpdateStatus {
+    /** Already on the latest version (or store-managed). */
+    data object UpToDate : UpdateStatus
+    /** Couldn't reach the version endpoint. */
+    data object Offline : UpdateStatus
+    /** Newer [version] is already downloaded and ready to install. */
+    data class Ready(val version: String) : UpdateStatus
+    /** Newer [version] is available; the caller should download it. */
+    data class Available(val version: String) : UpdateStatus
 }

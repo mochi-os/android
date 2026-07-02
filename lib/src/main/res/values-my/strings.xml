@@ -243,6 +243,7 @@
     <string name="about_version">ဗားရှင်း %1$s</string>
     <string name="about_check_updates">အပ်ဒိတ်များ စစ်ဆေးပါ</string>
     <string name="about_up_to_date">နောက်ဆုံးဗားရှင်းဖြစ်သည်</string>
+    <string name="about_check_downloading">ဗားရှင်း %1$s ရနိုင်သည်၊ ဒေါင်းလုဒ်ဆွဲနေသည်…</string>
     <string name="about_check_network_error">အပ်ဒိတ်ဆာဗာသို့ ဆက်သွယ်၍မရပါ</string>
     <string name="about_check_download_failed">ဒေါင်းလုဒ်လုပ်ခြင်း မအောင်မြင်ပါ</string>
     <string name="notifications_clear_all_title">အကြောင်းကြားချက်အားလုံးကို ရှင်းလင်းမည်လား?</string>

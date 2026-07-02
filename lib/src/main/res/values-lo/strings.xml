@@ -243,6 +243,7 @@
     <string name="about_version">ເວີຊັນ %1$s</string>
     <string name="about_check_updates">ກວດຫາການອັບເດດ</string>
     <string name="about_up_to_date">ເປັນເວີຊັນລ່າສຸດແລ້ວ</string>
+    <string name="about_check_downloading">ເວີຊັນ %1$s ມີໃຫ້, ກຳລັງດາວໂຫລດ…</string>
     <string name="about_check_network_error">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີອັບເດດໄດ້</string>
     <string name="about_check_download_failed">ການດາວໂຫຼດລົ້ມເຫຼວ</string>
     <string name="notifications_clear_all_title">ລ້າງການແຈ້ງເຕືອນທັງໝົດບໍ?</string>

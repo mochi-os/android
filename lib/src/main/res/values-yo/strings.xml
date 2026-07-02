@@ -243,6 +243,7 @@
     <string name="about_version">Ìtumọ̀ %1$s</string>
     <string name="about_check_updates">Yẹ àwọn ìmúdójúìwọ̀n wò</string>
     <string name="about_up_to_date">Ó ti wà ní tuntun</string>
+    <string name="about_check_downloading">Ẹ̀yà %1$s wà, ń gbà sílẹ̀…</string>
     <string name="about_check_network_error">Kò lè dé sí olùpín ìmúdójúìwọ̀n</string>
     <string name="about_check_download_failed">Ìgbàsílẹ̀ kùnà</string>
     <string name="notifications_clear_all_title">Pa gbogbo àwọn ìfitónilétí rẹ́?</string>

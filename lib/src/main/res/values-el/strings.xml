@@ -244,6 +244,7 @@
     <string name="about_version">Έκδοση %1$s</string>
     <string name="about_check_updates">Έλεγχος για ενημερώσεις</string>
     <string name="about_up_to_date">Ενημερωμένο</string>
+    <string name="about_check_downloading">Η έκδοση %1$s είναι διαθέσιμη, γίνεται λήψη…</string>
     <string name="about_check_network_error">Δεν ήταν δυνατή η σύνδεση με τον διακομιστή ενημερώσεων</string>
     <string name="about_check_download_failed">Η λήψη απέτυχε</string>
     <string name="notifications_clear_all_title">Διαγραφή όλων των ειδοποιήσεων;</string>

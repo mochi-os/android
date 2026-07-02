@@ -574,7 +574,7 @@ interface ForumsApi {
     suspend fun setAiSettings(
         @Path("forumId") forumId: String,
         @Field("mode") mode: String,
-        @Field("account") account: Int = 0,
+        @Field("account") account: String = "",
     ): Response<ApiResponse<SuccessResponse>>
 
     @GET("{forumId}/-/ai/prompts/get")

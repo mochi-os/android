@@ -243,6 +243,7 @@
     <string name="about_version">Versie %1$s</string>
     <string name="about_check_updates">Controleren op updates</string>
     <string name="about_up_to_date">Up-to-date</string>
+    <string name="about_check_downloading">Versie %1$s beschikbaar, downloaden…</string>
     <string name="about_check_network_error">Updateserver kon niet worden bereikt</string>
     <string name="about_check_download_failed">Downloaden mislukt</string>
     <string name="notifications_clear_all_title">Alle meldingen wissen?</string>

@@ -244,12 +244,12 @@ class PushService : Service() {
         val payload = event.payload ?: return
         dispatchPush(subId, payload)
         // Ack so the matching push_pending row is removed server-side. The
-        // server includes `account` (the integer accounts.id) on the WS
-        // envelope specifically for this — subId alone is the random
+        // server includes `account` (the opaque accounts.id, a string uid) on
+        // the WS envelope specifically for this — subId alone is the random
         // subscription token and can't identify the queue row. Without
         // account we silently skip the ack and the row stays until the
         // 7-day TTL sweep.
-        val account = event.account?.toInt() ?: return
+        val account = event.account?.takeIf { it.isNotBlank() } ?: return
         val eventId = extractTag(payload) ?: return
         scope.launch { ackEvent(server, token, account, eventId) }
     }
@@ -299,11 +299,11 @@ class PushService : Service() {
                     val ev = events.getJSONObject(i)
                     val subId = ev.optString("subId")
                     val payload = ev.optString("payload")
-                    val account = ev.optInt("account", 0)
+                    val account = ev.optString("account")
                     val eventId = ev.optString("event_id")
                     if (subId.isBlank() || payload.isBlank()) continue
                     dispatchPush(subId, payload)
-                    if (account > 0 && eventId.isNotBlank()) {
+                    if (account.isNotBlank() && eventId.isNotBlank()) {
                         acks.put(JSONObject().put("account", account).put("event_id", eventId))
                     }
                 }
@@ -314,7 +314,7 @@ class PushService : Service() {
         }.onFailure { Log.w(TAG, "Drain failed: ${it.message}") }
     }
 
-    private fun ackEvent(server: String, token: String, account: Int, eventId: String) {
+    private fun ackEvent(server: String, token: String, account: String, eventId: String) {
         val acks = org.json.JSONArray().put(
             JSONObject().put("account", account).put("event_id", eventId)
         )

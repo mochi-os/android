@@ -37,7 +37,7 @@ data class NotifCategory(
 )
 
 data class DestinationAccount(
-    val id: Int = 0,
+    val id: String = "",
     val type: String = "",
     val label: String = "",
     val identifier: String = "",

@@ -242,6 +242,7 @@
     <string name="about_version">Verzija %1$s</string>
     <string name="about_check_updates">Provjeri ažuriranja</string>
     <string name="about_up_to_date">Ažurirano</string>
+    <string name="about_check_downloading">Verzija %1$s dostupna, preuzimanje…</string>
     <string name="about_check_network_error">Server za ažuriranja nije dostupan</string>
     <string name="about_check_download_failed">Preuzimanje nije uspjelo</string>
     <string name="notifications_clear_all_title">Obrisati sva obavještenja?</string>

@@ -56,6 +56,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.board.PagedZoomableBoard
 import org.mochios.android.ui.components.dnd.DragEdge
@@ -323,8 +324,7 @@ private fun BoardColumn(
                 .clip(MaterialTheme.shapes.small)
                 .then(headerDragModifier)
                 .then(edgeBorderModifier)
-                .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
-                .padding(horizontal = 8.dp, vertical = 2.dp)
+                .padding(start = 10.dp, end = 2.dp, top = 6.dp, bottom = 6.dp)
         ) {
             if (option.colour.isNotBlank()) {
                 Box(
@@ -333,15 +333,32 @@ private fun BoardColumn(
                         .clip(CircleShape)
                         .background(parseColor(option.colour))
                 )
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(10.dp))
             }
             Text(
                 text = option.name,
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.primary,
+                color = MaterialTheme.colorScheme.onSurface,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f)
             )
+            Spacer(modifier = Modifier.width(8.dp))
+            // Card-count pill — the standard kanban column count, in a tonal
+            // chip. Replaces the old washed-out primary-tinted header bar.
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .padding(horizontal = 8.dp, vertical = 2.dp)
+            ) {
+                Text(
+                    text = objects.size.toString(),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
             if (onCreateInColumn != null) {
                 IconButton(onClick = onCreateInColumn, modifier = Modifier.size(32.dp)) {
                     Icon(

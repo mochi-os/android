@@ -243,6 +243,7 @@
     <string name="about_version">Toleo %1$s</string>
     <string name="about_check_updates">Angalia masasisho</string>
     <string name="about_up_to_date">Imesasishwa</string>
+    <string name="about_check_downloading">Toleo %1$s linapatikana, inapakua…</string>
     <string name="about_check_network_error">Haikuweza kufikia seva ya masasisho</string>
     <string name="about_check_download_failed">Upakuaji umeshindikana</string>
     <string name="notifications_clear_all_title">Futa arifa zote?</string>

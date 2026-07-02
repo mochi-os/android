@@ -243,6 +243,7 @@
     <string name="about_version">Inguqulo %1$s</string>
     <string name="about_check_updates">Hlola izibuyekezo</string>
     <string name="about_up_to_date">Kusebenza kwesakamuva</string>
+    <string name="about_check_downloading">Inguqulo %1$s iyatholakala, iyalandwa…</string>
     <string name="about_check_network_error">Ayikwazanga ukufinyelela iseva yezibuyekezo</string>
     <string name="about_check_download_failed">Ukulanda kuhlulekile</string>
     <string name="notifications_clear_all_title">Sula zonke izaziso?</string>

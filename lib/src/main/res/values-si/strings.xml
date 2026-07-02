@@ -243,6 +243,7 @@
     <string name="about_version">අනුවාදය %1$s</string>
     <string name="about_check_updates">යාවත්කාලීන සඳහා පරීක්ෂා කරන්න</string>
     <string name="about_up_to_date">යාවත්කාලීනයි</string>
+    <string name="about_check_downloading">අනුවාදය %1$s තිබේ, බාගත වෙමින්…</string>
     <string name="about_check_network_error">යාවත්කාලීන සේවාදායකය වෙත ළඟා විය නොහැකි විය</string>
     <string name="about_check_download_failed">බාගත කිරීම අසාර්ථක විය</string>
     <string name="notifications_clear_all_title">සියලුම දැනුම්දීම් ඉවත් කරන්නද?</string>

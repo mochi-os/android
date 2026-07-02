@@ -226,7 +226,7 @@ class ForumSettingsViewModel @Inject constructor(
                     // a GET zeroed the columns.
                     aiSettings = AiSettings(
                         mode = _uiState.value.forum.aiMode,
-                        account = _uiState.value.forum.aiAccount.toString(),
+                        account = _uiState.value.forum.aiAccount,
                     ),
                     aiPrompts = repository.getAiPrompts(forumId),
                     aiAccounts = repository.listAiAccounts()
@@ -238,12 +238,12 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
-    fun setAiSettings(mode: String, account: Int) {
+    fun setAiSettings(mode: String, account: String) {
         viewModelScope.launch {
             try {
                 repository.setAiSettings(forumId, mode, account)
                 _uiState.value = _uiState.value.copy(
-                    aiSettings = AiSettings(mode = mode, account = account.toString()),
+                    aiSettings = AiSettings(mode = mode, account = account),
                     forum = _uiState.value.forum.copy(aiMode = mode, aiAccount = account),
                 )
             } catch (e: Exception) {

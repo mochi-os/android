@@ -243,6 +243,7 @@
     <string name="about_version">ਵਰਜਨ %1$s</string>
     <string name="about_check_updates">ਅੱਪਡੇਟਾਂ ਲਈ ਚੈੱਕ ਕਰੋ</string>
     <string name="about_up_to_date">ਅੱਪ ਟੂ ਡੇਟ</string>
+    <string name="about_check_downloading">ਵਰਜਨ %1$s ਉਪਲਬਧ ਹੈ, ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="about_check_network_error">ਅੱਪਡੇਟ ਸਰਵਰ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ</string>
     <string name="about_check_download_failed">ਡਾਊਨਲੋਡ ਅਸਫਲ ਰਿਹਾ</string>
     <string name="notifications_clear_all_title">ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਸਾਫ਼ ਕਰਨੀਆਂ ਹਨ?</string>

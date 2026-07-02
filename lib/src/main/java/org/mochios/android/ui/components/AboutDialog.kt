@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -31,13 +32,26 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.update.CheckOutcome
 import org.mochios.android.update.UpdateChecker
 import org.mochios.android.update.UpdateInstaller
+import org.mochios.android.update.UpdateStatus
 
-private enum class UpdateCheckState { IDLE, CHECKING, UP_TO_DATE, NETWORK_ERROR, DOWNLOAD_FAILED }
+private sealed interface CheckUi {
+    data object Idle : CheckUi
+    data object Checking : CheckUi
+    data object UpToDate : CheckUi
+    /**
+     * A newer [version] was found and is downloading in the background.
+     * [progress] is the percent complete, or null while it's still unknown.
+     */
+    data class Downloading(val version: String, val progress: Int?) : CheckUi
+    data object Offline : CheckUi
+    data object DownloadFailed : CheckUi
+}
 
 /**
  * Simple "About" dialog shown from each feature's drawer footer. Reads the
@@ -59,24 +73,15 @@ fun AboutDialog(onDismiss: () -> Unit) {
             context.packageManager.getPackageInfo(context.packageName, 0).versionName
         }.getOrNull().orEmpty()
     }
-    var state by remember { mutableStateOf(UpdateCheckState.IDLE) }
+    var state by remember { mutableStateOf<CheckUi>(CheckUi.Idle) }
 
-    // If checkNow stages an update, dismiss the dialog and hand off to the
-    // installer. promptIfPending needs an Activity (it calls startActivity)
-    // — context here is the Activity hosting the dialog.
-    fun handleOutcome(outcome: CheckOutcome) {
-        state = when (outcome) {
-            CheckOutcome.UpToDate -> UpdateCheckState.UP_TO_DATE
-            CheckOutcome.NetworkError -> UpdateCheckState.NETWORK_ERROR
-            CheckOutcome.DownloadFailed -> UpdateCheckState.DOWNLOAD_FAILED
-            CheckOutcome.UpdateStaged -> {
-                // Use forcePrompt — user explicitly asked, so suppression
-                // for an already-declined version should be ignored here.
-                (context as? Activity)?.let { UpdateInstaller.forcePrompt(it) }
-                onDismiss()
-                UpdateCheckState.IDLE
-            }
-        }
+    // A staged APK is ready — hand off to the system installer. forcePrompt (vs
+    // promptIfPending) because the user explicitly asked, so an
+    // already-declined-this-version suppression shouldn't apply. Needs an
+    // Activity (it calls startActivity); context here is the hosting Activity.
+    fun promptInstall() {
+        (context as? Activity)?.let { UpdateInstaller.forcePrompt(it) }
+        onDismiss()
     }
 
     AlertDialog(
@@ -92,38 +97,87 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     OutlinedButton(
                         onClick = {
-                            state = UpdateCheckState.CHECKING
+                            state = CheckUi.Checking
                             scope.launch {
-                                handleOutcome(UpdateChecker.checkNow(context))
+                                when (val result = UpdateChecker.checkForUpdate(context)) {
+                                    is UpdateStatus.UpToDate -> state = CheckUi.UpToDate
+                                    is UpdateStatus.Offline -> state = CheckUi.Offline
+                                    is UpdateStatus.Ready -> promptInstall()
+                                    is UpdateStatus.Available -> {
+                                        state = CheckUi.Downloading(result.version, null)
+                                        // Download in the FOREGROUND so it runs at full
+                                        // network speed (a WorkManager background job's
+                                        // network is throttled as background data on many
+                                        // phones — slow even on fast wifi), updating the
+                                        // bar straight from the progress callback.
+                                        val outcome = try {
+                                            UpdateChecker.checkNow(context) { done, total ->
+                                                val pct = if (total > 0L) ((done * 100L) / total).toInt().coerceIn(0, 100) else null
+                                                state = CheckUi.Downloading(result.version, pct)
+                                            }
+                                        } catch (cancel: CancellationException) {
+                                            // Dialog closed mid-download — finish the
+                                            // partial in the background so it isn't lost.
+                                            UpdateChecker.enqueueBackgroundDownload(context)
+                                            throw cancel
+                                        }
+                                        when (outcome) {
+                                            CheckOutcome.UpdateStaged -> promptInstall()
+                                            CheckOutcome.UpToDate -> state = CheckUi.UpToDate
+                                            CheckOutcome.NetworkError -> state = CheckUi.Offline
+                                            CheckOutcome.DownloadFailed -> state = CheckUi.DownloadFailed
+                                        }
+                                    }
+                                }
                             }
                         },
-                        enabled = state != UpdateCheckState.CHECKING,
+                        enabled = state !is CheckUi.Checking && state !is CheckUi.Downloading,
                     ) {
                         Text(stringResource(R.string.about_check_updates))
                     }
-                    Spacer(modifier = Modifier.size(12.dp))
-                    when (state) {
-                        UpdateCheckState.CHECKING -> CircularProgressIndicator(
+                    if (state is CheckUi.Checking) {
+                        Spacer(modifier = Modifier.size(12.dp))
+                        CircularProgressIndicator(
                             modifier = Modifier.size(20.dp),
                             strokeWidth = 2.dp,
                         )
-                        UpdateCheckState.UP_TO_DATE -> Text(
-                            text = stringResource(R.string.about_up_to_date),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                        UpdateCheckState.NETWORK_ERROR -> Text(
-                            text = stringResource(R.string.about_check_network_error),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.error,
-                        )
-                        UpdateCheckState.DOWNLOAD_FAILED -> Text(
-                            text = stringResource(R.string.about_check_download_failed),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.error,
-                        )
-                        UpdateCheckState.IDLE -> Unit
                     }
+                }
+                // Status line below the button — spells out whether a new version
+                // was found and that it's downloading, so a tap is never silent.
+                when (val s = state) {
+                    is CheckUi.Downloading -> {
+                        AboutStatus(stringResource(R.string.about_check_downloading, s.version), isError = false)
+                        Spacer(modifier = Modifier.height(8.dp))
+                        val pct = s.progress
+                        if (pct != null) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                LinearProgressIndicator(
+                                    progress = { pct / 100f },
+                                    modifier = Modifier.weight(1f),
+                                )
+                                Spacer(modifier = Modifier.size(8.dp))
+                                Text(
+                                    text = "$pct%",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                        } else {
+                            // Total size not known yet — indeterminate sweep.
+                            LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                        }
+                    }
+                    is CheckUi.UpToDate ->
+                        AboutStatus(stringResource(R.string.about_up_to_date), isError = false)
+                    is CheckUi.Offline ->
+                        AboutStatus(stringResource(R.string.about_check_network_error), isError = true)
+                    is CheckUi.DownloadFailed ->
+                        AboutStatus(stringResource(R.string.about_check_download_failed), isError = true)
+                    is CheckUi.Idle, is CheckUi.Checking -> Unit
                 }
             }
         },
@@ -132,5 +186,16 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text(stringResource(R.string.about_close))
             }
         },
+    )
+}
+
+@Composable
+private fun AboutStatus(text: String, isError: Boolean) {
+    Spacer(modifier = Modifier.height(8.dp))
+    Text(
+        text = text,
+        style = MaterialTheme.typography.bodySmall,
+        color = if (isError) MaterialTheme.colorScheme.error
+        else MaterialTheme.colorScheme.onSurfaceVariant,
     )
 }

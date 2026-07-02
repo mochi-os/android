@@ -718,7 +718,7 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun setAiSettings(feedId: String, mode: String, account: Int = 0) {
+    suspend fun setAiSettings(feedId: String, mode: String, account: String = "") {
         try {
             api.setAiSettings(feedId, mode, account).unwrap()
             return

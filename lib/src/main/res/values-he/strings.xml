@@ -244,6 +244,7 @@
     <string name="about_version">גרסה %1$s</string>
     <string name="about_check_updates">בדוק עדכונים</string>
     <string name="about_up_to_date">מעודכן</string>
+    <string name="about_check_downloading">גרסה %1$s זמינה, מוריד…</string>
     <string name="about_check_network_error">לא ניתן היה להגיע לשרת העדכונים</string>
     <string name="about_check_download_failed">ההורדה נכשלה</string>
     <string name="notifications_clear_all_title">לנקות את כל ההתראות?</string>

@@ -244,6 +244,7 @@
     <string name="about_version">Vèsyon %1$s</string>
     <string name="about_check_updates">Tcheke pou mizajou</string>
     <string name="about_up_to_date">Ajou</string>
+    <string name="about_check_downloading">Vèsyon %1$s disponib, l ap telechaje…</string>
     <string name="about_check_network_error">Pa t kapab jwenn sèvè mizajou a</string>
     <string name="about_check_download_failed">Telechajman echwe</string>
     <string name="notifications_clear_all_title">Efase tout notifikasyon?</string>

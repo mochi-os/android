@@ -243,6 +243,7 @@
     <string name="about_version">ಆವೃತ್ತಿ %1$s</string>
     <string name="about_check_updates">ನವೀಕರಣಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸಿ</string>
     <string name="about_up_to_date">ನವೀಕೃತವಾಗಿದೆ</string>
+    <string name="about_check_downloading">ಆವೃತ್ತಿ %1$s ಲಭ್ಯವಿದೆ, ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
     <string name="about_check_network_error">ನವೀಕರಣ ಸರ್ವರ್ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="about_check_download_failed">ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ</string>
     <string name="notifications_clear_all_title">ಎಲ್ಲ ಅಧಿಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸುವುದೇ?</string>

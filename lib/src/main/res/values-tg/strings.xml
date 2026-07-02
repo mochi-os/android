@@ -243,6 +243,7 @@
     <string name="about_version">Версияи %1$s</string>
     <string name="about_check_updates">Санҷидани навсозиҳо</string>
     <string name="about_up_to_date">Навтарин нусха</string>
+    <string name="about_check_downloading">Версияи %1$s дастрас аст, боргирӣ…</string>
     <string name="about_check_network_error">Ба сервери навсозӣ пайваст шуда нашуд</string>
     <string name="about_check_download_failed">Боргирӣ ноком шуд</string>
     <string name="notifications_clear_all_title">Ҳамаи огоҳномаҳо тоза карда шаванд?</string>

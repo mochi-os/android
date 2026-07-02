@@ -242,6 +242,7 @@
     <string name="about_version">Версія %1$s</string>
     <string name="about_check_updates">Праверыць абнаўленні</string>
     <string name="about_up_to_date">Усё актуальнае</string>
+    <string name="about_check_downloading">Версія %1$s даступная, спампоўванне…</string>
     <string name="about_check_network_error">Не ўдалося звязацца з серверам абнаўленняў</string>
     <string name="about_check_download_failed">Памылка спампоўвання</string>
     <string name="notifications_clear_all_title">Ачысціць усе апавяшчэнні?</string>

@@ -246,6 +246,7 @@
     <string name="about_version">Version %1$s</string>
     <string name="about_check_updates">Søg efter opdateringer</string>
     <string name="about_up_to_date">Opdateret</string>
+    <string name="about_check_downloading">Version %1$s er tilgængelig, downloader…</string>
     <string name="about_check_network_error">Kunne ikke nå opdateringsserveren</string>
     <string name="about_check_download_failed">Download mislykkedes</string>
     <string name="notifications_clear_all_title">Ryd alle notifikationer?</string>

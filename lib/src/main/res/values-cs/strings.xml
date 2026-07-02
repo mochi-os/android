@@ -242,6 +242,7 @@
     <string name="about_version">Verze %1$s</string>
     <string name="about_check_updates">Zkontrolovat aktualizace</string>
     <string name="about_up_to_date">Aktuální</string>
+    <string name="about_check_downloading">Verze %1$s je dostupná, stahování…</string>
     <string name="about_check_network_error">Server aktualizací nelze kontaktovat</string>
     <string name="about_check_download_failed">Stažení se nezdařilo</string>
     <string name="notifications_clear_all_title">Vymazat všechna oznámení?</string>

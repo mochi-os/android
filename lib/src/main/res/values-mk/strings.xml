@@ -243,6 +243,7 @@
     <string name="about_version">Верзија %1$s</string>
     <string name="about_check_updates">Провери за ажурирања</string>
     <string name="about_up_to_date">Ажурирано</string>
+    <string name="about_check_downloading">Верзијата %1$s е достапна, се презема…</string>
     <string name="about_check_network_error">Серверот за ажурирања не е достапен</string>
     <string name="about_check_download_failed">Преземањето не успеа</string>
     <string name="notifications_clear_all_title">Да се исчистат сите известувања?</string>

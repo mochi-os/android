@@ -242,6 +242,7 @@
     <string name="about_version">Fersiwn %1$s</string>
     <string name="about_check_updates">Gwirio am ddiweddariadau</string>
     <string name="about_up_to_date">Yn gyfredol</string>
+    <string name="about_check_downloading">Mae fersiwn %1$s ar gael, yn lawrlwytho…</string>
     <string name="about_check_network_error">Methu cyrraedd y gweinydd diweddaru</string>
     <string name="about_check_download_failed">Methodd y lawrlwytho</string>
     <string name="notifications_clear_all_title">Clirio pob hysbysiad?</string>

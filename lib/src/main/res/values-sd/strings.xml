@@ -243,6 +243,7 @@
     <string name="about_version">ورجن %1$s</string>
     <string name="about_check_updates">تازه ڪاريون ڏسو</string>
     <string name="about_up_to_date">تازو آھي</string>
+    <string name="about_check_downloading">ورزن %1$s دستياب آهي، ڊائونلوڊ ٿي رهيو آهي…</string>
     <string name="about_check_network_error">اپڊيٽ سرور تائين پھچي نه سگھيو</string>
     <string name="about_check_download_failed">ڊائون لوڊ ناڪام ٿيو</string>
     <string name="notifications_clear_all_title">سڀ اطلاع صاف ڪجن؟</string>

@@ -243,6 +243,7 @@
     <string name="about_version">Versión %1$s</string>
     <string name="about_check_updates">Musuqyaykunata maskay</string>
     <string name="about_up_to_date">Musuqchasqaña</string>
+    <string name="about_check_downloading">Versión %1$s kachkan, urquchkan…</string>
     <string name="about_check_network_error">Musuqchay servidorman mana chayayta atikunchu</string>
     <string name="about_check_download_failed">Uraykachiy mana atikunchu</string>
     <string name="notifications_clear_all_title">Llapan willaykunata pichanachu?</string>

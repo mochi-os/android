@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -56,8 +57,13 @@ fun MoveObjectSheet(
     val rowOptions = rowFieldId?.let { viewModel.getAllOptionsForField(it) } ?: emptyList()
     val currentRowValue = rowFieldId?.let { obj.stringValue(it) } ?: ""
 
-    // Objects in the same column for reordering
-    val columnObjects = uiState.objects.filter { it.stringValue(columnFieldId) == currentColumnValue && it.id != obj.id }
+    // Objects in the same column for reordering, in rank order — the fractional
+    // rank key sorts as a plain string (#53). Matches the server's `others` list
+    // (order by rank, excluding the moved object), so a row's index here is the
+    // drop position the server expects.
+    val columnObjects = uiState.objects
+        .filter { it.stringValue(columnFieldId) == currentColumnValue && it.id != obj.id }
+        .sortedBy { it.rank }
     val prefix = uiState.projectDetails?.project?.prefix ?: ""
 
     ModalBottomSheet(
@@ -183,13 +189,16 @@ fun MoveObjectSheet(
                             Text(stringResource(R.string.projects_move_position_top), style = MaterialTheme.typography.bodyLarge)
                         }
                     }
-                    items(columnObjects, key = { "after_${it.id}" }) { other ->
+                    itemsIndexed(columnObjects, key = { _, it -> "after_${it.id}" }) { index, other ->
                         val label = other.readable.ifBlank { "$prefix-${other.number}" }
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    viewModel.moveObject(obj.id, columnFieldId, currentColumnValue, other.rank + 1)
+                                    // 1-based drop slot to land just after this row:
+                                    // server inserts between others[pos-2] and
+                                    // others[pos-1], so "after index i" is pos = i + 2.
+                                    viewModel.moveObject(obj.id, columnFieldId, currentColumnValue, index + 2)
                                     onDismiss()
                                 }
                                 .padding(vertical = 12.dp, horizontal = 8.dp),

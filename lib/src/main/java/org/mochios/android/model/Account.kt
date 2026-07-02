@@ -14,7 +14,7 @@ import com.google.gson.annotations.SerializedName
  * unchanged field name so we mark the binding explicitly.
  */
 data class Account(
-    val id: Int = 0,
+    val id: String = "",
     val type: String = "",
     val label: String = "",
     val identifier: String = "",

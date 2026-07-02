@@ -243,6 +243,7 @@
     <string name="about_version">Versija %1$s</string>
     <string name="about_check_updates">Tikrinti, ar yra naujinių</string>
     <string name="about_up_to_date">Naujausia versija</string>
+    <string name="about_check_downloading">Versija %1$s prieinama, atsisiunčiama…</string>
     <string name="about_check_network_error">Nepavyko pasiekti naujinių serverio</string>
     <string name="about_check_download_failed">Nepavyko atsisiųsti</string>
     <string name="notifications_clear_all_title">Išvalyti visus pranešimus?</string>

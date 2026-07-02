@@ -243,6 +243,7 @@
     <string name="about_version">Verzhinii %1$s</string>
     <string name="about_check_updates">Haaromsa sakatta\'i</string>
     <string name="about_up_to_date">Haaromfameera</string>
+    <string name="about_check_downloading">Versiyiin %1$s ni jira, buufamaa jira…</string>
     <string name="about_check_network_error">Sarvarii haaromsaa bira gahuu hin dandeenye</string>
     <string name="about_check_download_failed">Buusuun kufeera</string>
     <string name="notifications_clear_all_title">Beeksisawwan hunda haquu?</string>

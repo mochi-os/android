@@ -152,6 +152,7 @@
     <string name="about_version">Weergawe %1$s</string>
     <string name="about_check_updates">Kyk vir opdaterings</string>
     <string name="about_up_to_date">Op datum</string>
+    <string name="about_check_downloading">Weergawe %1$s beskikbaar, besig om af te laai…</string>
     <string name="about_check_network_error">Kon nie opdateringbediener bereik nie</string>
     <string name="about_check_download_failed">Aflaai het misluk</string>
     <string name="notifications_clear_all_title">Vee alle kennisgewings uit?</string>

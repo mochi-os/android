@@ -244,6 +244,7 @@
     <string name="about_version">Version %1$s</string>
     <string name="about_check_updates">Rechercher des mises à jour</string>
     <string name="about_up_to_date">À jour</string>
+    <string name="about_check_downloading">Version %1$s disponible, téléchargement…</string>
     <string name="about_check_network_error">Impossible de joindre le serveur de mises à jour</string>
     <string name="about_check_download_failed">Échec du téléchargement</string>
     <string name="notifications_clear_all_title">Effacer toutes les notifications ?</string>
