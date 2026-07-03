@@ -86,8 +86,6 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ListItem
-import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -147,6 +145,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -171,6 +170,7 @@ import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.post.AddTagDialog
 import org.mochios.feeds.ui.post.CommentInputBar
 import org.mochios.feeds.ui.post.PostTagsButton
+import org.mochios.feeds.ui.feedlist.CreateFeedDialog
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
@@ -196,6 +196,7 @@ fun FeedScreen(
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
     val hasAi by feedListViewModel.hasAi.collectAsState()
+    val showCreateFeedDialog by feedListViewModel.showCreateDialog.collectAsState()
 
     // Persist the last-viewed feed so the next cold start lands here. The
     // router composable reads this back via [LastViewedStore.get].
@@ -254,6 +255,12 @@ fun FeedScreen(
                 is InterestFeedback.Failure -> fb.error?.message ?: interestFailed
             }
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+        }
+    }
+    // Creating a feed from the drawer opens it, landing on its empty state.
+    LaunchedEffect(Unit) {
+        feedListViewModel.feedCreated.collect { newFeedId ->
+            if (newFeedId.isNotEmpty()) onSelectFeed(newFeedId)
         }
     }
     LaunchedEffect(viewModel.feedId) {
@@ -456,51 +463,37 @@ fun FeedScreen(
             if (item.id != currentDrawerId) onSelectFeed(item.id)
         },
         actions = {
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(R.string.feeds_saved_menu),
+                icon = Icons.Default.BookmarkBorder,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToSaved()
                 },
-                headlineContent = { Text(stringResource(R.string.feeds_saved_menu)) },
-                leadingContent = { Icon(Icons.Default.BookmarkBorder, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(R.string.feeds_find_feeds),
+                icon = Icons.Default.Search,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToFindFeeds()
                 },
-                headlineContent = { Text(stringResource(R.string.feeds_find_feeds)) },
-                leadingContent = { Icon(Icons.Default.Search, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
-            // TODO: re-enable Suggested interests once it's wired into the
-            // subscribe-feed flow.
-            // val suggestedInterests by viewModel.suggestedInterests.collectAsState()
-            // if (suggestedInterests.isNotEmpty()) {
-            //     ListItem(
-            //         modifier = Modifier.clickable {
-            //             drawerScope.launch { drawerState.close() }
-            //             showSuggestedInterests = true
-            //         },
-            //         headlineContent = { Text(stringResource(R.string.feeds_suggested_interests)) },
-            //         supportingContent = {
-            //             Text(stringResource(R.string.feeds_suggested_interests_count, suggestedInterests.size))
-            //         },
-            //         leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
-            //         colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
-            //     )
-            // }
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(R.string.feeds_create_feed),
+                icon = Icons.Default.Add,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    feedListViewModel.showCreateDialog()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.feeds_logout),
+                icon = Icons.AutoMirrored.Filled.Logout,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
                 },
-                headlineContent = { Text(stringResource(R.string.feeds_logout)) },
-                leadingContent = {
-                    Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null)
-                },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
     ) {
@@ -709,8 +702,10 @@ fun FeedScreen(
                 )
             },
             floatingActionButton = {
-                // Primary action: create a new post in this feed.
-                if (permissions.manage) {
+                // Primary action: create a new post in this feed. Hidden while the
+                // feed is empty — the empty state offers its own "Create the first
+                // post" button instead.
+                if (permissions.manage && posts.isNotEmpty()) {
                     FloatingActionButton(
                         onClick = { onNavigateToCreatePost(viewModel.feedId) }
                     ) {
@@ -801,17 +796,34 @@ fun FeedScreen(
                         else -> {
                             Column(modifier = Modifier.fillMaxSize()) {
                                 if (posts.isEmpty() && !isLoading) {
-                                    Box(
+                                    Column(
                                         modifier = Modifier
                                             .fillMaxSize()
                                             .padding(48.dp),
-                                        contentAlignment = Alignment.Center
+                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                        verticalArrangement = Arrangement.Center
                                     ) {
                                         Text(
                                             text = stringResource(R.string.feeds_no_posts_yet),
                                             style = MaterialTheme.typography.bodyLarge,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant
                                         )
+                                        if (permissions.manage) {
+                                            Spacer(modifier = Modifier.height(16.dp))
+                                            Button(
+                                                onClick = {
+                                                    onNavigateToCreatePost(viewModel.feedId)
+                                                }
+                                            ) {
+                                                Icon(
+                                                    Icons.Default.Add,
+                                                    contentDescription = null,
+                                                    modifier = Modifier.size(18.dp)
+                                                )
+                                                Spacer(modifier = Modifier.width(8.dp))
+                                                Text(stringResource(R.string.feeds_create_first_post))
+                                            }
+                                        }
                                     }
                                 } else {
                                     // Magazine-style vertical pager: one post per page.
@@ -1045,6 +1057,16 @@ fun FeedScreen(
                         Text(stringResource(MochiR.string.common_cancel))
                     }
                 }
+            )
+        }
+
+        if (showCreateFeedDialog) {
+            CreateFeedDialog(
+                onDismiss = { feedListViewModel.hideCreateDialog() },
+                onCreate = { name, privacy, memories ->
+                    feedListViewModel.createFeed(name, privacy, memories)
+                },
+                viewModel = feedListViewModel,
             )
         }
 

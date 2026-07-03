@@ -8,8 +8,11 @@ package org.mochios.feeds.ui.feedlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -53,6 +56,11 @@ class FeedListViewModel @Inject constructor(
 
     private val _isCreating = MutableStateFlow(false)
     val isCreating: StateFlow<Boolean> = _isCreating.asStateFlow()
+
+    // Emits the new feed's id right after a successful create, so the screen can
+    // open it (landing on its empty "create the first post" state).
+    private val _feedCreated = MutableSharedFlow<String>()
+    val feedCreated: SharedFlow<String> = _feedCreated.asSharedFlow()
 
     private val _currentSort = MutableStateFlow("")
     val currentSort: StateFlow<String> = _currentSort.asStateFlow()
@@ -157,9 +165,10 @@ class FeedListViewModel @Inject constructor(
             _isCreating.value = true
             _createError.value = null
             try {
-                repository.createFeed(name, privacy, memories)
+                val feed = repository.createFeed(name, privacy, memories)
                 _showCreateDialog.value = false
                 refresh()
+                _feedCreated.emit(feed.fingerprint.ifEmpty { feed.id })
             } catch (e: Exception) {
                 _createError.value = e.toMochiError()
             } finally {

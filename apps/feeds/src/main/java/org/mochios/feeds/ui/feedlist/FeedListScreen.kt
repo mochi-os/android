@@ -117,6 +117,13 @@ fun FeedListScreen(
         }
     }
 
+    // Open a freshly created feed so the user lands on its empty state.
+    LaunchedEffect(Unit) {
+        viewModel.feedCreated.collect { feedId ->
+            if (feedId.isNotEmpty()) onNavigateToFeed(feedId)
+        }
+    }
+
     // When this screen comes back into the foreground (e.g. after the user
     // marks posts read in a feed view and navigates back), refresh the
     // per-feed unread counts. The server doesn't push a websocket event
@@ -411,14 +418,15 @@ private fun FeedRow(
 }
 
 @Composable
-private fun CreateFeedDialog(
+internal fun CreateFeedDialog(
     onDismiss: () -> Unit,
     onCreate: (String, String, Boolean) -> Unit,
     viewModel: FeedListViewModel
 ) {
     var name by remember { mutableStateOf("") }
-    var isPrivate by remember { mutableStateOf(true) }
-    var memoriesEnabled by remember { mutableStateOf(false) }
+    // The toggle reads "Allow anyone to search for feed" — on means public.
+    var allowSearch by remember { mutableStateOf(true) }
+    var memoriesEnabled by remember { mutableStateOf(true) }
     val isCreating by viewModel.isCreating.collectAsState()
     val createError by viewModel.createError.collectAsState()
 
@@ -430,7 +438,7 @@ private fun CreateFeedDialog(
                 OutlinedTextField(
                     value = name,
                     onValueChange = { name = it },
-                    label = { Text(stringResource(R.string.feeds_name)) },
+                    label = { Text(stringResource(R.string.feeds_feed_name)) },
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true
                 )
@@ -440,10 +448,10 @@ private fun CreateFeedDialog(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(stringResource(R.string.feeds_private))
+                    Text(stringResource(R.string.feeds_allow_search))
                     Switch(
-                        checked = isPrivate,
-                        onCheckedChange = { isPrivate = it }
+                        checked = allowSearch,
+                        onCheckedChange = { allowSearch = it }
                     )
                 }
                 Row(
@@ -451,7 +459,7 @@ private fun CreateFeedDialog(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(stringResource(R.string.feeds_memories))
+                    Text(stringResource(R.string.feeds_enable_memories))
                     Switch(
                         checked = memoriesEnabled,
                         onCheckedChange = { memoriesEnabled = it }
@@ -470,7 +478,7 @@ private fun CreateFeedDialog(
         confirmButton = {
             TextButton(
                 onClick = {
-                    val privacy = if (isPrivate) "private" else "public"
+                    val privacy = if (allowSearch) "public" else "private"
                     onCreate(name, privacy, memoriesEnabled)
                 },
                 enabled = name.isNotBlank() && !isCreating
