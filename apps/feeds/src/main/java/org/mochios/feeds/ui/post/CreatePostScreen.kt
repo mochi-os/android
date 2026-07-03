@@ -27,12 +27,15 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AttachFile
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.Flight
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -43,6 +46,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -58,18 +64,25 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.PlaceData
+import org.mochios.android.ui.components.LocationPreviewMap
+import org.mochios.android.ui.components.MapMarkerPoint
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
 import org.mochios.feeds.R
-import org.mochios.feeds.model.Feed
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -93,8 +106,11 @@ fun CreatePostScreen(
     val postSuccess by viewModel.postSuccess.collectAsState()
     val isEditing = viewModel.isEditing
 
-    var showLocationSection by remember { mutableStateOf(false) }
+    var showCheckinSheet by remember { mutableStateOf(false) }
+    var showTravellingSheet by remember { mutableStateOf(false) }
     var feedDropdownExpanded by remember { mutableStateOf(false) }
+
+    val hasTravelling = travellingOrigin != null || travellingDestination != null
 
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -124,7 +140,10 @@ fun CreatePostScreen(
                 title = { Text(stringResource(if (isEditing) R.string.feeds_edit_post else R.string.feeds_new_post)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back)
+                        )
                     }
                 },
                 actions = {
@@ -155,8 +174,9 @@ fun CreatePostScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp)
         ) {
-            // Feed selector (hidden in edit mode — can't change feed of existing post)
-            if (!isEditing && (selectedFeed.isEmpty() || availableFeeds.size > 1)) {
+            // Feed selector — shown only when no feed was preselected (a global
+            // "new post" entry). Coming from a feed already fixes the destination.
+            if (!isEditing && !viewModel.feedPreselected) {
                 ExposedDropdownMenuBox(
                     expanded = feedDropdownExpanded,
                     onExpandedChange = { feedDropdownExpanded = it }
@@ -185,7 +205,10 @@ fun CreatePostScreen(
                             DropdownMenuItem(
                                 text = {
                                     Row(verticalAlignment = Alignment.CenterVertically) {
-                                        CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
+                                        CircularProgressIndicator(
+                                            modifier = Modifier.size(16.dp),
+                                            strokeWidth = 2.dp
+                                        )
                                         Spacer(modifier = Modifier.width(8.dp))
                                         Text(stringResource(R.string.feeds_loading_feeds))
                                     }
@@ -209,28 +232,115 @@ fun CreatePostScreen(
             }
 
             // Body text area
+            Text(
+                text = stringResource(R.string.feeds_post_content),
+                style = MaterialTheme.typography.titleMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
             MentionTextField(
                 value = body,
-                onValueChange = { viewModel.setBody(it) },
-                onSearch = { viewModel.searchMembers(it) },
-                label = { Text(stringResource(R.string.feeds_whats_on_your_mind)) },
+                onValueChange = { text -> viewModel.setBody(text) },
+                onSearch = { query -> viewModel.searchMembers(query) },
+                placeholder = { Text(stringResource(R.string.feeds_markdown_supported)) },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(200.dp),
-                maxLines = 20
+                    .height(250.dp),
+                maxLines = 20,
+                fillHeight = true
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Attachments
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Button(
-                    onClick = { filePickerLauncher.launch("*/*") },
-                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
-                ) {
-                    Icon(Icons.Default.AttachFile, contentDescription = null, modifier = Modifier.size(18.dp))
+            // Neutral (variant) tint for the compose action buttons — not primary.
+            val actionButtonColors = ButtonDefaults.outlinedButtonColors(
+                contentColor = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+
+            // Preview card of the chosen location, above the action buttons.
+            if (checkin != null) {
+                LocationPreviewCard(
+                    icon = Icons.Default.LocationOn,
+                    text = checkin?.name.orEmpty(),
+                    points = listOfNotNull(
+                        checkin?.let { place ->
+                            MapMarkerPoint(
+                                place.lat,
+                                place.lon,
+                                LocationPinBlue
+                            )
+                        }
+                    ),
+                    connectRoute = false,
+                    onClear = { viewModel.clearLocation() }
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+            } else if (hasTravelling) {
+                LocationPreviewCard(
+                    icon = Icons.Default.Flight,
+                    text = listOfNotNull(
+                        travellingOrigin?.name,
+                        travellingDestination?.name
+                    ).joinToString(" – "),
+                    points = listOfNotNull(
+                        travellingOrigin?.let { place ->
+                            MapMarkerPoint(
+                                place.lat,
+                                place.lon,
+                                LocationPinBlue
+                            )
+                        },
+                        travellingDestination?.let { place ->
+                            MapMarkerPoint(
+                                place.lat,
+                                place.lon,
+                                LocationPinGreen
+                            )
+                        }
+                    ),
+                    connectRoute = true,
+                    onClear = { viewModel.clearLocation() }
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+            }
+
+            // Location: each button opens a bottom sheet to search + confirm.
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                OutlinedButton(onClick = { showCheckinSheet = true }, colors = actionButtonColors) {
+                    Icon(
+                        Icons.Default.LocationOn,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.feeds_add_files))
+                    Text(stringResource(R.string.feeds_check_in))
                 }
+                OutlinedButton(
+                    onClick = { showTravellingSheet = true },
+                    colors = actionButtonColors
+                ) {
+                    Icon(
+                        Icons.Default.Flight,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(stringResource(R.string.feeds_travelling))
+                }
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            // Attachments
+            OutlinedButton(
+                onClick = { filePickerLauncher.launch("*/*") },
+                colors = actionButtonColors
+            ) {
+                Icon(
+                    Icons.Default.AttachFile,
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(stringResource(R.string.feeds_add_files))
             }
 
             if (existingAttachments.isNotEmpty() || attachments.isNotEmpty()) {
@@ -246,18 +356,36 @@ fun CreatePostScreen(
                                 Column {
                                     if (index > 0) {
                                         IconButton(
-                                            onClick = { viewModel.moveExistingAttachment(attachment.id, -1) },
+                                            onClick = {
+                                                viewModel.moveExistingAttachment(
+                                                    attachment.id,
+                                                    -1
+                                                )
+                                            },
                                             modifier = Modifier.size(20.dp)
                                         ) {
-                                            Icon(Icons.Default.ExpandLess, contentDescription = stringResource(R.string.feeds_move_up), modifier = Modifier.size(14.dp))
+                                            Icon(
+                                                Icons.Default.ExpandLess,
+                                                contentDescription = stringResource(R.string.feeds_move_up),
+                                                modifier = Modifier.size(14.dp)
+                                            )
                                         }
                                     }
                                     if (index < existingAttachments.lastIndex) {
                                         IconButton(
-                                            onClick = { viewModel.moveExistingAttachment(attachment.id, 1) },
+                                            onClick = {
+                                                viewModel.moveExistingAttachment(
+                                                    attachment.id,
+                                                    1
+                                                )
+                                            },
                                             modifier = Modifier.size(20.dp)
                                         ) {
-                                            Icon(Icons.Default.ExpandMore, contentDescription = stringResource(R.string.feeds_move_down), modifier = Modifier.size(14.dp))
+                                            Icon(
+                                                Icons.Default.ExpandMore,
+                                                contentDescription = stringResource(R.string.feeds_move_down),
+                                                modifier = Modifier.size(14.dp)
+                                            )
                                         }
                                     }
                                 }
@@ -290,7 +418,11 @@ fun CreatePostScreen(
                                             onClick = { viewModel.moveAttachment(uri, -1) },
                                             modifier = Modifier.size(20.dp)
                                         ) {
-                                            Icon(Icons.Default.ExpandLess, contentDescription = stringResource(R.string.feeds_move_up), modifier = Modifier.size(14.dp))
+                                            Icon(
+                                                Icons.Default.ExpandLess,
+                                                contentDescription = stringResource(R.string.feeds_move_up),
+                                                modifier = Modifier.size(14.dp)
+                                            )
                                         }
                                     }
                                     if (index < attachments.lastIndex) {
@@ -298,7 +430,11 @@ fun CreatePostScreen(
                                             onClick = { viewModel.moveAttachment(uri, 1) },
                                             modifier = Modifier.size(20.dp)
                                         ) {
-                                            Icon(Icons.Default.ExpandMore, contentDescription = stringResource(R.string.feeds_move_down), modifier = Modifier.size(14.dp))
+                                            Icon(
+                                                Icons.Default.ExpandMore,
+                                                contentDescription = stringResource(R.string.feeds_move_down),
+                                                modifier = Modifier.size(14.dp)
+                                            )
                                         }
                                     }
                                 }
@@ -325,103 +461,212 @@ fun CreatePostScreen(
                 }
             }
 
-            // Location section
-            Spacer(modifier = Modifier.height(16.dp))
-            TextButton(
-                onClick = { showLocationSection = !showLocationSection }
-            ) {
-                Icon(
-                    Icons.Default.LocationOn,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(stringResource(R.string.feeds_location))
-                Spacer(modifier = Modifier.width(4.dp))
-                Icon(
-                    if (showLocationSection) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-            }
+        }
+    }
 
-            if (showLocationSection) {
-                LocationSection(
-                    checkin = checkin,
-                    travellingOrigin = travellingOrigin,
-                    travellingDestination = travellingDestination,
-                    onCheckinChange = { viewModel.setCheckin(it) },
-                    onTravellingOriginChange = { viewModel.setTravellingOrigin(it) },
-                    onTravellingDestinationChange = { viewModel.setTravellingDestination(it) },
-                    onClear = { viewModel.clearLocation() }
+    if (showCheckinSheet) {
+        CheckinBottomSheet(
+            initial = checkin,
+            onConfirm = { place ->
+                viewModel.applyCheckin(place)
+                showCheckinSheet = false
+            },
+            onDismiss = { showCheckinSheet = false }
+        )
+    }
+
+    if (showTravellingSheet) {
+        TravellingBottomSheet(
+            initialOrigin = travellingOrigin,
+            initialDestination = travellingDestination,
+            onConfirm = { origin, destination ->
+                viewModel.applyTravelling(origin, destination)
+                showTravellingSheet = false
+            },
+            onDismiss = { showTravellingSheet = false }
+        )
+    }
+}
+
+/** Origin/check-in pin colour, matching the web preview. */
+private val LocationPinBlue = Color(0xFF2563EB)
+
+/** Destination pin colour. */
+private val LocationPinGreen = Color(0xFF22C55E)
+
+/**
+ * Preview card for a chosen post location: an icon + place name(s), a clear (✕)
+ * button, and a map showing the marker(s) and — for travelling — a route line.
+ */
+@Composable
+private fun LocationPreviewCard(
+    icon: ImageVector,
+    text: String,
+    points: List<MapMarkerPoint>,
+    connectRoute: Boolean,
+    onClear: () -> Unit
+) {
+    OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.padding(12.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    icon,
+                    contentDescription = null,
+                    tint = LocationPinBlue,
+                    modifier = Modifier.size(20.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = text,
+                    style = MaterialTheme.typography.bodyMedium,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f)
+                )
+                IconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
+                    Icon(
+                        Icons.Default.Close,
+                        contentDescription = stringResource(MochiR.string.common_close),
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
+            }
+            if (points.any { point -> point.lat != 0.0 || point.lon != 0.0 }) {
+                Spacer(modifier = Modifier.height(8.dp))
+                LocationPreviewMap(
+                    points = points,
+                    connectRoute = connectRoute,
+                    modifier = Modifier.clip(RoundedCornerShape(10.dp))
                 )
             }
         }
     }
 }
 
+/**
+ * Bottom sheet for choosing a check-in location: a searchable map picker with a
+ * Back / Confirm action. The selection is committed only on Confirm.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun LocationSection(
-    checkin: PlaceData?,
-    travellingOrigin: PlaceData?,
-    travellingDestination: PlaceData?,
-    onCheckinChange: (PlaceData?) -> Unit,
-    onTravellingOriginChange: (PlaceData?) -> Unit,
-    onTravellingDestinationChange: (PlaceData?) -> Unit,
-    onClear: () -> Unit
+private fun CheckinBottomSheet(
+    initial: PlaceData?,
+    onConfirm: (PlaceData?) -> Unit,
+    onDismiss: () -> Unit
 ) {
-    // Derive the initial mode from existing data so an edited post opens to
-    // the correct picker. `remember` snapshots these values once.
-    val initialMode = remember {
-        when {
-            checkin != null -> "checkin"
-            travellingOrigin != null || travellingDestination != null -> "travelling"
-            else -> "none"
+    var draft by remember { mutableStateOf(initial) }
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 24.dp)
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Default.LocationOn, contentDescription = null)
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = stringResource(R.string.feeds_check_in),
+                    style = MaterialTheme.typography.titleLarge,
+                    modifier = Modifier.weight(1f)
+                )
+                IconButton(onClick = onDismiss) {
+                    Icon(
+                        Icons.Default.Close,
+                        contentDescription = stringResource(MochiR.string.common_close)
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            PlacePicker(
+                place = draft,
+                onPlaceSelected = { place -> draft = place },
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            SheetActions(
+                onCancel = onDismiss,
+                cancelLabel = stringResource(R.string.feeds_back),
+                onConfirm = { onConfirm(draft) }
+            )
         }
     }
-    var locationMode by remember { mutableStateOf(initialMode) }
+}
 
-    Column(modifier = Modifier.padding(start = 16.dp)) {
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            FilterChip(
-                selected = locationMode == "checkin",
-                onClick = {
-                    val next = if (locationMode == "checkin") "none" else "checkin"
-                    locationMode = next
-                    if (next == "none") onClear()
-                },
-                label = { Text(stringResource(R.string.feeds_check_in)) }
+/**
+ * Bottom sheet for choosing a travelling origin/destination pair with a
+ * Cancel / Confirm action. Committed only on Confirm.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun TravellingBottomSheet(
+    initialOrigin: PlaceData?,
+    initialDestination: PlaceData?,
+    onConfirm: (PlaceData?, PlaceData?) -> Unit,
+    onDismiss: () -> Unit
+) {
+    var origin by remember { mutableStateOf(initialOrigin) }
+    var destination by remember { mutableStateOf(initialDestination) }
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 24.dp)
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Default.Flight, contentDescription = null)
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = stringResource(R.string.feeds_travelling),
+                    style = MaterialTheme.typography.titleLarge,
+                    modifier = Modifier.weight(1f)
+                )
+                IconButton(onClick = onDismiss) {
+                    Icon(
+                        Icons.Default.Close,
+                        contentDescription = stringResource(MochiR.string.common_close)
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            TravellingPicker(
+                origin = origin,
+                destination = destination,
+                onOriginSelected = { place -> origin = place },
+                onDestinationSelected = { place -> destination = place },
+                modifier = Modifier.fillMaxWidth()
             )
-            FilterChip(
-                selected = locationMode == "travelling",
-                onClick = {
-                    val next = if (locationMode == "travelling") "none" else "travelling"
-                    locationMode = next
-                    if (next == "none") onClear()
-                },
-                label = { Text(stringResource(R.string.feeds_travelling)) }
+            Spacer(modifier = Modifier.height(16.dp))
+            SheetActions(
+                onCancel = onDismiss,
+                cancelLabel = stringResource(MochiR.string.common_cancel),
+                onConfirm = { onConfirm(origin, destination) }
             )
         }
+    }
+}
 
-        Spacer(modifier = Modifier.height(8.dp))
-
-        when (locationMode) {
-            "checkin" -> {
-                PlacePicker(
-                    place = checkin,
-                    onPlaceSelected = { onCheckinChange(it) },
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
-            "travelling" -> {
-                TravellingPicker(
-                    origin = travellingOrigin,
-                    destination = travellingDestination,
-                    onOriginSelected = { onTravellingOriginChange(it) },
-                    onDestinationSelected = { onTravellingDestinationChange(it) },
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
+/** Shared Cancel / Confirm button row for the location bottom sheets. */
+@Composable
+private fun SheetActions(
+    onCancel: () -> Unit,
+    cancelLabel: String,
+    onConfirm: () -> Unit
+) {
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        OutlinedButton(onClick = onCancel, modifier = Modifier.weight(1f)) {
+            Text(cancelLabel)
+        }
+        Button(onClick = onConfirm, modifier = Modifier.weight(1f)) {
+            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(stringResource(R.string.feeds_confirm))
         }
     }
 }

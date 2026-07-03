@@ -1023,6 +1023,24 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch { refreshSilently() }
     }
 
+    /**
+     * Silently reload the feed when the screen returns to the foreground — e.g.
+     * after the user created a post here — so a newly added (or first) post
+     * shows without a manual pull-to-refresh.
+     */
+    fun reloadOnForeground() {
+        viewModelScope.launch {
+            if (isAllFeeds) {
+                try {
+                    loadAllFeeds()
+                } catch (_: Exception) {
+                }
+            } else if (feedId.isNotBlank()) {
+                refreshSilently()
+            }
+        }
+    }
+
     override fun onCleared() {
         super.onCleared()
         markReadJob?.cancel()

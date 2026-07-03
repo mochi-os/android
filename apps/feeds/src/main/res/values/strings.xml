@@ -151,6 +151,8 @@
     <string name="feeds_feed_label">Feed</string>
     <string name="feeds_loading_feeds">Loading feeds…</string>
     <string name="feeds_whats_on_your_mind">What\'s on your mind?</string>
+    <string name="feeds_post_content">Post content</string>
+    <string name="feeds_markdown_supported">Markdown supported</string>
     <string name="feeds_add_files">Add files</string>
     <string name="feeds_restore">Restore</string>
     <string name="feeds_move_up">Move up</string>
@@ -158,6 +160,8 @@
     <string name="feeds_location">Location</string>
     <string name="feeds_check_in">Check in</string>
     <string name="feeds_travelling">Travelling</string>
+    <string name="feeds_back">Back</string>
+    <string name="feeds_confirm">Confirm</string>
 
     <!-- Settings: tabs -->
     <string name="feeds_tab_general">General</string>

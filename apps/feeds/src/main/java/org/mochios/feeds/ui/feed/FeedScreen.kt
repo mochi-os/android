@@ -99,6 +99,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
@@ -133,6 +134,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import coil3.compose.AsyncImage
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlin.math.abs
@@ -262,6 +266,19 @@ fun FeedScreen(
         feedListViewModel.feedCreated.collect { newFeedId ->
             if (newFeedId.isNotEmpty()) onSelectFeed(newFeedId)
         }
+    }
+    // Reload when the screen returns to the foreground — most importantly after
+    // creating a post here, so the new (or first) post shows without a manual
+    // pull-to-refresh.
+    val feedLifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(feedLifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                viewModel.reloadOnForeground()
+            }
+        }
+        feedLifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { feedLifecycleOwner.lifecycle.removeObserver(observer) }
     }
     LaunchedEffect(viewModel.feedId) {
         if (viewModel.feedId.isNotBlank()) {
