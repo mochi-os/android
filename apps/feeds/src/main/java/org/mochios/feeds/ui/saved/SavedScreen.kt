@@ -11,19 +11,24 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -45,15 +50,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.feeds.R
+import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.model.SavedItem
 import org.mochios.android.R as MochiR
 
@@ -119,6 +123,7 @@ fun SavedScreen(
                     SavedPostCard(
                         item = item,
                         onClick = { onOpenPost(item.post.feedId, item.post.id) },
+                        onUnsave = { viewModel.remove(item.post.id) },
                     )
                 }
             }
@@ -151,53 +156,81 @@ fun SavedScreen(
 private fun SavedPostCard(
     item: SavedItem,
     onClick: () -> Unit,
+    onUnsave: () -> Unit,
 ) {
     val post = item.post
-    val image = post.attachments.firstOrNull { it.isImage }
 
-    Card(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
+    // Resolve the title and hero image exactly as the feed's PostCard does: the
+    // RSS title (shown only when the body starts with it), and the first image
+    // attachment's full URL, else the RSS preview image.
+    val rawTitle = post.data?.rss?.title.orEmpty()
+    val displayTitle = rawTitle.trim().takeIf { it.isNotEmpty() && post.body.startsWith(rawTitle) }
+    val attachmentImageUrls = post.attachments
+        .filter { attachment -> attachment.isImage }
+        .map { attachment -> attachment.url ?: "/feeds/${post.feedId}/-/attachments/${attachment.id}" }
+    val heroUrl = attachmentImageUrls.firstOrNull()
+        ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
+    val previewBody = post.bodyHtml.ifBlank { post.body }
+
+    OutlinedCard(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
         Column(modifier = Modifier.padding(12.dp)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = post.feedName.ifBlank { post.author },
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
-                    modifier = Modifier.weight(1f),
-                )
-                Text(
-                    text = LocalFormat.current.formatTimestamp(post.created),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+            if (displayTitle != null) {
+                PostTitle(
+                    title = displayTitle,
+                    fontSize = 20.sp,
+                    truncated = true,
                 )
             }
-            if (post.author.isNotBlank() && post.author != post.feedName) {
-                Text(
-                    text = post.author,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            val body = post.bodyHtml.ifBlank { post.body }
-            if (body.isNotBlank()) {
-                HtmlContent(
-                    html = body,
-                    modifier = Modifier.padding(top = 6.dp),
-                    maxLines = 6,
-                )
-            }
-            if (image != null) {
+            if (heroUrl != null) {
                 AsyncImage(
-                    model = image.thumbnailUrl
-                        ?: image.url
-                        ?: "/feeds/${post.feedId}/-/attachments/${image.id}/thumbnail",
+                    model = heroUrl,
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .padding(top = 8.dp)
                         .fillMaxWidth()
-                        .height(160.dp)
+                        .height(180.dp)
                         .clip(RoundedCornerShape(8.dp)),
                 )
+            }
+            if (previewBody.isNotBlank()) {
+                HtmlContent(
+                    html = previewBody,
+                    modifier = Modifier.padding(top = 8.dp),
+                    maxLines = 6,
+                )
+            }
+
+            // Tag count + a bookmark to remove from saved — the tag icon/count
+            // mirror the feed post's footer, minus reactions and comments.
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(top = 8.dp),
+            ) {
+                val hasTags = post.tags.isNotEmpty()
+                val tagColor = MaterialTheme.colorScheme.onSurfaceVariant
+                Icon(
+                    if (hasTags) Icons.Filled.LocalOffer else Icons.Outlined.LocalOffer,
+                    contentDescription = stringResource(R.string.feeds_tags),
+                    tint = tagColor,
+                    modifier = Modifier.size(18.dp),
+                )
+                if (hasTags) {
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text(
+                        text = "${post.tags.size}",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = tagColor,
+                    )
+                }
+                Spacer(modifier = Modifier.width(12.dp))
+                IconButton(onClick = onUnsave, modifier = Modifier.size(28.dp)) {
+                    Icon(
+                        Icons.Filled.Bookmark,
+                        contentDescription = stringResource(R.string.feeds_saved_remove),
+                        modifier = Modifier.size(18.dp),
+                    )
+                }
             }
         }
     }
