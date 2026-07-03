@@ -213,4 +213,6 @@
         <item quantity="other">%d nouvo pòs</item>
     </plurals>
     <string name="feeds_caught_up">Ou wè tout bagay deja</string>
+    <string name="feeds_all_caught_up">Ou rive nan dat</string>
+    <string name="feeds_view_all_posts">Wè tout pòs</string>
 </resources>

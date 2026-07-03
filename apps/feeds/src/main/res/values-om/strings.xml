@@ -213,4 +213,6 @@
         <item quantity="other">%d maxxansaalee haaraa</item>
     </plurals>
     <string name="feeds_caught_up">Hunda ilaalteerta</string>
+    <string name="feeds_all_caught_up">Hunda dubbisame</string>
+    <string name="feeds_view_all_posts">Postiwwan hunda daawwadhu</string>
 </resources>

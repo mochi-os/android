@@ -213,4 +213,6 @@
         <item quantity="other">%d ìfìwéránṣẹ́ tuntun</item>
     </plurals>
     <string name="feeds_caught_up">O ti rí gbogbo rẹ̀</string>
+    <string name="feeds_all_caught_up">Gbogbo rẹ̀ ti pé</string>
+    <string name="feeds_view_all_posts">Wo gbogbo àwọn ìfìránṣẹ́</string>
 </resources>

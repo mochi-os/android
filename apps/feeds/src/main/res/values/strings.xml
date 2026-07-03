@@ -43,6 +43,8 @@
     <string name="feeds_no_posts_yet">No posts yet</string>
     <string name="feeds_create_first_post">Create the first post</string>
     <string name="feeds_caught_up">You\'re all caught up</string>
+    <string name="feeds_all_caught_up">All caught up</string>
+    <string name="feeds_view_all_posts">View all posts</string>
     <string name="feeds_tag_clear">Clear filter</string>
     <string name="feeds_default_sort">Default sort</string>
     <string name="feeds_identity_fingerprint">Fingerprint: %1$s</string>

@@ -213,4 +213,6 @@
         <item quantity="other">%d نيون پوسٽون</item>
     </plurals>
     <string name="feeds_caught_up">توھان سڀ ڪجھ ڏسي ورتو</string>
+    <string name="feeds_all_caught_up">سڀ ڪجهه پڙهيو ويو</string>
+    <string name="feeds_view_all_posts">سڀ پوسٽون ڏسو</string>
 </resources>

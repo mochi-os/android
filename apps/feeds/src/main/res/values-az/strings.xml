@@ -215,4 +215,6 @@
         <item quantity="other">%d yeni paylaşım</item>
     </plurals>
     <string name="feeds_caught_up">Hər şeyi gördünüz</string>
+    <string name="feeds_all_caught_up">Hamısı tutulub</string>
+    <string name="feeds_view_all_posts">Bu istifadəçinin aktiv sessiyalarına baxın və ləğv edin.</string>
 </resources>

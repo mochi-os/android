@@ -214,4 +214,6 @@
         <item quantity="other">%d de postări noi</item>
     </plurals>
     <string name="feeds_caught_up">Ești la zi</string>
+    <string name="feeds_all_caught_up">Ești la zi</string>
+    <string name="feeds_view_all_posts">Vizualizează toate postările</string>
 </resources>

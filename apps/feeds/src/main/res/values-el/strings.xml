@@ -213,4 +213,6 @@
         <item quantity="other">%d νέες δημοσιεύσεις</item>
     </plurals>
     <string name="feeds_caught_up">Είστε ενημερωμένοι</string>
+    <string name="feeds_all_caught_up">Όλα ενημερωμένα</string>
+    <string name="feeds_view_all_posts">Προβολή όλων των δημοσιεύσεων</string>
 </resources>

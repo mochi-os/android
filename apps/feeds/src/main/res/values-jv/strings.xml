@@ -213,4 +213,6 @@
         <item quantity="other">%d kiriman anyar</item>
     </plurals>
     <string name="feeds_caught_up">Sampeyan wis ndeleng kabeh</string>
+    <string name="feeds_all_caught_up">Kabèh wis dikèkné</string>
+    <string name="feeds_view_all_posts">Deleng kabeh postingan</string>
 </resources>

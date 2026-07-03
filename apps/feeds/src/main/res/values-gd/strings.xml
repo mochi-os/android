@@ -217,4 +217,6 @@
         <item quantity="other">%d post ùr</item>
     </plurals>
     <string name="feeds_caught_up">Chunnaic thu a h-uile càil</string>
+    <string name="feeds_all_caught_up">Tha thu ri là</string>
+    <string name="feeds_view_all_posts">Seall a h-uile post</string>
 </resources>

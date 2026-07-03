@@ -213,4 +213,6 @@
         <item quantity="other">%d machaqa yatiyäwinaka</item>
     </plurals>
     <string name="feeds_caught_up">Taqpacha uñjtawa</string>
+    <string name="feeds_all_caught_up">Taqpach katjata</string>
+    <string name="feeds_view_all_posts">Item detalles uñjaña ukat editaña</string>
 </resources>

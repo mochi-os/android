@@ -217,4 +217,6 @@
         <item quantity="other">%d post ġdid</item>
     </plurals>
     <string name="feeds_caught_up">Rajt kollox</string>
+    <string name="feeds_all_caught_up">Kollox aġġornat</string>
+    <string name="feeds_view_all_posts">Ara l-posts kollha</string>
 </resources>

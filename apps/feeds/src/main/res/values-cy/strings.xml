@@ -216,4 +216,6 @@
         <item quantity="other">%d postiad newydd</item>
     </plurals>
     <string name="feeds_caught_up">Rydych wedi dal i fyny</string>
+    <string name="feeds_all_caught_up">Wedi dal i fyny</string>
+    <string name="feeds_view_all_posts">Gweld pob postiad</string>
 </resources>

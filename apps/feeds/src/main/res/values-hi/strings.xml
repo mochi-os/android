@@ -213,4 +213,6 @@
         <item quantity="other">%d नई पोस्ट</item>
     </plurals>
     <string name="feeds_caught_up">आप सब कुछ देख चुके हैं</string>
+    <string name="feeds_all_caught_up">सब देख लिया</string>
+    <string name="feeds_view_all_posts">सभी पोस्ट देखें</string>
 </resources>

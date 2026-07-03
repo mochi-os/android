@@ -213,4 +213,6 @@
         <item quantity="other">%d uut postitust</item>
     </plurals>
     <string name="feeds_caught_up">Olete kõik üle vaadanud</string>
+    <string name="feeds_all_caught_up">Kõik järje peal</string>
+    <string name="feeds_view_all_posts">Vaata kõiki postitusi</string>
 </resources>

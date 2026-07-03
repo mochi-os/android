@@ -213,4 +213,6 @@
         <item quantity="other">%d נײַע אַרײַנשרײַבן</item>
     </plurals>
     <string name="feeds_caught_up">איר האָט שוין געזען אַלץ</string>
+    <string name="feeds_all_caught_up">אַלץ אויפֿגעהאָלטן</string>
+    <string name="feeds_view_all_posts">זע אַלע פּאָסטס</string>
 </resources>

@@ -213,4 +213,6 @@
         <item quantity="other">%d iiposti ezintsha</item>
     </plurals>
     <string name="feeds_caught_up">Uyibonile yonke into</string>
+    <string name="feeds_all_caught_up">Konke kuhleli</string>
+    <string name="feeds_view_all_posts">Bonisa yonke imiyalezo</string>
 </resources>

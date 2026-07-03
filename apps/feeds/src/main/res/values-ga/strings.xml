@@ -216,4 +216,6 @@
         <item quantity="other">%d postáil nua</item>
     </plurals>
     <string name="feeds_caught_up">Tá tú cothrom le dáta</string>
+    <string name="feeds_all_caught_up">Tá gach rud déanta</string>
+    <string name="feeds_view_all_posts">Féach ar gach postáil</string>
 </resources>

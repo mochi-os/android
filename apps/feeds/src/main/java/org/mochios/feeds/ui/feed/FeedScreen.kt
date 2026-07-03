@@ -54,6 +54,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Menu
@@ -86,6 +87,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -818,15 +820,38 @@ fun FeedScreen(
                                             .fillMaxSize()
                                             .padding(48.dp),
                                         horizontalAlignment = Alignment.CenterHorizontally,
-                                        verticalArrangement = Arrangement.Center
+                                        verticalArrangement = Arrangement.spacedBy(16.dp)
                                     ) {
+                                        Icon(
+                                            imageVector = if (unreadOnly) Icons.Default.DoneAll else Icons.Default.RssFeed,
+                                            contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            modifier = Modifier.size(40.dp)
+                                        )
                                         Text(
-                                            text = stringResource(R.string.feeds_no_posts_yet),
+                                            text = stringResource(
+                                                if (unreadOnly) R.string.feeds_all_caught_up
+                                                else R.string.feeds_no_posts_yet
+                                            ),
                                             style = MaterialTheme.typography.bodyLarge,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant
                                         )
-                                        if (permissions.manage) {
-                                            Spacer(modifier = Modifier.height(16.dp))
+                                        if (unreadOnly) {
+                                            // Mirror the web's "All caught up" state: when the
+                                            // unread filter has emptied the list, offer a way
+                                            // back to every post instead of dead-ending.
+                                            OutlinedButton(onClick = { viewModel.setUnreadOnly(false) }) {
+                                                Icon(
+                                                    Icons.AutoMirrored.Filled.ArrowForward,
+                                                    contentDescription = null,
+                                                    modifier = Modifier.size(ButtonDefaults.IconSize)
+                                                )
+                                                Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                                                Text(stringResource(R.string.feeds_view_all_posts))
+                                            }
+                                        } else if (permissions.manage) {
+                                            // An owner of a genuinely empty feed can create
+                                            // the first post straight from here.
                                             Button(
                                                 onClick = {
                                                     onNavigateToCreatePost(viewModel.feedId)

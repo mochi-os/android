@@ -212,4 +212,6 @@
         <item quantity="other">%d ໂພສໃໝ່</item>
     </plurals>
     <string name="feeds_caught_up">ທ່ານໄດ້ເບິ່ງທັງໝົດແລ້ວ</string>
+    <string name="feeds_all_caught_up">ຕາມທັນທັງໝົດແລ້ວ</string>
+    <string name="feeds_view_all_posts">ເບິ່ງໂພສທັງໝົດ</string>
 </resources>

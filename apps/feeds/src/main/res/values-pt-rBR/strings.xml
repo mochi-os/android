@@ -213,4 +213,6 @@
         <item quantity="other">%d novas publicações</item>
     </plurals>
     <string name="feeds_caught_up">Você está em dia</string>
+    <string name="feeds_all_caught_up">Tudo em dia</string>
+    <string name="feeds_view_all_posts">Ver todas as postagens</string>
 </resources>

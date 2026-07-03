@@ -215,4 +215,6 @@
         <item quantity="other">%d פוסטים חדשים</item>
     </plurals>
     <string name="feeds_caught_up">צפית בכל הפוסטים</string>
+    <string name="feeds_all_caught_up">הושלם הכול</string>
+    <string name="feeds_view_all_posts">הצג את כל הפוסטים</string>
 </resources>

@@ -212,4 +212,6 @@
         <item quantity="other">ပို့စ်အသစ် %dခု</item>
     </plurals>
     <string name="feeds_caught_up">အားလုံးကို ကြည့်ပြီးပါပြီ</string>
+    <string name="feeds_all_caught_up">အားလုံးကြည့်ပြီး</string>
+    <string name="feeds_view_all_posts">Post များ အားလုံး ကြည့်ရှုမည်</string>
 </resources>

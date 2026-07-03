@@ -13,8 +13,6 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.async
-import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -34,6 +32,7 @@ import org.mochios.feeds.model.Post
 import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
+import org.mochios.feeds.repository.PostListResult
 import org.mochios.feeds.repository.SavedRepository
 import javax.inject.Inject
 
@@ -373,31 +372,40 @@ class FeedViewModel @Inject constructor(
     }
 
     private suspend fun loadAllFeeds() {
-        val feeds = repository.listFeeds()
         _feedInfo.value = Feed(name = "All feeds")
         _permissions.value = Permissions()
+        // The "All feeds" aggregate is served by the class-level -/posts
+        // endpoint (posts across every subscribed feed in one indexed query),
+        // so it pages exactly like a single feed via nextCursor.
+        val result = fetchPosts()
+        _posts.value = result.posts
+        _hasMore.value = result.hasMore
+        nextCursor = result.nextCursor
+    }
 
-        val feedIds = feeds.mapNotNull { feed ->
-            feed.fingerprint.ifEmpty { feed.id }.ifEmpty { null }
+    // Fetch one page for the current view. The "All feeds" aggregate hits the
+    // class-level all-subscribed-feeds endpoint; a single feed hits its own.
+    // Both paginate identically — a chronological `before` cursor (the last
+    // post's created timestamp, which the server filters `created < before`) or
+    // an `offset` for relevance sorts.
+    private suspend fun fetchPosts(before: String? = null, offset: Long? = null): PostListResult {
+        return if (isAllFeeds) {
+            repository.getAllPosts(
+                before = before,
+                offset = offset,
+                sort = _currentSort.value,
+                unreadOnly = _unreadOnly.value,
+            )
+        } else {
+            repository.getPosts(
+                feedId = feedId,
+                before = before,
+                offset = offset,
+                sort = _currentSort.value,
+                tag = _currentTag.value,
+                unreadOnly = _unreadOnly.value,
+            )
         }
-        val deferred = feedIds.map { fid ->
-            viewModelScope.async {
-                try {
-                    repository.getPosts(
-                        feedId = fid,
-                        sort = _currentSort.value,
-                        limit = 10,
-                        unreadOnly = _unreadOnly.value
-                    ).posts
-                } catch (_: Exception) {
-                    emptyList<Post>()
-                }
-            }
-        }
-        val allPosts = deferred.awaitAll().flatten()
-
-        _posts.value = allPosts.sortedByDescending { it.created }
-        _hasMore.value = false
     }
 
     fun refresh() {
@@ -610,28 +618,14 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoadingMore.value = true
             try {
+                // Relevance sorts page by opaque offset; chronological sorts by
+                // the `before` cursor (nextCursor is the last post's created
+                // timestamp — sending the post id instead once dead-ended the
+                // feed after one page). Both apply to the aggregate too.
                 val result = if (isRelevanceSort) {
-                    repository.getPosts(
-                        feedId = feedId,
-                        offset = nextCursor,
-                        sort = _currentSort.value,
-                        tag = _currentTag.value,
-                        unreadOnly = _unreadOnly.value
-                    )
+                    fetchPosts(offset = nextCursor)
                 } else {
-                    // The chronological `before` cursor is the last post's
-                    // `created` timestamp (the server filters `created < before`),
-                    // which it hands back as nextCursor. We were sending the post
-                    // id instead, so `created < <id>` matched nothing and the feed
-                    // dead-ended after the first page — looking like a premature
-                    // "bottom" once the reader swiped ~20 posts deep.
-                    repository.getPosts(
-                        feedId = feedId,
-                        before = nextCursor.toString(),
-                        sort = _currentSort.value,
-                        tag = _currentTag.value,
-                        unreadOnly = _unreadOnly.value
-                    )
+                    fetchPosts(before = nextCursor.toString())
                 }
                 _posts.value = _posts.value + result.posts
                 _hasMore.value = result.hasMore

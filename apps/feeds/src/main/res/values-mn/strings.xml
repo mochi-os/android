@@ -213,4 +213,6 @@
         <item quantity="other">%d шинэ нийтлэл</item>
     </plurals>
     <string name="feeds_caught_up">Та бүгдийг үзсэн</string>
+    <string name="feeds_all_caught_up">Бүгдийг шалгасан</string>
+    <string name="feeds_view_all_posts">Бүх постуудыг үзэх</string>
 </resources>

@@ -213,4 +213,6 @@
         <item quantity="other">%d nye opslag</item>
     </plurals>
     <string name="feeds_caught_up">Du er helt opdateret</string>
+    <string name="feeds_all_caught_up">Alt er læst</string>
+    <string name="feeds_view_all_posts">Vis alle opslag</string>
 </resources>

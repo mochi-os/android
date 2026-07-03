@@ -213,4 +213,6 @@
         <item quantity="other">%d şandiyên nû</item>
     </plurals>
     <string name="feeds_caught_up">Te her tişt dît</string>
+    <string name="feeds_all_caught_up">Her tişt nûye</string>
+    <string name="feeds_view_all_posts">Hemû postan bibîne</string>
 </resources>

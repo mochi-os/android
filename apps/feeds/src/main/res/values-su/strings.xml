@@ -213,4 +213,6 @@
         <item quantity="other">%d kintunan anyar</item>
     </plurals>
     <string name="feeds_caught_up">Anjeun parantos ningali sadayana</string>
+    <string name="feeds_all_caught_up">Sadaya geus dibaca</string>
+    <string name="feeds_view_all_posts">Tingali sagala postingan</string>
 </resources>

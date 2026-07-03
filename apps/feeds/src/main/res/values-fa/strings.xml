@@ -213,4 +213,6 @@
         <item quantity="other">%d پست جدید</item>
     </plurals>
     <string name="feeds_caught_up">همه‌چیز را دیده‌اید</string>
+    <string name="feeds_all_caught_up">همه‌چیز خوانده شد</string>
+    <string name="feeds_view_all_posts">نمایش همه پست‌ها</string>
 </resources>

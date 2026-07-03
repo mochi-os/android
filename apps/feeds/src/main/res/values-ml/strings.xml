@@ -213,4 +213,6 @@
         <item quantity="other">%d പുതിയ പോസ്റ്റുകൾ</item>
     </plurals>
     <string name="feeds_caught_up">നിങ്ങൾ എല്ലാം കണ്ടു</string>
+    <string name="feeds_all_caught_up">എല്ലാം പൂർത്തിയായി</string>
+    <string name="feeds_view_all_posts">എല്ലാ പോസ്റ്റുകളും കാണുക</string>
 </resources>

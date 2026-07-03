@@ -213,4 +213,6 @@
         <item quantity="other">%d yeni gönderi</item>
     </plurals>
     <string name="feeds_caught_up">Her şeyi gördünüz</string>
+    <string name="feeds_all_caught_up">Hepsi okundu</string>
+    <string name="feeds_view_all_posts">Tüm gönderileri görüntüle</string>
 </resources>

@@ -213,4 +213,6 @@
         <item quantity="other">%d imibhalo emisha</item>
     </plurals>
     <string name="feeds_caught_up">Usubonile konke</string>
+    <string name="feeds_all_caught_up">Konke kufinyelelekile</string>
+    <string name="feeds_view_all_posts">Buka zonke izithombe</string>
 </resources>

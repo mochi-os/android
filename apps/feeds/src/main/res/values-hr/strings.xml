@@ -214,4 +214,6 @@
         <item quantity="other">%d novih objava</item>
     </plurals>
     <string name="feeds_caught_up">Sve ste pregledali</string>
+    <string name="feeds_all_caught_up">Sve riješeno</string>
+    <string name="feeds_view_all_posts">Prikaži sve objave</string>
 </resources>

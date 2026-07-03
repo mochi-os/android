@@ -213,4 +213,6 @@
         <item quantity="other">%d bagong post</item>
     </plurals>
     <string name="feeds_caught_up">Nakita mo na ang lahat</string>
+    <string name="feeds_all_caught_up">Updated na lahat</string>
+    <string name="feeds_view_all_posts">Tingnan lahat ng post</string>
 </resources>

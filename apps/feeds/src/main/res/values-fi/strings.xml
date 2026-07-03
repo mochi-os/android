@@ -213,4 +213,6 @@
         <item quantity="other">%d uutta julkaisua</item>
     </plurals>
     <string name="feeds_caught_up">Olet ajan tasalla</string>
+    <string name="feeds_all_caught_up">Kaikki luettu</string>
+    <string name="feeds_view_all_posts">Näytä kaikki julkaisut</string>
 </resources>

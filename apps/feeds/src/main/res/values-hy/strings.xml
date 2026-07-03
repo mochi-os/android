@@ -213,4 +213,6 @@
         <item quantity="other">%d նոր գրառում</item>
     </plurals>
     <string name="feeds_caught_up">Դուք տեսել եք ամեն ինչ</string>
+    <string name="feeds_all_caught_up">Բոլոր պայմանները</string>
+    <string name="feeds_view_all_posts">Դիտել բոլոր գրառումները</string>
 </resources>

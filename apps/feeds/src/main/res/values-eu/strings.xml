@@ -213,4 +213,6 @@
         <item quantity="other">%d argitalpen berri</item>
     </plurals>
     <string name="feeds_caught_up">Dena ikusi duzu</string>
+    <string name="feeds_all_caught_up">Dena eguneratuta</string>
+    <string name="feeds_view_all_posts">Ikusi mezu guztiak</string>
 </resources>

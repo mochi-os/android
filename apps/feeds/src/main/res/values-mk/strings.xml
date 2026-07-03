@@ -213,4 +213,6 @@
         <item quantity="other">%d нови објави</item>
     </plurals>
     <string name="feeds_caught_up">Видовте сè</string>
+    <string name="feeds_all_caught_up">Сè е средено</string>
+    <string name="feeds_view_all_posts">Прикажи ги сите постови</string>
 </resources>

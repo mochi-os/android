@@ -215,4 +215,6 @@
         <item quantity="other">%d nowego posta</item>
     </plurals>
     <string name="feeds_caught_up">Wszystko obejrzane</string>
+    <string name="feeds_all_caught_up">Wszystko nadrobione</string>
+    <string name="feeds_view_all_posts">Zobacz wszystkie wpisy</string>
 </resources>

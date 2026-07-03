@@ -213,4 +213,6 @@
         <item quantity="other">%d täze ýazgy</item>
     </plurals>
     <string name="feeds_caught_up">Hemmesini gördüňiz</string>
+    <string name="feeds_all_caught_up">Hemmesi tutuldy</string>
+    <string name="feeds_view_all_posts">Ähli postlary görkez</string>
 </resources>

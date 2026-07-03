@@ -213,4 +213,6 @@
         <item quantity="other">%d නව පළ කිරීම්</item>
     </plurals>
     <string name="feeds_caught_up">ඔබ සියල්ල බැලුවා</string>
+    <string name="feeds_all_caught_up">සියල්ල යාවත්කාලීනයි</string>
+    <string name="feeds_view_all_posts">සියලුම පළ කිරීම් බලන්න</string>
 </resources>

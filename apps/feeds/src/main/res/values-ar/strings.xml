@@ -217,4 +217,6 @@
         <item quantity="other">%d منشور جديد</item>
     </plurals>
     <string name="feeds_caught_up">شاهدت كل المنشورات</string>
+    <string name="feeds_all_caught_up">لا جديد</string>
+    <string name="feeds_view_all_posts">عرض جميع المنشورات</string>
 </resources>

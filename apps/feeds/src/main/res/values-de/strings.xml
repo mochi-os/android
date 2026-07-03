@@ -213,4 +213,6 @@
         <item quantity="other">%d neue Beiträge</item>
     </plurals>
     <string name="feeds_caught_up">Du bist auf dem neuesten Stand</string>
+    <string name="feeds_all_caught_up">Alles erledigt</string>
+    <string name="feeds_view_all_posts">Alle Beiträge anzeigen</string>
 </resources>

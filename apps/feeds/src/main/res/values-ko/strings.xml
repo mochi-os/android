@@ -212,4 +212,6 @@
         <item quantity="other">새 게시물 %d개</item>
     </plurals>
     <string name="feeds_caught_up">모두 확인했습니다</string>
+    <string name="feeds_all_caught_up">모두 확인했어요</string>
+    <string name="feeds_view_all_posts">모든 게시물 보기</string>
 </resources>

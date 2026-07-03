@@ -212,4 +212,6 @@
         <item quantity="other">%d โพสต์ใหม่</item>
     </plurals>
     <string name="feeds_caught_up">คุณดูครบทั้งหมดแล้ว</string>
+    <string name="feeds_all_caught_up">อัปเดตครบแล้ว</string>
+    <string name="feeds_view_all_posts">ดูโพสต์ทั้งหมด</string>
 </resources>

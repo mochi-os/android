@@ -213,4 +213,6 @@
         <item quantity="other">%d marandu pyahu</item>
     </plurals>
     <string name="feeds_caught_up">Rehecháma opavave</string>
+    <string name="feeds_all_caught_up">Opa porãma</string>
+    <string name="feeds_view_all_posts">Ehecha opa ñemoñe\'ẽ</string>
 </resources>

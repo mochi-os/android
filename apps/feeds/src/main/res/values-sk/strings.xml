@@ -215,4 +215,6 @@
         <item quantity="other">%d nových príspevkov</item>
     </plurals>
     <string name="feeds_caught_up">Máte všetko prečítané</string>
+    <string name="feeds_all_caught_up">Všetko prečítané</string>
+    <string name="feeds_view_all_posts">Zobraziť všetky príspevky</string>
 </resources>

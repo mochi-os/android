@@ -212,4 +212,6 @@
         <item quantity="other">%d 条新帖子</item>
     </plurals>
     <string name="feeds_caught_up">你已看完全部内容</string>
+    <string name="feeds_all_caught_up">已全部查看</string>
+    <string name="feeds_view_all_posts">查看所有帖子</string>
 </resources>

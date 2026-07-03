@@ -54,7 +54,10 @@ data class PostListResponse(
     val posts: List<Post> = emptyList(),
     val hasMore: Boolean = false,
     val nextCursor: Long = 0,
-    val permissions: Permissions = Permissions(),
+    // Nullable: the "All feeds" aggregate endpoint (-/posts) has no single feed
+    // to scope permissions to and returns null. A non-null type would let Gson
+    // set the field to null and then NPE when constructing PostListResult.
+    val permissions: Permissions? = null,
     val owner: Boolean = false
 )
 
@@ -272,6 +275,18 @@ interface FeedsApi {
         @Query("limit") limit: Int = 20,
         @Query("sort") sort: String? = null,
         @Query("tag") tag: String? = null,
+        @Query("unread") unread: String? = null
+    ): Response<ApiResponse<PostListResponse>>
+
+    // "All feeds" aggregate: posts merged across every subscribed feed in one
+    // indexed query, paginated by the same before/offset cursors as a single
+    // feed. Class-level (no entity) — there's no single feed to scope it to.
+    @GET("-/posts")
+    suspend fun getAllPosts(
+        @Query("before") before: String? = null,
+        @Query("offset") offset: Long? = null,
+        @Query("limit") limit: Int = 20,
+        @Query("sort") sort: String? = null,
         @Query("unread") unread: String? = null
     ): Response<ApiResponse<PostListResponse>>
 

@@ -215,4 +215,6 @@
         <item quantity="other">%d нового допису</item>
     </plurals>
     <string name="feeds_caught_up">Ви переглянули все</string>
+    <string name="feeds_all_caught_up">Все переглянуто</string>
+    <string name="feeds_view_all_posts">Переглянути всі дописи</string>
 </resources>
