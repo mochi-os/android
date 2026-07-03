@@ -16,6 +16,8 @@
     <string name="feeds_settings">सेटिङहरू</string>
     <string name="feeds_no_posts_yet">अहिलेसम्म कुनै पोस्ट छैन</string>
     <string name="feeds_default_sort">पूर्वनिर्धारित क्रमबद्ध</string>
+    <string name="feeds_suggested_interests_add">थप्नुहोस्</string>
+    <string name="feeds_suggested_interests_dismiss">लुकाउनुहोस्</string>
     <string name="feeds_unread">नपढिएको</string>
     <string name="feeds_filter_all">सबै</string>
     <string name="feeds_sort_label">क्रमबद्ध गर्नुहोस्</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">सर्भर: %1$s</string>
     <string name="feeds_suggested_interests">सुझाव गरिएका रुचिहरू</string>
     <string name="feeds_suggested_interests_empty">अहिलेसम्म कुनै सुझाव छैन</string>
-    <string name="feeds_suggested_interests_title">%1$s बाट रुचिहरू थप्ने?</string>
-    <string name="feeds_suggested_interests_subtitle">यो फिडले यी विषयहरू समेट्छ। व्यक्तिगत श्रेणीकरणका लागि आफ्ना रुचिहरूमा कुन-कुन थप्ने भनेर छनौट गर्नुहोस्।</string>
-    <string name="feeds_suggested_interests_skip">छाड्नुहोस्</string>
+    <string name="feeds_suggested_interests_count">%1$d पोस्टहरू</string>
     <string name="feeds_tag_more">रुचि मिलाउनुहोस्</string>
     <string name="feeds_tag_more_up">यस्तै अरू देखाउनुहोस्</string>
     <string name="feeds_tag_more_down">यस्तै कम देखाउनुहोस्</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d नयाँ पोस्ट</item>
         <item quantity="other">%d नयाँ पोस्ट</item>
     </plurals>
-    <string name="feeds_caught_up">तपाईंले सबै हेरिसक्नुभयो</string>
     <string name="feeds_all_caught_up">सबै हेरियो</string>
     <string name="feeds_view_all_posts">सबै पोस्ट हेर्नुहोस्</string>
-    <string name="feeds_markdown_supported">Markdown समर्थित</string>
-    <string name="feeds_back">पछाडि</string>
-    <string name="feeds_confirm">पुष्टि गर्नुहोस्</string>
-    <string name="feeds_rss_feed">RSS फिड</string>
-    <string name="feeds_unsubscribe">सदस्यता हटाउनुहोस्</string>
-    <string name="feeds_unsubscribed">सदस्यता हटाइयो</string>
-    <string name="feeds_settings_section_identity">पहिचान</string>
-    <string name="feeds_settings_field_name">नाम</string>
-    <string name="feeds_settings_field_entity_id">एन्टिटी आईडी</string>
-    <string name="feeds_settings_field_fingerprint">औंलाछाप</string>
-    <string name="feeds_settings_field_server">सर्भर</string>
-    <string name="feeds_settings_name_edit_cd">नाम सम्पादन गर्नुहोस्</string>
-    <string name="feeds_settings_name_save_cd">नाम सुरक्षित गर्नुहोस्</string>
-    <string name="feeds_access_subject_anyone">जो कोही</string>
-    <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
-    <string name="feeds_access_level_view_full">मात्र हेर्नुहोस्</string>
-    <string name="feeds_access_level_none_full">पहुँच छैन</string>
-    <string name="feeds_access_segment_user">प्रयोगकर्ता</string>
-    <string name="feeds_access_segment_group">समूह</string>
-    <string name="feeds_access_segment_other">अन्य</string>
-    <string name="feeds_access_search_users">प्रयोगकर्ताहरू खोज्नुहोस्</string>
-    <string name="feeds_access_select_group">समूह छान्नुहोस्</string>
-    <string name="feeds_access_selected">चयन गरिएको: %1$s</string>
-    <string name="feeds_permission_deny">अस्वीकार गर्नुहोस्</string>
-    <string name="feeds_allow_search">कसैलाई पनि फिड खोज्न अनुमति दिनुहोस्</string>
-    <string name="feeds_enable_memories">मेमोरीहरू सक्षम गर्नुहोस्</string>
-    <string name="feeds_create_first_post">पहिलो पोस्ट सिर्जना गर्नुहोस्</string>
-    <string name="feeds_post_content">पोस्ट सामग्री</string>
-    <string name="feeds_rss_mode_posts">पोस्टहरू</string>
-    <string name="feeds_rss_mode_posts_comments">पोस्ट र टिप्पणीहरू</string>
-    <string name="feeds_unsubscribe_confirm">फिडबाट सदस्यता हटाउने?</string>
-    <string name="feeds_unsubscribe_confirm_message">तपाईंले यो फिडबाट अपडेटहरू प्राप्त गर्न छोड्नुहुनेछ। तपाईं जुनसुकै बेला पुनः सदस्यता लिन सक्नुहुन्छ।</string>
-    <string name="feeds_settings_unsubscribe_section">फिडबाट सदस्यता हटाउनुहोस्</string>
-    <string name="feeds_delete_feed_description">यो फिड र यसका सम्पूर्ण सामग्री स्थायी रूपमा मेटाउनुहोस्।</string>
-    <string name="feeds_access_management">पहुँच व्यवस्थापन</string>
-    <string name="feeds_access_management_desc">यो फिड कसले हेर्न र अन्तर्क्रिया गर्न सक्छ नियन्त्रण गर्नुहोस्</string>
-    <string name="feeds_access_level_comment_full">टिप्पणी गर्नुहोस्, प्रतिक्रिया दिनुहोस् र हेर्नुहोस्</string>
-    <string name="feeds_access_level_react_full">प्रतिक्रिया दिनुहोस् र हेर्नुहोस्</string>
-    <string name="feeds_access_add_title">पहुँच थप्नुहोस्</string>
-    <string name="feeds_access_add_subtitle">पहुँच दिन प्रयोगकर्ता, समूह वा अन्य नियम छान्नुहोस्।</string>
-    <string name="feeds_access_select_rule">पहुँच नियम छान्नुहोस्</string>
-    <string name="feeds_source_url_hint_feed">फिड एन्टिटी ID वा फिंगरप्रिन्ट</string>
-    <string name="feeds_source_credibility_label">विश्वसनीयता</string>
-    <string name="feeds_source_transform_hint">अङ्ग्रेजीमा अनुवाद गर्नुहोस्, र बुलेट बिन्दुको रूपमा देखाउनुहोस्।</string>
-    <string name="feeds_source_transform_help">निष्क्रिय गर्न खाली छोड्नुहोस्।</string>
-
-    <string name="feeds_scroll_to_top">माथि फर्कनुहोस्</string>
-    <string name="feeds_settings_title">%1$s सेटिङहरू</string>
-    <string name="feeds_settings_name_cancel_cd">सम्पादन रद्द गर्नुहोस्</string>
-    <string name="feeds_access_authenticated_desc">लगइन गरेको जो कोही</string>
-    <string name="feeds_access_anyone_desc">बेनामी प्रयोगकर्ताहरू सहित</string>
-    <string name="feeds_source_last_checked">पछिल्लो पटक %1$s मा जाँच गरिएको</string>
-    <string name="feeds_source_polling_interval">प्रत्येक %1$s मा जाँच गरिँदै</string>
-    <string name="feeds_permission_request_title">अनुमति अनुरोध</string>
-    <string name="feeds_permission_request_message">%1$s ले निम्न अनुमति अनुरोध गर्दैछ:</string>
-    <string name="feeds_permission_allow">अनुमति दिनुहोस्</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d पोस्ट</item>
-        <item quantity="other">%1$d पोस्टहरू</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d रुचि थप्नुहोस्</item>
-        <item quantity="other">%1$d रुचिहरू थप्नुहोस्</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">आजभन्दा %1$d वर्ष अघि</item>
-        <item quantity="other">आजभन्दा %1$d वर्ष अघि</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d छवि</item>
-        <item quantity="other">%1$d छविहरू</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d संलग्नक</item>
-        <item quantity="other">%1$d संलग्नकहरू</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d टिप्पणी</item>
-        <item quantity="other">%1$d टिप्पणीहरू</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">थप %1$d टिप्पणी हेर्नुहोस्</item>
-        <item quantity="other">थप %1$d टिप्पणीहरू हेर्नुहोस्</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d मिनेट</item>
-        <item quantity="other">%1$d मिनेट</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d घण्टा</item>
-        <item quantity="other">%1$d घण्टा</item>
-    </plurals>
-
 </resources>

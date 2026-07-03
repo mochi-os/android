@@ -3,6 +3,7 @@
 
     <string name="feeds_create_feed">Creá un feed</string>
     <string name="feeds_mark_all_read">Marcá todo como leído</string>
+    <string name="feeds_suggested_interests_add">Agregá</string>
     <string name="feeds_delete_post">Eliminá el posteo</string>
     <string name="feeds_delete_comment">Eliminá el comentario</string>
     <string name="feeds_remove">Quitá</string>
@@ -43,6 +44,7 @@
     <string name="feeds_all_caught_up">Todo al día</string>
     <string name="feeds_tag_clear">Quitar filtro</string>
     <string name="feeds_identity_fingerprint">Huella digital: %1$s</string>
+    <string name="feeds_suggested_interests_dismiss">Ocultar</string>
     <string name="feeds_sort_interests">Intereses</string>
     <string name="feeds_sort_hot">Populares</string>
     <string name="feeds_sort_top">Mejores</string>
@@ -96,9 +98,7 @@
     <string name="feeds_identity_server">Servidor: %1$s</string>
     <string name="feeds_suggested_interests">Intereses sugeridos</string>
     <string name="feeds_suggested_interests_empty">Aún no hay sugerencias</string>
-    <string name="feeds_suggested_interests_title">¿Agregar intereses de %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Este feed cubre estos temas. Elegí cuáles agregar a tus intereses para un orden personalizado.</string>
-    <string name="feeds_suggested_interests_skip">Omitir</string>
+    <string name="feeds_suggested_interests_count">%1$d publicaciones</string>
     <string name="feeds_tag_more">Ajustar interés</string>
     <string name="feeds_tag_more_up">Mostrar más como esto</string>
     <string name="feeds_tag_more_down">Mostrar menos como esto</string>
@@ -201,114 +201,5 @@
     <string name="feeds_saved_menu">Guardado</string>
     <string name="feeds_saved_remove">Quitar de guardados</string>
     <string name="feeds_saved_clear_all">Borrar todo</string>
-    <string name="feeds_caught_up">Estás al día</string>
     <string name="feeds_view_all_posts">Mirá todos los posteos</string>
-    <string name="feeds_markdown_supported">Compatible con Markdown</string>
-    <string name="feeds_back">Atrás</string>
-    <string name="feeds_confirm">Confirmá</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_unsubscribe">Cancelá la suscripción</string>
-    <string name="feeds_unsubscribed">Suscripción cancelada</string>
-    <string name="feeds_settings_section_identity">Identidad</string>
-    <string name="feeds_settings_field_name">Nombre</string>
-    <string name="feeds_settings_field_entity_id">Entity ID</string>
-    <string name="feeds_settings_field_fingerprint">Huella digital</string>
-    <string name="feeds_settings_name_edit_cd">Editá el nombre</string>
-    <string name="feeds_settings_name_save_cd">Save name</string>
-    <string name="feeds_access_subject_anyone">Cualquiera</string>
-    <string name="feeds_access_subject_authenticated">Usuarios autenticados</string>
-    <string name="feeds_access_level_view_full">View only</string>
-    <string name="feeds_access_level_none_full">No access</string>
-    <string name="feeds_access_segment_user">Usuario</string>
-    <string name="feeds_access_segment_group">Grupo</string>
-    <string name="feeds_access_segment_other">Otro</string>
-    <string name="feeds_access_search_users">Buscá usuarios</string>
-    <string name="feeds_access_select_group">Seleccioná un grupo</string>
-    <string name="feeds_access_selected">Seleccionado: %1$s</string>
-    <string name="feeds_permission_deny">Denegar</string>
-    <string name="feeds_allow_search">Permití que cualquiera busque el feed</string>
-    <string name="feeds_create_first_post">Creá el primer posteo</string>
-    <string name="feeds_settings_unsubscribe_section">Cancelá la suscripción al feed</string>
-    <string name="feeds_access_add_title">Agregá acceso</string>
-    <string name="feeds_access_add_subtitle">Seleccioná un usuario, grupo u otra regla para otorgar acceso.</string>
-    <string name="feeds_access_select_rule">Seleccioná una regla de acceso</string>
-    <string name="feeds_source_transform_hint">Traducí al inglés y mostralo como viñetas.</string>
-    <string name="feeds_source_transform_help">Dejalo vacío para desactivar.</string>
-    <string name="feeds_access_anyone_desc">Incluidos los usuarios anónimos</string>
-    <string name="feeds_access_authenticated_desc">Cualquier persona que haya iniciado sesión</string>
-    <string name="feeds_access_level_comment_full">Comentar, reaccionar y ver</string>
-    <string name="feeds_access_level_react_full">Reaccionar y ver</string>
-    <string name="feeds_access_management">Gestión de acceso</string>
-    <string name="feeds_access_management_desc">Controlá quién puede ver e interactuar con este feed</string>
-    <string name="feeds_delete_feed_description">Eliminá permanentemente este feed y todo su contenido.</string>
-    <string name="feeds_enable_memories">Habilitá los recuerdos</string>
-    <string name="feeds_interest_boosted">Interés aumentado</string>
-    <string name="feeds_interest_failed">Error al ajustar el interés</string>
-    <string name="feeds_interest_reduced">Interés reducido</string>
-    <string name="feeds_interest_removed">Interés eliminado</string>
-    <string name="feeds_permission_allow">Permití</string>
-    <string name="feeds_permission_request_message">%1$s solicita el siguiente permiso:</string>
-    <string name="feeds_permission_request_title">Solicitud de permiso</string>
-    <string name="feeds_post_content">Contenido del posteo</string>
-    <string name="feeds_rss_mode_posts">Posteos</string>
-    <string name="feeds_rss_mode_posts_comments">Posteos y comentarios</string>
-    <string name="feeds_saved_clear_confirm_body">Esto quita todos los posteos de tu lista de guardados. No se puede deshacer.</string>
-    <string name="feeds_saved_clear_confirm_title">¿Borrar todos los posteos guardados?</string>
-    <string name="feeds_saved_empty_subtitle">Tocá el marcador de cualquier posteo para guardarlo acá para más tarde.</string>
-    <string name="feeds_saved_empty_title">Todavía no hay nada guardado</string>
-    <string name="feeds_saved_error_clear">No se pudieron borrar los posteos guardados</string>
-    <string name="feeds_saved_save">Guardá para más tarde</string>
-    <string name="feeds_scroll_to_top">Volvé arriba</string>
-    <string name="feeds_settings_field_server">Servidor</string>
-    <string name="feeds_settings_name_cancel_cd">Cancelá la edición</string>
-    <string name="feeds_settings_title">Configuración de %1$s</string>
-    <string name="feeds_source_credibility_label">Credibilidad</string>
-    <string name="feeds_source_last_checked">Última verificación: %1$s</string>
-    <string name="feeds_source_polling_interval">Consultando cada %1$s</string>
-    <string name="feeds_source_url_hint_feed">ID de entidad del feed o huella digital</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-    <string name="feeds_unsubscribe_confirm">¿Cancelar la suscripción al feed?</string>
-    <string name="feeds_unsubscribe_confirm_message">Dejarás de recibir actualizaciones de este feed. Podés volver a suscribirte en cualquier momento.</string>
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d publicación</item>
-        <item quantity="other">%1$d publicaciones</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Agregar %1$d interés</item>
-        <item quantity="other">Agregar %1$d intereses</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Hoy hace %1$d año</item>
-        <item quantity="other">Hoy hace %1$d años</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d imagen</item>
-        <item quantity="other">%1$d imágenes</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d adjunto</item>
-        <item quantity="other">%1$d adjuntos</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d comentario</item>
-        <item quantity="other">%1$d comentarios</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Ver %1$d comentario más</item>
-        <item quantity="other">Ver %1$d comentarios más</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minutos</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d horas</item>
-    </plurals>
-    <plurals name="feeds_new_posts">
-        <item quantity="one">%d publicación nueva</item>
-        <item quantity="other">%d publicaciones nuevas</item>
-    </plurals>
-
 </resources>

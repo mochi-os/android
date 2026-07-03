@@ -56,10 +56,7 @@ fun MentionTextField(
     placeholder: @Composable (() -> Unit)? = null,
     maxLines: Int = Int.MAX_VALUE,
     minLines: Int = 1,
-    singleLine: Boolean = false,
-    // When true the field stretches to fill a height-constrained [modifier], so
-    // its border spans the full box rather than wrapping the text.
-    fillHeight: Boolean = false
+    singleLine: Boolean = false
 ) {
     var textFieldValue by remember { mutableStateOf(TextFieldValue(value)) }
     var suggestions by remember { mutableStateOf<List<MentionSuggestion>>(emptyList()) }
@@ -127,11 +124,7 @@ fun MentionTextField(
             maxLines = maxLines,
             minLines = minLines,
             singleLine = singleLine,
-            modifier = if (fillHeight) {
-                Modifier.fillMaxWidth().weight(1f)
-            } else {
-                Modifier.fillMaxWidth()
-            }
+            modifier = Modifier.fillMaxWidth()
         )
 
         if (suggestions.isNotEmpty()) {

@@ -16,6 +16,8 @@
     <string name="feeds_settings">Mga setting</string>
     <string name="feeds_no_posts_yet">Wala pang post</string>
     <string name="feeds_default_sort">Default na sort</string>
+    <string name="feeds_suggested_interests_add">Idagdag</string>
+    <string name="feeds_suggested_interests_dismiss">Itago</string>
     <string name="feeds_unread">Hindi nabasa</string>
     <string name="feeds_filter_all">Lahat</string>
     <string name="feeds_sort_label">Ayusin</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Mga iminumungkahing interes</string>
     <string name="feeds_suggested_interests_empty">Wala pang mungkahi</string>
-    <string name="feeds_suggested_interests_title">Magdagdag ng mga interes mula sa %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Sinasaklaw ng feed na ito ang mga paksang ito. Piliin kung alin ang idaragdag sa iyong mga interes para sa personalized na ranking.</string>
-    <string name="feeds_suggested_interests_skip">Laktawan</string>
+    <string name="feeds_suggested_interests_count">%1$d na post</string>
     <string name="feeds_tag_more">I-tune ang interes</string>
     <string name="feeds_tag_more_up">Magpakita ng higit pang katulad nito</string>
     <string name="feeds_tag_more_down">Magpakita ng mas kaunti na katulad nito</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d bagong post</item>
         <item quantity="other">%d bagong post</item>
     </plurals>
-    <string name="feeds_caught_up">Nakita mo na ang lahat</string>
     <string name="feeds_all_caught_up">Updated na lahat</string>
     <string name="feeds_view_all_posts">Tingnan lahat ng post</string>
-    <string name="feeds_markdown_supported">Sinusuportahan ang Markdown</string>
-    <string name="feeds_back">Bumalik</string>
-    <string name="feeds_confirm">Kumpirmahin</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_unsubscribe">Mag-unsubscribe</string>
-    <string name="feeds_unsubscribed">Hindi na naka-subscribe</string>
-    <string name="feeds_settings_section_identity">Identity</string>
-    <string name="feeds_settings_field_name">Pangalan</string>
-    <string name="feeds_settings_field_entity_id">Entity ID</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
-    <string name="feeds_settings_field_server">Server</string>
-    <string name="feeds_settings_name_edit_cd">I-edit ang pangalan</string>
-    <string name="feeds_settings_name_save_cd">I-save ang pangalan</string>
-    <string name="feeds_access_subject_anyone">Sinuman</string>
-    <string name="feeds_access_subject_authenticated">Mga napatotohanang user</string>
-    <string name="feeds_access_level_view_full">Tingnan lamang</string>
-    <string name="feeds_access_level_none_full">Walang access</string>
-    <string name="feeds_access_segment_user">User</string>
-    <string name="feeds_access_segment_group">Group</string>
-    <string name="feeds_access_segment_other">Iba pa</string>
-    <string name="feeds_access_search_users">Maghanap ng user</string>
-    <string name="feeds_access_select_group">Pumili ng group</string>
-    <string name="feeds_access_selected">Napili: %1$s</string>
-    <string name="feeds_permission_deny">Tanggihan</string>
-    <string name="feeds_allow_search">Payagan ang sinumang maghanap ng feed</string>
-    <string name="feeds_enable_memories">Paganahin ang mga alaala</string>
-    <string name="feeds_create_first_post">Gumawa ng unang post</string>
-    <string name="feeds_post_content">Nilalaman ng post</string>
-    <string name="feeds_rss_mode_posts">Mga Post</string>
-    <string name="feeds_rss_mode_posts_comments">Mga post at komento</string>
-    <string name="feeds_unsubscribe_confirm">Mag-unsubscribe sa feed?</string>
-    <string name="feeds_unsubscribe_confirm_message">Hindi ka na makakatanggap ng mga update mula sa feed na ito. Puwede kang mag-subscribe ulit anumang oras.</string>
-    <string name="feeds_settings_unsubscribe_section">Mag-unsubscribe sa feed</string>
-    <string name="feeds_delete_feed_description">Permanenteng burahin ang feed na ito at ang lahat ng nilalaman nito.</string>
-    <string name="feeds_access_management">Pamamahala ng access</string>
-    <string name="feeds_access_management_desc">Kontrolin kung sino ang maaaring tumingin at makipag-ugnayan sa feed na ito</string>
-    <string name="feeds_access_level_comment_full">Magkomento, mag-react, at tingnan</string>
-    <string name="feeds_access_level_react_full">Mag-react at tingnan</string>
-    <string name="feeds_access_add_title">Magdagdag ng access</string>
-    <string name="feeds_access_add_subtitle">Pumili ng user, group, o iba pang panuntunan para magbigay ng access.</string>
-    <string name="feeds_access_select_rule">Pumili ng access rule</string>
-    <string name="feeds_source_url_hint_feed">Feed entity ID o fingerprint</string>
-    <string name="feeds_source_credibility_label">Kredibilidad</string>
-    <string name="feeds_source_transform_hint">Isalin sa English, at ipakita bilang bullet points.</string>
-    <string name="feeds_source_transform_help">Iwanang walang laman para i-disable.</string>
-
-    <string name="feeds_scroll_to_top">Bumalik sa itaas</string>
-    <string name="feeds_settings_title">Mga setting ng %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Kanselahin ang pag-edit</string>
-    <string name="feeds_access_authenticated_desc">Sinumang naka-log in</string>
-    <string name="feeds_access_anyone_desc">Kasama ang mga anonymous na user</string>
-    <string name="feeds_source_last_checked">Huling sinuri %1$s</string>
-    <string name="feeds_source_polling_interval">Nagpo-poll bawat %1$s</string>
-    <string name="feeds_permission_request_title">Kahilingan sa pahintulot</string>
-    <string name="feeds_permission_request_message">Hinihiling ng %1$s ang sumusunod na pahintulot:</string>
-    <string name="feeds_permission_allow">Payagan</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d post</item>
-        <item quantity="other">%1$d na post</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Magdagdag ng %1$d interes</item>
-        <item quantity="other">Magdagdag ng %1$d na interes</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d taon ang nakalipas ngayong araw</item>
-        <item quantity="other">%1$d na taon ang nakalipas ngayong araw</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d larawan</item>
-        <item quantity="other">%1$d na larawan</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d kalakip</item>
-        <item quantity="other">%1$d na kalakip</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d komento</item>
-        <item quantity="other">%1$d na komento</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Tingnan ang %1$d pang komento</item>
-        <item quantity="other">Tingnan ang %1$d pang mga komento</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d na minuto</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d oras</item>
-        <item quantity="other">%1$d na oras</item>
-    </plurals>
-
 </resources>

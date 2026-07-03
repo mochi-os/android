@@ -16,6 +16,8 @@
     <string name="feeds_settings">Mipangilio</string>
     <string name="feeds_no_posts_yet">Hakuna machapisho bado</string>
     <string name="feeds_default_sort">Mpangilio chaguo-msingi</string>
+    <string name="feeds_suggested_interests_add">Ongeza</string>
+    <string name="feeds_suggested_interests_dismiss">Ficha</string>
     <string name="feeds_unread">Haijasomwa</string>
     <string name="feeds_filter_all">Vyote</string>
     <string name="feeds_sort_label">Panga</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Seva: %1$s</string>
     <string name="feeds_suggested_interests">Mapendekezo ya mapendeleo</string>
     <string name="feeds_suggested_interests_empty">Hakuna mapendekezo bado</string>
-    <string name="feeds_suggested_interests_title">Ongeza mapendeleo kutoka %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Mlisho huu unahusu mada hizi. Chagua zipi za kuongeza kwenye mapendeleo yako kwa upangaji uliobinafsishwa.</string>
-    <string name="feeds_suggested_interests_skip">Ruka</string>
+    <string name="feeds_suggested_interests_count">Machapisho %1$d</string>
     <string name="feeds_tag_more">Rekebisha mapendeleo</string>
     <string name="feeds_tag_more_up">Onyesha zaidi kama hii</string>
     <string name="feeds_tag_more_down">Onyesha kidogo kama hii</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d chapisho jipya</item>
         <item quantity="other">%d machapisho mapya</item>
     </plurals>
-    <string name="feeds_caught_up">Umeona kila kitu</string>
     <string name="feeds_all_caught_up">Umemaliza yote</string>
     <string name="feeds_view_all_posts">Tazama machapisho yote</string>
-    <string name="feeds_markdown_supported">Markdown inatumika</string>
-    <string name="feeds_back">Rudi</string>
-    <string name="feeds_confirm">Thibitisha</string>
-    <string name="feeds_rss_feed">Mlisho wa RSS</string>
-    <string name="feeds_unsubscribe">Jiondoe</string>
-    <string name="feeds_unsubscribed">Umejiondoa</string>
-    <string name="feeds_settings_section_identity">Utambulisho</string>
-    <string name="feeds_settings_field_name">Jina</string>
-    <string name="feeds_settings_field_entity_id">Kitambulisho cha kitengo</string>
-    <string name="feeds_settings_field_fingerprint">Alama ya kidole</string>
-    <string name="feeds_settings_field_server">Seva</string>
-    <string name="feeds_settings_name_edit_cd">Hariri jina</string>
-    <string name="feeds_settings_name_save_cd">Hifadhi jina</string>
-    <string name="feeds_access_subject_anyone">Mtu yeyote</string>
-    <string name="feeds_access_subject_authenticated">Watumiaji waliothibitishwa</string>
-    <string name="feeds_access_level_view_full">Tazama tu</string>
-    <string name="feeds_access_level_none_full">Hakuna ufikiaji</string>
-    <string name="feeds_access_segment_user">Mtumiaji</string>
-    <string name="feeds_access_segment_group">Kikundi</string>
-    <string name="feeds_access_segment_other">Nyingine</string>
-    <string name="feeds_access_search_users">Tafuta watumiaji</string>
-    <string name="feeds_access_select_group">Chagua kikundi</string>
-    <string name="feeds_access_selected">Imechaguliwa: %1$s</string>
-    <string name="feeds_permission_deny">Kataa</string>
-    <string name="feeds_allow_search">Ruhusu mtu yeyote kutafuta mlisho</string>
-    <string name="feeds_enable_memories">Wezesha kumbukumbu</string>
-    <string name="feeds_create_first_post">Unda chapisho la kwanza</string>
-    <string name="feeds_post_content">Maudhui ya chapisho</string>
-    <string name="feeds_rss_mode_posts">Machapisho</string>
-    <string name="feeds_rss_mode_posts_comments">Machapisho na maoni</string>
-    <string name="feeds_unsubscribe_confirm">Jiondoe kwenye mlisho?</string>
-    <string name="feeds_unsubscribe_confirm_message">Utaacha kupokea masasisho kutoka kwenye mlisho huu. Unaweza kujisajili tena wakati wowote.</string>
-    <string name="feeds_settings_unsubscribe_section">Jiondoe kutoka mlisho</string>
-    <string name="feeds_delete_feed_description">Futa kabisa mlisho huu na maudhui yake yote.</string>
-    <string name="feeds_access_management">Usimamizi wa Ufikiaji</string>
-    <string name="feeds_access_management_desc">Dhibiti nani anaweza kuona na kuingiliana na mlisho huu</string>
-    <string name="feeds_access_level_comment_full">Toa maoni, jibu na uone</string>
-    <string name="feeds_access_level_react_full">Jibu na uone</string>
-    <string name="feeds_access_add_title">Ongeza ufikiaji</string>
-    <string name="feeds_access_add_subtitle">Chagua mtumiaji, kikundi, au sheria nyingine kutoa ufikiaji.</string>
-    <string name="feeds_access_select_rule">Chagua sheria ya ufikiaji</string>
-    <string name="feeds_source_url_hint_feed">Kitambulisho cha Entiti ya Mlisho au Alama ya Kidole</string>
-    <string name="feeds_source_credibility_label">Uaminifu</string>
-    <string name="feeds_source_transform_hint">Tafsiri kwa Kiingereza, na onyesha kama vidokezo.</string>
-    <string name="feeds_source_transform_help">Acha tupu kuzima.</string>
-
-    <string name="feeds_scroll_to_top">Rudi juu</string>
-    <string name="feeds_settings_title">Mipangilio ya %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Ghairi kuhariri</string>
-    <string name="feeds_access_authenticated_desc">Mtu yeyote aliyeingia</string>
-    <string name="feeds_access_anyone_desc">Ikijumuisha watumiaji wasiojulikana</string>
-    <string name="feeds_source_last_checked">Ilikaguliwa mwisho %1$s</string>
-    <string name="feeds_source_polling_interval">Inakagua kila %1$s</string>
-    <string name="feeds_permission_request_title">Ombi la ruhusa</string>
-    <string name="feeds_permission_request_message">%1$s inaomba ruhusa ifuatayo:</string>
-    <string name="feeds_permission_allow">Ruhusu</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">Chapisho %1$d</item>
-        <item quantity="other">Machapisho %1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ongeza kipendwa %1$d</item>
-        <item quantity="other">Ongeza vipendwa %1$d</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Mwaka %1$d uliopita leo</item>
-        <item quantity="other">Miaka %1$d iliyopita leo</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">Picha %1$d</item>
-        <item quantity="other">Picha %1$d</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">Kiambatisho %1$d</item>
-        <item quantity="other">Viambatisho %1$d</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">Maoni %1$d</item>
-        <item quantity="other">Maoni %1$d</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Tazama maoni %1$d zaidi</item>
-        <item quantity="other">Tazama maoni %1$d zaidi</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">Dakika %1$d</item>
-        <item quantity="other">Dakika %1$d</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">Saa %1$d</item>
-        <item quantity="other">Saa %1$d</item>
-    </plurals>
-
 </resources>

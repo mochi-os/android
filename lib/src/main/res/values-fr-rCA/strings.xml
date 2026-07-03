@@ -203,10 +203,6 @@
     <string name="about_check_network_error">Impossible de joindre le serveur de mise à jour</string>
     <string name="about_check_download_failed">Échec du téléchargement</string>
     <string name="notifications_empty">Aucune notification</string>
-    <string name="notifications_empty_unread">Vous êtes à jour</string>
-    <string name="notifications_tab_unread">Non lues</string>
-    <string name="notifications_tab_unread_count">Non lues (%1$d)</string>
-    <string name="notifications_tab_all">Toutes</string>
     <string name="notifications_mark_all_read">Tout marquer comme lu</string>
     <string name="notifications_clear_all">Tout effacer</string>
     <string name="notifications_clear_all_title">Effacer toutes les notifications ?</string>
@@ -292,6 +288,4 @@
     <string name="stepup_error_code">Ce code est incorrect ou a expiré.</string>
     <string name="stepup_error_passkey">La vérification par clé d\'accès a échoué. Veuillez réessayer.</string>
     <string name="stepup_error_oauth">Impossible de vérifier avec ce compte. Veuillez réessayer.</string>
-    <string name="common_logout_confirm_title">Déconnexion</string>
-    <string name="reaction_remove">Effacer</string>
 </resources>

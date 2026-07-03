@@ -65,10 +65,6 @@
     <string name="notifications_open">اطلاعون</string>
     <string name="notifications_title">اطلاعون</string>
     <string name="notifications_empty">ڪا اطلاع نه آهي</string>
-    <string name="notifications_empty_unread">سڀ ڪجهه پڙهي ورتو اٿوَ</string>
-    <string name="notifications_tab_unread">اڻ پڙهيل</string>
-    <string name="notifications_tab_unread_count">اڻ پڙهيل (%1$d)</string>
-    <string name="notifications_tab_all">سڀ</string>
     <string name="notifications_mark_all_read">سڀ پڙهيل نشانبر ڪريو</string>
     <string name="notifications_clear_all">سڀ صاف ڪريو</string>
     <string name="notifications_loading">لوڊ ٿي رهيو آهي…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">فائل کلي رهي آهي…</string>
     <string name="common_no_app_for_file">ڪابه ايپ هي فائل نه ٿي کولي سگهي</string>
     <string name="common_file_open_failed">فائل کولي نه سگهي</string>
-    <string name="common_logout_confirm_title">لاگ آئوٽ</string>
-    <string name="reaction_remove">صاف ڪريو</string>
-
-    <string name="common_logout_confirm_message">ڇا توهان واقعي لاگ آئوٽ ٿيڻ چاهيو ٿا؟ پنهنجي اڪائونٽ تائين رسائي لاءِ توهان کي ٻيهر لاگ ان ٿيڻو پوندو.</string>
-
 </resources>

@@ -16,6 +16,8 @@
     <string name="feeds_settings">Cài đặt</string>
     <string name="feeds_no_posts_yet">Chưa có bài viết</string>
     <string name="feeds_default_sort">Sắp xếp mặc định</string>
+    <string name="feeds_suggested_interests_add">Thêm</string>
+    <string name="feeds_suggested_interests_dismiss">Ẩn</string>
     <string name="feeds_unread">Chưa đọc</string>
     <string name="feeds_filter_all">Tất cả</string>
     <string name="feeds_sort_label">Sắp xếp</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Máy chủ: %1$s</string>
     <string name="feeds_suggested_interests">Sở thích đề xuất</string>
     <string name="feeds_suggested_interests_empty">Chưa có đề xuất nào</string>
-    <string name="feeds_suggested_interests_title">Thêm sở thích từ %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Nguồn cấp này bao gồm các chủ đề này. Chọn những chủ đề bạn muốn thêm vào sở thích để xếp hạng được cá nhân hóa.</string>
-    <string name="feeds_suggested_interests_skip">Bỏ qua</string>
+    <string name="feeds_suggested_interests_count">%1$d bài đăng</string>
     <string name="feeds_tag_more">Điều chỉnh sở thích</string>
     <string name="feeds_tag_more_up">Hiển thị thêm nội dung tương tự</string>
     <string name="feeds_tag_more_down">Hiển thị ít nội dung tương tự</string>
@@ -211,94 +211,6 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d bài viết mới</item>
     </plurals>
-    <string name="feeds_caught_up">Bạn đã xem hết</string>
     <string name="feeds_all_caught_up">Đã xem hết</string>
     <string name="feeds_view_all_posts">Xem tất cả bài đăng</string>
-    <string name="feeds_markdown_supported">Hỗ trợ Markdown</string>
-    <string name="feeds_back">Quay lại</string>
-    <string name="feeds_confirm">Xác nhận</string>
-    <string name="feeds_rss_feed">Feed RSS</string>
-    <string name="feeds_unsubscribe">Hủy đăng ký</string>
-    <string name="feeds_unsubscribed">Đã hủy đăng ký</string>
-    <string name="feeds_settings_section_identity">Danh tính</string>
-    <string name="feeds_settings_field_name">Tên</string>
-    <string name="feeds_settings_field_entity_id">ID thực thể</string>
-    <string name="feeds_settings_field_fingerprint">Dấu vân tay</string>
-    <string name="feeds_settings_field_server">Máy chủ</string>
-    <string name="feeds_settings_name_edit_cd">Sửa tên</string>
-    <string name="feeds_settings_name_save_cd">Lưu tên</string>
-    <string name="feeds_access_subject_anyone">Bất kỳ ai</string>
-    <string name="feeds_access_subject_authenticated">Người dùng đã xác thực</string>
-    <string name="feeds_access_level_view_full">Chỉ xem</string>
-    <string name="feeds_access_level_none_full">Không có quyền truy cập</string>
-    <string name="feeds_access_segment_user">Người dùng</string>
-    <string name="feeds_access_segment_group">Nhóm</string>
-    <string name="feeds_access_segment_other">Khác</string>
-    <string name="feeds_access_search_users">Tìm kiếm người dùng</string>
-    <string name="feeds_access_select_group">Chọn nhóm</string>
-    <string name="feeds_access_selected">Đã chọn: %1$s</string>
-    <string name="feeds_permission_deny">Từ chối</string>
-    <string name="feeds_allow_search">Cho phép bất kỳ ai tìm kiếm nguồn cấp</string>
-    <string name="feeds_enable_memories">Bật bộ nhớ</string>
-    <string name="feeds_create_first_post">Tạo bài viết đầu tiên</string>
-    <string name="feeds_post_content">Nội dung bài viết</string>
-    <string name="feeds_rss_mode_posts">Bài viết</string>
-    <string name="feeds_rss_mode_posts_comments">Bài viết và bình luận</string>
-    <string name="feeds_unsubscribe_confirm">Hủy đăng ký nguồn cấp?</string>
-    <string name="feeds_unsubscribe_confirm_message">Bạn sẽ không nhận được cập nhật từ nguồn cấp này nữa. Bạn có thể đăng ký lại bất cứ lúc nào.</string>
-    <string name="feeds_settings_unsubscribe_section">Hủy đăng ký nguồn cấp</string>
-    <string name="feeds_delete_feed_description">Xoá vĩnh viễn feed này và toàn bộ nội dung của nó.</string>
-    <string name="feeds_access_management">Quản lý truy cập</string>
-    <string name="feeds_access_management_desc">Kiểm soát ai có thể xem và tương tác với feed này</string>
-    <string name="feeds_access_level_comment_full">Bình luận, phản ứng và xem</string>
-    <string name="feeds_access_level_react_full">Phản ứng và xem</string>
-    <string name="feeds_access_add_title">Thêm quyền truy cập</string>
-    <string name="feeds_access_add_subtitle">Chọn một người dùng, nhóm hoặc quy tắc khác để cấp quyền truy cập.</string>
-    <string name="feeds_access_select_rule">Chọn quy tắc truy cập</string>
-    <string name="feeds_source_url_hint_feed">ID thực thể nguồn cấp hoặc dấu vân tay</string>
-    <string name="feeds_source_credibility_label">Độ tin cậy</string>
-    <string name="feeds_source_transform_hint">Dịch sang tiếng Anh và hiển thị dưới dạng các điểm đánh dấu.</string>
-    <string name="feeds_source_transform_help">Để trống để tắt.</string>
-
-    <string name="feeds_scroll_to_top">Về đầu trang</string>
-    <string name="feeds_settings_title">Cài đặt %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Hủy chỉnh sửa</string>
-    <string name="feeds_access_authenticated_desc">Bất kỳ ai đã đăng nhập</string>
-    <string name="feeds_access_anyone_desc">Bao gồm cả người dùng ẩn danh</string>
-    <string name="feeds_source_last_checked">Kiểm tra lần cuối %1$s</string>
-    <string name="feeds_source_polling_interval">Kiểm tra mỗi %1$s</string>
-    <string name="feeds_permission_request_title">Yêu cầu quyền</string>
-    <string name="feeds_permission_request_message">%1$s đang yêu cầu quyền sau:</string>
-    <string name="feeds_permission_allow">Cho phép</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d bài viết</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">Thêm %1$d sở thích</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d năm trước vào ngày này</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="other">%1$d hình ảnh</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="other">%1$d tệp đính kèm</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="other">%1$d bình luận</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="other">Xem thêm %1$d bình luận</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d phút</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d giờ</item>
-    </plurals>
-
 </resources>

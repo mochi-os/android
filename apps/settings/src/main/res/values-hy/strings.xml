@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">Երթուղավորման սպասող հաղորդագրություններ</string>
     <string name="system_status_relay_service">Փոխանցման ծառայություն</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ամրագրումներ · %3$d շղթաներ · %4$d մերժված</string>
-    <string name="route_target_select">Ընտրել</string>
 </resources>

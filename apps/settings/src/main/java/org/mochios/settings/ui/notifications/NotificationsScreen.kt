@@ -31,8 +31,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -112,77 +110,39 @@ fun NotificationsScreen(
             )
         },
     ) { padding ->
-        // Badge count is derived from the items so it stays accurate as
-        // individual notifications are read (the server unreadCount only
-        // refreshes on load / mark-all-read).
-        val unreadCount = uiState.items.count { it.isUnread }
-        val displayItems = when (uiState.tab) {
-            NotificationsTab.UNREAD -> uiState.items.filter { it.isUnread }
-            NotificationsTab.ALL -> uiState.items
-        }
-
-        Column(Modifier.fillMaxSize().padding(padding)) {
-            TabRow(selectedTabIndex = uiState.tab.ordinal) {
-                Tab(
-                    selected = uiState.tab == NotificationsTab.UNREAD,
-                    onClick = { viewModel.setTab(NotificationsTab.UNREAD) },
-                    text = {
-                        Text(
-                            if (unreadCount > 0) {
-                                stringResource(R.string.notifications_tab_unread_count, unreadCount)
-                            } else {
-                                stringResource(R.string.notifications_tab_unread)
-                            },
-                        )
-                    },
-                )
-                Tab(
-                    selected = uiState.tab == NotificationsTab.ALL,
-                    onClick = { viewModel.setTab(NotificationsTab.ALL) },
-                    text = { Text(stringResource(R.string.notifications_tab_all)) },
-                )
+        when {
+            uiState.isLoading && uiState.items.isEmpty() -> {
+                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                    CircularProgressIndicator()
+                }
             }
-
-            when {
-                uiState.isLoading && uiState.items.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator()
-                    }
+            uiState.items.isEmpty() -> {
+                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                    Text(
+                        text = stringResource(R.string.notifications_empty),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
                 }
-                displayItems.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(
-                            text = stringResource(
-                                if (uiState.tab == NotificationsTab.UNREAD) {
-                                    R.string.notifications_empty_unread
-                                } else {
-                                    R.string.notifications_empty
-                                },
-                            ),
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    }
-                }
-                else -> {
-                    PullToRefreshBox(
-                        isRefreshing = uiState.isRefreshing,
-                        onRefresh = { viewModel.refresh() },
+            }
+            else -> {
+                PullToRefreshBox(
+                    isRefreshing = uiState.isRefreshing,
+                    onRefresh = { viewModel.refresh() },
+                    modifier = Modifier.fillMaxSize().padding(padding),
+                ) {
+                    LazyColumn(
                         modifier = Modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
-                        LazyColumn(
-                            modifier = Modifier.fillMaxSize(),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
-                            verticalArrangement = Arrangement.spacedBy(6.dp),
-                        ) {
-                            items(displayItems, key = { it.id }) { n ->
-                                NotificationCard(
-                                    notification = n,
-                                    onClick = {
-                                        if (n.read == 0L) viewModel.markRead(n.id)
-                                        if (n.link.isNotBlank()) onOpenLink(n.link)
-                                    },
-                                )
-                            }
+                        items(uiState.items, key = { it.id }) { n ->
+                            NotificationCard(
+                                notification = n,
+                                onClick = {
+                                    if (n.read == 0L) viewModel.markRead(n.id)
+                                    if (n.link.isNotBlank()) onOpenLink(n.link)
+                                },
+                            )
                         }
                     }
                 }

@@ -65,10 +65,6 @@
     <string name="notifications_open">خبرتیاوې</string>
     <string name="notifications_title">خبرتیاوې</string>
     <string name="notifications_empty">هیڅ خبرتیاوې نشته</string>
-    <string name="notifications_empty_unread">هرڅه دې ولوستل</string>
-    <string name="notifications_tab_unread">نالوستل شوي</string>
-    <string name="notifications_tab_unread_count">نالوستل شوي (%1$d)</string>
-    <string name="notifications_tab_all">ټول</string>
     <string name="notifications_mark_all_read">ټول د لوستل شویو په توګه نښه کړئ</string>
     <string name="notifications_clear_all">ټول پاک کړئ</string>
     <string name="notifications_loading">بار کیږي…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">فایل پرانیستل کیږي…</string>
     <string name="common_no_app_for_file">هیڅ اپلیکیشن دا فایل نه شي پرانیستلی</string>
     <string name="common_file_open_failed">فایل پرانیستل ونشول</string>
-    <string name="common_logout_confirm_title">لاګ آوټ</string>
-    <string name="reaction_remove">پاک کړئ</string>
-
-    <string name="common_logout_confirm_message">ایا تاسو ډاډه یاست چې غواړئ ووځئ؟ خپل حساب ته د لاسرسي لپاره به اړ یاست چې بیا ننوځئ.</string>
-
 </resources>

@@ -16,6 +16,8 @@
     <string name="feeds_settings">सेटिंग सब</string>
     <string name="feeds_no_posts_yet">अबहीं तक कौनो पोस्ट नइखे</string>
     <string name="feeds_default_sort">डिफ़ॉल्ट छंटाई</string>
+    <string name="feeds_suggested_interests_add">जोड़ीं</string>
+    <string name="feeds_suggested_interests_dismiss">छिपाईं</string>
     <string name="feeds_unread">अनपढ़ल</string>
     <string name="feeds_filter_all">सब</string>
     <string name="feeds_sort_label">क्रमबद्ध करीं</string>
@@ -113,9 +115,7 @@
     <string name="feeds_identity_server">सर्वर: %1$s</string>
     <string name="feeds_suggested_interests">सुझावल रुचि</string>
     <string name="feeds_suggested_interests_empty">अबही ले कवनो सुझाव नइखे</string>
-    <string name="feeds_suggested_interests_title">%1$s से रुचि जोड़ल जाव?</string>
-    <string name="feeds_suggested_interests_subtitle">ई फीड इ विषयन के समेटेला। निजीकृत रैंकिंग खातिर आपन रुचि में कवन सब जोड़ल चाहत बानी ओकरा के चुनीं।</string>
-    <string name="feeds_suggested_interests_skip">छोड़ीं</string>
+    <string name="feeds_suggested_interests_count">%1$d पोस्ट</string>
     <string name="feeds_tag_more">रुचि सेट करीं</string>
     <string name="feeds_tag_more_up">एकरा जइसन अउर देखाईं</string>
     <string name="feeds_tag_more_down">एकरा जइसन कम देखाईं</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d नया पोस्ट</item>
         <item quantity="other">%d नया पोस्ट</item>
     </plurals>
-    <string name="feeds_caught_up">रउरा सब देख लिहनी</string>
     <string name="feeds_all_caught_up">सब पकड़ल गइल</string>
     <string name="feeds_view_all_posts">सब पोस्ट देखीं</string>
-    <string name="feeds_markdown_supported">Markdown समर्थित</string>
-    <string name="feeds_back">वापस</string>
-    <string name="feeds_confirm">पुष्टि करीं</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_unsubscribe">सदस्यता रद्द करीं</string>
-    <string name="feeds_unsubscribed">सदस्यता रद्द भइल</string>
-    <string name="feeds_settings_section_identity">पहचान</string>
-    <string name="feeds_settings_field_name">नाम</string>
-    <string name="feeds_settings_field_entity_id">एंटिटी ID</string>
-    <string name="feeds_settings_field_fingerprint">फिंगरप्रिंट</string>
-    <string name="feeds_settings_field_server">सर्वर</string>
-    <string name="feeds_settings_name_edit_cd">नाम संपादित करीं</string>
-    <string name="feeds_settings_name_save_cd">नाम सहेजीं</string>
-    <string name="feeds_access_subject_anyone">केहू</string>
-    <string name="feeds_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
-    <string name="feeds_access_level_view_full">खाली देखीं</string>
-    <string name="feeds_access_level_none_full">पहुँच नइखे</string>
-    <string name="feeds_access_segment_user">उपयोगकर्ता</string>
-    <string name="feeds_access_segment_group">समूह</string>
-    <string name="feeds_access_segment_other">दोसर</string>
-    <string name="feeds_access_search_users">यूजर खोजीं</string>
-    <string name="feeds_access_select_group">समूह चुनीं</string>
-    <string name="feeds_access_selected">चुनल: %1$s</string>
-    <string name="feeds_permission_deny">मना करीं</string>
-    <string name="feeds_allow_search">केहू के फीड खोजे के अनुमति दीं</string>
-    <string name="feeds_enable_memories">यादें चालू करीं</string>
-    <string name="feeds_create_first_post">पहिला पोस्ट बनाईं</string>
-    <string name="feeds_post_content">पोस्ट सामग्री</string>
-    <string name="feeds_rss_mode_posts">पोस्ट</string>
-    <string name="feeds_rss_mode_posts_comments">पोस्ट आ टिप्पणी</string>
-    <string name="feeds_unsubscribe_confirm">फीड से अनसब्सक्राइब करीं?</string>
-    <string name="feeds_unsubscribe_confirm_message">रउआ के ई फीड से अपडेट मिलल बंद हो जाई। रउआ कबो फेर से सब्सक्राइब कर सकेनी।</string>
-    <string name="feeds_settings_unsubscribe_section">फ़ीड से सदस्यता रद्द करीं</string>
-    <string name="feeds_delete_feed_description">ए feed आ ओकर सब सामग्री के स्थायी रूप से मिटाईं।</string>
-    <string name="feeds_access_management">पहुंच प्रबंधन</string>
-    <string name="feeds_access_management_desc">नियंत्रित करीं कि के एह फीड के देख आ ओकरा से बात कर सकेला</string>
-    <string name="feeds_access_level_comment_full">टिप्पणी, प्रतिक्रिया, आ देखीं</string>
-    <string name="feeds_access_level_react_full">प्रतिक्रिया आ देखीं</string>
-    <string name="feeds_access_add_title">पहुंच जोड़ीं</string>
-    <string name="feeds_access_add_subtitle">पहुँच देवे खातिर यूजर, ग्रुप, भा दोसर नियम चुनीं।</string>
-    <string name="feeds_access_select_rule">पहुँच नियम चुनीं</string>
-    <string name="feeds_source_url_hint_feed">फीड एंटिटी ID भा फिंगरप्रिंट</string>
-    <string name="feeds_source_credibility_label">विश्वसनीयता</string>
-    <string name="feeds_source_transform_hint">अंग्रेजी में अनुवाद करीं, आ बुलेट बिंदु के रूप में देखाईं।</string>
-    <string name="feeds_source_transform_help">बंद करे खातिर खाली छोड़ीं।</string>
-
-    <string name="feeds_scroll_to_top">ऊपर वापस जाईं</string>
-    <string name="feeds_settings_title">%1$s सेटिंग</string>
-    <string name="feeds_settings_name_cancel_cd">संपादन रद्द करीं</string>
-    <string name="feeds_access_authenticated_desc">जे केहू लॉग इन बा</string>
-    <string name="feeds_access_anyone_desc">अनाम प्रयोगकर्ता लोग समेत</string>
-    <string name="feeds_source_last_checked">अंतिम बेर %1$s के जाँचल गइल</string>
-    <string name="feeds_source_polling_interval">हर %1$s पर जाँच होखत बा</string>
-    <string name="feeds_permission_request_title">अनुमति के अनुरोध</string>
-    <string name="feeds_permission_request_message">%1$s ई अनुमति माँगत बा:</string>
-    <string name="feeds_permission_allow">अनुमति दीं</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d गो पोस्ट</item>
-        <item quantity="other">%1$d गो पोस्ट</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d गो रुचि जोड़ीं</item>
-        <item quantity="other">%1$d गो रुचि जोड़ीं</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">आज के दिन %1$d साल पहिले</item>
-        <item quantity="other">आज के दिन %1$d साल पहिले</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d गो तस्वीर</item>
-        <item quantity="other">%1$d गो तस्वीर</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d गो अटैचमेंट</item>
-        <item quantity="other">%1$d गो अटैचमेंट</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d गो टिप्पणी</item>
-        <item quantity="other">%1$d गो टिप्पणी</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d गो अउरी टिप्पणी देखीं</item>
-        <item quantity="other">%1$d गो अउरी टिप्पणी देखीं</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d मिनट</item>
-        <item quantity="other">%1$d मिनट</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d घंटा</item>
-        <item quantity="other">%1$d घंटा</item>
-    </plurals>
-
 </resources>

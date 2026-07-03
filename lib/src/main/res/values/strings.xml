@@ -97,8 +97,6 @@
     <string name="common_more_options">More options</string>
     <string name="common_notifications">Notifications</string>
     <string name="common_logout">Log out</string>
-    <string name="common_logout_confirm_title">Log out</string>
-    <string name="common_logout_confirm_message">Are you sure you want to log out? You will need to log in again to access your account.</string>
     <string name="common_collapse">Collapse</string>
     <string name="common_expand">Expand</string>
     <string name="common_subscribe">Subscribe</string>
@@ -191,7 +189,6 @@
 
     <!-- Reactions -->
     <string name="reaction_add">Add reaction</string>
-    <string name="reaction_remove">Clear</string>
     <string name="reaction_like">Like</string>
     <string name="reaction_dislike">Dislike</string>
     <string name="reaction_laugh">Laugh</string>
@@ -237,10 +234,6 @@
     <string name="notifications_open">Notifications</string>
     <string name="notifications_title">Notifications</string>
     <string name="notifications_empty">No notifications</string>
-    <string name="notifications_empty_unread">You\'re all caught up</string>
-    <string name="notifications_tab_unread">Unread</string>
-    <string name="notifications_tab_unread_count">Unread (%1$d)</string>
-    <string name="notifications_tab_all">All</string>
     <string name="notifications_mark_all_read">Mark all read</string>
     <string name="notifications_clear_all">Clear all</string>
     <string name="notifications_clear_all_title">Clear all notifications?</string>

@@ -65,10 +65,6 @@
     <string name="notifications_open">Brathan</string>
     <string name="notifications_title">Brathan</string>
     <string name="notifications_empty">Gun bhrathan</string>
-    <string name="notifications_empty_unread">Tha thu cothrom ris</string>
-    <string name="notifications_tab_unread">Gun leughadh</string>
-    <string name="notifications_tab_unread_count">Gun leughadh (%1$d)</string>
-    <string name="notifications_tab_all">Na h-uile</string>
     <string name="notifications_mark_all_read">Comharraich gach nì mar leughte</string>
     <string name="notifications_clear_all">Falamhaich a h-uile</string>
     <string name="notifications_loading">A\' luchdadh…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">A\' fosgladh an fhaidhle…</string>
     <string name="common_no_app_for_file">Chan eil aplacaid ann as urrainn am faidhle seo fhosgladh</string>
     <string name="common_file_open_failed">Cha b\' urrainn am faidhle fhosgladh</string>
-
-    <string name="common_logout_confirm_title">Clàraich a-mach</string>
-    <string name="common_logout_confirm_message">A bheil thu cinnteach gu bheil thu airson clàradh a-mach? Feumaidh tu clàradh a-steach a-rithist gus cothrom fhaighinn air a\' chunntas agad.</string>
-    <string name="reaction_remove">Falamhaich</string>
-
 </resources>

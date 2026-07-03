@@ -16,6 +16,8 @@
     <string name="feeds_settings">Paramèt</string>
     <string name="feeds_no_posts_yet">Poko gen pòs</string>
     <string name="feeds_default_sort">Klasman defo</string>
+    <string name="feeds_suggested_interests_add">Ajoute</string>
+    <string name="feeds_suggested_interests_dismiss">Kache</string>
     <string name="feeds_unread">Pa li</string>
     <string name="feeds_filter_all">Tout</string>
     <string name="feeds_sort_label">Klase</string>
@@ -119,9 +121,7 @@
     <string name="feeds_identity_server">Sèvè: %1$s</string>
     <string name="feeds_suggested_interests">Enterè sijere</string>
     <string name="feeds_suggested_interests_empty">Poko gen sijesyon</string>
-    <string name="feeds_suggested_interests_title">Ajoute enterè soti nan %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Fil sa a kouvri sijè sa yo. Chwazi kiyès pou ajoute nan enterè ou yo pou yon klasman pèsonalize.</string>
-    <string name="feeds_suggested_interests_skip">Sote</string>
+    <string name="feeds_suggested_interests_count">%1$d piblikasyon</string>
     <string name="feeds_tag_more">Ajiste enterè</string>
     <string name="feeds_tag_more_up">Montre plis konsa</string>
     <string name="feeds_tag_more_down">Montre mwens konsa</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d nouvo pòs</item>
         <item quantity="other">%d nouvo pòs</item>
     </plurals>
-    <string name="feeds_caught_up">Ou wè tout bagay deja</string>
     <string name="feeds_all_caught_up">Ou rive nan dat</string>
     <string name="feeds_view_all_posts">Wè tout pòs</string>
-    <string name="feeds_markdown_supported">Markdown sipòte</string>
-    <string name="feeds_back">Retounen</string>
-    <string name="feeds_confirm">Konfime</string>
-    <string name="feeds_rss_feed">Flux RSS</string>
-    <string name="feeds_unsubscribe">Dezabòne</string>
-    <string name="feeds_unsubscribed">Dezabòne</string>
-    <string name="feeds_settings_section_identity">Idantite</string>
-    <string name="feeds_settings_field_name">Non</string>
-    <string name="feeds_settings_field_entity_id">ID Antite</string>
-    <string name="feeds_settings_field_fingerprint">Anprent dijital</string>
-    <string name="feeds_settings_field_server">Sèvè</string>
-    <string name="feeds_settings_name_edit_cd">Modifye non</string>
-    <string name="feeds_settings_name_save_cd">Sove non</string>
-    <string name="feeds_access_subject_anyone">Nenpòt moun</string>
-    <string name="feeds_access_subject_authenticated">Itilizatè otantifye</string>
-    <string name="feeds_access_level_view_full">Wè sèlman</string>
-    <string name="feeds_access_level_none_full">Pa gen aksè</string>
-    <string name="feeds_access_segment_user">Itilizatè</string>
-    <string name="feeds_access_segment_group">Gwoup</string>
-    <string name="feeds_access_segment_other">Lòt</string>
-    <string name="feeds_access_search_users">Chèche itilizatè</string>
-    <string name="feeds_access_select_group">Chwazi gwoup</string>
-    <string name="feeds_access_selected">Chwazi: %1$s</string>
-    <string name="feeds_permission_deny">Refize</string>
-    <string name="feeds_allow_search">Pèmèt nenpòt moun chèche fil</string>
-    <string name="feeds_enable_memories">Aktive memwa</string>
-    <string name="feeds_create_first_post">Kreye premye piblikasyon</string>
-    <string name="feeds_post_content">Kontni pòs</string>
-    <string name="feeds_rss_mode_posts">Pòs yo</string>
-    <string name="feeds_rss_mode_posts_comments">Pòs ak kòmantè</string>
-    <string name="feeds_unsubscribe_confirm">Anile abònman nan fil la?</string>
-    <string name="feeds_unsubscribe_confirm_message">Ou p ap resevwa mizajou nan fil sa a ankò. Ou ka abòne ankò nenpòt kilè.</string>
-    <string name="feeds_settings_unsubscribe_section">Dezabòne nan feed</string>
-    <string name="feeds_delete_feed_description">Efase pèmanan flux sa a ak tout kontni li.</string>
-    <string name="feeds_access_management">Jesyon Aksè</string>
-    <string name="feeds_access_management_desc">Kontwole kiyès ki ka gade ak entèraji ak fil sa a</string>
-    <string name="feeds_access_level_comment_full">Kòmante, reyaji, epi gade</string>
-    <string name="feeds_access_level_react_full">Reyaji ak gade</string>
-    <string name="feeds_access_add_title">Ajoute aksè</string>
-    <string name="feeds_access_add_subtitle">Chwazi yon itilizatè, gwoup, oswa lòt règ pou bay aksè.</string>
-    <string name="feeds_access_select_rule">Chwazi règ aksè</string>
-    <string name="feeds_source_url_hint_feed">ID antite feed oswa anprent dijital</string>
-    <string name="feeds_source_credibility_label">Kredibilite</string>
-    <string name="feeds_source_transform_hint">Tradui an Anglè, epi montre kòm pwen.</string>
-    <string name="feeds_source_transform_help">Kite vid pou dezaktive.</string>
-
-    <string name="feeds_scroll_to_top">Retounen anwo</string>
-    <string name="feeds_settings_title">Paramèt %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Anile modifikasyon an</string>
-    <string name="feeds_access_authenticated_desc">Nenpòt moun ki konekte</string>
-    <string name="feeds_access_anyone_desc">Enkli itilizatè anonim yo</string>
-    <string name="feeds_source_last_checked">Dènye verifikasyon %1$s</string>
-    <string name="feeds_source_polling_interval">Verifikasyon chak %1$s</string>
-    <string name="feeds_permission_request_title">Demann pèmisyon</string>
-    <string name="feeds_permission_request_message">%1$s ap mande pèmisyon sa a:</string>
-    <string name="feeds_permission_allow">Pèmèt</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d pòs</item>
-        <item quantity="other">%1$d pòs</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ajoute %1$d enterè</item>
-        <item quantity="other">Ajoute %1$d enterè</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Sa gen %1$d an jodi a</item>
-        <item quantity="other">Sa gen %1$d an jodi a</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d imaj</item>
-        <item quantity="other">%1$d imaj</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d atachman</item>
-        <item quantity="other">%1$d atachman</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d kòmantè</item>
-        <item quantity="other">%1$d kòmantè</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Gade %1$d lòt kòmantè</item>
-        <item quantity="other">Gade %1$d lòt kòmantè</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minit</item>
-        <item quantity="other">%1$d minit</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d èdtan</item>
-        <item quantity="other">%1$d èdtan</item>
-    </plurals>
-
 </resources>

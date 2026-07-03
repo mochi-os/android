@@ -65,10 +65,6 @@
     <string name="notifications_open">Yatiyawinaka</string>
     <string name="notifications_title">Yatiyawinaka</string>
     <string name="notifications_empty">Jan yatiyawinak</string>
-    <string name="notifications_empty_unread">Taqi ullt\'awaytawa</string>
-    <string name="notifications_tab_unread">Jan ullt\'ata</string>
-    <string name="notifications_tab_unread_count">Jan ullt\'ata (%1$d)</string>
-    <string name="notifications_tab_all">Taqpacha</string>
     <string name="notifications_mark_all_read">Taqpach ullt\'ata uñacht\'ayaña</string>
     <string name="notifications_clear_all">Taqpach q\'umachaña</string>
     <string name="notifications_loading">Apaqaskiwa…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Archivo jist\'araski…</string>
     <string name="common_no_app_for_file">Janiw aka archivo jist\'arañ app utjkiti</string>
     <string name="common_file_open_failed">Janiw archivo jist\'arañ atkiti</string>
-
-    <string name="common_logout_confirm_title">Mistuña</string>
-    <string name="common_logout_confirm_message">¿Chiqapunit mistuña munta? Cuentamar mantañatakix wasitat mantañamäniwa.</string>
-    <string name="reaction_remove">Pichsuña</string>
-
 </resources>

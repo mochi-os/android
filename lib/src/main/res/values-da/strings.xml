@@ -65,10 +65,6 @@
     <string name="notifications_open">Notifikationer</string>
     <string name="notifications_title">Notifikationer</string>
     <string name="notifications_empty">Ingen notifikationer</string>
-    <string name="notifications_empty_unread">Du er helt opdateret</string>
-    <string name="notifications_tab_unread">Ulæste</string>
-    <string name="notifications_tab_unread_count">Ulæste (%1$d)</string>
-    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Markér alle læst</string>
     <string name="notifications_clear_all">Ryd alle</string>
     <string name="notifications_loading">Indlæser…</string>
@@ -294,9 +290,4 @@
     <string name="common_opening_file">Åbner fil…</string>
     <string name="common_no_app_for_file">Ingen app kan åbne denne fil</string>
     <string name="common_file_open_failed">Kunne ikke åbne filen</string>
-
-    <string name="common_logout_confirm_title">Log ud</string>
-    <string name="common_logout_confirm_message">Er du sikker på, at du vil logge ud? Du skal logge ind igen for at få adgang til din konto.</string>
-    <string name="reaction_remove">Ryd</string>
-
 </resources>

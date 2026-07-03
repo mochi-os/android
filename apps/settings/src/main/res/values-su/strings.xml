@@ -437,5 +437,4 @@
     <string name="system_status_awaiting_routing">Talatah anu ngantosan rute</string>
     <string name="system_status_relay_service">Layanan relay</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasi · %3$d sirkuit · %4$d ditolak</string>
-    <string name="route_target_select">Pilih</string>
 </resources>

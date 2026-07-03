@@ -16,6 +16,8 @@
     <string name="feeds_settings">Instellings</string>
     <string name="feeds_no_posts_yet">Nog geen plasings nie</string>
     <string name="feeds_default_sort">Verstek sortering</string>
+    <string name="feeds_suggested_interests_add">Voeg by</string>
+    <string name="feeds_suggested_interests_dismiss">Versteek</string>
     <string name="feeds_unread">Ongelees</string>
     <string name="feeds_filter_all">Alle</string>
     <string name="feeds_sort_label">Sorteer</string>
@@ -113,9 +115,7 @@
     <string name="feeds_identity_server">Bediener: %1$s</string>
     <string name="feeds_suggested_interests">Voorgestelde belangstellings</string>
     <string name="feeds_suggested_interests_empty">Nog geen voorstelle nie</string>
-    <string name="feeds_suggested_interests_title">Voeg belangstellings van %1$s by?</string>
-    <string name="feeds_suggested_interests_subtitle">Hierdie feed dek hierdie onderwerpe. Kies watter jy by jou belangstellings wil voeg vir persoonlike rangskikking.</string>
-    <string name="feeds_suggested_interests_skip">Slaan oor</string>
+    <string name="feeds_suggested_interests_count">%1$d plasings</string>
     <string name="feeds_tag_more">Verfyn belangstelling</string>
     <string name="feeds_tag_more_up">Wys meer soos hierdie</string>
     <string name="feeds_tag_more_down">Wys minder soos hierdie</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d nuwe plasing</item>
         <item quantity="other">%d nuwe plasings</item>
     </plurals>
-    <string name="feeds_caught_up">Jy is heeltemal op datum</string>
     <string name="feeds_all_caught_up">Alles ingehaal</string>
     <string name="feeds_view_all_posts">Bekyk alle plasings</string>
-    <string name="feeds_markdown_supported">Markdown ondersteun</string>
-    <string name="feeds_back">Terug</string>
-    <string name="feeds_confirm">Bevestig</string>
-    <string name="feeds_rss_feed">RSS-feed</string>
-    <string name="feeds_unsubscribe">Teken uit</string>
-    <string name="feeds_unsubscribed">Uitgeteken</string>
-    <string name="feeds_settings_section_identity">Identiteit</string>
-    <string name="feeds_settings_field_name">Naam</string>
-    <string name="feeds_settings_field_entity_id">Entiteit-ID</string>
-    <string name="feeds_settings_field_fingerprint">Vingerafdruk</string>
-    <string name="feeds_settings_field_server">Bediener</string>
-    <string name="feeds_settings_name_edit_cd">Wysig naam</string>
-    <string name="feeds_settings_name_save_cd">Stoor naam</string>
-    <string name="feeds_access_subject_anyone">Enigiemand</string>
-    <string name="feeds_access_subject_authenticated">Geverifieerde gebruikers</string>
-    <string name="feeds_access_level_view_full">Slegs bekyk</string>
-    <string name="feeds_access_level_none_full">Geen toegang</string>
-    <string name="feeds_access_segment_user">Gebruiker</string>
-    <string name="feeds_access_segment_group">Groep</string>
-    <string name="feeds_access_segment_other">Ander</string>
-    <string name="feeds_access_search_users">Soek gebruikers</string>
-    <string name="feeds_access_select_group">Kies groep</string>
-    <string name="feeds_access_selected">Gekies: %1$s</string>
-    <string name="feeds_permission_deny">Weier</string>
-    <string name="feeds_allow_search">Laat enigiemand toe om die voer te soek</string>
-    <string name="feeds_enable_memories">Aktiveer herinneringe</string>
-    <string name="feeds_create_first_post">Skep die eerste plasing</string>
-    <string name="feeds_post_content">Plaasinhoud</string>
-    <string name="feeds_rss_mode_posts">Plasings</string>
-    <string name="feeds_rss_mode_posts_comments">Plasings en kommentaar</string>
-    <string name="feeds_unsubscribe_confirm">Teken uit van voer?</string>
-    <string name="feeds_unsubscribe_confirm_message">Jy sal nie meer opdaterings van hierdie voer ontvang nie. Jy kan enige tyd weer inteken.</string>
-    <string name="feeds_settings_unsubscribe_section">Teken uit van feed</string>
-    <string name="feeds_delete_feed_description">Verwyder hierdie feed en al sy inhoud permanent.</string>
-    <string name="feeds_access_management">Toegangsbestuur</string>
-    <string name="feeds_access_management_desc">Beheer wie kan hierdie feed bekyk en daarmee interaksie hê</string>
-    <string name="feeds_access_level_comment_full">Kommentaar lewer, reageer en kyk</string>
-    <string name="feeds_access_level_react_full">Reageer en kyk</string>
-    <string name="feeds_access_add_title">Voeg toegang by</string>
-    <string name="feeds_access_add_subtitle">Kies \'n gebruiker, groep of ander reël om toegang te verleen.</string>
-    <string name="feeds_access_select_rule">Kies toegangsreël</string>
-    <string name="feeds_source_url_hint_feed">Voer-entiteit-ID of vingerafdruk</string>
-    <string name="feeds_source_credibility_label">Geloofwaardigheid</string>
-    <string name="feeds_source_transform_hint">Vertaal na Engels, en wys as kolpunte.</string>
-    <string name="feeds_source_transform_help">Laat leeg om te deaktiveer.</string>
-
-    <string name="feeds_scroll_to_top">Terug na bo</string>
-    <string name="feeds_settings_title">%1$s-instellings</string>
-    <string name="feeds_settings_name_cancel_cd">Kanselleer redigering</string>
-    <string name="feeds_access_authenticated_desc">Enigiemand wat aangemeld is</string>
-    <string name="feeds_access_anyone_desc">Insluitend anonieme gebruikers</string>
-    <string name="feeds_source_last_checked">Laas nagegaan %1$s</string>
-    <string name="feeds_source_polling_interval">Word elke %1$s nagegaan</string>
-    <string name="feeds_permission_request_title">Toestemmingsversoek</string>
-    <string name="feeds_permission_request_message">%1$s versoek die volgende toestemming:</string>
-    <string name="feeds_permission_allow">Laat toe</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d plasing</item>
-        <item quantity="other">%1$d plasings</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Voeg %1$d belangstelling by</item>
-        <item quantity="other">Voeg %1$d belangstellings by</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d jaar gelede vandag</item>
-        <item quantity="other">%1$d jaar gelede vandag</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d beeld</item>
-        <item quantity="other">%1$d beelde</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d aanhangsel</item>
-        <item quantity="other">%1$d aanhangsels</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d opmerking</item>
-        <item quantity="other">%1$d opmerkings</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Bekyk nog %1$d opmerking</item>
-        <item quantity="other">Bekyk nog %1$d opmerkings</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuut</item>
-        <item quantity="other">%1$d minute</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d uur</item>
-        <item quantity="other">%1$d ure</item>
-    </plurals>
-
 </resources>

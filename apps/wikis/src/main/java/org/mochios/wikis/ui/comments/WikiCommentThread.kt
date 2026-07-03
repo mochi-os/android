@@ -116,7 +116,7 @@ fun WikiCommentThread(
     val isReplying = replyingTo == comment.id
 
     val timeAgo = format.formatTimestamp(comment.created)
-    val displayName = comment.name.ifBlank { comment.author.orEmpty() }
+    val displayName = comment.name.ifBlank { comment.author }
 
     val avatarSrc = wiki?.let { ctx ->
         "/wikis/${ctx.wikiId}/-/comment/${comment.id}/asset/avatar"
@@ -263,7 +263,7 @@ fun WikiCommentThread(
                                 Text(stringResource(R.string.wikis_comment_action_save))
                             }
                         }
-                    } else if (!comment.bodyMarkdown.isNullOrBlank()) {
+                    } else if (comment.bodyMarkdown.isNotBlank()) {
                         HtmlContent(
                             html = comment.bodyMarkdown,
                             modifier = Modifier.fillMaxWidth(),

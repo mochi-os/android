@@ -65,10 +65,6 @@
     <string name="notifications_open">Ñehenói</string>
     <string name="notifications_title">Ñehenói</string>
     <string name="notifications_empty">Ndaipóri ñehenói</string>
-    <string name="notifications_empty_unread">Reñongatupáma</string>
-    <string name="notifications_tab_unread">Ñembohasa\'ỹva</string>
-    <string name="notifications_tab_unread_count">Ñembohasa\'ỹva (%1$d)</string>
-    <string name="notifications_tab_all">Opavave</string>
     <string name="notifications_mark_all_read">Ehecha pyre opavave</string>
     <string name="notifications_clear_all">Embopotĩ opaite</string>
     <string name="notifications_loading">Ojembogue…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Ojejuruja archivo…</string>
     <string name="common_no_app_for_file">Ndaipóri tembiporu ojuruja hag̃ua ko archivo</string>
     <string name="common_file_open_failed">Ndaikatúi oñembojuruja archivo</string>
-
-    <string name="common_logout_confirm_title">Ñesẽ</string>
-    <string name="common_logout_confirm_message">¿Añetehápe esẽse? Tekotevẽta eike jey eiporu hag̃ua ne mba\'ete.</string>
-    <string name="reaction_remove">Mopotĩ</string>
-
 </resources>

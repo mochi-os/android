@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">מעלדונגען וואָס ווארטן אויף ראוטינג</string>
     <string name="system_status_relay_service">רעלע סערוויס</string>
     <string name="system_status_relay_service_value">%1$d / %2$d רעזערוואַציעס · %3$d סערקאַטס · %4$d אפגעזאגט</string>
-    <string name="route_target_select">אויסקלײַבן</string>
 </resources>

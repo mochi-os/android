@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">روٽنگ جي انتظار ۾ پيغام</string>
     <string name="system_status_relay_service">ريلي خدمت</string>
     <string name="system_status_relay_service_value">%1$d / %2$d رزرويشن · %3$d سرڪٽ · %4$d رد ٿيل</string>
-    <string name="route_target_select">چونڊيو</string>
 </resources>

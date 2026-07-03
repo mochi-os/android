@@ -103,9 +103,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onSwitchSection = { navController.openPeopleSection(it) },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
-            onMessage = { friendId ->
-                onOpenLink("chat/new?friend=${friendId}")
-            },
+            onOpenLink = onOpenLink,
             initialAction = action.ifBlank { null },
         )
     }

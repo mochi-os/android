@@ -65,10 +65,6 @@
     <string name="notifications_open">Билдирмелер</string>
     <string name="notifications_title">Билдирмелер</string>
     <string name="notifications_empty">Билдирмелер жок</string>
-    <string name="notifications_empty_unread">Баары окулду</string>
-    <string name="notifications_tab_unread">Окулбаган</string>
-    <string name="notifications_tab_unread_count">Окулбаган (%1$d)</string>
-    <string name="notifications_tab_all">Баары</string>
     <string name="notifications_mark_all_read">Баарын окулду деп белгилөө</string>
     <string name="notifications_clear_all">Баарын тазалоо</string>
     <string name="notifications_loading">Жүктөлүүдө…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Файл ачылууда…</string>
     <string name="common_no_app_for_file">Бул файлды ача турган колдонмо жок</string>
     <string name="common_file_open_failed">Файлды ачуу мүмкүн болгон жок</string>
-    <string name="common_logout_confirm_title">Чыгуу</string>
-    <string name="reaction_remove">Тазалоо</string>
-
-    <string name="common_logout_confirm_message">Чын эле чыгууну каалайсызбы? Аккаунтуңузга кирүү үчүн кайрадан кирүүгө туура келет.</string>
-
 </resources>

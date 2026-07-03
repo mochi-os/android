@@ -21,15 +21,11 @@ import org.mochios.android.notifications.NotificationsUnreadStore
 import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
-/** Notifications list filter, surfaced as the two top tabs. */
-enum class NotificationsTab { UNREAD, ALL }
-
 data class NotificationsUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val items: List<MochiNotification> = emptyList(),
     val unreadCount: Int = 0,
-    val tab: NotificationsTab = NotificationsTab.UNREAD,
     val error: MochiError? = null,
 )
 
@@ -54,10 +50,6 @@ class NotificationsViewModel @Inject constructor(
     }
 
     fun refresh() = load(initial = false)
-
-    fun setTab(tab: NotificationsTab) {
-        _uiState.value = _uiState.value.copy(tab = tab)
-    }
 
     private fun load(initial: Boolean) {
         viewModelScope.launch {

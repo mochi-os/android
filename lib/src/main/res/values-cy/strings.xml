@@ -65,10 +65,6 @@
     <string name="notifications_open">Hysbysiadau</string>
     <string name="notifications_title">Hysbysiadau</string>
     <string name="notifications_empty">Dim hysbysiadau</string>
-    <string name="notifications_empty_unread">Rydych chi wedi dal i fyny</string>
-    <string name="notifications_tab_unread">Heb ddarllen</string>
-    <string name="notifications_tab_unread_count">Heb ddarllen (%1$d)</string>
-    <string name="notifications_tab_all">Popeth</string>
     <string name="notifications_mark_all_read">Marcio\'r cyfan wedi\'u darllen</string>
     <string name="notifications_clear_all">Clirio popeth</string>
     <string name="notifications_loading">Yn llwytho…</string>
@@ -293,9 +289,4 @@
     <string name="common_opening_file">Yn agor y ffeil…</string>
     <string name="common_no_app_for_file">Ni all unrhyw ap agor y ffeil hon</string>
     <string name="common_file_open_failed">Methwyd agor y ffeil</string>
-
-    <string name="common_logout_confirm_title">Allgofnodi</string>
-    <string name="common_logout_confirm_message">Ydych chi\'n siŵr eich bod am allgofnodi? Bydd angen i chi fewngofnodi eto i gael mynediad at eich cyfrif.</string>
-    <string name="reaction_remove">Clirio</string>
-
 </resources>

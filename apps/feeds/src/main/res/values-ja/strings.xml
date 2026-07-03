@@ -16,6 +16,8 @@
     <string name="feeds_settings">設定</string>
     <string name="feeds_no_posts_yet">まだ投稿はありません</string>
     <string name="feeds_default_sort">デフォルトの並び順</string>
+    <string name="feeds_suggested_interests_add">追加</string>
+    <string name="feeds_suggested_interests_dismiss">非表示</string>
     <string name="feeds_unread">未読</string>
     <string name="feeds_filter_all">すべて</string>
     <string name="feeds_sort_label">並べ替え</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">サーバー: %1$s</string>
     <string name="feeds_suggested_interests">おすすめの興味</string>
     <string name="feeds_suggested_interests_empty">おすすめはまだありません</string>
-    <string name="feeds_suggested_interests_title">%1$s から興味を追加しますか？</string>
-    <string name="feeds_suggested_interests_subtitle">このフィードはこれらのトピックを扱っています。パーソナライズされたランキングのために、興味に追加するものを選択してください。</string>
-    <string name="feeds_suggested_interests_skip">スキップ</string>
+    <string name="feeds_suggested_interests_count">%1$d 件の投稿</string>
     <string name="feeds_tag_more">興味を調整</string>
     <string name="feeds_tag_more_up">似た投稿をもっと表示</string>
     <string name="feeds_tag_more_down">似た投稿を減らす</string>
@@ -211,94 +211,6 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d 件の新着投稿</item>
     </plurals>
-    <string name="feeds_caught_up">すべて表示しました</string>
     <string name="feeds_all_caught_up">未読はありません</string>
     <string name="feeds_view_all_posts">すべての投稿を表示</string>
-    <string name="feeds_markdown_supported">Markdown対応</string>
-    <string name="feeds_back">戻る</string>
-    <string name="feeds_confirm">確認</string>
-    <string name="feeds_rss_feed">RSS フィード</string>
-    <string name="feeds_unsubscribe">購読解除</string>
-    <string name="feeds_unsubscribed">購読を解除しました</string>
-    <string name="feeds_settings_section_identity">アイデンティティ</string>
-    <string name="feeds_settings_field_name">名前</string>
-    <string name="feeds_settings_field_entity_id">エンティティ ID</string>
-    <string name="feeds_settings_field_fingerprint">フィンガープリント</string>
-    <string name="feeds_settings_field_server">サーバー</string>
-    <string name="feeds_settings_name_edit_cd">名前を編集</string>
-    <string name="feeds_settings_name_save_cd">名前を保存</string>
-    <string name="feeds_access_subject_anyone">全員</string>
-    <string name="feeds_access_subject_authenticated">認証済みユーザー</string>
-    <string name="feeds_access_level_view_full">閲覧のみ</string>
-    <string name="feeds_access_level_none_full">アクセスなし</string>
-    <string name="feeds_access_segment_user">ユーザー</string>
-    <string name="feeds_access_segment_group">グループ</string>
-    <string name="feeds_access_segment_other">その他</string>
-    <string name="feeds_access_search_users">ユーザーを検索</string>
-    <string name="feeds_access_select_group">グループを選択</string>
-    <string name="feeds_access_selected">選択中: %1$s</string>
-    <string name="feeds_permission_deny">拒否</string>
-    <string name="feeds_allow_search">誰でもフィードを検索できるようにする</string>
-    <string name="feeds_enable_memories">メモリーを有効化</string>
-    <string name="feeds_create_first_post">最初の投稿を作成</string>
-    <string name="feeds_post_content">投稿内容</string>
-    <string name="feeds_rss_mode_posts">投稿</string>
-    <string name="feeds_rss_mode_posts_comments">投稿とコメント</string>
-    <string name="feeds_unsubscribe_confirm">フィードの購読を解除しますか？</string>
-    <string name="feeds_unsubscribe_confirm_message">このフィードからの更新を受け取らなくなります。いつでも再購読できます。</string>
-    <string name="feeds_settings_unsubscribe_section">フィードの購読を解除</string>
-    <string name="feeds_delete_feed_description">このフィードとすべてのコンテンツを完全に削除します。</string>
-    <string name="feeds_access_management">アクセス管理</string>
-    <string name="feeds_access_management_desc">このフィードを誰が表示・操作できるかを管理</string>
-    <string name="feeds_access_level_comment_full">コメント、リアクション、表示</string>
-    <string name="feeds_access_level_react_full">リアクションと表示</string>
-    <string name="feeds_access_add_title">アクセスを追加</string>
-    <string name="feeds_access_add_subtitle">アクセスを付与するユーザー、グループ、または他のルールを選択してください。</string>
-    <string name="feeds_access_select_rule">アクセスルールを選択</string>
-    <string name="feeds_source_url_hint_feed">フィードのエンティティIDまたはフィンガープリント</string>
-    <string name="feeds_source_credibility_label">信頼性</string>
-    <string name="feeds_source_transform_hint">英語に翻訳し、箇条書きで表示してください。</string>
-    <string name="feeds_source_transform_help">無効化するには空のままにしてください。</string>
-
-    <string name="feeds_scroll_to_top">トップに戻る</string>
-    <string name="feeds_settings_title">%1$sの設定</string>
-    <string name="feeds_settings_name_cancel_cd">編集をキャンセル</string>
-    <string name="feeds_access_authenticated_desc">ログインしているすべてのユーザー</string>
-    <string name="feeds_access_anyone_desc">匿名ユーザーを含む</string>
-    <string name="feeds_source_last_checked">最終確認: %1$s</string>
-    <string name="feeds_source_polling_interval">%1$sごとにポーリング</string>
-    <string name="feeds_permission_request_title">権限リクエスト</string>
-    <string name="feeds_permission_request_message">%1$sが次の権限をリクエストしています:</string>
-    <string name="feeds_permission_allow">許可</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d件の投稿</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">%1$d件の興味・関心を追加</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d年前の今日</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="other">%1$d枚の画像</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="other">%1$d件の添付ファイル</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="other">%1$d件のコメント</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="other">さらに%1$d件のコメントを表示</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d分</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d時間</item>
-    </plurals>
-
 </resources>

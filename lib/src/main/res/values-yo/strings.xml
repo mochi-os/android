@@ -65,10 +65,6 @@
     <string name="notifications_open">Àwọn ìfìtọ́nisí</string>
     <string name="notifications_title">Àwọn ìfìtọ́nisí</string>
     <string name="notifications_empty">Kò sí ìfìtọ́nisí</string>
-    <string name="notifications_empty_unread">O ti ka gbogbo rẹ̀ tán</string>
-    <string name="notifications_tab_unread">Àìkà</string>
-    <string name="notifications_tab_unread_count">Àìkà (%1$d)</string>
-    <string name="notifications_tab_all">Gbogbo</string>
     <string name="notifications_mark_all_read">Sàmì sí gbogbo gẹ́gẹ́ bí kíkà</string>
     <string name="notifications_clear_all">Pa gbogbo rẹ̀ rẹ́</string>
     <string name="notifications_loading">Ń ṣí…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Ń ṣí fáìlì…</string>
     <string name="common_no_app_for_file">Kò sí app tó lè ṣí fáìlì yìí</string>
     <string name="common_file_open_failed">Kò lè ṣí fáìlì</string>
-    <string name="common_logout_confirm_title">Jáde</string>
-    <string name="reaction_remove">Pa rẹ́</string>
-
-    <string name="common_logout_confirm_message">Ṣé o dá ọ lójú pé o fẹ́ jáde? Ìwọ yóò ní láti tún wọlé láti lè wọ àkáǹtì rẹ.</string>
-
 </resources>

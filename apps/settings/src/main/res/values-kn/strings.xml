@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">ರೂಟಿಂಗ್‌ಗಾಗಿ ಕಾಯುತ್ತಿರುವ ಸಂದೇಶಗಳು</string>
     <string name="system_status_relay_service">ರಿಲೇ ಸೇವೆ</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ಕಾಯ್ದಿರಿಸುವಿಕೆಗಳು · %3$d ಸರ್ಕ್ಯೂಟ್‌ಗಳು · %4$d ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
-    <string name="route_target_select">ಆಯ್ಕೆಮಾಡಿ</string>
 </resources>

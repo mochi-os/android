@@ -16,6 +16,8 @@
     <string name="feeds_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="feeds_no_posts_yet">പോസ്റ്റുകളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="feeds_default_sort">ഡിഫോൾട്ട് സോർട്ട്</string>
+    <string name="feeds_suggested_interests_add">ചേർക്കുക</string>
+    <string name="feeds_suggested_interests_dismiss">മറയ്ക്കുക</string>
     <string name="feeds_unread">വായിക്കാത്തത്</string>
     <string name="feeds_filter_all">എല്ലാം</string>
     <string name="feeds_sort_label">അടുക്കുക</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">സെർവർ: %1$s</string>
     <string name="feeds_suggested_interests">നിർദ്ദേശിച്ച താൽപ്പര്യങ്ങൾ</string>
     <string name="feeds_suggested_interests_empty">ഇതുവരെ നിർദ്ദേശങ്ങളൊന്നുമില്ല</string>
-    <string name="feeds_suggested_interests_title">%1$s-ൽ നിന്ന് താൽപ്പര്യങ്ങൾ ചേർക്കണോ?</string>
-    <string name="feeds_suggested_interests_subtitle">ഈ ഫീഡ് ഈ വിഷയങ്ങൾ ഉൾക്കൊള്ളുന്നു. വ്യക്തിഗതമാക്കിയ റാങ്കിംഗിനായി നിങ്ങളുടെ താൽപ്പര്യങ്ങളിലേക്ക് ചേർക്കാൻ ഏതൊക്കെ വേണമെന്ന് തിരഞ്ഞെടുക്കുക.</string>
-    <string name="feeds_suggested_interests_skip">ഒഴിവാക്കുക</string>
+    <string name="feeds_suggested_interests_count">%1$d പോസ്റ്റുകൾ</string>
     <string name="feeds_tag_more">താൽപ്പര്യം ക്രമീകരിക്കുക</string>
     <string name="feeds_tag_more_up">ഇതുപോലുള്ളവ കൂടുതൽ കാണിക്കുക</string>
     <string name="feeds_tag_more_down">ഇതുപോലുള്ളവ കുറച്ച് കാണിക്കുക</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d പുതിയ പോസ്റ്റ്</item>
         <item quantity="other">%d പുതിയ പോസ്റ്റുകൾ</item>
     </plurals>
-    <string name="feeds_caught_up">നിങ്ങൾ എല്ലാം കണ്ടു</string>
     <string name="feeds_all_caught_up">എല്ലാം പൂർത്തിയായി</string>
     <string name="feeds_view_all_posts">എല്ലാ പോസ്റ്റുകളും കാണുക</string>
-    <string name="feeds_markdown_supported">Markdown സപ്പോർട്ടുണ്ട്</string>
-    <string name="feeds_back">തിരികെ</string>
-    <string name="feeds_confirm">സ്ഥിരീകരിക്കുക</string>
-    <string name="feeds_rss_feed">റാങ്ക്</string>
-    <string name="feeds_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
-    <string name="feeds_unsubscribed">അൺസബ്സ്ക്രൈബ് ചെയ്തു</string>
-    <string name="feeds_settings_section_identity">സ്വത്വം</string>
-    <string name="feeds_settings_field_name">പേര്</string>
-    <string name="feeds_settings_field_entity_id">എന്റിറ്റി ID</string>
-    <string name="feeds_settings_field_fingerprint">വിരലടയാളം</string>
-    <string name="feeds_settings_field_server">സെർവർ</string>
-    <string name="feeds_settings_name_edit_cd">പേര് എഡിറ്റ് ചെയ്യുക</string>
-    <string name="feeds_settings_name_save_cd">പേര് സംരക്ഷിക്കുക</string>
-    <string name="feeds_access_subject_anyone">ആർക്കും</string>
-    <string name="feeds_access_subject_authenticated">പ്രാമാണീകരിച്ച ഉപയോക്താക്കൾ</string>
-    <string name="feeds_access_level_view_full">കാണുക മാത്രം</string>
-    <string name="feeds_access_level_none_full">ആക്സസ് ഇല്ല</string>
-    <string name="feeds_access_segment_user">ഉപയോക്താവ്</string>
-    <string name="feeds_access_segment_group">ഗ്രൂപ്പ്</string>
-    <string name="feeds_access_segment_other">മറ്റുള്ളവ</string>
-    <string name="feeds_access_search_users">ഉപയോക്താക്കളെ തിരയുക</string>
-    <string name="feeds_access_select_group">ഗ്രൂപ്പ് തിരഞ്ഞെടുക്കുക</string>
-    <string name="feeds_access_selected">തിരഞ്ഞെടുത്തത്: %1$s</string>
-    <string name="feeds_permission_deny">നിഷേധിക്കുക</string>
-    <string name="feeds_allow_search">എല്ലാവർക്കും ഫീഡ് തിരയാൻ അനുവദിക്കുക</string>
-    <string name="feeds_enable_memories">ഓർമ്മകൾ പ്രവർത്തനക്ഷമമാക്കുക</string>
-    <string name="feeds_create_first_post">ആദ്യ പോസ്റ്റ് സൃഷ്ടിക്കുക</string>
-    <string name="feeds_post_content">പോസ്റ്റ് ഉള്ളടക്കം</string>
-    <string name="feeds_rss_mode_posts">പോസ്റ്റുകൾ</string>
-    <string name="feeds_rss_mode_posts_comments">പോസ്റ്റുകളും അഭിപ്രായങ്ങളും</string>
-    <string name="feeds_unsubscribe_confirm">ഫീഡിൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യണോ?</string>
-    <string name="feeds_unsubscribe_confirm_message">ഈ ഫീഡിൽ നിന്നുള്ള അപ്ഡേറ്റുകൾ ഇനി ലഭിക്കില്ല. എപ്പോൾ വേണമെങ്കിലും വീണ്ടും സബ്സ്ക്രൈബ് ചെയ്യാം.</string>
-    <string name="feeds_settings_unsubscribe_section">ഫീഡിൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
-    <string name="feeds_delete_feed_description">ഈ ഫീഡും അതിന്റെ എല്ലാ ഉള്ളടക്കവും ശാശ്വതമായി ഇല്ലാതാക്കുക.</string>
-    <string name="feeds_access_management">ആക്സസ് മാനേജ്മെന്റ്</string>
-    <string name="feeds_access_management_desc">ഈ ഫീഡ് ആരൊക്കെ കാണാനും ഇടപഴകാനും കഴിയുമെന്ന് നിയന്ത്രിക്കുക</string>
-    <string name="feeds_access_level_comment_full">കമന്റ് ചെയ്യുക, പ്രതികരിക്കുക, കാണുക</string>
-    <string name="feeds_access_level_react_full">പ്രതികരിക്കുക, കാണുക</string>
-    <string name="feeds_access_add_title">ആക്സസ് ചേർക്കുക</string>
-    <string name="feeds_access_add_subtitle">ആക്സസ് നൽകാൻ ഒരു ഉപയോക്താവിനെ, ഗ്രൂപ്പിനെ അല്ലെങ്കിൽ മറ്റൊരു റൂൾ തിരഞ്ഞെടുക്കുക.</string>
-    <string name="feeds_access_select_rule">ആക്സസ് റൂൾ തിരഞ്ഞെടുക്കുക</string>
-    <string name="feeds_source_url_hint_feed">ഫീഡ് എന്റിറ്റി ഐഡി അല്ലെങ്കിൽ ഫിംഗർപ്രിന്റ്</string>
-    <string name="feeds_source_credibility_label">വിശ്വാസ്യത</string>
-    <string name="feeds_source_transform_hint">ഇംഗ്ലീഷിലേക്ക് വിവർത്തനം ചെയ്യുക, ബുള്ളറ്റ് പോയിന്റുകളായി കാണിക്കുക.</string>
-    <string name="feeds_source_transform_help">പ്രവർത്തനരഹിതമാക്കാൻ ശൂന്യമായി വിടുക.</string>
-
-    <string name="feeds_scroll_to_top">മുകളിലേക്ക് മടങ്ങുക</string>
-    <string name="feeds_settings_title">%1$s ക്രമീകരണങ്ങൾ</string>
-    <string name="feeds_settings_name_cancel_cd">തിരുത്തൽ റദ്ദാക്കുക</string>
-    <string name="feeds_access_authenticated_desc">ലോഗിൻ ചെയ്തിട്ടുള്ള ആർക്കും</string>
-    <string name="feeds_access_anyone_desc">അജ്ഞാത ഉപയോക്താക്കൾ ഉൾപ്പെടെ</string>
-    <string name="feeds_source_last_checked">അവസാനം പരിശോധിച്ചത് %1$s</string>
-    <string name="feeds_source_polling_interval">ഓരോ %1$s ഇടവേളയിലും പരിശോധിക്കുന്നു</string>
-    <string name="feeds_permission_request_title">അനുമതി അഭ്യർത്ഥന</string>
-    <string name="feeds_permission_request_message">%1$s താഴെപ്പറയുന്ന അനുമതി അഭ്യർത്ഥിക്കുന്നു:</string>
-    <string name="feeds_permission_allow">അനുവദിക്കുക</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d പോസ്റ്റ്</item>
-        <item quantity="other">%1$d പോസ്റ്റുകൾ</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d താൽപ്പര്യം ചേർക്കുക</item>
-        <item quantity="other">%1$d താൽപ്പര്യങ്ങൾ ചേർക്കുക</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d വർഷം മുമ്പ് ഇന്നേ ദിവസം</item>
-        <item quantity="other">%1$d വർഷം മുമ്പ് ഇന്നേ ദിവസം</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d ചിത്രം</item>
-        <item quantity="other">%1$d ചിത്രങ്ങൾ</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d അറ്റാച്ച്‌മെന്റ്</item>
-        <item quantity="other">%1$d അറ്റാച്ച്‌മെന്റുകൾ</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d അഭിപ്രായം</item>
-        <item quantity="other">%1$d അഭിപ്രായങ്ങൾ</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d അഭിപ്രായം കൂടി കാണുക</item>
-        <item quantity="other">%1$d അഭിപ്രായങ്ങൾ കൂടി കാണുക</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d മിനിറ്റ്</item>
-        <item quantity="other">%1$d മിനിറ്റ്</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d മണിക്കൂർ</item>
-        <item quantity="other">%1$d മണിക്കൂർ</item>
-    </plurals>
-
 </resources>

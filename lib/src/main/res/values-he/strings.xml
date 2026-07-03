@@ -65,10 +65,6 @@
     <string name="notifications_open">התראות</string>
     <string name="notifications_title">התראות</string>
     <string name="notifications_empty">אין התראות</string>
-    <string name="notifications_empty_unread">אתה מעודכן</string>
-    <string name="notifications_tab_unread">לא נקראו</string>
-    <string name="notifications_tab_unread_count">לא נקראו (%1$d)</string>
-    <string name="notifications_tab_all">הכול</string>
     <string name="notifications_mark_all_read">סמן הכול כנקרא</string>
     <string name="notifications_clear_all">נקה הכול</string>
     <string name="notifications_loading">טוען…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">פותח קובץ…</string>
     <string name="common_no_app_for_file">אין אפליקציה שיכולה לפתוח קובץ זה</string>
     <string name="common_file_open_failed">לא ניתן לפתוח את הקובץ</string>
-
-    <string name="common_logout_confirm_title">התנתקות</string>
-    <string name="common_logout_confirm_message">האם ברצונך להתנתק? יהיה עליך להתחבר שוב כדי לגשת לחשבון שלך.</string>
-    <string name="reaction_remove">ניקוי</string>
-
 </resources>

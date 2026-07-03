@@ -65,10 +65,6 @@
     <string name="notifications_open">Varsler</string>
     <string name="notifications_title">Varsler</string>
     <string name="notifications_empty">Ingen varsler</string>
-    <string name="notifications_empty_unread">Du er ajour</string>
-    <string name="notifications_tab_unread">Uleste</string>
-    <string name="notifications_tab_unread_count">Uleste (%1$d)</string>
-    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Merk alle som lest</string>
     <string name="notifications_clear_all">Tøm alt</string>
     <string name="notifications_loading">Laster …</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Åpner fil…</string>
     <string name="common_no_app_for_file">Ingen app kan åpne denne filen</string>
     <string name="common_file_open_failed">Kunne ikke åpne filen</string>
-    <string name="common_logout_confirm_title">Logg ut</string>
-    <string name="reaction_remove">Tøm</string>
-
-    <string name="common_logout_confirm_message">Er du sikker på at du vil logge ut? Du må logge inn igjen for å få tilgang til kontoen din.</string>
-
 </resources>

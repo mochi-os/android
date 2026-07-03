@@ -16,6 +16,8 @@
     <string name="feeds_settings">Nastavenia</string>
     <string name="feeds_no_posts_yet">Zatiaľ žiadne príspevky</string>
     <string name="feeds_default_sort">Predvolené triedenie</string>
+    <string name="feeds_suggested_interests_add">Pridať</string>
+    <string name="feeds_suggested_interests_dismiss">Skryť</string>
     <string name="feeds_unread">Neprečítané</string>
     <string name="feeds_filter_all">Všetko</string>
     <string name="feeds_sort_label">Zoradiť</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Navrhované záujmy</string>
     <string name="feeds_suggested_interests_empty">Zatiaľ žiadne návrhy</string>
-    <string name="feeds_suggested_interests_title">Pridať záujmy z %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Tento kanál pokrýva tieto témy. Vyberte, ktoré z nich chcete pridať medzi svoje záujmy pre personalizované hodnotenie.</string>
-    <string name="feeds_suggested_interests_skip">Preskočiť</string>
+    <string name="feeds_suggested_interests_count">%1$d príspevkov</string>
     <string name="feeds_tag_more">Doladiť záujem</string>
     <string name="feeds_tag_more_up">Zobraziť viac podobného</string>
     <string name="feeds_tag_more_down">Zobraziť menej podobného</string>
@@ -214,121 +214,6 @@
         <item quantity="many">%d nového príspevku</item>
         <item quantity="other">%d nových príspevkov</item>
     </plurals>
-    <string name="feeds_caught_up">Máte všetko prečítané</string>
     <string name="feeds_all_caught_up">Všetko prečítané</string>
     <string name="feeds_view_all_posts">Zobraziť všetky príspevky</string>
-    <string name="feeds_markdown_supported">Markdown podporovaný</string>
-    <string name="feeds_back">Späť</string>
-    <string name="feeds_confirm">Potvrdiť</string>
-    <string name="feeds_rss_feed">RSS kanál</string>
-    <string name="feeds_unsubscribe">Odhlásiť odber</string>
-    <string name="feeds_unsubscribed">Odber zrušený</string>
-    <string name="feeds_settings_section_identity">Identita</string>
-    <string name="feeds_settings_field_name">Názov</string>
-    <string name="feeds_settings_field_entity_id">ID entity</string>
-    <string name="feeds_settings_field_fingerprint">Odtlačok</string>
-    <string name="feeds_settings_field_server">Server</string>
-    <string name="feeds_settings_name_edit_cd">Upraviť názov</string>
-    <string name="feeds_settings_name_save_cd">Uložiť názov</string>
-    <string name="feeds_access_subject_anyone">Ktokoľvek</string>
-    <string name="feeds_access_subject_authenticated">Overení používatelia</string>
-    <string name="feeds_access_level_view_full">Iba zobrazenie</string>
-    <string name="feeds_access_level_none_full">Žiadny prístup</string>
-    <string name="feeds_access_segment_user">Používateľ</string>
-    <string name="feeds_access_segment_group">Skupina</string>
-    <string name="feeds_access_segment_other">Iné</string>
-    <string name="feeds_access_search_users">Hľadať používateľov</string>
-    <string name="feeds_access_select_group">Vybrať skupinu</string>
-    <string name="feeds_access_selected">Vybraté: %1$s</string>
-    <string name="feeds_permission_deny">Zamietnuť</string>
-    <string name="feeds_allow_search">Povoliť komukoľvek vyhľadávať kanál</string>
-    <string name="feeds_enable_memories">Povoliť spomienky</string>
-    <string name="feeds_create_first_post">Vytvoriť prvý príspevok</string>
-    <string name="feeds_post_content">Obsah príspevku</string>
-    <string name="feeds_rss_mode_posts">Príspevky</string>
-    <string name="feeds_rss_mode_posts_comments">Príspevky a komentáre</string>
-    <string name="feeds_unsubscribe_confirm">Zrušiť odber feedu?</string>
-    <string name="feeds_unsubscribe_confirm_message">Prestanete dostávať aktualizácie z tohto feedu. Kedykoľvek sa môžete znova prihlásiť na odber.</string>
-    <string name="feeds_settings_unsubscribe_section">Odhlásiť odber kanála</string>
-    <string name="feeds_delete_feed_description">Natrvalo odstrániť tento kanál a všetok jeho obsah.</string>
-    <string name="feeds_access_management">Správa prístupu</string>
-    <string name="feeds_access_management_desc">Určte, kto môže prezerať a interagovať s týmto kanálom</string>
-    <string name="feeds_access_level_comment_full">Komentovať, reagovať a prezerať</string>
-    <string name="feeds_access_level_react_full">Reagovať a prezerať</string>
-    <string name="feeds_access_add_title">Pridať prístup</string>
-    <string name="feeds_access_add_subtitle">Vyberte používateľa, skupinu alebo iné pravidlo na udelenie prístupu.</string>
-    <string name="feeds_access_select_rule">Vybrať pravidlo prístupu</string>
-    <string name="feeds_source_url_hint_feed">ID entity kanála alebo odtlačok</string>
-    <string name="feeds_source_credibility_label">Dôveryhodnosť</string>
-    <string name="feeds_source_transform_hint">Preložiť do angličtiny a zobraziť ako odrážky.</string>
-    <string name="feeds_source_transform_help">Pre vypnutie ponechajte prázdne.</string>
-
-    <string name="feeds_scroll_to_top">Späť na začiatok</string>
-    <string name="feeds_settings_title">Nastavenia %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Zrušiť úpravy</string>
-    <string name="feeds_access_authenticated_desc">Ktokoľvek, kto je prihlásený</string>
-    <string name="feeds_access_anyone_desc">Vrátane anonymných používateľov</string>
-    <string name="feeds_source_last_checked">Naposledy skontrolované %1$s</string>
-    <string name="feeds_source_polling_interval">Kontrola každých %1$s</string>
-    <string name="feeds_permission_request_title">Žiadosť o povolenie</string>
-    <string name="feeds_permission_request_message">%1$s žiada o nasledujúce povolenie:</string>
-    <string name="feeds_permission_allow">Povoliť</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d príspevok</item>
-        <item quantity="few">%1$d príspevky</item>
-        <item quantity="many">%1$d príspevku</item>
-        <item quantity="other">%1$d príspevkov</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Pridať %1$d záujem</item>
-        <item quantity="few">Pridať %1$d záujmy</item>
-        <item quantity="many">Pridať %1$d záujmu</item>
-        <item quantity="other">Pridať %1$d záujmov</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Dnes pred %1$d rokom</item>
-        <item quantity="few">Dnes pred %1$d rokmi</item>
-        <item quantity="many">Dnes pred %1$d roka</item>
-        <item quantity="other">Dnes pred %1$d rokmi</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d obrázok</item>
-        <item quantity="few">%1$d obrázky</item>
-        <item quantity="many">%1$d obrázka</item>
-        <item quantity="other">%1$d obrázkov</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d príloha</item>
-        <item quantity="few">%1$d prílohy</item>
-        <item quantity="many">%1$d prílohy</item>
-        <item quantity="other">%1$d príloh</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d komentár</item>
-        <item quantity="few">%1$d komentáre</item>
-        <item quantity="many">%1$d komentára</item>
-        <item quantity="other">%1$d komentárov</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Zobraziť %1$d ďalší komentár</item>
-        <item quantity="few">Zobraziť %1$d ďalšie komentáre</item>
-        <item quantity="many">Zobraziť %1$d ďalšieho komentára</item>
-        <item quantity="other">Zobraziť %1$d ďalších komentárov</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minúta</item>
-        <item quantity="few">%1$d minúty</item>
-        <item quantity="many">%1$d minúty</item>
-        <item quantity="other">%1$d minút</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d hodina</item>
-        <item quantity="few">%1$d hodiny</item>
-        <item quantity="many">%1$d hodiny</item>
-        <item quantity="other">%1$d hodín</item>
-    </plurals>
-
 </resources>

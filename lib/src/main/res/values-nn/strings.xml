@@ -64,10 +64,6 @@
     <string name="notifications_open">Varsel</string>
     <string name="notifications_title">Varsel</string>
     <string name="notifications_empty">Ingen varsel</string>
-    <string name="notifications_empty_unread">Du er ajour</string>
-    <string name="notifications_tab_unread">Ulesne</string>
-    <string name="notifications_tab_unread_count">Ulesne (%1$d)</string>
-    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Merk alle som lesne</string>
     <string name="notifications_clear_all">Tøm alle</string>
     <string name="notifications_loading">Lastar…</string>
@@ -292,9 +288,4 @@
     <string name="stepup_error_code">Den koden er feil eller har utløpt.</string>
     <string name="stepup_error_passkey">Verifisering med passnøkkel mislyktes. Prøv igjen.</string>
     <string name="stepup_error_oauth">Kunne ikke verifisere med den kontoen. Prøv igjen.</string>
-    <string name="common_logout_confirm_title">Logg ut</string>
-    <string name="reaction_remove">Tøm</string>
-
-    <string name="common_logout_confirm_message">Er du sikker på at du vil logge ut? Du må logge inn på nytt for å få tilgang til kontoen din.</string>
-
 </resources>

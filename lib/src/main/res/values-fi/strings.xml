@@ -65,10 +65,6 @@
     <string name="notifications_open">Ilmoitukset</string>
     <string name="notifications_title">Ilmoitukset</string>
     <string name="notifications_empty">Ei ilmoituksia</string>
-    <string name="notifications_empty_unread">Olet ajan tasalla</string>
-    <string name="notifications_tab_unread">Lukematta</string>
-    <string name="notifications_tab_unread_count">Lukematta (%1$d)</string>
-    <string name="notifications_tab_all">Kaikki</string>
     <string name="notifications_mark_all_read">Merkitse kaikki luetuiksi</string>
     <string name="notifications_clear_all">Tyhjennä kaikki</string>
     <string name="notifications_loading">Ladataan…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Avataan tiedostoa…</string>
     <string name="common_no_app_for_file">Mikään sovellus ei voi avata tätä tiedostoa</string>
     <string name="common_file_open_failed">Tiedostoa ei voitu avata</string>
-
-    <string name="common_logout_confirm_title">Kirjaudu ulos</string>
-    <string name="common_logout_confirm_message">Haluatko varmasti kirjautua ulos? Sinun on kirjauduttava uudelleen sisään käyttääksesi tiliäsi.</string>
-    <string name="reaction_remove">Poista</string>
-
 </resources>

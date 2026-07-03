@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">राउटिङको प्रतीक्षामा रहेका सन्देशहरू</string>
     <string name="system_status_relay_service">रिले सेवा</string>
     <string name="system_status_relay_service_value">%1$d / %2$d आरक्षणहरू · %3$d सर्किटहरू · %4$d अस्वीकृत</string>
-    <string name="route_target_select">छान्नुहोस्</string>
 </resources>

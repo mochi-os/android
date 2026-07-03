@@ -440,5 +440,4 @@
     <string name="system_status_awaiting_routing">Паведамленні ў чаканні маршрутызацыі</string>
     <string name="system_status_relay_service">Служба рэле</string>
     <string name="system_status_relay_service_value">%1$d / %2$d браніраванні · %3$d ланцугі · %4$d адхілена</string>
-    <string name="route_target_select">Выбраць</string>
 </resources>

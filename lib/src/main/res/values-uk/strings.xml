@@ -65,10 +65,6 @@
     <string name="notifications_open">Сповіщення</string>
     <string name="notifications_title">Сповіщення</string>
     <string name="notifications_empty">Немає сповіщень</string>
-    <string name="notifications_empty_unread">Ви все переглянули</string>
-    <string name="notifications_tab_unread">Непрочитані</string>
-    <string name="notifications_tab_unread_count">Непрочитані (%1$d)</string>
-    <string name="notifications_tab_all">Усі</string>
     <string name="notifications_mark_all_read">Позначити все прочитаним</string>
     <string name="notifications_clear_all">Очистити все</string>
     <string name="notifications_loading">Завантаження…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Відкриття файлу…</string>
     <string name="common_no_app_for_file">Немає застосунку для відкриття цього файлу</string>
     <string name="common_file_open_failed">Не вдалося відкрити файл</string>
-    <string name="common_logout_confirm_title">Вийти</string>
-    <string name="reaction_remove">Очистити</string>
-
-    <string name="common_logout_confirm_message">Ви впевнені, що хочете вийти? Щоб отримати доступ до свого облікового запису, вам потрібно буде увійти знову.</string>
-
 </resources>

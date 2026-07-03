@@ -337,5 +337,4 @@
     <string name="crm_board_add_column">Agregá una columna</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Huella digital</string>
-    <string name="crm_settings_server">Servidor</string>
 </resources>

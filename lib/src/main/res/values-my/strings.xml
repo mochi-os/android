@@ -65,10 +65,6 @@
     <string name="notifications_open">အသိပေးချက်များ</string>
     <string name="notifications_title">အသိပေးချက်များ</string>
     <string name="notifications_empty">အသိပေးချက်များ မရှိပါ</string>
-    <string name="notifications_empty_unread">အကုန်ဖတ်ပြီးပါပြီ</string>
-    <string name="notifications_tab_unread">မဖတ်ရသေး</string>
-    <string name="notifications_tab_unread_count">မဖတ်ရသေး (%1$d)</string>
-    <string name="notifications_tab_all">အားလုံး</string>
     <string name="notifications_mark_all_read">အားလုံး ဖတ်ပြီး မှတ်</string>
     <string name="notifications_clear_all">အားလုံး ရှင်းမည်</string>
     <string name="notifications_loading">တင်နေသည်…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ဖိုင် ဖွင့်နေသည်…</string>
     <string name="common_no_app_for_file">ဤဖိုင်ကို ဖွင့်နိုင်သော အက်ပ် မရှိပါ</string>
     <string name="common_file_open_failed">ဖိုင်ကို ဖွင့်၍ မရပါ</string>
-    <string name="common_logout_confirm_title">ထွက်</string>
-    <string name="reaction_remove">ရှင်းမည်</string>
-
-    <string name="common_logout_confirm_message">ထွက်ရန် သေချာပါသလား။ သင့်အကောင့်ကို ပြန်လည်အသုံးပြုရန် ထပ်မံဝင်ရောက်ရပါမည်။</string>
-
 </resources>

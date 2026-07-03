@@ -65,10 +65,6 @@
     <string name="notifications_open">შეტყობინებები</string>
     <string name="notifications_title">შეტყობინებები</string>
     <string name="notifications_empty">შეტყობინებები არ არის</string>
-    <string name="notifications_empty_unread">ყველაფერი წაკითხულია</string>
-    <string name="notifications_tab_unread">წაუკითხავი</string>
-    <string name="notifications_tab_unread_count">წაუკითხავი (%1$d)</string>
-    <string name="notifications_tab_all">ყველა</string>
     <string name="notifications_mark_all_read">ყველას წაკითხულად მონიშვნა</string>
     <string name="notifications_clear_all">ყველაფრის გასუფთავება</string>
     <string name="notifications_loading">იტვირთება…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ფაილის გახსნა…</string>
     <string name="common_no_app_for_file">ამ ფაილის გასახსნელი აპი არ არის</string>
     <string name="common_file_open_failed">ფაილის გახსნა ვერ მოხერხდა</string>
-    <string name="common_logout_confirm_title">გასვლა</string>
-    <string name="reaction_remove">გასუფთავება</string>
-
-    <string name="common_logout_confirm_message">დარწმუნებული ხართ, რომ გსურთ სისტემიდან გასვლა? ანგარიშზე წვდომისთვის ხელახლა შესვლა დაგჭირდებათ.</string>
-
 </resources>

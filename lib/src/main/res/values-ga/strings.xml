@@ -65,10 +65,6 @@
     <string name="notifications_open">Fógraí</string>
     <string name="notifications_title">Fógraí</string>
     <string name="notifications_empty">Níl aon fhógra</string>
-    <string name="notifications_empty_unread">Tá tú cothrom le dáta</string>
-    <string name="notifications_tab_unread">Gan léamh</string>
-    <string name="notifications_tab_unread_count">Gan léamh (%1$d)</string>
-    <string name="notifications_tab_all">Uile</string>
     <string name="notifications_mark_all_read">Marcáil gach rud léite</string>
     <string name="notifications_clear_all">Glan an t-iomlán</string>
     <string name="notifications_loading">Á luchtú…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Comhad á oscailt…</string>
     <string name="common_no_app_for_file">Níl aon aip in ann an comhad seo a oscailt</string>
     <string name="common_file_open_failed">Níorbh fhéidir an comhad a oscailt</string>
-
-    <string name="common_logout_confirm_title">Logáil amach</string>
-    <string name="common_logout_confirm_message">An bhfuil tú cinnte gur mhaith leat logáil amach? Beidh ort logáil isteach arís chun rochtain a fháil ar do chuntas.</string>
-    <string name="reaction_remove">Glan</string>
-
 </resources>

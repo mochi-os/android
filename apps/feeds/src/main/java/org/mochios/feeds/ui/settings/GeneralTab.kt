@@ -5,10 +5,12 @@
 
 package org.mochios.feeds.ui.settings
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,18 +20,19 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.FilterChip
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -37,32 +40,27 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import org.mochios.android.ui.components.ConfirmDialog
-import org.mochios.android.ui.components.DataChip
-import org.mochios.android.ui.components.Section
-import org.mochios.android.ui.components.Truncate
 import org.mochios.feeds.R
-import org.mochios.feeds.model.Feed
 import org.mochios.android.R as MochiR
 
-/**
- * Owner "Settings" tab: editable identity, banner, and delete sections. Only
- * shown to viewers who can manage the feed; subscribers get the read-only
- * identity view in [FeedSettingsScreen] instead.
- */
 @Composable
 fun GeneralTab(
     viewModel: FeedSettingsViewModel,
     onFeedDeleted: () -> Unit
 ) {
+    val feedName by viewModel.feedName.collectAsState()
+    val rssToken by viewModel.rssToken.collectAsState()
+    val rssMode by viewModel.rssMode.collectAsState()
     val banner by viewModel.banner.collectAsState()
     val feedInfo by viewModel.feedInfo.collectAsState()
     var showDeleteDialog by remember { mutableStateOf(false) }
+    val context = LocalContext.current
     val focusManager = LocalFocusManager.current
 
     LaunchedEffect(Unit) {
@@ -73,212 +71,189 @@ fun GeneralTab(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
+            .padding(16.dp)
     ) {
-        feedInfo?.let { info ->
-            FeedIdentitySection(
-                feed = info,
-                editable = true,
-                onRename = { newName ->
-                    viewModel.setFeedName(newName)
-                    viewModel.saveFeedName()
-                },
-            )
+        // Feed name
+        Text(
+            text = stringResource(R.string.feeds_feed_name),
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        OutlinedTextField(
+            value = feedName,
+            onValueChange = { viewModel.setFeedName(it) },
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        OutlinedButton(
+            onClick = {
+                viewModel.saveFeedName()
+                focusManager.clearFocus()
+            }
+        ) {
+            Text(stringResource(R.string.feeds_save_name))
         }
 
-        // Banner
-        Section(
-            title = stringResource(R.string.feeds_banner),
-            description = stringResource(R.string.feeds_banner_description),
-        ) {
-            Column(modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
-                OutlinedTextField(
-                    value = banner,
-                    onValueChange = { value -> viewModel.setBannerText(value) },
-                    modifier = Modifier.fillMaxWidth(),
-                    minLines = 3,
-                    maxLines = 8
+        feedInfo?.let { info ->
+            if (info.fingerprint.isNotBlank()) {
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    stringResource(R.string.feeds_identity_fingerprint, info.fingerprint),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                Spacer(modifier = Modifier.height(8.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Button(onClick = {
-                        viewModel.saveBanner()
-                        focusManager.clearFocus()
-                    }) {
-                        Text(stringResource(MochiR.string.common_save))
-                    }
-                    if (banner.isNotEmpty()) {
-                        OutlinedButton(
-                            onClick = { viewModel.clearBanner() },
-                            colors = ButtonDefaults.outlinedButtonColors(
-                                contentColor = MaterialTheme.colorScheme.onSurface
-                            ),
-                        ) {
-                            Text(stringResource(R.string.feeds_clear))
-                        }
-                    }
+            }
+            if (!info.server.isNullOrBlank()) {
+                Text(
+                    stringResource(R.string.feeds_identity_server, info.server!!),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(24.dp))
+        HorizontalDivider()
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Banner
+        Text(
+            text = stringResource(R.string.feeds_banner),
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold
+        )
+        Spacer(modifier = Modifier.height(4.dp))
+        Text(
+            text = stringResource(R.string.feeds_banner_description),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        OutlinedTextField(
+            value = banner,
+            onValueChange = { viewModel.setBannerText(it) },
+            modifier = Modifier.fillMaxWidth(),
+            minLines = 3,
+            maxLines = 8
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedButton(onClick = {
+                viewModel.saveBanner()
+                focusManager.clearFocus()
+            }) {
+                Text(stringResource(R.string.feeds_save_banner))
+            }
+            if (banner.isNotEmpty()) {
+                TextButton(onClick = { viewModel.clearBanner() }) {
+                    Text(stringResource(R.string.feeds_clear))
                 }
             }
         }
 
-        // Delete feed
-        Section(
-            title = stringResource(R.string.feeds_delete_feed),
-            description = stringResource(R.string.feeds_delete_feed_description),
-            action = {
-                OutlinedButton(
-                    onClick = { showDeleteDialog = true },
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = MaterialTheme.colorScheme.error
-                    ),
-                ) {
-                    Text(stringResource(MochiR.string.common_delete))
-                }
-            },
-            content = {},
+        Spacer(modifier = Modifier.height(24.dp))
+        HorizontalDivider()
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // RSS export
+        Text(
+            text = stringResource(R.string.feeds_rss_export),
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold
         )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = stringResource(R.string.feeds_rss_description),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            FilterChip(
+                selected = rssMode == "posts",
+                onClick = { viewModel.setRssMode("posts") },
+                label = { Text(stringResource(R.string.feeds_rss_posts_only)) }
+            )
+            FilterChip(
+                selected = rssMode == "all",
+                onClick = { viewModel.setRssMode("all") },
+                label = { Text(stringResource(R.string.feeds_rss_posts_and_comments)) }
+            )
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+
+        if (rssToken != null) {
+            OutlinedTextField(
+                value = rssToken!!,
+                onValueChange = {},
+                readOnly = true,
+                modifier = Modifier.fillMaxWidth(),
+                maxLines = 3
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            val clipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
+            OutlinedButton(
+                onClick = {
+                    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                    clipboard.setPrimaryClip(ClipData.newPlainText(clipboardLabel, rssToken))
+                    viewModel.setActionMessage(R.string.feeds_rss_url_copied)
+                }
+            ) {
+                Text(stringResource(R.string.feeds_copy_url))
+            }
+        } else {
+            OutlinedButton(onClick = { viewModel.generateRssToken() }) {
+                Text(stringResource(R.string.feeds_generate_rss_url))
+            }
+        }
+
+        Spacer(modifier = Modifier.height(24.dp))
+        HorizontalDivider()
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Delete feed
+        Text(
+            text = stringResource(R.string.feeds_danger_zone),
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.error
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Button(
+            onClick = { showDeleteDialog = true },
+            colors = ButtonDefaults.buttonColors(
+                containerColor = MaterialTheme.colorScheme.error
+            )
+        ) {
+            Icon(Icons.Default.Delete, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+            Text(stringResource(R.string.feeds_delete_feed))
+        }
     }
 
     if (showDeleteDialog) {
-        ConfirmDialog(
-            title = stringResource(R.string.feeds_delete_feed),
-            message = stringResource(R.string.feeds_delete_feed_confirm),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
-            onConfirm = {
-                showDeleteDialog = false
-                viewModel.deleteFeed { onFeedDeleted() }
+        AlertDialog(
+            onDismissRequest = { showDeleteDialog = false },
+            title = { Text(stringResource(R.string.feeds_delete_feed)) },
+            text = { Text(stringResource(R.string.feeds_delete_feed_confirm)) },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showDeleteDialog = false
+                        viewModel.deleteFeed { onFeedDeleted() }
+                    }
+                ) {
+                    Text(stringResource(MochiR.string.common_delete), color = MaterialTheme.colorScheme.error)
+                }
             },
-            onDismiss = { showDeleteDialog = false },
+            dismissButton = {
+                TextButton(onClick = { showDeleteDialog = false }) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
+            }
         )
-    }
-}
-
-/**
- * Identity card shared by the owner Settings tab and the subscriber view.
- * Shows the feed name (editable when [editable]), entity ID, fingerprint, and
- * server. Identifier values render as copyable [DataChip]s.
- *
- * @param onRename Invoked with the trimmed new name when the owner saves an
- *                 edit. Ignored when [editable] is false.
- */
-@Composable
-fun FeedIdentitySection(
-    feed: Feed,
-    editable: Boolean,
-    onRename: (String) -> Unit,
-) {
-    Section(title = stringResource(R.string.feeds_settings_section_identity)) {
-        IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_name)) {
-            if (editable) {
-                NameEditor(
-                    currentName = feed.name,
-                    onRename = onRename,
-                    modifier = Modifier.weight(1f),
-                )
-            } else {
-                Text(feed.name)
-            }
-        }
-        IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_entity_id)) {
-            DataChip(value = feed.id, truncate = Truncate.MIDDLE)
-        }
-        if (feed.fingerprint.isNotBlank()) {
-            IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_fingerprint)) {
-                DataChip(value = feed.fingerprint, truncate = Truncate.MIDDLE)
-            }
-        }
-        if (!feed.server.isNullOrBlank()) {
-            IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_server)) {
-                DataChip(value = feed.server!!, truncate = Truncate.MIDDLE)
-            }
-        }
-    }
-}
-
-/**
- * Identity row with a fixed-width label so values align in a column. Matches
- * the account settings identity layout rather than the right-aligned shared
- * [org.mochios.android.ui.components.FieldRow].
- */
-@Composable
-private fun IdentityFieldRow(
-    label: String,
-    content: @Composable RowScope.() -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.width(120.dp),
-        )
-        content()
-    }
-}
-
-@Composable
-private fun NameEditor(
-    currentName: String,
-    onRename: (String) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    var isEditing by remember { mutableStateOf(false) }
-    var editValue by remember(currentName) { mutableStateOf(currentName) }
-
-    if (isEditing) {
-        Row(
-            modifier = modifier,
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(4.dp),
-        ) {
-            OutlinedTextField(
-                value = editValue,
-                onValueChange = { value -> editValue = value },
-                singleLine = true,
-                modifier = Modifier.weight(1f),
-            )
-            IconButton(onClick = {
-                onRename(editValue.trim())
-                isEditing = false
-            }) {
-                Icon(
-                    Icons.Default.Check,
-                    contentDescription = stringResource(R.string.feeds_settings_name_save_cd),
-                )
-            }
-            IconButton(onClick = {
-                editValue = currentName
-                isEditing = false
-            }) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(R.string.feeds_settings_name_cancel_cd),
-                )
-            }
-        }
-    } else {
-        Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
-            // Weight so a long, multi-line name wraps instead of shoving the
-            // edit button off the end of the row.
-            Text(currentName, modifier = Modifier.weight(1f))
-            Spacer(modifier = Modifier.width(4.dp))
-            IconButton(onClick = {
-                editValue = currentName
-                isEditing = true
-            }) {
-                Icon(
-                    Icons.Default.Edit,
-                    contentDescription = stringResource(R.string.feeds_settings_name_edit_cd),
-                    modifier = Modifier.size(16.dp),
-                )
-            }
-        }
     }
 }

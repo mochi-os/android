@@ -65,10 +65,6 @@
     <string name="notifications_open">Bewara</string>
     <string name="notifications_title">Bewara</string>
     <string name="notifications_empty">Teu aya bewara</string>
-    <string name="notifications_empty_unread">Sadayana parantos kabaca</string>
-    <string name="notifications_tab_unread">Teu acan dibaca</string>
-    <string name="notifications_tab_unread_count">Teu acan dibaca (%1$d)</string>
-    <string name="notifications_tab_all">Sadaya</string>
     <string name="notifications_mark_all_read">Tandaan sadayana dibaca</string>
     <string name="notifications_clear_all">Bersihkeun sadaya</string>
     <string name="notifications_loading">Muat…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Muka berkas…</string>
     <string name="common_no_app_for_file">Teu aya aplikasi anu tiasa muka berkas ieu</string>
     <string name="common_file_open_failed">Teu tiasa muka berkas</string>
-    <string name="common_logout_confirm_title">Kaluar</string>
-    <string name="reaction_remove">Bersihkeun</string>
-
-    <string name="common_logout_confirm_message">Yakin badé kaluar? Anjeun kedah lebet deui pikeun ngaksés akun anjeun.</string>
-
 </resources>

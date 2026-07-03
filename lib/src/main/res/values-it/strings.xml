@@ -65,10 +65,6 @@
     <string name="notifications_open">Notifiche</string>
     <string name="notifications_title">Notifiche</string>
     <string name="notifications_empty">Nessuna notifica</string>
-    <string name="notifications_empty_unread">Sei in pari</string>
-    <string name="notifications_tab_unread">Da leggere</string>
-    <string name="notifications_tab_unread_count">Da leggere (%1$d)</string>
-    <string name="notifications_tab_all">Tutte</string>
     <string name="notifications_mark_all_read">Segna tutto come letto</string>
     <string name="notifications_clear_all">Cancella tutto</string>
     <string name="notifications_loading">Caricamento…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Apertura del file…</string>
     <string name="common_no_app_for_file">Nessuna app può aprire questo file</string>
     <string name="common_file_open_failed">Impossibile aprire il file</string>
-    <string name="common_logout_confirm_title">Esci</string>
-    <string name="reaction_remove">Cancella</string>
-
-    <string name="common_logout_confirm_message">Sei sicuro di voler uscire? Dovrai effettuare nuovamente l\'accesso per accedere al tuo account.</string>
-
 </resources>

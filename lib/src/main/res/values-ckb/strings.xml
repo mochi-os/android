@@ -65,10 +65,6 @@
     <string name="notifications_open">ئاگادارکردنەوەکان</string>
     <string name="notifications_title">ئاگادارکردنەوەکان</string>
     <string name="notifications_empty">هیچ ئاگادارکردنەوەیەک نییە</string>
-    <string name="notifications_empty_unread">هەمووت بینیوە</string>
-    <string name="notifications_tab_unread">نەخوێندراوە</string>
-    <string name="notifications_tab_unread_count">نەخوێندراوە (%1$d)</string>
-    <string name="notifications_tab_all">هەموو</string>
     <string name="notifications_mark_all_read">نیشانەکردنی هەمووان وەک خوێندراوە</string>
     <string name="notifications_clear_all">پاککردنەوەی هەموو</string>
     <string name="notifications_loading">بار دەکرێت…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">کردنەوەی پەڕگە…</string>
     <string name="common_no_app_for_file">هیچ ئەپێک ناتوانێت ئەم پەڕگەیە بکاتەوە</string>
     <string name="common_file_open_failed">نەتوانرا پەڕگەکە بکرێتەوە</string>
-
-    <string name="common_logout_confirm_title">چوونەدەرەوە</string>
-    <string name="common_logout_confirm_message">دڵنیایت دەتەوێت بچیتە دەرەوە؟ پێویستە دووبارە بچیتەوە ژوورەوە بۆ دەستگەیشتن بە هەژمارەکەت.</string>
-    <string name="reaction_remove">لابردن</string>
-
 </resources>

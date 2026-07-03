@@ -16,6 +16,8 @@
     <string name="feeds_settings">設定</string>
     <string name="feeds_no_posts_yet">尚無貼文</string>
     <string name="feeds_default_sort">預設排序</string>
+    <string name="feeds_suggested_interests_add">新增</string>
+    <string name="feeds_suggested_interests_dismiss">隱藏</string>
     <string name="feeds_unread">未讀</string>
     <string name="feeds_filter_all">全部</string>
     <string name="feeds_sort_label">排序</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">伺服器:%1$s</string>
     <string name="feeds_suggested_interests">建議興趣</string>
     <string name="feeds_suggested_interests_empty">尚無建議</string>
-    <string name="feeds_suggested_interests_title">要從 %1$s 新增興趣嗎？</string>
-    <string name="feeds_suggested_interests_subtitle">這個摘要涵蓋這些主題。選擇要加入你興趣的項目，以取得個人化排序。</string>
-    <string name="feeds_suggested_interests_skip">略過</string>
+    <string name="feeds_suggested_interests_count">%1$d 則貼文</string>
     <string name="feeds_tag_more">調整興趣</string>
     <string name="feeds_tag_more_up">多顯示類似內容</string>
     <string name="feeds_tag_more_down">少顯示類似內容</string>
@@ -211,92 +211,6 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d 則新貼文</item>
     </plurals>
-    <string name="feeds_caught_up">你已看完所有內容</string>
     <string name="feeds_all_caught_up">全部已讀完</string>
     <string name="feeds_view_all_posts">檢視所有貼文</string>
-    <string name="feeds_markdown_supported">支援 Markdown</string>
-    <string name="feeds_back">返回</string>
-    <string name="feeds_confirm">確認</string>
-    <string name="feeds_rss_feed">RSS 動態</string>
-    <string name="feeds_unsubscribe">取消訂閱</string>
-    <string name="feeds_unsubscribed">已取消訂閱</string>
-    <string name="feeds_settings_section_identity">身分</string>
-    <string name="feeds_settings_field_name">名稱</string>
-    <string name="feeds_settings_field_entity_id">實體 ID</string>
-    <string name="feeds_settings_field_fingerprint">指紋</string>
-    <string name="feeds_settings_field_server">伺服器</string>
-    <string name="feeds_settings_name_edit_cd">編輯名稱</string>
-    <string name="feeds_settings_name_save_cd">儲存名稱</string>
-    <string name="feeds_access_subject_anyone">任何人</string>
-    <string name="feeds_access_subject_authenticated">已驗證使用者</string>
-    <string name="feeds_access_level_view_full">僅檢視</string>
-    <string name="feeds_access_level_none_full">無存取權</string>
-    <string name="feeds_access_segment_user">使用者</string>
-    <string name="feeds_access_segment_group">群組</string>
-    <string name="feeds_access_segment_other">其他</string>
-    <string name="feeds_access_search_users">搜尋使用者</string>
-    <string name="feeds_access_select_group">選擇群組</string>
-    <string name="feeds_access_selected">已選取:%1$s</string>
-    <string name="feeds_permission_deny">拒絕</string>
-    <string name="feeds_allow_search">允許任何人搜尋此源</string>
-    <string name="feeds_enable_memories">啟用記憶</string>
-    <string name="feeds_create_first_post">建立第一則貼文</string>
-    <string name="feeds_post_content">貼文內容</string>
-    <string name="feeds_rss_mode_posts">貼文</string>
-    <string name="feeds_rss_mode_posts_comments">貼文和留言</string>
-    <string name="feeds_unsubscribe_confirm">取消訂閱此摘要？</string>
-    <string name="feeds_unsubscribe_confirm_message">你將不再收到此摘要的更新。你可以隨時重新訂閱。</string>
-    <string name="feeds_settings_unsubscribe_section">取消訂閱摘要</string>
-    <string name="feeds_delete_feed_description">永久刪除此動態及其所有內容。</string>
-    <string name="feeds_access_management">存取管理</string>
-    <string name="feeds_access_management_desc">控制誰可以檢視並與此訊息來源互動</string>
-    <string name="feeds_access_level_comment_full">評論、點讚和查看</string>
-    <string name="feeds_access_level_react_full">點讚和查看</string>
-    <string name="feeds_access_add_title">新增存取權</string>
-    <string name="feeds_access_add_subtitle">選擇使用者、群組或其他規則以授予存取權。</string>
-    <string name="feeds_access_select_rule">選擇存取規則</string>
-    <string name="feeds_source_url_hint_feed">源實體 ID 或指紋</string>
-    <string name="feeds_source_credibility_label">可信度</string>
-    <string name="feeds_source_transform_hint">翻譯成英文,並以項目符號顯示。</string>
-    <string name="feeds_source_transform_help">留空以停用。</string>
-    <string name="feeds_access_anyone_desc">包括匿名使用者</string>
-    <string name="feeds_access_authenticated_desc">任何已登入的使用者</string>
-    <string name="feeds_permission_allow">允許</string>
-    <string name="feeds_permission_request_message">%1$s 請求以下權限：</string>
-    <string name="feeds_permission_request_title">權限請求</string>
-    <string name="feeds_scroll_to_top">回到頂端</string>
-    <string name="feeds_settings_name_cancel_cd">取消編輯</string>
-    <string name="feeds_settings_title">%1$s 設定</string>
-    <string name="feeds_source_last_checked">上次檢查 %1$s</string>
-    <string name="feeds_source_polling_interval">每 %1$s 輪詢一次</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d 則貼文</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">新增 %1$d 個興趣</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d 年前的今天</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="other">%1$d 張圖片</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="other">%1$d 個附件</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="other">%1$d 則留言</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="other">查看另外 %1$d 則留言</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d 分鐘</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d 小時</item>
-    </plurals>
-
 </resources>

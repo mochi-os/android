@@ -6,8 +6,6 @@
 package org.mochios.settings.ui.account
 
 import android.app.DownloadManager
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
 import android.net.Uri
 import android.os.Environment
@@ -27,7 +25,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
@@ -276,7 +273,6 @@ private fun IdentitySection(
     onPrivacy: (String) -> Unit,
 ) {
     val id = state.identity
-    val context = LocalContext.current
     var editingName by remember { mutableStateOf(false) }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -318,32 +314,10 @@ private fun IdentitySection(
             )
         }
         IdentityFieldRow(label = stringResource(R.string.account_identity_fingerprint)) {
-            ValueChip(
-                text = chunkedFingerprint(id.fingerprint),
-                monospace = true,
-                modifier = Modifier.weight(1f),
-            )
-            IconButton(
-                onClick = { copyToClipboard(context, "fingerprint", id.fingerprint) },
-                enabled = id.fingerprint.isNotBlank(),
-            ) {
-                Icon(
-                    Icons.Default.ContentCopy,
-                    contentDescription = stringResource(R.string.account_copy),
-                )
-            }
+            ValueChip(text = chunkedFingerprint(id.fingerprint), monospace = true)
         }
         IdentityFieldRow(label = stringResource(R.string.account_identity_identity)) {
             ValueChip(text = id.entity, monospace = true, modifier = Modifier.weight(1f))
-            IconButton(
-                onClick = { copyToClipboard(context, "identity", id.entity) },
-                enabled = id.entity.isNotBlank(),
-            ) {
-                Icon(
-                    Icons.Default.ContentCopy,
-                    contentDescription = stringResource(R.string.account_copy),
-                )
-            }
         }
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -396,12 +370,6 @@ private fun ValueChip(text: String, monospace: Boolean = false, modifier: Modifi
             fontFamily = if (monospace) FontFamily.Monospace else FontFamily.Default,
         )
     }
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String) {
-    if (value.isBlank()) return
-    val cb = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return
-    cb.setPrimaryClip(ClipData.newPlainText(label, value))
 }
 
 /** Insert a hyphen every 3 chars — matches the web UI's fingerprint chunking. */

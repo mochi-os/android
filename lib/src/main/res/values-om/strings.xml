@@ -65,10 +65,6 @@
     <string name="notifications_open">Beeksisaalee</string>
     <string name="notifications_title">Beeksisaalee</string>
     <string name="notifications_empty">Beeksisaaleen hin jiran</string>
-    <string name="notifications_empty_unread">Hunda dubbiteerta</string>
-    <string name="notifications_tab_unread">Kan hin dubbatamne</string>
-    <string name="notifications_tab_unread_count">Kan hin dubbatamne (%1$d)</string>
-    <string name="notifications_tab_all">Hunda</string>
     <string name="notifications_mark_all_read">Hunda dubbifame</string>
     <string name="notifications_clear_all">Hunda cilliisi</string>
     <string name="notifications_loading">Fe\'aa jiraa…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Faayilii banaa jira…</string>
     <string name="common_no_app_for_file">Appiin faayilii kana banu hin jiru</string>
     <string name="common_file_open_failed">Faayilii banuun hin danda\'amne</string>
-    <string name="common_logout_confirm_title">Ba\'i</string>
-    <string name="reaction_remove">Cilliisi</string>
-
-    <string name="common_logout_confirm_message">Seenuu keessan cufuu akka barbaaddan mirkaneeffattanii? Akkaawuntii keessan argachuuf irra deebitanii seenuun isin barbaachisa.</string>
-
 </resources>

@@ -59,16 +59,12 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.FileKind
 import org.mochios.android.util.AttachmentOpener
 
-/** Fixed thumbnail height for [AttachmentGallery]'s compact (comment) layout. */
-private val COMPACT_IMAGE_HEIGHT = 120.dp
-
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun AttachmentGallery(
     attachments: List<Attachment>,
     urlBuilder: (Attachment) -> String,
     thumbnailUrlBuilder: ((Attachment) -> String)? = null,
-    compact: Boolean = false,
     modifier: Modifier = Modifier
 ) {
     if (attachments.isEmpty()) return
@@ -100,40 +96,15 @@ fun AttachmentGallery(
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (images.isNotEmpty()) {
-            if (compact) {
-                // In tight surfaces (e.g. comments), a full-width grid dwarfs the
-                // text. Render fixed-width square thumbnails that wrap instead.
-                FlowRow(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    images.forEachIndexed { index, image ->
-                        AsyncImage(
-                            model = resolvedThumb?.let { tb -> tb(image) } ?: resolvedUrl(image),
-                            contentDescription = image.name,
-                            // Fixed height; width follows the image's aspect ratio.
-                            contentScale = ContentScale.FillHeight,
-                            modifier = Modifier
-                                .height(COMPACT_IMAGE_HEIGHT)
-                                .clip(RoundedCornerShape(10.dp))
-                                .clickable {
-                                    viewerIndex = index
-                                    showViewer = true
-                                }
-                        )
-                    }
+            MediaGrid(
+                urls = images.map { resolvedUrl(it) },
+                thumbnailUrls = resolvedThumb?.let { tb -> images.map { tb(it) } },
+                contentDescriptions = images.map { it.name },
+                onClick = { index ->
+                    viewerIndex = index
+                    showViewer = true
                 }
-            } else {
-                MediaGrid(
-                    urls = images.map { resolvedUrl(it) },
-                    thumbnailUrls = resolvedThumb?.let { tb -> images.map { tb(it) } },
-                    contentDescriptions = images.map { it.name },
-                    onClick = { index ->
-                        viewerIndex = index
-                        showViewer = true
-                    }
-                )
-            }
+            )
         }
 
         for (video in videos) {

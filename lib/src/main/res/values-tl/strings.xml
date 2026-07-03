@@ -65,10 +65,6 @@
     <string name="notifications_open">Mga Notification</string>
     <string name="notifications_title">Mga Notification</string>
     <string name="notifications_empty">Walang notification</string>
-    <string name="notifications_empty_unread">Wala ka nang naiwan</string>
-    <string name="notifications_tab_unread">Hindi pa nabasa</string>
-    <string name="notifications_tab_unread_count">Hindi pa nabasa (%1$d)</string>
-    <string name="notifications_tab_all">Lahat</string>
     <string name="notifications_mark_all_read">Markahang nabasa lahat</string>
     <string name="notifications_clear_all">Burahin lahat</string>
     <string name="notifications_loading">Nilo-load…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Binubuksan ang file…</string>
     <string name="common_no_app_for_file">Walang app na makakapagbukas ng file na ito</string>
     <string name="common_file_open_failed">Hindi mabuksan ang file</string>
-    <string name="common_logout_confirm_title">Mag-log out</string>
-    <string name="reaction_remove">Burahin</string>
-
-    <string name="common_logout_confirm_message">Sigurado ka bang gusto mong mag-log out? Kakailanganin mong mag-log in muli para ma-access ang iyong account.</string>
-
 </resources>

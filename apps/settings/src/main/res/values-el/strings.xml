@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">Μηνύματα σε αναμονή δρομολόγησης</string>
     <string name="system_status_relay_service">Υπηρεσία αναμετάδοσης</string>
     <string name="system_status_relay_service_value">%1$d / %2$d κρατήσεις · %3$d κυκλώματα · %4$d απορρίφθηκαν</string>
-    <string name="route_target_select">Επιλογή</string>
 </resources>

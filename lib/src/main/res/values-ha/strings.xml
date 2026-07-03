@@ -65,10 +65,6 @@
     <string name="notifications_open">Sanarwa</string>
     <string name="notifications_title">Sanarwa</string>
     <string name="notifications_empty">Babu sanarwa</string>
-    <string name="notifications_empty_unread">Ka cim komai</string>
-    <string name="notifications_tab_unread">Wadanda ba a karanta ba</string>
-    <string name="notifications_tab_unread_count">Wadanda ba a karanta ba (%1$d)</string>
-    <string name="notifications_tab_all">Duka</string>
     <string name="notifications_mark_all_read">Alama duka karanta</string>
     <string name="notifications_clear_all">Share duka</string>
     <string name="notifications_loading">Ana saukarwa…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Ana buɗe fayil…</string>
     <string name="common_no_app_for_file">Babu manhajar da za ta iya buɗe wannan fayil</string>
     <string name="common_file_open_failed">An kasa buɗe fayil</string>
-
-    <string name="common_logout_confirm_title">Fita</string>
-    <string name="common_logout_confirm_message">Ka tabbata kana son fita? Za ka buƙaci sake shiga don samun damar shiga asusunka.</string>
-    <string name="reaction_remove">Share</string>
-
 </resources>

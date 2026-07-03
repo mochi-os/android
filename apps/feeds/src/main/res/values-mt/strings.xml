@@ -16,6 +16,8 @@
     <string name="feeds_settings">Settings</string>
     <string name="feeds_no_posts_yet">L-ebda posts s\'issa</string>
     <string name="feeds_default_sort">Ssortjar default</string>
+    <string name="feeds_suggested_interests_add">Żid</string>
+    <string name="feeds_suggested_interests_dismiss">Aħbi</string>
     <string name="feeds_unread">Mhux moqri</string>
     <string name="feeds_filter_all">Kollha</string>
     <string name="feeds_sort_label">Issortja</string>
@@ -125,9 +127,7 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Interessi suġġeriti</string>
     <string name="feeds_suggested_interests_empty">L-ebda suġġeriment s\'issa</string>
-    <string name="feeds_suggested_interests_title">Żid interessi minn %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Dan il-feed ikopri dawn is-suġġetti. Agħżel liema minnhom trid iżżid mal-interessi tiegħek għal klassifika personalizzata.</string>
-    <string name="feeds_suggested_interests_skip">Aqbeż</string>
+    <string name="feeds_suggested_interests_count">%1$d posts</string>
     <string name="feeds_tag_more">Aġġusta l-interess</string>
     <string name="feeds_tag_more_up">Uri aktar bħal dan</string>
     <string name="feeds_tag_more_down">Uri inqas bħal dan</string>
@@ -216,130 +216,6 @@
         <item quantity="many">%d post ġdid</item>
         <item quantity="other">%d post ġdid</item>
     </plurals>
-    <string name="feeds_caught_up">Rajt kollox</string>
     <string name="feeds_all_caught_up">Kollox aġġornat</string>
     <string name="feeds_view_all_posts">Ara l-posts kollha</string>
-    <string name="feeds_markdown_supported">Markdown sapportit</string>
-    <string name="feeds_back">Lura</string>
-    <string name="feeds_confirm">Ikkonferma</string>
-    <string name="feeds_rss_feed">Feed RSS</string>
-    <string name="feeds_unsubscribe">Iddiżabbona</string>
-    <string name="feeds_unsubscribed">Diżabbonat</string>
-    <string name="feeds_settings_section_identity">Identità</string>
-    <string name="feeds_settings_field_name">Isem</string>
-    <string name="feeds_settings_field_entity_id">ID tal-entità</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
-    <string name="feeds_settings_field_server">Server</string>
-    <string name="feeds_settings_name_edit_cd">Editja l-isem</string>
-    <string name="feeds_settings_name_save_cd">Issejvja l-isem</string>
-    <string name="feeds_access_subject_anyone">Kulħadd</string>
-    <string name="feeds_access_subject_authenticated">Utenti awtentikati</string>
-    <string name="feeds_access_level_view_full">Ara biss</string>
-    <string name="feeds_access_level_none_full">L-ebda aċċess</string>
-    <string name="feeds_access_segment_user">Utent</string>
-    <string name="feeds_access_segment_group">Grupp</string>
-    <string name="feeds_access_segment_other">Oħra</string>
-    <string name="feeds_access_search_users">Fittex utenti</string>
-    <string name="feeds_access_select_group">Agħżel grupp</string>
-    <string name="feeds_access_selected">Magħżul: %1$s</string>
-    <string name="feeds_permission_deny">Iċħad</string>
-    <string name="feeds_allow_search">Ippermetti lil kulħadd ifittex feed</string>
-    <string name="feeds_enable_memories">Attiva l-memorji</string>
-    <string name="feeds_create_first_post">Oħloq l-ewwel post</string>
-    <string name="feeds_post_content">Kontenut tal-post</string>
-    <string name="feeds_rss_mode_posts">Posts</string>
-    <string name="feeds_rss_mode_posts_comments">Posts u kummenti</string>
-    <string name="feeds_unsubscribe_confirm">Tneħħi l-abbonament mill-feed?</string>
-    <string name="feeds_unsubscribe_confirm_message">Ma tibqax tirċievi aġġornamenti minn dan il-feed. Tista\' terġa\' tabbona meta trid.</string>
-    <string name="feeds_settings_unsubscribe_section">Iddiżabbona minn feed</string>
-    <string name="feeds_delete_feed_description">Ħassar permanentement dan il-feed u l-kontenut kollu tiegħu.</string>
-    <string name="feeds_access_management">Mmaniġġjar tal-aċċess</string>
-    <string name="feeds_access_management_desc">Ikkontrolla min jista\' jara u jinteraġixxi ma\' dan il-feed</string>
-    <string name="feeds_access_level_comment_full">Ikkummenta, irreaġixxi, u ara</string>
-    <string name="feeds_access_level_react_full">Reaġixxi u ara</string>
-    <string name="feeds_access_add_title">Żid aċċess</string>
-    <string name="feeds_access_add_subtitle">Agħżel utent, grupp, jew regola oħra biex tagħti aċċess.</string>
-    <string name="feeds_access_select_rule">Agħżel regola tal-aċċess</string>
-    <string name="feeds_source_url_hint_feed">ID jew fingerprint tal-entità tal-feed</string>
-    <string name="feeds_source_credibility_label">Kredibbiltà</string>
-    <string name="feeds_source_transform_hint">Ittraduċi għall-Ingliż, u uri bħala punti.</string>
-    <string name="feeds_source_transform_help">Ħalli vojt biex tiddiżattiva.</string>
-
-    <string name="feeds_scroll_to_top">Lura \'l fuq</string>
-    <string name="feeds_settings_title">Issettjar ta\' %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Ikkanċella l-editjar</string>
-    <string name="feeds_access_authenticated_desc">Kull min hu illoggjat</string>
-    <string name="feeds_access_anyone_desc">Inklużi utenti anonimi</string>
-    <string name="feeds_source_last_checked">L-aħħar iċċekkjat %1$s</string>
-    <string name="feeds_source_polling_interval">Iċċekkjar kull %1$s</string>
-    <string name="feeds_permission_request_title">Talba għal permess</string>
-    <string name="feeds_permission_request_message">%1$s qed jitlob il-permess li ġej:</string>
-    <string name="feeds_permission_allow">Ippermetti</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d post</item>
-        <item quantity="two">%1$d posts</item>
-        <item quantity="few">%1$d posts</item>
-        <item quantity="many">%1$d-il post</item>
-        <item quantity="other">%1$d post</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Żid %1$d interess</item>
-        <item quantity="two">Żid %1$d interessi</item>
-        <item quantity="few">Żid %1$d interessi</item>
-        <item quantity="many">Żid %1$d-il interess</item>
-        <item quantity="other">Żid %1$d interess</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d sena ilu bħal-lum</item>
-        <item quantity="two">%1$d snin ilu bħal-lum</item>
-        <item quantity="few">%1$d snin ilu bħal-lum</item>
-        <item quantity="many">%1$d-il sena ilu bħal-lum</item>
-        <item quantity="other">%1$d sena ilu bħal-lum</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d immaġni</item>
-        <item quantity="two">%1$d immaġnijiet</item>
-        <item quantity="few">%1$d immaġnijiet</item>
-        <item quantity="many">%1$d-il immaġni</item>
-        <item quantity="other">%1$d immaġni</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d hemża</item>
-        <item quantity="two">%1$d hemżiet</item>
-        <item quantity="few">%1$d hemżiet</item>
-        <item quantity="many">%1$d-il hemża</item>
-        <item quantity="other">%1$d hemża</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d kumment</item>
-        <item quantity="two">%1$d kummenti</item>
-        <item quantity="few">%1$d kummenti</item>
-        <item quantity="many">%1$d-il kumment</item>
-        <item quantity="other">%1$d kumment</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Ara %1$d kumment ieħor</item>
-        <item quantity="two">Ara %1$d kummenti oħra</item>
-        <item quantity="few">Ara %1$d kummenti oħra</item>
-        <item quantity="many">Ara %1$d-il kumment ieħor</item>
-        <item quantity="other">Ara %1$d kumment ieħor</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="two">%1$d minuti</item>
-        <item quantity="few">%1$d minuti</item>
-        <item quantity="many">%1$d-il minuta</item>
-        <item quantity="other">%1$d minuta</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d siegħa</item>
-        <item quantity="two">%1$d sigħat</item>
-        <item quantity="few">%1$d sigħat</item>
-        <item quantity="many">%1$d-il siegħa</item>
-        <item quantity="other">%1$d siegħa</item>
-    </plurals>
-
 </resources>

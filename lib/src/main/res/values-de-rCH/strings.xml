@@ -203,10 +203,6 @@
     <string name="about_check_network_error">Aktualisierungsserver nicht erreichbar</string>
     <string name="about_check_download_failed">Download fehlgeschlagen</string>
     <string name="notifications_empty">Keine Mitteilungen</string>
-    <string name="notifications_empty_unread">Alles erledigt</string>
-    <string name="notifications_tab_unread">Ungelesen</string>
-    <string name="notifications_tab_unread_count">Ungelesen (%1$d)</string>
-    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Alle als gelesen markieren</string>
     <string name="notifications_clear_all">Alle löschen</string>
     <string name="notifications_clear_all_title">Alle Mitteilungen löschen?</string>
@@ -293,9 +289,4 @@
     <string name="stepup_error_code">Dieser Code ist falsch oder abgelaufen.</string>
     <string name="stepup_error_passkey">Die Passkey-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
     <string name="stepup_error_oauth">Verifizierung mit diesem Konto fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
-    <string name="common_logout_confirm_title">Abmelden</string>
-    <string name="reaction_remove">Löschen</string>
-
-    <string name="common_logout_confirm_message">Möchten Sie sich wirklich abmelden? Sie müssen sich erneut anmelden, um auf Ihr Konto zuzugreifen.</string>
-
 </resources>

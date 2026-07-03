@@ -65,10 +65,6 @@
     <string name="notifications_open">Agahdarî</string>
     <string name="notifications_title">Agahdarî</string>
     <string name="notifications_empty">Tu agahdarî tune</string>
-    <string name="notifications_empty_unread">Te hemû xwendin</string>
-    <string name="notifications_tab_unread">Nexwendî</string>
-    <string name="notifications_tab_unread_count">Nexwendî (%1$d)</string>
-    <string name="notifications_tab_all">Hemû</string>
     <string name="notifications_mark_all_read">Hemû wek xwendî nîşan bike</string>
     <string name="notifications_clear_all">Hemûyan paqij bike</string>
     <string name="notifications_loading">Tê barkirin…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Dosye tê vekirin…</string>
     <string name="common_no_app_for_file">Tu sepan nikare vê dosyeyê veke</string>
     <string name="common_file_open_failed">Dosye nehat vekirin</string>
-    <string name="common_logout_confirm_title">Derkeve</string>
-    <string name="reaction_remove">Paqij bike</string>
-
-    <string name="common_logout_confirm_message">Ma hûn piştrast in ku hûn dixwazin derkevin? Ji bo ku hûn bigihîjin hesabê xwe, divê hûn dîsa têkevin.</string>
-
 </resources>

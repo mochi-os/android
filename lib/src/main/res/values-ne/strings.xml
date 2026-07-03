@@ -65,10 +65,6 @@
     <string name="notifications_open">सूचनाहरू</string>
     <string name="notifications_title">सूचनाहरू</string>
     <string name="notifications_empty">कुनै सूचना छैन</string>
-    <string name="notifications_empty_unread">सबै हेरिसक्नुभयो</string>
-    <string name="notifications_tab_unread">नपढिएका</string>
-    <string name="notifications_tab_unread_count">नपढिएका (%1$d)</string>
-    <string name="notifications_tab_all">सबै</string>
     <string name="notifications_mark_all_read">सबै पढिएको चिन्ह लगाउनुहोस्</string>
     <string name="notifications_clear_all">सबै खाली गर्नुहोस्</string>
     <string name="notifications_loading">लोड हुँदै…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">फाइल खोल्दै…</string>
     <string name="common_no_app_for_file">यो फाइल खोल्न सक्ने कुनै एप छैन</string>
     <string name="common_file_open_failed">फाइल खोल्न सकिएन</string>
-    <string name="common_logout_confirm_title">लग आउट</string>
-    <string name="reaction_remove">खाली गर्नुहोस्</string>
-
-    <string name="common_logout_confirm_message">के तपाईं लगआउट गर्न निश्चित हुनुहुन्छ? आफ्नो खातामा पहुँच गर्न तपाईंले फेरि लगइन गर्नुपर्नेछ।</string>
-
 </resources>

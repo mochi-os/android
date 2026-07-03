@@ -65,10 +65,6 @@
     <string name="notifications_open">Notifikasi</string>
     <string name="notifications_title">Notifikasi</string>
     <string name="notifications_empty">Ora ana notifikasi</string>
-    <string name="notifications_empty_unread">Kabèh wis diwaca</string>
-    <string name="notifications_tab_unread">Durung diwaca</string>
-    <string name="notifications_tab_unread_count">Durung diwaca (%1$d)</string>
-    <string name="notifications_tab_all">Kabèh</string>
     <string name="notifications_mark_all_read">Tandhani kabèh wis diwaca</string>
     <string name="notifications_clear_all">Resiki kabèh</string>
     <string name="notifications_loading">Mbukak…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Mbukak berkas…</string>
     <string name="common_no_app_for_file">Ora ana app sing bisa mbukak berkas iki</string>
     <string name="common_file_open_failed">Ora bisa mbukak berkas</string>
-    <string name="common_logout_confirm_title">Metu</string>
-    <string name="reaction_remove">Resiki</string>
-
-    <string name="common_logout_confirm_message">Menapa panjenengan yakin badhe medal? Panjenengan kedah mlebet malih kangge ngakses akun panjenengan.</string>
-
 </resources>

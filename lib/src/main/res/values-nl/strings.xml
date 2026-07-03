@@ -65,10 +65,6 @@
     <string name="notifications_open">Meldingen</string>
     <string name="notifications_title">Meldingen</string>
     <string name="notifications_empty">Geen meldingen</string>
-    <string name="notifications_empty_unread">Je bent helemaal bij</string>
-    <string name="notifications_tab_unread">Ongelezen</string>
-    <string name="notifications_tab_unread_count">Ongelezen (%1$d)</string>
-    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Alles als gelezen markeren</string>
     <string name="notifications_clear_all">Alles wissen</string>
     <string name="notifications_loading">Laden…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Bestand openen…</string>
     <string name="common_no_app_for_file">Geen app kan dit bestand openen</string>
     <string name="common_file_open_failed">Kan bestand niet openen</string>
-    <string name="common_logout_confirm_title">Uitloggen</string>
-    <string name="reaction_remove">Wissen</string>
-
-    <string name="common_logout_confirm_message">Weet u zeker dat u wilt uitloggen? U moet opnieuw inloggen om toegang te krijgen tot uw account.</string>
-
 </resources>

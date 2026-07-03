@@ -65,10 +65,6 @@
     <string name="notifications_open">Jakinarazpenak</string>
     <string name="notifications_title">Jakinarazpenak</string>
     <string name="notifications_empty">Jakinarazpenik ez</string>
-    <string name="notifications_empty_unread">Egunean zaude</string>
-    <string name="notifications_tab_unread">Irakurri gabeak</string>
-    <string name="notifications_tab_unread_count">Irakurri gabeak (%1$d)</string>
-    <string name="notifications_tab_all">Guztiak</string>
     <string name="notifications_mark_all_read">Markatu denak irakurritzat</string>
     <string name="notifications_clear_all">Garbitu dena</string>
     <string name="notifications_loading">Kargatzen…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Fitxategia irekitzen…</string>
     <string name="common_no_app_for_file">Ezin du aplikaziorik fitxategi hau ireki</string>
     <string name="common_file_open_failed">Ezin izan da fitxategia ireki</string>
-
-    <string name="common_logout_confirm_title">Amaitu saioa</string>
-    <string name="common_logout_confirm_message">Ziur zaude saioa amaitu nahi duzula? Berriro hasi beharko duzu saioa zure kontura sartzeko.</string>
-    <string name="reaction_remove">Kendu</string>
-
 </resources>

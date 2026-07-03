@@ -65,10 +65,6 @@
     <string name="notifications_open">الإشعارات</string>
     <string name="notifications_title">الإشعارات</string>
     <string name="notifications_empty">لا توجد إشعارات</string>
-    <string name="notifications_empty_unread">لقد اطّلعت على كل شيء</string>
-    <string name="notifications_tab_unread">غير المقروءة</string>
-    <string name="notifications_tab_unread_count">غير المقروءة (%1$d)</string>
-    <string name="notifications_tab_all">الكل</string>
     <string name="notifications_mark_all_read">وضع علامة مقروء على الكل</string>
     <string name="notifications_clear_all">مسح الكل</string>
     <string name="notifications_loading">جارٍ التحميل…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">جارٍ فتح الملف…</string>
     <string name="common_no_app_for_file">لا يوجد تطبيق يمكنه فتح هذا الملف</string>
     <string name="common_file_open_failed">تعذّر فتح الملف</string>
-
-    <string name="common_logout_confirm_title">تسجيل الخروج</string>
-    <string name="common_logout_confirm_message">هل أنت متأكد أنك تريد تسجيل الخروج؟ ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك.</string>
-    <string name="reaction_remove">مسح</string>
-
 </resources>

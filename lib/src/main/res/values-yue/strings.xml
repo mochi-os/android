@@ -200,10 +200,6 @@
     <string name="about_check_network_error">無法連接更新伺服器</string>
     <string name="about_check_download_failed">下載失敗</string>
     <string name="notifications_empty">冇通知</string>
-    <string name="notifications_empty_unread">全部睇晒喇</string>
-    <string name="notifications_tab_unread">未讀</string>
-    <string name="notifications_tab_unread_count">未讀 (%1$d)</string>
-    <string name="notifications_tab_all">全部</string>
     <string name="notifications_mark_all_read">全部標示為已讀</string>
     <string name="notifications_clear_all">全部清除</string>
     <string name="notifications_clear_all_title">清除所有通知？</string>
@@ -292,9 +288,4 @@
     <string name="stepup_verify">驗證</string>
     <string name="stepup_continue_with">使用 %1$s 繼續</string>
     <string name="stepup_error_oauth">無法使用該帳戶進行驗證。請重試。</string>
-    <string name="common_logout_confirm_title">登出</string>
-    <string name="reaction_remove">清除</string>
-
-    <string name="common_logout_confirm_message">你確定要登出嗎？你需要再次登入先可以使用你嘅帳戶。</string>
-
 </resources>

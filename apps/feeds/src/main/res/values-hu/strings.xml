@@ -16,6 +16,8 @@
     <string name="feeds_settings">Beállítások</string>
     <string name="feeds_no_posts_yet">Még nincsenek bejegyzések</string>
     <string name="feeds_default_sort">Alapértelmezett rendezés</string>
+    <string name="feeds_suggested_interests_add">Hozzáadás</string>
+    <string name="feeds_suggested_interests_dismiss">Elrejtés</string>
     <string name="feeds_unread">Olvasatlan</string>
     <string name="feeds_filter_all">Összes</string>
     <string name="feeds_sort_label">Rendezés</string>
@@ -119,9 +121,7 @@
     <string name="feeds_identity_server">Kiszolgáló: %1$s</string>
     <string name="feeds_suggested_interests">Javasolt érdeklődési körök</string>
     <string name="feeds_suggested_interests_empty">Még nincsenek javaslatok</string>
-    <string name="feeds_suggested_interests_title">Hozzáad érdeklődési köröket innen: %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Ez a hírforrás ezeket a témákat fedi le. Válassza ki, melyeket adja hozzá az érdeklődési köreihez a személyre szabott rangsoroláshoz.</string>
-    <string name="feeds_suggested_interests_skip">Kihagyás</string>
+    <string name="feeds_suggested_interests_count">%1$d bejegyzés</string>
     <string name="feeds_tag_more">Érdeklődés hangolása</string>
     <string name="feeds_tag_more_up">Több ilyet mutasson</string>
     <string name="feeds_tag_more_down">Kevesebb ilyet mutasson</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d új bejegyzés</item>
         <item quantity="other">%d új bejegyzés</item>
     </plurals>
-    <string name="feeds_caught_up">Mindent megnéztél</string>
     <string name="feeds_all_caught_up">Mindennel végeztél</string>
     <string name="feeds_view_all_posts">Összes bejegyzés megtekintése</string>
-    <string name="feeds_markdown_supported">Markdown támogatott</string>
-    <string name="feeds_back">Vissza</string>
-    <string name="feeds_confirm">Megerősítés</string>
-    <string name="feeds_rss_feed">RSS hírfolyam</string>
-    <string name="feeds_unsubscribe">Leiratkozás</string>
-    <string name="feeds_unsubscribed">Leiratkozva</string>
-    <string name="feeds_settings_section_identity">Azonosító</string>
-    <string name="feeds_settings_field_name">Név</string>
-    <string name="feeds_settings_field_entity_id">Entitás azonosító</string>
-    <string name="feeds_settings_field_fingerprint">Ujjlenyomat</string>
-    <string name="feeds_settings_field_server">Kiszolgáló</string>
-    <string name="feeds_settings_name_edit_cd">Név szerkesztése</string>
-    <string name="feeds_settings_name_save_cd">Név mentése</string>
-    <string name="feeds_access_subject_anyone">Bárki</string>
-    <string name="feeds_access_subject_authenticated">Hitelesített felhasználók</string>
-    <string name="feeds_access_level_view_full">Csak megtekintés</string>
-    <string name="feeds_access_level_none_full">Nincs hozzáférés</string>
-    <string name="feeds_access_segment_user">Felhasználó</string>
-    <string name="feeds_access_segment_group">Csoport</string>
-    <string name="feeds_access_segment_other">Egyéb</string>
-    <string name="feeds_access_search_users">Felhasználók keresése</string>
-    <string name="feeds_access_select_group">Csoport kiválasztása</string>
-    <string name="feeds_access_selected">Kiválasztva: %1$s</string>
-    <string name="feeds_permission_deny">Megtagadás</string>
-    <string name="feeds_allow_search">Bárki kereshesse a hírfolyamot</string>
-    <string name="feeds_enable_memories">Emlékek engedélyezése</string>
-    <string name="feeds_create_first_post">Első bejegyzés létrehozása</string>
-    <string name="feeds_post_content">Bejegyzés tartalma</string>
-    <string name="feeds_rss_mode_posts">Bejegyzések</string>
-    <string name="feeds_rss_mode_posts_comments">Bejegyzések és hozzászólások</string>
-    <string name="feeds_unsubscribe_confirm">Leiratkozol a hírcsatornáról?</string>
-    <string name="feeds_unsubscribe_confirm_message">Többé nem kapsz frissítéseket ebből a hírcsatornából. Bármikor újra feliratkozhatsz.</string>
-    <string name="feeds_settings_unsubscribe_section">Leiratkozás a hírforrásról</string>
-    <string name="feeds_delete_feed_description">Véglegesen törli ezt a hírfolyamot és minden tartalmát.</string>
-    <string name="feeds_access_management">Hozzáférés-kezelés</string>
-    <string name="feeds_access_management_desc">Szabályozza, ki láthatja és használhatja ezt a feedet</string>
-    <string name="feeds_access_level_comment_full">Hozzászólás, reakció és megtekintés</string>
-    <string name="feeds_access_level_react_full">Reagálj és nézd meg</string>
-    <string name="feeds_access_add_title">Hozzáférés hozzáadása</string>
-    <string name="feeds_access_add_subtitle">Válasszon felhasználót, csoportot vagy más szabályt a hozzáférés megadásához.</string>
-    <string name="feeds_access_select_rule">Hozzáférési szabály kiválasztása</string>
-    <string name="feeds_source_url_hint_feed">Hírfolyam entitás azonosító vagy ujjlenyomat</string>
-    <string name="feeds_source_credibility_label">Hitelesség</string>
-    <string name="feeds_source_transform_hint">Fordítsa angolra, és jelenítse meg felsorolásként.</string>
-    <string name="feeds_source_transform_help">Hagyja üresen a letiltáshoz.</string>
-
-    <string name="feeds_scroll_to_top">Vissza a tetejére</string>
-    <string name="feeds_settings_title">%1$s beállításai</string>
-    <string name="feeds_settings_name_cancel_cd">Szerkesztés megszakítása</string>
-    <string name="feeds_access_authenticated_desc">Bárki, aki be van jelentkezve</string>
-    <string name="feeds_access_anyone_desc">Beleértve a névtelen felhasználókat is</string>
-    <string name="feeds_source_last_checked">Utoljára ellenőrizve: %1$s</string>
-    <string name="feeds_source_polling_interval">Lekérdezés %1$s időközönként</string>
-    <string name="feeds_permission_request_title">Engedélykérés</string>
-    <string name="feeds_permission_request_message">%1$s a következő engedélyt kéri:</string>
-    <string name="feeds_permission_allow">Engedélyezés</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d bejegyzés</item>
-        <item quantity="other">%1$d bejegyzés</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d érdeklődési kör hozzáadása</item>
-        <item quantity="other">%1$d érdeklődési kör hozzáadása</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d éve ezen a napon</item>
-        <item quantity="other">%1$d éve ezen a napon</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d kép</item>
-        <item quantity="other">%1$d kép</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d melléklet</item>
-        <item quantity="other">%1$d melléklet</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d hozzászólás</item>
-        <item quantity="other">%1$d hozzászólás</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">További %1$d hozzászólás megtekintése</item>
-        <item quantity="other">További %1$d hozzászólás megtekintése</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d perc</item>
-        <item quantity="other">%1$d perc</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d óra</item>
-        <item quantity="other">%1$d óra</item>
-    </plurals>
-
 </resources>

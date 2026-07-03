@@ -16,6 +16,8 @@
     <string name="feeds_settings">Sazlamalar</string>
     <string name="feeds_no_posts_yet">Heniz postlar ýok</string>
     <string name="feeds_default_sort">Adaty tertipleşdirme</string>
+    <string name="feeds_suggested_interests_add">Goşmak</string>
+    <string name="feeds_suggested_interests_dismiss">Gizle</string>
     <string name="feeds_unread">Okalmadyk</string>
     <string name="feeds_filter_all">Hemmesi</string>
     <string name="feeds_sort_label">Tertiple</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Teklip edilen gyzyklanmalar</string>
     <string name="feeds_suggested_interests_empty">Heniz teklip ýok</string>
-    <string name="feeds_suggested_interests_title">%1$s çeşmesinden gyzyklanmalar goşulsynmy?</string>
-    <string name="feeds_suggested_interests_subtitle">Bu akym şu mowzulary öz içine alýar. Şahsylaşdyrylan reýting üçin gyzyklanmalaryňyza haýsylaryny goşmalydygyňyzy saýlaň.</string>
-    <string name="feeds_suggested_interests_skip">Geç</string>
+    <string name="feeds_suggested_interests_count">%1$d ýazgy</string>
     <string name="feeds_tag_more">Gyzyklanmany sazla</string>
     <string name="feeds_tag_more_up">Şuňa meňzeşleri köpräk görkez</string>
     <string name="feeds_tag_more_down">Şuňa meňzeşleri azrak görkez</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d täze ýazgy</item>
         <item quantity="other">%d täze ýazgy</item>
     </plurals>
-    <string name="feeds_caught_up">Hemmesini gördüňiz</string>
     <string name="feeds_all_caught_up">Hemmesi tutuldy</string>
     <string name="feeds_view_all_posts">Ähli postlary görkez</string>
-    <string name="feeds_markdown_supported">Markdown goldanýar</string>
-    <string name="feeds_back">Yza</string>
-    <string name="feeds_confirm">Tassyklamak</string>
-    <string name="feeds_rss_feed">RSS akymy</string>
-    <string name="feeds_unsubscribe">Abunadan çyk</string>
-    <string name="feeds_unsubscribed">Abuna ýazylyşygy ýatyryldy</string>
-    <string name="feeds_settings_section_identity">Şahsyýet</string>
-    <string name="feeds_settings_field_name">At</string>
-    <string name="feeds_settings_field_entity_id">Essas ID</string>
-    <string name="feeds_settings_field_fingerprint">Barmak yzy</string>
-    <string name="feeds_settings_field_server">Server</string>
-    <string name="feeds_settings_name_edit_cd">Ady düzet</string>
-    <string name="feeds_settings_name_save_cd">Ady ýatda sakla</string>
-    <string name="feeds_access_subject_anyone">Islendik</string>
-    <string name="feeds_access_subject_authenticated">Tassyklanan ulanyjylar</string>
-    <string name="feeds_access_level_view_full">Diňe görkez</string>
-    <string name="feeds_access_level_none_full">Girip bolmaýar</string>
-    <string name="feeds_access_segment_user">Ulanyjy</string>
-    <string name="feeds_access_segment_group">Topar</string>
-    <string name="feeds_access_segment_other">Beýleki</string>
-    <string name="feeds_access_search_users">Ulanyjylary gözle</string>
-    <string name="feeds_access_select_group">Topary saýla</string>
-    <string name="feeds_access_selected">Saýlanan: %1$s</string>
-    <string name="feeds_permission_deny">Ret etmek</string>
-    <string name="feeds_allow_search">Islendik adamyň feed gözlemegine rugsat bermek</string>
-    <string name="feeds_enable_memories">Ýatlamalary işjeňleşdir</string>
-    <string name="feeds_create_first_post">Ilkinji ýazgyny döretmek</string>
-    <string name="feeds_post_content">Postyň mazmuny</string>
-    <string name="feeds_rss_mode_posts">Postlar</string>
-    <string name="feeds_rss_mode_posts_comments">Postlar we teswirler</string>
-    <string name="feeds_unsubscribe_confirm">Lenta abunaligini ýatyrmalymy?</string>
-    <string name="feeds_unsubscribe_confirm_message">Bu lentadan täzelikleri indi almarsyňyz. Islendik wagt täzeden abuna bolup bilersiňiz.</string>
-    <string name="feeds_settings_unsubscribe_section">Lentadan abuna ýazylyşygy ýatyr</string>
-    <string name="feeds_delete_feed_description">Bu akymy we onuň ähli mazmunyny hemişelik poz.</string>
-    <string name="feeds_access_management">Giriş dolandyryşy</string>
-    <string name="feeds_access_management_desc">Bu feed-i kim görüp we onuň bilen täsirleşip biljekdigini dolandyryň</string>
-    <string name="feeds_access_level_comment_full">Teswir, reaksiýa we görmek</string>
-    <string name="feeds_access_level_react_full">Reaksiýa we görmek</string>
-    <string name="feeds_access_add_title">Giriş goşmak</string>
-    <string name="feeds_access_add_subtitle">Giriş bermek üçin ulanyjy, topar ýa-da başga düzgün saýla.</string>
-    <string name="feeds_access_select_rule">Giriş düzgünini saýla</string>
-    <string name="feeds_source_url_hint_feed">Akym essas ID ýa-da barmak yzy</string>
-    <string name="feeds_source_credibility_label">Ynamlylyk</string>
-    <string name="feeds_source_transform_hint">Iňlis diline terjime et we güllejik nokat görnüşinde görkez.</string>
-    <string name="feeds_source_transform_help">Öçürmek üçin boş galdyr.</string>
-
-    <string name="feeds_scroll_to_top">Ýokarsyna dolan</string>
-    <string name="feeds_settings_title">%1$s sazlamalary</string>
-    <string name="feeds_settings_name_cancel_cd">Redaktirlemegi ýatyr</string>
-    <string name="feeds_access_authenticated_desc">Ulgama giren islendik adam</string>
-    <string name="feeds_access_anyone_desc">Anonim ulanyjylar bilen birlikde</string>
-    <string name="feeds_source_last_checked">Soňky barlanan: %1$s</string>
-    <string name="feeds_source_polling_interval">Her %1$s aralykda barlanýar</string>
-    <string name="feeds_permission_request_title">Rugsat haýyşy</string>
-    <string name="feeds_permission_request_message">%1$s aşakdaky rugsady soraýar:</string>
-    <string name="feeds_permission_allow">Rugsat ber</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d ýazgy</item>
-        <item quantity="other">%1$d ýazgy</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d gyzyklanma goş</item>
-        <item quantity="other">%1$d gyzyklanma goş</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Şu gün mundan %1$d ýyl ozal</item>
-        <item quantity="other">Şu gün mundan %1$d ýyl ozal</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d surat</item>
-        <item quantity="other">%1$d surat</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d goşundy</item>
-        <item quantity="other">%1$d goşundy</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d teswir</item>
-        <item quantity="other">%1$d teswir</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Ýene %1$d teswiri gör</item>
-        <item quantity="other">Ýene %1$d teswiri gör</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minut</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d sagat</item>
-        <item quantity="other">%1$d sagat</item>
-    </plurals>
-
 </resources>

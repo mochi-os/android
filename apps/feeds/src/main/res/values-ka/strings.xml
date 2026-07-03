@@ -16,6 +16,8 @@
     <string name="feeds_settings">პარამეტრები</string>
     <string name="feeds_no_posts_yet">პოსტები ჯერ არ არის</string>
     <string name="feeds_default_sort">ნაგულისხმევი დახარისხება</string>
+    <string name="feeds_suggested_interests_add">დამატება</string>
+    <string name="feeds_suggested_interests_dismiss">დამალვა</string>
     <string name="feeds_unread">მიმაგრების მოხსნა</string>
     <string name="feeds_filter_all">ყველა</string>
     <string name="feeds_sort_label">დახარისხება</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">სერვერი: %1$s</string>
     <string name="feeds_suggested_interests">შემოთავაზებული ინტერესები</string>
     <string name="feeds_suggested_interests_empty">ჯერ შემოთავაზებები არ არის</string>
-    <string name="feeds_suggested_interests_title">დაამატოთ ინტერესები %1$s-დან?</string>
-    <string name="feeds_suggested_interests_subtitle">ეს არხი მოიცავს ამ თემებს. აირჩიეთ, რომელი დაამატოთ თქვენს ინტერესებში პერსონალიზებული რანჟირებისთვის.</string>
-    <string name="feeds_suggested_interests_skip">გამოტოვება</string>
+    <string name="feeds_suggested_interests_count">%1$d პოსტი</string>
     <string name="feeds_tag_more">მოარგეთ ინტერესი</string>
     <string name="feeds_tag_more_up">მეტი ამის მსგავსი</string>
     <string name="feeds_tag_more_down">ნაკლები ამის მსგავსი</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d ახალი პოსტი</item>
         <item quantity="other">%d ახალი პოსტი</item>
     </plurals>
-    <string name="feeds_caught_up">ყველაფერი ნანახი გაქვთ</string>
     <string name="feeds_all_caught_up">ყველაფერი ნანახი</string>
     <string name="feeds_view_all_posts">ყველა შეტყობინების ნახვა</string>
-    <string name="feeds_markdown_supported">Markdown მხარდაჭერილია</string>
-    <string name="feeds_back">უკან</string>
-    <string name="feeds_confirm">დადასტურება</string>
-    <string name="feeds_rss_feed">RSS ფიდი</string>
-    <string name="feeds_unsubscribe">ამოუცნობი ანგარიში</string>
-    <string name="feeds_unsubscribed">გავაუქმოთ რეპოზიტორის გამოწერა?</string>
-    <string name="feeds_settings_section_identity">ვინაობა</string>
-    <string name="feeds_settings_field_name">სახელი</string>
-    <string name="feeds_settings_field_entity_id">ერთეულის ID</string>
-    <string name="feeds_settings_field_fingerprint">ანაბეჭდი</string>
-    <string name="feeds_settings_field_server">სერვერი</string>
-    <string name="feeds_settings_name_edit_cd">სახელის რედაქტირება</string>
-    <string name="feeds_settings_name_save_cd">სახელის შენახვა</string>
-    <string name="feeds_access_subject_anyone">ნებისმიერი</string>
-    <string name="feeds_access_subject_authenticated">ავთენტიფიცირებული მომხმარებლები</string>
-    <string name="feeds_access_level_view_full">ხედის კონტროლები</string>
-    <string name="feeds_access_level_none_full">წვდომა არ არის</string>
-    <string name="feeds_access_segment_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
-    <string name="feeds_access_segment_group">ჯგუფი</string>
-    <string name="feeds_access_segment_other">სხვა</string>
-    <string name="feeds_access_search_users">მომხმარებლების ძიება</string>
-    <string name="feeds_access_select_group">აირჩიეთ ჯგუფი</string>
-    <string name="feeds_access_selected">არჩეული: %1$s</string>
-    <string name="feeds_permission_deny">უარყოფა</string>
-    <string name="feeds_allow_search">ნებისმიერს feed-ის ძიების ნება დართე</string>
-    <string name="feeds_enable_memories">მეხსიერების ჩართვა</string>
-    <string name="feeds_create_first_post">პირველი პოსტის შექმნა</string>
-    <string name="feeds_post_content">პოსტის შინაარსი</string>
-    <string name="feeds_rss_mode_posts">პოსტები</string>
-    <string name="feeds_rss_mode_posts_comments">პოსტები და კომენტარები</string>
-    <string name="feeds_unsubscribe_confirm">ფიდის გამოწერის გაუქმება?</string>
-    <string name="feeds_unsubscribe_confirm_message">ამ ფიდიდან განახლებებს აღარ მიიღებთ. ხელახლა გამოწერა ნებისმიერ დროს შეგიძლიათ.</string>
-    <string name="feeds_settings_unsubscribe_section">crm-ის გამოწერის გაუქმება</string>
-    <string name="feeds_delete_feed_description">სამუდამოდ წაშალეთ ეს ფიდი და მთელი მისი შინაარსი.</string>
-    <string name="feeds_access_management">წვდომის მართვა</string>
-    <string name="feeds_access_management_desc">აკონტროლეთ ვის შეუძლია ამ feed-ის ნახვა და მასთან ურთიერთობა</string>
-    <string name="feeds_access_level_comment_full">კომენტარი, რეაქცია და ნახვა</string>
-    <string name="feeds_access_level_react_full">რეაქცია და ნახვა</string>
-    <string name="feeds_access_add_title">წვდომის დამატება</string>
-    <string name="feeds_access_add_subtitle">აირჩიეთ მომხმარებელი, ჯგუფი ან სხვა წესი წვდომის გადასაცემად.</string>
-    <string name="feeds_access_select_rule">წვდომის წესის არჩევა</string>
-    <string name="feeds_source_url_hint_feed">არხის ერთეულის ID ან ანაბეჭდი</string>
-    <string name="feeds_source_credibility_label">სანდოობა</string>
-    <string name="feeds_source_transform_hint">ტრეკინგის ნომერი</string>
-    <string name="feeds_source_transform_help">დატოვეთ ცარიელი გამოსართავად.</string>
-
-    <string name="feeds_scroll_to_top">დასაწყისზე დაბრუნება</string>
-    <string name="feeds_settings_title">%1$s-ის პარამეტრები</string>
-    <string name="feeds_settings_name_cancel_cd">რედაქტირების გაუქმება</string>
-    <string name="feeds_access_authenticated_desc">ნებისმიერი ავტორიზებული მომხმარებელი</string>
-    <string name="feeds_access_anyone_desc">ანონიმური მომხმარებლების ჩათვლით</string>
-    <string name="feeds_source_last_checked">ბოლოს შემოწმდა %1$s</string>
-    <string name="feeds_source_polling_interval">შემოწმება ყოველ %1$s</string>
-    <string name="feeds_permission_request_title">ნებართვის მოთხოვნა</string>
-    <string name="feeds_permission_request_message">%1$s ითხოვს შემდეგ ნებართვას:</string>
-    <string name="feeds_permission_allow">დაშვება</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d პოსტი</item>
-        <item quantity="other">%1$d პოსტი</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ინტერესის დამატება</item>
-        <item quantity="other">%1$d ინტერესის დამატება</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d წლის წინ, ამ დღეს</item>
-        <item quantity="other">%1$d წლის წინ, ამ დღეს</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d სურათი</item>
-        <item quantity="other">%1$d სურათი</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d დანართი</item>
-        <item quantity="other">%1$d დანართი</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d კომენტარი</item>
-        <item quantity="other">%1$d კომენტარი</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">კიდევ %1$d კომენტარის ნახვა</item>
-        <item quantity="other">კიდევ %1$d კომენტარის ნახვა</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d წუთი</item>
-        <item quantity="other">%1$d წუთი</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d საათი</item>
-        <item quantity="other">%1$d საათი</item>
-    </plurals>
-
 </resources>

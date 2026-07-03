@@ -209,10 +209,6 @@
     <string name="about_check_network_error">No se pudo conectar con el servidor de actualizaciones</string>
     <string name="about_check_download_failed">Falló la descarga</string>
     <string name="notifications_empty">Sin notificaciones</string>
-    <string name="notifications_empty_unread">Estás al día</string>
-    <string name="notifications_tab_unread">No leídas</string>
-    <string name="notifications_tab_unread_count">No leídas (%1$d)</string>
-    <string name="notifications_tab_all">Todas</string>
     <string name="notifications_clear_all">Borrar todo</string>
     <string name="notifications_clear_all_title">¿Borrar todas las notificaciones?</string>
     <string name="notifications_clear_all_message">Esto eliminará todas las notificaciones. No se pueden recuperar.</string>
@@ -292,9 +288,4 @@
     <string name="stepup_error_code">Ese código es incorrecto o ha caducado.</string>
     <string name="stepup_error_passkey">La verificación con la clave de acceso ha fallado. Inténtalo de nuevo.</string>
     <string name="stepup_error_oauth">No se pudo verificar con esa cuenta. Inténtalo de nuevo.</string>
-    <string name="common_logout_confirm_title">Cerrá sesión</string>
-    <string name="reaction_remove">Quitar</string>
-
-    <string name="common_logout_confirm_message">¿Estás seguro de que querés cerrar sesión? Vas a tener que iniciar sesión de nuevo para acceder a tu cuenta.</string>
-
 </resources>

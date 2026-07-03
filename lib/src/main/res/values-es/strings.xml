@@ -65,10 +65,6 @@
     <string name="notifications_open">Notificaciones</string>
     <string name="notifications_title">Notificaciones</string>
     <string name="notifications_empty">No hay notificaciones</string>
-    <string name="notifications_empty_unread">Estás al día</string>
-    <string name="notifications_tab_unread">No leídas</string>
-    <string name="notifications_tab_unread_count">No leídas (%1$d)</string>
-    <string name="notifications_tab_all">Todas</string>
     <string name="notifications_mark_all_read">Marcar todo como leído</string>
     <string name="notifications_clear_all">Borrar todo</string>
     <string name="notifications_loading">Cargando…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Abriendo archivo…</string>
     <string name="common_no_app_for_file">Ninguna app puede abrir este archivo</string>
     <string name="common_file_open_failed">No se pudo abrir el archivo</string>
-
-    <string name="common_logout_confirm_title">Cerrar sesión</string>
-    <string name="common_logout_confirm_message">¿Seguro que desea cerrar sesión? Deberá iniciar sesión de nuevo para acceder a su cuenta.</string>
-    <string name="reaction_remove">Quitar</string>
-
 </resources>

@@ -65,10 +65,6 @@
     <string name="notifications_open">Notifikasyon</string>
     <string name="notifications_title">Notifikasyon</string>
     <string name="notifications_empty">Pa gen notifikasyon</string>
-    <string name="notifications_empty_unread">Ou wè tout bagay deja</string>
-    <string name="notifications_tab_unread">Poko li</string>
-    <string name="notifications_tab_unread_count">Poko li (%1$d)</string>
-    <string name="notifications_tab_all">Tout</string>
     <string name="notifications_mark_all_read">Make tout kòm li</string>
     <string name="notifications_clear_all">Efase tout</string>
     <string name="notifications_loading">Ap chaje…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Ap ouvri fichye…</string>
     <string name="common_no_app_for_file">Pa gen okenn app ki ka ouvri fichye sa a</string>
     <string name="common_file_open_failed">Nou pa t ka ouvri fichye a</string>
-
-    <string name="common_logout_confirm_title">Dekonekte</string>
-    <string name="common_logout_confirm_message">Èske ou sèten ou vle dekonekte? W ap bezwen konekte ankò pou jwenn aksè nan kont ou.</string>
-    <string name="reaction_remove">Efase</string>
-
 </resources>

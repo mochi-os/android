@@ -16,8 +16,10 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import org.mochios.android.auth.AuthRepository
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
 
 /**
  * Server-driven transport selection. After auth, the client asks the user's
@@ -83,11 +85,11 @@ object PushTransport {
             return
         }
 
-        val authRepository = EntryPointAccessors
+        val tokenApi = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
-            .authRepository()
+            .tokenApi()
         val setup = try {
-            fetchSetup(authRepository, client, server)
+            fetchSetup(tokenApi, client, server)
         } catch (e: Exception) {
             Log.w(TAG, "fetchSetup($server) failed: ${e.javaClass.simpleName}: ${e.message}", e)
             null
@@ -109,12 +111,10 @@ object PushTransport {
                     runCatching { PushService.stop(context) }
                     Log.i(TAG, "fetchSetup failed; honouring cached FCM transport (no fallback)")
                 }
-
                 TRANSPORT_UNIFIEDPUSH -> {
                     startUnifiedPush(context, sessionManager)
                     Log.i(TAG, "fetchSetup failed; honouring cached UnifiedPush transport")
                 }
-
                 else -> {
                     runCatching { PushService.stop(context) }
                     Log.i(TAG, "fetchSetup failed and no cached transport; standing by")
@@ -127,13 +127,7 @@ object PushTransport {
         if (transport == TRANSPORT_FCM) {
             val configJson = setup.optJSONObject("firebase_config")
             val firebaseConfig = configJson?.let(::parseFirebaseConfig)
-            if (firebaseConfig != null && FcmRegistrar.connect(
-                    context,
-                    client,
-                    server,
-                    firebaseConfig
-                )
-            ) {
+            if (firebaseConfig != null && FcmRegistrar.connect(context, client, server, firebaseConfig)) {
                 recordTransport(context, server, TRANSPORT_FCM)
                 // Stop the UnifiedPush FG distributor if it's running from
                 // a prior session — no "listening for notifications"
@@ -184,11 +178,13 @@ object PushTransport {
     }
 
     private suspend fun fetchSetup(
-        authRepository: AuthRepository,
+        tokenApi: TokenApi,
         client: OkHttpClient,
         server: String,
     ): JSONObject? {
-        val appToken = authRepository.fetchToken("notifications").getOrNull() ?: return null
+        val appToken = runCatching {
+            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+        }.getOrNull() ?: return null
         val url = server.trimEnd('/') + "/notifications/-/push/setup"
         // GET — the action takes no parameters; server reads from settings.
         val request = Request.Builder()

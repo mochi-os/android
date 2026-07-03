@@ -65,10 +65,6 @@
     <string name="notifications_open">Bildirimler</string>
     <string name="notifications_title">Bildirimler</string>
     <string name="notifications_empty">Bildirim yok</string>
-    <string name="notifications_empty_unread">Hepsini gördünüz</string>
-    <string name="notifications_tab_unread">Okunmamış</string>
-    <string name="notifications_tab_unread_count">Okunmamış (%1$d)</string>
-    <string name="notifications_tab_all">Tümü</string>
     <string name="notifications_mark_all_read">Tümünü okundu olarak işaretle</string>
     <string name="notifications_clear_all">Tümünü temizle</string>
     <string name="notifications_loading">Yükleniyor…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Dosya açılıyor…</string>
     <string name="common_no_app_for_file">Bu dosyayı açabilecek uygulama yok</string>
     <string name="common_file_open_failed">Dosya açılamadı</string>
-    <string name="common_logout_confirm_title">Oturumu kapat</string>
-    <string name="reaction_remove">Temizle</string>
-
-    <string name="common_logout_confirm_message">Oturumu kapatmak istediğinizden emin misiniz? Hesabınıza erişmek için tekrar oturum açmanız gerekecek.</string>
-
 </resources>

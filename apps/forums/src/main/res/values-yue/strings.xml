@@ -210,10 +210,4 @@
     <string name="forums_saved_title">已儲存</string>
     <string name="forums_saved_remove">由已儲存中移除</string>
     <string name="forums_saved_clear_all">全部清除</string>
-    <string name="forums_saved_save">儲存留返遲啲睇</string>
-    <string name="forums_saved_clear_confirm_title">清除所有已儲存嘅帖文？</string>
-    <string name="forums_saved_clear_confirm_body">咁樣會將所有帖文由你嘅儲存清單度移除。呢個動作無法復原。</string>
-    <string name="forums_saved_empty_title">仲未儲存任何嘢</string>
-    <string name="forums_saved_empty_subtitle">撳任何帖文上面嘅書籤，就可以儲存喺呢度遲啲睇。</string>
-    <string name="forums_saved_error_clear">清除已儲存嘅帖文失敗</string>
 </resources>

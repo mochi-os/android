@@ -16,6 +16,8 @@
     <string name="feeds_settings">설정</string>
     <string name="feeds_no_posts_yet">아직 게시물이 없어요</string>
     <string name="feeds_default_sort">기본 정렬</string>
+    <string name="feeds_suggested_interests_add">추가</string>
+    <string name="feeds_suggested_interests_dismiss">숨기기</string>
     <string name="feeds_unread">읽지 않음</string>
     <string name="feeds_filter_all">전체</string>
     <string name="feeds_sort_label">정렬</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">서버: %1$s</string>
     <string name="feeds_suggested_interests">추천 관심사</string>
     <string name="feeds_suggested_interests_empty">아직 추천이 없습니다</string>
-    <string name="feeds_suggested_interests_title">%1$s의 관심사를 추가할까요?</string>
-    <string name="feeds_suggested_interests_subtitle">이 피드는 다음 주제를 다룹니다. 맞춤 순위 지정을 위해 관심사에 추가할 항목을 선택하세요.</string>
-    <string name="feeds_suggested_interests_skip">건너뛰기</string>
+    <string name="feeds_suggested_interests_count">게시물 %1$d개</string>
     <string name="feeds_tag_more">관심사 조정</string>
     <string name="feeds_tag_more_up">비슷한 항목 더 보기</string>
     <string name="feeds_tag_more_down">비슷한 항목 덜 보기</string>
@@ -211,94 +211,6 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">새 게시물 %d개</item>
     </plurals>
-    <string name="feeds_caught_up">모두 확인했습니다</string>
     <string name="feeds_all_caught_up">모두 확인했어요</string>
     <string name="feeds_view_all_posts">모든 게시물 보기</string>
-    <string name="feeds_markdown_supported">마크다운 지원됨</string>
-    <string name="feeds_back">뒤로</string>
-    <string name="feeds_confirm">확인</string>
-    <string name="feeds_rss_feed">RSS 피드</string>
-    <string name="feeds_unsubscribe">구독 취소</string>
-    <string name="feeds_unsubscribed">구독이 취소되었어요</string>
-    <string name="feeds_settings_section_identity">신원</string>
-    <string name="feeds_settings_field_name">이름</string>
-    <string name="feeds_settings_field_entity_id">엔티티 ID</string>
-    <string name="feeds_settings_field_fingerprint">지문</string>
-    <string name="feeds_settings_field_server">서버</string>
-    <string name="feeds_settings_name_edit_cd">이름 편집</string>
-    <string name="feeds_settings_name_save_cd">이름 저장</string>
-    <string name="feeds_access_subject_anyone">누구나</string>
-    <string name="feeds_access_subject_authenticated">인증된 사용자</string>
-    <string name="feeds_access_level_view_full">보기 전용</string>
-    <string name="feeds_access_level_none_full">접근 권한 없음</string>
-    <string name="feeds_access_segment_user">사용자</string>
-    <string name="feeds_access_segment_group">그룹</string>
-    <string name="feeds_access_segment_other">기타</string>
-    <string name="feeds_access_search_users">사용자 검색</string>
-    <string name="feeds_access_select_group">그룹 선택</string>
-    <string name="feeds_access_selected">선택됨: %1$s</string>
-    <string name="feeds_permission_deny">거부</string>
-    <string name="feeds_allow_search">누구나 피드를 검색할 수 있도록 허용</string>
-    <string name="feeds_enable_memories">메모리 사용</string>
-    <string name="feeds_create_first_post">첫 게시물을 작성하세요</string>
-    <string name="feeds_post_content">게시물 내용</string>
-    <string name="feeds_rss_mode_posts">게시물</string>
-    <string name="feeds_rss_mode_posts_comments">게시물 및 댓글</string>
-    <string name="feeds_unsubscribe_confirm">피드 구독을 취소할까요?</string>
-    <string name="feeds_unsubscribe_confirm_message">이 피드의 업데이트를 더 이상 받지 않게 됩니다. 언제든지 다시 구독할 수 있습니다.</string>
-    <string name="feeds_settings_unsubscribe_section">피드 구독 취소</string>
-    <string name="feeds_delete_feed_description">이 피드와 모든 콘텐츠를 영구적으로 삭제해요.</string>
-    <string name="feeds_access_management">접근 관리</string>
-    <string name="feeds_access_management_desc">이 피드를 누가 보고 상호작용할 수 있는지 제어하세요</string>
-    <string name="feeds_access_level_comment_full">댓글, 반응 및 보기</string>
-    <string name="feeds_access_level_react_full">반응 및 보기</string>
-    <string name="feeds_access_add_title">접근 추가</string>
-    <string name="feeds_access_add_subtitle">접근 권한을 부여할 사용자, 그룹 또는 다른 규칙을 선택해 주세요.</string>
-    <string name="feeds_access_select_rule">접근 규칙 선택</string>
-    <string name="feeds_source_url_hint_feed">피드 엔티티 ID 또는 지문</string>
-    <string name="feeds_source_credibility_label">신뢰도</string>
-    <string name="feeds_source_transform_hint">영어로 번역하여 글머리 기호로 표시해 주세요.</string>
-    <string name="feeds_source_transform_help">비활성화하려면 비워 두세요.</string>
-
-    <string name="feeds_scroll_to_top">맨 위로</string>
-    <string name="feeds_settings_title">%1$s 설정</string>
-    <string name="feeds_settings_name_cancel_cd">편집 취소</string>
-    <string name="feeds_access_authenticated_desc">로그인한 모든 사용자</string>
-    <string name="feeds_access_anyone_desc">익명 사용자 포함</string>
-    <string name="feeds_source_last_checked">마지막 확인: %1$s</string>
-    <string name="feeds_source_polling_interval">%1$s마다 폴링</string>
-    <string name="feeds_permission_request_title">권한 요청</string>
-    <string name="feeds_permission_request_message">%1$s이(가) 다음 권한을 요청하고 있습니다:</string>
-    <string name="feeds_permission_allow">허용</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">게시물 %1$d개</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">관심사 %1$d개 추가</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d년 전 오늘</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="other">이미지 %1$d개</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="other">첨부 파일 %1$d개</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="other">댓글 %1$d개</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="other">댓글 %1$d개 더 보기</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d분</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d시간</item>
-    </plurals>
-
 </resources>

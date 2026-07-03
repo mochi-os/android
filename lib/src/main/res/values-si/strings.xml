@@ -65,10 +65,6 @@
     <string name="notifications_open">දැනුම්දීම්</string>
     <string name="notifications_title">දැනුම්දීම්</string>
     <string name="notifications_empty">දැනුම්දීම් නැත</string>
-    <string name="notifications_empty_unread">සියල්ල කියවා අවසන්</string>
-    <string name="notifications_tab_unread">නොකියවූ</string>
-    <string name="notifications_tab_unread_count">නොකියවූ (%1$d)</string>
-    <string name="notifications_tab_all">සියල්ල</string>
     <string name="notifications_mark_all_read">සියල්ල කියවූ ලෙස සලකුණු කරන්න</string>
     <string name="notifications_clear_all">සියල්ල හිස් කරන්න</string>
     <string name="notifications_loading">පූරණය වෙමින්…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ගොනුව විවෘත කරමින්…</string>
     <string name="common_no_app_for_file">මෙම ගොනුව විවෘත කළ හැකි යෙදුමක් නැත</string>
     <string name="common_file_open_failed">ගොනුව විවෘත කළ නොහැකි විය</string>
-    <string name="common_logout_confirm_title">ඉවත් වන්න</string>
-    <string name="reaction_remove">හිස් කරන්න</string>
-
-    <string name="common_logout_confirm_message">ඔබට ඉවත් වීමට අවශ්‍ය බව විශ්වාසද? ඔබගේ ගිණුමට ප්‍රවේශ වීමට නැවත පිවිසීමට සිදුවේ.</string>
-
 </resources>

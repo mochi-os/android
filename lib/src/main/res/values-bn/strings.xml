@@ -65,10 +65,6 @@
     <string name="notifications_open">বিজ্ঞপ্তি</string>
     <string name="notifications_title">বিজ্ঞপ্তি</string>
     <string name="notifications_empty">কোনো বিজ্ঞপ্তি নেই</string>
-    <string name="notifications_empty_unread">সব দেখা হয়ে গেছে</string>
-    <string name="notifications_tab_unread">অপঠিত</string>
-    <string name="notifications_tab_unread_count">অপঠিত (%1$d)</string>
-    <string name="notifications_tab_all">সব</string>
     <string name="notifications_mark_all_read">সব পঠিত হিসেবে চিহ্নিত করুন</string>
     <string name="notifications_clear_all">সব পরিষ্কার করুন</string>
     <string name="notifications_loading">লোড হচ্ছে…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ফাইল খোলা হচ্ছে…</string>
     <string name="common_no_app_for_file">কোনো অ্যাপ এই ফাইলটি খুলতে পারে না</string>
     <string name="common_file_open_failed">ফাইল খোলা যায়নি</string>
-
-    <string name="common_logout_confirm_title">লগ আউট</string>
-    <string name="common_logout_confirm_message">আপনি কি নিশ্চিত যে আপনি লগ আউট করতে চান? আপনার অ্যাকাউন্টে প্রবেশ করতে আপনাকে আবার লগ ইন করতে হবে।</string>
-    <string name="reaction_remove">মুছে ফেলুন</string>
-
 </resources>

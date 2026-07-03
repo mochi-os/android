@@ -437,5 +437,4 @@
     <string name="system_status_awaiting_routing">Yatiyäwinaka apaña suyaskiri</string>
     <string name="system_status_relay_service">Relay servicio</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservanaka · %3$d circuitos · %4$d jarkʼata</string>
-    <string name="route_target_select">Ajlliña</string>
 </resources>

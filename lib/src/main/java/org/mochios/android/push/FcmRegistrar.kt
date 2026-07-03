@@ -18,7 +18,9 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import org.mochios.android.auth.AuthRepository
+import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
@@ -82,19 +84,12 @@ object FcmRegistrar {
             return false
         }
 
-        val authRepository = EntryPointAccessors
+        val tokenApi = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
-            .authRepository()
+            .tokenApi()
 
         return try {
-            postRegisterFcm(
-                authRepository,
-                client,
-                server,
-                token,
-                installId,
-                DeviceName.resolve(context)
-            )
+            postRegisterFcm(tokenApi, client, server, token, installId, DeviceName.resolve(context))
             Log.i(TAG, "Registered FCM token with $server (install=$installId)")
             true
         } catch (e: Exception) {
@@ -122,8 +117,7 @@ object FcmRegistrar {
         }
         try {
             app.delete()
-        } catch (_: Exception) { /* idempotent */
-        }
+        } catch (_: Exception) { /* idempotent */ }
     }
 
     private fun initIfNeeded(context: Context, config: FirebaseConfig): FirebaseApp {
@@ -165,15 +159,16 @@ object FcmRegistrar {
         }
 
     private suspend fun postRegisterFcm(
-        authRepository: AuthRepository,
+        tokenApi: TokenApi,
         client: OkHttpClient,
         server: String,
         token: String,
         installId: String,
         device: String,
     ) {
-        val appToken = authRepository.fetchToken("notifications").getOrNull()
-            ?: error("Could not mint notifications app token")
+        val appToken = runCatching {
+            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+        }.getOrNull() ?: error("Could not mint notifications app token")
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
         val body = JSONObject()
             .put("token", token)

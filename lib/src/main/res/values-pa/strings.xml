@@ -65,10 +65,6 @@
     <string name="notifications_open">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
     <string name="notifications_title">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
     <string name="notifications_empty">ਕੋਈ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ</string>
-    <string name="notifications_empty_unread">ਸਭ ਕੁਝ ਪੜ੍ਹ ਲਿਆ</string>
-    <string name="notifications_tab_unread">ਅਣਪੜ੍ਹੇ</string>
-    <string name="notifications_tab_unread_count">ਅਣਪੜ੍ਹੇ (%1$d)</string>
-    <string name="notifications_tab_all">ਸਾਰੇ</string>
     <string name="notifications_mark_all_read">ਸਾਰੇ ਪੜ੍ਹੇ ਮਾਰਕ ਕਰੋ</string>
     <string name="notifications_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
     <string name="notifications_loading">ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ (ਗ਼ਲਤੀਆਂ ਨਾਲ)</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ਫਾਈਲ ਖੋਲ੍ਹੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="common_no_app_for_file">ਕੋਈ ਐਪ ਇਸ ਫਾਈਲ ਨੂੰ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੀ</string>
     <string name="common_file_open_failed">ਫਾਈਲ ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕੀ</string>
-    <string name="common_logout_confirm_title">ਲੌਗ ਆਊਟ</string>
-    <string name="reaction_remove">ਸਾਫ਼ ਕਰੋ</string>
-
-    <string name="common_logout_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਲੌਗ ਆਊਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਆਪਣੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰਨਾ ਪਵੇਗਾ।</string>
-
 </resources>

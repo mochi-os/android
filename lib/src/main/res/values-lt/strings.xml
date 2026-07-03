@@ -65,10 +65,6 @@
     <string name="notifications_open">Pranešimai</string>
     <string name="notifications_title">Pranešimai</string>
     <string name="notifications_empty">Pranešimų nėra</string>
-    <string name="notifications_empty_unread">Viskas perskaityta</string>
-    <string name="notifications_tab_unread">Neperskaityti</string>
-    <string name="notifications_tab_unread_count">Neperskaityti (%1$d)</string>
-    <string name="notifications_tab_all">Visi</string>
     <string name="notifications_mark_all_read">Pažymėti visus skaitytais</string>
     <string name="notifications_clear_all">Išvalyti viską</string>
     <string name="notifications_loading">Įkeliama…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Atidaromas failas…</string>
     <string name="common_no_app_for_file">Nėra programėlės, galinčios atidaryti šį failą</string>
     <string name="common_file_open_failed">Nepavyko atidaryti failo</string>
-    <string name="common_logout_confirm_title">Atsijungti</string>
-    <string name="reaction_remove">Išvalyti</string>
-
-    <string name="common_logout_confirm_message">Ar tikrai norite atsijungti? Norėdami pasiekti savo paskyrą, turėsite prisijungti iš naujo.</string>
-
 </resources>

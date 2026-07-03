@@ -65,10 +65,6 @@
     <string name="notifications_open">Oznámení</string>
     <string name="notifications_title">Oznámení</string>
     <string name="notifications_empty">Žádná oznámení</string>
-    <string name="notifications_empty_unread">Vše máte přečteno</string>
-    <string name="notifications_tab_unread">Nepřečtené</string>
-    <string name="notifications_tab_unread_count">Nepřečtené (%1$d)</string>
-    <string name="notifications_tab_all">Vše</string>
     <string name="notifications_mark_all_read">Označit vše jako přečtené</string>
     <string name="notifications_clear_all">Vymazat vše</string>
     <string name="notifications_loading">Načítám…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Otevírání souboru…</string>
     <string name="common_no_app_for_file">Tento soubor nelze otevřít žádnou aplikací</string>
     <string name="common_file_open_failed">Soubor se nepodařilo otevřít</string>
-
-    <string name="common_logout_confirm_title">Odhlásit se</string>
-    <string name="common_logout_confirm_message">Opravdu se chcete odhlásit? Pro přístup ke svému účtu se budete muset znovu přihlásit.</string>
-    <string name="reaction_remove">Zrušit</string>
-
 </resources>

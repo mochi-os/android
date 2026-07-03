@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">రూటింగ్ కోసం వేచి ఉన్న సందేశాలు</string>
     <string name="system_status_relay_service">రిలే సేవ</string>
     <string name="system_status_relay_service_value">%1$d / %2$d రిజర్వేషన్‌లు · %3$d సర్క్యూట్‌లు · %4$d తిరస్కరించబడింది</string>
-    <string name="route_target_select">ఎంచుకోండి</string>
 </resources>

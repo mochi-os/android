@@ -65,10 +65,6 @@
     <string name="notifications_open">Notificacionkuna</string>
     <string name="notifications_title">Notificacionkuna</string>
     <string name="notifications_empty">Mana willaykuna</string>
-    <string name="notifications_empty_unread">Llapanta ñawinchashkañam</string>
-    <string name="notifications_tab_unread">Mana ñawinchashka</string>
-    <string name="notifications_tab_unread_count">Mana ñawinchashka (%1$d)</string>
-    <string name="notifications_tab_all">Llapan</string>
     <string name="notifications_mark_all_read">Llapanta ñawinchasqaman churay</string>
     <string name="notifications_clear_all">Llapan pichay</string>
     <string name="notifications_loading">Wichachichkan…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Archivota kichachkan…</string>
     <string name="common_no_app_for_file">Mana app kay archivota kichayta atinchu</string>
     <string name="common_file_open_failed">Archivota mana kichayta atikunchu</string>
-    <string name="common_logout_confirm_title">Lluqsiy</string>
-    <string name="reaction_remove">Pichay</string>
-
-    <string name="common_logout_confirm_message">¿Chiqaptapunichu lluqsiyta munanki? Cuentaykiman kutimunaykipaqqa, musuqmanta yaykunayki kanqa.</string>
-
 </resources>

@@ -65,10 +65,6 @@
     <string name="notifications_open">Obavijesti</string>
     <string name="notifications_title">Obavijesti</string>
     <string name="notifications_empty">Nema obavijesti</string>
-    <string name="notifications_empty_unread">Sve ste pregledali</string>
-    <string name="notifications_tab_unread">Nepročitano</string>
-    <string name="notifications_tab_unread_count">Nepročitano (%1$d)</string>
-    <string name="notifications_tab_all">Sve</string>
     <string name="notifications_mark_all_read">Označi sve pročitano</string>
     <string name="notifications_clear_all">Očisti sve</string>
     <string name="notifications_loading">Učitavanje…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Otvaranje datoteke…</string>
     <string name="common_no_app_for_file">Nijedna aplikacija ne može otvoriti ovu datoteku</string>
     <string name="common_file_open_failed">Datoteku nije moguće otvoriti</string>
-
-    <string name="common_logout_confirm_title">Odjava</string>
-    <string name="common_logout_confirm_message">Jeste li sigurni da se želite odjaviti? Za pristup svom računu morat ćete se ponovno prijaviti.</string>
-    <string name="reaction_remove">Ukloni</string>
-
 </resources>

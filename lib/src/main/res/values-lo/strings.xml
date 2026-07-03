@@ -65,10 +65,6 @@
     <string name="notifications_open">ການແຈ້ງເຕືອນ</string>
     <string name="notifications_title">ການແຈ້ງເຕືອນ</string>
     <string name="notifications_empty">ບໍ່ມີການແຈ້ງເຕືອນ</string>
-    <string name="notifications_empty_unread">ອ່ານໝົດແລ້ວ</string>
-    <string name="notifications_tab_unread">ຍັງບໍ່ໄດ້ອ່ານ</string>
-    <string name="notifications_tab_unread_count">ຍັງບໍ່ໄດ້ອ່ານ (%1$d)</string>
-    <string name="notifications_tab_all">ທັງໝົດ</string>
     <string name="notifications_mark_all_read">ໝາຍວ່າອ່ານທັງໝົດແລ້ວ</string>
     <string name="notifications_clear_all">ລ້າງທັງໝົດ</string>
     <string name="notifications_loading">ກຳລັງໂຫຼດ…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ກຳລັງເປີດໄຟລ໌…</string>
     <string name="common_no_app_for_file">ບໍ່ມີແອັບໃດສາມາດເປີດໄຟລ໌ນີ້ໄດ້</string>
     <string name="common_file_open_failed">ບໍ່ສາມາດເປີດໄຟລ໌ໄດ້</string>
-    <string name="common_logout_confirm_title">ອອກຈາກລະບົບ</string>
-    <string name="reaction_remove">ລ້າງ</string>
-
-    <string name="common_logout_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການອອກຈາກລະບົບ? ທ່ານຈະຕ້ອງເຂົ້າສູ່ລະບົບອີກຄັ້ງເພື່ອເຂົ້າເຖິງບັນຊີຂອງທ່ານ.</string>
-
 </resources>

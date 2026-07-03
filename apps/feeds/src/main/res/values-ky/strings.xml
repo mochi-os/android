@@ -16,6 +16,8 @@
     <string name="feeds_settings">Жөндөөлөр</string>
     <string name="feeds_no_posts_yet">Посттор азырынча жок</string>
     <string name="feeds_default_sort">Демейки иргөө</string>
+    <string name="feeds_suggested_interests_add">Кошуу</string>
+    <string name="feeds_suggested_interests_dismiss">Жашыруу</string>
     <string name="feeds_unread">Окулган эмес</string>
     <string name="feeds_filter_all">Баары</string>
     <string name="feeds_sort_label">Сорттоо</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Сервер: %1$s</string>
     <string name="feeds_suggested_interests">Сунушталган кызыкчылыктар</string>
     <string name="feeds_suggested_interests_empty">Азырынча сунуш жок</string>
-    <string name="feeds_suggested_interests_title">%1$s ичинен кызыкчылыктарды кошосузбу?</string>
-    <string name="feeds_suggested_interests_subtitle">Бул лента ушул темаларды камтыйт. Жекелештирилген иргөө үчүн кызыкчылыктарыңызга кошуу үчүн кайсынысын тандаңыз.</string>
-    <string name="feeds_suggested_interests_skip">Өткөрүп жиберүү</string>
+    <string name="feeds_suggested_interests_count">%1$d жазуу</string>
     <string name="feeds_tag_more">Кызыкчылыкты ыңгайлаштыруу</string>
     <string name="feeds_tag_more_up">Буга окшогондорду көбүрөөк көрсөтүү</string>
     <string name="feeds_tag_more_down">Буга окшогондорду азыраак көрсөтүү</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d жаңы жазуу</item>
         <item quantity="other">%d жаңы жазуу</item>
     </plurals>
-    <string name="feeds_caught_up">Баарын көрдүңүз</string>
     <string name="feeds_all_caught_up">Баары окулду</string>
     <string name="feeds_view_all_posts">Бардык посттарды көрүү</string>
-    <string name="feeds_markdown_supported">Markdown колдоого алынат</string>
-    <string name="feeds_back">Артка</string>
-    <string name="feeds_confirm">Ырастоо</string>
-    <string name="feeds_rss_feed">RSS тасмасы</string>
-    <string name="feeds_unsubscribe">Жазылуудан баш тартуу</string>
-    <string name="feeds_unsubscribed">Жазылуудан баш тартылды</string>
-    <string name="feeds_settings_section_identity">Идентификация</string>
-    <string name="feeds_settings_field_name">Аты</string>
-    <string name="feeds_settings_field_entity_id">Субъект ID</string>
-    <string name="feeds_settings_field_fingerprint">Манжа изи</string>
-    <string name="feeds_settings_field_server">Сервер</string>
-    <string name="feeds_settings_name_edit_cd">Атын түзөтүү</string>
-    <string name="feeds_settings_name_save_cd">Атын сактоо</string>
-    <string name="feeds_access_subject_anyone">Каалаган адам</string>
-    <string name="feeds_access_subject_authenticated">Аныкталган колдонуучулар</string>
-    <string name="feeds_access_level_view_full">Көрүү гана</string>
-    <string name="feeds_access_level_none_full">Кирүү жок</string>
-    <string name="feeds_access_segment_user">Колдонуучу</string>
-    <string name="feeds_access_segment_group">Топ</string>
-    <string name="feeds_access_segment_other">Башка</string>
-    <string name="feeds_access_search_users">Колдонуучуларды издөө</string>
-    <string name="feeds_access_select_group">Топту тандоо</string>
-    <string name="feeds_access_selected">Тандалды: %1$s</string>
-    <string name="feeds_permission_deny">Четке кагуу</string>
-    <string name="feeds_allow_search">Түрмөктү издөөгө ар кимге уруксат берүү</string>
-    <string name="feeds_enable_memories">Эстеликтерди иштетүү</string>
-    <string name="feeds_create_first_post">Биринчи постту түзүү</string>
-    <string name="feeds_post_content">Пост мазмуну</string>
-    <string name="feeds_rss_mode_posts">Посттор</string>
-    <string name="feeds_rss_mode_posts_comments">Посттор жана комментарийлер</string>
-    <string name="feeds_unsubscribe_confirm">Лентага жазылуудан баш тартасызбы?</string>
-    <string name="feeds_unsubscribe_confirm_message">Бул лентадан жаңыртууларды албай каласыз. Каалаган убакта кайра жазылсаңыз болот.</string>
-    <string name="feeds_settings_unsubscribe_section">Лентадан жазылуудан баш тартуу</string>
-    <string name="feeds_delete_feed_description">Бул тасманы жана анын бардык мазмунун биротоло өчүрүү.</string>
-    <string name="feeds_access_management">Жеткини башкаруу</string>
-    <string name="feeds_access_management_desc">Бул түрмөктү ким көрүп, аны менен иштей аларын башкарыңыз</string>
-    <string name="feeds_access_level_comment_full">Комментарий, реакция жана көрүү</string>
-    <string name="feeds_access_level_react_full">Реакция кылуу жана көрүү</string>
-    <string name="feeds_access_add_title">Жетки кошуу</string>
-    <string name="feeds_access_add_subtitle">Кирүү берүү үчүн колдонуучуну, топту же башка эрежени тандаңыз.</string>
-    <string name="feeds_access_select_rule">Кирүү эрежесин тандоо</string>
-    <string name="feeds_source_url_hint_feed">Лента субъект ID же манжа изи</string>
-    <string name="feeds_source_credibility_label">Ишенимдүүлүк</string>
-    <string name="feeds_source_transform_hint">Англис тилине которуңуз жана пункт пункт менен көрсөтүңүз.</string>
-    <string name="feeds_source_transform_help">Өчүрүү үчүн бош калтыруу.</string>
-
-    <string name="feeds_scroll_to_top">Жогоруга кайтуу</string>
-    <string name="feeds_settings_title">%1$s жөндөөлөрү</string>
-    <string name="feeds_settings_name_cancel_cd">Түзөтүүнү жокко чыгаруу</string>
-    <string name="feeds_access_authenticated_desc">Системага кирген ар бир адам</string>
-    <string name="feeds_access_anyone_desc">Анонимдүү колдонуучуларды кошкондо</string>
-    <string name="feeds_source_last_checked">Акыркы текшерүү: %1$s</string>
-    <string name="feeds_source_polling_interval">Ар %1$s сайын текшерилет</string>
-    <string name="feeds_permission_request_title">Уруксат суроо</string>
-    <string name="feeds_permission_request_message">%1$s төмөнкү уруксатты сурап жатат:</string>
-    <string name="feeds_permission_allow">Уруксат берүү</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d пост</item>
-        <item quantity="other">%1$d пост</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d кызыгууну кошуу</item>
-        <item quantity="other">%1$d кызыгууну кошуу</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Бүгүндөн %1$d жыл мурун</item>
-        <item quantity="other">Бүгүндөн %1$d жыл мурун</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d сүрөт</item>
-        <item quantity="other">%1$d сүрөт</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d тиркеме</item>
-        <item quantity="other">%1$d тиркеме</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d пикир</item>
-        <item quantity="other">%1$d пикир</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Дагы %1$d пикирди көрүү</item>
-        <item quantity="other">Дагы %1$d пикирди көрүү</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d мүнөт</item>
-        <item quantity="other">%1$d мүнөт</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d саат</item>
-        <item quantity="other">%1$d саат</item>
-    </plurals>
-
 </resources>

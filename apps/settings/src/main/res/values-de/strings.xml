@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">Nachrichten, die auf Routing warten</string>
     <string name="system_status_relay_service">Relaisdienst</string>
     <string name="system_status_relay_service_value">%1$d / %2$d Reservierungen · %3$d Verbindungen · %4$d abgelehnt</string>
-    <string name="route_target_select">Auswählen</string>
 </resources>

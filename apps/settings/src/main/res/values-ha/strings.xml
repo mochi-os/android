@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">Saƙonni masu jiran turawa hanya</string>
     <string name="system_status_relay_service">Sabis na watsawa</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ajiyewa · %3$d da\'irori · %4$d an ƙi</string>
-    <string name="route_target_select">Zaɓa</string>
 </resources>

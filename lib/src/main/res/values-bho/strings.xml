@@ -65,10 +65,6 @@
     <string name="notifications_open">सूचना</string>
     <string name="notifications_title">सूचना</string>
     <string name="notifications_empty">कौनो सूचना नइखे</string>
-    <string name="notifications_empty_unread">सब पढ़ल हो गइल</string>
-    <string name="notifications_tab_unread">अनपढ़ल</string>
-    <string name="notifications_tab_unread_count">अनपढ़ल (%1$d)</string>
-    <string name="notifications_tab_all">सब</string>
     <string name="notifications_mark_all_read">सब पढ़ल चिह्नित करीं</string>
     <string name="notifications_clear_all">सब साफ करीं</string>
     <string name="notifications_loading">लोड हो रहल बा…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">फाइल खुल रहल बा…</string>
     <string name="common_no_app_for_file">ई फाइल खोले वाला कवनो ऐप नइखे</string>
     <string name="common_file_open_failed">फाइल ना खुल सकल</string>
-
-    <string name="common_logout_confirm_title">लॉग आउट करीं</string>
-    <string name="common_logout_confirm_message">का रउआ पक्का लॉग आउट करे के चाहत बानी? आपन खाता में फेर से पहुँचे खातिर रउआ के दोबारा लॉग इन करे के पड़ी।</string>
-    <string name="reaction_remove">हटाईं</string>
-
 </resources>

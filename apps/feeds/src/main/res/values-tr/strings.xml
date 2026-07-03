@@ -16,6 +16,8 @@
     <string name="feeds_settings">Ayarlar</string>
     <string name="feeds_no_posts_yet">Henüz gönderi yok</string>
     <string name="feeds_default_sort">Varsayılan sıralama</string>
+    <string name="feeds_suggested_interests_add">Ekle</string>
+    <string name="feeds_suggested_interests_dismiss">Gizle</string>
     <string name="feeds_unread">Okunmamış</string>
     <string name="feeds_filter_all">Tümü</string>
     <string name="feeds_sort_label">Sırala</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Sunucu: %1$s</string>
     <string name="feeds_suggested_interests">Önerilen ilgi alanları</string>
     <string name="feeds_suggested_interests_empty">Henüz öneri yok</string>
-    <string name="feeds_suggested_interests_title">%1$s kaynağından ilgi alanları eklensin mi?</string>
-    <string name="feeds_suggested_interests_subtitle">Bu akış şu konuları kapsıyor. Kişiselleştirilmiş sıralama için ilgi alanlarınıza hangilerini ekleyeceğinizi seçin.</string>
-    <string name="feeds_suggested_interests_skip">Atla</string>
+    <string name="feeds_suggested_interests_count">%1$d gönderi</string>
     <string name="feeds_tag_more">İlgi alanını ayarla</string>
     <string name="feeds_tag_more_up">Buna benzer daha fazla göster</string>
     <string name="feeds_tag_more_down">Buna benzer daha az göster</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d yeni gönderi</item>
         <item quantity="other">%d yeni gönderi</item>
     </plurals>
-    <string name="feeds_caught_up">Her şeyi gördünüz</string>
     <string name="feeds_all_caught_up">Hepsi okundu</string>
     <string name="feeds_view_all_posts">Tüm gönderileri görüntüle</string>
-    <string name="feeds_markdown_supported">Markdown destekli</string>
-    <string name="feeds_back">Geri</string>
-    <string name="feeds_confirm">Onayla</string>
-    <string name="feeds_rss_feed">RSS akışı</string>
-    <string name="feeds_unsubscribe">Aboneliği iptal et</string>
-    <string name="feeds_unsubscribed">Abonelik iptal edildi</string>
-    <string name="feeds_settings_section_identity">Kimlik</string>
-    <string name="feeds_settings_field_name">Ad</string>
-    <string name="feeds_settings_field_entity_id">Varlık kimliği</string>
-    <string name="feeds_settings_field_fingerprint">Parmak izi</string>
-    <string name="feeds_settings_field_server">Sunucu</string>
-    <string name="feeds_settings_name_edit_cd">Adı düzenle</string>
-    <string name="feeds_settings_name_save_cd">Adı kaydet</string>
-    <string name="feeds_access_subject_anyone">Herkes</string>
-    <string name="feeds_access_subject_authenticated">Kimliği doğrulanmış kullanıcılar</string>
-    <string name="feeds_access_level_view_full">Yalnızca görüntüleme</string>
-    <string name="feeds_access_level_none_full">Erişim yok</string>
-    <string name="feeds_access_segment_user">Kullanıcı</string>
-    <string name="feeds_access_segment_group">Grup</string>
-    <string name="feeds_access_segment_other">Diğer</string>
-    <string name="feeds_access_search_users">Kullanıcılarda ara</string>
-    <string name="feeds_access_select_group">Grup seç</string>
-    <string name="feeds_access_selected">Seçilen: %1$s</string>
-    <string name="feeds_permission_deny">Reddet</string>
-    <string name="feeds_allow_search">Herkesin feed\'i aramasına izin ver</string>
-    <string name="feeds_enable_memories">Anıları etkinleştir</string>
-    <string name="feeds_create_first_post">İlk gönderiyi oluştur</string>
-    <string name="feeds_post_content">Gönderi içeriği</string>
-    <string name="feeds_rss_mode_posts">Gönderiler</string>
-    <string name="feeds_rss_mode_posts_comments">Gönderiler ve yorumlar</string>
-    <string name="feeds_unsubscribe_confirm">Akış aboneliği iptal edilsin mi?</string>
-    <string name="feeds_unsubscribe_confirm_message">Bu akıştan güncelleme almayı bırakacaksınız. İstediğiniz zaman yeniden abone olabilirsiniz.</string>
-    <string name="feeds_settings_unsubscribe_section">Akış aboneliğini iptal et</string>
-    <string name="feeds_delete_feed_description">Bu akışı ve tüm içeriğini kalıcı olarak silin.</string>
-    <string name="feeds_access_management">Erişim yönetimi</string>
-    <string name="feeds_access_management_desc">Bu feed\'i kimin görüntüleyebileceğini ve etkileşime girebileceğini kontrol edin</string>
-    <string name="feeds_access_level_comment_full">Yorum yap, tepki ver ve görüntüle</string>
-    <string name="feeds_access_level_react_full">Tepki ver ve görüntüle</string>
-    <string name="feeds_access_add_title">Erişim ekle</string>
-    <string name="feeds_access_add_subtitle">Erişim vermek için bir kullanıcı, grup veya başka bir kural seçin.</string>
-    <string name="feeds_access_select_rule">Erişim kuralı seç</string>
-    <string name="feeds_source_url_hint_feed">Akış varlık kimliği veya parmak izi</string>
-    <string name="feeds_source_credibility_label">Güvenilirlik</string>
-    <string name="feeds_source_transform_hint">İngilizceye çevir ve madde işaretleri olarak göster.</string>
-    <string name="feeds_source_transform_help">Devre dışı bırakmak için boş bırakın.</string>
-
-    <string name="feeds_scroll_to_top">Başa dön</string>
-    <string name="feeds_settings_title">%1$s ayarları</string>
-    <string name="feeds_settings_name_cancel_cd">Düzenlemeyi iptal et</string>
-    <string name="feeds_access_authenticated_desc">Oturum açmış olan herkes</string>
-    <string name="feeds_access_anyone_desc">Anonim kullanıcılar dahil</string>
-    <string name="feeds_source_last_checked">Son kontrol %1$s</string>
-    <string name="feeds_source_polling_interval">%1$s aralıkla sorgulanıyor</string>
-    <string name="feeds_permission_request_title">İzin isteği</string>
-    <string name="feeds_permission_request_message">%1$s aşağıdaki izni istiyor:</string>
-    <string name="feeds_permission_allow">İzin ver</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d gönderi</item>
-        <item quantity="other">%1$d gönderi</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ilgi alanı ekle</item>
-        <item quantity="other">%1$d ilgi alanı ekle</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Bugün %1$d yıl önce</item>
-        <item quantity="other">Bugün %1$d yıl önce</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d görsel</item>
-        <item quantity="other">%1$d görsel</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d ek</item>
-        <item quantity="other">%1$d ek</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d yorum</item>
-        <item quantity="other">%1$d yorum</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d yorum daha görüntüle</item>
-        <item quantity="other">%1$d yorum daha görüntüle</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d dakika</item>
-        <item quantity="other">%1$d dakika</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d saat</item>
-        <item quantity="other">%1$d saat</item>
-    </plurals>
-
 </resources>

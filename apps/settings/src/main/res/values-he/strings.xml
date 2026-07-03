@@ -439,5 +439,4 @@
     <string name="system_status_awaiting_routing">הודעות הממתינות לניתוב</string>
     <string name="system_status_relay_service">שירות ממסר</string>
     <string name="system_status_relay_service_value">%1$d / %2$d הזמנות · %3$d מעגלים · %4$d נדחו</string>
-    <string name="route_target_select">בחר</string>
 </resources>

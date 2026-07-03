@@ -65,10 +65,6 @@
     <string name="notifications_open">通知</string>
     <string name="notifications_title">通知</string>
     <string name="notifications_empty">通知はありません</string>
-    <string name="notifications_empty_unread">すべて確認済みです</string>
-    <string name="notifications_tab_unread">未読</string>
-    <string name="notifications_tab_unread_count">未読 (%1$d)</string>
-    <string name="notifications_tab_all">すべて</string>
     <string name="notifications_mark_all_read">すべて既読にする</string>
     <string name="notifications_clear_all">すべてクリア</string>
     <string name="notifications_loading">読み込み中…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ファイルを開いています…</string>
     <string name="common_no_app_for_file">このファイルを開けるアプリがありません</string>
     <string name="common_file_open_failed">ファイルを開けませんでした</string>
-    <string name="common_logout_confirm_title">ログアウト</string>
-    <string name="reaction_remove">クリア</string>
-
-    <string name="common_logout_confirm_message">本当にログアウトしますか？アカウントにアクセスするには再度ログインする必要があります。</string>
-
 </resources>

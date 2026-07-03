@@ -65,10 +65,6 @@
     <string name="notifications_open">Notificacions</string>
     <string name="notifications_title">Notificacions</string>
     <string name="notifications_empty">Sense notificacions</string>
-    <string name="notifications_empty_unread">Estàs al dia</string>
-    <string name="notifications_tab_unread">No llegides</string>
-    <string name="notifications_tab_unread_count">No llegides (%1$d)</string>
-    <string name="notifications_tab_all">Totes</string>
     <string name="notifications_mark_all_read">Marca-ho tot com a llegit</string>
     <string name="notifications_clear_all">Esborra-ho tot</string>
     <string name="notifications_loading">S\'està carregant…</string>
@@ -294,9 +290,4 @@
     <string name="common_opening_file">S\'està obrint el fitxer…</string>
     <string name="common_no_app_for_file">Cap aplicació pot obrir aquest fitxer</string>
     <string name="common_file_open_failed">No s\'ha pogut obrir el fitxer</string>
-
-    <string name="common_logout_confirm_title">Tanca la sessió</string>
-    <string name="common_logout_confirm_message">Segur que voleu tancar la sessió? Haureu de tornar a iniciar la sessió per accedir al vostre compte.</string>
-    <string name="reaction_remove">Esborra</string>
-
 </resources>

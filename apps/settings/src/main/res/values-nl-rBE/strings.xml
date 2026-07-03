@@ -440,5 +440,4 @@
     <string name="system_status_awaiting_routing">Berichten die wachten op routering</string>
     <string name="system_status_relay_service">Relaisdienst</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reserveringen · %3$d circuits · %4$d geweigerd</string>
-    <string name="route_target_select">Selecteren</string>
 </resources>

@@ -16,6 +16,8 @@
     <string name="feeds_settings">Setări</string>
     <string name="feeds_no_posts_yet">Încă nicio postare</string>
     <string name="feeds_default_sort">Sortare implicită</string>
+    <string name="feeds_suggested_interests_add">Adaugă</string>
+    <string name="feeds_suggested_interests_dismiss">Ascunde</string>
     <string name="feeds_unread">Necitit</string>
     <string name="feeds_filter_all">Toate</string>
     <string name="feeds_sort_label">Sortează</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Interese sugerate</string>
     <string name="feeds_suggested_interests_empty">Nicio sugestie încă</string>
-    <string name="feeds_suggested_interests_title">Adăugați interese din %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Acest flux acoperă aceste subiecte. Selectați pe care doriți să le adăugați la interesele dvs. pentru o clasificare personalizată.</string>
-    <string name="feeds_suggested_interests_skip">Omite</string>
+    <string name="feeds_suggested_interests_count">%1$d postări</string>
     <string name="feeds_tag_more">Ajustați interesul</string>
     <string name="feeds_tag_more_up">Afișați mai multe similare</string>
     <string name="feeds_tag_more_down">Afișați mai puține similare</string>
@@ -213,112 +213,6 @@
         <item quantity="few">%d postări noi</item>
         <item quantity="other">%d de postări noi</item>
     </plurals>
-    <string name="feeds_caught_up">Ești la zi</string>
     <string name="feeds_all_caught_up">Ești la zi</string>
     <string name="feeds_view_all_posts">Vizualizează toate postările</string>
-    <string name="feeds_markdown_supported">Markdown acceptat</string>
-    <string name="feeds_back">Înapoi</string>
-    <string name="feeds_confirm">Confirmă</string>
-    <string name="feeds_rss_feed">Flux RSS</string>
-    <string name="feeds_unsubscribe">Dezabonează-te</string>
-    <string name="feeds_unsubscribed">Dezabonat</string>
-    <string name="feeds_settings_section_identity">Identitate</string>
-    <string name="feeds_settings_field_name">Nume</string>
-    <string name="feeds_settings_field_entity_id">ID entitate</string>
-    <string name="feeds_settings_field_fingerprint">Amprentă</string>
-    <string name="feeds_settings_field_server">Server</string>
-    <string name="feeds_settings_name_edit_cd">Editează numele</string>
-    <string name="feeds_settings_name_save_cd">Salvează numele</string>
-    <string name="feeds_access_subject_anyone">Oricine</string>
-    <string name="feeds_access_subject_authenticated">Utilizatori autentificați</string>
-    <string name="feeds_access_level_view_full">Doar vizualizare</string>
-    <string name="feeds_access_level_none_full">Fără acces</string>
-    <string name="feeds_access_segment_user">Utilizator</string>
-    <string name="feeds_access_segment_group">Grup</string>
-    <string name="feeds_access_segment_other">Altele</string>
-    <string name="feeds_access_search_users">Caută utilizatori</string>
-    <string name="feeds_access_select_group">Selectează grupul</string>
-    <string name="feeds_access_selected">Selectat: %1$s</string>
-    <string name="feeds_permission_deny">Refuză</string>
-    <string name="feeds_allow_search">Permite oricui să caute fluxul</string>
-    <string name="feeds_enable_memories">Activează memoriile</string>
-    <string name="feeds_create_first_post">Creează prima postare</string>
-    <string name="feeds_post_content">Conținut postare</string>
-    <string name="feeds_rss_mode_posts">Postări</string>
-    <string name="feeds_rss_mode_posts_comments">Postări și comentarii</string>
-    <string name="feeds_unsubscribe_confirm">Dezabonare de la flux?</string>
-    <string name="feeds_unsubscribe_confirm_message">Nu vei mai primi actualizări din acest flux. Te poți reabona oricând.</string>
-    <string name="feeds_settings_unsubscribe_section">Dezabonează-te de la feed</string>
-    <string name="feeds_delete_feed_description">Șterge definitiv acest flux și tot conținutul său.</string>
-    <string name="feeds_access_management">Gestionare acces</string>
-    <string name="feeds_access_management_desc">Controlează cine poate vedea și interacționa cu acest flux</string>
-    <string name="feeds_access_level_comment_full">Comentează, reacționează și vezi</string>
-    <string name="feeds_access_level_react_full">Reacționează și vizualizează</string>
-    <string name="feeds_access_add_title">Adaugă acces</string>
-    <string name="feeds_access_add_subtitle">Selectează un utilizator, grup sau altă regulă pentru a acorda accesul.</string>
-    <string name="feeds_access_select_rule">Selectează regula de acces</string>
-    <string name="feeds_source_url_hint_feed">ID-ul entității fluxului sau amprenta</string>
-    <string name="feeds_source_credibility_label">Credibilitate</string>
-    <string name="feeds_source_transform_hint">Tradu în engleză și afișează ca puncte.</string>
-    <string name="feeds_source_transform_help">Lasă gol pentru a dezactiva.</string>
-
-    <string name="feeds_scroll_to_top">Înapoi sus</string>
-    <string name="feeds_settings_title">Setări %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Anulează editarea</string>
-    <string name="feeds_access_authenticated_desc">Oricine este autentificat</string>
-    <string name="feeds_access_anyone_desc">Inclusiv utilizatorii anonimi</string>
-    <string name="feeds_source_last_checked">Ultima verificare %1$s</string>
-    <string name="feeds_source_polling_interval">Interogare la fiecare %1$s</string>
-    <string name="feeds_permission_request_title">Cerere de permisiune</string>
-    <string name="feeds_permission_request_message">%1$s solicită următoarea permisiune:</string>
-    <string name="feeds_permission_allow">Permite</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d postare</item>
-        <item quantity="few">%1$d postări</item>
-        <item quantity="other">%1$d de postări</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Adaugă %1$d interes</item>
-        <item quantity="few">Adaugă %1$d interese</item>
-        <item quantity="other">Adaugă %1$d de interese</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Acum %1$d an, în această zi</item>
-        <item quantity="few">Acum %1$d ani, în această zi</item>
-        <item quantity="other">Acum %1$d de ani, în această zi</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d imagine</item>
-        <item quantity="few">%1$d imagini</item>
-        <item quantity="other">%1$d de imagini</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d atașament</item>
-        <item quantity="few">%1$d atașamente</item>
-        <item quantity="other">%1$d de atașamente</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d comentariu</item>
-        <item quantity="few">%1$d comentarii</item>
-        <item quantity="other">%1$d de comentarii</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Vezi încă %1$d comentariu</item>
-        <item quantity="few">Vezi încă %1$d comentarii</item>
-        <item quantity="other">Vezi încă %1$d de comentarii</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="few">%1$d minute</item>
-        <item quantity="other">%1$d de minute</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d oră</item>
-        <item quantity="few">%1$d ore</item>
-        <item quantity="other">%1$d de ore</item>
-    </plurals>
-
 </resources>

@@ -336,5 +336,4 @@
     <string name="crm_attachment_remove">Retirer la pièce jointe</string>
     <string name="crm_settings_entity_id">Identifiant de l\'entité</string>
     <string name="crm_settings_fingerprint">Empreinte</string>
-    <string name="crm_settings_server">Serveur</string>
 </resources>

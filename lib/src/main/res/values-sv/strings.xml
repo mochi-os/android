@@ -65,10 +65,6 @@
     <string name="notifications_open">Aviseringar</string>
     <string name="notifications_title">Aviseringar</string>
     <string name="notifications_empty">Inga aviseringar</string>
-    <string name="notifications_empty_unread">Du är ikapp</string>
-    <string name="notifications_tab_unread">Olästa</string>
-    <string name="notifications_tab_unread_count">Olästa (%1$d)</string>
-    <string name="notifications_tab_all">Alla</string>
     <string name="notifications_mark_all_read">Markera alla lästa</string>
     <string name="notifications_clear_all">Rensa allt</string>
     <string name="notifications_loading">Läser in…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Öppnar fil…</string>
     <string name="common_no_app_for_file">Ingen app kan öppna den här filen</string>
     <string name="common_file_open_failed">Det gick inte att öppna filen</string>
-    <string name="common_logout_confirm_title">Logga ut</string>
-    <string name="reaction_remove">Rensa</string>
-
-    <string name="common_logout_confirm_message">Är du säker på att du vill logga ut? Du måste logga in igen för att komma åt ditt konto.</string>
-
 </resources>

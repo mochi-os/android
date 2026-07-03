@@ -36,10 +36,6 @@ class CreatePostViewModel @Inject constructor(
     private val editingPostId: String? = savedStateHandle.get<String>("postId")
     val isEditing: Boolean = editingPostId != null
 
-    // True when we arrived from a specific feed (via its FAB / empty state), so
-    // the destination is already known and no feed picker should be shown.
-    val feedPreselected: Boolean = !preSelectedFeedId.isNullOrEmpty()
-
     private val _availableFeeds = MutableStateFlow<List<Feed>>(emptyList())
     val availableFeeds: StateFlow<List<Feed>> = _availableFeeds.asStateFlow()
 
@@ -168,20 +164,27 @@ class CreatePostViewModel @Inject constructor(
         _attachments.value = list
     }
 
-    /** Commit a check-in, replacing any travelling data. */
-    fun applyCheckin(place: PlaceData?) {
+    fun setCheckin(place: PlaceData?) {
         _checkin.value = place
+        // Clear travelling if checkin is set
         if (place != null) {
             _travellingOrigin.value = null
             _travellingDestination.value = null
         }
     }
 
-    /** Commit a travelling origin/destination pair, replacing any check-in. */
-    fun applyTravelling(origin: PlaceData?, destination: PlaceData?) {
-        _travellingOrigin.value = origin
-        _travellingDestination.value = destination
-        if (origin != null || destination != null) {
+    fun setTravellingOrigin(place: PlaceData?) {
+        _travellingOrigin.value = place
+        // Clear checkin if travelling is set
+        if (place != null) {
+            _checkin.value = null
+        }
+    }
+
+    fun setTravellingDestination(place: PlaceData?) {
+        _travellingDestination.value = place
+        // Clear checkin if travelling is set
+        if (place != null) {
             _checkin.value = null
         }
     }

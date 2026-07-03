@@ -16,6 +16,8 @@
     <string name="feeds_settings">Izilungiselelo</string>
     <string name="feeds_no_posts_yet">Akukho okwabiwayo okwamanje</string>
     <string name="feeds_default_sort">Ukuhlunga okuzenzakalelayo</string>
+    <string name="feeds_suggested_interests_add">Engeza</string>
+    <string name="feeds_suggested_interests_dismiss">Fihla</string>
     <string name="feeds_unread">Okungafundwanga</string>
     <string name="feeds_filter_all">Konke</string>
     <string name="feeds_sort_label">Hlunga</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Iseva: %1$s</string>
     <string name="feeds_suggested_interests">Izinto ezithandwayo ezisikiselwayo</string>
     <string name="feeds_suggested_interests_empty">Azikho iziphakamiso okwamanje</string>
-    <string name="feeds_suggested_interests_title">Engeza izinto ozithandayo ezivela ku-%1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Le fidi ihlanganisa lezi zihloko. Khetha lezo ofuna ukuzengeza ezintweni ozithandayo ukuze uthole ukuhlelwa ngokwakho.</string>
-    <string name="feeds_suggested_interests_skip">Yeqa</string>
+    <string name="feeds_suggested_interests_count">%1$d okuthunyelwe</string>
     <string name="feeds_tag_more">Lungisa intshisekelo</string>
     <string name="feeds_tag_more_up">Bonisa okunye okufana nalokhu</string>
     <string name="feeds_tag_more_down">Bonisa okuncane okufana nalokhu</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d umbhalo omusha</item>
         <item quantity="other">%d imibhalo emisha</item>
     </plurals>
-    <string name="feeds_caught_up">Usubonile konke</string>
     <string name="feeds_all_caught_up">Konke kufinyelelekile</string>
     <string name="feeds_view_all_posts">Buka zonke izithombe</string>
-    <string name="feeds_markdown_supported">I-Markdown iyasekelwa</string>
-    <string name="feeds_back">Emuva</string>
-    <string name="feeds_confirm">Qinisekisa</string>
-    <string name="feeds_rss_feed">Ifidi ye-RSS</string>
-    <string name="feeds_unsubscribe">Susa ukubhalisa</string>
-    <string name="feeds_unsubscribed">Kususiwe ukubhalisa</string>
-    <string name="feeds_settings_section_identity">Ubunikazi</string>
-    <string name="feeds_settings_field_name">Igama</string>
-    <string name="feeds_settings_field_entity_id">I-ID yohlaka</string>
-    <string name="feeds_settings_field_fingerprint">Isigxivizo somunwe</string>
-    <string name="feeds_settings_field_server">Iseva</string>
-    <string name="feeds_settings_name_edit_cd">Hlela igama</string>
-    <string name="feeds_settings_name_save_cd">Londoloza igama</string>
-    <string name="feeds_access_subject_anyone">Noma ubani</string>
-    <string name="feeds_access_subject_authenticated">Abasebenzisi abaqinisekisiwe</string>
-    <string name="feeds_access_level_view_full">Bukela kuphela</string>
-    <string name="feeds_access_level_none_full">Akukho ukufinyelela</string>
-    <string name="feeds_access_segment_user">Umsebenzisi</string>
-    <string name="feeds_access_segment_group">Iqembu</string>
-    <string name="feeds_access_segment_other">Okunye</string>
-    <string name="feeds_access_search_users">Sesha abasebenzisi</string>
-    <string name="feeds_access_select_group">Khetha iqembu</string>
-    <string name="feeds_access_selected">Okukhethiwe: %1$s</string>
-    <string name="feeds_permission_deny">Yenqaba</string>
-    <string name="feeds_allow_search">Vumela noma ngubani ukusesha umfutho</string>
-    <string name="feeds_enable_memories">Vumela amakhumbuzo</string>
-    <string name="feeds_create_first_post">Dala isithombe sokuqala</string>
-    <string name="feeds_post_content">Okuqukethwe okwabiwayo</string>
-    <string name="feeds_rss_mode_posts">Okuthunyelwe</string>
-    <string name="feeds_rss_mode_posts_comments">Okwabiwayo namazwana</string>
-    <string name="feeds_unsubscribe_confirm">Yeka ukubhalisela ifidi?</string>
-    <string name="feeds_unsubscribe_confirm_message">Uzoyeka ukuthola izibuyekezo kule fidi. Ungaphinda ubhalisele noma nini.</string>
-    <string name="feeds_settings_unsubscribe_section">Susa ukubhalisa kwifidi</string>
-    <string name="feeds_delete_feed_description">Susa unomphela le fidi nakho konke okuqukethe.</string>
-    <string name="feeds_access_management">Ukuphathwa Kokufinyelela</string>
-    <string name="feeds_access_management_desc">Lawula ukuthi ngubani ongabuka futhi axhumane naleli fidi</string>
-    <string name="feeds_access_level_comment_full">Phawula, sabela, futhi ubuke</string>
-    <string name="feeds_access_level_react_full">Sabela futhi ubuke</string>
-    <string name="feeds_access_add_title">Engeza ukufinyelela</string>
-    <string name="feeds_access_add_subtitle">Khetha umsebenzisi, iqembu, noma omunye umthetho ukuze unike ukufinyelela.</string>
-    <string name="feeds_access_select_rule">Khetha umthetho wokufinyelela</string>
-    <string name="feeds_source_url_hint_feed">I-ID yenhlangano yomfutho noma ucwecwe</string>
-    <string name="feeds_source_credibility_label">Ukwethembeka</string>
-    <string name="feeds_source_transform_hint">Humushela esiNgisini, futhi ukubonise njengamaphuzu amancane.</string>
-    <string name="feeds_source_transform_help">Shiya kungenalutho ukuze uvimbele.</string>
-
-    <string name="feeds_scroll_to_top">Buyela phezulu</string>
-    <string name="feeds_settings_title">Izilungiselelo ze-%1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Khansela ukuhlela</string>
-    <string name="feeds_access_authenticated_desc">Noma ubani ongene ngemvume</string>
-    <string name="feeds_access_anyone_desc">Kuhlanganisa nabasebenzisi abangaziwa</string>
-    <string name="feeds_source_last_checked">Kugcine ukuhlolwa ngo-%1$s</string>
-    <string name="feeds_source_polling_interval">Kuhlolwa njalo nge-%1$s</string>
-    <string name="feeds_permission_request_title">Isicelo semvume</string>
-    <string name="feeds_permission_request_message">%1$s icela imvume elandelayo:</string>
-    <string name="feeds_permission_allow">Vumela</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">okuthunyelwe okungu-%1$d</item>
-        <item quantity="other">okuthunyelwe okungu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Engeza intshisekelo engu-%1$d</item>
-        <item quantity="other">Engeza izintshisekelo ezingu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">unyaka ongu-%1$d odlule namuhla</item>
-        <item quantity="other">iminyaka engu-%1$d edlule namuhla</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">isithombe esingu-%1$d</item>
-        <item quantity="other">izithombe ezingu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">okunamathiselwe okungu-%1$d</item>
-        <item quantity="other">okunamathiselwe okungu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">izwana elingu-%1$d</item>
-        <item quantity="other">amazwana angu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Buka elinye izwana elingu-%1$d</item>
-        <item quantity="other">Buka amanye amazwana angu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">iminithi elingu-%1$d</item>
-        <item quantity="other">amaminithi angu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">ihora elingu-%1$d</item>
-        <item quantity="other">amahora angu-%1$d</item>
-    </plurals>
-
 </resources>

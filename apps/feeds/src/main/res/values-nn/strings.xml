@@ -17,6 +17,8 @@
     <string name="feeds_settings">Innstillingar</string>
     <string name="feeds_no_posts_yet">Ingen innlegg enno</string>
     <string name="feeds_default_sort">Standardsortering</string>
+    <string name="feeds_suggested_interests_add">Legg til</string>
+    <string name="feeds_suggested_interests_dismiss">Skjul</string>
     <string name="feeds_unread">Ulesen</string>
     <string name="feeds_filter_all">Alle</string>
     <string name="feeds_sort_label">Sorter</string>
@@ -119,9 +121,7 @@
     <string name="feeds_identity_server">Tenar: %1$s</string>
     <string name="feeds_suggested_interests">Føreslåtte interesser</string>
     <string name="feeds_suggested_interests_empty">Ingen framlegg enno</string>
-    <string name="feeds_suggested_interests_title">Leggja til interesser frå %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Denne straumen dekkjer desse emna. Vel kva for nokre du vil leggja til i interessene dine for personleg rangering.</string>
-    <string name="feeds_suggested_interests_skip">Hopp over</string>
+    <string name="feeds_suggested_interests_count">%1$d innlegg</string>
     <string name="feeds_tag_more">Juster interesse</string>
     <string name="feeds_tag_more_up">Vis meir av dette</string>
     <string name="feeds_tag_more_down">Vis mindre av dette</string>
@@ -204,113 +204,6 @@
     <string name="feeds_saved_title">Lagra</string>
     <string name="feeds_saved_menu">Lagra</string>
     <string name="feeds_saved_remove">Fjern frå lagra</string>
-    <string name="feeds_caught_up">Du er oppdatert</string>
     <string name="feeds_all_caught_up">Alt er ajour</string>
     <string name="feeds_view_all_posts">Vis alle innlegg</string>
-    <string name="feeds_markdown_supported">Markdown er støtta</string>
-    <string name="feeds_back">Tilbake</string>
-    <string name="feeds_confirm">Stadfest</string>
-    <string name="feeds_rss_feed">RSS-straum</string>
-    <string name="feeds_unsubscribe">Sei opp abonnement</string>
-    <string name="feeds_unsubscribed">Abonnement opphevd</string>
-    <string name="feeds_settings_section_identity">Identitet</string>
-    <string name="feeds_settings_field_name">Namn</string>
-    <string name="feeds_settings_field_entity_id">Entitets-ID</string>
-    <string name="feeds_settings_field_fingerprint">Fingeravtrykk</string>
-    <string name="feeds_settings_field_server">Tenar</string>
-    <string name="feeds_settings_name_edit_cd">Rediger namn</string>
-    <string name="feeds_settings_name_save_cd">Lagre namn</string>
-    <string name="feeds_access_subject_anyone">Alle</string>
-    <string name="feeds_access_subject_authenticated">Autentiserte brukarar</string>
-    <string name="feeds_access_level_view_full">Berre lese</string>
-    <string name="feeds_access_level_none_full">Ingen tilgang</string>
-    <string name="feeds_access_segment_user">Brukar</string>
-    <string name="feeds_access_segment_group">Gruppe</string>
-    <string name="feeds_access_segment_other">Anna</string>
-    <string name="feeds_access_search_users">Søk i brukarar</string>
-    <string name="feeds_access_select_group">Vel gruppe</string>
-    <string name="feeds_access_selected">Vald: %1$s</string>
-    <string name="feeds_permission_deny">Nekt</string>
-    <string name="feeds_allow_search">Tillat alle å søkje etter straum</string>
-    <string name="feeds_enable_memories">Slå på minne</string>
-    <string name="feeds_create_first_post">Opprett det fyrste innlegget</string>
-    <string name="feeds_post_content">Innleggsinnhald</string>
-    <string name="feeds_rss_mode_posts">Innlegg</string>
-    <string name="feeds_rss_mode_posts_comments">Innlegg og kommentarar</string>
-    <string name="feeds_settings_unsubscribe_section">Sei opp abonnement på straum</string>
-    <string name="feeds_delete_feed_description">Slett denne straumen og alt innhaldet permanent.</string>
-    <string name="feeds_access_management">Tilgangshandsaming</string>
-    <string name="feeds_access_management_desc">Styr kven som kan sjå og samhandle med denne straumen</string>
-    <string name="feeds_access_level_comment_full">Kommenter, reager og sjå</string>
-    <string name="feeds_access_level_react_full">Reager og sjå</string>
-    <string name="feeds_access_add_title">Legg til tilgang</string>
-    <string name="feeds_access_add_subtitle">Vel ein brukar, gruppe eller annan regel for å gje tilgang.</string>
-    <string name="feeds_access_select_rule">Vel tilgangsregel</string>
-    <string name="feeds_source_url_hint_feed">Straumens entitets-ID eller fingeravtrykk</string>
-    <string name="feeds_source_credibility_label">Truverd</string>
-    <string name="feeds_source_transform_hint">Set om til engelsk, og vis som punktliste.</string>
-    <string name="feeds_source_transform_help">Lat stå tomt for å slå av.</string>
-
-    <string name="feeds_scroll_to_top">Tilbake til toppen</string>
-    <string name="feeds_unsubscribe_confirm">Avslutte abonnementet på straumen?</string>
-    <string name="feeds_unsubscribe_confirm_message">Du vil ikkje lenger få oppdateringar frå denne straumen. Du kan abonnere på nytt når som helst.</string>
-    <string name="feeds_settings_title">Innstillingar for %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Avbryt redigering</string>
-    <string name="feeds_access_authenticated_desc">Alle som er innlogga</string>
-    <string name="feeds_access_anyone_desc">Inkludert anonyme brukarar</string>
-    <string name="feeds_source_last_checked">Sist sjekka %1$s</string>
-    <string name="feeds_source_polling_interval">Hentar med intervall på %1$s</string>
-    <string name="feeds_permission_request_title">Løyveførespurnad</string>
-    <string name="feeds_permission_request_message">%1$s ber om følgjande løyve:</string>
-    <string name="feeds_permission_allow">Tillat</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-    <string name="feeds_saved_save">Lagre til seinare</string>
-    <string name="feeds_saved_clear_confirm_title">Fjerne alle lagra innlegg?</string>
-    <string name="feeds_saved_clear_confirm_body">Dette fjernar alle innlegga frå den lagra lista di. Dette kan ikkje angrast.</string>
-    <string name="feeds_saved_empty_title">Ingenting lagra enno</string>
-    <string name="feeds_saved_empty_subtitle">Trykk på bokmerket på eit innlegg for å lagre det her til seinare.</string>
-    <string name="feeds_saved_error_clear">Klarte ikkje å fjerne lagra innlegg</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d innlegg</item>
-        <item quantity="other">%1$d innlegg</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Legg til %1$d interesse</item>
-        <item quantity="other">Legg til %1$d interesser</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d år sidan i dag</item>
-        <item quantity="other">%1$d år sidan i dag</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d bilete</item>
-        <item quantity="other">%1$d bilete</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d vedlegg</item>
-        <item quantity="other">%1$d vedlegg</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d kommentar</item>
-        <item quantity="other">%1$d kommentarar</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Vis %1$d kommentar til</item>
-        <item quantity="other">Vis %1$d kommentarar til</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minutt</item>
-        <item quantity="other">%1$d minutt</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d time</item>
-        <item quantity="other">%1$d timar</item>
-    </plurals>
-    <plurals name="feeds_new_posts">
-        <item quantity="one">%d nytt innlegg</item>
-        <item quantity="other">%d nye innlegg</item>
-    </plurals>
-
 </resources>

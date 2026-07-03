@@ -45,15 +45,4 @@ class SavedViewModel @Inject constructor(
             }
         }
     }
-
-    /** Remove one saved post (the bookmark toggle on its card). */
-    fun remove(postId: String) {
-        viewModelScope.launch {
-            try {
-                savedRepository.remove(postId)
-            } catch (_: Exception) {
-                _clearFailed.tryEmit(Unit)
-            }
-        }
-    }
 }

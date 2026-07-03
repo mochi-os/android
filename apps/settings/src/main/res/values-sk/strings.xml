@@ -440,5 +440,4 @@
     <string name="system_status_awaiting_routing">Správy čakajúce na smerovanie</string>
     <string name="system_status_relay_service">Služba relé</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervácie · %3$d okruhy · %4$d odmietnuté</string>
-    <string name="route_target_select">Vybrať</string>
 </resources>

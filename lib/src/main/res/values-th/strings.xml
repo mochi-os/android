@@ -65,10 +65,6 @@
     <string name="notifications_open">การแจ้งเตือน</string>
     <string name="notifications_title">การแจ้งเตือน</string>
     <string name="notifications_empty">ไม่มีการแจ้งเตือน</string>
-    <string name="notifications_empty_unread">คุณอ่านครบทั้งหมดแล้ว</string>
-    <string name="notifications_tab_unread">ยังไม่อ่าน</string>
-    <string name="notifications_tab_unread_count">ยังไม่อ่าน (%1$d)</string>
-    <string name="notifications_tab_all">ทั้งหมด</string>
     <string name="notifications_mark_all_read">ทำเครื่องหมายว่าอ่านแล้วทั้งหมด</string>
     <string name="notifications_clear_all">ล้างทั้งหมด</string>
     <string name="notifications_loading">กำลังโหลด…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">กำลังเปิดไฟล์…</string>
     <string name="common_no_app_for_file">ไม่มีแอปที่เปิดไฟล์นี้ได้</string>
     <string name="common_file_open_failed">เปิดไฟล์ไม่สำเร็จ</string>
-    <string name="common_logout_confirm_title">ออกจากระบบ</string>
-    <string name="reaction_remove">ล้าง</string>
-
-    <string name="common_logout_confirm_message">คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ? คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อเข้าถึงบัญชีของคุณ</string>
-
 </resources>

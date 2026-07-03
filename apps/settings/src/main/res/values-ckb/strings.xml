@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">نامەکان چاوەڕێی ڕێڕەوکردنن</string>
     <string name="system_status_relay_service">خزمەتی گواستنەوە</string>
     <string name="system_status_relay_service_value">%1$d / %2$d حیجزکردن · %3$d بازنە · %4$d ڕەتکراوە</string>
-    <string name="route_target_select">هەڵبژاردن</string>
 </resources>

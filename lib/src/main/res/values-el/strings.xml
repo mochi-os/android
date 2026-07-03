@@ -65,10 +65,6 @@
     <string name="notifications_open">Ειδοποιήσεις</string>
     <string name="notifications_title">Ειδοποιήσεις</string>
     <string name="notifications_empty">Καμία ειδοποίηση</string>
-    <string name="notifications_empty_unread">Είστε πλήρως ενημερωμένοι</string>
-    <string name="notifications_tab_unread">Μη αναγνωσμένες</string>
-    <string name="notifications_tab_unread_count">Μη αναγνωσμένες (%1$d)</string>
-    <string name="notifications_tab_all">Όλες</string>
     <string name="notifications_mark_all_read">Σήμανση όλων ως αναγνωσμένα</string>
     <string name="notifications_clear_all">Εκκαθάριση όλων</string>
     <string name="notifications_loading">Φόρτωση…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Άνοιγμα αρχείου…</string>
     <string name="common_no_app_for_file">Καμία εφαρμογή δεν μπορεί να ανοίξει αυτό το αρχείο</string>
     <string name="common_file_open_failed">Δεν ήταν δυνατό το άνοιγμα του αρχείου</string>
-
-    <string name="common_logout_confirm_title">Αποσύνδεση</string>
-    <string name="common_logout_confirm_message">Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε; Θα χρειαστεί να συνδεθείτε ξανά για να αποκτήσετε πρόσβαση στον λογαριασμό σας.</string>
-    <string name="reaction_remove">Απαλοιφή</string>
-
 </resources>

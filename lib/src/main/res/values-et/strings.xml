@@ -65,10 +65,6 @@
     <string name="notifications_open">Teavitused</string>
     <string name="notifications_title">Teavitused</string>
     <string name="notifications_empty">Teavitusi pole</string>
-    <string name="notifications_empty_unread">Oled kõigega kursis</string>
-    <string name="notifications_tab_unread">Lugemata</string>
-    <string name="notifications_tab_unread_count">Lugemata (%1$d)</string>
-    <string name="notifications_tab_all">Kõik</string>
     <string name="notifications_mark_all_read">Märgi kõik loetuks</string>
     <string name="notifications_clear_all">Tühjenda kõik</string>
     <string name="notifications_loading">Laadimine…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Faili avamine…</string>
     <string name="common_no_app_for_file">Ükski rakendus ei saa seda faili avada</string>
     <string name="common_file_open_failed">Faili ei õnnestunud avada</string>
-
-    <string name="common_logout_confirm_title">Logi välja</string>
-    <string name="common_logout_confirm_message">Kas soovite kindlasti välja logida? Kontole juurdepääsuks peate uuesti sisse logima.</string>
-    <string name="reaction_remove">Eemalda</string>
-
 </resources>

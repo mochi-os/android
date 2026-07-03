@@ -65,10 +65,6 @@
     <string name="notifications_open">Kennisgewings</string>
     <string name="notifications_title">Kennisgewings</string>
     <string name="notifications_empty">Geen kennisgewings nie</string>
-    <string name="notifications_empty_unread">Jy\'s heeltemal op datum</string>
-    <string name="notifications_tab_unread">Ongelees</string>
-    <string name="notifications_tab_unread_count">Ongelees (%1$d)</string>
-    <string name="notifications_tab_all">Almal</string>
     <string name="notifications_mark_all_read">Merk alles gelees</string>
     <string name="notifications_clear_all">Maak alles skoon</string>
     <string name="notifications_loading">Laai…</string>
@@ -294,9 +290,4 @@
     <string name="common_opening_file">Maak lêer oop…</string>
     <string name="common_no_app_for_file">Geen app kan hierdie lêer oopmaak nie</string>
     <string name="common_file_open_failed">Kon nie lêer oopmaak nie</string>
-
-    <string name="common_logout_confirm_title">Meld af</string>
-    <string name="common_logout_confirm_message">Is jy seker jy wil afmeld? Jy sal weer moet aanmeld om toegang tot jou rekening te kry.</string>
-    <string name="reaction_remove">Verwyder</string>
-
 </resources>

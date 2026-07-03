@@ -65,10 +65,6 @@
     <string name="notifications_open">સૂચનાઓ</string>
     <string name="notifications_title">સૂચનાઓ</string>
     <string name="notifications_empty">કોઈ સૂચનાઓ નથી</string>
-    <string name="notifications_empty_unread">બધું જોવાઈ ગયું છે</string>
-    <string name="notifications_tab_unread">વાંચ્યા વગરની</string>
-    <string name="notifications_tab_unread_count">વાંચ્યા વગરની (%1$d)</string>
-    <string name="notifications_tab_all">બધી</string>
     <string name="notifications_mark_all_read">બધાને વાંચ્યા તરીકે માર્ક કરો</string>
     <string name="notifications_clear_all">બધું સાફ કરો</string>
     <string name="notifications_loading">લોડ થઈ રહ્યું છે…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ફાઇલ ખોલી રહ્યાં છે…</string>
     <string name="common_no_app_for_file">કોઈ ઍપ આ ફાઇલ ખોલી શકતી નથી</string>
     <string name="common_file_open_failed">ફાઇલ ખોલી શકાઈ નહીં</string>
-
-    <string name="common_logout_confirm_title">લૉગ આઉટ</string>
-    <string name="common_logout_confirm_message">શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો? તમારા એકાઉન્ટને ઍક્સેસ કરવા માટે તમારે ફરીથી લૉગ ઇન કરવું પડશે.</string>
-    <string name="reaction_remove">સાફ કરો</string>
-
 </resources>

@@ -336,5 +336,4 @@
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
-    <string name="crm_settings_server">伺服器</string>
 </resources>

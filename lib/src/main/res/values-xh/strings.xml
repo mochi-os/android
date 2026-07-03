@@ -65,10 +65,6 @@
     <string name="notifications_open">Izaziso</string>
     <string name="notifications_title">Izaziso</string>
     <string name="notifications_empty">Akukho zaziso</string>
-    <string name="notifications_empty_unread">Sele uzifundile zonke</string>
-    <string name="notifications_tab_unread">Ezingafundwanga</string>
-    <string name="notifications_tab_unread_count">Ezingafundwanga (%1$d)</string>
-    <string name="notifications_tab_all">Zonke</string>
     <string name="notifications_mark_all_read">Phawula konke ukuba kufundiwe</string>
     <string name="notifications_clear_all">Cima konke</string>
     <string name="notifications_loading">Kulayishwa…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Kuvulwa ifayile…</string>
     <string name="common_no_app_for_file">Akukho app inokuvula le fayile</string>
     <string name="common_file_open_failed">Akukwazekanga ukuvula ifayile</string>
-    <string name="common_logout_confirm_title">Phuma</string>
-    <string name="reaction_remove">Cima</string>
-
-    <string name="common_logout_confirm_message">Uqinisekile ukuba ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwiakhawunti yakho.</string>
-
 </resources>

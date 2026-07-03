@@ -65,10 +65,6 @@
     <string name="notifications_open">Pemberitahuan</string>
     <string name="notifications_title">Pemberitahuan</string>
     <string name="notifications_empty">Tiada pemberitahuan</string>
-    <string name="notifications_empty_unread">Semua sudah dibaca</string>
-    <string name="notifications_tab_unread">Belum dibaca</string>
-    <string name="notifications_tab_unread_count">Belum dibaca (%1$d)</string>
-    <string name="notifications_tab_all">Semua</string>
     <string name="notifications_mark_all_read">Tanda semua dibaca</string>
     <string name="notifications_clear_all">Kosongkan semua</string>
     <string name="notifications_loading">Memuatkan…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Membuka fail…</string>
     <string name="common_no_app_for_file">Tiada apl yang boleh membuka fail ini</string>
     <string name="common_file_open_failed">Tidak dapat membuka fail</string>
-    <string name="common_logout_confirm_title">Log keluar</string>
-    <string name="reaction_remove">Kosongkan</string>
-
-    <string name="common_logout_confirm_message">Adakah anda pasti mahu log keluar? Anda perlu log masuk semula untuk mengakses akaun anda.</string>
-
 </resources>

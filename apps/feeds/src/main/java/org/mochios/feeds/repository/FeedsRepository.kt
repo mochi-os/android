@@ -8,32 +8,17 @@ package org.mochios.feeds.repository
 import android.content.ContentResolver
 import android.net.Uri
 import com.google.gson.Gson
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import org.mochios.android.api.ApiError
-import org.mochios.android.api.ApiException
-import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
+import org.mochios.android.model.User
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.InterestSuggestion
-import org.mochios.feeds.api.MenuApi
-import org.mochios.feeds.api.AccessRevokeRequest
-import org.mochios.feeds.api.AccessSetRequest
-import org.mochios.feeds.api.AddSourceRequest
-import org.mochios.feeds.api.CreateFeedRequest
-import org.mochios.feeds.api.SubscribeRequest
-import org.mochios.feeds.api.UnsubscribeRequest
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
@@ -41,23 +26,12 @@ import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
-import org.mochios.feeds.model.User
 import javax.inject.Inject
 import javax.inject.Singleton
 
 data class FeedInfoResult(
     val feed: Feed,
     val permissions: Permissions
-)
-
-/**
- * The class-level feeds overview returned by `-/info`: the subscribed feed
- * list and whether the server has any AI provider configured (which gates the
- * AI sort option).
- */
-data class FeedsInfoResult(
-    val feeds: List<Feed>,
-    val hasAi: Boolean
 )
 
 data class PostListResult(
@@ -82,38 +56,9 @@ data class AddSourceResult(
     val suggestedCredibility: Int? = null
 )
 
-/** Parsed body of a `permission_required` 403 from `sources/add`. */
-private data class PermissionRequiredBody(
-    val app: String? = null,
-    val error: String? = null,
-    val permission: String? = null
-)
-
-/**
- * Thrown when `sources/add` returns `permission_required`: the app must first
- * be granted [permission] before the source can be added. Carries the
- * requesting [app] entity id so the caller can resolve a name and grant it.
- */
-class PermissionRequiredException(
-    val app: String,
-    val permission: String
-) : Exception("permission_required: $permission")
-
-/**
- * A one-shot interest-suggestion prompt raised by subscribing to a feed, to be
- * shown once on that feed's screen. Held in the [@Singleton][Singleton]
- * repository because the subscribe action (FindFeeds) and the feed screen live
- * in different ViewModels.
- */
-data class PendingInterestSuggestion(
-    val feedId: String,
-    val suggestions: List<InterestSuggestion>
-)
-
 @Singleton
 class FeedsRepository @Inject constructor(
-    private val api: FeedsApi,
-    private val menuApi: MenuApi
+    private val api: FeedsApi
 ) {
 
     // In-memory cache: feedId -> (posts, hasMore, timestamp)
@@ -133,29 +78,6 @@ class FeedsRepository @Inject constructor(
         val result: FeedInfoResult,
         val timestamp: Long = System.currentTimeMillis()
     )
-
-    // One-shot interest suggestions raised by a successful subscribe, consumed
-    // once by the matching feed screen. Bridges the FindFeeds subscribe flow and
-    // the feed screen, which are separate ViewModels.
-    private val _pendingInterestSuggestion = MutableStateFlow<PendingInterestSuggestion?>(null)
-    val pendingInterestSuggestion: StateFlow<PendingInterestSuggestion?> =
-        _pendingInterestSuggestion.asStateFlow()
-
-    /** Stash suggestions for [feedId] so its feed screen can show them once. */
-    fun setPendingInterestSuggestion(feedId: String, suggestions: List<InterestSuggestion>) {
-        _pendingInterestSuggestion.value = PendingInterestSuggestion(feedId, suggestions)
-    }
-
-    /** Clear the pending suggestion once consumed (or when no longer relevant). */
-    fun clearPendingInterestSuggestion() {
-        _pendingInterestSuggestion.value = null
-    }
-
-    // Emits whenever the viewer's subscriptions change (subscribe/unsubscribe),
-    // so the feed-list drawer can reload even without a navigation that would
-    // otherwise recreate its ViewModel. Replay-less: only live collectors react.
-    private val _subscriptionChanges = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
-    val subscriptionChanges: SharedFlow<Unit> = _subscriptionChanges.asSharedFlow()
 
     fun getCachedPosts(feedId: String, sort: String?, tag: String?, unreadOnly: Boolean): PostListResult? {
         val cached = postCache[feedId] ?: return null
@@ -178,20 +100,8 @@ class FeedsRepository @Inject constructor(
     // --- Class-level operations ---
 
     suspend fun listFeeds(): List<Feed> {
-        return getFeedsInfo().feeds
-    }
-
-    /**
-     * Fetch the full class-level feeds overview (`-/info`): feed list, the
-     * user's global default sort, and the server's AI availability.
-     */
-    suspend fun getFeedsInfo(): FeedsInfoResult {
         return try {
-            val response = api.getInfo().unwrap()
-            FeedsInfoResult(
-                feeds = response.feeds,
-                hasAi = response.hasAi
-            )
+            api.getInfo().unwrap().feeds
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -199,10 +109,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun createFeed(name: String, privacy: String, memories: Boolean): Feed {
         return try {
-            val response = api.createFeed(
-                CreateFeedRequest(name = name, privacy = privacy, memories = memories.toString())
-            ).unwrap()
-            Feed(id = response.id, fingerprint = response.fingerprint, name = name, privacy = privacy)
+            api.createFeed(name, privacy, memories).unwrap().feed
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -210,7 +117,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun searchDirectory(query: String): List<Feed> {
         return try {
-            api.searchDirectory(query).unwrap()
+            api.searchDirectory(query).unwrap().feeds
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -235,9 +142,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun subscribeFeed(feed: String, server: String? = null) {
         try {
-            // Server hint omitted from the request body for now.
-            api.subscribe(SubscribeRequest(feed = feed)).unwrap()
-            _subscriptionChanges.emit(Unit)
+            api.subscribe(feed, server).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -245,9 +150,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun unsubscribeFeed(feed: String, server: String? = null) {
         try {
-            // Server hint omitted from the request body for now.
-            api.unsubscribe(UnsubscribeRequest(feed = feed)).unwrap()
-            _subscriptionChanges.emit(Unit)
+            api.unsubscribe(feed, server).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -264,24 +167,6 @@ class FeedsRepository @Inject constructor(
     suspend fun searchUsers(query: String): List<User> {
         return try {
             api.searchUsers(query).unwrap().results
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
-
-    /** Resolve a permission key to its human label. */
-    suspend fun permissionName(permission: String): String {
-        return try {
-            menuApi.permissionName(permission).unwrap().name
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
-
-    /** Grant [app] the given [permission], returning the resulting status. */
-    suspend fun grantPermission(app: String, permission: String): String {
-        return try {
-            menuApi.grantPermission(app, permission).unwrap().status
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -315,14 +200,11 @@ class FeedsRepository @Inject constructor(
         limit: Int = 20,
         sort: String? = null,
         tag: String? = null,
-        unreadOnly: Boolean = false,
-        forceRefresh: Boolean = false
+        unreadOnly: Boolean = false
     ): PostListResult {
         val isFirstPage = before == null && offset == null
-        // Only cache first-page requests. An explicit refresh skips the cached
-        // copy and re-fetches so it can't show stale data (e.g. comments that
-        // changed since the cache was written).
-        if (isFirstPage && !forceRefresh) {
+        // Only cache first-page requests
+        if (isFirstPage) {
             getCachedPosts(feedId, sort, tag, unreadOnly)?.let { return it }
         }
         return try {
@@ -663,10 +545,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun setAccess(feedId: String, subject: String, level: String) {
         try {
-            api.setAccess(
-                feedId,
-                AccessSetRequest(feed = feedId, subject = subject, level = level)
-            ).unwrap()
+            api.setAccess(feedId, subject, level).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -674,10 +553,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun revokeAccess(feedId: String, subject: String) {
         try {
-            api.revokeAccess(
-                feedId,
-                AccessRevokeRequest(feed = feedId, subject = subject)
-            ).unwrap()
+            api.revokeAccess(feedId, subject).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -694,37 +570,12 @@ class FeedsRepository @Inject constructor(
     }
 
     suspend fun addSource(feedId: String, url: String, type: String): AddSourceResult {
-        val response = api.addSource(feedId, AddSourceRequest(feed = feedId, type = type, url = url))
-        if (response.isSuccessful) {
-            val data = response.body()?.data
-                ?: throw MochiError.Unknown()
-            return AddSourceResult(source = data.source, suggestedCredibility = data.suggestedCredibility)
+        return try {
+            val response = api.addSource(feedId, url, type).unwrap()
+            AddSourceResult(source = response.source, suggestedCredibility = response.suggestedCredibility)
+        } catch (e: Exception) {
+            throw e.toMochiError()
         }
-        // A `permission_required` 403 carries the requesting app + permission
-        // key in its body — surface it distinctly so the caller can offer to
-        // grant it; every other failure maps to the standard error.
-        val body = response.errorBody()?.string()
-        if (response.code() == 403 && !body.isNullOrBlank()) {
-            val permission = runCatching {
-                Gson().fromJson(body, PermissionRequiredBody::class.java)
-            }.getOrNull()
-            if (permission?.error == "permission_required" &&
-                !permission.app.isNullOrEmpty() && !permission.permission.isNullOrEmpty()) {
-                throw PermissionRequiredException(permission.app, permission.permission)
-            }
-        }
-        // A structured `{"error": "Feed returned status 403"}` body carries the
-        // server's message — wrap it in an ApiException and let toMochiError()
-        // map it. Anything else (empty or an HTML gateway page) is a network
-        // failure.
-        val trimmed = body?.trimStart()
-        val apiError = if (!trimmed.isNullOrEmpty() && trimmed.startsWith("{")) {
-            runCatching { Gson().fromJson(trimmed, ApiError::class.java) }.getOrNull()
-        } else {
-            null
-        }
-        throw apiError?.let { error -> ApiException(response.code(), error).toMochiError() }
-            ?: MochiError.NetworkError()
     }
 
     suspend fun editSource(

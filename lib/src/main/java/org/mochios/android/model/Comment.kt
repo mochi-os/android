@@ -10,18 +10,11 @@ import com.google.gson.annotations.SerializedName
 data class Comment(
     val id: String,
     val parent: String = "",
-    // Nullable because the field is often absent from the JSON, and Gson
-    // instantiates models via Unsafe (bypassing Kotlin defaults) — so an absent
-    // non-null field would arrive as null and crash on access. Feeds also
-    // identify the commenter with `user` rather than `author`; read identity
-    // via [authorId].
-    val author: String? = null,
-    val user: String? = null,
+    val author: String = "",
     val name: String = "",
     val body: String = "",
-    val content: String? = null,
-    @SerializedName("body_markdown") val bodyMarkdown: String? = null,
-    val format: String = "",
+    val content: String = "",
+    @SerializedName("body_markdown") val bodyMarkdown: String = "",
     val created: Long = 0,
     @SerializedName("created_string") val createdString: String = "",
     val edited: Long = 0,
@@ -30,12 +23,6 @@ data class Comment(
     @SerializedName("my_reaction") val myReaction: String = "",
     val reactions: List<Reaction> = emptyList()
 ) {
-    /** Returns body text — projects uses 'content', feeds uses 'body'. */
-    val text: String get() = content.orEmpty().ifBlank { body }
-
-    /** Commenter's entity id, regardless of which field the module populates. */
-    val authorId: String get() = author.orEmpty().ifBlank { user.orEmpty() }
-
-    /** Plain-text source for editing: markdown when present, else the body. */
-    val markdownSource: String get() = bodyMarkdown.orEmpty().ifBlank { body }
+    /** Returns body text — projects uses 'content', feeds uses 'body' */
+    val text: String get() = content.ifBlank { body }
 }

@@ -6,8 +6,8 @@
 package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,12 +15,12 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Badge
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
@@ -35,9 +35,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -114,8 +112,10 @@ fun FeatureListDrawer(
                                     item = allItem,
                                     isSelected = selectedId == allItem.id,
                                     onClick = { onItemClick(allItem) },
-                                    pinned = true,
                                 )
+                            }
+                            item("__divider__") {
+                                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
                             }
                         }
                         items(items, key = { it.id }) { it ->
@@ -140,105 +140,38 @@ fun FeatureListDrawer(
     )
 }
 
-/**
- * Compact action row for the drawer's bottom [FeatureListDrawer.actions] slot
- * (Find, Create, Logout, ...). Unlike Material's [androidx.compose.material3.ListItem]
- * it carries no enforced min-height or wide content padding, so the actions sit
- * tight together and align with the drawer items above.
- */
-@Composable
-fun DrawerActionRow(
-    title: String,
-    icon: ImageVector,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(horizontal = 24.dp, vertical = 10.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            imageVector = icon,
-            contentDescription = null,
-            modifier = Modifier.size(24.dp),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Spacer(modifier = Modifier.size(12.dp))
-        Text(
-            text = title,
-            style = MaterialTheme.typography.bodyLarge,
-        )
-    }
-}
-
 @Composable
 private fun DrawerItemRow(
     item: FeatureDrawerItem,
     isSelected: Boolean,
     onClick: () -> Unit,
-    pinned: Boolean = false,
 ) {
-    val contentColor = if (isSelected) {
-        MaterialTheme.colorScheme.primary
-    } else {
-        MaterialTheme.colorScheme.onSurface
-    }
-    val background = if (isSelected) {
-        MaterialTheme.colorScheme.surfaceVariant
-    } else {
-        Color.Transparent
-    }
-    val accentColor = MaterialTheme.colorScheme.primary
+    val background = if (isSelected) MaterialTheme.colorScheme.secondaryContainer
+    else MaterialTheme.colorScheme.surface
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .padding(horizontal = 8.dp, vertical = 2.dp)
+            .clip(RoundedCornerShape(28.dp))
             .background(background)
-            .then(
-                // Selected rows carry a thin accent bar flush to the start edge.
-                if (isSelected) {
-                    Modifier.drawBehind {
-                        drawRect(
-                            color = accentColor,
-                            size = Size(width = 4.dp.toPx(), height = size.height),
-                        )
-                    }
-                } else {
-                    Modifier
-                }
-            )
             .clickable(onClick = onClick)
-            .padding(horizontal = 24.dp, vertical = 10.dp),
+            .padding(horizontal = 16.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         if (item.icon != null) {
-            Box(contentAlignment = Alignment.TopEnd) {
-                Icon(
-                    imageVector = item.icon,
-                    contentDescription = null,
-                    modifier = Modifier.size(24.dp),
-                    tint = contentColor,
-                )
-                // Small hollow ring marking the aggregate "All" item.
-                if (pinned) {
-                    Box(
-                        modifier = Modifier
-                            .offset(x = 2.dp, y = (-2).dp)
-                            .size(9.dp)
-                            .border(width = 1.5.dp, color = contentColor, shape = CircleShape)
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.size(12.dp))
+            Icon(
+                imageVector = item.icon,
+                contentDescription = null,
+                modifier = Modifier.size(20.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(modifier = Modifier.size(16.dp))
         }
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = item.title,
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.bodyLarge,
                 fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
-                color = contentColor,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -253,11 +186,7 @@ private fun DrawerItemRow(
             }
         }
         if (item.unread > 0) {
-            Spacer(modifier = Modifier.size(8.dp))
-            Badge(
-                containerColor = MaterialTheme.colorScheme.error,
-                contentColor = MaterialTheme.colorScheme.onError,
-            ) {
+            Badge {
                 Text(text = item.unread.toString())
             }
         }

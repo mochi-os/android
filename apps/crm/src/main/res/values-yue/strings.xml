@@ -336,5 +336,4 @@
     <string name="crm_attachment_remove">移除附件</string>
     <string name="crm_settings_entity_id">實體 ID</string>
     <string name="crm_settings_fingerprint">指紋</string>
-    <string name="crm_settings_server">伺服器</string>
 </resources>

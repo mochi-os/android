@@ -16,6 +16,8 @@
     <string name="feeds_settings">Cilësimet</string>
     <string name="feeds_no_posts_yet">Ende pa postime</string>
     <string name="feeds_default_sort">Renditja e parazgjedhur</string>
+    <string name="feeds_suggested_interests_add">Shto</string>
+    <string name="feeds_suggested_interests_dismiss">Fshih</string>
     <string name="feeds_unread">Pa lexuar</string>
     <string name="feeds_filter_all">Të gjitha</string>
     <string name="feeds_sort_label">Rendit</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">Serveri: %1$s</string>
     <string name="feeds_suggested_interests">Interesa të sugjeruara</string>
     <string name="feeds_suggested_interests_empty">Ende asnjë sugjerim</string>
-    <string name="feeds_suggested_interests_title">Të shtohen interesat nga %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Ky feed mbulon këto tema. Zgjidhni cilat të shtoni te interesat tuaja për një renditje të personalizuar.</string>
-    <string name="feeds_suggested_interests_skip">Anashkalo</string>
+    <string name="feeds_suggested_interests_count">%1$d postime</string>
     <string name="feeds_tag_more">Rregullo interesin</string>
     <string name="feeds_tag_more_up">Shfaq më shumë si kjo</string>
     <string name="feeds_tag_more_down">Shfaq më pak si kjo</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d postim i ri</item>
         <item quantity="other">%d postime të reja</item>
     </plurals>
-    <string name="feeds_caught_up">I keni parë të gjitha</string>
     <string name="feeds_all_caught_up">Të gjitha të arrira</string>
     <string name="feeds_view_all_posts">Shiko të gjitha postimet</string>
-    <string name="feeds_markdown_supported">Markdown i mbështetur</string>
-    <string name="feeds_back">Mbrapa</string>
-    <string name="feeds_confirm">Konfirmo</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_unsubscribe">Çabonohu</string>
-    <string name="feeds_unsubscribed">Çabonuar</string>
-    <string name="feeds_settings_section_identity">Identiteti</string>
-    <string name="feeds_settings_field_name">Emri</string>
-    <string name="feeds_settings_field_entity_id">ID e entitetit</string>
-    <string name="feeds_settings_field_fingerprint">Gjurma</string>
-    <string name="feeds_settings_field_server">Serveri</string>
-    <string name="feeds_settings_name_edit_cd">Modifiko emrin</string>
-    <string name="feeds_settings_name_save_cd">Ruaj emrin</string>
-    <string name="feeds_access_subject_anyone">Kushdo</string>
-    <string name="feeds_access_subject_authenticated">Përdorues të vërtetuar</string>
-    <string name="feeds_access_level_view_full">Vetëm shikim</string>
-    <string name="feeds_access_level_none_full">Pa qasje</string>
-    <string name="feeds_access_segment_user">Përdoruesi</string>
-    <string name="feeds_access_segment_group">Grupi</string>
-    <string name="feeds_access_segment_other">Tjetër</string>
-    <string name="feeds_access_search_users">Kërko përdorues</string>
-    <string name="feeds_access_select_group">Zgjidh grupin</string>
-    <string name="feeds_access_selected">E zgjedhur: %1$s</string>
-    <string name="feeds_permission_deny">Mohoj</string>
-    <string name="feeds_allow_search">Lejo këdo të kërkojë për feed</string>
-    <string name="feeds_enable_memories">Aktivizo kujtimet</string>
-    <string name="feeds_create_first_post">Krijo postimin e parë</string>
-    <string name="feeds_post_content">Përmbajtja e postimit</string>
-    <string name="feeds_rss_mode_posts">Postimet</string>
-    <string name="feeds_rss_mode_posts_comments">Postimet dhe komentet</string>
-    <string name="feeds_unsubscribe_confirm">Të hiqet abonimi nga ky fluks?</string>
-    <string name="feeds_unsubscribe_confirm_message">Nuk do të marrësh më përditësime nga ky fluks. Mund të abonohesh sërish në çdo kohë.</string>
-    <string name="feeds_settings_unsubscribe_section">Çabonohu nga burimi</string>
-    <string name="feeds_delete_feed_description">Fshi përfundimisht këtë feed dhe gjithë përmbajtjen e tij.</string>
-    <string name="feeds_access_management">Menaxhimi i qasjes</string>
-    <string name="feeds_access_management_desc">Kontrollo kush mund ta shohë dhe të ndërveprojë me këtë feed</string>
-    <string name="feeds_access_level_comment_full">Komento, reago dhe shih</string>
-    <string name="feeds_access_level_react_full">Reago dhe shiko</string>
-    <string name="feeds_access_add_title">Shto qasje</string>
-    <string name="feeds_access_add_subtitle">Zgjidh një përdorues, grup, ose rregull tjetër për të dhënë qasje.</string>
-    <string name="feeds_access_select_rule">Zgjidh rregullin e qasjes</string>
-    <string name="feeds_source_url_hint_feed">ID ose gjurmë e entitetit të feed</string>
-    <string name="feeds_source_credibility_label">Besueshmëria</string>
-    <string name="feeds_source_transform_hint">Përkthe në anglisht dhe shfaq si pika me yje.</string>
-    <string name="feeds_source_transform_help">Lini bosh për të çaktivizuar.</string>
-
-    <string name="feeds_scroll_to_top">Kthehu lart</string>
-    <string name="feeds_settings_title">Cilësimet e %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Anulo redaktimin</string>
-    <string name="feeds_access_authenticated_desc">Kushdo që është i identifikuar</string>
-    <string name="feeds_access_anyone_desc">Duke përfshirë përdoruesit anonimë</string>
-    <string name="feeds_source_last_checked">Kontrolluar për herë të fundit %1$s</string>
-    <string name="feeds_source_polling_interval">Kontrollohet çdo %1$s</string>
-    <string name="feeds_permission_request_title">Kërkesë për leje</string>
-    <string name="feeds_permission_request_message">%1$s po kërkon lejen e mëposhtme:</string>
-    <string name="feeds_permission_allow">Lejo</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d postim</item>
-        <item quantity="other">%1$d postime</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Shto %1$d interes</item>
-        <item quantity="other">Shto %1$d interesa</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d vit më parë sot</item>
-        <item quantity="other">%1$d vjet më parë sot</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d imazh</item>
-        <item quantity="other">%1$d imazhe</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d bashkëngjitje</item>
-        <item quantity="other">%1$d bashkëngjitje</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d koment</item>
-        <item quantity="other">%1$d komente</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Shiko %1$d koment tjetër</item>
-        <item quantity="other">Shiko %1$d komente të tjera</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minutë</item>
-        <item quantity="other">%1$d minuta</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d orë</item>
-        <item quantity="other">%1$d orë</item>
-    </plurals>
-
 </resources>

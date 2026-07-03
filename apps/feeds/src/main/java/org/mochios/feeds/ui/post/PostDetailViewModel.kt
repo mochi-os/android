@@ -77,17 +77,11 @@ class PostDetailViewModel @Inject constructor(
     private val _actionError = MutableStateFlow<MochiError?>(null)
     val actionError: StateFlow<MochiError?> = _actionError.asStateFlow()
 
-    // The viewer's own entity id, so comment items can offer edit/delete on the
-    // viewer's own comments. Resolved once from the bound session identity.
-    private val _currentUserId = MutableStateFlow<String?>(null)
-    val currentUserId: StateFlow<String?> = _currentUserId.asStateFlow()
-
     private var subscriptionId: String? = null
 
     init {
         loadPost()
         subscribeToWebSocket()
-        viewModelScope.launch { _currentUserId.value = sessionManager.getBoundIdentity() }
     }
 
     fun loadPost() {

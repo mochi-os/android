@@ -65,10 +65,6 @@
     <string name="notifications_open">通知</string>
     <string name="notifications_title">通知</string>
     <string name="notifications_empty">無通知</string>
-    <string name="notifications_empty_unread">全部已讀完</string>
-    <string name="notifications_tab_unread">未讀</string>
-    <string name="notifications_tab_unread_count">未讀 (%1$d)</string>
-    <string name="notifications_tab_all">全部</string>
     <string name="notifications_mark_all_read">全部標為已讀</string>
     <string name="notifications_clear_all">全部清除</string>
     <string name="notifications_loading">載入中…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">正在開啟檔案…</string>
     <string name="common_no_app_for_file">沒有應用程式可開啟此檔案</string>
     <string name="common_file_open_failed">無法開啟檔案</string>
-    <string name="common_logout_confirm_title">登出</string>
-    <string name="reaction_remove">清除</string>
-
-    <string name="common_logout_confirm_message">確定要登出嗎？您需要重新登入才能存取您的帳戶。</string>
-
 </resources>

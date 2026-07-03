@@ -105,7 +105,7 @@ fun FriendsScreen(
     onSwitchSection: (PeopleSidebarSection) -> Unit,
     onOpenNotifications: () -> Unit,
     onLogout: () -> Unit,
-    onMessage: (String) -> Unit = {},
+    onOpenLink: (String) -> Unit = {},
     initialAction: String? = null,
     viewModel: FriendsViewModel = hiltViewModel(),
 ) {
@@ -130,7 +130,7 @@ fun FriendsScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is FriendsEvent.Toast -> snackbarHostState.showSnackbar(event.message)
-                is FriendsEvent.MessageFriend -> onMessage(event.friendId)
+                is FriendsEvent.MessageFriend -> onOpenLink("chat/new?friend=${event.friendId}")
             }
         }
     }

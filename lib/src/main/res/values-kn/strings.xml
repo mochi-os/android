@@ -65,10 +65,6 @@
     <string name="notifications_open">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
     <string name="notifications_title">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
     <string name="notifications_empty">ಯಾವುದೇ ನೋಟಿಫಿಕೇಶನ್‌ಗಳಿಲ್ಲ</string>
-    <string name="notifications_empty_unread">ಎಲ್ಲವನ್ನೂ ನೋಡಿ ಆಗಿದೆ</string>
-    <string name="notifications_tab_unread">ಓದದಿರುವ</string>
-    <string name="notifications_tab_unread_count">ಓದದಿರುವ (%1$d)</string>
-    <string name="notifications_tab_all">ಎಲ್ಲಾ</string>
     <string name="notifications_mark_all_read">ಎಲ್ಲಾ ಓದಲಾಗಿದೆ ಎಂದು ಮಾರ್ಕ್ ಮಾಡಿ</string>
     <string name="notifications_clear_all">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="notifications_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">ಫೈಲ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ…</string>
     <string name="common_no_app_for_file">ಈ ಫೈಲ್ ಅನ್ನು ಯಾವುದೇ ಆ್ಯಪ್ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="common_file_open_failed">ಫೈಲ್ ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
-    <string name="common_logout_confirm_title">ಲಾಗ್ ಔಟ್</string>
-    <string name="reaction_remove">ತೆರವುಗೊಳಿಸಿ</string>
-
-    <string name="common_logout_confirm_message">ನೀವು ಖಚಿತವಾಗಿ ಲಾಗ್ ಔಟ್ ಆಗಲು ಬಯಸುವಿರಾ? ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ಮತ್ತೆ ಲಾಗಿನ್ ಆಗಬೇಕಾಗುತ್ತದೆ.</string>
-
 </resources>

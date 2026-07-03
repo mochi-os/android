@@ -65,10 +65,6 @@
     <string name="notifications_open">Értesítések</string>
     <string name="notifications_title">Értesítések</string>
     <string name="notifications_empty">Nincsenek értesítések</string>
-    <string name="notifications_empty_unread">Mindennel naprakész vagy</string>
-    <string name="notifications_tab_unread">Olvasatlan</string>
-    <string name="notifications_tab_unread_count">Olvasatlan (%1$d)</string>
-    <string name="notifications_tab_all">Összes</string>
     <string name="notifications_mark_all_read">Összes olvasottként</string>
     <string name="notifications_clear_all">Összes törlése</string>
     <string name="notifications_loading">Betöltés…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Fájl megnyitása…</string>
     <string name="common_no_app_for_file">Nincs olyan alkalmazás, amely meg tudná nyitni ezt a fájlt</string>
     <string name="common_file_open_failed">Nem sikerült megnyitni a fájlt</string>
-
-    <string name="common_logout_confirm_title">Kijelentkezés</string>
-    <string name="common_logout_confirm_message">Biztosan ki szeretne jelentkezni? A fiókja eléréséhez újra be kell majd jelentkeznie.</string>
-    <string name="reaction_remove">Törlés</string>
-
 </resources>

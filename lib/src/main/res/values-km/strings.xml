@@ -65,10 +65,6 @@
     <string name="notifications_open">ការជូនដំណឹង</string>
     <string name="notifications_title">ការជូនដំណឹង</string>
     <string name="notifications_empty">មិនមានការជូនដំណឹង</string>
-    <string name="notifications_empty_unread">អ្នកបានអានគ្រប់យ៉ាងហើយ</string>
-    <string name="notifications_tab_unread">មិនទាន់អាន</string>
-    <string name="notifications_tab_unread_count">មិនទាន់អាន (%1$d)</string>
-    <string name="notifications_tab_all">ទាំងអស់</string>
     <string name="notifications_mark_all_read">សម្គាល់ទាំងអស់បានអាន</string>
     <string name="notifications_clear_all">សម្អាតទាំងអស់</string>
     <string name="notifications_loading">កំពុងផ្ទុក…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">កំពុងបើកឯកសារ…</string>
     <string name="common_no_app_for_file">គ្មានកម្មវិធីណាអាចបើកឯកសារនេះបានទេ</string>
     <string name="common_file_open_failed">មិនអាចបើកឯកសារបានទេ</string>
-    <string name="common_logout_confirm_title">ចាកចេញ</string>
-    <string name="reaction_remove">សម្អាត</string>
-
-    <string name="common_logout_confirm_message">តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ? អ្នកនឹងត្រូវចូលម្តងទៀត ដើម្បីប្រើប្រាស់គណនីរបស់អ្នក។</string>
-
 </resources>

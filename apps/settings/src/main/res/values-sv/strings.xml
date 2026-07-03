@@ -438,5 +438,4 @@
     <string name="system_status_awaiting_routing">Meddelanden som väntar på routing</string>
     <string name="system_status_relay_service">Relätjänst</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservationer · %3$d kretsar · %4$d nekade</string>
-    <string name="route_target_select">Markera</string>
 </resources>

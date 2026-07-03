@@ -65,10 +65,6 @@
     <string name="notifications_open">Известувања</string>
     <string name="notifications_title">Известувања</string>
     <string name="notifications_empty">Нема известувања</string>
-    <string name="notifications_empty_unread">Сè е прочитано</string>
-    <string name="notifications_tab_unread">Непрочитани</string>
-    <string name="notifications_tab_unread_count">Непрочитани (%1$d)</string>
-    <string name="notifications_tab_all">Сите</string>
     <string name="notifications_mark_all_read">Означи сè прочитано</string>
     <string name="notifications_clear_all">Исчисти сè</string>
     <string name="notifications_loading">Се вчитува…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Се отвора датотека…</string>
     <string name="common_no_app_for_file">Ниедна апликација не може да ја отвори оваа датотека</string>
     <string name="common_file_open_failed">Датотеката не може да се отвори</string>
-    <string name="common_logout_confirm_title">Одјави се</string>
-    <string name="reaction_remove">Исчисти</string>
-
-    <string name="common_logout_confirm_message">Дали сте сигурни дека сакате да се одјавите? Ќе треба повторно да се најавите за да пристапите до вашата сметка.</string>
-
 </resources>

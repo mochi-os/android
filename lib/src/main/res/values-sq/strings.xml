@@ -65,10 +65,6 @@
     <string name="notifications_open">Njoftime</string>
     <string name="notifications_title">Njoftime</string>
     <string name="notifications_empty">Asnjë njoftim</string>
-    <string name="notifications_empty_unread">S\'ke asgjë për të parë</string>
-    <string name="notifications_tab_unread">Të palexuara</string>
-    <string name="notifications_tab_unread_count">Të palexuara (%1$d)</string>
-    <string name="notifications_tab_all">Të gjitha</string>
     <string name="notifications_mark_all_read">Shëno të gjitha si të lexuara</string>
     <string name="notifications_clear_all">Pastro të gjitha</string>
     <string name="notifications_loading">Duke ngarkuar…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Po hapet skedari…</string>
     <string name="common_no_app_for_file">Asnjë aplikacion nuk mund ta hapë këtë skedar</string>
     <string name="common_file_open_failed">Skedari nuk u hap dot</string>
-    <string name="common_logout_confirm_title">Dilni</string>
-    <string name="reaction_remove">Pastro</string>
-
-    <string name="common_logout_confirm_message">Jeni i sigurt që dëshironi të dilni? Do t\'ju duhet të identifikoheni përsëri për të hyrë në llogarinë tuaj.</string>
-
 </resources>

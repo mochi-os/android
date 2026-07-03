@@ -210,10 +210,4 @@
     <string name="forums_saved_clear_all">Tøm alle</string>
     <string name="forums_saved_title">Lagra</string>
     <string name="forums_saved_remove">Fjern frå lagra</string>
-    <string name="forums_saved_save">Lagre til seinare</string>
-    <string name="forums_saved_clear_confirm_title">Fjerne alle lagra innlegg?</string>
-    <string name="forums_saved_clear_confirm_body">Dette fjernar alle innlegga frå den lagra lista di. Dette kan ikkje angrast.</string>
-    <string name="forums_saved_empty_title">Ingenting lagra enno</string>
-    <string name="forums_saved_empty_subtitle">Trykk på bokmerket på eit innlegg for å lagre det her til seinare.</string>
-    <string name="forums_saved_error_clear">Klarte ikkje å fjerne lagra innlegg</string>
 </resources>

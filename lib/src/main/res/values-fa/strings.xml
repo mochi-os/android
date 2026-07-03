@@ -65,10 +65,6 @@
     <string name="notifications_open">اعلان‌ها</string>
     <string name="notifications_title">اعلان‌ها</string>
     <string name="notifications_empty">اعلانی وجود ندارد</string>
-    <string name="notifications_empty_unread">همه‌چیز را دیده‌اید</string>
-    <string name="notifications_tab_unread">خوانده‌نشده</string>
-    <string name="notifications_tab_unread_count">خوانده‌نشده (%1$d)</string>
-    <string name="notifications_tab_all">همه</string>
     <string name="notifications_mark_all_read">علامت‌گذاری همه خوانده‌شده</string>
     <string name="notifications_clear_all">پاک کردن همه</string>
     <string name="notifications_loading">در حال بارگذاری…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">در حال باز کردن فایل…</string>
     <string name="common_no_app_for_file">هیچ برنامه‌ای نمی‌تواند این فایل را باز کند</string>
     <string name="common_file_open_failed">باز کردن فایل ممکن نشد</string>
-
-    <string name="common_logout_confirm_title">خروج</string>
-    <string name="common_logout_confirm_message">آیا مطمئن هستید که می‌خواهید خارج شوید؟ برای دسترسی به حساب خود باید دوباره وارد شوید.</string>
-    <string name="reaction_remove">پاک کردن</string>
-
 </resources>

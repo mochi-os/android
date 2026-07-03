@@ -16,6 +16,8 @@
     <string name="feeds_settings">ترتیبات</string>
     <string name="feeds_no_posts_yet">تر اوسه هیڅ لیکنې نشته</string>
     <string name="feeds_default_sort">ډیفالټ ترتیب</string>
+    <string name="feeds_suggested_interests_add">اضافه کړئ</string>
+    <string name="feeds_suggested_interests_dismiss">پټ کړه</string>
     <string name="feeds_unread">نه لوستل شوی</string>
     <string name="feeds_filter_all">ټول</string>
     <string name="feeds_sort_label">ترتیب</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">سرور: %1$s</string>
     <string name="feeds_suggested_interests">وړاندیز شوې علاقې</string>
     <string name="feeds_suggested_interests_empty">تر اوسه هیڅ وړاندیزونه نشته</string>
-    <string name="feeds_suggested_interests_title">له %1$s څخه علاقې اضافه کړئ؟</string>
-    <string name="feeds_suggested_interests_subtitle">دا فیډ دا موضوعات پوښي. وټاکئ چې کوم یې د شخصي درجه بندۍ لپاره خپلو علاقو ته اضافه کړئ.</string>
-    <string name="feeds_suggested_interests_skip">تېر شه</string>
+    <string name="feeds_suggested_interests_count">%1$d لیکنې</string>
     <string name="feeds_tag_more">علاقه سمه کړئ</string>
     <string name="feeds_tag_more_up">د دې په څیر نور وښیه</string>
     <string name="feeds_tag_more_down">د دې په څیر لږ وښیه</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d نوی پوست</item>
         <item quantity="other">%d نوي پوستونه</item>
     </plurals>
-    <string name="feeds_caught_up">تاسو ټول ولیدل</string>
     <string name="feeds_all_caught_up">ټول کار پای ته رسېدلی</string>
     <string name="feeds_view_all_posts">ټول پوسټونه وګورئ</string>
-    <string name="feeds_markdown_supported">Markdown ملاتړ کیږي</string>
-    <string name="feeds_back">شاته</string>
-    <string name="feeds_confirm">تایید کړئ</string>
-    <string name="feeds_rss_feed">RSS فیډ</string>
-    <string name="feeds_unsubscribe">ګډون لغوه کول</string>
-    <string name="feeds_unsubscribed">ګډون لغوه شو</string>
-    <string name="feeds_settings_section_identity">هویت</string>
-    <string name="feeds_settings_field_name">نوم</string>
-    <string name="feeds_settings_field_entity_id">د موجودیت ID</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
-    <string name="feeds_settings_field_server">Server</string>
-    <string name="feeds_settings_name_edit_cd">د نوم سمول</string>
-    <string name="feeds_settings_name_save_cd">نوم وساتئ</string>
-    <string name="feeds_access_subject_anyone">هر څوک</string>
-    <string name="feeds_access_subject_authenticated">تصدیق شوي کاروونکي</string>
-    <string name="feeds_access_level_view_full">یوازې لیدل</string>
-    <string name="feeds_access_level_none_full">د لاسرسي اجازه نشته</string>
-    <string name="feeds_access_segment_user">کاروونکی</string>
-    <string name="feeds_access_segment_group">ګروپ</string>
-    <string name="feeds_access_segment_other">نور</string>
-    <string name="feeds_access_search_users">کاروونکي وپلټئ</string>
-    <string name="feeds_access_select_group">ګروپ وټاکئ</string>
-    <string name="feeds_access_selected">ټاکل شوي: %1$s</string>
-    <string name="feeds_permission_deny">رد کړئ</string>
-    <string name="feeds_allow_search">هر چا ته اجازه ورکړئ چې د فیډ لټون وکړي</string>
-    <string name="feeds_enable_memories">حافظې فعالې کړئ</string>
-    <string name="feeds_create_first_post">لومړی پوسټ جوړ کړئ</string>
-    <string name="feeds_post_content">د لیکنې مینځپانګه</string>
-    <string name="feeds_rss_mode_posts">لیکنې</string>
-    <string name="feeds_rss_mode_posts_comments">لیکنې او تبصرې</string>
-    <string name="feeds_unsubscribe_confirm">د فیډ ګډون لغوه شي؟</string>
-    <string name="feeds_unsubscribe_confirm_message">تاسو به نور د دې فیډ تازه معلومات نه ترلاسه کوئ. هر وخت بیا ګډون کولای شئ.</string>
-    <string name="feeds_settings_unsubscribe_section">د فیډ څخه ګډون لغوه کول</string>
-    <string name="feeds_delete_feed_description">په همیشني ډول دا فیډ او د هغه ټول مینځپانګه حذف کړئ.</string>
-    <string name="feeds_access_management">د لاسرسي اداره</string>
-    <string name="feeds_access_management_desc">وټاکئ څوک کولی شي دا فیډ وګوري او ورسره تعامل وکړي</string>
-    <string name="feeds_access_level_comment_full">تبصره، عکس العمل، او لیدنه</string>
-    <string name="feeds_access_level_react_full">غبرګون او کتنه</string>
-    <string name="feeds_access_add_title">لاسرسی اضافه کړئ</string>
-    <string name="feeds_access_add_subtitle">د لاسرسي د ورکولو لپاره یو کارن، ډله، یا بله قاعده وټاکئ.</string>
-    <string name="feeds_access_select_rule">د لاسرسي قاعده وټاکئ</string>
-    <string name="feeds_source_url_hint_feed">د فیډ موجودیت ID یا fingerprint</string>
-    <string name="feeds_source_credibility_label">اعتبار</string>
-    <string name="feeds_source_transform_hint">انګلیسي ته وژباړئ، او د bullet ټکو په توګه وښیه.</string>
-    <string name="feeds_source_transform_help">د غیرفعال کولو لپاره خالي پریږدئ.</string>
-
-    <string name="feeds_scroll_to_top">بېرته سر ته</string>
-    <string name="feeds_settings_title">د %1$s تنظیمات</string>
-    <string name="feeds_settings_name_cancel_cd">سمون لغوه کول</string>
-    <string name="feeds_access_authenticated_desc">هر څوک چې ننوتلی وي</string>
-    <string name="feeds_access_anyone_desc">د بېنومو کاروونکو په ګډون</string>
-    <string name="feeds_source_last_checked">وروستی ځل %1$s کتل شوی</string>
-    <string name="feeds_source_polling_interval">په هر %1$s کې کتنه کېږي</string>
-    <string name="feeds_permission_request_title">د اجازې غوښتنه</string>
-    <string name="feeds_permission_request_message">%1$s لاندې اجازه غواړي:</string>
-    <string name="feeds_permission_allow">اجازه ورکړئ</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d پوسټ</item>
-        <item quantity="other">%1$d پوسټونه</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d علاقه اضافه کړئ</item>
-        <item quantity="other">%1$d علاقې اضافه کړئ</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">نن ورځ %1$d کال وړاندې</item>
-        <item quantity="other">نن ورځ %1$d کاله وړاندې</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d انځور</item>
-        <item quantity="other">%1$d انځورونه</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d ضمیمه</item>
-        <item quantity="other">%1$d ضمیمې</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d تبصره</item>
-        <item quantity="other">%1$d تبصرې</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d نوره تبصره وګورئ</item>
-        <item quantity="other">%1$d نورې تبصرې وګورئ</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d دقیقه</item>
-        <item quantity="other">%1$d دقیقې</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ساعت</item>
-        <item quantity="other">%1$d ساعته</item>
-    </plurals>
-
 </resources>

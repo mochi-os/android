@@ -16,6 +16,8 @@
     <string name="feeds_settings">ការកំណត់</string>
     <string name="feeds_no_posts_yet">មិនទាន់មានប្រកាស</string>
     <string name="feeds_default_sort">ការតម្រៀបលំនាំដើម</string>
+    <string name="feeds_suggested_interests_add">បន្ថែម</string>
+    <string name="feeds_suggested_interests_dismiss">លាក់</string>
     <string name="feeds_unread">មិនទាន់អាន</string>
     <string name="feeds_filter_all">ទាំងអស់</string>
     <string name="feeds_sort_label">តម្រៀប</string>
@@ -118,9 +120,7 @@
     <string name="feeds_identity_server">ម៉ាស៊ីនមេ៖ %1$s</string>
     <string name="feeds_suggested_interests">ចំណាប់អារម្មណ៍ដែលបានណែនាំ</string>
     <string name="feeds_suggested_interests_empty">មិនទាន់មានការណែនាំទេ</string>
-    <string name="feeds_suggested_interests_title">បន្ថែមចំណាប់អារម្មណ៍ពី %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">ព័ត៌មាននេះគ្របដណ្តប់លើប្រធានបទទាំងនេះ។ ជ្រើសរើសប្រធានបទណាមួយដែលត្រូវបន្ថែមទៅចំណាប់អារម្មណ៍របស់អ្នក សម្រាប់ការដាក់ចំណាត់ថ្នាក់តាមបុគ្គល។</string>
-    <string name="feeds_suggested_interests_skip">រំលង</string>
+    <string name="feeds_suggested_interests_count">%1$d ការបង្ហោះ</string>
     <string name="feeds_tag_more">កែសម្រួលចំណាប់អារម្មណ៍</string>
     <string name="feeds_tag_more_up">បង្ហាញច្រើនបែបនេះ</string>
     <string name="feeds_tag_more_down">បង្ហាញតិចបែបនេះ</string>
@@ -211,94 +211,6 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">ការបង្ហោះថ្មី %d </item>
     </plurals>
-    <string name="feeds_caught_up">អ្នកបានឃើញទាំងអស់ហើយ</string>
     <string name="feeds_all_caught_up">ទាំងអស់ហើយ</string>
     <string name="feeds_view_all_posts">មើលការប្រកាសទាំងអស់</string>
-    <string name="feeds_markdown_supported">គាំទ្រ Markdown</string>
-    <string name="feeds_back">ត្រឡប់</string>
-    <string name="feeds_confirm">បញ្ជាក់</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_unsubscribe">ឈប់ជាវ</string>
-    <string name="feeds_unsubscribed">បានឈប់ជាវ</string>
-    <string name="feeds_settings_section_identity">អត្តសញ្ញាណ</string>
-    <string name="feeds_settings_field_name">ឈ្មោះ</string>
-    <string name="feeds_settings_field_entity_id">លេខសម្គាល់អង្គភាព</string>
-    <string name="feeds_settings_field_fingerprint">ស្នាមម្រាមដៃ</string>
-    <string name="feeds_settings_field_server">ម៉ាស៊ីនមេ</string>
-    <string name="feeds_settings_name_edit_cd">កែសម្រួលឈ្មោះ</string>
-    <string name="feeds_settings_name_save_cd">រក្សាទុកឈ្មោះ</string>
-    <string name="feeds_access_subject_anyone">អ្នកណាក៏បាន</string>
-    <string name="feeds_access_subject_authenticated">អ្នកប្រើដែលបានផ្ទៀងផ្ទាត់</string>
-    <string name="feeds_access_level_view_full">មើលតែប៉ុណ្ណោះ</string>
-    <string name="feeds_access_level_none_full">គ្មានសិទ្ធិចូលប្រើ</string>
-    <string name="feeds_access_segment_user">អ្នកប្រើប្រាស់</string>
-    <string name="feeds_access_segment_group">ក្រុម</string>
-    <string name="feeds_access_segment_other">ផ្សេងទៀត</string>
-    <string name="feeds_access_search_users">ស្វែងរកអ្នកប្រើ</string>
-    <string name="feeds_access_select_group">ជ្រើសរើសក្រុម</string>
-    <string name="feeds_access_selected">បានជ្រើសរើស៖ %1$s</string>
-    <string name="feeds_permission_deny">បដិសេធ</string>
-    <string name="feeds_allow_search">អនុញ្ញាតឱ្យអ្នកណាក៏អាចស្វែងរកមតិព័ត៌មាន</string>
-    <string name="feeds_enable_memories">បើកការចងចាំ</string>
-    <string name="feeds_create_first_post">បង្កើតការបង្ហោះដំបូង</string>
-    <string name="feeds_post_content">មាតិកាប្រកាស</string>
-    <string name="feeds_rss_mode_posts">ប្រកាស</string>
-    <string name="feeds_rss_mode_posts_comments">ប្រកាស និងមតិយោបល់</string>
-    <string name="feeds_unsubscribe_confirm">ឈប់ជាវហ្វីដនេះ?</string>
-    <string name="feeds_unsubscribe_confirm_message">អ្នកនឹងឈប់ទទួលបានបច្ចុប្បន្នភាពពីហ្វីដនេះ។ អ្នកអាចជាវឡើងវិញបានគ្រប់ពេល។</string>
-    <string name="feeds_settings_unsubscribe_section">ឈប់ជាវព័ត៌មាន</string>
-    <string name="feeds_delete_feed_description">លុប feed នេះ និងមាតិការបស់វាជាអចិន្ត្រៃយ៍។</string>
-    <string name="feeds_access_management">ការគ្រប់គ្រងការចូលប្រើ</string>
-    <string name="feeds_access_management_desc">គ្រប់គ្រងអ្នកដែលអាចមើល និងធ្វើអន្តរកម្មជាមួយមតិព័ត៌មាននេះ</string>
-    <string name="feeds_access_level_comment_full">មតិយោបល់ ប្រតិកម្ម និងមើល</string>
-    <string name="feeds_access_level_react_full">ប្រតិកម្ម និងមើល</string>
-    <string name="feeds_access_add_title">បន្ថែមការចូលប្រើ</string>
-    <string name="feeds_access_add_subtitle">ជ្រើសរើសអ្នកប្រើ ក្រុម ឬច្បាប់ផ្សេងទៀតដើម្បីផ្តល់សិទ្ធិចូលប្រើ។</string>
-    <string name="feeds_access_select_rule">ជ្រើសរើសច្បាប់ចូលប្រើ</string>
-    <string name="feeds_source_url_hint_feed">លេខសម្គាល់អង្គភាព ឬស្នាមម្រាមដៃព័ត៌មានបង្ហាញ</string>
-    <string name="feeds_source_credibility_label">ភាពគួរឱ្យជឿទុកចិត្ត</string>
-    <string name="feeds_source_transform_hint">បកប្រែទៅជាភាសាអង់គ្លេស និងបង្ហាញជាចំណុចសំខាន់ៗ។</string>
-    <string name="feeds_source_transform_help">ទុកឲ្យទទេដើម្បីបិទ។</string>
-
-    <string name="feeds_scroll_to_top">ត្រឡប់ទៅខាងលើ</string>
-    <string name="feeds_settings_title">ការកំណត់ %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">បោះបង់ការកែសម្រួល</string>
-    <string name="feeds_access_authenticated_desc">នរណាក៏ដោយដែលបានចូលគណនី</string>
-    <string name="feeds_access_anyone_desc">រួមទាំងអ្នកប្រើប្រាស់អនាមិកផងដែរ</string>
-    <string name="feeds_source_last_checked">បានពិនិត្យចុងក្រោយ %1$s</string>
-    <string name="feeds_source_polling_interval">ពិនិត្យរៀងរាល់ %1$s</string>
-    <string name="feeds_permission_request_title">សំណើសុំការអនុញ្ញាត</string>
-    <string name="feeds_permission_request_message">%1$s កំពុងស្នើសុំការអនុញ្ញាតដូចខាងក្រោម៖</string>
-    <string name="feeds_permission_allow">អនុញ្ញាត</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">ការបង្ហោះ %1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">បន្ថែមចំណាប់អារម្មណ៍ %1$d</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d ឆ្នាំមុន ថ្ងៃនេះ</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="other">រូបភាព %1$d</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="other">ឯកសារភ្ជាប់ %1$d</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="other">មតិយោបល់ %1$d</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="other">មើលមតិយោបល់ %1$d ទៀត</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d នាទី</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d ម៉ោង</item>
-    </plurals>
-
 </resources>

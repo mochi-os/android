@@ -442,5 +442,4 @@
     <string name="system_status_awaiting_routing">Negeseuon yn aros am lwybro</string>
     <string name="system_status_relay_service">Gwasanaeth relái</string>
     <string name="system_status_relay_service_value">%1$d / %2$d archebion · %3$d cylchedau · %4$d gwrthodwyd</string>
-    <string name="route_target_select">Dewis</string>
 </resources>

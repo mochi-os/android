@@ -16,6 +16,8 @@
     <string name="feeds_settings">الإعدادات</string>
     <string name="feeds_no_posts_yet">لا توجد منشورات بعد</string>
     <string name="feeds_default_sort">الترتيب الافتراضي</string>
+    <string name="feeds_suggested_interests_add">إضافة</string>
+    <string name="feeds_suggested_interests_dismiss">إخفاء</string>
     <string name="feeds_unread">غير مقروء</string>
     <string name="feeds_filter_all">الكل</string>
     <string name="feeds_sort_label">ترتيب</string>
@@ -113,9 +115,7 @@
     <string name="feeds_identity_server">الخادم: %1$s</string>
     <string name="feeds_suggested_interests">اهتمامات مقترحة</string>
     <string name="feeds_suggested_interests_empty">لا توجد اقتراحات بعد</string>
-    <string name="feeds_suggested_interests_title">إضافة اهتمامات من %1$s؟</string>
-    <string name="feeds_suggested_interests_subtitle">تتناول هذه التغذية هذه المواضيع. اختر أيها تريد إضافته إلى اهتماماتك للحصول على ترتيب مخصص.</string>
-    <string name="feeds_suggested_interests_skip">تخطّي</string>
+    <string name="feeds_suggested_interests_count">%1$d منشور</string>
     <string name="feeds_tag_more">ضبط الاهتمام</string>
     <string name="feeds_tag_more_up">أظهر المزيد مثل هذا</string>
     <string name="feeds_tag_more_down">أظهر أقل مثل هذا</string>
@@ -216,139 +216,6 @@
         <item quantity="many">%d منشورًا جديدًا</item>
         <item quantity="other">%d منشور جديد</item>
     </plurals>
-    <string name="feeds_caught_up">شاهدت كل المنشورات</string>
     <string name="feeds_all_caught_up">لا جديد</string>
     <string name="feeds_view_all_posts">عرض جميع المنشورات</string>
-    <string name="feeds_markdown_supported">Markdown مدعوم</string>
-    <string name="feeds_back">رجوع</string>
-    <string name="feeds_confirm">تأكيد</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_unsubscribe">إلغاء الاشتراك</string>
-    <string name="feeds_unsubscribed">تم إلغاء الاشتراك</string>
-    <string name="feeds_settings_section_identity">الهوية</string>
-    <string name="feeds_settings_field_name">الاسم</string>
-    <string name="feeds_settings_field_entity_id">معرّف الكيان</string>
-    <string name="feeds_settings_field_fingerprint">البصمة</string>
-    <string name="feeds_settings_field_server">الخادم</string>
-    <string name="feeds_settings_name_edit_cd">تعديل الاسم</string>
-    <string name="feeds_settings_name_save_cd">حفظ الاسم</string>
-    <string name="feeds_access_subject_anyone">أي شخص</string>
-    <string name="feeds_access_subject_authenticated">المستخدمون المُوثَّقون</string>
-    <string name="feeds_access_level_view_full">عرض فقط</string>
-    <string name="feeds_access_level_none_full">لا يوجد وصول</string>
-    <string name="feeds_access_segment_user">المستخدم</string>
-    <string name="feeds_access_segment_group">مجموعة</string>
-    <string name="feeds_access_segment_other">أخرى</string>
-    <string name="feeds_access_search_users">البحث عن مستخدمين</string>
-    <string name="feeds_access_select_group">اختر مجموعة</string>
-    <string name="feeds_access_selected">المحدد: %1$s</string>
-    <string name="feeds_permission_deny">رفض</string>
-    <string name="feeds_allow_search">السماح لأي شخص بالبحث عن التغذية</string>
-    <string name="feeds_enable_memories">تمكين الذكريات</string>
-    <string name="feeds_create_first_post">أنشئ المنشور الأول</string>
-    <string name="feeds_post_content">محتوى المنشور</string>
-    <string name="feeds_rss_mode_posts">المنشورات</string>
-    <string name="feeds_rss_mode_posts_comments">المنشورات والتعليقات</string>
-    <string name="feeds_unsubscribe_confirm">إلغاء الاشتراك في التغذية؟</string>
-    <string name="feeds_unsubscribe_confirm_message">ستتوقف عن تلقي التحديثات من هذه التغذية. يمكنك إعادة الاشتراك في أي وقت.</string>
-    <string name="feeds_settings_unsubscribe_section">إلغاء الاشتراك من feed</string>
-    <string name="feeds_delete_feed_description">حذف هذا feed وكل محتوياته نهائياً.</string>
-    <string name="feeds_access_management">إدارة الوصول</string>
-    <string name="feeds_access_management_desc">تحكّم في من يمكنه عرض هذه التغذية والتفاعل معها</string>
-    <string name="feeds_access_level_comment_full">التعليق والتفاعل والعرض</string>
-    <string name="feeds_access_level_react_full">التفاعل والعرض</string>
-    <string name="feeds_access_add_title">إضافة وصول</string>
-    <string name="feeds_access_add_subtitle">اختر مستخدمًا أو مجموعة أو قاعدة أخرى لمنح الوصول.</string>
-    <string name="feeds_access_select_rule">اختر قاعدة الوصول</string>
-    <string name="feeds_source_url_hint_feed">معرف كيان التغذية أو البصمة</string>
-    <string name="feeds_source_credibility_label">المصداقية</string>
-    <string name="feeds_source_transform_hint">ترجم إلى الإنجليزية، واعرض كنقاط.</string>
-    <string name="feeds_source_transform_help">اتركه فارغًا للتعطيل.</string>
-
-    <string name="feeds_scroll_to_top">العودة إلى الأعلى</string>
-    <string name="feeds_settings_title">إعدادات %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">إلغاء التعديل</string>
-    <string name="feeds_access_authenticated_desc">أي شخص مسجّل الدخول</string>
-    <string name="feeds_access_anyone_desc">بما في ذلك المستخدمون المجهولون</string>
-    <string name="feeds_source_last_checked">آخر فحص %1$s</string>
-    <string name="feeds_source_polling_interval">الاستطلاع كل %1$s</string>
-    <string name="feeds_permission_request_title">طلب إذن</string>
-    <string name="feeds_permission_request_message">يطلب %1$s الإذن التالي:</string>
-    <string name="feeds_permission_allow">السماح</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="zero">%1$d منشور</item>
-        <item quantity="one">%1$d منشور</item>
-        <item quantity="two">%1$d منشوران</item>
-        <item quantity="few">%1$d منشورات</item>
-        <item quantity="many">%1$d منشورًا</item>
-        <item quantity="other">%1$d منشور</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="zero">إضافة %1$d اهتمام</item>
-        <item quantity="one">إضافة %1$d اهتمام</item>
-        <item quantity="two">إضافة %1$d اهتمامين</item>
-        <item quantity="few">إضافة %1$d اهتمامات</item>
-        <item quantity="many">إضافة %1$d اهتمامًا</item>
-        <item quantity="other">إضافة %1$d اهتمام</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="zero">قبل %1$d سنة في مثل هذا اليوم</item>
-        <item quantity="one">قبل %1$d سنة في مثل هذا اليوم</item>
-        <item quantity="two">قبل %1$d سنتين في مثل هذا اليوم</item>
-        <item quantity="few">قبل %1$d سنوات في مثل هذا اليوم</item>
-        <item quantity="many">قبل %1$d سنة في مثل هذا اليوم</item>
-        <item quantity="other">قبل %1$d سنة في مثل هذا اليوم</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="zero">%1$d صورة</item>
-        <item quantity="one">%1$d صورة</item>
-        <item quantity="two">%1$d صورتان</item>
-        <item quantity="few">%1$d صور</item>
-        <item quantity="many">%1$d صورة</item>
-        <item quantity="other">%1$d صورة</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="zero">%1$d مرفق</item>
-        <item quantity="one">%1$d مرفق</item>
-        <item quantity="two">%1$d مرفقان</item>
-        <item quantity="few">%1$d مرفقات</item>
-        <item quantity="many">%1$d مرفقًا</item>
-        <item quantity="other">%1$d مرفق</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="zero">%1$d تعليق</item>
-        <item quantity="one">%1$d تعليق</item>
-        <item quantity="two">%1$d تعليقان</item>
-        <item quantity="few">%1$d تعليقات</item>
-        <item quantity="many">%1$d تعليقًا</item>
-        <item quantity="other">%1$d تعليق</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="zero">عرض %1$d تعليق إضافي</item>
-        <item quantity="one">عرض %1$d تعليق إضافي</item>
-        <item quantity="two">عرض %1$d تعليقين إضافيين</item>
-        <item quantity="few">عرض %1$d تعليقات إضافية</item>
-        <item quantity="many">عرض %1$d تعليقًا إضافيًا</item>
-        <item quantity="other">عرض %1$d تعليق إضافي</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="zero">%1$d دقيقة</item>
-        <item quantity="one">%1$d دقيقة</item>
-        <item quantity="two">%1$d دقيقتان</item>
-        <item quantity="few">%1$d دقائق</item>
-        <item quantity="many">%1$d دقيقة</item>
-        <item quantity="other">%1$d دقيقة</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="zero">%1$d ساعة</item>
-        <item quantity="one">%1$d ساعة</item>
-        <item quantity="two">%1$d ساعتان</item>
-        <item quantity="few">%1$d ساعات</item>
-        <item quantity="many">%1$d ساعة</item>
-        <item quantity="other">%1$d ساعة</item>
-    </plurals>
-
 </resources>

@@ -16,6 +16,8 @@
     <string name="feeds_settings">Ρυθμίσεις</string>
     <string name="feeds_no_posts_yet">Δεν υπάρχουν ακόμη αναρτήσεις</string>
     <string name="feeds_default_sort">Προεπιλεγμένη ταξινόμηση</string>
+    <string name="feeds_suggested_interests_add">Προσθήκη</string>
+    <string name="feeds_suggested_interests_dismiss">Απόκρυψη</string>
     <string name="feeds_unread">Μη αναγνωσμένα</string>
     <string name="feeds_filter_all">Όλα</string>
     <string name="feeds_sort_label">Ταξινόμηση</string>
@@ -123,9 +125,7 @@
     <string name="feeds_identity_server">Διακομιστής: %1$s</string>
     <string name="feeds_suggested_interests">Προτεινόμενα ενδιαφέροντα</string>
     <string name="feeds_suggested_interests_empty">Δεν υπάρχουν προτάσεις ακόμη</string>
-    <string name="feeds_suggested_interests_title">Προσθήκη ενδιαφερόντων από %1$s;</string>
-    <string name="feeds_suggested_interests_subtitle">Αυτή η ροή καλύπτει αυτά τα θέματα. Επιλέξτε ποια θέλετε να προσθέσετε στα ενδιαφέροντά σας για εξατομικευμένη κατάταξη.</string>
-    <string name="feeds_suggested_interests_skip">Παράλειψη</string>
+    <string name="feeds_suggested_interests_count">%1$d αναρτήσεις</string>
     <string name="feeds_tag_more">Ρύθμιση ενδιαφέροντος</string>
     <string name="feeds_tag_more_up">Εμφάνιση περισσότερων σαν αυτό</string>
     <string name="feeds_tag_more_down">Εμφάνιση λιγότερων σαν αυτό</string>
@@ -212,103 +212,6 @@
         <item quantity="one">%d νέα δημοσίευση</item>
         <item quantity="other">%d νέες δημοσιεύσεις</item>
     </plurals>
-    <string name="feeds_caught_up">Είστε ενημερωμένοι</string>
     <string name="feeds_all_caught_up">Όλα ενημερωμένα</string>
     <string name="feeds_view_all_posts">Προβολή όλων των δημοσιεύσεων</string>
-    <string name="feeds_markdown_supported">Υποστηρίζεται Markdown</string>
-    <string name="feeds_back">Πίσω</string>
-    <string name="feeds_confirm">Επιβεβαίωση</string>
-    <string name="feeds_rss_feed">Ροή RSS</string>
-    <string name="feeds_unsubscribe">Διαγραφή εγγραφής</string>
-    <string name="feeds_unsubscribed">Διαγραφή εγγραφής ολοκληρώθηκε</string>
-    <string name="feeds_settings_section_identity">Ταυτότητα</string>
-    <string name="feeds_settings_field_name">Όνομα</string>
-    <string name="feeds_settings_field_entity_id">ID οντότητας</string>
-    <string name="feeds_settings_field_fingerprint">Αποτύπωμα</string>
-    <string name="feeds_settings_field_server">Διακομιστής</string>
-    <string name="feeds_settings_name_edit_cd">Επεξεργασία ονόματος</string>
-    <string name="feeds_settings_name_save_cd">Αποθήκευση ονόματος</string>
-    <string name="feeds_access_subject_anyone">Οποιοσδήποτε</string>
-    <string name="feeds_access_subject_authenticated">Πιστοποιημένοι χρήστες</string>
-    <string name="feeds_access_level_view_full">Μόνο προβολή</string>
-    <string name="feeds_access_level_none_full">Χωρίς πρόσβαση</string>
-    <string name="feeds_access_segment_user">Χρήστης</string>
-    <string name="feeds_access_segment_group">Ομάδα</string>
-    <string name="feeds_access_segment_other">Άλλο</string>
-    <string name="feeds_access_search_users">Αναζήτηση χρηστών</string>
-    <string name="feeds_access_select_group">Επιλέξτε ομάδα</string>
-    <string name="feeds_access_selected">Επιλεγμένο: %1$s</string>
-    <string name="feeds_permission_deny">Άρνηση</string>
-    <string name="feeds_allow_search">Επιτρέψτε σε όλους να αναζητούν τη ροή</string>
-    <string name="feeds_enable_memories">Ενεργοποίηση αναμνήσεων</string>
-    <string name="feeds_create_first_post">Δημιουργία της πρώτης δημοσίευσης</string>
-    <string name="feeds_post_content">Περιεχόμενο ανάρτησης</string>
-    <string name="feeds_rss_mode_posts">Αναρτήσεις</string>
-    <string name="feeds_rss_mode_posts_comments">Αναρτήσεις και σχόλια</string>
-    <string name="feeds_unsubscribe_confirm">Κατάργηση εγγραφής από τη ροή;</string>
-    <string name="feeds_unsubscribe_confirm_message">Θα σταματήσετε να λαμβάνετε ενημερώσεις από αυτήν τη ροή. Μπορείτε να εγγραφείτε ξανά οποιαδήποτε στιγμή.</string>
-    <string name="feeds_settings_unsubscribe_section">Διαγραφή εγγραφής από τη ροή</string>
-    <string name="feeds_delete_feed_description">Διαγράψτε οριστικά αυτή τη ροή και όλο το περιεχόμενό της.</string>
-    <string name="feeds_access_management">Διαχείριση πρόσβασης</string>
-    <string name="feeds_access_management_desc">Ελέγξτε ποιος μπορεί να δει και να αλληλεπιδράσει με αυτή τη ροή</string>
-    <string name="feeds_access_level_comment_full">Σχολιασμός, αντίδραση και προβολή</string>
-    <string name="feeds_access_level_react_full">Αντίδραση και προβολή</string>
-    <string name="feeds_access_add_title">Προσθήκη πρόσβασης</string>
-    <string name="feeds_access_add_subtitle">Επιλέξτε έναν χρήστη, ομάδα ή άλλον κανόνα για να παραχωρήσετε πρόσβαση.</string>
-    <string name="feeds_access_select_rule">Επιλέξτε κανόνα πρόσβασης</string>
-    <string name="feeds_source_url_hint_feed">Αναγνωριστικό οντότητας ροής ή αποτύπωμα</string>
-    <string name="feeds_source_credibility_label">Αξιοπιστία</string>
-    <string name="feeds_source_transform_hint">Μεταφράστε στα Αγγλικά και εμφανίστε ως κουκκίδες.</string>
-    <string name="feeds_source_transform_help">Αφήστε κενό για απενεργοποίηση.</string>
-
-    <string name="feeds_scroll_to_top">Επιστροφή στην κορυφή</string>
-    <string name="feeds_settings_title">Ρυθμίσεις %1$s</string>
-    <string name="feeds_settings_name_cancel_cd">Ακύρωση επεξεργασίας</string>
-    <string name="feeds_access_authenticated_desc">Οποιοσδήποτε είναι συνδεδεμένος</string>
-    <string name="feeds_access_anyone_desc">Συμπεριλαμβανομένων ανώνυμων χρηστών</string>
-    <string name="feeds_source_last_checked">Τελευταίος έλεγχος %1$s</string>
-    <string name="feeds_source_polling_interval">Έλεγχος κάθε %1$s</string>
-    <string name="feeds_permission_request_title">Αίτημα άδειας</string>
-    <string name="feeds_permission_request_message">Το %1$s ζητά την ακόλουθη άδεια:</string>
-    <string name="feeds_permission_allow">Να επιτρέπεται</string>
-    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-
-
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d δημοσίευση</item>
-        <item quantity="other">%1$d δημοσιεύσεις</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Προσθήκη %1$d ενδιαφέροντος</item>
-        <item quantity="other">Προσθήκη %1$d ενδιαφερόντων</item>
-    </plurals>
-    <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">Σαν σήμερα πριν από %1$d χρόνο</item>
-        <item quantity="other">Σαν σήμερα πριν από %1$d χρόνια</item>
-    </plurals>
-    <plurals name="feeds_image_count">
-        <item quantity="one">%1$d εικόνα</item>
-        <item quantity="other">%1$d εικόνες</item>
-    </plurals>
-    <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d συνημμένο</item>
-        <item quantity="other">%1$d συνημμένα</item>
-    </plurals>
-    <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d σχόλιο</item>
-        <item quantity="other">%1$d σχόλια</item>
-    </plurals>
-    <plurals name="feeds_view_more_comments">
-        <item quantity="one">Προβολή %1$d ακόμη σχολίου</item>
-        <item quantity="other">Προβολή %1$d ακόμη σχολίων</item>
-    </plurals>
-    <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d λεπτό</item>
-        <item quantity="other">%1$d λεπτά</item>
-    </plurals>
-    <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ώρα</item>
-        <item quantity="other">%1$d ώρες</item>
-    </plurals>
-
 </resources>

@@ -65,10 +65,6 @@
     <string name="notifications_open">Tilkynningar</string>
     <string name="notifications_title">Tilkynningar</string>
     <string name="notifications_empty">Engar tilkynningar</string>
-    <string name="notifications_empty_unread">Allt lesið</string>
-    <string name="notifications_tab_unread">Ólesið</string>
-    <string name="notifications_tab_unread_count">Ólesið (%1$d)</string>
-    <string name="notifications_tab_all">Allt</string>
     <string name="notifications_mark_all_read">Merkja allt lesið</string>
     <string name="notifications_clear_all">Hreinsa allt</string>
     <string name="notifications_loading">Hleð…</string>
@@ -292,9 +288,4 @@
     <string name="common_opening_file">Opnar skrá…</string>
     <string name="common_no_app_for_file">Ekkert forrit getur opnað þessa skrá</string>
     <string name="common_file_open_failed">Ekki tókst að opna skrá</string>
-    <string name="common_logout_confirm_title">Skrá út</string>
-    <string name="reaction_remove">Hreinsa</string>
-
-    <string name="common_logout_confirm_message">Ertu viss um að þú viljir skrá þig út? Þú þarft að skrá þig inn aftur til að fá aðgang að reikningnum þínum.</string>
-
 </resources>
