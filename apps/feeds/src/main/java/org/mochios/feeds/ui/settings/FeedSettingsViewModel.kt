@@ -80,6 +80,12 @@ class FeedSettingsViewModel @Inject constructor(
     private val _pendingPermission = MutableStateFlow<PendingPermission?>(null)
     val pendingPermission: StateFlow<PendingPermission?> = _pendingPermission.asStateFlow()
 
+    // A failed addSource surfaces inline in the add dialog's URL field rather
+    // than the screen snackbar, so the user can fix the URL and retry without
+    // losing the dialog. Cleared when the field is edited or the dialog closes.
+    private val _addSourceError = MutableStateFlow<MochiError?>(null)
+    val addSourceError: StateFlow<MochiError?> = _addSourceError.asStateFlow()
+
     // Access tab
     private val _accessRules = MutableStateFlow<List<AccessRule>>(emptyList())
     val accessRules: StateFlow<List<AccessRule>> = _accessRules.asStateFlow()
@@ -280,11 +286,13 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun addSource(url: String, type: String) {
+    fun addSource(url: String, type: String, onSuccess: () -> Unit = {}) {
         viewModelScope.launch {
+            _addSourceError.value = null
             try {
                 val result = repository.addSource(feedId, url, type)
                 _actionMessage.value = R.string.feeds_settings_source_added
+                onSuccess()
                 loadSources()
                 val suggested = result.suggestedCredibility
                 if (suggested != null && result.source.id.isNotEmpty()) {
@@ -299,9 +307,16 @@ class FeedSettingsViewModel @Inject constructor(
                 // retry details for the approval dialog.
                 handlePermissionRequired(e, url, type)
             } catch (e: Exception) {
-                _error.value = e.toMochiError()
+                // Surface inline in the add dialog rather than the snackbar so
+                // the user can correct the URL and retry.
+                _addSourceError.value = e.toMochiError()
             }
         }
+    }
+
+    /** Clear the inline add-source error (on field edit or dialog dismiss). */
+    fun clearAddSourceError() {
+        _addSourceError.value = null
     }
 
     private suspend fun handlePermissionRequired(

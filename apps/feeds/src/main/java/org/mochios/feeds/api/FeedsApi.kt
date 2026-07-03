@@ -94,6 +94,12 @@ data class AccessRevokeRequest(
     val subject: String
 )
 
+data class AddSourceRequest(
+    val feed: String,
+    val type: String,
+    val url: String
+)
+
 data class RecommendationsResponse(
     val feeds: List<Feed> = emptyList()
 )
@@ -390,12 +396,10 @@ interface FeedsApi {
         @Path("feedId") feedId: String
     ): Response<ApiResponse<SourceListResponse>>
 
-    @FormUrlEncoded
     @POST("{feedId}/-/sources/add")
     suspend fun addSource(
         @Path("feedId") feedId: String,
-        @Field("url") url: String,
-        @Field("type") type: String
+        @Body body: AddSourceRequest
     ): Response<ApiResponse<SourceAddResponse>>
 
     @FormUrlEncoded

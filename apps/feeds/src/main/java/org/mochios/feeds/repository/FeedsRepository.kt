@@ -30,6 +30,7 @@ import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
+import org.mochios.feeds.api.AddSourceRequest
 import org.mochios.feeds.api.SubscribeRequest
 import org.mochios.feeds.api.UnsubscribeRequest
 import org.mochios.feeds.model.Feed
@@ -660,7 +661,7 @@ class FeedsRepository @Inject constructor(
     }
 
     suspend fun addSource(feedId: String, url: String, type: String): AddSourceResult {
-        val response = api.addSource(feedId, url, type)
+        val response = api.addSource(feedId, AddSourceRequest(feed = feedId, type = type, url = url))
         if (response.isSuccessful) {
             val data = response.body()?.data
                 ?: throw MochiError.Unknown()
@@ -679,21 +680,18 @@ class FeedsRepository @Inject constructor(
                 throw PermissionRequiredException(permission.app, permission.permission)
             }
         }
-        throw errorFromBody(response.code(), body)
-    }
-
-    // Map a non-success body to a MochiError, mirroring lib's unwrap() handling:
-    // a JSON `{error, message}` becomes an ApiException, anything else (empty or
-    // an HTML gateway page) is treated as a network failure.
-    private fun errorFromBody(code: Int, body: String?): Throwable {
+        // A structured `{"error": "Feed returned status 403"}` body carries the
+        // server's message — wrap it in an ApiException and let toMochiError()
+        // map it. Anything else (empty or an HTML gateway page) is a network
+        // failure.
         val trimmed = body?.trimStart()
-        if (trimmed.isNullOrEmpty() || !trimmed.startsWith("{")) {
-            return MochiError.NetworkError()
+        val apiError = if (!trimmed.isNullOrEmpty() && trimmed.startsWith("{")) {
+            runCatching { Gson().fromJson(trimmed, ApiError::class.java) }.getOrNull()
+        } else {
+            null
         }
-        val apiError = runCatching {
-            Gson().fromJson(trimmed, ApiError::class.java)
-        }.getOrNull() ?: return MochiError.NetworkError()
-        return ApiException(code, apiError).toMochiError()
+        throw apiError?.let { error -> ApiException(response.code(), error).toMochiError() }
+            ?: MochiError.NetworkError()
     }
 
     suspend fun editSource(

@@ -60,11 +60,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.api.userMessage
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Source
 import org.mochios.android.i18n.LocalFormat
@@ -85,6 +87,7 @@ fun SourcesTab(
     val isLoading by viewModel.isLoadingSources.collectAsState()
     val suggestedCredibility by viewModel.suggestedCredibility.collectAsState()
     val pendingPermission by viewModel.pendingPermission.collectAsState()
+    val addSourceError by viewModel.addSourceError.collectAsState()
 
     var showAddDialog by remember { mutableStateOf(false) }
     var showEditDialog by remember { mutableStateOf<Source?>(null) }
@@ -104,6 +107,15 @@ fun SourcesTab(
         if (index >= 0) {
             listState.animateScrollToItem(index)
             scrolled = true
+        }
+    }
+
+    // A permission-required add replaces the add dialog with the permission
+    // prompt; close the add dialog so the two don't stack. The retry details
+    // are stashed on the pending permission, so allowing it re-runs the add.
+    LaunchedEffect(pendingPermission) {
+        if (pendingPermission != null) {
+            showAddDialog = false
         }
     }
 
@@ -160,10 +172,16 @@ fun SourcesTab(
     if (showAddDialog) {
         AddSourceDialog(
             hasMemoriesSource = sources.any { it.type == "feed/memories" },
-            onDismiss = { showAddDialog = false },
-            onAdd = { url, type ->
-                viewModel.addSource(url, type)
+            errorMessage = addSourceError?.userMessage(),
+            onClearError = { viewModel.clearAddSourceError() },
+            onDismiss = {
                 showAddDialog = false
+                viewModel.clearAddSourceError()
+            },
+            onAdd = { url, type ->
+                viewModel.addSource(url, type) {
+                    showAddDialog = false
+                }
             }
         )
     }
@@ -380,12 +398,23 @@ private fun SourceCard(
 @Composable
 private fun AddSourceDialog(
     hasMemoriesSource: Boolean,
+    errorMessage: String?,
+    onClearError: () -> Unit,
     onDismiss: () -> Unit,
     onAdd: (String, String) -> Unit
 ) {
     var url by remember { mutableStateOf("") }
     var type by remember { mutableStateOf("rss") }
     var typeExpanded by remember { mutableStateOf(false) }
+
+    // On failure the error renders inline under the URL field; drop the keyboard
+    // so it's not hidden behind the IME.
+    val focusManager = LocalFocusManager.current
+    LaunchedEffect(errorMessage) {
+        if (errorMessage != null) {
+            focusManager.clearFocus()
+        }
+    }
 
     // A feed can only have one memories source, so drop that option once one
     // already exists (matching web, which hides it from the add menu).
@@ -413,9 +442,19 @@ private fun AddSourceDialog(
                 if (urlRequired) {
                     OutlinedTextField(
                         value = url,
-                        onValueChange = { url = it },
+                        onValueChange = { newUrl ->
+                            url = newUrl
+                            // Clear the previous failure once the user edits.
+                            if (errorMessage != null) {
+                                onClearError()
+                            }
+                        },
                         label = { Text(stringResource(R.string.feeds_source_url)) },
                         placeholder = { Text(urlHint) },
+                        isError = errorMessage != null,
+                        supportingText = errorMessage?.let { message ->
+                            { Text(message) }
+                        },
                         modifier = Modifier.fillMaxWidth(),
                         singleLine = true
                     )
