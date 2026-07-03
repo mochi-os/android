@@ -97,6 +97,8 @@
     <string name="common_more_options">More options</string>
     <string name="common_notifications">Notifications</string>
     <string name="common_logout">Log out</string>
+    <string name="common_logout_confirm_title">Log out</string>
+    <string name="common_logout_confirm_message">Are you sure you want to log out? You will need to log in again to access your account.</string>
     <string name="common_collapse">Collapse</string>
     <string name="common_expand">Expand</string>
     <string name="common_subscribe">Subscribe</string>
