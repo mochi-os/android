@@ -174,7 +174,8 @@ internal fun CommentItem(
                         },
                         thumbnailUrlBuilder = { att ->
                             att.thumbnailUrl ?: "/feeds/$feedId/-/attachments/${att.id}/thumbnail"
-                        }
+                        },
+                        compact = true
                     )
                 }
 
