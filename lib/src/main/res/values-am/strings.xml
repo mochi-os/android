@@ -292,4 +292,9 @@
     <string name="common_opening_file">ፋይል በመክፈት ላይ…</string>
     <string name="common_no_app_for_file">ይህን ፋይል መክፈት የሚችል መተግበሪያ የለም</string>
     <string name="common_file_open_failed">ፋይሉን መክፈት አልተቻለም</string>
+
+    <string name="common_logout_confirm_title">ውጣ</string>
+    <string name="common_logout_confirm_message">እርግጠኛ ነዎት መውጣት ይፈልጋሉ? መለያዎን ለመድረስ እንደገና መግባት ያስፈልግዎታል።</string>
+    <string name="reaction_remove">አጽዳ</string>
+
 </resources>

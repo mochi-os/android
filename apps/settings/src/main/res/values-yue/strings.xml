@@ -431,4 +431,12 @@
     <string name="system_status_awaiting_routing">等待路由嘅訊息</string>
     <string name="system_status_relay_service">中繼服務</string>
     <string name="system_status_relay_service_value">%1$d / %2$d 預留 · %3$d 線路 · %4$d 拒絕</string>
+    <string name="login_title">登入</string>
+    <string name="login_section_methods">登入方式</string>
+    <string name="login_method_email">電郵驗證碼</string>
+    <string name="login_method_passkey">通行密鑰</string>
+    <string name="login_method_totp">驗證器應用程式</string>
+    <string name="login_method_oauth">第三方登入</string>
+    <string name="login_method_recovery">復原碼</string>
+    <string name="route_target_select">選取</string>
 </resources>

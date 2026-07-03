@@ -292,4 +292,9 @@
     <string name="common_opening_file">Се отвора датотека…</string>
     <string name="common_no_app_for_file">Ниедна апликација не може да ја отвори оваа датотека</string>
     <string name="common_file_open_failed">Датотеката не може да се отвори</string>
+    <string name="common_logout_confirm_title">Одјави се</string>
+    <string name="reaction_remove">Исчисти</string>
+
+    <string name="common_logout_confirm_message">Дали сте сигурни дека сакате да се одјавите? Ќе треба повторно да се најавите за да пристапите до вашата сметка.</string>
+
 </resources>

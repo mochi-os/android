@@ -439,4 +439,5 @@
     <string name="system_status_awaiting_routing">Ziņojumi, kas gaida maršrutēšanu</string>
     <string name="system_status_relay_service">Retranslācijas pakalpojums</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervācijas · %3$d ķēdes · %4$d noraidīts</string>
+    <string name="route_target_select">Atlasīt</string>
 </resources>

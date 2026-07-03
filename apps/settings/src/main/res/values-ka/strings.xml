@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">მარშრუტიზაციას მომლოდინე შეტყობინებები</string>
     <string name="system_status_relay_service">რელეს სერვისი</string>
     <string name="system_status_relay_service_value">%1$d / %2$d დაჯავშნები · %3$d წრედები · %4$d უარყოფილი</string>
+    <string name="route_target_select">მონიშვნა</string>
 </resources>

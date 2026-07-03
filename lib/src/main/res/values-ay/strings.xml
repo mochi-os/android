@@ -292,4 +292,9 @@
     <string name="common_opening_file">Archivo jist\'araski…</string>
     <string name="common_no_app_for_file">Janiw aka archivo jist\'arañ app utjkiti</string>
     <string name="common_file_open_failed">Janiw archivo jist\'arañ atkiti</string>
+
+    <string name="common_logout_confirm_title">Mistuña</string>
+    <string name="common_logout_confirm_message">¿Chiqapunit mistuña munta? Cuentamar mantañatakix wasitat mantañamäniwa.</string>
+    <string name="reaction_remove">Pichsuña</string>
+
 </resources>

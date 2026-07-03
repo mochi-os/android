@@ -292,4 +292,9 @@
     <string name="common_opening_file">ਫਾਈਲ ਖੋਲ੍ਹੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="common_no_app_for_file">ਕੋਈ ਐਪ ਇਸ ਫਾਈਲ ਨੂੰ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੀ</string>
     <string name="common_file_open_failed">ਫਾਈਲ ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕੀ</string>
+    <string name="common_logout_confirm_title">ਲੌਗ ਆਊਟ</string>
+    <string name="reaction_remove">ਸਾਫ਼ ਕਰੋ</string>
+
+    <string name="common_logout_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਲੌਗ ਆਊਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਆਪਣੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰਨਾ ਪਵੇਗਾ।</string>
+
 </resources>

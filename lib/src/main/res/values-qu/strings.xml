@@ -292,4 +292,9 @@
     <string name="common_opening_file">Archivota kichachkan…</string>
     <string name="common_no_app_for_file">Mana app kay archivota kichayta atinchu</string>
     <string name="common_file_open_failed">Archivota mana kichayta atikunchu</string>
+    <string name="common_logout_confirm_title">Lluqsiy</string>
+    <string name="reaction_remove">Pichay</string>
+
+    <string name="common_logout_confirm_message">¿Chiqaptapunichu lluqsiyta munanki? Cuentaykiman kutimunaykipaqqa, musuqmanta yaykunayki kanqa.</string>
+
 </resources>

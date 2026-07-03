@@ -440,4 +440,5 @@
     <string name="system_status_awaiting_routing">Сообщения, ожидающие маршрутизации</string>
     <string name="system_status_relay_service">Служба ретрансляции</string>
     <string name="system_status_relay_service_value">%1$d / %2$d резервирования · %3$d цепи · %4$d отклонено</string>
+    <string name="route_target_select">Выбрать</string>
 </resources>

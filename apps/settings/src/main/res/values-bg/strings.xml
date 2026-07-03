@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">Съобщения, очакващи маршрутизация</string>
     <string name="system_status_relay_service">Релейна услуга</string>
     <string name="system_status_relay_service_value">%1$d / %2$d резервации · %3$d вериги · %4$d отказани</string>
+    <string name="route_target_select">Избор</string>
 </resources>

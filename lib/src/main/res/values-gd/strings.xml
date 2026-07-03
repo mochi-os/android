@@ -292,4 +292,9 @@
     <string name="common_opening_file">A\' fosgladh an fhaidhle…</string>
     <string name="common_no_app_for_file">Chan eil aplacaid ann as urrainn am faidhle seo fhosgladh</string>
     <string name="common_file_open_failed">Cha b\' urrainn am faidhle fhosgladh</string>
+
+    <string name="common_logout_confirm_title">Clàraich a-mach</string>
+    <string name="common_logout_confirm_message">A bheil thu cinnteach gu bheil thu airson clàradh a-mach? Feumaidh tu clàradh a-steach a-rithist gus cothrom fhaighinn air a\' chunntas agad.</string>
+    <string name="reaction_remove">Falamhaich</string>
+
 </resources>

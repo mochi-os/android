@@ -215,4 +215,91 @@
     <string name="feeds_caught_up">Taqpacha uñjtawa</string>
     <string name="feeds_all_caught_up">Taqpach katjata</string>
     <string name="feeds_view_all_posts">Item detalles uñjaña ukat editaña</string>
+    <string name="feeds_markdown_supported">Markdown wakisi</string>
+    <string name="feeds_back">Kutta</string>
+    <string name="feeds_confirm">Iyawsaña</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_unsubscribe">CRM ukatpach suscripción jaytaña?</string>
+    <string name="feeds_unsubscribed">Repositorio ukatpach suscripción jaytata</string>
+    <string name="feeds_settings_section_identity">Identidad</string>
+    <string name="feeds_settings_field_name">Suti</string>
+    <string name="feeds_settings_field_entity_id">Entidad ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">Servidor</string>
+    <string name="feeds_settings_name_edit_cd">Suti askichaña</string>
+    <string name="feeds_settings_name_save_cd">Suti imaña</string>
+    <string name="feeds_access_subject_anyone">Khitisa</string>
+    <string name="feeds_access_subject_authenticated">Yatiyat apnaqirinaka</string>
+    <string name="feeds_access_level_view_full">Uñjañ opcionanaka</string>
+    <string name="feeds_access_level_none_full">Jan mantañ</string>
+    <string name="feeds_access_segment_user">Apnaqiri banata</string>
+    <string name="feeds_access_segment_group">Grupo</string>
+    <string name="feeds_access_segment_other">Yaqha</string>
+    <string name="feeds_access_search_users">Usuarionak thaqhama</string>
+    <string name="feeds_access_select_group">Tama ajlliña</string>
+    <string name="feeds_access_selected">Ajllita: %1$s</string>
+    <string name="feeds_permission_deny">Jark\'aña</string>
+    <string name="feeds_allow_search">Khitirus feed thaqaña iyawsaña</string>
+    <string name="feeds_enable_memories">Memorianak yatichaña</string>
+    <string name="feeds_create_first_post">Nayrïr post luraña</string>
+    <string name="feeds_post_content">Qillqata contenido</string>
+    <string name="feeds_rss_mode_posts">Qillqatanaka</string>
+    <string name="feeds_rss_mode_posts_comments">Qillqatanak comentarionakampi</string>
+    <string name="feeds_unsubscribe_confirm">Feedat suscripción apsuñati?</string>
+    <string name="feeds_unsubscribe_confirm_message">Aka feedat janiw juk\'amp yatiyawinak katuqxätati. Kuna pachas mayamp suscribit\'asismawa.</string>
+    <string name="feeds_settings_unsubscribe_section">Foro ukatpach suscripción jaytaña</string>
+    <string name="feeds_delete_feed_description">Aka feed ukamp taqi contenidopa wiñayaru jiwayma.</string>
+    <string name="feeds_access_management">Mantaña Apnaqaña</string>
+    <string name="feeds_access_management_desc">Khitis aka feed uñjañ ukat interactuañ atki uka apnaqaña</string>
+    <string name="feeds_access_level_comment_full">Comentaña, reaccionaña, ukat uñakipaña</string>
+    <string name="feeds_access_level_react_full">Reaccionama uñjama</string>
+    <string name="feeds_access_add_title">Mantañ yapxataña</string>
+    <string name="feeds_access_add_subtitle">Mantañ grantañataki usuario, tama, jan ukax yaqha kamachi ajllima.</string>
+    <string name="feeds_access_select_rule">Mantañ kamachi ajllima</string>
+    <string name="feeds_source_url_hint_feed">Feed entidad ID jan ukax fingerprint</string>
+    <string name="feeds_source_credibility_label">Iyawsa</string>
+    <string name="feeds_source_transform_hint">Saraski</string>
+    <string name="feeds_source_transform_help">Jaytañataki wakischa jaytaña.</string>
+
+    <string name="feeds_scroll_to_top">Alayaru kutt\'aña</string>
+    <string name="feeds_settings_title">%1$s wakichäwinaka</string>
+    <string name="feeds_settings_name_cancel_cd">Askichäwi chhaqtayaña</string>
+    <string name="feeds_access_authenticated_desc">Taqi khitinakatix mantatäpki ukanaka</string>
+    <string name="feeds_access_anyone_desc">Jan uñt\'ata apnaqirinakampi</string>
+    <string name="feeds_source_last_checked">Qhipa uñakipata %1$s</string>
+    <string name="feeds_source_polling_interval">Sapa %1$s uñakipi</string>
+    <string name="feeds_permission_request_title">Iyaw säwi mayiwi</string>
+    <string name="feeds_permission_request_message">%1$s aka iyaw säwi mayisi:</string>
+    <string name="feeds_permission_allow">Iyaw saña</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d yatiyawinaka</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">%1$d munañanak yapaña</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">Jichhüru %1$d mara nayra</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d jamuqanaka</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">%1$d chinuntatanaka</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d amuyt\'awinaka</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">%1$d juk\'amp amuyt\'awinak uñjaña</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d minutunaka</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d uranaka</item>
+    </plurals>
+
 </resources>

@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">Бағдарлауды күтудегі хабарлар</string>
     <string name="system_status_relay_service">Реле қызметі</string>
     <string name="system_status_relay_service_value">%1$d / %2$d брондаулар · %3$d тізбектер · %4$d қабылданбады</string>
+    <string name="route_target_select">Таңдау</string>
 </resources>

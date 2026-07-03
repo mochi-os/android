@@ -292,4 +292,9 @@
     <string name="common_opening_file">فائل کھولی جا رہی ہے…</string>
     <string name="common_no_app_for_file">کوئی ایپ اس فائل کو نہیں کھول سکتی</string>
     <string name="common_file_open_failed">فائل نہیں کھل سکی</string>
+    <string name="common_logout_confirm_title">لاگ آؤٹ</string>
+    <string name="reaction_remove">صاف کریں</string>
+
+    <string name="common_logout_confirm_message">کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟ اپنے اکاؤنٹ تک رسائی کے لیے آپ کو دوبارہ لاگ اِن کرنا ہوگا۔</string>
+
 </resources>

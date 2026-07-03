@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">Hammasini ko‘rdingiz</string>
     <string name="feeds_all_caught_up">Hammasi koʻrildi</string>
     <string name="feeds_view_all_posts">Barcha postlarni koʻrish</string>
+    <string name="feeds_markdown_supported">Markdown qoʻllanadi</string>
+    <string name="feeds_back">Orqaga</string>
+    <string name="feeds_confirm">Tasdiqlash</string>
+    <string name="feeds_rss_feed">RSS lentasi</string>
+    <string name="feeds_unsubscribe">Obunadan chiqish</string>
+    <string name="feeds_unsubscribed">Obunadan chiqildi</string>
+    <string name="feeds_settings_section_identity">Identifikatsiya</string>
+    <string name="feeds_settings_field_name">Nomi</string>
+    <string name="feeds_settings_field_entity_id">Obyekt ID</string>
+    <string name="feeds_settings_field_fingerprint">Barmoq izi</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Nomni tahrirlash</string>
+    <string name="feeds_settings_name_save_cd">Nomni saqlash</string>
+    <string name="feeds_access_subject_anyone">Har kim</string>
+    <string name="feeds_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
+    <string name="feeds_access_level_view_full">Faqat koʻrish</string>
+    <string name="feeds_access_level_none_full">Ruxsat yoʻq</string>
+    <string name="feeds_access_segment_user">Foydalanuvchi</string>
+    <string name="feeds_access_segment_group">Guruh</string>
+    <string name="feeds_access_segment_other">Boshqa</string>
+    <string name="feeds_access_search_users">Foydalanuvchilarni qidirish</string>
+    <string name="feeds_access_select_group">Guruhni tanlang</string>
+    <string name="feeds_access_selected">Tanlangan: %1$s</string>
+    <string name="feeds_permission_deny">Rad etish</string>
+    <string name="feeds_allow_search">Hammaga feedni qidirishga ruxsat berish</string>
+    <string name="feeds_enable_memories">Xotiralarni yoqish</string>
+    <string name="feeds_create_first_post">Birinchi postni yaratish</string>
+    <string name="feeds_post_content">Post mazmuni</string>
+    <string name="feeds_rss_mode_posts">Postlar</string>
+    <string name="feeds_rss_mode_posts_comments">Postlar va izohlar</string>
+    <string name="feeds_unsubscribe_confirm">Lenta obunasini bekor qilasizmi?</string>
+    <string name="feeds_unsubscribe_confirm_message">Bu lentadan yangilanishlar kelmaydi. Istalgan vaqtda qayta obuna boʻlishingiz mumkin.</string>
+    <string name="feeds_settings_unsubscribe_section">Lentadan obunadan chiqish</string>
+    <string name="feeds_delete_feed_description">Bu lenta va uning barcha tarkibini butunlay oʻchirish.</string>
+    <string name="feeds_access_management">Kirishni boshqarish</string>
+    <string name="feeds_access_management_desc">Bu feedni kim koʻrishi va u bilan oʻzaro ishlashini boshqaring</string>
+    <string name="feeds_access_level_comment_full">Izoh, reaksiya va koʻrish</string>
+    <string name="feeds_access_level_react_full">Reaksiya berish va koʻrish</string>
+    <string name="feeds_access_add_title">Kirish qoʻshish</string>
+    <string name="feeds_access_add_subtitle">Kirish berish uchun foydalanuvchi, guruh yoki boshqa qoidani tanlang.</string>
+    <string name="feeds_access_select_rule">Kirish qoidasini tanlash</string>
+    <string name="feeds_source_url_hint_feed">Tasma obyekt ID yoki barmoq izi</string>
+    <string name="feeds_source_credibility_label">Ishonchlilik</string>
+    <string name="feeds_source_transform_hint">Inglizchaga tarjima qiling va punktlar sifatida koʻrsating.</string>
+    <string name="feeds_source_transform_help">Oʻchirish uchun boʻsh qoldiring.</string>
+
+    <string name="feeds_scroll_to_top">Yuqoriga qaytish</string>
+    <string name="feeds_settings_title">%1$s sozlamalari</string>
+    <string name="feeds_settings_name_cancel_cd">Tahrirlashni bekor qilish</string>
+    <string name="feeds_access_authenticated_desc">Tizimga kirgan har qanday foydalanuvchi</string>
+    <string name="feeds_access_anyone_desc">Shu jumladan anonim foydalanuvchilar</string>
+    <string name="feeds_source_last_checked">Oxirgi tekshiruv: %1$s</string>
+    <string name="feeds_source_polling_interval">Har %1$s da so\'rov yuboriladi</string>
+    <string name="feeds_permission_request_title">Ruxsat so\'rovi</string>
+    <string name="feeds_permission_request_message">%1$s quyidagi ruxsatni so\'ramoqda:</string>
+    <string name="feeds_permission_allow">Ruxsat berish</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d ta post</item>
+        <item quantity="other">%1$d ta post</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">%1$d ta qiziqish qo\'shish</item>
+        <item quantity="other">%1$d ta qiziqish qo\'shish</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">Bugun %1$d yil oldin</item>
+        <item quantity="other">Bugun %1$d yil oldin</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d ta rasm</item>
+        <item quantity="other">%1$d ta rasm</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d ta biriktirma</item>
+        <item quantity="other">%1$d ta biriktirma</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d ta izoh</item>
+        <item quantity="other">%1$d ta izoh</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Yana %1$d ta izohni ko\'rish</item>
+        <item quantity="other">Yana %1$d ta izohni ko\'rish</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d daqiqa</item>
+        <item quantity="other">%1$d daqiqa</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d soat</item>
+        <item quantity="other">%1$d soat</item>
+    </plurals>
+
 </resources>

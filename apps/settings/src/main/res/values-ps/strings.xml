@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">د لارښوونې په تمه پیغامونه</string>
     <string name="system_status_relay_service">د لېږد خدمت</string>
     <string name="system_status_relay_service_value">%1$d / %2$d خوندي کول · %3$d برخې · %4$d رد شوي</string>
+    <string name="route_target_select">غوره کول</string>
 </resources>

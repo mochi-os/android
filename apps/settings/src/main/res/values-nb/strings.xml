@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
     <string name="system_status_relay_service">Relétjeneste</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasjoner · %3$d kretser · %4$d avvist</string>
+    <string name="route_target_select">Velg</string>
 </resources>

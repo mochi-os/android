@@ -218,4 +218,127 @@
     <string name="feeds_caught_up">Tá tú cothrom le dáta</string>
     <string name="feeds_all_caught_up">Tá gach rud déanta</string>
     <string name="feeds_view_all_posts">Féach ar gach postáil</string>
+    <string name="feeds_markdown_supported">Tacaíonn Markdown</string>
+    <string name="feeds_back">Ar ais</string>
+    <string name="feeds_confirm">Deimhnigh</string>
+    <string name="feeds_rss_feed">Fotha RSS</string>
+    <string name="feeds_unsubscribe">Díliostáil</string>
+    <string name="feeds_unsubscribed">Díliostáilte</string>
+    <string name="feeds_settings_section_identity">Aitheantas</string>
+    <string name="feeds_settings_field_name">Ainm</string>
+    <string name="feeds_settings_field_entity_id">ID an aonáin</string>
+    <string name="feeds_settings_field_fingerprint">Méarlorg</string>
+    <string name="feeds_settings_field_server">Freastalaí</string>
+    <string name="feeds_settings_name_edit_cd">Cuir ainm in eagar</string>
+    <string name="feeds_settings_name_save_cd">Sábháil ainm</string>
+    <string name="feeds_access_subject_anyone">Aon duine</string>
+    <string name="feeds_access_subject_authenticated">Úsáideoirí fíordheimhnithe</string>
+    <string name="feeds_access_level_view_full">Féach amháin</string>
+    <string name="feeds_access_level_none_full">Gan rochtain</string>
+    <string name="feeds_access_segment_user">Úsáideoir</string>
+    <string name="feeds_access_segment_group">Grúpa</string>
+    <string name="feeds_access_segment_other">Eile</string>
+    <string name="feeds_access_search_users">Cuardaigh úsáideoirí</string>
+    <string name="feeds_access_select_group">Roghnaigh grúpa</string>
+    <string name="feeds_access_selected">Roghnaithe: %1$s</string>
+    <string name="feeds_permission_deny">Diúltaigh</string>
+    <string name="feeds_allow_search">Ceadaigh d\'aon duine cuardach do fhotha</string>
+    <string name="feeds_enable_memories">Cumasaigh cuimhní</string>
+    <string name="feeds_create_first_post">Cruthaigh an chéad phostáil</string>
+    <string name="feeds_post_content">Inneachar na postála</string>
+    <string name="feeds_rss_mode_posts">Postálacha</string>
+    <string name="feeds_rss_mode_posts_comments">Postálacha agus tráchtanna</string>
+    <string name="feeds_unsubscribe_confirm">Díliostáil ón bhfotha?</string>
+    <string name="feeds_unsubscribe_confirm_message">Ní bhfaighidh tú nuashonruithe ón bhfotha seo a thuilleadh. Is féidir leat liostáil arís am ar bith.</string>
+    <string name="feeds_settings_unsubscribe_section">Díliostáil ón bhfotha</string>
+    <string name="feeds_delete_feed_description">Scrios an fotha seo agus a inneachar go buan.</string>
+    <string name="feeds_access_management">Bainistíocht Rochtana</string>
+    <string name="feeds_access_management_desc">Smacht ar cé atá in ann an fotha seo a fheiceáil agus idirghníomhú leis</string>
+    <string name="feeds_access_level_comment_full">Nóta tráchta, frithghníomhaigh, agus amharc</string>
+    <string name="feeds_access_level_react_full">Frithghníomhaigh agus féach</string>
+    <string name="feeds_access_add_title">Cuir rochtain leis</string>
+    <string name="feeds_access_add_subtitle">Roghnaigh úsáideoir, grúpa, nó riail eile chun rochtain a dheonú.</string>
+    <string name="feeds_access_select_rule">Roghnaigh riail rochtana</string>
+    <string name="feeds_source_url_hint_feed">ID aonáin nó méarlorg an fhotha</string>
+    <string name="feeds_source_credibility_label">Inchreidteacht</string>
+    <string name="feeds_source_transform_hint">Aistrigh go Béarla, agus taispeáin mar phointí urchair.</string>
+    <string name="feeds_source_transform_help">Fág folamh chun é a dhíchumasú.</string>
+
+    <string name="feeds_scroll_to_top">Ar ais go dtí an barr</string>
+    <string name="feeds_settings_title">Socruithe %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Cealaigh an eagarthóireacht</string>
+    <string name="feeds_access_authenticated_desc">Duine ar bith atá logáilte isteach</string>
+    <string name="feeds_access_anyone_desc">Úsáideoirí anaithnide san áireamh</string>
+    <string name="feeds_source_last_checked">Seiceáladh go deireanach %1$s</string>
+    <string name="feeds_source_polling_interval">Ag seiceáil gach %1$s</string>
+    <string name="feeds_permission_request_title">Iarratas ar chead</string>
+    <string name="feeds_permission_request_message">Tá %1$s ag iarraidh an cheada seo a leanas:</string>
+    <string name="feeds_permission_allow">Ceadaigh</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d phostáil</item>
+        <item quantity="two">%1$d phostáil</item>
+        <item quantity="few">%1$d phostáil</item>
+        <item quantity="many">%1$d bpostáil</item>
+        <item quantity="other">%1$d postáil</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Cuir %1$d spéis leis</item>
+        <item quantity="two">Cuir %1$d spéis leis</item>
+        <item quantity="few">Cuir %1$d spéis leis</item>
+        <item quantity="many">Cuir %1$d spéis leis</item>
+        <item quantity="other">Cuir %1$d spéis leis</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d bhliain ó shin inniu</item>
+        <item quantity="two">%1$d bhliain ó shin inniu</item>
+        <item quantity="few">%1$d bliana ó shin inniu</item>
+        <item quantity="many">%1$d mbliana ó shin inniu</item>
+        <item quantity="other">%1$d bliain ó shin inniu</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d íomhá</item>
+        <item quantity="two">%1$d íomhá</item>
+        <item quantity="few">%1$d íomhá</item>
+        <item quantity="many">%1$d n-íomhá</item>
+        <item quantity="other">%1$d íomhá</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d cheangaltán</item>
+        <item quantity="two">%1$d cheangaltán</item>
+        <item quantity="few">%1$d cheangaltán</item>
+        <item quantity="many">%1$d gceangaltán</item>
+        <item quantity="other">%1$d ceangaltán</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d nóta tráchta</item>
+        <item quantity="two">%1$d nóta tráchta</item>
+        <item quantity="few">%1$d nóta tráchta</item>
+        <item quantity="many">%1$d nóta tráchta</item>
+        <item quantity="other">%1$d nóta tráchta</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Féach ar %1$d nóta tráchta eile</item>
+        <item quantity="two">Féach ar %1$d nóta tráchta eile</item>
+        <item quantity="few">Féach ar %1$d nóta tráchta eile</item>
+        <item quantity="many">Féach ar %1$d nóta tráchta eile</item>
+        <item quantity="other">Féach ar %1$d nóta tráchta eile</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d nóiméad</item>
+        <item quantity="two">%1$d nóiméad</item>
+        <item quantity="few">%1$d nóiméad</item>
+        <item quantity="many">%1$d nóiméad</item>
+        <item quantity="other">%1$d nóiméad</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d uair</item>
+        <item quantity="two">%1$d uair</item>
+        <item quantity="few">%1$d huaire</item>
+        <item quantity="many">%1$d n-uaire</item>
+        <item quantity="other">%1$d uair</item>
+    </plurals>
+
 </resources>

@@ -215,4 +215,91 @@
     <string name="feeds_caught_up">Anjeun parantos ningali sadayana</string>
     <string name="feeds_all_caught_up">Sadaya geus dibaca</string>
     <string name="feeds_view_all_posts">Tingali sagala postingan</string>
+    <string name="feeds_markdown_supported">Markdown didukung</string>
+    <string name="feeds_back">Tukang</string>
+    <string name="feeds_confirm">Konfirmasi</string>
+    <string name="feeds_rss_feed">Feed RSS</string>
+    <string name="feeds_unsubscribe">Hentikeun langganan</string>
+    <string name="feeds_unsubscribed">Henteu langganan</string>
+    <string name="feeds_settings_section_identity">Identitas</string>
+    <string name="feeds_settings_field_name">Ngaran</string>
+    <string name="feeds_settings_field_entity_id">ID Éntitas</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Édit ngaran</string>
+    <string name="feeds_settings_name_save_cd">Simpen ngaran</string>
+    <string name="feeds_access_subject_anyone">Saha waé</string>
+    <string name="feeds_access_subject_authenticated">Pangguna anu disahkeun</string>
+    <string name="feeds_access_level_view_full">Tingali wungkul</string>
+    <string name="feeds_access_level_none_full">Teu boga aksés</string>
+    <string name="feeds_access_segment_user">Pamaké</string>
+    <string name="feeds_access_segment_group">Grup</string>
+    <string name="feeds_access_segment_other">Séjén</string>
+    <string name="feeds_access_search_users">Paluruh pamaké</string>
+    <string name="feeds_access_select_group">Pilih grup</string>
+    <string name="feeds_access_selected">Dipilih: %1$s</string>
+    <string name="feeds_permission_deny">Tolak</string>
+    <string name="feeds_allow_search">Idinkeun saha waé néangan feed</string>
+    <string name="feeds_enable_memories">Aktipkeun mémori</string>
+    <string name="feeds_create_first_post">Jieun pos nu pangheulana</string>
+    <string name="feeds_post_content">Eusi pos</string>
+    <string name="feeds_rss_mode_posts">Pos</string>
+    <string name="feeds_rss_mode_posts_comments">Pos jeung koméntar</string>
+    <string name="feeds_unsubscribe_confirm">Eureun langganan feed?</string>
+    <string name="feeds_unsubscribe_confirm_message">Anjeun moal narima deui apdet ti ieu feed. Anjeun bisa langganan deui iraha waé.</string>
+    <string name="feeds_settings_unsubscribe_section">Hentikeun langganan ti feed</string>
+    <string name="feeds_delete_feed_description">Pupus permanén feed ieu jeung sakabéh eusina.</string>
+    <string name="feeds_access_management">Manajemén Aksés</string>
+    <string name="feeds_access_management_desc">Atur saha nu bisa nempo jeung interaksi jeung feed ieu</string>
+    <string name="feeds_access_level_comment_full">Koméntar, réaksi, jeung tempo</string>
+    <string name="feeds_access_level_react_full">Réaksi jeung tempo</string>
+    <string name="feeds_access_add_title">Tambah aksés</string>
+    <string name="feeds_access_add_subtitle">Pilih pamaké, grup, atawa aturan séjén pikeun ngabikeun aksés.</string>
+    <string name="feeds_access_select_rule">Pilih aturan aksés</string>
+    <string name="feeds_source_url_hint_feed">ID éntitas feed atawa fingerprint</string>
+    <string name="feeds_source_credibility_label">Kredibilitas</string>
+    <string name="feeds_source_transform_hint">Tarjamahkeun ka basa Inggris, sarta tembongkeun salaku poin-poin.</string>
+    <string name="feeds_source_transform_help">Kosongkeun pikeun mareuman.</string>
+
+    <string name="feeds_scroll_to_top">Balik ka luhur</string>
+    <string name="feeds_settings_title">Setélan %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Bolaykeun ngédit</string>
+    <string name="feeds_access_authenticated_desc">Saha waé anu parantos asup log</string>
+    <string name="feeds_access_anyone_desc">Kalebet pamaké anonim</string>
+    <string name="feeds_source_last_checked">Panungtungan dipariksa %1$s</string>
+    <string name="feeds_source_polling_interval">Polling unggal %1$s</string>
+    <string name="feeds_permission_request_title">Paménta idin</string>
+    <string name="feeds_permission_request_message">%1$s nyuhunkeun idin di handap ieu:</string>
+    <string name="feeds_permission_allow">Idinan</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d postingan</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">Tambahkeun %1$d minat</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d taun ka tukang dinten ieu</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d gambar</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">%1$d lampiran</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d koméntar</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">Tempo %1$d koméntar deui</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d menit</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d jam</item>
+    </plurals>
+
 </resources>

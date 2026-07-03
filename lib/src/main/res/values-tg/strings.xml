@@ -292,4 +292,9 @@
     <string name="common_opening_file">Кушодани файл…</string>
     <string name="common_no_app_for_file">Ягон барнома ин файлро кушода наметавонад</string>
     <string name="common_file_open_failed">Файл кушода нашуд</string>
+    <string name="common_logout_confirm_title">Баромадан</string>
+    <string name="reaction_remove">Тоза кардан</string>
+
+    <string name="common_logout_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед аз система бароед? Барои дастрасӣ ба ҳисоби худ ба шумо лозим меояд, ки дубора ворид шавед.</string>
+
 </resources>

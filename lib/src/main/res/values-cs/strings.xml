@@ -292,4 +292,9 @@
     <string name="common_opening_file">Otevírání souboru…</string>
     <string name="common_no_app_for_file">Tento soubor nelze otevřít žádnou aplikací</string>
     <string name="common_file_open_failed">Soubor se nepodařilo otevřít</string>
+
+    <string name="common_logout_confirm_title">Odhlásit se</string>
+    <string name="common_logout_confirm_message">Opravdu se chcete odhlásit? Pro přístup ke svému účtu se budete muset znovu přihlásit.</string>
+    <string name="reaction_remove">Zrušit</string>
+
 </resources>

@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">Skilaboð sem bíða leiðarvals</string>
     <string name="system_status_relay_service">Endurvarpsþjónusta</string>
     <string name="system_status_relay_service_value">%1$d / %2$d frátektir · %3$d rásir · %4$d hafnað</string>
+    <string name="route_target_select">Velja</string>
 </resources>

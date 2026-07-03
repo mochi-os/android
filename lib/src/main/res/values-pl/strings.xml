@@ -292,4 +292,9 @@
     <string name="common_opening_file">Otwieranie pliku…</string>
     <string name="common_no_app_for_file">Żadna aplikacja nie może otworzyć tego pliku</string>
     <string name="common_file_open_failed">Nie udało się otworzyć pliku</string>
+    <string name="common_logout_confirm_title">Wyloguj się</string>
+    <string name="reaction_remove">Wyczyść</string>
+
+    <string name="common_logout_confirm_message">Czy na pewno chcesz się wylogować? Aby uzyskać dostęp do swojego konta, konieczne będzie ponowne zalogowanie.</string>
+
 </resources>

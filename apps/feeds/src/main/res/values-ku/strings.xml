@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">Te her tişt dît</string>
     <string name="feeds_all_caught_up">Her tişt nûye</string>
     <string name="feeds_view_all_posts">Hemû postan bibîne</string>
+    <string name="feeds_markdown_supported">Markdown tê piştgirîkirin</string>
+    <string name="feeds_back">Vegere</string>
+    <string name="feeds_confirm">Piştrast bike</string>
+    <string name="feeds_rss_feed">Pelê RSS</string>
+    <string name="feeds_unsubscribe">Abone yî nebe</string>
+    <string name="feeds_unsubscribed">Abone yî nebû</string>
+    <string name="feeds_settings_section_identity">Nasname</string>
+    <string name="feeds_settings_field_name">Nav</string>
+    <string name="feeds_settings_field_entity_id">Nasnameya mîhengehê</string>
+    <string name="feeds_settings_field_fingerprint">Tilîya destan</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Navê sererast bike</string>
+    <string name="feeds_settings_name_save_cd">Navê tomar bike</string>
+    <string name="feeds_access_subject_anyone">Her kes</string>
+    <string name="feeds_access_subject_authenticated">Bikarhênerên erêkirî</string>
+    <string name="feeds_access_level_view_full">Tenê dîtin</string>
+    <string name="feeds_access_level_none_full">Bê destpêkirin</string>
+    <string name="feeds_access_segment_user">Bikarhêner</string>
+    <string name="feeds_access_segment_group">Kom</string>
+    <string name="feeds_access_segment_other">Yên din</string>
+    <string name="feeds_access_search_users">Li bikarhêneran bigere</string>
+    <string name="feeds_access_select_group">Komê hilbijêre</string>
+    <string name="feeds_access_selected">Hilbijartî: %1$s</string>
+    <string name="feeds_permission_deny">Red bike</string>
+    <string name="feeds_allow_search">Destûr bide her kesî ku li feed bigere</string>
+    <string name="feeds_enable_memories">Bîranînan çalak bike</string>
+    <string name="feeds_create_first_post">Şandiya yekem çêbike</string>
+    <string name="feeds_post_content">Naveroka posteyê</string>
+    <string name="feeds_rss_mode_posts">Poste</string>
+    <string name="feeds_rss_mode_posts_comments">Poste û şîrove</string>
+    <string name="feeds_unsubscribe_confirm">Aboneya feedê betal bikî?</string>
+    <string name="feeds_unsubscribe_confirm_message">Êdî tu nûvekirinan ji vê feedê wernagirî. Tu dikarî her dem dîsa abone bibî.</string>
+    <string name="feeds_settings_unsubscribe_section">Ji feed-ê abone yî nebe</string>
+    <string name="feeds_delete_feed_description">Vê pelê û tevahiya naveroka wê her û her jêbibe.</string>
+    <string name="feeds_access_management">Birêvebirina gihîştinê</string>
+    <string name="feeds_access_management_desc">Kontrol bike kê dikare vê feedê bibîne û pê re têkilî daynî</string>
+    <string name="feeds_access_level_comment_full">Şîrove, reaksiyon, û dîtin</string>
+    <string name="feeds_access_level_react_full">Reaksiyon û dîtin</string>
+    <string name="feeds_access_add_title">Gihîştin zêde bike</string>
+    <string name="feeds_access_add_subtitle">Bikarhêner, kom an rêzikek din hilbijêre da ku destûr bidî.</string>
+    <string name="feeds_access_select_rule">Rêzika destpêkirinê hilbijêre</string>
+    <string name="feeds_source_url_hint_feed">Nasnameya mîhengeha feedê an tilîya destan</string>
+    <string name="feeds_source_credibility_label">Bawerbûn</string>
+    <string name="feeds_source_transform_hint">Wergerîne Îngilîzî, û wek xalan nîşan bide.</string>
+    <string name="feeds_source_transform_help">Vala bihêle ji bo bêçalakkirin.</string>
+
+    <string name="feeds_scroll_to_top">Vegere jorê</string>
+    <string name="feeds_settings_title">Mîhengên %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Sererastkirinê betal bike</string>
+    <string name="feeds_access_authenticated_desc">Her kesê ku têketî ye</string>
+    <string name="feeds_access_anyone_desc">Bikarhênerên nenas jî tê de</string>
+    <string name="feeds_source_last_checked">Cara dawî %1$s hat kontrolkirin</string>
+    <string name="feeds_source_polling_interval">Her %1$s tê kontrolkirin</string>
+    <string name="feeds_permission_request_title">Daxwaza destûrê</string>
+    <string name="feeds_permission_request_message">%1$s destûra jêrîn dixwaze:</string>
+    <string name="feeds_permission_allow">Destûr bide</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d şandî</item>
+        <item quantity="other">%1$d şandî</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">%1$d berjewendiyê zêde bike</item>
+        <item quantity="other">%1$d berjewendiyan zêde bike</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">Îro berî %1$d salî</item>
+        <item quantity="other">Îro berî %1$d salan</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d wêne</item>
+        <item quantity="other">%1$d wêne</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d pêvek</item>
+        <item quantity="other">%1$d pêvek</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d şîrove</item>
+        <item quantity="other">%1$d şîrove</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d şîroveya din bibîne</item>
+        <item quantity="other">%1$d şîroveyên din bibîne</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d xulek</item>
+        <item quantity="other">%1$d xulek</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d saet</item>
+        <item quantity="other">%1$d saet</item>
+    </plurals>
+
 </resources>

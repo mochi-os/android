@@ -217,4 +217,118 @@
     <string name="feeds_caught_up">Peržiūrėjote viską</string>
     <string name="feeds_all_caught_up">Viskas perskaityta</string>
     <string name="feeds_view_all_posts">Peržiūrėti visus įrašus</string>
+    <string name="feeds_markdown_supported">Palaikomas markdown</string>
+    <string name="feeds_back">Atgal</string>
+    <string name="feeds_confirm">Patvirtinti</string>
+    <string name="feeds_rss_feed">RSS srautas</string>
+    <string name="feeds_unsubscribe">Atšaukti prenumeratą</string>
+    <string name="feeds_unsubscribed">Prenumerata atšaukta</string>
+    <string name="feeds_settings_section_identity">Tapatybė</string>
+    <string name="feeds_settings_field_name">Pavadinimas</string>
+    <string name="feeds_settings_field_entity_id">Subjekto ID</string>
+    <string name="feeds_settings_field_fingerprint">Pirštų atspaudas</string>
+    <string name="feeds_settings_field_server">Serveris</string>
+    <string name="feeds_settings_name_edit_cd">Redaguoti pavadinimą</string>
+    <string name="feeds_settings_name_save_cd">Išsaugoti pavadinimą</string>
+    <string name="feeds_access_subject_anyone">Bet kas</string>
+    <string name="feeds_access_subject_authenticated">Autentifikuoti naudotojai</string>
+    <string name="feeds_access_level_view_full">Tik peržiūra</string>
+    <string name="feeds_access_level_none_full">Nėra prieigos</string>
+    <string name="feeds_access_segment_user">Vartotojas</string>
+    <string name="feeds_access_segment_group">Grupė</string>
+    <string name="feeds_access_segment_other">Kita</string>
+    <string name="feeds_access_search_users">Ieškoti vartotojų</string>
+    <string name="feeds_access_select_group">Pasirinkite grupę</string>
+    <string name="feeds_access_selected">Pasirinkta: %1$s</string>
+    <string name="feeds_permission_deny">Atmesti</string>
+    <string name="feeds_allow_search">Leisti bet kam ieškoti srauto</string>
+    <string name="feeds_enable_memories">Įgalinti atmintis</string>
+    <string name="feeds_create_first_post">Sukurti pirmą įrašą</string>
+    <string name="feeds_post_content">Įrašo turinys</string>
+    <string name="feeds_rss_mode_posts">Įrašai</string>
+    <string name="feeds_rss_mode_posts_comments">Įrašai ir komentarai</string>
+    <string name="feeds_unsubscribe_confirm">Atsisakyti kanalo prenumeratos?</string>
+    <string name="feeds_unsubscribe_confirm_message">Nebegausite naujienų iš šio kanalo. Bet kada galite vėl užsiprenumeruoti.</string>
+    <string name="feeds_settings_unsubscribe_section">Atšaukti kanalo prenumeratą</string>
+    <string name="feeds_delete_feed_description">Visam laikui ištrinti šį srautą ir visą jo turinį.</string>
+    <string name="feeds_access_management">Prieigos valdymas</string>
+    <string name="feeds_access_management_desc">Valdykite, kas gali peržiūrėti ir bendrauti su šiuo srautu</string>
+    <string name="feeds_access_level_comment_full">Komentuoti, reaguoti ir peržiūrėti</string>
+    <string name="feeds_access_level_react_full">Reaguoti ir peržiūrėti</string>
+    <string name="feeds_access_add_title">Pridėti prieigą</string>
+    <string name="feeds_access_add_subtitle">Pasirinkite vartotoją, grupę ar kitą taisyklę prieigai suteikti.</string>
+    <string name="feeds_access_select_rule">Pasirinkite prieigos taisyklę</string>
+    <string name="feeds_source_url_hint_feed">Srauto subjekto ID arba pirštų atspaudas</string>
+    <string name="feeds_source_credibility_label">Patikimumas</string>
+    <string name="feeds_source_transform_hint">Versti į anglų kalbą ir rodyti kaip ženklintą sąrašą.</string>
+    <string name="feeds_source_transform_help">Palikite tuščią, kad išjungtumėte.</string>
+
+    <string name="feeds_scroll_to_top">Grįžti į viršų</string>
+    <string name="feeds_settings_title">%1$s nustatymai</string>
+    <string name="feeds_settings_name_cancel_cd">Atšaukti redagavimą</string>
+    <string name="feeds_access_authenticated_desc">Visi prisijungę naudotojai</string>
+    <string name="feeds_access_anyone_desc">Įskaitant anoniminius naudotojus</string>
+    <string name="feeds_source_last_checked">Paskutinį kartą tikrinta %1$s</string>
+    <string name="feeds_source_polling_interval">Tikrinama kas %1$s</string>
+    <string name="feeds_permission_request_title">Leidimo užklausa</string>
+    <string name="feeds_permission_request_message">%1$s prašo šio leidimo:</string>
+    <string name="feeds_permission_allow">Leisti</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d įrašas</item>
+        <item quantity="few">%1$d įrašai</item>
+        <item quantity="many">%1$d įrašo</item>
+        <item quantity="other">%1$d įrašų</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Pridėti %1$d pomėgį</item>
+        <item quantity="few">Pridėti %1$d pomėgius</item>
+        <item quantity="many">Pridėti %1$d pomėgio</item>
+        <item quantity="other">Pridėti %1$d pomėgių</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">Prieš %1$d metus šiandien</item>
+        <item quantity="few">Prieš %1$d metus šiandien</item>
+        <item quantity="many">Prieš %1$d metų šiandien</item>
+        <item quantity="other">Prieš %1$d metų šiandien</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d vaizdas</item>
+        <item quantity="few">%1$d vaizdai</item>
+        <item quantity="many">%1$d vaizdo</item>
+        <item quantity="other">%1$d vaizdų</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d priedas</item>
+        <item quantity="few">%1$d priedai</item>
+        <item quantity="many">%1$d priedo</item>
+        <item quantity="other">%1$d priedų</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d komentaras</item>
+        <item quantity="few">%1$d komentarai</item>
+        <item quantity="many">%1$d komentaro</item>
+        <item quantity="other">%1$d komentarų</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Rodyti dar %1$d komentarą</item>
+        <item quantity="few">Rodyti dar %1$d komentarus</item>
+        <item quantity="many">Rodyti dar %1$d komentaro</item>
+        <item quantity="other">Rodyti dar %1$d komentarų</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d minutė</item>
+        <item quantity="few">%1$d minutės</item>
+        <item quantity="many">%1$d minutės</item>
+        <item quantity="other">%1$d minučių</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d valanda</item>
+        <item quantity="few">%1$d valandos</item>
+        <item quantity="many">%1$d valandos</item>
+        <item quantity="other">%1$d valandų</item>
+    </plurals>
+
 </resources>

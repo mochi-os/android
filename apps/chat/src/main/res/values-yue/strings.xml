@@ -77,4 +77,5 @@
 
     <string name="chat_forward_chats">傾偈</string>
     <string name="chat_forward_friends">朋友</string>
+    <string name="chat_search_no_results">冇結果</string>
 </resources>

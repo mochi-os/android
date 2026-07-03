@@ -292,4 +292,9 @@
     <string name="common_opening_file">עפֿענען טעקע…</string>
     <string name="common_no_app_for_file">קיין אַפּ קען נישט עפֿענען די טעקע</string>
     <string name="common_file_open_failed">האָט נישט געקענט עפֿענען די טעקע</string>
+    <string name="common_logout_confirm_title">אַרויסקומען</string>
+    <string name="reaction_remove">רייניקן</string>
+
+    <string name="common_logout_confirm_message">זענט איר זיכער אַז איר ווילט זיך אויסלאָגירן? איר וועט זיך דאַרפֿן ווידער אײַנלאָגירן צו באַקומען צוטריט צו אײַער קאָנטע.</string>
+
 </resources>

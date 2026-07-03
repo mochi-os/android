@@ -215,4 +215,91 @@
     <string name="feeds_caught_up">Tukuyta rikurqankiña</string>
     <string name="feeds_all_caught_up">Llapan tariqasqa</string>
     <string name="feeds_view_all_posts">Llapan postkunata qhaway</string>
+    <string name="feeds_markdown_supported">Markdown haypaqsi</string>
+    <string name="feeds_back">Kutichiy</string>
+    <string name="feeds_confirm">Takyachiy</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_unsubscribe">Suscripcionta saqiy</string>
+    <string name="feeds_unsubscribed">Suscripcion saqisqa</string>
+    <string name="feeds_settings_section_identity">Identity</string>
+    <string name="feeds_settings_field_name">Sutin</string>
+    <string name="feeds_settings_field_entity_id">Entity ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Sutita hukchay</string>
+    <string name="feeds_settings_name_save_cd">Sutita waqaychay</string>
+    <string name="feeds_access_subject_anyone">Pipas</string>
+    <string name="feeds_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
+    <string name="feeds_access_level_view_full">Qhawayllapaq</string>
+    <string name="feeds_access_level_none_full">Mana yaykuy</string>
+    <string name="feeds_access_segment_user">Apaykachaq</string>
+    <string name="feeds_access_segment_group">Huñu</string>
+    <string name="feeds_access_segment_other">Huk</string>
+    <string name="feeds_access_search_users">Usuariokunata maskay</string>
+    <string name="feeds_access_select_group">Huñuyta akllay</string>
+    <string name="feeds_access_selected">Akllasqa: %1$s</string>
+    <string name="feeds_permission_deny">Mana saqiy</string>
+    <string name="feeds_allow_search">Pillapas maskhayta atichun feed-ta</string>
+    <string name="feeds_enable_memories">Yuyaykunata kallpachay</string>
+    <string name="feeds_create_first_post">Qallariq post kamariy</string>
+    <string name="feeds_post_content">Qillqa contenido</string>
+    <string name="feeds_rss_mode_posts">Qillqakuna</string>
+    <string name="feeds_rss_mode_posts_comments">Qillqakuna comentariokunawan</string>
+    <string name="feeds_unsubscribe_confirm">¿Feedmanta suscripcionta tukuchiy?</string>
+    <string name="feeds_unsubscribe_confirm_message">Kay feedmanta musuq willaykunata manaña chaskinkichu. Hayk\'appas musuqmanta suscribikuyta atinki.</string>
+    <string name="feeds_settings_unsubscribe_section">Feedmanta suscripcionta saqiy</string>
+    <string name="feeds_delete_feed_description">Wiñaypaq kay feedta tukuy contenidonwan pichay.</string>
+    <string name="feeds_access_management">Yaykuy Kamachiy</string>
+    <string name="feeds_access_management_desc">Pillapas qhawayta hinaspa kawsayta atichun kay feed-pi</string>
+    <string name="feeds_access_level_comment_full">Comentariy, kawsay rikuchiy, hinaspa qhaway</string>
+    <string name="feeds_access_level_react_full">Reactionay hinaspa qhaway</string>
+    <string name="feeds_access_add_title">Yaykuy yapay</string>
+    <string name="feeds_access_add_subtitle">Yaykuyta qonapaq usuariota, grupota, utaq huk kamachiyta akllay.</string>
+    <string name="feeds_access_select_rule">Yaykuy kamachiyta akllay</string>
+    <string name="feeds_source_url_hint_feed">Feed entity ID utaq fingerprint</string>
+    <string name="feeds_source_credibility_label">Iñiy</string>
+    <string name="feeds_source_transform_hint">Inglesman tikray, hinaspa bullet pointspi rikuchiy.</string>
+    <string name="feeds_source_transform_help">Wañuchinapaq ch\'usaqta saqiy.</string>
+
+    <string name="feeds_scroll_to_top">Pataman kutiy</string>
+    <string name="feeds_settings_title">%1$s allinkachaykuna</string>
+    <string name="feeds_settings_name_cancel_cd">Allinchayta saqiy</string>
+    <string name="feeds_access_authenticated_desc">Yaykusqa kaq pipas</string>
+    <string name="feeds_access_anyone_desc">Mana sutiyuq ruwaqkunapas</string>
+    <string name="feeds_source_last_checked">Qhipa qhawasqa %1$s</string>
+    <string name="feeds_source_polling_interval">Sapa %1$s qhawan</string>
+    <string name="feeds_permission_request_title">Permiso mañakuy</string>
+    <string name="feeds_permission_request_message">%1$s kay permisota mañakuchkan:</string>
+    <string name="feeds_permission_allow">Saqillay</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d willakuykuna</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">%1$d intereskunata yapay</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d watakuna ñawpaq kunan p\'unchawpi</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d imagenkuna</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">%1$d yapasqakuna</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d comentariokuna</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">%1$d aswan comentariokunata qhaway</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d minutokuna</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d horakuna</item>
+    </plurals>
+
 </resources>

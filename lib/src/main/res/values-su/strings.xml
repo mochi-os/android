@@ -292,4 +292,9 @@
     <string name="common_opening_file">Muka berkas…</string>
     <string name="common_no_app_for_file">Teu aya aplikasi anu tiasa muka berkas ieu</string>
     <string name="common_file_open_failed">Teu tiasa muka berkas</string>
+    <string name="common_logout_confirm_title">Kaluar</string>
+    <string name="reaction_remove">Bersihkeun</string>
+
+    <string name="common_logout_confirm_message">Yakin badé kaluar? Anjeun kedah lebet deui pikeun ngaksés akun anjeun.</string>
+
 </resources>

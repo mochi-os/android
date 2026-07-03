@@ -293,4 +293,9 @@
     <string name="common_opening_file">Đang mở tệp…</string>
     <string name="common_no_app_for_file">Không có ứng dụng nào có thể mở tệp này</string>
     <string name="common_file_open_failed">Không thể mở tệp</string>
+    <string name="common_logout_confirm_title">Đăng xuất</string>
+    <string name="reaction_remove">Xóa</string>
+
+    <string name="common_logout_confirm_message">Bạn có chắc chắn muốn đăng xuất không? Bạn sẽ cần đăng nhập lại để truy cập tài khoản của mình.</string>
+
 </resources>

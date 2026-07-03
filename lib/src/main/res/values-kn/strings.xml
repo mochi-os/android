@@ -292,4 +292,9 @@
     <string name="common_opening_file">ಫೈಲ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ…</string>
     <string name="common_no_app_for_file">ಈ ಫೈಲ್ ಅನ್ನು ಯಾವುದೇ ಆ್ಯಪ್ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="common_file_open_failed">ಫೈಲ್ ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="common_logout_confirm_title">ಲಾಗ್ ಔಟ್</string>
+    <string name="reaction_remove">ತೆರವುಗೊಳಿಸಿ</string>
+
+    <string name="common_logout_confirm_message">ನೀವು ಖಚಿತವಾಗಿ ಲಾಗ್ ಔಟ್ ಆಗಲು ಬಯಸುವಿರಾ? ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ಮತ್ತೆ ಲಾಗಿನ್ ಆಗಬೇಕಾಗುತ್ತದೆ.</string>
+
 </resources>

@@ -292,4 +292,9 @@
     <string name="common_opening_file">کردنەوەی پەڕگە…</string>
     <string name="common_no_app_for_file">هیچ ئەپێک ناتوانێت ئەم پەڕگەیە بکاتەوە</string>
     <string name="common_file_open_failed">نەتوانرا پەڕگەکە بکرێتەوە</string>
+
+    <string name="common_logout_confirm_title">چوونەدەرەوە</string>
+    <string name="common_logout_confirm_message">دڵنیایت دەتەوێت بچیتە دەرەوە؟ پێویستە دووبارە بچیتەوە ژوورەوە بۆ دەستگەیشتن بە هەژمارەکەت.</string>
+    <string name="reaction_remove">لابردن</string>
+
 </resources>

@@ -292,4 +292,9 @@
     <string name="common_opening_file">Отваряне на файла…</string>
     <string name="common_no_app_for_file">Няма приложение, което може да отвори този файл</string>
     <string name="common_file_open_failed">Файлът не можа да бъде отворен</string>
+
+    <string name="common_logout_confirm_title">Изход</string>
+    <string name="common_logout_confirm_message">Наистина ли искате да излезете? Ще трябва да влезете отново, за да получите достъп до акаунта си.</string>
+    <string name="reaction_remove">Изчистване</string>
+
 </resources>

@@ -215,4 +215,91 @@
     <string name="feeds_caught_up">Rehecháma opavave</string>
     <string name="feeds_all_caught_up">Opa porãma</string>
     <string name="feeds_view_all_posts">Ehecha opa ñemoñe\'ẽ</string>
+    <string name="feeds_markdown_supported">Markdown ojepuru</string>
+    <string name="feeds_back">Tapykuépe</string>
+    <string name="feeds_confirm">Emoneĩ</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_unsubscribe">Eñemboaty\'ỹ</string>
+    <string name="feeds_unsubscribed">Oñemboaty\'ỹ</string>
+    <string name="feeds_settings_section_identity">Identidad</string>
+    <string name="feeds_settings_field_name">Téra</string>
+    <string name="feeds_settings_field_entity_id">Entidad ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">Mohendaha</string>
+    <string name="feeds_settings_name_edit_cd">Embojuruja téra</string>
+    <string name="feeds_settings_name_save_cd">Eñongatu téra</string>
+    <string name="feeds_access_subject_anyone">Opavave</string>
+    <string name="feeds_access_subject_authenticated">Puruhára jeikuaapyre</string>
+    <string name="feeds_access_level_view_full">Ehecha mante</string>
+    <string name="feeds_access_level_none_full">Ojeikese\'ỹ</string>
+    <string name="feeds_access_segment_user">Mboapurevahára</string>
+    <string name="feeds_access_segment_group">Atypy</string>
+    <string name="feeds_access_segment_other">Ambue</string>
+    <string name="feeds_access_search_users">Eheka usuarios</string>
+    <string name="feeds_access_select_group">Eiporavo aty</string>
+    <string name="feeds_access_selected">Oñeporavóva: %1$s</string>
+    <string name="feeds_permission_deny">Heja</string>
+    <string name="feeds_allow_search">Eipysyrõ opavavépe oheka feed</string>
+    <string name="feeds_enable_memories">Emyendy mandu\'a</string>
+    <string name="feeds_create_first_post">Embojeguáva post peteĩha</string>
+    <string name="feeds_post_content">Marandu reta\'ãva</string>
+    <string name="feeds_rss_mode_posts">Marandu</string>
+    <string name="feeds_rss_mode_posts_comments">Marandu ha comentarios</string>
+    <string name="feeds_unsubscribe_confirm">Eipe\'a ne ñemboheraguapy ko feed-gui?</string>
+    <string name="feeds_unsubscribe_confirm_message">Nderehupytymo\'ãvéima pyahukue ko feed-gui. Ikatu eñemboheraguapy jey oimeraẽva ára.</string>
+    <string name="feeds_settings_unsubscribe_section">Eñemboaty\'ỹ feed-gui</string>
+    <string name="feeds_delete_feed_description">Embogue tapykue ko feed ha opa imba\'e.</string>
+    <string name="feeds_access_management">Jeike Sãmbyhy</string>
+    <string name="feeds_access_management_desc">Embohekombo\'e máva ohecháva ha oikóva ko feed ndive</string>
+    <string name="feeds_access_level_comment_full">Comentario, hechauka, ha hecha</string>
+    <string name="feeds_access_level_react_full">Reaccionar ha hechakuaa</string>
+    <string name="feeds_access_add_title">Embojuaju jeike</string>
+    <string name="feeds_access_add_subtitle">Eporavo peteĩ usuario, grupo, térã ambue regla eme\'ẽ haguã acceso.</string>
+    <string name="feeds_access_select_rule">Eporavo acceso regla</string>
+    <string name="feeds_source_url_hint_feed">Feed entidad ID térã fingerprint</string>
+    <string name="feeds_source_credibility_label">Credibilidad</string>
+    <string name="feeds_source_transform_hint">Embogua inglés-pe, ha ehechauka punto poravopyrã.</string>
+    <string name="feeds_source_transform_help">Eheja nandi emomba haguã.</string>
+
+    <string name="feeds_scroll_to_top">Eho jey yvate</string>
+    <string name="feeds_settings_title">%1$s ñemboheko</string>
+    <string name="feeds_settings_name_cancel_cd">Emboyke ñemoambue</string>
+    <string name="feeds_access_authenticated_desc">Oimeraẽva oike va\'ekue</string>
+    <string name="feeds_access_anyone_desc">Oike avei puruhára hérava\'ỹva</string>
+    <string name="feeds_source_last_checked">Ojehecha ipahaite %1$s</string>
+    <string name="feeds_source_polling_interval">Ojehechajey %1$s ñavõ</string>
+    <string name="feeds_permission_request_title">Ñemoneĩ jerure</string>
+    <string name="feeds_permission_request_message">%1$s ojerure ko ñemoneĩ:</string>
+    <string name="feeds_permission_allow">Emoneĩ</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d jehaipyre</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">Embojoapy %1$d interés</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">Ojapo %1$d ary ko árape</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d ta\'anga</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">%1$d mbojoapypyre</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d komentário</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">Ehecha ambue %1$d komentário</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d aravo\'i</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d aravo</item>
+    </plurals>
+
 </resources>

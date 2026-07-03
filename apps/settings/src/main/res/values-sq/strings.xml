@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">Mesazhe në pritje të rrugëzimit</string>
     <string name="system_status_relay_service">Shërbim rele</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervime · %3$d qarqe · %4$d refuzuar</string>
+    <string name="route_target_select">Zgjidh</string>
 </resources>

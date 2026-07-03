@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">Hunda ilaalteerta</string>
     <string name="feeds_all_caught_up">Hunda dubbisame</string>
     <string name="feeds_view_all_posts">Postiwwan hunda daawwadhu</string>
+    <string name="feeds_markdown_supported">Markdown deeggarama</string>
+    <string name="feeds_back">Duuba</string>
+    <string name="feeds_confirm">Mirkaneessi</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_unsubscribe">Galaa\'uu kaasi</string>
+    <string name="feeds_unsubscribed">Galaa\'uun kaafameera</string>
+    <string name="feeds_settings_section_identity">Eenyummaa</string>
+    <string name="feeds_settings_field_name">Maqaa</string>
+    <string name="feeds_settings_field_entity_id">ID Iddoo</string>
+    <string name="feeds_settings_field_fingerprint">Maxxansa quba</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Maqaa sirreessi</string>
+    <string name="feeds_settings_name_save_cd">Maqaa kuusuu</string>
+    <string name="feeds_access_subject_anyone">Nama kamiyyuu</string>
+    <string name="feeds_access_subject_authenticated">Fayyadamtoota mirkanaa\'an</string>
+    <string name="feeds_access_level_view_full">Daawwannaa qofa</string>
+    <string name="feeds_access_level_none_full">Itti seenuun hin jiru</string>
+    <string name="feeds_access_segment_user">Fayyadamaa</string>
+    <string name="feeds_access_segment_group">Garee</string>
+    <string name="feeds_access_segment_other">Biraa</string>
+    <string name="feeds_access_search_users">Fayyadamtoota barbaadi</string>
+    <string name="feeds_access_select_group">Garee filadhu</string>
+    <string name="feeds_access_selected">Filatame: %1$s</string>
+    <string name="feeds_permission_deny">Dhorki</string>
+    <string name="feeds_allow_search">Eenyu iyyuu sora barbaaduu hayyami</string>
+    <string name="feeds_enable_memories">Yaadannoo dandeessisi</string>
+    <string name="feeds_create_first_post">Maxxansa jalqabaa uumi</string>
+    <string name="feeds_post_content">Qabiyyee maxxansaa</string>
+    <string name="feeds_rss_mode_posts">Maxxansoota</string>
+    <string name="feeds_rss_mode_posts_comments">Maxxansoota fi yaadawwan</string>
+    <string name="feeds_unsubscribe_confirm">Feedii hordofuu dhiisuu?</string>
+    <string name="feeds_unsubscribe_confirm_message">Feedii kana irraa haaromsa argachuu ni dhaabda. Yeroo barbaaddetti irra deebitee hordofuu dandeessa.</string>
+    <string name="feeds_settings_unsubscribe_section">Marsaa irraa galaa\'uu kaasi</string>
+    <string name="feeds_delete_feed_description">Feed kana fi qabiyyee isaa hunda barabaraan haqi.</string>
+    <string name="feeds_access_management">Bulchiinsa Seensaa</string>
+    <string name="feeds_access_management_desc">Eenyu sora kana arguu fi waliin walqunnamuu danda\'u to\'adhu</string>
+    <string name="feeds_access_level_comment_full">Yaada, deebii, fi mul\'isi</string>
+    <string name="feeds_access_level_react_full">React fi ilaaluu</string>
+    <string name="feeds_access_add_title">Seensa dabali</string>
+    <string name="feeds_access_add_subtitle">Itti seenumsa kennuuf fayyadamaa, garee, ykn seera biroo fili.</string>
+    <string name="feeds_access_select_rule">Seera itti seenumsaa fili</string>
+    <string name="feeds_source_url_hint_feed">ID iddoo Feed yookiin maxxansa quba</string>
+    <string name="feeds_source_credibility_label">Amanamummaa</string>
+    <string name="feeds_source_transform_hint">Gara Ingilizii hiiki, akka qabxiitti agarsiisi.</string>
+    <string name="feeds_source_transform_help">Dhaamsuuf duwwaa kaa\'i.</string>
+
+    <string name="feeds_scroll_to_top">Gara gubbaatti deebi\'i</string>
+    <string name="feeds_settings_title">Qindaa\'ina %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Gulaaluu dhiisi</string>
+    <string name="feeds_access_authenticated_desc">Nama seenee jiru kamiyyuu</string>
+    <string name="feeds_access_anyone_desc">Fayyadamtoota maqaan isaanii hin beekamne dabalatee</string>
+    <string name="feeds_source_last_checked">Yeroo dhumaaf kan ilaalame %1$s</string>
+    <string name="feeds_source_polling_interval">Tokkoon tokkoon %1$s ni sakatta\'ama</string>
+    <string name="feeds_permission_request_title">Gaaffii hayyamaa</string>
+    <string name="feeds_permission_request_message">%1$s hayyama armaan gadii gaafachaa jira:</string>
+    <string name="feeds_permission_allow">Hayyami</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">maxxansa %1$d</item>
+        <item quantity="other">maxxansaawwan %1$d</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Fedhii %1$d dabali</item>
+        <item quantity="other">Fedhiiwwan %1$d dabali</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">waggaa %1$d dura guyyaa har\'aa</item>
+        <item quantity="other">waggoota %1$d dura guyyaa har\'aa</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">suuraa %1$d</item>
+        <item quantity="other">suuraawwan %1$d</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">miiltoo %1$d</item>
+        <item quantity="other">miiltoowwan %1$d</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">yaada %1$d</item>
+        <item quantity="other">yaadota %1$d</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Yaada dabalataa %1$d ilaali</item>
+        <item quantity="other">Yaadota dabalataa %1$d ilaali</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">daqiiqaa %1$d</item>
+        <item quantity="other">daqiiqaawwan %1$d</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">sa\'aatii %1$d</item>
+        <item quantity="other">sa\'aatiiwwan %1$d</item>
+    </plurals>
+
 </resources>

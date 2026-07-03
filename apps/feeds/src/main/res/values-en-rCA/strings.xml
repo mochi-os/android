@@ -201,4 +201,112 @@
     <string name="feeds_saved_remove">Remove from saved</string>
     <string name="feeds_saved_clear_all">Clear all</string>
     <string name="feeds_caught_up">You\'re all caught up</string>
+    <string name="feeds_markdown_supported">Markdown supported</string>
+    <string name="feeds_back">Back</string>
+    <string name="feeds_confirm">Confirm</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_unsubscribe">Unsubscribe</string>
+    <string name="feeds_unsubscribed">Unsubscribed</string>
+    <string name="feeds_settings_section_identity">Identity</string>
+    <string name="feeds_settings_field_name">Name</string>
+    <string name="feeds_settings_field_entity_id">Entity ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_name_edit_cd">Edit name</string>
+    <string name="feeds_settings_name_save_cd">Save name</string>
+    <string name="feeds_access_subject_anyone">Anyone</string>
+    <string name="feeds_access_subject_authenticated">Authenticated users</string>
+    <string name="feeds_access_level_view_full">View only</string>
+    <string name="feeds_access_level_none_full">No access</string>
+    <string name="feeds_access_segment_user">User</string>
+    <string name="feeds_access_segment_group">Group</string>
+    <string name="feeds_access_segment_other">Other</string>
+    <string name="feeds_access_search_users">Search users</string>
+    <string name="feeds_access_select_group">Select group</string>
+    <string name="feeds_access_selected">Selected: %1$s</string>
+    <string name="feeds_permission_deny">Deny</string>
+    <string name="feeds_access_add_subtitle">Select a user, group, or other rule to grant access.</string>
+    <string name="feeds_access_add_title">Add access</string>
+    <string name="feeds_access_anyone_desc">Including anonymous users</string>
+    <string name="feeds_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="feeds_access_level_comment_full">Comment, react, and view</string>
+    <string name="feeds_access_level_react_full">React and view</string>
+    <string name="feeds_access_management">Access Management</string>
+    <string name="feeds_access_management_desc">Control who can view and interact with this feed</string>
+    <string name="feeds_access_select_rule">Select access rule</string>
+    <string name="feeds_allow_search">Allow anyone to search for feed</string>
+    <string name="feeds_create_first_post">Create the first post</string>
+    <string name="feeds_delete_feed_description">Permanently delete this feed and all its content.</string>
+    <string name="feeds_enable_memories">Enable memories</string>
+    <string name="feeds_interest_boosted">Interest boosted</string>
+    <string name="feeds_interest_failed">Failed to adjust interest</string>
+    <string name="feeds_interest_reduced">Interest reduced</string>
+    <string name="feeds_interest_removed">Interest removed</string>
+    <string name="feeds_permission_allow">Allow</string>
+    <string name="feeds_permission_request_message">%1$s is requesting the following permission:</string>
+    <string name="feeds_permission_request_title">Permission request</string>
+    <string name="feeds_post_content">Post content</string>
+    <string name="feeds_rss_mode_posts">Posts</string>
+    <string name="feeds_rss_mode_posts_comments">Posts and comments</string>
+    <string name="feeds_saved_clear_confirm_body">This removes every post from your saved list. This cannot be undone.</string>
+    <string name="feeds_saved_clear_confirm_title">Clear all saved posts?</string>
+    <string name="feeds_saved_empty_subtitle">Tap the bookmark on any post to save it here for later.</string>
+    <string name="feeds_saved_empty_title">Nothing saved yet</string>
+    <string name="feeds_saved_error_clear">Failed to clear saved posts</string>
+    <string name="feeds_saved_save">Save for later</string>
+    <string name="feeds_scroll_to_top">Back to top</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_cancel_cd">Cancel editing</string>
+    <string name="feeds_settings_title">%1$s settings</string>
+    <string name="feeds_settings_unsubscribe_section">Unsubscribe from feed</string>
+    <string name="feeds_source_credibility_label">Credibility</string>
+    <string name="feeds_source_last_checked">Last checked %1$s</string>
+    <string name="feeds_source_polling_interval">Polling every %1$s</string>
+    <string name="feeds_source_transform_help">Leave empty to disable.</string>
+    <string name="feeds_source_transform_hint">Translate to English, and show as bullet points.</string>
+    <string name="feeds_source_url_hint_feed">Feed entity ID or fingerprint</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+    <string name="feeds_unsubscribe_confirm">Unsubscribe from feed?</string>
+    <string name="feeds_unsubscribe_confirm_message">You will stop receiving updates from this feed. You can re-subscribe at any time.</string>
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d post</item>
+        <item quantity="other">%1$d posts</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Add %1$d interest</item>
+        <item quantity="other">Add %1$d interests</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d year ago today</item>
+        <item quantity="other">%1$d years ago today</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d image</item>
+        <item quantity="other">%1$d images</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d attachment</item>
+        <item quantity="other">%1$d attachments</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d comment</item>
+        <item quantity="other">%1$d comments</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">View %1$d more comment</item>
+        <item quantity="other">View %1$d more comments</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d new post</item>
+        <item quantity="other">%d new posts</item>
+    </plurals>
+
 </resources>

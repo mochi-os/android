@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">ሁሉንም ተመልክተዋል</string>
     <string name="feeds_all_caught_up">ሁሉም ተስተናግዷል</string>
     <string name="feeds_view_all_posts">ሁሉንም ልጥፎች ይመልከቱ</string>
+    <string name="feeds_markdown_supported">ማርክዳውን ይደገፋል</string>
+    <string name="feeds_back">ተመለስ</string>
+    <string name="feeds_confirm">አረጋግጥ</string>
+    <string name="feeds_rss_feed">RSS ፊድ</string>
+    <string name="feeds_unsubscribe">ምዝገባ ያቋርጡ</string>
+    <string name="feeds_unsubscribed">ምዝገባ ተቋርጧል</string>
+    <string name="feeds_settings_section_identity">ማንነት</string>
+    <string name="feeds_settings_field_name">ስም</string>
+    <string name="feeds_settings_field_entity_id">የአካል መለያ</string>
+    <string name="feeds_settings_field_fingerprint">ጣት አሻራ</string>
+    <string name="feeds_settings_field_server">ሰርቨር</string>
+    <string name="feeds_settings_name_edit_cd">ስም አስተካክል</string>
+    <string name="feeds_settings_name_save_cd">ስም አስቀምጥ</string>
+    <string name="feeds_access_subject_anyone">ማንኛውም ሰው</string>
+    <string name="feeds_access_subject_authenticated">የተረጋገጡ ተጠቃሚዎች</string>
+    <string name="feeds_access_level_view_full">እይታ ብቻ</string>
+    <string name="feeds_access_level_none_full">ምንም ድረሳ የለም</string>
+    <string name="feeds_access_segment_user">ተጠቃሚ</string>
+    <string name="feeds_access_segment_group">ቡድን</string>
+    <string name="feeds_access_segment_other">ሌላ</string>
+    <string name="feeds_access_search_users">ተጠቃሚዎችን ይፈልጉ</string>
+    <string name="feeds_access_select_group">ቡድን ይምረጡ</string>
+    <string name="feeds_access_selected">የተመረጠ: %1$s</string>
+    <string name="feeds_permission_deny">ተከለከል</string>
+    <string name="feeds_allow_search">ማንኛውም ሰው ምግቡን እንዲፈልግ ፍቀድ</string>
+    <string name="feeds_enable_memories">ማስታወሻዎችን አንቃ</string>
+    <string name="feeds_create_first_post">የመጀመሪያውን ልጥፍ ፍጠር</string>
+    <string name="feeds_post_content">የልጥፍ ይዘት</string>
+    <string name="feeds_rss_mode_posts">ልጥፎች</string>
+    <string name="feeds_rss_mode_posts_comments">ልጥፎች እና አስተያየቶች</string>
+    <string name="feeds_unsubscribe_confirm">ከፊዱ ደንበኝነት ይውጡ?</string>
+    <string name="feeds_unsubscribe_confirm_message">ከዚህ ፊድ ዝማኔዎችን መቀበል ያቆማሉ። በማንኛውም ጊዜ እንደገና ደንበኛ መሆን ይችላሉ።</string>
+    <string name="feeds_settings_unsubscribe_section">ከፊድ ምዝገባ ያቋርጡ</string>
+    <string name="feeds_delete_feed_description">ይህን ፊድ እና ሁሉንም ይዘቶቹን በቋሚነት ሰርዝ።</string>
+    <string name="feeds_access_management">የመዳረሻ አስተዳደር</string>
+    <string name="feeds_access_management_desc">ይህን ፊድ ማን እንደሚያይና እንደሚገናኝ ተቆጣጠር</string>
+    <string name="feeds_access_level_comment_full">አስተያየት ስጥ፣ ምላሽ ስጥ እና ተመልከት</string>
+    <string name="feeds_access_level_react_full">ምላሽ ስጥ እና ተመልከት</string>
+    <string name="feeds_access_add_title">መዳረሻ ጨምር</string>
+    <string name="feeds_access_add_subtitle">መዳረሻ ለመስጠት ተጠቃሚ፣ ቡድን ወይም ሌላ ደንብ ይምረጡ።</string>
+    <string name="feeds_access_select_rule">የመዳረሻ ደንብ ይምረጡ</string>
+    <string name="feeds_source_url_hint_feed">የምግብ ኢንቲቲ መለያ ወይም የጣት አሻራ</string>
+    <string name="feeds_source_credibility_label">ታማኝነት</string>
+    <string name="feeds_source_transform_hint">ወደ እንግሊዝኛ ተርጉም፣ እና በነጥቦች አሳይ።</string>
+    <string name="feeds_source_transform_help">ለማሰናከል ባዶ ይተዉት።</string>
+
+    <string name="feeds_scroll_to_top">ወደ ላይ ተመለስ</string>
+    <string name="feeds_settings_title">የ%1$s ቅንብሮች</string>
+    <string name="feeds_settings_name_cancel_cd">አርትዖትን ሰርዝ</string>
+    <string name="feeds_access_authenticated_desc">የገባ ማንኛውም ሰው</string>
+    <string name="feeds_access_anyone_desc">ስም-አልባ ተጠቃሚዎችን ጨምሮ</string>
+    <string name="feeds_source_last_checked">መጨረሻ የተፈተሸው %1$s</string>
+    <string name="feeds_source_polling_interval">በየ%1$s ይፈትሻል</string>
+    <string name="feeds_permission_request_title">የፈቃድ ጥያቄ</string>
+    <string name="feeds_permission_request_message">%1$s የሚከተለውን ፈቃድ እየጠየቀ ነው፦</string>
+    <string name="feeds_permission_allow">ፍቀድ</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d ልጥፍ</item>
+        <item quantity="other">%1$d ልጥፎች</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">%1$d ፍላጎት ጨምር</item>
+        <item quantity="other">%1$d ፍላጎቶች ጨምር</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">ዛሬ ከ%1$d ዓመት በፊት</item>
+        <item quantity="other">ዛሬ ከ%1$d ዓመታት በፊት</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d ምስል</item>
+        <item quantity="other">%1$d ምስሎች</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d አባሪ</item>
+        <item quantity="other">%1$d አባሪዎች</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d አስተያየት</item>
+        <item quantity="other">%1$d አስተያየቶች</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d ተጨማሪ አስተያየት ይመልከቱ</item>
+        <item quantity="other">%1$d ተጨማሪ አስተያየቶች ይመልከቱ</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d ደቂቃ</item>
+        <item quantity="other">%1$d ደቂቃዎች</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d ሰዓት</item>
+        <item quantity="other">%1$d ሰዓታት</item>
+    </plurals>
+
 </resources>

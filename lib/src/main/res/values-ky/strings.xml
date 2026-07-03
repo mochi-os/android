@@ -292,4 +292,9 @@
     <string name="common_opening_file">Файл ачылууда…</string>
     <string name="common_no_app_for_file">Бул файлды ача турган колдонмо жок</string>
     <string name="common_file_open_failed">Файлды ачуу мүмкүн болгон жок</string>
+    <string name="common_logout_confirm_title">Чыгуу</string>
+    <string name="reaction_remove">Тазалоо</string>
+
+    <string name="common_logout_confirm_message">Чын эле чыгууну каалайсызбы? Аккаунтуңузга кирүү үчүн кайрадан кирүүгө туура келет.</string>
+
 </resources>

@@ -217,4 +217,118 @@
     <string name="feeds_caught_up">Wszystko obejrzane</string>
     <string name="feeds_all_caught_up">Wszystko nadrobione</string>
     <string name="feeds_view_all_posts">Zobacz wszystkie wpisy</string>
+    <string name="feeds_markdown_supported">Obsługa formatu Markdown</string>
+    <string name="feeds_back">Wstecz</string>
+    <string name="feeds_confirm">Potwierdź</string>
+    <string name="feeds_rss_feed">Kanał RSS</string>
+    <string name="feeds_unsubscribe">Anuluj subskrypcję</string>
+    <string name="feeds_unsubscribed">Anulowano subskrypcję</string>
+    <string name="feeds_settings_section_identity">Tożsamość</string>
+    <string name="feeds_settings_field_name">Nazwa</string>
+    <string name="feeds_settings_field_entity_id">ID encji</string>
+    <string name="feeds_settings_field_fingerprint">Odcisk palca</string>
+    <string name="feeds_settings_field_server">Serwer</string>
+    <string name="feeds_settings_name_edit_cd">Edytuj nazwę</string>
+    <string name="feeds_settings_name_save_cd">Zapisz nazwę</string>
+    <string name="feeds_access_subject_anyone">Każdy</string>
+    <string name="feeds_access_subject_authenticated">Uwierzytelnieni użytkownicy</string>
+    <string name="feeds_access_level_view_full">Tylko podgląd</string>
+    <string name="feeds_access_level_none_full">Brak dostępu</string>
+    <string name="feeds_access_segment_user">Użytkownik</string>
+    <string name="feeds_access_segment_group">Grupa</string>
+    <string name="feeds_access_segment_other">Inne</string>
+    <string name="feeds_access_search_users">Szukaj użytkowników</string>
+    <string name="feeds_access_select_group">Wybierz grupę</string>
+    <string name="feeds_access_selected">Zaznaczone: %1$s</string>
+    <string name="feeds_permission_deny">Odmów</string>
+    <string name="feeds_allow_search">Pozwól wszystkim wyszukiwać kanał</string>
+    <string name="feeds_enable_memories">Włącz wspomnienia</string>
+    <string name="feeds_create_first_post">Utwórz pierwszy post</string>
+    <string name="feeds_post_content">Treść wpisu</string>
+    <string name="feeds_rss_mode_posts">Wpisy</string>
+    <string name="feeds_rss_mode_posts_comments">Wpisy i komentarze</string>
+    <string name="feeds_unsubscribe_confirm">Anulować subskrypcję kanału?</string>
+    <string name="feeds_unsubscribe_confirm_message">Nie będziesz już otrzymywać aktualizacji z tego kanału. Możesz zasubskrybować ponownie w dowolnym momencie.</string>
+    <string name="feeds_settings_unsubscribe_section">Anuluj subskrypcję kanału</string>
+    <string name="feeds_delete_feed_description">Trwale usuń ten kanał i całą jego zawartość.</string>
+    <string name="feeds_access_management">Zarządzanie dostępem</string>
+    <string name="feeds_access_management_desc">Kontroluj, kto może przeglądać i wchodzić w interakcję z tym kanałem</string>
+    <string name="feeds_access_level_comment_full">Komentuj, reaguj i przeglądaj</string>
+    <string name="feeds_access_level_react_full">Reaguj i przeglądaj</string>
+    <string name="feeds_access_add_title">Dodaj dostęp</string>
+    <string name="feeds_access_add_subtitle">Wybierz użytkownika, grupę lub inną regułę, aby przyznać dostęp.</string>
+    <string name="feeds_access_select_rule">Wybierz regułę dostępu</string>
+    <string name="feeds_source_url_hint_feed">ID podmiotu kanału lub odcisk palca</string>
+    <string name="feeds_source_credibility_label">Wiarygodność</string>
+    <string name="feeds_source_transform_hint">Przetłumacz na angielski i pokaż jako punkty.</string>
+    <string name="feeds_source_transform_help">Pozostaw puste, aby wyłączyć.</string>
+
+    <string name="feeds_scroll_to_top">Powrót na górę</string>
+    <string name="feeds_settings_title">Ustawienia %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Anuluj edycję</string>
+    <string name="feeds_access_authenticated_desc">Każdy, kto jest zalogowany</string>
+    <string name="feeds_access_anyone_desc">W tym użytkownicy anonimowi</string>
+    <string name="feeds_source_last_checked">Ostatnio sprawdzono %1$s</string>
+    <string name="feeds_source_polling_interval">Odpytywanie co %1$s</string>
+    <string name="feeds_permission_request_title">Prośba o uprawnienie</string>
+    <string name="feeds_permission_request_message">%1$s prosi o następujące uprawnienie:</string>
+    <string name="feeds_permission_allow">Zezwól</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d post</item>
+        <item quantity="few">%1$d posty</item>
+        <item quantity="many">%1$d postów</item>
+        <item quantity="other">%1$d posta</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Dodaj %1$d zainteresowanie</item>
+        <item quantity="few">Dodaj %1$d zainteresowania</item>
+        <item quantity="many">Dodaj %1$d zainteresowań</item>
+        <item quantity="other">Dodaj %1$d zainteresowania</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d rok temu tego dnia</item>
+        <item quantity="few">%1$d lata temu tego dnia</item>
+        <item quantity="many">%1$d lat temu tego dnia</item>
+        <item quantity="other">%1$d roku temu tego dnia</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d obraz</item>
+        <item quantity="few">%1$d obrazy</item>
+        <item quantity="many">%1$d obrazów</item>
+        <item quantity="other">%1$d obrazu</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d załącznik</item>
+        <item quantity="few">%1$d załączniki</item>
+        <item quantity="many">%1$d załączników</item>
+        <item quantity="other">%1$d załącznika</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d komentarz</item>
+        <item quantity="few">%1$d komentarze</item>
+        <item quantity="many">%1$d komentarzy</item>
+        <item quantity="other">%1$d komentarza</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Zobacz jeszcze %1$d komentarz</item>
+        <item quantity="few">Zobacz jeszcze %1$d komentarze</item>
+        <item quantity="many">Zobacz jeszcze %1$d komentarzy</item>
+        <item quantity="other">Zobacz jeszcze %1$d komentarza</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="few">%1$d minuty</item>
+        <item quantity="many">%1$d minut</item>
+        <item quantity="other">%1$d minuty</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d godzina</item>
+        <item quantity="few">%1$d godziny</item>
+        <item quantity="many">%1$d godzin</item>
+        <item quantity="other">%1$d godziny</item>
+    </plurals>
+
 </resources>

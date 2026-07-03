@@ -336,4 +336,5 @@
     <string name="crm_attachment_remove">Anhang entfernen</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerabdruck</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

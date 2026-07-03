@@ -215,4 +215,98 @@
     <string name="feeds_caught_up">Je bent helemaal bij</string>
     <string name="feeds_all_caught_up">Alles bijgewerkt</string>
     <string name="feeds_view_all_posts">Alle berichten weergeven</string>
+    <string name="feeds_markdown_supported">Markdown ondersteund</string>
+    <string name="feeds_back">Terug</string>
+    <string name="feeds_confirm">Bevestigen</string>
+    <string name="feeds_rss_feed">RSS-feed</string>
+    <string name="feeds_unsubscribe">Uitschrijven</string>
+    <string name="feeds_unsubscribed">Uitgeschreven</string>
+    <string name="feeds_settings_section_identity">Identiteit</string>
+    <string name="feeds_settings_field_name">Naam</string>
+    <string name="feeds_settings_field_entity_id">Entiteit-ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Naam bewerken</string>
+    <string name="feeds_settings_name_save_cd">Naam opslaan</string>
+    <string name="feeds_access_subject_anyone">Iedereen</string>
+    <string name="feeds_access_subject_authenticated">Geverifieerde gebruikers</string>
+    <string name="feeds_access_level_view_full">Alleen-lezen</string>
+    <string name="feeds_access_level_none_full">Geen toegang</string>
+    <string name="feeds_access_segment_user">Gebruiker</string>
+    <string name="feeds_access_segment_group">Groep</string>
+    <string name="feeds_access_segment_other">Andere</string>
+    <string name="feeds_access_search_users">Gebruikers zoeken</string>
+    <string name="feeds_access_select_group">Selecteer groep</string>
+    <string name="feeds_access_selected">Geselecteerd: %1$s</string>
+    <string name="feeds_permission_deny">Weigeren</string>
+    <string name="feeds_allow_search">Sta iedereen toe om de feed te zoeken</string>
+    <string name="feeds_enable_memories">Herinneringen inschakelen</string>
+    <string name="feeds_create_first_post">Het eerste bericht aanmaken</string>
+    <string name="feeds_post_content">Berichtinhoud</string>
+    <string name="feeds_rss_mode_posts">Berichten</string>
+    <string name="feeds_rss_mode_posts_comments">Berichten en reacties</string>
+    <string name="feeds_unsubscribe_confirm">Afmelden voor feed?</string>
+    <string name="feeds_unsubscribe_confirm_message">Je ontvangt geen updates meer van deze feed. Je kan je op elk moment opnieuw abonneren.</string>
+    <string name="feeds_settings_unsubscribe_section">Uitschrijven van feed</string>
+    <string name="feeds_delete_feed_description">Verwijder deze feed en alle inhoud permanent.</string>
+    <string name="feeds_access_management">Toegangsbeheer</string>
+    <string name="feeds_access_management_desc">Bepaal wie deze feed kan bekijken en ermee kan interageren</string>
+    <string name="feeds_access_level_comment_full">Reageren, react geven en bekijken</string>
+    <string name="feeds_access_level_react_full">React geven en bekijken</string>
+    <string name="feeds_access_add_title">Toegang toevoegen</string>
+    <string name="feeds_access_add_subtitle">Selecteer een gebruiker, groep of andere regel om toegang te verlenen.</string>
+    <string name="feeds_access_select_rule">Selecteer toegangsregel</string>
+    <string name="feeds_source_url_hint_feed">Feed-entiteit-ID of vingerafdruk</string>
+    <string name="feeds_source_credibility_label">Geloofwaardigheid</string>
+    <string name="feeds_source_transform_hint">Vertaal naar het Engels en toon als opsommingstekens.</string>
+    <string name="feeds_source_transform_help">Laat leeg om uit te schakelen.</string>
+    <string name="feeds_access_anyone_desc">Inclusief anonieme gebruikers</string>
+    <string name="feeds_access_authenticated_desc">Iedereen die aangemeld is</string>
+    <string name="feeds_permission_allow">Toestaan</string>
+    <string name="feeds_permission_request_message">%1$s vraagt de volgende toestemming:</string>
+    <string name="feeds_permission_request_title">Toestemmingsverzoek</string>
+    <string name="feeds_scroll_to_top">Terug naar boven</string>
+    <string name="feeds_settings_name_cancel_cd">Bewerken annuleren</string>
+    <string name="feeds_settings_title">Instellingen voor %1$s</string>
+    <string name="feeds_source_last_checked">Laatst gecontroleerd %1$s</string>
+    <string name="feeds_source_polling_interval">Elke %1$s opgehaald</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d bericht</item>
+        <item quantity="other">%1$d berichten</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">%1$d interesse toevoegen</item>
+        <item quantity="other">%1$d interesses toevoegen</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d jaar geleden vandaag</item>
+        <item quantity="other">%1$d jaar geleden vandaag</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d afbeelding</item>
+        <item quantity="other">%1$d afbeeldingen</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d bijlage</item>
+        <item quantity="other">%1$d bijlagen</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d reactie</item>
+        <item quantity="other">%1$d reacties</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Nog %1$d reactie bekijken</item>
+        <item quantity="other">Nog %1$d reacties bekijken</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d minuut</item>
+        <item quantity="other">%1$d minuten</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d uur</item>
+        <item quantity="other">%1$d uur</item>
+    </plurals>
+
 </resources>

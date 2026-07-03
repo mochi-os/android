@@ -293,4 +293,9 @@
     <string name="stepup_error_code">Dieser Code ist falsch oder abgelaufen.</string>
     <string name="stepup_error_passkey">Die Passkey-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
     <string name="stepup_error_oauth">Verifizierung mit diesem Konto fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
+    <string name="common_logout_confirm_title">Abmelden</string>
+    <string name="reaction_remove">Löschen</string>
+
+    <string name="common_logout_confirm_message">Möchten Sie sich wirklich abmelden? Sie müssen sich erneut anmelden, um auf Ihr Konto zuzugreifen.</string>
+
 </resources>

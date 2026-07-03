@@ -219,4 +219,118 @@
     <string name="feeds_caught_up">Chunnaic thu a h-uile càil</string>
     <string name="feeds_all_caught_up">Tha thu ri là</string>
     <string name="feeds_view_all_posts">Seall a h-uile post</string>
+    <string name="feeds_markdown_supported">Tha taic ri Markdown</string>
+    <string name="feeds_back">Air ais</string>
+    <string name="feeds_confirm">Dearbhaich</string>
+    <string name="feeds_rss_feed">Sruth RSS</string>
+    <string name="feeds_unsubscribe">Dì-fho-sgrìobh</string>
+    <string name="feeds_unsubscribed">Dì-fho-sgrìobhte</string>
+    <string name="feeds_settings_section_identity">Dearbh-aithne</string>
+    <string name="feeds_settings_field_name">Ainm</string>
+    <string name="feeds_settings_field_entity_id">ID an aonaid</string>
+    <string name="feeds_settings_field_fingerprint">Meur-lorg</string>
+    <string name="feeds_settings_field_server">Frithealaiche</string>
+    <string name="feeds_settings_name_edit_cd">Deasaich an t-ainm</string>
+    <string name="feeds_settings_name_save_cd">Sàbhail an t-ainm</string>
+    <string name="feeds_access_subject_anyone">Duine sam bith</string>
+    <string name="feeds_access_subject_authenticated">Cleachdaichean dearbhte</string>
+    <string name="feeds_access_level_view_full">Seall a-mhàin</string>
+    <string name="feeds_access_level_none_full">Gun chothrom</string>
+    <string name="feeds_access_segment_user">Cleachdaiche</string>
+    <string name="feeds_access_segment_group">Buidheann</string>
+    <string name="feeds_access_segment_other">Eile</string>
+    <string name="feeds_access_search_users">Lorg cleachdaichean</string>
+    <string name="feeds_access_select_group">Tagh buidheann</string>
+    <string name="feeds_access_selected">Air a thaghadh: %1$s</string>
+    <string name="feeds_permission_deny">Diùlt</string>
+    <string name="feeds_allow_search">Ceadaich do dhuine sam bith inbhir a lorg</string>
+    <string name="feeds_enable_memories">Cuir cuimhneachain an comas</string>
+    <string name="feeds_create_first_post">Cruthaich a\' chiad phost</string>
+    <string name="feeds_post_content">Susbaint a\' phuist</string>
+    <string name="feeds_rss_mode_posts">Postaichean</string>
+    <string name="feeds_rss_mode_posts_comments">Postaichean is beachdan</string>
+    <string name="feeds_unsubscribe_confirm">Sgur dhen fho-sgrìobhadh dhan inbhir?</string>
+    <string name="feeds_unsubscribe_confirm_message">Chan fhaigh thu naidheachdan on inbhir seo tuilleadh. ’S urrainn dhut fo-sgrìobhadh às ùr uair sam bith.</string>
+    <string name="feeds_settings_unsubscribe_section">Dì-fho-sgrìobh bhon inbhir</string>
+    <string name="feeds_delete_feed_description">Sguab às an sruth seo agus a shusbaint gu sìorraidh.</string>
+    <string name="feeds_access_management">Stiùireadh inntrigidh</string>
+    <string name="feeds_access_management_desc">Stiùir cò as urrainn coimhead air agus cleachdadh ris an inbhir seo</string>
+    <string name="feeds_access_level_comment_full">Cuir beachd ris, dèan freagairt, agus seall</string>
+    <string name="feeds_access_level_react_full">Freagair is seall</string>
+    <string name="feeds_access_add_title">Cuir inntrigeadh ris</string>
+    <string name="feeds_access_add_subtitle">Tagh cleachdaiche, buidheann, no riaghailt eile airson cothrom a thoirt.</string>
+    <string name="feeds_access_select_rule">Tagh riaghailt cothraim</string>
+    <string name="feeds_source_url_hint_feed">ID no meur-lorg an inbhir</string>
+    <string name="feeds_source_credibility_label">Creideas</string>
+    <string name="feeds_source_transform_hint">Eadar-theangaich gu Beurla, agus seall mar phuingean.</string>
+    <string name="feeds_source_transform_help">Fàg falamh gus chur dheth.</string>
+
+    <string name="feeds_scroll_to_top">Air ais gu bàrr</string>
+    <string name="feeds_settings_title">Roghainnean %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Sguir dhen deasachadh</string>
+    <string name="feeds_access_authenticated_desc">Duine sam bith a tha air clàradh a-steach</string>
+    <string name="feeds_access_anyone_desc">A\' gabhail a-steach cleachdaichean gun ainm</string>
+    <string name="feeds_source_last_checked">Chaidh sùil a thoirt air mu dheireadh %1$s</string>
+    <string name="feeds_source_polling_interval">A\' toirt sùil gach %1$s</string>
+    <string name="feeds_permission_request_title">Iarrtas ceada</string>
+    <string name="feeds_permission_request_message">Tha %1$s ag iarraidh a\' chead a leanas:</string>
+    <string name="feeds_permission_allow">Ceadaich</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d phost</item>
+        <item quantity="two">%1$d phost</item>
+        <item quantity="few">%1$d postaichean</item>
+        <item quantity="other">%1$d post</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Cuir %1$d ùidh ris</item>
+        <item quantity="two">Cuir %1$d ùidh ris</item>
+        <item quantity="few">Cuir %1$d ùidhean ris</item>
+        <item quantity="other">Cuir %1$d ùidh ris</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">o chionn %1$d bhliadhna an-diugh</item>
+        <item quantity="two">o chionn %1$d bhliadhna an-diugh</item>
+        <item quantity="few">o chionn %1$d bliadhna an-diugh</item>
+        <item quantity="other">o chionn %1$d bliadhna an-diugh</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d dealbh</item>
+        <item quantity="two">%1$d dhealbh</item>
+        <item quantity="few">%1$d dealbhan</item>
+        <item quantity="other">%1$d dealbh</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d cheanglachan</item>
+        <item quantity="two">%1$d cheanglachan</item>
+        <item quantity="few">%1$d ceanglachain</item>
+        <item quantity="other">%1$d ceanglachan</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d bheachd</item>
+        <item quantity="two">%1$d bheachd</item>
+        <item quantity="few">%1$d beachdan</item>
+        <item quantity="other">%1$d beachd</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Seall %1$d bheachd eile</item>
+        <item quantity="two">Seall %1$d bheachd eile</item>
+        <item quantity="few">Seall %1$d beachdan eile</item>
+        <item quantity="other">Seall %1$d beachd eile</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d mhionaid</item>
+        <item quantity="two">%1$d mhionaid</item>
+        <item quantity="few">%1$d mionaidean</item>
+        <item quantity="other">%1$d mionaid</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d uair a thìde</item>
+        <item quantity="two">%1$d uair a thìde</item>
+        <item quantity="few">%1$d uairean a thìde</item>
+        <item quantity="other">%1$d uair a thìde</item>
+    </plurals>
+
 </resources>

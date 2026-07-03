@@ -292,4 +292,9 @@
     <string name="common_opening_file">Membuka file…</string>
     <string name="common_no_app_for_file">Tidak ada aplikasi yang dapat membuka file ini</string>
     <string name="common_file_open_failed">Tidak dapat membuka file</string>
+
+    <string name="common_logout_confirm_title">Keluar</string>
+    <string name="common_logout_confirm_message">Apakah Anda yakin ingin keluar? Anda perlu masuk kembali untuk mengakses akun Anda.</string>
+    <string name="reaction_remove">Hapus</string>
+
 </resources>

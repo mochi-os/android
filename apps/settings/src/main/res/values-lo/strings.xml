@@ -437,4 +437,5 @@
     <string name="system_status_awaiting_routing">ຂໍ້ຄວາມທີ່ລໍຖ້າການກຳນົດເສັ້ນທາງ</string>
     <string name="system_status_relay_service">ບໍລິການຣີເລ</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ການຈອງ · %3$d ວົງຈອນ · %4$d ປະຕິເສດ</string>
+    <string name="route_target_select">ເລືອກ</string>
 </resources>

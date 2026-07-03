@@ -292,4 +292,9 @@
     <string name="common_opening_file">ఫైల్‌ను తెరుస్తోంది…</string>
     <string name="common_no_app_for_file">ఈ ఫైల్‌ను తెరవగల యాప్ ఏదీ లేదు</string>
     <string name="common_file_open_failed">ఫైల్‌ను తెరవడం సాధ్యపడలేదు</string>
+    <string name="common_logout_confirm_title">లాగ్ అవుట్</string>
+    <string name="reaction_remove">క్లియర్ చేయండి</string>
+
+    <string name="common_logout_confirm_message">మీరు ఖచ్చితంగా లాగ్ అవుట్ అవ్వాలనుకుంటున్నారా? మీ ఖాతాను యాక్సెస్ చేయడానికి మీరు మళ్లీ లాగిన్ అవ్వాల్సి ఉంటుంది.</string>
+
 </resources>

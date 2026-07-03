@@ -437,4 +437,5 @@
     <string name="system_status_awaiting_routing">လမ်းကြောင်းသတ်မှတ်ရန် စောင့်ဆိုင်းနေသော မက်ဆေ့ဂျ်များ</string>
     <string name="system_status_relay_service">ထပ်ဆင့်ပို့ဝန်ဆောင်မှု</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ကြိုတင်နေရာယူမှု · %3$d လမ်းကြောင်းများ · %4$d ငြင်းပယ်</string>
+    <string name="route_target_select">ရွေးချယ်ရန်</string>
 </resources>

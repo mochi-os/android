@@ -292,4 +292,9 @@
     <string name="common_opening_file">Ֆայլը բացվում է…</string>
     <string name="common_no_app_for_file">Ոչ մի հավելված չի կարող բացել այս ֆայլը</string>
     <string name="common_file_open_failed">Չհաջողվեց բացել ֆայլը</string>
+
+    <string name="common_logout_confirm_title">Դուրս գալ</string>
+    <string name="common_logout_confirm_message">Վստա՞հ եք, որ ցանկանում եք դուրս գալ։ Ձեր հաշիվ մուտք գործելու համար նորից պետք է մուտք գործեք։</string>
+    <string name="reaction_remove">Մաքրել</string>
+
 </resources>

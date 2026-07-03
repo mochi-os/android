@@ -437,4 +437,5 @@
     <string name="system_status_awaiting_routing">Ñanta suyaq willaykuna</string>
     <string name="system_status_relay_service">Relay servicio</string>
     <string name="system_status_relay_service_value">%1$d / %2$d waqaychay · %3$d circuitos · %4$d mana chaskisqa</string>
+    <string name="route_target_select">Akllay</string>
 </resources>

@@ -440,4 +440,5 @@
     <string name="system_status_awaiting_routing">Sporočila, ki čakajo na usmerjanje</string>
     <string name="system_status_relay_service">Storitev releja</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervacije · %3$d vezja · %4$d zavrnjeno</string>
+    <string name="route_target_select">Izberi</string>
 </resources>

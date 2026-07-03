@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">Барлығын көрдіңіз</string>
     <string name="feeds_all_caught_up">Барлығы оқылды</string>
     <string name="feeds_view_all_posts">Барлық жазбаларды көру</string>
+    <string name="feeds_markdown_supported">Markdown қолдау көрсетіледі</string>
+    <string name="feeds_back">Артқа</string>
+    <string name="feeds_confirm">Растау</string>
+    <string name="feeds_rss_feed">RSS арнасы</string>
+    <string name="feeds_unsubscribe">Жазылудан бас тарту</string>
+    <string name="feeds_unsubscribed">Жазылудан бас тартылды</string>
+    <string name="feeds_settings_section_identity">Жеке басы</string>
+    <string name="feeds_settings_field_name">Аты</string>
+    <string name="feeds_settings_field_entity_id">Нысан идентификаторы</string>
+    <string name="feeds_settings_field_fingerprint">Саусақ ізі</string>
+    <string name="feeds_settings_field_server">Сервер</string>
+    <string name="feeds_settings_name_edit_cd">Атауды өңдеу</string>
+    <string name="feeds_settings_name_save_cd">Атауды сақтау</string>
+    <string name="feeds_access_subject_anyone">Кез келген</string>
+    <string name="feeds_access_subject_authenticated">Аутентификацияланған пайдаланушылар</string>
+    <string name="feeds_access_level_view_full">Тек көру</string>
+    <string name="feeds_access_level_none_full">Қолжетімсіз</string>
+    <string name="feeds_access_segment_user">Пайдаланушы</string>
+    <string name="feeds_access_segment_group">Топ</string>
+    <string name="feeds_access_segment_other">Басқа</string>
+    <string name="feeds_access_search_users">Қолданушыларды іздеу</string>
+    <string name="feeds_access_select_group">Топты таңдау</string>
+    <string name="feeds_access_selected">Таңдалды: %1$s</string>
+    <string name="feeds_permission_deny">Бас тарту</string>
+    <string name="feeds_allow_search">Кез келгенге арнаны іздеуге рұқсат ету</string>
+    <string name="feeds_enable_memories">Жадтарды қосу</string>
+    <string name="feeds_create_first_post">Алғашқы жазбаны құру</string>
+    <string name="feeds_post_content">Жазба мазмұны</string>
+    <string name="feeds_rss_mode_posts">Жазбалар</string>
+    <string name="feeds_rss_mode_posts_comments">Жазбалар мен пікірлер</string>
+    <string name="feeds_unsubscribe_confirm">Таспаға жазылудан бас тарту керек пе?</string>
+    <string name="feeds_unsubscribe_confirm_message">Бұл таспадан жаңартулар алуды тоқтатасыз. Кез келген уақытта қайта жазыла аласыз.</string>
+    <string name="feeds_settings_unsubscribe_section">Арнадан жазылудан бас тарту</string>
+    <string name="feeds_delete_feed_description">Бұл арнаны және оның барлық мазмұнын біржола жою.</string>
+    <string name="feeds_access_management">Қол жеткізуді басқару</string>
+    <string name="feeds_access_management_desc">Бұл арнаны кім көре алатынын және онымен өзара әрекеттесе алатынын басқару</string>
+    <string name="feeds_access_level_comment_full">Пікір қалдыру, реакция беру және көру</string>
+    <string name="feeds_access_level_react_full">Реакция беру және қарау</string>
+    <string name="feeds_access_add_title">Қол жеткізу қосу</string>
+    <string name="feeds_access_add_subtitle">Қатынау беру үшін қолданушыны, топты немесе басқа ережені таңдаңыз.</string>
+    <string name="feeds_access_select_rule">Қатынау ережесін таңдау</string>
+    <string name="feeds_source_url_hint_feed">Таспа нысаны идентификаторы немесе саусақ ізі</string>
+    <string name="feeds_source_credibility_label">Сенімділік</string>
+    <string name="feeds_source_transform_hint">Ағылшын тіліне аудару және маркер тізімі ретінде көрсету.</string>
+    <string name="feeds_source_transform_help">Өшіру үшін бос қалдыру.</string>
+
+    <string name="feeds_scroll_to_top">Жоғарыға оралу</string>
+    <string name="feeds_settings_title">%1$s параметрлері</string>
+    <string name="feeds_settings_name_cancel_cd">Өңдеуді болдырмау</string>
+    <string name="feeds_access_authenticated_desc">Жүйеге кірген кез келген адам</string>
+    <string name="feeds_access_anyone_desc">Анонимді пайдаланушыларды қоса алғанда</string>
+    <string name="feeds_source_last_checked">Соңғы тексерілгені: %1$s</string>
+    <string name="feeds_source_polling_interval">Әр %1$s сайын тексеріледі</string>
+    <string name="feeds_permission_request_title">Рұқсат сұрауы</string>
+    <string name="feeds_permission_request_message">%1$s келесі рұқсатты сұрап отыр:</string>
+    <string name="feeds_permission_allow">Рұқсат беру</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d жазба</item>
+        <item quantity="other">%1$d жазба</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">%1$d қызығушылық қосу</item>
+        <item quantity="other">%1$d қызығушылық қосу</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">Бүгіннен %1$d жыл бұрын</item>
+        <item quantity="other">Бүгіннен %1$d жыл бұрын</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d сурет</item>
+        <item quantity="other">%1$d сурет</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d тіркеме</item>
+        <item quantity="other">%1$d тіркеме</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d пікір</item>
+        <item quantity="other">%1$d пікір</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Тағы %1$d пікірді көру</item>
+        <item quantity="other">Тағы %1$d пікірді көру</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d минут</item>
+        <item quantity="other">%1$d минут</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d сағат</item>
+        <item quantity="other">%1$d сағат</item>
+    </plurals>
+
 </resources>

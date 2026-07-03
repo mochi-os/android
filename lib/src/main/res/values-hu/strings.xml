@@ -292,4 +292,9 @@
     <string name="common_opening_file">Fájl megnyitása…</string>
     <string name="common_no_app_for_file">Nincs olyan alkalmazás, amely meg tudná nyitni ezt a fájlt</string>
     <string name="common_file_open_failed">Nem sikerült megnyitni a fájlt</string>
+
+    <string name="common_logout_confirm_title">Kijelentkezés</string>
+    <string name="common_logout_confirm_message">Biztosan ki szeretne jelentkezni? A fiókja eléréséhez újra be kell majd jelentkeznie.</string>
+    <string name="reaction_remove">Törlés</string>
+
 </resources>

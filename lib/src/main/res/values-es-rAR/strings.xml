@@ -292,4 +292,9 @@
     <string name="stepup_error_code">Ese código es incorrecto o ha caducado.</string>
     <string name="stepup_error_passkey">La verificación con la clave de acceso ha fallado. Inténtalo de nuevo.</string>
     <string name="stepup_error_oauth">No se pudo verificar con esa cuenta. Inténtalo de nuevo.</string>
+    <string name="common_logout_confirm_title">Cerrá sesión</string>
+    <string name="reaction_remove">Quitar</string>
+
+    <string name="common_logout_confirm_message">¿Estás seguro de que querés cerrar sesión? Vas a tener que iniciar sesión de nuevo para acceder a tu cuenta.</string>
+
 </resources>

@@ -292,4 +292,9 @@
     <string name="stepup_verify">驗證</string>
     <string name="stepup_continue_with">使用 %1$s 繼續</string>
     <string name="stepup_error_oauth">無法使用該帳戶進行驗證。請重試。</string>
+    <string name="common_logout_confirm_title">登出</string>
+    <string name="reaction_remove">清除</string>
+
+    <string name="common_logout_confirm_message">確定要登出嗎？您需要重新登入才能存取您的帳戶。</string>
+
 </resources>

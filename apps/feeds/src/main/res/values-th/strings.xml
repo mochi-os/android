@@ -214,4 +214,91 @@
     <string name="feeds_caught_up">คุณดูครบทั้งหมดแล้ว</string>
     <string name="feeds_all_caught_up">อัปเดตครบแล้ว</string>
     <string name="feeds_view_all_posts">ดูโพสต์ทั้งหมด</string>
+    <string name="feeds_markdown_supported">รองรับ Markdown</string>
+    <string name="feeds_back">ย้อนกลับ</string>
+    <string name="feeds_confirm">ยืนยัน</string>
+    <string name="feeds_rss_feed">ฟีด RSS</string>
+    <string name="feeds_unsubscribe">ยกเลิกการติดตาม</string>
+    <string name="feeds_unsubscribed">ยกเลิกการติดตามแล้ว</string>
+    <string name="feeds_settings_section_identity">Identity</string>
+    <string name="feeds_settings_field_name">ชื่อ</string>
+    <string name="feeds_settings_field_entity_id">Entity ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">เซิร์ฟเวอร์</string>
+    <string name="feeds_settings_name_edit_cd">แก้ไขชื่อ</string>
+    <string name="feeds_settings_name_save_cd">บันทึกชื่อ</string>
+    <string name="feeds_access_subject_anyone">ใครก็ได้</string>
+    <string name="feeds_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>
+    <string name="feeds_access_level_view_full">ดูอย่างเดียว</string>
+    <string name="feeds_access_level_none_full">ไม่มีสิทธิ์เข้าถึง</string>
+    <string name="feeds_access_segment_user">ผู้ใช้</string>
+    <string name="feeds_access_segment_group">กลุ่ม</string>
+    <string name="feeds_access_segment_other">อื่น ๆ</string>
+    <string name="feeds_access_search_users">ค้นหาผู้ใช้</string>
+    <string name="feeds_access_select_group">เลือกกลุ่ม</string>
+    <string name="feeds_access_selected">เลือกแล้ว: %1$s</string>
+    <string name="feeds_permission_deny">ปฏิเสธ</string>
+    <string name="feeds_allow_search">อนุญาตให้ทุกคนค้นหาฟีด</string>
+    <string name="feeds_enable_memories">เปิดใช้งานความทรงจำ</string>
+    <string name="feeds_create_first_post">สร้างโพสต์แรก</string>
+    <string name="feeds_post_content">เนื้อหาโพสต์</string>
+    <string name="feeds_rss_mode_posts">โพสต์</string>
+    <string name="feeds_rss_mode_posts_comments">โพสต์และความคิดเห็น</string>
+    <string name="feeds_unsubscribe_confirm">ยกเลิกการติดตามฟีด?</string>
+    <string name="feeds_unsubscribe_confirm_message">คุณจะไม่ได้รับอัปเดตจากฟีดนี้อีก คุณสามารถกลับมาติดตามได้ทุกเมื่อ</string>
+    <string name="feeds_settings_unsubscribe_section">ยกเลิกการติดตามฟีด</string>
+    <string name="feeds_delete_feed_description">ลบฟีดนี้และเนื้อหาทั้งหมดอย่างถาวร</string>
+    <string name="feeds_access_management">การจัดการการเข้าถึง</string>
+    <string name="feeds_access_management_desc">ควบคุมว่าใครสามารถดูและโต้ตอบกับฟีดนี้</string>
+    <string name="feeds_access_level_comment_full">แสดงความคิดเห็น ตอบสนอง และดู</string>
+    <string name="feeds_access_level_react_full">ตอบสนองและดู</string>
+    <string name="feeds_access_add_title">เพิ่มการเข้าถึง</string>
+    <string name="feeds_access_add_subtitle">เลือกผู้ใช้ กลุ่ม หรือกฎอื่นเพื่อให้สิทธิ์การเข้าถึง</string>
+    <string name="feeds_access_select_rule">เลือกกฎการเข้าถึง</string>
+    <string name="feeds_source_url_hint_feed">รหัสเอนทิตีฟีดหรือลายนิ้วมือ</string>
+    <string name="feeds_source_credibility_label">ความน่าเชื่อถือ</string>
+    <string name="feeds_source_transform_hint">แปลเป็นภาษาอังกฤษและแสดงเป็นรายการบุลเล็ต</string>
+    <string name="feeds_source_transform_help">เว้นว่างเพื่อปิดใช้งาน</string>
+
+    <string name="feeds_scroll_to_top">กลับขึ้นด้านบน</string>
+    <string name="feeds_settings_title">การตั้งค่า %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">ยกเลิกการแก้ไข</string>
+    <string name="feeds_access_authenticated_desc">ทุกคนที่เข้าสู่ระบบแล้ว</string>
+    <string name="feeds_access_anyone_desc">รวมถึงผู้ใช้ที่ไม่ระบุตัวตน</string>
+    <string name="feeds_source_last_checked">ตรวจสอบล่าสุด %1$s</string>
+    <string name="feeds_source_polling_interval">ดึงข้อมูลทุก %1$s</string>
+    <string name="feeds_permission_request_title">คำขอสิทธิ์</string>
+    <string name="feeds_permission_request_message">%1$s กำลังขอสิทธิ์ต่อไปนี้:</string>
+    <string name="feeds_permission_allow">อนุญาต</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d โพสต์</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">เพิ่ม %1$d ความสนใจ</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d ปีที่แล้ววันนี้</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d รูปภาพ</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">ไฟล์แนบ %1$d รายการ</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d ความคิดเห็น</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">ดูอีก %1$d ความคิดเห็น</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d นาที</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d ชั่วโมง</item>
+    </plurals>
+
 </resources>

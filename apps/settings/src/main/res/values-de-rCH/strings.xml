@@ -431,4 +431,12 @@
     <string name="system_status_awaiting_routing">Nachrichten, die auf Routing warten</string>
     <string name="system_status_relay_service">Relaisdienst</string>
     <string name="system_status_relay_service_value">%1$d / %2$d Reservierungen · %3$d Verbindungen · %4$d abgelehnt</string>
+    <string name="login_title">Anmeldung</string>
+    <string name="login_section_methods">Anmeldemethoden</string>
+    <string name="login_method_email">E-Mail-Code</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator-App</string>
+    <string name="login_method_oauth">Anmeldung über Drittanbieter</string>
+    <string name="login_method_recovery">Wiederherstellungscodes</string>
+    <string name="route_target_select">Auswählen</string>
 </resources>

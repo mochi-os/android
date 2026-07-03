@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">Olet ajan tasalla</string>
     <string name="feeds_all_caught_up">Kaikki luettu</string>
     <string name="feeds_view_all_posts">Näytä kaikki julkaisut</string>
+    <string name="feeds_markdown_supported">Markdown tuettu</string>
+    <string name="feeds_back">Takaisin</string>
+    <string name="feeds_confirm">Vahvista</string>
+    <string name="feeds_rss_feed">RSS-syöte</string>
+    <string name="feeds_unsubscribe">Peru tilaus</string>
+    <string name="feeds_unsubscribed">Tilaus peruttu</string>
+    <string name="feeds_settings_section_identity">Identiteetti</string>
+    <string name="feeds_settings_field_name">Nimi</string>
+    <string name="feeds_settings_field_entity_id">Entiteetin tunnus</string>
+    <string name="feeds_settings_field_fingerprint">Sormenjälki</string>
+    <string name="feeds_settings_field_server">Palvelin</string>
+    <string name="feeds_settings_name_edit_cd">Muokkaa nimeä</string>
+    <string name="feeds_settings_name_save_cd">Tallenna nimi</string>
+    <string name="feeds_access_subject_anyone">Kuka tahansa</string>
+    <string name="feeds_access_subject_authenticated">Todennetut käyttäjät</string>
+    <string name="feeds_access_level_view_full">Vain katselu</string>
+    <string name="feeds_access_level_none_full">Ei käyttöoikeutta</string>
+    <string name="feeds_access_segment_user">Käyttäjä</string>
+    <string name="feeds_access_segment_group">Ryhmä</string>
+    <string name="feeds_access_segment_other">Muu</string>
+    <string name="feeds_access_search_users">Hae käyttäjiä</string>
+    <string name="feeds_access_select_group">Valitse ryhmä</string>
+    <string name="feeds_access_selected">Valittu: %1$s</string>
+    <string name="feeds_permission_deny">Estä</string>
+    <string name="feeds_allow_search">Salli kenen tahansa hakea syötettä</string>
+    <string name="feeds_enable_memories">Ota muistot käyttöön</string>
+    <string name="feeds_create_first_post">Luo ensimmäinen julkaisu</string>
+    <string name="feeds_post_content">Julkaisun sisältö</string>
+    <string name="feeds_rss_mode_posts">Julkaisut</string>
+    <string name="feeds_rss_mode_posts_comments">Julkaisut ja kommentit</string>
+    <string name="feeds_unsubscribe_confirm">Lopetetaanko syötteen tilaus?</string>
+    <string name="feeds_unsubscribe_confirm_message">Et saa enää päivityksiä tästä syötteestä. Voit tilata sen uudelleen milloin tahansa.</string>
+    <string name="feeds_settings_unsubscribe_section">Peru syötteen tilaus</string>
+    <string name="feeds_delete_feed_description">Poista tämä syöte ja kaikki sen sisältö pysyvästi.</string>
+    <string name="feeds_access_management">Käyttöoikeuksien hallinta</string>
+    <string name="feeds_access_management_desc">Hallitse, kuka voi tarkastella tätä syötettä ja olla vuorovaikutuksessa sen kanssa</string>
+    <string name="feeds_access_level_comment_full">Kommentoi, reagoi ja katsele</string>
+    <string name="feeds_access_level_react_full">Reagoi ja katsele</string>
+    <string name="feeds_access_add_title">Lisää käyttöoikeus</string>
+    <string name="feeds_access_add_subtitle">Valitse käyttäjä, ryhmä tai muu sääntö, jolle myönnät käyttöoikeuden.</string>
+    <string name="feeds_access_select_rule">Valitse käyttöoikeussääntö</string>
+    <string name="feeds_source_url_hint_feed">Syötteen kohteen tunnus tai sormenjälki</string>
+    <string name="feeds_source_credibility_label">Uskottavuus</string>
+    <string name="feeds_source_transform_hint">Käännä englanniksi ja esitä luettelomerkkeinä.</string>
+    <string name="feeds_source_transform_help">Jätä tyhjäksi poistaaksesi käytöstä.</string>
+
+    <string name="feeds_scroll_to_top">Takaisin alkuun</string>
+    <string name="feeds_settings_title">%1$s – asetukset</string>
+    <string name="feeds_settings_name_cancel_cd">Peruuta muokkaus</string>
+    <string name="feeds_access_authenticated_desc">Kaikki kirjautuneet käyttäjät</string>
+    <string name="feeds_access_anyone_desc">Mukaan lukien anonyymit käyttäjät</string>
+    <string name="feeds_source_last_checked">Viimeksi tarkistettu %1$s</string>
+    <string name="feeds_source_polling_interval">Haetaan %1$s välein</string>
+    <string name="feeds_permission_request_title">Käyttöoikeuspyyntö</string>
+    <string name="feeds_permission_request_message">%1$s pyytää seuraavaa käyttöoikeutta:</string>
+    <string name="feeds_permission_allow">Salli</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d julkaisu</item>
+        <item quantity="other">%1$d julkaisua</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Lisää %1$d kiinnostuksen kohde</item>
+        <item quantity="other">Lisää %1$d kiinnostuksen kohdetta</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d vuosi sitten tänä päivänä</item>
+        <item quantity="other">%1$d vuotta sitten tänä päivänä</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d kuva</item>
+        <item quantity="other">%1$d kuvaa</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d liite</item>
+        <item quantity="other">%1$d liitettä</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d kommentti</item>
+        <item quantity="other">%1$d kommenttia</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Näytä %1$d kommentti lisää</item>
+        <item quantity="other">Näytä %1$d kommenttia lisää</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d minuutti</item>
+        <item quantity="other">%1$d minuuttia</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d tunti</item>
+        <item quantity="other">%1$d tuntia</item>
+    </plurals>
+
 </resources>

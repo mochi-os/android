@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">איר האָט שוין געזען אַלץ</string>
     <string name="feeds_all_caught_up">אַלץ אויפֿגעהאָלטן</string>
     <string name="feeds_view_all_posts">זע אַלע פּאָסטס</string>
+    <string name="feeds_markdown_supported">Markdown געשטיצט</string>
+    <string name="feeds_back">צוריק</string>
+    <string name="feeds_confirm">באַשטעטיקן</string>
+    <string name="feeds_rss_feed">RSS פֿיד</string>
+    <string name="feeds_unsubscribe">אַבאַבאָנירן</string>
+    <string name="feeds_unsubscribed">אַבאַבאָנירט</string>
+    <string name="feeds_settings_section_identity">אידענטיטעט</string>
+    <string name="feeds_settings_field_name">נאָמען</string>
+    <string name="feeds_settings_field_entity_id">ענטיטעט־ID</string>
+    <string name="feeds_settings_field_fingerprint">פֿינגער־אָפּדרוק</string>
+    <string name="feeds_settings_field_server">סערווער</string>
+    <string name="feeds_settings_name_edit_cd">רעדאַקטירן נאָמען</string>
+    <string name="feeds_settings_name_save_cd">אָפּהיטן נאָמען</string>
+    <string name="feeds_access_subject_anyone">ווער עס איז</string>
+    <string name="feeds_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
+    <string name="feeds_access_level_view_full">בלויז זען</string>
+    <string name="feeds_access_level_none_full">קיין צוטריט</string>
+    <string name="feeds_access_segment_user">באַניצער</string>
+    <string name="feeds_access_segment_group">גרופּע</string>
+    <string name="feeds_access_segment_other">אַנדער</string>
+    <string name="feeds_access_search_users">זוך באַניצערס</string>
+    <string name="feeds_access_select_group">קלײַב גרופּע</string>
+    <string name="feeds_access_selected">אויסגעקליבן: %1$s</string>
+    <string name="feeds_permission_deny">אָפּזאָגן</string>
+    <string name="feeds_allow_search">דערלויבן עמעצן צו זוכן פֿאַר פֿיד</string>
+    <string name="feeds_enable_memories">אַקטיווירן זכרונות</string>
+    <string name="feeds_create_first_post">באַשאַפֿן דעם ערשטן פּאָסט</string>
+    <string name="feeds_post_content">פּאָסט אינהאַלט</string>
+    <string name="feeds_rss_mode_posts">פּאָסטן</string>
+    <string name="feeds_rss_mode_posts_comments">פּאָסטן און באַמערקונגען</string>
+    <string name="feeds_unsubscribe_confirm">זיך אָפּשרײַבן פֿונעם פֿיד?</string>
+    <string name="feeds_unsubscribe_confirm_message">איר וועט מער ניט באַקומען נײַעס פֿון דעם פֿיד. איר קענט זיך ווידער אײַנשרײַבן ווען נאָר איר ווילט.</string>
+    <string name="feeds_settings_unsubscribe_section">אַבאַבאָנירן פֿון פֿיד</string>
+    <string name="feeds_delete_feed_description">אויסמעקן שטענדיק דעם פֿיד און אַלע זײַן אינהאַלט.</string>
+    <string name="feeds_access_management">צוטריט פֿאַרוואַלטונג</string>
+    <string name="feeds_access_management_desc">קאָנטראָלירט ווער קען זען און וועקסל מיט דעם פֿיד</string>
+    <string name="feeds_access_level_comment_full">קאָמענטירן, רעאַגירן, און זען</string>
+    <string name="feeds_access_level_react_full">רעאַגיר און קוק</string>
+    <string name="feeds_access_add_title">צולייגן צוטריט</string>
+    <string name="feeds_access_add_subtitle">קלײַב אַ באַניצער, גרופּע, אָדער אַנדער כּלל צו געבן צוטריט.</string>
+    <string name="feeds_access_select_rule">קלײַב צוטריט כּלל</string>
+    <string name="feeds_source_url_hint_feed">פֿיד־ענטיטעט־ID אָדער פֿינגער־אָפּדרוק</string>
+    <string name="feeds_source_credibility_label">גלייבווערדיקייט</string>
+    <string name="feeds_source_transform_hint">איבערזעצט אין ענגליש, און ווײַז ווי בולעט־פּונקטן.</string>
+    <string name="feeds_source_transform_help">לאָזט ליידיק צו דעאַקטיווירן.</string>
+
+    <string name="feeds_scroll_to_top">צוריק אַרויף</string>
+    <string name="feeds_settings_title">%1$s איינשטעלונגען</string>
+    <string name="feeds_settings_name_cancel_cd">בטל מאַכן די רעדאַקטירונג</string>
+    <string name="feeds_access_authenticated_desc">יעדער וואָס איז אײַנגעלאָגט</string>
+    <string name="feeds_access_anyone_desc">אַרײַנגערעכנט אַנאָנימע באַניצער</string>
+    <string name="feeds_source_last_checked">לעצט געקאָנטראָלירט %1$s</string>
+    <string name="feeds_source_polling_interval">פֿרעגט אָפּ יעדע %1$s</string>
+    <string name="feeds_permission_request_title">בקשה פֿאַר דערלויבעניש</string>
+    <string name="feeds_permission_request_message">%1$s בעט די פֿאָלגנדיקע דערלויבעניש:</string>
+    <string name="feeds_permission_allow">דערלויבן</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d פּאָסט</item>
+        <item quantity="other">%1$d פּאָסטן</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">צולייגן %1$d אינטערעס</item>
+        <item quantity="other">צולייגן %1$d אינטערעסן</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">היינט מיט %1$d יאָר צוריק</item>
+        <item quantity="other">היינט מיט %1$d יאָר צוריק</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d בילד</item>
+        <item quantity="other">%1$d בילדער</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d בײַלאַגע</item>
+        <item quantity="other">%1$d בײַלאַגעס</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d קאָמענטאַר</item>
+        <item quantity="other">%1$d קאָמענטאַרן</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">זען נאָך %1$d קאָמענטאַר</item>
+        <item quantity="other">זען נאָך %1$d קאָמענטאַרן</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d מינוט</item>
+        <item quantity="other">%1$d מינוטן</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d שעה</item>
+        <item quantity="other">%1$d שעה</item>
+    </plurals>
+
 </resources>

@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">ඔබ සියල්ල බැලුවා</string>
     <string name="feeds_all_caught_up">සියල්ල යාවත්කාලීනයි</string>
     <string name="feeds_view_all_posts">සියලුම පළ කිරීම් බලන්න</string>
+    <string name="feeds_markdown_supported">Markdown සහාය දක්වයි</string>
+    <string name="feeds_back">ආපසු</string>
+    <string name="feeds_confirm">තහවුරු කරන්න</string>
+    <string name="feeds_rss_feed">RSS පෝෂණය</string>
+    <string name="feeds_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
+    <string name="feeds_unsubscribed">දායකත්වය ඉවත් කරන ලදී</string>
+    <string name="feeds_settings_section_identity">අනන්‍යතාවය</string>
+    <string name="feeds_settings_field_name">නම</string>
+    <string name="feeds_settings_field_entity_id">ආයතන හැඳුනුම</string>
+    <string name="feeds_settings_field_fingerprint">ඇඟිලි සලකුණ</string>
+    <string name="feeds_settings_field_server">සේවාදායකය</string>
+    <string name="feeds_settings_name_edit_cd">නාමය සංස්කරණය කරන්න</string>
+    <string name="feeds_settings_name_save_cd">නම සුරකින්න</string>
+    <string name="feeds_access_subject_anyone">ඕනෑම කෙනෙක්</string>
+    <string name="feeds_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
+    <string name="feeds_access_level_view_full">බැලීම පමණි</string>
+    <string name="feeds_access_level_none_full">ප්‍රවේශය නැත</string>
+    <string name="feeds_access_segment_user">පරිශීලකයා</string>
+    <string name="feeds_access_segment_group">කණ්ඩායම</string>
+    <string name="feeds_access_segment_other">වෙනත්</string>
+    <string name="feeds_access_search_users">පරිශීලකයින් සොයන්න</string>
+    <string name="feeds_access_select_group">කණ්ඩායම තෝරන්න</string>
+    <string name="feeds_access_selected">තෝරාගත්: %1$s</string>
+    <string name="feeds_permission_deny">ප්‍රතික්ෂේප කරන්න</string>
+    <string name="feeds_allow_search">ෆීඩ් සෙවීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
+    <string name="feeds_enable_memories">මතකයන් සක්‍රීය කරන්න</string>
+    <string name="feeds_create_first_post">පළමු පළ කිරීම නිර්මාණය කරන්න</string>
+    <string name="feeds_post_content">පළ කිරීමේ අන්තර්ගතය</string>
+    <string name="feeds_rss_mode_posts">පළ කිරීම්</string>
+    <string name="feeds_rss_mode_posts_comments">පළ කිරීම් සහ අදහස්</string>
+    <string name="feeds_unsubscribe_confirm">සංග්‍රහයෙන් දායකත්වය ඉවත් කරන්නද?</string>
+    <string name="feeds_unsubscribe_confirm_message">ඔබට මෙම සංග්‍රහයෙන් තවදුරටත් යාවත්කාලීන නොලැබේ. ඔබට ඕනෑම වේලාවක නැවත දායක විය හැක.</string>
+    <string name="feeds_settings_unsubscribe_section">පෝෂණයෙන් දායකත්වය ඉවත් කරන්න</string>
+    <string name="feeds_delete_feed_description">මෙම පෝෂණය සහ එහි සියලු අන්තර්ගතය ස්ථිරව මකන්න.</string>
+    <string name="feeds_access_management">ප්‍රවේශ කළමනාකරණය</string>
+    <string name="feeds_access_management_desc">මෙම පෝෂණය බැලීමට සහ එයට අන්තර්ක්‍රියා කිරීමට හැකි කවුරුන්ද යන්න පාලනය කරන්න</string>
+    <string name="feeds_access_level_comment_full">අදහස්, ප්‍රතිචාර හා බලන්න</string>
+    <string name="feeds_access_level_react_full">ප්‍රතිචාර හා බලන්න</string>
+    <string name="feeds_access_add_title">ප්‍රවේශය එක් කරන්න</string>
+    <string name="feeds_access_add_subtitle">ප්‍රවේශය ලබා දීමට පරිශීලකයෙක්, කණ්ඩායමක්, හෝ වෙනත් රීතියක් තෝරන්න.</string>
+    <string name="feeds_access_select_rule">ප්‍රවේශ රීතිය තෝරන්න</string>
+    <string name="feeds_source_url_hint_feed">ෆීඩ් සංස්ථා හැඳුනුම්පත හෝ ඇඟිලි සලකුණ</string>
+    <string name="feeds_source_credibility_label">විශ්වසනීයත්වය</string>
+    <string name="feeds_source_transform_hint">ඉංග්‍රීසියට පරිවර්තනය කර, බුලට් ලකුණු ලෙස පෙන්වන්න.</string>
+    <string name="feeds_source_transform_help">අක්‍රිය කිරීමට හිස්ව තබන්න.</string>
+
+    <string name="feeds_scroll_to_top">ඉහළට ආපසු</string>
+    <string name="feeds_settings_title">%1$s සැකසුම්</string>
+    <string name="feeds_settings_name_cancel_cd">සංස්කරණය අවලංගු කරන්න</string>
+    <string name="feeds_access_authenticated_desc">පුරනය වී සිටින ඕනෑම අයෙක්</string>
+    <string name="feeds_access_anyone_desc">නිර්නාමික පරිශීලකයන් ඇතුළුව</string>
+    <string name="feeds_source_last_checked">අවසන් වරට පරීක්ෂා කළේ %1$s</string>
+    <string name="feeds_source_polling_interval">සෑම %1$s කට වරක් විමසයි</string>
+    <string name="feeds_permission_request_title">අවසර ඉල්ලීම</string>
+    <string name="feeds_permission_request_message">%1$s පහත අවසරය ඉල්ලා සිටී:</string>
+    <string name="feeds_permission_allow">ඉඩ දෙන්න</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">පළ කිරීම් %1$dක්</item>
+        <item quantity="other">පළ කිරීම් %1$dක්</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">රුචිකත්ව %1$dක් එක් කරන්න</item>
+        <item quantity="other">රුචිකත්ව %1$dක් එක් කරන්න</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">අදට වසර %1$dකට පෙර</item>
+        <item quantity="other">අදට වසර %1$dකට පෙර</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">රූප %1$dක්</item>
+        <item quantity="other">රූප %1$dක්</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">ඇමුණුම් %1$dක්</item>
+        <item quantity="other">ඇමුණුම් %1$dක්</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">අදහස් %1$dක්</item>
+        <item quantity="other">අදහස් %1$dක්</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">තවත් අදහස් %1$dක් බලන්න</item>
+        <item quantity="other">තවත් අදහස් %1$dක් බලන්න</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">මිනිත්තු %1$dක්</item>
+        <item quantity="other">මිනිත්තු %1$dක්</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">පැය %1$dක්</item>
+        <item quantity="other">පැය %1$dක්</item>
+    </plurals>
+
 </resources>

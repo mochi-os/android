@@ -273,4 +273,6 @@
     <string name="common_opening_file">Opening file…</string>
     <string name="common_no_app_for_file">No app can open this file</string>
     <string name="common_file_open_failed">Couldn\'t open file</string>
+    <string name="common_logout_confirm_title">Log out</string>
+    <string name="reaction_remove">Clear</string>
 </resources>

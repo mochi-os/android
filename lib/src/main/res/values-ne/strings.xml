@@ -292,4 +292,9 @@
     <string name="common_opening_file">फाइल खोल्दै…</string>
     <string name="common_no_app_for_file">यो फाइल खोल्न सक्ने कुनै एप छैन</string>
     <string name="common_file_open_failed">फाइल खोल्न सकिएन</string>
+    <string name="common_logout_confirm_title">लग आउट</string>
+    <string name="reaction_remove">खाली गर्नुहोस्</string>
+
+    <string name="common_logout_confirm_message">के तपाईं लगआउट गर्न निश्चित हुनुहुन्छ? आफ्नो खातामा पहुँच गर्न तपाईंले फेरि लगइन गर्नुपर्नेछ।</string>
+
 </resources>

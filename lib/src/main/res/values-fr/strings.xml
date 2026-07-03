@@ -292,4 +292,9 @@
     <string name="common_opening_file">Ouverture du fichier…</string>
     <string name="common_no_app_for_file">Aucune application ne peut ouvrir ce fichier</string>
     <string name="common_file_open_failed">Impossible d\'ouvrir le fichier</string>
+
+    <string name="common_logout_confirm_title">Se déconnecter</string>
+    <string name="common_logout_confirm_message">Voulez-vous vraiment vous déconnecter ? Vous devrez vous reconnecter pour accéder à votre compte.</string>
+    <string name="reaction_remove">Effacer</string>
+
 </resources>

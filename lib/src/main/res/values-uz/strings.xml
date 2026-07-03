@@ -293,4 +293,9 @@
     <string name="common_opening_file">Fayl ochilmoqda…</string>
     <string name="common_no_app_for_file">Bu faylni hech qaysi ilova ocha olmaydi</string>
     <string name="common_file_open_failed">Faylni ochib boʻlmadi</string>
+    <string name="common_logout_confirm_title">Chiqish</string>
+    <string name="reaction_remove">Tozalash</string>
+
+    <string name="common_logout_confirm_message">Haqiqatan ham hisobdan chiqmoqchimisiz? Hisobingizga kirish uchun qaytadan tizimga kirishingiz kerak bo\'ladi.</string>
+
 </resources>

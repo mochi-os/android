@@ -212,4 +212,10 @@
     <string name="forums_saved_title">Enregistré</string>
     <string name="forums_saved_remove">Retirer des favoris</string>
     <string name="forums_saved_clear_all">Tout effacer</string>
+    <string name="forums_saved_save">Enregistrer pour plus tard</string>
+    <string name="forums_saved_clear_confirm_title">Effacer toutes les publications enregistrées?</string>
+    <string name="forums_saved_clear_confirm_body">Cette action retire toutes les publications de votre liste d\'éléments enregistrés. Elle est irréversible.</string>
+    <string name="forums_saved_empty_title">Rien d\'enregistré pour l\'instant</string>
+    <string name="forums_saved_empty_subtitle">Touchez le signet d\'une publication pour l\'enregistrer ici pour plus tard.</string>
+    <string name="forums_saved_error_clear">Échec de l\'effacement des publications enregistrées</string>
 </resources>

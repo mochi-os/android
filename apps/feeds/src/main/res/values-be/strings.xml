@@ -219,4 +219,118 @@
     <string name="feeds_caught_up">Вы ўсё прагледзелі</string>
     <string name="feeds_all_caught_up">Усё прачытана</string>
     <string name="feeds_view_all_posts">Паглядзець усе публікацыі</string>
+    <string name="feeds_markdown_supported">Падтрымліваецца Markdown</string>
+    <string name="feeds_back">Назад</string>
+    <string name="feeds_confirm">Пацвердзіць</string>
+    <string name="feeds_rss_feed">RSS-стужка</string>
+    <string name="feeds_unsubscribe">Адпісацца</string>
+    <string name="feeds_unsubscribed">Адпісана</string>
+    <string name="feeds_settings_section_identity">Асоба</string>
+    <string name="feeds_settings_field_name">Назва</string>
+    <string name="feeds_settings_field_entity_id">ID сутнасці</string>
+    <string name="feeds_settings_field_fingerprint">Адбітак пальца</string>
+    <string name="feeds_settings_field_server">Сервер</string>
+    <string name="feeds_settings_name_edit_cd">Рэдагаваць імя</string>
+    <string name="feeds_settings_name_save_cd">Захаваць імя</string>
+    <string name="feeds_access_subject_anyone">Любы</string>
+    <string name="feeds_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
+    <string name="feeds_access_level_view_full">Толькі прагляд</string>
+    <string name="feeds_access_level_none_full">Няма доступу</string>
+    <string name="feeds_access_segment_user">Карыстальнік</string>
+    <string name="feeds_access_segment_group">Група</string>
+    <string name="feeds_access_segment_other">Іншае</string>
+    <string name="feeds_access_search_users">Пошук карыстальнікаў</string>
+    <string name="feeds_access_select_group">Выбраць групу</string>
+    <string name="feeds_access_selected">Выбрана: %1$s</string>
+    <string name="feeds_permission_deny">Адмовіць</string>
+    <string name="feeds_allow_search">Дазволіць усім шукаць стужку</string>
+    <string name="feeds_enable_memories">Уключыць успаміны</string>
+    <string name="feeds_create_first_post">Стварыць першую публікацыю</string>
+    <string name="feeds_post_content">Змест паста</string>
+    <string name="feeds_rss_mode_posts">Пасты</string>
+    <string name="feeds_rss_mode_posts_comments">Пасты і каментары</string>
+    <string name="feeds_unsubscribe_confirm">Адпісацца ад стужкі?</string>
+    <string name="feeds_unsubscribe_confirm_message">Вы перастанеце атрымліваць абнаўленні з гэтай стужкі. Вы можаце падпісацца зноў у любы час.</string>
+    <string name="feeds_settings_unsubscribe_section">Адпісацца ад стужкі</string>
+    <string name="feeds_delete_feed_description">Назаўжды выдаліць гэтую стужку і ўвесь яе змест.</string>
+    <string name="feeds_access_management">Кіраванне доступам</string>
+    <string name="feeds_access_management_desc">Кіруйце тым, хто можа праглядаць і ўзаемадзейнічаць з гэтай стужкай</string>
+    <string name="feeds_access_level_comment_full">Каментаваць, рэагаваць і праглядаць</string>
+    <string name="feeds_access_level_react_full">Рэагаваць і праглядаць</string>
+    <string name="feeds_access_add_title">Дадаць доступ</string>
+    <string name="feeds_access_add_subtitle">Абярыце карыстальніка, групу або іншае правіла для прадастаўлення доступу.</string>
+    <string name="feeds_access_select_rule">Абярыце правіла доступу</string>
+    <string name="feeds_source_url_hint_feed">ID сутнасці стужкі або адбітак пальца</string>
+    <string name="feeds_source_credibility_label">Давер</string>
+    <string name="feeds_source_transform_hint">Перакладзіце на англійскую і пакажыце як спіс пунктаў.</string>
+    <string name="feeds_source_transform_help">Пакіньце пустым, каб адключыць.</string>
+
+    <string name="feeds_scroll_to_top">Уверх</string>
+    <string name="feeds_settings_title">Налады %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Скасаваць рэдагаванне</string>
+    <string name="feeds_access_authenticated_desc">Усе, хто ўвайшоў у сістэму</string>
+    <string name="feeds_access_anyone_desc">Уключаючы ананімных карыстальнікаў</string>
+    <string name="feeds_source_last_checked">Апошняя праверка %1$s</string>
+    <string name="feeds_source_polling_interval">Апытанне кожныя %1$s</string>
+    <string name="feeds_permission_request_title">Запыт дазволу</string>
+    <string name="feeds_permission_request_message">%1$s запытвае наступны дазвол:</string>
+    <string name="feeds_permission_allow">Дазволіць</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d допіс</item>
+        <item quantity="few">%1$d допісы</item>
+        <item quantity="many">%1$d допісаў</item>
+        <item quantity="other">%1$d допісу</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Дадаць %1$d інтарэс</item>
+        <item quantity="few">Дадаць %1$d інтарэсы</item>
+        <item quantity="many">Дадаць %1$d інтарэсаў</item>
+        <item quantity="other">Дадаць %1$d інтарэсу</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d год таму ў гэты дзень</item>
+        <item quantity="few">%1$d гады таму ў гэты дзень</item>
+        <item quantity="many">%1$d гадоў таму ў гэты дзень</item>
+        <item quantity="other">%1$d года таму ў гэты дзень</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d выява</item>
+        <item quantity="few">%1$d выявы</item>
+        <item quantity="many">%1$d выяў</item>
+        <item quantity="other">%1$d выявы</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d укладанне</item>
+        <item quantity="few">%1$d укладанні</item>
+        <item quantity="many">%1$d укладанняў</item>
+        <item quantity="other">%1$d укладання</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d каментарый</item>
+        <item quantity="few">%1$d каментарыі</item>
+        <item quantity="many">%1$d каментарыяў</item>
+        <item quantity="other">%1$d каментарыя</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Паказаць яшчэ %1$d каментарый</item>
+        <item quantity="few">Паказаць яшчэ %1$d каментарыі</item>
+        <item quantity="many">Паказаць яшчэ %1$d каментарыяў</item>
+        <item quantity="other">Паказаць яшчэ %1$d каментарыя</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d хвіліна</item>
+        <item quantity="few">%1$d хвіліны</item>
+        <item quantity="many">%1$d хвілін</item>
+        <item quantity="other">%1$d хвіліны</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d гадзіна</item>
+        <item quantity="few">%1$d гадзіны</item>
+        <item quantity="many">%1$d гадзін</item>
+        <item quantity="other">%1$d гадзіны</item>
+    </plurals>
+
 </resources>

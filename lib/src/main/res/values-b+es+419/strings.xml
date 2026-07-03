@@ -292,4 +292,9 @@
     <string name="common_opening_file">Abriendo archivo…</string>
     <string name="common_no_app_for_file">Ninguna app puede abrir este archivo</string>
     <string name="common_file_open_failed">No se pudo abrir el archivo</string>
+    <string name="common_logout_confirm_title">Cerrar sesión</string>
+    <string name="reaction_remove">Borrar</string>
+
+    <string name="common_logout_confirm_message">¿Está seguro de que desea cerrar sesión? Deberá iniciar sesión nuevamente para acceder a su cuenta.</string>
+
 </resources>

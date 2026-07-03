@@ -293,4 +293,9 @@
     <string name="common_opening_file">Файл ашылуда…</string>
     <string name="common_no_app_for_file">Бұл файлды ашатын қолданба жоқ</string>
     <string name="common_file_open_failed">Файлды ашу мүмкін болмады</string>
+    <string name="common_logout_confirm_title">Шығу</string>
+    <string name="reaction_remove">Тазалау</string>
+
+    <string name="common_logout_confirm_message">Жүйеден шыққыңыз келетініне сенімдісіз бе? Есептік жазбаңызға кіру үшін қайта кіру қажет болады.</string>
+
 </resources>

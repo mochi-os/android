@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">ਤੁਸੀਂ ਸਭ ਕੁਝ ਦੇਖ ਲਿਆ ਹੈ</string>
     <string name="feeds_all_caught_up">ਸਭ ਕੁਝ ਪੜ੍ਹ ਲਿਆ</string>
     <string name="feeds_view_all_posts">ਸਾਰੀਆਂ ਪੋਸਟਾਂ ਦੇਖੋ</string>
+    <string name="feeds_markdown_supported">Markdown ਸਪੋਰਟਡ</string>
+    <string name="feeds_back">ਵਾਪਸ</string>
+    <string name="feeds_confirm">ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string name="feeds_rss_feed">RSS ਫੀਡ</string>
+    <string name="feeds_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="feeds_unsubscribed">ਗਾਹਕੀ ਰੱਦ ਕੀਤੀ</string>
+    <string name="feeds_settings_section_identity">ਪਛਾਣ</string>
+    <string name="feeds_settings_field_name">ਨਾਮ</string>
+    <string name="feeds_settings_field_entity_id">ਇਕਾਈ ID</string>
+    <string name="feeds_settings_field_fingerprint">ਉਂਗਲੀ ਦਾ ਨਿਸ਼ਾਨ</string>
+    <string name="feeds_settings_field_server">ਸਰਵਰ</string>
+    <string name="feeds_settings_name_edit_cd">ਨਾਮ ਸੰਪਾਦਿਤ ਕਰੋ</string>
+    <string name="feeds_settings_name_save_cd">ਨਾਮ ਸੰਭਾਲੋ</string>
+    <string name="feeds_access_subject_anyone">ਕੋਈ ਵੀ</string>
+    <string name="feeds_access_subject_authenticated">ਪ੍ਰਮਾਣਿਤ ਵਰਤੋਂਕਾਰ</string>
+    <string name="feeds_access_level_view_full">ਸਿਰਫ਼ ਦੇਖੋ</string>
+    <string name="feeds_access_level_none_full">ਪਹੁੰਚ ਨਹੀਂ</string>
+    <string name="feeds_access_segment_user">ਉਪਭੋਗਤਾ</string>
+    <string name="feeds_access_segment_group">ਗਰੁੱਪ</string>
+    <string name="feeds_access_segment_other">ਹੋਰ</string>
+    <string name="feeds_access_search_users">ਉਪਭੋਗਤਾ ਖੋਜੋ</string>
+    <string name="feeds_access_select_group">ਗਰੁੱਪ ਚੁਣੋ</string>
+    <string name="feeds_access_selected">ਚੁਣਿਆ ਗਿਆ: %1$s</string>
+    <string name="feeds_permission_deny">ਇਨਕਾਰ ਕਰੋ</string>
+    <string name="feeds_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ ਫੀਡ ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
+    <string name="feeds_enable_memories">ਯਾਦਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰੋ</string>
+    <string name="feeds_create_first_post">ਪਹਿਲੀ ਪੋਸਟ ਬਣਾਓ</string>
+    <string name="feeds_post_content">ਪੋਸਟ ਸਮੱਗਰੀ</string>
+    <string name="feeds_rss_mode_posts">ਪੋਸਟਾਂ</string>
+    <string name="feeds_rss_mode_posts_comments">ਪੋਸਟਾਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
+    <string name="feeds_unsubscribe_confirm">ਫੀਡ ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਹੈ?</string>
+    <string name="feeds_unsubscribe_confirm_message">ਤੁਹਾਨੂੰ ਇਸ ਫੀਡ ਤੋਂ ਅੱਪਡੇਟ ਮਿਲਣੇ ਬੰਦ ਹੋ ਜਾਣਗੇ। ਤੁਸੀਂ ਕਦੇ ਵੀ ਮੁੜ ਸਬਸਕ੍ਰਾਈਬ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string name="feeds_settings_unsubscribe_section">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="feeds_delete_feed_description">ਇਸ ਫੀਡ ਅਤੇ ਇਸਦੀ ਸਾਰੀ ਸਮੱਗਰੀ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਓ।</string>
+    <string name="feeds_access_management">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
+    <string name="feeds_access_management_desc">ਕੰਟਰੋਲ ਕਰੋ ਕਿ ਕੌਣ ਇਸ ਫੀਡ ਨੂੰ ਵੇਖ ਅਤੇ ਇਸ ਨਾਲ ਜੁੜ ਸਕਦਾ ਹੈ</string>
+    <string name="feeds_access_level_comment_full">ਟਿੱਪਣੀ ਕਰੋ, ਪ੍ਰਤੀਕਿਰਿਆ ਦਿਓ ਅਤੇ ਦੇਖੋ</string>
+    <string name="feeds_access_level_react_full">ਪ੍ਰਤੀਕਿਰਿਆ ਦਿਓ ਅਤੇ ਦੇਖੋ</string>
+    <string name="feeds_access_add_title">ਪਹੁੰਚ ਜੋੜੋ</string>
+    <string name="feeds_access_add_subtitle">ਪਹੁੰਚ ਦੇਣ ਲਈ ਉਪਭੋਗਤਾ, ਗਰੁੱਪ, ਜਾਂ ਹੋਰ ਨਿਯਮ ਚੁਣੋ।</string>
+    <string name="feeds_access_select_rule">ਪਹੁੰਚ ਨਿਯਮ ਚੁਣੋ</string>
+    <string name="feeds_source_url_hint_feed">ਫੀਡ ਇਕਾਈ ID ਜਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
+    <string name="feeds_source_credibility_label">ਭਰੋਸੇਯੋਗਤਾ</string>
+    <string name="feeds_source_transform_hint">ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ, ਅਤੇ ਬੁਲੇਟ ਪੁਆਇੰਟ ਵਜੋਂ ਦਿਖਾਓ।</string>
+    <string name="feeds_source_transform_help">ਲਿਸਟਿੰਗ ID</string>
+
+    <string name="feeds_scroll_to_top">ਉੱਪਰ ਵਾਪਸ ਜਾਓ</string>
+    <string name="feeds_settings_title">%1$s ਸੈਟਿੰਗਾਂ</string>
+    <string name="feeds_settings_name_cancel_cd">ਸੋਧਣਾ ਰੱਦ ਕਰੋ</string>
+    <string name="feeds_access_authenticated_desc">ਕੋਈ ਵੀ ਜੋ ਲਾਗਇਨ ਹੈ</string>
+    <string name="feeds_access_anyone_desc">ਅਗਿਆਤ ਵਰਤੋਂਕਾਰਾਂ ਸਮੇਤ</string>
+    <string name="feeds_source_last_checked">ਆਖਰੀ ਜਾਂਚ %1$s</string>
+    <string name="feeds_source_polling_interval">ਹਰ %1$s ਬਾਅਦ ਜਾਂਚ ਕੀਤੀ ਜਾਂਦੀ ਹੈ</string>
+    <string name="feeds_permission_request_title">ਇਜਾਜ਼ਤ ਬੇਨਤੀ</string>
+    <string name="feeds_permission_request_message">%1$s ਹੇਠ ਲਿਖੀ ਇਜਾਜ਼ਤ ਦੀ ਬੇਨਤੀ ਕਰ ਰਿਹਾ ਹੈ:</string>
+    <string name="feeds_permission_allow">ਇਜਾਜ਼ਤ ਦਿਓ</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d ਪੋਸਟ</item>
+        <item quantity="other">%1$d ਪੋਸਟਾਂ</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">%1$d ਦਿਲਚਸਪੀ ਸ਼ਾਮਲ ਕਰੋ</item>
+        <item quantity="other">%1$d ਦਿਲਚਸਪੀਆਂ ਸ਼ਾਮਲ ਕਰੋ</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">ਅੱਜ ਤੋਂ %1$d ਸਾਲ ਪਹਿਲਾਂ</item>
+        <item quantity="other">ਅੱਜ ਤੋਂ %1$d ਸਾਲ ਪਹਿਲਾਂ</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d ਚਿੱਤਰ</item>
+        <item quantity="other">%1$d ਚਿੱਤਰ</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d ਅਟੈਚਮੈਂਟ</item>
+        <item quantity="other">%1$d ਅਟੈਚਮੈਂਟਾਂ</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d ਟਿੱਪਣੀ</item>
+        <item quantity="other">%1$d ਟਿੱਪਣੀਆਂ</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d ਹੋਰ ਟਿੱਪਣੀ ਵੇਖੋ</item>
+        <item quantity="other">%1$d ਹੋਰ ਟਿੱਪਣੀਆਂ ਵੇਖੋ</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d ਮਿੰਟ</item>
+        <item quantity="other">%1$d ਮਿੰਟ</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d ਘੰਟਾ</item>
+        <item quantity="other">%1$d ਘੰਟੇ</item>
+    </plurals>
+
 </resources>

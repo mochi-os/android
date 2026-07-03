@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">Пораки што чекаат рутирање</string>
     <string name="system_status_relay_service">Релејна услуга</string>
     <string name="system_status_relay_service_value">%1$d / %2$d резервации · %3$d кола · %4$d одбиено</string>
+    <string name="route_target_select">Избери</string>
 </resources>

@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">Peyamên li benda rêvekirinê</string>
     <string name="system_status_relay_service">Servîsa relê</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervasyon · %3$d gera · %4$d red kirin</string>
+    <string name="route_target_select">Hilbijêre</string>
 </resources>

@@ -441,4 +441,5 @@
     <string name="system_status_awaiting_routing">Messaġġi jistennew l-instradament</string>
     <string name="system_status_relay_service">Servizz tar-relay</string>
     <string name="system_status_relay_service_value">%1$d / %2$d riżervazzjonijiet · %3$d ċirkwiti · %4$d miċħuda</string>
+    <string name="route_target_select">Agħżel</string>
 </resources>

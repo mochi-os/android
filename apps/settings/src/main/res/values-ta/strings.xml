@@ -438,4 +438,5 @@
     <string name="system_status_awaiting_routing">வழியமைப்புக்காக காத்திருக்கும் செய்திகள்</string>
     <string name="system_status_relay_service">ரிலே சேவை</string>
     <string name="system_status_relay_service_value">%1$d / %2$d முன்பதிவுகள் · %3$d சுற்றுகள் · %4$d மறுக்கப்பட்டது</string>
+    <string name="route_target_select">தேர்ந்தெடு</string>
 </resources>

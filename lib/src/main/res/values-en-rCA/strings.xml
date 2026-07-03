@@ -293,4 +293,9 @@
     <string name="stepup_error_code">That code is incorrect or has expired.</string>
     <string name="stepup_error_passkey">Passkey verification failed. Please try again.</string>
     <string name="stepup_error_oauth">Couldn\'t verify with that account. Please try again.</string>
+    <string name="common_logout_confirm_title">Log out</string>
+    <string name="reaction_remove">Clear</string>
+
+    <string name="common_logout_confirm_message">Are you sure you want to log out? You will need to log in again to access your account.</string>
+
 </resources>

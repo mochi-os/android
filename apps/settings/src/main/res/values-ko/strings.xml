@@ -437,4 +437,5 @@
     <string name="system_status_awaiting_routing">라우팅 대기 중인 메시지</string>
     <string name="system_status_relay_service">릴레이 서비스</string>
     <string name="system_status_relay_service_value">%1$d / %2$d 예약 · %3$d 회선 · %4$d 거부됨</string>
+    <string name="route_target_select">선택</string>
 </resources>

@@ -215,4 +215,91 @@
     <string name="feeds_caught_up">Шумо ҳамаро дидед</string>
     <string name="feeds_all_caught_up">Ҳама хонда шуд</string>
     <string name="feeds_view_all_posts">Ҳама паёмҳоро дидан</string>
+    <string name="feeds_markdown_supported">Markdown дастгирӣ карда мешавад</string>
+    <string name="feeds_back">Бозгашт</string>
+    <string name="feeds_confirm">Тасдиқ</string>
+    <string name="feeds_rss_feed">Фиди RSS</string>
+    <string name="feeds_unsubscribe">Аз обуна баромадан</string>
+    <string name="feeds_unsubscribed">Хориҷ шуд</string>
+    <string name="feeds_settings_section_identity">Шахсият</string>
+    <string name="feeds_settings_field_name">Ном</string>
+    <string name="feeds_settings_field_entity_id">ID-и объект</string>
+    <string name="feeds_settings_field_fingerprint">Нақши ангушт</string>
+    <string name="feeds_settings_field_server">Сервер</string>
+    <string name="feeds_settings_name_edit_cd">Таҳрири ном</string>
+    <string name="feeds_settings_name_save_cd">Номро нигоҳ доштан</string>
+    <string name="feeds_access_subject_anyone">Ҳар кас</string>
+    <string name="feeds_access_subject_authenticated">Корбарони тасдиқшуда</string>
+    <string name="feeds_access_level_view_full">Танҳо назар</string>
+    <string name="feeds_access_level_none_full">Дастрасӣ нест</string>
+    <string name="feeds_access_segment_user">Корбар</string>
+    <string name="feeds_access_segment_group">Гурӯҳ</string>
+    <string name="feeds_access_segment_other">Дигар</string>
+    <string name="feeds_access_search_users">Ҷустуҷӯи корбарон</string>
+    <string name="feeds_access_select_group">Гурӯҳро интихоб кунед</string>
+    <string name="feeds_access_selected">Интихобшуда: %1$s</string>
+    <string name="feeds_permission_deny">Рад кардан</string>
+    <string name="feeds_allow_search">Иҷозат додан, ки ҳар кас навори RSS-ро ҷустуҷӯ кунад</string>
+    <string name="feeds_enable_memories">Хотираҳоро фаъол кунед</string>
+    <string name="feeds_create_first_post">Эҷоди аввалин паём</string>
+    <string name="feeds_post_content">Мӯҳтавои пост</string>
+    <string name="feeds_rss_mode_posts">Постҳо</string>
+    <string name="feeds_rss_mode_posts_comments">Постҳо ва шарҳҳо</string>
+    <string name="feeds_unsubscribe_confirm">Аз обунаи фид баромадан?</string>
+    <string name="feeds_unsubscribe_confirm_message">Шумо дигар аз ин фид навсозиҳо намегиред. Шумо метавонед дар вақти дилхоҳ дубора обуна шавед.</string>
+    <string name="feeds_settings_unsubscribe_section">Аз навор хориҷ шудан</string>
+    <string name="feeds_delete_feed_description">Ин фид ва тамоми мӯҳтавояшро доимӣ нест кунед.</string>
+    <string name="feeds_access_management">Идоракунии дастрасӣ</string>
+    <string name="feeds_access_management_desc">Назорат кунед, ки кӣ метавонад ин навори RSS-ро бубинад ва бо он ҳамкорӣ кунад</string>
+    <string name="feeds_access_level_comment_full">Шарҳ, аксуламал ва дидан</string>
+    <string name="feeds_access_level_react_full">Реаксия ва намоиш</string>
+    <string name="feeds_access_add_title">Иловаи дастрасӣ</string>
+    <string name="feeds_access_add_subtitle">Як корбар, гурӯҳ, ё қоидаи дигарро барои додани дастрасӣ интихоб кунед.</string>
+    <string name="feeds_access_select_rule">Интихоби қоидаи дастрасӣ</string>
+    <string name="feeds_source_url_hint_feed">ID-и объекти фид ё нақши ангушт</string>
+    <string name="feeds_source_credibility_label">Эътимоднокӣ</string>
+    <string name="feeds_source_transform_hint">Ба англисӣ тарҷума кунед ва ҳамчун нуқтаҳо нишон диҳед.</string>
+    <string name="feeds_source_transform_help">Барои ғайрифаъол холӣ гузоред.</string>
+
+    <string name="feeds_scroll_to_top">Ба боло баргаштан</string>
+    <string name="feeds_settings_title">Танзимоти %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Бекор кардани таҳрир</string>
+    <string name="feeds_access_authenticated_desc">Ҳар касе, ки ворид шудааст</string>
+    <string name="feeds_access_anyone_desc">Аз ҷумла корбарони беном</string>
+    <string name="feeds_source_last_checked">Санҷиши охирин %1$s</string>
+    <string name="feeds_source_polling_interval">Пурсиш ҳар %1$s</string>
+    <string name="feeds_permission_request_title">Дархости иҷозат</string>
+    <string name="feeds_permission_request_message">%1$s иҷозати зеринро дархост мекунад:</string>
+    <string name="feeds_permission_allow">Иҷозат додан</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d пост</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">Илова кардани %1$d шавқу ҳавас</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d сол пеш дар ҳамин рӯз</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d тасвир</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">%1$d замима</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d шарҳ</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">Дидани боз %1$d шарҳ</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d дақиқа</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d соат</item>
+    </plurals>
+
 </resources>

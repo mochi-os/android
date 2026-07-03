@@ -216,4 +216,109 @@
     <string name="feeds_caught_up">Sve ste pregledali</string>
     <string name="feeds_all_caught_up">Sve pregledano</string>
     <string name="feeds_view_all_posts">Pregledaj sve postove</string>
+    <string name="feeds_markdown_supported">Markdown podržan</string>
+    <string name="feeds_back">Nazad</string>
+    <string name="feeds_confirm">Potvrdi</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_unsubscribe">Otkaži pretplatu</string>
+    <string name="feeds_unsubscribed">Pretplata otkazana</string>
+    <string name="feeds_settings_section_identity">Identitet</string>
+    <string name="feeds_settings_field_name">Ime</string>
+    <string name="feeds_settings_field_entity_id">ID entiteta</string>
+    <string name="feeds_settings_field_fingerprint">Otisak</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Uredi naziv</string>
+    <string name="feeds_settings_name_save_cd">Sačuvaj naziv</string>
+    <string name="feeds_access_subject_anyone">Bilo ko</string>
+    <string name="feeds_access_subject_authenticated">Autentificirani korisnici</string>
+    <string name="feeds_access_level_view_full">Samo pregled</string>
+    <string name="feeds_access_level_none_full">Nema pristupa</string>
+    <string name="feeds_access_segment_user">Korisnik</string>
+    <string name="feeds_access_segment_group">Grupa</string>
+    <string name="feeds_access_segment_other">Drugo</string>
+    <string name="feeds_access_search_users">Pretraži korisnike</string>
+    <string name="feeds_access_select_group">Odaberi grupu</string>
+    <string name="feeds_access_selected">Odabrano: %1$s</string>
+    <string name="feeds_permission_deny">Odbij</string>
+    <string name="feeds_allow_search">Dozvoli svima da pretražuju feed</string>
+    <string name="feeds_enable_memories">Omogući uspomene</string>
+    <string name="feeds_create_first_post">Kreiraj prvu objavu</string>
+    <string name="feeds_post_content">Sadržaj objave</string>
+    <string name="feeds_rss_mode_posts">Objave</string>
+    <string name="feeds_rss_mode_posts_comments">Objave i komentari</string>
+    <string name="feeds_unsubscribe_confirm">Otkazati pretplatu na feed?</string>
+    <string name="feeds_unsubscribe_confirm_message">Više nećete primati novosti s ovog feeda. Možete se ponovo pretplatiti u bilo kojem trenutku.</string>
+    <string name="feeds_settings_unsubscribe_section">Otkaži pretplatu na feed</string>
+    <string name="feeds_delete_feed_description">Trajno obriši ovaj feed i sav njegov sadržaj.</string>
+    <string name="feeds_access_management">Upravljanje pristupom</string>
+    <string name="feeds_access_management_desc">Kontrolišite ko može vidjeti i komunicirati s ovim feedom</string>
+    <string name="feeds_access_level_comment_full">Komentariši, reaguj i pregledaj</string>
+    <string name="feeds_access_level_react_full">Reagiraj i pregledaj</string>
+    <string name="feeds_access_add_title">Dodaj pristup</string>
+    <string name="feeds_access_add_subtitle">Odaberite korisnika, grupu ili drugo pravilo za dodjelu pristupa.</string>
+    <string name="feeds_access_select_rule">Odaberi pravilo pristupa</string>
+    <string name="feeds_source_url_hint_feed">ID entiteta feeda ili otisak</string>
+    <string name="feeds_source_credibility_label">Kredibilitet</string>
+    <string name="feeds_source_transform_hint">Prevedi na engleski i prikaži kao bullet point.</string>
+    <string name="feeds_source_transform_help">Ostavite prazno da onemogućite.</string>
+
+    <string name="feeds_scroll_to_top">Nazad na vrh</string>
+    <string name="feeds_settings_title">Postavke: %1$s</string>
+    <string name="feeds_settings_name_cancel_cd">Otkaži uređivanje</string>
+    <string name="feeds_access_authenticated_desc">Svako ko je prijavljen</string>
+    <string name="feeds_access_anyone_desc">Uključujući anonimne korisnike</string>
+    <string name="feeds_source_last_checked">Zadnja provjera %1$s</string>
+    <string name="feeds_source_polling_interval">Provjera svakih %1$s</string>
+    <string name="feeds_permission_request_title">Zahtjev za dozvolu</string>
+    <string name="feeds_permission_request_message">%1$s traži sljedeću dozvolu:</string>
+    <string name="feeds_permission_allow">Dozvoli</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d objava</item>
+        <item quantity="few">%1$d objave</item>
+        <item quantity="other">%1$d objava</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Dodaj %1$d interesovanje</item>
+        <item quantity="few">Dodaj %1$d interesovanja</item>
+        <item quantity="other">Dodaj %1$d interesovanja</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">Prije %1$d godinu na današnji dan</item>
+        <item quantity="few">Prije %1$d godine na današnji dan</item>
+        <item quantity="other">Prije %1$d godina na današnji dan</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d slika</item>
+        <item quantity="few">%1$d slike</item>
+        <item quantity="other">%1$d slika</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d prilog</item>
+        <item quantity="few">%1$d priloga</item>
+        <item quantity="other">%1$d priloga</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d komentar</item>
+        <item quantity="few">%1$d komentara</item>
+        <item quantity="other">%1$d komentara</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Prikaži još %1$d komentar</item>
+        <item quantity="few">Prikaži još %1$d komentara</item>
+        <item quantity="other">Prikaži još %1$d komentara</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="few">%1$d minute</item>
+        <item quantity="other">%1$d minuta</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d sat</item>
+        <item quantity="few">%1$d sata</item>
+        <item quantity="other">%1$d sati</item>
+    </plurals>
+
 </resources>

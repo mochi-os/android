@@ -292,4 +292,9 @@
     <string name="common_opening_file">Åpner fil…</string>
     <string name="common_no_app_for_file">Ingen app kan åpne denne filen</string>
     <string name="common_file_open_failed">Kunne ikke åpne filen</string>
+    <string name="common_logout_confirm_title">Logg ut</string>
+    <string name="reaction_remove">Tøm</string>
+
+    <string name="common_logout_confirm_message">Er du sikker på at du vil logge ut? Du må logge inn igjen for å få tilgang til kontoen din.</string>
+
 </resources>

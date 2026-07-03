@@ -432,4 +432,12 @@
     <string name="system_status_awaiting_routing">Mensajes en espera de enrutamiento</string>
     <string name="system_status_relay_service">Servicio de retransmisión</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuitos · %4$d rechazadas</string>
+    <string name="login_title">Inicio de sesión</string>
+    <string name="login_section_methods">Métodos de inicio de sesión</string>
+    <string name="login_method_email">Código por correo</string>
+    <string name="login_method_passkey">Clave de acceso</string>
+    <string name="login_method_totp">Aplicación de autenticación</string>
+    <string name="login_method_oauth">Inicio de sesión con terceros</string>
+    <string name="login_method_recovery">Códigos de recuperación</string>
+    <string name="route_target_select">Seleccionar</string>
 </resources>

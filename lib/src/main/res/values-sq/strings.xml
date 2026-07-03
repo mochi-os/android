@@ -292,4 +292,9 @@
     <string name="common_opening_file">Po hapet skedari…</string>
     <string name="common_no_app_for_file">Asnjë aplikacion nuk mund ta hapë këtë skedar</string>
     <string name="common_file_open_failed">Skedari nuk u hap dot</string>
+    <string name="common_logout_confirm_title">Dilni</string>
+    <string name="reaction_remove">Pastro</string>
+
+    <string name="common_logout_confirm_message">Jeni i sigurt që dëshironi të dilni? Do t\'ju duhet të identifikoheni përsëri për të hyrë në llogarinë tuaj.</string>
+
 </resources>

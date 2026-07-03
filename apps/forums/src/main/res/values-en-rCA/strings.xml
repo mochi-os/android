@@ -210,4 +210,10 @@
     <string name="forums_saved_title">Saved</string>
     <string name="forums_saved_remove">Remove from saved</string>
     <string name="forums_saved_clear_all">Clear all</string>
+    <string name="forums_saved_save">Save for later</string>
+    <string name="forums_saved_clear_confirm_title">Clear all saved posts?</string>
+    <string name="forums_saved_clear_confirm_body">This removes every post from your saved list. This cannot be undone.</string>
+    <string name="forums_saved_empty_title">Nothing saved yet</string>
+    <string name="forums_saved_empty_subtitle">Tap the bookmark on any post to save it here for later.</string>
+    <string name="forums_saved_error_clear">Failed to clear saved posts</string>
 </resources>

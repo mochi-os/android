@@ -215,4 +215,100 @@
     <string name="feeds_caught_up">Դուք տեսել եք ամեն ինչ</string>
     <string name="feeds_all_caught_up">Բոլոր պայմանները</string>
     <string name="feeds_view_all_posts">Դիտել բոլոր գրառումները</string>
+    <string name="feeds_markdown_supported">Առավելագույն</string>
+    <string name="feeds_back">Հետ</string>
+    <string name="feeds_confirm">Հաստատել</string>
+    <string name="feeds_rss_feed">RSS հոսք</string>
+    <string name="feeds_unsubscribe">Բաժանորդագրությունից հրաժարվել</string>
+    <string name="feeds_unsubscribed">Բաժանորդագրությունից հրաժարված</string>
+    <string name="feeds_settings_section_identity">Ինքնություն</string>
+    <string name="feeds_settings_field_name">Անուն</string>
+    <string name="feeds_settings_field_entity_id">Անձի ID</string>
+    <string name="feeds_settings_field_fingerprint">Մատնահետք</string>
+    <string name="feeds_settings_field_server">Սերվեր</string>
+    <string name="feeds_settings_name_edit_cd">Խմբագրել անունը</string>
+    <string name="feeds_settings_name_save_cd">Պահպանել անունը</string>
+    <string name="feeds_access_subject_anyone">Ցանկացած մեկը</string>
+    <string name="feeds_access_subject_authenticated">Վավերացված օգտվողներ</string>
+    <string name="feeds_access_level_view_full">Միայն դիտել</string>
+    <string name="feeds_access_level_none_full">Մուտք չկա</string>
+    <string name="feeds_access_segment_user">Օգտատեր</string>
+    <string name="feeds_access_segment_group">Խումբ</string>
+    <string name="feeds_access_segment_other">Այլ</string>
+    <string name="feeds_access_search_users">Որոնել օգտատերեր</string>
+    <string name="feeds_access_select_group">Ընտրել խումբը</string>
+    <string name="feeds_access_selected">Ընտրված է՝ %1$s</string>
+    <string name="feeds_permission_deny">Մերժել</string>
+    <string name="feeds_allow_search">Թույլատրել բոլորին որոնել ֆորում</string>
+    <string name="feeds_enable_memories">Միացնել հիշողությունները</string>
+    <string name="feeds_create_first_post">Ստեղծել այս էջը</string>
+    <string name="feeds_post_content">Գրառման բովանդակություն</string>
+    <string name="feeds_rss_mode_posts">Գրառումներ</string>
+    <string name="feeds_rss_mode_posts_comments">Գրառումներ և մեկնաբանություններ</string>
+    <string name="feeds_unsubscribe_confirm">Ապաբաժանորդագրվե՞լ հոսքից</string>
+    <string name="feeds_unsubscribe_confirm_message">Այլևս չեք ստանա այս հոսքի թարմացումները։ Կարող եք կրկին բաժանորդագրվել ցանկացած պահի։</string>
+    <string name="feeds_settings_unsubscribe_section">Հրաժարվել ֆիդի բաժանորդագրությունից</string>
+    <string name="feeds_delete_feed_description">Ընդմիշտ ջնջել այս հոսքը և ամբողջ պարունակությունը։</string>
+    <string name="feeds_access_management">Մուտքի կառավարում</string>
+    <string name="feeds_access_management_desc">Վերահսկեք, թե ով կարող է դիտել և փոխազդել այս ֆորումի հետ</string>
+    <string name="feeds_access_level_comment_full">Մեկնաբանել, քվեարկել և դիտել</string>
+    <string name="feeds_access_level_react_full">Արձագանքել և դիտել</string>
+    <string name="feeds_access_add_title">Ավելացնել հաշիվ</string>
+    <string name="feeds_access_add_subtitle">Ընտրեք օգտատեր, խումբ կամ այլ կանոն՝ մուտք տրամադրելու համար։</string>
+    <string name="feeds_access_select_rule">Ընտրել մուտքի կանոնը</string>
+    <string name="feeds_source_url_hint_feed">Հոսքի անձի ID կամ մատնահետք</string>
+    <string name="feeds_source_credibility_label">Արժանահավատության հուշում</string>
+    <string name="feeds_source_transform_hint">Թարգմանել անգլերեն և ցույց տալ որպես կետեր:</string>
+    <string name="feeds_source_transform_help">Ձախից աջ</string>
+
+    <string name="feeds_scroll_to_top">Վերադառնալ վերև</string>
+    <string name="feeds_settings_title">%1$s կարգավորումներ</string>
+    <string name="feeds_settings_name_cancel_cd">Չեղարկել խմբագրումը</string>
+    <string name="feeds_access_authenticated_desc">Ցանկացած ոք, ով մուտք է գործել</string>
+    <string name="feeds_access_anyone_desc">Ներառյալ անանուն օգտատերերը</string>
+    <string name="feeds_source_last_checked">Վերջին ստուգումը՝ %1$s</string>
+    <string name="feeds_source_polling_interval">Հարցում ամեն %1$s</string>
+    <string name="feeds_permission_request_title">Թույլտվության հարցում</string>
+    <string name="feeds_permission_request_message">%1$s-ը հայցում է հետևյալ թույլտվությունը՝</string>
+    <string name="feeds_permission_allow">Թույլատրել</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+
+
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="one">%1$d գրառում</item>
+        <item quantity="other">%1$d գրառում</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="one">Ավելացնել %1$d հետաքրքրություն</item>
+        <item quantity="other">Ավելացնել %1$d հետաքրքրություն</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d տարի առաջ այս օրը</item>
+        <item quantity="other">%1$d տարի առաջ այս օրը</item>
+    </plurals>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d պատկեր</item>
+        <item quantity="other">%1$d պատկեր</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d կցորդ</item>
+        <item quantity="other">%1$d կցորդ</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d մեկնաբանություն</item>
+        <item quantity="other">%1$d մեկնաբանություն</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Դիտել ևս %1$d մեկնաբանություն</item>
+        <item quantity="other">Դիտել ևս %1$d մեկնաբանություն</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d րոպե</item>
+        <item quantity="other">%1$d րոպե</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d ժամ</item>
+        <item quantity="other">%1$d ժամ</item>
+    </plurals>
+
 </resources>

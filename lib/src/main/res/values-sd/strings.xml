@@ -292,4 +292,9 @@
     <string name="common_opening_file">فائل کلي رهي آهي…</string>
     <string name="common_no_app_for_file">ڪابه ايپ هي فائل نه ٿي کولي سگهي</string>
     <string name="common_file_open_failed">فائل کولي نه سگهي</string>
+    <string name="common_logout_confirm_title">لاگ آئوٽ</string>
+    <string name="reaction_remove">صاف ڪريو</string>
+
+    <string name="common_logout_confirm_message">ڇا توهان واقعي لاگ آئوٽ ٿيڻ چاهيو ٿا؟ پنهنجي اڪائونٽ تائين رسائي لاءِ توهان کي ٻيهر لاگ ان ٿيڻو پوندو.</string>
+
 </resources>

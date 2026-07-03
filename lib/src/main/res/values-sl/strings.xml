@@ -292,4 +292,9 @@
     <string name="common_opening_file">Odpiranje datoteke…</string>
     <string name="common_no_app_for_file">Te datoteke ni mogoče odpreti z nobeno aplikacijo</string>
     <string name="common_file_open_failed">Datoteke ni bilo mogoče odpreti</string>
+    <string name="common_logout_confirm_title">Odjava</string>
+    <string name="reaction_remove">Počisti</string>
+
+    <string name="common_logout_confirm_message">Ali ste prepričani, da se želite odjaviti? Za dostop do svojega računa se boste morali znova prijaviti.</string>
+
 </resources>

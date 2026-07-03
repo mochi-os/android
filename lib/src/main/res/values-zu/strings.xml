@@ -292,4 +292,9 @@
     <string name="common_opening_file">Kuvulwa ifayela…</string>
     <string name="common_no_app_for_file">Alikho i-app elingavula leli fayela</string>
     <string name="common_file_open_failed">Ayikwazanga ukuvula ifayela</string>
+    <string name="common_logout_confirm_title">Phuma</string>
+    <string name="reaction_remove">Sula</string>
+
+    <string name="common_logout_confirm_message">Uqinisekile ukuthi ufuna ukuphuma? Kuzodingeka ungene ngemvume futhi ukuze ufinyelele i-akhawunti yakho.</string>
+
 </resources>
