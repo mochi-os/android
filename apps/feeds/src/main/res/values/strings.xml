@@ -245,6 +245,15 @@
     <string name="feeds_source_last_fetched">Last fetched: %1$s</string>
     <string name="feeds_source_last_checked">Last checked %1$s</string>
     <string name="feeds_source_never_fetched">Never fetched</string>
+    <string name="feeds_source_polling_interval">Polling every %1$s</string>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
     <string name="feeds_source_poll">Poll</string>
     <string name="feeds_permission_request_title">Permission request</string>
     <string name="feeds_permission_request_message">%1$s is requesting the following permission:</string>
@@ -259,6 +268,7 @@
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Memories</string>
     <string name="feeds_source_credibility">Credibility: %1$s</string>
+    <string name="feeds_source_credibility_label">Credibility</string>
     <string name="feeds_source_transform">AI transform</string>
     <string name="feeds_source_transform_hint">Translate to English, and show as bullet points.</string>
     <string name="feeds_source_transform_help">Leave empty to disable.</string>

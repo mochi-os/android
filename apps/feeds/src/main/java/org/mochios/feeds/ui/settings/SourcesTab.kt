@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui.settings
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,15 +21,16 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.CalendarMonth
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Link
-import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.RssFeed
+import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -48,12 +50,15 @@ import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -61,6 +66,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -287,6 +293,25 @@ private fun PermissionRequestDialog(
     )
 }
 
+// The credibility pill sweeps a red→green hue ramp — 0 reads red, 100 green —
+// matching the web sources list.
+private fun credibilityHue(value: Int): Float = (value.coerceIn(0, 100) / 100f) * 130f
+
+/** Small pill showing a credibility score (0–100), tinted by the score. */
+@Composable
+private fun CredibilityBadge(value: Int) {
+    val hue = credibilityHue(value)
+    Text(
+        text = value.toString(),
+        style = MaterialTheme.typography.labelMedium,
+        fontWeight = FontWeight.SemiBold,
+        color = Color.hsl(hue, 0.6f, 0.38f),
+        modifier = Modifier
+            .background(Color.hsl(hue, 0.6f, 0.9f), RoundedCornerShape(50))
+            .padding(horizontal = 8.dp, vertical = 2.dp)
+    )
+}
+
 @Composable
 private fun SourceCard(
     source: Source,
@@ -297,10 +322,10 @@ private fun SourceCard(
     // Leading glyph + human label per source type, mirroring the web client's
     // sources list (calendar for memories, link for a Mochi feed, RSS glyph).
     val typeIcon = when (source.type) {
-        "rss" -> Icons.Default.RssFeed
-        "feed/posts" -> Icons.Default.Link
-        "feed/memories" -> Icons.Default.CalendarMonth
-        else -> Icons.Default.RssFeed
+        "rss" -> Icons.Outlined.RssFeed
+        "feed/posts" -> Icons.Outlined.Link
+        "feed/memories" -> Icons.Outlined.CalendarMonth
+        else -> Icons.Outlined.RssFeed
     }
     val typeLabel = when (source.type) {
         "rss" -> stringResource(R.string.feeds_source_type_rss)
@@ -310,17 +335,47 @@ private fun SourceCard(
     }
     // RSS keeps its brand orange; other source types use the theme accent.
     val typeTint = if (source.type == "rss") RssOrange else MaterialTheme.colorScheme.primary
-    val lastChecked = if (source.fetched > 0) {
-        stringResource(
+    // Memories sync on demand, so "Never fetched" reads as an error there —
+    // hide it until the source has actually been fetched.
+    val lastChecked = when {
+        source.fetched > 0 -> stringResource(
             R.string.feeds_source_last_checked,
             LocalFormat.current.formatRelativeTime(source.fetched)
         )
-    } else {
-        stringResource(R.string.feeds_source_never_fetched)
+        source.type == "feed/memories" -> null
+        else -> stringResource(R.string.feeds_source_never_fetched)
     }
-    // Metadata stacked under the name: type, last-checked time, and finally the
-    // source identifier — shown only when the name isn't already the URL.
+    // Human polling cadence, e.g. "Polling every 5 minutes". interval is in
+    // seconds; omitted when the source has no schedule.
+    val pollingText = source.interval.takeIf { interval -> interval > 0 }?.let { seconds ->
+        val duration = if (seconds < 3_600) {
+            val minutes = (seconds / 60).coerceAtLeast(1)
+            pluralStringResource(R.plurals.feeds_source_interval_minutes, minutes, minutes)
+        } else {
+            val hours = seconds / 3_600
+            pluralStringResource(R.plurals.feeds_source_interval_hours, hours, hours)
+        }
+        stringResource(R.string.feeds_source_polling_interval, duration)
+    }
+    // Metadata stacked under the name, one detail per line: the identifier
+    // (repeats the URL, shown only when the name isn't already the URL), type,
+    // last-checked time, and polling cadence.
     val showIdentifier = source.name.isNotEmpty() && source.url.isNotEmpty()
+    val metadataLines = buildList {
+        if (showIdentifier) {
+            add(source.url)
+        }
+        add(typeLabel)
+        lastChecked?.let { text -> add(text) }
+        pollingText?.let { text -> add(text) }
+    }
+    // Credibility pill beside the name — RSS-only, matching web. Colour tracks
+    // the score; hidden when there's no score set.
+    val credibilityValue = if (source.type == "rss" && source.credibility > 0) {
+        source.credibility.toInt()
+    } else {
+        null
+    }
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
@@ -330,7 +385,7 @@ private fun SourceCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 12.dp),
+                .padding(horizontal = 16.dp, vertical = 14.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
@@ -340,31 +395,27 @@ private fun SourceCard(
                 tint = typeTint
             )
             Spacer(modifier = Modifier.width(12.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = source.name.ifEmpty { source.url },
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Text(
-                    text = typeLabel,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Text(
-                    text = lastChecked,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                if (showIdentifier) {
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        text = source.url,
+                        text = source.name.ifEmpty { source.url },
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f, fill = false)
+                    )
+                    if (credibilityValue != null) {
+                        Spacer(modifier = Modifier.width(8.dp))
+                        CredibilityBadge(value = credibilityValue)
+                    }
+                }
+                metadataLines.forEach { line ->
+                    Text(
+                        text = line,
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
@@ -376,15 +427,15 @@ private fun SourceCard(
             // sync on their own schedule, so the refresh action is hidden there.
             if (source.type == "rss" || source.type == "feed/memories") {
                 IconButton(onClick = onPoll, modifier = Modifier.size(36.dp)) {
-                    Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(20.dp))
+                    Icon(Icons.Outlined.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(20.dp))
                 }
             }
             IconButton(onClick = onEdit, modifier = Modifier.size(36.dp)) {
-                Icon(Icons.Default.Edit, contentDescription = stringResource(MochiR.string.common_edit), modifier = Modifier.size(20.dp))
+                Icon(Icons.Outlined.Edit, contentDescription = stringResource(MochiR.string.common_edit), modifier = Modifier.size(20.dp))
             }
             IconButton(onClick = onRemove, modifier = Modifier.size(36.dp)) {
                 Icon(
-                    Icons.Default.Delete,
+                    Icons.Outlined.Delete,
                     contentDescription = stringResource(R.string.feeds_remove),
                     modifier = Modifier.size(20.dp),
                     tint = MaterialTheme.colorScheme.error
@@ -508,6 +559,7 @@ private fun AddSourceDialog(
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun EditSourceDialog(
     source: Source,
@@ -515,9 +567,13 @@ private fun EditSourceDialog(
     onSave: (String?, Int?, String?) -> Unit
 ) {
     // Every source can be renamed; non-memories sources also expose an AI
-    // transform expression applied to their imported content.
+    // transform expression applied to their imported content. RSS sources add a
+    // credibility score.
     val isMemories = source.type == "feed/memories"
+    val isRss = source.type == "rss"
     var name by remember { mutableStateOf(source.name) }
+    val initialCredibility = source.credibility.toInt()
+    var credibility by remember { mutableFloatStateOf(initialCredibility.toFloat()) }
     var transform by remember { mutableStateOf(source.transform) }
 
     AlertDialog(
@@ -532,6 +588,45 @@ private fun EditSourceDialog(
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true
                 )
+                if (isRss) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = stringResource(R.string.feeds_source_credibility_label),
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Slider(
+                            value = credibility,
+                            onValueChange = { newValue -> credibility = newValue },
+                            valueRange = 0f..100f,
+                            steps = 99,
+                            thumb = {
+                                // A small flat circle reads cleaner than the
+                                // default elevated pill.
+                                Box(
+                                    modifier = Modifier
+                                        .size(16.dp)
+                                        .background(
+                                            MaterialTheme.colorScheme.primary,
+                                            CircleShape
+                                        )
+                                )
+                            },
+                            track = { sliderState ->
+                                // Thin track, no tick marks or stop indicator.
+                                SliderDefaults.Track(
+                                    sliderState = sliderState,
+                                    modifier = Modifier.height(4.dp),
+                                    drawStopIndicator = null,
+                                    drawTick = { _, _ -> }
+                                )
+                            },
+                            modifier = Modifier.weight(1f)
+                        )
+                        Spacer(modifier = Modifier.width(12.dp))
+                        CredibilityBadge(value = credibility.toInt())
+                    }
+                }
                 if (!isMemories) {
                     Spacer(modifier = Modifier.height(16.dp))
                     OutlinedTextField(
@@ -549,9 +644,10 @@ private fun EditSourceDialog(
         confirmButton = {
             TextButton(
                 onClick = {
+                    val credibilityValue = credibility.toInt()
                     onSave(
                         name.takeIf { it != source.name },
-                        null,
+                        credibilityValue.takeIf { value -> isRss && value != initialCredibility },
                         transform.takeIf { it != source.transform }
                     )
                 }
