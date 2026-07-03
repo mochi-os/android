@@ -31,6 +31,7 @@ import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
 import org.mochios.feeds.api.AddSourceRequest
+import org.mochios.feeds.api.CreateFeedRequest
 import org.mochios.feeds.api.SubscribeRequest
 import org.mochios.feeds.api.UnsubscribeRequest
 import org.mochios.feeds.model.Feed
@@ -198,7 +199,10 @@ class FeedsRepository @Inject constructor(
 
     suspend fun createFeed(name: String, privacy: String, memories: Boolean): Feed {
         return try {
-            api.createFeed(name, privacy, memories).unwrap().feed
+            val response = api.createFeed(
+                CreateFeedRequest(name = name, privacy = privacy, memories = memories.toString())
+            ).unwrap()
+            Feed(id = response.id, fingerprint = response.fingerprint, name = name, privacy = privacy)
         } catch (e: Exception) {
             throw e.toMochiError()
         }

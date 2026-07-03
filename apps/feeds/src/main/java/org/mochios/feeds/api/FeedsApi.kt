@@ -9,6 +9,7 @@ import com.google.gson.annotations.SerializedName
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
+import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
@@ -40,7 +41,8 @@ data class FeedListResponse(
 )
 
 data class FeedCreateResponse(
-    val feed: Feed
+    val fingerprint: String = "",
+    val id: String = ""
 )
 
 data class FeedInfoResponse(
@@ -66,11 +68,19 @@ data class PostImageResponse(
 )
 
 data class PostCreateResponse(
-    val id: String = ""
+    val id: String = "",
+    val feed: Feed? = null,
+    val attachments: List<Attachment> = emptyList()
 )
 
 data class SuccessResponse(
     val success: Boolean = false
+)
+
+data class CreateFeedRequest(
+    val name: String,
+    val privacy: String,
+    val memories: String
 )
 
 data class SubscribeRequest(
@@ -181,12 +191,9 @@ interface FeedsApi {
     @GET("-/info")
     suspend fun getInfo(): Response<ApiResponse<FeedListResponse>>
 
-    @FormUrlEncoded
     @POST("-/create")
     suspend fun createFeed(
-        @Field("name") name: String,
-        @Field("privacy") privacy: String,
-        @Field("memories") memories: Boolean
+        @Body body: CreateFeedRequest
     ): Response<ApiResponse<FeedCreateResponse>>
 
     // directory/search returns a bare array of feeds in `data`, not a {feeds:[...]} object.
