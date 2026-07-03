@@ -151,6 +151,7 @@ import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipBook
+import org.mochios.android.ui.components.HtmlContent
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.feeds.ui.component.PostTitle
@@ -268,6 +269,8 @@ fun FeedScreen(
     val posts by viewModel.posts.collectAsState()
     val feedInfo by viewModel.feedInfo.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
+    // Owner-set markdown banner, carried on the feed info itself.
+    val banner = feedInfo?.banner.orEmpty()
     val isLoading by viewModel.isLoading.collectAsState()
     val isRefreshing by viewModel.isRefreshing.collectAsState()
     val isPostRefreshing by viewModel.isPostRefreshing.collectAsState()
@@ -300,6 +303,8 @@ fun FeedScreen(
     // Set once the viewer closes the one-shot post-subscribe suggestions prompt,
     // so it doesn't reopen while the suggestions are still being acted on.
     var suggestionsDismissed by remember { mutableStateOf(false) }
+    // Reader-dismissed banner. Keyed by content so a changed banner reappears.
+    var bannerDismissed by remember(banner) { mutableStateOf(false) }
     var addTagTarget by remember { mutableStateOf<String?>(null) }
     // (feedId, postId, commentId) of a comment pending delete confirmation.
     var pendingDeleteComment by remember { mutableStateOf<Triple<String, String, String>?>(null) }
@@ -722,6 +727,16 @@ fun FeedScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
+                if (banner.isNotBlank() && !bannerDismissed) {
+                    FeedBanner(
+                        banner = banner,
+                        onDismiss = { bannerDismissed = true },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 8.dp)
+                            .padding(bottom = 8.dp)
+                    )
+                }
                 FeedFilterChips(
                     currentSort = currentSort,
                     unreadOnly = unreadOnly,
@@ -1733,6 +1748,43 @@ private fun feedSortOptions(hasAi: Boolean): List<FeedSortOption> = buildList {
     add(FeedSortOption("new", R.string.feeds_sort_new, Icons.Default.Schedule))
     add(FeedSortOption("hot", R.string.feeds_sort_hot, Icons.Default.LocalFireDepartment))
     add(FeedSortOption("top", R.string.feeds_sort_top, Icons.Default.EmojiEvents))
+}
+
+/**
+ * Owner-set markdown banner shown to readers below the feed title, with a close
+ * button to dismiss it for the session.
+ */
+@Composable
+private fun FeedBanner(
+    banner: String,
+    onDismiss: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier,
+        shape = RoundedCornerShape(10.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant
+        )
+    ) {
+        Row(
+            modifier = Modifier.padding(start = 12.dp, end = 4.dp),
+            verticalAlignment = Alignment.Top
+        ) {
+            HtmlContent(
+                html = banner,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(top = 12.dp, bottom = 12.dp)
+            )
+            IconButton(onClick = onDismiss) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(MochiR.string.common_close)
+                )
+            }
+        }
+    }
 }
 
 /**

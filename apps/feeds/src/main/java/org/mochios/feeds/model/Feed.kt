@@ -22,7 +22,8 @@ data class Feed(
     val unread: Int = 0,
     @SerializedName("ai_mode") val aiMode: String? = null,
     @SerializedName("ai_account") val aiAccount: String = "",
-    val sort: String = ""
+    val sort: String = "",
+    val banner: String = ""
 )
 
 data class Permissions(
