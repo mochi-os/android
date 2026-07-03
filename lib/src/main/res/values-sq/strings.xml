@@ -65,6 +65,10 @@
     <string name="notifications_open">Njoftime</string>
     <string name="notifications_title">Njoftime</string>
     <string name="notifications_empty">Asnjë njoftim</string>
+    <string name="notifications_empty_unread">S\'ke asgjë për të parë</string>
+    <string name="notifications_tab_unread">Të palexuara</string>
+    <string name="notifications_tab_unread_count">Të palexuara (%1$d)</string>
+    <string name="notifications_tab_all">Të gjitha</string>
     <string name="notifications_mark_all_read">Shëno të gjitha si të lexuara</string>
     <string name="notifications_clear_all">Pastro të gjitha</string>
     <string name="notifications_loading">Duke ngarkuar…</string>

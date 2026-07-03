@@ -16,8 +16,6 @@
     <string name="feeds_settings">Innstillinger</string>
     <string name="feeds_no_posts_yet">Ingen innlegg ennå</string>
     <string name="feeds_default_sort">Standard sortering</string>
-    <string name="feeds_suggested_interests_add">Legg til</string>
-    <string name="feeds_suggested_interests_dismiss">Skjul</string>
     <string name="feeds_unread">Uleste</string>
     <string name="feeds_filter_all">Alle</string>
     <string name="feeds_sort_label">Sorter</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Tjener: %1$s</string>
     <string name="feeds_suggested_interests">Foreslåtte interesser</string>
     <string name="feeds_suggested_interests_empty">Ingen forslag ennå</string>
-    <string name="feeds_suggested_interests_count">%1$d innlegg</string>
+    <string name="feeds_suggested_interests_title">Legge til interesser fra %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Denne strømmen dekker disse emnene. Velg hvilke du vil legge til i interessene dine for personlig rangering.</string>
+    <string name="feeds_suggested_interests_skip">Hopp over</string>
     <string name="feeds_tag_more">Juster interesse</string>
     <string name="feeds_tag_more_up">Vis mer som dette</string>
     <string name="feeds_tag_more_down">Vis mindre som dette</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d nytt innlegg</item>
         <item quantity="other">%d nye innlegg</item>
     </plurals>
+    <string name="feeds_caught_up">Du er oppdatert</string>
     <string name="feeds_all_caught_up">Alt er à jour</string>
     <string name="feeds_view_all_posts">Vis alle innlegg</string>
 </resources>

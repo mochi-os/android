@@ -16,8 +16,6 @@
     <string name="feeds_settings">Կարգավորումներ</string>
     <string name="feeds_no_posts_yet">Դեռ գրառումներ չկան</string>
     <string name="feeds_default_sort">Լռելյայն տեսակավորում</string>
-    <string name="feeds_suggested_interests_add">Ավելացնել Mochi հոսք</string>
-    <string name="feeds_suggested_interests_dismiss">Թաքցնել</string>
     <string name="feeds_unread">Չկարդացված</string>
     <string name="feeds_filter_all">Բոլոր CRM-երը</string>
     <string name="feeds_sort_label">Տեսակավորել</string>
@@ -121,7 +119,9 @@
     <string name="feeds_identity_server">Սերվեր՝ %1$s</string>
     <string name="feeds_suggested_interests">Առաջարկվող հետաքրքրություններ</string>
     <string name="feeds_suggested_interests_empty">Առաջարկներ դեռ չկան</string>
-    <string name="feeds_suggested_interests_count">%1$d գրառում</string>
+    <string name="feeds_suggested_interests_title">Ավելացնե՞լ հետաքրքրություններ %1$s-ից։</string>
+    <string name="feeds_suggested_interests_subtitle">Այս հոսքն ընդգրկում է այս թեմաները։ Ընտրեք, թե որոնք ավելացնել ձեր հետաքրքրություններին՝ անհատականացված դասակարգման համար։</string>
+    <string name="feeds_suggested_interests_skip">Բաց թողնել</string>
     <string name="feeds_tag_more">Կարգավորել հետաքրքրությունը</string>
     <string name="feeds_tag_more_up">Ցույց տալ ավելի շատ սրա նման</string>
     <string name="feeds_tag_more_down">Ցույց տալ ավելի քիչ սրա նման</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d նոր գրառում</item>
         <item quantity="other">%d նոր գրառում</item>
     </plurals>
+    <string name="feeds_caught_up">Դուք տեսել եք ամեն ինչ</string>
     <string name="feeds_all_caught_up">Բոլոր պայմանները</string>
     <string name="feeds_view_all_posts">Դիտել բոլոր գրառումները</string>
 </resources>

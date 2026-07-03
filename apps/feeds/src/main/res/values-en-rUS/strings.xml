@@ -202,4 +202,5 @@
     <string name="feeds_saved_menu">Saved</string>
     <string name="feeds_saved_remove">Remove from saved</string>
     <string name="feeds_saved_clear_all">Clear all</string>
+    <string name="feeds_caught_up">You\'re all caught up</string>
 </resources>

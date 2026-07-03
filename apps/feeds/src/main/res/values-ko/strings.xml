@@ -16,8 +16,6 @@
     <string name="feeds_settings">설정</string>
     <string name="feeds_no_posts_yet">아직 게시물이 없어요</string>
     <string name="feeds_default_sort">기본 정렬</string>
-    <string name="feeds_suggested_interests_add">추가</string>
-    <string name="feeds_suggested_interests_dismiss">숨기기</string>
     <string name="feeds_unread">읽지 않음</string>
     <string name="feeds_filter_all">전체</string>
     <string name="feeds_sort_label">정렬</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">서버: %1$s</string>
     <string name="feeds_suggested_interests">추천 관심사</string>
     <string name="feeds_suggested_interests_empty">아직 추천이 없습니다</string>
-    <string name="feeds_suggested_interests_count">게시물 %1$d개</string>
+    <string name="feeds_suggested_interests_title">%1$s의 관심사를 추가할까요?</string>
+    <string name="feeds_suggested_interests_subtitle">이 피드는 다음 주제를 다룹니다. 맞춤 순위 지정을 위해 관심사에 추가할 항목을 선택하세요.</string>
+    <string name="feeds_suggested_interests_skip">건너뛰기</string>
     <string name="feeds_tag_more">관심사 조정</string>
     <string name="feeds_tag_more_up">비슷한 항목 더 보기</string>
     <string name="feeds_tag_more_down">비슷한 항목 덜 보기</string>
@@ -211,6 +211,7 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">새 게시물 %d개</item>
     </plurals>
+    <string name="feeds_caught_up">모두 확인했습니다</string>
     <string name="feeds_all_caught_up">모두 확인했어요</string>
     <string name="feeds_view_all_posts">모든 게시물 보기</string>
 </resources>

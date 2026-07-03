@@ -65,6 +65,10 @@
     <string name="notifications_open">Agahdarî</string>
     <string name="notifications_title">Agahdarî</string>
     <string name="notifications_empty">Tu agahdarî tune</string>
+    <string name="notifications_empty_unread">Te hemû xwendin</string>
+    <string name="notifications_tab_unread">Nexwendî</string>
+    <string name="notifications_tab_unread_count">Nexwendî (%1$d)</string>
+    <string name="notifications_tab_all">Hemû</string>
     <string name="notifications_mark_all_read">Hemû wek xwendî nîşan bike</string>
     <string name="notifications_clear_all">Hemûyan paqij bike</string>
     <string name="notifications_loading">Tê barkirin…</string>

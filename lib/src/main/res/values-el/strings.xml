@@ -65,6 +65,10 @@
     <string name="notifications_open">Ειδοποιήσεις</string>
     <string name="notifications_title">Ειδοποιήσεις</string>
     <string name="notifications_empty">Καμία ειδοποίηση</string>
+    <string name="notifications_empty_unread">Είστε πλήρως ενημερωμένοι</string>
+    <string name="notifications_tab_unread">Μη αναγνωσμένες</string>
+    <string name="notifications_tab_unread_count">Μη αναγνωσμένες (%1$d)</string>
+    <string name="notifications_tab_all">Όλες</string>
     <string name="notifications_mark_all_read">Σήμανση όλων ως αναγνωσμένα</string>
     <string name="notifications_clear_all">Εκκαθάριση όλων</string>
     <string name="notifications_loading">Φόρτωση…</string>

@@ -65,6 +65,10 @@
     <string name="notifications_open">通知</string>
     <string name="notifications_title">通知</string>
     <string name="notifications_empty">無通知</string>
+    <string name="notifications_empty_unread">全部已讀完</string>
+    <string name="notifications_tab_unread">未讀</string>
+    <string name="notifications_tab_unread_count">未讀 (%1$d)</string>
+    <string name="notifications_tab_all">全部</string>
     <string name="notifications_mark_all_read">全部標為已讀</string>
     <string name="notifications_clear_all">全部清除</string>
     <string name="notifications_loading">載入中…</string>

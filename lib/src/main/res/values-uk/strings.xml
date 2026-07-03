@@ -65,6 +65,10 @@
     <string name="notifications_open">Сповіщення</string>
     <string name="notifications_title">Сповіщення</string>
     <string name="notifications_empty">Немає сповіщень</string>
+    <string name="notifications_empty_unread">Ви все переглянули</string>
+    <string name="notifications_tab_unread">Непрочитані</string>
+    <string name="notifications_tab_unread_count">Непрочитані (%1$d)</string>
+    <string name="notifications_tab_all">Усі</string>
     <string name="notifications_mark_all_read">Позначити все прочитаним</string>
     <string name="notifications_clear_all">Очистити все</string>
     <string name="notifications_loading">Завантаження…</string>

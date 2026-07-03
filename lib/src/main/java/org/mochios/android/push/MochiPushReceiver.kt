@@ -15,9 +15,7 @@ import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
-import org.mochios.android.api.unwrapRaw
-import org.mochios.android.auth.TokenApi
-import org.mochios.android.auth.TokenRequest
+import org.mochios.android.auth.AuthRepository
 import org.unifiedpush.android.connector.MessagingReceiver
 import org.unifiedpush.android.connector.data.PushEndpoint
 import org.unifiedpush.android.connector.data.PushMessage
@@ -43,7 +41,12 @@ abstract class MochiPushReceiver : MessagingReceiver() {
      * the dispatcher should include it on the URI so MainActivity can hit
      * the notifications app's `-/read` endpoint after navigating.
      */
-    abstract fun deepLinkFor(context: Context, instance: String, link: String, id: String): android.net.Uri
+    abstract fun deepLinkFor(
+        context: Context,
+        instance: String,
+        link: String,
+        id: String
+    ): android.net.Uri
 
     private fun deps(context: Context): PushEntryPoint =
         EntryPointAccessors.fromApplication(context.applicationContext, PushEntryPoint::class.java)
@@ -65,10 +68,13 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                 // WebSocket fast-path instead of POSTing RFC 8030 back to itself
                 // (which would hit the still-stubbed inbound endpoint and 501).
                 val endpointToSend = collapseLocalEndpoint(endpoint.url, server)
-                Log.i(TAG, "register: endpoint.url=${endpoint.url} server=$server collapsed=$endpointToSend")
+                Log.i(
+                    TAG,
+                    "register: endpoint.url=${endpoint.url} server=$server collapsed=$endpointToSend"
+                )
                 val accountId = postPushRegister(
                     deps.okHttpClient(),
-                    deps.tokenApi(),
+                    deps.authRepository(),
                     server = server,
                     label = DeviceName.resolve(context),
                     auth = keys.auth,
@@ -114,7 +120,12 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             try {
                 val deps = deps(context)
                 val server = deps.sessionManager().getServerUrlBlocking()
-                postPushAccountsRemove(deps.okHttpClient(), deps.tokenApi(), server, accountId)
+                postPushAccountsRemove(
+                    deps.okHttpClient(),
+                    deps.authRepository(),
+                    server,
+                    accountId
+                )
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to unregister endpoint from Mochi server: ${e.message}")
             } finally {
@@ -157,16 +168,15 @@ abstract class MochiPushReceiver : MessagingReceiver() {
 
     private suspend fun postPushRegister(
         client: OkHttpClient,
-        tokenApi: TokenApi,
+        authRepository: AuthRepository,
         server: String,
         label: String,
         auth: String,
         p256dh: String,
         endpoint: String,
     ): String? {
-        val token = runCatching {
-            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
-        }.getOrNull() ?: return null
+        val token =
+            authRepository.fetchToken("notifications").getOrNull() ?: return null
         val url = server.trimEnd('/') + "/notifications/-/push/register"
         val form = FormBody.Builder()
             .add("label", label)
@@ -196,13 +206,12 @@ abstract class MochiPushReceiver : MessagingReceiver() {
 
     private suspend fun postPushAccountsRemove(
         client: OkHttpClient,
-        tokenApi: TokenApi,
+        authRepository: AuthRepository,
         server: String,
         accountId: String,
     ) {
-        val token = runCatching {
-            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
-        }.getOrNull() ?: return
+        val token =
+            authRepository.fetchToken("notifications").getOrNull() ?: return
         val url = server.trimEnd('/') + "/notifications/-/push/accounts/remove"
         val form = FormBody.Builder().add("id", accountId).build()
         val request = Request.Builder()

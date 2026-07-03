@@ -16,8 +16,6 @@
     <string name="feeds_settings">הגדרות</string>
     <string name="feeds_no_posts_yet">עדיין אין פוסטים</string>
     <string name="feeds_default_sort">מיון ברירת מחדל</string>
-    <string name="feeds_suggested_interests_add">הוספה</string>
-    <string name="feeds_suggested_interests_dismiss">הסתר</string>
     <string name="feeds_unread">לא נקרא</string>
     <string name="feeds_filter_all">הכול</string>
     <string name="feeds_sort_label">מיין</string>
@@ -121,7 +119,9 @@
     <string name="feeds_identity_server">שרת: %1$s</string>
     <string name="feeds_suggested_interests">תחומי עניין מוצעים</string>
     <string name="feeds_suggested_interests_empty">אין עדיין הצעות</string>
-    <string name="feeds_suggested_interests_count">%1$d פוסטים</string>
+    <string name="feeds_suggested_interests_title">להוסיף תחומי עניין מ-%1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">הפיד הזה עוסק בנושאים האלה. בחר אילו מהם להוסיף לתחומי העניין שלך לדירוג מותאם אישית.</string>
+    <string name="feeds_suggested_interests_skip">דלג</string>
     <string name="feeds_tag_more">כוונון תחום עניין</string>
     <string name="feeds_tag_more_up">הצג עוד כאלה</string>
     <string name="feeds_tag_more_down">הצג פחות כאלה</string>
@@ -214,6 +214,7 @@
         <item quantity="many">%d פוסטים חדשים</item>
         <item quantity="other">%d פוסטים חדשים</item>
     </plurals>
+    <string name="feeds_caught_up">צפית בכל הפוסטים</string>
     <string name="feeds_all_caught_up">הושלם הכול</string>
     <string name="feeds_view_all_posts">הצג את כל הפוסטים</string>
 </resources>

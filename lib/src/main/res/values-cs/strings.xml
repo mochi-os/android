@@ -65,6 +65,10 @@
     <string name="notifications_open">Oznámení</string>
     <string name="notifications_title">Oznámení</string>
     <string name="notifications_empty">Žádná oznámení</string>
+    <string name="notifications_empty_unread">Vše máte přečteno</string>
+    <string name="notifications_tab_unread">Nepřečtené</string>
+    <string name="notifications_tab_unread_count">Nepřečtené (%1$d)</string>
+    <string name="notifications_tab_all">Vše</string>
     <string name="notifications_mark_all_read">Označit vše jako přečtené</string>
     <string name="notifications_clear_all">Vymazat vše</string>
     <string name="notifications_loading">Načítám…</string>

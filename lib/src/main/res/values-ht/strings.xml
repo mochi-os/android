@@ -65,6 +65,10 @@
     <string name="notifications_open">Notifikasyon</string>
     <string name="notifications_title">Notifikasyon</string>
     <string name="notifications_empty">Pa gen notifikasyon</string>
+    <string name="notifications_empty_unread">Ou wè tout bagay deja</string>
+    <string name="notifications_tab_unread">Poko li</string>
+    <string name="notifications_tab_unread_count">Poko li (%1$d)</string>
+    <string name="notifications_tab_all">Tout</string>
     <string name="notifications_mark_all_read">Make tout kòm li</string>
     <string name="notifications_clear_all">Efase tout</string>
     <string name="notifications_loading">Ap chaje…</string>

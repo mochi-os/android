@@ -65,6 +65,10 @@
     <string name="notifications_open">Апавяшчэнні</string>
     <string name="notifications_title">Апавяшчэнні</string>
     <string name="notifications_empty">Апавяшчэнняў няма</string>
+    <string name="notifications_empty_unread">Усё прачытана</string>
+    <string name="notifications_tab_unread">Непрачытаныя</string>
+    <string name="notifications_tab_unread_count">Непрачытаныя (%1$d)</string>
+    <string name="notifications_tab_all">Усе</string>
     <string name="notifications_mark_all_read">Адзначыць усе прачытаныя</string>
     <string name="notifications_clear_all">Ачысціць усё</string>
     <string name="notifications_loading">Загрузка…</string>

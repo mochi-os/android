@@ -65,6 +65,10 @@
     <string name="notifications_open">Notifiki</string>
     <string name="notifications_title">Notifiki</string>
     <string name="notifications_empty">L-ebda notifiki</string>
+    <string name="notifications_empty_unread">Aġġornat kollox</string>
+    <string name="notifications_tab_unread">Mhux maqru</string>
+    <string name="notifications_tab_unread_count">Mhux maqru (%1$d)</string>
+    <string name="notifications_tab_all">Kollha</string>
     <string name="notifications_mark_all_read">Immarka kollox maqru</string>
     <string name="notifications_clear_all">Naddaf kollox</string>
     <string name="notifications_loading">Qed jitgħabba…</string>

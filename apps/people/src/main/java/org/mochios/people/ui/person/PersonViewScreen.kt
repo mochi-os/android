@@ -375,7 +375,7 @@ private fun ActionRow(
                 ) {
                     if (isMutating) {
                         CircularProgressIndicator(
-                            modifier = Modifier.height(16.dp),
+                            modifier = Modifier.size(16.dp),
                             strokeWidth = 2.dp,
                             color = MaterialTheme.colorScheme.onPrimary,
                         )

@@ -16,8 +16,6 @@
     <string name="feeds_settings">設定</string>
     <string name="feeds_no_posts_yet">まだ投稿はありません</string>
     <string name="feeds_default_sort">デフォルトの並び順</string>
-    <string name="feeds_suggested_interests_add">追加</string>
-    <string name="feeds_suggested_interests_dismiss">非表示</string>
     <string name="feeds_unread">未読</string>
     <string name="feeds_filter_all">すべて</string>
     <string name="feeds_sort_label">並べ替え</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">サーバー: %1$s</string>
     <string name="feeds_suggested_interests">おすすめの興味</string>
     <string name="feeds_suggested_interests_empty">おすすめはまだありません</string>
-    <string name="feeds_suggested_interests_count">%1$d 件の投稿</string>
+    <string name="feeds_suggested_interests_title">%1$s から興味を追加しますか？</string>
+    <string name="feeds_suggested_interests_subtitle">このフィードはこれらのトピックを扱っています。パーソナライズされたランキングのために、興味に追加するものを選択してください。</string>
+    <string name="feeds_suggested_interests_skip">スキップ</string>
     <string name="feeds_tag_more">興味を調整</string>
     <string name="feeds_tag_more_up">似た投稿をもっと表示</string>
     <string name="feeds_tag_more_down">似た投稿を減らす</string>
@@ -211,6 +211,7 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d 件の新着投稿</item>
     </plurals>
+    <string name="feeds_caught_up">すべて表示しました</string>
     <string name="feeds_all_caught_up">未読はありません</string>
     <string name="feeds_view_all_posts">すべての投稿を表示</string>
 </resources>

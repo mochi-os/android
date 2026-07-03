@@ -31,15 +31,14 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
@@ -53,7 +52,9 @@ import org.mochios.android.push.PendingDeepLink
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.ui.AppBootstrapHost
+import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.theme.MochiTheme
+import org.mochios.android.R as MochiR
 import org.mochios.android.update.UpdateInstaller
 import org.mochios.chat.navigation.ChatApp
 import org.mochios.chat.navigation.chatNavGraph
@@ -193,6 +194,10 @@ class MainActivity : ComponentActivity() {
                         onLocaleChangeRequested = { recreate() },
                         prefetchApps = MOCHI_APPS,
                     ) { onLogout ->
+                        // Every feature's logout button routes through here, so a
+                        // single confirmation dialog covers them all.
+                        var showLogoutConfirm by remember { mutableStateOf(false) }
+                        val requestLogout: () -> Unit = { showLogoutConfirm = true }
                         // Alias-switch transition. The previous attempt
                         // (Snapshot-tracked mutableStateOf + key(startApp)
                         // wrap) still left Android's surface showing the
@@ -241,61 +246,61 @@ class MainActivity : ComponentActivity() {
                                 NavHost(navController = navController, startDestination = startDestinationFor(app)) {
                                     feedsNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                     )
                                     chatNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                     )
                                     forumsNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                     )
                                     projectsNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                     )
                                     crmsNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                     )
                                     peopleNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                     settingsNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                     wikisNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                     chessNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                     goNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                     wordsNavGraph(
                                         navController,
-                                        onLogout = onLogout,
+                                        onLogout = requestLogout,
                                         onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
@@ -308,6 +313,20 @@ class MainActivity : ComponentActivity() {
                                     modifier = Modifier
                                         .fillMaxSize()
                                         .background(MaterialTheme.colorScheme.background),
+                                )
+                            }
+
+                            if (showLogoutConfirm) {
+                                ConfirmDialog(
+                                    title = stringResource(MochiR.string.common_logout_confirm_title),
+                                    message = stringResource(MochiR.string.common_logout_confirm_message),
+                                    confirmLabel = stringResource(MochiR.string.common_logout),
+                                    isDestructive = true,
+                                    onConfirm = {
+                                        showLogoutConfirm = false
+                                        onLogout()
+                                    },
+                                    onDismiss = { showLogoutConfirm = false },
                                 )
                             }
                         }
@@ -783,6 +802,6 @@ class MainActivity : ComponentActivity() {
          * API call — only the cold-start alias's app would otherwise get its
          * token minted.
          */
-        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff")
+        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "menu")
     }
 }

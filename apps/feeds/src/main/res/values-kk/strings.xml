@@ -16,8 +16,6 @@
     <string name="feeds_settings">Параметрлер</string>
     <string name="feeds_no_posts_yet">Жазбалар әлі жоқ</string>
     <string name="feeds_default_sort">Әдепкі сұрыптау</string>
-    <string name="feeds_suggested_interests_add">Қосу</string>
-    <string name="feeds_suggested_interests_dismiss">Жасыру</string>
     <string name="feeds_unread">Оқылмаған</string>
     <string name="feeds_filter_all">Барлығы</string>
     <string name="feeds_sort_label">Сұрыптау</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Сервер: %1$s</string>
     <string name="feeds_suggested_interests">Ұсынылған қызығушылықтар</string>
     <string name="feeds_suggested_interests_empty">Әзірге ұсыныстар жоқ</string>
-    <string name="feeds_suggested_interests_count">%1$d жазба</string>
+    <string name="feeds_suggested_interests_title">%1$s ішінен қызығушылықтарды қосу керек пе?</string>
+    <string name="feeds_suggested_interests_subtitle">Бұл арна осы тақырыптарды қамтиды. Дербестендірілген рейтинг үшін қызығушылықтарыңызға қайсысын қосатыныңызды таңдаңыз.</string>
+    <string name="feeds_suggested_interests_skip">Өткізіп жіберу</string>
     <string name="feeds_tag_more">Қызығушылықты баптау</string>
     <string name="feeds_tag_more_up">Осыған ұқсастарды көбірек көрсету</string>
     <string name="feeds_tag_more_down">Осыған ұқсастарды азырақ көрсету</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d жаңа жазба</item>
         <item quantity="other">%d жаңа жазба</item>
     </plurals>
+    <string name="feeds_caught_up">Барлығын көрдіңіз</string>
     <string name="feeds_all_caught_up">Барлығы оқылды</string>
     <string name="feeds_view_all_posts">Барлық жазбаларды көру</string>
 </resources>

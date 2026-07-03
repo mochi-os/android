@@ -65,6 +65,10 @@
     <string name="notifications_open">Paziņojumi</string>
     <string name="notifications_title">Paziņojumi</string>
     <string name="notifications_empty">Nav paziņojumu</string>
+    <string name="notifications_empty_unread">Viss izlasīts</string>
+    <string name="notifications_tab_unread">Nelasīti</string>
+    <string name="notifications_tab_unread_count">Nelasīti (%1$d)</string>
+    <string name="notifications_tab_all">Visi</string>
     <string name="notifications_mark_all_read">Atzīmēt visus kā lasītus</string>
     <string name="notifications_clear_all">Notīrīt visu</string>
     <string name="notifications_loading">Ielādē…</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Настройки</string>
     <string name="feeds_no_posts_yet">Все още няма публикации</string>
     <string name="feeds_default_sort">Сортиране по подразбиране</string>
-    <string name="feeds_suggested_interests_add">Добави</string>
-    <string name="feeds_suggested_interests_dismiss">Скрий</string>
     <string name="feeds_unread">Непрочетено</string>
     <string name="feeds_filter_all">Всички</string>
     <string name="feeds_sort_label">Сортиране</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">Сървър: %1$s</string>
     <string name="feeds_suggested_interests">Предложени интереси</string>
     <string name="feeds_suggested_interests_empty">Все още няма предложения</string>
-    <string name="feeds_suggested_interests_count">%1$d публикации</string>
+    <string name="feeds_suggested_interests_title">Добавяне на интереси от %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Този канал обхваща тези теми. Изберете кои да добавите към интересите си за персонализирано класиране.</string>
+    <string name="feeds_suggested_interests_skip">Пропусни</string>
     <string name="feeds_tag_more">Настройка на интерес</string>
     <string name="feeds_tag_more_up">Показвай повече такива</string>
     <string name="feeds_tag_more_down">Показвай по-малко такива</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d нова публикация</item>
         <item quantity="other">%d нови публикации</item>
     </plurals>
+    <string name="feeds_caught_up">Видяхте всичко</string>
     <string name="feeds_all_caught_up">Всичко прегледано</string>
     <string name="feeds_view_all_posts">Виж всички публикации</string>
 </resources>

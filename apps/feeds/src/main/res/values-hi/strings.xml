@@ -16,8 +16,6 @@
     <string name="feeds_settings">सेटिंग्स</string>
     <string name="feeds_no_posts_yet">अभी तक कोई पोस्ट नहीं</string>
     <string name="feeds_default_sort">डिफ़ॉल्ट सॉर्ट</string>
-    <string name="feeds_suggested_interests_add">जोड़ें</string>
-    <string name="feeds_suggested_interests_dismiss">छिपाएँ</string>
     <string name="feeds_unread">अनरीड</string>
     <string name="feeds_filter_all">सभी</string>
     <string name="feeds_sort_label">सॉर्ट करें</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">सर्वर: %1$s</string>
     <string name="feeds_suggested_interests">सुझाई गई रुचियाँ</string>
     <string name="feeds_suggested_interests_empty">अभी तक कोई सुझाव नहीं</string>
-    <string name="feeds_suggested_interests_count">%1$d पोस्ट</string>
+    <string name="feeds_suggested_interests_title">%1$s से रुचियाँ जोड़ें?</string>
+    <string name="feeds_suggested_interests_subtitle">यह फ़ीड इन विषयों को कवर करता है। व्यक्तिगत रैंकिंग के लिए चुनें कि इनमें से कौन-सी अपनी रुचियों में जोड़नी हैं।</string>
+    <string name="feeds_suggested_interests_skip">छोड़ें</string>
     <string name="feeds_tag_more">रुचि अनुकूलित करें</string>
     <string name="feeds_tag_more_up">इस तरह की और दिखाएँ</string>
     <string name="feeds_tag_more_down">इस तरह की कम दिखाएँ</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d नई पोस्ट</item>
         <item quantity="other">%d नई पोस्ट</item>
     </plurals>
+    <string name="feeds_caught_up">आप सब कुछ देख चुके हैं</string>
     <string name="feeds_all_caught_up">सब देख लिया</string>
     <string name="feeds_view_all_posts">सभी पोस्ट देखें</string>
 </resources>

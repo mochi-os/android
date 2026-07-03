@@ -16,8 +16,6 @@
     <string name="feeds_settings">Parametrlər</string>
     <string name="feeds_no_posts_yet">Hələ post yoxdur</string>
     <string name="feeds_default_sort">Default sıralama</string>
-    <string name="feeds_suggested_interests_add">Əlavə et</string>
-    <string name="feeds_suggested_interests_dismiss">Gizlət</string>
     <string name="feeds_unread">Abunəlikdən çıx</string>
     <string name="feeds_filter_all">Hamısı</string>
     <string name="feeds_sort_label">Sırala</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Təklif olunan maraqlar</string>
     <string name="feeds_suggested_interests_empty">Hələ təklif yoxdur</string>
-    <string name="feeds_suggested_interests_count">%1$d yazı</string>
+    <string name="feeds_suggested_interests_title">%1$s mənbəyindən maraqlar əlavə edilsin?</string>
+    <string name="feeds_suggested_interests_subtitle">Bu lent bu mövzuları əhatə edir. Fərdiləşdirilmiş sıralama üçün maraqlarınıza hansılarını əlavə edəcəyinizi seçin.</string>
+    <string name="feeds_suggested_interests_skip">Keç</string>
     <string name="feeds_tag_more">Marağı tənzimlə</string>
     <string name="feeds_tag_more_up">Bu tip daha çox göstər</string>
     <string name="feeds_tag_more_down">Bu tip daha az göstər</string>
@@ -214,6 +214,7 @@
         <item quantity="one">%d yeni paylaşım</item>
         <item quantity="other">%d yeni paylaşım</item>
     </plurals>
+    <string name="feeds_caught_up">Hər şeyi gördünüz</string>
     <string name="feeds_all_caught_up">Hamısı tutulub</string>
     <string name="feeds_view_all_posts">Bu istifadəçinin aktiv sessiyalarına baxın və ləğv edin.</string>
 </resources>

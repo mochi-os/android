@@ -16,8 +16,6 @@
     <string name="feeds_settings">Cài đặt</string>
     <string name="feeds_no_posts_yet">Chưa có bài viết</string>
     <string name="feeds_default_sort">Sắp xếp mặc định</string>
-    <string name="feeds_suggested_interests_add">Thêm</string>
-    <string name="feeds_suggested_interests_dismiss">Ẩn</string>
     <string name="feeds_unread">Chưa đọc</string>
     <string name="feeds_filter_all">Tất cả</string>
     <string name="feeds_sort_label">Sắp xếp</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Máy chủ: %1$s</string>
     <string name="feeds_suggested_interests">Sở thích đề xuất</string>
     <string name="feeds_suggested_interests_empty">Chưa có đề xuất nào</string>
-    <string name="feeds_suggested_interests_count">%1$d bài đăng</string>
+    <string name="feeds_suggested_interests_title">Thêm sở thích từ %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Nguồn cấp này bao gồm các chủ đề này. Chọn những chủ đề bạn muốn thêm vào sở thích để xếp hạng được cá nhân hóa.</string>
+    <string name="feeds_suggested_interests_skip">Bỏ qua</string>
     <string name="feeds_tag_more">Điều chỉnh sở thích</string>
     <string name="feeds_tag_more_up">Hiển thị thêm nội dung tương tự</string>
     <string name="feeds_tag_more_down">Hiển thị ít nội dung tương tự</string>
@@ -211,6 +211,7 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d bài viết mới</item>
     </plurals>
+    <string name="feeds_caught_up">Bạn đã xem hết</string>
     <string name="feeds_all_caught_up">Đã xem hết</string>
     <string name="feeds_view_all_posts">Xem tất cả bài đăng</string>
 </resources>

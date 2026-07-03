@@ -65,6 +65,10 @@
     <string name="notifications_open">Известия</string>
     <string name="notifications_title">Известия</string>
     <string name="notifications_empty">Няма известия</string>
+    <string name="notifications_empty_unread">Нямате нови известия</string>
+    <string name="notifications_tab_unread">Непрочетени</string>
+    <string name="notifications_tab_unread_count">Непрочетени (%1$d)</string>
+    <string name="notifications_tab_all">Всички</string>
     <string name="notifications_mark_all_read">Маркирай всички прочетени</string>
     <string name="notifications_clear_all">Изчисти всички</string>
     <string name="notifications_loading">Зареждане…</string>

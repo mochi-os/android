@@ -65,6 +65,10 @@
     <string name="notifications_open">അറിയിപ്പുകൾ</string>
     <string name="notifications_title">അറിയിപ്പുകൾ</string>
     <string name="notifications_empty">അറിയിപ്പുകളൊന്നുമില്ല</string>
+    <string name="notifications_empty_unread">എല്ലാം കണ്ടുകഴിഞ്ഞു</string>
+    <string name="notifications_tab_unread">വായിക്കാത്തവ</string>
+    <string name="notifications_tab_unread_count">വായിക്കാത്തവ (%1$d)</string>
+    <string name="notifications_tab_all">എല്ലാം</string>
     <string name="notifications_mark_all_read">എല്ലാം വായിച്ചതായി അടയാളപ്പെടുത്തുക</string>
     <string name="notifications_clear_all">എല്ലാം മായ്ക്കുക</string>
     <string name="notifications_loading">ലോഡുചെയ്യുന്നു…</string>

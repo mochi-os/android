@@ -65,6 +65,10 @@
     <string name="notifications_open">Ilmoitukset</string>
     <string name="notifications_title">Ilmoitukset</string>
     <string name="notifications_empty">Ei ilmoituksia</string>
+    <string name="notifications_empty_unread">Olet ajan tasalla</string>
+    <string name="notifications_tab_unread">Lukematta</string>
+    <string name="notifications_tab_unread_count">Lukematta (%1$d)</string>
+    <string name="notifications_tab_all">Kaikki</string>
     <string name="notifications_mark_all_read">Merkitse kaikki luetuiksi</string>
     <string name="notifications_clear_all">Tyhjennä kaikki</string>
     <string name="notifications_loading">Ladataan…</string>

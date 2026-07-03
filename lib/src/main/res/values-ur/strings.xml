@@ -65,6 +65,10 @@
     <string name="notifications_open">notifications</string>
     <string name="notifications_title">notifications</string>
     <string name="notifications_empty">کوئی notifications نہیں</string>
+    <string name="notifications_empty_unread">آپ سب دیکھ چکے ہیں</string>
+    <string name="notifications_tab_unread">غیر پڑھی</string>
+    <string name="notifications_tab_unread_count">غیر پڑھی (%1$d)</string>
+    <string name="notifications_tab_all">سب</string>
     <string name="notifications_mark_all_read">سب کو پڑھا ہوا نشان زد کریں</string>
     <string name="notifications_clear_all">سب صاف کریں</string>
     <string name="notifications_loading">لوڈ ہو رہا ہے…</string>

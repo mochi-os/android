@@ -16,8 +16,6 @@
     <string name="feeds_settings">Танзимот</string>
     <string name="feeds_no_posts_yet">То ҳол ягон пост нест</string>
     <string name="feeds_default_sort">Ҷобаҷогузории пешфарз</string>
-    <string name="feeds_suggested_interests_add">Илова кардан</string>
-    <string name="feeds_suggested_interests_dismiss">Пинҳон кардан</string>
     <string name="feeds_unread">Хонданашуда</string>
     <string name="feeds_filter_all">Ҳама</string>
     <string name="feeds_sort_label">Мураттаб кардан</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Сервер: %1$s</string>
     <string name="feeds_suggested_interests">Манфиатҳои пешниҳодшуда</string>
     <string name="feeds_suggested_interests_empty">Ҳоло пешниҳод нест</string>
-    <string name="feeds_suggested_interests_count">%1$d паём</string>
+    <string name="feeds_suggested_interests_title">Манфиатҳоро аз %1$s илова мекунед?</string>
+    <string name="feeds_suggested_interests_subtitle">Ин фид ин мавзӯъҳоро дар бар мегирад. Интихоб кунед, ки кадомҳоро барои рейтинги фардӣ ба манфиатҳои худ илова кунед.</string>
+    <string name="feeds_suggested_interests_skip">Гузаштан</string>
     <string name="feeds_tag_more">Манфиатро танзим кунед</string>
     <string name="feeds_tag_more_up">Бештар монандашро нишон диҳед</string>
     <string name="feeds_tag_more_down">Камтар монандашро нишон диҳед</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d паёми нав</item>
         <item quantity="other">%d паёмҳои нав</item>
     </plurals>
+    <string name="feeds_caught_up">Шумо ҳамаро дидед</string>
     <string name="feeds_all_caught_up">Ҳама хонда шуд</string>
     <string name="feeds_view_all_posts">Ҳама паёмҳоро дидан</string>
 </resources>

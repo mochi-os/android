@@ -65,6 +65,10 @@
     <string name="notifications_open">Mga Notification</string>
     <string name="notifications_title">Mga Notification</string>
     <string name="notifications_empty">Walang notification</string>
+    <string name="notifications_empty_unread">Wala ka nang naiwan</string>
+    <string name="notifications_tab_unread">Hindi pa nabasa</string>
+    <string name="notifications_tab_unread_count">Hindi pa nabasa (%1$d)</string>
+    <string name="notifications_tab_all">Lahat</string>
     <string name="notifications_mark_all_read">Markahang nabasa lahat</string>
     <string name="notifications_clear_all">Burahin lahat</string>
     <string name="notifications_loading">Nilo-load…</string>

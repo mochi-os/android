@@ -65,6 +65,10 @@
     <string name="notifications_open">Izaziso</string>
     <string name="notifications_title">Izaziso</string>
     <string name="notifications_empty">Azikho izaziso</string>
+    <string name="notifications_empty_unread">Usuzifundile zonke</string>
+    <string name="notifications_tab_unread">Ezingafundiwe</string>
+    <string name="notifications_tab_unread_count">Ezingafundiwe (%1$d)</string>
+    <string name="notifications_tab_all">Konke</string>
     <string name="notifications_mark_all_read">Maka konke njengokufundiwe</string>
     <string name="notifications_clear_all">Sula konke</string>
     <string name="notifications_loading">Kulayishwa…</string>

@@ -65,6 +65,10 @@
     <string name="notifications_open">Értesítések</string>
     <string name="notifications_title">Értesítések</string>
     <string name="notifications_empty">Nincsenek értesítések</string>
+    <string name="notifications_empty_unread">Mindennel naprakész vagy</string>
+    <string name="notifications_tab_unread">Olvasatlan</string>
+    <string name="notifications_tab_unread_count">Olvasatlan (%1$d)</string>
+    <string name="notifications_tab_all">Összes</string>
     <string name="notifications_mark_all_read">Összes olvasottként</string>
     <string name="notifications_clear_all">Összes törlése</string>
     <string name="notifications_loading">Betöltés…</string>

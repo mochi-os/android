@@ -16,8 +16,6 @@
     <string name="feeds_settings">Àwọn ìṣètò</string>
     <string name="feeds_no_posts_yet">Kò sí ìfìránṣẹ́ síbẹ̀</string>
     <string name="feeds_default_sort">Ìtò àìpé</string>
-    <string name="feeds_suggested_interests_add">Fi kún</string>
-    <string name="feeds_suggested_interests_dismiss">Fi pamọ́</string>
     <string name="feeds_unread">Aláìkà</string>
     <string name="feeds_filter_all">Gbogbo</string>
     <string name="feeds_sort_label">Ṣètò</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Sáfà: %1$s</string>
     <string name="feeds_suggested_interests">Àwọn ìfẹ́ tí a dámọ̀ràn</string>
     <string name="feeds_suggested_interests_empty">Kò sí ìdámọ̀ràn síbẹ̀</string>
-    <string name="feeds_suggested_interests_count">Ìfìwéránṣẹ́ %1$d</string>
+    <string name="feeds_suggested_interests_title">Fi àwọn ìfẹ́ kún láti %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Fíìdì yìí kárí àwọn àkòrí wọ̀nyí. Yan àwọn tí o fẹ́ fi kún àwọn ìfẹ́ rẹ fún ìṣètò ní pàtó sí ọ.</string>
+    <string name="feeds_suggested_interests_skip">Fò ó</string>
     <string name="feeds_tag_more">Ṣàtúnṣe ìfẹ́</string>
     <string name="feeds_tag_more_up">Fi irú èyí hàn sí i</string>
     <string name="feeds_tag_more_down">Fi irú èyí hàn dín kù</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d ìfìwéránṣẹ́ tuntun</item>
         <item quantity="other">%d ìfìwéránṣẹ́ tuntun</item>
     </plurals>
+    <string name="feeds_caught_up">O ti rí gbogbo rẹ̀</string>
     <string name="feeds_all_caught_up">Gbogbo rẹ̀ ti pé</string>
     <string name="feeds_view_all_posts">Wo gbogbo àwọn ìfìránṣẹ́</string>
 </resources>

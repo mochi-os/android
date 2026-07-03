@@ -65,6 +65,10 @@
     <string name="notifications_open">Obvestila</string>
     <string name="notifications_title">Obvestila</string>
     <string name="notifications_empty">Brez obvestil</string>
+    <string name="notifications_empty_unread">Vse je prebrano</string>
+    <string name="notifications_tab_unread">Neprebrano</string>
+    <string name="notifications_tab_unread_count">Neprebrano (%1$d)</string>
+    <string name="notifications_tab_all">Vse</string>
     <string name="notifications_mark_all_read">Označi vse prebrano</string>
     <string name="notifications_clear_all">Počisti vse</string>
     <string name="notifications_loading">Nalaganje…</string>

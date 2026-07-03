@@ -65,6 +65,10 @@
     <string name="notifications_open">सूचनाहरू</string>
     <string name="notifications_title">सूचनाहरू</string>
     <string name="notifications_empty">कुनै सूचना छैन</string>
+    <string name="notifications_empty_unread">सबै हेरिसक्नुभयो</string>
+    <string name="notifications_tab_unread">नपढिएका</string>
+    <string name="notifications_tab_unread_count">नपढिएका (%1$d)</string>
+    <string name="notifications_tab_all">सबै</string>
     <string name="notifications_mark_all_read">सबै पढिएको चिन्ह लगाउनुहोस्</string>
     <string name="notifications_clear_all">सबै खाली गर्नुहोस्</string>
     <string name="notifications_loading">लोड हुँदै…</string>

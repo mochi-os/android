@@ -16,8 +16,6 @@
     <string name="feeds_settings">Ayarlar</string>
     <string name="feeds_no_posts_yet">Henüz gönderi yok</string>
     <string name="feeds_default_sort">Varsayılan sıralama</string>
-    <string name="feeds_suggested_interests_add">Ekle</string>
-    <string name="feeds_suggested_interests_dismiss">Gizle</string>
     <string name="feeds_unread">Okunmamış</string>
     <string name="feeds_filter_all">Tümü</string>
     <string name="feeds_sort_label">Sırala</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Sunucu: %1$s</string>
     <string name="feeds_suggested_interests">Önerilen ilgi alanları</string>
     <string name="feeds_suggested_interests_empty">Henüz öneri yok</string>
-    <string name="feeds_suggested_interests_count">%1$d gönderi</string>
+    <string name="feeds_suggested_interests_title">%1$s kaynağından ilgi alanları eklensin mi?</string>
+    <string name="feeds_suggested_interests_subtitle">Bu akış şu konuları kapsıyor. Kişiselleştirilmiş sıralama için ilgi alanlarınıza hangilerini ekleyeceğinizi seçin.</string>
+    <string name="feeds_suggested_interests_skip">Atla</string>
     <string name="feeds_tag_more">İlgi alanını ayarla</string>
     <string name="feeds_tag_more_up">Buna benzer daha fazla göster</string>
     <string name="feeds_tag_more_down">Buna benzer daha az göster</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d yeni gönderi</item>
         <item quantity="other">%d yeni gönderi</item>
     </plurals>
+    <string name="feeds_caught_up">Her şeyi gördünüz</string>
     <string name="feeds_all_caught_up">Hepsi okundu</string>
     <string name="feeds_view_all_posts">Tüm gönderileri görüntüle</string>
 </resources>

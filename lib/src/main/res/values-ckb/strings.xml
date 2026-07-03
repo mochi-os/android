@@ -65,6 +65,10 @@
     <string name="notifications_open">ئاگادارکردنەوەکان</string>
     <string name="notifications_title">ئاگادارکردنەوەکان</string>
     <string name="notifications_empty">هیچ ئاگادارکردنەوەیەک نییە</string>
+    <string name="notifications_empty_unread">هەمووت بینیوە</string>
+    <string name="notifications_tab_unread">نەخوێندراوە</string>
+    <string name="notifications_tab_unread_count">نەخوێندراوە (%1$d)</string>
+    <string name="notifications_tab_all">هەموو</string>
     <string name="notifications_mark_all_read">نیشانەکردنی هەمووان وەک خوێندراوە</string>
     <string name="notifications_clear_all">پاککردنەوەی هەموو</string>
     <string name="notifications_loading">بار دەکرێت…</string>

@@ -65,6 +65,10 @@
     <string name="notifications_open">Teavitused</string>
     <string name="notifications_title">Teavitused</string>
     <string name="notifications_empty">Teavitusi pole</string>
+    <string name="notifications_empty_unread">Oled kõigega kursis</string>
+    <string name="notifications_tab_unread">Lugemata</string>
+    <string name="notifications_tab_unread_count">Lugemata (%1$d)</string>
+    <string name="notifications_tab_all">Kõik</string>
     <string name="notifications_mark_all_read">Märgi kõik loetuks</string>
     <string name="notifications_clear_all">Tühjenda kõik</string>
     <string name="notifications_loading">Laadimine…</string>

@@ -65,6 +65,10 @@
     <string name="notifications_open">Powiadomienia</string>
     <string name="notifications_title">Powiadomienia</string>
     <string name="notifications_empty">Brak powiadomień</string>
+    <string name="notifications_empty_unread">Wszystko na bieżąco</string>
+    <string name="notifications_tab_unread">Nieprzeczytane</string>
+    <string name="notifications_tab_unread_count">Nieprzeczytane (%1$d)</string>
+    <string name="notifications_tab_all">Wszystkie</string>
     <string name="notifications_mark_all_read">Oznacz wszystkie jako przeczytane</string>
     <string name="notifications_clear_all">Wyczyść wszystko</string>
     <string name="notifications_loading">Ładowanie…</string>

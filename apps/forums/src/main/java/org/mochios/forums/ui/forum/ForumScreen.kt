@@ -48,8 +48,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ListItem
-import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -80,6 +78,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
@@ -148,32 +147,29 @@ fun ForumScreen(
             if (item.id != forumId) onSelectForum(item.id)
         },
         actions = {
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(R.string.forums_list_find),
+                icon = Icons.Default.Search,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindForums()
                 },
-                headlineContent = { Text(stringResource(R.string.forums_list_find)) },
-                leadingContent = { Icon(Icons.Default.Search, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(R.string.forums_list_logout),
+                icon = Icons.AutoMirrored.Filled.Logout,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
                 },
-                headlineContent = { Text(stringResource(R.string.forums_list_logout)) },
-                leadingContent = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Default.Info,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true
                 },
-                headlineContent = { Text(stringResource(MochiR.string.about_label)) },
-                leadingContent = { Icon(Icons.Default.Info, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
     ) {

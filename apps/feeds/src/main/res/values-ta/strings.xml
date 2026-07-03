@@ -16,8 +16,6 @@
     <string name="feeds_settings">அமைப்புகள்</string>
     <string name="feeds_no_posts_yet">பதிவுகள் இன்னும் இல்லை</string>
     <string name="feeds_default_sort">இயல்புநிலை வரிசை</string>
-    <string name="feeds_suggested_interests_add">சேர்</string>
-    <string name="feeds_suggested_interests_dismiss">மறை</string>
     <string name="feeds_unread">படிக்கப்படாதது</string>
     <string name="feeds_filter_all">அனைத்தும்</string>
     <string name="feeds_sort_label">வரிசைப்படுத்து</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">சேவையகம்: %1$s</string>
     <string name="feeds_suggested_interests">பரிந்துரைக்கப்பட்ட ஆர்வங்கள்</string>
     <string name="feeds_suggested_interests_empty">இன்னும் பரிந்துரைகள் இல்லை</string>
-    <string name="feeds_suggested_interests_count">%1$d இடுகைகள்</string>
+    <string name="feeds_suggested_interests_title">%1$s இலிருந்து ஆர்வங்களைச் சேர்க்கவா?</string>
+    <string name="feeds_suggested_interests_subtitle">இந்த ஊட்டம் இந்தத் தலைப்புகளை உள்ளடக்கியது. தனிப்பயனாக்கப்பட்ட தரவரிசைக்காக உங்கள் ஆர்வங்களில் எவற்றைச் சேர்க்க வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="feeds_suggested_interests_skip">தவிர்</string>
     <string name="feeds_tag_more">ஆர்வத்தைச் சரிசெய்</string>
     <string name="feeds_tag_more_up">இது போன்றவற்றை மேலும் காட்டு</string>
     <string name="feeds_tag_more_down">இது போன்றவற்றை குறைவாகக் காட்டு</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d புதிய இடுகை</item>
         <item quantity="other">%d புதிய இடுகைகள்</item>
     </plurals>
+    <string name="feeds_caught_up">நீங்கள் அனைத்தையும் பார்த்துவிட்டீர்கள்</string>
     <string name="feeds_all_caught_up">எல்லாம் முடிந்தது</string>
     <string name="feeds_view_all_posts">அனைத்து பதிவுகளையும் காட்டு</string>
 </resources>

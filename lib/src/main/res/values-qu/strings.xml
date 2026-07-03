@@ -65,6 +65,10 @@
     <string name="notifications_open">Notificacionkuna</string>
     <string name="notifications_title">Notificacionkuna</string>
     <string name="notifications_empty">Mana willaykuna</string>
+    <string name="notifications_empty_unread">Llapanta ñawinchashkañam</string>
+    <string name="notifications_tab_unread">Mana ñawinchashka</string>
+    <string name="notifications_tab_unread_count">Mana ñawinchashka (%1$d)</string>
+    <string name="notifications_tab_all">Llapan</string>
     <string name="notifications_mark_all_read">Llapanta ñawinchasqaman churay</string>
     <string name="notifications_clear_all">Llapan pichay</string>
     <string name="notifications_loading">Wichachichkan…</string>

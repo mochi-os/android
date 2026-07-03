@@ -16,8 +16,6 @@
     <string name="feeds_settings">Nastavení</string>
     <string name="feeds_no_posts_yet">Zatím žádné příspěvky</string>
     <string name="feeds_default_sort">Výchozí řazení</string>
-    <string name="feeds_suggested_interests_add">Přidat</string>
-    <string name="feeds_suggested_interests_dismiss">Skrýt</string>
     <string name="feeds_unread">Nepřečteno</string>
     <string name="feeds_filter_all">Vše</string>
     <string name="feeds_sort_label">Třídit</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Navrhované zájmy</string>
     <string name="feeds_suggested_interests_empty">Zatím žádné návrhy</string>
-    <string name="feeds_suggested_interests_count">%1$d příspěvků</string>
+    <string name="feeds_suggested_interests_title">Přidat zájmy z %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Tento kanál se věnuje těmto tématům. Vyberte, které chcete přidat mezi své zájmy pro personalizované řazení.</string>
+    <string name="feeds_suggested_interests_skip">Přeskočit</string>
     <string name="feeds_tag_more">Vyladit zájem</string>
     <string name="feeds_tag_more_up">Zobrazit více podobného</string>
     <string name="feeds_tag_more_down">Zobrazit méně podobného</string>
@@ -214,6 +214,7 @@
         <item quantity="many">%d nového příspěvku</item>
         <item quantity="other">%d nových příspěvků</item>
     </plurals>
+    <string name="feeds_caught_up">Máte vše přečtené</string>
     <string name="feeds_all_caught_up">Vše přečteno</string>
     <string name="feeds_view_all_posts">Zobrazit všechny příspěvky</string>
 </resources>

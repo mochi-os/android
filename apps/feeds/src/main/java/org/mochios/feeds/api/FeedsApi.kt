@@ -9,8 +9,8 @@ import com.google.gson.annotations.SerializedName
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
+import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
-import org.mochios.android.model.User
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
@@ -20,7 +20,9 @@ import org.mochios.feeds.model.SavedListResponse
 import org.mochios.feeds.model.SavedToggleResponse
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.model.User
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -31,11 +33,16 @@ import retrofit2.http.Query
 // Response wrapper types
 
 data class FeedListResponse(
-    val feeds: List<Feed> = emptyList()
+    val feeds: List<Feed> = emptyList(),
+    val entity: Boolean = false,
+    val hasAi: Boolean = false,
+    val settings: FeedSettings = FeedSettings(),
+    @SerializedName("user_id") val userId: String = ""
 )
 
 data class FeedCreateResponse(
-    val feed: Feed
+    val fingerprint: String = "",
+    val id: String = ""
 )
 
 data class FeedInfoResponse(
@@ -64,15 +71,46 @@ data class PostImageResponse(
 )
 
 data class PostCreateResponse(
-    val id: String = ""
+    val id: String = "",
+    val feed: Feed? = null,
+    val attachments: List<Attachment> = emptyList()
 )
 
 data class SuccessResponse(
     val success: Boolean = false
 )
 
-data class DirectorySearchResponse(
-    val feeds: List<Feed> = emptyList()
+data class CreateFeedRequest(
+    val name: String,
+    val privacy: String,
+    val memories: String
+)
+
+data class SubscribeRequest(
+    val feed: String,
+    val server: String? = null
+)
+
+data class UnsubscribeRequest(
+    val feed: String,
+    val server: String? = null
+)
+
+data class AccessSetRequest(
+    val feed: String,
+    val subject: String,
+    val level: String
+)
+
+data class AccessRevokeRequest(
+    val feed: String,
+    val subject: String
+)
+
+data class AddSourceRequest(
+    val feed: String,
+    val type: String,
+    val url: String
 )
 
 data class RecommendationsResponse(
@@ -156,18 +194,16 @@ interface FeedsApi {
     @GET("-/info")
     suspend fun getInfo(): Response<ApiResponse<FeedListResponse>>
 
-    @FormUrlEncoded
     @POST("-/create")
     suspend fun createFeed(
-        @Field("name") name: String,
-        @Field("privacy") privacy: String,
-        @Field("memories") memories: Boolean
+        @Body body: CreateFeedRequest
     ): Response<ApiResponse<FeedCreateResponse>>
 
+    // directory/search returns a bare array of feeds in `data`, not a {feeds:[...]} object.
     @GET("-/directory/search")
     suspend fun searchDirectory(
         @Query("search") query: String
-    ): Response<ApiResponse<DirectorySearchResponse>>
+    ): Response<ApiResponse<List<Feed>>>
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<RecommendationsResponse>>
@@ -177,18 +213,14 @@ interface FeedsApi {
         @Query("url") url: String
     ): Response<ApiResponse<ProbeResponse>>
 
-    @FormUrlEncoded
     @POST("-/subscribe")
     suspend fun subscribe(
-        @Field("feed") feed: String,
-        @Field("server") server: String?
+        @Body body: SubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
-        @Field("feed") feed: String,
-        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
+        @Body body: UnsubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
@@ -367,19 +399,16 @@ interface FeedsApi {
         @Path("feedId") feedId: String
     ): Response<ApiResponse<AccessListResponse>>
 
-    @FormUrlEncoded
     @POST("{feedId}/-/access/set")
     suspend fun setAccess(
         @Path("feedId") feedId: String,
-        @Field("subject") subject: String,
-        @Field("level") level: String
+        @Body body: AccessSetRequest
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{feedId}/-/access/revoke")
     suspend fun revokeAccess(
         @Path("feedId") feedId: String,
-        @Field("subject") subject: String
+        @Body body: AccessRevokeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     // --- Sources ---
@@ -389,12 +418,10 @@ interface FeedsApi {
         @Path("feedId") feedId: String
     ): Response<ApiResponse<SourceListResponse>>
 
-    @FormUrlEncoded
     @POST("{feedId}/-/sources/add")
     suspend fun addSource(
         @Path("feedId") feedId: String,
-        @Field("url") url: String,
-        @Field("type") type: String
+        @Body body: AddSourceRequest
     ): Response<ApiResponse<SourceAddResponse>>
 
     @FormUrlEncoded

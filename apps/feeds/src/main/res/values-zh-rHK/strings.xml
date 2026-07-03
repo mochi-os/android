@@ -17,7 +17,6 @@
     <string name="feeds_name">名稱</string>
     <string name="feeds_create">建立</string>
     <string name="feeds_save_label">儲存</string>
-    <string name="feeds_suggested_interests_add">新增</string>
     <string name="feeds_logout">登出</string>
     <string name="feeds_settings">設定</string>
     <string name="feeds_send">傳送</string>
@@ -86,8 +85,9 @@
     <string name="feeds_identity_server">伺服器：%1$s</string>
     <string name="feeds_suggested_interests">建議興趣</string>
     <string name="feeds_suggested_interests_empty">暫時未有建議</string>
-    <string name="feeds_suggested_interests_count">%1$d 篇貼文</string>
-    <string name="feeds_suggested_interests_dismiss">隱藏</string>
+    <string name="feeds_suggested_interests_title">由 %1$s 加入興趣？</string>
+    <string name="feeds_suggested_interests_subtitle">此資訊流涵蓋以下主題。請選擇你想加入興趣嘅項目，以獲得個人化排序。</string>
+    <string name="feeds_suggested_interests_skip">略過</string>
     <string name="feeds_tag_more">調整興趣</string>
     <string name="feeds_tag_more_up">顯示更多類似內容</string>
     <string name="feeds_tag_more_down">減少類似內容</string>
@@ -202,4 +202,5 @@
     <string name="feeds_saved_menu">已儲存</string>
     <string name="feeds_saved_remove">從已儲存中移除</string>
     <string name="feeds_saved_clear_all">清除全部</string>
+    <string name="feeds_caught_up">你已看完所有內容</string>
 </resources>

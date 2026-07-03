@@ -65,6 +65,10 @@
     <string name="notifications_open">အသိပေးချက်များ</string>
     <string name="notifications_title">အသိပေးချက်များ</string>
     <string name="notifications_empty">အသိပေးချက်များ မရှိပါ</string>
+    <string name="notifications_empty_unread">အကုန်ဖတ်ပြီးပါပြီ</string>
+    <string name="notifications_tab_unread">မဖတ်ရသေး</string>
+    <string name="notifications_tab_unread_count">မဖတ်ရသေး (%1$d)</string>
+    <string name="notifications_tab_all">အားလုံး</string>
     <string name="notifications_mark_all_read">အားလုံး ဖတ်ပြီး မှတ်</string>
     <string name="notifications_clear_all">အားလုံး ရှင်းမည်</string>
     <string name="notifications_loading">တင်နေသည်…</string>

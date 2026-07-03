@@ -16,8 +16,6 @@
     <string name="feeds_settings">Cilësimet</string>
     <string name="feeds_no_posts_yet">Ende pa postime</string>
     <string name="feeds_default_sort">Renditja e parazgjedhur</string>
-    <string name="feeds_suggested_interests_add">Shto</string>
-    <string name="feeds_suggested_interests_dismiss">Fshih</string>
     <string name="feeds_unread">Pa lexuar</string>
     <string name="feeds_filter_all">Të gjitha</string>
     <string name="feeds_sort_label">Rendit</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Serveri: %1$s</string>
     <string name="feeds_suggested_interests">Interesa të sugjeruara</string>
     <string name="feeds_suggested_interests_empty">Ende asnjë sugjerim</string>
-    <string name="feeds_suggested_interests_count">%1$d postime</string>
+    <string name="feeds_suggested_interests_title">Të shtohen interesat nga %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Ky feed mbulon këto tema. Zgjidhni cilat të shtoni te interesat tuaja për një renditje të personalizuar.</string>
+    <string name="feeds_suggested_interests_skip">Anashkalo</string>
     <string name="feeds_tag_more">Rregullo interesin</string>
     <string name="feeds_tag_more_up">Shfaq më shumë si kjo</string>
     <string name="feeds_tag_more_down">Shfaq më pak si kjo</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d postim i ri</item>
         <item quantity="other">%d postime të reja</item>
     </plurals>
+    <string name="feeds_caught_up">I keni parë të gjitha</string>
     <string name="feeds_all_caught_up">Të gjitha të arrira</string>
     <string name="feeds_view_all_posts">Shiko të gjitha postimet</string>
 </resources>

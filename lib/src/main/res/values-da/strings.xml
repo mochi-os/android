@@ -65,6 +65,10 @@
     <string name="notifications_open">Notifikationer</string>
     <string name="notifications_title">Notifikationer</string>
     <string name="notifications_empty">Ingen notifikationer</string>
+    <string name="notifications_empty_unread">Du er helt opdateret</string>
+    <string name="notifications_tab_unread">Ulæste</string>
+    <string name="notifications_tab_unread_count">Ulæste (%1$d)</string>
+    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Markér alle læst</string>
     <string name="notifications_clear_all">Ryd alle</string>
     <string name="notifications_loading">Indlæser…</string>

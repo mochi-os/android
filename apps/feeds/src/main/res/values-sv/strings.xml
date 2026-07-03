@@ -16,8 +16,6 @@
     <string name="feeds_settings">Inställningar</string>
     <string name="feeds_no_posts_yet">Inga inlägg ännu</string>
     <string name="feeds_default_sort">Standardsortering</string>
-    <string name="feeds_suggested_interests_add">Lägg till</string>
-    <string name="feeds_suggested_interests_dismiss">Dölj</string>
     <string name="feeds_unread">Olästa</string>
     <string name="feeds_filter_all">Alla</string>
     <string name="feeds_sort_label">Sortera</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Föreslagna intressen</string>
     <string name="feeds_suggested_interests_empty">Inga förslag ännu</string>
-    <string name="feeds_suggested_interests_count">%1$d inlägg</string>
+    <string name="feeds_suggested_interests_title">Lägg till intressen från %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Detta flöde täcker dessa ämnen. Välj vilka du vill lägga till bland dina intressen för personligt anpassad rankning.</string>
+    <string name="feeds_suggested_interests_skip">Hoppa över</string>
     <string name="feeds_tag_more">Justera intresse</string>
     <string name="feeds_tag_more_up">Visa mer av detta</string>
     <string name="feeds_tag_more_down">Visa mindre av detta</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d nytt inlägg</item>
         <item quantity="other">%d nya inlägg</item>
     </plurals>
+    <string name="feeds_caught_up">Du är ikapp</string>
     <string name="feeds_all_caught_up">Allt är ikapp</string>
     <string name="feeds_view_all_posts">Visa alla inlägg</string>
 </resources>

@@ -65,6 +65,10 @@
     <string name="notifications_open">Meldingen</string>
     <string name="notifications_title">Meldingen</string>
     <string name="notifications_empty">Geen meldingen</string>
+    <string name="notifications_empty_unread">Je bent helemaal bij</string>
+    <string name="notifications_tab_unread">Ongelezen</string>
+    <string name="notifications_tab_unread_count">Ongelezen (%1$d)</string>
+    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Alles als gelezen markeren</string>
     <string name="notifications_clear_all">Alles wissen</string>
     <string name="notifications_loading">Laden…</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">ਸੈਟਿੰਗਾਂ</string>
     <string name="feeds_no_posts_yet">ਅਜੇ ਕੋਈ ਪੋਸਟ ਨਹੀਂ</string>
     <string name="feeds_default_sort">ਡਿਫਾਲਟ ਛਾਂਟ</string>
-    <string name="feeds_suggested_interests_add">ਜੋੜੋ</string>
-    <string name="feeds_suggested_interests_dismiss">ਲੁਕਾਓ</string>
     <string name="feeds_unread">ਅਣ-ਪੜ੍ਹਿਆ</string>
     <string name="feeds_filter_all">ਸਾਰੇ</string>
     <string name="feeds_sort_label">ਛਾਂਟੋ</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">ਸਰਵਰ: %1$s</string>
     <string name="feeds_suggested_interests">ਸੁਝਾਈਆਂ ਰੁਚੀਆਂ</string>
     <string name="feeds_suggested_interests_empty">ਅਜੇ ਕੋਈ ਸੁਝਾਅ ਨਹੀਂ</string>
-    <string name="feeds_suggested_interests_count">%1$d ਪੋਸਟਾਂ</string>
+    <string name="feeds_suggested_interests_title">%1$s ਤੋਂ ਰੁਚੀਆਂ ਜੋੜਨੀਆਂ ਹਨ?</string>
+    <string name="feeds_suggested_interests_subtitle">ਇਹ ਫੀਡ ਇਹਨਾਂ ਵਿਸ਼ਿਆਂ ਨੂੰ ਕਵਰ ਕਰਦੀ ਹੈ। ਨਿੱਜੀ ਦਰਜਾਬੰਦੀ ਲਈ ਆਪਣੀਆਂ ਰੁਚੀਆਂ ਵਿੱਚ ਕਿਹੜੀਆਂ ਜੋੜਨੀਆਂ ਹਨ, ਚੁਣੋ।</string>
+    <string name="feeds_suggested_interests_skip">ਛੱਡੋ</string>
     <string name="feeds_tag_more">ਰੁਚੀ ਤਹਿ ਕਰੋ</string>
     <string name="feeds_tag_more_up">ਇਸ ਵਰਗਾ ਹੋਰ ਦਿਖਾਓ</string>
     <string name="feeds_tag_more_down">ਇਸ ਵਰਗਾ ਘੱਟ ਦਿਖਾਓ</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d ਨਵੀਂ ਪੋਸਟ</item>
         <item quantity="other">%d ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
     </plurals>
+    <string name="feeds_caught_up">ਤੁਸੀਂ ਸਭ ਕੁਝ ਦੇਖ ਲਿਆ ਹੈ</string>
     <string name="feeds_all_caught_up">ਸਭ ਕੁਝ ਪੜ੍ਹ ਲਿਆ</string>
     <string name="feeds_view_all_posts">ਸਾਰੀਆਂ ਪੋਸਟਾਂ ਦੇਖੋ</string>
 </resources>

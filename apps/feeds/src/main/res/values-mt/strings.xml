@@ -16,8 +16,6 @@
     <string name="feeds_settings">Settings</string>
     <string name="feeds_no_posts_yet">L-ebda posts s\'issa</string>
     <string name="feeds_default_sort">Ssortjar default</string>
-    <string name="feeds_suggested_interests_add">Żid</string>
-    <string name="feeds_suggested_interests_dismiss">Aħbi</string>
     <string name="feeds_unread">Mhux moqri</string>
     <string name="feeds_filter_all">Kollha</string>
     <string name="feeds_sort_label">Issortja</string>
@@ -127,7 +125,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Interessi suġġeriti</string>
     <string name="feeds_suggested_interests_empty">L-ebda suġġeriment s\'issa</string>
-    <string name="feeds_suggested_interests_count">%1$d posts</string>
+    <string name="feeds_suggested_interests_title">Żid interessi minn %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Dan il-feed ikopri dawn is-suġġetti. Agħżel liema minnhom trid iżżid mal-interessi tiegħek għal klassifika personalizzata.</string>
+    <string name="feeds_suggested_interests_skip">Aqbeż</string>
     <string name="feeds_tag_more">Aġġusta l-interess</string>
     <string name="feeds_tag_more_up">Uri aktar bħal dan</string>
     <string name="feeds_tag_more_down">Uri inqas bħal dan</string>
@@ -216,6 +216,7 @@
         <item quantity="many">%d post ġdid</item>
         <item quantity="other">%d post ġdid</item>
     </plurals>
+    <string name="feeds_caught_up">Rajt kollox</string>
     <string name="feeds_all_caught_up">Kollox aġġornat</string>
     <string name="feeds_view_all_posts">Ara l-posts kollha</string>
 </resources>

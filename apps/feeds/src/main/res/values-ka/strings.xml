@@ -16,8 +16,6 @@
     <string name="feeds_settings">პარამეტრები</string>
     <string name="feeds_no_posts_yet">პოსტები ჯერ არ არის</string>
     <string name="feeds_default_sort">ნაგულისხმევი დახარისხება</string>
-    <string name="feeds_suggested_interests_add">დამატება</string>
-    <string name="feeds_suggested_interests_dismiss">დამალვა</string>
     <string name="feeds_unread">მიმაგრების მოხსნა</string>
     <string name="feeds_filter_all">ყველა</string>
     <string name="feeds_sort_label">დახარისხება</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">სერვერი: %1$s</string>
     <string name="feeds_suggested_interests">შემოთავაზებული ინტერესები</string>
     <string name="feeds_suggested_interests_empty">ჯერ შემოთავაზებები არ არის</string>
-    <string name="feeds_suggested_interests_count">%1$d პოსტი</string>
+    <string name="feeds_suggested_interests_title">დაამატოთ ინტერესები %1$s-დან?</string>
+    <string name="feeds_suggested_interests_subtitle">ეს არხი მოიცავს ამ თემებს. აირჩიეთ, რომელი დაამატოთ თქვენს ინტერესებში პერსონალიზებული რანჟირებისთვის.</string>
+    <string name="feeds_suggested_interests_skip">გამოტოვება</string>
     <string name="feeds_tag_more">მოარგეთ ინტერესი</string>
     <string name="feeds_tag_more_up">მეტი ამის მსგავსი</string>
     <string name="feeds_tag_more_down">ნაკლები ამის მსგავსი</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d ახალი პოსტი</item>
         <item quantity="other">%d ახალი პოსტი</item>
     </plurals>
+    <string name="feeds_caught_up">ყველაფერი ნანახი გაქვთ</string>
     <string name="feeds_all_caught_up">ყველაფერი ნანახი</string>
     <string name="feeds_view_all_posts">ყველა შეტყობინების ნახვა</string>
 </resources>

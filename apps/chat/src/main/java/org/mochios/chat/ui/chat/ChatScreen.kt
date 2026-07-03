@@ -59,8 +59,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ListItem
-import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
@@ -94,6 +92,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
@@ -105,7 +104,6 @@ import org.mochios.android.model.ReactionType
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.NotificationBell
-import org.mochios.android.ui.components.ReactionAddButton
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
@@ -174,32 +172,29 @@ fun ChatScreen(
             if (item.id != chatId) onSelectChat(item.id)
         },
         actions = {
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(R.string.chat_list_new),
+                icon = Icons.Default.Add,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNewChat()
                 },
-                headlineContent = { Text(stringResource(R.string.chat_list_new)) },
-                leadingContent = { Icon(Icons.Default.Add, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(R.string.chat_list_logout),
+                icon = Icons.AutoMirrored.Filled.Logout,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
                 },
-                headlineContent = { Text(stringResource(R.string.chat_list_logout)) },
-                leadingContent = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
-            ListItem(
-                modifier = Modifier.clickable {
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Default.Info,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true
                 },
-                headlineContent = { Text(stringResource(MochiR.string.about_label)) },
-                leadingContent = { Icon(Icons.Default.Info, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
     ) {
@@ -723,7 +718,7 @@ private fun MessageBubble(
                     // Reserve a strip below the bubble for the reaction button,
                     // which floats just under the bottom-right corner so it never
                     // sits on the message text (even for short messages).
-                    .padding(bottom = if (selectionMode) 0.dp else 20.dp)
+                    .padding(bottom = if (selectionMode) 0.dp else 18.dp)
                     .then(
                         when {
                             selectionMode -> Modifier.clickable(onClick = onToggleSelect)
@@ -853,24 +848,18 @@ private fun MessageBubble(
                     modifier = Modifier
                         .align(Alignment.BottomEnd)
                         .padding(end = 6.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    val reactions = chatReactionCounts(message.reactionCounts, message.myReaction)
-                    if (reactions.isNotEmpty()) {
-                        ReactionBar(
-                            reactions = reactions,
-                            onReact = onReact,
-                            onRemoveReaction = { onReact("none") },
-                            showAddButton = false,
-                            maxVisible = 3
-                        )
-                    }
-                    ReactionAddButton(
+                    // Single bar with pills + built-in add button, so the
+                    // add/change/clear affordance is consistent with feeds.
+                    ReactionBar(
+                        reactions = chatReactionCounts(message.reactionCounts, message.myReaction),
                         onReact = onReact,
+                        onRemoveReaction = { onReact("none") },
                         currentReaction = message.myReaction?.let { key ->
                             ReactionType.fromString(key)
-                        }
+                        },
+                        maxVisible = 3
                     )
                 }
             }

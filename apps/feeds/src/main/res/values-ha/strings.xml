@@ -16,8 +16,6 @@
     <string name="feeds_settings">Saitunan</string>
     <string name="feeds_no_posts_yet">Babu posts tukuna</string>
     <string name="feeds_default_sort">Default sort</string>
-    <string name="feeds_suggested_interests_add">Ƙara</string>
-    <string name="feeds_suggested_interests_dismiss">Ɓoye</string>
     <string name="feeds_unread">Ba a karanta ba</string>
     <string name="feeds_filter_all">Duk</string>
     <string name="feeds_sort_label">Jera</string>
@@ -121,7 +119,9 @@
     <string name="feeds_identity_server">Sabar: %1$s</string>
     <string name="feeds_suggested_interests">Abubuwan sha\'awa da aka ba da shawara</string>
     <string name="feeds_suggested_interests_empty">Babu shawarwari tukuna</string>
-    <string name="feeds_suggested_interests_count">Posts %1$d</string>
+    <string name="feeds_suggested_interests_title">A ƙara abubuwan sha\'awa daga %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Wannan feed yana ɗauke da waɗannan batutuwa. Zaɓi waɗanda za a ƙara cikin abubuwan sha\'awarka don tsara abubuwa na keɓaɓɓe.</string>
+    <string name="feeds_suggested_interests_skip">Tsallake</string>
     <string name="feeds_tag_more">Daidaita sha\'awa</string>
     <string name="feeds_tag_more_up">Nuna ƙari irin wannan</string>
     <string name="feeds_tag_more_down">Nuna ƙasa da haka</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d sabon wasiƙa</item>
         <item quantity="other">%d sababbin wasiƙu</item>
     </plurals>
+    <string name="feeds_caught_up">Kun ga komai</string>
     <string name="feeds_all_caught_up">An kammala duka</string>
     <string name="feeds_view_all_posts">Kalli duk saƙonnin</string>
 </resources>

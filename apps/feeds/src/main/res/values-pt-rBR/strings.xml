@@ -16,8 +16,6 @@
     <string name="feeds_settings">Configurações</string>
     <string name="feeds_no_posts_yet">Ainda não há postagens</string>
     <string name="feeds_default_sort">Ordenação padrão</string>
-    <string name="feeds_suggested_interests_add">Adicionar</string>
-    <string name="feeds_suggested_interests_dismiss">Ocultar</string>
     <string name="feeds_unread">Não lido</string>
     <string name="feeds_filter_all">Todos</string>
     <string name="feeds_sort_label">Ordenar</string>
@@ -111,7 +109,9 @@
     <string name="feeds_identity_server">Servidor: %1$s</string>
     <string name="feeds_suggested_interests">Interesses sugeridos</string>
     <string name="feeds_suggested_interests_empty">Nenhuma sugestão ainda</string>
-    <string name="feeds_suggested_interests_count">%1$d publicações</string>
+    <string name="feeds_suggested_interests_title">Adicionar interesses de %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Este feed cobre estes tópicos. Selecione quais você deseja adicionar aos seus interesses para uma classificação personalizada.</string>
+    <string name="feeds_suggested_interests_skip">Pular</string>
     <string name="feeds_tag_more">Ajustar interesse</string>
     <string name="feeds_tag_more_up">Mostrar mais como este</string>
     <string name="feeds_tag_more_down">Mostrar menos como este</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d nova publicação</item>
         <item quantity="other">%d novas publicações</item>
     </plurals>
+    <string name="feeds_caught_up">Você está em dia</string>
     <string name="feeds_all_caught_up">Tudo em dia</string>
     <string name="feeds_view_all_posts">Ver todas as postagens</string>
 </resources>

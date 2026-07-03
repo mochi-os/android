@@ -16,8 +16,6 @@
     <string name="feeds_settings">सेटिंग्ज</string>
     <string name="feeds_no_posts_yet">अद्याप पोस्ट्स नाहीत</string>
     <string name="feeds_default_sort">डीफॉल्ट क्रमवारी</string>
-    <string name="feeds_suggested_interests_add">जोडा</string>
-    <string name="feeds_suggested_interests_dismiss">लपवा</string>
     <string name="feeds_unread">न वाचलेले</string>
     <string name="feeds_filter_all">सर्व</string>
     <string name="feeds_sort_label">क्रमवारी</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">सर्व्हर: %1$s</string>
     <string name="feeds_suggested_interests">सुचवलेल्या आवडी</string>
     <string name="feeds_suggested_interests_empty">अद्याप सूचना नाहीत</string>
-    <string name="feeds_suggested_interests_count">%1$d पोस्ट्स</string>
+    <string name="feeds_suggested_interests_title">%1$s मधील आवडी जोडायच्या?</string>
+    <string name="feeds_suggested_interests_subtitle">हे फीड या विषयांचा समावेश करते. वैयक्तिकृत क्रमवारीसाठी तुमच्या आवडींमध्ये जोडण्यासाठी कोणते ते निवडा.</string>
+    <string name="feeds_suggested_interests_skip">वगळा</string>
     <string name="feeds_tag_more">आवड समायोजित करा</string>
     <string name="feeds_tag_more_up">यासारखे आणखी दाखवा</string>
     <string name="feeds_tag_more_down">यासारखे कमी दाखवा</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d नवीन पोस्ट</item>
         <item quantity="other">%d नवीन पोस्ट</item>
     </plurals>
+    <string name="feeds_caught_up">तुम्ही सर्व पाहिले आहे</string>
     <string name="feeds_all_caught_up">सर्व पाहून झाले</string>
     <string name="feeds_view_all_posts">सर्व पोस्ट पहा</string>
 </resources>

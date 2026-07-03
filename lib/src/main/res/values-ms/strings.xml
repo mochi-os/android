@@ -65,6 +65,10 @@
     <string name="notifications_open">Pemberitahuan</string>
     <string name="notifications_title">Pemberitahuan</string>
     <string name="notifications_empty">Tiada pemberitahuan</string>
+    <string name="notifications_empty_unread">Semua sudah dibaca</string>
+    <string name="notifications_tab_unread">Belum dibaca</string>
+    <string name="notifications_tab_unread_count">Belum dibaca (%1$d)</string>
+    <string name="notifications_tab_all">Semua</string>
     <string name="notifications_mark_all_read">Tanda semua dibaca</string>
     <string name="notifications_clear_all">Kosongkan semua</string>
     <string name="notifications_loading">Memuatkan…</string>

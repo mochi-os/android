@@ -65,6 +65,10 @@
     <string name="notifications_open">알림</string>
     <string name="notifications_title">알림</string>
     <string name="notifications_empty">알림이 없어요</string>
+    <string name="notifications_empty_unread">모두 확인했어요</string>
+    <string name="notifications_tab_unread">읽지 않음</string>
+    <string name="notifications_tab_unread_count">읽지 않음 (%1$d)</string>
+    <string name="notifications_tab_all">전체</string>
     <string name="notifications_mark_all_read">모두 읽음 처리</string>
     <string name="notifications_clear_all">모두 지우기</string>
     <string name="notifications_loading">로딩 중…</string>

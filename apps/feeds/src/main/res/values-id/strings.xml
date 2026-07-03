@@ -16,8 +16,6 @@
     <string name="feeds_settings">Pengaturan</string>
     <string name="feeds_no_posts_yet">Belum ada postingan</string>
     <string name="feeds_default_sort">Pengurutan default</string>
-    <string name="feeds_suggested_interests_add">Tambah</string>
-    <string name="feeds_suggested_interests_dismiss">Sembunyikan</string>
     <string name="feeds_unread">Belum dibaca</string>
     <string name="feeds_filter_all">Semua</string>
     <string name="feeds_sort_label">Urutkan</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Minat yang disarankan</string>
     <string name="feeds_suggested_interests_empty">Belum ada saran</string>
-    <string name="feeds_suggested_interests_count">%1$d kiriman</string>
+    <string name="feeds_suggested_interests_title">Tambahkan minat dari %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Feed ini mencakup topik-topik ini. Pilih mana yang ingin ditambahkan ke minat Anda untuk pemeringkatan yang dipersonalisasi.</string>
+    <string name="feeds_suggested_interests_skip">Lewati</string>
     <string name="feeds_tag_more">Sesuaikan minat</string>
     <string name="feeds_tag_more_up">Tampilkan lebih banyak seperti ini</string>
     <string name="feeds_tag_more_down">Tampilkan lebih sedikit seperti ini</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d kiriman baru</item>
         <item quantity="other">%d kiriman baru</item>
     </plurals>
+    <string name="feeds_caught_up">Kamu sudah melihat semuanya</string>
     <string name="feeds_all_caught_up">Semua sudah terbaca</string>
     <string name="feeds_view_all_posts">Lihat semua pos</string>
 </resources>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Жөндөөлөр</string>
     <string name="feeds_no_posts_yet">Посттор азырынча жок</string>
     <string name="feeds_default_sort">Демейки иргөө</string>
-    <string name="feeds_suggested_interests_add">Кошуу</string>
-    <string name="feeds_suggested_interests_dismiss">Жашыруу</string>
     <string name="feeds_unread">Окулган эмес</string>
     <string name="feeds_filter_all">Баары</string>
     <string name="feeds_sort_label">Сорттоо</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Сервер: %1$s</string>
     <string name="feeds_suggested_interests">Сунушталган кызыкчылыктар</string>
     <string name="feeds_suggested_interests_empty">Азырынча сунуш жок</string>
-    <string name="feeds_suggested_interests_count">%1$d жазуу</string>
+    <string name="feeds_suggested_interests_title">%1$s ичинен кызыкчылыктарды кошосузбу?</string>
+    <string name="feeds_suggested_interests_subtitle">Бул лента ушул темаларды камтыйт. Жекелештирилген иргөө үчүн кызыкчылыктарыңызга кошуу үчүн кайсынысын тандаңыз.</string>
+    <string name="feeds_suggested_interests_skip">Өткөрүп жиберүү</string>
     <string name="feeds_tag_more">Кызыкчылыкты ыңгайлаштыруу</string>
     <string name="feeds_tag_more_up">Буга окшогондорду көбүрөөк көрсөтүү</string>
     <string name="feeds_tag_more_down">Буга окшогондорду азыраак көрсөтүү</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d жаңы жазуу</item>
         <item quantity="other">%d жаңы жазуу</item>
     </plurals>
+    <string name="feeds_caught_up">Баарын көрдүңүз</string>
     <string name="feeds_all_caught_up">Баары окулду</string>
     <string name="feeds_view_all_posts">Бардык посттарды көрүү</string>
 </resources>

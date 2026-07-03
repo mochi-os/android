@@ -65,6 +65,10 @@
     <string name="notifications_open">Bildirişler</string>
     <string name="notifications_title">Bildirişler</string>
     <string name="notifications_empty">Bildirişler ýok</string>
+    <string name="notifications_empty_unread">Hemmesini gördüňiz</string>
+    <string name="notifications_tab_unread">Okalmadyk</string>
+    <string name="notifications_tab_unread_count">Okalmadyk (%1$d)</string>
+    <string name="notifications_tab_all">Hemmesi</string>
     <string name="notifications_mark_all_read">Hemmesini okaldy diýip belgile</string>
     <string name="notifications_clear_all">Hemmesini arassalamak</string>
     <string name="notifications_loading">Ýüklenýär…</string>

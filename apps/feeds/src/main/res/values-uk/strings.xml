@@ -16,8 +16,6 @@
     <string name="feeds_settings">Налаштування</string>
     <string name="feeds_no_posts_yet">Дописів ще немає</string>
     <string name="feeds_default_sort">Сортування за замовчуванням</string>
-    <string name="feeds_suggested_interests_add">Додати</string>
-    <string name="feeds_suggested_interests_dismiss">Приховати</string>
     <string name="feeds_unread">Непрочитані</string>
     <string name="feeds_filter_all">Усі</string>
     <string name="feeds_sort_label">Сортувати</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Сервер: %1$s</string>
     <string name="feeds_suggested_interests">Запропоновані інтереси</string>
     <string name="feeds_suggested_interests_empty">Пропозицій ще немає</string>
-    <string name="feeds_suggested_interests_count">%1$d дописів</string>
+    <string name="feeds_suggested_interests_title">Додати інтереси з %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Ця стрічка охоплює ці теми. Виберіть, які з них додати до ваших інтересів для персоналізованого ранжування.</string>
+    <string name="feeds_suggested_interests_skip">Пропустити</string>
     <string name="feeds_tag_more">Налаштувати інтерес</string>
     <string name="feeds_tag_more_up">Показувати більше подібного</string>
     <string name="feeds_tag_more_down">Показувати менше подібного</string>
@@ -214,6 +214,7 @@
         <item quantity="many">%d нових дописів</item>
         <item quantity="other">%d нового допису</item>
     </plurals>
+    <string name="feeds_caught_up">Ви переглянули все</string>
     <string name="feeds_all_caught_up">Все переглянуто</string>
     <string name="feeds_view_all_posts">Переглянути всі дописи</string>
 </resources>

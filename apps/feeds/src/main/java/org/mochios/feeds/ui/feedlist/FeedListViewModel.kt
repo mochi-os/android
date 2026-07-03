@@ -8,8 +8,11 @@ package org.mochios.feeds.ui.feedlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -31,6 +34,11 @@ class FeedListViewModel @Inject constructor(
     private val _feeds = MutableStateFlow<List<Feed>>(emptyList())
     val feeds: StateFlow<List<Feed>> = _feeds.asStateFlow()
 
+    // Whether the server has an AI provider configured; gates the AI sort
+    // option offered for every feed.
+    private val _hasAi = MutableStateFlow(false)
+    val hasAi: StateFlow<Boolean> = _hasAi.asStateFlow()
+
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
@@ -49,6 +57,11 @@ class FeedListViewModel @Inject constructor(
     private val _isCreating = MutableStateFlow(false)
     val isCreating: StateFlow<Boolean> = _isCreating.asStateFlow()
 
+    // Emits the new feed's id right after a successful create, so the screen can
+    // open it (landing on its empty "create the first post" state).
+    private val _feedCreated = MutableSharedFlow<String>()
+    val feedCreated: SharedFlow<String> = _feedCreated.asSharedFlow()
+
     private val _currentSort = MutableStateFlow("")
     val currentSort: StateFlow<String> = _currentSort.asStateFlow()
 
@@ -65,6 +78,17 @@ class FeedListViewModel @Inject constructor(
     init {
         loadFeeds()
         loadGlobalSort()
+        observeSubscriptionChanges()
+    }
+
+    // Reload the drawer whenever the viewer subscribes to or unsubscribes from a
+    // feed, so the list stays correct even when no navigation recreates this VM.
+    private fun observeSubscriptionChanges() {
+        viewModelScope.launch {
+            repository.subscriptionChanges.collect {
+                loadFeeds()
+            }
+        }
     }
 
     private fun loadGlobalSort() {
@@ -94,9 +118,11 @@ class FeedListViewModel @Inject constructor(
             _isLoading.value = true
             _error.value = null
             try {
-                val feedList = repository.listFeeds()
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                val info = repository.getFeedsInfo()
+                val feedList = info.feeds
+                    .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
+                _hasAi.value = info.hasAi
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -110,9 +136,11 @@ class FeedListViewModel @Inject constructor(
         viewModelScope.launch {
             _isRefreshing.value = true
             try {
-                val feedList = repository.listFeeds()
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                val info = repository.getFeedsInfo()
+                val feedList = info.feeds
+                    .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
+                _hasAi.value = info.hasAi
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -137,9 +165,10 @@ class FeedListViewModel @Inject constructor(
             _isCreating.value = true
             _createError.value = null
             try {
-                repository.createFeed(name, privacy, memories)
+                val feed = repository.createFeed(name, privacy, memories)
                 _showCreateDialog.value = false
                 refresh()
+                _feedCreated.emit(feed.fingerprint.ifEmpty { feed.id })
             } catch (e: Exception) {
                 _createError.value = e.toMochiError()
             } finally {
@@ -201,11 +230,21 @@ class FeedListViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Re-fetch the feed list without surfacing a loading or refreshing
+     * indicator, so the drawer's unread badges reflect server state after an
+     * action elsewhere (e.g. marking a feed read).
+     */
+    fun refreshSilently() {
+        viewModelScope.launch { refreshFeedSilently() }
+    }
+
     private suspend fun refreshFeedSilently() {
         try {
-            val feedList = repository.listFeeds()
-                .sortedWith(compareBy(NaturalCompare) { it.name })
-            _feeds.value = feedList
+            val info = repository.getFeedsInfo()
+            _feeds.value = info.feeds
+                .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
+            _hasAi.value = info.hasAi
         } catch (_: Exception) {
             // Silent refresh failure
         }

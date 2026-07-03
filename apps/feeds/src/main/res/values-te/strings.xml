@@ -16,8 +16,6 @@
     <string name="feeds_settings">సెట్టింగ్‌లు</string>
     <string name="feeds_no_posts_yet">ఇంకా పోస్ట్‌లు లేవు</string>
     <string name="feeds_default_sort">డిఫాల్ట్ క్రమబద్ధీకరణ</string>
-    <string name="feeds_suggested_interests_add">జోడించండి</string>
-    <string name="feeds_suggested_interests_dismiss">దాచండి</string>
     <string name="feeds_unread">చదవనివి</string>
     <string name="feeds_filter_all">అన్నీ</string>
     <string name="feeds_sort_label">సార్ట్ చేయండి</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">సర్వర్: %1$s</string>
     <string name="feeds_suggested_interests">సూచించిన ఆసక్తులు</string>
     <string name="feeds_suggested_interests_empty">ఇంకా సూచనలు లేవు</string>
-    <string name="feeds_suggested_interests_count">%1$d పోస్ట్‌లు</string>
+    <string name="feeds_suggested_interests_title">%1$s నుండి ఆసక్తులను జోడించాలా?</string>
+    <string name="feeds_suggested_interests_subtitle">ఈ ఫీడ్ ఈ అంశాలను కవర్ చేస్తుంది. వ్యక్తిగతీకరించిన ర్యాంకింగ్ కోసం మీ ఆసక్తులకు వేటిని జోడించాలో ఎంచుకోండి.</string>
+    <string name="feeds_suggested_interests_skip">దాటవేయి</string>
     <string name="feeds_tag_more">ఆసక్తిని సర్దుబాటు చేయండి</string>
     <string name="feeds_tag_more_up">ఇలాంటివి మరిన్ని చూపించు</string>
     <string name="feeds_tag_more_down">ఇలాంటివి తక్కువగా చూపించు</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d కొత్త పోస్ట్</item>
         <item quantity="other">%d కొత్త పోస్ట్‌లు</item>
     </plurals>
+    <string name="feeds_caught_up">మీరు అన్నీ చూశారు</string>
     <string name="feeds_all_caught_up">అన్నీ చూసేశారు</string>
     <string name="feeds_view_all_posts">అన్ని పోస్ట్‌లను వీక్షించండి</string>
 </resources>

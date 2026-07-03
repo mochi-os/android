@@ -65,6 +65,10 @@
     <string name="notifications_open">خبرتیاوې</string>
     <string name="notifications_title">خبرتیاوې</string>
     <string name="notifications_empty">هیڅ خبرتیاوې نشته</string>
+    <string name="notifications_empty_unread">هرڅه دې ولوستل</string>
+    <string name="notifications_tab_unread">نالوستل شوي</string>
+    <string name="notifications_tab_unread_count">نالوستل شوي (%1$d)</string>
+    <string name="notifications_tab_all">ټول</string>
     <string name="notifications_mark_all_read">ټول د لوستل شویو په توګه نښه کړئ</string>
     <string name="notifications_clear_all">ټول پاک کړئ</string>
     <string name="notifications_loading">بار کیږي…</string>

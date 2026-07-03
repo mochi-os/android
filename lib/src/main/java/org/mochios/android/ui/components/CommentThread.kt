@@ -107,7 +107,7 @@ private fun CommentItem(
     var showReplyField by rememberSaveable { mutableStateOf(false) }
     var replyText by rememberSaveable { mutableStateOf("") }
     var showEditField by rememberSaveable { mutableStateOf(false) }
-    var editText by rememberSaveable { mutableStateOf(comment.bodyMarkdown.ifBlank { comment.text }) }
+    var editText by rememberSaveable { mutableStateOf(comment.bodyMarkdown.orEmpty().ifBlank { comment.text }) }
     var showMenu by remember { mutableStateOf(false) }
 
     Column(
@@ -220,7 +220,7 @@ private fun CommentItem(
             )
             TextButton(onClick = {
                 showEditField = false
-                editText = comment.bodyMarkdown.ifBlank { comment.text }
+                editText = comment.bodyMarkdown.orEmpty().ifBlank { comment.text }
             }) {
                 Text(stringResource(R.string.common_cancel))
             }

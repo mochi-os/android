@@ -55,47 +55,60 @@ fun PostBody(
     passThroughTouches: Boolean = false,
     titleFontSize: TextUnit = 18.sp,
     titleBodyGap: Dp = 4.dp,
+    includeTitle: Boolean = true,
+    stripTrailingLink: Boolean = false,
     onClick: (() -> Unit)? = null,
 ) {
     var altText by remember { mutableStateOf<String?>(null) }
     val showAlt: (String) -> Unit = { altText = it }
 
     val rawTitle = post.data?.rss?.title.orEmpty()
-    val title = rawTitle.trim()
-    val body = post.body
-    val hasTitle = title.isNotEmpty() && body.startsWith(rawTitle)
+    val title = rssDisplayTitle(post)
+    // Body text with the RSS title line stripped when present, so the title
+    // isn't repeated — whether it's rendered here or hoisted by the caller
+    // (e.g. the feed card renders it above the byline via [PostTitle]).
+    val bodyContent = run {
+        val withoutTitle = if (title != null) {
+            post.body.substring(rawTitle.length).trimStart('\n', ' ')
+        } else {
+            post.body
+        }
+        // For RSS posts the body ends with the raw article link. The feed card
+        // drops it for a cleaner preview — the title and body still open the
+        // article — while the detail screen keeps it.
+        val rssLink = post.data?.rss?.link.orEmpty()
+        if (stripTrailingLink && rssLink.isNotEmpty() && withoutTitle.endsWith(rssLink)) {
+            withoutTitle.substring(0, withoutTitle.length - rssLink.length).trimEnd('\n', ' ')
+        } else {
+            withoutTitle
+        }
+    }
+    val truncated = fillHeight || maxLines != Int.MAX_VALUE
 
-    if (!hasTitle) {
-        HtmlContent(
-            html = body,
-            modifier = modifier,
-            maxLines = maxLines,
-            passThroughTouches = passThroughTouches,
-            clampToBoundedHeight = fillHeight,
-            onClick = onClick,
-            onImageLongPress = showAlt,
-        )
-    } else {
-        val rest = body.substring(rawTitle.length).trimStart('\n', ' ')
-        val truncated = fillHeight || maxLines != Int.MAX_VALUE
-        val titleModifier = Modifier
-            .fillMaxWidth()
-            .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier)
-
-        Column(modifier = modifier) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.Bold,
-                fontSize = titleFontSize,
-                maxLines = if (truncated) 3 else Int.MAX_VALUE,
-                overflow = TextOverflow.Ellipsis,
-                modifier = titleModifier,
+    if (title == null || !includeTitle) {
+        if (bodyContent.isNotEmpty()) {
+            HtmlContent(
+                html = bodyContent,
+                modifier = modifier,
+                maxLines = maxLines,
+                passThroughTouches = passThroughTouches,
+                clampToBoundedHeight = fillHeight,
+                onClick = onClick,
+                onImageLongPress = showAlt,
             )
-            if (rest.isNotEmpty()) {
+        }
+    } else {
+        Column(modifier = modifier) {
+            PostTitle(
+                title = title,
+                fontSize = titleFontSize,
+                truncated = truncated,
+                onClick = onClick,
+            )
+            if (bodyContent.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(titleBodyGap))
                 HtmlContent(
-                    html = rest,
+                    html = bodyContent,
                     modifier = if (fillHeight) {
                         Modifier
                             .fillMaxWidth()
@@ -124,4 +137,42 @@ fun PostBody(
             },
         )
     }
+}
+
+/**
+ * The RSS title to render as a heading, or null when the body has no leading
+ * title line (a plain, non-RSS post). The check mirrors [PostBody]: a title
+ * counts only when the body actually starts with it, so we never duplicate or
+ * mis-strip content.
+ */
+fun rssDisplayTitle(post: Post): String? {
+    val rawTitle = post.data?.rss?.title.orEmpty()
+    val title = rawTitle.trim()
+    return if (title.isNotEmpty() && post.body.startsWith(rawTitle)) title else null
+}
+
+/**
+ * The post title as a bold, slightly-larger heading line. Shared by [PostBody]
+ * and callers that hoist the title out to control its placement (e.g. the feed
+ * card, which shows it above the source/time byline).
+ */
+@Composable
+fun PostTitle(
+    title: String,
+    modifier: Modifier = Modifier,
+    fontSize: TextUnit = 18.sp,
+    truncated: Boolean = false,
+    onClick: (() -> Unit)? = null,
+) {
+    Text(
+        text = title,
+        style = MaterialTheme.typography.bodyLarge,
+        fontWeight = FontWeight.Bold,
+        fontSize = fontSize,
+        maxLines = if (truncated) 3 else Int.MAX_VALUE,
+        overflow = TextOverflow.Ellipsis,
+        modifier = modifier
+            .fillMaxWidth()
+            .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier),
+    )
 }

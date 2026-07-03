@@ -16,8 +16,6 @@
     <string name="feeds_settings">Sozlamalar</string>
     <string name="feeds_no_posts_yet">Hozircha postlar yoʻq</string>
     <string name="feeds_default_sort">Standart saralash</string>
-    <string name="feeds_suggested_interests_add">Qoʻshish</string>
-    <string name="feeds_suggested_interests_dismiss">Yashirish</string>
     <string name="feeds_unread">Oʻqilmagan</string>
     <string name="feeds_filter_all">Hammasi</string>
     <string name="feeds_sort_label">Saralash</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Tavsiya etilgan qiziqishlar</string>
     <string name="feeds_suggested_interests_empty">Hozircha tavsiyalar yo\'q</string>
-    <string name="feeds_suggested_interests_count">%1$d ta post</string>
+    <string name="feeds_suggested_interests_title">%1$s dan qiziqishlar qoʻshilsinmi?</string>
+    <string name="feeds_suggested_interests_subtitle">Bu tasma ushbu mavzularni qamrab oladi. Shaxsiylashtirilgan tartiblash uchun qiziqishlaringizga qaysilarini qoʻshishni tanlang.</string>
+    <string name="feeds_suggested_interests_skip">Oʻtkazib yuborish</string>
     <string name="feeds_tag_more">Qiziqishni sozlash</string>
     <string name="feeds_tag_more_up">Shunga o\'xshashlarni ko\'proq ko\'rsatish</string>
     <string name="feeds_tag_more_down">Shunga o\'xshashlarni kamroq ko\'rsatish</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d yangi post</item>
         <item quantity="other">%d yangi post</item>
     </plurals>
+    <string name="feeds_caught_up">Hammasini ko‘rdingiz</string>
     <string name="feeds_all_caught_up">Hammasi koʻrildi</string>
     <string name="feeds_view_all_posts">Barcha postlarni koʻrish</string>
 </resources>

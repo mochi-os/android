@@ -17,18 +17,25 @@ import android.webkit.WebViewClient
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
@@ -49,6 +56,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -69,24 +77,29 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.feeds.R
+import org.mochios.feeds.ui.component.CommentItem
+import org.mochios.feeds.ui.component.flattenComments
+import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
 
 // Chrome-on-Android UA. Some publishers' bot/embed detection 403s the default
 // "wv" WebView user agent; impersonating regular Chrome makes most articles load.
 private const val CHROME_USER_AGENT =
     "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) " +
-        "Chrome/127.0.0.0 Mobile Safari/537.36"
+            "Chrome/127.0.0.0 Mobile Safari/537.36"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -105,7 +118,6 @@ fun PostSourceScreen(
     val isSendingComment by viewModel.isSendingComment.collectAsState()
     val replyingTo by viewModel.replyingTo.collectAsState()
     val actionError by viewModel.actionError.collectAsState()
-    val tags by viewModel.tags.collectAsState()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showDeleteCommentDialog by remember { mutableStateOf<String?>(null) }
@@ -147,6 +159,7 @@ fun PostSourceScreen(
             sheetState.currentValue == SheetValue.Expanded -> {
                 coroutineScope.launch { sheetState.partialExpand() }
             }
+
             canGoBack -> webView?.goBack()
         }
     }
@@ -220,7 +233,12 @@ fun PostSourceScreen(
                                 onClick = {
                                     showOverflowMenu = false
                                     try {
-                                        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(sourceUrl)))
+                                        context.startActivity(
+                                            Intent(
+                                                Intent.ACTION_VIEW,
+                                                Uri.parse(sourceUrl)
+                                            )
+                                        )
                                     } catch (_: Exception) {
                                         // invalid URL
                                     }
@@ -275,14 +293,10 @@ fun PostSourceScreen(
                 onCancelReply = { viewModel.setReplyingTo(null) },
                 onSearchMembers = { viewModel.searchMembers(it) },
                 commentCount = post?.let { countComments(it.comments) } ?: 0,
-                tags = tags,
-                onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) },
-                showAddTagDialog = { showAddTagDialog = true },
                 showDeleteCommentDialog = { showDeleteCommentDialog = it },
                 onExpand = {
                     coroutineScope.launch { sheetState.expand() }
-                },
-                onBack = onNavigateBack,
+                }
             )
         }
     ) { paddingValues ->
@@ -310,7 +324,8 @@ fun PostSourceScreen(
                         // over HTTP even when the article itself is HTTPS;
                         // compatibility mode lets those assets load instead
                         // of leaving a broken article.
-                        settings.mixedContentMode = android.webkit.WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE
+                        settings.mixedContentMode =
+                            android.webkit.WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE
                         webViewClient = object : WebViewClient() {
                             override fun shouldOverrideUrlLoading(
                                 view: WebView?,
@@ -407,7 +422,10 @@ fun PostSourceScreen(
                         viewModel.deletePost { onNavigateBack() }
                     }
                 ) {
-                    Text(stringResource(MochiR.string.common_delete), color = MaterialTheme.colorScheme.error)
+                    Text(
+                        stringResource(MochiR.string.common_delete),
+                        color = MaterialTheme.colorScheme.error
+                    )
                 }
             },
             dismissButton = {
@@ -430,7 +448,10 @@ fun PostSourceScreen(
                         viewModel.deleteComment(commentId)
                     }
                 ) {
-                    Text(stringResource(MochiR.string.common_delete), color = MaterialTheme.colorScheme.error)
+                    Text(
+                        stringResource(MochiR.string.common_delete),
+                        color = MaterialTheme.colorScheme.error
+                    )
                 }
             },
             dismissButton = {
@@ -480,13 +501,21 @@ private fun LoadErrorOverlay(
             Spacer(modifier = Modifier.height(16.dp))
             Row {
                 TextButton(onClick = onRetry) {
-                    Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Icon(
+                        Icons.Default.Refresh,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(stringResource(MochiR.string.common_retry))
                 }
                 Spacer(modifier = Modifier.width(8.dp))
                 TextButton(onClick = onOpenExternal) {
-                    Icon(Icons.Default.OpenInBrowser, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Icon(
+                        Icons.Default.OpenInBrowser,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(stringResource(R.string.feeds_open_in_browser))
                 }
@@ -514,55 +543,71 @@ private fun PostSourceSheet(
     onCancelReply: () -> Unit,
     onSearchMembers: suspend (String) -> List<org.mochios.android.ui.components.MentionSuggestion>,
     commentCount: Int,
-    tags: List<org.mochios.feeds.model.Tag>,
-    onAdjustInterest: (org.mochios.feeds.model.Tag, String) -> Unit,
-    showAddTagDialog: () -> Unit,
     showDeleteCommentDialog: (String) -> Unit,
-    onExpand: () -> Unit,
-    onBack: () -> Unit,
+    onExpand: () -> Unit
 ) {
-    Column(modifier = Modifier.fillMaxSize()) {
+    val post by viewModel.post.collectAsState()
+    val editingCommentId by viewModel.editingCommentId.collectAsState()
+    val editCommentText by viewModel.editCommentText.collectAsState()
+    val currentUserId by viewModel.currentUserId.collectAsState()
+    val flatComments = flattenComments(post?.comments.orEmpty(), 0)
+    Column {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(40.dp)
-                .padding(horizontal = 16.dp),
+                .padding(horizontal = 8.dp),
+            horizontalArrangement = Arrangement.End,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(
-                Icons.Default.ChatBubbleOutline,
-                contentDescription = null,
-                modifier = Modifier.size(20.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = pluralStringResource(R.plurals.feeds_comment_count, commentCount, commentCount),
-                style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.weight(1f)
-            )
-            PostTagsButton(
-                tags = tags,
-                onAddTag = showAddTagDialog,
-                onAdjustInterest = onAdjustInterest,
-            )
+            // Comment icon + count, right-aligned and styled like the former
+            // "View post" action. Tapping it expands the sheet.
             TextButton(onClick = onExpand) {
-                Text(stringResource(R.string.feeds_view_post))
+                Icon(
+                    Icons.Default.ChatBubbleOutline,
+                    contentDescription = null,
+                    modifier = Modifier.size(20.dp),
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = pluralStringResource(
+                        R.plurals.feeds_comment_count,
+                        commentCount,
+                        commentCount
+                    ),
+                )
             }
         }
 
-        PostDetailContent(
-            viewModel = viewModel,
-            showAddTagDialog = showAddTagDialog,
-            showDeleteCommentDialog = showDeleteCommentDialog,
-            onBack = onBack,
+        // Comments only — the article is shown in the WebView above, and the
+        // post header (author, time) plus reactions are intentionally omitted.
+        LazyColumn(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth(),
-            contentPadding = PaddingValues(bottom = 8.dp),
-            showBody = false
-        )
+            contentPadding = PaddingValues(bottom = 8.dp)
+        ) {
+            items(flatComments, key = { entry -> entry.first.id }) { entry ->
+                val (comment, depth) = entry
+                CommentItem(
+                    comment = comment,
+                    depth = depth,
+                    avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
+                    feedId = viewModel.feedId,
+                    isEditing = editingCommentId == comment.id,
+                    editText = if (editingCommentId == comment.id) editCommentText else "",
+                    onEditTextChange = { viewModel.setEditCommentText(it) },
+                    onSaveEdit = { viewModel.saveEditComment() },
+                    onCancelEdit = { viewModel.cancelEditComment() },
+                    onReply = { viewModel.setReplyingTo(comment.id) },
+                    onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.body)) },
+                    onDelete = { showDeleteCommentDialog(comment.id) },
+                    onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },
+                    canManage = permissions.manage,
+                    isMine = currentUserId != null && comment.authorId == currentUserId,
+                )
+            }
+        }
 
         if (permissions.comment) {
             CommentInputBar(
@@ -588,3 +633,4 @@ private fun countComments(comments: List<org.mochios.android.model.Comment>): In
     }
     return n
 }
+

@@ -5,7 +5,6 @@
 
 package org.mochios.feeds.ui.settings
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -14,14 +13,20 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.userMessage
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -38,12 +43,32 @@ fun SourcesScreen(
     viewModel: FeedSettingsViewModel = hiltViewModel(),
 ) {
     val feedInfo by viewModel.feedInfo.collectAsState()
+    val error by viewModel.error.collectAsState()
+    val actionMessage by viewModel.actionMessage.collectAsState()
 
-    androidx.compose.runtime.LaunchedEffect(Unit) {
+    val snackbarHostState = remember { SnackbarHostState() }
+    val context = LocalContext.current
+
+    LaunchedEffect(Unit) {
         viewModel.loadSources()
     }
 
+    LaunchedEffect(error) {
+        error?.let { current ->
+            snackbarHostState.showSnackbar(current.userMessage())
+            viewModel.clearError()
+        }
+    }
+
+    LaunchedEffect(actionMessage) {
+        actionMessage?.let { messageRes ->
+            snackbarHostState.showSnackbar(context.getString(messageRes))
+            viewModel.clearActionMessage()
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -64,8 +89,10 @@ fun SourcesScreen(
             )
         },
     ) { padding ->
-        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            SourcesTab(viewModel = viewModel, scrollToSourceUrl = highlightSource)
-        }
+        SourcesTab(
+            viewModel = viewModel,
+            scrollToSourceUrl = highlightSource,
+            modifier = Modifier.fillMaxSize().padding(padding),
+        )
     }
 }

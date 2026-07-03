@@ -16,8 +16,6 @@
     <string name="feeds_settings">Ezarpenak</string>
     <string name="feeds_no_posts_yet">Oraindik argitalpenik ez</string>
     <string name="feeds_default_sort">Lehenetsitako ordena</string>
-    <string name="feeds_suggested_interests_add">Gehitu</string>
-    <string name="feeds_suggested_interests_dismiss">Ezkutatu</string>
     <string name="feeds_unread">Irakurri gabea</string>
     <string name="feeds_filter_all">Guztiak</string>
     <string name="feeds_sort_label">Ordenatu</string>
@@ -125,7 +123,9 @@
     <string name="feeds_identity_server">Zerbitzaria: %1$s</string>
     <string name="feeds_suggested_interests">Iradokitako interesak</string>
     <string name="feeds_suggested_interests_empty">Oraindik iradokizunik ez</string>
-    <string name="feeds_suggested_interests_count">%1$d argitalpen</string>
+    <string name="feeds_suggested_interests_title">Gehitu %1$s(e)tik interesak?</string>
+    <string name="feeds_suggested_interests_subtitle">Jario honek gai hauek lantzen ditu. Hautatu zein gehitu zure interesetara sailkapen pertsonalizatua egiteko.</string>
+    <string name="feeds_suggested_interests_skip">Saltatu</string>
     <string name="feeds_tag_more">Doitu interesa</string>
     <string name="feeds_tag_more_up">Erakutsi honelako gehiago</string>
     <string name="feeds_tag_more_down">Erakutsi honelako gutxiago</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d argitalpen berri</item>
         <item quantity="other">%d argitalpen berri</item>
     </plurals>
+    <string name="feeds_caught_up">Dena ikusi duzu</string>
     <string name="feeds_all_caught_up">Dena eguneratuta</string>
     <string name="feeds_view_all_posts">Ikusi mezu guztiak</string>
 </resources>

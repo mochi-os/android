@@ -10,8 +10,11 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -54,6 +57,11 @@ class FindFeedsViewModel @Inject constructor(
 
     private val _isProbing = MutableStateFlow(false)
     val isProbing: StateFlow<Boolean> = _isProbing.asStateFlow()
+
+    // One-shot: the feed to open after a successful subscribe. The screen
+    // navigates into that feed, whose screen reloads and shows the suggestions.
+    private val _navigateToFeed = MutableSharedFlow<String>(extraBufferCapacity = 1)
+    val navigateToFeed: SharedFlow<String> = _navigateToFeed.asSharedFlow()
 
     private var searchJob: Job? = null
 
@@ -125,12 +133,6 @@ class FindFeedsViewModel @Inject constructor(
         }
     }
 
-    private val _interestSuggestions = MutableStateFlow<List<org.mochios.feeds.api.InterestSuggestion>>(emptyList())
-    val interestSuggestions: StateFlow<List<org.mochios.feeds.api.InterestSuggestion>> = _interestSuggestions.asStateFlow()
-
-    private val _justSubscribedFeed = MutableStateFlow<String?>(null)
-    val justSubscribedFeed: StateFlow<String?> = _justSubscribedFeed.asStateFlow()
-
     fun subscribe(feed: Feed) {
         val feedId = feed.fingerprint.ifEmpty { feed.id }
         if (feedId.isEmpty()) return
@@ -138,41 +140,28 @@ class FindFeedsViewModel @Inject constructor(
         viewModelScope.launch {
             _subscribingFeed.value = feedId
             try {
-                repository.subscribeFeed(feedId, feed.server)
+                // The subscribe request identifies the feed by its full id; the
+                // fingerprint-preferred [feedId] is only the local tracking key.
+                repository.subscribeFeed(feed.id.ifEmpty { feed.fingerprint }, feed.server)
                 _subscribedFeeds.value = _subscribedFeeds.value + feedId
-                // Load interest suggestions for the newly subscribed feed
+                // Fetch interest suggestions and stash them BEFORE navigating, so
+                // they're ready when the feed screen opens — and not cancelled
+                // when this screen (and its ViewModel scope) is popped.
                 try {
                     val suggestions = repository.getSuggestedInterests(feedId)
                     if (suggestions.isNotEmpty()) {
-                        _interestSuggestions.value = suggestions
-                        _justSubscribedFeed.value = feedId
+                        repository.setPendingInterestSuggestion(feedId, suggestions)
                     }
                 } catch (_: Exception) { }
+                // Open the just-subscribed feed; its screen reloads and shows the
+                // suggestions prompt.
+                _navigateToFeed.emit(feedId)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
                 _subscribingFeed.value = null
             }
         }
-    }
-
-    fun addInterest(suggestion: org.mochios.feeds.api.InterestSuggestion) {
-        val feedId = _justSubscribedFeed.value ?: return
-        viewModelScope.launch {
-            try {
-                repository.adjustInterest(feedId, qid = suggestion.qid.takeIf { it.isNotEmpty() }, label = suggestion.label, direction = "up")
-                _interestSuggestions.value = _interestSuggestions.value - suggestion
-            } catch (_: Exception) { }
-        }
-    }
-
-    fun dismissInterest(suggestion: org.mochios.feeds.api.InterestSuggestion) {
-        _interestSuggestions.value = _interestSuggestions.value - suggestion
-    }
-
-    fun dismissAllSuggestions() {
-        _interestSuggestions.value = emptyList()
-        _justSubscribedFeed.value = null
     }
 
     fun clearError() {

@@ -65,6 +65,10 @@
     <string name="notifications_open">Notificacions</string>
     <string name="notifications_title">Notificacions</string>
     <string name="notifications_empty">Sense notificacions</string>
+    <string name="notifications_empty_unread">Estàs al dia</string>
+    <string name="notifications_tab_unread">No llegides</string>
+    <string name="notifications_tab_unread_count">No llegides (%1$d)</string>
+    <string name="notifications_tab_all">Totes</string>
     <string name="notifications_mark_all_read">Marca-ho tot com a llegit</string>
     <string name="notifications_clear_all">Esborra-ho tot</string>
     <string name="notifications_loading">S\'està carregant…</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Socruithe</string>
     <string name="feeds_no_posts_yet">Níl aon phostáil fós</string>
     <string name="feeds_default_sort">Sórtáil réamhshocraithe</string>
-    <string name="feeds_suggested_interests_add">Cuir leis</string>
-    <string name="feeds_suggested_interests_dismiss">Folaigh</string>
     <string name="feeds_unread">Gan léamh</string>
     <string name="feeds_filter_all">Iomlán</string>
     <string name="feeds_sort_label">Sórtáil</string>
@@ -121,7 +119,9 @@
     <string name="feeds_identity_server">Freastalaí: %1$s</string>
     <string name="feeds_suggested_interests">Sainspéiseanna molta</string>
     <string name="feeds_suggested_interests_empty">Níl aon mholtaí ann fós</string>
-    <string name="feeds_suggested_interests_count">%1$d postáil</string>
+    <string name="feeds_suggested_interests_title">Cuir sainspéiseanna ó %1$s leis?</string>
+    <string name="feeds_suggested_interests_subtitle">Clúdaíonn an fotha seo na hábhair seo. Roghnaigh cé acu a chuirfear le do shainspéiseanna le haghaidh rangú pearsantaithe.</string>
+    <string name="feeds_suggested_interests_skip">Scipeáil</string>
     <string name="feeds_tag_more">Tiúin sainspéis</string>
     <string name="feeds_tag_more_up">Taispeáin tuilleadh den chineál seo</string>
     <string name="feeds_tag_more_down">Taispeáin níos lú den chineál seo</string>
@@ -215,6 +215,7 @@
         <item quantity="many">%d bpostáil nua</item>
         <item quantity="other">%d postáil nua</item>
     </plurals>
+    <string name="feeds_caught_up">Tá tú cothrom le dáta</string>
     <string name="feeds_all_caught_up">Tá gach rud déanta</string>
     <string name="feeds_view_all_posts">Féach ar gach postáil</string>
 </resources>

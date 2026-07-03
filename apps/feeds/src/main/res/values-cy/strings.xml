@@ -16,8 +16,6 @@
     <string name="feeds_settings">Gosodiadau</string>
     <string name="feeds_no_posts_yet">Dim postiadau eto</string>
     <string name="feeds_default_sort">Trefnu diofyn</string>
-    <string name="feeds_suggested_interests_add">Ychwanegu</string>
-    <string name="feeds_suggested_interests_dismiss">Cuddio</string>
     <string name="feeds_unread">Heb ei ddarllen</string>
     <string name="feeds_filter_all">Pob un</string>
     <string name="feeds_sort_label">Trefnu</string>
@@ -138,7 +136,9 @@
     <string name="feeds_identity_server">Gweinydd: %1$s</string>
     <string name="feeds_suggested_interests">Diddordebau a awgrymir</string>
     <string name="feeds_suggested_interests_empty">Dim awgrymiadau eto</string>
-    <string name="feeds_suggested_interests_count">%1$d post</string>
+    <string name="feeds_suggested_interests_title">Ychwanegu diddordebau o %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Mae\'r ffrwd hon yn ymdrin â\'r pynciau hyn. Dewiswch pa rai i\'w hychwanegu at eich diddordebau ar gyfer trefnu wedi\'i bersonoli.</string>
+    <string name="feeds_suggested_interests_skip">Hepgor</string>
     <string name="feeds_tag_more">Tiwnio diddordeb</string>
     <string name="feeds_tag_more_up">Dangos mwy fel hyn</string>
     <string name="feeds_tag_more_down">Dangos llai fel hyn</string>
@@ -215,6 +215,7 @@
         <item quantity="many">%d postiad newydd</item>
         <item quantity="other">%d postiad newydd</item>
     </plurals>
+    <string name="feeds_caught_up">Rydych wedi dal i fyny</string>
     <string name="feeds_all_caught_up">Wedi dal i fyny</string>
     <string name="feeds_view_all_posts">Gweld pob postiad</string>
 </resources>

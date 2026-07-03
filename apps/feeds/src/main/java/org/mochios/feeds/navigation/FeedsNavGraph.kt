@@ -212,6 +212,11 @@ fun NavGraphBuilder.feedsNavGraph(
                 // come back as the destination).
                 navController.popBackStack(FeedsApp.ROUTER, inclusive = false)
             },
+            onUnsubscribed = {
+                // Same as delete: the user no longer follows this feed, so
+                // bounce to the router rather than back to the now-empty feed.
+                navController.popBackStack(FeedsApp.ROUTER, inclusive = false)
+            },
         )
     }
 

@@ -62,11 +62,23 @@ class NewChatViewModel @Inject constructor(
                     .takeIf { it.isNotBlank() }
                     ?.let { id -> friends.firstOrNull { it.id == id } }
                 if (target != null) {
-                    val chatId = target.chatId.ifBlank {
-                        val response = repository.createChat(target.name, listOf(target.id))
-                        response.fingerprint.ifEmpty { response.id }
+                    try {
+                        val chatId = target.chatId.ifBlank {
+                            val response = repository.createChat(target.name, listOf(target.id))
+                            response.fingerprint.ifEmpty { response.id }
+                        }
+                        _uiState.value = _uiState.value.copy(friends = friends, createdChatId = chatId)
+                    } catch (e: Exception) {
+                        // Create failed: drop the user onto the picker with the friend
+                        // pre-selected and the error shown, so they can retry instead of
+                        // hitting a dead-end error screen.
+                        _uiState.value = _uiState.value.copy(
+                            friends = friends,
+                            isLoading = false,
+                            selected = setOf(target.id),
+                            error = e.toMochiError(),
+                        )
                     }
-                    _uiState.value = _uiState.value.copy(friends = friends, createdChatId = chatId)
                     return@launch
                 }
 

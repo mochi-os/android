@@ -65,6 +65,10 @@
     <string name="notifications_open">Arifa</string>
     <string name="notifications_title">Arifa</string>
     <string name="notifications_empty">Hakuna arifa</string>
+    <string name="notifications_empty_unread">Umemaliza zote</string>
+    <string name="notifications_tab_unread">Ambazo hazijasomwa</string>
+    <string name="notifications_tab_unread_count">Ambazo hazijasomwa (%1$d)</string>
+    <string name="notifications_tab_all">Zote</string>
     <string name="notifications_mark_all_read">Weka zote zimesomwa</string>
     <string name="notifications_clear_all">Futa vyote</string>
     <string name="notifications_loading">Inapakia…</string>

@@ -5,25 +5,21 @@
 
 package org.mochios.feeds.ui.post
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -37,11 +33,12 @@ import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.ThumbDown
-import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material.icons.filled.ThumbDown
+import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
@@ -70,40 +67,40 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import androidx.hilt.navigation.compose.hiltViewModel
+import coil3.compose.AsyncImage
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
-import org.mochios.android.model.Reaction
-import org.mochios.android.model.ReactionCount
-import org.mochios.android.model.ReactionType
 import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.ui.components.EntityAvatar
-import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LocationMapView
-import org.mochios.android.ui.components.VideoEmbed
-import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
-import org.mochios.feeds.ui.component.PostBody
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.VideoEmbed
+import org.mochios.android.ui.components.extractVideos
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.ui.component.CommentItem
+import org.mochios.feeds.ui.component.PostBody
+import org.mochios.feeds.ui.component.currentReactionType
+import org.mochios.feeds.ui.component.flattenComments
+import org.mochios.feeds.ui.component.stripHtml
+import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -152,7 +149,10 @@ fun PostDetailScreen(
                 title = { Text(stringResource(R.string.feeds_post), maxLines = 1) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back)
+                        )
                     }
                 },
                 actions = {
@@ -217,7 +217,10 @@ fun PostDetailScreen(
                         viewModel.deletePost { onNavigateBack() }
                     }
                 ) {
-                    Text(stringResource(MochiR.string.common_delete), color = MaterialTheme.colorScheme.error)
+                    Text(
+                        stringResource(MochiR.string.common_delete),
+                        color = MaterialTheme.colorScheme.error
+                    )
                 }
             },
             dismissButton = {
@@ -241,7 +244,10 @@ fun PostDetailScreen(
                         viewModel.deleteComment(commentId)
                     }
                 ) {
-                    Text(stringResource(MochiR.string.common_delete), color = MaterialTheme.colorScheme.error)
+                    Text(
+                        stringResource(MochiR.string.common_delete),
+                        color = MaterialTheme.colorScheme.error
+                    )
                 }
             },
             dismissButton = {
@@ -285,6 +291,7 @@ internal fun PostDetailContent(
     val isNotFound by viewModel.isNotFound.collectAsState()
     val editingCommentId by viewModel.editingCommentId.collectAsState()
     val editCommentText by viewModel.editCommentText.collectAsState()
+    val currentUserId by viewModel.currentUserId.collectAsState()
     val tags by viewModel.tags.collectAsState()
 
     when {
@@ -293,6 +300,7 @@ internal fun PostDetailContent(
                 CircularProgressIndicator()
             }
         }
+
         isNotFound && post == null -> {
             Box(modifier = modifier) {
                 NotFoundState(
@@ -301,6 +309,7 @@ internal fun PostDetailContent(
                 )
             }
         }
+
         error != null && post == null -> {
             Box(modifier = modifier, contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -316,6 +325,7 @@ internal fun PostDetailContent(
                 }
             }
         }
+
         post != null -> {
             val currentPost = post!!
             LazyColumn(
@@ -332,7 +342,12 @@ internal fun PostDetailContent(
                         onReact = { viewModel.reactToPost(it) },
                         onAddTag = showAddTagDialog,
                         onRemoveTag = { viewModel.removeTag(it) },
-                        onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) },
+                        onAdjustInterest = { tag, direction ->
+                            viewModel.adjustInterest(
+                                tag,
+                                direction
+                            )
+                        },
                         showBody = showBody
                     )
                 }
@@ -354,7 +369,6 @@ internal fun PostDetailContent(
                             comment = comment,
                             depth = depth,
                             avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
-                            serverUrl = viewModel.serverUrl,
                             feedId = viewModel.feedId,
                             isEditing = editingCommentId == comment.id,
                             editText = if (editingCommentId == comment.id) editCommentText else "",
@@ -362,10 +376,21 @@ internal fun PostDetailContent(
                             onSaveEdit = { viewModel.saveEditComment() },
                             onCancelEdit = { viewModel.cancelEditComment() },
                             onReply = { viewModel.setReplyingTo(comment.id) },
-                            onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.body)) },
+                            onEdit = {
+                                viewModel.startEditComment(
+                                    comment.id,
+                                    stripHtml(comment.body)
+                                )
+                            },
                             onDelete = { showDeleteCommentDialog(comment.id) },
-                            onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },
-                            canManage = permissions.manage
+                            onReact = { reaction ->
+                                viewModel.reactToComment(
+                                    comment.id,
+                                    reaction
+                                )
+                            },
+                            canManage = permissions.manage,
+                            isMine = currentUserId != null && comment.authorId == currentUserId,
                         )
                     }
                 }
@@ -419,7 +444,11 @@ private fun PostContent(
             if (memory.yearsAgo > 0) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = pluralStringResource(R.plurals.feeds_memory_years_ago_today, memory.yearsAgo, memory.yearsAgo),
+                    text = pluralStringResource(
+                        R.plurals.feeds_memory_years_ago_today,
+                        memory.yearsAgo,
+                        memory.yearsAgo
+                    ),
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Medium
@@ -457,7 +486,11 @@ private fun PostContent(
                 Spacer(modifier = Modifier.height(4.dp))
                 if (origin != null && destination != null) {
                     Text(
-                        text = stringResource(R.string.feeds_travel_arrow, origin.name, destination.name),
+                        text = stringResource(
+                            R.string.feeds_travel_arrow,
+                            origin.name,
+                            destination.name
+                        ),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -481,7 +514,7 @@ private fun PostContent(
         val checkinWithCoords = post.data?.checkin?.takeIf { it.lat != 0.0 || it.lon != 0.0 }
         val travellingWithCoords = post.data?.travelling?.takeIf {
             (it.origin?.lat != 0.0 || it.origin?.lon != 0.0) &&
-                (it.destination?.lat != 0.0 || it.destination?.lon != 0.0)
+                    (it.destination?.lat != 0.0 || it.destination?.lon != 0.0)
         }
         if (checkinWithCoords != null || travellingWithCoords != null) {
             Spacer(modifier = Modifier.height(8.dp))
@@ -501,7 +534,8 @@ private fun PostContent(
             {
                 try {
                     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                } catch (_: Exception) { /* invalid URL */ }
+                } catch (_: Exception) { /* invalid URL */
+                }
             }
         }
         if (showBody && post.body.isNotEmpty()) {
@@ -578,9 +612,10 @@ private fun PostContent(
             }
         }
 
-        // Reactions, with the tags button on the trailing edge. In the source
-        // sheet (showBody = false) the tags button lives in the sheet header
-        // instead, so it stays reachable from the peek without expanding.
+        // Reaction + tag grouped on the leading edge, matching the feed card's
+        // action bar. In the source sheet (showBody = false) the tags button
+        // lives in the sheet header instead, so it stays reachable from the peek
+        // without expanding.
         Spacer(modifier = Modifier.height(12.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -590,15 +625,22 @@ private fun PostContent(
                 reactions = toReactionCounts(post.reactions, post.myReaction),
                 onReact = onReact,
                 onRemoveReaction = { onReact(post.myReaction) },
-                modifier = Modifier.weight(1f)
+                currentReaction = currentReactionType(post.myReaction),
             )
             if (showBody) {
+                // The reaction add button is a filled circle, so its padding
+                // sits inside the background; this spacer makes the gap to the
+                // tag match the feed's action bar (≈16dp).
+                Spacer(modifier = Modifier.width(8.dp))
                 PostTagsButton(
                     tags = tags,
                     onAddTag = onAddTag,
                     onAdjustInterest = onAdjustInterest,
+                    horizontalPadding = 8.dp,
+                    iconSize = 24.dp,
                 )
             }
+            Spacer(modifier = Modifier.weight(1f))
         }
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -614,6 +656,8 @@ internal fun PostTagsButton(
     tags: List<Tag>,
     onAddTag: () -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
+    horizontalPadding: Dp = 6.dp,
+    iconSize: Dp = 18.dp,
 ) {
     var open by remember { mutableStateOf(false) }
     Box {
@@ -622,33 +666,43 @@ internal fun PostTagsButton(
             modifier = Modifier
                 .clip(RoundedCornerShape(8.dp))
                 .clickable { open = true }
-                .padding(horizontal = 6.dp, vertical = 4.dp)
+                .padding(horizontal = horizontalPadding, vertical = 4.dp)
         ) {
+            val hasTags = tags.isNotEmpty()
+            val tagColor = MaterialTheme.colorScheme.onSurfaceVariant
             Icon(
-                Icons.Default.LocalOffer,
+                if (hasTags) Icons.Filled.LocalOffer else Icons.Outlined.LocalOffer,
                 contentDescription = stringResource(R.string.feeds_tags),
-                modifier = Modifier.size(18.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                modifier = Modifier.size(iconSize),
+                tint = tagColor
             )
-            if (tags.isNotEmpty()) {
+            if (hasTags) {
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
                     text = "${tags.size}",
                     style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    color = tagColor
                 )
             }
         }
         DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             // Close the menu after a thumb tap so the action visibly registers.
-            tags.forEach { tag -> TagMenuRow(tag = tag, onAdjustInterest = { t, d -> onAdjustInterest(t, d); open = false }) }
+            tags.forEach { tag ->
+                TagMenuRow(
+                    tag = tag,
+                    onAdjustInterest = { t, d -> onAdjustInterest(t, d); open = false })
+            }
             if (tags.isNotEmpty()) {
                 HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
             }
             DropdownMenuItem(
                 text = { Text(stringResource(R.string.feeds_add_tag)) },
                 leadingIcon = {
-                    Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
                 },
                 onClick = {
                     open = false
@@ -690,14 +744,20 @@ private fun TagMenuRow(
                     modifier = Modifier.size(16.dp)
                 )
             }
-            IconButton(onClick = { onAdjustInterest(tag, "down") }, modifier = Modifier.size(36.dp)) {
+            IconButton(
+                onClick = { onAdjustInterest(tag, "down") },
+                modifier = Modifier.size(36.dp)
+            ) {
                 Icon(
                     Icons.Default.ThumbDown,
                     contentDescription = stringResource(R.string.feeds_tag_more_down),
                     modifier = Modifier.size(16.dp)
                 )
             }
-            IconButton(onClick = { onAdjustInterest(tag, "remove") }, modifier = Modifier.size(36.dp)) {
+            IconButton(
+                onClick = { onAdjustInterest(tag, "remove") },
+                modifier = Modifier.size(36.dp)
+            ) {
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.feeds_tag_remove),
@@ -715,138 +775,6 @@ private fun interestColor(interest: Double): Color {
     return Color.hsl(hue, 0.8f, 0.45f)
 }
 
-private fun toReactionCounts(reactions: List<Reaction>, myReaction: String): List<ReactionCount> =
-    reactions.groupBy { it.reaction }.mapNotNull { (reaction, list) ->
-        val type = ReactionType.fromString(reaction) ?: return@mapNotNull null
-        ReactionCount(type, list.size, reaction.equals(myReaction, ignoreCase = true))
-    }
-
-@Composable
-private fun CommentItem(
-    comment: Comment,
-    depth: Int,
-    avatarUrl: String,
-    serverUrl: String,
-    feedId: String,
-    isEditing: Boolean,
-    editText: String,
-    onEditTextChange: (String) -> Unit,
-    onSaveEdit: () -> Unit,
-    onCancelEdit: () -> Unit,
-    onReply: () -> Unit,
-    onEdit: () -> Unit,
-    onDelete: () -> Unit,
-    onReact: (String) -> Unit,
-    canManage: Boolean
-) {
-    val startPadding = (16 + depth * 24).coerceAtMost(96).dp
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = startPadding, end = 16.dp, top = 8.dp, bottom = 8.dp)
-    ) {
-        // Comment header
-        val anonymous = stringResource(R.string.feeds_anonymous)
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = comment.name.ifEmpty { anonymous },
-                src = avatarUrl,
-                seed = comment.author,
-                size = 20.dp,
-            )
-            Spacer(modifier = Modifier.width(6.dp))
-            Text(
-                text = comment.name.ifEmpty { anonymous },
-                style = MaterialTheme.typography.labelMedium,
-                fontWeight = FontWeight.SemiBold
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = LocalFormat.current.formatRelativeTime(comment.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            if (comment.edited > 0) {
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = stringResource(MochiR.string.comment_edited),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        }
-
-        Spacer(modifier = Modifier.height(4.dp))
-
-        if (isEditing) {
-            OutlinedTextField(
-                value = editText,
-                onValueChange = onEditTextChange,
-                modifier = Modifier.fillMaxWidth(),
-                minLines = 2
-            )
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.End
-            ) {
-                TextButton(onClick = onCancelEdit) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-                TextButton(onClick = onSaveEdit) {
-                    Text(stringResource(MochiR.string.common_save))
-                }
-            }
-        } else {
-            // Comment body
-            HtmlContent(
-                html = comment.body,
-                modifier = Modifier.fillMaxWidth()
-            )
-
-            // Comment attachments
-            if (comment.attachments.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(4.dp))
-                AttachmentGallery(
-                    attachments = comment.attachments,
-                    urlBuilder = { att ->
-                        att.url ?: "/feeds/$feedId/-/attachments/${att.id}"
-                    },
-                    thumbnailUrlBuilder = { att ->
-                        att.thumbnailUrl ?: "/feeds/$feedId/-/attachments/${att.id}/thumbnail"
-                    }
-                )
-            }
-
-            // Reactions on comment — always shown so users can add their first reaction.
-            Spacer(modifier = Modifier.height(4.dp))
-            ReactionBar(
-                reactions = toReactionCounts(comment.reactions, comment.myReaction),
-                onReact = onReact,
-                onRemoveReaction = { onReact(comment.myReaction) }
-            )
-
-            // Comment actions
-            Row {
-                TextButton(onClick = onReply, modifier = Modifier.height(32.dp)) {
-                    Text(stringResource(MochiR.string.comment_reply), style = MaterialTheme.typography.labelSmall)
-                }
-                if (canManage) {
-                    TextButton(onClick = onEdit, modifier = Modifier.height(32.dp)) {
-                        Text(stringResource(MochiR.string.common_edit), style = MaterialTheme.typography.labelSmall)
-                    }
-                    TextButton(onClick = onDelete, modifier = Modifier.height(32.dp)) {
-                        Text(
-                            stringResource(MochiR.string.common_delete),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.error
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
 
 @Composable
 internal fun CommentInputBar(
@@ -865,11 +793,7 @@ internal fun CommentInputBar(
         shadowElevation = 8.dp,
         color = MaterialTheme.colorScheme.surface
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .imePadding()
-        ) {
+        Column(modifier = Modifier.fillMaxWidth()) {
             if (replyingTo != null) {
                 Row(
                     modifier = Modifier
@@ -931,7 +855,10 @@ internal fun CommentInputBar(
                 verticalAlignment = Alignment.Bottom
             ) {
                 IconButton(onClick = onAddAttachment) {
-                    Icon(Icons.Default.AttachFile, contentDescription = stringResource(R.string.feeds_attach_file))
+                    Icon(
+                        Icons.Default.AttachFile,
+                        contentDescription = stringResource(R.string.feeds_attach_file)
+                    )
                 }
                 MentionTextField(
                     value = text,
@@ -948,9 +875,15 @@ internal fun CommentInputBar(
                     enabled = text.isNotBlank() && !isSending
                 ) {
                     if (isSending) {
-                        CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(20.dp),
+                            strokeWidth = 2.dp
+                        )
                     } else {
-                        Icon(Icons.AutoMirrored.Filled.Send, contentDescription = stringResource(R.string.feeds_send))
+                        Icon(
+                            Icons.AutoMirrored.Filled.Send,
+                            contentDescription = stringResource(R.string.feeds_send)
+                        )
                     }
                 }
             }
@@ -991,28 +924,6 @@ internal fun AddTagDialog(
             }
         }
     )
-}
-
-private fun flattenComments(comments: List<Comment>, depth: Int): List<Pair<Comment, Int>> {
-    val result = mutableListOf<Pair<Comment, Int>>()
-    for (comment in comments) {
-        result.add(comment to depth)
-        result.addAll(flattenComments(comment.children, depth + 1))
-    }
-    return result
-}
-
-private fun stripHtml(html: String): String {
-    return html
-        .replace(Regex("<br\\s*/?>"), "\n")
-        .replace(Regex("<[^>]*>"), "")
-        .replace("&amp;", "&")
-        .replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&quot;", "\"")
-        .replace("&#39;", "'")
-        .replace("&nbsp;", " ")
-        .trim()
 }
 
 

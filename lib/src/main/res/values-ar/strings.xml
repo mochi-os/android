@@ -65,6 +65,10 @@
     <string name="notifications_open">الإشعارات</string>
     <string name="notifications_title">الإشعارات</string>
     <string name="notifications_empty">لا توجد إشعارات</string>
+    <string name="notifications_empty_unread">لقد اطّلعت على كل شيء</string>
+    <string name="notifications_tab_unread">غير المقروءة</string>
+    <string name="notifications_tab_unread_count">غير المقروءة (%1$d)</string>
+    <string name="notifications_tab_all">الكل</string>
     <string name="notifications_mark_all_read">وضع علامة مقروء على الكل</string>
     <string name="notifications_clear_all">مسح الكل</string>
     <string name="notifications_loading">جارٍ التحميل…</string>

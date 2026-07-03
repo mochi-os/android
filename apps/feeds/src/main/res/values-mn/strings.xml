@@ -16,8 +16,6 @@
     <string name="feeds_settings">Тохиргоо</string>
     <string name="feeds_no_posts_yet">Нийтлэл алга</string>
     <string name="feeds_default_sort">Үндсэн эрэмбэлэлт</string>
-    <string name="feeds_suggested_interests_add">Нэмэх</string>
-    <string name="feeds_suggested_interests_dismiss">Нуух</string>
     <string name="feeds_unread">Уншаагүй</string>
     <string name="feeds_filter_all">Бүгд</string>
     <string name="feeds_sort_label">Эрэмбэлэх</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Сервер: %1$s</string>
     <string name="feeds_suggested_interests">Санал болгож буй сонирхол</string>
     <string name="feeds_suggested_interests_empty">Одоогоор санал алга</string>
-    <string name="feeds_suggested_interests_count">%1$d нийтлэл</string>
+    <string name="feeds_suggested_interests_title">%1$s-аас сонирхол нэмэх үү?</string>
+    <string name="feeds_suggested_interests_subtitle">Энэ хангамж эдгээр сэдвийг хамардаг. Хувийн эрэмбэлэлтэд зориулж сонирхолдоо нэмэх сэдвүүдийг сонгоно уу.</string>
+    <string name="feeds_suggested_interests_skip">Алгасах</string>
     <string name="feeds_tag_more">Сонирхол тохируулах</string>
     <string name="feeds_tag_more_up">Иймэрхүү зүйлийг илүү харуулах</string>
     <string name="feeds_tag_more_down">Иймэрхүү зүйлийг бага харуулах</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d шинэ нийтлэл</item>
         <item quantity="other">%d шинэ нийтлэл</item>
     </plurals>
+    <string name="feeds_caught_up">Та бүгдийг үзсэн</string>
     <string name="feeds_all_caught_up">Бүгдийг шалгасан</string>
     <string name="feeds_view_all_posts">Бүх постуудыг үзэх</string>
 </resources>

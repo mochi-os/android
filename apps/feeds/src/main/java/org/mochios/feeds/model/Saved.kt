@@ -15,9 +15,9 @@ import org.mochios.android.model.Attachment
  * user's devices via the feeds app's per-user replication.
  *
  * Only the fields needed to render a read-only card are captured; the card
- * links back to the live post for everything else. Heavy/format-specific data
- * the web snapshot also stores (reactions counts, location data, tags) is
- * ignored here and defaulted when absent — graceful degradation either way.
+ * links back to the live post for everything else. [data] carries the RSS
+ * title/image (and check-in/travelling) exactly as on a live [Post]; reaction
+ * counts are ignored and defaulted when absent — graceful degradation either way.
  */
 data class SavedSnapshot(
     val id: String = "",
@@ -28,7 +28,9 @@ data class SavedSnapshot(
     val created: Long = 0,
     val body: String = "",
     val bodyHtml: String = "",
+    val data: PostData? = null,
     val attachments: List<Attachment> = emptyList(),
+    val tags: List<Tag> = emptyList(),
 )
 
 /** One entry from `-/saved/list`: the stored snapshot plus the saved-at time. */

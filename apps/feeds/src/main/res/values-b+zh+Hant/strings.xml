@@ -16,8 +16,6 @@
     <string name="feeds_settings">設定</string>
     <string name="feeds_no_posts_yet">尚無貼文</string>
     <string name="feeds_default_sort">預設排序</string>
-    <string name="feeds_suggested_interests_add">新增</string>
-    <string name="feeds_suggested_interests_dismiss">隱藏</string>
     <string name="feeds_unread">未讀</string>
     <string name="feeds_filter_all">全部</string>
     <string name="feeds_sort_label">排序</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">伺服器:%1$s</string>
     <string name="feeds_suggested_interests">建議興趣</string>
     <string name="feeds_suggested_interests_empty">尚無建議</string>
-    <string name="feeds_suggested_interests_count">%1$d 則貼文</string>
+    <string name="feeds_suggested_interests_title">要從 %1$s 新增興趣嗎？</string>
+    <string name="feeds_suggested_interests_subtitle">這個摘要涵蓋這些主題。選擇要加入你興趣的項目，以取得個人化排序。</string>
+    <string name="feeds_suggested_interests_skip">略過</string>
     <string name="feeds_tag_more">調整興趣</string>
     <string name="feeds_tag_more_up">多顯示類似內容</string>
     <string name="feeds_tag_more_down">少顯示類似內容</string>
@@ -211,6 +211,7 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d 則新貼文</item>
     </plurals>
+    <string name="feeds_caught_up">你已看完所有內容</string>
     <string name="feeds_all_caught_up">全部已讀完</string>
     <string name="feeds_view_all_posts">檢視所有貼文</string>
 </resources>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">Configuració</string>
     <string name="feeds_no_posts_yet">Encara no hi ha publicacions</string>
     <string name="feeds_default_sort">Ordre per defecte</string>
-    <string name="feeds_suggested_interests_add">Afegeix</string>
-    <string name="feeds_suggested_interests_dismiss">Amaga</string>
     <string name="feeds_unread">No llegit</string>
     <string name="feeds_filter_all">Tot</string>
     <string name="feeds_sort_label">Ordena</string>
@@ -115,7 +113,9 @@
     <string name="feeds_identity_server">Servidor: %1$s</string>
     <string name="feeds_suggested_interests">Interessos suggerits</string>
     <string name="feeds_suggested_interests_empty">Encara no hi ha suggeriments</string>
-    <string name="feeds_suggested_interests_count">%1$d publicacions</string>
+    <string name="feeds_suggested_interests_title">Voleu afegir interessos de %1$s?</string>
+    <string name="feeds_suggested_interests_subtitle">Aquest feed tracta aquests temes. Trieu quins voleu afegir als vostres interessos per a una classificació personalitzada.</string>
+    <string name="feeds_suggested_interests_skip">Omet</string>
     <string name="feeds_tag_more">Ajusta l\'interès</string>
     <string name="feeds_tag_more_up">Mostra\'n més com aquesta</string>
     <string name="feeds_tag_more_down">Mostra\'n menys com aquesta</string>
@@ -214,6 +214,7 @@
         <item quantity="one">%d publicació nova</item>
         <item quantity="other">%d publicacions noves</item>
     </plurals>
+    <string name="feeds_caught_up">Estàs al dia</string>
     <string name="feeds_all_caught_up">Tot al dia</string>
     <string name="feeds_view_all_posts">Mostra tots els missatges</string>
 </resources>

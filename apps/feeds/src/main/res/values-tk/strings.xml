@@ -16,8 +16,6 @@
     <string name="feeds_settings">Sazlamalar</string>
     <string name="feeds_no_posts_yet">Heniz postlar ýok</string>
     <string name="feeds_default_sort">Adaty tertipleşdirme</string>
-    <string name="feeds_suggested_interests_add">Goşmak</string>
-    <string name="feeds_suggested_interests_dismiss">Gizle</string>
     <string name="feeds_unread">Okalmadyk</string>
     <string name="feeds_filter_all">Hemmesi</string>
     <string name="feeds_sort_label">Tertiple</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">Server: %1$s</string>
     <string name="feeds_suggested_interests">Teklip edilen gyzyklanmalar</string>
     <string name="feeds_suggested_interests_empty">Heniz teklip ýok</string>
-    <string name="feeds_suggested_interests_count">%1$d ýazgy</string>
+    <string name="feeds_suggested_interests_title">%1$s çeşmesinden gyzyklanmalar goşulsynmy?</string>
+    <string name="feeds_suggested_interests_subtitle">Bu akym şu mowzulary öz içine alýar. Şahsylaşdyrylan reýting üçin gyzyklanmalaryňyza haýsylaryny goşmalydygyňyzy saýlaň.</string>
+    <string name="feeds_suggested_interests_skip">Geç</string>
     <string name="feeds_tag_more">Gyzyklanmany sazla</string>
     <string name="feeds_tag_more_up">Şuňa meňzeşleri köpräk görkez</string>
     <string name="feeds_tag_more_down">Şuňa meňzeşleri azrak görkez</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d täze ýazgy</item>
         <item quantity="other">%d täze ýazgy</item>
     </plurals>
+    <string name="feeds_caught_up">Hemmesini gördüňiz</string>
     <string name="feeds_all_caught_up">Hemmesi tutuldy</string>
     <string name="feeds_view_all_posts">Ähli postlary görkez</string>
 </resources>

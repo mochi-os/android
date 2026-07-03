@@ -65,6 +65,10 @@
     <string name="notifications_open">ການແຈ້ງເຕືອນ</string>
     <string name="notifications_title">ການແຈ້ງເຕືອນ</string>
     <string name="notifications_empty">ບໍ່ມີການແຈ້ງເຕືອນ</string>
+    <string name="notifications_empty_unread">ອ່ານໝົດແລ້ວ</string>
+    <string name="notifications_tab_unread">ຍັງບໍ່ໄດ້ອ່ານ</string>
+    <string name="notifications_tab_unread_count">ຍັງບໍ່ໄດ້ອ່ານ (%1$d)</string>
+    <string name="notifications_tab_all">ທັງໝົດ</string>
     <string name="notifications_mark_all_read">ໝາຍວ່າອ່ານທັງໝົດແລ້ວ</string>
     <string name="notifications_clear_all">ລ້າງທັງໝົດ</string>
     <string name="notifications_loading">ກຳລັງໂຫຼດ…</string>

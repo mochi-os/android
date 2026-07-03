@@ -65,6 +65,10 @@
     <string name="notifications_open">Brathan</string>
     <string name="notifications_title">Brathan</string>
     <string name="notifications_empty">Gun bhrathan</string>
+    <string name="notifications_empty_unread">Tha thu cothrom ris</string>
+    <string name="notifications_tab_unread">Gun leughadh</string>
+    <string name="notifications_tab_unread_count">Gun leughadh (%1$d)</string>
+    <string name="notifications_tab_all">Na h-uile</string>
     <string name="notifications_mark_all_read">Comharraich gach nì mar leughte</string>
     <string name="notifications_clear_all">Falamhaich a h-uile</string>
     <string name="notifications_loading">A\' luchdadh…</string>

@@ -16,8 +16,6 @@
     <string name="feeds_settings">සැකසුම්</string>
     <string name="feeds_no_posts_yet">තවම පළ කිරීම් නැත</string>
     <string name="feeds_default_sort">පෙරනිමි වර්ග කිරීම</string>
-    <string name="feeds_suggested_interests_add">එක් කරන්න</string>
-    <string name="feeds_suggested_interests_dismiss">සඟවන්න</string>
     <string name="feeds_unread">කියවා නැති</string>
     <string name="feeds_filter_all">සියල්ල</string>
     <string name="feeds_sort_label">වර්ග කරන්න</string>
@@ -120,7 +118,9 @@
     <string name="feeds_identity_server">සේවාදායකය: %1$s</string>
     <string name="feeds_suggested_interests">යෝජිත රුචිකත්ව</string>
     <string name="feeds_suggested_interests_empty">තවම යෝජනා නැත</string>
-    <string name="feeds_suggested_interests_count">පළ කිරීම් %1$d</string>
+    <string name="feeds_suggested_interests_title">%1$s වෙතින් රුචිකත්ව එක් කරන්නද?</string>
+    <string name="feeds_suggested_interests_subtitle">මෙම සංග්‍රහය මෙම මාතෘකා ආවරණය කරයි. පුද්ගලීකරණය කළ ශ්‍රේණිගත කිරීම සඳහා ඔබගේ රුචිකත්වවලට එක් කිරීමට අවශ්‍ය ඒවා තෝරන්න.</string>
+    <string name="feeds_suggested_interests_skip">මඟ හරින්න</string>
     <string name="feeds_tag_more">රුචිකත්වය සකසන්න</string>
     <string name="feeds_tag_more_up">මේ වැනි තවත් පෙන්වන්න</string>
     <string name="feeds_tag_more_down">මේ වැනි අඩුවෙන් පෙන්වන්න</string>
@@ -212,6 +212,7 @@
         <item quantity="one">%d නව පළ කිරීම</item>
         <item quantity="other">%d නව පළ කිරීම්</item>
     </plurals>
+    <string name="feeds_caught_up">ඔබ සියල්ල බැලුවා</string>
     <string name="feeds_all_caught_up">සියල්ල යාවත්කාලීනයි</string>
     <string name="feeds_view_all_posts">සියලුම පළ කිරීම් බලන්න</string>
 </resources>

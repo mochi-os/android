@@ -65,6 +65,10 @@
     <string name="notifications_open">התראות</string>
     <string name="notifications_title">התראות</string>
     <string name="notifications_empty">אין התראות</string>
+    <string name="notifications_empty_unread">אתה מעודכן</string>
+    <string name="notifications_tab_unread">לא נקראו</string>
+    <string name="notifications_tab_unread_count">לא נקראו (%1$d)</string>
+    <string name="notifications_tab_all">הכול</string>
     <string name="notifications_mark_all_read">סמן הכול כנקרא</string>
     <string name="notifications_clear_all">נקה הכול</string>
     <string name="notifications_loading">טוען…</string>
