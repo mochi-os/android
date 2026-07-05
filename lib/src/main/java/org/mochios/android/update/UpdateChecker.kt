@@ -68,13 +68,15 @@ class UpdateChecker(
         private const val VERSIONS_URL = "https://packages.mochi-os.org/android/versions.json"
         private const val APK_URL = "https://packages.mochi-os.org/android/mochi.apk"
 
-        // The ~38 MB APK pull is the fragile step: on mobile data a single
+        // The ~40 MB APK pull is the fragile step: on mobile data a single
         // transfer often drops mid-stream (throttling, cell handoff, packet
-        // loss). The periodic worker masks this by returning Result.retry(),
-        // but checkNow's on-demand caller (the About dialog) is one-shot — so
-        // retry the download here too, else a single miss surfaces as a hard
-        // "download failed" when a second attempt would have succeeded.
-        private const val DOWNLOAD_ATTEMPTS = 3
+        // loss) or simply crawls. The periodic worker masks this by returning
+        // Result.retry(), but checkNow's on-demand caller (the About dialog) is
+        // one-shot — so retry the download here too, each attempt resuming from
+        // the partial. Budget is generous because a drop-prone link can need
+        // several rounds to finish the tail: 3 attempts once surfaced as a hard
+        // "download failed" at ~90% when a couple more would have completed it.
+        private const val DOWNLOAD_ATTEMPTS = 6
         private const val DOWNLOAD_RETRY_DELAY_MS = 2_000L
 
         /**
@@ -330,16 +332,18 @@ class UpdateChecker(
             .readTimeout(15, TimeUnit.SECONDS)
             .build()
 
-        // ~40 MB APK pull, downloaded resumably (see download()). readTimeout
-        // aborts an attempt when the connection goes dead (no bytes for the
-        // window) so the retry loop can resume; callTimeout bounds a single
-        // attempt so it can't run away. Neither has to cover the whole 40 MB in
-        // one shot — the Range resume carries progress across attempts, so a
-        // slow/flaky link completes over several rounds rather than one long
-        // transfer. (A timeout firing is no longer a lost download — just the
-        // end of one resumable chunk.)
+        // ~40 MB APK pull, downloaded resumably (see download()). readTimeout is
+        // the real guard: it aborts an attempt when the connection goes dead (no
+        // bytes for the window) so the retry loop can resume. callTimeout only
+        // stops a live-but-pathologically-slow attempt from running away, so it
+        // must be generous — a 40 MB pull over slow mobile data is a legitimately
+        // long transfer, and a tight cap (4 min) cut off attempts that were still
+        // making progress, stranding the download near the end. At 1 hour a
+        // single attempt completes even at ~11 KB/s; the cap never strands a real
+        // download, and it never makes the user wait on a dead one — readTimeout
+        // fails that within 60 s. Range resume carries progress across attempts.
         private fun downloadClient(): OkHttpClient = OkHttpClient.Builder()
-            .callTimeout(4, TimeUnit.MINUTES)
+            .callTimeout(1, TimeUnit.HOURS)
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
             .build()
