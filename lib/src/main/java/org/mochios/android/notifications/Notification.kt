@@ -10,6 +10,7 @@ data class MochiNotification(
     val app: String = "",
     val topic: String = "",
     val `object`: String = "",
+    val title: String = "",
     val content: String = "",
     val link: String = "",
     val sender: String = "",

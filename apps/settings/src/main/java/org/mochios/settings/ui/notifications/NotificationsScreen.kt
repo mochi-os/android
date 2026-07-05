@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.notifications
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -23,6 +24,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -121,7 +123,11 @@ fun NotificationsScreen(
             NotificationsTab.ALL -> uiState.items
         }
 
-        Column(Modifier.fillMaxSize().padding(padding)) {
+        Column(
+            Modifier
+                .fillMaxSize()
+                .padding(padding)
+        ) {
             TabRow(selectedTabIndex = uiState.tab.ordinal) {
                 Tab(
                     selected = uiState.tab == NotificationsTab.UNREAD,
@@ -149,6 +155,7 @@ fun NotificationsScreen(
                         CircularProgressIndicator()
                     }
                 }
+
                 displayItems.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Text(
@@ -163,6 +170,7 @@ fun NotificationsScreen(
                         )
                     }
                 }
+
                 else -> {
                     PullToRefreshBox(
                         isRefreshing = uiState.isRefreshing,
@@ -212,67 +220,61 @@ private fun NotificationCard(
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
-    val container = if (notification.read == 0L) {
-        MaterialTheme.colorScheme.surfaceContainerHigh
-    } else {
-        MaterialTheme.colorScheme.surfaceContainerLow
-    }
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(MaterialTheme.shapes.medium)
-            .background(container)
             .clickable(onClick = onClick),
+        shape = MaterialTheme.shapes.medium,
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
     ) {
-        Row(
-            modifier = Modifier.padding(12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            val avatarSrc = if (notification.sender.isNotBlank()) {
-                "/people/${notification.sender}/-/avatar"
-            } else null
-            EntityAvatar(
-                name = notification.sender.ifBlank { notification.app },
-                src = avatarSrc,
-                seed = notification.sender.ifBlank { notification.app },
-                size = 36.dp,
-            )
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = notification.content,
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = if (notification.read == 0L) FontWeight.SemiBold else FontWeight.Normal,
+        Column(modifier = Modifier.padding(12.dp)) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                // Always render a leading avatar so rows align: a person photo
+                // when there's a sender, otherwise an app-seeded monogram so the
+                // circle still signals which app the notification came from.
+                val hasSender = notification.sender.isNotBlank()
+                EntityAvatar(
+                    name = if (hasSender) notification.sender else notification.topic,
+                    src = if (hasSender) "/people/${notification.sender}/-/avatar" else null,
+                    seed = if (hasSender) notification.sender else notification.topic,
+                    size = 36.dp,
                 )
-                Row(
-                    modifier = Modifier.padding(top = 2.dp),
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                Column(
+                    modifier = Modifier.weight(1f),
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    if (notification.app.isNotBlank()) {
-                        Text(
-                            text = notification.app,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.primary,
-                        )
-                    }
+                    Text(
+                        text = notification.title,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Text(
+                        text = notification.content,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
                     Text(
                         text = format.formatRelativeTime(notification.created),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
-                    if (notification.count > 1) {
-                        Box(
-                            modifier = Modifier
-                                .clip(CircleShape)
-                                .background(MaterialTheme.colorScheme.secondaryContainer)
-                                .padding(horizontal = 6.dp),
-                        ) {
-                            Text(
-                                text = "×${notification.count}",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSecondaryContainer,
-                            )
-                        }
+                }
+                if (notification.count > 1) {
+                    Box(
+                        modifier = Modifier
+                            .clip(CircleShape)
+                            .background(MaterialTheme.colorScheme.secondaryContainer)
+                            .padding(horizontal = 6.dp),
+                    ) {
+                        Text(
+                            text = "×${notification.count}",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSecondaryContainer,
+                        )
                     }
                 }
             }
