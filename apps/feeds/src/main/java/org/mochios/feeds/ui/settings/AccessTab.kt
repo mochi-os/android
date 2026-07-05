@@ -332,7 +332,7 @@ private fun AddAccessDialog(
                         onClick = { tab = 0; selectedSubject = ""; selectedName = "" },
                         shape = SegmentedButtonDefaults.itemShape(index = 0, count = 3),
                         icon = { Icon(Icons.Default.Person, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.feeds_access_segment_user)) },
+                        label = { Text(stringResource(R.string.feeds_user)) },
                     )
                     SegmentedButton(
                         selected = tab == 1,

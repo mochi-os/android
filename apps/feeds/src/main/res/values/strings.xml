@@ -162,8 +162,6 @@
     <string name="feeds_location">Location</string>
     <string name="feeds_check_in">Check in</string>
     <string name="feeds_travelling">Travelling</string>
-    <string name="feeds_back">Back</string>
-    <string name="feeds_confirm">Confirm</string>
 
     <!-- Settings: tabs -->
     <string name="feeds_tab_general">General</string>
@@ -204,12 +202,10 @@
     <!-- Role-based feed settings: identity card, subscriber unsubscribe, delete -->
     <string name="feeds_settings_title">%1$s settings</string>
     <string name="feeds_settings_section_identity">Identity</string>
-    <string name="feeds_settings_field_name">Name</string>
     <string name="feeds_settings_field_entity_id">Entity ID</string>
     <string name="feeds_settings_field_fingerprint">Fingerprint</string>
     <string name="feeds_settings_field_server">Server</string>
     <string name="feeds_settings_name_edit_cd">Edit name</string>
-    <string name="feeds_settings_name_save_cd">Save name</string>
     <string name="feeds_settings_name_cancel_cd">Cancel editing</string>
     <string name="feeds_settings_unsubscribe_section">Unsubscribe from feed</string>
     <string name="feeds_delete_feed_description">Permanently delete this feed and all its content.</string>
@@ -227,7 +223,6 @@
     <!-- Add access dialog -->
     <string name="feeds_access_add_title">Add access</string>
     <string name="feeds_access_add_subtitle">Select a user, group, or other rule to grant access.</string>
-    <string name="feeds_access_segment_user">User</string>
     <string name="feeds_access_segment_group">Group</string>
     <string name="feeds_access_segment_other">Other</string>
     <string name="feeds_access_search_users">Search users</string>

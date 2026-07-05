@@ -589,7 +589,7 @@ private fun CheckinBottomSheet(
             Spacer(modifier = Modifier.height(16.dp))
             SheetActions(
                 onCancel = onDismiss,
-                cancelLabel = stringResource(R.string.feeds_back),
+                cancelLabel = stringResource(MochiR.string.common_back),
                 onConfirm = { onConfirm(draft) }
             )
         }
@@ -666,7 +666,7 @@ private fun SheetActions(
         Button(onClick = onConfirm, modifier = Modifier.weight(1f)) {
             Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
             Spacer(modifier = Modifier.width(8.dp))
-            Text(stringResource(R.string.feeds_confirm))
+            Text(stringResource(MochiR.string.common_confirm))
         }
     }
 }

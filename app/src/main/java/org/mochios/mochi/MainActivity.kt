@@ -318,7 +318,7 @@ class MainActivity : ComponentActivity() {
 
                             if (showLogoutConfirm) {
                                 ConfirmDialog(
-                                    title = stringResource(MochiR.string.common_logout_confirm_title),
+                                    title = stringResource(MochiR.string.common_logout),
                                     message = stringResource(MochiR.string.common_logout_confirm_message),
                                     confirmLabel = stringResource(MochiR.string.common_logout),
                                     isDestructive = true,

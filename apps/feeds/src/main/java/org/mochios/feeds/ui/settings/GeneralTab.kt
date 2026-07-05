@@ -170,7 +170,7 @@ fun FeedIdentitySection(
     onRename: (String) -> Unit,
 ) {
     Section(title = stringResource(R.string.feeds_settings_section_identity)) {
-        IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_name)) {
+        IdentityFieldRow(label = stringResource(R.string.feeds_name)) {
             if (editable) {
                 NameEditor(
                     currentName = feed.name,
@@ -250,7 +250,7 @@ private fun NameEditor(
             }) {
                 Icon(
                     Icons.Default.Check,
-                    contentDescription = stringResource(R.string.feeds_settings_name_save_cd),
+                    contentDescription = stringResource(R.string.feeds_save_name),
                 )
             }
             IconButton(onClick = {
