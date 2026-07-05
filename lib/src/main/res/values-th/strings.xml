@@ -292,4 +292,6 @@
     <string name="common_opening_file">กำลังเปิดไฟล์…</string>
     <string name="common_no_app_for_file">ไม่มีแอปที่เปิดไฟล์นี้ได้</string>
     <string name="common_file_open_failed">เปิดไฟล์ไม่สำเร็จ</string>
+    <string name="reaction_remove">ล้าง</string>
+    <string name="common_logout_confirm_message">คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ? คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อเข้าถึงบัญชีของคุณ</string>
 </resources>

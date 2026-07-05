@@ -292,4 +292,6 @@
     <string name="common_opening_file">ফাইল খোলা হচ্ছে…</string>
     <string name="common_no_app_for_file">কোনো অ্যাপ এই ফাইলটি খুলতে পারে না</string>
     <string name="common_file_open_failed">ফাইল খোলা যায়নি</string>
+    <string name="reaction_remove">মুছে ফেলুন</string>
+    <string name="common_logout_confirm_message">আপনি কি নিশ্চিত যে আপনি লগ আউট করতে চান? আপনার অ্যাকাউন্টে প্রবেশ করতে আপনাকে আবার লগ ইন করতে হবে।</string>
 </resources>

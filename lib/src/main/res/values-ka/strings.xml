@@ -292,4 +292,6 @@
     <string name="common_opening_file">ფაილის გახსნა…</string>
     <string name="common_no_app_for_file">ამ ფაილის გასახსნელი აპი არ არის</string>
     <string name="common_file_open_failed">ფაილის გახსნა ვერ მოხერხდა</string>
+    <string name="reaction_remove">გასუფთავება</string>
+    <string name="common_logout_confirm_message">დარწმუნებული ხართ, რომ გსურთ სისტემიდან გასვლა? ანგარიშზე წვდომისთვის ხელახლა შესვლა დაგჭირდებათ.</string>
 </resources>

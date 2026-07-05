@@ -292,4 +292,6 @@
     <string name="common_opening_file">Ap ouvri fichye…</string>
     <string name="common_no_app_for_file">Pa gen okenn app ki ka ouvri fichye sa a</string>
     <string name="common_file_open_failed">Nou pa t ka ouvri fichye a</string>
+    <string name="reaction_remove">Efase</string>
+    <string name="common_logout_confirm_message">Èske ou sèten ou vle dekonekte? W ap bezwen konekte ankò pou jwenn aksè nan kont ou.</string>
 </resources>

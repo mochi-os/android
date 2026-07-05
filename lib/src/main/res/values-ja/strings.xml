@@ -292,4 +292,6 @@
     <string name="common_opening_file">ファイルを開いています…</string>
     <string name="common_no_app_for_file">このファイルを開けるアプリがありません</string>
     <string name="common_file_open_failed">ファイルを開けませんでした</string>
+    <string name="reaction_remove">クリア</string>
+    <string name="common_logout_confirm_message">本当にログアウトしますか？アカウントにアクセスするには再度ログインする必要があります。</string>
 </resources>

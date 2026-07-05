@@ -292,4 +292,6 @@
     <string name="common_opening_file">ഫയൽ തുറക്കുന്നു…</string>
     <string name="common_no_app_for_file">ഈ ഫയൽ തുറക്കാൻ കഴിയുന്ന ആപ്പ് ഇല്ല</string>
     <string name="common_file_open_failed">ഫയൽ തുറക്കാനായില്ല</string>
+    <string name="reaction_remove">മായ്ക്കുക</string>
+    <string name="common_logout_confirm_message">ലോഗൗട്ട് ചെയ്യണമെന്ന് ഉറപ്പാണോ? നിങ്ങളുടെ അക്കൗണ്ട് ആക്സസ് ചെയ്യാൻ വീണ്ടും ലോഗിൻ ചെയ്യേണ്ടതുണ്ട്.</string>
 </resources>

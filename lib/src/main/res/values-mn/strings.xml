@@ -292,4 +292,6 @@
     <string name="common_opening_file">Файл нээж байна…</string>
     <string name="common_no_app_for_file">Энэ файлыг нээх апп алга</string>
     <string name="common_file_open_failed">Файлыг нээж чадсангүй</string>
+    <string name="reaction_remove">Цэвэрлэх</string>
+    <string name="common_logout_confirm_message">Та гарахдаа итгэлтэй байна уу? Бүртгэлдээ хандахын тулд дахин нэвтрэх шаардлагатай болно.</string>
 </resources>

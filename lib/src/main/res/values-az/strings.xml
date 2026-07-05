@@ -292,4 +292,6 @@
     <string name="common_opening_file">Fayl açılır…</string>
     <string name="common_no_app_for_file">Bu faylı aça biləcək tətbiq yoxdur</string>
     <string name="common_file_open_failed">Faylı açmaq mümkün olmadı</string>
+    <string name="reaction_remove">Təmizlə</string>
+    <string name="common_logout_confirm_message">Çıxış etmək istədiyinizə əminsiniz? Hesabınıza yenidən daxil olmaq üçün təkrar giriş etməlisiniz.</string>
 </resources>

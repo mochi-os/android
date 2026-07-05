@@ -292,4 +292,6 @@
     <string name="common_opening_file">កំពុងបើកឯកសារ…</string>
     <string name="common_no_app_for_file">គ្មានកម្មវិធីណាអាចបើកឯកសារនេះបានទេ</string>
     <string name="common_file_open_failed">មិនអាចបើកឯកសារបានទេ</string>
+    <string name="reaction_remove">សម្អាត</string>
+    <string name="common_logout_confirm_message">តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ? អ្នកនឹងត្រូវចូលម្តងទៀត ដើម្បីប្រើប្រាស់គណនីរបស់អ្នក។</string>
 </resources>

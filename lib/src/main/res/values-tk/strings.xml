@@ -292,4 +292,6 @@
     <string name="common_opening_file">Faýl açylýar…</string>
     <string name="common_no_app_for_file">Bu faýly açyp biljek programma ýok</string>
     <string name="common_file_open_failed">Faýly açyp bolmady</string>
+    <string name="reaction_remove">Arassalamak</string>
+    <string name="common_logout_confirm_message">Hasabyňyzdan çykmak isleýändigiňize ynanýarsyňyzmy? Hasabyňyza girmek üçin täzeden ulgama girmeli bolarsyňyz.</string>
 </resources>

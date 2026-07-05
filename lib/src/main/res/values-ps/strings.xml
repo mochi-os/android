@@ -292,4 +292,6 @@
     <string name="common_opening_file">فایل پرانیستل کیږي…</string>
     <string name="common_no_app_for_file">هیڅ اپلیکیشن دا فایل نه شي پرانیستلی</string>
     <string name="common_file_open_failed">فایل پرانیستل ونشول</string>
+    <string name="reaction_remove">پاک کړئ</string>
+    <string name="common_logout_confirm_message">ایا تاسو ډاډه یاست چې غواړئ ووځئ؟ خپل حساب ته د لاسرسي لپاره به اړ یاست چې بیا ننوځئ.</string>
 </resources>

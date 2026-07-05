@@ -292,4 +292,6 @@
     <string name="common_opening_file">Membuka fail…</string>
     <string name="common_no_app_for_file">Tiada apl yang boleh membuka fail ini</string>
     <string name="common_file_open_failed">Tidak dapat membuka fail</string>
+    <string name="reaction_remove">Kosongkan</string>
+    <string name="common_logout_confirm_message">Adakah anda pasti mahu log keluar? Anda perlu log masuk semula untuk mengakses akaun anda.</string>
 </resources>

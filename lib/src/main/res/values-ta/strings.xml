@@ -292,4 +292,6 @@
     <string name="common_opening_file">கோப்பைத் திறக்கிறது…</string>
     <string name="common_no_app_for_file">இந்தக் கோப்பைத் திறக்கக்கூடிய பயன்பாடு எதுவும் இல்லை</string>
     <string name="common_file_open_failed">கோப்பைத் திறக்க முடியவில்லை</string>
+    <string name="reaction_remove">அழி</string>
+    <string name="common_logout_confirm_message">நிச்சயமாக வெளியேற விரும்புகிறீர்களா? உங்கள் கணக்கை அணுக மீண்டும் உள்நுழைய வேண்டியிருக்கும்.</string>
 </resources>

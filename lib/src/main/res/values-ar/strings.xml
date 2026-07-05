@@ -292,4 +292,6 @@
     <string name="common_opening_file">جارٍ فتح الملف…</string>
     <string name="common_no_app_for_file">لا يوجد تطبيق يمكنه فتح هذا الملف</string>
     <string name="common_file_open_failed">تعذّر فتح الملف</string>
+    <string name="reaction_remove">مسح</string>
+    <string name="common_logout_confirm_message">هل أنت متأكد أنك تريد تسجيل الخروج؟ ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك.</string>
 </resources>

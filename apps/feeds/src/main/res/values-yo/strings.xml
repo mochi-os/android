@@ -215,4 +215,66 @@
     <string name="feeds_caught_up">O ti rí gbogbo rẹ̀</string>
     <string name="feeds_all_caught_up">Gbogbo rẹ̀ ti pé</string>
     <string name="feeds_view_all_posts">Wo gbogbo àwọn ìfìránṣẹ́</string>
+    <string name="feeds_access_level_none_full">Kò sí àyè</string>
+    <string name="feeds_access_level_view_full">Wíwò nìkan</string>
+    <string name="feeds_access_search_users">Wá àwọn user</string>
+    <string name="feeds_access_segment_group">Àwùjọ</string>
+    <string name="feeds_access_segment_other">Mìíràn</string>
+    <string name="feeds_access_select_group">Yan ẹgbẹ́</string>
+    <string name="feeds_access_selected">Tí a yàn: %1$s</string>
+    <string name="feeds_access_subject_anyone">Ẹnikẹ́ni</string>
+    <string name="feeds_access_subject_authenticated">Àwọn olùmúlò tí a fọwọ́sí</string>
+    <string name="feeds_markdown_supported">Markdown wà ní àtìlẹ́yìn</string>
+    <string name="feeds_permission_deny">Kọ̀</string>
+    <string name="feeds_rss_feed">Feed RSS</string>
+    <string name="feeds_settings_field_entity_id">ID Ẹ̀ka</string>
+    <string name="feeds_settings_field_fingerprint">Àmì-ìka</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Ṣàtúnṣe orúkọ</string>
+    <string name="feeds_settings_section_identity">Ìdánimọ̀</string>
+    <string name="feeds_unsubscribe">Yọ ìforúkọsílẹ̀ kúrò</string>
+    <string name="feeds_unsubscribed">Ti yọ ìforúkọsílẹ̀ kúrò</string>
+    <string name="feeds_access_level_comment_full">Ṣe asọye, fesi, ati wo</string>
+    <string name="feeds_rss_mode_posts_comments">Àwọn ìfìránṣẹ́ àti àlàyé</string>
+    <string name="feeds_delete_feed_description">Pa feed yìí àti gbogbo àkóónú rẹ̀ rẹ́ pátápátá.</string>
+    <string name="feeds_access_add_title">Fi ìwọlé kún</string>
+    <string name="feeds_permission_request_message">%1$s ń béèrè fún ìyọ̀ǹda wọ̀nyí:</string>
+    <string name="feeds_allow_search">Gba ẹnikẹni laaye lati wa fidi</string>
+    <string name="feeds_post_content">Àkóónú ìfìránṣẹ́</string>
+    <string name="feeds_enable_memories">Mu àwọn ìrántí ṣiṣẹ</string>
+    <string name="feeds_permission_request_title">Ìbéèrè ìyọ̀ǹda</string>
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">àtẹ̀jáde %1$d</item>
+    </plurals>
+    <string name="feeds_unsubscribe_confirm">Dáwọ́ títẹ̀lé fiidi dúró?</string>
+    <string name="feeds_settings_title">Àwọn ètò %1$s</string>
+    <string name="feeds_source_transform_help">Fi ṣófo láti pa á.</string>
+    <string name="feeds_settings_name_cancel_cd">Fagilé àtúnṣe</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+    <string name="feeds_access_management">Ìṣàkóso Ìwọlé</string>
+    <string name="feeds_access_anyone_desc">Pẹ̀lú àwọn aṣàmúlò aláìlórúkọ</string>
+    <string name="feeds_access_add_subtitle">Yan user, ẹgbẹ́, tàbí òfin míì láti fún ní ààyè.</string>
+    <string name="feeds_create_first_post">Dá ìfìránṣẹ́ àkọ́kọ́</string>
+    <string name="feeds_rss_mode_posts">Àwọn ìfìránṣẹ́</string>
+    <string name="feeds_source_last_checked">Àyẹ̀wò tó gbẹ̀yìn %1$s</string>
+    <string name="feeds_settings_unsubscribe_section">Yọ ìforúkọsílẹ̀ kúrò lórí feed</string>
+    <string name="feeds_source_transform_hint">Túmọ̀ sí Gẹ̀ẹ́sì, kí o sì fihàn gẹ́gẹ́ bí àwọn àmì òòlu.</string>
+    <string name="feeds_source_url_hint_feed">ID nkankan fidi tabi ẹsẹ ẹsẹ ìka</string>
+    <string name="feeds_source_credibility_label">Ìgbẹ́kẹ̀lé</string>
+    <string name="feeds_access_management_desc">Darí ẹni tó lè wò àti bá feed yìí ṣiṣẹ́</string>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">wákàtí %1$d</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">Ṣàfikún ìfẹ́ràn %1$d</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">ìṣẹ́jú %1$d</item>
+    </plurals>
+    <string name="feeds_source_polling_interval">Ń ṣàyẹ̀wò ní gbogbo %1$s</string>
+    <string name="feeds_access_level_react_full">Fesi ki o wo</string>
+    <string name="feeds_permission_allow">Gbà láàyè</string>
+    <string name="feeds_unsubscribe_confirm_message">Ìwọ kò ní gba àwọn ìmúdójúìwọ̀n láti inú fiidi yìí mọ́. O lè forúkọsílẹ̀ padà nígbàkigbà.</string>
+    <string name="feeds_access_select_rule">Yan òfin ààyè</string>
+    <string name="feeds_access_authenticated_desc">Ẹnikẹ́ni tí ó ti wọlé</string>
 </resources>

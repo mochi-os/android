@@ -292,4 +292,6 @@
     <string name="common_opening_file">Открытие файла…</string>
     <string name="common_no_app_for_file">Нет приложения для открытия этого файла</string>
     <string name="common_file_open_failed">Не удалось открыть файл</string>
+    <string name="reaction_remove">Очистить</string>
+    <string name="common_logout_confirm_message">Вы уверены, что хотите выйти? Для доступа к аккаунту вам потребуется войти снова.</string>
 </resources>

@@ -292,4 +292,6 @@
     <string name="stepup_error_code">Ce code est incorrect ou a expiré.</string>
     <string name="stepup_error_passkey">La vérification par clé d\'accès a échoué. Veuillez réessayer.</string>
     <string name="stepup_error_oauth">Impossible de vérifier avec ce compte. Veuillez réessayer.</string>
+    <string name="reaction_remove">Effacer</string>
+    <string name="common_logout_confirm_message">Voulez-vous vraiment vous déconnecter ? Vous devrez vous reconnecter pour accéder à votre compte.</string>
 </resources>

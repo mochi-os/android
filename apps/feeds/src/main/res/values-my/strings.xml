@@ -214,4 +214,66 @@
     <string name="feeds_caught_up">အားလုံးကို ကြည့်ပြီးပါပြီ</string>
     <string name="feeds_all_caught_up">အားလုံးကြည့်ပြီး</string>
     <string name="feeds_view_all_posts">Post များ အားလုံး ကြည့်ရှုမည်</string>
+    <string name="feeds_access_level_none_full">ဝင်ရောက်ခွင့်မရှိ</string>
+    <string name="feeds_access_level_view_full">ကြည့်ရှုရုံသာ</string>
+    <string name="feeds_access_search_users">သုံးစွဲသူများ ရှာဖွေ</string>
+    <string name="feeds_access_segment_group">အုပ်စု</string>
+    <string name="feeds_access_segment_other">အခြား</string>
+    <string name="feeds_access_select_group">အုပ်စုကို ရွေးပါ</string>
+    <string name="feeds_access_selected">ရွေးချယ်ထား: %1$s</string>
+    <string name="feeds_access_subject_anyone">မည်သူမဆို</string>
+    <string name="feeds_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
+    <string name="feeds_markdown_supported">Markdown ပံ့ပိုးသည်</string>
+    <string name="feeds_permission_deny">ငြင်းပယ်မည်</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_settings_field_entity_id">အကောင့် ID</string>
+    <string name="feeds_settings_field_fingerprint">လက်ဗွေ</string>
+    <string name="feeds_settings_field_server">ဆာဗာ</string>
+    <string name="feeds_settings_name_edit_cd">အမည် တည်းဖြတ်</string>
+    <string name="feeds_settings_section_identity">ကိုယ်ပိုင်</string>
+    <string name="feeds_unsubscribe">Subscribe ဖြုတ်မည်</string>
+    <string name="feeds_unsubscribed">Subscribe ဖြုတ်ပြီး</string>
+    <string name="feeds_access_level_comment_full">မှတ်ချက်၊ react၊ နှင့် ကြည့်ရှုခြင်း</string>
+    <string name="feeds_rss_mode_posts_comments">ပို့စ်နှင့် comment များ</string>
+    <string name="feeds_delete_feed_description">ဤ feed နှင့် အကြောင်းအရာအားလုံးကို အပြီးတိုင်ဖျက်ပါ။</string>
+    <string name="feeds_access_add_title">ဝင်ရောက်ခွင့် ထည့်မည်</string>
+    <string name="feeds_permission_request_message">%1$s သည် အောက်ပါခွင့်ပြုချက်ကို တောင်းဆိုနေသည် -</string>
+    <string name="feeds_allow_search">မည်သူမဆို feed ကို ရှာဖွေခွင့်ပြုမည်</string>
+    <string name="feeds_post_content">ပို့စ် အကြောင်းအရာ</string>
+    <string name="feeds_enable_memories">မှတ်ဉာဏ် ဖွင့်</string>
+    <string name="feeds_permission_request_title">ခွင့်ပြုချက် တောင်းဆိုမှု</string>
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">ပို့စ် %1$d ခု</item>
+    </plurals>
+    <string name="feeds_unsubscribe_confirm">ဖိဒ်ကို စာရင်းသွင်းထားမှု ဖျက်မလား?</string>
+    <string name="feeds_settings_title">%1$s ဆက်တင်များ</string>
+    <string name="feeds_source_transform_help">ပိတ်ရန် ဗလာထားပါ။</string>
+    <string name="feeds_settings_name_cancel_cd">တည်းဖြတ်ခြင်းကို ပယ်ဖျက်ရန်</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+    <string name="feeds_access_management">ဝင်ရောက်ခွင့် စီမံခန့်ခွဲမှု</string>
+    <string name="feeds_access_anyone_desc">အမည်မသိ အသုံးပြုသူများ အပါအဝင်</string>
+    <string name="feeds_access_add_subtitle">ဝင်ရောက်ခွင့်ပေးရန် သုံးစွဲသူ၊ အုပ်စု၊ သို့မဟုတ် အခြားစည်းမျဉ်းကို ရွေးချယ်ပါ။</string>
+    <string name="feeds_create_first_post">ပထမဆုံးပို့စ် ဖန်တီးမည်</string>
+    <string name="feeds_rss_mode_posts">ပို့စ်များ</string>
+    <string name="feeds_source_last_checked">နောက်ဆုံးစစ်ဆေးခဲ့သည်မှာ %1$s</string>
+    <string name="feeds_settings_unsubscribe_section">Feed မှ subscribe ဖြုတ်မည်</string>
+    <string name="feeds_source_transform_hint">အင်္ဂလိပ်ဘာသာသို့ ဘာသာပြန်ပြီး bullet point များဖြင့် ပြသမည်။</string>
+    <string name="feeds_source_url_hint_feed">ဖိဒ် အကောင့် ID သို့မဟုတ် လက်ဗွေ</string>
+    <string name="feeds_source_credibility_label">ယုံကြည်စိတ်ချရမှု</string>
+    <string name="feeds_access_management_desc">ဤ feed ကို မည်သူများ ကြည့်ရှု၍ ပါဝင်နိုင်သည်ကို ထိန်းချုပ်ပါ</string>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d နာရီ</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">စိတ်ဝင်စားမှု %1$d ခု ထည့်ရန်</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d မိနစ်</item>
+    </plurals>
+    <string name="feeds_source_polling_interval">%1$s တိုင်း စစ်ဆေးနေသည်</string>
+    <string name="feeds_access_level_react_full">တုံ့ပြန်ပြီး ကြည့်ရှု</string>
+    <string name="feeds_permission_allow">ခွင့်ပြုရန်</string>
+    <string name="feeds_unsubscribe_confirm_message">ဤဖိဒ်မှ နောက်ဆုံးရ အချက်အလက်များ ရရှိတော့မည် မဟုတ်ပါ။ အချိန်မရွေး ပြန်လည် စာရင်းသွင်းနိုင်ပါသည်။</string>
+    <string name="feeds_access_select_rule">ဝင်ရောက်ခွင့် စည်းမျဉ်း ရွေးချယ်</string>
+    <string name="feeds_access_authenticated_desc">အကောင့်ဝင်ထားသူ မည်သူမဆို</string>
 </resources>

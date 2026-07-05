@@ -292,4 +292,6 @@
     <string name="common_opening_file">פותח קובץ…</string>
     <string name="common_no_app_for_file">אין אפליקציה שיכולה לפתוח קובץ זה</string>
     <string name="common_file_open_failed">לא ניתן לפתוח את הקובץ</string>
+    <string name="reaction_remove">ניקוי</string>
+    <string name="common_logout_confirm_message">האם ברצונך להתנתק? יהיה עליך להתחבר שוב כדי לגשת לחשבון שלך.</string>
 </resources>

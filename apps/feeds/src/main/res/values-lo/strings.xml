@@ -214,4 +214,66 @@
     <string name="feeds_caught_up">ທ່ານໄດ້ເບິ່ງທັງໝົດແລ້ວ</string>
     <string name="feeds_all_caught_up">ຕາມທັນທັງໝົດແລ້ວ</string>
     <string name="feeds_view_all_posts">ເບິ່ງໂພສທັງໝົດ</string>
+    <string name="feeds_access_level_none_full">ບໍ່ມີການເຂົ້າເຖິງ</string>
+    <string name="feeds_access_level_view_full">ເບິ່ງເທົ່ານັ້ນ</string>
+    <string name="feeds_access_search_users">ຄົ້ນຫາຜູ້ໃຊ້</string>
+    <string name="feeds_access_segment_group">ກຸ່ມ</string>
+    <string name="feeds_access_segment_other">ອື່ນໆ</string>
+    <string name="feeds_access_select_group">ເລືອກກຸ່ມ</string>
+    <string name="feeds_access_selected">ເລືອກແລ້ວ: %1$s</string>
+    <string name="feeds_access_subject_anyone">ໃຜກໍໄດ້</string>
+    <string name="feeds_access_subject_authenticated">ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ</string>
+    <string name="feeds_markdown_supported">ຮອງຮັບ markdown</string>
+    <string name="feeds_permission_deny">ປະຕິເສດ</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_settings_field_entity_id">ID ຂອງເອັນຕິຕີ້</string>
+    <string name="feeds_settings_field_fingerprint">ລາຍນິ້ວມື</string>
+    <string name="feeds_settings_field_server">ເຊີບເວີ</string>
+    <string name="feeds_settings_name_edit_cd">ແກ້ໄຂຊື່</string>
+    <string name="feeds_settings_section_identity">ຕົວຕົນ</string>
+    <string name="feeds_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="feeds_unsubscribed">ຍົກເລີກການສະໝັກສະມາຊິກແລ້ວ</string>
+    <string name="feeds_access_level_comment_full">ຄຳເຫັນ, ໂຕ້ຕອບ, ແລະ ເບິ່ງ</string>
+    <string name="feeds_rss_mode_posts_comments">ໂພສແລະຄຳເຫັນ</string>
+    <string name="feeds_delete_feed_description">ລຶບ feed ນີ້ແລະເນື້ອໃນທັງໝົດຖາວອນ.</string>
+    <string name="feeds_access_add_title">ເພີ່ມການເຂົ້າເຖິງ</string>
+    <string name="feeds_permission_request_message">%1$s ກຳລັງຂໍສິດອະນຸຍາດຕໍ່ໄປນີ້:</string>
+    <string name="feeds_allow_search">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາຟີດ</string>
+    <string name="feeds_post_content">ເນື້ອໃນໂພສ</string>
+    <string name="feeds_enable_memories">ເປີດການນຳໃຊ້ຄວາມຊົງຈຳ</string>
+    <string name="feeds_permission_request_title">ຄຳຂໍສິດອະນຸຍາດ</string>
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d ໂພສ</item>
+    </plurals>
+    <string name="feeds_unsubscribe_confirm">ເຊົາຕິດຕາມຟີດບໍ?</string>
+    <string name="feeds_settings_title">ການຕັ້ງຄ່າ %1$s</string>
+    <string name="feeds_source_transform_help">ປະໄວ້ຫວ່າງເພື່ອປິດການໃຊ້ງານ.</string>
+    <string name="feeds_settings_name_cancel_cd">ຍົກເລີກການແກ້ໄຂ</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+    <string name="feeds_access_management">ການຈັດການການເຂົ້າເຖິງ</string>
+    <string name="feeds_access_anyone_desc">ລວມທັງຜູ້ໃຊ້ບໍ່ລະບຸຊື່</string>
+    <string name="feeds_access_add_subtitle">ເລືອກຜູ້ໃຊ້, ກຸ່ມ, ຫຼືກົດອື່ນເພື່ອໃຫ້ການເຂົ້າເຖິງ.</string>
+    <string name="feeds_create_first_post">ສ້າງໂພສທຳອິດ</string>
+    <string name="feeds_rss_mode_posts">ໂພສ</string>
+    <string name="feeds_source_last_checked">ກວດສອບຄັ້ງລ່າສຸດ %1$s</string>
+    <string name="feeds_settings_unsubscribe_section">ຍົກເລີກການສະໝັກສະມາຊິກຈາກ feed</string>
+    <string name="feeds_source_transform_hint">ແປເປັນພາສາອັງກິດ, ແລະສະແດງເປັນຫົວຂໍ້ຍ່ອຍ.</string>
+    <string name="feeds_source_url_hint_feed">ID ເອັນຕິຕີ້ຟີດ ຫຼື ລາຍນິ້ວມື</string>
+    <string name="feeds_source_credibility_label">ຄວາມໜ້າເຊື່ອຖື</string>
+    <string name="feeds_access_management_desc">ຄວບຄຸມວ່າໃຜສາມາດເບິ່ງ ແລະ ໂຕ້ຕອບກັບຟີດນີ້</string>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d ຊົ່ວໂມງ</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">ເພີ່ມ %1$d ຄວາມສົນໃຈ</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d ນາທີ</item>
+    </plurals>
+    <string name="feeds_source_polling_interval">ດຶງຂໍ້ມູນທຸກໆ %1$s</string>
+    <string name="feeds_access_level_react_full">ປະຕິກິລິຍາແລະເບິ່ງ</string>
+    <string name="feeds_permission_allow">ອະນຸຍາດ</string>
+    <string name="feeds_unsubscribe_confirm_message">ທ່ານຈະບໍ່ໄດ້ຮັບອັບເດດຈາກຟີດນີ້ອີກ. ທ່ານສາມາດສະໝັກຄືນໄດ້ທຸກເວລາ.</string>
+    <string name="feeds_access_select_rule">ເລືອກກົດການເຂົ້າເຖິງ</string>
+    <string name="feeds_access_authenticated_desc">ທຸກຄົນທີ່ເຂົ້າສູ່ລະບົບແລ້ວ</string>
 </resources>

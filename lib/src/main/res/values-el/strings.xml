@@ -292,4 +292,6 @@
     <string name="common_opening_file">Άνοιγμα αρχείου…</string>
     <string name="common_no_app_for_file">Καμία εφαρμογή δεν μπορεί να ανοίξει αυτό το αρχείο</string>
     <string name="common_file_open_failed">Δεν ήταν δυνατό το άνοιγμα του αρχείου</string>
+    <string name="reaction_remove">Απαλοιφή</string>
+    <string name="common_logout_confirm_message">Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε; Θα χρειαστεί να συνδεθείτε ξανά για να αποκτήσετε πρόσβαση στον λογαριασμό σας.</string>
 </resources>

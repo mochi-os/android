@@ -292,4 +292,6 @@
     <string name="stepup_error_code">Den koden er feil eller har utløpt.</string>
     <string name="stepup_error_passkey">Verifisering med passnøkkel mislyktes. Prøv igjen.</string>
     <string name="stepup_error_oauth">Kunne ikke verifisere med den kontoen. Prøv igjen.</string>
+    <string name="reaction_remove">Tøm</string>
+    <string name="common_logout_confirm_message">Er du sikker på at du vil logge ut? Du må logge inn på nytt for å få tilgang til kontoen din.</string>
 </resources>

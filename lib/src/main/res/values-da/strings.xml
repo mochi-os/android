@@ -294,4 +294,6 @@
     <string name="common_opening_file">Åbner fil…</string>
     <string name="common_no_app_for_file">Ingen app kan åbne denne fil</string>
     <string name="common_file_open_failed">Kunne ikke åbne filen</string>
+    <string name="reaction_remove">Ryd</string>
+    <string name="common_logout_confirm_message">Er du sikker på, at du vil logge ud? Du skal logge ind igen for at få adgang til din konto.</string>
 </resources>

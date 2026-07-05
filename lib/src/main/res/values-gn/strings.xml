@@ -292,4 +292,6 @@
     <string name="common_opening_file">Ojejuruja archivo…</string>
     <string name="common_no_app_for_file">Ndaipóri tembiporu ojuruja hag̃ua ko archivo</string>
     <string name="common_file_open_failed">Ndaikatúi oñembojuruja archivo</string>
+    <string name="reaction_remove">Mopotĩ</string>
+    <string name="common_logout_confirm_message">¿Añetehápe esẽse? Tekotevẽta eike jey eiporu hag̃ua ne mba\'ete.</string>
 </resources>

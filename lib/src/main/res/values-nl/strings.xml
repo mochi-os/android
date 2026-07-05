@@ -292,4 +292,6 @@
     <string name="common_opening_file">Bestand openen…</string>
     <string name="common_no_app_for_file">Geen app kan dit bestand openen</string>
     <string name="common_file_open_failed">Kan bestand niet openen</string>
+    <string name="reaction_remove">Wissen</string>
+    <string name="common_logout_confirm_message">Weet u zeker dat u wilt uitloggen? U moet opnieuw inloggen om toegang te krijgen tot uw account.</string>
 </resources>

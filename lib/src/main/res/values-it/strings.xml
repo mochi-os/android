@@ -292,4 +292,6 @@
     <string name="common_opening_file">Apertura del file…</string>
     <string name="common_no_app_for_file">Nessuna app può aprire questo file</string>
     <string name="common_file_open_failed">Impossibile aprire il file</string>
+    <string name="reaction_remove">Cancella</string>
+    <string name="common_logout_confirm_message">Sei sicuro di voler uscire? Dovrai effettuare nuovamente l\'accesso per accedere al tuo account.</string>
 </resources>

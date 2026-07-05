@@ -292,4 +292,6 @@
     <string name="common_opening_file">ဖိုင် ဖွင့်နေသည်…</string>
     <string name="common_no_app_for_file">ဤဖိုင်ကို ဖွင့်နိုင်သော အက်ပ် မရှိပါ</string>
     <string name="common_file_open_failed">ဖိုင်ကို ဖွင့်၍ မရပါ</string>
+    <string name="reaction_remove">ရှင်းမည်</string>
+    <string name="common_logout_confirm_message">ထွက်ရန် သေချာပါသလား။ သင့်အကောင့်ကို ပြန်လည်အသုံးပြုရန် ထပ်မံဝင်ရောက်ရပါမည်။</string>
 </resources>

@@ -203,4 +203,66 @@
     <string name="feeds_saved_remove">從已儲存中移除</string>
     <string name="feeds_saved_clear_all">清除全部</string>
     <string name="feeds_caught_up">你已看完所有內容</string>
+    <string name="feeds_access_level_none_full">No access</string>
+    <string name="feeds_access_level_view_full">View only</string>
+    <string name="feeds_access_search_users">搜尋用戶</string>
+    <string name="feeds_access_segment_group">群組</string>
+    <string name="feeds_access_segment_other">其他</string>
+    <string name="feeds_access_select_group">選擇群組</string>
+    <string name="feeds_access_selected">已選擇:%1$s</string>
+    <string name="feeds_access_subject_anyone">任何人</string>
+    <string name="feeds_access_subject_authenticated">已驗證用戶</string>
+    <string name="feeds_markdown_supported">支援 Markdown</string>
+    <string name="feeds_permission_deny">拒絕</string>
+    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_settings_field_entity_id">Entity ID</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_name_edit_cd">Edit name</string>
+    <string name="feeds_settings_section_identity">Identity</string>
+    <string name="feeds_unsubscribe">取消訂閱</string>
+    <string name="feeds_unsubscribed">Unsubscribed</string>
+    <string name="feeds_access_level_comment_full">評論、點讚和查看</string>
+    <string name="feeds_rss_mode_posts_comments">貼文和留言</string>
+    <string name="feeds_delete_feed_description">永久刪除此資訊提供及其所有內容。</string>
+    <string name="feeds_access_add_title">新增存取權</string>
+    <string name="feeds_permission_request_message">%1$s 請求以下權限：</string>
+    <string name="feeds_allow_search">允許任何人搜尋此資訊提供</string>
+    <string name="feeds_post_content">貼文內容</string>
+    <string name="feeds_enable_memories">啟用記憶</string>
+    <string name="feeds_permission_request_title">權限請求</string>
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d 篇帖子</item>
+    </plurals>
+    <string name="feeds_unsubscribe_confirm">取消訂閱資訊提供？</string>
+    <string name="feeds_settings_title">%1$s 設定</string>
+    <string name="feeds_source_transform_help">留空以停用。</string>
+    <string name="feeds_settings_name_cancel_cd">取消編輯</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+    <string name="feeds_access_management">存取管理</string>
+    <string name="feeds_settings_field_server">伺服器</string>
+    <string name="feeds_access_anyone_desc">包括匿名用戶</string>
+    <string name="feeds_access_add_subtitle">選擇用戶、群組或其他規則以授予存取權。</string>
+    <string name="feeds_create_first_post">建立第一則貼文</string>
+    <string name="feeds_rss_mode_posts">貼文</string>
+    <string name="feeds_source_last_checked">上次檢查 %1$s</string>
+    <string name="feeds_settings_unsubscribe_section">取消訂閱資訊提供</string>
+    <string name="feeds_source_transform_hint">翻譯成英文，並以項目符號顯示。</string>
+    <string name="feeds_source_url_hint_feed">資訊提供實體 ID 或指紋</string>
+    <string name="feeds_source_credibility_label">可信度</string>
+    <string name="feeds_access_management_desc">控制誰可以查看此資訊提供並與之互動</string>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d 小時</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">新增 %1$d 個興趣</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d 分鐘</item>
+    </plurals>
+    <string name="feeds_source_polling_interval">每 %1$s 輪詢一次</string>
+    <string name="feeds_access_level_react_full">點讚和查看</string>
+    <string name="feeds_permission_allow">允許</string>
+    <string name="feeds_unsubscribe_confirm_message">你將不再收到此資訊提供的更新。你可以隨時重新訂閱。</string>
+    <string name="feeds_access_select_rule">選擇存取規則</string>
+    <string name="feeds_access_authenticated_desc">任何已登入的用戶</string>
 </resources>

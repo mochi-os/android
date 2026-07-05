@@ -215,4 +215,66 @@
     <string name="feeds_caught_up">Sampeyan wis ndeleng kabeh</string>
     <string name="feeds_all_caught_up">Kabèh wis dikèkné</string>
     <string name="feeds_view_all_posts">Deleng kabeh postingan</string>
+    <string name="feeds_access_level_none_full">Ora ana akses</string>
+    <string name="feeds_access_level_view_full">Mung deleng</string>
+    <string name="feeds_access_search_users">Goleki pangguna</string>
+    <string name="feeds_access_segment_group">Grup</string>
+    <string name="feeds_access_segment_other">Liyané</string>
+    <string name="feeds_access_select_group">Pilih grup</string>
+    <string name="feeds_access_selected">Dipilih: %1$s</string>
+    <string name="feeds_access_subject_anyone">Sapa wae</string>
+    <string name="feeds_access_subject_authenticated">Pangguna sing wis dipriksa</string>
+    <string name="feeds_markdown_supported">Markdown didukung</string>
+    <string name="feeds_permission_deny">Tolak</string>
+    <string name="feeds_rss_feed">Feed RSS</string>
+    <string name="feeds_settings_field_entity_id">ID Entitas</string>
+    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_server">Server</string>
+    <string name="feeds_settings_name_edit_cd">Owahi jeneng</string>
+    <string name="feeds_settings_section_identity">Identitas</string>
+    <string name="feeds_unsubscribe">Mbatalaké langganan</string>
+    <string name="feeds_unsubscribed">Wis mbatalaké langganan</string>
+    <string name="feeds_access_level_comment_full">Komentar, reaksi, lan ndelok</string>
+    <string name="feeds_rss_mode_posts_comments">Postingan lan komentar</string>
+    <string name="feeds_delete_feed_description">Busak permanen feed iki lan kabèh isiné.</string>
+    <string name="feeds_access_add_title">Tambah akses</string>
+    <string name="feeds_permission_request_message">%1$s njaluk idin ing ngisor iki:</string>
+    <string name="feeds_allow_search">Idini sapa waé nggolèki feed</string>
+    <string name="feeds_post_content">Isi postingan</string>
+    <string name="feeds_enable_memories">Aktifaké memori</string>
+    <string name="feeds_permission_request_title">Panjalukan idin</string>
+    <plurals name="feeds_suggested_interests_post_count">
+        <item quantity="other">%1$d kiriman</item>
+    </plurals>
+    <string name="feeds_unsubscribe_confirm">Mandheg langganan feed?</string>
+    <string name="feeds_settings_title">Setelan %1$s</string>
+    <string name="feeds_source_transform_help">Kosongna kanggo nonaktifaké.</string>
+    <string name="feeds_settings_name_cancel_cd">Batalake nyunting</string>
+    <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
+    <string name="feeds_access_management">Manajemen Akses</string>
+    <string name="feeds_access_anyone_desc">Kalebu pangguna anonim</string>
+    <string name="feeds_access_add_subtitle">Pilih pangguna, grup, utawa aturan liyané kanggo wènèh akses.</string>
+    <string name="feeds_create_first_post">Gawé post pertama</string>
+    <string name="feeds_rss_mode_posts">Postingan</string>
+    <string name="feeds_source_last_checked">Pungkasan dipriksa %1$s</string>
+    <string name="feeds_settings_unsubscribe_section">Mbatalaké langganan saka feed</string>
+    <string name="feeds_source_transform_hint">Terjemahaké menyang Inggris, lan tampilake minangka poin-poin.</string>
+    <string name="feeds_source_url_hint_feed">ID entitas utawa fingerprint feed</string>
+    <string name="feeds_source_credibility_label">Krédibilitas</string>
+    <string name="feeds_access_management_desc">Atur sapa sing bisa ndelok lan sesambungan karo feed iki</string>
+    <plurals name="feeds_source_interval_hours">
+        <item quantity="other">%1$d jam</item>
+    </plurals>
+    <plurals name="feeds_suggested_interests_add_count">
+        <item quantity="other">Tambahake %1$d minat</item>
+    </plurals>
+    <plurals name="feeds_source_interval_minutes">
+        <item quantity="other">%1$d menit</item>
+    </plurals>
+    <string name="feeds_source_polling_interval">Polling saben %1$s</string>
+    <string name="feeds_access_level_react_full">Reaksi lan ndelok</string>
+    <string name="feeds_permission_allow">Idini</string>
+    <string name="feeds_unsubscribe_confirm_message">Sampeyan ora bakal nampa anyaran saka feed iki maneh. Sampeyan bisa langganan maneh kapan wae.</string>
+    <string name="feeds_access_select_rule">Pilih aturan akses</string>
+    <string name="feeds_access_authenticated_desc">Sapa wae sing wis mlebu</string>
 </resources>

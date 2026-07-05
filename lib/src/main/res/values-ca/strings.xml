@@ -294,4 +294,6 @@
     <string name="common_opening_file">S\'està obrint el fitxer…</string>
     <string name="common_no_app_for_file">Cap aplicació pot obrir aquest fitxer</string>
     <string name="common_file_open_failed">No s\'ha pogut obrir el fitxer</string>
+    <string name="reaction_remove">Esborra</string>
+    <string name="common_logout_confirm_message">Segur que voleu tancar la sessió? Haureu de tornar a iniciar la sessió per accedir al vostre compte.</string>
 </resources>

@@ -292,4 +292,6 @@
     <string name="common_opening_file">Kuvulwa ifayile…</string>
     <string name="common_no_app_for_file">Akukho app inokuvula le fayile</string>
     <string name="common_file_open_failed">Akukwazekanga ukuvula ifayile</string>
+    <string name="reaction_remove">Cima</string>
+    <string name="common_logout_confirm_message">Uqinisekile ukuba ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwiakhawunti yakho.</string>
 </resources>

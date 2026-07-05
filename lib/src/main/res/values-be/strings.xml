@@ -292,4 +292,6 @@
     <string name="common_opening_file">Адкрыццё файла…</string>
     <string name="common_no_app_for_file">Няма праграмы, якая можа адкрыць гэты файл</string>
     <string name="common_file_open_failed">Не ўдалося адкрыць файл</string>
+    <string name="reaction_remove">Ачысціць</string>
+    <string name="common_logout_confirm_message">Вы сапраўды хочаце выйсці? Каб зноў атрымаць доступ да свайго ўліковага запісу, вам трэба будзе выканаць уваход паўторна.</string>
 </resources>

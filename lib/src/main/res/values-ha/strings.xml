@@ -292,4 +292,6 @@
     <string name="common_opening_file">Ana buɗe fayil…</string>
     <string name="common_no_app_for_file">Babu manhajar da za ta iya buɗe wannan fayil</string>
     <string name="common_file_open_failed">An kasa buɗe fayil</string>
+    <string name="reaction_remove">Share</string>
+    <string name="common_logout_confirm_message">Ka tabbata kana son fita? Za ka buƙaci sake shiga don samun damar shiga asusunka.</string>
 </resources>

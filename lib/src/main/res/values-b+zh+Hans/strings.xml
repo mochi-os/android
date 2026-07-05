@@ -292,4 +292,6 @@
     <string name="common_opening_file">正在打开文件…</string>
     <string name="common_no_app_for_file">没有可打开此文件的应用</string>
     <string name="common_file_open_failed">无法打开文件</string>
+    <string name="reaction_remove">清除</string>
+    <string name="common_logout_confirm_message">确定要退出登录吗？您需要重新登录才能访问您的账户。</string>
 </resources>

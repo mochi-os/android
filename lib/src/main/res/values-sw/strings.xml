@@ -292,4 +292,6 @@
     <string name="common_opening_file">Inafungua faili…</string>
     <string name="common_no_app_for_file">Hakuna programu inayoweza kufungua faili hili</string>
     <string name="common_file_open_failed">Imeshindwa kufungua faili</string>
+    <string name="reaction_remove">Futa</string>
+    <string name="common_logout_confirm_message">Je, una uhakika unataka kuondoka? Utahitaji kuingia tena ili kufikia akaunti yako.</string>
 </resources>

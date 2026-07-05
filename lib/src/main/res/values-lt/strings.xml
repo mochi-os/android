@@ -292,4 +292,6 @@
     <string name="common_opening_file">Atidaromas failas…</string>
     <string name="common_no_app_for_file">Nėra programėlės, galinčios atidaryti šį failą</string>
     <string name="common_file_open_failed">Nepavyko atidaryti failo</string>
+    <string name="reaction_remove">Išvalyti</string>
+    <string name="common_logout_confirm_message">Ar tikrai norite atsijungti? Norėdami pasiekti savo paskyrą, turėsite prisijungti iš naujo.</string>
 </resources>
