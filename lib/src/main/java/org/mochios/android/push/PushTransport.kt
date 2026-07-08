@@ -151,6 +151,28 @@ object PushTransport {
         recordTransport(context, server, TRANSPORT_UNIFIEDPUSH)
     }
 
+    /**
+     * Tear down all push on sign-out. Stops the UnifiedPush foreground
+     * distributor ([PushService]) and, via [FcmRegistrar.disconnect], deletes
+     * the FCM token from Firebase — so Google stops delivering to this device —
+     * and tears down the default `FirebaseApp` so a later [configure] against a
+     * different account/server starts clean.
+     *
+     * Serialised through [configureMutex] so a logout can't race an in-flight
+     * [configure] and leave the service running or the token re-registered.
+     * Both steps are wrapped in `runCatching` — a partial teardown must never
+     * wedge the sign-out flow.
+     */
+    suspend fun tearDown(context: Context) = withContext(Dispatchers.IO) {
+        configureMutex.withLock {
+            Log.i(TAG, "tearDown(): stopping push service and clearing FCM token")
+            runCatching { PushService.stop(context) }
+                .onFailure { Log.w(TAG, "PushService.stop failed: ${it.message}") }
+            runCatching { FcmRegistrar.disconnect(context) }
+                .onFailure { Log.w(TAG, "FcmRegistrar.disconnect failed: ${it.message}") }
+        }
+    }
+
     private suspend fun startUnifiedPush(context: Context, sessionManager: SessionManager) {
         runCatching { FcmRegistrar.disconnect(context) }
         PushService.start(context)

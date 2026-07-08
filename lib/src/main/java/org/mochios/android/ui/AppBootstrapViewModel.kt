@@ -25,6 +25,7 @@ import org.mochios.android.i18n.LanguageRepository
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
+import org.mochios.android.push.PushTransport
 import org.mochios.android.ui.theme.ThemeRepository
 import javax.inject.Inject
 
@@ -206,6 +207,10 @@ class AppBootstrapViewModel @Inject constructor(
     fun logout() {
         _stage.value = AuthStage.NeedsLogin
         viewModelScope.launch {
+            // Stop the push service and delete the FCM token from Firebase
+            // before dropping the session, so this device stops receiving
+            // pushes for the account we're leaving.
+            PushTransport.tearDown(context)
             sessionManager.clearAll()
         }
     }
