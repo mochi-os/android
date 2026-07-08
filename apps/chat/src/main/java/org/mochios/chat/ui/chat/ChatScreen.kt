@@ -28,6 +28,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Forward
@@ -46,6 +47,8 @@ import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.AccountCircle
@@ -68,6 +71,8 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
@@ -81,14 +86,21 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavBackStackEntry
@@ -212,6 +224,7 @@ fun ChatScreen(
             )
         } else {
             ChatContent(
+                chatId = chatId,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                 onSettings = onSettings,
                 onOpenNotifications = onOpenNotifications,
@@ -254,6 +267,7 @@ private fun ChatDrawerPlaceholder(onOpenDrawer: () -> Unit) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ChatContent(
+    chatId: String,
     onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
     onOpenNotifications: () -> Unit,
@@ -274,6 +288,13 @@ private fun ChatContent(
     var menuExpanded by remember { mutableStateOf(false) }
     val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
 
+    // Match ids come from the server search (newest-first). The active match is
+    // scrolled to and highlighted; the counter/navigation reflect the full set.
+    val searchMatchIds = uiState.searchMatchIds
+    val searchMatchIndex = uiState.searchMatchIndex
+        .coerceIn(0, (searchMatchIds.size - 1).coerceAtLeast(0))
+    val activeMatchId = searchMatchIds.getOrNull(searchMatchIndex)
+
     LaunchedEffect(Unit) {
         viewModel.events.collect { msg ->
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
@@ -281,8 +302,22 @@ private fun ChatContent(
     }
 
     LaunchedEffect(uiState.messages.size) {
-        if (uiState.messages.isNotEmpty()) {
+        // Don't yank the list to the bottom while the user is navigating search
+        // matches — the match-scroll effect below owns positioning then.
+        if (uiState.messages.isNotEmpty() && !uiState.searchOpen) {
             listState.animateScrollToItem(uiState.messages.size - 1)
+        }
+    }
+
+    LaunchedEffect(activeMatchId, uiState.messages) {
+        val id = activeMatchId ?: return@LaunchedEffect
+        val idx = messageLazyIndex(grouped, uiState.hasMore, id)
+        when {
+            idx >= 0 -> listState.animateScrollToItem(idx)
+            // The match lives in older history that isn't loaded yet. Page back
+            // one chunk; this effect re-runs as messages grow, so it keeps
+            // paging until the match appears (or there's nothing older left).
+            uiState.hasMore && !uiState.isLoadingMore -> viewModel.loadMoreOlder()
         }
     }
 
@@ -301,114 +336,133 @@ private fun ChatContent(
                     ordered.joinToString(", ")
                 }
             }
-            TopAppBar(
-                title = {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        if (peerAvatarUrl != null) {
-                            EntityAvatar(
-                                name = peer.name.ifBlank { uiState.chat.name },
-                                src = peerAvatarUrl,
-                                seed = peer.id,
-                                size = 32.dp,
-                            )
-                            Spacer(Modifier.width(8.dp))
-                        }
-                        Column {
-                            Text(
-                                text = uiState.chat.name.ifBlank { stringResource(R.string.chat_messages_loading) },
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                            if (membersSubtitle.isNotBlank()) {
+            if (uiState.searchOpen) {
+                ChatSearchBar(
+                    query = uiState.searchQuery,
+                    onQueryChange = { text -> viewModel.setSearchQuery(text) },
+                    onClose = { viewModel.closeSearch() },
+                    matchPosition = if (searchMatchIds.isEmpty()) 0 else searchMatchIndex + 1,
+                    matchCount = searchMatchIds.size,
+                    onUp = { viewModel.setSearchMatchIndex(searchMatchIndex + 1) },
+                    onDown = { viewModel.setSearchMatchIndex(searchMatchIndex - 1) },
+                )
+            } else {
+                TopAppBar(
+                    title = {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            if (peerAvatarUrl != null) {
+                                EntityAvatar(
+                                    name = peer.name.ifBlank { uiState.chat.name },
+                                    src = peerAvatarUrl,
+                                    seed = peer.id,
+                                    size = 32.dp,
+                                )
+                                Spacer(Modifier.width(8.dp))
+                            }
+                            Column {
                                 Text(
-                                    text = membersSubtitle,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    text = uiState.chat.name.ifBlank {
+                                        stringResource(R.string.chat_messages_loading)
+                                    },
                                     maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                                if (membersSubtitle.isNotBlank()) {
+                                    Text(
+                                        text = membersSubtitle,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                }
+                            }
+                        }
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = onOpenDrawer) {
+                            Icon(
+                                Icons.Default.Menu,
+                                contentDescription = stringResource(R.string.chat_list_title)
+                            )
+                        }
+                    },
+                    actions = {
+                        NotificationBell(onClick = onOpenNotifications)
+                        if (chatId.isNotEmpty()) {
+                            IconButton(onClick = { viewModel.openSearch() }) {
+                                Icon(
+                                    Icons.Default.Search,
+                                    contentDescription = stringResource(R.string.chat_list_search)
+                                )
+                            }
+                            IconButton(onClick = { menuExpanded = true }) {
+                                Icon(
+                                    Icons.Default.MoreVert,
+                                    contentDescription = stringResource(MochiR.string.common_more_options)
+                                )
+                            }
+                            DropdownMenu(
+                                expanded = menuExpanded,
+                                onDismissRequest = { menuExpanded = false }
+                            ) {
+                                DropdownMenuItem(
+                                    text = {
+                                        Text(
+                                            stringResource(
+                                                if (uiState.isPinned) R.string.chat_unpin
+                                                else R.string.chat_pin
+                                            )
+                                        )
+                                    },
+                                    leadingIcon = {
+                                        Icon(
+                                            imageVector = if (uiState.isPinned) {
+                                                ImageVector.vectorResource(R.drawable.ic_push_pin_off)
+                                            } else {
+                                                Icons.Outlined.PushPin
+                                            },
+                                            contentDescription = null,
+                                        )
+                                    },
+                                    onClick = {
+                                        menuExpanded = false
+                                        viewModel.togglePin()
+                                    }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.chat_mark_read)) },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.DoneAll, contentDescription = null)
+                                    },
+                                    onClick = {
+                                        menuExpanded = false
+                                        viewModel.markReadNow()
+                                    }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.settings_title)) },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.Settings, contentDescription = null)
+                                    },
+                                    onClick = {
+                                        menuExpanded = false
+                                        onSettings(uiState.chat.fingerprint.ifEmpty { chatId })
+                                    }
                                 )
                             }
                         }
                     }
-                },
-                navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
-                        Icon(
-                            Icons.Default.Menu,
-                            contentDescription = stringResource(R.string.chat_list_title)
-                        )
-                    }
-                },
-                actions = {
-                    NotificationBell(onClick = onOpenNotifications)
-                    if (uiState.chat.id.isNotEmpty()) {
-                        IconButton(onClick = { viewModel.openSearch() }) {
-                            Icon(
-                                Icons.Default.Search,
-                                contentDescription = stringResource(R.string.chat_search_hint)
-                            )
-                        }
-                        IconButton(onClick = { onSettings(uiState.chat.fingerprint.ifEmpty { uiState.chat.id }) }) {
-                            Icon(
-                                Icons.Default.Settings,
-                                contentDescription = stringResource(R.string.chat_settings_title)
-                            )
-                        }
-                        IconButton(onClick = { menuExpanded = true }) {
-                            Icon(
-                                Icons.Default.MoreVert,
-                                contentDescription = stringResource(MochiR.string.common_more_options)
-                            )
-                        }
-                        DropdownMenu(
-                            expanded = menuExpanded,
-                            onDismissRequest = { menuExpanded = false }
-                        ) {
-                            DropdownMenuItem(
-                                text = {
-                                    Text(
-                                        stringResource(
-                                            if (uiState.isPinned) R.string.chat_unpin
-                                            else R.string.chat_pin
-                                        )
-                                    )
-                                },
-                                leadingIcon = {
-                                    Icon(
-                                        imageVector = if (uiState.isPinned) {
-                                            ImageVector.vectorResource(R.drawable.ic_push_pin_off)
-                                        } else {
-                                            Icons.Outlined.PushPin
-                                        },
-                                        contentDescription = null,
-                                    )
-                                },
-                                onClick = {
-                                    menuExpanded = false
-                                    viewModel.togglePin()
-                                }
-                            )
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.chat_mark_read)) },
-                                leadingIcon = {
-                                    Icon(Icons.Default.DoneAll, contentDescription = null)
-                                },
-                                onClick = {
-                                    menuExpanded = false
-                                    viewModel.markReadNow()
-                                }
-                            )
-                        }
-                    }
-                }
-            )
+                )
+            }
         }
     ) { padding ->
-        Column(
+        Box(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
         ) {
+            Column(modifier = Modifier.fillMaxSize()) {
             if (uiState.selectionMode) {
                 SelectionBar(
                     count = uiState.selectedIds.size,
@@ -469,7 +523,7 @@ private fun ChatContent(
                     LazyColumn(
                         state = listState,
                         modifier = Modifier.weight(1f).fillMaxWidth(),
-                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+                        contentPadding = PaddingValues(vertical = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         if (uiState.hasMore) {
@@ -504,6 +558,8 @@ private fun ChatContent(
                                             chatId = uiState.chat.id,
                                             selectionMode = uiState.selectionMode,
                                             isSelected = entry.message.id in uiState.selectedIds,
+                                            isSearchMatch = entry.message.id == activeMatchId,
+                                            searchQuery = if (uiState.searchOpen) uiState.searchQuery else "",
                                             replyToMessage = entry.message.replyTo?.let { rid ->
                                                 uiState.messages.firstOrNull { it.id == rid }
                                             },
@@ -544,21 +600,6 @@ private fun ChatContent(
                 }
             )
 
-            if (uiState.searchOpen) {
-                ChatSearchSheet(
-                    query = uiState.searchQuery,
-                    onQueryChange = { viewModel.setSearchQuery(it) },
-                    results = uiState.searchResults,
-                    loading = uiState.searchLoading,
-                    onDismiss = { viewModel.closeSearch() },
-                    onResultClick = { result ->
-                        val idx = messageLazyIndex(grouped, uiState.hasMore, result.id)
-                        viewModel.closeSearch()
-                        if (idx >= 0) scope.launch { listState.animateScrollToItem(idx) }
-                    },
-                )
-            }
-
             if (uiState.forwardMessageIds.isNotEmpty()) {
                 ChatForwardSheet(
                     chats = uiState.forwardChats,
@@ -595,6 +636,34 @@ private fun ChatContent(
                     },
                 )
             }
+            }
+        }
+    }
+}
+
+/**
+ * Build an [AnnotatedString] of [text] with every case-insensitive occurrence
+ * of [query] painted on a yellow background (black text for contrast), used to
+ * highlight search hits inline. Returns the plain text when [query] is blank.
+ */
+private fun highlightQuery(text: String, query: String): AnnotatedString {
+    val needle = query.trim()
+    if (needle.isEmpty()) return AnnotatedString(text)
+    return buildAnnotatedString {
+        val haystack = text.lowercase()
+        val lowerNeedle = needle.lowercase()
+        var start = 0
+        while (true) {
+            val hit = haystack.indexOf(lowerNeedle, start)
+            if (hit < 0) {
+                append(text.substring(start))
+                break
+            }
+            append(text.substring(start, hit))
+            withStyle(SpanStyle(background = Color(0xFFFFEB3B), color = Color.Black)) {
+                append(text.substring(hit, hit + needle.length))
+            }
+            start = hit + needle.length
         }
     }
 }
@@ -618,84 +687,92 @@ private fun messageLazyIndex(
 }
 
 /**
- * Search-in-chat bottom sheet: a query field over the server search endpoint
- * plus a results list (sender / excerpt / time). Tapping a result jumps to the
- * message if it's loaded. Mirrors the web chat-search header's capability.
+ * In-conversation "find" app bar: an auto-focused query field over the loaded
+ * messages, plus a match counter and up/down navigation that scroll to and
+ * highlight each hit. The conversation stays visible behind it (no results
+ * overlay), mirroring a find-in-page bar.
+ *
+ * @param matchPosition 1-based index of the active match (0 when none).
+ * @param matchCount total number of matches.
+ * @param onUp jump to the previous (older) match.
+ * @param onDown jump to the next (newer) match.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun ChatSearchSheet(
+private fun ChatSearchBar(
     query: String,
     onQueryChange: (String) -> Unit,
-    results: List<org.mochios.chat.model.ChatSearchResult>,
-    loading: Boolean,
-    onDismiss: () -> Unit,
-    onResultClick: (org.mochios.chat.model.ChatSearchResult) -> Unit,
+    onClose: () -> Unit,
+    matchPosition: Int,
+    matchCount: Int,
+    onUp: () -> Unit,
+    onDown: () -> Unit,
 ) {
-    val format = LocalFormat.current
-    ModalBottomSheet(onDismissRequest = onDismiss) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp)
-                .padding(bottom = 16.dp)
-        ) {
-            OutlinedTextField(
+    val focusRequester = remember { FocusRequester() }
+    LaunchedEffect(Unit) {
+        focusRequester.requestFocus()
+    }
+    TopAppBar(
+        navigationIcon = {
+            IconButton(onClick = onClose) {
+                Icon(
+                    Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = stringResource(MochiR.string.common_back),
+                )
+            }
+        },
+        title = {
+            TextField(
                 value = query,
                 onValueChange = onQueryChange,
                 placeholder = { Text(stringResource(R.string.chat_search_hint)) },
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 singleLine = true,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-            when {
-                loading -> Box(
-                    modifier = Modifier.fillMaxWidth().padding(24.dp),
-                    contentAlignment = Alignment.Center,
-                ) { CircularProgressIndicator() }
-                query.trim().length >= 2 && results.isEmpty() -> Text(
-                    text = stringResource(R.string.chat_search_no_results),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(vertical = 16.dp),
-                )
-                else -> LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
-                    items(results, key = { it.id }) { result ->
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable { onResultClick(result) }
-                                .padding(vertical = 8.dp)
-                        ) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                            ) {
-                                Text(
-                                    text = result.name,
-                                    style = MaterialTheme.typography.labelMedium,
-                                    color = MaterialTheme.colorScheme.primary,
-                                )
-                                Text(
-                                    text = format.formatTimestamp(result.created),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                )
-                            }
-                            Text(
-                                text = result.excerpt.ifBlank { result.body },
-                                style = MaterialTheme.typography.bodyMedium,
-                                maxLines = 2,
-                                overflow = TextOverflow.Ellipsis,
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                trailingIcon = {
+                    if (query.isNotEmpty()) {
+                        IconButton(onClick = { onQueryChange("") }) {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = stringResource(MochiR.string.common_close),
                             )
                         }
-                        HorizontalDivider()
                     }
+                },
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    disabledContainerColor = Color.Transparent,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(focusRequester),
+            )
+        },
+        actions = {
+            if (query.isNotBlank()) {
+                Text(
+                    text = "$matchPosition/$matchCount",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                IconButton(onClick = onUp, enabled = matchPosition < matchCount) {
+                    Icon(
+                        Icons.Default.KeyboardArrowUp,
+                        contentDescription = stringResource(R.string.chat_search_prev),
+                    )
+                }
+                IconButton(onClick = onDown, enabled = matchPosition > 1) {
+                    Icon(
+                        Icons.Default.KeyboardArrowDown,
+                        contentDescription = stringResource(R.string.chat_search_next),
+                    )
                 }
             }
-        }
-    }
+        },
+    )
 }
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -707,6 +784,8 @@ private fun MessageBubble(
     chatId: String,
     selectionMode: Boolean,
     isSelected: Boolean,
+    isSearchMatch: Boolean,
+    searchQuery: String,
     replyToMessage: ChatMessage?,
     onStartSelect: () -> Unit,
     onToggleSelect: () -> Unit,
@@ -727,8 +806,8 @@ private fun MessageBubble(
         modifier = Modifier
             .fillMaxWidth()
             .then(
-                if (isSelected) {
-                    Modifier.background(MaterialTheme.colorScheme.surfaceVariant)
+                if (isSelected || isSearchMatch) {
+                    Modifier.background(MaterialTheme.colorScheme.primary.copy(alpha = 0.10f))
                 } else {
                     Modifier
                 }
@@ -736,7 +815,7 @@ private fun MessageBubble(
             .then(
                 if (selectionMode) Modifier.clickable(onClick = onToggleSelect) else Modifier
             )
-            .padding(vertical = 2.dp),
+            .padding(horizontal = 12.dp, vertical = 2.dp),
         horizontalAlignment = if (isOwn) Alignment.End else Alignment.Start
     ) {
         if (isGroup && !isOwn) {
@@ -808,7 +887,7 @@ private fun MessageBubble(
                     } else {
                         if (message.body.isNotEmpty()) {
                             Text(
-                                text = message.body,
+                                text = highlightQuery(message.body, searchQuery),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = if (isOwn) {
                                     MaterialTheme.colorScheme.onPrimaryContainer

@@ -99,6 +99,10 @@
     <string name="chat_members_you">You</string>
     <string name="chat_chat_not_found">Chat not found</string>
 
+    <!-- Search navigation -->
+    <string name="chat_search_prev">Previous match</string>
+    <string name="chat_search_next">Next match</string>
+
     <!-- Conversation overflow menu -->
     <string name="chat_pin">Pin</string>
     <string name="chat_unpin">Unpin</string>

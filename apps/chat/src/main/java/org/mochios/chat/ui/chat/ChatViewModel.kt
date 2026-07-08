@@ -29,7 +29,6 @@ import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
-import org.mochios.chat.model.ChatSearchResult
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.Friend
 import org.mochios.chat.repository.ChatRepository
@@ -50,8 +49,8 @@ data class ChatUiState(
     val pendingAttachments: List<Uri> = emptyList(),
     val searchOpen: Boolean = false,
     val searchQuery: String = "",
-    val searchResults: List<ChatSearchResult> = emptyList(),
-    val searchLoading: Boolean = false,
+    val searchMatchIds: List<String> = emptyList(),
+    val searchMatchIndex: Int = 0,
     val forwardMessageIds: List<String> = emptyList(),
     val forwardChats: List<Chat> = emptyList(),
     val forwardFriends: List<Friend> = emptyList(),
@@ -231,35 +230,47 @@ class ChatViewModel @Inject constructor(
 
     fun openSearch() {
         _uiState.value = _uiState.value.copy(
-            searchOpen = true, searchQuery = "", searchResults = emptyList(), searchLoading = false,
+            searchOpen = true, searchQuery = "", searchMatchIds = emptyList(), searchMatchIndex = 0,
         )
     }
 
     fun closeSearch() {
         searchJob?.cancel()
         _uiState.value = _uiState.value.copy(
-            searchOpen = false, searchQuery = "", searchResults = emptyList(), searchLoading = false,
+            searchOpen = false, searchQuery = "", searchMatchIds = emptyList(), searchMatchIndex = 0,
         )
     }
 
-    /** Debounced server-side message search; needs >=2 chars (matches web). */
+    /**
+     * Debounced server-side message search (needs >=2 chars, matches web). The
+     * returned match ids drive the counter and up/down navigation; results are
+     * ordered newest-first so match 1 is the most recent hit.
+     */
     fun setSearchQuery(query: String) {
-        _uiState.value = _uiState.value.copy(searchQuery = query)
+        _uiState.value = _uiState.value.copy(searchQuery = query, searchMatchIndex = 0)
         searchJob?.cancel()
-        if (query.trim().length < 2) {
-            _uiState.value = _uiState.value.copy(searchResults = emptyList(), searchLoading = false)
+        val trimmed = query.trim()
+        if (trimmed.length < 2) {
+            _uiState.value = _uiState.value.copy(searchMatchIds = emptyList())
             return
         }
         searchJob = viewModelScope.launch {
             delay(300)
-            _uiState.value = _uiState.value.copy(searchLoading = true)
             try {
-                val res = repository.search(chatId, query.trim())
-                _uiState.value = _uiState.value.copy(searchResults = res.results, searchLoading = false)
+                val res = repository.search(chatId, trimmed)
+                val ids = res.results
+                    .sortedByDescending { result -> result.created }
+                    .map { result -> result.id }
+                _uiState.value = _uiState.value.copy(searchMatchIds = ids, searchMatchIndex = 0)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(searchLoading = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    /** Select which match is active — its message is scrolled to and highlighted. */
+    fun setSearchMatchIndex(index: Int) {
+        _uiState.value = _uiState.value.copy(searchMatchIndex = index)
     }
 
     // ---------------- forward ----------------
