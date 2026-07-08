@@ -122,47 +122,57 @@ class MochiWebSocket @Inject constructor(
 
         reconnecting[key] = true
 
-        val socket = wsClient.newWebSocket(request, object : WebSocketListener() {
-            override fun onOpen(webSocket: WebSocket, response: Response) {
-                // Reset backoff on successful connect so the next failure
-                // starts at the short-end again.
-                backoffAttempts.remove(key)
-            }
+        // Create-and-store atomically. A raw reconnect thread and subscribe()
+        // (or two racing reconnects) can otherwise both open a socket for the
+        // same key, and only the last is retained — the orphan keeps failing
+        // and reconnecting, doubling the connection loop. computeIfAbsent makes
+        // this a no-op when a socket already exists for the key.
+        sockets.computeIfAbsent(key) { _ ->
+            wsClient.newWebSocket(request, object : WebSocketListener() {
+                override fun onOpen(webSocket: WebSocket, response: Response) {
+                    // Reset backoff on successful connect so the next failure
+                    // starts at the short-end again.
+                    backoffAttempts.remove(key)
+                }
 
-            override fun onMessage(webSocket: WebSocket, text: String) {
-                try {
-                    val event = gson.fromJson(text, WebSocketEvent::class.java)
-                    val callbacks = subscribers[key]
-                    if (callbacks != null) {
-                        for ((_, callback) in callbacks) {
-                            try {
-                                callback(event)
-                            } catch (e: Exception) {
-                                // Swallow callback errors to avoid crashing the websocket
+                override fun onMessage(webSocket: WebSocket, text: String) {
+                    try {
+                        val event = gson.fromJson(text, WebSocketEvent::class.java)
+                        val callbacks = subscribers[key]
+                        if (callbacks != null) {
+                            for ((_, callback) in callbacks) {
+                                try {
+                                    callback(event)
+                                } catch (e: Exception) {
+                                    // Swallow callback errors to avoid crashing the websocket
+                                }
                             }
                         }
+                    } catch (e: Exception) {
+                        // Failed to parse message
                     }
-                } catch (e: Exception) {
-                    // Failed to parse message
                 }
-            }
 
-            override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
-                webSocket.close(1000, null)
-            }
+                override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
+                    webSocket.close(1000, null)
+                }
 
-            override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
-                sockets.remove(key)
-                scheduleReconnect(serverUrl, fingerprint)
-            }
+                override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
+                    // Only reconnect if this socket is still the current one for
+                    // the key — an orphaned socket dying must not evict a newer
+                    // healthy socket or start a competing reconnect loop.
+                    if (sockets.remove(key, webSocket)) {
+                        scheduleReconnect(serverUrl, fingerprint)
+                    }
+                }
 
-            override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
-                sockets.remove(key)
-                scheduleReconnect(serverUrl, fingerprint)
-            }
-        })
-
-        sockets[key] = socket
+                override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
+                    if (sockets.remove(key, webSocket)) {
+                        scheduleReconnect(serverUrl, fingerprint)
+                    }
+                }
+            })
+        }
     }
 
     private fun scheduleReconnect(serverUrl: String, fingerprint: String) {

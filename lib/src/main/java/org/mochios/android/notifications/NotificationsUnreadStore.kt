@@ -15,6 +15,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
@@ -49,9 +50,27 @@ class NotificationsUnreadStore @Inject constructor(
         if (started) return
         started = true
         scope.launch {
+            // Don't poll or open the notifications socket while signed out —
+            // the count call 401s and the socket reconnect-loops forever.
+            if (sessionManager.currentToken.first() == null) {
+                started = false
+                return@launch
+            }
             refresh()
             subscribeWebSocket()
         }
+    }
+
+    /**
+     * Tear everything down on sign-out: drop the websocket subscription (which
+     * stops its reconnect loop) and reset state so a later sign-in starts the
+     * poller and socket cleanly from [ensureStarted].
+     */
+    fun stop() {
+        subscriptionId?.let { id -> webSocket.unsubscribe(id) }
+        subscriptionId = null
+        started = false
+        _count.value = 0
     }
 
     suspend fun refresh() {

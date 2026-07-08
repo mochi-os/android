@@ -25,8 +25,10 @@ import org.mochios.android.i18n.LanguageRepository
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
+import org.mochios.android.notifications.NotificationsUnreadStore
 import org.mochios.android.push.PushTransport
 import org.mochios.android.ui.theme.ThemeRepository
+import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
 /**
@@ -86,6 +88,8 @@ class AppBootstrapViewModel @Inject constructor(
     private val themeRepository: ThemeRepository,
     private val languageRepository: LanguageRepository,
     private val preferencesManager: PreferencesManager,
+    private val webSocket: MochiWebSocket,
+    private val unreadStore: NotificationsUnreadStore,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -125,6 +129,8 @@ class AppBootstrapViewModel @Inject constructor(
                         // Cross-app logout: our bound identity vanished.
                         val boundId = sessionManager.getBoundIdentity()
                         if (boundId != null && accounts.none { it.identity == boundId }) {
+                            unreadStore.stop()
+                            webSocket.disconnectAll()
                             sessionManager.clearAll()
                             _stage.value = AuthStage.NeedsLogin
                         }
@@ -207,7 +213,12 @@ class AppBootstrapViewModel @Inject constructor(
     fun logout() {
         _stage.value = AuthStage.NeedsLogin
         viewModelScope.launch {
-            // Clear the session first: tearDown() deletes the FCM token, which
+            // Stop the notifications poller + websocket first: otherwise the
+            // socket keeps reconnect-looping and the unread-count call 401s
+            // once clearAll() drops the session cookie.
+            unreadStore.stop()
+            webSocket.disconnectAll()
+            // Clear the session next: tearDown() deletes the FCM token, which
             // makes Firebase mint a fresh one and fire onNewToken. With no
             // active session that callback skips re-registering, so this device
             // stops receiving pushes for the account we're leaving.
