@@ -18,13 +18,8 @@ import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
-import org.json.JSONObject
-import org.mochios.android.auth.AuthRepository
 
 /**
  * Receives FCM messages and posts the system notification on the matching
@@ -68,66 +63,20 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
     override fun onNewToken(token: String) {
         Log.i(TAG, "FCM token refreshed")
         scope.launch {
-            try {
-                val deps = deps()
-                val server = deps.sessionManager().getServerUrlBlocking()
-                postPushRegisterFcm(
-                    deps.okHttpClient(),
-                    deps.authRepository(),
-                    applicationContext,
-                    server,
-                    token
-                )
-            } catch (e: Exception) {
-                Log.w(TAG, "Failed to register FCM token with Mochi server: ${e.message}")
+            val deps = deps()
+            // deleteToken() during sign-out makes Firebase mint a fresh token
+            // and fire this callback. Registering it would re-subscribe the
+            // device we just signed out of, so skip when there's no session.
+            if (!deps.sessionManager().isAuthenticated.first()) {
+                Log.i(TAG, "No active session; skipping FCM token registration")
+                return@launch
             }
-        }
-    }
-
-    /**
-     * Body shape matches [FcmRegistrar.postRegisterFcm] — server requires
-     * `install_id` (Firebase Installations ID, used as the per-device dedup
-     * key) and `device` (display name) alongside `token`. Sending only the
-     * token returned 400 and the cold-start race then fell back to
-     * UnifiedPush, surfacing the "listening for notifications" status row.
-     */
-    private suspend fun postPushRegisterFcm(
-        client: OkHttpClient,
-        authRepository: AuthRepository,
-        context: Context,
-        server: String,
-        token: String,
-    ) {
-        val appToken =
-            authRepository.fetchToken("notifications").getOrNull() ?: return
-        val installId = try {
-            com.google.firebase.installations.FirebaseInstallations.getInstance().id
-                .let { task ->
-                    com.google.android.gms.tasks.Tasks.await(task)
-                }
-        } catch (e: Exception) {
-            Log.w(
-                TAG,
-                "Could not fetch Firebase Installations ID for FCM re-register: ${e.message}"
-            )
-            return
-        }
-        val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
-        val body = JSONObject()
-            .put("token", token)
-            .put("install_id", installId)
-            .put("device", DeviceName.resolve(context))
-            .toString()
-            .toRequestBody("application/json".toMediaType())
-        val request = Request.Builder()
-            .url(url)
-            .header("Authorization", "Bearer $appToken")
-            .post(body)
-            .build()
-        client.newCall(request).execute().use { resp ->
-            if (!resp.isSuccessful) {
-                Log.w(TAG, "/notifications/-/push/register/fcm returned ${resp.code}")
+            val server = deps.sessionManager().getServerUrlBlocking()
+            if (server.isBlank()) {
+                Log.w(TAG, "No server bound; skipping FCM token registration")
+                return@launch
             }
+            FcmRegistrar.register(applicationContext, deps.okHttpClient(), server, token)
         }
     }
 

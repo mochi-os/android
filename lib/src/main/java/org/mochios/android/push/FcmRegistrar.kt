@@ -75,6 +75,25 @@ object FcmRegistrar {
             return false
         }
 
+        return register(context, client, server, token)
+    }
+
+    /**
+     * Register (or refresh) the given FCM token with the Mochi server via the
+     * notifications app's push/register/fcm action. Resolves the Firebase
+     * Installations ID (the per-device dedup key) and device display name
+     * itself, so callers holding only a token — notably
+     * [MochiFirebaseMessagingService.onNewToken] — can reuse this path instead
+     * of duplicating the request.
+     *
+     * Returns true on success, false on any failure.
+     */
+    suspend fun register(
+        context: Context,
+        client: OkHttpClient,
+        server: String,
+        token: String,
+    ): Boolean {
         val installId = try {
             FirebaseInstallations.getInstance().awaitId()
         } catch (e: Exception) {

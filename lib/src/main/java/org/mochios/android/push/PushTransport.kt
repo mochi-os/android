@@ -162,6 +162,12 @@ object PushTransport {
      * [configure] and leave the service running or the token re-registered.
      * Both steps are wrapped in `runCatching` — a partial teardown must never
      * wedge the sign-out flow.
+     *
+     * Callers must clear the session (so [SessionManager.isAuthenticated] is
+     * false) *before* invoking this: [FcmRegistrar.disconnect]'s deleteToken()
+     * makes Firebase mint a fresh token and fire
+     * [MochiFirebaseMessagingService.onNewToken], which skips re-registering
+     * only while there is no active session.
      */
     suspend fun tearDown(context: Context) = withContext(Dispatchers.IO) {
         configureMutex.withLock {

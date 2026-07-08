@@ -207,11 +207,12 @@ class AppBootstrapViewModel @Inject constructor(
     fun logout() {
         _stage.value = AuthStage.NeedsLogin
         viewModelScope.launch {
-            // Stop the push service and delete the FCM token from Firebase
-            // before dropping the session, so this device stops receiving
-            // pushes for the account we're leaving.
-            PushTransport.tearDown(context)
+            // Clear the session first: tearDown() deletes the FCM token, which
+            // makes Firebase mint a fresh one and fire onNewToken. With no
+            // active session that callback skips re-registering, so this device
+            // stops receiving pushes for the account we're leaving.
             sessionManager.clearAll()
+            PushTransport.tearDown(context)
         }
     }
 
