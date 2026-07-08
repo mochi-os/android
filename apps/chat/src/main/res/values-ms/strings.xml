@@ -12,7 +12,6 @@
     <string name="chat_new_title">Sembang baharu</string>
     <string name="chat_new_name">Nama kumpulan</string>
     <string name="chat_new_friends">Rakan</string>
-    <string name="chat_new_search_placeholder">Cari rakan</string>
     <string name="chat_message_placeholder">Mesej</string>
     <string name="chat_attachment_add">Lampirkan fail</string>
     <string name="chat_message_attach">Lampirkan fail</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Tiada sembang yang sepadan</string>
     <string name="chat_list_empty">Belum ada sembang</string>
     <string name="chat_list_left_chat">Keluar</string>
-    <string name="chat_new_no_friends">Belum ada rakan untuk disembangkan</string>
-    <string name="chat_new_no_matches">Tiada rakan yang sepadan</string>
     <string name="chat_new_existing_chat">Buka sembang sedia ada</string>
     <string name="chat_new_start">Mulakan sembang</string>
     <string name="chat_new_start_group">Mulakan sembang kumpulan</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Pilih sembang atau rakan untuk memajukan mesej yang dipilih</string>
     <string name="chat_forward_chats">Sembang</string>
     <string name="chat_forward_friends">Rakan</string>
+    <string name="chat_policy_title">Sembang masuk</string>
+    <string name="chat_policy_friends">Rakan sahaja</string>
+    <string name="chat_policy_friends_description">Hanya rakan boleh memulakan sembang dengan anda (lalai).</string>
+    <string name="chat_policy_anyone">Sesiapa sahaja</string>
+    <string name="chat_policy_anyone_description">Sesiapa sahaja boleh memulakan sembang dengan anda.</string>
+    <string name="chat_new_search_placeholder">Cari orang</string>
+    <string name="chat_new_no_matches">Tiada orang yang sepadan</string>
+    <string name="chat_new_no_friends">Cari orang untuk bersembang</string>
 </resources>

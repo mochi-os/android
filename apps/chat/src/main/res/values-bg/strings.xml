@@ -12,7 +12,6 @@
     <string name="chat_new_title">Нов чат</string>
     <string name="chat_new_name">Име на група</string>
     <string name="chat_new_friends">Приятели</string>
-    <string name="chat_new_search_placeholder">Търси приятели</string>
     <string name="chat_message_placeholder">Съобщение</string>
     <string name="chat_attachment_add">Прикачи файлове</string>
     <string name="chat_message_attach">Прикачи файлове</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Все още няма чатове</string>
     <string name="chat_list_add_to_home">Добавяне към началния екран</string>
     <string name="chat_list_left_chat">Напуснат</string>
-    <string name="chat_new_no_friends">Все още няма приятели за чат</string>
-    <string name="chat_new_no_matches">Няма съвпадащи приятели</string>
     <string name="chat_new_existing_chat">Отваряне на съществуващ чат</string>
     <string name="chat_new_start">Започване на чат</string>
     <string name="chat_new_start_group">Започване на групов чат</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Изберете чат или приятел, към когото да препратите избраните съобщения</string>
     <string name="chat_forward_chats">Чатове</string>
     <string name="chat_forward_friends">Приятели</string>
+    <string name="chat_policy_title">Входящи чатове</string>
+    <string name="chat_policy_friends">Само приятели</string>
+    <string name="chat_policy_friends_description">Само приятели могат да започнат чат с вас (по подразбиране).</string>
+    <string name="chat_policy_anyone">Всеки</string>
+    <string name="chat_policy_anyone_description">Всеки може да започне чат с вас.</string>
+    <string name="chat_new_search_placeholder">Търсене на хора</string>
+    <string name="chat_new_no_matches">Няма съвпадащи хора</string>
+    <string name="chat_new_no_friends">Търсете хора за чат</string>
 </resources>

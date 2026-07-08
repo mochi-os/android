@@ -12,7 +12,6 @@
     <string name="chat_new_title">নতুন চ্যাট</string>
     <string name="chat_new_name">গ্রুপের নাম</string>
     <string name="chat_new_friends">বন্ধুরা</string>
-    <string name="chat_new_search_placeholder">বন্ধু অনুসন্ধান করুন</string>
     <string name="chat_message_placeholder">বার্তা</string>
     <string name="chat_attachment_add">ফাইল সংযুক্ত করুন</string>
     <string name="chat_message_attach">ফাইল সংযুক্ত করুন</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">এখনও কোনো চ্যাট নেই</string>
     <string name="chat_list_add_to_home">হোম স্ক্রিনে যোগ করুন</string>
     <string name="chat_list_left_chat">ত্যাগ করেছেন</string>
-    <string name="chat_new_no_friends">চ্যাট করার মতো এখনও কোনো বন্ধু নেই</string>
-    <string name="chat_new_no_matches">কোনো মিলযুক্ত বন্ধু নেই</string>
     <string name="chat_new_existing_chat">বিদ্যমান চ্যাট খুলুন</string>
     <string name="chat_new_start">চ্যাট শুরু করুন</string>
     <string name="chat_new_start_group">গ্রুপ চ্যাট শুরু করুন</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">নির্বাচিত বার্তা ফরওয়ার্ড করতে একটি চ্যাট বা বন্ধু বেছে নিন</string>
     <string name="chat_forward_chats">চ্যাট</string>
     <string name="chat_forward_friends">বন্ধুরা</string>
+    <string name="chat_policy_title">আগত চ্যাট</string>
+    <string name="chat_policy_friends">শুধুমাত্র বন্ধুরা</string>
+    <string name="chat_policy_friends_description">শুধুমাত্র বন্ধুরা আপনার সাথে চ্যাট শুরু করতে পারে (ডিফল্ট)।</string>
+    <string name="chat_policy_anyone">যে কেউ</string>
+    <string name="chat_policy_anyone_description">যে কেউ আপনার সাথে চ্যাট শুরু করতে পারে।</string>
+    <string name="chat_new_search_placeholder">মানুষ খুঁজুন</string>
+    <string name="chat_new_no_matches">কোনো মিলে যাওয়া মানুষ নেই</string>
+    <string name="chat_new_no_friends">চ্যাট করার জন্য মানুষ খুঁজুন</string>
 </resources>

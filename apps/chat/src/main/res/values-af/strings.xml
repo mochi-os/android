@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nuwe geselsie</string>
     <string name="chat_new_name">Groepnaam</string>
     <string name="chat_new_friends">Vriende</string>
-    <string name="chat_new_search_placeholder">Soek vriende</string>
     <string name="chat_message_placeholder">Boodskap</string>
     <string name="chat_attachment_add">Heg lêers aan</string>
     <string name="chat_message_attach">Heg lêers aan</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Nog geen kletse nie</string>
     <string name="chat_list_add_to_home">Voeg by tuisskerm by</string>
     <string name="chat_list_left_chat">Verlaat</string>
-    <string name="chat_new_no_friends">Nog geen vriende om mee te klets nie</string>
-    <string name="chat_new_no_matches">Geen passende vriende nie</string>
     <string name="chat_new_existing_chat">Open bestaande klets</string>
     <string name="chat_new_start">Begin klets</string>
     <string name="chat_new_start_group">Begin groepklets</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Kies \'n klets of vriend om die gekose boodskappe na aan te stuur</string>
     <string name="chat_forward_chats">Kletse</string>
     <string name="chat_forward_friends">Vriende</string>
+    <string name="chat_policy_title">Inkomende kletse</string>
+    <string name="chat_policy_friends">Slegs vriende</string>
+    <string name="chat_policy_friends_description">Slegs vriende kan \'n klets met jou begin (verstek).</string>
+    <string name="chat_policy_anyone">Enigiemand</string>
+    <string name="chat_policy_anyone_description">Enigiemand kan \'n klets met jou begin.</string>
+    <string name="chat_new_search_placeholder">Soek mense</string>
+    <string name="chat_new_no_matches">Geen passende mense</string>
+    <string name="chat_new_no_friends">Soek mense om mee te klets</string>
 </resources>

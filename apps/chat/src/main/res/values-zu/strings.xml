@@ -12,7 +12,6 @@
     <string name="chat_new_title">Ingxoxo entsha</string>
     <string name="chat_new_name">Igama leqembu</string>
     <string name="chat_new_friends">Abangane</string>
-    <string name="chat_new_search_placeholder">Sesha abangani</string>
     <string name="chat_message_placeholder">Umyalezo</string>
     <string name="chat_attachment_add">Namathisela amafayela</string>
     <string name="chat_message_attach">Namathisela amafayela</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Azikho izingxoxo ezifanayo</string>
     <string name="chat_list_empty">Azikho izingxoxo okwamanje</string>
     <string name="chat_list_left_chat">Kushiyiwe</string>
-    <string name="chat_new_no_friends">Abekho abangani ongaxoxa nabo okwamanje</string>
-    <string name="chat_new_no_matches">Abekho abangani abafanayo</string>
     <string name="chat_new_existing_chat">Vula ingxoxo ekhona</string>
     <string name="chat_new_start">Qala ingxoxo</string>
     <string name="chat_new_start_group">Qala ingxoxo yeqembu</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Khetha ingxoxo noma umngane wokudlulisela imilayezo ekhethiwe</string>
     <string name="chat_forward_chats">Izingxoxo</string>
     <string name="chat_forward_friends">Abangane</string>
+    <string name="chat_policy_title">Izingxoxo ezingenayo</string>
+    <string name="chat_policy_friends">Abangane kuphela</string>
+    <string name="chat_policy_friends_description">Abangane kuphela abangaqala ingxoxo nawe (okuzenzakalelayo).</string>
+    <string name="chat_policy_anyone">Noma ubani</string>
+    <string name="chat_policy_anyone_description">Noma ubani angaqala ingxoxo nawe.</string>
+    <string name="chat_new_search_placeholder">Sesha abantu</string>
+    <string name="chat_new_no_matches">Abekho abantu abafanayo</string>
+    <string name="chat_new_no_friends">Sesha abantu ozoxoxa nabo</string>
 </resources>

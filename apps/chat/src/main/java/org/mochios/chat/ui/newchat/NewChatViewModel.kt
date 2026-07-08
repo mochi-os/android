@@ -8,6 +8,8 @@ package org.mochios.chat.ui.newchat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -21,10 +23,15 @@ import javax.inject.Inject
 
 data class NewChatUiState(
     val friends: List<Friend> = emptyList(),
+    // Directory people matching the current query who aren't already friends.
+    // Non-friends may be addressed; the sender-side probe at create decides
+    // whether their chat_policy allows it (mirrors the web picker).
+    val directory: List<Friend> = emptyList(),
     val selected: Set<String> = emptySet(),
     val groupName: String = "",
     val searchQuery: String = "",
     val isLoading: Boolean = false,
+    val isSearchingDirectory: Boolean = false,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     val createdChatId: String? = null
@@ -91,14 +98,52 @@ class NewChatViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(groupName = name)
     }
 
+    private var searchJob: Job? = null
+
     fun updateSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
+        searchJob?.cancel()
+        val trimmed = query.trim()
+        if (trimmed.length < 2) {
+            _uiState.value = _uiState.value.copy(directory = emptyList(), isSearchingDirectory = false)
+            return
+        }
+        searchJob = viewModelScope.launch {
+            delay(300)
+            _uiState.value = _uiState.value.copy(isSearchingDirectory = true)
+            try {
+                val friendIds = _uiState.value.friends.map { it.id }.toSet()
+                val results = repository.personSearch(trimmed)
+                    .filter { it.id !in friendIds }
+                    .map { Friend(id = it.id, identity = it.id, name = it.name, chatId = "") }
+                _uiState.value = _uiState.value.copy(directory = results, isSearchingDirectory = false)
+            } catch (e: Exception) {
+                // A failed directory search leaves the local matches; not fatal.
+                _uiState.value = _uiState.value.copy(directory = emptyList(), isSearchingDirectory = false)
+            }
+        }
     }
 
+    // Friends matching the query first, then directory (non-friend) matches -
+    // deduped by id. With no query the picker shows the friend list unchanged.
     fun filteredFriends(): List<Friend> {
         val query = _uiState.value.searchQuery.lowercase().trim()
-        if (query.isEmpty()) return _uiState.value.friends
-        return _uiState.value.friends.filter { it.name.lowercase().contains(query) }
+        val friends = if (query.isEmpty()) _uiState.value.friends
+        else _uiState.value.friends.filter { it.name.lowercase().contains(query) }
+        val seen = friends.map { it.id }.toSet()
+        return friends + _uiState.value.directory.filter { it.id !in seen }
+    }
+
+    // Every selectable person (friends + current directory results) - used for
+    // resolving selected ids to display names.
+    private fun allPeople(): List<Friend> = _uiState.value.friends + _uiState.value.directory
+
+    // Default chat name from the selected people (handles directory picks,
+    // which aren't in the friend list). Falls back to "Chat" when unresolved.
+    fun selectedFallbackName(): String {
+        val selected = _uiState.value.selected
+        val names = allPeople().filter { it.id in selected }.joinToString(", ") { it.name }
+        return names.ifBlank { "Chat" }
     }
 
     fun createChat(fallbackName: String) {

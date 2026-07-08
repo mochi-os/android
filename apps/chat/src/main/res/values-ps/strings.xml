@@ -12,7 +12,6 @@
     <string name="chat_new_title">نوې چټ</string>
     <string name="chat_new_name">د ګروپ نوم</string>
     <string name="chat_new_friends">ملګري</string>
-    <string name="chat_new_search_placeholder">ملګري وپلټئ</string>
     <string name="chat_message_placeholder">پیغام</string>
     <string name="chat_attachment_add">فایلونه ضمیمه کړئ</string>
     <string name="chat_message_attach">فایلونه ضمیمه کړئ</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">هیڅ سمون لرونکی چټ نشته</string>
     <string name="chat_list_empty">تر اوسه هیڅ چټ نشته</string>
     <string name="chat_list_left_chat">پریښودل شو</string>
-    <string name="chat_new_no_friends">تر اوسه د چټ کولو لپاره هیڅ ملګری نشته</string>
-    <string name="chat_new_no_matches">هیڅ سمون لرونکي ملګري نشته</string>
     <string name="chat_new_existing_chat">موجود چټ خلاص کړئ</string>
     <string name="chat_new_start">چټ پیل کړئ</string>
     <string name="chat_new_start_group">ډله ییز چټ پیل کړئ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">غوره شوي پیغامونه لیږلو لپاره چټ یا ملګری وټاکئ</string>
     <string name="chat_forward_chats">چټونه</string>
     <string name="chat_forward_friends">ملګري</string>
+    <string name="chat_policy_title">راتلونکي چیټونه</string>
+    <string name="chat_policy_friends">یوازې ملګري</string>
+    <string name="chat_policy_friends_description">یوازې ملګري کولی شي تاسو سره چیټ پیل کړي (اصلي).</string>
+    <string name="chat_policy_anyone">هر څوک</string>
+    <string name="chat_policy_anyone_description">هر څوک کولی شي تاسو سره چیټ پیل کړي.</string>
+    <string name="chat_new_search_placeholder">خلک ولټوئ</string>
+    <string name="chat_new_no_matches">هیڅ سمون لرونکي خلک نشته</string>
+    <string name="chat_new_no_friends">د چیټ لپاره خلک ولټوئ</string>
 </resources>

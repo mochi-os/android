@@ -12,7 +12,6 @@
     <string name="chat_new_title">புதிய அரட்டை</string>
     <string name="chat_new_name">குழு பெயர்</string>
     <string name="chat_new_friends">நண்பர்கள்</string>
-    <string name="chat_new_search_placeholder">நண்பர்களைத் தேடு</string>
     <string name="chat_message_placeholder">செய்தி</string>
     <string name="chat_attachment_add">கோப்புகளை இணை</string>
     <string name="chat_message_attach">கோப்புகளை இணை</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">பொருந்தும் அரட்டைகள் இல்லை</string>
     <string name="chat_list_empty">இதுவரை அரட்டைகள் இல்லை</string>
     <string name="chat_list_left_chat">வெளியேறியது</string>
-    <string name="chat_new_no_friends">இதுவரை அரட்டை அடிக்க நண்பர்கள் இல்லை</string>
-    <string name="chat_new_no_matches">பொருந்தும் நண்பர்கள் இல்லை</string>
     <string name="chat_new_existing_chat">ஏற்கனவே உள்ள அரட்டையைத் திறக்கவும்</string>
     <string name="chat_new_start">அரட்டையைத் தொடங்கவும்</string>
     <string name="chat_new_start_group">குழு அரட்டையைத் தொடங்கவும்</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">தேர்ந்தெடுத்த செய்திகளை அனுப்ப அரட்டை அல்லது நண்பரைத் தேர்வுசெய்க</string>
     <string name="chat_forward_chats">அரட்டைகள்</string>
     <string name="chat_forward_friends">நண்பர்கள்</string>
+    <string name="chat_policy_title">உள்வரும் அரட்டைகள்</string>
+    <string name="chat_policy_friends">நண்பர்கள் மட்டும்</string>
+    <string name="chat_policy_friends_description">நண்பர்கள் மட்டுமே உங்களுடன் அரட்டையைத் தொடங்க முடியும் (இயல்பு).</string>
+    <string name="chat_policy_anyone">எவரும்</string>
+    <string name="chat_policy_anyone_description">எவரும் உங்களுடன் அரட்டையைத் தொடங்கலாம்.</string>
+    <string name="chat_new_search_placeholder">நபர்களைத் தேடு</string>
+    <string name="chat_new_no_matches">பொருந்தும் நபர்கள் இல்லை</string>
+    <string name="chat_new_no_friends">அரட்டையடிக்க நபர்களைத் தேடு</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">නව චැට්</string>
     <string name="chat_new_name">කණ්ඩායම් නාමය</string>
     <string name="chat_new_friends">මිතුරන්</string>
-    <string name="chat_new_search_placeholder">මිතුරන් සොයන්න</string>
     <string name="chat_message_placeholder">පණිවිඩය</string>
     <string name="chat_attachment_add">ගොනු අමුණන්න</string>
     <string name="chat_message_attach">ගොනු අමුණන්න</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">ගැළපෙන කතාබස් නැත</string>
     <string name="chat_list_empty">තවම කතාබස් නැත</string>
     <string name="chat_list_left_chat">ඉවත් විය</string>
-    <string name="chat_new_no_friends">තවම කතා කිරීමට මිතුරන් නැත</string>
-    <string name="chat_new_no_matches">ගැළපෙන මිතුරන් නැත</string>
     <string name="chat_new_existing_chat">පවතින කතාබස විවෘත කරන්න</string>
     <string name="chat_new_start">කතාබස ආරම්භ කරන්න</string>
     <string name="chat_new_start_group">කණ්ඩායම් කතාබස ආරම්භ කරන්න</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">තෝරාගත් පණිවිඩ යොමු කිරීමට චැට් එකක් හෝ මිතුරෙකු තෝරන්න</string>
     <string name="chat_forward_chats">චැට්</string>
     <string name="chat_forward_friends">මිතුරන්</string>
+    <string name="chat_policy_title">එන කතාබස්</string>
+    <string name="chat_policy_friends">මිතුරන් පමණයි</string>
+    <string name="chat_policy_friends_description">ඔබ සමඟ කතාබහක් ආරම්භ කළ හැක්කේ මිතුරන්ට පමණි (පෙරනිමිය).</string>
+    <string name="chat_policy_anyone">ඕනෑම කෙනෙක්</string>
+    <string name="chat_policy_anyone_description">ඕනෑම කෙනෙකුට ඔබ සමඟ කතාබහක් ආරම්භ කළ හැක.</string>
+    <string name="chat_new_search_placeholder">පුද්ගලයන් සොයන්න</string>
+    <string name="chat_new_no_matches">ගැළපෙන පුද්ගලයන් නැත</string>
+    <string name="chat_new_no_friends">කතාබස් කිරීමට පුද්ගලයන් සොයන්න</string>
 </resources>

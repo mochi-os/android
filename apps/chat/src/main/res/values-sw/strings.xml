@@ -12,7 +12,6 @@
     <string name="chat_new_title">Mazungumzo mapya</string>
     <string name="chat_new_name">Jina la kikundi</string>
     <string name="chat_new_friends">Marafiki</string>
-    <string name="chat_new_search_placeholder">Tafuta marafiki</string>
     <string name="chat_message_placeholder">Ujumbe</string>
     <string name="chat_attachment_add">Ambatisha faili</string>
     <string name="chat_message_attach">Ambatisha faili</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Hakuna gumzo linalolingana</string>
     <string name="chat_list_empty">Bado hakuna gumzo</string>
     <string name="chat_list_left_chat">Umeondoka</string>
-    <string name="chat_new_no_friends">Bado hakuna marafiki wa kuzungumza nao</string>
-    <string name="chat_new_no_matches">Hakuna marafiki wanaolingana</string>
     <string name="chat_new_existing_chat">Fungua gumzo lililopo</string>
     <string name="chat_new_start">Anza gumzo</string>
     <string name="chat_new_start_group">Anza gumzo la kikundi</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Chagua gumzo au rafiki wa kutuma ujumbe uliochaguliwa</string>
     <string name="chat_forward_chats">Magumzo</string>
     <string name="chat_forward_friends">Marafiki</string>
+    <string name="chat_policy_title">Gumzo zinazoingia</string>
+    <string name="chat_policy_friends">Marafiki pekee</string>
+    <string name="chat_policy_friends_description">Marafiki pekee ndio wanaweza kuanzisha gumzo nawe (chaguo-msingi).</string>
+    <string name="chat_policy_anyone">Mtu yeyote</string>
+    <string name="chat_policy_anyone_description">Mtu yeyote anaweza kuanzisha gumzo nawe.</string>
+    <string name="chat_new_search_placeholder">Tafuta watu</string>
+    <string name="chat_new_no_matches">Hakuna watu wanaolingana</string>
+    <string name="chat_new_no_friends">Tafuta watu wa kupiga nao gumzo</string>
 </resources>

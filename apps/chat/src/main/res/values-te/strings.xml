@@ -12,7 +12,6 @@
     <string name="chat_new_title">కొత్త చాట్</string>
     <string name="chat_new_name">గ్రూప్ పేరు</string>
     <string name="chat_new_friends">స్నేహితులు</string>
-    <string name="chat_new_search_placeholder">ఫ్రెండ్స్‌ను శోధించండి</string>
     <string name="chat_message_placeholder">సందేశం</string>
     <string name="chat_attachment_add">ఫైల్‌లను జతచేయండి</string>
     <string name="chat_message_attach">ఫైల్‌లను జతచేయండి</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">సరిపోలే చాట్‌లు లేవు</string>
     <string name="chat_list_empty">ఇంకా చాట్‌లు లేవు</string>
     <string name="chat_list_left_chat">వదిలారు</string>
-    <string name="chat_new_no_friends">ఇంకా చాట్ చేయడానికి స్నేహితులు లేరు</string>
-    <string name="chat_new_no_matches">సరిపోలే స్నేహితులు లేరు</string>
     <string name="chat_new_existing_chat">ఇప్పటికే ఉన్న చాట్‌ను తెరవండి</string>
     <string name="chat_new_start">చాట్ ప్రారంభించండి</string>
     <string name="chat_new_start_group">గ్రూప్ చాట్ ప్రారంభించండి</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">ఎంచుకున్న సందేశాలను ఫార్వర్డ్ చేయడానికి చాట్ లేదా స్నేహితుడిని ఎంచుకోండి</string>
     <string name="chat_forward_chats">చాట్‌లు</string>
     <string name="chat_forward_friends">స్నేహితులు</string>
+    <string name="chat_policy_title">ఇన్‌కమింగ్ చాట్‌లు</string>
+    <string name="chat_policy_friends">స్నేహితులు మాత్రమే</string>
+    <string name="chat_policy_friends_description">స్నేహితులు మాత్రమే మీతో చాట్ ప్రారంభించగలరు (డిఫాల్ట్).</string>
+    <string name="chat_policy_anyone">ఎవరైనా</string>
+    <string name="chat_policy_anyone_description">ఎవరైనా మీతో చాట్ ప్రారంభించవచ్చు.</string>
+    <string name="chat_new_search_placeholder">వ్యక్తులను వెతకండి</string>
+    <string name="chat_new_no_matches">సరిపోలే వ్యక్తులు లేరు</string>
+    <string name="chat_new_no_friends">చాట్ చేయడానికి వ్యక్తులను వెతకండి</string>
 </resources>

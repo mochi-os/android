@@ -102,11 +102,6 @@ fun NewChatScreen(
                         )
                     }
                 }
-                uiState.friends.isEmpty() -> {
-                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(stringResource(R.string.chat_new_no_friends))
-                    }
-                }
                 else -> {
                     OutlinedTextField(
                         value = uiState.searchQuery,
@@ -136,10 +131,20 @@ fun NewChatScreen(
                             modifier = Modifier.fillMaxWidth().padding(top = 32.dp),
                             contentAlignment = Alignment.Center
                         ) {
-                            Text(
-                                text = stringResource(R.string.chat_new_no_matches),
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
+                            when {
+                                uiState.isSearchingDirectory ->
+                                    CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                                uiState.searchQuery.isBlank() && uiState.friends.isEmpty() ->
+                                    Text(
+                                        text = stringResource(R.string.chat_new_no_friends),
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                else ->
+                                    Text(
+                                        text = stringResource(R.string.chat_new_no_matches),
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                            }
                         }
                     } else {
                         LazyColumn(
@@ -167,7 +172,7 @@ fun NewChatScreen(
                         horizontalArrangement = Arrangement.End
                     ) {
                         Button(
-                            onClick = { viewModel.createChat(fallbackName = friendsName(uiState)) },
+                            onClick = { viewModel.createChat(fallbackName = viewModel.selectedFallbackName()) },
                             enabled = canCreate && !uiState.isCreating
                         ) {
                             if (uiState.isCreating) {
@@ -227,9 +232,4 @@ private fun FriendRow(
         }
         Checkbox(checked = selected, onCheckedChange = { onToggle() })
     }
-}
-
-private fun friendsName(state: NewChatUiState): String {
-    val names = state.friends.filter { it.id in state.selected }.joinToString(", ") { it.name }
-    return names.ifBlank { "Chat" }
 }

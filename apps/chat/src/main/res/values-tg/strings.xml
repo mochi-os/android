@@ -12,7 +12,6 @@
     <string name="chat_new_title">Чати нав</string>
     <string name="chat_new_name">Номи гурӯҳ</string>
     <string name="chat_new_friends">Дӯстон</string>
-    <string name="chat_new_search_placeholder">Ҷустуҷӯи дӯстон</string>
     <string name="chat_message_placeholder">Паём</string>
     <string name="chat_attachment_add">Замимаи файлҳо</string>
     <string name="chat_message_attach">Замимаи файлҳо</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Чатҳои мувофиқ нест</string>
     <string name="chat_list_empty">Ҳанӯз чате нест</string>
     <string name="chat_list_left_chat">Тарк кардаед</string>
-    <string name="chat_new_no_friends">Ҳанӯз дӯстоне барои чат кардан нест</string>
-    <string name="chat_new_no_matches">Дӯстони мувофиқ нест</string>
     <string name="chat_new_existing_chat">Кушодани чати мавҷуда</string>
     <string name="chat_new_start">Оғози чат</string>
     <string name="chat_new_start_group">Оғози чати гурӯҳӣ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Чат ё дӯстеро интихоб кунед, то паёмҳои интихобшударо ба он равон кунед</string>
     <string name="chat_forward_chats">Чатҳо</string>
     <string name="chat_forward_friends">Дӯстон</string>
+    <string name="chat_policy_title">Чатҳои воридотӣ</string>
+    <string name="chat_policy_friends">Танҳо дӯстон</string>
+    <string name="chat_policy_friends_description">Танҳо дӯстон метавонанд бо шумо чат оғоз кунанд (пешфарз).</string>
+    <string name="chat_policy_anyone">Ҳар кас</string>
+    <string name="chat_policy_anyone_description">Ҳар кас метавонад бо шумо чат оғоз кунад.</string>
+    <string name="chat_new_search_placeholder">Ҷустуҷӯи одамон</string>
+    <string name="chat_new_no_matches">Одамони мувофиқ нест</string>
+    <string name="chat_new_no_friends">Барои чат одамонро ҷустуҷӯ кунед</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nový chat</string>
     <string name="chat_new_name">Název skupiny</string>
     <string name="chat_new_friends">Přátelé</string>
-    <string name="chat_new_search_placeholder">Hledat přátele</string>
     <string name="chat_message_placeholder">Zpráva</string>
     <string name="chat_attachment_add">Připojit soubory</string>
     <string name="chat_message_attach">Připojit soubory</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Zatím žádné chaty</string>
     <string name="chat_list_add_to_home">Přidat na domovskou obrazovku</string>
     <string name="chat_list_left_chat">Opuštěno</string>
-    <string name="chat_new_no_friends">Zatím žádní přátelé, se kterými lze chatovat</string>
-    <string name="chat_new_no_matches">Žádní odpovídající přátelé</string>
     <string name="chat_new_existing_chat">Otevřít stávající chat</string>
     <string name="chat_new_start">Zahájit chat</string>
     <string name="chat_new_start_group">Zahájit skupinový chat</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Vyberte chat nebo přítele, kterému přeposlat vybrané zprávy</string>
     <string name="chat_forward_chats">Chaty</string>
     <string name="chat_forward_friends">Přátelé</string>
+    <string name="chat_policy_title">Příchozí chaty</string>
+    <string name="chat_policy_friends">Pouze přátelé</string>
+    <string name="chat_policy_friends_description">Chat s vámi mohou zahájit pouze přátelé (výchozí).</string>
+    <string name="chat_policy_anyone">Kdokoli</string>
+    <string name="chat_policy_anyone_description">Chat s vámi může zahájit kdokoli.</string>
+    <string name="chat_new_search_placeholder">Hledat lidi</string>
+    <string name="chat_new_no_matches">Žádní odpovídající lidé</string>
+    <string name="chat_new_no_friends">Vyhledejte lidi k chatování</string>
 </resources>

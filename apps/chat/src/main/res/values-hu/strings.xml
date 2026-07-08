@@ -12,7 +12,6 @@
     <string name="chat_new_title">Új csevegés</string>
     <string name="chat_new_name">Csoport neve</string>
     <string name="chat_new_friends">Barátok</string>
-    <string name="chat_new_search_placeholder">Barátok keresése</string>
     <string name="chat_message_placeholder">Üzenet</string>
     <string name="chat_attachment_add">Fájlok csatolása</string>
     <string name="chat_message_attach">Fájlok csatolása</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Még nincsenek csevegések</string>
     <string name="chat_list_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
     <string name="chat_list_left_chat">Elhagyva</string>
-    <string name="chat_new_no_friends">Még nincsenek ismerősök, akikkel csevegni lehetne</string>
-    <string name="chat_new_no_matches">Nincs egyező ismerős</string>
     <string name="chat_new_existing_chat">Meglévő csevegés megnyitása</string>
     <string name="chat_new_start">Csevegés indítása</string>
     <string name="chat_new_start_group">Csoportos csevegés indítása</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Válassz csevegést vagy ismerőst, akinek továbbítod a kijelölt üzeneteket</string>
     <string name="chat_forward_chats">Chatek</string>
     <string name="chat_forward_friends">Barátok</string>
+    <string name="chat_policy_title">Bejövő csevegések</string>
+    <string name="chat_policy_friends">Csak barátok</string>
+    <string name="chat_policy_friends_description">Csak barátok indíthatnak csevegést veled (alapértelmezett).</string>
+    <string name="chat_policy_anyone">Bárki</string>
+    <string name="chat_policy_anyone_description">Bárki indíthat csevegést veled.</string>
+    <string name="chat_new_search_placeholder">Emberek keresése</string>
+    <string name="chat_new_no_matches">Nincs egyező személy</string>
+    <string name="chat_new_no_friends">Keress embereket a csevegéshez</string>
 </resources>

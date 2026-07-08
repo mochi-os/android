@@ -12,7 +12,6 @@
     <string name="chat_new_title">Txat berria</string>
     <string name="chat_new_name">Taldearen izena</string>
     <string name="chat_new_friends">Lagunak</string>
-    <string name="chat_new_search_placeholder">Bilatu lagunak</string>
     <string name="chat_message_placeholder">Mezua</string>
     <string name="chat_attachment_add">Erantsi fitxategiak</string>
     <string name="chat_message_attach">Erantsi fitxategiak</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Oraindik ez dago txatik</string>
     <string name="chat_list_add_to_home">Gehitu hasierako pantailara</string>
     <string name="chat_list_left_chat">Utzita</string>
-    <string name="chat_new_no_friends">Oraindik ez dago lagunik txateatzeko</string>
-    <string name="chat_new_no_matches">Ez dago bat datorren lagunik</string>
     <string name="chat_new_existing_chat">Ireki lehendik dagoen txata</string>
     <string name="chat_new_start">Hasi txata</string>
     <string name="chat_new_start_group">Hasi talde-txata</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Aukeratu txat edo lagun bat hautatutako mezuak birbidaltzeko</string>
     <string name="chat_forward_chats">Txatak</string>
     <string name="chat_forward_friends">Lagunak</string>
+    <string name="chat_policy_title">Sarrerako txatak</string>
+    <string name="chat_policy_friends">Lagunak soilik</string>
+    <string name="chat_policy_friends_description">Lagunek soilik has dezakete txat bat zurekin (lehenetsia).</string>
+    <string name="chat_policy_anyone">Edonor</string>
+    <string name="chat_policy_anyone_description">Edonork has dezake txat bat zurekin.</string>
+    <string name="chat_new_search_placeholder">Bilatu pertsonak</string>
+    <string name="chat_new_no_matches">Ez dago bat datorren pertsonarik</string>
+    <string name="chat_new_no_friends">Bilatu pertsonak txateatzeko</string>
 </resources>

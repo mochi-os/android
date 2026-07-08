@@ -12,7 +12,6 @@
     <string name="chat_new_title">Yeni söhbət</string>
     <string name="chat_new_name">Qrup adı</string>
     <string name="chat_new_friends">Dostlar</string>
-    <string name="chat_new_search_placeholder">Dostları axtar</string>
     <string name="chat_message_placeholder">Mesaj</string>
     <string name="chat_attachment_add">Faylları qoş</string>
     <string name="chat_message_attach">Faylları qoş</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Hələ söhbət yoxdur</string>
     <string name="chat_list_add_to_home">Əsas ekrana əlavə edin</string>
     <string name="chat_list_left_chat">Tərk edildi</string>
-    <string name="chat_new_no_friends">Hələ söhbət edəcək dost yoxdur</string>
-    <string name="chat_new_no_matches">Uyğun dost yoxdur</string>
     <string name="chat_new_existing_chat">Mövcud söhbəti açın</string>
     <string name="chat_new_start">Söhbətə başlayın</string>
     <string name="chat_new_start_group">Qrup söhbətinə başlayın</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Seçilmiş mesajları yönləndirmək üçün söhbət və ya dost seçin</string>
     <string name="chat_forward_chats">Söhbətlər</string>
     <string name="chat_forward_friends">Dostlar</string>
+    <string name="chat_policy_title">Gələn söhbətlər</string>
+    <string name="chat_policy_friends">Yalnız dostlar</string>
+    <string name="chat_policy_friends_description">Sizinlə yalnız dostlar söhbətə başlaya bilər (defolt).</string>
+    <string name="chat_policy_anyone">İstənilən şəxs</string>
+    <string name="chat_policy_anyone_description">İstənilən şəxs sizinlə söhbətə başlaya bilər.</string>
+    <string name="chat_new_search_placeholder">İnsanları axtar</string>
+    <string name="chat_new_no_matches">Uyğun insan yoxdur</string>
+    <string name="chat_new_no_friends">Söhbət etmək üçün insanlar axtarın</string>
 </resources>

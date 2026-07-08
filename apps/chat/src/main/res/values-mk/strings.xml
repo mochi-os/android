@@ -12,7 +12,6 @@
     <string name="chat_new_title">Нов разговор</string>
     <string name="chat_new_name">Име на група</string>
     <string name="chat_new_friends">Пријатели</string>
-    <string name="chat_new_search_placeholder">Пребарај пријатели</string>
     <string name="chat_message_placeholder">Порака</string>
     <string name="chat_attachment_add">Прикачи датотеки</string>
     <string name="chat_message_attach">Прикачи датотеки</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Нема разговори што се совпаѓаат</string>
     <string name="chat_list_empty">Сè уште нема разговори</string>
     <string name="chat_list_left_chat">Напуштено</string>
-    <string name="chat_new_no_friends">Сè уште нема пријатели за разговор</string>
-    <string name="chat_new_no_matches">Нема пријатели што се совпаѓаат</string>
     <string name="chat_new_existing_chat">Отвори постоечки разговор</string>
     <string name="chat_new_start">Започни разговор</string>
     <string name="chat_new_start_group">Започни групен разговор</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Изберете разговор или пријател за да ги препратите избраните пораки</string>
     <string name="chat_forward_chats">Разговори</string>
     <string name="chat_forward_friends">Пријатели</string>
+    <string name="chat_policy_title">Дојдовни разговори</string>
+    <string name="chat_policy_friends">Само пријатели</string>
+    <string name="chat_policy_friends_description">Само пријателите можат да започнат разговор со вас (стандардно).</string>
+    <string name="chat_policy_anyone">Секој</string>
+    <string name="chat_policy_anyone_description">Секој може да започне разговор со вас.</string>
+    <string name="chat_new_search_placeholder">Пребарај луѓе</string>
+    <string name="chat_new_no_matches">Нема совпаѓачки луѓе</string>
+    <string name="chat_new_no_friends">Побарајте луѓе за разговор</string>
 </resources>

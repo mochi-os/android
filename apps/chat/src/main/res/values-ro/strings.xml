@@ -12,7 +12,6 @@
     <string name="chat_new_title">Conversație nouă</string>
     <string name="chat_new_name">Numele grupului</string>
     <string name="chat_new_friends">Prieteni</string>
-    <string name="chat_new_search_placeholder">Caută prieteni</string>
     <string name="chat_message_placeholder">Mesaj</string>
     <string name="chat_attachment_add">Atașează fișiere</string>
     <string name="chat_message_attach">Atașează fișiere</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Niciun chat corespunzător</string>
     <string name="chat_list_empty">Încă niciun chat</string>
     <string name="chat_list_left_chat">Părăsit</string>
-    <string name="chat_new_no_friends">Încă niciun prieten cu care să discutați</string>
-    <string name="chat_new_no_matches">Niciun prieten corespunzător</string>
     <string name="chat_new_existing_chat">Deschideți chatul existent</string>
     <string name="chat_new_start">Începeți chatul</string>
     <string name="chat_new_start_group">Începeți chat de grup</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Alege un chat sau un prieten căruia să-i redirecționezi mesajele selectate</string>
     <string name="chat_forward_chats">Chaturi</string>
     <string name="chat_forward_friends">Prieteni</string>
+    <string name="chat_policy_title">Conversații primite</string>
+    <string name="chat_policy_friends">Doar prieteni</string>
+    <string name="chat_policy_friends_description">Doar prietenii pot începe o conversație cu tine (implicit).</string>
+    <string name="chat_policy_anyone">Oricine</string>
+    <string name="chat_policy_anyone_description">Oricine poate începe o conversație cu tine.</string>
+    <string name="chat_new_search_placeholder">Caută persoane</string>
+    <string name="chat_new_no_matches">Nicio persoană potrivită</string>
+    <string name="chat_new_no_friends">Caută persoane cu care să discuți</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Новы чат</string>
     <string name="chat_new_name">Назва групы</string>
     <string name="chat_new_friends">Сябры</string>
-    <string name="chat_new_search_placeholder">Пошук сяброў</string>
     <string name="chat_message_placeholder">Паведамленне</string>
     <string name="chat_attachment_add">Прымацаваць файлы</string>
     <string name="chat_message_attach">Прымацаваць файлы</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Чатаў пакуль няма</string>
     <string name="chat_list_add_to_home">Дадаць на галоўны экран</string>
     <string name="chat_list_left_chat">Пакінуты</string>
-    <string name="chat_new_no_friends">Пакуль няма сяброў для чата</string>
-    <string name="chat_new_no_matches">Няма адпаведных сяброў</string>
     <string name="chat_new_existing_chat">Адкрыць існуючы чат</string>
     <string name="chat_new_start">Пачаць чат</string>
     <string name="chat_new_start_group">Пачаць групавы чат</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Выберыце чат або сябра, каб пераслаць выбраныя паведамленні</string>
     <string name="chat_forward_chats">Чаты</string>
     <string name="chat_forward_friends">Сябры</string>
+    <string name="chat_policy_title">Уваходныя чаты</string>
+    <string name="chat_policy_friends">Толькі сябры</string>
+    <string name="chat_policy_friends_description">Толькі сябры могуць пачаць чат з вамі (па змаўчанні).</string>
+    <string name="chat_policy_anyone">Хто заўгодна</string>
+    <string name="chat_policy_anyone_description">Любы можа пачаць чат з вамі.</string>
+    <string name="chat_new_search_placeholder">Пошук людзей</string>
+    <string name="chat_new_no_matches">Няма адпаведных людзей</string>
+    <string name="chat_new_no_friends">Знайдзіце людзей для чата</string>
 </resources>

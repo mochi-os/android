@@ -12,7 +12,6 @@
     <string name="chat_new_title">Bisedë e re</string>
     <string name="chat_new_name">Emri i grupit</string>
     <string name="chat_new_friends">Miqtë</string>
-    <string name="chat_new_search_placeholder">Kërko miq</string>
     <string name="chat_message_placeholder">Mesazhi</string>
     <string name="chat_attachment_add">Bashkëngjit skedarë</string>
     <string name="chat_message_attach">Bashkëngjit skedarë</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Asnjë bisedë përputhëse</string>
     <string name="chat_list_empty">Ende asnjë bisedë</string>
     <string name="chat_list_left_chat">Larguar</string>
-    <string name="chat_new_no_friends">Ende nuk ka miq për të biseduar</string>
-    <string name="chat_new_no_matches">Asnjë mik përputhës</string>
     <string name="chat_new_existing_chat">Hap bisedën ekzistuese</string>
     <string name="chat_new_start">Fillo bisedën</string>
     <string name="chat_new_start_group">Fillo bisedën në grup</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Zgjidh një bisedë ose mik për t\'i përcjellë mesazhet e zgjedhura</string>
     <string name="chat_forward_chats">Bisedat</string>
     <string name="chat_forward_friends">Miqtë</string>
+    <string name="chat_policy_title">Bisedat hyrëse</string>
+    <string name="chat_policy_friends">Vetëm miqtë</string>
+    <string name="chat_policy_friends_description">Vetëm miqtë mund të nisin një bisedë me ju (parazgjedhje).</string>
+    <string name="chat_policy_anyone">Kushdo</string>
+    <string name="chat_policy_anyone_description">Kushdo mund të nisë një bisedë me ju.</string>
+    <string name="chat_new_search_placeholder">Kërko persona</string>
+    <string name="chat_new_no_matches">Asnjë person që përputhet</string>
+    <string name="chat_new_no_friends">Kërko persona për të biseduar</string>
 </resources>

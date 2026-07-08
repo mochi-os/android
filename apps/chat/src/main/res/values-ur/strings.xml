@@ -12,7 +12,6 @@
     <string name="chat_new_title">نئی چیٹ</string>
     <string name="chat_new_name">گروپ کا نام</string>
     <string name="chat_new_friends">دوست</string>
-    <string name="chat_new_search_placeholder">دوست تلاش کریں</string>
     <string name="chat_message_placeholder">پیغام</string>
     <string name="chat_attachment_add">فائلیں منسلک کریں</string>
     <string name="chat_message_attach">فائلیں منسلک کریں</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">کوئی مماثل چیٹ نہیں</string>
     <string name="chat_list_empty">ابھی تک کوئی چیٹ نہیں</string>
     <string name="chat_list_left_chat">چھوڑ دی</string>
-    <string name="chat_new_no_friends">ابھی تک چیٹ کرنے کے لیے کوئی دوست نہیں</string>
-    <string name="chat_new_no_matches">کوئی مماثل دوست نہیں</string>
     <string name="chat_new_existing_chat">موجودہ چیٹ کھولیں</string>
     <string name="chat_new_start">چیٹ شروع کریں</string>
     <string name="chat_new_start_group">گروپ چیٹ شروع کریں</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">منتخب پیغامات آگے بھیجنے کے لیے چیٹ یا دوست منتخب کریں</string>
     <string name="chat_forward_chats">چیٹس</string>
     <string name="chat_forward_friends">دوست</string>
+    <string name="chat_policy_title">آنے والی چیٹس</string>
+    <string name="chat_policy_friends">صرف دوست</string>
+    <string name="chat_policy_friends_description">صرف دوست آپ کے ساتھ چیٹ شروع کر سکتے ہیں (ڈیفالٹ)۔</string>
+    <string name="chat_policy_anyone">کوئی بھی</string>
+    <string name="chat_policy_anyone_description">کوئی بھی آپ کے ساتھ چیٹ شروع کر سکتا ہے۔</string>
+    <string name="chat_new_search_placeholder">لوگ تلاش کریں</string>
+    <string name="chat_new_no_matches">کوئی مماثل لوگ نہیں</string>
+    <string name="chat_new_no_friends">چیٹ کرنے کے لیے لوگ تلاش کریں</string>
 </resources>

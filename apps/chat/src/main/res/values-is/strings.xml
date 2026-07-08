@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nýtt spjall</string>
     <string name="chat_new_name">Nafn hóps</string>
     <string name="chat_new_friends">Vinir</string>
-    <string name="chat_new_search_placeholder">Leita að vinum</string>
     <string name="chat_message_placeholder">Skilaboð</string>
     <string name="chat_attachment_add">Hengja við skrár</string>
     <string name="chat_message_attach">Hengja við skrár</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Engin spjöll fundust</string>
     <string name="chat_list_empty">Engin spjöll enn</string>
     <string name="chat_list_left_chat">Farin</string>
-    <string name="chat_new_no_friends">Engir vinir til að spjalla við enn</string>
-    <string name="chat_new_no_matches">Engir samsvarandi vinir</string>
     <string name="chat_new_existing_chat">Opna fyrirliggjandi spjall</string>
     <string name="chat_new_start">Hefja spjall</string>
     <string name="chat_new_start_group">Hefja hópspjall</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Veldu spjall eða vin til að áframsenda völdu skilaboðin á</string>
     <string name="chat_forward_chats">Spjöll</string>
     <string name="chat_forward_friends">Vinir</string>
+    <string name="chat_policy_title">Móttekið spjall</string>
+    <string name="chat_policy_friends">Aðeins vinir</string>
+    <string name="chat_policy_friends_description">Aðeins vinir geta hafið spjall við þig (sjálfgefið).</string>
+    <string name="chat_policy_anyone">Hver sem er</string>
+    <string name="chat_policy_anyone_description">Hver sem er getur hafið spjall við þig.</string>
+    <string name="chat_new_search_placeholder">Leita að fólki</string>
+    <string name="chat_new_no_matches">Engir samsvarandi</string>
+    <string name="chat_new_no_friends">Leitaðu að fólki til að spjalla við</string>
 </resources>

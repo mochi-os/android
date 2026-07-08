@@ -12,7 +12,6 @@
     <string name="chat_new_title">Chat ġdid</string>
     <string name="chat_new_name">Isem il-grupp</string>
     <string name="chat_new_friends">Ħbieb</string>
-    <string name="chat_new_search_placeholder">Fittex ħbieb</string>
     <string name="chat_message_placeholder">Messaġġ</string>
     <string name="chat_attachment_add">Ehmeż files</string>
     <string name="chat_message_attach">Ehmeż files</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Ebda chat ma jaqbel</string>
     <string name="chat_list_empty">Għad m\'hemm l-ebda chat</string>
     <string name="chat_list_left_chat">Ħriġt</string>
-    <string name="chat_new_no_friends">Għad m\'hemm l-ebda ħabib biex tiċċettja miegħu</string>
-    <string name="chat_new_no_matches">Ebda ħabib ma jaqbel</string>
     <string name="chat_new_existing_chat">Iftaħ chat eżistenti</string>
     <string name="chat_new_start">Ibda chat</string>
     <string name="chat_new_start_group">Ibda chat tal-grupp</string>
@@ -90,4 +87,12 @@
     <string name="chat_forward_subtitle">Agħżel chat jew ħabib biex tgħaddi l-messaġġi magħżula lilu</string>
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Ħbieb</string>
+    <string name="chat_policy_title">Chats deħlin</string>
+    <string name="chat_policy_friends">Ħbieb biss</string>
+    <string name="chat_policy_friends_description">Il-ħbieb biss jistgħu jibdew chat miegħek (default).</string>
+    <string name="chat_policy_anyone">Kulħadd</string>
+    <string name="chat_policy_anyone_description">Kulħadd jista\' jibda chat miegħek.</string>
+    <string name="chat_new_search_placeholder">Fittex nies</string>
+    <string name="chat_new_no_matches">L-ebda nies li jaqblu</string>
+    <string name="chat_new_no_friends">Fittex nies biex tiċċettja magħhom</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nový chat</string>
     <string name="chat_new_name">Názov skupiny</string>
     <string name="chat_new_friends">Priatelia</string>
-    <string name="chat_new_search_placeholder">Hľadať priateľov</string>
     <string name="chat_message_placeholder">Správa</string>
     <string name="chat_attachment_add">Pripojiť súbory</string>
     <string name="chat_message_attach">Pripojiť súbory</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Žiadne zodpovedajúce chaty</string>
     <string name="chat_list_empty">Zatiaľ žiadne chaty</string>
     <string name="chat_list_left_chat">Opustené</string>
-    <string name="chat_new_no_friends">Zatiaľ žiadni priatelia na chatovanie</string>
-    <string name="chat_new_no_matches">Žiadni zodpovedajúci priatelia</string>
     <string name="chat_new_existing_chat">Otvoriť existujúci chat</string>
     <string name="chat_new_start">Začať chat</string>
     <string name="chat_new_start_group">Začať skupinový chat</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Vyberte chat alebo priateľa, ktorému preposlať vybrané správy</string>
     <string name="chat_forward_chats">Chaty</string>
     <string name="chat_forward_friends">Priatelia</string>
+    <string name="chat_policy_title">Prichádzajúce chaty</string>
+    <string name="chat_policy_friends">Iba priatelia</string>
+    <string name="chat_policy_friends_description">Chat s vami môžu začať iba priatelia (predvolené).</string>
+    <string name="chat_policy_anyone">Ktokoľvek</string>
+    <string name="chat_policy_anyone_description">Chat s vami môže začať ktokoľvek.</string>
+    <string name="chat_new_search_placeholder">Hľadať ľudí</string>
+    <string name="chat_new_no_matches">Žiadni zodpovedajúci ľudia</string>
+    <string name="chat_new_no_friends">Vyhľadajte ľudí na četovanie</string>
 </resources>

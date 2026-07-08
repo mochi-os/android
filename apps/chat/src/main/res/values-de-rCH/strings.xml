@@ -30,9 +30,6 @@
     <string name="chat_new_title">Neuer Chat</string>
     <string name="chat_new_name">Gruppenname</string>
     <string name="chat_new_friends">Freunde</string>
-    <string name="chat_new_no_friends">Noch keine Freunde zum Chatten vorhanden</string>
-    <string name="chat_new_search_placeholder">Freunde suchen</string>
-    <string name="chat_new_no_matches">Keine passenden Freunde</string>
     <string name="chat_new_existing_chat">Bestehenden Chat öffnen</string>
     <string name="chat_new_start">Chat starten</string>
     <string name="chat_new_start_group">Gruppenchat starten</string>
@@ -77,4 +74,12 @@
 
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Freunde</string>
+    <string name="chat_policy_title">Eingehende Chats</string>
+    <string name="chat_policy_friends">Nur Freunde</string>
+    <string name="chat_policy_friends_description">Nur Freunde können einen Chat mit dir beginnen (Standard).</string>
+    <string name="chat_policy_anyone">Jeder</string>
+    <string name="chat_policy_anyone_description">Jeder kann einen Chat mit dir beginnen.</string>
+    <string name="chat_new_search_placeholder">Personen suchen</string>
+    <string name="chat_new_no_matches">Keine passenden Personen</string>
+    <string name="chat_new_no_friends">Nach Personen zum Chatten suchen</string>
 </resources>

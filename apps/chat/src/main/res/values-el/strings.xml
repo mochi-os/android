@@ -12,7 +12,6 @@
     <string name="chat_new_title">Νέα συνομιλία</string>
     <string name="chat_new_name">Όνομα ομάδας</string>
     <string name="chat_new_friends">Φίλοι</string>
-    <string name="chat_new_search_placeholder">Αναζήτηση φίλων</string>
     <string name="chat_message_placeholder">Μήνυμα</string>
     <string name="chat_attachment_add">Επισύναψη αρχείων</string>
     <string name="chat_message_attach">Επισύναψη αρχείων</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Δεν υπάρχουν ακόμη συνομιλίες</string>
     <string name="chat_list_add_to_home">Προσθήκη στην αρχική οθόνη</string>
     <string name="chat_list_left_chat">Αποχωρήσατε</string>
-    <string name="chat_new_no_friends">Δεν υπάρχουν ακόμη φίλοι για συνομιλία</string>
-    <string name="chat_new_no_matches">Δεν βρέθηκαν φίλοι</string>
     <string name="chat_new_existing_chat">Άνοιγμα υπάρχουσας συνομιλίας</string>
     <string name="chat_new_start">Έναρξη συνομιλίας</string>
     <string name="chat_new_start_group">Έναρξη ομαδικής συνομιλίας</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Επιλέξτε μια συνομιλία ή φίλο για να προωθήσετε τα επιλεγμένα μηνύματα</string>
     <string name="chat_forward_chats">Συνομιλίες</string>
     <string name="chat_forward_friends">Φίλοι</string>
+    <string name="chat_policy_title">Εισερχόμενες συνομιλίες</string>
+    <string name="chat_policy_friends">Μόνο φίλοι</string>
+    <string name="chat_policy_friends_description">Μόνο φίλοι μπορούν να ξεκινήσουν συνομιλία μαζί σας (προεπιλογή).</string>
+    <string name="chat_policy_anyone">Οποιοσδήποτε</string>
+    <string name="chat_policy_anyone_description">Οποιοσδήποτε μπορεί να ξεκινήσει συνομιλία μαζί σας.</string>
+    <string name="chat_new_search_placeholder">Αναζήτηση ατόμων</string>
+    <string name="chat_new_no_matches">Δεν βρέθηκαν άτομα</string>
+    <string name="chat_new_no_friends">Αναζητήστε άτομα για συνομιλία</string>
 </resources>

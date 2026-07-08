@@ -12,7 +12,6 @@
     <string name="chat_new_title">Cabadaich ùr</string>
     <string name="chat_new_name">Ainm a\' bhuidhne</string>
     <string name="chat_new_friends">Caraidean</string>
-    <string name="chat_new_search_placeholder">Lorg caraidean</string>
     <string name="chat_message_placeholder">Teachdaireachd</string>
     <string name="chat_attachment_add">Ceangail faidhlichean</string>
     <string name="chat_message_attach">Ceangail faidhlichean</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Chan eil còmhradh sam bith ann fhathast</string>
     <string name="chat_list_add_to_home">Cuir ris an sgrìn-dachaigh</string>
     <string name="chat_list_left_chat">Dh\'fhàg</string>
-    <string name="chat_new_no_friends">Chan eil caraidean agad ri an còmhradh fhathast</string>
-    <string name="chat_new_no_matches">Chan eil caraid co-fhreagarrach ann</string>
     <string name="chat_new_existing_chat">Fosgail còmhradh a tha ann</string>
     <string name="chat_new_start">Tòisich còmhradh</string>
     <string name="chat_new_start_group">Tòisich còmhradh buidhinn</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Tagh còmhradh no caraid airson na teachdaireachdan a thagh thu a chur air adhart</string>
     <string name="chat_forward_chats">Còmhraidhean</string>
     <string name="chat_forward_friends">Caraidean</string>
+    <string name="chat_policy_title">Cabadaich a\' tighinn a-steach</string>
+    <string name="chat_policy_friends">Caraidean a-mhàin</string>
+    <string name="chat_policy_friends_description">Chan fhaod ach caraidean cabadaich a thòiseachadh leat (bunaiteach).</string>
+    <string name="chat_policy_anyone">Duine sam bith</string>
+    <string name="chat_policy_anyone_description">Faodaidh duine sam bith cabadaich a thòiseachadh leat.</string>
+    <string name="chat_new_search_placeholder">Lorg daoine</string>
+    <string name="chat_new_no_matches">Chan eil daoine a\' freagairt</string>
+    <string name="chat_new_no_friends">Lorg daoine airson cabadaich</string>
 </resources>

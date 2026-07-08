@@ -12,7 +12,6 @@
     <string name="chat_new_title">Chat tuntun</string>
     <string name="chat_new_name">Orúkọ àwùjọ</string>
     <string name="chat_new_friends">Àwọn ọ̀rẹ́</string>
-    <string name="chat_new_search_placeholder">Wá àwọn ọ̀rẹ́</string>
     <string name="chat_message_placeholder">Ìránṣẹ́</string>
     <string name="chat_attachment_add">So àwọn fáìlì pọ̀</string>
     <string name="chat_message_attach">So àwọn fáìlì pọ̀</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Kò sí ìjíròrò tó bá a mu</string>
     <string name="chat_list_empty">Kò sí ìjíròrò kankan síbẹ̀</string>
     <string name="chat_list_left_chat">Kúrò</string>
-    <string name="chat_new_no_friends">Kò sí ọ̀rẹ́ kankan láti bá jíròrò síbẹ̀</string>
-    <string name="chat_new_no_matches">Kò sí ọ̀rẹ́ tó bá a mu</string>
     <string name="chat_new_existing_chat">Ṣí ìjíròrò tó wà</string>
     <string name="chat_new_start">Bẹ̀rẹ̀ ìjíròrò</string>
     <string name="chat_new_start_group">Bẹ̀rẹ̀ ìjíròrò àwùjọ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Yan ìbánisọ̀rọ̀ tàbí ọ̀rẹ́ láti fi àwọn ìfọ̀rọ̀ tí a yàn ránṣẹ́ síi</string>
     <string name="chat_forward_chats">Àwọn ìjíròrò</string>
     <string name="chat_forward_friends">Àwọn ọ̀rẹ́</string>
+    <string name="chat_policy_title">Àwọn ìfọ̀rọ̀wérọ̀ tí ń wọlé</string>
+    <string name="chat_policy_friends">Àwọn ọ̀rẹ́ nìkan</string>
+    <string name="chat_policy_friends_description">Àwọn ọ̀rẹ́ nìkan ni ó le bẹ̀rẹ̀ ìfọ̀rọ̀wérọ̀ pẹ̀lú rẹ (àbùdá).</string>
+    <string name="chat_policy_anyone">Ẹnikẹ́ni</string>
+    <string name="chat_policy_anyone_description">Ẹnikẹ́ni le bẹ̀rẹ̀ ìfọ̀rọ̀wérọ̀ pẹ̀lú rẹ.</string>
+    <string name="chat_new_search_placeholder">Wa awọn eniyan</string>
+    <string name="chat_new_no_matches">Ko si eniyan ti o baamu</string>
+    <string name="chat_new_no_friends">Wa awọn eniyan lati bá sọ̀rọ̀</string>
 </resources>

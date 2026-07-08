@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nowy czat</string>
     <string name="chat_new_name">Nazwa grupy</string>
     <string name="chat_new_friends">Znajomi</string>
-    <string name="chat_new_search_placeholder">Szukaj znajomych</string>
     <string name="chat_message_placeholder">Wiadomość</string>
     <string name="chat_attachment_add">Dołącz pliki</string>
     <string name="chat_message_attach">Dołącz pliki</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Brak pasujących czatów</string>
     <string name="chat_list_empty">Brak czatów</string>
     <string name="chat_list_left_chat">Opuszczono</string>
-    <string name="chat_new_no_friends">Brak znajomych do rozmowy</string>
-    <string name="chat_new_no_matches">Brak pasujących znajomych</string>
     <string name="chat_new_existing_chat">Otwórz istniejący czat</string>
     <string name="chat_new_start">Rozpocznij czat</string>
     <string name="chat_new_start_group">Rozpocznij czat grupowy</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Wybierz czat lub znajomego, do którego przekazać wybrane wiadomości</string>
     <string name="chat_forward_chats">Czaty</string>
     <string name="chat_forward_friends">Znajomi</string>
+    <string name="chat_policy_title">Przychodzące czaty</string>
+    <string name="chat_policy_friends">Tylko znajomi</string>
+    <string name="chat_policy_friends_description">Tylko znajomi mogą rozpocząć czat z Tobą (domyślnie).</string>
+    <string name="chat_policy_anyone">Każdy</string>
+    <string name="chat_policy_anyone_description">Każdy może rozpocząć czat z Tobą.</string>
+    <string name="chat_new_search_placeholder">Szukaj osób</string>
+    <string name="chat_new_no_matches">Brak pasujących osób</string>
+    <string name="chat_new_no_friends">Wyszukaj osoby do rozmowy</string>
 </resources>

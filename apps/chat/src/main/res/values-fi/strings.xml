@@ -12,7 +12,6 @@
     <string name="chat_new_title">Uusi keskustelu</string>
     <string name="chat_new_name">Ryhmän nimi</string>
     <string name="chat_new_friends">Kaverit</string>
-    <string name="chat_new_search_placeholder">Hae kavereita</string>
     <string name="chat_message_placeholder">Viesti</string>
     <string name="chat_attachment_add">Liitä tiedostoja</string>
     <string name="chat_message_attach">Liitä tiedostoja</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Ei vielä keskusteluja</string>
     <string name="chat_list_add_to_home">Lisää aloitusnäytölle</string>
     <string name="chat_list_left_chat">Poistuttu</string>
-    <string name="chat_new_no_friends">Ei vielä ystäviä, joiden kanssa keskustella</string>
-    <string name="chat_new_no_matches">Ei vastaavia ystäviä</string>
     <string name="chat_new_existing_chat">Avaa olemassa oleva keskustelu</string>
     <string name="chat_new_start">Aloita keskustelu</string>
     <string name="chat_new_start_group">Aloita ryhmäkeskustelu</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Valitse keskustelu tai kaveri, jolle valitut viestit välitetään</string>
     <string name="chat_forward_chats">Chatit</string>
     <string name="chat_forward_friends">Kaverit</string>
+    <string name="chat_policy_title">Saapuvat keskustelut</string>
+    <string name="chat_policy_friends">Vain kaverit</string>
+    <string name="chat_policy_friends_description">Vain kaverit voivat aloittaa keskustelun kanssasi (oletus).</string>
+    <string name="chat_policy_anyone">Kuka tahansa</string>
+    <string name="chat_policy_anyone_description">Kuka tahansa voi aloittaa keskustelun kanssasi.</string>
+    <string name="chat_new_search_placeholder">Hae henkilöitä</string>
+    <string name="chat_new_no_matches">Ei vastaavia henkilöitä</string>
+    <string name="chat_new_no_friends">Etsi henkilöitä keskusteltavaksi</string>
 </resources>

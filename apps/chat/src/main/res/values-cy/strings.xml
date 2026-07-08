@@ -12,7 +12,6 @@
     <string name="chat_new_title">Sgwrs newydd</string>
     <string name="chat_new_name">Enw\'r grŵp</string>
     <string name="chat_new_friends">Ffrindiau</string>
-    <string name="chat_new_search_placeholder">Chwilio ffrindiau</string>
     <string name="chat_message_placeholder">Neges</string>
     <string name="chat_attachment_add">Atodi ffeiliau</string>
     <string name="chat_message_attach">Atodi ffeiliau</string>
@@ -51,8 +50,6 @@
     <string name="chat_list_no_matching">Dim sgyrsiau cyfatebol</string>
     <string name="chat_list_empty">Dim sgyrsiau eto</string>
     <string name="chat_list_left_chat">Wedi gadael</string>
-    <string name="chat_new_no_friends">Dim ffrindiau i sgwrsio â nhw eto</string>
-    <string name="chat_new_no_matches">Dim ffrindiau cyfatebol</string>
     <string name="chat_new_existing_chat">Agor sgwrs sy\'n bodoli</string>
     <string name="chat_new_start">Dechrau sgwrs</string>
     <string name="chat_new_start_group">Dechrau sgwrs grŵp</string>
@@ -90,4 +87,12 @@
     <string name="chat_forward_subtitle">Dewiswch sgwrs neu ffrind i anfon y negeseuon a ddewiswyd ymlaen ato</string>
     <string name="chat_forward_chats">Sgyrsiau</string>
     <string name="chat_forward_friends">Ffrindiau</string>
+    <string name="chat_policy_title">Sgyrsiau sy\'n dod i mewn</string>
+    <string name="chat_policy_friends">Ffrindiau yn unig</string>
+    <string name="chat_policy_friends_description">Dim ond ffrindiau all ddechrau sgwrs gyda chi (rhagosodedig).</string>
+    <string name="chat_policy_anyone">Unrhyw un</string>
+    <string name="chat_policy_anyone_description">Gall unrhyw un ddechrau sgwrs gyda chi.</string>
+    <string name="chat_new_search_placeholder">Chwilio am bobl</string>
+    <string name="chat_new_no_matches">Dim pobl gyfatebol</string>
+    <string name="chat_new_no_friends">Chwiliwch am bobl i sgwrsio â nhw</string>
 </resources>

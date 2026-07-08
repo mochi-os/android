@@ -12,7 +12,6 @@
     <string name="chat_new_title">Incoko entsha</string>
     <string name="chat_new_name">Igama leqela</string>
     <string name="chat_new_friends">Abahlobo</string>
-    <string name="chat_new_search_placeholder">Khangela abahlobo</string>
     <string name="chat_message_placeholder">Umyalezo</string>
     <string name="chat_attachment_add">Qhoboshela iifayile</string>
     <string name="chat_message_attach">Qhoboshela iifayile</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Akukho ncoko ihambelanayo</string>
     <string name="chat_list_empty">Akukho ncoko okwangoku</string>
     <string name="chat_list_left_chat">Ushiyile</string>
-    <string name="chat_new_no_friends">Akukho bahlobo bokuncokola nabo okwangoku</string>
-    <string name="chat_new_no_matches">Akukho bahlobo bahambelanayo</string>
     <string name="chat_new_existing_chat">Vula incoko ekhoyo</string>
     <string name="chat_new_start">Qala incoko</string>
     <string name="chat_new_start_group">Qala incoko yeqela</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Khetha incoko okanye umhlobo wokuthumela imiyalezo ekhethiweyo</string>
     <string name="chat_forward_chats">Iincoko</string>
     <string name="chat_forward_friends">Abahlobo</string>
+    <string name="chat_policy_title">Iincoko ezingenayo</string>
+    <string name="chat_policy_friends">Abahlobo kuphela</string>
+    <string name="chat_policy_friends_description">Ngabahlobo kuphela abanganqala incoko nawe (okumiselweyo).</string>
+    <string name="chat_policy_anyone">Nabani na</string>
+    <string name="chat_policy_anyone_description">Nabani na anganqala incoko nawe.</string>
+    <string name="chat_new_search_placeholder">Khangela abantu</string>
+    <string name="chat_new_no_matches">Akukho bantu bahambelanayo</string>
+    <string name="chat_new_no_friends">Khangela abantu ozathetha nabo</string>
 </resources>

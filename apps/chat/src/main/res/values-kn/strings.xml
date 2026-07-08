@@ -12,7 +12,6 @@
     <string name="chat_new_title">ಹೊಸ ಚಾಟ್</string>
     <string name="chat_new_name">ಗುಂಪು ಹೆಸರು</string>
     <string name="chat_new_friends">ಸ್ನೇಹಿತರು</string>
-    <string name="chat_new_search_placeholder">ಸ್ನೇಹಿತರನ್ನು ಹುಡುಕಿ</string>
     <string name="chat_message_placeholder">ಸಂದೇಶ</string>
     <string name="chat_attachment_add">ಫೈಲ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ</string>
     <string name="chat_message_attach">ಫೈಲ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">ಹೊಂದಾಣಿಕೆಯಾಗುವ ಚಾಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="chat_list_empty">ಇನ್ನೂ ಯಾವುದೇ ಚಾಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="chat_list_left_chat">ಬಿಟ್ಟಿದ್ದೀರಿ</string>
-    <string name="chat_new_no_friends">ಚಾಟ್ ಮಾಡಲು ಇನ್ನೂ ಯಾವುದೇ ಸ್ನೇಹಿತರಿಲ್ಲ</string>
-    <string name="chat_new_no_matches">ಹೊಂದಾಣಿಕೆಯಾಗುವ ಸ್ನೇಹಿತರಿಲ್ಲ</string>
     <string name="chat_new_existing_chat">ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಚಾಟ್ ತೆರೆಯಿರಿ</string>
     <string name="chat_new_start">ಚಾಟ್ ಪ್ರಾರಂಭಿಸಿ</string>
     <string name="chat_new_start_group">ಗುಂಪು ಚಾಟ್ ಪ್ರಾರಂಭಿಸಿ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">ಆಯ್ಕೆ ಮಾಡಿದ ಸಂದೇಶಗಳನ್ನು ಫಾರ್ವರ್ಡ್ ಮಾಡಲು ಚಾಟ್ ಅಥವಾ ಸ್ನೇಹಿತರನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="chat_forward_chats">ಚಾಟ್‌ಗಳು</string>
     <string name="chat_forward_friends">ಸ್ನೇಹಿತರು</string>
+    <string name="chat_policy_title">ಒಳಬರುವ ಚಾಟ್‌ಗಳು</string>
+    <string name="chat_policy_friends">ಸ್ನೇಹಿತರು ಮಾತ್ರ</string>
+    <string name="chat_policy_friends_description">ಸ್ನೇಹಿತರು ಮಾತ್ರ ನಿಮ್ಮೊಂದಿಗೆ ಚಾಟ್ ಪ್ರಾರಂಭಿಸಬಹುದು (ಡೀಫಾಲ್ಟ್).</string>
+    <string name="chat_policy_anyone">ಯಾರಾದರೂ</string>
+    <string name="chat_policy_anyone_description">ಯಾರಾದರೂ ನಿಮ್ಮೊಂದಿಗೆ ಚಾಟ್ ಪ್ರಾರಂಭಿಸಬಹುದು.</string>
+    <string name="chat_new_search_placeholder">ಜನರನ್ನು ಹುಡುಕಿ</string>
+    <string name="chat_new_no_matches">ಹೊಂದುವ ಜನರಿಲ್ಲ</string>
+    <string name="chat_new_no_friends">ಚಾಟ್ ಮಾಡಲು ಜನರನ್ನು ಹುಡುಕಿ</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">ချတ်အသစ်</string>
     <string name="chat_new_name">အုပ်စု အမည်</string>
     <string name="chat_new_friends">သူငယ်ချင်းများ</string>
-    <string name="chat_new_search_placeholder">သူငယ်ချင်းများ ရှာဖွေ</string>
     <string name="chat_message_placeholder">မက်ဆေ့ဂျ်</string>
     <string name="chat_attachment_add">ဖိုင်များ ပူးတွဲမည်</string>
     <string name="chat_message_attach">ဖိုင်များ ပူးတွဲမည်</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">ကိုက်ညီသော ချတ်များ မရှိပါ</string>
     <string name="chat_list_empty">ချတ်များ မရှိသေးပါ</string>
     <string name="chat_list_left_chat">ထွက်ခွာပြီး</string>
-    <string name="chat_new_no_friends">ချတ်လုပ်ရန် မိတ်ဆွေများ မရှိသေးပါ</string>
-    <string name="chat_new_no_matches">ကိုက်ညီသော မိတ်ဆွေများ မရှိပါ</string>
     <string name="chat_new_existing_chat">ရှိပြီးသား ချတ်ကို ဖွင့်ပါ</string>
     <string name="chat_new_start">ချတ် စတင်ပါ</string>
     <string name="chat_new_start_group">အုပ်စု ချတ် စတင်ပါ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">ရွေးချယ်ထားသောမက်ဆေ့ဂျ်များကို ပို့ရန် ချတ် သို့မဟုတ် သူငယ်ချင်းတစ်ဦးကို ရွေးပါ</string>
     <string name="chat_forward_chats">စကားပြောခန်းများ</string>
     <string name="chat_forward_friends">သူငယ်ချင်းများ</string>
+    <string name="chat_policy_title">အဝင်ချတ်များ</string>
+    <string name="chat_policy_friends">သူငယ်ချင်းများသာ</string>
+    <string name="chat_policy_friends_description">သူငယ်ချင်းများသာ သင်နှင့် ချတ်စတင်နိုင်သည် (မူရင်း)။</string>
+    <string name="chat_policy_anyone">မည်သူမဆို</string>
+    <string name="chat_policy_anyone_description">မည်သူမဆို သင်နှင့် ချတ်စတင်နိုင်သည်။</string>
+    <string name="chat_new_search_placeholder">လူများကို ရှာဖွေရန်</string>
+    <string name="chat_new_no_matches">ကိုက်ညီသူ မရှိပါ</string>
+    <string name="chat_new_no_friends">ချတ်ရန် လူများကို ရှာဖွေပါ</string>
 </resources>

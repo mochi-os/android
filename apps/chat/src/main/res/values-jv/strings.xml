@@ -12,7 +12,6 @@
     <string name="chat_new_title">Chat anyar</string>
     <string name="chat_new_name">Jeneng grup</string>
     <string name="chat_new_friends">Kanca</string>
-    <string name="chat_new_search_placeholder">Goleki kanca</string>
     <string name="chat_message_placeholder">Pesen</string>
     <string name="chat_attachment_add">Lampirké berkas</string>
     <string name="chat_message_attach">Lampirké berkas</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Ora ana obrolan sing cocog</string>
     <string name="chat_list_empty">Durung ana obrolan</string>
     <string name="chat_list_left_chat">Metu</string>
-    <string name="chat_new_no_friends">Durung ana kanca kanggo diobrolake</string>
-    <string name="chat_new_no_matches">Ora ana kanca sing cocog</string>
     <string name="chat_new_existing_chat">Bukak obrolan sing wis ana</string>
     <string name="chat_new_start">Wiwiti obrolan</string>
     <string name="chat_new_start_group">Wiwiti obrolan grup</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Pilih obrolan utawa kanca kanggo nerusake pesen sing dipilih</string>
     <string name="chat_forward_chats">Chat</string>
     <string name="chat_forward_friends">Kanca</string>
+    <string name="chat_policy_title">Obrolan mlebu</string>
+    <string name="chat_policy_friends">Kanca thok</string>
+    <string name="chat_policy_friends_description">Mung kanca sing bisa miwiti obrolan karo sampeyan (gawan).</string>
+    <string name="chat_policy_anyone">Sapa wae</string>
+    <string name="chat_policy_anyone_description">Sapa wae bisa miwiti obrolan karo sampeyan.</string>
+    <string name="chat_new_search_placeholder">Golek wong</string>
+    <string name="chat_new_no_matches">Ora ana wong sing cocog</string>
+    <string name="chat_new_no_friends">Golek wong kanggo ngobrol</string>
 </resources>

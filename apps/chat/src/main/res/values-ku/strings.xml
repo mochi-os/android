@@ -12,7 +12,6 @@
     <string name="chat_new_title">Chata nû</string>
     <string name="chat_new_name">Navê komê</string>
     <string name="chat_new_friends">Heval</string>
-    <string name="chat_new_search_placeholder">Li hevalan bigere</string>
     <string name="chat_message_placeholder">Peyam</string>
     <string name="chat_attachment_add">Pelan pêve bike</string>
     <string name="chat_message_attach">Pelan pêve bike</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Tu chata lihevhatî tune</string>
     <string name="chat_list_empty">Hêj chat tune</string>
     <string name="chat_list_left_chat">Derket</string>
-    <string name="chat_new_no_friends">Hêj heval tune ku tu bi wan re biaxivî</string>
-    <string name="chat_new_no_matches">Tu hevalê lihevhatî tune</string>
     <string name="chat_new_existing_chat">Chata heyî veke</string>
     <string name="chat_new_start">Chatê dest pê bike</string>
     <string name="chat_new_start_group">Chata komê dest pê bike</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Sohbetek an hevalek hilbijêre da peyamên hilbijartî jê re bişînî</string>
     <string name="chat_forward_chats">Chat</string>
     <string name="chat_forward_friends">Heval</string>
+    <string name="chat_policy_title">Chatên tên</string>
+    <string name="chat_policy_friends">Tenê heval</string>
+    <string name="chat_policy_friends_description">Tenê heval dikarin bi te re chatek dest pê bikin (standard).</string>
+    <string name="chat_policy_anyone">Her kes</string>
+    <string name="chat_policy_anyone_description">Her kes dikare bi te re chatek dest pê bike.</string>
+    <string name="chat_new_search_placeholder">Li kesan bigere</string>
+    <string name="chat_new_no_matches">Tu kesên lihevhatî tune</string>
+    <string name="chat_new_no_friends">Ji bo chatê li kesan bigere</string>
 </resources>

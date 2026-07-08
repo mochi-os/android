@@ -12,7 +12,6 @@
     <string name="chat_new_title">נײַער שמועס</string>
     <string name="chat_new_name">גרופּע־נאָמען</string>
     <string name="chat_new_friends">חברים</string>
-    <string name="chat_new_search_placeholder">זוך פֿרײַנד</string>
     <string name="chat_message_placeholder">בריוו</string>
     <string name="chat_attachment_add">צוהענקען פֿײַלן</string>
     <string name="chat_message_attach">צוהענקען פֿײַלן</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">קיין פּאַסיקע שמועסן</string>
     <string name="chat_list_empty">נאָך קיין שמועסן</string>
     <string name="chat_list_left_chat">אַוועקגעגאַנגען</string>
-    <string name="chat_new_no_friends">נאָך קיין פֿרײַנד צו שמועסן מיט</string>
-    <string name="chat_new_no_matches">קיין פּאַסיקע פֿרײַנד</string>
     <string name="chat_new_existing_chat">עפֿענען בנימצא שמועס</string>
     <string name="chat_new_start">אָנהייבן שמועס</string>
     <string name="chat_new_start_group">אָנהייבן גרופּע־שמועס</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">קלײַבט אויס אַ שמועס אָדער פֿרײַנד צו װײַטערשיקן די אויסגעקליבענע מעלדונגען</string>
     <string name="chat_forward_chats">שמועסן</string>
     <string name="chat_forward_friends">חברים</string>
+    <string name="chat_policy_title">אַרײַנקומענדיקע שמועסן</string>
+    <string name="chat_policy_friends">בלויז פֿרײַנד</string>
+    <string name="chat_policy_friends_description">בלויז פֿרײַנד קענען אָנהייבן אַ שמועס מיט דיר (פֿאַרפֿאַלן).</string>
+    <string name="chat_policy_anyone">עמעצער</string>
+    <string name="chat_policy_anyone_description">ווער עס איז קען אָנהייבן אַ שמועס מיט דיר.</string>
+    <string name="chat_new_search_placeholder">זוך מענטשן</string>
+    <string name="chat_new_no_matches">קיין פּאַסיקע מענטשן</string>
+    <string name="chat_new_no_friends">זוך מענטשן צו שמועסן מיט</string>
 </resources>

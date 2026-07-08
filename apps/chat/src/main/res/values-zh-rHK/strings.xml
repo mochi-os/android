@@ -39,9 +39,6 @@
     <string name="chat_new_title">新聊天</string>
     <string name="chat_new_name">群組名稱</string>
     <string name="chat_new_friends">好友</string>
-    <string name="chat_new_no_friends">暫時沒有可聊天的好友</string>
-    <string name="chat_new_search_placeholder">搜尋好友</string>
-    <string name="chat_new_no_matches">沒有符合的好友</string>
     <string name="chat_new_existing_chat">開啟現有聊天</string>
     <string name="chat_new_start">開始聊天</string>
     <string name="chat_new_start_group">開始群組聊天</string>
@@ -77,4 +74,12 @@
 
     <string name="chat_forward_chats">聊天</string>
     <string name="chat_forward_friends">好友</string>
+    <string name="chat_policy_title">收到的聊天</string>
+    <string name="chat_policy_friends">僅好友</string>
+    <string name="chat_policy_friends_description">只有好友可以與您發起聊天（預設）。</string>
+    <string name="chat_policy_anyone">任何人</string>
+    <string name="chat_policy_anyone_description">任何人都可以與您發起聊天。</string>
+    <string name="chat_new_search_placeholder">搜尋使用者</string>
+    <string name="chat_new_no_matches">沒有相符的使用者</string>
+    <string name="chat_new_no_friends">搜尋可聊天的使用者</string>
 </resources>

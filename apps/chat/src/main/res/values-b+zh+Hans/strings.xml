@@ -12,7 +12,6 @@
     <string name="chat_new_title">新聊天</string>
     <string name="chat_new_name">群组名称</string>
     <string name="chat_new_friends">好友</string>
-    <string name="chat_new_search_placeholder">搜索好友</string>
     <string name="chat_message_placeholder">消息</string>
     <string name="chat_attachment_add">附加文件</string>
     <string name="chat_message_attach">附加文件</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">没有匹配的聊天</string>
     <string name="chat_list_empty">暂无聊天</string>
     <string name="chat_list_left_chat">已退出</string>
-    <string name="chat_new_no_friends">暂无可聊天的好友</string>
-    <string name="chat_new_no_matches">没有匹配的好友</string>
     <string name="chat_new_existing_chat">打开现有聊天</string>
     <string name="chat_new_start">开始聊天</string>
     <string name="chat_new_start_group">开始群聊</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">选择一个聊天或好友以转发所选消息</string>
     <string name="chat_forward_chats">聊天</string>
     <string name="chat_forward_friends">好友</string>
+    <string name="chat_policy_title">收到的聊天</string>
+    <string name="chat_policy_friends">仅好友</string>
+    <string name="chat_policy_friends_description">只有好友可以与您发起聊天（默认）。</string>
+    <string name="chat_policy_anyone">任何人</string>
+    <string name="chat_policy_anyone_description">任何人都可以与您发起聊天。</string>
+    <string name="chat_new_search_placeholder">搜索用户</string>
+    <string name="chat_new_no_matches">没有匹配的用户</string>
+    <string name="chat_new_no_friends">搜索可聊天的用户</string>
 </resources>

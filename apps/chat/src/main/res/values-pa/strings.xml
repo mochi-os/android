@@ -12,7 +12,6 @@
     <string name="chat_new_title">ਨਵੀਂ ਚੈਟ</string>
     <string name="chat_new_name">ਗਰੁੱਪ ਦਾ ਨਾਮ</string>
     <string name="chat_new_friends">ਦੋਸਤ</string>
-    <string name="chat_new_search_placeholder">ਦੋਸਤ ਖੋਜੋ</string>
     <string name="chat_message_placeholder">ਸੁਨੇਹਾ</string>
     <string name="chat_attachment_add">ਫਾਈਲਾਂ ਨੱਥੀ ਕਰੋ</string>
     <string name="chat_message_attach">ਫਾਈਲਾਂ ਨੱਥੀ ਕਰੋ</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">ਕੋਈ ਮੇਲ ਖਾਂਦੀ ਚੈਟ ਨਹੀਂ</string>
     <string name="chat_list_empty">ਅਜੇ ਕੋਈ ਚੈਟ ਨਹੀਂ</string>
     <string name="chat_list_left_chat">ਛੱਡ ਦਿੱਤੀ</string>
-    <string name="chat_new_no_friends">ਅਜੇ ਚੈਟ ਕਰਨ ਲਈ ਕੋਈ ਦੋਸਤ ਨਹੀਂ</string>
-    <string name="chat_new_no_matches">ਕੋਈ ਮੇਲ ਖਾਂਦੇ ਦੋਸਤ ਨਹੀਂ</string>
     <string name="chat_new_existing_chat">ਮੌਜੂਦਾ ਚੈਟ ਖੋਲ੍ਹੋ</string>
     <string name="chat_new_start">ਚੈਟ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="chat_new_start_group">ਸਮੂਹ ਚੈਟ ਸ਼ੁਰੂ ਕਰੋ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">ਚੁਣੇ ਸੁਨੇਹੇ ਅੱਗੇ ਭੇਜਣ ਲਈ ਚੈਟ ਜਾਂ ਦੋਸਤ ਚੁਣੋ</string>
     <string name="chat_forward_chats">ਚੈਟਾਂ</string>
     <string name="chat_forward_friends">ਦੋਸਤ</string>
+    <string name="chat_policy_title">ਆਉਣ ਵਾਲੀਆਂ ਚੈਟਾਂ</string>
+    <string name="chat_policy_friends">ਸਿਰਫ਼ ਦੋਸਤ</string>
+    <string name="chat_policy_friends_description">ਸਿਰਫ਼ ਦੋਸਤ ਹੀ ਤੁਹਾਡੇ ਨਾਲ ਚੈਟ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹਨ (ਡਿਫ਼ਾਲਟ)।</string>
+    <string name="chat_policy_anyone">ਕੋਈ ਵੀ</string>
+    <string name="chat_policy_anyone_description">ਕੋਈ ਵੀ ਤੁਹਾਡੇ ਨਾਲ ਚੈਟ ਸ਼ੁਰੂ ਕਰ ਸਕਦਾ ਹੈ।</string>
+    <string name="chat_new_search_placeholder">ਲੋਕ ਖੋਜੋ</string>
+    <string name="chat_new_no_matches">ਕੋਈ ਮੇਲ ਖਾਂਦੇ ਲੋਕ ਨਹੀਂ</string>
+    <string name="chat_new_no_friends">ਚੈਟ ਕਰਨ ਲਈ ਲੋਕ ਖੋਜੋ</string>
 </resources>
