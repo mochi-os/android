@@ -22,6 +22,7 @@ import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
 import org.mochios.android.account.MochiAccount
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -130,6 +131,11 @@ class SessionManager @Inject constructor(
         dataStore.edit { prefs ->
             prefs.clear()
         }
+        // Drop the in-memory cookies too. Otherwise the stale `session` cookie
+        // still rides on the next request (e.g. an FCM token refresh fired by
+        // tearDown()), and the server's rolling Set-Cookie re-persists the very
+        // session we just cleared — flipping isAuthenticated back to true.
+        cookieStore.clear()
         // Logout in this app shouldn't tear down OTHER apps' bindings —
         // remove only the account this app was bound to.
         if (identity != null) MochiAccount.remove(context, identity)
@@ -233,13 +239,20 @@ class SessionManager @Inject constructor(
         }
     }
 
+    /** In-memory per-host cookie cache, cleared on [clearAll]. */
+    private val cookieStore = ConcurrentHashMap<String, MutableList<Cookie>>()
+
     val cookieJar: CookieJar = object : CookieJar {
-        private val cookieStore = mutableMapOf<String, MutableList<Cookie>>()
 
         override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
             cookieStore[url.host] = cookies.toMutableList()
             val sessionCookie = cookies.find { it.name == "session" }
-            if (sessionCookie != null) {
+            // Only *renew* an existing session — never resurrect one that
+            // sign-out or a 401 has cleared. Login establishes the session
+            // explicitly via AuthRepository.extractSessionCookie, so gating on
+            // an existing token here is safe and stops a stray authenticated
+            // call (e.g. an FCM token refresh) from flipping us back signed-in.
+            if (sessionCookie != null && getSessionCookieBlocking() != null) {
                 runBlocking { saveSession(sessionCookie.value) }
             }
         }
