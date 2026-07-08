@@ -76,10 +76,15 @@
 
     <!-- Chat overflow / settings -->
     <string name="chat_settings_title">Chat settings</string>
+    <string name="chat_settings_screen_title">%1$s settings</string>
+    <string name="chat_settings_general">General</string>
+    <string name="chat_settings_general_desc">Adjust chat settings</string>
+    <string name="chat_settings_id">Chat ID</string>
     <string name="chat_settings_rename">Rename chat</string>
     <string name="chat_settings_rename_label">Chat name</string>
     <string name="chat_settings_save">Save</string>
     <string name="chat_settings_members">Members</string>
+    <string name="chat_settings_members_desc">List of people in this chat</string>
     <string name="chat_settings_add_member">Add member</string>
     <string name="chat_settings_add_member_search">Search friends</string>
     <string name="chat_settings_add_member_empty">No friends to add</string>

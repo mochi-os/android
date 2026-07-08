@@ -72,6 +72,13 @@ fun NavGraphBuilder.chatNavGraph(
             },
             onNewChat = { navController.navigate(ChatApp.newChat()) },
             onSettings = { id -> navController.navigate(ChatApp.chatSettings(id)) },
+            onChatDeleted = {
+                // The chat no longer exists locally — drop back to the router so
+                // last-viewed re-resolves instead of reopening a missing chat.
+                navController.navigate(ChatApp.ROUTER) {
+                    popUpTo(ChatApp.CHAT) { inclusive = true }
+                }
+            },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
         )

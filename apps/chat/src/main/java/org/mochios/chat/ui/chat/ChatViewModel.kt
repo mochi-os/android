@@ -59,6 +59,7 @@ data class ChatUiState(
     val selectionMode: Boolean = false,
     val selectedIds: Set<String> = emptySet(),
     val isPinned: Boolean = false,
+    val chatDeleted: Boolean = false,
 )
 
 @HiltViewModel
@@ -105,6 +106,38 @@ class ChatViewModel @Inject constructor(
     fun markReadNow() {
         markRead()
         _events.tryEmit(application.getString(R.string.chat_marked_read))
+    }
+
+    /**
+     * Leave this chat (server-side; keeps it locally as a read-only tombstone),
+     * then reload so the conversation reflects its now-inactive state (composer
+     * disabled). Deleting locally stays a chat-settings action.
+     */
+    fun leaveChat() {
+        viewModelScope.launch {
+            try {
+                repository.leaveChat(chatId)
+                load()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    /**
+     * Delete this chat from the local device (only offered once it's left/removed
+     * server-side). On success flag [ChatUiState.chatDeleted] so the screen can
+     * navigate away — the conversation no longer exists.
+     */
+    fun deleteChat() {
+        viewModelScope.launch {
+            try {
+                repository.deleteChat(chatId)
+                _uiState.value = _uiState.value.copy(chatDeleted = true)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
     }
 
     fun load() {

@@ -143,6 +143,7 @@ fun ChatScreen(
     onSelectChat: (String) -> Unit,
     onNewChat: () -> Unit,
     onSettings: (String) -> Unit,
+    onChatDeleted: () -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     listViewModel: ChatListViewModel = hiltViewModel(),
@@ -227,6 +228,7 @@ fun ChatScreen(
                 chatId = chatId,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                 onSettings = onSettings,
+                onChatDeleted = onChatDeleted,
                 onOpenNotifications = onOpenNotifications,
             )
         }
@@ -270,6 +272,7 @@ private fun ChatContent(
     chatId: String,
     onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
+    onChatDeleted: () -> Unit,
     onOpenNotifications: () -> Unit,
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
@@ -286,7 +289,14 @@ private fun ChatContent(
     var pendingDelete by remember { mutableStateOf<List<String>?>(null) }
     // Whether the top-bar overflow (three-dot) menu is expanded.
     var menuExpanded by remember { mutableStateOf(false) }
+    // Whether the leave-chat / delete-locally confirmation dialogs are open.
+    var showLeaveDialog by remember { mutableStateOf(false) }
+    var showDeleteDialog by remember { mutableStateOf(false) }
     val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
+
+    LaunchedEffect(uiState.chatDeleted) {
+        if (uiState.chatDeleted) onChatDeleted()
+    }
 
     // Match ids come from the server search (newest-first). The active match is
     // scrolled to and highlighted; the counter/navigation reflect the full set.
@@ -450,6 +460,32 @@ private fun ChatContent(
                                         onSettings(uiState.chat.fingerprint.ifEmpty { chatId })
                                     }
                                 )
+                                if (uiState.chat.status == ChatStatus.ACTIVE) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.chat_settings_leave)) },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.AutoMirrored.Filled.Logout,
+                                                contentDescription = null,
+                                            )
+                                        },
+                                        onClick = {
+                                            menuExpanded = false
+                                            showLeaveDialog = true
+                                        }
+                                    )
+                                } else {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.chat_settings_delete)) },
+                                        leadingIcon = {
+                                            Icon(Icons.Outlined.Delete, contentDescription = null)
+                                        },
+                                        onClick = {
+                                            menuExpanded = false
+                                            showDeleteDialog = true
+                                        }
+                                    )
+                                }
                             }
                         }
                     }
@@ -631,6 +667,58 @@ private fun ChatContent(
                     },
                     dismissButton = {
                         TextButton(onClick = { pendingDelete = null }) {
+                            Text(stringResource(MochiR.string.common_cancel))
+                        }
+                    },
+                )
+            }
+
+            if (showLeaveDialog) {
+                AlertDialog(
+                    onDismissRequest = { showLeaveDialog = false },
+                    title = { Text(stringResource(R.string.chat_settings_leave_title)) },
+                    text = { Text(stringResource(R.string.chat_settings_leave_message)) },
+                    confirmButton = {
+                        TextButton(
+                            onClick = {
+                                showLeaveDialog = false
+                                viewModel.leaveChat()
+                            }
+                        ) {
+                            Text(
+                                stringResource(R.string.chat_settings_leave),
+                                color = MaterialTheme.colorScheme.error,
+                            )
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(onClick = { showLeaveDialog = false }) {
+                            Text(stringResource(MochiR.string.common_cancel))
+                        }
+                    },
+                )
+            }
+
+            if (showDeleteDialog) {
+                AlertDialog(
+                    onDismissRequest = { showDeleteDialog = false },
+                    title = { Text(stringResource(R.string.chat_settings_delete_title)) },
+                    text = { Text(stringResource(R.string.chat_settings_delete_message)) },
+                    confirmButton = {
+                        TextButton(
+                            onClick = {
+                                showDeleteDialog = false
+                                viewModel.deleteChat()
+                            }
+                        ) {
+                            Text(
+                                stringResource(R.string.chat_settings_delete),
+                                color = MaterialTheme.colorScheme.error,
+                            )
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(onClick = { showDeleteDialog = false }) {
                             Text(stringResource(MochiR.string.common_cancel))
                         }
                     },
