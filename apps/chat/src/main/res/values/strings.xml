@@ -98,4 +98,11 @@
     <string name="chat_members_empty">No members</string>
     <string name="chat_members_you">You</string>
     <string name="chat_chat_not_found">Chat not found</string>
+
+    <!-- Conversation overflow menu -->
+    <string name="chat_pin">Pin</string>
+    <string name="chat_unpin">Unpin</string>
+    <string name="chat_pinned_label">Pinned</string>
+    <string name="chat_mark_read">Mark as read</string>
+    <string name="chat_marked_read">Marked as read</string>
 </resources>

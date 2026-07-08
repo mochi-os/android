@@ -25,6 +25,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.chat.R
+import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
@@ -58,6 +59,7 @@ data class ChatUiState(
     val replyingTo: ChatMessage? = null,
     val selectionMode: Boolean = false,
     val selectedIds: Set<String> = emptySet(),
+    val isPinned: Boolean = false,
 )
 
 @HiltViewModel
@@ -66,6 +68,7 @@ class ChatViewModel @Inject constructor(
     private val repository: ChatRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
+    private val pinnedStore: PinnedChatsStore,
     private val application: Application,
 ) : ViewModel() {
 
@@ -84,6 +87,25 @@ class ChatViewModel @Inject constructor(
 
     init {
         load()
+        viewModelScope.launch {
+            pinnedStore.pinned.collect { pins ->
+                _uiState.value = _uiState.value.copy(isPinned = chatId in pins)
+            }
+        }
+    }
+
+    /** Toggle this chat's local pin. Pins are device-only (no server concept). */
+    fun togglePin() {
+        pinnedStore.toggle(chatId)
+    }
+
+    /**
+     * Manually move the read watermark to the latest message (the same call
+     * fired automatically on open), then confirm with a toast.
+     */
+    fun markReadNow() {
+        markRead()
+        _events.tryEmit(application.getString(R.string.chat_marked_read))
     }
 
     fun load() {

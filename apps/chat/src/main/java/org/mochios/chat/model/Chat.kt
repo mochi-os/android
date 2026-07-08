@@ -30,6 +30,13 @@ data class Chat(
     val status: String = ChatStatus.ACTIVE
 )
 
+/**
+ * The stable navigation key for a chat: its fingerprint, falling back to its
+ * id when the fingerprint is blank. Matches the id used for drawer routing and
+ * local pin storage so a chat resolves the same from list and conversation.
+ */
+fun Chat.chatKey(): String = fingerprint.ifEmpty { id }
+
 data class ChatMember(
     val id: String = "",
     val name: String = ""

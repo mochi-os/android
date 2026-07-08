@@ -39,12 +39,15 @@ import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
+import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.outlined.CheckBox
 import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
@@ -78,9 +81,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
@@ -153,12 +158,15 @@ fun ChatScreen(
         }
     }
 
-    val drawerItems = remember(listUiState.chats) {
+    val pinnedChats by listViewModel.pinned.collectAsState()
+    val drawerItems = remember(listUiState.chats, pinnedChats) {
         listViewModel.filteredChats().map { chat ->
+            val key = chat.fingerprint.ifEmpty { chat.id }
             FeatureDrawerItem(
-                id = chat.fingerprint.ifEmpty { chat.id },
+                id = key,
                 title = chat.name,
                 icon = Icons.Default.ChatBubbleOutline,
+                trailingIcon = if (key in pinnedChats) Icons.Outlined.PushPin else null,
             )
         }
     }
@@ -262,6 +270,8 @@ private fun ChatContent(
     // Messages awaiting delete confirmation (single from the menu, or the whole
     // selection); null when no confirm dialog is open.
     var pendingDelete by remember { mutableStateOf<List<String>?>(null) }
+    // Whether the top-bar overflow (three-dot) menu is expanded.
+    var menuExpanded by remember { mutableStateOf(false) }
     val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
 
     LaunchedEffect(Unit) {
@@ -342,6 +352,51 @@ private fun ChatContent(
                             Icon(
                                 Icons.Default.Settings,
                                 contentDescription = stringResource(R.string.chat_settings_title)
+                            )
+                        }
+                        IconButton(onClick = { menuExpanded = true }) {
+                            Icon(
+                                Icons.Default.MoreVert,
+                                contentDescription = stringResource(MochiR.string.common_more_options)
+                            )
+                        }
+                        DropdownMenu(
+                            expanded = menuExpanded,
+                            onDismissRequest = { menuExpanded = false }
+                        ) {
+                            DropdownMenuItem(
+                                text = {
+                                    Text(
+                                        stringResource(
+                                            if (uiState.isPinned) R.string.chat_unpin
+                                            else R.string.chat_pin
+                                        )
+                                    )
+                                },
+                                leadingIcon = {
+                                    Icon(
+                                        imageVector = if (uiState.isPinned) {
+                                            ImageVector.vectorResource(R.drawable.ic_push_pin_off)
+                                        } else {
+                                            Icons.Outlined.PushPin
+                                        },
+                                        contentDescription = null,
+                                    )
+                                },
+                                onClick = {
+                                    menuExpanded = false
+                                    viewModel.togglePin()
+                                }
+                            )
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.chat_mark_read)) },
+                                leadingIcon = {
+                                    Icon(Icons.Default.DoneAll, contentDescription = null)
+                                },
+                                onClick = {
+                                    menuExpanded = false
+                                    viewModel.markReadNow()
+                                }
                             )
                         }
                     }

@@ -59,6 +59,7 @@ data class FeatureDrawerItem(
     val subtitle: String? = null,
     val unread: Int = 0,
     val icon: ImageVector? = null,
+    val trailingIcon: ImageVector? = null,
 )
 
 /**
@@ -251,6 +252,15 @@ private fun DrawerItemRow(
                     overflow = TextOverflow.Ellipsis,
                 )
             }
+        }
+        if (item.trailingIcon != null) {
+            Spacer(modifier = Modifier.size(8.dp))
+            Icon(
+                imageVector = item.trailingIcon,
+                contentDescription = null,
+                modifier = Modifier.size(16.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
         if (item.unread > 0) {
             Spacer(modifier = Modifier.size(8.dp))

@@ -15,7 +15,9 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.Chat
+import org.mochios.chat.model.chatKey
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -31,10 +33,14 @@ data class ChatListUiState(
 @HiltViewModel
 class ChatListViewModel @Inject constructor(
     private val repository: ChatRepository,
+    private val pinnedStore: PinnedChatsStore,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ChatListUiState())
     val uiState: StateFlow<ChatListUiState> = _uiState.asStateFlow()
+
+    /** Locally pinned chat keys, for pinning to the top of the drawer list. */
+    val pinned: StateFlow<Set<String>> = pinnedStore.pinned
 
     init {
         load()
@@ -79,12 +85,19 @@ class ChatListViewModel @Inject constructor(
     fun filteredChats(): List<Chat> {
         val query = _uiState.value.searchQuery.lowercase().trim()
         val base = _uiState.value.chats
-        val filtered = if (query.isEmpty()) base else base.filter { it.name.lowercase().contains(query) }
-        // Most recent activity first; chats with no activity yet (updated=0)
-        // sink to the bottom in name order so they remain reachable but don't
-        // outrank chats with real messages.
+        val filtered = if (query.isEmpty()) {
+            base
+        } else {
+            base.filter { chat -> chat.name.lowercase().contains(query) }
+        }
+        val pinnedKeys = pinnedStore.pinned.value
+        // Pinned chats first, then most recent activity; chats with no activity
+        // yet (updated=0) sink to the bottom in name order so they remain
+        // reachable but don't outrank chats with real messages.
         return filtered.sortedWith(
-            compareByDescending<Chat> { it.updated }.thenBy(NaturalCompare) { it.name }
+            compareByDescending<Chat> { chat -> chat.chatKey() in pinnedKeys }
+                .thenByDescending { chat -> chat.updated }
+                .thenBy(NaturalCompare) { chat -> chat.name }
         )
     }
 
