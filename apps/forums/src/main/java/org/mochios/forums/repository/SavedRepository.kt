@@ -115,6 +115,7 @@ class SavedRepository @Inject constructor(
         created = post.created,
         up = post.up,
         down = post.down,
+        tags = post.tags,
         attachments = post.attachments,
     )
 }

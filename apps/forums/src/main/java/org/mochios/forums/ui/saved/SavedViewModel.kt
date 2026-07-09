@@ -50,4 +50,16 @@ class SavedViewModel @Inject constructor(
             }
         }
     }
+
+    /** Remove a single post from the saved list. Mirrors the bookmark toggle on
+     *  post cards via the shared [SavedRepository]. */
+    fun remove(id: String) {
+        viewModelScope.launch {
+            try {
+                savedRepository.remove(id)
+            } catch (_: Exception) {
+                _clearFailed.tryEmit(Unit)
+            }
+        }
+    }
 }

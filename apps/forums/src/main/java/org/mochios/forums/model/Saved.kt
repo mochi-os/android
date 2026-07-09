@@ -28,6 +28,7 @@ data class SavedSnapshot(
     val created: Long = 0,
     val up: Int = 0,
     val down: Int = 0,
+    val tags: List<Tag> = emptyList(),
     val attachments: List<Attachment> = emptyList(),
 )
 

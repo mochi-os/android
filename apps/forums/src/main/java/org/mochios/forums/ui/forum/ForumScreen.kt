@@ -148,6 +148,14 @@ fun ForumScreen(
         },
         actions = {
             DrawerActionRow(
+                title = stringResource(R.string.forums_saved_title),
+                icon = Icons.Default.BookmarkBorder,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    onNavigateToSaved()
+                },
+            )
+            DrawerActionRow(
                 title = stringResource(R.string.forums_list_find),
                 icon = Icons.Default.Search,
                 onClick = {
@@ -183,7 +191,6 @@ fun ForumScreen(
                 onPostClick = onPostClick,
                 onNewPost = onNewPost,
                 onSettings = onSettings,
-                onNavigateToSaved = onNavigateToSaved,
                 onOpenNotifications = onOpenNotifications,
             )
         }
@@ -228,7 +235,6 @@ private fun ForumContent(
     onPostClick: (String, String) -> Unit,
     onNewPost: (String) -> Unit,
     onSettings: (String) -> Unit,
-    onNavigateToSaved: () -> Unit,
     onOpenNotifications: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
 ) {
@@ -258,12 +264,6 @@ private fun ForumContent(
                 },
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
-                    IconButton(onClick = onNavigateToSaved) {
-                        Icon(
-                            Icons.Default.Bookmark,
-                            contentDescription = stringResource(R.string.forums_saved_title)
-                        )
-                    }
                     Box {
                         IconButton(onClick = { showSortMenu = true }) {
                             Icon(Icons.Default.Sort, contentDescription = stringResource(R.string.forums_sort_label))

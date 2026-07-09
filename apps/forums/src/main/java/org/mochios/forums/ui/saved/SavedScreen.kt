@@ -10,18 +10,24 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -37,6 +43,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -112,6 +119,7 @@ fun SavedScreen(
                     SavedPostCard(
                         item = item,
                         onClick = { onOpenPost(item.post.forum, item.post.id) },
+                        onUnsave = { viewModel.remove(item.post.id) },
                     )
                 }
             }
@@ -144,9 +152,10 @@ fun SavedScreen(
 private fun SavedPostCard(
     item: SavedItem,
     onClick: () -> Unit,
+    onUnsave: () -> Unit,
 ) {
     val post = item.post
-    Card(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
+    OutlinedCard(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
         Column(modifier = Modifier.padding(12.dp)) {
             if (post.forumName.isNotBlank()) {
                 Text(
@@ -182,6 +191,38 @@ private fun SavedPostCard(
                     modifier = Modifier.padding(top = 6.dp),
                     maxLines = 4,
                 )
+            }
+
+            // Tag count and a bookmark to remove from saved.
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(top = 8.dp),
+            ) {
+                val hasTags = post.tags.isNotEmpty()
+                val tagColor = MaterialTheme.colorScheme.onSurfaceVariant
+                Icon(
+                    if (hasTags) Icons.Filled.LocalOffer else Icons.Outlined.LocalOffer,
+                    contentDescription = stringResource(R.string.forums_post_tag_label),
+                    tint = tagColor,
+                    modifier = Modifier.size(18.dp),
+                )
+                if (hasTags) {
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text(
+                        text = "${post.tags.size}",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = tagColor,
+                    )
+                }
+                Spacer(modifier = Modifier.width(12.dp))
+                // Unsave is implemented here in the Saved list screen (SavedScreen).
+                IconButton(onClick = onUnsave, modifier = Modifier.size(28.dp)) {
+                    Icon(
+                        Icons.Filled.Bookmark,
+                        contentDescription = stringResource(R.string.forums_saved_remove),
+                        modifier = Modifier.size(18.dp),
+                    )
+                }
             }
         }
     }
