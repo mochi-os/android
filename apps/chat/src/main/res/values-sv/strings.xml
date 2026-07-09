@@ -12,7 +12,6 @@
     <string name="chat_new_title">Ny chatt</string>
     <string name="chat_new_name">Gruppnamn</string>
     <string name="chat_new_friends">Vänner</string>
-    <string name="chat_new_search_placeholder">Sök vänner</string>
     <string name="chat_message_placeholder">Meddelande</string>
     <string name="chat_attachment_add">Bifoga filer</string>
     <string name="chat_message_attach">Bifoga filer</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Inga matchande chattar</string>
     <string name="chat_list_empty">Inga chattar ännu</string>
     <string name="chat_list_left_chat">Lämnade</string>
-    <string name="chat_new_no_friends">Inga vänner att chatta med ännu</string>
-    <string name="chat_new_no_matches">Inga matchande vänner</string>
     <string name="chat_new_existing_chat">Öppna befintlig chatt</string>
     <string name="chat_new_start">Starta chatt</string>
     <string name="chat_new_start_group">Starta gruppchatt</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Välj en chatt eller vän att vidarebefordra de valda meddelandena till</string>
     <string name="chat_forward_chats">Chattar</string>
     <string name="chat_forward_friends">Vänner</string>
+    <string name="chat_policy_title">Inkommande chattar</string>
+    <string name="chat_policy_friends">Endast vänner</string>
+    <string name="chat_policy_friends_description">Endast vänner kan starta en chatt med dig (standard).</string>
+    <string name="chat_policy_anyone">Vem som helst</string>
+    <string name="chat_policy_anyone_description">Vem som helst kan starta en chatt med dig.</string>
+    <string name="chat_new_search_placeholder">Sök efter personer</string>
+    <string name="chat_new_no_matches">Inga matchande personer</string>
+    <string name="chat_new_no_friends">Sök efter personer att chatta med</string>
 </resources>

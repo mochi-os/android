@@ -32,6 +32,7 @@ import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
@@ -84,6 +85,11 @@ fun ChatListScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     var showOverflow by remember { mutableStateOf(false) }
+    var showChatPolicy by remember { mutableStateOf(false) }
+
+    if (showChatPolicy) {
+        org.mochios.chat.ui.policy.ChatPolicyDialog(onDismiss = { showChatPolicy = false })
+    }
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -119,6 +125,14 @@ fun ChatListScreen(
                             expanded = showOverflow,
                             onDismissRequest = { showOverflow = false }
                         ) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.chat_policy_title)) },
+                                onClick = {
+                                    showOverflow = false
+                                    showChatPolicy = true
+                                },
+                                leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
+                            )
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.chat_list_logout)) },
                                 onClick = {

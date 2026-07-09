@@ -12,7 +12,6 @@
     <string name="chat_new_title">Naujas pokalbis</string>
     <string name="chat_new_name">Grupės pavadinimas</string>
     <string name="chat_new_friends">Draugai</string>
-    <string name="chat_new_search_placeholder">Ieškoti draugų</string>
     <string name="chat_message_placeholder">Pranešimas</string>
     <string name="chat_attachment_add">Pridėti failus</string>
     <string name="chat_message_attach">Pridėti failus</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Nėra atitinkančių pokalbių</string>
     <string name="chat_list_empty">Pokalbių dar nėra</string>
     <string name="chat_list_left_chat">Išėjo</string>
-    <string name="chat_new_no_friends">Dar nėra draugų, su kuriais galėtumėte kalbėtis</string>
-    <string name="chat_new_no_matches">Nėra atitinkančių draugų</string>
     <string name="chat_new_existing_chat">Atidaryti esamą pokalbį</string>
     <string name="chat_new_start">Pradėti pokalbį</string>
     <string name="chat_new_start_group">Pradėti grupinį pokalbį</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Pasirinkite pokalbį arba draugą, kuriam persiųsti pasirinktas žinutes</string>
     <string name="chat_forward_chats">Pokalbiai</string>
     <string name="chat_forward_friends">Draugai</string>
+    <string name="chat_policy_title">Gaunami pokalbiai</string>
+    <string name="chat_policy_friends">Tik draugai</string>
+    <string name="chat_policy_friends_description">Pokalbį su jumis gali pradėti tik draugai (numatytoji).</string>
+    <string name="chat_policy_anyone">Bet kas</string>
+    <string name="chat_policy_anyone_description">Bet kas gali pradėti pokalbį su jumis.</string>
+    <string name="chat_new_search_placeholder">Ieškoti žmonių</string>
+    <string name="chat_new_no_matches">Nėra atitinkančių žmonių</string>
+    <string name="chat_new_no_friends">Ieškokite žmonių pokalbiui</string>
 </resources>

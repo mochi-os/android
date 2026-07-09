@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nouvo chat</string>
     <string name="chat_new_name">Non gwoup</string>
     <string name="chat_new_friends">Zanmi</string>
-    <string name="chat_new_search_placeholder">Chèche zanmi</string>
     <string name="chat_message_placeholder">Mesaj</string>
     <string name="chat_attachment_add">Tache fichye</string>
     <string name="chat_message_attach">Tache fichye</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Poko gen chat</string>
     <string name="chat_list_add_to_home">Ajoute sou ekran akèy la</string>
     <string name="chat_list_left_chat">Kite</string>
-    <string name="chat_new_no_friends">Poko gen zanmi pou pale ak yo</string>
-    <string name="chat_new_no_matches">Pa gen zanmi ki koresponn</string>
     <string name="chat_new_existing_chat">Ouvri chat ki egziste</string>
     <string name="chat_new_start">Kòmanse chat</string>
     <string name="chat_new_start_group">Kòmanse chat gwoup</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Chwazi yon chat oswa yon zanmi pou voye mesaj ou chwazi yo bay</string>
     <string name="chat_forward_chats">Chat yo</string>
     <string name="chat_forward_friends">Zanmi</string>
+    <string name="chat_policy_title">Chat k ap antre</string>
+    <string name="chat_policy_friends">Zanmi sèlman</string>
+    <string name="chat_policy_friends_description">Se zanmi sèlman ki ka kòmanse yon chat avèk ou (default).</string>
+    <string name="chat_policy_anyone">Nenpòt moun</string>
+    <string name="chat_policy_anyone_description">Nenpòt moun ka kòmanse yon chat avèk ou.</string>
+    <string name="chat_new_search_placeholder">Chèche moun</string>
+    <string name="chat_new_no_matches">Pa gen moun ki koresponn</string>
+    <string name="chat_new_no_friends">Chèche moun pou pale ak yo</string>
 </resources>

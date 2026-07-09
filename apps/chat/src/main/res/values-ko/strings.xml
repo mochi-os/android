@@ -12,7 +12,6 @@
     <string name="chat_new_title">새 채팅</string>
     <string name="chat_new_name">그룹 이름</string>
     <string name="chat_new_friends">친구</string>
-    <string name="chat_new_search_placeholder">친구 검색</string>
     <string name="chat_message_placeholder">메시지</string>
     <string name="chat_attachment_add">파일 첨부</string>
     <string name="chat_message_attach">파일 첨부</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">일치하는 채팅이 없습니다</string>
     <string name="chat_list_empty">아직 채팅이 없습니다</string>
     <string name="chat_list_left_chat">나감</string>
-    <string name="chat_new_no_friends">아직 채팅할 친구가 없습니다</string>
-    <string name="chat_new_no_matches">일치하는 친구가 없습니다</string>
     <string name="chat_new_existing_chat">기존 채팅 열기</string>
     <string name="chat_new_start">채팅 시작</string>
     <string name="chat_new_start_group">그룹 채팅 시작</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">선택한 메시지를 전달할 채팅이나 친구를 선택하세요</string>
     <string name="chat_forward_chats">채팅</string>
     <string name="chat_forward_friends">친구</string>
+    <string name="chat_policy_title">수신 채팅</string>
+    <string name="chat_policy_friends">친구만</string>
+    <string name="chat_policy_friends_description">친구만 회원님과 채팅을 시작할 수 있어요 (기본값).</string>
+    <string name="chat_policy_anyone">누구나</string>
+    <string name="chat_policy_anyone_description">누구나 회원님과 채팅을 시작할 수 있어요.</string>
+    <string name="chat_new_search_placeholder">사람 검색</string>
+    <string name="chat_new_no_matches">일치하는 사람 없음</string>
+    <string name="chat_new_no_friends">채팅할 사람 검색</string>
 </resources>

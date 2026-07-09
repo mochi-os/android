@@ -12,7 +12,6 @@
     <string name="chat_new_title">แชตใหม่</string>
     <string name="chat_new_name">ชื่อกลุ่ม</string>
     <string name="chat_new_friends">เพื่อน</string>
-    <string name="chat_new_search_placeholder">ค้นหาเพื่อน</string>
     <string name="chat_message_placeholder">ข้อความ</string>
     <string name="chat_attachment_add">แนบไฟล์</string>
     <string name="chat_message_attach">แนบไฟล์</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">ไม่พบแชทที่ตรงกัน</string>
     <string name="chat_list_empty">ยังไม่มีแชท</string>
     <string name="chat_list_left_chat">ออกแล้ว</string>
-    <string name="chat_new_no_friends">ยังไม่มีเพื่อนให้แชทด้วย</string>
-    <string name="chat_new_no_matches">ไม่พบเพื่อนที่ตรงกัน</string>
     <string name="chat_new_existing_chat">เปิดแชทที่มีอยู่</string>
     <string name="chat_new_start">เริ่มแชท</string>
     <string name="chat_new_start_group">เริ่มแชทกลุ่ม</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">เลือกแชทหรือเพื่อนเพื่อส่งต่อข้อความที่เลือก</string>
     <string name="chat_forward_chats">แชท</string>
     <string name="chat_forward_friends">เพื่อน</string>
+    <string name="chat_policy_title">แชทขาเข้า</string>
+    <string name="chat_policy_friends">เฉพาะเพื่อน</string>
+    <string name="chat_policy_friends_description">เฉพาะเพื่อนเท่านั้นที่สามารถเริ่มแชทกับคุณได้ (ค่าเริ่มต้น)</string>
+    <string name="chat_policy_anyone">ใครก็ได้</string>
+    <string name="chat_policy_anyone_description">ใครก็สามารถเริ่มแชทกับคุณได้</string>
+    <string name="chat_new_search_placeholder">ค้นหาผู้คน</string>
+    <string name="chat_new_no_matches">ไม่มีผู้คนที่ตรงกัน</string>
+    <string name="chat_new_no_friends">ค้นหาผู้คนเพื่อแชทด้วย</string>
 </resources>

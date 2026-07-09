@@ -12,7 +12,6 @@
     <string name="chat_new_title">צ\'אט חדש</string>
     <string name="chat_new_name">שם הקבוצה</string>
     <string name="chat_new_friends">חברים</string>
-    <string name="chat_new_search_placeholder">חפש חברים</string>
     <string name="chat_message_placeholder">הודעה</string>
     <string name="chat_attachment_add">צרף קבצים</string>
     <string name="chat_message_attach">צרף קבצים</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">אין צ\'אטים עדיין</string>
     <string name="chat_list_add_to_home">הוספה למסך הבית</string>
     <string name="chat_list_left_chat">עזבתם</string>
-    <string name="chat_new_no_friends">אין עדיין חברים להתכתב איתם</string>
-    <string name="chat_new_no_matches">אין חברים תואמים</string>
     <string name="chat_new_existing_chat">פתיחת צ\'אט קיים</string>
     <string name="chat_new_start">התחלת צ\'אט</string>
     <string name="chat_new_start_group">התחלת צ\'אט קבוצתי</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">בחר צ\'אט או חבר להעברת ההודעות שנבחרו</string>
     <string name="chat_forward_chats">צ\'אטים</string>
     <string name="chat_forward_friends">חברים</string>
+    <string name="chat_policy_title">צ\'אטים נכנסים</string>
+    <string name="chat_policy_friends">חברים בלבד</string>
+    <string name="chat_policy_friends_description">רק חברים יכולים להתחיל צ\'אט איתך (ברירת מחדל).</string>
+    <string name="chat_policy_anyone">כל אחד</string>
+    <string name="chat_policy_anyone_description">כל אחד יכול להתחיל צ\'אט איתך.</string>
+    <string name="chat_new_search_placeholder">חיפוש אנשים</string>
+    <string name="chat_new_no_matches">אין אנשים תואמים</string>
+    <string name="chat_new_no_friends">חפש אנשים לשוחח איתם</string>
 </resources>

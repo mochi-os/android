@@ -12,7 +12,6 @@
     <string name="chat_new_title">Ñe\'ẽ pyahu</string>
     <string name="chat_new_name">Atypy téra</string>
     <string name="chat_new_friends">Iru</string>
-    <string name="chat_new_search_placeholder">Eheka angirũkuéra</string>
     <string name="chat_message_placeholder">Mensaje</string>
     <string name="chat_attachment_add">Embojuaju archivokuéra</string>
     <string name="chat_message_attach">Embojuaju archivokuéra</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Ndaipóri gueteri ñomongeta</string>
     <string name="chat_list_add_to_home">Embojuaju óga rovetãme</string>
     <string name="chat_list_left_chat">Osẽmava</string>
-    <string name="chat_new_no_friends">Ndereguerekói gueteri angirũ reñomongeta hagua</string>
-    <string name="chat_new_no_matches">Ndaipóri angirũ ojokupytýva</string>
     <string name="chat_new_existing_chat">Embojuruja ñomongeta oĩmava</string>
     <string name="chat_new_start">Eñepyrũ ñomongeta</string>
     <string name="chat_new_start_group">Eñepyrũ ñomongeta aty</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Eiporavo peteĩ ñomongeta térã angirũ remondoségui umi marandu eiporavóva</string>
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Iru</string>
+    <string name="chat_policy_title">Ñomongeta oikéva</string>
+    <string name="chat_policy_friends">Angirũnte</string>
+    <string name="chat_policy_friends_description">Angirũnte ikatu oñepyrũ ñomongeta nendive (tenondegua).</string>
+    <string name="chat_policy_anyone">Oimeraẽva</string>
+    <string name="chat_policy_anyone_description">Oimeraẽva ikatu oñepyrũ peteĩ ñomongeta nendive.</string>
+    <string name="chat_new_search_placeholder">Eheka tapicha</string>
+    <string name="chat_new_no_matches">Ndaipóri tapicha ojoguáva</string>
+    <string name="chat_new_no_friends">Eheka tapicha reñomongeta hag̃ua</string>
 </resources>

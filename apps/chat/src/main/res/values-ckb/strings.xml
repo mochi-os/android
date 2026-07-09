@@ -12,7 +12,6 @@
     <string name="chat_new_title">گفتوگۆی نوێ</string>
     <string name="chat_new_name">ناوی گرووپ</string>
     <string name="chat_new_friends">هاوڕێکان</string>
-    <string name="chat_new_search_placeholder">گەڕانی هاوڕێیان</string>
     <string name="chat_message_placeholder">پەیام</string>
     <string name="chat_attachment_add">هاوپێچکردنی پەڕگە</string>
     <string name="chat_message_attach">هاوپێچکردنی پەڕگە</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">هێشتا هیچ گفتوگۆیەک نییە</string>
     <string name="chat_list_add_to_home">زیادکردن بۆ شاشەی سەرەکی</string>
     <string name="chat_list_left_chat">بەجێهێڵرا</string>
-    <string name="chat_new_no_friends">هێشتا هیچ هاوڕێیەک نییە بۆ گفتوگۆکردن</string>
-    <string name="chat_new_no_matches">هیچ هاوڕێیەکی هاوتا نییە</string>
     <string name="chat_new_existing_chat">کردنەوەی گفتوگۆی هەبوو</string>
     <string name="chat_new_start">دەستپێکردنی گفتوگۆ</string>
     <string name="chat_new_start_group">دەستپێکردنی گفتوگۆی گرووپی</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">گفتوگۆیەک یان هاوڕێیەک هەڵبژێرە بۆ ئاراستەکردنی پەیامە هەڵبژێردراوەکان</string>
     <string name="chat_forward_chats">گفتوگۆکان</string>
     <string name="chat_forward_friends">هاوڕێکان</string>
+    <string name="chat_policy_title">چاتە هاتووەکان</string>
+    <string name="chat_policy_friends">تەنها هاوڕێیان</string>
+    <string name="chat_policy_friends_description">تەنها هاوڕێیان دەتوانن چاتت لەگەڵ دەست پێبکەن (بنەڕەت).</string>
+    <string name="chat_policy_anyone">هەر کەسێک</string>
+    <string name="chat_policy_anyone_description">هەر کەسێک دەتوانێت چاتێک لەگەڵت دەست پێبکات.</string>
+    <string name="chat_new_search_placeholder">گەڕان بۆ کەسان</string>
+    <string name="chat_new_no_matches">هیچ کەسێکی هاوتا نییە</string>
+    <string name="chat_new_no_friends">بۆ چات کردن بەدوای کەساندا بگەڕێ</string>
 </resources>

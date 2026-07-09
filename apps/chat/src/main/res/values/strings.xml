@@ -31,9 +31,9 @@
     <string name="chat_new_title">New chat</string>
     <string name="chat_new_name">Group name</string>
     <string name="chat_new_friends">Friends</string>
-    <string name="chat_new_no_friends">No friends to chat with yet</string>
-    <string name="chat_new_search_placeholder">Search friends</string>
-    <string name="chat_new_no_matches">No matching friends</string>
+    <string name="chat_new_no_friends">Search for people to chat with</string>
+    <string name="chat_new_search_placeholder">Search people</string>
+    <string name="chat_new_no_matches">No matching people</string>
     <string name="chat_new_existing_chat">Open existing chat</string>
     <string name="chat_new_start">Start chat</string>
     <string name="chat_new_start_group">Start group chat</string>
@@ -103,6 +103,12 @@
     <string name="chat_members_empty">No members</string>
     <string name="chat_members_you">You</string>
     <string name="chat_chat_not_found">Chat not found</string>
+    <!-- Incoming chat policy (whom may start a chat with you) -->
+    <string name="chat_policy_title">Incoming chats</string>
+    <string name="chat_policy_friends">Friends only</string>
+    <string name="chat_policy_friends_description">Only friends can start a chat with you (default).</string>
+    <string name="chat_policy_anyone">Anyone</string>
+    <string name="chat_policy_anyone_description">Anyone can start a chat with you.</string>
 
     <!-- Search navigation -->
     <string name="chat_search_prev">Previous match</string>

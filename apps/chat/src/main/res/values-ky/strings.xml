@@ -12,7 +12,6 @@
     <string name="chat_new_title">Жаңы чат</string>
     <string name="chat_new_name">Топ аты</string>
     <string name="chat_new_friends">Достор</string>
-    <string name="chat_new_search_placeholder">Досторду издөө</string>
     <string name="chat_message_placeholder">Билдирүү</string>
     <string name="chat_attachment_add">Файлдарды тиркөө</string>
     <string name="chat_message_attach">Файлдарды тиркөө</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Дал келген чаттар жок</string>
     <string name="chat_list_empty">Азырынча чаттар жок</string>
     <string name="chat_list_left_chat">Чыгып кетти</string>
-    <string name="chat_new_no_friends">Чатташа турган достор азырынча жок</string>
-    <string name="chat_new_no_matches">Дал келген достор жок</string>
     <string name="chat_new_existing_chat">Учурдагы чатты ачуу</string>
     <string name="chat_new_start">Чатты баштоо</string>
     <string name="chat_new_start_group">Топтук чатты баштоо</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Тандалган билдирүүлөрдү багыттоо үчүн маек же дос тандаңыз</string>
     <string name="chat_forward_chats">Чаттар</string>
     <string name="chat_forward_friends">Достор</string>
+    <string name="chat_policy_title">Кирүүчү чаттар</string>
+    <string name="chat_policy_friends">Досторго гана</string>
+    <string name="chat_policy_friends_description">Сиз менен чатты досторуңуз гана баштай алат (демейки).</string>
+    <string name="chat_policy_anyone">Каалаган адам</string>
+    <string name="chat_policy_anyone_description">Каалаган адам сиз менен маек баштай алат.</string>
+    <string name="chat_new_search_placeholder">Адамдарды издөө</string>
+    <string name="chat_new_no_matches">Дал келген адамдар жок</string>
+    <string name="chat_new_no_friends">Маектешүү үчүн адамдарды издеңиз</string>
 </resources>

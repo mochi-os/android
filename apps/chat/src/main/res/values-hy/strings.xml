@@ -12,7 +12,6 @@
     <string name="chat_new_title">Նոր զրույց</string>
     <string name="chat_new_name">Խմբի անուն</string>
     <string name="chat_new_friends">Ընկերներ</string>
-    <string name="chat_new_search_placeholder">Որոնել ընկերներին</string>
     <string name="chat_message_placeholder">Հաղորդագրեք ձեր ընկերներին, անհատապես կամ խմբերով, peer-to-peer և կոդավորված։</string>
     <string name="chat_attachment_add">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_message_attach">Կցել պատասխանի ֆայլեր</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Դեռ զրույցներ չկան</string>
     <string name="chat_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
     <string name="chat_list_left_chat">Լքված է</string>
-    <string name="chat_new_no_friends">Դեռ չկան ընկերներ, որոնց հետ զրուցել</string>
-    <string name="chat_new_no_matches">Համապատասխան ընկերներ չկան</string>
     <string name="chat_new_existing_chat">Բացել առկա զրույցը</string>
     <string name="chat_new_start">Սկսել զրույց</string>
     <string name="chat_new_start_group">Սկսել խմբային զրույց</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Ընտրեք զրույց կամ ընկեր՝ ընտրված հաղորդագրությունները փոխանցելու համար</string>
     <string name="chat_forward_chats">Զրույցները ընկերների միջև են։ Նախ ավելացրեք ընկեր People հավելվածում։</string>
     <string name="chat_forward_friends">Ընկերներ</string>
+    <string name="chat_policy_title">Մուտքային զրույցներ</string>
+    <string name="chat_policy_friends">Միայն ընկերներ</string>
+    <string name="chat_policy_friends_description">Միայն ընկերները կարող են ձեզ հետ զրույց սկսել (կանխադրված)։</string>
+    <string name="chat_policy_anyone">Ցանկացած ոք</string>
+    <string name="chat_policy_anyone_description">Ցանկացած ոք կարող է ձեզ հետ զրույց սկսել։</string>
+    <string name="chat_new_search_placeholder">Փնտրել մարդկանց</string>
+    <string name="chat_new_no_matches">Համընկնող մարդիկ չկան</string>
+    <string name="chat_new_no_friends">Փնտրեք մարդկանց՝ զրուցելու համար</string>
 </resources>

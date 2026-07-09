@@ -12,7 +12,6 @@
     <string name="chat_new_title">Новий чат</string>
     <string name="chat_new_name">Назва групи</string>
     <string name="chat_new_friends">Друзі</string>
-    <string name="chat_new_search_placeholder">Пошук друзів</string>
     <string name="chat_message_placeholder">Повідомлення</string>
     <string name="chat_attachment_add">Додати файли</string>
     <string name="chat_message_attach">Додати файли</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Немає відповідних чатів</string>
     <string name="chat_list_empty">Чатів ще немає</string>
     <string name="chat_list_left_chat">Вийшли</string>
-    <string name="chat_new_no_friends">Поки немає друзів для чату</string>
-    <string name="chat_new_no_matches">Немає відповідних друзів</string>
     <string name="chat_new_existing_chat">Відкрити наявний чат</string>
     <string name="chat_new_start">Почати чат</string>
     <string name="chat_new_start_group">Почати груповий чат</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Виберіть чат або друга, щоб переслати вибрані повідомлення</string>
     <string name="chat_forward_chats">Чати</string>
     <string name="chat_forward_friends">Друзі</string>
+    <string name="chat_policy_title">Вхідні чати</string>
+    <string name="chat_policy_friends">Лише друзі</string>
+    <string name="chat_policy_friends_description">Почати чат з вами можуть лише друзі (за замовчуванням).</string>
+    <string name="chat_policy_anyone">Будь-хто</string>
+    <string name="chat_policy_anyone_description">Будь-хто може почати чат з вами.</string>
+    <string name="chat_new_search_placeholder">Пошук людей</string>
+    <string name="chat_new_no_matches">Немає відповідних людей</string>
+    <string name="chat_new_no_friends">Знайдіть людей для спілкування</string>
 </resources>

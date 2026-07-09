@@ -12,7 +12,6 @@
     <string name="chat_new_title">Uus vestlus</string>
     <string name="chat_new_name">Grupi nimi</string>
     <string name="chat_new_friends">Sõbrad</string>
-    <string name="chat_new_search_placeholder">Otsi sõpru</string>
     <string name="chat_message_placeholder">Sõnum</string>
     <string name="chat_attachment_add">Lisa failid</string>
     <string name="chat_message_attach">Lisa failid</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Vestlusi veel pole</string>
     <string name="chat_list_add_to_home">Lisa avakuvale</string>
     <string name="chat_list_left_chat">Lahkutud</string>
-    <string name="chat_new_no_friends">Pole veel sõpru, kellega vestelda</string>
-    <string name="chat_new_no_matches">Sobivaid sõpru pole</string>
     <string name="chat_new_existing_chat">Ava olemasolev vestlus</string>
     <string name="chat_new_start">Alusta vestlust</string>
     <string name="chat_new_start_group">Alusta grupivestlust</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Vali vestlus või sõber, kellele valitud sõnumid edasi saata</string>
     <string name="chat_forward_chats">Vestlused</string>
     <string name="chat_forward_friends">Sõbrad</string>
+    <string name="chat_policy_title">Sissetulevad vestlused</string>
+    <string name="chat_policy_friends">Ainult sõbrad</string>
+    <string name="chat_policy_friends_description">Ainult sõbrad saavad sinuga vestlust alustada (vaikimisi).</string>
+    <string name="chat_policy_anyone">Kõik</string>
+    <string name="chat_policy_anyone_description">Igaüks saab sinuga vestlust alustada.</string>
+    <string name="chat_new_search_placeholder">Otsi inimesi</string>
+    <string name="chat_new_no_matches">Sobivaid inimesi pole</string>
+    <string name="chat_new_no_friends">Otsi inimesi, kellega vestelda</string>
 </resources>

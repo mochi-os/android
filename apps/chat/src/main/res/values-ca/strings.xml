@@ -12,7 +12,6 @@
     <string name="chat_new_title">Xat nou</string>
     <string name="chat_new_name">Nom del grup</string>
     <string name="chat_new_friends">Amics</string>
-    <string name="chat_new_search_placeholder">Cerca amics</string>
     <string name="chat_message_placeholder">Missatge</string>
     <string name="chat_attachment_add">Adjunta fitxers</string>
     <string name="chat_message_attach">Adjunta fitxers</string>
@@ -52,8 +51,6 @@
     <string name="chat_list_no_matching">Cap xat coincident</string>
     <string name="chat_list_empty">Encara no hi ha cap xat</string>
     <string name="chat_list_left_chat">Abandonat</string>
-    <string name="chat_new_no_friends">Encara no hi ha amics amb qui xatejar</string>
-    <string name="chat_new_no_matches">Cap amic coincident</string>
     <string name="chat_new_existing_chat">Obre el xat existent</string>
     <string name="chat_new_start">Inicia el xat</string>
     <string name="chat_new_start_group">Inicia un xat de grup</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Tria un xat o amic per reenviar-hi els missatges seleccionats</string>
     <string name="chat_forward_chats">Xats</string>
     <string name="chat_forward_friends">Amics</string>
+    <string name="chat_policy_title">Xats entrants</string>
+    <string name="chat_policy_friends">Només amics</string>
+    <string name="chat_policy_friends_description">Només els amics poden iniciar un xat amb tu (per defecte).</string>
+    <string name="chat_policy_anyone">Qualsevol</string>
+    <string name="chat_policy_anyone_description">Qualsevol pot iniciar un xat amb tu.</string>
+    <string name="chat_new_search_placeholder">Cerca persones</string>
+    <string name="chat_new_no_matches">Cap persona coincident</string>
+    <string name="chat_new_no_friends">Cerca persones per xatejar</string>
 </resources>

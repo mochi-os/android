@@ -39,9 +39,6 @@
     <string name="chat_new_title">新對話</string>
     <string name="chat_new_name">群組名稱</string>
     <string name="chat_new_friends">朋友</string>
-    <string name="chat_new_no_friends">未有朋友可以傾偈</string>
-    <string name="chat_new_search_placeholder">搜尋朋友</string>
-    <string name="chat_new_no_matches">搵唔到相符嘅朋友</string>
     <string name="chat_new_existing_chat">打開現有對話</string>
     <string name="chat_new_start">開始傾偈</string>
     <string name="chat_new_start_group">開始群組對話</string>
@@ -77,4 +74,12 @@
 
     <string name="chat_forward_chats">傾偈</string>
     <string name="chat_forward_friends">朋友</string>
+    <string name="chat_policy_title">收到嘅聊天</string>
+    <string name="chat_policy_friends">只限好友</string>
+    <string name="chat_policy_friends_description">只有好友先可以同你開始傾偈（預設）。</string>
+    <string name="chat_policy_anyone">任何人</string>
+    <string name="chat_policy_anyone_description">任何人都可以同你開始傾偈。</string>
+    <string name="chat_new_search_placeholder">搜尋使用者</string>
+    <string name="chat_new_no_matches">冇相符嘅使用者</string>
+    <string name="chat_new_no_friends">搵人傾偈</string>
 </resources>

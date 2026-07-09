@@ -12,7 +12,6 @@
     <string name="chat_new_title">Шинэ чат</string>
     <string name="chat_new_name">Бүлгийн нэр</string>
     <string name="chat_new_friends">Найзууд</string>
-    <string name="chat_new_search_placeholder">Найзууд хайх</string>
     <string name="chat_message_placeholder">Мессеж</string>
     <string name="chat_attachment_add">Файл хавсаргах</string>
     <string name="chat_message_attach">Файл хавсаргах</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Тохирох чат алга</string>
     <string name="chat_list_empty">Одоогоор чат алга</string>
     <string name="chat_list_left_chat">Гарсан</string>
-    <string name="chat_new_no_friends">Чатлах найз одоогоор алга</string>
-    <string name="chat_new_no_matches">Тохирох найз алга</string>
     <string name="chat_new_existing_chat">Одоо байгаа чатыг нээх</string>
     <string name="chat_new_start">Чат эхлүүлэх</string>
     <string name="chat_new_start_group">Бүлгийн чат эхлүүлэх</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Сонгосон зурвасуудыг дамжуулах чат эсвэл найзаа сонгоно уу</string>
     <string name="chat_forward_chats">Чатууд</string>
     <string name="chat_forward_friends">Найзууд</string>
+    <string name="chat_policy_title">Ирж буй чатууд</string>
+    <string name="chat_policy_friends">Зөвхөн найзууд</string>
+    <string name="chat_policy_friends_description">Зөвхөн найзууд тантай чат эхлүүлж болно (өгөгдмөл).</string>
+    <string name="chat_policy_anyone">Хэн ч</string>
+    <string name="chat_policy_anyone_description">Хэн ч тантай чат эхлүүлж болно.</string>
+    <string name="chat_new_search_placeholder">Хүмүүсийг хайх</string>
+    <string name="chat_new_no_matches">Тохирох хүн алга</string>
+    <string name="chat_new_no_friends">Чатлах хүмүүсийг хайх</string>
 </resources>

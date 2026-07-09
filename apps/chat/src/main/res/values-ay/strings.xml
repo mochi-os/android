@@ -12,7 +12,6 @@
     <string name="chat_new_title">Machaqa parla</string>
     <string name="chat_new_name">Grupo suti</string>
     <string name="chat_new_friends">Masinaka</string>
-    <string name="chat_new_search_placeholder">Amigonak thaqhama</string>
     <string name="chat_message_placeholder">Mensaje</string>
     <string name="chat_attachment_add">Archivonak apkataña</string>
     <string name="chat_message_attach">Archivonak apkataña</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Janïraw kuna chatsa utjkiti</string>
     <string name="chat_list_add_to_home">Qallta pantallar yapxatam</string>
     <string name="chat_list_left_chat">Mistuwayata</string>
-    <string name="chat_new_no_friends">Janïraw kuna masinakamampi chatañ utjkiti</string>
-    <string name="chat_new_no_matches">Janiw masinaka jikxatkiti</string>
     <string name="chat_new_existing_chat">Utjki uka chat jistʼaram</string>
     <string name="chat_new_start">Chat qalltaña</string>
     <string name="chat_new_start_group">Tama chat qalltaña</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Mä aru lakʼa jan ukax mä masi ajllim, ajllita yatiyäwinak apañataki</string>
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Masinaka</string>
+    <string name="chat_policy_title">Puriri chatanaka</string>
+    <string name="chat_policy_friends">Amigonakaki</string>
+    <string name="chat_policy_friends_description">Amigonakaki jumampi chat qalltapxaspa (nayrïri).</string>
+    <string name="chat_policy_anyone">Khitisa</string>
+    <string name="chat_policy_anyone_description">Khitisa jumampi chat qalltaspa.</string>
+    <string name="chat_new_search_placeholder">Jaqinak thaqhaña</string>
+    <string name="chat_new_no_matches">Janiw uñtata jaqinakäkiti</string>
+    <string name="chat_new_no_friends">Chat luraña jaqinak thaqhaña</string>
 </resources>

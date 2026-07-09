@@ -12,7 +12,6 @@
     <string name="chat_new_title">Ny prat</string>
     <string name="chat_new_name">Gruppenamn</string>
     <string name="chat_new_friends">Vener</string>
-    <string name="chat_new_search_placeholder">Søk i vener</string>
     <string name="chat_message_placeholder">Melding</string>
     <string name="chat_attachment_add">Legg ved filer</string>
     <string name="chat_message_attach">Legg ved filer</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Ingen samsvarande chattar</string>
     <string name="chat_list_empty">Ingen chattar enno</string>
     <string name="chat_list_left_chat">Forlate</string>
-    <string name="chat_new_no_friends">Ingen vener å chatte med enno</string>
-    <string name="chat_new_no_matches">Ingen samsvarande vener</string>
     <string name="chat_new_existing_chat">Opne eksisterande chat</string>
     <string name="chat_new_start">Start chat</string>
     <string name="chat_new_start_group">Start gruppechat</string>
@@ -79,4 +76,12 @@
 
     <string name="chat_forward_chats">Prat</string>
     <string name="chat_forward_friends">Vener</string>
+    <string name="chat_policy_title">Innkomande chattar</string>
+    <string name="chat_policy_friends">Berre venner</string>
+    <string name="chat_policy_friends_description">Berre venner kan starte ein chat med deg (standard).</string>
+    <string name="chat_policy_anyone">Alle</string>
+    <string name="chat_policy_anyone_description">Alle kan starte ein chat med deg.</string>
+    <string name="chat_new_search_placeholder">Søk etter personar</string>
+    <string name="chat_new_no_matches">Ingen samsvarande personar</string>
+    <string name="chat_new_no_friends">Søk etter personar å chatte med</string>
 </resources>

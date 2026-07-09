@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nova conversa</string>
     <string name="chat_new_name">Nome do grupo</string>
     <string name="chat_new_friends">Amigos</string>
-    <string name="chat_new_search_placeholder">Pesquisar amigos</string>
     <string name="chat_message_placeholder">Mensagem</string>
     <string name="chat_attachment_add">Anexar arquivos</string>
     <string name="chat_message_attach">Anexar arquivos</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Nenhum chat correspondente</string>
     <string name="chat_list_empty">Ainda não há chats</string>
     <string name="chat_list_left_chat">Saiu</string>
-    <string name="chat_new_no_friends">Ainda não há amigos para conversar</string>
-    <string name="chat_new_no_matches">Nenhum amigo correspondente</string>
     <string name="chat_new_existing_chat">Abrir chat existente</string>
     <string name="chat_new_start">Iniciar chat</string>
     <string name="chat_new_start_group">Iniciar chat em grupo</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Escolha um chat ou amigo para encaminhar as mensagens selecionadas</string>
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Amigos</string>
+    <string name="chat_policy_title">Conversas recebidas</string>
+    <string name="chat_policy_friends">Apenas amigos</string>
+    <string name="chat_policy_friends_description">Apenas amigos podem iniciar uma conversa com você (padrão).</string>
+    <string name="chat_policy_anyone">Qualquer pessoa</string>
+    <string name="chat_policy_anyone_description">Qualquer pessoa pode iniciar uma conversa com você.</string>
+    <string name="chat_new_search_placeholder">Procurar pessoas</string>
+    <string name="chat_new_no_matches">Nenhuma pessoa correspondente</string>
+    <string name="chat_new_no_friends">Procure pessoas para conversar</string>
 </resources>

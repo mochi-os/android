@@ -12,7 +12,6 @@
     <string name="chat_new_title">Yeni sohbet</string>
     <string name="chat_new_name">Grup adı</string>
     <string name="chat_new_friends">Arkadaşlar</string>
-    <string name="chat_new_search_placeholder">Arkadaşlarda ara</string>
     <string name="chat_message_placeholder">Mesaj</string>
     <string name="chat_attachment_add">Dosya ekle</string>
     <string name="chat_message_attach">Dosya ekle</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Eşleşen sohbet yok</string>
     <string name="chat_list_empty">Henüz sohbet yok</string>
     <string name="chat_list_left_chat">Ayrıldı</string>
-    <string name="chat_new_no_friends">Sohbet edilecek arkadaş yok</string>
-    <string name="chat_new_no_matches">Eşleşen arkadaş yok</string>
     <string name="chat_new_existing_chat">Mevcut sohbeti aç</string>
     <string name="chat_new_start">Sohbet başlat</string>
     <string name="chat_new_start_group">Grup sohbeti başlat</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Seçili mesajları iletmek için bir sohbet veya arkadaş seçin</string>
     <string name="chat_forward_chats">Sohbetler</string>
     <string name="chat_forward_friends">Arkadaşlar</string>
+    <string name="chat_policy_title">Gelen sohbetler</string>
+    <string name="chat_policy_friends">Yalnızca arkadaşlar</string>
+    <string name="chat_policy_friends_description">Sizinle yalnızca arkadaşlar sohbet başlatabilir (varsayılan).</string>
+    <string name="chat_policy_anyone">Herkes</string>
+    <string name="chat_policy_anyone_description">Herkes sizinle sohbet başlatabilir.</string>
+    <string name="chat_new_search_placeholder">Kişileri ara</string>
+    <string name="chat_new_no_matches">Eşleşen kişi yok</string>
+    <string name="chat_new_no_friends">Sohbet edecek kişileri ara</string>
 </resources>

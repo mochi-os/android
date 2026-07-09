@@ -12,7 +12,6 @@
     <string name="chat_new_title">Trò chuyện mới</string>
     <string name="chat_new_name">Tên nhóm</string>
     <string name="chat_new_friends">Bạn bè</string>
-    <string name="chat_new_search_placeholder">Tìm kiếm bạn bè</string>
     <string name="chat_message_placeholder">Tin nhắn</string>
     <string name="chat_attachment_add">Đính kèm tệp</string>
     <string name="chat_message_attach">Đính kèm tệp</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Không có cuộc trò chuyện phù hợp</string>
     <string name="chat_list_empty">Chưa có cuộc trò chuyện nào</string>
     <string name="chat_list_left_chat">Đã rời</string>
-    <string name="chat_new_no_friends">Chưa có bạn bè nào để trò chuyện</string>
-    <string name="chat_new_no_matches">Không có bạn bè phù hợp</string>
     <string name="chat_new_existing_chat">Mở cuộc trò chuyện hiện có</string>
     <string name="chat_new_start">Bắt đầu trò chuyện</string>
     <string name="chat_new_start_group">Bắt đầu trò chuyện nhóm</string>
@@ -90,4 +87,12 @@
     <string name="chat_forward_subtitle">Chọn một cuộc trò chuyện hoặc bạn bè để chuyển tiếp các tin nhắn đã chọn</string>
     <string name="chat_forward_chats">Trò chuyện</string>
     <string name="chat_forward_friends">Bạn bè</string>
+    <string name="chat_policy_title">Chat đến</string>
+    <string name="chat_policy_friends">Chỉ bạn bè</string>
+    <string name="chat_policy_friends_description">Chỉ bạn bè mới có thể bắt đầu chat với bạn (mặc định).</string>
+    <string name="chat_policy_anyone">Bất kỳ ai</string>
+    <string name="chat_policy_anyone_description">Bất kỳ ai cũng có thể bắt đầu chat với bạn.</string>
+    <string name="chat_new_search_placeholder">Tìm người</string>
+    <string name="chat_new_no_matches">Không có người phù hợp</string>
+    <string name="chat_new_no_friends">Tìm người để trò chuyện</string>
 </resources>

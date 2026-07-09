@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nouveau chat</string>
     <string name="chat_new_name">Nom du groupe</string>
     <string name="chat_new_friends">Amis</string>
-    <string name="chat_new_search_placeholder">Rechercher des amis</string>
     <string name="chat_message_placeholder">Message</string>
     <string name="chat_attachment_add">Joindre des fichiers</string>
     <string name="chat_message_attach">Joindre des fichiers</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Aucune conversation pour le moment</string>
     <string name="chat_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="chat_list_left_chat">Quitté</string>
-    <string name="chat_new_no_friends">Aucun ami avec qui discuter pour le moment</string>
-    <string name="chat_new_no_matches">Aucun ami correspondant</string>
     <string name="chat_new_existing_chat">Ouvrir la conversation existante</string>
     <string name="chat_new_start">Démarrer la conversation</string>
     <string name="chat_new_start_group">Démarrer une conversation de groupe</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Choisissez une discussion ou un ami vers qui transférer les messages sélectionnés</string>
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Amis</string>
+    <string name="chat_policy_title">Chats entrants</string>
+    <string name="chat_policy_friends">Amis uniquement</string>
+    <string name="chat_policy_friends_description">Seuls les amis peuvent démarrer un chat avec vous (par défaut).</string>
+    <string name="chat_policy_anyone">N\'importe qui</string>
+    <string name="chat_policy_anyone_description">N\'importe qui peut démarrer un chat avec vous.</string>
+    <string name="chat_new_search_placeholder">Rechercher des personnes</string>
+    <string name="chat_new_no_matches">Aucune personne correspondante</string>
+    <string name="chat_new_no_friends">Recherchez des personnes avec qui discuter</string>
 </resources>

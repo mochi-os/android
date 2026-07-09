@@ -12,7 +12,6 @@
     <string name="chat_new_title">નવી ચેટ</string>
     <string name="chat_new_name">ગ્રુપનું નામ</string>
     <string name="chat_new_friends">મિત્રો</string>
-    <string name="chat_new_search_placeholder">મિત્રો શોધો</string>
     <string name="chat_message_placeholder">સંદેશ</string>
     <string name="chat_attachment_add">ફાઇલો જોડો</string>
     <string name="chat_message_attach">ફાઇલો જોડો</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">હજુ સુધી કોઈ ચેટ નથી</string>
     <string name="chat_list_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
     <string name="chat_list_left_chat">છોડી દીધી</string>
-    <string name="chat_new_no_friends">ચેટ કરવા માટે હજુ સુધી કોઈ મિત્ર નથી</string>
-    <string name="chat_new_no_matches">કોઈ મેળ ખાતા મિત્રો નથી</string>
     <string name="chat_new_existing_chat">હાલની ચેટ ખોલો</string>
     <string name="chat_new_start">ચેટ શરૂ કરો</string>
     <string name="chat_new_start_group">જૂથ ચેટ શરૂ કરો</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">પસંદ કરેલા સંદેશા ફોરવર્ડ કરવા માટે ચેટ અથવા મિત્ર પસંદ કરો</string>
     <string name="chat_forward_chats">ચેટ્સ</string>
     <string name="chat_forward_friends">મિત્રો</string>
+    <string name="chat_policy_title">આવનારી ચેટ્સ</string>
+    <string name="chat_policy_friends">ફક્ત મિત્રો</string>
+    <string name="chat_policy_friends_description">ફક્ત મિત્રો તમારી સાથે ચેટ શરૂ કરી શકે છે (ડિફૉલ્ટ).</string>
+    <string name="chat_policy_anyone">કોઈપણ</string>
+    <string name="chat_policy_anyone_description">કોઈપણ તમારી સાથે ચેટ શરૂ કરી શકે છે.</string>
+    <string name="chat_new_search_placeholder">લોકો શોધો</string>
+    <string name="chat_new_no_matches">કોઈ મેળ ખાતા લોકો નથી</string>
+    <string name="chat_new_no_friends">ચેટ કરવા માટે લોકો શોધો</string>
 </resources>

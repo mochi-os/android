@@ -12,7 +12,6 @@
     <string name="chat_new_title">പുതിയ ചാറ്റ്</string>
     <string name="chat_new_name">ഗ്രൂപ്പ് നാമം</string>
     <string name="chat_new_friends">സുഹൃത്തുക്കൾ</string>
-    <string name="chat_new_search_placeholder">സുഹൃത്തുക്കളെ തിരയുക</string>
     <string name="chat_message_placeholder">സന്ദേശം</string>
     <string name="chat_attachment_add">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="chat_message_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">പൊരുത്തപ്പെടുന്ന ചാറ്റുകൾ ഇല്ല</string>
     <string name="chat_list_empty">ഇതുവരെ ചാറ്റുകൾ ഇല്ല</string>
     <string name="chat_list_left_chat">വിട്ടു</string>
-    <string name="chat_new_no_friends">ചാറ്റ് ചെയ്യാൻ ഇതുവരെ സുഹൃത്തുക്കൾ ഇല്ല</string>
-    <string name="chat_new_no_matches">പൊരുത്തപ്പെടുന്ന സുഹൃത്തുക്കൾ ഇല്ല</string>
     <string name="chat_new_existing_chat">നിലവിലുള്ള ചാറ്റ് തുറക്കുക</string>
     <string name="chat_new_start">ചാറ്റ് ആരംഭിക്കുക</string>
     <string name="chat_new_start_group">ഗ്രൂപ്പ് ചാറ്റ് ആരംഭിക്കുക</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">തിരഞ്ഞെടുത്ത സന്ദേശങ്ങൾ കൈമാറാൻ ഒരു ചാറ്റോ സുഹൃത്തിനെയോ തിരഞ്ഞെടുക്കുക</string>
     <string name="chat_forward_chats">ചാറ്റുകൾ</string>
     <string name="chat_forward_friends">സുഹൃത്തുക്കൾ</string>
+    <string name="chat_policy_title">ഇൻകമിംഗ് ചാറ്റുകൾ</string>
+    <string name="chat_policy_friends">സുഹൃത്തുക്കൾ മാത്രം</string>
+    <string name="chat_policy_friends_description">സുഹൃത്തുക്കൾക്ക് മാത്രമേ നിങ്ങളുമായി ചാറ്റ് ആരംഭിക്കാൻ കഴിയൂ (ഡിഫോൾട്ട്).</string>
+    <string name="chat_policy_anyone">ആർക്കും</string>
+    <string name="chat_policy_anyone_description">ആർക്കും നിങ്ങളുമായി ചാറ്റ് ആരംഭിക്കാം.</string>
+    <string name="chat_new_search_placeholder">ആളുകളെ തിരയുക</string>
+    <string name="chat_new_no_matches">പൊരുത്തപ്പെടുന്ന ആളുകളില്ല</string>
+    <string name="chat_new_no_friends">ചാറ്റ് ചെയ്യാൻ ആളുകളെ തിരയുക</string>
 </resources>

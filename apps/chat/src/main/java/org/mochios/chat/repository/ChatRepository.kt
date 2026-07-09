@@ -19,6 +19,7 @@ import org.mochios.chat.api.ForwardResponse
 import org.mochios.chat.api.MemberAddResponse
 import org.mochios.chat.api.MessageListResponse
 import org.mochios.chat.api.NewChatResponse
+import org.mochios.chat.api.PersonResult
 import org.mochios.chat.api.ReactResponse
 import org.mochios.chat.api.SearchResponse
 import org.mochios.chat.model.Chat
@@ -37,6 +38,16 @@ class ChatRepository @Inject constructor(
 
     suspend fun getNewChatData(): NewChatResponse =
         api.getNewChatData().unwrap()
+
+    suspend fun getChatPolicy(): String =
+        api.getPreferences().unwrap().chatPolicy
+
+    suspend fun setChatPolicy(policy: String) {
+        api.setPreferences(policy).unwrap()
+    }
+
+    suspend fun personSearch(query: String): List<PersonResult> =
+        api.personSearch(query).unwrap().results
 
     suspend fun createChat(name: String, members: List<String> = emptyList()): CreateChatResponse =
         api.createChat(name, members.takeIf { it.isNotEmpty() }?.joinToString(",")).unwrap()

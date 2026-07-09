@@ -12,7 +12,6 @@
     <string name="chat_new_title">نئين چيٽ</string>
     <string name="chat_new_name">گروپ نالو</string>
     <string name="chat_new_friends">دوست</string>
-    <string name="chat_new_search_placeholder">دوست ڳوليو</string>
     <string name="chat_message_placeholder">پيغام</string>
     <string name="chat_attachment_add">فائلون ڳنڍيو</string>
     <string name="chat_message_attach">فائلون ڳنڍيو</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">ڪابه ملندڙ چيٽ ناهي</string>
     <string name="chat_list_empty">اڃا تائين ڪابه چيٽ ناهي</string>
     <string name="chat_list_left_chat">ڇڏي ڏنو</string>
-    <string name="chat_new_no_friends">اڃا تائين چيٽ ڪرڻ لاءِ ڪوبه دوست ناهي</string>
-    <string name="chat_new_no_matches">ڪوبه ملندڙ دوست ناهي</string>
     <string name="chat_new_existing_chat">موجوده چيٽ کوليو</string>
     <string name="chat_new_start">چيٽ شروع ڪريو</string>
     <string name="chat_new_start_group">گروپ چيٽ شروع ڪريو</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">چونڊيل پيغام اڳتي موڪلڻ لاءِ چيٽ يا دوست چونڊيو</string>
     <string name="chat_forward_chats">چيٽ</string>
     <string name="chat_forward_friends">دوست</string>
+    <string name="chat_policy_title">ايندڙ چيٽ</string>
+    <string name="chat_policy_friends">صرف دوست</string>
+    <string name="chat_policy_friends_description">صرف دوست توهان سان چيٽ شروع ڪري سگهن ٿا (ڊفالٽ).</string>
+    <string name="chat_policy_anyone">ڪوبه</string>
+    <string name="chat_policy_anyone_description">ڪوبه توهان سان چيٽ شروع ڪري سگهي ٿو.</string>
+    <string name="chat_new_search_placeholder">ماڻهو ڳوليو</string>
+    <string name="chat_new_no_matches">ڪوبه ملندڙ ماڻهو ناهي</string>
+    <string name="chat_new_no_friends">چيٽ ڪرڻ لاءِ ماڻهو ڳوليو</string>
 </resources>

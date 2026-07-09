@@ -12,7 +12,6 @@
     <string name="chat_new_title">Novi razgovor</string>
     <string name="chat_new_name">Naziv grupe</string>
     <string name="chat_new_friends">Prijatelji</string>
-    <string name="chat_new_search_placeholder">Pretraži prijatelje</string>
     <string name="chat_message_placeholder">Poruka</string>
     <string name="chat_attachment_add">Priloži datoteke</string>
     <string name="chat_message_attach">Priloži datoteke</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Još nema chatova</string>
     <string name="chat_list_add_to_home">Dodaj na početni zaslon</string>
     <string name="chat_list_left_chat">Napušteno</string>
-    <string name="chat_new_no_friends">Još nema prijatelja za razgovor</string>
-    <string name="chat_new_no_matches">Nema odgovarajućih prijatelja</string>
     <string name="chat_new_existing_chat">Otvori postojeći chat</string>
     <string name="chat_new_start">Započni chat</string>
     <string name="chat_new_start_group">Započni grupni chat</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Odaberi razgovor ili prijatelja kojem ćeš proslijediti odabrane poruke</string>
     <string name="chat_forward_chats">Razgovori</string>
     <string name="chat_forward_friends">Prijatelji</string>
+    <string name="chat_policy_title">Dolazni razgovori</string>
+    <string name="chat_policy_friends">Samo prijatelji</string>
+    <string name="chat_policy_friends_description">Samo prijatelji mogu započeti razgovor s vama (zadano).</string>
+    <string name="chat_policy_anyone">Bilo tko</string>
+    <string name="chat_policy_anyone_description">Bilo tko može započeti razgovor s vama.</string>
+    <string name="chat_new_search_placeholder">Pretraži ljude</string>
+    <string name="chat_new_no_matches">Nema podudarnih ljudi</string>
+    <string name="chat_new_no_friends">Potražite ljude za razgovor</string>
 </resources>

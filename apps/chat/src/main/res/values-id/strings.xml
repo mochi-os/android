@@ -12,7 +12,6 @@
     <string name="chat_new_title">Chat baru</string>
     <string name="chat_new_name">Nama grup</string>
     <string name="chat_new_friends">Teman</string>
-    <string name="chat_new_search_placeholder">Cari teman</string>
     <string name="chat_message_placeholder">Pesan</string>
     <string name="chat_attachment_add">Lampirkan file</string>
     <string name="chat_message_attach">Lampirkan file</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Tidak ada chat yang cocok</string>
     <string name="chat_list_empty">Belum ada chat</string>
     <string name="chat_list_left_chat">Keluar</string>
-    <string name="chat_new_no_friends">Belum ada teman untuk diajak chat</string>
-    <string name="chat_new_no_matches">Tidak ada teman yang cocok</string>
     <string name="chat_new_existing_chat">Buka chat yang ada</string>
     <string name="chat_new_start">Mulai chat</string>
     <string name="chat_new_start_group">Mulai chat grup</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Pilih obrolan atau teman untuk meneruskan pesan yang dipilih</string>
     <string name="chat_forward_chats">Chat</string>
     <string name="chat_forward_friends">Teman</string>
+    <string name="chat_policy_title">Obrolan masuk</string>
+    <string name="chat_policy_friends">Hanya teman</string>
+    <string name="chat_policy_friends_description">Hanya teman yang dapat memulai obrolan dengan Anda (default).</string>
+    <string name="chat_policy_anyone">Siapa saja</string>
+    <string name="chat_policy_anyone_description">Siapa saja dapat memulai obrolan dengan Anda.</string>
+    <string name="chat_new_search_placeholder">Cari orang</string>
+    <string name="chat_new_no_matches">Tidak ada orang yang cocok</string>
+    <string name="chat_new_no_friends">Cari orang untuk diajak mengobrol</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Musuq chat</string>
     <string name="chat_new_name">Huñu suti</string>
     <string name="chat_new_friends">Masikuna</string>
-    <string name="chat_new_search_placeholder">Amigokunata maskay</string>
     <string name="chat_message_placeholder">Willakuy</string>
     <string name="chat_attachment_add">Archivos churay</string>
     <string name="chat_message_attach">Archivos churay</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Mana tupaq rimanakuykunapas kanchu</string>
     <string name="chat_list_empty">Manaraqmi rimanakuykuna kanchu</string>
     <string name="chat_list_left_chat">Lluqsirqa</string>
-    <string name="chat_new_no_friends">Manaraqmi masikuna rimanakunapaq kanchu</string>
-    <string name="chat_new_no_matches">Mana tupaq masikuna kanchu</string>
     <string name="chat_new_existing_chat">Kaq rimanakuyta kichay</string>
     <string name="chat_new_start">Rimanakuyta qallariy</string>
     <string name="chat_new_start_group">Huñu rimanakuyta qallariy</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Akllasqa willaykunata apachinaykipaq huk rimanakuyta utaq masita akllay</string>
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Masikuna</string>
+    <string name="chat_policy_title">Chayamuq rimanakuykuna</string>
+    <string name="chat_policy_friends">Masikunallam</string>
+    <string name="chat_policy_friends_description">Masikunallam qamwan rimanakuyta qallariyta atinku (ñawpaq).</string>
+    <string name="chat_policy_anyone">Pipas</string>
+    <string name="chat_policy_anyone_description">Pipas qamwan rimanakuyta qallariyta atin.</string>
+    <string name="chat_new_search_placeholder">Runakunata maskay</string>
+    <string name="chat_new_no_matches">Manam tupaq runakunachu</string>
+    <string name="chat_new_no_friends">Rimanakunapaq runakunata maskay</string>
 </resources>

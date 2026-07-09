@@ -12,7 +12,6 @@
     <string name="chat_new_title">ახალი ჩატი</string>
     <string name="chat_new_name">ჯგუფის სახელი</string>
     <string name="chat_new_friends">მეგობრები</string>
-    <string name="chat_new_search_placeholder">მეგობრების ძიება</string>
     <string name="chat_message_placeholder">შეტყობინება</string>
     <string name="chat_attachment_add">ფაილების მიმაგრება</string>
     <string name="chat_message_attach">ფაილების მიმაგრება</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">შესაბამისი ჩატები არ მოიძებნა</string>
     <string name="chat_list_empty">ჯერ ჩატები არ არის</string>
     <string name="chat_list_left_chat">დატოვებული</string>
-    <string name="chat_new_no_friends">ჯერ არ გყავთ მეგობრები სასაუბროდ</string>
-    <string name="chat_new_no_matches">შესაბამისი მეგობრები არ მოიძებნა</string>
     <string name="chat_new_existing_chat">არსებული ჩატის გახსნა</string>
     <string name="chat_new_start">ჩატის დაწყება</string>
     <string name="chat_new_start_group">ჯგუფური ჩატის დაწყება</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">აირჩიეთ ჩატი ან მეგობარი არჩეული შეტყობინებების გადასაგზავნად</string>
     <string name="chat_forward_chats">ჩატები</string>
     <string name="chat_forward_friends">მეგობრები</string>
+    <string name="chat_policy_title">შემომავალი ჩატები</string>
+    <string name="chat_policy_friends">მხოლოდ მეგობრები</string>
+    <string name="chat_policy_friends_description">თქვენთან ჩატის დაწყება მხოლოდ მეგობრებს შეუძლიათ (ნაგულისხმევი).</string>
+    <string name="chat_policy_anyone">ნებისმიერი</string>
+    <string name="chat_policy_anyone_description">ნებისმიერს შეუძლია თქვენთან ჩატის დაწყება.</string>
+    <string name="chat_new_search_placeholder">ხალხის ძებნა</string>
+    <string name="chat_new_no_matches">შესაბამისი ხალხი არ არის</string>
+    <string name="chat_new_no_friends">მოძებნეთ ხალხი სასაუბროდ</string>
 </resources>

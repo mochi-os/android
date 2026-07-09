@@ -12,7 +12,6 @@
     <string name="chat_new_title">አዲስ ውይይት</string>
     <string name="chat_new_name">የቡድን ስም</string>
     <string name="chat_new_friends">ጓደኞች</string>
-    <string name="chat_new_search_placeholder">ጓደኞችን ይፈልጉ</string>
     <string name="chat_message_placeholder">መልዕክት</string>
     <string name="chat_attachment_add">ፋይሎችን አያይዝ</string>
     <string name="chat_message_attach">ፋይሎችን አያይዝ</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">እስካሁን ውይይቶች የሉም</string>
     <string name="chat_list_add_to_home">ወደ መነሻ ስክሪን ያክሉ</string>
     <string name="chat_list_left_chat">ወጥቷል</string>
-    <string name="chat_new_no_friends">እስካሁን ለመወያየት ጓደኞች የሉም</string>
-    <string name="chat_new_no_matches">ተዛማጅ ጓደኞች የሉም</string>
     <string name="chat_new_existing_chat">ነባር ውይይት ይክፈቱ</string>
     <string name="chat_new_start">ውይይት ይጀምሩ</string>
     <string name="chat_new_start_group">የቡድን ውይይት ይጀምሩ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">የተመረጡትን መልዕክቶች ለማስተላለፍ ውይይት ወይም ጓደኛ ይምረጡ</string>
     <string name="chat_forward_chats">ውይይቶች</string>
     <string name="chat_forward_friends">ጓደኞች</string>
+    <string name="chat_policy_title">ገቢ ቻቶች</string>
+    <string name="chat_policy_friends">ጓደኞች ብቻ</string>
+    <string name="chat_policy_friends_description">ጓደኞች ብቻ ከእርስዎ ጋር ቻት መጀመር ይችላሉ (ነባሪ)።</string>
+    <string name="chat_policy_anyone">ማንኛውም ሰው</string>
+    <string name="chat_policy_anyone_description">ማንኛውም ሰው ከእርስዎ ጋር ቻት መጀመር ይችላል።</string>
+    <string name="chat_new_search_placeholder">ሰዎችን ይፈልጉ</string>
+    <string name="chat_new_no_matches">ተዛማጅ ሰዎች የሉም</string>
+    <string name="chat_new_no_friends">ለመወያየት ሰዎችን ይፈልጉ</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nieuwe chat</string>
     <string name="chat_new_name">Groepsnaam</string>
     <string name="chat_new_friends">Vrienden</string>
-    <string name="chat_new_search_placeholder">Zoek vrienden</string>
     <string name="chat_message_placeholder">Bericht</string>
     <string name="chat_attachment_add">Bestanden bijvoegen</string>
     <string name="chat_message_attach">Bestanden bijvoegen</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Geen overeenkomende chats</string>
     <string name="chat_list_empty">Nog geen chats</string>
     <string name="chat_list_left_chat">Verlaten</string>
-    <string name="chat_new_no_friends">Nog geen vrienden om mee te chatten</string>
-    <string name="chat_new_no_matches">Geen overeenkomende vrienden</string>
     <string name="chat_new_existing_chat">Bestaande chat openen</string>
     <string name="chat_new_start">Chat starten</string>
     <string name="chat_new_start_group">Groepschat starten</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Kies een chat of vriend om de geselecteerde berichten naar door te sturen</string>
     <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Vrienden</string>
+    <string name="chat_policy_title">Inkomende chats</string>
+    <string name="chat_policy_friends">Alleen vrienden</string>
+    <string name="chat_policy_friends_description">Alleen vrienden kunnen een chat met je starten (standaard).</string>
+    <string name="chat_policy_anyone">Iedereen</string>
+    <string name="chat_policy_anyone_description">Iedereen kan een chat met je starten.</string>
+    <string name="chat_new_search_placeholder">Personen zoeken</string>
+    <string name="chat_new_no_matches">Geen overeenkomende personen</string>
+    <string name="chat_new_no_friends">Zoek personen om mee te chatten</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Нови чет</string>
     <string name="chat_new_name">Име групе</string>
     <string name="chat_new_friends">Пријатељи</string>
-    <string name="chat_new_search_placeholder">Претражи пријатеље</string>
     <string name="chat_message_placeholder">Порука</string>
     <string name="chat_attachment_add">Приложи датотеке</string>
     <string name="chat_message_attach">Приложи датотеке</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Nema odgovarajućih ćaskanja</string>
     <string name="chat_list_empty">Još nema ćaskanja</string>
     <string name="chat_list_left_chat">Napušteno</string>
-    <string name="chat_new_no_friends">Još nema prijatelja za ćaskanje</string>
-    <string name="chat_new_no_matches">Nema odgovarajućih prijatelja</string>
     <string name="chat_new_existing_chat">Otvori postojeće ćaskanje</string>
     <string name="chat_new_start">Započni ćaskanje</string>
     <string name="chat_new_start_group">Započni grupno ćaskanje</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Изабери ћаскање или пријатеља коме ћеш проследити изабране поруке</string>
     <string name="chat_forward_chats">Разговори</string>
     <string name="chat_forward_friends">Пријатељи</string>
+    <string name="chat_policy_title">Долазна ћаскања</string>
+    <string name="chat_policy_friends">Само пријатељи</string>
+    <string name="chat_policy_friends_description">Само пријатељи могу да започну ћаскање са вама (подразумевано).</string>
+    <string name="chat_policy_anyone">Било ко</string>
+    <string name="chat_policy_anyone_description">Било ко може да започне ћаскање са вама.</string>
+    <string name="chat_new_search_placeholder">Претражи људе</string>
+    <string name="chat_new_no_matches">Нема одговарајућих људи</string>
+    <string name="chat_new_no_friends">Потражите људе за ћаскање</string>
 </resources>

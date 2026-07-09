@@ -12,7 +12,6 @@
     <string name="chat_new_title">नयाँ च्याट</string>
     <string name="chat_new_name">समूहको नाम</string>
     <string name="chat_new_friends">साथीहरू</string>
-    <string name="chat_new_search_placeholder">साथीहरू खोज्नुहोस्</string>
     <string name="chat_message_placeholder">सन्देश</string>
     <string name="chat_attachment_add">फाइलहरू एट्याच गर्नुहोस्</string>
     <string name="chat_message_attach">फाइलहरू एट्याच गर्नुहोस्</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">मिल्ने च्याट छैन</string>
     <string name="chat_list_empty">अहिलेसम्म कुनै च्याट छैन</string>
     <string name="chat_list_left_chat">छाडियो</string>
-    <string name="chat_new_no_friends">अहिलेसम्म च्याट गर्ने साथीहरू छैनन्</string>
-    <string name="chat_new_no_matches">मिल्ने साथीहरू छैनन्</string>
     <string name="chat_new_existing_chat">अवस्थित च्याट खोल्नुहोस्</string>
     <string name="chat_new_start">च्याट सुरु गर्नुहोस्</string>
     <string name="chat_new_start_group">समूह च्याट सुरु गर्नुहोस्</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">चयन गरिएका सन्देशहरू फर्वार्ड गर्न कुराकानी वा साथी छान्नुहोस्</string>
     <string name="chat_forward_chats">च्याटहरू</string>
     <string name="chat_forward_friends">साथीहरू</string>
+    <string name="chat_policy_title">आगमन च्याटहरू</string>
+    <string name="chat_policy_friends">साथीहरू मात्र</string>
+    <string name="chat_policy_friends_description">साथीहरूले मात्र तपाईंसँग च्याट सुरु गर्न सक्छन् (पूर्वनिर्धारित)।</string>
+    <string name="chat_policy_anyone">जोसुकै</string>
+    <string name="chat_policy_anyone_description">जोसुकैले तपाईंसँग च्याट सुरु गर्न सक्छ।</string>
+    <string name="chat_new_search_placeholder">मानिसहरू खोज्नुहोस्</string>
+    <string name="chat_new_no_matches">मिल्ने मानिसहरू छैनन्</string>
+    <string name="chat_new_no_friends">कुराकानी गर्न मानिसहरू खोज्नुहोस्</string>
 </resources>

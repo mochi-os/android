@@ -12,7 +12,6 @@
     <string name="chat_new_title">नया चैट</string>
     <string name="chat_new_name">समूह के नाम</string>
     <string name="chat_new_friends">दोस्त</string>
-    <string name="chat_new_search_placeholder">दोस्त खोजीं</string>
     <string name="chat_message_placeholder">संदेश</string>
     <string name="chat_attachment_add">फाइल संलग्न करीं</string>
     <string name="chat_message_attach">फाइल संलग्न करीं</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">अबहीं कवनो चैट नइखे</string>
     <string name="chat_list_add_to_home">होम स्क्रीन पर जोड़ीं</string>
     <string name="chat_list_left_chat">छोड़ दिहल</string>
-    <string name="chat_new_no_friends">अबहीं चैट करे खातिर कवनो दोस्त नइखे</string>
-    <string name="chat_new_no_matches">कवनो मेल खात दोस्त नइखे</string>
     <string name="chat_new_existing_chat">मौजूदा चैट खोलीं</string>
     <string name="chat_new_start">चैट शुरू करीं</string>
     <string name="chat_new_start_group">ग्रुप चैट शुरू करीं</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">चुनल संदेश अग्रेषित करे खातिर चैट भा दोस्त चुनीं</string>
     <string name="chat_forward_chats">चैट</string>
     <string name="chat_forward_friends">दोस्त</string>
+    <string name="chat_policy_title">आवे वाला चैट</string>
+    <string name="chat_policy_friends">खाली दोस्त</string>
+    <string name="chat_policy_friends_description">खाली दोस्त रउआ से चैट शुरू क सकेलें (डिफॉल्ट)।</string>
+    <string name="chat_policy_anyone">केहू भी</string>
+    <string name="chat_policy_anyone_description">केहू भी रउआ से चैट शुरू क सकेला।</string>
+    <string name="chat_new_search_placeholder">लोग खोजीं</string>
+    <string name="chat_new_no_matches">कवनो मेल खात लोग नइखे</string>
+    <string name="chat_new_no_friends">चैट करे खातिर लोग खोजीं</string>
 </resources>

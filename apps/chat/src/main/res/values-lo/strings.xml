@@ -12,7 +12,6 @@
     <string name="chat_new_title">ສົນທະນາໃໝ່</string>
     <string name="chat_new_name">ຊື່ກຸ່ມ</string>
     <string name="chat_new_friends">ໝູ່</string>
-    <string name="chat_new_search_placeholder">ຄົ້ນຫາໝູ່</string>
     <string name="chat_message_placeholder">ຂໍ້ຄວາມ</string>
     <string name="chat_attachment_add">ແນບໄຟລ໌</string>
     <string name="chat_message_attach">ແນບໄຟລ໌</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">ບໍ່ມີການສົນທະນາທີ່ກົງກັນ</string>
     <string name="chat_list_empty">ຍັງບໍ່ມີການສົນທະນາ</string>
     <string name="chat_list_left_chat">ອອກແລ້ວ</string>
-    <string name="chat_new_no_friends">ຍັງບໍ່ມີໝູ່ໃຫ້ສົນທະນາ</string>
-    <string name="chat_new_no_matches">ບໍ່ມີໝູ່ທີ່ກົງກັນ</string>
     <string name="chat_new_existing_chat">ເປີດການສົນທະນາທີ່ມີຢູ່</string>
     <string name="chat_new_start">ເລີ່ມການສົນທະນາ</string>
     <string name="chat_new_start_group">ເລີ່ມການສົນທະນາກຸ່ມ</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">ເລືອกแชັດ ຫຼື ໝູ່ເພື່ອນເພື່ອສົ່ງຕໍ່ຂໍ້ຄວາມທີ່ເລືອກໄປ</string>
     <string name="chat_forward_chats">ແຊັດ</string>
     <string name="chat_forward_friends">ໝູ່</string>
+    <string name="chat_policy_title">ແຊັດຂາເຂົ້າ</string>
+    <string name="chat_policy_friends">ໝູ່ເທົ່ານັ້ນ</string>
+    <string name="chat_policy_friends_description">ມີພຽງໝູ່ເທົ່ານັ້ນທີ່ສາມາດເລີ່ມການສົນທະນາກັບທ່ານໄດ້ (ຄ່າເລີ່ມຕົ້ນ).</string>
+    <string name="chat_policy_anyone">ໃຜກໍໄດ້</string>
+    <string name="chat_policy_anyone_description">ໃຜກໍໄດ້ສາມາດເລີ່ມການສົນທະນາກັບທ່ານໄດ້.</string>
+    <string name="chat_new_search_placeholder">ຄົ້ນຫາຄົນ</string>
+    <string name="chat_new_no_matches">ບໍ່ມີຄົນທີ່ກົງກັນ</string>
+    <string name="chat_new_no_friends">ຄົ້ນຫາຄົນເພື່ອສົນທະນາ</string>
 </resources>

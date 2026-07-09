@@ -12,7 +12,6 @@
     <string name="chat_new_title">Comhrá nua</string>
     <string name="chat_new_name">Ainm an ghrúpa</string>
     <string name="chat_new_friends">Cairde</string>
-    <string name="chat_new_search_placeholder">Cuardaigh cairde</string>
     <string name="chat_message_placeholder">Teachtaireacht</string>
     <string name="chat_attachment_add">Ceangail comhaid</string>
     <string name="chat_message_attach">Ceangail comhaid</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">Níl aon chomhrá ann go fóill</string>
     <string name="chat_list_add_to_home">Cuir leis an scáileán baile</string>
     <string name="chat_list_left_chat">D\'fhág</string>
-    <string name="chat_new_no_friends">Níl aon chairde le comhrá a dhéanamh leo go fóill</string>
-    <string name="chat_new_no_matches">Níl aon chairde comhoiriúnacha ann</string>
     <string name="chat_new_existing_chat">Oscail comhrá atá ann</string>
     <string name="chat_new_start">Tosaigh comhrá</string>
     <string name="chat_new_start_group">Tosaigh comhrá grúpa</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Roghnaigh comhrá nó cara chun na teachtaireachtaí roghnaithe a chur ar aghaidh</string>
     <string name="chat_forward_chats">Comhráite</string>
     <string name="chat_forward_friends">Cairde</string>
+    <string name="chat_policy_title">Comhráite isteach</string>
+    <string name="chat_policy_friends">Cairde amháin</string>
+    <string name="chat_policy_friends_description">Ní féidir ach le cairde comhrá a thosú leat (réamhshocrú).</string>
+    <string name="chat_policy_anyone">Aon duine</string>
+    <string name="chat_policy_anyone_description">Is féidir le haon duine comhrá a thosú leat.</string>
+    <string name="chat_new_search_placeholder">Cuardaigh daoine</string>
+    <string name="chat_new_no_matches">Níl aon duine comhoiriúnach</string>
+    <string name="chat_new_no_friends">Cuardaigh daoine le comhrá a dhéanamh</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Yangi suhbat</string>
     <string name="chat_new_name">Guruh nomi</string>
     <string name="chat_new_friends">Doʻstlar</string>
-    <string name="chat_new_search_placeholder">Doʻstlar qidirish</string>
     <string name="chat_message_placeholder">Xabar</string>
     <string name="chat_attachment_add">Fayl biriktirish</string>
     <string name="chat_message_attach">Fayl biriktirish</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Mos chatlar yo\'q</string>
     <string name="chat_list_empty">Hozircha chatlar yo\'q</string>
     <string name="chat_list_left_chat">Chiqdi</string>
-    <string name="chat_new_no_friends">Hozircha suhbatlashish uchun do\'stlar yo\'q</string>
-    <string name="chat_new_no_matches">Mos do\'stlar yo\'q</string>
     <string name="chat_new_existing_chat">Mavjud chatni ochish</string>
     <string name="chat_new_start">Chatni boshlash</string>
     <string name="chat_new_start_group">Guruh chatini boshlash</string>
@@ -90,4 +87,12 @@
     <string name="chat_forward_subtitle">Tanlangan xabarlarni yo\'naltirish uchun suhbat yoki do\'stni tanlang</string>
     <string name="chat_forward_chats">Suhbatlar</string>
     <string name="chat_forward_friends">Doʻstlar</string>
+    <string name="chat_policy_title">Kiruvchi suhbatlar</string>
+    <string name="chat_policy_friends">Faqat do\'stlar</string>
+    <string name="chat_policy_friends_description">Siz bilan faqat do\'stlar suhbat boshlashi mumkin (standart).</string>
+    <string name="chat_policy_anyone">Har kim</string>
+    <string name="chat_policy_anyone_description">Har kim siz bilan suhbat boshlashi mumkin.</string>
+    <string name="chat_new_search_placeholder">Odamlarni qidirish</string>
+    <string name="chat_new_no_matches">Mos odamlar yo\'q</string>
+    <string name="chat_new_no_friends">Suhbatlashish uchun odamlarni qidiring</string>
 </resources>

@@ -12,7 +12,6 @@
     <string name="chat_new_title">Täze söhbet</string>
     <string name="chat_new_name">Toparyň ady</string>
     <string name="chat_new_friends">Dostlar</string>
-    <string name="chat_new_search_placeholder">Dostlary gözle</string>
     <string name="chat_message_placeholder">Habar</string>
     <string name="chat_attachment_add">Faýllar goşmak</string>
     <string name="chat_message_attach">Faýllar goşmak</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Gabat gelýän söhbet ýok</string>
     <string name="chat_list_empty">Heniz söhbet ýok</string>
     <string name="chat_list_left_chat">Çykyldy</string>
-    <string name="chat_new_no_friends">Söhbetdeş boljak dost ýok</string>
-    <string name="chat_new_no_matches">Gabat gelýän dost ýok</string>
     <string name="chat_new_existing_chat">Bar bolan söhbeti aç</string>
     <string name="chat_new_start">Söhbete başla</string>
     <string name="chat_new_start_group">Topar söhbetine başla</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Saýlanan habarlary ugratmak üçin çat ýa-da dost saýlaň</string>
     <string name="chat_forward_chats">Söhbetdeşlikler</string>
     <string name="chat_forward_friends">Dostlar</string>
+    <string name="chat_policy_title">Gelýän söhbetler</string>
+    <string name="chat_policy_friends">Diňe dostlar</string>
+    <string name="chat_policy_friends_description">Siz bilen diňe dostlar söhbet başlap biler (deslapky).</string>
+    <string name="chat_policy_anyone">Islendik adam</string>
+    <string name="chat_policy_anyone_description">Islendik adam siz bilen söhbet başlap biler.</string>
+    <string name="chat_new_search_placeholder">Adamlary gözle</string>
+    <string name="chat_new_no_matches">Gabat gelýän adam ýok</string>
+    <string name="chat_new_no_friends">Söhbet etmek üçin adamlary gözle</string>
 </resources>

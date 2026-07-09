@@ -12,7 +12,6 @@
     <string name="chat_new_title">گفت‌وگوی جدید</string>
     <string name="chat_new_name">نام گروه</string>
     <string name="chat_new_friends">دوستان</string>
-    <string name="chat_new_search_placeholder">جست‌وجوی دوستان</string>
     <string name="chat_message_placeholder">پیام</string>
     <string name="chat_attachment_add">پیوست فایل‌ها</string>
     <string name="chat_message_attach">پیوست فایل‌ها</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">هنوز گفتگویی وجود ندارد</string>
     <string name="chat_list_add_to_home">افزودن به صفحه اصلی</string>
     <string name="chat_list_left_chat">ترک‌شده</string>
-    <string name="chat_new_no_friends">هنوز دوستی برای گفتگو وجود ندارد</string>
-    <string name="chat_new_no_matches">دوست مطابقی یافت نشد</string>
     <string name="chat_new_existing_chat">باز کردن گفتگوی موجود</string>
     <string name="chat_new_start">شروع گفتگو</string>
     <string name="chat_new_start_group">شروع گفتگوی گروهی</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">یک گفتگو یا دوست را برای هدایت پیام‌های انتخاب‌شده انتخاب کنید</string>
     <string name="chat_forward_chats">گفت‌وگوها</string>
     <string name="chat_forward_friends">دوستان</string>
+    <string name="chat_policy_title">گفتگوهای ورودی</string>
+    <string name="chat_policy_friends">فقط دوستان</string>
+    <string name="chat_policy_friends_description">فقط دوستان می‌توانند با شما گفتگو را آغاز کنند (پیش‌فرض).</string>
+    <string name="chat_policy_anyone">هر کسی</string>
+    <string name="chat_policy_anyone_description">هر کسی می‌تواند با شما گفتگو را آغاز کند.</string>
+    <string name="chat_new_search_placeholder">جستجوی افراد</string>
+    <string name="chat_new_no_matches">فرد منطبقی یافت نشد</string>
+    <string name="chat_new_no_friends">افرادی برای گفتگو پیدا کنید</string>
 </resources>

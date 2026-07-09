@@ -12,7 +12,6 @@
     <string name="chat_new_title">新しいチャット</string>
     <string name="chat_new_name">グループ名</string>
     <string name="chat_new_friends">友だち</string>
-    <string name="chat_new_search_placeholder">友達を検索</string>
     <string name="chat_message_placeholder">メッセージ</string>
     <string name="chat_attachment_add">ファイルを添付</string>
     <string name="chat_message_attach">ファイルを添付</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">一致するチャットがありません</string>
     <string name="chat_list_empty">チャットはまだありません</string>
     <string name="chat_list_left_chat">退出済み</string>
-    <string name="chat_new_no_friends">チャットできる友達がまだいません</string>
-    <string name="chat_new_no_matches">一致する友達がいません</string>
     <string name="chat_new_existing_chat">既存のチャットを開く</string>
     <string name="chat_new_start">チャットを開始</string>
     <string name="chat_new_start_group">グループチャットを開始</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">選択したメッセージを転送するチャットまたは友達を選択してください</string>
     <string name="chat_forward_chats">チャット</string>
     <string name="chat_forward_friends">友だち</string>
+    <string name="chat_policy_title">受信チャット</string>
+    <string name="chat_policy_friends">友達のみ</string>
+    <string name="chat_policy_friends_description">友達のみがあなたとのチャットを開始できます（デフォルト）。</string>
+    <string name="chat_policy_anyone">誰でも</string>
+    <string name="chat_policy_anyone_description">誰でもあなたとのチャットを開始できます。</string>
+    <string name="chat_new_search_placeholder">ユーザーを検索</string>
+    <string name="chat_new_no_matches">一致するユーザーがいません</string>
+    <string name="chat_new_no_friends">チャットする相手を検索</string>
 </resources>

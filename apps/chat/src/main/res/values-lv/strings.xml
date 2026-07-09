@@ -12,7 +12,6 @@
     <string name="chat_new_title">Jauns čats</string>
     <string name="chat_new_name">Grupas nosaukums</string>
     <string name="chat_new_friends">Draugi</string>
-    <string name="chat_new_search_placeholder">Meklēt draugus</string>
     <string name="chat_message_placeholder">Ziņojums</string>
     <string name="chat_attachment_add">Pievienot failus</string>
     <string name="chat_message_attach">Pievienot failus</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Nav atbilstošu tērzēšanu</string>
     <string name="chat_list_empty">Vēl nav nevienas tērzēšanas</string>
     <string name="chat_list_left_chat">Pamesta</string>
-    <string name="chat_new_no_friends">Vēl nav draugu, ar kuriem tērzēt</string>
-    <string name="chat_new_no_matches">Nav atbilstošu draugu</string>
     <string name="chat_new_existing_chat">Atvērt esošu tērzēšanu</string>
     <string name="chat_new_start">Sākt tērzēšanu</string>
     <string name="chat_new_start_group">Sākt grupas tērzēšanu</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Izvēlieties tērzēšanu vai draugu, kuram pārsūtīt atlasītās ziņas</string>
     <string name="chat_forward_chats">Sarunas</string>
     <string name="chat_forward_friends">Draugi</string>
+    <string name="chat_policy_title">Ienākošās tērzēšanas</string>
+    <string name="chat_policy_friends">Tikai draugi</string>
+    <string name="chat_policy_friends_description">Tērzēšanu ar jums var sākt tikai draugi (noklusējums).</string>
+    <string name="chat_policy_anyone">Jebkurš</string>
+    <string name="chat_policy_anyone_description">Jebkurš var sākt tērzēšanu ar jums.</string>
+    <string name="chat_new_search_placeholder">Meklēt cilvēkus</string>
+    <string name="chat_new_no_matches">Nav atbilstošu cilvēku</string>
+    <string name="chat_new_no_friends">Meklējiet cilvēkus tērzēšanai</string>
 </resources>

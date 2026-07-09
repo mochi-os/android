@@ -12,7 +12,6 @@
     <string name="chat_new_title">ការសន្ទនាថ្មី</string>
     <string name="chat_new_name">ឈ្មោះក្រុម</string>
     <string name="chat_new_friends">មិត្ត</string>
-    <string name="chat_new_search_placeholder">ស្វែងរកមិត្តភក្តិ</string>
     <string name="chat_message_placeholder">សារ</string>
     <string name="chat_attachment_add">ភ្ជាប់ឯកសារ</string>
     <string name="chat_message_attach">ភ្ជាប់ឯកសារ</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">មិនមានការជជែកត្រូវគ្នាទេ</string>
     <string name="chat_list_empty">មិនទាន់មានការជជែកទេ</string>
     <string name="chat_list_left_chat">បានចាកចេញ</string>
-    <string name="chat_new_no_friends">មិនទាន់មានមិត្តភក្ដិសម្រាប់ជជែកទេ</string>
-    <string name="chat_new_no_matches">មិនមានមិត្តភក្ដិត្រូវគ្នាទេ</string>
     <string name="chat_new_existing_chat">បើកការជជែកដែលមានស្រាប់</string>
     <string name="chat_new_start">ចាប់ផ្ដើមការជជែក</string>
     <string name="chat_new_start_group">ចាប់ផ្ដើមការជជែកជាក្រុម</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">ជ្រើសរើសការជជែក ឬមិត្តភ័ក្តិដើម្បីបញ្ជូនសារដែលបានជ្រើសរើស</string>
     <string name="chat_forward_chats">ការជជែក</string>
     <string name="chat_forward_friends">មិត្ត</string>
+    <string name="chat_policy_title">ការជជែកចូល</string>
+    <string name="chat_policy_friends">តែមិត្តភ័ក្តិប៉ុណ្ណោះ</string>
+    <string name="chat_policy_friends_description">មានតែមិត្តភ័ក្តិប៉ុណ្ណោះដែលអាចចាប់ផ្តើមការជជែកជាមួយអ្នក (លំនាំដើម)។</string>
+    <string name="chat_policy_anyone">នរណាម្នាក់</string>
+    <string name="chat_policy_anyone_description">នរណាម្នាក់ក៏អាចចាប់ផ្តើមការជជែកជាមួយអ្នកបាន។</string>
+    <string name="chat_new_search_placeholder">ស្វែងរកមនុស្ស</string>
+    <string name="chat_new_no_matches">គ្មានមនុស្សដែលត្រូវគ្នា</string>
+    <string name="chat_new_no_friends">ស្វែងរកមនុស្សដើម្បីជជែក</string>
 </resources>

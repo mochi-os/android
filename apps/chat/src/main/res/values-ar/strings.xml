@@ -12,7 +12,6 @@
     <string name="chat_new_title">محادثة جديدة</string>
     <string name="chat_new_name">اسم المجموعة</string>
     <string name="chat_new_friends">الأصدقاء</string>
-    <string name="chat_new_search_placeholder">البحث عن أصدقاء</string>
     <string name="chat_message_placeholder">رسالة</string>
     <string name="chat_attachment_add">إرفاق ملفات</string>
     <string name="chat_message_attach">إرفاق ملفات</string>
@@ -46,8 +45,6 @@
     <string name="chat_list_empty">لا توجد دردشات بعد</string>
     <string name="chat_list_add_to_home">إضافة إلى الشاشة الرئيسية</string>
     <string name="chat_list_left_chat">غادرت</string>
-    <string name="chat_new_no_friends">لا يوجد أصدقاء للدردشة معهم بعد</string>
-    <string name="chat_new_no_matches">لا يوجد أصدقاء مطابقون</string>
     <string name="chat_new_existing_chat">فتح دردشة موجودة</string>
     <string name="chat_new_start">بدء دردشة</string>
     <string name="chat_new_start_group">بدء دردشة جماعية</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">اختر دردشة أو صديقًا لإعادة توجيه الرسائل المحددة إليه</string>
     <string name="chat_forward_chats">الدردشات</string>
     <string name="chat_forward_friends">الأصدقاء</string>
+    <string name="chat_policy_title">المحادثات الواردة</string>
+    <string name="chat_policy_friends">الأصدقاء فقط</string>
+    <string name="chat_policy_friends_description">يمكن للأصدقاء فقط بدء محادثة معك (افتراضي).</string>
+    <string name="chat_policy_anyone">أي شخص</string>
+    <string name="chat_policy_anyone_description">يمكن لأي شخص بدء محادثة معك.</string>
+    <string name="chat_new_search_placeholder">البحث عن أشخاص</string>
+    <string name="chat_new_no_matches">لا يوجد أشخاص مطابقون</string>
+    <string name="chat_new_no_friends">ابحث عن أشخاص للدردشة معهم</string>
 </resources>

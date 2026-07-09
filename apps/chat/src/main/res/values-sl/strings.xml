@@ -12,7 +12,6 @@
     <string name="chat_new_title">Nov pogovor</string>
     <string name="chat_new_name">Ime skupine</string>
     <string name="chat_new_friends">Prijatelji</string>
-    <string name="chat_new_search_placeholder">Iskanje prijateljev</string>
     <string name="chat_message_placeholder">Sporočilo</string>
     <string name="chat_attachment_add">Priloži datoteke</string>
     <string name="chat_message_attach">Priloži datoteke</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Ni ustreznih klepetov</string>
     <string name="chat_list_empty">Še ni klepetov</string>
     <string name="chat_list_left_chat">Zapuščeno</string>
-    <string name="chat_new_no_friends">Še ni prijateljev za klepet</string>
-    <string name="chat_new_no_matches">Ni ustreznih prijateljev</string>
     <string name="chat_new_existing_chat">Odpri obstoječi klepet</string>
     <string name="chat_new_start">Začni klepet</string>
     <string name="chat_new_start_group">Začni skupinski klepet</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Izberi klepet ali prijatelja za posredovanje izbranih sporočil</string>
     <string name="chat_forward_chats">Klepeti</string>
     <string name="chat_forward_friends">Prijatelji</string>
+    <string name="chat_policy_title">Dohodni klepeti</string>
+    <string name="chat_policy_friends">Samo prijatelji</string>
+    <string name="chat_policy_friends_description">Klepet z vami lahko začnejo samo prijatelji (privzeto).</string>
+    <string name="chat_policy_anyone">Kdorkoli</string>
+    <string name="chat_policy_anyone_description">Klepet z vami lahko začne kdorkoli.</string>
+    <string name="chat_new_search_placeholder">Iskanje oseb</string>
+    <string name="chat_new_no_matches">Ni ujemajočih se oseb</string>
+    <string name="chat_new_no_friends">Poiščite osebe za klepet</string>
 </resources>

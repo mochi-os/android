@@ -12,7 +12,6 @@
     <string name="chat_new_title">Haasawa haaraa</string>
     <string name="chat_new_name">Maqaa garee</string>
     <string name="chat_new_friends">Hiriyoota</string>
-    <string name="chat_new_search_placeholder">Hiriyoota barbaadi</string>
     <string name="chat_message_placeholder">Ergaa</string>
     <string name="chat_attachment_add">Faayilii hidhi</string>
     <string name="chat_message_attach">Faayilii hidhi</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Mariin walsimu hin jiru</string>
     <string name="chat_list_empty">Mariin ammatti hin jiru</string>
     <string name="chat_list_left_chat">Bahe</string>
-    <string name="chat_new_no_friends">Hiriyoonni marii waliin gootu ammatti hin jiran</string>
-    <string name="chat_new_no_matches">Hiriyoonni walsiman hin jiran</string>
     <string name="chat_new_existing_chat">Marii jiru bani</string>
     <string name="chat_new_start">Marii jalqabi</string>
     <string name="chat_new_start_group">Marii garee jalqabi</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Ergaawwan filataman dabarsuuf chaatii ykn michuu fili</string>
     <string name="chat_forward_chats">Chaattota</string>
     <string name="chat_forward_friends">Hiriyoota</string>
+    <string name="chat_policy_title">Chaatii dhufan</string>
+    <string name="chat_policy_friends">Hiriyoota qofa</string>
+    <string name="chat_policy_friends_description">Hiriyoonni qofti si waliin chaatii jalqabuu danda\'u (durtii).</string>
+    <string name="chat_policy_anyone">Nama kamiyyuu</string>
+    <string name="chat_policy_anyone_description">Namni kamiyyuu si waliin haasawa jalqabuu danda\'a.</string>
+    <string name="chat_new_search_placeholder">Namoota barbaadi</string>
+    <string name="chat_new_no_matches">Namoonni walsiman hin jiran</string>
+    <string name="chat_new_no_friends">Namoota haasoftu barbaadi</string>
 </resources>

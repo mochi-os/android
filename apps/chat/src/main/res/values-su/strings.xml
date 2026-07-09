@@ -12,7 +12,6 @@
     <string name="chat_new_title">Obrolan anyar</string>
     <string name="chat_new_name">Ngaran grup</string>
     <string name="chat_new_friends">Babaturan</string>
-    <string name="chat_new_search_placeholder">Paluruh babaturan</string>
     <string name="chat_message_placeholder">Pesen</string>
     <string name="chat_attachment_add">Lampirkeun file</string>
     <string name="chat_message_attach">Lampirkeun file</string>
@@ -50,8 +49,6 @@
     <string name="chat_list_no_matching">Teu aya obrolan anu cocog</string>
     <string name="chat_list_empty">Tacan aya obrolan</string>
     <string name="chat_list_left_chat">Kaluar</string>
-    <string name="chat_new_no_friends">Tacan aya réréncangan pikeun ngobrol</string>
-    <string name="chat_new_no_matches">Teu aya réréncangan anu cocog</string>
     <string name="chat_new_existing_chat">Buka obrolan anu tos aya</string>
     <string name="chat_new_start">Mimitian obrolan</string>
     <string name="chat_new_start_group">Mimitian obrolan grup</string>
@@ -89,4 +86,12 @@
     <string name="chat_forward_subtitle">Pilih obrolan atawa babaturan pikeun neruskeun pesen anu dipilih</string>
     <string name="chat_forward_chats">Chat</string>
     <string name="chat_forward_friends">Babaturan</string>
+    <string name="chat_policy_title">Obrolan asup</string>
+    <string name="chat_policy_friends">Ngan babaturan</string>
+    <string name="chat_policy_friends_description">Ngan babaturan anu bisa ngamimitian obrolan sareng anjeun (standar).</string>
+    <string name="chat_policy_anyone">Saha waé</string>
+    <string name="chat_policy_anyone_description">Saha waé bisa ngamimitian obrolan sareng anjeun.</string>
+    <string name="chat_new_search_placeholder">Téangan jalma</string>
+    <string name="chat_new_no_matches">Teu aya jalma anu cocog</string>
+    <string name="chat_new_no_friends">Téangan jalma pikeun ngobrol</string>
 </resources>
