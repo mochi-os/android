@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.model.Forum
@@ -51,6 +52,11 @@ class ForumViewModel @Inject constructor(
 
     private val forumId: String = savedStateHandle["forumId"] ?: ""
 
+    /** True for the aggregate "All forums" view (posts across every subscribed
+     *  forum), served first-page-only by the class-level `-/list` endpoint —
+     *  no per-forum entity, tags, sort persistence, or live subscription. */
+    val isAll: Boolean = forumId == LastViewedStore.ALL
+
     private val _uiState = MutableStateFlow(ForumUiState())
     val uiState: StateFlow<ForumUiState> = _uiState.asStateFlow()
 
@@ -77,7 +83,7 @@ class ForumViewModel @Inject constructor(
     // web's entity-forum-page. Local tray dismissal happens separately in
     // ForumScreen.
     fun clearNotifications() {
-        if (forumId.isBlank()) return
+        if (forumId.isBlank() || isAll) return
         viewModelScope.launch {
             try {
                 repository.clearNotifications(forumId)
@@ -138,6 +144,10 @@ class ForumViewModel @Inject constructor(
     }
 
     fun load(sort: String? = null) {
+        if (isAll) {
+            loadAll(sort, refreshing = false)
+            return
+        }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
@@ -160,6 +170,10 @@ class ForumViewModel @Inject constructor(
     }
 
     fun refresh() {
+        if (isAll) {
+            loadAll(_uiState.value.sort.ifEmpty { null }, refreshing = true)
+            return
+        }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
@@ -176,6 +190,41 @@ class ForumViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Load the aggregate "All forums" feed from the class-level `-/list`
+     *  endpoint. First page only — the endpoint takes no cursor, so there is no
+     *  load-more, live subscription, or per-forum tag filter. */
+    private fun loadAll(sort: String?, refreshing: Boolean) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(
+                isLoading = !refreshing,
+                isRefreshing = refreshing,
+                error = null,
+            )
+            try {
+                val r = repository.listForums(sort)
+                _uiState.value = _uiState.value.copy(
+                    forum = Forum(),
+                    posts = r.posts,
+                    canManage = false,
+                    canModerate = false,
+                    sort = sort ?: r.settings.sort,
+                    hasMore = false,
+                    nextCursor = null,
+                    tags = emptyList(),
+                    currentTag = null,
+                    isLoading = false,
+                    isRefreshing = false,
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    isRefreshing = false,
+                    error = e.toMochiError(),
+                )
             }
         }
     }
@@ -200,8 +249,11 @@ class ForumViewModel @Inject constructor(
     }
 
     fun setSort(sort: String) {
-        viewModelScope.launch {
-            try { repository.setForumSort(forumId, sort) } catch (_: Exception) { }
+        // The aggregate has no per-forum sort to persist; just reload sorted.
+        if (!isAll) {
+            viewModelScope.launch {
+                try { repository.setForumSort(forumId, sort) } catch (_: Exception) { }
+            }
         }
         load(sort)
     }
@@ -213,6 +265,7 @@ class ForumViewModel @Inject constructor(
     }
 
     private fun loadTags() {
+        if (isAll) return
         viewModelScope.launch {
             try {
                 _uiState.value = _uiState.value.copy(tags = repository.getForumTags(forumId))
@@ -222,9 +275,16 @@ class ForumViewModel @Inject constructor(
     }
 
     fun votePost(postId: String, vote: String) {
+        // In the aggregate each post belongs to a different forum, so vote against
+        // the post's own forum rather than the (synthetic) screen forum id.
+        val targetForum = if (isAll) {
+            _uiState.value.posts.firstOrNull { post -> post.id == postId }?.forum ?: forumId
+        } else {
+            forumId
+        }
         viewModelScope.launch {
             try {
-                repository.votePost(forumId, postId, vote)
+                repository.votePost(targetForum, postId, vote)
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

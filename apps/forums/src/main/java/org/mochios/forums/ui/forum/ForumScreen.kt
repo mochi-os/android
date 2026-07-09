@@ -137,10 +137,16 @@ fun ForumScreen(
             )
         }
     }
+    val drawerAll = FeatureDrawerItem(
+        id = LastViewedStore.ALL,
+        title = stringResource(R.string.forums_all_forums),
+        icon = Icons.Default.Forum,
+    )
 
     FeatureListDrawer(
         drawerState = drawerState,
         items = drawerItems,
+        allItem = drawerAll,
         selectedId = forumId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
@@ -241,6 +247,7 @@ private fun ForumContent(
     val uiState by viewModel.uiState.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
+    val isAll = viewModel.isAll
     var showSortMenu by remember { mutableStateOf(false) }
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
 
@@ -249,7 +256,11 @@ private fun ForumContent(
             TopAppBar(
                 title = {
                     Text(
-                        text = uiState.forum.name.ifBlank { stringResource(R.string.forums_loading) },
+                        text = if (isAll) {
+                            stringResource(R.string.forums_all_forums)
+                        } else {
+                            uiState.forum.name.ifBlank { stringResource(R.string.forums_loading) }
+                        },
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -392,7 +403,12 @@ private fun ForumContent(
                             PostCard(
                                 post = post,
                                 isSaved = savedIds.contains(post.id),
-                                onClick = { onPostClick(forumIdForCallbacks, post.id) },
+                                showForumName = isAll,
+                                onClick = {
+                                    // Aggregate posts each belong to their own forum.
+                                    val targetForum = if (isAll) post.forum else forumIdForCallbacks
+                                    onPostClick(targetForum, post.id)
+                                },
                                 onVote = { vote -> viewModel.votePost(post.id, vote) },
                                 onToggleSave = { viewModel.toggleSave(post) },
                             )
@@ -437,6 +453,7 @@ private fun PostCard(
     onClick: () -> Unit,
     onVote: (String) -> Unit,
     onToggleSave: () -> Unit,
+    showForumName: Boolean = false,
 ) {
     val format = LocalFormat.current
     Card(
@@ -444,6 +461,16 @@ private fun PostCard(
         shape = MaterialTheme.shapes.medium
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
+            // In the aggregate "All forums" view, label which forum each post
+            // came from since the top bar no longer identifies a single one.
+            if (showForumName && post.forumName.isNotBlank()) {
+                Text(
+                    text = post.forumName,
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(bottom = 4.dp),
+                )
+            }
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (post.pinned) {
                     Icon(

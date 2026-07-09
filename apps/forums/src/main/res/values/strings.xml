@@ -14,6 +14,7 @@
 
     <!-- Forum list -->
     <string name="forums_list_title">Forums</string>
+    <string name="forums_all_forums">All forums</string>
     <string name="forums_list_search_placeholder">Search forums</string>
     <string name="forums_list_close_search">Close search</string>
     <string name="forums_list_search">Search</string>
