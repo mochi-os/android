@@ -6,8 +6,6 @@
 package org.mochios.settings.ui.tokens
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -49,7 +47,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -71,7 +70,7 @@ fun TokensScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val newToken by viewModel.newApiToken.collectAsState()
-    val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     var showCreate by remember { mutableStateOf(false) }
 
     Scaffold(
@@ -133,7 +132,7 @@ fun TokensScreen(
     newToken?.let { token ->
         NewTokenDialog(
             token = token,
-            onCopy = { copyToClipboard(context, "api token", token) },
+            onCopy = { clipboard.setClip(ClipData.newPlainText("api token", token).toClipEntry()) },
             onDone = viewModel::acknowledgeNewToken,
         )
     }
@@ -274,9 +273,4 @@ private fun NewTokenDialog(token: String, onCopy: () -> Unit, onDone: () -> Unit
             TextButton(onClick = onDone) { Text(stringResource(R.string.account_done)) }
         },
     )
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String) {
-    val cb = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return
-    cb.setPrimaryClip(ClipData.newPlainText(label, value))
 }

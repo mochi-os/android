@@ -6,8 +6,6 @@
 package org.mochios.settings.ui.replication
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -53,7 +52,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -78,7 +78,7 @@ fun ReplicationScreen(
     viewModel: ReplicationViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     val snackbar = remember { SnackbarHostState() }
 
     val copiedOk = stringResource(R.string.replication_copied)
@@ -137,7 +137,12 @@ fun ReplicationScreen(
                             value = state.username,
                             monospace = false,
                             onCopy = {
-                                val ok = copyToClipboard(context, "username", state.username)
+                                val ok = state.username.isNotBlank()
+                                if (ok) {
+                                    clipboard.setClip(
+                                        ClipData.newPlainText("username", state.username).toClipEntry(),
+                                    )
+                                }
                                 viewModel.reportCopied(ok)
                             },
                         )
@@ -148,7 +153,12 @@ fun ReplicationScreen(
                             value = state.serverPeerId,
                             monospace = true,
                             onCopy = {
-                                val ok = copyToClipboard(context, "peer", state.serverPeerId)
+                                val ok = state.serverPeerId.isNotBlank()
+                                if (ok) {
+                                    clipboard.setClip(
+                                        ClipData.newPlainText("peer", state.serverPeerId).toClipEntry(),
+                                    )
+                                }
                                 viewModel.reportCopied(ok)
                             },
                         )
@@ -158,7 +168,13 @@ fun ReplicationScreen(
                                 value = hyphenateFingerprint(state.serverFingerprint),
                                 monospace = true,
                                 onCopy = {
-                                    val ok = copyToClipboard(context, "fingerprint", hyphenateFingerprint(state.serverFingerprint))
+                                    val fingerprint = hyphenateFingerprint(state.serverFingerprint)
+                                    val ok = fingerprint.isNotBlank()
+                                    if (ok) {
+                                        clipboard.setClip(
+                                            ClipData.newPlainText("fingerprint", fingerprint).toClipEntry(),
+                                        )
+                                    }
                                     viewModel.reportCopied(ok)
                                 },
                             )
@@ -254,10 +270,15 @@ private fun AccountFieldRow(
                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
             )
         }
-        IconButton(onClick = onCopy, enabled = value.isNotBlank()) {
+        IconButton(
+            onClick = onCopy,
+            enabled = value.isNotBlank(),
+            modifier = Modifier.size(36.dp),
+        ) {
             Icon(
                 Icons.Default.ContentCopy,
                 contentDescription = stringResource(R.string.replication_copy),
+                modifier = Modifier.size(18.dp),
             )
         }
     }
@@ -447,12 +468,4 @@ private const val offlineBadgeSeconds = 3600L
 private fun offlineActive(since: Long): Boolean {
     if (since <= 0) return false
     return System.currentTimeMillis() / 1000 - since > offlineBadgeSeconds
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String): Boolean {
-    if (value.isBlank()) return false
-    val cb =
-        context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return false
-    cb.setPrimaryClip(ClipData.newPlainText(label, value))
-    return true
 }

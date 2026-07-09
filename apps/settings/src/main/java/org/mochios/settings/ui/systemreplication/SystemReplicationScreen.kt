@@ -6,8 +6,6 @@
 package org.mochios.settings.ui.systemreplication
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -51,7 +50,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -73,7 +73,7 @@ fun SystemReplicationScreen(
     viewModel: SystemReplicationViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     val snackbar = remember { SnackbarHostState() }
 
     val joinApprovedOk = stringResource(R.string.system_replication_join_approved)
@@ -132,7 +132,12 @@ fun SystemReplicationScreen(
                             peer = state.peer,
                             fingerprint = state.fingerprint,
                             onCopy = {
-                                val ok = copyToClipboard(context, "peer", state.peer)
+                                val ok = state.peer.isNotBlank()
+                                if (ok) {
+                                    clipboard.setClip(
+                                        ClipData.newPlainText("peer", state.peer).toClipEntry(),
+                                    )
+                                }
                                 viewModel.reportPeerCopied(ok)
                             },
                         )
@@ -146,7 +151,12 @@ fun SystemReplicationScreen(
                             AddressRow(
                                 address = address,
                                 onCopy = {
-                                    val ok = copyToClipboard(context, "address", address)
+                                    val ok = address.isNotBlank()
+                                    if (ok) {
+                                        clipboard.setClip(
+                                            ClipData.newPlainText("address", address).toClipEntry(),
+                                        )
+                                    }
                                     viewModel.reportAddressCopied(ok)
                                 },
                             )
@@ -246,10 +256,14 @@ private fun ThisServerRow(peer: String, fingerprint: String, onCopy: () -> Unit)
                     fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
                 )
             }
-            IconButton(onClick = onCopy) {
+            IconButton(
+                onClick = onCopy,
+                modifier = Modifier.size(36.dp),
+            ) {
                 Icon(
                     Icons.Default.ContentCopy,
                     contentDescription = stringResource(R.string.system_replication_copy_peer_id),
+                    modifier = Modifier.size(18.dp),
                 )
             }
         }
@@ -266,10 +280,14 @@ private fun AddressRow(address: String, onCopy: () -> Unit) {
                 fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
                 modifier = Modifier.weight(1f),
             )
-            IconButton(onClick = onCopy) {
+            IconButton(
+                onClick = onCopy,
+                modifier = Modifier.size(36.dp),
+            ) {
                 Icon(
                     Icons.Default.ContentCopy,
                     contentDescription = stringResource(R.string.system_replication_copy_address),
+                    modifier = Modifier.size(18.dp),
                 )
             }
         }
@@ -376,10 +394,4 @@ private fun PairMemberRow(
             },
         )
     }
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String): Boolean {
-    val cb = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return false
-    cb.setPrimaryClip(ClipData.newPlainText(label, value))
-    return true
 }

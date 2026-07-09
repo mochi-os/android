@@ -7,7 +7,6 @@ package org.mochios.settings.ui.account
 
 import android.app.DownloadManager
 import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
 import android.net.Uri
 import android.os.Environment
@@ -21,6 +20,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -54,13 +54,16 @@ import org.mochios.settings.ui.login.StepUpHost
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.CompactTextField
 import org.mochios.settings.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -277,6 +280,7 @@ private fun IdentitySection(
 ) {
     val id = state.identity
     val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     var editingName by remember { mutableStateOf(false) }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -284,10 +288,9 @@ private fun IdentitySection(
 
         IdentityFieldRow(label = stringResource(R.string.account_identity_name)) {
             if (editingName) {
-                OutlinedTextField(
+                CompactTextField(
                     value = state.nameDraft,
                     onValueChange = onNameDraftChange,
-                    singleLine = true,
                     modifier = Modifier.weight(1f),
                 )
                 TextButton(onClick = {
@@ -305,8 +308,15 @@ private fun IdentitySection(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.weight(1f),
                 )
-                IconButton(onClick = { editingName = true }) {
-                    Icon(Icons.Default.Edit, contentDescription = null)
+                IconButton(
+                    onClick = { editingName = true },
+                    modifier = Modifier.size(36.dp),
+                ) {
+                    Icon(
+                        Icons.Default.Edit,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp),
+                    )
                 }
             }
         }
@@ -324,24 +334,28 @@ private fun IdentitySection(
                 modifier = Modifier.weight(1f),
             )
             IconButton(
-                onClick = { copyToClipboard(context, "fingerprint", id.fingerprint) },
+                onClick = { clipboard.setClip(ClipData.newPlainText("fingerprint", id.fingerprint).toClipEntry()) },
                 enabled = id.fingerprint.isNotBlank(),
+                modifier = Modifier.size(36.dp),
             ) {
                 Icon(
                     Icons.Default.ContentCopy,
                     contentDescription = stringResource(R.string.account_copy),
+                    modifier = Modifier.size(18.dp),
                 )
             }
         }
         IdentityFieldRow(label = stringResource(R.string.account_identity_identity)) {
             ValueChip(text = id.entity, monospace = true, modifier = Modifier.weight(1f))
             IconButton(
-                onClick = { copyToClipboard(context, "identity", id.entity) },
+                onClick = { clipboard.setClip(ClipData.newPlainText("identity", id.entity).toClipEntry()) },
                 enabled = id.entity.isNotBlank(),
+                modifier = Modifier.size(36.dp),
             ) {
                 Icon(
                     Icons.Default.ContentCopy,
                     contentDescription = stringResource(R.string.account_copy),
+                    modifier = Modifier.size(18.dp),
                 )
             }
         }
@@ -396,12 +410,6 @@ private fun ValueChip(text: String, monospace: Boolean = false, modifier: Modifi
             fontFamily = if (monospace) FontFamily.Monospace else FontFamily.Default,
         )
     }
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String) {
-    if (value.isBlank()) return
-    val cb = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return
-    cb.setPrimaryClip(ClipData.newPlainText(label, value))
 }
 
 /** Insert a hyphen every 3 chars — matches the web UI's fingerprint chunking. */

@@ -60,6 +60,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.CompactTextField
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EntityAvatar
@@ -157,17 +158,17 @@ fun ChatSettingsScreen(
                     verticalArrangement = Arrangement.spacedBy(20.dp)
                 ) {
                     item {
-                        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                        Column {
                             SettingsSectionHeader(
                                 title = stringResource(R.string.chat_settings_general),
                                 description = stringResource(R.string.chat_settings_general_desc),
                             )
+                            Spacer(modifier = Modifier.height(8.dp))
                             SettingsFieldRow(label = stringResource(R.string.chat_settings_rename_label)) {
                                 if (editingName) {
-                                    OutlinedTextField(
+                                    CompactTextField(
                                         value = nameDraft,
-                                        onValueChange = { nameDraft = it },
-                                        singleLine = true,
+                                        onValueChange = { draft -> nameDraft = draft },
                                         modifier = Modifier.weight(1f),
                                     )
                                     IconButton(
@@ -178,19 +179,25 @@ fun ChatSettingsScreen(
                                             editingName = false
                                         },
                                         enabled = nameDraft.isNotBlank() && !uiState.isSaving,
+                                        modifier = Modifier.size(36.dp),
                                     ) {
                                         Icon(
                                             Icons.Default.Check,
                                             contentDescription = stringResource(R.string.chat_settings_save),
+                                            modifier = Modifier.size(18.dp),
                                         )
                                     }
-                                    IconButton(onClick = {
-                                        nameDraft = uiState.chat.name
-                                        editingName = false
-                                    }) {
+                                    IconButton(
+                                        onClick = {
+                                            nameDraft = uiState.chat.name
+                                            editingName = false
+                                        },
+                                        modifier = Modifier.size(36.dp),
+                                    ) {
                                         Icon(
                                             Icons.Default.Close,
                                             contentDescription = stringResource(MochiR.string.common_cancel),
+                                            modifier = Modifier.size(18.dp),
                                         )
                                     }
                                 } else {
@@ -208,7 +215,7 @@ fun ChatSettingsScreen(
                                                 nameDraft = uiState.chat.name
                                                 editingName = true
                                             },
-                                            modifier = Modifier.size(32.dp),
+                                            modifier = Modifier.size(36.dp),
                                         ) {
                                             Icon(
                                                 Icons.Default.Edit,
@@ -224,9 +231,11 @@ fun ChatSettingsScreen(
                                 IconButton(
                                     onClick = {
                                         clipboard.setText(AnnotatedString(uiState.chat.id))
-                                        Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT)
+                                            .show()
                                     },
                                     enabled = uiState.chat.id.isNotBlank(),
+                                    modifier = Modifier.size(36.dp),
                                 ) {
                                     Icon(
                                         Icons.Default.ContentCopy,
@@ -265,7 +274,7 @@ fun ChatSettingsScreen(
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                             } else {
-                                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                     uiState.chat.members.forEach { member ->
                                         MemberRow(
                                             member = member,

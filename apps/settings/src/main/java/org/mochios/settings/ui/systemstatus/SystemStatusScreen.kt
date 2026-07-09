@@ -6,7 +6,6 @@
 package org.mochios.settings.ui.systemstatus
 
 import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -48,7 +47,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -73,6 +74,7 @@ fun SystemStatusScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     Scaffold(
         topBar = {
             TopAppBar(
@@ -210,7 +212,7 @@ fun SystemStatusScreen(
                             isInstalling = state.isInstalling,
                             installError = state.installError?.userMessage(),
                             onInstall = { viewModel.installUpdate() },
-                            onCopy = { copyToClipboard(context, "command", it) },
+                            onCopy = { command -> clipboard.setClip(ClipData.newPlainText("command", command).toClipEntry()) },
                             onOpen = { openUrl(context, it) },
                         )
                     }
@@ -439,7 +441,10 @@ private fun CommandHint(command: String, onCopy: (String) -> Unit) {
                 fontFamily = FontFamily.Monospace,
             )
         }
-        IconButton(onClick = { onCopy(command) }) {
+        IconButton(
+            onClick = { onCopy(command) },
+            modifier = Modifier.size(36.dp),
+        ) {
             Icon(
                 Icons.Default.ContentCopy,
                 contentDescription = stringResource(R.string.system_status_copy),
@@ -465,11 +470,6 @@ private fun formatSystemTimestamp(epochSeconds: Long): String {
     val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US)
     sdf.timeZone = TimeZone.getDefault()
     return sdf.format(Date(epochSeconds * 1000))
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String) {
-    val cb = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return
-    cb.setPrimaryClip(ClipData.newPlainText(label, value))
 }
 
 private fun openUrl(context: Context, url: String) {

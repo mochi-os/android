@@ -220,7 +220,10 @@ private fun CrmInfoRow(label: String, value: String) {
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        IconButton(onClick = { clipboard.setText(AnnotatedString(value)) }) {
+        IconButton(
+            onClick = { clipboard.setText(AnnotatedString(value)) },
+            modifier = Modifier.size(36.dp),
+        ) {
             Icon(
                 Icons.Default.ContentCopy,
                 contentDescription = stringResource(MochiR.string.common_copy),

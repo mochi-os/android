@@ -6,8 +6,6 @@
 package org.mochios.settings.ui.login
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
@@ -60,7 +58,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -99,6 +99,7 @@ fun LoginScreen(
     val launchUrl by viewModel.oauthLaunchUrl.collectAsState()
     val stepUpVisible by viewModel.stepUpVisible.collectAsState()
     val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
 
     LaunchedEffect(launchUrl) {
         val url = launchUrl ?: return@LaunchedEffect
@@ -196,13 +197,13 @@ fun LoginScreen(
             secret = setup.secret,
             onCancel = viewModel::cancelTotpSetup,
             onVerify = { code -> viewModel.verifyTotp(code) },
-            onCopySecret = { copyToClipboard(context, "totp", setup.secret) },
+            onCopySecret = { clipboard.setClip(ClipData.newPlainText("totp", setup.secret).toClipEntry()) },
         )
     }
     recoveryCodes?.let { codes ->
         RecoveryCodesDialog(
             codes = codes,
-            onCopyAll = { copyToClipboard(context, "recovery codes", codes.joinToString("\n")) },
+            onCopyAll = { clipboard.setClip(ClipData.newPlainText("recovery codes", codes.joinToString("\n")).toClipEntry()) },
             onDone = viewModel::acknowledgeRecoveryCodes,
         )
     }
@@ -523,8 +524,15 @@ private fun TotpSetupDialog(
                         modifier = Modifier.weight(1f),
                         style = MaterialTheme.typography.bodyMedium,
                     )
-                    IconButton(onClick = onCopySecret) {
-                        Icon(Icons.Default.ContentCopy, contentDescription = stringResource(R.string.account_copy))
+                    IconButton(
+                        onClick = onCopySecret,
+                        modifier = Modifier.size(36.dp),
+                    ) {
+                        Icon(
+                            Icons.Default.ContentCopy,
+                            contentDescription = stringResource(R.string.account_copy),
+                            modifier = Modifier.size(18.dp),
+                        )
                     }
                 }
                 Spacer(Modifier.height(8.dp))
@@ -753,9 +761,4 @@ private fun SectionHeader(text: String) {
         fontWeight = FontWeight.SemiBold,
         modifier = Modifier.padding(bottom = 4.dp),
     )
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String) {
-    val cb = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return
-    cb.setPrimaryClip(ClipData.newPlainText(label, value))
 }
