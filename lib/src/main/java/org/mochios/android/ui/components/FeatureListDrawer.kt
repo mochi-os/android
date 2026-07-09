@@ -48,10 +48,18 @@ import androidx.compose.ui.unit.dp
  *
  * Feature modules adapt their domain row type (Feed, Chat, Forum, Project)
  * into this shape so a single [FeatureListDrawer] composable can render every
- * feature's drawer. Keeps icon + unread badge + secondary subtitle as
- * common columns; anything richer (e.g. avatars from an entity asset URL)
- * can be wired by overriding [icon] with a custom composable per feature in
- * a future iteration.
+ * feature's drawer. Keeps icon + unread badge + secondary subtitle as common
+ * columns.
+ *
+ * Leading slot resolution: [avatarUrl] wins (async avatar image), else a
+ * colour-seeded [EntityIconCircle] when both [seed] and [icon] are set, else
+ * the plain [icon]. Features that don't set [avatarUrl]/[seed] keep the plain
+ * icon look unchanged.
+ *
+ * @property avatarUrl optional avatar asset path (e.g. "/people/<id>/-/avatar");
+ *   rendered as a circular image, falling back to initials on load failure.
+ * @property seed stable id used to colour-seed the leading circle so the entity
+ *   reads the same here as in its list row / top bar.
  */
 data class FeatureDrawerItem(
     val id: String,
@@ -60,6 +68,8 @@ data class FeatureDrawerItem(
     val unread: Int = 0,
     val icon: ImageVector? = null,
     val trailingIcon: ImageVector? = null,
+    val avatarUrl: String? = null,
+    val seed: String? = null,
 )
 
 /**
@@ -214,25 +224,46 @@ private fun DrawerItemRow(
             .padding(horizontal = 24.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        if (item.icon != null) {
-            Box(contentAlignment = Alignment.TopEnd) {
-                Icon(
-                    imageVector = item.icon,
-                    contentDescription = null,
-                    modifier = Modifier.size(24.dp),
-                    tint = contentColor,
+        when {
+            !item.avatarUrl.isNullOrBlank() -> {
+                EntityAvatar(
+                    name = item.title,
+                    src = item.avatarUrl,
+                    seed = item.seed ?: item.id,
+                    size = 32.dp,
                 )
-                // Small hollow ring marking the aggregate "All" item.
-                if (pinned) {
-                    Box(
-                        modifier = Modifier
-                            .offset(x = 2.dp, y = (-2).dp)
-                            .size(9.dp)
-                            .border(width = 1.5.dp, color = contentColor, shape = CircleShape)
-                    )
-                }
+                Spacer(modifier = Modifier.size(12.dp))
             }
-            Spacer(modifier = Modifier.size(12.dp))
+
+            item.seed != null && item.icon != null && !pinned -> {
+                EntityIconCircle(
+                    seed = item.seed,
+                    icon = item.icon,
+                    size = 32.dp,
+                )
+                Spacer(modifier = Modifier.size(12.dp))
+            }
+
+            item.icon != null -> {
+                Box(contentAlignment = Alignment.TopEnd) {
+                    Icon(
+                        imageVector = item.icon,
+                        contentDescription = null,
+                        modifier = Modifier.size(24.dp),
+                        tint = contentColor,
+                    )
+                    // Small hollow ring marking the aggregate "All" item.
+                    if (pinned) {
+                        Box(
+                            modifier = Modifier
+                                .offset(x = 2.dp, y = (-2).dp)
+                                .size(9.dp)
+                                .border(width = 1.5.dp, color = contentColor, shape = CircleShape)
+                        )
+                    }
+                }
+                Spacer(modifier = Modifier.size(12.dp))
+            }
         }
         Column(modifier = Modifier.weight(1f)) {
             Text(

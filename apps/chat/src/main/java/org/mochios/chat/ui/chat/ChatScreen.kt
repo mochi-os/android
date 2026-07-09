@@ -46,6 +46,7 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
@@ -120,6 +121,7 @@ import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.chat.R
@@ -175,11 +177,14 @@ fun ChatScreen(
     val drawerItems = remember(listUiState.chats, pinnedChats) {
         listViewModel.filteredChats().map { chat ->
             val key = chat.fingerprint.ifEmpty { chat.id }
+            val isDirect = chat.members == 2 && chat.other.isNotBlank()
             FeatureDrawerItem(
                 id = key,
                 title = chat.name,
-                icon = Icons.Default.ChatBubbleOutline,
+                icon = if (chat.members > 2) Icons.Default.Groups else Icons.Default.ChatBubbleOutline,
                 trailingIcon = if (key in pinnedChats) Icons.Outlined.PushPin else null,
+                avatarUrl = if (isDirect) "/people/${chat.other}/-/avatar" else null,
+                seed = key,
             )
         }
     }
@@ -365,6 +370,13 @@ private fun ChatContent(
                                     name = peer.name.ifBlank { uiState.chat.name },
                                     src = peerAvatarUrl,
                                     seed = peer.id,
+                                    size = 32.dp,
+                                )
+                                Spacer(Modifier.width(8.dp))
+                            } else if (isGroup) {
+                                EntityIconCircle(
+                                    seed = uiState.chat.fingerprint.ifEmpty { uiState.chat.id },
+                                    icon = Icons.Default.Groups,
                                     size = 32.dp,
                                 )
                                 Spacer(Modifier.width(8.dp))

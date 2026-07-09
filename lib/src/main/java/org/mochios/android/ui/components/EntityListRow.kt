@@ -29,6 +29,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 /**
@@ -113,16 +114,26 @@ fun EntityListRow(
 }
 
 /**
- * 40dp circle filled with a colour seeded from [seed], with [icon] drawn
- * in white at the centre. Same colour seeding as [EntityAvatar] so a single
- * entity reads consistently across surfaces (avatar vs list row).
+ * Circle filled with a colour seeded from [seed], with [icon] drawn in white at
+ * the centre. Same colour seeding as [EntityAvatar] so a single entity reads
+ * consistently across surfaces (avatar vs list row vs top bar).
+ *
+ * @param seed stable identifier used to pick the deterministic circle colour.
+ * @param icon glyph drawn centred inside the circle.
+ * @param size circle diameter; the glyph scales to ~55% of it.
+ * @param modifier applied to the circle.
  */
 @Composable
-private fun EntityIconCircle(seed: String, icon: ImageVector) {
+fun EntityIconCircle(
+    seed: String,
+    icon: ImageVector,
+    size: Dp = 40.dp,
+    modifier: Modifier = Modifier,
+) {
     val bg = colourFromSeed(seed)
     Box(
-        modifier = Modifier
-            .size(40.dp)
+        modifier = modifier
+            .size(size)
             .clip(CircleShape)
             .background(bg),
         contentAlignment = Alignment.Center
@@ -131,7 +142,7 @@ private fun EntityIconCircle(seed: String, icon: ImageVector) {
             imageVector = icon,
             contentDescription = null,
             tint = Color.White,
-            modifier = Modifier.size(22.dp)
+            modifier = Modifier.size(size * 0.55f)
         )
     }
 }
