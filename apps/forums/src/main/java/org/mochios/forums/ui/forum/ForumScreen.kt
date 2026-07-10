@@ -102,6 +102,7 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.forums.R
 import org.mochios.forums.model.Post
+import org.mochios.forums.ui.forumlist.CreateForumDialog
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
@@ -156,6 +157,14 @@ fun ForumScreen(
         }
     }
 
+    // Opening the forum the user just created saves them hunting for it in the
+    // freshly reloaded drawer.
+    LaunchedEffect(listViewModel) {
+        listViewModel.forumCreated.collect { newForumId ->
+            if (newForumId != forumId) onSelectForum(newForumId)
+        }
+    }
+
     val drawerItems = remember(listUiState.forums) {
         listViewModel.filteredForums().map { forum ->
             FeatureDrawerItem(
@@ -195,6 +204,14 @@ fun ForumScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindForums()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.forums_create_title),
+                icon = Icons.Default.Add,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    listViewModel.showCreateDialog()
                 },
             )
             DrawerActionRow(
@@ -238,6 +255,14 @@ fun ForumScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
+    }
+
+    if (listUiState.showCreateDialog) {
+        CreateForumDialog(
+            isCreating = listUiState.isCreating,
+            onDismiss = { listViewModel.hideCreateDialog() },
+            onCreate = { name, privacy -> listViewModel.createForum(name, privacy) },
+        )
     }
 }
 
@@ -421,23 +446,6 @@ private fun ForumContent(
 
                                 HorizontalDivider()
 
-                                if (uiState.canManage && uiState.forum.id.isNotEmpty()) {
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(R.string.forums_settings))
-                                        },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.Default.Settings,
-                                                contentDescription = null
-                                            )
-                                        },
-                                        onClick = {
-                                            showOverflowMenu = false
-                                            onSettings(forumIdForCallbacks)
-                                        }
-                                    )
-                                }
                                 // The aggregate exports a class-level RSS feed
                                 // but has no single forum to unsubscribe from.
                                 if (isAll || uiState.forum.id.isNotEmpty()) {
@@ -460,7 +468,26 @@ private fun ForumContent(
                                         onClick = { showRssSubmenu = true }
                                     )
                                 }
-                                if (!isAll && uiState.forum.id.isNotEmpty()) {
+                                if (uiState.canManage && uiState.forum.id.isNotEmpty()) {
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(stringResource(R.string.forums_settings))
+                                        },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.Default.Settings,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        onClick = {
+                                            showOverflowMenu = false
+                                            onSettings(forumIdForCallbacks)
+                                        }
+                                    )
+                                }
+                                // Managers delete the forum from settings rather
+                                // than unsubscribing from something they own.
+                                if (!isAll && !uiState.canManage && uiState.forum.id.isNotEmpty()) {
                                     DropdownMenuItem(
                                         text = {
                                             Text(

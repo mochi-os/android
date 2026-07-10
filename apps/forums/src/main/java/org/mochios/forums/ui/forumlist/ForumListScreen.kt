@@ -36,25 +36,25 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -99,6 +99,10 @@ fun ForumListScreen(
         }
         lifecycleOwner.lifecycle.addObserver(observer)
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
+    LaunchedEffect(viewModel) {
+        viewModel.forumCreated.collect { newForumId -> onForumClick(newForumId) }
     }
 
     Scaffold(
@@ -349,15 +353,20 @@ private fun ForumRow(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+/**
+ * Create-forum dialog, shared by [ForumListScreen] and the forum drawer's
+ * "Create forum" action. The privacy choice is a single switch — on means the
+ * forum is listed in the directory and anyone can search for it (`public`),
+ * off keeps it out (`private`).
+ */
 @Composable
-private fun CreateForumDialog(
+internal fun CreateForumDialog(
     isCreating: Boolean,
     onDismiss: () -> Unit,
     onCreate: (String, String) -> Unit
 ) {
     var name by remember { mutableStateOf("") }
-    var privacy by remember { mutableStateOf("public") }
+    var allowSearch by remember { mutableStateOf(true) }
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -366,39 +375,35 @@ private fun CreateForumDialog(
             Column {
                 OutlinedTextField(
                     value = name,
-                    onValueChange = { name = it },
+                    onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.forums_create_name)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
-                Spacer(Modifier.height(12.dp))
-                Text(
-                    stringResource(R.string.forums_create_privacy),
-                    style = MaterialTheme.typography.labelMedium
-                )
-                Spacer(Modifier.height(4.dp))
-                Row {
-                    FilterChip(
-                        selected = privacy == "public",
-                        onClick = { privacy = "public" },
-                        label = { Text(stringResource(R.string.forums_create_public)) }
-                    )
-                    Spacer(Modifier.width(8.dp))
-                    FilterChip(
-                        selected = privacy == "private",
-                        onClick = { privacy = "private" },
-                        label = { Text(stringResource(R.string.forums_create_private)) }
+                Spacer(Modifier.height(16.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(stringResource(R.string.forums_create_allow_search))
+                    Switch(
+                        checked = allowSearch,
+                        onCheckedChange = { checked -> allowSearch = checked }
                     )
                 }
             }
         },
         confirmButton = {
-            Button(
-                onClick = { onCreate(name, privacy) },
+            TextButton(
+                onClick = { onCreate(name, if (allowSearch) "public" else "private") },
                 enabled = name.isNotBlank() && !isCreating
             ) {
                 if (isCreating) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(16.dp),
+                        strokeWidth = 2.dp
+                    )
                 } else {
                     Text(stringResource(R.string.forums_create_action))
                 }

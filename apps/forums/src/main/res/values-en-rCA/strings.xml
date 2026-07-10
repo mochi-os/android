@@ -3,8 +3,8 @@
 
     <string name="forums_create_privacy">Privacy</string>
 
-    <string name="forums_create_name">Name</string>
-    <string name="forums_create_action">Create</string>
+    <string name="forums_create_name">Forum name</string>
+    <string name="forums_create_action">Create forum</string>
     <string name="forums_post_save">Save</string>
     <string name="forums_comment_save">Save</string>
     <string name="forums_settings_save">Save</string>

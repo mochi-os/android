@@ -38,11 +38,12 @@
 
     <!-- Create forum -->
     <string name="forums_create_title">Create forum</string>
-    <string name="forums_create_name">Name</string>
+    <string name="forums_create_name">Forum name</string>
+    <string name="forums_create_allow_search">Allow anyone to search for forum</string>
     <string name="forums_create_privacy">Privacy</string>
     <string name="forums_create_private">Private</string>
     <string name="forums_create_public">Public</string>
-    <string name="forums_create_action">Create</string>
+    <string name="forums_create_action">Create forum</string>
 
     <!-- Find forums -->
     <string name="forums_find_title">Find forums</string>

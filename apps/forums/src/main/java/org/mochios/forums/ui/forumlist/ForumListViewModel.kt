@@ -8,8 +8,11 @@ package org.mochios.forums.ui.forumlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -40,6 +43,10 @@ class ForumListViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ForumListUiState())
     val uiState: StateFlow<ForumListUiState> = _uiState.asStateFlow()
+
+    /** Emits the id of a just-created forum so the host screen can open it. */
+    private val _forumCreated = MutableSharedFlow<String>()
+    val forumCreated: SharedFlow<String> = _forumCreated.asSharedFlow()
 
     init {
         load()
@@ -118,13 +125,18 @@ class ForumListViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(showCreateDialog = false)
     }
 
+    /**
+     * Create a forum, refresh the list so the drawer shows it, then emit its id
+     * on [forumCreated] for the host screen to navigate into.
+     */
     fun createForum(name: String, privacy: String) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true)
             try {
-                repository.createForum(name, privacy)
+                val forumId = repository.createForum(name, privacy)
                 _uiState.value = _uiState.value.copy(isCreating = false, showCreateDialog = false)
                 load()
+                _forumCreated.emit(forumId)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isCreating = false, error = e.toMochiError())
             }
