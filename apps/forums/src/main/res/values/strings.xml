@@ -49,6 +49,7 @@
     <string name="forums_find_title">Find forums</string>
     <string name="forums_find_search_placeholder">Search forums or paste URL</string>
     <string name="forums_find_recommended">Recommended</string>
+    <string name="forums_find_results">Search results</string>
     <string name="forums_find_search_hint">Search for forums to subscribe to</string>
     <string name="forums_find_subscribe">Subscribe</string>
     <string name="forums_find_subscribed">Subscribed</string>

@@ -130,7 +130,13 @@ fun NavGraphBuilder.forumsNavGraph(
     composable(ForumsApp.FIND_FORUMS) {
         FindForumsScreen(
             onBack = { navController.popBackStack() },
-            onForumSubscribed = { navController.popBackStack() },
+            // Drop discovery from the back stack and open the forum just joined,
+            // so Back returns to the forum the user came from, not to the search.
+            onForumSubscribed = { forumId ->
+                navController.navigate(ForumsApp.forum(forumId)) {
+                    popUpTo(ForumsApp.FIND_FORUMS) { inclusive = true }
+                }
+            },
         )
     }
 

@@ -27,6 +27,7 @@ import org.mochios.forums.model.Restriction
 import org.mochios.forums.model.SavedListResponse
 import org.mochios.forums.model.SavedToggleResponse
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -64,7 +65,24 @@ data class SearchForumsResponse(val results: List<DirectoryEntry> = emptyList())
 data class RecommendationsResponse(val forums: List<RecommendedForum> = emptyList())
 
 
-data class SubscribeResponse(val already_subscribed: Boolean = false)
+data class SubscribeResponse(
+    val already_subscribed: Boolean = false,
+    /** Fingerprint of the forum joined; the id to route to. */
+    val fingerprint: String = "",
+    val id: String = ""
+)
+
+/** JSON body of `-/subscribe`; [server] is the entity's home-server hint. */
+data class SubscribeRequest(
+    val forum: String,
+    val server: String? = null
+)
+
+/** JSON body of `-/unsubscribe`. */
+data class UnsubscribeRequest(
+    val forum: String,
+    val server: String? = null
+)
 
 data class ViewPostResponse(
     val forum: Forum = Forum(),
@@ -234,16 +252,20 @@ interface ForumsApi {
         @Query("tag") tag: String? = null
     ): Response<ApiResponse<ViewForumResponse>>
 
-    @FormUrlEncoded
+    // JSON body rather than form fields, mirroring feeds' subscribe. The route
+    // stays entity-level: forums has no class-level `-/subscribe`, and posting
+    // to one returns the SPA's HTML with a 200.
     @POST("{forumId}/-/subscribe")
     suspend fun subscribe(
         @Path("forumId") forumId: String,
-        @Field("forum") forum: String,
-        @Field("server") server: String? = null
+        @Body body: SubscribeRequest
     ): Response<ApiResponse<SubscribeResponse>>
 
     @POST("{forumId}/-/unsubscribe")
-    suspend fun unsubscribe(@Path("forumId") forumId: String): Response<ApiResponse<SuccessResponse>>
+    suspend fun unsubscribe(
+        @Path("forumId") forumId: String,
+        @Body body: UnsubscribeRequest
+    ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{forumId}/-/delete")
     suspend fun deleteForum(@Path("forumId") forumId: String): Response<ApiResponse<SuccessResponse>>

@@ -27,6 +27,8 @@ import org.mochios.forums.api.ModerationReportsResponse
 import org.mochios.forums.api.RecommendationsResponse
 import org.mochios.forums.api.RestrictionsResponse
 import org.mochios.forums.api.RssTokenResponse
+import org.mochios.forums.api.SubscribeRequest
+import org.mochios.forums.api.UnsubscribeRequest
 import org.mochios.forums.api.ViewForumResponse
 import org.mochios.forums.api.ViewPostResponse
 import org.mochios.forums.model.AiPrompts
@@ -79,12 +81,15 @@ class ForumsRepository @Inject constructor(
     suspend fun listGroups(): List<org.mochios.forums.model.Group> =
         api.getGroups().unwrap().groups
 
-    suspend fun subscribe(forumId: String, server: String? = null) {
-        api.subscribe(forumId, forumId, server).unwrap()
+    /** Subscribe and return the fingerprint of the joined forum, when the server
+     *  reports one — that is the id its screen should be opened with. */
+    suspend fun subscribe(forumId: String, server: String? = null): String {
+        val r = api.subscribe(forumId, SubscribeRequest(forum = forumId, server = server)).unwrap()
+        return r.fingerprint.ifEmpty { r.id.ifEmpty { forumId } }
     }
 
-    suspend fun unsubscribe(forumId: String) {
-        api.unsubscribe(forumId).unwrap()
+    suspend fun unsubscribe(forumId: String, server: String? = null) {
+        api.unsubscribe(forumId, UnsubscribeRequest(forum = forumId, server = server)).unwrap()
     }
 
     suspend fun deleteForum(forumId: String) {
