@@ -5,6 +5,9 @@
 
 package org.mochios.forums.repository
 
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -40,6 +43,15 @@ class ForumsRepository @Inject constructor(
     private val api: ForumsApi
 ) {
     private val text = "text/plain".toMediaTypeOrNull()
+
+    /**
+     * Emits the forum id a post was just created in. The forum screen listens so
+     * it can pull the post into its list as the composer closes over it. A
+     * back-stack result would be tidier, but `NavBackStackEntry.savedStateHandle`
+     * is a different handle from the one injected into the ViewModel.
+     */
+    private val _postCreated = MutableSharedFlow<String>(extraBufferCapacity = 1)
+    val postCreated: SharedFlow<String> = _postCreated.asSharedFlow()
 
     suspend fun listForums(sort: String? = null): ForumListResponse =
         api.listForums(sort).unwrap()
@@ -146,12 +158,60 @@ class ForumsRepository @Inject constructor(
         val parts = files.map { f ->
             MultipartBody.Part.createFormData("attachments", f.name, f.asRequestBody(guessMediaType(f).toMediaTypeOrNull()))
         }
-        return api.createPost(
+        val response = api.createPost(
             forum = forumId.toRequestBody(text),
             title = title.toRequestBody(text),
             body = body.toRequestBody(text),
             attachments = parts
         ).unwrap()
+        _postCreated.tryEmit(forumId)
+        return response
+    }
+
+    /**
+     * Create a post whose attachments come from content-provider [uris] (the
+     * system file picker) rather than files on disk. Each URI is read into
+     * memory and sent as an `attachments` part, in the order given.
+     */
+    suspend fun createPostFromUris(
+        forumId: String,
+        title: String,
+        body: String,
+        uris: List<android.net.Uri>,
+        contentResolver: android.content.ContentResolver,
+    ): CreatePostResponse {
+        val parts = uris.map { uri ->
+            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
+            val bytes = contentResolver.openInputStream(uri)?.readBytes()
+                ?: throw IllegalStateException("Cannot read $uri")
+            MultipartBody.Part.createFormData(
+                "attachments",
+                displayName(contentResolver, uri),
+                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
+            )
+        }
+        val response = api.createPost(
+            forum = forumId.toRequestBody(text),
+            title = title.toRequestBody(text),
+            body = body.toRequestBody(text),
+            attachments = parts,
+        ).unwrap()
+        _postCreated.tryEmit(forumId)
+        return response
+    }
+
+    /**
+     * Human-readable filename behind a content URI. A `content://` path segment
+     * is an opaque id, so the provider's DISPLAY_NAME column is consulted first.
+     */
+    private fun displayName(contentResolver: android.content.ContentResolver, uri: android.net.Uri): String {
+        contentResolver.query(uri, null, null, null, null)?.use { cursor ->
+            val index = cursor.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME)
+            if (index >= 0 && cursor.moveToFirst()) {
+                cursor.getString(index)?.let { name -> return name }
+            }
+        }
+        return uri.lastPathSegment?.substringAfterLast('/') ?: "file"
     }
 
     suspend fun editPost(forumId: String, postId: String, title: String, body: String, order: String? = null, files: List<File> = emptyList()) {

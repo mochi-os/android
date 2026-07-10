@@ -96,11 +96,36 @@ class ForumViewModel @Inject constructor(
 
     private var subscriptionId: String? = null
 
+    /** Set while the list is catching up with a post this user just made — see
+     *  [observeRefreshRequests]. Cleared as soon as the post lands in the list. */
+    private var awaitingOwnPost = false
+
     init {
         load()
         loadTags()
         clearNotifications()
         viewModelScope.launch { savedRepository.load() }
+        observeOwnPosts()
+    }
+
+    /**
+     * Pull the list in as soon as this user posts to the forum on screen, so the
+     * composer closes onto a list that already has the post.
+     *
+     * The create call can return before the post is visible to the list query,
+     * so [awaitingOwnPost] keeps the door open for the `post/create` socket event
+     * that follows — otherwise the author's own post sits behind the "new posts"
+     * pill, waiting for a tap.
+     */
+    private fun observeOwnPosts() {
+        viewModelScope.launch {
+            repository.postCreated.collect { postedForum ->
+                if (isAll || postedForum == forumId || postedForum == uiState.value.forum.id) {
+                    awaitingOwnPost = true
+                    refreshSilently()
+                }
+            }
+        }
     }
 
     // Mark this forum's notifications read on the server (clear/object) when the
@@ -128,7 +153,14 @@ class ForumViewModel @Inject constructor(
             // silently. A refresh incorporates any queued posts and clears the
             // pill (see refreshSilently).
             if (event.type == "post/create") {
-                _newPostsCount.value += 1
+                // The user's own post shouldn't hide behind a pill they'd have to
+                // tap. It arrives here when the create response beat the list
+                // query — pull it in rather than counting it.
+                if (awaitingOwnPost) {
+                    viewModelScope.launch { refreshSilently() }
+                } else {
+                    _newPostsCount.value += 1
+                }
             } else {
                 viewModelScope.launch { refreshSilently() }
             }
@@ -139,6 +171,7 @@ class ForumViewModel @Inject constructor(
      *  since the fresh list already incorporates any queued posts. */
     private suspend fun refreshSilently() {
         try {
+            val previousCount = _uiState.value.posts.size
             val r = repository.viewForum(
                 forumId,
                 sort = _uiState.value.sort.ifEmpty { null },
@@ -152,6 +185,9 @@ class ForumViewModel @Inject constructor(
                 hasMore = r.hasMore,
                 nextCursor = r.nextCursor,
             )
+            // The awaited post has landed once the list grows; anything arriving
+            // after this belongs to somebody else and gets the pill.
+            if (r.posts.size > previousCount) awaitingOwnPost = false
             _newPostsCount.value = 0
             loadTags()
         } catch (_: Exception) {}

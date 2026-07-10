@@ -75,6 +75,11 @@
     <string name="forums_post_body_field">Body</string>
     <string name="forums_post_attach">Attach files</string>
     <string name="forums_post_create_action">Post</string>
+    <string name="forums_markdown_supported">Markdown supported</string>
+    <string name="forums_attachment_file">File</string>
+    <string name="forums_attachment_remove">Remove</string>
+    <string name="forums_attachment_move_up">Move up</string>
+    <string name="forums_attachment_move_down">Move down</string>
     <string name="forums_post_edit">Edit post</string>
     <string name="forums_post_edit_title">Edit post</string>
     <string name="forums_post_edit_title_field">Title</string>

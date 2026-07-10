@@ -54,7 +54,6 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -355,10 +354,22 @@ private fun ForumContent(
                     }
                 },
                 actions = {
-                    // Both actions render unconditionally so the row keeps its
-                    // width while the forum loads — the rows that depend on the
-                    // response are gated inside the menu instead.
+                    // Every action renders unconditionally so the row keeps its
+                    // width while the forum loads — anything that depends on the
+                    // response is gated inside the menu, or merely disabled.
                     NotificationBell(onClick = onOpenNotifications)
+                    // The aggregate spans forums, so there is no forum to post to.
+                    if (!isAll) {
+                        IconButton(
+                            onClick = { onNewPost(forumIdForCallbacks) },
+                            enabled = uiState.forum.id.isNotEmpty(),
+                        ) {
+                            Icon(
+                                Icons.Default.Add,
+                                contentDescription = stringResource(R.string.forums_new_post)
+                            )
+                        }
+                    }
                     Box {
                         IconButton(onClick = { showOverflowMenu = true }) {
                             Icon(
@@ -514,13 +525,6 @@ private fun ForumContent(
                 }
             )
         },
-        floatingActionButton = {
-            if (uiState.forum.id.isNotEmpty()) {
-                FloatingActionButton(onClick = { onNewPost(forumIdForCallbacks) }) {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.forums_new_post))
-                }
-            }
-        }
     ) { padding ->
         PullToRefreshBox(
             isRefreshing = uiState.isRefreshing,

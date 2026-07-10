@@ -118,9 +118,11 @@ fun NavGraphBuilder.forumsNavGraph(
     ) {
         NewPostScreen(
             onBack = { navController.popBackStack() },
-            onPostCreated = { fId, pId ->
+            onPostCreated = { _, _ ->
+                // Return to the forum the post was made in rather than opening the
+                // new post — the author has just written it. The list underneath
+                // pulls the post in via ForumsRepository.postCreated.
                 navController.popBackStack()
-                navController.navigate(ForumsApp.post(fId, pId))
             },
         )
     }
