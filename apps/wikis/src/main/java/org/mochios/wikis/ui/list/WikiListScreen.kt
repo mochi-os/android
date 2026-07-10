@@ -6,8 +6,6 @@
 package org.mochios.wikis.ui.list
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -64,7 +62,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -113,7 +112,7 @@ fun WikiListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
-    val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
 
     var showOverflow by remember { mutableStateOf(false) }
     var rssSubmenuOpen by remember { mutableStateOf(false) }
@@ -200,7 +199,10 @@ fun WikiListScreen(
                                                 val result = viewModel.makeRssUrl(mode)
                                                 result.fold(
                                                     onSuccess = { url ->
-                                                        copyToClipboard(context, clipboardLabel, url)
+                                                        clipboard.setClip(
+                                                            ClipData.newPlainText(clipboardLabel, url)
+                                                                .toClipEntry(),
+                                                        )
                                                         snackbarHostState.showSnackbar(rssCopiedMessage)
                                                     },
                                                     onFailure = {
@@ -621,9 +623,4 @@ private fun SubscribableRow(
             }
         }
     }
-}
-
-private fun copyToClipboard(context: Context, label: String, text: String) {
-    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    clipboard.setPrimaryClip(ClipData.newPlainText(label, text))
 }

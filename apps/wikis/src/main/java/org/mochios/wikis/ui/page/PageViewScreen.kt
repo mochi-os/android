@@ -6,7 +6,6 @@
 package org.mochios.wikis.ui.page
 
 import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
@@ -55,7 +54,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInParent
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -115,6 +116,7 @@ fun PageViewScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     val scope = rememberCoroutineScope()
     val snackbar = remember { SnackbarHostState() }
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
@@ -142,7 +144,9 @@ fun PageViewScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is PageViewEvent.CopyRssUrl -> {
-                    copyToClipboard(context, clipboardLabelRss, event.url)
+                    clipboard.setClip(
+                        ClipData.newPlainText(clipboardLabelRss, event.url).toClipEntry(),
+                    )
                     snackbar.showSnackbar(rssCopiedMsg)
                 }
                 is PageViewEvent.ShowError -> {
@@ -695,11 +699,6 @@ private fun SkeletonBar(widthFraction: Float) {
             .fillMaxWidth(widthFraction)
             .height(14.dp),
     ) { /* no content — just the tinted surface as a placeholder */ }
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String) {
-    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    clipboard.setPrimaryClip(ClipData.newPlainText(label, value))
 }
 
 private fun sharePageLink(

@@ -6,7 +6,6 @@
 package org.mochios.forums.ui.forum
 
 import android.content.ClipData
-import android.content.ClipboardManager
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -86,7 +85,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -320,7 +321,7 @@ private fun ForumContent(
     onUnsubscribed: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
 ) {
-    val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     val uiState by viewModel.uiState.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
@@ -338,7 +339,9 @@ private fun ForumContent(
         viewModel.events.collect { event ->
             when (event) {
                 is ForumEvent.CopyRssUrl -> {
-                    copyToClipboard(context, rssClipboardLabel, event.url)
+                    clipboard.setClip(
+                        ClipData.newPlainText(rssClipboardLabel, event.url).toClipEntry(),
+                    )
                     snackbar.showSnackbar(rssCopiedMessage)
                 }
                 is ForumEvent.Unsubscribed -> onUnsubscribed()
@@ -658,11 +661,6 @@ private fun ForumContent(
             onDismiss = { showUnsubscribeConfirm = false },
         )
     }
-}
-
-private fun copyToClipboard(context: Context, label: String, value: String) {
-    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    clipboard.setPrimaryClip(ClipData.newPlainText(label, value))
 }
 
 @Composable

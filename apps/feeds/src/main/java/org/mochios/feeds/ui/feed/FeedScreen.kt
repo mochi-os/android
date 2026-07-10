@@ -6,8 +6,6 @@
 package org.mochios.feeds.ui.feed
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -121,7 +119,9 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import android.widget.Toast
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -192,6 +192,7 @@ fun FeedScreen(
     feedListViewModel: FeedListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
@@ -221,10 +222,8 @@ fun FeedScreen(
         viewModel.actionEvents.collect { event ->
             when (event) {
                 is FeedActionEvent.RssUrlReady -> {
-                    val clipboard =
-                        context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                    clipboard.setPrimaryClip(
-                        ClipData.newPlainText(rssClipboardLabel, event.url)
+                    clipboard.setClip(
+                        ClipData.newPlainText(rssClipboardLabel, event.url).toClipEntry(),
                     )
                     Toast.makeText(context, rssCopiedMessage, Toast.LENGTH_SHORT).show()
                 }

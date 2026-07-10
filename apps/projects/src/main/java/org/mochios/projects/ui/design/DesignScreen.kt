@@ -6,8 +6,6 @@
 package org.mochios.projects.ui.design
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -58,7 +56,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -82,6 +82,7 @@ fun DesignScreen(
     var confirmPastedJson by remember { mutableStateOf<String?>(null) }
 
     val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     val snackbarHostState = remember { SnackbarHostState() }
     val clipboardLabel = stringResource(R.string.projects_design_clipboard_label)
     val exportSubject = stringResource(R.string.projects_design_export_subject)
@@ -92,8 +93,7 @@ fun DesignScreen(
     LaunchedEffect(uiState.exportedJson) {
         uiState.exportedJson?.let { json ->
             // Copy to clipboard and offer share
-            val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            clipboard.setPrimaryClip(ClipData.newPlainText(clipboardLabel, json))
+            clipboard.setClip(ClipData.newPlainText(clipboardLabel, json).toClipEntry())
             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "application/json"
                 putExtra(Intent.EXTRA_TEXT, json)

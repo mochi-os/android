@@ -6,8 +6,6 @@
 package org.mochios.feeds.ui.feedlist
 
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -71,7 +69,9 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -291,7 +291,7 @@ private fun GlobalRssExportDialog(
     viewModel: FeedListViewModel,
     onDismiss: () -> Unit
 ) {
-    val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
     val globalRssUrl by viewModel.globalRssUrl.collectAsState()
     var mode by remember { mutableStateOf("posts") }
     val clipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
@@ -338,8 +338,9 @@ private fun GlobalRssExportDialog(
                     Spacer(modifier = Modifier.height(8.dp))
                     OutlinedButton(
                         onClick = {
-                            val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                            clipboard.setPrimaryClip(ClipData.newPlainText(clipboardLabel, globalRssUrl))
+                            clipboard.setClip(
+                                ClipData.newPlainText(clipboardLabel, globalRssUrl).toClipEntry(),
+                            )
                             viewModel.setRssCopiedMessage(copiedMessage)
                         }
                     ) {
