@@ -138,9 +138,8 @@ class ForumSettingsViewModel @Inject constructor(
         }
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(
-                    userSearchResults = repository.searchUsers(query.trim()),
-                )
+                val results = repository.searchUsers(query.trim())
+                _uiState.value = _uiState.value.copy(userSearchResults = results)
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             }
@@ -150,10 +149,9 @@ class ForumSettingsViewModel @Inject constructor(
     fun loadGroups() {
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(
-                    groups = repository.listGroups()
-                        .sortedWith(compareBy(NaturalCompare) { it.name }),
-                )
+                val groups = repository.listGroups()
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                _uiState.value = _uiState.value.copy(groups = groups)
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(groups = emptyList())
             }

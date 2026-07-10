@@ -62,9 +62,10 @@ class ReplicasTabViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                val replicas = repository.getReplicas(wikiId)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    replicas = repository.getReplicas(wikiId),
+                    replicas = replicas,
                     error = null,
                 )
             } catch (e: Exception) {

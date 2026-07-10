@@ -159,7 +159,11 @@ class CrmSettingsViewModel @Inject constructor(
         }
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(userSearchResults = repository.searchUsers(query.trim()))
+                // Await the results before reading the state to copy from —
+                // inline, the receiver is captured before the suspend, so a slow
+                // search writes back the snapshot it started from.
+                val results = repository.searchUsers(query.trim())
+                _uiState.value = _uiState.value.copy(userSearchResults = results)
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             }
@@ -170,9 +174,9 @@ class CrmSettingsViewModel @Inject constructor(
     fun loadGroups() {
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(
-                    groups = repository.getGroups().sortedWith(compareBy(NaturalCompare) { it.name }),
-                )
+                val groups = repository.getGroups()
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                _uiState.value = _uiState.value.copy(groups = groups)
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(groups = emptyList())
             }

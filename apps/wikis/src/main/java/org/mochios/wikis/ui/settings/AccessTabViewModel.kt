@@ -170,9 +170,8 @@ class AccessTabViewModel @Inject constructor(
         }
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(
-                    userSearchResults = repository.searchUsers(query),
-                )
+                val results = repository.searchUsers(query)
+                _uiState.value = _uiState.value.copy(userSearchResults = results)
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             }
@@ -182,10 +181,9 @@ class AccessTabViewModel @Inject constructor(
     fun loadGroups() {
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(
-                    groups = repository.listGroups(wikiId)
-                        .sortedWith(compareBy(NaturalCompare) { it.name }),
-                )
+                val groups = repository.listGroups(wikiId)
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                _uiState.value = _uiState.value.copy(groups = groups)
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(groups = emptyList())
             }

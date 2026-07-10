@@ -306,7 +306,13 @@ class ForumViewModel @Inject constructor(
         if (isAll) return
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(tags = repository.getForumTags(forumId))
+                // Await the tags BEFORE reading the state to copy from. Inline as
+                // a copy() argument the receiver `_uiState.value` is evaluated
+                // first, so a tag fetch that lands after the post fetch writes
+                // back the pre-load snapshot and strands the screen on its
+                // loading spinner.
+                val tags = repository.getForumTags(forumId)
+                _uiState.value = _uiState.value.copy(tags = tags)
             } catch (_: Exception) {
             }
         }

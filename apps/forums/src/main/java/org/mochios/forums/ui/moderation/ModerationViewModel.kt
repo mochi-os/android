@@ -70,16 +70,31 @@ class ModerationViewModel @Inject constructor(
                 error = null,
             )
             try {
+                // Each fetch is awaited before the state it merges into is read.
+                // Inline as a copy() argument the receiver `_uiState.value` is
+                // captured before the suspend, so a tab whose response lands late
+                // writes back the snapshot it started from — discarding the newer
+                // tab's data and the `finally` block's isLoading = false.
                 when (index) {
-                    0 -> _uiState.value = _uiState.value.copy(queue = repository.moderationQueue(forumId))
-                    1 -> _uiState.value = _uiState.value.copy(
-                        reports = repository.moderationReports(forumId, _uiState.value.reportsStatus)
-                    )
-                    2 -> _uiState.value = _uiState.value.copy(log = repository.moderationLog(forumId).entries)
-                    3 -> _uiState.value = _uiState.value.copy(
-                        restrictions = repository.restrictions(forumId).restrictions
+                    0 -> {
+                        val queue = repository.moderationQueue(forumId)
+                        _uiState.value = _uiState.value.copy(queue = queue)
+                    }
+                    1 -> {
+                        val reports = repository.moderationReports(
+                            forumId, _uiState.value.reportsStatus
+                        )
+                        _uiState.value = _uiState.value.copy(reports = reports)
+                    }
+                    2 -> {
+                        val log = repository.moderationLog(forumId).entries
+                        _uiState.value = _uiState.value.copy(log = log)
+                    }
+                    3 -> {
+                        val restrictions = repository.restrictions(forumId).restrictions
                             .sortedWith(compareBy(NaturalCompare) { it.name })
-                    )
+                        _uiState.value = _uiState.value.copy(restrictions = restrictions)
+                    }
                 }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -138,7 +153,8 @@ class ModerationViewModel @Inject constructor(
     fun loadSettings() {
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(settings = repository.moderationSettings(forumId))
+                val settings = repository.moderationSettings(forumId)
+                _uiState.value = _uiState.value.copy(settings = settings)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

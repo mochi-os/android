@@ -101,7 +101,11 @@ class ListingDetailViewModel @Inject constructor(
     private fun loadCategories() {
         viewModelScope.launch {
             try {
-                _state.value = _state.value.copy(categories = repository.listCategories())
+                // Await the categories before reading the state to copy from —
+                // inline, the receiver is captured before the suspend and a slow
+                // response writes back a pre-load snapshot.
+                val categories = repository.listCategories()
+                _state.value = _state.value.copy(categories = categories)
             } catch (_: Exception) {
                 // Categories non-critical; category chip just hides itself.
             }

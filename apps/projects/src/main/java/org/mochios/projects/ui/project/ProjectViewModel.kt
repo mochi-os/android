@@ -112,12 +112,13 @@ class ProjectViewModel @Inject constructor(
                 val objects = repository.getObjects(projectId)
                 val people = runCatching { repository.getPeople(projectId) }
                     .getOrDefault(_uiState.value.people)
+                val watched = repository.getWatched(projectId)
                 val activeViewId = _uiState.value.activeViewId
                     ?: details.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
                     objects = objects,
-                    watched = repository.getWatched(projectId),
+                    watched = watched,
                     people = people,
                     activeViewId = activeViewId,
                     isLoading = false
@@ -137,10 +138,11 @@ class ProjectViewModel @Inject constructor(
             val objects = repository.getObjects(projectId)
             val people = runCatching { repository.getPeople(projectId) }
                 .getOrDefault(_uiState.value.people)
+            val watched = repository.getWatched(projectId)
             _uiState.value = _uiState.value.copy(
                 projectDetails = details,
                 objects = objects,
-                watched = repository.getWatched(projectId),
+                watched = watched,
                 people = people
             )
         } catch (_: Exception) {
@@ -156,10 +158,11 @@ class ProjectViewModel @Inject constructor(
                 val objects = repository.getObjects(projectId)
                 val people = runCatching { repository.getPeople(projectId) }
                     .getOrDefault(_uiState.value.people)
+                val watched = repository.getWatched(projectId)
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
                     objects = objects,
-                    watched = repository.getWatched(projectId),
+                    watched = watched,
                     people = people,
                     isRefreshing = false,
                     error = null
@@ -348,9 +351,10 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val objects = repository.getObjects(projectId)
+                val watched = repository.getWatched(projectId)
                 _uiState.value = _uiState.value.copy(
                     objects = objects,
-                    watched = repository.getWatched(projectId)
+                    watched = watched
                 )
             } catch (_: Exception) { }
         }
