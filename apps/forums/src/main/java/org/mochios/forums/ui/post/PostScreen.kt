@@ -5,6 +5,20 @@
 
 package org.mochios.forums.ui.post
 
+import org.mochios.android.ui.components.CommentItem
+import org.mochios.android.ui.components.TagItem
+import org.mochios.android.ui.components.PostTagsButton
+import androidx.compose.material.icons.automirrored.outlined.Reply
+import androidx.compose.ui.platform.LocalContext
+import android.provider.OpenableColumns
+import androidx.compose.material3.AssistChip
+import androidx.compose.material.icons.filled.AttachFile
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.compose.rememberLauncherForActivityResult
+import android.net.Uri
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,19 +31,27 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.filled.ChatBubble
+import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
-import androidx.compose.material3.Card
+import androidx.compose.material.icons.outlined.ThumbUp
+import androidx.compose.material.icons.outlined.LocalOffer
+import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
@@ -37,6 +59,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.IconButton
@@ -55,7 +78,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -64,12 +90,15 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
+import org.mochios.forums.model.Tag
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -79,6 +108,7 @@ fun PostScreen(
     viewModel: PostViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val commentAttachments by viewModel.commentAttachments.collectAsState()
     var draft by remember { mutableStateOf("") }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
@@ -86,6 +116,8 @@ fun PostScreen(
     var editingComment by remember { mutableStateOf<ForumComment?>(null) }
     var showReportPost by remember { mutableStateOf(false) }
     var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
+    var showPostMenu by remember { mutableStateOf(false) }
+    val isPostAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank()
 
     LaunchedEffect(uiState.deleted) {
         if (uiState.deleted) onBack()
@@ -95,8 +127,10 @@ fun PostScreen(
         topBar = {
             TopAppBar(
                 title = {
+                    // The post's own title — the forum name is already implied by
+                    // where the user came from.
                     Text(
-                        text = uiState.forum.name.ifBlank { stringResource(R.string.forums_loading) },
+                        text = uiState.post.title.ifBlank { stringResource(R.string.forums_loading) },
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -107,6 +141,40 @@ fun PostScreen(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
                         )
+                    }
+                },
+                actions = {
+                    // The post's own actions live in the bar rather than beside
+                    // the title, leaving the card as pure content.
+                    if (uiState.post.id.isNotEmpty()) {
+                        Box {
+                            IconButton(onClick = { showPostMenu = true }) {
+                                Icon(
+                                    Icons.Default.MoreVert,
+                                    contentDescription = stringResource(
+                                        MochiR.string.common_more_options
+                                    )
+                                )
+                            }
+                            PostActionsMenu(
+                                expanded = showPostMenu,
+                                onDismiss = { showPostMenu = false },
+                                post = uiState.post,
+                                canEdit = isPostAuthor || uiState.canModerate,
+                                canModerate = uiState.canModerate,
+                                isAuthor = isPostAuthor,
+                                onEdit = { showEditPost = true },
+                                onDelete = { showDeletePostConfirm = true },
+                                onPin = viewModel::pinPost,
+                                onUnpin = viewModel::unpinPost,
+                                onLock = viewModel::lockPost,
+                                onUnlock = viewModel::unlockPost,
+                                onApprove = viewModel::approvePost,
+                                onRemove = viewModel::removePost,
+                                onRestore = viewModel::restorePost,
+                                onReport = { showReportPost = true },
+                            )
+                        }
                     }
                 }
             )
@@ -133,35 +201,23 @@ fun PostScreen(
                 else -> {
                     LazyColumn(
                         modifier = Modifier.weight(1f).fillMaxWidth(),
-                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+                        contentPadding = PaddingValues(start = 12.dp, end = 12.dp, bottom = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         item {
                             PostHeader(
                                 post = uiState.post,
                                 canVote = uiState.canVote,
-                                canEdit = (uiState.post.member == uiState.identity && uiState.identity.isNotBlank())
-                                    || uiState.canModerate,
-                                canModerate = uiState.canModerate,
-                                isAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank(),
+                                canEdit = isPostAuthor || uiState.canModerate,
                                 forumId = viewModel.forumId,
                                 onVote = { viewModel.votePost(it) },
-                                onEdit = { showEditPost = true },
-                                onDelete = { showDeletePostConfirm = true },
-                                onPin = viewModel::pinPost,
-                                onUnpin = viewModel::unpinPost,
-                                onLock = viewModel::lockPost,
-                                onUnlock = viewModel::unlockPost,
-                                onApprove = viewModel::approvePost,
-                                onRemove = viewModel::removePost,
-                                onRestore = viewModel::restorePost,
-                                onReport = { showReportPost = true },
-                                onQuote = { draft = quoteText(uiState.post.bodyMarkdown.ifBlank { uiState.post.body }, draft) },
                                 onAddTag = { label -> viewModel.addPostTag(label) },
                                 onRemoveTag = { tagId -> viewModel.removePostTag(tagId) },
                                 onTagInterest = { qid, direction -> viewModel.adjustTagInterest(qid, direction) },
                             )
                         }
+                        // Separates the post from the conversation below it.
+                        item { HorizontalDivider() }
                         if (uiState.comments.isEmpty()) {
                             item {
                                 Box(
@@ -188,10 +244,6 @@ fun PostScreen(
                                 onRemove = { viewModel.removeComment(it.id) },
                                 onRestore = { viewModel.restoreComment(it.id) },
                                 onReport = { reportingComment = it },
-                                onQuote = { c ->
-                                    viewModel.setReplyTo(c)
-                                    draft = quoteText(c.body, draft)
-                                },
                             )
                         }
                     }
@@ -202,6 +254,9 @@ fun PostScreen(
                             onValueChange = { draft = it },
                             isSending = uiState.isSending,
                             enabled = !uiState.post.locked,
+                            attachments = commentAttachments,
+                            onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
+                            onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
                             onSend = {
                                 viewModel.submitComment(draft)
                                 draft = ""
@@ -529,16 +584,54 @@ private fun ReportDialog(
     )
 }
 
-@OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
+/**
+ * One reaction counter on the post detail: icon plus its count, always shown
+ * even at zero. Tappable when [onClick] is given — only the votes are, and only
+ * when the viewer has vote rights.
+ */
 @Composable
-private fun PostHeader(
+private fun PostReaction(
+    icon: ImageVector,
+    contentDescription: String,
+    count: Int,
+    onClick: (() -> Unit)? = null,
+) {
+    val clickable = if (onClick != null) {
+        Modifier.clip(RoundedCornerShape(8.dp)).clickable(onClick = onClick)
+    } else {
+        Modifier
+    }
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = clickable.padding(horizontal = 6.dp, vertical = 4.dp),
+    ) {
+        Icon(
+            icon,
+            contentDescription = contentDescription,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.size(20.dp),
+        )
+        Spacer(Modifier.width(4.dp))
+        Text(
+            text = LocalFormat.current.formatNumber(count),
+            style = MaterialTheme.typography.labelMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+/**
+ * The post's moderation and authoring actions, hosted by the screen's top bar.
+ * "Quote in reply" is deliberately absent — the composer is the place to quote.
+ */
+@Composable
+private fun PostActionsMenu(
+    expanded: Boolean,
+    onDismiss: () -> Unit,
     post: Post,
-    canVote: Boolean,
     canEdit: Boolean,
     canModerate: Boolean,
     isAuthor: Boolean,
-    forumId: String,
-    onVote: (String) -> Unit,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     onPin: () -> Unit,
@@ -549,272 +642,197 @@ private fun PostHeader(
     onRemove: () -> Unit,
     onRestore: () -> Unit,
     onReport: () -> Unit,
-    onQuote: () -> Unit,
+) {
+    DropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
+        if (canEdit) {
+            DropdownMenuItem(
+                text = { Text(stringResource(R.string.forums_post_edit)) },
+                onClick = { onDismiss(); onEdit() }
+            )
+        }
+        if (canModerate) {
+            if (post.pinned) {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_post_unpin)) },
+                    onClick = { onDismiss(); onUnpin() }
+                )
+            } else {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_post_pin)) },
+                    onClick = { onDismiss(); onPin() }
+                )
+            }
+            if (post.locked) {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_post_unlock)) },
+                    onClick = { onDismiss(); onUnlock() }
+                )
+            } else {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_post_lock)) },
+                    onClick = { onDismiss(); onLock() }
+                )
+            }
+            if (post.status == "pending") {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_post_approve)) },
+                    onClick = { onDismiss(); onApprove() }
+                )
+            }
+            if (post.status == "removed") {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_post_restore)) },
+                    onClick = { onDismiss(); onRestore() }
+                )
+            } else {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_post_remove)) },
+                    onClick = { onDismiss(); onRemove() }
+                )
+            }
+        }
+        if (!isAuthor) {
+            DropdownMenuItem(
+                text = { Text(stringResource(R.string.forums_post_report)) },
+                onClick = { onDismiss(); onReport() }
+            )
+        }
+        if (canEdit) {
+            DropdownMenuItem(
+                text = { Text(stringResource(R.string.forums_post_delete)) },
+                onClick = { onDismiss(); onDelete() }
+            )
+        }
+    }
+}
+
+@Composable
+private fun PostHeader(
+    post: Post,
+    canVote: Boolean,
+    canEdit: Boolean,
+    forumId: String,
+    onVote: (String) -> Unit,
     onAddTag: (String) -> Unit,
     onRemoveTag: (String) -> Unit,
     onTagInterest: (qid: String, direction: String) -> Unit,
 ) {
-    var showAddTag by remember { mutableStateOf(false) }
     val format = LocalFormat.current
-    var showMenu by remember { mutableStateOf(false) }
-    Card(modifier = Modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Row(verticalAlignment = Alignment.Top) {
-                Text(
-                    text = post.title,
-                    style = MaterialTheme.typography.titleLarge,
-                    modifier = Modifier.weight(1f)
-                )
-                Box {
-                    IconButton(onClick = { showMenu = true }) {
-                        Icon(
-                            Icons.Default.MoreHoriz,
-                            contentDescription = stringResource(MochiR.string.common_more_options)
-                        )
-                    }
-                    DropdownMenu(
-                        expanded = showMenu,
-                        onDismissRequest = { showMenu = false }
-                    ) {
-                        if (canEdit) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.forums_post_edit)) },
-                                onClick = {
-                                    showMenu = false
-                                    onEdit()
-                                }
-                            )
-                        }
-                        if (canModerate) {
-                            if (post.pinned) {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_post_unpin)) },
-                                    onClick = { showMenu = false; onUnpin() }
-                                )
-                            } else {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_post_pin)) },
-                                    onClick = { showMenu = false; onPin() }
-                                )
-                            }
-                            if (post.locked) {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_post_unlock)) },
-                                    onClick = { showMenu = false; onUnlock() }
-                                )
-                            } else {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_post_lock)) },
-                                    onClick = { showMenu = false; onLock() }
-                                )
-                            }
-                            if (post.status == "pending") {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_post_approve)) },
-                                    onClick = { showMenu = false; onApprove() }
-                                )
-                            }
-                            if (post.status == "removed") {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_post_restore)) },
-                                    onClick = { showMenu = false; onRestore() }
-                                )
-                            } else {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_post_remove)) },
-                                    onClick = { showMenu = false; onRemove() }
-                                )
-                            }
-                        }
-                        DropdownMenuItem(
-                            text = { Text(stringResource(R.string.forums_post_quote)) },
-                            onClick = { showMenu = false; onQuote() }
-                        )
-                        if (!isAuthor) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.forums_post_report)) },
-                                onClick = { showMenu = false; onReport() }
-                            )
-                        }
-                        DropdownMenuItem(
-                            text = { Text(stringResource(R.string.forums_post_delete)) },
-                            onClick = {
-                                showMenu = false
-                                onDelete()
-                            }
-                        )
-                    }
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 8.dp, end = 8.dp, bottom = 8.dp)
+    ) {
+        val postMarkdown = post.bodyMarkdown.ifBlank { post.body }
+        if (postMarkdown.isNotBlank()) {
+            HtmlContent(html = postMarkdown, modifier = Modifier.fillMaxWidth())
+        }
+        if (post.attachments.isNotEmpty()) {
+            Spacer(Modifier.height(8.dp))
+            AttachmentGallery(
+                attachments = post.attachments,
+                urlBuilder = { att ->
+                    att.url ?: "/forums/$forumId/-/attachments/${att.id}"
+                },
+                thumbnailUrlBuilder = { att ->
+                    att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
                 }
+            )
+            Spacer(Modifier.height(6.dp))
+        }
+        // Author on the left, timestamp flush to the trailing edge. The avatar
+        // matches the name's line height so the two sit on one baseline.
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            val authorName = post.name.ifBlank {
+                stringResource(R.string.forums_post_default_author)
             }
-            Spacer(Modifier.height(4.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = post.name.ifBlank { stringResource(R.string.forums_post_default_author) },
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Spacer(Modifier.width(8.dp))
-                Text(
-                    text = format.formatRelativeTime(post.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            if (post.tags.isNotEmpty() || canEdit) {
-                Spacer(Modifier.height(8.dp))
-                androidx.compose.foundation.layout.FlowRow(
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
-                    verticalArrangement = Arrangement.spacedBy(4.dp),
-                ) {
-                    post.tags.forEach { tag ->
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            androidx.compose.material3.AssistChip(
-                                onClick = { if (canEdit) onRemoveTag(tag.id) },
-                                label = {
-                                    Text(tag.label, style = MaterialTheme.typography.labelSmall)
-                                },
-                                trailingIcon = if (canEdit) {
-                                    {
-                                        Icon(
-                                            Icons.Default.Close,
-                                            contentDescription = stringResource(R.string.forums_post_tag_remove),
-                                            modifier = Modifier.size(14.dp),
-                                        )
-                                    }
-                                } else null,
-                            )
-                            if (tag.qid.isNotBlank()) {
-                                IconButton(
-                                    onClick = { onTagInterest(tag.qid, "up") },
-                                    modifier = Modifier.size(28.dp),
-                                ) {
-                                    Icon(
-                                        Icons.Default.KeyboardArrowUp,
-                                        contentDescription = stringResource(R.string.forums_tag_interest_up),
-                                        modifier = Modifier.size(18.dp),
-                                    )
-                                }
-                                IconButton(
-                                    onClick = { onTagInterest(tag.qid, "down") },
-                                    modifier = Modifier.size(28.dp),
-                                ) {
-                                    Icon(
-                                        Icons.Default.KeyboardArrowDown,
-                                        contentDescription = stringResource(R.string.forums_tag_interest_down),
-                                        modifier = Modifier.size(18.dp),
-                                    )
-                                }
-                                IconButton(
-                                    onClick = { onTagInterest(tag.qid, "remove") },
-                                    modifier = Modifier.size(28.dp),
-                                ) {
-                                    Icon(
-                                        Icons.Default.Close,
-                                        contentDescription = stringResource(R.string.forums_tag_interest_remove),
-                                        modifier = Modifier.size(16.dp),
-                                    )
-                                }
-                            }
-                        }
-                    }
-                    if (canEdit) {
-                        TextButton(onClick = { showAddTag = true }) {
-                            Icon(
-                                Icons.Default.Add,
-                                contentDescription = null,
-                                modifier = Modifier.size(18.dp)
-                            )
-                            Spacer(Modifier.width(4.dp))
-                            Text(stringResource(R.string.forums_post_tag_add))
-                        }
-                    }
-                }
-            }
-            val postMarkdown = post.bodyMarkdown.ifBlank { post.body }
-            if (postMarkdown.isNotBlank()) {
-                Spacer(Modifier.height(12.dp))
-                HtmlContent(html = postMarkdown, modifier = Modifier.fillMaxWidth())
-            }
-            if (post.attachments.isNotEmpty()) {
-                Spacer(Modifier.height(12.dp))
-                AttachmentGallery(
-                    attachments = post.attachments,
-                    urlBuilder = { att ->
-                        att.url ?: "/forums/$forumId/-/attachments/${att.id}"
-                    },
-                    thumbnailUrlBuilder = { att ->
-                        att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
-                    }
-                )
-            }
-            if (canVote) {
-                Spacer(Modifier.height(12.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    IconButton(onClick = { onVote(if (post.userVote == "up") "" else "up") }) {
-                        Icon(
-                            Icons.Default.ThumbUp,
-                            contentDescription = stringResource(R.string.forums_post_vote_up),
-                            tint = if (post.userVote == "up") MaterialTheme.colorScheme.primary
-                                  else MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                    Text(LocalFormat.current.formatNumber(post.up - post.down), style = MaterialTheme.typography.labelLarge)
-                    IconButton(onClick = { onVote(if (post.userVote == "down") "" else "down") }) {
-                        Icon(
-                            Icons.Default.ThumbDown,
-                            contentDescription = stringResource(R.string.forums_post_vote_down),
-                            tint = if (post.userVote == "down") MaterialTheme.colorScheme.error
-                                  else MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                }
-            }
+            EntityAvatar(
+                name = authorName,
+                src = "/forums/$forumId/-/${post.id}/asset/avatar",
+                seed = post.member.ifEmpty { authorName },
+                size = 24.dp,
+            )
+            Spacer(Modifier.width(8.dp))
+            // The name takes the slack so the timestamp lands on the end edge.
+            Text(
+                text = authorName,
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
+            )
+            Spacer(Modifier.width(8.dp))
+            // The fuller timestamp — absolute date/time or "5m ago" per the
+            // user's preference — rather than the terse relative form.
+            Text(
+                text = format.formatTimestamp(post.created),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+            )
+        }
+        Spacer(Modifier.height(6.dp))
+        // Every counter is shown here, unlike the list card which hides the
+        // empty ones: tag · like · dislike · comment. Votes are tappable only
+        // when the viewer may vote; the rest are indicators.
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            // Shared with feeds: tag icon + count opening a popup that adds,
+            // deletes and tunes interest. Delete only when the viewer may edit.
+            PostTagsButton(
+                tags = post.tags.map { tag ->
+                    val qid = tag.qid.takeIf { value -> value.isNotBlank() }
+                    TagItem(
+                        id = tag.id,
+                        label = tag.label,
+                        qid = qid,
+                        // Only entity-backed tags carry an interest weight; the
+                        // model's 0f default would otherwise tint every label.
+                        interest = tag.interest.takeIf { qid != null },
+                    )
+                },
+                onAddTag = if (canEdit) onAddTag else null,
+                onRemoveTag = if (canEdit) onRemoveTag else null,
+                onAdjustInterest = onTagInterest,
+                horizontalPadding = 4.dp,
+                countStyle = MaterialTheme.typography.labelSmall,
+            )
+            PostReaction(
+                icon = if (post.userVote == "up") Icons.Filled.ThumbUp
+                       else Icons.Outlined.ThumbUp,
+                contentDescription = stringResource(R.string.forums_post_vote_up),
+                count = post.up,
+                onClick = if (canVote) {
+                    { onVote(if (post.userVote == "up") "" else "up") }
+                } else {
+                    null
+                },
+            )
+            PostReaction(
+                icon = if (post.userVote == "down") Icons.Filled.ThumbDown
+                       else Icons.Outlined.ThumbDown,
+                contentDescription = stringResource(R.string.forums_post_vote_down),
+                count = post.down,
+                onClick = if (canVote) {
+                    { onVote(if (post.userVote == "down") "" else "down") }
+                } else {
+                    null
+                },
+            )
+            PostReaction(
+                icon = if (post.comments == 0) Icons.Filled.ChatBubbleOutline
+                       else Icons.Filled.ChatBubble,
+                contentDescription = stringResource(R.string.forums_post_comments),
+                count = post.comments,
+            )
         }
     }
-
-    if (showAddTag) {
-        AddTagDialog(
-            onConfirm = { label ->
-                onAddTag(label)
-                showAddTag = false
-            },
-            onDismiss = { showAddTag = false },
-        )
-    }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AddTagDialog(
-    onConfirm: (label: String) -> Unit,
-    onDismiss: () -> Unit,
-) {
-    var label by remember { mutableStateOf("") }
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.forums_post_tag_add)) },
-        text = {
-            OutlinedTextField(
-                value = label,
-                onValueChange = { label = it },
-                label = { Text(stringResource(R.string.forums_post_tag_label)) },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth(),
-            )
-        },
-        confirmButton = {
-            TextButton(
-                onClick = { onConfirm(label.trim()) },
-                enabled = label.isNotBlank(),
-            ) { Text(stringResource(MochiR.string.common_add)) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
-    )
-}
+
 
 private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
     comments: List<ForumComment>,
@@ -830,7 +848,6 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
     onRemove: (ForumComment) -> Unit,
     onRestore: (ForumComment) -> Unit,
     onReport: (ForumComment) -> Unit,
-    onQuote: (ForumComment) -> Unit,
 ) {
     comments.forEach { c ->
         item(key = c.id) {
@@ -851,15 +868,19 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
                 onRemove = { onRemove(c) },
                 onRestore = { onRestore(c) },
                 onReport = { onReport(c) },
-                onQuote = { onQuote(c) },
             )
         }
         if (c.children.isNotEmpty()) {
-            commentsItems(c.children, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport, onQuote)
+            commentsItems(c.children, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport)
         }
     }
 }
 
+/**
+ * A forum comment, rendered by the shared [CommentItem] so the header, threading
+ * and attachments match feeds. Only the action row differs: up/down votes, a
+ * reply button, and the moderation overflow.
+ */
 @Composable
 private fun CommentCard(
     comment: ForumComment,
@@ -876,138 +897,103 @@ private fun CommentCard(
     onRemove: () -> Unit,
     onRestore: () -> Unit,
     onReport: () -> Unit,
-    onQuote: () -> Unit,
 ) {
-    val format = LocalFormat.current
     var showMenu by remember { mutableStateOf(false) }
-    Card(
-        modifier = Modifier.fillMaxWidth().padding(start = (depth * 12).dp)
+    CommentItem(
+        name = comment.name,
+        body = comment.body,
+        created = comment.created,
+        edited = comment.edited,
+        depth = depth,
+        seed = comment.member,
+        avatarUrl = "/forums/$forumId/-/${comment.post}/${comment.id}/asset/avatar",
+        attachments = comment.attachments,
+        attachmentUrl = { att -> att.url ?: "/forums/$forumId/-/attachments/${att.id}" },
+        attachmentThumbnailUrl = { att ->
+            att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
+        },
+        horizontalPadding = 12.dp,
     ) {
-        Column(modifier = Modifier.padding(12.dp)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = comment.name.ifBlank { stringResource(R.string.forums_post_default_author) },
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.primary
+        // Same reaction row as the post: like · dislike, filled for the viewer's
+        // own vote, tappable only with vote rights.
+        PostReaction(
+            icon = if (comment.userVote == "up") Icons.Filled.ThumbUp
+                   else Icons.Outlined.ThumbUp,
+            contentDescription = stringResource(R.string.forums_post_vote_up),
+            count = comment.up,
+            onClick = if (comment.canVote) {
+                { onVote(if (comment.userVote == "up") "" else "up") }
+            } else {
+                null
+            },
+        )
+        PostReaction(
+            icon = if (comment.userVote == "down") Icons.Filled.ThumbDown
+                   else Icons.Outlined.ThumbDown,
+            contentDescription = stringResource(R.string.forums_post_vote_down),
+            count = comment.down,
+            onClick = if (comment.canVote) {
+                { onVote(if (comment.userVote == "down") "" else "down") }
+            } else {
+                null
+            },
+        )
+        if (comment.canComment) {
+            IconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
+                Icon(
+                    Icons.AutoMirrored.Outlined.Reply,
+                    contentDescription = stringResource(R.string.forums_comment_reply),
+                    modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                Spacer(Modifier.width(8.dp))
-                Text(
-                    text = format.formatRelativeTime(comment.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+            }
+        }
+        Box {
+            IconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
+                Icon(
+                    Icons.Default.MoreHoriz,
+                    contentDescription = stringResource(MochiR.string.common_more_options),
+                    modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                Spacer(Modifier.weight(1f))
-                Box {
-                    IconButton(onClick = { showMenu = true }, modifier = Modifier.size(24.dp)) {
-                        Icon(
-                            Icons.Default.MoreHoriz,
-                            contentDescription = stringResource(MochiR.string.common_more_options),
-                            modifier = Modifier.size(16.dp)
+            }
+            DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+                if (canEdit) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.forums_comment_edit)) },
+                        onClick = { showMenu = false; onEdit() }
+                    )
+                }
+                if (canModerate) {
+                    if (comment.status == "pending") {
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.forums_comment_approve)) },
+                            onClick = { showMenu = false; onApprove() }
                         )
                     }
-                    DropdownMenu(
-                        expanded = showMenu,
-                        onDismissRequest = { showMenu = false }
-                    ) {
-                        if (canEdit) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.forums_comment_edit)) },
-                                onClick = {
-                                    showMenu = false
-                                    onEdit()
-                                }
-                            )
-                        }
-                        if (canModerate) {
-                            if (comment.status == "pending") {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_comment_approve)) },
-                                    onClick = { showMenu = false; onApprove() }
-                                )
-                            }
-                            if (comment.status == "removed") {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_comment_restore)) },
-                                    onClick = { showMenu = false; onRestore() }
-                                )
-                            } else {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_comment_remove)) },
-                                    onClick = { showMenu = false; onRemove() }
-                                )
-                            }
-                        }
+                    if (comment.status == "removed") {
                         DropdownMenuItem(
-                            text = { Text(stringResource(R.string.forums_comment_quote)) },
-                            onClick = { showMenu = false; onQuote() }
+                            text = { Text(stringResource(R.string.forums_comment_restore)) },
+                            onClick = { showMenu = false; onRestore() }
                         )
-                        if (!isAuthor) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.forums_comment_report)) },
-                                onClick = { showMenu = false; onReport() }
-                            )
-                        }
+                    } else {
                         DropdownMenuItem(
-                            text = { Text(stringResource(R.string.forums_comment_delete)) },
-                            onClick = {
-                                showMenu = false
-                                onDelete()
-                            }
+                            text = { Text(stringResource(R.string.forums_comment_remove)) },
+                            onClick = { showMenu = false; onRemove() }
                         )
                     }
                 }
-            }
-            Spacer(Modifier.height(4.dp))
-            HtmlContent(html = comment.body, modifier = Modifier.fillMaxWidth())
-            if (comment.attachments.isNotEmpty()) {
-                Spacer(Modifier.height(8.dp))
-                AttachmentGallery(
-                    attachments = comment.attachments,
-                    urlBuilder = { att ->
-                        att.url ?: "/forums/$forumId/-/attachments/${att.id}"
-                    },
-                    thumbnailUrlBuilder = { att ->
-                        att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
-                    }
-                )
-            }
-            Spacer(Modifier.height(4.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                if (comment.canVote) {
-                    IconButton(
-                        onClick = { onVote(if (comment.userVote == "up") "" else "up") },
-                        modifier = Modifier.size(28.dp)
-                    ) {
-                        Icon(
-                            Icons.Default.ThumbUp,
-                            contentDescription = stringResource(R.string.forums_post_vote_up),
-                            tint = if (comment.userVote == "up") MaterialTheme.colorScheme.primary
-                                  else MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.size(14.dp)
-                        )
-                    }
-                    Text(LocalFormat.current.formatNumber(comment.up - comment.down), style = MaterialTheme.typography.labelSmall)
-                    IconButton(
-                        onClick = { onVote(if (comment.userVote == "down") "" else "down") },
-                        modifier = Modifier.size(28.dp)
-                    ) {
-                        Icon(
-                            Icons.Default.ThumbDown,
-                            contentDescription = stringResource(R.string.forums_post_vote_down),
-                            tint = if (comment.userVote == "down") MaterialTheme.colorScheme.error
-                                  else MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.size(14.dp)
-                        )
-                    }
+                if (!isAuthor) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.forums_comment_report)) },
+                        onClick = { showMenu = false; onReport() }
+                    )
                 }
-                if (comment.canComment) {
-                    Spacer(Modifier.width(8.dp))
-                    TextButton(onClick = onReply) {
-                        Text(
-                            stringResource(R.string.forums_comment_reply),
-                            style = MaterialTheme.typography.labelMedium
-                        )
-                    }
+                if (canEdit) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.forums_comment_delete)) },
+                        onClick = { showMenu = false; onDelete() }
+                    )
                 }
             }
         }
@@ -1036,54 +1022,105 @@ private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
     }
 }
 
+
 /**
- * Quote a post or comment body into the reply composer. Mirrors web's
- * thread-detail behaviour: prefix every non-empty line with "> " and append
- * a blank line so the user can start typing immediately. When the draft is
- * already non-empty, prepend the quote above existing text.
+ * The provider's display name for [uri]; a `content://` path segment is an
+ * opaque id, so the chip would otherwise read "image:59".
  */
-private fun quoteText(body: String, currentDraft: String): String {
-    val trimmed = body.trim()
-    if (trimmed.isEmpty()) return currentDraft
-    val quoted = trimmed.split("\n").joinToString("\n") { line ->
-        if (line.isBlank()) ">" else "> $line"
-    } + "\n\n"
-    return if (currentDraft.isBlank()) quoted else "$quoted$currentDraft"
+@Composable
+private fun rememberFileName(uri: Uri, fallback: String): String {
+    val context = LocalContext.current
+    return remember(uri) {
+        context.contentResolver.query(uri, null, null, null, null)?.use { cursor ->
+            val index = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            if (index >= 0 && cursor.moveToFirst()) {
+                cursor.getString(index)?.let { name -> return@remember name }
+            }
+        }
+        uri.lastPathSegment?.substringAfterLast('/') ?: fallback
+    }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 private fun ComposerBar(
     value: String,
     onValueChange: (String) -> Unit,
     isSending: Boolean,
     enabled: Boolean,
+    attachments: List<Uri>,
+    onAddAttachments: (List<Uri>) -> Unit,
+    onRemoveAttachment: (Uri) -> Unit,
     onSend: () -> Unit
 ) {
-    Row(
-        modifier = Modifier.fillMaxWidth().padding(8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        OutlinedTextField(
-            value = value,
-            onValueChange = onValueChange,
-            modifier = Modifier.weight(1f),
-            placeholder = { Text(stringResource(R.string.forums_write_comment)) },
-            enabled = enabled,
-            maxLines = 4
-        )
-        Spacer(Modifier.width(8.dp))
-        IconButton(
-            onClick = onSend,
-            enabled = enabled && !isSending && value.isNotBlank()
+    val filePickerLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.GetMultipleContents()
+    ) { uris -> onAddAttachments(uris) }
+
+    Column(modifier = Modifier.fillMaxWidth()) {
+        if (attachments.isNotEmpty()) {
+            FlowRow(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                attachments.forEach { uri ->
+                    val fileLabel = stringResource(R.string.forums_attachment_file)
+                    AssistChip(
+                        onClick = { onRemoveAttachment(uri) },
+                        label = {
+                            Text(
+                                rememberFileName(uri, fileLabel).takeLast(20),
+                                style = MaterialTheme.typography.labelSmall
+                            )
+                        },
+                        trailingIcon = {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = stringResource(
+                                    R.string.forums_attachment_remove
+                                ),
+                                modifier = Modifier.size(14.dp)
+                            )
+                        }
+                    )
+                }
+            }
+        }
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(8.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            if (isSending) {
-                CircularProgressIndicator(modifier = Modifier.size(20.dp))
-            } else {
+            IconButton(
+                onClick = { filePickerLauncher.launch("*/*") },
+                enabled = enabled && !isSending,
+            ) {
                 Icon(
-                    Icons.AutoMirrored.Filled.Send,
-                    contentDescription = stringResource(R.string.forums_comment_send)
+                    Icons.Default.AttachFile,
+                    contentDescription = stringResource(R.string.forums_post_attach)
                 )
+            }
+            OutlinedTextField(
+                value = value,
+                onValueChange = onValueChange,
+                modifier = Modifier.weight(1f),
+                placeholder = { Text(stringResource(R.string.forums_write_comment)) },
+                enabled = enabled,
+                maxLines = 4
+            )
+            Spacer(Modifier.width(8.dp))
+            IconButton(
+                onClick = onSend,
+                // A body is required even when files are attached (server 400s).
+                enabled = enabled && !isSending && value.isNotBlank()
+            ) {
+                if (isSending) {
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                } else {
+                    Icon(
+                        Icons.AutoMirrored.Filled.Send,
+                        contentDescription = stringResource(R.string.forums_comment_send)
+                    )
+                }
             }
         }
     }

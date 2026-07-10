@@ -168,7 +168,6 @@ import org.mochios.feeds.R
 import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
-import org.mochios.feeds.ui.post.AddTagDialog
 import org.mochios.feeds.ui.post.CommentInputBar
 import org.mochios.feeds.ui.post.PostTagsButton
 import org.mochios.feeds.ui.feedlist.CreateFeedDialog
@@ -319,7 +318,6 @@ fun FeedScreen(
     // Set once the viewer closes the one-shot post-subscribe suggestions prompt,
     // so it doesn't reopen while the suggestions are still being acted on.
     var suggestionsDismissed by remember { mutableStateOf(false) }
-    var addTagTarget by remember { mutableStateOf<String?>(null) }
     // (feedId, postId, commentId) of a comment pending delete confirmation.
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
@@ -910,7 +908,9 @@ fun FeedScreen(
                                                 )
                                             },
                                             onToggleSave = { viewModel.toggleSave(post) },
-                                            onAddTag = { addTagTarget = post.id },
+                                            onAddTag = { label ->
+                                                viewModel.addTag(post.id, label, null)
+                                            },
                                             onAdjustInterest = { tag, direction ->
                                                 viewModel.adjustInterest(
                                                     routeFeedId,
@@ -1068,16 +1068,6 @@ fun FeedScreen(
             )
         }
 
-        addTagTarget?.let { postId ->
-            AddTagDialog(
-                onDismiss = { addTagTarget = null },
-                onAdd = { label, qid ->
-                    viewModel.addTag(postId, label, qid)
-                    addTagTarget = null
-                }
-            )
-        }
-
         commentTarget?.let { target ->
             ModalBottomSheet(
                 onDismissRequest = { viewModel.closeCommentComposer() },
@@ -1192,7 +1182,7 @@ private fun PostCard(
     onViewComments: () -> Unit,
     onReact: (String) -> Unit,
     onToggleSave: () -> Unit,
-    onAddTag: () -> Unit,
+    onAddTag: (String) -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
     canManage: Boolean,
     onEdit: () -> Unit,
@@ -1575,7 +1565,7 @@ private fun PostActionBar(
     onReact: (String) -> Unit,
     onComments: () -> Unit,
     onToggleSave: () -> Unit,
-    onAddTag: () -> Unit,
+    onAddTag: (String) -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
     onEdit: () -> Unit,
     onDelete: () -> Unit,

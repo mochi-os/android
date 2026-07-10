@@ -121,7 +121,6 @@ fun PostSourceScreen(
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showDeleteCommentDialog by remember { mutableStateOf<String?>(null) }
-    var showAddTagDialog by remember { mutableStateOf(false) }
     var showOverflowMenu by remember { mutableStateOf(false) }
 
     var webView by remember { mutableStateOf<WebView?>(null) }
@@ -458,16 +457,6 @@ fun PostSourceScreen(
                 TextButton(onClick = { showDeleteCommentDialog = null }) {
                     Text(stringResource(MochiR.string.common_cancel))
                 }
-            }
-        )
-    }
-
-    if (showAddTagDialog) {
-        AddTagDialog(
-            onDismiss = { showAddTagDialog = false },
-            onAdd = { label, qid ->
-                viewModel.addTag(label, qid)
-                showAddTagDialog = false
             }
         )
     }

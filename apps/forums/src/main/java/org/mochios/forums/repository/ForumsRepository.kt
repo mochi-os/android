@@ -276,6 +276,39 @@ class ForumsRepository @Inject constructor(
         ).unwrap()
     }
 
+    /**
+     * Create a comment whose attachments come from content-provider [uris] (the
+     * system file picker) rather than files on disk.
+     */
+    suspend fun createCommentFromUris(
+        forumId: String,
+        postId: String,
+        body: String,
+        parent: String? = null,
+        uris: List<android.net.Uri>,
+        contentResolver: android.content.ContentResolver,
+    ): CreateCommentResponse {
+        val parts = uris.map { uri ->
+            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
+            val bytes = contentResolver.openInputStream(uri)?.readBytes()
+                ?: throw IllegalStateException("Cannot read $uri")
+            MultipartBody.Part.createFormData(
+                "files",
+                displayName(contentResolver, uri),
+                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
+            )
+        }
+        return api.createComment(
+            forumId = forumId,
+            postId = postId,
+            forum = forumId.toRequestBody(text),
+            post = postId.toRequestBody(text),
+            body = body.toRequestBody(text),
+            parent = parent?.toRequestBody(text),
+            files = parts,
+        ).unwrap()
+    }
+
     suspend fun editCommentFromUris(
         forumId: String,
         postId: String,

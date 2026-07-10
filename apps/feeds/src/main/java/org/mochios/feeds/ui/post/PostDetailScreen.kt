@@ -88,6 +88,8 @@ import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.ui.components.TagItem
+import org.mochios.android.ui.components.PostTagsButton as SharedPostTagsButton
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
@@ -125,7 +127,6 @@ fun PostDetailScreen(
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showDeleteCommentDialog by remember { mutableStateOf<String?>(null) }
-    var showAddTagDialog by remember { mutableStateOf(false) }
 
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -195,7 +196,7 @@ fun PostDetailScreen(
     ) { paddingValues ->
         PostDetailContent(
             viewModel = viewModel,
-            showAddTagDialog = { showAddTagDialog = true },
+            onAddTag = { label -> viewModel.addTag(label, null) },
             showDeleteCommentDialog = { showDeleteCommentDialog = it },
             onBack = onNavigateBack,
             modifier = Modifier
@@ -258,23 +259,13 @@ fun PostDetailScreen(
         )
     }
 
-    // Add tag dialog
-    if (showAddTagDialog) {
-        AddTagDialog(
-            onDismiss = { showAddTagDialog = false },
-            onAdd = { label, qid ->
-                viewModel.addTag(label, qid)
-                showAddTagDialog = false
-            }
-        )
-    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 internal fun PostDetailContent(
     viewModel: PostDetailViewModel,
-    showAddTagDialog: () -> Unit,
+    onAddTag: (String) -> Unit,
     showDeleteCommentDialog: (String) -> Unit,
     onBack: () -> Unit,
     modifier: Modifier = Modifier,
@@ -340,7 +331,7 @@ internal fun PostDetailContent(
                         serverUrl = viewModel.serverUrl,
                         feedId = viewModel.feedId,
                         onReact = { viewModel.reactToPost(it) },
-                        onAddTag = showAddTagDialog,
+                        onAddTag = onAddTag,
                         onRemoveTag = { viewModel.removeTag(it) },
                         onAdjustInterest = { tag, direction ->
                             viewModel.adjustInterest(
@@ -408,7 +399,7 @@ private fun PostContent(
     serverUrl: String,
     feedId: String,
     onReact: (String) -> Unit,
-    onAddTag: () -> Unit,
+    onAddTag: (String) -> Unit,
     onRemoveTag: (String) -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
     showBody: Boolean = true
@@ -648,133 +639,37 @@ private fun PostContent(
     }
 }
 
-// Web-parity tags affordance: a tag icon + count that opens a popup listing the
-// post's tags. Entity-backed (qid) tags expose interest tuning; an "Add tag"
-// action opens the add dialog. Mirrors web's PostTagsTooltip.
+// Web-parity tags affordance, rendered by the shared [SharedPostTagsButton]:
+// a tag icon + count opening a popup with per-tag interest tuning and an
+// "Add tag" action. Feeds has no per-tag delete, so none is passed.
 @Composable
 internal fun PostTagsButton(
     tags: List<Tag>,
-    onAddTag: () -> Unit,
+    onAddTag: (String) -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
     horizontalPadding: Dp = 6.dp,
     iconSize: Dp = 18.dp,
 ) {
-    var open by remember { mutableStateOf(false) }
-    Box {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .clip(RoundedCornerShape(8.dp))
-                .clickable { open = true }
-                .padding(horizontal = horizontalPadding, vertical = 4.dp)
-        ) {
-            val hasTags = tags.isNotEmpty()
-            val tagColor = MaterialTheme.colorScheme.onSurfaceVariant
-            Icon(
-                if (hasTags) Icons.Filled.LocalOffer else Icons.Outlined.LocalOffer,
-                contentDescription = stringResource(R.string.feeds_tags),
-                modifier = Modifier.size(iconSize),
-                tint = tagColor
-            )
-            if (hasTags) {
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = "${tags.size}",
-                    style = MaterialTheme.typography.labelMedium,
-                    color = tagColor
-                )
-            }
-        }
-        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
-            // Close the menu after a thumb tap so the action visibly registers.
-            tags.forEach { tag ->
-                TagMenuRow(
-                    tag = tag,
-                    onAdjustInterest = { t, d -> onAdjustInterest(t, d); open = false })
-            }
-            if (tags.isNotEmpty()) {
-                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
-            }
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.feeds_add_tag)) },
-                leadingIcon = {
-                    Icon(
-                        Icons.Default.Add,
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                },
-                onClick = {
-                    open = false
-                    onAddTag()
-                }
-            )
-        }
-    }
-}
-
-@Composable
-private fun TagMenuRow(
-    tag: Tag,
-    onAdjustInterest: (Tag, String) -> Unit,
-) {
-    // Interest tuning only applies to entity-backed (qid) tags — these feed the
-    // user-global interest model. Free-text tags render as plain labels.
-    val tunable = !tag.qid.isNullOrEmpty()
-    val labelColor = tag.interest?.let { interestColor(it) } ?: MaterialTheme.colorScheme.onSurface
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .width(260.dp)
-            .padding(start = 12.dp, end = 4.dp, top = 2.dp, bottom = 2.dp)
-    ) {
-        Text(
-            text = "#${tag.label}",
-            style = MaterialTheme.typography.bodyMedium,
-            color = labelColor,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.weight(1f)
+    val items = tags.map { tag ->
+        TagItem(
+            id = tag.id,
+            label = tag.label,
+            qid = tag.qid,
+            interest = tag.interest?.toFloat(),
         )
-        if (tunable) {
-            IconButton(onClick = { onAdjustInterest(tag, "up") }, modifier = Modifier.size(36.dp)) {
-                Icon(
-                    Icons.Default.ThumbUp,
-                    contentDescription = stringResource(R.string.feeds_tag_more_up),
-                    modifier = Modifier.size(16.dp)
-                )
-            }
-            IconButton(
-                onClick = { onAdjustInterest(tag, "down") },
-                modifier = Modifier.size(36.dp)
-            ) {
-                Icon(
-                    Icons.Default.ThumbDown,
-                    contentDescription = stringResource(R.string.feeds_tag_more_down),
-                    modifier = Modifier.size(16.dp)
-                )
-            }
-            IconButton(
-                onClick = { onAdjustInterest(tag, "remove") },
-                modifier = Modifier.size(36.dp)
-            ) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(R.string.feeds_tag_remove),
-                    modifier = Modifier.size(16.dp)
-                )
-            }
-        }
     }
+    SharedPostTagsButton(
+        tags = items,
+        onAddTag = onAddTag,
+        onAdjustInterest = { qid, direction ->
+            tags.firstOrNull { tag -> tag.qid == qid }?.let { tag ->
+                onAdjustInterest(tag, direction)
+            }
+        },
+        horizontalPadding = horizontalPadding,
+        iconSize = iconSize,
+    )
 }
-
-// Continuous interest scale: red (-100) → blue (0) → green (+100). Mirrors the
-// web PostTags hue ramp so the same interest reads as the same colour on both.
-private fun interestColor(interest: Double): Color {
-    val hue = (240.0 - (interest / 100.0) * 120.0).toFloat().coerceIn(0f, 360f)
-    return Color.hsl(hue, 0.8f, 0.45f)
-}
-
 
 @Composable
 internal fun CommentInputBar(
@@ -891,39 +786,5 @@ internal fun CommentInputBar(
     }
 }
 
-@Composable
-internal fun AddTagDialog(
-    onDismiss: () -> Unit,
-    onAdd: (String, String?) -> Unit
-) {
-    var label by remember { mutableStateOf("") }
-
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_add_tag)) },
-        text = {
-            OutlinedTextField(
-                value = label,
-                onValueChange = { label = it },
-                label = { Text(stringResource(R.string.feeds_tag_label)) },
-                modifier = Modifier.fillMaxWidth(),
-                singleLine = true
-            )
-        },
-        confirmButton = {
-            TextButton(
-                onClick = { onAdd(label, null) },
-                enabled = label.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
-    )
-}
 
 

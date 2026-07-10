@@ -44,6 +44,7 @@ data class PostUiState(
 @HiltViewModel
 class PostViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
+    private val application: android.app.Application,
     private val repository: ForumsRepository,
     private val sessionManager: SessionManager,
     private val webSocket: MochiWebSocket,
@@ -155,14 +156,36 @@ class PostViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(replyTo = comment)
     }
 
+    /** Files picked for the pending comment, in upload order. */
+    private val _commentAttachments = MutableStateFlow<List<android.net.Uri>>(emptyList())
+    val commentAttachments: StateFlow<List<android.net.Uri>> = _commentAttachments.asStateFlow()
+
+    fun addCommentAttachments(uris: List<android.net.Uri>) {
+        _commentAttachments.value = _commentAttachments.value +
+            uris.filterNot { uri -> uri in _commentAttachments.value }
+    }
+
+    fun removeCommentAttachment(uri: android.net.Uri) {
+        _commentAttachments.value = _commentAttachments.value.filterNot { it == uri }
+    }
+
     fun submitComment(body: String) {
         val trimmed = body.trim()
+        // The server rejects an empty body with 400, even when files are attached.
         if (trimmed.isEmpty()) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSending = true)
             try {
                 val parent = _uiState.value.replyTo?.id
-                repository.createComment(forumId, postId, trimmed, parent)
+                repository.createCommentFromUris(
+                    forumId = forumId,
+                    postId = postId,
+                    body = trimmed,
+                    parent = parent,
+                    uris = _commentAttachments.value,
+                    contentResolver = application.contentResolver,
+                )
+                _commentAttachments.value = emptyList()
                 _uiState.value = _uiState.value.copy(replyTo = null)
                 refresh()
             } catch (e: Exception) {
