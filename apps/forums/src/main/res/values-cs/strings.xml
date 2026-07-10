@@ -222,4 +222,18 @@
         <item quantity="many">%d nového příspěvku</item>
         <item quantity="other">%d nových příspěvků</item>
     </plurals>
+    <string name="forums_rss_feed">RSS kanál</string>
+    <string name="forums_rss_mode_posts">Příspěvky</string>
+    <string name="forums_rss_mode_posts_comments">Příspěvky a komentáře</string>
+    <string name="forums_rss_copied">URL RSS zkopírována do schránky</string>
+    <string name="forums_find_results">Výsledky hledání</string>
+    <string name="forums_markdown_supported">Markdown podporován</string>
+    <string name="forums_attachment_file">Soubor</string>
+    <string name="forums_attachment_remove">Odebrat</string>
+    <string name="forums_attachment_move_up">Posunout nahoru</string>
+    <string name="forums_attachment_move_down">Posunout dolů</string>
+    <string name="forums_post_comments">Komentáře</string>
+    <string name="forums_all_forums">Všechna fóra</string>
+    <string name="forums_create_allow_search">Povolit komukoli vyhledat fórum</string>
+    <string name="forums_rss_clipboard_label">RSS URL fóra</string>
 </resources>

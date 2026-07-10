@@ -212,4 +212,18 @@
     <string name="forums_saved_title">Saved</string>
     <string name="forums_saved_remove">Remove from saved</string>
     <string name="forums_saved_clear_all">Clear all</string>
+    <string name="forums_rss_feed">RSS feed</string>
+    <string name="forums_rss_mode_posts">Posts</string>
+    <string name="forums_rss_mode_posts_comments">Posts and comments</string>
+    <string name="forums_rss_copied">RSS URL copied to clipboard</string>
+    <string name="forums_find_results">Search results</string>
+    <string name="forums_markdown_supported">Markdown supported</string>
+    <string name="forums_attachment_file">File</string>
+    <string name="forums_attachment_remove">Remove</string>
+    <string name="forums_attachment_move_up">Move up</string>
+    <string name="forums_attachment_move_down">Move down</string>
+    <string name="forums_post_comments">Comments</string>
+    <string name="forums_all_forums">All forums</string>
+    <string name="forums_create_allow_search">Allow anyone to search for forum</string>
+    <string name="forums_rss_clipboard_label">Forum RSS URL</string>
 </resources>

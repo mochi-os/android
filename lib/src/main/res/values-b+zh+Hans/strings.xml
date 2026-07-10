@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">无法打开文件</string>
     <string name="reaction_remove">清除</string>
     <string name="common_logout_confirm_message">确定要退出登录吗？您需要重新登录才能访问您的账户。</string>
+    <string name="comment_anonymous">匿名</string>
+    <string name="tags_label">标签</string>
+    <string name="tags_add">添加标签</string>
+    <string name="tags_label_field">标签名称</string>
+    <string name="tags_interest_up">多显示此类内容</string>
+    <string name="tags_interest_down">少显示此类内容</string>
+    <string name="tags_interest_clear">停止显示</string>
+    <string name="tags_none">无标签</string>
+    <string name="tags_delete">移除标签</string>
 </resources>

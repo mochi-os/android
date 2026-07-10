@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">An kasa buɗe fayil</string>
     <string name="reaction_remove">Share</string>
     <string name="common_logout_confirm_message">Ka tabbata kana son fita? Za ka buƙaci sake shiga don samun damar shiga asusunka.</string>
+    <string name="comment_anonymous">Ba a san suna ba</string>
+    <string name="tags_label">Alamomi</string>
+    <string name="tags_add">Ƙara alama</string>
+    <string name="tags_label_field">Lakabin tag</string>
+    <string name="tags_interest_up">Nuna ƙari irin wannan</string>
+    <string name="tags_interest_down">Nuna ƙasa da haka</string>
+    <string name="tags_interest_clear">Daina nunawa</string>
+    <string name="tags_none">Babu tags</string>
+    <string name="tags_delete">Cire alama</string>
 </resources>

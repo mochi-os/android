@@ -220,4 +220,18 @@
         <item quantity="one">%d پۆستی نوێ</item>
         <item quantity="other">%d پۆستی نوێ</item>
     </plurals>
+    <string name="forums_rss_feed">فیدی RSS</string>
+    <string name="forums_rss_mode_posts">پۆستەکان</string>
+    <string name="forums_rss_mode_posts_comments">پۆستەکان و بۆچوونەکان</string>
+    <string name="forums_rss_copied">URLی RSS لەبەر کرایەوە بۆ کلیپ بۆرد</string>
+    <string name="forums_find_results">ئەنجامەکانی گەڕان</string>
+    <string name="forums_markdown_supported">Markdown پشتیوانی دەکرێت</string>
+    <string name="forums_attachment_file">پەڕگە</string>
+    <string name="forums_attachment_remove">لابردن</string>
+    <string name="forums_attachment_move_up">گواستنەوە بۆ سەرەوە</string>
+    <string name="forums_attachment_move_down">گواستنەوە بۆ خوارەوە</string>
+    <string name="forums_post_comments">لێدوانەکان</string>
+    <string name="forums_all_forums">هەموو فۆڕەمەکان</string>
+    <string name="forums_create_allow_search">ڕێگە بدە بە هەرکەسێک فۆڕەم بگەڕێت</string>
+    <string name="forums_rss_clipboard_label">RSS URL ی فۆڕەم</string>
 </resources>

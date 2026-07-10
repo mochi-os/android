@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">تعذّر فتح الملف</string>
     <string name="reaction_remove">مسح</string>
     <string name="common_logout_confirm_message">هل أنت متأكد أنك تريد تسجيل الخروج؟ ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك.</string>
+    <string name="comment_anonymous">مجهول</string>
+    <string name="tags_label">الوسوم</string>
+    <string name="tags_add">إضافة وسم</string>
+    <string name="tags_label_field">تسمية الوسم</string>
+    <string name="tags_interest_up">أظهر المزيد مثل هذا</string>
+    <string name="tags_interest_down">أظهر أقل مثل هذا</string>
+    <string name="tags_interest_clear">إيقاف العرض</string>
+    <string name="tags_none">لا توجد وسوم</string>
+    <string name="tags_delete">إزالة الوسم</string>
 </resources>

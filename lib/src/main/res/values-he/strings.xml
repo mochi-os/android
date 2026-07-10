@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">לא ניתן לפתוח את הקובץ</string>
     <string name="reaction_remove">ניקוי</string>
     <string name="common_logout_confirm_message">האם ברצונך להתנתק? יהיה עליך להתחבר שוב כדי לגשת לחשבון שלך.</string>
+    <string name="comment_anonymous">אנונימי</string>
+    <string name="tags_label">תגיות</string>
+    <string name="tags_add">הוסף תג</string>
+    <string name="tags_label_field">תווית תגית</string>
+    <string name="tags_interest_up">הצג עוד כאלה</string>
+    <string name="tags_interest_down">הצג פחות כאלה</string>
+    <string name="tags_interest_clear">הפסק להציג</string>
+    <string name="tags_none">אין תגיות</string>
+    <string name="tags_delete">הסרת תגית</string>
 </resources>

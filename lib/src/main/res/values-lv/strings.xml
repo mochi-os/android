@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Neizdevās atvērt failu</string>
     <string name="reaction_remove">Notīrīt</string>
     <string name="common_logout_confirm_message">Vai tiešām vēlaties izrakstīties? Lai piekļūtu savam kontam, jums būs jāpierakstās vēlreiz.</string>
+    <string name="comment_anonymous">Anonīms</string>
+    <string name="tags_label">Tagi</string>
+    <string name="tags_add">Pievienot atzīmi</string>
+    <string name="tags_label_field">Birkas nosaukums</string>
+    <string name="tags_interest_up">Rādīt vairāk līdzīga</string>
+    <string name="tags_interest_down">Rādīt mazāk līdzīga</string>
+    <string name="tags_interest_clear">Pārtraukt rādīt</string>
+    <string name="tags_none">Nav birku</string>
+    <string name="tags_delete">Noņemt tagu</string>
 </resources>

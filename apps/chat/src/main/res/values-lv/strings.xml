@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Meklēt cilvēkus</string>
     <string name="chat_new_no_matches">Nav atbilstošu cilvēku</string>
     <string name="chat_new_no_friends">Meklējiet cilvēkus tērzēšanai</string>
+    <string name="chat_pin">Piespraust</string>
+    <string name="chat_unpin">Atspraust</string>
+    <string name="chat_pinned_label">Piesprausts</string>
+    <string name="chat_settings_general">Vispārīgi</string>
+    <string name="chat_settings_screen_title">%1$s iestatījumi</string>
+    <string name="chat_mark_read">Atzīmēt kā lasītu</string>
+    <string name="chat_marked_read">Atzīmēts kā lasīts</string>
+    <string name="chat_search_next">Nākamā atbilstība</string>
+    <string name="chat_search_prev">Iepriekšējā atbilstība</string>
+    <string name="chat_settings_general_desc">Pielāgot tērzēšanas iestatījumus</string>
+    <string name="chat_settings_id">Tērzēšanas ID</string>
+    <string name="chat_settings_members_desc">Šīs tērzēšanas dalībnieku saraksts</string>
 </resources>

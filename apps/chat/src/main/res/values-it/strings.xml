@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Cerca persone</string>
     <string name="chat_new_no_matches">Nessuna persona corrispondente</string>
     <string name="chat_new_no_friends">Cerca persone con cui chattare</string>
+    <string name="chat_pin">Fissa</string>
+    <string name="chat_unpin">Rimuovi dai fissati</string>
+    <string name="chat_pinned_label">Fissato</string>
+    <string name="chat_settings_general">Generale</string>
+    <string name="chat_settings_screen_title">Impostazioni di %1$s</string>
+    <string name="chat_mark_read">Segna come letto</string>
+    <string name="chat_marked_read">Segnato come letto</string>
+    <string name="chat_search_next">Corrispondenza successiva</string>
+    <string name="chat_search_prev">Corrispondenza precedente</string>
+    <string name="chat_settings_general_desc">Regola le impostazioni della chat</string>
+    <string name="chat_settings_id">ID chat</string>
+    <string name="chat_settings_members_desc">Elenco delle persone in questa chat</string>
 </resources>

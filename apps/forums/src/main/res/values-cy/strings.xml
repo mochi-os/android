@@ -223,4 +223,18 @@
         <item quantity="many">%d postiad newydd</item>
         <item quantity="other">%d postiad newydd</item>
     </plurals>
+    <string name="forums_rss_feed">Porthwr RSS</string>
+    <string name="forums_rss_mode_posts">Postiadau</string>
+    <string name="forums_rss_mode_posts_comments">Postiadau a sylwadau</string>
+    <string name="forums_rss_copied">URL RSS wedi\'i gopïo i\'r clipfwrdd</string>
+    <string name="forums_find_results">Canlyniadau chwilio</string>
+    <string name="forums_markdown_supported">Cefnogir markdown</string>
+    <string name="forums_attachment_file">Ffeil</string>
+    <string name="forums_attachment_remove">Tynnu</string>
+    <string name="forums_attachment_move_up">Symud i fyny</string>
+    <string name="forums_attachment_move_down">Symud i lawr</string>
+    <string name="forums_post_comments">Sylwadau</string>
+    <string name="forums_all_forums">Pob fforwm</string>
+    <string name="forums_create_allow_search">Caniatáu i unrhyw un chwilio am y fforwm</string>
+    <string name="forums_rss_clipboard_label">URL RSS y fforwm</string>
 </resources>

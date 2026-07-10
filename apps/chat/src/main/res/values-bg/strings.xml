@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Търсене на хора</string>
     <string name="chat_new_no_matches">Няма съвпадащи хора</string>
     <string name="chat_new_no_friends">Търсете хора за чат</string>
+    <string name="chat_pin">Закачи</string>
+    <string name="chat_unpin">Откачи</string>
+    <string name="chat_pinned_label">Закачено</string>
+    <string name="chat_settings_general">Общи</string>
+    <string name="chat_settings_screen_title">Настройки на %1$s</string>
+    <string name="chat_mark_read">Маркиране като прочетено</string>
+    <string name="chat_marked_read">Маркирано като прочетено</string>
+    <string name="chat_search_next">Следващо съвпадение</string>
+    <string name="chat_search_prev">Предишно съвпадение</string>
+    <string name="chat_settings_general_desc">Настройване на настройките на чата</string>
+    <string name="chat_settings_id">ID на чата</string>
+    <string name="chat_settings_members_desc">Списък с хора в този чат</string>
 </resources>

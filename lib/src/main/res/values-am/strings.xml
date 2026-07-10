@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ፋይሉን መክፈት አልተቻለም</string>
     <string name="reaction_remove">አጽዳ</string>
     <string name="common_logout_confirm_message">እርግጠኛ ነዎት መውጣት ይፈልጋሉ? መለያዎን ለመድረስ እንደገና መግባት ያስፈልግዎታል።</string>
+    <string name="comment_anonymous">ስም የለሽ</string>
+    <string name="tags_label">መለያዎች</string>
+    <string name="tags_add">መለያ ጨምር</string>
+    <string name="tags_label_field">የመለያ ስም</string>
+    <string name="tags_interest_up">ተመሳሳዮችን አሳይ</string>
+    <string name="tags_interest_down">እንደዚህ ያሉ ጥቂቶችን አሳይ</string>
+    <string name="tags_interest_clear">ማሳየት አቁም</string>
+    <string name="tags_none">ምንም መለያዎች የሉም</string>
+    <string name="tags_delete">መለያ አስወግድ</string>
 </resources>

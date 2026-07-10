@@ -222,4 +222,18 @@
         <item quantity="many">%d новых публикаций</item>
         <item quantity="other">%d новой публикации</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-лента</string>
+    <string name="forums_rss_mode_posts">Публикации</string>
+    <string name="forums_rss_mode_posts_comments">Публикации и комментарии</string>
+    <string name="forums_rss_copied">URL RSS скопирован в буфер обмена</string>
+    <string name="forums_find_results">Результаты поиска</string>
+    <string name="forums_markdown_supported">Поддерживается Markdown</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Удалить</string>
+    <string name="forums_attachment_move_up">Переместить вверх</string>
+    <string name="forums_attachment_move_down">Переместить вниз</string>
+    <string name="forums_post_comments">Комментарии</string>
+    <string name="forums_all_forums">Все форумы</string>
+    <string name="forums_create_allow_search">Разрешить всем искать форум</string>
+    <string name="forums_rss_clipboard_label">RSS-адрес форума</string>
 </resources>

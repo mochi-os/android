@@ -220,4 +220,18 @@
         <item quantity="one">%d maxxansaa haaraa</item>
         <item quantity="other">%d maxxansaalee haaraa</item>
     </plurals>
+    <string name="forums_rss_feed">Fiidii RSS</string>
+    <string name="forums_rss_mode_posts">Maxxansoota</string>
+    <string name="forums_rss_mode_posts_comments">Maxxansoota fi yaadawwan</string>
+    <string name="forums_rss_copied">URL RSS kilipboordiitti garagalfame</string>
+    <string name="forums_find_results">Bu\'aawwan barbaachaa</string>
+    <string name="forums_markdown_supported">Markdown deeggarama</string>
+    <string name="forums_attachment_file">Faayilii</string>
+    <string name="forums_attachment_remove">Haqi</string>
+    <string name="forums_attachment_move_up">Gubbatti dabarsi</string>
+    <string name="forums_attachment_move_down">Gadi dabarsi</string>
+    <string name="forums_post_comments">Yaadawwan</string>
+    <string name="forums_all_forums">Marii hunda</string>
+    <string name="forums_create_allow_search">Nama kamiyyuu marii barbaaduuf hayyami</string>
+    <string name="forums_rss_clipboard_label">RSS URL marii</string>
 </resources>

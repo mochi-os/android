@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">האָט נישט געקענט עפֿענען די טעקע</string>
     <string name="reaction_remove">רייניקן</string>
     <string name="common_logout_confirm_message">זענט איר זיכער אַז איר ווילט זיך אויסלאָגירן? איר וועט זיך דאַרפֿן ווידער אײַנלאָגירן צו באַקומען צוטריט צו אײַער קאָנטע.</string>
+    <string name="comment_anonymous">אַנאָנים</string>
+    <string name="tags_label">טאַגן</string>
+    <string name="tags_add">לייג צו אַ טאַג</string>
+    <string name="tags_label_field">צעטל נאָמען</string>
+    <string name="tags_interest_up">װײַזן מער אַזעלכע</string>
+    <string name="tags_interest_down">װײַזן װײניקער אַזעלכע</string>
+    <string name="tags_interest_clear">אױפֿהערן צו װײַזן</string>
+    <string name="tags_none">קײן צעטלעך</string>
+    <string name="tags_delete">אַראָפּנעמען טאַג</string>
 </resources>

@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Ndaikatúi oñembojuruja archivo</string>
     <string name="reaction_remove">Mopotĩ</string>
     <string name="common_logout_confirm_message">¿Añetehápe esẽse? Tekotevẽta eike jey eiporu hag̃ua ne mba\'ete.</string>
+    <string name="comment_anonymous">Hérỹva</string>
+    <string name="tags_label">Tagskuéra</string>
+    <string name="tags_add">Embojuaju tag</string>
+    <string name="tags_label_field">Techaukaha réra</string>
+    <string name="tags_interest_up">Ehechauka hetave kóicha</string>
+    <string name="tags_interest_down">Ehechauka sa\'ive kóicha</string>
+    <string name="tags_interest_clear">Ani ehechauka</string>
+    <string name="tags_none">Ndaipóri techaukaha</string>
+    <string name="tags_delete">Embogue tag</string>
 </resources>

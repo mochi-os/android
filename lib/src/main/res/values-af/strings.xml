@@ -296,4 +296,13 @@
     <string name="common_file_open_failed">Kon nie lêer oopmaak nie</string>
     <string name="reaction_remove">Verwyder</string>
     <string name="common_logout_confirm_message">Is jy seker jy wil afmeld? Jy sal weer moet aanmeld om toegang tot jou rekening te kry.</string>
+    <string name="comment_anonymous">Anoniem</string>
+    <string name="tags_label">Etikette</string>
+    <string name="tags_add">Voeg etiket by</string>
+    <string name="tags_label_field">Etiketnaam</string>
+    <string name="tags_interest_up">Wys meer soos hierdie</string>
+    <string name="tags_interest_down">Wys minder soos hierdie</string>
+    <string name="tags_interest_clear">Hou op wys</string>
+    <string name="tags_none">Geen etikette nie</string>
+    <string name="tags_delete">Verwyder etiket</string>
 </resources>

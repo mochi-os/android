@@ -220,4 +220,18 @@
         <item quantity="one">%d புதிய இடுகை</item>
         <item quantity="other">%d புதிய இடுகைகள்</item>
     </plurals>
+    <string name="forums_rss_feed">RSS ஃபீட்</string>
+    <string name="forums_rss_mode_posts">பதிவுகள்</string>
+    <string name="forums_rss_mode_posts_comments">பதிவுகள் மற்றும் கருத்துகள்</string>
+    <string name="forums_rss_copied">RSS URL clipboard-க்கு நகலெடுக்கப்பட்டது</string>
+    <string name="forums_find_results">தேடல் முடிவுகள்</string>
+    <string name="forums_markdown_supported">Markdown ஆதரிக்கப்படுகிறது</string>
+    <string name="forums_attachment_file">கோப்பு</string>
+    <string name="forums_attachment_remove">அகற்று</string>
+    <string name="forums_attachment_move_up">மேலே நகர்த்து</string>
+    <string name="forums_attachment_move_down">கீழே நகர்த்து</string>
+    <string name="forums_post_comments">கருத்துகள்</string>
+    <string name="forums_all_forums">அனைத்து மன்றங்களும்</string>
+    <string name="forums_create_allow_search">யாரும் மன்றத்தைத் தேட அனுமதிக்கவும்</string>
+    <string name="forums_rss_clipboard_label">மன்ற RSS URL</string>
 </resources>

@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">मानिसहरू खोज्नुहोस्</string>
     <string name="chat_new_no_matches">मिल्ने मानिसहरू छैनन्</string>
     <string name="chat_new_no_friends">कुराकानी गर्न मानिसहरू खोज्नुहोस्</string>
+    <string name="chat_pin">पिन गर्नुहोस्</string>
+    <string name="chat_unpin">अनपिन गर्नुहोस्</string>
+    <string name="chat_pinned_label">पिन गरिएको</string>
+    <string name="chat_settings_general">सामान्य</string>
+    <string name="chat_settings_screen_title">%1$s सेटिङहरू</string>
+    <string name="chat_mark_read">पढिएको रूपमा चिन्ह लगाउनुहोस्</string>
+    <string name="chat_marked_read">पढिएको रूपमा चिन्ह लगाइयो</string>
+    <string name="chat_search_next">अर्को मिल्दो</string>
+    <string name="chat_search_prev">अघिल्लो मिल्दो</string>
+    <string name="chat_settings_general_desc">कुराकानी सेटिङहरू समायोजन गर्नुहोस्</string>
+    <string name="chat_settings_id">कुराकानी आईडी</string>
+    <string name="chat_settings_members_desc">यो कुराकानीमा भएका मानिसहरूको सूची</string>
 </resources>

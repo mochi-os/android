@@ -294,4 +294,13 @@
     <string name="stepup_error_oauth">Kunne ikke verifisere med den kontoen. Prøv igjen.</string>
     <string name="reaction_remove">Tøm</string>
     <string name="common_logout_confirm_message">Er du sikker på at du vil logge ut? Du må logge inn på nytt for å få tilgang til kontoen din.</string>
+    <string name="comment_anonymous">Anonym</string>
+    <string name="tags_label">Etikettar</string>
+    <string name="tags_add">Legg til etikett</string>
+    <string name="tags_label_field">Merkelapp</string>
+    <string name="tags_interest_up">Vis meir av dette</string>
+    <string name="tags_interest_down">Vis mindre av dette</string>
+    <string name="tags_interest_clear">Slutt å visa</string>
+    <string name="tags_none">Ingen merkelappar</string>
+    <string name="tags_delete">Fjern merkelapp</string>
 </resources>

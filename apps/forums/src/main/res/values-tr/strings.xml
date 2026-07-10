@@ -220,4 +220,18 @@
         <item quantity="one">%d yeni gönderi</item>
         <item quantity="other">%d yeni gönderi</item>
     </plurals>
+    <string name="forums_rss_feed">RSS akışı</string>
+    <string name="forums_rss_mode_posts">Gönderiler</string>
+    <string name="forums_rss_mode_posts_comments">Gönderiler ve yorumlar</string>
+    <string name="forums_rss_copied">RSS URL\'si panoya kopyalandı</string>
+    <string name="forums_find_results">Arama sonuçları</string>
+    <string name="forums_markdown_supported">Markdown destekli</string>
+    <string name="forums_attachment_file">Dosya</string>
+    <string name="forums_attachment_remove">Kaldır</string>
+    <string name="forums_attachment_move_up">Yukarı taşı</string>
+    <string name="forums_attachment_move_down">Aşağı taşı</string>
+    <string name="forums_post_comments">Yorumlar</string>
+    <string name="forums_all_forums">Tüm forumlar</string>
+    <string name="forums_create_allow_search">Herkesin forumu aramasına izin ver</string>
+    <string name="forums_rss_clipboard_label">Forum RSS URL adresi</string>
 </resources>

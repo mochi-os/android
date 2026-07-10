@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">လူများကို ရှာဖွေရန်</string>
     <string name="chat_new_no_matches">ကိုက်ညီသူ မရှိပါ</string>
     <string name="chat_new_no_friends">ချတ်ရန် လူများကို ရှာဖွေပါ</string>
+    <string name="chat_pin">ပင်တွဲရန်</string>
+    <string name="chat_unpin">Pin ဖြုတ်မည်</string>
+    <string name="chat_pinned_label">Pin ထားသည်</string>
+    <string name="chat_settings_general">အထွေထွေ</string>
+    <string name="chat_settings_screen_title">%1$s ဆက်တင်များ</string>
+    <string name="chat_mark_read">ဖတ်ပြီးအဖြစ် အမှတ်အသားပြုရန်</string>
+    <string name="chat_marked_read">ဖတ်ပြီးအဖြစ် အမှတ်အသားပြုပြီး</string>
+    <string name="chat_search_next">နောက်ထပ် တူညီမှု</string>
+    <string name="chat_search_prev">ယခင် တူညီမှု</string>
+    <string name="chat_settings_general_desc">ချတ် ဆက်တင်များကို ချိန်ညှိပါ</string>
+    <string name="chat_settings_id">ချတ် ID</string>
+    <string name="chat_settings_members_desc">ဤချတ်ရှိ လူများစာရင်း</string>
 </resources>

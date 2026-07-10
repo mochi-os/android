@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Nepavyko atidaryti failo</string>
     <string name="reaction_remove">Išvalyti</string>
     <string name="common_logout_confirm_message">Ar tikrai norite atsijungti? Norėdami pasiekti savo paskyrą, turėsite prisijungti iš naujo.</string>
+    <string name="comment_anonymous">Anoniminis</string>
+    <string name="tags_label">Žymos</string>
+    <string name="tags_add">Pridėti žymą</string>
+    <string name="tags_label_field">Žymos pavadinimas</string>
+    <string name="tags_interest_up">Rodyti daugiau panašių</string>
+    <string name="tags_interest_down">Rodyti mažiau panašių</string>
+    <string name="tags_interest_clear">Nustoti rodyti</string>
+    <string name="tags_none">Žymų nėra</string>
+    <string name="tags_delete">Pašalinti žymą</string>
 </resources>

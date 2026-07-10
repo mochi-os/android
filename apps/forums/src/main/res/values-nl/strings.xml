@@ -220,4 +220,18 @@
         <item quantity="one">%d nieuw bericht</item>
         <item quantity="other">%d nieuwe berichten</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-feed</string>
+    <string name="forums_rss_mode_posts">Berichten</string>
+    <string name="forums_rss_mode_posts_comments">Posts en reacties</string>
+    <string name="forums_rss_copied">RSS-URL gekopieerd naar het klembord</string>
+    <string name="forums_find_results">Zoekresultaten</string>
+    <string name="forums_markdown_supported">Markdown wordt ondersteund</string>
+    <string name="forums_attachment_file">Bestand</string>
+    <string name="forums_attachment_remove">Verwijderen</string>
+    <string name="forums_attachment_move_up">Omhoog verplaatsen</string>
+    <string name="forums_attachment_move_down">Omlaag verplaatsen</string>
+    <string name="forums_post_comments">Reacties</string>
+    <string name="forums_all_forums">Alle forums</string>
+    <string name="forums_create_allow_search">Iedereen toestaan naar het forum te zoeken</string>
+    <string name="forums_rss_clipboard_label">RSS-URL van forum</string>
 </resources>

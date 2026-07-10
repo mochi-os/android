@@ -220,4 +220,18 @@
         <item quantity="one">%d bagong post</item>
         <item quantity="other">%d bagong post</item>
     </plurals>
+    <string name="forums_rss_feed">RSS feed</string>
+    <string name="forums_rss_mode_posts">Mga Post</string>
+    <string name="forums_rss_mode_posts_comments">Mga post at komento</string>
+    <string name="forums_rss_copied">Nakopya ang RSS URL sa clipboard</string>
+    <string name="forums_find_results">Mga resulta ng paghahanap</string>
+    <string name="forums_markdown_supported">Sinusuportahan ang Markdown</string>
+    <string name="forums_attachment_file">File</string>
+    <string name="forums_attachment_remove">Alisin</string>
+    <string name="forums_attachment_move_up">Ilipat pataas</string>
+    <string name="forums_attachment_move_down">Ilipat pababa</string>
+    <string name="forums_post_comments">Mga komento</string>
+    <string name="forums_all_forums">Lahat ng forum</string>
+    <string name="forums_create_allow_search">Payagan ang sinuman na hanapin ang forum</string>
+    <string name="forums_rss_clipboard_label">RSS URL ng forum</string>
 </resources>

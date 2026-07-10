@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ఫైల్‌ను తెరవడం సాధ్యపడలేదు</string>
     <string name="reaction_remove">క్లియర్ చేయండి</string>
     <string name="common_logout_confirm_message">మీరు ఖచ్చితంగా లాగ్ అవుట్ అవ్వాలనుకుంటున్నారా? మీ ఖాతాను యాక్సెస్ చేయడానికి మీరు మళ్లీ లాగిన్ అవ్వాల్సి ఉంటుంది.</string>
+    <string name="comment_anonymous">అనామకుడు</string>
+    <string name="tags_label">ట్యాగ్‌లు</string>
+    <string name="tags_add">ట్యాగ్ జోడించు</string>
+    <string name="tags_label_field">ట్యాగ్ లేబుల్</string>
+    <string name="tags_interest_up">ఇలాంటివి మరిన్ని చూపించు</string>
+    <string name="tags_interest_down">ఇలాంటివి తక్కువగా చూపించు</string>
+    <string name="tags_interest_clear">చూపించడం ఆపివేయి</string>
+    <string name="tags_none">ట్యాగ్‌లు లేవు</string>
+    <string name="tags_delete">ట్యాగ్‌ను తీసివేయండి</string>
 </resources>

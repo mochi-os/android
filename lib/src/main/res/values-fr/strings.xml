@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Impossible d\'ouvrir le fichier</string>
     <string name="reaction_remove">Effacer</string>
     <string name="common_logout_confirm_message">Voulez-vous vraiment vous déconnecter ? Vous devrez vous reconnecter pour accéder à votre compte.</string>
+    <string name="comment_anonymous">Anonyme</string>
+    <string name="tags_label">Étiquettes</string>
+    <string name="tags_add">Ajouter une étiquette</string>
+    <string name="tags_label_field">Libellé de l\'étiquette</string>
+    <string name="tags_interest_up">Afficher plus de ce type</string>
+    <string name="tags_interest_down">Afficher moins de ce type</string>
+    <string name="tags_interest_clear">Ne plus afficher</string>
+    <string name="tags_none">Aucune étiquette</string>
+    <string name="tags_delete">Supprimer l\'étiquette</string>
 </resources>

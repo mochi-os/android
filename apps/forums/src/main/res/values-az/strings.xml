@@ -220,4 +220,18 @@
         <item quantity="one">%d yeni paylaşım</item>
         <item quantity="other">%d yeni paylaşım</item>
     </plurals>
+    <string name="forums_rss_feed">RSS lenti</string>
+    <string name="forums_rss_mode_posts">Postlar</string>
+    <string name="forums_rss_mode_posts_comments">Postlar və şərhlər</string>
+    <string name="forums_rss_copied">RSS URL panelə kopyalandı</string>
+    <string name="forums_find_results">Axtarış nəticələri</string>
+    <string name="forums_markdown_supported">Markdown dəstəklənir</string>
+    <string name="forums_attachment_file">Fayl</string>
+    <string name="forums_attachment_remove">Sil</string>
+    <string name="forums_attachment_move_up">Yuxarı köçürün</string>
+    <string name="forums_attachment_move_down">Aşağı köçürün</string>
+    <string name="forums_post_comments">Şərhlər</string>
+    <string name="forums_all_forums">Bütün forumlar</string>
+    <string name="forums_create_allow_search">Hər kəsə forumu axtarmağa icazə ver</string>
+    <string name="forums_rss_clipboard_label">Forum RSS URL-i</string>
 </resources>

@@ -220,4 +220,18 @@
         <item quantity="one">%d publicació nova</item>
         <item quantity="other">%d publicacions noves</item>
     </plurals>
+    <string name="forums_rss_feed">Canal RSS</string>
+    <string name="forums_rss_mode_posts">Publicacions</string>
+    <string name="forums_rss_mode_posts_comments">Publicacions i comentaris</string>
+    <string name="forums_rss_copied">URL RSS copiat al porta-retalls</string>
+    <string name="forums_find_results">Resultats de la cerca</string>
+    <string name="forums_markdown_supported">Admet markdown</string>
+    <string name="forums_attachment_file">Fitxer</string>
+    <string name="forums_attachment_remove">Elimina</string>
+    <string name="forums_attachment_move_up">Mou amunt</string>
+    <string name="forums_attachment_move_down">Mou avall</string>
+    <string name="forums_post_comments">Comentaris</string>
+    <string name="forums_all_forums">Tots els fòrums</string>
+    <string name="forums_create_allow_search">Permet que qualsevol cerqui el fòrum</string>
+    <string name="forums_rss_clipboard_label">URL RSS del fòrum</string>
 </resources>

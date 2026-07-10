@@ -220,4 +220,18 @@
         <item quantity="one">%d nyt opslag</item>
         <item quantity="other">%d nye opslag</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-feed</string>
+    <string name="forums_rss_mode_posts">Indlæg</string>
+    <string name="forums_rss_mode_posts_comments">Indlæg og kommentarer</string>
+    <string name="forums_rss_copied">RSS-URL kopieret til udklipsholderen</string>
+    <string name="forums_find_results">Søgeresultater</string>
+    <string name="forums_markdown_supported">Markdown understøttes</string>
+    <string name="forums_attachment_file">Fil</string>
+    <string name="forums_attachment_remove">Fjern</string>
+    <string name="forums_attachment_move_up">Flyt op</string>
+    <string name="forums_attachment_move_down">Flyt ned</string>
+    <string name="forums_post_comments">Kommentarer</string>
+    <string name="forums_all_forums">Alle fora</string>
+    <string name="forums_create_allow_search">Tillad alle at søge efter forummet</string>
+    <string name="forums_rss_clipboard_label">Forummets RSS-URL</string>
 </resources>

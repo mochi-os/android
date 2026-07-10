@@ -220,4 +220,18 @@
         <item quantity="one">%d nytt innlegg</item>
         <item quantity="other">%d nye innlegg</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-strøm</string>
+    <string name="forums_rss_mode_posts">Innlegg</string>
+    <string name="forums_rss_mode_posts_comments">Innlegg og kommentarer</string>
+    <string name="forums_rss_copied">RSS-URL kopiert til utklippstavlen</string>
+    <string name="forums_find_results">Søkeresultater</string>
+    <string name="forums_markdown_supported">Markdown støttes</string>
+    <string name="forums_attachment_file">Fil</string>
+    <string name="forums_attachment_remove">Fjern</string>
+    <string name="forums_attachment_move_up">Flytt opp</string>
+    <string name="forums_attachment_move_down">Flytt ned</string>
+    <string name="forums_post_comments">Kommentarer</string>
+    <string name="forums_all_forums">Alle forumer</string>
+    <string name="forums_create_allow_search">Tillat alle å søke etter forumet</string>
+    <string name="forums_rss_clipboard_label">Forumets RSS-URL</string>
 </resources>

@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Golek wong</string>
     <string name="chat_new_no_matches">Ora ana wong sing cocog</string>
     <string name="chat_new_no_friends">Golek wong kanggo ngobrol</string>
+    <string name="chat_pin">Sematake</string>
+    <string name="chat_unpin">Lepasaké pin</string>
+    <string name="chat_pinned_label">Dipin</string>
+    <string name="chat_settings_general">Umum</string>
+    <string name="chat_settings_screen_title">Setelan %1$s</string>
+    <string name="chat_mark_read">Tandhani wis diwaca</string>
+    <string name="chat_marked_read">Ditandhani wis diwaca</string>
+    <string name="chat_search_next">Sing cocog sabanjure</string>
+    <string name="chat_search_prev">Sing cocog sadurunge</string>
+    <string name="chat_settings_general_desc">Atur setelan obrolan</string>
+    <string name="chat_settings_id">ID obrolan</string>
+    <string name="chat_settings_members_desc">Dhaptar wong ing obrolan iki</string>
 </resources>

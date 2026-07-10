@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Претражи људе</string>
     <string name="chat_new_no_matches">Нема одговарајућих људи</string>
     <string name="chat_new_no_friends">Потражите људе за ћаскање</string>
+    <string name="chat_pin">Закачи</string>
+    <string name="chat_unpin">Откачи</string>
+    <string name="chat_pinned_label">Закачено</string>
+    <string name="chat_settings_general">Опште</string>
+    <string name="chat_settings_screen_title">Подешавања за %1$s</string>
+    <string name="chat_mark_read">Означи као прочитано</string>
+    <string name="chat_marked_read">Означено као прочитано</string>
+    <string name="chat_search_next">Следеће подударање</string>
+    <string name="chat_search_prev">Претходно подударање</string>
+    <string name="chat_settings_general_desc">Прилагоди подешавања ћаскања</string>
+    <string name="chat_settings_id">ИД ћаскања</string>
+    <string name="chat_settings_members_desc">Списак људи у овом ћаскању</string>
 </resources>

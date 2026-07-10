@@ -220,4 +220,18 @@
         <item quantity="one">%d postim i ri</item>
         <item quantity="other">%d postime të reja</item>
     </plurals>
+    <string name="forums_rss_feed">Burimi RSS</string>
+    <string name="forums_rss_mode_posts">Postimet</string>
+    <string name="forums_rss_mode_posts_comments">Postimet dhe komentet</string>
+    <string name="forums_rss_copied">URL e RSS u kopjua në clipboard</string>
+    <string name="forums_find_results">Rezultatet e kërkimit</string>
+    <string name="forums_markdown_supported">Markdown i mbështetur</string>
+    <string name="forums_attachment_file">Skedar</string>
+    <string name="forums_attachment_remove">Hiq</string>
+    <string name="forums_attachment_move_up">Lëviz lart</string>
+    <string name="forums_attachment_move_down">Lëviz poshtë</string>
+    <string name="forums_post_comments">Komentet</string>
+    <string name="forums_all_forums">Të gjitha forumet</string>
+    <string name="forums_create_allow_search">Lejo këdo të kërkojë forumin</string>
+    <string name="forums_rss_clipboard_label">URL RSS e forumit</string>
 </resources>

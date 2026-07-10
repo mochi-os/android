@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Dosye nehat vekirin</string>
     <string name="reaction_remove">Paqij bike</string>
     <string name="common_logout_confirm_message">Ma hûn piştrast in ku hûn dixwazin derkevin? Ji bo ku hûn bigihîjin hesabê xwe, divê hûn dîsa têkevin.</string>
+    <string name="comment_anonymous">Nenas</string>
+    <string name="tags_label">Tag</string>
+    <string name="tags_add">Etîketê zêde bike</string>
+    <string name="tags_label_field">Etîket</string>
+    <string name="tags_interest_up">Bêtir wek vê nîşan bide</string>
+    <string name="tags_interest_down">Kêmtir wek vê nîşan bide</string>
+    <string name="tags_interest_clear">Nîşan nede</string>
+    <string name="tags_none">Etîket tune</string>
+    <string name="tags_delete">Etîketê rake</string>
 </resources>

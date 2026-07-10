@@ -220,4 +220,18 @@
         <item quantity="one">%d नवीन पोस्ट</item>
         <item quantity="other">%d नवीन पोस्ट</item>
     </plurals>
+    <string name="forums_rss_feed">RSS फीड</string>
+    <string name="forums_rss_mode_posts">पोस्ट्स</string>
+    <string name="forums_rss_mode_posts_comments">पोस्ट्स आणि कमेंट्स</string>
+    <string name="forums_rss_copied">RSS URL क्लिपबोर्डवर कॉपी केले</string>
+    <string name="forums_find_results">शोध निकाल</string>
+    <string name="forums_markdown_supported">Markdown समर्थित</string>
+    <string name="forums_attachment_file">फाइल</string>
+    <string name="forums_attachment_remove">काढा</string>
+    <string name="forums_attachment_move_up">वर हलवा</string>
+    <string name="forums_attachment_move_down">खाली हलवा</string>
+    <string name="forums_post_comments">टिप्पण्या</string>
+    <string name="forums_all_forums">सर्व मंच</string>
+    <string name="forums_create_allow_search">कोणालाही मंच शोधण्याची परवानगी द्या</string>
+    <string name="forums_rss_clipboard_label">मंच RSS URL</string>
 </resources>

@@ -219,4 +219,18 @@
     <plurals name="forums_new_posts">
         <item quantity="other">ការបង្ហោះថ្មី %d </item>
     </plurals>
+    <string name="forums_rss_feed">មតិព័ត៌មាន RSS</string>
+    <string name="forums_rss_mode_posts">ប្រកាស</string>
+    <string name="forums_rss_mode_posts_comments">ប្រកាស និងមតិយោបល់</string>
+    <string name="forums_rss_copied">បានចម្លង RSS URL ទៅ clipboard</string>
+    <string name="forums_find_results">លទ្ធផលស្វែងរក</string>
+    <string name="forums_markdown_supported">គាំទ្រ Markdown</string>
+    <string name="forums_attachment_file">ឯកសារ</string>
+    <string name="forums_attachment_remove">យកចេញ</string>
+    <string name="forums_attachment_move_up">ផ្លាស់ទីឡើងលើ</string>
+    <string name="forums_attachment_move_down">ផ្លាស់ទីចុះក្រោម</string>
+    <string name="forums_post_comments">មតិយោបល់</string>
+    <string name="forums_all_forums">វេទិកាទាំងអស់</string>
+    <string name="forums_create_allow_search">អនុញ្ញាតឱ្យអ្នកណាម្នាក់ស្វែងរកវេទិកា</string>
+    <string name="forums_rss_clipboard_label">URL RSS វេទិកា</string>
 </resources>

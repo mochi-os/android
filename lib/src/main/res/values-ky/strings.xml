@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Файлды ачуу мүмкүн болгон жок</string>
     <string name="reaction_remove">Тазалоо</string>
     <string name="common_logout_confirm_message">Чын эле чыгууну каалайсызбы? Аккаунтуңузга кирүү үчүн кайрадан кирүүгө туура келет.</string>
+    <string name="comment_anonymous">Анонимдүү</string>
+    <string name="tags_label">Тегдер</string>
+    <string name="tags_add">Тег кошуу</string>
+    <string name="tags_label_field">Тег белгиси</string>
+    <string name="tags_interest_up">Буга окшогондорду көбүрөөк көрсөтүү</string>
+    <string name="tags_interest_down">Буга окшогондорду азыраак көрсөтүү</string>
+    <string name="tags_interest_clear">Көрсөтүүнү токтотуу</string>
+    <string name="tags_none">Тегдер жок</string>
+    <string name="tags_delete">Тегди алып салуу</string>
 </resources>

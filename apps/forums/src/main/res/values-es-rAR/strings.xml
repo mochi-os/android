@@ -210,4 +210,18 @@
     <string name="forums_saved_title">Guardado</string>
     <string name="forums_saved_remove">Quitar de guardados</string>
     <string name="forums_saved_clear_all">Borrar todo</string>
+    <string name="forums_rss_feed">Fuente RSS</string>
+    <string name="forums_rss_mode_posts">Posteos</string>
+    <string name="forums_rss_mode_posts_comments">Posteos y comentarios</string>
+    <string name="forums_rss_copied">URL RSS copiada al portapapeles</string>
+    <string name="forums_find_results">Resultados de búsqueda</string>
+    <string name="forums_markdown_supported">Compatible con Markdown</string>
+    <string name="forums_attachment_file">Archivo</string>
+    <string name="forums_attachment_remove">Quitá</string>
+    <string name="forums_attachment_move_up">Mover hacia arriba</string>
+    <string name="forums_attachment_move_down">Mover hacia abajo</string>
+    <string name="forums_post_comments">Comentarios</string>
+    <string name="forums_all_forums">Todos los foros</string>
+    <string name="forums_create_allow_search">Permitir que cualquiera busque el foro</string>
+    <string name="forums_rss_clipboard_label">URL RSS del foro</string>
 </resources>

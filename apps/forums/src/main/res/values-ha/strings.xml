@@ -220,4 +220,18 @@
         <item quantity="one">%d sabon wasiƙa</item>
         <item quantity="other">%d sababbin wasiƙu</item>
     </plurals>
+    <string name="forums_rss_feed">Tashar RSS</string>
+    <string name="forums_rss_mode_posts">Sakonni</string>
+    <string name="forums_rss_mode_posts_comments">Posts da sharhi</string>
+    <string name="forums_rss_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
+    <string name="forums_find_results">Sakamakon bincike</string>
+    <string name="forums_markdown_supported">Ana goyon bayan Markdown</string>
+    <string name="forums_attachment_file">Fayil</string>
+    <string name="forums_attachment_remove">Cire</string>
+    <string name="forums_attachment_move_up">Matsa sama</string>
+    <string name="forums_attachment_move_down">Matsa ƙasa</string>
+    <string name="forums_post_comments">Sharhi</string>
+    <string name="forums_all_forums">Duk dandali</string>
+    <string name="forums_create_allow_search">Bar kowa ya nemi dandali</string>
+    <string name="forums_rss_clipboard_label">Adireshin RSS na dandali</string>
 </resources>

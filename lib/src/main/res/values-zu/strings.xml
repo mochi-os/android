@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Ayikwazanga ukuvula ifayela</string>
     <string name="reaction_remove">Sula</string>
     <string name="common_logout_confirm_message">Uqinisekile ukuthi ufuna ukuphuma? Kuzodingeka ungene ngemvume futhi ukuze ufinyelele i-akhawunti yakho.</string>
+    <string name="comment_anonymous">Ongaziwa</string>
+    <string name="tags_label">Amathegi</string>
+    <string name="tags_add">Engeza ithegi</string>
+    <string name="tags_label_field">Ilebula yethegi</string>
+    <string name="tags_interest_up">Bonisa okunye okufana nalokhu</string>
+    <string name="tags_interest_down">Bonisa okuncane okufana nalokhu</string>
+    <string name="tags_interest_clear">Yeka ukubonisa</string>
+    <string name="tags_none">Awekho amathegi</string>
+    <string name="tags_delete">Susa ithegi</string>
 </resources>

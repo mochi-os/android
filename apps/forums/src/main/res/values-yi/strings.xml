@@ -220,4 +220,18 @@
         <item quantity="one">%d נײַער אַרײַנשרײַב</item>
         <item quantity="other">%d נײַע אַרײַנשרײַבן</item>
     </plurals>
+    <string name="forums_rss_feed">RSS פֿיד</string>
+    <string name="forums_rss_mode_posts">פּאָסטן</string>
+    <string name="forums_rss_mode_posts_comments">פּאָסטן און באַמערקונגען</string>
+    <string name="forums_rss_copied">RSS URL קאָפּירט צו קלעמברעט</string>
+    <string name="forums_find_results">זוך רעזולטאַטן</string>
+    <string name="forums_markdown_supported">Markdown געשטיצט</string>
+    <string name="forums_attachment_file">טעקע</string>
+    <string name="forums_attachment_remove">אַראָפּנעמען</string>
+    <string name="forums_attachment_move_up">באַוועגן אַרויף</string>
+    <string name="forums_attachment_move_down">באַוועגן אַראָפּ</string>
+    <string name="forums_post_comments">קאָמענטאַרן</string>
+    <string name="forums_all_forums">אַלע פֿאָרומס</string>
+    <string name="forums_create_allow_search">דערלויבן יעדן צו זוכן דעם פֿאָרום</string>
+    <string name="forums_rss_clipboard_label">פֿאָרום RSS URL</string>
 </resources>

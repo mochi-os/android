@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Níorbh fhéidir an comhad a oscailt</string>
     <string name="reaction_remove">Glan</string>
     <string name="common_logout_confirm_message">An bhfuil tú cinnte gur mhaith leat logáil amach? Beidh ort logáil isteach arís chun rochtain a fháil ar do chuntas.</string>
+    <string name="comment_anonymous">Gan ainm</string>
+    <string name="tags_label">Clibeanna</string>
+    <string name="tags_add">Cuir clib leis</string>
+    <string name="tags_label_field">Lipéad cliba</string>
+    <string name="tags_interest_up">Taispeáin tuilleadh den chineál seo</string>
+    <string name="tags_interest_down">Taispeáin níos lú den chineál seo</string>
+    <string name="tags_interest_clear">Stop á taispeáint</string>
+    <string name="tags_none">Gan chlibeanna</string>
+    <string name="tags_delete">Bain clib</string>
 </resources>

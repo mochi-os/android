@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Wa awọn eniyan</string>
     <string name="chat_new_no_matches">Ko si eniyan ti o baamu</string>
     <string name="chat_new_no_friends">Wa awọn eniyan lati bá sọ̀rọ̀</string>
+    <string name="chat_pin">Tẹ̀</string>
+    <string name="chat_unpin">Yọ pin kúrò</string>
+    <string name="chat_pinned_label">Ti tẹ̀</string>
+    <string name="chat_settings_general">Gbogbogbòò</string>
+    <string name="chat_settings_screen_title">Àwọn ètò %1$s</string>
+    <string name="chat_mark_read">Sàmì sí bí a ti kà</string>
+    <string name="chat_marked_read">A ti sàmì sí bí a ti kà</string>
+    <string name="chat_search_next">Ìbáramu tó tẹ̀lé</string>
+    <string name="chat_search_prev">Ìbáramu tó ṣáájú</string>
+    <string name="chat_settings_general_desc">Ṣàtúnṣe àwọn ètò ìfọ̀rọ̀wérọ̀</string>
+    <string name="chat_settings_id">ID ìfọ̀rọ̀wérọ̀</string>
+    <string name="chat_settings_members_desc">Àkójọ àwọn ènìyàn nínú ìfọ̀rọ̀wérọ̀ yìí</string>
 </resources>

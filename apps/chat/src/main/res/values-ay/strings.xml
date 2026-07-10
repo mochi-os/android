@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Jaqinak thaqhaña</string>
     <string name="chat_new_no_matches">Janiw uñtata jaqinakäkiti</string>
     <string name="chat_new_no_friends">Chat luraña jaqinak thaqhaña</string>
+    <string name="chat_pin">Ch\'akhu</string>
+    <string name="chat_unpin">Jan uñjata</string>
+    <string name="chat_pinned_label">Ch\'akhuta</string>
+    <string name="chat_settings_general">Taqpacha</string>
+    <string name="chat_settings_screen_title">%1$s wakichäwinaka</string>
+    <string name="chat_mark_read">Ullt\'ata ukham uñacht\'ayaña</string>
+    <string name="chat_marked_read">Ullt\'ata ukham uñacht\'ayata</string>
+    <string name="chat_search_next">Jutir chika</string>
+    <string name="chat_search_prev">Nayrïr chika</string>
+    <string name="chat_settings_general_desc">Aruskipäwi wakichäwinaka askichaña</string>
+    <string name="chat_settings_id">Aruskipäwi ID</string>
+    <string name="chat_settings_members_desc">Aka aruskipäwin jaqinakapa</string>
 </resources>

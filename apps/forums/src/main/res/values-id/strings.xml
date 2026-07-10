@@ -220,4 +220,18 @@
         <item quantity="one">%d kiriman baru</item>
         <item quantity="other">%d kiriman baru</item>
     </plurals>
+    <string name="forums_rss_feed">Feed RSS</string>
+    <string name="forums_rss_mode_posts">Postingan</string>
+    <string name="forums_rss_mode_posts_comments">Postingan dan komentar</string>
+    <string name="forums_rss_copied">URL RSS disalin ke clipboard</string>
+    <string name="forums_find_results">Hasil pencarian</string>
+    <string name="forums_markdown_supported">Markdown didukung</string>
+    <string name="forums_attachment_file">Berkas</string>
+    <string name="forums_attachment_remove">Hapus</string>
+    <string name="forums_attachment_move_up">Pindahkan ke atas</string>
+    <string name="forums_attachment_move_down">Pindahkan ke bawah</string>
+    <string name="forums_post_comments">Komentar</string>
+    <string name="forums_all_forums">Semua forum</string>
+    <string name="forums_create_allow_search">Izinkan siapa saja mencari forum</string>
+    <string name="forums_rss_clipboard_label">URL RSS forum</string>
 </resources>

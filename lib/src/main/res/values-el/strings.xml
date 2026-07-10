@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Δεν ήταν δυνατό το άνοιγμα του αρχείου</string>
     <string name="reaction_remove">Απαλοιφή</string>
     <string name="common_logout_confirm_message">Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε; Θα χρειαστεί να συνδεθείτε ξανά για να αποκτήσετε πρόσβαση στον λογαριασμό σας.</string>
+    <string name="comment_anonymous">Ανώνυμος</string>
+    <string name="tags_label">Ετικέτες</string>
+    <string name="tags_add">Προσθήκη ετικέτας</string>
+    <string name="tags_label_field">Ετικέτα</string>
+    <string name="tags_interest_up">Εμφάνιση περισσότερων σαν αυτό</string>
+    <string name="tags_interest_down">Εμφάνιση λιγότερων σαν αυτό</string>
+    <string name="tags_interest_clear">Διακοπή εμφάνισης</string>
+    <string name="tags_none">Χωρίς ετικέτες</string>
+    <string name="tags_delete">Αφαίρεση ετικέτας</string>
 </resources>

@@ -220,4 +220,18 @@
         <item quantity="one">%d नया पोस्ट</item>
         <item quantity="other">%d नया पोस्ट</item>
     </plurals>
+    <string name="forums_rss_feed">RSS फीड</string>
+    <string name="forums_rss_mode_posts">पोस्ट</string>
+    <string name="forums_rss_mode_posts_comments">पोस्ट आ टिप्पणी</string>
+    <string name="forums_rss_copied">RSS URL क्लिपबोर्ड पर कॉपी भइल</string>
+    <string name="forums_find_results">खोज परिणाम</string>
+    <string name="forums_markdown_supported">Markdown समर्थित</string>
+    <string name="forums_attachment_file">फाइल</string>
+    <string name="forums_attachment_remove">हटाईं</string>
+    <string name="forums_attachment_move_up">ऊपर करीं</string>
+    <string name="forums_attachment_move_down">नीचे करीं</string>
+    <string name="forums_post_comments">टिप्पणी</string>
+    <string name="forums_all_forums">सब फोरम</string>
+    <string name="forums_create_allow_search">केहू के फोरम खोजे के अनुमति दीं</string>
+    <string name="forums_rss_clipboard_label">फोरम RSS URL</string>
 </resources>

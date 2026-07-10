@@ -220,4 +220,18 @@
         <item quantity="one">%d نئين پوسٽ</item>
         <item quantity="other">%d نيون پوسٽون</item>
     </plurals>
+    <string name="forums_rss_feed">RSS فيڊ</string>
+    <string name="forums_rss_mode_posts">پوسٽون</string>
+    <string name="forums_rss_mode_posts_comments">پوسٽون ۽ تبصرا</string>
+    <string name="forums_rss_copied">RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
+    <string name="forums_find_results">ڳولا جا نتيجا</string>
+    <string name="forums_markdown_supported">Markdown سپورٽ ٿيل</string>
+    <string name="forums_attachment_file">فائل</string>
+    <string name="forums_attachment_remove">هٽايو</string>
+    <string name="forums_attachment_move_up">مٿي منتقل ڪريو</string>
+    <string name="forums_attachment_move_down">هيٺ منتقل ڪريو</string>
+    <string name="forums_post_comments">تبصرا</string>
+    <string name="forums_all_forums">سڀ فورم</string>
+    <string name="forums_create_allow_search">ڪنهن کي به فورم ڳولڻ جي اجازت ڏيو</string>
+    <string name="forums_rss_clipboard_label">فورم RSS URL</string>
 </resources>

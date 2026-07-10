@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">ಜನರನ್ನು ಹುಡುಕಿ</string>
     <string name="chat_new_no_matches">ಹೊಂದುವ ಜನರಿಲ್ಲ</string>
     <string name="chat_new_no_friends">ಚಾಟ್ ಮಾಡಲು ಜನರನ್ನು ಹುಡುಕಿ</string>
+    <string name="chat_pin">ಪಿನ್</string>
+    <string name="chat_unpin">ಪಿನ್ ತೆಗೆಯಿರಿ</string>
+    <string name="chat_pinned_label">ಪಿನ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="chat_settings_general">ಸಾಮಾನ್ಯ</string>
+    <string name="chat_settings_screen_title">%1$s ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="chat_mark_read">ಓದಿದಂತೆ ಗುರುತಿಸಿ</string>
+    <string name="chat_marked_read">ಓದಿದಂತೆ ಗುರುತಿಸಲಾಗಿದೆ</string>
+    <string name="chat_search_next">ಮುಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
+    <string name="chat_search_prev">ಹಿಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
+    <string name="chat_settings_general_desc">ಚಾಟ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ</string>
+    <string name="chat_settings_id">ಚಾಟ್ ಐಡಿ</string>
+    <string name="chat_settings_members_desc">ಈ ಚಾಟ್‌ನಲ್ಲಿರುವ ಜನರ ಪಟ್ಟಿ</string>
 </resources>

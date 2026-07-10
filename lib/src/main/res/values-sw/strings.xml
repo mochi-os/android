@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Imeshindwa kufungua faili</string>
     <string name="reaction_remove">Futa</string>
     <string name="common_logout_confirm_message">Je, una uhakika unataka kuondoka? Utahitaji kuingia tena ili kufikia akaunti yako.</string>
+    <string name="comment_anonymous">Asiyejulikana</string>
+    <string name="tags_label">Lebo</string>
+    <string name="tags_add">Ongeza lebo</string>
+    <string name="tags_label_field">Lebo</string>
+    <string name="tags_interest_up">Onyesha zaidi kama hii</string>
+    <string name="tags_interest_down">Onyesha kidogo kama hii</string>
+    <string name="tags_interest_clear">Acha kuonyesha</string>
+    <string name="tags_none">Hakuna lebo</string>
+    <string name="tags_delete">Ondoa lebo</string>
 </resources>

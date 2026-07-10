@@ -220,4 +220,18 @@
         <item quantity="one">%d паёми нав</item>
         <item quantity="other">%d паёмҳои нав</item>
     </plurals>
+    <string name="forums_rss_feed">Фиди RSS</string>
+    <string name="forums_rss_mode_posts">Постҳо</string>
+    <string name="forums_rss_mode_posts_comments">Постҳо ва шарҳҳо</string>
+    <string name="forums_rss_copied">URL-и RSS ба буфер нусха карда шуд</string>
+    <string name="forums_find_results">Натиҷаҳои ҷустуҷӯ</string>
+    <string name="forums_markdown_supported">Markdown дастгирӣ карда мешавад</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Хориҷ кардан</string>
+    <string name="forums_attachment_move_up">Боло баровардан</string>
+    <string name="forums_attachment_move_down">Поён баровардан</string>
+    <string name="forums_post_comments">Шарҳҳо</string>
+    <string name="forums_all_forums">Ҳамаи форумҳо</string>
+    <string name="forums_create_allow_search">Ба ҳама иҷозат диҳед, ки форумро ҷустуҷӯ кунанд</string>
+    <string name="forums_rss_clipboard_label">Суроғаи RSS-и форум</string>
 </resources>

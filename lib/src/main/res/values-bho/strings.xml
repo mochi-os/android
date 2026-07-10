@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">फाइल ना खुल सकल</string>
     <string name="reaction_remove">हटाईं</string>
     <string name="common_logout_confirm_message">का रउआ पक्का लॉग आउट करे के चाहत बानी? आपन खाता में फेर से पहुँचे खातिर रउआ के दोबारा लॉग इन करे के पड़ी।</string>
+    <string name="comment_anonymous">अनाम</string>
+    <string name="tags_label">टैग सब</string>
+    <string name="tags_add">टैग जोड़ीं</string>
+    <string name="tags_label_field">टैग नाम</string>
+    <string name="tags_interest_up">एकरा जइसन अउर देखाईं</string>
+    <string name="tags_interest_down">एकरा जइसन कम देखाईं</string>
+    <string name="tags_interest_clear">देखावल बंद करीं</string>
+    <string name="tags_none">कवनो टैग नइखे</string>
+    <string name="tags_delete">टैग हटाईं</string>
 </resources>

@@ -220,4 +220,18 @@
         <item quantity="one">%d නව පළ කිරීම</item>
         <item quantity="other">%d නව පළ කිරීම්</item>
     </plurals>
+    <string name="forums_rss_feed">RSS පෝෂණය</string>
+    <string name="forums_rss_mode_posts">පළ කිරීම්</string>
+    <string name="forums_rss_mode_posts_comments">පළ කිරීම් සහ අදහස්</string>
+    <string name="forums_rss_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
+    <string name="forums_find_results">සෙවුම් ප්‍රතිඵල</string>
+    <string name="forums_markdown_supported">Markdown සහාය දක්වයි</string>
+    <string name="forums_attachment_file">ගොනුව</string>
+    <string name="forums_attachment_remove">ඉවත් කරන්න</string>
+    <string name="forums_attachment_move_up">ඉහළට ගෙනයන්න</string>
+    <string name="forums_attachment_move_down">පහළට ගෙනයන්න</string>
+    <string name="forums_post_comments">අදහස්</string>
+    <string name="forums_all_forums">සියලුම සංසද</string>
+    <string name="forums_create_allow_search">ඕනෑම කෙනෙකුට සංසදය සෙවීමට ඉඩ දෙන්න</string>
+    <string name="forums_rss_clipboard_label">සංසද RSS URL</string>
 </resources>

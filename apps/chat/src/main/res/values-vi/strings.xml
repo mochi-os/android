@@ -95,4 +95,16 @@
     <string name="chat_new_search_placeholder">Tìm người</string>
     <string name="chat_new_no_matches">Không có người phù hợp</string>
     <string name="chat_new_no_friends">Tìm người để trò chuyện</string>
+    <string name="chat_pin">Ghim</string>
+    <string name="chat_unpin">Bỏ ghim</string>
+    <string name="chat_pinned_label">Đã ghim</string>
+    <string name="chat_settings_general">Chung</string>
+    <string name="chat_settings_screen_title">Cài đặt %1$s</string>
+    <string name="chat_mark_read">Đánh dấu là đã đọc</string>
+    <string name="chat_marked_read">Đã đánh dấu là đã đọc</string>
+    <string name="chat_search_next">Kết quả khớp tiếp theo</string>
+    <string name="chat_search_prev">Kết quả khớp trước</string>
+    <string name="chat_settings_general_desc">Điều chỉnh cài đặt trò chuyện</string>
+    <string name="chat_settings_id">ID trò chuyện</string>
+    <string name="chat_settings_members_desc">Danh sách người trong cuộc trò chuyện này</string>
 </resources>

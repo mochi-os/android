@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ಫೈಲ್ ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="reaction_remove">ತೆರವುಗೊಳಿಸಿ</string>
     <string name="common_logout_confirm_message">ನೀವು ಖಚಿತವಾಗಿ ಲಾಗ್ ಔಟ್ ಆಗಲು ಬಯಸುವಿರಾ? ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ಮತ್ತೆ ಲಾಗಿನ್ ಆಗಬೇಕಾಗುತ್ತದೆ.</string>
+    <string name="comment_anonymous">ಅನಾಮಧೇಯ</string>
+    <string name="tags_label">ಟ್ಯಾಗ್‌ಗಳು</string>
+    <string name="tags_add">ಟ್ಯಾಗ್ ಸೇರಿಸಿ</string>
+    <string name="tags_label_field">ಟ್ಯಾಗ್ ಲೇಬಲ್</string>
+    <string name="tags_interest_up">ಇಂತಹ ಇನ್ನಷ್ಟು ತೋರಿಸಿ</string>
+    <string name="tags_interest_down">ಇಂತಹ ಕಡಿಮೆ ತೋರಿಸಿ</string>
+    <string name="tags_interest_clear">ತೋರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ</string>
+    <string name="tags_none">ಯಾವುದೇ ಟ್ಯಾಗ್‌ಗಳಿಲ್ಲ</string>
+    <string name="tags_delete">ಟ್ಯಾಗ್ ತೆಗೆದುಹಾಕಿ</string>
 </resources>

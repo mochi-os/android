@@ -222,4 +222,18 @@
         <item quantity="many">%d naujo įrašo</item>
         <item quantity="other">%d naujų įrašų</item>
     </plurals>
+    <string name="forums_rss_feed">RSS srautas</string>
+    <string name="forums_rss_mode_posts">Įrašai</string>
+    <string name="forums_rss_mode_posts_comments">Įrašai ir komentarai</string>
+    <string name="forums_rss_copied">RSS URL nukopijuotas į iškarpinę</string>
+    <string name="forums_find_results">Paieškos rezultatai</string>
+    <string name="forums_markdown_supported">Palaikomas markdown</string>
+    <string name="forums_attachment_file">Failas</string>
+    <string name="forums_attachment_remove">Šalinti</string>
+    <string name="forums_attachment_move_up">Perkelti į viršų</string>
+    <string name="forums_attachment_move_down">Perkelti į apačią</string>
+    <string name="forums_post_comments">Komentarai</string>
+    <string name="forums_all_forums">Visi forumai</string>
+    <string name="forums_create_allow_search">Leisti bet kam ieškoti forumo</string>
+    <string name="forums_rss_clipboard_label">Forumo RSS URL</string>
 </resources>

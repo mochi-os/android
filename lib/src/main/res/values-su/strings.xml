@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Teu tiasa muka berkas</string>
     <string name="reaction_remove">Bersihkeun</string>
     <string name="common_logout_confirm_message">Yakin badé kaluar? Anjeun kedah lebet deui pikeun ngaksés akun anjeun.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Tag</string>
+    <string name="tags_add">Tambah tag</string>
+    <string name="tags_label_field">Labél tag</string>
+    <string name="tags_interest_up">Témbongkeun nu sarupa deui</string>
+    <string name="tags_interest_down">Kurangan nu sarupa kieu</string>
+    <string name="tags_interest_clear">Eureunan nembongkeun</string>
+    <string name="tags_none">Taya tag</string>
+    <string name="tags_delete">Hapus tag</string>
 </resources>

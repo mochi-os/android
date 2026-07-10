@@ -210,4 +210,18 @@
     <string name="forums_saved_title">已儲存</string>
     <string name="forums_saved_remove">由已儲存中移除</string>
     <string name="forums_saved_clear_all">全部清除</string>
+    <string name="forums_rss_feed">RSS 訂閱源</string>
+    <string name="forums_rss_mode_posts">帖文</string>
+    <string name="forums_rss_mode_posts_comments">帖文同留言</string>
+    <string name="forums_rss_copied">RSS 網址已複製到剪貼簿</string>
+    <string name="forums_find_results">搜尋結果</string>
+    <string name="forums_markdown_supported">支援 Markdown</string>
+    <string name="forums_attachment_file">檔案</string>
+    <string name="forums_attachment_remove">移除</string>
+    <string name="forums_attachment_move_up">上移</string>
+    <string name="forums_attachment_move_down">下移</string>
+    <string name="forums_post_comments">留言</string>
+    <string name="forums_all_forums">所有論壇</string>
+    <string name="forums_create_allow_search">容許任何人搜尋論壇</string>
+    <string name="forums_rss_clipboard_label">論壇 RSS 網址</string>
 </resources>

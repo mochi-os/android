@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ဖိုင်ကို ဖွင့်၍ မရပါ</string>
     <string name="reaction_remove">ရှင်းမည်</string>
     <string name="common_logout_confirm_message">ထွက်ရန် သေချာပါသလား။ သင့်အကောင့်ကို ပြန်လည်အသုံးပြုရန် ထပ်မံဝင်ရောက်ရပါမည်။</string>
+    <string name="comment_anonymous">အမည်မသိ</string>
+    <string name="tags_label">အညွှန်းများ</string>
+    <string name="tags_add">အညွှန်း ထည့်ရန်</string>
+    <string name="tags_label_field">တဂ် အညွှန်း</string>
+    <string name="tags_interest_up">ဤကဲ့သို့ ပိုပြပါ</string>
+    <string name="tags_interest_down">ဤကဲ့သို့ လျှော့ပြပါ</string>
+    <string name="tags_interest_clear">ပြသခြင်း ရပ်ပါ</string>
+    <string name="tags_none">တဂ်များ မရှိပါ</string>
+    <string name="tags_delete">တဂ်ကို ဖယ်ရှားပါ</string>
 </resources>

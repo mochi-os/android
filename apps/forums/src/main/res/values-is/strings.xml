@@ -220,4 +220,18 @@
         <item quantity="one">%d ný færsla</item>
         <item quantity="other">%d nýjar færslur</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-straumur</string>
+    <string name="forums_rss_mode_posts">Færslur</string>
+    <string name="forums_rss_mode_posts_comments">Færslur og athugasemdir</string>
+    <string name="forums_rss_copied">RSS-vefslóð afrituð á klippiborð</string>
+    <string name="forums_find_results">Leitarniðurstöður</string>
+    <string name="forums_markdown_supported">Markdown stuðningur</string>
+    <string name="forums_attachment_file">Skrá</string>
+    <string name="forums_attachment_remove">Fjarlægja</string>
+    <string name="forums_attachment_move_up">Færa upp</string>
+    <string name="forums_attachment_move_down">Færa niður</string>
+    <string name="forums_post_comments">Athugasemdir</string>
+    <string name="forums_all_forums">Öll spjallborð</string>
+    <string name="forums_create_allow_search">Leyfa hverjum sem er að leita að spjallborðinu</string>
+    <string name="forums_rss_clipboard_label">RSS-slóð spjallborðs</string>
 </resources>

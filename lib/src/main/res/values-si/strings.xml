@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ගොනුව විවෘත කළ නොහැකි විය</string>
     <string name="reaction_remove">හිස් කරන්න</string>
     <string name="common_logout_confirm_message">ඔබට ඉවත් වීමට අවශ්‍ය බව විශ්වාසද? ඔබගේ ගිණුමට ප්‍රවේශ වීමට නැවත පිවිසීමට සිදුවේ.</string>
+    <string name="comment_anonymous">නිර්නාමික</string>
+    <string name="tags_label">ටැග</string>
+    <string name="tags_add">ටැගය එක් කරන්න</string>
+    <string name="tags_label_field">ටැග් ලේබලය</string>
+    <string name="tags_interest_up">මේ වැනි තවත් පෙන්වන්න</string>
+    <string name="tags_interest_down">මේ වැනි අඩුවෙන් පෙන්වන්න</string>
+    <string name="tags_interest_clear">පෙන්වීම නවත්වන්න</string>
+    <string name="tags_none">ටැග් නැත</string>
+    <string name="tags_delete">ටැගය ඉවත් කරන්න</string>
 </resources>

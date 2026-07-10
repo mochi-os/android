@@ -220,4 +220,18 @@
         <item quantity="one">%d marandu pyahu</item>
         <item quantity="other">%d marandu pyahu</item>
     </plurals>
+    <string name="forums_rss_feed">RSS ñemyasãi</string>
+    <string name="forums_rss_mode_posts">Marandu</string>
+    <string name="forums_rss_mode_posts_comments">Marandu ha comentarios</string>
+    <string name="forums_rss_copied">RSS URL oñekopia clipboard-pe</string>
+    <string name="forums_find_results">Jeheka rembiapoukapy</string>
+    <string name="forums_markdown_supported">Markdown ojepuru</string>
+    <string name="forums_attachment_file">Marandurenda</string>
+    <string name="forums_attachment_remove">Embogue</string>
+    <string name="forums_attachment_move_up">Emonge\'e yvate</string>
+    <string name="forums_attachment_move_down">Emonge\'e yvy gotyo</string>
+    <string name="forums_post_comments">Comentariokuéra</string>
+    <string name="forums_all_forums">Opaite foro</string>
+    <string name="forums_create_allow_search">Ehejáke opavavépe oheka foro</string>
+    <string name="forums_rss_clipboard_label">Foro RSS URL</string>
 </resources>

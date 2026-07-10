@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Хүмүүсийг хайх</string>
     <string name="chat_new_no_matches">Тохирох хүн алга</string>
     <string name="chat_new_no_friends">Чатлах хүмүүсийг хайх</string>
+    <string name="chat_pin">Бэхлэх</string>
+    <string name="chat_unpin">Хадаас тайлах</string>
+    <string name="chat_pinned_label">Бэхлэгдсэн</string>
+    <string name="chat_settings_general">Ерөнхий</string>
+    <string name="chat_settings_screen_title">%1$s тохиргоо</string>
+    <string name="chat_mark_read">Уншсан гэж тэмдэглэх</string>
+    <string name="chat_marked_read">Уншсан гэж тэмдэглэсэн</string>
+    <string name="chat_search_next">Дараагийн тохирол</string>
+    <string name="chat_search_prev">Өмнөх тохирол</string>
+    <string name="chat_settings_general_desc">Чатны тохиргоог тохируулах</string>
+    <string name="chat_settings_id">Чатны ID</string>
+    <string name="chat_settings_members_desc">Энэ чат дахь хүмүүсийн жагсаалт</string>
 </resources>

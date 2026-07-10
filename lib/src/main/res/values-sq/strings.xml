@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Skedari nuk u hap dot</string>
     <string name="reaction_remove">Pastro</string>
     <string name="common_logout_confirm_message">Jeni i sigurt që dëshironi të dilni? Do t\'ju duhet të identifikoheni përsëri për të hyrë në llogarinë tuaj.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Etiketat</string>
+    <string name="tags_add">Shto etiketë</string>
+    <string name="tags_label_field">Etiketë</string>
+    <string name="tags_interest_up">Shfaq më shumë si kjo</string>
+    <string name="tags_interest_down">Shfaq më pak si kjo</string>
+    <string name="tags_interest_clear">Mos e shfaq më</string>
+    <string name="tags_none">Asnjë etiketë</string>
+    <string name="tags_delete">Hiq etiketën</string>
 </resources>

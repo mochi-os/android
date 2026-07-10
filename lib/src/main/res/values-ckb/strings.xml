@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">نەتوانرا پەڕگەکە بکرێتەوە</string>
     <string name="reaction_remove">لابردن</string>
     <string name="common_logout_confirm_message">دڵنیایت دەتەوێت بچیتە دەرەوە؟ پێویستە دووبارە بچیتەوە ژوورەوە بۆ دەستگەیشتن بە هەژمارەکەت.</string>
+    <string name="comment_anonymous">نەناسراو</string>
+    <string name="tags_label">تاگەکان</string>
+    <string name="tags_add">زیادکردنی تاگ</string>
+    <string name="tags_label_field">ناونیشانی تاگ</string>
+    <string name="tags_interest_up">زیاتر لەمە پیشان بدە</string>
+    <string name="tags_interest_down">کەمتر لەمە پیشان بدە</string>
+    <string name="tags_interest_clear">ڕاوەستاندنی پیشاندان</string>
+    <string name="tags_none">هیچ تاگێک نییە</string>
+    <string name="tags_delete">لابردنی تاگ</string>
 </resources>

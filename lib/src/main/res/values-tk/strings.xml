@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Faýly açyp bolmady</string>
     <string name="reaction_remove">Arassalamak</string>
     <string name="common_logout_confirm_message">Hasabyňyzdan çykmak isleýändigiňize ynanýarsyňyzmy? Hasabyňyza girmek üçin täzeden ulgama girmeli bolarsyňyz.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Bellikler</string>
+    <string name="tags_add">Bellik goş</string>
+    <string name="tags_label_field">Bellik ady</string>
+    <string name="tags_interest_up">Şuňa meňzeşleri köpräk görkez</string>
+    <string name="tags_interest_down">Şuňa meňzeşleri azrak görkez</string>
+    <string name="tags_interest_clear">Görkezmegi bes et</string>
+    <string name="tags_none">Bellik ýok</string>
+    <string name="tags_delete">Belligi aýyrmak</string>
 </resources>

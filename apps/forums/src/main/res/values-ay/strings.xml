@@ -220,4 +220,18 @@
         <item quantity="one">%d machaqa yatiyäwi</item>
         <item quantity="other">%d machaqa yatiyäwinaka</item>
     </plurals>
+    <string name="forums_rss_feed">RSS yatiyäwi</string>
+    <string name="forums_rss_mode_posts">Qillqatanaka</string>
+    <string name="forums_rss_mode_posts_comments">Qillqatanak comentarionakampi</string>
+    <string name="forums_rss_copied">RSS URL clipboard ukar copiata</string>
+    <string name="forums_find_results">Thaqhañan mistuyäwinakapa</string>
+    <string name="forums_markdown_supported">Markdown wakisi</string>
+    <string name="forums_attachment_file">Archivo</string>
+    <string name="forums_attachment_remove">Aparma</string>
+    <string name="forums_attachment_move_up">Alaxar apaña</string>
+    <string name="forums_attachment_move_down">Aynachar apaña</string>
+    <string name="forums_post_comments">Comentarionaka</string>
+    <string name="forums_all_forums">Taqi foronaka</string>
+    <string name="forums_create_allow_search">Khitisa forox thaqhañapataki iyawsaña</string>
+    <string name="forums_rss_clipboard_label">Foro RSS URL</string>
 </resources>

@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Impossibile aprire il file</string>
     <string name="reaction_remove">Cancella</string>
     <string name="common_logout_confirm_message">Sei sicuro di voler uscire? Dovrai effettuare nuovamente l\'accesso per accedere al tuo account.</string>
+    <string name="comment_anonymous">Anonimo</string>
+    <string name="tags_label">Tag</string>
+    <string name="tags_add">Aggiungi tag</string>
+    <string name="tags_label_field">Etichetta tag</string>
+    <string name="tags_interest_up">Mostra di più di questo tipo</string>
+    <string name="tags_interest_down">Mostra di meno di questo tipo</string>
+    <string name="tags_interest_clear">Smetti di mostrare</string>
+    <string name="tags_none">Nessun tag</string>
+    <string name="tags_delete">Rimuovi tag</string>
 </resources>

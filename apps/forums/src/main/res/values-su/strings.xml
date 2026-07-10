@@ -220,4 +220,18 @@
         <item quantity="one">%d kintunan anyar</item>
         <item quantity="other">%d kintunan anyar</item>
     </plurals>
+    <string name="forums_rss_feed">Feed RSS</string>
+    <string name="forums_rss_mode_posts">Pos</string>
+    <string name="forums_rss_mode_posts_comments">Pos jeung koméntar</string>
+    <string name="forums_rss_copied">URL RSS disalin ka clipboard</string>
+    <string name="forums_find_results">Hasil pamilarian</string>
+    <string name="forums_markdown_supported">Markdown didukung</string>
+    <string name="forums_attachment_file">Berkas</string>
+    <string name="forums_attachment_remove">Pupus</string>
+    <string name="forums_attachment_move_up">Pindahkeun ka luhur</string>
+    <string name="forums_attachment_move_down">Pindahkeun ka handap</string>
+    <string name="forums_post_comments">Koméntar</string>
+    <string name="forums_all_forums">Sadaya forum</string>
+    <string name="forums_create_allow_search">Idinan saha waé néangan forum</string>
+    <string name="forums_rss_clipboard_label">URL RSS forum</string>
 </resources>

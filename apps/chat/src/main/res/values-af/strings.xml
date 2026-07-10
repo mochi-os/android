@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Soek mense</string>
     <string name="chat_new_no_matches">Geen passende mense</string>
     <string name="chat_new_no_friends">Soek mense om mee te klets</string>
+    <string name="chat_pin">Speld vas</string>
+    <string name="chat_unpin">Ontvasspeld</string>
+    <string name="chat_pinned_label">Vasgespeld</string>
+    <string name="chat_settings_general">Algemeen</string>
+    <string name="chat_settings_screen_title">%1$s-instellings</string>
+    <string name="chat_mark_read">Merk as gelees</string>
+    <string name="chat_marked_read">Gemerk as gelees</string>
+    <string name="chat_search_next">Volgende passing</string>
+    <string name="chat_search_prev">Vorige passing</string>
+    <string name="chat_settings_general_desc">Pas geselsinstellings aan</string>
+    <string name="chat_settings_id">Gesels-ID</string>
+    <string name="chat_settings_members_desc">Lys van mense in hierdie gesprek</string>
 </resources>

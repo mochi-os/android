@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Akukwazekanga ukuvula ifayile</string>
     <string name="reaction_remove">Cima</string>
     <string name="common_logout_confirm_message">Uqinisekile ukuba ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwiakhawunti yakho.</string>
+    <string name="comment_anonymous">Ongaziwayo</string>
+    <string name="tags_label">Iiletile</string>
+    <string name="tags_add">Yongeza itheki</string>
+    <string name="tags_label_field">Ilebhile yephawu</string>
+    <string name="tags_interest_up">Bonisa ezininzi ezinjengale</string>
+    <string name="tags_interest_down">Bonisa ezimbalwa ezinjengale</string>
+    <string name="tags_interest_clear">Yeka ukubonisa</string>
+    <string name="tags_none">Akukho maphawu</string>
+    <string name="tags_delete">Susa ithegi</string>
 </resources>

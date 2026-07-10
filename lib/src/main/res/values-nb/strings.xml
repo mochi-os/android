@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Kunne ikke åpne filen</string>
     <string name="reaction_remove">Tøm</string>
     <string name="common_logout_confirm_message">Er du sikker på at du vil logge ut? Du må logge inn igjen for å få tilgang til kontoen din.</string>
+    <string name="comment_anonymous">Anonym</string>
+    <string name="tags_label">Etiketter</string>
+    <string name="tags_add">Legg til etikett</string>
+    <string name="tags_label_field">Etikettnavn</string>
+    <string name="tags_interest_up">Vis mer som dette</string>
+    <string name="tags_interest_down">Vis mindre som dette</string>
+    <string name="tags_interest_clear">Slutt å vise</string>
+    <string name="tags_none">Ingen etiketter</string>
+    <string name="tags_delete">Fjern etikett</string>
 </resources>

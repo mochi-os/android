@@ -219,4 +219,18 @@
     <plurals name="forums_new_posts">
         <item quantity="other">%d 件の新着投稿</item>
     </plurals>
+    <string name="forums_rss_feed">RSS フィード</string>
+    <string name="forums_rss_mode_posts">投稿</string>
+    <string name="forums_rss_mode_posts_comments">投稿とコメント</string>
+    <string name="forums_rss_copied">RSS URL をクリップボードにコピーしました</string>
+    <string name="forums_find_results">検索結果</string>
+    <string name="forums_markdown_supported">Markdown対応</string>
+    <string name="forums_attachment_file">ファイル</string>
+    <string name="forums_attachment_remove">削除</string>
+    <string name="forums_attachment_move_up">上に移動</string>
+    <string name="forums_attachment_move_down">下に移動</string>
+    <string name="forums_post_comments">コメント</string>
+    <string name="forums_all_forums">すべてのフォーラム</string>
+    <string name="forums_create_allow_search">誰でもフォーラムを検索できるようにする</string>
+    <string name="forums_rss_clipboard_label">フォーラムのRSS URL</string>
 </resources>

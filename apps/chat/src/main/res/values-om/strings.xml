@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Namoota barbaadi</string>
     <string name="chat_new_no_matches">Namoonni walsiman hin jiran</string>
     <string name="chat_new_no_friends">Namoota haasoftu barbaadi</string>
+    <string name="chat_pin">Maxxansi</string>
+    <string name="chat_unpin">Sutachuu kaasi</string>
+    <string name="chat_pinned_label">Maxxanfame</string>
+    <string name="chat_settings_general">Waliigalaa</string>
+    <string name="chat_settings_screen_title">Qindaa\'ina %1$s</string>
+    <string name="chat_mark_read">Akka dubbifametti mallattoo godhi</string>
+    <string name="chat_marked_read">Akka dubbifametti mallattoo godhame</string>
+    <string name="chat_search_next">Walsimsiisa itti aanu</string>
+    <string name="chat_search_prev">Walsimsiisa duraa</string>
+    <string name="chat_settings_general_desc">Qindaa\'ina haasawaa sirreessi</string>
+    <string name="chat_settings_id">ID haasawaa</string>
+    <string name="chat_settings_members_desc">Tarree namoota haasawa kana keessaa</string>
 </resources>

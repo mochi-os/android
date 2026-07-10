@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Cha b\' urrainn am faidhle fhosgladh</string>
     <string name="reaction_remove">Falamhaich</string>
     <string name="common_logout_confirm_message">A bheil thu cinnteach gu bheil thu airson clàradh a-mach? Feumaidh tu clàradh a-steach a-rithist gus cothrom fhaighinn air a\' chunntas agad.</string>
+    <string name="comment_anonymous">Gun ainm</string>
+    <string name="tags_label">Tagaichean</string>
+    <string name="tags_add">Cuir taga ris</string>
+    <string name="tags_label_field">Leubail an taga</string>
+    <string name="tags_interest_up">Seall barrachd dhen leithid seo</string>
+    <string name="tags_interest_down">Seall nas lugha dhen leithid seo</string>
+    <string name="tags_interest_clear">Sguir de shealltainn</string>
+    <string name="tags_none">Gun tagaichean</string>
+    <string name="tags_delete">Thoir an taga air falbh</string>
 </resources>

@@ -220,4 +220,18 @@
         <item quantity="one">%d iposti entsha</item>
         <item quantity="other">%d iiposti ezintsha</item>
     </plurals>
+    <string name="forums_rss_feed">Ifidi ye-RSS</string>
+    <string name="forums_rss_mode_posts">Iimpapasho</string>
+    <string name="forums_rss_mode_posts_comments">Imiyalezo nezimvo</string>
+    <string name="forums_rss_copied">I-URL ye-RSS ikhutshelwe ku-clipboard</string>
+    <string name="forums_find_results">Iziphumo zokukhangela</string>
+    <string name="forums_markdown_supported">I-Markdown iyaxhaswa</string>
+    <string name="forums_attachment_file">Ifayile</string>
+    <string name="forums_attachment_remove">Susa</string>
+    <string name="forums_attachment_move_up">Hambisa phezulu</string>
+    <string name="forums_attachment_move_down">Hambisa ezantsi</string>
+    <string name="forums_post_comments">Izimvo</string>
+    <string name="forums_all_forums">Onke amaqonga</string>
+    <string name="forums_create_allow_search">Vumela nabani na ukuba akhangele iqonga</string>
+    <string name="forums_rss_clipboard_label">I-URL ye-RSS yeqonga</string>
 </resources>

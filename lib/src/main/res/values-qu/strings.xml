@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Archivota mana kichayta atikunchu</string>
     <string name="reaction_remove">Pichay</string>
     <string name="common_logout_confirm_message">¿Chiqaptapunichu lluqsiyta munanki? Cuentaykiman kutimunaykipaqqa, musuqmanta yaykunayki kanqa.</string>
+    <string name="comment_anonymous">Mana sutiyuq</string>
+    <string name="tags_label">Chimpukuna</string>
+    <string name="tags_add">Tag yapay</string>
+    <string name="tags_label_field">Etiqueta suti</string>
+    <string name="tags_interest_up">Kayman rikch\'akuqkunata aswan rikuchiy</string>
+    <string name="tags_interest_down">Kayman rikch\'akuqkunata pisi rikuchiy</string>
+    <string name="tags_interest_clear">Ama rikuchiychu</string>
+    <string name="tags_none">Mana etiquetakunachu</string>
+    <string name="tags_delete">Unanchata hurquy</string>
 </resources>

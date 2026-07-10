@@ -294,4 +294,13 @@
     <string name="stepup_error_oauth">無法使用該帳戶進行驗證。請重試。</string>
     <string name="reaction_remove">清除</string>
     <string name="common_logout_confirm_message">你確定要登出嗎？你需要再次登入先可以使用你嘅帳戶。</string>
+    <string name="comment_anonymous">匿名</string>
+    <string name="tags_label">標籤</string>
+    <string name="tags_add">加入標籤</string>
+    <string name="tags_label_field">標籤名稱</string>
+    <string name="tags_interest_up">顯示多啲呢類內容</string>
+    <string name="tags_interest_down">顯示少啲呢類內容</string>
+    <string name="tags_interest_clear">停止顯示</string>
+    <string name="tags_none">無標籤</string>
+    <string name="tags_delete">移除標籤</string>
 </resources>

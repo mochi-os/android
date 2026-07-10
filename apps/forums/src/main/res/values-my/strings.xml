@@ -219,4 +219,18 @@
     <plurals name="forums_new_posts">
         <item quantity="other">ပို့စ်အသစ် %dခု</item>
     </plurals>
+    <string name="forums_rss_feed">RSS ဖိဒ်</string>
+    <string name="forums_rss_mode_posts">ပို့စ်များ</string>
+    <string name="forums_rss_mode_posts_comments">ပို့စ်နှင့် comment များ</string>
+    <string name="forums_rss_copied">RSS URL ကို clipboard သို့ ကူးယူပြီးပါပြီ</string>
+    <string name="forums_find_results">ရှာဖွေမှု ရလဒ်များ</string>
+    <string name="forums_markdown_supported">Markdown ပံ့ပိုးသည်</string>
+    <string name="forums_attachment_file">ဖိုင်</string>
+    <string name="forums_attachment_remove">ဖယ်ရှား</string>
+    <string name="forums_attachment_move_up">အပေါ်သို့ ရွှေ့</string>
+    <string name="forums_attachment_move_down">အောက်သို့ ရွှေ့</string>
+    <string name="forums_post_comments">မှတ်ချက်များ</string>
+    <string name="forums_all_forums">ဖိုရမ်အားလုံး</string>
+    <string name="forums_create_allow_search">မည်သူမဆို ဖိုရမ်ကို ရှာဖွေခွင့်ပြုပါ</string>
+    <string name="forums_rss_clipboard_label">ဖိုရမ် RSS URL</string>
 </resources>

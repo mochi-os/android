@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Nou pa t ka ouvri fichye a</string>
     <string name="reaction_remove">Efase</string>
     <string name="common_logout_confirm_message">Èske ou sèten ou vle dekonekte? W ap bezwen konekte ankò pou jwenn aksè nan kont ou.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Tag yo</string>
+    <string name="tags_add">Ajoute yon tag</string>
+    <string name="tags_label_field">Etikèt</string>
+    <string name="tags_interest_up">Montre plis konsa</string>
+    <string name="tags_interest_down">Montre mwens konsa</string>
+    <string name="tags_interest_clear">Sispann montre</string>
+    <string name="tags_none">Pa gen etikèt</string>
+    <string name="tags_delete">Retire etikèt</string>
 </resources>

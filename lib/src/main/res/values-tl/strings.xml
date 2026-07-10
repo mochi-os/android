@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Hindi mabuksan ang file</string>
     <string name="reaction_remove">Burahin</string>
     <string name="common_logout_confirm_message">Sigurado ka bang gusto mong mag-log out? Kakailanganin mong mag-log in muli para ma-access ang iyong account.</string>
+    <string name="comment_anonymous">Anonimo</string>
+    <string name="tags_label">Mga tag</string>
+    <string name="tags_add">Magdagdag ng tag</string>
+    <string name="tags_label_field">Label ng tag</string>
+    <string name="tags_interest_up">Magpakita ng higit pang katulad nito</string>
+    <string name="tags_interest_down">Magpakita ng mas kaunti na katulad nito</string>
+    <string name="tags_interest_clear">Itigil ang pagpapakita</string>
+    <string name="tags_none">Walang tag</string>
+    <string name="tags_delete">Alisin ang tag</string>
 </resources>

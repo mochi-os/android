@@ -296,4 +296,13 @@
     <string name="common_file_open_failed">Kunne ikke åbne filen</string>
     <string name="reaction_remove">Ryd</string>
     <string name="common_logout_confirm_message">Er du sikker på, at du vil logge ud? Du skal logge ind igen for at få adgang til din konto.</string>
+    <string name="comment_anonymous">Anonym</string>
+    <string name="tags_label">Tags</string>
+    <string name="tags_add">Tilføj tag</string>
+    <string name="tags_label_field">Tagetiket</string>
+    <string name="tags_interest_up">Vis mere som dette</string>
+    <string name="tags_interest_down">Vis mindre som dette</string>
+    <string name="tags_interest_clear">Stop med at vise</string>
+    <string name="tags_none">Ingen tags</string>
+    <string name="tags_delete">Fjern tag</string>
 </resources>

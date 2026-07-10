@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Kişileri ara</string>
     <string name="chat_new_no_matches">Eşleşen kişi yok</string>
     <string name="chat_new_no_friends">Sohbet edecek kişileri ara</string>
+    <string name="chat_pin">Sabitle</string>
+    <string name="chat_unpin">Sabitlemeyi kaldır</string>
+    <string name="chat_pinned_label">Sabitlendi</string>
+    <string name="chat_settings_general">Genel</string>
+    <string name="chat_settings_screen_title">%1$s ayarları</string>
+    <string name="chat_mark_read">Okundu olarak işaretle</string>
+    <string name="chat_marked_read">Okundu olarak işaretlendi</string>
+    <string name="chat_search_next">Sonraki eşleşme</string>
+    <string name="chat_search_prev">Önceki eşleşme</string>
+    <string name="chat_settings_general_desc">Sohbet ayarlarını düzenle</string>
+    <string name="chat_settings_id">Sohbet kimliği</string>
+    <string name="chat_settings_members_desc">Bu sohbetteki kişilerin listesi</string>
 </resources>

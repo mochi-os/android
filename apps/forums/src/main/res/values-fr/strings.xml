@@ -220,4 +220,18 @@
         <item quantity="one">%d nouvelle publication</item>
         <item quantity="other">%d nouvelles publications</item>
     </plurals>
+    <string name="forums_rss_feed">Flux RSS</string>
+    <string name="forums_rss_mode_posts">Publications</string>
+    <string name="forums_rss_mode_posts_comments">Publications et commentaires</string>
+    <string name="forums_rss_copied">URL RSS copiée dans le presse-papiers</string>
+    <string name="forums_find_results">Résultats de recherche</string>
+    <string name="forums_markdown_supported">Markdown pris en charge</string>
+    <string name="forums_attachment_file">Fichier</string>
+    <string name="forums_attachment_remove">Retirer</string>
+    <string name="forums_attachment_move_up">Déplacer vers le haut</string>
+    <string name="forums_attachment_move_down">Déplacer vers le bas</string>
+    <string name="forums_post_comments">Commentaires</string>
+    <string name="forums_all_forums">Tous les forums</string>
+    <string name="forums_create_allow_search">Autoriser tout le monde à rechercher le forum</string>
+    <string name="forums_rss_clipboard_label">URL RSS du forum</string>
 </resources>

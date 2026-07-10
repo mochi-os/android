@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">ค้นหาผู้คน</string>
     <string name="chat_new_no_matches">ไม่มีผู้คนที่ตรงกัน</string>
     <string name="chat_new_no_friends">ค้นหาผู้คนเพื่อแชทด้วย</string>
+    <string name="chat_pin">ปักหมุด</string>
+    <string name="chat_unpin">ยกเลิกการปักหมุด</string>
+    <string name="chat_pinned_label">ปักหมุดแล้ว</string>
+    <string name="chat_settings_general">ทั่วไป</string>
+    <string name="chat_settings_screen_title">การตั้งค่า %1$s</string>
+    <string name="chat_mark_read">ทำเครื่องหมายว่าอ่านแล้ว</string>
+    <string name="chat_marked_read">ทำเครื่องหมายว่าอ่านแล้วเรียบร้อย</string>
+    <string name="chat_search_next">รายการที่ตรงกันถัดไป</string>
+    <string name="chat_search_prev">รายการที่ตรงกันก่อนหน้า</string>
+    <string name="chat_settings_general_desc">ปรับการตั้งค่าแชท</string>
+    <string name="chat_settings_id">รหัสแชท</string>
+    <string name="chat_settings_members_desc">รายชื่อผู้คนในแชทนี้</string>
 </resources>

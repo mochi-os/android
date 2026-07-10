@@ -220,4 +220,18 @@
         <item quantity="one">%d yangi post</item>
         <item quantity="other">%d yangi post</item>
     </plurals>
+    <string name="forums_rss_feed">RSS lentasi</string>
+    <string name="forums_rss_mode_posts">Postlar</string>
+    <string name="forums_rss_mode_posts_comments">Postlar va izohlar</string>
+    <string name="forums_rss_copied">RSS URL klipboardga nusxalandi</string>
+    <string name="forums_find_results">Qidiruv natijalari</string>
+    <string name="forums_markdown_supported">Markdown qoʻllanadi</string>
+    <string name="forums_attachment_file">Fayl</string>
+    <string name="forums_attachment_remove">Olib tashlash</string>
+    <string name="forums_attachment_move_up">Yuqoriga ko‘chirish</string>
+    <string name="forums_attachment_move_down">Pastga ko‘chirish</string>
+    <string name="forums_post_comments">Izohlar</string>
+    <string name="forums_all_forums">Barcha forumlar</string>
+    <string name="forums_create_allow_search">Har kimga forumni qidirishga ruxsat berish</string>
+    <string name="forums_rss_clipboard_label">Forum RSS manzili</string>
 </resources>

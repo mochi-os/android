@@ -220,4 +220,18 @@
         <item quantity="one">%d نوی پوست</item>
         <item quantity="other">%d نوي پوستونه</item>
     </plurals>
+    <string name="forums_rss_feed">RSS فیډ</string>
+    <string name="forums_rss_mode_posts">لیکنې</string>
+    <string name="forums_rss_mode_posts_comments">لیکنې او تبصرې</string>
+    <string name="forums_rss_copied">د RSS URL کلیپبورډ ته کاپي شو</string>
+    <string name="forums_find_results">د لټون پایلې</string>
+    <string name="forums_markdown_supported">Markdown ملاتړ کیږي</string>
+    <string name="forums_attachment_file">فایل</string>
+    <string name="forums_attachment_remove">لرې کول</string>
+    <string name="forums_attachment_move_up">پورته یوسئ</string>
+    <string name="forums_attachment_move_down">ښکته یوسئ</string>
+    <string name="forums_post_comments">تبصرې</string>
+    <string name="forums_all_forums">ټول فورمونه</string>
+    <string name="forums_create_allow_search">هرچا ته اجازه ورکړئ چې فورم ولټوي</string>
+    <string name="forums_rss_clipboard_label">د فورم RSS پته</string>
 </resources>

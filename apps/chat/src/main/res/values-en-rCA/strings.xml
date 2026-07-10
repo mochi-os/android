@@ -82,4 +82,16 @@
     <string name="chat_policy_friends_description">Only friends can start a chat with you (default).</string>
     <string name="chat_policy_anyone">Anyone</string>
     <string name="chat_policy_anyone_description">Anyone can start a chat with you.</string>
+    <string name="chat_pin">Pin</string>
+    <string name="chat_unpin">Unpin</string>
+    <string name="chat_pinned_label">Pinned</string>
+    <string name="chat_settings_general">General</string>
+    <string name="chat_settings_screen_title">%1$s settings</string>
+    <string name="chat_mark_read">Mark as read</string>
+    <string name="chat_marked_read">Marked as read</string>
+    <string name="chat_search_next">Next match</string>
+    <string name="chat_search_prev">Previous match</string>
+    <string name="chat_settings_general_desc">Adjust chat settings</string>
+    <string name="chat_settings_id">Chat ID</string>
+    <string name="chat_settings_members_desc">List of people in this chat</string>
 </resources>

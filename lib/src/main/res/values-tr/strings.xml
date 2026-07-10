@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Dosya açılamadı</string>
     <string name="reaction_remove">Temizle</string>
     <string name="common_logout_confirm_message">Oturumu kapatmak istediğinizden emin misiniz? Hesabınıza erişmek için tekrar oturum açmanız gerekecek.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Etiketler</string>
+    <string name="tags_add">Etiket ekle</string>
+    <string name="tags_label_field">Etiket adı</string>
+    <string name="tags_interest_up">Buna benzer daha fazla göster</string>
+    <string name="tags_interest_down">Buna benzer daha az göster</string>
+    <string name="tags_interest_clear">Göstermeyi bırak</string>
+    <string name="tags_none">Etiket yok</string>
+    <string name="tags_delete">Etiketi kaldır</string>
 </resources>

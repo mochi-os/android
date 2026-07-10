@@ -221,4 +221,18 @@
         <item quantity="few">%d postări noi</item>
         <item quantity="other">%d de postări noi</item>
     </plurals>
+    <string name="forums_rss_feed">Flux RSS</string>
+    <string name="forums_rss_mode_posts">Postări</string>
+    <string name="forums_rss_mode_posts_comments">Postări și comentarii</string>
+    <string name="forums_rss_copied">URL RSS copiat în clipboard</string>
+    <string name="forums_find_results">Rezultatele căutării</string>
+    <string name="forums_markdown_supported">Markdown acceptat</string>
+    <string name="forums_attachment_file">Fișier</string>
+    <string name="forums_attachment_remove">Elimină</string>
+    <string name="forums_attachment_move_up">Mutați sus</string>
+    <string name="forums_attachment_move_down">Mutați jos</string>
+    <string name="forums_post_comments">Comentarii</string>
+    <string name="forums_all_forums">Toate forumurile</string>
+    <string name="forums_create_allow_search">Permite oricui să caute forumul</string>
+    <string name="forums_rss_clipboard_label">URL RSS forum</string>
 </resources>

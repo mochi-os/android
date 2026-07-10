@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Faylı açmaq mümkün olmadı</string>
     <string name="reaction_remove">Təmizlə</string>
     <string name="common_logout_confirm_message">Çıxış etmək istədiyinizə əminsiniz? Hesabınıza yenidən daxil olmaq üçün təkrar giriş etməlisiniz.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Etiketlər</string>
+    <string name="tags_add">Etiket əlavə et</string>
+    <string name="tags_label_field">Etiket adı</string>
+    <string name="tags_interest_up">Bu tip daha çox göstər</string>
+    <string name="tags_interest_down">Bu tip daha az göstər</string>
+    <string name="tags_interest_clear">Göstərməyi dayandır</string>
+    <string name="tags_none">Etiket yoxdur</string>
+    <string name="tags_delete">Etiketi sil</string>
 </resources>

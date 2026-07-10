@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Sök efter personer</string>
     <string name="chat_new_no_matches">Inga matchande personer</string>
     <string name="chat_new_no_friends">Sök efter personer att chatta med</string>
+    <string name="chat_pin">Fäst</string>
+    <string name="chat_unpin">Ta bort fäst</string>
+    <string name="chat_pinned_label">Fäst</string>
+    <string name="chat_settings_general">Allmänt</string>
+    <string name="chat_settings_screen_title">Inställningar för %1$s</string>
+    <string name="chat_mark_read">Markera som läst</string>
+    <string name="chat_marked_read">Markerad som läst</string>
+    <string name="chat_search_next">Nästa träff</string>
+    <string name="chat_search_prev">Föregående träff</string>
+    <string name="chat_settings_general_desc">Justera chattinställningar</string>
+    <string name="chat_settings_id">Chatt-ID</string>
+    <string name="chat_settings_members_desc">Lista över personer i den här chatten</string>
 </resources>

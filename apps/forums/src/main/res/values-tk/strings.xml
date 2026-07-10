@@ -220,4 +220,18 @@
         <item quantity="one">%d täze ýazgy</item>
         <item quantity="other">%d täze ýazgy</item>
     </plurals>
+    <string name="forums_rss_feed">RSS akymy</string>
+    <string name="forums_rss_mode_posts">Postlar</string>
+    <string name="forums_rss_mode_posts_comments">Postlar we teswirler</string>
+    <string name="forums_rss_copied">RSS URL bufer ýadyna göçürildi</string>
+    <string name="forums_find_results">Gözleg netijeleri</string>
+    <string name="forums_markdown_supported">Markdown goldanýar</string>
+    <string name="forums_attachment_file">Faýl</string>
+    <string name="forums_attachment_remove">Aýyr</string>
+    <string name="forums_attachment_move_up">Ýokarlat</string>
+    <string name="forums_attachment_move_down">Aşaklat</string>
+    <string name="forums_post_comments">Teswirler</string>
+    <string name="forums_all_forums">Ähli forumlar</string>
+    <string name="forums_create_allow_search">Islendik adama forumy gözlemäge rugsat beriň</string>
+    <string name="forums_rss_clipboard_label">Forumyň RSS URL-i</string>
 </resources>

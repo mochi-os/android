@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ഫയൽ തുറക്കാനായില്ല</string>
     <string name="reaction_remove">മായ്ക്കുക</string>
     <string name="common_logout_confirm_message">ലോഗൗട്ട് ചെയ്യണമെന്ന് ഉറപ്പാണോ? നിങ്ങളുടെ അക്കൗണ്ട് ആക്സസ് ചെയ്യാൻ വീണ്ടും ലോഗിൻ ചെയ്യേണ്ടതുണ്ട്.</string>
+    <string name="comment_anonymous">അജ്ഞാതം</string>
+    <string name="tags_label">ടാഗുകൾ</string>
+    <string name="tags_add">ടാഗ് ചേർക്കുക</string>
+    <string name="tags_label_field">ടാഗ് ലേബൽ</string>
+    <string name="tags_interest_up">ഇതുപോലുള്ളവ കൂടുതൽ കാണിക്കുക</string>
+    <string name="tags_interest_down">ഇതുപോലുള്ളവ കുറച്ച് കാണിക്കുക</string>
+    <string name="tags_interest_clear">കാണിക്കുന്നത് നിർത്തുക</string>
+    <string name="tags_none">ടാഗുകളൊന്നുമില്ല</string>
+    <string name="tags_delete">ടാഗ് നീക്കം ചെയ്യുക</string>
 </resources>

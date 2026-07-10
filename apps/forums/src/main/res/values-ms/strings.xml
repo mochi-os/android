@@ -220,4 +220,18 @@
         <item quantity="one">%d siaran baharu</item>
         <item quantity="other">%d siaran baharu</item>
     </plurals>
+    <string name="forums_rss_feed">Suapan RSS</string>
+    <string name="forums_rss_mode_posts">Hantaran</string>
+    <string name="forums_rss_mode_posts_comments">Hantaran dan komen</string>
+    <string name="forums_rss_copied">URL RSS disalin ke papan keratan</string>
+    <string name="forums_find_results">Hasil carian</string>
+    <string name="forums_markdown_supported">Markdown disokong</string>
+    <string name="forums_attachment_file">Fail</string>
+    <string name="forums_attachment_remove">Alih keluar</string>
+    <string name="forums_attachment_move_up">Alihkan ke atas</string>
+    <string name="forums_attachment_move_down">Alihkan ke bawah</string>
+    <string name="forums_post_comments">Komen</string>
+    <string name="forums_all_forums">Semua forum</string>
+    <string name="forums_create_allow_search">Benarkan sesiapa sahaja mencari forum</string>
+    <string name="forums_rss_clipboard_label">URL RSS forum</string>
 </resources>

@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Faili ei õnnestunud avada</string>
     <string name="reaction_remove">Eemalda</string>
     <string name="common_logout_confirm_message">Kas soovite kindlasti välja logida? Kontole juurdepääsuks peate uuesti sisse logima.</string>
+    <string name="comment_anonymous">Anonüümne</string>
+    <string name="tags_label">Sildid</string>
+    <string name="tags_add">Lisa silt</string>
+    <string name="tags_label_field">Sildi nimetus</string>
+    <string name="tags_interest_up">Näita rohkem sarnast</string>
+    <string name="tags_interest_down">Näita vähem sarnast</string>
+    <string name="tags_interest_clear">Lõpeta näitamine</string>
+    <string name="tags_none">Silte pole</string>
+    <string name="tags_delete">Eemalda silt</string>
 </resources>

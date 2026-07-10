@@ -222,4 +222,18 @@
         <item quantity="many">%d нових дописів</item>
         <item quantity="other">%d нового допису</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-стрічка</string>
+    <string name="forums_rss_mode_posts">Дописи</string>
+    <string name="forums_rss_mode_posts_comments">Дописи та коментарі</string>
+    <string name="forums_rss_copied">RSS URL скопійовано в буфер обміну</string>
+    <string name="forums_find_results">Результати пошуку</string>
+    <string name="forums_markdown_supported">Markdown підтримується</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Видалити</string>
+    <string name="forums_attachment_move_up">Перемістити вгору</string>
+    <string name="forums_attachment_move_down">Перемістити вниз</string>
+    <string name="forums_post_comments">Коментарі</string>
+    <string name="forums_all_forums">Усі форуми</string>
+    <string name="forums_create_allow_search">Дозволити всім шукати форум</string>
+    <string name="forums_rss_clipboard_label">RSS-адреса форуму</string>
 </resources>

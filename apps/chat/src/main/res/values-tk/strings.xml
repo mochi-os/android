@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Adamlary gözle</string>
     <string name="chat_new_no_matches">Gabat gelýän adam ýok</string>
     <string name="chat_new_no_friends">Söhbet etmek üçin adamlary gözle</string>
+    <string name="chat_pin">Berkit</string>
+    <string name="chat_unpin">Berkitmäni aýyr</string>
+    <string name="chat_pinned_label">Berkidilen</string>
+    <string name="chat_settings_general">Umumy</string>
+    <string name="chat_settings_screen_title">%1$s sazlamalary</string>
+    <string name="chat_mark_read">Okalan diýip belläň</string>
+    <string name="chat_marked_read">Okalan diýip bellendi</string>
+    <string name="chat_search_next">Indiki gabat gelme</string>
+    <string name="chat_search_prev">Öňki gabat gelme</string>
+    <string name="chat_settings_general_desc">Söhbet sazlamalaryny sazlaň</string>
+    <string name="chat_settings_id">Söhbet ID-si</string>
+    <string name="chat_settings_members_desc">Bu söhbetdäki adamlaryň sanawy</string>
 </resources>

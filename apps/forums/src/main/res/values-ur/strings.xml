@@ -220,4 +220,18 @@
         <item quantity="one">%d نئی پوسٹ</item>
         <item quantity="other">%d نئی پوسٹس</item>
     </plurals>
+    <string name="forums_rss_feed">RSS فیڈ</string>
+    <string name="forums_rss_mode_posts">پوسٹس</string>
+    <string name="forums_rss_mode_posts_comments">پوسٹس اور تبصرے</string>
+    <string name="forums_rss_copied">RSS URL clipboard پر copy ہو گیا</string>
+    <string name="forums_find_results">تلاش کے نتائج</string>
+    <string name="forums_markdown_supported">Markdown سپورٹڈ ہے</string>
+    <string name="forums_attachment_file">فائل</string>
+    <string name="forums_attachment_remove">ہٹائیں</string>
+    <string name="forums_attachment_move_up">اوپر منتقل کریں</string>
+    <string name="forums_attachment_move_down">نیچے منتقل کریں</string>
+    <string name="forums_post_comments">تبصرے</string>
+    <string name="forums_all_forums">تمام فورمز</string>
+    <string name="forums_create_allow_search">کسی کو بھی فورم تلاش کرنے کی اجازت دیں</string>
+    <string name="forums_rss_clipboard_label">فورم RSS یو آر ایل</string>
 </resources>

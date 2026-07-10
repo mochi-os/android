@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Ora bisa mbukak berkas</string>
     <string name="reaction_remove">Resiki</string>
     <string name="common_logout_confirm_message">Menapa panjenengan yakin badhe medal? Panjenengan kedah mlebet malih kangge ngakses akun panjenengan.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Tag</string>
+    <string name="tags_add">Tambah tag</string>
+    <string name="tags_label_field">Label tag</string>
+    <string name="tags_interest_up">Tuduhke luwih akeh sing kaya iki</string>
+    <string name="tags_interest_down">Tuduhke luwih sithik sing kaya iki</string>
+    <string name="tags_interest_clear">Aja ditampilake</string>
+    <string name="tags_none">Ora ana tag</string>
+    <string name="tags_delete">Busek tag</string>
 </resources>

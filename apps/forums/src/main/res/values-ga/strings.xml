@@ -223,4 +223,18 @@
         <item quantity="many">%d bpostáil nua</item>
         <item quantity="other">%d postáil nua</item>
     </plurals>
+    <string name="forums_rss_feed">Fotha RSS</string>
+    <string name="forums_rss_mode_posts">Postálacha</string>
+    <string name="forums_rss_mode_posts_comments">Postálacha agus tráchtanna</string>
+    <string name="forums_rss_copied">Cóipeáladh URL RSS chuig an ngearrthaisce</string>
+    <string name="forums_find_results">Torthaí cuardaigh</string>
+    <string name="forums_markdown_supported">Tacaíonn Markdown</string>
+    <string name="forums_attachment_file">Comhad</string>
+    <string name="forums_attachment_remove">Bain</string>
+    <string name="forums_attachment_move_up">Bog suas</string>
+    <string name="forums_attachment_move_down">Bog síos</string>
+    <string name="forums_post_comments">Nótaí tráchta</string>
+    <string name="forums_all_forums">Gach fóram</string>
+    <string name="forums_create_allow_search">Ceadaigh d\'aon duine cuardach a dhéanamh ar an bhfóram</string>
+    <string name="forums_rss_clipboard_label">URL RSS an fhóraim</string>
 </resources>

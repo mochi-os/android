@@ -222,4 +222,18 @@
         <item quantity="many">%d post ġdid</item>
         <item quantity="other">%d post ġdid</item>
     </plurals>
+    <string name="forums_rss_feed">Feed RSS</string>
+    <string name="forums_rss_mode_posts">Postijiet</string>
+    <string name="forums_rss_mode_posts_comments">Posts u kummenti</string>
+    <string name="forums_rss_copied">URL ta\' RSS ikkupjat fil-clipboard</string>
+    <string name="forums_find_results">Riżultati tat-tfittxija</string>
+    <string name="forums_markdown_supported">Markdown sapportit</string>
+    <string name="forums_attachment_file">Fajl</string>
+    <string name="forums_attachment_remove">Neħħi</string>
+    <string name="forums_attachment_move_up">Mexxi \'l fuq</string>
+    <string name="forums_attachment_move_down">Mexxi \'l isfel</string>
+    <string name="forums_post_comments">Kummenti</string>
+    <string name="forums_all_forums">Il-fora kollha</string>
+    <string name="forums_create_allow_search">Ħalli lil kulħadd ifittex il-forum</string>
+    <string name="forums_rss_clipboard_label">URL RSS tal-forum</string>
 </resources>

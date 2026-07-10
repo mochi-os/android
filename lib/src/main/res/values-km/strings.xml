@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">មិនអាចបើកឯកសារបានទេ</string>
     <string name="reaction_remove">សម្អាត</string>
     <string name="common_logout_confirm_message">តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ? អ្នកនឹងត្រូវចូលម្តងទៀត ដើម្បីប្រើប្រាស់គណនីរបស់អ្នក។</string>
+    <string name="comment_anonymous">អនាមិក</string>
+    <string name="tags_label">ស្លាក</string>
+    <string name="tags_add">បន្ថែមស្លាក</string>
+    <string name="tags_label_field">ស្លាក</string>
+    <string name="tags_interest_up">បង្ហាញច្រើនបែបនេះ</string>
+    <string name="tags_interest_down">បង្ហាញតិចបែបនេះ</string>
+    <string name="tags_interest_clear">ឈប់បង្ហាញ</string>
+    <string name="tags_none">មិនមានស្លាក</string>
+    <string name="tags_delete">លុបស្លាក</string>
 </resources>

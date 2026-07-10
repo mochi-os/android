@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Не ўдалося адкрыць файл</string>
     <string name="reaction_remove">Ачысціць</string>
     <string name="common_logout_confirm_message">Вы сапраўды хочаце выйсці? Каб зноў атрымаць доступ да свайго ўліковага запісу, вам трэба будзе выканаць уваход паўторна.</string>
+    <string name="comment_anonymous">Ананімна</string>
+    <string name="tags_label">Тэгі</string>
+    <string name="tags_add">Дадаць тэг</string>
+    <string name="tags_label_field">Назва тэга</string>
+    <string name="tags_interest_up">Паказваць больш падобнага</string>
+    <string name="tags_interest_down">Паказваць менш падобнага</string>
+    <string name="tags_interest_clear">Спыніць паказ</string>
+    <string name="tags_none">Тэгаў няма</string>
+    <string name="tags_delete">Выдаліць тэг</string>
 </resources>

@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">நபர்களைத் தேடு</string>
     <string name="chat_new_no_matches">பொருந்தும் நபர்கள் இல்லை</string>
     <string name="chat_new_no_friends">அரட்டையடிக்க நபர்களைத் தேடு</string>
+    <string name="chat_pin">பின் செய்</string>
+    <string name="chat_unpin">பின் நீக்கு</string>
+    <string name="chat_pinned_label">Pin செய்யப்பட்டது</string>
+    <string name="chat_settings_general">பொது</string>
+    <string name="chat_settings_screen_title">%1$s அமைப்புகள்</string>
+    <string name="chat_mark_read">படித்ததாகக் குறிக்கவும்</string>
+    <string name="chat_marked_read">படித்ததாகக் குறிக்கப்பட்டது</string>
+    <string name="chat_search_next">அடுத்த பொருத்தம்</string>
+    <string name="chat_search_prev">முந்தைய பொருத்தம்</string>
+    <string name="chat_settings_general_desc">அரட்டை அமைப்புகளைச் சரிசெய்யவும்</string>
+    <string name="chat_settings_id">அரட்டை ஐடி</string>
+    <string name="chat_settings_members_desc">இந்த அரட்டையில் உள்ளவர்களின் பட்டியல்</string>
 </resources>

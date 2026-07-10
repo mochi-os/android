@@ -296,4 +296,13 @@
     <string name="common_file_open_failed">No s\'ha pogut obrir el fitxer</string>
     <string name="reaction_remove">Esborra</string>
     <string name="common_logout_confirm_message">Segur que voleu tancar la sessió? Haureu de tornar a iniciar la sessió per accedir al vostre compte.</string>
+    <string name="comment_anonymous">Anònim</string>
+    <string name="tags_label">Etiquetes</string>
+    <string name="tags_add">Afegeix una etiqueta</string>
+    <string name="tags_label_field">Etiqueta</string>
+    <string name="tags_interest_up">Mostra\'n més com aquesta</string>
+    <string name="tags_interest_down">Mostra\'n menys com aquesta</string>
+    <string name="tags_interest_clear">Deixa de mostrar</string>
+    <string name="tags_none">Sense etiquetes</string>
+    <string name="tags_delete">Elimina etiqueta</string>
 </resources>

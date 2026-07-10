@@ -220,4 +220,18 @@
         <item quantity="one">%d argitalpen berri</item>
         <item quantity="other">%d argitalpen berri</item>
     </plurals>
+    <string name="forums_rss_feed">RSS jarioa</string>
+    <string name="forums_rss_mode_posts">Argitalpenak</string>
+    <string name="forums_rss_mode_posts_comments">Argitalpenak eta iruzkinak</string>
+    <string name="forums_rss_copied">RSS URLa arbelera kopiatu da</string>
+    <string name="forums_find_results">Bilaketaren emaitzak</string>
+    <string name="forums_markdown_supported">Markdown onartzen da</string>
+    <string name="forums_attachment_file">Fitxategia</string>
+    <string name="forums_attachment_remove">Kendu</string>
+    <string name="forums_attachment_move_up">Eraman gora</string>
+    <string name="forums_attachment_move_down">Eraman behera</string>
+    <string name="forums_post_comments">Iruzkinak</string>
+    <string name="forums_all_forums">Foro guztiak</string>
+    <string name="forums_create_allow_search">Baimendu edonori foroa bilatzea</string>
+    <string name="forums_rss_clipboard_label">Foroaren RSS URLa</string>
 </resources>

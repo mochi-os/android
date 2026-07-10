@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Ieškoti žmonių</string>
     <string name="chat_new_no_matches">Nėra atitinkančių žmonių</string>
     <string name="chat_new_no_friends">Ieškokite žmonių pokalbiui</string>
+    <string name="chat_pin">Prisegti</string>
+    <string name="chat_unpin">Atsegti</string>
+    <string name="chat_pinned_label">Prisegta</string>
+    <string name="chat_settings_general">Bendra</string>
+    <string name="chat_settings_screen_title">%1$s nustatymai</string>
+    <string name="chat_mark_read">Žymėti kaip skaitytą</string>
+    <string name="chat_marked_read">Pažymėta kaip skaityta</string>
+    <string name="chat_search_next">Kitas atitikmuo</string>
+    <string name="chat_search_prev">Ankstesnis atitikmuo</string>
+    <string name="chat_settings_general_desc">Koreguoti pokalbio nustatymus</string>
+    <string name="chat_settings_id">Pokalbio ID</string>
+    <string name="chat_settings_members_desc">Šio pokalbio žmonių sąrašas</string>
 </resources>

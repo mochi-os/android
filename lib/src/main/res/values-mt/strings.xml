@@ -295,4 +295,13 @@
     <string name="common_file_open_failed">Ma rnexxiex jinfetaħ il-fajl</string>
     <string name="reaction_remove">Naddaf</string>
     <string name="common_logout_confirm_message">Żgur li trid toħroġ? Ikollok terġa\' tidħol biex taċċessa l-kont tiegħek.</string>
+    <string name="comment_anonymous">Anonimu</string>
+    <string name="tags_label">Tikketti</string>
+    <string name="tags_add">Żid tikketta</string>
+    <string name="tags_label_field">Tikketta</string>
+    <string name="tags_interest_up">Uri aktar bħal dan</string>
+    <string name="tags_interest_down">Uri inqas bħal dan</string>
+    <string name="tags_interest_clear">Ieqaf turi</string>
+    <string name="tags_none">L-ebda tikketta</string>
+    <string name="tags_delete">Neħħi t-tikketta</string>
 </resources>

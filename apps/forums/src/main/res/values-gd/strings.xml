@@ -222,4 +222,18 @@
         <item quantity="few">%d postaichean ùra</item>
         <item quantity="other">%d post ùr</item>
     </plurals>
+    <string name="forums_rss_feed">Sruth RSS</string>
+    <string name="forums_rss_mode_posts">Postaichean</string>
+    <string name="forums_rss_mode_posts_comments">Postaichean is beachdan</string>
+    <string name="forums_rss_copied">Chaidh URL RSS a lethbhreacadh dhan stòr-bhòrd</string>
+    <string name="forums_find_results">Toraidhean luirg</string>
+    <string name="forums_markdown_supported">Tha taic ri Markdown</string>
+    <string name="forums_attachment_file">Faidhle</string>
+    <string name="forums_attachment_remove">Thoir air falbh</string>
+    <string name="forums_attachment_move_up">Gluais suas</string>
+    <string name="forums_attachment_move_down">Gluais sìos</string>
+    <string name="forums_post_comments">Beachdan</string>
+    <string name="forums_all_forums">A h-uile fòram</string>
+    <string name="forums_create_allow_search">Leig le duine sam bith am fòram a lorg</string>
+    <string name="forums_rss_clipboard_label">URL RSS an fhòraim</string>
 </resources>

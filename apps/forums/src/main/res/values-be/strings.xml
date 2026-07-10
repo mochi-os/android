@@ -222,4 +222,18 @@
         <item quantity="many">%d новых допісаў</item>
         <item quantity="other">%d новага допісу</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-стужка</string>
+    <string name="forums_rss_mode_posts">Пасты</string>
+    <string name="forums_rss_mode_posts_comments">Пасты і каментары</string>
+    <string name="forums_rss_copied">URL RSS скапіраваны ў буфер абмену</string>
+    <string name="forums_find_results">Вынікі пошуку</string>
+    <string name="forums_markdown_supported">Падтрымліваецца Markdown</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Выдаліць</string>
+    <string name="forums_attachment_move_up">Перамясціць уверх</string>
+    <string name="forums_attachment_move_down">Перамясціць уніз</string>
+    <string name="forums_post_comments">Каментарыі</string>
+    <string name="forums_all_forums">Усе форумы</string>
+    <string name="forums_create_allow_search">Дазволіць усім шукаць форум</string>
+    <string name="forums_rss_clipboard_label">RSS URL форуму</string>
 </resources>

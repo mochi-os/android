@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Файл кушода нашуд</string>
     <string name="reaction_remove">Тоза кардан</string>
     <string name="common_logout_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед аз система бароед? Барои дастрасӣ ба ҳисоби худ ба шумо лозим меояд, ки дубора ворид шавед.</string>
+    <string name="comment_anonymous">Беном</string>
+    <string name="tags_label">Барчаспҳо</string>
+    <string name="tags_add">Тег илова кардан</string>
+    <string name="tags_label_field">Номи барчасп</string>
+    <string name="tags_interest_up">Бештар монандашро нишон диҳед</string>
+    <string name="tags_interest_down">Камтар монандашро нишон диҳед</string>
+    <string name="tags_interest_clear">Нишон надиҳед</string>
+    <string name="tags_none">Барчасп нест</string>
+    <string name="tags_delete">Тегро нест кунед</string>
 </resources>

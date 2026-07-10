@@ -220,4 +220,18 @@
         <item quantity="one">%d chapisho jipya</item>
         <item quantity="other">%d machapisho mapya</item>
     </plurals>
+    <string name="forums_rss_feed">Mlisho wa RSS</string>
+    <string name="forums_rss_mode_posts">Machapisho</string>
+    <string name="forums_rss_mode_posts_comments">Machapisho na maoni</string>
+    <string name="forums_rss_copied">URL ya RSS imenakiliwa kwenye ubao wa kunakili</string>
+    <string name="forums_find_results">Matokeo ya utafutaji</string>
+    <string name="forums_markdown_supported">Markdown inatumika</string>
+    <string name="forums_attachment_file">Faili</string>
+    <string name="forums_attachment_remove">Ondoa</string>
+    <string name="forums_attachment_move_up">Sogeza juu</string>
+    <string name="forums_attachment_move_down">Sogeza chini</string>
+    <string name="forums_post_comments">Maoni</string>
+    <string name="forums_all_forums">Mabaraza yote</string>
+    <string name="forums_create_allow_search">Ruhusu mtu yeyote kutafuta baraza</string>
+    <string name="forums_rss_clipboard_label">URL ya RSS ya baraza</string>
 </resources>

@@ -220,4 +220,18 @@
         <item quantity="one">%d umbhalo omusha</item>
         <item quantity="other">%d imibhalo emisha</item>
     </plurals>
+    <string name="forums_rss_feed">Ifidi ye-RSS</string>
+    <string name="forums_rss_mode_posts">Okuthunyelwe</string>
+    <string name="forums_rss_mode_posts_comments">Okwabiwayo namazwana</string>
+    <string name="forums_rss_copied">I-URL ye-RSS ikopishelwe kubhodi</string>
+    <string name="forums_find_results">Imiphumela yokusesha</string>
+    <string name="forums_markdown_supported">I-Markdown iyasekelwa</string>
+    <string name="forums_attachment_file">Ifayela</string>
+    <string name="forums_attachment_remove">Khipha</string>
+    <string name="forums_attachment_move_up">Hambisa phezulu</string>
+    <string name="forums_attachment_move_down">Hambisa phansi</string>
+    <string name="forums_post_comments">Imibono</string>
+    <string name="forums_all_forums">Wonke amaforamu</string>
+    <string name="forums_create_allow_search">Vumela noma ubani ukusesha iforamu</string>
+    <string name="forums_rss_clipboard_label">I-URL ye-RSS yeforamu</string>
 </resources>

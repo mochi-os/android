@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Personen zoeken</string>
     <string name="chat_new_no_matches">Geen overeenkomende personen</string>
     <string name="chat_new_no_friends">Zoek personen om mee te chatten</string>
+    <string name="chat_pin">Vastmaken</string>
+    <string name="chat_unpin">Losmaken</string>
+    <string name="chat_pinned_label">Vastgemaakt</string>
+    <string name="chat_settings_general">Algemeen</string>
+    <string name="chat_settings_screen_title">Instellingen voor %1$s</string>
+    <string name="chat_mark_read">Markeren als gelezen</string>
+    <string name="chat_marked_read">Gemarkeerd als gelezen</string>
+    <string name="chat_search_next">Volgende overeenkomst</string>
+    <string name="chat_search_prev">Vorige overeenkomst</string>
+    <string name="chat_settings_general_desc">Chatinstellingen aanpassen</string>
+    <string name="chat_settings_id">Chat-ID</string>
+    <string name="chat_settings_members_desc">Lijst met personen in deze chat</string>
 </resources>

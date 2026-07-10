@@ -82,4 +82,16 @@
     <string name="chat_new_search_placeholder">Personen suchen</string>
     <string name="chat_new_no_matches">Keine passenden Personen</string>
     <string name="chat_new_no_friends">Nach Personen zum Chatten suchen</string>
+    <string name="chat_pin">Anheften</string>
+    <string name="chat_unpin">Lösen</string>
+    <string name="chat_pinned_label">Angeheftet</string>
+    <string name="chat_settings_general">Allgemein</string>
+    <string name="chat_settings_screen_title">Einstellungen für %1$s</string>
+    <string name="chat_mark_read">Als gelesen markieren</string>
+    <string name="chat_marked_read">Als gelesen markiert</string>
+    <string name="chat_search_next">Nächster Treffer</string>
+    <string name="chat_search_prev">Vorheriger Treffer</string>
+    <string name="chat_settings_general_desc">Chat-Einstellungen anpassen</string>
+    <string name="chat_settings_id">Chat-ID</string>
+    <string name="chat_settings_members_desc">Liste der Personen in diesem Chat</string>
 </resources>

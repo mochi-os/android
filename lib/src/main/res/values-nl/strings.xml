@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Kan bestand niet openen</string>
     <string name="reaction_remove">Wissen</string>
     <string name="common_logout_confirm_message">Weet u zeker dat u wilt uitloggen? U moet opnieuw inloggen om toegang te krijgen tot uw account.</string>
+    <string name="comment_anonymous">Anoniem</string>
+    <string name="tags_label">Tags</string>
+    <string name="tags_add">Tag toevoegen</string>
+    <string name="tags_label_field">Taglabel</string>
+    <string name="tags_interest_up">Toon meer zoals dit</string>
+    <string name="tags_interest_down">Toon minder zoals dit</string>
+    <string name="tags_interest_clear">Niet meer tonen</string>
+    <string name="tags_none">Geen tags</string>
+    <string name="tags_delete">Tag verwijderen</string>
 </resources>

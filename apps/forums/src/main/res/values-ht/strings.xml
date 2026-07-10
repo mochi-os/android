@@ -220,4 +220,18 @@
         <item quantity="one">%d nouvo pòs</item>
         <item quantity="other">%d nouvo pòs</item>
     </plurals>
+    <string name="forums_rss_feed">Flux RSS</string>
+    <string name="forums_rss_mode_posts">Pòs yo</string>
+    <string name="forums_rss_mode_posts_comments">Pòs ak kòmantè</string>
+    <string name="forums_rss_copied">URL RSS kopye nan clipboard</string>
+    <string name="forums_find_results">Rezilta rechèch</string>
+    <string name="forums_markdown_supported">Markdown sipòte</string>
+    <string name="forums_attachment_file">Fichye</string>
+    <string name="forums_attachment_remove">Retire</string>
+    <string name="forums_attachment_move_up">Monte</string>
+    <string name="forums_attachment_move_down">Desann</string>
+    <string name="forums_post_comments">Kòmantè</string>
+    <string name="forums_all_forums">Tout fowòm</string>
+    <string name="forums_create_allow_search">Kite nenpòt moun chèche fowòm nan</string>
+    <string name="forums_rss_clipboard_label">URL RSS fowòm</string>
 </resources>

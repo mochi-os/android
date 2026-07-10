@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Tafuta watu</string>
     <string name="chat_new_no_matches">Hakuna watu wanaolingana</string>
     <string name="chat_new_no_friends">Tafuta watu wa kupiga nao gumzo</string>
+    <string name="chat_pin">Bandika</string>
+    <string name="chat_unpin">Bandua</string>
+    <string name="chat_pinned_label">Imebandikwa</string>
+    <string name="chat_settings_general">Jumla</string>
+    <string name="chat_settings_screen_title">Mipangilio ya %1$s</string>
+    <string name="chat_mark_read">Weka alama kuwa imesomwa</string>
+    <string name="chat_marked_read">Imewekwa alama kuwa imesomwa</string>
+    <string name="chat_search_next">Inayolingana inayofuata</string>
+    <string name="chat_search_prev">Inayolingana iliyotangulia</string>
+    <string name="chat_settings_general_desc">Rekebisha mipangilio ya gumzo</string>
+    <string name="chat_settings_id">Kitambulisho cha gumzo</string>
+    <string name="chat_settings_members_desc">Orodha ya watu katika gumzo hili</string>
 </resources>

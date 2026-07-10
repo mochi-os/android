@@ -295,4 +295,13 @@
     <string name="common_file_open_failed">Faylni ochib boʻlmadi</string>
     <string name="reaction_remove">Tozalash</string>
     <string name="common_logout_confirm_message">Haqiqatan ham hisobdan chiqmoqchimisiz? Hisobingizga kirish uchun qaytadan tizimga kirishingiz kerak bo\'ladi.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Teglar</string>
+    <string name="tags_add">Teg qo\'shish</string>
+    <string name="tags_label_field">Teg nomi</string>
+    <string name="tags_interest_up">Shunga o\'xshashlarni ko\'proq ko\'rsatish</string>
+    <string name="tags_interest_down">Shunga o\'xshashlarni kamroq ko\'rsatish</string>
+    <string name="tags_interest_clear">Ko\'rsatishni to\'xtatish</string>
+    <string name="tags_none">Teglar yo\'q</string>
+    <string name="tags_delete">Tegni olib tashlash</string>
 </resources>

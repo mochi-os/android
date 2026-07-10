@@ -220,4 +220,18 @@
         <item quantity="one">%d uus postitus</item>
         <item quantity="other">%d uut postitust</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-voog</string>
+    <string name="forums_rss_mode_posts">Postitused</string>
+    <string name="forums_rss_mode_posts_comments">Postitused ja kommentaarid</string>
+    <string name="forums_rss_copied">RSS URL kopeeritud lõikepuhvrisse</string>
+    <string name="forums_find_results">Otsingutulemused</string>
+    <string name="forums_markdown_supported">Markdown toetatud</string>
+    <string name="forums_attachment_file">Fail</string>
+    <string name="forums_attachment_remove">Eemalda</string>
+    <string name="forums_attachment_move_up">Liiguta üles</string>
+    <string name="forums_attachment_move_down">Liiguta alla</string>
+    <string name="forums_post_comments">Kommentaarid</string>
+    <string name="forums_all_forums">Kõik foorumid</string>
+    <string name="forums_create_allow_search">Luba kõigil foorumit otsida</string>
+    <string name="forums_rss_clipboard_label">Foorumi RSS-URL</string>
 </resources>

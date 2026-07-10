@@ -219,4 +219,18 @@
     <plurals name="forums_new_posts">
         <item quantity="other">%d ໂພສໃໝ່</item>
     </plurals>
+    <string name="forums_rss_feed">ຟີດ RSS</string>
+    <string name="forums_rss_mode_posts">ໂພສ</string>
+    <string name="forums_rss_mode_posts_comments">ໂພສແລະຄຳເຫັນ</string>
+    <string name="forums_rss_copied">ຄັດລອກ RSS URL ໄປຄລິບບອດແລ້ວ</string>
+    <string name="forums_find_results">ຜົນການຄົ້ນຫາ</string>
+    <string name="forums_markdown_supported">ຮອງຮັບ markdown</string>
+    <string name="forums_attachment_file">ໄຟລ໌</string>
+    <string name="forums_attachment_remove">ລຶບອອກ</string>
+    <string name="forums_attachment_move_up">ຍ້າຍຂຶ້ນ</string>
+    <string name="forums_attachment_move_down">ຍ້າຍລົງ</string>
+    <string name="forums_post_comments">ຄຳເຫັນ</string>
+    <string name="forums_all_forums">ຟໍຣັມທັງໝົດ</string>
+    <string name="forums_create_allow_search">ອະນຸຍາດໃຫ້ທຸກຄົນຄົ້ນຫາຟໍຣັມ</string>
+    <string name="forums_rss_clipboard_label">URL RSS ຂອງຟໍຣັມ</string>
 </resources>

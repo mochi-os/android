@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Datoteke ni bilo mogoče odpreti</string>
     <string name="reaction_remove">Počisti</string>
     <string name="common_logout_confirm_message">Ali ste prepričani, da se želite odjaviti? Za dostop do svojega računa se boste morali znova prijaviti.</string>
+    <string name="comment_anonymous">Anonimno</string>
+    <string name="tags_label">Oznake</string>
+    <string name="tags_add">Dodaj oznako</string>
+    <string name="tags_label_field">Oznaka</string>
+    <string name="tags_interest_up">Prikaži več podobnega</string>
+    <string name="tags_interest_down">Prikaži manj podobnega</string>
+    <string name="tags_interest_clear">Ne prikazuj več</string>
+    <string name="tags_none">Ni oznak</string>
+    <string name="tags_delete">Odstrani oznako</string>
 </resources>

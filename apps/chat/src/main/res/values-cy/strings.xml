@@ -95,4 +95,16 @@
     <string name="chat_new_search_placeholder">Chwilio am bobl</string>
     <string name="chat_new_no_matches">Dim pobl gyfatebol</string>
     <string name="chat_new_no_friends">Chwiliwch am bobl i sgwrsio â nhw</string>
+    <string name="chat_pin">Pinio</string>
+    <string name="chat_unpin">Dadbinio</string>
+    <string name="chat_pinned_label">Wedi\'i binio</string>
+    <string name="chat_settings_general">Cyffredinol</string>
+    <string name="chat_settings_screen_title">Gosodiadau %1$s</string>
+    <string name="chat_mark_read">Marcio fel wedi darllen</string>
+    <string name="chat_marked_read">Wedi ei farcio fel wedi darllen</string>
+    <string name="chat_search_next">Cyfatebiaeth nesaf</string>
+    <string name="chat_search_prev">Cyfatebiaeth flaenorol</string>
+    <string name="chat_settings_general_desc">Addasu gosodiadau sgwrs</string>
+    <string name="chat_settings_id">ID sgwrs</string>
+    <string name="chat_settings_members_desc">Rhestr o bobl yn y sgwrs hon</string>
 </resources>

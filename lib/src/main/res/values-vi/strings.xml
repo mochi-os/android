@@ -295,4 +295,13 @@
     <string name="common_file_open_failed">Không thể mở tệp</string>
     <string name="reaction_remove">Xóa</string>
     <string name="common_logout_confirm_message">Bạn có chắc chắn muốn đăng xuất không? Bạn sẽ cần đăng nhập lại để truy cập tài khoản của mình.</string>
+    <string name="comment_anonymous">Ẩn danh</string>
+    <string name="tags_label">Các thẻ</string>
+    <string name="tags_add">Thêm thẻ</string>
+    <string name="tags_label_field">Nhãn thẻ</string>
+    <string name="tags_interest_up">Hiển thị thêm nội dung tương tự</string>
+    <string name="tags_interest_down">Hiển thị ít nội dung tương tự</string>
+    <string name="tags_interest_clear">Ngừng hiển thị</string>
+    <string name="tags_none">Không có thẻ</string>
+    <string name="tags_delete">Xóa thẻ</string>
 </resources>

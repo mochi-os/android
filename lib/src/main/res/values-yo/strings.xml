@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Kò lè ṣí fáìlì</string>
     <string name="reaction_remove">Pa rẹ́</string>
     <string name="common_logout_confirm_message">Ṣé o dá ọ lójú pé o fẹ́ jáde? Ìwọ yóò ní láti tún wọlé láti lè wọ àkáǹtì rẹ.</string>
+    <string name="comment_anonymous">Aláìní-orúkọ</string>
+    <string name="tags_label">Àwọn tag</string>
+    <string name="tags_add">Fi àmì kún</string>
+    <string name="tags_label_field">Àmì àpèjúwe</string>
+    <string name="tags_interest_up">Fi irú èyí hàn sí i</string>
+    <string name="tags_interest_down">Fi irú èyí hàn dín kù</string>
+    <string name="tags_interest_clear">Dáwọ́ fífihàn dúró</string>
+    <string name="tags_none">Kò sí àmì</string>
+    <string name="tags_delete">Yọ àmì kúrò</string>
 </resources>

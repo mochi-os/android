@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Tiedostoa ei voitu avata</string>
     <string name="reaction_remove">Poista</string>
     <string name="common_logout_confirm_message">Haluatko varmasti kirjautua ulos? Sinun on kirjauduttava uudelleen sisään käyttääksesi tiliäsi.</string>
+    <string name="comment_anonymous">Anonyymi</string>
+    <string name="tags_label">Tunnisteet</string>
+    <string name="tags_add">Lisää tunniste</string>
+    <string name="tags_label_field">Tunnisteen nimi</string>
+    <string name="tags_interest_up">Näytä lisää tällaisia</string>
+    <string name="tags_interest_down">Näytä vähemmän tällaisia</string>
+    <string name="tags_interest_clear">Lopeta näyttäminen</string>
+    <string name="tags_none">Ei tunnisteita</string>
+    <string name="tags_delete">Poista tunniste</string>
 </resources>

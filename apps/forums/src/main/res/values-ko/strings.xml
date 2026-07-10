@@ -219,4 +219,18 @@
     <plurals name="forums_new_posts">
         <item quantity="other">새 게시물 %d개</item>
     </plurals>
+    <string name="forums_rss_feed">RSS 피드</string>
+    <string name="forums_rss_mode_posts">게시물</string>
+    <string name="forums_rss_mode_posts_comments">게시물 및 댓글</string>
+    <string name="forums_rss_copied">RSS URL이 클립보드에 복사되었어요</string>
+    <string name="forums_find_results">검색 결과</string>
+    <string name="forums_markdown_supported">마크다운 지원됨</string>
+    <string name="forums_attachment_file">파일</string>
+    <string name="forums_attachment_remove">제거</string>
+    <string name="forums_attachment_move_up">위로 이동</string>
+    <string name="forums_attachment_move_down">아래로 이동</string>
+    <string name="forums_post_comments">댓글</string>
+    <string name="forums_all_forums">모든 포럼</string>
+    <string name="forums_create_allow_search">누구나 포럼을 검색할 수 있도록 허용</string>
+    <string name="forums_rss_clipboard_label">포럼 RSS URL</string>
 </resources>

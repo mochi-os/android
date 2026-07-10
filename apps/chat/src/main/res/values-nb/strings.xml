@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Søk etter personer</string>
     <string name="chat_new_no_matches">Ingen samsvarende personer</string>
     <string name="chat_new_no_friends">Søk etter personer å chatte med</string>
+    <string name="chat_pin">Fest</string>
+    <string name="chat_unpin">Løsne</string>
+    <string name="chat_pinned_label">Festet</string>
+    <string name="chat_settings_general">Generelt</string>
+    <string name="chat_settings_screen_title">Innstillinger for %1$s</string>
+    <string name="chat_mark_read">Merk som lest</string>
+    <string name="chat_marked_read">Merket som lest</string>
+    <string name="chat_search_next">Neste treff</string>
+    <string name="chat_search_prev">Forrige treff</string>
+    <string name="chat_settings_general_desc">Juster chat-innstillinger</string>
+    <string name="chat_settings_id">Chat-ID</string>
+    <string name="chat_settings_members_desc">Liste over personer i denne chatten</string>
 </resources>

@@ -220,4 +220,18 @@
         <item quantity="one">%d şandiyê nû</item>
         <item quantity="other">%d şandiyên nû</item>
     </plurals>
+    <string name="forums_rss_feed">Pelê RSS</string>
+    <string name="forums_rss_mode_posts">Poste</string>
+    <string name="forums_rss_mode_posts_comments">Poste û şîrove</string>
+    <string name="forums_rss_copied">URL ya RSS hate kopîkirin</string>
+    <string name="forums_find_results">Encamên lêgerînê</string>
+    <string name="forums_markdown_supported">Markdown tê piştgirîkirin</string>
+    <string name="forums_attachment_file">Dosye</string>
+    <string name="forums_attachment_remove">Rake</string>
+    <string name="forums_attachment_move_up">Bibe jor</string>
+    <string name="forums_attachment_move_down">Bibe jêr</string>
+    <string name="forums_post_comments">Şîrove</string>
+    <string name="forums_all_forums">Hemû forum</string>
+    <string name="forums_create_allow_search">Destûr bide her kesî ku li forumê bigere</string>
+    <string name="forums_rss_clipboard_label">URL-ya RSS ya forumê</string>
 </resources>

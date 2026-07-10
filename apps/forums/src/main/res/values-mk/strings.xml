@@ -220,4 +220,18 @@
         <item quantity="one">%d нова објава</item>
         <item quantity="other">%d нови објави</item>
     </plurals>
+    <string name="forums_rss_feed">RSS канал</string>
+    <string name="forums_rss_mode_posts">Објави</string>
+    <string name="forums_rss_mode_posts_comments">Објави и коментари</string>
+    <string name="forums_rss_copied">RSS URL е копиран во клипборд</string>
+    <string name="forums_find_results">Резултати од пребарувањето</string>
+    <string name="forums_markdown_supported">Поддржан е markdown</string>
+    <string name="forums_attachment_file">Датотека</string>
+    <string name="forums_attachment_remove">Отстрани</string>
+    <string name="forums_attachment_move_up">Премести нагоре</string>
+    <string name="forums_attachment_move_down">Премести надолу</string>
+    <string name="forums_post_comments">Коментари</string>
+    <string name="forums_all_forums">Сите форуми</string>
+    <string name="forums_create_allow_search">Дозволи секој да го пребарува форумот</string>
+    <string name="forums_rss_clipboard_label">RSS URL на форумот</string>
 </resources>

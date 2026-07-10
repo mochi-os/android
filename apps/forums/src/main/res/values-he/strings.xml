@@ -222,4 +222,18 @@
         <item quantity="many">%d פוסטים חדשים</item>
         <item quantity="other">%d פוסטים חדשים</item>
     </plurals>
+    <string name="forums_rss_feed">פיד RSS</string>
+    <string name="forums_rss_mode_posts">פוסטים</string>
+    <string name="forums_rss_mode_posts_comments">פוסטים ותגובות</string>
+    <string name="forums_rss_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
+    <string name="forums_find_results">תוצאות חיפוש</string>
+    <string name="forums_markdown_supported">Markdown נתמך</string>
+    <string name="forums_attachment_file">קובץ</string>
+    <string name="forums_attachment_remove">הסר</string>
+    <string name="forums_attachment_move_up">הזזה למעלה</string>
+    <string name="forums_attachment_move_down">הזזה למטה</string>
+    <string name="forums_post_comments">תגובות</string>
+    <string name="forums_all_forums">כל הפורומים</string>
+    <string name="forums_create_allow_search">לאפשר לכל אחד לחפש את הפורום</string>
+    <string name="forums_rss_clipboard_label">כתובת RSS של הפורום</string>
 </resources>

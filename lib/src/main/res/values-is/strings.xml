@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Ekki tókst að opna skrá</string>
     <string name="reaction_remove">Hreinsa</string>
     <string name="common_logout_confirm_message">Ertu viss um að þú viljir skrá þig út? Þú þarft að skrá þig inn aftur til að fá aðgang að reikningnum þínum.</string>
+    <string name="comment_anonymous">Nafnlaust</string>
+    <string name="tags_label">Merki</string>
+    <string name="tags_add">Bæta við merki</string>
+    <string name="tags_label_field">Merkimiði</string>
+    <string name="tags_interest_up">Sýna meira af svona</string>
+    <string name="tags_interest_down">Sýna minna af svona</string>
+    <string name="tags_interest_clear">Hætta að sýna</string>
+    <string name="tags_none">Engin merki</string>
+    <string name="tags_delete">Fjarlægja merki</string>
 </resources>

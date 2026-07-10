@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Не вдалося відкрити файл</string>
     <string name="reaction_remove">Очистити</string>
     <string name="common_logout_confirm_message">Ви впевнені, що хочете вийти? Щоб отримати доступ до свого облікового запису, вам потрібно буде увійти знову.</string>
+    <string name="comment_anonymous">Анонімно</string>
+    <string name="tags_label">Теги</string>
+    <string name="tags_add">Додати тег</string>
+    <string name="tags_label_field">Назва тегу</string>
+    <string name="tags_interest_up">Показувати більше подібного</string>
+    <string name="tags_interest_down">Показувати менше подібного</string>
+    <string name="tags_interest_clear">Більше не показувати</string>
+    <string name="tags_none">Немає тегів</string>
+    <string name="tags_delete">Видалити мітку</string>
 </resources>

@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Αναζήτηση ατόμων</string>
     <string name="chat_new_no_matches">Δεν βρέθηκαν άτομα</string>
     <string name="chat_new_no_friends">Αναζητήστε άτομα για συνομιλία</string>
+    <string name="chat_pin">Καρφίτσωμα</string>
+    <string name="chat_unpin">Ξεκαρφίτσωμα</string>
+    <string name="chat_pinned_label">Καρφιτσωμένο</string>
+    <string name="chat_settings_general">Γενικά</string>
+    <string name="chat_settings_screen_title">Ρυθμίσεις %1$s</string>
+    <string name="chat_mark_read">Σήμανση ως αναγνωσμένο</string>
+    <string name="chat_marked_read">Σημάνθηκε ως αναγνωσμένο</string>
+    <string name="chat_search_next">Επόμενη αντιστοίχιση</string>
+    <string name="chat_search_prev">Προηγούμενη αντιστοίχιση</string>
+    <string name="chat_settings_general_desc">Προσαρμογή ρυθμίσεων συνομιλίας</string>
+    <string name="chat_settings_id">Αναγνωριστικό συνομιλίας</string>
+    <string name="chat_settings_members_desc">Λίστα ατόμων σε αυτήν τη συνομιλία</string>
 </resources>

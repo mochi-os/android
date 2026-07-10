@@ -219,4 +219,18 @@
     <plurals name="forums_new_posts">
         <item quantity="other">%d โพสต์ใหม่</item>
     </plurals>
+    <string name="forums_rss_feed">ฟีด RSS</string>
+    <string name="forums_rss_mode_posts">โพสต์</string>
+    <string name="forums_rss_mode_posts_comments">โพสต์และความคิดเห็น</string>
+    <string name="forums_rss_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
+    <string name="forums_find_results">ผลการค้นหา</string>
+    <string name="forums_markdown_supported">รองรับ Markdown</string>
+    <string name="forums_attachment_file">ไฟล์</string>
+    <string name="forums_attachment_remove">ลบ</string>
+    <string name="forums_attachment_move_up">เลื่อนขึ้น</string>
+    <string name="forums_attachment_move_down">เลื่อนลง</string>
+    <string name="forums_post_comments">ความคิดเห็น</string>
+    <string name="forums_all_forums">ฟอรัมทั้งหมด</string>
+    <string name="forums_create_allow_search">อนุญาตให้ทุกคนค้นหาฟอรัม</string>
+    <string name="forums_rss_clipboard_label">URL RSS ของฟอรัม</string>
 </resources>

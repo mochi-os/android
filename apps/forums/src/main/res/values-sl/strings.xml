@@ -222,4 +222,18 @@
         <item quantity="few">%d nove objave</item>
         <item quantity="other">%d novih objav</item>
     </plurals>
+    <string name="forums_rss_feed">RSS vir</string>
+    <string name="forums_rss_mode_posts">Objave</string>
+    <string name="forums_rss_mode_posts_comments">Objave in komentarji</string>
+    <string name="forums_rss_copied">RSS URL kopiran v odložišče</string>
+    <string name="forums_find_results">Rezultati iskanja</string>
+    <string name="forums_markdown_supported">Markdown podprt</string>
+    <string name="forums_attachment_file">Datoteka</string>
+    <string name="forums_attachment_remove">Odstrani</string>
+    <string name="forums_attachment_move_up">Premakni navzgor</string>
+    <string name="forums_attachment_move_down">Premakni navzdol</string>
+    <string name="forums_post_comments">Komentarji</string>
+    <string name="forums_all_forums">Vsi forumi</string>
+    <string name="forums_create_allow_search">Dovoli vsem iskanje foruma</string>
+    <string name="forums_rss_clipboard_label">RSS URL foruma</string>
 </resources>

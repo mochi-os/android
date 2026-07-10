@@ -220,4 +220,18 @@
         <item quantity="one">%d նոր գրառում</item>
         <item quantity="other">%d նոր գրառում</item>
     </plurals>
+    <string name="forums_rss_feed">RSS հոսք</string>
+    <string name="forums_rss_mode_posts">Գրառումներ</string>
+    <string name="forums_rss_mode_posts_comments">Գրառումներ և մեկնաբանություններ</string>
+    <string name="forums_rss_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
+    <string name="forums_find_results">Որոնման արդյունքներ</string>
+    <string name="forums_markdown_supported">Առավելագույն</string>
+    <string name="forums_attachment_file">Ֆայլ</string>
+    <string name="forums_attachment_remove">Հեռացնել</string>
+    <string name="forums_attachment_move_up">Տեղափոխել վերև</string>
+    <string name="forums_attachment_move_down">Տեղափոխել ներքև</string>
+    <string name="forums_post_comments">Մեկնաբանություններ ({0})</string>
+    <string name="forums_all_forums">Բոլոր ֆորումները</string>
+    <string name="forums_create_allow_search">Թույլատրել բոլորին որոնել ֆորումը</string>
+    <string name="forums_rss_clipboard_label">Ֆորումի RSS URL</string>
 </resources>

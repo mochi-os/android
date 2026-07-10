@@ -220,4 +220,18 @@
         <item quantity="one">%d шинэ нийтлэл</item>
         <item quantity="other">%d шинэ нийтлэл</item>
     </plurals>
+    <string name="forums_rss_feed">RSS фид</string>
+    <string name="forums_rss_mode_posts">Нийтлэлүүд</string>
+    <string name="forums_rss_mode_posts_comments">Нийтлэл болон сэтгэгдэл</string>
+    <string name="forums_rss_copied">RSS URL clipboard руу хуулагдсан</string>
+    <string name="forums_find_results">Хайлтын үр дүн</string>
+    <string name="forums_markdown_supported">Markdown дэмжигдсэн</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Хасах</string>
+    <string name="forums_attachment_move_up">Дээш зөөх</string>
+    <string name="forums_attachment_move_down">Доош зөөх</string>
+    <string name="forums_post_comments">Сэтгэгдэлүүд</string>
+    <string name="forums_all_forums">Бүх форум</string>
+    <string name="forums_create_allow_search">Хэн ч форумыг хайхыг зөвшөөрөх</string>
+    <string name="forums_rss_clipboard_label">Форумын RSS URL</string>
 </resources>

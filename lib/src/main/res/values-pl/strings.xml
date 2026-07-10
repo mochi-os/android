@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Nie udało się otworzyć pliku</string>
     <string name="reaction_remove">Wyczyść</string>
     <string name="common_logout_confirm_message">Czy na pewno chcesz się wylogować? Aby uzyskać dostęp do swojego konta, konieczne będzie ponowne zalogowanie.</string>
+    <string name="comment_anonymous">Anonim</string>
+    <string name="tags_label">Tagi</string>
+    <string name="tags_add">Dodaj tag</string>
+    <string name="tags_label_field">Etykieta tagu</string>
+    <string name="tags_interest_up">Pokaż więcej podobnych</string>
+    <string name="tags_interest_down">Pokaż mniej podobnych</string>
+    <string name="tags_interest_clear">Przestań pokazywać</string>
+    <string name="tags_none">Brak tagów</string>
+    <string name="tags_delete">Usuń tag</string>
 </resources>

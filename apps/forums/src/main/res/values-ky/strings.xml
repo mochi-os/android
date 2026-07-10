@@ -220,4 +220,18 @@
         <item quantity="one">%d жаңы жазуу</item>
         <item quantity="other">%d жаңы жазуу</item>
     </plurals>
+    <string name="forums_rss_feed">RSS тасмасы</string>
+    <string name="forums_rss_mode_posts">Посттор</string>
+    <string name="forums_rss_mode_posts_comments">Посттор жана комментарийлер</string>
+    <string name="forums_rss_copied">RSS URL алмашуу буферине көчүрүлдү</string>
+    <string name="forums_find_results">Издөө жыйынтыктары</string>
+    <string name="forums_markdown_supported">Markdown колдоого алынат</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Алуу</string>
+    <string name="forums_attachment_move_up">Жогору жылдыруу</string>
+    <string name="forums_attachment_move_down">Төмөн жылдыруу</string>
+    <string name="forums_post_comments">Комментарийлер</string>
+    <string name="forums_all_forums">Бардык форумдар</string>
+    <string name="forums_create_allow_search">Ар кимге форумду издөөгө уруксат берүү</string>
+    <string name="forums_rss_clipboard_label">Форумдун RSS URL дареги</string>
 </resources>

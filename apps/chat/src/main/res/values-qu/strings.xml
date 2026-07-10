@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Runakunata maskay</string>
     <string name="chat_new_no_matches">Manam tupaq runakunachu</string>
     <string name="chat_new_no_friends">Rimanakunapaq runakunata maskay</string>
+    <string name="chat_pin">Pinkay</string>
+    <string name="chat_unpin">Mana takyachiy</string>
+    <string name="chat_pinned_label">Pinkasqa</string>
+    <string name="chat_settings_general">Llapanpi</string>
+    <string name="chat_settings_screen_title">%1$s allinkachaykuna</string>
+    <string name="chat_mark_read">Ñawinchasqahina señalay</string>
+    <string name="chat_marked_read">Ñawinchasqahina señalasqa</string>
+    <string name="chat_search_next">Qatiq tupay</string>
+    <string name="chat_search_prev">Ñawpaq tupay</string>
+    <string name="chat_settings_general_desc">Rimanakuy churayninkunata allichay</string>
+    <string name="chat_settings_id">Rimanakuy ID</string>
+    <string name="chat_settings_members_desc">Kay rimanakuypi runakunap sutinkuna</string>
 </resources>

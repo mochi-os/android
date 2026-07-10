@@ -210,4 +210,18 @@
     <string name="forums_saved_title">Gespeichert</string>
     <string name="forums_saved_remove">Aus Gespeicherten entfernen</string>
     <string name="forums_saved_clear_all">Alle löschen</string>
+    <string name="forums_rss_feed">RSS-Feed</string>
+    <string name="forums_rss_mode_posts">Beiträge</string>
+    <string name="forums_rss_mode_posts_comments">Beiträge und Kommentare</string>
+    <string name="forums_rss_copied">RSS-URL in die Zwischenablage kopiert</string>
+    <string name="forums_find_results">Suchergebnisse</string>
+    <string name="forums_markdown_supported">Markdown wird unterstützt</string>
+    <string name="forums_attachment_file">Datei</string>
+    <string name="forums_attachment_remove">Entfernen</string>
+    <string name="forums_attachment_move_up">Nach oben verschieben</string>
+    <string name="forums_attachment_move_down">Nach unten verschieben</string>
+    <string name="forums_post_comments">Kommentare</string>
+    <string name="forums_all_forums">Alle Foren</string>
+    <string name="forums_create_allow_search">Jedem erlauben, nach Forum zu suchen</string>
+    <string name="forums_rss_clipboard_label">Forum-RSS-URL</string>
 </resources>

@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Ezin izan da fitxategia ireki</string>
     <string name="reaction_remove">Kendu</string>
     <string name="common_logout_confirm_message">Ziur zaude saioa amaitu nahi duzula? Berriro hasi beharko duzu saioa zure kontura sartzeko.</string>
+    <string name="comment_anonymous">Anonimoa</string>
+    <string name="tags_label">Etiketak</string>
+    <string name="tags_add">Gehitu etiketa</string>
+    <string name="tags_label_field">Etiketaren izena</string>
+    <string name="tags_interest_up">Erakutsi honelako gehiago</string>
+    <string name="tags_interest_down">Erakutsi honelako gutxiago</string>
+    <string name="tags_interest_clear">Utzi erakusteari</string>
+    <string name="tags_none">Etiketarik ez</string>
+    <string name="tags_delete">Kendu etiketa</string>
 </resources>

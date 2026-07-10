@@ -295,4 +295,13 @@
     <string name="stepup_error_oauth">Couldn\'t verify with that account. Please try again.</string>
     <string name="reaction_remove">Clear</string>
     <string name="common_logout_confirm_message">Are you sure you want to log out? You will need to log in again to access your account.</string>
+    <string name="comment_anonymous">Anonymous</string>
+    <string name="tags_label">Tags</string>
+    <string name="tags_add">Add tag</string>
+    <string name="tags_label_field">Tag label</string>
+    <string name="tags_interest_up">Show more like this</string>
+    <string name="tags_interest_down">Show less like this</string>
+    <string name="tags_interest_clear">Stop showing</string>
+    <string name="tags_none">No tags</string>
+    <string name="tags_delete">Remove tag</string>
 </resources>

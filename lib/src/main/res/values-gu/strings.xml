@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ફાઇલ ખોલી શકાઈ નહીં</string>
     <string name="reaction_remove">સાફ કરો</string>
     <string name="common_logout_confirm_message">શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો? તમારા એકાઉન્ટને ઍક્સેસ કરવા માટે તમારે ફરીથી લૉગ ઇન કરવું પડશે.</string>
+    <string name="comment_anonymous">અનામી</string>
+    <string name="tags_label">ટૅગ્સ</string>
+    <string name="tags_add">ટૅગ ઉમેરો</string>
+    <string name="tags_label_field">ટૅગ લેબલ</string>
+    <string name="tags_interest_up">આના જેવું વધુ બતાવો</string>
+    <string name="tags_interest_down">આના જેવું ઓછું બતાવો</string>
+    <string name="tags_interest_clear">બતાવવાનું બંધ કરો</string>
+    <string name="tags_none">કોઈ ટૅગ નથી</string>
+    <string name="tags_delete">ટૅગ દૂર કરો</string>
 </resources>

@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ფაილის გახსნა ვერ მოხერხდა</string>
     <string name="reaction_remove">გასუფთავება</string>
     <string name="common_logout_confirm_message">დარწმუნებული ხართ, რომ გსურთ სისტემიდან გასვლა? ანგარიშზე წვდომისთვის ხელახლა შესვლა დაგჭირდებათ.</string>
+    <string name="comment_anonymous">ანონიმური</string>
+    <string name="tags_label">ტეგები</string>
+    <string name="tags_add">ტეგის დამატება</string>
+    <string name="tags_label_field">ტეგის ეტიკეტი</string>
+    <string name="tags_interest_up">მეტი ამის მსგავსი</string>
+    <string name="tags_interest_down">ნაკლები ამის მსგავსი</string>
+    <string name="tags_interest_clear">აღარ მაჩვენო</string>
+    <string name="tags_none">ტეგები არ არის</string>
+    <string name="tags_delete">ტეგის წაშლა</string>
 </resources>

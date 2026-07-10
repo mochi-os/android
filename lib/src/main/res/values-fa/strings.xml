@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">باز کردن فایل ممکن نشد</string>
     <string name="reaction_remove">پاک کردن</string>
     <string name="common_logout_confirm_message">آیا مطمئن هستید که می‌خواهید خارج شوید؟ برای دسترسی به حساب خود باید دوباره وارد شوید.</string>
+    <string name="comment_anonymous">ناشناس</string>
+    <string name="tags_label">برچسب‌ها</string>
+    <string name="tags_add">افزودن برچسب</string>
+    <string name="tags_label_field">برچسب</string>
+    <string name="tags_interest_up">موارد مشابه بیشتری نشان بده</string>
+    <string name="tags_interest_down">موارد مشابه کمتری نشان بده</string>
+    <string name="tags_interest_clear">نمایش نده</string>
+    <string name="tags_none">بدون برچسب</string>
+    <string name="tags_delete">حذف برچسب</string>
 </resources>

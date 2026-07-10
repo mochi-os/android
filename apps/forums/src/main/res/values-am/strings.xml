@@ -220,4 +220,18 @@
         <item quantity="one">%d አዲስ ልጥፍ</item>
         <item quantity="other">%d አዲስ ልጥፎች</item>
     </plurals>
+    <string name="forums_rss_feed">RSS ፊድ</string>
+    <string name="forums_rss_mode_posts">ልጥፎች</string>
+    <string name="forums_rss_mode_posts_comments">ልጥፎች እና አስተያየቶች</string>
+    <string name="forums_rss_copied">RSS ዩአርኤል ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
+    <string name="forums_find_results">የፍለጋ ውጤቶች</string>
+    <string name="forums_markdown_supported">ማርክዳውን ይደገፋል</string>
+    <string name="forums_attachment_file">ፋይል</string>
+    <string name="forums_attachment_remove">አስወግድ</string>
+    <string name="forums_attachment_move_up">ወደ ላይ ያንቀሳቅሱ</string>
+    <string name="forums_attachment_move_down">ወደ ታች ያንቀሳቅሱ</string>
+    <string name="forums_post_comments">አስተያየቶች</string>
+    <string name="forums_all_forums">ሁሉም መድረኮች</string>
+    <string name="forums_create_allow_search">ማንኛውም ሰው መድረኩን እንዲፈልግ ፍቀድ</string>
+    <string name="forums_rss_clipboard_label">የመድረክ RSS URL</string>
 </resources>

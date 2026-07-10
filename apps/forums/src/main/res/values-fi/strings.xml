@@ -220,4 +220,18 @@
         <item quantity="one">%d uusi julkaisu</item>
         <item quantity="other">%d uutta julkaisua</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-syöte</string>
+    <string name="forums_rss_mode_posts">Julkaisut</string>
+    <string name="forums_rss_mode_posts_comments">Julkaisut ja kommentit</string>
+    <string name="forums_rss_copied">RSS-URL kopioitu leikepöydälle</string>
+    <string name="forums_find_results">Hakutulokset</string>
+    <string name="forums_markdown_supported">Markdown tuettu</string>
+    <string name="forums_attachment_file">Tiedosto</string>
+    <string name="forums_attachment_remove">Poista</string>
+    <string name="forums_attachment_move_up">Siirrä ylös</string>
+    <string name="forums_attachment_move_down">Siirrä alas</string>
+    <string name="forums_post_comments">Kommentit</string>
+    <string name="forums_all_forums">Kaikki foorumit</string>
+    <string name="forums_create_allow_search">Salli kenen tahansa hakea foorumia</string>
+    <string name="forums_rss_clipboard_label">Foorumin RSS-osoite</string>
 </resources>

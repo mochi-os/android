@@ -210,4 +210,18 @@
     <string name="forums_saved_clear_all">Tøm alle</string>
     <string name="forums_saved_title">Lagra</string>
     <string name="forums_saved_remove">Fjern frå lagra</string>
+    <string name="forums_rss_feed">RSS-straum</string>
+    <string name="forums_rss_mode_posts">Innlegg</string>
+    <string name="forums_rss_mode_posts_comments">Innlegg og kommentarar</string>
+    <string name="forums_rss_copied">RSS-URL kopiert til utklippstavla</string>
+    <string name="forums_find_results">Søkjeresultat</string>
+    <string name="forums_markdown_supported">Markdown er støtta</string>
+    <string name="forums_attachment_file">Fil</string>
+    <string name="forums_attachment_remove">Fjern</string>
+    <string name="forums_attachment_move_up">Flytt opp</string>
+    <string name="forums_attachment_move_down">Flytt ned</string>
+    <string name="forums_post_comments">Kommentarar</string>
+    <string name="forums_all_forums">Alle forum</string>
+    <string name="forums_create_allow_search">La alle søkje etter forumet</string>
+    <string name="forums_rss_clipboard_label">RSS-URL for forumet</string>
 </resources>

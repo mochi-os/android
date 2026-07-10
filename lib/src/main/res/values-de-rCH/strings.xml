@@ -295,4 +295,13 @@
     <string name="stepup_error_oauth">Verifizierung mit diesem Konto fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
     <string name="reaction_remove">Löschen</string>
     <string name="common_logout_confirm_message">Möchten Sie sich wirklich abmelden? Sie müssen sich erneut anmelden, um auf Ihr Konto zuzugreifen.</string>
+    <string name="comment_anonymous">Anonym</string>
+    <string name="tags_label">Tags</string>
+    <string name="tags_add">Tag hinzufügen</string>
+    <string name="tags_label_field">Tag-Bezeichnung</string>
+    <string name="tags_interest_up">Mehr davon anzeigen</string>
+    <string name="tags_interest_down">Weniger davon anzeigen</string>
+    <string name="tags_interest_clear">Nicht mehr anzeigen</string>
+    <string name="tags_none">Keine Tags</string>
+    <string name="tags_delete">Tag entfernen</string>
 </resources>

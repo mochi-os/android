@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Det gick inte att öppna filen</string>
     <string name="reaction_remove">Rensa</string>
     <string name="common_logout_confirm_message">Är du säker på att du vill logga ut? Du måste logga in igen för att komma åt ditt konto.</string>
+    <string name="comment_anonymous">Anonym</string>
+    <string name="tags_label">Taggar</string>
+    <string name="tags_add">Lägg till tagg</string>
+    <string name="tags_label_field">Taggetikett</string>
+    <string name="tags_interest_up">Visa mer av detta</string>
+    <string name="tags_interest_down">Visa mindre av detta</string>
+    <string name="tags_interest_clear">Sluta visa</string>
+    <string name="tags_none">Inga taggar</string>
+    <string name="tags_delete">Ta bort tagg</string>
 </resources>

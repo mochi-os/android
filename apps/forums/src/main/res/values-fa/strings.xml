@@ -220,4 +220,18 @@
         <item quantity="one">%d پست جدید</item>
         <item quantity="other">%d پست جدید</item>
     </plurals>
+    <string name="forums_rss_feed">فید RSS</string>
+    <string name="forums_rss_mode_posts">پست‌ها</string>
+    <string name="forums_rss_mode_posts_comments">پست‌ها و نظرات</string>
+    <string name="forums_rss_copied">URL RSS در کلیپ‌بورد کپی شد</string>
+    <string name="forums_find_results">نتایج جستجو</string>
+    <string name="forums_markdown_supported">Markdown پشتیبانی می‌شود</string>
+    <string name="forums_attachment_file">فایل</string>
+    <string name="forums_attachment_remove">حذف</string>
+    <string name="forums_attachment_move_up">انتقال به بالا</string>
+    <string name="forums_attachment_move_down">انتقال به پایین</string>
+    <string name="forums_post_comments">نظرها</string>
+    <string name="forums_all_forums">همه انجمن‌ها</string>
+    <string name="forums_create_allow_search">اجازه دهید هر کسی انجمن را جستجو کند</string>
+    <string name="forums_rss_clipboard_label">نشانی RSS انجمن</string>
 </resources>

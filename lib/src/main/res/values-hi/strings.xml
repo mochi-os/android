@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">फ़ाइल नहीं खोली जा सकी</string>
     <string name="reaction_remove">हटाएँ</string>
     <string name="common_logout_confirm_message">क्या आप वाकई लॉग आउट करना चाहते हैं? अपने खाते तक पहुँचने के लिए आपको फिर से लॉग इन करना होगा।</string>
+    <string name="comment_anonymous">अनाम</string>
+    <string name="tags_label">टैग</string>
+    <string name="tags_add">टैग जोड़ें</string>
+    <string name="tags_label_field">टैग लेबल</string>
+    <string name="tags_interest_up">इस तरह की और दिखाएँ</string>
+    <string name="tags_interest_down">इस तरह की कम दिखाएँ</string>
+    <string name="tags_interest_clear">दिखाना बंद करें</string>
+    <string name="tags_none">कोई टैग नहीं</string>
+    <string name="tags_delete">टैग हटाएँ</string>
 </resources>

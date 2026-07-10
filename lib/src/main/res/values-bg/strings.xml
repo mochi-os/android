@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Файлът не можа да бъде отворен</string>
     <string name="reaction_remove">Изчистване</string>
     <string name="common_logout_confirm_message">Наистина ли искате да излезете? Ще трябва да влезете отново, за да получите достъп до акаунта си.</string>
+    <string name="comment_anonymous">Анонимен</string>
+    <string name="tags_label">Етикети</string>
+    <string name="tags_add">Добавяне на етикет</string>
+    <string name="tags_label_field">Етикет</string>
+    <string name="tags_interest_up">Показвай повече такива</string>
+    <string name="tags_interest_down">Показвай по-малко такива</string>
+    <string name="tags_interest_clear">Спри показването</string>
+    <string name="tags_none">Няма етикети</string>
+    <string name="tags_delete">Премахване на етикет</string>
 </resources>

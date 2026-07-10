@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Súbor sa nepodarilo otvoriť</string>
     <string name="reaction_remove">Vymazať</string>
     <string name="common_logout_confirm_message">Naozaj sa chcete odhlásiť? Na prístup k svojmu účtu sa budete musieť znova prihlásiť.</string>
+    <string name="comment_anonymous">Anonymný</string>
+    <string name="tags_label">Tagy</string>
+    <string name="tags_add">Pridať značku</string>
+    <string name="tags_label_field">Označenie značky</string>
+    <string name="tags_interest_up">Zobraziť viac podobného</string>
+    <string name="tags_interest_down">Zobraziť menej podobného</string>
+    <string name="tags_interest_clear">Prestať zobrazovať</string>
+    <string name="tags_none">Žiadne značky</string>
+    <string name="tags_delete">Odstrániť značku</string>
 </resources>

@@ -220,4 +220,18 @@
         <item quantity="one">%d nuwe plasing</item>
         <item quantity="other">%d nuwe plasings</item>
     </plurals>
+    <string name="forums_rss_feed">RSS-feed</string>
+    <string name="forums_rss_mode_posts">Plasings</string>
+    <string name="forums_rss_mode_posts_comments">Plasings en kommentaar</string>
+    <string name="forums_rss_copied">RSS-URL na knipbord gekopieer</string>
+    <string name="forums_find_results">Soekresultate</string>
+    <string name="forums_markdown_supported">Markdown ondersteun</string>
+    <string name="forums_attachment_file">Lêer</string>
+    <string name="forums_attachment_remove">Verwyder</string>
+    <string name="forums_attachment_move_up">Skuif op</string>
+    <string name="forums_attachment_move_down">Skuif af</string>
+    <string name="forums_post_comments">Kommentare</string>
+    <string name="forums_all_forums">Alle forums</string>
+    <string name="forums_create_allow_search">Laat enigiemand toe om die forum te soek</string>
+    <string name="forums_rss_clipboard_label">Forum RSS-URL</string>
 </resources>

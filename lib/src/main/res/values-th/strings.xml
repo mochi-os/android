@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">เปิดไฟล์ไม่สำเร็จ</string>
     <string name="reaction_remove">ล้าง</string>
     <string name="common_logout_confirm_message">คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ? คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อเข้าถึงบัญชีของคุณ</string>
+    <string name="comment_anonymous">ไม่ระบุชื่อ</string>
+    <string name="tags_label">แท็ก</string>
+    <string name="tags_add">เพิ่มแท็ก</string>
+    <string name="tags_label_field">ป้ายแท็ก</string>
+    <string name="tags_interest_up">แสดงเพิ่มเติมแบบนี้</string>
+    <string name="tags_interest_down">แสดงน้อยลงแบบนี้</string>
+    <string name="tags_interest_clear">หยุดแสดง</string>
+    <string name="tags_none">ไม่มีแท็ก</string>
+    <string name="tags_delete">ลบแท็ก</string>
 </resources>

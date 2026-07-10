@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">İnsanları axtar</string>
     <string name="chat_new_no_matches">Uyğun insan yoxdur</string>
     <string name="chat_new_no_friends">Söhbət etmək üçün insanlar axtarın</string>
+    <string name="chat_pin">Sancaqla</string>
+    <string name="chat_unpin">Tanınmayan ödəniş</string>
+    <string name="chat_pinned_label">Sancaqlanıb</string>
+    <string name="chat_settings_general">Ümumi</string>
+    <string name="chat_settings_screen_title">%1$s parametrləri</string>
+    <string name="chat_mark_read">Oxunmuş kimi işarələ</string>
+    <string name="chat_marked_read">Oxunmuş kimi işarələndi</string>
+    <string name="chat_search_next">Növbəti uyğunluq</string>
+    <string name="chat_search_prev">Əvvəlki uyğunluq</string>
+    <string name="chat_settings_general_desc">Söhbət parametrlərini tənzimləyin</string>
+    <string name="chat_settings_id">Söhbət ID-si</string>
+    <string name="chat_settings_members_desc">Bu söhbətdəki insanların siyahısı</string>
 </resources>

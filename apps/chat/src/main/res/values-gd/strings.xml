@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Lorg daoine</string>
     <string name="chat_new_no_matches">Chan eil daoine a\' freagairt</string>
     <string name="chat_new_no_friends">Lorg daoine airson cabadaich</string>
+    <string name="chat_pin">Prìnich</string>
+    <string name="chat_unpin">Dì-phrìnich</string>
+    <string name="chat_pinned_label">Prìnichte</string>
+    <string name="chat_settings_general">Coitcheann</string>
+    <string name="chat_settings_screen_title">Roghainnean %1$s</string>
+    <string name="chat_mark_read">Comharraich mar leughte</string>
+    <string name="chat_marked_read">Air a chomharrachadh mar leughte</string>
+    <string name="chat_search_next">An ath mhaids</string>
+    <string name="chat_search_prev">A\' mhaids roimhe</string>
+    <string name="chat_settings_general_desc">Atharraich roghainnean na cabadaich</string>
+    <string name="chat_settings_id">ID na cabadaich</string>
+    <string name="chat_settings_members_desc">Liosta dhaoine sa chabadaich seo</string>
 </resources>

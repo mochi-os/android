@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Faayilii banuun hin danda\'amne</string>
     <string name="reaction_remove">Cilliisi</string>
     <string name="common_logout_confirm_message">Seenuu keessan cufuu akka barbaaddan mirkaneeffattanii? Akkaawuntii keessan argachuuf irra deebitanii seenuun isin barbaachisa.</string>
+    <string name="comment_anonymous">Maqaa malee</string>
+    <string name="tags_label">Tagoota</string>
+    <string name="tags_add">Maallattoo dabali</string>
+    <string name="tags_label_field">Maqaa mallattoo</string>
+    <string name="tags_interest_up">Kana fakkaatu dabalataan agarsiisi</string>
+    <string name="tags_interest_down">Kana fakkaatu xinneessii agarsiisi</string>
+    <string name="tags_interest_clear">Agarsiisuu dhaabi</string>
+    <string name="tags_none">Mallattoon hin jiru</string>
+    <string name="tags_delete">Mallattoo haqi</string>
 </resources>

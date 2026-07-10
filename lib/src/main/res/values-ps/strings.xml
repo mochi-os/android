@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">فایل پرانیستل ونشول</string>
     <string name="reaction_remove">پاک کړئ</string>
     <string name="common_logout_confirm_message">ایا تاسو ډاډه یاست چې غواړئ ووځئ؟ خپل حساب ته د لاسرسي لپاره به اړ یاست چې بیا ننوځئ.</string>
+    <string name="comment_anonymous">ناپېژندل شوی</string>
+    <string name="tags_label">ټاګونه</string>
+    <string name="tags_add">ټګ اضافه کړئ</string>
+    <string name="tags_label_field">د ټګ نوم</string>
+    <string name="tags_interest_up">د دې په څیر نور وښیه</string>
+    <string name="tags_interest_down">د دې په څیر لږ وښیه</string>
+    <string name="tags_interest_clear">ښودل ودروه</string>
+    <string name="tags_none">هیڅ ټګونه نشته</string>
+    <string name="tags_delete">ټګ لرې کړئ</string>
 </resources>

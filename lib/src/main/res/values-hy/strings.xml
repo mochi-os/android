@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Չհաջողվեց բացել ֆայլը</string>
     <string name="reaction_remove">Մաքրել</string>
     <string name="common_logout_confirm_message">Վստա՞հ եք, որ ցանկանում եք դուրս գալ։ Ձեր հաշիվ մուտք գործելու համար նորից պետք է մուտք գործեք։</string>
+    <string name="comment_anonymous">Անանուն</string>
+    <string name="tags_label">Թեգեր</string>
+    <string name="tags_add">Ավելացնել պիտակ</string>
+    <string name="tags_label_field">Պիտակի անվանում</string>
+    <string name="tags_interest_up">Ցույց տալ ավելի շատ սրա նման</string>
+    <string name="tags_interest_down">Ցույց տալ ավելի քիչ սրա նման</string>
+    <string name="tags_interest_clear">Դադարեցնել ցուցադրումը</string>
+    <string name="tags_none">Պիտակներ չկան</string>
+    <string name="tags_delete">Հեռացնել պիտակը</string>
 </resources>

@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">فائل نہیں کھل سکی</string>
     <string name="reaction_remove">صاف کریں</string>
     <string name="common_logout_confirm_message">کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟ اپنے اکاؤنٹ تک رسائی کے لیے آپ کو دوبارہ لاگ اِن کرنا ہوگا۔</string>
+    <string name="comment_anonymous">گمنام</string>
+    <string name="tags_label">ٹیگز</string>
+    <string name="tags_add">ٹیگ شامل کریں</string>
+    <string name="tags_label_field">ٹیگ کا لیبل</string>
+    <string name="tags_interest_up">اس جیسی مزید دکھائیں</string>
+    <string name="tags_interest_down">اس جیسی کم دکھائیں</string>
+    <string name="tags_interest_clear">دکھانا بند کریں</string>
+    <string name="tags_none">کوئی ٹیگ نہیں</string>
+    <string name="tags_delete">ٹیگ ہٹائیں</string>
 </resources>

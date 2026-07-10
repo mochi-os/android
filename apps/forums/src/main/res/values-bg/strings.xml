@@ -220,4 +220,18 @@
         <item quantity="one">%d нова публикация</item>
         <item quantity="other">%d нови публикации</item>
     </plurals>
+    <string name="forums_rss_feed">RSS емисия</string>
+    <string name="forums_rss_mode_posts">Публикации</string>
+    <string name="forums_rss_mode_posts_comments">Публикации и коментари</string>
+    <string name="forums_rss_copied">RSS URL е копиран в клипборда</string>
+    <string name="forums_find_results">Резултати от търсенето</string>
+    <string name="forums_markdown_supported">Поддържа се markdown</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Премахни</string>
+    <string name="forums_attachment_move_up">Преместване нагоре</string>
+    <string name="forums_attachment_move_down">Преместване надолу</string>
+    <string name="forums_post_comments">Коментари</string>
+    <string name="forums_all_forums">Всички форуми</string>
+    <string name="forums_create_allow_search">Разрешаване на всеки да търси форума</string>
+    <string name="forums_rss_clipboard_label">RSS URL на форума</string>
 </resources>

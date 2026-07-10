@@ -220,4 +220,18 @@
         <item quantity="one">%d musuq willakuy</item>
         <item quantity="other">%d musuq willakuykuna</item>
     </plurals>
+    <string name="forums_rss_feed">RSS willakuy</string>
+    <string name="forums_rss_mode_posts">Qillqakuna</string>
+    <string name="forums_rss_mode_posts_comments">Qillqakuna comentariokunawan</string>
+    <string name="forums_rss_copied">RSS URL clipboardman copiasqa</string>
+    <string name="forums_find_results">Maskay tariykuna</string>
+    <string name="forums_markdown_supported">Markdown haypaqsi</string>
+    <string name="forums_attachment_file">Kawsay</string>
+    <string name="forums_attachment_remove">Qichuy</string>
+    <string name="forums_attachment_move_up">Patamanta apay</string>
+    <string name="forums_attachment_move_down">Uramanta apay</string>
+    <string name="forums_post_comments">Comentarios</string>
+    <string name="forums_all_forums">Llapan forokuna</string>
+    <string name="forums_create_allow_search">Pipas forota maskananpaq saqiy</string>
+    <string name="forums_rss_clipboard_label">Foro RSS URL</string>
 </resources>

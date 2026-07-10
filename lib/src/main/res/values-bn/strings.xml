@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ফাইল খোলা যায়নি</string>
     <string name="reaction_remove">মুছে ফেলুন</string>
     <string name="common_logout_confirm_message">আপনি কি নিশ্চিত যে আপনি লগ আউট করতে চান? আপনার অ্যাকাউন্টে প্রবেশ করতে আপনাকে আবার লগ ইন করতে হবে।</string>
+    <string name="comment_anonymous">বেনামী</string>
+    <string name="tags_label">ট্যাগ</string>
+    <string name="tags_add">ট্যাগ যোগ করুন</string>
+    <string name="tags_label_field">ট্যাগ লেবেল</string>
+    <string name="tags_interest_up">এর মতো আরও দেখান</string>
+    <string name="tags_interest_down">এর মতো কম দেখান</string>
+    <string name="tags_interest_clear">দেখানো বন্ধ করুন</string>
+    <string name="tags_none">কোনো ট্যাগ নেই</string>
+    <string name="tags_delete">ট্যাগ সরান</string>
 </resources>

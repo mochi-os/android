@@ -94,4 +94,16 @@
     <string name="chat_new_search_placeholder">Nemo mutane</string>
     <string name="chat_new_no_matches">Babu mutanen da suka dace</string>
     <string name="chat_new_no_friends">Nemo mutanen da za ka yi hira da su</string>
+    <string name="chat_pin">Manna</string>
+    <string name="chat_unpin">Cire pin</string>
+    <string name="chat_pinned_label">An pin</string>
+    <string name="chat_settings_general">Gabaɗaya</string>
+    <string name="chat_settings_screen_title">Saitunan %1$s</string>
+    <string name="chat_mark_read">Yiwa alama a matsayin an karanta</string>
+    <string name="chat_marked_read">An yiwa alama a matsayin an karanta</string>
+    <string name="chat_search_next">Daidaituwa ta gaba</string>
+    <string name="chat_search_prev">Daidaituwa ta baya</string>
+    <string name="chat_settings_general_desc">Daidaita saitunan taɗi</string>
+    <string name="chat_settings_id">ID na taɗi</string>
+    <string name="chat_settings_members_desc">Jerin mutane a wannan taɗi</string>
 </resources>

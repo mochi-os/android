@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ファイルを開けませんでした</string>
     <string name="reaction_remove">クリア</string>
     <string name="common_logout_confirm_message">本当にログアウトしますか？アカウントにアクセスするには再度ログインする必要があります。</string>
+    <string name="comment_anonymous">匿名</string>
+    <string name="tags_label">タグ</string>
+    <string name="tags_add">タグを追加</string>
+    <string name="tags_label_field">タグラベル</string>
+    <string name="tags_interest_up">似た投稿をもっと表示</string>
+    <string name="tags_interest_down">似た投稿を減らす</string>
+    <string name="tags_interest_clear">表示しない</string>
+    <string name="tags_none">タグなし</string>
+    <string name="tags_delete">タグを削除</string>
 </resources>

@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">ਫਾਈਲ ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕੀ</string>
     <string name="reaction_remove">ਸਾਫ਼ ਕਰੋ</string>
     <string name="common_logout_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਲੌਗ ਆਊਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਆਪਣੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰਨਾ ਪਵੇਗਾ।</string>
+    <string name="comment_anonymous">ਅਣਜਾਣ</string>
+    <string name="tags_label">ਟੈਗ</string>
+    <string name="tags_add">ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="tags_label_field">ਟੈਗ ਲੇਬਲ</string>
+    <string name="tags_interest_up">ਇਸ ਵਰਗਾ ਹੋਰ ਦਿਖਾਓ</string>
+    <string name="tags_interest_down">ਇਸ ਵਰਗਾ ਘੱਟ ਦਿਖਾਓ</string>
+    <string name="tags_interest_clear">ਦਿਖਾਉਣਾ ਬੰਦ ਕਰੋ</string>
+    <string name="tags_none">ਕੋਈ ਟੈਗ ਨਹੀਂ</string>
+    <string name="tags_delete">ਟੈਗ ਹਟਾਓ</string>
 </resources>

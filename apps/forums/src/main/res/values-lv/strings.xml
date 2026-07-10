@@ -221,4 +221,18 @@
         <item quantity="one">%d jauns ieraksts</item>
         <item quantity="other">%d jauni ieraksti</item>
     </plurals>
+    <string name="forums_rss_feed">RSS plūsma</string>
+    <string name="forums_rss_mode_posts">Ieraksti</string>
+    <string name="forums_rss_mode_posts_comments">Ieraksti un komentāri</string>
+    <string name="forums_rss_copied">RSS URL nokopēts starpliktuvē</string>
+    <string name="forums_find_results">Meklēšanas rezultāti</string>
+    <string name="forums_markdown_supported">Markdown atbalstīts</string>
+    <string name="forums_attachment_file">Fails</string>
+    <string name="forums_attachment_remove">Noņemt</string>
+    <string name="forums_attachment_move_up">Pārvietot uz augšu</string>
+    <string name="forums_attachment_move_down">Pārvietot uz leju</string>
+    <string name="forums_post_comments">Komentāri</string>
+    <string name="forums_all_forums">Visi forumi</string>
+    <string name="forums_create_allow_search">Atļaut ikvienam meklēt forumu</string>
+    <string name="forums_rss_clipboard_label">Foruma RSS URL</string>
 </resources>

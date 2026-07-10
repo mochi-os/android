@@ -220,4 +220,18 @@
         <item quantity="one">%d ìfìwéránṣẹ́ tuntun</item>
         <item quantity="other">%d ìfìwéránṣẹ́ tuntun</item>
     </plurals>
+    <string name="forums_rss_feed">Feed RSS</string>
+    <string name="forums_rss_mode_posts">Àwọn ìfìránṣẹ́</string>
+    <string name="forums_rss_mode_posts_comments">Àwọn ìfìránṣẹ́ àti àlàyé</string>
+    <string name="forums_rss_copied">A ti ṣàdàkọ URL RSS sí clipboard</string>
+    <string name="forums_find_results">Àwọn èsì ìwákiri</string>
+    <string name="forums_markdown_supported">Markdown wà ní àtìlẹ́yìn</string>
+    <string name="forums_attachment_file">Fáìlì</string>
+    <string name="forums_attachment_remove">Yọ kúrò</string>
+    <string name="forums_attachment_move_up">Gbe soke</string>
+    <string name="forums_attachment_move_down">Gbe sokale</string>
+    <string name="forums_post_comments">Àwọn àlàyé</string>
+    <string name="forums_all_forums">Gbogbo àwọn àpéjọ</string>
+    <string name="forums_create_allow_search">Gba ẹnikẹ́ni láàyè láti wá àpéjọ</string>
+    <string name="forums_rss_clipboard_label">RSS URL àpéjọ</string>
 </resources>

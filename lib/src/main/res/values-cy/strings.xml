@@ -295,4 +295,13 @@
     <string name="common_file_open_failed">Methwyd agor y ffeil</string>
     <string name="reaction_remove">Clirio</string>
     <string name="common_logout_confirm_message">Ydych chi\'n siŵr eich bod am allgofnodi? Bydd angen i chi fewngofnodi eto i gael mynediad at eich cyfrif.</string>
+    <string name="comment_anonymous">Anhysbys</string>
+    <string name="tags_label">Tagiau</string>
+    <string name="tags_add">Ychwanegu tag</string>
+    <string name="tags_label_field">Label tag</string>
+    <string name="tags_interest_up">Dangos mwy fel hyn</string>
+    <string name="tags_interest_down">Dangos llai fel hyn</string>
+    <string name="tags_interest_clear">Peidio â dangos</string>
+    <string name="tags_none">Dim tagiau</string>
+    <string name="tags_delete">Tynnu tag</string>
 </resources>

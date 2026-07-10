@@ -220,4 +220,18 @@
         <item quantity="one">%d жаңа жазба</item>
         <item quantity="other">%d жаңа жазба</item>
     </plurals>
+    <string name="forums_rss_feed">RSS арнасы</string>
+    <string name="forums_rss_mode_posts">Жазбалар</string>
+    <string name="forums_rss_mode_posts_comments">Жазбалар мен пікірлер</string>
+    <string name="forums_rss_copied">RSS URL алмасу буферіне көшірілді</string>
+    <string name="forums_find_results">Іздеу нәтижелері</string>
+    <string name="forums_markdown_supported">Markdown қолдау көрсетіледі</string>
+    <string name="forums_attachment_file">Файл</string>
+    <string name="forums_attachment_remove">Жою</string>
+    <string name="forums_attachment_move_up">Жоғары жылжыту</string>
+    <string name="forums_attachment_move_down">Төмен жылжыту</string>
+    <string name="forums_post_comments">Пікірлер</string>
+    <string name="forums_all_forums">Барлық форумдар</string>
+    <string name="forums_create_allow_search">Кез келген адамға форумды іздеуге рұқсат ету</string>
+    <string name="forums_rss_clipboard_label">Форумның RSS URL мекенжайы</string>
 </resources>

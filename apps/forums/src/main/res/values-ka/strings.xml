@@ -220,4 +220,18 @@
         <item quantity="one">%d ახალი პოსტი</item>
         <item quantity="other">%d ახალი პოსტი</item>
     </plurals>
+    <string name="forums_rss_feed">RSS ფიდი</string>
+    <string name="forums_rss_mode_posts">პოსტები</string>
+    <string name="forums_rss_mode_posts_comments">პოსტები და კომენტარები</string>
+    <string name="forums_rss_copied">RSS URL დაკოპირდა</string>
+    <string name="forums_find_results">ძიების შედეგები</string>
+    <string name="forums_markdown_supported">Markdown მხარდაჭერილია</string>
+    <string name="forums_attachment_file">ფაილი</string>
+    <string name="forums_attachment_remove">წაშლა</string>
+    <string name="forums_attachment_move_up">აწევა</string>
+    <string name="forums_attachment_move_down">ჩამოწევა</string>
+    <string name="forums_post_comments">კომენტარები</string>
+    <string name="forums_all_forums">ყველა ფორუმი</string>
+    <string name="forums_create_allow_search">ნება დართეთ ნებისმიერს მოძებნოს ფორუმი</string>
+    <string name="forums_rss_clipboard_label">ფორუმის RSS URL</string>
 </resources>

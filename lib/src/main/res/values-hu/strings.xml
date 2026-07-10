@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Nem sikerült megnyitni a fájlt</string>
     <string name="reaction_remove">Törlés</string>
     <string name="common_logout_confirm_message">Biztosan ki szeretne jelentkezni? A fiókja eléréséhez újra be kell majd jelentkeznie.</string>
+    <string name="comment_anonymous">Névtelen</string>
+    <string name="tags_label">Címkék</string>
+    <string name="tags_add">Címke hozzáadása</string>
+    <string name="tags_label_field">Címke felirata</string>
+    <string name="tags_interest_up">Több ilyet mutasson</string>
+    <string name="tags_interest_down">Kevesebb ilyet mutasson</string>
+    <string name="tags_interest_clear">Ne mutassa többé</string>
+    <string name="tags_none">Nincsenek címkék</string>
+    <string name="tags_delete">Címke eltávolítása</string>
 </resources>

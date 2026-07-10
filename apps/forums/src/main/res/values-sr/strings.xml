@@ -221,4 +221,18 @@
         <item quantity="few">%d нове објаве</item>
         <item quantity="other">%d нових објава</item>
     </plurals>
+    <string name="forums_rss_feed">RSS извор</string>
+    <string name="forums_rss_mode_posts">Постови</string>
+    <string name="forums_rss_mode_posts_comments">Постови и коментари</string>
+    <string name="forums_rss_copied">RSS URL копиран у клипборд</string>
+    <string name="forums_find_results">Rezultati pretrage</string>
+    <string name="forums_markdown_supported">Markdown подржан</string>
+    <string name="forums_attachment_file">Datoteka</string>
+    <string name="forums_attachment_remove">Уклони</string>
+    <string name="forums_attachment_move_up">Помери горе</string>
+    <string name="forums_attachment_move_down">Помери доле</string>
+    <string name="forums_post_comments">Коментари</string>
+    <string name="forums_all_forums">Сви форуми</string>
+    <string name="forums_create_allow_search">Дозволи свима да претражују форум</string>
+    <string name="forums_rss_clipboard_label">RSS адреса форума</string>
 </resources>

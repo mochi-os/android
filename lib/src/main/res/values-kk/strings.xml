@@ -295,4 +295,13 @@
     <string name="common_file_open_failed">Файлды ашу мүмкін болмады</string>
     <string name="reaction_remove">Тазалау</string>
     <string name="common_logout_confirm_message">Жүйеден шыққыңыз келетініне сенімдісіз бе? Есептік жазбаңызға кіру үшін қайта кіру қажет болады.</string>
+    <string name="comment_anonymous">Анонимді</string>
+    <string name="tags_label">Тегтер</string>
+    <string name="tags_add">Тег қосу</string>
+    <string name="tags_label_field">Тег атауы</string>
+    <string name="tags_interest_up">Осыған ұқсастарды көбірек көрсету</string>
+    <string name="tags_interest_down">Осыған ұқсастарды азырақ көрсету</string>
+    <string name="tags_interest_clear">Көрсетуді тоқтату</string>
+    <string name="tags_none">Тегтер жоқ</string>
+    <string name="tags_delete">Тегті жою</string>
 </resources>

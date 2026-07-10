@@ -294,4 +294,13 @@
     <string name="common_file_open_failed">Файлыг нээж чадсангүй</string>
     <string name="reaction_remove">Цэвэрлэх</string>
     <string name="common_logout_confirm_message">Та гарахдаа итгэлтэй байна уу? Бүртгэлдээ хандахын тулд дахин нэвтрэх шаардлагатай болно.</string>
+    <string name="comment_anonymous">Нэргүй</string>
+    <string name="tags_label">Тэгүүд</string>
+    <string name="tags_add">Шошго нэмэх</string>
+    <string name="tags_label_field">Шошгоны нэр</string>
+    <string name="tags_interest_up">Иймэрхүү зүйлийг илүү харуулах</string>
+    <string name="tags_interest_down">Иймэрхүү зүйлийг бага харуулах</string>
+    <string name="tags_interest_clear">Харуулахаа болих</string>
+    <string name="tags_none">Шошго алга</string>
+    <string name="tags_delete">Шошго хасах</string>
 </resources>

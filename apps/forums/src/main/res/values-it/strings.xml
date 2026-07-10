@@ -220,4 +220,18 @@
         <item quantity="one">%d nuovo post</item>
         <item quantity="other">%d nuovi post</item>
     </plurals>
+    <string name="forums_rss_feed">Feed RSS</string>
+    <string name="forums_rss_mode_posts">Post</string>
+    <string name="forums_rss_mode_posts_comments">Post e commenti</string>
+    <string name="forums_rss_copied">URL RSS copiato negli appunti</string>
+    <string name="forums_find_results">Risultati della ricerca</string>
+    <string name="forums_markdown_supported">Markdown supportato</string>
+    <string name="forums_attachment_file">File</string>
+    <string name="forums_attachment_remove">Rimuovi</string>
+    <string name="forums_attachment_move_up">Sposta su</string>
+    <string name="forums_attachment_move_down">Sposta giù</string>
+    <string name="forums_post_comments">Commenti</string>
+    <string name="forums_all_forums">Tutti i forum</string>
+    <string name="forums_create_allow_search">Consenti a chiunque di cercare il forum</string>
+    <string name="forums_rss_clipboard_label">URL RSS del forum</string>
 </resources>
