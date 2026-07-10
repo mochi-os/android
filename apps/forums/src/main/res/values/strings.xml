@@ -117,6 +117,7 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_post_tag_remove">Remove tag</string>
     <string name="forums_post_tag_label">Tag</string>
+    <string name="forums_post_comments">Comments</string>
     <string name="forums_tag_interest_up">Boost interest</string>
     <string name="forums_tag_interest_down">Reduce interest</string>
     <string name="forums_tag_interest_remove">Remove interest</string>

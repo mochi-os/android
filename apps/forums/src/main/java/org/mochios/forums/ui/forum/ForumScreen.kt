@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -28,12 +29,14 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
 import android.content.Context
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Forum
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
@@ -47,8 +50,11 @@ import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.EmojiEvents
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.StarOutline
+import androidx.compose.material.icons.outlined.ThumbDown
+import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.outlined.Whatshot
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
@@ -58,6 +64,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -76,6 +83,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
@@ -92,6 +101,7 @@ import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
@@ -105,6 +115,13 @@ import org.mochios.forums.ui.forumlist.CreateForumDialog
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
+
+/**
+ * Width reserved for a post card's action strip. Sized for the full set — save,
+ * tags, like, dislike, comments — so hiding a zero-count entry never shifts the
+ * byline that follows it.
+ */
+private val ACTION_STRIP_WIDTH = 192.dp
 
 /** A post-sort choice as rendered in the forum overflow menu. */
 private data class SortOption(
@@ -538,33 +555,6 @@ private fun ForumContent(
                     forumId = uiState.forum.id,
                 )
             }
-            if (uiState.tags.isNotEmpty()) {
-                androidx.compose.foundation.lazy.LazyRow(
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp),
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                ) {
-                    if (uiState.currentTag != null) {
-                        item(key = "clear") {
-                            androidx.compose.material3.FilterChip(
-                                selected = false,
-                                onClick = { viewModel.setTagFilter(null) },
-                                label = { Text(stringResource(R.string.forums_tag_clear)) },
-                            )
-                        }
-                    }
-                    items(uiState.tags, key = { it.label }) { tag ->
-                        androidx.compose.material3.FilterChip(
-                            selected = uiState.currentTag == tag.label,
-                            onClick = {
-                                viewModel.setTagFilter(
-                                    if (uiState.currentTag == tag.label) null else tag.label
-                                )
-                            },
-                            label = { Text(tag.label) },
-                        )
-                    }
-                }
-            }
             when {
                 uiState.isLoading && uiState.posts.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -610,6 +600,8 @@ private fun ForumContent(
                         items(uiState.posts, key = { it.id }) { post ->
                             PostCard(
                                 post = post,
+                                // Aggregate rows each carry their own forum.
+                                forumId = post.forum.ifBlank { forumIdForCallbacks },
                                 isSaved = savedIds.contains(post.id),
                                 showForumName = isAll,
                                 onClick = {
@@ -617,7 +609,6 @@ private fun ForumContent(
                                     val targetForum = if (isAll) post.forum else forumIdForCallbacks
                                     onPostClick(targetForum, post.id)
                                 },
-                                onVote = { vote -> viewModel.votePost(post.id, vote) },
                                 onToggleSave = { viewModel.toggleSave(post) },
                             )
                         }
@@ -677,16 +668,19 @@ private fun copyToClipboard(context: Context, label: String, value: String) {
 @Composable
 private fun PostCard(
     post: Post,
+    forumId: String,
     isSaved: Boolean,
     onClick: () -> Unit,
-    onVote: (String) -> Unit,
     onToggleSave: () -> Unit,
     showForumName: Boolean = false,
 ) {
     val format = LocalFormat.current
-    Card(
+    OutlinedCard(
         modifier = Modifier.fillMaxWidth().clickable(onClick = onClick),
-        shape = MaterialTheme.shapes.medium
+        shape = MaterialTheme.shapes.medium,
+        // Outline only — the card reads against the screen background rather
+        // than sitting on its own surface tint.
+        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             // In the aggregate "All forums" view, label which forum each post
@@ -738,62 +732,137 @@ private fun PostCard(
             }
             Spacer(Modifier.height(8.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(
-                    onClick = { onVote(if (post.userVote == "up") "" else "up") },
-                    modifier = Modifier.size(32.dp)
+                // The action strip keeps a fixed width whether or not the
+                // zero-count entries render, so every card's byline begins at the
+                // same x. The width fits a full row of five with 3-digit counts.
+                Row(
+                    modifier = Modifier.width(ACTION_STRIP_WIDTH),
+                    verticalAlignment = Alignment.CenterVertically,
                 ) {
+                    // Left to right: save · tags · like · dislike · comments.
+                    // Save toggles in place; every other action opens the post,
+                    // where the vote and tag controls live. A zero-count entry
+                    // drops out entirely.
+                    val saveLabel = stringResource(
+                        if (isSaved) R.string.forums_saved_remove else R.string.forums_saved_save
+                    )
                     Icon(
-                        Icons.Default.ThumbUp,
+                        if (isSaved) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder,
+                        contentDescription = saveLabel,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .clickable(onClick = onToggleSave)
+                            .padding(horizontal = 4.dp, vertical = 4.dp)
+                            .size(18.dp),
+                    )
+                    CountedAction(
+                        icon = Icons.Filled.LocalOffer,
+                        contentDescription = stringResource(R.string.forums_post_tag_label),
+                        count = post.tags.size,
+                        onClick = onClick,
+                    )
+                    // `user_vote` picks the filled glyph for the viewer's own
+                    // vote; the count is the post's tally either way.
+                    CountedAction(
+                        icon = if (post.userVote == "up") Icons.Filled.ThumbUp
+                               else Icons.Outlined.ThumbUp,
                         contentDescription = stringResource(R.string.forums_post_vote_up),
-                        tint = if (post.userVote == "up") MaterialTheme.colorScheme.primary
-                              else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(18.dp)
+                        count = post.up,
+                        onClick = onClick,
                     )
-                }
-                Text(LocalFormat.current.formatNumber(post.up - post.down), style = MaterialTheme.typography.labelMedium)
-                IconButton(
-                    onClick = { onVote(if (post.userVote == "down") "" else "down") },
-                    modifier = Modifier.size(32.dp)
-                ) {
-                    Icon(
-                        Icons.Default.ThumbDown,
+                    CountedAction(
+                        icon = if (post.userVote == "down") Icons.Filled.ThumbDown
+                               else Icons.Outlined.ThumbDown,
                         contentDescription = stringResource(R.string.forums_post_vote_down),
-                        tint = if (post.userVote == "down") MaterialTheme.colorScheme.error
-                              else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(18.dp)
+                        count = post.down,
+                        onClick = onClick,
+                    )
+                    CountedAction(
+                        icon = Icons.Filled.ChatBubble,
+                        contentDescription = stringResource(R.string.forums_post_comments),
+                        count = post.comments,
+                        onClick = onClick,
                     )
                 }
-                Spacer(Modifier.width(16.dp))
-                Text(
-                    text = post.name.ifBlank { stringResource(R.string.forums_post_default_author) },
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Spacer(Modifier.width(8.dp))
-                Text(
-                    text = format.formatRelativeTime(post.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Spacer(Modifier.weight(1f))
-                Text(
-                    text = "${post.comments}",
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                IconButton(onClick = onToggleSave, modifier = Modifier.size(32.dp)) {
-                    Icon(
-                        if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
-                        contentDescription = stringResource(
-                            if (isSaved) R.string.forums_saved_remove else R.string.forums_saved_save
-                        ),
-                        tint = if (isSaved) MaterialTheme.colorScheme.primary
-                              else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(18.dp)
+
+                // Byline, right of the strip: avatar · name · time.
+                Row(
+                    modifier = Modifier.weight(1f),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    val authorName = post.name.ifBlank {
+                        stringResource(R.string.forums_post_default_author)
+                    }
+                    EntityAvatar(
+                        name = authorName,
+                        // Served per post so remote authors resolve without a
+                        // separate member lookup; falls back to seeded initials.
+                        src = "/forums/$forumId/-/${post.id}/asset/avatar",
+                        seed = post.member.ifEmpty { authorName },
+                        size = 20.dp,
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text(
+                        text = authorName,
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f, fill = false),
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text = format.formatRelativeTime(post.created),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
                     )
                 }
             }
         }
+    }
+}
+
+/**
+ * An action icon with its count beside it, using the feeds post-card glyphs and
+ * its borderless tap target. Hidden entirely while the count is zero, so a card
+ * only shows what the post actually has — the save control is exempt and lives
+ * at the head of the strip.
+ *
+ * Every entry carries the muted variant colour: the card highlights the viewer's
+ * own vote by filling the glyph, not by tinting it.
+ */
+@Composable
+private fun CountedAction(
+    icon: ImageVector,
+    contentDescription: String,
+    count: Int,
+    onClick: (() -> Unit)? = null,
+) {
+    if (count == 0) return
+    val clickable = if (onClick != null) {
+        Modifier.clip(RoundedCornerShape(8.dp)).clickable(onClick = onClick)
+    } else {
+        Modifier
+    }
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = clickable.padding(horizontal = 4.dp, vertical = 4.dp),
+    ) {
+        Icon(
+            icon,
+            contentDescription = contentDescription,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.size(18.dp),
+        )
+        Spacer(Modifier.width(3.dp))
+        Text(
+            text = LocalFormat.current.formatNumber(count),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+        )
     }
 }
 
