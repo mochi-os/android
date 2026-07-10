@@ -9,8 +9,11 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -41,6 +44,24 @@ data class ForumUiState(
     val currentTag: String? = null,
 )
 
+/**
+ * One-shot side effects emitted by [ForumViewModel]. Navigation stays on the
+ * composable side, so this channel only carries results the ViewModel produces
+ * asynchronously — an RSS URL ready for the clipboard, a finished unsubscribe,
+ * and transient errors.
+ */
+sealed class ForumEvent {
+
+    /** Copy this URL to the clipboard and confirm with a snackbar. */
+    data class CopyRssUrl(val url: String) : ForumEvent()
+
+    /** The user is no longer subscribed; the screen navigates away. */
+    data object Unsubscribed : ForumEvent()
+
+    /** Show a transient error snackbar. */
+    data class ShowError(val error: MochiError) : ForumEvent()
+}
+
 @HiltViewModel
 class ForumViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -68,6 +89,10 @@ class ForumViewModel @Inject constructor(
      *  than injected into the list while the user is reading. */
     private val _newPostsCount = MutableStateFlow(0)
     val newPostsCount: StateFlow<Int> = _newPostsCount.asStateFlow()
+
+    /** One-shot side effects for the screen — see [ForumEvent]. */
+    private val _events = MutableSharedFlow<ForumEvent>()
+    val events: SharedFlow<ForumEvent> = _events.asSharedFlow()
 
     private var subscriptionId: String? = null
 
@@ -300,6 +325,45 @@ class ForumViewModel @Inject constructor(
                 savedRepository.toggle(post)
             } catch (_: Exception) {
                 // SavedRepository already reverted the optimistic mirror update.
+            }
+        }
+    }
+
+    /**
+     * Mint an RSS token in [mode] (`"posts"` for posts only, `"all"` for posts
+     * and comments) and emit the subscription URL for the screen to place on
+     * the clipboard. The "All forums" aggregate tokenises the `*` entity and
+     * uses the class-level feed; a single forum uses its own. The server
+     * returns the absolute URL; older servers only return the token, so fall
+     * back to assembling it against the bound server origin.
+     */
+    fun copyRssUrl(mode: String) {
+        if (forumId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                val entity = if (isAll) "*" else forumId
+                val response = repository.getRssToken(entity, mode)
+                val url = response.url.ifBlank {
+                    val serverUrl = sessionManager.getServerUrlBlocking()
+                    val path = if (isAll) "forums/-/rss" else "forums/$forumId/-/rss"
+                    "$serverUrl/$path?token=${response.token}"
+                }
+                _events.emit(ForumEvent.CopyRssUrl(url))
+            } catch (e: Exception) {
+                _events.emit(ForumEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
+
+    /** Unsubscribe from this forum, then signal the screen to navigate away. */
+    fun unsubscribe() {
+        if (forumId.isBlank() || isAll) return
+        viewModelScope.launch {
+            try {
+                repository.unsubscribe(forumId)
+                _events.emit(ForumEvent.Unsubscribed)
+            } catch (e: Exception) {
+                _events.emit(ForumEvent.ShowError(e.toMochiError()))
             }
         }
     }

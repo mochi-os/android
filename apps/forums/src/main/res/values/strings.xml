@@ -29,6 +29,13 @@
     <string name="forums_list_unsubscribe_title">Unsubscribe</string>
     <string name="forums_list_unsubscribe_message">Are you sure you want to unsubscribe from this forum?</string>
 
+    <!-- Forum overflow menu: RSS feed submenu and unsubscribe -->
+    <string name="forums_rss_feed">RSS feed</string>
+    <string name="forums_rss_mode_posts">Posts</string>
+    <string name="forums_rss_mode_posts_comments">Posts and comments</string>
+    <string name="forums_rss_copied">RSS URL copied to clipboard</string>
+    <string name="forums_rss_clipboard_label">Forum RSS URL</string>
+
     <!-- Create forum -->
     <string name="forums_create_title">Create forum</string>
     <string name="forums_create_name">Name</string>

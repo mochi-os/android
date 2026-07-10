@@ -5,6 +5,8 @@
 
 package org.mochios.forums.ui.forum
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -22,6 +24,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
 import android.content.Context
 import androidx.compose.material.icons.filled.Add
@@ -32,7 +35,9 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
+import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
@@ -46,10 +51,13 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -78,6 +86,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -198,6 +207,12 @@ fun ForumScreen(
                 onNewPost = onNewPost,
                 onSettings = onSettings,
                 onOpenNotifications = onOpenNotifications,
+                onUnsubscribed = {
+                    // The forum just left the user's list — drop it from the
+                    // drawer and fall back to the aggregate view.
+                    listViewModel.load()
+                    onSelectForum(LastViewedStore.ALL)
+                },
             )
         }
     }
@@ -242,16 +257,39 @@ private fun ForumContent(
     onNewPost: (String) -> Unit,
     onSettings: (String) -> Unit,
     onOpenNotifications: () -> Unit,
+    onUnsubscribed: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
 ) {
+    val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
     val isAll = viewModel.isAll
     var showSortMenu by remember { mutableStateOf(false) }
+    var showOverflowMenu by remember { mutableStateOf(false) }
+    var showRssSubmenu by remember { mutableStateOf(false) }
+    var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
 
+    val snackbar = remember { SnackbarHostState() }
+    val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)
+    val rssCopiedMessage = stringResource(R.string.forums_rss_copied)
+
+    LaunchedEffect(viewModel) {
+        viewModel.events.collect { event ->
+            when (event) {
+                is ForumEvent.CopyRssUrl -> {
+                    copyToClipboard(context, rssClipboardLabel, event.url)
+                    snackbar.showSnackbar(rssCopiedMessage)
+                }
+                is ForumEvent.Unsubscribed -> onUnsubscribed()
+                is ForumEvent.ShowError -> snackbar.showSnackbar(event.error.userMessage())
+            }
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = {
@@ -305,6 +343,104 @@ private fun ForumContent(
                                 Icons.Default.Settings,
                                 contentDescription = stringResource(R.string.forums_settings)
                             )
+                        }
+                    }
+                    // The aggregate view exports a class-level RSS feed but has
+                    // no single forum to unsubscribe from.
+                    if (isAll || uiState.forum.id.isNotEmpty()) {
+                        Box {
+                            IconButton(onClick = { showOverflowMenu = true }) {
+                                Icon(
+                                    Icons.Default.MoreVert,
+                                    contentDescription = stringResource(
+                                        MochiR.string.common_more_options
+                                    )
+                                )
+                            }
+                            DropdownMenu(
+                                expanded = showOverflowMenu,
+                                onDismissRequest = {
+                                    showOverflowMenu = false
+                                    showRssSubmenu = false
+                                }
+                            ) {
+                                if (showRssSubmenu) {
+                                    // Header row taps back to the main menu.
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.forums_rss_feed)) },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.AutoMirrored.Filled.ArrowBack,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        onClick = { showRssSubmenu = false }
+                                    )
+                                    HorizontalDivider()
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(stringResource(R.string.forums_rss_mode_posts))
+                                        },
+                                        onClick = {
+                                            viewModel.copyRssUrl("posts")
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        }
+                                    )
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(
+                                                stringResource(
+                                                    R.string.forums_rss_mode_posts_comments
+                                                )
+                                            )
+                                        },
+                                        onClick = {
+                                            viewModel.copyRssUrl("all")
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        }
+                                    )
+                                } else {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.forums_rss_feed)) },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.Default.RssFeed,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        trailingIcon = {
+                                            Icon(
+                                                Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        onClick = { showRssSubmenu = true }
+                                    )
+                                    if (!isAll) {
+                                        DropdownMenuItem(
+                                            text = {
+                                                Text(
+                                                    stringResource(
+                                                        R.string.forums_list_unsubscribe
+                                                    )
+                                                )
+                                            },
+                                            leadingIcon = {
+                                                Icon(
+                                                    Icons.AutoMirrored.Filled.Logout,
+                                                    contentDescription = null
+                                                )
+                                            },
+                                            onClick = {
+                                                showOverflowMenu = false
+                                                showUnsubscribeConfirm = true
+                                            }
+                                        )
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -444,6 +580,26 @@ private fun ForumContent(
           }
         }
     }
+
+    if (showUnsubscribeConfirm) {
+        ConfirmDialog(
+            title = stringResource(R.string.forums_list_unsubscribe_title),
+            message = stringResource(R.string.forums_list_unsubscribe_message),
+            confirmLabel = stringResource(R.string.forums_list_unsubscribe),
+            dismissLabel = stringResource(MochiR.string.common_cancel),
+            isDestructive = true,
+            onConfirm = {
+                showUnsubscribeConfirm = false
+                viewModel.unsubscribe()
+            },
+            onDismiss = { showUnsubscribeConfirm = false },
+        )
+    }
+}
+
+private fun copyToClipboard(context: Context, label: String, value: String) {
+    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+    clipboard.setPrimaryClip(ClipData.newPlainText(label, value))
 }
 
 @Composable
