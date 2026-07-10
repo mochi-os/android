@@ -273,11 +273,24 @@ class ForumViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Persist the chosen [sort] server-side, then reload with it. The aggregate
+     * has no forum entity of its own, so it writes the class-level default
+     * (`-/sort/set`) that the `-/list` endpoint reads back; a single forum
+     * writes its own override. Persisting either way is what keeps the choice
+     * from resetting when the user switches forums in the drawer, since each
+     * forum gets a fresh ViewModel that re-reads the sort from the server.
+     */
     fun setSort(sort: String) {
-        // The aggregate has no per-forum sort to persist; just reload sorted.
-        if (!isAll) {
-            viewModelScope.launch {
-                try { repository.setForumSort(forumId, sort) } catch (_: Exception) { }
+        viewModelScope.launch {
+            try {
+                if (isAll) {
+                    repository.setDefaultSort(sort)
+                } else {
+                    repository.setForumSort(forumId, sort)
+                }
+            } catch (_: Exception) {
+                // A failed persist still leaves the list sorted for this session.
             }
         }
         load(sort)

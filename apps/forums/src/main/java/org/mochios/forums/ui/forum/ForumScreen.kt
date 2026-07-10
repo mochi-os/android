@@ -28,6 +28,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
 import android.content.Context
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Forum
 import androidx.compose.material.icons.filled.Info
@@ -41,9 +42,12 @@ import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.outlined.EmojiEvents
+import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.outlined.StarOutline
+import androidx.compose.material.icons.outlined.Whatshot
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -73,6 +77,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -100,6 +105,20 @@ import org.mochios.forums.model.Post
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
+
+/** A post-sort choice as rendered in the forum overflow menu. */
+private data class SortOption(
+    val key: String,
+    val labelRes: Int,
+    val icon: ImageVector,
+)
+
+private val SORT_OPTIONS = listOf(
+    SortOption("interests", R.string.forums_sort_interests, Icons.Outlined.StarOutline),
+    SortOption("new", R.string.forums_sort_new, Icons.Outlined.Schedule),
+    SortOption("hot", R.string.forums_sort_hot, Icons.Outlined.Whatshot),
+    SortOption("top", R.string.forums_sort_top, Icons.Outlined.EmojiEvents),
+)
 
 /**
  * Forum detail screen wrapped in a [FeatureListDrawer]. The drawer holds
@@ -265,7 +284,6 @@ private fun ForumContent(
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
     val isAll = viewModel.isAll
-    var showSortMenu by remember { mutableStateOf(false) }
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showRssSubmenu by remember { mutableStateOf(false) }
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
@@ -312,98 +330,121 @@ private fun ForumContent(
                     }
                 },
                 actions = {
+                    // Both actions render unconditionally so the row keeps its
+                    // width while the forum loads — the rows that depend on the
+                    // response are gated inside the menu instead.
                     NotificationBell(onClick = onOpenNotifications)
                     Box {
-                        IconButton(onClick = { showSortMenu = true }) {
-                            Icon(Icons.Default.Sort, contentDescription = stringResource(R.string.forums_sort_label))
-                        }
-                        DropdownMenu(
-                            expanded = showSortMenu,
-                            onDismissRequest = { showSortMenu = false }
-                        ) {
-                            listOf(
-                                "new" to R.string.forums_sort_new,
-                                "hot" to R.string.forums_sort_hot,
-                                "top" to R.string.forums_sort_top,
-                                "interests" to R.string.forums_sort_interests
-                            ).forEach { (key, labelRes) ->
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(labelRes)) },
-                                    onClick = {
-                                        showSortMenu = false
-                                        viewModel.setSort(key)
-                                    }
-                                )
-                            }
-                        }
-                    }
-                    if (uiState.canManage && uiState.forum.id.isNotEmpty()) {
-                        IconButton(onClick = { onSettings(forumIdForCallbacks) }) {
+                        IconButton(onClick = { showOverflowMenu = true }) {
                             Icon(
-                                Icons.Default.Settings,
-                                contentDescription = stringResource(R.string.forums_settings)
+                                Icons.Default.MoreVert,
+                                contentDescription = stringResource(
+                                    MochiR.string.common_more_options
+                                )
                             )
                         }
-                    }
-                    // The aggregate view exports a class-level RSS feed but has
-                    // no single forum to unsubscribe from.
-                    if (isAll || uiState.forum.id.isNotEmpty()) {
-                        Box {
-                            IconButton(onClick = { showOverflowMenu = true }) {
-                                Icon(
-                                    Icons.Default.MoreVert,
-                                    contentDescription = stringResource(
-                                        MochiR.string.common_more_options
-                                    )
-                                )
+                        DropdownMenu(
+                            expanded = showOverflowMenu,
+                            onDismissRequest = {
+                                showOverflowMenu = false
+                                showRssSubmenu = false
                             }
-                            DropdownMenu(
-                                expanded = showOverflowMenu,
-                                onDismissRequest = {
-                                    showOverflowMenu = false
-                                    showRssSubmenu = false
-                                }
-                            ) {
-                                if (showRssSubmenu) {
-                                    // Header row taps back to the main menu.
+                        ) {
+                            if (showRssSubmenu) {
+                                // Header row taps back to the main menu.
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_rss_feed)) },
+                                    leadingIcon = {
+                                        Icon(
+                                            Icons.AutoMirrored.Filled.ArrowBack,
+                                            contentDescription = null
+                                        )
+                                    },
+                                    onClick = { showRssSubmenu = false }
+                                )
+                                HorizontalDivider()
+                                DropdownMenuItem(
+                                    text = {
+                                        Text(stringResource(R.string.forums_rss_mode_posts))
+                                    },
+                                    onClick = {
+                                        viewModel.copyRssUrl("posts")
+                                        showRssSubmenu = false
+                                        showOverflowMenu = false
+                                    }
+                                )
+                                DropdownMenuItem(
+                                    text = {
+                                        Text(
+                                            stringResource(
+                                                R.string.forums_rss_mode_posts_comments
+                                            )
+                                        )
+                                    },
+                                    onClick = {
+                                        viewModel.copyRssUrl("all")
+                                        showRssSubmenu = false
+                                        showOverflowMenu = false
+                                    }
+                                )
+                            } else {
+                                // Sort options listed inline, each with its own
+                                // icon and a trailing check on the active one.
+                                Text(
+                                    text = stringResource(R.string.forums_sort_label),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(
+                                        start = 16.dp, top = 8.dp, bottom = 4.dp
+                                    ),
+                                )
+                                SORT_OPTIONS.forEach { option ->
                                     DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.forums_rss_feed)) },
+                                        text = { Text(stringResource(option.labelRes)) },
+                                        leadingIcon = {
+                                            Icon(option.icon, contentDescription = null)
+                                        },
+                                        trailingIcon = {
+                                            if (uiState.sort == option.key) {
+                                                Icon(
+                                                    Icons.Default.Check,
+                                                    contentDescription = null,
+                                                )
+                                            }
+                                        },
+                                        onClick = {
+                                            showOverflowMenu = false
+                                            viewModel.setSort(option.key)
+                                        }
+                                    )
+                                }
+
+                                HorizontalDivider()
+
+                                if (uiState.canManage && uiState.forum.id.isNotEmpty()) {
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(stringResource(R.string.forums_settings))
+                                        },
                                         leadingIcon = {
                                             Icon(
-                                                Icons.AutoMirrored.Filled.ArrowBack,
+                                                Icons.Default.Settings,
                                                 contentDescription = null
                                             )
                                         },
-                                        onClick = { showRssSubmenu = false }
-                                    )
-                                    HorizontalDivider()
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(R.string.forums_rss_mode_posts))
-                                        },
                                         onClick = {
-                                            viewModel.copyRssUrl("posts")
-                                            showRssSubmenu = false
                                             showOverflowMenu = false
+                                            onSettings(forumIdForCallbacks)
                                         }
                                     )
+                                }
+                                // The aggregate exports a class-level RSS feed
+                                // but has no single forum to unsubscribe from.
+                                if (isAll || uiState.forum.id.isNotEmpty()) {
                                     DropdownMenuItem(
                                         text = {
-                                            Text(
-                                                stringResource(
-                                                    R.string.forums_rss_mode_posts_comments
-                                                )
-                                            )
+                                            Text(stringResource(R.string.forums_rss_feed))
                                         },
-                                        onClick = {
-                                            viewModel.copyRssUrl("all")
-                                            showRssSubmenu = false
-                                            showOverflowMenu = false
-                                        }
-                                    )
-                                } else {
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.forums_rss_feed)) },
                                         leadingIcon = {
                                             Icon(
                                                 Icons.Default.RssFeed,
@@ -418,27 +459,27 @@ private fun ForumContent(
                                         },
                                         onClick = { showRssSubmenu = true }
                                     )
-                                    if (!isAll) {
-                                        DropdownMenuItem(
-                                            text = {
-                                                Text(
-                                                    stringResource(
-                                                        R.string.forums_list_unsubscribe
-                                                    )
+                                }
+                                if (!isAll && uiState.forum.id.isNotEmpty()) {
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(
+                                                stringResource(
+                                                    R.string.forums_list_unsubscribe
                                                 )
-                                            },
-                                            leadingIcon = {
-                                                Icon(
-                                                    Icons.AutoMirrored.Filled.Logout,
-                                                    contentDescription = null
-                                                )
-                                            },
-                                            onClick = {
-                                                showOverflowMenu = false
-                                                showUnsubscribeConfirm = true
-                                            }
-                                        )
-                                    }
+                                            )
+                                        },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.AutoMirrored.Filled.Logout,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        onClick = {
+                                            showOverflowMenu = false
+                                            showUnsubscribeConfirm = true
+                                        }
+                                    )
                                 }
                             }
                         }
