@@ -18,8 +18,8 @@ import org.mochios.android.ui.components.StepUpDialog
 
 /**
  * Reusable step-up re-authentication plumbing, lifted from [LoginViewModel] so
- * the token / replication / system-pair screens can gate a sensitive mutation
- * on re-verification without each copying the dialog wiring.
+ * the token / account screens can gate a sensitive mutation on re-verification
+ * without each copying the dialog wiring.
  *
  * Embed one in a ViewModel, call [request] from a gated action (the run block
  * receives the proof token once the user re-verifies), render [StepUpHost] once

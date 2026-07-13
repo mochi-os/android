@@ -24,11 +24,9 @@ import org.mochios.settings.ui.login.LoginScreen
 import org.mochios.settings.ui.notificationprefs.NotificationPrefsScreen
 import org.mochios.settings.ui.notifications.NotificationsScreen
 import org.mochios.settings.ui.preferences.UserSettingsScreen
-import org.mochios.settings.ui.replication.ReplicationScreen
 import org.mochios.settings.ui.sessions.SessionsScreen
 import org.mochios.settings.ui.tokens.TokensScreen
 import org.mochios.settings.ui.systemdocuments.SystemDocumentsScreen
-import org.mochios.settings.ui.systemreplication.SystemReplicationScreen
 import org.mochios.settings.ui.systemsettings.SystemSettingsScreen
 import org.mochios.settings.ui.systemstatus.SystemStatusScreen
 import org.mochios.settings.ui.systemusers.SystemUsersScreen
@@ -43,8 +41,6 @@ object SettingsApp {
     const val NOTIFICATION_PREFS = "settings/notification-prefs"
     const val SESSIONS = "settings/sessions"
     const val TOKENS = "settings/tokens"
-    const val REPLICATION = "settings/replication"
-    const val SYSTEM_REPLICATION = "settings/system/replication"
     const val SYSTEM_SETTINGS = "settings/system/settings"
     const val SYSTEM_STATUS = "settings/system/status"
     const val SYSTEM_USERS = "settings/system/users"
@@ -76,8 +72,6 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenNotificationPrefs = { navController.navigate(SettingsApp.NOTIFICATION_PREFS) },
             onOpenSessions = { navController.navigate(SettingsApp.SESSIONS) },
             onOpenTokens = { navController.navigate(SettingsApp.TOKENS) },
-            onOpenReplication = { navController.navigate(SettingsApp.REPLICATION) },
-            onOpenSystemReplication = { navController.navigate(SettingsApp.SYSTEM_REPLICATION) },
             onOpenSystemSettings = { navController.navigate(SettingsApp.SYSTEM_SETTINGS) },
             onOpenSystemStatus = { navController.navigate(SettingsApp.SYSTEM_STATUS) },
             onOpenSystemUsers = { navController.navigate(SettingsApp.SYSTEM_USERS) },
@@ -115,12 +109,6 @@ fun NavGraphBuilder.settingsNavGraph(
     }
     composable(SettingsApp.NOTIFICATION_PREFS) {
         NotificationPrefsScreen(onBack = { navController.popBackStack() })
-    }
-    composable(SettingsApp.REPLICATION) {
-        ReplicationScreen(onBack = { navController.popBackStack() }, onLeft = onLogout)
-    }
-    composable(SettingsApp.SYSTEM_REPLICATION) {
-        SystemReplicationScreen(onBack = { navController.popBackStack() })
     }
     composable(SettingsApp.SYSTEM_SETTINGS) {
         SystemSettingsScreen(onBack = { navController.popBackStack() })

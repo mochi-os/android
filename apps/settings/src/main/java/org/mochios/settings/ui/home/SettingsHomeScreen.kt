@@ -20,7 +20,6 @@ import androidx.compose.material.icons.filled.Article
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Devices
 import androidx.compose.material.icons.filled.Gavel
-import androidx.compose.material.icons.filled.Hub
 import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Lock
@@ -32,7 +31,6 @@ import androidx.compose.material.icons.filled.PrivacyTip
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.SettingsApplications
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.Sync
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -64,8 +62,6 @@ fun SettingsHomeScreen(
     onOpenNotificationPrefs: () -> Unit,
     onOpenSessions: () -> Unit,
     onOpenTokens: () -> Unit,
-    onOpenReplication: () -> Unit,
-    onOpenSystemReplication: () -> Unit,
     onOpenSystemSettings: () -> Unit,
     onOpenSystemStatus: () -> Unit,
     onOpenSystemUsers: () -> Unit,
@@ -200,15 +196,6 @@ fun SettingsHomeScreen(
             }
             item {
                 ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenReplication),
-                    headlineContent = { Text(stringResource(R.string.settings_home_replication)) },
-                    leadingContent = { Icon(Icons.Default.Sync, contentDescription = null) },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
-                HorizontalDivider()
-            }
-            item {
-                ListItem(
                     modifier = Modifier.clickable(onClick = onOpenInterests),
                     headlineContent = { Text(stringResource(R.string.settings_home_interests)) },
                     leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
@@ -217,7 +204,7 @@ fun SettingsHomeScreen(
                 HorizontalDivider()
             }
             // System group: administrator-only (Status / Users / Settings /
-            // Replication / Documents), matching web's admin-gated sidebar.
+            // Documents), matching web's admin-gated sidebar.
             if (isAdmin) {
             item {
                 ListItem(
@@ -269,15 +256,6 @@ fun SettingsHomeScreen(
                             contentDescription = null
                         )
                     },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
-                HorizontalDivider()
-            }
-            item {
-                ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenSystemReplication),
-                    headlineContent = { Text(stringResource(R.string.settings_home_system_replication)) },
-                    leadingContent = { Icon(Icons.Default.Hub, contentDescription = null) },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
