@@ -662,11 +662,28 @@ fun FeedScreen(
                                             showOverflowMenu = false
                                         }
                                     )
-                                    // Per-feed actions are hidden on the "All
-                                    // feeds" aggregate, which isn't a real feed.
                                     // Sources are only editable by managers, so
-                                    // hide the entry for plain subscribers.
-                                    if (!viewModel.isAllFeeds && permissions.manage) {
+                                    // hide the entry for plain subscribers. In the
+                                    // "All feeds" aggregate ("__all__" isn't a real
+                                    // feed) route through the feed of the post
+                                    // currently in view instead — the standard
+                                    // aggregate per-post routing — shown when the
+                                    // user owns that feed.
+                                    val sourcesPost = posts.getOrNull(pagerState.currentPage)
+                                    val sourcesFeedId = if (viewModel.isAllFeeds) {
+                                        sourcesPost?.let { it.feedFingerprint.ifEmpty { it.feed } } ?: ""
+                                    } else {
+                                        viewModel.feedId
+                                    }
+                                    val sourcesAllowed = if (viewModel.isAllFeeds) {
+                                        drawerFeeds.any { f ->
+                                            f.owner == 1 && (f.id == sourcesPost?.feed ||
+                                                (f.fingerprint.isNotEmpty() && f.fingerprint == sourcesPost?.feedFingerprint))
+                                        }
+                                    } else {
+                                        permissions.manage
+                                    }
+                                    if (sourcesAllowed && sourcesFeedId.isNotEmpty()) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_tab_sources)) },
                                             leadingIcon = {
@@ -676,12 +693,16 @@ fun FeedScreen(
                                                 // Open the Sources list scrolled to the
                                                 // source of the post currently in view.
                                                 onNavigateToSources(
-                                                    viewModel.feedId,
-                                                    posts.getOrNull(pagerState.currentPage)?.source?.url,
+                                                    sourcesFeedId,
+                                                    sourcesPost?.source?.url,
                                                 )
                                                 showOverflowMenu = false
                                             }
                                         )
+                                    }
+                                    // Per-feed settings stay hidden on the
+                                    // aggregate, which has no feed to configure.
+                                    if (!viewModel.isAllFeeds && permissions.manage) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_settings)) },
                                             leadingIcon = {

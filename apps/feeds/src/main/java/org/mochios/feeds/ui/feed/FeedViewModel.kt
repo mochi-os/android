@@ -34,6 +34,7 @@ import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.PostListResult
 import org.mochios.feeds.repository.SavedRepository
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 
 private const val PREFS = "mochi_feeds"
@@ -95,6 +96,11 @@ class FeedViewModel @Inject constructor(
      *  than injected into the pager while the user is reading. */
     private val _newPostsCount = MutableStateFlow(0)
     val newPostsCount: StateFlow<Int> = _newPostsCount.asStateFlow()
+
+    /** Post ids the pill has already counted, so repeated post/create events
+     *  for the same post count once. Concurrent set: written from the OkHttp
+     *  websocket thread, cleared from viewModelScope. */
+    private val pendingPosts = ConcurrentHashMap.newKeySet<String>()
 
     private val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 
@@ -434,6 +440,10 @@ class FeedViewModel @Inject constructor(
 
                     loadTags()
                 }
+                // The fresh list incorporates any queued posts — a pill left
+                // up would just re-show posts the user now has.
+                pendingPosts.clear()
+                _newPostsCount.value = 0
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -980,8 +990,22 @@ class FeedViewModel @Inject constructor(
             when (event.type) {
                 // A brand-new post is queued behind the "new posts" pill so the
                 // pager doesn't shift under the reader; tapping it refreshes.
+                // The event can arrive for a post the list already shows: RSS
+                // ingestion inserts the row immediately but defers post/create
+                // until AI tagging completes, so a load in between sees the
+                // post before its event. Count only posts genuinely absent,
+                // once each.
                 "post/create" -> {
-                    _newPostsCount.value += 1
+                    val postId = event.post
+                    if (postId.isNullOrEmpty()) {
+                        // Batch form (no post id; sent when AI tagging is off)
+                        // — nothing to reconcile against, count it.
+                        _newPostsCount.value += 1
+                    } else if (pendingPosts.add(postId) &&
+                        _posts.value.none { it.id == postId }
+                    ) {
+                        _newPostsCount.value += 1
+                    }
                 }
                 "post/edit", "post/delete",
                 "comment/create", "comment/edit", "comment/delete",
@@ -1005,6 +1029,7 @@ class FeedViewModel @Inject constructor(
             _hasMore.value = result.hasMore
             nextCursor = result.nextCursor
             // The fresh list incorporates any queued posts — clear the pill.
+            pendingPosts.clear()
             _newPostsCount.value = 0
         } catch (_: Exception) {
             // Silent failure
