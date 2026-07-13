@@ -160,6 +160,7 @@
     <string name="market_editor_title">തലക്കെട്ട്</string>
     <string name="market_editor_title_edit">ലിസ്റ്റിംഗ് എഡിറ്റ് ചെയ്യുക</string>
     <string name="market_editor_title_new">പുതിയ പട്ടിക</string>
+    <string name="market_editor_title_required">ഫോട്ടോകളോ ഫയലുകളോ ചേർക്കുന്നതിനു മുമ്പ് ഒരു ശീർഷകം നൽകുക</string>
     <string name="market_editor_type">പട്ടിക തരം</string>
     <string name="market_editor_type_digital">ഡിജിറ്റൽ</string>
     <string name="market_editor_type_physical">ഫിസിക്കൽ</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ഇപ്പോൾ വാങ്ങുക</string>
     <string name="market_section_recently_viewed">ശുപാർശകൾ</string>
     <string name="market_recently_viewed_clear">എല്ലാം മായ്ക്കുക</string>
+    <string name="market_listings_create">സൃഷ്ടിക്കുക</string>
 </resources>

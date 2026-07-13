@@ -160,6 +160,7 @@
     <string name="market_editor_title">Sutinchay</string>
     <string name="market_editor_title_edit">Qhatuyta hukchay</string>
     <string name="market_editor_title_new">Musuq willay</string>
+    <string name="market_editor_title_required">Fotokunata utaq archivokunata yapanaykipaq ñawpaqta huk titulota churay</string>
     <string name="market_editor_type">Willaypa rikch\'aynin</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Físico</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Kunan rantiy</string>
     <string name="market_section_recently_viewed">Yaqa pacha qhawasqa</string>
     <string name="market_recently_viewed_clear">Llapan pichay</string>
+    <string name="market_listings_create">Kamariy</string>
 </resources>

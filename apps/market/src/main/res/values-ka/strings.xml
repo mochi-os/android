@@ -162,6 +162,7 @@
     <string name="market_editor_title">სათაური</string>
     <string name="market_editor_title_edit">ჩამონათვალის რედაქტირება</string>
     <string name="market_editor_title_new">ახალი განცხადება</string>
+    <string name="market_editor_title_required">შეიყვანეთ სათაური ფოტოების ან ფაილების დამატებამდე</string>
     <string name="market_editor_type">განცხადების ტიპი</string>
     <string name="market_editor_type_digital">ციფრული</string>
     <string name="market_editor_type_physical">ფიზიკური</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ყიდე ახლავე</string>
     <string name="market_section_recently_viewed">ბოლო ნახვები</string>
     <string name="market_recently_viewed_clear">ყველაფრის გასუფთავება</string>
+    <string name="market_listings_create">შექმნა</string>
 </resources>

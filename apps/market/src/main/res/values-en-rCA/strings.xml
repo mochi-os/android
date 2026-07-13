@@ -380,6 +380,7 @@
     <string name="market_editor_tags_field">Tags (comma separated)</string>
     <string name="market_editor_title_edit">Edit listing</string>
     <string name="market_editor_title_new">New listing</string>
+    <string name="market_editor_title_required">Enter a title before adding photos or files</string>
     <string name="market_editor_type">Listing type</string>
     <string name="market_editor_zone_add">Add zone</string>
     <string name="market_editor_zone_country_au">Australia</string>
@@ -734,4 +735,5 @@
     <string name="market_listing_detail_buy_now_label">Buy it now</string>
     <string name="market_section_recently_viewed">Recently viewed</string>
     <string name="market_recently_viewed_clear">Clear all</string>
+    <string name="market_listings_create">Create</string>
 </resources>

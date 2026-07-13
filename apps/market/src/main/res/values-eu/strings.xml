@@ -214,6 +214,7 @@
     <string name="market_editor_title">Izenburua</string>
     <string name="market_editor_title_edit">Editatu zerrendapena</string>
     <string name="market_editor_title_new">Zerrenda berria</string>
+    <string name="market_editor_title_required">Sartu izenburu bat argazkiak edo fitxategiak gehitu aurretik</string>
     <string name="market_editor_type">Zerrenda mota</string>
     <string name="market_editor_type_digital">Digitala</string>
     <string name="market_editor_type_physical">Fisikoa</string>
@@ -740,4 +741,5 @@
     <string name="market_listing_detail_buy_now_label">Erosi orain</string>
     <string name="market_section_recently_viewed">Azkenaldian ikusiak</string>
     <string name="market_recently_viewed_clear">Garbitu dena</string>
+    <string name="market_listings_create">Sortu</string>
 </resources>

@@ -177,6 +177,7 @@
     <string name="market_editor_title">Suti campo</string>
     <string name="market_editor_title_edit">Listado askichaña</string>
     <string name="market_editor_title_new">Machaq anuncio</string>
+    <string name="market_editor_title_required">Fotonaka jan ukax archivonak yapkatañ nayraqata mä titulo qillqantam</string>
     <string name="market_editor_type">Anuncio tipo</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Físico</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Jichhakiy alaña</string>
     <string name="market_section_recently_viewed">Jichhüru uñjata</string>
     <string name="market_recently_viewed_clear">Taqpach q\'umachaña</string>
+    <string name="market_listings_create">Luraña</string>
 </resources>

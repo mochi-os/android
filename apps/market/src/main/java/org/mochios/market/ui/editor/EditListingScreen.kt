@@ -109,6 +109,8 @@ fun EditListingScreen(
                 is EditListingEvent.Error -> snackbar.showSnackbar(event.error.userMessage())
                 is EditListingEvent.Deleted -> navController.popBackStack()
                 is EditListingEvent.Published -> navController.popBackStack()
+                is EditListingEvent.TitleRequired ->
+                    snackbar.showSnackbar(context.getString(R.string.market_editor_title_required))
             }
         }
     }

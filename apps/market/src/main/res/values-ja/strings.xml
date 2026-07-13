@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Stripeのオンボーディングを完了</string>
     <string name="market_editor_tags_field">タグ (カンマ区切り)</string>
     <string name="market_editor_title_new">新しい出品</string>
+    <string name="market_editor_title_required">写真やファイルを追加する前にタイトルを入力してください</string>
     <string name="market_editor_type">出品タイプ</string>
     <string name="market_editor_zone_add">ゾーンを追加</string>
     <string name="market_editor_zone_country_au">オーストラリア</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">今すぐ購入</string>
     <string name="market_section_recently_viewed">最近見た商品</string>
     <string name="market_recently_viewed_clear">すべてクリア</string>
+    <string name="market_listings_create">作成</string>
 </resources>

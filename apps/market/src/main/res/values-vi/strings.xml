@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Hoàn tất thiết lập Stripe</string>
     <string name="market_editor_tags_field">Thẻ (phân tách bằng dấu phẩy)</string>
     <string name="market_editor_title_new">Danh sách mới</string>
+    <string name="market_editor_title_required">Nhập tiêu đề trước khi thêm ảnh hoặc tệp</string>
     <string name="market_editor_type">Loại danh sách</string>
     <string name="market_editor_zone_add">Thêm khu vực</string>
     <string name="market_editor_zone_country_au">Úc</string>
@@ -743,4 +744,5 @@
     <string name="market_listing_detail_buy_now_label">Mua ngay</string>
     <string name="market_section_recently_viewed">Đã xem gần đây</string>
     <string name="market_recently_viewed_clear">Xóa tất cả</string>
+    <string name="market_listings_create">Tạo</string>
 </resources>

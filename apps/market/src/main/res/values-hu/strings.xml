@@ -670,6 +670,7 @@
     <string name="market_editor_stripe_banner_title">Stripe-regisztráció befejezése</string>
     <string name="market_editor_tags_field">Címkék (vesszővel elválasztva)</string>
     <string name="market_editor_title_new">Új hirdetés</string>
+    <string name="market_editor_title_required">Adjon meg egy címet, mielőtt fényképeket vagy fájlokat adna hozzá</string>
     <string name="market_editor_type">Hirdetés típusa</string>
     <string name="market_editor_zone_add">Zóna hozzáadása</string>
     <string name="market_editor_zone_country_au">Ausztrália</string>
@@ -743,4 +744,5 @@
     <string name="market_listing_detail_buy_now_label">Vásárolja meg most</string>
     <string name="market_section_recently_viewed">Nemrég megtekintett</string>
     <string name="market_recently_viewed_clear">Összes törlése</string>
+    <string name="market_listings_create">Létrehozás</string>
 </resources>

@@ -164,6 +164,7 @@
     <string name="market_editor_title">Judul</string>
     <string name="market_editor_title_edit">Owahi listing</string>
     <string name="market_editor_title_new">Iklan anyar</string>
+    <string name="market_editor_title_required">Lebokna irah-irahan sadurunge nambahake foto utawa file</string>
     <string name="market_editor_type">Jinis iklan</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Fisik</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Tuku saiki</string>
     <string name="market_section_recently_viewed">Lagi waé didelok</string>
     <string name="market_recently_viewed_clear">Resiki kabèh</string>
+    <string name="market_listings_create">Gawé</string>
 </resources>

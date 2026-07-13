@@ -162,6 +162,7 @@
     <string name="market_editor_title">Վերնագիր</string>
     <string name="market_editor_title_edit">Խմբագրել ցուցակագրումը</string>
     <string name="market_editor_title_new">Նոր ցուցակ</string>
+    <string name="market_editor_title_required">Մուտքագրեք վերնագիրը՝ նախքան լուսանկարներ կամ ֆայլեր ավելացնելը</string>
     <string name="market_editor_type">Ցուցակի տեսակ</string>
     <string name="market_editor_type_digital">Թվային</string>
     <string name="market_editor_type_physical">Ֆիզիկական</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Հենց հիմա գնելու գին</string>
     <string name="market_section_recently_viewed">Վերջերս դիտված</string>
     <string name="market_recently_viewed_clear">Մաքրել զտիչները</string>
+    <string name="market_listings_create">Ստեղծել CRM</string>
 </resources>

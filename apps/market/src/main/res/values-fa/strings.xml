@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">تکمیل راه‌اندازی Stripe</string>
     <string name="market_editor_tags_field">برچسب‌ها (با ویرگول جدا شوند)</string>
     <string name="market_editor_title_new">آگهی جدید</string>
+    <string name="market_editor_title_required">قبل از افزودن عکس‌ها یا فایل‌ها عنوانی وارد کنید</string>
     <string name="market_editor_type">نوع آگهی</string>
     <string name="market_editor_zone_add">افزودن منطقه</string>
     <string name="market_editor_zone_country_au">استرالیا</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">همین حالا بخرید</string>
     <string name="market_section_recently_viewed">اخیراً مشاهده‌شده</string>
     <string name="market_recently_viewed_clear">پاک کردن همه</string>
+    <string name="market_listings_create">ساختن</string>
 </resources>

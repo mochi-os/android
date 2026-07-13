@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Stripe kurulumunu tamamlayın</string>
     <string name="market_editor_tags_field">Etiketler (virgülle ayrılmış)</string>
     <string name="market_editor_title_new">Yeni ilan</string>
+    <string name="market_editor_title_required">Fotoğraf veya dosya eklemeden önce bir başlık girin</string>
     <string name="market_editor_type">İlan türü</string>
     <string name="market_editor_zone_add">Bölge ekle</string>
     <string name="market_editor_zone_country_au">Avustralya</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Hemen al</string>
     <string name="market_section_recently_viewed">Son görüntülenenler</string>
     <string name="market_recently_viewed_clear">Tümünü temizle</string>
+    <string name="market_listings_create">Oluştur</string>
 </resources>

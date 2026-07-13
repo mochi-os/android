@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -40,6 +41,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -111,6 +113,8 @@ fun MyListingsScreen(
     // Per-listing dialog state.
     var deleteCandidate by remember { mutableStateOf<Listing?>(null) }
     var appealCandidate by remember { mutableStateOf<Listing?>(null) }
+    var showCreateDialog by remember { mutableStateOf(false) }
+    var createTitle by remember { mutableStateOf("") }
 
     val deleteFailedFallback = stringResource(R.string.market_listings_delete_failed)
     val relistFailedFallback = stringResource(R.string.market_listings_relist_failed)
@@ -136,7 +140,10 @@ fun MyListingsScreen(
             val stripe = state.stripeStatus
             if (stripe != null && stripe.chargesEnabled && stripe.payoutsEnabled) {
                 ExtendedFloatingActionButton(
-                    onClick = { navController.navigate(MarketApp.newListing()) },
+                    onClick = {
+                        createTitle = ""
+                        showCreateDialog = true
+                    },
                     icon = { Icon(Icons.Default.Add, contentDescription = null) },
                     text = { Text(stringResource(R.string.market_listings_new)) },
                 )
@@ -298,6 +305,39 @@ fun MyListingsScreen(
             listingId = candidate.id,
             onDismiss = { appealCandidate = null },
             onSuccess = { viewModel.refresh() },
+        )
+    }
+
+    // New-listing dialog: collect the title up front so the editor always has
+    // one to create the listing row with; the row itself is still created
+    // lazily on the editor's first save.
+    if (showCreateDialog) {
+        AlertDialog(
+            onDismissRequest = { showCreateDialog = false },
+            title = { Text(stringResource(R.string.market_listings_new)) },
+            text = {
+                OutlinedTextField(
+                    value = createTitle,
+                    onValueChange = { createTitle = it },
+                    label = { Text(stringResource(R.string.market_editor_title)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            },
+            confirmButton = {
+                TextButton(
+                    enabled = createTitle.isNotBlank(),
+                    onClick = {
+                        showCreateDialog = false
+                        navController.navigate(MarketApp.newListing(createTitle.trim()))
+                    },
+                ) { Text(stringResource(R.string.market_listings_create)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showCreateDialog = false }) {
+                    Text(stringResource(org.mochios.android.R.string.common_cancel))
+                }
+            },
         )
     }
 }

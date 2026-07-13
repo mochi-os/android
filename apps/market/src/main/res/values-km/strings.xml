@@ -160,6 +160,7 @@
     <string name="market_editor_title">ចំណងជើង</string>
     <string name="market_editor_title_edit">កែសម្រួលការដាក់លក់</string>
     <string name="market_editor_title_new">ការផ្សាយថ្មី</string>
+    <string name="market_editor_title_required">បញ្ចូលចំណងជើងមុនពេលបន្ថែមរូបថត ឬឯកសារ</string>
     <string name="market_editor_type">ប្រភេទការផ្សាយ</string>
     <string name="market_editor_type_digital">ឌីជីថល</string>
     <string name="market_editor_type_physical">រូបវន្ត</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ទិញឥឡូវ</string>
     <string name="market_section_recently_viewed">បានមើលថ្មីៗ</string>
     <string name="market_recently_viewed_clear">សម្អាតទាំងអស់</string>
+    <string name="market_listings_create">បង្កើត</string>
 </resources>

@@ -380,6 +380,7 @@
     <string name="market_editor_tags_field">Mots-clés (séparés par des virgules)</string>
     <string name="market_editor_title_edit">Modifier l\'annonce</string>
     <string name="market_editor_title_new">Nouvelle annonce</string>
+    <string name="market_editor_title_required">Saisissez un titre avant d\'ajouter des photos ou des fichiers</string>
     <string name="market_editor_type">Type d\'annonce</string>
     <string name="market_editor_zone_add">Ajouter une zone</string>
     <string name="market_editor_zone_country_au">Australie</string>
@@ -734,4 +735,5 @@
     <string name="market_listing_detail_buy_now_label">Acheter maintenant</string>
     <string name="market_section_recently_viewed">Consultés récemment</string>
     <string name="market_recently_viewed_clear">Tout effacer</string>
+    <string name="market_listings_create">Créer</string>
 </resources>

@@ -21,6 +21,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.market.lib.toMinorUnits
@@ -104,6 +106,9 @@ sealed class EditListingEvent {
     data object Deleted : EditListingEvent()
     /** Emit when the listing is published so the host can navigate to detail. */
     data class Published(val id: String) : EditListingEvent()
+    /** Emit when photos or files are added before the listing has a title, so
+     * there is no listing row to attach them to yet. */
+    data object TitleRequired : EditListingEvent()
 }
 
 /**
@@ -124,8 +129,14 @@ class EditListingViewModel @Inject constructor(
     private val rawId: String = savedStateHandle.get<String>("id").orEmpty()
     private val isNew: Boolean = rawId.isEmpty() || rawId == "new"
     private val initialId: String = if (isNew) "" else rawId
+    // Title collected by the new-listing dialog on MyListingsScreen. Seeding it
+    // here means a photo added before any edit already has a title to create
+    // the listing row with; the row itself is still created lazily on first save.
+    private val initialTitle: String = savedStateHandle.get<String>("title").orEmpty()
 
-    private val _state = MutableStateFlow(EditUiState(isNew = isNew, listingId = initialId))
+    private val _state = MutableStateFlow(
+        EditUiState(isNew = isNew, listingId = initialId, title = initialTitle),
+    )
     val state: StateFlow<EditUiState> = _state.asStateFlow()
 
     private val _events = MutableSharedFlow<EditListingEvent>(extraBufferCapacity = 8)
@@ -133,6 +144,7 @@ class EditListingViewModel @Inject constructor(
 
     private val gson = Gson()
     private var autoSaveJob: Job? = null
+    private val saveMutex = Mutex()
 
     init {
         loadInitial()
@@ -296,9 +308,18 @@ class EditListingViewModel @Inject constructor(
     }
 
     fun save() {
-        val current = _state.value
-        if (current.isLoading || current.title.isBlank()) return
-        viewModelScope.launch {
+        viewModelScope.launch { saveNow() }
+    }
+
+    // Persist the current state, creating the listing row on first save. The
+    // mutex serialises concurrent saves (debounced autosave vs. an awaited
+    // create from uploadPhoto/uploadAsset) so two in-flight first saves can't
+    // both take the create branch and produce duplicate listings; the state is
+    // re-read inside the lock so the second saver sees the id the first set.
+    private suspend fun saveNow() {
+        saveMutex.withLock {
+            val current = _state.value
+            if (current.isLoading || current.title.isBlank()) return
             _state.value = _state.value.copy(saveStatus = SaveStatus.SAVING)
             val fields = buildFields(current)
             try {
@@ -435,10 +456,17 @@ class EditListingViewModel @Inject constructor(
         cacheDir: File,
     ) {
         if (uris.isEmpty()) return
-        // Make sure we have a listing row to attach photos to.
+        // Make sure we have a listing row to attach photos to. The first save
+        // refuses to create one without a title, so tell the seller instead of
+        // silently dropping the photos.
         viewModelScope.launch {
             if (_state.value.listingId.isEmpty()) {
-                save()
+                if (_state.value.title.isBlank()) {
+                    _events.emit(EditListingEvent.TitleRequired)
+                    return@launch
+                }
+                saveNow()
+                // Create failed; saveNow already surfaced the error.
                 if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId
@@ -498,9 +526,15 @@ class EditListingViewModel @Inject constructor(
         cacheDir: File,
     ) {
         if (uris.isEmpty()) return
+        // Same first-save handling as uploadPhoto: no listing row without a title.
         viewModelScope.launch {
             if (_state.value.listingId.isEmpty()) {
-                save()
+                if (_state.value.title.isBlank()) {
+                    _events.emit(EditListingEvent.TitleRequired)
+                    return@launch
+                }
+                saveNow()
+                // Create failed; saveNow already surfaced the error.
                 if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId

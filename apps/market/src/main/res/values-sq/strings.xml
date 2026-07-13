@@ -160,6 +160,7 @@
     <string name="market_editor_title">Titulli</string>
     <string name="market_editor_title_edit">Modifiko shpalljen</string>
     <string name="market_editor_title_new">Listim i ri</string>
+    <string name="market_editor_title_required">Shkruani një titull para se të shtoni foto ose skedarë</string>
     <string name="market_editor_type">Lloji i listimit</string>
     <string name="market_editor_type_digital">Dixhitale</string>
     <string name="market_editor_type_physical">Fizik</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Blije tani</string>
     <string name="market_section_recently_viewed">Të parët së fundmi</string>
     <string name="market_recently_viewed_clear">Pastro të gjitha</string>
+    <string name="market_listings_create">Krijo</string>
 </resources>

@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Stripe 가입 완료</string>
     <string name="market_editor_tags_field">태그 (쉼표로 구분)</string>
     <string name="market_editor_title_new">새 상품</string>
+    <string name="market_editor_title_required">사진이나 파일을 추가하기 전에 제목을 입력하세요</string>
     <string name="market_editor_type">상품 유형</string>
     <string name="market_editor_zone_add">지역 추가</string>
     <string name="market_editor_zone_country_au">호주</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">즉시 구매</string>
     <string name="market_section_recently_viewed">최근 본 상품</string>
     <string name="market_recently_viewed_clear">모두 지우기</string>
+    <string name="market_listings_create">생성</string>
 </resources>

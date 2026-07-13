@@ -161,6 +161,7 @@
     <string name="market_editor_title">Аталышы</string>
     <string name="market_editor_title_edit">Жарнаманы түзөтүү</string>
     <string name="market_editor_title_new">Жаңы жарнама</string>
+    <string name="market_editor_title_required">Сүрөт же файл кошуудан мурун аталыш киргизиңиз</string>
     <string name="market_editor_type">Жарнама түрү</string>
     <string name="market_editor_type_digital">Санариптик</string>
     <string name="market_editor_type_physical">Физикалык</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Азыр сатып алуу</string>
     <string name="market_section_recently_viewed">Жакында көрүлгөн</string>
     <string name="market_recently_viewed_clear">Баарын тазалоо</string>
+    <string name="market_listings_create">Түзүү</string>
 </resources>

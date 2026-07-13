@@ -160,6 +160,7 @@
     <string name="market_editor_title">ခေါင်းစဉ်</string>
     <string name="market_editor_title_edit">စာရင်း တည်းဖြတ်</string>
     <string name="market_editor_title_new">ကြော်ငြာ အသစ်</string>
+    <string name="market_editor_title_required">ဓာတ်ပုံ သို့မဟုတ် ဖိုင်များ မထည့်မီ ခေါင်းစဉ်တစ်ခု ထည့်ပါ</string>
     <string name="market_editor_type">ကြော်ငြာ အမျိုးအစား</string>
     <string name="market_editor_type_digital">ဒစ်ဂျစ်တယ်</string>
     <string name="market_editor_type_physical">ရုပ်ပိုင်း</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ယခုပင် ဝယ်မည်</string>
     <string name="market_section_recently_viewed">လတ်တလော ကြည့်ရှုခဲ့</string>
     <string name="market_recently_viewed_clear">အားလုံး ရှင်းမည်</string>
+    <string name="market_listings_create">ဖန်တီးမည်</string>
 </resources>

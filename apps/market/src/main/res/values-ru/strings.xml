@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Завершите подключение Stripe</string>
     <string name="market_editor_tags_field">Теги (через запятую)</string>
     <string name="market_editor_title_new">Новое объявление</string>
+    <string name="market_editor_title_required">Введите название, прежде чем добавлять фото или файлы</string>
     <string name="market_editor_type">Тип объявления</string>
     <string name="market_editor_zone_add">Добавить зону</string>
     <string name="market_editor_zone_country_au">Австралия</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Купить сейчас</string>
     <string name="market_section_recently_viewed">Недавно просмотренные</string>
     <string name="market_recently_viewed_clear">Очистить всё</string>
+    <string name="market_listings_create">Создать</string>
 </resources>

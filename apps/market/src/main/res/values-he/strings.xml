@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">סיים את ההצטרפות ל-Stripe</string>
     <string name="market_editor_tags_field">תגיות (מופרדות בפסיקים)</string>
     <string name="market_editor_title_new">מודעה חדשה</string>
+    <string name="market_editor_title_required">יש להזין כותרת לפני הוספת תמונות או קבצים</string>
     <string name="market_editor_type">סוג מודעה</string>
     <string name="market_editor_zone_add">הוסף אזור</string>
     <string name="market_editor_zone_country_au">אוסטרליה</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">קנה עכשיו</string>
     <string name="market_section_recently_viewed">נצפו לאחרונה</string>
     <string name="market_recently_viewed_clear">נקה הכול</string>
+    <string name="market_listings_create">צור</string>
 </resources>

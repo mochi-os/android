@@ -166,6 +166,7 @@
     <string name="market_editor_title">Titill</string>
     <string name="market_editor_title_edit">Breyta auglýsingu</string>
     <string name="market_editor_title_new">Ný auglýsing</string>
+    <string name="market_editor_title_required">Sláðu inn titil áður en þú bætir við myndum eða skrám</string>
     <string name="market_editor_type">Auglýsingategund</string>
     <string name="market_editor_type_digital">Stafrænt</string>
     <string name="market_editor_type_physical">Áþreifanlegt</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Kaupa núna</string>
     <string name="market_section_recently_viewed">Nýlega skoðað</string>
     <string name="market_recently_viewed_clear">Hreinsa allt</string>
+    <string name="market_listings_create">Búa til</string>
 </resources>

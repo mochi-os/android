@@ -160,6 +160,7 @@
     <string name="market_editor_title">शीर्षक</string>
     <string name="market_editor_title_edit">सूची सम्पादन गर्नुहोस्</string>
     <string name="market_editor_title_new">नयाँ विज्ञापन</string>
+    <string name="market_editor_title_required">फोटो वा फाइलहरू थप्नु अघि शीर्षक प्रविष्ट गर्नुहोस्</string>
     <string name="market_editor_type">विज्ञापन प्रकार</string>
     <string name="market_editor_type_digital">डिजिटल</string>
     <string name="market_editor_type_physical">भौतिक</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">अहिले नै किन्नुहोस्</string>
     <string name="market_section_recently_viewed">हालै हेरिएका</string>
     <string name="market_recently_viewed_clear">सबै खाली गर्नुहोस्</string>
+    <string name="market_listings_create">सिर्जना गर्नुहोस्</string>
 </resources>

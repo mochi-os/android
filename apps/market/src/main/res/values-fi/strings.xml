@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Viimeistele Stripe-käyttöönotto</string>
     <string name="market_editor_tags_field">Tunnisteet (pilkulla erotettuna)</string>
     <string name="market_editor_title_new">Uusi ilmoitus</string>
+    <string name="market_editor_title_required">Anna otsikko ennen kuvien tai tiedostojen lisäämistä</string>
     <string name="market_editor_type">Ilmoituksen tyyppi</string>
     <string name="market_editor_zone_add">Lisää alue</string>
     <string name="market_editor_zone_country_au">Australia</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Osta heti</string>
     <string name="market_section_recently_viewed">Viimeksi katsotut</string>
     <string name="market_recently_viewed_clear">Tyhjennä kaikki</string>
+    <string name="market_listings_create">Luo</string>
 </resources>

@@ -601,6 +601,7 @@
     <string name="market_checkout_subscribing">সাবস্ক্রাইব হচ্ছে…</string>
     <string name="market_editor_delete_confirm_title">লিস্টিং মুছবেন?</string>
     <string name="market_editor_title_new">নতুন লিস্টিং</string>
+    <string name="market_editor_title_required">ছবি বা ফাইল যোগ করার আগে একটি শিরোনাম লিখুন</string>
 
     <string name="market_account_biography_placeholder">ক্রেতাদের নিজের সম্পর্কে বলুন…</string>
     <string name="market_account_load_failed">অ্যাকাউন্ট লোড করা যায়নি</string>
@@ -743,4 +744,5 @@
     <string name="market_listing_detail_buy_now_label">এখনই কিনুন</string>
     <string name="market_section_recently_viewed">সম্প্রতি দেখা</string>
     <string name="market_recently_viewed_clear">সব পরিষ্কার করুন</string>
+    <string name="market_listings_create">তৈরি করুন</string>
 </resources>

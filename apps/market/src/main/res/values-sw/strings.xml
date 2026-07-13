@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Maliza usajili wa Stripe</string>
     <string name="market_editor_tags_field">Vitambulisho (vimetenganishwa kwa koma)</string>
     <string name="market_editor_title_new">Tangazo jipya</string>
+    <string name="market_editor_title_required">Weka kichwa kabla ya kuongeza picha au faili</string>
     <string name="market_editor_type">Aina ya tangazo</string>
     <string name="market_editor_zone_add">Ongeza eneo</string>
     <string name="market_editor_zone_country_au">Australia</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Inunue sasa</string>
     <string name="market_section_recently_viewed">Zilizotazamwa hivi karibuni</string>
     <string name="market_recently_viewed_clear">Futa vyote</string>
+    <string name="market_listings_create">Unda</string>
 </resources>

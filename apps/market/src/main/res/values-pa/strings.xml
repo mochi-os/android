@@ -160,6 +160,7 @@
     <string name="market_editor_title">ਸਿਰਲੇਖ</string>
     <string name="market_editor_title_edit">ਲਿਸਟਿੰਗ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="market_editor_title_new">ਨਵਾਂ ਇਸ਼ਤਿਹਾਰ</string>
+    <string name="market_editor_title_required">ਫੋਟੋਆਂ ਜਾਂ ਫਾਈਲਾਂ ਜੋੜਨ ਤੋਂ ਪਹਿਲਾਂ ਸਿਰਲੇਖ ਦਰਜ ਕਰੋ</string>
     <string name="market_editor_type">ਇਸ਼ਤਿਹਾਰ ਦੀ ਕਿਸਮ</string>
     <string name="market_editor_type_digital">ਡਿਜੀਟਲ</string>
     <string name="market_editor_type_physical">ਭੌਤਿਕ</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ਹੁਣੇ ਖਰੀਦੋ</string>
     <string name="market_section_recently_viewed">ਹਾਲ ਹੀ ਵਿੱਚ ਦੇਖੇ ਗਏ</string>
     <string name="market_recently_viewed_clear">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
+    <string name="market_listings_create">ਬਣਾਓ</string>
 </resources>

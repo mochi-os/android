@@ -214,6 +214,7 @@
     <string name="market_editor_title">Наслов</string>
     <string name="market_editor_title_edit">Уреди оглас</string>
     <string name="market_editor_title_new">Нов оглас</string>
+    <string name="market_editor_title_required">Внесете наслов пред да додадете фотографии или датотеки</string>
     <string name="market_editor_type">Тип на оглас</string>
     <string name="market_editor_type_digital">Дигитално</string>
     <string name="market_editor_type_physical">Физички</string>
@@ -740,4 +741,5 @@
     <string name="market_listing_detail_buy_now_label">Купи веднаш</string>
     <string name="market_section_recently_viewed">Неодамна прегледано</string>
     <string name="market_recently_viewed_clear">Исчисти сè</string>
+    <string name="market_listings_create">Создај</string>
 </resources>

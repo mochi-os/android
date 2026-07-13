@@ -160,6 +160,7 @@
     <string name="market_editor_title">Pamagat</string>
     <string name="market_editor_title_edit">I-edit ang listing</string>
     <string name="market_editor_title_new">Bagong listahan</string>
+    <string name="market_editor_title_required">Maglagay ng pamagat bago magdagdag ng mga larawan o file</string>
     <string name="market_editor_type">Uri ng listahan</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Pisikal</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Bilhin ngayon</string>
     <string name="market_section_recently_viewed">Kamakailang tiningnan</string>
     <string name="market_recently_viewed_clear">Burahin lahat</string>
+    <string name="market_listings_create">Gumawa</string>
 </resources>

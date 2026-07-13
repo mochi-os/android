@@ -160,6 +160,7 @@
     <string name="market_editor_title">קעפּל</string>
     <string name="market_editor_title_edit">רעדאַקטירן רשימה</string>
     <string name="market_editor_title_new">נייע רעקלאמע</string>
+    <string name="market_editor_title_required">לייגט אריין א טיטל איידער איר לייגט צו בילדער אדער טעקעס</string>
     <string name="market_editor_type">רעקלאמע טיפ</string>
     <string name="market_editor_type_digital">דיגיטאַל</string>
     <string name="market_editor_type_physical">פֿיזיש</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">קויפֿן עס איצט</string>
     <string name="market_section_recently_viewed">לעצטנס געקוקט</string>
     <string name="market_recently_viewed_clear">רייניקן אַלץ</string>
+    <string name="market_listings_create">באַשאַפֿן</string>
 </resources>

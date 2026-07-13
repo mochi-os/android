@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">ดำเนินการตั้งค่า Stripe ให้เสร็จสิ้น</string>
     <string name="market_editor_tags_field">แท็ก (คั่นด้วยเครื่องหมายจุลภาค)</string>
     <string name="market_editor_title_new">รายการประกาศใหม่</string>
+    <string name="market_editor_title_required">ป้อนชื่อก่อนเพิ่มรูปภาพหรือไฟล์</string>
     <string name="market_editor_type">ประเภทรายการประกาศ</string>
     <string name="market_editor_zone_add">เพิ่มเขต</string>
     <string name="market_editor_zone_country_au">ออสเตรเลีย</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ซื้อเลย</string>
     <string name="market_section_recently_viewed">ดูล่าสุด</string>
     <string name="market_recently_viewed_clear">ล้างทั้งหมด</string>
+    <string name="market_listings_create">สร้าง</string>
 </resources>

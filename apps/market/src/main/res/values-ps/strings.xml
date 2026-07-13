@@ -160,6 +160,7 @@
     <string name="market_editor_title">سرلیک</string>
     <string name="market_editor_title_edit">د لیسټینګ سمول</string>
     <string name="market_editor_title_new">نوی اعلان</string>
+    <string name="market_editor_title_required">د انځورونو یا فایلونو له اضافه کولو مخکې سرلیک ولیکئ</string>
     <string name="market_editor_type">د اعلان ډول</string>
     <string name="market_editor_type_digital">ډیجیټل</string>
     <string name="market_editor_type_physical">فزیکي</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">اوس یې واخله</string>
     <string name="market_section_recently_viewed">په وروستیو کې لیدل شوي</string>
     <string name="market_recently_viewed_clear">ټول پاک کړئ</string>
+    <string name="market_listings_create">جوړ کړئ</string>
 </resources>

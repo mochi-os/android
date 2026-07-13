@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Fullfør Stripe-registrering</string>
     <string name="market_editor_tags_field">Etiketter (kommaseparert)</string>
     <string name="market_editor_title_new">Ny oppføring</string>
+    <string name="market_editor_title_required">Skriv inn en tittel før du legger til bilder eller filer</string>
     <string name="market_editor_type">Oppføringstype</string>
     <string name="market_editor_zone_add">Legg til sone</string>
     <string name="market_editor_zone_country_au">Australia</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Kjøp nå</string>
     <string name="market_section_recently_viewed">Nylig sett</string>
     <string name="market_recently_viewed_clear">Tøm alt</string>
+    <string name="market_listings_create">Opprett</string>
 </resources>

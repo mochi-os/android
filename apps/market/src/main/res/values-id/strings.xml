@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Selesaikan pendaftaran Stripe</string>
     <string name="market_editor_tags_field">Tag (dipisahkan koma)</string>
     <string name="market_editor_title_new">Daftar baru</string>
+    <string name="market_editor_title_required">Masukkan judul sebelum menambahkan foto atau file</string>
     <string name="market_editor_type">Tipe daftar</string>
     <string name="market_editor_zone_add">Tambah zona</string>
     <string name="market_editor_zone_country_au">Australia</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Beli sekarang</string>
     <string name="market_section_recently_viewed">Baru dilihat</string>
     <string name="market_recently_viewed_clear">Bersihkan semua</string>
+    <string name="market_listings_create">Buat</string>
 </resources>

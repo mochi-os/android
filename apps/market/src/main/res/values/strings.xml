@@ -237,6 +237,7 @@
     <string name="market_editor_title">Title</string>
     <string name="market_editor_title_edit">Edit listing</string>
     <string name="market_editor_title_new">New listing</string>
+    <string name="market_editor_title_required">Enter a title before adding photos or files</string>
     <string name="market_editor_type">Listing type</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Physical</string>
@@ -358,6 +359,7 @@
     <string name="market_listings_action_relist">Relist</string>
     <string name="market_listings_action_share">Share</string>
     <string name="market_listings_action_view">View</string>
+    <string name="market_listings_create">Create</string>
     <string name="market_listings_delete_confirm">Delete</string>
     <string name="market_listings_delete_failed">Failed to delete listing</string>
     <string name="market_listings_delete_message">This permanently removes the draft from your account.</string>

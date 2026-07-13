@@ -160,6 +160,7 @@
     <string name="market_editor_title">Isihloko</string>
     <string name="market_editor_title_edit">Hlela ushicilelo</string>
     <string name="market_editor_title_new">Uhlu olusha</string>
+    <string name="market_editor_title_required">Faka isihloko ngaphambi kokwengeza izithombe noma amafayela</string>
     <string name="market_editor_type">Uhlobo lohlu</string>
     <string name="market_editor_type_digital">Idijithali</string>
     <string name="market_editor_type_physical">Okuphathekayo</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Yithenge manje</string>
     <string name="market_section_recently_viewed">Okubukwe muva</string>
     <string name="market_recently_viewed_clear">Sula konke</string>
+    <string name="market_listings_create">Dala</string>
 </resources>

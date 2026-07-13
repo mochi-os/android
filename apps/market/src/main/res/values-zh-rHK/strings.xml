@@ -123,6 +123,7 @@
     <string name="market_editor_stripe_banner_title">完成 Stripe 設定</string>
     <string name="market_editor_tags_field">標籤 (以逗號分隔)</string>
     <string name="market_editor_title_new">新商品</string>
+    <string name="market_editor_title_required">新增相片或檔案前請先輸入標題</string>
     <string name="market_editor_type">商品類型</string>
     <string name="market_editor_zone_add">新增區域</string>
     <string name="market_editor_zone_country_au">澳洲</string>
@@ -733,4 +734,5 @@
     <string name="market_listing_detail_buy_now_label">立即購買</string>
     <string name="market_section_recently_viewed">最近瀏覽</string>
     <string name="market_recently_viewed_clear">清除全部</string>
+    <string name="market_listings_create">建立</string>
 </resources>

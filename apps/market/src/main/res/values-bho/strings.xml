@@ -161,6 +161,7 @@
     <string name="market_editor_title">शीर्षक</string>
     <string name="market_editor_title_edit">लिस्टिंग संपादित करीं</string>
     <string name="market_editor_title_new">नया विज्ञापन</string>
+    <string name="market_editor_title_required">फोटो भा फाइल जोड़े से पहिले शीर्षक डालीं</string>
     <string name="market_editor_type">विज्ञापन प्रकार</string>
     <string name="market_editor_type_digital">डिजिटल</string>
     <string name="market_editor_type_physical">भौतिक</string>
@@ -743,4 +744,5 @@
     <string name="market_listing_detail_buy_now_label">अबहीं खरीदीं</string>
     <string name="market_section_recently_viewed">हाल में देखल</string>
     <string name="market_recently_viewed_clear">सब साफ करीं</string>
+    <string name="market_listings_create">बनाईं</string>
 </resources>

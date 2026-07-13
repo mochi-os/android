@@ -161,6 +161,7 @@
     <string name="market_editor_title">Tiotal</string>
     <string name="market_editor_title_edit">Deasaich an liosta</string>
     <string name="market_editor_title_new">Liosta ùr</string>
+    <string name="market_editor_title_required">Cuir a-steach tiotal mus cuir thu dealbhan no faidhlichean ris</string>
     <string name="market_editor_type">Seòrsa liosta</string>
     <string name="market_editor_type_digital">Didseatach</string>
     <string name="market_editor_type_physical">Corporra</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Ceannaich a-nis</string>
     <string name="market_section_recently_viewed">Air an coimhead o chionn ghoirid</string>
     <string name="market_recently_viewed_clear">Falamhaich a h-uile</string>
+    <string name="market_listings_create">Cruthaich</string>
 </resources>

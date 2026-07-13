@@ -160,6 +160,7 @@
     <string name="market_editor_title">Mata duree</string>
     <string name="market_editor_title_edit">Tarreeffama sirreessi</string>
     <string name="market_editor_title_new">Tarree haaraa</string>
+    <string name="market_editor_title_required">Suuraalee yookiin faayilota dabaluu dura mata-duree galchi</string>
     <string name="market_editor_type">Gosa tarree</string>
     <string name="market_editor_type_digital">Dijitaala</string>
     <string name="market_editor_type_physical">Qaamaan</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Amma bitadhu</string>
     <string name="market_section_recently_viewed">Dhiyeenya ilaalame</string>
     <string name="market_recently_viewed_clear">Hunda cilliisi</string>
+    <string name="market_listings_create">Uumi</string>
 </resources>

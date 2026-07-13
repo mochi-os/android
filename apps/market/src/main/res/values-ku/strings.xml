@@ -160,6 +160,7 @@
     <string name="market_editor_title">Sernav</string>
     <string name="market_editor_title_edit">Lîsteyê sererast bike</string>
     <string name="market_editor_title_new">Lîsteya nû</string>
+    <string name="market_editor_title_required">Berî ku wêne an pelan lê zêde bikî sernavekê binivîse</string>
     <string name="market_editor_type">Cureya lîsteyê</string>
     <string name="market_editor_type_digital">Dîjîtal</string>
     <string name="market_editor_type_physical">Fizîkî</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Niha bikire</string>
     <string name="market_section_recently_viewed">Vê dawiyê dîtî</string>
     <string name="market_recently_viewed_clear">Hemûyan paqij bike</string>
+    <string name="market_listings_create">Çêbike</string>
 </resources>

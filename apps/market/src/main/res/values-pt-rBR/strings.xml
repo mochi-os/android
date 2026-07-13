@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Concluir integração com o Stripe</string>
     <string name="market_editor_tags_field">Tags (separadas por vírgula)</string>
     <string name="market_editor_title_new">Novo anúncio</string>
+    <string name="market_editor_title_required">Insira um título antes de adicionar fotos ou arquivos</string>
     <string name="market_editor_type">Tipo de anúncio</string>
     <string name="market_editor_zone_add">Adicionar zona</string>
     <string name="market_editor_zone_country_au">Austrália</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Compre agora</string>
     <string name="market_section_recently_viewed">Vistos recentemente</string>
     <string name="market_recently_viewed_clear">Limpar tudo</string>
+    <string name="market_listings_create">Criar</string>
 </resources>

@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Stripe-aanmelding voltooien</string>
     <string name="market_editor_tags_field">Tags (door komma\'s gescheiden)</string>
     <string name="market_editor_title_new">Nieuwe advertentie</string>
+    <string name="market_editor_title_required">Voer een titel in voordat je foto\'s of bestanden toevoegt</string>
     <string name="market_editor_type">Type advertentie</string>
     <string name="market_editor_zone_add">Zone toevoegen</string>
     <string name="market_editor_zone_country_au">Australië</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Nu kopen</string>
     <string name="market_section_recently_viewed">Recent bekeken</string>
     <string name="market_recently_viewed_clear">Alles wissen</string>
+    <string name="market_listings_create">Aanmaken</string>
 </resources>

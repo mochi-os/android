@@ -166,6 +166,7 @@
     <string name="market_editor_title">Título</string>
     <string name="market_editor_title_edit">Editar anuncio</string>
     <string name="market_editor_title_new">Novo anuncio</string>
+    <string name="market_editor_title_required">Introduce un título antes de engadir fotos ou ficheiros</string>
     <string name="market_editor_type">Tipo de anuncio</string>
     <string name="market_editor_type_digital">Dixital</string>
     <string name="market_editor_type_physical">Físico</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Comprar agora</string>
     <string name="market_section_recently_viewed">Vistos recentemente</string>
     <string name="market_recently_viewed_clear">Borrar todo</string>
+    <string name="market_listings_create">Crear</string>
 </resources>

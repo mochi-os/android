@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Lõpeta Stripe\'i seadistamine</string>
     <string name="market_editor_tags_field">Sildid (komaga eraldatud)</string>
     <string name="market_editor_title_new">Uus kuulutus</string>
+    <string name="market_editor_title_required">Enne fotode või failide lisamist sisesta pealkiri</string>
     <string name="market_editor_type">Kuulutuse tüüp</string>
     <string name="market_editor_zone_add">Lisa tsoon</string>
     <string name="market_editor_zone_country_au">Austraalia</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Osta kohe</string>
     <string name="market_section_recently_viewed">Hiljuti vaadatud</string>
     <string name="market_recently_viewed_clear">Tühjenda kõik</string>
+    <string name="market_listings_create">Loo</string>
 </resources>

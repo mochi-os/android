@@ -173,6 +173,7 @@
     <string name="market_editor_title">Tit</string>
     <string name="market_editor_title_edit">Modifye lis</string>
     <string name="market_editor_title_new">Nouvo lis</string>
+    <string name="market_editor_title_required">Antre yon tit anvan ou ajoute foto oswa fichye</string>
     <string name="market_editor_type">Tip lis</string>
     <string name="market_editor_type_digital">Dijital</string>
     <string name="market_editor_type_physical">Fizik</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Achte li kounye a</string>
     <string name="market_section_recently_viewed">Wè dènyèman</string>
     <string name="market_recently_viewed_clear">Efase tout</string>
+    <string name="market_listings_create">Kreye</string>
 </resources>

@@ -160,6 +160,7 @@
     <string name="market_editor_title">ಶೀರ್ಷಿಕೆ</string>
     <string name="market_editor_title_edit">ಲಿಸ್ಟಿಂಗ್ ಸಂಪಾದಿಸಿ</string>
     <string name="market_editor_title_new">ಹೊಸ ಪಟ್ಟಿ</string>
+    <string name="market_editor_title_required">ಫೋಟೋಗಳು ಅಥವಾ ಫೈಲ್‌ಗಳನ್ನು ಸೇರಿಸುವ ಮೊದಲು ಶೀರ್ಷಿಕೆ ನಮೂದಿಸಿ</string>
     <string name="market_editor_type">ಪಟ್ಟಿ ಪ್ರಕಾರ</string>
     <string name="market_editor_type_digital">ಡಿಜಿಟಲ್</string>
     <string name="market_editor_type_physical">ಭೌತಿಕ</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ಈಗಲೇ ಖರೀದಿಸಿ</string>
     <string name="market_section_recently_viewed">ಇತ್ತೀಚೆಗೆ ವೀಕ್ಷಿಸಲಾಗಿದೆ</string>
     <string name="market_recently_viewed_clear">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="market_listings_create">ರಚಿಸಿ</string>
 </resources>

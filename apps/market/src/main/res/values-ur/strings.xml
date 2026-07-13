@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Stripe آن بورڈنگ مکمل کریں</string>
     <string name="market_editor_tags_field">ٹیگز (کاما سے علیحدہ)</string>
     <string name="market_editor_title_new">نئی فہرست</string>
+    <string name="market_editor_title_required">تصاویر یا فائلیں شامل کرنے سے پہلے عنوان درج کریں</string>
     <string name="market_editor_type">فہرست کی قسم</string>
     <string name="market_editor_zone_add">زون شامل کریں</string>
     <string name="market_editor_zone_country_au">آسٹریلیا</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ابھی خریدیں</string>
     <string name="market_section_recently_viewed">حال ہی میں دیکھے گئے</string>
     <string name="market_recently_viewed_clear">سب صاف کریں</string>
+    <string name="market_listings_create">بنائیں</string>
 </resources>

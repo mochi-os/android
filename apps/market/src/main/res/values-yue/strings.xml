@@ -329,6 +329,7 @@
     <string name="market_editor_tags_field">標籤(以逗號分隔)</string>
     <string name="market_editor_title_edit">編輯刊登</string>
     <string name="market_editor_title_new">新刊登</string>
+    <string name="market_editor_title_required">加相或者檔案之前，請先輸入標題</string>
     <string name="market_editor_type">刊登類型</string>
     <string name="market_editor_zone_add">新增區域</string>
     <string name="market_editor_zone_country_us">美國</string>
@@ -733,4 +734,5 @@
     <string name="market_listing_detail_buy_now_label">即刻買</string>
     <string name="market_section_recently_viewed">最近瀏覽</string>
     <string name="market_recently_viewed_clear">全部清除</string>
+    <string name="market_listings_create">建立</string>
 </resources>

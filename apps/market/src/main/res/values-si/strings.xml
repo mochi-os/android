@@ -160,6 +160,7 @@
     <string name="market_editor_title">මාතෘකාව</string>
     <string name="market_editor_title_edit">ලැයිස්තුගත කිරීම සංස්කරණය කරන්න</string>
     <string name="market_editor_title_new">නව ලැයිස්තුව</string>
+    <string name="market_editor_title_required">ඡායාරූප හෝ ගොනු එක් කිරීමට පෙර මාතෘකාවක් ඇතුළත් කරන්න</string>
     <string name="market_editor_type">ලැයිස්තු වර්ගය</string>
     <string name="market_editor_type_digital">ඩිජිටල්</string>
     <string name="market_editor_type_physical">භෞතික</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">දැන් මිලදී ගන්න</string>
     <string name="market_section_recently_viewed">මෑත දී බැලූ</string>
     <string name="market_recently_viewed_clear">සියල්ල හිස් කරන්න</string>
+    <string name="market_listings_create">නිර්මාණය කරන්න</string>
 </resources>

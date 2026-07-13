@@ -67,7 +67,7 @@ object MarketApp {
     // ---- Detail route patterns ----
     const val LISTING_DETAIL = "market/listing/{id}"
     const val LISTING_EDIT = "market/listing/{id}/edit"
-    const val NEW_LISTING = "market/listings/new"
+    const val NEW_LISTING = "market/listings/new?title={title}"
     const val CHECKOUT = "market/checkout/{listingId}"
     const val PURCHASE_DETAIL = "market/purchases/{orderId}"
     const val SALE_DETAIL = "market/sales/{orderId}"
@@ -78,7 +78,9 @@ object MarketApp {
     // ---- Detail route builders ----
     fun listingDetail(id: String) = "market/listing/$id"
     fun listingEdit(id: String) = "market/listing/$id/edit"
-    fun newListing() = "market/listings/new"
+    // Title comes from the new-listing dialog; the editor seeds its state with
+    // it and still creates the listing row lazily on first save.
+    fun newListing(title: String) = "market/listings/new?title=" + Uri.encode(title)
     fun checkout(listingId: String) = "market/checkout/$listingId"
     fun purchaseDetail(orderId: String) = "market/purchases/$orderId"
     fun saleDetail(orderId: String) = "market/sales/$orderId"
@@ -130,7 +132,10 @@ fun NavGraphBuilder.marketNavGraph(navController: NavController) {
     composable(MarketApp.NOTIFICATION_PREFERENCES) { NotificationPreferencesScreen(navController = navController) }
 
     // ---- Detail routes ----
-    composable(MarketApp.NEW_LISTING) { EditListingScreen(navController = navController) }
+    composable(
+        route = MarketApp.NEW_LISTING,
+        arguments = listOf(navArgument("title") { type = NavType.StringType; defaultValue = "" }),
+    ) { EditListingScreen(navController = navController) }
     composable(
         route = MarketApp.LISTING_DETAIL,
         arguments = listOf(navArgument("id") { type = NavType.StringType }),

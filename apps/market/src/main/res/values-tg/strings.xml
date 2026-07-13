@@ -518,6 +518,7 @@
     <string name="market_editor_stripe_banner_title">Танзимоти Stripe-ро ба анҷом расонед</string>
     <string name="market_editor_tags_field">Барчаспҳо (бо вергул ҷудо карда шудаанд)</string>
     <string name="market_editor_title_new">Рӯйхати нав</string>
+    <string name="market_editor_title_required">Пеш аз илова кардани суратҳо ё файлҳо сарлавҳа ворид кунед</string>
     <string name="market_editor_type">Навъи рӯйхат</string>
     <string name="market_editor_zone_add">Илова кардани минтақа</string>
     <string name="market_editor_zone_country_au">Австралия</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Бо нархи имрӯз харидан</string>
     <string name="market_section_recently_viewed">Ба наздикӣ дидашуда</string>
     <string name="market_recently_viewed_clear">Ҳамаро тоза кардан</string>
+    <string name="market_listings_create">Эҷод кардан</string>
 </resources>

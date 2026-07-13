@@ -160,6 +160,7 @@
     <string name="market_editor_title">عنوان</string>
     <string name="market_editor_title_edit">لسٽنگ ۾ ترميم ڪريو</string>
     <string name="market_editor_title_new">نئون اشتهار</string>
+    <string name="market_editor_title_required">تصويرون يا فائلون شامل ڪرڻ کان اڳ عنوان داخل ڪريو</string>
     <string name="market_editor_type">اشتهار جو قسم</string>
     <string name="market_editor_type_digital">ڊجيٽل</string>
     <string name="market_editor_type_physical">جسماني</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ابھي خريد ڪريو</string>
     <string name="market_section_recently_viewed">تازو ڏٺل</string>
     <string name="market_recently_viewed_clear">سڀ صاف ڪريو</string>
+    <string name="market_listings_create">ٺاهيو</string>
 </resources>

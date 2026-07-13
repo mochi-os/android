@@ -214,6 +214,7 @@
     <string name="market_editor_title">Teitl</string>
     <string name="market_editor_title_edit">Golygu rhestriad</string>
     <string name="market_editor_title_new">Rhestriad newydd</string>
+    <string name="market_editor_title_required">Rhowch deitl cyn ychwanegu lluniau neu ffeiliau</string>
     <string name="market_editor_type">Math o restriad</string>
     <string name="market_editor_type_digital">Digidol</string>
     <string name="market_editor_type_physical">Corfforol</string>
@@ -740,4 +741,5 @@
     <string name="market_listing_detail_buy_now_label">Prynu nawr</string>
     <string name="market_section_recently_viewed">A welwyd yn ddiweddar</string>
     <string name="market_recently_viewed_clear">Clirio popeth</string>
+    <string name="market_listings_create">Creu</string>
 </resources>

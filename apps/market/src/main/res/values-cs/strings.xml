@@ -514,6 +514,7 @@
     <string name="market_editor_stripe_banner_title">Dokončit nastavení Stripe</string>
     <string name="market_editor_tags_field">Štítky (oddělené čárkou)</string>
     <string name="market_editor_title_new">Nová nabídka</string>
+    <string name="market_editor_title_required">Před přidáním fotografií nebo souborů zadejte název</string>
     <string name="market_editor_type">Typ nabídky</string>
     <string name="market_editor_zone_add">Přidat zónu</string>
     <string name="market_editor_zone_country_au">Austrálie</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Koupit teď</string>
     <string name="market_section_recently_viewed">Nedávno zobrazené</string>
     <string name="market_recently_viewed_clear">Vymazat vše</string>
+    <string name="market_listings_create">Vytvořit</string>
 </resources>

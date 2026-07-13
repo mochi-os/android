@@ -214,6 +214,7 @@
     <string name="market_editor_title">Titel</string>
     <string name="market_editor_title_edit">Wysig lys</string>
     <string name="market_editor_title_new">Nuwe lys</string>
+    <string name="market_editor_title_required">Voer \'n titel in voordat jy foto\'s of lêers byvoeg</string>
     <string name="market_editor_type">Lys-tipe</string>
     <string name="market_editor_type_digital">Digitaal</string>
     <string name="market_editor_type_physical">Fisies</string>
@@ -740,4 +741,5 @@
     <string name="market_listing_detail_buy_now_label">Koop dit nou</string>
     <string name="market_section_recently_viewed">Onlangs bekyk</string>
     <string name="market_recently_viewed_clear">Maak alles skoon</string>
+    <string name="market_listings_create">Skep</string>
 </resources>

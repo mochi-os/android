@@ -160,6 +160,7 @@
     <string name="market_editor_title">Isihloko</string>
     <string name="market_editor_title_edit">Hlela uluhlu</string>
     <string name="market_editor_title_new">Uluhlu olutsha</string>
+    <string name="market_editor_title_required">Faka isihloko phambi kokongeza iifoto okanye iifayile</string>
     <string name="market_editor_type">Uhlobo loluhlu</string>
     <string name="market_editor_type_digital">Idijithali</string>
     <string name="market_editor_type_physical">Eyokwenyani</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Yithenge ngoku</string>
     <string name="market_section_recently_viewed">Okubukwe kutsha nje</string>
     <string name="market_recently_viewed_clear">Cima konke</string>
+    <string name="market_listings_create">Yenza</string>
 </resources>

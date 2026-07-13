@@ -160,6 +160,7 @@
     <string name="market_editor_title">ناونیشان</string>
     <string name="market_editor_title_edit">دەستکاری ناونووسکراو</string>
     <string name="market_editor_title_new">لیستی نوێ</string>
+    <string name="market_editor_title_required">پێش زیادکردنی وێنە یان فایلەکان ناونیشانێک بنووسە</string>
     <string name="market_editor_type">جۆری لیست</string>
     <string name="market_editor_type_digital">دیجیتاڵ</string>
     <string name="market_editor_type_physical">لەشی</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">ئێستا بیکڕە</string>
     <string name="market_section_recently_viewed">تازە بینراوە</string>
     <string name="market_recently_viewed_clear">پاککردنەوەی هەموو</string>
+    <string name="market_listings_create">دروستکردن</string>
 </resources>

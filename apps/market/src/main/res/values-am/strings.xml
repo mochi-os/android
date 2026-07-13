@@ -214,6 +214,7 @@
     <string name="market_editor_title">ርዕስ</string>
     <string name="market_editor_title_edit">ዝርዝር አስተካክል</string>
     <string name="market_editor_title_new">አዲስ ዝርዝር</string>
+    <string name="market_editor_title_required">ፎቶዎችን ወይም ፋይሎችን ከማከልዎ በፊት ርዕስ ያስገቡ</string>
     <string name="market_editor_type">የዝርዝር ዓይነት</string>
     <string name="market_editor_type_digital">ዲጂታል</string>
     <string name="market_editor_type_physical">አካላዊ</string>
@@ -740,4 +741,5 @@
     <string name="market_listing_detail_buy_now_label">አሁን ግዛው</string>
     <string name="market_section_recently_viewed">በቅርቡ የታዩ</string>
     <string name="market_recently_viewed_clear">ሁሉንም አጽዳ</string>
+    <string name="market_listings_create">ፍጠር</string>
 </resources>

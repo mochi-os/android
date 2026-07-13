@@ -514,6 +514,7 @@
     <string name="market_editor_stripe_banner_title">Completeu la configuració d\'Stripe</string>
     <string name="market_editor_tags_field">Etiquetes (separades per comes)</string>
     <string name="market_editor_title_new">Nova publicació</string>
+    <string name="market_editor_title_required">Introduïu un títol abans d\'afegir fotos o fitxers</string>
     <string name="market_editor_type">Tipus de publicació</string>
     <string name="market_editor_zone_add">Afegeix una zona</string>
     <string name="market_editor_zone_country_au">Austràlia</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Compra-ho ara</string>
     <string name="market_section_recently_viewed">Vist recentment</string>
     <string name="market_recently_viewed_clear">Esborra-ho tot</string>
+    <string name="market_listings_create">Crea</string>
 </resources>

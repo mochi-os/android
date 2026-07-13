@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Stripe ऑनबोर्डिंग पूरी करें</string>
     <string name="market_editor_tags_field">टैग (अल्पविराम से अलग)</string>
     <string name="market_editor_title_new">नई लिस्टिंग</string>
+    <string name="market_editor_title_required">फ़ोटो या फ़ाइलें जोड़ने से पहले शीर्षक दर्ज करें</string>
     <string name="market_editor_type">लिस्टिंग प्रकार</string>
     <string name="market_editor_zone_add">क्षेत्र जोड़ें</string>
     <string name="market_editor_zone_country_au">ऑस्ट्रेलिया</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">अभी खरीदें</string>
     <string name="market_section_recently_viewed">हाल ही में देखा गया</string>
     <string name="market_recently_viewed_clear">सब साफ़ करें</string>
+    <string name="market_listings_create">बनाएँ</string>
 </resources>

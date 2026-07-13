@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Završite Stripe podešavanje</string>
     <string name="market_editor_tags_field">Oznake (odvojene zarezom)</string>
     <string name="market_editor_title_new">Novi oglas</string>
+    <string name="market_editor_title_required">Унесите наслов пре додавања фотографија или датотека</string>
     <string name="market_editor_type">Vrsta oglasa</string>
     <string name="market_editor_zone_add">Dodaj zonu</string>
     <string name="market_editor_zone_country_au">Australija</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Купи одмах</string>
     <string name="market_section_recently_viewed">Недавно прегледано</string>
     <string name="market_recently_viewed_clear">Очисти све</string>
+    <string name="market_listings_create">Креирај</string>
 </resources>

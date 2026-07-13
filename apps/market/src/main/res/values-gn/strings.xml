@@ -154,6 +154,7 @@
     <string name="market_editor_title">Téra</string>
     <string name="market_editor_title_edit">Embojuruja listado</string>
     <string name="market_editor_title_new">Ñepyrũmby pyahu</string>
+    <string name="market_editor_title_required">Emoinge peteĩ título embojuaju mboyve ta\'anga térã marandurenda</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Hete\'ỹva</string>
     <string name="market_editor_zone_cancel">Heja</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Ejogua ko\'ã ko\'ãngaite</string>
     <string name="market_section_recently_viewed">Ehecha va\'ekue ramoguáve</string>
     <string name="market_recently_viewed_clear">Embopotĩ opaite</string>
+    <string name="market_listings_create">Embojeguáva</string>
 </resources>

@@ -520,6 +520,7 @@
     <string name="market_editor_stripe_banner_title">Finalizați configurarea Stripe</string>
     <string name="market_editor_tags_field">Etichete (separate prin virgulă)</string>
     <string name="market_editor_title_new">Anunț nou</string>
+    <string name="market_editor_title_required">Introduceți un titlu înainte de a adăuga fotografii sau fișiere</string>
     <string name="market_editor_type">Tip de anunț</string>
     <string name="market_editor_zone_add">Adăugați zonă</string>
     <string name="market_editor_zone_country_au">Australia</string>
@@ -741,4 +742,5 @@
     <string name="market_listing_detail_buy_now_label">Cumpără acum</string>
     <string name="market_section_recently_viewed">Vizualizate recent</string>
     <string name="market_recently_viewed_clear">Golește tot</string>
+    <string name="market_listings_create">Creează</string>
 </resources>
