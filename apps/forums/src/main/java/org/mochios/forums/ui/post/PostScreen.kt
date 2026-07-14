@@ -79,9 +79,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -109,7 +114,9 @@ fun PostScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
-    var draft by remember { mutableStateOf("") }
+    // A TextFieldValue rather than a String: quoting has to place the caret, and
+    // only the value carries a selection.
+    var draft by remember { mutableStateOf(TextFieldValue("")) }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
     var showEditPost by remember { mutableStateOf(false) }
@@ -118,6 +125,27 @@ fun PostScreen(
     var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
     var showPostMenu by remember { mutableStateOf(false) }
     val isPostAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank()
+
+    val composerFocus = remember { FocusRequester() }
+    val keyboard = LocalSoftwareKeyboardController.current
+
+    // Quote and Reply both hand the conversation to the composer, so put the
+    // cursor in it and raise the keyboard. Guarded on canComment: without it the
+    // composer is not in the tree and the requester has nothing to focus.
+    val focusComposer = {
+        if (uiState.canComment && !uiState.post.locked) {
+            composerFocus.requestFocus()
+            keyboard?.show()
+        }
+    }
+
+    // Quote the given body into the draft and park the caret at the end — past the
+    // quote block, on the blank line the user is meant to type on.
+    val quoteIntoDraft = { body: String ->
+        val text = quoteText(body, draft.text)
+        draft = TextFieldValue(text = text, selection = TextRange(text.length))
+        focusComposer()
+    }
 
     LaunchedEffect(uiState.deleted) {
         if (uiState.deleted) onBack()
@@ -173,6 +201,11 @@ fun PostScreen(
                                 onRemove = viewModel::removePost,
                                 onRestore = viewModel::restorePost,
                                 onReport = { showReportPost = true },
+                                onQuote = {
+                                    quoteIntoDraft(
+                                        uiState.post.bodyMarkdown.ifBlank { uiState.post.body }
+                                    )
+                                },
                             )
                         }
                     }
@@ -211,6 +244,11 @@ fun PostScreen(
                                 canEdit = isPostAuthor || uiState.canModerate,
                                 forumId = viewModel.forumId,
                                 onVote = { viewModel.votePost(it) },
+                                onComment = if (uiState.canComment && !uiState.post.locked) {
+                                    focusComposer
+                                } else {
+                                    null
+                                },
                                 onAddTag = { label -> viewModel.addPostTag(label) },
                                 onRemoveTag = { tagId -> viewModel.removePostTag(tagId) },
                                 onTagInterest = { qid, direction -> viewModel.adjustTagInterest(qid, direction) },
@@ -237,13 +275,24 @@ fun PostScreen(
                                 currentIdentity = uiState.identity,
                                 canModerate = uiState.canModerate,
                                 onVote = viewModel::voteComment,
-                                onReply = { viewModel.setReplyTo(it) },
+                                onReply = { comment ->
+                                    viewModel.setReplyTo(comment)
+                                    focusComposer()
+                                },
                                 onEdit = { editingComment = it },
                                 onDelete = { commentToDelete = it },
                                 onApprove = { viewModel.approveComment(it.id) },
                                 onRemove = { viewModel.removeComment(it.id) },
                                 onRestore = { viewModel.restoreComment(it.id) },
                                 onReport = { reportingComment = it },
+                                // Quoting cites a comment; it does not thread under
+                                // it. Only Reply sets the parent, so the viewer can
+                                // reply to one comment while quoting another. Cite
+                                // the author's own words, not the quote they were
+                                // themselves replying to.
+                                onQuote = { comment ->
+                                    quoteIntoDraft(withoutQuote(comment.body))
+                                },
                             )
                         }
                     }
@@ -251,15 +300,16 @@ fun PostScreen(
                         ReplyBanner(uiState.replyTo, onClear = { viewModel.setReplyTo(null) })
                         ComposerBar(
                             value = draft,
-                            onValueChange = { draft = it },
+                            onValueChange = { value -> draft = value },
                             isSending = uiState.isSending,
                             enabled = !uiState.post.locked,
+                            focusRequester = composerFocus,
                             attachments = commentAttachments,
                             onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
                             onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
                             onSend = {
-                                viewModel.submitComment(draft)
-                                draft = ""
+                                viewModel.submitComment(draft.text)
+                                draft = TextFieldValue("")
                             }
                         )
                     }
@@ -622,7 +672,6 @@ private fun PostReaction(
 
 /**
  * The post's moderation and authoring actions, hosted by the screen's top bar.
- * "Quote in reply" is deliberately absent — the composer is the place to quote.
  */
 @Composable
 private fun PostActionsMenu(
@@ -642,6 +691,7 @@ private fun PostActionsMenu(
     onRemove: () -> Unit,
     onRestore: () -> Unit,
     onReport: () -> Unit,
+    onQuote: () -> Unit,
 ) {
     DropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
         if (canEdit) {
@@ -691,6 +741,10 @@ private fun PostActionsMenu(
                 )
             }
         }
+        DropdownMenuItem(
+            text = { Text(stringResource(R.string.forums_post_quote)) },
+            onClick = { onDismiss(); onQuote() }
+        )
         if (!isAuthor) {
             DropdownMenuItem(
                 text = { Text(stringResource(R.string.forums_post_report)) },
@@ -713,6 +767,7 @@ private fun PostHeader(
     canEdit: Boolean,
     forumId: String,
     onVote: (String) -> Unit,
+    onComment: (() -> Unit)?,
     onAddTag: (String) -> Unit,
     onRemoveTag: (String) -> Unit,
     onTagInterest: (qid: String, direction: String) -> Unit,
@@ -822,11 +877,15 @@ private fun PostHeader(
                     null
                 },
             )
+            // Unlike the votes, this counter is a way in: tapping it puts the
+            // cursor in the composer, the way the comment icon does elsewhere.
+            // Tappable only when the viewer may actually comment.
             PostReaction(
                 icon = if (post.comments == 0) Icons.Filled.ChatBubbleOutline
                        else Icons.Filled.ChatBubble,
                 contentDescription = stringResource(R.string.forums_post_comments),
                 count = post.comments,
+                onClick = onComment,
             )
         }
     }
@@ -848,6 +907,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
     onRemove: (ForumComment) -> Unit,
     onRestore: (ForumComment) -> Unit,
     onReport: (ForumComment) -> Unit,
+    onQuote: (ForumComment) -> Unit,
 ) {
     comments.forEach { c ->
         item(key = c.id) {
@@ -868,10 +928,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
                 onRemove = { onRemove(c) },
                 onRestore = { onRestore(c) },
                 onReport = { onReport(c) },
+                onQuote = { onQuote(c) },
             )
         }
         if (c.children.isNotEmpty()) {
-            commentsItems(c.children, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport)
+            commentsItems(c.children, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport, onQuote)
         }
     }
 }
@@ -897,6 +958,7 @@ private fun CommentCard(
     onRemove: () -> Unit,
     onRestore: () -> Unit,
     onReport: () -> Unit,
+    onQuote: () -> Unit,
 ) {
     var showMenu by remember { mutableStateOf(false) }
     CommentItem(
@@ -983,6 +1045,10 @@ private fun CommentCard(
                         )
                     }
                 }
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.forums_comment_quote)) },
+                    onClick = { showMenu = false; onQuote() }
+                )
                 if (!isAuthor) {
                     DropdownMenuItem(
                         text = { Text(stringResource(R.string.forums_comment_report)) },
@@ -1024,6 +1090,45 @@ private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
 
 
 /**
+ * A comment's own words, with any quote it was itself citing dropped.
+ *
+ * A quote is stored as a leading "> " block in the body, so quoting such a
+ * comment verbatim would nest the older quote inside the new one — and every
+ * further round would drag the whole chain along. A post never needs this: its
+ * body is the root of the thread and cites nothing.
+ *
+ * Only a *leading* block is dropped. A blockquote further down is something the
+ * author wrote into their own text, and it stays.
+ *
+ * Falls back to the untouched body when the comment is nothing but a quote —
+ * there are no original words to cite, so citing what they cited beats a menu
+ * item that silently does nothing.
+ */
+private fun withoutQuote(body: String): String {
+    val lines = body.split("\n")
+    if (lines.firstOrNull()?.startsWith(">") != true) return body
+    val own = lines.dropWhile { line -> line.startsWith(">") }
+        .dropWhile { line -> line.isBlank() }
+        .joinToString("\n")
+    return own.ifBlank { body }
+}
+
+/**
+ * Quote a post or comment body into the reply composer. Mirrors web's
+ * thread-detail behaviour: prefix every non-empty line with "> " and append
+ * a blank line so the user can start typing immediately. When the draft is
+ * already non-empty, prepend the quote above existing text.
+ */
+private fun quoteText(body: String, currentDraft: String): String {
+    val trimmed = body.trim()
+    if (trimmed.isEmpty()) return currentDraft
+    val quoted = trimmed.split("\n").joinToString("\n") { line ->
+        if (line.isBlank()) ">" else "> $line"
+    } + "\n\n"
+    return if (currentDraft.isBlank()) quoted else "$quoted$currentDraft"
+}
+
+/**
  * The provider's display name for [uri]; a `content://` path segment is an
  * opaque id, so the chip would otherwise read "image:59".
  */
@@ -1044,10 +1149,11 @@ private fun rememberFileName(uri: Uri, fallback: String): String {
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 private fun ComposerBar(
-    value: String,
-    onValueChange: (String) -> Unit,
+    value: TextFieldValue,
+    onValueChange: (TextFieldValue) -> Unit,
     isSending: Boolean,
     enabled: Boolean,
+    focusRequester: FocusRequester,
     attachments: List<Uri>,
     onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
@@ -1102,7 +1208,7 @@ private fun ComposerBar(
             OutlinedTextField(
                 value = value,
                 onValueChange = onValueChange,
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f).focusRequester(focusRequester),
                 placeholder = { Text(stringResource(R.string.forums_write_comment)) },
                 enabled = enabled,
                 maxLines = 4
@@ -1111,7 +1217,7 @@ private fun ComposerBar(
             IconButton(
                 onClick = onSend,
                 // A body is required even when files are attached (server 400s).
-                enabled = enabled && !isSending && value.isNotBlank()
+                enabled = enabled && !isSending && value.text.isNotBlank()
             ) {
                 if (isSending) {
                     CircularProgressIndicator(modifier = Modifier.size(20.dp))
