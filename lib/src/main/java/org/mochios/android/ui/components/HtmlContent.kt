@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import io.noties.markwon.Markwon
+import io.noties.markwon.SoftBreakAddsNewLinePlugin
 import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
 import io.noties.markwon.ext.tables.TableAwareMovementMethod
 import io.noties.markwon.ext.tables.TablePlugin
@@ -35,6 +36,10 @@ fun HtmlContent(
     val context = LocalContext.current
     val markwon = remember(context) {
         Markwon.builder(context)
+            // CommonMark folds a single newline into the surrounding paragraph and
+            // renders it as a space, so a body typed as two lines came out as one.
+            // People write these bodies in a message box, where Enter means Enter.
+            .usePlugin(SoftBreakAddsNewLinePlugin.create())
             .usePlugin(HtmlPlugin.create())
             .usePlugin(ImagesPlugin.create())
             .usePlugin(TablePlugin.create(context))
