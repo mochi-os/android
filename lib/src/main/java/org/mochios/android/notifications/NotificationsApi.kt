@@ -29,4 +29,10 @@ interface NotificationsApi {
 
     @POST("-/clear/all")
     suspend fun clearAll(): Response<ApiResponse<Map<String, Any>>>
+
+    @FormUrlEncoded
+    @POST("-/accounts/remove")
+    suspend fun removeAccount(
+        @Field("id") id: String,
+    ): Response<ApiResponse<Map<String, Any>>>
 }
