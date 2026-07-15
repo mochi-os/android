@@ -219,17 +219,44 @@ class ForumsRepository @Inject constructor(
         return uri.lastPathSegment?.substringAfterLast('/') ?: "file"
     }
 
-    suspend fun editPost(forumId: String, postId: String, title: String, body: String, order: String? = null, files: List<File> = emptyList()) {
-        val parts = files.map { f ->
-            MultipartBody.Part.createFormData("attachments", f.name, f.asRequestBody(guessMediaType(f).toMediaTypeOrNull()))
+    /**
+     * Edit a post's title, body and attachments. [keptAttachmentIds] lists the
+     * existing attachments to retain, in the order they should appear; each file
+     * in [newFileUris] is read from the picker and appended. The `order` part
+     * ties the two together — kept ids followed by a `new:N` marker per new file
+     * — mirroring [editCommentFromUris]. Passing a null [keptAttachmentIds] with
+     * no new files omits `order` entirely, leaving the attachments untouched.
+     */
+    suspend fun editPostFromUris(
+        forumId: String,
+        postId: String,
+        title: String,
+        body: String,
+        keptAttachmentIds: List<String>?,
+        newFileUris: List<android.net.Uri>,
+        contentResolver: android.content.ContentResolver,
+    ) {
+        val newParts = newFileUris.map { uri ->
+            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
+            val bytes = contentResolver.openInputStream(uri)?.readBytes()
+                ?: throw IllegalStateException("Cannot read $uri")
+            MultipartBody.Part.createFormData(
+                "attachments", displayName(contentResolver, uri),
+                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
+            )
         }
+        val order: List<String>? = when {
+            keptAttachmentIds == null && newFileUris.isEmpty() -> null
+            else -> keptAttachmentIds.orEmpty() + newFileUris.indices.map { "new:$it" }
+        }
+        val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
         api.editPost(
             forumId = forumId,
             postId = postId,
             title = title.toRequestBody(text),
             body = body.toRequestBody(text),
-            order = order?.toRequestBody(text),
-            attachments = parts
+            order = orderJson,
+            attachments = newParts,
         ).unwrap()
     }
 
