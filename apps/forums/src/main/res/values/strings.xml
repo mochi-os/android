@@ -153,7 +153,7 @@
 
     <!-- Banner tab -->
     <string name="forums_banner_description">Markdown shown at the top of the forum.</string>
-    <string name="forums_banner_placeholder">Welcome to this forum…</string>
+    <string name="forums_banner_placeholder">Enter banner text (markdown supported)…</string>
     <string name="forums_banner_dismiss">Dismiss banner</string>
 
     <!-- AI tab -->
@@ -249,6 +249,26 @@
 
     <!-- Forum settings -->
     <string name="forums_settings_title">Forum settings</string>
+    <string name="forums_settings_forum_renamed">Forum renamed</string>
+    <string name="forums_settings_banner_saved">Banner saved</string>
+    <string name="forums_settings_access_updated">Access updated</string>
+    <string name="forums_settings_access_revoked">Access revoked</string>
+    <string name="forums_settings_member_removed">Member removed</string>
+    <string name="forums_settings_ai_updated">AI settings updated</string>
+    <string name="forums_settings_prompt_saved">Prompt saved</string>
+    <string name="forums_settings_section_identity">Identity</string>
+    <string name="forums_settings_field_name">Name</string>
+    <string name="forums_settings_field_entity_id">Entity ID</string>
+    <string name="forums_settings_field_fingerprint_label">Fingerprint</string>
+    <string name="forums_settings_field_server">Server</string>
+    <string name="forums_settings_name_edit_cd">Edit name</string>
+    <string name="forums_settings_name_cancel_cd">Cancel editing</string>
+    <string name="forums_settings_name_clear_cd">Clear name</string>
+    <string name="forums_settings_save_name">Save name</string>
+    <string name="forums_settings_delete_description">Permanently delete this forum and all its content.</string>
+    <string name="forums_settings_section_manage">Manage</string>
+    <string name="forums_access_management">Access Management</string>
+    <string name="forums_access_management_description">Control who can view and interact with this forum</string>
     <string name="forums_settings_rename">Rename</string>
     <string name="forums_settings_rename_label">Forum name</string>
     <string name="forums_settings_save">Save</string>

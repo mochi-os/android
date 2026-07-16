@@ -6,18 +6,20 @@
 package org.mochios.forums.ui.settings
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -26,9 +28,10 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Tab
@@ -47,51 +50,119 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.AccessRuleCard
+import org.mochios.android.ui.components.Section
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
+/**
+ * Access tab: an "Access Management" [Section] listing every access rule with
+ * an inline level dropdown and revoke, plus a merged "Members" section for
+ * searching and removing forum members. Styled to match feeds' Access tab.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AccessTab(viewModel: ForumSettingsViewModel) {
     val uiState by viewModel.uiState.collectAsState()
     var showAdd by remember { mutableStateOf(false) }
+    var memberQuery by remember { mutableStateOf("") }
 
-    LaunchedEffect(Unit) { viewModel.loadAccess() }
+    LaunchedEffect(Unit) {
+        viewModel.loadAccess()
+        viewModel.loadMembers()
+    }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        OutlinedButton(
-            onClick = { showAdd = true },
-            modifier = Modifier.padding(16.dp),
+    val filteredMembers = if (memberQuery.isBlank()) {
+        uiState.members
+    } else {
+        uiState.members.filter { member -> member.name.contains(memberQuery, ignoreCase = true) }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        Section(
+            title = stringResource(R.string.forums_access_management),
+            description = stringResource(R.string.forums_access_management_description),
+            action = {
+                Button(onClick = { showAdd = true }) {
+                    Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(4.dp))
+                    Text(stringResource(R.string.forums_access_add))
+                }
+            },
         ) {
-            Text(stringResource(R.string.forums_access_add))
-        }
-        if (uiState.accessRules.isEmpty()) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            if (uiState.accessRules.isEmpty()) {
                 Text(
                     stringResource(R.string.forums_access_empty),
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 8.dp),
                 )
+            } else {
+                Column(
+                    modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    uiState.accessRules.forEach { rule ->
+                        // Render the rule's effective level (a deny rule, grant=0,
+                        // reads as "none") so the chip and the level dropdown
+                        // share one label function.
+                        val effective = rule.copy(
+                            operation = if (rule.grant == 0) "none" else rule.operation,
+                        )
+                        AccessRuleCard(
+                            rule = effective,
+                            levelLabel = { op -> accessLevelLabel(op) },
+                            onRevoke = { viewModel.revokeAccess(rule.subject) },
+                            levels = ACCESS_LEVEL_CHANGE_KEYS,
+                            onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
+                        )
+                    }
+                }
             }
-        } else {
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 4.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                items(uiState.accessRules, key = { it.subject }) { rule ->
-                    // Render the rule's effective level (a deny rule, grant=0,
-                    // reads as "none") so the chip and the grant-independent
-                    // level dropdown share one label function.
-                    val effective = rule.copy(
-                        operation = if (rule.grant == 0) "none" else rule.operation,
+        }
+
+        Section(title = stringResource(R.string.forums_tab_members)) {
+            Column(modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
+                OutlinedTextField(
+                    value = memberQuery,
+                    onValueChange = { value -> memberQuery = value },
+                    placeholder = { Text(stringResource(R.string.forums_members_search)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Spacer(Modifier.height(8.dp))
+                if (filteredMembers.isEmpty()) {
+                    Text(
+                        stringResource(R.string.forums_members_empty),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
-                    AccessRuleCard(
-                        rule = effective,
-                        levelLabel = { op -> accessLevelLabel(op) },
-                        onRevoke = { viewModel.revokeAccess(rule.subject) },
-                        levels = ACCESS_LEVEL_CHANGE_KEYS,
-                        onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
-                    )
+                } else {
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        filteredMembers.forEach { member ->
+                            Row(
+                                modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(
+                                    member.name.ifBlank { member.id },
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    modifier = Modifier.weight(1f),
+                                )
+                                IconButton(onClick = { viewModel.removeMember(member.id) }) {
+                                    Icon(
+                                        Icons.Default.Delete,
+                                        contentDescription = stringResource(MochiR.string.common_delete),
+                                    )
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

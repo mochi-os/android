@@ -17,6 +17,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
+import org.mochios.forums.R
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.Forum
@@ -29,6 +30,7 @@ data class ForumSettingsUiState(
     val isLoading: Boolean = false,
     val isSaving: Boolean = false,
     val error: MochiError? = null,
+    val actionMessage: Int? = null,
     val deleted: Boolean = false,
     val accessRules: List<AccessRule> = emptyList(),
     val members: List<ForumMember> = emptyList(),
@@ -77,7 +79,8 @@ class ForumSettingsViewModel @Inject constructor(
                 repository.renameForum(forumId, newName)
                 _uiState.value = _uiState.value.copy(
                     forum = _uiState.value.forum.copy(name = newName),
-                    isSaving = false
+                    isSaving = false,
+                    actionMessage = R.string.forums_settings_forum_renamed,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
@@ -113,6 +116,9 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAccess(forumId, target, level)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.forums_settings_access_updated,
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -124,6 +130,9 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.revokeAccess(forumId, target)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.forums_settings_access_revoked,
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -186,6 +195,9 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.removeMember(forumId, memberId)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.forums_settings_member_removed,
+                )
                 loadMembers()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -208,7 +220,11 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setBanner(forumId, banner)
-                _uiState.value = _uiState.value.copy(banner = banner)
+                _uiState.value = _uiState.value.copy(
+                    banner = banner,
+                    forum = _uiState.value.forum.copy(banner = banner),
+                    actionMessage = R.string.forums_settings_banner_saved,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -243,6 +259,7 @@ class ForumSettingsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     aiSettings = AiSettings(mode = mode, account = account),
                     forum = _uiState.value.forum.copy(aiMode = mode, aiAccount = account),
+                    actionMessage = R.string.forums_settings_ai_updated,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -258,6 +275,7 @@ class ForumSettingsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     aiPrompts = _uiState.value.aiPrompts?.copy(prompts = current + (type to prompt))
                         ?: AiPrompts(prompts = mapOf(type to prompt)),
+                    actionMessage = R.string.forums_settings_prompt_saved,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -284,6 +302,14 @@ class ForumSettingsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
+    }
+
+    fun clearActionMessage() {
+        _uiState.value = _uiState.value.copy(actionMessage = null)
     }
 
     fun loadRssToken() {

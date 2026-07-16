@@ -177,6 +177,8 @@
     <string name="feeds_save_name">Save name</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Optional markdown banner shown at the top of your feed.</string>
+    <string name="feeds_banner_hint">Enter banner text (markdown supported)…</string>
+    <string name="feeds_banner_dismiss">Dismiss banner</string>
     <string name="feeds_save_banner">Save banner</string>
     <string name="feeds_clear">Clear</string>
     <string name="feeds_rss_export">RSS export</string>

@@ -52,7 +52,6 @@ import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.outlined.Whatshot
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -73,6 +72,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -93,6 +93,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
@@ -116,6 +119,7 @@ import org.mochios.forums.ui.forumlist.CreateForumDialog
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
+import androidx.core.content.edit
 
 /**
  * Width reserved for a post card's action strip. Sized for the full set — save,
@@ -292,14 +296,19 @@ private fun ForumDrawerPlaceholder(onOpenDrawer: () -> Unit) {
                 title = { Text(stringResource(R.string.forums_list_title)) },
                 navigationIcon = {
                     IconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.forums_list_title))
+                        Icon(
+                            Icons.Default.Menu,
+                            contentDescription = stringResource(R.string.forums_list_title)
+                        )
                     }
                 }
             )
         }
     ) { padding ->
         Box(
-            modifier = Modifier.fillMaxSize().padding(padding),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding),
             contentAlignment = Alignment.Center,
         ) {
             Text(
@@ -335,6 +344,20 @@ private fun ForumContent(
     val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)
     val rssCopiedMessage = stringResource(R.string.forums_rss_copied)
 
+    // Silently reload the forum when it returns to the foreground — e.g. after
+    // editing the banner in settings — so the change shows without a manual
+    // pull-to-refresh.
+    val forumLifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(forumLifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                viewModel.reloadOnForeground()
+            }
+        }
+        forumLifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { forumLifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
     LaunchedEffect(viewModel) {
         viewModel.events.collect { event ->
             when (event) {
@@ -344,6 +367,7 @@ private fun ForumContent(
                     )
                     snackbar.showSnackbar(rssCopiedMessage)
                 }
+
                 is ForumEvent.Unsubscribed -> onUnsubscribed()
                 is ForumEvent.ShowError -> snackbar.showSnackbar(event.error.userMessage())
             }
@@ -549,101 +573,121 @@ private fun ForumContent(
         PullToRefreshBox(
             isRefreshing = uiState.isRefreshing,
             onRefresh = { viewModel.refresh() },
-            modifier = Modifier.fillMaxSize().padding(padding)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
         ) {
-          Column(modifier = Modifier.fillMaxSize()) {
-            if (uiState.forum.bannerHtml.isNotBlank()) {
-                ForumBanner(
-                    bannerHtml = uiState.forum.bannerHtml,
-                    forumId = uiState.forum.id,
-                )
-            }
-            when {
-                uiState.isLoading && uiState.posts.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator()
-                    }
-                }
-                uiState.error is MochiError.NotFoundError && uiState.posts.isEmpty() -> {
-                    NotFoundState(
-                        title = stringResource(R.string.forums_forum_not_found),
-                        onBack = onOpenDrawer,
+            Column(modifier = Modifier.fillMaxSize()) {
+                if (uiState.forum.banner.isNotBlank()) {
+                    ForumBanner(
+                        banner = uiState.forum.banner,
+                        forumId = uiState.forum.id,
                     )
                 }
-                uiState.error != null && uiState.posts.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(uiState.error!!.userMessage(), color = MaterialTheme.colorScheme.error)
-                    }
-                }
-                uiState.posts.isEmpty() -> {
-                    LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(16.dp)) {
-                        item {
-                            Box(
-                                Modifier.fillMaxWidth().padding(top = 64.dp),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text(
-                                    stringResource(R.string.forums_no_posts),
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
+                when {
+                    uiState.isLoading && uiState.posts.isEmpty() -> {
+                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            CircularProgressIndicator()
                         }
                     }
-                }
-                else -> {
-                    val listState = androidx.compose.foundation.lazy.rememberLazyListState()
-                    val pillScope = rememberCoroutineScope()
-                    Box(modifier = Modifier.fillMaxSize()) {
-                    LazyColumn(
-                        state = listState,
-                        modifier = Modifier.fillMaxSize(),
-                        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        items(uiState.posts, key = { it.id }) { post ->
-                            PostCard(
-                                post = post,
-                                // Aggregate rows each carry their own forum.
-                                forumId = post.forum.ifBlank { forumIdForCallbacks },
-                                isSaved = savedIds.contains(post.id),
-                                showForumName = isAll,
-                                onClick = {
-                                    // Aggregate posts each belong to their own forum.
-                                    val targetForum = if (isAll) post.forum else forumIdForCallbacks
-                                    onPostClick(targetForum, post.id)
-                                },
-                                onToggleSave = { viewModel.toggleSave(post) },
+
+                    uiState.error is MochiError.NotFoundError && uiState.posts.isEmpty() -> {
+                        NotFoundState(
+                            title = stringResource(R.string.forums_forum_not_found),
+                            onBack = onOpenDrawer,
+                        )
+                    }
+
+                    uiState.error != null && uiState.posts.isEmpty() -> {
+                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            Text(
+                                uiState.error!!.userMessage(),
+                                color = MaterialTheme.colorScheme.error
                             )
                         }
-                        if (uiState.hasMore) {
+                    }
+
+                    uiState.posts.isEmpty() -> {
+                        LazyColumn(
+                            modifier = Modifier.fillMaxSize(),
+                            contentPadding = PaddingValues(16.dp)
+                        ) {
                             item {
-                                Box(Modifier.fillMaxWidth().padding(8.dp), contentAlignment = Alignment.Center) {
-                                    if (uiState.isLoadingMore) {
-                                        CircularProgressIndicator()
-                                    } else {
-                                        TextButton(onClick = { viewModel.loadMore() }) {
-                                            Text(stringResource(R.string.forums_load_more))
-                                        }
-                                    }
+                                Box(
+                                    Modifier
+                                        .fillMaxWidth()
+                                        .padding(top = 64.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        stringResource(R.string.forums_no_posts),
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
                                 }
                             }
                         }
                     }
-                    NewItemsPill(
-                        count = newPostsCount,
-                        label = pluralStringResource(
-                            R.plurals.forums_new_posts, newPostsCount, newPostsCount
-                        ),
-                        onClick = {
-                            viewModel.showNewPosts()
-                            pillScope.launch { listState.animateScrollToItem(0) }
-                        },
-                        modifier = Modifier.align(Alignment.TopCenter),
-                    )
+
+                    else -> {
+                        val listState = androidx.compose.foundation.lazy.rememberLazyListState()
+                        val pillScope = rememberCoroutineScope()
+                        Box(modifier = Modifier.fillMaxSize()) {
+                            LazyColumn(
+                                state = listState,
+                                modifier = Modifier.fillMaxSize(),
+                                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                items(uiState.posts, key = { it.id }) { post ->
+                                    PostCard(
+                                        post = post,
+                                        // Aggregate rows each carry their own forum.
+                                        forumId = post.forum.ifBlank { forumIdForCallbacks },
+                                        isSaved = savedIds.contains(post.id),
+                                        showForumName = isAll,
+                                        onClick = {
+                                            // Aggregate posts each belong to their own forum.
+                                            val targetForum =
+                                                if (isAll) post.forum else forumIdForCallbacks
+                                            onPostClick(targetForum, post.id)
+                                        },
+                                        onToggleSave = { viewModel.toggleSave(post) },
+                                    )
+                                }
+                                if (uiState.hasMore) {
+                                    item {
+                                        Box(
+                                            Modifier
+                                                .fillMaxWidth()
+                                                .padding(8.dp),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            if (uiState.isLoadingMore) {
+                                                CircularProgressIndicator()
+                                            } else {
+                                                TextButton(onClick = { viewModel.loadMore() }) {
+                                                    Text(stringResource(R.string.forums_load_more))
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            NewItemsPill(
+                                count = newPostsCount,
+                                label = pluralStringResource(
+                                    R.plurals.forums_new_posts, newPostsCount, newPostsCount
+                                ),
+                                onClick = {
+                                    viewModel.showNewPosts()
+                                    pillScope.launch { listState.animateScrollToItem(0) }
+                                },
+                                modifier = Modifier.align(Alignment.TopCenter),
+                            )
+                        }
                     }
                 }
             }
-          }
         }
     }
 
@@ -674,7 +718,9 @@ private fun PostCard(
 ) {
     val format = LocalFormat.current
     OutlinedCard(
-        modifier = Modifier.fillMaxWidth().clickable(onClick = onClick),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
         shape = MaterialTheme.shapes.medium,
         // Outline only — the card reads against the screen background rather
         // than sitting on its own surface tint.
@@ -764,14 +810,14 @@ private fun PostCard(
                     // vote; the count is the post's tally either way.
                     CountedAction(
                         icon = if (post.userVote == "up") Icons.Filled.ThumbUp
-                               else Icons.Outlined.ThumbUp,
+                        else Icons.Outlined.ThumbUp,
                         contentDescription = stringResource(R.string.forums_post_vote_up),
                         count = post.up,
                         onClick = onClick,
                     )
                     CountedAction(
                         icon = if (post.userVote == "down") Icons.Filled.ThumbDown
-                               else Icons.Outlined.ThumbDown,
+                        else Icons.Outlined.ThumbDown,
                         contentDescription = stringResource(R.string.forums_post_vote_down),
                         count = post.down,
                         onClick = onClick,
@@ -840,7 +886,9 @@ private fun CountedAction(
 ) {
     if (count == 0) return
     val clickable = if (onClick != null) {
-        Modifier.clip(RoundedCornerShape(8.dp)).clickable(onClick = onClick)
+        Modifier
+            .clip(RoundedCornerShape(8.dp))
+            .clickable(onClick = onClick)
     } else {
         Modifier
     }
@@ -866,33 +914,42 @@ private fun CountedAction(
 
 private fun bannerContentHash(content: String): String {
     var hash = 5381
-    for (c in content) hash = (hash shl 5) + hash + c.code
+    for (c in content) hash += (hash shl 5) + c.code
     return Integer.toHexString(hash)
 }
 
 @Composable
-private fun ForumBanner(bannerHtml: String, forumId: String) {
+private fun ForumBanner(banner: String, forumId: String) {
     val context = LocalContext.current
     val prefs = remember(context) {
         context.getSharedPreferences("forums_banner_dismissed", Context.MODE_PRIVATE)
     }
     val prefKey = remember(forumId) { "forum_$forumId" }
-    val contentHash = remember(bannerHtml) { bannerContentHash(bannerHtml) }
+    val contentHash = remember(banner) { bannerContentHash(banner) }
     var dismissed by remember(prefKey, contentHash) {
         mutableStateOf(prefs.getString(prefKey, null) == contentHash)
     }
     if (dismissed) return
 
-    Card(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
+    OutlinedCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
+    ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(start = 12.dp, top = 8.dp, bottom = 8.dp),
-            verticalAlignment = Alignment.Top,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 12.dp, top = 8.dp, bottom = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            HtmlContent(html = bannerHtml, modifier = Modifier.weight(1f))
-            IconButton(onClick = {
-                prefs.edit().putString(prefKey, contentHash).apply()
-                dismissed = true
-            }) {
+            HtmlContent(html = banner, modifier = Modifier.weight(1f))
+            IconButton(
+                onClick = {
+                    prefs.edit { putString(prefKey, contentHash) }
+                    dismissed = true
+                },
+            ) {
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.forums_banner_dismiss),

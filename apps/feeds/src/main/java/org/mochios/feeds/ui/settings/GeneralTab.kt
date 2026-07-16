@@ -92,32 +92,23 @@ fun GeneralTab(
             title = stringResource(R.string.feeds_banner),
             description = stringResource(R.string.feeds_banner_description),
         ) {
-            Column(modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
+            Column(modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 8.dp)) {
                 OutlinedTextField(
                     value = banner,
                     onValueChange = { value -> viewModel.setBannerText(value) },
+                    placeholder = { Text(stringResource(R.string.feeds_banner_hint)) },
                     modifier = Modifier.fillMaxWidth(),
                     minLines = 3,
                     maxLines = 8
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Button(onClick = {
-                        viewModel.saveBanner()
-                        focusManager.clearFocus()
-                    }) {
-                        Text(stringResource(MochiR.string.common_save))
-                    }
-                    if (banner.isNotEmpty()) {
-                        OutlinedButton(
-                            onClick = { viewModel.clearBanner() },
-                            colors = ButtonDefaults.outlinedButtonColors(
-                                contentColor = MaterialTheme.colorScheme.onSurface
-                            ),
-                        ) {
-                            Text(stringResource(R.string.feeds_clear))
-                        }
-                    }
+                Button(onClick = {
+                    viewModel.saveBanner()
+                    focusManager.clearFocus()
+                }) {
+                    Text(stringResource(MochiR.string.common_save))
                 }
             }
         }
@@ -242,6 +233,18 @@ private fun NameEditor(
                 value = editValue,
                 onValueChange = { value -> editValue = value },
                 singleLine = true,
+                trailingIcon = if (editValue.isNotEmpty()) {
+                    {
+                        IconButton(onClick = { editValue = "" }) {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = stringResource(R.string.feeds_clear),
+                            )
+                        }
+                    }
+                } else {
+                    null
+                },
                 modifier = Modifier.weight(1f),
             )
             IconButton(onClick = {
@@ -265,14 +268,16 @@ private fun NameEditor(
         }
     } else {
         Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
-            // Weight so a long, multi-line name wraps instead of shoving the
-            // edit button off the end of the row.
-            Text(currentName, modifier = Modifier.weight(1f))
-            Spacer(modifier = Modifier.width(4.dp))
-            IconButton(onClick = {
-                editValue = currentName
-                isEditing = true
-            }) {
+            // fill = false keeps the pencil next to the name instead of pushed to
+            // the far end, while the weight still lets a long name wrap.
+            Text(currentName, modifier = Modifier.weight(1f, fill = false))
+            IconButton(
+                onClick = {
+                    editValue = currentName
+                    isEditing = true
+                },
+                modifier = Modifier.size(30.dp),
+            ) {
                 Icon(
                     Icons.Default.Edit,
                     contentDescription = stringResource(R.string.feeds_settings_name_edit_cd),

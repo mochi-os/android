@@ -1043,6 +1043,22 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
+     * Silently re-fetch the feed's info (name, banner, permissions) so edits made
+     * elsewhere — e.g. saving a new banner in feed settings — show on return
+     * without a manual pull-to-refresh. Keeps the current sort untouched.
+     */
+    private suspend fun refreshFeedInfo() {
+        if (isAllFeeds || feedId.isBlank()) return
+        try {
+            val info = repository.getFeedInfo(feedId)
+            _feedInfo.value = info.feed
+            _permissions.value = info.permissions
+        } catch (_: Exception) {
+            // Silent failure — keep showing the current info.
+        }
+    }
+
+    /**
      * Silently reload the feed when the screen returns to the foreground — e.g.
      * after the user created a post here — so a newly added (or first) post
      * shows without a manual pull-to-refresh.
@@ -1055,6 +1071,7 @@ class FeedViewModel @Inject constructor(
                 } catch (_: Exception) {
                 }
             } else if (feedId.isNotBlank()) {
+                refreshFeedInfo()
                 refreshSilently()
             }
         }

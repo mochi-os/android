@@ -199,6 +199,17 @@ class ForumViewModel @Inject constructor(
         viewModelScope.launch { refreshSilently() }
     }
 
+    /**
+     * Silently reload the forum when the screen returns to the foreground — e.g.
+     * after saving a new banner in forum settings — so the change shows on
+     * return without a manual pull-to-refresh. The aggregate "all" view has no
+     * per-forum banner, so it's skipped.
+     */
+    fun reloadOnForeground() {
+        if (isAll || forumId.isBlank()) return
+        viewModelScope.launch { refreshSilently() }
+    }
+
     override fun onCleared() {
         super.onCleared()
         subscriptionId?.let { webSocket.unsubscribe(it) }

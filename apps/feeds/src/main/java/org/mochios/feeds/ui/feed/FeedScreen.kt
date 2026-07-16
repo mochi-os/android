@@ -6,6 +6,7 @@
 package org.mochios.feeds.ui.feed
 
 import android.content.ClipData
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -65,8 +66,8 @@ import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
@@ -81,7 +82,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
@@ -93,7 +93,6 @@ import androidx.compose.material3.rememberDrawerState
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -114,6 +113,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
@@ -174,6 +174,7 @@ import org.mochios.feeds.ui.feedlist.CreateFeedDialog
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
+import androidx.core.content.edit
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -759,6 +760,9 @@ fun FeedScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
+                feedInfo?.banner?.takeIf { banner -> banner.isNotBlank() }?.let { banner ->
+                    FeedBanner(banner = banner, feedId = viewModel.feedId)
+                }
                 PullToRefreshBox(
                     isRefreshing = isRefreshing,
                     onRefresh = {
@@ -1787,4 +1791,52 @@ private fun InterestSuggestionsDialog(
             }
         },
     )
+}
+
+private fun bannerContentHash(content: String): String {
+    var hash = 5381
+    for (c in content) hash += (hash shl 5) + c.code
+    return Integer.toHexString(hash)
+}
+
+/**
+ * Dismissible markdown banner shown at the top of a feed, mirroring the forums
+ * banner. Dismissal is persisted per feed keyed by a content hash, so a new
+ * banner (different text) reappears even after a previous one was dismissed.
+ */
+@Composable
+private fun FeedBanner(banner: String, feedId: String) {
+    val context = LocalContext.current
+    val prefs = remember(context) {
+        context.getSharedPreferences("feeds_banner_dismissed", Context.MODE_PRIVATE)
+    }
+    val prefKey = remember(feedId) { "feed_$feedId" }
+    val contentHash = remember(banner) { bannerContentHash(banner) }
+    var dismissed by remember(prefKey, contentHash) {
+        mutableStateOf(prefs.getString(prefKey, null) == contentHash)
+    }
+    if (dismissed) return
+
+    OutlinedCard(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(start = 12.dp, top = 8.dp, bottom = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            HtmlContent(html = banner, modifier = Modifier.weight(1f))
+            IconButton(
+                onClick = {
+                    prefs.edit { putString(prefKey, contentHash) }
+                    dismissed = true
+                },
+            ) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.feeds_banner_dismiss),
+                )
+            }
+        }
+    }
 }
