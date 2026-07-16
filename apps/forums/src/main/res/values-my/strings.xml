@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ဤမှတ်ချက်ကို ဖျက်လိုသည်မှာ သေချာပါသလား?</string>
     <string name="forums_comment_replying_to">%1$s သို့ ပြန်လည်ဖြေကြားနေသည်</string>
     <string name="forums_comment_clear_reply">ပြန်ဖြေကြားမှုကို ရှင်းလင်းပါ</string>
-    <string name="forums_settings_title">ဖိုရမ် ဆက်တင်များ</string>
+    <string name="forums_settings_title">%1$s ဆက်တင်များ</string>
     <string name="forums_settings_rename_label">ဖိုရမ်အမည်</string>
     <string name="forums_settings_danger_zone">အန္တရာယ်ဇုန်</string>
     <string name="forums_settings_delete_message">၎င်းသည် ဖိုရမ်နှင့် ၎င်း၏ ပို့စ်အားလုံးကို အပြီးတိုင် ဖျက်ပါမည်။ ၎င်းကို ပြန်လည်ပြုပြင်၍ မရပါ။</string>

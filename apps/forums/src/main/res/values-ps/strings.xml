@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ایا تاسو ډاډه یاست چې غواړئ دا کمنټ ړنګ کړئ؟</string>
     <string name="forums_comment_replying_to">%1$s ته ځواب ویل کیږي</string>
     <string name="forums_comment_clear_reply">ځواب پاک کړئ</string>
-    <string name="forums_settings_title">د فورم تنظیمات</string>
+    <string name="forums_settings_title">د %1$s تنظیمات</string>
     <string name="forums_settings_rename_label">د فورم نوم</string>
     <string name="forums_settings_danger_zone">د خطر ساحه</string>
     <string name="forums_settings_delete_message">دا به فورم او ټول پوسټونه یې په دایمي توګه ړنګ کړي. دا نه شي بېرته راګرځیدلی.</string>

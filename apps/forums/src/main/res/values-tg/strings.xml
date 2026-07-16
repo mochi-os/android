@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Шумо мутмаин ҳастед, ки мехоҳед ин шарҳро нест кунед?</string>
     <string name="forums_comment_replying_to">Ҷавоб ба %1$s</string>
     <string name="forums_comment_clear_reply">Ҷавобро тоза кунед</string>
-    <string name="forums_settings_title">Танзимоти форум</string>
+    <string name="forums_settings_title">Танзимоти %1$s</string>
     <string name="forums_settings_rename_label">Номи форум</string>
     <string name="forums_settings_danger_zone">Минтақаи хатарнок</string>
     <string name="forums_settings_delete_message">Ин форум ва ҳамаи паёмҳои онро бебозгашт нест мекунад. Инро баргардонидан мумкин нест.</string>

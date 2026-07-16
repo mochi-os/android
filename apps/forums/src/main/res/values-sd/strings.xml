@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ڇا توهان پڪ سان هي تبصرو ڊاهڻ چاهيو ٿا؟</string>
     <string name="forums_comment_replying_to">%1$s کي جواب ڏئي رهيا آهيو</string>
     <string name="forums_comment_clear_reply">جواب صاف ڪريو</string>
-    <string name="forums_settings_title">فورم سيٽنگون</string>
+    <string name="forums_settings_title">%1$s سيٽنگون</string>
     <string name="forums_settings_rename_label">فورم جو نالو</string>
     <string name="forums_settings_danger_zone">خطري وارو علائقو</string>
     <string name="forums_settings_delete_message">هي فورم ۽ ان جون سڀ پوسٽون مستقل طور ڊاهي ڇڏيندو. اهو واپس نٿو ٿي سگهي.</string>

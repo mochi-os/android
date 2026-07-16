@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Sigurado ka bang gusto mong tanggalin ang komentong ito?</string>
     <string name="forums_comment_replying_to">Tumutugon kay %1$s</string>
     <string name="forums_comment_clear_reply">I-clear ang tugon</string>
-    <string name="forums_settings_title">Mga setting ng forum</string>
+    <string name="forums_settings_title">Mga setting ng %1$s</string>
     <string name="forums_settings_rename_label">Pangalan ng forum</string>
     <string name="forums_settings_danger_zone">Mapanganib na bahagi</string>
     <string name="forums_settings_delete_message">Permanenteng matatanggal nito ang forum at lahat ng mga post nito. Hindi ito mababawi.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">このコメントを削除してもよろしいですか？</string>
     <string name="forums_comment_replying_to">%1$s に返信中</string>
     <string name="forums_comment_clear_reply">返信をクリア</string>
-    <string name="forums_settings_title">フォーラム設定</string>
+    <string name="forums_settings_title">%1$sの設定</string>
     <string name="forums_settings_rename_label">フォーラム名</string>
     <string name="forums_settings_danger_zone">危険ゾーン</string>
     <string name="forums_settings_delete_message">フォーラムとすべての投稿が完全に削除されます。この操作は取り消せません。</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել այս մեկնաբանությունը:</string>
     <string name="forums_comment_replying_to">Պատասխանում է %1$s-ին</string>
     <string name="forums_comment_clear_reply">Մաքրել պատասխանը</string>
-    <string name="forums_settings_title">Ֆորումի կարգավորումներ</string>
+    <string name="forums_settings_title">%1$s կարգավորումներ</string>
     <string name="forums_settings_rename_label">Ֆորումի անվանումը</string>
     <string name="forums_settings_danger_zone">Վտանգավոր գոտի</string>
     <string name="forums_settings_delete_message">Սա մշտապես կջնջի ֆորումը և նրա բոլոր գրառումները: Սա հնարավոր չէ հետարկել:</string>

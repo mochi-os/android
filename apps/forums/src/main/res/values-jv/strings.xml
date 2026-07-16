@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Panjenengan saestu badhe mbusek komentar punika?</string>
     <string name="forums_comment_replying_to">Mangsuli dhateng %1$s</string>
     <string name="forums_comment_clear_reply">Resiki wangsulan</string>
-    <string name="forums_settings_title">Setelan forum</string>
+    <string name="forums_settings_title">Setelan %1$s</string>
     <string name="forums_settings_rename_label">Nami forum</string>
     <string name="forums_settings_danger_zone">Wewengkon bebaya</string>
     <string name="forums_settings_delete_message">Punika badhe mbusek forum lan sedaya kirimanipun kanthi permanen. Boten saged dipun wangsulaken.</string>

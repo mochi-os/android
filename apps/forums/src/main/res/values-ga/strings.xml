@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">An bhfuil tú cinnte gur mhaith leat an nóta tráchta seo a scriosadh?</string>
     <string name="forums_comment_replying_to">Ag freagairt do %1$s</string>
     <string name="forums_comment_clear_reply">Glan freagra</string>
-    <string name="forums_settings_title">Socruithe an fhóraim</string>
+    <string name="forums_settings_title">Socruithe %1$s</string>
     <string name="forums_settings_rename_label">Ainm an fhóraim</string>
     <string name="forums_settings_danger_zone">Crios dainséir</string>
     <string name="forums_settings_delete_message">Scriosfaidh sé seo an fóram agus a phostálacha go léir go buan. Ní féidir é seo a chur ar ceal.</string>

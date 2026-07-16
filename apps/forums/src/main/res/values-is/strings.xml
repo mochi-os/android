@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ertu viss um að þú viljir eyða þessari athugasemd?</string>
     <string name="forums_comment_replying_to">Svarar %1$s</string>
     <string name="forums_comment_clear_reply">Hreinsa svar</string>
-    <string name="forums_settings_title">Stillingar spjallborðs</string>
+    <string name="forums_settings_title">Stillingar %1$s</string>
     <string name="forums_settings_rename_label">Nafn spjallborðs</string>
     <string name="forums_settings_danger_zone">Hættusvæði</string>
     <string name="forums_settings_delete_message">Þetta mun eyða spjallborðinu og öllum færslum þess varanlega. Þetta er ekki hægt að afturkalla.</string>

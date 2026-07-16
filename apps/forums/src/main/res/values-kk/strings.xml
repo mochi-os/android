@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Бұл пікірді жойғыңыз келетініне сенімдісіз бе?</string>
     <string name="forums_comment_replying_to">%1$s пайдаланушысына жауап беру</string>
     <string name="forums_comment_clear_reply">Жауапты тазалау</string>
-    <string name="forums_settings_title">Форум баптаулары</string>
+    <string name="forums_settings_title">%1$s параметрлері</string>
     <string name="forums_settings_rename_label">Форум атауы</string>
     <string name="forums_settings_danger_zone">Қауіпті аймақ</string>
     <string name="forums_settings_delete_message">Бұл форумды және оның барлық жазбаларын біржола жояды. Мұны қайтару мүмкін емес.</string>

@@ -189,7 +189,7 @@
     <string name="forums_comment_delete_message">確定要刪除此留言嗎？</string>
     <string name="forums_comment_replying_to">回覆 %1$s</string>
     <string name="forums_comment_clear_reply">清除回覆</string>
-    <string name="forums_settings_title">論壇設定</string>
+    <string name="forums_settings_title">%1$s 設定</string>
     <string name="forums_settings_rename_label">論壇名稱</string>
     <string name="forums_settings_danger_zone">危險區域</string>
     <string name="forums_settings_delete">刪除論壇</string>

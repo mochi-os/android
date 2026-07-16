@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ნამდვილად გსურთ ამ კომენტარის წაშლა?</string>
     <string name="forums_comment_replying_to">პასუხი %1$s-ს</string>
     <string name="forums_comment_clear_reply">პასუხის გასუფთავება</string>
-    <string name="forums_settings_title">ფორუმის პარამეტრები</string>
+    <string name="forums_settings_title">%1$s-ის პარამეტრები</string>
     <string name="forums_settings_rename_label">ფორუმის სახელი</string>
     <string name="forums_settings_danger_zone">სახიფათო ზონა</string>
     <string name="forums_settings_delete_message">ეს სამუდამოდ წაშლის ფორუმს და მის ყველა პოსტს. ეს ქმედება შეუქცევადია.</string>

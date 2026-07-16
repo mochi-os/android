@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Voulez-vous vraiment supprimer ce commentaire ?</string>
     <string name="forums_comment_replying_to">En réponse à %1$s</string>
     <string name="forums_comment_clear_reply">Effacer la réponse</string>
-    <string name="forums_settings_title">Paramètres du forum</string>
+    <string name="forums_settings_title">Paramètres de %1$s</string>
     <string name="forums_settings_rename_label">Nom du forum</string>
     <string name="forums_settings_danger_zone">Zone sensible</string>
     <string name="forums_settings_delete_message">Cela supprimera définitivement le forum et toutes ses publications. Cette action est irréversible.</string>

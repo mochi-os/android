@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Añetehápe piko reipota emboguete ko comentario?</string>
     <string name="forums_comment_replying_to">Ombohováivo %1$s-pe</string>
     <string name="forums_comment_clear_reply">Embogue mbohovái</string>
-    <string name="forums_settings_title">Foro ñemboheko</string>
+    <string name="forums_settings_title">%1$s ñemboheko</string>
     <string name="forums_settings_rename_label">Foro réra</string>
     <string name="forums_settings_danger_zone">Apañuái renda</string>
     <string name="forums_settings_delete_message">Kóva oguete\'ỹreíta foro ha opa iñe\'ẽmondokuéra. Kóva ndaikatúi ojejapojey.</string>

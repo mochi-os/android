@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ви впевнені, що хочете видалити цей коментар?</string>
     <string name="forums_comment_replying_to">Відповідь на %1$s</string>
     <string name="forums_comment_clear_reply">Очистити відповідь</string>
-    <string name="forums_settings_title">Налаштування форуму</string>
+    <string name="forums_settings_title">Налаштування %1$s</string>
     <string name="forums_settings_rename_label">Назва форуму</string>
     <string name="forums_settings_danger_zone">Небезпечна зона</string>
     <string name="forums_settings_delete_message">Це назавжди видалить форум та всі його публікації. Цю дію не можна скасувати.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Czy na pewno chcesz usunąć ten komentarz?</string>
     <string name="forums_comment_replying_to">Odpowiadasz na %1$s</string>
     <string name="forums_comment_clear_reply">Wyczyść odpowiedź</string>
-    <string name="forums_settings_title">Ustawienia forum</string>
+    <string name="forums_settings_title">Ustawienia %1$s</string>
     <string name="forums_settings_rename_label">Nazwa forum</string>
     <string name="forums_settings_danger_zone">Strefa niebezpieczna</string>
     <string name="forums_settings_delete_message">Spowoduje to trwałe usunięcie forum i wszystkich jego postów. Tej operacji nie można cofnąć.</string>

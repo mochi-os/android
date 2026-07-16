@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Vuoi davvero eliminare questo commento?</string>
     <string name="forums_comment_replying_to">In risposta a %1$s</string>
     <string name="forums_comment_clear_reply">Annulla risposta</string>
-    <string name="forums_settings_title">Impostazioni del forum</string>
+    <string name="forums_settings_title">Impostazioni di %1$s</string>
     <string name="forums_settings_rename_label">Nome del forum</string>
     <string name="forums_settings_danger_zone">Zona pericolosa</string>
     <string name="forums_settings_delete_message">Il forum e tutti i suoi post verranno eliminati definitivamente. L\'operazione non può essere annullata.</string>

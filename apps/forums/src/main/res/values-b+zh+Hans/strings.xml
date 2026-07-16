@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">确定要删除此评论吗?</string>
     <string name="forums_comment_replying_to">正在回复 %1$s</string>
     <string name="forums_comment_clear_reply">清除回复</string>
-    <string name="forums_settings_title">论坛设置</string>
+    <string name="forums_settings_title">%1$s 设置</string>
     <string name="forums_settings_rename_label">论坛名称</string>
     <string name="forums_settings_danger_zone">危险操作区</string>
     <string name="forums_settings_delete_message">这将永久删除该论坛及其所有帖子。此操作无法撤销。</string>

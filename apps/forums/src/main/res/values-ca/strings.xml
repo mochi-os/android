@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Segur que voleu suprimir aquest comentari?</string>
     <string name="forums_comment_replying_to">Responent a %1$s</string>
     <string name="forums_comment_clear_reply">Esborra la resposta</string>
-    <string name="forums_settings_title">Configuració del fòrum</string>
+    <string name="forums_settings_title">Configuració de %1$s</string>
     <string name="forums_settings_rename_label">Nom del fòrum</string>
     <string name="forums_settings_danger_zone">Zona de perill</string>
     <string name="forums_settings_delete_message">Això suprimirà permanentment el fòrum i totes les seves publicacions. Aquesta acció no es pot desfer.</string>

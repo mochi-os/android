@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Kas oled kindel, et soovid selle kommentaari kustutada?</string>
     <string name="forums_comment_replying_to">Vastad kasutajale %1$s</string>
     <string name="forums_comment_clear_reply">Tühjenda vastus</string>
-    <string name="forums_settings_title">Foorumi sätted</string>
+    <string name="forums_settings_title">%1$s seaded</string>
     <string name="forums_settings_rename_label">Foorumi nimi</string>
     <string name="forums_settings_danger_zone">Ohutsoon</string>
     <string name="forums_settings_delete_message">See kustutab foorumi ja kõik selle postitused jäädavalt. Seda ei saa tagasi võtta.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">이 댓글을 삭제하시겠습니까?</string>
     <string name="forums_comment_replying_to">%1$s에게 답글 작성 중</string>
     <string name="forums_comment_clear_reply">답글 지우기</string>
-    <string name="forums_settings_title">포럼 설정</string>
+    <string name="forums_settings_title">%1$s 설정</string>
     <string name="forums_settings_rename_label">포럼 이름</string>
     <string name="forums_settings_danger_zone">위험 구역</string>
     <string name="forums_settings_delete_message">포럼과 모든 게시물이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.</string>

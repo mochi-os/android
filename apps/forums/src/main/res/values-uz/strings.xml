@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ushbu izohni oʻchirishni xohlaysizmi?</string>
     <string name="forums_comment_replying_to">%1$s ga javob bermoqda</string>
     <string name="forums_comment_clear_reply">Javobni tozalash</string>
-    <string name="forums_settings_title">Forum sozlamalari</string>
+    <string name="forums_settings_title">%1$s sozlamalari</string>
     <string name="forums_settings_rename_label">Forum nomi</string>
     <string name="forums_settings_danger_zone">Xavfli zona</string>
     <string name="forums_settings_delete_message">Bu forumni va uning barcha postlarini butunlay oʻchirib tashlaydi. Bu amalni bekor qilib boʻlmaydi.</string>

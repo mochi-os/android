@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Is jy seker jy wil hierdie kommentaar uitvee?</string>
     <string name="forums_comment_replying_to">Antwoord aan %1$s</string>
     <string name="forums_comment_clear_reply">Maak antwoord skoon</string>
-    <string name="forums_settings_title">Foruminstellings</string>
+    <string name="forums_settings_title">%1$s-instellings</string>
     <string name="forums_settings_rename_label">Forumnaam</string>
     <string name="forums_settings_danger_zone">Gevaarsone</string>
     <string name="forums_settings_delete_message">Dit sal die forum en al sy possse permanent uitvee. Dit kan nie ongedaan gemaak word nie.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">¿Chiqapunit aka comentario chhaqtayañ munta?</string>
     <string name="forums_comment_replying_to">%1$s jaysasa</string>
     <string name="forums_comment_clear_reply">Jaysawi chhaqtayaña</string>
-    <string name="forums_settings_title">Foron kamachinakapa</string>
+    <string name="forums_settings_title">%1$s wakichäwinaka</string>
     <string name="forums_settings_rename_label">Foron sutipa</string>
     <string name="forums_settings_danger_zone">Jan walja chiqa</string>
     <string name="forums_settings_delete_message">Akax forot taqi qillqatanakapampi wiñayatakiw chhaqtayani. Janiw kutiyañjamäkiti.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">A bheil thu cinnteach gu bheil thu airson am beachd seo a sguabadh às?</string>
     <string name="forums_comment_replying_to">A\' freagairt %1$s</string>
     <string name="forums_comment_clear_reply">Falamhaich am freagairt</string>
-    <string name="forums_settings_title">Roghainnean an fhòraim</string>
+    <string name="forums_settings_title">Roghainnean %1$s</string>
     <string name="forums_settings_rename_label">Ainm an fhòraim</string>
     <string name="forums_settings_danger_zone">Raon cunnartach</string>
     <string name="forums_settings_delete_message">Sguabaidh seo às am fòram agus a h-uile post a tha ann gu buan. Cha ghabh seo a neo-dhèanamh.</string>

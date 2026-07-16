@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">¿Cheqaqchu kay niykuyta pichayta munanki?</string>
     <string name="forums_comment_replying_to">%1$s-man kutichichkanki</string>
     <string name="forums_comment_clear_reply">Kutichiyta pichay</string>
-    <string name="forums_settings_title">Forum allichakuykuna</string>
+    <string name="forums_settings_title">%1$s allinkachaykuna</string>
     <string name="forums_settings_rename_label">Forum suti</string>
     <string name="forums_settings_danger_zone">Manchachikuq k\'iti</string>
     <string name="forums_settings_delete_message">Kayqa forumta llapan willakuyninkunapiwan wiñaypaq pichanqa. Manam kutichiyta atinkichu.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Żgur li trid tħassar dan il-kumment?</string>
     <string name="forums_comment_replying_to">Twieġeb lil %1$s</string>
     <string name="forums_comment_clear_reply">Neħħi t-tweġiba</string>
-    <string name="forums_settings_title">Settings tal-forum</string>
+    <string name="forums_settings_title">Issettjar ta\' %1$s</string>
     <string name="forums_settings_rename_label">Isem tal-forum</string>
     <string name="forums_settings_danger_zone">Żona ta\' periklu</string>
     <string name="forums_settings_delete_message">Dan se jħassar il-forum u l-posts kollha tiegħu b\'mod permanenti. Dan ma jistax jitreġġa\' lura.</string>

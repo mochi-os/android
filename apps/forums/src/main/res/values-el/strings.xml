@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το σχόλιο;</string>
     <string name="forums_comment_replying_to">Απάντηση στον/στην %1$s</string>
     <string name="forums_comment_clear_reply">Καθαρισμός απάντησης</string>
-    <string name="forums_settings_title">Ρυθμίσεις φόρουμ</string>
+    <string name="forums_settings_title">Ρυθμίσεις %1$s</string>
     <string name="forums_settings_rename_label">Όνομα φόρουμ</string>
     <string name="forums_settings_danger_zone">Ζώνη κινδύνου</string>
     <string name="forums_settings_delete_message">Αυτό θα διαγράψει οριστικά το φόρουμ και όλες τις αναρτήσεις του. Η ενέργεια αυτή δεν μπορεί να αναιρεθεί.</string>

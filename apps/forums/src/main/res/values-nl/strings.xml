@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Weet je zeker dat je deze reactie wilt verwijderen?</string>
     <string name="forums_comment_replying_to">Antwoorden op %1$s</string>
     <string name="forums_comment_clear_reply">Antwoord wissen</string>
-    <string name="forums_settings_title">Foruminstellingen</string>
+    <string name="forums_settings_title">Instellingen voor %1$s</string>
     <string name="forums_settings_rename_label">Forumnaam</string>
     <string name="forums_settings_danger_zone">Gevarenzone</string>
     <string name="forums_settings_delete_message">Hiermee wordt het forum en alle berichten permanent verwijderd. Dit kan niet ongedaan worden gemaakt.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">શું તમે ખરેખર આ ટિપ્પણી કાઢી નાખવા માંગો છો?</string>
     <string name="forums_comment_replying_to">%1$s ને જવાબ આપી રહ્યા છો</string>
     <string name="forums_comment_clear_reply">જવાબ સાફ કરો</string>
-    <string name="forums_settings_title">ફોરમ સેટિંગ્સ</string>
+    <string name="forums_settings_title">%1$s સેટિંગ્સ</string>
     <string name="forums_settings_rename_label">ફોરમ નામ</string>
     <string name="forums_settings_danger_zone">જોખમ ઝોન</string>
     <string name="forums_settings_delete_message">આ ફોરમ અને તેની બધી પોસ્ટ્સ કાયમી ધોરણે કાઢી નાખશે. આ પૂર્વવત્ કરી શકાતું નથી.</string>

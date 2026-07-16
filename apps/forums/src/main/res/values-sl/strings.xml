@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ali res želite izbrisati ta komentar?</string>
     <string name="forums_comment_replying_to">Odgovarjate uporabniku %1$s</string>
     <string name="forums_comment_clear_reply">Počisti odgovor</string>
-    <string name="forums_settings_title">Nastavitve foruma</string>
+    <string name="forums_settings_title">Nastavitve %1$s</string>
     <string name="forums_settings_rename_label">Ime foruma</string>
     <string name="forums_settings_danger_zone">Nevarno območje</string>
     <string name="forums_settings_delete_message">S tem boste trajno izbrisali forum in vse njegove objave. Tega ni mogoče razveljaviti.</string>

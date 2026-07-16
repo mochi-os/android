@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">آیا مطمئن هستید که می‌خواهید این دیدگاه را حذف کنید؟</string>
     <string name="forums_comment_replying_to">در پاسخ به %1$s</string>
     <string name="forums_comment_clear_reply">پاک کردن پاسخ</string>
-    <string name="forums_settings_title">تنظیمات انجمن</string>
+    <string name="forums_settings_title">تنظیمات %1$s</string>
     <string name="forums_settings_rename_label">نام انجمن</string>
     <string name="forums_settings_danger_zone">منطقه خطر</string>
     <string name="forums_settings_delete_message">این کار انجمن و تمام مطالب آن را برای همیشه حذف می‌کند. این عمل قابل بازگشت نیست.</string>

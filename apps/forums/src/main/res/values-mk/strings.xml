@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Дали сте сигурни дека сакате да го избришете овој коментар?</string>
     <string name="forums_comment_replying_to">Одговарате на %1$s</string>
     <string name="forums_comment_clear_reply">Откажи одговор</string>
-    <string name="forums_settings_title">Поставки на форум</string>
+    <string name="forums_settings_title">Поставки за %1$s</string>
     <string name="forums_settings_rename_label">Име на форум</string>
     <string name="forums_settings_danger_zone">Опасна зона</string>
     <string name="forums_settings_delete_message">Ова трајно ќе го избрише форумот и сите негови објави. Ова не може да се врати.</string>

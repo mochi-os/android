@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Вы ўпэўнены, што хочаце выдаліць гэты каментар?</string>
     <string name="forums_comment_replying_to">Адказ для %1$s</string>
     <string name="forums_comment_clear_reply">Ачысціць адказ</string>
-    <string name="forums_settings_title">Налады форуму</string>
+    <string name="forums_settings_title">Налады %1$s</string>
     <string name="forums_settings_rename_label">Назва форуму</string>
     <string name="forums_settings_danger_zone">Небяспечная зона</string>
     <string name="forums_settings_delete_message">Гэта назаўсёды выдаліць форум і ўсе яго допісы. Гэта дзеянне нельга адмяніць.</string>

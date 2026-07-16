@@ -109,7 +109,7 @@
     <string name="forums_comment_replying_to">Replying to %1$s</string>
     <string name="forums_comment_clear_reply">Clear reply</string>
     <string name="forums_comment_reply">Reply</string>
-    <string name="forums_settings_title">Forum settings</string>
+    <string name="forums_settings_title">%1$s settings</string>
     <string name="forums_settings_rename">Rename</string>
     <string name="forums_settings_rename_label">Forum name</string>
     <string name="forums_settings_danger_zone">Danger zone</string>

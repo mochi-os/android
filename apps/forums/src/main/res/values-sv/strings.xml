@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Är du säker på att du vill ta bort den här kommentaren?</string>
     <string name="forums_comment_replying_to">Svarar på %1$s</string>
     <string name="forums_comment_clear_reply">Rensa svar</string>
-    <string name="forums_settings_title">Foruminställningar</string>
+    <string name="forums_settings_title">Inställningar för %1$s</string>
     <string name="forums_settings_rename_label">Forumnamn</string>
     <string name="forums_settings_danger_zone">Riskzon</string>
     <string name="forums_settings_delete_message">Detta tar bort forumet och alla dess inlägg permanent. Detta kan inte ångras.</string>

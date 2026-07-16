@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">האם אתה בטוח שברצונך למחוק תגובה זו?</string>
     <string name="forums_comment_replying_to">תגובה אל %1$s</string>
     <string name="forums_comment_clear_reply">ניקוי תגובה</string>
-    <string name="forums_settings_title">הגדרות פורום</string>
+    <string name="forums_settings_title">הגדרות %1$s</string>
     <string name="forums_settings_rename_label">שם הפורום</string>
     <string name="forums_settings_danger_zone">אזור מסוכן</string>
     <string name="forums_settings_delete_message">פעולה זו תמחק לצמיתות את הפורום ואת כל הפוסטים שבו. לא ניתן לבטל פעולה זו.</string>

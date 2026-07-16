@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Bu şərhi silmək istədiyinizə əminsiniz?</string>
     <string name="forums_comment_replying_to">%1$s istifadəçisinə cavab</string>
     <string name="forums_comment_clear_reply">Cavabı təmizlə</string>
-    <string name="forums_settings_title">Forum parametrləri</string>
+    <string name="forums_settings_title">%1$s parametrləri</string>
     <string name="forums_settings_rename_label">Forum adı</string>
     <string name="forums_settings_danger_zone">Təhlükəli zona</string>
     <string name="forums_settings_delete_message">Bu forumu və onun bütün yazılarını qalıcı olaraq siləcək. Bu geri qaytarıla bilməz.</string>

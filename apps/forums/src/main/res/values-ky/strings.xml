@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Бул комментарийди чындап эле жокко чыгаргыңыз келеби?</string>
     <string name="forums_comment_replying_to">%1$s колдонуучусуна жооп берүү</string>
     <string name="forums_comment_clear_reply">Жоопту тазалоо</string>
-    <string name="forums_settings_title">Форум жөндөөлөрү</string>
+    <string name="forums_settings_title">%1$s жөндөөлөрү</string>
     <string name="forums_settings_rename_label">Форумдун аты</string>
     <string name="forums_settings_danger_zone">Кооптуу зона</string>
     <string name="forums_settings_delete_message">Бул форумду жана анын бардык жазууларын биротоло жок кылат. Бул аракетти артка кайтарууга болбойт.</string>

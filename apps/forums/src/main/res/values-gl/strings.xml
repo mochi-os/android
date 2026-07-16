@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Seguro que quere eliminar este comentario?</string>
     <string name="forums_comment_replying_to">Respondendo a %1$s</string>
     <string name="forums_comment_clear_reply">Borrar resposta</string>
-    <string name="forums_settings_title">Configuración do foro</string>
+    <string name="forums_settings_title">Configuración de %1$s</string>
     <string name="forums_settings_rename_label">Nome do foro</string>
     <string name="forums_settings_danger_zone">Zona de perigo</string>
     <string name="forums_settings_delete_message">Isto eliminará permanentemente o foro e todas as súas publicacións. Non se pode desfacer.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">کیا آپ واقعی اس تبصرے کو حذف کرنا چاہتے ہیں؟</string>
     <string name="forums_comment_replying_to">%1$s کو جواب دے رہے ہیں</string>
     <string name="forums_comment_clear_reply">جواب صاف کریں</string>
-    <string name="forums_settings_title">فورم کی ترتیبات</string>
+    <string name="forums_settings_title">%1$s کی ترتیبات</string>
     <string name="forums_settings_rename_label">فورم کا نام</string>
     <string name="forums_settings_danger_zone">خطرے کا علاقہ</string>
     <string name="forums_settings_delete_message">اس سے فورم اور اس کی تمام پوسٹس مستقل طور پر حذف ہو جائیں گی۔ یہ کارروائی واپس نہیں ہو سکتی۔</string>

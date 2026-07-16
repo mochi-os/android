@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ar tikrai norite ištrinti šį komentarą?</string>
     <string name="forums_comment_replying_to">Atsakoma į %1$s</string>
     <string name="forums_comment_clear_reply">Išvalyti atsakymą</string>
-    <string name="forums_settings_title">Forumo nustatymai</string>
+    <string name="forums_settings_title">%1$s nustatymai</string>
     <string name="forums_settings_rename_label">Forumo pavadinimas</string>
     <string name="forums_settings_danger_zone">Pavojaus zona</string>
     <string name="forums_settings_delete_message">Tai visam laikui ištrins forumą ir visus jo įrašus. To atšaukti nebus galima.</string>

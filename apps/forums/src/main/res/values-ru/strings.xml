@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Вы действительно хотите удалить этот комментарий?</string>
     <string name="forums_comment_replying_to">Ответ для %1$s</string>
     <string name="forums_comment_clear_reply">Отменить ответ</string>
-    <string name="forums_settings_title">Настройки форума</string>
+    <string name="forums_settings_title">Настройки %1$s</string>
     <string name="forums_settings_rename_label">Название форума</string>
     <string name="forums_settings_danger_zone">Опасная зона</string>
     <string name="forums_settings_delete_message">Это действие навсегда удалит форум и все его записи. Это действие необратимо.</string>

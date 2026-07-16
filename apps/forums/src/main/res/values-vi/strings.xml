@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Bạn có chắc chắn muốn xóa bình luận này không?</string>
     <string name="forums_comment_replying_to">Đang trả lời %1$s</string>
     <string name="forums_comment_clear_reply">Xóa phản hồi</string>
-    <string name="forums_settings_title">Cài đặt diễn đàn</string>
+    <string name="forums_settings_title">Cài đặt %1$s</string>
     <string name="forums_settings_rename_label">Tên diễn đàn</string>
     <string name="forums_settings_danger_zone">Khu vực nguy hiểm</string>
     <string name="forums_settings_delete_message">Hành động này sẽ xóa vĩnh viễn diễn đàn và tất cả bài đăng của nó. Không thể hoàn tác.</string>

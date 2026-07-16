@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Anjeun yakin hoyong miceun koméntar ieu?</string>
     <string name="forums_comment_replying_to">Ngawaler ka %1$s</string>
     <string name="forums_comment_clear_reply">Hapus waleran</string>
-    <string name="forums_settings_title">Setélan forum</string>
+    <string name="forums_settings_title">Setélan %1$s</string>
     <string name="forums_settings_rename_label">Ngaran forum</string>
     <string name="forums_settings_danger_zone">Wilayah bahaya</string>
     <string name="forums_settings_delete_message">Ieu bakal miceun forum sareng sadaya posna sacara permanén. Ieu teu tiasa dibalikeun deui.</string>

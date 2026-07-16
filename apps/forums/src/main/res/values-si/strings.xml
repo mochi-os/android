@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">මෙම අදහස මැකීමට අවශ්‍ය බව ඔබට විශ්වාසද?</string>
     <string name="forums_comment_replying_to">%1$s වෙත පිළිතුරු දෙමින්</string>
     <string name="forums_comment_clear_reply">පිළිතුර හිස් කරන්න</string>
-    <string name="forums_settings_title">සංසද සැකසුම්</string>
+    <string name="forums_settings_title">%1$s සැකසුම්</string>
     <string name="forums_settings_rename_label">සංසදයේ නම</string>
     <string name="forums_settings_danger_zone">අවදානම් කලාපය</string>
     <string name="forums_settings_delete_message">මෙය සංසදය සහ එහි සියලුම පළ කිරීම් ස්ථිරවම මකා දමයි. මෙය ආපසු හැරවිය නොහැක.</string>

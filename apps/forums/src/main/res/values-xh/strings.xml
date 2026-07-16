@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ingaba uqinisekile ufuna ukucima esi simvo?</string>
     <string name="forums_comment_replying_to">Uphendula ku-%1$s</string>
     <string name="forums_comment_clear_reply">Cima impendulo</string>
-    <string name="forums_settings_title">Iisetingi zenkundla</string>
+    <string name="forums_settings_title">Izicwangciso ze-%1$s</string>
     <string name="forums_settings_rename_label">Igama lenkundla</string>
     <string name="forums_settings_danger_zone">Indawo eyingozi</string>
     <string name="forums_settings_delete_message">Oku kuya kuyicima ngonaphakade inkundla nazo zonke izithuba zayo. Oku akunakubuyiselwa.</string>

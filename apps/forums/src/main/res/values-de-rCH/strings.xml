@@ -188,7 +188,7 @@
     <string name="forums_comment_replying_to">Antwort an %1$s</string>
     <string name="forums_comment_clear_reply">Antwort entfernen</string>
     <string name="forums_comment_reply">Antworten</string>
-    <string name="forums_settings_title">Forumseinstellungen</string>
+    <string name="forums_settings_title">Einstellungen für %1$s</string>
     <string name="forums_settings_rename">Umbenennen</string>
     <string name="forums_settings_rename_label">Forumsname</string>
     <string name="forums_settings_danger_zone">Gefahrenbereich</string>

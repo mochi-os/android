@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">क्या आप वाकई इस टिप्पणी को हटाना चाहते हैं?</string>
     <string name="forums_comment_replying_to">%1$s को उत्तर दे रहे हैं</string>
     <string name="forums_comment_clear_reply">उत्तर साफ़ करें</string>
-    <string name="forums_settings_title">फ़ोरम सेटिंग्स</string>
+    <string name="forums_settings_title">%1$s सेटिंग्स</string>
     <string name="forums_settings_rename_label">फ़ोरम का नाम</string>
     <string name="forums_settings_danger_zone">खतरे का क्षेत्र</string>
     <string name="forums_settings_delete_message">यह फ़ोरम और उसकी सभी पोस्ट को स्थायी रूप से हटा देगा। यह पूर्ववत नहीं किया जा सकता।</string>

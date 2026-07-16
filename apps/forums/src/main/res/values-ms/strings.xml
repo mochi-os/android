@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Adakah anda pasti mahu memadamkan komen ini?</string>
     <string name="forums_comment_replying_to">Membalas kepada %1$s</string>
     <string name="forums_comment_clear_reply">Kosongkan balasan</string>
-    <string name="forums_settings_title">Tetapan forum</string>
+    <string name="forums_settings_title">Tetapan %1$s</string>
     <string name="forums_settings_rename_label">Nama forum</string>
     <string name="forums_settings_danger_zone">Zon bahaya</string>
     <string name="forums_settings_delete_message">Ini akan memadamkan forum dan semua hantarannya secara kekal. Tindakan ini tidak boleh dibatalkan.</string>

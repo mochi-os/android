@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບຄຳເຫັນນີ້?</string>
     <string name="forums_comment_replying_to">ກຳລັງຕອບກັບ %1$s</string>
     <string name="forums_comment_clear_reply">ລ້າງຄຳຕອບ</string>
-    <string name="forums_settings_title">ການຕັ້ງຄ່າກະດານສົນທະນາ</string>
+    <string name="forums_settings_title">ການຕັ້ງຄ່າ %1$s</string>
     <string name="forums_settings_rename_label">ຊື່ກະດານສົນທະນາ</string>
     <string name="forums_settings_danger_zone">ເຂດອັນຕະລາຍ</string>
     <string name="forums_settings_delete_message">ການກະທຳນີ້ຈະລຶບກະດານສົນທະນາ ແລະ ໂພສທັງໝົດຢ່າງຖາວອນ. ບໍ່ສາມາດກູ້ຄືນໄດ້.</string>

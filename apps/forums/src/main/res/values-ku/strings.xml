@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Bi rastî dixwazî vê şîroveyê jê bibî?</string>
     <string name="forums_comment_replying_to">Bersiv didî %1$s</string>
     <string name="forums_comment_clear_reply">Bersivê paqij bike</string>
-    <string name="forums_settings_title">Sazkariyên forumê</string>
+    <string name="forums_settings_title">Mîhengên %1$s</string>
     <string name="forums_settings_rename_label">Navê forumê</string>
     <string name="forums_settings_danger_zone">Devera xeternak</string>
     <string name="forums_settings_delete_message">Ev ê forumê û hemû şandiyên wê herdem jê bibe. Ev nayê vegerandin.</string>

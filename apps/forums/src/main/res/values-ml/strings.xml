@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ഈ കമന്റ് ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
     <string name="forums_comment_replying_to">%1$s എന്നയാൾക്ക് മറുപടി നൽകുന്നു</string>
     <string name="forums_comment_clear_reply">മറുപടി മായ്ക്കുക</string>
-    <string name="forums_settings_title">ഫോറം ക്രമീകരണങ്ങൾ</string>
+    <string name="forums_settings_title">%1$s ക്രമീകരണങ്ങൾ</string>
     <string name="forums_settings_rename_label">ഫോറത്തിന്റെ പേര്</string>
     <string name="forums_settings_danger_zone">അപകട മേഖല</string>
     <string name="forums_settings_delete_message">ഇത് ഫോറവും അതിന്റെ എല്ലാ പോസ്റ്റുകളും ശാശ്വതമായി ഇല്ലാതാക്കും. ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>

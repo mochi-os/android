@@ -194,7 +194,7 @@
     <string name="forums_moderation_restriction_expires">%1$s के समाप्त</string>
     <string name="forums_moderation_restriction_permanent">स्थायी</string>
     <string name="forums_report_reason_hate">घृणा</string>
-    <string name="forums_settings_title">फोरम सेटिंग</string>
+    <string name="forums_settings_title">%1$s सेटिंग</string>
     <string name="forums_settings_rename_label">फोरम के नाम</string>
     <string name="forums_settings_delete_message">एसे फोरम आ ओकर सब पोस्ट हमेशा खातिर मेटा जाई। एके वापस ना कइल जा सके।</string>
 

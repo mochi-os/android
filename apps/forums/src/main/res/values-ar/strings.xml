@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">هل أنت متأكد من أنك تريد حذف هذا التعليق؟</string>
     <string name="forums_comment_replying_to">الرد على %1$s</string>
     <string name="forums_comment_clear_reply">مسح الرد</string>
-    <string name="forums_settings_title">إعدادات المنتدى</string>
+    <string name="forums_settings_title">إعدادات %1$s</string>
     <string name="forums_settings_rename_label">اسم المنتدى</string>
     <string name="forums_settings_danger_zone">منطقة الخطر</string>
     <string name="forums_settings_delete_message">سيؤدي هذا إلى حذف المنتدى وجميع منشوراته نهائيًا. لا يمكن التراجع عن هذا الإجراء.</string>

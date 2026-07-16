@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Tem certeza de que deseja excluir este comentário?</string>
     <string name="forums_comment_replying_to">Respondendo a %1$s</string>
     <string name="forums_comment_clear_reply">Limpar resposta</string>
-    <string name="forums_settings_title">Configurações do fórum</string>
+    <string name="forums_settings_title">Configurações de %1$s</string>
     <string name="forums_settings_rename_label">Nome do fórum</string>
     <string name="forums_settings_danger_zone">Zona de perigo</string>
     <string name="forums_settings_delete_message">Isso excluirá permanentemente o fórum e todas as suas publicações. Isso não pode ser desfeito.</string>

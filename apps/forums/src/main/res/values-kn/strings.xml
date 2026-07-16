@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ನೀವು ಈ ಕಾಮೆಂಟ್ ಅನ್ನು ಅಳಿಸಲು ಖಚಿತವೇ?</string>
     <string name="forums_comment_replying_to">%1$s ಗೆ ಪ್ರತ್ಯುತ್ತರಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="forums_comment_clear_reply">ಪ್ರತ್ಯುತ್ತರವನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
-    <string name="forums_settings_title">ಫೋರಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="forums_settings_title">%1$s ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="forums_settings_rename_label">ಫೋರಂ ಹೆಸರು</string>
     <string name="forums_settings_danger_zone">ಅಪಾಯಕಾರಿ ವಲಯ</string>
     <string name="forums_settings_delete_message">ಇದು ಫೋರಂ ಮತ್ತು ಅದರ ಎಲ್ಲಾ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ. ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>

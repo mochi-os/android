@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">మీరు ఈ వ్యాఖ్యను తొలగించాలనుకుంటున్నారా?</string>
     <string name="forums_comment_replying_to">%1$sకి ప్రత్యుత్తరం ఇస్తున్నారు</string>
     <string name="forums_comment_clear_reply">ప్రత్యుత్తరాన్ని క్లియర్ చేయండి</string>
-    <string name="forums_settings_title">ఫోరమ్ సెట్టింగ్‌లు</string>
+    <string name="forums_settings_title">%1$s సెట్టింగ్‌లు</string>
     <string name="forums_settings_rename_label">ఫోరమ్ పేరు</string>
     <string name="forums_settings_danger_zone">ప్రమాద జోన్</string>
     <string name="forums_settings_delete_message">ఇది ఫోరమ్‌ను మరియు దాని అన్ని పోస్ట్‌లను శాశ్వతంగా తొలగిస్తుంది. దీన్ని తిరిగి పొందలేరు.</string>

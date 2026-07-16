@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">आपण ही टिप्पणी हटवू इच्छिता याची खात्री आहे का?</string>
     <string name="forums_comment_replying_to">%1$s ला उत्तर देत आहे</string>
     <string name="forums_comment_clear_reply">उत्तर साफ करा</string>
-    <string name="forums_settings_title">मंच सेटिंग्ज</string>
+    <string name="forums_settings_title">%1$s सेटिंग्ज</string>
     <string name="forums_settings_rename_label">मंचाचे नाव</string>
     <string name="forums_settings_danger_zone">धोका क्षेत्र</string>
     <string name="forums_settings_delete_message">हे मंच आणि त्याच्या सर्व पोस्ट कायमचे हटवेल. हे पूर्ववत करता येणार नाही.</string>

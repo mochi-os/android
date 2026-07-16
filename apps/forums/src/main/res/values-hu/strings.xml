@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Biztosan törli ezt a hozzászólást?</string>
     <string name="forums_comment_replying_to">Válasz neki: %1$s</string>
     <string name="forums_comment_clear_reply">Válasz törlése</string>
-    <string name="forums_settings_title">Fórum beállításai</string>
+    <string name="forums_settings_title">%1$s beállításai</string>
     <string name="forums_settings_rename_label">Fórum neve</string>
     <string name="forums_settings_danger_zone">Veszélyzóna</string>
     <string name="forums_settings_delete_message">Ez véglegesen törli a fórumot és minden bejegyzését. Ez a művelet nem vonható vissza.</string>

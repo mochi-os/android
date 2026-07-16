@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Una uhakika unataka kufuta maoni haya?</string>
     <string name="forums_comment_replying_to">Unajibu %1$s</string>
     <string name="forums_comment_clear_reply">Futa jibu</string>
-    <string name="forums_settings_title">Mipangilio ya jukwaa</string>
+    <string name="forums_settings_title">Mipangilio ya %1$s</string>
     <string name="forums_settings_rename_label">Jina la jukwaa</string>
     <string name="forums_settings_danger_zone">Eneo la hatari</string>
     <string name="forums_settings_delete_message">Hii itafuta jukwaa na machapisho yake yote kabisa. Hili haliwezi kutenduliwa.</string>

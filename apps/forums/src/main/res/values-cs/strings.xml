@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Opravdu chcete tento komentář smazat?</string>
     <string name="forums_comment_replying_to">Odpovídáte na %1$s</string>
     <string name="forums_comment_clear_reply">Zrušit odpověď</string>
-    <string name="forums_settings_title">Nastavení fóra</string>
+    <string name="forums_settings_title">Nastavení %1$s</string>
     <string name="forums_settings_rename_label">Název fóra</string>
     <string name="forums_settings_danger_zone">Nebezpečná zóna</string>
     <string name="forums_settings_delete_message">Tímto trvale smažete fórum a všechny jeho příspěvky. Tuto akci nelze vrátit zpět.</string>

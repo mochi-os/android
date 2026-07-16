@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ziur iruzkin hau ezabatu nahi duzula?</string>
     <string name="forums_comment_replying_to">%1$s erabiltzaileari erantzuten</string>
     <string name="forums_comment_clear_reply">Garbitu erantzuna</string>
-    <string name="forums_settings_title">Foroaren ezarpenak</string>
+    <string name="forums_settings_title">%1$s ezarpenak</string>
     <string name="forums_settings_rename_label">Foroaren izena</string>
     <string name="forums_settings_danger_zone">Eremu arriskutsua</string>
     <string name="forums_settings_delete_message">Honek foroa eta bere bidalketa guztiak betiko ezabatuko ditu. Ekintza hau ezin da desegin.</string>

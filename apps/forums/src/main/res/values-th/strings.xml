@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบความคิดเห็นนี้?</string>
     <string name="forums_comment_replying_to">กำลังตอบกลับ %1$s</string>
     <string name="forums_comment_clear_reply">ล้างการตอบกลับ</string>
-    <string name="forums_settings_title">ตั้งค่าฟอรัม</string>
+    <string name="forums_settings_title">การตั้งค่า %1$s</string>
     <string name="forums_settings_rename_label">ชื่อฟอรัม</string>
     <string name="forums_settings_danger_zone">เขตอันตราย</string>
     <string name="forums_settings_delete_message">การกระทำนี้จะลบฟอรัมและโพสต์ทั้งหมดอย่างถาวร การกระทำนี้ไม่สามารถยกเลิกได้</string>

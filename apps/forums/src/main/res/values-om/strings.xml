@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Yaada kana haquu barbaaddaa?</string>
     <string name="forums_comment_replying_to">%1$s deebisaa jirta</string>
     <string name="forums_comment_clear_reply">Deebii haqi</string>
-    <string name="forums_settings_title">Qindaa\'ina marichaa</string>
+    <string name="forums_settings_title">Qindaa\'ina %1$s</string>
     <string name="forums_settings_rename_label">Maqaa marichaa</string>
     <string name="forums_settings_danger_zone">Naannoo balaa qabu</string>
     <string name="forums_settings_delete_message">Kun marichaa fi maxxansa isaa hunda hanga dhumaatti haqa. Kun deebi\'ee fooyya\'uu hin danda\'u.</string>

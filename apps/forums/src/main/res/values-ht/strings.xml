@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Èske ou sèten ou vle efase kòmantè sa a?</string>
     <string name="forums_comment_replying_to">Reponn %1$s</string>
     <string name="forums_comment_clear_reply">Efase repons</string>
-    <string name="forums_settings_title">Paramèt fowòm</string>
+    <string name="forums_settings_title">Paramèt %1$s</string>
     <string name="forums_settings_rename_label">Non fowòm</string>
     <string name="forums_settings_danger_zone">Zòn danje</string>
     <string name="forums_settings_delete_message">Sa pral efase fowòm nan ak tout piblikasyon li yo pou tout tan. Sa pa ka defèt.</string>

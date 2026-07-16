@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Haluatko varmasti poistaa tämän kommentin?</string>
     <string name="forums_comment_replying_to">Vastataan käyttäjälle %1$s</string>
     <string name="forums_comment_clear_reply">Tyhjennä vastaus</string>
-    <string name="forums_settings_title">Foorumin asetukset</string>
+    <string name="forums_settings_title">%1$s – asetukset</string>
     <string name="forums_settings_rename_label">Foorumin nimi</string>
     <string name="forums_settings_danger_zone">Vaaravyöhyke</string>
     <string name="forums_settings_delete_message">Tämä poistaa foorumin ja kaikki sen julkaisut pysyvästi. Tätä ei voi kumota.</string>

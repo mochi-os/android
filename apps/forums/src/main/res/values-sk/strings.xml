@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Naozaj chcete odstrániť tento komentár?</string>
     <string name="forums_comment_replying_to">Odpovedáte používateľovi %1$s</string>
     <string name="forums_comment_clear_reply">Zrušiť odpoveď</string>
-    <string name="forums_settings_title">Nastavenia fóra</string>
+    <string name="forums_settings_title">Nastavenia %1$s</string>
     <string name="forums_settings_rename_label">Názov fóra</string>
     <string name="forums_settings_danger_zone">Nebezpečná zóna</string>
     <string name="forums_settings_delete_message">Týmto sa natrvalo odstráni fórum a všetky jeho príspevky. Túto akciu nie je možné vrátiť späť.</string>

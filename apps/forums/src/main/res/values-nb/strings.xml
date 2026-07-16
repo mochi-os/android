@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Er du sikker på at du vil slette denne kommentaren?</string>
     <string name="forums_comment_replying_to">Svarer til %1$s</string>
     <string name="forums_comment_clear_reply">Fjern svar</string>
-    <string name="forums_settings_title">Foruminnstillinger</string>
+    <string name="forums_settings_title">Innstillinger for %1$s</string>
     <string name="forums_settings_rename_label">Forumnavn</string>
     <string name="forums_settings_danger_zone">Faresone</string>
     <string name="forums_settings_delete_message">Dette vil slette forumet og alle innleggene permanent. Dette kan ikke angres.</string>

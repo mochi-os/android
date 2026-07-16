@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">זײַט איר זיכער אַז איר ווילט אויסמעקן דעם קאָמענטאַר?</string>
     <string name="forums_comment_replying_to">ענטפֿערט %1$s</string>
     <string name="forums_comment_clear_reply">רייניקן ענטפֿער</string>
-    <string name="forums_settings_title">פֿאָרום־אײַנשטעלונגען</string>
+    <string name="forums_settings_title">%1$s איינשטעלונגען</string>
     <string name="forums_settings_rename_label">פֿאָרום־נאָמען</string>
     <string name="forums_settings_danger_zone">סכּנה־געגנט</string>
     <string name="forums_settings_delete_message">דאָס וועט תּמיד אויסמעקן דעם פֿאָרום און אַלע זײַנע פּאָסטן. דאָס קען מען נישט אומקערן.</string>

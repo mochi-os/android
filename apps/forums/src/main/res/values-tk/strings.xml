@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Bu teswiri pozmak isleýändigiňize ynamlymy?</string>
     <string name="forums_comment_replying_to">%1$s ulanyjysyna jogap berilýär</string>
     <string name="forums_comment_clear_reply">Jogaby arassalamak</string>
-    <string name="forums_settings_title">Forum sazlamalary</string>
+    <string name="forums_settings_title">%1$s sazlamalary</string>
     <string name="forums_settings_rename_label">Forumyň ady</string>
     <string name="forums_settings_danger_zone">Howply zolak</string>
     <string name="forums_settings_delete_message">Bu forumy we onuň ähli ýazgylaryny hemişelik pozar. Bu yzyna gaýtarylyp bilinmez.</string>

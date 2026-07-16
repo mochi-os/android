@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Apakah Anda yakin ingin menghapus komentar ini?</string>
     <string name="forums_comment_replying_to">Membalas %1$s</string>
     <string name="forums_comment_clear_reply">Bersihkan balasan</string>
-    <string name="forums_settings_title">Pengaturan forum</string>
+    <string name="forums_settings_title">Pengaturan %1$s</string>
     <string name="forums_settings_rename_label">Nama forum</string>
     <string name="forums_settings_danger_zone">Zona berbahaya</string>
     <string name="forums_settings_delete_message">Tindakan ini akan menghapus forum dan semua kirimannya secara permanen. Tindakan ini tidak dapat dibatalkan.</string>

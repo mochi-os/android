@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Jeste li sigurni da želite obrisati ovaj komentar?</string>
     <string name="forums_comment_replying_to">Odgovara se na %1$s</string>
     <string name="forums_comment_clear_reply">Očisti odgovor</string>
-    <string name="forums_settings_title">Postavke foruma</string>
+    <string name="forums_settings_title">Postavke: %1$s</string>
     <string name="forums_settings_rename_label">Naziv foruma</string>
     <string name="forums_settings_danger_zone">Opasna zona</string>
     <string name="forums_settings_delete_message">Ovo će trajno obrisati forum i sve njegove objave. Ovo se ne može poništiti.</string>

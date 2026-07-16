@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Möchten Sie diesen Kommentar wirklich löschen?</string>
     <string name="forums_comment_replying_to">Antwort an %1$s</string>
     <string name="forums_comment_clear_reply">Antwort verwerfen</string>
-    <string name="forums_settings_title">Forumeinstellungen</string>
+    <string name="forums_settings_title">Einstellungen für %1$s</string>
     <string name="forums_settings_rename_label">Forumname</string>
     <string name="forums_settings_danger_zone">Gefahrenzone</string>
     <string name="forums_settings_delete_message">Dies löscht das Forum und alle seine Beiträge dauerhaft. Dies kann nicht rückgängig gemacht werden.</string>

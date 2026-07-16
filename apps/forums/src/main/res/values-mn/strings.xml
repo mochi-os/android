@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Энэ сэтгэгдлийг устгахдаа итгэлтэй байна уу?</string>
     <string name="forums_comment_replying_to">%1$s-д хариулж байна</string>
     <string name="forums_comment_clear_reply">Хариултыг арилгах</string>
-    <string name="forums_settings_title">Форумын тохиргоо</string>
+    <string name="forums_settings_title">%1$s тохиргоо</string>
     <string name="forums_settings_rename_label">Форумын нэр</string>
     <string name="forums_settings_danger_zone">Аюултай бүс</string>
     <string name="forums_settings_delete_message">Энэ нь форум болон түүний бүх нийтлэлийг бүрмөсөн устгана. Үүнийг буцаах боломжгүй.</string>

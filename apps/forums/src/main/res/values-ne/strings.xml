@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">के तपाईं यो टिप्पणी मेटाउन निश्चित हुनुहुन्छ?</string>
     <string name="forums_comment_replying_to">%1$s लाई जवाफ दिँदै</string>
     <string name="forums_comment_clear_reply">जवाफ खाली गर्नुहोस्</string>
-    <string name="forums_settings_title">फोरम सेटिङहरू</string>
+    <string name="forums_settings_title">%1$s सेटिङहरू</string>
     <string name="forums_settings_rename_label">फोरमको नाम</string>
     <string name="forums_settings_danger_zone">खतरा क्षेत्र</string>
     <string name="forums_settings_delete_message">यसले फोरम र यसका सबै पोस्टहरू स्थायी रूपमा मेटाउनेछ। यो पूर्ववत गर्न सकिँदैन।</string>

@@ -188,7 +188,7 @@
     <string name="forums_comment_replying_to">Réponse à %1$s</string>
     <string name="forums_comment_clear_reply">Effacer la réponse</string>
     <string name="forums_comment_reply">Répondre</string>
-    <string name="forums_settings_title">Paramètres du forum</string>
+    <string name="forums_settings_title">Paramètres de %1$s</string>
     <string name="forums_settings_rename">Renommer</string>
     <string name="forums_settings_rename_label">Nom du forum</string>
     <string name="forums_settings_danger_zone">Zone de danger</string>

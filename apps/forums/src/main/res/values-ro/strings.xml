@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Sigur doriți să ștergeți acest comentariu?</string>
     <string name="forums_comment_replying_to">Răspundeți lui %1$s</string>
     <string name="forums_comment_clear_reply">Anulați răspunsul</string>
-    <string name="forums_settings_title">Setări forum</string>
+    <string name="forums_settings_title">Setări %1$s</string>
     <string name="forums_settings_rename_label">Numele forumului</string>
     <string name="forums_settings_danger_zone">Zonă cu risc</string>
     <string name="forums_settings_delete_message">Aceasta va șterge permanent forumul și toate postările sale. Această acțiune nu poate fi anulată.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Jeni i sigurt që doni ta fshini këtë koment?</string>
     <string name="forums_comment_replying_to">Po i përgjigjeni %1$s</string>
     <string name="forums_comment_clear_reply">Pastro përgjigjen</string>
-    <string name="forums_settings_title">Cilësimet e forumit</string>
+    <string name="forums_settings_title">Cilësimet e %1$s</string>
     <string name="forums_settings_rename_label">Emri i forumit</string>
     <string name="forums_settings_danger_zone">Zona e rrezikut</string>
     <string name="forums_settings_delete_message">Ky veprim do ta fshijë përgjithmonë forumin dhe të gjitha postimet e tij. Ky veprim s\'mund të zhbëhet.</string>

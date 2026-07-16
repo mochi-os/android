@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ṣé o dáni lójú pé o fẹ́ pa àlàyé yìí rẹ́?</string>
     <string name="forums_comment_replying_to">Ń dáhùn sí %1$s</string>
     <string name="forums_comment_clear_reply">Pa ìdáhùn rẹ́</string>
-    <string name="forums_settings_title">Ètò àpérò</string>
+    <string name="forums_settings_title">Àwọn ètò %1$s</string>
     <string name="forums_settings_rename_label">Orúkọ àpérò</string>
     <string name="forums_settings_danger_zone">Agbègbè ewu</string>
     <string name="forums_settings_delete_message">Èyí yóò pa àpérò àti gbogbo àwọn àkọsílẹ̀ rẹ̀ rẹ́ pátápátá. Èyí kò ṣeé yí padà.</string>

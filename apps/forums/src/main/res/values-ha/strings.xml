@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Kana da tabbacin kana son share wannan bayani?</string>
     <string name="forums_comment_replying_to">Ana amsa wa %1$s</string>
     <string name="forums_comment_clear_reply">Share amsa</string>
-    <string name="forums_settings_title">Saitunan taron tattaunawa</string>
+    <string name="forums_settings_title">Saitunan %1$s</string>
     <string name="forums_settings_rename_label">Sunan taron tattaunawa</string>
     <string name="forums_settings_danger_zone">Yankin haɗari</string>
     <string name="forums_settings_delete_message">Wannan zai share taron tattaunawa da dukkan saƙonninsa har abada. Ba za a iya warware wannan ba.</string>

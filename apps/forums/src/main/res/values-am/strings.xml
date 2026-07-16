@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ይህን አስተያየት መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት?</string>
     <string name="forums_comment_replying_to">ለ%1$s ምላሽ በመስጠት ላይ</string>
     <string name="forums_comment_clear_reply">ምላሽ አጽዳ</string>
-    <string name="forums_settings_title">የመድረክ ቅንብሮች</string>
+    <string name="forums_settings_title">የ%1$s ቅንብሮች</string>
     <string name="forums_settings_rename_label">የመድረክ ስም</string>
     <string name="forums_settings_danger_zone">የአደጋ ቀጠና</string>
     <string name="forums_settings_delete_message">ይህ መድረኩን እና ሁሉንም ልጥፎቹን በቋሚነት ይሰርዛል። ይህ መቀልበስ አይቻልም።</string>

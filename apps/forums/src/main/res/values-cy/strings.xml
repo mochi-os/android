@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r sylw hwn?</string>
     <string name="forums_comment_replying_to">Ymateb i %1$s</string>
     <string name="forums_comment_clear_reply">Clirio\'r ymateb</string>
-    <string name="forums_settings_title">Gosodiadau\'r fforwm</string>
+    <string name="forums_settings_title">Gosodiadau %1$s</string>
     <string name="forums_settings_rename_label">Enw\'r fforwm</string>
     <string name="forums_settings_danger_zone">Parth peryglus</string>
     <string name="forums_settings_delete_message">Bydd hyn yn dileu\'r fforwm a\'i holl bostiadau yn barhaol. Ni ellir dadwneud hyn.</string>

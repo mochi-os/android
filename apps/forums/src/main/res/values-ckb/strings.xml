@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">دڵنیایت کە دەتەوێت ئەم لێدوانە بسڕیتەوە؟</string>
     <string name="forums_comment_replying_to">وەڵامدانەوە بۆ %1$s</string>
     <string name="forums_comment_clear_reply">پاککردنەوەی وەڵام</string>
-    <string name="forums_settings_title">ڕێکخستنەکانی فۆڕەم</string>
+    <string name="forums_settings_title">ڕێکخستنەکانی %1$s</string>
     <string name="forums_settings_rename_label">ناوی فۆڕەم</string>
     <string name="forums_settings_danger_zone">ناوچەی مەترسی</string>
     <string name="forums_settings_delete_message">ئەمە بە شێوەی هەمیشەیی فۆڕەمەکە و هەموو پۆستەکانی دەسڕێتەوە. ئەمە ناتوانرێت بگەڕێنرێتەوە.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Uqinisekile ukuthi ufuna ukususa leli zwana?</string>
     <string name="forums_comment_replying_to">Uphendula u-%1$s</string>
     <string name="forums_comment_clear_reply">Sula impendulo</string>
-    <string name="forums_settings_title">Izilungiselelo zenkundla</string>
+    <string name="forums_settings_title">Izilungiselelo ze-%1$s</string>
     <string name="forums_settings_rename_label">Igama lenkundla</string>
     <string name="forums_settings_danger_zone">Indawo eyingozi</string>
     <string name="forums_settings_delete_message">Lokhu kuzosusa unaphakade inkundla nakho konke okuthunyelwe kuyo. Lokhu ngeke kubuyiselwe.</string>

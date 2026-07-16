@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">আপনি কি নিশ্চিতভাবে এই মন্তব্যটি মুছে ফেলতে চান?</string>
     <string name="forums_comment_replying_to">%1$s-কে উত্তর দেওয়া হচ্ছে</string>
     <string name="forums_comment_clear_reply">উত্তর পরিষ্কার করুন</string>
-    <string name="forums_settings_title">ফোরাম সেটিংস</string>
+    <string name="forums_settings_title">%1$s সেটিংস</string>
     <string name="forums_settings_rename_label">ফোরামের নাম</string>
     <string name="forums_settings_danger_zone">ঝুঁকিপূর্ণ এলাকা</string>
     <string name="forums_settings_delete_message">এটি ফোরাম এবং এর সমস্ত পোস্ট স্থায়ীভাবে মুছে ফেলবে। এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>

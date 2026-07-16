@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Vai tiešām vēlaties dzēst šo komentāru?</string>
     <string name="forums_comment_replying_to">Atbild lietotājam %1$s</string>
     <string name="forums_comment_clear_reply">Notīrīt atbildi</string>
-    <string name="forums_settings_title">Foruma iestatījumi</string>
+    <string name="forums_settings_title">%1$s iestatījumi</string>
     <string name="forums_settings_rename_label">Foruma nosaukums</string>
     <string name="forums_settings_danger_zone">Bīstamā zona</string>
     <string name="forums_settings_delete_message">Tas neatgriezeniski dzēsīs forumu un visus tā ierakstus. Šo darbību nevar atsaukt.</string>

@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਟਿੱਪਣੀ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="forums_comment_replying_to">%1$s ਨੂੰ ਜਵਾਬ ਦੇ ਰਹੇ ਹੋ</string>
     <string name="forums_comment_clear_reply">ਜਵਾਬ ਸਾਫ਼ ਕਰੋ</string>
-    <string name="forums_settings_title">ਫੋਰਮ ਸੈਟਿੰਗਜ਼</string>
+    <string name="forums_settings_title">%1$s ਸੈਟਿੰਗਾਂ</string>
     <string name="forums_settings_rename_label">ਫੋਰਮ ਦਾ ਨਾਮ</string>
     <string name="forums_settings_danger_zone">ਖ਼ਤਰੇ ਵਾਲਾ ਖੇਤਰ</string>
     <string name="forums_settings_delete_message">ਇਹ ਫੋਰਮ ਅਤੇ ਇਸ ਦੀਆਂ ਸਾਰੀਆਂ ਪੋਸਟਾਂ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾ ਦੇਵੇਗਾ। ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>

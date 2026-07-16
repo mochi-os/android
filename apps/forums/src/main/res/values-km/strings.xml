@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">តើអ្នកប្រាកដថាចង់លុបមតិយោបល់នេះមែនទេ?</string>
     <string name="forums_comment_replying_to">កំពុងឆ្លើយតបទៅ %1$s</string>
     <string name="forums_comment_clear_reply">សម្អាតការឆ្លើយតប</string>
-    <string name="forums_settings_title">ការកំណត់វេទិកា</string>
+    <string name="forums_settings_title">ការកំណត់ %1$s</string>
     <string name="forums_settings_rename_label">ឈ្មោះវេទិកា</string>
     <string name="forums_settings_danger_zone">តំបន់គ្រោះថ្នាក់</string>
     <string name="forums_settings_delete_message">វានឹងលុបវេទិកា និងការប្រកាសទាំងអស់របស់វាជាអចិន្ត្រៃយ៍។ វាមិនអាចត្រឡប់វិញបានទេ។</string>

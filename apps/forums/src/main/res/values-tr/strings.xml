@@ -193,7 +193,7 @@
     <string name="forums_comment_delete_message">Bu yorumu silmek istediğinizden emin misiniz?</string>
     <string name="forums_comment_replying_to">%1$s kullanıcısına yanıt veriliyor</string>
     <string name="forums_comment_clear_reply">Yanıtı temizle</string>
-    <string name="forums_settings_title">Forum ayarları</string>
+    <string name="forums_settings_title">%1$s ayarları</string>
     <string name="forums_settings_rename_label">Forum adı</string>
     <string name="forums_settings_danger_zone">Tehlikeli alan</string>
     <string name="forums_settings_delete_message">Bu işlem, forumu ve tüm gönderilerini kalıcı olarak siler. Bu işlem geri alınamaz.</string>
