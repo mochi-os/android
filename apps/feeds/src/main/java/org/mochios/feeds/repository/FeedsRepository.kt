@@ -7,6 +7,7 @@ package org.mochios.feeds.repository
 
 import android.content.ContentResolver
 import android.net.Uri
+import android.util.Log
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -22,6 +23,7 @@ import org.mochios.android.api.ApiException
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
@@ -811,8 +813,9 @@ class FeedsRepository @Inject constructor(
 
     suspend fun listAiAccounts(): List<org.mochios.android.model.Account> {
         return try {
-            api.listAccounts(capability = "ai").unwrap()
-        } catch (_: Exception) {
+            api.listAccounts(capability = "ai").unwrapRaw()
+        } catch (e: Exception) {
+            Log.w("FeedsRepository", "listAiAccounts failed", e)
             emptyList()
         }
     }

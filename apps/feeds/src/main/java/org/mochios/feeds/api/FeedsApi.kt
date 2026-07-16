@@ -495,10 +495,12 @@ interface FeedsApi {
 
     // --- AI ---
 
+    // The accounts endpoint returns a bare JSON array (no `{data:…}` envelope),
+    // so decode it as a plain list, not ApiResponse.
     @GET("-/accounts/list")
     suspend fun listAccounts(
         @Query("capability") capability: String,
-    ): Response<ApiResponse<List<org.mochios.android.model.Account>>>
+    ): Response<List<org.mochios.android.model.Account>>
 
     @FormUrlEncoded
     @POST("{feedId}/-/ai/settings")
