@@ -15,6 +15,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.CircularProgressIndicator
@@ -73,7 +74,7 @@ fun FeedSettingsScreen(
     // read-only identity card plus an unsubscribe action.
     val canManage = permissions.manage
 
-    val tabIds = listOf(SettingsTab.General, SettingsTab.Access)
+    val tabIds = listOf(SettingsTab.General, SettingsTab.Access, SettingsTab.Ai)
 
     // Persist tab by stable key so it survives back/forward navigation and
     // process death.
@@ -193,6 +194,7 @@ fun FeedSettingsScreen(
                             onFeedDeleted = onFeedDeleted
                         )
                         SettingsTab.Access -> AccessTab(viewModel = viewModel)
+                        SettingsTab.Ai -> AiTab(viewModel = viewModel)
                     }
                 }
             }
@@ -250,4 +252,5 @@ private fun SubscriberSettings(
 private enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
     General(R.string.feeds_settings, Icons.Outlined.Settings),
     Access(R.string.feeds_tab_access, Icons.Outlined.Shield),
+    Ai(R.string.feeds_tab_ai, Icons.Outlined.AutoAwesome),
 }
