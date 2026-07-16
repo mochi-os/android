@@ -149,6 +149,13 @@ class FeedSettingsViewModel @Inject constructor(
                 _feedName.value = info.feed.name
                 _aiMode.value = info.feed.aiMode ?: ""
                 _aiAccount.value = info.feed.aiAccount
+                // Owners only: load the AI-capable accounts up front — this decides
+                // whether the AI tab shows, so await it before clearing isLoading to
+                // keep the tab bar from popping the AI tab in a moment later.
+                if (info.permissions.manage) {
+                    _aiAccounts.value = repository.listAiAccounts()
+                        .sortedWith(compareBy(NaturalCompare) { it.label })
+                }
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -573,13 +580,6 @@ class FeedSettingsViewModel @Inject constructor(
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             }
-        }
-    }
-
-    fun loadAiAccounts() {
-        viewModelScope.launch {
-            _aiAccounts.value = repository.listAiAccounts()
-                .sortedWith(compareBy(NaturalCompare) { it.label })
         }
     }
 

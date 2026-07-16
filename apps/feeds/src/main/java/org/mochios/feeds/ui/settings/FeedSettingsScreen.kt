@@ -69,12 +69,16 @@ fun FeedSettingsScreen(
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
     val actionMessage by viewModel.actionMessage.collectAsState()
+    val aiAccounts by viewModel.aiAccounts.collectAsState()
 
     // Owners/admins get the full tabbed editor; plain subscribers get a
     // read-only identity card plus an unsubscribe action.
     val canManage = permissions.manage
 
-    val tabIds = listOf(SettingsTab.General, SettingsTab.Access, SettingsTab.Ai)
+    // The AI tab only appears once the account has an AI-capable account.
+    val tabIds = listOf(SettingsTab.General, SettingsTab.Access, SettingsTab.Ai).filter { tab ->
+        tab != SettingsTab.Ai || aiAccounts.isNotEmpty()
+    }
 
     // Persist tab by stable key so it survives back/forward navigation and
     // process death.

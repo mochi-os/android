@@ -28,7 +28,6 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -52,8 +51,6 @@ fun AiTab(
     val aiAccounts by viewModel.aiAccounts.collectAsState()
     val aiPrompts by viewModel.aiPrompts.collectAsState()
     val aiDefaults by viewModel.aiDefaults.collectAsState()
-
-    LaunchedEffect(Unit) { viewModel.loadAiAccounts() }
 
     val modes = listOf(
         "" to stringResource(R.string.feeds_ai_mode_off),
