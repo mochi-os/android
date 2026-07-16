@@ -19,7 +19,6 @@ import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.R
 import org.mochios.forums.model.AiPrompts
-import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumMember
 import org.mochios.forums.repository.ForumsRepository
@@ -35,8 +34,6 @@ data class ForumSettingsUiState(
     val accessRules: List<AccessRule> = emptyList(),
     val members: List<ForumMember> = emptyList(),
     val memberSearchResults: List<ForumMember> = emptyList(),
-    val banner: String = "",
-    val aiSettings: AiSettings? = null,
     val aiPrompts: AiPrompts? = null,
     val aiAccounts: List<org.mochios.android.model.Account> = emptyList(),
     val rssToken: String = "",
@@ -64,8 +61,10 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val r = repository.viewForum(forumId)
-                _uiState.value = _uiState.value.copy(forum = r.forum, isLoading = false)
+                val info = repository.getForumInfo(forumId)
+                val accounts = repository.listAiAccounts()
+                    .sortedWith(compareBy(NaturalCompare) { it.label })
+                _uiState.value = _uiState.value.copy(forum = info.forum, aiAccounts = accounts, isLoading = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -104,7 +103,9 @@ class ForumSettingsViewModel @Inject constructor(
             try {
                 val r = repository.getAccess(forumId)
                 _uiState.value = _uiState.value.copy(
-                    accessRules = r.rules.sortedWith(compareBy(NaturalCompare) { it.name ?: it.subject })
+                    accessRules = r.rules.sortedWith(compareBy(NaturalCompare) {
+                        it.name ?: it.subject
+                    })
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -205,23 +206,11 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
-    fun loadBanner() {
-        viewModelScope.launch {
-            try {
-                val r = repository.getBanner(forumId)
-                _uiState.value = _uiState.value.copy(banner = r.banner)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     fun saveBanner(banner: String) {
         viewModelScope.launch {
             try {
                 repository.setBanner(forumId, banner)
                 _uiState.value = _uiState.value.copy(
-                    banner = banner,
                     forum = _uiState.value.forum.copy(banner = banner),
                     actionMessage = R.string.forums_settings_banner_saved,
                 )
@@ -231,21 +220,14 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
-    fun loadAi() {
+    /**
+     * Load the prompt defaults for the AI section's "reset to default" action.
+     * The current mode/account/prompt values come from the forum row itself.
+     */
+    fun loadAiPrompts() {
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(
-                    // Drive aiSettings off the already-loaded forum row — there's
-                    // no separate read endpoint; calling the POST ai/settings as
-                    // a GET zeroed the columns.
-                    aiSettings = AiSettings(
-                        mode = _uiState.value.forum.aiMode,
-                        account = _uiState.value.forum.aiAccount,
-                    ),
-                    aiPrompts = repository.getAiPrompts(forumId),
-                    aiAccounts = repository.listAiAccounts()
-                        .sortedWith(compareBy(NaturalCompare) { it.label }),
-                )
+                _uiState.value = _uiState.value.copy(aiPrompts = repository.getAiPrompts(forumId))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -257,7 +239,6 @@ class ForumSettingsViewModel @Inject constructor(
             try {
                 repository.setAiSettings(forumId, mode, account)
                 _uiState.value = _uiState.value.copy(
-                    aiSettings = AiSettings(mode = mode, account = account),
                     forum = _uiState.value.forum.copy(aiMode = mode, aiAccount = account),
                     actionMessage = R.string.forums_settings_ai_updated,
                 )

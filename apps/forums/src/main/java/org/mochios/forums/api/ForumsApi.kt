@@ -55,6 +55,24 @@ data class ViewForumResponse(
     val nextCursor: Long? = null
 )
 
+/** Viewer permissions block returned alongside the forum row. */
+data class ForumPermissions(
+    val manage: Boolean = false,
+    val post: Boolean = false,
+    val view: Boolean = false,
+)
+
+/**
+ * Response for `{forumId}/-/information`: the forum row plus the viewer's
+ * permissions. Used by the settings screen in place of the heavier `viewForum`.
+ */
+data class ForumInfoResponse(
+    val entity: Boolean = false,
+    val fingerprint: String = "",
+    val forum: Forum = Forum(),
+    val permissions: ForumPermissions = ForumPermissions(),
+)
+
 data class CreateForumResponse(
     val id: String = "",
     val fingerprint: String = ""
@@ -240,7 +258,7 @@ interface ForumsApi {
     // ---- Forum entity ----
 
     @GET("{forumId}/-/information")
-    suspend fun getForumInfo(@Path("forumId") forumId: String): Response<ApiResponse<Map<String, Any>>>
+    suspend fun getForumInfo(@Path("forumId") forumId: String): Response<ApiResponse<ForumInfoResponse>>
 
     @GET("{forumId}/-/posts")
     suspend fun viewForum(
@@ -586,10 +604,13 @@ interface ForumsApi {
         @Field("banner") banner: String,
     ): Response<ApiResponse<SuccessResponse>>
 
+    // The accounts endpoint returns a bare JSON array (no `{data:…}` envelope),
+    // matching the settings module's connected-accounts list — so decode it as a
+    // plain list, not ApiResponse.
     @GET("-/accounts/list")
     suspend fun listAccounts(
         @Query("capability") capability: String,
-    ): Response<ApiResponse<List<org.mochios.android.model.Account>>>
+    ): Response<List<org.mochios.android.model.Account>>
 
     @FormUrlEncoded
     @POST("{forumId}/-/ai/settings")

@@ -156,12 +156,10 @@ fun NavGraphBuilder.forumsNavGraph(
     composable(
         route = ForumsApp.FORUM_SETTINGS,
         arguments = listOf(navArgument("forumId") { type = NavType.StringType })
-    ) { backStackEntry ->
-        val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
+    ) {
         ForumSettingsScreen(
             onBack = { navController.popBackStack() },
             onForumDeleted = { navController.popBackStack(ForumsApp.ROUTER, inclusive = false) },
-            onModeration = { navController.navigate(ForumsApp.moderation(forumId)) },
         )
     }
 

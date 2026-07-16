@@ -159,7 +159,7 @@
     <!-- AI tab -->
     <string name="forums_ai_mode_label">Mode: %1$s</string>
     <string name="forums_ai_mode_heading">AI mode</string>
-    <string name="forums_ai_mode_off">Off</string>
+    <string name="forums_ai_mode_off">Disabled</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account">AI account</string>
     <string name="forums_ai_account_default">Default account</string>
@@ -168,6 +168,13 @@
     <string name="forums_ai_prompt_reset">Reset to default</string>
     <string name="forums_ai_post_prompt_label">Prompt for post tags</string>
     <string name="forums_ai_comment_prompt_label">Prompt for comment tags</string>
+    <string name="forums_ai_actions_label">AI actions on posts</string>
+    <string name="forums_ai_account_label">Account</string>
+    <string name="forums_ai_prompt_tag_label">Tag prompt</string>
+    <string name="forums_ai_prompt_score_label">Score prompt</string>
+    <string name="forums_ai_prompt_default">Default</string>
+    <string name="forums_ai_prompt_custom">Custom</string>
+    <string name="forums_ai_prompt_variables">Variables: %1$s</string>
 
     <!-- General tab extras -->
     <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
@@ -248,7 +255,7 @@
     <string name="forums_comment_reply">Reply</string>
 
     <!-- Forum settings -->
-    <string name="forums_settings_title">Forum settings</string>
+    <string name="forums_settings_title">%1$s settings</string>
     <string name="forums_settings_forum_renamed">Forum renamed</string>
     <string name="forums_settings_banner_saved">Banner saved</string>
     <string name="forums_settings_access_updated">Access updated</string>

@@ -21,6 +21,18 @@ data class Forum(
     val sort: String = "",
     @SerializedName("ai_mode") val aiMode: String = "",
     @SerializedName("ai_account") val aiAccount: String = "",
+    @SerializedName("ai_prompt_tag") val aiPromptTag: String = "",
+    @SerializedName("ai_prompt_score") val aiPromptScore: String = "",
+    @SerializedName("comment_limit") val commentLimit: Int = 0,
+    @SerializedName("post_limit") val postLimit: Int = 0,
+    @SerializedName("limit_window") val limitWindow: Int = 0,
+    @SerializedName("new_user_days") val newUserDays: Int = 0,
+    @SerializedName("moderation_new") val moderationNew: Int = 0,
+    @SerializedName("moderation_posts") val moderationPosts: Int = 0,
+    @SerializedName("moderation_comments") val moderationComments: Int = 0,
+    val members: Int = 0,
+    val populated: Int = 0,
+    val synced: Long = 0,
 )
 
 data class Member(

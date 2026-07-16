@@ -5,6 +5,7 @@
 
 package org.mochios.forums.repository
 
+import android.util.Log
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -13,10 +14,12 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
 import org.mochios.forums.api.AccessResponse
 import org.mochios.forums.api.BannerResponse
 import org.mochios.forums.api.CreateCommentResponse
 import org.mochios.forums.api.CreatePostResponse
+import org.mochios.forums.api.ForumInfoResponse
 import org.mochios.forums.api.ForumListResponse
 import org.mochios.forums.api.ForumsApi
 import org.mochios.forums.api.MemberSearchResponse
@@ -60,6 +63,10 @@ class ForumsRepository @Inject constructor(
 
     suspend fun viewForum(forumId: String, before: Long? = null, sort: String? = null, tag: String? = null): ViewForumResponse =
         api.viewForum(forumId, before = before, sort = sort, tag = tag).unwrap()
+
+    /** Fetch the forum row plus viewer permissions (no posts) — used by settings. */
+    suspend fun getForumInfo(forumId: String): ForumInfoResponse =
+        api.getForumInfo(forumId).unwrap()
 
     suspend fun createForum(name: String, privacy: String? = null): String {
         val r = api.createForum(name, privacy).unwrap()
@@ -451,8 +458,9 @@ class ForumsRepository @Inject constructor(
 
     suspend fun listAiAccounts(): List<org.mochios.android.model.Account> {
         return try {
-            api.listAccounts(capability = "ai").unwrap()
-        } catch (_: Exception) {
+            api.listAccounts(capability = "ai").unwrapRaw()
+        } catch (e: Exception) {
+            Log.w("ForumsRepository", "listAiAccounts failed", e)
             emptyList()
         }
     }
