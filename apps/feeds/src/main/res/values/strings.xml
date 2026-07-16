@@ -306,6 +306,9 @@
     <string name="feeds_ai_prompt_rank">Ranking / scoring</string>
     <string name="feeds_ai_prompt_credibility">Credibility assessment</string>
     <string name="feeds_ai_reset_default">Reset to default</string>
+    <string name="feeds_ai_prompt_default">Default</string>
+    <string name="feeds_ai_prompt_custom">Custom</string>
+    <string name="feeds_ai_prompt_variables">Variables: %1$s</string>
 
     <string name="feeds_feed_not_found">Feed not found</string>
     <string name="feeds_post_not_found">Post not found</string>

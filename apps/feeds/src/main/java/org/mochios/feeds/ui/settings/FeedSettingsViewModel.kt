@@ -103,8 +103,10 @@ class FeedSettingsViewModel @Inject constructor(
     private val _aiAccounts = MutableStateFlow<List<org.mochios.android.model.Account>>(emptyList())
     val aiAccounts: StateFlow<List<org.mochios.android.model.Account>> = _aiAccounts.asStateFlow()
 
-    private val _aiPrompts = MutableStateFlow<Map<String, String>>(emptyMap())
-    val aiPrompts: StateFlow<Map<String, String>> = _aiPrompts.asStateFlow()
+    // Custom prompt overrides keyed by type — empty when the feed uses the
+    // server default for that prompt.
+    private val _aiOverrides = MutableStateFlow<Map<String, String>>(emptyMap())
+    val aiOverrides: StateFlow<Map<String, String>> = _aiOverrides.asStateFlow()
 
     private val _aiDefaults = MutableStateFlow<Map<String, String>>(emptyMap())
     val aiDefaults: StateFlow<Map<String, String>> = _aiDefaults.asStateFlow()
@@ -144,18 +146,15 @@ class FeedSettingsViewModel @Inject constructor(
             _isLoading.value = true
             try {
                 val info = repository.getFeedInfo(feedId)
+                if (info.permissions.manage) {
+                    _aiAccounts.value = repository.listAiAccounts()
+                        .sortedWith(compareBy(NaturalCompare) { it.label })
+                }
                 _feedInfo.value = info.feed
                 _permissions.value = info.permissions
                 _feedName.value = info.feed.name
                 _aiMode.value = info.feed.aiMode ?: ""
                 _aiAccount.value = info.feed.aiAccount
-                // Owners only: load the AI-capable accounts up front — this decides
-                // whether the AI tab shows, so await it before clearing isLoading to
-                // keep the tab bar from popping the AI tab in a moment later.
-                if (info.permissions.manage) {
-                    _aiAccounts.value = repository.listAiAccounts()
-                        .sortedWith(compareBy(NaturalCompare) { it.label })
-                }
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -588,22 +587,19 @@ class FeedSettingsViewModel @Inject constructor(
             try {
                 val (defaults, overrides) = repository.getAiPrompts(feedId)
                 _aiDefaults.value = defaults
-                _aiPrompts.value = defaults + overrides
+                _aiOverrides.value = overrides
             } catch (_: Exception) {
                 // Non-critical
             }
         }
     }
 
-    fun setAiPromptText(type: String, text: String) {
-        _aiPrompts.value = _aiPrompts.value + (type to text)
-    }
-
-    fun saveAiPrompt(type: String) {
-        val prompt = _aiPrompts.value[type] ?: ""
+    /** Persist [prompt] as the custom override for [type]. */
+    fun saveAiPrompt(type: String, prompt: String) {
         viewModelScope.launch {
             try {
                 repository.setAiPrompt(feedId, type, prompt)
+                _aiOverrides.value += (type to prompt)
                 _actionMessage.value = R.string.feeds_settings_prompt_saved
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -611,12 +607,12 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
+    /** Clear the custom override for [type] (server falls back to the default). */
     fun resetAiPrompt(type: String) {
-        val defaultVal = _aiDefaults.value[type] ?: ""
-        _aiPrompts.value = _aiPrompts.value + (type to defaultVal)
         viewModelScope.launch {
             try {
                 repository.setAiPrompt(feedId, type, "")
+                _aiOverrides.value -= type
                 _actionMessage.value = R.string.feeds_settings_prompt_reset
             } catch (_: Exception) { }
         }
