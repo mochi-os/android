@@ -91,20 +91,24 @@ class PushService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        // System-driven STICKY restart can still bring this service back even
-        // after the user has moved to FCM and our own callers have stopped
-        // calling PushService.start — Android remembers the previous live
-        // instance and replays it once it has resources. Bail out before
-        // startForegroundCompat so the "listening for notifications" FG
-        // notification never appears for FCM users. Intent is null on
-        // system-driven restarts (so we can't gate off the intent); we read
-        // the cached transport from PushTransport.current instead.
+        // Always promote to the foreground first. Android requires
+        // startForeground() within ~5s of every startForegroundService() call —
+        // even on paths where we immediately stop — or it raises
+        // ForegroundServiceDidNotStartInTimeException. Then decide whether to stay:
+        //
+        // FCM users (and system-driven STICKY restarts, where intent is null so we
+        // can't gate off it — we read the cached PushTransport.current instead)
+        // don't want the UnifiedPush distributor running or its "listening for
+        // notifications" notification lingering, so we remove it and stop. A
+        // UnifiedPush start also races recordTransport(), so onStartCommand can
+        // legitimately still read transport=fcm here.
+        startForegroundCompat()
         if (PushTransport.current(applicationContext) == PushTransport.TRANSPORT_FCM) {
             Log.i(TAG, "onStartCommand: transport=fcm; stopping self")
+            stopForeground(STOP_FOREGROUND_REMOVE)
             stopSelf()
             return START_NOT_STICKY
         }
-        startForegroundCompat()
         // Initial snapshot — accountsFlow does NOT emit synchronously on
         // collection, so we have to seed from MochiAccount.all() ourselves.
         reconcile(MochiAccount.all(applicationContext))
