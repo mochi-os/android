@@ -18,6 +18,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.R
+import org.mochios.forums.api.ForumPermissions
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumMember
@@ -26,11 +27,14 @@ import javax.inject.Inject
 
 data class ForumSettingsUiState(
     val forum: Forum = Forum(),
+    /** The viewer's permissions; `manage` gates every editing surface. */
+    val permissions: ForumPermissions = ForumPermissions(),
     val isLoading: Boolean = false,
     val isSaving: Boolean = false,
     val error: MochiError? = null,
     val actionMessage: Int? = null,
     val deleted: Boolean = false,
+    val unsubscribed: Boolean = false,
     val accessRules: List<AccessRule> = emptyList(),
     /** Levels this forum offers, highest first; empty until access loads. */
     val accessLevels: List<String> = emptyList(),
@@ -64,9 +68,19 @@ class ForumSettingsViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val info = repository.getForumInfo(forumId)
-                val accounts = repository.listAiAccounts()
-                    .sortedWith(compareBy(NaturalCompare) { it.label })
-                _uiState.value = _uiState.value.copy(forum = info.forum, aiAccounts = accounts, isLoading = false)
+                // AI accounts are an account-wide list and only ever drive
+                // manage-only UI, so skip the call for a viewer who can't manage.
+                val accounts = if (info.permissions.manage) {
+                    repository.listAiAccounts().sortedWith(compareBy(NaturalCompare) { it.label })
+                } else {
+                    emptyList()
+                }
+                _uiState.value = _uiState.value.copy(
+                    forum = info.forum,
+                    permissions = info.permissions,
+                    aiAccounts = accounts,
+                    isLoading = false,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -94,6 +108,18 @@ class ForumSettingsViewModel @Inject constructor(
             try {
                 repository.deleteForum(forumId)
                 _uiState.value = _uiState.value.copy(deleted = true)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Unsubscribe the viewer from this forum, then leave the settings screen. */
+    fun unsubscribe() {
+        viewModelScope.launch {
+            try {
+                repository.unsubscribe(forumId, _uiState.value.forum.server.ifBlank { null })
+                _uiState.value = _uiState.value.copy(unsubscribed = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

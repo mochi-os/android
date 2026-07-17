@@ -74,7 +74,11 @@ fun GeneralTab(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        ForumIdentitySection(forum = uiState.forum, onRename = { name -> viewModel.rename(name) })
+        ForumIdentitySection(
+            forum = uiState.forum,
+            editable = true,
+            onRename = { name -> viewModel.rename(name) },
+        )
 
         // Banner
         Section(
@@ -149,21 +153,35 @@ fun GeneralTab(
 }
 
 /**
- * Identity card: forum name (inline editable) plus copyable entity id,
- * fingerprint, and server chips. Mirrors feeds' `FeedIdentitySection`.
+ * Identity card: forum name (inline editable when [editable]) plus copyable
+ * entity id, fingerprint, and server chips. Mirrors feeds'
+ * `FeedIdentitySection` — shared by the owner General tab and the read-only
+ * view a non-manager gets.
+ *
+ * @param onRename invoked with the new name when the owner saves an edit;
+ *                 ignored when [editable] is false.
  */
 @Composable
-private fun ForumIdentitySection(
+fun ForumIdentitySection(
     forum: Forum,
+    editable: Boolean,
     onRename: (String) -> Unit,
+    modifier: Modifier = Modifier,
 ) {
-    Section(title = stringResource(R.string.forums_settings_section_identity)) {
+    Section(
+        title = stringResource(R.string.forums_settings_section_identity),
+        modifier = modifier,
+    ) {
         IdentityFieldRow(label = stringResource(R.string.forums_settings_field_name)) {
-            NameEditor(
-                currentName = forum.name,
-                onRename = onRename,
-                modifier = Modifier.weight(1f),
-            )
+            if (editable) {
+                NameEditor(
+                    currentName = forum.name,
+                    onRename = onRename,
+                    modifier = Modifier.weight(1f),
+                )
+            } else {
+                Text(forum.name)
+            }
         }
         IdentityFieldRow(label = stringResource(R.string.forums_settings_field_entity_id)) {
             DataChip(value = forum.id, truncate = Truncate.MIDDLE)

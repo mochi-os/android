@@ -180,6 +180,7 @@
     <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
     <string name="forums_settings_clear_notifications">Clear notifications</string>
     <string name="forums_settings_unsubscribe">Unsubscribe</string>
+    <string name="forums_settings_unsubscribe_section">Unsubscribe from forum</string>
 
     <!-- Moderation centre -->
     <string name="forums_moderation_title">Moderation</string>
