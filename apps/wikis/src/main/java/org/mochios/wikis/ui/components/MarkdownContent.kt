@@ -373,6 +373,10 @@ private fun ProseSegment(
     onImageTap: (resolvedUrl: String) -> Unit,
 ) {
     val spanned = remember(markwon, markdown) { markwon.toMarkdown(markdown) }
+    // Markwon renders into a platform TextView, which knows nothing about the
+    // Compose theme; onSurface keeps prose readable on either scheme, where the
+    // old fixed android.R.color.primary_text_light went black in dark mode.
+    val textColor = MaterialTheme.colorScheme.onSurface.toArgb()
 
     AndroidView(
         factory = { ctx ->
@@ -382,12 +386,11 @@ private fun ProseSegment(
                 // LinkMovementMethod can't dispatch clicks into TableRowSpans.
                 movementMethod = TableAwareMovementMethod.create()
                 textSize = 16f
-                setTextColor(
-                    ctx.resources.getColor(android.R.color.primary_text_light, ctx.theme)
-                )
+                setTextColor(textColor)
             }
         },
         update = { textView ->
+            textView.setTextColor(textColor)
             textView.ellipsize = TextUtils.TruncateAt.END
             markwon.setParsedMarkdown(textView, spanned)
 
@@ -453,6 +456,9 @@ private fun CodeBlockSegment(
     onTopMeasured: (top: Int) -> Unit,
 ) {
     val spanned = remember(markwon, codeMarkdown) { markwon.toMarkdown(codeMarkdown) }
+    // The block sits on surfaceVariant, so its code follows that role rather
+    // than the fixed near-black it used to draw in.
+    val textColor = MaterialTheme.colorScheme.onSurfaceVariant.toArgb()
 
     Surface(
         modifier = Modifier
@@ -485,12 +491,11 @@ private fun CodeBlockSegment(
                         ClickableLinkTextView(ctx).apply {
                             movementMethod = LinkMovementMethod.getInstance()
                             textSize = 13f
-                            setTextColor(
-                                ctx.resources.getColor(android.R.color.primary_text_light, ctx.theme)
-                            )
+                            setTextColor(textColor)
                         }
                     },
                     update = { textView ->
+                        textView.setTextColor(textColor)
                         textView.ellipsize = TextUtils.TruncateAt.END
                         markwon.setParsedMarkdown(textView, spanned)
                         textView.viewTreeObserver.addOnPreDrawListener {

@@ -7,9 +7,11 @@ package org.mochios.android.ui.components
 
 import android.text.TextUtils
 import android.widget.TextView
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import io.noties.markwon.Markwon
@@ -56,6 +58,13 @@ fun HtmlContent(
     // keeps only the URL). Used for the long-press-shows-alt-text affordance.
     val altByUrl = remember(html) { parseImageAlts(html) }
 
+    // Markdown is rendered into a platform TextView, which knows nothing about
+    // the Compose theme. Feed it onSurface so a body reads on either scheme —
+    // the old android.R.color.primary_text_light is a fixed near-black and left
+    // every post unreadable in dark mode. Applied in `update` as well as
+    // `factory`, since `factory` runs once and a theme switch recomposes.
+    val textColor = MaterialTheme.colorScheme.onSurface.toArgb()
+
     AndroidView(
         factory = { ctx ->
             ClickableLinkTextView(ctx).apply {
@@ -64,9 +73,7 @@ fun HtmlContent(
                 // LinkMovementMethod can't dispatch clicks into TableRowSpans.
                 movementMethod = TableAwareMovementMethod.create()
                 textSize = 16f
-                setTextColor(
-                    ctx.resources.getColor(android.R.color.primary_text_light, ctx.theme)
-                )
+                setTextColor(textColor)
                 // Selectable so the user can long-press to pick text inside
                 // the rendered markdown — used by wikis' quote-on-select
                 // reply path, which reads the active selection at the moment
@@ -75,6 +82,7 @@ fun HtmlContent(
             }
         },
         update = { textView ->
+            textView.setTextColor(textColor)
             val view = textView as ClickableLinkTextView
             view.clampToHeight = clampToBoundedHeight
             // The clamped feeds body is a non-interactive preview, so drop text
