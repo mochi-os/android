@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.api.Interest
 import org.mochios.settings.api.InterestSearchResult
 import org.mochios.settings.api.InterestsApi
@@ -134,7 +135,7 @@ class InterestsViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(300)
+            delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isSearching = true)
             try {
                 val resp = api.searchInterests(trimmed).bodyOrThrow()

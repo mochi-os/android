@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,6 +19,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.forums.R
 import org.mochios.forums.api.ForumPermissions
 import org.mochios.forums.model.AiPrompts
@@ -58,6 +61,10 @@ class ForumSettingsViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ForumSettingsUiState())
     val uiState: StateFlow<ForumSettingsUiState> = _uiState.asStateFlow()
+
+    /** In-flight searches, each cancelled by the next keystroke. */
+    private var userSearchJob: Job? = null
+    private var memberSearchJob: Job? = null
 
     init {
         load()
@@ -186,11 +193,16 @@ class ForumSettingsViewModel @Inject constructor(
     }
 
     fun searchUsers(query: String) {
+        // Each keystroke replaces the last: without this a typed name is one
+        // request per letter, and a slow early response can land after a later
+        // one and overwrite the newer results.
+        userSearchJob?.cancel()
         if (query.trim().length < 2) {
             _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             return
         }
-        viewModelScope.launch {
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
                 val results = repository.searchUsers(query.trim())
                 _uiState.value = _uiState.value.copy(userSearchResults = results)
@@ -226,7 +238,9 @@ class ForumSettingsViewModel @Inject constructor(
     }
 
     fun searchMembers(query: String) {
-        viewModelScope.launch {
+        memberSearchJob?.cancel()
+        memberSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
                 val r = repository.searchMembers(forumId, query)
                 _uiState.value = _uiState.value.copy(memberSearchResults = r.members)

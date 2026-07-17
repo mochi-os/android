@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,6 +19,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.crm.model.Person
 import org.mochios.crm.model.Crm
 import org.mochios.crm.model.Group
@@ -48,6 +51,9 @@ class CrmSettingsViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CrmSettingsUiState())
     val uiState: StateFlow<CrmSettingsUiState> = _uiState.asStateFlow()
+
+    /** In-flight user search, cancelled by the next keystroke. */
+    private var userSearchJob: Job? = null
 
     init {
         loadCrm()
@@ -153,11 +159,16 @@ class CrmSettingsViewModel @Inject constructor(
 
     /** Live user search for the access picker (needs >=2 chars), mirroring web. */
     fun searchUsers(query: String) {
+        // Each keystroke replaces the last: without this a typed name is one
+        // request per letter, and a slow early response can land after a later
+        // one and overwrite the newer results.
+        userSearchJob?.cancel()
         if (query.trim().length < 2) {
             _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             return
         }
-        viewModelScope.launch {
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
                 // Await the results before reading the state to copy from —
                 // inline, the receiver is captured before the suspend, so a slow

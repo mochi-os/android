@@ -63,6 +63,7 @@ import org.mochios.android.R
 import org.mochios.android.model.PlaceData
 import org.mochios.android.places.NominatimPlace
 import org.mochios.android.places.NominatimService
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.osmdroid.events.MapEventsReceiver
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
@@ -82,7 +83,6 @@ private fun nominatimService(context: Context): NominatimService =
         PlacePickerEntryPoint::class.java
     ).nominatimService()
 
-private const val SEARCH_DEBOUNCE_MS = 300L
 private const val MAX_DISPLAY_NAME_LENGTH = 80
 
 private fun truncate(text: String, max: Int = MAX_DISPLAY_NAME_LENGTH): String =
@@ -157,7 +157,7 @@ fun PlacePicker(
     // Debounced autocomplete search driven by `nameText`.
     LaunchedEffect(Unit) {
         snapshotFlow { nameText }
-            .debounce(SEARCH_DEBOUNCE_MS)
+            .debounce(SEARCH_DEBOUNCE)
             .distinctUntilChanged()
             .collect { query ->
                 if (suppressSearch) {

@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.wikis.model.SearchResult
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
@@ -73,7 +74,7 @@ class SearchViewModel @Inject constructor(
         // here so the perceived responsiveness matches.
         viewModelScope.launch {
             _queryFlow
-                .debounce(300)
+                .debounce(SEARCH_DEBOUNCE)
                 .distinctUntilChanged()
                 .onEach { debounced ->
                     // Persist into SavedStateHandle so a rotation / process

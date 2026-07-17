@@ -22,6 +22,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.people.model.Group
 import org.mochios.people.model.GroupMember
 import org.mochios.people.model.GroupMemberType
@@ -264,7 +265,7 @@ class GroupDetailViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(300)
+            delay(SEARCH_DEBOUNCE)
             _state.update { it.copy(searchLoading = true, searchError = null) }
             try {
                 val excluded = (_state.value.members.map { it.member } + groupId).toSet()

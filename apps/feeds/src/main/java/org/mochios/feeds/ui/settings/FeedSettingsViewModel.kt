@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -18,6 +20,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
@@ -37,6 +40,9 @@ class FeedSettingsViewModel @Inject constructor(
 ) : ViewModel() {
 
     val feedId: String = savedStateHandle.get<String>("feedId") ?: ""
+
+    /** In-flight user search, cancelled by the next keystroke. */
+    private var userSearchJob: Job? = null
 
     // General tab
     private val _feedInfo = MutableStateFlow<Feed?>(null)
@@ -460,15 +466,21 @@ class FeedSettingsViewModel @Inject constructor(
     }
 
     fun searchUsers(query: String) {
+        // Each keystroke replaces the last: without this a typed name is one
+        // request per letter, and a slow early response can land after a later
+        // one and overwrite the newer results.
+        userSearchJob?.cancel()
         // Below two characters there's nothing to search — clear any prior
         // results so an emptied field doesn't keep showing stale matches.
         if (query.length < 2) {
             _userSearchResults.value = emptyList()
             return
         }
-        viewModelScope.launch {
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
-                _userSearchResults.value = repository.searchUsers(query)
+                val results = repository.searchUsers(query)
+                _userSearchResults.value = results
             } catch (_: Exception) {
                 _userSearchResults.value = emptyList()
             }

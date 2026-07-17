@@ -19,11 +19,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
 
 /** Debounce before a typed query is sent to the directory, in milliseconds. */
-private const val SEARCH_DEBOUNCE_MS = 300L
 
 /**
  * One forum row in the discovery list, whichever source it came from — the
@@ -99,7 +99,7 @@ class FindForumsViewModel @Inject constructor(
     }
 
     /**
-     * Search as the user types, debounced by [SEARCH_DEBOUNCE_MS] so a query is
+     * Search as the user types, debounced by [SEARCH_DEBOUNCE] so a query is
      * only sent once they pause. A query that looks like a URL is probed
      * instead. Clearing the field restores the recommendations.
      */
@@ -116,7 +116,7 @@ class FindForumsViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(SEARCH_DEBOUNCE_MS)
+            delay(SEARCH_DEBOUNCE)
             if (looksLikeUrl(query)) {
                 _uiState.value = _uiState.value.copy(results = emptyList())
                 probe(query.trim())

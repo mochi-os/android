@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
@@ -80,7 +81,7 @@ class FindFeedsViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(300) // Debounce
+            delay(SEARCH_DEBOUNCE)
             if (looksLikeUrl(query)) {
                 probe(query)
                 _searchResults.value = emptyList()

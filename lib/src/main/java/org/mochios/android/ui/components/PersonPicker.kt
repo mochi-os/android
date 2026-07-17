@@ -31,6 +31,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.model.User
+import org.mochios.android.util.SEARCH_DEBOUNCE
 
 @Composable
 fun PersonPicker(
@@ -51,7 +52,7 @@ fun PersonPicker(
                 searchJob?.cancel()
                 if (newQuery.length >= 2) {
                     searchJob = scope.launch {
-                        delay(300)
+                        delay(SEARCH_DEBOUNCE)
                         results = onSearch(newQuery)
                     }
                 } else {

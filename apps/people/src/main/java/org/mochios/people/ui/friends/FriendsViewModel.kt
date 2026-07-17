@@ -20,6 +20,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.people.model.Friend
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.RelationshipStatus
@@ -334,7 +335,7 @@ class FriendsViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(300)
+            delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(addSearchLoading = true, addSearchError = null)
             try {
                 val results = repository.searchFriends(query)
