@@ -31,7 +31,6 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -60,14 +59,12 @@ fun GeneralTab(
     viewModel: FeedSettingsViewModel,
     onFeedDeleted: () -> Unit
 ) {
-    val banner by viewModel.banner.collectAsState()
     val feedInfo by viewModel.feedInfo.collectAsState()
+    // The banner arrives with the feed information load; no separate fetch.
+    val banner = feedInfo?.banner.orEmpty()
+    var bannerDraft by remember(banner) { mutableStateOf(banner) }
     var showDeleteDialog by remember { mutableStateOf(false) }
     val focusManager = LocalFocusManager.current
-
-    LaunchedEffect(Unit) {
-        viewModel.loadBanner()
-    }
 
     Column(
         modifier = Modifier
@@ -96,18 +93,21 @@ fun GeneralTab(
                 .fillMaxWidth()
                 .padding(top = 8.dp)) {
                 OutlinedTextField(
-                    value = banner,
-                    onValueChange = { value -> viewModel.setBannerText(value) },
+                    value = bannerDraft,
+                    onValueChange = { value -> bannerDraft = value },
                     placeholder = { Text(stringResource(R.string.feeds_banner_hint)) },
                     modifier = Modifier.fillMaxWidth(),
                     minLines = 3,
                     maxLines = 8
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                Button(onClick = {
-                    viewModel.saveBanner()
-                    focusManager.clearFocus()
-                }) {
+                Button(
+                    onClick = {
+                        viewModel.saveBanner(bannerDraft)
+                        focusManager.clearFocus()
+                    },
+                    enabled = bannerDraft != banner,
+                ) {
                     Text(stringResource(MochiR.string.common_save))
                 }
             }

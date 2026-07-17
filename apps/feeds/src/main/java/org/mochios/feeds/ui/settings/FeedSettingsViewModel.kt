@@ -56,11 +56,6 @@ class FeedSettingsViewModel @Inject constructor(
     private val _rssMode = MutableStateFlow("posts")
     val rssMode: StateFlow<String> = _rssMode.asStateFlow()
 
-    private val _banner = MutableStateFlow("")
-    val banner: StateFlow<String> = _banner.asStateFlow()
-
-    private val _bannerOriginal = MutableStateFlow("")
-
     // Sources tab
     private val _sources = MutableStateFlow<List<Source>>(emptyList())
     val sources: StateFlow<List<Source>> = _sources.asStateFlow()
@@ -232,41 +227,16 @@ class FeedSettingsViewModel @Inject constructor(
 
     // --- Banner ---
 
-    fun loadBanner() {
+    /**
+     * Persist [text] as the feed's banner. The current value comes from the feed
+     * information load, so there is no separate banner fetch.
+     */
+    fun saveBanner(text: String) {
         viewModelScope.launch {
             try {
-                val text = repository.getBanner(feedId)
-                _banner.value = text
-                _bannerOriginal.value = text
-            } catch (_: Exception) {
-                // Non-critical
-            }
-        }
-    }
-
-    fun setBannerText(text: String) {
-        _banner.value = text
-    }
-
-    fun saveBanner() {
-        viewModelScope.launch {
-            try {
-                repository.setBanner(feedId, _banner.value)
-                _bannerOriginal.value = _banner.value
+                repository.setBanner(feedId, text)
+                _feedInfo.value = _feedInfo.value?.copy(banner = text)
                 _actionMessage.value = R.string.feeds_settings_banner_saved
-            } catch (e: Exception) {
-                _error.value = e.toMochiError()
-            }
-        }
-    }
-
-    fun clearBanner() {
-        _banner.value = ""
-        viewModelScope.launch {
-            try {
-                repository.setBanner(feedId, "")
-                _bannerOriginal.value = ""
-                _actionMessage.value = R.string.feeds_settings_banner_cleared
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             }
