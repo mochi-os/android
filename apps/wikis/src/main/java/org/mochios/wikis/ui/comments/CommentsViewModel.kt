@@ -107,9 +107,8 @@ class CommentsViewModel @Inject constructor(
         viewModelScope.launch {
             // Capture the signed-in entity so Edit affordances can gate on
             // ownership of each comment — `comment.author == currentUserId`.
-            _uiState.value = _uiState.value.copy(
-                currentUserId = sessionManager.getBoundIdentity(),
-            )
+            val identity = sessionManager.getBoundIdentity()
+            _uiState.value = _uiState.value.copy(currentUserId = identity)
         }
     }
 

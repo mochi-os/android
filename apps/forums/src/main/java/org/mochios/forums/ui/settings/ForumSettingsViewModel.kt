@@ -271,7 +271,8 @@ class ForumSettingsViewModel @Inject constructor(
     fun loadAiPrompts() {
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(aiPrompts = repository.getAiPrompts(forumId))
+                val prompts = repository.getAiPrompts(forumId)
+                _uiState.value = _uiState.value.copy(aiPrompts = prompts)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
