@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">報告</string>
     <string name="forums_moderation_tab_log">ログ</string>
     <string name="forums_moderation_tab_restrictions">制限</string>
-    <string name="forums_moderation_reports_status">ステータス</string>
     <string name="forums_moderation_reports_pending">保留中</string>
     <string name="forums_moderation_reports_resolved">解決済み</string>
     <string name="forums_moderation_reports_all">すべて</string>

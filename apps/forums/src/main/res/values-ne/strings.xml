@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">रिपोर्टहरू</string>
     <string name="forums_moderation_tab_log">लग</string>
     <string name="forums_moderation_tab_restrictions">प्रतिबन्धहरू</string>
-    <string name="forums_moderation_reports_status">स्थिति</string>
     <string name="forums_moderation_reports_pending">बाँकी</string>
     <string name="forums_moderation_reports_resolved">समाधान भयो</string>
     <string name="forums_moderation_reports_all">सबै</string>

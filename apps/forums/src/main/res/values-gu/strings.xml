@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">રિપોર્ટ્સ</string>
     <string name="forums_moderation_tab_log">લૉગ</string>
     <string name="forums_moderation_tab_restrictions">પ્રતિબંધો</string>
-    <string name="forums_moderation_reports_status">સ્થિતિ</string>
     <string name="forums_moderation_reports_pending">બાકી</string>
     <string name="forums_moderation_reports_resolved">ઉકેલાયું</string>
     <string name="forums_moderation_reports_all">બધા</string>

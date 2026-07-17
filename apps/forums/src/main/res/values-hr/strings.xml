@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Prijave</string>
     <string name="forums_moderation_tab_log">Zapisnik</string>
     <string name="forums_moderation_tab_restrictions">Ograničenja</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Na čekanju</string>
     <string name="forums_moderation_reports_resolved">Riješeno</string>
     <string name="forums_moderation_reports_all">Sve</string>

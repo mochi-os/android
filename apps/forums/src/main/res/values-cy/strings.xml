@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Adroddiadau</string>
     <string name="forums_moderation_tab_log">Log</string>
     <string name="forums_moderation_tab_restrictions">Cyfyngiadau</string>
-    <string name="forums_moderation_reports_status">Statws</string>
     <string name="forums_moderation_reports_pending">Ar y gweill</string>
     <string name="forums_moderation_reports_resolved">Wedi\'i datrys</string>
     <string name="forums_moderation_reports_all">Pob un</string>

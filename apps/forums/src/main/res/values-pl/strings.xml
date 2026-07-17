@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Zgłoszenia</string>
     <string name="forums_moderation_tab_log">Dziennik</string>
     <string name="forums_moderation_tab_restrictions">Ograniczenia</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Oczekujące</string>
     <string name="forums_moderation_reports_resolved">Rozwiązane</string>
     <string name="forums_moderation_reports_all">Wszystko</string>

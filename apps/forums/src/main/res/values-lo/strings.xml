@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">ລາຍງານ</string>
     <string name="forums_moderation_tab_log">ບັນທຶກ</string>
     <string name="forums_moderation_tab_restrictions">ຂໍ້ຈຳກັດ</string>
-    <string name="forums_moderation_reports_status">ສະຖານະ</string>
     <string name="forums_moderation_reports_pending">ກຳລັງລໍຖ້າ</string>
     <string name="forums_moderation_reports_resolved">ແກ້ໄຂແລ້ວ</string>
     <string name="forums_moderation_reports_all">ທັງໝົດ</string>

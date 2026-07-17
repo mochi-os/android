@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Raportid</string>
     <string name="forums_moderation_tab_log">Logi</string>
     <string name="forums_moderation_tab_restrictions">Piirangud</string>
-    <string name="forums_moderation_reports_status">Olek</string>
     <string name="forums_moderation_reports_pending">Ootel</string>
     <string name="forums_moderation_reports_resolved">Lahendatud</string>
     <string name="forums_moderation_reports_all">Kõik</string>

@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Αναφορές</string>
     <string name="forums_moderation_tab_log">Αρχείο καταγραφής</string>
     <string name="forums_moderation_tab_restrictions">Περιορισμοί</string>
-    <string name="forums_moderation_reports_status">Κατάσταση</string>
     <string name="forums_moderation_reports_pending">Σε εκκρεμότητα</string>
     <string name="forums_moderation_reports_resolved">Επιλύθηκε</string>
     <string name="forums_moderation_reports_all">Όλα</string>

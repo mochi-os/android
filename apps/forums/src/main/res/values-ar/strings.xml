@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">التقارير</string>
     <string name="forums_moderation_tab_log">السجل</string>
     <string name="forums_moderation_tab_restrictions">القيود</string>
-    <string name="forums_moderation_reports_status">الحالة</string>
     <string name="forums_moderation_reports_pending">قيد الانتظار</string>
     <string name="forums_moderation_reports_resolved">تم الحل</string>
     <string name="forums_moderation_reports_all">الكل</string>

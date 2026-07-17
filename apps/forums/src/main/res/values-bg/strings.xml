@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Доклади</string>
     <string name="forums_moderation_tab_log">Дневник</string>
     <string name="forums_moderation_tab_restrictions">Ограничения</string>
-    <string name="forums_moderation_reports_status">Състояние</string>
     <string name="forums_moderation_reports_pending">В очакване</string>
     <string name="forums_moderation_reports_resolved">Разрешен</string>
     <string name="forums_moderation_reports_all">Всички</string>

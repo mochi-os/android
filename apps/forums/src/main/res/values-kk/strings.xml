@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Шағымдар</string>
     <string name="forums_moderation_tab_log">Журнал</string>
     <string name="forums_moderation_tab_restrictions">Шектеулер</string>
-    <string name="forums_moderation_reports_status">Күй</string>
     <string name="forums_moderation_reports_pending">Күтуде</string>
     <string name="forums_moderation_reports_resolved">Шешілді</string>
     <string name="forums_moderation_reports_all">Барлығы</string>

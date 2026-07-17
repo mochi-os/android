@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Denúncias</string>
     <string name="forums_moderation_tab_log">Registro</string>
     <string name="forums_moderation_tab_restrictions">Restrições</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Pendente</string>
     <string name="forums_moderation_reports_resolved">Resolvido</string>
     <string name="forums_moderation_reports_all">Todos</string>

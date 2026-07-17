@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">रिपोर्ट्स</string>
     <string name="forums_moderation_tab_log">लॉग</string>
     <string name="forums_moderation_tab_restrictions">निर्बंध</string>
-    <string name="forums_moderation_reports_status">स्थिती</string>
     <string name="forums_moderation_reports_pending">प्रलंबित</string>
     <string name="forums_moderation_reports_resolved">निराकरण झाले</string>
     <string name="forums_moderation_reports_all">सर्व</string>

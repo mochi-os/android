@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">ანგარიშები</string>
     <string name="forums_moderation_tab_log">ჟურნალი</string>
     <string name="forums_moderation_tab_restrictions">შეზღუდვები</string>
-    <string name="forums_moderation_reports_status">სტატუსი</string>
     <string name="forums_moderation_reports_pending">მოლოდინში</string>
     <string name="forums_moderation_reports_resolved">გადაწყვეტილი</string>
     <string name="forums_moderation_reports_all">ყველა</string>

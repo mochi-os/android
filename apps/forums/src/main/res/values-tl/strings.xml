@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Mga Report</string>
     <string name="forums_moderation_tab_log">Talaan</string>
     <string name="forums_moderation_tab_restrictions">Mga paghihigpit</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Nakabinbin</string>
     <string name="forums_moderation_reports_resolved">Naresolba</string>
     <string name="forums_moderation_reports_all">Lahat</string>

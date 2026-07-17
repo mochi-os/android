@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">වාර්තා</string>
     <string name="forums_moderation_tab_log">ලඝු සටහන</string>
     <string name="forums_moderation_tab_restrictions">සීමා කිරීම්</string>
-    <string name="forums_moderation_reports_status">තත්ත්වය</string>
     <string name="forums_moderation_reports_pending">සැලකිල්ලට පැමිණි</string>
     <string name="forums_moderation_reports_resolved">විසඳා ඇත</string>
     <string name="forums_moderation_reports_all">සියල්ල</string>

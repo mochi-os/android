@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Laporan</string>
     <string name="forums_moderation_tab_log">Log</string>
     <string name="forums_moderation_tab_restrictions">Pembatasan</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Tertunda</string>
     <string name="forums_moderation_reports_resolved">Diselesaikan</string>
     <string name="forums_moderation_reports_all">Semua</string>

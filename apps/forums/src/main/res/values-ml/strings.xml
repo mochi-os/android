@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">റിപ്പോസിറ്ററികൾ</string>
     <string name="forums_moderation_tab_log">ലോഗ്</string>
     <string name="forums_moderation_tab_restrictions">നിയന്ത്രണങ്ങൾ</string>
-    <string name="forums_moderation_reports_status">സ്റ്റാറ്റസ്</string>
     <string name="forums_moderation_reports_pending">തീർപ്പുകൽപ്പിക്കാത്തത്</string>
     <string name="forums_moderation_reports_resolved">പരിഹരിച്ചു</string>
     <string name="forums_moderation_reports_all">എല്ലാം</string>

@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">דיווחים</string>
     <string name="forums_moderation_tab_log">יומן</string>
     <string name="forums_moderation_tab_restrictions">הגבלות</string>
-    <string name="forums_moderation_reports_status">סטטוס</string>
     <string name="forums_moderation_reports_pending">ממתין</string>
     <string name="forums_moderation_reports_resolved">נפתר</string>
     <string name="forums_moderation_reports_all">הכול</string>

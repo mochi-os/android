@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Hlásenia</string>
     <string name="forums_moderation_tab_log">Protokol</string>
     <string name="forums_moderation_tab_restrictions">Obmedzenia</string>
-    <string name="forums_moderation_reports_status">Stav</string>
     <string name="forums_moderation_reports_pending">Čaká sa</string>
     <string name="forums_moderation_reports_resolved">Vyriešené</string>
     <string name="forums_moderation_reports_all">Všetko</string>

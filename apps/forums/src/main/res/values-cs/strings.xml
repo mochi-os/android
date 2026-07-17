@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Hlášení</string>
     <string name="forums_moderation_tab_log">Záznam</string>
     <string name="forums_moderation_tab_restrictions">Omezení</string>
-    <string name="forums_moderation_reports_status">Stav</string>
     <string name="forums_moderation_reports_pending">Čeká</string>
     <string name="forums_moderation_reports_resolved">Vyřešeno</string>
     <string name="forums_moderation_reports_all">Vše</string>

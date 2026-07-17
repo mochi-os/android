@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Aithisgean</string>
     <string name="forums_moderation_tab_log">Loga</string>
     <string name="forums_moderation_tab_restrictions">Cuingealachaidhean</string>
-    <string name="forums_moderation_reports_status">Cor</string>
     <string name="forums_moderation_reports_pending">Ri làimhseachadh</string>
     <string name="forums_moderation_reports_resolved">Air fhuasgladh</string>
     <string name="forums_moderation_reports_all">Na h-uile</string>

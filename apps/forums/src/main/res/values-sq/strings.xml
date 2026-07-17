@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Raportet</string>
     <string name="forums_moderation_tab_log">Regjistri</string>
     <string name="forums_moderation_tab_restrictions">Kufizimet</string>
-    <string name="forums_moderation_reports_status">Statusi</string>
     <string name="forums_moderation_reports_pending">Në pritje</string>
     <string name="forums_moderation_reports_resolved">I zgjidhur</string>
     <string name="forums_moderation_reports_all">Të gjitha</string>

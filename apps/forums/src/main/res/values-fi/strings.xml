@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Ilmoitukset</string>
     <string name="forums_moderation_tab_log">Loki</string>
     <string name="forums_moderation_tab_restrictions">Rajoitukset</string>
-    <string name="forums_moderation_reports_status">Tila</string>
     <string name="forums_moderation_reports_pending">Odottaa</string>
     <string name="forums_moderation_reports_resolved">Ratkaistu</string>
     <string name="forums_moderation_reports_all">Kaikki</string>

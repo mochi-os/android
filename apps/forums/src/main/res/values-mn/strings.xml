@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Гомдол</string>
     <string name="forums_moderation_tab_log">Лог</string>
     <string name="forums_moderation_tab_restrictions">Хязгаарлалт</string>
-    <string name="forums_moderation_reports_status">Төлөв</string>
     <string name="forums_moderation_reports_pending">Хүлээгдэж буй</string>
     <string name="forums_moderation_reports_resolved">Шийдвэрлэгдсэн</string>
     <string name="forums_moderation_reports_all">Бүгд</string>

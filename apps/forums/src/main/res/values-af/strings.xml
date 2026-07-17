@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Rapporte</string>
     <string name="forums_moderation_tab_log">Log</string>
     <string name="forums_moderation_tab_restrictions">Beperkings</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Hangend</string>
     <string name="forums_moderation_reports_resolved">Opgelos</string>
     <string name="forums_moderation_reports_all">Alle</string>

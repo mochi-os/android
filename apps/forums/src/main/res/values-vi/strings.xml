@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Báo cáo</string>
     <string name="forums_moderation_tab_log">Nhật ký</string>
     <string name="forums_moderation_tab_restrictions">Hạn chế</string>
-    <string name="forums_moderation_reports_status">Trạng thái</string>
     <string name="forums_moderation_reports_pending">Đang chờ</string>
     <string name="forums_moderation_reports_resolved">Đã giải quyết</string>
     <string name="forums_moderation_reports_all">Tất cả</string>

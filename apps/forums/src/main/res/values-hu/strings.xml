@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Jelentések</string>
     <string name="forums_moderation_tab_log">Napló</string>
     <string name="forums_moderation_tab_restrictions">Korlátozások</string>
-    <string name="forums_moderation_reports_status">Állapot</string>
     <string name="forums_moderation_reports_pending">Függőben</string>
     <string name="forums_moderation_reports_resolved">Megoldva</string>
     <string name="forums_moderation_reports_all">Összes</string>

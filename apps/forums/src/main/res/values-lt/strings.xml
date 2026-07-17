@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Pranešimai</string>
     <string name="forums_moderation_tab_log">Žurnalas</string>
     <string name="forums_moderation_tab_restrictions">Apribojimai</string>
-    <string name="forums_moderation_reports_status">Būsena</string>
     <string name="forums_moderation_reports_pending">Laukiama</string>
     <string name="forums_moderation_reports_resolved">Išspręsta</string>
     <string name="forums_moderation_reports_all">Visi</string>

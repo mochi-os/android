@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">รายงาน</string>
     <string name="forums_moderation_tab_log">บันทึก</string>
     <string name="forums_moderation_tab_restrictions">ข้อจำกัด</string>
-    <string name="forums_moderation_reports_status">สถานะ</string>
     <string name="forums_moderation_reports_pending">รอดำเนินการ</string>
     <string name="forums_moderation_reports_resolved">แก้ไขแล้ว</string>
     <string name="forums_moderation_reports_all">ทั้งหมด</string>

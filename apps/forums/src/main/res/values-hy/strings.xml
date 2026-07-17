@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Հաղորդումներ</string>
     <string name="forums_moderation_tab_log">Մուտք գործել առաջարկ ներկայացնելու համար</string>
     <string name="forums_moderation_tab_restrictions">Սահմանափակումներ</string>
-    <string name="forums_moderation_reports_status">Կարգավիճակ</string>
     <string name="forums_moderation_reports_pending">Սպասվող</string>
     <string name="forums_moderation_reports_resolved">Լուծվել է</string>
     <string name="forums_moderation_reports_all">Բոլոր CRM-երը</string>

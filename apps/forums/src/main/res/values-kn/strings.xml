@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">ರಿಪೋರ್ಟ್‌ಗಳು</string>
     <string name="forums_moderation_tab_log">ಲಾಗ್</string>
     <string name="forums_moderation_tab_restrictions">ನಿರ್ಬಂಧಗಳು</string>
-    <string name="forums_moderation_reports_status">ಸ್ಥಿತಿ</string>
     <string name="forums_moderation_reports_pending">ಬಾಕಿ ಇದೆ</string>
     <string name="forums_moderation_reports_resolved">ಪರಿಹರಿಸಲಾಗಿದೆ</string>
     <string name="forums_moderation_reports_all">ಎಲ್ಲಾ</string>

@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">راپورونه</string>
     <string name="forums_moderation_tab_log">لاګ</string>
     <string name="forums_moderation_tab_restrictions">محدودیتونه</string>
-    <string name="forums_moderation_reports_status">حالت</string>
     <string name="forums_moderation_reports_pending">په تمه</string>
     <string name="forums_moderation_reports_resolved">حل شوی</string>
     <string name="forums_moderation_reports_all">ټول</string>

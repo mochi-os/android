@@ -24,6 +24,14 @@ import org.mochios.forums.model.Restriction
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
 
+/** The moderation tabs, in the order the web client presents them. */
+enum class ModerationTab {
+    QUEUE,
+    REPORTS,
+    RESTRICTIONS,
+    LOG,
+}
+
 data class ModerationUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
@@ -34,7 +42,7 @@ data class ModerationUiState(
     val restrictions: List<Restriction> = emptyList(),
     val settings: ModerationSettings? = null,
     val error: MochiError? = null,
-    val selectedTab: Int = 0,
+    val selectedTab: ModerationTab = ModerationTab.QUEUE,
 )
 
 @HiltViewModel
@@ -49,20 +57,20 @@ class ModerationViewModel @Inject constructor(
     val uiState: StateFlow<ModerationUiState> = _uiState.asStateFlow()
 
     init {
-        loadTab(0)
+        loadTab(ModerationTab.QUEUE)
     }
 
-    fun selectTab(index: Int) {
-        if (_uiState.value.selectedTab == index) return
-        _uiState.value = _uiState.value.copy(selectedTab = index)
-        loadTab(index)
+    fun selectTab(tab: ModerationTab) {
+        if (_uiState.value.selectedTab == tab) return
+        _uiState.value = _uiState.value.copy(selectedTab = tab)
+        loadTab(tab)
     }
 
     fun refresh() {
         loadTab(_uiState.value.selectedTab, refreshing = true)
     }
 
-    private fun loadTab(index: Int, refreshing: Boolean = false) {
+    private fun loadTab(tab: ModerationTab, refreshing: Boolean = false) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(
                 isLoading = !refreshing,
@@ -75,22 +83,22 @@ class ModerationViewModel @Inject constructor(
                 // captured before the suspend, so a tab whose response lands late
                 // writes back the snapshot it started from — discarding the newer
                 // tab's data and the `finally` block's isLoading = false.
-                when (index) {
-                    0 -> {
+                when (tab) {
+                    ModerationTab.QUEUE -> {
                         val queue = repository.moderationQueue(forumId)
                         _uiState.value = _uiState.value.copy(queue = queue)
                     }
-                    1 -> {
+                    ModerationTab.REPORTS -> {
                         val reports = repository.moderationReports(
                             forumId, _uiState.value.reportsStatus
                         )
                         _uiState.value = _uiState.value.copy(reports = reports)
                     }
-                    2 -> {
+                    ModerationTab.LOG -> {
                         val log = repository.moderationLog(forumId).entries
                         _uiState.value = _uiState.value.copy(log = log)
                     }
-                    3 -> {
+                    ModerationTab.RESTRICTIONS -> {
                         val restrictions = repository.restrictions(forumId).restrictions
                             .sortedWith(compareBy(NaturalCompare) { it.name })
                         _uiState.value = _uiState.value.copy(restrictions = restrictions)
@@ -106,14 +114,18 @@ class ModerationViewModel @Inject constructor(
 
     fun setReportsStatus(status: String) {
         _uiState.value = _uiState.value.copy(reportsStatus = status)
-        if (_uiState.value.selectedTab == 1) loadTab(1)
+        // Refresh rather than load: `isLoading` would swap the whole tab for a
+        // spinner, so the filter chips would blink out and back on every switch.
+        if (_uiState.value.selectedTab == ModerationTab.REPORTS) {
+            loadTab(ModerationTab.REPORTS, refreshing = true)
+        }
     }
 
     fun resolveReport(reportId: String, resolution: String) {
         viewModelScope.launch {
             try {
                 repository.resolveReport(forumId, reportId, resolution)
-                loadTab(1, refreshing = true)
+                loadTab(ModerationTab.REPORTS, refreshing = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -122,32 +134,32 @@ class ModerationViewModel @Inject constructor(
 
     fun approvePost(postId: String) = mutate {
         repository.approvePost(forumId, postId)
-        loadTab(0, refreshing = true)
+        loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
     fun removePost(postId: String) = mutate {
         repository.removePost(forumId, postId)
-        loadTab(0, refreshing = true)
+        loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
     fun approveComment(postId: String, commentId: String) = mutate {
         repository.approveComment(forumId, postId, commentId)
-        loadTab(0, refreshing = true)
+        loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
     fun removeComment(postId: String, commentId: String) = mutate {
         repository.removeComment(forumId, postId, commentId)
-        loadTab(0, refreshing = true)
+        loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
     fun addRestriction(user: String, type: String, reason: String, durationSeconds: Long? = null) = mutate {
         repository.restrict(forumId, user, type, reason, durationSeconds)
-        loadTab(3, refreshing = true)
+        loadTab(ModerationTab.RESTRICTIONS, refreshing = true)
     }
 
     fun removeRestriction(user: String) = mutate {
         repository.unrestrict(forumId, user)
-        loadTab(3, refreshing = true)
+        loadTab(ModerationTab.RESTRICTIONS, refreshing = true)
     }
 
     fun loadSettings() {

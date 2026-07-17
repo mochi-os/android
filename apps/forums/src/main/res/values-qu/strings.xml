@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Reportekuna</string>
     <string name="forums_moderation_tab_log">Log</string>
     <string name="forums_moderation_tab_restrictions">Harkaykuna</string>
-    <string name="forums_moderation_reports_status">Estado</string>
     <string name="forums_moderation_reports_pending">Suyashan</string>
     <string name="forums_moderation_reports_resolved">Allichasqa</string>
     <string name="forums_moderation_reports_all">Llapan</string>

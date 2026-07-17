@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">রিপোর্ট</string>
     <string name="forums_moderation_tab_log">লগ</string>
     <string name="forums_moderation_tab_restrictions">বিধিনিষেধ</string>
-    <string name="forums_moderation_reports_status">স্ট্যাটাস</string>
     <string name="forums_moderation_reports_pending">মুলতুবি</string>
     <string name="forums_moderation_reports_resolved">সমাধান হয়েছে</string>
     <string name="forums_moderation_reports_all">সব</string>

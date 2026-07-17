@@ -29,7 +29,6 @@
     <string name="forums_sort_new">新增</string>
     <string name="forums_post_default_author">用戶</string>
     <string name="forums_moderation_reports_all">全部</string>
-    <string name="forums_moderation_reports_status">狀態</string>
     <string name="forums_report_reason">原因</string>
     <string name="forums_report_reason_other">其他</string>
     <string name="forums_create_public">公開</string>

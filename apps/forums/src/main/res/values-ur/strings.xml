@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">reports</string>
     <string name="forums_moderation_tab_log">لاگ</string>
     <string name="forums_moderation_tab_restrictions">پابندیاں</string>
-    <string name="forums_moderation_reports_status">اسٹیٹس</string>
     <string name="forums_moderation_reports_pending">زیر التوا</string>
     <string name="forums_moderation_reports_resolved">حل ہو گیا</string>
     <string name="forums_moderation_reports_all">تمام</string>

@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">檢舉</string>
     <string name="forums_moderation_tab_log">記錄</string>
     <string name="forums_moderation_tab_restrictions">限制</string>
-    <string name="forums_moderation_reports_status">狀態</string>
     <string name="forums_moderation_reports_pending">待處理</string>
     <string name="forums_moderation_reports_resolved">已解決</string>
     <string name="forums_moderation_reports_all">全部</string>

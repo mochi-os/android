@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Meldungen</string>
     <string name="forums_moderation_tab_log">Protokoll</string>
     <string name="forums_moderation_tab_restrictions">Einschränkungen</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Ausstehend</string>
     <string name="forums_moderation_reports_resolved">Gelöst</string>
     <string name="forums_moderation_reports_all">Alle</string>

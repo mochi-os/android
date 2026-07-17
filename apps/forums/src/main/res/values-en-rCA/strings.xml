@@ -29,7 +29,6 @@
     <string name="forums_sort_new">New</string>
     <string name="forums_post_default_author">User</string>
     <string name="forums_moderation_reports_all">All</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_report_reason">Reason</string>
     <string name="forums_report_reason_other">Other</string>
 

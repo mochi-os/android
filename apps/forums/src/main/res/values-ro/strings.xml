@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Rapoarte</string>
     <string name="forums_moderation_tab_log">Jurnal</string>
     <string name="forums_moderation_tab_restrictions">Restricții</string>
-    <string name="forums_moderation_reports_status">Stare</string>
     <string name="forums_moderation_reports_pending">În așteptare</string>
     <string name="forums_moderation_reports_resolved">Rezolvat</string>
     <string name="forums_moderation_reports_all">Toate</string>

@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">ሪፖርቶች</string>
     <string name="forums_moderation_tab_log">ምዝግብ ማስታወሻ</string>
     <string name="forums_moderation_tab_restrictions">ገደቦች</string>
-    <string name="forums_moderation_reports_status">ሁኔታ</string>
     <string name="forums_moderation_reports_pending">በመጠባበቅ ላይ</string>
     <string name="forums_moderation_reports_resolved">ተፈትቷል</string>
     <string name="forums_moderation_reports_all">ሁሉም</string>

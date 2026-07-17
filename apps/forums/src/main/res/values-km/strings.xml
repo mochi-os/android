@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">របាយការណ៍</string>
     <string name="forums_moderation_tab_log">កំណត់ហេតុ</string>
     <string name="forums_moderation_tab_restrictions">ការរឹតបន្តឹង</string>
-    <string name="forums_moderation_reports_status">ស្ថានភាព</string>
     <string name="forums_moderation_reports_pending">កំពុងរង់ចាំ</string>
     <string name="forums_moderation_reports_resolved">បានដោះស្រាយ</string>
     <string name="forums_moderation_reports_all">ទាំងអស់</string>

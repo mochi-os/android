@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">신고</string>
     <string name="forums_moderation_tab_log">로그</string>
     <string name="forums_moderation_tab_restrictions">제한</string>
-    <string name="forums_moderation_reports_status">상태</string>
     <string name="forums_moderation_reports_pending">대기 중</string>
     <string name="forums_moderation_reports_resolved">해결됨</string>
     <string name="forums_moderation_reports_all">전체</string>

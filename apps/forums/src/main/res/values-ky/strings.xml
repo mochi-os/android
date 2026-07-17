@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Билдирүүлөр</string>
     <string name="forums_moderation_tab_log">Журнал</string>
     <string name="forums_moderation_tab_restrictions">Чектөөлөр</string>
-    <string name="forums_moderation_reports_status">Абалы</string>
     <string name="forums_moderation_reports_pending">Күтүүдө</string>
     <string name="forums_moderation_reports_resolved">Чечилди</string>
     <string name="forums_moderation_reports_all">Баары</string>

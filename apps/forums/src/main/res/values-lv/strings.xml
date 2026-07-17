@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Ziņojumi</string>
     <string name="forums_moderation_tab_log">Žurnāls</string>
     <string name="forums_moderation_tab_restrictions">Ierobežojumi</string>
-    <string name="forums_moderation_reports_status">Statuss</string>
     <string name="forums_moderation_reports_pending">Gaida</string>
     <string name="forums_moderation_reports_resolved">Atrisināts</string>
     <string name="forums_moderation_reports_all">Visi</string>

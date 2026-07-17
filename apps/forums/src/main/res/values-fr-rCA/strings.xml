@@ -30,7 +30,6 @@
     <string name="forums_sort_new">Nouveau</string>
     <string name="forums_post_default_author">Utilisateur</string>
     <string name="forums_moderation_reports_all">Tous</string>
-    <string name="forums_moderation_reports_status">Statut</string>
     <string name="forums_report_reason">Motif</string>
     <string name="forums_report_reason_other">Autre</string>
 

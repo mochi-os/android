@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Signalements</string>
     <string name="forums_moderation_tab_log">Journal</string>
     <string name="forums_moderation_tab_restrictions">Restrictions</string>
-    <string name="forums_moderation_reports_status">Statut</string>
     <string name="forums_moderation_reports_pending">En attente</string>
     <string name="forums_moderation_reports_resolved">Résolu</string>
     <string name="forums_moderation_reports_all">Tout</string>

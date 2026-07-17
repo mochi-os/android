@@ -52,7 +52,6 @@
     <string name="forums_sort_new">Nuevo</string>
     <string name="forums_post_default_author">Usuario</string>
     <string name="forums_moderation_reports_all">Todos</string>
-    <string name="forums_moderation_reports_status">Estado</string>
     <string name="forums_report_reason">Motivo</string>
     <string name="forums_report_reason_other">Otro</string>
 

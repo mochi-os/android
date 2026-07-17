@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Salaketak</string>
     <string name="forums_moderation_tab_log">Erregistroa</string>
     <string name="forums_moderation_tab_restrictions">Murrizketak</string>
-    <string name="forums_moderation_reports_status">Egoera</string>
     <string name="forums_moderation_reports_pending">Zain</string>
     <string name="forums_moderation_reports_resolved">Ebatzita</string>
     <string name="forums_moderation_reports_all">Guztiak</string>

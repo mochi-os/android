@@ -20,7 +20,12 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Flag
+import androidx.compose.material.icons.outlined.Group
+import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Card
@@ -29,7 +34,8 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -39,6 +45,8 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
+import androidx.compose.material3.TabRowDefaults
+import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -51,17 +59,50 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.forums.R
 import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationReport
 import org.mochios.forums.model.Restriction
 import org.mochios.android.R as MochiR
+
+/** A moderation tab as rendered: its label, icon, and the state it selects. */
+private data class ModerationTabEntry(
+    val tab: ModerationTab,
+    val titleRes: Int,
+    val icon: ImageVector,
+)
+
+// Ordered like the web moderation page: Queue, Reports, Restrictions, Log.
+private val TABS = listOf(
+    ModerationTabEntry(
+        ModerationTab.QUEUE,
+        R.string.forums_moderation_tab_queue,
+        Icons.Outlined.Schedule,
+    ),
+    ModerationTabEntry(
+        ModerationTab.REPORTS,
+        R.string.forums_moderation_tab_reports,
+        Icons.Outlined.Flag,
+    ),
+    ModerationTabEntry(
+        ModerationTab.RESTRICTIONS,
+        R.string.forums_moderation_tab_restrictions,
+        Icons.Outlined.Group,
+    ),
+    ModerationTabEntry(
+        ModerationTab.LOG,
+        R.string.forums_moderation_tab_log,
+        Icons.Outlined.History,
+    ),
+)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -71,12 +112,10 @@ fun ForumModerationScreen(
     viewModel: ModerationViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val tabs = listOf(
-        stringResource(R.string.forums_moderation_tab_queue),
-        stringResource(R.string.forums_moderation_tab_reports),
-        stringResource(R.string.forums_moderation_tab_log),
-        stringResource(R.string.forums_moderation_tab_restrictions),
-    )
+    val selectedIndex = TABS.indexOfFirst { tab -> tab.tab == uiState.selectedTab }
+        .coerceAtLeast(0)
+    // Owned here rather than in the tab, so the Scaffold's FAB can open it.
+    var showAddRestriction by remember { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -100,14 +139,45 @@ fun ForumModerationScreen(
                 },
             )
         },
+        floatingActionButton = {
+            if (uiState.selectedTab == ModerationTab.RESTRICTIONS) {
+                FloatingActionButton(onClick = { showAddRestriction = true }) {
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(
+                            R.string.forums_moderation_restriction_add
+                        ),
+                    )
+                }
+            }
+        },
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
-            TabRow(selectedTabIndex = uiState.selectedTab) {
-                tabs.forEachIndexed { index, title ->
+            TabRow(
+                selectedTabIndex = selectedIndex,
+                containerColor = MaterialTheme.colorScheme.surface,
+                // Primary colour is reserved for the selected tab's divider;
+                // the labels stay neutral. Mirrors the forum settings tabs.
+                indicator = { tabPositions ->
+                    TabRowDefaults.SecondaryIndicator(
+                        modifier = Modifier.tabIndicatorOffset(tabPositions[selectedIndex]),
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                },
+            ) {
+                TABS.forEachIndexed { index, entry ->
                     Tab(
-                        selected = uiState.selectedTab == index,
-                        onClick = { viewModel.selectTab(index) },
-                        text = { Text(title) },
+                        selected = selectedIndex == index,
+                        onClick = { viewModel.selectTab(entry.tab) },
+                        selectedContentColor = MaterialTheme.colorScheme.onSurface,
+                        unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                        icon = { Icon(entry.icon, contentDescription = null) },
+                        text = {
+                            Text(
+                                stringResource(entry.titleRes),
+                                style = MaterialTheme.typography.labelMedium,
+                            )
+                        },
                     )
                 }
             }
@@ -123,10 +193,15 @@ fun ForumModerationScreen(
                     )
                 }
                 else -> when (uiState.selectedTab) {
-                    0 -> QueueTab(uiState, viewModel)
-                    1 -> ReportsTab(uiState, viewModel)
-                    2 -> LogTab(uiState.log)
-                    3 -> RestrictionsTab(uiState.restrictions, viewModel)
+                    ModerationTab.QUEUE -> QueueTab(uiState, viewModel)
+                    ModerationTab.REPORTS -> ReportsTab(uiState, viewModel)
+                    ModerationTab.RESTRICTIONS -> RestrictionsTab(
+                        restrictions = uiState.restrictions,
+                        viewModel = viewModel,
+                        showAdd = showAddRestriction,
+                        onDismissAdd = { showAddRestriction = false },
+                    )
+                    ModerationTab.LOG -> LogTab(uiState.log)
                 }
             }
         }
@@ -137,10 +212,11 @@ fun ForumModerationScreen(
 private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel) {
     val queue = uiState.queue ?: return
     if (queue.counts.total == 0) {
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text(stringResource(R.string.forums_moderation_queue_empty),
-                color = MaterialTheme.colorScheme.onSurfaceVariant)
-        }
+        EmptyState(
+            icon = Icons.Outlined.Schedule,
+            title = stringResource(R.string.forums_moderation_queue_empty),
+            subtitle = stringResource(R.string.forums_moderation_queue_empty_subtitle),
+        )
         return
     }
     LazyColumn(
@@ -207,66 +283,75 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ReportsTab(uiState: ModerationUiState, viewModel: ModerationViewModel) {
     val reports = uiState.reports?.reports ?: emptyList()
-    var statusExpanded by remember { mutableStateOf(false) }
-    val statusLabel = when (uiState.reportsStatus) {
-        "resolved" -> stringResource(R.string.forums_moderation_reports_resolved)
-        "all" -> stringResource(R.string.forums_moderation_reports_all)
-        else -> stringResource(R.string.forums_moderation_reports_pending)
+    val statuses = listOf(
+        "pending" to stringResource(R.string.forums_moderation_reports_pending),
+        "resolved" to stringResource(R.string.forums_moderation_reports_resolved),
+        "all" to stringResource(R.string.forums_moderation_reports_all),
+    )
+
+    if (reports.isEmpty()) {
+        // Chips overlay rather than stack, so the empty state centres on the
+        // whole tab — level with the other tabs' empty states.
+        Box(modifier = Modifier.fillMaxSize()) {
+            EmptyState(
+                icon = Icons.Outlined.Flag,
+                title = stringResource(R.string.forums_moderation_reports_empty),
+                subtitle = stringResource(R.string.forums_moderation_reports_empty_subtitle),
+            )
+            ReportStatusChips(
+                statuses = statuses,
+                selected = uiState.reportsStatus,
+                onSelect = { code -> viewModel.setReportsStatus(code) },
+                modifier = Modifier.align(Alignment.TopStart),
+            )
+        }
+        return
     }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        ExposedDropdownMenuBox(
-            expanded = statusExpanded,
-            onExpandedChange = { statusExpanded = it },
-            modifier = Modifier.padding(12.dp),
+        ReportStatusChips(
+            statuses = statuses,
+            selected = uiState.reportsStatus,
+            onSelect = { code -> viewModel.setReportsStatus(code) },
+        )
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            OutlinedTextField(
-                value = statusLabel,
-                onValueChange = {},
-                readOnly = true,
-                label = { Text(stringResource(R.string.forums_moderation_reports_status)) },
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = statusExpanded) },
-                modifier = Modifier.menuAnchor(MenuAnchorType.PrimaryNotEditable).fillMaxWidth(),
-            )
-            ExposedDropdownMenu(
-                expanded = statusExpanded,
-                onDismissRequest = { statusExpanded = false },
-            ) {
-                listOf(
-                    "pending" to stringResource(R.string.forums_moderation_reports_pending),
-                    "resolved" to stringResource(R.string.forums_moderation_reports_resolved),
-                    "all" to stringResource(R.string.forums_moderation_reports_all),
-                ).forEach { (code, label) ->
-                    DropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            statusExpanded = false
-                            viewModel.setReportsStatus(code)
-                        },
-                    )
-                }
+            items(reports, key = { it.id }) { r ->
+                ReportCard(r, onResolve = { viewModel.resolveReport(r.id, it) })
             }
         }
+    }
+}
 
-        if (reports.isEmpty()) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(stringResource(R.string.forums_moderation_reports_empty),
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
-            }
-        } else {
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                items(reports, key = { it.id }) { r ->
-                    ReportCard(r, onResolve = { viewModel.resolveReport(r.id, it) })
-                }
-            }
+/**
+ * The report status filter. Three mutually-exclusive statuses read faster as
+ * chips than as a dropdown — the current filter shows without opening anything.
+ */
+@Composable
+private fun ReportStatusChips(
+    statuses: List<Pair<String, String>>,
+    selected: String,
+    onSelect: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        statuses.forEach { (code, label) ->
+            FilterChip(
+                selected = selected == code,
+                onClick = { onSelect(code) },
+                label = { Text(label) },
+            )
         }
     }
 }
@@ -341,10 +426,11 @@ private fun ReportCard(report: ModerationReport, onResolve: (String) -> Unit) {
 @Composable
 private fun LogTab(log: List<ModerationLogEntry>) {
     if (log.isEmpty()) {
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text(stringResource(R.string.forums_moderation_log_empty),
-                color = MaterialTheme.colorScheme.onSurfaceVariant)
-        }
+        EmptyState(
+            icon = Icons.Outlined.History,
+            title = stringResource(R.string.forums_moderation_log_empty),
+            subtitle = stringResource(R.string.forums_moderation_log_empty_subtitle),
+        )
         return
     }
     val format = LocalFormat.current
@@ -386,26 +472,30 @@ private fun LogTab(log: List<ModerationLogEntry>) {
 }
 
 @Composable
-private fun RestrictionsTab(restrictions: List<Restriction>, viewModel: ModerationViewModel) {
-    var showAdd by remember { mutableStateOf(false) }
+private fun RestrictionsTab(
+    restrictions: List<Restriction>,
+    viewModel: ModerationViewModel,
+    showAdd: Boolean,
+    onDismissAdd: () -> Unit,
+) {
     Column(modifier = Modifier.fillMaxSize()) {
-        OutlinedButton(
-            onClick = { showAdd = true },
-            modifier = Modifier.padding(12.dp),
-        ) {
-            Text(stringResource(R.string.forums_moderation_restriction_add))
-        }
-        HorizontalDivider()
         if (restrictions.isEmpty()) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(stringResource(R.string.forums_moderation_restrictions_empty),
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
-            }
+            EmptyState(
+                icon = Icons.Outlined.Group,
+                title = stringResource(R.string.forums_moderation_restrictions_empty),
+                subtitle = stringResource(R.string.forums_moderation_restrictions_empty_subtitle),
+            )
         } else {
             val format = LocalFormat.current
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+                // Bottom padding keeps the last card clear of the FAB.
+                contentPadding = PaddingValues(
+                    start = 12.dp,
+                    top = 8.dp,
+                    end = 12.dp,
+                    bottom = 88.dp,
+                ),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 items(restrictions, key = { it.user }) { r ->
@@ -442,9 +532,9 @@ private fun RestrictionsTab(restrictions: List<Restriction>, viewModel: Moderati
         AddRestrictionDialog(
             onConfirm = { user, type, reason, duration ->
                 viewModel.addRestriction(user, type, reason, duration)
-                showAdd = false
+                onDismissAdd()
             },
-            onDismiss = { showAdd = false },
+            onDismiss = onDismissAdd,
         )
     }
 }

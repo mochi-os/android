@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Скарги</string>
     <string name="forums_moderation_tab_log">Журнал</string>
     <string name="forums_moderation_tab_restrictions">Обмеження</string>
-    <string name="forums_moderation_reports_status">Статус</string>
     <string name="forums_moderation_reports_pending">В очікуванні</string>
     <string name="forums_moderation_reports_resolved">Вирішено</string>
     <string name="forums_moderation_reports_all">Усі</string>

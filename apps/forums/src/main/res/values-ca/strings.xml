@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Informes</string>
     <string name="forums_moderation_tab_log">Registre</string>
     <string name="forums_moderation_tab_restrictions">Restriccions</string>
-    <string name="forums_moderation_reports_status">Estat</string>
     <string name="forums_moderation_reports_pending">Pendent</string>
     <string name="forums_moderation_reports_resolved">Resolt</string>
     <string name="forums_moderation_reports_all">Tot</string>

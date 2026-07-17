@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Tilkynningar</string>
     <string name="forums_moderation_tab_log">Skrá</string>
     <string name="forums_moderation_tab_restrictions">Takmarkanir</string>
-    <string name="forums_moderation_reports_status">Staða</string>
     <string name="forums_moderation_reports_pending">Í bið</string>
     <string name="forums_moderation_reports_resolved">Leyst</string>
     <string name="forums_moderation_reports_all">Allt</string>

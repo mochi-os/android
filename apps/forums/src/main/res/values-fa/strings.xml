@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">گزارش‌ها</string>
     <string name="forums_moderation_tab_log">گزارش</string>
     <string name="forums_moderation_tab_restrictions">محدودیت‌ها</string>
-    <string name="forums_moderation_reports_status">وضعیت</string>
     <string name="forums_moderation_reports_pending">در انتظار</string>
     <string name="forums_moderation_reports_resolved">رفع شد</string>
     <string name="forums_moderation_reports_all">همه</string>

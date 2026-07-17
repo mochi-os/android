@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Hesabatlar</string>
     <string name="forums_moderation_tab_log">Jurnal</string>
     <string name="forums_moderation_tab_restrictions">Məhdudiyyətlər</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Gözləmədə</string>
     <string name="forums_moderation_reports_resolved">Həll edildi</string>
     <string name="forums_moderation_reports_all">Hamısı</string>

@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Rapporten</string>
     <string name="forums_moderation_tab_log">Logboek</string>
     <string name="forums_moderation_tab_restrictions">Beperkingen</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">In behandeling</string>
     <string name="forums_moderation_reports_resolved">Opgelost</string>
     <string name="forums_moderation_reports_all">Alle</string>

@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Laporan</string>
     <string name="forums_moderation_tab_log">Log</string>
     <string name="forums_moderation_tab_restrictions">Watesan</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Nunggu</string>
     <string name="forums_moderation_reports_resolved">Rampung</string>
     <string name="forums_moderation_reports_all">Kabèh</string>

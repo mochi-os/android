@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">Rapportar</string>
     <string name="forums_moderation_tab_log">Logg</string>
     <string name="forums_moderation_tab_restrictions">Avgrensingar</string>
-    <string name="forums_moderation_reports_status">Status</string>
     <string name="forums_moderation_reports_pending">Ventar</string>
     <string name="forums_moderation_reports_resolved">Løyst</string>
     <string name="forums_moderation_reports_all">Alle</string>

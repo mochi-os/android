@@ -80,7 +80,6 @@
     <string name="forums_moderation_tab_reports">புகார்கள்</string>
     <string name="forums_moderation_tab_log">பதிவேடு</string>
     <string name="forums_moderation_tab_restrictions">கட்டுப்பாடுகள்</string>
-    <string name="forums_moderation_reports_status">நிலை</string>
     <string name="forums_moderation_reports_pending">நிலுவையில்</string>
     <string name="forums_moderation_reports_resolved">தீர்க்கப்பட்டது</string>
     <string name="forums_moderation_reports_all">அனைத்தும்</string>
