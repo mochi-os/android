@@ -141,11 +141,25 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_moderate">Moderate</string>
     <string name="forums_access_level_none">None</string>
+    <string name="forums_access_level_moderate_full">Moderate, post, comment, vote, and view</string>
+    <string name="forums_access_level_post_full">Post, comment, vote, and view</string>
+    <string name="forums_access_level_comment_full">Comment, vote, and view</string>
+    <string name="forums_access_level_vote_full">Vote and view</string>
+    <string name="forums_access_level_view_full">View only</string>
+    <string name="forums_access_level_none_full">No access</string>
     <string name="forums_access_tab_users">Users</string>
     <string name="forums_access_tab_groups">Groups</string>
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Search users</string>
     <string name="forums_access_no_groups">No groups available</string>
+    <string name="forums_access_subject_anyone">Anyone</string>
+    <string name="forums_access_subject_authenticated">Authenticated users</string>
+    <string name="forums_access_tab_other">Other</string>
+    <string name="forums_access_select_group">Select a group</string>
+    <string name="forums_access_select_rule">Select a rule</string>
+    <string name="forums_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="forums_access_anyone_desc">Including anonymous users</string>
+    <string name="forums_access_selected">Selected: %1$s</string>
 
     <!-- Members tab -->
     <string name="forums_members_search">Filter members</string>

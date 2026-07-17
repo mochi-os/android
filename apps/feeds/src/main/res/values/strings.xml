@@ -237,6 +237,7 @@
     <!-- Settings: members -->
     <string name="feeds_add_member">Add member</string>
     <string name="feeds_no_members">No members</string>
+    <string name="feeds_members_search">Filter members</string>
     <string name="feeds_user">User</string>
 
     <!-- Settings: access -->

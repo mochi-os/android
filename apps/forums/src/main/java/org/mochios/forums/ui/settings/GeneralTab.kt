@@ -123,12 +123,6 @@ fun GeneralTab(
                         contentColor = MaterialTheme.colorScheme.error,
                     ),
                 ) {
-                    Icon(
-                        Icons.Default.Delete,
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                    Spacer(Modifier.width(4.dp))
                     Text(stringResource(MochiR.string.common_delete))
                 }
             },
