@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Ruk\'ana unancha: %1$s</string>
     <string name="forums_settings_clear_notifications">Willakuykunata pichay</string>
     <string name="forums_moderation_queue_empty">Mana imapas suyachkanchu</string>
-    <string name="forums_moderation_pending_posts">Suyachkaq willakuykuna</string>
-    <string name="forums_moderation_pending_comments">Suyachkaq niykuykuna</string>
+    <string name="forums_moderation_pending_posts">Suyachkaq willakuykuna (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Suyachkaq niykuykuna (%1$d)</string>
     <string name="forums_moderation_report_details">Sutinchaykuna: %1$s</string>
-    <string name="forums_moderation_report_meta">Willakuq %1$s · Qillqaq %2$s</string>
-    <string name="forums_moderation_report_acted">Ruwasqa</string>
     <string name="forums_moderation_report_resolved_by">Allichaq %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Manaraq allichaqpa ruwayninkuna kanchu</string>
     <string name="forums_moderation_log_meta">Ruwaq %1$s · Chaskiq %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Pirkstu nospiedums: %1$s</string>
     <string name="forums_settings_clear_notifications">Notīrīt paziņojumus</string>
     <string name="forums_moderation_queue_empty">Nekas nav gaidīšanā</string>
-    <string name="forums_moderation_pending_posts">Gaidošie ieraksti</string>
-    <string name="forums_moderation_pending_comments">Gaidošie komentāri</string>
+    <string name="forums_moderation_pending_posts">Gaidošie ieraksti (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Gaidošie komentāri (%1$d)</string>
     <string name="forums_moderation_report_details">Detaļas: %1$s</string>
-    <string name="forums_moderation_report_meta">Ziņoja %1$s · Autors %2$s</string>
-    <string name="forums_moderation_report_acted">Rīkojās</string>
     <string name="forums_moderation_report_resolved_by">Atrisināja %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Vēl nav moderatoru darbību</string>
     <string name="forums_moderation_log_meta">Veica %1$s · Mērķis %2$s</string>

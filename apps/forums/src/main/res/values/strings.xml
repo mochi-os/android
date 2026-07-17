@@ -169,6 +169,7 @@
     <string name="forums_members_empty">No members</string>
 
     <!-- Banner tab -->
+    <string name="forums_clear">Clear</string>
     <string name="forums_banner_description">Markdown shown at the top of the forum.</string>
     <string name="forums_banner_placeholder">Enter banner text (markdown supported)…</string>
     <string name="forums_banner_dismiss">Dismiss banner</string>
@@ -208,17 +209,23 @@
     <string name="forums_moderation_tab_restrictions">Restrictions</string>
     <string name="forums_moderation_queue_empty">Moderation queue is empty</string>
     <string name="forums_moderation_queue_empty_subtitle">All posts and comments have been reviewed</string>
-    <string name="forums_moderation_pending_posts">Pending posts</string>
-    <string name="forums_moderation_pending_comments">Pending comments</string>
+    <string name="forums_moderation_pending_posts">Pending posts (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Pending comments (%1$d)</string>
+    <string name="forums_moderation_reject">Reject</string>
+    <string name="forums_moderation_mute_title">Mute %1$s?</string>
+    <string name="forums_moderation_mute_message">They stay in the forum but cannot post or comment until you remove the restriction.</string>
+    <string name="forums_moderation_ban_title">Ban %1$s?</string>
+    <string name="forums_moderation_ban_message">They lose access to the forum until you remove the restriction.</string>
     <string name="forums_moderation_reports_pending">Pending</string>
     <string name="forums_moderation_reports_resolved">Resolved</string>
     <string name="forums_moderation_reports_all">All</string>
     <string name="forums_moderation_reports_empty">No reports</string>
     <string name="forums_moderation_reports_empty_subtitle">No pending reports found</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
-    <string name="forums_moderation_report_meta">Reported by %1$s · Author %2$s</string>
+    <string name="forums_moderation_report_by">by %1$s</string>
+    <string name="forums_moderation_report_reason">Reason: %1$s</string>
+    <string name="forums_moderation_report_reported_by">Reported by %1$s</string>
     <string name="forums_moderation_report_dismiss">Dismiss</string>
-    <string name="forums_moderation_report_acted">Acted</string>
     <string name="forums_moderation_report_resolved_by">Resolved by %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">No moderation activity</string>
     <string name="forums_moderation_log_empty_subtitle">There are no moderation actions recorded yet</string>
@@ -227,6 +234,8 @@
     <string name="forums_moderation_restrictions_empty_subtitle">No users have been muted or banned</string>
     <string name="forums_moderation_restriction_add">Add restriction</string>
     <string name="forums_moderation_restriction_remove">Remove</string>
+    <string name="forums_moderation_restriction_remove_title">Remove restriction on %1$s?</string>
+    <string name="forums_moderation_restriction_remove_message">They regain full access to the forum straight away.</string>
     <string name="forums_moderation_restriction_user">User identity</string>
     <string name="forums_moderation_restriction_type">Type</string>
     <string name="forums_moderation_restriction_type_muted">Mute</string>
@@ -235,6 +244,10 @@
     <string name="forums_moderation_restriction_duration_seconds">Duration (seconds, blank for permanent)</string>
     <string name="forums_moderation_restriction_expires">Expires %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
+    <string name="forums_moderation_restriction_by">By %1$s</string>
+    <string name="forums_moderation_restriction_state_muted">Muted</string>
+    <string name="forums_moderation_restriction_state_banned">Banned</string>
+    <string name="forums_moderation_restriction_state_shadowban">Shadowbanned</string>
     <string name="forums_moderation_section_premoderation">Pre-moderation</string>
     <string name="forums_moderation_section_premoderation_description">Require approval before content becomes visible</string>
     <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>

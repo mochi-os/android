@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">فنگر پرنٽ: %1$s</string>
     <string name="forums_settings_clear_notifications">اطلاعون صاف ڪريو</string>
     <string name="forums_moderation_queue_empty">ڪجهه به زير التوا ناهي</string>
-    <string name="forums_moderation_pending_posts">زير التوا پوسٽون</string>
-    <string name="forums_moderation_pending_comments">زير التوا تبصرا</string>
+    <string name="forums_moderation_pending_posts">زير التوا پوسٽون (%1$d)</string>
+    <string name="forums_moderation_pending_comments">زير التوا تبصرا (%1$d)</string>
     <string name="forums_moderation_report_details">تفصيل: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s پاران رپورٽ ٿيل · ليکڪ %2$s</string>
-    <string name="forums_moderation_report_acted">ڪارروائي ٿي</string>
     <string name="forums_moderation_report_resolved_by">%1$s پاران حل ٿيل — %2$s</string>
     <string name="forums_moderation_log_empty">اڃا تائين ڪابه ماڊريٽر سرگرمي ناهي</string>
     <string name="forums_moderation_log_meta">%1$s پاران · ھدف %2$s</string>

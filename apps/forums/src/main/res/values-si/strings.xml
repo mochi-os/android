@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">ඇඟිලි සලකුණ: %1$s</string>
     <string name="forums_settings_clear_notifications">දැනුම්දීම් හිස් කරන්න</string>
     <string name="forums_moderation_queue_empty">කිසිවක් අපේක්ෂාවෙන් නැත</string>
-    <string name="forums_moderation_pending_posts">අපේක්ෂිත පළ කිරීම්</string>
-    <string name="forums_moderation_pending_comments">අපේක්ෂිත අදහස්</string>
+    <string name="forums_moderation_pending_posts">අපේක්ෂිත පළ කිරීම් (%1$d)</string>
+    <string name="forums_moderation_pending_comments">අපේක්ෂිත අදහස් (%1$d)</string>
     <string name="forums_moderation_report_details">විස්තර: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s විසින් වාර්තා කරන ලදී · කතුවරයා %2$s</string>
-    <string name="forums_moderation_report_acted">ක්‍රියා කරන ලදී</string>
     <string name="forums_moderation_report_resolved_by">%1$s විසින් විසඳන ලදී — %2$s</string>
     <string name="forums_moderation_log_empty">තවම මධ්‍යස්ථ කිරීමේ ක්‍රියාකාරකම් නොමැත</string>
     <string name="forums_moderation_log_meta">%1$s විසින් · ඉලක්කය %2$s</string>

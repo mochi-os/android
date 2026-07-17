@@ -146,13 +146,11 @@
     <string name="forums_moderation_tab_log">紀錄</string>
     <string name="forums_moderation_tab_restrictions">限制</string>
     <string name="forums_moderation_queue_empty">冇待處理項目</string>
-    <string name="forums_moderation_pending_posts">待處理貼文</string>
-    <string name="forums_moderation_pending_comments">待處理留言</string>
+    <string name="forums_moderation_pending_posts">待處理貼文 (%1$d)</string>
+    <string name="forums_moderation_pending_comments">待處理留言 (%1$d)</string>
     <string name="forums_moderation_reports_resolved">已處理</string>
     <string name="forums_moderation_reports_empty">冇舉報</string>
     <string name="forums_moderation_report_details">詳情:%1$s</string>
-    <string name="forums_moderation_report_meta">由 %1$s 舉報 · 作者 %2$s</string>
-    <string name="forums_moderation_report_acted">已處理</string>
     <string name="forums_moderation_report_resolved_by">由 %1$s 處理 — %2$s</string>
     <string name="forums_moderation_log_empty">暫時未有版務活動</string>
     <string name="forums_moderation_log_meta">由 %1$s · 對象 %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Barmoq izi: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirishnomalarni tozalash</string>
     <string name="forums_moderation_queue_empty">Kutilayotgan hech narsa yoʻq</string>
-    <string name="forums_moderation_pending_posts">Kutilayotgan postlar</string>
-    <string name="forums_moderation_pending_comments">Kutilayotgan izohlar</string>
+    <string name="forums_moderation_pending_posts">Kutilayotgan postlar (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Kutilayotgan izohlar (%1$d)</string>
     <string name="forums_moderation_report_details">Tafsilotlar: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s tomonidan xabar berilgan · Muallif %2$s</string>
-    <string name="forums_moderation_report_acted">Choralar koʻrildi</string>
     <string name="forums_moderation_report_resolved_by">%1$s tomonidan hal qilindi — %2$s</string>
     <string name="forums_moderation_log_empty">Hali moderator faoliyati yoʻq</string>
     <string name="forums_moderation_log_meta">%1$s tomonidan · Manzil %2$s</string>

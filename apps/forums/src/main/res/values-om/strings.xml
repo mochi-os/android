@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Quba mallattoo: %1$s</string>
     <string name="forums_settings_clear_notifications">Beeksisawwan haqi</string>
     <string name="forums_moderation_queue_empty">Wanti hafe hin jiru</string>
-    <string name="forums_moderation_pending_posts">Maxxansa eegamu</string>
-    <string name="forums_moderation_pending_comments">Yaada eegamu</string>
+    <string name="forums_moderation_pending_posts">Maxxansa eegamu (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Yaada eegamu (%1$d)</string>
     <string name="forums_moderation_report_details">Bal\'ina: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s gabaase · Barreessaa %2$s</string>
-    <string name="forums_moderation_report_acted">Tarkaanfii fudhatame</string>
     <string name="forums_moderation_report_resolved_by">%1$s xumure — %2$s</string>
     <string name="forums_moderation_log_empty">Ammaaf gocha to\'attootaa hin jiru</string>
     <string name="forums_moderation_log_meta">%1$s hojjete · Galma %2$s</string>

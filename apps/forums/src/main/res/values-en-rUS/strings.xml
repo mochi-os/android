@@ -56,15 +56,13 @@
     <string name="forums_moderation_tab_log">Log</string>
     <string name="forums_moderation_tab_restrictions">Restrictions</string>
     <string name="forums_moderation_queue_empty">Nothing pending</string>
-    <string name="forums_moderation_pending_posts">Pending posts</string>
-    <string name="forums_moderation_pending_comments">Pending comments</string>
+    <string name="forums_moderation_pending_posts">Pending posts (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Pending comments (%1$d)</string>
     <string name="forums_moderation_reports_pending">Pending</string>
     <string name="forums_moderation_reports_resolved">Resolved</string>
     <string name="forums_moderation_reports_empty">No reports</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
-    <string name="forums_moderation_report_meta">Reported by %1$s · Author %2$s</string>
     <string name="forums_moderation_report_dismiss">Dismiss</string>
-    <string name="forums_moderation_report_acted">Acted</string>
     <string name="forums_moderation_report_resolved_by">Resolved by %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">No moderator activity yet</string>
     <string name="forums_moderation_log_meta">By %1$s · Target %2$s</string>

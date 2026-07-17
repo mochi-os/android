@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">ګوته‌نښه: %1$s</string>
     <string name="forums_settings_clear_notifications">خبرتیاوې پاکې کړئ</string>
     <string name="forums_moderation_queue_empty">هیڅ شی په تمه نشته</string>
-    <string name="forums_moderation_pending_posts">په تمه پوسټونه</string>
-    <string name="forums_moderation_pending_comments">په تمه کمنټونه</string>
+    <string name="forums_moderation_pending_posts">په تمه پوسټونه (%1$d)</string>
+    <string name="forums_moderation_pending_comments">په تمه کمنټونه (%1$d)</string>
     <string name="forums_moderation_report_details">تفصیلات: %1$s</string>
-    <string name="forums_moderation_report_meta">د %1$s لخوا راپور شوی · لیکوال %2$s</string>
-    <string name="forums_moderation_report_acted">عمل وشو</string>
     <string name="forums_moderation_report_resolved_by">د %1$s لخوا حل شو — %2$s</string>
     <string name="forums_moderation_log_empty">تر اوسه د مدیر هیڅ فعالیت نشته</string>
     <string name="forums_moderation_log_meta">د %1$s لخوا · هدف %2$s</string>

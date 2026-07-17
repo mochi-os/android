@@ -177,11 +177,9 @@
     <string name="forums_ai_post_prompt_label">पोस्ट टैग खातिर प्रॉम्प्ट</string>
     <string name="forums_ai_comment_prompt_label">टिप्पणी टैग खातिर प्रॉम्प्ट</string>
     <string name="forums_moderation_queue_empty">कुछुओ लंबित नइखे</string>
-    <string name="forums_moderation_pending_posts">लंबित पोस्ट</string>
-    <string name="forums_moderation_pending_comments">लंबित टिप्पणी</string>
+    <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$d)</string>
+    <string name="forums_moderation_pending_comments">लंबित टिप्पणी (%1$d)</string>
     <string name="forums_moderation_report_details">विवरण: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s के रिपोर्ट · लेखक %2$s</string>
-    <string name="forums_moderation_report_acted">कार्रवाई भइल</string>
     <string name="forums_moderation_report_resolved_by">%1$s के समाधान — %2$s</string>
     <string name="forums_moderation_log_empty">अबहीं कवनो मॉडरेटर गतिविधि नइखे</string>
     <string name="forums_moderation_log_meta">%1$s द्वारा · लक्ष्य %2$s</string>

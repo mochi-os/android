@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Fingeravtrykk: %1$s</string>
     <string name="forums_settings_clear_notifications">Fjern varsler</string>
     <string name="forums_moderation_queue_empty">Ingenting venter</string>
-    <string name="forums_moderation_pending_posts">Ventende innlegg</string>
-    <string name="forums_moderation_pending_comments">Ventende kommentarer</string>
+    <string name="forums_moderation_pending_posts">Ventende innlegg (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Ventende kommentarer (%1$d)</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>
-    <string name="forums_moderation_report_meta">Rapportert av %1$s · Forfatter %2$s</string>
-    <string name="forums_moderation_report_acted">Behandlet</string>
     <string name="forums_moderation_report_resolved_by">Løst av %1$s – %2$s</string>
     <string name="forums_moderation_log_empty">Ingen moderatoraktivitet ennå</string>
     <string name="forums_moderation_log_meta">Av %1$s · Mål %2$s</string>

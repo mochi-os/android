@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Sõrmejälg: %1$s</string>
     <string name="forums_settings_clear_notifications">Tühjenda teavitused</string>
     <string name="forums_moderation_queue_empty">Midagi ootel pole</string>
-    <string name="forums_moderation_pending_posts">Ootel postitused</string>
-    <string name="forums_moderation_pending_comments">Ootel kommentaarid</string>
+    <string name="forums_moderation_pending_posts">Ootel postitused (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Ootel kommentaarid (%1$d)</string>
     <string name="forums_moderation_report_details">Üksikasjad: %1$s</string>
-    <string name="forums_moderation_report_meta">Teatas %1$s · Autor %2$s</string>
-    <string name="forums_moderation_report_acted">Tegutsetud</string>
     <string name="forums_moderation_report_resolved_by">Lahendas %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Moderaatori tegevust pole veel</string>
     <string name="forums_moderation_log_meta">Autor %1$s · Sihtmärk %2$s</string>

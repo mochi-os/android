@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Ôl bys: %1$s</string>
     <string name="forums_settings_clear_notifications">Clirio hysbysiadau</string>
     <string name="forums_moderation_queue_empty">Dim byd yn aros</string>
-    <string name="forums_moderation_pending_posts">Postiadau yn aros</string>
-    <string name="forums_moderation_pending_comments">Sylwadau yn aros</string>
+    <string name="forums_moderation_pending_posts">Postiadau yn aros (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Sylwadau yn aros (%1$d)</string>
     <string name="forums_moderation_report_details">Manylion: %1$s</string>
-    <string name="forums_moderation_report_meta">Adroddwyd gan %1$s · Awdur %2$s</string>
-    <string name="forums_moderation_report_acted">Gweithredwyd</string>
     <string name="forums_moderation_report_resolved_by">Datryswyd gan %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Dim gweithgaredd cymedrolwr eto</string>
     <string name="forums_moderation_log_meta">Gan %1$s · Targed %2$s</string>

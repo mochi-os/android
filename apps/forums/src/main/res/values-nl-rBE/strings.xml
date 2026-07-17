@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Vingerafdruk: %1$s</string>
     <string name="forums_settings_clear_notifications">Meldingen wissen</string>
     <string name="forums_moderation_queue_empty">Niets in behandeling</string>
-    <string name="forums_moderation_pending_posts">Posts in behandeling</string>
-    <string name="forums_moderation_pending_comments">Commentaren in behandeling</string>
+    <string name="forums_moderation_pending_posts">Posts in behandeling (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Commentaren in behandeling (%1$d)</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
-    <string name="forums_moderation_report_meta">Gerapporteerd door %1$s · Auteur %2$s</string>
-    <string name="forums_moderation_report_acted">Behandeld</string>
     <string name="forums_moderation_report_resolved_by">Opgelost door %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Nog geen moderatoractiviteit</string>
     <string name="forums_moderation_log_meta">Door %1$s · Doel %2$s</string>

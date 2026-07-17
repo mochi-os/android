@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Fingeraftryk: %1$s</string>
     <string name="forums_settings_clear_notifications">Ryd notifikationer</string>
     <string name="forums_moderation_queue_empty">Intet afventende</string>
-    <string name="forums_moderation_pending_posts">Afventende opslag</string>
-    <string name="forums_moderation_pending_comments">Afventende kommentarer</string>
+    <string name="forums_moderation_pending_posts">Afventende opslag (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Afventende kommentarer (%1$d)</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>
-    <string name="forums_moderation_report_meta">Rapporteret af %1$s · Forfatter %2$s</string>
-    <string name="forums_moderation_report_acted">Behandlet</string>
     <string name="forums_moderation_report_resolved_by">Løst af %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ingen moderatoraktivitet endnu</string>
     <string name="forums_moderation_log_meta">Af %1$s · Mål %2$s</string>

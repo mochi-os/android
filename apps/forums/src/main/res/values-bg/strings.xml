@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Отпечатък: %1$s</string>
     <string name="forums_settings_clear_notifications">Изчистване на известията</string>
     <string name="forums_moderation_queue_empty">Няма чакащи елементи</string>
-    <string name="forums_moderation_pending_posts">Чакащи публикации</string>
-    <string name="forums_moderation_pending_comments">Чакащи коментари</string>
+    <string name="forums_moderation_pending_posts">Чакащи публикации (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Чакащи коментари (%1$d)</string>
     <string name="forums_moderation_report_details">Подробности: %1$s</string>
-    <string name="forums_moderation_report_meta">Подадено от %1$s · Автор %2$s</string>
-    <string name="forums_moderation_report_acted">Действие предприето</string>
     <string name="forums_moderation_report_resolved_by">Разрешено от %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Все още няма активност от модератори</string>
     <string name="forums_moderation_log_meta">От %1$s · Цел %2$s</string>

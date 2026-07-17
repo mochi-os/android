@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Barmaq izi: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirişləri təmizlə</string>
     <string name="forums_moderation_queue_empty">Gözləyən yoxdur</string>
-    <string name="forums_moderation_pending_posts">Gözləyən yazılar</string>
-    <string name="forums_moderation_pending_comments">Gözləyən şərhlər</string>
+    <string name="forums_moderation_pending_posts">Gözləyən yazılar (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Gözləyən şərhlər (%1$d)</string>
     <string name="forums_moderation_report_details">Təfərrüatlar: %1$s</string>
-    <string name="forums_moderation_report_meta">Bildirən %1$s · Müəllif %2$s</string>
-    <string name="forums_moderation_report_acted">Tədbir görüldü</string>
     <string name="forums_moderation_report_resolved_by">Həll edən %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Hələ moderator fəaliyyəti yoxdur</string>
     <string name="forums_moderation_log_meta">Edən %1$s · Hədəf %2$s</string>

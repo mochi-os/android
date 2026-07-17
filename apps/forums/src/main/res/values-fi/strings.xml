@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Sormenjälki: %1$s</string>
     <string name="forums_settings_clear_notifications">Tyhjennä ilmoitukset</string>
     <string name="forums_moderation_queue_empty">Ei käsiteltäviä</string>
-    <string name="forums_moderation_pending_posts">Käsittelyä odottavat julkaisut</string>
-    <string name="forums_moderation_pending_comments">Käsittelyä odottavat kommentit</string>
+    <string name="forums_moderation_pending_posts">Käsittelyä odottavat julkaisut (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Käsittelyä odottavat kommentit (%1$d)</string>
     <string name="forums_moderation_report_details">Tiedot: %1$s</string>
-    <string name="forums_moderation_report_meta">Ilmoittaja %1$s · Tekijä %2$s</string>
-    <string name="forums_moderation_report_acted">Käsitelty</string>
     <string name="forums_moderation_report_resolved_by">Ratkaisija %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ei vielä valvojan toimintaa</string>
     <string name="forums_moderation_log_meta">Tekijä %1$s · Kohde %2$s</string>

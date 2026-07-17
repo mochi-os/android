@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Huella: %1$s</string>
     <string name="forums_settings_clear_notifications">Borrar notificaciones</string>
     <string name="forums_moderation_queue_empty">Nada pendiente</string>
-    <string name="forums_moderation_pending_posts">Publicaciones pendientes</string>
-    <string name="forums_moderation_pending_comments">Comentarios pendientes</string>
+    <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$d)</string>
     <string name="forums_moderation_report_details">Detalles: %1$s</string>
-    <string name="forums_moderation_report_meta">Informado por %1$s · Autor %2$s</string>
-    <string name="forums_moderation_report_acted">Aplicado</string>
     <string name="forums_moderation_report_resolved_by">Resuelto por %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Aún no hay actividad de moderación</string>
     <string name="forums_moderation_log_meta">Por %1$s · Objetivo %2$s</string>

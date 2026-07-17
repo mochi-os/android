@@ -118,6 +118,7 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.forums.R
 import org.mochios.forums.model.Post
+import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.ui.forumlist.CreateForumDialog
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
@@ -415,7 +416,11 @@ private fun ForumContent(
                     if (!isAll) {
                         IconButton(
                             onClick = { onNewPost(forumIdForCallbacks) },
-                            enabled = uiState.forum.id.isNotEmpty(),
+                            // `canPost` is null when the response omits it, which
+                            // reads as "unknown" and leaves the button live — only
+                            // an explicit `false` disables it.
+                            enabled = uiState.forum.id.isNotEmpty() &&
+                                uiState.forum.canPost != false,
                         ) {
                             Icon(
                                 Icons.Default.Add,
@@ -827,6 +832,12 @@ private fun PostCard(
                     modifier = Modifier.weight(1f),
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
+                )
+                // Status rides the title's trailing edge — the first thing read
+                // on a card that isn't live yet.
+                PostBadges(
+                    status = post.status,
+                    modifier = Modifier.padding(start = 8.dp),
                 )
             }
             if (post.body.isNotBlank()) {

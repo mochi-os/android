@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Empreinte : %1$s</string>
     <string name="forums_settings_clear_notifications">Effacer les notifications</string>
     <string name="forums_moderation_queue_empty">Rien en attente</string>
-    <string name="forums_moderation_pending_posts">Publications en attente</string>
-    <string name="forums_moderation_pending_comments">Commentaires en attente</string>
+    <string name="forums_moderation_pending_posts">Publications en attente (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Commentaires en attente (%1$d)</string>
     <string name="forums_moderation_report_details">Détails : %1$s</string>
-    <string name="forums_moderation_report_meta">Signalé par %1$s · Auteur %2$s</string>
-    <string name="forums_moderation_report_acted">Traité</string>
     <string name="forums_moderation_report_resolved_by">Résolu par %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Aucune activité de modération pour le moment</string>
     <string name="forums_moderation_log_meta">Par %1$s · Cible %2$s</string>

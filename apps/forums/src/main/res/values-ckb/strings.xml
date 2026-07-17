@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">پەنجەمۆر: %1$s</string>
     <string name="forums_settings_clear_notifications">پاککردنەوەی ئاگادارکردنەوەکان</string>
     <string name="forums_moderation_queue_empty">هیچ شتێک چاوەڕوان نییە</string>
-    <string name="forums_moderation_pending_posts">پۆستە چاوەڕوانەکان</string>
-    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان</string>
+    <string name="forums_moderation_pending_posts">پۆستە چاوەڕوانەکان (%1$d)</string>
+    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$d)</string>
     <string name="forums_moderation_report_details">وردەکارییەکان: %1$s</string>
-    <string name="forums_moderation_report_meta">ڕاپۆرتکراوە لەلایەن %1$s · نووسەر %2$s</string>
-    <string name="forums_moderation_report_acted">کاری لەسەر کراوە</string>
     <string name="forums_moderation_report_resolved_by">چارەسەرکراوە لەلایەن %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">هێشتا هیچ کارێکی چاودێر نییە</string>
     <string name="forums_moderation_log_meta">لەلایەن %1$s · ئامانج %2$s</string>

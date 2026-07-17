@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Хурууны хээ: %1$s</string>
     <string name="forums_settings_clear_notifications">Мэдэгдлийг арилгах</string>
     <string name="forums_moderation_queue_empty">Хүлээгдэж буй зүйл алга</string>
-    <string name="forums_moderation_pending_posts">Хүлээгдэж буй нийтлэл</string>
-    <string name="forums_moderation_pending_comments">Хүлээгдэж буй сэтгэгдэл</string>
+    <string name="forums_moderation_pending_posts">Хүлээгдэж буй нийтлэл (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Хүлээгдэж буй сэтгэгдэл (%1$d)</string>
     <string name="forums_moderation_report_details">Дэлгэрэнгүй: %1$s</string>
-    <string name="forums_moderation_report_meta">Мэдэгдсэн: %1$s · Зохиогч %2$s</string>
-    <string name="forums_moderation_report_acted">Шийдсэн</string>
     <string name="forums_moderation_report_resolved_by">Шийдвэрлэсэн: %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Зохицуулагчийн үйл ажиллагаа алга</string>
     <string name="forums_moderation_log_meta">Хийсэн: %1$s · Зорилт %2$s</string>

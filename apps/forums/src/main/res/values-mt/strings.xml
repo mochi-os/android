@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Marka tas-swaba\': %1$s</string>
     <string name="forums_settings_clear_notifications">Neħħi n-notifiki</string>
     <string name="forums_moderation_queue_empty">Xejn pendenti</string>
-    <string name="forums_moderation_pending_posts">Posts pendenti</string>
-    <string name="forums_moderation_pending_comments">Kummenti pendenti</string>
+    <string name="forums_moderation_pending_posts">Posts pendenti (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Kummenti pendenti (%1$d)</string>
     <string name="forums_moderation_report_details">Dettalji: %1$s</string>
-    <string name="forums_moderation_report_meta">Irrappurtat minn %1$s · Awtur %2$s</string>
-    <string name="forums_moderation_report_acted">Ittieħdet azzjoni</string>
     <string name="forums_moderation_report_resolved_by">Solvut minn %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">L-ebda attività tal-moderaturi s\'issa</string>
     <string name="forums_moderation_log_meta">Minn %1$s · Mira %2$s</string>

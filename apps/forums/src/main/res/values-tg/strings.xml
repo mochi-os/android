@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Изи ангушт: %1$s</string>
     <string name="forums_settings_clear_notifications">Огоҳномаҳоро тоза кунед</string>
     <string name="forums_moderation_queue_empty">Чизе дар интизорӣ нест</string>
-    <string name="forums_moderation_pending_posts">Паёмҳои дар интизорӣ</string>
-    <string name="forums_moderation_pending_comments">Шарҳҳои дар интизорӣ</string>
+    <string name="forums_moderation_pending_posts">Паёмҳои дар интизорӣ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Шарҳҳои дар интизорӣ (%1$d)</string>
     <string name="forums_moderation_report_details">Тафсилот: %1$s</string>
-    <string name="forums_moderation_report_meta">Хабар додашуда аз %1$s · Муаллиф %2$s</string>
-    <string name="forums_moderation_report_acted">Амал шуд</string>
     <string name="forums_moderation_report_resolved_by">Ҳалшуда аз тарафи %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ҳанӯз фаъолияти модератор нест</string>
     <string name="forums_moderation_log_meta">Аз %1$s · Ҳадаф %2$s</string>

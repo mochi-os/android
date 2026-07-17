@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Otisk: %1$s</string>
     <string name="forums_settings_clear_notifications">Vymazat oznámení</string>
     <string name="forums_moderation_queue_empty">Nic nečeká</string>
-    <string name="forums_moderation_pending_posts">Čekající příspěvky</string>
-    <string name="forums_moderation_pending_comments">Čekající komentáře</string>
+    <string name="forums_moderation_pending_posts">Čekající příspěvky (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Čekající komentáře (%1$d)</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>
-    <string name="forums_moderation_report_meta">Nahlásil(a) %1$s · Autor %2$s</string>
-    <string name="forums_moderation_report_acted">Vyřízeno</string>
     <string name="forums_moderation_report_resolved_by">Vyřešil(a) %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Zatím žádná aktivita moderátorů</string>
     <string name="forums_moderation_log_meta">Od %1$s · Cíl %2$s</string>

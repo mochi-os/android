@@ -136,14 +136,12 @@
     <string name="forums_moderation_tab_log">Protokoll</string>
     <string name="forums_moderation_tab_restrictions">Einschränkungen</string>
     <string name="forums_moderation_queue_empty">Nichts ausstehend</string>
-    <string name="forums_moderation_pending_posts">Ausstehende Beiträge</string>
-    <string name="forums_moderation_pending_comments">Ausstehende Kommentare</string>
+    <string name="forums_moderation_pending_posts">Ausstehende Beiträge (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Ausstehende Kommentare (%1$d)</string>
     <string name="forums_moderation_reports_pending">Ausstehend</string>
     <string name="forums_moderation_reports_resolved">Erledigt</string>
     <string name="forums_moderation_reports_empty">Keine Meldungen</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
-    <string name="forums_moderation_report_meta">Gemeldet von %1$s · Autor %2$s</string>
-    <string name="forums_moderation_report_acted">Bearbeitet</string>
     <string name="forums_moderation_report_resolved_by">Erledigt von %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Noch keine Moderationsaktivität</string>
     <string name="forums_moderation_log_meta">Von %1$s · Ziel %2$s</string>

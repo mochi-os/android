@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Lorg-meòir: %1$s</string>
     <string name="forums_settings_clear_notifications">Falamhaich na brathan</string>
     <string name="forums_moderation_queue_empty">Chan eil dad ri dhèanamh</string>
-    <string name="forums_moderation_pending_posts">Postaichean a\' feitheamh</string>
-    <string name="forums_moderation_pending_comments">Beachdan a\' feitheamh</string>
+    <string name="forums_moderation_pending_posts">Postaichean a\' feitheamh (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Beachdan a\' feitheamh (%1$d)</string>
     <string name="forums_moderation_report_details">Mion-fhiosrachadh: %1$s</string>
-    <string name="forums_moderation_report_meta">Air aithris le %1$s · Ùghdar %2$s</string>
-    <string name="forums_moderation_report_acted">Air gabhail os làimh</string>
     <string name="forums_moderation_report_resolved_by">Air fhuasgladh le %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Chan eil gnìomh modaratair ann fhathast</string>
     <string name="forums_moderation_log_meta">Le %1$s · Targaid %2$s</string>

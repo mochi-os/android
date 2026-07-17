@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">फिंगरप्रिंट: %1$s</string>
     <string name="forums_settings_clear_notifications">सूचना साफ करा</string>
     <string name="forums_moderation_queue_empty">काहीही प्रलंबित नाही</string>
-    <string name="forums_moderation_pending_posts">प्रलंबित पोस्ट</string>
-    <string name="forums_moderation_pending_comments">प्रलंबित टिप्पण्या</string>
+    <string name="forums_moderation_pending_posts">प्रलंबित पोस्ट (%1$d)</string>
+    <string name="forums_moderation_pending_comments">प्रलंबित टिप्पण्या (%1$d)</string>
     <string name="forums_moderation_report_details">तपशील: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s द्वारे अहवाल · लेखक %2$s</string>
-    <string name="forums_moderation_report_acted">कारवाई केली</string>
     <string name="forums_moderation_report_resolved_by">%1$s द्वारे निराकरण — %2$s</string>
     <string name="forums_moderation_log_empty">अद्याप कोणतीही नियंत्रण क्रिया नाही</string>
     <string name="forums_moderation_log_meta">%1$s द्वारे · लक्ष्य %2$s</string>

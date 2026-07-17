@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">ഫിംഗർപ്രിന്റ്: %1$s</string>
     <string name="forums_settings_clear_notifications">അറിയിപ്പുകൾ മായ്ക്കുക</string>
     <string name="forums_moderation_queue_empty">ഒന്നും തീർച്ചപ്പെടുത്താനില്ല</string>
-    <string name="forums_moderation_pending_posts">തീർച്ചപ്പെടുത്താനുള്ള പോസ്റ്റുകൾ</string>
-    <string name="forums_moderation_pending_comments">തീർച്ചപ്പെടുത്താനുള്ള കമന്റുകൾ</string>
+    <string name="forums_moderation_pending_posts">തീർച്ചപ്പെടുത്താനുള്ള പോസ്റ്റുകൾ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">തീർച്ചപ്പെടുത്താനുള്ള കമന്റുകൾ (%1$d)</string>
     <string name="forums_moderation_report_details">വിശദാംശങ്ങൾ: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s റിപ്പോർട്ട് ചെയ്തു · രചയിതാവ് %2$s</string>
-    <string name="forums_moderation_report_acted">നടപടി സ്വീകരിച്ചു</string>
     <string name="forums_moderation_report_resolved_by">%1$s പരിഹരിച്ചു — %2$s</string>
     <string name="forums_moderation_log_empty">ഇതുവരെ മോഡറേറ്റർ പ്രവർത്തനമൊന്നുമില്ല</string>
     <string name="forums_moderation_log_meta">%1$s നടത്തിയത് · ലക്ഷ്യം %2$s</string>

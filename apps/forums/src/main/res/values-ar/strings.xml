@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">البصمة: %1$s</string>
     <string name="forums_settings_clear_notifications">مسح الإشعارات</string>
     <string name="forums_moderation_queue_empty">لا يوجد شيء معلّق</string>
-    <string name="forums_moderation_pending_posts">المنشورات المعلّقة</string>
-    <string name="forums_moderation_pending_comments">التعليقات المعلّقة</string>
+    <string name="forums_moderation_pending_posts">المنشورات المعلّقة (%1$d)</string>
+    <string name="forums_moderation_pending_comments">التعليقات المعلّقة (%1$d)</string>
     <string name="forums_moderation_report_details">التفاصيل: %1$s</string>
-    <string name="forums_moderation_report_meta">أبلغ عنه %1$s · المؤلف %2$s</string>
-    <string name="forums_moderation_report_acted">تم اتخاذ إجراء</string>
     <string name="forums_moderation_report_resolved_by">تم الحل بواسطة %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">لا يوجد نشاط للمشرفين بعد</string>
     <string name="forums_moderation_log_meta">بواسطة %1$s · الهدف %2$s</string>

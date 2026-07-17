@@ -145,15 +145,13 @@
     <string name="forums_moderation_tab_log">Registro</string>
     <string name="forums_moderation_tab_restrictions">Restricciones</string>
     <string name="forums_moderation_queue_empty">Nada pendiente</string>
-    <string name="forums_moderation_pending_posts">Publicaciones pendientes</string>
-    <string name="forums_moderation_pending_comments">Comentarios pendientes</string>
+    <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$d)</string>
     <string name="forums_moderation_reports_pending">Pendientes</string>
     <string name="forums_moderation_reports_resolved">Resueltos</string>
     <string name="forums_moderation_reports_empty">Sin reportes</string>
     <string name="forums_moderation_report_details">Detalles: %1$s</string>
-    <string name="forums_moderation_report_meta">Reportado por %1$s · Autor %2$s</string>
     <string name="forums_moderation_report_dismiss">Descartar</string>
-    <string name="forums_moderation_report_acted">Actuado</string>
     <string name="forums_moderation_report_resolved_by">Resuelto por %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Aún no hay actividad de moderadores</string>
     <string name="forums_moderation_log_meta">Por %1$s · Objetivo %2$s</string>

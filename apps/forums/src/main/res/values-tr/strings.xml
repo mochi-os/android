@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Parmak izi: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirimleri temizle</string>
     <string name="forums_moderation_queue_empty">Bekleyen bir şey yok</string>
-    <string name="forums_moderation_pending_posts">Bekleyen gönderiler</string>
-    <string name="forums_moderation_pending_comments">Bekleyen yorumlar</string>
+    <string name="forums_moderation_pending_posts">Bekleyen gönderiler (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Bekleyen yorumlar (%1$d)</string>
     <string name="forums_moderation_report_details">Ayrıntılar: %1$s</string>
-    <string name="forums_moderation_report_meta">Bildiren: %1$s · Yazar: %2$s</string>
-    <string name="forums_moderation_report_acted">İşlem yapıldı</string>
     <string name="forums_moderation_report_resolved_by">Çözen: %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Henüz moderatör etkinliği yok</string>
     <string name="forums_moderation_log_meta">Yapan: %1$s · Hedef: %2$s</string>

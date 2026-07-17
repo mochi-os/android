@@ -44,8 +44,10 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
@@ -100,9 +102,11 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
+import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.model.Tag
 import org.mochios.android.R as MochiR
 
@@ -156,12 +160,40 @@ fun PostScreen(
             TopAppBar(
                 title = {
                     // The post's own title — the forum name is already implied by
-                    // where the user came from.
-                    Text(
-                        text = uiState.post.title.ifBlank { stringResource(R.string.forums_loading) },
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
+                    // where the user came from. Pinned and locked lead it, the
+                    // same pairing the list card uses; locked is also why the
+                    // composer below is disabled.
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (uiState.post.pinned) {
+                            Icon(
+                                Icons.Default.PushPin,
+                                contentDescription = stringResource(
+                                    R.string.forums_post_pinned
+                                ),
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(18.dp),
+                            )
+                            Spacer(Modifier.width(6.dp))
+                        }
+                        if (uiState.post.locked) {
+                            Icon(
+                                Icons.Default.Lock,
+                                contentDescription = stringResource(
+                                    R.string.forums_post_locked
+                                ),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(18.dp),
+                            )
+                            Spacer(Modifier.width(6.dp))
+                        }
+                        Text(
+                            text = uiState.post.title.ifBlank {
+                                stringResource(R.string.forums_loading)
+                            },
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
@@ -826,6 +858,10 @@ private fun PostHeader(
                 count = post.comments,
                 onClick = onComment,
             )
+            // Status closes the row on the trailing edge, a size up from the
+            // list card since this is the post's own screen.
+            Spacer(Modifier.weight(1f))
+            PostBadges(status = post.status, size = StatusBadgeSize.Regular)
         }
     }
 }

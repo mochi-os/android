@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Odcisk palca: %1$s</string>
     <string name="forums_settings_clear_notifications">Wyczyść powiadomienia</string>
     <string name="forums_moderation_queue_empty">Brak oczekujących</string>
-    <string name="forums_moderation_pending_posts">Oczekujące posty</string>
-    <string name="forums_moderation_pending_comments">Oczekujące komentarze</string>
+    <string name="forums_moderation_pending_posts">Oczekujące posty (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Oczekujące komentarze (%1$d)</string>
     <string name="forums_moderation_report_details">Szczegóły: %1$s</string>
-    <string name="forums_moderation_report_meta">Zgłoszone przez %1$s · Autor %2$s</string>
-    <string name="forums_moderation_report_acted">Podjęto działanie</string>
     <string name="forums_moderation_report_resolved_by">Rozwiązane przez %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Brak aktywności moderatorów</string>
     <string name="forums_moderation_log_meta">Przez %1$s · Cel %2$s</string>

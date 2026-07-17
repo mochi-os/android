@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">ফিঙ্গারপ্রিন্ট: %1$s</string>
     <string name="forums_settings_clear_notifications">বিজ্ঞপ্তি পরিষ্কার করুন</string>
     <string name="forums_moderation_queue_empty">মুলতুবি কিছু নেই</string>
-    <string name="forums_moderation_pending_posts">মুলতুবি পোস্ট</string>
-    <string name="forums_moderation_pending_comments">মুলতুবি মন্তব্য</string>
+    <string name="forums_moderation_pending_posts">মুলতুবি পোস্ট (%1$d)</string>
+    <string name="forums_moderation_pending_comments">মুলতুবি মন্তব্য (%1$d)</string>
     <string name="forums_moderation_report_details">বিস্তারিত: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s দ্বারা রিপোর্ট করা হয়েছে · লেখক %2$s</string>
-    <string name="forums_moderation_report_acted">ব্যবস্থা নেওয়া হয়েছে</string>
     <string name="forums_moderation_report_resolved_by">%1$s দ্বারা সমাধান করা হয়েছে — %2$s</string>
     <string name="forums_moderation_log_empty">এখনও কোনো মডারেটরের কার্যকলাপ নেই</string>
     <string name="forums_moderation_log_meta">%1$s দ্বারা · লক্ষ্য %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">फिङ्गरप्रिन्ट: %1$s</string>
     <string name="forums_settings_clear_notifications">सूचनाहरू खाली गर्नुहोस्</string>
     <string name="forums_moderation_queue_empty">कुनै बाँकी छैन</string>
-    <string name="forums_moderation_pending_posts">बाँकी पोस्टहरू</string>
-    <string name="forums_moderation_pending_comments">बाँकी टिप्पणीहरू</string>
+    <string name="forums_moderation_pending_posts">बाँकी पोस्टहरू (%1$d)</string>
+    <string name="forums_moderation_pending_comments">बाँकी टिप्पणीहरू (%1$d)</string>
     <string name="forums_moderation_report_details">विवरण: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s द्वारा रिपोर्ट गरिएको · लेखक %2$s</string>
-    <string name="forums_moderation_report_acted">कारबाही गरियो</string>
     <string name="forums_moderation_report_resolved_by">%1$s द्वारा समाधान गरियो — %2$s</string>
     <string name="forums_moderation_log_empty">अहिलेसम्म कुनै मध्यस्थता गतिविधि छैन</string>
     <string name="forums_moderation_log_meta">%1$s द्वारा · लक्ष्य %2$s</string>

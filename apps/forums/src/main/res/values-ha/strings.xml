@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Yatsa: %1$s</string>
     <string name="forums_settings_clear_notifications">Share sanarwa</string>
     <string name="forums_moderation_queue_empty">Babu abin da ke jiran sarrafawa</string>
-    <string name="forums_moderation_pending_posts">Saƙonni masu jira</string>
-    <string name="forums_moderation_pending_comments">Bayanai masu jira</string>
+    <string name="forums_moderation_pending_posts">Saƙonni masu jira (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Bayanai masu jira (%1$d)</string>
     <string name="forums_moderation_report_details">Cikakkun bayanai: %1$s</string>
-    <string name="forums_moderation_report_meta">Wanda ya ba da rahoto %1$s · Marubuci %2$s</string>
-    <string name="forums_moderation_report_acted">An ɗauki mataki</string>
     <string name="forums_moderation_report_resolved_by">An warware ta hanyar %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Babu aikin masu sarrafawa har yanzu</string>
     <string name="forums_moderation_log_meta">Daga %1$s · Manufa %2$s</string>

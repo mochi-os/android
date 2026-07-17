@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Адбітак: %1$s</string>
     <string name="forums_settings_clear_notifications">Ачысціць апавяшчэнні</string>
     <string name="forums_moderation_queue_empty">Нічога не чакае разгляду</string>
-    <string name="forums_moderation_pending_posts">Допісы ў чаканні</string>
-    <string name="forums_moderation_pending_comments">Каментары ў чаканні</string>
+    <string name="forums_moderation_pending_posts">Допісы ў чаканні (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Каментары ў чаканні (%1$d)</string>
     <string name="forums_moderation_report_details">Падрабязнасці: %1$s</string>
-    <string name="forums_moderation_report_meta">Паведаміў %1$s · Аўтар %2$s</string>
-    <string name="forums_moderation_report_acted">Дзеянне выканана</string>
     <string name="forums_moderation_report_resolved_by">Вырашана %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Пакуль няма дзеянняў мадэратараў</string>
     <string name="forums_moderation_log_meta">Кім %1$s · Мэта %2$s</string>

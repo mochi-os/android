@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ: %1$s</string>
     <string name="forums_settings_clear_notifications">ਸੂਚਨਾਵਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="forums_moderation_queue_empty">ਕੁਝ ਵੀ ਬਕਾਇਆ ਨਹੀਂ</string>
-    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ</string>
-    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ</string>
+    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$d)</string>
     <string name="forums_moderation_report_details">ਵੇਰਵਾ: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s ਦੁਆਰਾ ਰਿਪੋਰਟ ਕੀਤੀ ਗਈ · ਲੇਖਕ %2$s</string>
-    <string name="forums_moderation_report_acted">ਕਾਰਵਾਈ ਕੀਤੀ ਗਈ</string>
     <string name="forums_moderation_report_resolved_by">%1$s ਦੁਆਰਾ ਹੱਲ ਕੀਤਾ ਗਿਆ — %2$s</string>
     <string name="forums_moderation_log_empty">ਅਜੇ ਕੋਈ ਸੰਚਾਲਕ ਗਤੀਵਿਧੀ ਨਹੀਂ</string>
     <string name="forums_moderation_log_meta">%1$s ਦੁਆਰਾ · ਨਿਸ਼ਾਨਾ %2$s</string>

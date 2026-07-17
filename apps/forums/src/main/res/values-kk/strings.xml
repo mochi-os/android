@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Саусақ ізі: %1$s</string>
     <string name="forums_settings_clear_notifications">Хабарландыруларды тазалау</string>
     <string name="forums_moderation_queue_empty">Күтудегі ештеңе жоқ</string>
-    <string name="forums_moderation_pending_posts">Күтудегі жазбалар</string>
-    <string name="forums_moderation_pending_comments">Күтудегі пікірлер</string>
+    <string name="forums_moderation_pending_posts">Күтудегі жазбалар (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Күтудегі пікірлер (%1$d)</string>
     <string name="forums_moderation_report_details">Мәліметтер: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s хабарлады · Авторы %2$s</string>
-    <string name="forums_moderation_report_acted">Әрекет жасалды</string>
     <string name="forums_moderation_report_resolved_by">%1$s шешті — %2$s</string>
     <string name="forums_moderation_log_empty">Әзірге модератор әрекеті жоқ</string>
     <string name="forums_moderation_log_meta">%1$s · Нысан %2$s</string>

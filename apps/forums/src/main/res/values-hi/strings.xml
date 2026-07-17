@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">फ़िंगरप्रिंट: %1$s</string>
     <string name="forums_settings_clear_notifications">सूचनाएँ साफ़ करें</string>
     <string name="forums_moderation_queue_empty">कुछ भी लंबित नहीं</string>
-    <string name="forums_moderation_pending_posts">लंबित पोस्ट</string>
-    <string name="forums_moderation_pending_comments">लंबित टिप्पणियाँ</string>
+    <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$d)</string>
+    <string name="forums_moderation_pending_comments">लंबित टिप्पणियाँ (%1$d)</string>
     <string name="forums_moderation_report_details">विवरण: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s द्वारा रिपोर्ट किया गया · लेखक %2$s</string>
-    <string name="forums_moderation_report_acted">कार्रवाई की गई</string>
     <string name="forums_moderation_report_resolved_by">%1$s द्वारा हल किया गया — %2$s</string>
     <string name="forums_moderation_log_empty">अभी तक कोई मॉडरेटर गतिविधि नहीं</string>
     <string name="forums_moderation_log_meta">%1$s द्वारा · लक्ष्य %2$s</string>

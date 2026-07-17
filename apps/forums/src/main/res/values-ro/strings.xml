@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Amprentă: %1$s</string>
     <string name="forums_settings_clear_notifications">Ștergeți notificările</string>
     <string name="forums_moderation_queue_empty">Nimic în așteptare</string>
-    <string name="forums_moderation_pending_posts">Postări în așteptare</string>
-    <string name="forums_moderation_pending_comments">Comentarii în așteptare</string>
+    <string name="forums_moderation_pending_posts">Postări în așteptare (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Comentarii în așteptare (%1$d)</string>
     <string name="forums_moderation_report_details">Detalii: %1$s</string>
-    <string name="forums_moderation_report_meta">Raportat de %1$s · Autor %2$s</string>
-    <string name="forums_moderation_report_acted">Acționat</string>
     <string name="forums_moderation_report_resolved_by">Rezolvat de %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Încă nicio activitate de moderare</string>
     <string name="forums_moderation_log_meta">De %1$s · Țintă %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Anprent: %1$s</string>
     <string name="forums_settings_clear_notifications">Efase notifikasyon</string>
     <string name="forums_moderation_queue_empty">Pa gen anyen annatant</string>
-    <string name="forums_moderation_pending_posts">Piblikasyon annatant</string>
-    <string name="forums_moderation_pending_comments">Kòmantè annatant</string>
+    <string name="forums_moderation_pending_posts">Piblikasyon annatant (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Kòmantè annatant (%1$d)</string>
     <string name="forums_moderation_report_details">Detay: %1$s</string>
-    <string name="forums_moderation_report_meta">Rapòte pa %1$s · Otè %2$s</string>
-    <string name="forums_moderation_report_acted">Aji</string>
     <string name="forums_moderation_report_resolved_by">Rezoud pa %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Poko gen aktivite moderatè</string>
     <string name="forums_moderation_log_meta">Pa %1$s · Sib %2$s</string>

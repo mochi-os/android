@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">လက်ဗွေ: %1$s</string>
     <string name="forums_settings_clear_notifications">အကြောင်းကြားချက်များကို ရှင်းလင်းပါ</string>
     <string name="forums_moderation_queue_empty">ဆိုင်းငံ့ထားသည် မရှိပါ</string>
-    <string name="forums_moderation_pending_posts">ဆိုင်းငံ့ထားသော ပို့စ်များ</string>
-    <string name="forums_moderation_pending_comments">ဆိုင်းငံ့ထားသော မှတ်ချက်များ</string>
+    <string name="forums_moderation_pending_posts">ဆိုင်းငံ့ထားသော ပို့စ်များ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">ဆိုင်းငံ့ထားသော မှတ်ချက်များ (%1$d)</string>
     <string name="forums_moderation_report_details">အသေးစိတ်: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s က သတင်းပို့ထား · ရေးသားသူ %2$s</string>
-    <string name="forums_moderation_report_acted">ဆောင်ရွက်ပြီး</string>
     <string name="forums_moderation_report_resolved_by">%1$s က ဖြေရှင်းခဲ့သည် — %2$s</string>
     <string name="forums_moderation_log_empty">ထိန်းညှိသူ၏ လုပ်ဆောင်ချက် မရှိသေးပါ</string>
     <string name="forums_moderation_log_meta">%1$s က · ပစ်မှတ် %2$s</string>

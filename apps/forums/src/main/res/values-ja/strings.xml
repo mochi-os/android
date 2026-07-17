@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">フィンガープリント: %1$s</string>
     <string name="forums_settings_clear_notifications">通知をクリア</string>
     <string name="forums_moderation_queue_empty">保留中の項目はありません</string>
-    <string name="forums_moderation_pending_posts">保留中の投稿</string>
-    <string name="forums_moderation_pending_comments">保留中のコメント</string>
+    <string name="forums_moderation_pending_posts">保留中の投稿 (%1$d)</string>
+    <string name="forums_moderation_pending_comments">保留中のコメント (%1$d)</string>
     <string name="forums_moderation_report_details">詳細: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s が報告 · 作成者 %2$s</string>
-    <string name="forums_moderation_report_acted">対応済み</string>
     <string name="forums_moderation_report_resolved_by">%1$s が解決 — %2$s</string>
     <string name="forums_moderation_log_empty">モデレーター活動はまだありません</string>
     <string name="forums_moderation_log_meta">%1$s 実施 · 対象 %2$s</string>

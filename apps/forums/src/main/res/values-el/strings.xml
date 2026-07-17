@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Αποτύπωμα: %1$s</string>
     <string name="forums_settings_clear_notifications">Εκκαθάριση ειδοποιήσεων</string>
     <string name="forums_moderation_queue_empty">Τίποτα σε εκκρεμότητα</string>
-    <string name="forums_moderation_pending_posts">Εκκρεμείς αναρτήσεις</string>
-    <string name="forums_moderation_pending_comments">Εκκρεμή σχόλια</string>
+    <string name="forums_moderation_pending_posts">Εκκρεμείς αναρτήσεις (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Εκκρεμή σχόλια (%1$d)</string>
     <string name="forums_moderation_report_details">Λεπτομέρειες: %1$s</string>
-    <string name="forums_moderation_report_meta">Αναφέρθηκε από %1$s · Συντάκτης %2$s</string>
-    <string name="forums_moderation_report_acted">Έγινε ενέργεια</string>
     <string name="forums_moderation_report_resolved_by">Επιλύθηκε από %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Δεν υπάρχει δραστηριότητα συντονιστή ακόμη</string>
     <string name="forums_moderation_log_meta">Από %1$s · Στόχος %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Отпечаток: %1$s</string>
     <string name="forums_settings_clear_notifications">Исчисти известувања</string>
     <string name="forums_moderation_queue_empty">Нема ништо во чекање</string>
-    <string name="forums_moderation_pending_posts">Објави во чекање</string>
-    <string name="forums_moderation_pending_comments">Коментари во чекање</string>
+    <string name="forums_moderation_pending_posts">Објави во чекање (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Коментари во чекање (%1$d)</string>
     <string name="forums_moderation_report_details">Детали: %1$s</string>
-    <string name="forums_moderation_report_meta">Пријавено од %1$s · Автор %2$s</string>
-    <string name="forums_moderation_report_acted">Постапено</string>
     <string name="forums_moderation_report_resolved_by">Решено од %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Сè уште нема активност од модератор</string>
     <string name="forums_moderation_log_meta">Од %1$s · Цел %2$s</string>

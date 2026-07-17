@@ -101,14 +101,35 @@ fun GeneralTab(
                     maxLines = 8
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                Button(
-                    onClick = {
-                        viewModel.saveBanner(bannerDraft)
-                        focusManager.clearFocus()
-                    },
-                    enabled = bannerDraft != banner,
-                ) {
-                    Text(stringResource(MochiR.string.common_save))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    // Save only has something to do once the draft has moved off
+                    // what is stored.
+                    Button(
+                        onClick = {
+                            viewModel.saveBanner(bannerDraft)
+                            focusManager.clearFocus()
+                        },
+                        enabled = bannerDraft != banner,
+                    ) {
+                        Text(stringResource(MochiR.string.common_save))
+                    }
+                    // Clear only empties the box — Save is what writes it, the
+                    // same as any other edit. Neutral rather than primary: it
+                    // undoes typing, it does not commit anything. Absent while
+                    // the box is empty: there is nothing to clear.
+                    if (bannerDraft.isNotEmpty()) {
+                        OutlinedButton(
+                            onClick = {
+                                bannerDraft = ""
+                                focusManager.clearFocus()
+                            },
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                            ),
+                        ) {
+                            Text(stringResource(R.string.feeds_clear))
+                        }
+                    }
                 }
             }
         }

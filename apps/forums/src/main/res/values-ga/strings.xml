@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Méarlorg: %1$s</string>
     <string name="forums_settings_clear_notifications">Glan fógraí</string>
     <string name="forums_moderation_queue_empty">Níl aon rud ar feitheamh</string>
-    <string name="forums_moderation_pending_posts">Postálacha ar feitheamh</string>
-    <string name="forums_moderation_pending_comments">Nótaí tráchta ar feitheamh</string>
+    <string name="forums_moderation_pending_posts">Postálacha ar feitheamh (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Nótaí tráchta ar feitheamh (%1$d)</string>
     <string name="forums_moderation_report_details">Sonraí: %1$s</string>
-    <string name="forums_moderation_report_meta">Tuairiscithe ag %1$s · Údar %2$s</string>
-    <string name="forums_moderation_report_acted">Gníomhaithe</string>
     <string name="forums_moderation_report_resolved_by">Réitithe ag %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Níl aon ghníomhaíocht ó mhodhnóir ann fós</string>
     <string name="forums_moderation_log_meta">Ag %1$s · Sprioc %2$s</string>

@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">የጣት አሻራ፦ %1$s</string>
     <string name="forums_settings_clear_notifications">ማሳወቂያዎችን አጽዳ</string>
     <string name="forums_moderation_queue_empty">በመጠባበቅ ላይ ምንም የለም</string>
-    <string name="forums_moderation_pending_posts">በመጠባበቅ ላይ ያሉ ልጥፎች</string>
-    <string name="forums_moderation_pending_comments">በመጠባበቅ ላይ ያሉ አስተያየቶች</string>
+    <string name="forums_moderation_pending_posts">በመጠባበቅ ላይ ያሉ ልጥፎች (%1$d)</string>
+    <string name="forums_moderation_pending_comments">በመጠባበቅ ላይ ያሉ አስተያየቶች (%1$d)</string>
     <string name="forums_moderation_report_details">ዝርዝሮች፦ %1$s</string>
-    <string name="forums_moderation_report_meta">በ%1$s ሪፖርት ተደርጓል · ደራሲ %2$s</string>
-    <string name="forums_moderation_report_acted">እርምጃ ተወስዷል</string>
     <string name="forums_moderation_report_resolved_by">በ%1$s ተፈቷል — %2$s</string>
     <string name="forums_moderation_log_empty">እስካሁን ምንም የአወያይ እንቅስቃሴ የለም</string>
     <string name="forums_moderation_log_meta">በ%1$s · ኢላማ %2$s</string>

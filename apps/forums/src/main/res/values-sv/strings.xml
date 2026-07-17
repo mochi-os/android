@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Fingeravtryck: %1$s</string>
     <string name="forums_settings_clear_notifications">Rensa aviseringar</string>
     <string name="forums_moderation_queue_empty">Inget väntande</string>
-    <string name="forums_moderation_pending_posts">Väntande inlägg</string>
-    <string name="forums_moderation_pending_comments">Väntande kommentarer</string>
+    <string name="forums_moderation_pending_posts">Väntande inlägg (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Väntande kommentarer (%1$d)</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>
-    <string name="forums_moderation_report_meta">Rapporterad av %1$s · Författare %2$s</string>
-    <string name="forums_moderation_report_acted">Åtgärdad</string>
     <string name="forums_moderation_report_resolved_by">Löst av %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ingen modereringsaktivitet ännu</string>
     <string name="forums_moderation_log_meta">Av %1$s · Mål %2$s</string>

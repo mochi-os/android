@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Gjurma: %1$s</string>
     <string name="forums_settings_clear_notifications">Pastro njoftimet</string>
     <string name="forums_moderation_queue_empty">Asgjë në pritje</string>
-    <string name="forums_moderation_pending_posts">Postime në pritje</string>
-    <string name="forums_moderation_pending_comments">Komente në pritje</string>
+    <string name="forums_moderation_pending_posts">Postime në pritje (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Komente në pritje (%1$d)</string>
     <string name="forums_moderation_report_details">Detaje: %1$s</string>
-    <string name="forums_moderation_report_meta">Raportuar nga %1$s · Autor %2$s</string>
-    <string name="forums_moderation_report_acted">U veprua</string>
     <string name="forums_moderation_report_resolved_by">Zgjidhur nga %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ende s\'ka aktivitet moderatori</string>
     <string name="forums_moderation_log_meta">Nga %1$s · Objektivi %2$s</string>

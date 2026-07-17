@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Barmak yzy: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirişleri arassalamak</string>
     <string name="forums_moderation_queue_empty">Garaşylýan zat ýok</string>
-    <string name="forums_moderation_pending_posts">Garaşylýan ýazgylar</string>
-    <string name="forums_moderation_pending_comments">Garaşylýan teswirler</string>
+    <string name="forums_moderation_pending_posts">Garaşylýan ýazgylar (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Garaşylýan teswirler (%1$d)</string>
     <string name="forums_moderation_report_details">Jikme-jiklikler: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s tarapyndan habar berildi · Awtor %2$s</string>
-    <string name="forums_moderation_report_acted">Çäre görüldi</string>
     <string name="forums_moderation_report_resolved_by">%1$s tarapyndan çözüldi — %2$s</string>
     <string name="forums_moderation_log_empty">Heniz moderator işjeňligi ýok</string>
     <string name="forums_moderation_log_meta">%1$s tarapyndan · Maksat %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Izigxivizo zeminwe: %1$s</string>
     <string name="forums_settings_clear_notifications">Sula izaziso</string>
     <string name="forums_moderation_queue_empty">Akukho okulindile</string>
-    <string name="forums_moderation_pending_posts">Okuthunyelwe okulindile</string>
-    <string name="forums_moderation_pending_comments">Amazwana alindile</string>
+    <string name="forums_moderation_pending_posts">Okuthunyelwe okulindile (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Amazwana alindile (%1$d)</string>
     <string name="forums_moderation_report_details">Imininingwane: %1$s</string>
-    <string name="forums_moderation_report_meta">Kubikwe ngu-%1$s · Umbhali %2$s</string>
-    <string name="forums_moderation_report_acted">Kuthathwe isinyathelo</string>
     <string name="forums_moderation_report_resolved_by">Kuxazululwe ngu-%1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Awukho umsebenzi womlawuli okwamanje</string>
     <string name="forums_moderation_log_meta">Ngu-%1$s · Okuqondiwe %2$s</string>

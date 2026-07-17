@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Cap jari: %1$s</string>
     <string name="forums_settings_clear_notifications">Kosongkan pemberitahuan</string>
     <string name="forums_moderation_queue_empty">Tiada yang menunggu</string>
-    <string name="forums_moderation_pending_posts">Hantaran menunggu</string>
-    <string name="forums_moderation_pending_comments">Komen menunggu</string>
+    <string name="forums_moderation_pending_posts">Hantaran menunggu (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Komen menunggu (%1$d)</string>
     <string name="forums_moderation_report_details">Butiran: %1$s</string>
-    <string name="forums_moderation_report_meta">Dilaporkan oleh %1$s · Pengarang %2$s</string>
-    <string name="forums_moderation_report_acted">Diambil tindakan</string>
     <string name="forums_moderation_report_resolved_by">Diselesaikan oleh %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Belum ada aktiviti moderator</string>
     <string name="forums_moderation_log_meta">Oleh %1$s · Sasaran %2$s</string>

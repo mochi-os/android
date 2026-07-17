@@ -13,7 +13,15 @@ data class Forum(
     val name: String = "",
     val updated: Long = 0,
     @SerializedName("can_manage") val canManage: Boolean = false,
-    @SerializedName("can_post") val canPost: Boolean = false,
+
+    /**
+     * Whether the viewer may post. Null when the response omits it — not every
+     * endpoint sends the `can_*` fields on the forum row — so callers must treat
+     * null as "unknown" and let the action through rather than reading a missing
+     * field as a denial.
+     */
+    @SerializedName("can_post") val canPost: Boolean? = null,
+
     @SerializedName("can_moderate") val canModerate: Boolean = false,
     val server: String = "",
     val banner: String = "",

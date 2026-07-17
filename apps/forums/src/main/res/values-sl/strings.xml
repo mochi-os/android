@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Prstni odtis: %1$s</string>
     <string name="forums_settings_clear_notifications">Počisti obvestila</string>
     <string name="forums_moderation_queue_empty">Nič v čakanju</string>
-    <string name="forums_moderation_pending_posts">Objave v čakanju</string>
-    <string name="forums_moderation_pending_comments">Komentarji v čakanju</string>
+    <string name="forums_moderation_pending_posts">Objave v čakanju (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Komentarji v čakanju (%1$d)</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>
-    <string name="forums_moderation_report_meta">Prijavil %1$s · Avtor %2$s</string>
-    <string name="forums_moderation_report_acted">Obravnavano</string>
     <string name="forums_moderation_report_resolved_by">Rešil %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Še ni dejavnosti moderatorja</string>
     <string name="forums_moderation_log_meta">Avtor %1$s · Cilj %2$s</string>

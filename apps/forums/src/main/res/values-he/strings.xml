@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">טביעת אצבע: %1$s</string>
     <string name="forums_settings_clear_notifications">ניקוי התראות</string>
     <string name="forums_moderation_queue_empty">אין פריטים ממתינים</string>
-    <string name="forums_moderation_pending_posts">פוסטים ממתינים</string>
-    <string name="forums_moderation_pending_comments">תגובות ממתינות</string>
+    <string name="forums_moderation_pending_posts">פוסטים ממתינים (%1$d)</string>
+    <string name="forums_moderation_pending_comments">תגובות ממתינות (%1$d)</string>
     <string name="forums_moderation_report_details">פרטים: %1$s</string>
-    <string name="forums_moderation_report_meta">דווח על ידי %1$s · מחבר %2$s</string>
-    <string name="forums_moderation_report_acted">טופל</string>
     <string name="forums_moderation_report_resolved_by">נפתר על ידי %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">אין עדיין פעילות מנהלים</string>
     <string name="forums_moderation_log_meta">מאת %1$s · יעד %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Մատնահետք՝ %1$s</string>
     <string name="forums_settings_clear_notifications">Մաքրել ծանուցումները</string>
     <string name="forums_moderation_queue_empty">Սպասող ոչինչ չկա</string>
-    <string name="forums_moderation_pending_posts">Սպասող գրառումներ</string>
-    <string name="forums_moderation_pending_comments">Սպասող մեկնաբանություններ</string>
+    <string name="forums_moderation_pending_posts">Սպասող գրառումներ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Սպասող մեկնաբանություններ (%1$d)</string>
     <string name="forums_moderation_report_details">Մանրամասներ՝ %1$s</string>
-    <string name="forums_moderation_report_meta">Հայտնել է %1$s · Հեղինակ՝ %2$s</string>
-    <string name="forums_moderation_report_acted">Քայլ ձեռնարկված է</string>
     <string name="forums_moderation_report_resolved_by">Լուծել է %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Մոդերատորի գործունեություն դեռ չկա</string>
     <string name="forums_moderation_log_meta">%1$s-ի կողմից · Թիրախ՝ %2$s</string>

@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Отпечаток: %1$s</string>
     <string name="forums_settings_clear_notifications">Очистить уведомления</string>
     <string name="forums_moderation_queue_empty">Нет ожидающих</string>
-    <string name="forums_moderation_pending_posts">Ожидающие записи</string>
-    <string name="forums_moderation_pending_comments">Ожидающие комментарии</string>
+    <string name="forums_moderation_pending_posts">Ожидающие записи (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Ожидающие комментарии (%1$d)</string>
     <string name="forums_moderation_report_details">Подробности: %1$s</string>
-    <string name="forums_moderation_report_meta">Пожаловался %1$s · Автор %2$s</string>
-    <string name="forums_moderation_report_acted">Обработано</string>
     <string name="forums_moderation_report_resolved_by">Разрешено %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Активности модераторов пока нет</string>
     <string name="forums_moderation_log_meta">Кем %1$s · Цель %2$s</string>

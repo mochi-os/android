@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Манжа изи: %1$s</string>
     <string name="forums_settings_clear_notifications">Билдирмелерди тазалоо</string>
     <string name="forums_moderation_queue_empty">Күтүүдө эч нерсе жок</string>
-    <string name="forums_moderation_pending_posts">Күтүүдөгү жазуулар</string>
-    <string name="forums_moderation_pending_comments">Күтүүдөгү комментарийлер</string>
+    <string name="forums_moderation_pending_posts">Күтүүдөгү жазуулар (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Күтүүдөгү комментарийлер (%1$d)</string>
     <string name="forums_moderation_report_details">Чоо-жайы: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s тарабынан билдирилди · Автору %2$s</string>
-    <string name="forums_moderation_report_acted">Чара көрүлдү</string>
     <string name="forums_moderation_report_resolved_by">%1$s тарабынан чечилди — %2$s</string>
     <string name="forums_moderation_log_empty">Азырынча модератордун аракети жок</string>
     <string name="forums_moderation_log_meta">%1$s тарабынан · Объект %2$s</string>

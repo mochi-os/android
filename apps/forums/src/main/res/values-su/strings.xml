@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Sidik ramo: %1$s</string>
     <string name="forums_settings_clear_notifications">Hapus béwara</string>
     <string name="forums_moderation_queue_empty">Teu aya anu ngantosan</string>
-    <string name="forums_moderation_pending_posts">Pos anu ngantosan</string>
-    <string name="forums_moderation_pending_comments">Koméntar anu ngantosan</string>
+    <string name="forums_moderation_pending_posts">Pos anu ngantosan (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Koméntar anu ngantosan (%1$d)</string>
     <string name="forums_moderation_report_details">Rincian: %1$s</string>
-    <string name="forums_moderation_report_meta">Dilaporkeun ku %1$s · Pangarang %2$s</string>
-    <string name="forums_moderation_report_acted">Geus ditindak</string>
     <string name="forums_moderation_report_resolved_by">Direngsekeun ku %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Acan aya aktivitas moderator</string>
     <string name="forums_moderation_log_meta">Ku %1$s · Sasaran %2$s</string>

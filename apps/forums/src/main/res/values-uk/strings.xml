@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Відбиток: %1$s</string>
     <string name="forums_settings_clear_notifications">Очистити сповіщення</string>
     <string name="forums_moderation_queue_empty">Нічого не очікує</string>
-    <string name="forums_moderation_pending_posts">Публікації на розгляді</string>
-    <string name="forums_moderation_pending_comments">Коментарі на розгляді</string>
+    <string name="forums_moderation_pending_posts">Публікації на розгляді (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Коментарі на розгляді (%1$d)</string>
     <string name="forums_moderation_report_details">Подробиці: %1$s</string>
-    <string name="forums_moderation_report_meta">Поскаржився %1$s · Автор %2$s</string>
-    <string name="forums_moderation_report_acted">Виконано</string>
     <string name="forums_moderation_report_resolved_by">Вирішено %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Поки немає активності модераторів</string>
     <string name="forums_moderation_log_meta">Від %1$s · Ціль %2$s</string>

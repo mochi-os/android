@@ -171,11 +171,9 @@
     <string name="forums_settings_fingerprint">Hatz-marka: %1$s</string>
     <string name="forums_settings_clear_notifications">Garbitu jakinarazpenak</string>
     <string name="forums_moderation_queue_empty">Ez dago zain dagoenik</string>
-    <string name="forums_moderation_pending_posts">Zain dauden bidalketak</string>
-    <string name="forums_moderation_pending_comments">Zain dauden iruzkinak</string>
+    <string name="forums_moderation_pending_posts">Zain dauden bidalketak (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Zain dauden iruzkinak (%1$d)</string>
     <string name="forums_moderation_report_details">Xehetasunak: %1$s</string>
-    <string name="forums_moderation_report_meta">%1$s erabiltzaileak salatua · Egilea %2$s</string>
-    <string name="forums_moderation_report_acted">Ekintza hartua</string>
     <string name="forums_moderation_report_resolved_by">%1$s erabiltzaileak ebatzia — %2$s</string>
     <string name="forums_moderation_log_empty">Oraindik ez dago moderatzaile-jarduerarik</string>
     <string name="forums_moderation_log_meta">Egilea: %1$s · Helburua: %2$s</string>

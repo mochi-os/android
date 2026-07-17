@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Vân tay: %1$s</string>
     <string name="forums_settings_clear_notifications">Xóa thông báo</string>
     <string name="forums_moderation_queue_empty">Không có gì đang chờ</string>
-    <string name="forums_moderation_pending_posts">Bài đăng đang chờ</string>
-    <string name="forums_moderation_pending_comments">Bình luận đang chờ</string>
+    <string name="forums_moderation_pending_posts">Bài đăng đang chờ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Bình luận đang chờ (%1$d)</string>
     <string name="forums_moderation_report_details">Chi tiết: %1$s</string>
-    <string name="forums_moderation_report_meta">Báo cáo bởi %1$s · Tác giả %2$s</string>
-    <string name="forums_moderation_report_acted">Đã xử lý</string>
     <string name="forums_moderation_report_resolved_by">Đã giải quyết bởi %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Chưa có hoạt động kiểm duyệt nào</string>
     <string name="forums_moderation_log_meta">Bởi %1$s · Mục tiêu %2$s</string>

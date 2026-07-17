@@ -173,11 +173,9 @@
     <string name="forums_settings_fingerprint">Atspaudas: %1$s</string>
     <string name="forums_settings_clear_notifications">Išvalyti pranešimus</string>
     <string name="forums_moderation_queue_empty">Nieko nelaukia</string>
-    <string name="forums_moderation_pending_posts">Laukiantys įrašai</string>
-    <string name="forums_moderation_pending_comments">Laukiantys komentarai</string>
+    <string name="forums_moderation_pending_posts">Laukiantys įrašai (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Laukiantys komentarai (%1$d)</string>
     <string name="forums_moderation_report_details">Išsami informacija: %1$s</string>
-    <string name="forums_moderation_report_meta">Pranešė %1$s · Autorius %2$s</string>
-    <string name="forums_moderation_report_acted">Imtasi veiksmų</string>
     <string name="forums_moderation_report_resolved_by">Išsprendė %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Moderatoriaus veiklos dar nėra</string>
     <string name="forums_moderation_log_meta">Atliko %1$s · Taikinys %2$s</string>
