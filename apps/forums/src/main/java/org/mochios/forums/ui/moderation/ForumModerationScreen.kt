@@ -142,18 +142,6 @@ fun ForumModerationScreen(
                 },
             )
         },
-        floatingActionButton = {
-            if (uiState.selectedTab == ModerationTab.RESTRICTIONS) {
-                FloatingActionButton(onClick = { showAddRestriction = true }) {
-                    Icon(
-                        Icons.Default.Add,
-                        contentDescription = stringResource(
-                            R.string.forums_moderation_restriction_add
-                        ),
-                    )
-                }
-            }
-        },
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
             TabRow(
