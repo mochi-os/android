@@ -35,6 +35,7 @@ import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Forum
+import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.LocalOffer
@@ -159,6 +160,7 @@ fun ForumScreen(
     onNewPost: (String) -> Unit,
     onFindForums: () -> Unit,
     onSettings: (String) -> Unit,
+    onModeration: (String) -> Unit = {},
     onNavigateToSaved: () -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
@@ -264,6 +266,7 @@ fun ForumScreen(
                 onPostClick = onPostClick,
                 onNewPost = onNewPost,
                 onSettings = onSettings,
+                onModeration = onModeration,
                 onOpenNotifications = onOpenNotifications,
                 onUnsubscribed = {
                     // The forum just left the user's list — drop it from the
@@ -327,6 +330,7 @@ private fun ForumContent(
     onPostClick: (String, String) -> Unit,
     onNewPost: (String) -> Unit,
     onSettings: (String) -> Unit,
+    onModeration: (String) -> Unit,
     onOpenNotifications: () -> Unit,
     onUnsubscribed: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
@@ -506,6 +510,25 @@ private fun ForumContent(
 
                                 HorizontalDivider()
 
+                                // Moderation is a moderator's tool — a wider gate
+                                // than Settings, which is managers only.
+                                if (!isAll && uiState.canModerate && uiState.forum.id.isNotEmpty()) {
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(stringResource(R.string.forums_moderation_title))
+                                        },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.Default.Gavel,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        onClick = {
+                                            showOverflowMenu = false
+                                            onModeration(forumIdForCallbacks)
+                                        }
+                                    )
+                                }
                                 // The aggregate exports a class-level RSS feed
                                 // but has no single forum to unsubscribe from.
                                 if (isAll || uiState.forum.id.isNotEmpty()) {

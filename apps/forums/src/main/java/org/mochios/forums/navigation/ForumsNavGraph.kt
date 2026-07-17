@@ -86,6 +86,7 @@ fun NavGraphBuilder.forumsNavGraph(
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },
             onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
             onSettings = { fId -> navController.navigate(ForumsApp.forumSettings(fId)) },
+            onModeration = { fId -> navController.navigate(ForumsApp.moderation(fId)) },
             onNavigateToSaved = { navController.navigate(ForumsApp.SAVED) },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
