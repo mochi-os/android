@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Uza kuyeka ukufumana uhlaziyo kule fidi. Ungaphinda ubhalise nanini na.</string>
     <string name="feeds_access_select_rule">Khetha umgaqo wofikelelo</string>
     <string name="feeds_access_authenticated_desc">Nabani na ongene ngemvume</string>
+    <string name="feeds_banner_hint">Wamkelekile kule nkundla…</string>
+    <string name="feeds_banner_dismiss">Yikhabe ibhena</string>
+    <string name="feeds_members_search">Hluza amalungu</string>
+    <string name="feeds_ai_prompt_default">Eyoqobo</string>
+    <string name="feeds_ai_prompt_custom">Yezifiso</string>
+    <string name="feeds_ai_prompt_variables">Iiguquguquko: %1$s</string>
+    <string name="feeds_link">Ikhonkco</string>
+    <string name="feeds_share_link_title">Ikhonkco lefidi</string>
+    <string name="feeds_scroll_to_top">Buyela phezulu</string>
 </resources>

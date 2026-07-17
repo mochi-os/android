@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">คุณจะไม่ได้รับอัปเดตจากฟีดนี้อีก คุณสามารถกลับมาติดตามได้ทุกเมื่อ</string>
     <string name="feeds_access_select_rule">เลือกกฎการเข้าถึง</string>
     <string name="feeds_access_authenticated_desc">ทุกคนที่เข้าสู่ระบบแล้ว</string>
+    <string name="feeds_banner_hint">ยินดีต้อนรับสู่ฟอรัมนี้…</string>
+    <string name="feeds_banner_dismiss">ปิดแบนเนอร์</string>
+    <string name="feeds_members_search">กรองสมาชิก</string>
+    <string name="feeds_ai_prompt_default">ค่าเริ่มต้น</string>
+    <string name="feeds_ai_prompt_custom">กำหนดเอง</string>
+    <string name="feeds_ai_prompt_variables">ตัวแปร: %1$s</string>
+    <string name="feeds_link">ลิงก์</string>
+    <string name="feeds_share_link_title">ลิงก์ฟีด</string>
+    <string name="feeds_scroll_to_top">กลับไปด้านบน</string>
 </resources>

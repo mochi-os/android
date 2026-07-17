@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Jario honen eguneraketak jasotzeari utziko diozu. Edonoiz harpidetu zaitezke berriro.</string>
     <string name="feeds_access_select_rule">Hautatu sarbide-araua</string>
     <string name="feeds_access_authenticated_desc">Saioa hasi duen edonor</string>
+    <string name="feeds_banner_hint">Ongi etorri foro honetara…</string>
+    <string name="feeds_banner_dismiss">Baztertu iragarki-banda</string>
+    <string name="feeds_members_search">Iragazi kideak</string>
+    <string name="feeds_ai_prompt_default">Lehenetsia</string>
+    <string name="feeds_ai_prompt_custom">Pertsonalizatua</string>
+    <string name="feeds_ai_prompt_variables">Aldagaiak: %1$s</string>
+    <string name="feeds_link">Esteka</string>
+    <string name="feeds_share_link_title">Jarioaren esteka</string>
+    <string name="feeds_scroll_to_top">Itzuli goira</string>
 </resources>

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Bu lentadan täzelikleri indi almarsyňyz. Islendik wagt täzeden abuna bolup bilersiňiz.</string>
     <string name="feeds_access_select_rule">Giriş düzgünini saýla</string>
     <string name="feeds_access_authenticated_desc">Ulgama giren islendik adam</string>
+    <string name="feeds_banner_hint">Bu foruma hoş geldiňiz…</string>
+    <string name="feeds_banner_dismiss">Banneri goýbermek</string>
+    <string name="feeds_members_search">Agzalary süzmek</string>
+    <string name="feeds_ai_prompt_default">Adaty</string>
+    <string name="feeds_ai_prompt_custom">Şahsy</string>
+    <string name="feeds_ai_prompt_variables">Üýtgeýänler: %1$s</string>
+    <string name="feeds_link">Salgy</string>
+    <string name="feeds_share_link_title">Lenta salgysy</string>
+    <string name="feeds_scroll_to_top">Ýokary dolan</string>
 </resources>

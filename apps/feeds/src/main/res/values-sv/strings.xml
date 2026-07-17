@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Du slutar få uppdateringar från det här flödet. Du kan prenumerera igen när som helst.</string>
     <string name="feeds_access_select_rule">Välj åtkomstregel</string>
     <string name="feeds_access_authenticated_desc">Alla som är inloggade</string>
+    <string name="feeds_banner_hint">Välkommen till det här forumet…</string>
+    <string name="feeds_banner_dismiss">Avfärda banner</string>
+    <string name="feeds_members_search">Filtrera medlemmar</string>
+    <string name="feeds_ai_prompt_default">Standard</string>
+    <string name="feeds_ai_prompt_custom">Anpassad</string>
+    <string name="feeds_ai_prompt_variables">Variabler: %1$s</string>
+    <string name="feeds_link">Länk</string>
+    <string name="feeds_share_link_title">Flödeslänk</string>
+    <string name="feeds_scroll_to_top">Tillbaka till toppen</string>
 </resources>

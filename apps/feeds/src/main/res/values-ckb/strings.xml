@@ -283,4 +283,13 @@
     <string name="feeds_unsubscribe_confirm_message">ئیتر نوێکارییەکانی ئەم فیدە وەرناگریت. دەتوانیت هەر کاتێک دووبارە بەشدار ببیتەوە.</string>
     <string name="feeds_access_select_rule">ڕێسای دەستڕاگەیشتن هەڵبژێرە</string>
     <string name="feeds_access_authenticated_desc">هەر کەسێک کە چووەتە ژوورەوە</string>
+    <string name="feeds_banner_hint">بەخێربێیت بۆ ئەم فۆڕەمە…</string>
+    <string name="feeds_banner_dismiss">لابردنی بانەر</string>
+    <string name="feeds_members_search">فلتەرکردنی ئەندامان</string>
+    <string name="feeds_ai_prompt_default">بنەڕەت</string>
+    <string name="feeds_ai_prompt_custom">دڵخواز</string>
+    <string name="feeds_ai_prompt_variables">گۆڕاوەکان: %1$s</string>
+    <string name="feeds_link">بەستەر</string>
+    <string name="feeds_share_link_title">بەستەری فید</string>
+    <string name="feeds_scroll_to_top">گەڕانەوە بۆ سەرەوە</string>
 </resources>

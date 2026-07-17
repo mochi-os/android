@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Du modtager ikke længere opdateringer fra dette feed. Du kan abonnere igen når som helst.</string>
     <string name="feeds_access_select_rule">Vælg adgangsregel</string>
     <string name="feeds_access_authenticated_desc">Alle, der er logget ind</string>
+    <string name="feeds_banner_hint">Velkommen til dette forum…</string>
+    <string name="feeds_banner_dismiss">Afvis banner</string>
+    <string name="feeds_members_search">Filtrer medlemmer</string>
+    <string name="feeds_ai_prompt_default">Standard</string>
+    <string name="feeds_ai_prompt_custom">Tilpasset</string>
+    <string name="feeds_ai_prompt_variables">Variabler: %1$s</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Feed-link</string>
+    <string name="feeds_scroll_to_top">Tilbage til toppen</string>
 </resources>

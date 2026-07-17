@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Anda tidak akan menerima kemas kini daripada suapan ini lagi. Anda boleh melanggan semula pada bila-bila masa.</string>
     <string name="feeds_access_select_rule">Pilih peraturan akses</string>
     <string name="feeds_access_authenticated_desc">Sesiapa sahaja yang telah log masuk</string>
+    <string name="feeds_banner_hint">Selamat datang ke forum ini…</string>
+    <string name="feeds_banner_dismiss">Tutup sepanduk</string>
+    <string name="feeds_members_search">Tapis ahli</string>
+    <string name="feeds_ai_prompt_default">Lalai</string>
+    <string name="feeds_ai_prompt_custom">Tersuai</string>
+    <string name="feeds_ai_prompt_variables">Pemboleh ubah: %1$s</string>
+    <string name="feeds_link">Pautan</string>
+    <string name="feeds_share_link_title">Pautan suapan</string>
+    <string name="feeds_scroll_to_top">Kembali ke atas</string>
 </resources>

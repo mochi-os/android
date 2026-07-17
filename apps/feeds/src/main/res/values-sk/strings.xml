@@ -291,4 +291,13 @@
     <string name="feeds_unsubscribe_confirm_message">Prestanete dostávať aktualizácie z tohto feedu. Kedykoľvek sa môžete znova prihlásiť na odber.</string>
     <string name="feeds_access_select_rule">Vybrať pravidlo prístupu</string>
     <string name="feeds_access_authenticated_desc">Ktokoľvek, kto je prihlásený</string>
+    <string name="feeds_banner_hint">Vitajte na tomto fóre…</string>
+    <string name="feeds_banner_dismiss">Zatvoriť banner</string>
+    <string name="feeds_members_search">Filtrovať členov</string>
+    <string name="feeds_ai_prompt_default">Predvolené</string>
+    <string name="feeds_ai_prompt_custom">Vlastné</string>
+    <string name="feeds_ai_prompt_variables">Premenné: %1$s</string>
+    <string name="feeds_link">Odkaz</string>
+    <string name="feeds_share_link_title">Odkaz na kanál</string>
+    <string name="feeds_scroll_to_top">Späť nahor</string>
 </resources>

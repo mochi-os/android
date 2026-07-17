@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Jy sal nie meer opdaterings van hierdie voer ontvang nie. Jy kan enige tyd weer inteken.</string>
     <string name="feeds_access_select_rule">Kies toegangsreël</string>
     <string name="feeds_access_authenticated_desc">Enigiemand wat aangemeld is</string>
+    <string name="feeds_banner_hint">Welkom by hierdie forum…</string>
+    <string name="feeds_banner_dismiss">Sluit banier</string>
+    <string name="feeds_members_search">Filter lede</string>
+    <string name="feeds_ai_prompt_default">Verstek</string>
+    <string name="feeds_ai_prompt_custom">Pasgemaak</string>
+    <string name="feeds_ai_prompt_variables">Veranderlikes: %1$s</string>
+    <string name="feeds_link">Skakel</string>
+    <string name="feeds_share_link_title">Voerskakel</string>
+    <string name="feeds_scroll_to_top">Terug na bo</string>
 </resources>

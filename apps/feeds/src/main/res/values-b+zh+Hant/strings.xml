@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">你將不再收到此摘要的更新。你可以隨時重新訂閱。</string>
     <string name="feeds_access_select_rule">選擇存取規則</string>
     <string name="feeds_access_authenticated_desc">任何已登入的使用者</string>
+    <string name="feeds_banner_hint">歡迎來到此論壇…</string>
+    <string name="feeds_banner_dismiss">關閉橫幅</string>
+    <string name="feeds_members_search">篩選成員</string>
+    <string name="feeds_ai_prompt_default">預設</string>
+    <string name="feeds_ai_prompt_custom">自訂</string>
+    <string name="feeds_ai_prompt_variables">變數：%1$s</string>
+    <string name="feeds_link">連結</string>
+    <string name="feeds_share_link_title">訂閱來源連結</string>
+    <string name="feeds_scroll_to_top">回到頂部</string>
 </resources>

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Feedii kana irraa haaromsa argachuu ni dhaabda. Yeroo barbaaddetti irra deebitee hordofuu dandeessa.</string>
     <string name="feeds_access_select_rule">Seera itti seenumsaa fili</string>
     <string name="feeds_access_authenticated_desc">Nama seenee jiru kamiyyuu</string>
+    <string name="feeds_banner_hint">Marii kanatti baga nagaan dhuftan…</string>
+    <string name="feeds_banner_dismiss">Bannerii dhiisi</string>
+    <string name="feeds_members_search">Miseensota gulaali</string>
+    <string name="feeds_ai_prompt_default">Idilee</string>
+    <string name="feeds_ai_prompt_custom">Dhuunfaa</string>
+    <string name="feeds_ai_prompt_variables">Jijjiiramoo: %1$s</string>
+    <string name="feeds_link">Geessituu</string>
+    <string name="feeds_scroll_to_top">Gara gubbaatti deebi\'i</string>
+    <string name="feeds_share_link_title">Geessituu feed</string>
 </resources>

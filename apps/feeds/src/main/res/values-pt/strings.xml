@@ -285,4 +285,13 @@
     <string name="feeds_unsubscribe_confirm_message">Deixará de receber atualizações deste feed. Pode voltar a subscrever em qualquer altura.</string>
     <string name="feeds_access_select_rule">Selecione uma regra de acesso</string>
     <string name="feeds_access_authenticated_desc">Qualquer pessoa com sessão iniciada</string>
+    <string name="feeds_banner_hint">Bem-vindo a este fórum…</string>
+    <string name="feeds_banner_dismiss">Dispensar faixa</string>
+    <string name="feeds_members_search">Filtrar membros</string>
+    <string name="feeds_ai_prompt_default">Predefinição</string>
+    <string name="feeds_ai_prompt_custom">Personalizado</string>
+    <string name="feeds_ai_prompt_variables">Variáveis: %1$s</string>
+    <string name="feeds_link">Ligação</string>
+    <string name="feeds_share_link_title">Ligação do feed</string>
+    <string name="feeds_scroll_to_top">Voltar ao topo</string>
 </resources>

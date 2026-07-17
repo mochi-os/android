@@ -291,4 +291,13 @@
     <string name="feeds_unsubscribe_confirm_message">לא תקבל עוד עדכונים מהפיד הזה. ניתן להירשם מחדש בכל עת.</string>
     <string name="feeds_access_select_rule">בחר כלל גישה</string>
     <string name="feeds_access_authenticated_desc">כל מי שמחובר</string>
+    <string name="feeds_banner_hint">ברוכים הבאים לפורום זה…</string>
+    <string name="feeds_banner_dismiss">סגור באנר</string>
+    <string name="feeds_members_search">סינון חברים</string>
+    <string name="feeds_ai_prompt_default">ברירת מחדל</string>
+    <string name="feeds_ai_prompt_custom">מותאם אישית</string>
+    <string name="feeds_ai_prompt_variables">משתנים: %1$s</string>
+    <string name="feeds_link">קישור</string>
+    <string name="feeds_share_link_title">קישור לפיד</string>
+    <string name="feeds_scroll_to_top">חזרה למעלה</string>
 </resources>

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Utaacha kupokea masasisho kutoka kwenye mlisho huu. Unaweza kujisajili tena wakati wowote.</string>
     <string name="feeds_access_select_rule">Chagua sheria ya ufikiaji</string>
     <string name="feeds_access_authenticated_desc">Mtu yeyote aliyeingia</string>
+    <string name="feeds_banner_hint">Karibu kwenye jukwaa hili…</string>
+    <string name="feeds_banner_dismiss">Ondoa bango</string>
+    <string name="feeds_members_search">Chuja wanachama</string>
+    <string name="feeds_ai_prompt_default">Chaguo-msingi</string>
+    <string name="feeds_ai_prompt_custom">Maalum</string>
+    <string name="feeds_ai_prompt_variables">Vigezo: %1$s</string>
+    <string name="feeds_link">Kiungo</string>
+    <string name="feeds_share_link_title">Kiungo cha mlisho</string>
+    <string name="feeds_scroll_to_top">Rudi juu</string>
 </resources>

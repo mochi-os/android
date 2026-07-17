@@ -291,4 +291,13 @@
     <string name="feeds_unsubscribe_confirm_message">Ne boš več prejemal posodobitev iz tega vira. Kadar koli se lahko znova naročiš.</string>
     <string name="feeds_access_select_rule">Izberite pravilo dostopa</string>
     <string name="feeds_access_authenticated_desc">Vsi, ki so prijavljeni</string>
+    <string name="feeds_banner_hint">Dobrodošli na tem forumu…</string>
+    <string name="feeds_banner_dismiss">Opusti pasico</string>
+    <string name="feeds_members_search">Filtriraj člane</string>
+    <string name="feeds_ai_prompt_default">Privzeto</string>
+    <string name="feeds_ai_prompt_custom">Po meri</string>
+    <string name="feeds_ai_prompt_variables">Spremenljivke: %1$s</string>
+    <string name="feeds_link">Povezava</string>
+    <string name="feeds_share_link_title">Povezava vira</string>
+    <string name="feeds_scroll_to_top">Nazaj na vrh</string>
 </resources>

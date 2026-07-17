@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">ဤဖိဒ်မှ နောက်ဆုံးရ အချက်အလက်များ ရရှိတော့မည် မဟုတ်ပါ။ အချိန်မရွေး ပြန်လည် စာရင်းသွင်းနိုင်ပါသည်။</string>
     <string name="feeds_access_select_rule">ဝင်ရောက်ခွင့် စည်းမျဉ်း ရွေးချယ်</string>
     <string name="feeds_access_authenticated_desc">အကောင့်ဝင်ထားသူ မည်သူမဆို</string>
+    <string name="feeds_banner_hint">ဤဖိုရမ်သို့ ကြိုဆိုပါသည်…</string>
+    <string name="feeds_banner_dismiss">ပိုစတာ ပယ်မည်</string>
+    <string name="feeds_members_search">အဖွဲ့ဝင်များကို စစ်ထုတ်ပါ</string>
+    <string name="feeds_ai_prompt_default">မူရင်း</string>
+    <string name="feeds_ai_prompt_custom">စိတ်ကြိုက်</string>
+    <string name="feeds_ai_prompt_variables">ကိန်းရှင်များ: %1$s</string>
+    <string name="feeds_link">လင့်ခ်</string>
+    <string name="feeds_share_link_title">ဖီးဒ် လင့်ခ်</string>
+    <string name="feeds_scroll_to_top">ထိပ်သို့ ပြန်သွားရန်</string>
 </resources>

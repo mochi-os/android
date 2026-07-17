@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Za ka daina samun sabbin abubuwa daga wannan feed ɗin. Za ka iya sake bi a kowane lokaci.</string>
     <string name="feeds_access_select_rule">Zaɓi tsarin damar shiga</string>
     <string name="feeds_access_authenticated_desc">Duk wanda ya shiga</string>
+    <string name="feeds_banner_hint">Barka da zuwa wannan taron tattaunawa…</string>
+    <string name="feeds_banner_dismiss">Kau da banner</string>
+    <string name="feeds_members_search">Tace mambobi</string>
+    <string name="feeds_ai_prompt_default">Asali</string>
+    <string name="feeds_ai_prompt_custom">Na musamman</string>
+    <string name="feeds_ai_prompt_variables">Masu canji: %1$s</string>
+    <string name="feeds_link">Hanyar haɗi</string>
+    <string name="feeds_share_link_title">Hanyar haɗin feed</string>
+    <string name="feeds_scroll_to_top">Koma sama</string>
 </resources>

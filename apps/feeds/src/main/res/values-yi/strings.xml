@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">איר וועט מער ניט באַקומען נײַעס פֿון דעם פֿיד. איר קענט זיך ווידער אײַנשרײַבן ווען נאָר איר ווילט.</string>
     <string name="feeds_access_select_rule">קלײַב צוטריט כּלל</string>
     <string name="feeds_access_authenticated_desc">יעדער וואָס איז אײַנגעלאָגט</string>
+    <string name="feeds_banner_hint">ברוכים הבאים צו דעם פֿאָרום…</string>
+    <string name="feeds_banner_dismiss">אַראָפּזאָגן באַנער</string>
+    <string name="feeds_members_search">פֿילטרירן מיטגלידער</string>
+    <string name="feeds_ai_prompt_default">פֿאַרשטאַנדלעך</string>
+    <string name="feeds_ai_prompt_custom">אָנגעפּאַסט</string>
+    <string name="feeds_ai_prompt_variables">וואַריאַבלען: %1$s</string>
+    <string name="feeds_link">לינק</string>
+    <string name="feeds_share_link_title">פֿיד לינק</string>
+    <string name="feeds_scroll_to_top">צוריק אַרויף</string>
 </resources>

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Bu akıştan güncelleme almayı bırakacaksınız. İstediğiniz zaman yeniden abone olabilirsiniz.</string>
     <string name="feeds_access_select_rule">Erişim kuralı seç</string>
     <string name="feeds_access_authenticated_desc">Oturum açmış olan herkes</string>
+    <string name="feeds_banner_hint">Bu foruma hoş geldiniz…</string>
+    <string name="feeds_banner_dismiss">Banner\'ı kapat</string>
+    <string name="feeds_members_search">Üyeleri filtrele</string>
+    <string name="feeds_ai_prompt_default">Varsayılan</string>
+    <string name="feeds_ai_prompt_custom">Özel</string>
+    <string name="feeds_ai_prompt_variables">Değişkenler: %1$s</string>
+    <string name="feeds_link">Bağlantı</string>
+    <string name="feeds_share_link_title">Akış bağlantısı</string>
+    <string name="feeds_scroll_to_top">Başa dön</string>
 </resources>

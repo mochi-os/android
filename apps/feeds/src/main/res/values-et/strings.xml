@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Sa ei saa enam selle voo värskendusi. Saad igal ajal uuesti tellida.</string>
     <string name="feeds_access_select_rule">Vali juurdepääsureegel</string>
     <string name="feeds_access_authenticated_desc">Kõik sisselogitud kasutajad</string>
+    <string name="feeds_banner_hint">Tere tulemast sellesse foorumisse…</string>
+    <string name="feeds_banner_dismiss">Sulge bänner</string>
+    <string name="feeds_members_search">Filtreeri liikmeid</string>
+    <string name="feeds_ai_prompt_default">Vaikimisi</string>
+    <string name="feeds_ai_prompt_custom">Kohandatud</string>
+    <string name="feeds_ai_prompt_variables">Muutujad: %1$s</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Voo link</string>
+    <string name="feeds_scroll_to_top">Tagasi üles</string>
 </resources>

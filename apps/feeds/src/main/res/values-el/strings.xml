@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Θα σταματήσετε να λαμβάνετε ενημερώσεις από αυτήν τη ροή. Μπορείτε να εγγραφείτε ξανά οποιαδήποτε στιγμή.</string>
     <string name="feeds_access_select_rule">Επιλέξτε κανόνα πρόσβασης</string>
     <string name="feeds_access_authenticated_desc">Οποιοσδήποτε είναι συνδεδεμένος</string>
+    <string name="feeds_banner_hint">Καλώς ορίσατε σε αυτό το φόρουμ…</string>
+    <string name="feeds_banner_dismiss">Απόρριψη μπάνερ</string>
+    <string name="feeds_members_search">Φιλτράρισμα μελών</string>
+    <string name="feeds_ai_prompt_default">Προεπιλογή</string>
+    <string name="feeds_ai_prompt_custom">Προσαρμοσμένο</string>
+    <string name="feeds_ai_prompt_variables">Μεταβλητές: %1$s</string>
+    <string name="feeds_link">Σύνδεσμος</string>
+    <string name="feeds_share_link_title">Σύνδεσμος ροής</string>
+    <string name="feeds_scroll_to_top">Επιστροφή στην κορυφή</string>
 </resources>

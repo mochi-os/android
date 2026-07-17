@@ -283,4 +283,13 @@
     <string name="feeds_unsubscribe_confirm_message">Bu lentdən yenilikləri almayacaqsınız. İstənilən vaxt yenidən abunə ola bilərsiniz.</string>
     <string name="feeds_access_select_rule">Giriş qaydası seç</string>
     <string name="feeds_access_authenticated_desc">Daxil olmuş hər kəs</string>
+    <string name="feeds_banner_hint">Bu foruma xoş gəlmisiniz…</string>
+    <string name="feeds_banner_dismiss">Banneri rədd et</string>
+    <string name="feeds_members_search">Üzvləri filtrlə</string>
+    <string name="feeds_ai_prompt_default">Standart</string>
+    <string name="feeds_ai_prompt_custom">Fərdi</string>
+    <string name="feeds_ai_prompt_variables">Dəyişənlər: %1$s</string>
+    <string name="feeds_link">Keçid</string>
+    <string name="feeds_share_link_title">Lent keçidi</string>
+    <string name="feeds_scroll_to_top">Yuxarı qayıt</string>
 </resources>

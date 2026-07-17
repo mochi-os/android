@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Ìwọ kò ní gba àwọn ìmúdójúìwọ̀n láti inú fiidi yìí mọ́. O lè forúkọsílẹ̀ padà nígbàkigbà.</string>
     <string name="feeds_access_select_rule">Yan òfin ààyè</string>
     <string name="feeds_access_authenticated_desc">Ẹnikẹ́ni tí ó ti wọlé</string>
+    <string name="feeds_banner_hint">Káàbọ̀ sí àpérò yìí…</string>
+    <string name="feeds_banner_dismiss">Mú banner kúrò</string>
+    <string name="feeds_members_search">Yẹ àwọn ọmọ ẹgbẹ́ wò</string>
+    <string name="feeds_ai_prompt_default">Àìpé</string>
+    <string name="feeds_ai_prompt_custom">Àdáni</string>
+    <string name="feeds_ai_prompt_variables">Àwọn ìyípadà: %1$s</string>
+    <string name="feeds_link">Ọ̀nà àsopọ̀</string>
+    <string name="feeds_share_link_title">Ọ̀nà àsopọ̀ fídì</string>
+    <string name="feeds_scroll_to_top">Pada sí òkè</string>
 </resources>

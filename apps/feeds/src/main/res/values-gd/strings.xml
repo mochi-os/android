@@ -293,4 +293,13 @@
     <string name="feeds_unsubscribe_confirm_message">Chan fhaigh thu naidheachdan on inbhir seo tuilleadh. ’S urrainn dhut fo-sgrìobhadh às ùr uair sam bith.</string>
     <string name="feeds_access_select_rule">Tagh riaghailt cothraim</string>
     <string name="feeds_access_authenticated_desc">Duine sam bith a tha air clàradh a-steach</string>
+    <string name="feeds_banner_hint">Fàilte gun fhòram seo…</string>
+    <string name="feeds_banner_dismiss">Leig seachad a\' bhratach</string>
+    <string name="feeds_members_search">Criathraich na buill</string>
+    <string name="feeds_ai_prompt_default">Bunaiteach</string>
+    <string name="feeds_ai_prompt_custom">Gnàthaichte</string>
+    <string name="feeds_ai_prompt_variables">Caochladairean: %1$s</string>
+    <string name="feeds_link">Ceangal</string>
+    <string name="feeds_share_link_title">Ceangal an inbhir</string>
+    <string name="feeds_scroll_to_top">Air ais gun mhullach</string>
 </resources>

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Бул лентадан жаңыртууларды албай каласыз. Каалаган убакта кайра жазылсаңыз болот.</string>
     <string name="feeds_access_select_rule">Кирүү эрежесин тандоо</string>
     <string name="feeds_access_authenticated_desc">Системага кирген ар бир адам</string>
+    <string name="feeds_banner_hint">Бул форумга кош келиңиз…</string>
+    <string name="feeds_banner_dismiss">Баннерди четке кагуу</string>
+    <string name="feeds_members_search">Мүчөлөрдү чыпкалоо</string>
+    <string name="feeds_ai_prompt_default">Демейки</string>
+    <string name="feeds_ai_prompt_custom">Ыңгайлаштырылган</string>
+    <string name="feeds_ai_prompt_variables">Өзгөрмөлөр: %1$s</string>
+    <string name="feeds_link">Шилтеме</string>
+    <string name="feeds_share_link_title">Тасма шилтемеси</string>
+    <string name="feeds_scroll_to_top">Жогоруга кайтуу</string>
 </resources>

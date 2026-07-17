@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">Bạn sẽ không nhận được cập nhật từ nguồn cấp này nữa. Bạn có thể đăng ký lại bất cứ lúc nào.</string>
     <string name="feeds_access_select_rule">Chọn quy tắc truy cập</string>
     <string name="feeds_access_authenticated_desc">Bất kỳ ai đã đăng nhập</string>
+    <string name="feeds_banner_hint">Chào mừng đến với diễn đàn này…</string>
+    <string name="feeds_banner_dismiss">Bỏ qua biểu ngữ</string>
+    <string name="feeds_members_search">Lọc thành viên</string>
+    <string name="feeds_ai_prompt_default">Mặc định</string>
+    <string name="feeds_ai_prompt_custom">Tùy chỉnh</string>
+    <string name="feeds_ai_prompt_variables">Biến: %1$s</string>
+    <string name="feeds_link">Liên kết</string>
+    <string name="feeds_share_link_title">Liên kết bảng tin</string>
+    <string name="feeds_scroll_to_top">Về đầu trang</string>
 </resources>

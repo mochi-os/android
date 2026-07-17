@@ -291,4 +291,13 @@
     <string name="feeds_unsubscribe_confirm_message">Вы перестанете получать обновления из этой ленты. Вы можете снова подписаться в любое время.</string>
     <string name="feeds_access_select_rule">Выберите правило доступа</string>
     <string name="feeds_access_authenticated_desc">Все, кто вошёл в систему</string>
+    <string name="feeds_banner_hint">Добро пожаловать на форум…</string>
+    <string name="feeds_banner_dismiss">Закрыть баннер</string>
+    <string name="feeds_members_search">Фильтр участников</string>
+    <string name="feeds_ai_prompt_default">По умолчанию</string>
+    <string name="feeds_ai_prompt_custom">Пользовательский</string>
+    <string name="feeds_ai_prompt_variables">Переменные: %1$s</string>
+    <string name="feeds_link">Ссылка</string>
+    <string name="feeds_share_link_title">Ссылка на ленту</string>
+    <string name="feeds_scroll_to_top">Наверх</string>
 </resources>

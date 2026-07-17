@@ -273,4 +273,19 @@
     <string name="feeds_unsubscribe_confirm_message">Du vil ikkje lenger få oppdateringar frå denne straumen. Du kan abonnere på nytt når som helst.</string>
     <string name="feeds_access_select_rule">Vel tilgangsregel</string>
     <string name="feeds_access_authenticated_desc">Alle som er innlogga</string>
+    <string name="feeds_banner_hint">Velkomen til dette forumet…</string>
+    <string name="feeds_banner_dismiss">Avvis banner</string>
+    <string name="feeds_members_search">Filtrer medlemer</string>
+    <string name="feeds_ai_prompt_default">Standard</string>
+    <string name="feeds_ai_prompt_custom">Tilpassa</string>
+    <string name="feeds_ai_prompt_variables">Variablar: %1$s</string>
+    <string name="feeds_link">Lenkje</string>
+    <string name="feeds_share_link_title">Straumlenkje</string>
+    <string name="feeds_saved_clear_confirm_body">Dette fjernar alle innlegg frå lista di over lagra. Dette kan ikkje angrast.</string>
+    <string name="feeds_saved_clear_confirm_title">Tømme alle lagra innlegg?</string>
+    <string name="feeds_saved_empty_subtitle">Trykk på bokmerket på eit innlegg for å lagra det her til seinare.</string>
+    <string name="feeds_saved_empty_title">Ingenting lagra enno</string>
+    <string name="feeds_saved_error_clear">Kunne ikkje tømme lagra innlegg</string>
+    <string name="feeds_saved_save">Lagra til seinare</string>
+    <string name="feeds_scroll_to_top">Tilbake til toppen</string>
 </resources>

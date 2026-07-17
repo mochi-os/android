@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Веќе нема да добивате ажурирања од овој фид. Можете повторно да се претплатите во секое време.</string>
     <string name="feeds_access_select_rule">Изберете правило за пристап</string>
     <string name="feeds_access_authenticated_desc">Секој што е најавен</string>
+    <string name="feeds_banner_hint">Добредојдовте на овој форум…</string>
+    <string name="feeds_banner_dismiss">Отфрли банер</string>
+    <string name="feeds_members_search">Филтрирај членови</string>
+    <string name="feeds_ai_prompt_default">Стандардно</string>
+    <string name="feeds_ai_prompt_custom">Прилагодено</string>
+    <string name="feeds_ai_prompt_variables">Променливи: %1$s</string>
+    <string name="feeds_link">Врска</string>
+    <string name="feeds_share_link_title">Врска до каналот</string>
+    <string name="feeds_scroll_to_top">Назад на врвот</string>
 </resources>

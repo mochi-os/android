@@ -286,4 +286,13 @@
     <string name="feeds_unsubscribe_confirm_message">Više nećete primati ažuriranja s ovog feeda. Možete se ponovno pretplatiti u bilo kojem trenutku.</string>
     <string name="feeds_access_select_rule">Odaberite pravilo pristupa</string>
     <string name="feeds_access_authenticated_desc">Svi koji su prijavljeni</string>
+    <string name="feeds_banner_hint">Dobro došli na ovaj forum…</string>
+    <string name="feeds_banner_dismiss">Odbaci banner</string>
+    <string name="feeds_members_search">Filtriraj članove</string>
+    <string name="feeds_ai_prompt_default">Zadano</string>
+    <string name="feeds_ai_prompt_custom">Prilagođeno</string>
+    <string name="feeds_ai_prompt_variables">Varijable: %1$s</string>
+    <string name="feeds_link">Poveznica</string>
+    <string name="feeds_share_link_title">Poveznica kanala</string>
+    <string name="feeds_scroll_to_top">Natrag na vrh</string>
 </resources>

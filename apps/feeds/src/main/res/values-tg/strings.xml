@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Шумо дигар аз ин фид навсозиҳо намегиред. Шумо метавонед дар вақти дилхоҳ дубора обуна шавед.</string>
     <string name="feeds_access_select_rule">Интихоби қоидаи дастрасӣ</string>
     <string name="feeds_access_authenticated_desc">Ҳар касе, ки ворид шудааст</string>
+    <string name="feeds_banner_hint">Хуш омадед ба ин форум…</string>
+    <string name="feeds_banner_dismiss">Рад кардани баннер</string>
+    <string name="feeds_members_search">Филтр кардани аъзоён</string>
+    <string name="feeds_ai_prompt_default">Пешфарз</string>
+    <string name="feeds_ai_prompt_custom">Фармоишӣ</string>
+    <string name="feeds_ai_prompt_variables">Тағйирёбандаҳо: %1$s</string>
+    <string name="feeds_link">Пайванд</string>
+    <string name="feeds_share_link_title">Пайванди навор</string>
+    <string name="feeds_scroll_to_top">Бозгашт ба боло</string>
 </resources>

@@ -291,4 +291,13 @@
     <string name="feeds_unsubscribe_confirm_message">Přestanou vám chodit novinky z tohoto kanálu. Odběr můžete kdykoli obnovit.</string>
     <string name="feeds_access_select_rule">Vyberte pravidlo přístupu</string>
     <string name="feeds_access_authenticated_desc">Kdokoli, kdo je přihlášen</string>
+    <string name="feeds_banner_hint">Vítejte na tomto fóru…</string>
+    <string name="feeds_banner_dismiss">Zavřít banner</string>
+    <string name="feeds_members_search">Filtrovat členy</string>
+    <string name="feeds_ai_prompt_default">Výchozí</string>
+    <string name="feeds_ai_prompt_custom">Vlastní</string>
+    <string name="feeds_ai_prompt_variables">Proměnné: %1$s</string>
+    <string name="feeds_link">Odkaz</string>
+    <string name="feeds_share_link_title">Odkaz na kanál</string>
+    <string name="feeds_scroll_to_top">Zpět nahoru</string>
 </resources>

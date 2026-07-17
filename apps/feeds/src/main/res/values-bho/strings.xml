@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">रउआ के ई फीड से अपडेट मिलल बंद हो जाई। रउआ कबो फेर से सब्सक्राइब कर सकेनी।</string>
     <string name="feeds_access_select_rule">पहुँच नियम चुनीं</string>
     <string name="feeds_access_authenticated_desc">जे केहू लॉग इन बा</string>
+    <string name="feeds_banner_hint">ए फोरम में रउआ के स्वागत बा…</string>
+    <string name="feeds_banner_dismiss">Banner खारिज करीं</string>
+    <string name="feeds_members_search">सदस्य छाँटीं</string>
+    <string name="feeds_ai_prompt_default">डिफ़ॉल्ट</string>
+    <string name="feeds_ai_prompt_custom">कस्टम</string>
+    <string name="feeds_ai_prompt_variables">चर: %1$s</string>
+    <string name="feeds_link">लिंक</string>
+    <string name="feeds_scroll_to_top">ऊपर लौटीं</string>
+    <string name="feeds_share_link_title">फीड लिंक</string>
 </resources>

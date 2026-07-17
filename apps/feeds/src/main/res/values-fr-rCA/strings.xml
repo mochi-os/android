@@ -270,4 +270,23 @@
         <item quantity="one">%1$d heure</item>
         <item quantity="other">%1$d heures</item>
     </plurals>
+    <string name="feeds_banner_hint">Bienvenue dans ce forum…</string>
+    <string name="feeds_banner_dismiss">Masquer la bannière</string>
+    <string name="feeds_members_search">Filtrer les membres</string>
+    <string name="feeds_ai_prompt_default">Par défaut</string>
+    <string name="feeds_link">Lien</string>
+    <string name="feeds_share_link_title">Lien du flux</string>
+    <string name="feeds_ai_prompt_custom">Personnalisé</string>
+    <string name="feeds_ai_prompt_variables">Variables : %1$s</string>
+    <string name="feeds_interest_boosted">Centre d\'intérêt renforcé</string>
+    <string name="feeds_interest_failed">Échec de l\'ajustement du centre d\'intérêt</string>
+    <string name="feeds_interest_reduced">Centre d\'intérêt réduit</string>
+    <string name="feeds_interest_removed">Centre d\'intérêt retiré</string>
+    <string name="feeds_saved_clear_confirm_body">Cette action retire toutes les publications de votre liste d\'enregistrés. Elle est irréversible.</string>
+    <string name="feeds_saved_clear_confirm_title">Effacer toutes les publications enregistrées?</string>
+    <string name="feeds_saved_empty_subtitle">Touchez le marque-page d\'une publication pour l\'enregistrer ici pour plus tard.</string>
+    <string name="feeds_saved_empty_title">Rien d\'enregistré pour l\'instant</string>
+    <string name="feeds_saved_error_clear">Échec de l\'effacement des publications enregistrées</string>
+    <string name="feeds_saved_save">Enregistrer pour plus tard</string>
+    <string name="feeds_scroll_to_top">Retour en haut</string>
 </resources>

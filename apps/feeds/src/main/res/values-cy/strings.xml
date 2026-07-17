@@ -300,4 +300,13 @@
     <string name="feeds_unsubscribe_confirm_message">Byddwch yn stopio derbyn diweddariadau o\'r ffrwd hon. Gallwch ail-danysgrifio unrhyw bryd.</string>
     <string name="feeds_access_select_rule">Dewiswch reol mynediad</string>
     <string name="feeds_access_authenticated_desc">Unrhyw un sydd wedi mewngofnodi</string>
+    <string name="feeds_banner_hint">Croeso i\'r fforwm hwn…</string>
+    <string name="feeds_banner_dismiss">Diystyru baner</string>
+    <string name="feeds_members_search">Hidlo aelodau</string>
+    <string name="feeds_ai_prompt_default">Diofyn</string>
+    <string name="feeds_ai_prompt_custom">Personol</string>
+    <string name="feeds_ai_prompt_variables">Newidynnau: %1$s</string>
+    <string name="feeds_link">Dolen</string>
+    <string name="feeds_share_link_title">Dolen y ffrwd</string>
+    <string name="feeds_scroll_to_top">Yn ôl i\'r brig</string>
 </resources>

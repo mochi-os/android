@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">ከዚህ ፊድ ዝማኔዎችን መቀበል ያቆማሉ። በማንኛውም ጊዜ እንደገና ደንበኛ መሆን ይችላሉ።</string>
     <string name="feeds_access_select_rule">የመዳረሻ ደንብ ይምረጡ</string>
     <string name="feeds_access_authenticated_desc">የገባ ማንኛውም ሰው</string>
+    <string name="feeds_banner_hint">ወደዚህ መድረክ እንኳን ደህና መጡ…</string>
+    <string name="feeds_banner_dismiss">ባነሩን አጥፋ</string>
+    <string name="feeds_members_search">አባላትን አጣራ</string>
+    <string name="feeds_ai_prompt_default">ነባሪ</string>
+    <string name="feeds_ai_prompt_custom">ብጁ</string>
+    <string name="feeds_ai_prompt_variables">ተለዋዋጮች፦ %1$s</string>
+    <string name="feeds_link">አገናኝ</string>
+    <string name="feeds_share_link_title">የምግብ አገናኝ</string>
+    <string name="feeds_scroll_to_top">ወደ ላይ ተመለስ</string>
 </resources>

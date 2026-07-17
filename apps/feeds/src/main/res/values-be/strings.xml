@@ -293,4 +293,13 @@
     <string name="feeds_unsubscribe_confirm_message">Вы перастанеце атрымліваць абнаўленні з гэтай стужкі. Вы можаце падпісацца зноў у любы час.</string>
     <string name="feeds_access_select_rule">Абярыце правіла доступу</string>
     <string name="feeds_access_authenticated_desc">Усе, хто ўвайшоў у сістэму</string>
+    <string name="feeds_banner_hint">Сардэчна запрашаем на гэты форум…</string>
+    <string name="feeds_banner_dismiss">Закрыць банер</string>
+    <string name="feeds_members_search">Фільтр удзельнікаў</string>
+    <string name="feeds_ai_prompt_default">Па змаўчанні</string>
+    <string name="feeds_ai_prompt_custom">Карыстальніцкі</string>
+    <string name="feeds_ai_prompt_variables">Зменныя: %1$s</string>
+    <string name="feeds_link">Спасылка</string>
+    <string name="feeds_share_link_title">Спасылка на стужку</string>
+    <string name="feeds_scroll_to_top">Уверх</string>
 </resources>

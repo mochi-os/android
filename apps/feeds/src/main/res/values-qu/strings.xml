@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Kay feedmanta musuq willaykunata manaña chaskinkichu. Hayk\'appas musuqmanta suscribikuyta atinki.</string>
     <string name="feeds_access_select_rule">Yaykuy kamachiyta akllay</string>
     <string name="feeds_access_authenticated_desc">Yaykusqa kaq pipas</string>
+    <string name="feeds_banner_hint">Kay forum-man allin hamusqayki…</string>
+    <string name="feeds_banner_dismiss">Banner wischuy</string>
+    <string name="feeds_members_search">Yanapaqkunata suskuy</string>
+    <string name="feeds_ai_prompt_default">Por defecto</string>
+    <string name="feeds_ai_prompt_custom">Personalizasqa</string>
+    <string name="feeds_ai_prompt_variables">Variablekuna: %1$s</string>
+    <string name="feeds_link">T\'inki</string>
+    <string name="feeds_scroll_to_top">Hanaqman kutiy</string>
+    <string name="feeds_share_link_title">Feed t\'inki</string>
 </resources>

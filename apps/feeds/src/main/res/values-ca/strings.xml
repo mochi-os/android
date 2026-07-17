@@ -283,4 +283,13 @@
     <string name="feeds_unsubscribe_confirm_message">Deixaràs de rebre actualitzacions d\'aquesta font. Pots tornar-te a subscriure en qualsevol moment.</string>
     <string name="feeds_access_select_rule">Selecciona la regla d\'accés</string>
     <string name="feeds_access_authenticated_desc">Qualsevol persona que hagi iniciat sessió</string>
+    <string name="feeds_banner_hint">Us donem la benvinguda a aquest fòrum…</string>
+    <string name="feeds_banner_dismiss">Descarta el bàner</string>
+    <string name="feeds_members_search">Filtra els membres</string>
+    <string name="feeds_ai_prompt_default">Per defecte</string>
+    <string name="feeds_ai_prompt_custom">Personalitzat</string>
+    <string name="feeds_ai_prompt_variables">Variables: %1$s</string>
+    <string name="feeds_link">Enllaç</string>
+    <string name="feeds_share_link_title">Enllaç del canal</string>
+    <string name="feeds_scroll_to_top">Torna a dalt</string>
 </resources>

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Et saa enää päivityksiä tästä syötteestä. Voit tilata sen uudelleen milloin tahansa.</string>
     <string name="feeds_access_select_rule">Valitse käyttöoikeussääntö</string>
     <string name="feeds_access_authenticated_desc">Kaikki kirjautuneet käyttäjät</string>
+    <string name="feeds_banner_hint">Tervetuloa tälle foorumille…</string>
+    <string name="feeds_banner_dismiss">Hylkää banneri</string>
+    <string name="feeds_members_search">Suodata jäseniä</string>
+    <string name="feeds_ai_prompt_default">Oletus</string>
+    <string name="feeds_ai_prompt_custom">Mukautettu</string>
+    <string name="feeds_ai_prompt_variables">Muuttujat: %1$s</string>
+    <string name="feeds_link">Linkki</string>
+    <string name="feeds_share_link_title">Syötteen linkki</string>
+    <string name="feeds_scroll_to_top">Takaisin ylös</string>
 </resources>

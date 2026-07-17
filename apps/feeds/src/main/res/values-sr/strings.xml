@@ -286,4 +286,13 @@
     <string name="feeds_unsubscribe_confirm_message">Више нећете добијати новости са овог фида. Поново можете да се пријавите у било ком тренутку.</string>
     <string name="feeds_access_select_rule">Изабери правило приступа</string>
     <string name="feeds_access_authenticated_desc">Свако ко је пријављен</string>
+    <string name="feeds_banner_hint">Dobro došli na ovaj forum…</string>
+    <string name="feeds_banner_dismiss">Одбаци банер</string>
+    <string name="feeds_members_search">Filtriraj članove</string>
+    <string name="feeds_ai_prompt_default">Подразумевано</string>
+    <string name="feeds_ai_prompt_custom">Прилагођено</string>
+    <string name="feeds_ai_prompt_variables">Променљиве: %1$s</string>
+    <string name="feeds_link">Веза</string>
+    <string name="feeds_share_link_title">Веза ка каналу</string>
+    <string name="feeds_scroll_to_top">Назад на врх</string>
 </resources>

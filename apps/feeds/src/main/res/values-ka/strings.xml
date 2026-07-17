@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">ამ ფიდიდან განახლებებს აღარ მიიღებთ. ხელახლა გამოწერა ნებისმიერ დროს შეგიძლიათ.</string>
     <string name="feeds_access_select_rule">წვდომის წესის არჩევა</string>
     <string name="feeds_access_authenticated_desc">ნებისმიერი ავტორიზებული მომხმარებელი</string>
+    <string name="feeds_banner_hint">კეთილი იყოს თქვენი მობრძანება ამ ფორუმზე…</string>
+    <string name="feeds_banner_dismiss">ბანერის უარყოფა</string>
+    <string name="feeds_members_search">წევრების ფილტრი</string>
+    <string name="feeds_ai_prompt_default">ნაგულისხმევი</string>
+    <string name="feeds_ai_prompt_custom">მორგებული</string>
+    <string name="feeds_ai_prompt_variables">ცვლადები: %1$s</string>
+    <string name="feeds_link">ბმული</string>
+    <string name="feeds_share_link_title">ნაკადის ბმული</string>
+    <string name="feeds_scroll_to_top">დაბრუნება ზემოთ</string>
 </resources>

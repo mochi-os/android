@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Je ontvangt geen updates meer van deze feed. Je kunt je op elk moment opnieuw abonneren.</string>
     <string name="feeds_access_select_rule">Kies toegangsregel</string>
     <string name="feeds_access_authenticated_desc">Iedereen die is ingelogd</string>
+    <string name="feeds_banner_hint">Welkom op dit forum…</string>
+    <string name="feeds_banner_dismiss">Banner sluiten</string>
+    <string name="feeds_members_search">Leden filteren</string>
+    <string name="feeds_ai_prompt_default">Standaard</string>
+    <string name="feeds_ai_prompt_custom">Aangepast</string>
+    <string name="feeds_ai_prompt_variables">Variabelen: %1$s</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Feed-link</string>
+    <string name="feeds_scroll_to_top">Terug naar boven</string>
 </resources>
