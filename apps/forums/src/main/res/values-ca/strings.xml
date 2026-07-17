@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Indicació per a les etiquetes de comentaris</string>
     <string name="forums_settings_fingerprint">Empremta: %1$s</string>
     <string name="forums_settings_clear_notifications">Esborra les notificacions</string>
-    <string name="forums_moderation_settings">Configuració de moderació</string>
     <string name="forums_moderation_queue_empty">Res pendent</string>
     <string name="forums_moderation_pending_posts">Publicacions pendents</string>
     <string name="forums_moderation_pending_comments">Comentaris pendents</string>

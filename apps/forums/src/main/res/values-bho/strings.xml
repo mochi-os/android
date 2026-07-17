@@ -176,7 +176,6 @@
     <string name="forums_ai_prompt_score">स्कोरिंग प्रॉम्प्ट</string>
     <string name="forums_ai_post_prompt_label">पोस्ट टैग खातिर प्रॉम्प्ट</string>
     <string name="forums_ai_comment_prompt_label">टिप्पणी टैग खातिर प्रॉम्प्ट</string>
-    <string name="forums_moderation_settings">मॉडरेशन सेटिंग</string>
     <string name="forums_moderation_queue_empty">कुछुओ लंबित नइखे</string>
     <string name="forums_moderation_pending_posts">लंबित पोस्ट</string>
     <string name="forums_moderation_pending_comments">लंबित टिप्पणी</string>

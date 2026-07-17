@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt voor reactietags</string>
     <string name="forums_settings_fingerprint">Vingerafdruk: %1$s</string>
     <string name="forums_settings_clear_notifications">Meldingen wissen</string>
-    <string name="forums_moderation_settings">Moderatie-instellingen</string>
     <string name="forums_moderation_queue_empty">Niets in behandeling</string>
     <string name="forums_moderation_pending_posts">Berichten in behandeling</string>
     <string name="forums_moderation_pending_comments">Reacties in behandeling</string>

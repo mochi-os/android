@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Hvati fyrir athugasemdamerki</string>
     <string name="forums_settings_fingerprint">Fingrafar: %1$s</string>
     <string name="forums_settings_clear_notifications">Hreinsa tilkynningar</string>
-    <string name="forums_moderation_settings">Umsjónarstillingar</string>
     <string name="forums_moderation_queue_empty">Ekkert í bið</string>
     <string name="forums_moderation_pending_posts">Færslur í bið</string>
     <string name="forums_moderation_pending_comments">Athugasemdir í bið</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt ji bo etîketên şîroveyan</string>
     <string name="forums_settings_fingerprint">Şopa tilî: %1$s</string>
     <string name="forums_settings_clear_notifications">Agahdariyan paqij bike</string>
-    <string name="forums_moderation_settings">Sazkariyên rêvebirinê</string>
     <string name="forums_moderation_queue_empty">Tiştek li benda nîne</string>
     <string name="forums_moderation_pending_posts">Şandiyên li benda</string>
     <string name="forums_moderation_pending_comments">Şîroveyên li benda</string>

@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Запыт для тэгаў каментароў</string>
     <string name="forums_settings_fingerprint">Адбітак: %1$s</string>
     <string name="forums_settings_clear_notifications">Ачысціць апавяшчэнні</string>
-    <string name="forums_moderation_settings">Налады мадэрацыі</string>
     <string name="forums_moderation_queue_empty">Нічога не чакае разгляду</string>
     <string name="forums_moderation_pending_posts">Допісы ў чаканні</string>
     <string name="forums_moderation_pending_comments">Каментары ў чаканні</string>

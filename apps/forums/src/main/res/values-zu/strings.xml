@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Isikhumbuzo samathegi okuphawula</string>
     <string name="forums_settings_fingerprint">Izigxivizo zeminwe: %1$s</string>
     <string name="forums_settings_clear_notifications">Sula izaziso</string>
-    <string name="forums_moderation_settings">Izilungiselelo zokulawula</string>
     <string name="forums_moderation_queue_empty">Akukho okulindile</string>
     <string name="forums_moderation_pending_posts">Okuthunyelwe okulindile</string>
     <string name="forums_moderation_pending_comments">Amazwana alindile</string>

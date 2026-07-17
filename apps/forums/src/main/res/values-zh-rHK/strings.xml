@@ -143,7 +143,6 @@
     <string name="forums_ai_comment_prompt_label">留言標籤提示</string>
     <string name="forums_settings_fingerprint">指紋：%1$s</string>
     <string name="forums_settings_clear_notifications">清除通知</string>
-    <string name="forums_moderation_settings">版務設定</string>
     <string name="forums_moderation_tab_queue">佇列</string>
     <string name="forums_moderation_tab_reports">舉報</string>
     <string name="forums_moderation_tab_log">紀錄</string>

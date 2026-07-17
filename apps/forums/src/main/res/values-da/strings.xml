@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt til kommentar-tags</string>
     <string name="forums_settings_fingerprint">Fingeraftryk: %1$s</string>
     <string name="forums_settings_clear_notifications">Ryd notifikationer</string>
-    <string name="forums_moderation_settings">Modereringsindstillinger</string>
     <string name="forums_moderation_queue_empty">Intet afventende</string>
     <string name="forums_moderation_pending_posts">Afventende opslag</string>
     <string name="forums_moderation_pending_comments">Afventende kommentarer</string>

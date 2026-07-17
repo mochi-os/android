@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">കമന്റ് ടാഗുകൾക്കുള്ള പ്രോംപ്റ്റ്</string>
     <string name="forums_settings_fingerprint">ഫിംഗർപ്രിന്റ്: %1$s</string>
     <string name="forums_settings_clear_notifications">അറിയിപ്പുകൾ മായ്ക്കുക</string>
-    <string name="forums_moderation_settings">മോഡറേഷൻ ക്രമീകരണങ്ങൾ</string>
     <string name="forums_moderation_queue_empty">ഒന്നും തീർച്ചപ്പെടുത്താനില്ല</string>
     <string name="forums_moderation_pending_posts">തീർച്ചപ്പെടുത്താനുള്ള പോസ്റ്റുകൾ</string>
     <string name="forums_moderation_pending_comments">തീർച്ചപ്പെടുത്താനുള്ള കമന്റുകൾ</string>

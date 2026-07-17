@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt pentru etichetele comentariilor</string>
     <string name="forums_settings_fingerprint">Amprentă: %1$s</string>
     <string name="forums_settings_clear_notifications">Ștergeți notificările</string>
-    <string name="forums_moderation_settings">Setări de moderare</string>
     <string name="forums_moderation_queue_empty">Nimic în așteptare</string>
     <string name="forums_moderation_pending_posts">Postări în așteptare</string>
     <string name="forums_moderation_pending_comments">Comentarii în așteptare</string>

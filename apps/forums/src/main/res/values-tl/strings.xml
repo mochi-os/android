@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt para sa mga tag ng komento</string>
     <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
     <string name="forums_settings_clear_notifications">I-clear ang mga abiso</string>
-    <string name="forums_moderation_settings">Mga setting ng moderasyon</string>
     <string name="forums_moderation_queue_empty">Walang nakabinbin</string>
     <string name="forums_moderation_pending_posts">Mga nakabinbing post</string>
     <string name="forums_moderation_pending_comments">Mga nakabinbing komento</string>

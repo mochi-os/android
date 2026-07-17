@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt comentario tag-rã</string>
     <string name="forums_settings_fingerprint">Kuãhũ: %1$s</string>
     <string name="forums_settings_clear_notifications">Embogue marandukuéra</string>
-    <string name="forums_moderation_settings">Moñangareko ñemboheko</string>
     <string name="forums_moderation_queue_empty">Ndaipóri mba\'eve oha\'arõva</string>
     <string name="forums_moderation_pending_posts">Ñe\'ẽmondo oha\'arõva</string>
     <string name="forums_moderation_pending_comments">Comentario oha\'arõva</string>

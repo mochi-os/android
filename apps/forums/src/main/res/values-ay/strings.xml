@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Comentarion etiquetapatak prompt</string>
     <string name="forums_settings_fingerprint">Luk\'ana unancha: %1$s</string>
     <string name="forums_settings_clear_notifications">Yatiyawinak chhaqtayaña</string>
-    <string name="forums_moderation_settings">Apnaqañ kamachinaka</string>
     <string name="forums_moderation_queue_empty">Janiw kuna suyaskiti</string>
     <string name="forums_moderation_pending_posts">Qillqatanak suyaskirinaka</string>
     <string name="forums_moderation_pending_comments">Comentarionak suyaskirinaka</string>

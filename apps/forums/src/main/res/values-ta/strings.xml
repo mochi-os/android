@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">கருத்துக் குறிச்சொற்களுக்கான தூண்டுதல்</string>
     <string name="forums_settings_fingerprint">கைரேகை: %1$s</string>
     <string name="forums_settings_clear_notifications">அறிவிப்புகளை அழிக்கவும்</string>
-    <string name="forums_moderation_settings">மட்டுப்படுத்தல் அமைப்புகள்</string>
     <string name="forums_moderation_queue_empty">எதுவும் நிலுவையில் இல்லை</string>
     <string name="forums_moderation_pending_posts">நிலுவையில் உள்ள இடுகைகள்</string>
     <string name="forums_moderation_pending_comments">நிலுவையில் உள்ள கருத்துகள்</string>

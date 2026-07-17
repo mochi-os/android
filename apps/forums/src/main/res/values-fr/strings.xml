@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Invite pour les étiquettes de commentaire</string>
     <string name="forums_settings_fingerprint">Empreinte : %1$s</string>
     <string name="forums_settings_clear_notifications">Effacer les notifications</string>
-    <string name="forums_moderation_settings">Paramètres de modération</string>
     <string name="forums_moderation_queue_empty">Rien en attente</string>
     <string name="forums_moderation_pending_posts">Publications en attente</string>
     <string name="forums_moderation_pending_comments">Commentaires en attente</string>

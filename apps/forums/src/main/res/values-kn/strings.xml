@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">ಕಾಮೆಂಟ್ ಟ್ಯಾಗ್‌ಗಳಿಗಾಗಿ ಪ್ರಾಂಪ್ಟ್</string>
     <string name="forums_settings_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್: %1$s</string>
     <string name="forums_settings_clear_notifications">ಅಧಿಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
-    <string name="forums_moderation_settings">ಮಾಡರೇಶನ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="forums_moderation_queue_empty">ಬಾಕಿ ಇರುವುದು ಏನೂ ಇಲ್ಲ</string>
     <string name="forums_moderation_pending_posts">ಬಾಕಿ ಇರುವ ಪೋಸ್ಟ್‌ಗಳು</string>
     <string name="forums_moderation_pending_comments">ಬಾಕಿ ಇರುವ ಕಾಮೆಂಟ್‌ಗಳು</string>

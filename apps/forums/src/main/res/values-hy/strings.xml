@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Հուշում մեկնաբանության պիտակների համար</string>
     <string name="forums_settings_fingerprint">Մատնահետք՝ %1$s</string>
     <string name="forums_settings_clear_notifications">Մաքրել ծանուցումները</string>
-    <string name="forums_moderation_settings">Մոդերացիայի կարգավորումներ</string>
     <string name="forums_moderation_queue_empty">Սպասող ոչինչ չկա</string>
     <string name="forums_moderation_pending_posts">Սպասող գրառումներ</string>
     <string name="forums_moderation_pending_comments">Սպասող մեկնաբանություններ</string>

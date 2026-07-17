@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">موجّه وسوم التعليقات</string>
     <string name="forums_settings_fingerprint">البصمة: %1$s</string>
     <string name="forums_settings_clear_notifications">مسح الإشعارات</string>
-    <string name="forums_moderation_settings">إعدادات الإشراف</string>
     <string name="forums_moderation_queue_empty">لا يوجد شيء معلّق</string>
     <string name="forums_moderation_pending_posts">المنشورات المعلّقة</string>
     <string name="forums_moderation_pending_comments">التعليقات المعلّقة</string>

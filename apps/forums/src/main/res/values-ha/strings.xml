@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Umarni don alamomin bayani</string>
     <string name="forums_settings_fingerprint">Yatsa: %1$s</string>
     <string name="forums_settings_clear_notifications">Share sanarwa</string>
-    <string name="forums_moderation_settings">Saitunan sarrafawa</string>
     <string name="forums_moderation_queue_empty">Babu abin da ke jiran sarrafawa</string>
     <string name="forums_moderation_pending_posts">Saƙonni masu jira</string>
     <string name="forums_moderation_pending_comments">Bayanai masu jira</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Пікір тегтері үшін нұсқау</string>
     <string name="forums_settings_fingerprint">Саусақ ізі: %1$s</string>
     <string name="forums_settings_clear_notifications">Хабарландыруларды тазалау</string>
-    <string name="forums_moderation_settings">Модерация баптаулары</string>
     <string name="forums_moderation_queue_empty">Күтудегі ештеңе жоқ</string>
     <string name="forums_moderation_pending_posts">Күтудегі жазбалар</string>
     <string name="forums_moderation_pending_comments">Күтудегі пікірлер</string>

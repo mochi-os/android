@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">פרומפט לתגיות תגובות</string>
     <string name="forums_settings_fingerprint">טביעת אצבע: %1$s</string>
     <string name="forums_settings_clear_notifications">ניקוי התראות</string>
-    <string name="forums_moderation_settings">הגדרות ניהול תוכן</string>
     <string name="forums_moderation_queue_empty">אין פריטים ממתינים</string>
     <string name="forums_moderation_pending_posts">פוסטים ממתינים</string>
     <string name="forums_moderation_pending_comments">תגובות ממתינות</string>

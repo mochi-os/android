@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Anogiad ar gyfer tagiau sylwadau</string>
     <string name="forums_settings_fingerprint">Ôl bys: %1$s</string>
     <string name="forums_settings_clear_notifications">Clirio hysbysiadau</string>
-    <string name="forums_moderation_settings">Gosodiadau cymedroli</string>
     <string name="forums_moderation_queue_empty">Dim byd yn aros</string>
     <string name="forums_moderation_pending_posts">Postiadau yn aros</string>
     <string name="forums_moderation_pending_comments">Sylwadau yn aros</string>

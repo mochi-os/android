@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">تبصري ٽيگ لاءِ پرامپٽ</string>
     <string name="forums_settings_fingerprint">فنگر پرنٽ: %1$s</string>
     <string name="forums_settings_clear_notifications">اطلاعون صاف ڪريو</string>
-    <string name="forums_moderation_settings">اعتدال جون سيٽنگون</string>
     <string name="forums_moderation_queue_empty">ڪجهه به زير التوا ناهي</string>
     <string name="forums_moderation_pending_posts">زير التوا پوسٽون</string>
     <string name="forums_moderation_pending_comments">زير التوا تبصرا</string>

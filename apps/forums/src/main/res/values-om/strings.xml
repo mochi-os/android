@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Ajaja mallattoo yaadaa</string>
     <string name="forums_settings_fingerprint">Quba mallattoo: %1$s</string>
     <string name="forums_settings_clear_notifications">Beeksisawwan haqi</string>
-    <string name="forums_moderation_settings">Qindaa\'inota to\'annoo</string>
     <string name="forums_moderation_queue_empty">Wanti hafe hin jiru</string>
     <string name="forums_moderation_pending_posts">Maxxansa eegamu</string>
     <string name="forums_moderation_pending_comments">Yaada eegamu</string>

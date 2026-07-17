@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">نووسین بۆ تاگەکانی لێدوان</string>
     <string name="forums_settings_fingerprint">پەنجەمۆر: %1$s</string>
     <string name="forums_settings_clear_notifications">پاککردنەوەی ئاگادارکردنەوەکان</string>
-    <string name="forums_moderation_settings">ڕێکخستنەکانی چاودێری</string>
     <string name="forums_moderation_queue_empty">هیچ شتێک چاوەڕوان نییە</string>
     <string name="forums_moderation_pending_posts">پۆستە چاوەڕوانەکان</string>
     <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">تبصرہ ٹیگز کے لیے پرامپٹ</string>
     <string name="forums_settings_fingerprint">فنگر پرنٹ: %1$s</string>
     <string name="forums_settings_clear_notifications">اطلاعات صاف کریں</string>
-    <string name="forums_moderation_settings">اعتدال کی ترتیبات</string>
     <string name="forums_moderation_queue_empty">کچھ بھی زیر التواء نہیں</string>
     <string name="forums_moderation_pending_posts">زیر التواء پوسٹس</string>
     <string name="forums_moderation_pending_comments">زیر التواء تبصرے</string>

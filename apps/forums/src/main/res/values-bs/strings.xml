@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Upit za oznake komentara</string>
     <string name="forums_settings_fingerprint">Otisak: %1$s</string>
     <string name="forums_settings_clear_notifications">Očisti obavještenja</string>
-    <string name="forums_moderation_settings">Postavke moderacije</string>
     <string name="forums_moderation_queue_empty">Ništa na čekanju</string>
     <string name="forums_moderation_pending_posts">Objave na čekanju</string>
     <string name="forums_moderation_pending_comments">Komentari na čekanju</string>

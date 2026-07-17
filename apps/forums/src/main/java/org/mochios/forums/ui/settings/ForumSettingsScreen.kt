@@ -15,6 +15,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.AutoAwesome
+import androidx.compose.material.icons.outlined.Gavel
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.CircularProgressIndicator
@@ -61,6 +62,7 @@ import org.mochios.android.R as MochiR
  */
 private enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
     General(R.string.forums_tab_general, Icons.Outlined.Settings),
+    Moderation(R.string.forums_tab_moderation, Icons.Outlined.Gavel),
     Access(R.string.forums_tab_access, Icons.Outlined.Shield),
     Ai(R.string.forums_tab_ai, Icons.Outlined.AutoAwesome),
 }
@@ -237,6 +239,9 @@ fun ForumSettingsScreen(
                     when (selectedTab) {
                         SettingsTab.General -> GeneralTab(viewModel)
                         SettingsTab.Access -> AccessTab(viewModel)
+                        SettingsTab.Moderation -> ModerationTab(
+                            onMessage = { messageRes -> viewModel.setActionMessage(messageRes) },
+                        )
                         SettingsTab.Ai -> AiTab(viewModel)
                     }
                 }

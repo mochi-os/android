@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">ለአስተያየት መለያዎች ጥያቄ</string>
     <string name="forums_settings_fingerprint">የጣት አሻራ፦ %1$s</string>
     <string name="forums_settings_clear_notifications">ማሳወቂያዎችን አጽዳ</string>
-    <string name="forums_moderation_settings">የአወያይነት ቅንብሮች</string>
     <string name="forums_moderation_queue_empty">በመጠባበቅ ላይ ምንም የለም</string>
     <string name="forums_moderation_pending_posts">በመጠባበቅ ላይ ያሉ ልጥፎች</string>
     <string name="forums_moderation_pending_comments">በመጠባበቅ ላይ ያሉ አስተያየቶች</string>

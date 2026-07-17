@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt pro značky komentářů</string>
     <string name="forums_settings_fingerprint">Otisk: %1$s</string>
     <string name="forums_settings_clear_notifications">Vymazat oznámení</string>
-    <string name="forums_moderation_settings">Nastavení moderování</string>
     <string name="forums_moderation_queue_empty">Nic nečeká</string>
     <string name="forums_moderation_pending_posts">Čekající příspěvky</string>
     <string name="forums_moderation_pending_comments">Čekající komentáře</string>

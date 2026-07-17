@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt for kommentarmerkelappar</string>
     <string name="forums_settings_fingerprint">Fingeravtrykk: %1$s</string>
     <string name="forums_settings_clear_notifications">Tøm varsel</string>
-    <string name="forums_moderation_settings">Modereringsinnstillingar</string>
     <string name="forums_moderation_queue_empty">Ingenting ventar</string>
     <string name="forums_moderation_pending_posts">Ventande innlegg</string>
     <string name="forums_moderation_pending_comments">Ventande kommentarar</string>

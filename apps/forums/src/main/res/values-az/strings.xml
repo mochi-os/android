@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Şərh etiketləri üçün sorğu</string>
     <string name="forums_settings_fingerprint">Barmaq izi: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirişləri təmizlə</string>
-    <string name="forums_moderation_settings">Moderasiya parametrləri</string>
     <string name="forums_moderation_queue_empty">Gözləyən yoxdur</string>
     <string name="forums_moderation_pending_posts">Gözləyən yazılar</string>
     <string name="forums_moderation_pending_comments">Gözləyən şərhlər</string>

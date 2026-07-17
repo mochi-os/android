@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt dla tagów komentarzy</string>
     <string name="forums_settings_fingerprint">Odcisk palca: %1$s</string>
     <string name="forums_settings_clear_notifications">Wyczyść powiadomienia</string>
-    <string name="forums_moderation_settings">Ustawienia moderacji</string>
     <string name="forums_moderation_queue_empty">Brak oczekujących</string>
     <string name="forums_moderation_pending_posts">Oczekujące posty</string>
     <string name="forums_moderation_pending_comments">Oczekujące komentarze</string>

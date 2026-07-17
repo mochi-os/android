@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Gesaan untuk tag komen</string>
     <string name="forums_settings_fingerprint">Cap jari: %1$s</string>
     <string name="forums_settings_clear_notifications">Kosongkan pemberitahuan</string>
-    <string name="forums_moderation_settings">Tetapan moderasi</string>
     <string name="forums_moderation_queue_empty">Tiada yang menunggu</string>
     <string name="forums_moderation_pending_posts">Hantaran menunggu</string>
     <string name="forums_moderation_pending_comments">Komen menunggu</string>

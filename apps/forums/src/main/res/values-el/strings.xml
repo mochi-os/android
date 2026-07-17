@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Προτροπή για ετικέτες σχολίου</string>
     <string name="forums_settings_fingerprint">Αποτύπωμα: %1$s</string>
     <string name="forums_settings_clear_notifications">Εκκαθάριση ειδοποιήσεων</string>
-    <string name="forums_moderation_settings">Ρυθμίσεις συντονισμού</string>
     <string name="forums_moderation_queue_empty">Τίποτα σε εκκρεμότητα</string>
     <string name="forums_moderation_pending_posts">Εκκρεμείς αναρτήσεις</string>
     <string name="forums_moderation_pending_comments">Εκκρεμή σχόλια</string>

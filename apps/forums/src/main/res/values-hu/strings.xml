@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt a hozzászólás címkéihez</string>
     <string name="forums_settings_fingerprint">Ujjlenyomat: %1$s</string>
     <string name="forums_settings_clear_notifications">Értesítések törlése</string>
-    <string name="forums_moderation_settings">Moderálási beállítások</string>
     <string name="forums_moderation_queue_empty">Nincs függőben lévő elem</string>
     <string name="forums_moderation_pending_posts">Függőben lévő bejegyzések</string>
     <string name="forums_moderation_pending_comments">Függőben lévő hozzászólások</string>

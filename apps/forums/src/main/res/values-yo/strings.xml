@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Ìtọ́ni fún àwọn àmì àlàyé</string>
     <string name="forums_settings_fingerprint">Ìka-ọwọ́: %1$s</string>
     <string name="forums_settings_clear_notifications">Pa àwọn ìfitónilétí rẹ́</string>
-    <string name="forums_moderation_settings">Ètò ìṣàkóso</string>
     <string name="forums_moderation_queue_empty">Kò sí ohun tí ó dúró</string>
     <string name="forums_moderation_pending_posts">Àwọn àkọsílẹ̀ tí ó dúró</string>
     <string name="forums_moderation_pending_comments">Àwọn àlàyé tí ó dúró</string>

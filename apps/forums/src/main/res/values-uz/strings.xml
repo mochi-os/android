@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Izoh teglari uchun soʻrov</string>
     <string name="forums_settings_fingerprint">Barmoq izi: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirishnomalarni tozalash</string>
-    <string name="forums_moderation_settings">Moderatsiya sozlamalari</string>
     <string name="forums_moderation_queue_empty">Kutilayotgan hech narsa yoʻq</string>
     <string name="forums_moderation_pending_posts">Kutilayotgan postlar</string>
     <string name="forums_moderation_pending_comments">Kutilayotgan izohlar</string>

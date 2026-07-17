@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Iruzkin etiketen prompta</string>
     <string name="forums_settings_fingerprint">Hatz-marka: %1$s</string>
     <string name="forums_settings_clear_notifications">Garbitu jakinarazpenak</string>
-    <string name="forums_moderation_settings">Moderazio ezarpenak</string>
     <string name="forums_moderation_queue_empty">Ez dago zain dagoenik</string>
     <string name="forums_moderation_pending_posts">Zain dauden bidalketak</string>
     <string name="forums_moderation_pending_comments">Zain dauden iruzkinak</string>

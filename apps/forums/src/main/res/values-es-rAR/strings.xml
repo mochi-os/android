@@ -140,7 +140,6 @@
     <string name="forums_settings_fingerprint">Huella digital: %1$s</string>
     <string name="forums_settings_clear_notifications">Borrar notificaciones</string>
     <string name="forums_moderation_title">Moderación</string>
-    <string name="forums_moderation_settings">Configuración de moderación</string>
     <string name="forums_moderation_tab_queue">Cola</string>
     <string name="forums_moderation_tab_reports">Reportes</string>
     <string name="forums_moderation_tab_log">Registro</string>

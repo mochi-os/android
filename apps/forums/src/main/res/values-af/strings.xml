@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt vir kommentaaretikette</string>
     <string name="forums_settings_fingerprint">Vingerafdruk: %1$s</string>
     <string name="forums_settings_clear_notifications">Vee kennisgewings uit</string>
-    <string name="forums_moderation_settings">Modereringsinstellings</string>
     <string name="forums_moderation_queue_empty">Niks hangende nie</string>
     <string name="forums_moderation_pending_posts">Hangende posse</string>
     <string name="forums_moderation_pending_comments">Hangende kommentaar</string>

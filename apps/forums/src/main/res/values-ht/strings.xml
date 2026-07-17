@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Pwòmpt pou etikèt kòmantè</string>
     <string name="forums_settings_fingerprint">Anprent: %1$s</string>
     <string name="forums_settings_clear_notifications">Efase notifikasyon</string>
-    <string name="forums_moderation_settings">Paramèt moderasyon</string>
     <string name="forums_moderation_queue_empty">Pa gen anyen annatant</string>
     <string name="forums_moderation_pending_posts">Piblikasyon annatant</string>
     <string name="forums_moderation_pending_comments">Kòmantè annatant</string>

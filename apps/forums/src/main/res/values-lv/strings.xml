@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Uzvedne komentāru tagiem</string>
     <string name="forums_settings_fingerprint">Pirkstu nospiedums: %1$s</string>
     <string name="forums_settings_clear_notifications">Notīrīt paziņojumus</string>
-    <string name="forums_moderation_settings">Moderēšanas iestatījumi</string>
     <string name="forums_moderation_queue_empty">Nekas nav gaidīšanā</string>
     <string name="forums_moderation_pending_posts">Gaidošie ieraksti</string>
     <string name="forums_moderation_pending_comments">Gaidošie komentāri</string>

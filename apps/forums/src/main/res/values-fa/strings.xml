@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">پرامپت برای برچسب‌های دیدگاه</string>
     <string name="forums_settings_fingerprint">اثر انگشت: %1$s</string>
     <string name="forums_settings_clear_notifications">پاک کردن اعلان‌ها</string>
-    <string name="forums_moderation_settings">تنظیمات نظارت</string>
     <string name="forums_moderation_queue_empty">موردی در انتظار نیست</string>
     <string name="forums_moderation_pending_posts">مطالب در انتظار</string>
     <string name="forums_moderation_pending_comments">دیدگاه‌های در انتظار</string>

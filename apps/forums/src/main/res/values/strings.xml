@@ -129,6 +129,7 @@
     <string name="forums_tab_access">Access</string>
     <string name="forums_tab_members">Members</string>
     <string name="forums_tab_banner">Banner</string>
+    <string name="forums_tab_moderation">Moderation</string>
     <string name="forums_tab_ai">AI</string>
 
     <!-- Access tab -->
@@ -200,7 +201,7 @@
 
     <!-- Moderation centre -->
     <string name="forums_moderation_title">Moderation</string>
-    <string name="forums_moderation_settings">Moderation settings</string>
+    <string name="forums_moderation_settings_updated">Moderation settings updated</string>
     <string name="forums_moderation_tab_queue">Queue</string>
     <string name="forums_moderation_tab_reports">Reports</string>
     <string name="forums_moderation_tab_log">Log</string>
@@ -235,11 +236,20 @@
     <string name="forums_moderation_restriction_expires">Expires %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_moderation_section_premoderation">Pre-moderation</string>
+    <string name="forums_moderation_section_premoderation_description">Require approval before content becomes visible</string>
     <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting_description">Prevent spam by limiting how often users can post</string>
     <string name="forums_moderation_require_posts">Require approval for new posts</string>
+    <string name="forums_moderation_require_posts_description">New threads must be approved</string>
     <string name="forums_moderation_require_comments">Require approval for new comments</string>
+    <string name="forums_moderation_require_comments_description">Replies must be approved</string>
     <string name="forums_moderation_require_new_users">Require approval for new users</string>
+    <string name="forums_moderation_require_new_users_description">Content from users below a threshold must be approved</string>
     <string name="forums_moderation_new_user_days">New user threshold:</string>
+    <string name="forums_moderation_unit_days">days</string>
+    <string name="forums_moderation_unit_posts">posts</string>
+    <string name="forums_moderation_unit_replies">replies</string>
+    <string name="forums_moderation_unit_seconds">seconds</string>
     <string name="forums_moderation_post_limit">Post limit</string>
     <string name="forums_moderation_comment_limit">Comment limit</string>
     <string name="forums_moderation_limit_window">Window duration</string>

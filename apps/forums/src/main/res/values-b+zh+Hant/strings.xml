@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">留言標籤提示詞</string>
     <string name="forums_settings_fingerprint">指紋：%1$s</string>
     <string name="forums_settings_clear_notifications">清除通知</string>
-    <string name="forums_moderation_settings">審核設定</string>
     <string name="forums_moderation_queue_empty">沒有待處理項目</string>
     <string name="forums_moderation_pending_posts">待處理貼文</string>
     <string name="forums_moderation_pending_comments">待處理留言</string>

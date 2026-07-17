@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Leid do chlibeanna nótaí tráchta</string>
     <string name="forums_settings_fingerprint">Méarlorg: %1$s</string>
     <string name="forums_settings_clear_notifications">Glan fógraí</string>
-    <string name="forums_moderation_settings">Socruithe modhnóireachta</string>
     <string name="forums_moderation_queue_empty">Níl aon rud ar feitheamh</string>
     <string name="forums_moderation_pending_posts">Postálacha ar feitheamh</string>
     <string name="forums_moderation_pending_comments">Nótaí tráchta ar feitheamh</string>

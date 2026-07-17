@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Pituduh kangge tag komentar</string>
     <string name="forums_settings_fingerprint">Sidik jari: %1$s</string>
     <string name="forums_settings_clear_notifications">Resiki notifikasi</string>
-    <string name="forums_moderation_settings">Setelan moderasi</string>
     <string name="forums_moderation_queue_empty">Boten wonten ingkang ngantos</string>
     <string name="forums_moderation_pending_posts">Kiriman ingkang ngantos</string>
     <string name="forums_moderation_pending_comments">Komentar ingkang ngantos</string>

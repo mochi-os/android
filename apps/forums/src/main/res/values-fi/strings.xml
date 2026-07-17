@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Kehote kommenttien tunnisteille</string>
     <string name="forums_settings_fingerprint">Sormenjälki: %1$s</string>
     <string name="forums_settings_clear_notifications">Tyhjennä ilmoitukset</string>
-    <string name="forums_moderation_settings">Valvonta-asetukset</string>
     <string name="forums_moderation_queue_empty">Ei käsiteltäviä</string>
     <string name="forums_moderation_pending_posts">Käsittelyä odottavat julkaisut</string>
     <string name="forums_moderation_pending_comments">Käsittelyä odottavat kommentit</string>

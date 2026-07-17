@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Pokyn pre značky komentárov</string>
     <string name="forums_settings_fingerprint">Odtlačok: %1$s</string>
     <string name="forums_settings_clear_notifications">Vymazať upozornenia</string>
-    <string name="forums_moderation_settings">Nastavenia moderovania</string>
     <string name="forums_moderation_queue_empty">Nič nečaká</string>
     <string name="forums_moderation_pending_posts">Čakajúce príspevky</string>
     <string name="forums_moderation_pending_comments">Čakajúce komentáre</string>

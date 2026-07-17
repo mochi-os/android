@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Yorum etiketleri istemi</string>
     <string name="forums_settings_fingerprint">Parmak izi: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirimleri temizle</string>
-    <string name="forums_moderation_settings">Moderasyon ayarları</string>
     <string name="forums_moderation_queue_empty">Bekleyen bir şey yok</string>
     <string name="forums_moderation_pending_posts">Bekleyen gönderiler</string>
     <string name="forums_moderation_pending_comments">Bekleyen yorumlar</string>

@@ -14,7 +14,6 @@ import androidx.navigation.navDeepLink
 import org.mochios.forums.ui.find.FindForumsScreen
 import org.mochios.forums.ui.forum.ForumScreen
 import org.mochios.forums.ui.moderation.ForumModerationScreen
-import org.mochios.forums.ui.moderation.ForumModerationSettingsScreen
 import org.mochios.forums.ui.newpost.NewPostScreen
 import org.mochios.forums.ui.post.PostScreen
 import org.mochios.forums.ui.router.ForumsRouter
@@ -36,7 +35,6 @@ object ForumsApp {
     const val FIND_FORUMS = "forums/discover"
     const val FORUM_SETTINGS = "forums/forum/{forumId}/settings"
     const val MODERATION = "forums/forum/{forumId}/moderation"
-    const val MODERATION_SETTINGS = "forums/forum/{forumId}/moderation/settings"
     const val SAVED = "forums/saved"
 
     fun forum(forumId: String) = "forums/forum/$forumId"
@@ -46,7 +44,6 @@ object ForumsApp {
         else "forums/forum/$forumId/new?postId=$postId"
     fun forumSettings(forumId: String) = "forums/forum/$forumId/settings"
     fun moderation(forumId: String) = "forums/forum/$forumId/moderation"
-    fun moderationSettings(forumId: String) = "forums/forum/$forumId/moderation/settings"
 }
 
 fun NavGraphBuilder.forumsNavGraph(
@@ -171,19 +168,8 @@ fun NavGraphBuilder.forumsNavGraph(
     composable(
         route = ForumsApp.MODERATION,
         arguments = listOf(navArgument("forumId") { type = NavType.StringType })
-    ) { backStackEntry ->
-        val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
-        ForumModerationScreen(
-            onBack = { navController.popBackStack() },
-            onOpenSettings = { navController.navigate(ForumsApp.moderationSettings(forumId)) },
-        )
-    }
-
-    composable(
-        route = ForumsApp.MODERATION_SETTINGS,
-        arguments = listOf(navArgument("forumId") { type = NavType.StringType })
     ) {
-        ForumModerationSettingsScreen(
+        ForumModerationScreen(
             onBack = { navController.popBackStack() },
         )
     }

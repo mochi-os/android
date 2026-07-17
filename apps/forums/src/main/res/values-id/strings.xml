@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt untuk tag komentar</string>
     <string name="forums_settings_fingerprint">Sidik jari: %1$s</string>
     <string name="forums_settings_clear_notifications">Bersihkan notifikasi</string>
-    <string name="forums_moderation_settings">Pengaturan moderasi</string>
     <string name="forums_moderation_queue_empty">Tidak ada yang tertunda</string>
     <string name="forums_moderation_pending_posts">Kiriman tertunda</string>
     <string name="forums_moderation_pending_comments">Komentar tertunda</string>

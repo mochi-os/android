@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">მოთხოვნა კომენტარის ტეგებისთვის</string>
     <string name="forums_settings_fingerprint">ანაბეჭდი: %1$s</string>
     <string name="forums_settings_clear_notifications">შეტყობინებების გასუფთავება</string>
-    <string name="forums_moderation_settings">მოდერაციის პარამეტრები</string>
     <string name="forums_moderation_queue_empty">მოლოდინში არაფერია</string>
     <string name="forums_moderation_pending_posts">მოლოდინში მყოფი პოსტები</string>
     <string name="forums_moderation_pending_comments">მოლოდინში მყოფი კომენტარები</string>

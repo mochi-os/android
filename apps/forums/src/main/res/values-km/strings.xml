@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">សារជំរុញសម្រាប់ស្លាកមតិយោបល់</string>
     <string name="forums_settings_fingerprint">ស្នាមម្រាមដៃ: %1$s</string>
     <string name="forums_settings_clear_notifications">សម្អាតការជូនដំណឹង</string>
-    <string name="forums_moderation_settings">ការកំណត់ការសម្របសម្រួល</string>
     <string name="forums_moderation_queue_empty">គ្មានអ្វីកំពុងរង់ចាំទេ</string>
     <string name="forums_moderation_pending_posts">ការប្រកាសកំពុងរង់ចាំ</string>
     <string name="forums_moderation_pending_comments">មតិយោបល់កំពុងរង់ចាំ</string>

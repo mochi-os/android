@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">ટિપ્પણી ટૅગ માટે પ્રોમ્પ્ટ</string>
     <string name="forums_settings_fingerprint">ફિંગરપ્રિન્ટ: %1$s</string>
     <string name="forums_settings_clear_notifications">સૂચનાઓ સાફ કરો</string>
-    <string name="forums_moderation_settings">મધ્યસ્થી સેટિંગ્સ</string>
     <string name="forums_moderation_queue_empty">કંઈપણ બાકી નથી</string>
     <string name="forums_moderation_pending_posts">બાકી પોસ્ટ્સ</string>
     <string name="forums_moderation_pending_comments">બાકી ટિપ્પણીઓ</string>

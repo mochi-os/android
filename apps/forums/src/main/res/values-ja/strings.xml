@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">コメントタグのプロンプト</string>
     <string name="forums_settings_fingerprint">フィンガープリント: %1$s</string>
     <string name="forums_settings_clear_notifications">通知をクリア</string>
-    <string name="forums_moderation_settings">モデレーション設定</string>
     <string name="forums_moderation_queue_empty">保留中の項目はありません</string>
     <string name="forums_moderation_pending_posts">保留中の投稿</string>
     <string name="forums_moderation_pending_comments">保留中のコメント</string>

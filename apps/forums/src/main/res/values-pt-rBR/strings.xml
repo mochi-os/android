@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt para etiquetas de comentário</string>
     <string name="forums_settings_fingerprint">Impressão digital: %1$s</string>
     <string name="forums_settings_clear_notifications">Limpar notificações</string>
-    <string name="forums_moderation_settings">Configurações de moderação</string>
     <string name="forums_moderation_queue_empty">Nada pendente</string>
     <string name="forums_moderation_pending_posts">Publicações pendentes</string>
     <string name="forums_moderation_pending_comments">Comentários pendentes</string>

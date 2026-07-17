@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Промпт для тегов комментариев</string>
     <string name="forums_settings_fingerprint">Отпечаток: %1$s</string>
     <string name="forums_settings_clear_notifications">Очистить уведомления</string>
-    <string name="forums_moderation_settings">Настройки модерации</string>
     <string name="forums_moderation_queue_empty">Нет ожидающих</string>
     <string name="forums_moderation_pending_posts">Ожидающие записи</string>
     <string name="forums_moderation_pending_comments">Ожидающие комментарии</string>

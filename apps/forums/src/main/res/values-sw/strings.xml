@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Kidokezo cha lebo za maoni</string>
     <string name="forums_settings_fingerprint">Alama ya kidole: %1$s</string>
     <string name="forums_settings_clear_notifications">Futa arifa</string>
-    <string name="forums_moderation_settings">Mipangilio ya usimamizi</string>
     <string name="forums_moderation_queue_empty">Hakuna kinachosubiri</string>
     <string name="forums_moderation_pending_posts">Machapisho yanayosubiri</string>
     <string name="forums_moderation_pending_comments">Maoni yanayosubiri</string>

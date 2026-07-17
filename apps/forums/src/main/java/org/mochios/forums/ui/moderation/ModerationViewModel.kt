@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.forums.R
 import org.mochios.forums.api.ModerationQueueResponse
 import org.mochios.forums.api.ModerationReportsResponse
 import org.mochios.forums.model.ModerationLogEntry
@@ -41,6 +42,8 @@ data class ModerationUiState(
     val log: List<ModerationLogEntry> = emptyList(),
     val restrictions: List<Restriction> = emptyList(),
     val settings: ModerationSettings? = null,
+    /** Snackbar/toast message resource for a finished action. */
+    val actionMessage: Int? = null,
     val error: MochiError? = null,
     val selectedTab: ModerationTab = ModerationTab.QUEUE,
 )
@@ -177,11 +180,18 @@ class ModerationViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.saveModerationSettings(forumId, settings)
-                _uiState.value = _uiState.value.copy(settings = settings)
+                _uiState.value = _uiState.value.copy(
+                    settings = settings,
+                    actionMessage = R.string.forums_moderation_settings_updated,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    fun clearActionMessage() {
+        _uiState.value = _uiState.value.copy(actionMessage = null)
     }
 
     private fun mutate(block: suspend () -> Unit) {

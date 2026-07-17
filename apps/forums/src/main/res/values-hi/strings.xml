@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">टिप्पणी टैग के लिए प्रॉम्प्ट</string>
     <string name="forums_settings_fingerprint">फ़िंगरप्रिंट: %1$s</string>
     <string name="forums_settings_clear_notifications">सूचनाएँ साफ़ करें</string>
-    <string name="forums_moderation_settings">मॉडरेशन सेटिंग्स</string>
     <string name="forums_moderation_queue_empty">कुछ भी लंबित नहीं</string>
     <string name="forums_moderation_pending_posts">लंबित पोस्ट</string>
     <string name="forums_moderation_pending_comments">लंबित टिप्पणियाँ</string>

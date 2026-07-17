@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Подкана за етикети на коментари</string>
     <string name="forums_settings_fingerprint">Отпечатък: %1$s</string>
     <string name="forums_settings_clear_notifications">Изчистване на известията</string>
-    <string name="forums_moderation_settings">Настройки за модериране</string>
     <string name="forums_moderation_queue_empty">Няма чакащи елементи</string>
     <string name="forums_moderation_pending_posts">Чакащи публикации</string>
     <string name="forums_moderation_pending_comments">Чакащи коментари</string>

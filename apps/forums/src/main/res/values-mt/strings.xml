@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt għat-tikketti tal-kummenti</string>
     <string name="forums_settings_fingerprint">Marka tas-swaba\': %1$s</string>
     <string name="forums_settings_clear_notifications">Neħħi n-notifiki</string>
-    <string name="forums_moderation_settings">Settings tal-moderazzjoni</string>
     <string name="forums_moderation_queue_empty">Xejn pendenti</string>
     <string name="forums_moderation_pending_posts">Posts pendenti</string>
     <string name="forums_moderation_pending_comments">Kummenti pendenti</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Isikhokelo seethegi zezimvo</string>
     <string name="forums_settings_fingerprint">Umnwe wesandla: %1$s</string>
     <string name="forums_settings_clear_notifications">Cima izaziso</string>
-    <string name="forums_moderation_settings">Iisetingi zolawulo</string>
     <string name="forums_moderation_queue_empty">Akukho nto ilindileyo</string>
     <string name="forums_moderation_pending_posts">Izithuba ezilindileyo</string>
     <string name="forums_moderation_pending_comments">Izimvo ezilindileyo</string>

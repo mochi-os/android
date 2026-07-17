@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">မှတ်ချက် တဂ်များအတွက် Prompt</string>
     <string name="forums_settings_fingerprint">လက်ဗွေ: %1$s</string>
     <string name="forums_settings_clear_notifications">အကြောင်းကြားချက်များကို ရှင်းလင်းပါ</string>
-    <string name="forums_moderation_settings">ထိန်းညှိမှု ဆက်တင်များ</string>
     <string name="forums_moderation_queue_empty">ဆိုင်းငံ့ထားသည် မရှိပါ</string>
     <string name="forums_moderation_pending_posts">ဆိုင်းငံ့ထားသော ပို့စ်များ</string>
     <string name="forums_moderation_pending_comments">ဆိုင်းငံ့ထားသော မှတ်ချက်များ</string>

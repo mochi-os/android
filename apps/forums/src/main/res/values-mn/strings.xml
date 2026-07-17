@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Сэтгэгдлийн шошгоны заавар</string>
     <string name="forums_settings_fingerprint">Хурууны хээ: %1$s</string>
     <string name="forums_settings_clear_notifications">Мэдэгдлийг арилгах</string>
-    <string name="forums_moderation_settings">Зохицуулалтын тохиргоо</string>
     <string name="forums_moderation_queue_empty">Хүлээгдэж буй зүйл алга</string>
     <string name="forums_moderation_pending_posts">Хүлээгдэж буй нийтлэл</string>
     <string name="forums_moderation_pending_comments">Хүлээгдэж буй сэтгэгдэл</string>

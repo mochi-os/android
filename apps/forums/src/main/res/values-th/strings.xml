@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">พรอมต์สำหรับแท็กความคิดเห็น</string>
     <string name="forums_settings_fingerprint">ลายนิ้วมือ: %1$s</string>
     <string name="forums_settings_clear_notifications">ล้างการแจ้งเตือน</string>
-    <string name="forums_moderation_settings">ตั้งค่าการดูแล</string>
     <string name="forums_moderation_queue_empty">ไม่มีรายการที่รอดำเนินการ</string>
     <string name="forums_moderation_pending_posts">โพสต์ที่รอดำเนินการ</string>
     <string name="forums_moderation_pending_comments">ความคิดเห็นที่รอดำเนินการ</string>

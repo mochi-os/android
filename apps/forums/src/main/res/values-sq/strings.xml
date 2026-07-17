@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Kërkesë për etiketat e komenteve</string>
     <string name="forums_settings_fingerprint">Gjurma: %1$s</string>
     <string name="forums_settings_clear_notifications">Pastro njoftimet</string>
-    <string name="forums_moderation_settings">Cilësimet e moderimit</string>
     <string name="forums_moderation_queue_empty">Asgjë në pritje</string>
     <string name="forums_moderation_pending_posts">Postime në pritje</string>
     <string name="forums_moderation_pending_comments">Komente në pritje</string>

@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">মন্তব্য ট্যাগের জন্য প্রম্পট</string>
     <string name="forums_settings_fingerprint">ফিঙ্গারপ্রিন্ট: %1$s</string>
     <string name="forums_settings_clear_notifications">বিজ্ঞপ্তি পরিষ্কার করুন</string>
-    <string name="forums_moderation_settings">পরিমিতকরণ সেটিংস</string>
     <string name="forums_moderation_queue_empty">মুলতুবি কিছু নেই</string>
     <string name="forums_moderation_pending_posts">মুলতুবি পোস্ট</string>
     <string name="forums_moderation_pending_comments">মুলতুবি মন্তব্য</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Барање за ознаки на коментари</string>
     <string name="forums_settings_fingerprint">Отпечаток: %1$s</string>
     <string name="forums_settings_clear_notifications">Исчисти известувања</string>
-    <string name="forums_moderation_settings">Поставки за модерација</string>
     <string name="forums_moderation_queue_empty">Нема ништо во чекање</string>
     <string name="forums_moderation_pending_posts">Објави во чекање</string>
     <string name="forums_moderation_pending_comments">Коментари во чекање</string>

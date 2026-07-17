@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Lời nhắc cho thẻ bình luận</string>
     <string name="forums_settings_fingerprint">Vân tay: %1$s</string>
     <string name="forums_settings_clear_notifications">Xóa thông báo</string>
-    <string name="forums_moderation_settings">Cài đặt kiểm duyệt</string>
     <string name="forums_moderation_queue_empty">Không có gì đang chờ</string>
     <string name="forums_moderation_pending_posts">Bài đăng đang chờ</string>
     <string name="forums_moderation_pending_comments">Bình luận đang chờ</string>

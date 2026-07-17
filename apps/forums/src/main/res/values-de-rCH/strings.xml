@@ -131,7 +131,6 @@
     <string name="forums_settings_fingerprint">Fingerabdruck: %1$s</string>
     <string name="forums_settings_clear_notifications">Benachrichtigungen löschen</string>
     <string name="forums_moderation_title">Moderation</string>
-    <string name="forums_moderation_settings">Moderationseinstellungen</string>
     <string name="forums_moderation_tab_queue">Warteschlange</string>
     <string name="forums_moderation_tab_reports">Meldungen</string>
     <string name="forums_moderation_tab_log">Protokoll</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Комментарийдин тегдери үчүн көрсөтмө</string>
     <string name="forums_settings_fingerprint">Манжа изи: %1$s</string>
     <string name="forums_settings_clear_notifications">Билдирмелерди тазалоо</string>
-    <string name="forums_moderation_settings">Модерация жөндөөлөрү</string>
     <string name="forums_moderation_queue_empty">Күтүүдө эч нерсе жок</string>
     <string name="forums_moderation_pending_posts">Күтүүдөгү жазуулар</string>
     <string name="forums_moderation_pending_comments">Күтүүдөгү комментарийлер</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">ਟਿੱਪਣੀ ਟੈਗਾਂ ਲਈ ਪ੍ਰੋਂਪਟ</string>
     <string name="forums_settings_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ: %1$s</string>
     <string name="forums_settings_clear_notifications">ਸੂਚਨਾਵਾਂ ਸਾਫ਼ ਕਰੋ</string>
-    <string name="forums_moderation_settings">ਸੰਚਾਲਨ ਸੈਟਿੰਗਜ਼</string>
     <string name="forums_moderation_queue_empty">ਕੁਝ ਵੀ ਬਕਾਇਆ ਨਹੀਂ</string>
     <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ</string>
     <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ</string>

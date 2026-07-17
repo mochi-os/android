@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt för kommentarstaggar</string>
     <string name="forums_settings_fingerprint">Fingeravtryck: %1$s</string>
     <string name="forums_settings_clear_notifications">Rensa aviseringar</string>
-    <string name="forums_moderation_settings">Modereringsinställningar</string>
     <string name="forums_moderation_queue_empty">Inget väntande</string>
     <string name="forums_moderation_pending_posts">Väntande inlägg</string>
     <string name="forums_moderation_pending_comments">Väntande kommentarer</string>

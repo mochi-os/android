@@ -334,6 +334,11 @@ class ForumSettingsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(error = null)
     }
 
+    /** Post [messageRes] to the settings screen's snackbar. */
+    fun setActionMessage(messageRes: Int) {
+        _uiState.value = _uiState.value.copy(actionMessage = messageRes)
+    }
+
     fun clearActionMessage() {
         _uiState.value = _uiState.value.copy(actionMessage = null)
     }

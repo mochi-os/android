@@ -130,7 +130,6 @@
     <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
     <string name="forums_settings_clear_notifications">Clear notifications</string>
     <string name="forums_moderation_title">Moderation</string>
-    <string name="forums_moderation_settings">Moderation settings</string>
     <string name="forums_moderation_tab_queue">Queue</string>
     <string name="forums_moderation_tab_reports">Reports</string>
     <string name="forums_moderation_tab_log">Log</string>

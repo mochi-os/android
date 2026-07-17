@@ -131,7 +131,6 @@
     <string name="forums_settings_fingerprint">Empreinte : %1$s</string>
     <string name="forums_settings_clear_notifications">Effacer les notifications</string>
     <string name="forums_moderation_title">Modération</string>
-    <string name="forums_moderation_settings">Paramètres de modération</string>
     <string name="forums_moderation_tab_queue">File d\'attente</string>
     <string name="forums_moderation_tab_reports">Signalements</string>
     <string name="forums_moderation_tab_log">Journal</string>

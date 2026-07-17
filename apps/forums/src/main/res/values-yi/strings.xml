@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">פּאָדערונג פֿאַר קאָמענטאַר־טאַגן</string>
     <string name="forums_settings_fingerprint">פֿינגער־אָפּדרוק: %1$s</string>
     <string name="forums_settings_clear_notifications">רייניקן מעלדונגען</string>
-    <string name="forums_moderation_settings">מאָדעראַציע־אײַנשטעלונגען</string>
     <string name="forums_moderation_queue_empty">גאָרנישט וואַרט</string>
     <string name="forums_moderation_pending_posts">וואַרטנדיקע פּאָסטן</string>
     <string name="forums_moderation_pending_comments">וואַרטנדיקע קאָמענטאַרן</string>

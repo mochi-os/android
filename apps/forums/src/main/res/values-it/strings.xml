@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Prompt per i tag dei commenti</string>
     <string name="forums_settings_fingerprint">Impronta: %1$s</string>
     <string name="forums_settings_clear_notifications">Cancella notifiche</string>
-    <string name="forums_moderation_settings">Impostazioni di moderazione</string>
     <string name="forums_moderation_queue_empty">Nessun elemento in sospeso</string>
     <string name="forums_moderation_pending_posts">Post in sospeso</string>
     <string name="forums_moderation_pending_comments">Commenti in sospeso</string>

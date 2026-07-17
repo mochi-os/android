@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Indicación para etiquetas de comentario</string>
     <string name="forums_settings_fingerprint">Pegada dixital: %1$s</string>
     <string name="forums_settings_clear_notifications">Borrar notificacións</string>
-    <string name="forums_moderation_settings">Configuración de moderación</string>
     <string name="forums_moderation_queue_empty">Nada pendente</string>
     <string name="forums_moderation_pending_posts">Publicacións pendentes</string>
     <string name="forums_moderation_pending_comments">Comentarios pendentes</string>

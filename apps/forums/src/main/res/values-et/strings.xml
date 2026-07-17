@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Kommentaaride siltide viip</string>
     <string name="forums_settings_fingerprint">Sõrmejälg: %1$s</string>
     <string name="forums_settings_clear_notifications">Tühjenda teavitused</string>
-    <string name="forums_moderation_settings">Modereerimise sätted</string>
     <string name="forums_moderation_queue_empty">Midagi ootel pole</string>
     <string name="forums_moderation_pending_posts">Ootel postitused</string>
     <string name="forums_moderation_pending_comments">Ootel kommentaarid</string>

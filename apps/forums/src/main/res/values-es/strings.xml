@@ -170,7 +170,6 @@
     <string name="forums_ai_comment_prompt_label">Indicación para etiquetas de comentario</string>
     <string name="forums_settings_fingerprint">Huella: %1$s</string>
     <string name="forums_settings_clear_notifications">Borrar notificaciones</string>
-    <string name="forums_moderation_settings">Configuración de moderación</string>
     <string name="forums_moderation_queue_empty">Nada pendiente</string>
     <string name="forums_moderation_pending_posts">Publicaciones pendientes</string>
     <string name="forums_moderation_pending_comments">Comentarios pendientes</string>

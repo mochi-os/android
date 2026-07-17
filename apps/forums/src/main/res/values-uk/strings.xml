@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Запит для міток коментарів</string>
     <string name="forums_settings_fingerprint">Відбиток: %1$s</string>
     <string name="forums_settings_clear_notifications">Очистити сповіщення</string>
-    <string name="forums_moderation_settings">Налаштування модерації</string>
     <string name="forums_moderation_queue_empty">Нічого не очікує</string>
     <string name="forums_moderation_pending_posts">Публікації на розгляді</string>
     <string name="forums_moderation_pending_comments">Коментарі на розгляді</string>

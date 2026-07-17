@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">टिप्पणी ट्यागहरूको लागि प्रम्प्ट</string>
     <string name="forums_settings_fingerprint">फिङ्गरप्रिन्ट: %1$s</string>
     <string name="forums_settings_clear_notifications">सूचनाहरू खाली गर्नुहोस्</string>
-    <string name="forums_moderation_settings">मध्यस्थता सेटिङहरू</string>
     <string name="forums_moderation_queue_empty">कुनै बाँकी छैन</string>
     <string name="forums_moderation_pending_posts">बाँकी पोस्टहरू</string>
     <string name="forums_moderation_pending_comments">बाँकी टिप्पणीहरू</string>

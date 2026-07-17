@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">వ్యాఖ్య ట్యాగ్‌ల కోసం ప్రాంప్ట్</string>
     <string name="forums_settings_fingerprint">ఫింగర్‌ప్రింట్: %1$s</string>
     <string name="forums_settings_clear_notifications">నోటిఫికేషన్‌లను క్లియర్ చేయండి</string>
-    <string name="forums_moderation_settings">మోడరేషన్ సెట్టింగ్‌లు</string>
     <string name="forums_moderation_queue_empty">పెండింగ్‌లో ఏదీ లేదు</string>
     <string name="forums_moderation_pending_posts">పెండింగ్ పోస్ట్‌లు</string>
     <string name="forums_moderation_pending_comments">పెండింగ్ వ్యాఖ్యలు</string>

@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Дархост барои тегҳои шарҳ</string>
     <string name="forums_settings_fingerprint">Изи ангушт: %1$s</string>
     <string name="forums_settings_clear_notifications">Огоҳномаҳоро тоза кунед</string>
-    <string name="forums_moderation_settings">Танзимоти модератсия</string>
     <string name="forums_moderation_queue_empty">Чизе дар интизорӣ нест</string>
     <string name="forums_moderation_pending_posts">Паёмҳои дар интизорӣ</string>
     <string name="forums_moderation_pending_comments">Шарҳҳои дар интизорӣ</string>

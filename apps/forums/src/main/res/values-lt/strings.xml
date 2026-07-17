@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Užklausa komentarų žymoms</string>
     <string name="forums_settings_fingerprint">Atspaudas: %1$s</string>
     <string name="forums_settings_clear_notifications">Išvalyti pranešimus</string>
-    <string name="forums_moderation_settings">Moderavimo nustatymai</string>
     <string name="forums_moderation_queue_empty">Nieko nelaukia</string>
     <string name="forums_moderation_pending_posts">Laukiantys įrašai</string>
     <string name="forums_moderation_pending_comments">Laukiantys komentarai</string>

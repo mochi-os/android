@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">Brodadh airson tagaichean nam beachd</string>
     <string name="forums_settings_fingerprint">Lorg-meòir: %1$s</string>
     <string name="forums_settings_clear_notifications">Falamhaich na brathan</string>
-    <string name="forums_moderation_settings">Roghainnean modarataireachd</string>
     <string name="forums_moderation_queue_empty">Chan eil dad ri dhèanamh</string>
     <string name="forums_moderation_pending_posts">Postaichean a\' feitheamh</string>
     <string name="forums_moderation_pending_comments">Beachdan a\' feitheamh</string>

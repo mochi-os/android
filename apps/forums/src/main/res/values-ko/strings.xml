@@ -172,7 +172,6 @@
     <string name="forums_ai_comment_prompt_label">댓글 태그용 프롬프트</string>
     <string name="forums_settings_fingerprint">지문: %1$s</string>
     <string name="forums_settings_clear_notifications">알림 지우기</string>
-    <string name="forums_moderation_settings">조정 설정</string>
     <string name="forums_moderation_queue_empty">대기 중인 항목이 없습니다</string>
     <string name="forums_moderation_pending_posts">대기 중인 게시물</string>
     <string name="forums_moderation_pending_comments">대기 중인 댓글</string>
