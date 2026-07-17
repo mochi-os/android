@@ -55,6 +55,9 @@ sealed interface FeedActionEvent {
     /** An RSS feed URL is ready for the screen to copy to the clipboard. */
     data class RssUrlReady(val url: String) : FeedActionEvent
 
+    /** A share link is ready for the screen to hand to the system share sheet. */
+    data class ShareLinkReady(val link: String) : FeedActionEvent
+
     /** Unsubscribe succeeded; the screen should leave this feed. */
     data object Unsubscribed : FeedActionEvent
 
@@ -214,6 +217,21 @@ class FeedViewModel @Inject constructor(
                     "$serverUrl/feeds/$feedId/-/rss?token=$token"
                 }
                 _actionEvents.emit(FeedActionEvent.RssUrlReady(url))
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Fetch the feed's `mochi://<peer>/<feed>` link and hand it to the screen for
+     * the system share sheet. The server assembles the link, so the peer id never
+     * has to be resolved client-side.
+     */
+    fun shareLink() {
+        viewModelScope.launch {
+            try {
+                _actionEvents.emit(FeedActionEvent.ShareLinkReady(repository.shareFeed(feedId)))
             } catch (e: Exception) {
                 _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }

@@ -495,6 +495,10 @@ class ForumsRepository @Inject constructor(
     suspend fun getRssToken(entity: String, mode: String = "posts"): RssTokenResponse =
         api.getRssToken(entity, mode).unwrap()
 
+    /** The forum's shareable `mochi://<peer>/<forum>` link, built by the server. */
+    suspend fun shareForum(forumId: String): String =
+        api.shareForum(forumId).unwrap().link
+
     suspend fun getForumTags(forumId: String): List<org.mochios.forums.api.ForumTagCount> =
         api.getForumTags(forumId).unwrap().tags
 

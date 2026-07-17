@@ -186,6 +186,16 @@ data class RssTokenResponse(
     val url: String = "",
 )
 
+/**
+ * Response of `{forumId}/-/share`: the shareable [link]
+ * (`mochi://<peer>/<forum>`) plus the [peer] and [forum] it is built from.
+ */
+data class ShareResponse(
+    val forum: String = "",
+    val link: String = "",
+    val peer: String = "",
+)
+
 data class ForumTagCount(val label: String = "", val count: Int = 0)
 
 data class ForumTagsResponse(
@@ -682,6 +692,11 @@ interface ForumsApi {
         @Query("entity") entity: String,
         @Query("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
+
+    @POST("{forumId}/-/share")
+    suspend fun shareForum(
+        @Path("forumId") forumId: String,
+    ): Response<ApiResponse<ShareResponse>>
 
     @GET("{forumId}/-/tags")
     suspend fun getForumTags(@Path("forumId") forumId: String): Response<ApiResponse<ForumTagsResponse>>

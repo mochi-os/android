@@ -263,6 +263,15 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /** The feed's shareable `mochi://<peer>/<feed>` link, built by the server. */
+    suspend fun shareFeed(feedId: String): String {
+        return try {
+            api.shareFeed(feedId).unwrap().link
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun searchUsers(query: String): List<User> {
         return try {
             api.searchUsers(query).unwrap().results

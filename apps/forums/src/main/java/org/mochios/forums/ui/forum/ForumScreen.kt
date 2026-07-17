@@ -6,6 +6,8 @@
 package org.mochios.forums.ui.forum
 
 import android.content.ClipData
+import android.content.Intent
+import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,22 +21,22 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
-import android.content.Context
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Forum
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
@@ -42,7 +44,6 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
@@ -92,6 +93,7 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.core.content.edit
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -108,8 +110,8 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
-import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -119,7 +121,6 @@ import org.mochios.forums.ui.forumlist.CreateForumDialog
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
-import androidx.core.content.edit
 
 /**
  * Width reserved for a post card's action strip. Sized for the full set — save,
@@ -341,8 +342,10 @@ private fun ForumContent(
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
 
     val snackbar = remember { SnackbarHostState() }
+    val context = LocalContext.current
     val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)
     val rssCopiedMessage = stringResource(R.string.forums_rss_copied)
+    val shareLinkTitle = stringResource(R.string.forums_share_link_title)
 
     // Silently reload the forum when it returns to the foreground — e.g. after
     // editing the banner in settings — so the change shows without a manual
@@ -367,6 +370,8 @@ private fun ForumContent(
                     )
                     snackbar.showSnackbar(rssCopiedMessage)
                 }
+
+                is ForumEvent.ShareLink -> shareLink(context, event.link, shareLinkTitle)
 
                 is ForumEvent.Unsubscribed -> onUnsubscribed()
                 is ForumEvent.ShowError -> snackbar.showSnackbar(event.error.userMessage())
@@ -521,6 +526,26 @@ private fun ForumContent(
                                             )
                                         },
                                         onClick = { showRssSubmenu = true }
+                                    )
+                                }
+                                // Sharing a forum is a manager's call, so this
+                                // sits behind the same gate as Settings. The
+                                // aggregate has no single forum to share.
+                                if (!isAll && uiState.canManage && uiState.forum.id.isNotEmpty()) {
+                                    DropdownMenuItem(
+                                        text = {
+                                            Text(stringResource(R.string.forums_link))
+                                        },
+                                        leadingIcon = {
+                                            Icon(
+                                                Icons.Default.Link,
+                                                contentDescription = null
+                                            )
+                                        },
+                                        onClick = {
+                                            showOverflowMenu = false
+                                            viewModel.shareLink()
+                                        }
                                     )
                                 }
                                 if (uiState.canManage && uiState.forum.id.isNotEmpty()) {
@@ -705,6 +730,23 @@ private fun ForumContent(
             onDismiss = { showUnsubscribeConfirm = false },
         )
     }
+}
+
+/**
+ * Hand [link] to the system share sheet, whose target list already includes
+ * "Copy" — so there is no in-app copy affordance to maintain.
+ */
+private fun shareLink(context: Context, link: String, title: String) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, link)
+        // Names the sheet's content preview. Android 10+ ignores the
+        // createChooser title, so without this the sheet reads "Sharing text".
+        putExtra(Intent.EXTRA_TITLE, title)
+    }
+    val chooser = Intent.createChooser(intent, title)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
 }
 
 @Composable

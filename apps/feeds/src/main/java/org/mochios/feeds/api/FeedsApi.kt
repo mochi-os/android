@@ -126,6 +126,16 @@ data class RssTokenResponse(
     val token: String = ""
 )
 
+/**
+ * Response of `{feedId}/-/share`: the shareable [link] (`mochi://<peer>/<feed>`)
+ * plus the [peer] and [feed] it is built from.
+ */
+data class ShareResponse(
+    val feed: String = "",
+    val link: String = "",
+    val peer: String = ""
+)
+
 data class BannerResponse(
     val banner: String = ""
 )
@@ -229,6 +239,11 @@ interface FeedsApi {
         @Field("entity") entity: String,
         @Field("mode") mode: String
     ): Response<ApiResponse<RssTokenResponse>>
+
+    @POST("{feedId}/-/share")
+    suspend fun shareFeed(
+        @Path("feedId") feedId: String
+    ): Response<ApiResponse<ShareResponse>>
 
     @FormUrlEncoded
     @POST("-/users/search")

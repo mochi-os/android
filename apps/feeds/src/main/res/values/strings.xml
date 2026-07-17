@@ -194,6 +194,8 @@
 
     <!-- Feed overflow menu: RSS feed submenu and unsubscribe -->
     <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Feed link</string>
     <string name="feeds_rss_mode_posts">Posts</string>
     <string name="feeds_rss_mode_posts_comments">Posts and comments</string>
     <string name="feeds_unsubscribe">Unsubscribe</string>
