@@ -8,7 +8,6 @@ package org.mochios.forums.api
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
-import org.mochios.android.model.AccessRule
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.DirectoryEntry
@@ -146,9 +145,27 @@ data class ModerationLogResponse(
     val entries: List<ModerationLogEntry> = emptyList(),
 )
 
+/**
+ * One access entry as the forums API serialises it: the subject in [id] (an
+ * entity id, `@group`, `*` for anyone, or `+` for authenticated users) and the
+ * granted level in [level] (`*` for the owner). [name] is the resolved display
+ * name, empty for the wildcard subjects.
+ */
+data class ForumAccessEntry(
+    val id: String = "",
+    val isOwner: Boolean = false,
+    val level: String = "",
+    val name: String = "",
+)
+
+/**
+ * Response of `-/access`: the forum, its access entries, and the levels the
+ * server offers for this forum (lowest to highest).
+ */
 data class AccessResponse(
     val forum: Forum = Forum(),
-    val rules: List<AccessRule> = emptyList(),
+    val access: List<ForumAccessEntry> = emptyList(),
+    val levels: List<String> = emptyList(),
 )
 
 data class MembersResponse(

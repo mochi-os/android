@@ -32,6 +32,8 @@ data class ForumSettingsUiState(
     val actionMessage: Int? = null,
     val deleted: Boolean = false,
     val accessRules: List<AccessRule> = emptyList(),
+    /** Levels this forum offers, highest first; empty until access loads. */
+    val accessLevels: List<String> = emptyList(),
     val members: List<ForumMember> = emptyList(),
     val memberSearchResults: List<ForumMember> = emptyList(),
     val aiPrompts: AiPrompts? = null,
@@ -103,9 +105,25 @@ class ForumSettingsViewModel @Inject constructor(
             try {
                 val r = repository.getAccess(forumId)
                 _uiState.value = _uiState.value.copy(
-                    accessRules = r.rules.sortedWith(compareBy(NaturalCompare) {
-                        it.name ?: it.subject
-                    })
+                    // The API keys each entry by `id`/`level`; the shared UI row
+                    // speaks `subject`/`operation`. Entries are grants by
+                    // definition — a revoked subject is simply absent.
+                    accessRules = r.access
+                        .map { entry ->
+                            AccessRule(
+                                subject = entry.id,
+                                operation = entry.level,
+                                grant = 1,
+                                name = entry.name,
+                                isOwner = entry.isOwner,
+                            )
+                        }
+                        .sortedWith(compareBy(NaturalCompare) { rule ->
+                            rule.name?.ifBlank { rule.subject } ?: rule.subject
+                        }),
+                    // The server decides which levels this forum offers; it
+                    // lists them lowest-first, the UI shows highest-first.
+                    accessLevels = r.levels.reversed(),
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
