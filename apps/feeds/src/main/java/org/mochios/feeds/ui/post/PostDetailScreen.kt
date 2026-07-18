@@ -35,7 +35,9 @@ import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.LocalOffer
@@ -110,6 +112,7 @@ import org.mochios.android.R as MochiR
 fun PostDetailScreen(
     onNavigateBack: () -> Unit,
     onEditPost: (feedId: String, postId: String) -> Unit,
+    onNavigateToSources: (feedId: String, sourceUrl: String) -> Unit,
     viewModel: PostDetailViewModel = hiltViewModel()
 ) {
     val post by viewModel.post.collectAsState()
@@ -127,6 +130,7 @@ fun PostDetailScreen(
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showDeleteCommentDialog by remember { mutableStateOf<String?>(null) }
+    var showOverflowMenu by remember { mutableStateOf(false) }
 
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -169,6 +173,37 @@ fun PostDetailScreen(
                                 Icons.Default.Delete,
                                 contentDescription = stringResource(MochiR.string.common_delete)
                             )
+                        }
+                        // Sources is manager-only, like the feed screen's entry,
+                        // and only offered when the post was ingested from a
+                        // source (feed-to-feed and memories posts land here;
+                        // RSS posts open the source article screen instead).
+                        // The overflow menu itself only appears when it has
+                        // this entry to show.
+                        post?.source?.url?.takeIf { it.isNotEmpty() }?.let { sourceUrl ->
+                            Box {
+                                IconButton(onClick = { showOverflowMenu = true }) {
+                                    Icon(
+                                        Icons.Default.MoreVert,
+                                        contentDescription = stringResource(MochiR.string.common_more_options)
+                                    )
+                                }
+                                DropdownMenu(
+                                    expanded = showOverflowMenu,
+                                    onDismissRequest = { showOverflowMenu = false }
+                                ) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                        leadingIcon = {
+                                            Icon(Icons.Default.Link, contentDescription = null)
+                                        },
+                                        onClick = {
+                                            showOverflowMenu = false
+                                            onNavigateToSources(viewModel.feedId, sourceUrl)
+                                        }
+                                    )
+                                }
+                            }
                         }
                     }
                 },

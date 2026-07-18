@@ -128,6 +128,9 @@ fun NavGraphBuilder.feedsNavGraph(
             onEditPost = { feedId, postId ->
                 navController.navigate(FeedsApp.createPost(feedId = feedId, postId = postId))
             },
+            onNavigateToSources = { feedId, sourceUrl ->
+                navController.navigate(FeedsApp.feedSources(feedId, sourceUrl))
+            },
         )
     }
 
@@ -156,6 +159,9 @@ fun NavGraphBuilder.feedsNavGraph(
             onNavigateBack = { navController.popBackStack() },
             onEditPost = { feedId, postId ->
                 navController.navigate(FeedsApp.createPost(feedId = feedId, postId = postId))
+            },
+            onNavigateToSources = { feedId, ingestionUrl ->
+                navController.navigate(FeedsApp.feedSources(feedId, ingestionUrl))
             },
         )
     }

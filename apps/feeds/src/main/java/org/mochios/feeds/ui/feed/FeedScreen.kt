@@ -18,6 +18,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -52,6 +53,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.BrokenImage
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Menu
@@ -133,6 +135,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import coil3.compose.AsyncImage
+import coil3.compose.AsyncImagePainter
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlin.math.abs
 import kotlinx.coroutines.Job
@@ -1193,6 +1196,58 @@ private fun Modifier.noRippleClickable(onClick: () -> Unit): Modifier {
 }
 
 @Composable
+private fun PostImage(
+    url: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier,
+    alignment: Alignment = Alignment.Center,
+    onClick: (() -> Unit)? = null,
+) {
+    // Layout-stable image: the caller fixes the container's size up front
+    // (height or aspect ratio) because posts carry no image dimensions, so
+    // the space is reserved before the bitmap arrives and the surrounding
+    // layout never shifts. A neutral tint marks the reserved space while
+    // loading; a broken-image icon takes it over if loading fails. The
+    // lightbox tap only arms once the image has actually loaded — there's
+    // nothing to show full-screen for a pending or failed URL.
+    var state by remember(url) {
+        mutableStateOf<AsyncImagePainter.State>(AsyncImagePainter.State.Empty)
+    }
+    val loaded = state is AsyncImagePainter.State.Success
+    Box(
+        modifier = modifier.then(
+            if (onClick != null && loaded) Modifier.clickable { onClick() } else Modifier
+        ),
+        contentAlignment = Alignment.Center,
+    ) {
+        if (!loaded) {
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f))
+            )
+        }
+        if (state is AsyncImagePainter.State.Error) {
+            Icon(
+                Icons.Default.BrokenImage,
+                contentDescription = contentDescription,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(48.dp)
+            )
+        } else {
+            AsyncImage(
+                model = url,
+                contentDescription = contentDescription,
+                contentScale = ContentScale.Fit,
+                alignment = alignment,
+                onState = { state = it },
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+    }
+}
+
+@Composable
 private fun PostCard(
     post: Post,
     fallbackFeedId: String,
@@ -1240,26 +1295,30 @@ private fun PostCard(
             .background(MaterialTheme.colorScheme.surface)
     ) {
         if (heroUrl != null) {
-            // Square corners; height follows the image's ratio up to a half-screen
-            // cap. ContentScale.Fit means a landscape image fills the width
-            // edge-to-edge, while a very tall image (e.g. a web comic) is shown
-            // whole, contained within the cap (with side margins), rather than
-            // cropped top and bottom. Tap opens the full-screen lightbox.
-            val maxHeroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
-            AsyncImage(
-                model = heroUrl,
+            // Square corners; the hero region is a FIXED half-screen height,
+            // reserved from the first frame — the post data carries no image
+            // dimensions, so this is the only way a slow image load can't
+            // shift (and re-truncate) the text below it. ContentScale.Fit
+            // means a landscape image fills the width edge-to-edge, while a
+            // very tall image (e.g. a web comic) is shown whole, contained
+            // within the region (with side margins), rather than cropped top
+            // and bottom. Top-aligned so the image stays full-bleed against
+            // the screen edge. Tap opens the full-screen lightbox.
+            val heroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
+            PostImage(
+                url = heroUrl,
                 contentDescription = stringResource(R.string.feeds_image_preview),
+                alignment = Alignment.TopCenter,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .heightIn(max = maxHeroHeight)
-                    .clickable {
-                        lightboxState = if (heroFromAttachment) {
-                            attachmentImageUrls to 0
-                        } else {
-                            listOf(heroUrl) to 0
-                        }
-                    },
-                contentScale = ContentScale.Fit,
+                    .height(heroHeight),
+                onClick = {
+                    lightboxState = if (heroFromAttachment) {
+                        attachmentImageUrls to 0
+                    } else {
+                        listOf(heroUrl) to 0
+                    }
+                },
             )
         }
         // One post = one screen. The inner column is pinned to the viewport
@@ -1452,17 +1511,18 @@ private fun PostCard(
                     }
 
                     // RSS preview image — only when it isn't already the hero on top.
-                    // Tapping opens the lightbox (web parity).
+                    // Fixed 16:9 region for the same no-layout-shift reason as the
+                    // hero. Tapping opens the lightbox (web parity).
                     if (rssImageUrl != null && rssImageUrl != heroUrl) {
                         Spacer(modifier = Modifier.height(8.dp))
-                        AsyncImage(
-                            model = rssImageUrl,
+                        PostImage(
+                            url = rssImageUrl,
                             contentDescription = stringResource(R.string.feeds_image_preview),
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clip(RoundedCornerShape(8.dp))
-                                .clickable { lightboxState = listOf(rssImageUrl) to 0 },
-                            contentScale = ContentScale.Fit
+                                .aspectRatio(16f / 9f)
+                                .clip(RoundedCornerShape(8.dp)),
+                            onClick = { lightboxState = listOf(rssImageUrl) to 0 },
                         )
                     }
 

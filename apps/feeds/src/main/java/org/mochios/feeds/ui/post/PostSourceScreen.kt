@@ -43,6 +43,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material.icons.filled.Refresh
@@ -107,6 +108,7 @@ fun PostSourceScreen(
     sourceUrl: String,
     onNavigateBack: () -> Unit,
     onEditPost: (feedId: String, postId: String) -> Unit,
+    onNavigateToSources: (feedId: String, sourceUrl: String) -> Unit,
     initiallyExpanded: Boolean = false,
     viewModel: PostDetailViewModel = hiltViewModel()
 ) {
@@ -244,6 +246,23 @@ fun PostSourceScreen(
                                 }
                             )
                             if (permissions.manage) {
+                                // Sources is manager-only, like the feed screen's
+                                // entry. post.source.url is the ingestion source
+                                // (RSS XML) URL — the key the Sources list scrolls
+                                // to — not the article URL in this screen's
+                                // sourceUrl parameter.
+                                post?.source?.url?.takeIf { it.isNotEmpty() }?.let { ingestionUrl ->
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                        leadingIcon = {
+                                            Icon(Icons.Default.Link, contentDescription = null)
+                                        },
+                                        onClick = {
+                                            showOverflowMenu = false
+                                            onNavigateToSources(viewModel.feedId, ingestionUrl)
+                                        }
+                                    )
+                                }
                                 DropdownMenuItem(
                                     text = { Text(stringResource(MochiR.string.common_edit)) },
                                     leadingIcon = {
