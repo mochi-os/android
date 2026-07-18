@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -18,6 +20,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
@@ -38,6 +41,9 @@ class FeedSettingsViewModel @Inject constructor(
 
     val feedId: String = savedStateHandle.get<String>("feedId") ?: ""
 
+    /** In-flight user search, cancelled by the next keystroke. */
+    private var userSearchJob: Job? = null
+
     // General tab
     private val _feedInfo = MutableStateFlow<Feed?>(null)
     val feedInfo: StateFlow<Feed?> = _feedInfo.asStateFlow()
@@ -55,11 +61,6 @@ class FeedSettingsViewModel @Inject constructor(
 
     private val _rssMode = MutableStateFlow("posts")
     val rssMode: StateFlow<String> = _rssMode.asStateFlow()
-
-    private val _banner = MutableStateFlow("")
-    val banner: StateFlow<String> = _banner.asStateFlow()
-
-    private val _bannerOriginal = MutableStateFlow("")
 
     // Sources tab
     private val _sources = MutableStateFlow<List<Source>>(emptyList())
@@ -103,8 +104,10 @@ class FeedSettingsViewModel @Inject constructor(
     private val _aiAccounts = MutableStateFlow<List<org.mochios.android.model.Account>>(emptyList())
     val aiAccounts: StateFlow<List<org.mochios.android.model.Account>> = _aiAccounts.asStateFlow()
 
-    private val _aiPrompts = MutableStateFlow<Map<String, String>>(emptyMap())
-    val aiPrompts: StateFlow<Map<String, String>> = _aiPrompts.asStateFlow()
+    // Custom prompt overrides keyed by type — empty when the feed uses the
+    // server default for that prompt.
+    private val _aiOverrides = MutableStateFlow<Map<String, String>>(emptyMap())
+    val aiOverrides: StateFlow<Map<String, String>> = _aiOverrides.asStateFlow()
 
     private val _aiDefaults = MutableStateFlow<Map<String, String>>(emptyMap())
     val aiDefaults: StateFlow<Map<String, String>> = _aiDefaults.asStateFlow()
@@ -144,6 +147,10 @@ class FeedSettingsViewModel @Inject constructor(
             _isLoading.value = true
             try {
                 val info = repository.getFeedInfo(feedId)
+                if (info.permissions.manage) {
+                    _aiAccounts.value = repository.listAiAccounts()
+                        .sortedWith(compareBy(NaturalCompare) { it.label })
+                }
                 _feedInfo.value = info.feed
                 _permissions.value = info.permissions
                 _feedName.value = info.feed.name
@@ -226,41 +233,16 @@ class FeedSettingsViewModel @Inject constructor(
 
     // --- Banner ---
 
-    fun loadBanner() {
+    /**
+     * Persist [text] as the feed's banner. The current value comes from the feed
+     * information load, so there is no separate banner fetch.
+     */
+    fun saveBanner(text: String) {
         viewModelScope.launch {
             try {
-                val text = repository.getBanner(feedId)
-                _banner.value = text
-                _bannerOriginal.value = text
-            } catch (_: Exception) {
-                // Non-critical
-            }
-        }
-    }
-
-    fun setBannerText(text: String) {
-        _banner.value = text
-    }
-
-    fun saveBanner() {
-        viewModelScope.launch {
-            try {
-                repository.setBanner(feedId, _banner.value)
-                _bannerOriginal.value = _banner.value
+                repository.setBanner(feedId, text)
+                _feedInfo.value = _feedInfo.value?.copy(banner = text)
                 _actionMessage.value = R.string.feeds_settings_banner_saved
-            } catch (e: Exception) {
-                _error.value = e.toMochiError()
-            }
-        }
-    }
-
-    fun clearBanner() {
-        _banner.value = ""
-        viewModelScope.launch {
-            try {
-                repository.setBanner(feedId, "")
-                _bannerOriginal.value = ""
-                _actionMessage.value = R.string.feeds_settings_banner_cleared
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             }
@@ -484,15 +466,21 @@ class FeedSettingsViewModel @Inject constructor(
     }
 
     fun searchUsers(query: String) {
+        // Each keystroke replaces the last: without this a typed name is one
+        // request per letter, and a slow early response can land after a later
+        // one and overwrite the newer results.
+        userSearchJob?.cancel()
         // Below two characters there's nothing to search — clear any prior
         // results so an emptied field doesn't keep showing stale matches.
         if (query.length < 2) {
             _userSearchResults.value = emptyList()
             return
         }
-        viewModelScope.launch {
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
-                _userSearchResults.value = repository.searchUsers(query)
+                val results = repository.searchUsers(query)
+                _userSearchResults.value = results
             } catch (_: Exception) {
                 _userSearchResults.value = emptyList()
             }
@@ -576,34 +564,24 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun loadAiAccounts() {
-        viewModelScope.launch {
-            _aiAccounts.value = repository.listAiAccounts()
-                .sortedWith(compareBy(NaturalCompare) { it.label })
-        }
-    }
-
     fun loadAiPrompts() {
         viewModelScope.launch {
             try {
                 val (defaults, overrides) = repository.getAiPrompts(feedId)
                 _aiDefaults.value = defaults
-                _aiPrompts.value = defaults + overrides
+                _aiOverrides.value = overrides
             } catch (_: Exception) {
                 // Non-critical
             }
         }
     }
 
-    fun setAiPromptText(type: String, text: String) {
-        _aiPrompts.value = _aiPrompts.value + (type to text)
-    }
-
-    fun saveAiPrompt(type: String) {
-        val prompt = _aiPrompts.value[type] ?: ""
+    /** Persist [prompt] as the custom override for [type]. */
+    fun saveAiPrompt(type: String, prompt: String) {
         viewModelScope.launch {
             try {
                 repository.setAiPrompt(feedId, type, prompt)
+                _aiOverrides.value += (type to prompt)
                 _actionMessage.value = R.string.feeds_settings_prompt_saved
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -611,12 +589,12 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
+    /** Clear the custom override for [type] (server falls back to the default). */
     fun resetAiPrompt(type: String) {
-        val defaultVal = _aiDefaults.value[type] ?: ""
-        _aiPrompts.value = _aiPrompts.value + (type to defaultVal)
         viewModelScope.launch {
             try {
                 repository.setAiPrompt(feedId, type, "")
+                _aiOverrides.value -= type
                 _actionMessage.value = R.string.feeds_settings_prompt_reset
             } catch (_: Exception) { }
         }

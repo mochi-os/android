@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Aka feedat janiw juk\'amp yatiyawinak katuqxätati. Kuna pachas mayamp suscribit\'asismawa.</string>
     <string name="feeds_access_select_rule">Mantañ kamachi ajllima</string>
     <string name="feeds_access_authenticated_desc">Taqi khitinakatix mantatäpki ukanaka</string>
+    <string name="feeds_banner_hint">Aka foror suma jutawa…</string>
+    <string name="feeds_banner_dismiss">Banner apaqaña</string>
+    <string name="feeds_members_search">Uskutanak chhijllaña</string>
+    <string name="feeds_ai_prompt_default">Default</string>
+    <string name="feeds_ai_prompt_custom">Personalizata</string>
+    <string name="feeds_ai_prompt_variables">Variablenaka: %1$s</string>
+    <string name="feeds_link">Enlace</string>
+    <string name="feeds_scroll_to_top">Patxaru kutiña</string>
+    <string name="feeds_share_link_title">Feed enlace</string>
 </resources>

@@ -16,6 +16,7 @@ import android.os.IBinder
 import android.util.Log
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -65,11 +66,15 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class PushService : Service() {
 
-    @Inject lateinit var webSocket: MochiWebSocket
-    @Inject lateinit var okHttpClient: OkHttpClient
-    @Inject lateinit var gson: Gson
+    @Inject
+    lateinit var webSocket: MochiWebSocket
+    @Inject
+    lateinit var okHttpClient: OkHttpClient
+    @Inject
+    lateinit var gson: Gson
 
     private val store by lazy { DistributorStore(applicationContext) }
+
     // identity → subscriptionId. ConcurrentHashMap so reconcile() can claim
     // a slot atomically via putIfAbsent — onStartCommand can fire reentrantly
     // (Hilt re-init, system restarts, accountsFlow emissions) and we'd
@@ -86,20 +91,24 @@ class PushService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        // System-driven STICKY restart can still bring this service back even
-        // after the user has moved to FCM and our own callers have stopped
-        // calling PushService.start — Android remembers the previous live
-        // instance and replays it once it has resources. Bail out before
-        // startForegroundCompat so the "listening for notifications" FG
-        // notification never appears for FCM users. Intent is null on
-        // system-driven restarts (so we can't gate off the intent); we read
-        // the cached transport from PushTransport.current instead.
+        // Always promote to the foreground first. Android requires
+        // startForeground() within ~5s of every startForegroundService() call —
+        // even on paths where we immediately stop — or it raises
+        // ForegroundServiceDidNotStartInTimeException. Then decide whether to stay:
+        //
+        // FCM users (and system-driven STICKY restarts, where intent is null so we
+        // can't gate off it — we read the cached PushTransport.current instead)
+        // don't want the UnifiedPush distributor running or its "listening for
+        // notifications" notification lingering, so we remove it and stop. A
+        // UnifiedPush start also races recordTransport(), so onStartCommand can
+        // legitimately still read transport=fcm here.
+        startForegroundCompat()
         if (PushTransport.current(applicationContext) == PushTransport.TRANSPORT_FCM) {
             Log.i(TAG, "onStartCommand: transport=fcm; stopping self")
+            stopForeground(STOP_FOREGROUND_REMOVE)
             stopSelf()
             return START_NOT_STICKY
         }
-        startForegroundCompat()
         // Initial snapshot — accountsFlow does NOT emit synchronously on
         // collection, so we have to seed from MochiAccount.all() ourselves.
         reconcile(MochiAccount.all(applicationContext))
@@ -178,10 +187,16 @@ class PushService : Service() {
                 // cookie.
                 val token = mintToken(account.server, account.session)
                 if (token == null) {
-                    Log.w(TAG, "Could not mint token for ${account.server}; WS will not authenticate")
+                    Log.w(
+                        TAG,
+                        "Could not mint token for ${account.server}; WS will not authenticate"
+                    )
                     return@launch
                 }
-                Log.i(TAG, "Subscribing to push channel on ${account.server} (identity ${account.identity})")
+                Log.i(
+                    TAG,
+                    "Subscribing to push channel on ${account.server} (identity ${account.identity})"
+                )
                 sid = webSocket.subscribe(
                     serverUrl = account.server,
                     fingerprint = FINGERPRINT,
@@ -363,11 +378,13 @@ class PushService : Service() {
         // Critical that users discover *this* path rather than swipe-to-dismiss,
         // which on Samsung pops a "Turn off ALL notifications from this app?"
         // dialog and would kill the per-app channels too.
-        val hideIntent = android.content.Intent(android.provider.Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
-            .putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, packageName)
-            .putExtra(android.provider.Settings.EXTRA_CHANNEL_ID, CHANNEL_ID)
-            .addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-        val hidePendingIntent = android.app.PendingIntent.getActivity(this, 1, hideIntent, pendingFlags)
+        val hideIntent =
+            android.content.Intent(android.provider.Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
+                .putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, packageName)
+                .putExtra(android.provider.Settings.EXTRA_CHANNEL_ID, CHANNEL_ID)
+                .addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
+        val hidePendingIntent =
+            android.app.PendingIntent.getActivity(this, 1, hideIntent, pendingFlags)
 
         val builder = androidx.core.app.NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(getString(org.mochios.android.R.string.push_service_title))
@@ -460,6 +477,36 @@ class PushService : Service() {
          */
         fun stop(context: android.content.Context) {
             context.stopService(Intent(context, PushService::class.java))
+        }
+
+        /**
+         * Drop the signed-in identity's push account server-side via
+         * `/notifications/-/accounts/remove`, so neither FCM nor UnifiedPush
+         * keeps delivering to this device after sign-out. The `id` it takes is
+         * the `accounts.id` uid the server handed back at registration — the
+         * identity is not accepted here.
+         *
+         * Call *before* clearing the session: the request carries the
+         * notifications app token, which can no longer be minted once
+         * [org.mochios.android.auth.SessionManager.clearAll] has run. A failure
+         * is logged and swallowed — a server that never got the removal must
+         * not wedge sign-out.
+         */
+        suspend fun removeAccount(context: android.content.Context) {
+            val deps = EntryPointAccessors.fromApplication(
+                context.applicationContext,
+                PushEntryPoint::class.java
+            )
+            val identity = deps.sessionManager().getBoundIdentity().orEmpty()
+            if (identity.isBlank()) return
+            val store = deps.pushAccountStore()
+            val accountId = store.read(identity) ?: return
+            runCatching { deps.notificationsRepository().removeAccount(accountId) }
+                .onSuccess {
+                    Log.i(TAG, "Removed push account $accountId")
+                    store.clear(identity)
+                }
+                .onFailure { e -> Log.w(TAG, "accounts/remove failed: ${e.message}") }
         }
     }
 }

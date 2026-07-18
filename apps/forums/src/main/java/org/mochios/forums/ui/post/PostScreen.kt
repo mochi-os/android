@@ -44,8 +44,10 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
@@ -100,9 +102,11 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
+import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.model.Tag
 import org.mochios.android.R as MochiR
 
@@ -110,6 +114,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun PostScreen(
     onBack: () -> Unit,
+    onEditPost: (forumId: String, postId: String) -> Unit,
     viewModel: PostViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -119,7 +124,6 @@ fun PostScreen(
     var draft by remember { mutableStateOf(TextFieldValue("")) }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
-    var showEditPost by remember { mutableStateOf(false) }
     var editingComment by remember { mutableStateOf<ForumComment?>(null) }
     var showReportPost by remember { mutableStateOf(false) }
     var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
@@ -156,12 +160,40 @@ fun PostScreen(
             TopAppBar(
                 title = {
                     // The post's own title — the forum name is already implied by
-                    // where the user came from.
-                    Text(
-                        text = uiState.post.title.ifBlank { stringResource(R.string.forums_loading) },
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
+                    // where the user came from. Pinned and locked lead it, the
+                    // same pairing the list card uses; locked is also why the
+                    // composer below is disabled.
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (uiState.post.pinned) {
+                            Icon(
+                                Icons.Default.PushPin,
+                                contentDescription = stringResource(
+                                    R.string.forums_post_pinned
+                                ),
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(18.dp),
+                            )
+                            Spacer(Modifier.width(6.dp))
+                        }
+                        if (uiState.post.locked) {
+                            Icon(
+                                Icons.Default.Lock,
+                                contentDescription = stringResource(
+                                    R.string.forums_post_locked
+                                ),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(18.dp),
+                            )
+                            Spacer(Modifier.width(6.dp))
+                        }
+                        Text(
+                            text = uiState.post.title.ifBlank {
+                                stringResource(R.string.forums_loading)
+                            },
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
@@ -191,7 +223,7 @@ fun PostScreen(
                                 canEdit = isPostAuthor || uiState.canModerate,
                                 canModerate = uiState.canModerate,
                                 isAuthor = isPostAuthor,
-                                onEdit = { showEditPost = true },
+                                onEdit = { onEditPost(viewModel.forumId, viewModel.postId) },
                                 onDelete = { showDeletePostConfirm = true },
                                 onPin = viewModel::pinPost,
                                 onUnpin = viewModel::unpinPost,
@@ -348,18 +380,6 @@ fun PostScreen(
         )
     }
 
-    if (showEditPost) {
-        EditPostDialog(
-            initialTitle = uiState.post.title,
-            initialBody = uiState.post.body,
-            onConfirm = { title, body ->
-                viewModel.editPost(title, body)
-                showEditPost = false
-            },
-            onDismiss = { showEditPost = false }
-        )
-    }
-
     editingComment?.let { c ->
         val ctx = androidx.compose.ui.platform.LocalContext.current
         EditCommentDialog(
@@ -395,55 +415,6 @@ fun PostScreen(
             onDismiss = { reportingComment = null }
         )
     }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun EditPostDialog(
-    initialTitle: String,
-    initialBody: String,
-    onConfirm: (String, String) -> Unit,
-    onDismiss: () -> Unit,
-) {
-    var title by remember { mutableStateOf(initialTitle) }
-    var body by remember { mutableStateOf(initialBody) }
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.forums_post_edit_title)) },
-        text = {
-            Column {
-                OutlinedTextField(
-                    value = title,
-                    onValueChange = { title = it },
-                    label = { Text(stringResource(R.string.forums_post_edit_title_field)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
-                    value = body,
-                    onValueChange = { body = it },
-                    label = { Text(stringResource(R.string.forums_post_edit_body_field)) },
-                    minLines = 3,
-                    maxLines = 8,
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
-        },
-        confirmButton = {
-            TextButton(
-                onClick = { onConfirm(title, body) },
-                enabled = title.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
-    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
@@ -887,6 +858,10 @@ private fun PostHeader(
                 count = post.comments,
                 onClick = onComment,
             )
+            // Status closes the row on the trailing edge, a size up from the
+            // list card since this is the post's own screen.
+            Spacer(Modifier.weight(1f))
+            PostBadges(status = post.status, size = StatusBadgeSize.Regular)
         }
     }
 }

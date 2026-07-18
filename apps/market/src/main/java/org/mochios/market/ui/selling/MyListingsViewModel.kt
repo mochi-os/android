@@ -103,7 +103,8 @@ class MyListingsViewModel @Inject constructor(
     private fun loadCategories() {
         viewModelScope.launch {
             try {
-                _state.value = _state.value.copy(categories = repo.listCategories())
+                val categories = repo.listCategories()
+                _state.value = _state.value.copy(categories = categories)
             } catch (_: Exception) {
                 // Categories are non-critical; cards just omit the chip.
             }
@@ -195,7 +196,8 @@ class MyListingsViewModel @Inject constructor(
     private fun loadFees() {
         viewModelScope.launch {
             try {
-                _state.value = _state.value.copy(fees = repo.getFees())
+                val fees = repo.getFees()
+                _state.value = _state.value.copy(fees = fees)
             } catch (_: Exception) {
                 // Non-fatal — the fee disclosure card just hides itself.
             }
@@ -205,7 +207,8 @@ class MyListingsViewModel @Inject constructor(
     private fun loadStripeStatus() {
         viewModelScope.launch {
             try {
-                _state.value = _state.value.copy(stripeStatus = repo.stripeStatus())
+                val status = repo.stripeStatus()
+                _state.value = _state.value.copy(stripeStatus = status)
             } catch (_: Exception) {
                 // Non-fatal — the banner just hides itself.
             }

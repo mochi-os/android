@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">このフィードからの更新を受け取らなくなります。いつでも再購読できます。</string>
     <string name="feeds_access_select_rule">アクセスルールを選択</string>
     <string name="feeds_access_authenticated_desc">ログインしているすべてのユーザー</string>
+    <string name="feeds_banner_hint">このフォーラムへようこそ…</string>
+    <string name="feeds_banner_dismiss">バナーを閉じる</string>
+    <string name="feeds_members_search">メンバーを絞り込み</string>
+    <string name="feeds_ai_prompt_default">デフォルト</string>
+    <string name="feeds_ai_prompt_custom">カスタム</string>
+    <string name="feeds_ai_prompt_variables">変数: %1$s</string>
+    <string name="feeds_link">リンク</string>
+    <string name="feeds_share_link_title">フィードのリンク</string>
+    <string name="feeds_scroll_to_top">トップに戻る</string>
 </resources>

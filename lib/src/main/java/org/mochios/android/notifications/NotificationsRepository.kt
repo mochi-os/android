@@ -60,4 +60,18 @@ class NotificationsRepository @Inject constructor(
             throw e.toMochiError()
         }
     }
+
+    /**
+     * Remove the push account [id] the server minted for this device, so it
+     * stops delivering notifications there. Call while the session is still
+     * valid — the request is authenticated with the notifications app token.
+     */
+    suspend fun removeAccount(id: String) {
+        try {
+            val resp = api.removeAccount(id)
+            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
 }

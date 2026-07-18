@@ -269,4 +269,23 @@
     <string name="feeds_unsubscribe_confirm_message">Du erhältst keine Updates mehr von diesem Feed. Du kannst ihn jederzeit wieder abonnieren.</string>
     <string name="feeds_access_select_rule">Zugriffsregel auswählen</string>
     <string name="feeds_access_authenticated_desc">Alle angemeldeten Benutzer</string>
+    <string name="feeds_banner_hint">Willkommen in diesem Forum…</string>
+    <string name="feeds_banner_dismiss">Banner schliessen</string>
+    <string name="feeds_members_search">Mitglieder filtern</string>
+    <string name="feeds_ai_prompt_default">Standard</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Feed-Link</string>
+    <string name="feeds_ai_prompt_custom">Benutzerdefiniert</string>
+    <string name="feeds_ai_prompt_variables">Variablen: %1$s</string>
+    <string name="feeds_interest_boosted">Interesse erhöht</string>
+    <string name="feeds_interest_failed">Interesse konnte nicht angepasst werden</string>
+    <string name="feeds_interest_reduced">Interesse reduziert</string>
+    <string name="feeds_interest_removed">Interesse entfernt</string>
+    <string name="feeds_saved_clear_confirm_body">Dadurch werden alle Beiträge aus deiner Liste der gespeicherten Beiträge entfernt. Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="feeds_saved_clear_confirm_title">Alle gespeicherten Beiträge löschen?</string>
+    <string name="feeds_saved_empty_subtitle">Tippe auf das Lesezeichen eines Beitrags, um ihn hier für später zu speichern.</string>
+    <string name="feeds_saved_empty_title">Noch nichts gespeichert</string>
+    <string name="feeds_saved_error_clear">Gespeicherte Beiträge konnten nicht gelöscht werden</string>
+    <string name="feeds_saved_save">Für später speichern</string>
+    <string name="feeds_scroll_to_top">Zurück nach oben</string>
 </resources>

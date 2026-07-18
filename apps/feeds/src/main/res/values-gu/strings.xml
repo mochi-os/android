@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">તમને આ ફીડમાંથી અપડેટ્સ મળવાનું બંધ થશે. તમે કોઈપણ સમયે ફરી સબ્સ્ક્રાઇબ કરી શકો છો.</string>
     <string name="feeds_access_select_rule">ઍક્સેસ નિયમ પસંદ કરો</string>
     <string name="feeds_access_authenticated_desc">લૉગ ઇન કરેલ કોઈપણ વ્યક્તિ</string>
+    <string name="feeds_banner_hint">આ ફોરમમાં આપનું સ્વાગત છે…</string>
+    <string name="feeds_banner_dismiss">બેનર રદ કરો</string>
+    <string name="feeds_members_search">સભ્યો ફિલ્ટર કરો</string>
+    <string name="feeds_ai_prompt_default">ડિફૉલ્ટ</string>
+    <string name="feeds_ai_prompt_custom">કસ્ટમ</string>
+    <string name="feeds_ai_prompt_variables">ચલો: %1$s</string>
+    <string name="feeds_link">લિંક</string>
+    <string name="feeds_share_link_title">ફીડ લિંક</string>
+    <string name="feeds_scroll_to_top">ઉપર પાછા જાઓ</string>
 </resources>

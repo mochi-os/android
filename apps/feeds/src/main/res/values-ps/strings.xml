@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">تاسو به نور د دې فیډ تازه معلومات نه ترلاسه کوئ. هر وخت بیا ګډون کولای شئ.</string>
     <string name="feeds_access_select_rule">د لاسرسي قاعده وټاکئ</string>
     <string name="feeds_access_authenticated_desc">هر څوک چې ننوتلی وي</string>
+    <string name="feeds_banner_hint">دې فورم ته ښه راغلاست…</string>
+    <string name="feeds_banner_dismiss">بانر وردکړه</string>
+    <string name="feeds_members_search">د غړو فلټر</string>
+    <string name="feeds_ai_prompt_default">ډیفالټ</string>
+    <string name="feeds_ai_prompt_custom">دودیز</string>
+    <string name="feeds_ai_prompt_variables">متغیرونه: %1$s</string>
+    <string name="feeds_link">لینک</string>
+    <string name="feeds_share_link_title">د فیډ لینک</string>
+    <string name="feeds_scroll_to_top">بېرته پورته</string>
 </resources>

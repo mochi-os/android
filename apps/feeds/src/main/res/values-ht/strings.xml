@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Ou p ap resevwa mizajou nan fil sa a ankò. Ou ka abòne ankò nenpòt kilè.</string>
     <string name="feeds_access_select_rule">Chwazi règ aksè</string>
     <string name="feeds_access_authenticated_desc">Nenpòt moun ki konekte</string>
+    <string name="feeds_banner_hint">Byenveni nan fowòm sa a…</string>
+    <string name="feeds_banner_dismiss">Rejte banyè</string>
+    <string name="feeds_members_search">Filtre manm</string>
+    <string name="feeds_ai_prompt_default">Defo</string>
+    <string name="feeds_ai_prompt_custom">Pèsonalize</string>
+    <string name="feeds_ai_prompt_variables">Varyab: %1$s</string>
+    <string name="feeds_link">Lyen</string>
+    <string name="feeds_share_link_title">Lyen fil la</string>
+    <string name="feeds_scroll_to_top">Retounen anlè</string>
 </resources>

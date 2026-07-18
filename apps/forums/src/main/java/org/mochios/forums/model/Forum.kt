@@ -13,7 +13,15 @@ data class Forum(
     val name: String = "",
     val updated: Long = 0,
     @SerializedName("can_manage") val canManage: Boolean = false,
-    @SerializedName("can_post") val canPost: Boolean = false,
+
+    /**
+     * Whether the viewer may post. Null when the response omits it — not every
+     * endpoint sends the `can_*` fields on the forum row — so callers must treat
+     * null as "unknown" and let the action through rather than reading a missing
+     * field as a denial.
+     */
+    @SerializedName("can_post") val canPost: Boolean? = null,
+
     @SerializedName("can_moderate") val canModerate: Boolean = false,
     val server: String = "",
     val banner: String = "",
@@ -21,6 +29,18 @@ data class Forum(
     val sort: String = "",
     @SerializedName("ai_mode") val aiMode: String = "",
     @SerializedName("ai_account") val aiAccount: String = "",
+    @SerializedName("ai_prompt_tag") val aiPromptTag: String = "",
+    @SerializedName("ai_prompt_score") val aiPromptScore: String = "",
+    @SerializedName("comment_limit") val commentLimit: Int = 0,
+    @SerializedName("post_limit") val postLimit: Int = 0,
+    @SerializedName("limit_window") val limitWindow: Int = 0,
+    @SerializedName("new_user_days") val newUserDays: Int = 0,
+    @SerializedName("moderation_new") val moderationNew: Int = 0,
+    @SerializedName("moderation_posts") val moderationPosts: Int = 0,
+    @SerializedName("moderation_comments") val moderationComments: Int = 0,
+    val members: Int = 0,
+    val populated: Int = 0,
+    val synced: Long = 0,
 )
 
 data class Member(

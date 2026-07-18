@@ -301,4 +301,13 @@
     <string name="feeds_unsubscribe_confirm_message">ستتوقف عن تلقي التحديثات من هذه التغذية. يمكنك إعادة الاشتراك في أي وقت.</string>
     <string name="feeds_access_select_rule">اختر قاعدة الوصول</string>
     <string name="feeds_access_authenticated_desc">أي شخص مسجّل الدخول</string>
+    <string name="feeds_banner_hint">مرحبًا بك في هذا المنتدى…</string>
+    <string name="feeds_banner_dismiss">تجاهل الشعار</string>
+    <string name="feeds_members_search">تصفية الأعضاء</string>
+    <string name="feeds_ai_prompt_default">افتراضي</string>
+    <string name="feeds_ai_prompt_custom">مخصص</string>
+    <string name="feeds_ai_prompt_variables">المتغيرات: %1$s</string>
+    <string name="feeds_link">رابط</string>
+    <string name="feeds_share_link_title">رابط الموجز</string>
+    <string name="feeds_scroll_to_top">العودة إلى الأعلى</string>
 </resources>

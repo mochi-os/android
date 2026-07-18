@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">ఈ ఫీడ్ నుండి మీకు ఇకపై అప్‌డేట్‌లు రావు. మీరు ఎప్పుడైనా మళ్లీ సభ్యత్వం పొందవచ్చు.</string>
     <string name="feeds_access_select_rule">యాక్సెస్ నియమాన్ని ఎంచుకోండి</string>
     <string name="feeds_access_authenticated_desc">లాగిన్ అయిన ఎవరైనా</string>
+    <string name="feeds_banner_hint">ఈ ఫోరమ్‌కు స్వాగతం…</string>
+    <string name="feeds_banner_dismiss">బ్యానర్‌ను విస్మరించండి</string>
+    <string name="feeds_members_search">సభ్యులను ఫిల్టర్ చేయండి</string>
+    <string name="feeds_ai_prompt_default">డిఫాల్ట్</string>
+    <string name="feeds_ai_prompt_custom">అనుకూలం</string>
+    <string name="feeds_ai_prompt_variables">వేరియబుల్స్: %1$s</string>
+    <string name="feeds_link">లింక్</string>
+    <string name="feeds_share_link_title">ఫీడ్ లింక్</string>
+    <string name="feeds_scroll_to_top">పైకి తిరిగి వెళ్లు</string>
 </resources>

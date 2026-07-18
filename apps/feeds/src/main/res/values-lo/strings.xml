@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">ທ່ານຈະບໍ່ໄດ້ຮັບອັບເດດຈາກຟີດນີ້ອີກ. ທ່ານສາມາດສະໝັກຄືນໄດ້ທຸກເວລາ.</string>
     <string name="feeds_access_select_rule">ເລືອກກົດການເຂົ້າເຖິງ</string>
     <string name="feeds_access_authenticated_desc">ທຸກຄົນທີ່ເຂົ້າສູ່ລະບົບແລ້ວ</string>
+    <string name="feeds_banner_hint">ຍິນດີຕ້ອນຮັບສູ່ກະດານສົນທະນານີ້…</string>
+    <string name="feeds_banner_dismiss">ປິດປ້າຍ</string>
+    <string name="feeds_members_search">ກັ່ນຕອງສະມາຊິກ</string>
+    <string name="feeds_ai_prompt_default">ຄ່າເລີ່ມຕົ້ນ</string>
+    <string name="feeds_ai_prompt_custom">ກຳນົດເອງ</string>
+    <string name="feeds_ai_prompt_variables">ຕົວແປ: %1$s</string>
+    <string name="feeds_link">ລິ້ງ</string>
+    <string name="feeds_share_link_title">ລິ້ງຟີດ</string>
+    <string name="feeds_scroll_to_top">ກັບໄປດ້ານເທິງ</string>
 </resources>

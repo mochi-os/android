@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Бұл таспадан жаңартулар алуды тоқтатасыз. Кез келген уақытта қайта жазыла аласыз.</string>
     <string name="feeds_access_select_rule">Қатынау ережесін таңдау</string>
     <string name="feeds_access_authenticated_desc">Жүйеге кірген кез келген адам</string>
+    <string name="feeds_banner_hint">Бұл форумға қош келдіңіз…</string>
+    <string name="feeds_banner_dismiss">Баннерді жабу</string>
+    <string name="feeds_members_search">Мүшелерді сүзу</string>
+    <string name="feeds_ai_prompt_default">Әдепкі</string>
+    <string name="feeds_ai_prompt_custom">Теңшелетін</string>
+    <string name="feeds_ai_prompt_variables">Айнымалылар: %1$s</string>
+    <string name="feeds_link">Сілтеме</string>
+    <string name="feeds_share_link_title">Арна сілтемесі</string>
+    <string name="feeds_scroll_to_top">Жоғарыға оралу</string>
 </resources>

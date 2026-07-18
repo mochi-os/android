@@ -267,4 +267,23 @@
     <string name="feeds_unsubscribe_confirm_message">You will stop receiving updates from this feed. You can re-subscribe at any time.</string>
     <string name="feeds_access_select_rule">Select access rule</string>
     <string name="feeds_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="feeds_banner_hint">Welcome to this forum…</string>
+    <string name="feeds_banner_dismiss">Dismiss banner</string>
+    <string name="feeds_members_search">Filter members</string>
+    <string name="feeds_ai_prompt_default">Default</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Feed link</string>
+    <string name="feeds_ai_prompt_custom">Custom</string>
+    <string name="feeds_ai_prompt_variables">Variables: %1$s</string>
+    <string name="feeds_interest_boosted">Interest boosted</string>
+    <string name="feeds_interest_failed">Failed to adjust interest</string>
+    <string name="feeds_interest_reduced">Interest reduced</string>
+    <string name="feeds_interest_removed">Interest removed</string>
+    <string name="feeds_saved_clear_confirm_body">This removes every post from your saved list. This cannot be undone.</string>
+    <string name="feeds_saved_clear_confirm_title">Clear all saved posts?</string>
+    <string name="feeds_saved_empty_subtitle">Tap the bookmark on any post to save it here for later.</string>
+    <string name="feeds_saved_empty_title">Nothing saved yet</string>
+    <string name="feeds_saved_error_clear">Failed to clear saved posts</string>
+    <string name="feeds_saved_save">Save for later</string>
+    <string name="feeds_scroll_to_top">Back to top</string>
 </resources>

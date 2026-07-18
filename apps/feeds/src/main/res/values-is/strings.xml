@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Þú hættir að fá uppfærslur úr þessum straumi. Þú getur gerst áskrifandi aftur hvenær sem er.</string>
     <string name="feeds_access_select_rule">Veldu aðgangsreglu</string>
     <string name="feeds_access_authenticated_desc">Allir sem eru innskráðir</string>
+    <string name="feeds_banner_hint">Velkomin á þetta spjallborð…</string>
+    <string name="feeds_banner_dismiss">Loka borða</string>
+    <string name="feeds_members_search">Sía meðlimi</string>
+    <string name="feeds_ai_prompt_default">Sjálfgefið</string>
+    <string name="feeds_ai_prompt_custom">Sérsniðið</string>
+    <string name="feeds_ai_prompt_variables">Breytur: %1$s</string>
+    <string name="feeds_link">Tengill</string>
+    <string name="feeds_share_link_title">Tengill á streymi</string>
+    <string name="feeds_scroll_to_top">Aftur efst</string>
 </resources>

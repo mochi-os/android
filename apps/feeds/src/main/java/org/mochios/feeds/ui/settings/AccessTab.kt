@@ -34,12 +34,12 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SegmentedButton
@@ -72,9 +72,10 @@ private val ACCESS_LEVEL_CHANGE_KEYS = listOf("comment", "react", "view", "none"
 
 /**
  * Access tab: an "Access Management" card listing each subject (owner, groups,
- * authenticated users, anyone, individual users) with its access level. The
- * owner row is read-only; every other row exposes an inline level dropdown and
- * a remove button. The floating button opens the add-access dialog.
+ * authenticated users, anyone, individual users) with its access level, plus a
+ * "Members" section for filtering, adding, and removing members. The owner row
+ * is read-only; every other row exposes an inline level dropdown and a remove
+ * button. Each section header carries its own add action.
  */
 @Composable
 fun AccessTab(
@@ -82,65 +83,144 @@ fun AccessTab(
 ) {
     val accessRules by viewModel.accessRules.collectAsState()
     val isLoading by viewModel.isLoadingAccess.collectAsState()
+    val permissions by viewModel.permissions.collectAsState()
+    val members by viewModel.members.collectAsState()
     var showAddDialog by remember { mutableStateOf(false) }
+    var showAddMemberDialog by remember { mutableStateOf(false) }
+    var memberQuery by remember { mutableStateOf("") }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(16.dp),
+    // Members are managed here, so only load them for a viewer who can.
+    LaunchedEffect(permissions.manage) {
+        if (permissions.manage) {
+            viewModel.loadMembers()
+        }
+    }
+
+    // Filtering is local to the loaded list — the same as forums, and it keeps
+    // typing responsive without a round trip per keystroke.
+    val filteredMembers = if (memberQuery.isBlank()) {
+        members
+    } else {
+        members.filter { member -> member.name.contains(memberQuery, ignoreCase = true) }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+    ) {
+        Section(
+            title = stringResource(R.string.feeds_access_management),
+            description = stringResource(R.string.feeds_access_management_desc),
+            action = {
+                // Outlined, primary-tinted — the same shape as the delete action
+                // on the General tab, which tints itself error instead.
+                OutlinedButton(onClick = { showAddDialog = true }) {
+                    Text(stringResource(MochiR.string.access_add_rule))
+                }
+            },
         ) {
-            Section(
-                title = stringResource(R.string.feeds_access_management),
-                description = stringResource(R.string.feeds_access_management_desc),
-            ) {
-                when {
-                    isLoading && accessRules.isEmpty() -> {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 24.dp),
-                            contentAlignment = Alignment.Center,
-                        ) {
-                            CircularProgressIndicator()
-                        }
+            when {
+                isLoading && accessRules.isEmpty() -> {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 24.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        CircularProgressIndicator()
                     }
+                }
 
-                    accessRules.isEmpty() -> {
-                        Text(
-                            text = stringResource(MochiR.string.access_no_rules),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(vertical = 16.dp),
+                accessRules.isEmpty() -> {
+                    Text(
+                        text = stringResource(MochiR.string.access_no_rules),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(vertical = 16.dp),
+                    )
+                }
+
+                else -> {
+                    // Owner always sits at the top; the rest keep their order.
+                    val ordered = accessRules.sortedByDescending { rule -> rule.isOwner }
+                    ordered.forEach { rule ->
+                        AccessRuleRow(
+                            rule = rule,
+                            onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
+                            onRevoke = { viewModel.revokeAccess(rule.subject) },
                         )
-                    }
-
-                    else -> {
-                        // Owner always sits at the top; the rest keep their order.
-                        val ordered = accessRules.sortedByDescending { rule -> rule.isOwner }
-                        ordered.forEach { rule ->
-                            AccessRuleRow(
-                                rule = rule,
-                                onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
-                                onRevoke = { viewModel.revokeAccess(rule.subject) },
-                            )
-                        }
                     }
                 }
             }
         }
 
-        FloatingActionButton(
-            onClick = { showAddDialog = true },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(16.dp),
-        ) {
-            Icon(
-                Icons.Default.Add,
-                contentDescription = stringResource(MochiR.string.access_add_rule),
-            )
+        if (permissions.manage) {
+            Spacer(modifier = Modifier.height(16.dp))
+            Section(
+                title = stringResource(R.string.feeds_tab_members),
+                headerAlignment = Alignment.CenterVertically,
+                action = {
+                    OutlinedButton(onClick = { showAddMemberDialog = true }) {
+                        Text(stringResource(R.string.feeds_add_member))
+                    }
+                },
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 8.dp)
+                ) {
+                    OutlinedTextField(
+                        value = memberQuery,
+                        onValueChange = { value -> memberQuery = value },
+                        placeholder = { Text(stringResource(R.string.feeds_members_search)) },
+                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    if (filteredMembers.isEmpty()) {
+                        Text(
+                            text = stringResource(R.string.feeds_no_members),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    } else {
+                        filteredMembers.forEach { member ->
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 8.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Icon(
+                                    Icons.Default.Person,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.size(24.dp),
+                                )
+                                Spacer(modifier = Modifier.width(12.dp))
+                                Text(
+                                    text = member.name.ifBlank { member.id },
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.weight(1f),
+                                )
+                                IconButton(onClick = { viewModel.removeMember(member.id) }) {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = stringResource(R.string.feeds_remove),
+                                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -154,6 +234,94 @@ fun AccessTab(
             },
         )
     }
+
+    if (showAddMemberDialog) {
+        AddMemberDialog(
+            viewModel = viewModel,
+            onDismiss = { showAddMemberDialog = false },
+            onAdd = { memberEntityId ->
+                viewModel.addMember(memberEntityId)
+                showAddMemberDialog = false
+            },
+        )
+    }
+}
+
+/** Add-member dialog: search users and pick one to add to the feed. */
+@Composable
+private fun AddMemberDialog(
+    viewModel: FeedSettingsViewModel,
+    onDismiss: () -> Unit,
+    onAdd: (String) -> Unit,
+) {
+    var query by remember { mutableStateOf("") }
+    var selectedSubject by remember { mutableStateOf("") }
+    var selectedName by remember { mutableStateOf("") }
+    val searchResults by viewModel.userSearchResults.collectAsState()
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.feeds_add_member)) },
+        text = {
+            Column(modifier = Modifier.fillMaxWidth()) {
+                OutlinedTextField(
+                    value = query,
+                    onValueChange = { value ->
+                        query = value
+                        selectedSubject = ""
+                        selectedName = ""
+                        viewModel.searchUsers(value)
+                    },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                if (searchResults.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+                        searchResults.take(6).forEach { user ->
+                            SubjectOption(
+                                icon = Icons.Default.Person,
+                                title = user.name,
+                                subtitle = null,
+                                selected = selectedSubject == user.id,
+                                onClick = {
+                                    selectedSubject = user.id
+                                    selectedName = user.name
+                                },
+                            )
+                        }
+                    }
+                }
+                if (selectedSubject.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text(
+                        text = stringResource(R.string.feeds_access_selected, selectedName),
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                }
+            }
+        },
+        confirmButton = {
+            Button(
+                onClick = { onAdd(selectedSubject) },
+                enabled = selectedSubject.isNotEmpty(),
+            ) {
+                Icon(
+                    Icons.Default.Add,
+                    contentDescription = null,
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                )
+                Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                Text(stringResource(MochiR.string.common_add))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        },
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -204,7 +372,7 @@ private fun AccessRuleRow(
         }
 
         // Editable subjects get a full-width level dropdown on its own line,
-        // aligned under the subject name for a natural mobile rhythm.
+        // matching the member filter field rather than indenting under the name.
         if (!rule.isOwner) {
             var expanded by remember { mutableStateOf(false) }
             ExposedDropdownMenuBox(
@@ -212,7 +380,7 @@ private fun AccessRuleRow(
                 onExpandedChange = { expanded = it },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 36.dp, top = 4.dp),
+                    .padding(top = 8.dp),
             ) {
                 OutlinedTextField(
                     value = feedsAccessLevelLabel(rule.operation),

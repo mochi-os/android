@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.staff.model.DirectorySearchResult
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.repository.StaffRepository
@@ -114,7 +115,7 @@ class TeamViewModel @Inject constructor(
         _state.value = _state.value.copy(addSearch = query)
         val token = ++searchToken
         viewModelScope.launch {
-            delay(300)
+            delay(SEARCH_DEBOUNCE)
             if (token != searchToken) return@launch
             if (query.length < 2) {
                 _state.value = _state.value.copy(addResults = emptyList(), addSearching = false)

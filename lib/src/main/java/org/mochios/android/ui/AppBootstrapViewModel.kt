@@ -26,6 +26,7 @@ import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.notifications.NotificationsUnreadStore
+import org.mochios.android.push.PushService
 import org.mochios.android.push.PushTransport
 import org.mochios.android.ui.theme.ThemeRepository
 import org.mochios.android.websocket.MochiWebSocket
@@ -218,6 +219,10 @@ class AppBootstrapViewModel @Inject constructor(
             // once clearAll() drops the session cookie.
             unreadStore.stop()
             webSocket.disconnectAll()
+            // Drop the device's push account server-side while the session can
+            // still mint a notifications token — once clearAll() runs the call
+            // would 401 and the server would keep pushing to this device.
+            PushService.removeAccount(context)
             // Clear the session next: tearDown() deletes the FCM token, which
             // makes Firebase mint a fresh one and fire onNewToken. With no
             // active session that callback skips re-registering, so this device

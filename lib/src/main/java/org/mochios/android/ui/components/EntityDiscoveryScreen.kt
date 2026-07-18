@@ -49,6 +49,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.model.EntitySummary
+import org.mochios.android.util.SEARCH_DEBOUNCE
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,7 +78,7 @@ fun EntityDiscoveryScreen(
                         searchJob?.cancel()
                         if (newQuery.length >= 2) {
                             searchJob = scope.launch {
-                                delay(300)
+                                delay(SEARCH_DEBOUNCE)
                                 isSearching = true
                                 try {
                                     searchResults = onSearch(newQuery)

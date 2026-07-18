@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.repository.WikisRepository
@@ -113,7 +114,7 @@ class FindWikisViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(500) // Debounce — matches web's 500ms in inline-wiki-search.
+            delay(SEARCH_DEBOUNCE)
             performSearch(query.trim())
         }
     }

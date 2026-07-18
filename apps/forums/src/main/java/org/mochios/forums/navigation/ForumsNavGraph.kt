@@ -14,7 +14,6 @@ import androidx.navigation.navDeepLink
 import org.mochios.forums.ui.find.FindForumsScreen
 import org.mochios.forums.ui.forum.ForumScreen
 import org.mochios.forums.ui.moderation.ForumModerationScreen
-import org.mochios.forums.ui.moderation.ForumModerationSettingsScreen
 import org.mochios.forums.ui.newpost.NewPostScreen
 import org.mochios.forums.ui.post.PostScreen
 import org.mochios.forums.ui.router.ForumsRouter
@@ -30,19 +29,21 @@ object ForumsApp {
     // to the detail screen rendering NotFoundState.
     const val FORUM = "forums/forum/{forumId}"
     const val POST = "forums/forum/{forumId}/post/{postId}"
-    const val NEW_POST = "forums/forum/{forumId}/new"
+    // A single route composes and edits: an edit carries the target post's id as
+    // an optional query arg, a new post omits it.
+    const val NEW_POST = "forums/forum/{forumId}/new?postId={postId}"
     const val FIND_FORUMS = "forums/discover"
     const val FORUM_SETTINGS = "forums/forum/{forumId}/settings"
     const val MODERATION = "forums/forum/{forumId}/moderation"
-    const val MODERATION_SETTINGS = "forums/forum/{forumId}/moderation/settings"
     const val SAVED = "forums/saved"
 
     fun forum(forumId: String) = "forums/forum/$forumId"
     fun post(forumId: String, postId: String) = "forums/forum/$forumId/post/$postId"
-    fun newPost(forumId: String) = "forums/forum/$forumId/new"
+    fun newPost(forumId: String, postId: String? = null) =
+        if (postId.isNullOrEmpty()) "forums/forum/$forumId/new"
+        else "forums/forum/$forumId/new?postId=$postId"
     fun forumSettings(forumId: String) = "forums/forum/$forumId/settings"
     fun moderation(forumId: String) = "forums/forum/$forumId/moderation"
-    fun moderationSettings(forumId: String) = "forums/forum/$forumId/moderation/settings"
 }
 
 fun NavGraphBuilder.forumsNavGraph(
@@ -82,6 +83,7 @@ fun NavGraphBuilder.forumsNavGraph(
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },
             onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
             onSettings = { fId -> navController.navigate(ForumsApp.forumSettings(fId)) },
+            onModeration = { fId -> navController.navigate(ForumsApp.moderation(fId)) },
             onNavigateToSaved = { navController.navigate(ForumsApp.SAVED) },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
@@ -109,19 +111,28 @@ fun NavGraphBuilder.forumsNavGraph(
     ) {
         PostScreen(
             onBack = { navController.popBackStack() },
+            onEditPost = { fId, pId -> navController.navigate(ForumsApp.newPost(fId, pId)) },
         )
     }
 
     composable(
         route = ForumsApp.NEW_POST,
-        arguments = listOf(navArgument("forumId") { type = NavType.StringType })
+        arguments = listOf(
+            navArgument("forumId") { type = NavType.StringType },
+            navArgument("postId") {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
+        )
     ) {
         NewPostScreen(
             onBack = { navController.popBackStack() },
             onPostCreated = { _, _ ->
-                // Return to the forum the post was made in rather than opening the
-                // new post — the author has just written it. The list underneath
-                // pulls the post in via ForumsRepository.postCreated.
+                // Return to where the compose began — the forum for a new post, or
+                // the post itself for an edit. A new post's list pulls it in via
+                // ForumsRepository.postCreated; an edited post refreshes over its
+                // live subscription.
                 navController.popBackStack()
             },
         )
@@ -143,31 +154,22 @@ fun NavGraphBuilder.forumsNavGraph(
     composable(
         route = ForumsApp.FORUM_SETTINGS,
         arguments = listOf(navArgument("forumId") { type = NavType.StringType })
-    ) { backStackEntry ->
-        val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
+    ) {
         ForumSettingsScreen(
             onBack = { navController.popBackStack() },
             onForumDeleted = { navController.popBackStack(ForumsApp.ROUTER, inclusive = false) },
-            onModeration = { navController.navigate(ForumsApp.moderation(forumId)) },
+            // Leaving the forum leaves its screens too — the user is no longer a
+            // subscriber, so the forum behind settings is no longer theirs to
+            // return to.
+            onUnsubscribed = { navController.popBackStack(ForumsApp.ROUTER, inclusive = false) },
         )
     }
 
     composable(
         route = ForumsApp.MODERATION,
         arguments = listOf(navArgument("forumId") { type = NavType.StringType })
-    ) { backStackEntry ->
-        val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
-        ForumModerationScreen(
-            onBack = { navController.popBackStack() },
-            onOpenSettings = { navController.navigate(ForumsApp.moderationSettings(forumId)) },
-        )
-    }
-
-    composable(
-        route = ForumsApp.MODERATION_SETTINGS,
-        arguments = listOf(navArgument("forumId") { type = NavType.StringType })
     ) {
-        ForumModerationSettingsScreen(
+        ForumModerationScreen(
             onBack = { navController.popBackStack() },
         )
     }

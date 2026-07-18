@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Այլևս չեք ստանա այս հոսքի թարմացումները։ Կարող եք կրկին բաժանորդագրվել ցանկացած պահի։</string>
     <string name="feeds_access_select_rule">Ընտրել մուտքի կանոնը</string>
     <string name="feeds_access_authenticated_desc">Ցանկացած ոք, ով մուտք է գործել</string>
+    <string name="feeds_banner_hint">Բարի գալուստ այս ֆորում…</string>
+    <string name="feeds_banner_dismiss">Հեռացնել բաններն</string>
+    <string name="feeds_members_search">Զտել անդամներին</string>
+    <string name="feeds_ai_prompt_default">Լռելյայն</string>
+    <string name="feeds_ai_prompt_custom">Հարմարեցված</string>
+    <string name="feeds_ai_prompt_variables">Փոփոխականներ՝ %1$s</string>
+    <string name="feeds_link">Հղում</string>
+    <string name="feeds_share_link_title">Հոսքի հղում</string>
+    <string name="feeds_scroll_to_top">Վերադառնալ վերև</string>
 </resources>

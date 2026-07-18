@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.api.SystemUser
 import org.mochios.settings.api.SystemUserSession
 import org.mochios.settings.api.SystemUsersApi
@@ -117,7 +118,7 @@ class SystemUsersViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(search = value, offset = 0)
         searchJob?.cancel()
         searchJob = viewModelScope.launch {
-            delay(300)
+            delay(SEARCH_DEBOUNCE)
             refresh()
         }
     }

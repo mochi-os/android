@@ -55,6 +55,9 @@ sealed interface FeedActionEvent {
     /** An RSS feed URL is ready for the screen to copy to the clipboard. */
     data class RssUrlReady(val url: String) : FeedActionEvent
 
+    /** A share link is ready for the screen to hand to the system share sheet. */
+    data class ShareLinkReady(val link: String) : FeedActionEvent
+
     /** Unsubscribe succeeded; the screen should leave this feed. */
     data object Unsubscribed : FeedActionEvent
 
@@ -214,6 +217,21 @@ class FeedViewModel @Inject constructor(
                     "$serverUrl/feeds/$feedId/-/rss?token=$token"
                 }
                 _actionEvents.emit(FeedActionEvent.RssUrlReady(url))
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Fetch the feed's `mochi://<peer>/<feed>` link and hand it to the screen for
+     * the system share sheet. The server assembles the link, so the peer id never
+     * has to be resolved client-side.
+     */
+    fun shareLink() {
+        viewModelScope.launch {
+            try {
+                _actionEvents.emit(FeedActionEvent.ShareLinkReady(repository.shareFeed(feedId)))
             } catch (e: Exception) {
                 _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
@@ -1043,6 +1061,22 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
+     * Silently re-fetch the feed's info (name, banner, permissions) so edits made
+     * elsewhere — e.g. saving a new banner in feed settings — show on return
+     * without a manual pull-to-refresh. Keeps the current sort untouched.
+     */
+    private suspend fun refreshFeedInfo() {
+        if (isAllFeeds || feedId.isBlank()) return
+        try {
+            val info = repository.getFeedInfo(feedId)
+            _feedInfo.value = info.feed
+            _permissions.value = info.permissions
+        } catch (_: Exception) {
+            // Silent failure — keep showing the current info.
+        }
+    }
+
+    /**
      * Silently reload the feed when the screen returns to the foreground — e.g.
      * after the user created a post here — so a newly added (or first) post
      * shows without a manual pull-to-refresh.
@@ -1055,6 +1089,7 @@ class FeedViewModel @Inject constructor(
                 } catch (_: Exception) {
                 }
             } else if (feedId.isNotBlank()) {
+                refreshFeedInfo()
                 refreshSilently()
             }
         }

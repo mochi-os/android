@@ -55,6 +55,9 @@ sealed class ForumEvent {
     /** Copy this URL to the clipboard and confirm with a snackbar. */
     data class CopyRssUrl(val url: String) : ForumEvent()
 
+    /** Hand this link to the system share sheet. */
+    data class ShareLink(val link: String) : ForumEvent()
+
     /** The user is no longer subscribed; the screen navigates away. */
     data object Unsubscribed : ForumEvent()
 
@@ -196,6 +199,17 @@ class ForumViewModel @Inject constructor(
     /** Reveal the queued new posts: refresh the list and clear the pill. The
      *  screen also scrolls to the top when this is invoked. */
     fun showNewPosts() {
+        viewModelScope.launch { refreshSilently() }
+    }
+
+    /**
+     * Silently reload the forum when the screen returns to the foreground — e.g.
+     * after saving a new banner in forum settings — so the change shows on
+     * return without a manual pull-to-refresh. The aggregate "all" view has no
+     * per-forum banner, so it's skipped.
+     */
+    fun reloadOnForeground() {
+        if (isAll || forumId.isBlank()) return
         viewModelScope.launch { refreshSilently() }
     }
 
@@ -404,6 +418,22 @@ class ForumViewModel @Inject constructor(
                     "$serverUrl/$path?token=${response.token}"
                 }
                 _events.emit(ForumEvent.CopyRssUrl(url))
+            } catch (e: Exception) {
+                _events.emit(ForumEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Fetch the forum's `mochi://<peer>/<forum>` link and hand it to the screen
+     * for the system share sheet. The server assembles the link, so the peer id
+     * never has to be resolved client-side.
+     */
+    fun shareLink() {
+        if (forumId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                _events.emit(ForumEvent.ShareLink(repository.shareForum(forumId)))
             } catch (e: Exception) {
                 _events.emit(ForumEvent.ShowError(e.toMochiError()))
             }

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">ඔබට මෙම සංග්‍රහයෙන් තවදුරටත් යාවත්කාලීන නොලැබේ. ඔබට ඕනෑම වේලාවක නැවත දායක විය හැක.</string>
     <string name="feeds_access_select_rule">ප්‍රවේශ රීතිය තෝරන්න</string>
     <string name="feeds_access_authenticated_desc">පුරනය වී සිටින ඕනෑම අයෙක්</string>
+    <string name="feeds_banner_hint">මෙම සංසදයට සාදරයෙන් පිළිගනිමු…</string>
+    <string name="feeds_banner_dismiss">බැනරය ඉවත ලන්න</string>
+    <string name="feeds_members_search">සාමාජිකයන් පෙරහන් කරන්න</string>
+    <string name="feeds_ai_prompt_default">පෙරනිමි</string>
+    <string name="feeds_ai_prompt_custom">අභිරුචි</string>
+    <string name="feeds_ai_prompt_variables">විචල්‍ය: %1$s</string>
+    <string name="feeds_link">සබැඳිය</string>
+    <string name="feeds_share_link_title">පෝෂක සබැඳිය</string>
+    <string name="feeds_scroll_to_top">ඉහළට ආපසු</string>
 </resources>

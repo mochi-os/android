@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">이 피드의 업데이트를 더 이상 받지 않게 됩니다. 언제든지 다시 구독할 수 있습니다.</string>
     <string name="feeds_access_select_rule">접근 규칙 선택</string>
     <string name="feeds_access_authenticated_desc">로그인한 모든 사용자</string>
+    <string name="feeds_banner_hint">이 포럼에 오신 것을 환영합니다…</string>
+    <string name="feeds_banner_dismiss">배너 닫기</string>
+    <string name="feeds_members_search">구성원 필터</string>
+    <string name="feeds_ai_prompt_default">기본값</string>
+    <string name="feeds_ai_prompt_custom">사용자 지정</string>
+    <string name="feeds_ai_prompt_variables">변수: %1$s</string>
+    <string name="feeds_link">링크</string>
+    <string name="feeds_share_link_title">피드 링크</string>
+    <string name="feeds_scroll_to_top">맨 위로</string>
 </resources>

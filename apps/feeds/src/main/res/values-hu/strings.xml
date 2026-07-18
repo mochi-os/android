@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Többé nem kapsz frissítéseket ebből a hírcsatornából. Bármikor újra feliratkozhatsz.</string>
     <string name="feeds_access_select_rule">Hozzáférési szabály kiválasztása</string>
     <string name="feeds_access_authenticated_desc">Bárki, aki be van jelentkezve</string>
+    <string name="feeds_banner_hint">Üdvözöljük ezen a fórumon…</string>
+    <string name="feeds_banner_dismiss">Banner elvetése</string>
+    <string name="feeds_members_search">Tagok szűrése</string>
+    <string name="feeds_ai_prompt_default">Alapértelmezett</string>
+    <string name="feeds_ai_prompt_custom">Egyéni</string>
+    <string name="feeds_ai_prompt_variables">Változók: %1$s</string>
+    <string name="feeds_link">Hivatkozás</string>
+    <string name="feeds_share_link_title">Hírfolyam hivatkozása</string>
+    <string name="feeds_scroll_to_top">Vissza a tetejére</string>
 </resources>

@@ -11,6 +11,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.notifications.NotificationsRepository
 
 /**
  * Shared Hilt entry point for the push package. Its components are instantiated
@@ -25,4 +26,6 @@ interface PushEntryPoint {
     fun sessionManager(): SessionManager
     fun okHttpClient(): OkHttpClient
     fun authRepository(): AuthRepository
+    fun notificationsRepository(): NotificationsRepository
+    fun pushAccountStore(): PushAccountStore
 }

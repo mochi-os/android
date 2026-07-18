@@ -297,4 +297,13 @@
     <string name="feeds_unsubscribe_confirm_message">Ma tibqax tirċievi aġġornamenti minn dan il-feed. Tista\' terġa\' tabbona meta trid.</string>
     <string name="feeds_access_select_rule">Agħżel regola tal-aċċess</string>
     <string name="feeds_access_authenticated_desc">Kull min hu illoggjat</string>
+    <string name="feeds_banner_hint">Merħba f\'dan il-forum…</string>
+    <string name="feeds_banner_dismiss">Warrab il-banner</string>
+    <string name="feeds_members_search">Iffiltra l-membri</string>
+    <string name="feeds_ai_prompt_default">Default</string>
+    <string name="feeds_ai_prompt_custom">Personalizzat</string>
+    <string name="feeds_ai_prompt_variables">Varjabbli: %1$s</string>
+    <string name="feeds_link">Ħolqa</string>
+    <string name="feeds_share_link_title">Ħolqa tal-feed</string>
+    <string name="feeds_scroll_to_top">Lura fil-quċċata</string>
 </resources>

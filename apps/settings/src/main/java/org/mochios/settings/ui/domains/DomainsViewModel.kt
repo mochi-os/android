@@ -8,6 +8,8 @@ package org.mochios.settings.ui.domains
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -15,6 +17,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.api.Delegation
 import org.mochios.settings.api.Domain
 import org.mochios.settings.api.DomainDetailsData
@@ -50,6 +53,9 @@ class DomainsViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(DomainsUiState())
     val uiState: StateFlow<DomainsUiState> = _uiState.asStateFlow()
+    /** In-flight user search, cancelled by the next keystroke. */
+    private var userSearchJob: Job? = null
+
 
     init { refresh() }
 
@@ -164,12 +170,17 @@ class DomainsViewModel @Inject constructor(
     /** Autocomplete users for the delegation dialog (admin only). The server
      *  returns at most 10 matches; empty query yields no results. */
     fun searchUsers(query: String) {
+        // Each keystroke replaces the last: without this a typed name is one
+        // request per letter, and a slow early response can land after a later
+        // one and overwrite the newer results.
+        userSearchJob?.cancel()
         val q = query.trim()
         if (q.length < 2) {
             _uiState.value = _uiState.value.copy(userResults = emptyList())
             return
         }
-        viewModelScope.launch {
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
                 val users = api.searchUsers(q).bodyOrThrow().users
                 _uiState.value = _uiState.value.copy(userResults = users)

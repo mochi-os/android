@@ -23,6 +23,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.chat.R
 import org.mochios.chat.data.PinnedChatsStore
@@ -288,7 +289,7 @@ class ChatViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(300)
+            delay(SEARCH_DEBOUNCE)
             try {
                 val res = repository.search(chatId, trimmed)
                 val ids = res.results

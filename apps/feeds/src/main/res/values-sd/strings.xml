@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">توهان کي هن فيڊ مان اپڊيٽ ملڻ بند ٿي وينديون. توهان ڪنهن به وقت ٻيهر سبسڪرائيب ڪري سگهو ٿا.</string>
     <string name="feeds_access_select_rule">رسائي قاعدو چونڊيو</string>
     <string name="feeds_access_authenticated_desc">ڪو به جيڪو لاگ ان ٿيل آهي</string>
+    <string name="feeds_banner_hint">هن فورم ۾ ڀلي ڪري آيا…</string>
+    <string name="feeds_banner_dismiss">بينر رد ڪريو</string>
+    <string name="feeds_members_search">ميمبر فلٽر ڪريو</string>
+    <string name="feeds_ai_prompt_default">ڊفالٽ</string>
+    <string name="feeds_ai_prompt_custom">ڪسٽم</string>
+    <string name="feeds_ai_prompt_variables">متغير: %1$s</string>
+    <string name="feeds_link">لنڪ</string>
+    <string name="feeds_share_link_title">فيڊ جو لنڪ</string>
+    <string name="feeds_scroll_to_top">مٿي واپس</string>
 </resources>

@@ -7,99 +7,86 @@ package org.mochios.feeds.ui.feed
 
 import android.content.ClipData
 import android.content.Intent
-import android.net.Uri
+import android.content.Context
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
-import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.ChatBubble
-import androidx.compose.material.icons.filled.ChatBubbleOutline
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.BrokenImage
-import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.ChatBubble
+import androidx.compose.material.icons.filled.ChatBubbleOutline
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoneAll
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Link
-import androidx.compose.material.icons.filled.Visibility
-import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.material3.rememberModalBottomSheetState
-import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateMapOf
@@ -113,33 +100,28 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.graphics.TransformOrigin
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalConfiguration
-import android.widget.Toast
 import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.edit
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import coil3.compose.AsyncImage
 import coil3.compose.AsyncImagePainter
-import androidx.hilt.navigation.compose.hiltViewModel
-import kotlin.math.abs
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
@@ -147,19 +129,13 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipBook
 import org.mochios.android.ui.components.HtmlContent
-import org.mochios.feeds.ui.component.PostBody
-import org.mochios.feeds.ui.component.PostTitle
-import org.mochios.feeds.ui.component.currentReactionType
-import org.mochios.feeds.ui.component.rssDisplayTitle
-import org.mochios.feeds.ui.component.stripHtml
-import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MediaGrid
@@ -171,10 +147,16 @@ import org.mochios.feeds.R
 import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
-import org.mochios.feeds.ui.post.CommentInputBar
-import org.mochios.feeds.ui.post.PostTagsButton
+import org.mochios.feeds.ui.component.PostBody
+import org.mochios.feeds.ui.component.PostTitle
+import org.mochios.feeds.ui.component.currentReactionType
+import org.mochios.feeds.ui.component.rssDisplayTitle
+import org.mochios.feeds.ui.component.stripHtml
+import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.feeds.ui.feedlist.CreateFeedDialog
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
+import org.mochios.feeds.ui.post.CommentInputBar
+import org.mochios.feeds.ui.post.PostTagsButton
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
 
@@ -219,6 +201,7 @@ fun FeedScreen(
     val rssCopiedMessage = stringResource(R.string.feeds_rss_url_copied)
     val rssClipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
     val unsubscribedMessage = stringResource(R.string.feeds_unsubscribed)
+    val shareLinkTitle = stringResource(R.string.feeds_share_link_title)
     // Turn one-shot overflow-menu actions into a clipboard write, a toast, or a
     // jump back to the "All feeds" aggregate after unsubscribing.
     LaunchedEffect(Unit) {
@@ -229,6 +212,10 @@ fun FeedScreen(
                         ClipData.newPlainText(rssClipboardLabel, event.url).toClipEntry(),
                     )
                     Toast.makeText(context, rssCopiedMessage, Toast.LENGTH_SHORT).show()
+                }
+
+                is FeedActionEvent.ShareLinkReady -> {
+                    shareLink(context, event.link, shareLinkTitle)
                 }
 
                 is FeedActionEvent.Unsubscribed -> {
@@ -730,6 +717,21 @@ fun FeedScreen(
                                         },
                                         onClick = { showRssSubmenu = true }
                                     )
+                                    // Sharing a feed is an owner's call, so this
+                                    // sits behind the same gate as Settings. The
+                                    // aggregate has no single feed to share.
+                                    if (!viewModel.isAllFeeds && permissions.manage) {
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(R.string.feeds_link)) },
+                                            leadingIcon = {
+                                                Icon(Icons.Default.Link, contentDescription = null)
+                                            },
+                                            onClick = {
+                                                viewModel.shareLink()
+                                                showOverflowMenu = false
+                                            }
+                                        )
+                                    }
                                     // Unsubscribe only for member feeds — owners/admins
                                     // manage (and delete) the feed instead.
                                     if (!viewModel.isAllFeeds && !permissions.manage) {
@@ -762,6 +764,9 @@ fun FeedScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
+                feedInfo?.banner?.takeIf { banner -> banner.isNotBlank() }?.let { banner ->
+                    FeedBanner(banner = banner, feedId = viewModel.feedId)
+                }
                 PullToRefreshBox(
                     isRefreshing = isRefreshing,
                     onRefresh = {
@@ -1847,4 +1852,69 @@ private fun InterestSuggestionsDialog(
             }
         },
     )
+}
+
+private fun bannerContentHash(content: String): String {
+    var hash = 5381
+    for (c in content) hash += (hash shl 5) + c.code
+    return Integer.toHexString(hash)
+}
+
+/**
+ * Dismissible markdown banner shown at the top of a feed, mirroring the forums
+ * banner. Dismissal is persisted per feed keyed by a content hash, so a new
+ * banner (different text) reappears even after a previous one was dismissed.
+ */
+@Composable
+private fun FeedBanner(banner: String, feedId: String) {
+    val context = LocalContext.current
+    val prefs = remember(context) {
+        context.getSharedPreferences("feeds_banner_dismissed", Context.MODE_PRIVATE)
+    }
+    val prefKey = remember(feedId) { "feed_$feedId" }
+    val contentHash = remember(banner) { bannerContentHash(banner) }
+    var dismissed by remember(prefKey, contentHash) {
+        mutableStateOf(prefs.getString(prefKey, null) == contentHash)
+    }
+    if (dismissed) return
+
+    OutlinedCard(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(start = 12.dp, top = 8.dp, bottom = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            HtmlContent(html = banner, modifier = Modifier.weight(1f))
+            IconButton(
+                onClick = {
+                    prefs.edit { putString(prefKey, contentHash) }
+                    dismissed = true
+                },
+            ) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.feeds_banner_dismiss),
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Hand [link] to the system share sheet, whose target list already includes
+ * "Copy" — so there is no in-app copy affordance to maintain.
+ */
+private fun shareLink(context: Context, link: String, title: String) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, link)
+        // Names the sheet's content preview. Android 10+ ignores the
+        // createChooser title, so without this the sheet reads "Sharing text".
+        putExtra(Intent.EXTRA_TITLE, title)
+    }
+    val chooser = Intent.createChooser(intent, title)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
 }

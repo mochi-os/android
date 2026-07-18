@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">你将不再收到此订阅源的更新。你可以随时重新订阅。</string>
     <string name="feeds_access_select_rule">选择访问规则</string>
     <string name="feeds_access_authenticated_desc">任何已登录的用户</string>
+    <string name="feeds_banner_hint">欢迎来到本论坛…</string>
+    <string name="feeds_banner_dismiss">关闭横幅</string>
+    <string name="feeds_members_search">筛选成员</string>
+    <string name="feeds_ai_prompt_default">默认</string>
+    <string name="feeds_ai_prompt_custom">自定义</string>
+    <string name="feeds_ai_prompt_variables">变量：%1$s</string>
+    <string name="feeds_link">链接</string>
+    <string name="feeds_share_link_title">订阅源链接</string>
+    <string name="feeds_scroll_to_top">回到顶部</string>
 </resources>

@@ -101,19 +101,25 @@ object FcmRegistrar {
             return false
         }
 
-        val authRepository = EntryPointAccessors
+        val deps = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
-            .authRepository()
 
         return try {
-            postRegisterFcm(
-                authRepository,
+            val accountId = postRegisterFcm(
+                deps.authRepository(),
                 client,
                 server,
                 token,
                 installId,
                 DeviceName.resolve(context)
             )
+            // Keep the account id: sign-out hands it to
+            // `/notifications/-/accounts/remove` so the server stops pushing to
+            // this device. Keyed by identity, matching the UnifiedPush path.
+            val identity = deps.sessionManager().getBoundIdentity().orEmpty()
+            if (accountId != null && identity.isNotBlank()) {
+                deps.pushAccountStore().store(identity, accountId)
+            }
             Log.i(TAG, "Registered FCM token with $server (install=$installId)")
             true
         } catch (e: Exception) {
@@ -183,6 +189,7 @@ object FcmRegistrar {
                 .addOnFailureListener { cont.resumeWithException(it) }
         }
 
+    /** Returns the server-side push account id, or null if the response omits it. */
     private suspend fun postRegisterFcm(
         authRepository: AuthRepository,
         client: OkHttpClient,
@@ -190,7 +197,7 @@ object FcmRegistrar {
         token: String,
         installId: String,
         device: String,
-    ) {
+    ): String? {
         val appToken = authRepository.fetchToken("notifications").getOrNull()
             ?: error("Could not mint notifications app token")
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
@@ -207,6 +214,15 @@ object FcmRegistrar {
             .build()
         client.newCall(request).execute().use { resp ->
             if (!resp.isSuccessful) error("/notifications/-/push/register/fcm returned ${resp.code}")
+            val raw = resp.body?.string().orEmpty()
+            return try {
+                JSONObject(raw).optJSONObject("data")
+                    ?.optString("id")
+                    ?.takeIf { id -> id.isNotBlank() }
+            } catch (_: Exception) {
+                Log.w(TAG, "Could not parse /notifications/-/push/register/fcm response")
+                null
+            }
         }
     }
 }

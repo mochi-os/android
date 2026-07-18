@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">آپ کو اس فیڈ سے اپ ڈیٹس ملنا بند ہو جائیں گی۔ آپ کسی بھی وقت دوبارہ سبسکرائب کر سکتے ہیں۔</string>
     <string name="feeds_access_select_rule">رسائی کا قاعدہ منتخب کریں</string>
     <string name="feeds_access_authenticated_desc">کوئی بھی جو لاگ ان ہو</string>
+    <string name="feeds_banner_hint">اس فورم میں خوش آمدید…</string>
+    <string name="feeds_banner_dismiss">بینر برخاست کریں</string>
+    <string name="feeds_members_search">ممبران فلٹر کریں</string>
+    <string name="feeds_ai_prompt_default">ڈیفالٹ</string>
+    <string name="feeds_ai_prompt_custom">حسبِ ضرورت</string>
+    <string name="feeds_ai_prompt_variables">متغیرات: %1$s</string>
+    <string name="feeds_link">لنک</string>
+    <string name="feeds_share_link_title">فیڈ کا لنک</string>
+    <string name="feeds_scroll_to_top">اوپر واپس جائیں</string>
 </resources>

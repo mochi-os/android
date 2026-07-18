@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Non riceverai più aggiornamenti da questo feed. Puoi iscriverti di nuovo in qualsiasi momento.</string>
     <string name="feeds_access_select_rule">Seleziona regola di accesso</string>
     <string name="feeds_access_authenticated_desc">Chiunque abbia effettuato l\'accesso</string>
+    <string name="feeds_banner_hint">Benvenuti in questo forum…</string>
+    <string name="feeds_banner_dismiss">Ignora banner</string>
+    <string name="feeds_members_search">Filtra membri</string>
+    <string name="feeds_ai_prompt_default">Predefinito</string>
+    <string name="feeds_ai_prompt_custom">Personalizzato</string>
+    <string name="feeds_ai_prompt_variables">Variabili: %1$s</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Link del feed</string>
+    <string name="feeds_scroll_to_top">Torna in alto</string>
 </resources>

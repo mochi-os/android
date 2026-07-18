@@ -286,4 +286,13 @@
     <string name="feeds_unsubscribe_confirm_message">Tu vairs nesaņemsi atjauninājumus no šīs plūsmas. Vari abonēt atkārtoti jebkurā laikā.</string>
     <string name="feeds_access_select_rule">Atlasīt piekļuves noteikumu</string>
     <string name="feeds_access_authenticated_desc">Ikviens, kurš ir pierakstījies</string>
+    <string name="feeds_banner_hint">Laipni lūdzam šajā forumā…</string>
+    <string name="feeds_banner_dismiss">Aizvērt baneri</string>
+    <string name="feeds_members_search">Filtrēt dalībniekus</string>
+    <string name="feeds_ai_prompt_default">Noklusētais</string>
+    <string name="feeds_ai_prompt_custom">Pielāgots</string>
+    <string name="feeds_ai_prompt_variables">Mainīgie: %1$s</string>
+    <string name="feeds_link">Saite</string>
+    <string name="feeds_share_link_title">Plūsmas saite</string>
+    <string name="feeds_scroll_to_top">Atpakaļ uz augšu</string>
 </resources>

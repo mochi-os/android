@@ -276,4 +276,13 @@
     <string name="feeds_unsubscribe_confirm_message">អ្នកនឹងឈប់ទទួលបានបច្ចុប្បន្នភាពពីហ្វីដនេះ។ អ្នកអាចជាវឡើងវិញបានគ្រប់ពេល។</string>
     <string name="feeds_access_select_rule">ជ្រើសរើសច្បាប់ចូលប្រើ</string>
     <string name="feeds_access_authenticated_desc">នរណាក៏ដោយដែលបានចូលគណនី</string>
+    <string name="feeds_banner_hint">សូមស្វាគមន៍មកកាន់វេទិកានេះ…</string>
+    <string name="feeds_banner_dismiss">បិទបដា</string>
+    <string name="feeds_members_search">ច្រោះសមាជិក</string>
+    <string name="feeds_ai_prompt_default">លំនាំដើម</string>
+    <string name="feeds_ai_prompt_custom">ផ្ទាល់ខ្លួន</string>
+    <string name="feeds_ai_prompt_variables">អថេរ៖ %1$s</string>
+    <string name="feeds_link">តំណ</string>
+    <string name="feeds_share_link_title">តំណព័ត៌មាន</string>
+    <string name="feeds_scroll_to_top">ត្រឡប់ទៅខាងលើ</string>
 </resources>

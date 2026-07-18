@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">আপনি এই ফিড থেকে আর আপডেট পাবেন না। আপনি যেকোনো সময় আবার সাবস্ক্রাইব করতে পারবেন।</string>
     <string name="feeds_access_select_rule">অ্যাক্সেস নিয়ম নির্বাচন করুন</string>
     <string name="feeds_access_authenticated_desc">লগ ইন করা যে কেউ</string>
+    <string name="feeds_banner_hint">এই ফোরামে স্বাগতম…</string>
+    <string name="feeds_banner_dismiss">ব্যানার বাতিল করুন</string>
+    <string name="feeds_members_search">সদস্য ফিল্টার করুন</string>
+    <string name="feeds_ai_prompt_default">ডিফল্ট</string>
+    <string name="feeds_ai_prompt_custom">কাস্টম</string>
+    <string name="feeds_ai_prompt_variables">ভেরিয়েবল: %1$s</string>
+    <string name="feeds_link">লিঙ্ক</string>
+    <string name="feeds_share_link_title">ফিডের লিঙ্ক</string>
+    <string name="feeds_scroll_to_top">উপরে ফিরে যান</string>
 </resources>

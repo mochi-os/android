@@ -249,17 +249,6 @@ class PostViewModel @Inject constructor(
         }
     }
 
-    fun editPost(newTitle: String, newBody: String) {
-        viewModelScope.launch {
-            try {
-                repository.editPost(forumId, postId, newTitle, newBody)
-                refresh()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     fun pinPost() = moderate { repository.pinPost(forumId, postId) }
     fun unpinPost() = moderate { repository.unpinPost(forumId, postId) }
     fun lockPost() = moderate { repository.lockPost(forumId, postId) }

@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Ще спрете да получавате актуализации от тази емисия. Можете да се абонирате отново по всяко време.</string>
     <string name="feeds_access_select_rule">Изберете правило за достъп</string>
     <string name="feeds_access_authenticated_desc">Всеки, който е влязъл в системата</string>
+    <string name="feeds_banner_hint">Добре дошли в този форум…</string>
+    <string name="feeds_banner_dismiss">Отхвърли банера</string>
+    <string name="feeds_members_search">Филтриране на членове</string>
+    <string name="feeds_ai_prompt_default">По подразбиране</string>
+    <string name="feeds_ai_prompt_custom">Персонализиран</string>
+    <string name="feeds_ai_prompt_variables">Променливи: %1$s</string>
+    <string name="feeds_link">Връзка</string>
+    <string name="feeds_share_link_title">Връзка към емисията</string>
+    <string name="feeds_scroll_to_top">Обратно нагоре</string>
 </resources>

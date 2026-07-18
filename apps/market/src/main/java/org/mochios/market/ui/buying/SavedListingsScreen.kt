@@ -182,7 +182,8 @@ class SavedListingsViewModel @Inject constructor(
     private fun loadCategories() {
         viewModelScope.launch {
             try {
-                internalState.value = internalState.value.copy(categories = repo.listCategories())
+                val categories = repo.listCategories()
+                internalState.value = internalState.value.copy(categories = categories)
             } catch (_: Exception) {
                 // Categories are non-critical; cards just omit the chip.
             }

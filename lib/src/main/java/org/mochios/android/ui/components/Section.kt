@@ -19,6 +19,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
@@ -44,8 +45,9 @@ import androidx.compose.ui.unit.dp
  * }
  * ```
  *
- * @param title       Section heading, rendered as `titleMedium`.
- * @param description Optional one-line description in `bodySmall` muted style.
+ * @param title       Section heading, rendered as bold `titleMedium`.
+ * @param description Optional one-line description in muted `bodyMedium` — read
+ *                    once for orientation, so it sits under the rows it explains.
  * @param action      Optional trailing composable (typically a small button)
  *                    aligned to the end of the header row.
  * @param headerAlignment Vertical alignment of the title column and the
@@ -76,12 +78,13 @@ fun Section(
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
                     )
                     if (description != null) {
                         Spacer(modifier = Modifier.padding(top = 4.dp))
                         Text(
                             text = description,
-                            style = MaterialTheme.typography.bodySmall,
+                            style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }

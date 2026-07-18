@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Nderehupytymo\'ãvéima pyahukue ko feed-gui. Ikatu eñemboheraguapy jey oimeraẽva ára.</string>
     <string name="feeds_access_select_rule">Eporavo acceso regla</string>
     <string name="feeds_access_authenticated_desc">Oimeraẽva oike va\'ekue</string>
+    <string name="feeds_banner_hint">Eg̃uahẽporãite ko foro-pe…</string>
+    <string name="feeds_banner_dismiss">Mbohovái banner</string>
+    <string name="feeds_members_search">Embogue mba\'apoharakuéra</string>
+    <string name="feeds_ai_prompt_default">Ypy peguáva</string>
+    <string name="feeds_ai_prompt_custom">Personalizado</string>
+    <string name="feeds_ai_prompt_variables">Variable-kuéra: %1$s</string>
+    <string name="feeds_link">Juajuha</string>
+    <string name="feeds_scroll_to_top">Jevy yvatévo</string>
+    <string name="feeds_share_link_title">Feed juajuha</string>
 </resources>

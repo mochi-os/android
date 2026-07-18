@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Uzoyeka ukuthola izibuyekezo kule fidi. Ungaphinda ubhalisele noma nini.</string>
     <string name="feeds_access_select_rule">Khetha umthetho wokufinyelela</string>
     <string name="feeds_access_authenticated_desc">Noma ubani ongene ngemvume</string>
+    <string name="feeds_banner_hint">Siyakwamukela kule nkundla…</string>
+    <string name="feeds_banner_dismiss">Cashisa ibhana</string>
+    <string name="feeds_members_search">Hlunga amalungu</string>
+    <string name="feeds_ai_prompt_default">Okuzenzakalelayo</string>
+    <string name="feeds_ai_prompt_custom">Okwezifiso</string>
+    <string name="feeds_ai_prompt_variables">Okuguqukayo: %1$s</string>
+    <string name="feeds_link">Isixhumanisi</string>
+    <string name="feeds_share_link_title">Isixhumanisi sefidi</string>
+    <string name="feeds_scroll_to_top">Buyela phezulu</string>
 </resources>

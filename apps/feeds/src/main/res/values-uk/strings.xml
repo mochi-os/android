@@ -291,4 +291,13 @@
     <string name="feeds_unsubscribe_confirm_message">Ви більше не отримуватимете оновлення з цієї стрічки. Ви можете підписатися знову в будь-який момент.</string>
     <string name="feeds_access_select_rule">Виберіть правило доступу</string>
     <string name="feeds_access_authenticated_desc">Усі, хто увійшли в систему</string>
+    <string name="feeds_banner_hint">Ласкаво просимо до цього форуму…</string>
+    <string name="feeds_banner_dismiss">Закрити банер</string>
+    <string name="feeds_members_search">Фільтрувати учасників</string>
+    <string name="feeds_ai_prompt_default">За замовчуванням</string>
+    <string name="feeds_ai_prompt_custom">Користувацький</string>
+    <string name="feeds_ai_prompt_variables">Змінні: %1$s</string>
+    <string name="feeds_link">Посилання</string>
+    <string name="feeds_share_link_title">Посилання на стрічку</string>
+    <string name="feeds_scroll_to_top">Догори</string>
 </resources>

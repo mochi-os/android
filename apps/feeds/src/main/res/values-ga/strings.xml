@@ -296,4 +296,13 @@
     <string name="feeds_unsubscribe_confirm_message">Ní bhfaighidh tú nuashonruithe ón bhfotha seo a thuilleadh. Is féidir leat liostáil arís am ar bith.</string>
     <string name="feeds_access_select_rule">Roghnaigh riail rochtana</string>
     <string name="feeds_access_authenticated_desc">Duine ar bith atá logáilte isteach</string>
+    <string name="feeds_banner_hint">Fáilte chuig an bhfóram seo…</string>
+    <string name="feeds_banner_dismiss">Dífhostaigh meirge</string>
+    <string name="feeds_members_search">Scag baill</string>
+    <string name="feeds_ai_prompt_default">Réamhshocrú</string>
+    <string name="feeds_ai_prompt_custom">Saincheaptha</string>
+    <string name="feeds_ai_prompt_variables">Athróga: %1$s</string>
+    <string name="feeds_link">Nasc</string>
+    <string name="feeds_share_link_title">Nasc an fhotha</string>
+    <string name="feeds_scroll_to_top">Ar ais go barr</string>
 </resources>

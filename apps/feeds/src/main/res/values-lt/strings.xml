@@ -291,4 +291,13 @@
     <string name="feeds_unsubscribe_confirm_message">Nebegausite naujienų iš šio kanalo. Bet kada galite vėl užsiprenumeruoti.</string>
     <string name="feeds_access_select_rule">Pasirinkite prieigos taisyklę</string>
     <string name="feeds_access_authenticated_desc">Visi prisijungę naudotojai</string>
+    <string name="feeds_banner_hint">Sveiki atvykę į šį forumą…</string>
+    <string name="feeds_banner_dismiss">Atmesti reklamjuostę</string>
+    <string name="feeds_members_search">Filtruoti narius</string>
+    <string name="feeds_ai_prompt_default">Numatytasis</string>
+    <string name="feeds_ai_prompt_custom">Pasirinktinis</string>
+    <string name="feeds_ai_prompt_variables">Kintamieji: %1$s</string>
+    <string name="feeds_link">Nuoroda</string>
+    <string name="feeds_share_link_title">Srauto nuoroda</string>
+    <string name="feeds_scroll_to_top">Atgal į viršų</string>
 </resources>

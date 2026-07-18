@@ -8,7 +8,6 @@ package org.mochios.forums.api
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
-import org.mochios.android.model.AccessRule
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.DirectoryEntry
@@ -53,6 +52,24 @@ data class ViewForumResponse(
     val can_moderate: Boolean = false,
     val hasMore: Boolean = false,
     val nextCursor: Long? = null
+)
+
+/** Viewer permissions block returned alongside the forum row. */
+data class ForumPermissions(
+    val manage: Boolean = false,
+    val post: Boolean = false,
+    val view: Boolean = false,
+)
+
+/**
+ * Response for `{forumId}/-/information`: the forum row plus the viewer's
+ * permissions. Used by the settings screen in place of the heavier `viewForum`.
+ */
+data class ForumInfoResponse(
+    val entity: Boolean = false,
+    val fingerprint: String = "",
+    val forum: Forum = Forum(),
+    val permissions: ForumPermissions = ForumPermissions(),
 )
 
 data class CreateForumResponse(
@@ -128,9 +145,27 @@ data class ModerationLogResponse(
     val entries: List<ModerationLogEntry> = emptyList(),
 )
 
+/**
+ * One access entry as the forums API serialises it: the subject in [id] (an
+ * entity id, `@group`, `*` for anyone, or `+` for authenticated users) and the
+ * granted level in [level] (`*` for the owner). [name] is the resolved display
+ * name, empty for the wildcard subjects.
+ */
+data class ForumAccessEntry(
+    val id: String = "",
+    val isOwner: Boolean = false,
+    val level: String = "",
+    val name: String = "",
+)
+
+/**
+ * Response of `-/access`: the forum, its access entries, and the levels the
+ * server offers for this forum (lowest to highest).
+ */
 data class AccessResponse(
     val forum: Forum = Forum(),
-    val rules: List<AccessRule> = emptyList(),
+    val access: List<ForumAccessEntry> = emptyList(),
+    val levels: List<String> = emptyList(),
 )
 
 data class MembersResponse(
@@ -149,6 +184,16 @@ data class BannerResponse(
 data class RssTokenResponse(
     val token: String = "",
     val url: String = "",
+)
+
+/**
+ * Response of `{forumId}/-/share`: the shareable [link]
+ * (`mochi://<peer>/<forum>`) plus the [peer] and [forum] it is built from.
+ */
+data class ShareResponse(
+    val forum: String = "",
+    val link: String = "",
+    val peer: String = "",
 )
 
 data class ForumTagCount(val label: String = "", val count: Int = 0)
@@ -240,7 +285,7 @@ interface ForumsApi {
     // ---- Forum entity ----
 
     @GET("{forumId}/-/information")
-    suspend fun getForumInfo(@Path("forumId") forumId: String): Response<ApiResponse<Map<String, Any>>>
+    suspend fun getForumInfo(@Path("forumId") forumId: String): Response<ApiResponse<ForumInfoResponse>>
 
     @GET("{forumId}/-/posts")
     suspend fun viewForum(
@@ -586,10 +631,13 @@ interface ForumsApi {
         @Field("banner") banner: String,
     ): Response<ApiResponse<SuccessResponse>>
 
+    // The accounts endpoint returns a bare JSON array (no `{data:…}` envelope),
+    // matching the settings module's connected-accounts list — so decode it as a
+    // plain list, not ApiResponse.
     @GET("-/accounts/list")
     suspend fun listAccounts(
         @Query("capability") capability: String,
-    ): Response<ApiResponse<List<org.mochios.android.model.Account>>>
+    ): Response<List<org.mochios.android.model.Account>>
 
     @FormUrlEncoded
     @POST("{forumId}/-/ai/settings")
@@ -644,6 +692,11 @@ interface ForumsApi {
         @Query("entity") entity: String,
         @Query("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
+
+    @POST("{forumId}/-/share")
+    suspend fun shareForum(
+        @Path("forumId") forumId: String,
+    ): Response<ApiResponse<ShareResponse>>
 
     @GET("{forumId}/-/tags")
     suspend fun getForumTags(@Path("forumId") forumId: String): Response<ApiResponse<ForumTagsResponse>>

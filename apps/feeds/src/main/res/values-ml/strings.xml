@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">ഈ ഫീഡിൽ നിന്നുള്ള അപ്ഡേറ്റുകൾ ഇനി ലഭിക്കില്ല. എപ്പോൾ വേണമെങ്കിലും വീണ്ടും സബ്സ്ക്രൈബ് ചെയ്യാം.</string>
     <string name="feeds_access_select_rule">ആക്സസ് റൂൾ തിരഞ്ഞെടുക്കുക</string>
     <string name="feeds_access_authenticated_desc">ലോഗിൻ ചെയ്തിട്ടുള്ള ആർക്കും</string>
+    <string name="feeds_banner_hint">ഈ ഫോറത്തിലേക്ക് സ്വാഗതം…</string>
+    <string name="feeds_banner_dismiss">ബാനർ ഒഴിവാക്കുക</string>
+    <string name="feeds_members_search">അംഗങ്ങളെ ഫിൽട്ടർ ചെയ്യുക</string>
+    <string name="feeds_ai_prompt_default">ഡിഫോൾട്ട്</string>
+    <string name="feeds_ai_prompt_custom">ഇഷ്ടാനുസൃതം</string>
+    <string name="feeds_ai_prompt_variables">വേരിയബിളുകൾ: %1$s</string>
+    <string name="feeds_link">ലിങ്ക്</string>
+    <string name="feeds_share_link_title">ഫീഡ് ലിങ്ക്</string>
+    <string name="feeds_scroll_to_top">മുകളിലേക്ക് മടങ്ങുക</string>
 </resources>

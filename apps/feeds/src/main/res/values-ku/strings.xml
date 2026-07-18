@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Êdî tu nûvekirinan ji vê feedê wernagirî. Tu dikarî her dem dîsa abone bibî.</string>
     <string name="feeds_access_select_rule">Rêzika destpêkirinê hilbijêre</string>
     <string name="feeds_access_authenticated_desc">Her kesê ku têketî ye</string>
+    <string name="feeds_banner_hint">Bi xêr hatî vê forumê…</string>
+    <string name="feeds_banner_dismiss">Bannerê red bike</string>
+    <string name="feeds_members_search">Endaman parz bike</string>
+    <string name="feeds_ai_prompt_default">Standard</string>
+    <string name="feeds_ai_prompt_custom">Taybet</string>
+    <string name="feeds_ai_prompt_variables">Guhêrbar: %1$s</string>
+    <string name="feeds_link">Girêdan</string>
+    <string name="feeds_scroll_to_top">Vegere jor</string>
+    <string name="feeds_share_link_title">Girêdana feedê</string>
 </resources>

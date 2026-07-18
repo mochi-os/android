@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Anjeun moal narima deui apdet ti ieu feed. Anjeun bisa langganan deui iraha waé.</string>
     <string name="feeds_access_select_rule">Pilih aturan aksés</string>
     <string name="feeds_access_authenticated_desc">Saha waé anu parantos asup log</string>
+    <string name="feeds_banner_hint">Wilujeng sumping ka forum ieu…</string>
+    <string name="feeds_banner_dismiss">Pasini banner</string>
+    <string name="feeds_members_search">Saring anggota</string>
+    <string name="feeds_ai_prompt_default">Standar</string>
+    <string name="feeds_ai_prompt_custom">Kustom</string>
+    <string name="feeds_ai_prompt_variables">Variabel: %1$s</string>
+    <string name="feeds_link">Tumbu</string>
+    <string name="feeds_share_link_title">Tumbu feed</string>
+    <string name="feeds_scroll_to_top">Balik ka luhur</string>
 </resources>

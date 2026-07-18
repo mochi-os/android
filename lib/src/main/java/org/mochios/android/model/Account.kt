@@ -21,8 +21,8 @@ data class Account(
     val created: Long = 0,
     val verified: Int = 0,
     val enabled: Int = 0,
-    @SerializedName("default") val isDefault: Int = 0,
+    @SerializedName("default") val isDefault: String = "",
 ) {
     /** Display label: explicit `label`, falling back to the identifier (e.g. email). */
-    val displayLabel: String get() = label.ifBlank { identifier }
+    val displayLabel: String get() = label.ifBlank { "$identifier - $type" }
 }

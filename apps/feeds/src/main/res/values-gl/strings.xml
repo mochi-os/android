@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Deixarás de recibir actualizacións desta fonte. Podes volver subscribirte en calquera momento.</string>
     <string name="feeds_access_select_rule">Seleccionar regra de acceso</string>
     <string name="feeds_access_authenticated_desc">Calquera persoa con sesión iniciada</string>
+    <string name="feeds_banner_hint">Benvido a este foro…</string>
+    <string name="feeds_banner_dismiss">Descartar banner</string>
+    <string name="feeds_members_search">Filtrar membros</string>
+    <string name="feeds_ai_prompt_default">Predeterminado</string>
+    <string name="feeds_ai_prompt_custom">Personalizado</string>
+    <string name="feeds_ai_prompt_variables">Variables: %1$s</string>
+    <string name="feeds_link">Ligazón</string>
+    <string name="feeds_share_link_title">Ligazón da fonte</string>
+    <string name="feeds_scroll_to_top">Volver arriba</string>
 </resources>

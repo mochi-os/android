@@ -95,7 +95,8 @@ class SellerSettingsViewModel @Inject constructor(
     private fun loadFees() {
         viewModelScope.launch {
             try {
-                _state.value = _state.value.copy(fees = repo.getFees())
+                val fees = repo.getFees()
+                _state.value = _state.value.copy(fees = fees)
             } catch (_: Exception) {
                 // Fees are non-critical; the page falls back to the loading label.
             }
@@ -105,7 +106,8 @@ class SellerSettingsViewModel @Inject constructor(
     private fun refreshStripe() {
         viewModelScope.launch {
             try {
-                _state.value = _state.value.copy(stripeStatus = repo.stripeStatus())
+                val status = repo.stripeStatus()
+                _state.value = _state.value.copy(stripeStatus = status)
             } catch (_: Exception) {
                 // Leave the prior status in place; the summary degrades gracefully.
             }

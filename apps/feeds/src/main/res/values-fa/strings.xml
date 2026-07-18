@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">دیگر به‌روزرسانی‌های این فید را دریافت نخواهید کرد. هر زمان می‌توانید دوباره مشترک شوید.</string>
     <string name="feeds_access_select_rule">انتخاب قاعده دسترسی</string>
     <string name="feeds_access_authenticated_desc">هر کسی که وارد شده باشد</string>
+    <string name="feeds_banner_hint">به این انجمن خوش آمدید…</string>
+    <string name="feeds_banner_dismiss">بستن بنر</string>
+    <string name="feeds_members_search">فیلتر اعضا</string>
+    <string name="feeds_ai_prompt_default">پیش‌فرض</string>
+    <string name="feeds_ai_prompt_custom">سفارشی</string>
+    <string name="feeds_ai_prompt_variables">متغیرها: %1$s</string>
+    <string name="feeds_link">پیوند</string>
+    <string name="feeds_share_link_title">پیوند خوراک</string>
+    <string name="feeds_scroll_to_top">بازگشت به بالا</string>
 </resources>

@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.chat.model.Friend
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
@@ -121,7 +122,7 @@ class NewChatViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(300)
+            delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isSearchingDirectory = true)
             try {
                 val friendIds = _uiState.value.friends.map { it.id }.toSet()

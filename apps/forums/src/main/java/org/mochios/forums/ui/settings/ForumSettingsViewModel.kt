@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,8 +19,10 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.forums.R
+import org.mochios.forums.api.ForumPermissions
 import org.mochios.forums.model.AiPrompts
-import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumMember
 import org.mochios.forums.repository.ForumsRepository
@@ -26,15 +30,19 @@ import javax.inject.Inject
 
 data class ForumSettingsUiState(
     val forum: Forum = Forum(),
+    /** The viewer's permissions; `manage` gates every editing surface. */
+    val permissions: ForumPermissions = ForumPermissions(),
     val isLoading: Boolean = false,
     val isSaving: Boolean = false,
     val error: MochiError? = null,
+    val actionMessage: Int? = null,
     val deleted: Boolean = false,
+    val unsubscribed: Boolean = false,
     val accessRules: List<AccessRule> = emptyList(),
+    /** Levels this forum offers, highest first; empty until access loads. */
+    val accessLevels: List<String> = emptyList(),
     val members: List<ForumMember> = emptyList(),
     val memberSearchResults: List<ForumMember> = emptyList(),
-    val banner: String = "",
-    val aiSettings: AiSettings? = null,
     val aiPrompts: AiPrompts? = null,
     val aiAccounts: List<org.mochios.android.model.Account> = emptyList(),
     val rssToken: String = "",
@@ -54,6 +62,10 @@ class ForumSettingsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(ForumSettingsUiState())
     val uiState: StateFlow<ForumSettingsUiState> = _uiState.asStateFlow()
 
+    /** In-flight searches, each cancelled by the next keystroke. */
+    private var userSearchJob: Job? = null
+    private var memberSearchJob: Job? = null
+
     init {
         load()
     }
@@ -62,8 +74,20 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val r = repository.viewForum(forumId)
-                _uiState.value = _uiState.value.copy(forum = r.forum, isLoading = false)
+                val info = repository.getForumInfo(forumId)
+                // AI accounts are an account-wide list and only ever drive
+                // manage-only UI, so skip the call for a viewer who can't manage.
+                val accounts = if (info.permissions.manage) {
+                    repository.listAiAccounts().sortedWith(compareBy(NaturalCompare) { it.label })
+                } else {
+                    emptyList()
+                }
+                _uiState.value = _uiState.value.copy(
+                    forum = info.forum,
+                    permissions = info.permissions,
+                    aiAccounts = accounts,
+                    isLoading = false,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -77,7 +101,8 @@ class ForumSettingsViewModel @Inject constructor(
                 repository.renameForum(forumId, newName)
                 _uiState.value = _uiState.value.copy(
                     forum = _uiState.value.forum.copy(name = newName),
-                    isSaving = false
+                    isSaving = false,
+                    actionMessage = R.string.forums_settings_forum_renamed,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
@@ -96,12 +121,42 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
+    /** Unsubscribe the viewer from this forum, then leave the settings screen. */
+    fun unsubscribe() {
+        viewModelScope.launch {
+            try {
+                repository.unsubscribe(forumId, _uiState.value.forum.server.ifBlank { null })
+                _uiState.value = _uiState.value.copy(unsubscribed = true)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
     fun loadAccess() {
         viewModelScope.launch {
             try {
                 val r = repository.getAccess(forumId)
                 _uiState.value = _uiState.value.copy(
-                    accessRules = r.rules.sortedWith(compareBy(NaturalCompare) { it.name ?: it.subject })
+                    // The API keys each entry by `id`/`level`; the shared UI row
+                    // speaks `subject`/`operation`. Entries are grants by
+                    // definition — a revoked subject is simply absent.
+                    accessRules = r.access
+                        .map { entry ->
+                            AccessRule(
+                                subject = entry.id,
+                                operation = entry.level,
+                                grant = 1,
+                                name = entry.name,
+                                isOwner = entry.isOwner,
+                            )
+                        }
+                        .sortedWith(compareBy(NaturalCompare) { rule ->
+                            rule.name?.ifBlank { rule.subject } ?: rule.subject
+                        }),
+                    // The server decides which levels this forum offers; it
+                    // lists them lowest-first, the UI shows highest-first.
+                    accessLevels = r.levels.reversed(),
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -113,6 +168,9 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAccess(forumId, target, level)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.forums_settings_access_updated,
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -124,6 +182,9 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.revokeAccess(forumId, target)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.forums_settings_access_revoked,
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -132,11 +193,16 @@ class ForumSettingsViewModel @Inject constructor(
     }
 
     fun searchUsers(query: String) {
+        // Each keystroke replaces the last: without this a typed name is one
+        // request per letter, and a slow early response can land after a later
+        // one and overwrite the newer results.
+        userSearchJob?.cancel()
         if (query.trim().length < 2) {
             _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             return
         }
-        viewModelScope.launch {
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
                 val results = repository.searchUsers(query.trim())
                 _uiState.value = _uiState.value.copy(userSearchResults = results)
@@ -172,7 +238,9 @@ class ForumSettingsViewModel @Inject constructor(
     }
 
     fun searchMembers(query: String) {
-        viewModelScope.launch {
+        memberSearchJob?.cancel()
+        memberSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
                 val r = repository.searchMembers(forumId, query)
                 _uiState.value = _uiState.value.copy(memberSearchResults = r.members)
@@ -186,18 +254,10 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.removeMember(forumId, memberId)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.forums_settings_member_removed,
+                )
                 loadMembers()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun loadBanner() {
-        viewModelScope.launch {
-            try {
-                val r = repository.getBanner(forumId)
-                _uiState.value = _uiState.value.copy(banner = r.banner)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -208,28 +268,25 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setBanner(forumId, banner)
-                _uiState.value = _uiState.value.copy(banner = banner)
+                _uiState.value = _uiState.value.copy(
+                    forum = _uiState.value.forum.copy(banner = banner),
+                    actionMessage = R.string.forums_settings_banner_saved,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }
 
-    fun loadAi() {
+    /**
+     * Load the prompt defaults for the AI section's "reset to default" action.
+     * The current mode/account/prompt values come from the forum row itself.
+     */
+    fun loadAiPrompts() {
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(
-                    // Drive aiSettings off the already-loaded forum row — there's
-                    // no separate read endpoint; calling the POST ai/settings as
-                    // a GET zeroed the columns.
-                    aiSettings = AiSettings(
-                        mode = _uiState.value.forum.aiMode,
-                        account = _uiState.value.forum.aiAccount,
-                    ),
-                    aiPrompts = repository.getAiPrompts(forumId),
-                    aiAccounts = repository.listAiAccounts()
-                        .sortedWith(compareBy(NaturalCompare) { it.label }),
-                )
+                val prompts = repository.getAiPrompts(forumId)
+                _uiState.value = _uiState.value.copy(aiPrompts = prompts)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -241,8 +298,8 @@ class ForumSettingsViewModel @Inject constructor(
             try {
                 repository.setAiSettings(forumId, mode, account)
                 _uiState.value = _uiState.value.copy(
-                    aiSettings = AiSettings(mode = mode, account = account),
                     forum = _uiState.value.forum.copy(aiMode = mode, aiAccount = account),
+                    actionMessage = R.string.forums_settings_ai_updated,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -258,6 +315,7 @@ class ForumSettingsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     aiPrompts = _uiState.value.aiPrompts?.copy(prompts = current + (type to prompt))
                         ?: AiPrompts(prompts = mapOf(type to prompt)),
+                    actionMessage = R.string.forums_settings_prompt_saved,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -284,6 +342,19 @@ class ForumSettingsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
+    }
+
+    /** Post [messageRes] to the settings screen's snackbar. */
+    fun setActionMessage(messageRes: Int) {
+        _uiState.value = _uiState.value.copy(actionMessage = messageRes)
+    }
+
+    fun clearActionMessage() {
+        _uiState.value = _uiState.value.copy(actionMessage = null)
     }
 
     fun loadRssToken() {

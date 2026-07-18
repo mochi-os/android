@@ -21,6 +21,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
@@ -207,8 +208,7 @@ class WikiListViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            // 500ms debounce matches the web `InlineWikiSearch` debounce.
-            delay(500)
+            delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(searchLoading = true, searchError = null)
             try {
                 val results = repo.directorySearch(query).results

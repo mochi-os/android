@@ -35,6 +35,8 @@
     <string name="forums_rss_mode_posts_comments">Posts and comments</string>
     <string name="forums_rss_copied">RSS URL copied to clipboard</string>
     <string name="forums_rss_clipboard_label">Forum RSS URL</string>
+    <string name="forums_link">Link</string>
+    <string name="forums_share_link_title">Forum link</string>
 
     <!-- Create forum -->
     <string name="forums_create_title">Create forum</string>
@@ -127,6 +129,7 @@
     <string name="forums_tab_access">Access</string>
     <string name="forums_tab_members">Members</string>
     <string name="forums_tab_banner">Banner</string>
+    <string name="forums_tab_moderation">Moderation</string>
     <string name="forums_tab_ai">AI</string>
 
     <!-- Access tab -->
@@ -141,25 +144,40 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_moderate">Moderate</string>
     <string name="forums_access_level_none">None</string>
+    <string name="forums_access_level_moderate_full">Moderate, post, comment, vote, and view</string>
+    <string name="forums_access_level_post_full">Post, comment, vote, and view</string>
+    <string name="forums_access_level_comment_full">Comment, vote, and view</string>
+    <string name="forums_access_level_vote_full">Vote and view</string>
+    <string name="forums_access_level_view_full">View only</string>
+    <string name="forums_access_level_none_full">No access</string>
     <string name="forums_access_tab_users">Users</string>
     <string name="forums_access_tab_groups">Groups</string>
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Search users</string>
     <string name="forums_access_no_groups">No groups available</string>
+    <string name="forums_access_subject_anyone">Anyone</string>
+    <string name="forums_access_subject_authenticated">Authenticated users</string>
+    <string name="forums_access_tab_other">Other</string>
+    <string name="forums_access_select_group">Select a group</string>
+    <string name="forums_access_select_rule">Select a rule</string>
+    <string name="forums_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="forums_access_anyone_desc">Including anonymous users</string>
+    <string name="forums_access_selected">Selected: %1$s</string>
 
     <!-- Members tab -->
     <string name="forums_members_search">Filter members</string>
     <string name="forums_members_empty">No members</string>
 
     <!-- Banner tab -->
+    <string name="forums_clear">Clear</string>
     <string name="forums_banner_description">Markdown shown at the top of the forum.</string>
-    <string name="forums_banner_placeholder">Welcome to this forum…</string>
+    <string name="forums_banner_placeholder">Enter banner text (markdown supported)…</string>
     <string name="forums_banner_dismiss">Dismiss banner</string>
 
     <!-- AI tab -->
     <string name="forums_ai_mode_label">Mode: %1$s</string>
     <string name="forums_ai_mode_heading">AI mode</string>
-    <string name="forums_ai_mode_off">Off</string>
+    <string name="forums_ai_mode_off">Disabled</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account">AI account</string>
     <string name="forums_ai_account_default">Default account</string>
@@ -168,37 +186,56 @@
     <string name="forums_ai_prompt_reset">Reset to default</string>
     <string name="forums_ai_post_prompt_label">Prompt for post tags</string>
     <string name="forums_ai_comment_prompt_label">Prompt for comment tags</string>
+    <string name="forums_ai_actions_label">AI actions on posts</string>
+    <string name="forums_ai_account_label">Account</string>
+    <string name="forums_ai_prompt_tag_label">Tag prompt</string>
+    <string name="forums_ai_prompt_score_label">Score prompt</string>
+    <string name="forums_ai_prompt_default">Default</string>
+    <string name="forums_ai_prompt_custom">Custom</string>
+    <string name="forums_ai_prompt_variables">Variables: %1$s</string>
 
     <!-- General tab extras -->
     <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
     <string name="forums_settings_clear_notifications">Clear notifications</string>
     <string name="forums_settings_unsubscribe">Unsubscribe</string>
+    <string name="forums_settings_unsubscribe_section">Unsubscribe from forum</string>
 
     <!-- Moderation centre -->
     <string name="forums_moderation_title">Moderation</string>
-    <string name="forums_moderation_settings">Moderation settings</string>
+    <string name="forums_moderation_settings_updated">Moderation settings updated</string>
     <string name="forums_moderation_tab_queue">Queue</string>
     <string name="forums_moderation_tab_reports">Reports</string>
     <string name="forums_moderation_tab_log">Log</string>
     <string name="forums_moderation_tab_restrictions">Restrictions</string>
-    <string name="forums_moderation_queue_empty">Nothing pending</string>
-    <string name="forums_moderation_pending_posts">Pending posts</string>
-    <string name="forums_moderation_pending_comments">Pending comments</string>
-    <string name="forums_moderation_reports_status">Status</string>
+    <string name="forums_moderation_queue_empty">Moderation queue is empty</string>
+    <string name="forums_moderation_queue_empty_subtitle">All posts and comments have been reviewed</string>
+    <string name="forums_moderation_pending_posts">Pending posts (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Pending comments (%1$d)</string>
+    <string name="forums_moderation_reject">Reject</string>
+    <string name="forums_moderation_mute_title">Mute %1$s?</string>
+    <string name="forums_moderation_mute_message">They stay in the forum but cannot post or comment until you remove the restriction.</string>
+    <string name="forums_moderation_ban_title">Ban %1$s?</string>
+    <string name="forums_moderation_ban_message">They lose access to the forum until you remove the restriction.</string>
     <string name="forums_moderation_reports_pending">Pending</string>
     <string name="forums_moderation_reports_resolved">Resolved</string>
     <string name="forums_moderation_reports_all">All</string>
     <string name="forums_moderation_reports_empty">No reports</string>
+    <string name="forums_moderation_reports_empty_subtitle">No pending reports found</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
-    <string name="forums_moderation_report_meta">Reported by %1$s · Author %2$s</string>
+    <string name="forums_moderation_report_by">by %1$s</string>
+    <string name="forums_moderation_report_reason">Reason: %1$s</string>
+    <string name="forums_moderation_report_reported_by">Reported by %1$s</string>
     <string name="forums_moderation_report_dismiss">Dismiss</string>
-    <string name="forums_moderation_report_acted">Acted</string>
     <string name="forums_moderation_report_resolved_by">Resolved by %1$s — %2$s</string>
-    <string name="forums_moderation_log_empty">No moderator activity yet</string>
+    <string name="forums_moderation_log_empty">No moderation activity</string>
+    <string name="forums_moderation_log_empty_subtitle">There are no moderation actions recorded yet</string>
     <string name="forums_moderation_log_meta">By %1$s · Target %2$s</string>
     <string name="forums_moderation_restrictions_empty">No restrictions</string>
+    <string name="forums_moderation_restrictions_empty_subtitle">No users have been muted or banned</string>
     <string name="forums_moderation_restriction_add">Add restriction</string>
     <string name="forums_moderation_restriction_remove">Remove</string>
+    <string name="forums_moderation_restriction_remove_title">Remove restriction on %1$s?</string>
+    <string name="forums_moderation_restriction_remove_message">They regain full access to the forum straight away.</string>
     <string name="forums_moderation_restriction_user">User identity</string>
     <string name="forums_moderation_restriction_type">Type</string>
     <string name="forums_moderation_restriction_type_muted">Mute</string>
@@ -207,12 +244,25 @@
     <string name="forums_moderation_restriction_duration_seconds">Duration (seconds, blank for permanent)</string>
     <string name="forums_moderation_restriction_expires">Expires %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
+    <string name="forums_moderation_restriction_by">By %1$s</string>
+    <string name="forums_moderation_restriction_state_muted">Muted</string>
+    <string name="forums_moderation_restriction_state_banned">Banned</string>
+    <string name="forums_moderation_restriction_state_shadowban">Shadowbanned</string>
     <string name="forums_moderation_section_premoderation">Pre-moderation</string>
+    <string name="forums_moderation_section_premoderation_description">Require approval before content becomes visible</string>
     <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting_description">Prevent spam by limiting how often users can post</string>
     <string name="forums_moderation_require_posts">Require approval for new posts</string>
+    <string name="forums_moderation_require_posts_description">New threads must be approved</string>
     <string name="forums_moderation_require_comments">Require approval for new comments</string>
+    <string name="forums_moderation_require_comments_description">Replies must be approved</string>
     <string name="forums_moderation_require_new_users">Require approval for new users</string>
+    <string name="forums_moderation_require_new_users_description">Content from users below a threshold must be approved</string>
     <string name="forums_moderation_new_user_days">New user threshold:</string>
+    <string name="forums_moderation_unit_days">days</string>
+    <string name="forums_moderation_unit_posts">posts</string>
+    <string name="forums_moderation_unit_replies">replies</string>
+    <string name="forums_moderation_unit_seconds">seconds</string>
     <string name="forums_moderation_post_limit">Post limit</string>
     <string name="forums_moderation_comment_limit">Comment limit</string>
     <string name="forums_moderation_limit_window">Window duration</string>
@@ -248,7 +298,26 @@
     <string name="forums_comment_reply">Reply</string>
 
     <!-- Forum settings -->
-    <string name="forums_settings_title">Forum settings</string>
+    <string name="forums_settings_title">%1$s settings</string>
+    <string name="forums_settings_forum_renamed">Forum renamed</string>
+    <string name="forums_settings_banner_saved">Banner saved</string>
+    <string name="forums_settings_access_updated">Access updated</string>
+    <string name="forums_settings_access_revoked">Access revoked</string>
+    <string name="forums_settings_member_removed">Member removed</string>
+    <string name="forums_settings_ai_updated">AI settings updated</string>
+    <string name="forums_settings_prompt_saved">Prompt saved</string>
+    <string name="forums_settings_section_identity">Identity</string>
+    <string name="forums_settings_field_name">Name</string>
+    <string name="forums_settings_field_entity_id">Entity ID</string>
+    <string name="forums_settings_field_fingerprint_label">Fingerprint</string>
+    <string name="forums_settings_field_server">Server</string>
+    <string name="forums_settings_name_edit_cd">Edit name</string>
+    <string name="forums_settings_name_cancel_cd">Cancel editing</string>
+    <string name="forums_settings_name_clear_cd">Clear name</string>
+    <string name="forums_settings_save_name">Save name</string>
+    <string name="forums_settings_delete_description">Permanently delete this forum and all its content.</string>
+    <string name="forums_access_management">Access Management</string>
+    <string name="forums_access_management_description">Control who can view and interact with this forum</string>
     <string name="forums_settings_rename">Rename</string>
     <string name="forums_settings_rename_label">Forum name</string>
     <string name="forums_settings_save">Save</string>

@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -19,6 +21,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.wikis.R
 import org.mochios.wikis.model.AccessRule
 import org.mochios.wikis.model.Group
@@ -110,6 +113,9 @@ class AccessTabViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(AccessTabUiState())
     val uiState: StateFlow<AccessTabUiState> = _uiState.asStateFlow()
+    /** In-flight user search, cancelled by the next keystroke. */
+    private var userSearchJob: Job? = null
+
 
     private val _snackbar = MutableSharedFlow<AccessTabSnackbar>(extraBufferCapacity = 4)
     val snackbar: SharedFlow<AccessTabSnackbar> = _snackbar.asSharedFlow()
@@ -164,11 +170,16 @@ class AccessTabViewModel @Inject constructor(
     }
 
     fun searchUsers(query: String) {
+        // Each keystroke replaces the last: without this a typed name is one
+        // request per letter, and a slow early response can land after a later
+        // one and overwrite the newer results.
+        userSearchJob?.cancel()
         if (query.length < 2) {
             _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             return
         }
-        viewModelScope.launch {
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
             try {
                 val results = repository.searchUsers(query)
                 _uiState.value = _uiState.value.copy(userSearchResults = results)

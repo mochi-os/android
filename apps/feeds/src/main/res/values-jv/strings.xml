@@ -277,4 +277,13 @@
     <string name="feeds_unsubscribe_confirm_message">Sampeyan ora bakal nampa anyaran saka feed iki maneh. Sampeyan bisa langganan maneh kapan wae.</string>
     <string name="feeds_access_select_rule">Pilih aturan akses</string>
     <string name="feeds_access_authenticated_desc">Sapa wae sing wis mlebu</string>
+    <string name="feeds_banner_hint">Sugeng rawuh wonten ing forum punika…</string>
+    <string name="feeds_banner_dismiss">Singkiraké banner</string>
+    <string name="feeds_members_search">Saring anggota</string>
+    <string name="feeds_ai_prompt_default">Standar</string>
+    <string name="feeds_ai_prompt_custom">Kustom</string>
+    <string name="feeds_ai_prompt_variables">Variabel: %1$s</string>
+    <string name="feeds_link">Tautan</string>
+    <string name="feeds_share_link_title">Tautan feed</string>
+    <string name="feeds_scroll_to_top">Bali menyang ndhuwur</string>
 </resources>

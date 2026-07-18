@@ -82,7 +82,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                     endpoint = endpointToSend,
                 )
                 if (accountId != null) {
-                    storeAccountId(context, instance, accountId)
+                    deps.pushAccountStore().store(instance, accountId)
                 }
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to register endpoint with Mochi server: ${e.message}")
@@ -113,8 +113,9 @@ abstract class MochiPushReceiver : MessagingReceiver() {
 
     override fun onUnregistered(context: Context, instance: String) {
         Log.i(TAG, "onUnregistered instance=$instance")
-        val accountId = readAccountId(context, instance) ?: return
-        clearAccountId(context, instance)
+        val store = deps(context).pushAccountStore()
+        val accountId = store.read(instance) ?: return
+        store.clear(instance)
         val pendingResult = goAsync()
         CoroutineScope(Dispatchers.IO).launch {
             try {
@@ -222,36 +223,6 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         client.newCall(request).execute().close()
     }
 
-    private fun storeAccountId(context: Context, instance: String, accountId: String) {
-        context.applicationContext
-            .getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE)
-            .edit()
-            .putString(prefKey(instance), accountId)
-            .apply()
-    }
-
-    private fun readAccountId(context: Context, instance: String): String? {
-        val prefs = context.applicationContext.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE)
-        // Tolerate the legacy integer-typed value written by builds that
-        // predate the string-uid account id: getString throws if the stored
-        // entry is still an Int, so fall back to reading it as an Int.
-        return try {
-            prefs.getString(prefKey(instance), null)?.takeIf { it.isNotBlank() }
-        } catch (_: ClassCastException) {
-            prefs.getInt(prefKey(instance), -1).takeIf { it > 0 }?.toString()
-        }
-    }
-
-    private fun clearAccountId(context: Context, instance: String) {
-        context.applicationContext
-            .getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE)
-            .edit()
-            .remove(prefKey(instance))
-            .apply()
-    }
-
-    private fun prefKey(instance: String) = "push_account_id:$instance"
-
     private fun postSystemNotification(
         context: Context,
         instance: String,
@@ -297,6 +268,5 @@ abstract class MochiPushReceiver : MessagingReceiver() {
 
     private companion object {
         const val TAG = "MochiPush"
-        const val PREF_FILE = "mochi_push"
     }
 }

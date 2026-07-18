@@ -34,6 +34,7 @@ import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import org.mochios.android.util.SEARCH_DEBOUNCE
 
 data class MentionSuggestion(
     val id: String,
@@ -76,7 +77,7 @@ fun MentionTextField(
     // Debounce mention search
     LaunchedEffect(mentionQuery) {
         snapshotFlow { mentionQuery }
-            .debounce(200)
+            .debounce(SEARCH_DEBOUNCE)
             .distinctUntilChanged()
             .collectLatest { query ->
                 if (query != null && query.isNotEmpty()) {

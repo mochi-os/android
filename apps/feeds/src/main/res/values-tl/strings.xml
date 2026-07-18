@@ -281,4 +281,13 @@
     <string name="feeds_unsubscribe_confirm_message">Hindi ka na makakatanggap ng mga update mula sa feed na ito. Puwede kang mag-subscribe ulit anumang oras.</string>
     <string name="feeds_access_select_rule">Pumili ng access rule</string>
     <string name="feeds_access_authenticated_desc">Sinumang naka-log in</string>
+    <string name="feeds_banner_hint">Maligayang pagdating sa forum na ito…</string>
+    <string name="feeds_banner_dismiss">I-dismiss ang banner</string>
+    <string name="feeds_members_search">I-filter ang mga miyembro</string>
+    <string name="feeds_ai_prompt_default">Default</string>
+    <string name="feeds_ai_prompt_custom">Custom</string>
+    <string name="feeds_ai_prompt_variables">Mga variable: %1$s</string>
+    <string name="feeds_link">Link</string>
+    <string name="feeds_share_link_title">Link ng feed</string>
+    <string name="feeds_scroll_to_top">Bumalik sa itaas</string>
 </resources>

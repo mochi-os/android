@@ -33,6 +33,7 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -47,9 +48,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -57,15 +56,18 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
 /**
- * Compose a new forum post: title, a markdown body with `@mention`
- * autocomplete, and file attachments. Mirrors feeds' `CreatePostScreen` — the
- * submit action lives in the top bar and the attachment chips can be reordered,
- * since the server keeps the upload order.
+ * Compose or edit a forum post: title, a markdown body with `@mention`
+ * autocomplete, and file attachments. A single screen serves both — it is in
+ * edit mode when the back-stack carries a `postId`, prefilling the fields and
+ * showing the post's current attachments as keep/remove chips. Mirrors feeds'
+ * `CreatePostScreen` — the submit action lives in the top bar and the
+ * attachment chips can be reordered, since the server keeps the upload order.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -76,8 +78,11 @@ fun NewPostScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val attachments by viewModel.attachments.collectAsState()
-    var title by remember { mutableStateOf("") }
-    var body by remember { mutableStateOf("") }
+    val existingAttachments by viewModel.existingAttachments.collectAsState()
+    val removedExistingIds by viewModel.removedExistingIds.collectAsState()
+    val title by viewModel.title.collectAsState()
+    val body by viewModel.body.collectAsState()
+    val isEditing = viewModel.isEditing
 
     val filePickerLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
@@ -92,7 +97,14 @@ fun NewPostScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.forums_new_post)) },
+                title = {
+                    Text(
+                        stringResource(
+                            if (isEditing) R.string.forums_post_edit_title
+                            else R.string.forums_new_post
+                        )
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(
@@ -103,7 +115,7 @@ fun NewPostScreen(
                 },
                 actions = {
                     TextButton(
-                        onClick = { viewModel.submit(title, body) },
+                        onClick = { viewModel.submit() },
                         enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting
                     ) {
                         if (uiState.isPosting) {
@@ -112,7 +124,12 @@ fun NewPostScreen(
                                 strokeWidth = 2.dp
                             )
                         } else {
-                            Text(stringResource(R.string.forums_post_create_action))
+                            Text(
+                                stringResource(
+                                    if (isEditing) MochiR.string.common_save
+                                    else R.string.forums_post_create_action
+                                )
+                            )
                         }
                     }
                 },
@@ -131,7 +148,7 @@ fun NewPostScreen(
         ) {
             OutlinedTextField(
                 value = title,
-                onValueChange = { value -> title = value },
+                onValueChange = { value -> viewModel.setTitle(value) },
                 label = { Text(stringResource(R.string.forums_post_title_field)) },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth()
@@ -145,7 +162,7 @@ fun NewPostScreen(
             Spacer(Modifier.height(8.dp))
             MentionTextField(
                 value = body,
-                onValueChange = { value -> body = value },
+                onValueChange = { value -> viewModel.setBody(value) },
                 onSearch = { query -> viewModel.searchMembers(query) },
                 placeholder = { Text(stringResource(R.string.forums_markdown_supported)) },
                 modifier = Modifier
@@ -169,6 +186,16 @@ fun NewPostScreen(
                 )
                 Spacer(Modifier.width(8.dp))
                 Text(stringResource(R.string.forums_post_attach))
+            }
+
+            if (existingAttachments.isNotEmpty()) {
+                Spacer(Modifier.height(8.dp))
+                ExistingAttachmentChips(
+                    attachments = existingAttachments,
+                    removedIds = removedExistingIds,
+                    onMove = { id, direction -> viewModel.moveExistingAttachment(id, direction) },
+                    onToggleRemove = { id -> viewModel.toggleRemoveExistingAttachment(id) },
+                )
             }
 
             if (attachments.isNotEmpty()) {
@@ -259,6 +286,75 @@ private fun AttachmentChips(
                     label = {
                         Text(
                             rememberFileName(uri, fileLabel).takeLast(25),
+                            style = MaterialTheme.typography.labelSmall
+                        )
+                    },
+                    trailingIcon = {
+                        Icon(
+                            Icons.Default.Close,
+                            contentDescription = stringResource(R.string.forums_attachment_remove),
+                            modifier = Modifier.size(14.dp)
+                        )
+                    }
+                )
+            }
+        }
+    }
+}
+
+/**
+ * The post's current attachments while editing, as keep/remove chips. A
+ * deselected chip is dropped on save; up/down controls reorder the kept set,
+ * since the server keeps the order the ids arrive in.
+ */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun ExistingAttachmentChips(
+    attachments: List<Attachment>,
+    removedIds: Set<String>,
+    onMove: (String, Int) -> Unit,
+    onToggleRemove: (String) -> Unit,
+) {
+    FlowRow(
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        attachments.forEachIndexed { index, attachment ->
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (attachments.size > 1) {
+                    Column {
+                        if (index > 0) {
+                            IconButton(
+                                onClick = { onMove(attachment.id, -1) },
+                                modifier = Modifier.size(20.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.ExpandLess,
+                                    contentDescription = stringResource(R.string.forums_attachment_move_up),
+                                    modifier = Modifier.size(14.dp)
+                                )
+                            }
+                        }
+                        if (index < attachments.lastIndex) {
+                            IconButton(
+                                onClick = { onMove(attachment.id, 1) },
+                                modifier = Modifier.size(20.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.ExpandMore,
+                                    contentDescription = stringResource(R.string.forums_attachment_move_down),
+                                    modifier = Modifier.size(14.dp)
+                                )
+                            }
+                        }
+                    }
+                }
+                FilterChip(
+                    selected = attachment.id !in removedIds,
+                    onClick = { onToggleRemove(attachment.id) },
+                    label = {
+                        Text(
+                            attachment.name.takeLast(25),
                             style = MaterialTheme.typography.labelSmall
                         )
                     },
