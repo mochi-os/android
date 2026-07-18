@@ -134,6 +134,10 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
             .setContentTitle(title)
             .setContentText(body)
             .setAutoCancel(true)
+            // Damp bursts: a batch of server events re-posts the same tag in
+            // rapid succession (e.g. an RSS poll ingesting several posts);
+            // the first alerts, the rest update the tray silently.
+            .setOnlyAlertOnce(!SystemNotifications.shouldAlert(tag.ifBlank { "mochi" }))
             .setContentIntent(pending)
 
         val nm = NotificationManagerCompat.from(context)

@@ -60,4 +60,32 @@ object SystemNotifications {
         if (objectId.isBlank()) return true
         return tag.endsWith("-$objectId")
     }
+
+    // Last time each tray tag was allowed to alert. In-memory only: a
+    // process restart forgetting the burst window just means one extra
+    // alert, which is the safe direction.
+    private val alerted = java.util.concurrent.ConcurrentHashMap<String, Long>()
+
+    private const val ALERT_WINDOW_MILLIS = 5_000L
+
+    /**
+     * Whether a post of [tag] should make sound/vibration, damping bursts:
+     * the server coalesces each (app, topic, object) into one notification
+     * and re-sends it per event, so a batch — an RSS poll ingesting several
+     * posts at once — arrives as a rapid run of re-posts of the same tag.
+     * The first post of a burst alerts; further posts within the window
+     * should set `setOnlyAlertOnce(true)` so they update the tray silently.
+     * (`setOnlyAlertOnce` only mutes when the notification is still showing,
+     * so a row the user dismissed mid-window still alerts on re-post.)
+     */
+    fun shouldAlert(tag: String): Boolean {
+        val now = android.os.SystemClock.elapsedRealtime()
+        // Record only allowed alerts, so the window measures from the last
+        // audible alert — a steady stream of sub-window re-posts still
+        // alerts once per window rather than sliding into permanent silence.
+        val last = alerted[tag]
+        if (last != null && now - last <= ALERT_WINDOW_MILLIS) return false
+        alerted[tag] = now
+        return true
+    }
 }
