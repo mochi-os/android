@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -54,6 +55,7 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
@@ -115,6 +117,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.edit
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
@@ -129,6 +133,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.model.Attachment
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityAvatar
@@ -139,6 +144,9 @@ import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MediaGrid
+import org.mochios.android.ui.components.VideoFrame
+import org.mochios.android.ui.components.VideoPlayer
+import org.mochios.android.ui.components.rememberServerUrl
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -1206,6 +1214,7 @@ private fun PostImage(
     contentDescription: String?,
     modifier: Modifier = Modifier,
     alignment: Alignment = Alignment.Center,
+    contentScale: ContentScale = ContentScale.Fit,
     onClick: (() -> Unit)? = null,
 ) {
     // Layout-stable image: the caller fixes the container's size up front
@@ -1243,11 +1252,346 @@ private fun PostImage(
             AsyncImage(
                 model = url,
                 contentDescription = contentDescription,
-                contentScale = ContentScale.Fit,
+                contentScale = contentScale,
                 alignment = alignment,
                 onState = { state = it },
                 modifier = Modifier.fillMaxSize()
             )
+        }
+    }
+}
+
+// A post is a "gallery" when its media is the content: no RSS article behind
+// it, and at most a caption of text alongside the images/videos.
+private const val GALLERY_CAPTION_LIMIT = 200
+
+// Mosaic tiles shown before the last one collapses into a "+N" overlay.
+private const val GALLERY_TILE_LIMIT = 6
+
+// Byline (source/feed name + timestamp) and the compact metadata lines
+// (memory, check-in, travelling), shared by the article and gallery layouts.
+@Composable
+private fun PostByline(post: Post) {
+    // formatTimestamp obeys every timestamp preference (relative / absolute /
+    // auto, and the date+time+timezone format).
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        val defaultAuthor = stringResource(R.string.feeds_post_default_author)
+        val authorName = post.source?.name?.takeIf { it.isNotEmpty() }
+            ?: post.feedName.takeIf { it.isNotEmpty() }
+            ?: defaultAuthor
+        Text(
+            text = authorName,
+            style = MaterialTheme.typography.labelMedium,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.weight(1f),
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(
+            text = LocalFormat.current.formatTimestamp(post.created),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+
+    // Memory badge
+    post.data?.memory?.let { memory ->
+        if (memory.yearsAgo > 0) {
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = pluralStringResource(
+                    R.plurals.feeds_memory_years_ago_today,
+                    memory.yearsAgo,
+                    memory.yearsAgo
+                ),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.primary,
+                fontWeight = FontWeight.Medium
+            )
+        }
+    }
+
+    // Location info
+    post.data?.checkin?.let { checkin ->
+        if (checkin.name.isNotEmpty()) {
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = stringResource(R.string.feeds_location_at, checkin.name),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+    }
+    post.data?.travelling?.let { travelling ->
+        val origin = travelling.origin?.name ?: ""
+        val destination = travelling.destination?.name ?: ""
+        if (origin.isNotEmpty() || destination.isNotEmpty()) {
+            Spacer(modifier = Modifier.height(4.dp))
+            val text = when {
+                origin.isNotEmpty() && destination.isNotEmpty() ->
+                    stringResource(
+                        R.string.feeds_travel_arrow,
+                        origin,
+                        destination
+                    )
+
+                origin.isNotEmpty() ->
+                    stringResource(R.string.feeds_travel_from, origin)
+
+                else ->
+                    stringResource(R.string.feeds_travel_to, destination)
+            }
+            Text(
+                text = text,
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+    }
+}
+
+// Full-page gallery layout: byline on top, a media mosaic filling the space
+// down to the action bar, then the caption. Replaces the hero + article
+// column when the post's media is its content.
+@Composable
+private fun GalleryContent(
+    post: Post,
+    media: List<Attachment>,
+    caption: String,
+    fallbackFeedId: String,
+    onOpenImage: (imageIndex: Int) -> Unit,
+    onPlayVideo: (url: String) -> Unit,
+    onOpenPost: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
+    // Image requests go through Coil, whose mapper resolves relative URLs, but
+    // the video frame decoder and ExoPlayer don't — resolve video URLs against
+    // the server here. Absolute URLs pass through unchanged.
+    val serverUrl = rememberServerUrl().trimEnd('/')
+    val resolve: (String) -> String = { path ->
+        when {
+            path.startsWith("http://") || path.startsWith("https://") -> path
+            path.startsWith("/") -> "$serverUrl$path"
+            else -> "$serverUrl/$path"
+        }
+    }
+    val fullUrl: (Attachment) -> String = { attachment ->
+        attachment.url ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}"
+    }
+
+    Column(modifier = modifier) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 16.dp, end = 4.dp, top = 16.dp)
+        ) {
+            PostByline(post)
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        GalleryMosaic(
+            media = media,
+            tileModel = { attachment ->
+                if (attachment.isVideo) {
+                    // No server video-thumbnail route: decode the opening
+                    // frame from the video itself (VideoFrameFetcher).
+                    VideoFrame(resolve(fullUrl(attachment)))
+                } else {
+                    attachment.thumbnailUrl
+                        ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}/thumbnail"
+                }
+            },
+            onTap = { index ->
+                val attachment = media[index]
+                if (attachment.isVideo) {
+                    onPlayVideo(resolve(fullUrl(attachment)))
+                } else {
+                    // The lightbox spans images only, so map the mosaic index
+                    // to the attachment's position among the images.
+                    onOpenImage(media.take(index + 1).count { it.isImage } - 1)
+                }
+            },
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth(),
+        )
+        if (caption.isNotEmpty()) {
+            Text(
+                text = caption,
+                style = MaterialTheme.typography.bodyMedium,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 16.dp, end = 4.dp, top = 8.dp)
+                    .noRippleClickable(onOpenPost),
+            )
+        }
+        val files = post.attachments.filter { attachment ->
+            !attachment.isImage && !attachment.isVideo
+        }
+        if (files.isNotEmpty()) {
+            Text(
+                text = pluralStringResource(
+                    R.plurals.feeds_attachment_count,
+                    files.size,
+                    files.size
+                ),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(start = 16.dp, top = 4.dp),
+            )
+        }
+    }
+}
+
+// Count-adaptive fixed templates rather than a measured justified grid: the
+// geometry is final on the first frame (no reflow as bitmaps arrive), the
+// same layout-stability rule the hero image follows. Full-bleed, 2dp gaps.
+@Composable
+private fun GalleryMosaic(
+    media: List<Attachment>,
+    tileModel: (Attachment) -> Any,
+    onTap: (index: Int) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val shown = media.take(GALLERY_TILE_LIMIT)
+    val overflow = media.size - shown.size
+
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(2.dp)) {
+        val tile: @Composable (Int, Modifier, ContentScale) -> Unit = { index, tileModifier, scale ->
+            GalleryTile(
+                attachment = shown[index],
+                model = tileModel(shown[index]),
+                contentScale = scale,
+                more = if (index == shown.lastIndex && overflow > 0) overflow else 0,
+                onClick = { onTap(index) },
+                modifier = tileModifier,
+            )
+        }
+        when (shown.size) {
+            // A lone photo keeps its natural framing; grids crop to fill.
+            1 -> tile(0, Modifier.weight(1f).fillMaxWidth(), ContentScale.Fit)
+            2 -> {
+                tile(0, Modifier.weight(1f).fillMaxWidth(), ContentScale.Crop)
+                tile(1, Modifier.weight(1f).fillMaxWidth(), ContentScale.Crop)
+            }
+            3 -> {
+                tile(0, Modifier.weight(3f).fillMaxWidth(), ContentScale.Crop)
+                Row(
+                    modifier = Modifier.weight(2f).fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
+                ) {
+                    tile(1, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                    tile(2, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                }
+            }
+            4 -> {
+                Row(
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
+                ) {
+                    tile(0, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                    tile(1, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                }
+                Row(
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
+                ) {
+                    tile(2, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                    tile(3, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                }
+            }
+            5 -> {
+                Row(
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
+                ) {
+                    tile(0, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                    tile(1, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                }
+                Row(
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
+                ) {
+                    tile(2, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                    tile(3, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                }
+                tile(4, Modifier.weight(1f).fillMaxWidth(), ContentScale.Crop)
+            }
+            else -> {
+                for (row in 0 until 3) {
+                    Row(
+                        modifier = Modifier.weight(1f).fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(2.dp)
+                    ) {
+                        tile(row * 2, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                        tile(row * 2 + 1, Modifier.weight(1f).fillMaxHeight(), ContentScale.Crop)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// One mosaic cell: an image thumbnail (layout-stable PostImage) or a decoded
+// video frame with a play glyph, with a "+N" overlay on the last tile when
+// the post has more media than the mosaic shows.
+@Composable
+private fun GalleryTile(
+    attachment: Attachment,
+    model: Any,
+    contentScale: ContentScale,
+    more: Int,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Box(
+        modifier = modifier.clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        if (attachment.isVideo) {
+            Box(modifier = Modifier.matchParentSize().background(Color.Black))
+            AsyncImage(
+                model = model,
+                contentDescription = attachment.name,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize(),
+            )
+            if (more == 0) {
+                Icon(
+                    imageVector = Icons.Default.PlayCircle,
+                    contentDescription = stringResource(MochiR.string.common_play_video),
+                    tint = Color.White.copy(alpha = 0.9f),
+                    modifier = Modifier.size(48.dp),
+                )
+            }
+        } else {
+            PostImage(
+                url = model as String,
+                contentDescription = attachment.name,
+                contentScale = contentScale,
+                modifier = Modifier.fillMaxSize(),
+            )
+        }
+        if (more > 0) {
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .background(Color.Black.copy(alpha = 0.5f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = stringResource(MochiR.string.media_grid_more_count, more),
+                    color = Color.White,
+                    style = MaterialTheme.typography.titleLarge,
+                )
+            }
         }
     }
 }
@@ -1293,13 +1637,38 @@ private fun PostCard(
     val rssImageUrl = post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
     val heroUrl = attachmentImageUrls.firstOrNull() ?: rssImageUrl
+    // Gallery posts — the media is the content (no RSS article, at most a
+    // caption of text) — take the full-page mosaic layout instead of the
+    // hero + article column below.
+    val mediaAttachments = post.attachments.filter { it.isImage || it.isVideo }
+    val captionText = remember(post.body) { stripHtml(post.body).trim() }
+    val isGallery = post.data?.rss == null && mediaAttachments.isNotEmpty() &&
+        captionText.length <= GALLERY_CAPTION_LIMIT
+    // Full-screen playback for a tapped gallery video tile. null = closed.
+    var playingVideoUrl by remember { mutableStateOf<String?>(null) }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surface)
     ) {
-        if (heroUrl != null) {
+        if (isGallery) {
+            GalleryContent(
+                post = post,
+                media = mediaAttachments,
+                caption = captionText,
+                fallbackFeedId = fallbackFeedId,
+                onOpenImage = { imageIndex ->
+                    lightboxState = attachmentImageUrls to imageIndex
+                },
+                onPlayVideo = { url -> playingVideoUrl = url },
+                onOpenPost = onClick,
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth(),
+            )
+        }
+        if (!isGallery && heroUrl != null) {
             // Square corners; the hero region is a FIXED half-screen height,
             // reserved from the first frame — the post data carries no image
             // dimensions, so this is the only way a slow image load can't
@@ -1331,7 +1700,7 @@ private fun PostCard(
         // rather than scrolled. The verticalScroll is kept ONLY for its
         // nested-scroll handoff to the pager (its scroll range is zero) — a swipe
         // forwards to the pager and flips to the next post.
-        BoxWithConstraints(
+        if (!isGallery) BoxWithConstraints(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
@@ -1368,88 +1737,9 @@ private fun PostCard(
                         Spacer(modifier = Modifier.height(8.dp))
                     }
 
-                    // Byline: source/feed name + timestamp, below the title.
-                    // formatTimestamp obeys every timestamp preference (relative /
-                    // absolute / auto, and the date+time+timezone format).
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        val defaultAuthor = stringResource(R.string.feeds_post_default_author)
-                        val authorName = post.source?.name?.takeIf { it.isNotEmpty() }
-                            ?: post.feedName.takeIf { it.isNotEmpty() }
-                            ?: defaultAuthor
-                        Text(
-                            text = authorName,
-                            style = MaterialTheme.typography.labelMedium,
-                            fontWeight = FontWeight.SemiBold,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.weight(1f),
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            text = LocalFormat.current.formatTimestamp(post.created),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-
-                    // Memory badge
-                    post.data?.memory?.let { memory ->
-                        if (memory.yearsAgo > 0) {
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Text(
-                                text = pluralStringResource(
-                                    R.plurals.feeds_memory_years_ago_today,
-                                    memory.yearsAgo,
-                                    memory.yearsAgo
-                                ),
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.primary,
-                                fontWeight = FontWeight.Medium
-                            )
-                        }
-                    }
-
-                    // Location info
-                    post.data?.checkin?.let { checkin ->
-                        if (checkin.name.isNotEmpty()) {
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Text(
-                                text = stringResource(R.string.feeds_location_at, checkin.name),
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
-                    post.data?.travelling?.let { travelling ->
-                        val origin = travelling.origin?.name ?: ""
-                        val destination = travelling.destination?.name ?: ""
-                        if (origin.isNotEmpty() || destination.isNotEmpty()) {
-                            Spacer(modifier = Modifier.height(4.dp))
-                            val text = when {
-                                origin.isNotEmpty() && destination.isNotEmpty() ->
-                                    stringResource(
-                                        R.string.feeds_travel_arrow,
-                                        origin,
-                                        destination
-                                    )
-
-                                origin.isNotEmpty() ->
-                                    stringResource(R.string.feeds_travel_from, origin)
-
-                                else ->
-                                    stringResource(R.string.feeds_travel_to, destination)
-                            }
-                            Text(
-                                text = text,
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
+                    // Byline: source/feed name + timestamp, below the title,
+                    // then the compact metadata lines.
+                    PostByline(post)
 
                     // Post body — fillHeight gives it the weighted remainder of the
                     // viewport-height column, so it fills the space under the header
@@ -1635,6 +1925,24 @@ private fun PostCard(
             initialIndex = index,
             onDismiss = { lightboxState = null },
         )
+    }
+
+    // Full-screen playback for gallery video tiles, matching the attachment
+    // gallery's player dialog.
+    playingVideoUrl?.let { url ->
+        Dialog(
+            onDismissRequest = { playingVideoUrl = null },
+            properties = DialogProperties(usePlatformDefaultWidth = false),
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .aspectRatio(16f / 9f)
+                    .background(Color.Black),
+            ) {
+                VideoPlayer(url = url, modifier = Modifier.fillMaxSize())
+            }
+        }
     }
 }
 
