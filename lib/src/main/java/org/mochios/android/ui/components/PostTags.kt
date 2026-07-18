@@ -234,10 +234,13 @@ private fun TagMenuRow(
 }
 
 /**
- * Continuous interest scale: red (-100) → blue (0) → green (+100). Mirrors the
- * web PostTags hue ramp so the same interest reads as the same colour on both.
+ * Diverging interest scale: red (−) ↔ grey (0) ↔ green (+). Hue carries the
+ * sign, saturation the strength, so a neutral interest reads as plain grey
+ * rather than a colour you have to interpret. Keep in sync with
+ * interestColor() in lib/web/src/components/post-tags.tsx.
  */
 private fun interestColor(interest: Float): Color {
-    val hue = (240.0 - (interest / 100.0) * 120.0).toFloat().coerceIn(0f, 360f)
-    return Color.hsl(hue, 0.8f, 0.45f)
+    val magnitude = (kotlin.math.abs(interest) / 100f).coerceIn(0f, 1f)
+    val hue = if (interest >= 0f) 145f else 4f
+    return Color.hsl(hue, 0.06f + magnitude * 0.72f, 0.50f - magnitude * 0.03f)
 }
