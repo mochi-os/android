@@ -117,11 +117,6 @@
     <string name="feeds_search_results">Keresési eredmények</string>
     <string name="feeds_identity_fingerprint">Ujjlenyomat: %1$s</string>
     <string name="feeds_identity_server">Kiszolgáló: %1$s</string>
-    <string name="feeds_suggested_interests">Javasolt érdeklődési körök</string>
-    <string name="feeds_suggested_interests_empty">Még nincsenek javaslatok</string>
-    <string name="feeds_suggested_interests_title">Hozzáad érdeklődési köröket innen: %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Ez a hírforrás ezeket a témákat fedi le. Válassza ki, melyeket adja hozzá az érdeklődési köreihez a személyre szabott rangsoroláshoz.</string>
-    <string name="feeds_suggested_interests_skip">Kihagyás</string>
     <string name="feeds_tag_more">Érdeklődés hangolása</string>
     <string name="feeds_tag_more_up">Több ilyet mutasson</string>
     <string name="feeds_tag_more_down">Kevesebb ilyet mutasson</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Bejegyzés tartalma</string>
     <string name="feeds_enable_memories">Emlékek engedélyezése</string>
     <string name="feeds_permission_request_title">Engedélykérés</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d bejegyzés</item>
-        <item quantity="other">%1$d bejegyzés</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Leiratkozol a hírcsatornáról?</string>
     <string name="feeds_settings_title">%1$s beállításai</string>
     <string name="feeds_source_transform_help">Hagyja üresen a letiltáshoz.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d óra</item>
         <item quantity="other">%1$d óra</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d érdeklődési kör hozzáadása</item>
-        <item quantity="other">%1$d érdeklődési kör hozzáadása</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d perc</item>

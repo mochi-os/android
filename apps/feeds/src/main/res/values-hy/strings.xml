@@ -117,11 +117,6 @@
     <string name="feeds_search_results">Որոնման արդյունքներ</string>
     <string name="feeds_identity_fingerprint">Մատնահետք՝ %1$s</string>
     <string name="feeds_identity_server">Սերվեր՝ %1$s</string>
-    <string name="feeds_suggested_interests">Առաջարկվող հետաքրքրություններ</string>
-    <string name="feeds_suggested_interests_empty">Առաջարկներ դեռ չկան</string>
-    <string name="feeds_suggested_interests_title">Ավելացնե՞լ հետաքրքրություններ %1$s-ից։</string>
-    <string name="feeds_suggested_interests_subtitle">Այս հոսքն ընդգրկում է այս թեմաները։ Ընտրեք, թե որոնք ավելացնել ձեր հետաքրքրություններին՝ անհատականացված դասակարգման համար։</string>
-    <string name="feeds_suggested_interests_skip">Բաց թողնել</string>
     <string name="feeds_tag_more">Կարգավորել հետաքրքրությունը</string>
     <string name="feeds_tag_more_up">Ցույց տալ ավելի շատ սրա նման</string>
     <string name="feeds_tag_more_down">Ցույց տալ ավելի քիչ սրա նման</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Գրառման բովանդակություն</string>
     <string name="feeds_enable_memories">Միացնել հիշողությունները</string>
     <string name="feeds_permission_request_title">Թույլտվության հարցում</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d գրառում</item>
-        <item quantity="other">%1$d գրառում</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Ապաբաժանորդագրվե՞լ հոսքից</string>
     <string name="feeds_settings_title">%1$s կարգավորումներ</string>
     <string name="feeds_source_transform_help">Ձախից աջ</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ժամ</item>
         <item quantity="other">%1$d ժամ</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ավելացնել %1$d հետաքրքրություն</item>
-        <item quantity="other">Ավելացնել %1$d հետաքրքրություն</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d րոպե</item>

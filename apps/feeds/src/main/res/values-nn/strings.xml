@@ -117,11 +117,6 @@
     <string name="feeds_search_results">Søkjeresultat</string>
     <string name="feeds_identity_fingerprint">Fingeravtrykk: %1$s</string>
     <string name="feeds_identity_server">Tenar: %1$s</string>
-    <string name="feeds_suggested_interests">Føreslåtte interesser</string>
-    <string name="feeds_suggested_interests_empty">Ingen framlegg enno</string>
-    <string name="feeds_suggested_interests_title">Leggja til interesser frå %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Denne straumen dekkjer desse emna. Vel kva for nokre du vil leggja til i interessene dine for personleg rangering.</string>
-    <string name="feeds_suggested_interests_skip">Hopp over</string>
     <string name="feeds_tag_more">Juster interesse</string>
     <string name="feeds_tag_more_up">Vis meir av dette</string>
     <string name="feeds_tag_more_down">Vis mindre av dette</string>
@@ -234,10 +229,6 @@
     <string name="feeds_post_content">Innleggsinnhald</string>
     <string name="feeds_enable_memories">Slå på minne</string>
     <string name="feeds_permission_request_title">Løyveførespurnad</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d innlegg</item>
-        <item quantity="other">%1$d innlegg</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Avslutte abonnementet på straumen?</string>
     <string name="feeds_settings_title">Innstillingar for %1$s</string>
     <string name="feeds_source_transform_help">Lat stå tomt for å slå av.</string>
@@ -256,10 +247,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d time</item>
         <item quantity="other">%1$d timar</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Legg til %1$d interesse</item>
-        <item quantity="other">Legg til %1$d interesser</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minutt</item>

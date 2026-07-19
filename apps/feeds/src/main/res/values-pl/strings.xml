@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Wyniki wyszukiwania</string>
     <string name="feeds_identity_fingerprint">Odcisk: %1$s</string>
     <string name="feeds_identity_server">Serwer: %1$s</string>
-    <string name="feeds_suggested_interests">Sugerowane zainteresowania</string>
-    <string name="feeds_suggested_interests_empty">Brak sugestii</string>
-    <string name="feeds_suggested_interests_title">Dodać zainteresowania z %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Ten kanał obejmuje te tematy. Wybierz, które chcesz dodać do swoich zainteresowań, aby spersonalizować ranking.</string>
-    <string name="feeds_suggested_interests_skip">Pomiń</string>
     <string name="feeds_tag_more">Dostosuj zainteresowanie</string>
     <string name="feeds_tag_more_up">Pokaż więcej podobnych</string>
     <string name="feeds_tag_more_down">Pokaż mniej podobnych</string>
@@ -244,12 +239,6 @@
     <string name="feeds_post_content">Treść wpisu</string>
     <string name="feeds_enable_memories">Włącz wspomnienia</string>
     <string name="feeds_permission_request_title">Prośba o uprawnienie</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d post</item>
-        <item quantity="few">%1$d posty</item>
-        <item quantity="many">%1$d postów</item>
-        <item quantity="other">%1$d posta</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Anulować subskrypcję kanału?</string>
     <string name="feeds_settings_title">Ustawienia %1$s</string>
     <string name="feeds_source_transform_help">Pozostaw puste, aby wyłączyć.</string>
@@ -270,12 +259,6 @@
         <item quantity="few">%1$d godziny</item>
         <item quantity="many">%1$d godzin</item>
         <item quantity="other">%1$d godziny</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Dodaj %1$d zainteresowanie</item>
-        <item quantity="few">Dodaj %1$d zainteresowania</item>
-        <item quantity="many">Dodaj %1$d zainteresowań</item>
-        <item quantity="other">Dodaj %1$d zainteresowania</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuta</item>

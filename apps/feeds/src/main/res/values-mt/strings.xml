@@ -123,11 +123,6 @@
     <string name="feeds_search_results">Riżultati tat-tfittxija</string>
     <string name="feeds_identity_fingerprint">Marka tas-saba\': %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Interessi suġġeriti</string>
-    <string name="feeds_suggested_interests_empty">L-ebda suġġeriment s\'issa</string>
-    <string name="feeds_suggested_interests_title">Żid interessi minn %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Dan il-feed ikopri dawn is-suġġetti. Agħżel liema minnhom trid iżżid mal-interessi tiegħek għal klassifika personalizzata.</string>
-    <string name="feeds_suggested_interests_skip">Aqbeż</string>
     <string name="feeds_tag_more">Aġġusta l-interess</string>
     <string name="feeds_tag_more_up">Uri aktar bħal dan</string>
     <string name="feeds_tag_more_down">Uri inqas bħal dan</string>
@@ -246,13 +241,6 @@
     <string name="feeds_post_content">Kontenut tal-post</string>
     <string name="feeds_enable_memories">Attiva l-memorji</string>
     <string name="feeds_permission_request_title">Talba għal permess</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d post</item>
-        <item quantity="two">%1$d posts</item>
-        <item quantity="few">%1$d posts</item>
-        <item quantity="many">%1$d-il post</item>
-        <item quantity="other">%1$d post</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Tneħħi l-abbonament mill-feed?</string>
     <string name="feeds_settings_title">Issettjar ta\' %1$s</string>
     <string name="feeds_source_transform_help">Ħalli vojt biex tiddiżattiva.</string>
@@ -274,13 +262,6 @@
         <item quantity="few">%1$d sigħat</item>
         <item quantity="many">%1$d-il siegħa</item>
         <item quantity="other">%1$d siegħa</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Żid %1$d interess</item>
-        <item quantity="two">Żid %1$d interessi</item>
-        <item quantity="few">Żid %1$d interessi</item>
-        <item quantity="many">Żid %1$d-il interess</item>
-        <item quantity="other">Żid %1$d interess</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuta</item>

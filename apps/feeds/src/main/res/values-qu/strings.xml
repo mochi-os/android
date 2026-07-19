@@ -116,11 +116,6 @@
     <string name="feeds_tag_clear">Suchuchiyta pichay</string>
     <string name="feeds_identity_fingerprint">Ruk\'ana unancha: %1$s</string>
     <string name="feeds_identity_server">Servidor: %1$s</string>
-    <string name="feeds_suggested_interests">Yuyaychasqa munasqakuna</string>
-    <string name="feeds_suggested_interests_empty">Manaraq yuyaychaykuna kanchu</string>
-    <string name="feeds_suggested_interests_title">%1$s nisqamanta munasqakunata yapanachu?</string>
-    <string name="feeds_suggested_interests_subtitle">Kay willay kay rimanakuykunamanta riman. Munasqaykikunaman yapanaykipaq mayqenkunatachus akllay, kikiykipaq allichasqa churanapaq.</string>
-    <string name="feeds_suggested_interests_skip">Saqiy</string>
     <string name="feeds_tag_more">Munasqata allichay</string>
     <string name="feeds_tag_more_up">Kayman rikch\'akuqkunata aswan rikuchiy</string>
     <string name="feeds_tag_more_down">Kayman rikch\'akuqkunata pisi rikuchiy</string>
@@ -242,9 +237,6 @@
     <string name="feeds_post_content">Qillqa contenido</string>
     <string name="feeds_enable_memories">Yuyaykunata kallpachay</string>
     <string name="feeds_permission_request_title">Permiso mañakuy</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d willakuykuna</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">¿Feedmanta suscripcionta tukuchiy?</string>
     <string name="feeds_settings_title">%1$s allinkachaykuna</string>
     <string name="feeds_source_transform_help">Wañuchinapaq ch\'usaqta saqiy.</string>
@@ -262,9 +254,6 @@
     <string name="feeds_source_credibility_label">Iñiy</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d horakuna</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">%1$d intereskunata yapay</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d minutokuna</item>

@@ -70,11 +70,6 @@
     <string name="feeds_default_sort">預設排序</string>
     <string name="feeds_identity_fingerprint">指紋：%1$s</string>
     <string name="feeds_identity_server">伺服器：%1$s</string>
-    <string name="feeds_suggested_interests">建議興趣</string>
-    <string name="feeds_suggested_interests_empty">仲未有建議</string>
-    <string name="feeds_suggested_interests_title">由 %1$s 加入興趣？</string>
-    <string name="feeds_suggested_interests_subtitle">呢個資訊流涵蓋呢啲主題。揀選你想加入興趣嘅項目，以獲得個人化排序。</string>
-    <string name="feeds_suggested_interests_skip">略過</string>
     <string name="feeds_tag_more">調整興趣</string>
     <string name="feeds_tag_more_up">顯示多啲呢類內容</string>
     <string name="feeds_tag_more_down">顯示少啲呢類內容</string>
@@ -227,9 +222,6 @@
     <string name="feeds_post_content">帖文內容</string>
     <string name="feeds_enable_memories">啟用回憶</string>
     <string name="feeds_permission_request_title">權限請求</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d 篇帖子</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">取消訂閱呢個摘要？</string>
     <string name="feeds_settings_title">%1$s 設定</string>
     <string name="feeds_source_transform_help">留空即停用。</string>
@@ -248,9 +240,6 @@
     <string name="feeds_source_credibility_label">可信度</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d 個鐘</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">加入 %1$d 個興趣</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d 分鐘</item>

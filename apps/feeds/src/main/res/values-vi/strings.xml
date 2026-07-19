@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Kết quả tìm kiếm</string>
     <string name="feeds_identity_fingerprint">Dấu vân tay: %1$s</string>
     <string name="feeds_identity_server">Máy chủ: %1$s</string>
-    <string name="feeds_suggested_interests">Sở thích đề xuất</string>
-    <string name="feeds_suggested_interests_empty">Chưa có đề xuất nào</string>
-    <string name="feeds_suggested_interests_title">Thêm sở thích từ %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Nguồn cấp này bao gồm các chủ đề này. Chọn những chủ đề bạn muốn thêm vào sở thích để xếp hạng được cá nhân hóa.</string>
-    <string name="feeds_suggested_interests_skip">Bỏ qua</string>
     <string name="feeds_tag_more">Điều chỉnh sở thích</string>
     <string name="feeds_tag_more_up">Hiển thị thêm nội dung tương tự</string>
     <string name="feeds_tag_more_down">Hiển thị ít nội dung tương tự</string>
@@ -241,9 +236,6 @@
     <string name="feeds_post_content">Nội dung bài viết</string>
     <string name="feeds_enable_memories">Bật bộ nhớ</string>
     <string name="feeds_permission_request_title">Yêu cầu quyền</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d bài viết</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Hủy đăng ký nguồn cấp?</string>
     <string name="feeds_settings_title">Cài đặt %1$s</string>
     <string name="feeds_source_transform_help">Để trống để tắt.</string>
@@ -261,9 +253,6 @@
     <string name="feeds_source_credibility_label">Độ tin cậy</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d giờ</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">Thêm %1$d sở thích</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d phút</item>

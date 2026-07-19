@@ -116,11 +116,6 @@
     <string name="feeds_search_results">தேடல் முடிவுகள்</string>
     <string name="feeds_identity_fingerprint">கைரேகை: %1$s</string>
     <string name="feeds_identity_server">சேவையகம்: %1$s</string>
-    <string name="feeds_suggested_interests">பரிந்துரைக்கப்பட்ட ஆர்வங்கள்</string>
-    <string name="feeds_suggested_interests_empty">இன்னும் பரிந்துரைகள் இல்லை</string>
-    <string name="feeds_suggested_interests_title">%1$s இலிருந்து ஆர்வங்களைச் சேர்க்கவா?</string>
-    <string name="feeds_suggested_interests_subtitle">இந்த ஊட்டம் இந்தத் தலைப்புகளை உள்ளடக்கியது. தனிப்பயனாக்கப்பட்ட தரவரிசைக்காக உங்கள் ஆர்வங்களில் எவற்றைச் சேர்க்க வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்.</string>
-    <string name="feeds_suggested_interests_skip">தவிர்</string>
     <string name="feeds_tag_more">ஆர்வத்தைச் சரிசெய்</string>
     <string name="feeds_tag_more_up">இது போன்றவற்றை மேலும் காட்டு</string>
     <string name="feeds_tag_more_down">இது போன்றவற்றை குறைவாகக் காட்டு</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">பதிவு உள்ளடக்கம்</string>
     <string name="feeds_enable_memories">நினைவுகளை இயக்கு</string>
     <string name="feeds_permission_request_title">அனுமதி கோரிக்கை</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d பதிவு</item>
-        <item quantity="other">%1$d பதிவுகள்</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ஃபீடிலிருந்து விலகவா?</string>
     <string name="feeds_settings_title">%1$s அமைப்புகள்</string>
     <string name="feeds_source_transform_help">முடக்க காலியாக விடவும்.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d மணிநேரம்</item>
         <item quantity="other">%1$d மணிநேரங்கள்</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ஆர்வத்தைச் சேர்</item>
-        <item quantity="other">%1$d ஆர்வங்களைச் சேர்</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d நிமிடம்</item>

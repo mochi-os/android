@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">Vymazat filtr</string>
     <string name="feeds_identity_fingerprint">Otisk: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Navrhované zájmy</string>
-    <string name="feeds_suggested_interests_empty">Zatím žádné návrhy</string>
-    <string name="feeds_suggested_interests_title">Přidat zájmy z %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Tento kanál se věnuje těmto tématům. Vyberte, které chcete přidat mezi své zájmy pro personalizované řazení.</string>
-    <string name="feeds_suggested_interests_skip">Přeskočit</string>
     <string name="feeds_tag_more">Vyladit zájem</string>
     <string name="feeds_tag_more_up">Zobrazit více podobného</string>
     <string name="feeds_tag_more_down">Zobrazit méně podobného</string>
@@ -244,12 +239,6 @@
     <string name="feeds_post_content">Obsah příspěvku</string>
     <string name="feeds_enable_memories">Povolit vzpomínky</string>
     <string name="feeds_permission_request_title">Žádost o oprávnění</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d příspěvek</item>
-        <item quantity="few">%1$d příspěvky</item>
-        <item quantity="many">%1$d příspěvku</item>
-        <item quantity="other">%1$d příspěvků</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Zrušit odběr kanálu?</string>
     <string name="feeds_settings_title">Nastavení %1$s</string>
     <string name="feeds_source_transform_help">Ponechte prázdné pro zakázání.</string>
@@ -270,12 +259,6 @@
         <item quantity="few">%1$d hodiny</item>
         <item quantity="many">%1$d hodiny</item>
         <item quantity="other">%1$d hodin</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Přidat %1$d zájem</item>
-        <item quantity="few">Přidat %1$d zájmy</item>
-        <item quantity="many">Přidat %1$d zájmu</item>
-        <item quantity="other">Přidat %1$d zájmů</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuta</item>

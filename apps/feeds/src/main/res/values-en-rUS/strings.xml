@@ -7,7 +7,6 @@
     <string name="feeds_name">Name</string>
     <string name="feeds_create">Create</string>
     <string name="feeds_save_label">Save</string>
-    <string name="feeds_suggested_interests_add">Add</string>
     <string name="feeds_logout">Log out</string>
     <string name="feeds_settings">Settings</string>
     <string name="feeds_send">Send</string>
@@ -29,7 +28,6 @@
     <string name="feeds_add_to_home_screen">Add to home screen</string>
     <string name="feeds_tag_clear">Clear filter</string>
     <string name="feeds_identity_fingerprint">Fingerprint: %1$s</string>
-    <string name="feeds_suggested_interests_dismiss">Hide</string>
     <string name="feeds_sort_interests">Interests</string>
     <string name="feeds_image_preview">Preview</string>
     <string name="feeds_comments">Comments</string>
@@ -86,9 +84,6 @@
     <string name="feeds_view_all_posts">View all posts</string>
     <string name="feeds_default_sort">Default sort</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Suggested interests</string>
-    <string name="feeds_suggested_interests_empty">No suggestions yet</string>
-    <string name="feeds_suggested_interests_count">%1$d posts</string>
     <string name="feeds_tag_more">Tune interest</string>
     <string name="feeds_tag_more_up">Show more like this</string>
     <string name="feeds_tag_more_down">Show less like this</string>
@@ -226,10 +221,6 @@
     <string name="feeds_access_add_subtitle">Select a user, group, or other rule to grant access.</string>
     <string name="feeds_permission_request_title">Permission request</string>
     <string name="feeds_settings_name_cancel_cd">Cancel editing</string>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Add %1$d interest</item>
-        <item quantity="other">Add %1$d interests</item>
-    </plurals>
     <string name="feeds_create_first_post">Create the first post</string>
     <string name="feeds_rss_mode_posts_comments">Posts and comments</string>
     <plurals name="feeds_source_interval_minutes">
@@ -240,11 +231,9 @@
     <string name="feeds_settings_unsubscribe_section">Unsubscribe from feed</string>
     <string name="feeds_settings_field_server">Server</string>
     <string name="feeds_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="feeds_suggested_interests_title">Add interests from %1$s?</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
     <string name="feeds_post_content">Post content</string>
     <string name="feeds_source_transform_hint">Translate to English, and show as bullet points.</string>
-    <string name="feeds_suggested_interests_subtitle">This feed covers these topics. Select which ones to add to your interests for personalized ranking.</string>
     <string name="feeds_source_credibility_label">Credibility</string>
     <string name="feeds_source_url_hint_feed">Feed entity ID or fingerprint</string>
     <string name="feeds_access_anyone_desc">Including anonymous users</string>
@@ -257,14 +246,9 @@
     <string name="feeds_unsubscribe_confirm_message">You will stop receiving updates from this feed. You can re-subscribe at any time.</string>
     <string name="feeds_enable_memories">Enable memories</string>
     <string name="feeds_source_last_checked">Last checked %1$s</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d post</item>
-        <item quantity="other">%1$d posts</item>
-    </plurals>
     <string name="feeds_settings_title">%1$s settings</string>
     <string name="feeds_access_level_react_full">React and view</string>
     <string name="feeds_source_transform_help">Leave empty to disable.</string>
-    <string name="feeds_suggested_interests_skip">Skip</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d hour</item>
         <item quantity="other">%1$d hours</item>

@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Encamên lêgerînê</string>
     <string name="feeds_identity_fingerprint">Şopa tilî: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Berjewendiyên pêşniyazkirî</string>
-    <string name="feeds_suggested_interests_empty">Hîn pêşniyaz tune</string>
-    <string name="feeds_suggested_interests_title">Berjewendiyan ji %1$s zêde bikî?</string>
-    <string name="feeds_suggested_interests_subtitle">Ev feed van mijaran vedigire. Hilbijêre ka kîjan ji bo rêzkirina kesanekirî li berjewendiyên te werin zêdekirin.</string>
-    <string name="feeds_suggested_interests_skip">Derbas bike</string>
     <string name="feeds_tag_more">Berjewendiyê mîheng bike</string>
     <string name="feeds_tag_more_up">Bêtir wek vê nîşan bide</string>
     <string name="feeds_tag_more_down">Kêmtir wek vê nîşan bide</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Naveroka posteyê</string>
     <string name="feeds_enable_memories">Bîranînan çalak bike</string>
     <string name="feeds_permission_request_title">Daxwaza destûrê</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d şandî</item>
-        <item quantity="other">%1$d şandî</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Aboneya feedê betal bikî?</string>
     <string name="feeds_settings_title">Mîhengên %1$s</string>
     <string name="feeds_source_transform_help">Vala bihêle ji bo bêçalakkirin.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d saet</item>
         <item quantity="other">%1$d saet</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d berjewendiyê zêde bike</item>
-        <item quantity="other">%1$d berjewendiyan zêde bike</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d xulek</item>

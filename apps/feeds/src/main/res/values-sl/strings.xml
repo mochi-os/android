@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Rezultati iskanja</string>
     <string name="feeds_identity_fingerprint">Prstni odtis: %1$s</string>
     <string name="feeds_identity_server">Strežnik: %1$s</string>
-    <string name="feeds_suggested_interests">Predlagani interesi</string>
-    <string name="feeds_suggested_interests_empty">Še ni predlogov</string>
-    <string name="feeds_suggested_interests_title">Dodam interese iz %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Ta vir pokriva te teme. Izberite, katere želite dodati med svoje interese za prilagojeno razvrščanje.</string>
-    <string name="feeds_suggested_interests_skip">Preskoči</string>
     <string name="feeds_tag_more">Prilagodi interes</string>
     <string name="feeds_tag_more_up">Prikaži več podobnega</string>
     <string name="feeds_tag_more_down">Prikaži manj podobnega</string>
@@ -244,12 +239,6 @@
     <string name="feeds_post_content">Vsebina objave</string>
     <string name="feeds_enable_memories">Omogoči spomine</string>
     <string name="feeds_permission_request_title">Zahteva za dovoljenje</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d objava</item>
-        <item quantity="two">%1$d objavi</item>
-        <item quantity="few">%1$d objave</item>
-        <item quantity="other">%1$d objav</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Odjava od vira?</string>
     <string name="feeds_settings_title">Nastavitve %1$s</string>
     <string name="feeds_source_transform_help">Pustite prazno, da onemogočite.</string>
@@ -270,12 +259,6 @@
         <item quantity="two">%1$d uri</item>
         <item quantity="few">%1$d ure</item>
         <item quantity="other">%1$d ur</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Dodaj %1$d zanimanje</item>
-        <item quantity="two">Dodaj %1$d zanimanji</item>
-        <item quantity="few">Dodaj %1$d zanimanja</item>
-        <item quantity="other">Dodaj %1$d zanimanj</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuta</item>

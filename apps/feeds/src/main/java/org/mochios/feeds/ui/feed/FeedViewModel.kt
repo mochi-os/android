@@ -29,7 +29,6 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
-import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.PostListResult
@@ -130,9 +129,6 @@ class FeedViewModel @Inject constructor(
     private val _actionEvents = MutableSharedFlow<FeedActionEvent>(extraBufferCapacity = 4)
     val actionEvents: SharedFlow<FeedActionEvent> = _actionEvents.asSharedFlow()
 
-    private val _suggestedInterests = MutableStateFlow<List<InterestSuggestion>>(emptyList())
-    val suggestedInterests: StateFlow<List<InterestSuggestion>> = _suggestedInterests.asStateFlow()
-
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
@@ -225,7 +221,6 @@ class FeedViewModel @Inject constructor(
     init {
         loadFeed()
         subscribeToWebSocket()
-        observePendingInterestSuggestions()
         viewModelScope.launch { savedRepository.load() }
         viewModelScope.launch { _currentUserId.value = sessionManager.getBoundIdentity() }
     }
@@ -282,21 +277,6 @@ class FeedViewModel @Inject constructor(
                 _actionEvents.emit(FeedActionEvent.Unsubscribed)
             } catch (e: Exception) {
                 _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
-            }
-        }
-    }
-
-    // Show interest suggestions raised by a just-completed subscribe exactly
-    // once: consume the repository's pending prompt when it targets this feed,
-    // then clear it so it never reappears (e.g. on a return visit).
-    private fun observePendingInterestSuggestions() {
-        if (isAllFeeds || feedId.isEmpty()) return
-        viewModelScope.launch {
-            repository.pendingInterestSuggestion.collect { pending ->
-                if (pending != null && pending.feedId == feedId) {
-                    _suggestedInterests.value = pending.suggestions
-                    repository.clearPendingInterestSuggestion()
-                }
             }
         }
     }
@@ -464,8 +444,6 @@ class FeedViewModel @Inject constructor(
     fun refresh() {
         viewModelScope.launch {
             _isRefreshing.value = true
-            // A manual refresh dismisses the one-shot post-subscribe suggestions.
-            _suggestedInterests.value = emptyList()
             try {
                 if (isAllFeeds) {
                     loadAllFeeds()
@@ -509,8 +487,6 @@ class FeedViewModel @Inject constructor(
     fun refreshPost(postFeedId: String, postId: String) {
         viewModelScope.launch {
             _isPostRefreshing.value = true
-            // The top-bar refresh button also dismisses the suggestions prompt.
-            _suggestedInterests.value = emptyList()
             try {
                 val fresh = repository.getPost(postFeedId, postId).post
                 _posts.value = _posts.value.map { existing ->
@@ -992,40 +968,6 @@ class FeedViewModel @Inject constructor(
                 // Tags are non-critical
             }
         }
-    }
-
-    fun addInterest(suggestion: InterestSuggestion) {
-        viewModelScope.launch {
-            try {
-                repository.adjustInterest(feedId, qid = suggestion.qid, label = null, direction = "up")
-                // Remove from suggestions once added
-                _suggestedInterests.value = _suggestedInterests.value - suggestion
-            } catch (_: Exception) {
-                // Silent — user can retry
-            }
-        }
-    }
-
-    /**
-     * Adds every selected suggestion in one pass (the prompt's "Add N interests"
-     * action) and clears the suggestion list so the dialog dismisses.
-     */
-    fun addInterests(suggestions: List<InterestSuggestion>) {
-        if (suggestions.isEmpty()) return
-        viewModelScope.launch {
-            suggestions.forEach { suggestion ->
-                try {
-                    repository.adjustInterest(feedId, qid = suggestion.qid, label = null, direction = "up")
-                } catch (_: Exception) {
-                    // Silent — user can retry from feed settings
-                }
-            }
-            _suggestedInterests.value = emptyList()
-        }
-    }
-
-    fun dismissInterest(suggestion: InterestSuggestion) {
-        _suggestedInterests.value = _suggestedInterests.value - suggestion
     }
 
     private fun subscribeToWebSocket() {

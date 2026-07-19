@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Qidiruv natijalari</string>
     <string name="feeds_identity_fingerprint">Barmoq izi: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Tavsiya etilgan qiziqishlar</string>
-    <string name="feeds_suggested_interests_empty">Hozircha tavsiyalar yo\'q</string>
-    <string name="feeds_suggested_interests_title">%1$s dan qiziqishlar qoʻshilsinmi?</string>
-    <string name="feeds_suggested_interests_subtitle">Bu tasma ushbu mavzularni qamrab oladi. Shaxsiylashtirilgan tartiblash uchun qiziqishlaringizga qaysilarini qoʻshishni tanlang.</string>
-    <string name="feeds_suggested_interests_skip">Oʻtkazib yuborish</string>
     <string name="feeds_tag_more">Qiziqishni sozlash</string>
     <string name="feeds_tag_more_up">Shunga o\'xshashlarni ko\'proq ko\'rsatish</string>
     <string name="feeds_tag_more_down">Shunga o\'xshashlarni kamroq ko\'rsatish</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Post mazmuni</string>
     <string name="feeds_enable_memories">Xotiralarni yoqish</string>
     <string name="feeds_permission_request_title">Ruxsat so\'rovi</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d ta post</item>
-        <item quantity="other">%1$d ta post</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Lenta obunasini bekor qilasizmi?</string>
     <string name="feeds_settings_title">%1$s sozlamalari</string>
     <string name="feeds_source_transform_help">Oʻchirish uchun boʻsh qoldiring.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d soat</item>
         <item quantity="other">%1$d soat</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ta qiziqish qo\'shish</item>
-        <item quantity="other">%1$d ta qiziqish qo\'shish</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d daqiqa</item>

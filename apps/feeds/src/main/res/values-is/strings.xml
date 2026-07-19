@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Leitarniðurstöður</string>
     <string name="feeds_identity_fingerprint">Fingrafar: %1$s</string>
     <string name="feeds_identity_server">Þjónn: %1$s</string>
-    <string name="feeds_suggested_interests">Tillögð áhugamál</string>
-    <string name="feeds_suggested_interests_empty">Engar tillögur enn</string>
-    <string name="feeds_suggested_interests_title">Bæta við áhugamálum frá %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Þessi straumur fjallar um þessi efni. Veldu hver þeirra á að bæta við áhugamálin þín fyrir sérsniðna röðun.</string>
-    <string name="feeds_suggested_interests_skip">Sleppa</string>
     <string name="feeds_tag_more">Stilla áhuga</string>
     <string name="feeds_tag_more_up">Sýna meira af svona</string>
     <string name="feeds_tag_more_down">Sýna minna af svona</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Innihald færslu</string>
     <string name="feeds_enable_memories">Virkja minningar</string>
     <string name="feeds_permission_request_title">Beiðni um heimild</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d færsla</item>
-        <item quantity="other">%1$d færslur</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Hætta áskrift að straumnum?</string>
     <string name="feeds_settings_title">Stillingar %1$s</string>
     <string name="feeds_source_transform_help">Skildu eftir autt til að slökkva.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d klukkustund</item>
         <item quantity="other">%1$d klukkustundir</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Bæta við %1$d áhugamáli</item>
-        <item quantity="other">Bæta við %1$d áhugamálum</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d mínúta</item>

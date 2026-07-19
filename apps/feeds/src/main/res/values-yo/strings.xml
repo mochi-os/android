@@ -116,11 +116,6 @@
     <string name="feeds_tag_clear">Pa àyẹ̀wò rẹ́</string>
     <string name="feeds_identity_fingerprint">Ìka ìdánimọ̀: %1$s</string>
     <string name="feeds_identity_server">Sáfà: %1$s</string>
-    <string name="feeds_suggested_interests">Àwọn ìfẹ́ tí a dámọ̀ràn</string>
-    <string name="feeds_suggested_interests_empty">Kò sí ìdámọ̀ràn síbẹ̀</string>
-    <string name="feeds_suggested_interests_title">Fi àwọn ìfẹ́ kún láti %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Fíìdì yìí kárí àwọn àkòrí wọ̀nyí. Yan àwọn tí o fẹ́ fi kún àwọn ìfẹ́ rẹ fún ìṣètò ní pàtó sí ọ.</string>
-    <string name="feeds_suggested_interests_skip">Fò ó</string>
     <string name="feeds_tag_more">Ṣàtúnṣe ìfẹ́</string>
     <string name="feeds_tag_more_up">Fi irú èyí hàn sí i</string>
     <string name="feeds_tag_more_down">Fi irú èyí hàn dín kù</string>
@@ -242,9 +237,6 @@
     <string name="feeds_post_content">Àkóónú ìfìránṣẹ́</string>
     <string name="feeds_enable_memories">Mu àwọn ìrántí ṣiṣẹ</string>
     <string name="feeds_permission_request_title">Ìbéèrè ìyọ̀ǹda</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">àtẹ̀jáde %1$d</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Dáwọ́ títẹ̀lé fiidi dúró?</string>
     <string name="feeds_settings_title">Àwọn ètò %1$s</string>
     <string name="feeds_source_transform_help">Fi ṣófo láti pa á.</string>
@@ -262,9 +254,6 @@
     <string name="feeds_source_credibility_label">Ìgbẹ́kẹ̀lé</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">wákàtí %1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">Ṣàfikún ìfẹ́ràn %1$d</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">ìṣẹ́jú %1$d</item>

@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Rezultatet e kërkimit</string>
     <string name="feeds_identity_fingerprint">Gjurmë: %1$s</string>
     <string name="feeds_identity_server">Serveri: %1$s</string>
-    <string name="feeds_suggested_interests">Interesa të sugjeruara</string>
-    <string name="feeds_suggested_interests_empty">Ende asnjë sugjerim</string>
-    <string name="feeds_suggested_interests_title">Të shtohen interesat nga %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Ky feed mbulon këto tema. Zgjidhni cilat të shtoni te interesat tuaja për një renditje të personalizuar.</string>
-    <string name="feeds_suggested_interests_skip">Anashkalo</string>
     <string name="feeds_tag_more">Rregullo interesin</string>
     <string name="feeds_tag_more_up">Shfaq më shumë si kjo</string>
     <string name="feeds_tag_more_down">Shfaq më pak si kjo</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Përmbajtja e postimit</string>
     <string name="feeds_enable_memories">Aktivizo kujtimet</string>
     <string name="feeds_permission_request_title">Kërkesë për leje</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d postim</item>
-        <item quantity="other">%1$d postime</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Të hiqet abonimi nga ky fluks?</string>
     <string name="feeds_settings_title">Cilësimet e %1$s</string>
     <string name="feeds_source_transform_help">Lini bosh për të çaktivizuar.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d orë</item>
         <item quantity="other">%1$d orë</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Shto %1$d interes</item>
-        <item quantity="other">Shto %1$d interesa</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minutë</item>

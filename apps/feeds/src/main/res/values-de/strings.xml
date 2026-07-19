@@ -121,11 +121,6 @@
     <string name="feeds_url_result">URL-Ergebnis</string>
     <string name="feeds_search_results">Suchergebnisse</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Vorgeschlagene Interessen</string>
-    <string name="feeds_suggested_interests_empty">Noch keine Vorschläge</string>
-    <string name="feeds_suggested_interests_title">Interessen aus %1$s hinzufügen?</string>
-    <string name="feeds_suggested_interests_subtitle">Dieser Feed behandelt diese Themen. Wähle aus, welche du zu deinen Interessen hinzufügen möchtest, um eine personalisierte Sortierung zu erhalten.</string>
-    <string name="feeds_suggested_interests_skip">Überspringen</string>
     <string name="feeds_tag_more">Interesse anpassen</string>
     <string name="feeds_tag_more_up">Mehr davon anzeigen</string>
     <string name="feeds_tag_more_down">Weniger davon anzeigen</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Beitragsinhalt</string>
     <string name="feeds_enable_memories">Erinnerungen aktivieren</string>
     <string name="feeds_permission_request_title">Berechtigungsanfrage</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d Beitrag</item>
-        <item quantity="other">%1$d Beiträge</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Feed abbestellen?</string>
     <string name="feeds_settings_title">Einstellungen für %1$s</string>
     <string name="feeds_source_transform_help">Zum Deaktivieren leer lassen.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d Stunde</item>
         <item quantity="other">%1$d Stunden</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d Interesse hinzufügen</item>
-        <item quantity="other">%1$d Interessen hinzufügen</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d Minute</item>

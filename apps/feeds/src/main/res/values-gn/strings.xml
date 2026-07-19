@@ -117,11 +117,6 @@
     <string name="feeds_search_results">Jeheka rembiapoukapy</string>
     <string name="feeds_identity_fingerprint">Kuãhũ: %1$s</string>
     <string name="feeds_identity_server">Mohendaha: %1$s</string>
-    <string name="feeds_suggested_interests">Mba\'eporãrã oñemoñe\'ẽva</string>
-    <string name="feeds_suggested_interests_empty">Ndaipóri gueteri ñemoñe\'ẽ</string>
-    <string name="feeds_suggested_interests_title">¿Embojuaju mba\'eporãrã %1$s-gui?</string>
-    <string name="feeds_suggested_interests_subtitle">Ko feed oñe\'ẽ ko\'ã téma rehe. Eiporavo mávapa rembojuajúta nde mba\'eporãrãme ñemohenda personalizadorã g̃uarã.</string>
-    <string name="feeds_suggested_interests_skip">Ehasa</string>
     <string name="feeds_tag_more">Embohekopyahu mba\'eporãrã</string>
     <string name="feeds_tag_more_up">Ehechauka hetave kóicha</string>
     <string name="feeds_tag_more_down">Ehechauka sa\'ive kóicha</string>
@@ -242,9 +237,6 @@
     <string name="feeds_post_content">Marandu reta\'ãva</string>
     <string name="feeds_enable_memories">Emyendy mandu\'a</string>
     <string name="feeds_permission_request_title">Ñemoneĩ jerure</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d jehaipyre</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Eipe\'a ne ñemboheraguapy ko feed-gui?</string>
     <string name="feeds_settings_title">%1$s ñemboheko</string>
     <string name="feeds_source_transform_help">Eheja nandi emomba haguã.</string>
@@ -262,9 +254,6 @@
     <string name="feeds_source_credibility_label">Credibilidad</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d aravo</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">Embojoapy %1$d interés</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d aravo\'i</item>

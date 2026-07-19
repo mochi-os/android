@@ -116,11 +116,6 @@
     <string name="feeds_search_results">සෙවුම් ප්‍රතිඵල</string>
     <string name="feeds_identity_fingerprint">ඇඟිලි සලකුණ: %1$s</string>
     <string name="feeds_identity_server">සේවාදායකය: %1$s</string>
-    <string name="feeds_suggested_interests">යෝජිත රුචිකත්ව</string>
-    <string name="feeds_suggested_interests_empty">තවම යෝජනා නැත</string>
-    <string name="feeds_suggested_interests_title">%1$s වෙතින් රුචිකත්ව එක් කරන්නද?</string>
-    <string name="feeds_suggested_interests_subtitle">මෙම සංග්‍රහය මෙම මාතෘකා ආවරණය කරයි. පුද්ගලීකරණය කළ ශ්‍රේණිගත කිරීම සඳහා ඔබගේ රුචිකත්වවලට එක් කිරීමට අවශ්‍ය ඒවා තෝරන්න.</string>
-    <string name="feeds_suggested_interests_skip">මඟ හරින්න</string>
     <string name="feeds_tag_more">රුචිකත්වය සකසන්න</string>
     <string name="feeds_tag_more_up">මේ වැනි තවත් පෙන්වන්න</string>
     <string name="feeds_tag_more_down">මේ වැනි අඩුවෙන් පෙන්වන්න</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">පළ කිරීමේ අන්තර්ගතය</string>
     <string name="feeds_enable_memories">මතකයන් සක්‍රීය කරන්න</string>
     <string name="feeds_permission_request_title">අවසර ඉල්ලීම</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">පළ කිරීම් %1$dක්</item>
-        <item quantity="other">පළ කිරීම් %1$dක්</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">සංග්‍රහයෙන් දායකත්වය ඉවත් කරන්නද?</string>
     <string name="feeds_settings_title">%1$s සැකසුම්</string>
     <string name="feeds_source_transform_help">අක්‍රිය කිරීමට හිස්ව තබන්න.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">පැය %1$dක්</item>
         <item quantity="other">පැය %1$dක්</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">රුචිකත්ව %1$dක් එක් කරන්න</item>
-        <item quantity="other">රුචිකත්ව %1$dක් එක් කරන්න</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">මිනිත්තු %1$dක්</item>

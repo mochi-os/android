@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Arama sonuçları</string>
     <string name="feeds_identity_fingerprint">Parmak izi: %1$s</string>
     <string name="feeds_identity_server">Sunucu: %1$s</string>
-    <string name="feeds_suggested_interests">Önerilen ilgi alanları</string>
-    <string name="feeds_suggested_interests_empty">Henüz öneri yok</string>
-    <string name="feeds_suggested_interests_title">%1$s kaynağından ilgi alanları eklensin mi?</string>
-    <string name="feeds_suggested_interests_subtitle">Bu akış şu konuları kapsıyor. Kişiselleştirilmiş sıralama için ilgi alanlarınıza hangilerini ekleyeceğinizi seçin.</string>
-    <string name="feeds_suggested_interests_skip">Atla</string>
     <string name="feeds_tag_more">İlgi alanını ayarla</string>
     <string name="feeds_tag_more_up">Buna benzer daha fazla göster</string>
     <string name="feeds_tag_more_down">Buna benzer daha az göster</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Gönderi içeriği</string>
     <string name="feeds_enable_memories">Anıları etkinleştir</string>
     <string name="feeds_permission_request_title">İzin isteği</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d gönderi</item>
-        <item quantity="other">%1$d gönderi</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Akış aboneliği iptal edilsin mi?</string>
     <string name="feeds_settings_title">%1$s ayarları</string>
     <string name="feeds_source_transform_help">Devre dışı bırakmak için boş bırakın.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d saat</item>
         <item quantity="other">%1$d saat</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ilgi alanı ekle</item>
-        <item quantity="other">%1$d ilgi alanı ekle</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d dakika</item>

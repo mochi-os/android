@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Резултати од пребарувањето</string>
     <string name="feeds_identity_fingerprint">Отпечаток: %1$s</string>
     <string name="feeds_identity_server">Сервер: %1$s</string>
-    <string name="feeds_suggested_interests">Предложени интереси</string>
-    <string name="feeds_suggested_interests_empty">Сè уште нема предлози</string>
-    <string name="feeds_suggested_interests_title">Да се додадат интереси од %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Овој канал ги опфаќа овие теми. Изберете кои да ги додадете во вашите интереси за персонализирано рангирање.</string>
-    <string name="feeds_suggested_interests_skip">Прескокни</string>
     <string name="feeds_tag_more">Прилагоди интерес</string>
     <string name="feeds_tag_more_up">Прикажи повеќе вакви</string>
     <string name="feeds_tag_more_down">Прикажи помалку вакви</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Содржина на објавата</string>
     <string name="feeds_enable_memories">Овозможи мемории</string>
     <string name="feeds_permission_request_title">Барање за дозвола</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d објава</item>
-        <item quantity="other">%1$d објави</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Да се отпишете од фидот?</string>
     <string name="feeds_settings_title">Поставки за %1$s</string>
     <string name="feeds_source_transform_help">Оставете празно за оневозможување.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d час</item>
         <item quantity="other">%1$d часа</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Додај %1$d интерес</item>
-        <item quantity="other">Додај %1$d интереси</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d минута</item>

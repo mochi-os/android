@@ -117,11 +117,6 @@
     <string name="feeds_search_results">શોધ પરિણામો</string>
     <string name="feeds_identity_fingerprint">ફિંગરપ્રિન્ટ: %1$s</string>
     <string name="feeds_identity_server">સર્વર: %1$s</string>
-    <string name="feeds_suggested_interests">સૂચવેલી રુચિઓ</string>
-    <string name="feeds_suggested_interests_empty">હજુ સુધી કોઈ સૂચનો નથી</string>
-    <string name="feeds_suggested_interests_title">%1$s માંથી રુચિઓ ઉમેરવી?</string>
-    <string name="feeds_suggested_interests_subtitle">આ ફીડ આ વિષયોને આવરી લે છે. વ્યક્તિગત ક્રમાંકન માટે તમારી રુચિઓમાં કઈ ઉમેરવી તે પસંદ કરો.</string>
-    <string name="feeds_suggested_interests_skip">છોડો</string>
     <string name="feeds_tag_more">રુચિ ટ્યુન કરો</string>
     <string name="feeds_tag_more_up">આના જેવું વધુ બતાવો</string>
     <string name="feeds_tag_more_down">આના જેવું ઓછું બતાવો</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">પોસ્ટ સામગ્રી</string>
     <string name="feeds_enable_memories">યાદો સક્ષમ કરો</string>
     <string name="feeds_permission_request_title">પરવાનગી વિનંતી</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d પોસ્ટ</item>
-        <item quantity="other">%1$d પોસ્ટ</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ફીડમાંથી અનસબ્સ્ક્રાઇબ કરવું છે?</string>
     <string name="feeds_settings_title">%1$s સેટિંગ્સ</string>
     <string name="feeds_source_transform_help">નિષ્ક્રિય કરવા માટે ખાલી રાખો.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d કલાક</item>
         <item quantity="other">%1$d કલાક</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d રુચિ ઉમેરો</item>
-        <item quantity="other">%1$d રુચિઓ ઉમેરો</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d મિનિટ</item>

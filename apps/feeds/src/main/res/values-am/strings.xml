@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">ማጣሪያን አጽዳ</string>
     <string name="feeds_identity_fingerprint">የጣት አሻራ: %1$s</string>
     <string name="feeds_identity_server">አገልጋይ: %1$s</string>
-    <string name="feeds_suggested_interests">የተጠቆሙ ፍላጎቶች</string>
-    <string name="feeds_suggested_interests_empty">እስካሁን ምንም ጥቆማዎች የሉም</string>
-    <string name="feeds_suggested_interests_title">ከ%1$s ፍላጎቶችን ይጨመሩ?</string>
-    <string name="feeds_suggested_interests_subtitle">ይህ ምግብ እነዚህን ርዕሶች ይሸፍናል። ለግል ደረጃ አሰጣጥ ወደ ፍላጎቶችዎ የትኞቹን ማከል እንደሚፈልጉ ይምረጡ።</string>
-    <string name="feeds_suggested_interests_skip">ዝለል</string>
     <string name="feeds_tag_more">ፍላጎትን አስተካክል</string>
     <string name="feeds_tag_more_up">ተመሳሳዮችን አሳይ</string>
     <string name="feeds_tag_more_down">እንደዚህ ያሉ ጥቂቶችን አሳይ</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">የልጥፍ ይዘት</string>
     <string name="feeds_enable_memories">ማስታወሻዎችን አንቃ</string>
     <string name="feeds_permission_request_title">የፈቃድ ጥያቄ</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d ልጥፍ</item>
-        <item quantity="other">%1$d ልጥፎች</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ከፊዱ ደንበኝነት ይውጡ?</string>
     <string name="feeds_settings_title">የ%1$s ቅንብሮች</string>
     <string name="feeds_source_transform_help">ለማሰናከል ባዶ ይተዉት።</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ሰዓት</item>
         <item quantity="other">%1$d ሰዓታት</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ፍላጎት ጨምር</item>
-        <item quantity="other">%1$d ፍላጎቶች ጨምር</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d ደቂቃ</item>

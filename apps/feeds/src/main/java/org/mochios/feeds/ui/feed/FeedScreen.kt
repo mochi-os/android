@@ -25,12 +25,9 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
@@ -64,7 +61,6 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
@@ -93,7 +89,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -155,7 +150,6 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
-import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.component.PostBody
@@ -316,9 +310,6 @@ fun FeedScreen(
     // True while the unsubscribe confirmation dialog is open.
     var pendingUnsubscribe by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
-    // Set once the viewer closes the one-shot post-subscribe suggestions prompt,
-    // so it doesn't reopen while the suggestions are still being acted on.
-    var suggestionsDismissed by remember { mutableStateOf(false) }
     // (feedId, postId, commentId) of a comment pending delete confirmation.
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
@@ -1036,22 +1027,6 @@ fun FeedScreen(
                     }
                 }
             }
-        }
-
-        // Show the suggestions raised by a just-completed subscribe once: they
-        // appear when the prompt arrives, hide when the viewer acts on them all,
-        // closes the dialog, or refreshes (which clears the list in the VM).
-        val suggestedInterests by viewModel.suggestedInterests.collectAsState()
-        if (suggestedInterests.isNotEmpty() && !suggestionsDismissed) {
-            InterestSuggestionsDialog(
-                feedName = feedInfo?.name.orEmpty(),
-                suggestions = suggestedInterests,
-                onAdd = { selected ->
-                    viewModel.addInterests(selected)
-                    suggestionsDismissed = true
-                },
-                onDismiss = { suggestionsDismissed = true },
-            )
         }
 
         pendingDelete?.let { target ->
@@ -2139,114 +2114,6 @@ private fun PostActionBar(
     }
 }
 
-
-/**
- * Post-subscribe prompt offering the feed's topics as interests. Every topic
- * starts selected; the viewer unchecks any they don't want, then "Add N
- * interests" commits the selection in one pass or "Skip" dismisses the prompt.
- */
-@Composable
-private fun InterestSuggestionsDialog(
-    feedName: String,
-    suggestions: List<InterestSuggestion>,
-    onAdd: (List<InterestSuggestion>) -> Unit,
-    onDismiss: () -> Unit,
-) {
-    // qid -> selected. Seeded to all-on so the common "take everything" path is
-    // a single tap; the map is keyed by qid so it survives recomposition.
-    val selected = remember(suggestions) {
-        mutableStateMapOf<String, Boolean>().apply {
-            suggestions.forEach { put(it.qid, true) }
-        }
-    }
-    val selectedCount = selected.count { it.value }
-
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = {
-            Text(
-                if (feedName.isNotEmpty()) {
-                    stringResource(R.string.feeds_suggested_interests_title, feedName)
-                } else {
-                    stringResource(R.string.feeds_suggested_interests)
-                }
-            )
-        },
-        text = {
-            if (suggestions.isEmpty()) {
-                Text(stringResource(R.string.feeds_suggested_interests_empty))
-            } else {
-                Column {
-                    Text(
-                        stringResource(R.string.feeds_suggested_interests_subtitle),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                    Spacer(modifier = Modifier.height(12.dp))
-                    LazyColumn(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .heightIn(max = 300.dp),
-                    ) {
-                        items(suggestions, key = { it.qid }) { s ->
-                            val checked = selected[s.qid] ?: false
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .clip(RoundedCornerShape(8.dp))
-                                    .clickable { selected[s.qid] = !checked }
-                                    .padding(vertical = 4.dp),
-                                verticalAlignment = Alignment.CenterVertically,
-                            ) {
-                                Checkbox(
-                                    checked = checked,
-                                    onCheckedChange = { selected[s.qid] = it },
-                                )
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(
-                                    s.label,
-                                    style = MaterialTheme.typography.bodyLarge,
-                                    modifier = Modifier.weight(1f),
-                                )
-                                if (s.count > 0) {
-                                    Spacer(modifier = Modifier.width(8.dp))
-                                    Text(
-                                        pluralStringResource(
-                                            R.plurals.feeds_suggested_interests_post_count,
-                                            s.count,
-                                            s.count,
-                                        ),
-                                        style = MaterialTheme.typography.bodyMedium,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        confirmButton = {
-            Button(
-                onClick = { onAdd(suggestions.filter { selected[it.qid] == true }) },
-                enabled = selectedCount > 0,
-            ) {
-                Text(
-                    pluralStringResource(
-                        R.plurals.feeds_suggested_interests_add_count,
-                        selectedCount,
-                        selectedCount,
-                    )
-                )
-            }
-        },
-        dismissButton = {
-            OutlinedButton(onClick = onDismiss) {
-                Text(stringResource(R.string.feeds_suggested_interests_skip))
-            }
-        },
-    )
-}
 
 private fun bannerContentHash(content: String): String {
     var hash = 5381

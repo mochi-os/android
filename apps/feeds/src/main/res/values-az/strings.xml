@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">Filtri təmizlə</string>
     <string name="feeds_identity_fingerprint">Barmaq izi: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Təklif olunan maraqlar</string>
-    <string name="feeds_suggested_interests_empty">Hələ təklif yoxdur</string>
-    <string name="feeds_suggested_interests_title">%1$s mənbəyindən maraqlar əlavə edilsin?</string>
-    <string name="feeds_suggested_interests_subtitle">Bu lent bu mövzuları əhatə edir. Fərdiləşdirilmiş sıralama üçün maraqlarınıza hansılarını əlavə edəcəyinizi seçin.</string>
-    <string name="feeds_suggested_interests_skip">Keç</string>
     <string name="feeds_tag_more">Marağı tənzimlə</string>
     <string name="feeds_tag_more_up">Bu tip daha çox göstər</string>
     <string name="feeds_tag_more_down">Bu tip daha az göstər</string>
@@ -244,10 +239,6 @@
     <string name="feeds_post_content">Post məzmunu</string>
     <string name="feeds_enable_memories">Yaddaşları aktivləşdir</string>
     <string name="feeds_permission_request_title">İcazə sorğusu</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d paylaşım</item>
-        <item quantity="other">%1$d paylaşım</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Lent abunəliyi ləğv edilsin?</string>
     <string name="feeds_settings_title">%1$s parametrləri</string>
     <string name="feeds_source_transform_help">Deaktiv etmək üçün boş buraxın.</string>
@@ -266,10 +257,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d saat</item>
         <item quantity="other">%1$d saat</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d maraq əlavə et</item>
-        <item quantity="other">%1$d maraq əlavə et</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d dəqiqə</item>

@@ -116,11 +116,6 @@
     <string name="feeds_search_results">ผลการค้นหา</string>
     <string name="feeds_identity_fingerprint">ลายนิ้วมือ: %1$s</string>
     <string name="feeds_identity_server">เซิร์ฟเวอร์: %1$s</string>
-    <string name="feeds_suggested_interests">ความสนใจที่แนะนำ</string>
-    <string name="feeds_suggested_interests_empty">ยังไม่มีคำแนะนำ</string>
-    <string name="feeds_suggested_interests_title">เพิ่มความสนใจจาก %1$s ไหม?</string>
-    <string name="feeds_suggested_interests_subtitle">ฟีดนี้ครอบคลุมหัวข้อเหล่านี้ เลือกหัวข้อที่จะเพิ่มลงในความสนใจของคุณเพื่อการจัดอันดับที่ปรับให้เหมาะกับคุณ</string>
-    <string name="feeds_suggested_interests_skip">ข้าม</string>
     <string name="feeds_tag_more">ปรับความสนใจ</string>
     <string name="feeds_tag_more_up">แสดงเพิ่มเติมแบบนี้</string>
     <string name="feeds_tag_more_down">แสดงน้อยลงแบบนี้</string>
@@ -241,9 +236,6 @@
     <string name="feeds_post_content">เนื้อหาโพสต์</string>
     <string name="feeds_enable_memories">เปิดใช้งานความทรงจำ</string>
     <string name="feeds_permission_request_title">คำขอสิทธิ์</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d โพสต์</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ยกเลิกการติดตามฟีด?</string>
     <string name="feeds_settings_title">การตั้งค่า %1$s</string>
     <string name="feeds_source_transform_help">เว้นว่างเพื่อปิดใช้งาน</string>
@@ -261,9 +253,6 @@
     <string name="feeds_source_credibility_label">ความน่าเชื่อถือ</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d ชั่วโมง</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">เพิ่ม %1$d ความสนใจ</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d นาที</item>

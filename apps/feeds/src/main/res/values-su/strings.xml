@@ -116,11 +116,6 @@
     <string name="feeds_tag_clear">Pupus saringan</string>
     <string name="feeds_identity_fingerprint">Fingerprint: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Karesep nu disarankeun</string>
-    <string name="feeds_suggested_interests_empty">Tacan aya saran</string>
-    <string name="feeds_suggested_interests_title">Tambahkeun karesep ti %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Feed ieu nyangkup topik-topik ieu. Pilih nu mana anu badé ditambahkeun kana karesep anjeun pikeun pemeringkatan nu dipersonalisasi.</string>
-    <string name="feeds_suggested_interests_skip">Liwat</string>
     <string name="feeds_tag_more">Setél karesep</string>
     <string name="feeds_tag_more_up">Témbongkeun nu sarupa deui</string>
     <string name="feeds_tag_more_down">Kurangan nu sarupa kieu</string>
@@ -242,9 +237,6 @@
     <string name="feeds_post_content">Eusi pos</string>
     <string name="feeds_enable_memories">Aktipkeun mémori</string>
     <string name="feeds_permission_request_title">Paménta idin</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d postingan</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Eureun langganan feed?</string>
     <string name="feeds_settings_title">Setélan %1$s</string>
     <string name="feeds_source_transform_help">Kosongkeun pikeun mareuman.</string>
@@ -262,9 +254,6 @@
     <string name="feeds_source_credibility_label">Kredibilitas</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d jam</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">Tambahkeun %1$d minat</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d menit</item>

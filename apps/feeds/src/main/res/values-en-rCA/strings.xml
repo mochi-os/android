@@ -88,11 +88,6 @@
     <string name="feeds_mark_all_read">Mark all read</string>
     <string name="feeds_default_sort">Default sort</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Suggested interests</string>
-    <string name="feeds_suggested_interests_empty">No suggestions yet</string>
-    <string name="feeds_suggested_interests_title">Add interests from %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">This feed covers these topics. Select which ones to add to your interests for personalized ranking.</string>
-    <string name="feeds_suggested_interests_skip">Skip</string>
     <string name="feeds_tag_more">Tune interest</string>
     <string name="feeds_tag_more_up">Show more like this</string>
     <string name="feeds_tag_more_down">Show less like this</string>
@@ -227,10 +222,6 @@
     <string name="feeds_post_content">Post content</string>
     <string name="feeds_enable_memories">Enable memories</string>
     <string name="feeds_permission_request_title">Permission request</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d post</item>
-        <item quantity="other">%1$d posts</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Unsubscribe from feed?</string>
     <string name="feeds_settings_title">%1$s settings</string>
     <string name="feeds_source_transform_help">Leave empty to disable.</string>
@@ -250,10 +241,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d hour</item>
         <item quantity="other">%1$d hours</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Add %1$d interest</item>
-        <item quantity="other">Add %1$d interests</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minute</item>

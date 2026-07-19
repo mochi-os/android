@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Meklēšanas rezultāti</string>
     <string name="feeds_identity_fingerprint">Pirkstu nospiedums: %1$s</string>
     <string name="feeds_identity_server">Serveris: %1$s</string>
-    <string name="feeds_suggested_interests">Ieteiktās intereses</string>
-    <string name="feeds_suggested_interests_empty">Vēl nav ieteikumu</string>
-    <string name="feeds_suggested_interests_title">Pievienot intereses no %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Šī plūsma aptver šīs tēmas. Atlasiet, kuras pievienot savām interesēm, lai ranžēšana būtu personalizēta.</string>
-    <string name="feeds_suggested_interests_skip">Izlaist</string>
     <string name="feeds_tag_more">Pielāgot interesi</string>
     <string name="feeds_tag_more_up">Rādīt vairāk līdzīga</string>
     <string name="feeds_tag_more_down">Rādīt mazāk līdzīga</string>
@@ -243,11 +238,6 @@
     <string name="feeds_post_content">Ieraksta saturs</string>
     <string name="feeds_enable_memories">Iespējot atmiņas</string>
     <string name="feeds_permission_request_title">Atļaujas pieprasījums</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="zero">%1$d ierakstu</item>
-        <item quantity="one">%1$d ieraksts</item>
-        <item quantity="other">%1$d ieraksti</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Atrakstīties no plūsmas?</string>
     <string name="feeds_settings_title">%1$s iestatījumi</string>
     <string name="feeds_source_transform_help">Atstājiet tukšu, lai atspējotu.</string>
@@ -267,11 +257,6 @@
         <item quantity="zero">%1$d stundu</item>
         <item quantity="one">%1$d stunda</item>
         <item quantity="other">%1$d stundas</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="zero">Pievienot %1$d interešu</item>
-        <item quantity="one">Pievienot %1$d interesi</item>
-        <item quantity="other">Pievienot %1$d intereses</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="zero">%1$d minūšu</item>

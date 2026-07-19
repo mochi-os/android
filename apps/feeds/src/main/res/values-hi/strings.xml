@@ -116,11 +116,6 @@
     <string name="feeds_search_results">खोज परिणाम</string>
     <string name="feeds_identity_fingerprint">फ़िंगरप्रिंट: %1$s</string>
     <string name="feeds_identity_server">सर्वर: %1$s</string>
-    <string name="feeds_suggested_interests">सुझाई गई रुचियाँ</string>
-    <string name="feeds_suggested_interests_empty">अभी तक कोई सुझाव नहीं</string>
-    <string name="feeds_suggested_interests_title">%1$s से रुचियाँ जोड़ें?</string>
-    <string name="feeds_suggested_interests_subtitle">यह फ़ीड इन विषयों को कवर करता है। व्यक्तिगत रैंकिंग के लिए चुनें कि इनमें से कौन-सी अपनी रुचियों में जोड़नी हैं।</string>
-    <string name="feeds_suggested_interests_skip">छोड़ें</string>
     <string name="feeds_tag_more">रुचि अनुकूलित करें</string>
     <string name="feeds_tag_more_up">इस तरह की और दिखाएँ</string>
     <string name="feeds_tag_more_down">इस तरह की कम दिखाएँ</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">पोस्ट सामग्री</string>
     <string name="feeds_enable_memories">यादें सक्षम करें</string>
     <string name="feeds_permission_request_title">अनुमति अनुरोध</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d पोस्ट</item>
-        <item quantity="other">%1$d पोस्ट</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">फ़ीड से अनसब्सक्राइब करें?</string>
     <string name="feeds_settings_title">%1$s सेटिंग्स</string>
     <string name="feeds_source_transform_help">अक्षम करने के लिए खाली छोड़ें।</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d घंटा</item>
         <item quantity="other">%1$d घंटे</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d रुचि जोड़ें</item>
-        <item quantity="other">%1$d रुचियाँ जोड़ें</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d मिनट</item>

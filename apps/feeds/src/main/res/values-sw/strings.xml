@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Matokeo ya utafutaji</string>
     <string name="feeds_identity_fingerprint">Alama: %1$s</string>
     <string name="feeds_identity_server">Seva: %1$s</string>
-    <string name="feeds_suggested_interests">Mapendekezo ya mapendeleo</string>
-    <string name="feeds_suggested_interests_empty">Hakuna mapendekezo bado</string>
-    <string name="feeds_suggested_interests_title">Ongeza mapendeleo kutoka %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Mlisho huu unahusu mada hizi. Chagua zipi za kuongeza kwenye mapendeleo yako kwa upangaji uliobinafsishwa.</string>
-    <string name="feeds_suggested_interests_skip">Ruka</string>
     <string name="feeds_tag_more">Rekebisha mapendeleo</string>
     <string name="feeds_tag_more_up">Onyesha zaidi kama hii</string>
     <string name="feeds_tag_more_down">Onyesha kidogo kama hii</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Maudhui ya chapisho</string>
     <string name="feeds_enable_memories">Wezesha kumbukumbu</string>
     <string name="feeds_permission_request_title">Ombi la ruhusa</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">Chapisho %1$d</item>
-        <item quantity="other">Machapisho %1$d</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Jiondoe kwenye mlisho?</string>
     <string name="feeds_settings_title">Mipangilio ya %1$s</string>
     <string name="feeds_source_transform_help">Acha tupu kuzima.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">Saa %1$d</item>
         <item quantity="other">Saa %1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ongeza kipendwa %1$d</item>
-        <item quantity="other">Ongeza vipendwa %1$d</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">Dakika %1$d</item>

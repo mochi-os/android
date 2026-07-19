@@ -116,11 +116,6 @@
     <string name="feeds_search_results">搜索结果</string>
     <string name="feeds_identity_fingerprint">指纹：%1$s</string>
     <string name="feeds_identity_server">服务器：%1$s</string>
-    <string name="feeds_suggested_interests">推荐兴趣</string>
-    <string name="feeds_suggested_interests_empty">暂无推荐</string>
-    <string name="feeds_suggested_interests_title">从 %1$s 添加兴趣？</string>
-    <string name="feeds_suggested_interests_subtitle">此信息流涵盖这些主题。选择要添加到你兴趣中的项目，以获得个性化排序。</string>
-    <string name="feeds_suggested_interests_skip">跳过</string>
     <string name="feeds_tag_more">调整兴趣</string>
     <string name="feeds_tag_more_up">多显示此类内容</string>
     <string name="feeds_tag_more_down">少显示此类内容</string>
@@ -241,9 +236,6 @@
     <string name="feeds_post_content">帖子内容</string>
     <string name="feeds_enable_memories">启用记忆</string>
     <string name="feeds_permission_request_title">权限请求</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d 篇帖子</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">取消订阅该订阅源？</string>
     <string name="feeds_settings_title">%1$s 设置</string>
     <string name="feeds_source_transform_help">留空以禁用。</string>
@@ -261,9 +253,6 @@
     <string name="feeds_source_credibility_label">可信度</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d 小时</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">添加 %1$d 个兴趣</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d 分钟</item>

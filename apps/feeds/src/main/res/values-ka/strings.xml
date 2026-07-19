@@ -116,11 +116,6 @@
     <string name="feeds_search_results">ძიების შედეგები</string>
     <string name="feeds_identity_fingerprint">ანაბეჭდი: %1$s</string>
     <string name="feeds_identity_server">სერვერი: %1$s</string>
-    <string name="feeds_suggested_interests">შემოთავაზებული ინტერესები</string>
-    <string name="feeds_suggested_interests_empty">ჯერ შემოთავაზებები არ არის</string>
-    <string name="feeds_suggested_interests_title">დაამატოთ ინტერესები %1$s-დან?</string>
-    <string name="feeds_suggested_interests_subtitle">ეს არხი მოიცავს ამ თემებს. აირჩიეთ, რომელი დაამატოთ თქვენს ინტერესებში პერსონალიზებული რანჟირებისთვის.</string>
-    <string name="feeds_suggested_interests_skip">გამოტოვება</string>
     <string name="feeds_tag_more">მოარგეთ ინტერესი</string>
     <string name="feeds_tag_more_up">მეტი ამის მსგავსი</string>
     <string name="feeds_tag_more_down">ნაკლები ამის მსგავსი</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">პოსტის შინაარსი</string>
     <string name="feeds_enable_memories">მეხსიერების ჩართვა</string>
     <string name="feeds_permission_request_title">ნებართვის მოთხოვნა</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d პოსტი</item>
-        <item quantity="other">%1$d პოსტი</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ფიდის გამოწერის გაუქმება?</string>
     <string name="feeds_settings_title">%1$s-ის პარამეტრები</string>
     <string name="feeds_source_transform_help">დატოვეთ ცარიელი გამოსართავად.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d საათი</item>
         <item quantity="other">%1$d საათი</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ინტერესის დამატება</item>
-        <item quantity="other">%1$d ინტერესის დამატება</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d წუთი</item>

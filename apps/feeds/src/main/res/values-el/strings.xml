@@ -121,11 +121,6 @@
     <string name="feeds_url_result">Αποτέλεσμα URL</string>
     <string name="feeds_search_results">Αποτελέσματα αναζήτησης</string>
     <string name="feeds_identity_server">Διακομιστής: %1$s</string>
-    <string name="feeds_suggested_interests">Προτεινόμενα ενδιαφέροντα</string>
-    <string name="feeds_suggested_interests_empty">Δεν υπάρχουν προτάσεις ακόμη</string>
-    <string name="feeds_suggested_interests_title">Προσθήκη ενδιαφερόντων από %1$s;</string>
-    <string name="feeds_suggested_interests_subtitle">Αυτή η ροή καλύπτει αυτά τα θέματα. Επιλέξτε ποια θέλετε να προσθέσετε στα ενδιαφέροντά σας για εξατομικευμένη κατάταξη.</string>
-    <string name="feeds_suggested_interests_skip">Παράλειψη</string>
     <string name="feeds_tag_more">Ρύθμιση ενδιαφέροντος</string>
     <string name="feeds_tag_more_up">Εμφάνιση περισσότερων σαν αυτό</string>
     <string name="feeds_tag_more_down">Εμφάνιση λιγότερων σαν αυτό</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Περιεχόμενο ανάρτησης</string>
     <string name="feeds_enable_memories">Ενεργοποίηση αναμνήσεων</string>
     <string name="feeds_permission_request_title">Αίτημα άδειας</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d δημοσίευση</item>
-        <item quantity="other">%1$d δημοσιεύσεις</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Κατάργηση εγγραφής από τη ροή;</string>
     <string name="feeds_settings_title">Ρυθμίσεις %1$s</string>
     <string name="feeds_source_transform_help">Αφήστε κενό για απενεργοποίηση.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ώρα</item>
         <item quantity="other">%1$d ώρες</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Προσθήκη %1$d ενδιαφέροντος</item>
-        <item quantity="other">Προσθήκη %1$d ενδιαφερόντων</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d λεπτό</item>

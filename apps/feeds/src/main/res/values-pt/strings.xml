@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Resultados da pesquisa</string>
     <string name="feeds_identity_fingerprint">Impressão digital: %1$s</string>
     <string name="feeds_identity_server">Servidor: %1$s</string>
-    <string name="feeds_suggested_interests">Interesses sugeridos</string>
-    <string name="feeds_suggested_interests_empty">Ainda sem sugestões</string>
-    <string name="feeds_suggested_interests_title">Adicionar interesses de %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Este feed cobre estes tópicos. Selecione quais deseja adicionar aos seus interesses para uma classificação personalizada.</string>
-    <string name="feeds_suggested_interests_skip">Ignorar</string>
     <string name="feeds_tag_more">Ajustar interesse</string>
     <string name="feeds_tag_more_up">Mostrar mais como isto</string>
     <string name="feeds_tag_more_down">Mostrar menos como isto</string>
@@ -242,11 +237,6 @@
     <string name="feeds_post_content">Conteúdo da publicação</string>
     <string name="feeds_enable_memories">Ativar memórias</string>
     <string name="feeds_permission_request_title">Pedido de permissão</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d publicação</item>
-        <item quantity="many">%1$d de publicações</item>
-        <item quantity="other">%1$d publicações</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Cancelar a subscrição do feed?</string>
     <string name="feeds_settings_title">Definições de %1$s</string>
     <string name="feeds_source_transform_help">Deixar vazio para desativar.</string>
@@ -266,11 +256,6 @@
         <item quantity="one">%1$d hora</item>
         <item quantity="many">%1$d de horas</item>
         <item quantity="other">%1$d horas</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Adicionar %1$d interesse</item>
-        <item quantity="many">Adicionar %1$d de interesses</item>
-        <item quantity="other">Adicionar %1$d interesses</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuto</item>

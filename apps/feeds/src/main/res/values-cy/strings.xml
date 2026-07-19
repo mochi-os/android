@@ -134,11 +134,6 @@
     <string name="feeds_url_result">Canlyniad URL</string>
     <string name="feeds_search_results">Canlyniadau chwilio</string>
     <string name="feeds_identity_server">Gweinydd: %1$s</string>
-    <string name="feeds_suggested_interests">Diddordebau a awgrymir</string>
-    <string name="feeds_suggested_interests_empty">Dim awgrymiadau eto</string>
-    <string name="feeds_suggested_interests_title">Ychwanegu diddordebau o %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Mae\'r ffrwd hon yn ymdrin â\'r pynciau hyn. Dewiswch pa rai i\'w hychwanegu at eich diddordebau ar gyfer trefnu wedi\'i bersonoli.</string>
-    <string name="feeds_suggested_interests_skip">Hepgor</string>
     <string name="feeds_tag_more">Tiwnio diddordeb</string>
     <string name="feeds_tag_more_up">Dangos mwy fel hyn</string>
     <string name="feeds_tag_more_down">Dangos llai fel hyn</string>
@@ -245,14 +240,6 @@
     <string name="feeds_post_content">Cynnwys postiad</string>
     <string name="feeds_enable_memories">Galluogi cofion</string>
     <string name="feeds_permission_request_title">Cais am ganiatâd</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="zero">%1$d postiadau</item>
-        <item quantity="one">%1$d postiad</item>
-        <item quantity="two">%1$d bostiad</item>
-        <item quantity="few">%1$d phostiad</item>
-        <item quantity="many">%1$d phostiad</item>
-        <item quantity="other">%1$d postiad</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Dad-danysgrifio o\'r ffrwd?</string>
     <string name="feeds_settings_title">Gosodiadau %1$s</string>
     <string name="feeds_source_transform_help">Gadewch yn wag i\'w analluogi.</string>
@@ -275,14 +262,6 @@
         <item quantity="few">%1$d awr</item>
         <item quantity="many">%1$d awr</item>
         <item quantity="other">%1$d awr</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="zero">Ychwanegu %1$d diddordebau</item>
-        <item quantity="one">Ychwanegu %1$d diddordeb</item>
-        <item quantity="two">Ychwanegu %1$d ddiddordeb</item>
-        <item quantity="few">Ychwanegu %1$d diddordeb</item>
-        <item quantity="many">Ychwanegu %1$d diddordeb</item>
-        <item quantity="other">Ychwanegu %1$d diddordeb</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="zero">%1$d munudau</item>

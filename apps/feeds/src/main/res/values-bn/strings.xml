@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">ফিল্টার সাফ করুন</string>
     <string name="feeds_identity_fingerprint">ফিঙ্গারপ্রিন্ট: %1$s</string>
     <string name="feeds_identity_server">সার্ভার: %1$s</string>
-    <string name="feeds_suggested_interests">প্রস্তাবিত আগ্রহ</string>
-    <string name="feeds_suggested_interests_empty">এখনও কোনো পরামর্শ নেই</string>
-    <string name="feeds_suggested_interests_title">%1$s থেকে আগ্রহ যোগ করবেন?</string>
-    <string name="feeds_suggested_interests_subtitle">এই ফিডটি এই বিষয়গুলো কভার করে। ব্যক্তিগতকৃত র‍্যাঙ্কিংয়ের জন্য আপনার আগ্রহে কোনগুলো যোগ করবেন তা নির্বাচন করুন।</string>
-    <string name="feeds_suggested_interests_skip">এড়িয়ে যান</string>
     <string name="feeds_tag_more">আগ্রহ সমন্বয় করুন</string>
     <string name="feeds_tag_more_up">এর মতো আরও দেখান</string>
     <string name="feeds_tag_more_down">এর মতো কম দেখান</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">পোস্টের বিষয়বস্তু</string>
     <string name="feeds_enable_memories">স্মৃতি সক্ষম করুন</string>
     <string name="feeds_permission_request_title">অনুমতির অনুরোধ</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$dটি পোস্ট</item>
-        <item quantity="other">%1$dটি পোস্ট</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ফিড থেকে আনসাবস্ক্রাইব করবেন?</string>
     <string name="feeds_settings_title">%1$s সেটিংস</string>
     <string name="feeds_source_transform_help">নিষ্ক্রিয় করতে খালি রাখুন।</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ঘণ্টা</item>
         <item quantity="other">%1$d ঘণ্টা</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$dটি আগ্রহ যোগ করুন</item>
-        <item quantity="other">%1$dটি আগ্রহ যোগ করুন</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d মিনিট</item>

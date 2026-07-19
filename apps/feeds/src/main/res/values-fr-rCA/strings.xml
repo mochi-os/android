@@ -3,7 +3,6 @@
     <string name="feeds_name">Nom</string>
     <string name="feeds_create">Créer</string>
     <string name="feeds_save_label">Enregistrer</string>
-    <string name="feeds_suggested_interests_add">Ajouter</string>
     <string name="feeds_logout">Déconnexion</string>
     <string name="feeds_settings">Paramètres</string>
     <string name="feeds_send">Envoyer</string>
@@ -30,7 +29,6 @@
     <string name="feeds_view_all_posts">Voir toutes les publications</string>
     <string name="feeds_tag_clear">Effacer le filtre</string>
     <string name="feeds_identity_fingerprint">Empreinte : %1$s</string>
-    <string name="feeds_suggested_interests_dismiss">Masquer</string>
     <string name="feeds_sort_interests">Intérêts</string>
     <string name="feeds_sort_hot">Populaires</string>
     <string name="feeds_sort_top">Meilleurs</string>
@@ -89,9 +87,6 @@
     <string name="feeds_mark_all_read">Tout marquer comme lu</string>
     <string name="feeds_default_sort">Tri par défaut</string>
     <string name="feeds_identity_server">Serveur : %1$s</string>
-    <string name="feeds_suggested_interests">Intérêts suggérés</string>
-    <string name="feeds_suggested_interests_empty">Aucune suggestion pour l\'instant</string>
-    <string name="feeds_suggested_interests_count">%1$d publications</string>
     <string name="feeds_tag_more">Ajuster l\'intérêt</string>
     <string name="feeds_tag_more_up">Afficher plus de ce contenu</string>
     <string name="feeds_tag_more_down">Afficher moins de ce contenu</string>
@@ -224,8 +219,6 @@
     <string name="feeds_access_add_title">Ajouter un accès</string>
     <string name="feeds_permission_request_message">%1$s demande la permission suivante :</string>
     <string name="feeds_allow_search">Permettre à tous de rechercher le fil</string>
-    <string name="feeds_suggested_interests_title">Ajouter des intérêts de %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Ce fil aborde ces sujets. Sélectionnez ceux à ajouter à vos intérêts pour un classement personnalisé.</string>
     <string name="feeds_post_content">Contenu de la publication</string>
     <string name="feeds_enable_memories">Activer les souvenirs</string>
     <string name="feeds_permission_request_title">Demande de permission</string>
@@ -234,7 +227,6 @@
     <string name="feeds_source_transform_help">Laisser vide pour désactiver.</string>
     <string name="feeds_settings_name_cancel_cd">Annuler la modification</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-    <string name="feeds_suggested_interests_skip">Ignorer</string>
     <string name="feeds_access_management">Gestion des accès</string>
     <string name="feeds_settings_field_server">Serveur</string>
     <string name="feeds_access_anyone_desc">Y compris les utilisateurs anonymes</string>
@@ -252,17 +244,9 @@
     <string name="feeds_unsubscribe_confirm_message">Vous ne recevrez plus de mises à jour de ce fil. Vous pouvez vous réabonner à tout moment.</string>
     <string name="feeds_access_select_rule">Sélectionner une règle d\'accès</string>
     <string name="feeds_access_authenticated_desc">Toute personne connectée</string>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ajouter %1$d centre d\'intérêt</item>
-        <item quantity="other">Ajouter %1$d centres d\'intérêt</item>
-    </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minute</item>
         <item quantity="other">%1$d minutes</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d publication</item>
-        <item quantity="other">%1$d publications</item>
     </plurals>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d heure</item>

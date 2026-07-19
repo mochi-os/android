@@ -135,11 +135,6 @@
     <string name="feeds_url_result">URL-resultat</string>
     <string name="feeds_search_results">Søgeresultater</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Foreslåede interesser</string>
-    <string name="feeds_suggested_interests_empty">Ingen forslag endnu</string>
-    <string name="feeds_suggested_interests_title">Tilføj interesser fra %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Dette feed dækker disse emner. Vælg, hvilke du vil føje til dine interesser for personlig rangering.</string>
-    <string name="feeds_suggested_interests_skip">Spring over</string>
     <string name="feeds_tag_more">Justér interesse</string>
     <string name="feeds_tag_more_up">Vis mere som dette</string>
     <string name="feeds_tag_more_down">Vis mindre som dette</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Indlæggets indhold</string>
     <string name="feeds_enable_memories">Aktivér minder</string>
     <string name="feeds_permission_request_title">Anmodning om tilladelse</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d indlæg</item>
-        <item quantity="other">%1$d indlæg</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Afmeld feedet?</string>
     <string name="feeds_settings_title">Indstillinger for %1$s</string>
     <string name="feeds_source_transform_help">Lad være tomt for at deaktivere.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d time</item>
         <item quantity="other">%1$d timer</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Tilføj %1$d interesse</item>
-        <item quantity="other">Tilføj %1$d interesser</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minut</item>

@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">फिल्टर हटाईं</string>
     <string name="feeds_identity_fingerprint">फिंगरप्रिंट: %1$s</string>
     <string name="feeds_identity_server">सर्वर: %1$s</string>
-    <string name="feeds_suggested_interests">सुझावल रुचि</string>
-    <string name="feeds_suggested_interests_empty">अबही ले कवनो सुझाव नइखे</string>
-    <string name="feeds_suggested_interests_title">%1$s से रुचि जोड़ल जाव?</string>
-    <string name="feeds_suggested_interests_subtitle">ई फीड इ विषयन के समेटेला। निजीकृत रैंकिंग खातिर आपन रुचि में कवन सब जोड़ल चाहत बानी ओकरा के चुनीं।</string>
-    <string name="feeds_suggested_interests_skip">छोड़ीं</string>
     <string name="feeds_tag_more">रुचि सेट करीं</string>
     <string name="feeds_tag_more_up">एकरा जइसन अउर देखाईं</string>
     <string name="feeds_tag_more_down">एकरा जइसन कम देखाईं</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">पोस्ट सामग्री</string>
     <string name="feeds_enable_memories">यादें चालू करीं</string>
     <string name="feeds_permission_request_title">अनुमति के अनुरोध</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d गो पोस्ट</item>
-        <item quantity="other">%1$d गो पोस्ट</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">फीड से अनसब्सक्राइब करीं?</string>
     <string name="feeds_settings_title">%1$s सेटिंग</string>
     <string name="feeds_source_transform_help">बंद करे खातिर खाली छोड़ीं।</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d घंटा</item>
         <item quantity="other">%1$d घंटा</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d गो रुचि जोड़ीं</item>
-        <item quantity="other">%1$d गो रुचि जोड़ीं</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d मिनट</item>

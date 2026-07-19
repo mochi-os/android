@@ -121,11 +121,6 @@
     <string name="feeds_url_result">Résultat URL</string>
     <string name="feeds_search_results">Résultats de recherche</string>
     <string name="feeds_identity_server">Serveur : %1$s</string>
-    <string name="feeds_suggested_interests">Centres d\'intérêt suggérés</string>
-    <string name="feeds_suggested_interests_empty">Aucune suggestion pour le moment</string>
-    <string name="feeds_suggested_interests_title">Ajouter des centres d\'intérêt de %1$s ?</string>
-    <string name="feeds_suggested_interests_subtitle">Ce flux aborde ces sujets. Sélectionnez ceux à ajouter à vos centres d\'intérêt pour un classement personnalisé.</string>
-    <string name="feeds_suggested_interests_skip">Ignorer</string>
     <string name="feeds_tag_more">Ajuster l\'intérêt</string>
     <string name="feeds_tag_more_up">Afficher plus de ce type</string>
     <string name="feeds_tag_more_down">Afficher moins de ce type</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Contenu de la publication</string>
     <string name="feeds_enable_memories">Activer les souvenirs</string>
     <string name="feeds_permission_request_title">Demande de permission</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d publication</item>
-        <item quantity="other">%1$d publications</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Se désabonner du flux ?</string>
     <string name="feeds_settings_title">Paramètres de %1$s</string>
     <string name="feeds_source_transform_help">Laisser vide pour désactiver.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d heure</item>
         <item quantity="other">%1$d heures</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ajouter %1$d centre d\'intérêt</item>
-        <item quantity="other">Ajouter %1$d centres d\'intérêt</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minute</item>

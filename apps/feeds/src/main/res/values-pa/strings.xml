@@ -116,11 +116,6 @@
     <string name="feeds_search_results">ਖੋਜ ਨਤੀਜੇ</string>
     <string name="feeds_identity_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ: %1$s</string>
     <string name="feeds_identity_server">ਸਰਵਰ: %1$s</string>
-    <string name="feeds_suggested_interests">ਸੁਝਾਈਆਂ ਰੁਚੀਆਂ</string>
-    <string name="feeds_suggested_interests_empty">ਅਜੇ ਕੋਈ ਸੁਝਾਅ ਨਹੀਂ</string>
-    <string name="feeds_suggested_interests_title">%1$s ਤੋਂ ਰੁਚੀਆਂ ਜੋੜਨੀਆਂ ਹਨ?</string>
-    <string name="feeds_suggested_interests_subtitle">ਇਹ ਫੀਡ ਇਹਨਾਂ ਵਿਸ਼ਿਆਂ ਨੂੰ ਕਵਰ ਕਰਦੀ ਹੈ। ਨਿੱਜੀ ਦਰਜਾਬੰਦੀ ਲਈ ਆਪਣੀਆਂ ਰੁਚੀਆਂ ਵਿੱਚ ਕਿਹੜੀਆਂ ਜੋੜਨੀਆਂ ਹਨ, ਚੁਣੋ।</string>
-    <string name="feeds_suggested_interests_skip">ਛੱਡੋ</string>
     <string name="feeds_tag_more">ਰੁਚੀ ਤਹਿ ਕਰੋ</string>
     <string name="feeds_tag_more_up">ਇਸ ਵਰਗਾ ਹੋਰ ਦਿਖਾਓ</string>
     <string name="feeds_tag_more_down">ਇਸ ਵਰਗਾ ਘੱਟ ਦਿਖਾਓ</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">ਪੋਸਟ ਸਮੱਗਰੀ</string>
     <string name="feeds_enable_memories">ਯਾਦਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰੋ</string>
     <string name="feeds_permission_request_title">ਇਜਾਜ਼ਤ ਬੇਨਤੀ</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d ਪੋਸਟ</item>
-        <item quantity="other">%1$d ਪੋਸਟਾਂ</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ਫੀਡ ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਹੈ?</string>
     <string name="feeds_settings_title">%1$s ਸੈਟਿੰਗਾਂ</string>
     <string name="feeds_source_transform_help">ਲਿਸਟਿੰਗ ID</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ਘੰਟਾ</item>
         <item quantity="other">%1$d ਘੰਟੇ</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ਦਿਲਚਸਪੀ ਸ਼ਾਮਲ ਕਰੋ</item>
-        <item quantity="other">%1$d ਦਿਲਚਸਪੀਆਂ ਸ਼ਾਮਲ ਕਰੋ</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d ਮਿੰਟ</item>

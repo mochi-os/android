@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">مسح عامل التصفية</string>
     <string name="feeds_identity_fingerprint">البصمة: %1$s</string>
     <string name="feeds_identity_server">الخادم: %1$s</string>
-    <string name="feeds_suggested_interests">اهتمامات مقترحة</string>
-    <string name="feeds_suggested_interests_empty">لا توجد اقتراحات بعد</string>
-    <string name="feeds_suggested_interests_title">إضافة اهتمامات من %1$s؟</string>
-    <string name="feeds_suggested_interests_subtitle">تتناول هذه التغذية هذه المواضيع. اختر أيها تريد إضافته إلى اهتماماتك للحصول على ترتيب مخصص.</string>
-    <string name="feeds_suggested_interests_skip">تخطّي</string>
     <string name="feeds_tag_more">ضبط الاهتمام</string>
     <string name="feeds_tag_more_up">أظهر المزيد مثل هذا</string>
     <string name="feeds_tag_more_down">أظهر أقل مثل هذا</string>
@@ -246,14 +241,6 @@
     <string name="feeds_post_content">محتوى المنشور</string>
     <string name="feeds_enable_memories">تمكين الذكريات</string>
     <string name="feeds_permission_request_title">طلب إذن</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="zero">%1$d منشور</item>
-        <item quantity="one">%1$d منشور</item>
-        <item quantity="two">%1$d منشوران</item>
-        <item quantity="few">%1$d منشورات</item>
-        <item quantity="many">%1$d منشورًا</item>
-        <item quantity="other">%1$d منشور</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">إلغاء الاشتراك في التغذية؟</string>
     <string name="feeds_settings_title">إعدادات %1$s</string>
     <string name="feeds_source_transform_help">اتركه فارغًا للتعطيل.</string>
@@ -276,14 +263,6 @@
         <item quantity="few">%1$d ساعات</item>
         <item quantity="many">%1$d ساعة</item>
         <item quantity="other">%1$d ساعة</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="zero">إضافة %1$d اهتمام</item>
-        <item quantity="one">إضافة %1$d اهتمام</item>
-        <item quantity="two">إضافة %1$d اهتمامين</item>
-        <item quantity="few">إضافة %1$d اهتمامات</item>
-        <item quantity="many">إضافة %1$d اهتمامًا</item>
-        <item quantity="other">إضافة %1$d اهتمام</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="zero">%1$d دقيقة</item>

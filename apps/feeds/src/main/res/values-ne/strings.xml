@@ -116,11 +116,6 @@
     <string name="feeds_search_results">खोज नतिजा</string>
     <string name="feeds_identity_fingerprint">फिंगरप्रिन्ट: %1$s</string>
     <string name="feeds_identity_server">सर्भर: %1$s</string>
-    <string name="feeds_suggested_interests">सुझाव गरिएका रुचिहरू</string>
-    <string name="feeds_suggested_interests_empty">अहिलेसम्म कुनै सुझाव छैन</string>
-    <string name="feeds_suggested_interests_title">%1$s बाट रुचिहरू थप्ने?</string>
-    <string name="feeds_suggested_interests_subtitle">यो फिडले यी विषयहरू समेट्छ। व्यक्तिगत श्रेणीकरणका लागि आफ्ना रुचिहरूमा कुन-कुन थप्ने भनेर छनौट गर्नुहोस्।</string>
-    <string name="feeds_suggested_interests_skip">छाड्नुहोस्</string>
     <string name="feeds_tag_more">रुचि मिलाउनुहोस्</string>
     <string name="feeds_tag_more_up">यस्तै अरू देखाउनुहोस्</string>
     <string name="feeds_tag_more_down">यस्तै कम देखाउनुहोस्</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">पोस्ट सामग्री</string>
     <string name="feeds_enable_memories">मेमोरीहरू सक्षम गर्नुहोस्</string>
     <string name="feeds_permission_request_title">अनुमति अनुरोध</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d पोस्ट</item>
-        <item quantity="other">%1$d पोस्टहरू</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">फिडबाट सदस्यता हटाउने?</string>
     <string name="feeds_settings_title">%1$s सेटिङहरू</string>
     <string name="feeds_source_transform_help">निष्क्रिय गर्न खाली छोड्नुहोस्।</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d घण्टा</item>
         <item quantity="other">%1$d घण्टा</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d रुचि थप्नुहोस्</item>
-        <item quantity="other">%1$d रुचिहरू थप्नुहोस्</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d मिनेट</item>

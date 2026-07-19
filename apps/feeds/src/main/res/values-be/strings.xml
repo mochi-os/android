@@ -148,11 +148,6 @@
     <string name="feeds_url_result">Вынік па URL</string>
     <string name="feeds_search_results">Вынікі пошуку</string>
     <string name="feeds_identity_server">Сервер: %1$s</string>
-    <string name="feeds_suggested_interests">Прапанаваныя інтарэсы</string>
-    <string name="feeds_suggested_interests_empty">Прапаноў пакуль няма</string>
-    <string name="feeds_suggested_interests_title">Дадаць інтарэсы з %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Гэтая стужка ахоплівае гэтыя тэмы. Выберыце, якія з іх дадаць у вашы інтарэсы для персаналізаванага ранжыравання.</string>
-    <string name="feeds_suggested_interests_skip">Прапусціць</string>
     <string name="feeds_tag_more">Наладзіць інтарэс</string>
     <string name="feeds_tag_more_up">Паказваць больш падобнага</string>
     <string name="feeds_tag_more_down">Паказваць менш падобнага</string>
@@ -246,12 +241,6 @@
     <string name="feeds_post_content">Змест паста</string>
     <string name="feeds_enable_memories">Уключыць успаміны</string>
     <string name="feeds_permission_request_title">Запыт дазволу</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d допіс</item>
-        <item quantity="few">%1$d допісы</item>
-        <item quantity="many">%1$d допісаў</item>
-        <item quantity="other">%1$d допісу</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Адпісацца ад стужкі?</string>
     <string name="feeds_settings_title">Налады %1$s</string>
     <string name="feeds_source_transform_help">Пакіньце пустым, каб адключыць.</string>
@@ -272,12 +261,6 @@
         <item quantity="few">%1$d гадзіны</item>
         <item quantity="many">%1$d гадзін</item>
         <item quantity="other">%1$d гадзіны</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Дадаць %1$d інтарэс</item>
-        <item quantity="few">Дадаць %1$d інтарэсы</item>
-        <item quantity="many">Дадаць %1$d інтарэсаў</item>
-        <item quantity="other">Дадаць %1$d інтарэсу</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d хвіліна</item>

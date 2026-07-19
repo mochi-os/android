@@ -94,11 +94,6 @@
     <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_default_sort">Orden predeterminado</string>
     <string name="feeds_identity_server">Servidor: %1$s</string>
-    <string name="feeds_suggested_interests">Intereses sugeridos</string>
-    <string name="feeds_suggested_interests_empty">Aún no hay sugerencias</string>
-    <string name="feeds_suggested_interests_title">¿Agregar intereses de %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Este feed cubre estos temas. Elegí cuáles agregar a tus intereses para un orden personalizado.</string>
-    <string name="feeds_suggested_interests_skip">Omitir</string>
     <string name="feeds_tag_more">Ajustar interés</string>
     <string name="feeds_tag_more_up">Mostrar más como esto</string>
     <string name="feeds_tag_more_down">Mostrar menos como esto</string>
@@ -229,10 +224,6 @@
     <string name="feeds_post_content">Contenido del posteo</string>
     <string name="feeds_enable_memories">Habilitá los recuerdos</string>
     <string name="feeds_permission_request_title">Solicitud de permiso</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d publicación</item>
-        <item quantity="other">%1$d publicaciones</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">¿Cancelar la suscripción al feed?</string>
     <string name="feeds_settings_title">Configuración de %1$s</string>
     <string name="feeds_source_transform_help">Dejalo vacío para desactivar.</string>
@@ -252,10 +243,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d hora</item>
         <item quantity="other">%1$d horas</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Agregar %1$d interés</item>
-        <item quantity="other">Agregar %1$d intereses</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuto</item>

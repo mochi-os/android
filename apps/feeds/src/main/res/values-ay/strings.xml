@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">Suskt\'awi pichaña</string>
     <string name="feeds_identity_fingerprint">Luk\'ana unanchawi: %1$s</string>
     <string name="feeds_identity_server">Servidor: %1$s</string>
-    <string name="feeds_suggested_interests">Iwxat\'ata munañanaka</string>
-    <string name="feeds_suggested_interests_empty">Janïraw iwxañanakax utjkiti</string>
-    <string name="feeds_suggested_interests_title">¿%1$s ukat munañanak yapxatañ?</string>
-    <string name="feeds_suggested_interests_subtitle">Aka feedax aka tuqinakat parli. Jumar uñt\'ata wakichañataki munañanakamar khitinak yapxatañ munta uk ajllim.</string>
-    <string name="feeds_suggested_interests_skip">Jaltaña</string>
     <string name="feeds_tag_more">Munaña askichaña</string>
     <string name="feeds_tag_more_up">Akham juk\'amp uñacht\'ayaña</string>
     <string name="feeds_tag_more_down">Akham juk\'a uñacht\'ayaña</string>
@@ -242,9 +237,6 @@
     <string name="feeds_post_content">Qillqata contenido</string>
     <string name="feeds_enable_memories">Memorianak yatichaña</string>
     <string name="feeds_permission_request_title">Iyaw säwi mayiwi</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d yatiyawinaka</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Feedat suscripción apsuñati?</string>
     <string name="feeds_settings_title">%1$s wakichäwinaka</string>
     <string name="feeds_source_transform_help">Jaytañataki wakischa jaytaña.</string>
@@ -262,9 +254,6 @@
     <string name="feeds_source_credibility_label">Iyawsa</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d uranaka</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">%1$d munañanak yapaña</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d minutunaka</item>

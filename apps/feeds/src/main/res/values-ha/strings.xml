@@ -117,11 +117,6 @@
     <string name="feeds_search_results">Sakamakon bincike</string>
     <string name="feeds_identity_fingerprint">Yatsa: %1$s</string>
     <string name="feeds_identity_server">Sabar: %1$s</string>
-    <string name="feeds_suggested_interests">Abubuwan sha\'awa da aka ba da shawara</string>
-    <string name="feeds_suggested_interests_empty">Babu shawarwari tukuna</string>
-    <string name="feeds_suggested_interests_title">A ƙara abubuwan sha\'awa daga %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Wannan feed yana ɗauke da waɗannan batutuwa. Zaɓi waɗanda za a ƙara cikin abubuwan sha\'awarka don tsara abubuwa na keɓaɓɓe.</string>
-    <string name="feeds_suggested_interests_skip">Tsallake</string>
     <string name="feeds_tag_more">Daidaita sha\'awa</string>
     <string name="feeds_tag_more_up">Nuna ƙari irin wannan</string>
     <string name="feeds_tag_more_down">Nuna ƙasa da haka</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Abin da ke cikin post</string>
     <string name="feeds_enable_memories">Kunna tunatarwa</string>
     <string name="feeds_permission_request_title">Neman izini</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">post %1$d</item>
-        <item quantity="other">posts %1$d</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Daina bin feed ɗin?</string>
     <string name="feeds_settings_title">Saitunan %1$s</string>
     <string name="feeds_source_transform_help">Bar fanko don kashewa.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">awa %1$d</item>
         <item quantity="other">awanni %1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ƙara sha\'awa %1$d</item>
-        <item quantity="other">Ƙara sha\'awa %1$d</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">minti %1$d</item>

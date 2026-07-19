@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Іздеу нәтижелері</string>
     <string name="feeds_identity_fingerprint">Саусақ ізі: %1$s</string>
     <string name="feeds_identity_server">Сервер: %1$s</string>
-    <string name="feeds_suggested_interests">Ұсынылған қызығушылықтар</string>
-    <string name="feeds_suggested_interests_empty">Әзірге ұсыныстар жоқ</string>
-    <string name="feeds_suggested_interests_title">%1$s ішінен қызығушылықтарды қосу керек пе?</string>
-    <string name="feeds_suggested_interests_subtitle">Бұл арна осы тақырыптарды қамтиды. Дербестендірілген рейтинг үшін қызығушылықтарыңызға қайсысын қосатыныңызды таңдаңыз.</string>
-    <string name="feeds_suggested_interests_skip">Өткізіп жіберу</string>
     <string name="feeds_tag_more">Қызығушылықты баптау</string>
     <string name="feeds_tag_more_up">Осыған ұқсастарды көбірек көрсету</string>
     <string name="feeds_tag_more_down">Осыған ұқсастарды азырақ көрсету</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Жазба мазмұны</string>
     <string name="feeds_enable_memories">Жадтарды қосу</string>
     <string name="feeds_permission_request_title">Рұқсат сұрауы</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d жазба</item>
-        <item quantity="other">%1$d жазба</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Таспаға жазылудан бас тарту керек пе?</string>
     <string name="feeds_settings_title">%1$s параметрлері</string>
     <string name="feeds_source_transform_help">Өшіру үшін бос қалдыру.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d сағат</item>
         <item quantity="other">%1$d сағат</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d қызығушылық қосу</item>
-        <item quantity="other">%1$d қызығушылық қосу</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d минут</item>

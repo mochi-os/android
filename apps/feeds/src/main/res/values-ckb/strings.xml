@@ -148,11 +148,6 @@
     <string name="feeds_url_result">ئەنجامی URL</string>
     <string name="feeds_search_results">ئەنجامەکانی گەڕان</string>
     <string name="feeds_identity_server">ڕاژەکار: %1$s</string>
-    <string name="feeds_suggested_interests">بەرژەوەندیە پێشنیارکراوەکان</string>
-    <string name="feeds_suggested_interests_empty">هێشتا هیچ پێشنیارێک نییە</string>
-    <string name="feeds_suggested_interests_title">بەرژەوەندی لە %1$s زیاد بکرێت؟</string>
-    <string name="feeds_suggested_interests_subtitle">ئەم فیدە ئەم بابەتانە دەگرێتەوە. ئەوانە هەڵبژێرە کە دەتەوێت بیانخەیتە سەر بەرژەوەندییەکانت بۆ ڕیزبەندی کەسیکراو.</string>
-    <string name="feeds_suggested_interests_skip">تێپەڕاندن</string>
     <string name="feeds_tag_more">ڕێکخستنی بەرژەوەندی</string>
     <string name="feeds_tag_more_up">زیاتر لەمە پیشان بدە</string>
     <string name="feeds_tag_more_down">کەمتر لەمە پیشان بدە</string>
@@ -244,10 +239,6 @@
     <string name="feeds_post_content">ناوەڕۆکی پۆست</string>
     <string name="feeds_enable_memories">چالاککردنی یادەوەرییەکان</string>
     <string name="feeds_permission_request_title">داواکاری ڕێگەپێدان</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d پۆست</item>
-        <item quantity="other">%1$d پۆست</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">بەشداریت لە فیدەکە هەڵبوەشێنیتەوە؟</string>
     <string name="feeds_settings_title">ڕێکخستنەکانی %1$s</string>
     <string name="feeds_source_transform_help">بۆ ناچالاککردن بەتاڵی بهێڵە.</string>
@@ -266,10 +257,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d کاتژمێر</item>
         <item quantity="other">%1$d کاتژمێر</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">زیادکردنی %1$d حەز</item>
-        <item quantity="other">زیادکردنی %1$d حەز</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d خولەک</item>

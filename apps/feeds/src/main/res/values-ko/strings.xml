@@ -116,11 +116,6 @@
     <string name="feeds_search_results">검색 결과</string>
     <string name="feeds_identity_fingerprint">지문: %1$s</string>
     <string name="feeds_identity_server">서버: %1$s</string>
-    <string name="feeds_suggested_interests">추천 관심사</string>
-    <string name="feeds_suggested_interests_empty">아직 추천이 없습니다</string>
-    <string name="feeds_suggested_interests_title">%1$s의 관심사를 추가할까요?</string>
-    <string name="feeds_suggested_interests_subtitle">이 피드는 다음 주제를 다룹니다. 맞춤 순위 지정을 위해 관심사에 추가할 항목을 선택하세요.</string>
-    <string name="feeds_suggested_interests_skip">건너뛰기</string>
     <string name="feeds_tag_more">관심사 조정</string>
     <string name="feeds_tag_more_up">비슷한 항목 더 보기</string>
     <string name="feeds_tag_more_down">비슷한 항목 덜 보기</string>
@@ -241,9 +236,6 @@
     <string name="feeds_post_content">게시물 내용</string>
     <string name="feeds_enable_memories">메모리 사용</string>
     <string name="feeds_permission_request_title">권한 요청</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">게시물 %1$d개</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">피드 구독을 취소할까요?</string>
     <string name="feeds_settings_title">%1$s 설정</string>
     <string name="feeds_source_transform_help">비활성화하려면 비워 두세요.</string>
@@ -261,9 +253,6 @@
     <string name="feeds_source_credibility_label">신뢰도</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d시간</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">관심사 %1$d개 추가</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d분</item>

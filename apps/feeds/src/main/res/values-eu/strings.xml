@@ -121,11 +121,6 @@
     <string name="feeds_url_result">URL emaitza</string>
     <string name="feeds_search_results">Bilaketaren emaitzak</string>
     <string name="feeds_identity_server">Zerbitzaria: %1$s</string>
-    <string name="feeds_suggested_interests">Iradokitako interesak</string>
-    <string name="feeds_suggested_interests_empty">Oraindik iradokizunik ez</string>
-    <string name="feeds_suggested_interests_title">Gehitu %1$s(e)tik interesak?</string>
-    <string name="feeds_suggested_interests_subtitle">Jario honek gai hauek lantzen ditu. Hautatu zein gehitu zure interesetara sailkapen pertsonalizatua egiteko.</string>
-    <string name="feeds_suggested_interests_skip">Saltatu</string>
     <string name="feeds_tag_more">Doitu interesa</string>
     <string name="feeds_tag_more_up">Erakutsi honelako gehiago</string>
     <string name="feeds_tag_more_down">Erakutsi honelako gutxiago</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Argitalpenaren edukia</string>
     <string name="feeds_enable_memories">Gaitu oroitzapenak</string>
     <string name="feeds_permission_request_title">Baimen-eskaera</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">Argitalpen %1$d</item>
-        <item quantity="other">%1$d argitalpen</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Jarioaren harpidetza utzi?</string>
     <string name="feeds_settings_title">%1$s ezarpenak</string>
     <string name="feeds_source_transform_help">Utzi hutsik desgaitzeko.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">Ordu %1$d</item>
         <item quantity="other">%1$d ordu</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Gehitu interes %1$d</item>
-        <item quantity="other">Gehitu %1$d interes</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">Minutu %1$d</item>

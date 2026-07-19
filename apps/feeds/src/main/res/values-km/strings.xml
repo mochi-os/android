@@ -116,11 +116,6 @@
     <string name="feeds_search_results">លទ្ធផលស្វែងរក</string>
     <string name="feeds_identity_fingerprint">ស្នាមម្រាមដៃ៖ %1$s</string>
     <string name="feeds_identity_server">ម៉ាស៊ីនមេ៖ %1$s</string>
-    <string name="feeds_suggested_interests">ចំណាប់អារម្មណ៍ដែលបានណែនាំ</string>
-    <string name="feeds_suggested_interests_empty">មិនទាន់មានការណែនាំទេ</string>
-    <string name="feeds_suggested_interests_title">បន្ថែមចំណាប់អារម្មណ៍ពី %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">ព័ត៌មាននេះគ្របដណ្តប់លើប្រធានបទទាំងនេះ។ ជ្រើសរើសប្រធានបទណាមួយដែលត្រូវបន្ថែមទៅចំណាប់អារម្មណ៍របស់អ្នក សម្រាប់ការដាក់ចំណាត់ថ្នាក់តាមបុគ្គល។</string>
-    <string name="feeds_suggested_interests_skip">រំលង</string>
     <string name="feeds_tag_more">កែសម្រួលចំណាប់អារម្មណ៍</string>
     <string name="feeds_tag_more_up">បង្ហាញច្រើនបែបនេះ</string>
     <string name="feeds_tag_more_down">បង្ហាញតិចបែបនេះ</string>
@@ -241,9 +236,6 @@
     <string name="feeds_post_content">មាតិកាប្រកាស</string>
     <string name="feeds_enable_memories">បើកការចងចាំ</string>
     <string name="feeds_permission_request_title">សំណើសុំការអនុញ្ញាត</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">ការបង្ហោះ %1$d</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ឈប់ជាវហ្វីដនេះ?</string>
     <string name="feeds_settings_title">ការកំណត់ %1$s</string>
     <string name="feeds_source_transform_help">ទុកឲ្យទទេដើម្បីបិទ។</string>
@@ -261,9 +253,6 @@
     <string name="feeds_source_credibility_label">ភាពគួរឱ្យជឿទុកចិត្ត</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d ម៉ោង</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">បន្ថែមចំណាប់អារម្មណ៍ %1$d</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d នាទី</item>

@@ -116,11 +116,6 @@
     <string name="feeds_search_results">ရှာဖွေမှု ရလဒ်များ</string>
     <string name="feeds_identity_fingerprint">လက်ဗွေ - %1$s</string>
     <string name="feeds_identity_server">ဆာဗာ - %1$s</string>
-    <string name="feeds_suggested_interests">အကြံပြုထားသော စိတ်ဝင်စားမှုများ</string>
-    <string name="feeds_suggested_interests_empty">အကြံပြုချက်များ မရှိသေးပါ</string>
-    <string name="feeds_suggested_interests_title">%1$s မှ စိတ်ဝင်စားမှုများ ထည့်မလား?</string>
-    <string name="feeds_suggested_interests_subtitle">ဤဖိဒ်သည် ဤခေါင်းစဉ်များကို လွှမ်းခြုံသည်။ ပုဂ္ဂိုလ်ရေးသီးသန့် အဆင့်သတ်မှတ်မှုအတွက် သင့်စိတ်ဝင်စားမှုများတွင် မည်သည်တို့ကို ထည့်မည်ကို ရွေးပါ။</string>
-    <string name="feeds_suggested_interests_skip">ကျော်ပါ</string>
     <string name="feeds_tag_more">စိတ်ဝင်စားမှု ချိန်ညှိပါ</string>
     <string name="feeds_tag_more_up">ဤကဲ့သို့ ပိုပြပါ</string>
     <string name="feeds_tag_more_down">ဤကဲ့သို့ လျှော့ပြပါ</string>
@@ -241,9 +236,6 @@
     <string name="feeds_post_content">ပို့စ် အကြောင်းအရာ</string>
     <string name="feeds_enable_memories">မှတ်ဉာဏ် ဖွင့်</string>
     <string name="feeds_permission_request_title">ခွင့်ပြုချက် တောင်းဆိုမှု</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">ပို့စ် %1$d ခု</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ဖိဒ်ကို စာရင်းသွင်းထားမှု ဖျက်မလား?</string>
     <string name="feeds_settings_title">%1$s ဆက်တင်များ</string>
     <string name="feeds_source_transform_help">ပိတ်ရန် ဗလာထားပါ။</string>
@@ -261,9 +253,6 @@
     <string name="feeds_source_credibility_label">ယုံကြည်စိတ်ချရမှု</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d နာရီ</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">စိတ်ဝင်စားမှု %1$d ခု ထည့်ရန်</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d မိနစ်</item>

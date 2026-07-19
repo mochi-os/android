@@ -111,11 +111,6 @@
     <string name="feeds_tag_clear">Maak filter skoon</string>
     <string name="feeds_identity_fingerprint">Vingerafdruk: %1$s</string>
     <string name="feeds_identity_server">Bediener: %1$s</string>
-    <string name="feeds_suggested_interests">Voorgestelde belangstellings</string>
-    <string name="feeds_suggested_interests_empty">Nog geen voorstelle nie</string>
-    <string name="feeds_suggested_interests_title">Voeg belangstellings van %1$s by?</string>
-    <string name="feeds_suggested_interests_subtitle">Hierdie feed dek hierdie onderwerpe. Kies watter jy by jou belangstellings wil voeg vir persoonlike rangskikking.</string>
-    <string name="feeds_suggested_interests_skip">Slaan oor</string>
     <string name="feeds_tag_more">Verfyn belangstelling</string>
     <string name="feeds_tag_more_up">Wys meer soos hierdie</string>
     <string name="feeds_tag_more_down">Wys minder soos hierdie</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Plaasinhoud</string>
     <string name="feeds_enable_memories">Aktiveer herinneringe</string>
     <string name="feeds_permission_request_title">Toestemmingsversoek</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d plasing</item>
-        <item quantity="other">%1$d plasings</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Teken uit van voer?</string>
     <string name="feeds_settings_title">%1$s-instellings</string>
     <string name="feeds_source_transform_help">Laat leeg om te deaktiveer.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d uur</item>
         <item quantity="other">%1$d ure</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Voeg %1$d belangstelling by</item>
-        <item quantity="other">Voeg %1$d belangstellings by</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuut</item>

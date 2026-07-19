@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Søkeresultater</string>
     <string name="feeds_identity_fingerprint">Fingeravtrykk: %1$s</string>
     <string name="feeds_identity_server">Tjener: %1$s</string>
-    <string name="feeds_suggested_interests">Foreslåtte interesser</string>
-    <string name="feeds_suggested_interests_empty">Ingen forslag ennå</string>
-    <string name="feeds_suggested_interests_title">Legge til interesser fra %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Denne strømmen dekker disse emnene. Velg hvilke du vil legge til i interessene dine for personlig rangering.</string>
-    <string name="feeds_suggested_interests_skip">Hopp over</string>
     <string name="feeds_tag_more">Juster interesse</string>
     <string name="feeds_tag_more_up">Vis mer som dette</string>
     <string name="feeds_tag_more_down">Vis mindre som dette</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Innleggets innhold</string>
     <string name="feeds_enable_memories">Aktiver minner</string>
     <string name="feeds_permission_request_title">Tillatelsesforespørsel</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d innlegg</item>
-        <item quantity="other">%1$d innlegg</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Avslutte abonnementet på feeden?</string>
     <string name="feeds_settings_title">Innstillinger for %1$s</string>
     <string name="feeds_source_transform_help">La stå tom for å deaktivere.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d time</item>
         <item quantity="other">%1$d timer</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Legg til %1$d interesse</item>
-        <item quantity="other">Legg til %1$d interesser</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minutt</item>

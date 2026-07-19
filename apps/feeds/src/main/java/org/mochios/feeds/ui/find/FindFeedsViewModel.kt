@@ -145,17 +145,7 @@ class FindFeedsViewModel @Inject constructor(
                 // fingerprint-preferred [feedId] is only the local tracking key.
                 repository.subscribeFeed(feed.id.ifEmpty { feed.fingerprint }, feed.server)
                 _subscribedFeeds.value = _subscribedFeeds.value + feedId
-                // Fetch interest suggestions and stash them BEFORE navigating, so
-                // they're ready when the feed screen opens — and not cancelled
-                // when this screen (and its ViewModel scope) is popped.
-                try {
-                    val suggestions = repository.getSuggestedInterests(feedId)
-                    if (suggestions.isNotEmpty()) {
-                        repository.setPendingInterestSuggestion(feedId, suggestions)
-                    }
-                } catch (_: Exception) { }
-                // Open the just-subscribed feed; its screen reloads and shows the
-                // suggestions prompt.
+                // Open the just-subscribed feed.
                 _navigateToFeed.emit(feedId)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()

@@ -116,11 +116,6 @@
     <string name="feeds_search_results">ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳು</string>
     <string name="feeds_identity_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್: %1$s</string>
     <string name="feeds_identity_server">ಸರ್ವರ್: %1$s</string>
-    <string name="feeds_suggested_interests">ಸೂಚಿಸಲಾದ ಆಸಕ್ತಿಗಳು</string>
-    <string name="feeds_suggested_interests_empty">ಇನ್ನೂ ಯಾವುದೇ ಸಲಹೆಗಳಿಲ್ಲ</string>
-    <string name="feeds_suggested_interests_title">%1$s ನಿಂದ ಆಸಕ್ತಿಗಳನ್ನು ಸೇರಿಸಬೇಕೇ?</string>
-    <string name="feeds_suggested_interests_subtitle">ಈ ಫೀಡ್ ಈ ವಿಷಯಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ವೈಯಕ್ತೀಕರಿಸಿದ ಶ್ರೇಯಾಂಕಕ್ಕಾಗಿ ನಿಮ್ಮ ಆಸಕ್ತಿಗಳಿಗೆ ಸೇರಿಸಲು ಯಾವುದನ್ನು ಆಯ್ಕೆಮಾಡಿ.</string>
-    <string name="feeds_suggested_interests_skip">ಬಿಟ್ಟುಬಿಡಿ</string>
     <string name="feeds_tag_more">ಆಸಕ್ತಿಯನ್ನು ಹೊಂದಿಸಿ</string>
     <string name="feeds_tag_more_up">ಇಂತಹ ಇನ್ನಷ್ಟು ತೋರಿಸಿ</string>
     <string name="feeds_tag_more_down">ಇಂತಹ ಕಡಿಮೆ ತೋರಿಸಿ</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">ಪೋಸ್ಟ್ ವಿಷಯ</string>
     <string name="feeds_enable_memories">ನೆನಪುಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="feeds_permission_request_title">ಅನುಮತಿ ವಿನಂತಿ</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d ಪೋಸ್ಟ್</item>
-        <item quantity="other">%1$d ಪೋಸ್ಟ್‌ಗಳು</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ಫೀಡ್‌ನ ಚಂದಾದಾರಿಕೆ ರದ್ದುಮಾಡುವುದೇ?</string>
     <string name="feeds_settings_title">%1$s ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="feeds_source_transform_help">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ಖಾಲಿ ಬಿಡಿ.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ಗಂಟೆ</item>
         <item quantity="other">%1$d ಗಂಟೆಗಳು</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ಆಸಕ್ತಿಯನ್ನು ಸೇರಿಸಿ</item>
-        <item quantity="other">%1$d ಆಸಕ್ತಿಗಳನ್ನು ಸೇರಿಸಿ</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d ನಿಮಿಷ</item>

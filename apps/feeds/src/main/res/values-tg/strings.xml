@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Натиҷаҳои ҷустуҷӯ</string>
     <string name="feeds_identity_fingerprint">Изи ангушт: %1$s</string>
     <string name="feeds_identity_server">Сервер: %1$s</string>
-    <string name="feeds_suggested_interests">Манфиатҳои пешниҳодшуда</string>
-    <string name="feeds_suggested_interests_empty">Ҳоло пешниҳод нест</string>
-    <string name="feeds_suggested_interests_title">Манфиатҳоро аз %1$s илова мекунед?</string>
-    <string name="feeds_suggested_interests_subtitle">Ин фид ин мавзӯъҳоро дар бар мегирад. Интихоб кунед, ки кадомҳоро барои рейтинги фардӣ ба манфиатҳои худ илова кунед.</string>
-    <string name="feeds_suggested_interests_skip">Гузаштан</string>
     <string name="feeds_tag_more">Манфиатро танзим кунед</string>
     <string name="feeds_tag_more_up">Бештар монандашро нишон диҳед</string>
     <string name="feeds_tag_more_down">Камтар монандашро нишон диҳед</string>
@@ -242,9 +237,6 @@
     <string name="feeds_post_content">Мӯҳтавои пост</string>
     <string name="feeds_enable_memories">Хотираҳоро фаъол кунед</string>
     <string name="feeds_permission_request_title">Дархости иҷозат</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d пост</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Аз обунаи фид баромадан?</string>
     <string name="feeds_settings_title">Танзимоти %1$s</string>
     <string name="feeds_source_transform_help">Барои ғайрифаъол холӣ гузоред.</string>
@@ -262,9 +254,6 @@
     <string name="feeds_source_credibility_label">Эътимоднокӣ</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d соат</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">Илова кардани %1$d шавқу ҳавас</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d дақиқа</item>

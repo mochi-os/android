@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Rezultatele căutării</string>
     <string name="feeds_identity_fingerprint">Amprentă: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Interese sugerate</string>
-    <string name="feeds_suggested_interests_empty">Nicio sugestie încă</string>
-    <string name="feeds_suggested_interests_title">Adăugați interese din %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Acest flux acoperă aceste subiecte. Selectați pe care doriți să le adăugați la interesele dvs. pentru o clasificare personalizată.</string>
-    <string name="feeds_suggested_interests_skip">Omite</string>
     <string name="feeds_tag_more">Ajustați interesul</string>
     <string name="feeds_tag_more_up">Afișați mai multe similare</string>
     <string name="feeds_tag_more_down">Afișați mai puține similare</string>
@@ -243,11 +238,6 @@
     <string name="feeds_post_content">Conținut postare</string>
     <string name="feeds_enable_memories">Activează memoriile</string>
     <string name="feeds_permission_request_title">Cerere de permisiune</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d postare</item>
-        <item quantity="few">%1$d postări</item>
-        <item quantity="other">%1$d de postări</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Dezabonare de la flux?</string>
     <string name="feeds_settings_title">Setări %1$s</string>
     <string name="feeds_source_transform_help">Lasă gol pentru a dezactiva.</string>
@@ -267,11 +257,6 @@
         <item quantity="one">%1$d oră</item>
         <item quantity="few">%1$d ore</item>
         <item quantity="other">%1$d de ore</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Adaugă %1$d interes</item>
-        <item quantity="few">Adaugă %1$d interese</item>
-        <item quantity="other">Adaugă %1$d de interese</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minut</item>

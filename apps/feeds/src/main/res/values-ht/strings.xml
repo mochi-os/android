@@ -117,11 +117,6 @@
     <string name="feeds_search_results">Rezilta rechèch</string>
     <string name="feeds_identity_fingerprint">Anprent: %1$s</string>
     <string name="feeds_identity_server">Sèvè: %1$s</string>
-    <string name="feeds_suggested_interests">Enterè sijere</string>
-    <string name="feeds_suggested_interests_empty">Poko gen sijesyon</string>
-    <string name="feeds_suggested_interests_title">Ajoute enterè soti nan %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Fil sa a kouvri sijè sa yo. Chwazi kiyès pou ajoute nan enterè ou yo pou yon klasman pèsonalize.</string>
-    <string name="feeds_suggested_interests_skip">Sote</string>
     <string name="feeds_tag_more">Ajiste enterè</string>
     <string name="feeds_tag_more_up">Montre plis konsa</string>
     <string name="feeds_tag_more_down">Montre mwens konsa</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Kontni pòs</string>
     <string name="feeds_enable_memories">Aktive memwa</string>
     <string name="feeds_permission_request_title">Demann pèmisyon</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d pòs</item>
-        <item quantity="other">%1$d pòs</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Anile abònman nan fil la?</string>
     <string name="feeds_settings_title">Paramèt %1$s</string>
     <string name="feeds_source_transform_help">Kite vid pou dezaktive.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d èdtan</item>
         <item quantity="other">%1$d èdtan</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Ajoute %1$d enterè</item>
-        <item quantity="other">Ajoute %1$d enterè</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minit</item>

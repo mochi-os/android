@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Gözleg netijeleri</string>
     <string name="feeds_identity_fingerprint">Barmak yzy: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Teklip edilen gyzyklanmalar</string>
-    <string name="feeds_suggested_interests_empty">Heniz teklip ýok</string>
-    <string name="feeds_suggested_interests_title">%1$s çeşmesinden gyzyklanmalar goşulsynmy?</string>
-    <string name="feeds_suggested_interests_subtitle">Bu akym şu mowzulary öz içine alýar. Şahsylaşdyrylan reýting üçin gyzyklanmalaryňyza haýsylaryny goşmalydygyňyzy saýlaň.</string>
-    <string name="feeds_suggested_interests_skip">Geç</string>
     <string name="feeds_tag_more">Gyzyklanmany sazla</string>
     <string name="feeds_tag_more_up">Şuňa meňzeşleri köpräk görkez</string>
     <string name="feeds_tag_more_down">Şuňa meňzeşleri azrak görkez</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Postyň mazmuny</string>
     <string name="feeds_enable_memories">Ýatlamalary işjeňleşdir</string>
     <string name="feeds_permission_request_title">Rugsat haýyşy</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d ýazgy</item>
-        <item quantity="other">%1$d ýazgy</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Lenta abunaligini ýatyrmalymy?</string>
     <string name="feeds_settings_title">%1$s sazlamalary</string>
     <string name="feeds_source_transform_help">Öçürmek üçin boş galdyr.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d sagat</item>
         <item quantity="other">%1$d sagat</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d gyzyklanma goş</item>
-        <item quantity="other">%1$d gyzyklanma goş</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minut</item>

@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Iziphumo zokukhangela</string>
     <string name="feeds_identity_fingerprint">Umnwe: %1$s</string>
     <string name="feeds_identity_server">Iseva: %1$s</string>
-    <string name="feeds_suggested_interests">Izinto ezicetyiswayo</string>
-    <string name="feeds_suggested_interests_empty">Akukabikho zicebiso</string>
-    <string name="feeds_suggested_interests_title">Yongeza umdla osuka ku-%1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Le feed iquka ezi zihloko. Khetha ezo ufuna ukuzongeza kwimidla yakho ukuze ufumane ulungelelaniso lobuqu.</string>
-    <string name="feeds_suggested_interests_skip">Tsiba</string>
     <string name="feeds_tag_more">Lungelelanisa umdla</string>
     <string name="feeds_tag_more_up">Bonisa ezininzi ezinjengale</string>
     <string name="feeds_tag_more_down">Bonisa ezimbalwa ezinjengale</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Okuqulethwe komyalezo</string>
     <string name="feeds_enable_memories">Yenza ziyasebenza iinkumbulo</string>
     <string name="feeds_permission_request_title">Isicelo semvume</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">iposti engu-%1$d</item>
-        <item quantity="other">iiposti ezingu-%1$d</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Uyeke ukubhalisela le fidi?</string>
     <string name="feeds_settings_title">Izicwangciso ze-%1$s</string>
     <string name="feeds_source_transform_help">Shiya kungenanto ukucima.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">iyure engu-%1$d</item>
         <item quantity="other">iiyure ezingu-%1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Yongeza umdla ongu-%1$d</item>
-        <item quantity="other">Yongeza imidla engu-%1$d</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">umzuzu ongu-%1$d</item>

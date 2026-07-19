@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Výsledky vyhľadávania</string>
     <string name="feeds_identity_fingerprint">Odtlačok: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Navrhované záujmy</string>
-    <string name="feeds_suggested_interests_empty">Zatiaľ žiadne návrhy</string>
-    <string name="feeds_suggested_interests_title">Pridať záujmy z %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Tento kanál pokrýva tieto témy. Vyberte, ktoré z nich chcete pridať medzi svoje záujmy pre personalizované hodnotenie.</string>
-    <string name="feeds_suggested_interests_skip">Preskočiť</string>
     <string name="feeds_tag_more">Doladiť záujem</string>
     <string name="feeds_tag_more_up">Zobraziť viac podobného</string>
     <string name="feeds_tag_more_down">Zobraziť menej podobného</string>
@@ -244,12 +239,6 @@
     <string name="feeds_post_content">Obsah príspevku</string>
     <string name="feeds_enable_memories">Povoliť spomienky</string>
     <string name="feeds_permission_request_title">Žiadosť o povolenie</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d príspevok</item>
-        <item quantity="few">%1$d príspevky</item>
-        <item quantity="many">%1$d príspevku</item>
-        <item quantity="other">%1$d príspevkov</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Zrušiť odber feedu?</string>
     <string name="feeds_settings_title">Nastavenia %1$s</string>
     <string name="feeds_source_transform_help">Pre vypnutie ponechajte prázdne.</string>
@@ -270,12 +259,6 @@
         <item quantity="few">%1$d hodiny</item>
         <item quantity="many">%1$d hodiny</item>
         <item quantity="other">%1$d hodín</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Pridať %1$d záujem</item>
-        <item quantity="few">Pridať %1$d záujmy</item>
-        <item quantity="many">Pridať %1$d záujmu</item>
-        <item quantity="other">Pridať %1$d záujmov</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minúta</item>

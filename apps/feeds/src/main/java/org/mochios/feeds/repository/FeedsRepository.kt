@@ -10,11 +10,8 @@ import android.net.Uri
 import android.util.Log
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -28,7 +25,6 @@ import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
 import org.mochios.feeds.api.FeedsApi
-import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
@@ -101,17 +97,6 @@ class PermissionRequiredException(
     val permission: String
 ) : Exception("permission_required: $permission")
 
-/**
- * A one-shot interest-suggestion prompt raised by subscribing to a feed, to be
- * shown once on that feed's screen. Held in the [@Singleton][Singleton]
- * repository because the subscribe action (FindFeeds) and the feed screen live
- * in different ViewModels.
- */
-data class PendingInterestSuggestion(
-    val feedId: String,
-    val suggestions: List<InterestSuggestion>
-)
-
 @Singleton
 class FeedsRepository @Inject constructor(
     private val api: FeedsApi,
@@ -135,23 +120,6 @@ class FeedsRepository @Inject constructor(
         val result: FeedInfoResult,
         val timestamp: Long = System.currentTimeMillis()
     )
-
-    // One-shot interest suggestions raised by a successful subscribe, consumed
-    // once by the matching feed screen. Bridges the FindFeeds subscribe flow and
-    // the feed screen, which are separate ViewModels.
-    private val _pendingInterestSuggestion = MutableStateFlow<PendingInterestSuggestion?>(null)
-    val pendingInterestSuggestion: StateFlow<PendingInterestSuggestion?> =
-        _pendingInterestSuggestion.asStateFlow()
-
-    /** Stash suggestions for [feedId] so its feed screen can show them once. */
-    fun setPendingInterestSuggestion(feedId: String, suggestions: List<InterestSuggestion>) {
-        _pendingInterestSuggestion.value = PendingInterestSuggestion(feedId, suggestions)
-    }
-
-    /** Clear the pending suggestion once consumed (or when no longer relevant). */
-    fun clearPendingInterestSuggestion() {
-        _pendingInterestSuggestion.value = null
-    }
 
     // Emits whenever the viewer's subscriptions change (subscribe/unsubscribe),
     // so the feed-list drawer can reload even without a navigation that would
@@ -805,14 +773,6 @@ class FeedsRepository @Inject constructor(
     suspend fun adjustInterest(feedId: String, qid: String?, label: String?, direction: String) {
         try {
             api.adjustInterest(feedId, qid, label, direction).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
-
-    suspend fun getSuggestedInterests(feedId: String): List<InterestSuggestion> {
-        return try {
-            api.getSuggestedInterests(feedId).unwrap().suggestions
         } catch (e: Exception) {
             throw e.toMochiError()
         }

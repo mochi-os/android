@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Mga resulta ng paghahanap</string>
     <string name="feeds_identity_fingerprint">Fingerprint: %1$s</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Mga iminumungkahing interes</string>
-    <string name="feeds_suggested_interests_empty">Wala pang mungkahi</string>
-    <string name="feeds_suggested_interests_title">Magdagdag ng mga interes mula sa %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Sinasaklaw ng feed na ito ang mga paksang ito. Piliin kung alin ang idaragdag sa iyong mga interes para sa personalized na ranking.</string>
-    <string name="feeds_suggested_interests_skip">Laktawan</string>
     <string name="feeds_tag_more">I-tune ang interes</string>
     <string name="feeds_tag_more_up">Magpakita ng higit pang katulad nito</string>
     <string name="feeds_tag_more_down">Magpakita ng mas kaunti na katulad nito</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Nilalaman ng post</string>
     <string name="feeds_enable_memories">Paganahin ang mga alaala</string>
     <string name="feeds_permission_request_title">Kahilingan sa pahintulot</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d post</item>
-        <item quantity="other">%1$d na post</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Mag-unsubscribe sa feed?</string>
     <string name="feeds_settings_title">Mga setting ng %1$s</string>
     <string name="feeds_source_transform_help">Iwanang walang laman para i-disable.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d oras</item>
         <item quantity="other">%1$d na oras</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Magdagdag ng %1$d interes</item>
-        <item quantity="other">Magdagdag ng %1$d na interes</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minuto</item>

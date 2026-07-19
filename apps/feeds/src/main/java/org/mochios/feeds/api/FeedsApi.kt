@@ -187,16 +187,6 @@ data class GroupListResponse(
     val groups: List<Group> = emptyList()
 )
 
-data class InterestSuggestion(
-    val qid: String = "",
-    val label: String = "",
-    val count: Int = 0
-)
-
-data class InterestSuggestResponse(
-    val suggestions: List<InterestSuggestion> = emptyList()
-)
-
 interface FeedsApi {
 
     // --- Class-level endpoints (no entity) ---
@@ -503,11 +493,6 @@ interface FeedsApi {
         @Field("label") label: String?,
         @Field("direction") direction: String
     ): Response<ApiResponse<SuccessResponse>>
-
-    @GET("{feedId}/-/interests/suggest")
-    suspend fun getSuggestedInterests(
-        @Path("feedId") feedId: String
-    ): Response<ApiResponse<InterestSuggestResponse>>
 
     // --- AI ---
 

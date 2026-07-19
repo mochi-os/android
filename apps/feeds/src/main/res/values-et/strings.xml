@@ -121,11 +121,6 @@
     <string name="feeds_url_result">URLi tulemus</string>
     <string name="feeds_search_results">Otsingutulemused</string>
     <string name="feeds_identity_server">Server: %1$s</string>
-    <string name="feeds_suggested_interests">Soovitatud huvid</string>
-    <string name="feeds_suggested_interests_empty">Soovitusi pole veel</string>
-    <string name="feeds_suggested_interests_title">Kas lisada huvid kanalist %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">See kanal käsitleb neid teemasid. Vali, millised neist lisada oma huvide hulka isikupärastatud järjestamiseks.</string>
-    <string name="feeds_suggested_interests_skip">Jäta vahele</string>
     <string name="feeds_tag_more">Häälesta huvi</string>
     <string name="feeds_tag_more_up">Näita rohkem sarnast</string>
     <string name="feeds_tag_more_down">Näita vähem sarnast</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Postituse sisu</string>
     <string name="feeds_enable_memories">Luba mälud</string>
     <string name="feeds_permission_request_title">Õiguse taotlus</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d postitus</item>
-        <item quantity="other">%1$d postitust</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Kas loobuda voo tellimusest?</string>
     <string name="feeds_settings_title">%1$s seaded</string>
     <string name="feeds_source_transform_help">Jäta tühjaks, et keelata.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d tund</item>
         <item quantity="other">%1$d tundi</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Lisa %1$d huvi</item>
-        <item quantity="other">Lisa %1$d huvi</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d minut</item>

@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Hasil carian</string>
     <string name="feeds_identity_fingerprint">Cap jari: %1$s</string>
     <string name="feeds_identity_server">Pelayan: %1$s</string>
-    <string name="feeds_suggested_interests">Minat yang dicadangkan</string>
-    <string name="feeds_suggested_interests_empty">Tiada cadangan lagi</string>
-    <string name="feeds_suggested_interests_title">Tambah minat daripada %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">Suapan ini merangkumi topik-topik ini. Pilih yang mana hendak ditambah ke minat anda untuk kedudukan yang diperibadikan.</string>
-    <string name="feeds_suggested_interests_skip">Langkau</string>
     <string name="feeds_tag_more">Tala minat</string>
     <string name="feeds_tag_more_up">Tunjukkan lebih banyak seperti ini</string>
     <string name="feeds_tag_more_down">Tunjukkan kurang seperti ini</string>
@@ -242,9 +237,6 @@
     <string name="feeds_post_content">Kandungan hantaran</string>
     <string name="feeds_enable_memories">Dayakan ingatan</string>
     <string name="feeds_permission_request_title">Permintaan kebenaran</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d kiriman</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Berhenti melanggan suapan?</string>
     <string name="feeds_settings_title">Tetapan %1$s</string>
     <string name="feeds_source_transform_help">Biarkan kosong untuk melumpuhkan.</string>
@@ -262,9 +254,6 @@
     <string name="feeds_source_credibility_label">Kredibiliti</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d jam</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">Tambah %1$d minat</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d minit</item>

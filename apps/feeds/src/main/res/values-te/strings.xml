@@ -116,11 +116,6 @@
     <string name="feeds_search_results">శోధన ఫలితాలు</string>
     <string name="feeds_identity_fingerprint">వేలిముద్ర: %1$s</string>
     <string name="feeds_identity_server">సర్వర్: %1$s</string>
-    <string name="feeds_suggested_interests">సూచించిన ఆసక్తులు</string>
-    <string name="feeds_suggested_interests_empty">ఇంకా సూచనలు లేవు</string>
-    <string name="feeds_suggested_interests_title">%1$s నుండి ఆసక్తులను జోడించాలా?</string>
-    <string name="feeds_suggested_interests_subtitle">ఈ ఫీడ్ ఈ అంశాలను కవర్ చేస్తుంది. వ్యక్తిగతీకరించిన ర్యాంకింగ్ కోసం మీ ఆసక్తులకు వేటిని జోడించాలో ఎంచుకోండి.</string>
-    <string name="feeds_suggested_interests_skip">దాటవేయి</string>
     <string name="feeds_tag_more">ఆసక్తిని సర్దుబాటు చేయండి</string>
     <string name="feeds_tag_more_up">ఇలాంటివి మరిన్ని చూపించు</string>
     <string name="feeds_tag_more_down">ఇలాంటివి తక్కువగా చూపించు</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">పోస్ట్ కంటెంట్</string>
     <string name="feeds_enable_memories">మెమరీలను ప్రారంభించండి</string>
     <string name="feeds_permission_request_title">అనుమతి అభ్యర్థన</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d పోస్ట్</item>
-        <item quantity="other">%1$d పోస్ట్‌లు</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">ఫీడ్ సభ్యత్వాన్ని రద్దు చేయాలా?</string>
     <string name="feeds_settings_title">%1$s సెట్టింగ్‌లు</string>
     <string name="feeds_source_transform_help">నిలిపివేయడానికి ఖాళీగా ఉంచండి.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d గంట</item>
         <item quantity="other">%1$d గంటలు</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">%1$d ఆసక్తిని జోడించండి</item>
-        <item quantity="other">%1$d ఆసక్తులను జోడించండి</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d నిమిషం</item>

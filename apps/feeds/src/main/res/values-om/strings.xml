@@ -116,11 +116,6 @@
     <string name="feeds_search_results">Bu\'aawwan barbaachaa</string>
     <string name="feeds_identity_fingerprint">Faana quba: %1$s</string>
     <string name="feeds_identity_server">Sarvarii: %1$s</string>
-    <string name="feeds_suggested_interests">Fedhiiwwan yaadaman</string>
-    <string name="feeds_suggested_interests_empty">Hanga ammaatti yaadi hin jiru</string>
-    <string name="feeds_suggested_interests_title">Fedhota %1$s irraa dabaluu?</string>
-    <string name="feeds_suggested_interests_subtitle">Feed kun mata dureewwan kana hammata. Sadarkeessuu dhuunfaa keessaniif kamtu fedhota keessanitti akka dabalamu filadhaa.</string>
-    <string name="feeds_suggested_interests_skip">Dabarsi</string>
     <string name="feeds_tag_more">Fedhii sirreessi</string>
     <string name="feeds_tag_more_up">Kana fakkaatu dabalataan agarsiisi</string>
     <string name="feeds_tag_more_down">Kana fakkaatu xinneessii agarsiisi</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">Qabiyyee maxxansaa</string>
     <string name="feeds_enable_memories">Yaadannoo dandeessisi</string>
     <string name="feeds_permission_request_title">Gaaffii hayyamaa</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">maxxansa %1$d</item>
-        <item quantity="other">maxxansaawwan %1$d</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Feedii hordofuu dhiisuu?</string>
     <string name="feeds_settings_title">Qindaa\'ina %1$s</string>
     <string name="feeds_source_transform_help">Dhaamsuuf duwwaa kaa\'i.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">sa\'aatii %1$d</item>
         <item quantity="other">sa\'aatiiwwan %1$d</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Fedhii %1$d dabali</item>
-        <item quantity="other">Fedhiiwwan %1$d dabali</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">daqiiqaa %1$d</item>

@@ -117,11 +117,6 @@
     <string name="feeds_search_results">Toraidhean luirg</string>
     <string name="feeds_identity_fingerprint">Lorg-meòir: %1$s</string>
     <string name="feeds_identity_server">Frithealaiche: %1$s</string>
-    <string name="feeds_suggested_interests">Ùidhean a thathar a\' moladh</string>
-    <string name="feeds_suggested_interests_empty">Chan eil moladh ann fhathast</string>
-    <string name="feeds_suggested_interests_title">A bheil thu airson ùidhean o %1$s a chur ris?</string>
-    <string name="feeds_suggested_interests_subtitle">Tha an t-inbhir seo a\' còmhdach nan cuspairean seo. Tagh cò an fheadhainn a chuireas tu ris na h-ùidhean agad airson rangachadh pearsanaichte.</string>
-    <string name="feeds_suggested_interests_skip">Leum thairis</string>
     <string name="feeds_tag_more">Gleus ùidh</string>
     <string name="feeds_tag_more_up">Seall barrachd dhen leithid seo</string>
     <string name="feeds_tag_more_down">Seall nas lugha dhen leithid seo</string>
@@ -246,12 +241,6 @@
     <string name="feeds_post_content">Susbaint a\' phuist</string>
     <string name="feeds_enable_memories">Cuir cuimhneachain an comas</string>
     <string name="feeds_permission_request_title">Iarrtas ceada</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d phost</item>
-        <item quantity="two">%1$d phost</item>
-        <item quantity="few">%1$d postaichean</item>
-        <item quantity="other">%1$d post</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">Sgur dhen fho-sgrìobhadh dhan inbhir?</string>
     <string name="feeds_settings_title">Roghainnean %1$s</string>
     <string name="feeds_source_transform_help">Fàg falamh gus chur dheth.</string>
@@ -272,12 +261,6 @@
         <item quantity="two">%1$d uair a thìde</item>
         <item quantity="few">%1$d uairean a thìde</item>
         <item quantity="other">%1$d uair a thìde</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">Cuir %1$d ùidh ris</item>
-        <item quantity="two">Cuir %1$d ùidh ris</item>
-        <item quantity="few">Cuir %1$d ùidhean ris</item>
-        <item quantity="other">Cuir %1$d ùidh ris</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d mhionaid</item>

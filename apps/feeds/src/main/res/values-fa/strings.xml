@@ -121,11 +121,6 @@
     <string name="feeds_url_result">نتیجه نشانی</string>
     <string name="feeds_search_results">نتایج جستجو</string>
     <string name="feeds_identity_server">سرور: %1$s</string>
-    <string name="feeds_suggested_interests">علاقه‌مندی‌های پیشنهادی</string>
-    <string name="feeds_suggested_interests_empty">هنوز پیشنهادی نیست</string>
-    <string name="feeds_suggested_interests_title">علاقه‌مندی‌ها از %1$s افزوده شود؟</string>
-    <string name="feeds_suggested_interests_subtitle">این فید این موضوعات را پوشش می‌دهد. انتخاب کنید کدام‌یک به علاقه‌مندی‌های شما برای رتبه‌بندی شخصی‌سازی‌شده افزوده شوند.</string>
-    <string name="feeds_suggested_interests_skip">رد کردن</string>
     <string name="feeds_tag_more">تنظیم علاقه‌مندی</string>
     <string name="feeds_tag_more_up">موارد مشابه بیشتری نشان بده</string>
     <string name="feeds_tag_more_down">موارد مشابه کمتری نشان بده</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">محتوای پست</string>
     <string name="feeds_enable_memories">فعال‌سازی خاطرات</string>
     <string name="feeds_permission_request_title">درخواست مجوز</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d پست</item>
-        <item quantity="other">%1$d پست</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">لغو اشتراک از فید؟</string>
     <string name="feeds_settings_title">تنظیمات %1$s</string>
     <string name="feeds_source_transform_help">برای غیرفعال‌سازی خالی بگذارید.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ساعت</item>
         <item quantity="other">%1$d ساعت</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">افزودن %1$d علاقه‌مندی</item>
-        <item quantity="other">افزودن %1$d علاقه‌مندی</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d دقیقه</item>

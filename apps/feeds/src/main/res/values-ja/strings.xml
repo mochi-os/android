@@ -116,11 +116,6 @@
     <string name="feeds_search_results">検索結果</string>
     <string name="feeds_identity_fingerprint">フィンガープリント: %1$s</string>
     <string name="feeds_identity_server">サーバー: %1$s</string>
-    <string name="feeds_suggested_interests">おすすめの興味</string>
-    <string name="feeds_suggested_interests_empty">おすすめはまだありません</string>
-    <string name="feeds_suggested_interests_title">%1$s から興味を追加しますか？</string>
-    <string name="feeds_suggested_interests_subtitle">このフィードはこれらのトピックを扱っています。パーソナライズされたランキングのために、興味に追加するものを選択してください。</string>
-    <string name="feeds_suggested_interests_skip">スキップ</string>
     <string name="feeds_tag_more">興味を調整</string>
     <string name="feeds_tag_more_up">似た投稿をもっと表示</string>
     <string name="feeds_tag_more_down">似た投稿を減らす</string>
@@ -241,9 +236,6 @@
     <string name="feeds_post_content">投稿内容</string>
     <string name="feeds_enable_memories">メモリーを有効化</string>
     <string name="feeds_permission_request_title">権限リクエスト</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="other">%1$d件の投稿</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">フィードの購読を解除しますか？</string>
     <string name="feeds_settings_title">%1$sの設定</string>
     <string name="feeds_source_transform_help">無効化するには空のままにしてください。</string>
@@ -261,9 +253,6 @@
     <string name="feeds_source_credibility_label">信頼性</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d時間</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="other">%1$d件の興味・関心を追加</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="other">%1$d分</item>

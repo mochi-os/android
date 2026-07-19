@@ -116,11 +116,6 @@
     <string name="feeds_tag_clear">אױסמעקן פֿילטער</string>
     <string name="feeds_identity_fingerprint">פֿינגער־אָפּדרוק: %1$s</string>
     <string name="feeds_identity_server">סערװער: %1$s</string>
-    <string name="feeds_suggested_interests">פֿאָרגעלײגטע אינטערעסן</string>
-    <string name="feeds_suggested_interests_empty">נאָך קײן פֿאָרשלאָגן</string>
-    <string name="feeds_suggested_interests_title">צולייגן אינטערעסן פֿון %1$s?</string>
-    <string name="feeds_suggested_interests_subtitle">דער פֿיד נעמט אַרום די טעמעס. קלייַבט אויס וועלכע צוצולייגן צו אייערע אינטערעסן פֿאַר אַ פּערזענלעכן ראַנגירונג.</string>
-    <string name="feeds_suggested_interests_skip">איבערשפּרינגען</string>
     <string name="feeds_tag_more">סטימען אינטערעס</string>
     <string name="feeds_tag_more_up">װײַזן מער אַזעלכע</string>
     <string name="feeds_tag_more_down">װײַזן װײניקער אַזעלכע</string>
@@ -242,10 +237,6 @@
     <string name="feeds_post_content">פּאָסט אינהאַלט</string>
     <string name="feeds_enable_memories">אַקטיווירן זכרונות</string>
     <string name="feeds_permission_request_title">בקשה פֿאַר דערלויבעניש</string>
-    <plurals name="feeds_suggested_interests_post_count">
-        <item quantity="one">%1$d פּאָסט</item>
-        <item quantity="other">%1$d פּאָסטן</item>
-    </plurals>
     <string name="feeds_unsubscribe_confirm">זיך אָפּשרײַבן פֿונעם פֿיד?</string>
     <string name="feeds_settings_title">%1$s איינשטעלונגען</string>
     <string name="feeds_source_transform_help">לאָזט ליידיק צו דעאַקטיווירן.</string>
@@ -264,10 +255,6 @@
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d שעה</item>
         <item quantity="other">%1$d שעה</item>
-    </plurals>
-    <plurals name="feeds_suggested_interests_add_count">
-        <item quantity="one">צולייגן %1$d אינטערעס</item>
-        <item quantity="other">צולייגן %1$d אינטערעסן</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
         <item quantity="one">%1$d מינוט</item>
