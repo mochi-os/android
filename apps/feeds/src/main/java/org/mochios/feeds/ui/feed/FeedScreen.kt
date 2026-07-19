@@ -1394,67 +1394,86 @@ private fun GalleryContent(
         attachment.url ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}"
     }
 
-    Column(modifier = modifier) {
+    // Same zero-range verticalScroll wrapper as the article column: its only
+    // job is the nested-scroll handoff to the pager, so a swipe starting on a
+    // mosaic tile forwards to the page flip instead of being fought over —
+    // without it, gallery pages were noticeably harder to flip than articles.
+    // The inner column is pinned to the viewport height, so the scroll range
+    // stays zero and every drag delegates upward.
+    BoxWithConstraints(modifier = modifier) {
+        val viewportHeight = this.maxHeight
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 16.dp, end = 4.dp, top = 16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
-            PostByline(post)
-        }
-        Spacer(modifier = Modifier.height(8.dp))
-        GalleryMosaic(
-            media = media,
-            tileModel = { attachment ->
-                if (attachment.isVideo) {
-                    // No server video-thumbnail route: decode the opening
-                    // frame from the video itself (VideoFrameFetcher).
-                    VideoFrame(resolve(fullUrl(attachment)))
-                } else {
-                    attachment.thumbnailUrl
-                        ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}/thumbnail"
-                }
-            },
-            onTap = { index ->
-                val attachment = media[index]
-                if (attachment.isVideo) {
-                    onPlayVideo(resolve(fullUrl(attachment)))
-                } else {
-                    // The lightbox spans images only, so map the mosaic index
-                    // to the attachment's position among the images.
-                    onOpenImage(media.take(index + 1).count { it.isImage } - 1)
-                }
-            },
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth(),
-        )
-        if (caption.isNotEmpty()) {
-            Text(
-                text = caption,
-                style = MaterialTheme.typography.bodyMedium,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
+            Column(
                 modifier = Modifier
+                    .height(viewportHeight)
                     .fillMaxWidth()
-                    .padding(start = 16.dp, end = 4.dp, top = 8.dp)
-                    .noRippleClickable(onOpenPost),
-            )
-        }
-        val files = post.attachments.filter { attachment ->
-            !attachment.isImage && !attachment.isVideo
-        }
-        if (files.isNotEmpty()) {
-            Text(
-                text = pluralStringResource(
-                    R.plurals.feeds_attachment_count,
-                    files.size,
-                    files.size
-                ),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.padding(start = 16.dp, top = 4.dp),
-            )
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = 16.dp, end = 4.dp, top = 16.dp)
+                ) {
+                    PostByline(post)
+                }
+                Spacer(modifier = Modifier.height(8.dp))
+                GalleryMosaic(
+                    media = media,
+                    tileModel = { attachment ->
+                        if (attachment.isVideo) {
+                            // No server video-thumbnail route: decode the opening
+                            // frame from the video itself (VideoFrameFetcher).
+                            VideoFrame(resolve(fullUrl(attachment)))
+                        } else {
+                            attachment.thumbnailUrl
+                                ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}/thumbnail"
+                        }
+                    },
+                    onTap = { index ->
+                        val attachment = media[index]
+                        if (attachment.isVideo) {
+                            onPlayVideo(resolve(fullUrl(attachment)))
+                        } else {
+                            // The lightbox spans images only, so map the mosaic
+                            // index to the attachment's position among the images.
+                            onOpenImage(media.take(index + 1).count { it.isImage } - 1)
+                        }
+                    },
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxWidth(),
+                )
+                if (caption.isNotEmpty()) {
+                    Text(
+                        text = caption,
+                        style = MaterialTheme.typography.bodyMedium,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(start = 16.dp, end = 4.dp, top = 8.dp)
+                            .noRippleClickable(onOpenPost),
+                    )
+                }
+                val files = post.attachments.filter { attachment ->
+                    !attachment.isImage && !attachment.isVideo
+                }
+                if (files.isNotEmpty()) {
+                    Text(
+                        text = pluralStringResource(
+                            R.plurals.feeds_attachment_count,
+                            files.size,
+                            files.size
+                        ),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(start = 16.dp, top = 4.dp),
+                    )
+                }
+            }
         }
     }
 }

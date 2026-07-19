@@ -11,10 +11,13 @@ import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.BrokenImage
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -37,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import coil3.compose.AsyncImage
+import coil3.compose.AsyncImagePainter
 import org.mochios.android.R
 
 /**
@@ -121,6 +125,12 @@ private fun ZoomableImage(
     var scale by remember { mutableFloatStateOf(1f) }
     var offset by remember { mutableStateOf(Offset.Zero) }
     var dismissProgress by remember { mutableFloatStateOf(0f) }
+    // Full-size images can take many seconds on a slow connection, and the
+    // page is otherwise pure black — show a spinner while loading and a
+    // broken-image glyph when the fetch fails.
+    var state by remember(url) {
+        mutableStateOf<AsyncImagePainter.State>(AsyncImagePainter.State.Empty)
+    }
 
     Box(
         modifier = Modifier
@@ -150,6 +160,7 @@ private fun ZoomableImage(
             model = url,
             contentDescription = null,
             contentScale = ContentScale.Fit,
+            onState = { state = it },
             modifier = Modifier
                 .fillMaxSize()
                 .graphicsLayer {
@@ -160,5 +171,20 @@ private fun ZoomableImage(
                     alpha = 1f - kotlin.math.abs(dismissProgress) * 0.5f
                 }
         )
+        when (state) {
+            is AsyncImagePainter.State.Error -> Icon(
+                imageVector = Icons.Default.BrokenImage,
+                contentDescription = null,
+                tint = Color.White.copy(alpha = 0.7f),
+                modifier = Modifier.size(64.dp)
+            )
+
+            is AsyncImagePainter.State.Success -> {}
+
+            else -> CircularProgressIndicator(
+                color = Color.White,
+                modifier = Modifier.size(48.dp)
+            )
+        }
     }
 }
