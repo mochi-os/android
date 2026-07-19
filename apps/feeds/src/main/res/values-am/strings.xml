@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">ምዝገባ ተቋርጧል</string>
     <string name="feeds_access_level_comment_full">አስተያየት ስጥ፣ ምላሽ ስጥ እና ተመልከት</string>
     <string name="feeds_rss_mode_posts_comments">ልጥፎች እና አስተያየቶች</string>
-    <string name="feeds_delete_feed_description">ይህን ፊድ እና ሁሉንም ይዘቶቹን በቋሚነት ሰርዝ።</string>
     <string name="feeds_access_add_title">መዳረሻ ጨምር</string>
     <string name="feeds_permission_request_message">%1$s የሚከተለውን ፈቃድ እየጠየቀ ነው፦</string>
     <string name="feeds_allow_search">ማንኛውም ሰው ምግቡን እንዲፈልግ ፍቀድ</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">ወደ እንግሊዝኛ ተርጉም፣ እና በነጥቦች አሳይ።</string>
     <string name="feeds_source_url_hint_feed">የምግብ ኢንቲቲ መለያ ወይም የጣት አሻራ</string>
     <string name="feeds_source_credibility_label">ታማኝነት</string>
-    <string name="feeds_access_management_desc">ይህን ፊድ ማን እንደሚያይና እንደሚገናኝ ተቆጣጠር</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ሰዓት</item>
         <item quantity="other">%1$d ሰዓታት</item>

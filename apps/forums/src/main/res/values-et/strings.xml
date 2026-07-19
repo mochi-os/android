@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Modereerimine, postitamine, kommenteerimine, hääletamine ja vaatamine</string>
     <string name="forums_access_level_post_full">Postitamine, kommenteerimine, hääletamine ja vaatamine</string>
     <string name="forums_access_level_vote_full">Hääletamine ja vaatamine</string>
-    <string name="forums_access_management_description">Määrake, kes saab seda foorumit näha ja selles osaleda</string>
     <string name="forums_access_select_group">Valige rühm</string>
     <string name="forums_access_select_rule">Valige reegel</string>
     <string name="forums_ai_actions_label">TI toimingud postitustega</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">vastust</string>
     <string name="forums_moderation_unit_seconds">sekundit</string>
     <string name="forums_settings_ai_updated">TI seaded värskendatud</string>
-    <string name="forums_settings_delete_description">Kustuta see foorum ja kogu selle sisu jäädavalt.</string>
     <string name="forums_settings_forum_renamed">Foorum ümber nimetatud</string>
     <string name="forums_settings_name_clear_cd">Tühjenda nimi</string>
     <string name="forums_settings_unsubscribe_section">Loobu foorumi tellimusest</string>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">እንደተነበበ ምልክት ተደርጓል</string>
     <string name="chat_search_next">ቀጣይ ተዛማጅ</string>
     <string name="chat_search_prev">ቀዳሚ ተዛማጅ</string>
-    <string name="chat_settings_general_desc">የውይይት ቅንብሮችን አስተካክል</string>
     <string name="chat_settings_id">የውይይት መታወቂያ</string>
-    <string name="chat_settings_members_desc">በዚህ ውይይት ውስጥ ያሉ ሰዎች ዝርዝር</string>
 </resources>

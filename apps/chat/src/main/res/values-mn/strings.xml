@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Уншсан гэж тэмдэглэсэн</string>
     <string name="chat_search_next">Дараагийн тохирол</string>
     <string name="chat_search_prev">Өмнөх тохирол</string>
-    <string name="chat_settings_general_desc">Чатны тохиргоог тохируулах</string>
     <string name="chat_settings_id">Чатны ID</string>
-    <string name="chat_settings_members_desc">Энэ чат дахь хүмүүсийн жагсаалт</string>
 </resources>

@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Хориҷ шуд</string>
     <string name="feeds_access_level_comment_full">Шарҳ, аксуламал ва дидан</string>
     <string name="feeds_rss_mode_posts_comments">Постҳо ва шарҳҳо</string>
-    <string name="feeds_delete_feed_description">Ин фид ва тамоми мӯҳтавояшро доимӣ нест кунед.</string>
     <string name="feeds_access_add_title">Иловаи дастрасӣ</string>
     <string name="feeds_permission_request_message">%1$s иҷозати зеринро дархост мекунад:</string>
     <string name="feeds_allow_search">Иҷозат додан, ки ҳар кас навори RSS-ро ҷустуҷӯ кунад</string>
@@ -261,7 +260,6 @@
     <string name="feeds_source_transform_hint">Ба англисӣ тарҷума кунед ва ҳамчун нуқтаҳо нишон диҳед.</string>
     <string name="feeds_source_url_hint_feed">ID-и объекти фид ё нақши ангушт</string>
     <string name="feeds_source_credibility_label">Эътимоднокӣ</string>
-    <string name="feeds_access_management_desc">Назорат кунед, ки кӣ метавонад ин навори RSS-ро бубинад ва бо он ҳамкорӣ кунад</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d соат</item>
     </plurals>

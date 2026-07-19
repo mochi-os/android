@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Valfri skildring</string>
     <string name="people_group_name_required">Namn er påkravd</string>
     <string name="people_group_actions">Gruppehandlingar</string>
-    <string name="people_group_actions_description">Kjerneinformasjon om denne gruppa</string>
     <string name="people_group_members">Medlemer</string>
     <string name="people_group_members_count">Medlemstal</string>
     <string name="people_group_members_description">Brukarar og grupper som høyrer til denne gruppa</string>

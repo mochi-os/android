@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">ההרשמה בוטלה</string>
     <string name="feeds_access_level_comment_full">הגב, הגב ב-react וצפה</string>
     <string name="feeds_rss_mode_posts_comments">פוסטים ותגובות</string>
-    <string name="feeds_delete_feed_description">מחק לצמיתות את הפיד הזה וכל התוכן שלו.</string>
     <string name="feeds_access_add_title">הוסף גישה</string>
     <string name="feeds_permission_request_message">%1$s מבקש את ההרשאה הבאה:</string>
     <string name="feeds_allow_search">אפשר לכל אחד לחפש את הפיד</string>
@@ -266,7 +265,6 @@
     <string name="feeds_source_transform_hint">תרגם לאנגלית, והצג כתבליטים.</string>
     <string name="feeds_source_url_hint_feed">מזהה ישות פיד או טביעת אצבע</string>
     <string name="feeds_source_credibility_label">אמינות</string>
-    <string name="feeds_access_management_desc">שלוט במי שיכול לצפות ולתקשר עם פיד זה</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d שעה</item>
         <item quantity="two">%1$d שעות</item>

@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">已取消訂閱</string>
     <string name="feeds_access_level_comment_full">評論、點讚和查看</string>
     <string name="feeds_rss_mode_posts_comments">貼文和留言</string>
-    <string name="feeds_delete_feed_description">永久刪除此動態及其所有內容。</string>
     <string name="feeds_access_add_title">新增存取權</string>
     <string name="feeds_permission_request_message">%1$s 請求以下權限：</string>
     <string name="feeds_allow_search">允許任何人搜尋此源</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">翻譯成英文,並以項目符號顯示。</string>
     <string name="feeds_source_url_hint_feed">源實體 ID 或指紋</string>
     <string name="feeds_source_credibility_label">可信度</string>
-    <string name="feeds_access_management_desc">控制誰可以檢視並與此訊息來源互動</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d 小時</item>
     </plurals>

@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">ڕێکخستن، بڵاوکردنەوە، لێدوان، دەنگدان و بینین</string>
     <string name="forums_access_level_post_full">بڵاوکردنەوە، لێدوان، دەنگدان و بینین</string>
     <string name="forums_access_level_vote_full">دەنگدان و بینین</string>
-    <string name="forums_access_management_description">کۆنترۆڵ بکە کێ دەتوانێت ئەم فۆڕەمە ببینێت و بەشداری تێدا بکات</string>
     <string name="forums_access_select_group">گرووپێک هەڵبژێرە</string>
     <string name="forums_access_select_rule">یاسایەک هەڵبژێرە</string>
     <string name="forums_ai_actions_label">کردارەکانی AI لەسەر بڵاوکراوەکان</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">وەڵام</string>
     <string name="forums_moderation_unit_seconds">چرکە</string>
     <string name="forums_settings_ai_updated">ڕێکخستنەکانی AI نوێکرانەوە</string>
-    <string name="forums_settings_delete_description">ئەم فۆڕەمە و هەموو ناوەڕۆکەکەی بۆ هەمیشە بسڕەوە.</string>
     <string name="forums_settings_forum_renamed">ناوی فۆڕەم گۆڕدرا</string>
     <string name="forums_settings_name_clear_cd">ناو پاک بکەرەوە</string>
     <string name="forums_settings_unsubscribe_section">بەشداری فۆڕەم هەڵبوەشێنەوە</string>

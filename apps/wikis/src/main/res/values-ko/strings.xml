@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">설정이 저장되었어요</string>
     <string name="wikis_settings_home_save_failed">설정 저장에 실패했어요</string>
     <string name="wikis_settings_section_delete">위키 삭제</string>
-    <string name="wikis_settings_delete_description">이 위키와 모든 콘텐츠를 영구적으로 삭제해요. 되돌릴 수 없어요.</string>
     <string name="wikis_settings_delete_action">위키 삭제</string>
     <string name="wikis_settings_delete_confirm_title">정말로 진행할까요?</string>
     <string name="wikis_settings_delete_confirm_message">이 작업은 되돌릴 수 없어요. 위키와 모든 내용이 영구적으로 삭제돼요.</string>

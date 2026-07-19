@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Okalan diýip bellendi</string>
     <string name="chat_search_next">Indiki gabat gelme</string>
     <string name="chat_search_prev">Öňki gabat gelme</string>
-    <string name="chat_settings_general_desc">Söhbet sazlamalaryny sazlaň</string>
     <string name="chat_settings_id">Söhbet ID-si</string>
-    <string name="chat_settings_members_desc">Bu söhbetdäki adamlaryň sanawy</string>
 </resources>

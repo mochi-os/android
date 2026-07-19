@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderieren, posten, kommentieren, abstimmen und ansehen</string>
     <string name="forums_access_level_post_full">Posten, kommentieren, abstimmen und ansehen</string>
     <string name="forums_access_level_vote_full">Abstimmen und ansehen</string>
-    <string name="forums_access_management_description">Lege fest, wer dieses Forum sehen und darin interagieren darf</string>
     <string name="forums_access_select_group">Gruppe auswählen</string>
     <string name="forums_access_select_rule">Regel auswählen</string>
     <string name="forums_ai_actions_label">KI-Aktionen für Beiträge</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">Antworten</string>
     <string name="forums_moderation_unit_seconds">Sekunden</string>
     <string name="forums_settings_ai_updated">KI-Einstellungen aktualisiert</string>
-    <string name="forums_settings_delete_description">Dieses Forum und alle seine Inhalte dauerhaft löschen.</string>
     <string name="forums_settings_forum_renamed">Forum umbenannt</string>
     <string name="forums_settings_name_clear_cd">Namen löschen</string>
     <string name="forums_settings_unsubscribe_section">Forum abbestellen</string>

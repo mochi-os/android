@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Neobvezen opis</string>
     <string name="people_group_name_required">Ime je obvezno</string>
     <string name="people_group_actions">Skupinska dejanja</string>
-    <string name="people_group_actions_description">Osnovne informacije o tej skupini</string>
     <string name="people_group_members">Člani</string>
     <string name="people_group_members_count">Število članov</string>
     <string name="people_group_members_description">Uporabniki in skupine, ki pripadajo tej skupini</string>

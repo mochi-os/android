@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Märgitud loetuks</string>
     <string name="chat_search_next">Järgmine vaste</string>
     <string name="chat_search_prev">Eelmine vaste</string>
-    <string name="chat_settings_general_desc">Kohanda vestluse sätteid</string>
     <string name="chat_settings_id">Vestluse ID</string>
-    <string name="chat_settings_members_desc">Selle vestluse inimeste loend</string>
 </resources>

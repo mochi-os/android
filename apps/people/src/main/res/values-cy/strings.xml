@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Disgrifiad dewisol</string>
     <string name="people_group_name_required">Mae angen enw</string>
     <string name="people_group_actions">Gweithrediadau grŵp</string>
-    <string name="people_group_actions_description">Gwybodaeth graidd am y grŵp hwn</string>
     <string name="people_group_members">Aelodau</string>
     <string name="people_group_members_count">Cyfrif aelodau</string>
     <string name="people_group_members_description">Defnyddwyr a grwpiau sy\'n perthyn i\'r grŵp hwn</string>

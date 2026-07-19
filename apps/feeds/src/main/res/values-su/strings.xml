@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Henteu langganan</string>
     <string name="feeds_access_level_comment_full">Koméntar, réaksi, jeung tempo</string>
     <string name="feeds_rss_mode_posts_comments">Pos jeung koméntar</string>
-    <string name="feeds_delete_feed_description">Pupus permanén feed ieu jeung sakabéh eusina.</string>
     <string name="feeds_access_add_title">Tambah aksés</string>
     <string name="feeds_permission_request_message">%1$s nyuhunkeun idin di handap ieu:</string>
     <string name="feeds_allow_search">Idinkeun saha waé néangan feed</string>
@@ -261,7 +260,6 @@
     <string name="feeds_source_transform_hint">Tarjamahkeun ka basa Inggris, sarta tembongkeun salaku poin-poin.</string>
     <string name="feeds_source_url_hint_feed">ID éntitas feed atawa fingerprint</string>
     <string name="feeds_source_credibility_label">Kredibilitas</string>
-    <string name="feeds_access_management_desc">Atur saha nu bisa nempo jeung interaksi jeung feed ieu</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d jam</item>
     </plurals>

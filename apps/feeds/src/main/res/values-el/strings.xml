@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Διαγραφή εγγραφής ολοκληρώθηκε</string>
     <string name="feeds_access_level_comment_full">Σχολιασμός, αντίδραση και προβολή</string>
     <string name="feeds_rss_mode_posts_comments">Αναρτήσεις και σχόλια</string>
-    <string name="feeds_delete_feed_description">Διαγράψτε οριστικά αυτή τη ροή και όλο το περιεχόμενό της.</string>
     <string name="feeds_access_add_title">Προσθήκη πρόσβασης</string>
     <string name="feeds_permission_request_message">Το %1$s ζητά την ακόλουθη άδεια:</string>
     <string name="feeds_allow_search">Επιτρέψτε σε όλους να αναζητούν τη ροή</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Μεταφράστε στα Αγγλικά και εμφανίστε ως κουκκίδες.</string>
     <string name="feeds_source_url_hint_feed">Αναγνωριστικό οντότητας ροής ή αποτύπωμα</string>
     <string name="feeds_source_credibility_label">Αξιοπιστία</string>
-    <string name="feeds_access_management_desc">Ελέγξτε ποιος μπορεί να δει και να αλληλεπιδράσει με αυτή τη ροή</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ώρα</item>
         <item quantity="other">%1$d ώρες</item>

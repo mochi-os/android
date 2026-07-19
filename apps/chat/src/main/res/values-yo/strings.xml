@@ -103,7 +103,5 @@
     <string name="chat_marked_read">A ti sàmì sí bí a ti kà</string>
     <string name="chat_search_next">Ìbáramu tó tẹ̀lé</string>
     <string name="chat_search_prev">Ìbáramu tó ṣáájú</string>
-    <string name="chat_settings_general_desc">Ṣàtúnṣe àwọn ètò ìfọ̀rọ̀wérọ̀</string>
     <string name="chat_settings_id">ID ìfọ̀rọ̀wérọ̀</string>
-    <string name="chat_settings_members_desc">Àkójọ àwọn ènìyàn nínú ìfọ̀rọ̀wérọ̀ yìí</string>
 </resources>

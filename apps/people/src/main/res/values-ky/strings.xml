@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Милдеттүү эмес сүрөттөмө</string>
     <string name="people_group_name_required">Аты талап кылынат</string>
     <string name="people_group_actions">Топ аракеттери</string>
-    <string name="people_group_actions_description">Бул топ тууралуу негизги маалымат</string>
     <string name="people_group_members">Мүчөлөр</string>
     <string name="people_group_members_count">Мүчөлөрдүн саны</string>
     <string name="people_group_members_description">Бул топко таандык колдонуучулар жана топтор</string>

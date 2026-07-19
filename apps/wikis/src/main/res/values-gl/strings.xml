@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Axustes gardados</string>
     <string name="wikis_settings_home_save_failed">Non se puido gardar a configuración</string>
     <string name="wikis_settings_section_delete">Eliminar wiki</string>
-    <string name="wikis_settings_delete_description">Eliminar permanentemente esta wiki e todo o seu contido. Isto non se pode desfacer.</string>
     <string name="wikis_settings_delete_action">Eliminar wiki</string>
     <string name="wikis_settings_delete_confirm_title">Estás absolutamente seguro?</string>
     <string name="wikis_settings_delete_confirm_message">Esta acción non se pode desfacer. Isto eliminará permanentemente a wiki e todos os seus contidos.</string>

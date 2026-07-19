@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">אַבאַבאָנירט</string>
     <string name="feeds_access_level_comment_full">קאָמענטירן, רעאַגירן, און זען</string>
     <string name="feeds_rss_mode_posts_comments">פּאָסטן און באַמערקונגען</string>
-    <string name="feeds_delete_feed_description">אויסמעקן שטענדיק דעם פֿיד און אַלע זײַן אינהאַלט.</string>
     <string name="feeds_access_add_title">צולייגן צוטריט</string>
     <string name="feeds_permission_request_message">%1$s בעט די פֿאָלגנדיקע דערלויבעניש:</string>
     <string name="feeds_allow_search">דערלויבן עמעצן צו זוכן פֿאַר פֿיד</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">איבערזעצט אין ענגליש, און ווײַז ווי בולעט־פּונקטן.</string>
     <string name="feeds_source_url_hint_feed">פֿיד־ענטיטעט־ID אָדער פֿינגער־אָפּדרוק</string>
     <string name="feeds_source_credibility_label">גלייבווערדיקייט</string>
-    <string name="feeds_access_management_desc">קאָנטראָלירט ווער קען זען און וועקסל מיט דעם פֿיד</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d שעה</item>
         <item quantity="other">%1$d שעה</item>

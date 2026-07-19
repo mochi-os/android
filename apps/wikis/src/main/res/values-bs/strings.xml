@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Postavke sačuvane</string>
     <string name="wikis_settings_home_save_failed">Spremanje postavki nije uspjelo</string>
     <string name="wikis_settings_section_delete">Obriši wiki</string>
-    <string name="wikis_settings_delete_description">Trajno obriši ovaj wiki i sav njegov sadržaj. Ovo se ne može poništiti.</string>
     <string name="wikis_settings_delete_action">Obriši wiki</string>
     <string name="wikis_settings_delete_confirm_title">Jeste li potpuno sigurni?</string>
     <string name="wikis_settings_delete_confirm_message">Ova akcija se ne može poništiti. Ovo će trajno obrisati wiki i sav njegov sadržaj.</string>

@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Abonnement opgezegd</string>
     <string name="feeds_access_level_comment_full">Reageren, react geven en bekijken</string>
     <string name="feeds_rss_mode_posts_comments">Posts en reacties</string>
-    <string name="feeds_delete_feed_description">Verwijder deze feed en alle inhoud permanent.</string>
     <string name="feeds_access_add_title">Toegang toevoegen</string>
     <string name="feeds_permission_request_message">%1$s vraagt de volgende toestemming aan:</string>
     <string name="feeds_allow_search">Sta iedereen toe om de feed te zoeken</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Vertaal naar het Engels en toon als opsommingstekens.</string>
     <string name="feeds_source_url_hint_feed">Feed-entiteit-ID of vingerafdruk</string>
     <string name="feeds_source_credibility_label">Geloofwaardigheid</string>
-    <string name="feeds_access_management_desc">Bepaal wie deze feed kan bekijken en ermee kan werken</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d uur</item>
         <item quantity="other">%1$d uur</item>

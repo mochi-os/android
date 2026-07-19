@@ -102,7 +102,6 @@
     <string name="people_group_description_optional">Optional description</string>
     <string name="people_group_name_required">Name is required</string>
     <string name="people_group_actions">Group actions</string>
-    <string name="people_group_actions_description">Core information about this group</string>
     <string name="people_group_members">Members</string>
     <string name="people_group_members_count">Members Count</string>
     <string name="people_group_members_description">Users and groups that belong to this group</string>

@@ -237,7 +237,6 @@
     <string name="feeds_unsubscribed">Dezabonat</string>
     <string name="feeds_access_level_comment_full">Comentează, reacționează și vezi</string>
     <string name="feeds_rss_mode_posts_comments">Postări și comentarii</string>
-    <string name="feeds_delete_feed_description">Șterge definitiv acest flux și tot conținutul său.</string>
     <string name="feeds_access_add_title">Adaugă acces</string>
     <string name="feeds_permission_request_message">%1$s solicită următoarea permisiune:</string>
     <string name="feeds_allow_search">Permite oricui să caute fluxul</string>
@@ -264,7 +263,6 @@
     <string name="feeds_source_transform_hint">Tradu în engleză și afișează ca puncte.</string>
     <string name="feeds_source_url_hint_feed">ID-ul entității fluxului sau amprenta</string>
     <string name="feeds_source_credibility_label">Credibilitate</string>
-    <string name="feeds_access_management_desc">Controlează cine poate vedea și interacționa cu acest flux</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d oră</item>
         <item quantity="few">%1$d ore</item>

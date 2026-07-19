@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Qindaa\'inoonni olkaa\'amaniiru</string>
     <string name="wikis_settings_home_save_failed">Filannoo olkaa\'uu hin dandeenye</string>
     <string name="wikis_settings_section_delete">Wikii haqi</string>
-    <string name="wikis_settings_delete_description">Wikii kana fi qabiyyee isaa hunda barabaraan haqi. Kun deebi\'uu hin danda\'u.</string>
     <string name="wikis_settings_delete_action">Wikii haqi</string>
     <string name="wikis_settings_delete_confirm_title">Dhugumatti mirkanaa\'oo dha?</string>
     <string name="wikis_settings_delete_confirm_message">Tarkaanfiin kun deebi\'ee hin sirreessamu. Kun wiki fi qabiyyeesaa hunda bara baraan haqa.</string>

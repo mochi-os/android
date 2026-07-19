@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">Odjavljeno</string>
     <string name="feeds_access_level_comment_full">Komentiranje, reakcije in ogled</string>
     <string name="feeds_rss_mode_posts_comments">Objave in komentarji</string>
-    <string name="feeds_delete_feed_description">Trajno izbriši ta vir in vso njegovo vsebino.</string>
     <string name="feeds_access_add_title">Dodaj dostop</string>
     <string name="feeds_permission_request_message">%1$s zahteva naslednje dovoljenje:</string>
     <string name="feeds_allow_search">Dovoli vsem iskanje vira</string>
@@ -266,7 +265,6 @@
     <string name="feeds_source_transform_hint">Prevedi v angleščino in prikaži kot alineje.</string>
     <string name="feeds_source_url_hint_feed">ID entitete ali prstni odtis vira</string>
     <string name="feeds_source_credibility_label">Verodostojnost</string>
-    <string name="feeds_access_management_desc">Nadzorujte, kdo lahko vidi in komunicira s tem virom</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ura</item>
         <item quantity="two">%1$d uri</item>

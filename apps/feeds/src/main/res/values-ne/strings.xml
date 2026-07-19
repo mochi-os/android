@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">सदस्यता हटाइयो</string>
     <string name="feeds_access_level_comment_full">टिप्पणी गर्नुहोस्, प्रतिक्रिया दिनुहोस् र हेर्नुहोस्</string>
     <string name="feeds_rss_mode_posts_comments">पोस्ट र टिप्पणीहरू</string>
-    <string name="feeds_delete_feed_description">यो फिड र यसका सम्पूर्ण सामग्री स्थायी रूपमा मेटाउनुहोस्।</string>
     <string name="feeds_access_add_title">पहुँच थप्नुहोस्</string>
     <string name="feeds_permission_request_message">%1$s ले निम्न अनुमति अनुरोध गर्दैछ:</string>
     <string name="feeds_allow_search">कसैलाई पनि फिड खोज्न अनुमति दिनुहोस्</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">अङ्ग्रेजीमा अनुवाद गर्नुहोस्, र बुलेट बिन्दुको रूपमा देखाउनुहोस्।</string>
     <string name="feeds_source_url_hint_feed">फिड एन्टिटी ID वा फिंगरप्रिन्ट</string>
     <string name="feeds_source_credibility_label">विश्वसनीयता</string>
-    <string name="feeds_access_management_desc">यो फिड कसले हेर्न र अन्तर्क्रिया गर्न सक्छ नियन्त्रण गर्नुहोस्</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d घण्टा</item>
         <item quantity="other">%1$d घण्टा</item>

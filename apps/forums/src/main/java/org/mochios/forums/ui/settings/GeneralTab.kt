@@ -135,7 +135,6 @@ fun GeneralTab(
         // Delete forum
         Section(
             title = stringResource(R.string.forums_settings_delete),
-            description = stringResource(R.string.forums_settings_delete_description),
             headerAlignment = Alignment.CenterVertically,
             action = {
                 OutlinedButton(

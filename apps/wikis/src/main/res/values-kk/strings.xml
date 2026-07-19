@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Параметрлер сақталды</string>
     <string name="wikis_settings_home_save_failed">Параметрлерді сақтау сәтсіз аяқталды</string>
     <string name="wikis_settings_section_delete">Wiki жою</string>
-    <string name="wikis_settings_delete_description">Бұл wiki-ді және оның барлық мазмұнын біржола жою. Қайтару мүмкін емес.</string>
     <string name="wikis_settings_delete_action">Wiki жою</string>
     <string name="wikis_settings_delete_confirm_title">Сіз шынымен сенімдісіз бе?</string>
     <string name="wikis_settings_delete_confirm_message">Бұл әрекетті қайтаруға болмайды. Бұл wiki-ді және оның барлық мазмұнын біржола жояды.</string>

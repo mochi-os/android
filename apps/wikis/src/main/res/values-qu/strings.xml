@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Wakichiykuna waqaychasqa</string>
     <string name="wikis_settings_home_save_failed">Mana configuracionkunata waqaychayta atinchu</string>
     <string name="wikis_settings_section_delete">Wiki wischuy</string>
-    <string name="wikis_settings_delete_description">Wiñaypaq kay wikita tukuy contenidonwan pichay. Mana kutichinapaqchu.</string>
     <string name="wikis_settings_delete_action">Wiki wischuy</string>
     <string name="wikis_settings_delete_confirm_title">Cheqaqtachu munanki?</string>
     <string name="wikis_settings_delete_confirm_message">Kay rurayqa mana kutichiyta atikunchu. Kayqa wiñaypaq wikita lliw yachayninkunata qulluchinqa.</string>

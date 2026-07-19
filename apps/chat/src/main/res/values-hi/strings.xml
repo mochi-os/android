@@ -103,7 +103,5 @@
     <string name="chat_marked_read">पढ़ा हुआ चिह्नित किया गया</string>
     <string name="chat_search_next">अगला मिलान</string>
     <string name="chat_search_prev">पिछला मिलान</string>
-    <string name="chat_settings_general_desc">चैट सेटिंग समायोजित करें</string>
     <string name="chat_settings_id">चैट आईडी</string>
-    <string name="chat_settings_members_desc">इस चैट में लोगों की सूची</string>
 </resources>

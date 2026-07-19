@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Ṣàkóso, fi ránṣẹ́, ṣàlàyé, dìbò àti wò</string>
     <string name="forums_access_level_post_full">Fi ránṣẹ́, ṣàlàyé, dìbò àti wò</string>
     <string name="forums_access_level_vote_full">Dìbò àti wò</string>
-    <string name="forums_access_management_description">Ṣàkóso ẹni tí ó lè rí àpéjọ yìí kí ó sì kópa nínú rẹ̀</string>
     <string name="forums_access_select_group">Yan ẹgbẹ́ kan</string>
     <string name="forums_access_select_rule">Yan òfin kan</string>
     <string name="forums_ai_actions_label">Àwọn ìṣe AI lórí àwọn ìfìwéránṣẹ́</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">ìdáhùn</string>
     <string name="forums_moderation_unit_seconds">ìṣẹ́jú àáyá</string>
     <string name="forums_settings_ai_updated">A ti ṣàtúnṣe àwọn ètò AI</string>
-    <string name="forums_settings_delete_description">Pa àpéjọ yìí àti gbogbo àkóónú rẹ̀ rẹ́ pátápátá.</string>
     <string name="forums_settings_forum_renamed">A ti sọ àpéjọ ní orúkọ tuntun</string>
     <string name="forums_settings_name_clear_cd">Pa orúkọ rẹ́</string>
     <string name="forums_settings_unsubscribe_section">Yọ ara rẹ kúrò nínú àpéjọ</string>

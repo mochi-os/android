@@ -350,7 +350,6 @@ private fun DeleteSection(
 
     Section(
         title = stringResource(R.string.wikis_settings_section_delete),
-        description = stringResource(R.string.wikis_settings_delete_description),
         action = {
             OutlinedButton(
                 onClick = { showConfirm = true },

@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Налады захаваны</string>
     <string name="wikis_settings_home_save_failed">Не ўдалося захаваць налады</string>
     <string name="wikis_settings_section_delete">Выдаліць вікі</string>
-    <string name="wikis_settings_delete_description">Назаўжды выдаліць гэты wiki і ўвесь яго змест. Гэта нельга адмяніць.</string>
     <string name="wikis_settings_delete_action">Выдаліць вікі</string>
     <string name="wikis_settings_delete_confirm_title">Вы абсалютна ўпэўнены?</string>
     <string name="wikis_settings_delete_confirm_message">Гэта дзеянне нельга адмяніць. Вікі і ўвесь яе змест будуць незваротна выдалены.</string>

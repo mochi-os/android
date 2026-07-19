@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">सदस्यता रद्द भइल</string>
     <string name="feeds_access_level_comment_full">टिप्पणी, प्रतिक्रिया, आ देखीं</string>
     <string name="feeds_rss_mode_posts_comments">पोस्ट आ टिप्पणी</string>
-    <string name="feeds_delete_feed_description">ए feed आ ओकर सब सामग्री के स्थायी रूप से मिटाईं।</string>
     <string name="feeds_access_add_title">पहुंच जोड़ीं</string>
     <string name="feeds_permission_request_message">%1$s ई अनुमति माँगत बा:</string>
     <string name="feeds_allow_search">केहू के फीड खोजे के अनुमति दीं</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">अंग्रेजी में अनुवाद करीं, आ बुलेट बिंदु के रूप में देखाईं।</string>
     <string name="feeds_source_url_hint_feed">फीड एंटिटी ID भा फिंगरप्रिंट</string>
     <string name="feeds_source_credibility_label">विश्वसनीयता</string>
-    <string name="feeds_access_management_desc">नियंत्रित करीं कि के एह फीड के देख आ ओकरा से बात कर सकेला</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d घंटा</item>
         <item quantity="other">%1$d घंटा</item>

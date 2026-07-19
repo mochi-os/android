@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Innstillingar lagra</string>
     <string name="wikis_settings_home_save_failed">Klarte ikkje lagra innstillingar</string>
     <string name="wikis_settings_section_delete">Slett wiki</string>
-    <string name="wikis_settings_delete_description">Slett denne wikien og alt innhaldet permanent. Dette kan ikkje angrast.</string>
     <string name="wikis_settings_delete_action">Slett wiki</string>
     <string name="wikis_settings_delete_confirm_title">Er du heilt sikker?</string>
     <string name="wikis_settings_delete_confirm_message">Denne handlinga kan ikkje gjerast om. Dette vil sletta wiki-en og alt innhald for godt.</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">அமைப்புகள் சேமிக்கப்பட்டன</string>
     <string name="wikis_settings_home_save_failed">அமைப்புகளை சேமிக்க முடியவில்லை</string>
     <string name="wikis_settings_section_delete">Wiki-ஐ நீக்கு</string>
-    <string name="wikis_settings_delete_description">இந்த wiki மற்றும் அதன் அனைத்து உள்ளடக்கத்தையும் நிரந்தரமாக நீக்கவும். இதை திரும்பப் பெற முடியாது.</string>
     <string name="wikis_settings_delete_action">Wiki-ஐ நீக்கு</string>
     <string name="wikis_settings_delete_confirm_title">நீங்கள் முற்றிலும் உறுதியாக உள்ளீர்களா?</string>
     <string name="wikis_settings_delete_confirm_message">இந்த செயலை திரும்ப மாற்ற முடியாது. இது wiki மற்றும் அதன் அனைத்து உள்ளடக்கங்களையும் நிரந்தரமாக நீக்கும்.</string>

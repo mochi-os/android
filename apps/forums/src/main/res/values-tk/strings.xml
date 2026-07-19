@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderasiýa, ýerleşdirmek, teswir, ses bermek we görmek</string>
     <string name="forums_access_level_post_full">Ýerleşdirmek, teswir, ses bermek we görmek</string>
     <string name="forums_access_level_vote_full">Ses bermek we görmek</string>
-    <string name="forums_access_management_description">Bu forumy kimiň görüp we oňa gatnaşyp biljekdigini dolandyryň</string>
     <string name="forums_access_select_group">Topar saýlaň</string>
     <string name="forums_access_select_rule">Düzgün saýlaň</string>
     <string name="forums_ai_actions_label">Ýazgylarda SI hereketleri</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">jogap</string>
     <string name="forums_moderation_unit_seconds">sekunt</string>
     <string name="forums_settings_ai_updated">SI sazlamalary täzelendi</string>
-    <string name="forums_settings_delete_description">Bu forumy we ähli mazmunyny hemişelik pozuň.</string>
     <string name="forums_settings_forum_renamed">Forumyň ady üýtgedildi</string>
     <string name="forums_settings_name_clear_cd">Ady arassala</string>
     <string name="forums_settings_unsubscribe_section">Forumdan ýazylyşy ýatyr</string>

@@ -105,7 +105,6 @@
     <string name="people_group_description_optional">Beschreibung (optional)</string>
     <string name="people_group_name_required">Name ist erforderlich</string>
     <string name="people_group_actions">Gruppenaktionen</string>
-    <string name="people_group_actions_description">Grundlegende Informationen zu dieser Gruppe</string>
     <string name="people_group_members">Mitglieder</string>
     <string name="people_group_members_count">Anzahl Mitglieder</string>
     <string name="people_group_members_description">Benutzer und Gruppen, die zu dieser Gruppe gehören</string>

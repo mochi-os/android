@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Маркирано като прочетено</string>
     <string name="chat_search_next">Следващо съвпадение</string>
     <string name="chat_search_prev">Предишно съвпадение</string>
-    <string name="chat_settings_general_desc">Настройване на настройките на чата</string>
     <string name="chat_settings_id">ID на чата</string>
-    <string name="chat_settings_members_desc">Списък с хора в този чат</string>
 </resources>

@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">சந்தா நீக்கப்பட்டது</string>
     <string name="feeds_access_level_comment_full">கருத்து, ரியாக்ட் மற்றும் பார்க்கவும்</string>
     <string name="feeds_rss_mode_posts_comments">பதிவுகள் மற்றும் கருத்துகள்</string>
-    <string name="feeds_delete_feed_description">இந்த ஃபீட் மற்றும் அதன் அனைத்து உள்ளடக்கத்தையும் நிரந்தரமாக நீக்கவும்.</string>
     <string name="feeds_access_add_title">அணுகல் சேர்</string>
     <string name="feeds_permission_request_message">%1$s பின்வரும் அனுமதியைக் கோருகிறது:</string>
     <string name="feeds_allow_search">எவருக்கும் ஃபீட் தேட அனுமதி</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">ஆங்கிலத்திற்கு மொழிபெயர்த்து, புள்ளிகளாக காட்டு.</string>
     <string name="feeds_source_url_hint_feed">ஃபீட் பொருள் ஐடி அல்லது கைரேகை</string>
     <string name="feeds_source_credibility_label">நம்பகத்தன்மை</string>
-    <string name="feeds_access_management_desc">இந்த ஃபீட்டை யார் பார்க்கலாம் மற்றும் தொடர்பு கொள்ளலாம் என்பதைக் கட்டுப்படுத்தவும்</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d மணிநேரம்</item>
         <item quantity="other">%1$d மணிநேரங்கள்</item>

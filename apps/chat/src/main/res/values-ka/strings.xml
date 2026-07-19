@@ -103,7 +103,5 @@
     <string name="chat_marked_read">მონიშნულია როგორც წაკითხული</string>
     <string name="chat_search_next">შემდეგი დამთხვევა</string>
     <string name="chat_search_prev">წინა დამთხვევა</string>
-    <string name="chat_settings_general_desc">ჩატის პარამეტრების მორგება</string>
     <string name="chat_settings_id">ჩატის ID</string>
-    <string name="chat_settings_members_desc">ამ ჩატის მონაწილეთა სია</string>
 </resources>

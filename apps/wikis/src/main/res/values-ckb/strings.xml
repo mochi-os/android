@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ڕێکخستنەکان پاشەکەوتکران</string>
     <string name="wikis_settings_home_save_failed">پاشەکەوتکردنی ڕێکخستنەکان سەرکەوتوو نەبوو</string>
     <string name="wikis_settings_section_delete">سڕینەوەی wiki</string>
-    <string name="wikis_settings_delete_description">ئەم ویکییە و هەموو ناوەڕۆکەکانی بە یەکجاری بسڕەوە. ئەمە ناتوانرێت پووچ بکرێتەوە.</string>
     <string name="wikis_settings_delete_action">سڕینەوەی wiki</string>
     <string name="wikis_settings_delete_confirm_title">ئایا بە ڕاستی دڵنیایت؟</string>
     <string name="wikis_settings_delete_confirm_message">ئەم کردارە ناتوانرێت بگەڕێنرێتەوە. ئەمە Wiki و هەموو ناوەڕۆکەکانی بە هەمیشەیی دەسڕێتەوە.</string>

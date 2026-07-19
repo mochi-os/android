@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Претплатата е откажана</string>
     <string name="feeds_access_level_comment_full">Коментирај, реагирај и прегледај</string>
     <string name="feeds_rss_mode_posts_comments">Објави и коментари</string>
-    <string name="feeds_delete_feed_description">Трајно избриши го овој feed и сета негова содржина.</string>
     <string name="feeds_access_add_title">Додај пристап</string>
     <string name="feeds_permission_request_message">%1$s ја бара следната дозвола:</string>
     <string name="feeds_allow_search">Дозволи на секого да пребарува канал</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Преведи на англиски и прикажи како точки.</string>
     <string name="feeds_source_url_hint_feed">ID на ентитет на feed или отпечаток</string>
     <string name="feeds_source_credibility_label">Веродостојност</string>
-    <string name="feeds_access_management_desc">Контролирај кој може да го гледа и да биде во интеракција со овој канал</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d час</item>
         <item quantity="other">%1$d часа</item>

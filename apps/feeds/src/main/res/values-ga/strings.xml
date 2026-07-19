@@ -239,7 +239,6 @@
     <string name="feeds_unsubscribed">Díliostáilte</string>
     <string name="feeds_access_level_comment_full">Nóta tráchta, frithghníomhaigh, agus amharc</string>
     <string name="feeds_rss_mode_posts_comments">Postálacha agus tráchtanna</string>
-    <string name="feeds_delete_feed_description">Scrios an fotha seo agus a inneachar go buan.</string>
     <string name="feeds_access_add_title">Cuir rochtain leis</string>
     <string name="feeds_permission_request_message">Tá %1$s ag iarraidh an cheada seo a leanas:</string>
     <string name="feeds_allow_search">Ceadaigh d\'aon duine cuardach do fhotha</string>
@@ -268,7 +267,6 @@
     <string name="feeds_source_transform_hint">Aistrigh go Béarla, agus taispeáin mar phointí urchair.</string>
     <string name="feeds_source_url_hint_feed">ID aonáin nó méarlorg an fhotha</string>
     <string name="feeds_source_credibility_label">Inchreidteacht</string>
-    <string name="feeds_access_management_desc">Smacht ar cé atá in ann an fotha seo a fheiceáil agus idirghníomhú leis</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d uair</item>
         <item quantity="two">%1$d uair</item>

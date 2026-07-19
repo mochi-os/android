@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">ګډون لغوه شو</string>
     <string name="feeds_access_level_comment_full">تبصره، عکس العمل، او لیدنه</string>
     <string name="feeds_rss_mode_posts_comments">لیکنې او تبصرې</string>
-    <string name="feeds_delete_feed_description">په همیشني ډول دا فیډ او د هغه ټول مینځپانګه حذف کړئ.</string>
     <string name="feeds_access_add_title">لاسرسی اضافه کړئ</string>
     <string name="feeds_permission_request_message">%1$s لاندې اجازه غواړي:</string>
     <string name="feeds_allow_search">هر چا ته اجازه ورکړئ چې د فیډ لټون وکړي</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">انګلیسي ته وژباړئ، او د bullet ټکو په توګه وښیه.</string>
     <string name="feeds_source_url_hint_feed">د فیډ موجودیت ID یا fingerprint</string>
     <string name="feeds_source_credibility_label">اعتبار</string>
-    <string name="feeds_access_management_desc">وټاکئ څوک کولی شي دا فیډ وګوري او ورسره تعامل وکړي</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ساعت</item>
         <item quantity="other">%1$d ساعته</item>

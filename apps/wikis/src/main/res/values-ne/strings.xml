@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">सेटिङहरू सुरक्षित गरियो</string>
     <string name="wikis_settings_home_save_failed">सेटिङहरू सुरक्षित गर्न असफल</string>
     <string name="wikis_settings_section_delete">wiki मेटाउनुहोस्</string>
-    <string name="wikis_settings_delete_description">यो विकी र यसका सम्पूर्ण सामग्री स्थायी रूपमा मेटाउनुहोस्। यो पूर्ववत गर्न सकिँदैन।</string>
     <string name="wikis_settings_delete_action">wiki मेटाउनुहोस्</string>
     <string name="wikis_settings_delete_confirm_title">के तपाईं पूर्ण रूपमा निश्चित हुनुहुन्छ?</string>
     <string name="wikis_settings_delete_confirm_message">यो कार्य फिर्ता गर्न सकिँदैन। यसले विकि र यसका सबै सामग्रीहरूलाई स्थायी रूपमा मेटाउनेछ।</string>

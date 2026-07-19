@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Çabonuar</string>
     <string name="feeds_access_level_comment_full">Komento, reago dhe shih</string>
     <string name="feeds_rss_mode_posts_comments">Postimet dhe komentet</string>
-    <string name="feeds_delete_feed_description">Fshi përfundimisht këtë feed dhe gjithë përmbajtjen e tij.</string>
     <string name="feeds_access_add_title">Shto qasje</string>
     <string name="feeds_permission_request_message">%1$s po kërkon lejen e mëposhtme:</string>
     <string name="feeds_allow_search">Lejo këdo të kërkojë për feed</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Përkthe në anglisht dhe shfaq si pika me yje.</string>
     <string name="feeds_source_url_hint_feed">ID ose gjurmë e entitetit të feed</string>
     <string name="feeds_source_credibility_label">Besueshmëria</string>
-    <string name="feeds_access_management_desc">Kontrollo kush mund ta shohë dhe të ndërveprojë me këtë feed</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d orë</item>
         <item quantity="other">%1$d orë</item>

@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderar, publicar, comentar, votar e ver</string>
     <string name="forums_access_level_post_full">Publicar, comentar, votar e ver</string>
     <string name="forums_access_level_vote_full">Votar e ver</string>
-    <string name="forums_access_management_description">Controla quen pode ver este foro e interactuar con el</string>
     <string name="forums_access_select_group">Selecciona un grupo</string>
     <string name="forums_access_select_rule">Selecciona unha regra</string>
     <string name="forums_ai_actions_label">Accións de IA nas publicacións</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">respostas</string>
     <string name="forums_moderation_unit_seconds">segundos</string>
     <string name="forums_settings_ai_updated">Actualizouse a configuración de IA</string>
-    <string name="forums_settings_delete_description">Elimina permanentemente este foro e todo o seu contido.</string>
     <string name="forums_settings_forum_renamed">Renomeouse o foro</string>
     <string name="forums_settings_name_clear_cd">Borrar o nome</string>
     <string name="forums_settings_unsubscribe_section">Cancelar a subscrición ao foro</string>

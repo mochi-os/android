@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Seaded salvestatud</string>
     <string name="wikis_settings_home_save_failed">Seadete salvestamine ebaõnnestus</string>
     <string name="wikis_settings_section_delete">Kustuta wiki</string>
-    <string name="wikis_settings_delete_description">Kustuta see viki ja kogu selle sisu jäädavalt. Seda ei saa tagasi võtta.</string>
     <string name="wikis_settings_delete_action">Kustuta wiki</string>
     <string name="wikis_settings_delete_confirm_title">Oled täiesti kindel?</string>
     <string name="wikis_settings_delete_confirm_message">Seda toimingut ei saa tagasi võtta. See kustutab wiki ja kogu selle sisu jäädavalt.</string>

@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">மேற்பார்வை, இடுகை, கருத்திடல், வாக்களித்தல் மற்றும் பார்வை</string>
     <string name="forums_access_level_post_full">இடுகை, கருத்திடல், வாக்களித்தல் மற்றும் பார்வை</string>
     <string name="forums_access_level_vote_full">வாக்களித்தல் மற்றும் பார்வை</string>
-    <string name="forums_access_management_description">இந்த மன்றத்தை யார் பார்க்கலாம், பங்கேற்கலாம் என்பதைக் கட்டுப்படுத்துங்கள்</string>
     <string name="forums_access_select_group">ஒரு குழுவைத் தேர்ந்தெடுக்கவும்</string>
     <string name="forums_access_select_rule">ஒரு விதியைத் தேர்ந்தெடுக்கவும்</string>
     <string name="forums_ai_actions_label">இடுகைகளில் AI செயல்கள்</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">பதில்கள்</string>
     <string name="forums_moderation_unit_seconds">வினாடிகள்</string>
     <string name="forums_settings_ai_updated">AI அமைப்புகள் புதுப்பிக்கப்பட்டன</string>
-    <string name="forums_settings_delete_description">இந்த மன்றத்தையும் அதன் அனைத்து உள்ளடக்கத்தையும் நிரந்தரமாக நீக்கவும்.</string>
     <string name="forums_settings_forum_renamed">மன்றத்தின் பெயர் மாற்றப்பட்டது</string>
     <string name="forums_settings_name_clear_cd">பெயரை அழிக்கவும்</string>
     <string name="forums_settings_unsubscribe_section">மன்றத்திலிருந்து விலகு</string>

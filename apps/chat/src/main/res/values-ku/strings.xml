@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Wek xwendî hate nîşankirin</string>
     <string name="chat_search_next">Lihevhatina pêş</string>
     <string name="chat_search_prev">Lihevhatina berê</string>
-    <string name="chat_settings_general_desc">Mîhengên chatê saz bike</string>
     <string name="chat_settings_id">Nasnameya chatê</string>
-    <string name="chat_settings_members_desc">Lîsteya kesên di vê chatê de</string>
 </resources>

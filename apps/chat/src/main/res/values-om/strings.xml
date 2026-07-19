@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Akka dubbifametti mallattoo godhame</string>
     <string name="chat_search_next">Walsimsiisa itti aanu</string>
     <string name="chat_search_prev">Walsimsiisa duraa</string>
-    <string name="chat_settings_general_desc">Qindaa\'ina haasawaa sirreessi</string>
     <string name="chat_settings_id">ID haasawaa</string>
-    <string name="chat_settings_members_desc">Tarree namoota haasawa kana keessaa</string>
 </resources>

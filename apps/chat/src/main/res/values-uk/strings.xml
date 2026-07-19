@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Позначено як прочитане</string>
     <string name="chat_search_next">Наступний збіг</string>
     <string name="chat_search_prev">Попередній збіг</string>
-    <string name="chat_settings_general_desc">Налаштувати параметри чату</string>
     <string name="chat_settings_id">Ідентифікатор чату</string>
-    <string name="chat_settings_members_desc">Список учасників цього чату</string>
 </resources>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Oznaczono jako przeczytane</string>
     <string name="chat_search_next">Następne dopasowanie</string>
     <string name="chat_search_prev">Poprzednie dopasowanie</string>
-    <string name="chat_settings_general_desc">Dostosuj ustawienia czatu</string>
     <string name="chat_settings_id">Identyfikator czatu</string>
-    <string name="chat_settings_members_desc">Lista osób na tym czacie</string>
 </resources>

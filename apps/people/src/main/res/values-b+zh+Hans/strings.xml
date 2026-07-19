@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">可选描述</string>
     <string name="people_group_name_required">名称为必填项</string>
     <string name="people_group_actions">群组操作</string>
-    <string name="people_group_actions_description">关于此群组的核心信息</string>
     <string name="people_group_members">成员</string>
     <string name="people_group_members_count">成员数量</string>
     <string name="people_group_members_description">属于此群组的用户和群组</string>

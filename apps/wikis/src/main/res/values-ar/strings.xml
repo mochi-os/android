@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">تم حفظ الإعدادات</string>
     <string name="wikis_settings_home_save_failed">فشل حفظ الإعدادات</string>
     <string name="wikis_settings_section_delete">حذف الويكي</string>
-    <string name="wikis_settings_delete_description">حذف هذا الويكي وكل محتوياته نهائياً. لا يمكن التراجع عن هذا.</string>
     <string name="wikis_settings_delete_action">حذف الويكي</string>
     <string name="wikis_settings_delete_confirm_title">هل أنت متأكد تمامًا؟</string>
     <string name="wikis_settings_delete_confirm_message">لا يمكن التراجع عن هذا الإجراء. سيؤدي هذا إلى حذف الويكي وكل محتوياته بشكل دائم.</string>

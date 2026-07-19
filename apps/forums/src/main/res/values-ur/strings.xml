@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">نگرانی، پوسٹ، تبصرہ، ووٹ اور دیکھنا</string>
     <string name="forums_access_level_post_full">پوسٹ، تبصرہ، ووٹ اور دیکھنا</string>
     <string name="forums_access_level_vote_full">ووٹ اور دیکھنا</string>
-    <string name="forums_access_management_description">طے کریں کہ کون اس فورم کو دیکھ اور اس میں شریک ہو سکتا ہے</string>
     <string name="forums_access_select_group">ایک گروپ منتخب کریں</string>
     <string name="forums_access_select_rule">ایک اصول منتخب کریں</string>
     <string name="forums_ai_actions_label">پوسٹس پر AI کارروائیاں</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">جوابات</string>
     <string name="forums_moderation_unit_seconds">سیکنڈ</string>
     <string name="forums_settings_ai_updated">AI ترتیبات اپ ڈیٹ ہو گئیں</string>
-    <string name="forums_settings_delete_description">اس فورم اور اس کے تمام مواد کو مستقل طور پر حذف کریں۔</string>
     <string name="forums_settings_forum_renamed">فورم کا نام تبدیل ہو گیا</string>
     <string name="forums_settings_name_clear_cd">نام صاف کریں</string>
     <string name="forums_settings_unsubscribe_section">فورم کی رکنیت ختم کریں</string>

@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">Kiểm duyệt, đăng bài, bình luận, bình chọn và xem</string>
     <string name="forums_access_level_post_full">Đăng bài, bình luận, bình chọn và xem</string>
     <string name="forums_access_level_vote_full">Bình chọn và xem</string>
-    <string name="forums_access_management_description">Kiểm soát ai có thể xem và tương tác với diễn đàn này</string>
     <string name="forums_access_select_group">Chọn một nhóm</string>
     <string name="forums_access_select_rule">Chọn một quy tắc</string>
     <string name="forums_ai_actions_label">Hành động AI trên bài đăng</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">trả lời</string>
     <string name="forums_moderation_unit_seconds">giây</string>
     <string name="forums_settings_ai_updated">Đã cập nhật cài đặt AI</string>
-    <string name="forums_settings_delete_description">Xóa vĩnh viễn diễn đàn này và toàn bộ nội dung của nó.</string>
     <string name="forums_settings_forum_renamed">Đã đổi tên diễn đàn</string>
     <string name="forums_settings_name_clear_cd">Xóa tên</string>
     <string name="forums_settings_unsubscribe_section">Hủy đăng ký diễn đàn</string>

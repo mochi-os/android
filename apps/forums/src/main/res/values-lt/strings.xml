@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">Moderuoti, skelbti, komentuoti, balsuoti ir peržiūrėti</string>
     <string name="forums_access_level_post_full">Skelbti, komentuoti, balsuoti ir peržiūrėti</string>
     <string name="forums_access_level_vote_full">Balsuoti ir peržiūrėti</string>
-    <string name="forums_access_management_description">Nustatykite, kas gali matyti šį forumą ir jame dalyvauti</string>
     <string name="forums_access_select_group">Pasirinkite grupę</string>
     <string name="forums_access_select_rule">Pasirinkite taisyklę</string>
     <string name="forums_ai_actions_label">DI veiksmai su įrašais</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">atsakymų</string>
     <string name="forums_moderation_unit_seconds">sekundžių</string>
     <string name="forums_settings_ai_updated">DI nustatymai atnaujinti</string>
-    <string name="forums_settings_delete_description">Visam laikui ištrinti šį forumą ir visą jo turinį.</string>
     <string name="forums_settings_forum_renamed">Forumas pervadintas</string>
     <string name="forums_settings_name_clear_cd">Išvalyti pavadinimą</string>
     <string name="forums_settings_unsubscribe_section">Atsisakyti forumo prenumeratos</string>

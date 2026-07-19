@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Танзимот захира шуд</string>
     <string name="wikis_settings_home_save_failed">Захира кардани танзимот ба анҷом нарасид</string>
     <string name="wikis_settings_section_delete">Нест кардани вики</string>
-    <string name="wikis_settings_delete_description">Ин вики ва тамоми мӯҳтавояшро доимӣ нест кунед. Ин амалро бекор кардан мумкин нест.</string>
     <string name="wikis_settings_delete_action">Нест кардани вики</string>
     <string name="wikis_settings_delete_confirm_title">Шумо комилан мутмаин ҳастед?</string>
     <string name="wikis_settings_delete_confirm_message">Ин амалро ботил кардан мумкин нест. Ин викӣ ва ҳама мундариҷаи онро ба таври доимӣ нест мекунад.</string>

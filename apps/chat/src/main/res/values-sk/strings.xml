@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Označené ako prečítané</string>
     <string name="chat_search_next">Ďalšia zhoda</string>
     <string name="chat_search_prev">Predchádzajúca zhoda</string>
-    <string name="chat_settings_general_desc">Upraviť nastavenia četu</string>
     <string name="chat_settings_id">ID četu</string>
-    <string name="chat_settings_members_desc">Zoznam ľudí v tomto čete</string>
 </resources>

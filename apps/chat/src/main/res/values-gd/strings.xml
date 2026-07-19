@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Air a chomharrachadh mar leughte</string>
     <string name="chat_search_next">An ath mhaids</string>
     <string name="chat_search_prev">A\' mhaids roimhe</string>
-    <string name="chat_settings_general_desc">Atharraich roghainnean na cabadaich</string>
     <string name="chat_settings_id">ID na cabadaich</string>
-    <string name="chat_settings_members_desc">Liosta dhaoine sa chabadaich seo</string>
 </resources>

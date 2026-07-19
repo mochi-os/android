@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Könüllü təsvir</string>
     <string name="people_group_name_required">Ad tələb olunur</string>
     <string name="people_group_actions">Qrup hərəkətləri</string>
-    <string name="people_group_actions_description">Bu qrup haqqında əsas məlumat</string>
     <string name="people_group_members">Üzvlər</string>
     <string name="people_group_members_count">Üzv sayı</string>
     <string name="people_group_members_description">Birləşdirilmiş standart istifadə olunur</string>

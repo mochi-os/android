@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">Отписан</string>
     <string name="feeds_access_level_comment_full">Комментировать, реагировать и просматривать</string>
     <string name="feeds_rss_mode_posts_comments">Публикации и комментарии</string>
-    <string name="feeds_delete_feed_description">Безвозвратно удалить эту ленту и всё её содержимое.</string>
     <string name="feeds_access_add_title">Добавить доступ</string>
     <string name="feeds_permission_request_message">%1$s запрашивает следующее разрешение:</string>
     <string name="feeds_allow_search">Разрешить всем искать ленту</string>
@@ -266,7 +265,6 @@
     <string name="feeds_source_transform_hint">Переведите на английский и покажите в виде маркированного списка.</string>
     <string name="feeds_source_url_hint_feed">ID объекта ленты или отпечаток</string>
     <string name="feeds_source_credibility_label">Достоверность</string>
-    <string name="feeds_access_management_desc">Управляйте, кто может просматривать и взаимодействовать с этой лентой</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d час</item>
         <item quantity="few">%1$d часа</item>

@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">ຍົກເລີກການສະໝັກສະມາຊິກແລ້ວ</string>
     <string name="feeds_access_level_comment_full">ຄຳເຫັນ, ໂຕ້ຕອບ, ແລະ ເບິ່ງ</string>
     <string name="feeds_rss_mode_posts_comments">ໂພສແລະຄຳເຫັນ</string>
-    <string name="feeds_delete_feed_description">ລຶບ feed ນີ້ແລະເນື້ອໃນທັງໝົດຖາວອນ.</string>
     <string name="feeds_access_add_title">ເພີ່ມການເຂົ້າເຖິງ</string>
     <string name="feeds_permission_request_message">%1$s ກຳລັງຂໍສິດອະນຸຍາດຕໍ່ໄປນີ້:</string>
     <string name="feeds_allow_search">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາຟີດ</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">ແປເປັນພາສາອັງກິດ, ແລະສະແດງເປັນຫົວຂໍ້ຍ່ອຍ.</string>
     <string name="feeds_source_url_hint_feed">ID ເອັນຕິຕີ້ຟີດ ຫຼື ລາຍນິ້ວມື</string>
     <string name="feeds_source_credibility_label">ຄວາມໜ້າເຊື່ອຖື</string>
-    <string name="feeds_access_management_desc">ຄວບຄຸມວ່າໃຜສາມາດເບິ່ງ ແລະ ໂຕ້ຕອບກັບຟີດນີ້</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d ຊົ່ວໂມງ</item>
     </plurals>

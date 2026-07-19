@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Mîheng tomar bûn</string>
     <string name="wikis_settings_home_save_failed">Tomarkirina mîhengan neserkeftî bû</string>
     <string name="wikis_settings_section_delete">Wikiyê jê bibe</string>
-    <string name="wikis_settings_delete_description">Vê wikiyê û tevahiya naveroka wê her û her jêbibe. Vegerandina vê ne mumkin e.</string>
     <string name="wikis_settings_delete_action">Wikiyê jê bibe</string>
     <string name="wikis_settings_delete_confirm_title">Tu pê bawer î?</string>
     <string name="wikis_settings_delete_confirm_message">Ev çalakî nayê vegerandin. Ev dê wîkîyê û hemû naveroka wê herheyî jê bibe.</string>

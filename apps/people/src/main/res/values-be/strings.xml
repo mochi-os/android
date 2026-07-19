@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Неабавязковае апісанне</string>
     <string name="people_group_name_required">Назва абавязковая</string>
     <string name="people_group_actions">Дзеянні групы</string>
-    <string name="people_group_actions_description">Асноўная інфармацыя пра гэту групу</string>
     <string name="people_group_members">Удзельнікі</string>
     <string name="people_group_members_count">Колькасць удзельнікаў</string>
     <string name="people_group_members_description">Карыстальнікі і групы, якія належаць гэтай групе</string>

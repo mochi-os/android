@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">Subscripció cancel·lada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar i veure</string>
     <string name="feeds_rss_mode_posts_comments">Publicacions i comentaris</string>
-    <string name="feeds_delete_feed_description">Suprimeix permanentment aquest canal i tot el seu contingut.</string>
     <string name="feeds_access_add_title">Afegeix accés</string>
     <string name="feeds_permission_request_message">%1$s sol·licita el permís següent:</string>
     <string name="feeds_allow_search">Permet que qualsevol cerqui el canal</string>
@@ -264,7 +263,6 @@
     <string name="feeds_source_transform_hint">Tradueix a l\'anglès i mostra com a llista amb pics.</string>
     <string name="feeds_source_url_hint_feed">ID d\'entitat o empremta de la font</string>
     <string name="feeds_source_credibility_label">Credibilitat</string>
-    <string name="feeds_access_management_desc">Controla qui pot veure i interactuar amb aquest canal</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d hora</item>
         <item quantity="other">%1$d hores</item>

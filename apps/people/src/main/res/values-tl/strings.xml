@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Opsyonal na paglalarawan</string>
     <string name="people_group_name_required">Kailangan ang pangalan</string>
     <string name="people_group_actions">Mga group action</string>
-    <string name="people_group_actions_description">Pangunahing impormasyon tungkol sa group na ito</string>
     <string name="people_group_members">Mga Miyembro</string>
     <string name="people_group_members_count">Bilang ng Miyembro</string>
     <string name="people_group_members_description">Mga user at group na kabilang sa group na ito</string>

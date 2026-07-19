@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">管理、发帖、评论、投票和查看</string>
     <string name="forums_access_level_post_full">发帖、评论、投票和查看</string>
     <string name="forums_access_level_vote_full">投票和查看</string>
-    <string name="forums_access_management_description">控制谁可以查看此论坛并与之互动</string>
     <string name="forums_access_select_group">选择一个群组</string>
     <string name="forums_access_select_rule">选择一条规则</string>
     <string name="forums_ai_actions_label">对帖子的 AI 操作</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">条</string>
     <string name="forums_moderation_unit_seconds">秒</string>
     <string name="forums_settings_ai_updated">AI 设置已更新</string>
-    <string name="forums_settings_delete_description">永久删除此论坛及其全部内容。</string>
     <string name="forums_settings_forum_renamed">论坛已重命名</string>
     <string name="forums_settings_name_clear_cd">清除名称</string>
     <string name="forums_settings_unsubscribe_section">取消订阅论坛</string>

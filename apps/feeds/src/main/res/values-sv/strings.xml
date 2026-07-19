@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Prenumeration avslutad</string>
     <string name="feeds_access_level_comment_full">Kommentera, reagera och visa</string>
     <string name="feeds_rss_mode_posts_comments">Inlägg och kommentarer</string>
-    <string name="feeds_delete_feed_description">Ta permanent bort detta flöde och allt dess innehåll.</string>
     <string name="feeds_access_add_title">Lägg till åtkomst</string>
     <string name="feeds_permission_request_message">%1$s begär följande behörighet:</string>
     <string name="feeds_allow_search">Tillåt alla att söka efter flöde</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Översätt till engelska och visa som punktlista.</string>
     <string name="feeds_source_url_hint_feed">Flödesentitets-ID eller fingeravtryck</string>
     <string name="feeds_source_credibility_label">Trovärdighet</string>
-    <string name="feeds_access_management_desc">Styr vem som kan visa och interagera med detta flöde</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d timme</item>
         <item quantity="other">%1$d timmar</item>

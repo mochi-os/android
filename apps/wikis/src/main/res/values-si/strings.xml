@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">සැකසුම් සුරකින ලදී</string>
     <string name="wikis_settings_home_save_failed">සැකසුම් සුරැකීමට අසමත් විය</string>
     <string name="wikis_settings_section_delete">wiki එක මකන්න</string>
-    <string name="wikis_settings_delete_description">මෙම wiki සහ එහි සියලු අන්තර්ගතය ස්ථිරව මකන්න. මෙය පෙරළිය නොහැක.</string>
     <string name="wikis_settings_delete_action">wiki එක මකන්න</string>
     <string name="wikis_settings_delete_confirm_title">ඔබට නිසැකවම විශ්වාසද?</string>
     <string name="wikis_settings_delete_confirm_message">මෙම ක්‍රියාව ආපසු හැරවිය නොහැක. මෙය wiki එක සහ එහි සියලුම අන්තර්ගතය ස්ථිරවම මකා දමනු ඇත.</string>

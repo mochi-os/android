@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">سيٽنگون محفوظ ٿي ويون</string>
     <string name="wikis_settings_home_save_failed">سيٽنگون محفوظ ڪرڻ ۾ ناڪام</string>
     <string name="wikis_settings_section_delete">wiki ختم ڪريو</string>
-    <string name="wikis_settings_delete_description">هن wiki ۽ ان جي سموري مواد کي مستقل طور تي حذف ڪريو. هي واپس نه ٿو ٿي سگهي.</string>
     <string name="wikis_settings_delete_action">wiki ختم ڪريو</string>
     <string name="wikis_settings_delete_confirm_title">ڇا توهان بلڪل پڪا آهيو؟</string>
     <string name="wikis_settings_delete_confirm_message">ھي عمل واپس نه ٿو ٿي سگھي. ھي wiki ۽ ان جا سڀ مواد مستقل طور تي حذف ٿي ويندا.</string>

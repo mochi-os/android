@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Configuració desada</string>
     <string name="wikis_settings_home_save_failed">No s\'ha pogut desar la configuració</string>
     <string name="wikis_settings_section_delete">Suprimeix la wiki</string>
-    <string name="wikis_settings_delete_description">Suprimeix permanentment aquest wiki i tot el seu contingut. Aquesta acció no es pot desfer.</string>
     <string name="wikis_settings_delete_action">Suprimeix la wiki</string>
     <string name="wikis_settings_delete_confirm_title">Estàs absolutament segur?</string>
     <string name="wikis_settings_delete_confirm_message">Aquesta acció no es pot desfer. S\'eliminarà permanentment la wiki i tot el seu contingut.</string>

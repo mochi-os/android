@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ההגדרות נשמרו</string>
     <string name="wikis_settings_home_save_failed">שמירת ההגדרות נכשלה</string>
     <string name="wikis_settings_section_delete">מחק wiki</string>
-    <string name="wikis_settings_delete_description">מחק לצמיתות את הוויקי הזה וכל תכניו. לא ניתן לבטל פעולה זו.</string>
     <string name="wikis_settings_delete_action">מחק wiki</string>
     <string name="wikis_settings_delete_confirm_title">האם אתה בטוח לחלוטין?</string>
     <string name="wikis_settings_delete_confirm_message">לא ניתן לבטל פעולה זו. פעולה זו תמחק לצמיתות את הוויקי ואת כל תוכנו.</string>

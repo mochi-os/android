@@ -240,7 +240,6 @@
     <string name="feeds_unsubscribed">تم إلغاء الاشتراك</string>
     <string name="feeds_access_level_comment_full">التعليق والتفاعل والعرض</string>
     <string name="feeds_rss_mode_posts_comments">المنشورات والتعليقات</string>
-    <string name="feeds_delete_feed_description">حذف هذا feed وكل محتوياته نهائياً.</string>
     <string name="feeds_access_add_title">إضافة وصول</string>
     <string name="feeds_permission_request_message">يطلب %1$s الإذن التالي:</string>
     <string name="feeds_allow_search">السماح لأي شخص بالبحث عن التغذية</string>
@@ -270,7 +269,6 @@
     <string name="feeds_source_transform_hint">ترجم إلى الإنجليزية، واعرض كنقاط.</string>
     <string name="feeds_source_url_hint_feed">معرف كيان التغذية أو البصمة</string>
     <string name="feeds_source_credibility_label">المصداقية</string>
-    <string name="feeds_access_management_desc">تحكّم في من يمكنه عرض هذه التغذية والتفاعل معها</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="zero">%1$d ساعة</item>
         <item quantity="one">%1$d ساعة</item>

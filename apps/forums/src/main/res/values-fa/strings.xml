@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">مدیریت، ارسال، نظر دادن، رأی دادن و مشاهده</string>
     <string name="forums_access_level_post_full">ارسال، نظر دادن، رأی دادن و مشاهده</string>
     <string name="forums_access_level_vote_full">رأی دادن و مشاهده</string>
-    <string name="forums_access_management_description">تعیین کنید چه کسی می‌تواند این انجمن را ببیند و در آن مشارکت کند</string>
     <string name="forums_access_select_group">یک گروه انتخاب کنید</string>
     <string name="forums_access_select_rule">یک قانون انتخاب کنید</string>
     <string name="forums_ai_actions_label">اقدامات هوش مصنوعی روی نوشته‌ها</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">پاسخ</string>
     <string name="forums_moderation_unit_seconds">ثانیه</string>
     <string name="forums_settings_ai_updated">تنظیمات هوش مصنوعی به‌روزرسانی شد</string>
-    <string name="forums_settings_delete_description">این انجمن و همه محتوای آن را برای همیشه حذف کنید.</string>
     <string name="forums_settings_forum_renamed">نام انجمن تغییر کرد</string>
     <string name="forums_settings_name_clear_cd">پاک کردن نام</string>
     <string name="forums_settings_unsubscribe_section">لغو اشتراک انجمن</string>

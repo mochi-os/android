@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Apnaqaña, qillqata, comentaña, ajlliña ukat taqi uñjaña</string>
     <string name="forums_access_level_post_full">Qillqata, comentaña, ajlliña ukat taqi uñjaña</string>
     <string name="forums_access_level_vote_full">Ajlliña ukat taqi uñjaña</string>
-    <string name="forums_access_management_description">Khitinakas aka forum uñjañapa ukat participañapa uñakipaña</string>
     <string name="forums_access_select_group">Mä grupo ajlliña</string>
     <string name="forums_access_select_rule">Mä regla ajlliña</string>
     <string name="forums_ai_actions_label">AI luräwinaka qillqatanakan</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">jaysäwinaka</string>
     <string name="forums_moderation_unit_seconds">segundonaka</string>
     <string name="forums_settings_ai_updated">AI wakichäwinakax machaqachatawa</string>
-    <string name="forums_settings_delete_description">Aka forum ukat taqi contenidopa wiñayataki chhaqtayaña.</string>
     <string name="forums_settings_forum_renamed">Forum sutix mayjt\'ayatawa</string>
     <string name="forums_settings_name_clear_cd">Suti q\'umachaña</string>
     <string name="forums_settings_unsubscribe_section">Forumat mistuña</string>

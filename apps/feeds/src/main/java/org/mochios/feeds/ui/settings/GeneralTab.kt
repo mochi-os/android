@@ -137,7 +137,6 @@ fun GeneralTab(
         // Delete feed
         Section(
             title = stringResource(R.string.feeds_delete_feed),
-            description = stringResource(R.string.feeds_delete_feed_description),
             action = {
                 OutlinedButton(
                     onClick = { showDeleteDialog = true },

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Nustatymai išsaugoti</string>
     <string name="wikis_settings_home_save_failed">Nepavyko išsaugoti nustatymų</string>
     <string name="wikis_settings_section_delete">Ištrinti wiki</string>
-    <string name="wikis_settings_delete_description">Visam laikui ištrinti šį wiki ir visą jo turinį. To nebus galima atšaukti.</string>
     <string name="wikis_settings_delete_action">Ištrinti wiki</string>
     <string name="wikis_settings_delete_confirm_title">Ar tikrai esate tikri?</string>
     <string name="wikis_settings_delete_confirm_message">Šio veiksmo negalima atšaukti. Tai visam laikui ištrins wiki ir visą jo turinį.</string>

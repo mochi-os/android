@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Modereer, plaas, kommentaar lewer, stem en bekyk</string>
     <string name="forums_access_level_post_full">Plaas, kommentaar lewer, stem en bekyk</string>
     <string name="forums_access_level_vote_full">Stem en bekyk</string>
-    <string name="forums_access_management_description">Beheer wie hierdie forum kan sien en daaraan kan deelneem</string>
     <string name="forums_access_select_group">Kies \'n groep</string>
     <string name="forums_access_select_rule">Kies \'n reël</string>
     <string name="forums_ai_actions_label">KI-aksies op plasings</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">antwoorde</string>
     <string name="forums_moderation_unit_seconds">sekondes</string>
     <string name="forums_settings_ai_updated">KI-instellings opgedateer</string>
-    <string name="forums_settings_delete_description">Skrap hierdie forum en al sy inhoud permanent.</string>
     <string name="forums_settings_forum_renamed">Forum se naam verander</string>
     <string name="forums_settings_name_clear_cd">Maak naam skoon</string>
     <string name="forums_settings_unsubscribe_section">Teken uit van forum</string>

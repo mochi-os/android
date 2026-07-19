@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">పర్యవేక్షణ, పోస్ట్, వ్యాఖ్య, ఓటు మరియు చూడటం</string>
     <string name="forums_access_level_post_full">పోస్ట్, వ్యాఖ్య, ఓటు మరియు చూడటం</string>
     <string name="forums_access_level_vote_full">ఓటు వేయడం మరియు చూడటం</string>
-    <string name="forums_access_management_description">ఈ ఫోరమ్‌ను ఎవరు చూడగలరు మరియు పాల్గొనగలరో నియంత్రించండి</string>
     <string name="forums_access_select_group">ఒక సమూహాన్ని ఎంచుకోండి</string>
     <string name="forums_access_select_rule">ఒక నియమాన్ని ఎంచుకోండి</string>
     <string name="forums_ai_actions_label">పోస్ట్‌లపై AI చర్యలు</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">సమాధానాలు</string>
     <string name="forums_moderation_unit_seconds">సెకన్లు</string>
     <string name="forums_settings_ai_updated">AI సెట్టింగ్‌లు నవీకరించబడ్డాయి</string>
-    <string name="forums_settings_delete_description">ఈ ఫోరమ్‌ను మరియు దాని మొత్తం కంటెంట్‌ను శాశ్వతంగా తొలగించండి.</string>
     <string name="forums_settings_forum_renamed">ఫోరమ్ పేరు మార్చబడింది</string>
     <string name="forums_settings_name_clear_cd">పేరును తొలగించు</string>
     <string name="forums_settings_unsubscribe_section">ఫోరమ్ నుండి చందా రద్దు చేయండి</string>

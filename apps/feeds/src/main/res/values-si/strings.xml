@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">දායකත්වය ඉවත් කරන ලදී</string>
     <string name="feeds_access_level_comment_full">අදහස්, ප්‍රතිචාර හා බලන්න</string>
     <string name="feeds_rss_mode_posts_comments">පළ කිරීම් සහ අදහස්</string>
-    <string name="feeds_delete_feed_description">මෙම පෝෂණය සහ එහි සියලු අන්තර්ගතය ස්ථිරව මකන්න.</string>
     <string name="feeds_access_add_title">ප්‍රවේශය එක් කරන්න</string>
     <string name="feeds_permission_request_message">%1$s පහත අවසරය ඉල්ලා සිටී:</string>
     <string name="feeds_allow_search">ෆීඩ් සෙවීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">ඉංග්‍රීසියට පරිවර්තනය කර, බුලට් ලකුණු ලෙස පෙන්වන්න.</string>
     <string name="feeds_source_url_hint_feed">ෆීඩ් සංස්ථා හැඳුනුම්පත හෝ ඇඟිලි සලකුණ</string>
     <string name="feeds_source_credibility_label">විශ්වසනීයත්වය</string>
-    <string name="feeds_access_management_desc">මෙම පෝෂණය බැලීමට සහ එයට අන්තර්ක්‍රියා කිරීමට හැකි කවුරුන්ද යන්න පාලනය කරන්න</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">පැය %1$dක්</item>
         <item quantity="other">පැය %1$dක්</item>

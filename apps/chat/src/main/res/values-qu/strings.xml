@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Ñawinchasqahina señalasqa</string>
     <string name="chat_search_next">Qatiq tupay</string>
     <string name="chat_search_prev">Ñawpaq tupay</string>
-    <string name="chat_settings_general_desc">Rimanakuy churayninkunata allichay</string>
     <string name="chat_settings_id">Rimanakuy ID</string>
-    <string name="chat_settings_members_desc">Kay rimanakuypi runakunap sutinkuna</string>
 </resources>

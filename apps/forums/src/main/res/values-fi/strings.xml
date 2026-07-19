@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Valvonta, julkaisu, kommentointi, äänestys ja katselu</string>
     <string name="forums_access_level_post_full">Julkaisu, kommentointi, äänestys ja katselu</string>
     <string name="forums_access_level_vote_full">Äänestys ja katselu</string>
-    <string name="forums_access_management_description">Määritä, ketkä voivat nähdä tämän foorumin ja osallistua siihen</string>
     <string name="forums_access_select_group">Valitse ryhmä</string>
     <string name="forums_access_select_rule">Valitse sääntö</string>
     <string name="forums_ai_actions_label">Tekoälytoiminnot julkaisuille</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">vastausta</string>
     <string name="forums_moderation_unit_seconds">sekuntia</string>
     <string name="forums_settings_ai_updated">Tekoälyasetukset päivitetty</string>
-    <string name="forums_settings_delete_description">Poista tämä foorumi ja kaikki sen sisältö pysyvästi.</string>
     <string name="forums_settings_forum_renamed">Foorumi nimetty uudelleen</string>
     <string name="forums_settings_name_clear_cd">Tyhjennä nimi</string>
     <string name="forums_settings_unsubscribe_section">Lopeta foorumin tilaus</string>

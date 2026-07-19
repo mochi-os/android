@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ဆက်တင်များ သိမ်းပြီး</string>
     <string name="wikis_settings_home_save_failed">ဆက်တင်များ သိမ်း၍ မရပါ</string>
     <string name="wikis_settings_section_delete">wiki ဖျက်မည်</string>
-    <string name="wikis_settings_delete_description">ဤ wiki နှင့် ၎င်း၏ အကြောင်းအရာအားလုံးကို အပြီးတိုင်ဖျက်ပါ။ ပြန်ပြင်၍ မရပါ။</string>
     <string name="wikis_settings_delete_action">wiki ဖျက်မည်</string>
     <string name="wikis_settings_delete_confirm_title">သေချာပေါက် ဖျက်မှာသေချာပါသလား?</string>
     <string name="wikis_settings_delete_confirm_message">ဤလုပ်ဆောင်ချက်ကို ပြန်လုပ်၍မရပါ။ ၎င်းသည် wiki နှင့် ၎င်း၏ အကြောင်းအရာအားလုံးကို အပြီးတိုင် ဖျက်ပစ်ပါမည်။</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Ustawienia zapisane</string>
     <string name="wikis_settings_home_save_failed">Nie udało się zapisać ustawień</string>
     <string name="wikis_settings_section_delete">Usuń wiki</string>
-    <string name="wikis_settings_delete_description">Trwale usuń to wiki i całą jego zawartość. Tej operacji nie można cofnąć.</string>
     <string name="wikis_settings_delete_action">Usuń wiki</string>
     <string name="wikis_settings_delete_confirm_title">Czy jesteś absolutnie pewny?</string>
     <string name="wikis_settings_delete_confirm_message">Tego działania nie można cofnąć. Spowoduje to trwałe usunięcie wiki i całej jego zawartości.</string>

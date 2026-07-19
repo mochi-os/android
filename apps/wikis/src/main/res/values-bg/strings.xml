@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Настройките са запазени</string>
     <string name="wikis_settings_home_save_failed">Неуспешно записване на настройки</string>
     <string name="wikis_settings_section_delete">Изтрий wiki</string>
-    <string name="wikis_settings_delete_description">Изтрий завинаги тази wiki и цялото ѝ съдържание. Това не може да бъде отменено.</string>
     <string name="wikis_settings_delete_action">Изтрий wiki</string>
     <string name="wikis_settings_delete_confirm_title">Напълно ли сте сигурни?</string>
     <string name="wikis_settings_delete_confirm_message">Това действие не може да бъде отменено. Това ще изтрие окончателно wiki и цялото му съдържание.</string>

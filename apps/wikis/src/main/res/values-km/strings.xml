@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">បានរក្សាទុកការកំណត់</string>
     <string name="wikis_settings_home_save_failed">បរាជ័យក្នុងការរក្សាទុកការកំណត់</string>
     <string name="wikis_settings_section_delete">លុបវិគី</string>
-    <string name="wikis_settings_delete_description">លុប wiki នេះ និងមាតិការបស់វាជាអចិន្ត្រៃយ៍។ មិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="wikis_settings_delete_action">លុបវិគី</string>
     <string name="wikis_settings_delete_confirm_title">តើអ្នកប្រាកដច្បាស់ទេ?</string>
     <string name="wikis_settings_delete_confirm_message">សកម្មភាពនេះមិនអាចមិនធ្វើវិញបានទេ។ វានឹងលុប wiki និងមាតិកាទាំងអស់របស់វាជាអចិន្ត្រៃយ៍។</string>

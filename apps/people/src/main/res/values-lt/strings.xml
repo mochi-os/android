@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Neprivalomas aprašymas</string>
     <string name="people_group_name_required">Pavadinimas yra privalomas</string>
     <string name="people_group_actions">Grupės veiksmai</string>
-    <string name="people_group_actions_description">Pagrindinė informacija apie šią grupę</string>
     <string name="people_group_members">Nariai</string>
     <string name="people_group_members_count">Narių skaičius</string>
     <string name="people_group_members_description">Vartotojai ir grupės, priklausantys šiai grupei</string>

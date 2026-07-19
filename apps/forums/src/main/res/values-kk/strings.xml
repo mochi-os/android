@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Модерациялау, жариялау, пікір қалдыру, дауыс беру және қарау</string>
     <string name="forums_access_level_post_full">Жариялау, пікір қалдыру, дауыс беру және қарау</string>
     <string name="forums_access_level_vote_full">Дауыс беру және қарау</string>
-    <string name="forums_access_management_description">Бұл форумды кім көре және онда қатыса алатынын басқарыңыз</string>
     <string name="forums_access_select_group">Топты таңдаңыз</string>
     <string name="forums_access_select_rule">Ережені таңдаңыз</string>
     <string name="forums_ai_actions_label">Жазбаларға ЖИ әрекеттері</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">жауап</string>
     <string name="forums_moderation_unit_seconds">секунд</string>
     <string name="forums_settings_ai_updated">ЖИ параметрлері жаңартылды</string>
-    <string name="forums_settings_delete_description">Бұл форумды және оның барлық мазмұнын біржола жойыңыз.</string>
     <string name="forums_settings_forum_renamed">Форум атауы өзгертілді</string>
     <string name="forums_settings_name_clear_cd">Атауды тазалау</string>
     <string name="forums_settings_unsubscribe_section">Форумнан бас тарту</string>

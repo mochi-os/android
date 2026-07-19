@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Na-save ang mga setting</string>
     <string name="wikis_settings_home_save_failed">Nabigong i-save ang settings</string>
     <string name="wikis_settings_section_delete">I-delete ang wiki</string>
-    <string name="wikis_settings_delete_description">Permanenteng burahin ang wiki na ito at ang lahat ng nilalaman nito. Hindi ito maibabalik.</string>
     <string name="wikis_settings_delete_action">I-delete ang wiki</string>
     <string name="wikis_settings_delete_confirm_title">Sigurado ka ba talaga?</string>
     <string name="wikis_settings_delete_confirm_message">Hindi maaaring bawiin ang aksyong ito. Permanenteng tatanggalin nito ang wiki at lahat ng nilalaman nito.</string>

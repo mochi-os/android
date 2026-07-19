@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">वैकल्पिक विवरण</string>
     <string name="people_group_name_required">नाम आवश्यक है</string>
     <string name="people_group_actions">ग्रुप क्रियाएँ</string>
-    <string name="people_group_actions_description">इस समूह के बारे में मुख्य जानकारी</string>
     <string name="people_group_members">सदस्य</string>
     <string name="people_group_members_count">सदस्यों की संख्या</string>
     <string name="people_group_members_description">इस ग्रुप से संबंधित यूज़र और ग्रुप</string>

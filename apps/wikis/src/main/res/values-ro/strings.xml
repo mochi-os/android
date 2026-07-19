@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Setări salvate</string>
     <string name="wikis_settings_home_save_failed">Salvarea setărilor a eșuat</string>
     <string name="wikis_settings_section_delete">Șterge wiki-ul</string>
-    <string name="wikis_settings_delete_description">Șterge definitiv acest wiki și tot conținutul său. Această acțiune nu poate fi anulată.</string>
     <string name="wikis_settings_delete_action">Șterge wiki-ul</string>
     <string name="wikis_settings_delete_confirm_title">Ești absolut sigur?</string>
     <string name="wikis_settings_delete_confirm_message">Această acțiune nu poate fi anulată. Aceasta va șterge definitiv wiki-ul și tot conținutul său.</string>

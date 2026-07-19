@@ -103,7 +103,5 @@
     <string name="chat_marked_read">વાંચેલું તરીકે ચિહ્નિત</string>
     <string name="chat_search_next">આગલી મેળ</string>
     <string name="chat_search_prev">પાછલી મેળ</string>
-    <string name="chat_settings_general_desc">ચેટ સેટિંગ્સ સમાયોજિત કરો</string>
     <string name="chat_settings_id">ચેટ ID</string>
-    <string name="chat_settings_members_desc">આ ચેટમાંના લોકોની સૂચિ</string>
 </resources>

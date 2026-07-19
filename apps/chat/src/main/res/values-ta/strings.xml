@@ -103,7 +103,5 @@
     <string name="chat_marked_read">படித்ததாகக் குறிக்கப்பட்டது</string>
     <string name="chat_search_next">அடுத்த பொருத்தம்</string>
     <string name="chat_search_prev">முந்தைய பொருத்தம்</string>
-    <string name="chat_settings_general_desc">அரட்டை அமைப்புகளைச் சரிசெய்யவும்</string>
     <string name="chat_settings_id">அரட்டை ஐடி</string>
-    <string name="chat_settings_members_desc">இந்த அரட்டையில் உள்ளவர்களின் பட்டியல்</string>
 </resources>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Einstellungen gespeichert</string>
     <string name="wikis_settings_home_save_failed">Einstellungen konnten nicht gespeichert werden</string>
     <string name="wikis_settings_section_delete">Wiki löschen</string>
-    <string name="wikis_settings_delete_description">Dieses Wiki und alle zugehörigen Inhalte endgültig löschen. Dies kann nicht rückgängig gemacht werden.</string>
     <string name="wikis_settings_delete_action">Wiki löschen</string>
     <string name="wikis_settings_delete_confirm_title">Sind Sie sich absolut sicher?</string>
     <string name="wikis_settings_delete_confirm_message">Diese Aktion kann nicht rückgängig gemacht werden. Das Wiki und alle seine Inhalte werden dauerhaft gelöscht.</string>

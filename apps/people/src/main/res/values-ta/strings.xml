@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">விருப்ப விளக்கம்</string>
     <string name="people_group_name_required">பெயர் தேவை</string>
     <string name="people_group_actions">குழு செயல்கள்</string>
-    <string name="people_group_actions_description">இந்த குழு பற்றிய அடிப்படை தகவல்</string>
     <string name="people_group_members">உறுப்பினர்கள்</string>
     <string name="people_group_members_count">உறுப்பினர்களின் எண்ணிக்கை</string>
     <string name="people_group_members_description">இந்த குழுவை சேர்ந்த பயனர்கள் மற்றும் குழுக்கள்</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">सेटिंग्स सेव की गईं</string>
     <string name="wikis_settings_home_save_failed">सेटिंग्स सहेजने में विफल</string>
     <string name="wikis_settings_section_delete">wiki हटाएँ</string>
-    <string name="wikis_settings_delete_description">इस विकी और इसकी सभी सामग्री को स्थायी रूप से हटाएँ। यह पूर्ववत नहीं किया जा सकता।</string>
     <string name="wikis_settings_delete_action">wiki हटाएँ</string>
     <string name="wikis_settings_delete_confirm_title">क्या आप बिल्कुल निश्चित हैं?</string>
     <string name="wikis_settings_delete_confirm_message">यह ऐक्शन वापस नहीं लिया जा सकता। यह विकि और इसके सभी कंटेंट को स्थायी रूप से डिलीट कर देगा।</string>

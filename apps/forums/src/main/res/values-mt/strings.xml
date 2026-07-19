@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">Moderazzjoni, pubblikazzjoni, kummenti, votazzjoni u wiri</string>
     <string name="forums_access_level_post_full">Pubblikazzjoni, kummenti, votazzjoni u wiri</string>
     <string name="forums_access_level_vote_full">Votazzjoni u wiri</string>
-    <string name="forums_access_management_description">Ikkontrolla min jista\' jara dan il-forum u jipparteċipa fih</string>
     <string name="forums_access_select_group">Agħżel grupp</string>
     <string name="forums_access_select_rule">Agħżel regola</string>
     <string name="forums_ai_actions_label">Azzjonijiet tal-IA fuq il-posts</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">tweġibiet</string>
     <string name="forums_moderation_unit_seconds">sekondi</string>
     <string name="forums_settings_ai_updated">L-issettjar tal-IA ġie aġġornat</string>
-    <string name="forums_settings_delete_description">Ħassar dan il-forum u l-kontenut kollu tiegħu b\'mod permanenti.</string>
     <string name="forums_settings_forum_renamed">Il-forum issemma mill-ġdid</string>
     <string name="forums_settings_name_clear_cd">Naddaf l-isem</string>
     <string name="forums_settings_unsubscribe_section">Ħassar l-abbonament mill-forum</string>

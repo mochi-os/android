@@ -112,7 +112,6 @@ fun AccessTab(
     ) {
         Section(
             title = stringResource(R.string.feeds_access_management),
-            description = stringResource(R.string.feeds_access_management_desc),
             action = {
                 // Outlined, primary-tinted — the same shape as the delete action
                 // on the General tab, which tints itself error instead.

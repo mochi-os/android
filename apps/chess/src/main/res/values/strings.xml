@@ -6,13 +6,13 @@
 
     <!-- Sidebar -->
     <string name="chess_sidebar_header">Chess</string>
-    <string name="chess_sidebar_active">Active Games</string>
+    <string name="chess_sidebar_active">Active games</string>
     <string name="chess_sidebar_completed">Completed</string>
     <string name="chess_sidebar_new_game">New game</string>
     <string name="chess_open_sidebar">Open sidebar</string>
 
     <!-- List screen -->
-    <string name="chess_section_active">Active Games</string>
+    <string name="chess_section_active">Active games</string>
     <string name="chess_section_completed">Completed</string>
     <string name="chess_new_game">New game</string>
     <string name="chess_empty_title">No games yet</string>
@@ -20,7 +20,7 @@
     <string name="chess_empty_start_button">Start your first game</string>
 
     <!-- New-game dialog -->
-    <string name="chess_new_title">New Game</string>
+    <string name="chess_new_title">New game</string>
     <string name="chess_new_pick_opponent">Choose opponent</string>
     <string name="chess_new_no_friends_title">No friends yet</string>
     <string name="chess_new_no_friends_subtitle">Add friends in the People app to start playing</string>

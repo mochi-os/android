@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">ঐচ্ছিক বিবরণ</string>
     <string name="people_group_name_required">নাম প্রয়োজন</string>
     <string name="people_group_actions">গ্রুপ ক্রিয়াসমূহ</string>
-    <string name="people_group_actions_description">এই গ্রুপ সম্পর্কে মূল তথ্য</string>
     <string name="people_group_members">সদস্যগণ</string>
     <string name="people_group_members_count">সদস্য সংখ্যা</string>
     <string name="people_group_members_description">এই গ্রুপের অন্তর্গত ব্যবহারকারী এবং গ্রুপ</string>

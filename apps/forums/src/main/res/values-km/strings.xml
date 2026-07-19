@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">សម្របសម្រួល បង្ហោះ បញ្ចេញមតិ បោះឆ្នោត និងមើល</string>
     <string name="forums_access_level_post_full">បង្ហោះ បញ្ចេញមតិ បោះឆ្នោត និងមើល</string>
     <string name="forums_access_level_vote_full">បោះឆ្នោត និងមើល</string>
-    <string name="forums_access_management_description">គ្រប់គ្រងថានរណាអាចមើល និងចូលរួមក្នុងវេទិកានេះ</string>
     <string name="forums_access_select_group">ជ្រើសរើសក្រុម</string>
     <string name="forums_access_select_rule">ជ្រើសរើសច្បាប់</string>
     <string name="forums_ai_actions_label">សកម្មភាព AI លើការបង្ហោះ</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">ការឆ្លើយតប</string>
     <string name="forums_moderation_unit_seconds">វិនាទី</string>
     <string name="forums_settings_ai_updated">ការកំណត់ AI ត្រូវបានធ្វើបច្ចុប្បន្នភាព</string>
-    <string name="forums_settings_delete_description">លុបវេទិកានេះ និងខ្លឹមសារទាំងអស់របស់វាជាអចិន្ត្រៃយ៍។</string>
     <string name="forums_settings_forum_renamed">វេទិកាត្រូវបានប្តូរឈ្មោះ</string>
     <string name="forums_settings_name_clear_cd">សម្អាតឈ្មោះ</string>
     <string name="forums_settings_unsubscribe_section">ឈប់ជាវវេទិកា</string>

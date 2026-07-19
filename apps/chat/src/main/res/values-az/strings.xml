@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Oxunmuş kimi işarələndi</string>
     <string name="chat_search_next">Növbəti uyğunluq</string>
     <string name="chat_search_prev">Əvvəlki uyğunluq</string>
-    <string name="chat_settings_general_desc">Söhbət parametrlərini tənzimləyin</string>
     <string name="chat_settings_id">Söhbət ID-si</string>
-    <string name="chat_settings_members_desc">Bu söhbətdəki insanların siyahısı</string>
 </resources>

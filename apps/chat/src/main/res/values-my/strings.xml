@@ -103,7 +103,5 @@
     <string name="chat_marked_read">ဖတ်ပြီးအဖြစ် အမှတ်အသားပြုပြီး</string>
     <string name="chat_search_next">နောက်ထပ် တူညီမှု</string>
     <string name="chat_search_prev">ယခင် တူညီမှု</string>
-    <string name="chat_settings_general_desc">ချတ် ဆက်တင်များကို ချိန်ညှိပါ</string>
     <string name="chat_settings_id">ချတ် ID</string>
-    <string name="chat_settings_members_desc">ဤချတ်ရှိ လူများစာရင်း</string>
 </resources>

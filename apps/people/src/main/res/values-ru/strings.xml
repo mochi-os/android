@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Необязательное описание</string>
     <string name="people_group_name_required">Требуется имя</string>
     <string name="people_group_actions">Групповые действия</string>
-    <string name="people_group_actions_description">Основная информация об этой группе</string>
     <string name="people_group_members">Участники</string>
     <string name="people_group_members_count">Количество участников</string>
     <string name="people_group_members_description">Пользователи и группы, принадлежащие этой группе</string>

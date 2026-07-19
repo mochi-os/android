@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Sazlamalar saklandy</string>
     <string name="wikis_settings_home_save_failed">Sazlamalar saklanyp galynmady</string>
     <string name="wikis_settings_section_delete">Wikiňi pozmak</string>
-    <string name="wikis_settings_delete_description">Bu wikini we onuň ähli mazmunyny hemişelik poz. Bu yzyna gaýtarylyp bilinmez.</string>
     <string name="wikis_settings_delete_action">Wikiňi pozmak</string>
     <string name="wikis_settings_delete_confirm_title">Hakykatdan-da ynamlymy?</string>
     <string name="wikis_settings_delete_confirm_message">Bu hereketi yza gaýtaryp bolmaz. Bu wiki we ähli mazmunyny hemişelik pozar.</string>

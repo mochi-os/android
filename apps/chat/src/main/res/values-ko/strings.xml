@@ -103,7 +103,5 @@
     <string name="chat_marked_read">읽음으로 표시됨</string>
     <string name="chat_search_next">다음 일치 항목</string>
     <string name="chat_search_prev">이전 일치 항목</string>
-    <string name="chat_settings_general_desc">채팅 설정 조정</string>
     <string name="chat_settings_id">채팅 ID</string>
-    <string name="chat_settings_members_desc">이 채팅의 참여자 목록</string>
 </resources>

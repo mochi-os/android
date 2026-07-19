@@ -267,7 +267,6 @@
     <string name="forums_access_level_moderate_full">Modhnú, postáil, trácht, vótáil agus amharc</string>
     <string name="forums_access_level_post_full">Postáil, trácht, vótáil agus amharc</string>
     <string name="forums_access_level_vote_full">Vótáil agus amharc</string>
-    <string name="forums_access_management_description">Rialaigh cé atá in ann an fóram seo a fheiceáil agus páirt a ghlacadh ann</string>
     <string name="forums_access_select_group">Roghnaigh grúpa</string>
     <string name="forums_access_select_rule">Roghnaigh riail</string>
     <string name="forums_ai_actions_label">Gníomhartha IS ar phostálacha</string>
@@ -301,7 +300,6 @@
     <string name="forums_moderation_unit_replies">freagra</string>
     <string name="forums_moderation_unit_seconds">soicind</string>
     <string name="forums_settings_ai_updated">Nuashonraíodh na socruithe IS</string>
-    <string name="forums_settings_delete_description">Scrios an fóram seo agus a bhfuil ann go buan.</string>
     <string name="forums_settings_forum_renamed">Athainmníodh an fóram</string>
     <string name="forums_settings_name_clear_cd">Glan an t-ainm</string>
     <string name="forums_settings_unsubscribe_section">Díliostáil ón bhfóram</string>

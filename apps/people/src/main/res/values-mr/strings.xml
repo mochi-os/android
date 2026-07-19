@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">वैकल्पिक वर्णन</string>
     <string name="people_group_name_required">नाव आवश्यक आहे</string>
     <string name="people_group_actions">गट कृती</string>
-    <string name="people_group_actions_description">या गटाबद्दल मुख्य माहिती</string>
     <string name="people_group_members">सदस्य</string>
     <string name="people_group_members_count">सदस्यांची संख्या</string>
     <string name="people_group_members_description">या गटाचे असलेले वापरकर्ते आणि गट</string>

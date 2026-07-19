@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Ajustes guardados</string>
     <string name="wikis_settings_home_save_failed">Error al guardar los ajustes</string>
     <string name="wikis_settings_section_delete">Eliminar wiki</string>
-    <string name="wikis_settings_delete_description">Eliminar permanentemente este wiki y todo su contenido. Esta acción no se puede deshacer.</string>
     <string name="wikis_settings_delete_action">Eliminar wiki</string>
     <string name="wikis_settings_delete_confirm_title">¿Estás totalmente seguro?</string>
     <string name="wikis_settings_delete_confirm_message">Esta acción no se puede deshacer. Eliminará permanentemente el wiki y todo su contenido.</string>

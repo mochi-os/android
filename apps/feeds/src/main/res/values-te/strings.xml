@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">చందా మానివేయబడింది</string>
     <string name="feeds_access_level_comment_full">వ్యాఖ్యానించండి, స్పందించండి మరియు చూడండి</string>
     <string name="feeds_rss_mode_posts_comments">పోస్ట్‌లు మరియు కామెంట్‌లు</string>
-    <string name="feeds_delete_feed_description">ఈ ఫీడ్ మరియు దాని మొత్తం కంటెంట్‌ను శాశ్వతంగా డిలీట్ చేయండి.</string>
     <string name="feeds_access_add_title">యాక్సెస్‌ను జోడించండి</string>
     <string name="feeds_permission_request_message">%1$s కింది అనుమతిని అభ్యర్థిస్తోంది:</string>
     <string name="feeds_allow_search">ఎవరికైనా ఫీడ్‌ను శోధించడానికి అనుమతించండి</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">ఇంగ్లీషుకు అనువదించండి మరియు బుల్లెట్ పాయింట్లుగా చూపించండి.</string>
     <string name="feeds_source_url_hint_feed">ఫీడ్ ఎంటిటీ ID లేదా ఫింగర్‌ప్రింట్</string>
     <string name="feeds_source_credibility_label">విశ్వసనీయత</string>
-    <string name="feeds_access_management_desc">ఎవరు ఈ ఫీడ్‌ను చూడగలరు మరియు దానితో ఇంటరాక్ట్ అవ్వగలరో నియంత్రించండి</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d గంట</item>
         <item quantity="other">%1$d గంటలు</item>

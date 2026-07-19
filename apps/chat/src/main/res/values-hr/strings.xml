@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Označeno kao pročitano</string>
     <string name="chat_search_next">Sljedeće podudaranje</string>
     <string name="chat_search_prev">Prethodno podudaranje</string>
-    <string name="chat_settings_general_desc">Prilagodi postavke razgovora</string>
     <string name="chat_settings_id">ID razgovora</string>
-    <string name="chat_settings_members_desc">Popis osoba u ovom razgovoru</string>
 </resources>

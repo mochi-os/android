@@ -103,7 +103,5 @@
     <string name="chat_marked_read">చదివినట్లు గుర్తు పెట్టబడింది</string>
     <string name="chat_search_next">తదుపరి సరిపోలిక</string>
     <string name="chat_search_prev">మునుపటి సరిపోలిక</string>
-    <string name="chat_settings_general_desc">చాట్ సెట్టింగ్‌లను సర్దుబాటు చేయండి</string>
     <string name="chat_settings_id">చాట్ ఐడీ</string>
-    <string name="chat_settings_members_desc">ఈ చాట్‌లోని వ్యక్తుల జాబితా</string>
 </resources>

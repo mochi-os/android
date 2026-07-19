@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Жазылуудан баш тартылды</string>
     <string name="feeds_access_level_comment_full">Комментарий, реакция жана көрүү</string>
     <string name="feeds_rss_mode_posts_comments">Посттор жана комментарийлер</string>
-    <string name="feeds_delete_feed_description">Бул тасманы жана анын бардык мазмунун биротоло өчүрүү.</string>
     <string name="feeds_access_add_title">Жетки кошуу</string>
     <string name="feeds_permission_request_message">%1$s төмөнкү уруксатты сурап жатат:</string>
     <string name="feeds_allow_search">Түрмөктү издөөгө ар кимге уруксат берүү</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Англис тилине которуңуз жана пункт пункт менен көрсөтүңүз.</string>
     <string name="feeds_source_url_hint_feed">Лента субъект ID же манжа изи</string>
     <string name="feeds_source_credibility_label">Ишенимдүүлүк</string>
-    <string name="feeds_access_management_desc">Бул түрмөктү ким көрүп, аны менен иштей аларын башкарыңыз</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d саат</item>
         <item quantity="other">%1$d саат</item>

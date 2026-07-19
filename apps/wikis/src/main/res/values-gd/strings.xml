@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Roghainnean air an sàbhaladh</string>
     <string name="wikis_settings_home_save_failed">Cha b\' urrainn na roghainnean a shàbhaladh</string>
     <string name="wikis_settings_section_delete">Sguab às uicipeid</string>
-    <string name="wikis_settings_delete_description">Sguab às an uicipèad seo agus a shusbaint uile gu sìorraidh. Chan urrainn seo a thilleadh.</string>
     <string name="wikis_settings_delete_action">Sguab às uicipeid</string>
     <string name="wikis_settings_delete_confirm_title">A bheil thu gu tur cinnteach?</string>
     <string name="wikis_settings_delete_confirm_message">Chan urrainn seo a thoirt air ais. Sguabaidh seo às an wiki agus a h-uile susbaint aige gu buan.</string>

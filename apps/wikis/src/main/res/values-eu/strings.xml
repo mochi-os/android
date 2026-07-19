@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Ezarpenak gorde dira</string>
     <string name="wikis_settings_home_save_failed">Ezin izan dira ezarpenak gorde</string>
     <string name="wikis_settings_section_delete">Ezabatu wikia</string>
-    <string name="wikis_settings_delete_description">Ezabatu betiko wiki hau eta bere eduki guztia. Hau ezin da desegin.</string>
     <string name="wikis_settings_delete_action">Ezabatu wikia</string>
     <string name="wikis_settings_delete_confirm_title">Erabat ziur al zaude?</string>
     <string name="wikis_settings_delete_confirm_message">Ekintza hau ezin da desegin. Honek wikia eta bere eduki guztiak betiko ezabatuko ditu.</string>

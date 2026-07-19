@@ -103,7 +103,5 @@
     <string name="chat_marked_read">به‌عنوان خوانده‌شده علامت‌گذاری شد</string>
     <string name="chat_search_next">مورد بعدی</string>
     <string name="chat_search_prev">مورد قبلی</string>
-    <string name="chat_settings_general_desc">تنظیمات گفتگو را تنظیم کنید</string>
     <string name="chat_settings_id">شناسه گفتگو</string>
-    <string name="chat_settings_members_desc">فهرست افراد این گفتگو</string>
 </resources>

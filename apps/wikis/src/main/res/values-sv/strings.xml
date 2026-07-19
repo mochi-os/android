@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Inställningar sparade</string>
     <string name="wikis_settings_home_save_failed">Kunde inte spara inställningar</string>
     <string name="wikis_settings_section_delete">Ta bort wiki</string>
-    <string name="wikis_settings_delete_description">Ta permanent bort denna wiki och allt dess innehåll. Detta kan inte ångras.</string>
     <string name="wikis_settings_delete_action">Ta bort wiki</string>
     <string name="wikis_settings_delete_confirm_title">Är du helt säker?</string>
     <string name="wikis_settings_delete_confirm_message">Den här åtgärden kan inte ångras. Detta tar permanent bort wikin och allt dess innehåll.</string>

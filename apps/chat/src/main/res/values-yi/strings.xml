@@ -103,7 +103,5 @@
     <string name="chat_marked_read">מארקירט ווי געלייענט</string>
     <string name="chat_search_next">ווײַטערדיקער געפֿינס</string>
     <string name="chat_search_prev">פֿריִערדיקער געפֿינס</string>
-    <string name="chat_settings_general_desc">פּאַסן טשאַט ײַנשטעלונגען</string>
     <string name="chat_settings_id">טשאַט אידענטיפֿיקאַציע</string>
-    <string name="chat_settings_members_desc">רשימה פֿון מענטשן אין דעם טשאַט</string>
 </resources>

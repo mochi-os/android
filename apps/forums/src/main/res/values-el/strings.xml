@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Συντονισμός, δημοσίευση, σχολιασμός, ψηφοφορία και προβολή</string>
     <string name="forums_access_level_post_full">Δημοσίευση, σχολιασμός, ψηφοφορία και προβολή</string>
     <string name="forums_access_level_vote_full">Ψηφοφορία και προβολή</string>
-    <string name="forums_access_management_description">Ελέγξτε ποιοι μπορούν να δουν αυτό το φόρουμ και να συμμετέχουν σε αυτό</string>
     <string name="forums_access_select_group">Επιλέξτε ομάδα</string>
     <string name="forums_access_select_rule">Επιλέξτε κανόνα</string>
     <string name="forums_ai_actions_label">Ενέργειες AI στις δημοσιεύσεις</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">απαντήσεις</string>
     <string name="forums_moderation_unit_seconds">δευτερόλεπτα</string>
     <string name="forums_settings_ai_updated">Οι ρυθμίσεις AI ενημερώθηκαν</string>
-    <string name="forums_settings_delete_description">Διαγράψτε οριστικά αυτό το φόρουμ και όλο το περιεχόμενό του.</string>
     <string name="forums_settings_forum_renamed">Το φόρουμ μετονομάστηκε</string>
     <string name="forums_settings_name_clear_cd">Εκκαθάριση ονόματος</string>
     <string name="forums_settings_unsubscribe_section">Κατάργηση εγγραφής από το φόρουμ</string>

@@ -104,7 +104,5 @@
     <string name="chat_marked_read">O\'qilgan deb belgilandi</string>
     <string name="chat_search_next">Keyingi moslik</string>
     <string name="chat_search_prev">Oldingi moslik</string>
-    <string name="chat_settings_general_desc">Chat sozlamalarini moslash</string>
     <string name="chat_settings_id">Chat identifikatori</string>
-    <string name="chat_settings_members_desc">Ushbu chatdagi odamlar ro\'yxati</string>
 </resources>

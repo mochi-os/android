@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Repositorio ukatpach suscripción jaytata</string>
     <string name="feeds_access_level_comment_full">Comentaña, reaccionaña, ukat uñakipaña</string>
     <string name="feeds_rss_mode_posts_comments">Qillqatanak comentarionakampi</string>
-    <string name="feeds_delete_feed_description">Aka feed ukamp taqi contenidopa wiñayaru jiwayma.</string>
     <string name="feeds_access_add_title">Mantañ yapxataña</string>
     <string name="feeds_permission_request_message">%1$s aka iyaw säwi mayisi:</string>
     <string name="feeds_allow_search">Khitirus feed thaqaña iyawsaña</string>
@@ -261,7 +260,6 @@
     <string name="feeds_source_transform_hint">Saraski</string>
     <string name="feeds_source_url_hint_feed">Feed entidad ID jan ukax fingerprint</string>
     <string name="feeds_source_credibility_label">Iyawsa</string>
-    <string name="feeds_access_management_desc">Khitis aka feed uñjañ ukat interactuañ atki uka apnaqaña</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d uranaka</item>
     </plurals>

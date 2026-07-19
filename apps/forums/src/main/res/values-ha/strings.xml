@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Sarrafawa, wallafawa, yin sharhi, kaɗa kuri\'a da kallo</string>
     <string name="forums_access_level_post_full">Wallafawa, yin sharhi, kaɗa kuri\'a da kallo</string>
     <string name="forums_access_level_vote_full">Kaɗa kuri\'a da kallo</string>
-    <string name="forums_access_management_description">Sarrafa wanda zai iya ganin wannan dandalin da shiga cikinsa</string>
     <string name="forums_access_select_group">Zaɓi rukuni</string>
     <string name="forums_access_select_rule">Zaɓi doka</string>
     <string name="forums_ai_actions_label">Ayyukan AI kan wallafe-wallafe</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">amsoshi</string>
     <string name="forums_moderation_unit_seconds">daƙiƙa</string>
     <string name="forums_settings_ai_updated">An sabunta saitunan AI</string>
-    <string name="forums_settings_delete_description">Share wannan dandalin da dukkan abun cikinsa har abada.</string>
     <string name="forums_settings_forum_renamed">An sauya sunan dandalin</string>
     <string name="forums_settings_name_clear_cd">Share suna</string>
     <string name="forums_settings_unsubscribe_section">Dakatar da biyan kuɗin dandalin</string>

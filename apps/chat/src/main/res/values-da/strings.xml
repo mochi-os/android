@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Markeret som læst</string>
     <string name="chat_search_next">Næste match</string>
     <string name="chat_search_prev">Forrige match</string>
-    <string name="chat_settings_general_desc">Juster chatindstillinger</string>
     <string name="chat_settings_id">Chat-ID</string>
-    <string name="chat_settings_members_desc">Liste over personer i denne chat</string>
 </resources>

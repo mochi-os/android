@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Модериране, публикуване, коментиране, гласуване и преглед</string>
     <string name="forums_access_level_post_full">Публикуване, коментиране, гласуване и преглед</string>
     <string name="forums_access_level_vote_full">Гласуване и преглед</string>
-    <string name="forums_access_management_description">Определете кой може да вижда този форум и да участва в него</string>
     <string name="forums_access_select_group">Изберете група</string>
     <string name="forums_access_select_rule">Изберете правило</string>
     <string name="forums_ai_actions_label">ИИ действия върху публикациите</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">отговора</string>
     <string name="forums_moderation_unit_seconds">секунди</string>
     <string name="forums_settings_ai_updated">Настройките за ИИ са актуализирани</string>
-    <string name="forums_settings_delete_description">Изтрийте окончателно този форум и цялото му съдържание.</string>
     <string name="forums_settings_forum_renamed">Форумът е преименуван</string>
     <string name="forums_settings_name_clear_cd">Изчистване на името</string>
     <string name="forums_settings_unsubscribe_section">Отписване от форума</string>

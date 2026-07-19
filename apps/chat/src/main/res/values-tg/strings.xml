@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Ҳамчун хондашуда қайд шуд</string>
     <string name="chat_search_next">Мутобиқати навбатӣ</string>
     <string name="chat_search_prev">Мутобиқати қаблӣ</string>
-    <string name="chat_settings_general_desc">Танзимоти чатро танзим кунед</string>
     <string name="chat_settings_id">Рақами чат</string>
-    <string name="chat_settings_members_desc">Рӯйхати одамони ин чат</string>
 </resources>

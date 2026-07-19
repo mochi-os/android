@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Ditandaan geus dibaca</string>
     <string name="chat_search_next">Cocok satuluyna</string>
     <string name="chat_search_prev">Cocok saméméhna</string>
-    <string name="chat_settings_general_desc">Luyukeun setelan obrolan</string>
     <string name="chat_settings_id">ID obrolan</string>
-    <string name="chat_settings_members_desc">Daptar jalma dina obrolan ieu</string>
 </resources>

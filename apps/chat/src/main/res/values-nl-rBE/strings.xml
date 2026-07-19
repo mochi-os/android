@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Gemarkeerd als gelezen</string>
     <string name="chat_search_next">Volgende overeenkomst</string>
     <string name="chat_search_prev">Vorige overeenkomst</string>
-    <string name="chat_settings_general_desc">Chatinstellingen aanpassen</string>
     <string name="chat_settings_id">Chat-ID</string>
-    <string name="chat_settings_members_desc">Lijst met personen in deze chat</string>
 </resources>

@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Отписан</string>
     <string name="feeds_access_level_comment_full">Коментирай, реагирай и преглеждай</string>
     <string name="feeds_rss_mode_posts_comments">Публикации и коментари</string>
-    <string name="feeds_delete_feed_description">Изтрий завинаги тази емисия и цялото ѝ съдържание.</string>
     <string name="feeds_access_add_title">Добави достъп</string>
     <string name="feeds_permission_request_message">%1$s изисква следното разрешение:</string>
     <string name="feeds_allow_search">Позволи на всеки да търси емисията</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Преведи на английски и покажи като булети.</string>
     <string name="feeds_source_url_hint_feed">ID на обект на емисия или отпечатък</string>
     <string name="feeds_source_credibility_label">Достоверност</string>
-    <string name="feeds_access_management_desc">Контролирайте кой може да преглежда и взаимодейства с тази емисия</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d час</item>
         <item quantity="other">%1$d часа</item>

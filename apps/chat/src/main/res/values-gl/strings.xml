@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Marcado como lido</string>
     <string name="chat_search_next">Seguinte coincidencia</string>
     <string name="chat_search_prev">Coincidencia anterior</string>
-    <string name="chat_settings_general_desc">Axustar a configuración do chat</string>
     <string name="chat_settings_id">ID do chat</string>
-    <string name="chat_settings_members_desc">Lista de persoas neste chat</string>
 </resources>

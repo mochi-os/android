@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">सेटिंग सहेजल गइल</string>
     <string name="wikis_settings_home_save_failed">सेटिंग सहेजे में विफल</string>
     <string name="wikis_settings_section_delete">wiki मेटाईं</string>
-    <string name="wikis_settings_delete_description">ए विकी आ ओकर सब सामग्री के स्थायी रूप से मिटाईं। ई वापस ना हो सके।</string>
     <string name="wikis_settings_delete_action">wiki मेटाईं</string>
     <string name="wikis_settings_delete_confirm_title">का रउआ बिल्कुल पक्का बानी?</string>
     <string name="wikis_settings_delete_confirm_message">ई कार्य पूर्ववत ना कइल जा सकेला। ई विकी आ ओकर सब सामग्री के स्थायी रूप से हटा दी।</string>

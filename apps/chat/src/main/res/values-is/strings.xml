@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Merkt sem lesið</string>
     <string name="chat_search_next">Næsta samsvörun</string>
     <string name="chat_search_prev">Fyrri samsvörun</string>
-    <string name="chat_settings_general_desc">Stilla spjallstillingar</string>
     <string name="chat_settings_id">Spjall-auðkenni</string>
-    <string name="chat_settings_members_desc">Listi yfir fólk í þessu spjalli</string>
 </resources>

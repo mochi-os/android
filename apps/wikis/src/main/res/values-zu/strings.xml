@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Izilungiselelo zilondoloziwe</string>
     <string name="wikis_settings_home_save_failed">Kuhlulekile ukulondoloza izilungiselelo</string>
     <string name="wikis_settings_section_delete">Susa i-wiki</string>
-    <string name="wikis_settings_delete_description">Susa unomphela le-wiki nakho konke okuqukethe. Lokhu akukwazi ukubuyiselwa emuva.</string>
     <string name="wikis_settings_delete_action">Susa i-wiki</string>
     <string name="wikis_settings_delete_confirm_title">Uqinisekile ngokuphelele?</string>
     <string name="wikis_settings_delete_confirm_message">Lesi senzo asikwazi ukuhlehliswa. Lokhu kuzosusa iwiki nakho konke okuqukethwe ngokuphelele.</string>

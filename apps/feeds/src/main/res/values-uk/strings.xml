@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">Відписано</string>
     <string name="feeds_access_level_comment_full">Коментувати, реагувати та переглядати</string>
     <string name="feeds_rss_mode_posts_comments">Дописи та коментарі</string>
-    <string name="feeds_delete_feed_description">Остаточно видалити цю стрічку та весь її вміст.</string>
     <string name="feeds_access_add_title">Додати доступ</string>
     <string name="feeds_permission_request_message">%1$s запитує такий дозвіл:</string>
     <string name="feeds_allow_search">Дозволити будь-кому шукати стрічку</string>
@@ -266,7 +265,6 @@
     <string name="feeds_source_transform_hint">Перекласти англійською та показати у вигляді списку.</string>
     <string name="feeds_source_url_hint_feed">ID сутності стрічки або відбиток</string>
     <string name="feeds_source_credibility_label">Достовірність</string>
-    <string name="feeds_access_management_desc">Керуйте тим, хто може переглядати та взаємодіяти з цією стрічкою</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d година</item>
         <item quantity="few">%1$d години</item>

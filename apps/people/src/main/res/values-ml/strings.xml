@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">ഓപ്ഷണൽ വിവരണം</string>
     <string name="people_group_name_required">പേര് നൽകേണ്ടത് ആവശ്യമാണ്</string>
     <string name="people_group_actions">ഗ്രൂപ്പ് പ്രവർത്തനങ്ങൾ</string>
-    <string name="people_group_actions_description">ഈ ഗ്രൂപ്പിനെക്കുറിച്ചുള്ള പ്രധാന വിവരങ്ങൾ</string>
     <string name="people_group_members">അംഗങ്ങൾ</string>
     <string name="people_group_members_count">അംഗങ്ങളുടെ എണ്ണം</string>
     <string name="people_group_members_description">ഈ ഗ്രൂപ്പിൽ ഉൾപ്പെടുന്ന ഉപയോക്താക്കളും ഗ്രൂപ്പുകളും</string>

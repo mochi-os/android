@@ -103,7 +103,5 @@
     <string name="chat_marked_read">د لوستل شوي په توګه نښه شو</string>
     <string name="chat_search_next">راتلونکی سمون</string>
     <string name="chat_search_prev">مخکینی سمون</string>
-    <string name="chat_settings_general_desc">د چټ تنظیمات سم کړئ</string>
     <string name="chat_settings_id">د چټ پیژندنه</string>
-    <string name="chat_settings_members_desc">په دې چټ کې د خلکو لړلیک</string>
 </resources>

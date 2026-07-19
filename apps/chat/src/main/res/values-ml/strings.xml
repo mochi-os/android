@@ -103,7 +103,5 @@
     <string name="chat_marked_read">വായിച്ചതായി അടയാളപ്പെടുത്തി</string>
     <string name="chat_search_next">അടുത്ത പൊരുത്തം</string>
     <string name="chat_search_prev">മുൻ പൊരുത്തം</string>
-    <string name="chat_settings_general_desc">ചാറ്റ് ക്രമീകരണങ്ങൾ ക്രമീകരിക്കുക</string>
     <string name="chat_settings_id">ചാറ്റ് ഐഡി</string>
-    <string name="chat_settings_members_desc">ഈ ചാറ്റിലെ ആളുകളുടെ പട്ടിക</string>
 </resources>

@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">मॉडरेट, पोस्ट, टिप्पणी, वोट आ देखल</string>
     <string name="forums_access_level_post_full">पोस्ट, टिप्पणी, वोट आ देखल</string>
     <string name="forums_access_level_vote_full">वोट आ देखल</string>
-    <string name="forums_access_management_description">नियंत्रण करीं कि एह फोरम के के देख सकेला आ एकरा से जुड़ सकेला</string>
     <string name="forums_access_select_group">एगो समूह चुनीं</string>
     <string name="forums_access_select_rule">एगो नियम चुनीं</string>
     <string name="forums_ai_actions_label">पोस्ट पर AI कार्रवाई</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">जवाब</string>
     <string name="forums_moderation_unit_seconds">सेकंड</string>
     <string name="forums_settings_ai_updated">AI सेटिंग अपडेट भइल</string>
-    <string name="forums_settings_delete_description">एह फोरम आ एकर सब सामग्री के हमेशा खातिर मेटा दीं।</string>
     <string name="forums_settings_forum_renamed">फोरम के नाम बदलल</string>
     <string name="forums_settings_name_clear_cd">नाम साफ करीं</string>
     <string name="forums_settings_unsubscribe_section">फोरम से सदस्यता छोड़ीं</string>

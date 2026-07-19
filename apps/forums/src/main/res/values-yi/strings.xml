@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">מאָדערירן, פּאָסטן, קאָמענטירן, שטימען און זען</string>
     <string name="forums_access_level_post_full">פּאָסטן, קאָמענטירן, שטימען און זען</string>
     <string name="forums_access_level_vote_full">שטימען און זען</string>
-    <string name="forums_access_management_description">קאָנטראָלירט ווער עס קען זען דעם פֿאָרום און זיך באַטייליקן</string>
     <string name="forums_access_select_group">קלייַבט אויס אַ גרופּע</string>
     <string name="forums_access_select_rule">קלייַבט אויס אַ כּלל</string>
     <string name="forums_ai_actions_label">AI אַקציעס אויף פּאָסטן</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">ענטפֿערס</string>
     <string name="forums_moderation_unit_seconds">סעקונדעס</string>
     <string name="forums_settings_ai_updated">AI אײַנשטעלונגען דערהײַנטיקט</string>
-    <string name="forums_settings_delete_description">מעקט דעם פֿאָרום און אַל זײַן אינהאַלט אויף שטענדיק.</string>
     <string name="forums_settings_forum_renamed">פֿאָרום איבערגענומען אַ נײַעם נאָמען</string>
     <string name="forums_settings_name_clear_cd">רייניקט דעם נאָמען</string>
     <string name="forums_settings_unsubscribe_section">אַבאָנירט זיך אָפּ פֿון פֿאָרום</string>

@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Allichay, qillqay, comentay, akllay, qhaway</string>
     <string name="forums_access_level_post_full">Qillqay, comentay, akllay, qhaway</string>
     <string name="forums_access_level_vote_full">Akllay, qhaway</string>
-    <string name="forums_access_management_description">Pikuna kay forumta qhawanku hinaspa rimanakunku chayta kamachiy</string>
     <string name="forums_access_select_group">Huk huñuta akllay</string>
     <string name="forums_access_select_rule">Huk kamachiyta akllay</string>
     <string name="forums_ai_actions_label">AI ruwaykuna qillqakunapi</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">kutichiykuna</string>
     <string name="forums_moderation_unit_seconds">segundokuna</string>
     <string name="forums_settings_ai_updated">AI allinkachaykuna musuqchasqa</string>
-    <string name="forums_settings_delete_description">Kay forumta llapa contenidontawan wiñaypaq wischuy.</string>
     <string name="forums_settings_forum_renamed">Forum sutin hukchasqa</string>
     <string name="forums_settings_name_clear_cd">Sutita pichay</string>
     <string name="forums_settings_unsubscribe_section">Forummanta lluqsiy</string>

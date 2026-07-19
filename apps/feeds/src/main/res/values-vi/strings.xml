@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">Đã hủy đăng ký</string>
     <string name="feeds_access_level_comment_full">Bình luận, phản ứng và xem</string>
     <string name="feeds_rss_mode_posts_comments">Bài viết và bình luận</string>
-    <string name="feeds_delete_feed_description">Xoá vĩnh viễn feed này và toàn bộ nội dung của nó.</string>
     <string name="feeds_access_add_title">Thêm quyền truy cập</string>
     <string name="feeds_permission_request_message">%1$s đang yêu cầu quyền sau:</string>
     <string name="feeds_allow_search">Cho phép bất kỳ ai tìm kiếm nguồn cấp</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">Dịch sang tiếng Anh và hiển thị dưới dạng các điểm đánh dấu.</string>
     <string name="feeds_source_url_hint_feed">ID thực thể nguồn cấp hoặc dấu vân tay</string>
     <string name="feeds_source_credibility_label">Độ tin cậy</string>
-    <string name="feeds_access_management_desc">Kiểm soát ai có thể xem và tương tác với feed này</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d giờ</item>
     </plurals>

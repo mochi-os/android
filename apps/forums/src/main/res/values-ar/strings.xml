@@ -268,7 +268,6 @@
     <string name="forums_access_level_moderate_full">الإشراف والنشر والتعليق والتصويت والعرض</string>
     <string name="forums_access_level_post_full">النشر والتعليق والتصويت والعرض</string>
     <string name="forums_access_level_vote_full">التصويت والعرض</string>
-    <string name="forums_access_management_description">تحكّم في من يمكنه عرض هذا المنتدى والتفاعل معه</string>
     <string name="forums_access_select_group">اختر مجموعة</string>
     <string name="forums_access_select_rule">اختر قاعدة</string>
     <string name="forums_ai_actions_label">إجراءات الذكاء الاصطناعي على المنشورات</string>
@@ -302,7 +301,6 @@
     <string name="forums_moderation_unit_replies">ردود</string>
     <string name="forums_moderation_unit_seconds">ثوانٍ</string>
     <string name="forums_settings_ai_updated">تم تحديث إعدادات الذكاء الاصطناعي</string>
-    <string name="forums_settings_delete_description">احذف هذا المنتدى وكل محتوياته نهائيًا.</string>
     <string name="forums_settings_forum_renamed">تمت إعادة تسمية المنتدى</string>
     <string name="forums_settings_name_clear_cd">مسح الاسم</string>
     <string name="forums_settings_unsubscribe_section">إلغاء الاشتراك في المنتدى</string>

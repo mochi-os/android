@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">Moderovať, prispievať, komentovať, hlasovať a zobraziť</string>
     <string name="forums_access_level_post_full">Prispievať, komentovať, hlasovať a zobraziť</string>
     <string name="forums_access_level_vote_full">Hlasovať a zobraziť</string>
-    <string name="forums_access_management_description">Určite, kto môže toto fórum zobraziť a používať</string>
     <string name="forums_access_select_group">Vyberte skupinu</string>
     <string name="forums_access_select_rule">Vyberte pravidlo</string>
     <string name="forums_ai_actions_label">Akcie AI pri príspevkoch</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">odpovedí</string>
     <string name="forums_moderation_unit_seconds">sekúnd</string>
     <string name="forums_settings_ai_updated">Nastavenia AI aktualizované</string>
-    <string name="forums_settings_delete_description">Natrvalo odstrániť toto fórum a všetok jeho obsah.</string>
     <string name="forums_settings_forum_renamed">Fórum premenované</string>
     <string name="forums_settings_name_clear_cd">Vymazať názov</string>
     <string name="forums_settings_unsubscribe_section">Odhlásiť odber fóra</string>

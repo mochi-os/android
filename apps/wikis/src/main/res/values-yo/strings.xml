@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Àwọn ìṣètò ti fi pamọ́</string>
     <string name="wikis_settings_home_save_failed">Kò lè fi àwọn ètò pamọ́</string>
     <string name="wikis_settings_section_delete">Pa wiki rẹ́</string>
-    <string name="wikis_settings_delete_description">Pa wiki yìí àti gbogbo àkóónú rẹ̀ rẹ́ pátápátá. A kò lè gba èyí padà.</string>
     <string name="wikis_settings_delete_action">Pa wiki rẹ́</string>
     <string name="wikis_settings_delete_confirm_title">Ṣé o dájú pátápátá?</string>
     <string name="wikis_settings_delete_confirm_message">A kò lè yí ìṣe yìí padà. Èyí yóò pa wiki àti gbogbo àkóónú rẹ̀ rẹ́ títí láé.</string>

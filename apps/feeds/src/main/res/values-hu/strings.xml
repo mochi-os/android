@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Leiratkozva</string>
     <string name="feeds_access_level_comment_full">Hozzászólás, reakció és megtekintés</string>
     <string name="feeds_rss_mode_posts_comments">Bejegyzések és hozzászólások</string>
-    <string name="feeds_delete_feed_description">Véglegesen törli ezt a hírfolyamot és minden tartalmát.</string>
     <string name="feeds_access_add_title">Hozzáférés hozzáadása</string>
     <string name="feeds_permission_request_message">%1$s a következő engedélyt kéri:</string>
     <string name="feeds_allow_search">Bárki kereshesse a hírfolyamot</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Fordítsa angolra, és jelenítse meg felsorolásként.</string>
     <string name="feeds_source_url_hint_feed">Hírfolyam entitás azonosító vagy ujjlenyomat</string>
     <string name="feeds_source_credibility_label">Hitelesség</string>
-    <string name="feeds_access_management_desc">Szabályozza, ki láthatja és használhatja ezt a feedet</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d óra</item>
         <item quantity="other">%1$d óra</item>

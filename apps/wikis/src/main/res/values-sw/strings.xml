@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Mipangilio imehifadhiwa</string>
     <string name="wikis_settings_home_save_failed">Imeshindwa kuhifadhi mipangilio</string>
     <string name="wikis_settings_section_delete">Futa wiki</string>
-    <string name="wikis_settings_delete_description">Futa kabisa wiki hii na maudhui yake yote. Hii haiwezi kutenduliwa.</string>
     <string name="wikis_settings_delete_action">Futa wiki</string>
     <string name="wikis_settings_delete_confirm_title">Una uhakika kabisa?</string>
     <string name="wikis_settings_delete_confirm_message">Kitendo hiki hakiwezi kutenduliwa. Hii itafuta wiki na yaliyomo yake yote kabisa.</string>

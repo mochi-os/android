@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Ukulawula, ukuthumela, ukuphawula, ukuvota nokubuka</string>
     <string name="forums_access_level_post_full">Ukuthumela, ukuphawula, ukuvota nokubuka</string>
     <string name="forums_access_level_vote_full">Ukuvota nokubuka</string>
-    <string name="forums_access_management_description">Lawula ukuthi ubani ongabona futhi abambe iqhaza kule fasitela</string>
     <string name="forums_access_select_group">Khetha iqembu</string>
     <string name="forums_access_select_rule">Khetha umthetho</string>
     <string name="forums_ai_actions_label">Izenzo ze-AI kokuthunyelwe</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">izimpendulo</string>
     <string name="forums_moderation_unit_seconds">amasekhondi</string>
     <string name="forums_settings_ai_updated">Izilungiselelo ze-AI zibuyekeziwe</string>
-    <string name="forums_settings_delete_description">Susa le fasitela nakho konke okuqukethwe kwayo unomphela.</string>
     <string name="forums_settings_forum_renamed">Ifasitela liqanjwe kabusha</string>
     <string name="forums_settings_name_clear_cd">Sula igama</string>
     <string name="forums_settings_unsubscribe_section">Yekisa ukubhalisa kule fasitela</string>

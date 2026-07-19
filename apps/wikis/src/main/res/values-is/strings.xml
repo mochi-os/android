@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Stillingar vistaðar</string>
     <string name="wikis_settings_home_save_failed">Tókst ekki að vista stillingar</string>
     <string name="wikis_settings_section_delete">Eyða wiki</string>
-    <string name="wikis_settings_delete_description">Eyða þessu wiki og öllu innihaldi þess varanlega. Þetta er ekki hægt að afturkalla.</string>
     <string name="wikis_settings_delete_action">Eyða wiki</string>
     <string name="wikis_settings_delete_confirm_title">Ertu alveg viss?</string>
     <string name="wikis_settings_delete_confirm_message">Ekki er hægt að afturkalla þessa aðgerð. Þetta mun eyða wiki-inu og öllu efni þess til frambúðar.</string>

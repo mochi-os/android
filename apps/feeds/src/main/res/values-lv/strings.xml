@@ -237,7 +237,6 @@
     <string name="feeds_unsubscribed">Atrakstīts</string>
     <string name="feeds_access_level_comment_full">Komentēt, reaģēt un skatīt</string>
     <string name="feeds_rss_mode_posts_comments">Ieraksti un komentāri</string>
-    <string name="feeds_delete_feed_description">Neatgriezeniski izdzēst šo plūsmu un visu tās saturu.</string>
     <string name="feeds_access_add_title">Pievienot piekļuvi</string>
     <string name="feeds_permission_request_message">%1$s pieprasa šādu atļauju:</string>
     <string name="feeds_allow_search">Ļaut jebkuram meklēt plūsmu</string>
@@ -264,7 +263,6 @@
     <string name="feeds_source_transform_hint">Tulkot uz angļu valodu un parādīt kā aizzīmes punktus.</string>
     <string name="feeds_source_url_hint_feed">Plūsmas entītijas ID vai pirkstu nospiedums</string>
     <string name="feeds_source_credibility_label">Uzticamība</string>
-    <string name="feeds_access_management_desc">Kontrolē, kas var skatīt un mijiedarboties ar šo plūsmu</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="zero">%1$d stundu</item>
         <item quantity="one">%1$d stunda</item>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Configuración imata</string>
     <string name="wikis_settings_home_save_failed">Janiw configuracionanak imaña atinkti</string>
     <string name="wikis_settings_section_delete">Wiki chhaqtayaña</string>
-    <string name="wikis_settings_delete_description">Aka wiki ukamp taqi contenidonakapa wiñayaru jiwayma. Aka jan kuttayañ atititi.</string>
     <string name="wikis_settings_delete_action">Wiki chhaqtayaña</string>
     <string name="wikis_settings_delete_confirm_title">Chiqpach iyawsta?</string>
     <string name="wikis_settings_delete_confirm_message">Aka appax janiw versión apnaqañ utjkiti</string>

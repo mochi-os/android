@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Configurações salvas</string>
     <string name="wikis_settings_home_save_failed">Falha ao salvar configurações</string>
     <string name="wikis_settings_section_delete">Excluir wiki</string>
-    <string name="wikis_settings_delete_description">Excluir permanentemente este wiki e todo o seu conteúdo. Isso não pode ser desfeito.</string>
     <string name="wikis_settings_delete_action">Excluir wiki</string>
     <string name="wikis_settings_delete_confirm_title">Você tem absoluta certeza?</string>
     <string name="wikis_settings_delete_confirm_message">Esta ação não pode ser desfeita. Isso excluirá permanentemente o wiki e todo o seu conteúdo.</string>

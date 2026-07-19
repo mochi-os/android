@@ -276,7 +276,6 @@
     <string name="wikis_settings_home_saved">已儲存設定</string>
     <string name="wikis_settings_home_save_failed">儲存設定失敗</string>
     <string name="wikis_settings_section_delete">刪除 wiki</string>
-    <string name="wikis_settings_delete_description">永久刪除呢個 wiki 同埋佢所有內容。呢個操作冇得還原。</string>
     <string name="wikis_settings_delete_action">刪除 wiki</string>
     <string name="wikis_settings_delete_confirm_title">你係咪真係好肯定？</string>
     <string name="wikis_settings_delete_confirm_message">呢個操作冇得還原。呢個會永久刪除個 wiki 同埋佢所有內容。</string>

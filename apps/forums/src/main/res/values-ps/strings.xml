@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">څارنه، لیکنه، تبصره، رایه ورکول او لیدل</string>
     <string name="forums_access_level_post_full">لیکنه، تبصره، رایه ورکول او لیدل</string>
     <string name="forums_access_level_vote_full">رایه ورکول او لیدل</string>
-    <string name="forums_access_management_description">کنټرول کړئ چې څوک دا فورم لیدلی او پکې برخه اخیستلی شي</string>
     <string name="forums_access_select_group">یوه ډله وټاکئ</string>
     <string name="forums_access_select_rule">یو قانون وټاکئ</string>
     <string name="forums_ai_actions_label">په لیکنو کې د AI کړنې</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">ځوابونه</string>
     <string name="forums_moderation_unit_seconds">ثانیې</string>
     <string name="forums_settings_ai_updated">د AI تنظیمات تازه شول</string>
-    <string name="forums_settings_delete_description">دا فورم او ټول محتوا یې د تل لپاره حذف کړئ.</string>
     <string name="forums_settings_forum_renamed">د فورم نوم بدل شو</string>
     <string name="forums_settings_name_clear_cd">نوم پاک کړئ</string>
     <string name="forums_settings_unsubscribe_section">له فورم څخه ګډون لغوه کړئ</string>

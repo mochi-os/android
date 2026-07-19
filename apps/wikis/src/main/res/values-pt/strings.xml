@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Definições guardadas</string>
     <string name="wikis_settings_home_save_failed">Falha ao guardar definições</string>
     <string name="wikis_settings_section_delete">Eliminar wiki</string>
-    <string name="wikis_settings_delete_description">Eliminar permanentemente este wiki e todo o seu conteúdo. Não é possível anular esta ação.</string>
     <string name="wikis_settings_delete_action">Eliminar wiki</string>
     <string name="wikis_settings_delete_confirm_title">Tem a certeza absoluta?</string>
     <string name="wikis_settings_delete_confirm_message">Esta ação não pode ser anulada. Isto eliminará permanentemente o wiki e todo o seu conteúdo.</string>

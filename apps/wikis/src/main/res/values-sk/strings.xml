@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Nastavenia uložené</string>
     <string name="wikis_settings_home_save_failed">Nepodarilo sa uložiť nastavenia</string>
     <string name="wikis_settings_section_delete">Odstrániť wiki</string>
-    <string name="wikis_settings_delete_description">Natrvalo odstrániť túto wiki a všetok jej obsah. Túto akciu nie je možné vrátiť späť.</string>
     <string name="wikis_settings_delete_action">Odstrániť wiki</string>
     <string name="wikis_settings_delete_confirm_title">Ste si úplne istí?</string>
     <string name="wikis_settings_delete_confirm_message">Túto akciu nemožno vrátiť. Toto natrvalo odstráni wiki a všetok jej obsah.</string>

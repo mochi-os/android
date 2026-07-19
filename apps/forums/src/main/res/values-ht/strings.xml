@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Modere, poste, komante, vote ak gade</string>
     <string name="forums_access_level_post_full">Poste, komante, vote ak gade</string>
     <string name="forums_access_level_vote_full">Vote ak gade</string>
-    <string name="forums_access_management_description">Kontwole kiyès ki ka wè fowòm sa a epi patisipe ladan l</string>
     <string name="forums_access_select_group">Chwazi yon gwoup</string>
     <string name="forums_access_select_rule">Chwazi yon règ</string>
     <string name="forums_ai_actions_label">Aksyon AI sou pòs yo</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">repons</string>
     <string name="forums_moderation_unit_seconds">segond</string>
     <string name="forums_settings_ai_updated">Paramèt AI yo mete ajou</string>
-    <string name="forums_settings_delete_description">Efase fowòm sa a ak tout kontni li nèt.</string>
     <string name="forums_settings_forum_renamed">Fowòm nan chanje non</string>
     <string name="forums_settings_name_clear_cd">Efase non an</string>
     <string name="forums_settings_unsubscribe_section">Dezabone nan fowòm nan</string>

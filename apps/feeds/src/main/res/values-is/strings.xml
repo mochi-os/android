@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Áskrift afskráð</string>
     <string name="feeds_access_level_comment_full">Skrifa athugasemd, bregðast við og skoða</string>
     <string name="feeds_rss_mode_posts_comments">Færslur og athugasemdir</string>
-    <string name="feeds_delete_feed_description">Eyða þessum straumi og öllu innihaldi hans varanlega.</string>
     <string name="feeds_access_add_title">Bæta við aðgangi</string>
     <string name="feeds_permission_request_message">%1$s biður um eftirfarandi heimild:</string>
     <string name="feeds_allow_search">Leyfa öllum að leita að straumi</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Þýddu á ensku og sýndu sem punkta.</string>
     <string name="feeds_source_url_hint_feed">Auðkenni straumefnis eða fingrafar</string>
     <string name="feeds_source_credibility_label">Trúverðugleiki</string>
-    <string name="feeds_access_management_desc">Stjórnaðu hverjir geta skoðað og átt samskipti við þetta streymi</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d klukkustund</item>
         <item quantity="other">%1$d klukkustundir</item>

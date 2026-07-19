@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Ti yọ ìforúkọsílẹ̀ kúrò</string>
     <string name="feeds_access_level_comment_full">Ṣe asọye, fesi, ati wo</string>
     <string name="feeds_rss_mode_posts_comments">Àwọn ìfìránṣẹ́ àti àlàyé</string>
-    <string name="feeds_delete_feed_description">Pa feed yìí àti gbogbo àkóónú rẹ̀ rẹ́ pátápátá.</string>
     <string name="feeds_access_add_title">Fi ìwọlé kún</string>
     <string name="feeds_permission_request_message">%1$s ń béèrè fún ìyọ̀ǹda wọ̀nyí:</string>
     <string name="feeds_allow_search">Gba ẹnikẹni laaye lati wa fidi</string>
@@ -261,7 +260,6 @@
     <string name="feeds_source_transform_hint">Túmọ̀ sí Gẹ̀ẹ́sì, kí o sì fihàn gẹ́gẹ́ bí àwọn àmì òòlu.</string>
     <string name="feeds_source_url_hint_feed">ID nkankan fidi tabi ẹsẹ ẹsẹ ìka</string>
     <string name="feeds_source_credibility_label">Ìgbẹ́kẹ̀lé</string>
-    <string name="feeds_access_management_desc">Darí ẹni tó lè wò àti bá feed yìí ṣiṣẹ́</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">wákàtí %1$d</item>
     </plurals>

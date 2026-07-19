@@ -291,8 +291,6 @@
     <string name="forums_settings_forum_renamed">Forum umbenannt</string>
     <string name="forums_settings_ai_updated">KI-Einstellungen aktualisiert</string>
     <string name="forums_settings_name_clear_cd">Namen löschen</string>
-    <string name="forums_settings_delete_description">Dieses Forum und alle seine Inhalte dauerhaft löschen.</string>
-    <string name="forums_access_management_description">Lege fest, wer dieses Forum sehen und darin interagieren darf</string>
     <string name="forums_find_found_by_url">Über URL gefunden</string>
     <string name="forums_saved_clear_confirm_body">Dadurch werden alle Beiträge aus deiner Liste der gespeicherten Beiträge entfernt. Dies kann nicht rückgängig gemacht werden.</string>
     <string name="forums_saved_clear_confirm_title">Alle gespeicherten Beiträge löschen?</string>

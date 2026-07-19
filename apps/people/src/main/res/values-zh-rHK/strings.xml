@@ -124,7 +124,6 @@
     <string name="people_group_description_optional">選填說明</string>
     <string name="people_group_name_required">必須輸入名稱</string>
     <string name="people_group_actions">群組操作</string>
-    <string name="people_group_actions_description">此群組的核心資訊</string>
     <string name="people_group_members_count">成員數量</string>
     <string name="people_group_edit">編輯群組</string>
     <string name="people_group_delete">刪除群組</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Parametrlər saxlanıldı</string>
     <string name="wikis_settings_home_save_failed">Parametrləri saxlamaq alınmadı</string>
     <string name="wikis_settings_section_delete">Vikini sil</string>
-    <string name="wikis_settings_delete_description">Bu wiki-ni və bütün məzmununu birdəfəlik silin. Bu geri qaytarıla bilməz.</string>
     <string name="wikis_settings_delete_action">Vikini sil</string>
     <string name="wikis_settings_delete_confirm_title">Tam əminsiniz?</string>
     <string name="wikis_settings_delete_confirm_message">Bu tətbiq yalnız Mochi heyəti üçündür.</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">تنظیمات ذخیره شد</string>
     <string name="wikis_settings_home_save_failed">ذخیره تنظیمات ناموفق بود</string>
     <string name="wikis_settings_section_delete">حذف ویکی</string>
-    <string name="wikis_settings_delete_description">این ویکی و تمام محتوای آن را به طور دائم حذف کنید. این عمل قابل بازگشت نیست.</string>
     <string name="wikis_settings_delete_action">حذف ویکی</string>
     <string name="wikis_settings_delete_confirm_title">آیا کاملاً مطمئن هستید؟</string>
     <string name="wikis_settings_delete_confirm_message">این عمل قابل بازگشت نیست. این کار ویکی و تمام محتوای آن را به‌طور دائمی حذف خواهد کرد.</string>

@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">بەشداری هەڵوەشایەوە</string>
     <string name="feeds_access_level_comment_full">لێدوان، کاردانەوە و بینین</string>
     <string name="feeds_rss_mode_posts_comments">پۆستەکان و بۆچوونەکان</string>
-    <string name="feeds_delete_feed_description">ئەم فیدە و هەموو ناوەڕۆکەکانی بە یەکجاری بسڕەوە.</string>
     <string name="feeds_access_add_title">زیادکردنی دەستڕاگەیشتن</string>
     <string name="feeds_permission_request_message">%1$s داوای ئەم ڕێگەپێدانەی خوارەوە دەکات:</string>
     <string name="feeds_allow_search">ڕێگە بدە بە هەرکەسێک بگەڕێت بۆ فید</string>
@@ -264,7 +263,6 @@
     <string name="feeds_source_transform_hint">وەربگێڕە بۆ ئینگلیزی، و وەک خاڵی بچووک پیشانبدە.</string>
     <string name="feeds_source_url_hint_feed">ناسنامەی ئەنتیتی یان فینگەرپرینتی Feed</string>
     <string name="feeds_source_credibility_label">متمانە</string>
-    <string name="feeds_access_management_desc">کۆنترۆلی ئەوە بکە کێ دەتوانێت ئەم فیدە ببینێت و کاری لەگەڵ بکات</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d کاتژمێر</item>
         <item quantity="other">%1$d کاتژمێر</item>

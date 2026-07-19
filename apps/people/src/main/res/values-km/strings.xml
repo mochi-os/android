@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">ការពិពណ៌នាស្រេចចិត្ត</string>
     <string name="people_group_name_required">តម្រូវឱ្យបញ្ចូលឈ្មោះ</string>
     <string name="people_group_actions">សកម្មភាពក្រុម</string>
-    <string name="people_group_actions_description">ព័ត៌មានស្នូលអំពីក្រុមនេះ</string>
     <string name="people_group_members">សមាជិក</string>
     <string name="people_group_members_count">ចំនួនសមាជិក</string>
     <string name="people_group_members_description">អ្នកប្រើប្រាស់ និងក្រុមដែលស្ថិតនៅក្នុងក្រុមនេះ</string>

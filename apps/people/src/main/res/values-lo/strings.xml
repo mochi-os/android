@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">ລາຍລະອຽດເພີ່ມເຕີມ</string>
     <string name="people_group_name_required">ຕ້ອງການຊື່</string>
     <string name="people_group_actions">ການກະທຳກຸ່ມ</string>
-    <string name="people_group_actions_description">ຂໍ້ມູນຫຼັກກ່ຽວກັບກຸ່ມນີ້</string>
     <string name="people_group_members">ສະມາຊິກ</string>
     <string name="people_group_members_count">ຈຳນວນສະມາຊິກ</string>
     <string name="people_group_members_description">ຜູ້ໃຊ້ແລະກຸ່ມທີ່ເປັນສ່ວນໜຶ່ງຂອງກຸ່ມນີ້</string>

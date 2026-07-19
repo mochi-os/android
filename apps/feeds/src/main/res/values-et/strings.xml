@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Tellimus tühistatud</string>
     <string name="feeds_access_level_comment_full">Kommenteeri, reageeri ja vaata</string>
     <string name="feeds_rss_mode_posts_comments">Postitused ja kommentaarid</string>
-    <string name="feeds_delete_feed_description">Kustuta see voog ja kogu selle sisu jäädavalt.</string>
     <string name="feeds_access_add_title">Lisa juurdepääs</string>
     <string name="feeds_permission_request_message">%1$s taotleb järgmist õigust:</string>
     <string name="feeds_allow_search">Luba kõigil otsida voogu</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Tõlgi inglise keelde ja näita täpploendina.</string>
     <string name="feeds_source_url_hint_feed">Voo olemi ID või sõrmejälg</string>
     <string name="feeds_source_credibility_label">Usaldusväärsus</string>
-    <string name="feeds_access_management_desc">Halda, kes saab seda voogu vaadata ja sellega suhelda</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d tund</item>
         <item quantity="other">%1$d tundi</item>

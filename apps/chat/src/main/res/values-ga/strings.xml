@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Marcáilte mar léite</string>
     <string name="chat_search_next">An chéad mheaitseáil eile</string>
     <string name="chat_search_prev">An mheaitseáil roimhe seo</string>
-    <string name="chat_settings_general_desc">Coigeartaigh socruithe comhrá</string>
     <string name="chat_settings_id">Aitheantas comhrá</string>
-    <string name="chat_settings_members_desc">Liosta daoine sa chomhrá seo</string>
 </resources>

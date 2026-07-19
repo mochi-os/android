@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">ማስተዳደር፣ መለጠፍ፣ አስተያየት መስጠት፣ መምረጥ እና ማየት</string>
     <string name="forums_access_level_post_full">መለጠፍ፣ አስተያየት መስጠት፣ መምረጥ እና ማየት</string>
     <string name="forums_access_level_vote_full">መምረጥ እና ማየት</string>
-    <string name="forums_access_management_description">ይህን መድረክ ማን ማየት እና መሳተፍ እንደሚችል ይቆጣጠሩ</string>
     <string name="forums_access_select_group">ቡድን ይምረጡ</string>
     <string name="forums_access_select_rule">ደንብ ይምረጡ</string>
     <string name="forums_ai_actions_label">በልጥፎች ላይ የAI እርምጃዎች</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">መልሶች</string>
     <string name="forums_moderation_unit_seconds">ሰከንዶች</string>
     <string name="forums_settings_ai_updated">የAI ቅንብሮች ተዘምነዋል</string>
-    <string name="forums_settings_delete_description">ይህን መድረክ እና ሁሉንም ይዘቱን በቋሚነት ይሰርዙ።</string>
     <string name="forums_settings_forum_renamed">የመድረኩ ስም ተቀይሯል</string>
     <string name="forums_settings_name_clear_cd">ስም አጽዳ</string>
     <string name="forums_settings_unsubscribe_section">ከመድረኩ ይውጡ</string>

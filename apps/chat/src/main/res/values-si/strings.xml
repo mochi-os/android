@@ -103,7 +103,5 @@
     <string name="chat_marked_read">කියවූ ලෙස ලකුණු කර ඇත</string>
     <string name="chat_search_next">ඊළඟ ගැළපීම</string>
     <string name="chat_search_prev">පෙර ගැළපීම</string>
-    <string name="chat_settings_general_desc">කතාබස් සැකසුම් සීරුමාරු කරන්න</string>
     <string name="chat_settings_id">කතාබස් හැඳුනුම</string>
-    <string name="chat_settings_members_desc">මෙම කතාබසෙහි සිටින පුද්ගලයින්ගේ ලැයිස්තුව</string>
 </resources>

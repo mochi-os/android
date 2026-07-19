@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">විකල්ප විස්තරය</string>
     <string name="people_group_name_required">නම අවශ්‍යයි</string>
     <string name="people_group_actions">කණ්ඩායම් ක්‍රියා</string>
-    <string name="people_group_actions_description">මෙම කණ්ඩායම ගැන මූලික තොරතුරු</string>
     <string name="people_group_members">සාමාජිකයින්</string>
     <string name="people_group_members_count">සාමාජික සංඛ්‍යාව</string>
     <string name="people_group_members_description">මෙම කණ්ඩායමට අයත් පරිශීලකයින් සහ කණ්ඩායම්</string>

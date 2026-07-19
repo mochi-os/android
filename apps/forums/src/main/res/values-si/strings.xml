@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">මධ්‍යස්ථ කිරීම, පළ කිරීම, අදහස් දැක්වීම, ඡන්දය දීම සහ බැලීම</string>
     <string name="forums_access_level_post_full">පළ කිරීම, අදහස් දැක්වීම, ඡන්දය දීම සහ බැලීම</string>
     <string name="forums_access_level_vote_full">ඡන්දය දීම සහ බැලීම</string>
-    <string name="forums_access_management_description">මෙම සංසදය කාට බැලිය හැකිද සහ සහභාගී විය හැකිද යන්න පාලනය කරන්න</string>
     <string name="forums_access_select_group">කණ්ඩායමක් තෝරන්න</string>
     <string name="forums_access_select_rule">නීතියක් තෝරන්න</string>
     <string name="forums_ai_actions_label">පළ කිරීම් මත AI ක්‍රියා</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">පිළිතුරු</string>
     <string name="forums_moderation_unit_seconds">තත්පර</string>
     <string name="forums_settings_ai_updated">AI සැකසුම් යාවත්කාලීන කරන ලදී</string>
-    <string name="forums_settings_delete_description">මෙම සංසදය සහ එහි සියලුම අන්තර්ගතය ස්ථිරවම මකන්න.</string>
     <string name="forums_settings_forum_renamed">සංසදය නැවත නම් කරන ලදී</string>
     <string name="forums_settings_name_clear_cd">නම හිස් කරන්න</string>
     <string name="forums_settings_unsubscribe_section">සංසදයෙන් දායකත්වය ඉවත් කරන්න</string>

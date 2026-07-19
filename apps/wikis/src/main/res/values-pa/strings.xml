@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ਸੈਟਿੰਗਾਂ ਸੰਭਾਲੀਆਂ ਗਈਆਂ</string>
     <string name="wikis_settings_home_save_failed">ਸੈਟਿੰਗਾਂ ਸੁਰੱਖਿਅਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_settings_section_delete">ਵਿਕੀ ਮਿਟਾਓ</string>
-    <string name="wikis_settings_delete_description">ਇਸ ਵਿਕੀ ਅਤੇ ਇਸਦੀ ਸਾਰੀ ਸਮੱਗਰੀ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਓ। ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="wikis_settings_delete_action">ਵਿਕੀ ਮਿਟਾਓ</string>
     <string name="wikis_settings_delete_confirm_title">ਕੀ ਤੁਸੀਂ ਪੂਰੀ ਤਰ੍ਹਾਂ ਯਕੀਨੀ ਹੋ?</string>
     <string name="wikis_settings_delete_confirm_message">ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਵਾਪਸ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ। ਇਹ wiki ਅਤੇ ਇਸ ਦੀ ਸਾਰੀ ਸਮੱਗਰੀ ਨੂੰ ਪੱਕੇ ਤੌਰ \'ਤੇ ਮਿਟਾ ਦੇਵੇਗਾ।</string>

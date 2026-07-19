@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="wikis_settings_home_save_failed">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಉಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="wikis_settings_section_delete">ವಿಕಿ ಅಳಿಸಿ</string>
-    <string name="wikis_settings_delete_description">ಈ wiki ಮತ್ತು ಅದರ ಎಲ್ಲಾ ವಿಷಯಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ಡಿಲೀಟ್ ಮಾಡಿ. ಇದನ್ನು ಮರಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="wikis_settings_delete_action">ವಿಕಿ ಅಳಿಸಿ</string>
     <string name="wikis_settings_delete_confirm_title">ನೀವು ಸಂಪೂರ್ಣ ಖಚಿತವಾಗಿದ್ದೀರಾ?</string>
     <string name="wikis_settings_delete_confirm_message">ಈ ಕ್ರಿಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗುವುದಿಲ್ಲ. ಇದು ವಿಕಿ ಮತ್ತು ಅದರ ಎಲ್ಲಾ ವಿಷಯವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ.</string>

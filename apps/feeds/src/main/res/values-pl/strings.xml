@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">Anulowano subskrypcję</string>
     <string name="feeds_access_level_comment_full">Komentuj, reaguj i przeglądaj</string>
     <string name="feeds_rss_mode_posts_comments">Wpisy i komentarze</string>
-    <string name="feeds_delete_feed_description">Trwale usuń ten kanał i całą jego zawartość.</string>
     <string name="feeds_access_add_title">Dodaj dostęp</string>
     <string name="feeds_permission_request_message">%1$s prosi o następujące uprawnienie:</string>
     <string name="feeds_allow_search">Pozwól wszystkim wyszukiwać kanał</string>
@@ -266,7 +265,6 @@
     <string name="feeds_source_transform_hint">Przetłumacz na angielski i pokaż jako punkty.</string>
     <string name="feeds_source_url_hint_feed">ID podmiotu kanału lub odcisk palca</string>
     <string name="feeds_source_credibility_label">Wiarygodność</string>
-    <string name="feeds_access_management_desc">Kontroluj, kto może przeglądać i wchodzić w interakcję z tym kanałem</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d godzina</item>
         <item quantity="few">%1$d godziny</item>

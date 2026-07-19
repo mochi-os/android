@@ -265,7 +265,6 @@
     <string name="forums_access_level_moderate_full">Moderare, postare, comentare, votare și vizualizare</string>
     <string name="forums_access_level_post_full">Postare, comentare, votare și vizualizare</string>
     <string name="forums_access_level_vote_full">Votare și vizualizare</string>
-    <string name="forums_access_management_description">Controlează cine poate vedea acest forum și interacționa cu el</string>
     <string name="forums_access_select_group">Selectează un grup</string>
     <string name="forums_access_select_rule">Selectează o regulă</string>
     <string name="forums_ai_actions_label">Acțiuni AI asupra postărilor</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">răspunsuri</string>
     <string name="forums_moderation_unit_seconds">secunde</string>
     <string name="forums_settings_ai_updated">Setările AI au fost actualizate</string>
-    <string name="forums_settings_delete_description">Șterge definitiv acest forum și tot conținutul său.</string>
     <string name="forums_settings_forum_renamed">Forum redenumit</string>
     <string name="forums_settings_name_clear_cd">Șterge numele</string>
     <string name="forums_settings_unsubscribe_section">Dezabonare de la forum</string>

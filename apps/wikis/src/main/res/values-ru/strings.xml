@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Настройки сохранены</string>
     <string name="wikis_settings_home_save_failed">Не удалось сохранить настройки</string>
     <string name="wikis_settings_section_delete">Удалить вики</string>
-    <string name="wikis_settings_delete_description">Безвозвратно удалить эту wiki и всё её содержимое. Это действие нельзя отменить.</string>
     <string name="wikis_settings_delete_action">Удалить вики</string>
     <string name="wikis_settings_delete_confirm_title">Вы абсолютно уверены?</string>
     <string name="wikis_settings_delete_confirm_message">Это действие нельзя отменить. Wiki и всё её содержимое будут удалены навсегда.</string>

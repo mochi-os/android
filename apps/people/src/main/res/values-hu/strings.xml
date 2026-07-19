@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Opcionális leírás</string>
     <string name="people_group_name_required">A név kötelező</string>
     <string name="people_group_actions">Csoportos műveletek</string>
-    <string name="people_group_actions_description">Alapvető információk erről a csoportról</string>
     <string name="people_group_members">Tagok</string>
     <string name="people_group_members_count">Tagok száma</string>
     <string name="people_group_members_description">A csoporthoz tartozó felhasználók és csoportok</string>

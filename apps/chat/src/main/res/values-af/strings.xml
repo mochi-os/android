@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Gemerk as gelees</string>
     <string name="chat_search_next">Volgende passing</string>
     <string name="chat_search_prev">Vorige passing</string>
-    <string name="chat_settings_general_desc">Pas geselsinstellings aan</string>
     <string name="chat_settings_id">Gesels-ID</string>
-    <string name="chat_settings_members_desc">Lys van mense in hierdie gesprek</string>
 </resources>

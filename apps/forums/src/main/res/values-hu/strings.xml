@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderálás, bejegyzés, hozzászólás, szavazás és megtekintés</string>
     <string name="forums_access_level_post_full">Bejegyzés, hozzászólás, szavazás és megtekintés</string>
     <string name="forums_access_level_vote_full">Szavazás és megtekintés</string>
-    <string name="forums_access_management_description">Szabályozza, ki láthatja és használhatja ezt a fórumot</string>
     <string name="forums_access_select_group">Válasszon csoportot</string>
     <string name="forums_access_select_rule">Válasszon szabályt</string>
     <string name="forums_ai_actions_label">MI-műveletek a bejegyzéseken</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">válasz</string>
     <string name="forums_moderation_unit_seconds">másodperc</string>
     <string name="forums_settings_ai_updated">MI-beállítások frissítve</string>
-    <string name="forums_settings_delete_description">Véglegesen törli ezt a fórumot és minden tartalmát.</string>
     <string name="forums_settings_forum_renamed">Fórum átnevezve</string>
     <string name="forums_settings_name_clear_cd">Név törlése</string>
     <string name="forums_settings_unsubscribe_section">Leiratkozás a fórumról</string>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Atzīmēts kā lasīts</string>
     <string name="chat_search_next">Nākamā atbilstība</string>
     <string name="chat_search_prev">Iepriekšējā atbilstība</string>
-    <string name="chat_settings_general_desc">Pielāgot tērzēšanas iestatījumus</string>
     <string name="chat_settings_id">Tērzēšanas ID</string>
-    <string name="chat_settings_members_desc">Šīs tērzēšanas dalībnieku saraksts</string>
 </resources>

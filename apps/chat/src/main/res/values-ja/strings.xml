@@ -103,7 +103,5 @@
     <string name="chat_marked_read">既読にしました</string>
     <string name="chat_search_next">次の一致</string>
     <string name="chat_search_prev">前の一致</string>
-    <string name="chat_settings_general_desc">チャットの設定を調整</string>
     <string name="chat_settings_id">チャットID</string>
-    <string name="chat_settings_members_desc">このチャットの参加者一覧</string>
 </resources>

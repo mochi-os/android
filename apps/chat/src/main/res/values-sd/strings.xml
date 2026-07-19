@@ -103,7 +103,5 @@
     <string name="chat_marked_read">پڙهيل طور نشان لڳايو ويو</string>
     <string name="chat_search_next">ايندڙ ميچ</string>
     <string name="chat_search_prev">پويون ميچ</string>
-    <string name="chat_settings_general_desc">چيٽ سيٽنگون ترتيب ڏيو</string>
     <string name="chat_settings_id">چيٽ جي سڃاڻپ</string>
-    <string name="chat_settings_members_desc">هن چيٽ ۾ ماڻهن جي فهرست</string>
 </resources>

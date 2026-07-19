@@ -103,7 +103,6 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
     ) {
         Section(
             title = stringResource(R.string.forums_access_management),
-            description = stringResource(R.string.forums_access_management_description),
             action = {
                 // Outlined, primary-tinted — the same shape as the delete action
                 // on the General tab, which tints itself error instead.

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Instellings gestoor</string>
     <string name="wikis_settings_home_save_failed">Kon nie instellings stoor nie</string>
     <string name="wikis_settings_section_delete">Verwyder wiki</string>
-    <string name="wikis_settings_delete_description">Verwyder hierdie wiki en al sy inhoud permanent. Dit kan nie ongedaan gemaak word nie.</string>
     <string name="wikis_settings_delete_action">Verwyder wiki</string>
     <string name="wikis_settings_delete_confirm_title">Is jy heeltemal seker?</string>
     <string name="wikis_settings_delete_confirm_message">Hierdie aksie kan nie ongedaan gemaak word nie. Dit sal die wiki en al sy inhoud permanent skrap.</string>

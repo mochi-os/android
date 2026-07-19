@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Make kòm li deja</string>
     <string name="chat_search_next">Pwochen rezilta</string>
     <string name="chat_search_prev">Rezilta anvan</string>
-    <string name="chat_settings_general_desc">Ajiste paramèt chat la</string>
     <string name="chat_settings_id">ID chat</string>
-    <string name="chat_settings_members_desc">Lis moun nan chat sa a</string>
 </resources>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">已标记为已读</string>
     <string name="chat_search_next">下一个匹配项</string>
     <string name="chat_search_prev">上一个匹配项</string>
-    <string name="chat_settings_general_desc">调整聊天设置</string>
     <string name="chat_settings_id">聊天 ID</string>
-    <string name="chat_settings_members_desc">此聊天中的成员列表</string>
 </resources>

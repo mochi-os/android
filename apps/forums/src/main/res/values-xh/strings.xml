@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Ukulawula, ukuposa, ukugqabaza, ukuvota nokujonga</string>
     <string name="forums_access_level_post_full">Ukuposa, ukugqabaza, ukuvota nokujonga</string>
     <string name="forums_access_level_vote_full">Ukuvota nokujonga</string>
-    <string name="forums_access_management_description">Lawula ukuba ngubani onokubona athathe inxaxheba kweli qonga</string>
     <string name="forums_access_select_group">Khetha iqela</string>
     <string name="forums_access_select_rule">Khetha umthetho</string>
     <string name="forums_ai_actions_label">Izenzo ze-AI kwiiposti</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">iimpendulo</string>
     <string name="forums_moderation_unit_seconds">imizuzwana</string>
     <string name="forums_settings_ai_updated">Useto lwe-AI luhlaziyiwe</string>
-    <string name="forums_settings_delete_description">Cima eli qonga nawo wonke umxholo walo ngokusisigxina.</string>
     <string name="forums_settings_forum_renamed">Iqonga liphinde lathiywa</string>
     <string name="forums_settings_name_clear_cd">Cima igama</string>
     <string name="forums_settings_unsubscribe_section">Rhoxisa ukubhalisa kweli qonga</string>

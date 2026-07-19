@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moñangareko, marandu, comentario, mbo\'e ha ehecha</string>
     <string name="forums_access_level_post_full">Marandu, comentario, mbo\'e ha ehecha</string>
     <string name="forums_access_level_vote_full">Mbo\'e ha ehecha</string>
-    <string name="forums_access_management_description">Emoñangareko mávapa ikatu ohecha ha oike ko fórope</string>
     <string name="forums_access_select_group">Eiporavo peteĩ atyguasu</string>
     <string name="forums_access_select_rule">Eiporavo peteĩ tekome\'ẽ</string>
     <string name="forums_ai_actions_label">AI tembiapo marandu ári</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">mbohovái</string>
     <string name="forums_moderation_unit_seconds">segundo</string>
     <string name="forums_settings_ai_updated">AI ñemboheko oñemboepyahúma</string>
-    <string name="forums_settings_delete_description">Ehundi tapiaguáicha ko fóro ha opa imba\'ekuaarã.</string>
     <string name="forums_settings_forum_renamed">Fóro réra oñemoambue</string>
     <string name="forums_settings_name_clear_cd">Embopotĩ téra</string>
     <string name="forums_settings_unsubscribe_section">Esẽ fórogui</string>

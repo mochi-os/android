@@ -119,7 +119,6 @@
     <string name="people_group_description_optional">可選描述</string>
     <string name="people_group_name_required">必須填寫名稱</string>
     <string name="people_group_actions">群組操作</string>
-    <string name="people_group_actions_description">呢個群組嘅核心資訊</string>
     <string name="people_group_members_count">成員數目</string>
     <string name="people_group_members_description">屬於呢個群組嘅用戶同群組</string>
     <string name="people_group_edit">編輯群組</string>

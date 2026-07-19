@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Поставките се зачувани</string>
     <string name="wikis_settings_home_save_failed">Неуспешно зачувување на поставки</string>
     <string name="wikis_settings_section_delete">Избриши вики</string>
-    <string name="wikis_settings_delete_description">Трајно избриши го ова wiki и целата негова содржина. Ова не може да се поништи.</string>
     <string name="wikis_settings_delete_action">Избриши вики</string>
     <string name="wikis_settings_delete_confirm_title">Дали си апсолутно сигурен?</string>
     <string name="wikis_settings_delete_confirm_message">Ова дејство не може да се поништи. Ова трајно ќе го избрише викито и сите негови содржини.</string>

@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Opsionele beskrywing</string>
     <string name="people_group_name_required">Naam word vereis</string>
     <string name="people_group_actions">Groepaksies</string>
-    <string name="people_group_actions_description">Kerninligting oor hierdie groep</string>
     <string name="people_group_members">Lede</string>
     <string name="people_group_members_count">Aantal lede</string>
     <string name="people_group_members_description">Gebruikers en groepe wat aan hierdie groep behoort</string>

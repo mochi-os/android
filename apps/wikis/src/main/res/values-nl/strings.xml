@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Instellingen opgeslagen</string>
     <string name="wikis_settings_home_save_failed">Instellingen opslaan mislukt</string>
     <string name="wikis_settings_section_delete">Wiki verwijderen</string>
-    <string name="wikis_settings_delete_description">Verwijder deze wiki en alle inhoud permanent. Dit kan niet ongedaan worden gemaakt.</string>
     <string name="wikis_settings_delete_action">Wiki verwijderen</string>
     <string name="wikis_settings_delete_confirm_title">Weet je het absoluut zeker?</string>
     <string name="wikis_settings_delete_confirm_message">Deze actie kan niet ongedaan worden gemaakt. Hiermee wordt de wiki en alle inhoud permanent verwijderd.</string>

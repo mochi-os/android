@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">관리, 게시, 댓글, 투표 및 보기</string>
     <string name="forums_access_level_post_full">게시, 댓글, 투표 및 보기</string>
     <string name="forums_access_level_vote_full">투표 및 보기</string>
-    <string name="forums_access_management_description">이 포럼을 보고 참여할 수 있는 사람을 관리합니다</string>
     <string name="forums_access_select_group">그룹 선택</string>
     <string name="forums_access_select_rule">규칙 선택</string>
     <string name="forums_ai_actions_label">게시물에 대한 AI 작업</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">개</string>
     <string name="forums_moderation_unit_seconds">초</string>
     <string name="forums_settings_ai_updated">AI 설정이 업데이트되었습니다</string>
-    <string name="forums_settings_delete_description">이 포럼과 모든 콘텐츠를 영구적으로 삭제합니다.</string>
     <string name="forums_settings_forum_renamed">포럼 이름이 변경되었습니다</string>
     <string name="forums_settings_name_clear_cd">이름 지우기</string>
     <string name="forums_settings_unsubscribe_section">포럼 구독 취소</string>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Окулду деп белгиленди</string>
     <string name="chat_search_next">Кийинки дал келүү</string>
     <string name="chat_search_prev">Мурунку дал келүү</string>
-    <string name="chat_settings_general_desc">Чат жөндөөлөрүн жөнгө салуу</string>
     <string name="chat_settings_id">Чаттын IDси</string>
-    <string name="chat_settings_members_desc">Бул чаттагы адамдардын тизмеси</string>
 </resources>

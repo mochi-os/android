@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">Moderiranje, objavljanje, komentiranje, glasovanje in ogled</string>
     <string name="forums_access_level_post_full">Objavljanje, komentiranje, glasovanje in ogled</string>
     <string name="forums_access_level_vote_full">Glasovanje in ogled</string>
-    <string name="forums_access_management_description">Določite, kdo lahko vidi ta forum in sodeluje v njem</string>
     <string name="forums_access_select_group">Izberite skupino</string>
     <string name="forums_access_select_rule">Izberite pravilo</string>
     <string name="forums_ai_actions_label">Dejanja UI nad objavami</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">odgovorov</string>
     <string name="forums_moderation_unit_seconds">sekund</string>
     <string name="forums_settings_ai_updated">Nastavitve UI posodobljene</string>
-    <string name="forums_settings_delete_description">Trajno izbriši ta forum in vso njegovo vsebino.</string>
     <string name="forums_settings_forum_renamed">Forum preimenovan</string>
     <string name="forums_settings_name_clear_cd">Počisti ime</string>
     <string name="forums_settings_unsubscribe_section">Odjava s foruma</string>

@@ -291,8 +291,6 @@
     <string name="forums_settings_forum_renamed">Forum renamed</string>
     <string name="forums_settings_ai_updated">AI settings updated</string>
     <string name="forums_settings_name_clear_cd">Clear name</string>
-    <string name="forums_settings_delete_description">Permanently delete this forum and all its content.</string>
-    <string name="forums_access_management_description">Control who can view and interact with this forum</string>
     <string name="forums_find_found_by_url">Found by URL</string>
     <string name="forums_saved_clear_confirm_body">This removes every post from your saved list. This cannot be undone.</string>
     <string name="forums_saved_clear_confirm_title">Clear all saved posts?</string>

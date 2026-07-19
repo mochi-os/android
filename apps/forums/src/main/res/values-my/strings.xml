@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">စိစစ်ခြင်း၊ တင်ခြင်း၊ မှတ်ချက်ပေးခြင်း၊ မဲပေးခြင်းနှင့် ကြည့်ရှုခြင်း</string>
     <string name="forums_access_level_post_full">တင်ခြင်း၊ မှတ်ချက်ပေးခြင်း၊ မဲပေးခြင်းနှင့် ကြည့်ရှုခြင်း</string>
     <string name="forums_access_level_vote_full">မဲပေးခြင်းနှင့် ကြည့်ရှုခြင်း</string>
-    <string name="forums_access_management_description">ဤဖိုရမ်ကို မည်သူကြည့်ရှုနိုင်ပြီး ပါဝင်နိုင်သည်ကို ထိန်းချုပ်ပါ</string>
     <string name="forums_access_select_group">အုပ်စုတစ်ခု ရွေးပါ</string>
     <string name="forums_access_select_rule">စည်းမျဉ်းတစ်ခု ရွေးပါ</string>
     <string name="forums_ai_actions_label">ပို့စ်များပေါ်တွင် AI လုပ်ဆောင်ချက်များ</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">အကြောင်းပြန်ချက်</string>
     <string name="forums_moderation_unit_seconds">စက္ကန့်</string>
     <string name="forums_settings_ai_updated">AI ဆက်တင်များ အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
-    <string name="forums_settings_delete_description">ဤဖိုရမ်နှင့် ၎င်း၏ အကြောင်းအရာအားလုံးကို အပြီးအပိုင် ဖျက်ပါ။</string>
     <string name="forums_settings_forum_renamed">ဖိုရမ်အမည် ပြောင်းလဲပြီးပါပြီ</string>
     <string name="forums_settings_name_clear_cd">အမည်ကို ရှင်းလင်းပါ</string>
     <string name="forums_settings_unsubscribe_section">ဖိုရမ်မှ စာရင်းသွင်းမှု ရပ်ဆိုင်းပါ</string>

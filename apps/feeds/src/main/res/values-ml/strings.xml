@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">അൺസബ്സ്ക്രൈബ് ചെയ്തു</string>
     <string name="feeds_access_level_comment_full">കമന്റ് ചെയ്യുക, പ്രതികരിക്കുക, കാണുക</string>
     <string name="feeds_rss_mode_posts_comments">പോസ്റ്റുകളും അഭിപ്രായങ്ങളും</string>
-    <string name="feeds_delete_feed_description">ഈ ഫീഡും അതിന്റെ എല്ലാ ഉള്ളടക്കവും ശാശ്വതമായി ഇല്ലാതാക്കുക.</string>
     <string name="feeds_access_add_title">ആക്സസ് ചേർക്കുക</string>
     <string name="feeds_permission_request_message">%1$s താഴെപ്പറയുന്ന അനുമതി അഭ്യർത്ഥിക്കുന്നു:</string>
     <string name="feeds_allow_search">എല്ലാവർക്കും ഫീഡ് തിരയാൻ അനുവദിക്കുക</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">ഇംഗ്ലീഷിലേക്ക് വിവർത്തനം ചെയ്യുക, ബുള്ളറ്റ് പോയിന്റുകളായി കാണിക്കുക.</string>
     <string name="feeds_source_url_hint_feed">ഫീഡ് എന്റിറ്റി ഐഡി അല്ലെങ്കിൽ ഫിംഗർപ്രിന്റ്</string>
     <string name="feeds_source_credibility_label">വിശ്വാസ്യത</string>
-    <string name="feeds_access_management_desc">ഈ ഫീഡ് ആരൊക്കെ കാണാനും ഇടപഴകാനും കഴിയുമെന്ന് നിയന്ത്രിക്കുക</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d മണിക്കൂർ</item>
         <item quantity="other">%1$d മണിക്കൂർ</item>

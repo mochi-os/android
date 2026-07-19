@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Tetapan disimpan</string>
     <string name="wikis_settings_home_save_failed">Gagal menyimpan tetapan</string>
     <string name="wikis_settings_section_delete">Padam wiki</string>
-    <string name="wikis_settings_delete_description">Padam wiki ini dan semua kandungannya secara kekal. Ini tidak boleh dibatalkan.</string>
     <string name="wikis_settings_delete_action">Padam wiki</string>
     <string name="wikis_settings_delete_confirm_title">Adakah anda pasti?</string>
     <string name="wikis_settings_delete_confirm_message">Tindakan ini tidak boleh dibatalkan. Ini akan memadam wiki dan semua kandungannya secara kekal.</string>

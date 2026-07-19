@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Վերահսկել, հրապարակել, մեկնաբանել, քվեարկել և դիտել</string>
     <string name="forums_access_level_post_full">Հրապարակել, մեկնաբանել, քվեարկել և դիտել</string>
     <string name="forums_access_level_vote_full">Քվեարկել և դիտել</string>
-    <string name="forums_access_management_description">Կառավարեք, թե ով կարող է տեսնել այս ֆորումը և մասնակցել դրան</string>
     <string name="forums_access_select_group">Ընտրեք խումբ</string>
     <string name="forums_access_select_rule">Ընտրեք կանոն</string>
     <string name="forums_ai_actions_label">ԱԲ գործողությունները գրառումների վրա</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">պատասխան</string>
     <string name="forums_moderation_unit_seconds">վայրկյան</string>
     <string name="forums_settings_ai_updated">ԱԲ կարգավորումները թարմացվեցին</string>
-    <string name="forums_settings_delete_description">Ընդմիշտ ջնջել այս ֆորումը և դրա ամբողջ բովանդակությունը։</string>
     <string name="forums_settings_forum_renamed">Ֆորումը վերանվանվեց</string>
     <string name="forums_settings_name_clear_cd">Մաքրել անունը</string>
     <string name="forums_settings_unsubscribe_section">Չեղարկել ֆորումի բաժանորդագրությունը</string>

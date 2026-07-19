@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderasiya, paylaşım, şərh, səsvermə və baxış</string>
     <string name="forums_access_level_post_full">Paylaşım, şərh, səsvermə və baxış</string>
     <string name="forums_access_level_vote_full">Səsvermə və baxış</string>
-    <string name="forums_access_management_description">Bu forumu kimin görə və orada iştirak edə biləcəyini idarə edin</string>
     <string name="forums_access_select_group">Qrup seçin</string>
     <string name="forums_access_select_rule">Qayda seçin</string>
     <string name="forums_ai_actions_label">Paylaşımlarda Sİ əməliyyatları</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">cavab</string>
     <string name="forums_moderation_unit_seconds">saniyə</string>
     <string name="forums_settings_ai_updated">Sİ parametrləri yeniləndi</string>
-    <string name="forums_settings_delete_description">Bu forumu və bütün məzmununu həmişəlik silin.</string>
     <string name="forums_settings_forum_renamed">Forumun adı dəyişdirildi</string>
     <string name="forums_settings_name_clear_cd">Adı təmizlə</string>
     <string name="forums_settings_unsubscribe_section">Forumdan abunəlikdən çıx</string>

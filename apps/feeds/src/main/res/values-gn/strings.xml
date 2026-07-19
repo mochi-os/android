@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Oñemboaty\'ỹ</string>
     <string name="feeds_access_level_comment_full">Comentario, hechauka, ha hecha</string>
     <string name="feeds_rss_mode_posts_comments">Marandu ha comentarios</string>
-    <string name="feeds_delete_feed_description">Embogue tapykue ko feed ha opa imba\'e.</string>
     <string name="feeds_access_add_title">Embojuaju jeike</string>
     <string name="feeds_permission_request_message">%1$s ojerure ko ñemoneĩ:</string>
     <string name="feeds_allow_search">Eipysyrõ opavavépe oheka feed</string>
@@ -261,7 +260,6 @@
     <string name="feeds_source_transform_hint">Embogua inglés-pe, ha ehechauka punto poravopyrã.</string>
     <string name="feeds_source_url_hint_feed">Feed entidad ID térã fingerprint</string>
     <string name="feeds_source_credibility_label">Credibilidad</string>
-    <string name="feeds_access_management_desc">Embohekombo\'e máva ohecháva ha oikóva ko feed ndive</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d aravo</item>
     </plurals>

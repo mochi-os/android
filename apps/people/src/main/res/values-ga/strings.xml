@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Cur síos roghnach</string>
     <string name="people_group_name_required">Tá ainm riachtanach</string>
     <string name="people_group_actions">Gníomhaíochtaí grúpa</string>
-    <string name="people_group_actions_description">Eolas lárnach faoin ngrúpa seo</string>
     <string name="people_group_members">Baill</string>
     <string name="people_group_members_count">Líon na mball</string>
     <string name="people_group_members_description">Úsáideoirí agus grúpaí a bhaineann leis an ngrúpa seo</string>

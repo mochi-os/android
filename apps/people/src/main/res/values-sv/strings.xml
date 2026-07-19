@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Valfri beskrivning</string>
     <string name="people_group_name_required">Namn krävs</string>
     <string name="people_group_actions">Gruppåtgärder</string>
-    <string name="people_group_actions_description">Grundinformation om denna grupp</string>
     <string name="people_group_members">Medlemmar</string>
     <string name="people_group_members_count">Antal medlemmar</string>
     <string name="people_group_members_description">Användare och grupper som tillhör den här gruppen</string>

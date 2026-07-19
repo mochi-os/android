@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Setélan disimpen</string>
     <string name="wikis_settings_home_save_failed">Gagal nyimpen setélan</string>
     <string name="wikis_settings_section_delete">Hapus wiki</string>
-    <string name="wikis_settings_delete_description">Pupus permanén wiki ieu jeung sakabéh eusina. Ieu teu bisa dibatalkeun.</string>
     <string name="wikis_settings_delete_action">Hapus wiki</string>
     <string name="wikis_settings_delete_confirm_title">Anjeun bener-bener yakin?</string>
     <string name="wikis_settings_delete_confirm_message">Aksi ieu teu tiasa dibatalkeun. Ieu bakal ngahapus permanén wiki sarta sagala eusina.</string>

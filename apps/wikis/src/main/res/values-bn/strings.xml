@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">সেটিংস সংরক্ষিত হয়েছে</string>
     <string name="wikis_settings_home_save_failed">সেটিংস সংরক্ষণ করতে ব্যর্থ</string>
     <string name="wikis_settings_section_delete">wiki মুছুন</string>
-    <string name="wikis_settings_delete_description">এই উইকি ও এর সমস্ত বিষয়বস্তু স্থায়ীভাবে মুছে ফেলুন। এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
     <string name="wikis_settings_delete_action">wiki মুছুন</string>
     <string name="wikis_settings_delete_confirm_title">আপনি কি সম্পূর্ণ নিশ্চিত?</string>
     <string name="wikis_settings_delete_confirm_message">এই অ্যাকশন পূর্বাবস্থায় ফিরিয়ে আনা যাবে না। এটি স্থায়ীভাবে wiki এবং এর সমস্ত বিষয়বস্তু মুছে ফেলবে।</string>

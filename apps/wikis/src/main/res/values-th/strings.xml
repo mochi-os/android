@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">บันทึกการตั้งค่าแล้ว</string>
     <string name="wikis_settings_home_save_failed">ไม่สามารถบันทึกการตั้งค่าได้</string>
     <string name="wikis_settings_section_delete">ลบ wiki</string>
-    <string name="wikis_settings_delete_description">ลบ wiki นี้และเนื้อหาทั้งหมดอย่างถาวร ไม่สามารถกู้คืนได้</string>
     <string name="wikis_settings_delete_action">ลบ wiki</string>
     <string name="wikis_settings_delete_confirm_title">คุณแน่ใจอย่างยิ่งหรือไม่?</string>
     <string name="wikis_settings_delete_confirm_message">ไม่สามารถย้อนกลับการกระทำนี้ได้ การกระทำนี้จะลบวิกิและเนื้อหาทั้งหมดอย่างถาวร</string>

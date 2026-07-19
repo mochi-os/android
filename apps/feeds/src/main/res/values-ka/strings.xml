@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">გავაუქმოთ რეპოზიტორის გამოწერა?</string>
     <string name="feeds_access_level_comment_full">კომენტარი, რეაქცია და ნახვა</string>
     <string name="feeds_rss_mode_posts_comments">პოსტები და კომენტარები</string>
-    <string name="feeds_delete_feed_description">სამუდამოდ წაშალეთ ეს ფიდი და მთელი მისი შინაარსი.</string>
     <string name="feeds_access_add_title">წვდომის დამატება</string>
     <string name="feeds_permission_request_message">%1$s ითხოვს შემდეგ ნებართვას:</string>
     <string name="feeds_allow_search">ნებისმიერს feed-ის ძიების ნება დართე</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">ტრეკინგის ნომერი</string>
     <string name="feeds_source_url_hint_feed">არხის ერთეულის ID ან ანაბეჭდი</string>
     <string name="feeds_source_credibility_label">სანდოობა</string>
-    <string name="feeds_access_management_desc">აკონტროლეთ ვის შეუძლია ამ feed-ის ნახვა და მასთან ურთიერთობა</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d საათი</item>
         <item quantity="other">%1$d საათი</item>

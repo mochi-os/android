@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">คำอธิบาย (ไม่บังคับ)</string>
     <string name="people_group_name_required">ต้องระบุชื่อ</string>
     <string name="people_group_actions">การดำเนินการกลุ่ม</string>
-    <string name="people_group_actions_description">ข้อมูลหลักเกี่ยวกับกลุ่มนี้</string>
     <string name="people_group_members">สมาชิก</string>
     <string name="people_group_members_count">จำนวนสมาชิก</string>
     <string name="people_group_members_description">ผู้ใช้และกลุ่มที่อยู่ในกลุ่มนี้</string>

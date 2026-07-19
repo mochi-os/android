@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">ان سبسکرائب ہو گیا</string>
     <string name="feeds_access_level_comment_full">تبصرہ کریں، رد عمل دیں اور دیکھیں</string>
     <string name="feeds_rss_mode_posts_comments">پوسٹس اور تبصرے</string>
-    <string name="feeds_delete_feed_description">اس feed اور اس کے تمام مواد کو مستقل طور پر حذف کریں۔</string>
     <string name="feeds_access_add_title">رسائی شامل کریں</string>
     <string name="feeds_permission_request_message">%1$s درج ذیل اجازت کی درخواست کر رہا ہے:</string>
     <string name="feeds_allow_search">کسی کو بھی فیڈ تلاش کرنے کی اجازت دیں</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">انگریزی میں ترجمہ کریں، اور بلٹ پوائنٹس کے طور پر دکھائیں۔</string>
     <string name="feeds_source_url_hint_feed">فیڈ اینٹیٹی ID یا فنگر پرنٹ</string>
     <string name="feeds_source_credibility_label">ساکھ</string>
-    <string name="feeds_access_management_desc">کنٹرول کریں کہ کون اس فیڈ کو دیکھ سکتا ہے اور اس سے تعامل کر سکتا ہے</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d گھنٹہ</item>
         <item quantity="other">%1$d گھنٹے</item>

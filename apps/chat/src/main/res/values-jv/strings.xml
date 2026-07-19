@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Ditandhani wis diwaca</string>
     <string name="chat_search_next">Sing cocog sabanjure</string>
     <string name="chat_search_prev">Sing cocog sadurunge</string>
-    <string name="chat_settings_general_desc">Atur setelan obrolan</string>
     <string name="chat_settings_id">ID obrolan</string>
-    <string name="chat_settings_members_desc">Dhaptar wong ing obrolan iki</string>
 </resources>

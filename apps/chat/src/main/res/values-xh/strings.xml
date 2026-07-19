@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Iphawulwe njengefundiwe</string>
     <string name="chat_search_next">Ukungqamana okulandelayo</string>
     <string name="chat_search_prev">Ukungqamana kwangaphambili</string>
-    <string name="chat_settings_general_desc">Lungisa iisetingi zencoko</string>
     <string name="chat_settings_id">I-ID yencoko</string>
-    <string name="chat_settings_members_desc">Uluhlu lwabantu kule ncoko</string>
 </resources>

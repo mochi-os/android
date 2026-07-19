@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Deskripsi opsional</string>
     <string name="people_group_name_required">Nama wajib diisi</string>
     <string name="people_group_actions">Tindakan grup</string>
-    <string name="people_group_actions_description">Informasi inti tentang grup ini</string>
     <string name="people_group_members">Anggota</string>
     <string name="people_group_members_count">Jumlah Anggota</string>
     <string name="people_group_members_description">Pengguna dan grup yang termasuk dalam grup ini</string>

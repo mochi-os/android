@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Đã lưu cài đặt</string>
     <string name="wikis_settings_home_save_failed">Không lưu cài đặt được</string>
     <string name="wikis_settings_section_delete">Xóa wiki</string>
-    <string name="wikis_settings_delete_description">Xoá vĩnh viễn wiki này và toàn bộ nội dung của nó. Không thể hoàn tác.</string>
     <string name="wikis_settings_delete_action">Xóa wiki</string>
     <string name="wikis_settings_delete_confirm_title">Bạn hoàn toàn chắc chắn?</string>
     <string name="wikis_settings_delete_confirm_message">Hành động này không thể hoàn tác. Thao tác này sẽ xóa vĩnh viễn wiki và toàn bộ nội dung của nó.</string>

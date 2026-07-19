@@ -103,7 +103,5 @@
     <string name="chat_marked_read">បានសម្គាល់ថាបានអាន</string>
     <string name="chat_search_next">ការផ្គូផ្គងបន្ទាប់</string>
     <string name="chat_search_prev">ការផ្គូផ្គងមុន</string>
-    <string name="chat_settings_general_desc">កែសម្រួលការកំណត់ជជែក</string>
     <string name="chat_settings_id">លេខសម្គាល់ជជែក</string>
-    <string name="chat_settings_members_desc">បញ្ជីមនុស្សនៅក្នុងការជជែកនេះ</string>
 </resources>

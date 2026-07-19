@@ -104,7 +104,5 @@
     <string name="chat_marked_read">Đã đánh dấu là đã đọc</string>
     <string name="chat_search_next">Kết quả khớp tiếp theo</string>
     <string name="chat_search_prev">Kết quả khớp trước</string>
-    <string name="chat_settings_general_desc">Điều chỉnh cài đặt trò chuyện</string>
     <string name="chat_settings_id">ID trò chuyện</string>
-    <string name="chat_settings_members_desc">Danh sách người trong cuộc trò chuyện này</string>
 </resources>

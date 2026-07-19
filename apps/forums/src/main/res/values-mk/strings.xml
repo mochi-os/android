@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Модерирање, објавување, коментирање, гласање и преглед</string>
     <string name="forums_access_level_post_full">Објавување, коментирање, гласање и преглед</string>
     <string name="forums_access_level_vote_full">Гласање и преглед</string>
-    <string name="forums_access_management_description">Одредете кој може да го гледа овој форум и да учествува во него</string>
     <string name="forums_access_select_group">Изберете група</string>
     <string name="forums_access_select_rule">Изберете правило</string>
     <string name="forums_ai_actions_label">Дејства на ВИ врз објавите</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">одговори</string>
     <string name="forums_moderation_unit_seconds">секунди</string>
     <string name="forums_settings_ai_updated">Поставките за ВИ се ажурирани</string>
-    <string name="forums_settings_delete_description">Трајно избришете го овој форум и целата негова содржина.</string>
     <string name="forums_settings_forum_renamed">Форумот е преименуван</string>
     <string name="forums_settings_name_clear_cd">Исчисти го името</string>
     <string name="forums_settings_unsubscribe_section">Откажи претплата на форумот</string>

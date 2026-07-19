@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderasyon, gönderi, yorum, oy verme ve görüntüleme</string>
     <string name="forums_access_level_post_full">Gönderi, yorum, oy verme ve görüntüleme</string>
     <string name="forums_access_level_vote_full">Oy verme ve görüntüleme</string>
-    <string name="forums_access_management_description">Bu forumu kimlerin görüntüleyebileceğini ve kullanabileceğini belirleyin</string>
     <string name="forums_access_select_group">Bir grup seçin</string>
     <string name="forums_access_select_rule">Bir kural seçin</string>
     <string name="forums_ai_actions_label">Gönderilerde yapay zekâ işlemleri</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">yanıt</string>
     <string name="forums_moderation_unit_seconds">saniye</string>
     <string name="forums_settings_ai_updated">Yapay zekâ ayarları güncellendi</string>
-    <string name="forums_settings_delete_description">Bu forumu ve tüm içeriğini kalıcı olarak sil.</string>
     <string name="forums_settings_forum_renamed">Forum yeniden adlandırıldı</string>
     <string name="forums_settings_name_clear_cd">Adı temizle</string>
     <string name="forums_settings_unsubscribe_section">Forum aboneliğinden çık</string>

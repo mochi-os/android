@@ -91,7 +91,5 @@
     <string name="chat_marked_read">已標記為已讀</string>
     <string name="chat_search_next">下一個相符項</string>
     <string name="chat_search_prev">上一個相符項</string>
-    <string name="chat_settings_general_desc">調整傾偈設定</string>
     <string name="chat_settings_id">傾偈 ID</string>
-    <string name="chat_settings_members_desc">呢個傾偈入面嘅人嘅名單</string>
 </resources>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">ຖືກໝາຍວ່າອ່ານແລ້ວ</string>
     <string name="chat_search_next">ຜົນທີ່ກົງກັນຕໍ່ໄປ</string>
     <string name="chat_search_prev">ຜົນທີ່ກົງກັນກ່ອນໜ້າ</string>
-    <string name="chat_settings_general_desc">ປັບການຕັ້ງຄ່າການສົນທະນາ</string>
     <string name="chat_settings_id">ໄອດີການສົນທະນາ</string>
-    <string name="chat_settings_members_desc">ລາຍຊື່ຄົນໃນການສົນທະນານີ້</string>
 </resources>

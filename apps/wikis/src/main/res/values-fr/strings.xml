@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Paramètres enregistrés</string>
     <string name="wikis_settings_home_save_failed">Échec de l\'enregistrement des paramètres</string>
     <string name="wikis_settings_section_delete">Supprimer le wiki</string>
-    <string name="wikis_settings_delete_description">Supprimer définitivement ce wiki et tout son contenu. Cette action est irréversible.</string>
     <string name="wikis_settings_delete_action">Supprimer le wiki</string>
     <string name="wikis_settings_delete_confirm_title">Êtes-vous absolument sûr ?</string>
     <string name="wikis_settings_delete_confirm_message">Cette action est irréversible. Le wiki et tout son contenu seront supprimés définitivement.</string>

@@ -237,7 +237,6 @@
     <string name="feeds_unsubscribed">Pretplata otkazana</string>
     <string name="feeds_access_level_comment_full">Komentiraj, reagiraj i pregledaj</string>
     <string name="feeds_rss_mode_posts_comments">Objave i komentari</string>
-    <string name="feeds_delete_feed_description">Trajno izbriši ovaj feed i sav njegov sadržaj.</string>
     <string name="feeds_access_add_title">Dodaj pristup</string>
     <string name="feeds_permission_request_message">%1$s traži sljedeće dopuštenje:</string>
     <string name="feeds_allow_search">Dopusti svima pretraživanje feeda</string>
@@ -264,7 +263,6 @@
     <string name="feeds_source_transform_hint">Prevedi na engleski i prikaži kao natuknice.</string>
     <string name="feeds_source_url_hint_feed">ID entiteta feeda ili otisak</string>
     <string name="feeds_source_credibility_label">Vjerodostojnost</string>
-    <string name="feeds_access_management_desc">Kontrolirajte tko može pregledavati i komunicirati s ovim feedom</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d sat</item>
         <item quantity="few">%1$d sata</item>

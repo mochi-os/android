@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">購読を解除しました</string>
     <string name="feeds_access_level_comment_full">コメント、リアクション、表示</string>
     <string name="feeds_rss_mode_posts_comments">投稿とコメント</string>
-    <string name="feeds_delete_feed_description">このフィードとすべてのコンテンツを完全に削除します。</string>
     <string name="feeds_access_add_title">アクセスを追加</string>
     <string name="feeds_permission_request_message">%1$sが次の権限をリクエストしています:</string>
     <string name="feeds_allow_search">誰でもフィードを検索できるようにする</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">英語に翻訳し、箇条書きで表示してください。</string>
     <string name="feeds_source_url_hint_feed">フィードのエンティティIDまたはフィンガープリント</string>
     <string name="feeds_source_credibility_label">信頼性</string>
-    <string name="feeds_access_management_desc">このフィードを誰が表示・操作できるかを管理</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d時間</item>
     </plurals>

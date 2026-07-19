@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">პარამეტრები შენახულია</string>
     <string name="wikis_settings_home_save_failed">პარამეტრების შენახვა ვერ მოხერხდა</string>
     <string name="wikis_settings_section_delete">wiki-ის წაშლა</string>
-    <string name="wikis_settings_delete_description">სამუდამოდ წაშალეთ ეს ვიკი და მთელი მისი შინაარსი. ეს ვერ გაუქმდება.</string>
     <string name="wikis_settings_delete_action">wiki-ის წაშლა</string>
     <string name="wikis_settings_delete_confirm_title">ნამდვილად დარწმუნებული ხართ?</string>
     <string name="wikis_settings_delete_confirm_message">ეს მოქმედება ვერ გაუქმდება. ის სამუდამოდ წაშლის ვიკის და მთელ მის შინაარსს.</string>

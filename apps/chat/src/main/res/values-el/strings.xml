@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Σημάνθηκε ως αναγνωσμένο</string>
     <string name="chat_search_next">Επόμενη αντιστοίχιση</string>
     <string name="chat_search_prev">Προηγούμενη αντιστοίχιση</string>
-    <string name="chat_settings_general_desc">Προσαρμογή ρυθμίσεων συνομιλίας</string>
     <string name="chat_settings_id">Αναγνωριστικό συνομιλίας</string>
-    <string name="chat_settings_members_desc">Λίστα ατόμων σε αυτήν τη συνομιλία</string>
 </resources>

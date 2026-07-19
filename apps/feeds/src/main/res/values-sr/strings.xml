@@ -237,7 +237,6 @@
     <string name="feeds_unsubscribed">Претплата отказана</string>
     <string name="feeds_access_level_comment_full">Коментариши, реагуј и прегледај</string>
     <string name="feeds_rss_mode_posts_comments">Постови и коментари</string>
-    <string name="feeds_delete_feed_description">Трајно обриши овај извор и сав његов садржај.</string>
     <string name="feeds_access_add_title">Додај приступ</string>
     <string name="feeds_permission_request_message">%1$s захтева следећу дозволу:</string>
     <string name="feeds_allow_search">Дозволи свима да претражују феед</string>
@@ -264,7 +263,6 @@
     <string name="feeds_source_transform_hint">Преведи на енглески и прикажи као ставке листе.</string>
     <string name="feeds_source_url_hint_feed">ID ентитета или отисак прста фида</string>
     <string name="feeds_source_credibility_label">Веродостојност</string>
-    <string name="feeds_access_management_desc">Контролишите ко може да види и комуницира са овим феедом</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d сат</item>
         <item quantity="few">%1$d сата</item>

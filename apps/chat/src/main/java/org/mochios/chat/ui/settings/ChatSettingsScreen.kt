@@ -161,7 +161,6 @@ fun ChatSettingsScreen(
                         Column {
                             SettingsSectionHeader(
                                 title = stringResource(R.string.chat_settings_general),
-                                description = stringResource(R.string.chat_settings_general_desc),
                             )
                             Spacer(modifier = Modifier.height(8.dp))
                             SettingsFieldRow(label = stringResource(R.string.chat_settings_rename_label)) {
@@ -254,7 +253,6 @@ fun ChatSettingsScreen(
                         ) {
                             SettingsSectionHeader(
                                 title = stringResource(R.string.chat_settings_members),
-                                description = stringResource(R.string.chat_settings_members_desc),
                                 action = if (uiState.chat.status == ChatStatus.ACTIVE) {
                                     {
                                         OutlinedButton(onClick = {

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Označeno kot prebrano</string>
     <string name="chat_search_next">Naslednje ujemanje</string>
     <string name="chat_search_prev">Prejšnje ujemanje</string>
-    <string name="chat_settings_general_desc">Prilagodi nastavitve klepeta</string>
     <string name="chat_settings_id">ID klepeta</string>
-    <string name="chat_settings_members_desc">Seznam oseb v tem klepetu</string>
 </resources>

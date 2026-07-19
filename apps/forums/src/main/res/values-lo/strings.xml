@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">ຄວບຄຸມ, ໂພສ, ຄອມເມັນ, ໂຫວດ ແລະ ເບິ່ງ</string>
     <string name="forums_access_level_post_full">ໂພສ, ຄອມເມັນ, ໂຫວດ ແລະ ເບິ່ງ</string>
     <string name="forums_access_level_vote_full">ໂຫວດ ແລະ ເບິ່ງ</string>
-    <string name="forums_access_management_description">ຄວບຄຸມວ່າໃຜສາມາດເບິ່ງ ແລະ ມີສ່ວນຮ່ວມໃນເວທີນີ້</string>
     <string name="forums_access_select_group">ເລືອກກຸ່ມ</string>
     <string name="forums_access_select_rule">ເລືອກກົດ</string>
     <string name="forums_ai_actions_label">ການດຳເນີນການ AI ຕໍ່ໂພສ</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">ການຕອບ</string>
     <string name="forums_moderation_unit_seconds">ວິນາທີ</string>
     <string name="forums_settings_ai_updated">ອັບເດດການຕັ້ງຄ່າ AI ແລ້ວ</string>
-    <string name="forums_settings_delete_description">ລຶບເວທີນີ້ ແລະ ເນື້ອຫາທັງໝົດຂອງມັນຢ່າງຖາວອນ.</string>
     <string name="forums_settings_forum_renamed">ປ່ຽນຊື່ເວທີແລ້ວ</string>
     <string name="forums_settings_name_clear_cd">ລ້າງຊື່</string>
     <string name="forums_settings_unsubscribe_section">ຍົກເລີກການຕິດຕາມເວທີ</string>

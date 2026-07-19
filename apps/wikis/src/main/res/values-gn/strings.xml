@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Ñemboheko oñembyaty</string>
     <string name="wikis_settings_home_save_failed">Ndaikatúi oñongatu configuraciones</string>
     <string name="wikis_settings_section_delete">Hundi wiki</string>
-    <string name="wikis_settings_delete_description">Embogue tapykue ko wiki ha opa imba\'e. Kóva ndaikatúi oñembojevy.</string>
     <string name="wikis_settings_delete_action">Hundi wiki</string>
     <string name="wikis_settings_delete_confirm_title">Eñembyetépe piko reime?</string>
     <string name="wikis_settings_delete_confirm_message">Ko tembiapo ndaikatúi oñembojevy. Kóva oguéta tapiarã ko wiki ha opa imba\'évape.</string>

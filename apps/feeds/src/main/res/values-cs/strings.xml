@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">Odběr zrušen</string>
     <string name="feeds_access_level_comment_full">Komentovat, reagovat a zobrazit</string>
     <string name="feeds_rss_mode_posts_comments">Příspěvky a komentáře</string>
-    <string name="feeds_delete_feed_description">Trvale smazat tento kanál a veškerý jeho obsah.</string>
     <string name="feeds_access_add_title">Přidat přístup</string>
     <string name="feeds_permission_request_message">%1$s žádá o následující oprávnění:</string>
     <string name="feeds_allow_search">Povolit komukoli vyhledávat feed</string>
@@ -266,7 +265,6 @@
     <string name="feeds_source_transform_hint">Přeložit do angličtiny a zobrazit jako odrážky.</string>
     <string name="feeds_source_url_hint_feed">ID entity feedu nebo otisk</string>
     <string name="feeds_source_credibility_label">Důvěryhodnost</string>
-    <string name="feeds_access_management_desc">Určuje, kdo může tento kanál zobrazit a pracovat s ním</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d hodina</item>
         <item quantity="few">%1$d hodiny</item>

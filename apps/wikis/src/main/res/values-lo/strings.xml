@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ການຕັ້ງຄ່າຖືກບັນທຶກແລ້ວ</string>
     <string name="wikis_settings_home_save_failed">ບັນທຶກການຕັ້ງຄ່າລົ້ມເຫຼວ</string>
     <string name="wikis_settings_section_delete">ລົບ wiki</string>
-    <string name="wikis_settings_delete_description">ລຶບ wiki ນີ້ແລະເນື້ອໃນທັງໝົດຖາວອນ. ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
     <string name="wikis_settings_delete_action">ລົບ wiki</string>
     <string name="wikis_settings_delete_confirm_title">ທ່ານແນ່ໃຈບໍ?</string>
     <string name="wikis_settings_delete_confirm_message">ການກະທຳນີ້ຄືນບໍ່ໄດ້. ນີ້ຈະລົບ wiki ແລະເນື້ອຫາທັງໝົດແບບຖາວອນ.</string>

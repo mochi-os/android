@@ -116,9 +116,8 @@
     <string name="people_group_description_optional">Optional description</string>
     <string name="people_group_name_required">Name is required</string>
     <string name="people_group_actions">Group actions</string>
-    <string name="people_group_actions_description">Core information about this group</string>
     <string name="people_group_members">Members</string>
-    <string name="people_group_members_count">Members Count</string>
+    <string name="people_group_members_count">Members count</string>
     <string name="people_group_members_description">Users and groups that belong to this group</string>
     <string name="people_group_no_members">No members</string>
     <string name="people_group_edit">Edit group</string>
@@ -133,7 +132,7 @@
     <string name="people_member_add_failed">Failed to add member</string>
     <string name="people_member_added">Added %1$s to the group</string>
     <string name="people_member_remove">Remove member</string>
-    <string name="people_member_remove_title">Remove Member</string>
+    <string name="people_member_remove_title">Remove member</string>
     <string name="people_member_remove_confirm">Are you sure you want to remove %1$s from this group?</string>
     <string name="people_member_remove_with_name">Remove %1$s</string>
     <string name="people_member_remove_typed">Remove %1$s %2$s</string>

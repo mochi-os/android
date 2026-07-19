@@ -239,7 +239,6 @@
     <string name="feeds_unsubscribed">Wedi dad-danysgrifio</string>
     <string name="feeds_access_level_comment_full">Sylwi, ymateb, a gweld</string>
     <string name="feeds_rss_mode_posts_comments">Postiadau a sylwadau</string>
-    <string name="feeds_delete_feed_description">Dileu\'r porthwr hwn a\'i holl gynnwys yn barhaol.</string>
     <string name="feeds_access_add_title">Ychwanegu mynediad</string>
     <string name="feeds_permission_request_message">Mae %1$s yn gofyn am y caniatâd canlynol:</string>
     <string name="feeds_allow_search">Caniatáu i unrhyw un chwilio am borthiant</string>
@@ -269,7 +268,6 @@
     <string name="feeds_source_transform_hint">Cyfieithwch i\'r Saesneg, a dangos fel pwyntiau bwled.</string>
     <string name="feeds_source_url_hint_feed">ID endid neu olion bysedd y ffrwd</string>
     <string name="feeds_source_credibility_label">Hygrededd</string>
-    <string name="feeds_access_management_desc">Rheolwch pwy all weld a rhyngweithio â\'r porthiant hwn</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="zero">%1$d oriau</item>
         <item quantity="one">%1$d awr</item>

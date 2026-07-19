@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">ניהול, פרסום, תגובה, הצבעה וצפייה</string>
     <string name="forums_access_level_post_full">פרסום, תגובה, הצבעה וצפייה</string>
     <string name="forums_access_level_vote_full">הצבעה וצפייה</string>
-    <string name="forums_access_management_description">קבע מי יכול לצפות בפורום הזה ולהשתתף בו</string>
     <string name="forums_access_select_group">בחר קבוצה</string>
     <string name="forums_access_select_rule">בחר כלל</string>
     <string name="forums_ai_actions_label">פעולות AI על פוסטים</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">תגובות</string>
     <string name="forums_moderation_unit_seconds">שניות</string>
     <string name="forums_settings_ai_updated">הגדרות ה-AI עודכנו</string>
-    <string name="forums_settings_delete_description">מחק לצמיתות את הפורום הזה ואת כל תוכנו.</string>
     <string name="forums_settings_forum_renamed">שם הפורום שונה</string>
     <string name="forums_settings_name_clear_cd">נקה שם</string>
     <string name="forums_settings_unsubscribe_section">בטל מנוי לפורום</string>

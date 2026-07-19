@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">To\'achuu, maxxansuu, yaada kennuu, sagalee kennuu fi daawwachuu</string>
     <string name="forums_access_level_post_full">Maxxansuu, yaada kennuu, sagalee kennuu fi daawwachuu</string>
     <string name="forums_access_level_vote_full">Sagalee kennuu fi daawwachuu</string>
-    <string name="forums_access_management_description">Eenyu foramii kana daawwachuu fi keessatti hirmaachuu akka danda\'u to\'adhu</string>
     <string name="forums_access_select_group">Garee filadhu</string>
     <string name="forums_access_select_rule">Seera filadhu</string>
     <string name="forums_ai_actions_label">Gochaalee AI maxxansaalee irratti</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">deebiiwwan</string>
     <string name="forums_moderation_unit_seconds">sekondii</string>
     <string name="forums_settings_ai_updated">Qindaa\'inni AI haaromfameera</string>
-    <string name="forums_settings_delete_description">Foramii kana fi qabiyyee isaa hunda bara baraan haqi.</string>
     <string name="forums_settings_forum_renamed">Maqaan foramii jijjiirame</string>
     <string name="forums_settings_name_clear_cd">Maqaa cilliisi</string>
     <string name="forums_settings_unsubscribe_section">Foramii irraa bahi</string>

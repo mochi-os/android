@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Pagmomoderate, pag-post, pagkomento, pagboto at pagtingin</string>
     <string name="forums_access_level_post_full">Pag-post, pagkomento, pagboto at pagtingin</string>
     <string name="forums_access_level_vote_full">Pagboto at pagtingin</string>
-    <string name="forums_access_management_description">Kontrolin kung sino ang makakakita at makakalahok sa forum na ito</string>
     <string name="forums_access_select_group">Pumili ng grupo</string>
     <string name="forums_access_select_rule">Pumili ng panuntunan</string>
     <string name="forums_ai_actions_label">Mga aksyon ng AI sa mga post</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">tugon</string>
     <string name="forums_moderation_unit_seconds">segundo</string>
     <string name="forums_settings_ai_updated">Na-update ang mga setting ng AI</string>
-    <string name="forums_settings_delete_description">Permanenteng tanggalin ang forum na ito at lahat ng nilalaman nito.</string>
     <string name="forums_settings_forum_renamed">Napalitan ang pangalan ng forum</string>
     <string name="forums_settings_name_clear_cd">I-clear ang pangalan</string>
     <string name="forums_settings_unsubscribe_section">Mag-unsubscribe sa forum</string>

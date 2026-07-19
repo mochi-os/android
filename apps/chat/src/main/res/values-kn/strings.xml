@@ -103,7 +103,5 @@
     <string name="chat_marked_read">ಓದಿದಂತೆ ಗುರುತಿಸಲಾಗಿದೆ</string>
     <string name="chat_search_next">ಮುಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
     <string name="chat_search_prev">ಹಿಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
-    <string name="chat_settings_general_desc">ಚಾಟ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ</string>
     <string name="chat_settings_id">ಚಾಟ್ ಐಡಿ</string>
-    <string name="chat_settings_members_desc">ಈ ಚಾಟ್‌ನಲ್ಲಿರುವ ಜನರ ಪಟ್ಟಿ</string>
 </resources>

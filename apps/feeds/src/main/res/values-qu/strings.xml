@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Suscripcion saqisqa</string>
     <string name="feeds_access_level_comment_full">Comentariy, kawsay rikuchiy, hinaspa qhaway</string>
     <string name="feeds_rss_mode_posts_comments">Qillqakuna comentariokunawan</string>
-    <string name="feeds_delete_feed_description">Wiñaypaq kay feedta tukuy contenidonwan pichay.</string>
     <string name="feeds_access_add_title">Yaykuy yapay</string>
     <string name="feeds_permission_request_message">%1$s kay permisota mañakuchkan:</string>
     <string name="feeds_allow_search">Pillapas maskhayta atichun feed-ta</string>
@@ -261,7 +260,6 @@
     <string name="feeds_source_transform_hint">Inglesman tikray, hinaspa bullet pointspi rikuchiy.</string>
     <string name="feeds_source_url_hint_feed">Feed entity ID utaq fingerprint</string>
     <string name="feeds_source_credibility_label">Iñiy</string>
-    <string name="feeds_access_management_desc">Pillapas qhawayta hinaspa kawsayta atichun kay feed-pi</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d horakuna</item>
     </plurals>

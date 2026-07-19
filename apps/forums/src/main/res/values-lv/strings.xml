@@ -265,7 +265,6 @@
     <string name="forums_access_level_moderate_full">Moderēt, publicēt, komentēt, balsot un skatīt</string>
     <string name="forums_access_level_post_full">Publicēt, komentēt, balsot un skatīt</string>
     <string name="forums_access_level_vote_full">Balsot un skatīt</string>
-    <string name="forums_access_management_description">Nosakiet, kas var skatīt šo forumu un tajā darboties</string>
     <string name="forums_access_select_group">Izvēlieties grupu</string>
     <string name="forums_access_select_rule">Izvēlieties noteikumu</string>
     <string name="forums_ai_actions_label">MI darbības ar ierakstiem</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">atbildes</string>
     <string name="forums_moderation_unit_seconds">sekundes</string>
     <string name="forums_settings_ai_updated">MI iestatījumi atjaunināti</string>
-    <string name="forums_settings_delete_description">Neatgriezeniski dzēst šo forumu un visu tā saturu.</string>
     <string name="forums_settings_forum_renamed">Forums pārdēvēts</string>
     <string name="forums_settings_name_clear_cd">Notīrīt nosaukumu</string>
     <string name="forums_settings_unsubscribe_section">Atteikties no foruma abonementa</string>

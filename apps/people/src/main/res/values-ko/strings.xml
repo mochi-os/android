@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">선택적 설명</string>
     <string name="people_group_name_required">이름은 필수예요</string>
     <string name="people_group_actions">그룹 작업</string>
-    <string name="people_group_actions_description">이 그룹에 대한 핵심 정보</string>
     <string name="people_group_members">멤버</string>
     <string name="people_group_members_count">멤버 수</string>
     <string name="people_group_members_description">이 그룹에 속한 사용자와 그룹</string>

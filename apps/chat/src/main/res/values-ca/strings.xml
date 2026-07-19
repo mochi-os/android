@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Marcat com a llegit</string>
     <string name="chat_search_next">Coincidència següent</string>
     <string name="chat_search_prev">Coincidència anterior</string>
-    <string name="chat_settings_general_desc">Ajusta la configuració del xat</string>
     <string name="chat_settings_id">ID del xat</string>
-    <string name="chat_settings_members_desc">Llista de persones en aquest xat</string>
 </resources>

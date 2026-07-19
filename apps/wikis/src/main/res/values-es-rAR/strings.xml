@@ -280,7 +280,6 @@
     <string name="wikis_settings_field_home_label">Use as home</string>
     <string name="wikis_settings_home_saved">Settings saved</string>
     <string name="wikis_settings_home_save_failed">Failed to save settings</string>
-    <string name="wikis_settings_delete_description">Permanently delete this wiki and all its contents. This cannot be undone.</string>
     <string name="wikis_settings_delete_confirm_message">This action cannot be undone. This will permanently delete the wiki and all its contents.</string>
     <string name="wikis_settings_delete_success">Wiki deleted</string>
     <string name="wikis_settings_delete_failed">Failed to delete wiki</string>

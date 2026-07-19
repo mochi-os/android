@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Նշված է որպես կարդացված</string>
     <string name="chat_search_next">Հաջորդ համընկնումը</string>
     <string name="chat_search_prev">Նախորդ համընկնումը</string>
-    <string name="chat_settings_general_desc">Կարգավորել զրույցի կարգավորումները</string>
     <string name="chat_settings_id">Զրույցի ID</string>
-    <string name="chat_settings_members_desc">Այս զրույցի մասնակիցների ցանկը</string>
 </resources>

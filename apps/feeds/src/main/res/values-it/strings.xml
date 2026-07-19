@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Iscrizione annullata</string>
     <string name="feeds_access_level_comment_full">Commenta, reagisci e visualizza</string>
     <string name="feeds_rss_mode_posts_comments">Post e commenti</string>
-    <string name="feeds_delete_feed_description">Elimina definitivamente questo feed e tutto il suo contenuto.</string>
     <string name="feeds_access_add_title">Aggiungi accesso</string>
     <string name="feeds_permission_request_message">%1$s richiede la seguente autorizzazione:</string>
     <string name="feeds_allow_search">Permetti a chiunque di cercare il feed</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Traduci in inglese e mostra come elenco puntato.</string>
     <string name="feeds_source_url_hint_feed">ID entità feed o impronta</string>
     <string name="feeds_source_credibility_label">Credibilità</string>
-    <string name="feeds_access_management_desc">Controlla chi può visualizzare e interagire con questo feed</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ora</item>
         <item quantity="other">%1$d ore</item>

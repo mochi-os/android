@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Afmeldt</string>
     <string name="feeds_access_level_comment_full">Kommentere, reagere og vise</string>
     <string name="feeds_rss_mode_posts_comments">Indlæg og kommentarer</string>
-    <string name="feeds_delete_feed_description">Slet dette feed og alt dets indhold permanent.</string>
     <string name="feeds_access_add_title">Tilføj adgang</string>
     <string name="feeds_permission_request_message">%1$s anmoder om følgende tilladelse:</string>
     <string name="feeds_allow_search">Tillad alle at søge efter feed</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Oversæt til engelsk, og vis som punktopstilling.</string>
     <string name="feeds_source_url_hint_feed">Feed-entitets-ID eller fingeraftryk</string>
     <string name="feeds_source_credibility_label">Troværdighed</string>
-    <string name="feeds_access_management_desc">Styr hvem der kan se og interagere med dette feed</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d time</item>
         <item quantity="other">%1$d timer</item>

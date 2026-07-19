@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ക്രമീകരണങ്ങൾ സേവ് ചെയ്തു</string>
     <string name="wikis_settings_home_save_failed">ക്രമീകരണങ്ങൾ സംരക്ഷിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_settings_section_delete">വിക്കി ഇല്ലാതാക്കുക</string>
-    <string name="wikis_settings_delete_description">ഈ വിക്കിയും അതിന്റെ എല്ലാ ഉള്ളടക്കങ്ങളും ശാശ്വതമായി ഇല്ലാതാക്കുക. ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="wikis_settings_delete_action">വിക്കി ഇല്ലാതാക്കുക</string>
     <string name="wikis_settings_delete_confirm_title">നിങ്ങൾക്ക് തീർച്ചയായും ഉറപ്പാണോ?</string>
     <string name="wikis_settings_delete_confirm_message">ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല. ഇത് വിക്കിയും അതിന്റെ എല്ലാ ഉള്ളടക്കങ്ങളും സ്ഥിരമായി ഇല്ലാതാക്കും.</string>

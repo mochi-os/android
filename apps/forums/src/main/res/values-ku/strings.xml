@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Rêvebirin, poste, şîrove, deng bide û bibîne</string>
     <string name="forums_access_level_post_full">Poste, şîrove, deng bide û bibîne</string>
     <string name="forums_access_level_vote_full">Deng bide û bibîne</string>
-    <string name="forums_access_management_description">Kontrol bike kî dikare vê forumê bibîne û tevlî bibe</string>
     <string name="forums_access_select_group">Komekê hilbijêre</string>
     <string name="forums_access_select_rule">Rêzikekê hilbijêre</string>
     <string name="forums_ai_actions_label">Kirinên AI li ser posteyan</string>
@@ -299,7 +298,6 @@
     <string name="forums_moderation_unit_replies">bersiv</string>
     <string name="forums_moderation_unit_seconds">çirke</string>
     <string name="forums_settings_ai_updated">Mîhengên AI hatin nûkirin</string>
-    <string name="forums_settings_delete_description">Vê forumê û hemû naveroka wê bi awayekî mayînde jê bibe.</string>
     <string name="forums_settings_forum_renamed">Navê forumê hate guhertin</string>
     <string name="forums_settings_name_clear_cd">Navî paqij bike</string>
     <string name="forums_settings_unsubscribe_section">Ji forumê derkeve</string>

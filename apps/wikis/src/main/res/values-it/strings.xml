@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Impostazioni salvate</string>
     <string name="wikis_settings_home_save_failed">Impossibile salvare le impostazioni</string>
     <string name="wikis_settings_section_delete">Elimina wiki</string>
-    <string name="wikis_settings_delete_description">Elimina definitivamente questo wiki e tutti i suoi contenuti. Questa azione non può essere annullata.</string>
     <string name="wikis_settings_delete_action">Elimina wiki</string>
     <string name="wikis_settings_delete_confirm_title">Sei assolutamente sicuro?</string>
     <string name="wikis_settings_delete_confirm_message">Questa azione non può essere annullata. Eliminerà definitivamente il wiki e tutti i suoi contenuti.</string>

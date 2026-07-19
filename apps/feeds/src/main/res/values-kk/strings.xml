@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Жазылудан бас тартылды</string>
     <string name="feeds_access_level_comment_full">Пікір қалдыру, реакция беру және көру</string>
     <string name="feeds_rss_mode_posts_comments">Жазбалар мен пікірлер</string>
-    <string name="feeds_delete_feed_description">Бұл арнаны және оның барлық мазмұнын біржола жою.</string>
     <string name="feeds_access_add_title">Қол жеткізу қосу</string>
     <string name="feeds_permission_request_message">%1$s келесі рұқсатты сұрап отыр:</string>
     <string name="feeds_allow_search">Кез келгенге арнаны іздеуге рұқсат ету</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Ағылшын тіліне аудару және маркер тізімі ретінде көрсету.</string>
     <string name="feeds_source_url_hint_feed">Таспа нысаны идентификаторы немесе саусақ ізі</string>
     <string name="feeds_source_credibility_label">Сенімділік</string>
-    <string name="feeds_access_management_desc">Бұл арнаны кім көре алатынын және онымен өзара әрекеттесе алатынын басқару</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d сағат</item>
         <item quantity="other">%1$d сағат</item>

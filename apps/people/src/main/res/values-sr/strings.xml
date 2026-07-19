@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Опциони опис</string>
     <string name="people_group_name_required">Име је обавезно</string>
     <string name="people_group_actions">Радње групе</string>
-    <string name="people_group_actions_description">Основне информације о овој групи</string>
     <string name="people_group_members">Чланови</string>
     <string name="people_group_members_count">Број чланова</string>
     <string name="people_group_members_description">Корисници и групе које припадају овој групи</string>

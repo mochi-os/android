@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">ดูแล โพสต์ แสดงความคิดเห็น โหวต และดู</string>
     <string name="forums_access_level_post_full">โพสต์ แสดงความคิดเห็น โหวต และดู</string>
     <string name="forums_access_level_vote_full">โหวตและดู</string>
-    <string name="forums_access_management_description">ควบคุมว่าใครสามารถดูและมีส่วนร่วมกับฟอรัมนี้ได้</string>
     <string name="forums_access_select_group">เลือกกลุ่ม</string>
     <string name="forums_access_select_rule">เลือกกฎ</string>
     <string name="forums_ai_actions_label">การทำงานของ AI กับโพสต์</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">การตอบกลับ</string>
     <string name="forums_moderation_unit_seconds">วินาที</string>
     <string name="forums_settings_ai_updated">อัปเดตการตั้งค่า AI แล้ว</string>
-    <string name="forums_settings_delete_description">ลบฟอรัมนี้และเนื้อหาทั้งหมดอย่างถาวร</string>
     <string name="forums_settings_forum_renamed">เปลี่ยนชื่อฟอรัมแล้ว</string>
     <string name="forums_settings_name_clear_cd">ล้างชื่อ</string>
     <string name="forums_settings_unsubscribe_section">เลิกติดตามฟอรัม</string>

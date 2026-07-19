@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">ਗਾਹਕੀ ਰੱਦ ਕੀਤੀ</string>
     <string name="feeds_access_level_comment_full">ਟਿੱਪਣੀ ਕਰੋ, ਪ੍ਰਤੀਕਿਰਿਆ ਦਿਓ ਅਤੇ ਦੇਖੋ</string>
     <string name="feeds_rss_mode_posts_comments">ਪੋਸਟਾਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
-    <string name="feeds_delete_feed_description">ਇਸ ਫੀਡ ਅਤੇ ਇਸਦੀ ਸਾਰੀ ਸਮੱਗਰੀ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਓ।</string>
     <string name="feeds_access_add_title">ਪਹੁੰਚ ਜੋੜੋ</string>
     <string name="feeds_permission_request_message">%1$s ਹੇਠ ਲਿਖੀ ਇਜਾਜ਼ਤ ਦੀ ਬੇਨਤੀ ਕਰ ਰਿਹਾ ਹੈ:</string>
     <string name="feeds_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ ਫੀਡ ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ, ਅਤੇ ਬੁਲੇਟ ਪੁਆਇੰਟ ਵਜੋਂ ਦਿਖਾਓ।</string>
     <string name="feeds_source_url_hint_feed">ਫੀਡ ਇਕਾਈ ID ਜਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="feeds_source_credibility_label">ਭਰੋਸੇਯੋਗਤਾ</string>
-    <string name="feeds_access_management_desc">ਕੰਟਰੋਲ ਕਰੋ ਕਿ ਕੌਣ ਇਸ ਫੀਡ ਨੂੰ ਵੇਖ ਅਤੇ ਇਸ ਨਾਲ ਜੁੜ ਸਕਦਾ ਹੈ</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ਘੰਟਾ</item>
         <item quantity="other">%1$d ਘੰਟੇ</item>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Irakurritako gisa markatuta</string>
     <string name="chat_search_next">Hurrengo bat-etortzea</string>
     <string name="chat_search_prev">Aurreko bat-etortzea</string>
-    <string name="chat_settings_general_desc">Doitu txataren ezarpenak</string>
     <string name="chat_settings_id">Txat IDa</string>
-    <string name="chat_settings_members_desc">Txat honetako pertsonen zerrenda</string>
 </resources>

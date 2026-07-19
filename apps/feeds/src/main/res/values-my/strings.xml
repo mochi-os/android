@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">Subscribe ဖြုတ်ပြီး</string>
     <string name="feeds_access_level_comment_full">မှတ်ချက်၊ react၊ နှင့် ကြည့်ရှုခြင်း</string>
     <string name="feeds_rss_mode_posts_comments">ပို့စ်နှင့် comment များ</string>
-    <string name="feeds_delete_feed_description">ဤ feed နှင့် အကြောင်းအရာအားလုံးကို အပြီးတိုင်ဖျက်ပါ။</string>
     <string name="feeds_access_add_title">ဝင်ရောက်ခွင့် ထည့်မည်</string>
     <string name="feeds_permission_request_message">%1$s သည် အောက်ပါခွင့်ပြုချက်ကို တောင်းဆိုနေသည် -</string>
     <string name="feeds_allow_search">မည်သူမဆို feed ကို ရှာဖွေခွင့်ပြုမည်</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">အင်္ဂလိပ်ဘာသာသို့ ဘာသာပြန်ပြီး bullet point များဖြင့် ပြသမည်။</string>
     <string name="feeds_source_url_hint_feed">ဖိဒ် အကောင့် ID သို့မဟုတ် လက်ဗွေ</string>
     <string name="feeds_source_credibility_label">ယုံကြည်စိတ်ချရမှု</string>
-    <string name="feeds_access_management_desc">ဤ feed ကို မည်သူများ ကြည့်ရှု၍ ပါဝင်နိုင်သည်ကို ထိန်းချုပ်ပါ</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d နာရီ</item>
     </plurals>

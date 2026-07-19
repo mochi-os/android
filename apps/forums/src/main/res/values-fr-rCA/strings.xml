@@ -293,8 +293,6 @@
     <string name="forums_settings_forum_renamed">Forum renommé</string>
     <string name="forums_settings_ai_updated">Paramètres IA mis à jour</string>
     <string name="forums_settings_name_clear_cd">Effacer le nom</string>
-    <string name="forums_settings_delete_description">Supprimer définitivement ce forum et tout son contenu.</string>
-    <string name="forums_access_management_description">Contrôlez qui peut consulter ce forum et y interagir</string>
     <string name="forums_find_found_by_url">Trouvé par URL</string>
     <string name="forums_saved_clear_confirm_body">Cette action retire toutes les publications de votre liste d\'enregistrés. Elle est irréversible.</string>
     <string name="forums_saved_clear_confirm_title">Effacer toutes les publications enregistrées?</string>

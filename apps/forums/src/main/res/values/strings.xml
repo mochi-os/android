@@ -250,7 +250,7 @@
     <string name="forums_moderation_restriction_state_shadowban">Shadowbanned</string>
     <string name="forums_moderation_section_premoderation">Pre-moderation</string>
     <string name="forums_moderation_section_premoderation_description">Require approval before content becomes visible</string>
-    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_section_ratelimiting">Rate limiting</string>
     <string name="forums_moderation_section_ratelimiting_description">Prevent spam by limiting how often users can post</string>
     <string name="forums_moderation_require_posts">Require approval for new posts</string>
     <string name="forums_moderation_require_posts_description">New threads must be approved</string>
@@ -315,9 +315,7 @@
     <string name="forums_settings_name_cancel_cd">Cancel editing</string>
     <string name="forums_settings_name_clear_cd">Clear name</string>
     <string name="forums_settings_save_name">Save name</string>
-    <string name="forums_settings_delete_description">Permanently delete this forum and all its content.</string>
-    <string name="forums_access_management">Access Management</string>
-    <string name="forums_access_management_description">Control who can view and interact with this forum</string>
+    <string name="forums_access_management">Access management</string>
     <string name="forums_settings_rename">Rename</string>
     <string name="forums_settings_rename_label">Forum name</string>
     <string name="forums_settings_save">Save</string>

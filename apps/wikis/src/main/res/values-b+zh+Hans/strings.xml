@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">设置已保存</string>
     <string name="wikis_settings_home_save_failed">保存设置失败</string>
     <string name="wikis_settings_section_delete">删除 Wiki</string>
-    <string name="wikis_settings_delete_description">永久删除此 Wiki 及其所有内容。此操作无法撤销。</string>
     <string name="wikis_settings_delete_action">删除 Wiki</string>
     <string name="wikis_settings_delete_confirm_title">你确定要继续吗?</string>
     <string name="wikis_settings_delete_confirm_message">此操作无法撤销。这将永久删除该 Wiki 及其所有内容。</string>

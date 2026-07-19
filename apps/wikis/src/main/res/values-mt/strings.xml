@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Settings issejvjati</string>
     <string name="wikis_settings_home_save_failed">Ma rnexxiex jiġu ssejvjati s-settings</string>
     <string name="wikis_settings_section_delete">Ħassar wiki</string>
-    <string name="wikis_settings_delete_description">Ħassar permanentement dan il-wiki u l-kontenut kollu tiegħu. Dan ma jistax jiġi mreġġa\' lura.</string>
     <string name="wikis_settings_delete_action">Ħassar wiki</string>
     <string name="wikis_settings_delete_confirm_title">Żgur sa l-aħħar?</string>
     <string name="wikis_settings_delete_confirm_message">Din l-azzjoni ma tistax titreġġa\' lura. Dan iħassar permanentement il-wiki u l-kontenut kollu tagħha.</string>

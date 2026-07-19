@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderatsiya, e\'lon qilish, izoh qoldirish, ovoz berish va ko\'rish</string>
     <string name="forums_access_level_post_full">E\'lon qilish, izoh qoldirish, ovoz berish va ko\'rish</string>
     <string name="forums_access_level_vote_full">Ovoz berish va ko\'rish</string>
-    <string name="forums_access_management_description">Bu forumni kim ko\'ra olishini va unda qatnasha olishini boshqaring</string>
     <string name="forums_access_select_group">Guruhni tanlang</string>
     <string name="forums_access_select_rule">Qoidani tanlang</string>
     <string name="forums_ai_actions_label">Postlarda SI amallari</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">javob</string>
     <string name="forums_moderation_unit_seconds">soniya</string>
     <string name="forums_settings_ai_updated">SI sozlamalari yangilandi</string>
-    <string name="forums_settings_delete_description">Bu forumni va uning barcha kontentini butunlay o\'chiring.</string>
     <string name="forums_settings_forum_renamed">Forum nomi o\'zgartirildi</string>
     <string name="forums_settings_name_clear_cd">Nomni tozalash</string>
     <string name="forums_settings_unsubscribe_section">Forumdan obunani bekor qilish</string>

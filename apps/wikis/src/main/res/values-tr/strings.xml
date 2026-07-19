@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Ayarlar kaydedildi</string>
     <string name="wikis_settings_home_save_failed">Ayarlar kaydedilemedi</string>
     <string name="wikis_settings_section_delete">Wiki\'yi sil</string>
-    <string name="wikis_settings_delete_description">Bu wiki\'yi ve tüm içeriklerini kalıcı olarak silin. Bu işlem geri alınamaz.</string>
     <string name="wikis_settings_delete_action">Wiki\'yi sil</string>
     <string name="wikis_settings_delete_confirm_title">Tamamen emin misiniz?</string>
     <string name="wikis_settings_delete_confirm_message">Bu işlem geri alınamaz. Wiki ve tüm içeriği kalıcı olarak silinecek.</string>

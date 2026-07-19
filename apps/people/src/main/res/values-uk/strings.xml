@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Необов\'язковий опис</string>
     <string name="people_group_name_required">Ім\'я обов\'язкове</string>
     <string name="people_group_actions">Групові дії</string>
-    <string name="people_group_actions_description">Основна інформація про цю групу</string>
     <string name="people_group_members">Учасники</string>
     <string name="people_group_members_count">Кількість учасників</string>
     <string name="people_group_members_description">Користувачі та групи, що належать до цієї групи</string>

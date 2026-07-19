@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Valikuline kirjeldus</string>
     <string name="people_group_name_required">Nimi on kohustuslik</string>
     <string name="people_group_actions">Grupi tegevused</string>
-    <string name="people_group_actions_description">Selle grupi põhiteave</string>
     <string name="people_group_members">Liikmed</string>
     <string name="people_group_members_count">Liikmete arv</string>
     <string name="people_group_members_description">Kasutajad ja grupid, kes kuuluvad sellesse gruppi</string>

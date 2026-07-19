@@ -91,7 +91,5 @@
     <string name="chat_marked_read">Marked as read</string>
     <string name="chat_search_next">Next match</string>
     <string name="chat_search_prev">Previous match</string>
-    <string name="chat_settings_general_desc">Adjust chat settings</string>
     <string name="chat_settings_id">Chat ID</string>
-    <string name="chat_settings_members_desc">List of people in this chat</string>
 </resources>

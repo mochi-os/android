@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Բաժանորդագրությունից հրաժարված</string>
     <string name="feeds_access_level_comment_full">Մեկնաբանել, քվեարկել և դիտել</string>
     <string name="feeds_rss_mode_posts_comments">Գրառումներ և մեկնաբանություններ</string>
-    <string name="feeds_delete_feed_description">Ընդմիշտ ջնջել այս հոսքը և ամբողջ պարունակությունը։</string>
     <string name="feeds_access_add_title">Ավելացնել հաշիվ</string>
     <string name="feeds_permission_request_message">%1$s-ը հայցում է հետևյալ թույլտվությունը՝</string>
     <string name="feeds_allow_search">Թույլատրել բոլորին որոնել ֆորում</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Թարգմանել անգլերեն և ցույց տալ որպես կետեր:</string>
     <string name="feeds_source_url_hint_feed">Հոսքի անձի ID կամ մատնահետք</string>
     <string name="feeds_source_credibility_label">Արժանահավատության հուշում</string>
-    <string name="feeds_access_management_desc">Վերահսկեք, թե ով կարող է դիտել և փոխազդել այս ֆորումի հետ</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d ժամ</item>
         <item quantity="other">%1$d ժամ</item>

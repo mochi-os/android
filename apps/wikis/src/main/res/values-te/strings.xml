@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">సెట్టింగ్‌లు సేవ్ చేయబడ్డాయి</string>
     <string name="wikis_settings_home_save_failed">సెట్టింగ్‌లను సేవ్ చేయడంలో విఫలమైంది</string>
     <string name="wikis_settings_section_delete">వికీని తొలగించండి</string>
-    <string name="wikis_settings_delete_description">ఈ wiki మరియు దాని మొత్తం కంటెంట్‌లను శాశ్వతంగా డిలీట్ చేయండి. ఇది తిరిగి పొందలేరు.</string>
     <string name="wikis_settings_delete_action">వికీని తొలగించండి</string>
     <string name="wikis_settings_delete_confirm_title">మీరు పూర్తిగా నిశ్చయించుకున్నారా?</string>
     <string name="wikis_settings_delete_confirm_message">ఈ చర్యను రద్దు చేయలేరు. ఇది wiki మరియు దాని అన్ని కంటెంట్‌లను శాశ్వతంగా తొలగిస్తుంది.</string>

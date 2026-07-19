@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">Moderowanie, publikowanie, komentowanie, głosowanie i przeglądanie</string>
     <string name="forums_access_level_post_full">Publikowanie, komentowanie, głosowanie i przeglądanie</string>
     <string name="forums_access_level_vote_full">Głosowanie i przeglądanie</string>
-    <string name="forums_access_management_description">Określ, kto może przeglądać to forum i z nim pracować</string>
     <string name="forums_access_select_group">Wybierz grupę</string>
     <string name="forums_access_select_rule">Wybierz regułę</string>
     <string name="forums_ai_actions_label">Działania AI na postach</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">odpowiedzi</string>
     <string name="forums_moderation_unit_seconds">sekund</string>
     <string name="forums_settings_ai_updated">Zaktualizowano ustawienia AI</string>
-    <string name="forums_settings_delete_description">Trwale usuń to forum i całą jego zawartość.</string>
     <string name="forums_settings_forum_renamed">Zmieniono nazwę forum</string>
     <string name="forums_settings_name_clear_cd">Wyczyść nazwę</string>
     <string name="forums_settings_unsubscribe_section">Anuluj subskrypcję forum</string>

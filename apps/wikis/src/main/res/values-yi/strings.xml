@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">אײַנשטעלונגען אויפֿגעהיט</string>
     <string name="wikis_settings_home_save_failed">ניט געלונגען אויפֿצוהיטן הגדרות</string>
     <string name="wikis_settings_section_delete">אויסמעקן וויקי</string>
-    <string name="wikis_settings_delete_description">אויסמעקן שטענדיק דעם וויקי און אַלע זײַן אינהאַלט. דאָס קען ניט זײַן אומגעמאַכט.</string>
     <string name="wikis_settings_delete_action">אויסמעקן וויקי</string>
     <string name="wikis_settings_delete_confirm_title">זענט איר זיכער?</string>
     <string name="wikis_settings_delete_confirm_message">די אַקציע קאָן נישט ווערן צוריקגעקערט. דאָס וועט אויף שטענדיק אויסמעקן דעם Wiki און אַלע זײַנע אינהאַלטן.</string>

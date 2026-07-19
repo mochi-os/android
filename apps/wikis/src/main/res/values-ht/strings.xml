@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Paramèt sove</string>
     <string name="wikis_settings_home_save_failed">Echwe pou sove paramèt yo</string>
     <string name="wikis_settings_section_delete">Efase wiki</string>
-    <string name="wikis_settings_delete_description">Efase pèmanan wiki sa a ak tout kontni li. Sa pa ka defèt.</string>
     <string name="wikis_settings_delete_action">Efase wiki</string>
     <string name="wikis_settings_delete_confirm_title">Èske ou totalman sèten?</string>
     <string name="wikis_settings_delete_confirm_message">Aksyon sa pa ka anile. Sa pral efase wiki a ak tout kontni l yo pèmanan.</string>

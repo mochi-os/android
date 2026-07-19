@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">Модерировать, публиковать, комментировать, голосовать и просматривать</string>
     <string name="forums_access_level_post_full">Публиковать, комментировать, голосовать и просматривать</string>
     <string name="forums_access_level_vote_full">Голосовать и просматривать</string>
-    <string name="forums_access_management_description">Определите, кто может просматривать этот форум и взаимодействовать с ним</string>
     <string name="forums_access_select_group">Выберите группу</string>
     <string name="forums_access_select_rule">Выберите правило</string>
     <string name="forums_ai_actions_label">Действия ИИ с публикациями</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">ответов</string>
     <string name="forums_moderation_unit_seconds">секунд</string>
     <string name="forums_settings_ai_updated">Настройки ИИ обновлены</string>
-    <string name="forums_settings_delete_description">Безвозвратно удалить этот форум и всё его содержимое.</string>
     <string name="forums_settings_forum_renamed">Форум переименован</string>
     <string name="forums_settings_name_clear_cd">Очистить имя</string>
     <string name="forums_settings_unsubscribe_section">Отписаться от форума</string>

@@ -221,7 +221,6 @@
     <string name="feeds_unsubscribed">Unsubscribed</string>
     <string name="feeds_access_level_comment_full">Comment, react, and view</string>
     <string name="feeds_rss_mode_posts_comments">Posts and comments</string>
-    <string name="feeds_delete_feed_description">Permanently delete this feed and all its content.</string>
     <string name="feeds_access_add_title">Add access</string>
     <string name="feeds_permission_request_message">%1$s is requesting the following permission:</string>
     <string name="feeds_allow_search">Allow anyone to search for feed</string>
@@ -248,7 +247,6 @@
     <string name="feeds_source_transform_hint">Translate to English, and show as bullet points.</string>
     <string name="feeds_source_url_hint_feed">Feed entity ID or fingerprint</string>
     <string name="feeds_source_credibility_label">Credibility</string>
-    <string name="feeds_access_management_desc">Control who can view and interact with this feed</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d hour</item>
         <item quantity="other">%1$d hours</item>

@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">മോഡറേഷൻ, പോസ്റ്റ്, അഭിപ്രായം, വോട്ട്, കാഴ്ച</string>
     <string name="forums_access_level_post_full">പോസ്റ്റ്, അഭിപ്രായം, വോട്ട്, കാഴ്ച</string>
     <string name="forums_access_level_vote_full">വോട്ടും കാഴ്ചയും</string>
-    <string name="forums_access_management_description">ഈ ഫോറം ആർക്കൊക്കെ കാണാനും പങ്കെടുക്കാനും കഴിയുമെന്ന് നിയന്ത്രിക്കുക</string>
     <string name="forums_access_select_group">ഒരു ഗ്രൂപ്പ് തിരഞ്ഞെടുക്കുക</string>
     <string name="forums_access_select_rule">ഒരു നിയമം തിരഞ്ഞെടുക്കുക</string>
     <string name="forums_ai_actions_label">പോസ്റ്റുകളിൽ AI പ്രവർത്തനങ്ങൾ</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">മറുപടികൾ</string>
     <string name="forums_moderation_unit_seconds">സെക്കൻഡുകൾ</string>
     <string name="forums_settings_ai_updated">AI ക്രമീകരണങ്ങൾ അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="forums_settings_delete_description">ഈ ഫോറവും അതിന്റെ എല്ലാ ഉള്ളടക്കവും ശാശ്വതമായി ഇല്ലാതാക്കുക.</string>
     <string name="forums_settings_forum_renamed">ഫോറത്തിന്റെ പേര് മാറ്റി</string>
     <string name="forums_settings_name_clear_cd">പേര് മായ്ക്കുക</string>
     <string name="forums_settings_unsubscribe_section">ഫോറത്തിൽ നിന്ന് അൺസബ്‌സ്‌ക്രൈബ് ചെയ്യുക</string>

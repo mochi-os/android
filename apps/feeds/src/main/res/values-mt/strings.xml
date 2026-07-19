@@ -240,7 +240,6 @@
     <string name="feeds_unsubscribed">Diżabbonat</string>
     <string name="feeds_access_level_comment_full">Ikkummenta, irreaġixxi, u ara</string>
     <string name="feeds_rss_mode_posts_comments">Posts u kummenti</string>
-    <string name="feeds_delete_feed_description">Ħassar permanentement dan il-feed u l-kontenut kollu tiegħu.</string>
     <string name="feeds_access_add_title">Żid aċċess</string>
     <string name="feeds_permission_request_message">%1$s qed jitlob il-permess li ġej:</string>
     <string name="feeds_allow_search">Ippermetti lil kulħadd ifittex feed</string>
@@ -269,7 +268,6 @@
     <string name="feeds_source_transform_hint">Ittraduċi għall-Ingliż, u uri bħala punti.</string>
     <string name="feeds_source_url_hint_feed">ID jew fingerprint tal-entità tal-feed</string>
     <string name="feeds_source_credibility_label">Kredibbiltà</string>
-    <string name="feeds_access_management_desc">Ikkontrolla min jista\' jara u jinteraġixxi ma\' dan il-feed</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d siegħa</item>
         <item quantity="two">%1$d sigħat</item>

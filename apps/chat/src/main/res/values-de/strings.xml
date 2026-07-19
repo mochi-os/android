@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Als gelesen markiert</string>
     <string name="chat_search_next">Nächster Treffer</string>
     <string name="chat_search_prev">Vorheriger Treffer</string>
-    <string name="chat_settings_general_desc">Chat-Einstellungen anpassen</string>
     <string name="chat_settings_id">Chat-ID</string>
-    <string name="chat_settings_members_desc">Liste der Personen in diesem Chat</string>
 </resources>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Marcat ca citit</string>
     <string name="chat_search_next">Următoarea potrivire</string>
     <string name="chat_search_prev">Potrivirea anterioară</string>
-    <string name="chat_settings_general_desc">Ajustează setările conversației</string>
     <string name="chat_settings_id">ID conversație</string>
-    <string name="chat_settings_members_desc">Lista persoanelor din această conversație</string>
 </resources>

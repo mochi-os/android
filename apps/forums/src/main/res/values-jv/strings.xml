@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderasi, kirim, komentar, milih lan ndeleng</string>
     <string name="forums_access_level_post_full">Kirim, komentar, milih lan ndeleng</string>
     <string name="forums_access_level_vote_full">Milih lan ndeleng</string>
-    <string name="forums_access_management_description">Atur sapa sing bisa ndeleng lan melu ing forum iki</string>
     <string name="forums_access_select_group">Pilih grup</string>
     <string name="forums_access_select_rule">Pilih aturan</string>
     <string name="forums_ai_actions_label">Tumindak AI ing kiriman</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">wangsulan</string>
     <string name="forums_moderation_unit_seconds">detik</string>
     <string name="forums_settings_ai_updated">Setelan AI wis dianyari</string>
-    <string name="forums_settings_delete_description">Busak forum iki lan kabeh isine kanthi permanen.</string>
     <string name="forums_settings_forum_renamed">Forum wis diganti jeneng</string>
     <string name="forums_settings_name_clear_cd">Busak jeneng</string>
     <string name="forums_settings_unsubscribe_section">Mundur saka forum</string>

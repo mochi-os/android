@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Οι ρυθμίσεις αποθηκεύτηκαν</string>
     <string name="wikis_settings_home_save_failed">Αποτυχία αποθήκευσης ρυθμίσεων</string>
     <string name="wikis_settings_section_delete">Διαγραφή wiki</string>
-    <string name="wikis_settings_delete_description">Διαγράψτε οριστικά αυτό το wiki και όλα τα περιεχόμενά του. Αυτό δεν μπορεί να αναιρεθεί.</string>
     <string name="wikis_settings_delete_action">Διαγραφή wiki</string>
     <string name="wikis_settings_delete_confirm_title">Είστε απολύτως σίγουροι;</string>
     <string name="wikis_settings_delete_confirm_message">Αυτή η ενέργεια δεν μπορεί να αναιρεθεί. Θα διαγράψει οριστικά το wiki και όλο το περιεχόμενό του.</string>

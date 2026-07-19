@@ -267,7 +267,6 @@
     <string name="forums_access_level_moderate_full">Cymedroli, postio, sylwi, pleidleisio a gweld</string>
     <string name="forums_access_level_post_full">Postio, sylwi, pleidleisio a gweld</string>
     <string name="forums_access_level_vote_full">Pleidleisio a gweld</string>
-    <string name="forums_access_management_description">Rheolwch pwy sy\'n gallu gweld y fforwm hwn a chymryd rhan ynddo</string>
     <string name="forums_access_select_group">Dewiswch grŵp</string>
     <string name="forums_access_select_rule">Dewiswch reol</string>
     <string name="forums_ai_actions_label">Gweithredoedd AI ar bostiadau</string>
@@ -301,7 +300,6 @@
     <string name="forums_moderation_unit_replies">ateb</string>
     <string name="forums_moderation_unit_seconds">eiliad</string>
     <string name="forums_settings_ai_updated">Diweddarwyd gosodiadau AI</string>
-    <string name="forums_settings_delete_description">Dileu\'r fforwm hwn a\'i holl gynnwys yn barhaol.</string>
     <string name="forums_settings_forum_renamed">Ailenwyd y fforwm</string>
     <string name="forums_settings_name_clear_cd">Clirio\'r enw</string>
     <string name="forums_settings_unsubscribe_section">Dad-danysgrifio o\'r fforwm</string>

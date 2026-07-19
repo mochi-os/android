@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Модератсия, интишор, шарҳ, овоздиҳӣ ва дидан</string>
     <string name="forums_access_level_post_full">Интишор, шарҳ, овоздиҳӣ ва дидан</string>
     <string name="forums_access_level_vote_full">Овоздиҳӣ ва дидан</string>
-    <string name="forums_access_management_description">Муайян кунед, ки кӣ метавонад ин форумро бинад ва дар он иштирок кунад</string>
     <string name="forums_access_select_group">Гурӯҳро интихоб кунед</string>
     <string name="forums_access_select_rule">Қоидаро интихоб кунед</string>
     <string name="forums_ai_actions_label">Амалҳои ЗС дар паёмҳо</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">ҷавоб</string>
     <string name="forums_moderation_unit_seconds">сония</string>
     <string name="forums_settings_ai_updated">Танзимоти ЗС навсозӣ шуд</string>
-    <string name="forums_settings_delete_description">Ин форум ва тамоми мундариҷаи онро ҳамешагӣ нест кунед.</string>
     <string name="forums_settings_forum_renamed">Номи форум иваз шуд</string>
     <string name="forums_settings_name_clear_cd">Номро тоза кунед</string>
     <string name="forums_settings_unsubscribe_section">Обунаро аз форум бекор кунед</string>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Segnato come letto</string>
     <string name="chat_search_next">Corrispondenza successiva</string>
     <string name="chat_search_prev">Corrispondenza precedente</string>
-    <string name="chat_settings_general_desc">Regola le impostazioni della chat</string>
     <string name="chat_settings_id">ID chat</string>
-    <string name="chat_settings_members_desc">Elenco delle persone in questa chat</string>
 </resources>

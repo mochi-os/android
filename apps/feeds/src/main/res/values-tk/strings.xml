@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Abuna ýazylyşygy ýatyryldy</string>
     <string name="feeds_access_level_comment_full">Teswir, reaksiýa we görmek</string>
     <string name="feeds_rss_mode_posts_comments">Postlar we teswirler</string>
-    <string name="feeds_delete_feed_description">Bu akymy we onuň ähli mazmunyny hemişelik poz.</string>
     <string name="feeds_access_add_title">Giriş goşmak</string>
     <string name="feeds_permission_request_message">%1$s aşakdaky rugsady soraýar:</string>
     <string name="feeds_allow_search">Islendik adamyň feed gözlemegine rugsat bermek</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Iňlis diline terjime et we güllejik nokat görnüşinde görkez.</string>
     <string name="feeds_source_url_hint_feed">Akym essas ID ýa-da barmak yzy</string>
     <string name="feeds_source_credibility_label">Ynamlylyk</string>
-    <string name="feeds_access_management_desc">Bu feed-i kim görüp we onuň bilen täsirleşip biljekdigini dolandyryň</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d sagat</item>
         <item quantity="other">%1$d sagat</item>

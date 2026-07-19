@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">已取消订阅</string>
     <string name="feeds_access_level_comment_full">评论、点赞和查看</string>
     <string name="feeds_rss_mode_posts_comments">帖子和评论</string>
-    <string name="feeds_delete_feed_description">永久删除此信息流及其所有内容。</string>
     <string name="feeds_access_add_title">添加访问权限</string>
     <string name="feeds_permission_request_message">%1$s 请求以下权限：</string>
     <string name="feeds_allow_search">允许任何人搜索此源</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">翻译为英语,并以要点形式显示。</string>
     <string name="feeds_source_url_hint_feed">源实体 ID 或指纹</string>
     <string name="feeds_source_credibility_label">可信度</string>
-    <string name="feeds_access_management_desc">控制谁可以查看此订阅源并与之互动</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d 小时</item>
     </plurals>

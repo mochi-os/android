@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Kususiwe ukubhalisa</string>
     <string name="feeds_access_level_comment_full">Phawula, sabela, futhi ubuke</string>
     <string name="feeds_rss_mode_posts_comments">Okwabiwayo namazwana</string>
-    <string name="feeds_delete_feed_description">Susa unomphela le fidi nakho konke okuqukethe.</string>
     <string name="feeds_access_add_title">Engeza ukufinyelela</string>
     <string name="feeds_permission_request_message">%1$s icela imvume elandelayo:</string>
     <string name="feeds_allow_search">Vumela noma ngubani ukusesha umfutho</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Humushela esiNgisini, futhi ukubonise njengamaphuzu amancane.</string>
     <string name="feeds_source_url_hint_feed">I-ID yenhlangano yomfutho noma ucwecwe</string>
     <string name="feeds_source_credibility_label">Ukwethembeka</string>
-    <string name="feeds_access_management_desc">Lawula ukuthi ngubani ongabuka futhi axhumane naleli fidi</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">ihora elingu-%1$d</item>
         <item quantity="other">amahora angu-%1$d</item>

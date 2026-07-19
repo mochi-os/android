@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">وصف اختياري</string>
     <string name="people_group_name_required">الاسم مطلوب</string>
     <string name="people_group_actions">إجراءات المجموعة</string>
-    <string name="people_group_actions_description">معلومات أساسية عن هذه المجموعة</string>
     <string name="people_group_members">الأعضاء</string>
     <string name="people_group_members_count">عدد الأعضاء</string>
     <string name="people_group_members_description">المستخدمون والمجموعات التي تنتمي إلى هذه المجموعة</string>

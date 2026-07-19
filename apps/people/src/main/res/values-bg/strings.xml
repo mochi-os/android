@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Описание (по избор)</string>
     <string name="people_group_name_required">Името е задължително</string>
     <string name="people_group_actions">Действия на групата</string>
-    <string name="people_group_actions_description">Основна информация за тази група</string>
     <string name="people_group_members">Членове</string>
     <string name="people_group_members_count">Брой членове</string>
     <string name="people_group_members_description">Потребители и групи, които принадлежат към тази група</string>

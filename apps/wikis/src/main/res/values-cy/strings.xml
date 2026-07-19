@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Gosodiadau wedi\'u cadw</string>
     <string name="wikis_settings_home_save_failed">Methwyd cadw\'r gosodiadau</string>
     <string name="wikis_settings_section_delete">Dileu wici</string>
-    <string name="wikis_settings_delete_description">Dileu\'r wici hwn a\'i holl gynnwys yn barhaol. Ni ellir dadwneud hyn.</string>
     <string name="wikis_settings_delete_action">Dileu wici</string>
     <string name="wikis_settings_delete_confirm_title">Ydych chi\'n hollol siŵr?</string>
     <string name="wikis_settings_delete_confirm_message">Ni ellir dadwneud y weithred hon. Bydd hyn yn dileu\'r wici a\'i holl gynnwys yn barhaol.</string>

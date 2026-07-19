@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderim, postim, komentim, votim dhe shikim</string>
     <string name="forums_access_level_post_full">Postim, komentim, votim dhe shikim</string>
     <string name="forums_access_level_vote_full">Votim dhe shikim</string>
-    <string name="forums_access_management_description">Kontrolloni kush mund ta shohë këtë forum dhe të marrë pjesë në të</string>
     <string name="forums_access_select_group">Zgjidhni një grup</string>
     <string name="forums_access_select_rule">Zgjidhni një rregull</string>
     <string name="forums_ai_actions_label">Veprimet e IA-së në postime</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">përgjigje</string>
     <string name="forums_moderation_unit_seconds">sekonda</string>
     <string name="forums_settings_ai_updated">Cilësimet e IA-së u përditësuan</string>
-    <string name="forums_settings_delete_description">Fshi përgjithmonë këtë forum dhe të gjithë përmbajtjen e tij.</string>
     <string name="forums_settings_forum_renamed">Forumi u riemërtua</string>
     <string name="forums_settings_name_clear_cd">Pastro emrin</string>
     <string name="forums_settings_unsubscribe_section">Çabonohu nga forumi</string>

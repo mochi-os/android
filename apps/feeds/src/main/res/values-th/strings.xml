@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">ยกเลิกการติดตามแล้ว</string>
     <string name="feeds_access_level_comment_full">แสดงความคิดเห็น ตอบสนอง และดู</string>
     <string name="feeds_rss_mode_posts_comments">โพสต์และความคิดเห็น</string>
-    <string name="feeds_delete_feed_description">ลบฟีดนี้และเนื้อหาทั้งหมดอย่างถาวร</string>
     <string name="feeds_access_add_title">เพิ่มการเข้าถึง</string>
     <string name="feeds_permission_request_message">%1$s กำลังขอสิทธิ์ต่อไปนี้:</string>
     <string name="feeds_allow_search">อนุญาตให้ทุกคนค้นหาฟีด</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">แปลเป็นภาษาอังกฤษและแสดงเป็นรายการบุลเล็ต</string>
     <string name="feeds_source_url_hint_feed">รหัสเอนทิตีฟีดหรือลายนิ้วมือ</string>
     <string name="feeds_source_credibility_label">ความน่าเชื่อถือ</string>
-    <string name="feeds_access_management_desc">ควบคุมว่าใครสามารถดูและโต้ตอบกับฟีดนี้</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d ชั่วโมง</item>
     </plurals>

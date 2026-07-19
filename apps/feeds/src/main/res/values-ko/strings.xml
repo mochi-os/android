@@ -235,7 +235,6 @@
     <string name="feeds_unsubscribed">구독이 취소되었어요</string>
     <string name="feeds_access_level_comment_full">댓글, 반응 및 보기</string>
     <string name="feeds_rss_mode_posts_comments">게시물 및 댓글</string>
-    <string name="feeds_delete_feed_description">이 피드와 모든 콘텐츠를 영구적으로 삭제해요.</string>
     <string name="feeds_access_add_title">접근 추가</string>
     <string name="feeds_permission_request_message">%1$s이(가) 다음 권한을 요청하고 있습니다:</string>
     <string name="feeds_allow_search">누구나 피드를 검색할 수 있도록 허용</string>
@@ -260,7 +259,6 @@
     <string name="feeds_source_transform_hint">영어로 번역하여 글머리 기호로 표시해 주세요.</string>
     <string name="feeds_source_url_hint_feed">피드 엔티티 ID 또는 지문</string>
     <string name="feeds_source_credibility_label">신뢰도</string>
-    <string name="feeds_access_management_desc">이 피드를 누가 보고 상호작용할 수 있는지 제어하세요</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d시간</item>
     </plurals>

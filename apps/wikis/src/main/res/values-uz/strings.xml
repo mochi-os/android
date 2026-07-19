@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Sozlamalar saqlandi</string>
     <string name="wikis_settings_home_save_failed">Sozlamalarni saqlab boʻlmadi</string>
     <string name="wikis_settings_section_delete">Wikini oʻchirish</string>
-    <string name="wikis_settings_delete_description">Bu wiki va uning barcha tarkibini butunlay oʻchirish. Bu amalni qaytarib boʻlmaydi.</string>
     <string name="wikis_settings_delete_action">Wikini oʻchirish</string>
     <string name="wikis_settings_delete_confirm_title">Ishonchingiz komilmi?</string>
     <string name="wikis_settings_delete_confirm_message">Bu amalni bekor qilib boʻlmaydi. Bu wiki va uning barcha mazmunini doimiy ravishda oʻchiradi.</string>

@@ -91,7 +91,5 @@
     <string name="chat_marked_read">已標記為已讀</string>
     <string name="chat_search_next">下一個相符項目</string>
     <string name="chat_search_prev">上一個相符項目</string>
-    <string name="chat_settings_general_desc">調整聊天設定</string>
     <string name="chat_settings_id">聊天 ID</string>
-    <string name="chat_settings_members_desc">此聊天中的成員名單</string>
 </resources>

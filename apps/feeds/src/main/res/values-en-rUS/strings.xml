@@ -239,7 +239,6 @@
     <string name="feeds_access_select_rule">Select access rule</string>
     <string name="feeds_settings_unsubscribe_section">Unsubscribe from feed</string>
     <string name="feeds_settings_field_server">Server</string>
-    <string name="feeds_access_management_desc">Control who can view and interact with this feed</string>
     <string name="feeds_access_authenticated_desc">Anyone who is logged in</string>
     <string name="feeds_suggested_interests_title">Add interests from %1$s?</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
@@ -264,7 +263,6 @@
     </plurals>
     <string name="feeds_settings_title">%1$s settings</string>
     <string name="feeds_access_level_react_full">React and view</string>
-    <string name="feeds_delete_feed_description">Permanently delete this feed and all its content.</string>
     <string name="feeds_source_transform_help">Leave empty to disable.</string>
     <string name="feeds_suggested_interests_skip">Skip</string>
     <plurals name="feeds_source_interval_hours">

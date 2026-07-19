@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Налаштування збережено</string>
     <string name="wikis_settings_home_save_failed">Не вдалося зберегти налаштування</string>
     <string name="wikis_settings_section_delete">Видалити вікі</string>
-    <string name="wikis_settings_delete_description">Остаточно видалити цю вікі та весь її вміст. Цю дію неможливо скасувати.</string>
     <string name="wikis_settings_delete_action">Видалити вікі</string>
     <string name="wikis_settings_delete_confirm_title">Ви абсолютно впевнені?</string>
     <string name="wikis_settings_delete_confirm_message">Цю дію не можна скасувати. Вікі та весь її вміст буде остаточно видалено.</string>

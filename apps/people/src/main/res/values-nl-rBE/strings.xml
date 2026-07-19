@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Optionele beschrijving</string>
     <string name="people_group_name_required">Naam is verplicht</string>
     <string name="people_group_actions">Groepsacties</string>
-    <string name="people_group_actions_description">Kerninformatie over deze groep</string>
     <string name="people_group_members">Leden</string>
     <string name="people_group_members_count">Aantal leden</string>
     <string name="people_group_members_description">Gebruikers en groepen die tot deze groep behoren</string>

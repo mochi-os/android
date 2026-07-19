@@ -103,7 +103,5 @@
     <string name="chat_marked_read">סומן כנקרא</string>
     <string name="chat_search_next">ההתאמה הבאה</string>
     <string name="chat_search_prev">ההתאמה הקודמת</string>
-    <string name="chat_settings_general_desc">התאמת הגדרות הצ׳אט</string>
     <string name="chat_settings_id">מזהה צ׳אט</string>
-    <string name="chat_settings_members_desc">רשימת האנשים בצ׳אט הזה</string>
 </resources>

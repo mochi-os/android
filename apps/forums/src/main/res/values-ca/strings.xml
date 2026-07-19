@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderar, publicar, comentar, votar i veure</string>
     <string name="forums_access_level_post_full">Publicar, comentar, votar i veure</string>
     <string name="forums_access_level_vote_full">Votar i veure</string>
-    <string name="forums_access_management_description">Controla qui pot veure aquest fòrum i interactuar-hi</string>
     <string name="forums_access_select_group">Selecciona un grup</string>
     <string name="forums_access_select_rule">Selecciona una regla</string>
     <string name="forums_ai_actions_label">Accions d\'IA a les publicacions</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">respostes</string>
     <string name="forums_moderation_unit_seconds">segons</string>
     <string name="forums_settings_ai_updated">S\'ha actualitzat la configuració d\'IA</string>
-    <string name="forums_settings_delete_description">Suprimeix definitivament aquest fòrum i tot el seu contingut.</string>
     <string name="forums_settings_forum_renamed">S\'ha canviat el nom del fòrum</string>
     <string name="forums_settings_name_clear_cd">Esborra el nom</string>
     <string name="forums_settings_unsubscribe_section">Cancel·la la subscripció al fòrum</string>

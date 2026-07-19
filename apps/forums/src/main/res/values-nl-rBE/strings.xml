@@ -301,7 +301,5 @@
     <string name="forums_settings_forum_renamed">Forum hernoemd</string>
     <string name="forums_settings_ai_updated">AI-instellingen bijgewerkt</string>
     <string name="forums_settings_name_clear_cd">Naam wissen</string>
-    <string name="forums_settings_delete_description">Verwijder dit forum en alle inhoud definitief.</string>
-    <string name="forums_access_management_description">Bepaal wie dit forum kan bekijken en ermee kan werken</string>
     <string name="forums_find_found_by_url">Gevonden via URL</string>
 </resources>

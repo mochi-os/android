@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Iestatījumi saglabāti</string>
     <string name="wikis_settings_home_save_failed">Neizdevās saglabāt iestatījumus</string>
     <string name="wikis_settings_section_delete">Dzēst wiki</string>
-    <string name="wikis_settings_delete_description">Neatgriezeniski izdzēst šo wiki un visu tās saturu. To nevar atsaukt.</string>
     <string name="wikis_settings_delete_action">Dzēst wiki</string>
     <string name="wikis_settings_delete_confirm_title">Vai esi pilnīgi pārliecināts?</string>
     <string name="wikis_settings_delete_confirm_message">Šo darbību nevar atsaukt. Tas neatgriezeniski izdzēsīs wiki un visu tā saturu.</string>

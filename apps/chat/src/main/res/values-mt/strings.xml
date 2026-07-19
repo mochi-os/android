@@ -104,7 +104,5 @@
     <string name="chat_marked_read">Immarkat bħala moqri</string>
     <string name="chat_search_next">Il-korrispondenza li jmiss</string>
     <string name="chat_search_prev">Il-korrispondenza preċedenti</string>
-    <string name="chat_settings_general_desc">Aġġusta s-settings tal-chat</string>
     <string name="chat_settings_id">ID tal-chat</string>
-    <string name="chat_settings_members_desc">Lista ta\' nies f\'din il-chat</string>
 </resources>

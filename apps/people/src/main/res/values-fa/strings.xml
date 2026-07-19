@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">توضیحات اختیاری</string>
     <string name="people_group_name_required">نام الزامی است</string>
     <string name="people_group_actions">اقدامات گروهی</string>
-    <string name="people_group_actions_description">اطلاعات اصلی این گروه</string>
     <string name="people_group_members">اعضا</string>
     <string name="people_group_members_count">تعداد اعضا</string>
     <string name="people_group_members_description">کاربران و گروه‌هایی که به این گروه تعلق دارند</string>

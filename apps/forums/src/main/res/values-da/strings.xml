@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderere, poste, kommentere, stemme og se</string>
     <string name="forums_access_level_post_full">Poste, kommentere, stemme og se</string>
     <string name="forums_access_level_vote_full">Stemme og se</string>
-    <string name="forums_access_management_description">Bestem, hvem der kan se og deltage i dette forum</string>
     <string name="forums_access_select_group">Vælg en gruppe</string>
     <string name="forums_access_select_rule">Vælg en regel</string>
     <string name="forums_ai_actions_label">AI-handlinger på opslag</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">svar</string>
     <string name="forums_moderation_unit_seconds">sekunder</string>
     <string name="forums_settings_ai_updated">AI-indstillinger opdateret</string>
-    <string name="forums_settings_delete_description">Slet dette forum og alt dets indhold permanent.</string>
     <string name="forums_settings_forum_renamed">Forummet er omdøbt</string>
     <string name="forums_settings_name_clear_cd">Ryd navn</string>
     <string name="forums_settings_unsubscribe_section">Afmeld forummet</string>

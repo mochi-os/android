@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Hindi na naka-subscribe</string>
     <string name="feeds_access_level_comment_full">Magkomento, mag-react, at tingnan</string>
     <string name="feeds_rss_mode_posts_comments">Mga post at komento</string>
-    <string name="feeds_delete_feed_description">Permanenteng burahin ang feed na ito at ang lahat ng nilalaman nito.</string>
     <string name="feeds_access_add_title">Magdagdag ng access</string>
     <string name="feeds_permission_request_message">Hinihiling ng %1$s ang sumusunod na pahintulot:</string>
     <string name="feeds_allow_search">Payagan ang sinumang maghanap ng feed</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Isalin sa English, at ipakita bilang bullet points.</string>
     <string name="feeds_source_url_hint_feed">Feed entity ID o fingerprint</string>
     <string name="feeds_source_credibility_label">Kredibilidad</string>
-    <string name="feeds_access_management_desc">Kontrolin kung sino ang maaaring tumingin at makipag-ugnayan sa feed na ito</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d oras</item>
         <item quantity="other">%1$d na oras</item>

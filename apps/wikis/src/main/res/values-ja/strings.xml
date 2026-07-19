@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">設定を保存しました</string>
     <string name="wikis_settings_home_save_failed">設定の保存に失敗しました</string>
     <string name="wikis_settings_section_delete">Wiki を削除</string>
-    <string name="wikis_settings_delete_description">この Wiki とそのすべてのコンテンツを完全に削除します。この操作は取り消せません。</string>
     <string name="wikis_settings_delete_action">Wiki を削除</string>
     <string name="wikis_settings_delete_confirm_title">本当によろしいですか?</string>
     <string name="wikis_settings_delete_confirm_message">この操作は取り消せません。Wikiとそのすべての内容が完全に削除されます。</string>

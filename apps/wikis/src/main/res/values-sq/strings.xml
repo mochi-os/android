@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Cilësimet u ruajtën</string>
     <string name="wikis_settings_home_save_failed">Ruajtja e cilësimeve dështoi</string>
     <string name="wikis_settings_section_delete">Fshi wiki-n</string>
-    <string name="wikis_settings_delete_description">Fshi përfundimisht këtë wiki dhe gjithë përmbajtjen e tij. Ky veprim s\'mund të zhbëhet.</string>
     <string name="wikis_settings_delete_action">Fshi wiki-n</string>
     <string name="wikis_settings_delete_confirm_title">Je absolutisht i sigurt?</string>
     <string name="wikis_settings_delete_confirm_message">Ky veprim nuk mund të zhbëhet. Kjo do të fshijë përgjithmonë wikin dhe gjithë përmbajtjen e tij.</string>

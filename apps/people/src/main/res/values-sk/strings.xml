@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Voliteľný popis</string>
     <string name="people_group_name_required">Názov je povinný</string>
     <string name="people_group_actions">Akcie skupiny</string>
-    <string name="people_group_actions_description">Hlavné informácie o tejto skupine</string>
     <string name="people_group_members">Členovia</string>
     <string name="people_group_members_count">Počet členov</string>
     <string name="people_group_members_description">Používatelia a skupiny, ktoré patria do tejto skupiny</string>

@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Valinnainen kuvaus</string>
     <string name="people_group_name_required">Nimi vaaditaan</string>
     <string name="people_group_actions">Ryhmätoiminnot</string>
-    <string name="people_group_actions_description">Ydintiedot tästä ryhmästä</string>
     <string name="people_group_members">Jäsenet</string>
     <string name="people_group_members_count">Jäsenmäärä</string>
     <string name="people_group_members_description">Tähän ryhmään kuuluvat käyttäjät ja ryhmät</string>

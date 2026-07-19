@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Asetukset tallennettu</string>
     <string name="wikis_settings_home_save_failed">Asetusten tallennus epäonnistui</string>
     <string name="wikis_settings_section_delete">Poista wiki</string>
-    <string name="wikis_settings_delete_description">Poista tämä wiki ja kaikki sen sisältö pysyvästi. Tätä ei voi peruuttaa.</string>
     <string name="wikis_settings_delete_action">Poista wiki</string>
     <string name="wikis_settings_delete_confirm_title">Oletko aivan varma?</string>
     <string name="wikis_settings_delete_confirm_message">Tätä toimintoa ei voi kumota. Tämä poistaa wikin ja kaiken sen sisällön pysyvästi.</string>

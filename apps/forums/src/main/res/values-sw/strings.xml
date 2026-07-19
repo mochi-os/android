@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Kusimamia, kuchapisha, kutoa maoni, kupiga kura na kutazama</string>
     <string name="forums_access_level_post_full">Kuchapisha, kutoa maoni, kupiga kura na kutazama</string>
     <string name="forums_access_level_vote_full">Kupiga kura na kutazama</string>
-    <string name="forums_access_management_description">Dhibiti nani anaweza kuona jukwaa hili na kushiriki ndani yake</string>
     <string name="forums_access_select_group">Chagua kikundi</string>
     <string name="forums_access_select_rule">Chagua sheria</string>
     <string name="forums_ai_actions_label">Vitendo vya AI kwenye machapisho</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">majibu</string>
     <string name="forums_moderation_unit_seconds">sekunde</string>
     <string name="forums_settings_ai_updated">Mipangilio ya AI imesasishwa</string>
-    <string name="forums_settings_delete_description">Futa jukwaa hili na maudhui yake yote kabisa.</string>
     <string name="forums_settings_forum_renamed">Jukwaa limepewa jina jipya</string>
     <string name="forums_settings_name_clear_cd">Futa jina</string>
     <string name="forums_settings_unsubscribe_section">Jiondoe kwenye jukwaa</string>

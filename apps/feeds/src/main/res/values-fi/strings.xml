@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Tilaus peruttu</string>
     <string name="feeds_access_level_comment_full">Kommentoi, reagoi ja katsele</string>
     <string name="feeds_rss_mode_posts_comments">Julkaisut ja kommentit</string>
-    <string name="feeds_delete_feed_description">Poista tämä syöte ja kaikki sen sisältö pysyvästi.</string>
     <string name="feeds_access_add_title">Lisää käyttöoikeus</string>
     <string name="feeds_permission_request_message">%1$s pyytää seuraavaa käyttöoikeutta:</string>
     <string name="feeds_allow_search">Salli kenen tahansa hakea syötettä</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Käännä englanniksi ja esitä luettelomerkkeinä.</string>
     <string name="feeds_source_url_hint_feed">Syötteen kohteen tunnus tai sormenjälki</string>
     <string name="feeds_source_credibility_label">Uskottavuus</string>
-    <string name="feeds_access_management_desc">Hallitse, kuka voi tarkastella tätä syötettä ja olla vuorovaikutuksessa sen kanssa</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d tunti</item>
         <item quantity="other">%1$d tuntia</item>

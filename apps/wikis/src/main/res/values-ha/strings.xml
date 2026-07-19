@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">An adana saituna</string>
     <string name="wikis_settings_home_save_failed">An gaza ajiye saituna</string>
     <string name="wikis_settings_section_delete">Goge wiki</string>
-    <string name="wikis_settings_delete_description">Share wannan wiki da duk abin da ke cikinsa har abada. Ba za a iya gyara ba.</string>
     <string name="wikis_settings_delete_action">Goge wiki</string>
     <string name="wikis_settings_delete_confirm_title">Ka tabbata sosai?</string>
     <string name="wikis_settings_delete_confirm_message">Ba a iya soke wannan aiki. Wannan zai share wiki da duk abun cikinsa har abada.</string>

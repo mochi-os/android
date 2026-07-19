@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ቅንብሮች ተቀምጠዋል</string>
     <string name="wikis_settings_home_save_failed">ቅንብሮችን ማስቀመጥ አልተሳካም</string>
     <string name="wikis_settings_section_delete">ዊኪ ሰርዝ</string>
-    <string name="wikis_settings_delete_description">ይህን ዊኪ እና ሁሉንም ይዘቶቹን በቋሚነት ሰርዝ። ይህ ሊቀለበስ አይችልም።</string>
     <string name="wikis_settings_delete_action">ዊኪ ሰርዝ</string>
     <string name="wikis_settings_delete_confirm_title">በፍጹም እርግጠኛ ነህ?</string>
     <string name="wikis_settings_delete_confirm_message">ይህ ድርጊት መመለስ አይቻልም። ይህ ዊኪውንና ሁሉንም ይዘቶቹን በቋሚነት ይሰርዛል።</string>

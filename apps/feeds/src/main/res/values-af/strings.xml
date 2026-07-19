@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Uitgeteken</string>
     <string name="feeds_access_level_comment_full">Kommentaar lewer, reageer en kyk</string>
     <string name="feeds_rss_mode_posts_comments">Plasings en kommentaar</string>
-    <string name="feeds_delete_feed_description">Verwyder hierdie feed en al sy inhoud permanent.</string>
     <string name="feeds_access_add_title">Voeg toegang by</string>
     <string name="feeds_permission_request_message">%1$s versoek die volgende toestemming:</string>
     <string name="feeds_allow_search">Laat enigiemand toe om die voer te soek</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Vertaal na Engels, en wys as kolpunte.</string>
     <string name="feeds_source_url_hint_feed">Voer-entiteit-ID of vingerafdruk</string>
     <string name="feeds_source_credibility_label">Geloofwaardigheid</string>
-    <string name="feeds_access_management_desc">Beheer wie kan hierdie feed bekyk en daarmee interaksie hê</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d uur</item>
         <item quantity="other">%1$d ure</item>

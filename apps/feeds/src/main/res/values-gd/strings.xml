@@ -240,7 +240,6 @@
     <string name="feeds_unsubscribed">Dì-fho-sgrìobhte</string>
     <string name="feeds_access_level_comment_full">Cuir beachd ris, dèan freagairt, agus seall</string>
     <string name="feeds_rss_mode_posts_comments">Postaichean is beachdan</string>
-    <string name="feeds_delete_feed_description">Sguab às an sruth seo agus a shusbaint gu sìorraidh.</string>
     <string name="feeds_access_add_title">Cuir inntrigeadh ris</string>
     <string name="feeds_permission_request_message">Tha %1$s ag iarraidh a\' chead a leanas:</string>
     <string name="feeds_allow_search">Ceadaich do dhuine sam bith inbhir a lorg</string>
@@ -268,7 +267,6 @@
     <string name="feeds_source_transform_hint">Eadar-theangaich gu Beurla, agus seall mar phuingean.</string>
     <string name="feeds_source_url_hint_feed">ID no meur-lorg an inbhir</string>
     <string name="feeds_source_credibility_label">Creideas</string>
-    <string name="feeds_access_management_desc">Stiùir cò as urrainn coimhead air agus cleachdadh ris an inbhir seo</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d uair a thìde</item>
         <item quantity="two">%1$d uair a thìde</item>

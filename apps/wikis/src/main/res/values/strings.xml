@@ -408,7 +408,6 @@
 
     <!-- Settings tab — delete -->
     <string name="wikis_settings_section_delete">Delete wiki</string>
-    <string name="wikis_settings_delete_description">Permanently delete this wiki and all its contents. This cannot be undone.</string>
     <string name="wikis_settings_delete_action">Delete wiki</string>
     <string name="wikis_settings_delete_confirm_title">Are you absolutely sure?</string>
     <string name="wikis_settings_delete_confirm_message">This action cannot be undone. This will permanently delete the wiki and all its contents.</string>

@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">ಮಾಡರೇಶನ್, ಪೋಸ್ಟ್, ಕಾಮೆಂಟ್, ಮತ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
     <string name="forums_access_level_post_full">ಪೋಸ್ಟ್, ಕಾಮೆಂಟ್, ಮತ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
     <string name="forums_access_level_vote_full">ಮತ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
-    <string name="forums_access_management_description">ಈ ವೇದಿಕೆಯನ್ನು ಯಾರು ನೋಡಬಹುದು ಮತ್ತು ಭಾಗವಹಿಸಬಹುದು ಎಂಬುದನ್ನು ನಿಯಂತ್ರಿಸಿ</string>
     <string name="forums_access_select_group">ಗುಂಪನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="forums_access_select_rule">ನಿಯಮವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="forums_ai_actions_label">ಪೋಸ್ಟ್‌ಗಳಲ್ಲಿ AI ಕ್ರಿಯೆಗಳು</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">ಪ್ರತ್ಯುತ್ತರಗಳು</string>
     <string name="forums_moderation_unit_seconds">ಸೆಕೆಂಡುಗಳು</string>
     <string name="forums_settings_ai_updated">AI ಸೆಟ್ಟಿಂಗ್‌ಗಳು ನವೀಕರಿಸಲಾಗಿದೆ</string>
-    <string name="forums_settings_delete_description">ಈ ವೇದಿಕೆಯನ್ನು ಮತ್ತು ಅದರ ಎಲ್ಲಾ ವಿಷಯವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಿ.</string>
     <string name="forums_settings_forum_renamed">ವೇದಿಕೆಯ ಹೆಸರು ಬದಲಾಯಿಸಲಾಗಿದೆ</string>
     <string name="forums_settings_name_clear_cd">ಹೆಸರನ್ನು ಅಳಿಸಿ</string>
     <string name="forums_settings_unsubscribe_section">ವೇದಿಕೆಯಿಂದ ಚಂದಾದಾರಿಕೆ ರದ್ದುಮಾಡಿ</string>

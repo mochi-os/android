@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">მოდერაცია, პოსტი, კომენტარი, ხმის მიცემა და ნახვა</string>
     <string name="forums_access_level_post_full">პოსტი, კომენტარი, ხმის მიცემა და ნახვა</string>
     <string name="forums_access_level_vote_full">ხმის მიცემა და ნახვა</string>
-    <string name="forums_access_management_description">აკონტროლეთ, ვის შეუძლია ამ ფორუმის ნახვა და მასში მონაწილეობა</string>
     <string name="forums_access_select_group">აირჩიეთ ჯგუფი</string>
     <string name="forums_access_select_rule">აირჩიეთ წესი</string>
     <string name="forums_ai_actions_label">AI მოქმედებები პოსტებზე</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">პასუხი</string>
     <string name="forums_moderation_unit_seconds">წამი</string>
     <string name="forums_settings_ai_updated">AI პარამეტრები განახლდა</string>
-    <string name="forums_settings_delete_description">სამუდამოდ წაშალეთ ეს ფორუმი და მთელი მისი კონტენტი.</string>
     <string name="forums_settings_forum_renamed">ფორუმს სახელი შეეცვალა</string>
     <string name="forums_settings_name_clear_cd">სახელის გასუფთავება</string>
     <string name="forums_settings_unsubscribe_section">ფორუმიდან გამოწერის გაუქმება</string>

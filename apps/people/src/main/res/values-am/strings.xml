@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">አማራጭ መግለጫ</string>
     <string name="people_group_name_required">ስም ያስፈልጋል</string>
     <string name="people_group_actions">የቡድን ተግባራት</string>
-    <string name="people_group_actions_description">ስለዚህ ቡድን ዋና መረጃ</string>
     <string name="people_group_members">አባላት</string>
     <string name="people_group_members_count">የአባላት ብዛት</string>
     <string name="people_group_members_description">የዚህ ቡድን አባል የሆኑ ተጠቃሚዎችና ቡድኖች</string>

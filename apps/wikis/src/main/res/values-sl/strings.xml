@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">Nastavitve shranjene</string>
     <string name="wikis_settings_home_save_failed">Neuspešno shranjevanje nastavitev</string>
     <string name="wikis_settings_section_delete">Izbriši wiki</string>
-    <string name="wikis_settings_delete_description">Trajno izbriši ta wiki in vso njegovo vsebino. Tega ni mogoče razveljaviti.</string>
     <string name="wikis_settings_delete_action">Izbriši wiki</string>
     <string name="wikis_settings_delete_confirm_title">Ste popolnoma prepričani?</string>
     <string name="wikis_settings_delete_confirm_message">Tega dejanja ni mogoče razveljaviti. To bo trajno izbrisalo wiki in vso njegovo vsebino.</string>

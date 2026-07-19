@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Dezabòne</string>
     <string name="feeds_access_level_comment_full">Kòmante, reyaji, epi gade</string>
     <string name="feeds_rss_mode_posts_comments">Pòs ak kòmantè</string>
-    <string name="feeds_delete_feed_description">Efase pèmanan flux sa a ak tout kontni li.</string>
     <string name="feeds_access_add_title">Ajoute aksè</string>
     <string name="feeds_permission_request_message">%1$s ap mande pèmisyon sa a:</string>
     <string name="feeds_allow_search">Pèmèt nenpòt moun chèche fil</string>
@@ -262,7 +261,6 @@
     <string name="feeds_source_transform_hint">Tradui an Anglè, epi montre kòm pwen.</string>
     <string name="feeds_source_url_hint_feed">ID antite feed oswa anprent dijital</string>
     <string name="feeds_source_credibility_label">Kredibilite</string>
-    <string name="feeds_access_management_desc">Kontwole kiyès ki ka gade ak entèraji ak fil sa a</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d èdtan</item>
         <item quantity="other">%1$d èdtan</item>

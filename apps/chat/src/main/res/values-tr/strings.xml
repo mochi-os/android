@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Okundu olarak işaretlendi</string>
     <string name="chat_search_next">Sonraki eşleşme</string>
     <string name="chat_search_prev">Önceki eşleşme</string>
-    <string name="chat_settings_general_desc">Sohbet ayarlarını düzenle</string>
     <string name="chat_settings_id">Sohbet kimliği</string>
-    <string name="chat_settings_members_desc">Bu sohbetteki kişilerin listesi</string>
 </resources>

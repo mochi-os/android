@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Iisetingi zigciniwe</string>
     <string name="wikis_settings_home_save_failed">Ayiphumelelanga ukugcina iisetingi</string>
     <string name="wikis_settings_section_delete">Cima iwiki</string>
-    <string name="wikis_settings_delete_description">Cima ngokusisigxina le wiki kunye nako konke okuqulethwe kuyo. Oku akunakubuyela emva.</string>
     <string name="wikis_settings_delete_action">Cima iwiki</string>
     <string name="wikis_settings_delete_confirm_title">Uqinisekile ngokupheleleyo?</string>
     <string name="wikis_settings_delete_confirm_message">Esi senzo asinakubuyiselwa umva. Oku kuya kucima iwiki nazo zonke iziqulatho zayo unaphakade.</string>

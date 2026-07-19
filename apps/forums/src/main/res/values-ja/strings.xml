@@ -263,7 +263,6 @@
     <string name="forums_access_level_moderate_full">モデレート・投稿・コメント・投票・閲覧</string>
     <string name="forums_access_level_post_full">投稿・コメント・投票・閲覧</string>
     <string name="forums_access_level_vote_full">投票・閲覧</string>
-    <string name="forums_access_management_description">このフォーラムを閲覧・利用できるユーザーを管理します</string>
     <string name="forums_access_select_group">グループを選択</string>
     <string name="forums_access_select_rule">ルールを選択</string>
     <string name="forums_ai_actions_label">投稿へのAI処理</string>
@@ -297,7 +296,6 @@
     <string name="forums_moderation_unit_replies">件</string>
     <string name="forums_moderation_unit_seconds">秒</string>
     <string name="forums_settings_ai_updated">AI設定を更新しました</string>
-    <string name="forums_settings_delete_description">このフォーラムとすべてのコンテンツを完全に削除します。</string>
     <string name="forums_settings_forum_renamed">フォーラム名を変更しました</string>
     <string name="forums_settings_name_clear_cd">名前を消去</string>
     <string name="forums_settings_unsubscribe_section">フォーラムの購読を解除</string>

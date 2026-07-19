@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Valfrjáls lýsing</string>
     <string name="people_group_name_required">Nafn er nauðsynlegt</string>
     <string name="people_group_actions">Hópaaðgerðir</string>
-    <string name="people_group_actions_description">Grunnupplýsingar um þennan hóp</string>
     <string name="people_group_members">Meðlimir</string>
     <string name="people_group_members_count">Fjöldi meðlima</string>
     <string name="people_group_members_description">Notendur og hópar sem tilheyra þessum hópi</string>

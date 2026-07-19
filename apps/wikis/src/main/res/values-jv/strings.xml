@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Setelan disimpen</string>
     <string name="wikis_settings_home_save_failed">Gagal nyimpen setélan</string>
     <string name="wikis_settings_section_delete">Busak wiki</string>
-    <string name="wikis_settings_delete_description">Busak permanen wiki iki lan kabèh isiné. Iki ora bisa dibatalaké.</string>
     <string name="wikis_settings_delete_action">Busak wiki</string>
     <string name="wikis_settings_delete_confirm_title">Sampéyan yakin tenan?</string>
     <string name="wikis_settings_delete_confirm_message">Tindakan iki ora bisa dibatalaké. Iki bakal mbusak wiki lan kabeh isiné kanthi permanen.</string>

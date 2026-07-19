@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">સેટિંગ્સ સાચવી</string>
     <string name="wikis_settings_home_save_failed">સેટિંગ્સ સેવ કરવામાં નિષ્ફળ</string>
     <string name="wikis_settings_section_delete">wiki કાઢી નાખો</string>
-    <string name="wikis_settings_delete_description">આ wiki અને તેની તમામ સામગ્રી કાયમ માટે ડિલીટ કરો. આ પૂર્વવત્ કરી શકાતું નથી.</string>
     <string name="wikis_settings_delete_action">wiki કાઢી નાખો</string>
     <string name="wikis_settings_delete_confirm_title">શું તમે ખરેખર ચોક્કસ છો?</string>
     <string name="wikis_settings_delete_confirm_message">આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી. આ વિકિ અને તેની તમામ સામગ્રીને કાયમ માટે કાઢી નાખશે.</string>

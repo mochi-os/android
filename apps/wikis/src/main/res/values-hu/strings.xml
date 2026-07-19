@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Beállítások mentve</string>
     <string name="wikis_settings_home_save_failed">Nem sikerült menteni a beállításokat</string>
     <string name="wikis_settings_section_delete">Wiki törlése</string>
-    <string name="wikis_settings_delete_description">Véglegesen törli ezt a wikit és minden tartalmát. Ez nem visszavonható.</string>
     <string name="wikis_settings_delete_action">Wiki törlése</string>
     <string name="wikis_settings_delete_confirm_title">Teljesen biztos benne?</string>
     <string name="wikis_settings_delete_confirm_message">Ez a művelet nem vonható vissza. A wiki és minden tartalma véglegesen törlődik.</string>

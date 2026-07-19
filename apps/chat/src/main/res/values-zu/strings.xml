@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Kumakiwe njengokufundiwe</string>
     <string name="chat_search_next">Ukufana okulandelayo</string>
     <string name="chat_search_prev">Ukufana kwangaphambilini</string>
-    <string name="chat_settings_general_desc">Lungisa izilungiselelo zengxoxo</string>
     <string name="chat_settings_id">I-ID yengxoxo</string>
-    <string name="chat_settings_members_desc">Uhlu lwabantu kule ngxoxo</string>
 </resources>

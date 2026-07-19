@@ -199,7 +199,6 @@
     <string name="wikis_settings_home_saved">سیٹنگز محفوظ ہو گئیں</string>
     <string name="wikis_settings_home_save_failed">ترتیبات محفوظ کرنے میں ناکامی</string>
     <string name="wikis_settings_section_delete">wiki حذف کریں</string>
-    <string name="wikis_settings_delete_description">اس wiki اور اس کے تمام مواد کو مستقل طور پر حذف کریں۔ اسے واپس نہیں کیا جا سکتا۔</string>
     <string name="wikis_settings_delete_action">wiki حذف کریں</string>
     <string name="wikis_settings_delete_confirm_title">کیا آپ بالکل یقین رکھتے ہیں؟</string>
     <string name="wikis_settings_delete_confirm_message">یہ ایکشن واپس نہیں لیا جا سکتا۔ یہ وکی اور اس کے تمام مواد کو مستقل طور پر حذف کر دے گا۔</string>

@@ -103,7 +103,5 @@
     <string name="chat_marked_read">وەک خوێندراوە نیشانە کرا</string>
     <string name="chat_search_next">هاوتای دواتر</string>
     <string name="chat_search_prev">هاوتای پێشوو</string>
-    <string name="chat_settings_general_desc">ڕێکخستنەکانی چات ڕێکبخە</string>
     <string name="chat_settings_id">ناسنامەی چات</string>
-    <string name="chat_settings_members_desc">لیستی کەسانی ئەم چاتە</string>
 </resources>

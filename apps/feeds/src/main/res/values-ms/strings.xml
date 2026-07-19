@@ -236,7 +236,6 @@
     <string name="feeds_unsubscribed">Berhenti melanggan</string>
     <string name="feeds_access_level_comment_full">Komen, beri reaksi dan lihat</string>
     <string name="feeds_rss_mode_posts_comments">Hantaran dan komen</string>
-    <string name="feeds_delete_feed_description">Padam suapan ini dan semua kandungannya secara kekal.</string>
     <string name="feeds_access_add_title">Tambah akses</string>
     <string name="feeds_permission_request_message">%1$s meminta kebenaran berikut:</string>
     <string name="feeds_allow_search">Benarkan sesiapa sahaja mencari suapan</string>
@@ -261,7 +260,6 @@
     <string name="feeds_source_transform_hint">Terjemah ke bahasa Inggeris, dan tunjukkan sebagai poin senarai.</string>
     <string name="feeds_source_url_hint_feed">ID entiti suapan atau cap jari</string>
     <string name="feeds_source_credibility_label">Kredibiliti</string>
-    <string name="feeds_access_management_desc">Kawal siapa boleh melihat dan berinteraksi dengan suapan ini</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="other">%1$d jam</item>
     </plurals>

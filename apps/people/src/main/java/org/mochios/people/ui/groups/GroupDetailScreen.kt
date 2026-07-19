@@ -265,11 +265,6 @@ private fun GroupDetailContent(
                     text = stringResource(R.string.people_profile_identity),
                     style = MaterialTheme.typography.titleMedium,
                 )
-                Text(
-                    text = stringResource(R.string.people_group_actions_description),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
             }
         }
         item("name-row") {

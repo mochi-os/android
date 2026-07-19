@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Olvasottként megjelölve</string>
     <string name="chat_search_next">Következő találat</string>
     <string name="chat_search_prev">Előző találat</string>
-    <string name="chat_settings_general_desc">Csevegés beállításainak módosítása</string>
     <string name="chat_settings_id">Csevegés azonosítója</string>
-    <string name="chat_settings_members_desc">A csevegésben részt vevők listája</string>
 </resources>

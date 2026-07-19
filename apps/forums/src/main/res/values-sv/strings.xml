@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderera, posta, kommentera, rösta och visa</string>
     <string name="forums_access_level_post_full">Posta, kommentera, rösta och visa</string>
     <string name="forums_access_level_vote_full">Rösta och visa</string>
-    <string name="forums_access_management_description">Bestäm vem som kan se och delta i det här forumet</string>
     <string name="forums_access_select_group">Välj en grupp</string>
     <string name="forums_access_select_rule">Välj en regel</string>
     <string name="forums_ai_actions_label">AI-åtgärder på inlägg</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">svar</string>
     <string name="forums_moderation_unit_seconds">sekunder</string>
     <string name="forums_settings_ai_updated">AI-inställningar uppdaterade</string>
-    <string name="forums_settings_delete_description">Ta bort det här forumet och allt innehåll permanent.</string>
     <string name="forums_settings_forum_renamed">Forumet har bytt namn</string>
     <string name="forums_settings_name_clear_cd">Rensa namn</string>
     <string name="forums_settings_unsubscribe_section">Avsluta prenumeration på forumet</string>

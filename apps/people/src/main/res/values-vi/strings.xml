@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Mô tả không bắt buộc</string>
     <string name="people_group_name_required">Tên là bắt buộc</string>
     <string name="people_group_actions">Hành động nhóm</string>
-    <string name="people_group_actions_description">Thông tin cốt lõi về nhóm này</string>
     <string name="people_group_members">Thành viên</string>
     <string name="people_group_members_count">Số thành viên</string>
     <string name="people_group_members_description">Người dùng và nhóm thuộc về nhóm này</string>

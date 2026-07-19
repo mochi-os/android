@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Menyederhana, menyiar, mengulas, mengundi dan melihat</string>
     <string name="forums_access_level_post_full">Menyiar, mengulas, mengundi dan melihat</string>
     <string name="forums_access_level_vote_full">Mengundi dan melihat</string>
-    <string name="forums_access_management_description">Kawal siapa yang boleh melihat dan berinteraksi dengan forum ini</string>
     <string name="forums_access_select_group">Pilih kumpulan</string>
     <string name="forums_access_select_rule">Pilih peraturan</string>
     <string name="forums_ai_actions_label">Tindakan AI pada siaran</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">balasan</string>
     <string name="forums_moderation_unit_seconds">saat</string>
     <string name="forums_settings_ai_updated">Tetapan AI dikemas kini</string>
-    <string name="forums_settings_delete_description">Padam forum ini dan semua kandungannya secara kekal.</string>
     <string name="forums_settings_forum_renamed">Forum dinamakan semula</string>
     <string name="forums_settings_name_clear_cd">Kosongkan nama</string>
     <string name="forums_settings_unsubscribe_section">Nyahlanggan forum</string>

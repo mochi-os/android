@@ -266,7 +266,6 @@
     <string name="forums_access_level_moderate_full">Modaireachd, postadh, beachdachadh, bhòtadh agus sealltainn</string>
     <string name="forums_access_level_post_full">Postadh, beachdachadh, bhòtadh agus sealltainn</string>
     <string name="forums_access_level_vote_full">Bhòtadh agus sealltainn</string>
-    <string name="forums_access_management_description">Stiùirich cò as urrainn am fòram seo fhaicinn agus pàirt a ghabhail ann</string>
     <string name="forums_access_select_group">Tagh buidheann</string>
     <string name="forums_access_select_rule">Tagh riaghailt</string>
     <string name="forums_ai_actions_label">Gnìomhan IF air postaichean</string>
@@ -300,7 +299,6 @@
     <string name="forums_moderation_unit_replies">freagairt</string>
     <string name="forums_moderation_unit_seconds">diog</string>
     <string name="forums_settings_ai_updated">Chaidh roghainnean IF ùrachadh</string>
-    <string name="forums_settings_delete_description">Sguab às am fòram seo agus a shusbaint gu lèir gu buan.</string>
     <string name="forums_settings_forum_renamed">Chaidh am fòram ath-ainmeachadh</string>
     <string name="forums_settings_name_clear_cd">Falamhaich an t-ainm</string>
     <string name="forums_settings_unsubscribe_section">Dì-chlàraich bhon fhòram</string>

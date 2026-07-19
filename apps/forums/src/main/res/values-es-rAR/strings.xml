@@ -291,8 +291,6 @@
     <string name="forums_settings_forum_renamed">Foro renombrado</string>
     <string name="forums_settings_ai_updated">Ajustes de IA actualizados</string>
     <string name="forums_settings_name_clear_cd">Borrar nombre</string>
-    <string name="forums_settings_delete_description">Elimina permanentemente este foro y todo su contenido.</string>
-    <string name="forums_access_management_description">Controla quién puede ver este foro e interactuar con él</string>
     <string name="forums_find_found_by_url">Encontrado por URL</string>
     <string name="forums_saved_clear_confirm_body">Esto quita todas las publicaciones de tu lista de guardados. No se puede deshacer.</string>
     <string name="forums_saved_clear_confirm_title">¿Borrar todas las publicaciones guardadas?</string>

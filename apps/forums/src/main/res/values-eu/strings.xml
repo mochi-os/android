@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Moderatu, argitaratu, iruzkindu, bozkatu eta ikusi</string>
     <string name="forums_access_level_post_full">Argitaratu, iruzkindu, bozkatu eta ikusi</string>
     <string name="forums_access_level_vote_full">Bozkatu eta ikusi</string>
-    <string name="forums_access_management_description">Kontrolatu nork ikus dezakeen foro hau eta bertan parte hartu</string>
     <string name="forums_access_select_group">Hautatu talde bat</string>
     <string name="forums_access_select_rule">Hautatu arau bat</string>
     <string name="forums_ai_actions_label">AAren ekintzak argitalpenetan</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">erantzun</string>
     <string name="forums_moderation_unit_seconds">segundo</string>
     <string name="forums_settings_ai_updated">AAren ezarpenak eguneratu dira</string>
-    <string name="forums_settings_delete_description">Ezabatu betiko foro hau eta bere eduki guztia.</string>
     <string name="forums_settings_forum_renamed">Foroa izenez aldatu da</string>
     <string name="forums_settings_name_clear_cd">Garbitu izena</string>
     <string name="forums_settings_unsubscribe_section">Utzi foroaren harpidetza</string>

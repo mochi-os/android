@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Descrição opcional</string>
     <string name="people_group_name_required">O nome é obrigatório</string>
     <string name="people_group_actions">Ações do grupo</string>
-    <string name="people_group_actions_description">Informação principal sobre este grupo</string>
     <string name="people_group_members">Membros</string>
     <string name="people_group_members_count">Número de Membros</string>
     <string name="people_group_members_description">Utilizadores e grupos que pertencem a este grupo</string>

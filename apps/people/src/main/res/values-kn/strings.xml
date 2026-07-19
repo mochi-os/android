@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">ಐಚ್ಛಿಕ ವಿವರಣೆ</string>
     <string name="people_group_name_required">ಹೆಸರು ಅಗತ್ಯವಿದೆ</string>
     <string name="people_group_actions">ಗುಂಪು ಆ್ಯಕ್ಷನ್‌ಗಳು</string>
-    <string name="people_group_actions_description">ಈ ಗುಂಪಿನ ಬಗ್ಗೆ ಮುಖ್ಯ ಮಾಹಿತಿ</string>
     <string name="people_group_members">ಸದಸ್ಯರು</string>
     <string name="people_group_members_count">ಸದಸ್ಯರ ಸಂಖ್ಯೆ</string>
     <string name="people_group_members_description">ಈ ಗುಂಪಿಗೆ ಸೇರಿದ ಬಳಕೆದಾರರು ಮತ್ತು ಗುಂಪುಗಳು</string>

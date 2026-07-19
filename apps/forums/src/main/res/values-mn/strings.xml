@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Хянах, нийтлэх, сэтгэгдэл бичих, санал өгөх, үзэх</string>
     <string name="forums_access_level_post_full">Нийтлэх, сэтгэгдэл бичих, санал өгөх, үзэх</string>
     <string name="forums_access_level_vote_full">Санал өгөх, үзэх</string>
-    <string name="forums_access_management_description">Энэ форумыг хэн үзэж, оролцож болохыг удирдана уу</string>
     <string name="forums_access_select_group">Бүлэг сонгоно уу</string>
     <string name="forums_access_select_rule">Дүрэм сонгоно уу</string>
     <string name="forums_ai_actions_label">Нийтлэл дээрх ХИ үйлдлүүд</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">хариулт</string>
     <string name="forums_moderation_unit_seconds">секунд</string>
     <string name="forums_settings_ai_updated">ХИ тохиргоо шинэчлэгдлээ</string>
-    <string name="forums_settings_delete_description">Энэ форум болон түүний бүх контентыг бүрмөсөн устгана.</string>
     <string name="forums_settings_forum_renamed">Форумын нэрийг өөрчиллөө</string>
     <string name="forums_settings_name_clear_cd">Нэрийг цэвэрлэх</string>
     <string name="forums_settings_unsubscribe_section">Форумаас гарах</string>

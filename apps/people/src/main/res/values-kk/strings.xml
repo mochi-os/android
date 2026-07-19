@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Қосымша сипаттама</string>
     <string name="people_group_name_required">Аты міндетті</string>
     <string name="people_group_actions">Топ әрекеттері</string>
-    <string name="people_group_actions_description">Осы топ туралы негізгі ақпарат</string>
     <string name="people_group_members">Мүшелер</string>
     <string name="people_group_members_count">Мүшелер саны</string>
     <string name="people_group_members_description">Осы топқа жататын пайдаланушылар мен топтар</string>

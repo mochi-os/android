@@ -59,7 +59,6 @@
     <string name="people_group_description_optional">Tuairisgeul roghainneil</string>
     <string name="people_group_name_required">Tha ainm a dhìth</string>
     <string name="people_group_actions">Gnìomhan a\' bhuidhne</string>
-    <string name="people_group_actions_description">Bun-fhiosrachadh mun bhuidheann seo</string>
     <string name="people_group_members">Buill</string>
     <string name="people_group_members_count">Cunntas nam Buill</string>
     <string name="people_group_members_description">Cleachdaichean is buidhnean a bhuineas dhan bhuidheann seo</string>

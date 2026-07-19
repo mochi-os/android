@@ -103,7 +103,5 @@
     <string name="chat_marked_read">Означено како прочитано</string>
     <string name="chat_search_next">Следно совпаѓање</string>
     <string name="chat_search_prev">Претходно совпаѓање</string>
-    <string name="chat_settings_general_desc">Прилагоди ги поставките за разговор</string>
     <string name="chat_settings_id">ИД на разговорот</string>
-    <string name="chat_settings_members_desc">Список на луѓе во овој разговор</string>
 </resources>

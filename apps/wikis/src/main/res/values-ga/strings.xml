@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Socruithe sábháilte</string>
     <string name="wikis_settings_home_save_failed">Theip ar shábháil socruithe</string>
     <string name="wikis_settings_section_delete">Scrios wiki</string>
-    <string name="wikis_settings_delete_description">Scrios an wiki seo agus a inneachar go léir go buan. Ní féidir é seo a chealú.</string>
     <string name="wikis_settings_delete_action">Scrios wiki</string>
     <string name="wikis_settings_delete_confirm_title">An bhfuil tú lánchinnte?</string>
     <string name="wikis_settings_delete_confirm_message">Ní féidir an gníomh seo a chealú. Scriosfaidh sé seo an wiki agus a ábhar uile go buan.</string>

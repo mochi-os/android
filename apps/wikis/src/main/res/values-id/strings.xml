@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Pengaturan disimpan</string>
     <string name="wikis_settings_home_save_failed">Gagal menyimpan pengaturan</string>
     <string name="wikis_settings_section_delete">Hapus wiki</string>
-    <string name="wikis_settings_delete_description">Hapus permanen wiki ini dan semua isinya. Ini tidak dapat dibatalkan.</string>
     <string name="wikis_settings_delete_action">Hapus wiki</string>
     <string name="wikis_settings_delete_confirm_title">Apakah Anda benar-benar yakin?</string>
     <string name="wikis_settings_delete_confirm_message">Tindakan ini tidak dapat dibatalkan. Ini akan menghapus wiki secara permanen beserta semua kontennya.</string>

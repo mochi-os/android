@@ -240,7 +240,6 @@
     <string name="feeds_unsubscribed">Адпісана</string>
     <string name="feeds_access_level_comment_full">Каментаваць, рэагаваць і праглядаць</string>
     <string name="feeds_rss_mode_posts_comments">Пасты і каментары</string>
-    <string name="feeds_delete_feed_description">Назаўжды выдаліць гэтую стужку і ўвесь яе змест.</string>
     <string name="feeds_access_add_title">Дадаць доступ</string>
     <string name="feeds_permission_request_message">%1$s запытвае наступны дазвол:</string>
     <string name="feeds_allow_search">Дазволіць усім шукаць стужку</string>
@@ -268,7 +267,6 @@
     <string name="feeds_source_transform_hint">Перакладзіце на англійскую і пакажыце як спіс пунктаў.</string>
     <string name="feeds_source_url_hint_feed">ID сутнасці стужкі або адбітак пальца</string>
     <string name="feeds_source_credibility_label">Давер</string>
-    <string name="feeds_access_management_desc">Кіруйце тым, хто можа праглядаць і ўзаемадзейнічаць з гэтай стужкай</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d гадзіна</item>
         <item quantity="few">%1$d гадзіны</item>

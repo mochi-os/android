@@ -238,7 +238,6 @@
     <string name="feeds_unsubscribed">{feedName}-dən abunəlikdən çıxıldı</string>
     <string name="feeds_access_level_comment_full">Şərh, reaksiya ver və bax</string>
     <string name="feeds_rss_mode_posts_comments">Postlar və şərhlər</string>
-    <string name="feeds_delete_feed_description">Bu feed-i və bütün məzmununu birdəfəlik silin.</string>
     <string name="feeds_access_add_title">Giriş əlavə et</string>
     <string name="feeds_permission_request_message">%1$s aşağıdakı icazəni tələb edir:</string>
     <string name="feeds_allow_search">Hər kəsə feed axtarmağa icazə ver</string>
@@ -264,7 +263,6 @@
     <string name="feeds_source_transform_hint">Fərqli axtarış termini sınayın</string>
     <string name="feeds_source_url_hint_feed">Lent qurum ID və ya barmaq izi</string>
     <string name="feeds_source_credibility_label">Etibarlılıq</string>
-    <string name="feeds_access_management_desc">Bu feed-i kim baxa və qarşılıqlı əlaqədə ola biləcəyinə nəzarət edin</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">%1$d saat</item>
         <item quantity="other">%1$d saat</item>

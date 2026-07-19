@@ -264,7 +264,6 @@
     <string name="forums_access_level_moderate_full">Umsjón, færslur, athugasemdir, atkvæði og skoðun</string>
     <string name="forums_access_level_post_full">Færslur, athugasemdir, atkvæði og skoðun</string>
     <string name="forums_access_level_vote_full">Atkvæði og skoðun</string>
-    <string name="forums_access_management_description">Stjórnaðu hverjir geta séð þetta spjallborð og tekið þátt í því</string>
     <string name="forums_access_select_group">Veldu hóp</string>
     <string name="forums_access_select_rule">Veldu reglu</string>
     <string name="forums_ai_actions_label">Gervigreindaraðgerðir á færslum</string>
@@ -298,7 +297,6 @@
     <string name="forums_moderation_unit_replies">svör</string>
     <string name="forums_moderation_unit_seconds">sekúndur</string>
     <string name="forums_settings_ai_updated">Gervigreindarstillingar uppfærðar</string>
-    <string name="forums_settings_delete_description">Eyða þessu spjallborði og öllu efni þess varanlega.</string>
     <string name="forums_settings_forum_renamed">Spjallborð endurnefnt</string>
     <string name="forums_settings_name_clear_cd">Hreinsa nafn</string>
     <string name="forums_settings_unsubscribe_section">Segja upp áskrift að spjallborði</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Innstillinger lagret</string>
     <string name="wikis_settings_home_save_failed">Kunne ikke lagre innstillinger</string>
     <string name="wikis_settings_section_delete">Slett wiki</string>
-    <string name="wikis_settings_delete_description">Slett denne wikien og alt innhold permanent. Dette kan ikke angres.</string>
     <string name="wikis_settings_delete_action">Slett wiki</string>
     <string name="wikis_settings_delete_confirm_title">Er du helt sikker?</string>
     <string name="wikis_settings_delete_confirm_message">Denne handlingen kan ikke angres. Dette vil slette wikien og alt innhold permanent.</string>

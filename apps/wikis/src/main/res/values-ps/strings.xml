@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">ترتیبات خوندي شول</string>
     <string name="wikis_settings_home_save_failed">د تنظیماتو د خوندي کولو پاتې راغلل</string>
     <string name="wikis_settings_section_delete">ویکي ړنګ کړئ</string>
-    <string name="wikis_settings_delete_description">په همیشني ډول دا wiki او د هغه ټول مینځپانګه حذف کړئ. دا بیرته نشي راګرځیدلی.</string>
     <string name="wikis_settings_delete_action">ویکي ړنګ کړئ</string>
     <string name="wikis_settings_delete_confirm_title">ایا تاسو په بشپړ ډول ډاډه یاست؟</string>
     <string name="wikis_settings_delete_confirm_message">دا کړنه نشي بېرته راګرځیدلی. دا به wiki او ټوله یې محتوا دایمي ډول حذف کړي.</string>

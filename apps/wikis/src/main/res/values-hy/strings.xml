@@ -200,7 +200,6 @@
     <string name="wikis_settings_home_saved">Կարգավորումները պահպանվեցին</string>
     <string name="wikis_settings_home_save_failed">Չհաջողվեց պահպանել կարգավորումները</string>
     <string name="wikis_settings_section_delete">Ջնջել wiki-ն</string>
-    <string name="wikis_settings_delete_description">Ընդմիշտ ջնջել այս wiki-ն և ամբողջ պարունակությունը։ Սա հնարավոր չէ հետ վերադարձնել։</string>
     <string name="wikis_settings_delete_action">Ջնջել wiki-ն</string>
     <string name="wikis_settings_delete_confirm_title">Վստա՞հ եք, որ ուզում եք ջնջել «{0}»-ը։</string>
     <string name="wikis_settings_delete_confirm_message">Այս գործողությունը հնարավոր չէ չեղարկել: Սա մշտապես կջնջի wiki-ն և նրա ողջ բովանդակությունը:</string>
