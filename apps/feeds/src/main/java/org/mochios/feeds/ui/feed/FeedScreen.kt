@@ -90,6 +90,8 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
@@ -143,6 +145,7 @@ import org.mochios.android.ui.components.FlipBook
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.VideoPlayer
@@ -1236,6 +1239,10 @@ private fun PostImage(
     var state by remember(url) {
         mutableStateOf<AsyncImagePainter.State>(AsyncImagePainter.State.Empty)
     }
+    // Bumped by tapping the broken-image glyph: recreating the painter under a
+    // new key is what makes Coil re-attempt the fetch — flaky mobile links
+    // stall image loads that a later tap would recover.
+    var retry by remember(url) { mutableIntStateOf(0) }
     val loaded = state is AsyncImagePainter.State.Success
     Box(
         modifier = modifier.then(
@@ -1255,17 +1262,32 @@ private fun PostImage(
                 Icons.Default.BrokenImage,
                 contentDescription = contentDescription,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(48.dp)
+                modifier = Modifier
+                    .size(48.dp)
+                    .clickable {
+                        state = AsyncImagePainter.State.Empty
+                        retry++
+                    }
             )
         } else {
-            AsyncImage(
-                model = url,
-                contentDescription = contentDescription,
-                contentScale = contentScale,
-                alignment = alignment,
-                onState = { state = it },
-                modifier = Modifier.fillMaxSize()
-            )
+            key(retry) {
+                AsyncImage(
+                    model = url,
+                    contentDescription = contentDescription,
+                    contentScale = contentScale,
+                    alignment = alignment,
+                    onState = { state = it },
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
+            if (!loaded) {
+                // A bare tint reads as "nothing is coming"; show that the
+                // fetch is still in flight.
+                CircularProgressIndicator(
+                    modifier = Modifier.size(24.dp),
+                    strokeWidth = 2.dp
+                )
+            }
         }
     }
 }
@@ -1418,6 +1440,30 @@ private fun GalleryContent(
                         .padding(start = 16.dp, end = 4.dp, top = 16.dp)
                 ) {
                     PostByline(post)
+                }
+                // Check-in / travelling map, as the web card shows for located
+                // posts. Guards match the detail screen: zero coordinates mean
+                // the location carries no mappable point.
+                val checkinWithCoordinates = post.data?.checkin?.takeIf { place ->
+                    place.lat != 0.0 || place.lon != 0.0
+                }
+                val travellingWithCoordinates = post.data?.travelling?.takeIf { travelling ->
+                    (travelling.origin?.lat != 0.0 || travelling.origin?.lon != 0.0) &&
+                        (travelling.destination?.lat != 0.0 || travelling.destination?.lon != 0.0)
+                }
+                if (checkinWithCoordinates != null || travellingWithCoordinates != null) {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp)
+                    ) {
+                        LocationMapView(
+                            checkin = checkinWithCoordinates,
+                            origin = travellingWithCoordinates?.origin,
+                            destination = travellingWithCoordinates?.destination
+                        )
+                    }
                 }
                 Spacer(modifier = Modifier.height(8.dp))
                 GalleryMosaic(
