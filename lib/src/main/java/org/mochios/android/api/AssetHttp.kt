@@ -21,19 +21,33 @@ import javax.inject.Singleton
 annotation class AssetHttpClient
 
 /**
- * OkHttp client for fetching session-gated media assets (avatars, chat / feed
- * attachments, video frames). Mirrors the API clients' auth — the session
- * cookie plus the per-app bearer token — so Coil and ExoPlayer can load images
- * and stream video the same way the REST clients do.
+ * OkHttp client for fetching media assets. Requests to the user's own Mochi
+ * server mirror the API clients' auth — the session cookie plus the per-app
+ * bearer token — so Coil and ExoPlayer can load session-gated images (avatars,
+ * chat / feed attachments, video frames) the same way the REST clients do.
  *
  * The app name is the URL's first path segment (`/chat/...` → "chat"), which is
  * the key [SessionManager.getTokenBlocking] expects, so a single client serves
  * every feature's assets. Deliberately omits the session-invalidation
  * interceptor: a transient image / video 401 must not sign the user out.
+ *
+ * Requests to any other host (publisher CDNs behind RSS post images) carry no
+ * Mochi auth and are dressed as a browser instead: image CDNs behind bot
+ * mitigation reject bare library fetches — Cloudflare 403s the Japan Times'
+ * images without a Referer, whatever the user agent — so send the image's own
+ * origin as Referer plus the browser UA / Accept pair the feeds source WebView
+ * already impersonates for the same reason.
  */
 @Module
 @InstallIn(SingletonComponent::class)
 object AssetHttpModule {
+
+    // Chrome-on-Android UA, matching the feeds source WebView's impersonation.
+    private const val BROWSER_USER_AGENT =
+        "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) " +
+            "Chrome/127.0.0.0 Mobile Safari/537.36"
+
+    private const val BROWSER_IMAGE_ACCEPT = "image/avif,image/webp,image/apng,image/*,*/*;q=0.8"
 
     @Provides
     @Singleton
@@ -43,6 +57,16 @@ object AssetHttpModule {
             .cookieJar(sessionManager.cookieJar)
             .addInterceptor { chain ->
                 val request = chain.request()
+                val server = sessionManager.getServerUrlBlocking().toHttpUrlOrNull()
+                if (server == null || request.url.host != server.host) {
+                    return@addInterceptor chain.proceed(
+                        request.newBuilder()
+                            .header("User-Agent", BROWSER_USER_AGENT)
+                            .header("Accept", BROWSER_IMAGE_ACCEPT)
+                            .header("Referer", "${request.url.scheme}://${request.url.host}/")
+                            .build()
+                    )
+                }
                 val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
                 val token = app?.let { sessionManager.getTokenBlocking(it) }
                 val authed = if (token != null) {
