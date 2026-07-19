@@ -294,6 +294,7 @@ fun FeedScreen(
     val currentSort by viewModel.currentSort.collectAsState()
     val unreadOnly by viewModel.unreadOnly.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
+    val postImages by viewModel.postImages.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
     val commentTarget by viewModel.commentTarget.collectAsState()
     val commentDraft by viewModel.commentDraft.collectAsState()
@@ -906,9 +907,17 @@ fun FeedScreen(
                                         // Anything else falls through to post detail.
                                         val sourceUrl =
                                             post.data?.rss?.link?.takeIf { it.isNotEmpty() }
+                                        // Upgrade the RSS thumbnail to the article's
+                                        // og:image for pages the pager composes
+                                        // (current + neighbours); resolves once per
+                                        // post, server-cached after the first fetch.
+                                        LaunchedEffect(post.id) {
+                                            viewModel.resolvePostImage(post)
+                                        }
                                         PostCard(
                                             post = post,
                                             fallbackFeedId = viewModel.feedId,
+                                            upgradedRssImage = postImages[post.id],
                                             isSaved = savedIds.contains(post.id),
                                             onClick = {
                                                 onNavigateToPost(
@@ -1600,6 +1609,9 @@ private fun GalleryTile(
 private fun PostCard(
     post: Post,
     fallbackFeedId: String,
+    // Article og:image resolved by the ViewModel, upgrading the RSS item's
+    // (often tiny) thumbnail. Null = not resolved yet, "" = nothing better.
+    upgradedRssImage: String?,
     isSaved: Boolean,
     onClick: () -> Unit,
     onComments: () -> Unit,
@@ -1634,7 +1646,8 @@ private fun PostCard(
     val attachmentImageUrls = attachmentImages.map { att ->
         att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}"
     }
-    val rssImageUrl = post.data?.rss?.image?.takeIf { it.isNotEmpty() }
+    val rssImageUrl = upgradedRssImage?.takeIf { it.isNotEmpty() }
+        ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
     val heroUrl = attachmentImageUrls.firstOrNull() ?: rssImageUrl
     // Gallery posts — the media is the content (no RSS article, at most a
@@ -1669,16 +1682,24 @@ private fun PostCard(
             )
         }
         if (!isGallery && heroUrl != null) {
-            // Square corners; the hero region is a FIXED half-screen height,
-            // reserved from the first frame — the post data carries no image
+            // Square corners; the hero region has a FIXED height reserved
+            // from the first frame — the post data carries no image
             // dimensions, so this is the only way a slow image load can't
-            // shift (and re-truncate) the text below it. ContentScale.Fit
-            // means a landscape image fills the width edge-to-edge, while a
-            // very tall image (e.g. a web comic) is shown whole, contained
-            // within the region (with side margins), rather than cropped top
-            // and bottom. Top-aligned so the image stays full-bleed against
-            // the screen edge. Tap opens the full-screen lightbox.
-            val heroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
+            // shift (and re-truncate) the text below it. The height depends
+            // only on screen geometry, never the bitmap: RSS heroes get a
+            // width-driven 16:9 region (news images are almost always
+            // landscape; reserving more just left a dead band between image
+            // and text on tall screens), while attachment heroes keep the
+            // half-screen region since user photos are often portrait.
+            // ContentScale.Fit shows a mismatched image whole with margins
+            // rather than cropped. Top-aligned so the image stays full-bleed
+            // against the screen edge. Tap opens the full-screen lightbox.
+            val configuration = LocalConfiguration.current
+            val heroHeight = if (heroFromAttachment) {
+                (configuration.screenHeightDp / 2).dp
+            } else {
+                minOf(configuration.screenWidthDp * 9 / 16, configuration.screenHeightDp / 2).dp
+            }
             PostImage(
                 url = heroUrl,
                 contentDescription = stringResource(R.string.feeds_image_preview),

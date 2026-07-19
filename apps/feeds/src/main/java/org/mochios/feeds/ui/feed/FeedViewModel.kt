@@ -193,6 +193,35 @@ class FeedViewModel @Inject constructor(
     private var markReadJob: Job? = null
     private val pendingReadIds = mutableSetOf<String>()
 
+    // Upgraded hero image URLs per post id, resolved lazily as pages come
+    // into view. "" = resolved, nothing better than the stored thumbnail.
+    private val _postImages = MutableStateFlow<Map<String, String>>(emptyMap())
+    val postImages: StateFlow<Map<String, String>> = _postImages.asStateFlow()
+    private val resolvingImages = mutableSetOf<String>()
+
+    /**
+     * Upgrade an RSS post's preview image: feeds store the RSS item's
+     * `media:thumbnail`, which is often tiny (BBC ships 240px), while the
+     * server can fetch the article's og:image on demand and caches it into
+     * the post. Only posts that already show an image are upgraded — posts
+     * without one reserve no hero region, so a late image would shift the
+     * layout. Safe to call repeatedly; each post resolves once.
+     */
+    fun resolvePostImage(post: Post) {
+        val rss = post.data?.rss ?: return
+        if (rss.image.isEmpty() || rss.link.isEmpty()) return
+        if (_postImages.value.containsKey(post.id) || !resolvingImages.add(post.id)) return
+        viewModelScope.launch {
+            val feed = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { feedId }
+            val url = try {
+                repository.getPostImage(feed, post.id)
+            } catch (_: Exception) {
+                ""
+            }
+            _postImages.value = _postImages.value + (post.id to url)
+        }
+    }
+
     init {
         loadFeed()
         subscribeToWebSocket()

@@ -415,15 +415,15 @@ class FeedsRepository @Inject constructor(
     }
 
     /**
-     * Lazy og:image fetch for RSS posts whose feed didn't carry an
-     * inline image. Server-side action_post_image fetches the article URL
-     * once per day per post and caches the result on the post row;
-     * subsequent calls return the cached value cheaply. Returns "" when
-     * no image could be extracted (or the post is non-RSS).
+     * The best image for an RSS post: the server fetches the article's
+     * og:image once (replacing a low-resolution feed thumbnail such as
+     * BBC's 240px media:thumbnail) and caches it on the post row, so
+     * repeat calls are cheap. Returns "" when the article offers nothing
+     * better (or the post is non-RSS).
      */
     suspend fun getPostImage(feedId: String, postId: String): String {
         return try {
-            api.getPostImage(feedId, postId).unwrap().image
+            api.getPostImage(feedId, postId).unwrapRaw().image
         } catch (_: Exception) {
             ""
         }

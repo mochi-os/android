@@ -369,11 +369,12 @@ interface FeedsApi {
         @Path("postId") postId: String
     ): Response<ApiResponse<PostDetailResponse>>
 
+    // Bare JSON response (no `{data:…}` envelope) — decode with unwrapRaw.
     @GET("{feedId}/-/{postId}/image")
     suspend fun getPostImage(
         @Path("feedId") feedId: String,
         @Path("postId") postId: String
-    ): Response<ApiResponse<PostImageResponse>>
+    ): Response<PostImageResponse>
 
     @POST("{feedId}/-/{postId}/comment/create")
     suspend fun createComment(
