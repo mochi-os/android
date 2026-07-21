@@ -695,7 +695,9 @@ fun FeedScreen(
                                     }
                                     // Per-feed settings stay hidden on the
                                     // aggregate, which has no feed to configure.
-                                    if (!viewModel.isAllFeeds && permissions.manage) {
+                                    // Subscribers get in too: their view is the
+                                    // read-only identity card plus unsubscribe.
+                                    if (!viewModel.isAllFeeds) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_settings)) },
                                             leadingIcon = {
