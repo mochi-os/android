@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Үшінші тарап логині</string>
     <string name="account_oauth_link">Тіркелгіні байланыстыру</string>
     <string name="account_unlink">Байланысын үзу</string>
-    <string name="tokens_create">Токен құру</string>
-    <string name="tokens_name">Аты</string>
-    <string name="tokens_delete_title">Токенді жою керек пе?</string>
-    <string name="tokens_create_confirm">Құру</string>
     <string name="account_cancel">Болдырмау</string>
     <string name="account_save">Сақтау</string>
     <string name="account_done">Дайын</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Параметрлер</string>
     <string name="settings_home_sessions">Сессиялар</string>
-    <string name="settings_home_tokens">Токендер</string>
     <string name="settings_home_privacy">Құпиялылық саясаты</string>
     <string name="settings_home_rules">Ережелер</string>
     <string name="settings_home_terms">Қызмет шарттары</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Провайдерді байланыстыру</string>
     <string name="account_oauth_unlink_title">Тіркелгіні ажырату керек пе?</string>
     <string name="account_oauth_unlink_message">Сіз енді %1$s арқылы кіре алмайсыз.</string>
-    <string name="tokens_section_title">API таңбалауыштары</string>
-    <string name="tokens_title">Аутентификация токендері</string>
-    <string name="tokens_empty">API таңбалауыштары жоқ.</string>
-    <string name="tokens_create_title">Жаңа API таңбалауышы</string>
-    <string name="tokens_new_title">API таңбалауышы жасалды</string>
-    <string name="tokens_new_warning">Бұл таңбалауышты қазір көшіріңіз — ол қайтадан көрсетілмейді.</string>
-    <string name="tokens_delete_message">\"%1$s\" енді оны пайдаланатын қолданбаларды аутентификациялауды тоқтатады.</string>
-    <string name="account_created_at">Жасалды %1$s</string>
     <string name="account_last_used">Соңғы пайдаланылды %1$s</string>
-    <string name="tokens_scopes">Аумақтар: %1$s</string>
-    <string name="tokens_expires">Мерзімі: %1$s</string>
-    <string name="tokens_never">Ешқашан</string>
     <string name="route_delete_message">Бұл \"%1$s\" жолы үшін бағытты жояды.</string>
     <string name="route_empty">Конфигурацияланған бағыттар жоқ.</string>
     <string name="route_meta">Басымдылық %1$d · %2$s</string>

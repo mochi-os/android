@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Þriðja aðila innskráning</string>
     <string name="account_oauth_link">Tengja reikning</string>
     <string name="account_unlink">Aftengja</string>
-    <string name="tokens_create">Búa til tókna</string>
-    <string name="tokens_name">Nafn</string>
-    <string name="tokens_delete_title">Eyða tókna?</string>
-    <string name="tokens_create_confirm">Búa til</string>
     <string name="account_cancel">Hætta við</string>
     <string name="account_save">Vista</string>
     <string name="account_done">Lokið</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Stillingar</string>
     <string name="settings_home_sessions">Lotur</string>
-    <string name="settings_home_tokens">Tákn</string>
     <string name="settings_home_privacy">Persónuverndarstefna</string>
     <string name="settings_home_rules">Reglur</string>
     <string name="settings_home_terms">Þjónustuskilmálar</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Tengja þjónustuveitanda</string>
     <string name="account_oauth_unlink_title">Aftengja reikning?</string>
     <string name="account_oauth_unlink_message">Þú munt ekki lengur geta skráð þig inn með %1$s.</string>
-    <string name="tokens_section_title">API-lyklar</string>
-    <string name="tokens_title">Sannprófunartákn</string>
-    <string name="tokens_empty">Engir API-lyklar.</string>
-    <string name="tokens_create_title">Nýr API-lykill</string>
-    <string name="tokens_new_title">API-lykill búinn til</string>
-    <string name="tokens_new_warning">Afritaðu þennan lykil núna — hann verður ekki sýndur aftur.</string>
-    <string name="tokens_delete_message">\"%1$s\" mun ekki lengur auðkenna forrit sem nota það.</string>
-    <string name="account_created_at">Búið til %1$s</string>
     <string name="account_last_used">Síðast notað %1$s</string>
-    <string name="tokens_scopes">Umfang: %1$s</string>
-    <string name="tokens_expires">Rennur út: %1$s</string>
-    <string name="tokens_never">Aldrei</string>
     <string name="route_delete_message">Þetta mun fjarlægja slóðina fyrir leiðina \"%1$s\".</string>
     <string name="route_empty">Engar slóðir stilltar.</string>
     <string name="route_meta">Forgangur %1$d · %2$s</string>

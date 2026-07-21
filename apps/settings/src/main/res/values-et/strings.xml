@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Kolmanda osapoole sisselogimine</string>
     <string name="account_oauth_link">Lingi konto</string>
     <string name="account_unlink">Eemalda link</string>
-    <string name="tokens_create">Loo luba</string>
-    <string name="tokens_name">Nimi</string>
-    <string name="tokens_delete_title">Kustutada luba?</string>
-    <string name="tokens_create_confirm">Loo</string>
     <string name="account_cancel">Tühista</string>
     <string name="account_save">Salvesta</string>
     <string name="account_done">Tehtud</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Seaded</string>
     <string name="settings_home_sessions">Seansid</string>
-    <string name="settings_home_tokens">Lubad</string>
     <string name="settings_home_privacy">Privaatsuspoliitika</string>
     <string name="settings_home_rules">Reeglid</string>
     <string name="settings_home_terms">Teenusetingimused</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Ühenda pakkuja</string>
     <string name="account_oauth_unlink_title">Eemalda konto ühendus?</string>
     <string name="account_oauth_unlink_message">Sa ei saa enam %1$s-iga sisse logida.</string>
-    <string name="tokens_section_title">API tokenid</string>
-    <string name="tokens_title">Autentimisload</string>
-    <string name="tokens_empty">API tokeneid pole.</string>
-    <string name="tokens_create_title">Uus API token</string>
-    <string name="tokens_new_title">API token loodud</string>
-    <string name="tokens_new_warning">Kopeeri see token kohe — seda ei näidata uuesti.</string>
-    <string name="tokens_delete_message">\"%1$s\" ei autendi enam rakendusi, mis seda kasutavad.</string>
-    <string name="account_created_at">Loodud %1$s</string>
     <string name="account_last_used">Viimati kasutatud %1$s</string>
-    <string name="tokens_scopes">Ulatused: %1$s</string>
-    <string name="tokens_expires">Aegub: %1$s</string>
-    <string name="tokens_never">Mitte kunagi</string>
     <string name="route_delete_message">See eemaldab marsruudi tee \"%1$s\".</string>
     <string name="route_empty">Marsruute pole konfigureeritud.</string>
     <string name="route_meta">Prioriteet %1$d · %2$s</string>

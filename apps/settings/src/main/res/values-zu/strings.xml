@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Ukungena kwabanye</string>
     <string name="account_oauth_link">Xhuma i-akhawunti</string>
     <string name="account_unlink">Susa isixhumanisi</string>
-    <string name="tokens_create">Dala ithokheni</string>
-    <string name="tokens_name">Igama</string>
-    <string name="tokens_delete_title">Susa ithokheni?</string>
-    <string name="tokens_create_confirm">Dala</string>
     <string name="account_cancel">Khansela</string>
     <string name="account_save">Londoloza</string>
     <string name="account_done">Kwenziwe</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Izilungiselelo</string>
     <string name="settings_home_sessions">Amaseshini</string>
-    <string name="settings_home_tokens">Amathokheni</string>
     <string name="settings_home_privacy">Inqubomgomo yobumfihlo</string>
     <string name="settings_home_rules">Imithetho</string>
     <string name="settings_home_terms">Imibandela yesevisi</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Xhuma umhlinzeki</string>
     <string name="account_oauth_unlink_title">Susa i-akhawunti?</string>
     <string name="account_oauth_unlink_message">Ngeke ukwazi ukungena nge-%1$s.</string>
-    <string name="tokens_section_title">Amathokheni e-API</string>
-    <string name="tokens_title">Amathokheni okuqinisekisa</string>
-    <string name="tokens_empty">Awekho amathokheni e-API.</string>
-    <string name="tokens_create_title">Ithokheni elisha le-API</string>
-    <string name="tokens_new_title">Ithokheni le-API likhiqiziwe</string>
-    <string name="tokens_new_warning">Kopisha leli thokheni manje — ngeke libuye likhonjiswe futhi.</string>
-    <string name="tokens_delete_message">\"%1$s\" ngeke isaqinisekisa izinhlelo zokusebenza ezilisebenzisayo.</string>
-    <string name="account_created_at">Idaliwe %1$s</string>
     <string name="account_last_used">Isetshenziswe okokugcina %1$s</string>
-    <string name="tokens_scopes">Amaqondo: %1$s</string>
-    <string name="tokens_expires">Iyaphela: %1$s</string>
-    <string name="tokens_never">Akekho</string>
     <string name="route_delete_message">Lokhu kuzosusa irawudi yendlela \"%1$s\".</string>
     <string name="route_empty">Azikho izindlela ezilungisiwe.</string>
     <string name="route_meta">Okubaluleke kakhulu %1$d · %2$s</string>

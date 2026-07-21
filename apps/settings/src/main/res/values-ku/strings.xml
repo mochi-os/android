@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Têketina aliyê sêyem</string>
     <string name="account_oauth_link">Hesabê girêde</string>
     <string name="account_unlink">Veqetîne</string>
-    <string name="tokens_create">Token çêbike</string>
-    <string name="tokens_name">Nav</string>
-    <string name="tokens_delete_title">Tokenê jê bibe?</string>
-    <string name="tokens_create_confirm">Çêbike</string>
     <string name="account_cancel">Betal bike</string>
     <string name="account_save">Tomar bike</string>
     <string name="account_done">Qediya</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Mîheng</string>
     <string name="settings_home_sessions">Danîştin</string>
-    <string name="settings_home_tokens">Token</string>
     <string name="settings_home_privacy">Polîtîkaya nepenîtiyê</string>
     <string name="settings_home_rules">Rêbaz</string>
     <string name="settings_home_terms">Mercên xizmetê</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Pêşkêşkar girê bide</string>
     <string name="account_oauth_unlink_title">Hesab veqetîne?</string>
     <string name="account_oauth_unlink_message">Hûn êdî bi %1$s nikarin têkevin.</string>
-    <string name="tokens_section_title">Nîşaneyên API</string>
-    <string name="tokens_title">Tokenên rastandinê</string>
-    <string name="tokens_empty">Tu nîşaneyên API nin.</string>
-    <string name="tokens_create_title">Nîşaneya nû ya API</string>
-    <string name="tokens_new_title">Nîşaneya API hate çêkirin</string>
-    <string name="tokens_new_warning">Vê nîşaneyê niha kopî bike — dê dîsa neyê nîşan dan.</string>
-    <string name="tokens_delete_message">\"%1$s\" êdî bernameyên ku wê bikar tînin rast nake.</string>
-    <string name="account_created_at">Hate çêkirin %1$s</string>
     <string name="account_last_used">Bikaranîna dawî %1$s</string>
-    <string name="tokens_scopes">Qadan: %1$s</string>
-    <string name="tokens_expires">Diqede: %1$s</string>
-    <string name="tokens_never">Tu car</string>
     <string name="route_delete_message">Ev dê riya rêya \"%1$s\" jêbibe.</string>
     <string name="route_empty">Tu rî mîhengkirî nin.</string>
     <string name="route_meta">Pêşîn %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Login ta\' partijiet terzi</string>
     <string name="account_oauth_link">Orbot kont</string>
     <string name="account_unlink">Aqta\'</string>
-    <string name="tokens_create">Oħloq token</string>
-    <string name="tokens_name">Isem</string>
-    <string name="tokens_delete_title">Tħassar token?</string>
-    <string name="tokens_create_confirm">Oħloq</string>
     <string name="account_cancel">Ikkanċella</string>
     <string name="account_save">Issejvja</string>
     <string name="account_done">Lest</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Settings</string>
     <string name="settings_home_sessions">Sessjonijiet</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Politika tal-privatezza</string>
     <string name="settings_home_rules">Regoli</string>
     <string name="settings_home_terms">Termini tas-servizz</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Għaqqad fornitur</string>
     <string name="account_oauth_unlink_title">Aqta\' l-kont?</string>
     <string name="account_oauth_unlink_message">M\'għadekx tista\' tidħol bi %1$s.</string>
-    <string name="tokens_section_title">Tokens API</string>
-    <string name="tokens_title">Tokens tal-awtentikazzjoni</string>
-    <string name="tokens_empty">L-ebda tokens API.</string>
-    <string name="tokens_create_title">Token API ġdid</string>
-    <string name="tokens_new_title">Token API maħluq</string>
-    <string name="tokens_new_warning">Ikkopja dan it-token issa — mhux se jerġa\' jintwera.</string>
-    <string name="tokens_delete_message">\"%1$s\" mhux se jawtentika apps li jużawh aktar.</string>
-    <string name="account_created_at">Maħluq %1$s</string>
     <string name="account_last_used">L-aħħar uża %1$s</string>
-    <string name="tokens_scopes">Skopi: %1$s</string>
-    <string name="tokens_expires">Jiskadi: %1$s</string>
-    <string name="tokens_never">Qatt</string>
     <string name="route_delete_message">Dan se jneħħi r-rotta għall-passaġġ \"%1$s\".</string>
     <string name="route_empty">L-ebda rotot konfigurati.</string>
     <string name="route_meta">Prijorità %1$d · %2$s</string>

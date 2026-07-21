@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Autentificare terță parte</string>
     <string name="account_oauth_link">Conectează contul</string>
     <string name="account_unlink">Deconectează</string>
-    <string name="tokens_create">Creează token</string>
-    <string name="tokens_name">Nume</string>
-    <string name="tokens_delete_title">Ștergi tokenul?</string>
-    <string name="tokens_create_confirm">Creează</string>
     <string name="account_cancel">Anulează</string>
     <string name="account_save">Salvează</string>
     <string name="account_done">Terminat</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Setări</string>
     <string name="settings_home_sessions">Sesiuni</string>
-    <string name="settings_home_tokens">Tokenuri</string>
     <string name="settings_home_privacy">Politica de confidențialitate</string>
     <string name="settings_home_rules">Reguli</string>
     <string name="settings_home_terms">Termenii serviciului</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Conectează un furnizor</string>
     <string name="account_oauth_unlink_title">Deconectați contul?</string>
     <string name="account_oauth_unlink_message">Nu vă veți mai putea conecta cu %1$s.</string>
-    <string name="tokens_section_title">Token-uri API</string>
-    <string name="tokens_title">Tokenuri de autentificare</string>
-    <string name="tokens_empty">Fără token-uri API.</string>
-    <string name="tokens_create_title">Token API nou</string>
-    <string name="tokens_new_title">Token API creat</string>
-    <string name="tokens_new_warning">Copiați acest token acum — nu va mai fi afișat.</string>
-    <string name="tokens_delete_message">„%1$s\" nu va mai autentifica aplicațiile care îl folosesc.</string>
-    <string name="account_created_at">Creat %1$s</string>
     <string name="account_last_used">Ultima utilizare %1$s</string>
-    <string name="tokens_scopes">Domenii: %1$s</string>
-    <string name="tokens_expires">Expiră: %1$s</string>
-    <string name="tokens_never">Niciodată</string>
     <string name="route_delete_message">Aceasta va elimina ruta pentru calea „%1$s\".</string>
     <string name="route_empty">Nicio rută configurată.</string>
     <string name="route_meta">Prioritate %1$d · %2$s</string>

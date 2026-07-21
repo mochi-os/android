@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Пријава трећег лица</string>
     <string name="account_oauth_link">Повежи налог</string>
     <string name="account_unlink">Прекини везу</string>
-    <string name="tokens_create">Креирај токен</string>
-    <string name="tokens_name">Име</string>
-    <string name="tokens_delete_title">Обрисати токен?</string>
-    <string name="tokens_create_confirm">Креирај</string>
     <string name="account_cancel">Откажи</string>
     <string name="account_save">Сачувај</string>
     <string name="account_done">Готово</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi подешавања</string>
     <string name="settings_home_sessions">Сесије</string>
-    <string name="settings_home_tokens">Токени</string>
     <string name="settings_home_privacy">Политика приватности</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Услови коришћења</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Повежи добављача</string>
     <string name="account_oauth_unlink_title">Прекинути везу налога?</string>
     <string name="account_oauth_unlink_message">Више нећете моћи да се пријавите помоћу %1$s.</string>
-    <string name="tokens_section_title">API токени</string>
-    <string name="tokens_title">Токени за аутентификацију</string>
-    <string name="tokens_empty">Нема API токена.</string>
-    <string name="tokens_create_title">Нови API токен</string>
-    <string name="tokens_new_title">API токен направљен</string>
-    <string name="tokens_new_warning">Копирајте овај токен сада — неће бити поново приказан.</string>
-    <string name="tokens_delete_message">„%1$s\" више неће аутентификовати апликације које га користе.</string>
-    <string name="account_created_at">Направљено %1$s</string>
     <string name="account_last_used">Последње коришћено %1$s</string>
-    <string name="tokens_scopes">Опсеги: %1$s</string>
-    <string name="tokens_expires">Истиче: %1$s</string>
-    <string name="tokens_never">Никад</string>
     <string name="route_delete_message">Ово ће уклонити руту за путању „%1$s\".</string>
     <string name="route_empty">Нема конфигурисаних рута.</string>
     <string name="route_meta">Приоритет %1$d · %2$s</string>

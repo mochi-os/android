@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Drittanbieter-Anmeldung</string>
     <string name="account_oauth_link">Konto verknüpfen</string>
     <string name="account_unlink">Verknüpfung aufheben</string>
-    <string name="tokens_create">Token erstellen</string>
-    <string name="tokens_name">Name</string>
-    <string name="tokens_delete_title">Token löschen?</string>
-    <string name="tokens_create_confirm">Erstellen</string>
     <string name="account_cancel">Abbrechen</string>
     <string name="account_save">Speichern</string>
     <string name="account_done">Fertig</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Einstellungen</string>
     <string name="settings_home_sessions">Sitzungen</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Datenschutzerklärung</string>
     <string name="settings_home_rules">Regeln</string>
     <string name="settings_home_terms">Nutzungsbedingungen</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Anbieter verknüpfen</string>
     <string name="account_oauth_unlink_title">Konto trennen?</string>
     <string name="account_oauth_unlink_message">Du kannst dich nicht mehr mit %1$s anmelden.</string>
-    <string name="tokens_section_title">API-Tokens</string>
-    <string name="tokens_title">Authentifizierungstokens</string>
-    <string name="tokens_empty">Keine API-Tokens.</string>
-    <string name="tokens_create_title">Neues API-Token</string>
-    <string name="tokens_new_title">API-Token erstellt</string>
-    <string name="tokens_new_warning">Kopiere dieses Token jetzt — es wird nicht erneut angezeigt.</string>
-    <string name="tokens_delete_message">„%1$s\" wird Apps, die es verwenden, nicht mehr authentifizieren.</string>
-    <string name="account_created_at">Erstellt %1$s</string>
     <string name="account_last_used">Zuletzt verwendet %1$s</string>
-    <string name="tokens_scopes">Geltungsbereiche: %1$s</string>
-    <string name="tokens_expires">Läuft ab: %1$s</string>
-    <string name="tokens_never">Nie</string>
     <string name="route_delete_message">Dies entfernt die Route für den Pfad „%1$s\".</string>
     <string name="route_empty">Keine Routen konfiguriert.</string>
     <string name="route_meta">Priorität %1$d · %2$s</string>

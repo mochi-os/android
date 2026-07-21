@@ -27,10 +27,6 @@
     <string name="account_section_oauth">د دریمې ډلې ننوتل</string>
     <string name="account_oauth_link">حساب وصل کړئ</string>
     <string name="account_unlink">بې وصله کول</string>
-    <string name="tokens_create">ټوکن جوړ کړئ</string>
-    <string name="tokens_name">نوم</string>
-    <string name="tokens_delete_title">ټوکن ړنګ کړئ؟</string>
-    <string name="tokens_create_confirm">جوړ کړئ</string>
     <string name="account_cancel">لغوه کول</string>
     <string name="account_save">خوندي کول</string>
     <string name="account_done">ترسره شو</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi تنظيمات</string>
     <string name="settings_home_sessions">ناستې</string>
-    <string name="settings_home_tokens">ټوکنونه</string>
     <string name="settings_home_privacy">د محرمیت تګلاره</string>
     <string name="settings_home_rules">قواعد</string>
     <string name="settings_home_terms">د خدمت شرایط</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">چمتو کوونکی ونښلوئ</string>
     <string name="account_oauth_unlink_title">حساب جلا کړئ؟</string>
     <string name="account_oauth_unlink_message">تاسو به نور د %1$s سره ننه وتلی شئ.</string>
-    <string name="tokens_section_title">API ټوکنونه</string>
-    <string name="tokens_title">د هویت پیژندنې ټوکنونه</string>
-    <string name="tokens_empty">هیڅ API ټوکنونه نشته.</string>
-    <string name="tokens_create_title">نوی API ټوکن</string>
-    <string name="tokens_new_title">API ټوکن جوړ شو</string>
-    <string name="tokens_new_warning">دا ټوکن همدا اوس کاپي کړئ — بیا به ښکاره نشي.</string>
-    <string name="tokens_delete_message">\"%1$s\" به نور هغه پروګرامونه چې دا کاروي تایید نکړي.</string>
-    <string name="account_created_at">جوړ شو %1$s</string>
     <string name="account_last_used">وروستی کارول %1$s</string>
-    <string name="tokens_scopes">ساحې: %1$s</string>
-    <string name="tokens_expires">پای ته رسیږي: %1$s</string>
-    <string name="tokens_never">هیڅکله</string>
     <string name="route_delete_message">دا به د \"%1$s\" لارې لپاره روټ لرې کړي.</string>
     <string name="route_empty">هیڅ لارې نه دي تنظیم شوي.</string>
     <string name="route_meta">لومړیتوب %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Prijava tretje osebe</string>
     <string name="account_oauth_link">Poveži račun</string>
     <string name="account_unlink">Odstrani povezavo</string>
-    <string name="tokens_create">Ustvari žeton</string>
-    <string name="tokens_name">Ime</string>
-    <string name="tokens_delete_title">Izbriši žeton?</string>
-    <string name="tokens_create_confirm">Ustvari</string>
     <string name="account_cancel">Prekliči</string>
     <string name="account_save">Shrani</string>
     <string name="account_done">Končano</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Nastavitve</string>
     <string name="settings_home_sessions">Seje</string>
-    <string name="settings_home_tokens">Žetoni</string>
     <string name="settings_home_privacy">Pravilnik o zasebnosti</string>
     <string name="settings_home_rules">Pravila</string>
     <string name="settings_home_terms">Pogoji storitve</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Poveži ponudnika</string>
     <string name="account_oauth_unlink_title">Prekiniti povezavo z računom?</string>
     <string name="account_oauth_unlink_message">Ne boste se več mogli prijaviti z %1$s.</string>
-    <string name="tokens_section_title">API žetoni</string>
-    <string name="tokens_title">Žetoni za preverjanje pristnosti</string>
-    <string name="tokens_empty">Ni API žetonov.</string>
-    <string name="tokens_create_title">Nov API žeton</string>
-    <string name="tokens_new_title">API žeton ustvarjen</string>
-    <string name="tokens_new_warning">Kopirajte ta žeton zdaj — ne bo prikazan znova.</string>
-    <string name="tokens_delete_message">„%1$s\" ne bo več preverjal pristnosti aplikacij, ki ga uporabljajo.</string>
-    <string name="account_created_at">Ustvarjeno %1$s</string>
     <string name="account_last_used">Nazadnje uporabljeno %1$s</string>
-    <string name="tokens_scopes">Področja: %1$s</string>
-    <string name="tokens_expires">Poteče: %1$s</string>
-    <string name="tokens_never">Nikoli</string>
     <string name="route_delete_message">To bo odstranilo pot za pot „%1$s\".</string>
     <string name="route_empty">Ni konfiguriranih poti.</string>
     <string name="route_meta">Prioriteta %1$d · %2$s</string>

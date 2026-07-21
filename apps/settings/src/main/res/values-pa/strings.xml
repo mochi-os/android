@@ -27,10 +27,6 @@
     <string name="account_section_oauth">ਤੀਜੀ-ਧਿਰ ਲੌਗਇਨ</string>
     <string name="account_oauth_link">ਲਿਸਟਿੰਗ ਇਤਿਹਾਸ</string>
     <string name="account_unlink">ਅਨਲਿੰਕ ਕਰੋ</string>
-    <string name="tokens_create">ਟੋਕਨ ਬਣਾਓ</string>
-    <string name="tokens_name">ਨਾਮ</string>
-    <string name="tokens_delete_title">ਟੋਕਨ ਮਿਟਾਉਣਾ ਹੈ?</string>
-    <string name="tokens_create_confirm">ਬਣਾਓ</string>
     <string name="account_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="account_save">ਸੰਭਾਲੋ</string>
     <string name="account_done">ਹੋ ਗਿਆ</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ਸੈਟਿੰਗਾਂ</string>
     <string name="settings_home_sessions">ਸੈਸ਼ਨ</string>
-    <string name="settings_home_tokens">ਟੋਕਨ</string>
     <string name="settings_home_privacy">ਗੋਪਨੀਯਤਾ ਨੀਤੀ</string>
     <string name="settings_home_rules">ਨਿਯਮ</string>
     <string name="settings_home_terms">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">ਪ੍ਰਦਾਤਾ ਜੋੜੋ</string>
     <string name="account_oauth_unlink_title">ਖਾਤਾ ਅਨਲਿੰਕ ਕਰਨਾ?</string>
     <string name="account_oauth_unlink_message">ਤੁਸੀਂ ਹੁਣ %1$s ਨਾਲ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕੋਗੇ।</string>
-    <string name="tokens_section_title">API ਟੋਕਨ</string>
-    <string name="tokens_title">ਪ੍ਰਮਾਣੀਕਰਨ ਟੋਕਨ</string>
-    <string name="tokens_empty">ਕੋਈ API ਟੋਕਨ ਨਹੀਂ।</string>
-    <string name="tokens_create_title">ਨਵਾਂ API ਟੋਕਨ</string>
-    <string name="tokens_new_title">API ਟੋਕਨ ਬਣਾਇਆ ਗਿਆ</string>
-    <string name="tokens_new_warning">ਇਸ ਟੋਕਨ ਨੂੰ ਹੁਣੇ ਕਾਪੀ ਕਰੋ — ਇਹ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾਵੇਗਾ।</string>
-    <string name="tokens_delete_message">\"%1$s\" ਹੁਣ ਇਸ ਦੀ ਵਰਤੋਂ ਕਰਨ ਵਾਲੇ ਐਪਸ ਦੀ ਪ੍ਰਮਾਣਿਕਤਾ ਨਹੀਂ ਕਰੇਗਾ।</string>
-    <string name="account_created_at">ਬਣਾਇਆ %1$s</string>
     <string name="account_last_used">ਆਖਰੀ ਵਾਰ ਵਰਤਿਆ %1$s</string>
-    <string name="tokens_scopes">ਦਾਇਰੇ: %1$s</string>
-    <string name="tokens_expires">ਮਿਆਦ ਮੁੱਕਦੀ: %1$s</string>
-    <string name="tokens_never">ਕਦੇ ਨਹੀਂ</string>
     <string name="route_delete_message">ਇਹ ਮਾਰਗ \"%1$s\" ਲਈ ਰੂਟ ਹਟਾ ਦੇਵੇਗਾ।</string>
     <string name="route_empty">ਕੋਈ ਰੂਟ ਕੌਨਫਿਗਰ ਨਹੀਂ ਹਨ।</string>
     <string name="route_meta">ਤਰਜੀਹ %1$d · %2$s</string>

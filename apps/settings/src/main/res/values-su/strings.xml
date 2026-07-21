@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Asup pihak katilu</string>
     <string name="account_oauth_link">Hubungkeun akun</string>
     <string name="account_unlink">Cabut tali</string>
-    <string name="tokens_create">Jieun token</string>
-    <string name="tokens_name">Ngaran</string>
-    <string name="tokens_delete_title">Hapus token?</string>
-    <string name="tokens_create_confirm">Jieun</string>
     <string name="account_cancel">Batalkeun</string>
     <string name="account_save">Simpen</string>
     <string name="account_done">Beres</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Setélan</string>
     <string name="settings_home_sessions">Sési</string>
-    <string name="settings_home_tokens">Token</string>
     <string name="settings_home_privacy">Kawijakan privasi</string>
     <string name="settings_home_rules">Aturan</string>
     <string name="settings_home_terms">Sarat layanan</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Sambungkeun panyadia</string>
     <string name="account_oauth_unlink_title">Pegatkeun akun?</string>
     <string name="account_oauth_unlink_message">Anjeun moal tiasa asup ku %1$s deui.</string>
-    <string name="tokens_section_title">Token API</string>
-    <string name="tokens_title">Token auténtikasi</string>
-    <string name="tokens_empty">Henteu aya token API.</string>
-    <string name="tokens_create_title">Token API anyar</string>
-    <string name="tokens_new_title">Token API dijieun</string>
-    <string name="tokens_new_warning">Salin token ieu ayeuna — moal ditembongkeun deui.</string>
-    <string name="tokens_delete_message">\"%1$s\" moal otentikasi aplikasi nu nganggo deui.</string>
-    <string name="account_created_at">Dijieun %1$s</string>
     <string name="account_last_used">Pamungkas dipake %1$s</string>
-    <string name="tokens_scopes">Lingkup: %1$s</string>
-    <string name="tokens_expires">Béak: %1$s</string>
-    <string name="tokens_never">Tara</string>
     <string name="route_delete_message">Ieu bakal nyabut rute pikeun jalan \"%1$s\".</string>
     <string name="route_empty">Henteu aya rute nu dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$d · %2$s</string>

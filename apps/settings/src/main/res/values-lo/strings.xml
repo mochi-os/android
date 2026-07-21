@@ -27,10 +27,6 @@
     <string name="account_section_oauth">ການເຂົ້າສູ່ລະບົບຈາກບຸກຄົນທີສາມ</string>
     <string name="account_oauth_link">ເຊື່ອມຕໍ່ບັນຊີ</string>
     <string name="account_unlink">ຍົກເລີກການເຊື່ອມໂຍງ</string>
-    <string name="tokens_create">ສ້າງໂທເຄນ</string>
-    <string name="tokens_name">ຊື່</string>
-    <string name="tokens_delete_title">ລົບໂທເຄນບໍ?</string>
-    <string name="tokens_create_confirm">ສ້າງ</string>
     <string name="account_cancel">ຍົກເລີກ</string>
     <string name="account_save">ບັນທຶກ</string>
     <string name="account_done">ສຳເລັດແລ້ວ</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ການຕັ້ງຄ່າ</string>
     <string name="settings_home_sessions">ເຊດຊັນ</string>
-    <string name="settings_home_tokens">ໂທເຄນ</string>
     <string name="settings_home_privacy">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</string>
     <string name="settings_home_rules">ກົດລະບຽບ</string>
     <string name="settings_home_terms">ເງື່ອນໄຂການບໍລິການ</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">ເຊື່ອມຕໍ່ຜູ້ໃຫ້ບໍລິການ</string>
     <string name="account_oauth_unlink_title">ຍົກເລີກການເຊື່ອມຕໍ່ບັນຊີ?</string>
     <string name="account_oauth_unlink_message">ທ່ານຈະບໍ່ສາມາດເຂົ້າສູ່ລະບົບດ້ວຍ %1$s ໄດ້ອີກ.</string>
-    <string name="tokens_section_title">API ໂທເຄນ</string>
-    <string name="tokens_title">ໂທເຄນພິສູດຢືນຢັນ</string>
-    <string name="tokens_empty">ບໍ່ມີ API tokens.</string>
-    <string name="tokens_create_title">API token ໃໝ່</string>
-    <string name="tokens_new_title">ສ້າງ API token ແລ້ວ</string>
-    <string name="tokens_new_warning">ກ໊ອບປີ້ token ນີ້ດຽວນີ້ — ຈະບໍ່ສະແດງອີກ.</string>
-    <string name="tokens_delete_message">\"%1$s\" ຈະບໍ່ຢັ້ງຢືນແອັບທີ່ໃຊ້ມັນອີກຕໍ່ໄປ.</string>
-    <string name="account_created_at">ສ້າງເມື່ອ %1$s</string>
     <string name="account_last_used">ໃຊ້ຄັ້ງສຸດທ້າຍ %1$s</string>
-    <string name="tokens_scopes">ຂອບເຂດ: %1$s</string>
-    <string name="tokens_expires">ໝົດອາຍຸ: %1$s</string>
-    <string name="tokens_never">ບໍ່ເຄີຍ</string>
     <string name="route_delete_message">ນີ້ຈະລົບເສັ້ນທາງສຳລັບເສັ້ນທາງ \"%1$s\".</string>
     <string name="route_empty">ບໍ່ມີເສັ້ນທາງຖືກກໍານົດ.</string>
     <string name="route_meta">ບູລິມະສິດ %1$d · %2$s</string>

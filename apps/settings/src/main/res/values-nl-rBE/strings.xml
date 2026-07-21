@@ -26,10 +26,6 @@
     <string name="account_oauth_empty">Geen accounts gekoppeld</string>
     <string name="account_oauth_link">Account koppelen</string>
     <string name="account_unlink">Ontkoppelen</string>
-    <string name="tokens_create">Token aanmaken</string>
-    <string name="tokens_name">Naam</string>
-    <string name="tokens_delete_title">Token verwijderen?</string>
-    <string name="tokens_create_confirm">Aanmaken</string>
     <string name="account_cancel">Annuleren</string>
     <string name="account_save">Opslaan</string>
     <string name="account_done">Klaar</string>
@@ -250,16 +246,7 @@
     <string name="account_oauth_link_title">Een provider koppelen</string>
     <string name="account_oauth_unlink_title">Account ontkoppelen?</string>
     <string name="account_oauth_unlink_message">Je zal je niet meer kunnen aanmelden met %1$s.</string>
-    <string name="tokens_section_title">API-tokens</string>
-    <string name="tokens_empty">Geen API-tokens.</string>
-    <string name="tokens_create_title">Nieuw API-token</string>
-    <string name="tokens_new_title">API-token aangemaakt</string>
-    <string name="tokens_new_warning">Kopieer dit token nu — het wordt niet opnieuw getoond.</string>
-    <string name="tokens_delete_message">\"%1$s\" zal apps die het gebruiken niet langer authenticeren.</string>
-    <string name="account_created_at">Aangemaakt %1$s</string>
     <string name="account_last_used">Laatst gebruikt %1$s</string>
-    <string name="tokens_scopes">Bereiken: %1$s</string>
-    <string name="tokens_expires">Verloopt: %1$s</string>
     <string name="route_delete_message">Hiermee wordt de route voor pad \"%1$s\" verwijderd.</string>
     <string name="route_empty">Geen routes geconfigureerd.</string>
     <string name="route_meta">Prioriteit %1$d · %2$s</string>
@@ -312,9 +299,6 @@
     <string name="account_method_passkey_subtitle">Registreer hieronder een passkey om in te schakelen</string>
     <string name="sessions_title">Sessies</string>
     <string name="settings_home_sessions">Sessies</string>
-    <string name="settings_home_tokens">Tokens</string>
-    <string name="tokens_never">Nooit</string>
-    <string name="tokens_title">Authenticatietokens</string>
     <string name="domain_add">Domein toevoegen</string>
     <string name="domain_add_title">Domein toevoegen</string>
     <string name="domain_delegation_add">Toevoegen</string>

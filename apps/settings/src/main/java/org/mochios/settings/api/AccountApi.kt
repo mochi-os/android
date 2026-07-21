@@ -22,7 +22,7 @@ import javax.inject.Singleton
 
 /** Generic `{ "ok": true }` envelope used by mutate endpoints across all
  *  settings APIs. Lives here because AccountApi defines the largest set of
- *  endpoints that return it; TokensApi and SessionsApi import from here. */
+ *  endpoints that return it; SessionsApi imports from here. */
 data class OkResponse(val ok: Boolean = false)
 
 /** Step-up re-authentication result. A verify returns `token` once every

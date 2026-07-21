@@ -27,10 +27,6 @@
     <string name="account_section_oauth">サードパーティログイン</string>
     <string name="account_oauth_link">アカウントをリンク</string>
     <string name="account_unlink">リンク解除</string>
-    <string name="tokens_create">トークンを作成</string>
-    <string name="tokens_name">名前</string>
-    <string name="tokens_delete_title">トークンを削除しますか?</string>
-    <string name="tokens_create_confirm">作成</string>
     <string name="account_cancel">キャンセル</string>
     <string name="account_save">保存</string>
     <string name="account_done">完了</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi 設定</string>
     <string name="settings_home_sessions">セッション</string>
-    <string name="settings_home_tokens">トークン</string>
     <string name="settings_home_privacy">プライバシーポリシー</string>
     <string name="settings_home_rules">ルール</string>
     <string name="settings_home_terms">利用規約</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">プロバイダーを連携</string>
     <string name="account_oauth_unlink_title">アカウントの連携を解除しますか？</string>
     <string name="account_oauth_unlink_message">%1$s でサインインできなくなります。</string>
-    <string name="tokens_section_title">API トークン</string>
-    <string name="tokens_title">認証トークン</string>
-    <string name="tokens_empty">API トークンはありません。</string>
-    <string name="tokens_create_title">新しい API トークン</string>
-    <string name="tokens_new_title">API トークンを作成しました</string>
-    <string name="tokens_new_warning">このトークンを今すぐコピーしてください。再表示はされません。</string>
-    <string name="tokens_delete_message">「%1$s」を使用するアプリの認証ができなくなります。</string>
-    <string name="account_created_at">作成 %1$s</string>
     <string name="account_last_used">最終使用 %1$s</string>
-    <string name="tokens_scopes">スコープ: %1$s</string>
-    <string name="tokens_expires">有効期限: %1$s</string>
-    <string name="tokens_never">なし</string>
     <string name="route_delete_message">パス「%1$s」のルートが削除されます。</string>
     <string name="route_empty">ルートが設定されていません。</string>
     <string name="route_meta">優先度 %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Pag-login ng third-party</string>
     <string name="account_oauth_link">I-link ang account</string>
     <string name="account_unlink">Tanggalin ang link</string>
-    <string name="tokens_create">Gumawa ng token</string>
-    <string name="tokens_name">Pangalan</string>
-    <string name="tokens_delete_title">I-delete ang token?</string>
-    <string name="tokens_create_confirm">Gumawa</string>
     <string name="account_cancel">Kanselahin</string>
     <string name="account_save">I-save</string>
     <string name="account_done">Tapos na</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mga Setting ng Mochi</string>
     <string name="settings_home_sessions">Mga session</string>
-    <string name="settings_home_tokens">Mga token</string>
     <string name="settings_home_privacy">Patakaran sa privacy</string>
     <string name="settings_home_rules">Mga panuntunan</string>
     <string name="settings_home_terms">Mga tuntunin ng serbisyo</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Mag-link ng provider</string>
     <string name="account_oauth_unlink_title">Mag-unlink ng account?</string>
     <string name="account_oauth_unlink_message">Hindi ka na makakapag-sign in gamit ang %1$s.</string>
-    <string name="tokens_section_title">Mga API token</string>
-    <string name="tokens_title">Mga token ng pagpapatotoo</string>
-    <string name="tokens_empty">Walang mga API token.</string>
-    <string name="tokens_create_title">Bagong API token</string>
-    <string name="tokens_new_title">Nalikha ang API token</string>
-    <string name="tokens_new_warning">Kopyahin ang token na ito ngayon — hindi na ito ipapakita muli.</string>
-    <string name="tokens_delete_message">Hindi na pa-aauthenticate ng \"%1$s\" ang mga app na gumagamit nito.</string>
-    <string name="account_created_at">Nilikha %1$s</string>
     <string name="account_last_used">Huling ginamit %1$s</string>
-    <string name="tokens_scopes">Mga saklaw: %1$s</string>
-    <string name="tokens_expires">Mag-eexpire: %1$s</string>
-    <string name="tokens_never">Hindi kailanman</string>
     <string name="route_delete_message">Aalisin nito ang ruta para sa path na \"%1$s\".</string>
     <string name="route_empty">Walang mga naka-configure na ruta.</string>
     <string name="route_meta">Prayoridad %1$d · %2$s</string>

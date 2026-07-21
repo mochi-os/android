@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Üçünji tarap girişi</string>
     <string name="account_oauth_link">Hasaby baglanyşdyr</string>
     <string name="account_unlink">Baglanyşdyrmany aýyr</string>
-    <string name="tokens_create">Token döretmek</string>
-    <string name="tokens_name">At</string>
-    <string name="tokens_delete_title">Tokeni pozmaly?</string>
-    <string name="tokens_create_confirm">Döretmek</string>
     <string name="account_cancel">Ýatyrmak</string>
     <string name="account_save">Saklaýyş</string>
     <string name="account_done">Taýýar</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Sazlamalar</string>
     <string name="settings_home_sessions">Sessiýalar</string>
-    <string name="settings_home_tokens">Tokenler</string>
     <string name="settings_home_privacy">Şahsy maglumat syýasaty</string>
     <string name="settings_home_rules">Düzgünler</string>
     <string name="settings_home_terms">Hyzmat şertleri</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Üpjün edijini birikdir</string>
     <string name="account_oauth_unlink_title">Hasaby aýyrmalymy?</string>
     <string name="account_oauth_unlink_message">Indi %1$s bilen girip bilmersiňiz.</string>
-    <string name="tokens_section_title">API tokenleri</string>
-    <string name="tokens_title">Tassyklaýyş tokenleri</string>
-    <string name="tokens_empty">API tokenleri ýok.</string>
-    <string name="tokens_create_title">Täze API tokeni</string>
-    <string name="tokens_new_title">API tokeni döredildi</string>
-    <string name="tokens_new_warning">Bu tokeni häzir göçüriň — gaýtadan görkezilmez.</string>
-    <string name="tokens_delete_message">\"%1$s\" indi ony ulanýan programmalary tassyklamaz.</string>
-    <string name="account_created_at">Döredildi %1$s</string>
     <string name="account_last_used">Iň soňky ulanyş %1$s</string>
-    <string name="tokens_scopes">Çäkler: %1$s</string>
-    <string name="tokens_expires">Tamamlanýar: %1$s</string>
-    <string name="tokens_never">Hiç haçan</string>
     <string name="route_delete_message">Bu \"%1$s\" ýolu üçin marşruty aýyrar.</string>
     <string name="route_empty">Sazlanan ýollar ýok.</string>
     <string name="route_meta">Ileri tutulma %1$d · %2$s</string>

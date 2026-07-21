@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Clàradh-a-steach treas-phàrtaidh</string>
     <string name="account_oauth_link">Ceangail an cunntas</string>
     <string name="account_unlink">Dì-cheangail</string>
-    <string name="tokens_create">Cruthaich tòcan</string>
-    <string name="tokens_name">Ainm</string>
-    <string name="tokens_delete_title">Sguab às tòcan?</string>
-    <string name="tokens_create_confirm">Cruthaich</string>
     <string name="account_cancel">Sguir dheth</string>
     <string name="account_save">Sàbhail</string>
     <string name="account_done">Deiseil</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Roghainnean</string>
     <string name="settings_home_sessions">Seiseanan</string>
-    <string name="settings_home_tokens">Tòcanan</string>
     <string name="settings_home_privacy">Poileasaidh prìobhaideachd</string>
     <string name="settings_home_rules">Riaghailtean</string>
     <string name="settings_home_terms">Cumhachan seirbheis</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Ceangail solaraiche</string>
     <string name="account_oauth_unlink_title">Dì-cheangail cunntas?</string>
     <string name="account_oauth_unlink_message">Cha bhi e comasach dhut log a-steach le %1$s tuilleadh.</string>
-    <string name="tokens_section_title">Tòcanan API</string>
-    <string name="tokens_title">Tòcanan dearbhachaidh</string>
-    <string name="tokens_empty">Chan eil tòcanan API.</string>
-    <string name="tokens_create_title">Tòcan API ùr</string>
-    <string name="tokens_new_title">Chaidh tòcan API a chruthachadh</string>
-    <string name="tokens_new_warning">Dèan lethbhreac den tòcan seo a-nis — cha nochdar e a-rithist.</string>
-    <string name="tokens_delete_message">Cha dearbh \"%1$s\" aplacaidean a tha ga chleachdadh tuilleadh.</string>
-    <string name="account_created_at">Chruthaichte %1$s</string>
     <string name="account_last_used">Chleachdte mu dheireadh %1$s</string>
-    <string name="tokens_scopes">Raointean: %1$s</string>
-    <string name="tokens_expires">Crìochnachadh: %1$s</string>
-    <string name="tokens_never">Chaoidh</string>
     <string name="route_delete_message">Bheir seo air falbh an t-slighe airson na slighe \"%1$s\".</string>
     <string name="route_empty">Chan eil slighean air an rèiteachadh.</string>
     <string name="route_meta">Prìomhachas %1$d · %2$s</string>

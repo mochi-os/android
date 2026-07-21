@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Hirugarrenen saio-hasiera</string>
     <string name="account_oauth_link">Lotu kontua</string>
     <string name="account_unlink">Desestekatu</string>
-    <string name="tokens_create">Sortu tokena</string>
-    <string name="tokens_name">Izena</string>
-    <string name="tokens_delete_title">Ezabatu tokena?</string>
-    <string name="tokens_create_confirm">Sortu</string>
     <string name="account_cancel">Utzi</string>
     <string name="account_save">Gorde</string>
     <string name="account_done">Eginda</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Ezarpenak</string>
     <string name="settings_home_sessions">Saioak</string>
-    <string name="settings_home_tokens">Tokenak</string>
     <string name="settings_home_privacy">Pribatutasun-politika</string>
     <string name="settings_home_rules">Arauak</string>
     <string name="settings_home_terms">Zerbitzuaren baldintzak</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Hornitzaile bat lotu</string>
     <string name="account_oauth_unlink_title">Kontua deslotu?</string>
     <string name="account_oauth_unlink_message">Ezin izango duzu %1$s-rekin saiorik hasi.</string>
-    <string name="tokens_section_title">API tokenak</string>
-    <string name="tokens_title">Autentifikazio-tokenak</string>
-    <string name="tokens_empty">Ez dago API tokenik.</string>
-    <string name="tokens_create_title">API token berria</string>
-    <string name="tokens_new_title">API tokena sortuta</string>
-    <string name="tokens_new_warning">Kopiatu token hau orain — ez da berriro erakutsiko.</string>
-    <string name="tokens_delete_message">\"%1$s\" ez du gehiago erabiltzen duten aplikazioak autentifikatuko.</string>
-    <string name="account_created_at">Sortua %1$s</string>
     <string name="account_last_used">Azken erabilera %1$s</string>
-    <string name="tokens_scopes">Eremuak: %1$s</string>
-    <string name="tokens_expires">Iraungitzen da: %1$s</string>
-    <string name="tokens_never">Inoiz ez</string>
     <string name="route_delete_message">Honek \"%1$s\" bidearen ibilbidea kenduko du.</string>
     <string name="route_empty">Ez dago konfiguratutako ibilbiderik.</string>
     <string name="route_meta">Lehentasuna %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Trečiosios šalies prisijungimas</string>
     <string name="account_oauth_link">Susieti paskyrą</string>
     <string name="account_unlink">Atsieti</string>
-    <string name="tokens_create">Sukurti žetoną</string>
-    <string name="tokens_name">Pavadinimas</string>
-    <string name="tokens_delete_title">Ištrinti žetoną?</string>
-    <string name="tokens_create_confirm">Sukurti</string>
     <string name="account_cancel">Atšaukti</string>
     <string name="account_save">Išsaugoti</string>
     <string name="account_done">Atlikta</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Nustatymai</string>
     <string name="settings_home_sessions">Seansai</string>
-    <string name="settings_home_tokens">Žetonai</string>
     <string name="settings_home_privacy">Privatumo politika</string>
     <string name="settings_home_rules">Taisyklės</string>
     <string name="settings_home_terms">Paslaugos sąlygos</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Susieti teikėją</string>
     <string name="account_oauth_unlink_title">Atsieti paskyrą?</string>
     <string name="account_oauth_unlink_message">Nebegalėsite prisijungti naudodami %1$s.</string>
-    <string name="tokens_section_title">API atpažintukai</string>
-    <string name="tokens_title">Autentifikavimo žetonai</string>
-    <string name="tokens_empty">Nėra API atpažintukų.</string>
-    <string name="tokens_create_title">Naujas API atpažintukas</string>
-    <string name="tokens_new_title">API atpažintukas sukurtas</string>
-    <string name="tokens_new_warning">Nukopijuokite šį atpažintuką dabar — jis nebus rodomas dar kartą.</string>
-    <string name="tokens_delete_message">\"%1$s\" nebeautentifikuos programėlių, kurios ją naudoja.</string>
-    <string name="account_created_at">Sukurta %1$s</string>
     <string name="account_last_used">Paskutinį kartą naudota %1$s</string>
-    <string name="tokens_scopes">Sritys: %1$s</string>
-    <string name="tokens_expires">Galioja iki: %1$s</string>
-    <string name="tokens_never">Niekada</string>
     <string name="route_delete_message">Tai pašalins maršrutą kelio \"%1$s\".</string>
     <string name="route_empty">Nesukonfigūruota maršrutų.</string>
     <string name="route_meta">Prioritetas %1$d · %2$s</string>

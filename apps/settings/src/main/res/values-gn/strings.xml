@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Tembiporu mboaike ambue</string>
     <string name="account_oauth_link">Embojuaju cuenta</string>
     <string name="account_unlink">Eipe\'a</string>
-    <string name="tokens_create">Embojeguáva token</string>
-    <string name="tokens_name">Téra</string>
-    <string name="tokens_delete_title">Hundi token?</string>
-    <string name="tokens_create_confirm">Embojeguáva</string>
     <string name="account_cancel">Heja</string>
     <string name="account_save">Ñongatu</string>
     <string name="account_done">Apopyre</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Mbohape</string>
     <string name="settings_home_sessions">Mba\'ehe\'õi</string>
-    <string name="settings_home_tokens">Tokenkuéra</string>
     <string name="settings_home_privacy">Ñemoñe\'ẽ ñembyatyrã</string>
     <string name="settings_home_rules">Tekoita</string>
     <string name="settings_home_terms">Mba\'eapo rape</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Mbojoaju proveedor</string>
     <string name="account_oauth_unlink_title">Embojuasahína cuenta?</string>
     <string name="account_oauth_unlink_message">Ndaipóri jeike %1$s rupive.</string>
-    <string name="tokens_section_title">API token-kuéra</string>
-    <string name="tokens_title">Mba\'epykuéra ñembokatupyry</string>
-    <string name="tokens_empty">Ndaipori API tokens.</string>
-    <string name="tokens_create_title">API token pyahu</string>
-    <string name="tokens_new_title">API token oñemoñembokue</string>
-    <string name="tokens_new_warning">Embogua ko token ko\'ágã — ndoñeexhibíri jevy.</string>
-    <string name="tokens_delete_message">\"%1$s\" ndoautenticái mo\'ã apps oiporúva.</string>
-    <string name="account_created_at">Oñembyaty %1$s</string>
     <string name="account_last_used">Iporu paha %1$s</string>
-    <string name="tokens_scopes">Mbojeguaha: %1$s</string>
-    <string name="tokens_expires">Opa: %1$s</string>
-    <string name="tokens_never">Araka\'eve</string>
     <string name="route_delete_message">Kóva oipe\'a tape \"%1$s\" ru ruta.</string>
     <string name="route_empty">Ndaipori ruta oñembokuéva.</string>
     <string name="route_meta">Tenondegua %1$d · %2$s</string>

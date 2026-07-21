@@ -27,10 +27,6 @@
     <string name="account_section_oauth">第三方登录</string>
     <string name="account_oauth_link">关联账户</string>
     <string name="account_unlink">取消链接</string>
-    <string name="tokens_create">创建令牌</string>
-    <string name="tokens_name">名称</string>
-    <string name="tokens_delete_title">删除令牌吗?</string>
-    <string name="tokens_create_confirm">创建</string>
     <string name="account_cancel">取消</string>
     <string name="account_save">保存</string>
     <string name="account_done">完成</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi 设置</string>
     <string name="settings_home_sessions">会话</string>
-    <string name="settings_home_tokens">令牌</string>
     <string name="settings_home_privacy">隐私政策</string>
     <string name="settings_home_rules">规则</string>
     <string name="settings_home_terms">服务条款</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">连接提供商</string>
     <string name="account_oauth_unlink_title">解除账户连接？</string>
     <string name="account_oauth_unlink_message">您将无法使用 %1$s 登录。</string>
-    <string name="tokens_section_title">API 令牌</string>
-    <string name="tokens_title">身份验证令牌</string>
-    <string name="tokens_empty">无 API 令牌。</string>
-    <string name="tokens_create_title">新建 API 令牌</string>
-    <string name="tokens_new_title">API 令牌已创建</string>
-    <string name="tokens_new_warning">立即复制此令牌——它将不再显示。</string>
-    <string name="tokens_delete_message">\"%1$s\"将不再认证使用它的应用。</string>
-    <string name="account_created_at">创建 %1$s</string>
     <string name="account_last_used">最近使用 %1$s</string>
-    <string name="tokens_scopes">作用域：%1$s</string>
-    <string name="tokens_expires">到期：%1$s</string>
-    <string name="tokens_never">从不</string>
     <string name="route_delete_message">这将删除路径\"%1$s\"的路由。</string>
     <string name="route_empty">未配置任何路由。</string>
     <string name="route_meta">优先级 %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Prijava treće strane</string>
     <string name="account_oauth_link">Poveži račun</string>
     <string name="account_unlink">Razveži</string>
-    <string name="tokens_create">Kreiraj token</string>
-    <string name="tokens_name">Ime</string>
-    <string name="tokens_delete_title">Obrisati token?</string>
-    <string name="tokens_create_confirm">Kreiraj</string>
     <string name="account_cancel">Otkaži</string>
     <string name="account_save">Sačuvaj</string>
     <string name="account_done">Gotovo</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Postavke</string>
     <string name="settings_home_sessions">Sesije</string>
-    <string name="settings_home_tokens">Tokeni</string>
     <string name="settings_home_privacy">Politika privatnosti</string>
     <string name="settings_home_rules">Pravila</string>
     <string name="settings_home_terms">Uslovi korištenja</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Poveži pružatelja</string>
     <string name="account_oauth_unlink_title">Odvojiti račun?</string>
     <string name="account_oauth_unlink_message">Više se nećete moći prijaviti s %1$s.</string>
-    <string name="tokens_section_title">API tokeni</string>
-    <string name="tokens_title">Tokeni za autentifikaciju</string>
-    <string name="tokens_empty">Nema API tokena.</string>
-    <string name="tokens_create_title">Novi API token</string>
-    <string name="tokens_new_title">API token kreiran</string>
-    <string name="tokens_new_warning">Kopirajte ovaj token sada — neće biti ponovo prikazan.</string>
-    <string name="tokens_delete_message">\"%1$s\" više neće autentikovati aplikacije koje ga koriste.</string>
-    <string name="account_created_at">Kreirano %1$s</string>
     <string name="account_last_used">Zadnji put korišteno %1$s</string>
-    <string name="tokens_scopes">Opsezi: %1$s</string>
-    <string name="tokens_expires">Istječe: %1$s</string>
-    <string name="tokens_never">Nikad</string>
     <string name="route_delete_message">Ovo će ukloniti rutu za putanju \"%1$s\".</string>
     <string name="route_empty">Nema konfigurisanih ruta.</string>
     <string name="route_meta">Prioritet %1$d · %2$s</string>

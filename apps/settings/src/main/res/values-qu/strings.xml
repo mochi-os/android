@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Kinsa kaq yaykuy</string>
     <string name="account_oauth_link">Cuentata watay</string>
     <string name="account_unlink">Paskay</string>
-    <string name="tokens_create">Token kamariy</string>
-    <string name="tokens_name">Sutin</string>
-    <string name="tokens_delete_title">Token wischuy?</string>
-    <string name="tokens_create_confirm">Kamariy</string>
     <string name="account_cancel">Mana ruway</string>
     <string name="account_save">Waqaychay</string>
     <string name="account_done">Tukurqun</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Allichaykuna</string>
     <string name="settings_home_sessions">Tariykuna</string>
-    <string name="settings_home_tokens">Tokenkuna</string>
     <string name="settings_home_privacy">Pakana kamachiy</string>
     <string name="settings_home_rules">Kamachiykuna</string>
     <string name="settings_home_terms">Yanapay rimaykuna</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Quqniqta watay</string>
     <string name="account_oauth_unlink_title">Cuentata paskay?</string>
     <string name="account_oauth_unlink_message">Manaña %1$swan yaykuyta atinkichu.</string>
-    <string name="tokens_section_title">API tokenkuna</string>
-    <string name="tokens_title">Sutiyay tokenkuna</string>
-    <string name="tokens_empty">Mana API tokenkuna.</string>
-    <string name="tokens_create_title">Musuq API token</string>
-    <string name="tokens_new_title">API token ruwasqa</string>
-    <string name="tokens_new_warning">Kay tokenta kunan kopiay — manaña qhawachisqaqa kanqa.</string>
-    <string name="tokens_delete_message">\"%1$s\" manaña apaykachaq apps autenticasqachu kanqa.</string>
-    <string name="account_created_at">Ruwasqa %1$s</string>
     <string name="account_last_used">Tukukuy apaykachasqa %1$s</string>
-    <string name="tokens_scopes">Patakuna: %1$s</string>
-    <string name="tokens_expires">Tukunqa: %1$s</string>
-    <string name="tokens_never">Mana hayk\'aqpas</string>
     <string name="route_delete_message">Kayqa \"%1$s\" ñan ñanta urqunqa.</string>
     <string name="route_empty">Mana ima ñan churasqachu.</string>
     <string name="route_meta">Ñawpaq %1$d · %2$s</string>

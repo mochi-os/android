@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Accesso di terze parti</string>
     <string name="account_oauth_link">Collega account</string>
     <string name="account_unlink">Scollega</string>
-    <string name="tokens_create">Crea token</string>
-    <string name="tokens_name">Nome</string>
-    <string name="tokens_delete_title">Eliminare il token?</string>
-    <string name="tokens_create_confirm">Crea</string>
     <string name="account_cancel">Annulla</string>
     <string name="account_save">Salva</string>
     <string name="account_done">Fatto</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Impostazioni</string>
     <string name="settings_home_sessions">Sessioni</string>
-    <string name="settings_home_tokens">Token</string>
     <string name="settings_home_privacy">Informativa sulla privacy</string>
     <string name="settings_home_rules">Regole</string>
     <string name="settings_home_terms">Termini di servizio</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Collega un provider</string>
     <string name="account_oauth_unlink_title">Scollegare l\'account?</string>
     <string name="account_oauth_unlink_message">Non potrai più accedere con %1$s.</string>
-    <string name="tokens_section_title">Token API</string>
-    <string name="tokens_title">Token di autenticazione</string>
-    <string name="tokens_empty">Nessun token API.</string>
-    <string name="tokens_create_title">Nuovo token API</string>
-    <string name="tokens_new_title">Token API creato</string>
-    <string name="tokens_new_warning">Copia questo token ora — non verrà mostrato di nuovo.</string>
-    <string name="tokens_delete_message">«%1$s» non autenticherà più le app che lo usano.</string>
-    <string name="account_created_at">Creato %1$s</string>
     <string name="account_last_used">Ultimo uso %1$s</string>
-    <string name="tokens_scopes">Ambiti: %1$s</string>
-    <string name="tokens_expires">Scade: %1$s</string>
-    <string name="tokens_never">Mai</string>
     <string name="route_delete_message">Questo rimuoverà il percorso per il path «%1$s».</string>
     <string name="route_empty">Nessun percorso configurato.</string>
     <string name="route_meta">Priorità %1$d · %2$s</string>

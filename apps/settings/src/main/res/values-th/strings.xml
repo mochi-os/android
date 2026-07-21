@@ -27,10 +27,6 @@
     <string name="account_section_oauth">เข้าสู่ระบบบุคคลที่สาม</string>
     <string name="account_oauth_link">เชื่อมโยงบัญชี</string>
     <string name="account_unlink">ยกเลิกการเชื่อมโยง</string>
-    <string name="tokens_create">สร้างโทเคน</string>
-    <string name="tokens_name">ชื่อ</string>
-    <string name="tokens_delete_title">ลบโทเคนหรือไม่?</string>
-    <string name="tokens_create_confirm">สร้าง</string>
     <string name="account_cancel">ยกเลิก</string>
     <string name="account_save">บันทึก</string>
     <string name="account_done">เสร็จสิ้น</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi การตั้งค่า</string>
     <string name="settings_home_sessions">เซสชัน</string>
-    <string name="settings_home_tokens">โทเค็น</string>
     <string name="settings_home_privacy">นโยบายความเป็นส่วนตัว</string>
     <string name="settings_home_rules">กฎ</string>
     <string name="settings_home_terms">ข้อกำหนดในการให้บริการ</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">เชื่อมโยงผู้ให้บริการ</string>
     <string name="account_oauth_unlink_title">ยกเลิกการเชื่อมโยงบัญชี?</string>
     <string name="account_oauth_unlink_message">คุณจะไม่สามารถเข้าสู่ระบบด้วย %1$s ได้</string>
-    <string name="tokens_section_title">โทเค็น API</string>
-    <string name="tokens_title">โทเค็นการตรวจสอบสิทธิ์</string>
-    <string name="tokens_empty">ไม่มีโทเค็น API</string>
-    <string name="tokens_create_title">โทเค็น API ใหม่</string>
-    <string name="tokens_new_title">สร้างโทเค็น API แล้ว</string>
-    <string name="tokens_new_warning">คัดลอกโทเค็นนี้ทันที — จะไม่แสดงอีก</string>
-    <string name="tokens_delete_message">\"%1$s\" จะไม่ตรวจสอบความถูกต้องของแอปที่ใช้อีก</string>
-    <string name="account_created_at">สร้าง %1$s</string>
     <string name="account_last_used">ใช้ล่าสุด %1$s</string>
-    <string name="tokens_scopes">ขอบเขต: %1$s</string>
-    <string name="tokens_expires">หมดอายุ: %1$s</string>
-    <string name="tokens_never">ไม่เลย</string>
     <string name="route_delete_message">การกระทำนี้จะลบเส้นทางสำหรับเส้นทาง \"%1$s\"</string>
     <string name="route_empty">ไม่มีเส้นทางที่กำหนดค่าไว้</string>
     <string name="route_meta">ความสำคัญ %1$d · %2$s</string>

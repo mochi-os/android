@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Koneksyon twazyèm pati</string>
     <string name="account_oauth_link">Lye kont</string>
     <string name="account_unlink">Dekonekte</string>
-    <string name="tokens_create">Kreye token</string>
-    <string name="tokens_name">Non</string>
-    <string name="tokens_delete_title">Efase token?</string>
-    <string name="tokens_create_confirm">Kreye</string>
     <string name="account_cancel">Anile</string>
     <string name="account_save">Sove</string>
     <string name="account_done">Fini</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Paramèt</string>
     <string name="settings_home_sessions">Sesyon yo</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Politik konfidansyalite</string>
     <string name="settings_home_rules">Règ</string>
     <string name="settings_home_terms">Kondisyon sèvis</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Konekte yon founisè</string>
     <string name="account_oauth_unlink_title">Dekonekte kont la?</string>
     <string name="account_oauth_unlink_message">Ou pap kapab konekte ak %1$s ankò.</string>
-    <string name="tokens_section_title">Token API</string>
-    <string name="tokens_title">Tokens otantifikasyon</string>
-    <string name="tokens_empty">Pa gen token API.</string>
-    <string name="tokens_create_title">Nouvo token API</string>
-    <string name="tokens_new_title">Token API kreye</string>
-    <string name="tokens_new_warning">Kopye token sa a kounye a — li pap montre ankò.</string>
-    <string name="tokens_delete_message">\"%1$s\" pa pral otantifye aplikasyon ki itilize li yo ankò.</string>
-    <string name="account_created_at">Kreye %1$s</string>
     <string name="account_last_used">Dènye itilizasyon %1$s</string>
-    <string name="tokens_scopes">Sijè: %1$s</string>
-    <string name="tokens_expires">Ekspire: %1$s</string>
-    <string name="tokens_never">Janmen</string>
     <string name="route_delete_message">Sa pral retire wout pou chemen \"%1$s\".</string>
     <string name="route_empty">Pa gen wout konfigire.</string>
     <string name="route_meta">Priyorite %1$d · %2$s</string>

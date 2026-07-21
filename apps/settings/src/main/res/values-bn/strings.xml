@@ -27,10 +27,6 @@
     <string name="account_section_oauth">তৃতীয় পক্ষের লগইন</string>
     <string name="account_oauth_link">অ্যাকাউন্ট লিঙ্ক করুন</string>
     <string name="account_unlink">লিঙ্ক বিচ্ছিন্ন</string>
-    <string name="tokens_create">টোকেন তৈরি করুন</string>
-    <string name="tokens_name">নাম</string>
-    <string name="tokens_delete_title">টোকেন মুছবেন?</string>
-    <string name="tokens_create_confirm">তৈরি করুন</string>
     <string name="account_cancel">বাতিল করুন</string>
     <string name="account_save">সংরক্ষণ করুন</string>
     <string name="account_done">সম্পন্ন</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi সেটিংস</string>
     <string name="settings_home_sessions">সেশন</string>
-    <string name="settings_home_tokens">টোকেন</string>
     <string name="settings_home_privacy">গোপনীয়তা নীতি</string>
     <string name="settings_home_rules">নিয়মাবলী</string>
     <string name="settings_home_terms">পরিষেবার শর্তাবলী</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">একটি প্রদানকারী লিঙ্ক করুন</string>
     <string name="account_oauth_unlink_title">অ্যাকাউন্ট লিঙ্ক মুক্ত করবেন?</string>
     <string name="account_oauth_unlink_message">আপনি আর %1$s দিয়ে সাইন ইন করতে পারবেন না।</string>
-    <string name="tokens_section_title">API টোকেন</string>
-    <string name="tokens_title">প্রমাণীকরণ টোকেন</string>
-    <string name="tokens_empty">কোনো API টোকেন নেই।</string>
-    <string name="tokens_create_title">নতুন API টোকেন</string>
-    <string name="tokens_new_title">API টোকেন তৈরি হয়েছে</string>
-    <string name="tokens_new_warning">এই টোকেনটি এখন কপি করুন — এটি আর দেখানো হবে না।</string>
-    <string name="tokens_delete_message">\"%1$s\" এটি ব্যবহারকারী অ্যাপগুলিকে আর প্রমাণীকরণ করবে না।</string>
-    <string name="account_created_at">তৈরি %1$s</string>
     <string name="account_last_used">শেষ ব্যবহার %1$s</string>
-    <string name="tokens_scopes">স্কোপ: %1$s</string>
-    <string name="tokens_expires">মেয়াদ শেষ: %1$s</string>
-    <string name="tokens_never">কখনই না</string>
     <string name="route_delete_message">এটি \"%1$s\" পথের রুট মুছে ফেলবে।</string>
     <string name="route_empty">কোনো রুট কনফিগার করা নেই।</string>
     <string name="route_meta">অগ্রাধিকার %1$d · %2$s</string>

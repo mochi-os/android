@@ -27,10 +27,6 @@
     <string name="account_section_oauth">മൂന്നാം കക്ഷി ലോഗിൻ</string>
     <string name="account_oauth_link">അക്കൗണ്ട് ലിങ്ക് ചെയ്യുക</string>
     <string name="account_unlink">അൺലിങ്ക് ചെയ്യുക</string>
-    <string name="tokens_create">ടോക്കൺ സൃഷ്ടിക്കുക</string>
-    <string name="tokens_name">പേര്</string>
-    <string name="tokens_delete_title">ടോക്കൺ ഇല്ലാതാക്കണോ?</string>
-    <string name="tokens_create_confirm">സൃഷ്ടിക്കുക</string>
     <string name="account_cancel">റദ്ദാക്കുക</string>
     <string name="account_save">സേവ് ചെയ്യുക</string>
     <string name="account_done">പൂർത്തിയായി</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ക്രമീകരണങ്ങൾ</string>
     <string name="settings_home_sessions">സെഷനുകൾ</string>
-    <string name="settings_home_tokens">ടോക്കണുകൾ</string>
     <string name="settings_home_privacy">സ്വകാര്യതാ നയം</string>
     <string name="settings_home_rules">നിയമങ്ങൾ</string>
     <string name="settings_home_terms">സേവന നിബന്ധനകൾ</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">ദാതാവിനെ ലിങ്ക് ചെയ്യുക</string>
     <string name="account_oauth_unlink_title">അക്കൗണ്ട് അൺലിങ്ക് ചെയ്യണോ?</string>
     <string name="account_oauth_unlink_message">നിങ്ങൾക്ക് ഇനി %1$s ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യാൻ കഴിയില്ല.</string>
-    <string name="tokens_section_title">API ടോക്കണുകൾ</string>
-    <string name="tokens_title">ആധികാരികത ടോക്കണുകൾ</string>
-    <string name="tokens_empty">API ടോക്കണുകൾ ഇല്ല.</string>
-    <string name="tokens_create_title">പുതിയ API ടോക്കൺ</string>
-    <string name="tokens_new_title">API ടോക്കൺ സൃഷ്ടിച്ചു</string>
-    <string name="tokens_new_warning">ഈ ടോക്കൺ ഇപ്പോൾ പകർത്തുക — അത് വീണ്ടും കാണിക്കില്ല.</string>
-    <string name="tokens_delete_message">\"%1$s\" ഇത് ഉപയോഗിക്കുന്ന ആപ്പുകളെ ഇനി പ്രാമാണീകരിക്കില്ല.</string>
-    <string name="account_created_at">സൃഷ്ടിച്ചത് %1$s</string>
     <string name="account_last_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
-    <string name="tokens_scopes">സ്കോപ്പുകൾ: %1$s</string>
-    <string name="tokens_expires">കാലഹരണപ്പെടും: %1$s</string>
-    <string name="tokens_never">ഒരിക്കലുമില്ല</string>
     <string name="route_delete_message">ഇത് പാത \"%1$s\" നായുള്ള റൂട്ട് നീക്കം ചെയ്യും.</string>
     <string name="route_empty">റൂട്ടുകൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല.</string>
     <string name="route_meta">മുൻഗണന %1$d · %2$s</string>

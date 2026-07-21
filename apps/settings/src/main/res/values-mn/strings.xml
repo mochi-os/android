@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Гуравдагч талын нэвтрэлт</string>
     <string name="account_oauth_link">Бүртгэл холбох</string>
     <string name="account_unlink">Холбоо тасалах</string>
-    <string name="tokens_create">Токен үүсгэх</string>
-    <string name="tokens_name">Нэр</string>
-    <string name="tokens_delete_title">Токен устгах уу?</string>
-    <string name="tokens_create_confirm">Үүсгэх</string>
     <string name="account_cancel">Цуцлах</string>
     <string name="account_save">Хадгалах</string>
     <string name="account_done">Дууссан</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Тохиргоо</string>
     <string name="settings_home_sessions">Сешн</string>
-    <string name="settings_home_tokens">Токен</string>
     <string name="settings_home_privacy">Нууцлалын бодлого</string>
     <string name="settings_home_rules">Дүрэм</string>
     <string name="settings_home_terms">Үйлчилгээний нөхцөл</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Үйлчилгээ үзүүлэгчийг холбох</string>
     <string name="account_oauth_unlink_title">Бүртгэлийг салгах уу?</string>
     <string name="account_oauth_unlink_message">Та цаашид %1$s-ээр нэвтэрч чадахгүй.</string>
-    <string name="tokens_section_title">API токенууд</string>
-    <string name="tokens_title">Танилтын токенууд</string>
-    <string name="tokens_empty">API токен байхгүй.</string>
-    <string name="tokens_create_title">Шинэ API токен</string>
-    <string name="tokens_new_title">API токен үүсгэгдсэн</string>
-    <string name="tokens_new_warning">Энэ токеныг одоо хуулна уу — дахин харагдахгүй.</string>
-    <string name="tokens_delete_message">\"%1$s\" нь үүнийг ашиглаж буй апп-уудыг цаашид баталгаажуулахгүй.</string>
-    <string name="account_created_at">Үүсгэсэн %1$s</string>
     <string name="account_last_used">Сүүлд ашигласан %1$s</string>
-    <string name="tokens_scopes">Хамрах хүрээ: %1$s</string>
-    <string name="tokens_expires">Дуусах: %1$s</string>
-    <string name="tokens_never">Хэзээ ч</string>
     <string name="route_delete_message">Энэ нь \"%1$s\" замын маршрутыг арилгана.</string>
     <string name="route_empty">Тохируулсан маршрут алга.</string>
     <string name="route_meta">Тэргүүлэх %1$d · %2$s</string>

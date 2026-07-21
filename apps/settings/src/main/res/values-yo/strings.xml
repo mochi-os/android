@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Iwọle ẹnikẹta</string>
     <string name="account_oauth_link">Ìjápọ̀ àkántì</string>
     <string name="account_unlink">Yọ ìsopọ̀ kúrò</string>
-    <string name="tokens_create">Dá token</string>
-    <string name="tokens_name">Orúkọ</string>
-    <string name="tokens_delete_title">Pa token rẹ́?</string>
-    <string name="tokens_create_confirm">Dá</string>
     <string name="account_cancel">Fagilé</string>
     <string name="account_save">Fi pamọ́</string>
     <string name="account_done">Ti parí</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Ètò</string>
     <string name="settings_home_sessions">Awọn igba</string>
-    <string name="settings_home_tokens">Awọn tókini</string>
     <string name="settings_home_privacy">Ìlànà àdáni</string>
     <string name="settings_home_rules">Àwọn òfin</string>
     <string name="settings_home_terms">Àwọn àdéhùn iṣẹ́</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">So olùpèsè</string>
     <string name="account_oauth_unlink_title">Tú àkáǹtì kúrò?</string>
     <string name="account_oauth_unlink_message">O kò ní lè wọlé pẹ̀lú %1$s mọ́.</string>
-    <string name="tokens_section_title">Àwọn àmì API</string>
-    <string name="tokens_title">Awọn tókini ìjẹ́rísí</string>
-    <string name="tokens_empty">Kò sí àwọn àmì API.</string>
-    <string name="tokens_create_title">Àmì API tuntun</string>
-    <string name="tokens_new_title">A ti ṣe àmì API</string>
-    <string name="tokens_new_warning">Daakọ àmì yìí báyìí — a kò ní fihàn mọ́.</string>
-    <string name="tokens_delete_message">\"%1$s\" kò ní jẹ́rìísí àwọn ohun tí ń lò ó mọ́.</string>
-    <string name="account_created_at">A ṣe %1$s</string>
     <string name="account_last_used">Lò gbẹyìn %1$s</string>
-    <string name="tokens_scopes">Àwọn ìbáyé: %1$s</string>
-    <string name="tokens_expires">Pari: %1$s</string>
-    <string name="tokens_never">Láéláé</string>
     <string name="route_delete_message">Èyí yóò mú ọ̀nà fún ọ̀nà \"%1$s\" kúrò.</string>
     <string name="route_empty">Kò sí àwọn ọ̀nà tí a tò.</string>
     <string name="route_meta">Ìpataki %1$d · %2$s</string>

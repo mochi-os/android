@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Uchinchi tomon kirishi</string>
     <string name="account_oauth_link">Hisobni bogʻlash</string>
     <string name="account_unlink">Bogʻlamani yechish</string>
-    <string name="tokens_create">Token yaratish</string>
-    <string name="tokens_name">Nomi</string>
-    <string name="tokens_delete_title">Token oʻchirilsinmi?</string>
-    <string name="tokens_create_confirm">Yaratish</string>
     <string name="account_cancel">Bekor qilish</string>
     <string name="account_save">Saqlash</string>
     <string name="account_done">Bajarildi</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Sozlamalar</string>
     <string name="settings_home_sessions">Seanslar</string>
-    <string name="settings_home_tokens">Tokenlar</string>
     <string name="settings_home_privacy">Maxfiylik siyosati</string>
     <string name="settings_home_rules">Qoidalar</string>
     <string name="settings_home_terms">Xizmat shartlari</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Provayderni bogʻlash</string>
     <string name="account_oauth_unlink_title">Hisobni ajratmoqchimisiz?</string>
     <string name="account_oauth_unlink_message">Siz endi %1$s bilan kira olmaysiz.</string>
-    <string name="tokens_section_title">API tokenlari</string>
-    <string name="tokens_title">Autentifikatsiya tokenlari</string>
-    <string name="tokens_empty">API tokenlari yoʻq.</string>
-    <string name="tokens_create_title">Yangi API tokeni</string>
-    <string name="tokens_new_title">API tokeni yaratildi</string>
-    <string name="tokens_new_warning">Ushbu tokenni hozir nusxalang — u qaytadan koʻrsatilmaydi.</string>
-    <string name="tokens_delete_message">\"%1$s\" endi undan foydalanadigan ilovalarni autentifikatsiya qilmaydi.</string>
-    <string name="account_created_at">Yaratilgan %1$s</string>
     <string name="account_last_used">Oxirgi foydalanish %1$s</string>
-    <string name="tokens_scopes">Doiralar: %1$s</string>
-    <string name="tokens_expires">Tugaydi: %1$s</string>
-    <string name="tokens_never">Hech qachon</string>
     <string name="route_delete_message">Bu yoʻl \"%1$s\" uchun marshrutni olib tashlaydi.</string>
     <string name="route_empty">Sozlangan marshrutlar yoʻq.</string>
     <string name="route_meta">Ustuvorlik %1$d · %2$s</string>

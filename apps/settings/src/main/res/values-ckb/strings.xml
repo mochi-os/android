@@ -27,10 +27,6 @@
     <string name="account_section_oauth">چوونەژوورەوەی لایەنی سێیەم</string>
     <string name="account_oauth_link">بەستنی هەژمار</string>
     <string name="account_unlink">بەستن لابرە</string>
-    <string name="tokens_create">دروستکردنی تۆکن</string>
-    <string name="tokens_name">ناو</string>
-    <string name="tokens_delete_title">تۆکن بسڕەوە؟</string>
-    <string name="tokens_create_confirm">دروستکردن</string>
     <string name="account_cancel">هەڵوەشاندنەوە</string>
     <string name="account_save">پاشەکەوتکردن</string>
     <string name="account_done">تەواوبوو</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ڕێکخستنەکان</string>
     <string name="settings_home_sessions">دانیشتنەکان</string>
-    <string name="settings_home_tokens">نیشانەکان</string>
     <string name="settings_home_privacy">ڕێنماییەکانی پاراستنی نهێنی</string>
     <string name="settings_home_rules">یاساکان</string>
     <string name="settings_home_terms">مەرجەکانی خزمەتگوزاری</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">دابینکەرێک پەیوەست بکە</string>
     <string name="account_oauth_unlink_title">پەیوەندی ھەژمار بپچڕێنە؟</string>
     <string name="account_oauth_unlink_message">چیتر ناتوانیت بە %1$s بێیتە ژوورەوە.</string>
-    <string name="tokens_section_title">تۆکنەکانی API</string>
-    <string name="tokens_title">نیشانەکانی ڕاستکردنەوە</string>
-    <string name="tokens_empty">تۆکنی API نییە.</string>
-    <string name="tokens_create_title">تۆکنی نوێی API</string>
-    <string name="tokens_new_title">تۆکنی API دروستکرا</string>
-    <string name="tokens_new_warning">ئەم تۆکنە ئێستا کۆپی بکە — جارێکی تر پیشان نادرێتەوە.</string>
-    <string name="tokens_delete_message">\"%1$s\" چیتر ئەو ئەپانە پشتڕاست ناکاتەوە کە بەکاریدەھێنن.</string>
-    <string name="account_created_at">دروستکراو %1$s</string>
     <string name="account_last_used">کۆتا بەکارھێنان %1$s</string>
-    <string name="tokens_scopes">بوارەکان: %1$s</string>
-    <string name="tokens_expires">بەسەردەچێت: %1$s</string>
-    <string name="tokens_never">هەرگیز</string>
     <string name="route_delete_message">ئەمە ڕێگای \"%1$s\" لادەبات.</string>
     <string name="route_empty">ڕێگایەک ڕێکخراو نییە.</string>
     <string name="route_meta">پێشینەیی %1$d · %2$s</string>

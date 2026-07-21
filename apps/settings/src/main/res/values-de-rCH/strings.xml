@@ -3,7 +3,6 @@
 
     <string name="system_documents_tab_privacy">Privacy</string>
 
-    <string name="tokens_name">Name</string>
     <string name="notifprefs_name_label">Name</string>
     <string name="accounts_field_name">Name</string>
     <string name="account_cancel">Abbrechen</string>
@@ -79,23 +78,12 @@
     <string name="account_oauth_unlink_title">Konto trennen?</string>
     <string name="account_oauth_unlink_message">Sie können sich nicht mehr mit %1$s anmelden.</string>
     <string name="account_unlink">Trennen</string>
-    <string name="tokens_section_title">API-Tokens</string>
-    <string name="tokens_empty">Keine API-Tokens.</string>
-    <string name="tokens_create">Token erstellen</string>
-    <string name="tokens_create_title">Neues API-Token</string>
-    <string name="tokens_new_title">API-Token erstellt</string>
-    <string name="tokens_new_warning">Kopieren Sie dieses Token jetzt – es wird nicht erneut angezeigt.</string>
-    <string name="tokens_delete_title">Token löschen?</string>
-    <string name="tokens_delete_message">\"%1$s\" authentifiziert keine Apps mehr, die es verwenden.</string>
     <string name="account_done">Fertig</string>
     <string name="account_rename">Umbenennen</string>
     <string name="account_disable">Deaktivieren</string>
     <string name="account_copy">Kopieren</string>
     <string name="account_copy_all">Alle kopieren</string>
-    <string name="account_created_at">Erstellt %1$s</string>
     <string name="account_last_used">Zuletzt verwendet %1$s</string>
-    <string name="tokens_scopes">Bereiche: %1$s</string>
-    <string name="tokens_expires">Läuft ab: %1$s</string>
     <string name="sessions_current">(aktuell)</string>
     <string name="settings_home_section_system">System</string>
     <string name="route_section">Routä</string>
@@ -311,10 +299,6 @@
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Einstellungen</string>
     <string name="settings_home_sessions">Sitzungen</string>
-    <string name="settings_home_tokens">Tokens</string>
-    <string name="tokens_create_confirm">Erstellen</string>
-    <string name="tokens_never">Nie</string>
-    <string name="tokens_title">Authentifizierungstokens</string>
     <string name="domain_add">Domänä hinzuefüegä</string>
     <string name="domain_add_title">Domänä hinzuefüegä</string>
     <string name="domain_delegation_add">Hinzufügen</string>

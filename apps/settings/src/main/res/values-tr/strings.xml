@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Üçüncü taraf girişi</string>
     <string name="account_oauth_link">Hesabı bağla</string>
     <string name="account_unlink">Bağlantıyı kaldır</string>
-    <string name="tokens_create">Token oluştur</string>
-    <string name="tokens_name">Ad</string>
-    <string name="tokens_delete_title">Token silinsin mi?</string>
-    <string name="tokens_create_confirm">Oluştur</string>
     <string name="account_cancel">İptal</string>
     <string name="account_save">Kaydet</string>
     <string name="account_done">Tamamlandı</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Ayarlar</string>
     <string name="settings_home_sessions">Oturumlar</string>
-    <string name="settings_home_tokens">Belirteçler</string>
     <string name="settings_home_privacy">Gizlilik politikası</string>
     <string name="settings_home_rules">Kurallar</string>
     <string name="settings_home_terms">Hizmet koşulları</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Sağlayıcı bağla</string>
     <string name="account_oauth_unlink_title">Hesap bağlantısı kaldırılsın mı?</string>
     <string name="account_oauth_unlink_message">%1$s ile giriş yapamayacaksınız.</string>
-    <string name="tokens_section_title">API jetonları</string>
-    <string name="tokens_title">Kimlik doğrulama belirteçleri</string>
-    <string name="tokens_empty">API jetonu yok.</string>
-    <string name="tokens_create_title">Yeni API jetonu</string>
-    <string name="tokens_new_title">API jetonu oluşturuldu</string>
-    <string name="tokens_new_warning">Bu jetonu şimdi kopyalayın — tekrar gösterilmeyecek.</string>
-    <string name="tokens_delete_message">\"%1$s\" artık onu kullanan uygulamaları doğrulamayacak.</string>
-    <string name="account_created_at">Oluşturuldu %1$s</string>
     <string name="account_last_used">Son kullanım %1$s</string>
-    <string name="tokens_scopes">Kapsamlar: %1$s</string>
-    <string name="tokens_expires">Süre dolumu: %1$s</string>
-    <string name="tokens_never">Asla</string>
     <string name="route_delete_message">Bu, \"%1$s\" yolu için rotayı kaldıracak.</string>
     <string name="route_empty">Yapılandırılmış rota yok.</string>
     <string name="route_meta">Öncelik %1$d · %2$s</string>

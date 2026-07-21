@@ -27,10 +27,6 @@
     <string name="account_section_oauth">דריט־פּאַרטיי לאָגין</string>
     <string name="account_oauth_link">פֿאַרבינדן קאָנטע</string>
     <string name="account_unlink">אָפּקניפּן</string>
-    <string name="tokens_create">באַשאַפֿן טאָקן</string>
-    <string name="tokens_name">נאָמען</string>
-    <string name="tokens_delete_title">אויסמעקן טאָקן?</string>
-    <string name="tokens_create_confirm">באַשאַפֿן</string>
     <string name="account_cancel">אָפּזאָגן</string>
     <string name="account_save">היט אויף</string>
     <string name="account_done">געטאָן</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi הגדרות</string>
     <string name="settings_home_sessions">סעסיעס</string>
-    <string name="settings_home_tokens">טאָקנס</string>
     <string name="settings_home_privacy">פּריוואַטקייט פּאָליסי</string>
     <string name="settings_home_rules">כללים</string>
     <string name="settings_home_terms">דינסט באדינגונגען</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">פֿאַרבינדן אַ פֿאָרזעער</string>
     <string name="account_oauth_unlink_title">אַנפֿאַרבינדן חשבון?</string>
     <string name="account_oauth_unlink_message">איר וועט מער ניט קענען לאָגין מיט %1$s.</string>
-    <string name="tokens_section_title">API טאָקנס</string>
-    <string name="tokens_title">אַטענטיציר־טאָקנס</string>
-    <string name="tokens_empty">קײנע API טאָקנס.</string>
-    <string name="tokens_create_title">נײַער API טאָקן</string>
-    <string name="tokens_new_title">API טאָקן באַשאַפֿן</string>
-    <string name="tokens_new_warning">קאָפּיר דעם טאָקן איצט — עס וועט ניט ווידער געוויזן.</string>
-    <string name="tokens_delete_message">\"%1$s\" וועט מער ניט אָטענטיקאַציעט אַפּס וואָס נוצן אים.</string>
-    <string name="account_created_at">באַשאַפֿן %1$s</string>
     <string name="account_last_used">לעצטע מאָל גענוצט %1$s</string>
-    <string name="tokens_scopes">געביטן: %1$s</string>
-    <string name="tokens_expires">לויפֿט אויס: %1$s</string>
-    <string name="tokens_never">קיינמאָל</string>
     <string name="route_delete_message">דאָס וועט אַרױסנעמען די רוט פֿאַר וועג \"%1$s\".</string>
     <string name="route_empty">קײנע רעטעס פֿאַרקאָנפֿיגירט.</string>
     <string name="route_meta">פּריאָריטעט %1$d · %2$s</string>

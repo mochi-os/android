@@ -20,7 +20,6 @@ import androidx.compose.material.icons.filled.Article
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Devices
 import androidx.compose.material.icons.filled.Gavel
-import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MonitorHeart
@@ -61,7 +60,6 @@ fun SettingsHomeScreen(
     onOpenNotifications: () -> Unit,
     onOpenNotificationPrefs: () -> Unit,
     onOpenSessions: () -> Unit,
-    onOpenTokens: () -> Unit,
     onOpenSystemSettings: () -> Unit,
     onOpenSystemStatus: () -> Unit,
     onOpenSystemUsers: () -> Unit,
@@ -159,15 +157,6 @@ fun SettingsHomeScreen(
                             contentDescription = null
                         )
                     },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
-                HorizontalDivider()
-            }
-            item {
-                ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenTokens),
-                    headlineContent = { Text(stringResource(R.string.settings_home_tokens)) },
-                    leadingContent = { Icon(Icons.Default.Key, contentDescription = null) },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()

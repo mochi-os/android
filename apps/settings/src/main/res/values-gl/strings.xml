@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Inicio de sesión externo</string>
     <string name="account_oauth_link">Vincular conta</string>
     <string name="account_unlink">Desvincular</string>
-    <string name="tokens_create">Crear token</string>
-    <string name="tokens_name">Nome</string>
-    <string name="tokens_delete_title">Eliminar token?</string>
-    <string name="tokens_create_confirm">Crear</string>
     <string name="account_cancel">Cancelar</string>
     <string name="account_save">Gardar</string>
     <string name="account_done">Feito</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Configuración</string>
     <string name="settings_home_sessions">Sesións</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Política de privacidade</string>
     <string name="settings_home_rules">Regras</string>
     <string name="settings_home_terms">Termos do servizo</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Vincular un provedor</string>
     <string name="account_oauth_unlink_title">Desvincular a conta?</string>
     <string name="account_oauth_unlink_message">Xa non poderás iniciar sesión con %1$s.</string>
-    <string name="tokens_section_title">Tokens de API</string>
-    <string name="tokens_title">Tokens de autenticación</string>
-    <string name="tokens_empty">Non hai tokens de API.</string>
-    <string name="tokens_create_title">Novo token de API</string>
-    <string name="tokens_new_title">Token de API creado</string>
-    <string name="tokens_new_warning">Copia este token agora — non se mostrará de novo.</string>
-    <string name="tokens_delete_message">«%1$s» xa non autenticará as aplicacións que o usen.</string>
-    <string name="account_created_at">Creado %1$s</string>
     <string name="account_last_used">Último uso %1$s</string>
-    <string name="tokens_scopes">Ámbitos: %1$s</string>
-    <string name="tokens_expires">Expira: %1$s</string>
-    <string name="tokens_never">Nunca</string>
     <string name="route_delete_message">Isto eliminará a ruta para o camiño «%1$s».</string>
     <string name="route_empty">Non hai rutas configuradas.</string>
     <string name="route_meta">Prioridade %1$d · %2$s</string>

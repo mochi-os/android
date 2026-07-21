@@ -27,10 +27,6 @@
     <string name="account_section_oauth">تسجيل دخول من طرف ثالث</string>
     <string name="account_oauth_link">ربط الحساب</string>
     <string name="account_unlink">إلغاء الربط</string>
-    <string name="tokens_create">إنشاء رمز</string>
-    <string name="tokens_name">الاسم</string>
-    <string name="tokens_delete_title">حذف الرمز؟</string>
-    <string name="tokens_create_confirm">إنشاء</string>
     <string name="account_cancel">إلغاء</string>
     <string name="account_save">حفظ</string>
     <string name="account_done">منتهٍ</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">إعدادات Mochi</string>
     <string name="settings_home_sessions">الجلسات</string>
-    <string name="settings_home_tokens">الرموز</string>
     <string name="settings_home_privacy">سياسة الخصوصية</string>
     <string name="settings_home_rules">القواعد</string>
     <string name="settings_home_terms">شروط الخدمة</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">ربط مزوّد</string>
     <string name="account_oauth_unlink_title">إلغاء ربط الحساب؟</string>
     <string name="account_oauth_unlink_message">لن تتمكن من تسجيل الدخول باستخدام %1$s.</string>
-    <string name="tokens_section_title">رموز API</string>
-    <string name="tokens_title">رموز المصادقة</string>
-    <string name="tokens_empty">لا توجد رموز API.</string>
-    <string name="tokens_create_title">رمز API جديد</string>
-    <string name="tokens_new_title">تم إنشاء رمز API</string>
-    <string name="tokens_new_warning">انسخ هذا الرمز الآن — لن يُعرض مرة أخرى.</string>
-    <string name="tokens_delete_message">لن يصادق \"%1$s\" التطبيقات التي تستخدمه بعد الآن.</string>
-    <string name="account_created_at">تم الإنشاء %1$s</string>
     <string name="account_last_used">آخر استخدام %1$s</string>
-    <string name="tokens_scopes">النطاقات: %1$s</string>
-    <string name="tokens_expires">تنتهي في: %1$s</string>
-    <string name="tokens_never">أبداً</string>
     <string name="route_delete_message">سيؤدي هذا إلى إزالة المسار للمسار \"%1$s\".</string>
     <string name="route_empty">لا توجد مسارات مُهيأة.</string>
     <string name="route_meta">الأولوية %1$d · %2$s</string>

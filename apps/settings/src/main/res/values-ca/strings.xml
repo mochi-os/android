@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Inici de sessió extern</string>
     <string name="account_oauth_link">Enllaça el compte</string>
     <string name="account_unlink">Desvincula</string>
-    <string name="tokens_create">Crea un token</string>
-    <string name="tokens_name">Nom</string>
-    <string name="tokens_delete_title">Vols suprimir el token?</string>
-    <string name="tokens_create_confirm">Crea</string>
     <string name="account_cancel">Cancel·la</string>
     <string name="account_save">Desa</string>
     <string name="account_done">Fet</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Configuració</string>
     <string name="settings_home_sessions">Sessions</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Política de privacitat</string>
     <string name="settings_home_rules">Regles</string>
     <string name="settings_home_terms">Termes del servei</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Enllaçar un proveïdor</string>
     <string name="account_oauth_unlink_title">Desenllaçar compte?</string>
     <string name="account_oauth_unlink_message">Ja no podreu iniciar sessió amb %1$s.</string>
-    <string name="tokens_section_title">Tokens d\'API</string>
-    <string name="tokens_title">Tokens d\'autenticació</string>
-    <string name="tokens_empty">No hi ha tokens d\'API.</string>
-    <string name="tokens_create_title">Nou token d\'API</string>
-    <string name="tokens_new_title">Token d\'API creat</string>
-    <string name="tokens_new_warning">Copieu aquest token ara — no es mostrarà de nou.</string>
-    <string name="tokens_delete_message">«%1$s» ja no autenticarà les aplicacions que el facin servir.</string>
-    <string name="account_created_at">Creat %1$s</string>
     <string name="account_last_used">Darrer ús %1$s</string>
-    <string name="tokens_scopes">Àmbits: %1$s</string>
-    <string name="tokens_expires">Caduca: %1$s</string>
-    <string name="tokens_never">Mai</string>
     <string name="route_delete_message">Això eliminarà la ruta per al camí «%1$s».</string>
     <string name="route_empty">No hi ha rutes configurades.</string>
     <string name="route_meta">Prioritat %1$d · %2$s</string>
