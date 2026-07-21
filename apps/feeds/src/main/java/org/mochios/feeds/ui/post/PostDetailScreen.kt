@@ -592,6 +592,13 @@ private fun PostContent(
                 },
                 thumbnailUrlBuilder = { att ->
                     att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
+                },
+                // previewUrl is absent on servers that predate the preview
+                // variant; falling back to the thumbnail chain keeps working.
+                previewUrlBuilder = { att ->
+                    att.previewUrl
+                        ?: att.thumbnailUrl
+                        ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
                 }
             )
         }

@@ -762,6 +762,13 @@ private fun PostHeader(
                 },
                 thumbnailUrlBuilder = { att ->
                     att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
+                },
+                // previewUrl is absent on servers that predate the preview
+                // variant; falling back to the thumbnail chain keeps working.
+                previewUrlBuilder = { att ->
+                    att.previewUrl
+                        ?: att.thumbnailUrl
+                        ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
                 }
             )
             Spacer(Modifier.height(6.dp))

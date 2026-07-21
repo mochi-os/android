@@ -14,7 +14,8 @@ data class Attachment(
     val type: String = "",
     val created: Long = 0,
     val url: String? = null,
-    @SerializedName("thumbnail_url") val thumbnailUrl: String? = null
+    @SerializedName("thumbnail_url") val thumbnailUrl: String? = null,
+    @SerializedName("preview_url") val previewUrl: String? = null
 ) {
     /**
      * Coarse file category, from the MIME [type] first and the filename

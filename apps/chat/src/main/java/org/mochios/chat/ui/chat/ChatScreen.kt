@@ -1009,6 +1009,16 @@ private fun MessageBubble(
                                 },
                                 thumbnailUrlBuilder = { att ->
                                     "/chat/$chatId/-/attachments/${att.id}/thumbnail"
+                                },
+                                previewUrlBuilder = { att ->
+                                    // previewUrl's presence signals the server
+                                    // generates previews; the path itself is
+                                    // rebuilt on the chat asset route (see above).
+                                    if (att.previewUrl != null) {
+                                        "/chat/$chatId/-/attachments/${att.id}/preview"
+                                    } else {
+                                        "/chat/$chatId/-/attachments/${att.id}/thumbnail"
+                                    }
                                 }
                             )
                         }

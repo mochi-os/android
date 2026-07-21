@@ -1449,7 +1449,12 @@ private fun GalleryContent(
                             // frame from the video itself (VideoFrameFetcher).
                             VideoFrame(resolve(fullUrl(attachment)))
                         } else {
-                            attachment.thumbnailUrl
+                            // Mosaic tiles render at up to full screen width, so
+                            // prefer the preview variant; previewUrl is absent on
+                            // servers that predate it, where the thumbnail chain
+                            // keeps working.
+                            attachment.previewUrl
+                                ?: attachment.thumbnailUrl
                                 ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}/thumbnail"
                         }
                     },
@@ -1689,7 +1694,14 @@ private fun PostCard(
     val rssImageUrl = upgradedRssImage?.takeIf { it.isNotEmpty() }
         ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
-    val heroUrl = attachmentImageUrls.firstOrNull() ?: rssImageUrl
+    // Attachment heroes load the preview variant — the half-screen hero doesn't
+    // need multi-megabyte originals (the lightbox still gets them). previewUrl
+    // is absent on servers that predate it, where the original keeps working.
+    val heroUrl = if (heroFromAttachment) {
+        attachmentImages.first().previewUrl ?: attachmentImageUrls.first()
+    } else {
+        rssImageUrl
+    }
     // Gallery posts — the media is the content (no RSS article, at most a
     // caption of text) — take the full-page mosaic layout instead of the
     // hero + article column below.
@@ -1844,7 +1856,8 @@ private fun PostCard(
                         MediaGrid(
                             urls = attachmentImageUrls.drop(gridStartIndex),
                             thumbnailUrls = gridImages.map { att ->
-                                att.thumbnailUrl
+                                att.previewUrl
+                                    ?: att.thumbnailUrl
                                     ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
                             },
                             contentDescriptions = gridImages.map { it.name },
