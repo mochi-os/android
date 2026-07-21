@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">I-banner ye-markdown yokukhetha eboniswa phezulu kwifidi yakho.</string>
     <string name="feeds_clear">Cima</string>
     <string name="feeds_delete_feed">Cima ifidi</string>
-    <string name="feeds_add_member">Yongeza ilungu</string>
     <string name="feeds_no_members">Akukho malungu</string>
     <string name="feeds_user">Umsebenzisi</string>
     <string name="feeds_access_users">Abasebenzisi</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Iyabuyisela umthombo…</string>
     <string name="feeds_settings_access_updated">Ufikelelo luhlaziyiwe</string>
     <string name="feeds_settings_access_revoked">Ufikelelo lurhoxisiwe</string>
-    <string name="feeds_settings_member_added">Ilungu lifakiwe</string>
     <string name="feeds_settings_member_removed">Ilungu lisusiwe</string>
     <string name="feeds_settings_ai_mode_updated">Imo ye-AI ihlaziyiwe</string>
     <string name="feeds_settings_ai_account_updated">I-akhawunti ye-AI ihlaziyiwe</string>

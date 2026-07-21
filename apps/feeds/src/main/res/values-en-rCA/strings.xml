@@ -53,7 +53,6 @@
     <string name="feeds_banner">Banner</string>
     <string name="feeds_clear">Clear</string>
     <string name="feeds_danger_zone">Danger zone</string>
-    <string name="feeds_add_member">Add member</string>
     <string name="feeds_no_members">No members</string>
     <string name="feeds_access_users">Users</string>
     <string name="feeds_access_groups">Groups</string>
@@ -67,7 +66,6 @@
     <string name="feeds_ai_reset_default">Reset to default</string>
     <string name="feeds_post_not_found">Post not found</string>
     <string name="feeds_settings_access_updated">Access updated</string>
-    <string name="feeds_settings_member_added">Member added</string>
     <string name="feeds_settings_member_removed">Member removed</string>
     <string name="feeds_location">Location</string>
 

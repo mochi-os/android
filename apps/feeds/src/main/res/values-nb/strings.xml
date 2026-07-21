@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Valgfri markdown-banner som vises øverst i strømmen din.</string>
     <string name="feeds_clear">Tøm</string>
     <string name="feeds_delete_feed">Slett strøm</string>
-    <string name="feeds_add_member">Legg til medlem</string>
     <string name="feeds_no_members">Ingen medlemmer</string>
     <string name="feeds_user">Bruker</string>
     <string name="feeds_access_users">Brukere</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Spør kilde…</string>
     <string name="feeds_settings_access_updated">Tilgang oppdatert</string>
     <string name="feeds_settings_access_revoked">Tilgang opphevet</string>
-    <string name="feeds_settings_member_added">Medlem lagt til</string>
     <string name="feeds_settings_member_removed">Medlem fjernet</string>
     <string name="feeds_settings_ai_mode_updated">AI-modus oppdatert</string>
     <string name="feeds_settings_ai_account_updated">AI-konto oppdatert</string>

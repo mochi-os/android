@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">በፊድዎ አናት ላይ የሚታይ አማራጭ የማርክዳውን ባነር።</string>
     <string name="feeds_clear">አጽዳ</string>
     <string name="feeds_delete_feed">ፊድ ሰርዝ</string>
-    <string name="feeds_add_member">አባል ጨምር</string>
     <string name="feeds_no_members">ምንም አባላት የሉም</string>
     <string name="feeds_user">ተጠቃሚ</string>
     <string name="feeds_access_users">ተጠቃሚዎች</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">ምንጭ አልሳል…</string>
     <string name="feeds_settings_access_updated">መዳረሻ ተዘምኗል</string>
     <string name="feeds_settings_access_revoked">ጭቅም ተርሿል</string>
-    <string name="feeds_settings_member_added">አባል ተጨምሯል</string>
     <string name="feeds_settings_member_removed">አባል ተወግዷል</string>
     <string name="feeds_settings_ai_mode_updated">የአወቀ መረጃ (AI) ምቀረታ ተኵᜳል</string>
     <string name="feeds_settings_ai_account_updated">የአወቀ መረጃ (AI) አካውንት ተኵᜳል</string>

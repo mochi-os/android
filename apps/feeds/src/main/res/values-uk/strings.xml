@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Необов\'язковий markdown-банер, що відображається у верхній частині вашої стрічки.</string>
     <string name="feeds_clear">Очистити</string>
     <string name="feeds_delete_feed">Видалити стрічку</string>
-    <string name="feeds_add_member">Додати учасника</string>
     <string name="feeds_no_members">Немає учасників</string>
     <string name="feeds_user">Користувач</string>
     <string name="feeds_access_users">Користувачі</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Опитування джерела…</string>
     <string name="feeds_settings_access_updated">Доступ оновлено</string>
     <string name="feeds_settings_access_revoked">Доступ відкликано</string>
-    <string name="feeds_settings_member_added">Учасника додано</string>
     <string name="feeds_settings_member_removed">Учасника видалено</string>
     <string name="feeds_settings_ai_mode_updated">Режим ШІ оновлено</string>
     <string name="feeds_settings_ai_account_updated">Обліковий запис ШІ оновлено</string>

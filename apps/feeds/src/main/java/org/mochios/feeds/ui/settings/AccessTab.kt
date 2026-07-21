@@ -73,9 +73,11 @@ private val ACCESS_LEVEL_CHANGE_KEYS = listOf("comment", "react", "view", "none"
 /**
  * Access tab: an "Access Management" card listing each subject (owner, groups,
  * authenticated users, anyone, individual users) with its access level, plus a
- * "Members" section for filtering, adding, and removing members. The owner row
- * is read-only; every other row exposes an inline level dropdown and a remove
- * button. Each section header carries its own add action.
+ * "Members" section for filtering and removing subscribers. Subscription is
+ * always subscriber-initiated, so there is no owner-side add — the owner only
+ * controls who may subscribe (access rules) and can remove a subscriber. The
+ * owner row is read-only; every other row exposes an inline level dropdown and
+ * a remove button.
  */
 @Composable
 fun AccessTab(
@@ -86,7 +88,6 @@ fun AccessTab(
     val permissions by viewModel.permissions.collectAsState()
     val members by viewModel.members.collectAsState()
     var showAddDialog by remember { mutableStateOf(false) }
-    var showAddMemberDialog by remember { mutableStateOf(false) }
     var memberQuery by remember { mutableStateOf("") }
 
     // Members are managed here, so only load them for a viewer who can.
@@ -160,11 +161,6 @@ fun AccessTab(
             Section(
                 title = stringResource(R.string.feeds_tab_members),
                 headerAlignment = Alignment.CenterVertically,
-                action = {
-                    OutlinedButton(onClick = { showAddMemberDialog = true }) {
-                        Text(stringResource(R.string.feeds_add_member))
-                    }
-                },
             ) {
                 Column(
                     modifier = Modifier
@@ -234,93 +230,6 @@ fun AccessTab(
         )
     }
 
-    if (showAddMemberDialog) {
-        AddMemberDialog(
-            viewModel = viewModel,
-            onDismiss = { showAddMemberDialog = false },
-            onAdd = { memberEntityId ->
-                viewModel.addMember(memberEntityId)
-                showAddMemberDialog = false
-            },
-        )
-    }
-}
-
-/** Add-member dialog: search users and pick one to add to the feed. */
-@Composable
-private fun AddMemberDialog(
-    viewModel: FeedSettingsViewModel,
-    onDismiss: () -> Unit,
-    onAdd: (String) -> Unit,
-) {
-    var query by remember { mutableStateOf("") }
-    var selectedSubject by remember { mutableStateOf("") }
-    var selectedName by remember { mutableStateOf("") }
-    val searchResults by viewModel.userSearchResults.collectAsState()
-
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_add_member)) },
-        text = {
-            Column(modifier = Modifier.fillMaxWidth()) {
-                OutlinedTextField(
-                    value = query,
-                    onValueChange = { value ->
-                        query = value
-                        selectedSubject = ""
-                        selectedName = ""
-                        viewModel.searchUsers(value)
-                    },
-                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                if (searchResults.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    OutlinedCard(modifier = Modifier.fillMaxWidth()) {
-                        searchResults.take(6).forEach { user ->
-                            SubjectOption(
-                                icon = Icons.Default.Person,
-                                title = user.name,
-                                subtitle = null,
-                                selected = selectedSubject == user.id,
-                                onClick = {
-                                    selectedSubject = user.id
-                                    selectedName = user.name
-                                },
-                            )
-                        }
-                    }
-                }
-                if (selectedSubject.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Text(
-                        text = stringResource(R.string.feeds_access_selected, selectedName),
-                        style = MaterialTheme.typography.bodyMedium,
-                    )
-                }
-            }
-        },
-        confirmButton = {
-            Button(
-                onClick = { onAdd(selectedSubject) },
-                enabled = selectedSubject.isNotEmpty(),
-            ) {
-                Icon(
-                    Icons.Default.Add,
-                    contentDescription = null,
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                )
-                Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
-    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

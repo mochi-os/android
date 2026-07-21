@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">तुमच्या फीडच्या शीर्षस्थानी दर्शविले जाणारे वैकल्पिक markdown बॅनर.</string>
     <string name="feeds_clear">साफ करा</string>
     <string name="feeds_delete_feed">फीड हटवा</string>
-    <string name="feeds_add_member">सदस्य जोडा</string>
     <string name="feeds_no_members">सदस्य नाहीत</string>
     <string name="feeds_user">वापरकर्ता</string>
     <string name="feeds_access_users">वापरकर्ते</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">स्रोत बघत आहोत…</string>
     <string name="feeds_settings_access_updated">प्रवेश अद्ययावत केला</string>
     <string name="feeds_settings_access_revoked">प्रवेश रद्द केला</string>
-    <string name="feeds_settings_member_added">सदस्य जोडला</string>
     <string name="feeds_settings_member_removed">सदस्य काढला</string>
     <string name="feeds_settings_ai_mode_updated">AI मोड अद्ययावत बनवला</string>
     <string name="feeds_settings_ai_account_updated">AI खाते अद्ययावत बनवले</string>

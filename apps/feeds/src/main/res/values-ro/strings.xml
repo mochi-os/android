@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Banner markdown opțional afișat în partea de sus a fluxului tău.</string>
     <string name="feeds_clear">Golește</string>
     <string name="feeds_delete_feed">Șterge fluxul</string>
-    <string name="feeds_add_member">Adaugă membru</string>
     <string name="feeds_no_members">Niciun membru</string>
     <string name="feeds_user">Utilizator</string>
     <string name="feeds_access_users">Utilizatori</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Se interoghează sursa…</string>
     <string name="feeds_settings_access_updated">Acces actualizat</string>
     <string name="feeds_settings_access_revoked">Accesul a fost revocat</string>
-    <string name="feeds_settings_member_added">Membru adăugat</string>
     <string name="feeds_settings_member_removed">Membru eliminat</string>
     <string name="feeds_settings_ai_mode_updated">Modul IA a fost actualizat</string>
     <string name="feeds_settings_ai_account_updated">Contul IA a fost actualizat</string>

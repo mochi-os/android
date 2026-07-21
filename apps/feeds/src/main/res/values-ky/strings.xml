@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Тасмаңыздын үстүндө көрсөтүлгөн милдеттүү эмес markdown баннер.</string>
     <string name="feeds_clear">Тазалоо</string>
     <string name="feeds_delete_feed">Түрмөктү жок кылуу</string>
-    <string name="feeds_add_member">Мүчө кошуу</string>
     <string name="feeds_no_members">Мүчөлөр жок</string>
     <string name="feeds_user">Колдонуучу</string>
     <string name="feeds_access_users">Колдонуучулар</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Булакка суроо жиберилип жатат…</string>
     <string name="feeds_settings_access_updated">Жетки жаңыланды</string>
     <string name="feeds_settings_access_revoked">Кирүү жокко чыгарылды</string>
-    <string name="feeds_settings_member_added">Мүчө кошулду</string>
     <string name="feeds_settings_member_removed">Мүчө алынып салынды</string>
     <string name="feeds_settings_ai_mode_updated">AI режими жаңыртылды</string>
     <string name="feeds_settings_ai_account_updated">AI эсеби жаңыртылды</string>

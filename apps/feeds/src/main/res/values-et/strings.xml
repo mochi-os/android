@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Valikuline markdown-bänner sinu voo ülaosas.</string>
     <string name="feeds_clear">Tühjenda</string>
     <string name="feeds_delete_feed">Kustuta voog</string>
-    <string name="feeds_add_member">Lisa liige</string>
     <string name="feeds_no_members">Liikmeid pole</string>
     <string name="feeds_user">Kasutaja</string>
     <string name="feeds_access_users">Kasutajad</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Allika küsitlemine…</string>
     <string name="feeds_settings_access_updated">Juurdepääs uuendatud</string>
     <string name="feeds_settings_access_revoked">Juurdepääs tühistati</string>
-    <string name="feeds_settings_member_added">Liige lisatud</string>
     <string name="feeds_settings_member_removed">Liige eemaldatud</string>
     <string name="feeds_settings_ai_mode_updated">AI režiim uuendatud</string>
     <string name="feeds_settings_ai_account_updated">AI konto uuendatud</string>

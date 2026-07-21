@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Προαιρετικό banner markdown που εμφανίζεται στην κορυφή της ροής σας.</string>
     <string name="feeds_clear">Εκκαθάριση</string>
     <string name="feeds_delete_feed">Διαγραφή ροής</string>
-    <string name="feeds_add_member">Προσθήκη μέλους</string>
     <string name="feeds_no_members">Χωρίς μέλη</string>
     <string name="feeds_user">Χρήστης</string>
     <string name="feeds_access_users">Χρήστες</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Ανίχνευση πηγής…</string>
     <string name="feeds_settings_access_updated">Η πρόσβαση ενημερώθηκε</string>
     <string name="feeds_settings_access_revoked">Η πρόσβαση ανακλήθηκε</string>
-    <string name="feeds_settings_member_added">Το μέλος προστέθηκε</string>
     <string name="feeds_settings_member_removed">Το μέλος αφαιρέθηκε</string>
     <string name="feeds_settings_ai_mode_updated">Η λειτουργία AI ενημερώθηκε</string>
     <string name="feeds_settings_ai_account_updated">Ο λογαριασμός AI ενημερώθηκε</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">بنر Markdown اختیاری که در بالای فید شما نمایش داده می‌شود.</string>
     <string name="feeds_clear">پاک کردن</string>
     <string name="feeds_delete_feed">حذف فید</string>
-    <string name="feeds_add_member">افزودن عضو</string>
     <string name="feeds_no_members">هیچ عضوی وجود ندارد</string>
     <string name="feeds_user">کاربر</string>
     <string name="feeds_access_users">کاربران</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">در حال دریافت منبع…</string>
     <string name="feeds_settings_access_updated">دسترسی به‌روزرسانی شد</string>
     <string name="feeds_settings_access_revoked">دسترسی لغو شد</string>
-    <string name="feeds_settings_member_added">عضو افزوده شد</string>
     <string name="feeds_settings_member_removed">عضو حذف شد</string>
     <string name="feeds_settings_ai_mode_updated">حالت هوش مصنوعی به‌روز شد</string>
     <string name="feeds_settings_ai_account_updated">حساب هوش مصنوعی به‌روز شد</string>

@@ -514,18 +514,6 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun addMember(memberEntityId: String) {
-        viewModelScope.launch {
-            try {
-                repository.addMember(feedId, memberEntityId)
-                _actionMessage.value = R.string.feeds_settings_member_added
-                loadMembers()
-            } catch (e: Exception) {
-                _error.value = e.toMochiError()
-            }
-        }
-    }
-
     fun removeMember(memberEntityId: String) {
         viewModelScope.launch {
             try {

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Lentangiz tepasida koʻrsatiladigan ixtiyoriy markdown banner.</string>
     <string name="feeds_clear">Tozalash</string>
     <string name="feeds_delete_feed">Feedni oʻchirish</string>
-    <string name="feeds_add_member">Aʼzo qoʻshish</string>
     <string name="feeds_no_members">Aʼzolar yoʻq</string>
     <string name="feeds_user">Foydalanuvchi</string>
     <string name="feeds_access_users">Foydalanuvchilar</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Manba soʻraladi…</string>
     <string name="feeds_settings_access_updated">Kirish yangilandi</string>
     <string name="feeds_settings_access_revoked">Kirish bekor qilindi</string>
-    <string name="feeds_settings_member_added">Aʼzo qoʻshildi</string>
     <string name="feeds_settings_member_removed">Aʼzo olib tashlandi</string>
     <string name="feeds_settings_ai_mode_updated">AI rejimi yangilandi</string>
     <string name="feeds_settings_ai_account_updated">AI hisobi yangilandi</string>

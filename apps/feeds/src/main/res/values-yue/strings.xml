@@ -42,7 +42,6 @@
     <string name="feeds_location">位置</string>
     <string name="feeds_access_groups">群組</string>
     <string name="feeds_add_to_home_screen">加到主畫面</string>
-    <string name="feeds_add_member">加入成員</string>
     <string name="feeds_no_members">沒有成員</string>
 
     <string name="notification_channel_feeds">資訊串通知</string>
@@ -183,7 +182,6 @@
     <string name="feeds_settings_source_polling">正在輪詢來源…</string>
     <string name="feeds_settings_access_updated">已更新存取權限</string>
     <string name="feeds_settings_access_revoked">已撤銷存取權限</string>
-    <string name="feeds_settings_member_added">已新增成員</string>
     <string name="feeds_settings_member_removed">已移除成員</string>
     <string name="feeds_settings_ai_mode_updated">已更新 AI 模式</string>
     <string name="feeds_settings_ai_account_updated">已更新 AI 帳戶</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Opsionele markdown-banier wat boaan jou feed vertoon word.</string>
     <string name="feeds_clear">Maak skoon</string>
     <string name="feeds_delete_feed">Verwyder feed</string>
-    <string name="feeds_add_member">Voeg lid by</string>
     <string name="feeds_no_members">Geen lede</string>
     <string name="feeds_user">Gebruiker</string>
     <string name="feeds_access_users">Gebruikers</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Bron word gepol…</string>
     <string name="feeds_settings_access_updated">Toegang opgedateer</string>
     <string name="feeds_settings_access_revoked">Toegang ingetrek</string>
-    <string name="feeds_settings_member_added">Lid bygevoeg</string>
     <string name="feeds_settings_member_removed">Lid verwyder</string>
     <string name="feeds_settings_ai_mode_updated">KI-modus bygewerk</string>
     <string name="feeds_settings_ai_account_updated">KI-rekening bygewerk</string>

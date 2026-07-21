@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Akymyňyzyň ýokarsynda görkezilýän hökman däl markdown banner.</string>
     <string name="feeds_clear">Arassalamak</string>
     <string name="feeds_delete_feed">Feed pozmak</string>
-    <string name="feeds_add_member">Agza goşmak</string>
     <string name="feeds_no_members">Agzalar ýok</string>
     <string name="feeds_user">Ulanyjy</string>
     <string name="feeds_access_users">Ulanyjylar</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Çeşme ümsi eşitlenen…</string>
     <string name="feeds_settings_access_updated">Giriş täzelendi</string>
     <string name="feeds_settings_access_revoked">Giriş ret edildi</string>
-    <string name="feeds_settings_member_added">Agza goşuldy</string>
     <string name="feeds_settings_member_removed">Agza aýryldy</string>
     <string name="feeds_settings_ai_mode_updated">AI režimi täzelendi</string>
     <string name="feeds_settings_ai_account_updated">AI hasaby täzelendi</string>

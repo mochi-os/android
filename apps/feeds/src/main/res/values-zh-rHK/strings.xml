@@ -55,7 +55,6 @@
     <string name="feeds_sort_top">頂部</string>
     <string name="feeds_restore">還原</string>
     <string name="feeds_add_to_home_screen">加到主畫面</string>
-    <string name="feeds_add_member">加入成員</string>
     <string name="feeds_no_members">沒有成員</string>
 
     <string name="notification_channel_feeds">資訊流通知</string>
@@ -188,7 +187,6 @@
     <string name="feeds_settings_source_added">已新增來源</string>
     <string name="feeds_settings_source_updated">已更新來源</string>
     <string name="feeds_settings_source_removed">已移除來源</string>
-    <string name="feeds_settings_member_added">已新增成員</string>
     <string name="feeds_settings_member_removed">已移除成員</string>
     <string name="feeds_settings_prompt_saved">已儲存提示</string>
 

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Незадължителен markdown банер, показан в горната част на емисията.</string>
     <string name="feeds_clear">Изчисти</string>
     <string name="feeds_delete_feed">Изтрий емисията</string>
-    <string name="feeds_add_member">Добави член</string>
     <string name="feeds_no_members">Няма членове</string>
     <string name="feeds_user">Потребител</string>
     <string name="feeds_access_users">Потребители</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Извличане от източник…</string>
     <string name="feeds_settings_access_updated">Достъпът е обновен</string>
     <string name="feeds_settings_access_revoked">Достъпът е отменен</string>
-    <string name="feeds_settings_member_added">Членът е добавен</string>
     <string name="feeds_settings_member_removed">Членът е премахнат</string>
     <string name="feeds_settings_ai_mode_updated">Режимът на ИИ е актуализиран</string>
     <string name="feeds_settings_ai_account_updated">Акаунтът на ИИ е актуализиран</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">បដា markdown ស្រេចចិត្តដែលបង្ហាញនៅផ្នែកខាងលើនៃ feed របស់អ្នក។</string>
     <string name="feeds_clear">សម្អាត</string>
     <string name="feeds_delete_feed">លុបមតិព័ត៌មាន</string>
-    <string name="feeds_add_member">បន្ថែមសមាជិក</string>
     <string name="feeds_no_members">មិនមានសមាជិក</string>
     <string name="feeds_user">អ្នកប្រើប្រាស់</string>
     <string name="feeds_access_users">អ្នកប្រើប្រាស់</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">កំពុងសួរានិយលូវ…</string>
     <string name="feeds_settings_access_updated">បានធ្វើបច្ចុប្បន្នភាពការចូលប្រើ</string>
     <string name="feeds_settings_access_revoked">សិទ្ធិបែររបស៴គទែរ</string>
-    <string name="feeds_settings_member_added">បានបន្ថែមសមាជិក</string>
     <string name="feeds_settings_member_removed">បានដកសមាជិក</string>
     <string name="feeds_settings_ai_mode_updated">វិទី AI ទែររានបែរ</string>
     <string name="feeds_settings_ai_account_updated">គននៀ AI ទែររានបែរ</string>

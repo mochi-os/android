@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Valfri markdown-banner som vert vist øvst på straumen din.</string>
     <string name="feeds_clear">Tøm</string>
     <string name="feeds_delete_feed">Slett straum</string>
-    <string name="feeds_add_member">Legg til medlem</string>
     <string name="feeds_no_members">Ingen medlemmer</string>
     <string name="feeds_user">Brukar</string>
     <string name="feeds_access_users">Brukarar</string>
@@ -83,7 +82,6 @@
     <string name="feeds_settings_source_updated">Kjelde oppdatert</string>
     <string name="feeds_settings_source_removed">Kjelde fjerna</string>
     <string name="feeds_settings_access_updated">Tilgang oppdatert</string>
-    <string name="feeds_settings_member_added">Medlem lagt til</string>
     <string name="feeds_settings_member_removed">Medlem fjerna</string>
     <string name="feeds_settings_prompt_saved">Leiarmelding lagra</string>
     <string name="feeds_settings_banner_saved">Banner lagra</string>

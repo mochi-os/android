@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">在您的動態頂部顯示的選用 Markdown 橫幅。</string>
     <string name="feeds_clear">清除</string>
     <string name="feeds_delete_feed">刪除訊息來源</string>
-    <string name="feeds_add_member">新增成員</string>
     <string name="feeds_no_members">無成員</string>
     <string name="feeds_user">使用者</string>
     <string name="feeds_access_users">使用者</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">正在輪詢來源…</string>
     <string name="feeds_settings_access_updated">存取已更新</string>
     <string name="feeds_settings_access_revoked">存取權限已撤銷</string>
-    <string name="feeds_settings_member_added">已新增成員</string>
     <string name="feeds_settings_member_removed">已移除成員</string>
     <string name="feeds_settings_ai_mode_updated">AI 模式已更新</string>
     <string name="feeds_settings_ai_account_updated">AI 帳號已更新</string>

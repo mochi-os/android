@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Optionele markdown-banner die bovenaan je feed wordt weergegeven.</string>
     <string name="feeds_clear">Wissen</string>
     <string name="feeds_delete_feed">Feed verwijderen</string>
-    <string name="feeds_add_member">Lid toevoegen</string>
     <string name="feeds_no_members">Geen leden</string>
     <string name="feeds_user">Gebruiker</string>
     <string name="feeds_access_users">Gebruikers</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Bron wordt opgevraagd…</string>
     <string name="feeds_settings_access_updated">Toegang bijgewerkt</string>
     <string name="feeds_settings_access_revoked">Toegang ingetrokken</string>
-    <string name="feeds_settings_member_added">Lid toegevoegd</string>
     <string name="feeds_settings_member_removed">Lid verwijderd</string>
     <string name="feeds_settings_ai_mode_updated">AI-modus bijgewerkt</string>
     <string name="feeds_settings_ai_account_updated">AI-account bijgewerkt</string>

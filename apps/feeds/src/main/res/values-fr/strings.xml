@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Bannière Markdown optionnelle affichée en haut de votre feed.</string>
     <string name="feeds_clear">Effacer</string>
     <string name="feeds_delete_feed">Supprimer le flux</string>
-    <string name="feeds_add_member">Ajouter un membre</string>
     <string name="feeds_no_members">Aucun membre</string>
     <string name="feeds_user">Utilisateur</string>
     <string name="feeds_access_users">Utilisateurs</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Interrogation de la source…</string>
     <string name="feeds_settings_access_updated">Accès mis à jour</string>
     <string name="feeds_settings_access_revoked">Accès révoqué</string>
-    <string name="feeds_settings_member_added">Membre ajouté</string>
     <string name="feeds_settings_member_removed">Membre supprimé</string>
     <string name="feeds_settings_ai_mode_updated">Mode IA mis à jour</string>
     <string name="feeds_settings_ai_account_updated">Compte IA mis à jour</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Akışınızın üstünde gösterilen isteğe bağlı markdown banner.</string>
     <string name="feeds_clear">Temizle</string>
     <string name="feeds_delete_feed">Feed\'i sil</string>
-    <string name="feeds_add_member">Üye ekle</string>
     <string name="feeds_no_members">Üye yok</string>
     <string name="feeds_user">Kullanıcı</string>
     <string name="feeds_access_users">Kullanıcılar</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Kaynak yoklaınıyor…</string>
     <string name="feeds_settings_access_updated">Erişim güncellendi</string>
     <string name="feeds_settings_access_revoked">Erişim iptal edildi</string>
-    <string name="feeds_settings_member_added">Üye eklendi</string>
     <string name="feeds_settings_member_removed">Üye kaldırıldı</string>
     <string name="feeds_settings_ai_mode_updated">AI modu güncellendi</string>
     <string name="feeds_settings_ai_account_updated">AI hesabı güncellendi</string>

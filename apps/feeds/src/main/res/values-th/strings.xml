@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">แบนเนอร์ markdown ที่ไม่บังคับ แสดงที่ด้านบนของฟีดของคุณ</string>
     <string name="feeds_clear">ล้าง</string>
     <string name="feeds_delete_feed">ลบฟีด</string>
-    <string name="feeds_add_member">เพิ่มสมาชิก</string>
     <string name="feeds_no_members">ไม่มีสมาชิก</string>
     <string name="feeds_user">ผู้ใช้</string>
     <string name="feeds_access_users">ผู้ใช้</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">กำลังสอบถามแหล่งที่มา…</string>
     <string name="feeds_settings_access_updated">อัปเดตการเข้าถึงแล้ว</string>
     <string name="feeds_settings_access_revoked">เพิกถอนการเข้าถึงแล้ว</string>
-    <string name="feeds_settings_member_added">เพิ่มสมาชิกแล้ว</string>
     <string name="feeds_settings_member_removed">ลบสมาชิกแล้ว</string>
     <string name="feeds_settings_ai_mode_updated">อัปเดตโหมด AI แล้ว</string>
     <string name="feeds_settings_ai_account_updated">อัปเดตบัญชี AI แล้ว</string>

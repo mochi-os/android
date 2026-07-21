@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Необязательный markdown-баннер, отображаемый вверху вашей ленты.</string>
     <string name="feeds_clear">Очистить</string>
     <string name="feeds_delete_feed">Удалить ленту</string>
-    <string name="feeds_add_member">Добавить участника</string>
     <string name="feeds_no_members">Нет участников</string>
     <string name="feeds_user">Пользователь</string>
     <string name="feeds_access_users">Пользователи</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Опрос источника…</string>
     <string name="feeds_settings_access_updated">Доступ обновлён</string>
     <string name="feeds_settings_access_revoked">Доступ отозван</string>
-    <string name="feeds_settings_member_added">Участник добавлен</string>
     <string name="feeds_settings_member_removed">Участник удалён</string>
     <string name="feeds_settings_ai_mode_updated">Режим ИИ обновлён</string>
     <string name="feeds_settings_ai_account_updated">Аккаунт ИИ обновлён</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Baner markdown opsional i shfaqur në krye të feed-it tuaj.</string>
     <string name="feeds_clear">Pastro</string>
     <string name="feeds_delete_feed">Fshi feed-in</string>
-    <string name="feeds_add_member">Shto anëtar</string>
     <string name="feeds_no_members">Asnjë anëtar</string>
     <string name="feeds_user">Përdoruesi</string>
     <string name="feeds_access_users">Përdoruesit</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Po sondazhohet burimi…</string>
     <string name="feeds_settings_access_updated">Qasja u përditësua</string>
     <string name="feeds_settings_access_revoked">Aksesi u revokua</string>
-    <string name="feeds_settings_member_added">Anëtari u shtua</string>
     <string name="feeds_settings_member_removed">Anëtari u hoq</string>
     <string name="feeds_settings_ai_mode_updated">Modaliteti i IA u përditësua</string>
     <string name="feeds_settings_ai_account_updated">Llogaria e IA u përditësua</string>

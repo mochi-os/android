@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Valfri markdown-banner som visas högst upp i ditt flöde.</string>
     <string name="feeds_clear">Rensa</string>
     <string name="feeds_delete_feed">Ta bort flöde</string>
-    <string name="feeds_add_member">Lägg till medlem</string>
     <string name="feeds_no_members">Inga medlemmar</string>
     <string name="feeds_user">Användare</string>
     <string name="feeds_access_users">Användare</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Avsöker källa…</string>
     <string name="feeds_settings_access_updated">Åtkomst uppdaterad</string>
     <string name="feeds_settings_access_revoked">Åtkomst återkallad</string>
-    <string name="feeds_settings_member_added">Medlem tillagd</string>
     <string name="feeds_settings_member_removed">Medlem borttagen</string>
     <string name="feeds_settings_ai_mode_updated">AI-läge uppdaterat</string>
     <string name="feeds_settings_ai_account_updated">AI-konto uppdaterat</string>

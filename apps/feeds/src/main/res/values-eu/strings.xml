@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Markdown banner aukerakoa, zure jarioaren goialdean erakutsia.</string>
     <string name="feeds_clear">Garbitu</string>
     <string name="feeds_delete_feed">Ezabatu jarioa</string>
-    <string name="feeds_add_member">Gehitu kidea</string>
     <string name="feeds_no_members">Kiderik ez</string>
     <string name="feeds_user">Erabiltzailea</string>
     <string name="feeds_access_users">Erabiltzaileak</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Iturria kontsultatzen…</string>
     <string name="feeds_settings_access_updated">Sarbidea eguneratua</string>
     <string name="feeds_settings_access_revoked">Sarbidea kendu da</string>
-    <string name="feeds_settings_member_added">Kidea gehituta</string>
     <string name="feeds_settings_member_removed">Kidea kenduta</string>
     <string name="feeds_settings_ai_mode_updated">AI modua eguneratuta</string>
     <string name="feeds_settings_ai_account_updated">AI kontua eguneratuta</string>

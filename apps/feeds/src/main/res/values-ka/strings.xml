@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">არასავალდებულო markdown ბანერი, რომელიც ნაჩვენებია თქვენი ფიდის თავში.</string>
     <string name="feeds_clear">გასუფთავება</string>
     <string name="feeds_delete_feed">feed-ის წაშლა</string>
-    <string name="feeds_add_member">წევრის დამატება</string>
     <string name="feeds_no_members">წევრები არ არის</string>
     <string name="feeds_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
     <string name="feeds_access_users">მომხმარებლის სახელი</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">წყაროს გამვითხვა…</string>
     <string name="feeds_settings_access_updated">წვდომა განახლდა</string>
     <string name="feeds_settings_access_revoked">წვდომა გაუქმდა</string>
-    <string name="feeds_settings_member_added">წევრი დაემატა</string>
     <string name="feeds_settings_member_removed">წევრი წაიშალა</string>
     <string name="feeds_settings_ai_mode_updated">ინტელექტის რეჟიმი განახლდა</string>
     <string name="feeds_settings_ai_account_updated">ინტელექტის ანგარიში განახლდა</string>

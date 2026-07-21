@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">మీ ఫీడ్ పైభాగంలో చూపించే ఐచ్ఛిక markdown బ్యానర్.</string>
     <string name="feeds_clear">క్లియర్ చేయండి</string>
     <string name="feeds_delete_feed">ఫీడ్‌ను తొలగించండి</string>
-    <string name="feeds_add_member">సభ్యుడిని జోడించండి</string>
     <string name="feeds_no_members">సభ్యులు లేరు</string>
     <string name="feeds_user">యూజర్</string>
     <string name="feeds_access_users">యూజర్‌లు</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">మూలం నుండి తలఖరే చేరెనీ…</string>
     <string name="feeds_settings_access_updated">యాక్సెస్ నవీకరించబడింది</string>
     <string name="feeds_settings_access_revoked">ప్రవేశీఙీ రద్దు చేయబడింది</string>
-    <string name="feeds_settings_member_added">సభ్యుడు జోడించబడ్డారు</string>
     <string name="feeds_settings_member_removed">సభ్యుడు తొలగించబడ్డారు</string>
     <string name="feeds_settings_ai_mode_updated">AI మోడ్ నవీకరించబడింది</string>
     <string name="feeds_settings_ai_account_updated">AI ఖాతా నవీకరించబడింది</string>

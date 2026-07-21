@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Feed-inizin yuxarısında göstərilən könüllü markdown banneri.</string>
     <string name="feeds_clear">Təmizlə</string>
     <string name="feeds_delete_feed">Feed-i sil</string>
-    <string name="feeds_add_member">Üzv əlavə et</string>
     <string name="feeds_no_members">Üzv yoxdur</string>
     <string name="feeds_user">İstifadəçi yaradıldı</string>
     <string name="feeds_access_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Mənbə sorğulanır…</string>
     <string name="feeds_settings_access_updated">Giriş yeniləndi</string>
     <string name="feeds_settings_access_revoked">İcaxə ləğv edildi</string>
-    <string name="feeds_settings_member_added">Üzv əlavə edildi</string>
     <string name="feeds_settings_member_removed">Üzv silindi</string>
     <string name="feeds_settings_ai_mode_updated">AI rejimi yeniləndi</string>
     <string name="feeds_settings_ai_account_updated">AI hesabı yeniləndi</string>

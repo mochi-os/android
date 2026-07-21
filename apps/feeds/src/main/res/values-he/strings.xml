@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">באנר markdown אופציונלי שמוצג בראש הפיד שלך.</string>
     <string name="feeds_clear">נקה</string>
     <string name="feeds_delete_feed">מחק פיד</string>
-    <string name="feeds_add_member">הוסף חבר</string>
     <string name="feeds_no_members">אין חברים</string>
     <string name="feeds_user">משתמש</string>
     <string name="feeds_access_users">משתמשים</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">בודק את המקור…</string>
     <string name="feeds_settings_access_updated">הגישה עודכנה</string>
     <string name="feeds_settings_access_revoked">הגישה בוטלה</string>
-    <string name="feeds_settings_member_added">החבר נוסף</string>
     <string name="feeds_settings_member_removed">החבר הוסר</string>
     <string name="feeds_settings_ai_mode_updated">מצב הבינה המלאכותית עודכן</string>
     <string name="feeds_settings_ai_account_updated">חשבון הבינה המלאכותית עודכן</string>

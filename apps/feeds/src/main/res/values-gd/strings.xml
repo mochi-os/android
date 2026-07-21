@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Bratach mharkdown roghainneil air a shealltainn aig mullach do shrutha.</string>
     <string name="feeds_clear">Falamhaich</string>
     <string name="feeds_delete_feed">Sguab às inbhir</string>
-    <string name="feeds_add_member">Cuir ball ris</string>
     <string name="feeds_no_members">Gun bhall</string>
     <string name="feeds_user">Cleachdaiche</string>
     <string name="feeds_access_users">Cleachdaichean</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">A’ toirt sgrudadh air an stoc…</string>
     <string name="feeds_settings_access_updated">Inntrigeadh air ùrachadh</string>
     <string name="feeds_settings_access_revoked">Chaidh cothrom inntrigidh a thoirmeasg</string>
-    <string name="feeds_settings_member_added">Chaidh ball a chur ris</string>
     <string name="feeds_settings_member_removed">Chaidh ball a thoirt air falbh</string>
     <string name="feeds_settings_ai_mode_updated">Modh IF air ùrachadh</string>
     <string name="feeds_settings_ai_account_updated">Cunntas IF air ùrachadh</string>

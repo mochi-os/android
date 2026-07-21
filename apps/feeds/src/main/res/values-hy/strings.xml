@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Ոչ պարտադիր markdown բաններ՝ ցուցադրվող ձեր հոսքի վերևում։</string>
     <string name="feeds_clear">Մաքրել ամենը</string>
     <string name="feeds_delete_feed">Ջնջել հոսքը</string>
-    <string name="feeds_add_member">Ավելացնել նոր հաշիվ</string>
     <string name="feeds_no_members">Անդամներ չկան</string>
     <string name="feeds_user">Օգտատեր</string>
     <string name="feeds_access_users">Օգտատերեր</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Աղբյուրի հարցում…</string>
     <string name="feeds_settings_access_updated">Մուտքը թարմացված է</string>
     <string name="feeds_settings_access_revoked">Մուտքը հետ է կանչված</string>
-    <string name="feeds_settings_member_added">Անդամների քանակ</string>
     <string name="feeds_settings_member_removed">Հիշողություններ</string>
     <string name="feeds_settings_ai_mode_updated">Արհեստական անհատի ռեժիմը թարմացված է</string>
     <string name="feeds_settings_ai_account_updated">Արհեստական անհատի հաշիվը թարմացված է</string>

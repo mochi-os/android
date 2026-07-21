@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">피드 상단에 표시되는 선택적 마크다운 배너예요.</string>
     <string name="feeds_clear">지우기</string>
     <string name="feeds_delete_feed">피드 삭제</string>
-    <string name="feeds_add_member">멤버 추가</string>
     <string name="feeds_no_members">멤버가 없어요</string>
     <string name="feeds_user">사용자</string>
     <string name="feeds_access_users">사용자</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">소스 가져오는 중…</string>
     <string name="feeds_settings_access_updated">접근이 업데이트되었어요</string>
     <string name="feeds_settings_access_revoked">액세스가 취소되었습니다</string>
-    <string name="feeds_settings_member_added">멤버가 추가되었어요</string>
     <string name="feeds_settings_member_removed">멤버가 제거되었어요</string>
     <string name="feeds_settings_ai_mode_updated">AI 모드가 업데이트되었습니다</string>
     <string name="feeds_settings_ai_account_updated">AI 계정이 업데이트되었습니다</string>

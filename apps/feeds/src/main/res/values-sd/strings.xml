@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">توهان جي feed جي مٿان ڏيکاريل اختياري markdown بينر.</string>
     <string name="feeds_clear">صاف ڪريو</string>
     <string name="feeds_delete_feed">فيڊ ختم ڪريو</string>
-    <string name="feeds_add_member">ميمبر شامل ڪريو</string>
     <string name="feeds_no_members">ڪي ميمبر نه آهن</string>
     <string name="feeds_user">صارف</string>
     <string name="feeds_access_users">صارف</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">سر ٽرسجو پد پر اعتبر جیو وې…</string>
     <string name="feeds_settings_access_updated">رسائي اپڊيٽ ڪئي وئي</string>
     <string name="feeds_settings_access_revoked">رسائی ژلائی ٽکدایو</string>
-    <string name="feeds_settings_member_added">ميمبر شامل ٿيو</string>
     <string name="feeds_settings_member_removed">ميمبر هٽايو ويو</string>
     <string name="feeds_settings_ai_mode_updated">AI وثیرو اپڈیت تابو</string>
     <string name="feeds_settings_ai_account_updated">AI سالاد اپڈیت تابو</string>

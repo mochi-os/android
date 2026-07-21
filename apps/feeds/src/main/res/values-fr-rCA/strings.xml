@@ -53,7 +53,6 @@
     <string name="feeds_banner">Bannière</string>
     <string name="feeds_clear">Effacer</string>
     <string name="feeds_danger_zone">Zone de danger</string>
-    <string name="feeds_add_member">Ajouter un membre</string>
     <string name="feeds_no_members">Aucun membre</string>
     <string name="feeds_access_users">Utilisateurs</string>
     <string name="feeds_access_groups">Groupes</string>
@@ -66,7 +65,6 @@
     <string name="feeds_ai_mode_tag">Étiquette</string>
     <string name="feeds_ai_reset_default">Rétablir les valeurs par défaut</string>
     <string name="feeds_settings_access_updated">Accès mis à jour</string>
-    <string name="feeds_settings_member_added">Membre ajouté</string>
     <string name="feeds_settings_member_removed">Membre retiré</string>
     <string name="feeds_location">Emplacement</string>
 

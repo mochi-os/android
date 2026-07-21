@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">আপনার ফিডের শীর্ষে দেখানো ঐচ্ছিক markdown ব্যানার।</string>
     <string name="feeds_clear">পরিষ্কার করুন</string>
     <string name="feeds_delete_feed">ফিড মুছুন</string>
-    <string name="feeds_add_member">সদস্য যোগ করুন</string>
     <string name="feeds_no_members">কোনো সদস্য নেই</string>
     <string name="feeds_user">ব্যবহারকারী</string>
     <string name="feeds_access_users">ব্যবহারকারী</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">সোর্স পোল করা হচ্ছে…</string>
     <string name="feeds_settings_access_updated">অ্যাক্সেস আপডেট হয়েছে</string>
     <string name="feeds_settings_access_revoked">অ্যাক্সেস প্রত্যাহার করা হয়েছে</string>
-    <string name="feeds_settings_member_added">সদস্য যোগ করা হয়েছে</string>
     <string name="feeds_settings_member_removed">সদস্য সরানো হয়েছে</string>
     <string name="feeds_settings_ai_mode_updated">AI মোড আপডেট করা হয়েছে</string>
     <string name="feeds_settings_ai_account_updated">AI অ্যাকাউন্ট আপডেট করা হয়েছে</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Баннери ихтиёрии markdown, ки дар болои фиди шумо нишон дода мешавад.</string>
     <string name="feeds_clear">Тоза кардан</string>
     <string name="feeds_delete_feed">Нест кардани навор</string>
-    <string name="feeds_add_member">Иловаи аъзо</string>
     <string name="feeds_no_members">Ягон аъзо нест</string>
     <string name="feeds_user">Корбар</string>
     <string name="feeds_access_users">Корбарон</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Сарчашма пурсида шуда истадааст…</string>
     <string name="feeds_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
     <string name="feeds_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
-    <string name="feeds_settings_member_added">Узв илова шуд</string>
     <string name="feeds_settings_member_removed">Узв бартараф шуд</string>
     <string name="feeds_settings_ai_mode_updated">Режими AI нав карда шуд</string>
     <string name="feeds_settings_ai_account_updated">Ҳисоби AI нав карда шуд</string>

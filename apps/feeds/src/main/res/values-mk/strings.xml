@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Опционален markdown banner прикажан на врвот на вашиот feed.</string>
     <string name="feeds_clear">Исчисти</string>
     <string name="feeds_delete_feed">Избриши канал</string>
-    <string name="feeds_add_member">Додај член</string>
     <string name="feeds_no_members">Нема членови</string>
     <string name="feeds_user">Корисник</string>
     <string name="feeds_access_users">Корисници</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Испитување на изворот…</string>
     <string name="feeds_settings_access_updated">Пристапот е ажуриран</string>
     <string name="feeds_settings_access_revoked">Пристапот е повлечен</string>
-    <string name="feeds_settings_member_added">Членот е додаден</string>
     <string name="feeds_settings_member_removed">Членот е отстранет</string>
     <string name="feeds_settings_ai_mode_updated">AI режимот е ажуриран</string>
     <string name="feeds_settings_ai_account_updated">AI сметката е ажурирана</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">ਤੁਹਾਡੀ ਫੀਡ ਦੇ ਉੱਪਰ ਦਿਖਾਇਆ ਗਿਆ ਵਿਕਲਪਿਕ markdown ਬੈਨਰ।</string>
     <string name="feeds_clear">ਸਾਫ਼ ਕਰੋ</string>
     <string name="feeds_delete_feed">ਫੀਡ ਮਿਟਾਓ</string>
-    <string name="feeds_add_member">ਮੈਂਬਰ ਜੋੜੋ</string>
     <string name="feeds_no_members">ਕੋਈ ਮੈਂਬਰ ਨਹੀਂ</string>
     <string name="feeds_user">ਉਪਭੋਗਤਾ</string>
     <string name="feeds_access_users">ਉਪਭੋਗਤਾ</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">ਸਰੋਤ ਪੋਲ કੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="feeds_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
     <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
-    <string name="feeds_settings_member_added">ਮੈਂਬਰ ਜੋੜਿਆ ਗਿਆ</string>
     <string name="feeds_settings_member_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="feeds_settings_ai_mode_updated">AI ਮੋਡ ਅਪਡੇਟ કੀਤਾ ਗਿਆ</string>
     <string name="feeds_settings_ai_account_updated">AI ਖਾਤਾ ਅਪਡੇਟ કੀਤਾ ਗਿਆ</string>

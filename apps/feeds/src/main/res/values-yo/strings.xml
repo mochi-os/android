@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Banner markdown tí kò pọn dandan tó hàn lókè feed rẹ.</string>
     <string name="feeds_clear">Pa rẹ́</string>
     <string name="feeds_delete_feed">Pa feed rẹ́</string>
-    <string name="feeds_add_member">Fi ọmọ ẹgbẹ́ kún</string>
     <string name="feeds_no_members">Kò sí ọmọ ẹgbẹ́</string>
     <string name="feeds_user">User</string>
     <string name="feeds_access_users">Àwọn user</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Ẹ́kò ìgbòkànà ti ṣègbà…</string>
     <string name="feeds_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
     <string name="feeds_settings_access_revoked">Ati gba aṣèsẹbí</string>
-    <string name="feeds_settings_member_added">Ọmọ ẹgbẹ́ ti fi kún</string>
     <string name="feeds_settings_member_removed">Ọmọ ẹgbẹ́ ti yọ kúrò</string>
     <string name="feeds_settings_ai_mode_updated">Àpọn AI ti se imudoju</string>
     <string name="feeds_settings_ai_account_updated">Akàntí AI ti se imudoju</string>

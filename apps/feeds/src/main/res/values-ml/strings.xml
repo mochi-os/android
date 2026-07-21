@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">നിങ്ങളുടെ ഫീഡിന്റെ മുകളിൽ കാണിക്കുന്ന ഓപ്ഷണൽ markdown ബാനർ.</string>
     <string name="feeds_clear">മായ്ക്കുക</string>
     <string name="feeds_delete_feed">ഫീഡ് ഇല്ലാതാക്കുക</string>
-    <string name="feeds_add_member">അംഗത്തെ ചേർക്കുക</string>
     <string name="feeds_no_members">അംഗങ്ങളാരുമില്ല</string>
     <string name="feeds_user">ഉപയോക്താവ്</string>
     <string name="feeds_access_users">ഉപയോക്താക്കൾ</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">സ്റോതസ്സിൻറെ ഈ സമയത്തു ഫറപ്പിക്കുന്നു…</string>
     <string name="feeds_settings_access_updated">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="feeds_settings_access_revoked">ആക്സസ്സ് റദ്ദാക്കി</string>
-    <string name="feeds_settings_member_added">അംഗം ചേർത്തു</string>
     <string name="feeds_settings_member_removed">അംഗത്തെ നീക്കം ചെയ്തു</string>
     <string name="feeds_settings_ai_mode_updated">AI മോഡ് അപ്ഡേറ്റ്ක്කു</string>
     <string name="feeds_settings_ai_account_updated">AI അക്കൌണ്ඟ് അപ്ഡേറ്റ്ක്කു</string>

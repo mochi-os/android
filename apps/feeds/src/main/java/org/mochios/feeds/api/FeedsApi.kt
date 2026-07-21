@@ -539,13 +539,6 @@ interface FeedsApi {
     ): Response<ApiResponse<MemberListResponse>>
 
     @FormUrlEncoded
-    @POST("{feedId}/-/members/add")
-    suspend fun addMember(
-        @Path("feedId") feedId: String,
-        @Field("member") member: String
-    ): Response<ApiResponse<SuccessResponse>>
-
-    @FormUrlEncoded
     @POST("{feedId}/-/members/remove")
     suspend fun removeMember(
         @Path("feedId") feedId: String,

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Opcjonalny baner w formacie Markdown wyświetlany u góry Twojego kanału.</string>
     <string name="feeds_clear">Wyczyść</string>
     <string name="feeds_delete_feed">Usuń kanał</string>
-    <string name="feeds_add_member">Dodaj członka</string>
     <string name="feeds_no_members">Brak członków</string>
     <string name="feeds_user">Użytkownik</string>
     <string name="feeds_access_users">Użytkownicy</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Odpytywanie źródła…</string>
     <string name="feeds_settings_access_updated">Dostęp zaktualizowany</string>
     <string name="feeds_settings_access_revoked">Dostęp unieważniony</string>
-    <string name="feeds_settings_member_added">Dodano członka</string>
     <string name="feeds_settings_member_removed">Usunięto członka</string>
     <string name="feeds_settings_ai_mode_updated">Tryb AI zaktualizowany</string>
     <string name="feeds_settings_ai_account_updated">Konto AI zaktualizowane</string>

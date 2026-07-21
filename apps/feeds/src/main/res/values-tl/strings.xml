@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Opsyonal na markdown banner na ipinapakita sa itaas ng iyong feed.</string>
     <string name="feeds_clear">Burahin</string>
     <string name="feeds_delete_feed">I-delete ang feed</string>
-    <string name="feeds_add_member">Magdagdag ng member</string>
     <string name="feeds_no_members">Walang miyembro</string>
     <string name="feeds_user">User</string>
     <string name="feeds_access_users">Mga user</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Sinusuri ang pinagmulan…</string>
     <string name="feeds_settings_access_updated">Na-update ang access</string>
     <string name="feeds_settings_access_revoked">Binawi ang access</string>
-    <string name="feeds_settings_member_added">Naidagdag ang miyembro</string>
     <string name="feeds_settings_member_removed">Naalis ang miyembro</string>
     <string name="feeds_settings_ai_mode_updated">Na-update ang mode ng AI</string>
     <string name="feeds_settings_ai_account_updated">Na-update ang account ng AI</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Неабавязковы markdown-банер у верхняй частцы вашай стужкі.</string>
     <string name="feeds_clear">Ачысціць</string>
     <string name="feeds_delete_feed">Выдаліць стужку</string>
-    <string name="feeds_add_member">Дадаць удзельніка</string>
     <string name="feeds_no_members">Удзельнікаў няма</string>
     <string name="feeds_user">Карыстальнік</string>
     <string name="feeds_access_users">Карыстальнікі</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Апытванне крыніцы…</string>
     <string name="feeds_settings_access_updated">Доступ абноўлены</string>
     <string name="feeds_settings_access_revoked">Доступ адкліканы</string>
-    <string name="feeds_settings_member_added">Удзельнік дададзены</string>
     <string name="feeds_settings_member_removed">Удзельнік выдалены</string>
     <string name="feeds_settings_ai_mode_updated">Рэжым ШІ абноўлены</string>
     <string name="feeds_settings_ai_account_updated">Акаўнт ШІ абноўлены</string>

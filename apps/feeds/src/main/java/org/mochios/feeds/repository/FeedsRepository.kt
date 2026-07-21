@@ -835,14 +835,6 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun addMember(feedId: String, member: String) {
-        try {
-            api.addMember(feedId, member).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
-
     suspend fun removeMember(feedId: String, member: String) {
         try {
             api.removeMember(feedId, member).unwrap()

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">אָפּציאָנעלער מאַרקדאַון באַנער געוויזן אויבן אויף אײַער פֿיד.</string>
     <string name="feeds_clear">רייניקן</string>
     <string name="feeds_delete_feed">אויסמעקן פֿיד</string>
-    <string name="feeds_add_member">צולייגן מיטגליד</string>
     <string name="feeds_no_members">קיין מיטגלידער</string>
     <string name="feeds_user">באַניצער</string>
     <string name="feeds_access_users">באַניצערס</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">ווערט פערזיכטער קוועלע…</string>
     <string name="feeds_settings_access_updated">צוטריט באַנײַט</string>
     <string name="feeds_settings_access_revoked">צוגאנג צונופגענומען</string>
-    <string name="feeds_settings_member_added">מיטגליד צוגעגעבן</string>
     <string name="feeds_settings_member_removed">מיטגליד אַראָפּגענומען</string>
     <string name="feeds_settings_ai_mode_updated">AI אופנעיחטונג אפגעטעט זיך</string>
     <string name="feeds_settings_ai_account_updated">AI חשבון אפגעטעט זיך</string>

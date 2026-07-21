@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Banner na markdown na zaɓi da ake nunawa a saman feed ɗin ka.</string>
     <string name="feeds_clear">Share</string>
     <string name="feeds_delete_feed">Goge feed</string>
-    <string name="feeds_add_member">Ƙara memba</string>
     <string name="feeds_no_members">Babu membobi</string>
     <string name="feeds_user">Mai amfani</string>
     <string name="feeds_access_users">Masu amfani</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Ana bincike majiyar…</string>
     <string name="feeds_settings_access_updated">An sabunta damar shiga</string>
     <string name="feeds_settings_access_revoked">An hana shiga</string>
-    <string name="feeds_settings_member_added">An ƙara memba</string>
     <string name="feeds_settings_member_removed">An cire memba</string>
     <string name="feeds_settings_ai_mode_updated">An sabunta yanayin AI</string>
     <string name="feeds_settings_ai_account_updated">An sabunta asusun AI</string>

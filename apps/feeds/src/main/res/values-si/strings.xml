@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">ඔබේ පෝෂණයේ ඉහළින් පෙන්වන විකල්ප markdown බැනරයක්.</string>
     <string name="feeds_clear">හිස් කරන්න</string>
     <string name="feeds_delete_feed">පෝෂණය මකන්න</string>
-    <string name="feeds_add_member">සාමාජිකයෙකු එක් කරන්න</string>
     <string name="feeds_no_members">සාමාජිකයින් නැත</string>
     <string name="feeds_user">පරිශීලකයා</string>
     <string name="feeds_access_users">පරිශීලකයන්</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">මුලින෍ජරය බජැර ඪය්ඩෙොන අච්​ජිරහය ගත්ති ​ ​ ​ ​…</string>
     <string name="feeds_settings_access_updated">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
     <string name="feeds_settings_access_revoked">ප්‍රවේශය අයිඪ ගත්ති</string>
-    <string name="feeds_settings_member_added">සාමාජිකයා එක් කරන ලදී</string>
     <string name="feeds_settings_member_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
     <string name="feeds_settings_ai_mode_updated">AI විදීඇගඅවහ ජොෝව නවඨවා ගත්ති</string>
     <string name="feeds_settings_ai_account_updated">AI ගිණුම ජොෝව නවඨවා ගත්ති</string>

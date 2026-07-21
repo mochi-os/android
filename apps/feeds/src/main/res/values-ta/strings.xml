@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">உங்கள் ஃபீட்டின் மேற்பகுதியில் காட்டப்படும் விருப்ப markdown பேனர்.</string>
     <string name="feeds_clear">அழி</string>
     <string name="feeds_delete_feed">ஃபீட்டை நீக்கு</string>
-    <string name="feeds_add_member">உறுப்பினர் சேர்</string>
     <string name="feeds_no_members">உறுப்பினர்கள் இல்லை</string>
     <string name="feeds_user">பயனர்</string>
     <string name="feeds_access_users">பயனர்கள்</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">மூலம் நூறப்ப்படுகிறது…</string>
     <string name="feeds_settings_access_updated">அணுகல் புதுப்பிக்கப்பட்டது</string>
     <string name="feeds_settings_access_revoked">அணுகல் ரதுச்சையை மீண்டது</string>
-    <string name="feeds_settings_member_added">உறுப்பினர் சேர்க்கப்பட்டார்</string>
     <string name="feeds_settings_member_removed">உறுப்பினர் அகற்றப்பட்டார்</string>
     <string name="feeds_settings_ai_mode_updated">AI பளமீது முடிவுசீல்கீலுமு</string>
     <string name="feeds_settings_ai_account_updated">AI கணக்கு முடிவுசீல்கீலுமு</string>

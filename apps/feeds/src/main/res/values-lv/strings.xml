@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Pēc izvēles markdown baneris, kas tiek rādīts plūsmas augšdaļā.</string>
     <string name="feeds_clear">Notīrīt</string>
     <string name="feeds_delete_feed">Dzēst plūsmu</string>
-    <string name="feeds_add_member">Pievienot dalībnieku</string>
     <string name="feeds_no_members">Nav dalībnieku</string>
     <string name="feeds_user">Lietotājs</string>
     <string name="feeds_access_users">Lietotāji</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Notiek avota aptājašana…</string>
     <string name="feeds_settings_access_updated">Piekļuve atjaunināta</string>
     <string name="feeds_settings_access_revoked">Piekļuve atsaukta</string>
-    <string name="feeds_settings_member_added">Dalībnieks pievienots</string>
     <string name="feeds_settings_member_removed">Dalībnieks noņemts</string>
     <string name="feeds_settings_ai_mode_updated">AI režīms atjaunināts</string>
     <string name="feeds_settings_ai_account_updated">AI konts atjaunināts</string>

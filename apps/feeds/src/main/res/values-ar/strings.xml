@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">لافتة Markdown اختيارية تظهر في أعلى feed.</string>
     <string name="feeds_clear">مسح</string>
     <string name="feeds_delete_feed">حذف التغذية</string>
-    <string name="feeds_add_member">إضافة عضو</string>
     <string name="feeds_no_members">لا يوجد أعضاء</string>
     <string name="feeds_user">المستخدم</string>
     <string name="feeds_access_users">المستخدمون</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">جار استطلاع المصدر…</string>
     <string name="feeds_settings_access_updated">تم تحديث الوصول</string>
     <string name="feeds_settings_access_revoked">تم إلغاء الوصول</string>
-    <string name="feeds_settings_member_added">تمت إضافة العضو</string>
     <string name="feeds_settings_member_removed">تمت إزالة العضو</string>
     <string name="feeds_settings_ai_mode_updated">تم تحديث وضع الذكاء الاصطناعي</string>
     <string name="feeds_settings_ai_account_updated">تم تحديث حساب الذكاء الاصطناعي</string>

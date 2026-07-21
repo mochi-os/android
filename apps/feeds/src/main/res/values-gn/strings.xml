@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Markdown banner opcional ojechauka ne feed yvategua.</string>
     <string name="feeds_clear">Embopotĩ</string>
     <string name="feeds_delete_feed">Hundi feed</string>
-    <string name="feeds_add_member">Embojuaju membro</string>
     <string name="feeds_no_members">Ndaipóri miembros</string>
     <string name="feeds_user">Mboapurevahára</string>
     <string name="feeds_access_users">Mboapurevaharakuéra</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Oñemoporandu opaite mba’e…</string>
     <string name="feeds_settings_access_updated">Jeike oñembojeguáma</string>
     <string name="feeds_settings_access_revoked">Jeike oje’ói</string>
-    <string name="feeds_settings_member_added">Oñembojuaju member</string>
     <string name="feeds_settings_member_removed">Oñembogue member</string>
     <string name="feeds_settings_ai_mode_updated">AI mba’e oje’oguerá</string>
     <string name="feeds_settings_ai_account_updated">AI mba’e renohe oje’oguerá</string>

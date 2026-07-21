@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Volitelný markdown banner zobrazený v horní části vašeho kanálu.</string>
     <string name="feeds_clear">Vymazat</string>
     <string name="feeds_delete_feed">Smazat kanál</string>
-    <string name="feeds_add_member">Přidat člena</string>
     <string name="feeds_no_members">Žádní členové</string>
     <string name="feeds_user">Uživatel</string>
     <string name="feeds_access_users">Uživatelé</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Dotazování zdroje…</string>
     <string name="feeds_settings_access_updated">Přístup aktualizován</string>
     <string name="feeds_settings_access_revoked">Přístup odvolán</string>
-    <string name="feeds_settings_member_added">Člen přidán</string>
     <string name="feeds_settings_member_removed">Člen odebrán</string>
     <string name="feeds_settings_ai_mode_updated">Režim AI aktualizován</string>
     <string name="feeds_settings_ai_account_updated">Účet AI aktualizován</string>

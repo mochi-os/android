@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Opcional markdown banner feed patxana uñacht\'ayata.</string>
     <string name="feeds_clear">Q\'umachaña</string>
     <string name="feeds_delete_feed">Feed chhaqtayaña</string>
-    <string name="feeds_add_member">Miembro yapxataña</string>
     <string name="feeds_no_members">Jan miembronaka</string>
     <string name="feeds_user">Apnaqiri banata</string>
     <string name="feeds_access_users">Aka tamar mantapki uka apnaqirinakampi tamanakampi</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Pugutaq jutkata…</string>
     <string name="feeds_settings_access_updated">Mantañ machaqachata</string>
     <string name="feeds_settings_access_revoked">Mantanas jark’aqata</string>
-    <string name="feeds_settings_member_added">Integrante yapxatatawa</string>
     <string name="feeds_settings_member_removed">Integrante apsutawa</string>
     <string name="feeds_settings_ai_mode_updated">AI mantani machaqach’ata</string>
     <string name="feeds_settings_ai_account_updated">AI cuentap machaqach’ata</string>

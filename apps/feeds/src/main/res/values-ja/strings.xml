@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">フィード上部に表示するMarkdownバナー（任意）。</string>
     <string name="feeds_clear">クリア</string>
     <string name="feeds_delete_feed">フィードを削除</string>
-    <string name="feeds_add_member">メンバーを追加</string>
     <string name="feeds_no_members">メンバーがいません</string>
     <string name="feeds_user">ユーザー</string>
     <string name="feeds_access_users">ユーザー</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">ソースをポリング中…</string>
     <string name="feeds_settings_access_updated">アクセスを更新しました</string>
     <string name="feeds_settings_access_revoked">アクセスを取り消しました</string>
-    <string name="feeds_settings_member_added">メンバーを追加しました</string>
     <string name="feeds_settings_member_removed">メンバーを削除しました</string>
     <string name="feeds_settings_ai_mode_updated">AIモードを更新しました</string>
     <string name="feeds_settings_ai_account_updated">AIアカウントを更新しました</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Bàner Markdown opcional que es mostra a la part superior del canal.</string>
     <string name="feeds_clear">Esborra</string>
     <string name="feeds_delete_feed">Suprimeix el canal</string>
-    <string name="feeds_add_member">Afegeix un membre</string>
     <string name="feeds_no_members">Sense membres</string>
     <string name="feeds_user">Usuari</string>
     <string name="feeds_access_users">Usuaris</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Sondeig de la font…</string>
     <string name="feeds_settings_access_updated">Accés actualitzat</string>
     <string name="feeds_settings_access_revoked">Accés revocat</string>
-    <string name="feeds_settings_member_added">Membre afegit</string>
     <string name="feeds_settings_member_removed">Membre retirat</string>
     <string name="feeds_settings_ai_mode_updated">Mode IA actualitzat</string>
     <string name="feeds_settings_ai_account_updated">Compte IA actualitzat</string>

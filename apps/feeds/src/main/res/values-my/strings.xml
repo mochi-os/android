@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">သင့် feed ထိပ်တွင် ပြသမည့် ရွေးချယ်နိုင်သော markdown banner။</string>
     <string name="feeds_clear">ရှင်းမည်</string>
     <string name="feeds_delete_feed">feed ဖျက်မည်</string>
-    <string name="feeds_add_member">အဖွဲ့ဝင် ထည့်မည်</string>
     <string name="feeds_no_members">အဖွဲ့ဝင်များ မရှိပါ</string>
     <string name="feeds_user">သုံးစွဲသူ</string>
     <string name="feeds_access_users">သုံးစွဲသူများ</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">သလ်လာမှုပ၊့ နှင့် ဆက်သွယ်နေပါသည်…</string>
     <string name="feeds_settings_access_updated">ဝင်ရောက်ခွင့် ပြောင်းပြီး</string>
     <string name="feeds_settings_access_revoked">လာရောက်ခွင့် ပယ်သထားပါပြီ</string>
-    <string name="feeds_settings_member_added">အဖွဲ့ဝင် ထည့်ပြီးပါပြီ</string>
     <string name="feeds_settings_member_removed">အဖွဲ့ဝင် ဖယ်ရှားပြီးပါပြီ</string>
     <string name="feeds_settings_ai_mode_updated">AI မုဒ်ကို မှန်ထားနေနေသည်</string>
     <string name="feeds_settings_ai_account_updated">AI အကောင့်ကို မှန်ထားနေနေသည်</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Valfrjáls markdown-borði sem birtist efst á straumnum þínum.</string>
     <string name="feeds_clear">Hreinsa</string>
     <string name="feeds_delete_feed">Eyða streymi</string>
-    <string name="feeds_add_member">Bæta við meðlim</string>
     <string name="feeds_no_members">Engir meðlimir</string>
     <string name="feeds_user">Notandi</string>
     <string name="feeds_access_users">Notendur</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Sækir gögn úr veitu…</string>
     <string name="feeds_settings_access_updated">Aðgangur uppfærður</string>
     <string name="feeds_settings_access_revoked">Aðgangur afturkallaður</string>
-    <string name="feeds_settings_member_added">Meðlimi bætt við</string>
     <string name="feeds_settings_member_removed">Meðlimur fjarlægður</string>
     <string name="feeds_settings_ai_mode_updated">Gervigreindarstilling uppfærð</string>
     <string name="feeds_settings_ai_account_updated">Gervigreindarreikningur uppfærður</string>

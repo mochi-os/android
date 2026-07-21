@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Valinnainen markdown-banneri, joka näytetään syötteesi yläosassa.</string>
     <string name="feeds_clear">Tyhjennä</string>
     <string name="feeds_delete_feed">Poista syöte</string>
-    <string name="feeds_add_member">Lisää jäsen</string>
     <string name="feeds_no_members">Ei jäseniä</string>
     <string name="feeds_user">Käyttäjä</string>
     <string name="feeds_access_users">Käyttäjät</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Lähdettä noudetaan…</string>
     <string name="feeds_settings_access_updated">Käyttöoikeus päivitetty</string>
     <string name="feeds_settings_access_revoked">Käyttöoikeus peruutettu</string>
-    <string name="feeds_settings_member_added">Jäsen lisätty</string>
     <string name="feeds_settings_member_removed">Jäsen poistettu</string>
     <string name="feeds_settings_ai_mode_updated">Tekoälytila päivitetty</string>
     <string name="feeds_settings_ai_account_updated">Tekoälytili päivitetty</string>

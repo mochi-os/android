@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Optionales Markdown-Banner, das oben in Ihrem Feed angezeigt wird.</string>
     <string name="feeds_clear">Leeren</string>
     <string name="feeds_delete_feed">Feed löschen</string>
-    <string name="feeds_add_member">Mitglied hinzufügen</string>
     <string name="feeds_no_members">Keine Mitglieder</string>
     <string name="feeds_user">Benutzer</string>
     <string name="feeds_access_users">Benutzer</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Quelle wird abgerufen…</string>
     <string name="feeds_settings_access_updated">Zugriff aktualisiert</string>
     <string name="feeds_settings_access_revoked">Zugriff widerrufen</string>
-    <string name="feeds_settings_member_added">Mitglied hinzugefügt</string>
     <string name="feeds_settings_member_removed">Mitglied entfernt</string>
     <string name="feeds_settings_ai_mode_updated">KI-Modus aktualisiert</string>
     <string name="feeds_settings_ai_account_updated">KI-Konto aktualisiert</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Opcionalni markdown baner prikazan na vrhu vašeg feeda.</string>
     <string name="feeds_clear">Očisti</string>
     <string name="feeds_delete_feed">Obriši feed</string>
-    <string name="feeds_add_member">Dodaj člana</string>
     <string name="feeds_no_members">Nema članova</string>
     <string name="feeds_user">Korisnik</string>
     <string name="feeds_access_users">Korisnici</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Anketiranje izvora…</string>
     <string name="feeds_settings_access_updated">Pristup ažuriran</string>
     <string name="feeds_settings_access_revoked">Pristup opozvan</string>
-    <string name="feeds_settings_member_added">Član dodan</string>
     <string name="feeds_settings_member_removed">Član uklonjen</string>
     <string name="feeds_settings_ai_mode_updated">AI režim ažuriran</string>
     <string name="feeds_settings_ai_account_updated">AI nalog ažuriran</string>

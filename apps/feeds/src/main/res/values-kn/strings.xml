@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">ನಿಮ್ಮ ಫೀಡ್‌ನ ಮೇಲ್ಭಾಗದಲ್ಲಿ ತೋರಿಸಲಾಗುವ ಐಚ್ಛಿಕ markdown ಬ್ಯಾನರ್.</string>
     <string name="feeds_clear">ತೆರವುಗೊಳಿಸಿ</string>
     <string name="feeds_delete_feed">ಫೀಡ್ ಅಳಿಸಿ</string>
-    <string name="feeds_add_member">ಸದಸ್ಯರನ್ನು ಸೇರಿಸಿ</string>
     <string name="feeds_no_members">ಯಾವುದೇ ಸದಸ್ಯರಿಲ್ಲ</string>
     <string name="feeds_user">ಬಳಕೆದಾರ</string>
     <string name="feeds_access_users">ಬಳಕೆದಾರರು</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">ಮೂಲವನ್ನು ವಿಚಾರವಾಗುತ್ತಿದೆ…</string>
     <string name="feeds_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_settings_member_added">ಸದಸ್ಯ ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_member_removed">ಸದಸ್ಯ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="feeds_settings_ai_mode_updated">AI ವಿಧಾನವನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_ai_account_updated">AI ಖಾತೆಯನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>

@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Valgfrit markdown-banner vist øverst på dit feed.</string>
     <string name="feeds_clear">Ryd</string>
     <string name="feeds_delete_feed">Slet feed</string>
-    <string name="feeds_add_member">Tilføj medlem</string>
     <string name="feeds_no_members">Ingen medlemmer</string>
     <string name="feeds_user">Bruger</string>
     <string name="feeds_access_users">Brugere</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Henter fra kilde…</string>
     <string name="feeds_settings_access_updated">Adgang opdateret</string>
     <string name="feeds_settings_access_revoked">Adgang tilbagekaldt</string>
-    <string name="feeds_settings_member_added">Medlem tilføjet</string>
     <string name="feeds_settings_member_removed">Medlem fjernet</string>
     <string name="feeds_settings_ai_mode_updated">AI-tilstand opdateret</string>
     <string name="feeds_settings_ai_account_updated">AI-konto opdateret</string>

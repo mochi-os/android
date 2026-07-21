@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">اختیاري مارکډاون بینر چې ستاسو د فیډ په سر کې ښودل کیږي.</string>
     <string name="feeds_clear">پاک کړئ</string>
     <string name="feeds_delete_feed">فیډ ړنګ کړئ</string>
-    <string name="feeds_add_member">غړی اضافه کړئ</string>
     <string name="feeds_no_members">هیڅ غړي نشته</string>
     <string name="feeds_user">کاروونکی</string>
     <string name="feeds_access_users">کاروونکي</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">د سرچینې پوښتنه …</string>
     <string name="feeds_settings_access_updated">لاسرسی نوی شو</string>
     <string name="feeds_settings_access_revoked">لاسرسی پرېګدل و</string>
-    <string name="feeds_settings_member_added">غړی اضافه شو</string>
     <string name="feeds_settings_member_removed">غړی لیرې شو</string>
     <string name="feeds_settings_ai_mode_updated">د AI حالت تازه شو</string>
     <string name="feeds_settings_ai_account_updated">د AI حساب تازه شو</string>

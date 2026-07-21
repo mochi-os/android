@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Baner markdown ddewisol a ddangosir ar frig eich porthwr.</string>
     <string name="feeds_clear">Clirio</string>
     <string name="feeds_delete_feed">Dileu porthiant</string>
-    <string name="feeds_add_member">Ychwanegu aelod</string>
     <string name="feeds_no_members">Dim aelodau</string>
     <string name="feeds_user">Defnyddiwr</string>
     <string name="feeds_access_users">Defnyddwyr</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Wrthi’n holi’r ffynhonnell…</string>
     <string name="feeds_settings_access_updated">Mynediad wedi\'i ddiweddaru</string>
     <string name="feeds_settings_access_revoked">Mynediad wedi’i ddirymu</string>
-    <string name="feeds_settings_member_added">Aelod wedi\'i ychwanegu</string>
     <string name="feeds_settings_member_removed">Aelod wedi\'i ddileu</string>
     <string name="feeds_settings_ai_mode_updated">Modd AI wedi’i ddiweddaru</string>
     <string name="feeds_settings_ai_account_updated">Cyfrif AI wedi’i ddiweddaru</string>

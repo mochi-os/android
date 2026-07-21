@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Feedniyki patapi rikuriq munasqakaq markdown banner.</string>
     <string name="feeds_clear">Pichay</string>
     <string name="feeds_delete_feed">Feed wischuy</string>
-    <string name="feeds_add_member">Yanapaq yapay</string>
     <string name="feeds_no_members">Mana miembrokuna</string>
     <string name="feeds_user">Apaykachaq</string>
     <string name="feeds_access_users">Apaykachaqkuna</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Pukyuta tapurispa…</string>
     <string name="feeds_settings_access_updated">Yaykuy musuqchasqa</string>
     <string name="feeds_settings_access_revoked">Yaykuna anchurisqa</string>
-    <string name="feeds_settings_member_added">Miembro yapasqa</string>
     <string name="feeds_settings_member_removed">Miembro pichasqa</string>
     <string name="feeds_settings_ai_mode_updated">AI modo musuqyachisqa</string>
     <string name="feeds_settings_ai_account_updated">AI cuenta musuqyachisqa</string>

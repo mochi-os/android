@@ -54,7 +54,6 @@
     <string name="feeds_banner_description">Meirge markdown roghnach a thaispeántar ag barr d\'fhotha.</string>
     <string name="feeds_clear">Glan</string>
     <string name="feeds_delete_feed">Scrios fotha</string>
-    <string name="feeds_add_member">Cuir ball leis</string>
     <string name="feeds_no_members">Níl aon bhall</string>
     <string name="feeds_user">Úsáideoir</string>
     <string name="feeds_access_users">Úsáideoirí</string>
@@ -90,7 +89,6 @@
     <string name="feeds_settings_source_polling">Foinse á votáil…</string>
     <string name="feeds_settings_access_updated">Rochtain nuashonraithe</string>
     <string name="feeds_settings_access_revoked">Cuireadh deireadh leis an rochtain</string>
-    <string name="feeds_settings_member_added">Ball curtha leis</string>
     <string name="feeds_settings_member_removed">Ball bainte</string>
     <string name="feeds_settings_ai_mode_updated">Modh IS nuashonraithe</string>
     <string name="feeds_settings_ai_account_updated">Cuntas IS nuashonraithe</string>
