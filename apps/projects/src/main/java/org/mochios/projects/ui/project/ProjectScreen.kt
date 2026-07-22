@@ -5,11 +5,14 @@
 
 package org.mochios.projects.ui.project
 
+import android.content.Intent
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,7 +21,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
@@ -26,12 +33,15 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
+import androidx.compose.material.icons.filled.HomeMax
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.filled.Visibility
@@ -49,7 +59,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Tab
@@ -67,25 +80,38 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.core.content.pm.ShortcutInfoCompat
+import androidx.core.content.pm.ShortcutManagerCompat
+import androidx.core.graphics.drawable.IconCompat
+import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.projects.R
+import org.mochios.projects.model.Project
 import org.mochios.projects.ui.board.BoardView
 import org.mochios.projects.ui.`object`.ObjectDetailSheet
+import org.mochios.projects.ui.projectlist.CreateProjectDialog
 import org.mochios.projects.ui.projectlist.ProjectListViewModel
 import org.mochios.projects.ui.router.PROJECTS_FEATURE
 import org.mochios.projects.ui.tree.TreeView
@@ -96,6 +122,7 @@ import org.mochios.android.R as MochiR
 fun ProjectScreen(
     projectId: String,
     onSelectProject: (String) -> Unit,
+    onSelectAll: () -> Unit,
     onFindProjects: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
@@ -129,14 +156,23 @@ fun ProjectScreen(
             )
         }
     }
+    val drawerAll = FeatureDrawerItem(
+        id = LastViewedStore.ALL,
+        title = stringResource(R.string.projects_all_projects),
+        icon = Icons.Default.FolderOpen,
+    )
 
     FeatureListDrawer(
         drawerState = drawerState,
         items = drawerItems,
+        allItem = drawerAll,
         selectedId = projectId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            if (item.id != projectId) onSelectProject(item.id)
+            when {
+                item.id == LastViewedStore.ALL -> onSelectAll()
+                item.id != projectId -> onSelectProject(item.id)
+            }
         },
         actions = {
             DrawerActionRow(
@@ -145,6 +181,14 @@ fun ProjectScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindProjects()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.projects_list_create),
+                icon = Icons.Default.Add,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    listViewModel.showCreateDialog()
                 },
             )
             DrawerActionRow(
@@ -165,24 +209,48 @@ fun ProjectScreen(
             )
         },
     ) {
-        if (projectId.isEmpty()) {
-            ProjectDrawerPlaceholder(
-                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
-            )
-        } else {
-            ProjectContent(
-                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
-                onSettings = onSettings,
-                onDesign = onDesign,
-                onViewDiff = onViewDiff,
-                onOpenNotifications = onOpenNotifications,
-                initialObjectId = initialObjectId,
-            )
+        when {
+            projectId == LastViewedStore.ALL -> {
+                AllProjectsContent(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                    onProjectClick = onSelectProject,
+                    onOpenNotifications = onOpenNotifications,
+                    viewModel = listViewModel,
+                )
+            }
+
+            projectId.isEmpty() -> {
+                ProjectDrawerPlaceholder(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                )
+            }
+
+            else -> {
+                ProjectContent(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                    onSettings = onSettings,
+                    onDesign = onDesign,
+                    onViewDiff = onViewDiff,
+                    onOpenNotifications = onOpenNotifications,
+                    initialObjectId = initialObjectId,
+                )
+            }
         }
     }
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
+    }
+
+    if (listUiState.showCreateDialog) {
+        CreateProjectDialog(
+            templates = listUiState.templates,
+            isCreating = listUiState.isCreating,
+            onDismiss = { listViewModel.hideCreateDialog() },
+            onCreate = { name, description, prefix, privacy, template ->
+                listViewModel.createProject(name, description, prefix, privacy, template)
+            }
+        )
     }
 }
 
@@ -210,6 +278,283 @@ private fun ProjectDrawerPlaceholder(onOpenDrawer: () -> Unit) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun AllProjectsContent(
+    onOpenDrawer: () -> Unit,
+    onProjectClick: (String) -> Unit,
+    onOpenNotifications: () -> Unit,
+    viewModel: ProjectListViewModel,
+) {
+    val uiState by viewModel.uiState.collectAsState()
+
+    Scaffold(
+        topBar = {
+            if (uiState.showSearch) {
+                ProjectSearchBar(
+                    query = uiState.searchQuery,
+                    onQueryChange = viewModel::updateSearchQuery,
+                    onClose = { viewModel.toggleSearch() }
+                )
+            } else {
+                TopAppBar(
+                    title = { Text(stringResource(R.string.projects_all_projects)) },
+                    navigationIcon = {
+                        IconButton(onClick = onOpenDrawer) {
+                            Icon(
+                                Icons.Default.Menu,
+                                contentDescription = stringResource(R.string.projects_list_title)
+                            )
+                        }
+                    },
+                    actions = {
+                        NotificationBell(onClick = onOpenNotifications)
+                        IconButton(onClick = { viewModel.toggleSearch() }) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.projects_list_search)
+                            )
+                        }
+                    }
+                )
+            }
+        }
+    ) { padding ->
+        PullToRefreshBox(
+            isRefreshing = uiState.isRefreshing,
+            onRefresh = { viewModel.refresh() },
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+        ) {
+            Column(modifier = Modifier.fillMaxSize()) {
+                when {
+                    uiState.isLoading && uiState.projects.isEmpty() -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            CircularProgressIndicator()
+                        }
+                    }
+
+                    uiState.error != null && uiState.projects.isEmpty() -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            Text(
+                                text = uiState.error!!.userMessage(),
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.error
+                            )
+                        }
+                    }
+
+                    else -> {
+                        val filteredProjects = viewModel.filteredProjects()
+                        if (filteredProjects.isEmpty()) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(top = 64.dp),
+                                contentAlignment = Alignment.TopCenter
+                            ) {
+                                Text(
+                                    text = if (uiState.searchQuery.isNotBlank()) {
+                                        stringResource(R.string.projects_list_no_matching)
+                                    } else {
+                                        stringResource(R.string.projects_list_empty)
+                                    },
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        } else {
+                            LazyColumn(
+                                modifier = Modifier.fillMaxSize(),
+                                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
+                                verticalArrangement = Arrangement.spacedBy(12.dp)
+                            ) {
+                                items(filteredProjects, key = { it.fingerprint.ifEmpty { it.id } }) { project ->
+                                    ProjectRow(
+                                        project = project,
+                                        onClick = {
+                                            val id = project.fingerprint.ifEmpty { project.id }
+                                            onProjectClick(id)
+                                        },
+                                        onUnsubscribe = { viewModel.unsubscribe(project.id) }
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ProjectSearchBar(
+    query: String,
+    onQueryChange: (String) -> Unit,
+    onClose: () -> Unit,
+) {
+    val focusRequester = remember { FocusRequester() }
+    LaunchedEffect(Unit) {
+        focusRequester.requestFocus()
+    }
+    TopAppBar(
+        navigationIcon = {
+            IconButton(onClick = onClose) {
+                Icon(
+                    Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = stringResource(MochiR.string.common_back)
+                )
+            }
+        },
+        title = {
+            TextField(
+                value = query,
+                onValueChange = onQueryChange,
+                placeholder = { Text(stringResource(R.string.projects_list_search_placeholder)) },
+                singleLine = true,
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                trailingIcon = {
+                    if (query.isNotEmpty()) {
+                        IconButton(onClick = { onQueryChange("") }) {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = stringResource(MochiR.string.common_close)
+                            )
+                        }
+                    }
+                },
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    disabledContainerColor = Color.Transparent,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(focusRequester)
+            )
+        }
+    )
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun ProjectRow(
+    project: Project,
+    onClick: () -> Unit,
+    onUnsubscribe: () -> Unit
+) {
+    val context = LocalContext.current
+    var showMenu by remember { mutableStateOf(false) }
+    var showUnsubscribeConfirm by remember { mutableStateOf(false) }
+    val projectId = project.fingerprint.ifEmpty { project.id }
+    val canUnsubscribe = project.owner != 1
+    val unsubscribeTitle = stringResource(R.string.projects_settings_unsubscribe_title)
+    val unsubscribeMessage = stringResource(R.string.projects_settings_unsubscribe_message)
+    val unsubscribeLabel = stringResource(R.string.projects_settings_unsubscribe)
+    val cancelLabel = stringResource(MochiR.string.common_cancel)
+    val description = project.description.takeIf { it.isNotBlank() }
+
+    OutlinedCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
+    ) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            EntityIconCircle(
+                seed = projectId.ifEmpty { project.id },
+                icon = Icons.Default.Folder
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = project.name,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                if (description != null) {
+                    Text(
+                        text = description,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+            Box {
+                IconButton(onClick = { showMenu = true }) {
+                    Icon(
+                        Icons.Default.MoreHoriz,
+                        contentDescription = stringResource(MochiR.string.common_more_options)
+                    )
+                }
+                DropdownMenu(
+                    expanded = showMenu,
+                    onDismissRequest = { showMenu = false }
+                ) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.projects_list_add_to_home)) },
+                        leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
+                        onClick = {
+                            showMenu = false
+                            // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                            val intent = Intent(Intent.ACTION_VIEW, "mochi:/$projectId".toUri()).apply {
+                                setPackage(context.packageName)
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                                    Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                putExtra("app", "projects")
+                            }
+                            val shortcut = ShortcutInfoCompat.Builder(context, "project_$projectId")
+                                .setShortLabel(project.name)
+                                .setLongLabel(project.name)
+                                .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_projects))
+                                .setIntent(intent)
+                                .build()
+                            ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
+                        }
+                    )
+                    if (canUnsubscribe) {
+                        DropdownMenuItem(
+                            text = { Text(unsubscribeLabel) },
+                            leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
+                            onClick = {
+                                showMenu = false
+                                showUnsubscribeConfirm = true
+                            }
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    if (showUnsubscribeConfirm) {
+        ConfirmDialog(
+            title = unsubscribeTitle,
+            message = unsubscribeMessage,
+            confirmLabel = unsubscribeLabel,
+            dismissLabel = cancelLabel,
+            isDestructive = true,
+            onConfirm = {
+                showUnsubscribeConfirm = false
+                onUnsubscribe()
+            },
+            onDismiss = { showUnsubscribeConfirm = false }
+        )
     }
 }
 

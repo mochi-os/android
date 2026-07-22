@@ -14,6 +14,7 @@ import androidx.navigation.navDeepLink
 import org.mochios.projects.ui.design.DesignScreen
 import org.mochios.projects.ui.find.FindProjectsScreen
 import org.mochios.projects.ui.`object`.DiffViewerScreen
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.projects.ui.project.ProjectScreen
 import org.mochios.projects.ui.router.ProjectsRouter
 import org.mochios.projects.ui.settings.ProjectSettingsScreen
@@ -70,6 +71,12 @@ fun NavGraphBuilder.projectsNavGraph(
                     launchSingleTop = true
                 }
             },
+            onSelectAll = {
+                navController.navigate(ProjectsApp.project(LastViewedStore.ALL)) {
+                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
             onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
             onSettings = { id -> navController.navigate(ProjectsApp.projectSettings(id)) },
             onDesign = { id -> navController.navigate(ProjectsApp.projectDesign(id)) },
@@ -96,6 +103,12 @@ fun NavGraphBuilder.projectsNavGraph(
             projectId = projectId,
             onSelectProject = { id ->
                 navController.navigate(ProjectsApp.project(id)) {
+                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
+            onSelectAll = {
+                navController.navigate(ProjectsApp.project(LastViewedStore.ALL)) {
                     popUpTo(ProjectsApp.PROJECT) { inclusive = true }
                     launchSingleTop = true
                 }
