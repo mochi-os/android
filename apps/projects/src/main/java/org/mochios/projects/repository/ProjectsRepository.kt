@@ -82,7 +82,7 @@ class ProjectsRepository @Inject constructor(
         api.getTemplates().unwrap().templates
 
     suspend fun searchDirectory(query: String): List<Project> =
-        api.searchDirectory(query).unwrap().projects
+        api.searchDirectory(query).unwrap()
 
     suspend fun getRecommendations(): List<Project> =
         api.getRecommendations().unwrap().projects

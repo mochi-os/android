@@ -119,7 +119,7 @@ interface ProjectsApi {
     suspend fun getTemplates(): Response<ApiResponse<TemplateListResponse>>
 
     @GET("-/directory/search")
-    suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<ProjectListResponse>>
+    suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<List<Project>>>
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<ProjectListResponse>>
