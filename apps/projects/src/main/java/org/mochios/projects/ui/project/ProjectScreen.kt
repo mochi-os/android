@@ -247,8 +247,8 @@ fun ProjectScreen(
             templates = listUiState.templates,
             isCreating = listUiState.isCreating,
             onDismiss = { listViewModel.hideCreateDialog() },
-            onCreate = { name, description, prefix, privacy, template ->
-                listViewModel.createProject(name, description, prefix, privacy, template)
+            onCreate = { name, prefix, privacy, template, backupJson ->
+                listViewModel.createProject(name, prefix, privacy, template, backupJson)
             }
         )
     }

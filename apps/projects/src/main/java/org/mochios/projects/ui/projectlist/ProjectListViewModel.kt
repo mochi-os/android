@@ -111,17 +111,27 @@ class ProjectListViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(showCreateDialog = false)
     }
 
-    fun createProject(name: String, description: String, prefix: String, privacy: String, template: String?) {
+    fun createProject(
+        name: String,
+        prefix: String,
+        privacy: String,
+        template: String?,
+        backupJson: String?
+    ) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true)
             try {
-                repository.createProject(
+                val project = repository.createProject(
                     name = name,
-                    description = description.ifBlank { null },
+                    description = null,
                     prefix = prefix.ifBlank { null },
                     privacy = privacy,
                     template = template
                 )
+                if (!backupJson.isNullOrBlank()) {
+                    val projectId = project.fingerprint.ifEmpty { project.id }
+                    repository.importDesign(projectId, data = backupJson)
+                }
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
                     showCreateDialog = false
