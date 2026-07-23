@@ -37,7 +37,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -58,6 +57,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R
 import org.mochios.android.i18n.ThemeInfo
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.settings.ui.preferences.PrefRow
 import org.mochios.settings.ui.preferences.PrefSpec
 
@@ -245,7 +245,7 @@ fun DisplayScreen(
 
         if (showThemeSheet) {
             val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-            ModalBottomSheet(
+            MochiBottomSheet(
                 onDismissRequest = { showThemeSheet = false },
                 sheetState = sheetState,
             ) {

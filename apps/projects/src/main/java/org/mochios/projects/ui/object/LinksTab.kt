@@ -34,7 +34,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -50,6 +49,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.projects.R
 import org.mochios.projects.model.Link
 import org.mochios.projects.model.ProjectDetails
@@ -306,7 +306,7 @@ private fun AddLinkSheet(
         }
         .take(20)
 
-    ModalBottomSheet(
+    MochiBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState
     ) {

@@ -67,7 +67,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -114,6 +113,7 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -1281,7 +1281,7 @@ private fun ChatForwardSheet(
         if (filter.isBlank()) friends
         else friends.filter { it.name.contains(filter.trim(), ignoreCase = true) }
     }
-    ModalBottomSheet(onDismissRequest = onDismiss) {
+    MochiBottomSheet(onDismissRequest = onDismiss) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()

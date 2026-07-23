@@ -24,7 +24,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -36,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.project.ProjectViewModel
@@ -66,7 +66,7 @@ fun MoveObjectSheet(
         .sortedBy { it.rank }
     val prefix = uiState.projectDetails?.project?.prefix ?: ""
 
-    ModalBottomSheet(
+    MochiBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState
     ) {
