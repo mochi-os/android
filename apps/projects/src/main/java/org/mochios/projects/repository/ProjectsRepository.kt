@@ -99,7 +99,7 @@ class ProjectsRepository @Inject constructor(
     }
 
     suspend fun searchUsers(query: String): List<Person> =
-        api.searchUsers(query).unwrap().users
+        api.searchUsers(query).unwrap().results
 
     suspend fun getGroups(): List<Group> =
         api.getGroups().unwrap().groups

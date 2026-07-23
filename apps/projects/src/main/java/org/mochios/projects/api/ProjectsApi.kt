@@ -93,7 +93,7 @@ data class MergeCheckResponse(
     val behind: Int = 0
 )
 data class SuccessResponse(val success: Boolean = false)
-data class UserSearchResponse(val users: List<Person> = emptyList())
+data class UserSearchResponse(val results: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
 data class PreferenceResponse(@SerializedName("style") val preference: String = "unified")
