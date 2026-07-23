@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Du spillede %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spillede %2$s</string>
 
+    <string name="words_detail_delete_title">Slet parti?</string>
+    <string name="words_detail_delete_confirm">Slet</string>
+    <string name="words_detail_delete_message">Dette sletter spillet og dets chat permanent. Dette kan ikke fortrydes.</string>
 </resources>

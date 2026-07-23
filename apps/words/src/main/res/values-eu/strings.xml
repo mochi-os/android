@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Trukatu (%1$d)</string>
     <string name="words_detail_chat_you_played">%1$s jokatu duzu</string>
     <string name="words_detail_chat_player_played">%1$sek %2$s jokatu du</string>
+    <string name="words_detail_delete_title">Partida ezabatu?</string>
+    <string name="words_detail_delete_confirm">Ezabatu</string>
+    <string name="words_detail_delete_message">Honek jokoa eta bere txata betiko ezabatuko ditu. Ekintza hau ezin da desegin.</string>
 </resources>

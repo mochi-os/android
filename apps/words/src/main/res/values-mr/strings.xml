@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s played %2$s</string>
 
+    <string name="words_detail_delete_title">Delete game?</string>
+    <string name="words_detail_delete_confirm">हटवा</string>
+    <string name="words_detail_delete_message">यामुळे गेम आणि त्याचे चॅट कायमचे हटवले जाईल. ही क्रिया पूर्ववत केली जाऊ शकत नाही.</string>
 </resources>

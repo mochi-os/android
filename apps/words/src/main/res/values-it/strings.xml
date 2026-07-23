@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Hai giocato %1$s</string>
     <string name="words_detail_chat_player_played">%1$s ha giocato %2$s</string>
 
+    <string name="words_detail_delete_title">Eliminare la partita?</string>
+    <string name="words_detail_delete_confirm">Elimina</string>
+    <string name="words_detail_delete_message">Questa azione eliminerà definitivamente la partita e la relativa chat. Questa azione non può essere annullata.</string>
 </resources>

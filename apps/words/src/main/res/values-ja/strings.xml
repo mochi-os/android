@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">あなたは%1$sを置きました</string>
     <string name="words_detail_chat_player_played">%1$sは%2$sを置きました</string>
 
+    <string name="words_detail_delete_title">対局を削除しますか？</string>
+    <string name="words_detail_delete_confirm">削除</string>
+    <string name="words_detail_delete_message">この操作でゲームとそのチャットが完全に削除されます。この操作は元に戻せません。</string>
 </resources>

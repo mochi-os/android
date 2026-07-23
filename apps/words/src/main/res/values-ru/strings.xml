@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Вы сыграли %1$s</string>
     <string name="words_detail_chat_player_played">%1$s сыграл %2$s</string>
 
+    <string name="words_detail_delete_title">Удалить партию?</string>
+    <string name="words_detail_delete_confirm">Удалить</string>
+    <string name="words_detail_delete_message">Это навсегда удалит игру и её чат. Это действие нельзя отменить.</string>
 </resources>

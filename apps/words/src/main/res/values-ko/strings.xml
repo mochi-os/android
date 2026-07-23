@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">당신이 %1$s을(를) 놓았습니다</string>
     <string name="words_detail_chat_player_played">%1$s이(가) %2$s을(를) 놓았습니다</string>
 
+    <string name="words_detail_delete_title">대국을 삭제할까요?</string>
+    <string name="words_detail_delete_confirm">삭제</string>
+    <string name="words_detail_delete_message">이 작업은 게임과 채팅을 영구적으로 삭제합니다. 이 작업은 되돌릴 수 없습니다.</string>
 </resources>

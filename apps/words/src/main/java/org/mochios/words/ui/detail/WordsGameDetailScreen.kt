@@ -79,6 +79,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlin.math.roundToInt
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
@@ -382,6 +383,7 @@ private fun GameDetailContent(
     ) {
         val showChatInline = maxWidth >= 600.dp
         var showMobileChat by remember { mutableStateOf(false) }
+        var showDeleteDialog by remember { mutableStateOf(false) }
 
         Row(modifier = Modifier.fillMaxSize()) {
             Column(
@@ -406,7 +408,7 @@ private fun GameDetailContent(
                     },
                     onResign = { viewModel.openResignDialog() },
                     onRematch = { viewModel.rematch() },
-                    onDelete = { viewModel.deleteGame() },
+                    onDelete = { showDeleteDialog = true },
                     onOpenChat = if (!showChatInline) {
                         { showMobileChat = true }
                     } else null,
@@ -621,6 +623,20 @@ private fun GameDetailContent(
                 }
             }
         }
+
+        if (showDeleteDialog) {
+            ConfirmDialog(
+                title = stringResource(R.string.words_detail_delete_title),
+                message = stringResource(R.string.words_detail_delete_message),
+                confirmLabel = stringResource(R.string.words_detail_delete_confirm),
+                isDestructive = true,
+                onConfirm = {
+                    showDeleteDialog = false
+                    viewModel.deleteGame()
+                },
+                onDismiss = { showDeleteDialog = false },
+            )
+        }
     }
 }
 
@@ -685,7 +701,7 @@ private fun WordsGameHeader(
                     onDismissRequest = { menuOpen = false },
                 ) {
                     if (isActive) {
-                        if (isMyTurn) {
+                        if (isMyTurn && !exchangeMode) {
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.words_detail_action_shuffle)) },
                                 onClick = { menuOpen = false; onShuffle() },

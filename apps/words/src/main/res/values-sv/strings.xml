@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Du spelade %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spelade %2$s</string>
 
+    <string name="words_detail_delete_title">Radera parti?</string>
+    <string name="words_detail_delete_confirm">Ta bort</string>
+    <string name="words_detail_delete_message">Detta tar bort partiet och dess chatt permanent. Detta går inte att ångra.</string>
 </resources>

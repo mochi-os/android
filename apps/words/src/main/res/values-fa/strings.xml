@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">شما %1$s را بازی کردید</string>
     <string name="words_detail_chat_player_played">%1$s %2$s را بازی کرد</string>
 
+    <string name="words_detail_delete_title">بازی حذف شود؟</string>
+    <string name="words_detail_delete_confirm">حذف</string>
+    <string name="words_detail_delete_message">این کار بازی و گفتگوی آن را برای همیشه حذف می‌کند. این عمل قابل بازگشت نیست.</string>
 </resources>

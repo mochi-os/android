@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Badilisha (%1$d)</string>
     <string name="words_detail_chat_you_played">Ulicheza %1$s</string>
     <string name="words_detail_chat_player_played">%1$s alicheza %2$s</string>
+    <string name="words_detail_delete_title">Futa mchezo?</string>
+    <string name="words_detail_delete_confirm">Futa</string>
+    <string name="words_detail_delete_message">Hatua hii itafuta mchezo na mazungumzo yake kabisa. Hatua hii haiwezi kutenduliwa.</string>
 </resources>

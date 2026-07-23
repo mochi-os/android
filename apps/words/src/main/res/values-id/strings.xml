@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Anda memainkan %1$s</string>
     <string name="words_detail_chat_player_played">%1$s memainkan %2$s</string>
 
+    <string name="words_detail_delete_title">Hapus permainan?</string>
+    <string name="words_detail_delete_confirm">Hapus</string>
+    <string name="words_detail_delete_message">Ini akan menghapus permainan dan obrolannya secara permanen. Tindakan ini tidak dapat dibatalkan.</string>
 </resources>

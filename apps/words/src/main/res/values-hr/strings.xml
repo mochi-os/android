@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Odigrali ste %1$s</string>
     <string name="words_detail_chat_player_played">%1$s je odigrao %2$s</string>
 
+    <string name="words_detail_delete_title">Izbrisati partiju?</string>
+    <string name="words_detail_delete_confirm">Obriši</string>
+    <string name="words_detail_delete_message">Ovo će trajno izbrisati igru i njezin razgovor. Ova radnja ne može se poništiti.</string>
 </resources>

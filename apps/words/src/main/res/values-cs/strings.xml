@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Hrál jste %1$s</string>
     <string name="words_detail_chat_player_played">%1$s hrál %2$s</string>
 
+    <string name="words_detail_delete_title">Smazat partii?</string>
+    <string name="words_detail_delete_confirm">Smazat</string>
+    <string name="words_detail_delete_message">Tímto trvale smažete hru a její chat. Tuto akci nelze vzít zpět.</string>
 </resources>

@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Абмяняць (%1$d)</string>
     <string name="words_detail_chat_you_played">Вы згулялі %1$s</string>
     <string name="words_detail_chat_player_played">%1$s згуляў %2$s</string>
+    <string name="words_detail_delete_title">Выдаліць партыю?</string>
+    <string name="words_detail_delete_confirm">Выдаліць</string>
+    <string name="words_detail_delete_message">Гэта незваротна выдаліць гульню і яе чат. Гэтае дзеянне нельга адрабіць.</string>
 </resources>

@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Jūs žaidėte %1$s</string>
     <string name="words_detail_chat_player_played">%1$s žaidė %2$s</string>
 
+    <string name="words_detail_delete_title">Ištrinti partiją?</string>
+    <string name="words_detail_delete_confirm">Ištrinti</string>
+    <string name="words_detail_delete_message">Tai visam laikui ištrins žaidimą ir jo pokalbį. Šio veiksmo negalima anuliuoti.</string>
 </resources>

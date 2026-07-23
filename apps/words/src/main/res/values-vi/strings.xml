@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Bạn đã chơi %1$s</string>
     <string name="words_detail_chat_player_played">%1$s đã chơi %2$s</string>
 
+    <string name="words_detail_delete_title">Xoá ván cờ?</string>
+    <string name="words_detail_delete_confirm">Xóa</string>
+    <string name="words_detail_delete_message">Thao tác này sẽ xóa vĩnh viễn trận đấu và cuộc trò chuyện của nó. Không thể hoàn tác thao tác này.</string>
 </resources>

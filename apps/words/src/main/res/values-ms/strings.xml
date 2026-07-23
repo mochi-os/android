@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Tukar (%1$d)</string>
     <string name="words_detail_chat_you_played">Anda main %1$s</string>
     <string name="words_detail_chat_player_played">%1$s main %2$s</string>
+    <string name="words_detail_delete_title">Padam permainan?</string>
+    <string name="words_detail_delete_confirm">Padam</string>
+    <string name="words_detail_delete_message">Ini akan memadam permainan dan sembangnya secara kekal. Tindakan ini tidak boleh dibuat asal.</string>
 </resources>

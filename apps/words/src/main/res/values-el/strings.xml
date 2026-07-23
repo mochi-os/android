@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Παίξατε %1$s</string>
     <string name="words_detail_chat_player_played">Ο %1$s έπαιξε %2$s</string>
 
+    <string name="words_detail_delete_title">Διαγραφή παρτίδας;</string>
+    <string name="words_detail_delete_confirm">Διαγραφή</string>
+    <string name="words_detail_delete_message">Αυτό θα διαγράψει οριστικά το παιχνίδι και τη συνομιλία του. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
 </resources>

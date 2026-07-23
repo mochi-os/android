@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Ai jucat %1$s</string>
     <string name="words_detail_chat_player_played">%1$s a jucat %2$s</string>
 
+    <string name="words_detail_delete_title">Ștergeți partida?</string>
+    <string name="words_detail_delete_confirm">Șterge</string>
+    <string name="words_detail_delete_message">Aceasta va șterge definitiv jocul și discuția asociată. Această acțiune nu poate fi anulată.</string>
 </resources>

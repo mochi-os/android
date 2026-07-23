@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Jūs spēlējāt %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spēlēja %2$s</string>
 
+    <string name="words_detail_delete_title">Dzēst spēli?</string>
+    <string name="words_detail_delete_confirm">Dzēst</string>
+    <string name="words_detail_delete_message">Tas neatgriezeniski dzēsīs spēli un tās tērzēšanu. Šo darbību nevar atsaukt.</string>
 </resources>
