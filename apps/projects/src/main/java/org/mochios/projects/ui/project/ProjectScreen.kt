@@ -29,6 +29,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.FilterList
@@ -42,6 +43,8 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.outlined.Dashboard
+import androidx.compose.material.icons.outlined.FormatListBulleted
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
@@ -49,15 +52,15 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.ScrollableTabRow
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -650,6 +653,49 @@ private fun ProjectContent(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
+                                // Views the project defines, checked one at a
+                                // time. Listed even when there is only one, so
+                                // the menu always says which view is on screen
+                                // and how it is drawn.
+                                val views = details?.views.orEmpty()
+                                if (views.isNotEmpty()) {
+                                    views.forEach { view ->
+                                        val isActive = view.id == activeView?.id
+                                        DropdownMenuItem(
+                                            text = { Text(view.name) },
+                                            onClick = {
+                                                showOverflow = false
+                                                viewModel.setActiveView(view.id)
+                                            },
+                                            leadingIcon = {
+                                                Icon(
+                                                    if (view.viewtype == "board") {
+                                                        Icons.Outlined.Dashboard
+                                                    } else {
+                                                        Icons.Outlined.FormatListBulleted
+                                                    },
+                                                    contentDescription = null,
+                                                    tint = if (isActive) {
+                                                        MaterialTheme.colorScheme.primary
+                                                    } else {
+                                                        LocalContentColor.current
+                                                    },
+                                                )
+                                            },
+                                            trailingIcon = {
+                                                if (isActive) {
+                                                    Icon(
+                                                        Icons.Default.Check,
+                                                        contentDescription = null,
+                                                        tint = MaterialTheme.colorScheme.primary,
+                                                    )
+                                                }
+                                            },
+                                        )
+                                    }
+                                    HorizontalDivider()
+                                }
+
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.projects_settings)) },
                                     onClick = {
@@ -694,30 +740,6 @@ private fun ProjectContent(
                         orientation = Orientation.Vertical
                     )
             ) {
-                // View tabs
-                if (details != null && details.views.isNotEmpty()) {
-                    val views = details.views
-                    val selectedIndex = views.indexOfFirst { it.id == uiState.activeViewId }.coerceAtLeast(0)
-                    ScrollableTabRow(
-                        selectedTabIndex = selectedIndex,
-                        edgePadding = 16.dp
-                    ) {
-                        views.forEachIndexed { index, view ->
-                            Tab(
-                                selected = index == selectedIndex,
-                                onClick = { viewModel.setActiveView(view.id) },
-                                text = {
-                                    Text(
-                                        text = view.name,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                            )
-                        }
-                    }
-                }
-
                 // Main content
                 when {
                     uiState.isLoading && details == null -> {
