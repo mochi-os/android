@@ -18,6 +18,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectDetails
@@ -76,7 +77,8 @@ class ProjectViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: ProjectsRepository,
     private val webSocket: MochiWebSocket,
-    private val sessionManager: SessionManager
+    private val sessionManager: SessionManager,
+    private val activeViewStore: ActiveViewStore,
 ) : ViewModel() {
 
     val projectId: String = savedStateHandle.get<String>("projectId") ?: ""
@@ -105,6 +107,7 @@ class ProjectViewModel @Inject constructor(
             val cachedObjects = repository.getCachedObjects(projectId)
             if (cachedDetails != null && cachedObjects != null) {
                 val activeViewId = _uiState.value.activeViewId
+                    ?: rememberedViewId(cachedDetails.views)
                     ?: cachedDetails.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     projectDetails = cachedDetails,
@@ -125,6 +128,7 @@ class ProjectViewModel @Inject constructor(
                     .getOrDefault(_uiState.value.people)
                 val watched = repository.getWatched(projectId)
                 val activeViewId = _uiState.value.activeViewId
+                    ?: rememberedViewId(details.views)
                     ?: details.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
@@ -189,6 +193,16 @@ class ProjectViewModel @Inject constructor(
 
     fun setActiveView(viewId: String) {
         _uiState.value = _uiState.value.copy(activeViewId = viewId)
+        activeViewStore.set(projectId, viewId)
+    }
+
+    /**
+     * The view the user last opened in this project, if it still exists — a
+     * view deleted since then falls back to the project's own first view.
+     */
+    private fun rememberedViewId(views: List<ProjectView>): String? {
+        val remembered = activeViewStore.get(projectId) ?: return null
+        return remembered.takeIf { id -> views.any { view -> view.id == id } }
     }
 
     fun updateSearchQuery(query: String) {
