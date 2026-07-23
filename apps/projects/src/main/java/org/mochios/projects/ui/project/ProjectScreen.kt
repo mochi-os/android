@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -30,10 +29,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowDownward
-import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.HomeMax
@@ -44,23 +42,18 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
-import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material3.Badge
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -296,6 +289,7 @@ private fun AllProjectsContent(
             if (uiState.showSearch) {
                 ProjectSearchBar(
                     query = uiState.searchQuery,
+                    placeholder = stringResource(R.string.projects_list_search_placeholder),
                     onQueryChange = viewModel::updateSearchQuery,
                     onClose = { viewModel.toggleSearch() }
                 )
@@ -392,10 +386,15 @@ private fun AllProjectsContent(
     }
 }
 
+/**
+ * Search field that takes over the whole top bar. Shared by the All projects
+ * list and the project detail screen — they differ only in [placeholder].
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ProjectSearchBar(
     query: String,
+    placeholder: String,
     onQueryChange: (String) -> Unit,
     onClose: () -> Unit,
 ) {
@@ -416,7 +415,7 @@ private fun ProjectSearchBar(
             TextField(
                 value = query,
                 onValueChange = onQueryChange,
-                placeholder = { Text(stringResource(R.string.projects_list_search_placeholder)) },
+                placeholder = { Text(placeholder) },
                 singleLine = true,
                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 trailingIcon = {
@@ -572,6 +571,7 @@ private fun ProjectContent(
     val uiState by viewModel.uiState.collectAsState()
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
+    var showFilters by remember { mutableStateOf(false) }
 
     LaunchedEffect(initialObjectId) {
         if (initialObjectId != null) {
@@ -582,57 +582,96 @@ private fun ProjectContent(
     val details = uiState.projectDetails
     val activeView = viewModel.getActiveView()
 
+    // The top-bar icon carries a dot whenever the sheet holds something other
+    // than the view's own defaults. The search query is deliberately left out —
+    // it has its own visible affordance in the top bar.
+    val filtersActive = uiState.watchedOnly ||
+        uiState.fieldFilters.isNotEmpty() ||
+        viewModel.hasSortOverride()
+
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = details?.project?.name ?: stringResource(R.string.projects_loading),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                },
-                navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
+            if (showSearch) {
+                ProjectSearchBar(
+                    query = uiState.searchQuery,
+                    placeholder = stringResource(R.string.projects_search_objects_placeholder),
+                    onQueryChange = viewModel::updateSearchQuery,
+                    onClose = {
+                        showSearch = false
+                        viewModel.updateSearchQuery("")
                     }
-                },
-                actions = {
-                    NotificationBell(onClick = onOpenNotifications)
-                    IconButton(onClick = { showSearch = !showSearch }) {
-                        Icon(
-                            if (showSearch) Icons.Default.Close else Icons.Default.Search,
-                            contentDescription = stringResource(R.string.projects_search)
+                )
+            } else {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = details?.project?.name ?: stringResource(R.string.projects_loading),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
                         )
-                    }
-                    Box {
-                        IconButton(onClick = { showOverflow = true }) {
-                            Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.projects_more))
-                        }
-                        DropdownMenu(
-                            expanded = showOverflow,
-                            onDismissRequest = { showOverflow = false }
-                        ) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.projects_settings)) },
-                                onClick = {
-                                    showOverflow = false
-                                    onSettings(viewModel.projectId)
-                                },
-                                leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
-                            )
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.projects_design)) },
-                                onClick = {
-                                    showOverflow = false
-                                    onDesign(viewModel.projectId)
-                                },
-                                leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = onOpenDrawer) {
+                            Icon(
+                                Icons.Default.Menu,
+                                contentDescription = stringResource(R.string.projects_list_title)
                             )
                         }
+                    },
+                    actions = {
+                        NotificationBell(onClick = onOpenNotifications)
+                        IconButton(onClick = { showSearch = true }) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.projects_search)
+                            )
+                        }
+                        IconButton(onClick = { showFilters = !showFilters }) {
+                            BadgedBox(
+                                badge = {
+                                    if (filtersActive) {
+                                        Badge(modifier = Modifier.size(6.dp))
+                                    }
+                                }
+                            ) {
+                                Icon(
+                                    Icons.Default.FilterList,
+                                    contentDescription = stringResource(R.string.projects_filter)
+                                )
+                            }
+                        }
+                        Box {
+                            IconButton(onClick = { showOverflow = true }) {
+                                Icon(
+                                    Icons.Default.MoreVert,
+                                    contentDescription = stringResource(R.string.projects_more)
+                                )
+                            }
+                            DropdownMenu(
+                                expanded = showOverflow,
+                                onDismissRequest = { showOverflow = false }
+                            ) {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_settings)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        onSettings(viewModel.projectId)
+                                    },
+                                    leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_design)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        onDesign(viewModel.projectId)
+                                    },
+                                    leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                )
+                            }
+                        }
                     }
-                }
-            )
+                )
+            }
         },
         floatingActionButton = {
             if (details != null) {
@@ -687,34 +726,6 @@ private fun ProjectContent(
                     }
                 }
 
-                // Search and filter bar
-                if (showSearch) {
-                    Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            OutlinedTextField(
-                                value = uiState.searchQuery,
-                                onValueChange = viewModel::updateSearchQuery,
-                                placeholder = { Text(stringResource(R.string.projects_search_objects_placeholder)) },
-                                singleLine = true,
-                                modifier = Modifier.weight(1f)
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            FilterChip(
-                                selected = uiState.watchedOnly,
-                                onClick = { viewModel.toggleWatchedOnly() },
-                                label = { Text(stringResource(R.string.projects_watched)) },
-                                leadingIcon = if (uiState.watchedOnly) {
-                                    { Icon(Icons.Default.Visibility, contentDescription = null, modifier = Modifier.size(16.dp)) }
-                                } else null
-                            )
-                        }
-                        if (activeView != null) {
-                            Spacer(modifier = Modifier.height(8.dp))
-                            SortRow(viewModel = viewModel)
-                        }
-                    }
-                }
-
                 // Main content
                 when {
                     uiState.isLoading && details == null -> {
@@ -747,6 +758,7 @@ private fun ProjectContent(
                             "board" -> {
                                 BoardView(
                                     objects = allObjects,
+                                    visibleIds = viewModel.getVisibleObjectIds(),
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
@@ -810,85 +822,35 @@ private fun ProjectContent(
             },
         )
     }
-}
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun SortRow(viewModel: ProjectViewModel) {
-    val activeField = viewModel.getActiveSortField()
-    val activeDirection = viewModel.getActiveSortDirection()
-    val customOptions = viewModel.getSortFieldOptions()
-
-    val builtIn = listOf(
-        "rank" to stringResource(R.string.projects_sort_rank),
-        "number" to stringResource(R.string.projects_sort_number),
-        "created" to stringResource(R.string.projects_sort_created),
-        "updated" to stringResource(R.string.projects_sort_updated)
-    )
-    val all = customOptions + builtIn
-    val activeLabel = all.firstOrNull { it.first == activeField }?.second
-        ?: stringResource(R.string.projects_sort_rank)
-
-    var expanded by remember { mutableStateOf(false) }
-
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Text(
-            text = stringResource(R.string.projects_sort_label),
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+    if (showFilters) {
+        SortFilterSheet(
+            fieldSortOptions = viewModel.getSortFieldOptions(),
+            builtInSortOptions = builtInSortOptions(),
+            activeSort = viewModel.getSelectedSortField(),
+            activeDirection = viewModel.getActiveSortDirection(),
+            filterFields = viewModel.getFilterableFields(),
+            activeFieldFilters = uiState.fieldFilters,
+            watchedOnly = uiState.watchedOnly,
+            onSortChange = { field -> viewModel.setSortField(field) },
+            onToggleDirection = { viewModel.toggleSortDirection() },
+            onToggleFieldValue = { fieldId, optionId ->
+                viewModel.toggleFieldFilter(fieldId, optionId)
+            },
+            onClearFieldFilter = { fieldId -> viewModel.clearFieldFilter(fieldId) },
+            onToggleWatched = { viewModel.toggleWatchedOnly() },
+            onClearAll = { viewModel.clearFilters() },
+            onDismiss = { showFilters = false },
         )
-        Spacer(modifier = Modifier.width(8.dp))
-        ExposedDropdownMenuBox(
-            expanded = expanded,
-            onExpandedChange = { expanded = it },
-            modifier = Modifier.weight(1f)
-        ) {
-            OutlinedTextField(
-                value = activeLabel,
-                onValueChange = {},
-                readOnly = true,
-                singleLine = true,
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .menuAnchor(MenuAnchorType.PrimaryNotEditable)
-            )
-            DropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false }
-            ) {
-                if (customOptions.isNotEmpty()) {
-                    customOptions.forEach { (id, label) ->
-                        DropdownMenuItem(
-                            text = { Text(label) },
-                            onClick = {
-                                viewModel.setSortField(id)
-                                expanded = false
-                            }
-                        )
-                    }
-                    HorizontalDivider()
-                }
-                builtIn.forEach { (id, label) ->
-                    DropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            viewModel.setSortField(id)
-                            expanded = false
-                        }
-                    )
-                }
-            }
-        }
-        Spacer(modifier = Modifier.width(8.dp))
-        IconButton(onClick = { viewModel.toggleSortDirection() }) {
-            Icon(
-                imageVector = if (activeDirection == "desc") Icons.Default.ArrowDownward else Icons.Default.ArrowUpward,
-                contentDescription = stringResource(
-                    if (activeDirection == "desc") R.string.projects_sort_direction_desc
-                    else R.string.projects_sort_direction_asc
-                )
-            )
-        }
     }
 }
+
+/** Sort keys the server understands regardless of the project's own fields. */
+@Composable
+private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
+    "rank" to stringResource(R.string.projects_sort_rank),
+    "number" to stringResource(R.string.projects_sort_number),
+    "created" to stringResource(R.string.projects_sort_created),
+    "updated" to stringResource(R.string.projects_sort_updated)
+)
+

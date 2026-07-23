@@ -55,11 +55,16 @@
     <string name="projects_watched">Watched</string>
     <string name="projects_create_object">Create object</string>
     <string name="projects_search">Search</string>
+    <string name="projects_filter">Filter</string>
     <string name="projects_more">More</string>
     <string name="projects_settings">Settings</string>
     <string name="projects_design">Design</string>
 
-    <!-- Sort -->
+    <!-- Sort and filter -->
+    <string name="projects_sort_filter_title">Sort &amp; filter</string>
+    <string name="projects_filter_clear_all">Clear all</string>
+    <string name="projects_filter_all">All</string>
+    <string name="projects_filter_other">Other</string>
     <string name="projects_sort_label">Sort</string>
     <string name="projects_sort_field">Sort by</string>
     <string name="projects_sort_direction">Direction</string>
