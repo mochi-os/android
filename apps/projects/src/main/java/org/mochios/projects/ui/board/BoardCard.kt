@@ -37,6 +37,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -102,8 +103,9 @@ fun BoardCard(
         } else null
     } else null
 
-    val projectDetails = viewModel.uiState.value.projectDetails
-    val people = viewModel.uiState.value.people
+    val uiState by viewModel.uiState.collectAsState()
+    val projectDetails = uiState.projectDetails
+    val people = uiState.people
     val prefix = projectDetails?.project?.prefix ?: ""
     val cls = projectDetails?.classes?.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
