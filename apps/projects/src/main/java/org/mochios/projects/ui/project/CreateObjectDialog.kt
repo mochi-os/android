@@ -49,6 +49,11 @@ fun CreateObjectDialog(
      * "Add child" affordance on an existing object.
      */
     presetParent: String?,
+    /**
+     * Field values the dialog opens with, e.g. the board column the user tapped
+     * "+" on. They are applied to the created object as-is.
+     */
+    presetValues: Map<String, String>,
     isCreating: Boolean,
     activeView: ProjectView?,
     viewModel: ProjectViewModel,
@@ -190,9 +195,13 @@ fun CreateObjectDialog(
         confirmButton = {
             TextButton(
                 onClick = {
-                    val initialValues = mutableMapOf<String, String>()
-                    // Pre-fill column value from current view context if board view
-                    if (activeView?.viewtype == "board" && activeView.columns.isNotBlank()) {
+                    val initialValues = presetValues.toMutableMap()
+                    // On a board, an object with no column value would land in
+                    // "Unassigned" — fall back to the first column unless the
+                    // caller already said which one (the tapped column header).
+                    if (activeView?.viewtype == "board" && activeView.columns.isNotBlank() &&
+                        !initialValues.containsKey(activeView.columns)
+                    ) {
                         val options = viewModel.getAllOptionsForField(activeView.columns)
                         if (options.isNotEmpty()) {
                             initialValues[activeView.columns] = options.first().id

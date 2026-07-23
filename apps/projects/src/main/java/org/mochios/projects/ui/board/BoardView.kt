@@ -91,7 +91,7 @@ fun BoardView(
     viewModel: ProjectViewModel,
     onObjectClick: (String) -> Unit,
     visibleIds: Set<String>? = null,
-    onCreateObject: ((classId: String, title: String, initialValues: Map<String, String>) -> Unit)? = null
+    onCreateObject: ((initialValues: Map<String, String>) -> Unit)? = null
 ) {
     if (view == null || view.columns.isBlank()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -230,13 +230,7 @@ fun BoardView(
                 { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
             },
             onCreateInColumn = if (onCreateObject != null && !isUnassigned) {
-                {
-                    val details = viewModel.uiState.value.projectDetails
-                    val classId = view.classes.firstOrNull() ?: details?.classes?.firstOrNull()?.id ?: ""
-                    if (classId.isNotBlank()) {
-                        onCreateObject(classId, "", mapOf(columnFieldId to columnOption.id))
-                    }
-                }
+                { onCreateObject(mapOf(columnFieldId to columnOption.id)) }
             } else null,
         )
     }
@@ -389,7 +383,6 @@ private fun BoardColumn(
                     Icon(
                         Icons.Default.Add,
                         contentDescription = stringResource(R.string.projects_board_new),
-                        modifier = Modifier.size(18.dp)
                     )
                 }
             }
@@ -401,7 +394,6 @@ private fun BoardColumn(
                         Icon(
                             Icons.Default.MoreHoriz,
                             contentDescription = stringResource(MochiR.string.common_more_options),
-                            modifier = Modifier.size(18.dp)
                         )
                     }
                     DropdownMenu(

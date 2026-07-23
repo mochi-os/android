@@ -52,6 +52,11 @@ data class ProjectUiState(
      * none) themselves.
      */
     val createObjectParent: String? = null,
+    /**
+     * Field values the create-object dialog opens with — the tapped board
+     * column, so the new object lands where the user asked for it.
+     */
+    val createObjectValues: Map<String, String> = emptyMap(),
     val isCreatingObject: Boolean = false,
     val selectedObjectId: String? = null,
     /**
@@ -371,10 +376,14 @@ class ProjectViewModel @Inject constructor(
         return result
     }
 
-    fun showCreateObjectDialog(parent: String? = null) {
+    fun showCreateObjectDialog(
+        parent: String? = null,
+        values: Map<String, String> = emptyMap(),
+    ) {
         _uiState.value = _uiState.value.copy(
             showCreateObjectDialog = true,
             createObjectParent = parent,
+            createObjectValues = values,
         )
     }
 
@@ -382,6 +391,7 @@ class ProjectViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(
             showCreateObjectDialog = false,
             createObjectParent = null,
+            createObjectValues = emptyMap(),
         )
     }
 
@@ -411,6 +421,7 @@ class ProjectViewModel @Inject constructor(
                     isCreatingObject = false,
                     showCreateObjectDialog = false,
                     createObjectParent = null,
+                    createObjectValues = emptyMap(),
                 )
                 refreshObjects()
             } catch (e: Exception) {

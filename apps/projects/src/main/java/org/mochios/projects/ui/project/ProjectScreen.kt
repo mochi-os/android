@@ -49,7 +49,6 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -673,13 +672,6 @@ private fun ProjectContent(
                 )
             }
         },
-        floatingActionButton = {
-            if (details != null) {
-                FloatingActionButton(onClick = { viewModel.showCreateObjectDialog() }) {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_create_object))
-                }
-            }
-        }
     ) { padding ->
         // No-op vertical scrollable so the tabs/search header above the
         // columns also dispatches pull-down gestures up to PullToRefreshBox.
@@ -762,8 +754,8 @@ private fun ProjectContent(
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
-                                    onCreateObject = { classId, title, initialValues ->
-                                        viewModel.createObject(classId, title, initialValues = initialValues)
+                                    onCreateObject = { initialValues ->
+                                        viewModel.showCreateObjectDialog(values = initialValues)
                                     }
                                 )
                             }
@@ -789,6 +781,7 @@ private fun ProjectContent(
             hierarchy = details.hierarchy,
             objects = uiState.objects,
             presetParent = uiState.createObjectParent,
+            presetValues = uiState.createObjectValues,
             isCreating = uiState.isCreatingObject,
             activeView = activeView,
             viewModel = viewModel,
