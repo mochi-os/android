@@ -15,6 +15,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -94,15 +96,32 @@ object ApiClient {
      * with a dead cookie. 403 is *not* treated as session-dead: it can mean
      * "authenticated but missing app token" (which the per-app JWT
      * interceptors handle) or "authenticated but no permission" (legitimate).
+     *
+     * Three guards keep transient failures from signing the user out:
+     *  - the request must have carried the session we currently hold (the
+     *    cookie jar attaches exactly the stored value, so a null-at-send
+     *    session means the 401 indicts nothing);
+     *  - the stored session must be unchanged when the response arrives, so
+     *    an in-flight request from before a login/renewal can't clear the
+     *    new session it never rode;
+     *  - the response must be JSON — the client sends Accept:
+     *    application/json, so real Mochi 401s are JSON; an HTML 401 is a
+     *    captive portal or proxy answering for an unreachable server, which
+     *    says nothing about the session.
      */
     @Provides
     @Singleton
     @InvalidationInterceptor
     fun provideInvalidationInterceptor(sessionManager: SessionManager): Interceptor {
         return Interceptor { chain ->
+            val sessionAtSend = runBlocking { sessionManager.currentToken.first() }
             val response = chain.proceed(chain.request())
-            if (response.code == 401) {
-                kotlinx.coroutines.runBlocking { sessionManager.clearAll() }
+            if (response.code == 401 && sessionAtSend != null) {
+                val json = response.header("Content-Type")?.contains("application/json") == true
+                val sessionNow = runBlocking { sessionManager.currentToken.first() }
+                if (json && sessionNow == sessionAtSend) {
+                    runBlocking { sessionManager.clearAll() }
+                }
             }
             response
         }
