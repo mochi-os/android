@@ -85,9 +85,6 @@ fun PropertiesTab(
     val fields = projectDetails.fields[obj.objectClass] ?: emptyList()
     val classOptions = projectDetails.options[obj.objectClass] ?: emptyMap()
     val canWrite = canWriteAccess(uiState.access)
-    // The title field is rendered editable in the detail header (parity with
-    // web); exclude it here so it isn't shown twice.
-    val titleFieldId = projectDetails.classes.find { it.id == obj.objectClass }?.title
     // "Can this object have children?" — true when at least one class
     // lists obj.objectClass in its allowed parent classes.
     val canHaveChildren = remember(projectDetails.hierarchy, obj.objectClass) {
@@ -98,7 +95,8 @@ fun PropertiesTab(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(16.dp)
+            .padding(horizontal = 16.dp)
+            .padding(bottom = 16.dp)
     ) {
         // Parent picker
         val allowedParentClasses = (projectDetails.hierarchy[obj.objectClass] ?: emptyList())
@@ -121,8 +119,8 @@ fun PropertiesTab(
             Spacer(modifier = Modifier.height(12.dp))
         }
 
-        // Dynamic fields (title is shown in the header, not here)
-        fields.filter { it.id != titleFieldId }.sortedBy { it.rank }.forEach { field ->
+        // Dynamic fields, including the class's title field, ordered by rank.
+        fields.sortedBy { it.rank }.forEach { field ->
             FieldEditor(
                 field = field,
                 value = obj.values[field.id],
