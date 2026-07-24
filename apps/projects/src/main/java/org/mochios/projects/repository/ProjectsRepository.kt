@@ -76,7 +76,18 @@ class ProjectsRepository @Inject constructor(
         prefix: String? = null,
         privacy: String = "private",
         template: String? = null
-    ): Project = api.createProject(name, description, prefix, privacy, template).unwrap().project
+    ): Project {
+        val r = api.createProject(name, description, prefix, privacy, template).unwrap()
+        // Prefer the nested project when the backend sends one; otherwise build it
+        // from the flat top-level fields.
+        return r.project ?: Project(
+            id = r.id,
+            fingerprint = r.fingerprint,
+            name = r.name,
+            description = r.description,
+            prefix = r.prefix
+        )
+    }
 
     suspend fun getTemplates(): List<Template> =
         api.getTemplates().unwrap().templates

@@ -44,6 +44,24 @@ import retrofit2.http.Query
 // Response wrappers
 data class ProjectListResponse(val projects: List<Project> = emptyList())
 data class ProjectResponse(val project: Project = Project())
+
+// `-/create` returns the new project. The backend may send it flat (id,
+// fingerprint, … at the top level, like objects/create) or nested under
+// `project`, so this captures both and the repository resolves whichever is set.
+data class ProjectCreateResponse(
+
+    val id: String = "",
+
+    val fingerprint: String = "",
+
+    val name: String = "",
+
+    val description: String = "",
+
+    val prefix: String = "",
+
+    val project: Project? = null
+)
 data class ProjectInfoResponse(
     val project: Project = Project(),
     val classes: List<ProjectClass> = emptyList(),
@@ -113,7 +131,7 @@ interface ProjectsApi {
         @Field("prefix") prefix: String?,
         @Field("privacy") privacy: String,
         @Field("template") template: String?
-    ): Response<ApiResponse<ProjectResponse>>
+    ): Response<ApiResponse<ProjectCreateResponse>>
 
     @GET("-/templates")
     suspend fun getTemplates(): Response<ApiResponse<TemplateListResponse>>

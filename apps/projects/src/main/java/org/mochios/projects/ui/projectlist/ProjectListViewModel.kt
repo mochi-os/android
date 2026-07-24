@@ -29,7 +29,10 @@ data class ProjectListUiState(
     val error: MochiError? = null,
     val searchQuery: String = "",
     val showCreateDialog: Boolean = false,
-    val showSearch: Boolean = false
+    val showSearch: Boolean = false,
+    // Set to the new project's id after a successful create so the screen can
+    // navigate into it; cleared once consumed.
+    val createdProjectId: String? = null
 )
 
 @HiltViewModel
@@ -111,6 +114,11 @@ class ProjectListViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(showCreateDialog = false)
     }
 
+    /** Clears the pending-navigation id once the screen has opened the project. */
+    fun consumeCreatedProject() {
+        _uiState.value = _uiState.value.copy(createdProjectId = null)
+    }
+
     fun createProject(
         name: String,
         prefix: String,
@@ -128,15 +136,25 @@ class ProjectListViewModel @Inject constructor(
                     privacy = privacy,
                     template = template
                 )
+                val newProjectId = project.fingerprint.ifEmpty { project.id }
                 if (!backupJson.isNullOrBlank()) {
-                    val projectId = project.fingerprint.ifEmpty { project.id }
-                    repository.importDesign(projectId, data = backupJson)
+                    repository.importDesign(newProjectId, data = backupJson)
                 }
+                // The create response only carries id/fingerprint, so reload the
+                // full list before opening the project — this way the drawer and
+                // list already contain it (with its name) when we navigate in.
+                val projects = runCatching {
+                    repository.listProjects().sortedWith(compareBy(NaturalCompare) { item -> item.name })
+                }.getOrDefault(_uiState.value.projects)
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
-                    showCreateDialog = false
+                    showCreateDialog = false,
+                    projects = projects,
+                    // Open the new project straight after creation. Only when the
+                    // backend returned an id — navigating to a blank id would land
+                    // on the empty-project placeholder.
+                    createdProjectId = newProjectId.takeIf { id -> id.isNotBlank() }
                 )
-                loadProjects()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,

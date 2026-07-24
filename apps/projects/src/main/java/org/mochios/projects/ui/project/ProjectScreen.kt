@@ -142,6 +142,15 @@ fun ProjectScreen(
         }
     }
 
+    // Open the project detail right after a create, then clear the signal so
+    // it doesn't re-fire on recomposition.
+    LaunchedEffect(listUiState.createdProjectId) {
+        listUiState.createdProjectId?.let { newId ->
+            onSelectProject(newId)
+            listViewModel.consumeCreatedProject()
+        }
+    }
+
     val drawerItems = remember(listUiState.projects) {
         listViewModel.filteredProjects().map { project ->
             FeatureDrawerItem(
