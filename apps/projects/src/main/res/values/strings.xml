@@ -208,6 +208,8 @@
     <string name="projects_activity_cleared">cleared %1$s</string>
     <string name="projects_activity_updated">updated %1$s</string>
     <string name="projects_activity_made_change">made a change</string>
+    <string name="projects_activity_attached">attached</string>
+    <string name="projects_activity_commented">commented</string>
 
     <!-- Attachments -->
     <string name="projects_attachments">Attachments</string>
