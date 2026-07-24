@@ -98,7 +98,16 @@ fun CreateObjectDialog(
         title = { Text(stringResource(R.string.projects_create_object_title)) },
         text = {
             Column {
+                OutlinedTextField(
+                    value = title,
+                    onValueChange = { title = it },
+                    label = { Text(stringResource(R.string.projects_create_object_title_field)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
                 if (classes.size > 1) {
+                    Spacer(modifier = Modifier.height(8.dp))
                     ExposedDropdownMenuBox(
                         expanded = classExpanded,
                         onExpandedChange = { classExpanded = it }
@@ -131,7 +140,6 @@ fun CreateObjectDialog(
                             }
                         }
                     }
-                    Spacer(modifier = Modifier.height(8.dp))
                 }
 
                 // Parent picker — only shown when the selected class has
@@ -139,6 +147,7 @@ fun CreateObjectDialog(
                 // always an option so root-level objects can still be
                 // created from the dialog.
                 if (parentCandidates.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(8.dp))
                     val selectedParentLabel = selectedParentId?.let { id ->
                         objects.firstOrNull { it.id == id }?.let { o ->
                             o.readable.ifBlank { o.id }
@@ -180,16 +189,7 @@ fun CreateObjectDialog(
                             }
                         }
                     }
-                    Spacer(modifier = Modifier.height(8.dp))
                 }
-
-                OutlinedTextField(
-                    value = title,
-                    onValueChange = { title = it },
-                    label = { Text(stringResource(R.string.projects_create_object_title_field)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
             }
         },
         confirmButton = {
