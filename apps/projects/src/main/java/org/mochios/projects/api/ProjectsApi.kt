@@ -99,6 +99,9 @@ data class AccessResponse(val rules: List<AccessRule> = emptyList())
 // object ({"value": "…"}); form encoding fails to update some fields (e.g. the
 // due date).
 data class SetValueRequest(val value: String)
+
+// Shareable project link returned by the `-/share` endpoint.
+data class ShareResponse(val link: String = "")
 data class ClassListResponse(val classes: List<ProjectClass> = emptyList())
 data class ClassResponse(val `class`: ProjectClass = ProjectClass())
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
@@ -216,6 +219,9 @@ interface ProjectsApi {
 
     @GET("{projectId}/-/info")
     suspend fun getProjectInfo(@Path("projectId") projectId: String): Response<ApiResponse<ProjectInfoResponse>>
+
+    @POST("{projectId}/-/share")
+    suspend fun getShareLink(@Path("projectId") projectId: String): Response<ApiResponse<ShareResponse>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/update")

@@ -173,6 +173,10 @@ class ProjectsRepository @Inject constructor(
     suspend fun getPeople(projectId: String): List<Person> =
         api.getPeople(projectId).unwrap().people
 
+    /** A shareable link for the project, from the `-/share` endpoint. */
+    suspend fun getShareLink(projectId: String): String =
+        api.getShareLink(projectId).unwrap().link
+
     suspend fun getAccess(projectId: String): List<AccessRule> =
         api.getAccess(projectId).unwrap().rules
 

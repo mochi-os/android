@@ -58,6 +58,8 @@
     <string name="projects_search">Search</string>
     <string name="projects_filter">Filter</string>
     <string name="projects_more">More</string>
+    <string name="projects_link">Link</string>
+    <string name="projects_share_link_title">Share project</string>
     <string name="projects_settings">Settings</string>
     <string name="projects_design">Design</string>
 

@@ -5,6 +5,7 @@
 
 package org.mochios.projects.ui.project
 
+import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
@@ -37,6 +38,7 @@ import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.HomeMax
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
@@ -584,6 +586,14 @@ private fun ProjectContent(
     var showSearch by remember { mutableStateOf(false) }
     var showFilters by remember { mutableStateOf(false) }
 
+    val context = LocalContext.current
+    val shareTitle = stringResource(R.string.projects_share_link_title)
+    LaunchedEffect(viewModel) {
+        viewModel.shareLink.collect { link ->
+            shareProjectLink(context, link, shareTitle)
+        }
+    }
+
     LaunchedEffect(initialObjectId) {
         if (initialObjectId != null) {
             viewModel.selectObject(initialObjectId)
@@ -705,6 +715,14 @@ private fun ProjectContent(
                                     HorizontalDivider()
                                 }
 
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_link)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        viewModel.shareProject()
+                                    },
+                                    leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
+                                )
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.projects_settings)) },
                                     onClick = {
@@ -878,3 +896,17 @@ private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
     "updated" to stringResource(R.string.projects_sort_updated)
 )
 
+
+/** Opens the system share sheet with the project's [link]. */
+private fun shareProjectLink(context: Context, link: String, title: String) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, link)
+        // Names the sheet's content preview. Android 10+ ignores the
+        // createChooser title, so without this the sheet reads "Sharing text".
+        putExtra(Intent.EXTRA_TITLE, title)
+    }
+    val chooser = Intent.createChooser(intent, title)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
+}
