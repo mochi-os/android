@@ -11,7 +11,6 @@
     <string name="crm_create_title">ສ້າງໂຄງການ</string>
     <string name="crm_create_name">ຊື່</string>
     <string name="crm_create_description">ລາຍລະອຽດ</string>
-    <string name="crm_create_prefix">ຄຳນຳໜ້າ</string>
     <string name="crm_create_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
     <string name="crm_create_private">ສ່ວນຕົວ</string>
     <string name="crm_create_public">ສາທາລະນະ</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">ຈັດລຽງ</string>
     <string name="crm_sort_direction">ທິດທາງ</string>
     <string name="crm_sort_rank">ດ້ວຍຕົນເອງ</string>
-    <string name="crm_sort_number">ຕົວເລກ</string>
     <string name="crm_sort_created">ສ້າງແລ້ວ</string>
     <string name="crm_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="crm_create_object_title">ສ້າງວັດຖຸ</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">ກະດານ</string>
     <string name="crm_views_type_list">ລາຍຊື່</string>
     <string name="crm_views_direction">ທິດທາງ</string>
-    <string name="crm_views_sort_number">ຕົວເລກ</string>
     <string name="crm_views_sort_created">ສ້າງແລ້ວ</string>
     <string name="crm_views_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="crm_views_sort_rank">ອັນດັບ</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID ຂອງເອັນຕິຕີ້</string>
     <string name="crm_settings_fingerprint">ລາຍນິ້ວມື</string>
     <string name="crm_settings_server">ເຊີບເວີ</string>
+    <string name="crm_untitled">ບໍ່ມີຊື່</string>
 </resources>

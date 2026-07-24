@@ -11,7 +11,6 @@
     <string name="crm_create_title">Oħloq proġett</string>
     <string name="crm_create_name">Isem</string>
     <string name="crm_create_description">Deskrizzjoni</string>
-    <string name="crm_create_prefix">Prefiss</string>
     <string name="crm_create_privacy">Privatezza</string>
     <string name="crm_create_private">Privat</string>
     <string name="crm_create_public">Pubbliku</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Issortja</string>
     <string name="crm_sort_direction">Direzzjoni</string>
     <string name="crm_sort_rank">Manwali</string>
-    <string name="crm_sort_number">Numru</string>
     <string name="crm_sort_created">Maħluq</string>
     <string name="crm_sort_updated">Aġġornat</string>
     <string name="crm_create_object_title">Oħloq oġġett</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Bord</string>
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_direction">Direzzjoni</string>
-    <string name="crm_views_sort_number">Numru</string>
     <string name="crm_views_sort_created">Maħluq</string>
     <string name="crm_views_sort_updated">Aġġornat</string>
     <string name="crm_views_sort_rank">Rank</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID tal-entità</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Bla titlu</string>
 </resources>

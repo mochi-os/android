@@ -196,13 +196,11 @@ private fun collectDescendants(objects: List<CrmObject>, rootId: String): Set<St
     return result
 }
 
-private fun objectDisplayTitle(obj: CrmObject, crmDetails: CrmDetails): String {
+private fun objectDisplayTitle(obj: CrmObject, crmDetails: CrmDetails, untitled: String): String {
     val cls = crmDetails.classes.find { it.id == obj.objectClass }
     val titleField = cls?.title.orEmpty()
     val titleVal = if (titleField.isNotBlank()) obj.values[titleField]?.toString().orEmpty() else ""
-    if (titleVal.isNotBlank()) return titleVal
-    val prefix = crmDetails.crm.prefix
-    return if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}"
+    return titleVal.ifBlank { untitled }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -215,7 +213,8 @@ private fun ParentPicker(
     onSelect: (String) -> Unit
 ) {
     val noParentLabel = stringResource(R.string.crm_parent_none)
-    val displayText = currentParent?.let { objectDisplayTitle(it, crmDetails) } ?: noParentLabel
+    val untitled = stringResource(R.string.crm_untitled)
+    val displayText = currentParent?.let { objectDisplayTitle(it, crmDetails, untitled) } ?: noParentLabel
 
     if (!canWrite) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -280,7 +279,7 @@ private fun ParentPicker(
             )
             val q = query.trim().lowercase()
             parentOptions
-                .map { it to objectDisplayTitle(it, crmDetails) }
+                .map { it to objectDisplayTitle(it, crmDetails, untitled) }
                 .filter { (_, title) -> q.isEmpty() || title.lowercase().contains(q) }
                 .forEach { (parentObj, title) ->
                     DropdownMenuItem(

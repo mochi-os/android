@@ -66,10 +66,9 @@ class CrmsRepository @Inject constructor(
     suspend fun createCrm(
         name: String,
         description: String? = null,
-        prefix: String? = null,
         privacy: String = "private",
         template: String? = null
-    ): Crm = api.createCrm(name, description, prefix, privacy, template).unwrap().crm
+    ): Crm = api.createCrm(name, description, privacy, template).unwrap().crm
 
     suspend fun getTemplates(): List<Template> =
         api.getTemplates().unwrap().templates
@@ -113,8 +112,8 @@ class CrmsRepository @Inject constructor(
         return details
     }
 
-    suspend fun updateCrm(crmId: String, name: String? = null, description: String? = null, prefix: String? = null) {
-        api.updateCrm(crmId, name, description, prefix).unwrap()
+    suspend fun updateCrm(crmId: String, name: String? = null, description: String? = null) {
+        api.updateCrm(crmId, name, description).unwrap()
     }
 
     suspend fun deleteCrm(crmId: String) {

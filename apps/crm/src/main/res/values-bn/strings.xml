@@ -11,7 +11,6 @@
     <string name="crm_create_title">প্রজেক্ট তৈরি করুন</string>
     <string name="crm_create_name">নাম</string>
     <string name="crm_create_description">বিবরণ</string>
-    <string name="crm_create_prefix">প্রিফিক্স</string>
     <string name="crm_create_privacy">গোপনীয়তা</string>
     <string name="crm_create_private">প্রাইভেট</string>
     <string name="crm_create_public">সর্বজনীন</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">সাজান</string>
     <string name="crm_sort_direction">দিক</string>
     <string name="crm_sort_rank">ম্যানুয়াল</string>
-    <string name="crm_sort_number">সংখ্যা</string>
     <string name="crm_sort_created">তৈরি হয়েছে</string>
     <string name="crm_sort_updated">আপডেট হয়েছে</string>
     <string name="crm_create_object_title">অবজেক্ট তৈরি করুন</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">বোর্ড</string>
     <string name="crm_views_type_list">তালিকা</string>
     <string name="crm_views_direction">দিক</string>
-    <string name="crm_views_sort_number">সংখ্যা</string>
     <string name="crm_views_sort_created">তৈরি হয়েছে</string>
     <string name="crm_views_sort_updated">আপডেট হয়েছে</string>
     <string name="crm_views_sort_rank">র‍্যাঙ্ক</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ইউনিট আইডি</string>
     <string name="crm_settings_fingerprint">ফিঙ্গারপ্রিন্ট</string>
     <string name="crm_settings_server">সার্ভার</string>
+    <string name="crm_untitled">শিরোনামহীন</string>
 </resources>

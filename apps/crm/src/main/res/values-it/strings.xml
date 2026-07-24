@@ -11,7 +11,6 @@
     <string name="crm_create_title">Crea progetto</string>
     <string name="crm_create_name">Nome</string>
     <string name="crm_create_description">Descrizione</string>
-    <string name="crm_create_prefix">Prefisso</string>
     <string name="crm_create_privacy">Privacy</string>
     <string name="crm_create_private">Privato</string>
     <string name="crm_create_public">Pubblico</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Ordina</string>
     <string name="crm_sort_direction">Direzione</string>
     <string name="crm_sort_rank">Manuale</string>
-    <string name="crm_sort_number">Numero</string>
     <string name="crm_sort_created">Creato</string>
     <string name="crm_sort_updated">Aggiornato</string>
     <string name="crm_create_object_title">Crea oggetto</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Bacheca</string>
     <string name="crm_views_type_list">Elenco</string>
     <string name="crm_views_direction">Direzione</string>
-    <string name="crm_views_sort_number">Numero</string>
     <string name="crm_views_sort_created">Creato</string>
     <string name="crm_views_sort_updated">Aggiornato</string>
     <string name="crm_views_sort_rank">Classifica</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID entità</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Senza titolo</string>
 </resources>

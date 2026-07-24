@@ -11,7 +11,6 @@
     <string name="crm_create_title">Dá iṣẹ́ àkànṣe</string>
     <string name="crm_create_name">Orúkọ</string>
     <string name="crm_create_description">Àpèjúwe</string>
-    <string name="crm_create_prefix">Ọ̀rọ̀ ìbẹ̀rẹ̀</string>
     <string name="crm_create_privacy">Aṣírí</string>
     <string name="crm_create_private">Aṣírí</string>
     <string name="crm_create_public">Gbangba</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Ṣètò</string>
     <string name="crm_sort_direction">Ìtọ́sọ́nà</string>
     <string name="crm_sort_rank">Ìwé ìtọ́nisọ́nà</string>
-    <string name="crm_sort_number">Nọ́mbà</string>
     <string name="crm_sort_created">Tí a dá</string>
     <string name="crm_sort_updated">Ti ṣe imudojúìwọ̀n</string>
     <string name="crm_create_object_title">Dá ohun</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Pátákó</string>
     <string name="crm_views_type_list">Àkójọ</string>
     <string name="crm_views_direction">Ìtọ́sọ́nà</string>
-    <string name="crm_views_sort_number">Nọ́mbà</string>
     <string name="crm_views_sort_created">Tí a dá</string>
     <string name="crm_views_sort_updated">Ti ṣe imudojúìwọ̀n</string>
     <string name="crm_views_sort_rank">Ipò</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID Ẹ̀ka</string>
     <string name="crm_settings_fingerprint">Àmì-ìka</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Aláìlórúkọ</string>
 </resources>

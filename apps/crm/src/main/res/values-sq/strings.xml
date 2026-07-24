@@ -11,7 +11,6 @@
     <string name="crm_create_title">Krijo projekt</string>
     <string name="crm_create_name">Emri</string>
     <string name="crm_create_description">Përshkrimi</string>
-    <string name="crm_create_prefix">Prefiksi</string>
     <string name="crm_create_privacy">Privatësia</string>
     <string name="crm_create_private">Privat</string>
     <string name="crm_create_public">Publik</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Rendit</string>
     <string name="crm_sort_direction">Drejtimi</string>
     <string name="crm_sort_rank">Manual</string>
-    <string name="crm_sort_number">Numri</string>
     <string name="crm_sort_created">U krijua</string>
     <string name="crm_sort_updated">U përditësua</string>
     <string name="crm_create_object_title">Krijo objekt</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Tabela</string>
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_direction">Drejtimi</string>
-    <string name="crm_views_sort_number">Numri</string>
     <string name="crm_views_sort_created">U krijua</string>
     <string name="crm_views_sort_updated">U përditësua</string>
     <string name="crm_views_sort_rank">Renditja</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID e entitetit</string>
     <string name="crm_settings_fingerprint">Gjurma</string>
     <string name="crm_settings_server">Serveri</string>
+    <string name="crm_untitled">Pa titull</string>
 </resources>

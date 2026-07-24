@@ -11,7 +11,6 @@
     <string name="crm_create_title">Izveidot projektu</string>
     <string name="crm_create_name">Nosaukums</string>
     <string name="crm_create_description">Apraksts</string>
-    <string name="crm_create_prefix">Prefikss</string>
     <string name="crm_create_privacy">Privātums</string>
     <string name="crm_create_private">Privāts</string>
     <string name="crm_create_public">Publisks</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Kārtot</string>
     <string name="crm_sort_direction">Virziens</string>
     <string name="crm_sort_rank">Manuāls</string>
-    <string name="crm_sort_number">Numurs</string>
     <string name="crm_sort_created">Izveidots</string>
     <string name="crm_sort_updated">Atjaunināts</string>
     <string name="crm_create_object_title">Izveidot objektu</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Galds</string>
     <string name="crm_views_type_list">Saraksts</string>
     <string name="crm_views_direction">Virziens</string>
-    <string name="crm_views_sort_number">Numurs</string>
     <string name="crm_views_sort_created">Izveidots</string>
     <string name="crm_views_sort_updated">Atjaunināts</string>
     <string name="crm_views_sort_rank">Rangs</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entītijas ID</string>
     <string name="crm_settings_fingerprint">Pirkstu nospiedums</string>
     <string name="crm_settings_server">Serveris</string>
+    <string name="crm_untitled">Bez nosaukuma</string>
 </resources>

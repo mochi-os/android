@@ -61,9 +61,7 @@
     <string name="crm_field_position_default">Default</string>
     <string name="crm_settings_tab_people">People</string>
     <string name="crm_sort_label">Sort</string>
-    <string name="crm_sort_number">Number</string>
     <string name="crm_field_type_number">Number</string>
-    <string name="crm_views_sort_number">Number</string>
     <string name="crm_settings_tab_general">General</string>
     <string name="crm_settings_save">Save changes</string>
     <string name="crm_field_save">Save changes</string>
@@ -142,7 +140,6 @@
     <string name="crm_list_no_matching">No matching CRM</string>
     <string name="crm_list_empty">No CRM yet</string>
     <string name="crm_create_title">Create CRM</string>
-    <string name="crm_create_prefix">Prefix</string>
     <string name="crm_create_template">Template</string>
     <string name="crm_find_title">Find CRM</string>
     <string name="crm_find_search_placeholder">Search CRM or paste URL</string>
@@ -336,4 +333,5 @@
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_untitled">Untitled</string>
 </resources>

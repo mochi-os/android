@@ -103,14 +103,10 @@ fun BoardCard(
     } else null
 
     val crmDetails = viewModel.uiState.value.crmDetails
-    val prefix = crmDetails?.crm?.prefix ?: ""
     val cls = crmDetails?.classes?.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
-    val title = if (titleFieldId != null) {
-        obj.stringValue(titleFieldId).ifBlank { "$prefix-${obj.number}" }
-    } else {
-        obj.readable.ifBlank { "$prefix-${obj.number}" }
-    }
+    val untitled = stringResource(R.string.crm_untitled)
+    val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty().ifBlank { untitled }
     val cardFields = viewModel.getCardFields(obj.objectClass)
 
     // Drag-drop wiring — only top-level cards participate. Nested children stay

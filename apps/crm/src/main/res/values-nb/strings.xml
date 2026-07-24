@@ -11,7 +11,6 @@
     <string name="crm_create_title">Opprett prosjekt</string>
     <string name="crm_create_name">Navn</string>
     <string name="crm_create_description">Beskrivelse</string>
-    <string name="crm_create_prefix">Prefiks</string>
     <string name="crm_create_privacy">Personvern</string>
     <string name="crm_create_private">Privat</string>
     <string name="crm_create_public">Offentlig</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Sorter</string>
     <string name="crm_sort_direction">Retning</string>
     <string name="crm_sort_rank">Manuell</string>
-    <string name="crm_sort_number">Tall</string>
     <string name="crm_sort_created">Opprettet</string>
     <string name="crm_sort_updated">Oppdatert</string>
     <string name="crm_create_object_title">Opprett objekt</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Board</string>
     <string name="crm_views_type_list">Liste</string>
     <string name="crm_views_direction">Retning</string>
-    <string name="crm_views_sort_number">Tall</string>
     <string name="crm_views_sort_created">Opprettet</string>
     <string name="crm_views_sort_updated">Oppdatert</string>
     <string name="crm_views_sort_rank">Rang</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entitets-ID</string>
     <string name="crm_settings_fingerprint">Fingeravtrykk</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Uten tittel</string>
 </resources>

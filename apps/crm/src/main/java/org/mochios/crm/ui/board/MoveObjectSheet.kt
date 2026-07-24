@@ -61,7 +61,7 @@ fun MoveObjectSheet(
     val columnObjects = uiState.objects
         .filter { it.stringValue(columnFieldId) == currentColumnValue && it.id != obj.id }
         .sortedBy { it.rank }
-    val prefix = uiState.crmDetails?.crm?.prefix ?: ""
+    val untitled = stringResource(R.string.crm_untitled)
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -187,7 +187,9 @@ fun MoveObjectSheet(
                         }
                     }
                     itemsIndexed(columnObjects, key = { _, it -> "after_${it.id}" }) { index, other ->
-                        val label = other.readable.ifBlank { "$prefix-${other.number}" }
+                        val otherTitleField = uiState.crmDetails?.classes?.find { it.id == other.objectClass }
+                            ?.title?.takeIf { it.isNotBlank() }
+                        val label = otherTitleField?.let { other.stringValue(it) }.orEmpty().ifBlank { untitled }
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()

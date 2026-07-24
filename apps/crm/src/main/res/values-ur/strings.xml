@@ -11,7 +11,6 @@
     <string name="crm_create_title">پروجیکٹ بنائیں</string>
     <string name="crm_create_name">نام</string>
     <string name="crm_create_description">تفصیل</string>
-    <string name="crm_create_prefix">prefix</string>
     <string name="crm_create_privacy">پرائیویسی</string>
     <string name="crm_create_private">نجی</string>
     <string name="crm_create_public">عوامی</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">ترتیب دیں</string>
     <string name="crm_sort_direction">سمت</string>
     <string name="crm_sort_rank">دستی</string>
-    <string name="crm_sort_number">نمبر</string>
     <string name="crm_sort_created">بنایا گیا</string>
     <string name="crm_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="crm_create_object_title">آبجیکٹ بنائیں</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">بورڈ</string>
     <string name="crm_views_type_list">فہرست</string>
     <string name="crm_views_direction">سمت</string>
-    <string name="crm_views_sort_number">نمبر</string>
     <string name="crm_views_sort_created">بنایا گیا</string>
     <string name="crm_views_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="crm_views_sort_rank">رینک</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">اینٹٹی ID</string>
     <string name="crm_settings_fingerprint">فنگر پرنٹ</string>
     <string name="crm_settings_server">سرور</string>
+    <string name="crm_untitled">بے عنوان</string>
 </resources>

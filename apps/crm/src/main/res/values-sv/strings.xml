@@ -11,7 +11,6 @@
     <string name="crm_create_title">Skapa projekt</string>
     <string name="crm_create_name">Namn</string>
     <string name="crm_create_description">Beskrivning</string>
-    <string name="crm_create_prefix">Prefix</string>
     <string name="crm_create_privacy">Integritet</string>
     <string name="crm_create_private">Privat</string>
     <string name="crm_create_public">Offentlig</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Sortera</string>
     <string name="crm_sort_direction">Riktning</string>
     <string name="crm_sort_rank">Manuell</string>
-    <string name="crm_sort_number">Nummer</string>
     <string name="crm_sort_created">Skapad</string>
     <string name="crm_sort_updated">Uppdaterad</string>
     <string name="crm_create_object_title">Skapa objekt</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Bräde</string>
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_direction">Riktning</string>
-    <string name="crm_views_sort_number">Nummer</string>
     <string name="crm_views_sort_created">Skapad</string>
     <string name="crm_views_sort_updated">Uppdaterad</string>
     <string name="crm_views_sort_rank">Rank</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entitets-ID</string>
     <string name="crm_settings_fingerprint">Fingeravtryck</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Namnlös</string>
 </resources>

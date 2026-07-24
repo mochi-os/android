@@ -11,7 +11,6 @@
     <string name="crm_create_title">Δημιουργία έργου</string>
     <string name="crm_create_name">Όνομα</string>
     <string name="crm_create_description">Περιγραφή</string>
-    <string name="crm_create_prefix">Πρόθεμα</string>
     <string name="crm_create_privacy">Ιδιωτικότητα</string>
     <string name="crm_create_private">Ιδιωτικό</string>
     <string name="crm_create_public">Δημόσιο</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Ταξινόμηση</string>
     <string name="crm_sort_direction">Κατεύθυνση</string>
     <string name="crm_sort_rank">Χειροκίνητο</string>
-    <string name="crm_sort_number">Αριθμός</string>
     <string name="crm_sort_created">Δημιουργήθηκε</string>
     <string name="crm_sort_updated">Ενημερώθηκε</string>
     <string name="crm_create_object_title">Δημιουργία αντικειμένου</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Πίνακας</string>
     <string name="crm_views_type_list">Λίστα</string>
     <string name="crm_views_direction">Κατεύθυνση</string>
-    <string name="crm_views_sort_number">Αριθμός</string>
     <string name="crm_views_sort_created">Δημιουργήθηκε</string>
     <string name="crm_views_sort_updated">Ενημερώθηκε</string>
     <string name="crm_views_sort_rank">Κατάταξη</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID οντότητας</string>
     <string name="crm_settings_fingerprint">Αποτύπωμα</string>
     <string name="crm_settings_server">Διακομιστής</string>
+    <string name="crm_untitled">Χωρίς τίτλο</string>
 </resources>

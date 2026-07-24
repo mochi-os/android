@@ -47,9 +47,7 @@
     <string name="crm_field_position_default">Par défaut</string>
     <string name="crm_settings_tab_people">Personnes</string>
     <string name="crm_sort_label">Trier</string>
-    <string name="crm_sort_number">Numéro</string>
     <string name="crm_field_type_number">Numéro</string>
-    <string name="crm_views_sort_number">Numéro</string>
     <string name="crm_settings_tab_general">Général</string>
     <string name="crm_settings_save">Enregistrer les modifications</string>
     <string name="crm_field_save">Enregistrer les modifications</string>
@@ -132,7 +130,6 @@
     <string name="crm_list_no_matching">Aucun CRM correspondant</string>
     <string name="crm_list_empty">Aucun CRM pour le moment</string>
     <string name="crm_create_title">Créer un CRM</string>
-    <string name="crm_create_prefix">Préfixe</string>
     <string name="crm_create_template">Modèle</string>
     <string name="crm_find_title">Trouver un CRM</string>
     <string name="crm_find_search_placeholder">Rechercher un CRM ou coller une URL</string>
@@ -336,4 +333,7 @@
     <string name="crm_attachment_remove">Retirer la pièce jointe</string>
     <string name="crm_settings_entity_id">Identifiant de l\'entité</string>
     <string name="crm_settings_fingerprint">Empreinte</string>
+    <string name="crm_untitled">Sans titre</string>
+    <string name="crm_board_add_column">Ajouter une colonne</string>
+    <string name="crm_settings_server">Serveur</string>
 </resources>

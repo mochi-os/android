@@ -191,13 +191,6 @@ private fun DiscoveredCrmCard(
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(modifier = Modifier.weight(1f)) {
-                    if (crm.prefix.isNotBlank()) {
-                        Text(
-                            text = crm.prefix,
-                            style = MaterialTheme.typography.labelMedium,
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                    }
                     Text(
                         text = crm.name,
                         style = MaterialTheme.typography.titleMedium,

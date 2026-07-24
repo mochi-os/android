@@ -77,9 +77,7 @@
     <string name="crm_field_position_default">Predeterminado</string>
     <string name="crm_settings_tab_people">Personas</string>
     <string name="crm_sort_label">Ordenar</string>
-    <string name="crm_sort_number">Número</string>
     <string name="crm_field_type_number">Número</string>
-    <string name="crm_views_sort_number">Número</string>
     <string name="crm_settings_tab_general">General</string>
     <string name="crm_request_status_draft">Borrador</string>
     <string name="crm_request_field_draft">Borrador</string>
@@ -155,7 +153,6 @@
     <string name="crm_list_find">Encontrar CRM</string>
     <string name="crm_list_no_matching">Ningún CRM coincide</string>
     <string name="crm_list_empty">Aún no hay CRMs</string>
-    <string name="crm_create_prefix">Prefijo</string>
     <string name="crm_create_template">Plantilla</string>
     <string name="crm_find_title">Encontrar CRM</string>
     <string name="crm_find_search_placeholder">Buscá un CRM o pegá una URL</string>
@@ -337,4 +334,6 @@
     <string name="crm_board_add_column">Agregá una columna</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Huella digital</string>
+    <string name="crm_untitled">Sin título</string>
+    <string name="crm_settings_server">Servidor</string>
 </resources>

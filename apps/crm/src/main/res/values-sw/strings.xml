@@ -11,7 +11,6 @@
     <string name="crm_create_title">Unda mradi</string>
     <string name="crm_create_name">Jina</string>
     <string name="crm_create_description">Maelezo</string>
-    <string name="crm_create_prefix">Kiambishi awali</string>
     <string name="crm_create_privacy">Faragha</string>
     <string name="crm_create_private">Ya faragha</string>
     <string name="crm_create_public">Ya umma</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Panga</string>
     <string name="crm_sort_direction">Mwelekeo</string>
     <string name="crm_sort_rank">Mwongozo</string>
-    <string name="crm_sort_number">Nambari</string>
     <string name="crm_sort_created">Imeundwa</string>
     <string name="crm_sort_updated">Imesasishwa</string>
     <string name="crm_create_object_title">Unda kitu</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Ubao</string>
     <string name="crm_views_type_list">Orodha</string>
     <string name="crm_views_direction">Mwelekeo</string>
-    <string name="crm_views_sort_number">Nambari</string>
     <string name="crm_views_sort_created">Imeundwa</string>
     <string name="crm_views_sort_updated">Imesasishwa</string>
     <string name="crm_views_sort_rank">Cheo</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Kitambulisho cha kitengo</string>
     <string name="crm_settings_fingerprint">Alama ya kidole</string>
     <string name="crm_settings_server">Seva</string>
+    <string name="crm_untitled">Bila kichwa</string>
 </resources>

@@ -11,7 +11,6 @@
     <string name="crm_create_title">प्रकल्प तयार करा</string>
     <string name="crm_create_name">नाव</string>
     <string name="crm_create_description">वर्णन</string>
-    <string name="crm_create_prefix">प्रिफिक्स</string>
     <string name="crm_create_privacy">गोपनीयता</string>
     <string name="crm_create_private">खाजगी</string>
     <string name="crm_create_public">सार्वजनिक</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">क्रमवारी</string>
     <string name="crm_sort_direction">दिशा</string>
     <string name="crm_sort_rank">मॅन्युअल</string>
-    <string name="crm_sort_number">क्रमांक</string>
     <string name="crm_sort_created">तयार केले</string>
     <string name="crm_sort_updated">अपडेट केले</string>
     <string name="crm_create_object_title">ऑब्जेक्ट तयार करा</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">बोर्ड</string>
     <string name="crm_views_type_list">यादी</string>
     <string name="crm_views_direction">दिशा</string>
-    <string name="crm_views_sort_number">क्रमांक</string>
     <string name="crm_views_sort_created">तयार केले</string>
     <string name="crm_views_sort_updated">अपडेट केले</string>
     <string name="crm_views_sort_rank">क्रमांक</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">एंटिटी आयडी</string>
     <string name="crm_settings_fingerprint">बोटाचा ठसा</string>
     <string name="crm_settings_server">सर्व्हर</string>
+    <string name="crm_untitled">शीर्षकविरहित</string>
 </resources>

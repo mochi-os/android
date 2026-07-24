@@ -11,7 +11,6 @@
     <string name="crm_create_title">CRM aanmaken</string>
     <string name="crm_create_name">Naam</string>
     <string name="crm_create_description">Beschrijving</string>
-    <string name="crm_create_prefix">Prefix</string>
     <string name="crm_create_privacy">Privacy</string>
     <string name="crm_create_private">Privé</string>
     <string name="crm_create_public">Publiek</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Sorteren</string>
     <string name="crm_sort_direction">Richting</string>
     <string name="crm_sort_rank">Handmatig</string>
-    <string name="crm_sort_number">Getal</string>
     <string name="crm_sort_created">Aangemaakt</string>
     <string name="crm_sort_updated">Bijgewerkt</string>
     <string name="crm_create_object_title">Object aanmaken</string>
@@ -155,7 +153,6 @@
     <string name="crm_views_type_board">Bord</string>
     <string name="crm_views_type_list">Lijst</string>
     <string name="crm_views_direction">Richting</string>
-    <string name="crm_views_sort_number">Getal</string>
     <string name="crm_views_sort_created">Aangemaakt</string>
     <string name="crm_views_sort_updated">Bijgewerkt</string>
     <string name="crm_views_sort_rank">Rang</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entiteit-ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Naamloos</string>
 </resources>

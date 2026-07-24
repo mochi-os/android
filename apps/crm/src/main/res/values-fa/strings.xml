@@ -11,7 +11,6 @@
     <string name="crm_create_title">ساخت پروژه</string>
     <string name="crm_create_name">نام</string>
     <string name="crm_create_description">توضیحات</string>
-    <string name="crm_create_prefix">پیشوند</string>
     <string name="crm_create_privacy">حریم خصوصی</string>
     <string name="crm_create_private">خصوصی</string>
     <string name="crm_create_public">عمومی</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">مرتب‌سازی</string>
     <string name="crm_sort_direction">جهت</string>
     <string name="crm_sort_rank">دستی</string>
-    <string name="crm_sort_number">شماره</string>
     <string name="crm_sort_created">ساخته شد</string>
     <string name="crm_sort_updated">به‌روزرسانی شد</string>
     <string name="crm_create_object_title">ساخت شیء</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">تخته</string>
     <string name="crm_views_type_list">فهرست</string>
     <string name="crm_views_direction">جهت</string>
-    <string name="crm_views_sort_number">شماره</string>
     <string name="crm_views_sort_created">ساخته شد</string>
     <string name="crm_views_sort_updated">به‌روزرسانی شد</string>
     <string name="crm_views_sort_rank">رتبه</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">شناسه موجودیت</string>
     <string name="crm_settings_fingerprint">اثر انگشت</string>
     <string name="crm_settings_server">سرور</string>
+    <string name="crm_untitled">بدون عنوان</string>
 </resources>

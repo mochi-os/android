@@ -11,7 +11,6 @@
     <string name="crm_create_title">ಪ್ರಾಜೆಕ್ಟ್ ರಚಿಸಿ</string>
     <string name="crm_create_name">ಹೆಸರು</string>
     <string name="crm_create_description">ವಿವರಣೆ</string>
-    <string name="crm_create_prefix">ಪ್ರಿಫಿಕ್ಸ್</string>
     <string name="crm_create_privacy">ಗೌಪ್ಯತೆ</string>
     <string name="crm_create_private">ಖಾಸಗಿ</string>
     <string name="crm_create_public">ಸಾರ್ವಜನಿಕ</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">ವಿಂಗಡಿಸಿ</string>
     <string name="crm_sort_direction">ದಿಕ್ಕು</string>
     <string name="crm_sort_rank">ಮ್ಯಾನುಯಲ್</string>
-    <string name="crm_sort_number">ಸಂಖ್ಯೆ</string>
     <string name="crm_sort_created">ರಚಿಸಲಾಗಿದೆ</string>
     <string name="crm_sort_updated">ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="crm_create_object_title">ಆಬ್ಜೆಕ್ಟ್ ರಚಿಸಿ</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">ಬೋರ್ಡ್</string>
     <string name="crm_views_type_list">ಪಟ್ಟಿ</string>
     <string name="crm_views_direction">ದಿಕ್ಕು</string>
-    <string name="crm_views_sort_number">ಸಂಖ್ಯೆ</string>
     <string name="crm_views_sort_created">ರಚಿಸಲಾಗಿದೆ</string>
     <string name="crm_views_sort_updated">ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="crm_views_sort_rank">ರ‍್ಯಾಂಕ್</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ಎಂಟಿಟಿ ID</string>
     <string name="crm_settings_fingerprint">ಬೆರಳಚ್ಚು</string>
     <string name="crm_settings_server">ಸರ್ವರ್</string>
+    <string name="crm_untitled">ಶೀರ್ಷಿಕೆರಹಿತ</string>
 </resources>

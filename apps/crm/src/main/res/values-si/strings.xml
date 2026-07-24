@@ -11,7 +11,6 @@
     <string name="crm_create_title">CRM එකක් නිර්මාණය කරන්න</string>
     <string name="crm_create_name">නම</string>
     <string name="crm_create_description">විස්තරය</string>
-    <string name="crm_create_prefix">උපසර්ගය</string>
     <string name="crm_create_privacy">පෞද්ගලිකත්වය</string>
     <string name="crm_create_private">පෞද්ගලික</string>
     <string name="crm_create_public">ප්‍රසිද්ධ</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">වර්ග කරන්න</string>
     <string name="crm_sort_direction">දිශාව</string>
     <string name="crm_sort_rank">අතින්</string>
-    <string name="crm_sort_number">අංකය</string>
     <string name="crm_sort_created">නිර්මාණය කරන ලදී</string>
     <string name="crm_sort_updated">යාවත්කාලීන කරන ලදී</string>
     <string name="crm_create_object_title">වස්තුවක් නිර්මාණය කරන්න</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">පුවරුව</string>
     <string name="crm_views_type_list">ලැයිස්තුව</string>
     <string name="crm_views_direction">දිශාව</string>
-    <string name="crm_views_sort_number">අංකය</string>
     <string name="crm_views_sort_created">නිර්මාණය කරන ලදී</string>
     <string name="crm_views_sort_updated">යාවත්කාලීන කරන ලදී</string>
     <string name="crm_views_sort_rank">ශ්‍රේණිය</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ආයතන හැඳුනුම</string>
     <string name="crm_settings_fingerprint">ඇඟිලි සලකුණ</string>
     <string name="crm_settings_server">සේවාදායකය</string>
+    <string name="crm_untitled">මාතෘකා රහිත</string>
 </resources>

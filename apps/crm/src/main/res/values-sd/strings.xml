@@ -11,7 +11,6 @@
     <string name="crm_create_title">پروجيڪٽ ٺاهيو</string>
     <string name="crm_create_name">نالو</string>
     <string name="crm_create_description">تفصيل</string>
-    <string name="crm_create_prefix">اڳياڙي</string>
     <string name="crm_create_privacy">رازداري</string>
     <string name="crm_create_private">نجي</string>
     <string name="crm_create_public">عوامي</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">ترتيب</string>
     <string name="crm_sort_direction">هدايت</string>
     <string name="crm_sort_rank">دستي</string>
-    <string name="crm_sort_number">نمبر</string>
     <string name="crm_sort_created">ٺاهيو ويو</string>
     <string name="crm_sort_updated">اپڊيٽ ٿيو</string>
     <string name="crm_create_object_title">آبجيڪٽ ٺاهيو</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">بورڊ</string>
     <string name="crm_views_type_list">لسٽ</string>
     <string name="crm_views_direction">هدايت</string>
-    <string name="crm_views_sort_number">نمبر</string>
     <string name="crm_views_sort_created">ٺاهيو ويو</string>
     <string name="crm_views_sort_updated">اپڊيٽ ٿيو</string>
     <string name="crm_views_sort_rank">درجو</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">اينٽٽي ID</string>
     <string name="crm_settings_fingerprint">فنگر پرنٽ</string>
     <string name="crm_settings_server">سرور</string>
+    <string name="crm_untitled">بي عنوان</string>
 </resources>

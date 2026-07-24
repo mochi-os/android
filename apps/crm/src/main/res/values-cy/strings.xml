@@ -11,7 +11,6 @@
     <string name="crm_create_title">Creu prosiect</string>
     <string name="crm_create_name">Enw</string>
     <string name="crm_create_description">Disgrifiad</string>
-    <string name="crm_create_prefix">Rhagddodiad</string>
     <string name="crm_create_privacy">Preifatrwydd</string>
     <string name="crm_create_private">Preifat</string>
     <string name="crm_create_public">Cyhoeddus</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Trefnu</string>
     <string name="crm_sort_direction">Cyfeiriad</string>
     <string name="crm_sort_rank">Llawlyfr</string>
-    <string name="crm_sort_number">Rhif</string>
     <string name="crm_sort_created">Wedi\'i greu</string>
     <string name="crm_sort_updated">Wedi\'i ddiweddaru</string>
     <string name="crm_create_object_title">Creu gwrthrych</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Bwrdd</string>
     <string name="crm_views_type_list">Rhestr</string>
     <string name="crm_views_direction">Cyfeiriad</string>
-    <string name="crm_views_sort_number">Rhif</string>
     <string name="crm_views_sort_created">Wedi\'i greu</string>
     <string name="crm_views_sort_updated">Wedi\'i ddiweddaru</string>
     <string name="crm_views_sort_rank">Rheng</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID endid</string>
     <string name="crm_settings_fingerprint">Olion bysedd</string>
     <string name="crm_settings_server">Gweinydd</string>
+    <string name="crm_untitled">Heb deitl</string>
 </resources>

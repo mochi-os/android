@@ -80,16 +80,6 @@ fun GeneralTab(
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
-
-        OutlinedTextField(
-            value = uiState.prefix,
-            onValueChange = { viewModel.updatePrefix(it.uppercase()) },
-            label = { Text(stringResource(R.string.crm_create_prefix)) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth()
-        )
-
         if (uiState.error != null) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(

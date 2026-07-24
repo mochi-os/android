@@ -211,8 +211,8 @@ fun CrmListScreen(
             templates = uiState.templates,
             isCreating = uiState.isCreating,
             onDismiss = { viewModel.hideCreateDialog() },
-            onCreate = { name, description, prefix, privacy, template ->
-                viewModel.createCrm(name, description, prefix, privacy, template)
+            onCreate = { name, description, privacy, template ->
+                viewModel.createCrm(name, description, privacy, template)
             }
         )
     }

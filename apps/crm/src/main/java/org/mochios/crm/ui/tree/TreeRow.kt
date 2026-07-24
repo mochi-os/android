@@ -80,7 +80,10 @@ fun TreeRow(
     val indent = (node.depth * 24).dp
     val obj = node.obj
     val crmDetails = viewModel.uiState.value.crmDetails
-    val prefix = crmDetails?.crm?.prefix ?: ""
+    val titleFieldId = crmDetails?.classes?.find { it.id == obj.objectClass }
+        ?.title?.takeIf { it.isNotBlank() }
+    val untitled = stringResource(R.string.crm_untitled)
+    val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty().ifBlank { untitled }
     val cardFields = viewModel.getCardFields(obj.objectClass)
     val people = viewModel.uiState.value.people
 
@@ -165,19 +168,10 @@ fun TreeRow(
 
         Spacer(modifier = Modifier.width(4.dp))
 
-        // Object number
-        Text(
-            text = if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}",
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.primary
-        )
-
-        Spacer(modifier = Modifier.width(8.dp))
-
         // Title and field chips
         Column(modifier = Modifier.weight(1f)) {
             Text(
-                text = obj.readable,
+                text = title,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
                 maxLines = 1,
@@ -310,6 +304,8 @@ fun TreeRow(
                         HorizontalDivider()
                     }
                     items(possibleParents) { parent ->
+                        val parentTitleField = crmDetails?.classes?.find { it.id == parent.objectClass }
+                            ?.title?.takeIf { it.isNotBlank() }
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -321,7 +317,7 @@ fun TreeRow(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Text(
-                                text = parent.readable.ifBlank { "#${parent.number}" },
+                                text = parentTitleField?.let { parent.stringValue(it) }.orEmpty().ifBlank { untitled },
                                 style = MaterialTheme.typography.bodyMedium
                             )
                         }

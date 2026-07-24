@@ -11,7 +11,6 @@
     <string name="crm_create_title">ፕሮጀክት ፍጠር</string>
     <string name="crm_create_name">ስም</string>
     <string name="crm_create_description">መግለጫ</string>
-    <string name="crm_create_prefix">ቅድመ ቅጥያ</string>
     <string name="crm_create_privacy">ግላዊነት</string>
     <string name="crm_create_private">የግል</string>
     <string name="crm_create_public">ሕዝባዊ</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">ይደርድሩ</string>
     <string name="crm_sort_direction">አቅጣጫ</string>
     <string name="crm_sort_rank">በእጅ</string>
-    <string name="crm_sort_number">ቁጥር</string>
     <string name="crm_sort_created">ተፈጥሯል</string>
     <string name="crm_sort_updated">ተዘምኗል</string>
     <string name="crm_create_object_title">ነገር ፍጠር</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">ሰሌዳ</string>
     <string name="crm_views_type_list">ዝርዝር</string>
     <string name="crm_views_direction">አቅጣጫ</string>
-    <string name="crm_views_sort_number">ቁጥር</string>
     <string name="crm_views_sort_created">ተፈጥሯል</string>
     <string name="crm_views_sort_updated">ተዘምኗል</string>
     <string name="crm_views_sort_rank">ደረጃ</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">የአካል መለያ</string>
     <string name="crm_settings_fingerprint">ጣት አሻራ</string>
     <string name="crm_settings_server">ሰርቨር</string>
+    <string name="crm_untitled">ርዕስ የለሽ</string>
 </resources>

@@ -11,7 +11,6 @@
     <string name="crm_create_title">Ստեղծել վերահղում</string>
     <string name="crm_create_name">Անուն</string>
     <string name="crm_create_description">Նկարագրություն</string>
-    <string name="crm_create_prefix">Նախածանց</string>
     <string name="crm_create_privacy">Գաղտնիություն</string>
     <string name="crm_create_private">Մասնավոր</string>
     <string name="crm_create_public">Հանրային</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Տեսակավորել</string>
     <string name="crm_sort_direction">Ուղղություն</string>
     <string name="crm_sort_rank">Նշել բոլորը կարդացված</string>
-    <string name="crm_sort_number">Թիվ</string>
     <string name="crm_sort_created">Ստեղծված է {0}</string>
     <string name="crm_sort_updated">Թարմացված</string>
     <string name="crm_create_object_title">Ստեղծեք մեկը՝ սկսելու համար։</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Տախտակի չափ</string>
     <string name="crm_views_type_list">Ցուցակագրված է {0}</string>
     <string name="crm_views_direction">Ուղղություն</string>
-    <string name="crm_views_sort_number">Թիվ</string>
     <string name="crm_views_sort_created">Ստեղծված է {0}</string>
     <string name="crm_views_sort_updated">Թարմացված</string>
     <string name="crm_views_sort_rank">Աստիճան</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Անձի ID</string>
     <string name="crm_settings_fingerprint">Մատնահետք</string>
     <string name="crm_settings_server">Սերվեր</string>
+    <string name="crm_untitled">Անվերնագիր</string>
 </resources>

@@ -11,7 +11,6 @@
     <string name="crm_create_title">Luo projekti</string>
     <string name="crm_create_name">Nimi</string>
     <string name="crm_create_description">Kuvaus</string>
-    <string name="crm_create_prefix">Etuliite</string>
     <string name="crm_create_privacy">Yksityisyys</string>
     <string name="crm_create_private">Yksityinen</string>
     <string name="crm_create_public">Julkinen</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Lajittele</string>
     <string name="crm_sort_direction">Suunta</string>
     <string name="crm_sort_rank">Manuaalinen</string>
-    <string name="crm_sort_number">Numero</string>
     <string name="crm_sort_created">Luotu</string>
     <string name="crm_sort_updated">Päivitetty</string>
     <string name="crm_create_object_title">Luo objekti</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Lauta</string>
     <string name="crm_views_type_list">Luettelo</string>
     <string name="crm_views_direction">Suunta</string>
-    <string name="crm_views_sort_number">Numero</string>
     <string name="crm_views_sort_created">Luotu</string>
     <string name="crm_views_sort_updated">Päivitetty</string>
     <string name="crm_views_sort_rank">Sijoitus</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entiteetin tunnus</string>
     <string name="crm_settings_fingerprint">Sormenjälki</string>
     <string name="crm_settings_server">Palvelin</string>
+    <string name="crm_untitled">Nimetön</string>
 </resources>

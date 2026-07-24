@@ -43,6 +43,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
@@ -133,8 +134,10 @@ fun ObjectDetailSheet(
 
             uiState.obj != null -> {
                 val obj = uiState.obj!!
-                val prefix = crmDetails.crm.prefix
                 val objClass = crmDetails.classes.find { it.id == obj.objectClass }
+                val titleFieldId = objClass?.title?.takeIf { it.isNotBlank() }
+                val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty()
+                    .ifBlank { stringResource(R.string.crm_untitled) }
 
                 Column(modifier = Modifier.fillMaxSize()) {
                     // Header
@@ -149,9 +152,11 @@ fun ObjectDetailSheet(
                             modifier = Modifier.weight(1f)
                         ) {
                             Text(
-                                text = if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}",
+                                text = title,
                                 style = MaterialTheme.typography.labelLarge,
-                                color = MaterialTheme.colorScheme.primary
+                                color = MaterialTheme.colorScheme.primary,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
                             )
                             if (objClass != null) {
                                 Spacer(modifier = Modifier.width(8.dp))

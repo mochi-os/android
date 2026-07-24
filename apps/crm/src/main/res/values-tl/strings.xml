@@ -11,7 +11,6 @@
     <string name="crm_create_title">Gumawa ng CRM</string>
     <string name="crm_create_name">Pangalan</string>
     <string name="crm_create_description">Paglalarawan</string>
-    <string name="crm_create_prefix">Prefix</string>
     <string name="crm_create_privacy">Pagkapribado</string>
     <string name="crm_create_private">Pribado</string>
     <string name="crm_create_public">Pampubliko</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Ayusin</string>
     <string name="crm_sort_direction">Direksyon</string>
     <string name="crm_sort_rank">Manwal</string>
-    <string name="crm_sort_number">Numero</string>
     <string name="crm_sort_created">Nagawa</string>
     <string name="crm_sort_updated">Na-update</string>
     <string name="crm_create_object_title">Gumawa ng object</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Board</string>
     <string name="crm_views_type_list">Listahan</string>
     <string name="crm_views_direction">Direksyon</string>
-    <string name="crm_views_sort_number">Numero</string>
     <string name="crm_views_sort_created">Nagawa</string>
     <string name="crm_views_sort_updated">Na-update</string>
     <string name="crm_views_sort_rank">Rank</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Walang pamagat</string>
 </resources>

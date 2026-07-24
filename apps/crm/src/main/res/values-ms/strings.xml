@@ -11,7 +11,6 @@
     <string name="crm_create_title">Cipta projek</string>
     <string name="crm_create_name">Nama</string>
     <string name="crm_create_description">Penerangan</string>
-    <string name="crm_create_prefix">Prefiks</string>
     <string name="crm_create_privacy">Privasi</string>
     <string name="crm_create_private">Peribadi</string>
     <string name="crm_create_public">Awam</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Susun</string>
     <string name="crm_sort_direction">Arah</string>
     <string name="crm_sort_rank">Manual</string>
-    <string name="crm_sort_number">Nombor</string>
     <string name="crm_sort_created">Dicipta</string>
     <string name="crm_sort_updated">Dikemas kini</string>
     <string name="crm_create_object_title">Cipta objek</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Papan</string>
     <string name="crm_views_type_list">Senarai</string>
     <string name="crm_views_direction">Arah</string>
-    <string name="crm_views_sort_number">Nombor</string>
     <string name="crm_views_sort_created">Dicipta</string>
     <string name="crm_views_sort_updated">Dikemas kini</string>
     <string name="crm_views_sort_rank">Pangkat</string>
@@ -338,4 +335,5 @@
     <string name="crm_settings_entity_id">ID Entiti</string>
     <string name="crm_settings_fingerprint">Cap jari</string>
     <string name="crm_settings_server">Pelayan</string>
+    <string name="crm_untitled">Tiada tajuk</string>
 </resources>

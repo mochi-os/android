@@ -508,7 +508,6 @@ private fun SortRow(viewModel: CrmViewModel) {
 
     val builtIn = listOf(
         "rank" to stringResource(R.string.crm_sort_rank),
-        "number" to stringResource(R.string.crm_sort_number),
         "created" to stringResource(R.string.crm_sort_created),
         "updated" to stringResource(R.string.crm_sort_updated)
     )

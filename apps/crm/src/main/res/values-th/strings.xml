@@ -11,7 +11,6 @@
     <string name="crm_create_title">สร้างโครงการ</string>
     <string name="crm_create_name">ชื่อ</string>
     <string name="crm_create_description">คำอธิบาย</string>
-    <string name="crm_create_prefix">คำนำหน้า</string>
     <string name="crm_create_privacy">ความเป็นส่วนตัว</string>
     <string name="crm_create_private">ส่วนตัว</string>
     <string name="crm_create_public">สาธารณะ</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">เรียงลำดับ</string>
     <string name="crm_sort_direction">ทิศทาง</string>
     <string name="crm_sort_rank">คู่มือ</string>
-    <string name="crm_sort_number">ตัวเลข</string>
     <string name="crm_sort_created">สร้างแล้ว</string>
     <string name="crm_sort_updated">อัปเดตแล้ว</string>
     <string name="crm_create_object_title">สร้างวัตถุ</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">กระดาน</string>
     <string name="crm_views_type_list">รายการ</string>
     <string name="crm_views_direction">ทิศทาง</string>
-    <string name="crm_views_sort_number">ตัวเลข</string>
     <string name="crm_views_sort_created">สร้างแล้ว</string>
     <string name="crm_views_sort_updated">อัปเดตแล้ว</string>
     <string name="crm_views_sort_rank">อันดับ</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">เซิร์ฟเวอร์</string>
+    <string name="crm_untitled">ไม่มีชื่อ</string>
 </resources>

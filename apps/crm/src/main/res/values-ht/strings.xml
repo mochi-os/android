@@ -11,7 +11,6 @@
     <string name="crm_create_title">Kreye pwojè</string>
     <string name="crm_create_name">Non</string>
     <string name="crm_create_description">Deskripsyon</string>
-    <string name="crm_create_prefix">Prefiks</string>
     <string name="crm_create_privacy">Konfidansyalite</string>
     <string name="crm_create_private">Prive</string>
     <string name="crm_create_public">Piblik</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Klase</string>
     <string name="crm_sort_direction">Direksyon</string>
     <string name="crm_sort_rank">Manyèl</string>
-    <string name="crm_sort_number">Nimewo</string>
     <string name="crm_sort_created">Kreye</string>
     <string name="crm_sort_updated">Mete ajou</string>
     <string name="crm_create_object_title">Kreye objè</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Tablo</string>
     <string name="crm_views_type_list">Lis</string>
     <string name="crm_views_direction">Direksyon</string>
-    <string name="crm_views_sort_number">Nimewo</string>
     <string name="crm_views_sort_created">Kreye</string>
     <string name="crm_views_sort_updated">Mete ajou</string>
     <string name="crm_views_sort_rank">Klasman</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID Antite</string>
     <string name="crm_settings_fingerprint">Anprent dijital</string>
     <string name="crm_settings_server">Sèvè</string>
+    <string name="crm_untitled">San tit</string>
 </resources>

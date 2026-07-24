@@ -11,7 +11,6 @@
     <string name="crm_create_title">プロジェクトを作成</string>
     <string name="crm_create_name">名前</string>
     <string name="crm_create_description">説明</string>
-    <string name="crm_create_prefix">プレフィックス</string>
     <string name="crm_create_privacy">プライバシー</string>
     <string name="crm_create_private">非公開</string>
     <string name="crm_create_public">公開</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">並べ替え</string>
     <string name="crm_sort_direction">方向</string>
     <string name="crm_sort_rank">手動</string>
-    <string name="crm_sort_number">数値</string>
     <string name="crm_sort_created">作成日</string>
     <string name="crm_sort_updated">更新日</string>
     <string name="crm_create_object_title">オブジェクトを作成</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">ボード</string>
     <string name="crm_views_type_list">リスト</string>
     <string name="crm_views_direction">方向</string>
-    <string name="crm_views_sort_number">数値</string>
     <string name="crm_views_sort_created">作成日</string>
     <string name="crm_views_sort_updated">更新日</string>
     <string name="crm_views_sort_rank">ランク</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">エンティティ ID</string>
     <string name="crm_settings_fingerprint">フィンガープリント</string>
     <string name="crm_settings_server">サーバー</string>
+    <string name="crm_untitled">無題</string>
 </resources>

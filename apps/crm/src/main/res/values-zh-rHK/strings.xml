@@ -48,9 +48,7 @@
     <string name="crm_field_position_default">預設</string>
     <string name="crm_settings_tab_people">用戶</string>
     <string name="crm_sort_label">排序</string>
-    <string name="crm_sort_number">編號</string>
     <string name="crm_field_type_number">編號</string>
-    <string name="crm_views_sort_number">編號</string>
     <string name="crm_settings_tab_general">一般</string>
     <string name="crm_settings_save">儲存變更</string>
     <string name="crm_field_save">儲存變更</string>
@@ -125,7 +123,6 @@
     <string name="crm_list_no_matching">沒有符合的 CRM</string>
     <string name="crm_list_empty">尚未有 CRM</string>
     <string name="crm_create_title">建立 CRM</string>
-    <string name="crm_create_prefix">前綴</string>
     <string name="crm_create_template">範本</string>
     <string name="crm_find_title">尋找 CRM</string>
     <string name="crm_find_search_placeholder">搜尋 CRM 或貼上網址</string>
@@ -336,4 +333,7 @@
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_untitled">未命名</string>
+    <string name="crm_board_add_column">新增欄位</string>
+    <string name="crm_settings_server">伺服器</string>
 </resources>

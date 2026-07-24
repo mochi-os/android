@@ -11,7 +11,6 @@
     <string name="crm_create_title">Vytvoriť projekt</string>
     <string name="crm_create_name">Názov</string>
     <string name="crm_create_description">Popis</string>
-    <string name="crm_create_prefix">Predpona</string>
     <string name="crm_create_privacy">Súkromie</string>
     <string name="crm_create_private">Súkromné</string>
     <string name="crm_create_public">Verejné</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Zoradiť</string>
     <string name="crm_sort_direction">Smer</string>
     <string name="crm_sort_rank">Manuálne</string>
-    <string name="crm_sort_number">Číslo</string>
     <string name="crm_sort_created">Vytvorené</string>
     <string name="crm_sort_updated">Aktualizované</string>
     <string name="crm_create_object_title">Vytvoriť objekt</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Doska</string>
     <string name="crm_views_type_list">Zoznam</string>
     <string name="crm_views_direction">Smer</string>
-    <string name="crm_views_sort_number">Číslo</string>
     <string name="crm_views_sort_created">Vytvorené</string>
     <string name="crm_views_sort_updated">Aktualizované</string>
     <string name="crm_views_sort_rank">Poradie</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID entity</string>
     <string name="crm_settings_fingerprint">Odtlačok</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Bez názvu</string>
 </resources>

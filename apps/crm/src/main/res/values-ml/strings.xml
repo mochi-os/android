@@ -11,7 +11,6 @@
     <string name="crm_create_title">പ്രോജക്റ്റ് സൃഷ്ടിക്കുക</string>
     <string name="crm_create_name">പേര്</string>
     <string name="crm_create_description">വിവരണം</string>
-    <string name="crm_create_prefix">ഉപയോക്താക്കൾക്ക് എത്ര തവണ പോസ്റ്റ് ചെയ്യാമെന്ന് നിയന്ത്രിച്ച് സ്പാം തടയുക</string>
     <string name="crm_create_privacy">സ്വകാര്യതാ നയം</string>
     <string name="crm_create_private">തുടരുക</string>
     <string name="crm_create_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">അടുക്കുക</string>
     <string name="crm_sort_direction">ദിശ</string>
     <string name="crm_sort_rank">മാനുവൽ</string>
-    <string name="crm_sort_number">സംഖ്യ</string>
     <string name="crm_sort_created">സൃഷ്ടിച്ചു</string>
     <string name="crm_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="crm_create_object_title">ഒബ്ജക്റ്റ് സൃഷ്ടിക്കുക</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">ബോർഡ്</string>
     <string name="crm_views_type_list">ലിസ്റ്റ്</string>
     <string name="crm_views_direction">ദിശ</string>
-    <string name="crm_views_sort_number">സംഖ്യ</string>
     <string name="crm_views_sort_created">സൃഷ്ടിച്ചു</string>
     <string name="crm_views_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="crm_views_sort_rank">Rate Limiting</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">എന്റിറ്റി ID</string>
     <string name="crm_settings_fingerprint">വിരലടയാളം</string>
     <string name="crm_settings_server">സെർവർ</string>
+    <string name="crm_untitled">ശീർഷകമില്ലാത്തത്</string>
 </resources>

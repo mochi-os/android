@@ -11,7 +11,6 @@
     <string name="crm_create_title">Crea un projecte</string>
     <string name="crm_create_name">Nom</string>
     <string name="crm_create_description">Descripció</string>
-    <string name="crm_create_prefix">Prefix</string>
     <string name="crm_create_privacy">Privadesa</string>
     <string name="crm_create_private">Privat</string>
     <string name="crm_create_public">Públic</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Ordena</string>
     <string name="crm_sort_direction">Direcció</string>
     <string name="crm_sort_rank">Manual</string>
-    <string name="crm_sort_number">Número</string>
     <string name="crm_sort_created">Creat</string>
     <string name="crm_sort_updated">Actualitzat</string>
     <string name="crm_create_object_title">Crea un objecte</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Tauler</string>
     <string name="crm_views_type_list">Llista</string>
     <string name="crm_views_direction">Direcció</string>
-    <string name="crm_views_sort_number">Número</string>
     <string name="crm_views_sort_created">Creat</string>
     <string name="crm_views_sort_updated">Actualitzat</string>
     <string name="crm_views_sort_rank">Posició</string>
@@ -338,4 +335,5 @@
     <string name="crm_settings_entity_id">ID de l\'entitat</string>
     <string name="crm_settings_fingerprint">Empremta</string>
     <string name="crm_settings_server">Servidor</string>
+    <string name="crm_untitled">Sense títol</string>
 </resources>

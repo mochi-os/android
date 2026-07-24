@@ -114,6 +114,11 @@ fun CreateObjectDialog(
         if (allowedParentClasses.isEmpty()) emptyList()
         else objects.filter { it.objectClass in allowedParentClasses }
     }
+    val untitled = stringResource(R.string.crm_untitled)
+    fun parentLabel(o: CrmObject): String {
+        val titleField = classes.find { it.id == o.objectClass }?.title?.takeIf { it.isNotBlank() }
+        return titleField?.let { o.stringValue(it) }.orEmpty().ifBlank { untitled }
+    }
     var selectedParentId by remember(initialClassId) {
         mutableStateOf(presetParent.takeIf { presetParentObj != null })
     }
@@ -217,9 +222,7 @@ fun CreateObjectDialog(
                 // created from the dialog.
                 if (parentCandidates.isNotEmpty()) {
                     val selectedParentLabel = selectedParentId?.let { id ->
-                        objects.firstOrNull { it.id == id }?.let { o ->
-                            o.readable.ifBlank { o.id }
-                        } ?: id
+                        objects.firstOrNull { it.id == id }?.let { parentLabel(it) } ?: untitled
                     } ?: stringResource(R.string.crm_create_object_parent_none)
                     ExposedDropdownMenuBox(
                         expanded = parentExpanded,
@@ -248,7 +251,7 @@ fun CreateObjectDialog(
                             )
                             parentCandidates.forEach { p ->
                                 DropdownMenuItem(
-                                    text = { Text(p.readable.ifBlank { p.id }) },
+                                    text = { Text(parentLabel(p)) },
                                     onClick = {
                                         selectedParentId = p.id
                                         parentExpanded = false

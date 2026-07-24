@@ -59,7 +59,6 @@ private data class DisplayLink(
     val sectionKey: String,
     val targetId: String, // the "other" object id
     val displayTitle: String,
-    val readable: String,
     val className: String,
     // Originating direction:
     val isOutgoing: Boolean,
@@ -87,24 +86,20 @@ fun LinksSection(
     val sectionBlockedBy = stringResource(R.string.crm_links_section_blocked_by)
     val sectionDuplicates = stringResource(R.string.crm_links_section_duplicates)
     val sectionDuplicatedBy = stringResource(R.string.crm_links_section_duplicated_by)
+    val untitled = stringResource(R.string.crm_untitled)
 
     // Resolve display titles using siblingObjects + values; fall back to the
     // partial info the API returned with the link itself.
-    fun resolveTitle(otherId: String, fallback: Link): Pair<String, String> {
+    fun resolveTitle(otherId: String, fallback: Link): String {
         val sibling = uiState.siblingObjects.find { it.id == otherId }
-        val prefix = crmDetails.crm.prefix
-        val number = if (sibling != null && sibling.number != 0) sibling.number else fallback.number
-        val readable = if (prefix.isNotBlank()) "$prefix-$number" else "#$number"
         if (sibling != null) {
             val cls = crmDetails.classes.find { it.id == sibling.objectClass }
             val titleField = cls?.title.orEmpty()
             val titleVal = if (titleField.isNotBlank()) sibling.values[titleField]?.toString().orEmpty() else ""
-            val title = if (titleVal.isNotBlank()) titleVal else readable
-            return title to readable
+            return titleVal.ifBlank { untitled }
         }
         // Fallback to the link's own title field (returned by /links endpoint)
-        val title = if (fallback.title.isNotBlank()) fallback.title else readable
-        return title to readable
+        return fallback.title.ifBlank { untitled }
     }
 
     fun classNameFor(otherId: String, fallback: Link): String {
@@ -115,7 +110,7 @@ fun LinksSection(
 
     val display = mutableListOf<Pair<String, DisplayLink>>()
     for (l in uiState.outgoingLinks) {
-        val (title, readable) = resolveTitle(l.target, l)
+        val title = resolveTitle(l.target, l)
         val section = when (l.linktype) {
             "blocks" -> sectionBlocks
             "duplicates" -> sectionDuplicates
@@ -125,14 +120,13 @@ fun LinksSection(
             sectionKey = l.linktype,
             targetId = l.target,
             displayTitle = title,
-            readable = readable,
             className = classNameFor(l.target, l),
             isOutgoing = true,
             linktype = l.linktype
         ))
     }
     for (l in uiState.incomingLinks) {
-        val (title, readable) = resolveTitle(l.source, l)
+        val title = resolveTitle(l.source, l)
         // From this object's perspective, "blocks" incoming = "blocked by";
         // "duplicates" incoming = "duplicated by"; "relates" stays "relates".
         val section = when (l.linktype) {
@@ -144,7 +138,6 @@ fun LinksSection(
             sectionKey = "incoming-${l.linktype}",
             targetId = l.source,
             displayTitle = title,
-            readable = readable,
             className = classNameFor(l.source, l),
             isOutgoing = false,
             linktype = l.linktype
@@ -236,14 +229,8 @@ private fun LinkRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = link.readable,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                if (link.className.isNotBlank()) {
-                    Spacer(modifier = Modifier.width(8.dp))
+            if (link.className.isNotBlank()) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
                     AssistChip(
                         onClick = { /* type chip is decorative */ },
                         label = { Text(link.className, style = MaterialTheme.typography.labelSmall) },
@@ -285,6 +272,7 @@ private fun AddLinkSheet(
     var selectedType by remember { mutableStateOf(typeRelates.first) }
     var typeExpanded by remember { mutableStateOf(false) }
     var search by remember { mutableStateOf("") }
+    val untitled = stringResource(R.string.crm_untitled)
 
     // Build set of already-linked object ids to filter out
     val linkedIds = remember(uiState.outgoingLinks, uiState.incomingLinks, obj.id) {
@@ -298,12 +286,8 @@ private fun AddLinkSheet(
     val q = search.trim().lowercase()
     val filtered = uiState.siblingObjects
         .filter { it.id !in linkedIds }
-        .map { it to objectDisplayLabel(it, crmDetails) }
-        .filter { (_, labels) ->
-            q.isEmpty() ||
-                labels.first.lowercase().contains(q) ||
-                labels.second.lowercase().contains(q)
-        }
+        .map { it to objectDisplayLabel(it, crmDetails, untitled) }
+        .filter { (_, title) -> q.isEmpty() || title.lowercase().contains(q) }
         .take(20)
 
     ModalBottomSheet(
@@ -375,7 +359,7 @@ private fun AddLinkSheet(
                         .fillMaxWidth()
                         .heightIn(max = 280.dp)
                 ) {
-                    items(filtered) { (target, labels) ->
+                    items(filtered) { (target, title) ->
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier
@@ -391,19 +375,13 @@ private fun AddLinkSheet(
                                 }
                                 .padding(vertical = 8.dp, horizontal = 4.dp)
                         ) {
-                            Column(modifier = Modifier.weight(1f)) {
-                                Text(
-                                    text = labels.first,
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
-                                )
-                                Text(
-                                    text = labels.second,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
+                            Text(
+                                text = title,
+                                style = MaterialTheme.typography.bodyMedium,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.weight(1f)
+                            )
                         }
                         HorizontalDivider()
                     }
@@ -413,12 +391,9 @@ private fun AddLinkSheet(
     }
 }
 
-private fun objectDisplayLabel(obj: CrmObject, crmDetails: CrmDetails): Pair<String, String> {
+private fun objectDisplayLabel(obj: CrmObject, crmDetails: CrmDetails, untitled: String): String {
     val cls = crmDetails.classes.find { it.id == obj.objectClass }
     val titleField = cls?.title.orEmpty()
     val titleVal = if (titleField.isNotBlank()) obj.values[titleField]?.toString().orEmpty() else ""
-    val prefix = crmDetails.crm.prefix
-    val readable = if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}"
-    val title = if (titleVal.isNotBlank()) titleVal else readable
-    return title to readable
+    return titleVal.ifBlank { untitled }
 }

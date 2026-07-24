@@ -11,7 +11,6 @@
     <string name="crm_create_title">Proje çêbike</string>
     <string name="crm_create_name">Nav</string>
     <string name="crm_create_description">Şirove</string>
-    <string name="crm_create_prefix">Pêşgir</string>
     <string name="crm_create_privacy">Nepenî</string>
     <string name="crm_create_private">Taybet</string>
     <string name="crm_create_public">Giştî</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Rêz bike</string>
     <string name="crm_sort_direction">Arasteyî</string>
     <string name="crm_sort_rank">Destî</string>
-    <string name="crm_sort_number">Hejmar</string>
     <string name="crm_sort_created">Hat çêkirin</string>
     <string name="crm_sort_updated">Nûjen kirin</string>
     <string name="crm_create_object_title">Obje çêbike</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Tabloya</string>
     <string name="crm_views_type_list">Lîste</string>
     <string name="crm_views_direction">Arasteyî</string>
-    <string name="crm_views_sort_number">Hejmar</string>
     <string name="crm_views_sort_created">Hat çêkirin</string>
     <string name="crm_views_sort_updated">Nûjen kirin</string>
     <string name="crm_views_sort_rank">Rêz</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Nasnameya mîhengehê</string>
     <string name="crm_settings_fingerprint">Tilîya destan</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_untitled">Bê sernav</string>
 </resources>

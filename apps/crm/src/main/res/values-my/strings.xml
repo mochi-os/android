@@ -11,7 +11,6 @@
     <string name="crm_create_title">CRM ဖန်တီးမည်</string>
     <string name="crm_create_name">အမည်</string>
     <string name="crm_create_description">ဖော်ပြချက်</string>
-    <string name="crm_create_prefix">ရှေ့ဆက်</string>
     <string name="crm_create_privacy">ကိုယ်ရေးကိုယ်တာ</string>
     <string name="crm_create_private">သီးသန့်</string>
     <string name="crm_create_public">အများသုံး</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">စီမည်</string>
     <string name="crm_sort_direction">ဦးတည်ရာ</string>
     <string name="crm_sort_rank">ကိုယ်တိုင်</string>
-    <string name="crm_sort_number">နံပါတ်</string>
     <string name="crm_sort_created">ဖန်တီးပြီး</string>
     <string name="crm_sort_updated">အပ်ဒိတ်လုပ်ပြီး</string>
     <string name="crm_create_object_title">object ဖန်တီးမည်</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">ဘုတ်</string>
     <string name="crm_views_type_list">စာရင်း</string>
     <string name="crm_views_direction">ဦးတည်ရာ</string>
-    <string name="crm_views_sort_number">နံပါတ်</string>
     <string name="crm_views_sort_created">ဖန်တီးပြီး</string>
     <string name="crm_views_sort_updated">အပ်ဒိတ်လုပ်ပြီး</string>
     <string name="crm_views_sort_rank">Rank</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">အကောင့် ID</string>
     <string name="crm_settings_fingerprint">လက်ဗွေ</string>
     <string name="crm_settings_server">ဆာဗာ</string>
+    <string name="crm_untitled">ခေါင်းစဉ်မရှိ</string>
 </resources>

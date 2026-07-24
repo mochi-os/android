@@ -11,7 +11,6 @@
     <string name="crm_create_title">Создать проект</string>
     <string name="crm_create_name">Имя</string>
     <string name="crm_create_description">Описание</string>
-    <string name="crm_create_prefix">Префикс</string>
     <string name="crm_create_privacy">Конфиденциальность</string>
     <string name="crm_create_private">Приватный</string>
     <string name="crm_create_public">Публичный</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Сортировка</string>
     <string name="crm_sort_direction">Направление</string>
     <string name="crm_sort_rank">Вручную</string>
-    <string name="crm_sort_number">Число</string>
     <string name="crm_sort_created">Создано</string>
     <string name="crm_sort_updated">Обновлено</string>
     <string name="crm_create_object_title">Создать объект</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Доска</string>
     <string name="crm_views_type_list">Список</string>
     <string name="crm_views_direction">Направление</string>
-    <string name="crm_views_sort_number">Число</string>
     <string name="crm_views_sort_created">Создано</string>
     <string name="crm_views_sort_updated">Обновлено</string>
     <string name="crm_views_sort_rank">Ранг</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Идентификатор сущности</string>
     <string name="crm_settings_fingerprint">Отпечаток</string>
     <string name="crm_settings_server">Сервер</string>
+    <string name="crm_untitled">Без названия</string>
 </resources>

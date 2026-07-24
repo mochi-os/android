@@ -11,7 +11,6 @@
     <string name="crm_create_title">Embojeguáva tembiaporã</string>
     <string name="crm_create_name">Téra</string>
     <string name="crm_create_description">Mbohekoha</string>
-    <string name="crm_create_prefix">Prefijo</string>
     <string name="crm_create_privacy">Privacidad</string>
     <string name="crm_create_private">Ñemiguáva</string>
     <string name="crm_create_public">Ojeikéva</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Embojo\'a</string>
     <string name="crm_sort_direction">Direccióna</string>
     <string name="crm_sort_rank">Manual</string>
-    <string name="crm_sort_number">Papapy</string>
     <string name="crm_sort_created">Oñembojeguáma</string>
     <string name="crm_sort_updated">Hekopyahúpyre</string>
     <string name="crm_create_object_title">Embojeguáva mba\'e</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Tablero</string>
     <string name="crm_views_type_list">Tysýi</string>
     <string name="crm_views_direction">Direccióna</string>
-    <string name="crm_views_sort_number">Papapy</string>
     <string name="crm_views_sort_created">Oñembojeguáma</string>
     <string name="crm_views_sort_updated">Hekopyahúpyre</string>
     <string name="crm_views_sort_rank">Rango</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entidad ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">Mohendaha</string>
+    <string name="crm_untitled">Téra\'ỹva</string>
 </resources>

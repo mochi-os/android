@@ -111,14 +111,13 @@ class CrmListViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(showCreateDialog = false)
     }
 
-    fun createCrm(name: String, description: String, prefix: String, privacy: String, template: String?) {
+    fun createCrm(name: String, description: String, privacy: String, template: String?) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true)
             try {
                 repository.createCrm(
                     name = name,
                     description = description.ifBlank { null },
-                    prefix = prefix.ifBlank { null },
                     privacy = privacy,
                     template = template
                 )
@@ -141,7 +140,6 @@ class CrmListViewModel @Inject constructor(
         if (query.isBlank()) return _uiState.value.crm
         return _uiState.value.crm.filter {
             it.name.lowercase().contains(query) ||
-                it.prefix.lowercase().contains(query) ||
                 it.description.lowercase().contains(query)
         }
     }

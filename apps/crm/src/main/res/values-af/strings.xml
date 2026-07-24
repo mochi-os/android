@@ -11,7 +11,6 @@
     <string name="crm_create_title">Skep projek</string>
     <string name="crm_create_name">Naam</string>
     <string name="crm_create_description">Beskrywing</string>
-    <string name="crm_create_prefix">Voorvoegsel</string>
     <string name="crm_create_privacy">Privaatheid</string>
     <string name="crm_create_private">Privaat</string>
     <string name="crm_create_public">Publiek</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Sorteer</string>
     <string name="crm_sort_direction">Rigting</string>
     <string name="crm_sort_rank">Handmatig</string>
-    <string name="crm_sort_number">Nommer</string>
     <string name="crm_sort_created">Geskep</string>
     <string name="crm_sort_updated">Opgedateer</string>
     <string name="crm_create_object_title">Skep objek</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Bord</string>
     <string name="crm_views_type_list">Lys</string>
     <string name="crm_views_direction">Rigting</string>
-    <string name="crm_views_sort_number">Nommer</string>
     <string name="crm_views_sort_created">Geskep</string>
     <string name="crm_views_sort_updated">Opgedateer</string>
     <string name="crm_views_sort_rank">Rang</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entiteit-ID</string>
     <string name="crm_settings_fingerprint">Vingerafdruk</string>
     <string name="crm_settings_server">Bediener</string>
+    <string name="crm_untitled">Sonder titel</string>
 </resources>

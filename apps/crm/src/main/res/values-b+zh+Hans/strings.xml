@@ -11,7 +11,6 @@
     <string name="crm_create_title">创建项目</string>
     <string name="crm_create_name">名称</string>
     <string name="crm_create_description">描述</string>
-    <string name="crm_create_prefix">前缀</string>
     <string name="crm_create_privacy">隐私</string>
     <string name="crm_create_private">私有</string>
     <string name="crm_create_public">公开</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">排序</string>
     <string name="crm_sort_direction">方向</string>
     <string name="crm_sort_rank">手动</string>
-    <string name="crm_sort_number">数字</string>
     <string name="crm_sort_created">已创建</string>
     <string name="crm_sort_updated">已更新</string>
     <string name="crm_create_object_title">创建对象</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">棋盘</string>
     <string name="crm_views_type_list">列表</string>
     <string name="crm_views_direction">方向</string>
-    <string name="crm_views_sort_number">数字</string>
     <string name="crm_views_sort_created">已创建</string>
     <string name="crm_views_sort_updated">已更新</string>
     <string name="crm_views_sort_rank">排名</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">实体 ID</string>
     <string name="crm_settings_fingerprint">指纹</string>
     <string name="crm_settings_server">服务器</string>
+    <string name="crm_untitled">未命名</string>
 </resources>

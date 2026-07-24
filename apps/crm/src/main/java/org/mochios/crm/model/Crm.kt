@@ -10,8 +10,6 @@ data class Crm(
     val fingerprint: String = "",
     val name: String = "",
     val description: String = "",
-    val prefix: String = "",
-    val counter: Int = 0,
     val owner: Int = 0,
     val ownername: String = "",
     val server: String? = null,

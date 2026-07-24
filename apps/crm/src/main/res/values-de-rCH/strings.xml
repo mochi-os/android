@@ -48,9 +48,7 @@
     <string name="crm_field_position_default">Standard</string>
     <string name="crm_settings_tab_people">Personen</string>
     <string name="crm_sort_label">Sortieren</string>
-    <string name="crm_sort_number">Nummer</string>
     <string name="crm_field_type_number">Nummer</string>
-    <string name="crm_views_sort_number">Nummer</string>
     <string name="crm_settings_tab_general">Allgemein</string>
     <string name="crm_settings_save">Änderungen speichern</string>
     <string name="crm_field_save">Änderungen speichern</string>
@@ -133,7 +131,6 @@
     <string name="crm_list_no_matching">Kein passendes CRM</string>
     <string name="crm_list_empty">Noch keine CRMs</string>
     <string name="crm_create_title">CRM erstellen</string>
-    <string name="crm_create_prefix">Präfix</string>
     <string name="crm_create_template">Vorlage</string>
     <string name="crm_find_title">CRM finden</string>
     <string name="crm_find_search_placeholder">CRM suchen oder URL einfügen</string>
@@ -336,4 +333,7 @@
     <string name="crm_attachment_remove">Anhang entfernen</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerabdruck</string>
+    <string name="crm_untitled">Unbenannt</string>
+    <string name="crm_board_add_column">Spalte hinzufügen</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

@@ -49,7 +49,7 @@ data class CrmUiState(
     val isCreatingObject: Boolean = false,
     val selectedObjectId: String? = null,
     /**
-     * Sort field per view id. Field is one of "rank", "number", "created",
+     * Sort field per view id. Field is one of "rank", "created",
      * "updated", or "field:<fieldId>" matching the web sort key scheme.
      * Null entry => fall back to view.sort or "rank".
      */
@@ -184,7 +184,7 @@ class CrmViewModel @Inject constructor(
 
     /**
      * Active sort field for the current view. Mirrors the web sort key scheme:
-     * "rank" | "number" | "created" | "updated" | "field:<fieldId>".
+     * "rank" | "created" | "updated" | "field:<fieldId>".
      * Defaults to view.sort (when set) or "rank".
      */
     fun getActiveSortField(): String {
@@ -196,7 +196,7 @@ class CrmViewModel @Inject constructor(
             // view.sort stores a bare fieldId; crm it onto the field: prefix
             // unless it matches a built-in.
             return when (view.sort) {
-                "rank", "number", "created", "updated" -> view.sort
+                "rank", "created", "updated" -> view.sort
                 else -> "field:${view.sort}"
             }
         }
@@ -543,8 +543,7 @@ class CrmViewModel @Inject constructor(
         val query = state.searchQuery.lowercase()
         if (query.isNotBlank()) {
             objects = objects.filter {
-                it.readable.lowercase().contains(query) ||
-                    it.values.values.any { v -> v?.toString()?.lowercase()?.contains(query) == true }
+                it.values.values.any { v -> v?.toString()?.lowercase()?.contains(query) == true }
             }
         }
 
@@ -576,17 +575,15 @@ class CrmViewModel @Inject constructor(
         if (field == "rank") {
             return objects.sortedWith(Comparator { a, b -> a.rank.compareTo(b.rank) * multiplier })
         }
-        val numericFields = setOf("number", "created", "updated")
+        val numericFields = setOf("created", "updated")
         return if (field in numericFields) {
             objects.sortedWith(Comparator { a, b ->
                 val av = when (field) {
-                    "number" -> a.number.toLong()
                     "created" -> a.created
                     "updated" -> a.updated
                     else -> 0L
                 }
                 val bv = when (field) {
-                    "number" -> b.number.toLong()
                     "created" -> b.created
                     "updated" -> b.updated
                     else -> 0L

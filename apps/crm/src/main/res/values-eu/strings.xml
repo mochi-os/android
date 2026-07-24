@@ -11,7 +11,6 @@
     <string name="crm_create_title">Sortu proiektua</string>
     <string name="crm_create_name">Izena</string>
     <string name="crm_create_description">Deskribapena</string>
-    <string name="crm_create_prefix">Aurrizkia</string>
     <string name="crm_create_privacy">Pribatutasuna</string>
     <string name="crm_create_private">Pribatua</string>
     <string name="crm_create_public">Publikoa</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Ordenatu</string>
     <string name="crm_sort_direction">Norabidea</string>
     <string name="crm_sort_rank">Eskuz</string>
-    <string name="crm_sort_number">Zenbakia</string>
     <string name="crm_sort_created">Sortua</string>
     <string name="crm_sort_updated">Eguneratuta</string>
     <string name="crm_create_object_title">Sortu objektua</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Taula</string>
     <string name="crm_views_type_list">Zerrenda</string>
     <string name="crm_views_direction">Norabidea</string>
-    <string name="crm_views_sort_number">Zenbakia</string>
     <string name="crm_views_sort_created">Sortua</string>
     <string name="crm_views_sort_updated">Eguneratuta</string>
     <string name="crm_views_sort_rank">Maila</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">Entitate IDa</string>
     <string name="crm_settings_fingerprint">Hatz-marka</string>
     <string name="crm_settings_server">Zerbitzaria</string>
+    <string name="crm_untitled">Izengabea</string>
 </resources>

@@ -11,7 +11,6 @@
     <string name="crm_create_title">באַשאַפֿן פּראָיעקט</string>
     <string name="crm_create_name">נאָמען</string>
     <string name="crm_create_description">באַשרײַבונג</string>
-    <string name="crm_create_prefix">פּרעפֿיקס</string>
     <string name="crm_create_privacy">פּריוואַטקײַט</string>
     <string name="crm_create_private">פּריוואַט</string>
     <string name="crm_create_public">עפֿנטלעך</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">סאָרטיר</string>
     <string name="crm_sort_direction">ריכטונג</string>
     <string name="crm_sort_rank">מאַנואַל</string>
-    <string name="crm_sort_number">נומער</string>
     <string name="crm_sort_created">באַשאַפֿן</string>
     <string name="crm_sort_updated">באַנײַט</string>
     <string name="crm_create_object_title">באַשאַפֿן אָביעקט</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">ברעט</string>
     <string name="crm_views_type_list">רשימה</string>
     <string name="crm_views_direction">ריכטונג</string>
-    <string name="crm_views_sort_number">נומער</string>
     <string name="crm_views_sort_created">באַשאַפֿן</string>
     <string name="crm_views_sort_updated">באַנײַט</string>
     <string name="crm_views_sort_rank">ראַנג</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ענטיטעט־ID</string>
     <string name="crm_settings_fingerprint">פֿינגער־אָפּדרוק</string>
     <string name="crm_settings_server">סערווער</string>
+    <string name="crm_untitled">אָן קעפּל</string>
 </resources>

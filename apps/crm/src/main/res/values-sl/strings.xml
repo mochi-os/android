@@ -11,7 +11,6 @@
     <string name="crm_create_title">Ustvari projekt</string>
     <string name="crm_create_name">Ime</string>
     <string name="crm_create_description">Opis</string>
-    <string name="crm_create_prefix">Predpona</string>
     <string name="crm_create_privacy">Zasebnost</string>
     <string name="crm_create_private">Zasebno</string>
     <string name="crm_create_public">Javno</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">Razvrsti</string>
     <string name="crm_sort_direction">Smer</string>
     <string name="crm_sort_rank">Ročno</string>
-    <string name="crm_sort_number">Številka</string>
     <string name="crm_sort_created">Ustvarjeno</string>
     <string name="crm_sort_updated">Posodobljeno</string>
     <string name="crm_create_object_title">Ustvari objekt</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Tabla</string>
     <string name="crm_views_type_list">Seznam</string>
     <string name="crm_views_direction">Smer</string>
-    <string name="crm_views_sort_number">Številka</string>
     <string name="crm_views_sort_created">Ustvarjeno</string>
     <string name="crm_views_sort_updated">Posodobljeno</string>
     <string name="crm_views_sort_rank">Uvrstitev</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ID entitete</string>
     <string name="crm_settings_fingerprint">Prstni odtis</string>
     <string name="crm_settings_server">Strežnik</string>
+    <string name="crm_untitled">Brez naslova</string>
 </resources>

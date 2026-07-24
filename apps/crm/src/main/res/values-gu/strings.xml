@@ -11,7 +11,6 @@
     <string name="crm_create_title">પ્રોજેક્ટ બનાવો</string>
     <string name="crm_create_name">નામ</string>
     <string name="crm_create_description">વર્ણન</string>
-    <string name="crm_create_prefix">પ્રીફિક્સ</string>
     <string name="crm_create_privacy">ગોપનીયતા</string>
     <string name="crm_create_private">ખાનગી</string>
     <string name="crm_create_public">જાહેર</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">સોર્ટ કરો</string>
     <string name="crm_sort_direction">દિશા</string>
     <string name="crm_sort_rank">મેન્યુઅલ</string>
-    <string name="crm_sort_number">સંખ્યા</string>
     <string name="crm_sort_created">બનાવ્યું</string>
     <string name="crm_sort_updated">અપડેટ કર્યું</string>
     <string name="crm_create_object_title">ઘટક બનાવો</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">બોર્ડ</string>
     <string name="crm_views_type_list">લિસ્ટ</string>
     <string name="crm_views_direction">દિશા</string>
-    <string name="crm_views_sort_number">સંખ્યા</string>
     <string name="crm_views_sort_created">બનાવ્યું</string>
     <string name="crm_views_sort_updated">અપડેટ કર્યું</string>
     <string name="crm_views_sort_rank">રેન્ક</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">એન્ટિટી ID</string>
     <string name="crm_settings_fingerprint">આંગળાની છાપ</string>
     <string name="crm_settings_server">સર્વર</string>
+    <string name="crm_untitled">શીર્ષક વગરનું</string>
 </resources>

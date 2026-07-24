@@ -11,7 +11,6 @@
     <string name="crm_create_title">პროექტის შექმნა</string>
     <string name="crm_create_name">სახელი</string>
     <string name="crm_create_description">აღწერა</string>
-    <string name="crm_create_prefix">პრეფიქსი</string>
     <string name="crm_create_privacy">კონფიდენციალურობა</string>
     <string name="crm_create_private">პირადი</string>
     <string name="crm_create_public">საჯარო</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">დახარისხება</string>
     <string name="crm_sort_direction">მიმართულება</string>
     <string name="crm_sort_rank">სახელმძღვანელო</string>
-    <string name="crm_sort_number">ნომერი</string>
     <string name="crm_sort_created">შექმნილია</string>
     <string name="crm_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
     <string name="crm_create_object_title">ობიექტის შექმნა</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">დაფა</string>
     <string name="crm_views_type_list">სია</string>
     <string name="crm_views_direction">მიმართულება</string>
-    <string name="crm_views_sort_number">ნომერი</string>
     <string name="crm_views_sort_created">შექმნილია</string>
     <string name="crm_views_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
     <string name="crm_views_sort_rank">რანკი</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">ერთეულის ID</string>
     <string name="crm_settings_fingerprint">ანაბეჭდი</string>
     <string name="crm_settings_server">სერვერი</string>
+    <string name="crm_untitled">შეჩერება მოხსნილია</string>
 </resources>

@@ -29,7 +29,6 @@
     <string name="crm_create_title">Create CRM</string>
     <string name="crm_create_name">Name</string>
     <string name="crm_create_description">Description</string>
-    <string name="crm_create_prefix">Prefix</string>
     <string name="crm_create_privacy">Privacy</string>
     <string name="crm_create_private">Private</string>
     <string name="crm_create_public">Public</string>
@@ -53,6 +52,7 @@
     <string name="crm_more">More</string>
     <string name="crm_settings">Settings</string>
     <string name="crm_design">Design</string>
+    <string name="crm_untitled">Untitled</string>
 
     <!-- Sort -->
     <string name="crm_sort_label">Sort</string>
@@ -61,7 +61,6 @@
     <string name="crm_sort_direction_asc">Ascending</string>
     <string name="crm_sort_direction_desc">Descending</string>
     <string name="crm_sort_rank">Manual</string>
-    <string name="crm_sort_number">Number</string>
     <string name="crm_sort_created">Created</string>
     <string name="crm_sort_updated">Updated</string>
 
@@ -384,7 +383,6 @@
     <string name="crm_views_direction_asc">Ascending</string>
     <string name="crm_views_direction_desc">Descending</string>
     <string name="crm_views_filter_classes">Filter to classes</string>
-    <string name="crm_views_sort_number">Number</string>
     <string name="crm_views_sort_created">Created</string>
     <string name="crm_views_sort_updated">Updated</string>
     <string name="crm_views_sort_rank">Rank</string>

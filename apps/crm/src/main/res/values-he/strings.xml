@@ -11,7 +11,6 @@
     <string name="crm_create_title">צור פרויקט</string>
     <string name="crm_create_name">שם</string>
     <string name="crm_create_description">תיאור</string>
-    <string name="crm_create_prefix">קידומת</string>
     <string name="crm_create_privacy">פרטיות</string>
     <string name="crm_create_private">פרטי</string>
     <string name="crm_create_public">ציבורי</string>
@@ -29,7 +28,6 @@
     <string name="crm_sort_label">מיין</string>
     <string name="crm_sort_direction">כיוון</string>
     <string name="crm_sort_rank">ידני</string>
-    <string name="crm_sort_number">מספר</string>
     <string name="crm_sort_created">נוצר</string>
     <string name="crm_sort_updated">עודכן</string>
     <string name="crm_create_object_title">צור אובייקט</string>
@@ -156,7 +154,6 @@
     <string name="crm_views_type_board">Board</string>
     <string name="crm_views_type_list">רשימה</string>
     <string name="crm_views_direction">כיוון</string>
-    <string name="crm_views_sort_number">מספר</string>
     <string name="crm_views_sort_created">נוצר</string>
     <string name="crm_views_sort_updated">עודכן</string>
     <string name="crm_views_sort_rank">דירוג</string>
@@ -336,4 +333,5 @@
     <string name="crm_settings_entity_id">מזהה ישות</string>
     <string name="crm_settings_fingerprint">טביעת אצבע</string>
     <string name="crm_settings_server">שרת</string>
+    <string name="crm_untitled">ללא כותרת</string>
 </resources>
