@@ -97,6 +97,7 @@ fun PropertiesTab(
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp)
             .padding(bottom = 16.dp)
+            .padding(top = 8.dp)
     ) {
         // Parent picker
         val allowedParentClasses = (projectDetails.hierarchy[obj.objectClass] ?: emptyList())
