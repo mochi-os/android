@@ -269,7 +269,9 @@ fun PersonPicker(
                             )
                         } else {
                             LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
-                                if (hasSelection) {
+                                // "None" clears the current pick; hidden while
+                                // searching so it doesn't sit among results.
+                                if (hasSelection && query.isBlank()) {
                                     item(key = "none") {
                                         NoneRow(onClick = {
                                             lastSelected = null
