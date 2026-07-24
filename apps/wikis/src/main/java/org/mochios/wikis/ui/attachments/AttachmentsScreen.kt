@@ -106,6 +106,7 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.Uploads
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -732,7 +733,7 @@ private fun AttachmentsGrid(
                             context = context,
                             url = "${baseURL}attachments/${attachment.id}",
                             name = attachment.name,
-                            mimeType = attachment.type.ifBlank { "application/octet-stream" },
+                            mimeType = attachment.type.ifBlank { Uploads.DEFAULT_MIME },
                             token = token,
                         )
                     }
@@ -774,7 +775,7 @@ private fun AttachmentsList(
                             context = context,
                             url = "${baseURL}attachments/${attachment.id}",
                             name = attachment.name,
-                            mimeType = attachment.type.ifBlank { "application/octet-stream" },
+                            mimeType = attachment.type.ifBlank { Uploads.DEFAULT_MIME },
                             token = token,
                         )
                     }
@@ -1132,7 +1133,7 @@ private fun startAttachmentDownload(
     val req = DownloadManager.Request(Uri.parse(url))
         .setTitle(name)
         .setDescription(context.getString(R.string.wikis_attachments_downloading))
-        .setMimeType(mimeType.ifBlank { "application/octet-stream" })
+        .setMimeType(mimeType.ifBlank { Uploads.DEFAULT_MIME })
         .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
         .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, sanitiseFilename(name))
     if (!token.isNullOrBlank()) {

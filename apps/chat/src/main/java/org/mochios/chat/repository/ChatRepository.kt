@@ -7,11 +7,9 @@ package org.mochios.chat.repository
 
 import com.google.gson.Gson
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.util.Uploads
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.api.CreateChatResponse
 import org.mochios.chat.api.DeleteMessagesResponse
@@ -69,11 +67,7 @@ class ChatRepository @Inject constructor(
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val parts = files.map { file ->
-            val mediaType = guessMediaType(file).toMediaTypeOrNull()
-            val requestFile = file.asRequestBody(mediaType)
-            MultipartBody.Part.createFormData("files", file.name, requestFile)
-        }
+        val parts = Uploads.fileParts("files", files)
         return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
     }
 
@@ -89,17 +83,7 @@ class ChatRepository @Inject constructor(
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val parts = uris.map { uri ->
-            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-            val fileName = uri.lastPathSegment?.substringAfterLast('/') ?: "file"
-            val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                ?: throw IllegalStateException("Cannot read file: $uri")
-            MultipartBody.Part.createFormData(
-                "files",
-                fileName,
-                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
-            )
-        }
+        val parts = uris.map { uri -> Uploads.uriPart(contentResolver, "files", uri) }
         return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
     }
 
@@ -145,17 +129,4 @@ class ChatRepository @Inject constructor(
 
     suspend fun search(chatId: String, query: String): SearchResponse =
         api.search(chatId, query).unwrap()
-
-    private fun guessMediaType(file: File): String {
-        val ext = file.extension.lowercase()
-        return when (ext) {
-            "jpg", "jpeg" -> "image/jpeg"
-            "png" -> "image/png"
-            "gif" -> "image/gif"
-            "webp" -> "image/webp"
-            "mp4" -> "video/mp4"
-            "pdf" -> "application/pdf"
-            else -> "application/octet-stream"
-        }
-    }
 }

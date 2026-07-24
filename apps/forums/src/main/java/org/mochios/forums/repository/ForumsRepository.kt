@@ -10,11 +10,10 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.util.Uploads
 import org.mochios.forums.api.AccessResponse
 import org.mochios.forums.api.BannerResponse
 import org.mochios.forums.api.CreateCommentResponse
@@ -167,9 +166,7 @@ class ForumsRepository @Inject constructor(
     }
 
     suspend fun createPost(forumId: String, title: String, body: String, files: List<File> = emptyList()): CreatePostResponse {
-        val parts = files.map { f ->
-            MultipartBody.Part.createFormData("attachments", f.name, f.asRequestBody(guessMediaType(f).toMediaTypeOrNull()))
-        }
+        val parts = Uploads.fileParts("attachments", files)
         val response = api.createPost(
             forum = forumId.toRequestBody(text),
             title = title.toRequestBody(text),
@@ -192,16 +189,7 @@ class ForumsRepository @Inject constructor(
         uris: List<android.net.Uri>,
         contentResolver: android.content.ContentResolver,
     ): CreatePostResponse {
-        val parts = uris.map { uri ->
-            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-            val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                ?: throw IllegalStateException("Cannot read $uri")
-            MultipartBody.Part.createFormData(
-                "attachments",
-                displayName(contentResolver, uri),
-                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
-            )
-        }
+        val parts = uris.map { uri -> Uploads.uriPart(contentResolver, "attachments", uri) }
         val response = api.createPost(
             forum = forumId.toRequestBody(text),
             title = title.toRequestBody(text),
@@ -210,20 +198,6 @@ class ForumsRepository @Inject constructor(
         ).unwrap()
         _postCreated.tryEmit(forumId)
         return response
-    }
-
-    /**
-     * Human-readable filename behind a content URI. A `content://` path segment
-     * is an opaque id, so the provider's DISPLAY_NAME column is consulted first.
-     */
-    private fun displayName(contentResolver: android.content.ContentResolver, uri: android.net.Uri): String {
-        contentResolver.query(uri, null, null, null, null)?.use { cursor ->
-            val index = cursor.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME)
-            if (index >= 0 && cursor.moveToFirst()) {
-                cursor.getString(index)?.let { name -> return name }
-            }
-        }
-        return uri.lastPathSegment?.substringAfterLast('/') ?: "file"
     }
 
     /**
@@ -243,15 +217,7 @@ class ForumsRepository @Inject constructor(
         newFileUris: List<android.net.Uri>,
         contentResolver: android.content.ContentResolver,
     ) {
-        val newParts = newFileUris.map { uri ->
-            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-            val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                ?: throw IllegalStateException("Cannot read $uri")
-            MultipartBody.Part.createFormData(
-                "attachments", displayName(contentResolver, uri),
-                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
-            )
-        }
+        val newParts = newFileUris.map { uri -> Uploads.uriPart(contentResolver, "attachments", uri) }
         val order: List<String>? = when {
             keptAttachmentIds == null && newFileUris.isEmpty() -> null
             else -> keptAttachmentIds.orEmpty() + newFileUris.indices.map { "new:$it" }
@@ -268,9 +234,7 @@ class ForumsRepository @Inject constructor(
     }
 
     suspend fun createComment(forumId: String, postId: String, body: String, parent: String? = null, files: List<File> = emptyList()): CreateCommentResponse {
-        val parts = files.map { f ->
-            MultipartBody.Part.createFormData("files", f.name, f.asRequestBody(guessMediaType(f).toMediaTypeOrNull()))
-        }
+        val parts = Uploads.fileParts("files", files)
         return api.createComment(
             forumId = forumId,
             postId = postId,
@@ -294,11 +258,7 @@ class ForumsRepository @Inject constructor(
         order: List<String>? = null,
         files: List<File> = emptyList(),
     ) {
-        val parts = files.map { f ->
-            MultipartBody.Part.createFormData(
-                "files", f.name, f.asRequestBody(guessMediaType(f).toMediaTypeOrNull())
-            )
-        }
+        val parts = Uploads.fileParts("files", files)
         val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
         api.editComment(
             forumId = forumId,
@@ -322,16 +282,7 @@ class ForumsRepository @Inject constructor(
         uris: List<android.net.Uri>,
         contentResolver: android.content.ContentResolver,
     ): CreateCommentResponse {
-        val parts = uris.map { uri ->
-            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-            val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                ?: throw IllegalStateException("Cannot read $uri")
-            MultipartBody.Part.createFormData(
-                "files",
-                displayName(contentResolver, uri),
-                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
-            )
-        }
+        val parts = uris.map { uri -> Uploads.uriPart(contentResolver, "files", uri) }
         return api.createComment(
             forumId = forumId,
             postId = postId,
@@ -352,15 +303,7 @@ class ForumsRepository @Inject constructor(
         newFileUris: List<android.net.Uri>,
         contentResolver: android.content.ContentResolver,
     ) {
-        val newParts = newFileUris.map { uri ->
-            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-            val fileName = uri.lastPathSegment?.substringAfterLast('/') ?: "file"
-            val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                ?: throw IllegalStateException("Cannot read $uri")
-            MultipartBody.Part.createFormData(
-                "files", fileName, bytes.toRequestBody(mimeType.toMediaTypeOrNull())
-            )
-        }
+        val newParts = newFileUris.map { uri -> Uploads.uriPart(contentResolver, "files", uri) }
         val order: List<String>? = when {
             keptAttachmentIds == null && newFileUris.isEmpty() -> null
             else -> keptAttachmentIds.orEmpty() + newFileUris.indices.map { "new:$it" }
@@ -501,16 +444,4 @@ class ForumsRepository @Inject constructor(
 
     suspend fun getForumTags(forumId: String): List<org.mochios.forums.api.ForumTagCount> =
         api.getForumTags(forumId).unwrap().tags
-
-    private fun guessMediaType(f: File): String {
-        return when (f.extension.lowercase()) {
-            "jpg", "jpeg" -> "image/jpeg"
-            "png" -> "image/png"
-            "gif" -> "image/gif"
-            "webp" -> "image/webp"
-            "mp4" -> "video/mp4"
-            "pdf" -> "application/pdf"
-            else -> "application/octet-stream"
-        }
-    }
 }

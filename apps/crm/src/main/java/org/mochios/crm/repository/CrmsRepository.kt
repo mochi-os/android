@@ -7,13 +7,12 @@ package org.mochios.crm.repository
 
 import com.google.gson.JsonObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
+import org.mochios.android.util.Uploads
 import org.mochios.crm.api.CrmsApi
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.FieldOption
@@ -208,12 +207,9 @@ class CrmsRepository @Inject constructor(
     suspend fun createComment(crmId: String, objectId: String, content: String, parent: String? = null, files: List<File> = emptyList()): Comment {
         val contentBody = content.toRequestBody("text/plain".toMediaTypeOrNull())
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val fileParts = files.map { file ->
-            val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-            // The server reads the multipart field "files" (mochi.attachment.save);
-            // parts named anything else are silently dropped.
-            MultipartBody.Part.createFormData("files", file.name, requestFile)
-        }
+        // The server reads the multipart field "files" (mochi.attachment.save);
+        // parts named anything else are silently dropped.
+        val fileParts = Uploads.fileParts("files", files)
         return api.createComment(crmId, objectId, contentBody, parentBody, fileParts).unwrap().comment
     }
 
@@ -231,8 +227,7 @@ class CrmsRepository @Inject constructor(
         api.getAttachments(crmId, objectId).unwrap().attachments
 
     suspend fun createAttachment(crmId: String, objectId: String, file: File): Attachment {
-        val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-        val part = MultipartBody.Part.createFormData("files", file.name, requestFile)
+        val part = Uploads.filePart("files", file)
         return api.createAttachment(crmId, objectId, part).unwrap().attachment
     }
 

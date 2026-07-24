@@ -12,9 +12,7 @@ import com.google.gson.Gson
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.ApiError
 import org.mochios.android.api.ApiException
 import org.mochios.android.api.MochiError
@@ -24,6 +22,7 @@ import org.mochios.android.api.unwrapRaw
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
+import org.mochios.android.util.Uploads
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.AccessRevokeRequest
@@ -418,8 +417,8 @@ class FeedsRepository @Inject constructor(
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
             files.forEachIndexed { index, (name, bytes) ->
-                val mediaType = fileTypes.getOrElse(index) { "application/octet-stream" }
-                multipartBody.addFormDataPart("files", name, bytes.toRequestBody(mediaType.toMediaTypeOrNull()))
+                val mediaType = fileTypes.getOrElse(index) { Uploads.DEFAULT_MIME }
+                multipartBody.addPart(Uploads.bytesPart("files", name, mediaType, bytes))
             }
             api.createPost(feedId, multipartBody.build()).unwrap()
         } catch (e: Exception) {
@@ -439,11 +438,7 @@ class FeedsRepository @Inject constructor(
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
             for (uri in uris) {
-                val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-                val fileName = getFileName(contentResolver, uri)
-                val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                    ?: throw IllegalStateException("Cannot read file")
-                multipartBody.addFormDataPart("files", fileName, bytes.toRequestBody(mimeType.toMediaTypeOrNull()))
+                multipartBody.addPart(Uploads.uriPart(contentResolver, "files", uri))
             }
             api.createPost(feedId, multipartBody.build()).unwrap()
         } catch (e: Exception) {
@@ -529,11 +524,7 @@ class FeedsRepository @Inject constructor(
             }
 
             for (uri in newFiles) {
-                val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-                val fileName = getFileName(contentResolver, uri)
-                val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                    ?: throw IllegalStateException("Cannot read file")
-                builder.addFormDataPart("files", fileName, bytes.toRequestBody(mimeType.toMediaTypeOrNull()))
+                builder.addPart(Uploads.uriPart(contentResolver, "files", uri))
             }
             api.editPost(feedId, postId, builder.build()).unwrap()
         } catch (e: Exception) {
@@ -594,11 +585,7 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("parent", parent)
             }
             for (uri in files) {
-                val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
-                val fileName = getFileName(contentResolver, uri)
-                val bytes = contentResolver.openInputStream(uri)?.readBytes()
-                    ?: throw IllegalStateException("Cannot read file")
-                builder.addFormDataPart("files", fileName, bytes.toRequestBody(mimeType.toMediaTypeOrNull()))
+                builder.addPart(Uploads.uriPart(contentResolver, "files", uri))
             }
             api.createComment(feedId, postId, builder.build()).unwrap().comment
         } catch (e: Exception) {
@@ -895,19 +882,4 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    // --- Helpers ---
-
-    private fun getFileName(contentResolver: ContentResolver, uri: Uri): String {
-        var name = "file"
-        val cursor = contentResolver.query(uri, null, null, null, null)
-        cursor?.use {
-            if (it.moveToFirst()) {
-                val nameIndex = it.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME)
-                if (nameIndex >= 0) {
-                    name = it.getString(nameIndex)
-                }
-            }
-        }
-        return name
-    }
 }

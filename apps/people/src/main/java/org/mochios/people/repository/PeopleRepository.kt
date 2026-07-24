@@ -8,10 +8,9 @@ package org.mochios.people.repository
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.util.Uploads
 import org.mochios.people.api.FriendsListResponse
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.api.PreferenceResponse
@@ -179,10 +178,8 @@ class PeopleRepository @Inject constructor(
     // The picker always re-encodes to JPEG, so the part must declare an image
     // Content-Type — the server rejects "application/octet-stream" with
     // "<slot> must be an image". Field name "file" matches the web upload.
-    private fun multipart(file: File): MultipartBody.Part {
-        val body = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
-        return MultipartBody.Part.createFormData("file", file.name, body)
-    }
+    private fun multipart(file: File): MultipartBody.Part =
+        Uploads.filePart("file", file, "image/jpeg")
 
     private fun wireType(type: GroupMemberType): String = when (type) {
         GroupMemberType.USER -> "user"
