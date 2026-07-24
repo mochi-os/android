@@ -31,6 +31,7 @@ import org.mochios.projects.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
@@ -93,6 +94,11 @@ data class MergeRequestListResponse(val requests: List<MergeRequest> = emptyList
 data class MergeRequestResponse(val request: MergeRequest = MergeRequest())
 data class PeopleResponse(val people: List<Person> = emptyList())
 data class AccessResponse(val rules: List<AccessRule> = emptyList())
+
+// Body for setting a single field value. The values endpoint expects a JSON
+// object ({"value": "…"}); form encoding fails to update some fields (e.g. the
+// due date).
+data class SetValueRequest(val value: String)
 data class ClassListResponse(val classes: List<ProjectClass> = emptyList())
 data class ClassResponse(val `class`: ProjectClass = ProjectClass())
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
@@ -302,13 +308,12 @@ interface ProjectsApi {
         @FieldMap values: Map<String, String>
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/objects/{objectId}/values/{fieldId}")
     suspend fun setValue(
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
         @Path("fieldId") fieldId: String,
-        @Field("value") value: String
+        @Body body: SetValueRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Links ----

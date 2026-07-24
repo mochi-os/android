@@ -315,6 +315,7 @@ fun TreeRow(
                             value = obj.stringValue(field.id),
                             viewModel = viewModel,
                             people = people,
+                            modifier = Modifier.alignByBaseline(),
                         )
                     }
                 }
@@ -385,11 +386,14 @@ private fun MetaValue(
     value: String,
     viewModel: ProjectViewModel,
     people: List<Person>,
+    modifier: Modifier = Modifier,
 ) {
+    // Each item aligns to its text baseline in the FlowRow (via [modifier]).
+    val rowModifier = modifier
     when (field.fieldtype) {
         "enumerated" -> {
             val option = viewModel.getAllOptionsForField(field.id).find { it.id == value }
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
                 if (option != null && option.colour.isNotBlank()) {
                     Box(
                         modifier = Modifier
@@ -405,7 +409,7 @@ private fun MetaValue(
         "user" -> {
             val person = people.find { it.id == value }
             val name = person?.name?.takeIf { it.isNotBlank() } ?: value
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
                 EntityAvatar(name = name, seed = value, size = 22.dp)
                 Spacer(modifier = Modifier.width(6.dp))
                 MetaText(name)
@@ -419,7 +423,7 @@ private fun MetaValue(
             val overdue = seconds != null &&
                 seconds > 0 &&
                 seconds < System.currentTimeMillis() / 1000
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
                 Icon(
                     Icons.Default.Schedule,
                     contentDescription = null,
@@ -445,7 +449,11 @@ private fun MetaValue(
             }
         }
 
-        else -> MetaText(value)
+        else -> {
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
+                MetaText(value)
+            }
+        }
     }
 }
 

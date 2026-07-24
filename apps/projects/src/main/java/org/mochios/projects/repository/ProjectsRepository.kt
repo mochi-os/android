@@ -7,14 +7,14 @@ package org.mochios.projects.repository
 
 import com.google.gson.JsonObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
+import org.mochios.android.util.Uploads
 import org.mochios.projects.api.ProjectsApi
+import org.mochios.projects.api.SetValueRequest
 import org.mochios.projects.model.Activity
 import org.mochios.projects.model.Branch
 import org.mochios.projects.model.FieldOption
@@ -234,7 +234,7 @@ class ProjectsRepository @Inject constructor(
     }
 
     suspend fun setValue(projectId: String, objectId: String, fieldId: String, value: String) {
-        api.setValue(projectId, objectId, fieldId, value).unwrap()
+        api.setValue(projectId, objectId, fieldId, SetValueRequest(value)).unwrap()
     }
 
     // ---- Links ----
@@ -262,12 +262,9 @@ class ProjectsRepository @Inject constructor(
     suspend fun createComment(projectId: String, objectId: String, content: String, parent: String? = null, files: List<File> = emptyList()): Comment {
         val contentBody = content.toRequestBody("text/plain".toMediaTypeOrNull())
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val fileParts = files.map { file ->
-            val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-            // The server reads the multipart field "files" (mochi.attachment.save);
-            // parts named anything else are silently dropped.
-            MultipartBody.Part.createFormData("files", file.name, requestFile)
-        }
+        // The server reads the multipart field "files" (mochi.attachment.save);
+        // parts named anything else are silently dropped.
+        val fileParts = Uploads.fileParts("files", files)
         return api.createComment(projectId, objectId, contentBody, parentBody, fileParts).unwrap().comment
     }
 
@@ -285,8 +282,7 @@ class ProjectsRepository @Inject constructor(
         api.getAttachments(projectId, objectId).unwrap().attachments
 
     suspend fun createAttachment(projectId: String, objectId: String, file: File): Attachment {
-        val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-        val part = MultipartBody.Part.createFormData("files", file.name, requestFile)
+        val part = Uploads.filePart("files", file)
         return api.createAttachment(projectId, objectId, part).unwrap().attachment
     }
 

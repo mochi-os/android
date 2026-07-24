@@ -24,10 +24,15 @@ data class Attachment(
     val fileKind: FileKind
         get() {
             val ext = name.substringAfterLast('.', "").lowercase()
+            // The kind can arrive as a MIME type ("image/png"), a bare kind
+            // ("image"), or a Mochi entity-reference name ("image:59") that has
+            // neither a slash nor a file extension — accept all three.
+            val typeKind = type.substringBefore('/').lowercase()
+            val nameKind = if (name.contains(':')) name.substringBefore(':').lowercase() else ""
             return when {
-                type.startsWith("image/") -> FileKind.IMAGE
-                type.startsWith("video/") -> FileKind.VIDEO
-                type.startsWith("audio/") || ext in AUDIO_EXTENSIONS -> FileKind.AUDIO
+                typeKind == "image" || nameKind == "image" -> FileKind.IMAGE
+                typeKind == "video" || nameKind == "video" -> FileKind.VIDEO
+                typeKind == "audio" || nameKind == "audio" || ext in AUDIO_EXTENSIONS -> FileKind.AUDIO
                 ext == "pdf" || type == "application/pdf" -> FileKind.PDF
                 ext == "doc" || ext == "docx" || type in WORD_MIME_TYPES -> FileKind.WORD
                 ext == "xls" || ext == "xlsx" || type in EXCEL_MIME_TYPES -> FileKind.EXCEL
