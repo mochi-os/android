@@ -5,11 +5,13 @@
 
 package org.mochios.projects.ui.`object`
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
@@ -18,13 +20,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -34,7 +33,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -113,15 +111,10 @@ fun LinksSection(
         return projectDetails.classes.find { it.id == classId }?.name.orEmpty()
     }
 
-    val display = mutableListOf<Pair<String, DisplayLink>>()
+    val display = mutableListOf<DisplayLink>()
     for (l in uiState.outgoingLinks) {
         val (title, readable) = resolveTitle(l.target, l)
-        val section = when (l.linktype) {
-            "blocks" -> sectionBlocks
-            "duplicates" -> sectionDuplicates
-            else -> sectionRelates
-        }
-        display.add(section to DisplayLink(
+        display.add(DisplayLink(
             sectionKey = l.linktype,
             targetId = l.target,
             displayTitle = title,
@@ -133,14 +126,7 @@ fun LinksSection(
     }
     for (l in uiState.incomingLinks) {
         val (title, readable) = resolveTitle(l.source, l)
-        // From this object's perspective, "blocks" incoming = "blocked by";
-        // "duplicates" incoming = "duplicated by"; "relates" stays "relates".
-        val section = when (l.linktype) {
-            "blocks" -> sectionBlockedBy
-            "duplicates" -> sectionDuplicatedBy
-            else -> sectionRelates
-        }
-        display.add(section to DisplayLink(
+        display.add(DisplayLink(
             sectionKey = "incoming-${l.linktype}",
             targetId = l.source,
             displayTitle = title,
@@ -151,8 +137,13 @@ fun LinksSection(
         ))
     }
 
-    val grouped = display.groupBy({ it.first }, { it.second })
-    val sectionOrder = listOf(sectionRelates, sectionBlocks, sectionBlockedBy, sectionDuplicates, sectionDuplicatedBy)
+    // Relationship label for a link, from its type and direction — "blocks" seen
+    // from the other end reads as "blocked by", likewise for "duplicates".
+    fun typeLabel(link: DisplayLink): String = when (link.linktype) {
+        "blocks" -> if (link.isOutgoing) sectionBlocks else sectionBlockedBy
+        "duplicates" -> if (link.isOutgoing) sectionDuplicates else sectionDuplicatedBy
+        else -> sectionRelates
+    }
 
     Column(modifier = Modifier.fillMaxWidth()) {
         Row(
@@ -177,30 +168,22 @@ fun LinksSection(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         } else {
-            for (section in sectionOrder) {
-                val items = grouped[section] ?: continue
-                if (items.isEmpty()) continue
-                Text(
-                    text = section,
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                for (item in items) {
-                    LinkRow(
-                        link = item,
-                        canWrite = canWrite,
-                        onClick = { onNavigateToObject(item.targetId) },
-                        onDelete = {
-                            if (item.isOutgoing) {
-                                viewModel.deleteOutgoingLink(item.targetId, item.linktype)
-                            } else {
-                                viewModel.deleteIncomingLink(item.targetId, item.linktype)
-                            }
+            // Flat list; each row carries its own type badge, so section
+            // headings are unnecessary.
+            for (item in display) {
+                LinkRow(
+                    link = item,
+                    typeLabel = typeLabel(item),
+                    canWrite = canWrite,
+                    onClick = { onNavigateToObject(item.targetId) },
+                    onDelete = {
+                        if (item.isOutgoing) {
+                            viewModel.deleteOutgoingLink(item.targetId, item.linktype)
+                        } else {
+                            viewModel.deleteIncomingLink(item.targetId, item.linktype)
                         }
-                    )
-                }
-                Spacer(modifier = Modifier.height(12.dp))
+                    }
+                )
             }
         }
     }
@@ -218,6 +201,7 @@ fun LinksSection(
 @Composable
 private fun LinkRow(
     link: DisplayLink,
+    typeLabel: String,
     canWrite: Boolean,
     onClick: () -> Unit,
     onDelete: () -> Unit
@@ -226,32 +210,23 @@ private fun LinkRow(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick() }
+            // No ripple/background on tap — the row just navigates.
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick
+            )
             .padding(vertical = 6.dp)
     ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = link.displayTitle,
-                style = MaterialTheme.typography.bodyMedium,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = link.readable,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                if (link.className.isNotBlank()) {
-                    Spacer(modifier = Modifier.width(8.dp))
-                    AssistChip(
-                        onClick = { /* type chip is decorative */ },
-                        label = { Text(link.className, style = MaterialTheme.typography.labelSmall) },
-                        colors = AssistChipDefaults.assistChipColors()
-                    )
-                }
-            }
-        }
+        LinkTypeBadge(typeLabel)
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(
+            text = link.displayTitle,
+            style = MaterialTheme.typography.bodyMedium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f)
+        )
         if (canWrite) {
             IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
                 Icon(
@@ -263,6 +238,22 @@ private fun LinkRow(
             }
         }
     }
+}
+
+/** The relationship label as a bordered, filled badge that stands out. */
+@Composable
+private fun LinkTypeBadge(label: String) {
+    val shape = RoundedCornerShape(4.dp)
+    Text(
+        text = label,
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSecondaryContainer,
+        maxLines = 1,
+        modifier = Modifier
+            .background(color = MaterialTheme.colorScheme.secondaryContainer, shape = shape)
+            .border(width = 1.dp, color = MaterialTheme.colorScheme.outlineVariant, shape = shape)
+            .padding(horizontal = 8.dp, vertical = 4.dp)
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
