@@ -54,6 +54,7 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -743,6 +744,18 @@ private fun ProjectContent(
                         }
                     }
                 )
+            }
+        },
+        floatingActionButton = {
+            // The board view creates objects from its own per-column plus
+            // buttons, so the FAB is only offered on the list views.
+            if (details != null && activeView?.viewtype != "board") {
+                FloatingActionButton(onClick = { viewModel.showCreateObjectDialog() }) {
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(R.string.projects_create_object)
+                    )
+                }
             }
         },
     ) { padding ->
