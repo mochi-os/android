@@ -6,7 +6,6 @@
 package org.mochios.forums.ui.newpost
 
 import android.net.Uri
-import android.provider.OpenableColumns
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -59,6 +58,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.forums.R
+import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 /**
@@ -228,13 +228,7 @@ fun NewPostScreen(
 private fun rememberFileName(uri: Uri, fallback: String): String {
     val context = LocalContext.current
     return remember(uri) {
-        context.contentResolver.query(uri, null, null, null, null)?.use { cursor ->
-            val index = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
-            if (index >= 0 && cursor.moveToFirst()) {
-                cursor.getString(index)?.let { name -> return@remember name }
-            }
-        }
-        uri.lastPathSegment?.substringAfterLast('/') ?: fallback
+        Uploads.fileName(context.contentResolver, uri, fallback)
     }
 }
 

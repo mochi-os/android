@@ -95,6 +95,7 @@ import org.mochios.android.ui.components.PostTagsButton as SharedPostTagsButton
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
+import org.mochios.android.util.Uploads
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -753,16 +754,20 @@ internal fun CommentInputBar(
             if (attachments.isNotEmpty()) {
                 val fileLabel = stringResource(R.string.feeds_file)
                 val removeLabel = stringResource(R.string.feeds_remove)
+                val context = LocalContext.current
                 LazyRow(
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 4.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     items(attachments) { uri ->
+                        val label = remember(uri) {
+                            Uploads.fileName(context.contentResolver, uri, fileLabel)
+                        }
                         AssistChip(
                             onClick = { onRemoveAttachment(uri) },
                             label = {
                                 Text(
-                                    uri.lastPathSegment?.takeLast(20) ?: fileLabel,
+                                    label,
                                     style = MaterialTheme.typography.labelSmall
                                 )
                             },

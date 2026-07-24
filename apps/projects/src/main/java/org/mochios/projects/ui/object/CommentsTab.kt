@@ -82,17 +82,9 @@ fun CommentsTab(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
         for (uri in uris) {
-            val inputStream = context.contentResolver.openInputStream(uri) ?: continue
-            // Use the real display name (with extension) — not the content-uri's
-            // document id — so the upload carries a filename and MIME type the
-            // server keeps, which is what lets images/docs be previewed later.
-            val fileName = Uploads.fileName(context.contentResolver, uri, defaultName)
-            val tempFile = File(context.cacheDir, fileName)
-            tempFile.outputStream().use { output ->
-                inputStream.copyTo(output)
-            }
-            inputStream.close()
-            pendingFiles.add(tempFile)
+            // Copies with the real display name + extension so the upload keeps a
+            // filename and MIME type the server can recognise (and preview) later.
+            Uploads.cacheFile(context, uri, defaultName)?.let { file -> pendingFiles.add(file) }
         }
     }
 

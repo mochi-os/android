@@ -6,6 +6,7 @@
 package org.mochios.android.util
 
 import android.content.ContentResolver
+import android.content.Context
 import android.net.Uri
 import android.provider.OpenableColumns
 import android.webkit.MimeTypeMap
@@ -28,10 +29,28 @@ object Uploads {
     /** Fallback content type when a real MIME type can't be determined. */
     const val DEFAULT_MIME = "application/octet-stream"
 
+    // Types Android's MimeTypeMap commonly omits (mainly Office formats). Kept
+    // here so a File-based upload keeps the right type instead of degrading to
+    // application/octet-stream when the extension round-trips through MimeTypeMap.
+    private val SUPPLEMENTAL_MIME_BY_EXT = mapOf(
+        "doc" to "application/msword",
+        "docx" to "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "xls" to "application/vnd.ms-excel",
+        "xlsx" to "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "ppt" to "application/vnd.ms-powerpoint",
+        "pptx" to "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        "csv" to "text/csv",
+    )
+    private val SUPPLEMENTAL_EXT_BY_MIME =
+        SUPPLEMENTAL_MIME_BY_EXT.entries.associate { (ext, mime) -> mime to ext }
+
     /** MIME type for [file], from its extension; [DEFAULT_MIME] when unknown. */
-    fun mimeType(file: File): String =
-        MimeTypeMap.getSingleton().getMimeTypeFromExtension(file.extension.lowercase())
+    fun mimeType(file: File): String {
+        val ext = file.extension.lowercase()
+        return MimeTypeMap.getSingleton().getMimeTypeFromExtension(ext)
+            ?: SUPPLEMENTAL_MIME_BY_EXT[ext]
             ?: DEFAULT_MIME
+    }
 
     /** MIME type [resolver] reports for [uri]; [DEFAULT_MIME] when unknown. */
     fun mimeType(resolver: ContentResolver, uri: Uri): String =
@@ -104,12 +123,32 @@ object Uploads {
             .substringAfterLast('/')
             .replace(':', '_')
         if (!name.contains('.')) {
-            val ext = MimeTypeMap.getSingleton()
-                .getExtensionFromMimeType(resolver.getType(uri).orEmpty())
+            val mime = resolver.getType(uri)
+            val ext = mime?.let { MimeTypeMap.getSingleton().getExtensionFromMimeType(it) }
+                ?: mime?.let { SUPPLEMENTAL_EXT_BY_MIME[it] }
             if (!ext.isNullOrBlank()) {
                 name = "$name.$ext"
             }
         }
         return name.ifBlank { fallback }
+    }
+
+    /**
+     * Copies the content behind [uri] into the app cache, named via [fileName]
+     * so it keeps a real filename and extension. Returns the temp file, or null
+     * when the uri can't be opened.
+     *
+     * This is the one copy every attachment picker should use: a hand-rolled
+     * copy that names the temp file from the uri's document id loses the
+     * extension, which then makes the upload's MIME type degrade to
+     * [DEFAULT_MIME].
+     */
+    fun cacheFile(context: Context, uri: Uri, fallbackName: String = "file"): File? {
+        val resolver = context.contentResolver
+        val target = File(context.cacheDir, fileName(resolver, uri, fallbackName))
+        return resolver.openInputStream(uri)?.use { input ->
+            target.outputStream().use { output -> input.copyTo(output) }
+            target
+        }
     }
 }

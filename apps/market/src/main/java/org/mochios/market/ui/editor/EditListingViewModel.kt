@@ -25,6 +25,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.Uploads
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Asset
 import org.mochios.market.model.Category
@@ -474,7 +475,7 @@ class EditListingViewModel @Inject constructor(
             val temps = mutableListOf<File>()
             try {
                 for (uri in uris) {
-                    val name = displayName(contentResolver, uri) ?: uri.lastPathSegment ?: "photo"
+                    val name = Uploads.fileName(contentResolver, uri, "photo")
                     val temp = File(cacheDir, "market_photo_${System.nanoTime()}_$name")
                     contentResolver.openInputStream(uri)?.use { input ->
                         FileOutputStream(temp).use { out -> input.copyTo(out) }
@@ -542,7 +543,7 @@ class EditListingViewModel @Inject constructor(
             val temps = mutableListOf<File>()
             try {
                 for (uri in uris) {
-                    val name = displayName(contentResolver, uri) ?: uri.lastPathSegment ?: "file"
+                    val name = Uploads.fileName(contentResolver, uri, "file")
                     val temp = File(cacheDir, "market_asset_${System.nanoTime()}_$name")
                     contentResolver.openInputStream(uri)?.use { input ->
                         FileOutputStream(temp).use { out -> input.copyTo(out) }
@@ -629,21 +630,6 @@ class EditListingViewModel @Inject constructor(
         }
     }
 
-    // -------------------------------- Helpers
-
-    private fun displayName(resolver: ContentResolver, uri: Uri): String? {
-        return runCatching {
-            resolver.query(
-                uri,
-                arrayOf(android.provider.OpenableColumns.DISPLAY_NAME),
-                null,
-                null,
-                null,
-            )?.use {
-                if (it.moveToFirst()) it.getString(0) else null
-            }
-        }.getOrNull()
-    }
 }
 
 /**

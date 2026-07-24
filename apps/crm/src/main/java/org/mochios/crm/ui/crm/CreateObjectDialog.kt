@@ -58,6 +58,7 @@ import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.ui.`object`.FieldEditor
 import java.io.File
+import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -135,12 +136,7 @@ fun CreateObjectDialog(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
         for (uri in uris) {
-            val input = context.contentResolver.openInputStream(uri) ?: continue
-            val name = uri.lastPathSegment?.substringAfterLast('/') ?: defaultName
-            val temp = File(context.cacheDir, name)
-            temp.outputStream().use { output -> input.copyTo(output) }
-            input.close()
-            pendingFiles.add(temp)
+            Uploads.cacheFile(context, uri, defaultName)?.let { file -> pendingFiles.add(file) }
         }
     }
 

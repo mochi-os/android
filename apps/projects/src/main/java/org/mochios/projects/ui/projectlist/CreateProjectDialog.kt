@@ -62,6 +62,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
+import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 // Derive a URL-friendly prefix from the project name: lowercase, non-alphanumeric
@@ -111,7 +112,7 @@ fun CreateProjectDialog(
                 }
                 if (content != null) {
                     backupJson = content
-                    backupName = uri.lastPathSegment
+                    backupName = Uploads.fileName(context.contentResolver, uri, "")
                 }
             }
         }

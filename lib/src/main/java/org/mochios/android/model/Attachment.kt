@@ -33,10 +33,13 @@ data class Attachment(
                 typeKind == "image" || nameKind == "image" -> FileKind.IMAGE
                 typeKind == "video" || nameKind == "video" -> FileKind.VIDEO
                 typeKind == "audio" || nameKind == "audio" || ext in AUDIO_EXTENSIONS -> FileKind.AUDIO
-                ext == "pdf" || type == "application/pdf" -> FileKind.PDF
-                ext == "doc" || ext == "docx" || type in WORD_MIME_TYPES -> FileKind.WORD
-                ext == "xls" || ext == "xlsx" || type in EXCEL_MIME_TYPES -> FileKind.EXCEL
-                ext == "txt" || type == "text/plain" -> FileKind.TEXT
+                ext == "pdf" || type == "application/pdf" || nameKind == "pdf" -> FileKind.PDF
+                ext == "doc" || ext == "docx" || type in WORD_MIME_TYPES ||
+                    nameKind in WORD_KINDS -> FileKind.WORD
+                ext == "xls" || ext == "xlsx" || type in EXCEL_MIME_TYPES ||
+                    nameKind in EXCEL_KINDS -> FileKind.EXCEL
+                ext == "txt" || type == "text/plain" || nameKind == "txt" || nameKind == "text" ->
+                    FileKind.TEXT
                 else -> FileKind.OTHER
             }
         }
@@ -58,6 +61,12 @@ data class Attachment(
             "application/vnd.ms-excel",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
+
+        // Entity-reference name prefixes ("word:12") the server may use in place
+        // of a filename or MIME type.
+        val WORD_KINDS = setOf("doc", "docx", "word")
+
+        val EXCEL_KINDS = setOf("xls", "xlsx", "excel", "spreadsheet")
     }
 }
 

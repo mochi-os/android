@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.Uploads
 import org.mochios.android.api.userMessage
 import org.mochios.android.auth.SessionManager
 import org.mochios.wikis.model.Attachment
@@ -238,7 +239,7 @@ class AttachmentsViewModel @Inject constructor(
             val tempFiles = mutableListOf<File>()
             try {
                 for (uri in uris) {
-                    val name = displayName(contentResolver, uri) ?: uri.lastPathSegment ?: "file"
+                    val name = Uploads.fileName(contentResolver, uri, "file")
                     val temp = File(cacheDir, "wiki_upload_${System.nanoTime()}_$name")
                     contentResolver.openInputStream(uri)?.use { input ->
                         FileOutputStream(temp).use { out -> input.copyTo(out) }
@@ -299,14 +300,6 @@ class AttachmentsViewModel @Inject constructor(
     }
 
     // ---------------- Helpers ----------------
-
-    private fun displayName(resolver: ContentResolver, uri: Uri): String? {
-        return runCatching {
-            resolver.query(uri, arrayOf(android.provider.OpenableColumns.DISPLAY_NAME), null, null, null)?.use {
-                if (it.moveToFirst()) it.getString(0) else null
-            }
-        }.getOrNull()
-    }
 
     private fun mergeAttachments(
         existing: List<Attachment>,

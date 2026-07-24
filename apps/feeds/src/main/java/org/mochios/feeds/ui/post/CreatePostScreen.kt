@@ -70,6 +70,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -82,6 +83,7 @@ import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
+import org.mochios.android.util.Uploads
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -440,11 +442,15 @@ fun CreatePostScreen(
                                 }
                             }
                             val fileLabel = stringResource(R.string.feeds_file)
+                            val context = LocalContext.current
+                            val label = remember(uri) {
+                                Uploads.fileName(context.contentResolver, uri, fileLabel)
+                            }
                             AssistChip(
                                 onClick = { viewModel.removeAttachment(uri) },
                                 label = {
                                     Text(
-                                        uri.lastPathSegment?.takeLast(25) ?: fileLabel,
+                                        label,
                                         style = MaterialTheme.typography.labelSmall
                                     )
                                 },

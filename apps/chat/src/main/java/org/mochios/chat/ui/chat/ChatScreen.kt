@@ -124,6 +124,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.util.Uploads
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
@@ -1421,6 +1422,8 @@ private fun ComposerBar(
     onMoveAttachment: (android.net.Uri, Int) -> Unit,
     onSend: () -> Unit,
 ) {
+    val context = LocalContext.current
+    val attachmentFallback = stringResource(R.string.chat_attachment_label)
     val filePickerLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
         contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
     ) { uris ->
@@ -1434,12 +1437,14 @@ private fun ComposerBar(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 pendingAttachments.forEachIndexed { index, uri ->
+                    val label = remember(uri) {
+                        Uploads.fileName(context.contentResolver, uri, attachmentFallback)
+                    }
                     androidx.compose.material3.AssistChip(
                         onClick = { onRemoveAttachment(uri) },
                         label = {
                             Text(
-                                uri.lastPathSegment?.takeLast(20)
-                                    ?: stringResource(R.string.chat_attachment_label),
+                                label,
                                 style = MaterialTheme.typography.labelSmall,
                             )
                         },

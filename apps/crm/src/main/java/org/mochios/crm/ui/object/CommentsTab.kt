@@ -60,6 +60,7 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
+import org.mochios.android.util.Uploads
 import org.mochios.crm.R
 import java.io.File
 import org.mochios.android.R as MochiR
@@ -89,14 +90,7 @@ fun CommentsTab(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
         for (uri in uris) {
-            val inputStream = context.contentResolver.openInputStream(uri) ?: continue
-            val fileName = uri.lastPathSegment ?: defaultName
-            val tempFile = File(context.cacheDir, fileName)
-            tempFile.outputStream().use { output ->
-                inputStream.copyTo(output)
-            }
-            inputStream.close()
-            pendingFiles.add(tempFile)
+            Uploads.cacheFile(context, uri, defaultName)?.let { file -> pendingFiles.add(file) }
         }
     }
 

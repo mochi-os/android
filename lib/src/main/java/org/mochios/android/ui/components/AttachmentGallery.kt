@@ -21,9 +21,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Article
-import androidx.compose.material.icons.automirrored.filled.InsertDriveFile
 import androidx.compose.material.icons.automirrored.filled.TextSnippet
 import androidx.compose.material.icons.filled.Audiotrack
+import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.PictureAsPdf
 import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.TableChart
@@ -322,7 +322,7 @@ private fun fileKindIcon(kind: FileKind): ImageVector = when (kind) {
     FileKind.EXCEL -> Icons.Default.TableChart
     FileKind.TEXT -> Icons.AutoMirrored.Filled.TextSnippet
     FileKind.AUDIO -> Icons.Default.Audiotrack
-    else -> Icons.AutoMirrored.Filled.InsertDriveFile
+    else -> Icons.Default.Description
 }
 
 /** Drive-style accent colour for a file kind's icon. */
