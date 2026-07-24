@@ -452,6 +452,11 @@ class ProjectViewModel @Inject constructor(
                 if (initialValues.isNotEmpty()) {
                     repository.setValues(projectId, objectId, initialValues)
                 }
+                // Reload the list before opening the sheet so the new object —
+                // with its field values, which the single-object endpoint omits —
+                // is on hand to seed the detail. Opening first would show a
+                // half-populated object until a later fetch filled it in.
+                refreshObjectsNow()
                 _uiState.value = _uiState.value.copy(
                     isCreatingObject = false,
                     showCreateObjectDialog = false,
@@ -461,7 +466,6 @@ class ProjectViewModel @Inject constructor(
                     // edited straight after creation.
                     selectedObjectId = objectId,
                 )
-                refreshObjects()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isCreatingObject = false,
@@ -506,16 +510,24 @@ class ProjectViewModel @Inject constructor(
     }
 
     private fun refreshObjects() {
-        viewModelScope.launch {
-            try {
-                val objects = repository.getObjects(projectId)
-                val watched = repository.getWatched(projectId)
-                _uiState.value = _uiState.value.copy(
-                    objects = objects,
-                    watched = watched
-                )
-            } catch (_: Exception) { }
-        }
+        viewModelScope.launch { refreshObjectsNow() }
+    }
+
+    /**
+     * Reload the object list and wait for it. The list endpoint returns each
+     * object's field values, which the single-object endpoint omits — callers
+     * that need those values present (e.g. opening a just-created object's
+     * detail) must await this rather than firing [refreshObjects].
+     */
+    private suspend fun refreshObjectsNow() {
+        try {
+            val objects = repository.getObjects(projectId)
+            val watched = repository.getWatched(projectId)
+            _uiState.value = _uiState.value.copy(
+                objects = objects,
+                watched = watched
+            )
+        } catch (_: Exception) { }
     }
 
     private fun subscribeWebSocket() {

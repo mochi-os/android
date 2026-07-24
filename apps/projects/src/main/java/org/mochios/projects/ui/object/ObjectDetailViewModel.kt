@@ -103,14 +103,19 @@ class ObjectDetailViewModel @Inject constructor(
     fun loadWithInitialObject(projectId: String, objectId: String, initialObject: ProjectObject?, access: String = "") {
         currentProjectId = projectId
         currentObjectId = objectId
-        if (initialObject != null) {
-            _uiState.value = _uiState.value.copy(obj = initialObject, access = access)
-        } else {
-            _uiState.value = _uiState.value.copy(access = access)
-        }
+        // Carry over an object only when it's the one being opened. Otherwise a
+        // detail left over from the previous selection — its number, fields,
+        // comments, activity — would render until the fetch returns. That's most
+        // visible right after a create: the new object isn't in the list yet, so
+        // initialObject is null and the stale object would otherwise show through.
+        val carried = initialObject ?: _uiState.value.obj?.takeIf { current -> current.id == objectId }
+        _uiState.value = ObjectDetailUiState(
+            obj = carried,
+            access = access,
+            isLoading = carried == null,
+        )
         subscribeWebSocket(projectId)
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = _uiState.value.obj == null, error = null)
             try {
                 val fetched = repository.getObject(projectId, objectId)
                 // The single-object endpoint doesn't return values — merge with what we have
