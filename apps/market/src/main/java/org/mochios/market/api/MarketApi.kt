@@ -258,7 +258,7 @@ interface MarketApi {
      * dialog.
      */
     @FormUrlEncoded
-    @POST("-/listings/removal_check")
+    @POST("-/listings/removal/check")
     suspend fun removalCheckListing(
         @Field("id") id: String,
     ): Response<ApiResponse<RemovalCheck>>
