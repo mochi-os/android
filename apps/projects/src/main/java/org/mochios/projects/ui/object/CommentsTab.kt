@@ -101,7 +101,48 @@ fun CommentsTab(
     }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        // Comment input
+        // Comment list — takes the remaining height so the composer stays pinned
+        // to the bottom, matching the feeds comment composer.
+        if (comments.isEmpty()) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .padding(32.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = stringResource(R.string.projects_comment_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        } else {
+            LazyColumn(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+            ) {
+                items(comments, key = { comment -> comment.id }) { comment ->
+                    CommentItem(
+                        comment = comment,
+                        depth = 0,
+                        projectId = projectId,
+                        avatarUrlBuilder = avatarUrlBuilder,
+                        onReply = { id, name ->
+                            replyToId = id
+                            replyToName = name
+                        },
+                        onEdit = onUpdateComment,
+                        onDelete = onDeleteComment
+                    )
+                }
+            }
+        }
+
+        HorizontalDivider()
+
+        // Comment input, pinned below the list
         Column(modifier = Modifier.padding(16.dp)) {
             if (replyToName != null) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -153,7 +194,7 @@ fun CommentsTab(
             ) {
                 MentionTextField(
                     value = newComment,
-                    onValueChange = { newComment = it },
+                    onValueChange = { value -> newComment = value },
                     onSearch = onSearchUsers ?: { emptyList() },
                     placeholder = { Text(stringResource(R.string.projects_comment_placeholder)) },
                     maxLines = 4,
@@ -181,41 +222,6 @@ fun CommentsTab(
                     enabled = newComment.isNotBlank() || pendingFiles.isNotEmpty()
                 ) {
                     Icon(Icons.AutoMirrored.Filled.Send, contentDescription = stringResource(R.string.projects_comment_send))
-                }
-            }
-        }
-
-        HorizontalDivider()
-
-        // Comment list
-        if (comments.isEmpty()) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(32.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = stringResource(R.string.projects_comment_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        } else {
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
-                items(comments, key = { it.id }) { comment ->
-                    CommentItem(
-                        comment = comment,
-                        depth = 0,
-                        projectId = projectId,
-                        avatarUrlBuilder = avatarUrlBuilder,
-                        onReply = { id, name ->
-                            replyToId = id
-                            replyToName = name
-                        },
-                        onEdit = onUpdateComment,
-                        onDelete = onDeleteComment
-                    )
                 }
             }
         }
