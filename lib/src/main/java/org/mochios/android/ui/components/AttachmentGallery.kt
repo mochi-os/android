@@ -17,12 +17,15 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.automirrored.filled.TextSnippet
 import androidx.compose.material.icons.filled.Audiotrack
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.PictureAsPdf
 import androidx.compose.material.icons.filled.PlayCircle
@@ -69,6 +72,7 @@ fun AttachmentGallery(
     urlBuilder: (Attachment) -> String,
     thumbnailUrlBuilder: ((Attachment) -> String)? = null,
     compact: Boolean = false,
+    onDelete: ((Attachment) -> Unit)? = null,
     modifier: Modifier = Modifier
 ) {
     if (attachments.isEmpty()) return
@@ -100,27 +104,36 @@ fun AttachmentGallery(
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (images.isNotEmpty()) {
-            if (compact) {
-                // In tight surfaces (e.g. comments), a full-width grid dwarfs the
-                // text. Render fixed-width square thumbnails that wrap instead.
+            // The wrap-thumbnail layout is used for tight surfaces (comments) and
+            // whenever a per-item delete is offered, since a delete badge needs to
+            // overlay each image (the magazine MediaGrid has no per-cell slot).
+            if (compact || onDelete != null) {
                 FlowRow(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     images.forEachIndexed { index, image ->
-                        AsyncImage(
-                            model = resolvedThumb?.let { tb -> tb(image) } ?: resolvedUrl(image),
-                            contentDescription = image.name,
-                            // Fixed height; width follows the image's aspect ratio.
-                            contentScale = ContentScale.FillHeight,
-                            modifier = Modifier
-                                .height(COMPACT_IMAGE_HEIGHT)
-                                .clip(RoundedCornerShape(10.dp))
-                                .clickable {
-                                    viewerIndex = index
-                                    showViewer = true
-                                }
-                        )
+                        Box {
+                            AsyncImage(
+                                model = resolvedThumb?.let { tb -> tb(image) } ?: resolvedUrl(image),
+                                contentDescription = image.name,
+                                // Fixed height; width follows the image's aspect ratio.
+                                contentScale = ContentScale.FillHeight,
+                                modifier = Modifier
+                                    .height(COMPACT_IMAGE_HEIGHT)
+                                    .clip(RoundedCornerShape(10.dp))
+                                    .clickable {
+                                        viewerIndex = index
+                                        showViewer = true
+                                    }
+                            )
+                            if (onDelete != null) {
+                                DeleteBadge(
+                                    onClick = { onDelete(image) },
+                                    modifier = Modifier.align(Alignment.TopEnd)
+                                )
+                            }
+                        }
                     }
                 }
             } else {
@@ -142,14 +155,16 @@ fun AttachmentGallery(
                 // The server has no video-thumbnail route, so decode a frame
                 // from the video URL itself (VideoFrameDecoder in the loader).
                 frameUrl = resolvedUrl(video),
-                onClick = { showVideoUrl = resolvedUrl(video) }
+                onClick = { showVideoUrl = resolvedUrl(video) },
+                onDelete = onDelete?.let { cb -> { cb(video) } }
             )
         }
 
         for (audio in audios) {
             AudioAttachment(
                 audio = audio,
-                url = resolvedUrl(audio)
+                url = resolvedUrl(audio),
+                onDelete = onDelete?.let { cb -> { cb(audio) } }
             )
         }
 
@@ -162,6 +177,7 @@ fun AttachmentGallery(
                     FileChip(
                         attachment = file,
                         loading = downloadingId == file.id,
+                        onDelete = onDelete?.let { cb -> { cb(file) } },
                         onClick = {
                             // One download at a time; ignore taps while busy.
                             if (downloadingId == null) {
@@ -236,7 +252,8 @@ fun AttachmentGallery(
 private fun VideoThumbnail(
     video: Attachment,
     frameUrl: String,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    onDelete: (() -> Unit)? = null
 ) {
     Box(
         modifier = Modifier
@@ -261,22 +278,35 @@ private fun VideoThumbnail(
             tint = Color.White.copy(alpha = 0.9f),
             modifier = Modifier.size(64.dp)
         )
+        if (onDelete != null) {
+            DeleteBadge(
+                onClick = onDelete,
+                modifier = Modifier.align(Alignment.TopEnd)
+            )
+        }
     }
 }
 
 @Composable
 private fun AudioAttachment(
     audio: Attachment,
-    url: String
+    url: String,
+    onDelete: (() -> Unit)? = null
 ) {
     val format = LocalFormat.current
     Column(modifier = Modifier.fillMaxWidth()) {
-        Text(
-            text = "${audio.name} (${format.formatFileSize(audio.size)})",
-            style = MaterialTheme.typography.bodySmall,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = "${audio.name} (${format.formatFileSize(audio.size)})",
+                style = MaterialTheme.typography.bodySmall,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f)
+            )
+            if (onDelete != null) {
+                DeleteIcon(onClick = onDelete)
+            }
+        }
         AudioPlayer(
             url = url,
             modifier = Modifier.fillMaxWidth()
@@ -288,7 +318,8 @@ private fun AudioAttachment(
 private fun FileChip(
     attachment: Attachment,
     loading: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    onDelete: (() -> Unit)? = null
 ) {
     val format = LocalFormat.current
     AssistChip(
@@ -311,7 +342,45 @@ private fun FileChip(
                 )
             }
         },
+        trailingIcon = onDelete?.let { cb ->
+            { DeleteIcon(onClick = cb) }
+        },
         border = null
+    )
+}
+
+/** A circular translucent delete button, overlaid on image/video thumbnails. */
+@Composable
+private fun DeleteBadge(onClick: () -> Unit, modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .padding(4.dp)
+            .size(24.dp)
+            .clip(CircleShape)
+            .background(Color.Black.copy(alpha = 0.55f))
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            imageVector = Icons.Default.Close,
+            contentDescription = stringResource(R.string.common_delete),
+            tint = Color.White,
+            modifier = Modifier.size(15.dp)
+        )
+    }
+}
+
+/** A plain error-tinted delete icon button for file/audio rows. */
+@Composable
+private fun DeleteIcon(onClick: () -> Unit) {
+    Icon(
+        imageVector = Icons.Default.Close,
+        contentDescription = stringResource(R.string.common_delete),
+        tint = MaterialTheme.colorScheme.error,
+        modifier = Modifier
+            .size(20.dp)
+            .clip(CircleShape)
+            .clickable(onClick = onClick)
     )
 }
 
