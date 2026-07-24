@@ -436,6 +436,9 @@ class ProjectViewModel @Inject constructor(
                     showCreateObjectDialog = false,
                     createObjectParent = null,
                     createObjectValues = emptyMap(),
+                    // Open the new object's detail sheet so its content can be
+                    // edited straight after creation.
+                    selectedObjectId = objectId,
                 )
                 refreshObjects()
             } catch (e: Exception) {
