@@ -24,22 +24,18 @@ data class Attachment(
     val fileKind: FileKind
         get() {
             val ext = name.substringAfterLast('.', "").lowercase()
-            // The kind can arrive as a MIME type ("image/png"), a bare kind
-            // ("image"), or a Mochi entity-reference name ("image:59") that has
-            // neither a slash nor a file extension — accept all three.
+            // The kind can arrive as a full MIME type ("image/png") or a bare
+            // kind ("image"); match on the part before any slash, with the
+            // filename extension as a fallback.
             val typeKind = type.substringBefore('/').lowercase()
-            val nameKind = if (name.contains(':')) name.substringBefore(':').lowercase() else ""
             return when {
-                typeKind == "image" || nameKind == "image" -> FileKind.IMAGE
-                typeKind == "video" || nameKind == "video" -> FileKind.VIDEO
-                typeKind == "audio" || nameKind == "audio" || ext in AUDIO_EXTENSIONS -> FileKind.AUDIO
-                ext == "pdf" || type == "application/pdf" || nameKind == "pdf" -> FileKind.PDF
-                ext == "doc" || ext == "docx" || type in WORD_MIME_TYPES ||
-                    nameKind in WORD_KINDS -> FileKind.WORD
-                ext == "xls" || ext == "xlsx" || type in EXCEL_MIME_TYPES ||
-                    nameKind in EXCEL_KINDS -> FileKind.EXCEL
-                ext == "txt" || type == "text/plain" || nameKind == "txt" || nameKind == "text" ->
-                    FileKind.TEXT
+                typeKind == "image" -> FileKind.IMAGE
+                typeKind == "video" -> FileKind.VIDEO
+                typeKind == "audio" || ext in AUDIO_EXTENSIONS -> FileKind.AUDIO
+                ext == "pdf" || type == "application/pdf" -> FileKind.PDF
+                ext == "doc" || ext == "docx" || type in WORD_MIME_TYPES -> FileKind.WORD
+                ext == "xls" || ext == "xlsx" || type in EXCEL_MIME_TYPES -> FileKind.EXCEL
+                ext == "txt" || type == "text/plain" -> FileKind.TEXT
                 else -> FileKind.OTHER
             }
         }
@@ -61,12 +57,6 @@ data class Attachment(
             "application/vnd.ms-excel",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
-
-        // Entity-reference name prefixes ("word:12") the server may use in place
-        // of a filename or MIME type.
-        val WORD_KINDS = setOf("doc", "docx", "word")
-
-        val EXCEL_KINDS = setOf("xls", "xlsx", "excel", "spreadsheet")
     }
 }
 
