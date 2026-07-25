@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">აღარ მაჩვენო</string>
     <string name="tags_none">ტეგები არ არის</string>
     <string name="tags_delete">ტეგის წაშლა</string>
+    <string name="person_picker_none">არცერთი</string>
+    <string name="person_picker_clear">არჩევის გასუფთავება</string>
+    <string name="person_picker_select">აირჩიეთ …</string>
+    <string name="person_picker_directory">ცნობარი</string>
+    <string name="person_picker_no_people">ადამიანები არ არის</string>
+    <string name="person_picker_project_members">პროექტის წევრები</string>
 </resources>

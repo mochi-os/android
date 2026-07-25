@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Umnwe wesandla: %1$s</string>
     <string name="forums_settings_clear_notifications">Cima izaziso</string>
     <string name="forums_moderation_queue_empty">Akukho nto ilindileyo</string>
-    <string name="forums_moderation_pending_posts">Izithuba ezilindileyo (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Izimvo ezilindileyo (%1$d)</string>
     <string name="forums_moderation_report_details">Iinkcukacha: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Kucombululwe ngu-%1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Akukho msebenzi womlawuli okwangoku</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Rhoxisa ukubhalisa kweli qonga</string>
     <string name="forums_share_link_title">Ikhonkco leqonga</string>
     <string name="forums_find_found_by_url">Ifunyenwe nge-URL</string>
+    <string name="forums_moderation_pending_posts">Izithuba ezilindileyo (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Izimvo ezilindileyo (%1$d)</string>
 </resources>

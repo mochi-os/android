@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Sidik jari: %1$s</string>
     <string name="forums_settings_clear_notifications">Resiki notifikasi</string>
     <string name="forums_moderation_queue_empty">Boten wonten ingkang ngantos</string>
-    <string name="forums_moderation_pending_posts">Kiriman ingkang ngantos (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Komentar ingkang ngantos (%1$d)</string>
     <string name="forums_moderation_report_details">Rincian: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Dipun rampungaken dening %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Dereng wonten kagiyatan moderator</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Mundur saka forum</string>
     <string name="forums_share_link_title">Tautan forum</string>
     <string name="forums_find_found_by_url">Ditemokake liwat URL</string>
+    <string name="forums_moderation_pending_posts">Kiriman sing ngenteni (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Komentar sing ngenteni (%1$d)</string>
 </resources>

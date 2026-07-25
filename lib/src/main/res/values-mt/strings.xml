@@ -304,4 +304,10 @@
     <string name="tags_interest_clear">Ieqaf turi</string>
     <string name="tags_none">L-ebda tikketta</string>
     <string name="tags_delete">Neħħi t-tikketta</string>
+    <string name="person_picker_none">Xejn</string>
+    <string name="person_picker_clear">Naddaf l-għażla</string>
+    <string name="person_picker_select">Agħżel …</string>
+    <string name="person_picker_directory">Direttorju</string>
+    <string name="person_picker_no_people">L-ebda persuna</string>
+    <string name="person_picker_project_members">Membri tal-proġett</string>
 </resources>

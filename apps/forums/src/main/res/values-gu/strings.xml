@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ફિંગરપ્રિન્ટ: %1$s</string>
     <string name="forums_settings_clear_notifications">સૂચનાઓ સાફ કરો</string>
     <string name="forums_moderation_queue_empty">કંઈપણ બાકી નથી</string>
-    <string name="forums_moderation_pending_posts">બાકી પોસ્ટ્સ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">બાકી ટિપ્પણીઓ (%1$d)</string>
     <string name="forums_moderation_report_details">વિગતો: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s દ્વારા ઉકેલાયું — %2$s</string>
     <string name="forums_moderation_log_empty">હજુ સુધી કોઈ મધ્યસ્થી પ્રવૃત્તિ નથી</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">ફોરમમાંથી અનસબસ્ક્રાઇબ કરો</string>
     <string name="forums_share_link_title">ફોરમ લિંક</string>
     <string name="forums_find_found_by_url">URL દ્વારા મળ્યું</string>
+    <string name="forums_moderation_pending_posts">બાકી પોસ્ટ્સ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">બાકી ટિપ્પણીઓ (%1$d)</string>
 </resources>

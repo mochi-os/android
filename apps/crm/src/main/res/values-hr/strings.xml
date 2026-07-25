@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">Otisak</string>
     <string name="crm_settings_server">Poslužitelj</string>
     <string name="crm_untitled">Bez naslova</string>
+    <string name="crm_property_select">Odaberite …</string>
 </resources>

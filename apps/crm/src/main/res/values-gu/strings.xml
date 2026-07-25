@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">આંગળાની છાપ</string>
     <string name="crm_settings_server">સર્વર</string>
     <string name="crm_untitled">શીર્ષક વગરનું</string>
+    <string name="crm_property_select">પસંદ કરો …</string>
 </resources>

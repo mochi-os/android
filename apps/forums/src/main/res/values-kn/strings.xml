@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್: %1$s</string>
     <string name="forums_settings_clear_notifications">ಅಧಿಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
     <string name="forums_moderation_queue_empty">ಬಾಕಿ ಇರುವುದು ಏನೂ ಇಲ್ಲ</string>
-    <string name="forums_moderation_pending_posts">ಬಾಕಿ ಇರುವ ಪೋಸ್ಟ್‌ಗಳು (%1$d)</string>
-    <string name="forums_moderation_pending_comments">ಬಾಕಿ ಇರುವ ಕಾಮೆಂಟ್‌ಗಳು (%1$d)</string>
     <string name="forums_moderation_report_details">ವಿವರಗಳು: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s ರಿಂದ ಪರಿಹರಿಸಲಾಗಿದೆ — %2$s</string>
     <string name="forums_moderation_log_empty">ಇನ್ನೂ ಮಾಡರೇಟರ್ ಚಟುವಟಿಕೆ ಇಲ್ಲ</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">ವೇದಿಕೆಯಿಂದ ಚಂದಾದಾರಿಕೆ ರದ್ದುಮಾಡಿ</string>
     <string name="forums_share_link_title">ವೇದಿಕೆಯ ಲಿಂಕ್</string>
     <string name="forums_find_found_by_url">URL ಮೂಲಕ ಕಂಡುಬಂದಿದೆ</string>
+    <string name="forums_moderation_pending_posts">ಬಾಕಿ ಪೋಸ್ಟ್‌ಗಳು (%1$d)</string>
+    <string name="forums_moderation_pending_comments">ಬಾಕಿ ಕಾಮೆಂಟ್‌ಗಳು (%1$d)</string>
 </resources>

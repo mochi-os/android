@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">ڕاوەستاندنی پیشاندان</string>
     <string name="tags_none">هیچ تاگێک نییە</string>
     <string name="tags_delete">لابردنی تاگ</string>
+    <string name="person_picker_none">هیچ</string>
+    <string name="person_picker_clear">پاککردنەوەی هەڵبژاردە</string>
+    <string name="person_picker_select">هەڵبژێرە …</string>
+    <string name="person_picker_directory">ڕابەر</string>
+    <string name="person_picker_no_people">کەس نییە</string>
+    <string name="person_picker_project_members">ئەندامانی پڕۆژە</string>
 </resources>

@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">پەنجەمۆر: %1$s</string>
     <string name="forums_settings_clear_notifications">پاککردنەوەی ئاگادارکردنەوەکان</string>
     <string name="forums_moderation_queue_empty">هیچ شتێک چاوەڕوان نییە</string>
-    <string name="forums_moderation_pending_posts">پۆستە چاوەڕوانەکان (%1$d)</string>
-    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$d)</string>
     <string name="forums_moderation_report_details">وردەکارییەکان: %1$s</string>
     <string name="forums_moderation_report_resolved_by">چارەسەرکراوە لەلایەن %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">هێشتا هیچ کارێکی چاودێر نییە</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">بەشداری فۆڕەم هەڵبوەشێنەوە</string>
     <string name="forums_share_link_title">بەستەری فۆڕەم</string>
     <string name="forums_find_found_by_url">بە URL دۆزرایەوە</string>
+    <string name="forums_moderation_pending_posts">بابەتە چاوەڕوانەکان (%1$d)</string>
+    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$d)</string>
 </resources>

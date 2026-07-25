@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Відбиток: %1$s</string>
     <string name="forums_settings_clear_notifications">Очистити сповіщення</string>
     <string name="forums_moderation_queue_empty">Нічого не очікує</string>
-    <string name="forums_moderation_pending_posts">Публікації на розгляді (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Коментарі на розгляді (%1$d)</string>
     <string name="forums_moderation_report_details">Подробиці: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Вирішено %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Поки немає активності модераторів</string>
@@ -304,4 +302,6 @@
     <string name="forums_settings_unsubscribe_section">Відписатися від форуму</string>
     <string name="forums_share_link_title">Посилання на форум</string>
     <string name="forums_find_found_by_url">Знайдено за URL</string>
+    <string name="forums_moderation_pending_posts">Дописи в очікуванні (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Коментарі в очікуванні (%1$d)</string>
 </resources>

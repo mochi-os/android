@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Sguir de shealltainn</string>
     <string name="tags_none">Gun tagaichean</string>
     <string name="tags_delete">Thoir an taga air falbh</string>
+    <string name="person_picker_none">Chan eil gin</string>
+    <string name="person_picker_clear">Falamhaich an taghadh</string>
+    <string name="person_picker_select">Tagh …</string>
+    <string name="person_picker_directory">Eòlaire</string>
+    <string name="person_picker_no_people">Gun daoine</string>
+    <string name="person_picker_project_members">Buill a\' phròiseict</string>
 </resources>

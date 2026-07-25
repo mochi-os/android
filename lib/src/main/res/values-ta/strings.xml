@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">காட்டுவதை நிறுத்து</string>
     <string name="tags_none">குறிச்சொற்கள் இல்லை</string>
     <string name="tags_delete">குறிச்சொல்லை அகற்றவும்</string>
+    <string name="person_picker_none">ஒன்றுமில்லை</string>
+    <string name="person_picker_clear">தேர்வை அழி</string>
+    <string name="person_picker_select">தேர்ந்தெடுக்கவும் …</string>
+    <string name="person_picker_directory">அடைவு</string>
+    <string name="person_picker_no_people">நபர்கள் இல்லை</string>
+    <string name="person_picker_project_members">திட்ட உறுப்பினர்கள்</string>
 </resources>

@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">フィンガープリント</string>
     <string name="crm_settings_server">サーバー</string>
     <string name="crm_untitled">無題</string>
+    <string name="crm_property_select">選択 …</string>
 </resources>

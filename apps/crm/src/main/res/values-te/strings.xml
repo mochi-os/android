@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">వేలిముద్ర</string>
     <string name="crm_settings_server">సర్వర్</string>
     <string name="crm_untitled">శీర్షికలేని</string>
+    <string name="crm_property_select">ఎంచుకోండి …</string>
 </resources>

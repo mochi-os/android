@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Kuãhũ: %1$s</string>
     <string name="forums_settings_clear_notifications">Embogue marandukuéra</string>
     <string name="forums_moderation_queue_empty">Ndaipóri mba\'eve oha\'arõva</string>
-    <string name="forums_moderation_pending_posts">Ñe\'ẽmondo oha\'arõva (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentario oha\'arõva (%1$d)</string>
     <string name="forums_moderation_report_details">Mombe\'upyre: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Oñembohovái %1$s rupive — %2$s</string>
     <string name="forums_moderation_log_empty">Gueteri ndaipóri moderador rembiapo</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_name_clear_cd">Embopotĩ téra</string>
     <string name="forums_settings_unsubscribe_section">Esẽ fórogui</string>
     <string name="forums_share_link_title">Fóro juajuha</string>
+    <string name="forums_moderation_pending_posts">Jehaipy oha\'ãrõva (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Ñe\'ẽ oha\'ãrõva (%1$d)</string>
 </resources>

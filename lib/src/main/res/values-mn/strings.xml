@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Харуулахаа болих</string>
     <string name="tags_none">Шошго алга</string>
     <string name="tags_delete">Шошго хасах</string>
+    <string name="person_picker_none">Алга</string>
+    <string name="person_picker_clear">Сонголтыг цэвэрлэх</string>
+    <string name="person_picker_select">Сонгоно уу …</string>
+    <string name="person_picker_directory">Лавлах</string>
+    <string name="person_picker_no_people">Хүн алга</string>
+    <string name="person_picker_project_members">Төслийн гишүүд</string>
 </resources>

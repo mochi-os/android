@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ลายนิ้วมือ: %1$s</string>
     <string name="forums_settings_clear_notifications">ล้างการแจ้งเตือน</string>
     <string name="forums_moderation_queue_empty">ไม่มีรายการที่รอดำเนินการ</string>
-    <string name="forums_moderation_pending_posts">โพสต์ที่รอดำเนินการ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">ความคิดเห็นที่รอดำเนินการ (%1$d)</string>
     <string name="forums_moderation_report_details">รายละเอียด: %1$s</string>
     <string name="forums_moderation_report_resolved_by">แก้ไขโดย %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">ยังไม่มีกิจกรรมของผู้ดูแล</string>
@@ -301,4 +299,6 @@
     <string name="forums_settings_unsubscribe_section">เลิกติดตามฟอรัม</string>
     <string name="forums_share_link_title">ลิงก์ฟอรัม</string>
     <string name="forums_find_found_by_url">พบผ่าน URL</string>
+    <string name="forums_moderation_pending_posts">โพสต์ที่รอดำเนินการ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">ความคิดเห็นที่รอดำเนินการ (%1$d)</string>
 </resources>

@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">Fingrafar</string>
     <string name="crm_settings_server">Þjónn</string>
     <string name="crm_untitled">Án titils</string>
+    <string name="crm_property_select">Veldu …</string>
 </resources>

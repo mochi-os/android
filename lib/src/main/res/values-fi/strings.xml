@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Lopeta näyttäminen</string>
     <string name="tags_none">Ei tunnisteita</string>
     <string name="tags_delete">Poista tunniste</string>
+    <string name="person_picker_none">Ei mitään</string>
+    <string name="person_picker_clear">Tyhjennä valinta</string>
+    <string name="person_picker_select">Valitse …</string>
+    <string name="person_picker_directory">Hakemisto</string>
+    <string name="person_picker_no_people">Ei henkilöitä</string>
+    <string name="person_picker_project_members">Projektin jäsenet</string>
 </resources>

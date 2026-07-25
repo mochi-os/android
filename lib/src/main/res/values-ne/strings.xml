@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">देखाउन रोक्नुहोस्</string>
     <string name="tags_none">कुनै ट्याग छैन</string>
     <string name="tags_delete">ट्याग हटाउनुहोस्</string>
+    <string name="person_picker_none">कुनै पनि होइन</string>
+    <string name="person_picker_clear">चयन खाली गर्नुहोस्</string>
+    <string name="person_picker_select">चयन गर्नुहोस् …</string>
+    <string name="person_picker_directory">निर्देशिका</string>
+    <string name="person_picker_no_people">कोही छैनन्</string>
+    <string name="person_picker_project_members">परियोजना सदस्यहरू</string>
 </resources>

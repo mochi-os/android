@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ស្នាមម្រាមដៃ: %1$s</string>
     <string name="forums_settings_clear_notifications">សម្អាតការជូនដំណឹង</string>
     <string name="forums_moderation_queue_empty">គ្មានអ្វីកំពុងរង់ចាំទេ</string>
-    <string name="forums_moderation_pending_posts">ការប្រកាសកំពុងរង់ចាំ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">មតិយោបល់កំពុងរង់ចាំ (%1$d)</string>
     <string name="forums_moderation_report_details">ព័ត៌មានលម្អិត: %1$s</string>
     <string name="forums_moderation_report_resolved_by">បានដោះស្រាយដោយ %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">មិនទាន់មានសកម្មភាពអ្នកសម្របសម្រួលទេ</string>
@@ -301,4 +299,6 @@
     <string name="forums_settings_unsubscribe_section">ឈប់ជាវវេទិកា</string>
     <string name="forums_share_link_title">តំណវេទិកា</string>
     <string name="forums_find_found_by_url">រកឃើញតាម URL</string>
+    <string name="forums_moderation_pending_posts">ការប្រកាសដែលរង់ចាំ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">មតិដែលរង់ចាំ (%1$d)</string>
 </resources>

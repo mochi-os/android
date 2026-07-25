@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Impronta: %1$s</string>
     <string name="forums_settings_clear_notifications">Cancella notifiche</string>
     <string name="forums_moderation_queue_empty">Nessun elemento in sospeso</string>
-    <string name="forums_moderation_pending_posts">Post in sospeso (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Commenti in sospeso (%1$d)</string>
     <string name="forums_moderation_report_details">Dettagli: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Risolto da %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Nessuna attività di moderazione ancora</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Annulla l\'iscrizione al forum</string>
     <string name="forums_share_link_title">Link del forum</string>
     <string name="forums_find_found_by_url">Trovato tramite URL</string>
+    <string name="forums_moderation_pending_posts">Post in attesa (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Commenti in attesa (%1$d)</string>
 </resources>

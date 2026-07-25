@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Eureunan nembongkeun</string>
     <string name="tags_none">Taya tag</string>
     <string name="tags_delete">Hapus tag</string>
+    <string name="person_picker_none">Euweuh</string>
+    <string name="person_picker_clear">Bersihkeun pilihan</string>
+    <string name="person_picker_select">Pilih …</string>
+    <string name="person_picker_directory">Diréktori</string>
+    <string name="person_picker_no_people">Teu aya jalma</string>
+    <string name="person_picker_project_members">Anggota proyék</string>
 </resources>

@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Prestať zobrazovať</string>
     <string name="tags_none">Žiadne značky</string>
     <string name="tags_delete">Odstrániť značku</string>
+    <string name="person_picker_none">Žiadne</string>
+    <string name="person_picker_clear">Zrušiť výber</string>
+    <string name="person_picker_select">Vyberte …</string>
+    <string name="person_picker_directory">Adresár</string>
+    <string name="person_picker_no_people">Žiadne osoby</string>
+    <string name="person_picker_project_members">Členovia projektu</string>
 </resources>

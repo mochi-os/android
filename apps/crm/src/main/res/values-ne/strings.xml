@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">औंलाछाप</string>
     <string name="crm_settings_server">सर्भर</string>
     <string name="crm_untitled">शीर्षकविहीन</string>
+    <string name="crm_property_select">चयन गर्नुहोस् …</string>
 </resources>

@@ -336,4 +336,5 @@
     <string name="crm_untitled">Untitled</string>
     <string name="crm_board_add_column">Add column</string>
     <string name="crm_settings_server">Server</string>
+    <string name="crm_property_select">Select …</string>
 </resources>

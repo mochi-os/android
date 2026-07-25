@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Fingerabdruck: %1$s</string>
     <string name="forums_settings_clear_notifications">Benachrichtigungen löschen</string>
     <string name="forums_moderation_queue_empty">Nichts ausstehend</string>
-    <string name="forums_moderation_pending_posts">Ausstehende Beiträge (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Ausstehende Kommentare (%1$d)</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Gelöst von %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Noch keine Moderatoraktivität</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Forum abbestellen</string>
     <string name="forums_share_link_title">Forum-Link</string>
     <string name="forums_find_found_by_url">Über URL gefunden</string>
+    <string name="forums_moderation_pending_posts">Ausstehende Beiträge (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Ausstehende Kommentare (%1$d)</string>
 </resources>

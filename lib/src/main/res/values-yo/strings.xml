@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Dáwọ́ fífihàn dúró</string>
     <string name="tags_none">Kò sí àmì</string>
     <string name="tags_delete">Yọ àmì kúrò</string>
+    <string name="person_picker_none">Kòsí</string>
+    <string name="person_picker_clear">Pa ìyàn rẹ́</string>
+    <string name="person_picker_select">Yan …</string>
+    <string name="person_picker_directory">Ìwé àkọsílẹ̀</string>
+    <string name="person_picker_no_people">Kò sí ènìyàn</string>
+    <string name="person_picker_project_members">Àwọn ọmọ ẹgbẹ́ iṣẹ́ àkanṣe</string>
 </resources>

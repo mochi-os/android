@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Barmaq izi: %1$s</string>
     <string name="forums_settings_clear_notifications">Bildirişləri təmizlə</string>
     <string name="forums_moderation_queue_empty">Gözləyən yoxdur</string>
-    <string name="forums_moderation_pending_posts">Gözləyən yazılar (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Gözləyən şərhlər (%1$d)</string>
     <string name="forums_moderation_report_details">Təfərrüatlar: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Həll edən %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Hələ moderator fəaliyyəti yoxdur</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Forumdan abunəlikdən çıx</string>
     <string name="forums_share_link_title">Forum keçidi</string>
     <string name="forums_find_found_by_url">URL ilə tapıldı</string>
+    <string name="forums_moderation_pending_posts">Gözləyən paylaşımlar (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Gözləyən şərhlər (%1$d)</string>
 </resources>

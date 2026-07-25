@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ລາຍນິ້ວມື: %1$s</string>
     <string name="forums_settings_clear_notifications">ລ້າງການແຈ້ງເຕືອນ</string>
     <string name="forums_moderation_queue_empty">ບໍ່ມີລາຍການລໍຖ້າ</string>
-    <string name="forums_moderation_pending_posts">ໂພສລໍຖ້າ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">ຄຳເຫັນລໍຖ້າ (%1$d)</string>
     <string name="forums_moderation_report_details">ລາຍລະອຽດ: %1$s</string>
     <string name="forums_moderation_report_resolved_by">ແກ້ໄຂໂດຍ %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">ຍັງບໍ່ມີກິດຈະກຳຂອງຜູ້ກວດສອບ</string>
@@ -301,4 +299,6 @@
     <string name="forums_settings_unsubscribe_section">ຍົກເລີກການຕິດຕາມເວທີ</string>
     <string name="forums_share_link_title">ລິ້ງເວທີ</string>
     <string name="forums_find_found_by_url">ພົບຜ່ານ URL</string>
+    <string name="forums_moderation_pending_posts">ໂພສທີ່ລໍຖ້າ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">ຄຳເຫັນທີ່ລໍຖ້າ (%1$d)</string>
 </resources>

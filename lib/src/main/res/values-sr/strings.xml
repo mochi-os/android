@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Prestani da prikazuješ</string>
     <string name="tags_none">Nema oznaka</string>
     <string name="tags_delete">Ukloni oznaku</string>
+    <string name="person_picker_none">Ништа</string>
+    <string name="person_picker_clear">Очисти избор</string>
+    <string name="person_picker_select">Изаберите …</string>
+    <string name="person_picker_directory">Именик</string>
+    <string name="person_picker_no_people">Нема особа</string>
+    <string name="person_picker_project_members">Чланови пројекта</string>
 </resources>

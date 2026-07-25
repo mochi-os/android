@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">指紋：%1$s</string>
     <string name="forums_settings_clear_notifications">清除通知</string>
     <string name="forums_moderation_queue_empty">沒有待處理項目</string>
-    <string name="forums_moderation_pending_posts">待處理貼文 (%1$d)</string>
-    <string name="forums_moderation_pending_comments">待處理留言 (%1$d)</string>
     <string name="forums_moderation_report_details">詳情：%1$s</string>
     <string name="forums_moderation_report_resolved_by">由 %1$s 解決 — %2$s</string>
     <string name="forums_moderation_log_empty">尚無審核活動</string>
@@ -301,4 +299,6 @@
     <string name="forums_settings_unsubscribe_section">取消訂閱論壇</string>
     <string name="forums_share_link_title">論壇連結</string>
     <string name="forums_find_found_by_url">透過網址找到</string>
+    <string name="forums_moderation_pending_posts">待處理貼文 (%1$d)</string>
+    <string name="forums_moderation_pending_comments">待處理留言 (%1$d)</string>
 </resources>

@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">지문: %1$s</string>
     <string name="forums_settings_clear_notifications">알림 지우기</string>
     <string name="forums_moderation_queue_empty">대기 중인 항목이 없습니다</string>
-    <string name="forums_moderation_pending_posts">대기 중인 게시물 (%1$d)</string>
-    <string name="forums_moderation_pending_comments">대기 중인 댓글 (%1$d)</string>
     <string name="forums_moderation_report_details">세부 정보: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s에 의해 해결됨 — %2$s</string>
     <string name="forums_moderation_log_empty">아직 모더레이터 활동이 없습니다</string>
@@ -301,4 +299,6 @@
     <string name="forums_settings_unsubscribe_section">포럼 구독 취소</string>
     <string name="forums_share_link_title">포럼 링크</string>
     <string name="forums_find_found_by_url">URL로 찾음</string>
+    <string name="forums_moderation_pending_posts">대기 중인 게시물 (%1$d)</string>
+    <string name="forums_moderation_pending_comments">대기 중인 댓글 (%1$d)</string>
 </resources>

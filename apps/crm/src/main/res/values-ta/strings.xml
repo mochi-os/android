@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">கைரேகை</string>
     <string name="crm_settings_server">சர்வர்</string>
     <string name="crm_untitled">தலைப்பிடாதது</string>
+    <string name="crm_property_select">தேர்ந்தெடுக்கவும் …</string>
 </resources>

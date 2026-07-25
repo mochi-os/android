@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">Մատնահետք</string>
     <string name="crm_settings_server">Սերվեր</string>
     <string name="crm_untitled">Անվերնագիր</string>
+    <string name="crm_property_select">Ընտրեք …</string>
 </resources>

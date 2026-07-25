@@ -145,8 +145,6 @@
     <string name="forums_moderation_tab_log">Registro</string>
     <string name="forums_moderation_tab_restrictions">Restricciones</string>
     <string name="forums_moderation_queue_empty">Nada pendiente</string>
-    <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$d)</string>
     <string name="forums_moderation_reports_pending">Pendientes</string>
     <string name="forums_moderation_reports_resolved">Resueltos</string>
     <string name="forums_moderation_reports_empty">Sin reportes</string>
@@ -298,4 +296,6 @@
     <string name="forums_saved_empty_title">Todavía no hay nada guardado</string>
     <string name="forums_saved_error_clear">No se pudieron borrar las publicaciones guardadas</string>
     <string name="forums_saved_save">Guardar para más tarde</string>
+    <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$d)</string>
 </resources>

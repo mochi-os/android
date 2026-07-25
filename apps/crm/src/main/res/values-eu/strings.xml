@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">Hatz-marka</string>
     <string name="crm_settings_server">Zerbitzaria</string>
     <string name="crm_untitled">Izengabea</string>
+    <string name="crm_property_select">Hautatu …</string>
 </resources>

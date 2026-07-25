@@ -336,4 +336,5 @@
     <string name="crm_settings_fingerprint">Empremta</string>
     <string name="crm_settings_server">Servidor</string>
     <string name="crm_untitled">Sense títol</string>
+    <string name="crm_property_select">Selecciona …</string>
 </resources>

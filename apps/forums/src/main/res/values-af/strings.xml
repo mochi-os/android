@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Vingerafdruk: %1$s</string>
     <string name="forums_settings_clear_notifications">Vee kennisgewings uit</string>
     <string name="forums_moderation_queue_empty">Niks hangende nie</string>
-    <string name="forums_moderation_pending_posts">Hangende posse (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Hangende kommentaar (%1$d)</string>
     <string name="forums_moderation_report_details">Besonderhede: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Opgelos deur %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Nog geen moderatoraktiwiteit nie</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Teken uit van forum</string>
     <string name="forums_share_link_title">Forumskakel</string>
     <string name="forums_find_found_by_url">Gevind via URL</string>
+    <string name="forums_moderation_pending_posts">Hangende plasings (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Hangende kommentare (%1$d)</string>
 </resources>

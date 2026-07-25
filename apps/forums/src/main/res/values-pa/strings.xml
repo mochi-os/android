@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ: %1$s</string>
     <string name="forums_settings_clear_notifications">ਸੂਚਨਾਵਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="forums_moderation_queue_empty">ਕੁਝ ਵੀ ਬਕਾਇਆ ਨਹੀਂ</string>
-    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$d)</string>
     <string name="forums_moderation_report_details">ਵੇਰਵਾ: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s ਦੁਆਰਾ ਹੱਲ ਕੀਤਾ ਗਿਆ — %2$s</string>
     <string name="forums_moderation_log_empty">ਅਜੇ ਕੋਈ ਸੰਚਾਲਕ ਗਤੀਵਿਧੀ ਨਹੀਂ</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">ਫੋਰਮ ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="forums_share_link_title">ਫੋਰਮ ਲਿੰਕ</string>
     <string name="forums_find_found_by_url">URL ਰਾਹੀਂ ਮਿਲਿਆ</string>
+    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$d)</string>
 </resources>

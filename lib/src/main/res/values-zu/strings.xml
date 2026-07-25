@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Yeka ukubonisa</string>
     <string name="tags_none">Awekho amathegi</string>
     <string name="tags_delete">Susa ithegi</string>
+    <string name="person_picker_none">Lutho</string>
+    <string name="person_picker_clear">Sula ukukhetha</string>
+    <string name="person_picker_select">Khetha …</string>
+    <string name="person_picker_directory">Uhlu</string>
+    <string name="person_picker_no_people">Abekho abantu</string>
+    <string name="person_picker_project_members">Amalungu ephrojekthi</string>
 </resources>

@@ -284,4 +284,10 @@
     <string name="tags_interest_clear">Stop showing</string>
     <string name="tags_none">No tags</string>
     <string name="tags_delete">Remove tag</string>
+    <string name="person_picker_none">None</string>
+    <string name="game_system_draw_offer">%1$s offered a draw</string>
+    <string name="stepup_email_label">Email code</string>
+    <string name="stepup_totp_label">Authenticator code</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_verify">Verify</string>
 </resources>

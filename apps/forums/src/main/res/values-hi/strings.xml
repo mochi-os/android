@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">फ़िंगरप्रिंट: %1$s</string>
     <string name="forums_settings_clear_notifications">सूचनाएँ साफ़ करें</string>
     <string name="forums_moderation_queue_empty">कुछ भी लंबित नहीं</string>
-    <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$d)</string>
-    <string name="forums_moderation_pending_comments">लंबित टिप्पणियाँ (%1$d)</string>
     <string name="forums_moderation_report_details">विवरण: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s द्वारा हल किया गया — %2$s</string>
     <string name="forums_moderation_log_empty">अभी तक कोई मॉडरेटर गतिविधि नहीं</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">फ़ोरम की सदस्यता छोड़ें</string>
     <string name="forums_share_link_title">फ़ोरम लिंक</string>
     <string name="forums_find_found_by_url">URL से मिला</string>
+    <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$d)</string>
+    <string name="forums_moderation_pending_comments">लंबित टिप्पणियाँ (%1$d)</string>
 </resources>

@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">เซิร์ฟเวอร์</string>
     <string name="crm_untitled">ไม่มีชื่อ</string>
+    <string name="crm_property_select">เลือก …</string>
 </resources>

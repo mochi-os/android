@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">فنگر پرنٹ</string>
     <string name="crm_settings_server">سرور</string>
     <string name="crm_untitled">بے عنوان</string>
+    <string name="crm_property_select">منتخب کریں …</string>
 </resources>

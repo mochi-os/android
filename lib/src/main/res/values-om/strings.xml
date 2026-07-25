@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Agarsiisuu dhaabi</string>
     <string name="tags_none">Mallattoon hin jiru</string>
     <string name="tags_delete">Mallattoo haqi</string>
+    <string name="person_picker_none">Tokko illee</string>
+    <string name="person_picker_clear">Filannoo cilliisi</string>
+    <string name="person_picker_select">Filadhu …</string>
+    <string name="person_picker_directory">Galmee</string>
+    <string name="person_picker_no_people">Namni hin jiru</string>
+    <string name="person_picker_project_members">Miseensota pirojektii</string>
 </resources>

@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Luk\'ana unancha: %1$s</string>
     <string name="forums_settings_clear_notifications">Yatiyawinak chhaqtayaña</string>
     <string name="forums_moderation_queue_empty">Janiw kuna suyaskiti</string>
-    <string name="forums_moderation_pending_posts">Qillqatanak suyaskirinaka (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentarionak suyaskirinaka (%1$d)</string>
     <string name="forums_moderation_report_details">Yatxatawinaka: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s askichxi — %2$s</string>
     <string name="forums_moderation_log_empty">Janirakiw apnaqirin lurawinakapax utjkiti</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_name_clear_cd">Suti q\'umachaña</string>
     <string name="forums_settings_unsubscribe_section">Forumat mistuña</string>
     <string name="forums_share_link_title">Forum enlace</string>
+    <string name="forums_moderation_pending_posts">Suyt\'iri publicacionanaka (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Suyt\'iri arsuwinaka (%1$d)</string>
 </resources>

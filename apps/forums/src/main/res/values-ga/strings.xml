@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Méarlorg: %1$s</string>
     <string name="forums_settings_clear_notifications">Glan fógraí</string>
     <string name="forums_moderation_queue_empty">Níl aon rud ar feitheamh</string>
-    <string name="forums_moderation_pending_posts">Postálacha ar feitheamh (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Nótaí tráchta ar feitheamh (%1$d)</string>
     <string name="forums_moderation_report_details">Sonraí: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Réitithe ag %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Níl aon ghníomhaíocht ó mhodhnóir ann fós</string>
@@ -305,4 +303,6 @@
     <string name="forums_settings_unsubscribe_section">Díliostáil ón bhfóram</string>
     <string name="forums_share_link_title">Nasc an fhóraim</string>
     <string name="forums_find_found_by_url">Aimsithe de réir URL</string>
+    <string name="forums_moderation_pending_posts">Postálacha ar feitheamh (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Tráchtanna ar feitheamh (%1$d)</string>
 </resources>

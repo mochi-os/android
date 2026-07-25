@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">Sõrmejälg</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Pealkirjata</string>
+    <string name="crm_property_select">Valige …</string>
 </resources>

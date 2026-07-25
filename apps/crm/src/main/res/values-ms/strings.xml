@@ -336,4 +336,5 @@
     <string name="crm_settings_fingerprint">Cap jari</string>
     <string name="crm_settings_server">Pelayan</string>
     <string name="crm_untitled">Tiada tajuk</string>
+    <string name="crm_property_select">Pilih …</string>
 </resources>

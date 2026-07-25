@@ -136,8 +136,6 @@
     <string name="forums_moderation_tab_log">Journal</string>
     <string name="forums_moderation_tab_restrictions">Restrictions</string>
     <string name="forums_moderation_queue_empty">Rien en attente</string>
-    <string name="forums_moderation_pending_posts">Publications en attente (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Commentaires en attente (%1$d)</string>
     <string name="forums_moderation_reports_pending">En attente</string>
     <string name="forums_moderation_reports_resolved">Résolus</string>
     <string name="forums_moderation_reports_empty">Aucun signalement</string>
@@ -300,4 +298,6 @@
     <string name="forums_saved_empty_title">Rien d\'enregistré pour l\'instant</string>
     <string name="forums_saved_error_clear">Échec de l\'effacement des publications enregistrées</string>
     <string name="forums_saved_save">Enregistrer pour plus tard</string>
+    <string name="forums_moderation_pending_posts">Publications en attente (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Commentaires en attente (%1$d)</string>
 </resources>

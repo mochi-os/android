@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
     <string name="forums_settings_clear_notifications">I-clear ang mga abiso</string>
     <string name="forums_moderation_queue_empty">Walang nakabinbin</string>
-    <string name="forums_moderation_pending_posts">Mga nakabinbing post (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Mga nakabinbing komento (%1$d)</string>
     <string name="forums_moderation_report_details">Mga detalye: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Niresolba ni %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Wala pang aktibidad ng moderator</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Mag-unsubscribe sa forum</string>
     <string name="forums_share_link_title">Link ng forum</string>
     <string name="forums_find_found_by_url">Nahanap sa pamamagitan ng URL</string>
+    <string name="forums_moderation_pending_posts">Mga nakabinbing post (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Mga nakabinbing komento (%1$d)</string>
 </resources>

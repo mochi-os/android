@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">지문</string>
     <string name="crm_settings_server">서버</string>
     <string name="crm_untitled">제목 없음</string>
+    <string name="crm_property_select">선택 …</string>
 </resources>

@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">ਉਂਗਲੀ ਦਾ ਨਿਸ਼ਾਨ</string>
     <string name="crm_settings_server">ਸਰਵਰ</string>
     <string name="crm_untitled">ਬਿਨਾਂ ਸਿਰਲੇਖ</string>
+    <string name="crm_property_select">ਚੁਣੋ …</string>
 </resources>

@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Ama rikuchiychu</string>
     <string name="tags_none">Mana etiquetakunachu</string>
     <string name="tags_delete">Unanchata hurquy</string>
+    <string name="person_picker_none">Mana</string>
+    <string name="person_picker_clear">Akllasqa pichay</string>
+    <string name="person_picker_select">Akllay …</string>
+    <string name="person_picker_directory">Directorio</string>
+    <string name="person_picker_no_people">Mana runakuna kanchu</string>
+    <string name="person_picker_project_members">Proyectopi ruraqkuna</string>
 </resources>

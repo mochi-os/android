@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Şopa tilî: %1$s</string>
     <string name="forums_settings_clear_notifications">Agahdariyan paqij bike</string>
     <string name="forums_moderation_queue_empty">Tiştek li benda nîne</string>
-    <string name="forums_moderation_pending_posts">Şandiyên li benda (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Şîroveyên li benda (%1$d)</string>
     <string name="forums_moderation_report_details">Hûragahî: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Ji aliyê %1$s hat çareserkirin — %2$s</string>
     <string name="forums_moderation_log_empty">Hêj çalakiya rêvebir tune</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_name_clear_cd">Navî paqij bike</string>
     <string name="forums_settings_unsubscribe_section">Ji forumê derkeve</string>
     <string name="forums_share_link_title">Girêdana forumê</string>
+    <string name="forums_moderation_pending_posts">Şandiyên li bendê (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Şîroveyên li bendê (%1$d)</string>
 </resources>

@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Көрсөтүүнү токтотуу</string>
     <string name="tags_none">Тегдер жок</string>
     <string name="tags_delete">Тегди алып салуу</string>
+    <string name="person_picker_none">Эч кимиси</string>
+    <string name="person_picker_clear">Тандоону тазалоо</string>
+    <string name="person_picker_select">Тандаңыз …</string>
+    <string name="person_picker_directory">Каталог</string>
+    <string name="person_picker_no_people">Адамдар жок</string>
+    <string name="person_picker_project_members">Долбоордун мүчөлөрү</string>
 </resources>

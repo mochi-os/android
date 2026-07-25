@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">فنگر پرنٹ: %1$s</string>
     <string name="forums_settings_clear_notifications">اطلاعات صاف کریں</string>
     <string name="forums_moderation_queue_empty">کچھ بھی زیر التواء نہیں</string>
-    <string name="forums_moderation_pending_posts">زیر التواء پوسٹس (%1$d)</string>
-    <string name="forums_moderation_pending_comments">زیر التواء تبصرے (%1$d)</string>
     <string name="forums_moderation_report_details">تفصیلات: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s کی جانب سے حل کیا گیا — %2$s</string>
     <string name="forums_moderation_log_empty">ابھی تک کوئی منتظم سرگرمی نہیں</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">فورم کی رکنیت ختم کریں</string>
     <string name="forums_share_link_title">فورم کا لنک</string>
     <string name="forums_find_found_by_url">URL سے ملا</string>
+    <string name="forums_moderation_pending_posts">زیر التوا پوسٹس (%1$d)</string>
+    <string name="forums_moderation_pending_comments">زیر التوا تبصرے (%1$d)</string>
 </resources>

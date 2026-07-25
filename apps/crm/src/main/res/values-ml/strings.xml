@@ -334,4 +334,5 @@
     <string name="crm_settings_fingerprint">വിരലടയാളം</string>
     <string name="crm_settings_server">സെർവർ</string>
     <string name="crm_untitled">ശീർഷകമില്ലാത്തത്</string>
+    <string name="crm_property_select">തിരഞ്ഞെടുക്കുക …</string>
 </resources>
