@@ -386,7 +386,7 @@ fun PostScreen(
             comment = c,
             onConfirm = { body, keptIds, newUris ->
                 viewModel.editCommentWithAttachments(
-                    c.id, body, keptIds, newUris, ctx.contentResolver
+                    c.id, body, keptIds, newUris, ctx
                 )
                 editingComment = null
             },

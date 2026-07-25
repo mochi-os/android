@@ -183,7 +183,7 @@ class PostViewModel @Inject constructor(
                     body = trimmed,
                     parent = parent,
                     uris = _commentAttachments.value,
-                    contentResolver = application.contentResolver,
+                    context = application,
                 )
                 _commentAttachments.value = emptyList()
                 _uiState.value = _uiState.value.copy(replyTo = null)
@@ -234,13 +234,13 @@ class PostViewModel @Inject constructor(
         newBody: String,
         keptAttachmentIds: List<String>,
         newFileUris: List<android.net.Uri>,
-        contentResolver: android.content.ContentResolver,
+        context: android.content.Context,
     ) {
         viewModelScope.launch {
             try {
                 repository.editCommentFromUris(
                     forumId, postId, commentId,
-                    newBody, keptAttachmentIds, newFileUris, contentResolver
+                    newBody, keptAttachmentIds, newFileUris, context
                 )
                 refresh()
             } catch (e: Exception) {

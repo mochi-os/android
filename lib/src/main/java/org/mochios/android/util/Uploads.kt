@@ -11,7 +11,6 @@ import android.net.Uri
 import android.provider.OpenableColumns
 import android.webkit.MimeTypeMap
 import java.io.File
-import java.io.IOException
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -89,24 +88,6 @@ object Uploads {
         MultipartBody.Part.createFormData(field, fileName, bytes.toRequestBody(mimeType.toMediaTypeOrNull()))
 
     /**
-     * A multipart part built by reading [uri]'s bytes through [resolver], under
-     * form field [field], carrying the resolved display name and MIME type.
-     *
-     * @throws IOException when the uri cannot be opened.
-     */
-    fun uriPart(
-        resolver: ContentResolver,
-        field: String,
-        uri: Uri,
-        fallbackName: String = "file"
-    ): MultipartBody.Part {
-        val bytes = resolver.openInputStream(uri)?.use { stream -> stream.readBytes() }
-            ?: throw IOException("Cannot read $uri")
-        val body = bytes.toRequestBody(mimeType(resolver, uri).toMediaTypeOrNull())
-        return MultipartBody.Part.createFormData(field, fileName(resolver, uri, fallbackName), body)
-    }
-
-    /**
      * Resolves a picked content [uri] to a real filename with an extension:
      * prefers the provider's display name, falls back to the last path segment
      * then [fallback], and appends an extension from the MIME type when missing.
@@ -150,5 +131,20 @@ object Uploads {
             target.outputStream().use { output -> input.copyTo(output) }
             target
         }
+    }
+
+    /**
+     * Copies each of [uris] into the app cache via [cacheFile], preserving order.
+     * URIs that can't be opened are skipped. Callers own the returned files and
+     * must [deleteAll] them once the upload finishes. This is the streaming
+     * counterpart to reading each uri into memory — the request bodies built
+     * from these files upload straight off disk and survive request retries.
+     */
+    fun cacheFiles(context: Context, uris: List<Uri>, fallbackName: String = "file"): List<File> =
+        uris.mapNotNull { uri -> cacheFile(context, uri, fallbackName) }
+
+    /** Deletes each temp [files], ignoring individual failures. */
+    fun deleteAll(files: List<File>) {
+        files.forEach { file -> file.delete() }
     }
 }

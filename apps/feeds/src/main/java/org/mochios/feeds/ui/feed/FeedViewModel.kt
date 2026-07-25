@@ -573,7 +573,7 @@ class FeedViewModel @Inject constructor(
                         body = body,
                         parent = target.parentId,
                         files = _commentAttachments.value,
-                        contentResolver = context.contentResolver,
+                        context = context,
                     )
                 }
                 _commentTarget.value = null

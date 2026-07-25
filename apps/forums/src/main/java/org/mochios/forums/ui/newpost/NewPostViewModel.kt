@@ -169,7 +169,7 @@ class NewPostViewModel @Inject constructor(
                         body = body,
                         keptAttachmentIds = keptExisting,
                         newFileUris = _attachments.value,
-                        contentResolver = application.contentResolver,
+                        context = application,
                     )
                     _uiState.value = _uiState.value.copy(
                         isPosting = false,
@@ -183,7 +183,7 @@ class NewPostViewModel @Inject constructor(
                         title = title,
                         body = body,
                         uris = _attachments.value,
-                        contentResolver = application.contentResolver,
+                        context = application,
                     )
                     _uiState.value = _uiState.value.copy(
                         isPosting = false,

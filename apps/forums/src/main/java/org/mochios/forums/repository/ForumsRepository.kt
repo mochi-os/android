@@ -179,25 +179,30 @@ class ForumsRepository @Inject constructor(
 
     /**
      * Create a post whose attachments come from content-provider [uris] (the
-     * system file picker) rather than files on disk. Each URI is read into
-     * memory and sent as an `attachments` part, in the order given.
+     * system file picker) rather than files on disk. Each URI is cached to a
+     * temp file and streamed as an `attachments` part, in the order given.
      */
     suspend fun createPostFromUris(
         forumId: String,
         title: String,
         body: String,
         uris: List<android.net.Uri>,
-        contentResolver: android.content.ContentResolver,
+        context: android.content.Context,
     ): CreatePostResponse {
-        val parts = uris.map { uri -> Uploads.uriPart(contentResolver, "attachments", uri) }
-        val response = api.createPost(
-            forum = forumId.toRequestBody(text),
-            title = title.toRequestBody(text),
-            body = body.toRequestBody(text),
-            attachments = parts,
-        ).unwrap()
-        _postCreated.tryEmit(forumId)
-        return response
+        val files = Uploads.cacheFiles(context, uris)
+        try {
+            val parts = Uploads.fileParts("attachments", files)
+            val response = api.createPost(
+                forum = forumId.toRequestBody(text),
+                title = title.toRequestBody(text),
+                body = body.toRequestBody(text),
+                attachments = parts,
+            ).unwrap()
+            _postCreated.tryEmit(forumId)
+            return response
+        } finally {
+            Uploads.deleteAll(files)
+        }
     }
 
     /**
@@ -215,22 +220,27 @@ class ForumsRepository @Inject constructor(
         body: String,
         keptAttachmentIds: List<String>?,
         newFileUris: List<android.net.Uri>,
-        contentResolver: android.content.ContentResolver,
+        context: android.content.Context,
     ) {
-        val newParts = newFileUris.map { uri -> Uploads.uriPart(contentResolver, "attachments", uri) }
-        val order: List<String>? = when {
-            keptAttachmentIds == null && newFileUris.isEmpty() -> null
-            else -> keptAttachmentIds.orEmpty() + newFileUris.indices.map { "new:$it" }
+        val files = Uploads.cacheFiles(context, newFileUris)
+        try {
+            val newParts = Uploads.fileParts("attachments", files)
+            val order: List<String>? = when {
+                keptAttachmentIds == null && files.isEmpty() -> null
+                else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
+            }
+            val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
+            api.editPost(
+                forumId = forumId,
+                postId = postId,
+                title = title.toRequestBody(text),
+                body = body.toRequestBody(text),
+                order = orderJson,
+                attachments = newParts,
+            ).unwrap()
+        } finally {
+            Uploads.deleteAll(files)
         }
-        val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
-        api.editPost(
-            forumId = forumId,
-            postId = postId,
-            title = title.toRequestBody(text),
-            body = body.toRequestBody(text),
-            order = orderJson,
-            attachments = newParts,
-        ).unwrap()
     }
 
     suspend fun createComment(forumId: String, postId: String, body: String, parent: String? = null, files: List<File> = emptyList()): CreateCommentResponse {
@@ -280,18 +290,23 @@ class ForumsRepository @Inject constructor(
         body: String,
         parent: String? = null,
         uris: List<android.net.Uri>,
-        contentResolver: android.content.ContentResolver,
+        context: android.content.Context,
     ): CreateCommentResponse {
-        val parts = uris.map { uri -> Uploads.uriPart(contentResolver, "files", uri) }
-        return api.createComment(
-            forumId = forumId,
-            postId = postId,
-            forum = forumId.toRequestBody(text),
-            post = postId.toRequestBody(text),
-            body = body.toRequestBody(text),
-            parent = parent?.toRequestBody(text),
-            files = parts,
-        ).unwrap()
+        val files = Uploads.cacheFiles(context, uris)
+        try {
+            val parts = Uploads.fileParts("files", files)
+            return api.createComment(
+                forumId = forumId,
+                postId = postId,
+                forum = forumId.toRequestBody(text),
+                post = postId.toRequestBody(text),
+                body = body.toRequestBody(text),
+                parent = parent?.toRequestBody(text),
+                files = parts,
+            ).unwrap()
+        } finally {
+            Uploads.deleteAll(files)
+        }
     }
 
     suspend fun editCommentFromUris(
@@ -301,22 +316,27 @@ class ForumsRepository @Inject constructor(
         body: String,
         keptAttachmentIds: List<String>?,
         newFileUris: List<android.net.Uri>,
-        contentResolver: android.content.ContentResolver,
+        context: android.content.Context,
     ) {
-        val newParts = newFileUris.map { uri -> Uploads.uriPart(contentResolver, "files", uri) }
-        val order: List<String>? = when {
-            keptAttachmentIds == null && newFileUris.isEmpty() -> null
-            else -> keptAttachmentIds.orEmpty() + newFileUris.indices.map { "new:$it" }
+        val files = Uploads.cacheFiles(context, newFileUris)
+        try {
+            val newParts = Uploads.fileParts("files", files)
+            val order: List<String>? = when {
+                keptAttachmentIds == null && files.isEmpty() -> null
+                else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
+            }
+            val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
+            api.editComment(
+                forumId = forumId,
+                postId = postId,
+                commentId = commentId,
+                body = body.toRequestBody(text),
+                order = orderJson,
+                files = newParts,
+            ).unwrap()
+        } finally {
+            Uploads.deleteAll(files)
         }
-        val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
-        api.editComment(
-            forumId = forumId,
-            postId = postId,
-            commentId = commentId,
-            body = body.toRequestBody(text),
-            order = orderJson,
-            files = newParts,
-        ).unwrap()
     }
 
     suspend fun deleteComment(forumId: String, postId: String, commentId: String) {

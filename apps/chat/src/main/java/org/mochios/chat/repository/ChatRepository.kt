@@ -75,7 +75,7 @@ class ChatRepository @Inject constructor(
         chatId: String,
         body: String,
         uris: List<android.net.Uri>,
-        contentResolver: android.content.ContentResolver,
+        context: android.content.Context,
         replyTo: String? = null,
     ): String {
         if (uris.isEmpty()) {
@@ -83,8 +83,13 @@ class ChatRepository @Inject constructor(
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val parts = uris.map { uri -> Uploads.uriPart(contentResolver, "files", uri) }
-        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
+        val files = Uploads.cacheFiles(context, uris)
+        try {
+            val parts = Uploads.fileParts("files", files)
+            return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
+        } finally {
+            Uploads.deleteAll(files)
+        }
     }
 
     suspend fun getMembers(chatId: String): List<ChatMember> =

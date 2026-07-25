@@ -5,7 +5,7 @@
 
 package org.mochios.feeds.repository
 
-import android.content.ContentResolver
+import android.content.Context
 import android.net.Uri
 import android.util.Log
 import com.google.gson.Gson
@@ -430,19 +430,22 @@ class FeedsRepository @Inject constructor(
         feedId: String,
         body: String,
         uris: List<Uri>,
-        contentResolver: ContentResolver,
+        context: Context,
         checkin: PlaceData? = null,
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null
     ) {
+        val files = Uploads.cacheFiles(context, uris)
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
-            for (uri in uris) {
-                multipartBody.addPart(Uploads.uriPart(contentResolver, "files", uri))
+            for (file in files) {
+                multipartBody.addPart(Uploads.filePart("files", file))
             }
             api.createPost(feedId, multipartBody.build()).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
+        } finally {
+            Uploads.deleteAll(files)
         }
     }
 
@@ -493,11 +496,12 @@ class FeedsRepository @Inject constructor(
         body: String,
         order: List<String>,
         newFiles: List<Uri>,
-        contentResolver: ContentResolver,
+        context: Context,
         checkin: PlaceData? = null,
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null
     ) {
+        val files = Uploads.cacheFiles(context, newFiles)
         try {
             val builder = MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
@@ -523,12 +527,14 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("order", item)
             }
 
-            for (uri in newFiles) {
-                builder.addPart(Uploads.uriPart(contentResolver, "files", uri))
+            for (file in files) {
+                builder.addPart(Uploads.filePart("files", file))
             }
             api.editPost(feedId, postId, builder.build()).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
+        } finally {
+            Uploads.deleteAll(files)
         }
     }
 
@@ -573,8 +579,9 @@ class FeedsRepository @Inject constructor(
         body: String,
         parent: String? = null,
         files: List<Uri>,
-        contentResolver: ContentResolver
+        context: Context
     ): Comment {
+        val cachedFiles = Uploads.cacheFiles(context, files)
         return try {
             val builder = MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
@@ -584,12 +591,14 @@ class FeedsRepository @Inject constructor(
             if (parent != null) {
                 builder.addFormDataPart("parent", parent)
             }
-            for (uri in files) {
-                builder.addPart(Uploads.uriPart(contentResolver, "files", uri))
+            for (file in cachedFiles) {
+                builder.addPart(Uploads.filePart("files", file))
             }
             api.createComment(feedId, postId, builder.build()).unwrap().comment
         } catch (e: Exception) {
             throw e.toMochiError()
+        } finally {
+            Uploads.deleteAll(cachedFiles)
         }
     }
 

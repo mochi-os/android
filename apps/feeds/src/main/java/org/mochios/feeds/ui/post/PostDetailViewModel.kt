@@ -148,14 +148,13 @@ class PostDetailViewModel @Inject constructor(
             _isSendingComment.value = true
             _actionError.value = null
             try {
-                val contentResolver = application.contentResolver
                 repository.createComment(
                     feedId = feedId,
                     postId = postId,
                     body = body,
                     parent = _replyingTo.value,
                     files = _commentAttachments.value,
-                    contentResolver = contentResolver
+                    context = application
                 )
                 _commentText.value = ""
                 _commentAttachments.value = emptyList()

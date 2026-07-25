@@ -445,7 +445,7 @@ class ChatViewModel @Inject constructor(
                     repository.sendMessage(chatId, trimmed, replyTo = replyTo)
                 } else {
                     repository.sendMessageFromUris(
-                        chatId, trimmed, attachments, application.contentResolver, replyTo = replyTo,
+                        chatId, trimmed, attachments, application, replyTo = replyTo,
                     )
                 }
                 _uiState.value = _uiState.value.copy(pendingAttachments = emptyList(), replyingTo = null)
