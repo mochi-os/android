@@ -408,20 +408,16 @@ private fun ForumContent(
                     }
                 },
                 actions = {
-                    // Every action renders unconditionally so the row keeps its
-                    // width while the forum loads — anything that depends on the
-                    // response is gated inside the menu, or merely disabled.
                     NotificationBell(onClick = onOpenNotifications)
                     // The aggregate spans forums, so there is no forum to post to.
-                    if (!isAll) {
-                        IconButton(
-                            onClick = { onNewPost(forumIdForCallbacks) },
-                            // `canPost` is null when the response omits it, which
-                            // reads as "unknown" and leaves the button live — only
-                            // an explicit `false` disables it.
-                            enabled = uiState.forum.id.isNotEmpty() &&
-                                uiState.forum.canPost != false,
-                        ) {
+                    // Hide the button (rather than disable it) when posting isn't
+                    // available, matching feeds. `canPost` is null when the response
+                    // omits it, which reads as "unknown" and keeps the button — only
+                    // an explicit `false` hides it. Until the forum loads its id is
+                    // empty, so the button appears once posting is known to be allowed.
+                    if (!isAll && uiState.forum.id.isNotEmpty() &&
+                        uiState.forum.canPost != false) {
+                        IconButton(onClick = { onNewPost(forumIdForCallbacks) }) {
                             Icon(
                                 Icons.Default.Add,
                                 contentDescription = stringResource(R.string.forums_new_post)
@@ -576,7 +572,9 @@ private fun ForumContent(
                                         }
                                     )
                                 }
-                                if (uiState.canManage && uiState.forum.id.isNotEmpty()) {
+                                // Subscribers reach settings too — their view is
+                                // the read-only identity card plus unsubscribe.
+                                if (!isAll && uiState.forum.id.isNotEmpty()) {
                                     DropdownMenuItem(
                                         text = {
                                             Text(stringResource(R.string.forums_settings))

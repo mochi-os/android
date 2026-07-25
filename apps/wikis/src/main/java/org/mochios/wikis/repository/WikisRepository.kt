@@ -7,11 +7,10 @@ package org.mochios.wikis.repository
 
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.util.Uploads
 import org.mochios.wikis.api.WikisApi
 import org.mochios.wikis.model.AccessRule
 import org.mochios.wikis.model.Attachment
@@ -537,8 +536,6 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    private fun multipart(field: String, file: File): MultipartBody.Part {
-        val body: RequestBody = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-        return MultipartBody.Part.createFormData(field, file.name, body)
-    }
+    private fun multipart(field: String, file: File): MultipartBody.Part =
+        Uploads.filePart(field, file)
 }

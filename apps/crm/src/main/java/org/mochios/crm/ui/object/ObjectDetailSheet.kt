@@ -27,7 +27,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
@@ -47,6 +46,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
@@ -102,7 +102,7 @@ fun ObjectDetailSheet(
         }
     }
 
-    ModalBottomSheet(
+    MochiBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState
     ) {

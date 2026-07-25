@@ -128,6 +128,12 @@
 
     <!-- People picker -->
     <string name="person_picker_search">Search users</string>
+    <string name="person_picker_select">Select …</string>
+    <string name="person_picker_no_people">No people</string>
+    <string name="person_picker_clear">Clear selection</string>
+    <string name="person_picker_none">None</string>
+    <string name="person_picker_project_members">Project members</string>
+    <string name="person_picker_directory">Directory</string>
 
     <!-- Place picker -->
     <string name="place_picker_name">Place name</string>

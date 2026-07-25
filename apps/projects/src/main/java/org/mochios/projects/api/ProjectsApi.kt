@@ -31,6 +31,7 @@ import org.mochios.projects.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
@@ -44,6 +45,24 @@ import retrofit2.http.Query
 // Response wrappers
 data class ProjectListResponse(val projects: List<Project> = emptyList())
 data class ProjectResponse(val project: Project = Project())
+
+// `-/create` returns the new project. The backend may send it flat (id,
+// fingerprint, … at the top level, like objects/create) or nested under
+// `project`, so this captures both and the repository resolves whichever is set.
+data class ProjectCreateResponse(
+
+    val id: String = "",
+
+    val fingerprint: String = "",
+
+    val name: String = "",
+
+    val description: String = "",
+
+    val prefix: String = "",
+
+    val project: Project? = null
+)
 data class ProjectInfoResponse(
     val project: Project = Project(),
     val classes: List<ProjectClass> = emptyList(),
@@ -75,6 +94,14 @@ data class MergeRequestListResponse(val requests: List<MergeRequest> = emptyList
 data class MergeRequestResponse(val request: MergeRequest = MergeRequest())
 data class PeopleResponse(val people: List<Person> = emptyList())
 data class AccessResponse(val rules: List<AccessRule> = emptyList())
+
+// Body for setting a single field value. The values endpoint expects a JSON
+// object ({"value": "…"}); form encoding fails to update some fields (e.g. the
+// due date).
+data class SetValueRequest(val value: String)
+
+// Shareable project link returned by the `-/share` endpoint.
+data class ShareResponse(val link: String = "")
 data class ClassListResponse(val classes: List<ProjectClass> = emptyList())
 data class ClassResponse(val `class`: ProjectClass = ProjectClass())
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
@@ -93,7 +120,7 @@ data class MergeCheckResponse(
     val behind: Int = 0
 )
 data class SuccessResponse(val success: Boolean = false)
-data class UserSearchResponse(val users: List<Person> = emptyList())
+data class UserSearchResponse(val results: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
 data class PreferenceResponse(@SerializedName("style") val preference: String = "unified")
@@ -113,13 +140,13 @@ interface ProjectsApi {
         @Field("prefix") prefix: String?,
         @Field("privacy") privacy: String,
         @Field("template") template: String?
-    ): Response<ApiResponse<ProjectResponse>>
+    ): Response<ApiResponse<ProjectCreateResponse>>
 
     @GET("-/templates")
     suspend fun getTemplates(): Response<ApiResponse<TemplateListResponse>>
 
     @GET("-/directory/search")
-    suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<ProjectListResponse>>
+    suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<List<Project>>>
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<ProjectListResponse>>
@@ -192,6 +219,9 @@ interface ProjectsApi {
 
     @GET("{projectId}/-/info")
     suspend fun getProjectInfo(@Path("projectId") projectId: String): Response<ApiResponse<ProjectInfoResponse>>
+
+    @POST("{projectId}/-/share")
+    suspend fun getShareLink(@Path("projectId") projectId: String): Response<ApiResponse<ShareResponse>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/update")
@@ -284,13 +314,12 @@ interface ProjectsApi {
         @FieldMap values: Map<String, String>
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/objects/{objectId}/values/{fieldId}")
     suspend fun setValue(
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
         @Path("fieldId") fieldId: String,
-        @Field("value") value: String
+        @Body body: SetValueRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Links ----

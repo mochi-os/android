@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,6 +19,9 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.projects.R
+import org.mochios.projects.model.Group
 import org.mochios.projects.model.Person
 import org.mochios.projects.model.Project
 import org.mochios.projects.repository.ProjectsRepository
@@ -32,7 +37,10 @@ data class ProjectSettingsUiState(
     val isDeleting: Boolean = false,
     val name: String = "",
     val description: String = "",
-    val prefix: String = ""
+    val prefix: String = "",
+    val userSearchResults: List<Person> = emptyList(),
+    val groups: List<Group> = emptyList(),
+    val actionMessage: Int? = null
 )
 
 @HiltViewModel
@@ -45,6 +53,8 @@ class ProjectSettingsViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ProjectSettingsUiState())
     val uiState: StateFlow<ProjectSettingsUiState> = _uiState.asStateFlow()
+
+    private var userSearchJob: Job? = null
 
     init {
         loadProject()
@@ -110,7 +120,10 @@ class ProjectSettingsViewModel @Inject constructor(
                     description = state.description,
                     prefix = state.prefix
                 )
-                _uiState.value = _uiState.value.copy(isSaving = false)
+                _uiState.value = _uiState.value.copy(
+                    isSaving = false,
+                    actionMessage = R.string.projects_settings_updated
+                )
                 loadProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
@@ -141,9 +154,43 @@ class ProjectSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAccess(projectId, subject, level)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.projects_settings_access_updated
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun searchUsers(query: String) {
+        // Each keystroke replaces the last: cancel the in-flight request so a
+        // slow early response can't land after a newer one and overwrite it.
+        userSearchJob?.cancel()
+        if (query.trim().length < 2) {
+            _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
+            return
+        }
+        userSearchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
+            try {
+                val results = repository.searchUsers(query.trim())
+                _uiState.value = _uiState.value.copy(userSearchResults = results)
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
+            }
+        }
+    }
+
+    fun loadGroups() {
+        viewModelScope.launch {
+            try {
+                val groups = repository.getGroups()
+                    .sortedWith(compareBy(NaturalCompare) { group -> group.name })
+                _uiState.value = _uiState.value.copy(groups = groups)
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(groups = emptyList())
             }
         }
     }
@@ -163,10 +210,21 @@ class ProjectSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.revokeAccess(projectId, subject)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.projects_settings_access_revoked
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
+    }
+
+    fun clearActionMessage() {
+        _uiState.value = _uiState.value.copy(actionMessage = null)
     }
 }

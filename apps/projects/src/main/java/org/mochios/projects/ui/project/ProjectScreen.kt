@@ -5,54 +5,65 @@
 
 package org.mochios.projects.ui.project
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowDownward
-import androidx.compose.material.icons.filled.ArrowUpward
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.FilterList
+import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
+import androidx.compose.material.icons.filled.HomeMax
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
-import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.outlined.Dashboard
+import androidx.compose.material.icons.outlined.FormatListBulleted
+import androidx.compose.material3.Badge
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedCard
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.ScrollableTabRow
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -67,25 +78,38 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.core.content.pm.ShortcutInfoCompat
+import androidx.core.content.pm.ShortcutManagerCompat
+import androidx.core.graphics.drawable.IconCompat
+import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.projects.R
+import org.mochios.projects.model.Project
 import org.mochios.projects.ui.board.BoardView
 import org.mochios.projects.ui.`object`.ObjectDetailSheet
+import org.mochios.projects.ui.projectlist.CreateProjectDialog
 import org.mochios.projects.ui.projectlist.ProjectListViewModel
 import org.mochios.projects.ui.router.PROJECTS_FEATURE
 import org.mochios.projects.ui.tree.TreeView
@@ -96,6 +120,7 @@ import org.mochios.android.R as MochiR
 fun ProjectScreen(
     projectId: String,
     onSelectProject: (String) -> Unit,
+    onSelectAll: () -> Unit,
     onFindProjects: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
@@ -120,6 +145,15 @@ fun ProjectScreen(
         }
     }
 
+    // Open the project detail right after a create, then clear the signal so
+    // it doesn't re-fire on recomposition.
+    LaunchedEffect(listUiState.createdProjectId) {
+        listUiState.createdProjectId?.let { newId ->
+            onSelectProject(newId)
+            listViewModel.consumeCreatedProject()
+        }
+    }
+
     val drawerItems = remember(listUiState.projects) {
         listViewModel.filteredProjects().map { project ->
             FeatureDrawerItem(
@@ -129,14 +163,23 @@ fun ProjectScreen(
             )
         }
     }
+    val drawerAll = FeatureDrawerItem(
+        id = LastViewedStore.ALL,
+        title = stringResource(R.string.projects_all_projects),
+        icon = Icons.Default.FolderOpen,
+    )
 
     FeatureListDrawer(
         drawerState = drawerState,
         items = drawerItems,
+        allItem = drawerAll,
         selectedId = projectId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            if (item.id != projectId) onSelectProject(item.id)
+            when {
+                item.id == LastViewedStore.ALL -> onSelectAll()
+                item.id != projectId -> onSelectProject(item.id)
+            }
         },
         actions = {
             DrawerActionRow(
@@ -145,6 +188,14 @@ fun ProjectScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindProjects()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.projects_list_create),
+                icon = Icons.Default.Add,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    listViewModel.showCreateDialog()
                 },
             )
             DrawerActionRow(
@@ -165,24 +216,48 @@ fun ProjectScreen(
             )
         },
     ) {
-        if (projectId.isEmpty()) {
-            ProjectDrawerPlaceholder(
-                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
-            )
-        } else {
-            ProjectContent(
-                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
-                onSettings = onSettings,
-                onDesign = onDesign,
-                onViewDiff = onViewDiff,
-                onOpenNotifications = onOpenNotifications,
-                initialObjectId = initialObjectId,
-            )
+        when {
+            projectId == LastViewedStore.ALL -> {
+                AllProjectsContent(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                    onProjectClick = onSelectProject,
+                    onOpenNotifications = onOpenNotifications,
+                    viewModel = listViewModel,
+                )
+            }
+
+            projectId.isEmpty() -> {
+                ProjectDrawerPlaceholder(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                )
+            }
+
+            else -> {
+                ProjectContent(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                    onSettings = onSettings,
+                    onDesign = onDesign,
+                    onViewDiff = onViewDiff,
+                    onOpenNotifications = onOpenNotifications,
+                    initialObjectId = initialObjectId,
+                )
+            }
         }
     }
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
+    }
+
+    if (listUiState.showCreateDialog) {
+        CreateProjectDialog(
+            templates = listUiState.templates,
+            isCreating = listUiState.isCreating,
+            onDismiss = { listViewModel.hideCreateDialog() },
+            onCreate = { name, prefix, privacy, template, backupJson ->
+                listViewModel.createProject(name, prefix, privacy, template, backupJson)
+            }
+        )
     }
 }
 
@@ -215,6 +290,289 @@ private fun ProjectDrawerPlaceholder(onOpenDrawer: () -> Unit) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+private fun AllProjectsContent(
+    onOpenDrawer: () -> Unit,
+    onProjectClick: (String) -> Unit,
+    onOpenNotifications: () -> Unit,
+    viewModel: ProjectListViewModel,
+) {
+    val uiState by viewModel.uiState.collectAsState()
+
+    Scaffold(
+        topBar = {
+            if (uiState.showSearch) {
+                ProjectSearchBar(
+                    query = uiState.searchQuery,
+                    placeholder = stringResource(R.string.projects_list_search_placeholder),
+                    onQueryChange = viewModel::updateSearchQuery,
+                    onClose = { viewModel.toggleSearch() }
+                )
+            } else {
+                TopAppBar(
+                    title = { Text(stringResource(R.string.projects_all_projects)) },
+                    navigationIcon = {
+                        IconButton(onClick = onOpenDrawer) {
+                            Icon(
+                                Icons.Default.Menu,
+                                contentDescription = stringResource(R.string.projects_list_title)
+                            )
+                        }
+                    },
+                    actions = {
+                        NotificationBell(onClick = onOpenNotifications)
+                        IconButton(onClick = { viewModel.toggleSearch() }) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.projects_list_search)
+                            )
+                        }
+                    }
+                )
+            }
+        }
+    ) { padding ->
+        PullToRefreshBox(
+            isRefreshing = uiState.isRefreshing,
+            onRefresh = { viewModel.refresh() },
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+        ) {
+            Column(modifier = Modifier.fillMaxSize()) {
+                when {
+                    uiState.isLoading && uiState.projects.isEmpty() -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            CircularProgressIndicator()
+                        }
+                    }
+
+                    uiState.error != null && uiState.projects.isEmpty() -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            Text(
+                                text = uiState.error!!.userMessage(),
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.error
+                            )
+                        }
+                    }
+
+                    else -> {
+                        val filteredProjects = viewModel.filteredProjects()
+                        if (filteredProjects.isEmpty()) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(top = 64.dp),
+                                contentAlignment = Alignment.TopCenter
+                            ) {
+                                Text(
+                                    text = if (uiState.searchQuery.isNotBlank()) {
+                                        stringResource(R.string.projects_list_no_matching)
+                                    } else {
+                                        stringResource(R.string.projects_list_empty)
+                                    },
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        } else {
+                            LazyColumn(
+                                modifier = Modifier.fillMaxSize(),
+                                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
+                                verticalArrangement = Arrangement.spacedBy(12.dp)
+                            ) {
+                                items(filteredProjects, key = { it.fingerprint.ifEmpty { it.id } }) { project ->
+                                    ProjectRow(
+                                        project = project,
+                                        onClick = {
+                                            val id = project.fingerprint.ifEmpty { project.id }
+                                            onProjectClick(id)
+                                        },
+                                        onUnsubscribe = { viewModel.unsubscribe(project.id) }
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Search field that takes over the whole top bar. Shared by the All projects
+ * list and the project detail screen — they differ only in [placeholder].
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ProjectSearchBar(
+    query: String,
+    placeholder: String,
+    onQueryChange: (String) -> Unit,
+    onClose: () -> Unit,
+) {
+    val focusRequester = remember { FocusRequester() }
+    LaunchedEffect(Unit) {
+        focusRequester.requestFocus()
+    }
+    TopAppBar(
+        navigationIcon = {
+            IconButton(onClick = onClose) {
+                Icon(
+                    Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = stringResource(MochiR.string.common_back)
+                )
+            }
+        },
+        title = {
+            TextField(
+                value = query,
+                onValueChange = onQueryChange,
+                placeholder = { Text(placeholder) },
+                singleLine = true,
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                trailingIcon = {
+                    if (query.isNotEmpty()) {
+                        IconButton(onClick = { onQueryChange("") }) {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = stringResource(MochiR.string.common_close)
+                            )
+                        }
+                    }
+                },
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    disabledContainerColor = Color.Transparent,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(focusRequester)
+            )
+        }
+    )
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun ProjectRow(
+    project: Project,
+    onClick: () -> Unit,
+    onUnsubscribe: () -> Unit
+) {
+    val context = LocalContext.current
+    var showMenu by remember { mutableStateOf(false) }
+    var showUnsubscribeConfirm by remember { mutableStateOf(false) }
+    val projectId = project.fingerprint.ifEmpty { project.id }
+    val canUnsubscribe = project.owner != 1
+    val unsubscribeTitle = stringResource(R.string.projects_settings_unsubscribe_title)
+    val unsubscribeMessage = stringResource(R.string.projects_settings_unsubscribe_message)
+    val unsubscribeLabel = stringResource(R.string.projects_settings_unsubscribe)
+    val cancelLabel = stringResource(MochiR.string.common_cancel)
+    val description = project.description.takeIf { it.isNotBlank() }
+
+    OutlinedCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
+    ) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            EntityIconCircle(
+                seed = projectId.ifEmpty { project.id },
+                icon = Icons.Default.Folder
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = project.name,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                if (description != null) {
+                    Text(
+                        text = description,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+            Box {
+                IconButton(onClick = { showMenu = true }) {
+                    Icon(
+                        Icons.Default.MoreHoriz,
+                        contentDescription = stringResource(MochiR.string.common_more_options)
+                    )
+                }
+                DropdownMenu(
+                    expanded = showMenu,
+                    onDismissRequest = { showMenu = false }
+                ) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.projects_list_add_to_home)) },
+                        leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
+                        onClick = {
+                            showMenu = false
+                            // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                            val intent = Intent(Intent.ACTION_VIEW, "mochi:/$projectId".toUri()).apply {
+                                setPackage(context.packageName)
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                                    Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                putExtra("app", "projects")
+                            }
+                            val shortcut = ShortcutInfoCompat.Builder(context, "project_$projectId")
+                                .setShortLabel(project.name)
+                                .setLongLabel(project.name)
+                                .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_projects))
+                                .setIntent(intent)
+                                .build()
+                            ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
+                        }
+                    )
+                    if (canUnsubscribe) {
+                        DropdownMenuItem(
+                            text = { Text(unsubscribeLabel) },
+                            leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
+                            onClick = {
+                                showMenu = false
+                                showUnsubscribeConfirm = true
+                            }
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    if (showUnsubscribeConfirm) {
+        ConfirmDialog(
+            title = unsubscribeTitle,
+            message = unsubscribeMessage,
+            confirmLabel = unsubscribeLabel,
+            dismissLabel = cancelLabel,
+            isDestructive = true,
+            onConfirm = {
+                showUnsubscribeConfirm = false
+                onUnsubscribe()
+            },
+            onDismiss = { showUnsubscribeConfirm = false }
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
 private fun ProjectContent(
     onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
@@ -227,6 +585,15 @@ private fun ProjectContent(
     val uiState by viewModel.uiState.collectAsState()
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
+    var showFilters by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val shareTitle = stringResource(R.string.projects_share_link_title)
+    LaunchedEffect(viewModel) {
+        viewModel.shareLink.collect { link ->
+            shareProjectLink(context, link, shareTitle)
+        }
+    }
 
     LaunchedEffect(initialObjectId) {
         if (initialObjectId != null) {
@@ -237,65 +604,164 @@ private fun ProjectContent(
     val details = uiState.projectDetails
     val activeView = viewModel.getActiveView()
 
+    // The top-bar icon carries a dot whenever the sheet holds something other
+    // than the view's own defaults. The search query is deliberately left out —
+    // it has its own visible affordance in the top bar.
+    val filtersActive = uiState.watchedOnly ||
+        uiState.fieldFilters.isNotEmpty() ||
+        viewModel.hasSortOverride()
+
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = details?.project?.name ?: stringResource(R.string.projects_loading),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                },
-                navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
+            if (showSearch) {
+                ProjectSearchBar(
+                    query = uiState.searchQuery,
+                    placeholder = stringResource(R.string.projects_search_objects_placeholder),
+                    onQueryChange = viewModel::updateSearchQuery,
+                    onClose = {
+                        showSearch = false
+                        viewModel.updateSearchQuery("")
                     }
-                },
-                actions = {
-                    NotificationBell(onClick = onOpenNotifications)
-                    IconButton(onClick = { showSearch = !showSearch }) {
-                        Icon(
-                            if (showSearch) Icons.Default.Close else Icons.Default.Search,
-                            contentDescription = stringResource(R.string.projects_search)
+                )
+            } else {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = details?.project?.name ?: stringResource(R.string.projects_loading),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
                         )
-                    }
-                    Box {
-                        IconButton(onClick = { showOverflow = true }) {
-                            Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.projects_more))
-                        }
-                        DropdownMenu(
-                            expanded = showOverflow,
-                            onDismissRequest = { showOverflow = false }
-                        ) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.projects_settings)) },
-                                onClick = {
-                                    showOverflow = false
-                                    onSettings(viewModel.projectId)
-                                },
-                                leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
-                            )
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.projects_design)) },
-                                onClick = {
-                                    showOverflow = false
-                                    onDesign(viewModel.projectId)
-                                },
-                                leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = onOpenDrawer) {
+                            Icon(
+                                Icons.Default.Menu,
+                                contentDescription = stringResource(R.string.projects_list_title)
                             )
                         }
+                    },
+                    actions = {
+                        NotificationBell(onClick = onOpenNotifications)
+                        IconButton(onClick = { showSearch = true }) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.projects_search)
+                            )
+                        }
+                        IconButton(onClick = { showFilters = !showFilters }) {
+                            BadgedBox(
+                                badge = {
+                                    if (filtersActive) {
+                                        Badge(modifier = Modifier.size(6.dp))
+                                    }
+                                }
+                            ) {
+                                Icon(
+                                    Icons.Default.FilterList,
+                                    contentDescription = stringResource(R.string.projects_filter)
+                                )
+                            }
+                        }
+                        Box {
+                            IconButton(onClick = { showOverflow = true }) {
+                                Icon(
+                                    Icons.Default.MoreVert,
+                                    contentDescription = stringResource(R.string.projects_more)
+                                )
+                            }
+                            DropdownMenu(
+                                expanded = showOverflow,
+                                onDismissRequest = { showOverflow = false }
+                            ) {
+                                // Views the project defines, checked one at a
+                                // time. Listed even when there is only one, so
+                                // the menu always says which view is on screen
+                                // and how it is drawn.
+                                val views = details?.views.orEmpty()
+                                if (views.isNotEmpty()) {
+                                    views.forEach { view ->
+                                        val isActive = view.id == activeView?.id
+                                        DropdownMenuItem(
+                                            text = { Text(view.name) },
+                                            onClick = {
+                                                showOverflow = false
+                                                viewModel.setActiveView(view.id)
+                                            },
+                                            leadingIcon = {
+                                                Icon(
+                                                    if (view.viewtype == "board") {
+                                                        Icons.Outlined.Dashboard
+                                                    } else {
+                                                        Icons.Outlined.FormatListBulleted
+                                                    },
+                                                    contentDescription = null,
+                                                    tint = if (isActive) {
+                                                        MaterialTheme.colorScheme.primary
+                                                    } else {
+                                                        LocalContentColor.current
+                                                    },
+                                                )
+                                            },
+                                            trailingIcon = {
+                                                if (isActive) {
+                                                    Icon(
+                                                        Icons.Default.Check,
+                                                        contentDescription = null,
+                                                        tint = MaterialTheme.colorScheme.primary,
+                                                    )
+                                                }
+                                            },
+                                        )
+                                    }
+                                    HorizontalDivider()
+                                }
+
+                                // Sharing a link is only offered on projects the
+                                // user owns; it's hidden on subscribed ones.
+                                if (details?.project?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.projects_link)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            viewModel.shareProject()
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
+                                    )
+                                }
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_settings)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        onSettings(viewModel.projectId)
+                                    },
+                                    leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_design)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        onDesign(viewModel.projectId)
+                                    },
+                                    leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                )
+                            }
+                        }
                     }
-                }
-            )
+                )
+            }
         },
         floatingActionButton = {
-            if (details != null) {
+            // The board view creates objects from its own per-column plus
+            // buttons, so the FAB is only offered on the list views.
+            if (details != null && activeView?.viewtype != "board") {
                 FloatingActionButton(onClick = { viewModel.showCreateObjectDialog() }) {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_create_object))
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(R.string.projects_create_object)
+                    )
                 }
             }
-        }
+        },
     ) { padding ->
         // No-op vertical scrollable so the tabs/search header above the
         // columns also dispatches pull-down gestures up to PullToRefreshBox.
@@ -318,58 +784,6 @@ private fun ProjectContent(
                         orientation = Orientation.Vertical
                     )
             ) {
-                // View tabs
-                if (details != null && details.views.isNotEmpty()) {
-                    val views = details.views
-                    val selectedIndex = views.indexOfFirst { it.id == uiState.activeViewId }.coerceAtLeast(0)
-                    ScrollableTabRow(
-                        selectedTabIndex = selectedIndex,
-                        edgePadding = 16.dp
-                    ) {
-                        views.forEachIndexed { index, view ->
-                            Tab(
-                                selected = index == selectedIndex,
-                                onClick = { viewModel.setActiveView(view.id) },
-                                text = {
-                                    Text(
-                                        text = view.name,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                            )
-                        }
-                    }
-                }
-
-                // Search and filter bar
-                if (showSearch) {
-                    Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            OutlinedTextField(
-                                value = uiState.searchQuery,
-                                onValueChange = viewModel::updateSearchQuery,
-                                placeholder = { Text(stringResource(R.string.projects_search_objects_placeholder)) },
-                                singleLine = true,
-                                modifier = Modifier.weight(1f)
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            FilterChip(
-                                selected = uiState.watchedOnly,
-                                onClick = { viewModel.toggleWatchedOnly() },
-                                label = { Text(stringResource(R.string.projects_watched)) },
-                                leadingIcon = if (uiState.watchedOnly) {
-                                    { Icon(Icons.Default.Visibility, contentDescription = null, modifier = Modifier.size(16.dp)) }
-                                } else null
-                            )
-                        }
-                        if (activeView != null) {
-                            Spacer(modifier = Modifier.height(8.dp))
-                            SortRow(viewModel = viewModel)
-                        }
-                    }
-                }
-
                 // Main content
                 when {
                     uiState.isLoading && details == null -> {
@@ -402,11 +816,12 @@ private fun ProjectContent(
                             "board" -> {
                                 BoardView(
                                     objects = allObjects,
+                                    visibleIds = viewModel.getVisibleObjectIds(),
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
-                                    onCreateObject = { classId, title, initialValues ->
-                                        viewModel.createObject(classId, title, initialValues = initialValues)
+                                    onCreateObject = { initialValues ->
+                                        viewModel.showCreateObjectDialog(values = initialValues)
                                     }
                                 )
                             }
@@ -432,6 +847,7 @@ private fun ProjectContent(
             hierarchy = details.hierarchy,
             objects = uiState.objects,
             presetParent = uiState.createObjectParent,
+            presetValues = uiState.createObjectValues,
             isCreating = uiState.isCreatingObject,
             activeView = activeView,
             viewModel = viewModel,
@@ -465,85 +881,49 @@ private fun ProjectContent(
             },
         )
     }
+
+    if (showFilters) {
+        SortFilterSheet(
+            fieldSortOptions = viewModel.getSortFieldOptions(),
+            builtInSortOptions = builtInSortOptions(),
+            activeSort = viewModel.getSelectedSortField(),
+            activeDirection = viewModel.getActiveSortDirection(),
+            filterFields = viewModel.getFilterableFields(),
+            activeFieldFilters = uiState.fieldFilters,
+            watchedOnly = uiState.watchedOnly,
+            onSortChange = { field -> viewModel.setSortField(field) },
+            onToggleDirection = { viewModel.toggleSortDirection() },
+            onToggleFieldValue = { fieldId, optionId ->
+                viewModel.toggleFieldFilter(fieldId, optionId)
+            },
+            onClearFieldFilter = { fieldId -> viewModel.clearFieldFilter(fieldId) },
+            onToggleWatched = { viewModel.toggleWatchedOnly() },
+            onClearAll = { viewModel.clearFilters() },
+            onDismiss = { showFilters = false },
+        )
+    }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+/** Sort keys the server understands regardless of the project's own fields. */
 @Composable
-private fun SortRow(viewModel: ProjectViewModel) {
-    val activeField = viewModel.getActiveSortField()
-    val activeDirection = viewModel.getActiveSortDirection()
-    val customOptions = viewModel.getSortFieldOptions()
+private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
+    "rank" to stringResource(R.string.projects_sort_rank),
+    "number" to stringResource(R.string.projects_sort_number),
+    "created" to stringResource(R.string.projects_sort_created),
+    "updated" to stringResource(R.string.projects_sort_updated)
+)
 
-    val builtIn = listOf(
-        "rank" to stringResource(R.string.projects_sort_rank),
-        "number" to stringResource(R.string.projects_sort_number),
-        "created" to stringResource(R.string.projects_sort_created),
-        "updated" to stringResource(R.string.projects_sort_updated)
-    )
-    val all = customOptions + builtIn
-    val activeLabel = all.firstOrNull { it.first == activeField }?.second
-        ?: stringResource(R.string.projects_sort_rank)
 
-    var expanded by remember { mutableStateOf(false) }
-
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Text(
-            text = stringResource(R.string.projects_sort_label),
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        ExposedDropdownMenuBox(
-            expanded = expanded,
-            onExpandedChange = { expanded = it },
-            modifier = Modifier.weight(1f)
-        ) {
-            OutlinedTextField(
-                value = activeLabel,
-                onValueChange = {},
-                readOnly = true,
-                singleLine = true,
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .menuAnchor(MenuAnchorType.PrimaryNotEditable)
-            )
-            DropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false }
-            ) {
-                if (customOptions.isNotEmpty()) {
-                    customOptions.forEach { (id, label) ->
-                        DropdownMenuItem(
-                            text = { Text(label) },
-                            onClick = {
-                                viewModel.setSortField(id)
-                                expanded = false
-                            }
-                        )
-                    }
-                    HorizontalDivider()
-                }
-                builtIn.forEach { (id, label) ->
-                    DropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            viewModel.setSortField(id)
-                            expanded = false
-                        }
-                    )
-                }
-            }
-        }
-        Spacer(modifier = Modifier.width(8.dp))
-        IconButton(onClick = { viewModel.toggleSortDirection() }) {
-            Icon(
-                imageVector = if (activeDirection == "desc") Icons.Default.ArrowDownward else Icons.Default.ArrowUpward,
-                contentDescription = stringResource(
-                    if (activeDirection == "desc") R.string.projects_sort_direction_desc
-                    else R.string.projects_sort_direction_asc
-                )
-            )
-        }
+/** Opens the system share sheet with the project's [link]. */
+private fun shareProjectLink(context: Context, link: String, title: String) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, link)
+        // Names the sheet's content preview. Android 10+ ignores the
+        // createChooser title, so without this the sheet reads "Sharing text".
+        putExtra(Intent.EXTRA_TITLE, title)
     }
+    val chooser = Intent.createChooser(intent, title)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
 }

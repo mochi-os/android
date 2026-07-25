@@ -10,7 +10,6 @@ import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.PostTagsButton
 import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.ui.platform.LocalContext
-import android.provider.OpenableColumns
 import androidx.compose.material3.AssistChip
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.foundation.layout.FlowRow
@@ -108,6 +107,7 @@ import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.model.Tag
+import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -386,7 +386,7 @@ fun PostScreen(
             comment = c,
             onConfirm = { body, keptIds, newUris ->
                 viewModel.editCommentWithAttachments(
-                    c.id, body, keptIds, newUris, ctx.contentResolver
+                    c.id, body, keptIds, newUris, ctx
                 )
                 editingComment = null
             },
@@ -483,12 +483,15 @@ private fun EditCommentDialog(
                             )
                         }
                         newUris.forEach { uri ->
+                            val label = rememberFileName(
+                                uri,
+                                stringResource(R.string.forums_comment_edit_attach)
+                            )
                             androidx.compose.material3.AssistChip(
                                 onClick = { newUris.remove(uri) },
                                 label = {
                                     Text(
-                                        uri.lastPathSegment?.takeLast(20)
-                                            ?: stringResource(R.string.forums_comment_edit_attach),
+                                        label,
                                         style = MaterialTheme.typography.labelSmall,
                                     )
                                 },
@@ -1118,13 +1121,7 @@ private fun quoteText(body: String, currentDraft: String): String {
 private fun rememberFileName(uri: Uri, fallback: String): String {
     val context = LocalContext.current
     return remember(uri) {
-        context.contentResolver.query(uri, null, null, null, null)?.use { cursor ->
-            val index = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
-            if (index >= 0 && cursor.moveToFirst()) {
-                cursor.getString(index)?.let { name -> return@remember name }
-            }
-        }
-        uri.lastPathSegment?.substringAfterLast('/') ?: fallback
+        Uploads.fileName(context.contentResolver, uri, fallback)
     }
 }
 

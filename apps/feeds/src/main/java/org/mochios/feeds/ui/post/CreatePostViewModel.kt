@@ -227,7 +227,7 @@ class CreatePostViewModel @Inject constructor(
                         body = bodyText,
                         order = order,
                         newFiles = newFileUris,
-                        contentResolver = application.contentResolver,
+                        context = application,
                         checkin = _checkin.value,
                         travellingOrigin = _travellingOrigin.value,
                         travellingDestination = _travellingDestination.value
@@ -237,7 +237,7 @@ class CreatePostViewModel @Inject constructor(
                         feedId = feedId,
                         body = bodyText,
                         uris = _attachments.value,
-                        contentResolver = application.contentResolver,
+                        context = application,
                         checkin = _checkin.value,
                         travellingOrigin = _travellingOrigin.value,
                         travellingDestination = _travellingDestination.value

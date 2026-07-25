@@ -38,7 +38,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -73,6 +72,7 @@ import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.rememberGameWebSocket
@@ -93,7 +93,7 @@ import org.mochios.android.R as MochiR
  *    dropdown (Pass / Offer draw / Resign on active games; Rematch /
  *    Delete on finished games).
  *  - Board (left half on tablets ≥600 dp; full-width on phones with a
- *    chat-toggle action in the header opening a [ModalBottomSheet]).
+ *    chat-toggle action in the header opening a [MochiBottomSheet]).
  *  - Chat panel (right half on tablets; sheet on phones). Includes a
  *    [GameChatInput] composer.
  *  - Confirmation dialogs for Pass, Resign, and Delete. Pass uses a
@@ -499,7 +499,7 @@ fun GoGameDetailScreen(
                 // panel isn't visible.
                 if (showMobileChat) {
                     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-                    ModalBottomSheet(
+                    MochiBottomSheet(
                         onDismissRequest = { showMobileChat = false },
                         sheetState = sheetState,
                     ) {

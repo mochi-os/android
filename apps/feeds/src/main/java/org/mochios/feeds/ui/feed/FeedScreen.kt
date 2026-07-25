@@ -70,7 +70,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
@@ -142,6 +141,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MediaGrid
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.VideoPlayer
 import org.mochios.android.ui.components.rememberServerUrl
@@ -695,7 +695,9 @@ fun FeedScreen(
                                     }
                                     // Per-feed settings stay hidden on the
                                     // aggregate, which has no feed to configure.
-                                    if (!viewModel.isAllFeeds && permissions.manage) {
+                                    // Subscribers get in too: their view is the
+                                    // read-only identity card plus unsubscribe.
+                                    if (!viewModel.isAllFeeds) {
                                         DropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_settings)) },
                                             leadingIcon = {
@@ -1092,7 +1094,7 @@ fun FeedScreen(
         }
 
         commentTarget?.let { target ->
-            ModalBottomSheet(
+            MochiBottomSheet(
                 onDismissRequest = { viewModel.closeCommentComposer() },
                 sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
                 // Hide the drag handle and match the input bar's surface colour

@@ -25,10 +25,14 @@ data class Attachment(
     val fileKind: FileKind
         get() {
             val ext = name.substringAfterLast('.', "").lowercase()
+            // The kind can arrive as a full MIME type ("image/png") or a bare
+            // kind ("image"); match on the part before any slash, with the
+            // filename extension as a fallback.
+            val typeKind = type.substringBefore('/').lowercase()
             return when {
-                type.startsWith("image/") -> FileKind.IMAGE
-                type.startsWith("video/") -> FileKind.VIDEO
-                type.startsWith("audio/") || ext in AUDIO_EXTENSIONS -> FileKind.AUDIO
+                typeKind == "image" -> FileKind.IMAGE
+                typeKind == "video" -> FileKind.VIDEO
+                typeKind == "audio" || ext in AUDIO_EXTENSIONS -> FileKind.AUDIO
                 ext == "pdf" || type == "application/pdf" -> FileKind.PDF
                 ext == "doc" || ext == "docx" || type in WORD_MIME_TYPES -> FileKind.WORD
                 ext == "xls" || ext == "xlsx" || type in EXCEL_MIME_TYPES -> FileKind.EXCEL

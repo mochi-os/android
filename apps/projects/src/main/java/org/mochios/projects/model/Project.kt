@@ -15,6 +15,7 @@ data class Project(
     val owner: Int = 0,
     val ownername: String = "",
     val server: String? = null,
+    val location: String? = null,
     val created: Long = 0,
     val updated: Long = 0,
     val access: String = ""

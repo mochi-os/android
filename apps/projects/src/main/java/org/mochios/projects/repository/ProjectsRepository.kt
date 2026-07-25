@@ -7,14 +7,14 @@ package org.mochios.projects.repository
 
 import com.google.gson.JsonObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
+import org.mochios.android.util.Uploads
 import org.mochios.projects.api.ProjectsApi
+import org.mochios.projects.api.SetValueRequest
 import org.mochios.projects.model.Activity
 import org.mochios.projects.model.Branch
 import org.mochios.projects.model.FieldOption
@@ -76,13 +76,24 @@ class ProjectsRepository @Inject constructor(
         prefix: String? = null,
         privacy: String = "private",
         template: String? = null
-    ): Project = api.createProject(name, description, prefix, privacy, template).unwrap().project
+    ): Project {
+        val r = api.createProject(name, description, prefix, privacy, template).unwrap()
+        // Prefer the nested project when the backend sends one; otherwise build it
+        // from the flat top-level fields.
+        return r.project ?: Project(
+            id = r.id,
+            fingerprint = r.fingerprint,
+            name = r.name,
+            description = r.description,
+            prefix = r.prefix
+        )
+    }
 
     suspend fun getTemplates(): List<Template> =
         api.getTemplates().unwrap().templates
 
     suspend fun searchDirectory(query: String): List<Project> =
-        api.searchDirectory(query).unwrap().projects
+        api.searchDirectory(query).unwrap()
 
     suspend fun getRecommendations(): List<Project> =
         api.getRecommendations().unwrap().projects
@@ -99,7 +110,7 @@ class ProjectsRepository @Inject constructor(
     }
 
     suspend fun searchUsers(query: String): List<Person> =
-        api.searchUsers(query).unwrap().users
+        api.searchUsers(query).unwrap().results
 
     suspend fun getGroups(): List<Group> =
         api.getGroups().unwrap().groups
@@ -162,6 +173,10 @@ class ProjectsRepository @Inject constructor(
     suspend fun getPeople(projectId: String): List<Person> =
         api.getPeople(projectId).unwrap().people
 
+    /** A shareable link for the project, from the `-/share` endpoint. */
+    suspend fun getShareLink(projectId: String): String =
+        api.getShareLink(projectId).unwrap().link
+
     suspend fun getAccess(projectId: String): List<AccessRule> =
         api.getAccess(projectId).unwrap().rules
 
@@ -223,7 +238,7 @@ class ProjectsRepository @Inject constructor(
     }
 
     suspend fun setValue(projectId: String, objectId: String, fieldId: String, value: String) {
-        api.setValue(projectId, objectId, fieldId, value).unwrap()
+        api.setValue(projectId, objectId, fieldId, SetValueRequest(value)).unwrap()
     }
 
     // ---- Links ----
@@ -251,12 +266,9 @@ class ProjectsRepository @Inject constructor(
     suspend fun createComment(projectId: String, objectId: String, content: String, parent: String? = null, files: List<File> = emptyList()): Comment {
         val contentBody = content.toRequestBody("text/plain".toMediaTypeOrNull())
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val fileParts = files.map { file ->
-            val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-            // The server reads the multipart field "files" (mochi.attachment.save);
-            // parts named anything else are silently dropped.
-            MultipartBody.Part.createFormData("files", file.name, requestFile)
-        }
+        // The server reads the multipart field "files" (mochi.attachment.save);
+        // parts named anything else are silently dropped.
+        val fileParts = Uploads.fileParts("files", files)
         return api.createComment(projectId, objectId, contentBody, parentBody, fileParts).unwrap().comment
     }
 
@@ -274,8 +286,7 @@ class ProjectsRepository @Inject constructor(
         api.getAttachments(projectId, objectId).unwrap().attachments
 
     suspend fun createAttachment(projectId: String, objectId: String, file: File): Attachment {
-        val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-        val part = MultipartBody.Part.createFormData("files", file.name, requestFile)
+        val part = Uploads.filePart("files", file)
         return api.createAttachment(projectId, objectId, part).unwrap().attachment
     }
 

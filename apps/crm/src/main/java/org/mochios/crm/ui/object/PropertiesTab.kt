@@ -5,8 +5,10 @@
 
 package org.mochios.crm.ui.`object`
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -20,6 +22,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -51,6 +54,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -407,6 +412,12 @@ internal fun FieldEditor(
                                 onValueChange = {},
                                 readOnly = true,
                                 label = { Text(field.name) },
+                                placeholder = { Text(stringResource(R.string.crm_property_select)) },
+                                leadingIcon = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
+                                    { OptionColourSwatch(selectedOption.colour) }
+                                } else {
+                                    null
+                                },
                                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                                 modifier = Modifier
                                     .menuAnchor(MenuAnchorType.PrimaryNotEditable)
@@ -416,16 +427,14 @@ internal fun FieldEditor(
                                 expanded = expanded,
                                 onDismissRequest = { expanded = false }
                             ) {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.crm_property_option_none), color = MaterialTheme.colorScheme.onSurfaceVariant) },
-                                    onClick = {
-                                        onValueChange("")
-                                        expanded = false
-                                    }
-                                )
                                 options.sortedBy { it.rank }.forEach { option ->
                                     DropdownMenuItem(
                                         text = { Text(option.name) },
+                                        leadingIcon = if (option.colour.isNotBlank()) {
+                                            { OptionColourSwatch(option.colour) }
+                                        } else {
+                                            null
+                                        },
                                         onClick = {
                                             onValueChange(option.id)
                                             expanded = false
@@ -446,37 +455,28 @@ internal fun FieldEditor(
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 val resolvedName = people.find { it.id == stringValue }?.name
-                val displayName = when {
-                    stringValue.isBlank() -> "—"
-                    !resolvedName.isNullOrBlank() -> resolvedName
-                    else -> stringValue
-                }
                 if (readOnly) {
+                    val displayName = when {
+                        stringValue.isBlank() -> "—"
+                        !resolvedName.isNullOrBlank() -> resolvedName
+                        else -> stringValue
+                    }
                     Text(text = displayName, style = MaterialTheme.typography.bodyLarge)
                 } else {
-                    if (stringValue.isNotBlank()) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(
-                                text = displayName,
-                                style = MaterialTheme.typography.bodyLarge,
-                                modifier = Modifier.weight(1f)
-                            )
-                            IconButton(onClick = { onValueChange("") }) {
-                                Icon(
-                                    Icons.Default.Close,
-                                    contentDescription = stringResource(R.string.crm_property_remove),
-                                    modifier = Modifier.size(16.dp)
-                                )
-                            }
-                        }
-                        Spacer(modifier = Modifier.height(4.dp))
+                    // Person.id round-trips through User.fingerprint (User.id is
+                    // a numeric Int), matching the search adapter's mapping.
+                    val members = people.map { person ->
+                        User(id = 0, name = person.name, fingerprint = person.id)
                     }
                     PersonPicker(
+                        selectedId = stringValue,
+                        selectedName = resolvedName,
+                        members = members,
                         onSelect = { user ->
-                            // Person.id is stored in fingerprint by the search adapter
                             val entityId = user.fingerprint.orEmpty()
                             if (entityId.isNotBlank()) onValueChange(entityId)
                         },
+                        onClear = { onValueChange("") },
                         onSearch = onSearchUsers,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -638,6 +638,26 @@ private fun ReadOnlyDisplay(label: String, value: String) {
             text = if (value.isBlank()) "—" else value,
             style = MaterialTheme.typography.bodyLarge
         )
+    }
+}
+
+/** A small colour dot shown to the left of a select option. */
+@Composable
+private fun OptionColourSwatch(colour: String) {
+    Box(
+        modifier = Modifier
+            .size(16.dp)
+            .clip(CircleShape)
+            .background(parseOptionColour(colour))
+    )
+}
+
+/** Parse a `#RRGGBB` (or bare `RRGGBB`) option colour, falling back to grey. */
+private fun parseOptionColour(hex: String): Color {
+    return try {
+        Color(android.graphics.Color.parseColor("#${hex.removePrefix("#")}"))
+    } catch (_: Exception) {
+        Color.Gray
     }
 }
 

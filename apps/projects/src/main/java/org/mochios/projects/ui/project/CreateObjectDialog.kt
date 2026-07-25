@@ -49,6 +49,11 @@ fun CreateObjectDialog(
      * "Add child" affordance on an existing object.
      */
     presetParent: String?,
+    /**
+     * Field values the dialog opens with, e.g. the board column the user tapped
+     * "+" on. They are applied to the created object as-is.
+     */
+    presetValues: Map<String, String>,
     isCreating: Boolean,
     activeView: ProjectView?,
     viewModel: ProjectViewModel,
@@ -93,7 +98,16 @@ fun CreateObjectDialog(
         title = { Text(stringResource(R.string.projects_create_object_title)) },
         text = {
             Column {
+                OutlinedTextField(
+                    value = title,
+                    onValueChange = { title = it },
+                    label = { Text(stringResource(R.string.projects_create_object_title_field)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
                 if (classes.size > 1) {
+                    Spacer(modifier = Modifier.height(8.dp))
                     ExposedDropdownMenuBox(
                         expanded = classExpanded,
                         onExpandedChange = { classExpanded = it }
@@ -126,7 +140,6 @@ fun CreateObjectDialog(
                             }
                         }
                     }
-                    Spacer(modifier = Modifier.height(8.dp))
                 }
 
                 // Parent picker — only shown when the selected class has
@@ -134,6 +147,7 @@ fun CreateObjectDialog(
                 // always an option so root-level objects can still be
                 // created from the dialog.
                 if (parentCandidates.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(8.dp))
                     val selectedParentLabel = selectedParentId?.let { id ->
                         objects.firstOrNull { it.id == id }?.let { o ->
                             o.readable.ifBlank { o.id }
@@ -175,24 +189,19 @@ fun CreateObjectDialog(
                             }
                         }
                     }
-                    Spacer(modifier = Modifier.height(8.dp))
                 }
-
-                OutlinedTextField(
-                    value = title,
-                    onValueChange = { title = it },
-                    label = { Text(stringResource(R.string.projects_create_object_title_field)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
             }
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    val initialValues = mutableMapOf<String, String>()
-                    // Pre-fill column value from current view context if board view
-                    if (activeView?.viewtype == "board" && activeView.columns.isNotBlank()) {
+                    val initialValues = presetValues.toMutableMap()
+                    // On a board, an object with no column value would land in
+                    // "Unassigned" — fall back to the first column unless the
+                    // caller already said which one (the tapped column header).
+                    if (activeView?.viewtype == "board" && activeView.columns.isNotBlank() &&
+                        !initialValues.containsKey(activeView.columns)
+                    ) {
                         val options = viewModel.getAllOptionsForField(activeView.columns)
                         if (options.isNotEmpty()) {
                             initialValues[activeView.columns] = options.first().id

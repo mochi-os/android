@@ -51,6 +51,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import org.mochios.android.util.Uploads
 import org.mochios.wikis.R
 import java.io.File
 
@@ -115,12 +116,7 @@ fun CommentForm(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
         for (uri in uris) {
-            val name = uri.lastPathSegment?.substringAfterLast('/') ?: "file"
-            val temp = File(context.cacheDir, name)
-            context.contentResolver.openInputStream(uri)?.use { input ->
-                temp.outputStream().use { output -> input.copyTo(output) }
-            }
-            files.add(temp)
+            Uploads.cacheFile(context, uri, "file")?.let { file -> files.add(file) }
         }
     }
 

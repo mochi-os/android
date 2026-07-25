@@ -172,6 +172,7 @@
     <string name="crm_property_add_item">Add item</string>
     <string name="crm_property_required">%1$s is required</string>
     <string name="crm_property_option_none">None</string>
+    <string name="crm_property_select">Select …</string>
 
     <!-- Activity -->
     <string name="crm_activity_empty">No activity</string>

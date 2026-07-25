@@ -117,7 +117,7 @@ class FindProjectsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = id)
             try {
-                repository.subscribe(id, project.server)
+                repository.subscribe(id, project.server ?: project.location)
                 _uiState.value = _uiState.value.copy(subscribingId = null)
                 onSuccess()
             } catch (e: Exception) {

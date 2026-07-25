@@ -40,7 +40,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -82,6 +81,7 @@ import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.GameWsEvent
 import org.mochios.android.ws.GameWsStatus
@@ -255,7 +255,7 @@ fun ChessGameDetailScreen(
     }
 
     if (showMobileChat) {
-        ModalBottomSheet(
+        MochiBottomSheet(
             sheetState = mobileChatSheetState,
             onDismissRequest = { showMobileChat = false },
         ) {
