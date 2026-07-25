@@ -716,14 +716,18 @@ private fun ProjectContent(
                                     HorizontalDivider()
                                 }
 
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.projects_link)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        viewModel.shareProject()
-                                    },
-                                    leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
-                                )
+                                // Sharing a link is only offered on projects the
+                                // user owns; it's hidden on subscribed ones.
+                                if (details?.project?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.projects_link)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            viewModel.shareProject()
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
+                                    )
+                                }
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.projects_settings)) },
                                     onClick = {
