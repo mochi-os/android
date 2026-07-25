@@ -11,6 +11,7 @@ import android.net.Uri
 import android.provider.OpenableColumns
 import android.webkit.MimeTypeMap
 import java.io.File
+import java.io.IOException
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -126,7 +127,18 @@ object Uploads {
      */
     fun cacheFile(context: Context, uri: Uri, fallbackName: String = "file"): File? {
         val resolver = context.contentResolver
-        val target = File(context.cacheDir, fileName(resolver, uri, fallbackName))
+        // Two picked files can share a display name (and a crashed upload can
+        // leave a stale copy behind); writing to the same path would upload one
+        // file's bytes twice. Disambiguate with a counter before the extension.
+        var target = File(context.cacheDir, fileName(resolver, uri, fallbackName))
+        var counter = 2
+        while (target.exists()) {
+            val extension = target.extension
+            val stem = target.nameWithoutExtension
+            val name = if (extension.isEmpty()) "$stem-$counter" else "$stem-$counter.$extension"
+            target = File(context.cacheDir, name)
+            counter++
+        }
         return resolver.openInputStream(uri)?.use { input ->
             target.outputStream().use { output -> input.copyTo(output) }
             target
@@ -134,14 +146,28 @@ object Uploads {
     }
 
     /**
-     * Copies each of [uris] into the app cache via [cacheFile], preserving order.
-     * URIs that can't be opened are skipped. Callers own the returned files and
-     * must [deleteAll] them once the upload finishes. This is the streaming
-     * counterpart to reading each uri into memory — the request bodies built
-     * from these files upload straight off disk and survive request retries.
+     * Copies each of [uris] into the app cache via [cacheFile], preserving
+     * order. Callers own the returned files and must [deleteAll] them once the
+     * upload finishes. This is the streaming counterpart to reading each uri
+     * into memory — the request bodies built from these files upload straight
+     * off disk and survive request retries.
+     *
+     * @throws IOException when a uri can't be opened, so a picked attachment is
+     * never silently dropped from the upload; files cached before the failure
+     * are cleaned up.
      */
-    fun cacheFiles(context: Context, uris: List<Uri>, fallbackName: String = "file"): List<File> =
-        uris.mapNotNull { uri -> cacheFile(context, uri, fallbackName) }
+    fun cacheFiles(context: Context, uris: List<Uri>, fallbackName: String = "file"): List<File> {
+        val files = mutableListOf<File>()
+        for (uri in uris) {
+            val file = cacheFile(context, uri, fallbackName)
+            if (file == null) {
+                deleteAll(files)
+                throw IOException("Cannot read $uri")
+            }
+            files.add(file)
+        }
+        return files
+    }
 
     /** Deletes each temp [files], ignoring individual failures. */
     fun deleteAll(files: List<File>) {
