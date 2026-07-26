@@ -112,12 +112,12 @@ data class ViewPostResponse(
 )
 
 data class CreatePostResponse(
-    val forum: String = "",
-    val post: String = ""
+    val id: String = "",
+    val forum: String = ""
 )
 
 data class CreateCommentResponse(
-    val comment: String = "",
+    val id: String = "",
     val forum: String = "",
     val post: String = ""
 )

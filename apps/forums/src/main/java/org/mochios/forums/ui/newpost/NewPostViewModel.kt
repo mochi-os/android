@@ -189,7 +189,7 @@ class NewPostViewModel @Inject constructor(
                         isPosting = false,
                         postSuccess = true,
                         createdForum = r.forum,
-                        createdPost = r.post
+                        createdPost = r.id
                     )
                 }
             } catch (e: Exception) {

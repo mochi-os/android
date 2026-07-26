@@ -37,6 +37,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -51,6 +52,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.theme.interestColor
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.Interest
@@ -241,6 +243,7 @@ private fun InterestRow(
     onWeightChange: (Int) -> Unit,
     onRemove: () -> Unit,
 ) {
+    val weightColor = interestColor(interest.weight.toDouble())
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -253,7 +256,7 @@ private fun InterestRow(
                 Text(
                     text = if (interest.weight > 0) "+${interest.weight}" else "${interest.weight}",
                     style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = weightColor,
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
                         .background(MaterialTheme.colorScheme.surfaceVariant)
@@ -274,6 +277,10 @@ private fun InterestRow(
                 valueRange = -100f..100f,
                 steps = 19, // 20 segments at step 10 between -100 and 100
                 modifier = Modifier.fillMaxWidth(),
+                colors = SliderDefaults.colors(
+                    thumbColor = weightColor,
+                    activeTrackColor = weightColor,
+                ),
             )
         }
     }
