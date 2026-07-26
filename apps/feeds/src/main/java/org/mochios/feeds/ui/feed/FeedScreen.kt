@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -1748,19 +1749,31 @@ private fun PostCard(
             // ContentScale.Fit shows a mismatched image whole with margins
             // rather than cropped. Top-aligned so the image stays full-bleed
             // against the screen edge. Tap opens the full-screen lightbox.
+            //
+            // The 16:9 region comes from aspectRatio, not a computed dp
+            // height: integer-dp arithmetic (screenWidthDp * 9 / 16) came
+            // out a fraction of a dp short of true 16:9, so Fit letterboxed
+            // an exactly-16:9 image by a pixel of background down each side
+            // — visible as thin light lines against dark artwork. The
+            // half-screen cap still applies for landscape/squarish windows;
+            // when it binds, aspectRatio falls back to the capped height and
+            // Fit's margins take over as before.
             val configuration = LocalConfiguration.current
-            val heroHeight = if (heroFromAttachment) {
-                (configuration.screenHeightDp / 2).dp
+            val heroModifier = if (heroFromAttachment) {
+                Modifier
+                    .fillMaxWidth()
+                    .height((configuration.screenHeightDp / 2).dp)
             } else {
-                minOf(configuration.screenWidthDp * 9 / 16, configuration.screenHeightDp / 2).dp
+                Modifier
+                    .fillMaxWidth()
+                    .heightIn(max = (configuration.screenHeightDp / 2).dp)
+                    .aspectRatio(16f / 9f)
             }
             PostImage(
                 url = heroUrl,
                 contentDescription = stringResource(R.string.feeds_image_preview),
                 alignment = Alignment.TopCenter,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(heroHeight),
+                modifier = heroModifier,
                 onClick = {
                     lightboxState = if (heroFromAttachment) {
                         attachmentImageUrls to 0
