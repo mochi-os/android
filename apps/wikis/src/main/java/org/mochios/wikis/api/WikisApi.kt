@@ -349,12 +349,11 @@ interface WikisApi {
         @Query("search") query: String,
     ): Response<ApiResponse<UsersSearchResponse>>
 
-    /** Proxy to people.groups/list via the wikis backend. */
-    
-    @GET("{wiki}/-/groups")
-    suspend fun listGroups(
-        @Path(value = "wiki", encoded = true) wiki: String,
-    ): Response<ApiResponse<GroupsResponse>>
+    // Proxy to people.groups/list via the wikis backend (class-level).
+    // action_groups takes no wiki: it calls people directly, and app.json
+    // registers only `-/groups`. The entity-scoped form never resolved.
+    @GET("-/groups")
+    suspend fun listGroups(): Response<ApiResponse<GroupsResponse>>
 
     // ---- Wiki delete ----
 

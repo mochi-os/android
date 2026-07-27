@@ -260,9 +260,9 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun listGroups(wiki: String): List<Group> {
+    suspend fun listGroups(): List<Group> {
         return try {
-            api.listGroups(wiki).unwrap().groups
+            api.listGroups().unwrap().groups
         } catch (e: Exception) {
             throw e.toMochiError()
         }

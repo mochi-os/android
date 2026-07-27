@@ -192,7 +192,7 @@ class AccessTabViewModel @Inject constructor(
     fun loadGroups() {
         viewModelScope.launch {
             try {
-                val groups = repository.listGroups(wikiId)
+                val groups = repository.listGroups()
                     .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(groups = groups)
             } catch (_: Exception) {
