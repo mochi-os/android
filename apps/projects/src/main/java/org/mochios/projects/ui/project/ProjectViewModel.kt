@@ -62,6 +62,7 @@ data class ProjectUiState(
      */
     val createObjectValues: Map<String, String> = emptyMap(),
     val isCreatingObject: Boolean = false,
+    val isExporting: Boolean = false,
     val selectedObjectId: String? = null,
     /**
      * Sort field per view id. Field is one of "rank", "number", "created",
@@ -92,6 +93,9 @@ class ProjectViewModel @Inject constructor(
     /** Emits the project's share link once fetched, for the screen to share. */
     private val _shareLink = MutableSharedFlow<String>()
     val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
+
+    private val _exportData = MutableSharedFlow<String>()
+    val exportData: SharedFlow<String> = _exportData.asSharedFlow()
 
     private var wsSubscriptionId: String? = null
 
@@ -213,6 +217,31 @@ class ProjectViewModel @Inject constructor(
                 }
             } catch (_: Exception) {
                 // Best-effort: a failed share link simply does nothing.
+            }
+        }
+    }
+
+    fun exportProject() {
+        if (_uiState.value.isExporting) {
+            return
+        }
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isExporting = true)
+            try {
+                var rounds = 0
+                while (rounds < MAX_WARM_ROUNDS) {
+                    val warm = repository.warmExport(projectId)
+                    if (warm.remaining <= 0) {
+                        break
+                    }
+                    rounds++
+                }
+                val data = repository.exportData(projectId)
+                _exportData.emit(data.toString())
+            } catch (error: Exception) {
+                _uiState.value = _uiState.value.copy(error = error.toMochiError())
+            } finally {
+                _uiState.value = _uiState.value.copy(isExporting = false)
             }
         }
     }
@@ -811,5 +840,9 @@ class ProjectViewModel @Inject constructor(
             return allFields.filter { it.id in viewFieldIds }
         }
         return allFields.filter { it.showOnCard }
+    }
+
+    private companion object {
+        const val MAX_WARM_ROUNDS = 60
     }
 }

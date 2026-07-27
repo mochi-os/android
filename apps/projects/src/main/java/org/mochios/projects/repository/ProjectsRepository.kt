@@ -15,6 +15,7 @@ import org.mochios.android.model.Comment
 import org.mochios.android.util.Uploads
 import org.mochios.projects.api.ProjectsApi
 import org.mochios.projects.api.SetValueRequest
+import org.mochios.projects.api.WarmExportResponse
 import org.mochios.projects.model.Activity
 import org.mochios.projects.model.Branch
 import org.mochios.projects.model.FieldOption
@@ -365,6 +366,24 @@ class ProjectsRepository @Inject constructor(
         templateVersion: Int? = null
     ) {
         api.importDesign(projectId, data, template, templateVersion).unwrap()
+    }
+
+    // ---- Data ----
+
+    suspend fun warmExport(projectId: String): WarmExportResponse =
+        api.warmExport(projectId).unwrap()
+
+    suspend fun exportData(projectId: String): JsonObject =
+        api.exportData(projectId).unwrap()
+
+    suspend fun importData(projectId: String, backupJson: String) {
+        val part = Uploads.bytesPart(
+            field = "file",
+            fileName = "import.json",
+            mimeType = "application/json",
+            bytes = backupJson.toByteArray()
+        )
+        api.importData(projectId, part).unwrap()
     }
 
     // ---- Views ----

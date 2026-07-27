@@ -7,6 +7,8 @@ package org.mochios.projects.ui.projectlist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -128,17 +130,18 @@ class ProjectListViewModel @Inject constructor(
     ) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true)
+            val importing = !backupJson.isNullOrBlank()
             try {
                 val project = repository.createProject(
                     name = name,
                     description = null,
                     prefix = prefix.ifBlank { null },
                     privacy = privacy,
-                    template = template
+                    template = if (importing) TEMPLATE_BLANK else template
                 )
                 val newProjectId = project.fingerprint.ifEmpty { project.id }
-                if (!backupJson.isNullOrBlank()) {
-                    repository.importDesign(newProjectId, data = backupJson)
+                if (importing) {
+                    restoreBackup(newProjectId, backupJson)
                 }
                 // The create response only carries id/fingerprint, so reload the
                 // full list before opening the project — this way the drawer and
@@ -164,6 +167,31 @@ class ProjectListViewModel @Inject constructor(
         }
     }
 
+    private suspend fun restoreBackup(projectId: String, backupJson: String) {
+        try {
+            val root = JsonParser.parseString(backupJson).asJsonObject
+            val design = root.getAsJsonObject("design") ?: root
+            repository.importDesign(
+                projectId,
+                data = design.toString(),
+                template = "",
+                templateVersion = 0
+            )
+            if (hasData(root)) {
+                repository.importData(projectId, backupJson)
+            }
+        } catch (e: Exception) {
+            runCatching { repository.deleteProject(projectId) }
+            throw e
+        }
+    }
+
+    private fun hasData(root: JsonObject): Boolean {
+        val objects = root.getAsJsonArray("objects")?.size() ?: 0
+        val links = root.getAsJsonArray("links")?.size() ?: 0
+        return objects > 0 || links > 0
+    }
+
     fun filteredProjects(): List<Project> {
         val query = _uiState.value.searchQuery.lowercase()
         if (query.isBlank()) return _uiState.value.projects
@@ -185,5 +213,9 @@ class ProjectListViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    private companion object {
+        const val TEMPLATE_BLANK = "blank"
     }
 }

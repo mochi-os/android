@@ -7,6 +7,10 @@ package org.mochios.projects.ui.project
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
@@ -33,6 +37,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.FileDownload
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
@@ -64,6 +69,7 @@ import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -87,11 +93,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
+import java.time.LocalDate
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
@@ -595,6 +604,27 @@ private fun ProjectContent(
         }
     }
 
+    var pendingExport by remember { mutableStateOf<String?>(null) }
+    val exportSaved = stringResource(R.string.projects_export_saved)
+    val exportFailed = stringResource(R.string.projects_export_failed)
+    val saveExport = rememberLauncherForActivityResult(
+        ActivityResultContracts.CreateDocument("application/json")
+    ) { uri ->
+        val json = pendingExport
+        pendingExport = null
+        if (uri != null && json != null) {
+            val ok = writeTextToUri(context, uri, json)
+            Toast.makeText(context, if (ok) exportSaved else exportFailed, Toast.LENGTH_SHORT).show()
+        }
+    }
+    LaunchedEffect(viewModel) {
+        viewModel.exportData.collect { json ->
+            pendingExport = json
+            val name = viewModel.uiState.value.projectDetails?.project?.name
+            saveExport.launch(exportFileName(name))
+        }
+    }
+
     LaunchedEffect(initialObjectId) {
         if (initialObjectId != null) {
             viewModel.selectObject(initialObjectId)
@@ -744,6 +774,16 @@ private fun ProjectContent(
                                     },
                                     leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
                                 )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_export)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        viewModel.exportProject()
+                                    },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.FileDownload, contentDescription = null)
+                                    }
+                                )
                             }
                         }
                     }
@@ -882,6 +922,10 @@ private fun ProjectContent(
         )
     }
 
+    if (uiState.isExporting) {
+        ExportProgressDialog()
+    }
+
     if (showFilters) {
         SortFilterSheet(
             fieldSortOptions = viewModel.getSortFieldOptions(),
@@ -926,4 +970,49 @@ private fun shareProjectLink(context: Context, link: String, title: String) {
     val chooser = Intent.createChooser(intent, title)
     chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     context.startActivity(chooser)
+}
+
+@Composable
+private fun ExportProgressDialog() {
+    Dialog(
+        onDismissRequest = {},
+        properties = DialogProperties(
+            dismissOnBackPress = false,
+            dismissOnClickOutside = false
+        )
+    ) {
+        Surface(
+            shape = MaterialTheme.shapes.large,
+            tonalElevation = 6.dp
+        ) {
+            Row(
+                modifier = Modifier.padding(24.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(stringResource(R.string.projects_exporting))
+            }
+        }
+    }
+}
+
+private fun exportFileName(projectName: String?): String {
+    val slug = projectName
+        ?.lowercase()
+        ?.replace(Regex("[^a-z0-9]+"), "-")
+        ?.trim('-')
+        ?.takeIf { slug -> slug.isNotEmpty() }
+        ?: "unknown"
+    return "$slug-projects-backup-${LocalDate.now()}.json"
+}
+
+private fun writeTextToUri(context: Context, uri: Uri, text: String): Boolean {
+    return try {
+        val stream = context.contentResolver.openOutputStream(uri) ?: return false
+        stream.use { output -> output.write(text.toByteArray()) }
+        true
+    } catch (_: Exception) {
+        false
+    }
 }

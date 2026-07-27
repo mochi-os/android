@@ -62,6 +62,10 @@
     <string name="projects_share_link_title">Share project</string>
     <string name="projects_settings">Settings</string>
     <string name="projects_design">Design</string>
+    <string name="projects_export">Export data</string>
+    <string name="projects_exporting">Preparing export…</string>
+    <string name="projects_export_saved">Project data saved</string>
+    <string name="projects_export_failed">Couldn\'t save export</string>
 
     <!-- Sort and filter -->
     <string name="projects_sort_filter_title">Sort &amp; filter</string>

@@ -57,6 +57,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -74,6 +76,19 @@ private fun prefixFromName(name: String): String =
         .trim('-')
         .take(20)
         .trimEnd('-')
+
+private data class BackupPrefill(
+    val json: String,
+    val fileName: String,
+    val name: String?,
+    val prefix: String?
+)
+
+private fun JsonObject.jsonString(key: String): String? =
+    get(key)
+        ?.takeIf { element -> element.isJsonPrimitive }
+        ?.asString
+        ?.takeIf { value -> value.isNotBlank() }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -105,14 +120,32 @@ fun CreateProjectDialog(
     ) { uri: Uri? ->
         if (uri != null) {
             scope.launch {
-                val content = withContext(Dispatchers.IO) {
-                    context.contentResolver.openInputStream(uri)
+                val prefill = withContext(Dispatchers.IO) {
+                    val content = context.contentResolver.openInputStream(uri)
                         ?.bufferedReader()
                         ?.use { reader -> reader.readText() }
+                    val root = content
+                        ?.let { text -> runCatching { JsonParser.parseString(text).asJsonObject }.getOrNull() }
+                    if (content != null && root != null) {
+                        val project = root.getAsJsonObject("project")
+                        BackupPrefill(
+                            json = content,
+                            fileName = Uploads.fileName(context.contentResolver, uri, ""),
+                            name = project?.jsonString("name"),
+                            prefix = project?.jsonString("prefix")
+                        )
+                    } else {
+                        null
+                    }
                 }
-                if (content != null) {
-                    backupJson = content
-                    backupName = Uploads.fileName(context.contentResolver, uri, "")
+                if (prefill != null) {
+                    backupJson = prefill.json
+                    backupName = prefill.fileName
+                    prefill.name?.let { value -> name = value }
+                    prefill.prefix?.let { value ->
+                        prefix = prefixFromName(value)
+                        prefixEdited = true
+                    }
                 }
             }
         }
@@ -216,7 +249,7 @@ fun CreateProjectDialog(
         confirmButton = {
             // On the details step with templates available, advance to the
             // template picker; otherwise create the project.
-            val goesToTemplate = step == 0 && hasTemplates
+            val goesToTemplate = step == 0 && hasTemplates && backupJson == null
             TextButton(
                 onClick = {
                     if (goesToTemplate) {

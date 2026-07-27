@@ -102,6 +102,8 @@ data class SetValueRequest(val value: String)
 
 // Shareable project link returned by the `-/share` endpoint.
 data class ShareResponse(val link: String = "")
+
+data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
 data class ClassListResponse(val classes: List<ProjectClass> = emptyList())
 data class ClassResponse(val `class`: ProjectClass = ProjectClass())
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
@@ -486,6 +488,25 @@ interface ProjectsApi {
         @Field("data") data: String?,
         @Field("template") template: String?,
         @Field("template_version") templateVersion: Int?
+    ): Response<ApiResponse<SuccessResponse>>
+
+    // ---- Data: Export / Import ----
+
+    @POST("{projectId}/-/data/export/warm")
+    suspend fun warmExport(
+        @Path("projectId") projectId: String
+    ): Response<ApiResponse<WarmExportResponse>>
+
+    @GET("{projectId}/-/data/export")
+    suspend fun exportData(
+        @Path("projectId") projectId: String
+    ): Response<ApiResponse<JsonObject>>
+
+    @Multipart
+    @POST("{projectId}/-/data/import")
+    suspend fun importData(
+        @Path("projectId") projectId: String,
+        @Part file: MultipartBody.Part
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Views ----
