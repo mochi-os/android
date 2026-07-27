@@ -5,7 +5,6 @@
 
 package org.mochios.wikis.model
 
-import com.google.gson.annotations.SerializedName
 
 data class Revision(
     val id: String = "",
@@ -39,6 +38,9 @@ data class PageHistoryResponse(
 data class PageRevisionResponse(
     val page: String = "",
     val revision: RevisionDetail = RevisionDetail(),
-    @SerializedName("current_version")
-    val currentVersion: Int = 0,
+    val version: RevisionVersion = RevisionVersion(),
+)
+
+data class RevisionVersion(
+    val current: Int = 0,
 )

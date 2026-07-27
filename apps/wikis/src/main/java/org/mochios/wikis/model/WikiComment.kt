@@ -15,7 +15,7 @@ data class WikiComment(
     val author: String = "",
     val name: String = "",
     val body: String = "",
-    @SerializedName("body_markdown")
+    @SerializedName("markdown")
     val bodyMarkdown: String = "",
     val created: Long = 0,
     val edited: Long = 0,

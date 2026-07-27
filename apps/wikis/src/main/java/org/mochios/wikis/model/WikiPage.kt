@@ -8,7 +8,6 @@ package org.mochios.wikis.model
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
-import com.google.gson.annotations.SerializedName
 import java.lang.reflect.Type
 
 data class WikiPage(
@@ -23,12 +22,18 @@ data class WikiPage(
     val tags: List<String> = emptyList(),
 )
 
+data class PageLinks(
+    val missing: List<String>? = null,
+)
+
+data class PageComments(
+    val count: Int? = null,
+)
+
 data class PageResponse(
     val page: WikiPage = WikiPage(),
-    @SerializedName("missing_links")
-    val missingLinks: List<String>? = null,
-    @SerializedName("comment_count")
-    val commentCount: Int? = null,
+    val links: PageLinks? = null,
+    val comments: PageComments? = null,
 )
 
 data class PageNotFoundResponse(
@@ -59,11 +64,13 @@ class PageFetchResponseDeserializer : JsonDeserializer<PageFetchResponse> {
             PageFetchResponse.NotFound(slug)
         } else {
             val page = context.deserialize<WikiPage>(obj.get("page"), WikiPage::class.java)
-            val missingLinks = obj.get("missing_links")
+            val missingLinks = obj.getAsJsonObject("links")
+                ?.get("missing")
                 ?.takeIf { !it.isJsonNull }
                 ?.asJsonArray
                 ?.map { it.asString }
-            val commentCount = obj.get("comment_count")
+            val commentCount = obj.getAsJsonObject("comments")
+                ?.get("count")
                 ?.takeIf { !it.isJsonNull }
                 ?.asInt
             PageFetchResponse.Page(page, missingLinks, commentCount)
@@ -83,11 +90,14 @@ data class NewPageResponse(
     val slug: String = "",
 )
 
+data class PageReverted(
+    val from: Int = 0,
+)
+
 data class PageRevertResponse(
     val slug: String = "",
     val version: Int = 0,
-    @SerializedName("reverted_from")
-    val revertedFrom: Int = 0,
+    val reverted: PageReverted = PageReverted(),
 )
 
 data class PageDeleteResponse(

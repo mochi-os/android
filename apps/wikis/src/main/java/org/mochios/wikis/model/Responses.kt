@@ -33,8 +33,12 @@ data class RenamedEntry(
 /** Response from `POST {wiki}/-/:page/rename`. */
 data class PageRenameResponse(
     val renamed: List<RenamedEntry> = emptyList(),
-    @com.google.gson.annotations.SerializedName("updated_links")
-    val updatedLinks: Int = 0,
+    val links: RenameLinks = RenameLinks(),
+)
+
+/** Link-rewrite counts carried by [PageRenameResponse]. */
+data class RenameLinks(
+    val updated: Int = 0,
 )
 
 /** Response from `GET {wiki}/-/replicas`. */

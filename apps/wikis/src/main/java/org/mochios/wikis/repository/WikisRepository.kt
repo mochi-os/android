@@ -360,7 +360,7 @@ class WikisRepository @Inject constructor(
             ).unwrap()
             RenamePageResult(
                 renamed = r.renamed.map { it.new },
-                updatedLinks = r.updatedLinks,
+                updatedLinks = r.links.updated,
             )
         } catch (e: Exception) {
             throw e.toMochiError()
