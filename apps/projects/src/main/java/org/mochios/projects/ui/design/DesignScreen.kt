@@ -7,6 +7,10 @@ package org.mochios.projects.ui.design
 
 import android.content.ClipData
 import android.content.Intent
+import android.net.Uri
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,12 +24,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.SaveAlt
 import androidx.compose.material.icons.filled.Upload
+import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -36,6 +44,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -53,6 +62,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -63,8 +73,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.Uploads
 import org.mochios.projects.R
+import org.mochios.projects.lib.backupFileName
+import org.mochios.projects.lib.readTextFromUri
+import org.mochios.projects.lib.writeTextToUri
 import org.mochios.projects.model.Template
 import org.mochios.android.R as MochiR
 
@@ -79,7 +96,7 @@ fun DesignScreen(
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showImportDialog by remember { mutableStateOf(false) }
     var confirmTemplate by remember { mutableStateOf<Template?>(null) }
-    var confirmPastedJson by remember { mutableStateOf<String?>(null) }
+    var confirmImport by remember { mutableStateOf<PendingImport?>(null) }
 
     val context = LocalContext.current
     val clipboard = LocalClipboardManager.current
@@ -89,18 +106,42 @@ fun DesignScreen(
     val shareChooser = stringResource(R.string.projects_design_share_chooser)
     val exportCopiedMsg = stringResource(R.string.projects_design_export_copied)
     val importedMsg = stringResource(R.string.projects_design_imported)
+    val pastedJsonLabel = stringResource(R.string.projects_design_pasted_json_label)
+
+    // Held between picking "Save to file" and the save dialog coming back with
+    // a destination, so the JSON survives the trip out to the file picker.
+    var pendingFileExport by remember { mutableStateOf<String?>(null) }
+    val exportSavedMsg = stringResource(R.string.projects_design_export_saved)
+    val exportFailedMsg = stringResource(R.string.projects_export_failed)
+    val saveExport = rememberLauncherForActivityResult(
+        ActivityResultContracts.CreateDocument("application/json")
+    ) { uri: Uri? ->
+        val json = pendingFileExport
+        pendingFileExport = null
+        if (uri != null && json != null) {
+            val ok = writeTextToUri(context, uri, json)
+            Toast.makeText(context, if (ok) exportSavedMsg else exportFailedMsg, Toast.LENGTH_SHORT)
+                .show()
+        }
+    }
 
     LaunchedEffect(uiState.exportedJson) {
         uiState.exportedJson?.let { json ->
-            // Copy to clipboard and offer share
-            clipboard.setClip(ClipData.newPlainText(clipboardLabel, json).toClipEntry())
-            val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                type = "application/json"
-                putExtra(Intent.EXTRA_TEXT, json)
-                putExtra(Intent.EXTRA_SUBJECT, exportSubject)
+            if (uiState.exportToFile) {
+                pendingFileExport = json
+                val name = uiState.projectDetails?.project?.name
+                saveExport.launch(backupFileName(name, "design"))
+            } else {
+                // Copy to clipboard and offer share
+                clipboard.setClip(ClipData.newPlainText(clipboardLabel, json).toClipEntry())
+                val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                    type = "application/json"
+                    putExtra(Intent.EXTRA_TEXT, json)
+                    putExtra(Intent.EXTRA_SUBJECT, exportSubject)
+                }
+                context.startActivity(Intent.createChooser(shareIntent, shareChooser))
+                snackbarHostState.showSnackbar(exportCopiedMsg)
             }
-            context.startActivity(Intent.createChooser(shareIntent, shareChooser))
-            snackbarHostState.showSnackbar(exportCopiedMsg)
             viewModel.clearExportedJson()
         }
     }
@@ -144,6 +185,14 @@ fun DesignScreen(
                                 onClick = {
                                     showOverflowMenu = false
                                     viewModel.exportDesign()
+                                }
+                            )
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.projects_design_export_file)) },
+                                leadingIcon = { Icon(Icons.Default.SaveAlt, contentDescription = null) },
+                                onClick = {
+                                    showOverflowMenu = false
+                                    viewModel.exportDesign(toFile = true)
                                 }
                             )
                             DropdownMenuItem(
@@ -271,7 +320,11 @@ fun DesignScreen(
             },
             onPasteJson = { json ->
                 showImportDialog = false
-                confirmPastedJson = json
+                confirmImport = PendingImport(json = json, label = pastedJsonLabel)
+            },
+            onPickFile = { json, fileName ->
+                showImportDialog = false
+                confirmImport = PendingImport(json = json, label = fileName)
             }
         )
     }
@@ -287,17 +340,20 @@ fun DesignScreen(
         )
     }
 
-    confirmPastedJson?.let { json ->
+    confirmImport?.let { pending ->
         ConfirmReplaceDialog(
-            label = stringResource(R.string.projects_design_pasted_json_label),
-            onDismiss = { confirmPastedJson = null },
+            label = pending.label,
+            onDismiss = { confirmImport = null },
             onConfirm = {
-                viewModel.importFromJson(json)
-                confirmPastedJson = null
+                viewModel.importFromJson(pending.json)
+                confirmImport = null
             }
         )
     }
 }
+
+/** Design JSON waiting on the user to confirm it may replace the current design. */
+private data class PendingImport(val json: String, val label: String)
 
 @Composable
 private fun ImportDesignDialog(
@@ -305,15 +361,31 @@ private fun ImportDesignDialog(
     isLoadingTemplates: Boolean,
     onDismiss: () -> Unit,
     onSelectTemplate: (Template) -> Unit,
-    onPasteJson: (String) -> Unit
+    onPasteJson: (String) -> Unit,
+    onPickFile: (json: String, fileName: String) -> Unit
 ) {
     var pastedJson by remember { mutableStateOf("") }
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+
+    val filePicker = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.GetContent()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            scope.launch {
+                val content = withContext(Dispatchers.IO) { readTextFromUri(context, uri) }
+                if (content != null) {
+                    onPickFile(content, Uploads.fileName(context.contentResolver, uri, ""))
+                }
+            }
+        }
+    }
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.projects_design_import_dialog_title)) },
         text = {
-            Column {
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 Text(
                     text = stringResource(R.string.projects_design_import_choose_template),
                     style = MaterialTheme.typography.labelMedium,
@@ -384,10 +456,30 @@ private fun ImportDesignDialog(
                 Spacer(modifier = Modifier.height(8.dp))
                 OutlinedTextField(
                     value = pastedJson,
-                    onValueChange = { pastedJson = it },
+                    onValueChange = { value -> pastedJson = value },
                     placeholder = { Text(stringResource(R.string.projects_design_paste_placeholder)) },
                     modifier = Modifier.fillMaxWidth().height(120.dp)
                 )
+
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text = stringResource(R.string.projects_design_or_upload_json),
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.SemiBold
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                OutlinedButton(
+                    onClick = { filePicker.launch("application/json") },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Icon(
+                        Icons.Default.UploadFile,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = Modifier.size(8.dp))
+                    Text(stringResource(R.string.projects_create_upload_json))
+                }
             }
         },
         confirmButton = {

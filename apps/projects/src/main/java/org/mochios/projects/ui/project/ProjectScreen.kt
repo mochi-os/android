@@ -100,7 +100,6 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
-import java.time.LocalDate
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
@@ -115,6 +114,8 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.projects.R
+import org.mochios.projects.lib.backupFileName
+import org.mochios.projects.lib.writeTextToUri
 import org.mochios.projects.model.Project
 import org.mochios.projects.ui.board.BoardView
 import org.mochios.projects.ui.`object`.ObjectDetailSheet
@@ -621,7 +622,7 @@ private fun ProjectContent(
         viewModel.exportData.collect { json ->
             pendingExport = json
             val name = viewModel.uiState.value.projectDetails?.project?.name
-            saveExport.launch(exportFileName(name))
+            saveExport.launch(backupFileName(name, "projects-backup"))
         }
     }
 
@@ -997,22 +998,3 @@ private fun ExportProgressDialog() {
     }
 }
 
-private fun exportFileName(projectName: String?): String {
-    val slug = projectName
-        ?.lowercase()
-        ?.replace(Regex("[^a-z0-9]+"), "-")
-        ?.trim('-')
-        ?.takeIf { slug -> slug.isNotEmpty() }
-        ?: "unknown"
-    return "$slug-projects-backup-${LocalDate.now()}.json"
-}
-
-private fun writeTextToUri(context: Context, uri: Uri, text: String): Boolean {
-    return try {
-        val stream = context.contentResolver.openOutputStream(uri) ?: return false
-        stream.use { output -> output.write(text.toByteArray()) }
-        true
-    } catch (_: Exception) {
-        false
-    }
-}

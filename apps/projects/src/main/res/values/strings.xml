@@ -313,6 +313,8 @@
     <string name="projects_design_title">Design</string>
     <string name="projects_design_more_options">More options</string>
     <string name="projects_design_export">Export design</string>
+    <string name="projects_design_export_file">Save design to file</string>
+    <string name="projects_design_export_saved">Design saved</string>
     <string name="projects_design_import">Import design</string>
     <string name="projects_design_clipboard_label">Design JSON</string>
     <string name="projects_design_export_subject">Project design</string>
@@ -326,6 +328,7 @@
     <string name="projects_design_no_templates">No templates available</string>
     <string name="projects_design_or_paste_json">Or paste JSON</string>
     <string name="projects_design_paste_placeholder">Paste exported design JSON</string>
+    <string name="projects_design_or_upload_json">Or upload a file</string>
     <string name="projects_design_import_json">Import JSON</string>
     <string name="projects_design_use">Use</string>
     <string name="projects_design_replace_title">Replace design?</string>

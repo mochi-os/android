@@ -33,6 +33,9 @@ data class DesignUiState(
     val selectedFieldId: String? = null,
     val isSaving: Boolean = false,
     val exportedJson: String? = null,
+    // Where the pending [exportedJson] is headed: true saves it to a file the
+    // user picks, false copies it to the clipboard and offers the share sheet.
+    val exportToFile: Boolean = false,
     val templates: List<Template> = emptyList(),
     val isLoadingTemplates: Boolean = false,
     val importSuccess: Boolean = false
@@ -322,11 +325,20 @@ class DesignViewModel @Inject constructor(
 
     // ---- Design Export / Import ----
 
-    fun exportDesign() {
+    /**
+     * Fetches the design JSON for the current project.
+     *
+     * @param toFile true to hand the result to the system save dialog, false
+     *   to copy it to the clipboard and open the share sheet.
+     */
+    fun exportDesign(toFile: Boolean = false) {
         viewModelScope.launch {
             try {
                 val json = repository.exportDesign(projectId)
-                _uiState.value = _uiState.value.copy(exportedJson = json.toString())
+                _uiState.value = _uiState.value.copy(
+                    exportedJson = json.toString(),
+                    exportToFile = toFile
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -334,7 +346,7 @@ class DesignViewModel @Inject constructor(
     }
 
     fun clearExportedJson() {
-        _uiState.value = _uiState.value.copy(exportedJson = null)
+        _uiState.value = _uiState.value.copy(exportedJson = null, exportToFile = false)
     }
 
     fun loadTemplates() {
