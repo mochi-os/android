@@ -34,6 +34,14 @@ internal interface PreferencesApi {
         @retrofit2.http.FieldMap fields: Map<String, String>,
     ): Response<Map<String, Any>>
 
+    /** Clear the named preferences, each falling back to its default. */
+    @retrofit2.http.FormUrlEncoded
+    @POST("settings/-/user/preferences/unset")
+    suspend fun unsetPreferences(
+        @Header("Authorization") token: String,
+        @retrofit2.http.Field("key") keys: List<String>,
+    ): Response<Map<String, Any>>
+
     @POST("settings/-/user/preferences/reset")
     suspend fun resetPreferences(
         @Header("Authorization") token: String,

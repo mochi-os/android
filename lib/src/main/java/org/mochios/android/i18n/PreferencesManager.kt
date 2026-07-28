@@ -89,14 +89,13 @@ class PreferencesManager @Inject internal constructor(
         refresh()
     }
 
-    /** Clear only the supplied preference keys (server-side: setting "" resets
-     *  that key to its default). Used by the Display reset, which must not
-     *  touch regional keys, and vice versa. */
+    /** Clear only the supplied preference keys, each falling back to its
+     *  default. Used by the Display reset, which must not touch regional
+     *  keys, and vice versa. */
     suspend fun resetKeys(keys: List<String>) {
         if (keys.isEmpty()) return
         val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
-        val payload = keys.associateWith { "" }
-        val resp = api.setPreferences("Bearer $token", payload)
+        val resp = api.unsetPreferences("Bearer $token", keys)
         if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
         refresh()
     }
