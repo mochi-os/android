@@ -5,6 +5,7 @@
 
 package org.mochios.projects.ui.design
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,11 +16,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.projects.model.FieldOption
-import org.mochios.projects.model.ProjectClass
+import org.mochios.android.files.PendingExport
 import org.mochios.projects.model.ProjectDetails
-import org.mochios.projects.model.ProjectField
-import org.mochios.projects.model.ProjectView
 import org.mochios.projects.model.Template
 import org.mochios.projects.repository.ProjectsRepository
 import javax.inject.Inject
@@ -32,14 +30,25 @@ data class DesignUiState(
     val selectedClassId: String? = null,
     val selectedFieldId: String? = null,
     val isSaving: Boolean = false,
-    val exportedJson: String? = null,
-    // Where the pending [exportedJson] is headed: true saves it to a file the
-    // user picks, false copies it to the clipboard and offers the share sheet.
-    val exportToFile: Boolean = false,
+    // Design JSON fetched and waiting for the user to pick a destination.
+    val pendingExport: PendingExport? = null,
+    val exportSaved: Boolean = false,
+    val exportFailed: Boolean = false,
     val templates: List<Template> = emptyList(),
     val isLoadingTemplates: Boolean = false,
-    val importSuccess: Boolean = false
+    // Design JSON read from a picked file, waiting on the replace confirmation.
+    val pendingImport: PendingImport? = null,
+    val importSuccess: Boolean = false,
+    val importFailed: Boolean = false
 )
+
+/**
+ * A design read off disk that may replace the current one, once confirmed.
+ *
+ * @property json the design payload read from the file.
+ * @property label the file's name, shown in the confirmation.
+ */
+data class PendingImport(val json: String, val label: String)
 
 @HiltViewModel
 class DesignViewModel @Inject constructor(
@@ -326,18 +335,19 @@ class DesignViewModel @Inject constructor(
     // ---- Design Export / Import ----
 
     /**
-     * Fetches the design JSON for the current project.
-     *
-     * @param toFile true to hand the result to the system save dialog, false
-     *   to copy it to the clipboard and open the share sheet.
+     * Fetches the design JSON and parks it in [DesignUiState.pendingExport] so
+     * the screen can open the save dialog for it.
      */
-    fun exportDesign(toFile: Boolean = false) {
+    fun exportDesign() {
         viewModelScope.launch {
             try {
                 val json = repository.exportDesign(projectId)
+                val name = _uiState.value.projectDetails?.project?.name
                 _uiState.value = _uiState.value.copy(
-                    exportedJson = json.toString(),
-                    exportToFile = toFile
+                    pendingExport = PendingExport(
+                        json = json.toString(),
+                        suggestedName = repository.exportFileName(name, "design")
+                    )
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -345,8 +355,26 @@ class DesignViewModel @Inject constructor(
         }
     }
 
-    fun clearExportedJson() {
-        _uiState.value = _uiState.value.copy(exportedJson = null, exportToFile = false)
+    /** Writes the pending export to the destination the user picked. */
+    fun writeExportTo(uri: Uri) {
+        val pending = _uiState.value.pendingExport ?: return
+        viewModelScope.launch {
+            val ok = repository.saveTextFile(uri, pending.json)
+            _uiState.value = _uiState.value.copy(
+                pendingExport = null,
+                exportSaved = ok,
+                exportFailed = !ok
+            )
+        }
+    }
+
+    /** Drops the pending export when the user backs out of the save dialog. */
+    fun cancelExport() {
+        _uiState.value = _uiState.value.copy(pendingExport = null)
+    }
+
+    fun clearExportResult() {
+        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
     }
 
     fun loadTemplates() {
@@ -379,7 +407,41 @@ class DesignViewModel @Inject constructor(
         }
     }
 
-    fun importFromJson(jsonText: String) {
+    /**
+     * Reads a picked design file and holds it in
+     * [DesignUiState.pendingImport] until the user confirms the replacement.
+     */
+    fun readImportFile(uri: Uri) {
+        viewModelScope.launch {
+            val json = repository.readTextFile(uri)
+            if (json.isNullOrBlank()) {
+                _uiState.value = _uiState.value.copy(importFailed = true)
+                return@launch
+            }
+            val label = repository.fileName(uri)
+            _uiState.value = _uiState.value.copy(
+                pendingImport = PendingImport(json = json, label = label)
+            )
+        }
+    }
+
+    /** Applies the design the user confirmed, replacing the current one. */
+    fun confirmPendingImport() {
+        val pending = _uiState.value.pendingImport ?: return
+        _uiState.value = _uiState.value.copy(pendingImport = null)
+        importFromJson(pending.json)
+    }
+
+    /** Drops the pending import when the user backs out of the confirmation. */
+    fun cancelPendingImport() {
+        _uiState.value = _uiState.value.copy(pendingImport = null)
+    }
+
+    fun clearImportFailed() {
+        _uiState.value = _uiState.value.copy(importFailed = false)
+    }
+
+    private fun importFromJson(jsonText: String) {
         viewModelScope.launch {
             try {
                 repository.importDesign(projectId, data = jsonText)
