@@ -5,12 +5,14 @@
 
 package org.mochios.crm.ui.crm
 
+import android.content.Intent
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,6 +22,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
@@ -28,9 +33,13 @@ import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
+import androidx.compose.material.icons.filled.HomeMax
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ViewColumn
@@ -59,6 +68,8 @@ import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -72,26 +83,38 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.core.content.pm.ShortcutInfoCompat
+import androidx.core.content.pm.ShortcutManagerCompat
+import androidx.core.graphics.drawable.IconCompat
+import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.crm.R
+import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.board.BoardView
 import org.mochios.crm.ui.board.parseColor
 import org.mochios.crm.ui.`object`.ObjectDetailSheet
+import org.mochios.crm.ui.crmlist.CreateCrmDialog
 import org.mochios.crm.ui.crmlist.CrmListViewModel
 import org.mochios.crm.ui.router.PROJECTS_FEATURE
 import org.mochios.crm.ui.tree.TreeView
@@ -102,6 +125,7 @@ import org.mochios.android.R as MochiR
 fun CrmScreen(
     crmId: String,
     onSelectCrm: (String) -> Unit,
+    onSelectAll: () -> Unit,
     onFindCrms: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
@@ -125,6 +149,15 @@ fun CrmScreen(
         }
     }
 
+    // Open the CRM detail right after a create, then clear the signal so
+    // it doesn't re-fire on recomposition.
+    LaunchedEffect(listUiState.createdCrmId) {
+        listUiState.createdCrmId?.let { newId ->
+            onSelectCrm(newId)
+            listViewModel.consumeCreatedCrm()
+        }
+    }
+
     val drawerItems = remember(listUiState.crm) {
         listViewModel.filteredCrm().map { crm ->
             FeatureDrawerItem(
@@ -134,14 +167,23 @@ fun CrmScreen(
             )
         }
     }
+    val drawerAll = FeatureDrawerItem(
+        id = LastViewedStore.ALL,
+        title = stringResource(R.string.crm_all_crms),
+        icon = Icons.Default.FolderOpen,
+    )
 
     FeatureListDrawer(
         drawerState = drawerState,
         items = drawerItems,
+        allItem = drawerAll,
         selectedId = crmId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            if (item.id != crmId) onSelectCrm(item.id)
+            when {
+                item.id == LastViewedStore.ALL -> onSelectAll()
+                item.id != crmId -> onSelectCrm(item.id)
+            }
         },
         actions = {
             DrawerActionRow(
@@ -150,6 +192,14 @@ fun CrmScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindCrms()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.crm_list_create),
+                icon = Icons.Default.Add,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    listViewModel.showCreateDialog()
                 },
             )
             DrawerActionRow(
@@ -170,23 +220,47 @@ fun CrmScreen(
             )
         },
     ) {
-        if (crmId.isEmpty()) {
-            CrmDrawerPlaceholder(
-                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
-            )
-        } else {
-            CrmContent(
-                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
-                onSettings = onSettings,
-                onDesign = onDesign,
-                onOpenNotifications = onOpenNotifications,
-                initialObjectId = initialObjectId,
-            )
+        when {
+            crmId == LastViewedStore.ALL -> {
+                AllCrmsContent(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                    onCrmClick = onSelectCrm,
+                    onOpenNotifications = onOpenNotifications,
+                    viewModel = listViewModel,
+                )
+            }
+
+            crmId.isEmpty() -> {
+                CrmDrawerPlaceholder(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                )
+            }
+
+            else -> {
+                CrmContent(
+                    onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                    onSettings = onSettings,
+                    onDesign = onDesign,
+                    onOpenNotifications = onOpenNotifications,
+                    initialObjectId = initialObjectId,
+                )
+            }
         }
     }
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
+    }
+
+    if (listUiState.showCreateDialog) {
+        CreateCrmDialog(
+            templates = listUiState.templates,
+            isCreating = listUiState.isCreating,
+            onDismiss = { listViewModel.hideCreateDialog() },
+            onCreate = { name, description, prefix, privacy, template ->
+                listViewModel.createCrm(name, description, prefix, privacy, template)
+            }
+        )
     }
 }
 
@@ -214,6 +288,261 @@ private fun CrmDrawerPlaceholder(onOpenDrawer: () -> Unit) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun AllCrmsContent(
+    onOpenDrawer: () -> Unit,
+    onCrmClick: (String) -> Unit,
+    onOpenNotifications: () -> Unit,
+    viewModel: CrmListViewModel,
+) {
+    val uiState by viewModel.uiState.collectAsState()
+
+    Scaffold(
+        topBar = {
+            if (uiState.showSearch) {
+                CrmSearchBar(
+                    query = uiState.searchQuery,
+                    placeholder = stringResource(R.string.crm_list_search_placeholder),
+                    onQueryChange = viewModel::updateSearchQuery,
+                    onClose = { viewModel.toggleSearch() }
+                )
+            } else {
+                TopAppBar(
+                    title = { Text(stringResource(R.string.crm_all_crms)) },
+                    navigationIcon = {
+                        IconButton(onClick = onOpenDrawer) {
+                            Icon(
+                                Icons.Default.Menu,
+                                contentDescription = stringResource(R.string.crm_list_title)
+                            )
+                        }
+                    },
+                    actions = {
+                        NotificationBell(onClick = onOpenNotifications)
+                        IconButton(onClick = { viewModel.toggleSearch() }) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.crm_list_search)
+                            )
+                        }
+                    }
+                )
+            }
+        }
+    ) { padding ->
+        PullToRefreshBox(
+            isRefreshing = uiState.isRefreshing,
+            onRefresh = { viewModel.refresh() },
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+        ) {
+            Column(modifier = Modifier.fillMaxSize()) {
+                when {
+                    uiState.isLoading && uiState.crm.isEmpty() -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            CircularProgressIndicator()
+                        }
+                    }
+
+                    uiState.error != null && uiState.crm.isEmpty() -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            Text(
+                                text = uiState.error!!.userMessage(),
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.error
+                            )
+                        }
+                    }
+
+                    else -> {
+                        val filteredCrm = viewModel.filteredCrm()
+                        if (filteredCrm.isEmpty()) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(top = 64.dp),
+                                contentAlignment = Alignment.TopCenter
+                            ) {
+                                Text(
+                                    text = if (uiState.searchQuery.isNotBlank()) {
+                                        stringResource(R.string.crm_list_no_matching)
+                                    } else {
+                                        stringResource(R.string.crm_list_empty)
+                                    },
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        } else {
+                            LazyColumn(
+                                modifier = Modifier.fillMaxSize(),
+                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
+                                verticalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                items(filteredCrm, key = { crm -> crm.fingerprint.ifEmpty { crm.id } }) { crm ->
+                                    CrmRow(
+                                        crm = crm,
+                                        onClick = {
+                                            onCrmClick(crm.fingerprint.ifEmpty { crm.id })
+                                        },
+                                        onUnsubscribe = { viewModel.unsubscribe(crm.id) }
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Search field that takes over the whole top bar, as on the All CRMs list.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun CrmSearchBar(
+    query: String,
+    placeholder: String,
+    onQueryChange: (String) -> Unit,
+    onClose: () -> Unit,
+) {
+    val focusRequester = remember { FocusRequester() }
+    LaunchedEffect(Unit) {
+        focusRequester.requestFocus()
+    }
+    TopAppBar(
+        navigationIcon = {
+            IconButton(onClick = onClose) {
+                Icon(
+                    Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = stringResource(MochiR.string.common_back)
+                )
+            }
+        },
+        title = {
+            TextField(
+                value = query,
+                onValueChange = onQueryChange,
+                placeholder = { Text(placeholder) },
+                singleLine = true,
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                trailingIcon = {
+                    if (query.isNotEmpty()) {
+                        IconButton(onClick = { onQueryChange("") }) {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = stringResource(MochiR.string.common_close)
+                            )
+                        }
+                    }
+                },
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    disabledContainerColor = Color.Transparent,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(focusRequester)
+            )
+        }
+    )
+}
+
+@Composable
+private fun CrmRow(
+    crm: Crm,
+    onClick: () -> Unit,
+    onUnsubscribe: () -> Unit
+) {
+    val context = LocalContext.current
+    var showMenu by remember { mutableStateOf(false) }
+    var showUnsubscribeConfirm by remember { mutableStateOf(false) }
+    val crmId = crm.fingerprint.ifEmpty { crm.id }
+    val canUnsubscribe = crm.owner != 1
+    val unsubscribeTitle = stringResource(R.string.crm_settings_unsubscribe_title)
+    val unsubscribeMessage = stringResource(R.string.crm_settings_unsubscribe_message)
+    val unsubscribeLabel = stringResource(R.string.crm_settings_unsubscribe)
+    val cancelLabel = stringResource(MochiR.string.common_cancel)
+
+    Box {
+        EntityListRow(
+            name = crm.name,
+            seed = crmId.ifEmpty { crm.id },
+            icon = Icons.Default.Folder,
+            subtitle = crm.description.takeIf { description -> description.isNotBlank() },
+            onClick = onClick,
+            onLongClick = { showMenu = true },
+            trailing = {
+                IconButton(onClick = { showMenu = true }) {
+                    Icon(
+                        Icons.Default.MoreHoriz,
+                        contentDescription = stringResource(MochiR.string.common_more_options)
+                    )
+                }
+            }
+        )
+        DropdownMenu(
+            expanded = showMenu,
+            onDismissRequest = { showMenu = false }
+        ) {
+            DropdownMenuItem(
+                text = { Text(stringResource(R.string.crm_list_add_to_home)) },
+                leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
+                onClick = {
+                    showMenu = false
+                    // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                    val intent = Intent(Intent.ACTION_VIEW, "mochi:/$crmId".toUri()).apply {
+                        setPackage(context.packageName)
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        putExtra("app", "crm")
+                    }
+                    val shortcut = ShortcutInfoCompat.Builder(context, "crm_$crmId")
+                        .setShortLabel(crm.name)
+                        .setLongLabel(crm.name)
+                        .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_crm))
+                        .setIntent(intent)
+                        .build()
+                    ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
+                }
+            )
+            if (canUnsubscribe) {
+                DropdownMenuItem(
+                    text = { Text(unsubscribeLabel) },
+                    leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
+                    onClick = {
+                        showMenu = false
+                        showUnsubscribeConfirm = true
+                    }
+                )
+            }
+        }
+    }
+
+    if (showUnsubscribeConfirm) {
+        ConfirmDialog(
+            title = unsubscribeTitle,
+            message = unsubscribeMessage,
+            confirmLabel = unsubscribeLabel,
+            dismissLabel = cancelLabel,
+            isDestructive = true,
+            onConfirm = {
+                showUnsubscribeConfirm = false
+                onUnsubscribe()
+            },
+            onDismiss = { showUnsubscribeConfirm = false }
+        )
     }
 }
 

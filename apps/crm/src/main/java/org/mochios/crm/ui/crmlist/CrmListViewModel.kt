@@ -29,7 +29,10 @@ data class CrmListUiState(
     val error: MochiError? = null,
     val searchQuery: String = "",
     val showCreateDialog: Boolean = false,
-    val showSearch: Boolean = false
+    val showSearch: Boolean = false,
+    // Set to the new CRM's id after a successful create so the screen can
+    // navigate into it; cleared once consumed.
+    val createdCrmId: String? = null
 )
 
 @HiltViewModel
@@ -111,22 +114,38 @@ class CrmListViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(showCreateDialog = false)
     }
 
+    /** Clears the pending-navigation id once the screen has opened the CRM. */
+    fun consumeCreatedCrm() {
+        _uiState.value = _uiState.value.copy(createdCrmId = null)
+    }
+
     fun createCrm(name: String, description: String, prefix: String, privacy: String, template: String?) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true)
             try {
-                repository.createCrm(
+                val created = repository.createCrm(
                     name = name,
                     description = description.ifBlank { null },
                     prefix = prefix.ifBlank { null },
                     privacy = privacy,
                     template = template
                 )
+                // The create response only carries id/fingerprint, so reload the
+                // full list before opening the CRM — this way the drawer and
+                // list already contain it (with its name) when we navigate in.
+                val crm = runCatching {
+                    repository.listCrms().sortedWith(compareBy(NaturalCompare) { item -> item.name })
+                }.getOrDefault(_uiState.value.crm)
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
-                    showCreateDialog = false
+                    showCreateDialog = false,
+                    crm = crm,
+                    // Open the new CRM straight after creation. Only when the
+                    // backend returned an id — navigating to a blank id would
+                    // land on the empty-CRM placeholder.
+                    createdCrmId = created.fingerprint.ifEmpty { created.id }
+                        .takeIf { id -> id.isNotBlank() }
                 )
-                loadCrms()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,

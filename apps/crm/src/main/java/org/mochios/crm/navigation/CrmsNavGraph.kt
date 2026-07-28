@@ -11,6 +11,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.crm.ui.design.DesignScreen
 import org.mochios.crm.ui.find.FindCrmsScreen
 import org.mochios.crm.ui.crm.CrmScreen
@@ -66,6 +67,12 @@ fun NavGraphBuilder.crmsNavGraph(
                     launchSingleTop = true
                 }
             },
+            onSelectAll = {
+                navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
+                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
             onFindCrms = { navController.navigate(CrmsApp.FIND_PROJECTS) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
@@ -89,6 +96,12 @@ fun NavGraphBuilder.crmsNavGraph(
             crmId = crmId,
             onSelectCrm = { id ->
                 navController.navigate(CrmsApp.crm(id)) {
+                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
+            onSelectAll = {
+                navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
                     popUpTo(CrmsApp.PROJECT) { inclusive = true }
                     launchSingleTop = true
                 }

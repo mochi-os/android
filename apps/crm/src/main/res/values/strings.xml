@@ -14,6 +14,7 @@
 
     <!-- Crm list -->
     <string name="crm_list_title">CRMs</string>
+    <string name="crm_all_crms">All CRMs</string>
     <string name="crm_list_search_placeholder">Search CRM</string>
     <string name="crm_list_close_search">Close search</string>
     <string name="crm_list_search">Search</string>
