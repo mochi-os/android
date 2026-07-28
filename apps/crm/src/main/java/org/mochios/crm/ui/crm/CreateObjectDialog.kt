@@ -50,6 +50,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmField
@@ -58,7 +59,6 @@ import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.ui.`object`.FieldEditor
 import java.io.File
-import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -86,7 +86,7 @@ fun CreateObjectDialog(
     activeView: CrmView?,
     viewModel: CrmViewModel,
     onDismiss: () -> Unit,
-    onCreate: (classId: String, title: String, parent: String?, initialValues: Map<String, String>, files: List<File>) -> Unit
+    onCreate: (classId: String, title: String, parent: String?, initialValues: Map<String, String>, files: List<Uri>) -> Unit
 ) {
     val presetParentObj = remember(presetParent, objects) {
         presetParent?.let { p -> objects.firstOrNull { it.id == p } }
@@ -129,15 +129,12 @@ fun CreateObjectDialog(
     val titleFieldId = classes.firstOrNull { it.id == selectedClassId }?.title.orEmpty()
 
     // Files picked to attach on create.
-    val pendingFiles = remember { mutableStateListOf<File>() }
-    val context = LocalContext.current
+    val pendingFiles = remember { mutableStateListOf<Uri>() }
     val defaultName = stringResource(R.string.crm_attachment_default_name)
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
-        for (uri in uris) {
-            Uploads.cacheFile(context, uri, defaultName)?.let { file -> pendingFiles.add(file) }
-        }
+        pendingFiles.addAll(uris)
     }
 
     // Seed defaults whenever the selected class changes: clear prior values,
@@ -293,7 +290,7 @@ fun CreateObjectDialog(
                         Text(stringResource(R.string.crm_attachment_add))
                     }
                 }
-                pendingFiles.forEachIndexed { index, file ->
+                pendingFiles.forEachIndexed { index, uri ->
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically,
@@ -306,7 +303,7 @@ fun CreateObjectDialog(
                             tint = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Text(
-                            text = file.name,
+                            text = rememberFileLabel(uri, viewModel::fileName, defaultName),
                             style = MaterialTheme.typography.bodySmall,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,

@@ -5,6 +5,7 @@
 
 package org.mochios.projects.repository
 
+import android.net.Uri
 import com.google.gson.JsonObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -12,7 +13,8 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.projects.api.ProjectsApi
 import org.mochios.projects.api.SetValueRequest
 import org.mochios.projects.api.WarmExportResponse
@@ -39,8 +41,9 @@ import javax.inject.Singleton
 
 @Singleton
 class ProjectsRepository @Inject constructor(
-    private val api: ProjectsApi
-) {
+    private val api: ProjectsApi,
+    fileStore: FileStore
+) : FileRepository(fileStore) {
     // In-memory cache
     private val projectInfoCache = mutableMapOf<String, Pair<ProjectDetails, Long>>()
     private val objectsCache = mutableMapOf<String, Pair<List<ProjectObject>, Long>>()
@@ -269,7 +272,7 @@ class ProjectsRepository @Inject constructor(
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
         // The server reads the multipart field "files" (mochi.attachment.save);
         // parts named anything else are silently dropped.
-        val fileParts = Uploads.fileParts("files", files)
+        val fileParts = fileStore.fileParts("files", files)
         return api.createComment(projectId, objectId, contentBody, parentBody, fileParts).unwrap().comment
     }
 
@@ -287,7 +290,7 @@ class ProjectsRepository @Inject constructor(
         api.getAttachments(projectId, objectId).unwrap().attachments
 
     suspend fun createAttachment(projectId: String, objectId: String, file: File): Attachment {
-        val part = Uploads.filePart("files", file)
+        val part = fileStore.filePart("files", file)
         return api.createAttachment(projectId, objectId, part).unwrap().attachment
     }
 
@@ -377,7 +380,7 @@ class ProjectsRepository @Inject constructor(
         api.exportData(projectId).unwrap()
 
     suspend fun importData(projectId: String, backupJson: String) {
-        val part = Uploads.bytesPart(
+        val part = fileStore.bytesPart(
             field = "file",
             fileName = "import.json",
             mimeType = "application/json",

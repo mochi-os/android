@@ -34,6 +34,9 @@ class PostDetailViewModel @Inject constructor(
     private val application: Application
 ) : ViewModel() {
 
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
+
     val feedId: String = savedStateHandle.get<String>("feedId") ?: ""
     val postId: String = savedStateHandle.get<String>("postId") ?: ""
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')

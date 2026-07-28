@@ -86,8 +86,6 @@ fun InsertAttachmentDialog(
         if (uris.isNotEmpty()) {
             viewModel.uploadAttachments(
                 uris = uris,
-                contentResolver = context.contentResolver,
-                cacheDir = context.cacheDir,
                 uploadFailed = uploadFailedMsg,
             )
         }

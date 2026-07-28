@@ -5,6 +5,7 @@
 
 package org.mochios.crm.ui.crm
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -284,7 +285,7 @@ class CrmViewModel @Inject constructor(
         title: String,
         parent: String? = null,
         initialValues: Map<String, String> = emptyMap(),
-        files: List<File> = emptyList(),
+        uris: List<Uri> = emptyList(),
     ) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreatingObject = true)
@@ -296,9 +297,11 @@ class CrmViewModel @Inject constructor(
                 // Upload any attachments picked in the create dialog, mirroring
                 // web's create-then-upload flow. One failure shouldn't lose the
                 // object or the other files, so each upload is isolated.
+                val files = repository.stageFiles(uris)
                 for (file in files) {
                     runCatching { repository.createAttachment(crmId, obj.id, file) }
                 }
+                repository.discardStaged(files)
                 _uiState.value = _uiState.value.copy(
                     isCreatingObject = false,
                     showCreateObjectDialog = false,
@@ -313,6 +316,9 @@ class CrmViewModel @Inject constructor(
             }
         }
     }
+
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     fun deleteObject(objectId: String) {
         viewModelScope.launch {

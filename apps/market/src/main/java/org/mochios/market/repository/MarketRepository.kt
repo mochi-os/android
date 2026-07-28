@@ -5,6 +5,7 @@
 
 package org.mochios.market.repository
 
+import android.net.Uri
 import com.google.gson.Gson
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -14,7 +15,8 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.market.api.MarketApi
 import org.mochios.market.model.Account
 import org.mochios.market.model.AccountFees
@@ -67,7 +69,8 @@ import javax.inject.Singleton
 @Singleton
 class MarketRepository @Inject constructor(
     private val api: MarketApi,
-) {
+    fileStore: FileStore,
+) : FileRepository(fileStore) {
 
     private val text = "text/plain".toMediaTypeOrNull()
     private val gson = Gson()
@@ -794,5 +797,5 @@ class MarketRepository @Inject constructor(
     }
 
     private fun multipart(field: String, file: File): MultipartBody.Part =
-        Uploads.filePart(field, file)
+        fileStore.filePart(field, file)
 }

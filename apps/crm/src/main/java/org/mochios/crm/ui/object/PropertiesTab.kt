@@ -166,7 +166,7 @@ fun PropertiesTab(
             AttachmentsSection(
                 attachments = uiState.attachments,
                 crmId = crmId,
-                onAddAttachment = { file -> viewModel.createAttachment(file) },
+                onAddAttachment = { uri -> viewModel.createAttachment(uri) },
                 onDeleteAttachment = { id -> viewModel.deleteAttachment(id) },
             )
 

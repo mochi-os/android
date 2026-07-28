@@ -124,7 +124,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
@@ -643,6 +643,7 @@ private fun ChatContent(
                 onAddAttachments = { viewModel.addAttachments(it) },
                 onRemoveAttachment = { viewModel.removeAttachment(it) },
                 onMoveAttachment = { uri, dir -> viewModel.moveAttachment(uri, dir) },
+                resolveFileName = viewModel::fileName,
                 onSend = {
                     viewModel.sendMessage(draft)
                     draft = ""
@@ -1420,9 +1421,9 @@ private fun ComposerBar(
     onAddAttachments: (List<android.net.Uri>) -> Unit,
     onRemoveAttachment: (android.net.Uri) -> Unit,
     onMoveAttachment: (android.net.Uri, Int) -> Unit,
+    resolveFileName: suspend (android.net.Uri) -> String,
     onSend: () -> Unit,
 ) {
-    val context = LocalContext.current
     val attachmentFallback = stringResource(R.string.chat_attachment_label)
     val filePickerLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
         contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
@@ -1437,9 +1438,7 @@ private fun ComposerBar(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 pendingAttachments.forEachIndexed { index, uri ->
-                    val label = remember(uri) {
-                        Uploads.fileName(context.contentResolver, uri, attachmentFallback)
-                    }
+                    val label = rememberFileLabel(uri, resolveFileName, attachmentFallback)
                     androidx.compose.material3.AssistChip(
                         onClick = { onRemoveAttachment(uri) },
                         label = {

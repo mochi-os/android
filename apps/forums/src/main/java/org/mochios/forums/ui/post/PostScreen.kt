@@ -102,12 +102,12 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.StatusBadgeSize
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.model.Tag
-import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -339,6 +339,7 @@ fun PostScreen(
                             attachments = commentAttachments,
                             onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
                             onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
+                            resolveFileName = viewModel::fileName,
                             onSend = {
                                 viewModel.submitComment(draft.text)
                                 draft = TextFieldValue("")
@@ -390,7 +391,8 @@ fun PostScreen(
                 )
                 editingComment = null
             },
-            onDismiss = { editingComment = null }
+            onDismiss = { editingComment = null },
+            resolveFileName = viewModel::fileName,
         )
     }
 
@@ -423,6 +425,7 @@ private fun EditCommentDialog(
     comment: ForumComment,
     onConfirm: (body: String, keptAttachmentIds: List<String>, newUris: List<android.net.Uri>) -> Unit,
     onDismiss: () -> Unit,
+    resolveFileName: suspend (Uri) -> String,
 ) {
     var body by remember { mutableStateOf(comment.body) }
     val keptIds = remember { androidx.compose.runtime.mutableStateListOf<String>().apply {
@@ -485,7 +488,8 @@ private fun EditCommentDialog(
                         newUris.forEach { uri ->
                             val label = rememberFileName(
                                 uri,
-                                stringResource(R.string.forums_comment_edit_attach)
+                                stringResource(R.string.forums_comment_edit_attach),
+                                resolveFileName,
                             )
                             androidx.compose.material3.AssistChip(
                                 onClick = { newUris.remove(uri) },
@@ -1107,16 +1111,15 @@ private fun quoteText(body: String, currentDraft: String): String {
 }
 
 /**
- * The provider's display name for [uri]; a `content://` path segment is an
- * opaque id, so the chip would otherwise read "image:59".
+ * The provider's display name for [uri]. A `content://` path segment is an
+ * opaque id, so the picker's chip would otherwise read "1000000042".
  */
 @Composable
-private fun rememberFileName(uri: Uri, fallback: String): String {
-    val context = LocalContext.current
-    return remember(uri) {
-        Uploads.fileName(context.contentResolver, uri, fallback)
-    }
-}
+private fun rememberFileName(
+    uri: Uri,
+    fallback: String,
+    resolve: suspend (Uri) -> String,
+): String = rememberFileLabel(uri, resolve, fallback)
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -1129,6 +1132,7 @@ private fun ComposerBar(
     attachments: List<Uri>,
     onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
     onSend: () -> Unit
 ) {
     val filePickerLauncher = rememberLauncherForActivityResult(
@@ -1147,7 +1151,7 @@ private fun ComposerBar(
                         onClick = { onRemoveAttachment(uri) },
                         label = {
                             Text(
-                                rememberFileName(uri, fileLabel).takeLast(20),
+                                rememberFileName(uri, fileLabel, resolveFileName).takeLast(20),
                                 style = MaterialTheme.typography.labelSmall
                             )
                         },

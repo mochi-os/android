@@ -48,6 +48,9 @@ class NewPostViewModel @Inject constructor(
     private val repository: ForumsRepository
 ) : ViewModel() {
 
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
+
     val forumId: String = savedStateHandle["forumId"] ?: ""
 
     private val editingPostId: String? = savedStateHandle["postId"]

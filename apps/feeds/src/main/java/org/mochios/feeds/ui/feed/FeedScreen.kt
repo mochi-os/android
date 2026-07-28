@@ -1120,6 +1120,7 @@ fun FeedScreen(
                         attachments = commentAttachments,
                         onAddAttachment = { commentFilePicker.launch("*/*") },
                         onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
+                        resolveFileName = viewModel::fileName,
                         onSend = { viewModel.sendComment() },
                         isSending = isSendingComment,
                         replyingTo = null,

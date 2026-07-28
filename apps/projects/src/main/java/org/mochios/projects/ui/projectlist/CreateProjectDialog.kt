@@ -44,27 +44,20 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.google.gson.JsonObject
-import com.google.gson.JsonParser
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
-import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 // Derive a URL-friendly prefix from the project name: lowercase, non-alphanumeric
@@ -77,29 +70,23 @@ private fun prefixFromName(name: String): String =
         .take(20)
         .trimEnd('-')
 
-private data class BackupPrefill(
-    val json: String,
-    val fileName: String,
-    val name: String?,
-    val prefix: String?
-)
-
-private fun JsonObject.jsonString(key: String): String? =
-    get(key)
-        ?.takeIf { element -> element.isJsonPrimitive }
-        ?.asString
-        ?.takeIf { value -> value.isNotBlank() }
-
+/**
+ * Create dialog for a project, optionally seeded from a backup file.
+ *
+ * @param backupPrefill what the ViewModel read out of the picked backup, or
+ *   null when no file has been chosen; seeds the name, prefix and payload.
+ * @param onPickBackup hands the picked file's uri to the ViewModel to read.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateProjectDialog(
     templates: List<Template>,
     isCreating: Boolean,
+    backupPrefill: BackupPrefill?,
+    onPickBackup: (Uri) -> Unit,
     onDismiss: () -> Unit,
     onCreate: (name: String, prefix: String, privacy: String, template: String?, backupJson: String?) -> Unit
 ) {
-    val context = LocalContext.current
-    val scope = rememberCoroutineScope()
     var name by remember { mutableStateOf("") }
     var prefix by remember { mutableStateOf("") }
     // The prefix auto-tracks the name until the user edits it by hand.
@@ -119,34 +106,19 @@ fun CreateProjectDialog(
         contract = ActivityResultContracts.GetContent()
     ) { uri: Uri? ->
         if (uri != null) {
-            scope.launch {
-                val prefill = withContext(Dispatchers.IO) {
-                    val content = context.contentResolver.openInputStream(uri)
-                        ?.bufferedReader()
-                        ?.use { reader -> reader.readText() }
-                    val root = content
-                        ?.let { text -> runCatching { JsonParser.parseString(text).asJsonObject }.getOrNull() }
-                    if (content != null && root != null) {
-                        val project = root.getAsJsonObject("project")
-                        BackupPrefill(
-                            json = content,
-                            fileName = Uploads.fileName(context.contentResolver, uri, ""),
-                            name = project?.jsonString("name"),
-                            prefix = project?.jsonString("prefix")
-                        )
-                    } else {
-                        null
-                    }
-                }
-                if (prefill != null) {
-                    backupJson = prefill.json
-                    backupName = prefill.fileName
-                    prefill.name?.let { value -> name = value }
-                    prefill.prefix?.let { value ->
-                        prefix = prefixFromName(value)
-                        prefixEdited = true
-                    }
-                }
+            onPickBackup(uri)
+        }
+    }
+
+    // Seed the fields once the ViewModel has read the picked backup.
+    LaunchedEffect(backupPrefill) {
+        backupPrefill?.let { prefill ->
+            backupJson = prefill.json
+            backupName = prefill.fileName
+            prefill.name?.let { value -> name = value }
+            prefill.prefix?.let { value ->
+                prefix = prefixFromName(value)
+                prefixEdited = true
             }
         }
     }

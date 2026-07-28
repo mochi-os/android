@@ -244,9 +244,10 @@ fun ObjectDetailSheet(
                         1 -> CommentsTab(
                             comments = uiState.comments,
                             projectId = projectId,
-                            onCreateComment = { content, parent, files ->
-                                viewModel.createComment(content, parent, files)
+                            onCreateComment = { content, parent, uris ->
+                                viewModel.createComment(content, parent, uris)
                             },
+                            resolveFileName = viewModel::fileName,
                             onUpdateComment = { id, content ->
                                 viewModel.updateComment(id, content)
                             },

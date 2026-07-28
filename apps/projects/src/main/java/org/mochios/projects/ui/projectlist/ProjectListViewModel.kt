@@ -5,6 +5,7 @@
 
 package org.mochios.projects.ui.projectlist
 
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.JsonObject
@@ -22,6 +23,12 @@ import org.mochios.projects.model.Template
 import org.mochios.projects.repository.ProjectsRepository
 import javax.inject.Inject
 
+private fun JsonObject.jsonString(key: String): String? =
+    get(key)
+        ?.takeIf { element -> element.isJsonPrimitive }
+        ?.asString
+        ?.takeIf { value -> value.isNotBlank() }
+
 data class ProjectListUiState(
     val projects: List<Project> = emptyList(),
     val templates: List<Template> = emptyList(),
@@ -32,9 +39,26 @@ data class ProjectListUiState(
     val searchQuery: String = "",
     val showCreateDialog: Boolean = false,
     val showSearch: Boolean = false,
+    // What the create dialog reads back out of a picked backup file.
+    val backupPrefill: BackupPrefill? = null,
     // Set to the new project's id after a successful create so the screen can
     // navigate into it; cleared once consumed.
     val createdProjectId: String? = null
+)
+
+/**
+ * A backup file the user picked, ready to seed the create dialog.
+ *
+ * @property json the whole backup payload, restored after the project is made.
+ * @property fileName shown on the picker button so the choice is visible.
+ * @property name project name recorded in the backup, if any.
+ * @property prefix project prefix recorded in the backup, if any.
+ */
+data class BackupPrefill(
+    val json: String,
+    val fileName: String,
+    val name: String?,
+    val prefix: String?
 )
 
 @HiltViewModel
@@ -113,7 +137,32 @@ class ProjectListViewModel @Inject constructor(
     }
 
     fun hideCreateDialog() {
-        _uiState.value = _uiState.value.copy(showCreateDialog = false)
+        _uiState.value = _uiState.value.copy(showCreateDialog = false, backupPrefill = null)
+    }
+
+    /**
+     * Reads the backup file the user picked and pulls the project's name and
+     * prefix out of it, so the create dialog can seed itself.
+     */
+    fun readBackup(uri: Uri) {
+        viewModelScope.launch {
+            val content = repository.readTextFile(uri)
+            val root = content
+                ?.let { text -> runCatching { JsonParser.parseString(text).asJsonObject }.getOrNull() }
+            if (content == null || root == null) {
+                return@launch
+            }
+            val fileName = repository.fileName(uri)
+            val project = root.getAsJsonObject("project")
+            _uiState.value = _uiState.value.copy(
+                backupPrefill = BackupPrefill(
+                    json = content,
+                    fileName = fileName,
+                    name = project?.jsonString("name"),
+                    prefix = project?.jsonString("prefix")
+                )
+            )
+        }
     }
 
     /** Clears the pending-navigation id once the screen has opened the project. */

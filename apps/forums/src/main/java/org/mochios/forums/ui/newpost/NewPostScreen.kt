@@ -57,8 +57,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.MentionTextField
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.forums.R
-import org.mochios.android.util.Uploads
 import org.mochios.android.R as MochiR
 
 /**
@@ -204,6 +204,7 @@ fun NewPostScreen(
                     attachments = attachments,
                     onMove = { uri, direction -> viewModel.moveAttachment(uri, direction) },
                     onRemove = { uri -> viewModel.removeAttachment(uri) },
+                    resolveFileName = viewModel::fileName,
                 )
             }
 
@@ -225,12 +226,11 @@ fun NewPostScreen(
  * opaque id, so the picker's chip would otherwise read "1000000042".
  */
 @Composable
-private fun rememberFileName(uri: Uri, fallback: String): String {
-    val context = LocalContext.current
-    return remember(uri) {
-        Uploads.fileName(context.contentResolver, uri, fallback)
-    }
-}
+private fun rememberFileName(
+    uri: Uri,
+    fallback: String,
+    resolve: suspend (Uri) -> String,
+): String = rememberFileLabel(uri, resolve, fallback)
 
 /** Picked files as removable chips, each with up/down controls when several. */
 @OptIn(ExperimentalLayoutApi::class)
@@ -239,6 +239,7 @@ private fun AttachmentChips(
     attachments: List<Uri>,
     onMove: (Uri, Int) -> Unit,
     onRemove: (Uri) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
 ) {
     val fileLabel = stringResource(R.string.forums_attachment_file)
     FlowRow(
@@ -279,7 +280,7 @@ private fun AttachmentChips(
                     onClick = { onRemove(uri) },
                     label = {
                         Text(
-                            rememberFileName(uri, fileLabel).takeLast(25),
+                            rememberFileName(uri, fileLabel, resolveFileName).takeLast(25),
                             style = MaterialTheme.typography.labelSmall
                         )
                     },

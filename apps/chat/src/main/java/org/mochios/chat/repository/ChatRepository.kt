@@ -9,7 +9,8 @@ import com.google.gson.Gson
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.api.CreateChatResponse
 import org.mochios.chat.api.DeleteMessagesResponse
@@ -29,8 +30,9 @@ import javax.inject.Singleton
 
 @Singleton
 class ChatRepository @Inject constructor(
-    private val api: ChatApi
-) {
+    private val api: ChatApi,
+    fileStore: FileStore
+) : FileRepository(fileStore) {
     suspend fun listChats(): List<Chat> =
         api.listChats().unwrap()
 
@@ -67,7 +69,7 @@ class ChatRepository @Inject constructor(
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val parts = Uploads.fileParts("files", files)
+        val parts = fileStore.fileParts("files", files)
         return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
     }
 
@@ -83,12 +85,12 @@ class ChatRepository @Inject constructor(
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val files = Uploads.cacheFiles(context, uris)
+        val files = fileStore.cacheFiles(uris)
         try {
-            val parts = Uploads.fileParts("files", files)
+            val parts = fileStore.fileParts("files", files)
             return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
         } finally {
-            Uploads.deleteAll(files)
+            fileStore.deleteAll(files)
         }
     }
 

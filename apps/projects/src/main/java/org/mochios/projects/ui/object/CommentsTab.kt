@@ -52,7 +52,7 @@ import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.projects.R
 import java.io.File
 import org.mochios.android.R as MochiR
@@ -62,7 +62,8 @@ import org.mochios.android.R as MochiR
 fun CommentsTab(
     comments: List<Comment>,
     projectId: String,
-    onCreateComment: (String, String?, List<File>) -> Unit,
+    onCreateComment: (String, String?, List<Uri>) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
     onUpdateComment: (String, String) -> Unit,
     onDeleteComment: (String) -> Unit,
     onSearchUsers: (suspend (String) -> List<MentionSuggestion>)? = null,
@@ -75,7 +76,7 @@ fun CommentsTab(
     var newComment by remember { mutableStateOf("") }
     var replyToId by remember { mutableStateOf<String?>(null) }
     var replyToName by remember { mutableStateOf<String?>(null) }
-    val pendingFiles = remember { mutableStateListOf<File>() }
+    val pendingFiles = remember { mutableStateListOf<Uri>() }
     val defaultName = stringResource(R.string.projects_attachment_default_name)
 
     val filePicker = rememberLauncherForActivityResult(
@@ -84,7 +85,7 @@ fun CommentsTab(
         for (uri in uris) {
             // Copies with the real display name + extension so the upload keeps a
             // filename and MIME type the server can recognise (and preview) later.
-            Uploads.cacheFile(context, uri, defaultName)?.let { file -> pendingFiles.add(file) }
+            pendingFiles.add(uri)
         }
     }
 
@@ -160,10 +161,12 @@ fun CommentsTab(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
-                    pendingFiles.forEach { file ->
+                    pendingFiles.forEach { uri ->
                         AssistChip(
-                            onClick = { pendingFiles.remove(file) },
-                            label = { Text(file.name) },
+                            onClick = { pendingFiles.remove(uri) },
+                            label = {
+                                Text(rememberFileLabel(uri, resolveFileName, defaultName))
+                            },
                             trailingIcon = {
                                 Icon(
                                     Icons.Default.Close,

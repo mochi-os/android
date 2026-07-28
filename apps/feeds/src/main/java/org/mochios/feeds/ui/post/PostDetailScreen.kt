@@ -95,7 +95,7 @@ import org.mochios.android.ui.components.PostTagsButton as SharedPostTagsButton
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -221,6 +221,7 @@ fun PostDetailScreen(
                     attachments = commentAttachments,
                     onAddAttachment = { filePickerLauncher.launch("*/*") },
                     onRemoveAttachment = { viewModel.removeCommentAttachment(it) },
+                    resolveFileName = viewModel::fileName,
                     onSend = { viewModel.sendComment() },
                     isSending = isSendingComment,
                     replyingTo = replyingTo,
@@ -714,6 +715,7 @@ internal fun CommentInputBar(
     attachments: List<Uri>,
     onAddAttachment: () -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
     onSend: () -> Unit,
     isSending: Boolean,
     replyingTo: String?,
@@ -754,15 +756,12 @@ internal fun CommentInputBar(
             if (attachments.isNotEmpty()) {
                 val fileLabel = stringResource(R.string.feeds_file)
                 val removeLabel = stringResource(R.string.feeds_remove)
-                val context = LocalContext.current
                 LazyRow(
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 4.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     items(attachments) { uri ->
-                        val label = remember(uri) {
-                            Uploads.fileName(context.contentResolver, uri, fileLabel)
-                        }
+                        val label = rememberFileLabel(uri, resolveFileName, fileLabel)
                         AssistChip(
                             onClick = { onRemoveAttachment(uri) },
                             label = {

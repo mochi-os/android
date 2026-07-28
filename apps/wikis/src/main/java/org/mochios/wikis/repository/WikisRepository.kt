@@ -5,12 +5,14 @@
 
 package org.mochios.wikis.repository
 
+import android.net.Uri
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.wikis.api.WikisApi
 import org.mochios.wikis.model.AccessRule
 import org.mochios.wikis.model.Attachment
@@ -88,7 +90,8 @@ data class RenamePageResult(
 @Singleton
 class WikisRepository @Inject constructor(
     private val api: WikisApi,
-) {
+    fileStore: FileStore,
+) : FileRepository(fileStore) {
 
     private val text = "text/plain".toMediaTypeOrNull()
 
@@ -537,5 +540,5 @@ class WikisRepository @Inject constructor(
     }
 
     private fun multipart(field: String, file: File): MultipartBody.Part =
-        Uploads.filePart(field, file)
+        fileStore.filePart(field, file)
 }

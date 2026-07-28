@@ -90,6 +90,9 @@ class FeedViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
 ) : ViewModel() {
 
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
+
     /** Set of post ids the user has saved, mirrored from [SavedRepository] so
      *  each post card can show its bookmark filled/empty without awaiting. */
     val savedIds: StateFlow<Set<String>> = savedRepository.savedIds

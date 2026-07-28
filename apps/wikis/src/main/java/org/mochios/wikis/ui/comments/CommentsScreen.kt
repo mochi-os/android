@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.comments
 
+import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -136,16 +137,17 @@ fun CommentsScreen(
                         CommentsBody(
                             state = state,
                             canCompose = state.permissions.edit,
-                            onCreate = { body, files ->
-                                viewModel.createComment(body = body, parent = null, files = files)
+                            onCreate = { body, uris ->
+                                viewModel.createComment(body = body, parent = null, uris = uris)
                             },
+                            resolveFileName = viewModel::fileName,
                             onStartReply = { commentId, selectedText ->
                                 viewModel.requestStartReply(commentId, selectedText)
                             },
                             onCancelReply = { viewModel.cancelReply() },
                             onReplyDraftChange = { viewModel.updateReplyDraft(it) },
-                            onSubmitReply = { parentId, files ->
-                                viewModel.submitReply(parentId, files)
+                            onSubmitReply = { parentId, uris ->
+                                viewModel.submitReply(parentId, uris)
                             },
                             onEdit = if (state.permissions.edit) {
                                 { id, body -> viewModel.editComment(id, body) }
@@ -169,11 +171,12 @@ fun CommentsScreen(
 private fun CommentsBody(
     state: CommentsUiState,
     canCompose: Boolean,
-    onCreate: (body: String, files: List<java.io.File>?) -> Unit,
+    onCreate: (body: String, files: List<Uri>?) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
     onStartReply: (commentId: String, selectedText: String?) -> Unit,
     onCancelReply: () -> Unit,
     onReplyDraftChange: (String) -> Unit,
-    onSubmitReply: (commentId: String, files: List<java.io.File>?) -> Unit,
+    onSubmitReply: (commentId: String, files: List<Uri>?) -> Unit,
     onEdit: ((commentId: String, body: String) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
 ) {
@@ -182,7 +185,7 @@ private fun CommentsBody(
     Column(modifier = Modifier.fillMaxSize()) {
         if (canCompose) {
             Box(modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
-                CommentForm(onSubmit = onCreate)
+                CommentForm(onSubmit = onCreate, resolveFileName = resolveFileName)
             }
             HorizontalDivider()
         }
@@ -211,6 +214,7 @@ private fun CommentsBody(
                         onCancelReply = onCancelReply,
                         onReplyDraftChange = onReplyDraftChange,
                         onSubmitReply = onSubmitReply,
+                        resolveFileName = resolveFileName,
                         onEdit = onEdit,
                         onDelete = onDelete,
                     )

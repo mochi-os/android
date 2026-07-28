@@ -7,10 +7,7 @@ package org.mochios.projects.ui.project
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.widget.Toast
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
@@ -113,9 +110,8 @@ import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.projects.R
-import org.mochios.projects.lib.backupFileName
-import org.mochios.projects.lib.writeTextToUri
 import org.mochios.projects.model.Project
 import org.mochios.projects.ui.board.BoardView
 import org.mochios.projects.ui.`object`.ObjectDetailSheet
@@ -263,6 +259,8 @@ fun ProjectScreen(
         CreateProjectDialog(
             templates = listUiState.templates,
             isCreating = listUiState.isCreating,
+            backupPrefill = listUiState.backupPrefill,
+            onPickBackup = { uri -> listViewModel.readBackup(uri) },
             onDismiss = { listViewModel.hideCreateDialog() },
             onCreate = { name, prefix, privacy, template, backupJson ->
                 listViewModel.createProject(name, prefix, privacy, template, backupJson)
@@ -605,24 +603,22 @@ private fun ProjectContent(
         }
     }
 
-    var pendingExport by remember { mutableStateOf<String?>(null) }
     val exportSaved = stringResource(R.string.projects_export_saved)
     val exportFailed = stringResource(R.string.projects_export_failed)
-    val saveExport = rememberLauncherForActivityResult(
-        ActivityResultContracts.CreateDocument("application/json")
-    ) { uri ->
-        val json = pendingExport
-        pendingExport = null
-        if (uri != null && json != null) {
-            val ok = writeTextToUri(context, uri, json)
-            Toast.makeText(context, if (ok) exportSaved else exportFailed, Toast.LENGTH_SHORT).show()
+    // The picker only reports where the file goes; the ViewModel writes it.
+    val saveExport = rememberFileSaveLauncher { uri ->
+        if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
+    }
+    LaunchedEffect(uiState.pendingExport) {
+        uiState.pendingExport?.let { pending ->
+            saveExport.launch(pending.suggestedName)
         }
     }
-    LaunchedEffect(viewModel) {
-        viewModel.exportData.collect { json ->
-            pendingExport = json
-            val name = viewModel.uiState.value.projectDetails?.project?.name
-            saveExport.launch(backupFileName(name, "projects-backup"))
+    LaunchedEffect(uiState.exportSaved, uiState.exportFailed) {
+        if (uiState.exportSaved || uiState.exportFailed) {
+            val message = if (uiState.exportSaved) exportSaved else exportFailed
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+            viewModel.clearExportResult()
         }
     }
 

@@ -73,6 +73,9 @@ class ChatViewModel @Inject constructor(
     private val application: Application,
 ) : ViewModel() {
 
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
+
     private val chatId: String = savedStateHandle["chatId"] ?: ""
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 

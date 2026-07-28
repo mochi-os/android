@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.comments
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -172,19 +173,26 @@ class CommentsViewModel @Inject constructor(
      * Refreshes the thread on success so the new comment appears (and, for
      * replies, the reply textarea closes via [cancelReply]).
      */
-    fun createComment(body: String, parent: String? = null, files: List<File>? = null) {
+    /** Stages any picked attachments, then posts the comment. */
+    fun createComment(body: String, parent: String? = null, uris: List<Uri>? = null) {
         val trimmed = body.trim()
         if (trimmed.isEmpty()) return
         viewModelScope.launch {
+            val files = repository.stageFiles(uris.orEmpty())
             try {
-                repository.createComment(wikiId, slug, trimmed, parent, files)
+                repository.createComment(wikiId, slug, trimmed, parent, files.ifEmpty { null })
                 if (parent != null) cancelReply()
                 loadComments()
             } catch (e: Exception) {
                 _events.send(CommentsEvent.Error(e.toMochiError()))
+            } finally {
+                repository.discardStaged(files)
             }
         }
     }
+
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     fun editComment(id: String, body: String) {
         val trimmed = body.trim()
@@ -240,8 +248,8 @@ class CommentsViewModel @Inject constructor(
      * Submit the current reply draft as a reply under [parentId]. Files are
      * the optional list of attachments picked through the reply form.
      */
-    fun submitReply(parentId: String, files: List<File>? = null) {
+    fun submitReply(parentId: String, uris: List<Uri>? = null) {
         val draft = _uiState.value.replyDraft
-        createComment(body = draft, parent = parentId, files = files)
+        createComment(body = draft, parent = parentId, uris = uris)
     }
 }

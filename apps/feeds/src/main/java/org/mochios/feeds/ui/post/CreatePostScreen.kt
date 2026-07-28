@@ -83,7 +83,7 @@ import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -442,10 +442,7 @@ fun CreatePostScreen(
                                 }
                             }
                             val fileLabel = stringResource(R.string.feeds_file)
-                            val context = LocalContext.current
-                            val label = remember(uri) {
-                                Uploads.fileName(context.contentResolver, uri, fileLabel)
-                            }
+                            val label = rememberFileLabel(uri, viewModel::fileName, fileLabel)
                             AssistChip(
                                 onClick = { viewModel.removeAttachment(uri) },
                                 label = {

@@ -5,6 +5,7 @@
 
 package org.mochios.projects.ui.project
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -20,6 +21,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.files.PendingExport
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.FieldOption
@@ -63,6 +65,10 @@ data class ProjectUiState(
     val createObjectValues: Map<String, String> = emptyMap(),
     val isCreatingObject: Boolean = false,
     val isExporting: Boolean = false,
+    /** Export data fetched and waiting for the user to pick a destination. */
+    val pendingExport: PendingExport? = null,
+    val exportSaved: Boolean = false,
+    val exportFailed: Boolean = false,
     val selectedObjectId: String? = null,
     /**
      * Sort field per view id. Field is one of "rank", "number", "created",
@@ -93,9 +99,6 @@ class ProjectViewModel @Inject constructor(
     /** Emits the project's share link once fetched, for the screen to share. */
     private val _shareLink = MutableSharedFlow<String>()
     val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
-
-    private val _exportData = MutableSharedFlow<String>()
-    val exportData: SharedFlow<String> = _exportData.asSharedFlow()
 
     private var wsSubscriptionId: String? = null
 
@@ -237,13 +240,41 @@ class ProjectViewModel @Inject constructor(
                     rounds++
                 }
                 val data = repository.exportData(projectId)
-                _exportData.emit(data.toString())
+                val name = _uiState.value.projectDetails?.project?.name
+                _uiState.value = _uiState.value.copy(
+                    pendingExport = PendingExport(
+                        json = data.toString(),
+                        suggestedName = repository.exportFileName(name, "projects-backup")
+                    )
+                )
             } catch (error: Exception) {
                 _uiState.value = _uiState.value.copy(error = error.toMochiError())
             } finally {
                 _uiState.value = _uiState.value.copy(isExporting = false)
             }
         }
+    }
+
+    /** Writes the pending export to the destination the user picked. */
+    fun writeExportTo(uri: Uri) {
+        val pending = _uiState.value.pendingExport ?: return
+        viewModelScope.launch {
+            val ok = repository.saveTextFile(uri, pending.json)
+            _uiState.value = _uiState.value.copy(
+                pendingExport = null,
+                exportSaved = ok,
+                exportFailed = !ok
+            )
+        }
+    }
+
+    /** Drops the pending export when the user backs out of the save dialog. */
+    fun cancelExport() {
+        _uiState.value = _uiState.value.copy(pendingExport = null)
+    }
+
+    fun clearExportResult() {
+        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
     }
 
     /**

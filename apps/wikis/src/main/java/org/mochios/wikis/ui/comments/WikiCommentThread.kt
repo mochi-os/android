@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.comments
 
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -94,7 +95,8 @@ fun WikiCommentThread(
     onStartReply: (commentId: String, selectedText: String?) -> Unit,
     onCancelReply: () -> Unit,
     onReplyDraftChange: (String) -> Unit,
-    onSubmitReply: (commentId: String, files: List<File>?) -> Unit,
+    onSubmitReply: (commentId: String, files: List<Uri>?) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
     onEdit: ((commentId: String, body: String) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
     depth: Int = 0,
@@ -328,6 +330,7 @@ fun WikiCommentThread(
                         HorizontalDivider()
                         Spacer(Modifier.height(6.dp))
                         CommentForm(
+                            resolveFileName = resolveFileName,
                             initialText = replyDraft,
                             onSubmit = { _, files ->
                                 onSubmitReply(comment.id, files)
@@ -355,6 +358,7 @@ fun WikiCommentThread(
                         onCancelReply = onCancelReply,
                         onReplyDraftChange = onReplyDraftChange,
                         onSubmitReply = onSubmitReply,
+                        resolveFileName = resolveFileName,
                         onEdit = onEdit,
                         onDelete = onDelete,
                         depth = depth + 1,

@@ -30,7 +30,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.util.Uploads
 import org.mochios.projects.R
 import java.io.File
 
@@ -46,7 +45,7 @@ import java.io.File
 fun AttachmentsSection(
     attachments: List<Attachment>,
     projectId: String,
-    onAddAttachment: (File) -> Unit,
+    onAddAttachment: (Uri) -> Unit,
     onDeleteAttachment: (String) -> Unit,
 ) {
     val context = LocalContext.current
@@ -57,10 +56,7 @@ fun AttachmentsSection(
         contract = ActivityResultContracts.GetContent()
     ) { uri: Uri? ->
         if (uri != null) {
-            // Copies with the real display name + extension (the uri's last path
-            // segment is a document id like "document:59"), so the upload keeps a
-            // recognisable filename and MIME type.
-            Uploads.cacheFile(context, uri, defaultName)?.let { file -> onAddAttachment(file) }
+            onAddAttachment(uri)
         }
     }
 

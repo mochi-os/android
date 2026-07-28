@@ -261,7 +261,7 @@ fun EditListingScreen(
                 PhotoManager(
                     photos = state.photos,
                     onUpload = { uris ->
-                        viewModel.uploadPhoto(uris, context.contentResolver, context.cacheDir)
+                        viewModel.uploadPhoto(uris)
                     },
                     onDelete = viewModel::deletePhoto,
                     onReorder = viewModel::reorderPhotos,
@@ -275,7 +275,7 @@ fun EditListingScreen(
                     DigitalAssetsManager(
                         assets = state.assets,
                         onUpload = { uris ->
-                            viewModel.uploadAsset(uris, context.contentResolver, context.cacheDir)
+                            viewModel.uploadAsset(uris)
                         },
                         onDelete = viewModel::deleteAsset,
                         onReorder = viewModel::reorderAssets,

@@ -13,7 +13,8 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.forums.api.AccessResponse
 import org.mochios.forums.api.BannerResponse
 import org.mochios.forums.api.CreateCommentResponse
@@ -44,8 +45,9 @@ import javax.inject.Singleton
 
 @Singleton
 class ForumsRepository @Inject constructor(
-    private val api: ForumsApi
-) {
+    private val api: ForumsApi,
+    fileStore: FileStore
+) : FileRepository(fileStore) {
     private val text = "text/plain".toMediaTypeOrNull()
 
     /**
@@ -166,7 +168,7 @@ class ForumsRepository @Inject constructor(
     }
 
     suspend fun createPost(forumId: String, title: String, body: String, files: List<File> = emptyList()): CreatePostResponse {
-        val parts = Uploads.fileParts("attachments", files)
+        val parts = fileStore.fileParts("attachments", files)
         val response = api.createPost(
             forum = forumId.toRequestBody(text),
             title = title.toRequestBody(text),
@@ -189,9 +191,9 @@ class ForumsRepository @Inject constructor(
         uris: List<android.net.Uri>,
         context: android.content.Context,
     ): CreatePostResponse {
-        val files = Uploads.cacheFiles(context, uris)
+        val files = fileStore.cacheFiles(uris)
         try {
-            val parts = Uploads.fileParts("attachments", files)
+            val parts = fileStore.fileParts("attachments", files)
             val response = api.createPost(
                 forum = forumId.toRequestBody(text),
                 title = title.toRequestBody(text),
@@ -201,7 +203,7 @@ class ForumsRepository @Inject constructor(
             _postCreated.tryEmit(forumId)
             return response
         } finally {
-            Uploads.deleteAll(files)
+            fileStore.deleteAll(files)
         }
     }
 
@@ -222,9 +224,9 @@ class ForumsRepository @Inject constructor(
         newFileUris: List<android.net.Uri>,
         context: android.content.Context,
     ) {
-        val files = Uploads.cacheFiles(context, newFileUris)
+        val files = fileStore.cacheFiles(newFileUris)
         try {
-            val newParts = Uploads.fileParts("attachments", files)
+            val newParts = fileStore.fileParts("attachments", files)
             val order: List<String>? = when {
                 keptAttachmentIds == null && files.isEmpty() -> null
                 else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
@@ -239,12 +241,12 @@ class ForumsRepository @Inject constructor(
                 attachments = newParts,
             ).unwrap()
         } finally {
-            Uploads.deleteAll(files)
+            fileStore.deleteAll(files)
         }
     }
 
     suspend fun createComment(forumId: String, postId: String, body: String, parent: String? = null, files: List<File> = emptyList()): CreateCommentResponse {
-        val parts = Uploads.fileParts("files", files)
+        val parts = fileStore.fileParts("files", files)
         return api.createComment(
             forumId = forumId,
             postId = postId,
@@ -268,7 +270,7 @@ class ForumsRepository @Inject constructor(
         order: List<String>? = null,
         files: List<File> = emptyList(),
     ) {
-        val parts = Uploads.fileParts("files", files)
+        val parts = fileStore.fileParts("files", files)
         val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
         api.editComment(
             forumId = forumId,
@@ -292,9 +294,9 @@ class ForumsRepository @Inject constructor(
         uris: List<android.net.Uri>,
         context: android.content.Context,
     ): CreateCommentResponse {
-        val files = Uploads.cacheFiles(context, uris)
+        val files = fileStore.cacheFiles(uris)
         try {
-            val parts = Uploads.fileParts("files", files)
+            val parts = fileStore.fileParts("files", files)
             return api.createComment(
                 forumId = forumId,
                 postId = postId,
@@ -305,7 +307,7 @@ class ForumsRepository @Inject constructor(
                 files = parts,
             ).unwrap()
         } finally {
-            Uploads.deleteAll(files)
+            fileStore.deleteAll(files)
         }
     }
 
@@ -318,9 +320,9 @@ class ForumsRepository @Inject constructor(
         newFileUris: List<android.net.Uri>,
         context: android.content.Context,
     ) {
-        val files = Uploads.cacheFiles(context, newFileUris)
+        val files = fileStore.cacheFiles(newFileUris)
         try {
-            val newParts = Uploads.fileParts("files", files)
+            val newParts = fileStore.fileParts("files", files)
             val order: List<String>? = when {
                 keptAttachmentIds == null && files.isEmpty() -> null
                 else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
@@ -335,7 +337,7 @@ class ForumsRepository @Inject constructor(
                 files = newParts,
             ).unwrap()
         } finally {
-            Uploads.deleteAll(files)
+            fileStore.deleteAll(files)
         }
     }
 

@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.post
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -49,6 +50,9 @@ class PostViewModel @Inject constructor(
     private val sessionManager: SessionManager,
     private val webSocket: MochiWebSocket,
 ) : ViewModel() {
+
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     val forumId: String = savedStateHandle["forumId"] ?: ""
     val postId: String = savedStateHandle["postId"] ?: ""

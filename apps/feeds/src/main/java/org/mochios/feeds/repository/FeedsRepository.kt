@@ -22,7 +22,8 @@ import org.mochios.android.api.unwrapRaw
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.AccessRevokeRequest
@@ -99,8 +100,9 @@ class PermissionRequiredException(
 @Singleton
 class FeedsRepository @Inject constructor(
     private val api: FeedsApi,
-    private val menuApi: MenuApi
-) {
+    private val menuApi: MenuApi,
+    fileStore: FileStore
+) : FileRepository(fileStore) {
 
     // In-memory cache: feedId -> (posts, hasMore, timestamp)
     private val postCache = mutableMapOf<String, CachedPosts>()
@@ -417,8 +419,8 @@ class FeedsRepository @Inject constructor(
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
             files.forEachIndexed { index, (name, bytes) ->
-                val mediaType = fileTypes.getOrElse(index) { Uploads.DEFAULT_MIME }
-                multipartBody.addPart(Uploads.bytesPart("files", name, mediaType, bytes))
+                val mediaType = fileTypes.getOrElse(index) { FileStore.DEFAULT_MIME }
+                multipartBody.addPart(fileStore.bytesPart("files", name, mediaType, bytes))
             }
             api.createPost(feedId, multipartBody.build()).unwrap()
         } catch (e: Exception) {
@@ -435,17 +437,17 @@ class FeedsRepository @Inject constructor(
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null
     ) {
-        val files = Uploads.cacheFiles(context, uris)
+        val files = fileStore.cacheFiles(uris)
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
             for (file in files) {
-                multipartBody.addPart(Uploads.filePart("files", file))
+                multipartBody.addPart(fileStore.filePart("files", file))
             }
             api.createPost(feedId, multipartBody.build()).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {
-            Uploads.deleteAll(files)
+            fileStore.deleteAll(files)
         }
     }
 
@@ -501,7 +503,7 @@ class FeedsRepository @Inject constructor(
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null
     ) {
-        val files = Uploads.cacheFiles(context, newFiles)
+        val files = fileStore.cacheFiles(newFiles)
         try {
             val builder = MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
@@ -528,13 +530,13 @@ class FeedsRepository @Inject constructor(
             }
 
             for (file in files) {
-                builder.addPart(Uploads.filePart("files", file))
+                builder.addPart(fileStore.filePart("files", file))
             }
             api.editPost(feedId, postId, builder.build()).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {
-            Uploads.deleteAll(files)
+            fileStore.deleteAll(files)
         }
     }
 
@@ -581,7 +583,7 @@ class FeedsRepository @Inject constructor(
         files: List<Uri>,
         context: Context
     ): Comment {
-        val cachedFiles = Uploads.cacheFiles(context, files)
+        val cachedFiles = fileStore.cacheFiles(files)
         return try {
             val builder = MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
@@ -592,13 +594,13 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("parent", parent)
             }
             for (file in cachedFiles) {
-                builder.addPart(Uploads.filePart("files", file))
+                builder.addPart(fileStore.filePart("files", file))
             }
             api.createComment(feedId, postId, builder.build()).unwrap().comment
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {
-            Uploads.deleteAll(cachedFiles)
+            fileStore.deleteAll(cachedFiles)
         }
     }
 

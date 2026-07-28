@@ -12,7 +12,8 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.crm.api.CrmsApi
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.FieldOption
@@ -33,8 +34,9 @@ import javax.inject.Singleton
 
 @Singleton
 class CrmsRepository @Inject constructor(
-    private val api: CrmsApi
-) {
+    private val api: CrmsApi,
+    fileStore: FileStore
+) : FileRepository(fileStore) {
     // In-memory cache
     private val crmInfoCache = mutableMapOf<String, Pair<CrmDetails, Long>>()
     private val objectsCache = mutableMapOf<String, Pair<List<CrmObject>, Long>>()
@@ -209,7 +211,7 @@ class CrmsRepository @Inject constructor(
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
         // The server reads the multipart field "files" (mochi.attachment.save);
         // parts named anything else are silently dropped.
-        val fileParts = Uploads.fileParts("files", files)
+        val fileParts = fileStore.fileParts("files", files)
         return api.createComment(crmId, objectId, contentBody, parentBody, fileParts).unwrap().comment
     }
 
@@ -227,7 +229,7 @@ class CrmsRepository @Inject constructor(
         api.getAttachments(crmId, objectId).unwrap().attachments
 
     suspend fun createAttachment(crmId: String, objectId: String, file: File): Attachment {
-        val part = Uploads.filePart("files", file)
+        val part = fileStore.filePart("files", file)
         return api.createAttachment(crmId, objectId, part).unwrap().attachment
     }
 

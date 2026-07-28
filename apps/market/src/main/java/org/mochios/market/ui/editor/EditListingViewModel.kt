@@ -25,7 +25,6 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.util.Uploads
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Asset
 import org.mochios.market.model.Category
@@ -451,11 +450,7 @@ class EditListingViewModel @Inject constructor(
 
     // -------------------------------- Photos
 
-    fun uploadPhoto(
-        uris: List<Uri>,
-        contentResolver: ContentResolver,
-        cacheDir: File,
-    ) {
+    fun uploadPhoto(uris: List<Uri>) {
         if (uris.isEmpty()) return
         // Make sure we have a listing row to attach photos to. The first save
         // refuses to create one without a title, so tell the seller instead of
@@ -472,22 +467,16 @@ class EditListingViewModel @Inject constructor(
             }
             val listingId = _state.value.listingId
             _state.value = _state.value.copy(isUploadingPhoto = true)
-            val temps = mutableListOf<File>()
+            val temps = repository.stageFiles(uris, fallbackName = "photo")
             try {
-                for (uri in uris) {
-                    val name = Uploads.fileName(contentResolver, uri, "photo")
-                    val temp = File(cacheDir, "market_photo_${System.nanoTime()}_$name")
-                    contentResolver.openInputStream(uri)?.use { input ->
-                        FileOutputStream(temp).use { out -> input.copyTo(out) }
-                    } ?: throw IllegalStateException("Cannot open $uri")
-                    temps.add(temp)
+                for (temp in temps) {
                     val photo = repository.uploadPhoto(listingId, temp)
                     _state.value = _state.value.copy(photos = _state.value.photos + photo)
                 }
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             } finally {
-                temps.forEach { runCatching { it.delete() } }
+                repository.discardStaged(temps)
                 _state.value = _state.value.copy(isUploadingPhoto = false)
             }
         }
@@ -521,11 +510,7 @@ class EditListingViewModel @Inject constructor(
 
     // -------------------------------- Assets
 
-    fun uploadAsset(
-        uris: List<Uri>,
-        contentResolver: ContentResolver,
-        cacheDir: File,
-    ) {
+    fun uploadAsset(uris: List<Uri>) {
         if (uris.isEmpty()) return
         // Same first-save handling as uploadPhoto: no listing row without a title.
         viewModelScope.launch {
@@ -540,22 +525,16 @@ class EditListingViewModel @Inject constructor(
             }
             val listingId = _state.value.listingId
             _state.value = _state.value.copy(isUploadingAsset = true)
-            val temps = mutableListOf<File>()
+            val temps = repository.stageFiles(uris)
             try {
-                for (uri in uris) {
-                    val name = Uploads.fileName(contentResolver, uri, "file")
-                    val temp = File(cacheDir, "market_asset_${System.nanoTime()}_$name")
-                    contentResolver.openInputStream(uri)?.use { input ->
-                        FileOutputStream(temp).use { out -> input.copyTo(out) }
-                    } ?: throw IllegalStateException("Cannot open $uri")
-                    temps.add(temp)
+                for (temp in temps) {
                     val asset = repository.uploadAsset(listingId, temp)
                     _state.value = _state.value.copy(assets = _state.value.assets + asset)
                 }
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             } finally {
-                temps.forEach { runCatching { it.delete() } }
+                repository.discardStaged(temps)
                 _state.value = _state.value.copy(isUploadingAsset = false)
             }
         }

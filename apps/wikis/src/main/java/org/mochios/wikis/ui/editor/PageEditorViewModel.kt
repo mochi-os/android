@@ -19,7 +19,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.util.Uploads
 import org.mochios.android.api.userMessage
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.PageFetchResponse
@@ -274,8 +273,6 @@ class PageEditorViewModel @Inject constructor(
      */
     fun uploadAttachments(
         uris: List<Uri>,
-        contentResolver: ContentResolver,
-        cacheDir: File,
         uploadFailed: String,
     ) {
         if (uris.isEmpty()) return
@@ -284,16 +281,8 @@ class PageEditorViewModel @Inject constructor(
         if (_uiState.value.slug.isEmpty() && initialSlug == null) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isUploading = true)
-            val tempFiles = mutableListOf<File>()
+            val tempFiles = repository.stageFiles(uris)
             try {
-                for (uri in uris) {
-                    val name = Uploads.fileName(contentResolver, uri, "file")
-                    val temp = File(cacheDir, "wiki_upload_${System.nanoTime()}_$name")
-                    contentResolver.openInputStream(uri)?.use { input ->
-                        FileOutputStream(temp).use { out -> input.copyTo(out) }
-                    } ?: throw IllegalStateException("Cannot open $uri")
-                    tempFiles.add(temp)
-                }
                 val uploaded = repository.uploadAttachments(wikiId, tempFiles)
                 _uiState.value = _uiState.value.copy(
                     isUploading = false,
@@ -303,7 +292,7 @@ class PageEditorViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isUploading = false)
                 _events.send(PageEditorEvent.Toast(e.toMochiError().messageOrFallback(uploadFailed)))
             } finally {
-                tempFiles.forEach { runCatching { it.delete() } }
+                repository.discardStaged(tempFiles)
             }
         }
     }

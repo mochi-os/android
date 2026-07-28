@@ -310,6 +310,7 @@ fun PostSourceScreen(
                 replyingTo = replyingTo,
                 onCancelReply = { viewModel.setReplyingTo(null) },
                 onSearchMembers = { viewModel.searchMembers(it) },
+                resolveFileName = viewModel::fileName,
                 commentCount = post?.let { countComments(it.comments) } ?: 0,
                 showDeleteCommentDialog = { showDeleteCommentDialog = it },
                 onExpand = {
@@ -550,6 +551,7 @@ private fun PostSourceSheet(
     replyingTo: String?,
     onCancelReply: () -> Unit,
     onSearchMembers: suspend (String) -> List<org.mochios.android.ui.components.MentionSuggestion>,
+    resolveFileName: suspend (android.net.Uri) -> String,
     commentCount: Int,
     showDeleteCommentDialog: (String) -> Unit,
     onExpand: () -> Unit
@@ -624,6 +626,7 @@ private fun PostSourceSheet(
                 attachments = commentAttachments,
                 onAddAttachment = onAddAttachment,
                 onRemoveAttachment = onRemoveAttachment,
+                resolveFileName = resolveFileName,
                 onSend = onSendComment,
                 isSending = isSendingComment,
                 replyingTo = replyingTo,

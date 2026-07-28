@@ -10,7 +10,8 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import okhttp3.MultipartBody
 import org.mochios.android.api.unwrap
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.people.api.FriendsListResponse
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.api.PreferenceResponse
@@ -37,7 +38,8 @@ import javax.inject.Singleton
 @Singleton
 class PeopleRepository @Inject constructor(
     private val api: PeopleApi,
-) {
+    fileStore: FileStore,
+) : FileRepository(fileStore) {
 
     /**
      * Emits whenever a group is edited or deleted. The group list and the
@@ -179,7 +181,7 @@ class PeopleRepository @Inject constructor(
     // Content-Type — the server rejects "application/octet-stream" with
     // "<slot> must be an image". Field name "file" matches the web upload.
     private fun multipart(file: File): MultipartBody.Part =
-        Uploads.filePart("file", file, "image/jpeg")
+        fileStore.filePart("file", file, "image/jpeg")
 
     private fun wireType(type: GroupMemberType): String = when (type) {
         GroupMemberType.USER -> "user"

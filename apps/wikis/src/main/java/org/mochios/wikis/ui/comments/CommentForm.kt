@@ -51,7 +51,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import org.mochios.android.util.Uploads
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.wikis.R
 import java.io.File
 
@@ -89,18 +89,18 @@ import java.io.File
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun CommentForm(
-    onSubmit: (body: String, files: List<File>?) -> Unit,
+    onSubmit: (body: String, files: List<Uri>?) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
     initialText: String = "",
     onCancel: (() -> Unit)? = null,
     placeholder: String = stringResource(R.string.wikis_comment_form_placeholder_new),
     autoFocus: Boolean = false,
     onTextChange: ((String) -> Unit)? = null,
 ) {
-    val context = LocalContext.current
     val focusRequester = remember { FocusRequester() }
 
     var body by remember(initialText) { mutableStateOf(initialText) }
-    val files = remember { mutableStateListOf<File>() }
+    val files = remember { mutableStateListOf<Uri>() }
 
     // Whenever the caller seeds a new value (e.g. quote-on-select drops a
     // freshly-quoted draft into the reply textarea), reset the local field.
@@ -115,9 +115,7 @@ fun CommentForm(
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
-        for (uri in uris) {
-            Uploads.cacheFile(context, uri, "file")?.let { file -> files.add(file) }
-        }
+        files.addAll(uris)
     }
 
     val canSend = body.isNotBlank() || files.isNotEmpty()
@@ -155,9 +153,10 @@ fun CommentForm(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                files.forEachIndexed { index, file ->
+                files.forEachIndexed { index, uri ->
                     FileChip(
-                        file = file,
+                        uri = uri,
+                        name = rememberFileLabel(uri, resolveFileName),
                         onRemove = { files.removeAt(index) },
                     )
                 }
@@ -201,11 +200,12 @@ fun CommentForm(
 
 @Composable
 private fun FileChip(
-    file: File,
+    uri: Uri,
+    name: String,
     onRemove: () -> Unit,
 ) {
-    val isImage = remember(file.name) {
-        val ext = file.extension.lowercase()
+    val isImage = remember(name) {
+        val ext = name.substringAfterLast('.', "").lowercase()
         ext in setOf("png", "jpg", "jpeg", "gif", "webp", "bmp")
     }
     Row(
@@ -217,8 +217,8 @@ private fun FileChip(
     ) {
         if (isImage) {
             AsyncImage(
-                model = file,
-                contentDescription = file.name,
+                model = uri,
+                contentDescription = name,
                 modifier = Modifier
                     .size(32.dp)
                     .clip(RoundedCornerShape(4.dp)),
@@ -234,7 +234,7 @@ private fun FileChip(
             Spacer(Modifier.width(4.dp))
         }
         Text(
-            text = file.name,
+            text = name,
             style = MaterialTheme.typography.labelSmall,
             fontWeight = FontWeight.Medium,
             maxLines = 1,

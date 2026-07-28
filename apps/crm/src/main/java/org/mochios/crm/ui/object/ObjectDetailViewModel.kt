@@ -5,6 +5,7 @@
 
 package org.mochios.crm.ui.`object`
 
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -244,16 +245,23 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
-    fun createComment(content: String, parent: String? = null, files: List<File> = emptyList()) {
+    /** Stages any picked attachments, then posts the comment. */
+    fun createComment(content: String, parent: String? = null, uris: List<Uri> = emptyList()) {
         viewModelScope.launch {
+            val files = repository.stageFiles(uris)
             try {
                 repository.createComment(currentCrmId, currentObjectId, content, parent, files)
                 loadComments()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
+            } finally {
+                repository.discardStaged(files)
             }
         }
     }
+
+    /** The picked file's real name, for labelling a draft attachment. */
+    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     fun updateComment(commentId: String, content: String) {
         viewModelScope.launch {
@@ -321,13 +329,17 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
-    fun createAttachment(file: File) {
+    /** Stages the picked file, then uploads it as an attachment. */
+    fun createAttachment(uri: Uri) {
         viewModelScope.launch {
+            val file = repository.stageFile(uri) ?: return@launch
             try {
                 repository.createAttachment(currentCrmId, currentObjectId, file)
                 loadAttachments()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
+            } finally {
+                repository.discardStaged(listOf(file))
             }
         }
     }

@@ -37,7 +37,6 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.util.Uploads
 import org.mochios.crm.R
 import java.io.File
 import org.mochios.android.R as MochiR
@@ -51,16 +50,14 @@ import org.mochios.android.R as MochiR
 fun AttachmentsSection(
     attachments: List<Attachment>,
     crmId: String,
-    onAddAttachment: (File) -> Unit,
+    onAddAttachment: (Uri) -> Unit,
     onDeleteAttachment: (String) -> Unit,
 ) {
-    val context = LocalContext.current
-    val defaultName = stringResource(R.string.crm_attachment_default_name)
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetContent()
     ) { uri: Uri? ->
         if (uri != null) {
-            Uploads.cacheFile(context, uri, defaultName)?.let { file -> onAddAttachment(file) }
+            onAddAttachment(uri)
         }
     }
 
