@@ -372,4 +372,7 @@
     <string name="system_status_awaiting_routing">Poruke koje čekaju rutiranje</string>
     <string name="system_status_relay_service">Relejna usluga</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervacije · %3$d kola · %4$d odbijeno</string>
+    <string name="route_target_select">Odaberi</string>
+    <string name="account_data_description">Preuzmite potpunu rezervnu kopiju koju možete vratiti na ovom ili drugom Mochi serveru.</string>
+    <string name="route_target_none">Nema dostupnih odredišta</string>
 </resources>

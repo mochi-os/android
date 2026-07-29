@@ -369,4 +369,7 @@
     <string name="system_status_awaiting_routing">Àwọn iṣẹ́ tó ń dúró de ìpa-ọ̀nà</string>
     <string name="system_status_relay_service">Iṣẹ́ àfisẹ́</string>
     <string name="system_status_relay_service_value">%1$d / %2$d àkọsílẹ̀ · %3$d àyíká · %4$d kọ̀</string>
+    <string name="route_target_select">Yàn</string>
+    <string name="account_data_description">Ṣe àgbàsílẹ̀ ẹ̀dà ìpamọ́ pípé tí o lè dá padà sí olùpèsè Mochi yìí tàbí sí òmíràn.</string>
+    <string name="route_target_none">Kò sí ibi tí a lè fi sí</string>
 </resources>

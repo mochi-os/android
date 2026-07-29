@@ -369,4 +369,7 @@
     <string name="system_status_awaiting_routing">Pesan menunggu perutean</string>
     <string name="system_status_relay_service">Layanan relai</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasi · %3$d sirkuit · %4$d ditolak</string>
+    <string name="route_target_select">Pilih</string>
+    <string name="account_data_description">Unduh cadangan lengkap yang dapat Anda pulihkan di server Mochi ini atau server Mochi lain.</string>
+    <string name="route_target_none">Tidak ada target yang tersedia</string>
 </resources>

@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Imilayezo elindele ukuhanjiswa kwendlela</string>
     <string name="system_status_relay_service">Isevisi yokudlulisa</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ukubhukha · %3$d izifunda · %4$d kwenqatshiwe</string>
+    <string name="route_target_select">Khetha</string>
+    <string name="account_data_description">Landa isipele esiphelele ongasibuyisela kule seva ye-Mochi noma kwenye.</string>
+    <string name="route_target_none">Awekho amagondolozelo atholakalayo</string>
 </resources>

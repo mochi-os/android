@@ -369,4 +369,7 @@
     <string name="system_status_awaiting_routing">等待路由的消息</string>
     <string name="system_status_relay_service">中继服务</string>
     <string name="system_status_relay_service_value">%1$d / %2$d 预留 · %3$d 线路 · %4$d 拒绝</string>
+    <string name="route_target_select">选择</string>
+    <string name="account_data_description">下载完整备份，你可以在本服务器或其他 Mochi 服务器上还原。</string>
+    <string name="route_target_none">没有可用的目标</string>
 </resources>

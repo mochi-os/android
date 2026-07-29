@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Berichten die wachten op routering</string>
     <string name="system_status_relay_service">Relaisdienst</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reserveringen · %3$d circuits · %4$d geweigerd</string>
+    <string name="route_target_select">Selecteren</string>
+    <string name="account_data_description">Download een volledige back-up die je kunt terugzetten op deze of een andere Mochi-server.</string>
+    <string name="route_target_none">Geen doelen beschikbaar</string>
 </resources>

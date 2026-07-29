@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">રૂટિંગની રાહ જોતા સંદેશા</string>
     <string name="system_status_relay_service">રિલે સેવા</string>
     <string name="system_status_relay_service_value">%1$d / %2$d આરક્ષણો · %3$d સર્કિટ · %4$d નકારેલ</string>
+    <string name="route_target_select">પસંદ કરો</string>
+    <string name="account_data_description">સંપૂર્ણ બેકઅપ ડાઉનલોડ કરો જે તમે આ અથવા અન્ય Mochi સર્વર પર પુનઃસ્થાપિત કરી શકો છો.</string>
+    <string name="route_target_none">કોઈ લક્ષ્ય ઉપલબ્ધ નથી</string>
 </resources>

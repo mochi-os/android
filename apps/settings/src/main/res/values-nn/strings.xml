@@ -369,4 +369,10 @@
     <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
     <string name="system_status_relay_service">Relétjeneste</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasjoner · %3$d kretser · %4$d avvist</string>
+    <string name="login_section_methods">Innloggingsmetodar</string>
+    <string name="route_target_select">Vel</string>
+    <string name="account_data_description">Last ned ein fullstendig tryggingskopi som du kan gjenopprette på denne eller ein annan Mochi-tenar.</string>
+    <string name="account_data_dialog_body">Dette er ein fullstendig tryggingskopi du kan gjenopprette på denne eller ein annan Mochi-tenar. Stadfest at det er deg for å halde fram.</string>
+    <string name="account_data_passphrase_hint">Dei private nøklane dine er med, krypterte med denne passfrasen. Oppbevar han trygt. Du treng han for å gjenopprette.</string>
+    <string name="route_target_none">Ingen tilgjengelege mål</string>
 </resources>

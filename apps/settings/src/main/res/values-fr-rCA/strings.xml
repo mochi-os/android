@@ -360,4 +360,11 @@
         <item quantity="one">Test envoyé à %1$d destination</item>
         <item quantity="other">Test envoyé à %1$d destinations</item>
     </plurals>
+    <string name="login_title">Connexion</string>
+    <string name="login_section_methods">Méthodes de connexion</string>
+    <string name="login_method_passkey">Clé d\'accès</string>
+    <string name="login_method_totp">Application d\'authentification</string>
+    <string name="login_method_oauth">Connexion tierce</string>
+    <string name="login_method_recovery">Codes de récupération</string>
+    <string name="route_target_select">Sélectionner</string>
 </resources>

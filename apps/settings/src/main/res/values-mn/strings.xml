@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Чиглүүлэлт хүлээж буй мессежүүд</string>
     <string name="system_status_relay_service">Дамжуулагч үйлчилгээ</string>
     <string name="system_status_relay_service_value">%1$d / %2$d захиалга · %3$d хэлхээ · %4$d татгалзсан</string>
+    <string name="route_target_select">Сонгох</string>
+    <string name="account_data_description">Энэ болон бусад Mochi серверт сэргээж болох бүрэн нөөцлөлтийг татаж авна уу.</string>
+    <string name="route_target_none">Боломжтой зорилтууд байхгүй</string>
 </resources>

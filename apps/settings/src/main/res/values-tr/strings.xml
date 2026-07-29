@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Yönlendirme bekleyen mesajlar</string>
     <string name="system_status_relay_service">Aktarma hizmeti</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervasyonlar · %3$d devreler · %4$d reddedildi</string>
+    <string name="route_target_select">Seç</string>
+    <string name="account_data_description">Bu sunucuda veya başka bir Mochi sunucusunda geri yükleyebileceğiniz tam bir yedeği indirin.</string>
+    <string name="route_target_none">Kullanılabilir hedef yok</string>
 </resources>

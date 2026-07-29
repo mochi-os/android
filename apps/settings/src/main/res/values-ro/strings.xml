@@ -372,4 +372,7 @@
     <string name="system_status_awaiting_routing">Mesaje care așteaptă rutarea</string>
     <string name="system_status_relay_service">Serviciu de releu</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervări · %3$d circuite · %4$d respinse</string>
+    <string name="route_target_select">Selectează</string>
+    <string name="account_data_description">Descarcă o copie de rezervă completă pe care o poți restaura pe acest server Mochi sau pe altul.</string>
+    <string name="route_target_none">Nu există destinații disponibile</string>
 </resources>

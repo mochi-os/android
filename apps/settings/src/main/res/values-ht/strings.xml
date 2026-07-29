@@ -369,4 +369,7 @@
     <string name="system_status_awaiting_routing">Mesaj k ap tann acheminman</string>
     <string name="system_status_relay_service">Sèvis rele</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezèvasyon · %3$d sikui · %4$d refize</string>
+    <string name="route_target_select">Chwazi</string>
+    <string name="account_data_description">Telechaje yon sovgad konplè ou ka retabli sou sèvè sa a oswa sou yon lòt sèvè Mochi.</string>
+    <string name="route_target_none">Pa gen sib ki disponib</string>
 </resources>

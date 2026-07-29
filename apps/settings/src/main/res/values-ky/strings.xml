@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Багыттоону күтүп жаткан билдирүүлөр</string>
     <string name="system_status_relay_service">Реле кызматы</string>
     <string name="system_status_relay_service_value">%1$d / %2$d брондоолор · %3$d чынжырлар · %4$d четке кагылды</string>
+    <string name="route_target_select">Тандоо</string>
+    <string name="account_data_description">Бул же башка Mochi серверинде калыбына келтире турган толук камдык көчүрмөнү жүктөп алыңыз.</string>
+    <string name="route_target_none">Жеткиликтүү багыттар жок</string>
 </resources>

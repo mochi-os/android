@@ -369,4 +369,7 @@
     <string name="system_status_awaiting_routing">Mesej menunggu penghalaan</string>
     <string name="system_status_relay_service">Perkhidmatan geganti</string>
     <string name="system_status_relay_service_value">%1$d / %2$d tempahan · %3$d litar · %4$d ditolak</string>
+    <string name="route_target_select">Pilih</string>
+    <string name="account_data_description">Muat turun sandaran lengkap yang boleh anda pulihkan pada pelayan Mochi ini atau pelayan Mochi lain.</string>
+    <string name="route_target_none">Tiada sasaran tersedia</string>
 </resources>

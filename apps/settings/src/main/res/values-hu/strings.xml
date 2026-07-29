@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Útválasztásra váró üzenetek</string>
     <string name="system_status_relay_service">Továbbító szolgáltatás</string>
     <string name="system_status_relay_service_value">%1$d / %2$d foglalások · %3$d áramkörök · %4$d elutasítva</string>
+    <string name="route_target_select">Kiválasztás</string>
+    <string name="account_data_description">Töltsön le egy teljes biztonsági mentést, amelyet visszaállíthat ezen vagy egy másik Mochi-kiszolgálón.</string>
+    <string name="route_target_none">Nincs elérhető cél</string>
 </resources>

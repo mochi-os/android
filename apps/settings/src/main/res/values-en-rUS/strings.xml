@@ -345,4 +345,16 @@
         <item quantity="one">Test sent to %1$d destination</item>
         <item quantity="other">Test sent to %1$d destinations</item>
     </plurals>
+    <string name="login_title">Login</string>
+    <string name="login_section_methods">Login methods</string>
+    <string name="login_method_email">Email code</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Third-party login</string>
+    <string name="login_method_recovery">Recovery codes</string>
+    <string name="route_target_select">Select</string>
+    <string name="system_status_users">Users</string>
+    <string name="system_status_reachability_public">Public</string>
+    <string name="system_status_reachability_private">Private</string>
+    <string name="system_status_reachability_unknown">Unknown</string>
 </resources>

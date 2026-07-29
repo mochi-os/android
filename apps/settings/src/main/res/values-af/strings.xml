@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Boodskappe wag op roetering</string>
     <string name="system_status_relay_service">Relêdiens</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reserverings · %3$d stroombane · %4$d geweier</string>
+    <string name="route_target_select">Kies</string>
+    <string name="account_data_description">Laai \'n volledige rugsteun af wat jy op hierdie of \'n ander Mochi-bediener kan herstel.</string>
+    <string name="route_target_none">Geen teikens beskikbaar nie</string>
 </resources>

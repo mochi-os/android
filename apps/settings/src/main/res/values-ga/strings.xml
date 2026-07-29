@@ -376,4 +376,7 @@
     <string name="system_status_awaiting_routing">Teachtaireachtaí ag fanacht le ródú</string>
     <string name="system_status_relay_service">Seirbhís athsheachadáin</string>
     <string name="system_status_relay_service_value">%1$d / %2$d áirithintí · %3$d ciorcaid · %4$d diúltaithe</string>
+    <string name="route_target_select">Roghnaigh</string>
+    <string name="account_data_description">Íoslódáil cúltaca iomlán is féidir leat a athchóiriú ar an bhfreastalaí Mochi seo nó ar cheann eile.</string>
+    <string name="route_target_none">Níl aon sprioc ar fáil</string>
 </resources>

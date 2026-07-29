@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">روٹنگ کے منتظر پیغامات</string>
     <string name="system_status_relay_service">ریلے سروس</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ریزرویشنز · %3$d سرکٹس · %4$d مسترد</string>
+    <string name="route_target_select">منتخب کریں</string>
+    <string name="account_data_description">مکمل بیک اپ ڈاؤن لوڈ کریں جسے آپ اس یا کسی دوسرے Mochi سرور پر بحال کر سکتے ہیں۔</string>
+    <string name="route_target_none">کوئی ہدف دستیاب نہیں</string>
 </resources>

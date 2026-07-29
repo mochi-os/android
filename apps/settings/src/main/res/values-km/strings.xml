@@ -368,4 +368,7 @@
     <string name="system_status_awaiting_routing">សារកំពុងរង់ចាំការនាំផ្លូវ</string>
     <string name="system_status_relay_service">សេវាបញ្ជូនបន្ត</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ការកក់ · %3$d សៀគ្វី · %4$d បានបដិសេធ</string>
+    <string name="route_target_select">ជ្រើសរើស</string>
+    <string name="account_data_description">ទាញយកការបម្រុងទុកពេញលេញដែលអ្នកអាចស្ដារឡើងវិញនៅលើម៉ាស៊ីនមេ Mochi នេះ ឬម៉ាស៊ីនមេផ្សេងទៀត។</string>
+    <string name="route_target_none">មិនមានគោលដៅដែលអាចប្រើបានទេ</string>
 </resources>

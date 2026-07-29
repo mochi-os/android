@@ -369,4 +369,7 @@
     <string name="system_status_awaiting_routing">ルーティング待ちのメッセージ</string>
     <string name="system_status_relay_service">リレーサービス</string>
     <string name="system_status_relay_service_value">%1$d / %2$d 予約 · %3$d 回線 · %4$d 拒否</string>
+    <string name="route_target_select">選択</string>
+    <string name="account_data_description">このサーバーまたは別の Mochi サーバーで復元できる完全なバックアップをダウンロードします。</string>
+    <string name="route_target_none">利用できる宛先がありません</string>
 </resources>

@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">রাউটিংয়ের অপেক্ষায় বার্তা</string>
     <string name="system_status_relay_service">রিলে সার্ভিস</string>
     <string name="system_status_relay_service_value">%1$d / %2$d সংরক্ষণ · %3$d সার্কিট · %4$d প্রত্যাখ্যাত</string>
+    <string name="route_target_select">নির্বাচন করুন</string>
+    <string name="account_data_description">একটি সম্পূর্ণ ব্যাকআপ ডাউনলোড করুন যা আপনি এই বা অন্য কোনো Mochi সার্ভারে পুনরুদ্ধার করতে পারেন।</string>
+    <string name="route_target_none">কোনো লক্ষ্য নেই</string>
 </resources>

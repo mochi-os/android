@@ -370,4 +370,7 @@
     <string name="system_status_awaiting_routing">Ergaawwan daandii eeggachaa jiran</string>
     <string name="system_status_relay_service">Tajaajila daddabarsaa</string>
     <string name="system_status_relay_service_value">%1$d / %2$d qabannoo · %3$d geengoo · %4$d didame</string>
+    <string name="route_target_select">Filadhu</string>
+    <string name="account_data_description">Kuusaa guutuu Mochi sarvarii kana irratti yookaan kan biraa irratti deebisuu dandeessu buufadhu.</string>
+    <string name="route_target_none">Galmi jiru hin jiru</string>
 </resources>

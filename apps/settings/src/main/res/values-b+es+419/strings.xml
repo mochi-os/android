@@ -371,4 +371,7 @@
     <string name="system_status_awaiting_routing">Mensajes en espera de enrutamiento</string>
     <string name="system_status_relay_service">Servicio de retransmisión</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuitos · %4$d rechazadas</string>
+    <string name="route_target_select">Seleccionar</string>
+    <string name="account_data_description">Descarga una copia de seguridad completa que puedes restaurar en este o en otro servidor Mochi.</string>
+    <string name="route_target_none">No hay destinos disponibles</string>
 </resources>
