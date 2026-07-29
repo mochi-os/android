@@ -321,6 +321,10 @@
     <string name="domain_title">වසම්</string>
     <string name="domain_verify">DNS සත්‍යාපනය කරන්න</string>
     <string name="settings_home_domains">වසම්</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">ගමනාන්ත %1$d කට පරීක්ෂණය යවන ලදී</item>
+        <item quantity="other">ගමනාන්ත %1$d කට පරීක්ෂණය යවන ලදී</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">සැසි 1 අවලංගු කළා</item>
         <item quantity="other">සැසි %1$d ක් අවලංගු කළා</item>

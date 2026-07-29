@@ -321,6 +321,14 @@
     <string name="domain_title">Parthau</string>
     <string name="domain_verify">Dilysu DNS</string>
     <string name="settings_home_domains">Parthau</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="zero">Anfonwyd y prawf i %1$d cyrchfan</item>
+        <item quantity="one">Anfonwyd y prawf i %1$d cyrchfan</item>
+        <item quantity="two">Anfonwyd y prawf i %1$d gyrchfan</item>
+        <item quantity="few">Anfonwyd y prawf i %1$d chyrchfan</item>
+        <item quantity="many">Anfonwyd y prawf i %1$d chyrchfan</item>
+        <item quantity="other">Anfonwyd y prawf i %1$d cyrchfan</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Diddymwyd %1$d sesiwn</item>
         <item quantity="many">Diddymwyd %1$d sesiwn</item>

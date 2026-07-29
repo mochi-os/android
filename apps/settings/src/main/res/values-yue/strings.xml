@@ -323,6 +323,10 @@
     <string name="domain_title">網域</string>
     <string name="domain_verify">驗證 DNS</string>
     <string name="settings_home_domains">網域</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">已向 %1$d 個目標傳送測試</item>
+        <item quantity="other">已向 %1$d 個目標傳送測試</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">已撤銷 %1$d 個工作階段</item>
     </plurals>

@@ -321,6 +321,12 @@
     <string name="domain_title">Домены</string>
     <string name="domain_verify">Проверить DNS</string>
     <string name="settings_home_domains">Домены</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Тест отправлен на %1$d адрес</item>
+        <item quantity="few">Тест отправлен на %1$d адреса</item>
+        <item quantity="many">Тест отправлен на %1$d адресов</item>
+        <item quantity="other">Тест отправлен на %1$d адреса</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Отозвано %1$d сессии</item>
         <item quantity="many">Отозвано %1$d сессий</item>

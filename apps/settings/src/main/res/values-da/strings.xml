@@ -321,6 +321,10 @@
     <string name="domain_title">Domæner</string>
     <string name="domain_verify">Bekræft DNS</string>
     <string name="settings_home_domains">Domæner</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test sendt til %1$d destination</item>
+        <item quantity="other">Test sendt til %1$d destinationer</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 session tilbagekaldt</item>
         <item quantity="other">%1$d sessioner tilbagekaldt</item>

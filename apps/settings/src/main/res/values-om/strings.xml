@@ -321,6 +321,10 @@
     <string name="domain_title">Domeeniwwan</string>
     <string name="domain_verify">DNS Mirkaneessi</string>
     <string name="settings_home_domains">Domeeniwwan</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Qorannoon gara bakka %1$d ergameera</item>
+        <item quantity="other">Qorannoon gara bakkeewwan %1$d ergameera</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Yeroo turtii 1 kaafame</item>
         <item quantity="other">Yeroowwan turtii %1$d kaafaman</item>

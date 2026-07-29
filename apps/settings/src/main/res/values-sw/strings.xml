@@ -321,6 +321,10 @@
     <string name="domain_title">Vikoa</string>
     <string name="domain_verify">Thibitisha DNS</string>
     <string name="settings_home_domains">Vikoa</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Jaribio limetumwa kwa marudio %1$d</item>
+        <item quantity="other">Jaribio limetumwa kwa marudio %1$d</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Imefuta kipindi 1</item>
         <item quantity="other">Imefuta vipindi %1$d</item>

@@ -321,6 +321,10 @@
     <string name="domain_title">Tên miền</string>
     <string name="domain_verify">Xác minh DNS</string>
     <string name="settings_home_domains">Tên miền</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Đã gửi thử nghiệm đến %1$d đích</item>
+        <item quantity="other">Đã gửi thử nghiệm đến %1$d đích</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Đã thu hồi %1$d phiên</item>
     </plurals>

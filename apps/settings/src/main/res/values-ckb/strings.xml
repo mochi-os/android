@@ -321,6 +321,10 @@
     <string name="domain_title">دۆمەینەکان</string>
     <string name="domain_verify">DNS پشتڕاستبکە</string>
     <string name="settings_home_domains">دۆمەینەکان</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">تاقیکردنەوە بۆ %1$d مەبەست نێردرا</item>
+        <item quantity="other">تاقیکردنەوە بۆ %1$d مەبەست نێردرا</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">١ دانیشتن هەڵوەشایەوە</item>
         <item quantity="other">%1$d دانیشتن هەڵوەشایەوە</item>

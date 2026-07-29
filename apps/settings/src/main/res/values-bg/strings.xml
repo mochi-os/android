@@ -321,6 +321,10 @@
     <string name="domain_title">Домейни</string>
     <string name="domain_verify">Потвърди DNS</string>
     <string name="settings_home_domains">Домейни</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Тестът е изпратен до %1$d местоназначение</item>
+        <item quantity="other">Тестът е изпратен до %1$d местоназначения</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Отменена 1 сесия</item>
         <item quantity="other">Отменени %1$d сесии</item>

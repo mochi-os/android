@@ -321,6 +321,11 @@
     <string name="domain_title">Домени</string>
     <string name="domain_verify">Верификуј DNS</string>
     <string name="settings_home_domains">Домени</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Тест послат на %1$d одредиште</item>
+        <item quantity="few">Тест послат на %1$d одредишта</item>
+        <item quantity="other">Тест послат на %1$d одредишта</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Опозване %1$d сесије</item>
         <item quantity="one">Опозвана %1$d сесија</item>

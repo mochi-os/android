@@ -321,6 +321,10 @@
     <string name="domain_title">Dominis</string>
     <string name="domain_verify">Verifica el DNS</string>
     <string name="settings_home_domains">Dominis</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Prova enviada a %1$d destinació</item>
+        <item quantity="other">Prova enviada a %1$d destinacions</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="many">S\'han revocat %1$d sessions</item>
         <item quantity="one">S\'ha revocat 1 sessió</item>

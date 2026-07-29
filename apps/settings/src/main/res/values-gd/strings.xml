@@ -321,6 +321,12 @@
     <string name="domain_title">Àrainnean</string>
     <string name="domain_verify">Dearbh DNS</string>
     <string name="settings_home_domains">Àrainnean</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Chaidh an deuchainn a chur gu %1$d cheann-uidhe</item>
+        <item quantity="two">Chaidh an deuchainn a chur gu %1$d cheann-uidhe</item>
+        <item quantity="few">Chaidh an deuchainn a chur gu %1$d cinn-uidhe</item>
+        <item quantity="other">Chaidh an deuchainn a chur gu %1$d ceann-uidhe</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Cùl-ghairmte %1$d seiseanan</item>
         <item quantity="one">Cùl-ghairmte %1$d sheisean</item>

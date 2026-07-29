@@ -321,6 +321,10 @@
     <string name="domain_title">Dominionaka</string>
     <string name="domain_verify">Verificaña ukat habilitaña</string>
     <string name="settings_home_domains">Dominionaka</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Yant\'awi %1$d cheqaru khitanitawa</item>
+        <item quantity="other">Yant\'awi %1$d cheqanakaru khitanitawa</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d sesion jaktʼaywi</item>
     </plurals>

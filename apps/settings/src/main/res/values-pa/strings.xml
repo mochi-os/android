@@ -321,6 +321,10 @@
     <string name="domain_title">ਡੋਮੇਨ</string>
     <string name="domain_verify">DNS ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
     <string name="settings_home_domains">ਡੋਮੇਨ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d ਟਿਕਾਣੇ \'ਤੇ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
+        <item quantity="other">%1$d ਟਿਕਾਣਿਆਂ \'ਤੇ ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 ਸੈਸ਼ਨ ਰੱਦ ਕੀਤਾ</item>
         <item quantity="other">%1$d ਸੈਸ਼ਨ ਰੱਦ ਕੀਤੇ</item>

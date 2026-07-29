@@ -321,6 +321,10 @@
     <string name="domain_title">דאָמיינס</string>
     <string name="domain_verify">פֿאַריפֿיצירן DNS</string>
     <string name="settings_home_domains">דאָמיינס</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">פּרוּװ געשיקט צו %1$d דעסטינאַציע</item>
+        <item quantity="other">פּרוּװ געשיקט צו %1$d דעסטינאַציעס</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">אָפּגערופֿן 1 סעסיע</item>
         <item quantity="other">אָפּגערופֿן %1$d סעסיעס</item>

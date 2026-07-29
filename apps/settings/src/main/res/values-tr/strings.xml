@@ -321,6 +321,10 @@
     <string name="domain_title">Alan adları</string>
     <string name="domain_verify">DNS doğrula</string>
     <string name="settings_home_domains">Alan adları</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test %1$d hedefe gönderildi</item>
+        <item quantity="other">Test %1$d hedefe gönderildi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 oturum iptal edildi</item>
         <item quantity="other">%1$d oturum iptal edildi</item>

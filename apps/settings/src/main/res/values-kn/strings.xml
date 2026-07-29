@@ -321,6 +321,10 @@
     <string name="domain_title">ಡೊಮೇನ್‌ಗಳು</string>
     <string name="domain_verify">DNS ಪರಿಶೀಲಿಸಿ</string>
     <string name="settings_home_domains">ಡೊಮೇನ್‌ಗಳು</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d ಗಮ್ಯಸ್ಥಾನಕ್ಕೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">%1$d ಗಮ್ಯಸ್ಥಾನಗಳಿಗೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
         <item quantity="other">%1$d ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>

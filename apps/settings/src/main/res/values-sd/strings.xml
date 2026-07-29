@@ -321,6 +321,10 @@
     <string name="domain_title">ڊومينز</string>
     <string name="domain_verify">DNS تصديق ڪريو</string>
     <string name="settings_home_domains">ڊومينز</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">ٽيسٽ %1$d منزل ڏانھن موڪليو ويو</item>
+        <item quantity="other">ٽيسٽ %1$d منزلن ڏانھن موڪليو ويو</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 سيشن منسوخ ٿيو</item>
         <item quantity="other">%1$d سيشن منسوخ ٿيا</item>

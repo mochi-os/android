@@ -321,6 +321,10 @@
     <string name="domain_title">Domeenid</string>
     <string name="domain_verify">Kontrolli DNS-i</string>
     <string name="settings_home_domains">Domeenid</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test saadeti %1$d sihtkohta</item>
+        <item quantity="other">Test saadeti %1$d sihtkohta</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Tühistatud 1 sessioon</item>
         <item quantity="other">Tühistatud %1$d sessiooni</item>

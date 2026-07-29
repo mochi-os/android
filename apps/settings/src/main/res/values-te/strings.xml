@@ -321,6 +321,10 @@
     <string name="domain_title">డొమైన్‌లు</string>
     <string name="domain_verify">DNSను ధృవీకరించండి</string>
     <string name="settings_home_domains">డొమైన్‌లు</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d గమ్యస్థానానికి పరీక్ష పంపబడింది</item>
+        <item quantity="other">%1$d గమ్యస్థానాలకు పరీక్ష పంపబడింది</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 సెషన్ రద్దు చేయబడింది</item>
         <item quantity="other">%1$d సెషన్‌లు రద్దు చేయబడ్డాయి</item>

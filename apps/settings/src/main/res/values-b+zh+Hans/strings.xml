@@ -321,6 +321,10 @@
     <string name="domain_title">域名</string>
     <string name="domain_verify">验证 DNS</string>
     <string name="settings_home_domains">域名</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">已向 %1$d 个目标发送测试</item>
+        <item quantity="other">已向 %1$d 个目标发送测试</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">已撤销 %1$d 个会话</item>
     </plurals>

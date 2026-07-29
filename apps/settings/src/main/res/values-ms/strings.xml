@@ -321,6 +321,10 @@
     <string name="domain_title">Domain</string>
     <string name="domain_verify">Sahkan DNS</string>
     <string name="settings_home_domains">Domain</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Ujian dihantar ke %1$d destinasi</item>
+        <item quantity="other">Ujian dihantar ke %1$d destinasi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d sesi dibatalkan</item>
     </plurals>

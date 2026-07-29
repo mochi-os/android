@@ -321,6 +321,13 @@
     <string name="domain_title">Fearainn</string>
     <string name="domain_verify">Fíoraigh DNS</string>
     <string name="settings_home_domains">Fearainn</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Seoladh an tástáil chuig %1$d cheann scríbe</item>
+        <item quantity="two">Seoladh an tástáil chuig %1$d cheann scríbe</item>
+        <item quantity="few">Seoladh an tástáil chuig %1$d cheann scríbe</item>
+        <item quantity="many">Seoladh an tástáil chuig %1$d gceann scríbe</item>
+        <item quantity="other">Seoladh an tástáil chuig %1$d ceann scríbe</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Cúlghaireadh %1$d sheisiún</item>
         <item quantity="many">Cúlghaireadh %1$d seisiún</item>

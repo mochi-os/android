@@ -321,6 +321,12 @@
     <string name="domain_title">Domenai</string>
     <string name="domain_verify">Patvirtinti DNS</string>
     <string name="settings_home_domains">Domenai</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Bandymas išsiųstas į %1$d paskirties vietą</item>
+        <item quantity="few">Bandymas išsiųstas į %1$d paskirties vietas</item>
+        <item quantity="many">Bandymas išsiųstas į %1$d paskirties vietos</item>
+        <item quantity="other">Bandymas išsiųstas į %1$d paskirties vietų</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Atšauktos %1$d sesijos</item>
         <item quantity="many">Atšaukta %1$d sesijų</item>

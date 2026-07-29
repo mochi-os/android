@@ -321,6 +321,12 @@
     <string name="domain_title">Domene</string>
     <string name="domain_verify">Preveri DNS</string>
     <string name="settings_home_domains">Domene</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Preizkus poslan na %1$d cilj</item>
+        <item quantity="two">Preizkus poslan na %1$d cilja</item>
+        <item quantity="few">Preizkus poslan na %1$d cilje</item>
+        <item quantity="other">Preizkus poslan na %1$d ciljev</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Preklicane %1$d seje</item>
         <item quantity="one">Preklicana %1$d seja</item>

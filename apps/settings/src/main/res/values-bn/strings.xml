@@ -321,6 +321,10 @@
     <string name="domain_title">ডোমেইনসমূহ</string>
     <string name="domain_verify">DNS যাচাই করুন</string>
     <string name="settings_home_domains">ডোমেইনসমূহ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
+        <item quantity="other">%1$d গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1টি সেশন প্রত্যাহার করা হয়েছে</item>
         <item quantity="other">%1$d সেশন প্রত্যাহার করা হয়েছে</item>

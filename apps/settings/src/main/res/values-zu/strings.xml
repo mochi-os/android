@@ -321,6 +321,10 @@
     <string name="domain_title">Amadomeyini</string>
     <string name="domain_verify">Qinisekisa i-DNS</string>
     <string name="settings_home_domains">Amadomeyini</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Ukuhlolwa kuthunyelwe endaweni engu-%1$d</item>
+        <item quantity="other">Ukuhlolwa kuthunyelwe ezindaweni ezingu-%1$d</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Kuhoxiswe iseshini eyi-1</item>
         <item quantity="other">Kuhoxiswe iziseshini ezi-%1$d</item>

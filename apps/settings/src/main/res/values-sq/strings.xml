@@ -321,6 +321,10 @@
     <string name="domain_title">Domenet</string>
     <string name="domain_verify">Verifiko DNS</string>
     <string name="settings_home_domains">Domenet</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Testi u dërgua te %1$d destinacion</item>
+        <item quantity="other">Testi u dërgua te %1$d destinacione</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">U revokua 1 sesion</item>
         <item quantity="other">U revokuan %1$d sesione</item>

@@ -321,6 +321,10 @@
     <string name="domain_title">डोमेन</string>
     <string name="domain_verify">DNS सत्यापित करें</string>
     <string name="settings_home_domains">डोमेन</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d गंतव्य पर परीक्षण भेजा गया</item>
+        <item quantity="other">%1$d गंतव्यों पर परीक्षण भेजा गया</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 सत्र निरस्त किया गया</item>
         <item quantity="other">%1$d सत्र निरस्त किए गए</item>

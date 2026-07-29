@@ -321,6 +321,10 @@
     <string name="domain_title">Domenlər</string>
     <string name="domain_verify">E-poçt ünvanını yoxla</string>
     <string name="settings_home_domains">Domenlər</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test %1$d ünvana göndərildi</item>
+        <item quantity="other">Test %1$d ünvana göndərildi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sessiya ləğv edildi</item>
         <item quantity="other">%1$d sessiya ləğv edildi</item>

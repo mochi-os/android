@@ -321,6 +321,10 @@
     <string name="domain_title">Տիրույթներ</string>
     <string name="domain_verify">Ստուգել DNS</string>
     <string name="settings_home_domains">Տիրույթներ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Փորձնական հաղորդագրությունն ուղարկվել է %1$d հասցեի</item>
+        <item quantity="other">Փորձնական հաղորդագրությունն ուղարկվել է %1$d հասցեի</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Չեղարկվեց 1 սեսիա</item>
         <item quantity="other">Չեղարկվեցին %1$d սեսիա</item>

@@ -321,6 +321,10 @@
     <string name="domain_title">Àwọn domain</string>
     <string name="domain_verify">Ṣe ẹ̀rí DNS</string>
     <string name="settings_home_domains">Àwọn domain</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">A rán ìdánwò sí ibi %1$d</item>
+        <item quantity="other">A rán ìdánwò sí ibi %1$d</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Gbé ìpàdé %1$d padà</item>
     </plurals>

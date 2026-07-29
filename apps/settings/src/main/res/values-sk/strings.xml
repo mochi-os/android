@@ -321,6 +321,12 @@
     <string name="domain_title">Domény</string>
     <string name="domain_verify">Overiť DNS</string>
     <string name="settings_home_domains">Domény</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test odoslaný na %1$d cieľ</item>
+        <item quantity="few">Test odoslaný na %1$d ciele</item>
+        <item quantity="many">Test odoslaný na %1$d cieľov</item>
+        <item quantity="other">Test odoslaný na %1$d cieľa</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Zrušené %1$d relácie</item>
         <item quantity="many">Zrušených %1$d relácií</item>

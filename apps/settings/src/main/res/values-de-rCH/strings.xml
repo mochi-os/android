@@ -323,6 +323,10 @@
     <string name="domain_title">Domänä</string>
     <string name="domain_verify">DNS verifizierä</string>
     <string name="settings_home_domains">Domains</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test an %1$d Ziel gesendet</item>
+        <item quantity="other">Test an %1$d Ziele gesendet</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 Sitzung widerrufen</item>
         <item quantity="other">%1$d Sitzungen widerrufen</item>

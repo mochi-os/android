@@ -321,6 +321,10 @@
     <string name="domain_title">ډومینونه</string>
     <string name="domain_verify">DNS تصدیق</string>
     <string name="settings_home_domains">ډومینونه</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">ازموینه %1$d منزل ته واستول شوه</item>
+        <item quantity="other">ازموینه %1$d منزلونو ته واستول شوه</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 ناسته لغوه شوه</item>
         <item quantity="other">%1$d ناستې لغوه شوې</item>

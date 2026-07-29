@@ -321,6 +321,10 @@
     <string name="domain_title">Lén</string>
     <string name="domain_verify">Staðfesta DNS</string>
     <string name="settings_home_domains">Lén</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Prófun send á %1$d áfangastað</item>
+        <item quantity="other">Prófun send á %1$d áfangastaði</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">%1$d lota afturkölluð</item>
         <item quantity="other">%1$d lotur afturkallaðar</item>

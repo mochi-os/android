@@ -321,6 +321,11 @@
     <string name="domain_title">Domenii</string>
     <string name="domain_verify">Verifică DNS</string>
     <string name="settings_home_domains">Domenii</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test trimis către %1$d destinație</item>
+        <item quantity="few">Test trimis către %1$d destinații</item>
+        <item quantity="other">Test trimis către %1$d de destinații</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">S-au revocat %1$d sesiuni</item>
         <item quantity="one">S-a revocat 1 sesiune</item>

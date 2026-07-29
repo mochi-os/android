@@ -321,6 +321,10 @@
     <string name="domain_title">Iidomeyini</string>
     <string name="domain_verify">Qinisekisa i-DNS</string>
     <string name="settings_home_domains">Iidomeyini</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Uvavanyo luthunyelwe kwindawo e-%1$d</item>
+        <item quantity="other">Uvavanyo luthunyelwe kwiindawo ezi-%1$d</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Kurhoxiswe iseshoni eyi-1</item>
         <item quantity="other">Kurhoxiswe iiseshoni ezi-%1$d</item>

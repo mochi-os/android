@@ -321,6 +321,10 @@
     <string name="domain_title">ഡൊമെയിനുകൾ</string>
     <string name="domain_verify">DNS സ്ഥിരീകരിക്കുക</string>
     <string name="settings_home_domains">ഡൊമെയിനുകൾ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d ലക്ഷ്യസ്ഥാനത്തേക്ക് പരിശോധന അയച്ചു</item>
+        <item quantity="other">%1$d ലക്ഷ്യസ്ഥാനങ്ങളിലേക്ക് പരിശോധന അയച്ചു</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 സെഷൻ റദ്ദാക്കി</item>
         <item quantity="other">%1$d സെഷനുകൾ റദ്ദാക്കി</item>

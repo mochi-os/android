@@ -321,6 +321,10 @@
     <string name="domain_title">Домендер</string>
     <string name="domain_verify">DNSти текшерүү</string>
     <string name="settings_home_domains">Домендер</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Сыноо %1$d дарекке жөнөтүлдү</item>
+        <item quantity="other">Сыноо %1$d дарекке жөнөтүлдү</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 сессия жокко чыгарылды</item>
         <item quantity="other">%1$d сессия жокко чыгарылды</item>

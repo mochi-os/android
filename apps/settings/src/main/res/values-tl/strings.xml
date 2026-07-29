@@ -321,6 +321,10 @@
     <string name="domain_title">Mga domain</string>
     <string name="domain_verify">I-verify ang DNS</string>
     <string name="settings_home_domains">Mga domain</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Ipinadala ang test sa %1$d destinasyon</item>
+        <item quantity="other">Ipinadala ang test sa %1$d na destinasyon</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Pinawalang-bisa ang %1$d session</item>
         <item quantity="other">Pinawalang-bisa ang %1$d na session</item>

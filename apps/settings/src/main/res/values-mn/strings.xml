@@ -321,6 +321,10 @@
     <string name="domain_title">Домэйнүүд</string>
     <string name="domain_verify">DNS баталгаажуулах</string>
     <string name="settings_home_domains">Домэйнүүд</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d хаяг руу туршилт илгээлээ</item>
+        <item quantity="other">%1$d хаяг руу туршилт илгээлээ</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 сесс цуцалсан</item>
         <item quantity="other">%1$d сесс цуцалсан</item>

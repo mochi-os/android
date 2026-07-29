@@ -321,6 +321,10 @@
     <string name="domain_title">Domains</string>
     <string name="domain_verify">Tabbatar da DNS</string>
     <string name="settings_home_domains">Domains</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">An aika gwaji zuwa wuri %1$d</item>
+        <item quantity="other">An aika gwaji zuwa wurare %1$d</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">An soke 1 zaman</item>
         <item quantity="other">An soke zama %1$d</item>

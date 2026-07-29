@@ -321,6 +321,9 @@
     <string name="domain_title">ໂດເມນ</string>
     <string name="domain_verify">ຢືນຢັນ DNS</string>
     <string name="settings_home_domains">ໂດເມນ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="other">ສົ່ງການທົດສອບໄປຫາ %1$d ປາຍທາງ</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">ຖອນຄືນ %1$d sessions</item>
     </plurals>

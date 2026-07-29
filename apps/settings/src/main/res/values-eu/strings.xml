@@ -321,6 +321,10 @@
     <string name="domain_title">Domeinuak</string>
     <string name="domain_verify">Egiaztatu DNSa</string>
     <string name="settings_home_domains">Domeinuak</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Proba helmuga %1$d (e)ra bidali da</item>
+        <item quantity="other">Proba %1$d helmugatara bidali da</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 saio baliogabetuta</item>
         <item quantity="other">%1$d saio baliogabetuta</item>

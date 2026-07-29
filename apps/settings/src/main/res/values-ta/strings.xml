@@ -321,6 +321,10 @@
     <string name="domain_title">டொமைன்கள்</string>
     <string name="domain_verify">DNS ஐ சரிபார்க்கவும்</string>
     <string name="settings_home_domains">டொமைன்கள்</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d இலக்குக்கு சோதனை அனுப்பப்பட்டது</item>
+        <item quantity="other">%1$d இலக்குகளுக்கு சோதனை அனுப்பப்பட்டது</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 அமர்வு திரும்பப் பெறப்பட்டது</item>
         <item quantity="other">%1$d அமர்வுகள் திரும்பப் பெறப்பட்டன</item>

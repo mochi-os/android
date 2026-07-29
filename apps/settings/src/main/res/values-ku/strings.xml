@@ -321,6 +321,10 @@
     <string name="domain_title">Domain</string>
     <string name="domain_verify">DNS verifîke bike</string>
     <string name="settings_home_domains">Domain</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test ji %1$d armancê re hat şandin</item>
+        <item quantity="other">Test ji %1$d armancan re hat şandin</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 danişîn hat betalkirin</item>
         <item quantity="other">%1$d danişîn hatin betalkirin</item>

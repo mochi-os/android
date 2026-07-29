@@ -321,6 +321,9 @@
     <string name="domain_title">Domain များ</string>
     <string name="domain_verify">DNS အတည်ပြုမည်</string>
     <string name="settings_home_domains">Domain များ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="other">ဦးတည်ရာ %1$d ခုသို့ စမ်းသပ်ချက် ပို့ပြီး</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Session %1$d ခုကို ရုပ်သိမ်းပြီး</item>
     </plurals>

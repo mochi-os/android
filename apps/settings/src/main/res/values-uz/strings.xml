@@ -321,6 +321,10 @@
     <string name="domain_title">Domenlar</string>
     <string name="domain_verify">DNS ni tasdiqlash</string>
     <string name="settings_home_domains">Domenlar</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Sinov %1$d manzilga yuborildi</item>
+        <item quantity="other">Sinov %1$d manzilga yuborildi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sessiya bekor qilindi</item>
         <item quantity="other">%1$d sessiya bekor qilindi</item>

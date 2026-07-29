@@ -321,6 +321,9 @@
     <string name="domain_title">ដែន</string>
     <string name="domain_verify">ផ្ទៀងផ្ទាត់ DNS</string>
     <string name="settings_home_domains">ដែន</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="other">បានផ្ញើការសាកល្បងទៅកាន់ទិសដៅ %1$d </item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">បានដកហូត %1$d វគ្គ</item>
     </plurals>

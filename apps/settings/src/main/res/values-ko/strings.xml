@@ -321,6 +321,10 @@
     <string name="domain_title">도메인</string>
     <string name="domain_verify">DNS 확인</string>
     <string name="settings_home_domains">도메인</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d 개 대상에 테스트를 보냈어요</item>
+        <item quantity="other">%1$d 개 대상에 테스트를 보냈어요</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d개의 세션이 취소되었습니다</item>
     </plurals>

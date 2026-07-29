@@ -326,6 +326,10 @@
     <string name="domain_title">Domains</string>
     <string name="domain_verify">Verify DNS</string>
     <string name="settings_home_domains">Domains</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test sent to %1$d destination</item>
+        <item quantity="other">Test sent to %1$d destinations</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Revoked 1 session</item>
         <item quantity="other">Revoked %1$d sessions</item>

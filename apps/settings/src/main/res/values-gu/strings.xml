@@ -321,6 +321,10 @@
     <string name="domain_title">ડોમેન્સ</string>
     <string name="domain_verify">DNS ચકાસો</string>
     <string name="settings_home_domains">ડોમેન્સ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d ગંતવ્ય પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="other">%1$d ગંતવ્યો પર પરીક્ષણ મોકલાયું</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 સત્ર રદ કર્યું</item>
         <item quantity="other">%1$d સત્રો રદ કર્યા</item>

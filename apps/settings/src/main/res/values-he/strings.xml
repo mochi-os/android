@@ -321,6 +321,12 @@
     <string name="domain_title">דומיינים</string>
     <string name="domain_verify">אמת DNS</string>
     <string name="settings_home_domains">דומיינים</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">הבדיקה נשלחה ליעד אחד</item>
+        <item quantity="two">הבדיקה נשלחה לשני יעדים</item>
+        <item quantity="many">הבדיקה נשלחה ל-%1$d יעדים</item>
+        <item quantity="other">הבדיקה נשלחה ל-%1$d יעדים</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">הופסקה הפעלה אחת</item>
         <item quantity="other">הופסקו %1$d הפעלות</item>

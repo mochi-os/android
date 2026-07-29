@@ -321,6 +321,10 @@
     <string name="domain_title">ዶሜኖች</string>
     <string name="domain_verify">DNS ያረጋግጡ</string>
     <string name="settings_home_domains">ዶሜኖች</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">ሙከራ ወደ %1$d መድረሻ ተልኳል</item>
+        <item quantity="other">ሙከራ ወደ %1$d መድረሻዎች ተልኳል</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 ክፍለ ጊዜ ተሰርዟል</item>
         <item quantity="other">%1$d ክፍለ ጊዜዎች ተሰርዘዋል</item>

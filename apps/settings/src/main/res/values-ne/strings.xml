@@ -321,6 +321,10 @@
     <string name="domain_title">डोमेनहरू</string>
     <string name="domain_verify">DNS प्रमाणित गर्नुहोस्</string>
     <string name="settings_home_domains">डोमेनहरू</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d गन्तव्यमा परीक्षण पठाइयो</item>
+        <item quantity="other">%1$d गन्तव्यहरूमा परीक्षण पठाइयो</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 सत्र खारेज गरियो</item>
         <item quantity="other">%1$d सत्रहरू खारेज गरियो</item>

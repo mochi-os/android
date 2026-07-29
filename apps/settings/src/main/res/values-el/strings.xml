@@ -321,6 +321,10 @@
     <string name="domain_title">Τομείς</string>
     <string name="domain_verify">Επαλήθευση DNS</string>
     <string name="settings_home_domains">Τομείς</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Η δοκιμή στάλθηκε σε %1$d προορισμό</item>
+        <item quantity="other">Η δοκιμή στάλθηκε σε %1$d προορισμούς</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 συνεδρία ανακλήθηκε</item>
         <item quantity="other">%1$d συνεδρίες ανακλήθηκαν</item>

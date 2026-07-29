@@ -321,6 +321,10 @@
     <string name="domain_title">Verkkotunnukset</string>
     <string name="domain_verify">Vahvista DNS</string>
     <string name="settings_home_domains">Verkkotunnukset</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Testi lähetetty %1$d kohteeseen</item>
+        <item quantity="other">Testi lähetetty %1$d kohteeseen</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 istunto peruutettu</item>
         <item quantity="other">%1$d istuntoa peruutettu</item>

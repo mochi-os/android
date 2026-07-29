@@ -321,6 +321,11 @@
     <string name="domain_title">Domēni</string>
     <string name="domain_verify">Verificēt DNS</string>
     <string name="settings_home_domains">Domēni</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="zero">Tests nosūtīts uz %1$d galamērķiem</item>
+        <item quantity="one">Tests nosūtīts uz %1$d galamērķi</item>
+        <item quantity="other">Tests nosūtīts uz %1$d galamērķiem</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Atsaukta %1$d sesija</item>
         <item quantity="other">Atsauktas %1$d sesijas</item>

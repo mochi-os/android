@@ -321,6 +321,9 @@
     <string name="domain_title">Domèn yo</string>
     <string name="domain_verify">Verifye DNS</string>
     <string name="settings_home_domains">Domèn yo</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="other">Tès voye nan %1$d destinasyon</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sesyon revoke</item>
         <item quantity="other">%1$d sesyon revoke</item>

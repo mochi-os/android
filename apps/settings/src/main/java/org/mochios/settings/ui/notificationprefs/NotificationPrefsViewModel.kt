@@ -46,8 +46,11 @@ class NotificationPrefsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(NotificationPrefsUiState())
     val uiState: StateFlow<NotificationPrefsUiState> = _uiState.asStateFlow()
 
-    private val _toasts = MutableSharedFlow<String>(extraBufferCapacity = 4)
-    val toasts: SharedFlow<String> = _toasts.asSharedFlow()
+    // The destination count, not a finished sentence. The wording lives in the
+    // Compose layer, where a <plurals> resource can inflect it for the reader's
+    // language; a String built here can only ever be English.
+    private val _testSent = MutableSharedFlow<Int>(extraBufferCapacity = 4)
+    val testSent: SharedFlow<Int> = _testSent.asSharedFlow()
 
     init { refresh() }
 
@@ -59,9 +62,9 @@ class NotificationPrefsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val cats = api.getCategories().bodyOrThrow().data
-                val topics = api.getTopics().bodyOrThrow().data
-                val dests = api.getDestinations().bodyOrThrow().data
+                val cats = api.getCategories().bodyOrThrow()
+                val topics = api.getTopics().bodyOrThrow()
+                val dests = api.getDestinations().bodyOrThrow()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     categories = cats,
@@ -114,8 +117,8 @@ class NotificationPrefsViewModel @Inject constructor(
     fun testCategory(category: NotifCategory) {
         viewModelScope.launch {
             try {
-                val result = api.testCategory(id = category.id).bodyOrThrow().data
-                _toasts.emit("Test sent to ${result.sent} destination(s)")
+                val result = api.testCategory(id = category.id).bodyOrThrow()
+                _testSent.emit(result.sent)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

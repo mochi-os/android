@@ -321,6 +321,10 @@
     <string name="domain_title">Tartományok</string>
     <string name="domain_verify">DNS ellenőrzése</string>
     <string name="settings_home_domains">Tartományok</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Teszt elküldve %1$d célhelyre</item>
+        <item quantity="other">Teszt elküldve %1$d célhelyre</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 munkamenet visszavonva</item>
         <item quantity="other">%1$d munkamenet visszavonva</item>

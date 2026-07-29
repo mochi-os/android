@@ -321,6 +321,10 @@
     <string name="domain_title">โดเมน</string>
     <string name="domain_verify">ตรวจสอบ DNS</string>
     <string name="settings_home_domains">โดเมน</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">ส่งการทดสอบไปยัง %1$d ปลายทางแล้ว</item>
+        <item quantity="other">ส่งการทดสอบไปยัง %1$d ปลายทางแล้ว</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">เพิกถอน %1$d เซสชัน</item>
     </plurals>

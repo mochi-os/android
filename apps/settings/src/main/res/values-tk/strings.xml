@@ -321,6 +321,10 @@
     <string name="domain_title">Domenler</string>
     <string name="domain_verify">DNS tassykla</string>
     <string name="settings_home_domains">Domenler</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Synag %1$d barmaga iberildi</item>
+        <item quantity="other">Synag %1$d barmaga iberildi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sessiýa ýatyryldy</item>
         <item quantity="other">%1$d sessiýa ýatyryldy</item>

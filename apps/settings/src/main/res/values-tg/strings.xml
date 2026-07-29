@@ -321,6 +321,10 @@
     <string name="domain_title">Доменҳо</string>
     <string name="domain_verify">Тасдиқи DNS</string>
     <string name="settings_home_domains">Доменҳо</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Санҷиш ба %1$d мақсад фиристода шуд</item>
+        <item quantity="other">Санҷиш ба %1$d мақсад фиристода шуд</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d сессия бекор карда шуд</item>
     </plurals>
