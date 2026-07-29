@@ -8,12 +8,15 @@ package org.mochios.projects.ui.find
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.projects.model.Project
 import org.mochios.projects.repository.ProjectsRepository
 import javax.inject.Inject
@@ -35,6 +38,10 @@ class FindProjectsViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(FindProjectsUiState())
     val uiState: StateFlow<FindProjectsUiState> = _uiState.asStateFlow()
+
+    // The pending debounced search; cancelled when a newer keystroke arrives so
+    // only the latest query runs.
+    private var searchJob: Job? = null
 
     init {
         loadRecommendations()
@@ -80,35 +87,42 @@ class FindProjectsViewModel @Inject constructor(
 
     fun updateSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query, error = null)
+        // Auto-search after a short pause once the user stops typing; cancel any
+        // in-flight run so a stale response can't overwrite a newer one.
+        searchJob?.cancel()
+        val trimmed = query.trim()
+        if (trimmed.isBlank()) {
+            _uiState.value = _uiState.value.copy(searchResults = emptyList(), isLoading = false)
+            return
+        }
+        searchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
+            runSearch(trimmed)
+        }
     }
 
     fun search() {
+        // Explicit submit (keyboard Search): run at once, dropping the debounce.
+        searchJob?.cancel()
         val query = _uiState.value.searchQuery.trim()
         if (query.isBlank()) return
+        searchJob = viewModelScope.launch { runSearch(query) }
+    }
 
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null, searchResults = emptyList())
-            try {
-                val isUrl = query.startsWith("http://") || query.startsWith("https://")
-                if (isUrl) {
-                    val project = repository.probe(query)
-                    _uiState.value = _uiState.value.copy(
-                        searchResults = listOf(project),
-                        isLoading = false
-                    )
-                } else {
-                    val results = repository.searchDirectory(query)
-                    _uiState.value = _uiState.value.copy(
-                        searchResults = results,
-                        isLoading = false
-                    )
-                }
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError()
-                )
-            }
+    private suspend fun runSearch(query: String) {
+        _uiState.value = _uiState.value.copy(isLoading = true, error = null, searchResults = emptyList())
+        try {
+            val isUrl = query.startsWith("http://") || query.startsWith("https://")
+            val results = if (isUrl) listOf(repository.probe(query)) else repository.searchDirectory(query)
+            _uiState.value = _uiState.value.copy(
+                searchResults = results,
+                isLoading = false
+            )
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                error = e.toMochiError()
+            )
         }
     }
 
