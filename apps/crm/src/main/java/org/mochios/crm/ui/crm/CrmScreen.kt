@@ -21,7 +21,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
@@ -62,6 +64,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ScrollableTabRow
@@ -88,6 +91,7 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -103,7 +107,7 @@ import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.EntityListRow
+import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
@@ -459,6 +463,7 @@ private fun CrmSearchBar(
     )
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun CrmRow(
     crm: Crm,
@@ -474,58 +479,83 @@ private fun CrmRow(
     val unsubscribeMessage = stringResource(R.string.crm_settings_unsubscribe_message)
     val unsubscribeLabel = stringResource(R.string.crm_settings_unsubscribe)
     val cancelLabel = stringResource(MochiR.string.common_cancel)
+    val description = crm.description.takeIf { text -> text.isNotBlank() }
 
-    Box {
-        EntityListRow(
-            name = crm.name,
-            seed = crmId.ifEmpty { crm.id },
-            icon = Icons.Default.Folder,
-            subtitle = crm.description.takeIf { description -> description.isNotBlank() },
-            onClick = onClick,
-            onLongClick = { showMenu = true },
-            trailing = {
+    OutlinedCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
+    ) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            EntityIconCircle(
+                seed = crmId.ifEmpty { crm.id },
+                icon = Icons.Default.Folder
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = crm.name,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                if (description != null) {
+                    Text(
+                        text = description,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+            Box {
                 IconButton(onClick = { showMenu = true }) {
                     Icon(
                         Icons.Default.MoreHoriz,
                         contentDescription = stringResource(MochiR.string.common_more_options)
                     )
                 }
-            }
-        )
-        DropdownMenu(
-            expanded = showMenu,
-            onDismissRequest = { showMenu = false }
-        ) {
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.crm_list_add_to_home)) },
-                leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
-                onClick = {
-                    showMenu = false
-                    // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
-                    val intent = Intent(Intent.ACTION_VIEW, "mochi:/$crmId".toUri()).apply {
-                        setPackage(context.packageName)
-                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                            Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        putExtra("app", "crm")
+                DropdownMenu(
+                    expanded = showMenu,
+                    onDismissRequest = { showMenu = false }
+                ) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.crm_list_add_to_home)) },
+                        leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
+                        onClick = {
+                            showMenu = false
+                            // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                            val intent = Intent(Intent.ACTION_VIEW, "mochi:/$crmId".toUri()).apply {
+                                setPackage(context.packageName)
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                                    Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                putExtra("app", "crm")
+                            }
+                            val shortcut = ShortcutInfoCompat.Builder(context, "crm_$crmId")
+                                .setShortLabel(crm.name)
+                                .setLongLabel(crm.name)
+                                .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_crm))
+                                .setIntent(intent)
+                                .build()
+                            ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
+                        }
+                    )
+                    if (canUnsubscribe) {
+                        DropdownMenuItem(
+                            text = { Text(unsubscribeLabel) },
+                            leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
+                            onClick = {
+                                showMenu = false
+                                showUnsubscribeConfirm = true
+                            }
+                        )
                     }
-                    val shortcut = ShortcutInfoCompat.Builder(context, "crm_$crmId")
-                        .setShortLabel(crm.name)
-                        .setLongLabel(crm.name)
-                        .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_crm))
-                        .setIntent(intent)
-                        .build()
-                    ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
                 }
-            )
-            if (canUnsubscribe) {
-                DropdownMenuItem(
-                    text = { Text(unsubscribeLabel) },
-                    leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
-                    onClick = {
-                        showMenu = false
-                        showUnsubscribeConfirm = true
-                    }
-                )
             }
         }
     }
