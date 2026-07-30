@@ -103,6 +103,16 @@ fun FindWikisScreen(
         }
     }
 
+    // Directory-search failures live in the state rather than the event channel,
+    // so they need their own trip to the snackbar — otherwise a failed search
+    // just shows an empty list with no explanation.
+    LaunchedEffect(uiState.error) {
+        uiState.error?.let { error ->
+            snackbarHostState.showSnackbar(error.userMessage())
+            viewModel.clearError()
+        }
+    }
+
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {

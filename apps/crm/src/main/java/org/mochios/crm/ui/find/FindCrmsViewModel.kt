@@ -144,4 +144,9 @@ class FindCrmsViewModel @Inject constructor(
             }
         }
     }
+
+    /** Drop the error once the screen has shown it, so it isn't re-shown. */
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
+    }
 }

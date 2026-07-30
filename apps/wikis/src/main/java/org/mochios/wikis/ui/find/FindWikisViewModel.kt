@@ -41,6 +41,12 @@ data class FindWikisUiState(
     val isLoadingRecommendations: Boolean = false,
     /** Wiki id currently being subscribed to (disables that row's button). */
     val pendingId: String? = null,
+
+    /**
+     * Directory-search failure, shown as a snackbar and then cleared. Subscribe
+     * failures travel as [FindEvent.SubscribeFailed] instead, so they never land
+     * here.
+     */
     val error: MochiError? = null,
 )
 
@@ -172,18 +178,14 @@ class FindWikisViewModel @Inject constructor(
                     if (server != null && mochiError is MochiError.ServerError && mochiError.code == 502) {
                         _events.send(FindEvent.SubscribeRetried(target))
                         runCatching { repository.joinWiki(target, null) }.getOrElse { retryErr ->
-                            _uiState.value = _uiState.value.copy(
-                                pendingId = null,
-                                error = retryErr.toMochiError(),
-                            )
+                            // The event carries the message; keeping it in the
+                            // state too would snackbar it twice.
+                            _uiState.value = _uiState.value.copy(pendingId = null)
                             _events.send(FindEvent.SubscribeFailed(retryErr.toMochiError()))
                             return@launch
                         }
                     } else {
-                        _uiState.value = _uiState.value.copy(
-                            pendingId = null,
-                            error = mochiError,
-                        )
+                        _uiState.value = _uiState.value.copy(pendingId = null)
                         _events.send(FindEvent.SubscribeFailed(mochiError))
                         return@launch
                     }
@@ -201,6 +203,7 @@ class FindWikisViewModel @Inject constructor(
         }
     }
 
+    /** Drop the search error once the screen has shown it, so it isn't re-shown. */
     fun clearError() {
         _uiState.value = _uiState.value.copy(error = null)
     }
