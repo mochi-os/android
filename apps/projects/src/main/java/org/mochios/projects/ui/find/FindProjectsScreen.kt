@@ -247,15 +247,29 @@ private fun DiscoveredProjectCard(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            // Description is the friendlier subtitle; fall back to the owner name,
-            // which is all a bare directory hit tends to carry.
-            val subtitle = project.description.ifBlank { project.ownername }
-            if (subtitle.isNotBlank()) {
+            if (project.description.isNotBlank()) {
                 Text(
-                    text = subtitle,
+                    text = project.description,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            // Owner and home server, as the card showed them before the restyle.
+            // The separator only joins values that are there, so a bare hit never
+            // renders a dangling middot. `location` is the host a directory entry
+            // carries when it has no explicit `server`.
+            val meta = listOfNotNull(
+                project.ownername.takeIf { owner -> owner.isNotBlank() },
+                (project.server ?: project.location)?.takeIf { host -> host.isNotBlank() }
+            ).joinToString(" · ")
+            if (meta.isNotEmpty()) {
+                Text(
+                    text = meta,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
             }
