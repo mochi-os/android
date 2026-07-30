@@ -53,6 +53,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -74,6 +75,9 @@ fun FindProjectsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
+    // The search field keeps the keyboard up, which covers the snackbar the
+    // subscribe result lands in — drop it before the request goes out.
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     // Errors are transient feedback, not a screen state: a failed subscribe must
     // leave the results list on screen and tappable rather than replacing it.
@@ -140,6 +144,7 @@ fun FindProjectsScreen(
                                 isSubscribed = subscribeId in uiState.subscribedIds,
                                 isSubscribing = uiState.subscribingId == subscribeId,
                                 onSubscribe = {
+                                    keyboardController?.hide()
                                     viewModel.subscribe(project) { landingId ->
                                         onProjectSubscribed(landingId)
                                     }
@@ -170,6 +175,7 @@ fun FindProjectsScreen(
                                     isSubscribed = subscribeId in uiState.subscribedIds,
                                     isSubscribing = uiState.subscribingId == subscribeId,
                                     onSubscribe = {
+                                        keyboardController?.hide()
                                         viewModel.subscribe(project) { landingId ->
                                             onProjectSubscribed(landingId)
                                         }

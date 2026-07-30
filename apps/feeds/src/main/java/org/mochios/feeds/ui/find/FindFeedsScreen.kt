@@ -53,6 +53,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -135,6 +136,9 @@ fun FindFeedsContent(
     val subscribedFeeds by viewModel.subscribedFeeds.collectAsState()
     val probeResult by viewModel.probeResult.collectAsState()
     val isProbing by viewModel.isProbing.collectAsState()
+    // The search field keeps the keyboard up, which covers the snackbar the
+    // subscribe result lands in — drop it before the request goes out.
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     Column(
         modifier = modifier
@@ -223,7 +227,10 @@ fun FindFeedsContent(
                         feed = feed,
                         isSubscribed = isSubscribed,
                         isSubscribing = isSubscribing,
-                        onSubscribe = { viewModel.subscribe(feed) },
+                        onSubscribe = {
+                            keyboardController?.hide()
+                            viewModel.subscribe(feed)
+                        },
                         onClick = {
                             if (isSubscribed) {
                                 onNavigateToFeed(feedId)

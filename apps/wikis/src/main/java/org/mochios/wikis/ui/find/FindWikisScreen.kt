@@ -47,6 +47,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -83,6 +84,9 @@ fun FindWikisScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
+    // The search field keeps the keyboard up, which covers the snackbar the
+    // subscribe result lands in — drop it before the request goes out.
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     // Snackbar feedback messages — collected once before LaunchedEffect so
     // they can be passed into the coroutine, since stringResource() is only
@@ -199,7 +203,10 @@ fun FindWikisScreen(
                                     entry = entry,
                                     isSubscribed = target in uiState.subscribedIds,
                                     isPending = uiState.pendingId == target,
-                                    onSubscribe = { viewModel.subscribeDirectoryEntry(entry) },
+                                    onSubscribe = {
+                                        keyboardController?.hide()
+                                        viewModel.subscribeDirectoryEntry(entry)
+                                    },
                                     onOpen = { onSubscribed(entry.fingerprint.ifEmpty { entry.id }) },
                                 )
                             }
@@ -221,7 +228,10 @@ fun FindWikisScreen(
                                     rec = rec,
                                     isSubscribed = target in uiState.subscribedIds,
                                     isPending = uiState.pendingId == target,
-                                    onSubscribe = { viewModel.subscribeRecommendation(rec) },
+                                    onSubscribe = {
+                                        keyboardController?.hide()
+                                        viewModel.subscribeRecommendation(rec)
+                                    },
                                     onOpen = { onSubscribed(rec.fingerprint.ifEmpty { rec.id }) },
                                 )
                             }

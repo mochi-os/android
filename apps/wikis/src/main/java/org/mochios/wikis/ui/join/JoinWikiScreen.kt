@@ -47,6 +47,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
@@ -78,6 +79,9 @@ fun JoinWikiScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
+    // The address field keeps the keyboard up, which covers the snackbar the
+    // join result lands in — drop it before the request goes out.
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     val successMsg = stringResource(R.string.wikis_subscribe_success)
     val failedFallback = stringResource(R.string.wikis_subscribe_failed)
@@ -180,7 +184,10 @@ fun JoinWikiScreen(
                         singleLine = true,
                         enabled = !uiState.isSubmitting,
                         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Go),
-                        keyboardActions = KeyboardActions(onGo = { viewModel.submit() }),
+                        keyboardActions = KeyboardActions(onGo = {
+                            keyboardController?.hide()
+                            viewModel.submit()
+                        }),
                         modifier = Modifier.fillMaxWidth(),
                     )
 
@@ -197,7 +204,10 @@ fun JoinWikiScreen(
                         horizontalArrangement = Arrangement.End,
                     ) {
                         Button(
-                            onClick = viewModel::submit,
+                            onClick = {
+                                keyboardController?.hide()
+                                viewModel.submit()
+                            },
                             enabled = uiState.target.trim().isNotEmpty() && !uiState.isSubmitting,
                         ) {
                             if (uiState.isSubmitting) {
