@@ -338,12 +338,12 @@
         <item quantity="other">تمت إعادة تسمية %1$d صفحات</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="zero">، تم تحديث %1$d روابط</item>
-        <item quantity="one">، تم تحديث رابط واحد</item>
-        <item quantity="two">، تم تحديث %1$d روابط</item>
-        <item quantity="few">، تم تحديث %1$d روابط</item>
-        <item quantity="many">، تم تحديث %1$d روابط</item>
-        <item quantity="other">، تم تحديث %1$d روابط</item>
+        <item quantity="zero">تم تحديث %1$d روابط</item>
+        <item quantity="one">تم تحديث رابط واحد</item>
+        <item quantity="two">تم تحديث %1$d روابط</item>
+        <item quantity="few">تم تحديث %1$d روابط</item>
+        <item quantity="many">تم تحديث %1$d روابط</item>
+        <item quantity="other">تم تحديث %1$d روابط</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="zero">%d صفحات</item>

@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">මෑත දී බැලූ</string>
     <string name="market_recently_viewed_clear">සියල්ල හිස් කරන්න</string>
     <string name="market_listings_create">නිර්මාණය කරන්න</string>
+    <string name="market_bid_dialog_ceiling_label">උපරිම ලංසුව (විකල්ප)</string>
 </resources>

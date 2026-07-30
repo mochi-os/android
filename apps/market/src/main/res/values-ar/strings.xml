@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">شوهدت مؤخرًا</string>
     <string name="market_recently_viewed_clear">مسح الكل</string>
     <string name="market_listings_create">إنشاء</string>
+    <string name="market_bid_dialog_ceiling_label">أقصى مزايدة (اختياري)</string>
 </resources>

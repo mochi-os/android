@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Vist recentment</string>
     <string name="market_recently_viewed_clear">Esborra-ho tot</string>
     <string name="market_listings_create">Crea</string>
+    <string name="market_bid_dialog_ceiling_label">Puja màxima (opcional)</string>
 </resources>

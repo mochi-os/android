@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Recent bekeken</string>
     <string name="market_recently_viewed_clear">Alles wissen</string>
     <string name="market_listings_create">Aanmaken</string>
+    <string name="market_bid_dialog_ceiling_label">Maximaal bod (optioneel)</string>
 </resources>

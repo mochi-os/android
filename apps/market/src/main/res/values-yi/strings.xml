@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">לעצטנס געקוקט</string>
     <string name="market_recently_viewed_clear">רייניקן אַלץ</string>
     <string name="market_listings_create">באַשאַפֿן</string>
+    <string name="market_bid_dialog_ceiling_label">מאַקסימום געבאָט (אָפּציאָנעל)</string>
 </resources>

@@ -326,8 +326,8 @@
         <item quantity="other">%1$d صفحن جو نالو تبديل ٿيو</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">، %1$d لنڪ اپڊيٽ ٿيو</item>
-        <item quantity="other">، %1$d لنڪ اپڊيٽ ٿيا</item>
+        <item quantity="one">%1$d لنڪ اپڊيٽ ٿيو</item>
+        <item quantity="other">%1$d لنڪ اپڊيٽ ٿيا</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d صفحو</item>

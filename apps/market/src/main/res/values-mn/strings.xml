@@ -742,4 +742,5 @@
     <string name="market_section_recently_viewed">Сүүлд үзсэн</string>
     <string name="market_recently_viewed_clear">Бүгдийг цэвэрлэх</string>
     <string name="market_listings_create">Үүсгэх</string>
+    <string name="market_bid_dialog_ceiling_label">Дээд санал (заавал биш)</string>
 </resources>

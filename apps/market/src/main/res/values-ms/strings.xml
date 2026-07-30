@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Baru dilihat</string>
     <string name="market_recently_viewed_clear">Kosongkan semua</string>
     <string name="market_listings_create">Cipta</string>
+    <string name="market_bid_dialog_ceiling_label">Bidaan maksimum (pilihan)</string>
 </resources>

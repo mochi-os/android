@@ -346,4 +346,8 @@
         <item quantity="one">Fann %1$d resultat for "%2$s"</item>
         <item quantity="other">Fann %1$d resultat for "%2$s"</item>
     </plurals>
+    <string name="wikis_revision_compare">Samanlikn endringar</string>
+    <string name="wikis_revision_compare_failed">Klarte ikkje å laste førre versjon for samanlikning.</string>
+    <string name="wikis_revision_show_page">Vis sida</string>
+    <string name="wikis_revision_changes_from">Endringar frå versjon %1$d → %2$d</string>
 </resources>

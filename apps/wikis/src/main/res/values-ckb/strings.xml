@@ -326,8 +326,8 @@
         <item quantity="other">%1$d لاپەڕە ناوی گۆڕا</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">، ١ بەستەر نوێکرایەوە</item>
-        <item quantity="other">، %1$d بەستەر نوێکرانەوە</item>
+        <item quantity="one">١ بەستەر نوێکرایەوە</item>
+        <item quantity="other">%1$d بەستەر نوێکرانەوە</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d لاپەڕە</item>

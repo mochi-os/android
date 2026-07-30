@@ -324,7 +324,7 @@
         <item quantity="other">已重命名 %1$d 个页面</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">,更新 %1$d 个链接</item>
+        <item quantity="other">更新 %1$d 个链接</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d 个页面</item>

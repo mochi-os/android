@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">最近見た商品</string>
     <string name="market_recently_viewed_clear">すべてクリア</string>
     <string name="market_listings_create">作成</string>
+    <string name="market_bid_dialog_ceiling_label">上限入札額（任意）</string>
 </resources>

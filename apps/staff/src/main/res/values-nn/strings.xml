@@ -515,4 +515,5 @@
 
     <string name="staff_disputes_meta_already_refunded">Allereie refundert</string>
     <string name="staff_disputes_refund_exceeds_remaining">Refusjonsbeløpet overstig det gjenverande refunderbare beløpet</string>
+    <string name="staff_config_field_stripe_webhook">Signeringsløyndom for webhook</string>
 </resources>

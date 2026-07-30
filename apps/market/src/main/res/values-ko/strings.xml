@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">최근 본 상품</string>
     <string name="market_recently_viewed_clear">모두 지우기</string>
     <string name="market_listings_create">생성</string>
+    <string name="market_bid_dialog_ceiling_label">최대 입찰가(선택 사항)</string>
 </resources>

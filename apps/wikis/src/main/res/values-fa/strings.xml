@@ -326,8 +326,8 @@
         <item quantity="other">نام %1$d صفحه تغییر کرد</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">، ۱ پیوند به‌روزرسانی شد</item>
-        <item quantity="other">، %1$d پیوند به‌روزرسانی شد</item>
+        <item quantity="one">۱ پیوند به‌روزرسانی شد</item>
+        <item quantity="other">%1$d پیوند به‌روزرسانی شد</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d صفحه</item>

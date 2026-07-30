@@ -92,4 +92,14 @@
     <string name="chat_search_next">下一個相符項</string>
     <string name="chat_search_prev">上一個相符項</string>
     <string name="chat_settings_id">傾偈 ID</string>
+    <string name="chat_forward_empty">冇傾偈可以轉寄</string>
+    <string name="chat_forward_failed">轉寄失敗</string>
+    <string name="chat_forward_search">搜尋傾偈…</string>
+    <string name="chat_forward_subtitle">揀一個傾偈或者朋友，轉寄揀咗嘅訊息</string>
+    <string name="chat_forward_success">已轉寄</string>
+    <string name="chat_forward_title">轉寄去…</string>
+    <string name="chat_message_deleted">呢條訊息已經刪除</string>
+    <string name="chat_message_forward">轉寄</string>
+    <string name="chat_search_hint">喺傾偈度搜尋...</string>
+    <string name="chat_search_no_results">冇結果</string>
 </resources>

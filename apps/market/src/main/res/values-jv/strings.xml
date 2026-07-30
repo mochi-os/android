@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Lagi waé didelok</string>
     <string name="market_recently_viewed_clear">Resiki kabèh</string>
     <string name="market_listings_create">Gawé</string>
+    <string name="market_bid_dialog_ceiling_label">Tawaran maksimum (opsional)</string>
 </resources>

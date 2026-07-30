@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">最近浏览</string>
     <string name="market_recently_viewed_clear">全部清除</string>
     <string name="market_listings_create">创建</string>
+    <string name="market_bid_dialog_ceiling_label">最高出价（可选）</string>
 </resources>

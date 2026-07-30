@@ -326,8 +326,8 @@
         <item quantity="other">%1$d پاڼو نوم بدل شو</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">، %1$d لینک نوی شو</item>
-        <item quantity="other">، %1$d لینکونه نوي شول</item>
+        <item quantity="one">%1$d لینک نوی شو</item>
+        <item quantity="other">%1$d لینکونه نوي شول</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d پاڼه</item>

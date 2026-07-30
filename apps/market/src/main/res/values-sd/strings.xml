@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">تازو ڏٺل</string>
     <string name="market_recently_viewed_clear">سڀ صاف ڪريو</string>
     <string name="market_listings_create">ٺاهيو</string>
+    <string name="market_bid_dialog_ceiling_label">وڌ ۾ وڌ بولي (اختياري)</string>
 </resources>

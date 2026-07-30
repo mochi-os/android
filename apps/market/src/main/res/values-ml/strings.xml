@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">ശുപാർശകൾ</string>
     <string name="market_recently_viewed_clear">എല്ലാം മായ്ക്കുക</string>
     <string name="market_listings_create">സൃഷ്ടിക്കുക</string>
+    <string name="market_bid_dialog_ceiling_label">പരമാവധി ലേലം (ഓപ്ഷണൽ)</string>
 </resources>

@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Ба наздикӣ дидашуда</string>
     <string name="market_recently_viewed_clear">Ҳамаро тоза кардан</string>
     <string name="market_listings_create">Эҷод кардан</string>
+    <string name="market_bid_dialog_ceiling_label">Пешниҳоди ҳадди аксар (ихтиёрӣ)</string>
 </resources>

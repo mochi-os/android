@@ -299,6 +299,6 @@
     <string name="forums_moderation_pending_posts">待處理貼文 (%1$d)</string>
     <string name="forums_moderation_pending_comments">待處理留言 (%1$d)</string>
     <plurals name="forums_new_posts">
-        <item quantity="other">%d 則新貼文</item>
+        <item quantity="other">%d 篇新帖</item>
     </plurals>
 </resources>

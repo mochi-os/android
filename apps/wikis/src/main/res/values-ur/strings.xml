@@ -323,8 +323,8 @@
         <item quantity="other">%1$d صفحات کے نام تبدیل کیے</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">، %1$d لنک اپ ڈیٹ ہوا</item>
-        <item quantity="other">، %1$d لنکس اپ ڈیٹ ہوئے</item>
+        <item quantity="one">%1$d لنک اپ ڈیٹ ہوا</item>
+        <item quantity="other">%1$d لنکس اپ ڈیٹ ہوئے</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d صفحہ</item>

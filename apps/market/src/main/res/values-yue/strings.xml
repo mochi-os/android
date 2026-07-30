@@ -735,4 +735,14 @@
     <string name="market_section_recently_viewed">最近瀏覽</string>
     <string name="market_recently_viewed_clear">全部清除</string>
     <string name="market_listings_create">建立</string>
+    <string name="market_bid_dialog_ceiling_label">最高出價（可選）</string>
+    <string name="market_bid_dialog_instant_win">購買已確認 — 請完成付款</string>
+    <string name="market_bid_dialog_invalid_ceiling">最高出價至少要等於你嘅出價</string>
+    <string name="market_editor_start_time">開始時間</string>
+    <string name="market_editor_start_time_help">留空就一發佈即刻開始。</string>
+    <string name="market_editor_stock">存貨</string>
+    <string name="market_editor_stock_units">數量</string>
+    <string name="market_editor_stock_unlimited">無限</string>
+    <string name="market_listing_detail_seller_response">賣家回覆</string>
+    <string name="market_listing_detail_seller_reviews_heading">賣家評價</string>
 </resources>

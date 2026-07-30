@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">ఇటీవల వీక్షించినవి</string>
     <string name="market_recently_viewed_clear">అన్నీ క్లియర్ చేయండి</string>
     <string name="market_listings_create">సృష్టించండి</string>
+    <string name="market_bid_dialog_ceiling_label">గరిష్ట బిడ్ (ఐచ్ఛికం)</string>
 </resources>

@@ -198,4 +198,15 @@
     <string name="people_person_state_invited">已邀請</string>
     <string name="people_person_add_friend">新增為朋友</string>
 
+    <string name="people_friends_sort_name">名稱（A–Z）</string>
+    <string name="people_friends_sort_recent">最近加入</string>
+    <string name="people_invitations_accept_all">全部接受</string>
+    <string name="people_invitations_all_accepted">所有邀請都接受咗</string>
+    <string name="people_invitations_all_cancelled">所有邀請都取消咗</string>
+    <string name="people_invitations_all_declined">所有邀請都拒絕咗</string>
+    <string name="people_invitations_cancel_all">全部取消</string>
+    <string name="people_invitations_decline_all">全部拒絕</string>
+    <string name="people_invitations_some_accept_failed">有部分邀請接受唔到</string>
+    <string name="people_invitations_some_cancel_failed">有部分邀請取消唔到</string>
+    <string name="people_invitations_some_decline_failed">有部分邀請拒絕唔到</string>
 </resources>

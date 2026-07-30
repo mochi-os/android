@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Wè dènyèman</string>
     <string name="market_recently_viewed_clear">Efase tout</string>
     <string name="market_listings_create">Kreye</string>
+    <string name="market_bid_dialog_ceiling_label">Òf maksimòm (opsyonèl)</string>
 </resources>

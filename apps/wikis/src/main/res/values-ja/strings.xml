@@ -324,7 +324,7 @@
         <item quantity="other">%1$dページの名前を変更しました</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">、%1$d件のリンクを更新</item>
+        <item quantity="other">%1$d件のリンクを更新</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%dページ</item>

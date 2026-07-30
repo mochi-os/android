@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Nedavno pregledano</string>
     <string name="market_recently_viewed_clear">Očisti sve</string>
     <string name="market_listings_create">Kreiraj</string>
+    <string name="market_bid_dialog_ceiling_label">Maksimalna ponuda (opcionalno)</string>
 </resources>
