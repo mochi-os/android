@@ -20,7 +20,6 @@
     <string name="forums_find_title">Etsi foorumeita</string>
     <string name="forums_find_recommended">Suositeltu</string>
     <string name="forums_find_subscribe">Tilaa</string>
-    <string name="forums_find_subscribed">Tilattu</string>
     <string name="forums_find_no_results">Foorumeita ei löytynyt</string>
     <string name="forums_loading">Ladataan…</string>
     <string name="forums_no_posts">Ei vielä julkaisuja</string>

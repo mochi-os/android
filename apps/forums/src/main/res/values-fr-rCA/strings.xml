@@ -58,7 +58,6 @@
     <string name="forums_find_search_placeholder">Rechercher des forums ou coller une URL</string>
     <string name="forums_find_recommended">Recommandés</string>
     <string name="forums_find_search_hint">Recherchez des forums auxquels vous abonner</string>
-    <string name="forums_find_subscribed">Abonné</string>
     <string name="forums_find_no_results">Aucun forum trouvé</string>
     <string name="forums_loading">Chargement…</string>
     <string name="forums_no_posts">Aucune publication pour l\'instant</string>

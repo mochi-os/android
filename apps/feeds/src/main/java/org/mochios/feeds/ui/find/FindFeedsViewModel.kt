@@ -68,6 +68,26 @@ class FindFeedsViewModel @Inject constructor(
 
     init {
         loadRecommendations()
+        loadSubscribed()
+    }
+
+    /**
+     * Seeds the subscribed set from the feeds the user already follows, so a
+     * directory hit they're on shows as subscribed instead of offering a
+     * subscribe that would be a no-op. Directory hits and the feed list are
+     * matched on both handles, since a hit can carry either one.
+     */
+    private fun loadSubscribed() {
+        viewModelScope.launch {
+            try {
+                val feeds = repository.listFeeds()
+                _subscribedFeeds.value = _subscribedFeeds.value + feeds.flatMap { feed ->
+                    listOf(feed.fingerprint, feed.id).filter { handle -> handle.isNotEmpty() }
+                }
+            } catch (_: Exception) {
+                // Non-critical: the rows just fall back to offering Subscribe.
+            }
+        }
     }
 
     fun setSearchQuery(query: String) {

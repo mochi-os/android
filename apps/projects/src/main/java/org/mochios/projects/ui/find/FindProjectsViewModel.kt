@@ -28,7 +28,10 @@ data class FindProjectsUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val subscribingId: String? = null
+    val subscribingId: String? = null,
+    // Both handles (id and fingerprint) of every project the user already has,
+    // so a directory hit can be matched on whichever one it carries.
+    val subscribedIds: Set<String> = emptySet()
 )
 
 @HiltViewModel
@@ -45,6 +48,28 @@ class FindProjectsViewModel @Inject constructor(
 
     init {
         loadRecommendations()
+        loadSubscribed()
+    }
+
+    /**
+     * Seeds the subscribed set from the projects the user already has, so a
+     * directory hit they're subscribed to shows as such instead of offering a
+     * subscribe that would be a no-op.
+     */
+    private fun loadSubscribed() {
+        viewModelScope.launch {
+            try {
+                val projects = repository.listProjects()
+                val handles = projects.flatMap { project ->
+                    listOf(project.id, project.fingerprint).filter { handle -> handle.isNotEmpty() }
+                }
+                _uiState.value = _uiState.value.copy(
+                    subscribedIds = _uiState.value.subscribedIds + handles
+                )
+            } catch (_: Exception) {
+                // Non-critical: the rows just fall back to offering Subscribe.
+            }
+        }
     }
 
     private fun loadRecommendations() {
@@ -126,16 +151,29 @@ class FindProjectsViewModel @Inject constructor(
         }
     }
 
-    fun subscribe(project: Project, onSuccess: () -> Unit) {
+    /**
+     * Subscribes to [project], then hands [onSuccess] the id of the project the
+     * server says it joined, so the caller can open it.
+     */
+    fun subscribe(project: Project, onSuccess: (String) -> Unit) {
         // The full entity id is what `-/subscribe` resolves; a bare directory
         // hit without one leaves the fingerprint as the only handle.
         val id = project.id.ifEmpty { project.fingerprint }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = id)
             try {
-                repository.subscribe(id, project.server ?: project.location)
-                _uiState.value = _uiState.value.copy(subscribingId = null)
-                onSuccess()
+                val landingId = repository.subscribe(id, project.server ?: project.location)
+                _uiState.value = _uiState.value.copy(
+                    subscribingId = null,
+                    subscribedIds = _uiState.value.subscribedIds + listOfNotNull(
+                        project.id.takeIf { handle -> handle.isNotEmpty() },
+                        project.fingerprint.takeIf { handle -> handle.isNotEmpty() },
+                        landingId.takeIf { handle -> handle.isNotEmpty() }
+                    )
+                )
+                // The app routes by fingerprint; a directory hit can hand us a
+                // full entity id, so prefer what the server named.
+                onSuccess(landingId.ifBlank { project.fingerprint.ifEmpty { id } })
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     subscribingId = null,

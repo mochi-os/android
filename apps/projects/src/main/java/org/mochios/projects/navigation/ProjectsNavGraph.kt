@@ -127,7 +127,16 @@ fun NavGraphBuilder.projectsNavGraph(
     composable(ProjectsApp.FIND_PROJECTS) {
         FindProjectsScreen(
             onBack = { navController.popBackStack() },
-            onProjectSubscribed = { navController.popBackStack() },
+            // Drop discovery from the back stack and open the project just
+            // joined. Popping back would land on the project entry that was
+            // already there, whose list view model still holds the projects
+            // fetched before the subscribe — so the new one wouldn't show until
+            // a manual refresh. Navigating builds a fresh entry that reloads.
+            onProjectSubscribed = { projectId ->
+                navController.navigate(ProjectsApp.project(projectId)) {
+                    popUpTo(ProjectsApp.FIND_PROJECTS) { inclusive = true }
+                }
+            },
         )
     }
 

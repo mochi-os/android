@@ -79,6 +79,21 @@ data class PreferenceResponse(val preference: String = "")
 // directory hit and is omitted from the payload when null.
 data class SubscribeRequest(val crm: String, val server: String? = null)
 
+/**
+ * What `-/subscribe` names as the CRM it actually joined. The directory hit the
+ * user tapped can carry a full entity id where the app routes by fingerprint,
+ * so prefer what the server reports over what was asked for.
+ *
+ * @property fingerprint fingerprint of the CRM joined; the id to route to.
+ * @property id full entity id, when the server sends one.
+ */
+data class SubscribeResponse(
+
+    val fingerprint: String = "",
+
+    val id: String = ""
+)
+
 // JSON body of `-/unsubscribe`. `server` is accepted for symmetry with
 // subscribe but ignored server-side — unsubscribe resolves the CRM locally.
 data class UnsubscribeRequest(val crm: String, val server: String? = null)
@@ -116,7 +131,7 @@ interface CrmsApi {
     @POST("-/subscribe")
     suspend fun subscribe(
         @Body body: SubscribeRequest
-    ): Response<ApiResponse<SuccessResponse>>
+    ): Response<ApiResponse<SubscribeResponse>>
 
     @POST("-/unsubscribe")
     suspend fun unsubscribe(

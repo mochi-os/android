@@ -85,8 +85,15 @@ class CrmsRepository @Inject constructor(
     suspend fun probe(url: String): Crm =
         api.probe(url).unwrap().crm
 
-    suspend fun subscribe(crm: String, server: String? = null) {
-        api.subscribe(SubscribeRequest(crm = crm, server = server)).unwrap()
+    /**
+     * Subscribes to [crm], optionally hinting its home [server].
+     *
+     * @return the id to route to: the fingerprint the server reports, falling
+     *   back to its full id, then to [crm] when it names neither.
+     */
+    suspend fun subscribe(crm: String, server: String? = null): String {
+        val response = api.subscribe(SubscribeRequest(crm = crm, server = server)).unwrap()
+        return response.fingerprint.ifEmpty { response.id.ifEmpty { crm } }
     }
 
     suspend fun unsubscribe(crm: String, server: String? = null) {

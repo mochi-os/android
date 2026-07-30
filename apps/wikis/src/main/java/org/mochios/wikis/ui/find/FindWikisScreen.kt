@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.find
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
@@ -28,6 +30,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -63,7 +66,10 @@ import org.mochios.android.R as MochiR
  *  - Search results below, each row offering "Subscribe".
  *  - Below results (or as the whole body when the query is empty), a
  *    "Recommended wikis" section fed from `/-/recommendations`.
- *  - The user's already-subscribed wikis are filtered out of both lists.
+ *  - Wikis the user already has stay in both lists, showing a disabled
+ *    "Subscribed" chip instead of the button; tapping such a row opens the
+ *    wiki. This matches the other directories (feeds, forums, projects, CRM) —
+ *    hiding a wiki you searched for by name reads as "not found".
  *
  * Subscribe handles the 502 retry-without-server case in the ViewModel; on
  * success the screen navigates to the new wiki's home via [onSubscribed].
@@ -154,19 +160,11 @@ fun FindWikisScreen(
             )
 
             val showRecommendations = uiState.searchQuery.isBlank()
-            val filteredResults = uiState.results.filter { entry ->
-                entry.id !in uiState.subscribedIds &&
-                    entry.fingerprint !in uiState.subscribedIds
-            }
-            val filteredRecommendations = uiState.recommendations.filter { rec ->
-                rec.id !in uiState.subscribedIds &&
-                    rec.fingerprint !in uiState.subscribedIds
-            }
 
             when {
                 // Empty query + still loading recommendations
                 showRecommendations && uiState.isLoadingRecommendations &&
-                    filteredRecommendations.isEmpty() -> {
+                    uiState.recommendations.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator()
                     }
@@ -180,7 +178,7 @@ fun FindWikisScreen(
                     ) {
                         // Search results
                         if (!showRecommendations) {
-                            if (filteredResults.isEmpty() && !uiState.isSearching) {
+                            if (uiState.results.isEmpty() && !uiState.isSearching) {
                                 item {
                                     Box(
                                         Modifier
@@ -195,18 +193,20 @@ fun FindWikisScreen(
                                     }
                                 }
                             }
-                            items(filteredResults, key = { it.id }) { entry ->
+                            items(uiState.results, key = { it.id }) { entry ->
                                 val target = entry.id.ifEmpty { entry.fingerprint }
                                 DirectoryEntryRow(
                                     entry = entry,
+                                    isSubscribed = target in uiState.subscribedIds,
                                     isPending = uiState.pendingId == target,
                                     onSubscribe = { viewModel.subscribeDirectoryEntry(entry) },
+                                    onOpen = { onSubscribed(entry.fingerprint.ifEmpty { entry.id }) },
                                 )
                             }
                         }
 
                         // Recommendations
-                        if (filteredRecommendations.isNotEmpty()) {
+                        if (uiState.recommendations.isNotEmpty()) {
                             item {
                                 Text(
                                     text = stringResource(R.string.wikis_find_recommended_section),
@@ -215,12 +215,14 @@ fun FindWikisScreen(
                                     modifier = Modifier.padding(top = 8.dp, bottom = 4.dp),
                                 )
                             }
-                            items(filteredRecommendations, key = { it.id }) { rec ->
+                            items(uiState.recommendations, key = { it.id }) { rec ->
                                 val target = rec.id.ifEmpty { rec.fingerprint }
                                 RecommendationRow(
                                     rec = rec,
+                                    isSubscribed = target in uiState.subscribedIds,
                                     isPending = uiState.pendingId == target,
                                     onSubscribe = { viewModel.subscribeRecommendation(rec) },
+                                    onOpen = { onSubscribed(rec.fingerprint.ifEmpty { rec.id }) },
                                 )
                             }
                         }
@@ -231,14 +233,22 @@ fun FindWikisScreen(
     }
 }
 
+/**
+ * A directory hit, with a subscribe button that becomes a disabled "Subscribed"
+ * chip once the user has the wiki. Tapping a subscribed row opens it.
+ */
 @Composable
 private fun DirectoryEntryRow(
     entry: DirectoryEntry,
+    isSubscribed: Boolean,
     isPending: Boolean,
     onSubscribe: () -> Unit,
+    onOpen: () -> Unit,
 ) {
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(enabled = isSubscribed, onClick = onOpen),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface,
         ),
@@ -276,28 +286,31 @@ private fun DirectoryEntryRow(
                 }
             }
             Spacer(Modifier.width(12.dp))
-            Button(onClick = onSubscribe, enabled = !isPending) {
-                if (isPending) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(18.dp),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Text(stringResource(MochiR.string.common_subscribe))
-                }
-            }
+            SubscribeControl(
+                isSubscribed = isSubscribed,
+                isPending = isPending,
+                onSubscribe = onSubscribe,
+            )
         }
     }
 }
 
+/**
+ * A recommended wiki, with the same subscribe/subscribed control as a search
+ * hit. Tapping a subscribed row opens it.
+ */
 @Composable
 private fun RecommendationRow(
     rec: Recommendation,
+    isSubscribed: Boolean,
     isPending: Boolean,
     onSubscribe: () -> Unit,
+    onOpen: () -> Unit,
 ) {
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(enabled = isSubscribed, onClick = onOpen),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface,
         ),
@@ -345,15 +358,37 @@ private fun RecommendationRow(
                 }
             }
             Spacer(Modifier.width(12.dp))
-            Button(onClick = onSubscribe, enabled = !isPending) {
-                if (isPending) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(18.dp),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Text(stringResource(MochiR.string.common_subscribe))
-                }
+            SubscribeControl(
+                isSubscribed = isSubscribed,
+                isPending = isPending,
+                onSubscribe = onSubscribe,
+            )
+        }
+    }
+}
+
+/** The trailing control both rows share: Subscribe, spinner, or Subscribed. */
+@Composable
+private fun SubscribeControl(
+    isSubscribed: Boolean,
+    isPending: Boolean,
+    onSubscribe: () -> Unit,
+) {
+    if (isSubscribed) {
+        FilledTonalButton(onClick = {}, enabled = false) {
+            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(4.dp))
+            Text(stringResource(MochiR.string.discovery_subscribed))
+        }
+    } else {
+        Button(onClick = onSubscribe, enabled = !isPending) {
+            if (isPending) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(18.dp),
+                    strokeWidth = 2.dp,
+                )
+            } else {
+                Text(stringResource(MochiR.string.common_subscribe))
             }
         }
     }

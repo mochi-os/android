@@ -51,7 +51,6 @@
     <string name="forums_access_level_post">發佈</string>
     <string name="forums_post_pending">待處理</string>
     <string name="forums_moderation_reports_pending">待處理</string>
-    <string name="forums_find_subscribed">Subscribed</string>
     <string name="forums_sort_interests">興趣</string>
     <string name="forums_post_attach">Attach files</string>
     <string name="forums_post_approve">批准</string>

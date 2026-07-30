@@ -20,7 +20,6 @@
     <string name="forums_find_title">포럼 찾기</string>
     <string name="forums_find_recommended">추천됨</string>
     <string name="forums_find_subscribe">구독</string>
-    <string name="forums_find_subscribed">구독됨</string>
     <string name="forums_find_no_results">포럼을 찾을 수 없어요</string>
     <string name="forums_loading">로딩 중…</string>
     <string name="forums_no_posts">아직 게시물이 없어요</string>

@@ -28,7 +28,10 @@ data class FindCrmsUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val subscribingId: String? = null
+    val subscribingId: String? = null,
+    // Both handles (id and fingerprint) of every CRM the user already has, so a
+    // directory hit can be matched on whichever one it carries.
+    val subscribedIds: Set<String> = emptySet()
 )
 
 @HiltViewModel
@@ -45,6 +48,28 @@ class FindCrmsViewModel @Inject constructor(
 
     init {
         loadRecommendations()
+        loadSubscribed()
+    }
+
+    /**
+     * Seeds the subscribed set from the CRMs the user already has, so a
+     * directory hit they're subscribed to shows as such instead of offering a
+     * subscribe that would be a no-op.
+     */
+    private fun loadSubscribed() {
+        viewModelScope.launch {
+            try {
+                val crms = repository.listCrms()
+                val handles = crms.flatMap { crm ->
+                    listOf(crm.id, crm.fingerprint).filter { handle -> handle.isNotEmpty() }
+                }
+                _uiState.value = _uiState.value.copy(
+                    subscribedIds = _uiState.value.subscribedIds + handles
+                )
+            } catch (_: Exception) {
+                // Non-critical: the rows just fall back to offering Subscribe.
+            }
+        }
     }
 
     private fun loadRecommendations() {
@@ -126,16 +151,29 @@ class FindCrmsViewModel @Inject constructor(
         }
     }
 
-    fun subscribe(crm: Crm, onSuccess: () -> Unit) {
+    /**
+     * Subscribes to [crm], then hands [onSuccess] the id of the CRM the server
+     * says it joined, so the caller can open it.
+     */
+    fun subscribe(crm: Crm, onSuccess: (String) -> Unit) {
         // The full entity id is what `-/subscribe` needs — it rejects a bare
         // fingerprint, which is all a directory hit without an id carries.
         val id = crm.id.ifEmpty { crm.fingerprint }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = id)
             try {
-                repository.subscribe(id, crm.server ?: crm.location)
-                _uiState.value = _uiState.value.copy(subscribingId = null)
-                onSuccess()
+                val landingId = repository.subscribe(id, crm.server ?: crm.location)
+                _uiState.value = _uiState.value.copy(
+                    subscribingId = null,
+                    subscribedIds = _uiState.value.subscribedIds + listOfNotNull(
+                        crm.id.takeIf { handle -> handle.isNotEmpty() },
+                        crm.fingerprint.takeIf { handle -> handle.isNotEmpty() },
+                        landingId.takeIf { handle -> handle.isNotEmpty() }
+                    )
+                )
+                // The app routes by fingerprint; a directory hit can hand us a
+                // full entity id, so prefer what the server named.
+                onSuccess(landingId.ifBlank { crm.fingerprint.ifEmpty { id } })
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     subscribingId = null,

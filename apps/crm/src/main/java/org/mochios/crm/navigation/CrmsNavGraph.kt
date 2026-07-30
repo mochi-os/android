@@ -117,7 +117,16 @@ fun NavGraphBuilder.crmsNavGraph(
     composable(CrmsApp.FIND_PROJECTS) {
         FindCrmsScreen(
             onBack = { navController.popBackStack() },
-            onCrmSubscribed = { navController.popBackStack() },
+            // Drop discovery from the back stack and open the CRM just joined.
+            // Popping back would land on the CRM entry that was already there,
+            // whose list view model still holds the CRMs fetched before the
+            // subscribe — so the new one wouldn't show until a manual refresh.
+            // Navigating builds a fresh entry that reloads.
+            onCrmSubscribed = { crmId ->
+                navController.navigate(CrmsApp.crm(crmId)) {
+                    popUpTo(CrmsApp.FIND_PROJECTS) { inclusive = true }
+                }
+            },
         )
     }
 

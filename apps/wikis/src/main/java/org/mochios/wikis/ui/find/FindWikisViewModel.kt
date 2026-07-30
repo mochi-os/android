@@ -94,17 +94,26 @@ class FindWikisViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Seeds the subscribed set from the wikis the user already has, so a
+     * directory hit they're subscribed to shows as such instead of offering a
+     * subscribe that would be a no-op.
+     */
     private fun loadSubscribed() {
         viewModelScope.launch {
             try {
                 val info = repository.getClassInfo()
                 val ids = (info.wikis ?: emptyList()).flatMap { wiki ->
                     listOfNotNull(wiki.id, wiki.fingerprint, wiki.source)
-                        .filter { it.isNotEmpty() }
-                }.toSet()
-                _uiState.value = _uiState.value.copy(subscribedIds = ids)
+                        .filter { handle -> handle.isNotEmpty() }
+                }
+                // Merged, not replaced: a subscribe that lands while this call
+                // is in flight would otherwise be dropped from the set.
+                _uiState.value = _uiState.value.copy(
+                    subscribedIds = _uiState.value.subscribedIds + ids
+                )
             } catch (_: Exception) {
-                // Non-fatal — filter just stays empty.
+                // Non-critical: the rows just fall back to offering Subscribe.
             }
         }
     }

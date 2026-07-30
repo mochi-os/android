@@ -20,7 +20,6 @@
     <string name="forums_find_title">ຄົ້ນຫາກະດານສົນທະນາ</string>
     <string name="forums_find_recommended">ແນະນຳ</string>
     <string name="forums_find_subscribe">ສະໝັກສະມາຊິກ</string>
-    <string name="forums_find_subscribed">ສະໝັກສະມາຊິກແລ້ວ</string>
     <string name="forums_find_no_results">ບໍ່ພົບກະດານສົນທະນາ</string>
     <string name="forums_loading">ກຳລັງໂຫຼດ…</string>
     <string name="forums_no_posts">ຍັງບໍ່ມີໂພສ</string>

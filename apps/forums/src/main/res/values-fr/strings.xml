@@ -20,7 +20,6 @@
     <string name="forums_find_title">Trouver des forums</string>
     <string name="forums_find_recommended">Recommandé</string>
     <string name="forums_find_subscribe">S\'abonner</string>
-    <string name="forums_find_subscribed">Abonné</string>
     <string name="forums_find_no_results">Aucun forum trouvé</string>
     <string name="forums_loading">Chargement…</string>
     <string name="forums_no_posts">Aucun message pour le moment</string>

@@ -60,7 +60,6 @@
     <string name="forums_find_search_placeholder">Foren suchen oder URL einfügen</string>
     <string name="forums_find_recommended">Empfohlen</string>
     <string name="forums_find_search_hint">Nach Foren suchen, die Sie abonnieren möchten</string>
-    <string name="forums_find_subscribed">Abonniert</string>
     <string name="forums_find_no_results">Keine Foren gefunden</string>
     <string name="forums_loading">Wird geladen…</string>
     <string name="forums_no_posts">Noch keine Beiträge</string>

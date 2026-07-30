@@ -27,11 +27,13 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -67,7 +69,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun FindProjectsScreen(
     onBack: () -> Unit,
-    onProjectSubscribed: () -> Unit,
+    onProjectSubscribed: (String) -> Unit,
     viewModel: FindProjectsViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -135,11 +137,15 @@ fun FindProjectsScreen(
                             val subscribeId = project.id.ifEmpty { project.fingerprint }
                             DiscoveredProjectCard(
                                 project = project,
+                                isSubscribed = subscribeId in uiState.subscribedIds,
                                 isSubscribing = uiState.subscribingId == subscribeId,
                                 onSubscribe = {
-                                    viewModel.subscribe(project) {
-                                        onProjectSubscribed()
+                                    viewModel.subscribe(project) { landingId ->
+                                        onProjectSubscribed(landingId)
                                     }
+                                },
+                                onOpen = {
+                                    onProjectSubscribed(project.fingerprint.ifEmpty { project.id })
                                 }
                             )
                         }
@@ -161,11 +167,15 @@ fun FindProjectsScreen(
                                 val subscribeId = project.id.ifEmpty { project.fingerprint }
                                 DiscoveredProjectCard(
                                     project = project,
+                                    isSubscribed = subscribeId in uiState.subscribedIds,
                                     isSubscribing = uiState.subscribingId == subscribeId,
                                     onSubscribe = {
-                                        viewModel.subscribe(project) {
-                                            onProjectSubscribed()
+                                        viewModel.subscribe(project) { landingId ->
+                                            onProjectSubscribed(landingId)
                                         }
+                                    },
+                                    onOpen = {
+                                        onProjectSubscribed(project.fingerprint.ifEmpty { project.id })
                                     }
                                 )
                             }
@@ -188,16 +198,23 @@ fun FindProjectsScreen(
     }
 }
 
+/**
+ * A directory hit, with a subscribe button that becomes a disabled "Subscribed"
+ * chip once the user has the project. Tapping a subscribed row opens it.
+ */
 @Composable
 private fun DiscoveredProjectCard(
     project: Project,
+    isSubscribed: Boolean,
     isSubscribing: Boolean,
-    onSubscribe: () -> Unit
+    onSubscribe: () -> Unit,
+    onOpen: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
+            .clickable(enabled = isSubscribed, onClick = onOpen)
             .padding(horizontal = 8.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -251,11 +268,19 @@ private fun DiscoveredProjectCard(
             }
         }
         Spacer(Modifier.width(12.dp))
-        Button(onClick = onSubscribe, enabled = !isSubscribing) {
-            if (isSubscribing) {
-                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
-            } else {
-                Text(stringResource(MochiR.string.common_subscribe))
+        if (isSubscribed) {
+            FilledTonalButton(onClick = {}, enabled = false) {
+                Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(4.dp))
+                Text(stringResource(MochiR.string.discovery_subscribed))
+            }
+        } else {
+            Button(onClick = onSubscribe, enabled = !isSubscribing) {
+                if (isSubscribing) {
+                    CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+                } else {
+                    Text(stringResource(MochiR.string.common_subscribe))
+                }
             }
         }
     }

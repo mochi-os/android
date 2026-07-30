@@ -107,8 +107,15 @@ class ProjectsRepository @Inject constructor(
     suspend fun probe(url: String): Project =
         api.probe(url).unwrap().project
 
-    suspend fun subscribe(project: String, server: String? = null) {
-        api.subscribe(SubscribeRequest(project = project, server = server)).unwrap()
+    /**
+     * Subscribes to [project], optionally hinting its home [server].
+     *
+     * @return the id to route to: the fingerprint the server reports, falling
+     *   back to its full id, then to [project] when it names neither.
+     */
+    suspend fun subscribe(project: String, server: String? = null): String {
+        val response = api.subscribe(SubscribeRequest(project = project, server = server)).unwrap()
+        return response.fingerprint.ifEmpty { response.id.ifEmpty { project } }
     }
 
     suspend fun unsubscribe(project: String, server: String? = null) {

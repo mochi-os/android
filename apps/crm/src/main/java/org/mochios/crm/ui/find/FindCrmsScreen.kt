@@ -26,11 +26,13 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -66,7 +68,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun FindCrmsScreen(
     onBack: () -> Unit,
-    onCrmSubscribed: () -> Unit,
+    onCrmSubscribed: (String) -> Unit,
     viewModel: FindCrmsViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -134,12 +136,14 @@ fun FindCrmsScreen(
                             val subscribeId = crm.id.ifEmpty { crm.fingerprint }
                             DiscoveredCrmCard(
                                 crm = crm,
+                                isSubscribed = subscribeId in uiState.subscribedIds,
                                 isSubscribing = uiState.subscribingId == subscribeId,
                                 onSubscribe = {
-                                    viewModel.subscribe(crm) {
-                                        onCrmSubscribed()
+                                    viewModel.subscribe(crm) { landingId ->
+                                        onCrmSubscribed(landingId)
                                     }
-                                }
+                                },
+                                onOpen = { onCrmSubscribed(crm.fingerprint.ifEmpty { crm.id }) }
                             )
                         }
                     }
@@ -160,12 +164,14 @@ fun FindCrmsScreen(
                                 val subscribeId = crm.id.ifEmpty { crm.fingerprint }
                                 DiscoveredCrmCard(
                                     crm = crm,
+                                    isSubscribed = subscribeId in uiState.subscribedIds,
                                     isSubscribing = uiState.subscribingId == subscribeId,
                                     onSubscribe = {
-                                        viewModel.subscribe(crm) {
-                                            onCrmSubscribed()
+                                        viewModel.subscribe(crm) { landingId ->
+                                            onCrmSubscribed(landingId)
                                         }
-                                    }
+                                    },
+                                    onOpen = { onCrmSubscribed(crm.fingerprint.ifEmpty { crm.id }) }
                                 )
                             }
                         }
@@ -187,16 +193,23 @@ fun FindCrmsScreen(
     }
 }
 
+/**
+ * A directory hit, with a subscribe button that becomes a disabled "Subscribed"
+ * chip once the user has the CRM. Tapping a subscribed row opens it.
+ */
 @Composable
 private fun DiscoveredCrmCard(
     crm: Crm,
+    isSubscribed: Boolean,
     isSubscribing: Boolean,
-    onSubscribe: () -> Unit
+    onSubscribe: () -> Unit,
+    onOpen: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
+            .clickable(enabled = isSubscribed, onClick = onOpen)
             .padding(horizontal = 8.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -250,11 +263,19 @@ private fun DiscoveredCrmCard(
             }
         }
         Spacer(Modifier.width(12.dp))
-        Button(onClick = onSubscribe, enabled = !isSubscribing) {
-            if (isSubscribing) {
-                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
-            } else {
-                Text(stringResource(MochiR.string.common_subscribe))
+        if (isSubscribed) {
+            FilledTonalButton(onClick = {}, enabled = false) {
+                Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(4.dp))
+                Text(stringResource(MochiR.string.discovery_subscribed))
+            }
+        } else {
+            Button(onClick = onSubscribe, enabled = !isSubscribing) {
+                if (isSubscribing) {
+                    CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+                } else {
+                    Text(stringResource(MochiR.string.common_subscribe))
+                }
             }
         }
     }

@@ -57,7 +57,6 @@
     <string name="forums_find_search_placeholder">Search forums or paste URL</string>
     <string name="forums_find_recommended">Recommended</string>
     <string name="forums_find_search_hint">Search for forums to subscribe to</string>
-    <string name="forums_find_subscribed">Subscribed</string>
     <string name="forums_find_no_results">No forums found</string>
     <string name="forums_loading">Loading…</string>
     <string name="forums_no_posts">No posts yet</string>

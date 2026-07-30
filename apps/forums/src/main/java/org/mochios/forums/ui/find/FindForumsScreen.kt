@@ -287,7 +287,7 @@ private fun ForumDiscoveryCard(
             FilledTonalButton(onClick = {}, enabled = false) {
                 Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
                 Spacer(Modifier.width(4.dp))
-                Text(stringResource(R.string.forums_find_subscribed))
+                Text(stringResource(MochiR.string.discovery_subscribed))
             }
         } else {
             Button(onClick = onSubscribe, enabled = !isSubscribing) {

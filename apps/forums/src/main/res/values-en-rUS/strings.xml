@@ -135,7 +135,6 @@
     <string name="forums_auth_create_identity">Create your identity</string>
     <string name="forums_list_close_search">Close search</string>
     <string name="forums_list_add_to_home">Add to home screen</string>
-    <string name="forums_find_subscribed">Subscribed</string>
     <string name="forums_sort_interests">Interests</string>
     <string name="forums_post_attach">Attach files</string>
     <string name="forums_post_approve">Approve</string>

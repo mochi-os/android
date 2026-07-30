@@ -54,7 +54,6 @@
     <string name="forums_find_results">Search results</string>
     <string name="forums_find_search_hint">Search for forums to subscribe to</string>
     <string name="forums_find_subscribe">Subscribe</string>
-    <string name="forums_find_subscribed">Subscribed</string>
     <string name="forums_find_no_results">No forums found</string>
     <string name="forums_find_found_by_url">Found by URL</string>
 

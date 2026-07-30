@@ -77,7 +77,6 @@
     <string name="forums_find_search_placeholder">Buscar foros o pegar URL</string>
     <string name="forums_find_recommended">Recomendados</string>
     <string name="forums_find_search_hint">Buscá foros a los que suscribirte</string>
-    <string name="forums_find_subscribed">Suscripto</string>
     <string name="forums_find_no_results">No se encontraron foros</string>
     <string name="forums_loading">Cargando…</string>
     <string name="forums_no_posts">Todavía no hay publicaciones</string>
