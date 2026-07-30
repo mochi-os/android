@@ -16,14 +16,25 @@ apk = app/build/outputs/apk/release/app-release.apk
 # this app's subdirectory for mochi.apk + versions.json.
 packages = ../../packages/android
 
-.PHONY: all apk clean release
+.PHONY: all apk clean locales release
 
 all: apk
 
 # Build the signed release APK. Gradle handles incremental compilation, so this
 # is cheap when nothing changed; the signing config lives in app/build.gradle.kts.
+#
+# Every module's preBuild depends on the root checkLocaleCompleteness task, so
+# this FAILS on an incomplete or mis-filled string catalogue rather than shipping
+# one. `make locales` runs the same check on its own when you want the answer
+# without waiting for a build.
 apk:
 	./gradlew :app:assembleRelease
+
+# The portable form of the catalogue gate: no JVM, no Android SDK, no CI service.
+# Same script the gradle task and the lint workflow call, so there is one set of
+# rules and one place to change them.
+locales:
+	python3 tools/check-locales.py --discover . --strict
 
 clean:
 	./gradlew clean
