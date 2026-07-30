@@ -25,7 +25,7 @@
     <string name="chess_resign">Təslim ol</string>
     <string name="chess_rematch">Yenidən qarşılaşma</string>
     <string name="chess_delete_game">Oyunu sil</string>
-    <string name="chess_side_white">{colLabel}{rowLabel}-də ağ daş</string>
+    <string name="chess_side_white">Ağ</string>
     <string name="chess_side_black">Qara</string>
     <string name="chess_resign_title">Oyundan təslim olunsun?</string>
     <string name="chess_resign_confirm">Təslim ol</string>
@@ -34,7 +34,7 @@
     <string name="chess_draw_decline">Rədd et</string>
     <string name="chess_status_checkmate_you_win">Mat — qazandınız!</string>
     <string name="chess_status_stalemate">Pat — heç-heçə</string>
-    <string name="chess_status_draw">Çək</string>
+    <string name="chess_status_draw">Heç-heçə</string>
     <string name="chess_status_check_your_move">Şah — sizin gediş</string>
     <string name="chess_status_your_move">Sizin ödənişiniz</string>
     <string name="chess_move_subject_you">Artıq söhbətiniz olanlar:</string>
@@ -44,8 +44,8 @@
     <string name="chess_draw_offered">%1$s qazandı</string>
     <string name="chess_draw_waiting">Heç-heçə təklif edildi — %1$s gözlənilir</string>
     <string name="chess_status_checkmate_opponent_wins">Mat — %1$s qazandı</string>
-    <string name="chess_status_resigned_you">Qazandınız!</string>
-    <string name="chess_status_resigned_opponent">%1$s gedişi</string>
+    <string name="chess_status_resigned_you">Təslim oldunuz — %1$s qazandı</string>
+    <string name="chess_status_resigned_opponent">%1$s təslim oldu — siz qazandınız!</string>
     <string name="chess_status_check_opponent_move">Şah — %1$s-ın gedişi</string>
     <string name="chess_status_opponent_move">ayda %1$s</string>
     <string name="chess_piece_king">Əlaqələndirilmiş hesabları idarə et</string>

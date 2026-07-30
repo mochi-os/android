@@ -44,7 +44,7 @@
     <string name="chess_draw_offered">Cynigiodd %1$s gêm gyfartal</string>
     <string name="chess_draw_waiting">Cynigiwyd cyfartal — yn aros am %1$s</string>
     <string name="chess_status_checkmate_opponent_wins">Siecmat — %1$s sy\'n ennill</string>
-    <string name="chess_status_resigned_you">Ymddiswyddoch</string>
+    <string name="chess_status_resigned_you">Ildioch — %1$s sy\'n ennill</string>
     <string name="chess_status_resigned_opponent">Ymddiswyddodd %1$s — rydych yn ennill!</string>
     <string name="chess_status_check_opponent_move">Siec — tro %1$s</string>
     <string name="chess_status_opponent_move">Symudiad %1$s</string>
