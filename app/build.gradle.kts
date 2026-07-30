@@ -78,7 +78,10 @@ tasks.register("checkLocaleCompleteness") {
     doLast {
         val source = resDir.resolve("values/strings.xml")
         if (!source.exists()) return@doLast
-        val keyPattern = Regex("""<string name="([^"]+)"""")
+        // Both element kinds are user-facing text. Matching only <string> left
+        // every <plurals> invisible in both directions, which is how the
+        // count-bearing strings went unfilled in most locales for so long.
+        val keyPattern = Regex("""<(?:string|plurals) name="([^"]+)"""")
         val sourceKeys = keyPattern.findAll(source.readText()).map { it.groupValues[1] }.toSet()
         // Brand-identity strings stay verbatim in every locale (Latin script,
         // unchanged) — see the i18n glossary rule in CLAUDE.md. Excluding them
@@ -86,17 +89,41 @@ tasks.register("checkLocaleCompleteness") {
         // missing entries for keys that intentionally don't need translation.
         val brandKeys = setOf("app_name")
         val checkKeys = sourceKeys - brandKeys
-        // Sparse-override locales: only carry their locale-specific spelling
-        // / vocabulary diffs from the parent (en-rUS over en, fr-rCA's
-        // "Clavardage" over fr). Everything else resolves through Android's
-        // locale fallback chain, so missing keys here are by design.
-        val overlays = setOf("values-en-rUS", "values-fr-rCA")
+        // Android resolves a resource language+region -> language -> default, per
+        // resource rather than per file, so a key held only by values-de is still
+        // the text a de-CH reader sees. Modelling the chain replaces the old
+        // hardcoded exempt list, which both missed overlays and hid real gaps.
+        // zh-Hant-HK's parent is zh-Hant in CLDR and there is no values-zh here.
+        val scriptParents = mapOf(
+            "values-zh-rHK" to "values-b+zh+Hant",
+            "values-zh-rMO" to "values-b+zh+Hant",
+            "values-zh-rCN" to "values-b+zh+Hans",
+            "values-zh-rSG" to "values-b+zh+Hans",
+        )
+        fun parentOf(name: String): String? {
+            scriptParents[name]?.let { return it }
+            val tag = name.removePrefix("values-")
+            return when {
+                tag.startsWith("b+") ->
+                    "values-" + tag.removePrefix("b+").substringBefore('+').lowercase()
+                tag.contains("-r") -> "values-" + tag.substringBefore("-r")
+                else -> null
+            }
+        }
+        // English regional variants ship spelling diffs and fall through to
+        // values/, which is neutral English by design, so a key absent there
+        // already resolves to the right text.
+        val englishVariant = Regex("""^values-en(-|$)""")
         val problems = mutableListOf<String>()
         resDir.listFiles { f -> f.isDirectory && f.name.startsWith("values-") }?.forEach { dir ->
-            if (dir.name in overlays) return@forEach
+            if (englishVariant.containsMatchIn(dir.name)) return@forEach
             val xml = dir.resolve("strings.xml")
             if (!xml.exists()) return@forEach
-            val have = keyPattern.findAll(xml.readText()).map { it.groupValues[1] }.toSet()
+            val have = keyPattern.findAll(xml.readText()).map { it.groupValues[1] }.toMutableSet()
+            val parent = parentOf(dir.name)?.let { resDir.resolve("$it/strings.xml") }
+            if (parent != null && parent.exists()) {
+                have += keyPattern.findAll(parent.readText()).map { it.groupValues[1] }
+            }
             val missing = checkKeys - have
             if (missing.isNotEmpty()) {
                 problems += "${dir.name}: ${missing.size} missing (${missing.take(3).joinToString()}…)"
