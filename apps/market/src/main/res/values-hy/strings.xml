@@ -53,7 +53,7 @@
     <string name="market_bids_tab_lost">Միայն փոքրատառեր, թվեր և գծիկներ</string>
     <string name="market_bids_tab_outbid">Գերազանցված հայտ</string>
     <string name="market_bids_tab_won">Շահել</string>
-    <string name="market_bids_title">Բինար ֆայլ ({0})</string>
+    <string name="market_bids_title">Հայտեր</string>
     <string name="market_carousel_main">Լուսանկար %1$d / %2$d</string>
     <string name="market_channel_name">Առավելագույն առաջարկ (ընտրովի)</string>
     <string name="market_chargeback_reason_bank_cannot_process">Արգելափակված է</string>
@@ -140,7 +140,7 @@
     <string name="market_editor_photo_uploading">Վերբեռնվում է…</string>
     <string name="market_editor_photos_add">Ավելացնել լուսանկարներ</string>
     <string name="market_editor_price">Գին</string>
-    <string name="market_editor_pricing_auction">Աճուրդ #{0}</string>
+    <string name="market_editor_pricing_auction">Աճուրդ</string>
     <string name="market_editor_pricing_fixed">Ֆիքսված գին</string>
     <string name="market_editor_pricing_pwyw">Վճարեք որքան ցանկանում եք</string>
     <string name="market_editor_pricing_subscription">Բաժանորդագրություն</string>
@@ -200,7 +200,7 @@
     <string name="market_filter_price_min">Մոլորեցնող նկարագրություն</string>
     <string name="market_filter_price_range">Գնի միջակայք</string>
     <string name="market_filter_pricing">Գնագոյացում</string>
-    <string name="market_filter_pricing_auction">Աճուրդ #{0}</string>
+    <string name="market_filter_pricing_auction">Աճուրդ</string>
     <string name="market_filter_pricing_fixed">Ֆիքսված գին</string>
     <string name="market_filter_pricing_pwyw">Վճարեք որքան ցանկանում եք</string>
     <string name="market_filter_pricing_subscription">Բաժանորդագրություն</string>
@@ -215,7 +215,7 @@
     <string name="market_filter_type_physical">Ֆիզիկական</string>
     <string name="market_listing_detail_already_reported">Հաղորդված է</string>
     <string name="market_listing_detail_assets_heading">Թվային ակտիվներ</string>
-    <string name="market_listing_detail_bids_heading">Գնահարցը պետք է լինի առնվազն {0}</string>
+    <string name="market_listing_detail_bids_heading">Հայտերի պատմություն</string>
     <string name="market_listing_detail_buy">Գնել</string>
     <string name="market_listing_detail_buy_now">Գնորդ</string>
     <string name="market_listing_detail_description_heading">Նկարագրություն</string>
@@ -225,7 +225,7 @@
     <string name="market_listing_detail_listed">Հրապարակվել է %1$s</string>
     <string name="market_listing_detail_location_heading">Մատյան</string>
     <string name="market_listing_detail_message">Հաղորդագրություն</string>
-    <string name="market_listing_detail_message_seller">Հաղորդագրություններ ({0})</string>
+    <string name="market_listing_detail_message_seller">Հաղորդագրություն վաճառողին</string>
     <string name="market_listing_detail_not_found">Ցուցակագրումը հեռացվեց</string>
     <string name="market_listing_detail_place_bid">Ներկայացնել առաջարկ</string>
     <string name="market_listing_detail_relist">Կրկին ցուցակագրել</string>
@@ -327,7 +327,7 @@
     <string name="market_purchase_download_failed">Չհաջողվեց ներբեռնել</string>
     <string name="market_purchase_download_section">Ձեր գնումը պատրաստ է</string>
     <string name="market_purchase_item">Տարրի մանրամասներ</string>
-    <string name="market_purchase_message_seller">Հաղորդագրություններ ({0})</string>
+    <string name="market_purchase_message_seller">Հաղորդագրություն վաճառողին</string>
     <string name="market_purchase_not_found">Պատվերը չի գտնվել</string>
     <string name="market_purchase_order_label">Պատվեր</string>
     <string name="market_purchase_purchased">Գնված է</string>
@@ -341,7 +341,7 @@
     <string name="market_purchase_review_hidden">Թաքնված է, մինչև վաճառողը ձեզ չի գնահատի, կամ 14 օր անց։</string>
     <string name="market_purchase_review_prompt_body">Օգնեք ապագա գնորդներին — կիսվեք, թե ինչպես անցավ այս պատվերը։</string>
     <string name="market_purchase_review_rating">Գնահատական</string>
-    <string name="market_purchase_review_section">Թողեք դատարկ՝ ամբողջ մնացած {0}-ը վերադարձնելու համար։</string>
+    <string name="market_purchase_review_section">Թողնել կարծիք</string>
     <string name="market_purchase_review_submit">Ներկայացնել ակնարկը</string>
     <string name="market_purchase_review_submitted">Կարծիքը ներկայացվեց</string>
     <string name="market_purchase_review_your_review">Ձեր ակնարկը</string>
@@ -438,9 +438,9 @@
     <string name="market_shipping_price">Գին</string>
     <string name="market_shipping_region">Տարածաշրջան</string>
     <string name="market_sidebar_account">Հաշիվը ավելացված է</string>
-    <string name="market_sidebar_bids">Բինար ֆայլ ({0})</string>
+    <string name="market_sidebar_bids">Հայտեր</string>
     <string name="market_sidebar_browse">Թերթել կատեգորիաները</string>
-    <string name="market_sidebar_buying">Հաշիվ ստեղծելով՝ դուք համաձայնում եք &lt;0&gt;Սերվերի կանոններին&lt;/0&gt;, &lt;1&gt;Պայմաններին&lt;/1&gt; և &lt;2&gt;Գաղտնիության քաղաքականությանը&lt;/2&gt;։</string>
+    <string name="market_sidebar_buying">Գնում</string>
     <string name="market_sidebar_home">Տուն</string>
     <string name="market_sidebar_inbox">Մուտքային</string>
     <string name="market_sidebar_listings">Բեռնվում է diff-ը...</string>
@@ -454,7 +454,7 @@
     <string name="market_sidebar_subscribers">Բաժանորդներ</string>
     <string name="market_sidebar_subscriptions">Բաժանորդագրություններ</string>
     <string name="market_status_active">Ակտիվ խաղեր</string>
-    <string name="market_status_cancelled">Չեղարկված է հրավերը {friendName}-ին։</string>
+    <string name="market_status_cancelled">Չեղարկված</string>
     <string name="market_status_completed">Պայման</string>
     <string name="market_status_delivered">Առաքված է</string>
     <string name="market_status_disputed">Վիճարկված է</string>
@@ -490,7 +490,7 @@
     <string name="market_subscriptions_cancel_failed">Չհաջողվեց չեղարկել</string>
     <string name="market_subscriptions_cancel_title">Չեղարկումը ծրագրված է</string>
     <string name="market_subscriptions_cancelled">Բաժանորդագրությունը չեղարկվեց</string>
-    <string name="market_subscriptions_cancels_period_end">Չեղարկվում է {0}-ին</string>
+    <string name="market_subscriptions_cancels_period_end">Չեղարկվում է ընթացիկ ժամանակահատվածի վերջում</string>
     <string name="market_subscriptions_empty">Բաժանորդագրություններ չկան</string>
     <string name="market_subscriptions_empty_body">Բաժանորդագրությունները կրկնվող գնումներ են — վաճառողները դրանք ցուցադրում են ամսական կամ տարեկան գներով:</string>
     <string name="market_subscriptions_pause_failed">Չհաջողվեց դադարեցնել</string>

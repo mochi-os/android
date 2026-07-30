@@ -229,7 +229,7 @@
     <string name="forums_create_allow_search">Hər kəsə forumu axtarmağa icazə ver</string>
     <string name="forums_rss_clipboard_label">Forum RSS URL-i</string>
     <string name="forums_tab_moderation">Moderasiya</string>
-    <string name="forums_access_level_view_full">{0} fotoya bax</string>
+    <string name="forums_access_level_view_full">Yalnız baxış</string>
     <string name="forums_access_level_none_full">Giriş yoxdur</string>
     <string name="forums_access_subject_anyone">İstənilən şəxs</string>
     <string name="forums_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>

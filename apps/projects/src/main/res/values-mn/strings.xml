@@ -61,10 +61,10 @@
     <string name="projects_links_title">Холбоосууд</string>
     <string name="projects_links_add">Холбоос нэмэх</string>
     <string name="projects_links_section_blocks">Блокууд</string>
-    <string name="projects_links_section_blocked_by">{0}-аар блоклогдсон</string>
+    <string name="projects_links_section_blocked_by">Блоклосон</string>
     <string name="projects_links_section_duplicates">Давхардлууд</string>
     <string name="projects_links_type_blocks">Блокууд</string>
-    <string name="projects_links_type_blocked_by">{0}-аар блоклогдсон</string>
+    <string name="projects_links_type_blocked_by">Блоклосон</string>
     <string name="projects_links_type_duplicates">Давхардлууд</string>
     <string name="projects_links_no_matches">Тохирох обьект алга</string>
     <string name="projects_field_yes">Тийм</string>

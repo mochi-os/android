@@ -27,7 +27,7 @@
     <string name="feeds_post_default_author">Գրառում</string>
     <string name="feeds_image_preview">Նախադիտում</string>
     <string name="feeds_post">Գրառում</string>
-    <string name="feeds_comments">Մեկնաբանություններ ({0})</string>
+    <string name="feeds_comments">Մեկնաբանություններ</string>
     <string name="feeds_delete_post">Ջնջել գրառումը</string>
     <string name="feeds_delete_comment">Ջնջել մեկնաբանությունը</string>
     <string name="feeds_tags">Թեգեր</string>

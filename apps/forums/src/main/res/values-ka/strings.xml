@@ -48,7 +48,7 @@
     <string name="forums_post_pin">მიმაგრება</string>
     <string name="forums_post_unpin">უსახელო</string>
     <string name="forums_post_lock">დაბლოკვა</string>
-    <string name="forums_post_unlock">{0}-თან კავშირი გაწყდა</string>
+    <string name="forums_post_unlock">განბლოკვა</string>
     <string name="forums_post_approve">დამტკიცება</string>
     <string name="forums_post_remove">წაშლა</string>
     <string name="forums_post_restore">აღდგენა</string>
@@ -108,7 +108,7 @@
     <string name="forums_report_reason_misinformation">დეზინფორმაცია</string>
     <string name="forums_report_reason_offtopic">თემის გარეთ</string>
     <string name="forums_report_reason_other">სხვა</string>
-    <string name="forums_post_default_author">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="forums_post_default_author">მომხმარებელი</string>
     <string name="forums_comments">კომენტარები</string>
     <string name="forums_no_comments">კომენტარები ჯერ არ არის</string>
     <string name="forums_comment_save">შენახვა</string>

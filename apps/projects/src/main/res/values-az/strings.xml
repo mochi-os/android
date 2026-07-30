@@ -333,7 +333,7 @@
     <string name="projects_access_subject_anyone">İstənilən şəxs</string>
     <string name="projects_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>
     <string name="projects_access_select_role">Rolu seçin</string>
-    <string name="projects_access_role_view">{0} fotoya bax</string>
+    <string name="projects_access_role_view">Yalnız baxış</string>
     <string name="projects_access_role_none">Giriş yoxdur</string>
     <string name="projects_access_tab_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
     <string name="projects_access_tab_groups">Qruplar</string>

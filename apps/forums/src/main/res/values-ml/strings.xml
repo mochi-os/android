@@ -43,7 +43,7 @@
     <string name="forums_post_delete_title">പോസ്റ്റ് ഇല്ലാതാക്കുക</string>
     <string name="forums_post_locked">ലോക്ക് ചെയ്തു</string>
     <string name="forums_post_pinned">പിൻ ചെയ്തു</string>
-    <string name="forums_post_removed">{0} ഉപയോഗിക്കാത്ത {1} version നീക്കം ചെയ്തു</string>
+    <string name="forums_post_removed">നീക്കംചെയ്തു</string>
     <string name="forums_post_pending">തീർപ്പുകൽപ്പിക്കാത്തത്</string>
     <string name="forums_post_pin">പിൻ ചെയ്യുക</string>
     <string name="forums_post_unpin">അൺപിൻ ചെയ്യുക</string>

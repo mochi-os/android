@@ -51,7 +51,7 @@
     <string name="people_groups_updated">Qrup yeniləndi</string>
     <string name="people_groups_deleted">Qrup silindi</string>
     <string name="people_groups_not_found">Qrup tapılmadı</string>
-    <string name="people_groups_not_found_description">Bu elan {0}. Redaktə deaktivdir.</string>
+    <string name="people_groups_not_found_description">Bu qrup silinmiş və ya əlçatmaz ola bilər.</string>
     <string name="people_groups_back_to_friends">Dostlara geri</string>
     <string name="people_group_name">Qrup adı</string>
     <string name="people_group_id">Qrup ID</string>

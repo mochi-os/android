@@ -174,13 +174,13 @@
     <string name="system_setting_server_version">სერვერის ვერსია</string>
     <string name="system_setting_signup_enabled">ახალი რეგისტრაციების დაშვება</string>
     <string name="system_users_title">მომხმარებლის სახელი</string>
-    <string name="system_users_col_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="system_users_col_user">მომხმარებელი</string>
     <string name="system_users_col_status">სტატუსი</string>
     <string name="system_users_col_last">ბოლო შესვლა</string>
     <string name="system_users_open_actions">მომხმარებლის მოქმედებების გახსნა</string>
     <string name="system_users_role_label">როლი</string>
     <string name="system_users_role_administrator">ადმინისტრატორი</string>
-    <string name="system_users_role_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="system_users_role_user">მომხმარებელი</string>
     <string name="system_users_status_suspended">შეჩერებული</string>
     <string name="system_users_last_never">არასოდეს</string>
     <string name="system_users_email_label">ელფოსტა</string>

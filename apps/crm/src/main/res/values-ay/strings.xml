@@ -29,7 +29,7 @@
     <string name="crm_sort_direction">Dirección</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Lurata</string>
-    <string name="crm_sort_updated">{0}-na machaqachata</string>
+    <string name="crm_sort_updated">Machaqachatawa</string>
     <string name="crm_create_object_title">Objeto luraña</string>
     <string name="crm_create_object_type">Mä comando qillqam jan ukax thaqham...</string>
     <string name="crm_create_object_title_field">Suti campo</string>
@@ -155,7 +155,7 @@
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_direction">Dirección</string>
     <string name="crm_views_sort_created">Lurata</string>
-    <string name="crm_views_sort_updated">{0}-na machaqachata</string>
+    <string name="crm_views_sort_updated">Machaqachatawa</string>
     <string name="crm_views_sort_rank">Rango</string>
     <string name="crm_not_found">Lurawi jan jikxatasiti</string>
     <string name="crm_list_more">Juk\'ampi</string>

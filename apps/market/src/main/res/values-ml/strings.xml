@@ -251,7 +251,7 @@
     <string name="market_listings_filter_draft">ഡ്രാഫ്റ്റ്</string>
     <string name="market_listings_filter_expired">കാലഹരണപ്പെട്ടു</string>
     <string name="market_listings_filter_rejected">സ്റ്റാഫ് നിരസിച്ചു</string>
-    <string name="market_listings_filter_removed">{0} ഉപയോഗിക്കാത്ത {1} version നീക്കം ചെയ്തു</string>
+    <string name="market_listings_filter_removed">നീക്കംചെയ്തു</string>
     <string name="market_listings_filter_sold">വിറ്റു</string>
     <string name="market_listings_filter_status">സ്റ്റാറ്റസ്</string>
     <string name="market_listings_new">പുതിയ പട്ടിക</string>
@@ -333,7 +333,7 @@
     <string name="market_purchase_refund_failed">റീഫണ്ട് അഭ്യർത്ഥിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_purchase_refunded">റീഫണ്ട് നൽകി (ഭാഗികം)</string>
     <string name="market_purchase_refunded_partial">വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
-    <string name="market_purchase_request_refund">{permissionDomain}-ലേക്ക് ആക്സസ് അഭ്യർത്ഥിക്കുന്നു...</string>
+    <string name="market_purchase_request_refund">റീഫണ്ട് അഭ്യർത്ഥിക്കുക</string>
     <string name="market_purchase_review_body">അവലോകനം</string>
     <string name="market_purchase_review_failed">അവലോകനം സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_purchase_review_hidden">വിൽപ്പനക്കാരൻ നിങ്ങളെ അവലോകനം ചെയ്യുന്നതുവരെ, അല്ലെങ്കിൽ 14 ദിവസത്തിന് ശേഷം മറച്ചിരിക്കും.</string>
@@ -374,8 +374,8 @@
     <string name="market_refund_reason_not_received">ലഭിച്ചില്ല</string>
     <string name="market_refund_reason_other">മറ്റുള്ളവ</string>
     <string name="market_refund_reason_unauthorised">അനുവദിച്ചിട്ടില്ല</string>
-    <string name="market_refund_submit">{permissionDomain}-ലേക്ക് ആക്സസ് അഭ്യർത്ഥിക്കുന്നു...</string>
-    <string name="market_refund_title">{permissionDomain}-ലേക്ക് ആക്സസ് അഭ്യർത്ഥിക്കുന്നു...</string>
+    <string name="market_refund_submit">റീഫണ്ട് അഭ്യർത്ഥിക്കുക</string>
+    <string name="market_refund_title">റീഫണ്ട് അഭ്യർത്ഥിക്കുക</string>
     <string name="market_report_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_report_dialog_failed">റിപ്പോർട്ട് സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_report_dialog_reason_label">പഴയപടിയാക്കാനുള്ള കാരണം</string>

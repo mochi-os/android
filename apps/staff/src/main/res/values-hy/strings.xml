@@ -99,9 +99,9 @@
     <string name="staff_audit_action_listing_removed">Հեռացված է</string>
     <string name="staff_audit_action_listing_updated">Ցուցակագրումը հրապարակվեց</string>
     <string name="staff_audit_action_listing_warning">Զգուշացումը տրվեց</string>
-    <string name="staff_audit_action_order_cancelled">Չեղարկված է հրավերը {friendName}-ին։</string>
+    <string name="staff_audit_action_order_cancelled">Չեղարկված</string>
     <string name="staff_audit_action_order_chargeback">Chargeback-ը հաստատված է</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback {0}</string>
+    <string name="staff_audit_action_order_chargeback_lost">Հետգանձումը բավարարվել է</string>
     <string name="staff_audit_action_order_chargeback_won">Chargeback-ի վճար</string>
     <string name="staff_audit_action_order_completed">Պայման</string>
     <string name="staff_audit_action_order_created">Պատվերը կատարված է</string>
@@ -123,9 +123,9 @@
     <string name="staff_audit_action_subscription_activated">Բաժանորդագրությունը ակտիվացվեց</string>
     <string name="staff_audit_action_subscription_active">Վերադարձված է ակտիվ</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">Չեղարկված է</string>
-    <string name="staff_audit_action_subscription_cancelled">Չեղարկված է հրավերը {friendName}-ին։</string>
+    <string name="staff_audit_action_subscription_cancelled">Չեղարկված</string>
     <string name="staff_audit_action_subscription_chargeback">Chargeback-ը հաստատված է</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback {0}</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">Հետգանձումը բավարարվել է</string>
     <string name="staff_audit_action_subscription_chargeback_won">Chargeback-ի վճար</string>
     <string name="staff_audit_action_subscription_created">Բաժանորդագրությունը ստեղծվեց</string>
     <string name="staff_audit_action_subscription_past_due">Վճարման ժամկետն անցել է</string>
@@ -468,8 +468,8 @@
     <string name="staff_team_action_remove">Հեռացնել</string>
     <string name="staff_team_add_member">Ավելացնել նոր հաշիվ</string>
     <string name="staff_team_added_by_system">Համակարգ</string>
-    <string name="staff_team_col_added">Ավելացված է «{0}»</string>
-    <string name="staff_team_col_added_by">{0}-ը ավելացված է խմբին</string>
+    <string name="staff_team_col_added">Ավելացվել է</string>
+    <string name="staff_team_col_added_by">Ավելացրել է</string>
     <string name="staff_team_col_member">Անդամներ</string>
     <string name="staff_team_col_role">Դեր</string>
     <string name="staff_team_dialog_add">Ավելացնել Mochi հոսք</string>

@@ -41,7 +41,7 @@
     <string name="wikis_subscribe_failed">Չհաջողվեց բաժանորդագրվել</string>
     <string name="wikis_rss_menu">RSS հոսք</string>
     <string name="wikis_rss_changes">Փոփոխություններ և մեկնաբանություններ</string>
-    <string name="wikis_rss_comments">Մեկնաբանություններ ({0})</string>
+    <string name="wikis_rss_comments">Մեկնաբանություններ</string>
     <string name="wikis_rss_both">Փոփոխությունները կհայտնվեն այստեղ էջերը խմբագրելիս։</string>
     <string name="wikis_rss_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
     <string name="wikis_rss_failed">Չհաջողվեց ստանալ RSS տոկենը</string>
@@ -132,7 +132,7 @@
     <string name="wikis_redirect_create_action">Ստեղծել CRM</string>
     <string name="wikis_redirect_source_label">Աղբյուր</string>
     <string name="wikis_redirect_target_label">Թիրախ</string>
-    <string name="wikis_redirect_required_fields">«{branchToDelete}» ճյուղը ջնջված է</string>
+    <string name="wikis_redirect_required_fields">Պահանջվում են և՛ աղբյուրը, և՛ նպատակակետը</string>
     <string name="wikis_redirect_created_success">Վերահղումը ստեղծվեց</string>
     <string name="wikis_redirect_create_failed">Չհաջողվեց ստեղծել վերահղումը</string>
     <string name="wikis_redirect_delete_failed">Չհաջողվեց ջնջել վերահղումը</string>
@@ -163,7 +163,7 @@
     <string name="wikis_attachments_sort_name">Անուն</string>
     <string name="wikis_attachments_sort_size">Չափ</string>
     <string name="wikis_attachments_view_grid">Ցանցային տեսք</string>
-    <string name="wikis_attachments_view_list">Ցուցակագրում #{0}</string>
+    <string name="wikis_attachments_view_list">Ցանկի տեսք</string>
     <string name="wikis_attachments_copy_embed">Պատճենեք այս ID-ն և տեղադրեք ձեր Mochi սերվերի Apps էջում տեղադրելու համար։</string>
     <string name="wikis_attachments_copy_success">Ներդրման հղումը պատճենվեց</string>
     <string name="wikis_attachments_delete">Ջնջել</string>
@@ -201,7 +201,7 @@
     <string name="wikis_settings_home_save_failed">Չհաջողվեց պահպանել կարգավորումները</string>
     <string name="wikis_settings_section_delete">Ջնջել wiki-ն</string>
     <string name="wikis_settings_delete_action">Ջնջել wiki-ն</string>
-    <string name="wikis_settings_delete_confirm_title">Վստա՞հ եք, որ ուզում եք ջնջել «{0}»-ը։</string>
+    <string name="wikis_settings_delete_confirm_title">Դուք լիովին վստա՞հ եք։</string>
     <string name="wikis_settings_delete_confirm_message">Այս գործողությունը հնարավոր չէ չեղարկել: Սա մշտապես կջնջի wiki-ն և նրա ողջ բովանդակությունը:</string>
     <string name="wikis_settings_delete_success">Wiki-ն ջնջվեց</string>
     <string name="wikis_settings_delete_failed">Չհաջողվեց ջնջել wiki-ն</string>

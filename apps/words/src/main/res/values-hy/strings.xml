@@ -38,7 +38,7 @@
     <string name="words_detail_exchange">Փոխանակում</string>
     <string name="words_detail_blank_title">Ընտրեք կաղապար</string>
     <string name="words_detail_resign_title">Հանձնվե՞լ խաղում։</string>
-    <string name="words_detail_resign_message">Վստա՞հ եք, որ ուզում եք հանձնվել։ {opponentName}-ը կհաղթի խաղը։</string>
+    <string name="words_detail_resign_message">Վստա՞հ եք, որ ուզում եք հանձնվել։</string>
     <string name="words_detail_failed_move">Չհաջողվեց ներկայացնել քայլը</string>
     <string name="words_detail_failed_pass">Չհաջողվեց բաց թողնել</string>
     <string name="words_detail_failed_exchange">Չհաջողվեց փոխանակել</string>

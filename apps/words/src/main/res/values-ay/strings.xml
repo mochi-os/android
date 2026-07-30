@@ -21,7 +21,7 @@
     <string name="words_detail_status_you_win">Aka subasta gantata</string>
     <string name="words_detail_status_game_over">Anatawi tukusi</string>
     <string name="words_detail_status_opponent_resigned">Contrincante jaytayi — atipta!</string>
-    <string name="words_detail_status_you_resigned">Resignasta — {opponentName} ganata</string>
+    <string name="words_detail_status_you_resigned">Jumaw jaytanuqta</string>
     <string name="words_detail_label_you">Aka masimamp mä chat utjxiwa</string>
     <string name="words_detail_action_shuffle">Rack ch\'akhuyaña</string>
     <string name="words_detail_action_pass">Pasaña</string>

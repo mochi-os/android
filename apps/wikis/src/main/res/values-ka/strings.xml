@@ -206,7 +206,7 @@
     <string name="wikis_settings_delete_success">ვიკი შეიქმნა</string>
     <string name="wikis_settings_delete_failed">ვიკის წაშლა ვერ მოხერხდა</string>
     <string name="wikis_access_add_action">დამატება</string>
-    <string name="wikis_access_add_subject_label">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="wikis_access_add_subject_label">მომხმარებელი</string>
     <string name="wikis_access_level_edit">რედაქტირება და ნახვა</string>
     <string name="wikis_access_level_view">ხედის კონტროლები</string>
     <string name="wikis_access_level_none">წვდომა არ არის</string>

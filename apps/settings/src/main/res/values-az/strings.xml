@@ -26,7 +26,7 @@
     <string name="sessions_revoke_title">Sessiyanı geri çağıraq?</string>
     <string name="account_section_oauth">Üçüncü tərəf girişi</string>
     <string name="account_oauth_link">Hesabı bağla</string>
-    <string name="account_unlink">{0} əlaqəsi kəsildi</string>
+    <string name="account_unlink">Bağlantını kəs</string>
     <string name="account_cancel">Ləğv et</string>
     <string name="account_save">Saxla</string>
     <string name="account_done">Hazırdır</string>

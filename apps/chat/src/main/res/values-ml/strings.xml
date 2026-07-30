@@ -8,7 +8,7 @@
     <string name="chat_list_search">തിരയുക</string>
     <string name="chat_list_logout">ലോഗ് ഔട്ട്</string>
     <string name="chat_list_new">പുതിയ ചാറ്റ്</string>
-    <string name="chat_list_removed_chat">{0} ഉപയോഗിക്കാത്ത {1} version നീക്കം ചെയ്തു</string>
+    <string name="chat_list_removed_chat">നീക്കംചെയ്‌തു</string>
     <string name="chat_new_title">പുതിയ ചാറ്റ്</string>
     <string name="chat_new_name">ഗ്രൂപ്പ് നാമം</string>
     <string name="chat_new_friends">സുഹൃത്തുക്കൾ</string>

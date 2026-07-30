@@ -55,7 +55,7 @@
     <string name="feeds_clear">გასუფთავება</string>
     <string name="feeds_delete_feed">feed-ის წაშლა</string>
     <string name="feeds_no_members">წევრები არ არის</string>
-    <string name="feeds_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="feeds_user">მომხმარებელი</string>
     <string name="feeds_access_users">მომხმარებლის სახელი</string>
     <string name="feeds_access_groups">ჯგუფები</string>
     <string name="feeds_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>

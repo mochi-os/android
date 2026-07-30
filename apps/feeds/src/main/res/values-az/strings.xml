@@ -211,7 +211,7 @@
     <string name="feeds_all_caught_up">Hamısı tutulub</string>
     <string name="feeds_view_all_posts">Bu istifadəçinin aktiv sessiyalarına baxın və ləğv edin.</string>
     <string name="feeds_access_level_none_full">Giriş yoxdur</string>
-    <string name="feeds_access_level_view_full">{0} fotoya bax</string>
+    <string name="feeds_access_level_view_full">Yalnız baxış</string>
     <string name="feeds_access_search_users">İstifadəçi axtar</string>
     <string name="feeds_access_segment_group">Qrup</string>
     <string name="feeds_access_segment_other">Digər</string>
@@ -228,7 +228,7 @@
     <string name="feeds_settings_name_edit_cd">Adı redaktə et</string>
     <string name="feeds_settings_section_identity">Şəxsiyyət</string>
     <string name="feeds_unsubscribe">CRM-dən abunəlikdən çıx</string>
-    <string name="feeds_unsubscribed">{feedName}-dən abunəlikdən çıxıldı</string>
+    <string name="feeds_unsubscribed">Abunəlik ləğv edildi</string>
     <string name="feeds_access_level_comment_full">Şərh, reaksiya ver və bax</string>
     <string name="feeds_rss_mode_posts_comments">Postlar və şərhlər</string>
     <string name="feeds_access_add_title">Giriş əlavə et</string>

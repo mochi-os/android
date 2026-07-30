@@ -381,7 +381,7 @@
     <string name="staff_reports_submitting">იგზავნება…</string>
     <string name="staff_reports_title">ანგარიშები</string>
     <string name="staff_reports_type_listing">ჩამონათვალი</string>
-    <string name="staff_reports_type_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="staff_reports_type_user">მომხმარებელი</string>
     <string name="staff_reports_view">ვიდეოს ესკიზი</string>
     <string name="staff_reviews_action_hide">დამალვა</string>
     <string name="staff_reviews_action_remove">წაშლა</string>

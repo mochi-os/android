@@ -58,7 +58,7 @@
     <string name="market_bids_tab_all">Taqpach</string>
     <string name="market_bids_tab_lost">Atipt\'ayata</string>
     <string name="market_bids_tab_outbid">Outbid</string>
-    <string name="market_bids_tab_won">{0}-tak ganata</string>
+    <string name="market_bids_tab_won">Ganatawa</string>
     <string name="market_bids_title">Bids</string>
     <string name="market_carousel_main">Foto %1$d/%2$d</string>
     <string name="market_channel_name">Mercado</string>
@@ -508,7 +508,7 @@
     <string name="market_subscriptions_action_reactivate">Mayamp activama</string>
     <string name="market_subscriptions_action_resubscribe">Mayamp suscribima</string>
     <string name="market_subscriptions_action_resume">Mayamp qalltama</string>
-    <string name="market_subscriptions_cancel_body">Akax {0} activa {1, plural, one {subscription} other {subscriptions}} jichha facturación periodo tukuyatakix jaytayani. Suscriptoranakax yatiyatani. Listingax alirinakar imantatani.</string>
+    <string name="market_subscriptions_cancel_body">Akax suscripcionamax jaytanuqaniwa. Jichha pagaña tukuyanx mantañax chhaqtaniwa.</string>
     <string name="market_subscriptions_cancel_confirm">Suscripción jaytaña</string>
     <string name="market_subscriptions_cancel_failed">Janiw jaytaña atinkti</string>
     <string name="market_subscriptions_cancel_title">Suscripción jaytaña</string>

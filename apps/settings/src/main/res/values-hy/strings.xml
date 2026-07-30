@@ -176,7 +176,7 @@
     <string name="system_users_title">Օգտատերեր</string>
     <string name="system_users_col_user">Օգտատեր</string>
     <string name="system_users_col_status">Կարգավիճակ</string>
-    <string name="system_users_col_last">Վերջին օգտագործումը՝ {0}</string>
+    <string name="system_users_col_last">Վերջին մուտքը</string>
     <string name="system_users_open_actions">Բացել օգտատիրոջ գործողությունները</string>
     <string name="system_users_role_label">Դեր</string>
     <string name="system_users_role_administrator">Համաձայնել</string>

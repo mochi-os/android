@@ -227,7 +227,7 @@
     <string name="staff_dashboard_kpi_revenue_currency">%1$s</string>
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Satıcılar</string>
-    <string name="staff_dashboard_kpi_total_orders">\"{track}\" izi silindi</string>
+    <string name="staff_dashboard_kpi_total_orders">Ümumi sifarişlər</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Xeyr</string>
     <string name="staff_dashboard_open_sidebar">Yan paneli aç</string>

@@ -111,7 +111,7 @@
     <string name="crm_design_import">დიზაინის იმპორტი</string>
     <string name="crm_design_imported">დიზაინი იმპორტირებულია</string>
     <string name="crm_design_tab_classes">კლასები</string>
-    <string name="crm_design_tab_views">&lt;0&gt;{slug}&lt;/0&gt;-ის ისტორიის ნახვა, მიმდინარე ვერსია {currentVersion}</string>
+    <string name="crm_design_tab_views">ნახვები</string>
     <string name="crm_design_import_dialog_title">დიზაინის იმპორტი</string>
     <string name="crm_design_import_choose_template">აირჩიეთ შაბლონი</string>
     <string name="crm_design_replace_title">დიზაინის ჩანაცვლება?</string>
@@ -129,7 +129,7 @@
     <string name="crm_class_delete_title">კლასის წაშლა</string>
     <string name="crm_field_type_text">ტექსტი</string>
     <string name="crm_field_type_number">ნომერი</string>
-    <string name="crm_field_type_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="crm_field_type_user">მომხმარებელი</string>
     <string name="crm_field_type_date">თარიღი</string>
     <string name="crm_field_type_checklist">ჩამონათვალი</string>
     <string name="crm_field_name">სახელი</string>

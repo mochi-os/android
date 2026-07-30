@@ -112,7 +112,7 @@
     <string name="settings_time_zone">Başlıq</string>
     <string name="settings_reset_to_defaults">Standartlara sıfırla</string>
     <string name="settings_reset_confirm_title">Üstünlüklər sıfırlansın?</string>
-    <string name="settings_reset_confirm_message">Bu {appName}-dan \"{0}\" icazəsini geri alacaq. Tətbiq düzgün işləməyi dayandıra bilər.</string>
+    <string name="settings_reset_confirm_message">Bu, bütün nizamlamaları standart dəyərlərinə sıfırlayacaq.</string>
     <string name="settings_reset">Sıfırla</string>
     <string name="settings_display_title">Göstər</string>
     <string name="settings_display_reset">Standartlara sıfırla</string>
