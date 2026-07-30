@@ -76,8 +76,6 @@
     <string name="notifprefs_reassign_label">Alterar notificações atuais para</string>
     <string name="notifprefs_unassigned">Não atribuído</string>
     <string name="notifprefs_topics_empty">Ainda não há tópicos</string>
-    <string name="settings_home_system_status">Status</string>
-    <string name="system_status_title">Status</string>
     <string name="system_status_version">Versão</string>
     <string name="system_status_started">Iniciado</string>
     <string name="system_status_update">Atualizar</string>
@@ -175,7 +173,6 @@
     <string name="system_users_title">Usuários</string>
     <string name="system_users_add_user">Adicionar usuário</string>
     <string name="system_users_col_user">Usuário</string>
-    <string name="system_users_col_status">Status</string>
     <string name="system_users_col_last">Último login</string>
     <string name="system_users_open_actions">Abrir ações do usuário</string>
     <string name="system_users_role_label">Função</string>

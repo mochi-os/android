@@ -358,7 +358,7 @@
     <string name="staff_reports_reason_inappropriate">അനുചിതമായ ഉള്ളടക്കം</string>
     <string name="staff_reports_reason_misleading">തെറ്റിദ്ധരിപ്പിക്കുന്ന വിവരണം</string>
     <string name="staff_reports_reason_other">മറ്റുള്ളവ</string>
-    <string name="staff_reports_reason_prohibited">പ്രോജക്റ്റ്</string>
+    <string name="staff_reports_reason_prohibited">നിരോധിത അല്ലെങ്കിൽ നിയമവിരുദ്ധ ഇനം</string>
     <string name="staff_reports_reason_spam">സ്പാം അല്ലെങ്കിൽ തട്ടിപ്പ്</string>
     <string name="staff_reports_status_actioned">നടപടിയെടുത്തു</string>
     <string name="staff_reports_status_dismissed">ഒഴിവാക്കി</string>

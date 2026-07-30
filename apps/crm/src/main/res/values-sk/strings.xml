@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Zobrazované meno</string>
     <string name="crm_auth_verification_failed">Overenie zlyhalo</string>
-    <string name="crm_list_title">Projekty</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Zavrieť vyhľadávanie</string>
     <string name="crm_list_search">Hľadať</string>
-    <string name="crm_list_find">Nájsť projekty</string>
+    <string name="crm_list_find">Nájsť CRM</string>
     <string name="crm_list_logout">Odhlásiť sa</string>
-    <string name="crm_list_create">Vytvoriť projekt</string>
-    <string name="crm_create_title">Vytvoriť projekt</string>
+    <string name="crm_list_create">Vytvoriť CRM</string>
+    <string name="crm_create_title">Vytvoriť CRM</string>
     <string name="crm_create_name">Názov</string>
     <string name="crm_create_description">Popis</string>
     <string name="crm_create_privacy">Súkromie</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Verejné</string>
     <string name="crm_create_template_none">Žiadne</string>
     <string name="crm_create_action">Vytvoriť</string>
-    <string name="crm_find_title">Nájsť projekty</string>
+    <string name="crm_find_title">Nájsť CRM</string>
     <string name="crm_find_recommended">Odporúčané</string>
     <string name="crm_find_subscribe">Prihlásiť na odber</string>
     <string name="crm_loading">Načítava sa…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Uložiť zmeny</string>
     <string name="crm_settings_unsubscribe">Odhlásiť odber</string>
     <string name="crm_settings_delete_crm">Odstrániť projekt</string>
-    <string name="crm_settings_delete_confirm_title">Odstrániť projekt</string>
+    <string name="crm_settings_delete_confirm_title">Odstrániť CRM</string>
     <string name="crm_settings_unsubscribe_title">Odhlásiť odber</string>
-    <string name="crm_settings_unsubscribe_message">Naozaj sa chcete odhlásiť z odberu tohto projektu?</string>
+    <string name="crm_settings_unsubscribe_message">Naozaj sa chcete odhlásiť z odberu tohto CRM?</string>
     <string name="crm_access_level_owner">Vlastník</string>
     <string name="crm_access_level_design">Dizajn</string>
     <string name="crm_access_level_comment">Komentár</string>

@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">Цэрэг</string>
     <string name="chess_move_played">%1$s %2$s-г тоглосон</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">Шатрын хөдөлгөөн, тэнцээ санал болгох, тоглолтын үр дүнгийн талаарх мэдэгдэл.</string>
+    <string name="chess_open_sidebar">Хажуугийн самбарыг нээх</string>
+    <string name="chess_empty_subtitle">Найзтайгаа шатар тоглохын тулд анхны тоглолтоо эхлүүлээрэй.</string>
+    <string name="chess_empty_start_button">Анхны тоглолтоо эхлүүлээрэй</string>
+    <string name="chess_detail_unavailable">Тоглолт боломжгүй</string>
+    <string name="chess_delete_title">Тоглоомыг устгах уу?</string>
+    <string name="chess_delete_message">Энэ нь тоглолтыг таны жагсаалтаас устгана.</string>
+    <string name="chess_ws_connecting">Холбогдож байна…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">Дахин холбогдож байна…</string>
+    <string name="chess_ws_failed">Холболт амжилтгүй</string>
+    <string name="chess_move_capture">%1$s %2$s авлаа</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

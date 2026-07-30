@@ -247,7 +247,7 @@
     <string name="feeds_rss_mode_posts">Qillqatanaka</string>
     <string name="feeds_source_last_checked">Qhipa uñakipata %1$s</string>
     <string name="feeds_settings_unsubscribe_section">Foro ukatpach suscripción jaytaña</string>
-    <string name="feeds_source_transform_hint">Saraski</string>
+    <string name="feeds_source_transform_hint">Inglés ukar jaqukipam, ukatx bullet point kikpa uñacht\'ayam.</string>
     <string name="feeds_source_url_hint_feed">Feed entidad ID jan ukax fingerprint</string>
     <string name="feeds_source_credibility_label">Iyawsa</string>
     <plurals name="feeds_source_interval_hours">
@@ -266,7 +266,7 @@
     <string name="feeds_banner_dismiss">Banner apaqaña</string>
     <string name="feeds_members_search">Uskutanak chhijllaña</string>
     <string name="feeds_ai_prompt_default">Default</string>
-    <string name="feeds_ai_prompt_custom">Personalizata</string>
+    <string name="feeds_ai_prompt_custom">Sapa</string>
     <string name="feeds_ai_prompt_variables">Variablenaka: %1$s</string>
     <string name="feeds_link">Enlace</string>
     <string name="feeds_scroll_to_top">Patxaru kutiña</string>

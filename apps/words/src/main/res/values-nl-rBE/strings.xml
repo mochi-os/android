@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
-    <string name="words_list_title">Words</string>
     <string name="words_list_menu">Menu</string>
     <string name="words_list_new">Nieuw spel</string>
     <string name="words_list_logout">Uitloggen</string>
     <string name="words_list_empty_title">Nog geen spellen</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Voltooid</string>
     <string name="words_sidebar_new_game">Nieuw spel</string>
     <string name="words_new_game_title">Nieuw spel</string>
@@ -47,32 +44,8 @@
     <string name="words_detail_failed_delete">Spel verwijderen mislukt</string>
     <string name="words_detail_game_deleted">Spel verwijderd</string>
 
-    <string name="words_channel_name">Words notifications</string>
-    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
-    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
-    <string name="words_sidebar_active">Active games</string>
-    <string name="words_sidebar_empty">No games yet.</string>
-    <string name="words_new_game_choose_opponents">Choose opponents</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d players</string>
-    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
-    <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Game detail coming soon</string>
-    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
-    <string name="words_detail_status_winner_wins">%1$s wins</string>
-    <string name="words_detail_player_fallback">Player %1$d</string>
-    <string name="words_detail_player_count">%1$d players</string>
-    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
-    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
-    <string name="words_detail_chat_you_played">You played %1$s</string>
-    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
 
-    <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Verwijderen</string>
     <string name="words_detail_delete_message">Hierdoor worden het spel en de bijbehorende chat permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt.</string>
 </resources>

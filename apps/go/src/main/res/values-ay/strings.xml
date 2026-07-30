@@ -43,7 +43,7 @@
     <string name="go_new_game_start">Anata qalltaña</string>
     <string name="go_pass_confirm">Pasaña</string>
     <string name="go_pass_end_confirm">Anatawi tukuyaña</string>
-    <string name="go_pass_end_message">%1$s mä empate uñstayi</string>
+    <string name="go_pass_end_message">%1$s ukax pasarakiwa. Confirmañax anataw tukuyani ukat tableror puntuyani.</string>
     <string name="go_pass_end_title">¿Anatawi tukuyaña?</string>
     <string name="go_pass_message">Vuelta saraqaña, contrari ukar churaña.</string>
     <string name="go_pass_title">¿Turno pasaña?</string>

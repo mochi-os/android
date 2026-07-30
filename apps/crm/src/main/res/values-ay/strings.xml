@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Uñacht\'awi suti</string>
     <string name="crm_auth_verification_failed">Verificata</string>
-    <string name="crm_list_title">Lurawinaka</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">Thaqaña jist\'antaña</string>
     <string name="crm_list_search">Thaqhama</string>
-    <string name="crm_list_find">Proyectonak jikxataña</string>
+    <string name="crm_list_find">CRMnak jikxataña</string>
     <string name="crm_list_logout">Mistuña</string>
-    <string name="crm_list_create">Proyecto luraña</string>
-    <string name="crm_create_title">Proyecto luraña</string>
+    <string name="crm_list_create">CRM luraña</string>
+    <string name="crm_create_title">CRM luraña</string>
     <string name="crm_create_name">Suti</string>
     <string name="crm_create_description">Uñacht\'awi</string>
     <string name="crm_create_privacy">Imantawi</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Public</string>
     <string name="crm_create_template_none">Janiwa</string>
     <string name="crm_create_action">Luraña</string>
-    <string name="crm_find_title">Proyectonak jikxataña</string>
+    <string name="crm_find_title">CRMnak jikxataña</string>
     <string name="crm_find_recommended">Recomendata</string>
     <string name="crm_find_subscribe">Suscribiña</string>
     <string name="crm_loading">Apaqaskiwa…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Mayjt\'awinak imaña</string>
     <string name="crm_settings_unsubscribe">CRM ukatpach suscripción jaytaña?</string>
     <string name="crm_settings_delete_crm">Proyecto chhaqtayaña</string>
-    <string name="crm_settings_delete_confirm_title">Proyecto chhaqtayaña</string>
+    <string name="crm_settings_delete_confirm_title">CRM chhaqtayaña</string>
     <string name="crm_settings_unsubscribe_title">CRM ukatpach suscripción jaytaña?</string>
-    <string name="crm_settings_unsubscribe_message">Chiqpach aka proyectot mistuña munta?</string>
+    <string name="crm_settings_unsubscribe_message">Chiqpach aka CRMt mistuña munta?</string>
     <string name="crm_access_level_owner">Dueño</string>
     <string name="crm_access_level_design">Diseño</string>
     <string name="crm_access_level_comment">Comentaña</string>

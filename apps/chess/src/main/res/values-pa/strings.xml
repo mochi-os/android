@@ -23,7 +23,7 @@
     <string name="chess_open_actions">ਗੇਮ ਐਕਸ਼ਨ ਖੋਲ੍ਹੋ</string>
     <string name="chess_offer_draw">ਡਰਾਅ ਦੀ ਪੇਸ਼ਕਸ਼</string>
     <string name="chess_resign">ਅਸਤੀਫ਼ਾ ਦਿਓ</string>
-    <string name="chess_rematch">Rematch</string>
+    <string name="chess_rematch">ਦੁਬਾਰਾ ਖੇਡੋ</string>
     <string name="chess_delete_game">ਖੇਡ ਮਿਟਾਓ</string>
     <string name="chess_side_white">ਚਿੱਟਾ</string>
     <string name="chess_side_black">ਕਾਲਾ</string>
@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">ਪਿਆਦਾ</string>
     <string name="chess_move_played">%1$s ਨੇ %2$s ਖੇਡਿਆ</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">ਸ਼ਤਰੰਜ ਦੀਆਂ ਚਾਲਾਂ, ਡਰਾਅ ਪੇਸ਼ਕਸ਼ਾਂ ਅਤੇ ਖੇਡ ਦੇ ਨਤੀਜਿਆਂ ਬਾਰੇ ਸੂਚਨਾਵਾਂ।</string>
+    <string name="chess_open_sidebar">ਸਾਈਡਬਾਰ ਖੋਲ੍ਹੋ</string>
+    <string name="chess_empty_subtitle">ਕਿਸੇ ਦੋਸਤ ਨਾਲ ਸ਼ਤਰੰਜ ਖੇਡਣ ਲਈ ਆਪਣੀ ਪਹਿਲੀ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ।</string>
+    <string name="chess_empty_start_button">ਆਪਣੀ ਪਹਿਲੀ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="chess_detail_unavailable">ਖੇਡ ਉਪਲਬਧ ਨਹੀਂ</string>
+    <string name="chess_delete_title">ਖੇਡ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="chess_delete_message">ਇਹ ਖੇਡ ਨੂੰ ਤੁਹਾਡੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾ ਦਿੰਦਾ ਹੈ।</string>
+    <string name="chess_ws_connecting">ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">ਦੁਬਾਰਾ ਕਨੈਕਟ ਹੋ ਰਿਹਾ ਹੈ…</string>
+    <string name="chess_ws_failed">ਕਨੈਕਸ਼ਨ ਅਸਫਲ ਰਿਹਾ</string>
+    <string name="chess_move_capture">%1$s ਨੇ %2$s ਲਿਆ</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

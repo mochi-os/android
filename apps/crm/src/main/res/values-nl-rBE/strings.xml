@@ -2,10 +2,10 @@
 <resources>
     <string name="crm_auth_display_name">Weergavenaam</string>
     <string name="crm_auth_verification_failed">Verificatie mislukt</string>
-    <string name="crm_list_title">Projecten</string>
+    <string name="crm_list_title">CRM\'s</string>
     <string name="crm_list_close_search">Zoekopdracht sluiten</string>
     <string name="crm_list_search">Zoeken</string>
-    <string name="crm_list_find">Projecten zoeken</string>
+    <string name="crm_list_find">CRM\'s zoeken</string>
     <string name="crm_list_logout">Uitloggen</string>
     <string name="crm_list_create">CRM aanmaken</string>
     <string name="crm_create_title">CRM aanmaken</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Publiek</string>
     <string name="crm_create_template_none">Geen</string>
     <string name="crm_create_action">Aanmaken</string>
-    <string name="crm_find_title">Projecten zoeken</string>
+    <string name="crm_find_title">CRM\'s zoeken</string>
     <string name="crm_find_recommended">Aanbevolen</string>
     <string name="crm_find_subscribe">Abonneren</string>
     <string name="crm_loading">Laden…</string>
@@ -84,13 +84,9 @@
     <string name="crm_request_status_draft">Concept</string>
     <string name="crm_request_status_open">Open</string>
     <string name="crm_request_status_merged">Gemerged</string>
-    <string name="crm_request_merge">Merge</string>
     <string name="crm_request_close">Sluiten</string>
-    <string name="crm_request_merge_dialog_title">Merge</string>
     <string name="crm_request_method">Methode</string>
-    <string name="crm_request_method_merge">Merge</string>
     <string name="crm_request_field_repository">Repository</string>
-    <string name="crm_request_field_source">Source branch</string>
     <string name="crm_request_field_title">Titel</string>
     <string name="crm_request_field_description">Beschrijving</string>
     <string name="crm_request_field_draft">Concept</string>
@@ -162,7 +158,6 @@
     <string name="crm_request_more">Meer</string>
     <string name="crm_comment_send">Verzenden</string>
     <string name="crm_field_position_body">Inhoud</string>
-    <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_auth_login_failed">Aanmelding mislukt</string>
     <string name="crm_views_move_up">Omhoog verplaatsen</string>
     <string name="crm_class_move_up">Omhoog verplaatsen</string>
@@ -208,7 +203,6 @@
     <string name="crm_links_empty">Geen links</string>
     <string name="crm_links_section_relates">Heeft betrekking op</string>
     <string name="crm_links_section_duplicated_by">Gedupliceerd door</string>
-    <string name="crm_links_type">Linktype</string>
     <string name="crm_links_type_relates">Heeft betrekking op</string>
     <string name="crm_links_remove">Link verwijderen</string>
     <string name="crm_comment_replying_to">Antwoord aan %1$s</string>
@@ -328,10 +322,8 @@
     <string name="crm_access_tab_groups">Groepen</string>
     <string name="crm_access_target">Doel</string>
     <string name="crm_access_target_hint">Entiteits-ID, @groep, * (iedereen) of + (leden)</string>
-    <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">Kolom toevoegen</string>
     <string name="crm_settings_entity_id">Entiteit-ID</string>
-    <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Naamloos</string>
     <string name="crm_property_select">Selecteren …</string>

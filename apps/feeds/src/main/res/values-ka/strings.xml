@@ -247,7 +247,7 @@
     <string name="feeds_rss_mode_posts">პოსტები</string>
     <string name="feeds_source_last_checked">ბოლოს შემოწმდა %1$s</string>
     <string name="feeds_settings_unsubscribe_section">crm-ის გამოწერის გაუქმება</string>
-    <string name="feeds_source_transform_hint">ტრეკინგის ნომერი</string>
+    <string name="feeds_source_transform_hint">თარგმნეთ ინგლისურად და აჩვენეთ ჩამონათვალის სახით.</string>
     <string name="feeds_source_url_hint_feed">არხის ერთეულის ID ან ანაბეჭდი</string>
     <string name="feeds_source_credibility_label">სანდოობა</string>
     <plurals name="feeds_source_interval_hours">

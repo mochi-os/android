@@ -8,7 +8,7 @@
     <string name="people_group_title">Խումբ</string>
     <string name="people_person_title">Անձ</string>
     <string name="people_friends_empty">Ընկերներ չեն գտնվել</string>
-    <string name="people_friends_add_to_start">Ավելացրեք ընկերներ, միացեք համայնքներին։ Տվյալները համաժամանակացվում են ուղղակիորեն հանգույցների միջև՝ peer-to-peer, ծայրից ծայր։</string>
+    <string name="people_friends_add_to_start">Ավելացրեք ընկերներ՝ կապ հաստատելու համար</string>
     <string name="people_friends_search">Որոնել ընկերներին</string>
     <string name="people_friends_search_placeholder">Որոնել…</string>
     <string name="people_friends_remove">Հեռացնել ընկերոջը</string>
@@ -35,14 +35,14 @@
     <string name="people_invitations_cancelled">Հրավերներ</string>
     <string name="people_invitations_toast_policy">Հրավերները հայտնվում են հրավերներում։ Ծանուցում չի ուղարկվում։</string>
     <string name="people_invitations_sent_toast">Հրավերի կարգավորումներ</string>
-    <string name="people_invite_settings">Անհայտ ուղարկողներից եկած հրավերները բաց են թողնվում։ Փոխադարձ հրավերները դեռ կապ են ստեղծում։</string>
+    <string name="people_invite_settings">Հրավերների կարգավորումներ</string>
     <string name="people_invite_settings_updated">Հրավերները հայտնվում են հրավերներում։ Ծանուցում չի ուղարկվում։</string>
     <string name="people_invite_settings_notify_me">Ծանուցել ինձ</string>
-    <string name="people_invite_settings_notify_description">Վերադարձնել գումարը</string>
+    <string name="people_invite_settings_notify_description">Հրավերները հայտնվում են հրավերներում, և ձեզ ծանուցում է ուղարկվում (լռելյայն)։</string>
     <string name="people_invite_settings_store_silently">Պահպանել անձայն</string>
-    <string name="people_invite_settings_silent_description">Տարր</string>
+    <string name="people_invite_settings_silent_description">Հրավերները հայտնվում են հրավերներում։ Ծանուցում չի ուղարկվում։</string>
     <string name="people_invite_settings_reject_all">Մերժել բոլորը</string>
-    <string name="people_invite_settings_reject_description">Տարրը ստեղծվեց</string>
+    <string name="people_invite_settings_reject_description">Անհայտ ուղարկողներից եկած հրավերները բաց են թողնվում։ Փոխադարձ հրավերները դեռ կապ են ստեղծում։</string>
     <string name="people_invite_settings_accept_automatically">Ընդունել ինքնաբերաբար</string>
     <string name="people_invite_settings_accept_description">Բոլորը նշված են որպես կարդացված</string>
     <string name="people_groups_create">Ստեղծել ցուցակ</string>

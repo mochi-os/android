@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">표시 이름</string>
     <string name="crm_auth_verification_failed">확인에 실패했어요</string>
-    <string name="crm_list_title">프로젝트</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">검색 닫기</string>
     <string name="crm_list_search">검색</string>
-    <string name="crm_list_find">프로젝트 찾기</string>
+    <string name="crm_list_find">CRM 찾기</string>
     <string name="crm_list_logout">로그아웃</string>
-    <string name="crm_list_create">프로젝트 생성</string>
-    <string name="crm_create_title">프로젝트 생성</string>
+    <string name="crm_list_create">CRM 생성</string>
+    <string name="crm_create_title">CRM 생성</string>
     <string name="crm_create_name">이름</string>
     <string name="crm_create_description">설명</string>
     <string name="crm_create_privacy">개인정보</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">공개</string>
     <string name="crm_create_template_none">없음</string>
     <string name="crm_create_action">생성</string>
-    <string name="crm_find_title">프로젝트 찾기</string>
+    <string name="crm_find_title">CRM 찾기</string>
     <string name="crm_find_recommended">추천됨</string>
     <string name="crm_find_subscribe">구독</string>
     <string name="crm_loading">로딩 중…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">변경 사항 저장</string>
     <string name="crm_settings_unsubscribe">구독 취소</string>
     <string name="crm_settings_delete_crm">프로젝트 삭제</string>
-    <string name="crm_settings_delete_confirm_title">프로젝트 삭제</string>
+    <string name="crm_settings_delete_confirm_title">CRM 삭제</string>
     <string name="crm_settings_unsubscribe_title">구독 취소</string>
-    <string name="crm_settings_unsubscribe_message">이 프로젝트 구독을 취소할까요?</string>
+    <string name="crm_settings_unsubscribe_message">이 CRM 구독을 취소할까요?</string>
     <string name="crm_access_level_owner">소유자</string>
     <string name="crm_access_level_design">디자인</string>
     <string name="crm_access_level_comment">댓글</string>

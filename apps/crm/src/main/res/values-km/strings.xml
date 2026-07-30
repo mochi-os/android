@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">ឈ្មោះបង្ហាញ</string>
     <string name="crm_auth_verification_failed">ការផ្ទៀងផ្ទាត់បរាជ័យ</string>
-    <string name="crm_list_title">គម្រោង</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">បិទការស្វែងរក</string>
     <string name="crm_list_search">ស្វែងរក</string>
-    <string name="crm_list_find">ស្វែងរកគម្រោង</string>
+    <string name="crm_list_find">ស្វែងរក CRMs</string>
     <string name="crm_list_logout">ចាកចេញ</string>
-    <string name="crm_list_create">បង្កើតគម្រោង</string>
-    <string name="crm_create_title">បង្កើតគម្រោង</string>
+    <string name="crm_list_create">បង្កើត CRM</string>
+    <string name="crm_create_title">បង្កើត CRM</string>
     <string name="crm_create_name">ឈ្មោះ</string>
     <string name="crm_create_description">ការពិពណ៌នា</string>
     <string name="crm_create_privacy">ឯកជនភាព</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">សាធារណៈ</string>
     <string name="crm_create_template_none">គ្មាន</string>
     <string name="crm_create_action">បង្កើត</string>
-    <string name="crm_find_title">ស្វែងរកគម្រោង</string>
+    <string name="crm_find_title">ស្វែងរក CRMs</string>
     <string name="crm_find_recommended">បានណែនាំ</string>
     <string name="crm_find_subscribe">ជាវ</string>
     <string name="crm_loading">កំពុងផ្ទុក…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">រក្សាទុកការផ្លាស់ប្តូរ</string>
     <string name="crm_settings_unsubscribe">ឈប់ជាវ</string>
     <string name="crm_settings_delete_crm">លុបគម្រោង</string>
-    <string name="crm_settings_delete_confirm_title">លុបគម្រោង</string>
+    <string name="crm_settings_delete_confirm_title">លុប CRM</string>
     <string name="crm_settings_unsubscribe_title">ឈប់ជាវ</string>
-    <string name="crm_settings_unsubscribe_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវគម្រោងនេះមែនទេ?</string>
+    <string name="crm_settings_unsubscribe_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវ CRM នេះមែនទេ?</string>
     <string name="crm_access_level_owner">ម្ចាស់</string>
     <string name="crm_access_level_design">រចនា</string>
     <string name="crm_access_level_comment">មតិយោបល់</string>

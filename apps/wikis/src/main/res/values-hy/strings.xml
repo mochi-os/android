@@ -86,7 +86,7 @@
     <string name="wikis_editor_slug_hint">my-page-name</string>
     <string name="wikis_editor_content_label">Շեմից ցածր օգտատերերի բովանդակությունը պետք է հաստատվի</string>
     <string name="wikis_editor_summary_label">Խմբագրել ամփոփումը (ընտրովի)</string>
-    <string name="wikis_editor_summary_hint">Թերթել</string>
+    <string name="wikis_editor_summary_hint">Համառոտ նկարագրեք ձեր փոփոխությունները</string>
     <string name="wikis_editor_title_required">Վերնագիրը պարտադիր է</string>
     <string name="wikis_editor_slug_required">Էջի URL-ը պարտադիր է</string>
     <string name="wikis_editor_saved">Էջը պահպանվեց</string>
@@ -164,7 +164,7 @@
     <string name="wikis_attachments_sort_size">Չափ</string>
     <string name="wikis_attachments_view_grid">Ցանցային տեսք</string>
     <string name="wikis_attachments_view_list">Ցանկի տեսք</string>
-    <string name="wikis_attachments_copy_embed">Պատճենեք այս ID-ն և տեղադրեք ձեր Mochi սերվերի Apps էջում տեղադրելու համար։</string>
+    <string name="wikis_attachments_copy_embed">Պատճենել ներդրման հղումը</string>
     <string name="wikis_attachments_copy_success">Ներդրման հղումը պատճենվեց</string>
     <string name="wikis_attachments_delete">Ջնջել</string>
     <string name="wikis_attachments_delete_confirm_title">Ջնջել կցորդը</string>

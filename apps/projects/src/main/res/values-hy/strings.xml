@@ -109,7 +109,7 @@
     <string name="projects_design_tab_classes">Մաքրել չօգտագործված տարբերակները</string>
     <string name="projects_design_tab_views">Դիտումներ</string>
     <string name="projects_design_import_dialog_title">Ներմուծել ձևավորումը</string>
-    <string name="projects_design_import_choose_template">Ընտրեք լռելյայն ընդարձակվածի, կոմպակտ միայն-պատկերակի կամ լրիվ դասավորության ռեժիմների միջև</string>
+    <string name="projects_design_import_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="projects_design_replace_title">Փոխարինե՞լ ձևավորումը։</string>
     <string name="projects_design_replace">Փոխարինել</string>
     <string name="projects_classes_add">Ավելացնել սյունակ</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_no_options">Սյունակների դաշտում ընտրանքներ չկան</string>
     <string name="projects_design_preview_empty">Ցուցադրելու բան չկա</string>
 
-    <string name="projects_create_choose_template">Ընտրեք լռելյայն ընդարձակվածի, կոմպակտ միայն-պատկերակի կամ լրիվ դասավորության ռեժիմների միջև</string>
+    <string name="projects_create_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="projects_create_next">Հաջորդ</string>
     <string name="projects_filter">Զտել</string>
     <string name="projects_link">Հղում</string>

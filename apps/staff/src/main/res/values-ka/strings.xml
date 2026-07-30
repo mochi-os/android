@@ -227,7 +227,7 @@
     <string name="staff_dashboard_kpi_revenue_currency">%1$s</string>
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">გამყიდველები</string>
-    <string name="staff_dashboard_kpi_total_orders">სულ</string>
+    <string name="staff_dashboard_kpi_total_orders">შეკვეთები სულ</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">არა</string>
     <string name="staff_dashboard_open_sidebar">გვერდითი პანელის გახსნა</string>

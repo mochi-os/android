@@ -65,7 +65,6 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Type</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Herinneringen</string>
     <string name="feeds_remove_source">Bron verwijderen</string>
     <string name="feeds_suggested_credibility_accept">Accepteren</string>
@@ -87,9 +86,6 @@
     <string name="feeds_settings_prompt_saved">Prompt opgeslagen</string>
     <string name="feeds_send">Verzenden</string>
     <string name="feeds_tag_clear">Filter wissen</string>
-    <string name="feeds_add_tag">Add tag</string>
-    <string name="feeds_write_a_comment">Write a comment…</string>
-    <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Omhoog verplaatsen</string>
     <string name="feeds_move_down">Omlaag verplaatsen</string>
     <string name="feeds_add_to_home_screen">Toevoegen aan startscherm</string>
@@ -221,7 +217,6 @@
     <string name="feeds_permission_deny">Weigeren</string>
     <string name="feeds_rss_feed">RSS-feed</string>
     <string name="feeds_settings_field_entity_id">Entiteit-ID</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
     <string name="feeds_settings_field_server">Server</string>
     <string name="feeds_settings_name_edit_cd">Naam bewerken</string>
     <string name="feeds_settings_section_identity">Identiteit</string>

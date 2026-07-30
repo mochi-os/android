@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Enw arddangos</string>
     <string name="crm_auth_verification_failed">Dilysiad wedi methu</string>
-    <string name="crm_list_title">Prosiectau</string>
+    <string name="crm_list_title">CRMau</string>
     <string name="crm_list_close_search">Cau chwiliad</string>
     <string name="crm_list_search">Chwilio</string>
-    <string name="crm_list_find">Dod o hyd i brosiectau</string>
+    <string name="crm_list_find">Dod o hyd i CRMs</string>
     <string name="crm_list_logout">Allgofnodi</string>
-    <string name="crm_list_create">Creu prosiect</string>
-    <string name="crm_create_title">Creu prosiect</string>
+    <string name="crm_list_create">Creu CRM</string>
+    <string name="crm_create_title">Creu CRM</string>
     <string name="crm_create_name">Enw</string>
     <string name="crm_create_description">Disgrifiad</string>
     <string name="crm_create_privacy">Preifatrwydd</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Cyhoeddus</string>
     <string name="crm_create_template_none">Dim</string>
     <string name="crm_create_action">Creu</string>
-    <string name="crm_find_title">Dod o hyd i brosiectau</string>
+    <string name="crm_find_title">Dod o hyd i CRMs</string>
     <string name="crm_find_recommended">Argymhellir</string>
     <string name="crm_find_subscribe">Tanysgrifio</string>
     <string name="crm_loading">Yn llwytho…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Cadw newidiadau</string>
     <string name="crm_settings_unsubscribe">Dad-danysgrifio</string>
     <string name="crm_settings_delete_crm">Dileu prosiect</string>
-    <string name="crm_settings_delete_confirm_title">Dileu prosiect</string>
+    <string name="crm_settings_delete_confirm_title">Dileu CRM</string>
     <string name="crm_settings_unsubscribe_title">Dad-danysgrifio</string>
-    <string name="crm_settings_unsubscribe_message">Ydych chi\'n siŵr eich bod am ddad-danysgrifio o\'r prosiect hwn?</string>
+    <string name="crm_settings_unsubscribe_message">Ydych chi\'n siŵr eich bod am ddad-danysgrifio o\'r CRM hwn?</string>
     <string name="crm_access_level_owner">Perchennog</string>
     <string name="crm_access_level_design">Dyluniad</string>
     <string name="crm_access_level_comment">Sylw</string>

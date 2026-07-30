@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Isem li jidher</string>
     <string name="crm_auth_verification_failed">Verifika falliet</string>
-    <string name="crm_list_title">Proġetti</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">Agħlaq it-tiftix</string>
     <string name="crm_list_search">Fittex</string>
-    <string name="crm_list_find">Sib proġetti</string>
+    <string name="crm_list_find">Sib CRMs</string>
     <string name="crm_list_logout">Oħroġ</string>
-    <string name="crm_list_create">Oħloq proġett</string>
-    <string name="crm_create_title">Oħloq proġett</string>
+    <string name="crm_list_create">Oħloq CRM</string>
+    <string name="crm_create_title">Oħloq CRM</string>
     <string name="crm_create_name">Isem</string>
     <string name="crm_create_description">Deskrizzjoni</string>
     <string name="crm_create_privacy">Privatezza</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Pubbliku</string>
     <string name="crm_create_template_none">Xejn</string>
     <string name="crm_create_action">Oħloq</string>
-    <string name="crm_find_title">Sib proġetti</string>
+    <string name="crm_find_title">Sib CRMs</string>
     <string name="crm_find_recommended">Rakkomandat</string>
     <string name="crm_find_subscribe">Abbona</string>
     <string name="crm_loading">Qed jitgħabba…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Issejvja l-bidliet</string>
     <string name="crm_settings_unsubscribe">Iddiżabbona</string>
     <string name="crm_settings_delete_crm">Ħassar proġett</string>
-    <string name="crm_settings_delete_confirm_title">Ħassar proġett</string>
+    <string name="crm_settings_delete_confirm_title">Ħassar CRM</string>
     <string name="crm_settings_unsubscribe_title">Iddiżabbona</string>
-    <string name="crm_settings_unsubscribe_message">Żgur trid tikkanċella s-sottoskrizzjoni tiegħek minn dan il-proġett?</string>
+    <string name="crm_settings_unsubscribe_message">Żgur trid tikkanċella s-sottoskrizzjoni tiegħek minn dan is-CRM?</string>
     <string name="crm_access_level_owner">Sid</string>
     <string name="crm_access_level_design">Disinn</string>
     <string name="crm_access_level_comment">Kumment</string>

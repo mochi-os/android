@@ -115,7 +115,7 @@
     <string name="wikis_rename_page_failed">Səhifənin adını dəyişmək alınmadı</string>
     <string name="wikis_history_title">Tarixçə</string>
     <string name="wikis_history_empty">Versiya tapılmadı</string>
-    <string name="wikis_history_view_action">Bütün bildirişlərə bax</string>
+    <string name="wikis_history_view_action">Bax</string>
     <string name="wikis_history_revert_action">Bu versiyaya geri qaytar</string>
     <string name="wikis_revision_current_badge">Cari</string>
     <string name="wikis_revision_back_to_history">Tarixçəyə geri</string>
@@ -218,7 +218,7 @@
     <string name="wikis_access_revoke_success">Giriş silindi</string>
     <string name="wikis_access_revoke_failed">Girişi silmək alınmadı</string>
     <string name="wikis_replicas_empty_title">Hələ replika yoxdur</string>
-    <string name="wikis_replicas_empty_message">Ağ tutar:</string>
+    <string name="wikis_replicas_empty_message">Digər vikilər bu vikini replikasiya etdikdə burada görünəcəklər.</string>
     <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Heç vaxt</string>
     <string name="wikis_replicas_remove_confirm_title">Replikanı silək?</string>

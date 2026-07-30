@@ -8,7 +8,6 @@
     <string name="account_totp_setup_title">Configurá el autenticador</string>
     <string name="account_totp_verify">Verificá</string>
     <string name="account_totp_disable_title">¿Desactivás el autenticador?</string>
-    <string name="account_cancel">Cancelá</string>
     <string name="account_save">Guardá</string>
     <string name="account_delete">Eliminá</string>
     <string name="account_rename">Renombrá</string>
@@ -26,7 +25,6 @@
     <string name="document_save">Guardá</string>
     <string name="notifprefs_add_category">Agregá una categoría</string>
     <string name="notifprefs_edit_category">Editá la categoría</string>
-    <string name="notifprefs_edit">Editá</string>
     <string name="notifprefs_delete">Eliminá</string>
     <string name="notifprefs_remove">Quitá</string>
     <string name="notifprefs_reassign_label">Cambiá las notificaciones actuales a</string>
@@ -40,7 +38,6 @@
     <string name="accounts_verify">Verificá</string>
     <string name="accounts_remove">Quitá</string>
     <string name="accounts_remove_title">¿Quitás la cuenta?</string>
-    <string name="system_documents_tab_privacy">Privacy</string>
     <string name="system_documents_save">Guardá</string>
     <string name="system_settings_save">Guardá</string>
     <string name="system_settings_reset">Reiniciá</string>
@@ -126,7 +123,6 @@
     <string name="route_path">Ruta</string>
     <string name="route_target">Destino</string>
     <string name="route_method">Método</string>
-    <string name="route_method_app">App</string>
     <string name="route_method_entity">Entidad</string>
     <string name="route_method_redirect">Redirección</string>
     <string name="route_priority">Prioridad</string>
@@ -337,7 +333,6 @@
     <string name="account_close_confirm_title">¿Cerrar tu cuenta?</string>
     <string name="account_close_confirm_body">Tu cuenta se va a programar para eliminarse y se va a cerrar tu sesión. Podés cancelar en cualquier momento antes de la fecha de eliminación volviendo a iniciar sesión.</string>
     <string name="account_data_download">Descargá</string>
-    <string name="route_target_app">App</string>
     <string name="route_target_entity">Entidad</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">Tus datos</string>

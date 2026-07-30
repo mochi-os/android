@@ -218,7 +218,7 @@
     <string name="wikis_access_revoke_success">წვდომა წაიშალა</string>
     <string name="wikis_access_revoke_failed">წვდომის წაშლა ვერ მოხერხდა</string>
     <string name="wikis_replicas_empty_title">რეპლიკები ჯერ არ არის</string>
-    <string name="wikis_replicas_empty_message">კვირის დასაწყისი</string>
+    <string name="wikis_replicas_empty_message">როცა სხვა ვიკები დაარეპლიცირებენ ამ ვიკის, ისინი აქ გამოჩნდებიან.</string>
     <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">არასოდეს</string>
     <string name="wikis_replicas_remove_confirm_title">რეპლიკის წაშლა?</string>

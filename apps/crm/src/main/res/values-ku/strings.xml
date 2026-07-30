@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Navê xuyabûnê</string>
     <string name="crm_auth_verification_failed">Verifîkasyon têk çû</string>
-    <string name="crm_list_title">Proje</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Lêgerînê bigire</string>
     <string name="crm_list_search">Lêger</string>
-    <string name="crm_list_find">Projeyan bibîne</string>
+    <string name="crm_list_find">CRMan bibîne</string>
     <string name="crm_list_logout">Derkeve</string>
-    <string name="crm_list_create">Proje çêbike</string>
-    <string name="crm_create_title">Proje çêbike</string>
+    <string name="crm_list_create">CRM çêbike</string>
+    <string name="crm_create_title">CRM çêbike</string>
     <string name="crm_create_name">Nav</string>
     <string name="crm_create_description">Şirove</string>
     <string name="crm_create_privacy">Nepenî</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Giştî</string>
     <string name="crm_create_template_none">Tu</string>
     <string name="crm_create_action">Çêbike</string>
-    <string name="crm_find_title">Projeyan bibîne</string>
+    <string name="crm_find_title">CRMan bibîne</string>
     <string name="crm_find_recommended">Pêşniyarkirî</string>
     <string name="crm_find_subscribe">Abone bibe</string>
     <string name="crm_loading">Tê barkirin…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Guhertinan tomar bike</string>
     <string name="crm_settings_unsubscribe">Abone yî nebe</string>
     <string name="crm_settings_delete_crm">Projeyê jê bibe</string>
-    <string name="crm_settings_delete_confirm_title">Projeyê jê bibe</string>
+    <string name="crm_settings_delete_confirm_title">CRM jê bibe</string>
     <string name="crm_settings_unsubscribe_title">Abone yî nebe</string>
-    <string name="crm_settings_unsubscribe_message">Tu bawer î ku dixwazî abonetiya vê projeyê betal bikî?</string>
+    <string name="crm_settings_unsubscribe_message">Tu bawer î ku dixwazî abonetiya vê CRMê betal bikî?</string>
     <string name="crm_access_level_owner">Xwedî</string>
     <string name="crm_access_level_design">Sêwiran</string>
     <string name="crm_access_level_comment">Şîrove</string>

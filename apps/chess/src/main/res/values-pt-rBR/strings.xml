@@ -18,7 +18,6 @@
     <string name="chess_new_start_button">Iniciar jogo</string>
     <string name="chess_new_creating">Criando…</string>
     <string name="chess_new_failed">Falha ao criar jogo</string>
-    <string name="chess_chat_title">Chat</string>
     <string name="chess_open_chat">Abrir painel de conversa</string>
     <string name="chess_open_actions">Abrir ações do jogo</string>
     <string name="chess_offer_draw">Oferecer empate</string>
@@ -66,7 +65,6 @@
     <string name="chess_move_capture">%1$s capturou %2$s</string>
     <string name="chess_open_sidebar">Abrir menu lateral</string>
     <string name="chess_ws_connecting">Conectando…</string>
-    <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_failed">Falha na conexão</string>
     <string name="chess_ws_reconnecting">Reconectando…</string>
 </resources>

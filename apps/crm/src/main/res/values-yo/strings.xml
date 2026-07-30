@@ -5,10 +5,10 @@
     <string name="crm_list_title">Àwọn CRM</string>
     <string name="crm_list_close_search">Ti àwárí</string>
     <string name="crm_list_search">Wá</string>
-    <string name="crm_list_find">Wa àwọn iṣẹ́</string>
+    <string name="crm_list_find">Wa àwọn CRM</string>
     <string name="crm_list_logout">Jáde</string>
-    <string name="crm_list_create">Dá iṣẹ́ àkànṣe</string>
-    <string name="crm_create_title">Dá iṣẹ́ àkànṣe</string>
+    <string name="crm_list_create">Dá CRM</string>
+    <string name="crm_create_title">Dá CRM</string>
     <string name="crm_create_name">Orúkọ</string>
     <string name="crm_create_description">Àpèjúwe</string>
     <string name="crm_create_privacy">Aṣírí</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Gbangba</string>
     <string name="crm_create_template_none">Kòsí</string>
     <string name="crm_create_action">Dá</string>
-    <string name="crm_find_title">Wa àwọn iṣẹ́</string>
+    <string name="crm_find_title">Wa àwọn CRM</string>
     <string name="crm_find_recommended">Tí a dábàá</string>
     <string name="crm_find_subscribe">Forúkọsílẹ̀</string>
     <string name="crm_loading">Ń ṣí…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Fi àwọn àyípadà pamọ́</string>
     <string name="crm_settings_unsubscribe">Yọ ìforúkọsílẹ̀ kúrò</string>
     <string name="crm_settings_delete_crm">Pa iṣẹ́ àkànṣe rẹ́</string>
-    <string name="crm_settings_delete_confirm_title">Pa iṣẹ́ àkànṣe rẹ́</string>
+    <string name="crm_settings_delete_confirm_title">Pa CRM rẹ́</string>
     <string name="crm_settings_unsubscribe_title">Yọ ìforúkọsílẹ̀ kúrò</string>
-    <string name="crm_settings_unsubscribe_message">Ṣé o dájú pé o fẹ́ yọ orúkọ rẹ kúrò nínú iṣẹ́ àkànṣe yìí?</string>
+    <string name="crm_settings_unsubscribe_message">Ṣé o dájú pé o fẹ́ yọ orúkọ rẹ kúrò nínú CRM yìí?</string>
     <string name="crm_access_level_owner">Onílé</string>
     <string name="crm_access_level_design">Àpẹẹrẹ</string>
     <string name="crm_access_level_comment">Àlàyé</string>

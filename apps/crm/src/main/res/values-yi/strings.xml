@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">ווײַז נאָמען</string>
     <string name="crm_auth_verification_failed">פֿאַריפֿיקאַציע דורכגעפֿאַלן</string>
-    <string name="crm_list_title">פּראָיעקטן</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">פֿאַרמאַכן זוכן</string>
     <string name="crm_list_search">זוך</string>
-    <string name="crm_list_find">געפֿינען פּראָיעקטן</string>
+    <string name="crm_list_find">געפֿינען CRMs</string>
     <string name="crm_list_logout">אַרויסקומען</string>
-    <string name="crm_list_create">באַשאַפֿן פּראָיעקט</string>
-    <string name="crm_create_title">באַשאַפֿן פּראָיעקט</string>
+    <string name="crm_list_create">באַשאַפֿן CRM</string>
+    <string name="crm_create_title">באַשאַפֿן CRM</string>
     <string name="crm_create_name">נאָמען</string>
     <string name="crm_create_description">באַשרײַבונג</string>
     <string name="crm_create_privacy">פּריוואַטקײַט</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">עפֿנטלעך</string>
     <string name="crm_create_template_none">קיינס</string>
     <string name="crm_create_action">באַשאַפֿן</string>
-    <string name="crm_find_title">געפֿינען פּראָיעקטן</string>
+    <string name="crm_find_title">געפֿינען CRMs</string>
     <string name="crm_find_recommended">רעקאָמענדירט</string>
     <string name="crm_find_subscribe">אַבאָנירן</string>
     <string name="crm_loading">לאָדט…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">היט ענדערונגען</string>
     <string name="crm_settings_unsubscribe">אַבאַבאָנירן</string>
     <string name="crm_settings_delete_crm">אויסמעקן פּראָיעקט</string>
-    <string name="crm_settings_delete_confirm_title">אויסמעקן פּראָיעקט</string>
+    <string name="crm_settings_delete_confirm_title">אויסמעקן CRM</string>
     <string name="crm_settings_unsubscribe_title">אַבאַבאָנירן</string>
-    <string name="crm_settings_unsubscribe_message">זענט איר זיכער איר ווילט אַראָפּשרײַבן פֿון דעם פּראָיעקט?</string>
+    <string name="crm_settings_unsubscribe_message">זענט איר זיכער איר ווילט אַראָפּשרײַבן פֿון דעם CRM?</string>
     <string name="crm_access_level_owner">אייגנטימער</string>
     <string name="crm_access_level_design">אויסזען</string>
     <string name="crm_access_level_comment">קאָמענטאַר</string>

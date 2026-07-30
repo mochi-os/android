@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Ainm taisbeanaidh</string>
     <string name="crm_auth_verification_failed">Dh\'fhàillig an dearbhadh</string>
-    <string name="crm_list_title">Pròiseactan</string>
+    <string name="crm_list_title">CRMan</string>
     <string name="crm_list_close_search">Dùin an lorg</string>
     <string name="crm_list_search">Lorg</string>
-    <string name="crm_list_find">Lorg pròiseactan</string>
+    <string name="crm_list_find">Lorg CRMan</string>
     <string name="crm_list_logout">Clàraich a-mach</string>
-    <string name="crm_list_create">Cruthaich pròiseact</string>
-    <string name="crm_create_title">Cruthaich pròiseact</string>
+    <string name="crm_list_create">Cruthaich CRM</string>
+    <string name="crm_create_title">Cruthaich CRM</string>
     <string name="crm_create_name">Ainm</string>
     <string name="crm_create_description">Tuairisgeul</string>
     <string name="crm_create_privacy">Prìobhaideachd</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Poblach</string>
     <string name="crm_create_template_none">Chan eil gin</string>
     <string name="crm_create_action">Cruthaich</string>
-    <string name="crm_find_title">Lorg pròiseactan</string>
+    <string name="crm_find_title">Lorg CRMan</string>
     <string name="crm_find_recommended">Air a mholadh</string>
     <string name="crm_find_subscribe">Fo-sgrìobh</string>
     <string name="crm_loading">A\' luchdadh…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Sàbhail na h-atharrachaidhean</string>
     <string name="crm_settings_unsubscribe">Dì-fho-sgrìobh</string>
     <string name="crm_settings_delete_crm">Sguab às pròiseact</string>
-    <string name="crm_settings_delete_confirm_title">Sguab às pròiseact</string>
+    <string name="crm_settings_delete_confirm_title">Sguab às CRM</string>
     <string name="crm_settings_unsubscribe_title">Dì-fho-sgrìobh</string>
-    <string name="crm_settings_unsubscribe_message">A bheil thu cinnteach gu bheil thu airson sgur de fho-sgrìobhadh ris a\' phròiseact seo?</string>
+    <string name="crm_settings_unsubscribe_message">A bheil thu cinnteach gu bheil thu airson sgur de fho-sgrìobhadh ris a\' CRM seo?</string>
     <string name="crm_access_level_owner">Sealbhadair</string>
     <string name="crm_access_level_design">Dealbhadh</string>
     <string name="crm_access_level_comment">Beachd</string>

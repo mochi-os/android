@@ -317,7 +317,7 @@
     <string name="market_listing_detail_seller_suspended_banner">Энэ худалдагч түр зогсоосон. Бүртгэл сэргээх хүртэл шинэ захиалга түр зогссон.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Худалдагчийн бүртгэл хязгаарлагдсан үед худалдан авах боломжгүй.</string>
     <string name="market_listing_detail_share">Зар хуваалцах</string>
-    <string name="market_listing_detail_shipping_heading">Хүргэлт</string>
+    <string name="market_listing_detail_shipping_heading">Хүргэлтийн сонголтууд</string>
     <string name="market_listing_detail_subscribe">Захиалах</string>
     <string name="market_listing_detail_tags_heading">Тэгүүд</string>
     <string name="market_listing_detail_title">Зар</string>

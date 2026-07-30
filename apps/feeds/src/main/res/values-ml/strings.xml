@@ -69,7 +69,7 @@
     <string name="feeds_source_type_feed_memories">ഓർമ്മകൾ</string>
     <string name="feeds_remove_source">ഉറവിടം നീക്കം ചെയ്യുക</string>
     <string name="feeds_suggested_credibility_accept">സ്വീകരിക്കുക</string>
-    <string name="feeds_rss_url_copied">RSS ഫീഡ്</string>
+    <string name="feeds_rss_url_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="feeds_logout">ലോഗ് ഔട്ട്</string>
     <string name="feeds_ai_account_default">ഡിഫോൾട്ട് അക്കൗണ്ട്</string>
     <string name="feeds_ai_mode_off">പ്രവർത്തനരഹിതം</string>

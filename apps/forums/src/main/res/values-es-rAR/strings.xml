@@ -8,7 +8,6 @@
     <string name="forums_list_unsubscribe">Cancelá la suscripción</string>
     <string name="forums_list_unsubscribe_title">Cancelá la suscripción</string>
     <string name="forums_create_title">Creá un foro</string>
-    <string name="forums_create_privacy">Privacy</string>
     <string name="forums_find_subscribe">Suscribite</string>
     <string name="forums_post_edit">Editá el posteo</string>
     <string name="forums_post_edit_title">Editá el posteo</string>
@@ -200,7 +199,6 @@
     <string name="forums_access_tab_groups">Grupos</string>
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Buscá usuarios</string>
-    <string name="forums_access_no_groups">No groups available</string>
     <string name="forums_saved_title">Guardado</string>
     <string name="forums_saved_remove">Quitar de guardados</string>
     <string name="forums_saved_clear_all">Borrar todo</string>

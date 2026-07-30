@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nume afișat</string>
     <string name="crm_auth_verification_failed">Verificarea a eșuat</string>
-    <string name="crm_list_title">Proiecte</string>
+    <string name="crm_list_title">CRM-uri</string>
     <string name="crm_list_close_search">Închide căutarea</string>
     <string name="crm_list_search">Caută</string>
-    <string name="crm_list_find">Găsește proiecte</string>
+    <string name="crm_list_find">Găsește CRM-uri</string>
     <string name="crm_list_logout">Deconectează-te</string>
-    <string name="crm_list_create">Creează proiect</string>
-    <string name="crm_create_title">Creează proiect</string>
+    <string name="crm_list_create">Creează CRM</string>
+    <string name="crm_create_title">Creează CRM</string>
     <string name="crm_create_name">Nume</string>
     <string name="crm_create_description">Descriere</string>
     <string name="crm_create_privacy">Confidențialitate</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Public</string>
     <string name="crm_create_template_none">Niciuna</string>
     <string name="crm_create_action">Creează</string>
-    <string name="crm_find_title">Găsește proiecte</string>
+    <string name="crm_find_title">Găsește CRM-uri</string>
     <string name="crm_find_recommended">Recomandat</string>
     <string name="crm_find_subscribe">Abonează-te</string>
     <string name="crm_loading">Se încarcă…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Salvează modificările</string>
     <string name="crm_settings_unsubscribe">Dezabonează-te</string>
     <string name="crm_settings_delete_crm">Șterge proiectul</string>
-    <string name="crm_settings_delete_confirm_title">Șterge proiectul</string>
+    <string name="crm_settings_delete_confirm_title">Șterge CRM</string>
     <string name="crm_settings_unsubscribe_title">Dezabonează-te</string>
-    <string name="crm_settings_unsubscribe_message">Sigur vrei să te dezabonezi de la acest proiect?</string>
+    <string name="crm_settings_unsubscribe_message">Sigur vrei să te dezabonezi de la acest CRM?</string>
     <string name="crm_access_level_owner">Proprietar</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_comment">Comentează</string>

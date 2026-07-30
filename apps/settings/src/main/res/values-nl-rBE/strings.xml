@@ -68,8 +68,6 @@
     <string name="notifprefs_edit_category">Categorie bewerken</string>
     <string name="notifprefs_name_label">Naam</string>
     <string name="notifprefs_destinations">Bestemmingen</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
-    <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Bewerken</string>
     <string name="notifprefs_delete">Verwijderen</string>
     <string name="notifprefs_remove">Verwijderen</string>
@@ -104,7 +102,6 @@
     <string name="accounts_status_verified">Geverifieerd</string>
     <string name="accounts_status_connected">Verbonden</string>
     <string name="accounts_default_for_ai">Standaard voor AI</string>
-    <string name="accounts_test">Test</string>
     <string name="accounts_settings">Instellingen</string>
     <string name="accounts_verify">Verifiëren</string>
     <string name="accounts_remove">Verwijderen</string>
@@ -158,12 +155,9 @@
     <string name="system_setting_oauth_github_client_id">GitHub client-ID</string>
     <string name="system_setting_oauth_github_client_secret">GitHub client-secret</string>
     <string name="system_setting_oauth_microsoft_client_id">Microsoft client-ID</string>
-    <string name="system_setting_oauth_microsoft_client_secret">Microsoft client secret</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook App-ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook App-secret</string>
     <string name="system_setting_oauth_x_client_id">X client-ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
     <string name="system_setting_fcm_firebase_config">Firebase google-services.json-bestand</string>
     <string name="system_setting_fcm_service_account">Firebase privésleutel-bestand</string>
     <string name="system_setting_operator_name">Naam uitbater</string>
@@ -292,7 +286,6 @@
     <string name="account_identity_identity">Identiteit</string>
     <string name="account_identity_username">Gebruikersnaam</string>
     <string name="account_identity_name">Naam</string>
-    <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Anderen toestaan u te vinden in de directory</string>
     <string name="account_method_email_subtitle">Ontvang een verificatiecode per e-mail</string>
     <string name="account_method_totp_subtitle">Stel hieronder een authenticator in om in te schakelen</string>

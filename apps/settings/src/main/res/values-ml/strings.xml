@@ -151,7 +151,7 @@
     <string name="system_setting_auth_recovery">റിക്കവറി കോഡ് ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <string name="system_setting_default_theme">ഡിഫോൾട്ട് തീം</string>
-    <string name="system_setting_domains_verification">ആവശ്യമാണ്</string>
+    <string name="system_setting_domains_verification">ഡൊമെയ്ൻ പരിശോധന ആവശ്യമാണ്</string>
     <string name="system_setting_email_from">സിസ്റ്റം ഇമെയിലുകൾക്കുള്ള ഡിഫോൾട്ട് from വിലാസം</string>
     <string name="system_setting_oauth_public_url">OAuth റീഡയറക്റ്റുകൾക്കുള്ള പൊതു URL</string>
     <string name="system_setting_oauth_google_client_id">Google ക്ലയന്റ് ID</string>

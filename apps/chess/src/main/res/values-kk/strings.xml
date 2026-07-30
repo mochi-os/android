@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">Пешка</string>
     <string name="chess_move_played">%1$s %2$s ойнады</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">Шахмат жүрістері, тең ойын ұсыныстары және ойын нәтижелері туралы хабарландырулар.</string>
+    <string name="chess_open_sidebar">Бүйір тақтаны ашу</string>
+    <string name="chess_empty_subtitle">Досыңызбен шахмат ойнау үшін бірінші ойыныңызды бастаңыз.</string>
+    <string name="chess_empty_start_button">Бірінші ойыныңызды бастаңыз</string>
+    <string name="chess_detail_unavailable">Ойын қолжетімсіз</string>
+    <string name="chess_delete_title">Ойынды жою керек пе?</string>
+    <string name="chess_delete_message">Бұл ойынды тізіміңізден жояды.</string>
+    <string name="chess_ws_connecting">Қосылуда…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">Қайта қосылуда…</string>
+    <string name="chess_ws_failed">Қосылу сәтсіз аяқталды</string>
+    <string name="chess_move_capture">%1$s %2$s алды</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

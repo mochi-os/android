@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Prikazno ime</string>
     <string name="crm_auth_verification_failed">Preverjanje ni uspelo</string>
-    <string name="crm_list_title">Projekti</string>
+    <string name="crm_list_title">CRM-ji</string>
     <string name="crm_list_close_search">Zapri iskanje</string>
     <string name="crm_list_search">Iskanje</string>
-    <string name="crm_list_find">Najdi projekte</string>
+    <string name="crm_list_find">Najdi CRM-je</string>
     <string name="crm_list_logout">Odjava</string>
-    <string name="crm_list_create">Ustvari projekt</string>
-    <string name="crm_create_title">Ustvari projekt</string>
+    <string name="crm_list_create">Ustvari CRM</string>
+    <string name="crm_create_title">Ustvari CRM</string>
     <string name="crm_create_name">Ime</string>
     <string name="crm_create_description">Opis</string>
     <string name="crm_create_privacy">Zasebnost</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Javno</string>
     <string name="crm_create_template_none">Brez</string>
     <string name="crm_create_action">Ustvari</string>
-    <string name="crm_find_title">Najdi projekte</string>
+    <string name="crm_find_title">Najdi CRM-je</string>
     <string name="crm_find_recommended">Priporočeno</string>
     <string name="crm_find_subscribe">Naroči se</string>
     <string name="crm_loading">Nalaganje…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Shrani spremembe</string>
     <string name="crm_settings_unsubscribe">Odjavi se</string>
     <string name="crm_settings_delete_crm">Izbriši projekt</string>
-    <string name="crm_settings_delete_confirm_title">Izbriši projekt</string>
+    <string name="crm_settings_delete_confirm_title">Izbriši CRM</string>
     <string name="crm_settings_unsubscribe_title">Odjavi se</string>
-    <string name="crm_settings_unsubscribe_message">Ali ste prepričani, da se želite odjaviti od tega projekta?</string>
+    <string name="crm_settings_unsubscribe_message">Ali ste prepričani, da se želite odjaviti od tega CRM-a?</string>
     <string name="crm_access_level_owner">Lastnik</string>
     <string name="crm_access_level_design">Oblikovanje</string>
     <string name="crm_access_level_comment">Komentar</string>

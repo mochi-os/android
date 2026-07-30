@@ -39,7 +39,7 @@
     <string name="market_bid_dialog_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="market_bid_dialog_ceiling_help">Մենք ավտոմատ կերպով կբարձրացնենք ձեր առաջարկը հնարավորինս փոքր գումարով՝ առջևում մնալու համար, մինչև այս առավելագույնը։</string>
     <string name="market_bid_dialog_instant_win">Գնումը հաստատված է — ավարտեք վճարումը</string>
-    <string name="market_bid_dialog_invalid_ceiling">Անդամն ավելացվեց</string>
+    <string name="market_bid_dialog_invalid_ceiling">Առավելագույն հայտը պետք է լինի առնվազն ձեր հայտի չափը</string>
     <string name="market_bid_dialog_outbid">Ձեր առաջարկը ներկայացվել է, բայց անմիջապես գերազանցվել է։ Մյուս առաջարկողն ավելի բարձր առավելագույն ունի։ Նրա առաջարկն այժմ %1$s է։</string>
     <string name="market_bid_dialog_submit">Անել առաջարկ</string>
     <string name="market_bid_dialog_success">Գնահարցեր</string>
@@ -60,7 +60,7 @@
     <string name="market_chargeback_reason_check_returned">Ստուգել կարգավիճակը</string>
     <string name="market_chargeback_reason_credit_not_processed">CRM-ը ջնջված է</string>
     <string name="market_chargeback_reason_customer_initiated">Հարմարեցված</string>
-    <string name="market_chargeback_reason_debit_not_authorized">Որոշել</string>
+    <string name="market_chargeback_reason_debit_not_authorized">Դեբետը թույլատրված չէ</string>
     <string name="market_chargeback_reason_duplicate">Կրկնակի գանձում</string>
     <string name="market_chargeback_reason_fraudulent">Խարդախ</string>
     <string name="market_chargeback_reason_general">Ընդհանուր</string>
@@ -233,7 +233,7 @@
     <string name="market_listing_detail_save">Պահպանել</string>
     <string name="market_listing_detail_seller_heading">Վաճառող</string>
     <string name="market_listing_detail_share">Կիսվել ցուցակով</string>
-    <string name="market_listing_detail_shipping_heading">Առաքում</string>
+    <string name="market_listing_detail_shipping_heading">Առաքման տարբերակներ</string>
     <string name="market_listing_detail_subscribe">Բաժանորդագրվել</string>
     <string name="market_listing_detail_tags_heading">Թեգեր</string>
     <string name="market_listing_detail_title">Ցուցակագրումը հաստատվեց</string>
@@ -386,7 +386,7 @@
     <string name="market_report_dialog_title">Հաղորդել հայտարարության մասին</string>
     <string name="market_report_reason_counterfeit">Կեղծ</string>
     <string name="market_report_reason_inappropriate">Անպատշաճ բովանդակություն</string>
-    <string name="market_report_reason_misleading">Mochi</string>
+    <string name="market_report_reason_misleading">Ապակողմնորոշող նկարագրություն</string>
     <string name="market_report_reason_other">Այլ</string>
     <string name="market_report_reason_prohibited">Արգելված ապրանք</string>
     <string name="market_report_reason_spam">Սպամ</string>
@@ -416,7 +416,7 @@
     <string name="market_sale_section_review">Գնորդի ակնարկ</string>
     <string name="market_sale_section_shipping">Առաքում</string>
     <string name="market_sale_section_summary">Ամփոփում</string>
-    <string name="market_sale_ship_action">Շուկա</string>
+    <string name="market_sale_ship_action">Նշել որպես առաքված</string>
     <string name="market_sale_ship_failed">Չհաջողվեց նշել որպես առաքված</string>
     <string name="market_sale_ship_success">Առավելագույնը 3 հակառակորդ</string>
     <string name="market_sale_shipped_label">Առաքվել է</string>
@@ -431,7 +431,7 @@
     <string name="market_section_recent">Վերջերս դիտված</string>
     <string name="market_ship_dialog_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="market_ship_dialog_submit">Հաստատել ստացումը</string>
-    <string name="market_ship_dialog_title">Շուկա</string>
+    <string name="market_ship_dialog_title">Նշել որպես առաքված</string>
     <string name="market_shipping_days">Առաքում</string>
     <string name="market_shipping_days_value">%1$s օր</string>
     <string name="market_shipping_notes">Նշումներ</string>

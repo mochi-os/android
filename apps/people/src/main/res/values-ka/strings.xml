@@ -13,7 +13,7 @@
     <string name="people_friends_search_placeholder">ძიება…</string>
     <string name="people_friends_remove">მეგობრის წაშლა</string>
     <string name="people_friends_no_people_found">ხალხი ვერ მოიძებნა</string>
-    <string name="people_friends_try_different_search">მოგზაურობა</string>
+    <string name="people_friends_try_different_search">სცადეთ სხვა საძიებო სიტყვა</string>
     <string name="people_friends_try_adjusting">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
     <string name="people_friends_already_friends">უკვე მეგობრები</string>
     <string name="people_friends_pending">მოლოდინში</string>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_create_privacy">Privacy</string>
     <string name="forums_ai_account_default">預設賬戶</string>
     <string name="forums_moderation_require_new_users">新用戶需要批准</string>
     <string name="forums_moderation_new_user_days">新用戶閾值:</string>
@@ -51,22 +50,10 @@
     <string name="forums_access_level_post">發佈</string>
     <string name="forums_post_pending">待處理</string>
     <string name="forums_moderation_reports_pending">待處理</string>
-    <string name="forums_find_subscribed">Subscribed</string>
     <string name="forums_sort_interests">興趣</string>
-    <string name="forums_post_attach">Attach files</string>
     <string name="forums_post_approve">批准</string>
     <string name="forums_comment_approve">批准</string>
-    <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_post_tag_label">Tag</string>
-    <string name="forums_tab_access">Access</string>
     <string name="forums_access_target">目標</string>
-    <string name="forums_ai_mode_tag">Tag</string>
-    <string name="forums_comments">Comments</string>
-    <string name="forums_no_comments">No comments yet</string>
-    <string name="forums_write_comment">Write a comment…</string>
-    <string name="forums_comment_edit_attach">Attach files</string>
-    <string name="forums_comment_delete">Delete comment</string>
-    <string name="forums_comment_delete_title">Delete comment</string>
     <string name="forums_settings_rename">重新命名</string>
     <string name="forums_find_recommended">推薦</string>
     <string name="forums_auth_display_name">顯示名稱</string>
@@ -197,10 +184,8 @@
     <string name="forums_tag_interest_remove">移除興趣</string>
     <string name="forums_list_default_sort">預設排序</string>
     <string name="forums_access_tab_users">用戶</string>
-    <string name="forums_access_tab_groups">Groups</string>
     <string name="forums_access_tab_manual">手動</string>
     <string name="forums_access_search_users">搜尋用戶</string>
-    <string name="forums_access_no_groups">No groups available</string>
     <string name="forums_saved_title">已儲存</string>
     <string name="forums_saved_remove">從已儲存中移除</string>
     <string name="forums_saved_clear_all">清除全部</string>

@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">കാലാൾ</string>
     <string name="chess_move_played">%1$s %2$s കളിച്ചു</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">ചെസ് നീക്കങ്ങൾ, സമനില വാഗ്ദാനങ്ങൾ, കളിയുടെ ഫലങ്ങൾ എന്നിവയെക്കുറിച്ചുള്ള അറിയിപ്പുകൾ.</string>
+    <string name="chess_open_sidebar">സൈഡ്‌ബാർ തുറക്കുക</string>
+    <string name="chess_empty_subtitle">ഒരു സുഹൃത്തിനൊപ്പം ചെസ് കളിക്കാൻ നിങ്ങളുടെ ആദ്യ കളി തുടങ്ങുക.</string>
+    <string name="chess_empty_start_button">നിങ്ങളുടെ ആദ്യ കളി തുടങ്ങുക</string>
+    <string name="chess_detail_unavailable">കളി ലഭ്യമല്ല</string>
+    <string name="chess_delete_title">ഗെയിം ഇല്ലാതാക്കണോ?</string>
+    <string name="chess_delete_message">ഇത് കളിയെ നിങ്ങളുടെ പട്ടികയിൽ നിന്ന് നീക്കം ചെയ്യും.</string>
+    <string name="chess_ws_connecting">കണക്റ്റ് ചെയ്യുന്നു…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">വീണ്ടും കണക്റ്റ് ചെയ്യുന്നു…</string>
+    <string name="chess_ws_failed">കണക്ഷൻ പരാജയപ്പെട്ടു</string>
+    <string name="chess_move_capture">%1$s %2$s എടുത്തു</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

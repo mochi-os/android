@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Visningsnamn</string>
     <string name="crm_auth_verification_failed">Verifiering misslyckades</string>
-    <string name="crm_list_title">Projekt</string>
+    <string name="crm_list_title">CRM:er</string>
     <string name="crm_list_close_search">Stäng sökning</string>
     <string name="crm_list_search">Sök</string>
-    <string name="crm_list_find">Hitta projekt</string>
+    <string name="crm_list_find">Hitta CRM:er</string>
     <string name="crm_list_logout">Logga ut</string>
-    <string name="crm_list_create">Skapa projekt</string>
-    <string name="crm_create_title">Skapa projekt</string>
+    <string name="crm_list_create">Skapa CRM</string>
+    <string name="crm_create_title">Skapa CRM</string>
     <string name="crm_create_name">Namn</string>
     <string name="crm_create_description">Beskrivning</string>
     <string name="crm_create_privacy">Integritet</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Offentlig</string>
     <string name="crm_create_template_none">Ingen</string>
     <string name="crm_create_action">Skapa</string>
-    <string name="crm_find_title">Hitta projekt</string>
+    <string name="crm_find_title">Hitta CRM:er</string>
     <string name="crm_find_recommended">Rekommenderad</string>
     <string name="crm_find_subscribe">Prenumerera</string>
     <string name="crm_loading">Läser in…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Spara ändringar</string>
     <string name="crm_settings_unsubscribe">Avsluta prenumeration</string>
     <string name="crm_settings_delete_crm">Ta bort projekt</string>
-    <string name="crm_settings_delete_confirm_title">Ta bort projekt</string>
+    <string name="crm_settings_delete_confirm_title">Ta bort CRM</string>
     <string name="crm_settings_unsubscribe_title">Avsluta prenumeration</string>
-    <string name="crm_settings_unsubscribe_message">Är du säker på att du vill avprenumerera från detta projekt?</string>
+    <string name="crm_settings_unsubscribe_message">Är du säker på att du vill avprenumerera från detta CRM?</string>
     <string name="crm_access_level_owner">Ägare</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_comment">Kommentera</string>

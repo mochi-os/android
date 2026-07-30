@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="projects_create_privacy">Privacy</string>
     <string name="projects_field_type_user">用戶</string>
     <string name="projects_option_icon_placeholder">例如 Check, Star, Flag</string>
 
@@ -53,18 +52,8 @@
     <string name="projects_request_status_draft">草稿</string>
     <string name="projects_request_field_draft">草稿</string>
     <string name="projects_field_position_body">內容</string>
-    <string name="projects_settings_tab_access">Access</string>
-    <string name="projects_object_tab_comments">Comments</string>
-    <string name="projects_object_tab_attachments">Attachments</string>
-    <string name="projects_comment_empty">No comments yet</string>
-    <string name="projects_comment_attach">Attach files</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
-    <string name="projects_attachments">Attachments</string>
     <string name="projects_request_method">方式</string>
     <string name="projects_board_rename">重新命名</string>
-    <string name="projects_move_current">Current</string>
-    <string name="projects_class_save_name">Save name</string>
-    <string name="projects_field_type_date">Date</string>
     <string name="projects_find_recommended">推薦</string>
     <string name="projects_auth_display_name">顯示名稱</string>
     <string name="projects_auth_login_failed">登入失敗</string>
@@ -318,31 +307,22 @@
 
     <string name="projects_create_choose_template">選擇範本</string>
     <string name="projects_create_next">下一步</string>
-    <string name="projects_filter">Filter</string>
     <string name="projects_link">連結</string>
     <string name="projects_filter_clear_all">清除全部</string>
     <string name="projects_filter_all">全部</string>
     <string name="projects_filter_other">其他</string>
     <string name="projects_create_object_title">新增</string>
-    <string name="projects_settings_section_identity">Identity</string>
-    <string name="projects_settings_access_updated">Access updated</string>
     <string name="projects_settings_access_revoked">存取權限已撤銷</string>
     <string name="projects_settings_section_access">存取管理</string>
     <string name="projects_people_search">搜尋使用者</string>
-    <string name="projects_settings_field_entity_id">Entity ID</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
     <string name="projects_settings_field_server">伺服器</string>
     <string name="projects_access_subject_anyone">任何人</string>
     <string name="projects_access_subject_authenticated">已驗證用戶</string>
     <string name="projects_access_select_role">選擇角色</string>
-    <string name="projects_access_role_view">View only</string>
-    <string name="projects_access_role_none">No access</string>
     <string name="projects_access_tab_users">用戶</string>
-    <string name="projects_access_tab_groups">Groups</string>
     <string name="projects_access_tab_other">其他</string>
     <string name="projects_access_search_users">搜尋用戶</string>
     <string name="projects_access_select_group">選擇一個群組</string>
-    <string name="projects_access_no_groups">No groups available</string>
     <string name="projects_access_select_rule">選擇一條規則</string>
     <string name="projects_access_authenticated_desc">任何已登入的用戶</string>
     <string name="projects_access_anyone_desc">包括匿名用戶</string>

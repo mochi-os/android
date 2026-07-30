@@ -263,7 +263,6 @@
     <string name="staff_dashboard_col_object">Objekt</string>
     <string name="staff_dashboard_col_score">Punktzahl</string>
     <string name="staff_dashboard_col_seller">Verkäufer</string>
-    <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">Keine Audit-Einträge</string>
     <string name="staff_dashboard_empty_listings">Keine aktuellen Inserate</string>
     <string name="staff_dashboard_empty_moderation">Keine aktuelle Moderation</string>
@@ -282,7 +281,6 @@
     <string name="staff_dashboard_no">Nein</string>
     <string name="staff_dashboard_order_fallback">Bestellung #%1$s</string>
     <string name="staff_dashboard_system">System</string>
-    <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Inserate</string>
     <string name="staff_dashboard_tab_moderation">Moderation</string>
     <string name="staff_dashboard_tab_orders">Bestellungen</string>
@@ -308,7 +306,6 @@
     <string name="staff_disputes_meta_refunded_partial">Zurückerstattet (teilweise)</string>
     <string name="staff_disputes_meta_seller_no_response">Verkäufer hat noch nicht geantwortet.</string>
     <string name="staff_disputes_meta_seller_response">Antwort des Verkäufers</string>
-    <string name="staff_disputes_meta_total">Total</string>
     <string name="staff_disputes_notes_label">Notizen</string>
     <string name="staff_disputes_reason_damaged">Beschädigt</string>
     <string name="staff_disputes_reason_not_as_described">Nicht wie beschrieben</string>
@@ -382,7 +379,6 @@
     <string name="staff_listings_status_sold">Verkauft</string>
     <string name="staff_listings_submitting">Wird übermittelt…</string>
     <string name="staff_listings_title">Inserate</string>
-    <string name="staff_listings_total_count">Total: %1$d</string>
     <string name="staff_moderation_empty">Keine Moderationseinträge</string>
     <string name="staff_moderation_filter_clear">Filter löschen</string>
     <string name="staff_moderation_listing_filter_placeholder">Inserats-ID</string>

@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">ప్రదర్శన పేరు</string>
     <string name="crm_auth_verification_failed">ధృవీకరణ విఫలమైంది</string>
-    <string name="crm_list_title">ప్రాజెక్ట్‌లు</string>
+    <string name="crm_list_title">CRMలు</string>
     <string name="crm_list_close_search">శోధనను మూసివేయండి</string>
     <string name="crm_list_search">శోధన</string>
-    <string name="crm_list_find">ప్రాజెక్ట్‌లను కనుగొనండి</string>
+    <string name="crm_list_find">CRMలను కనుగొనండి</string>
     <string name="crm_list_logout">లాగ్ అవుట్</string>
-    <string name="crm_list_create">ప్రాజెక్ట్‌ను సృష్టించండి</string>
-    <string name="crm_create_title">ప్రాజెక్ట్‌ను సృష్టించండి</string>
+    <string name="crm_list_create">CRMను సృష్టించండి</string>
+    <string name="crm_create_title">CRMను సృష్టించండి</string>
     <string name="crm_create_name">పేరు</string>
     <string name="crm_create_description">వివరణ</string>
     <string name="crm_create_privacy">గోప్యత</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">పబ్లిక్</string>
     <string name="crm_create_template_none">ఏదీ లేదు</string>
     <string name="crm_create_action">సృష్టించండి</string>
-    <string name="crm_find_title">ప్రాజెక్ట్‌లను కనుగొనండి</string>
+    <string name="crm_find_title">CRMలను కనుగొనండి</string>
     <string name="crm_find_recommended">రికమెండ్ చేయబడింది</string>
     <string name="crm_find_subscribe">చందా చేరండి</string>
     <string name="crm_loading">లోడ్ చేస్తోంది…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">మార్పులను సేవ్ చేయండి</string>
     <string name="crm_settings_unsubscribe">చందా మానివేయండి</string>
     <string name="crm_settings_delete_crm">ప్రాజెక్ట్‌ను తొలగించండి</string>
-    <string name="crm_settings_delete_confirm_title">ప్రాజెక్ట్‌ను తొలగించండి</string>
+    <string name="crm_settings_delete_confirm_title">CRMను తొలగించండి</string>
     <string name="crm_settings_unsubscribe_title">చందా మానివేయండి</string>
-    <string name="crm_settings_unsubscribe_message">మీరు ఈ ప్రాజెక్ట్ నుండి చందా రద్దు చేయాలనుకుంటున్నారా?</string>
+    <string name="crm_settings_unsubscribe_message">మీరు ఈ CRM నుండి చందా రద్దు చేయాలనుకుంటున్నారా?</string>
     <string name="crm_access_level_owner">ఓనర్</string>
     <string name="crm_access_level_design">డిజైన్</string>
     <string name="crm_access_level_comment">వ్యాఖ్య</string>

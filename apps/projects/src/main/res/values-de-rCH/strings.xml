@@ -2,7 +2,6 @@
 <resources>
 
     <string name="projects_list_close_search">Suche schliessen</string>
-    <string name="projects_create_privacy">Privacy</string>
     <string name="projects_request_close">Schliessen</string>
 
     <string name="projects_create_name">Name</string>
@@ -71,7 +70,6 @@
     <string name="projects_views_move_up">Nach oben verschieben</string>
     <string name="projects_views_move_down">Nach unten verschieben</string>
     <string name="projects_object_tab_comments">Kommentare</string>
-    <string name="projects_object_tab_attachments">Attachments</string>
     <string name="projects_parent_label">Übergeordnet</string>
     <string name="projects_field_yes">Ja</string>
     <string name="projects_field_no">Nein</string>
@@ -80,14 +78,9 @@
     <string name="projects_comment_empty">Noch keine Kommentare</string>
     <string name="projects_comment_attach">Dateien anhängen</string>
     <string name="projects_comment_remove_attachment">Anhang entfernen</string>
-    <string name="projects_attachments">Attachments</string>
-    <string name="projects_request_method">Methodä</string>
     <string name="projects_board_unassigned">Nicht zugewiesen</string>
     <string name="projects_board_rename">Umbenennen</string>
     <string name="projects_move_position">Position</string>
-    <string name="projects_move_position_top">Top</string>
-    <string name="projects_move_current">Current</string>
-    <string name="projects_class_save_name">Save name</string>
     <string name="projects_class_move_up">Nach oben verschieben</string>
     <string name="projects_class_move_down">Nach unten verschieben</string>
     <string name="projects_field_type_text">Text</string>
@@ -324,24 +317,19 @@
     <string name="projects_filter_other">Andere</string>
     <string name="projects_create_object_title">Neu</string>
     <string name="projects_settings_section_identity">Identität</string>
-    <string name="projects_settings_access_updated">Access updated</string>
     <string name="projects_settings_access_revoked">Zugriff entzogen</string>
     <string name="projects_settings_section_access">Zugriffsverwaltung</string>
     <string name="projects_people_search">Personen suchen</string>
-    <string name="projects_settings_field_entity_id">Entity ID</string>
     <string name="projects_settings_field_fingerprint">Fingerabdruck</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Jeder</string>
     <string name="projects_access_subject_authenticated">Authentifizierte Benutzer</string>
     <string name="projects_access_select_role">Rolle auswählen</string>
-    <string name="projects_access_role_view">View only</string>
-    <string name="projects_access_role_none">No access</string>
     <string name="projects_access_tab_users">Benutzer</string>
     <string name="projects_access_tab_groups">Gruppen</string>
     <string name="projects_access_tab_other">Andere</string>
     <string name="projects_access_search_users">Benutzer suchen</string>
     <string name="projects_access_select_group">Gruppe auswählen</string>
-    <string name="projects_access_no_groups">No groups available</string>
     <string name="projects_access_select_rule">Regel auswählen</string>
     <string name="projects_access_authenticated_desc">Alle angemeldeten Benutzer</string>
     <string name="projects_access_anyone_desc">Einschliesslich anonymer Benutzer</string>

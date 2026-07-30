@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">प्यादा</string>
     <string name="chess_move_played">%1$s ने %2$s खेळले</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">बुद्धिबळाच्या चाली, बरोबरीच्या प्रस्ताव आणि खेळाच्या निकालांबद्दल सूचना.</string>
+    <string name="chess_open_sidebar">साइडबार उघडा</string>
+    <string name="chess_empty_subtitle">मित्रासोबत बुद्धिबळ खेळण्यासाठी तुमचा पहिला खेळ सुरू करा.</string>
+    <string name="chess_empty_start_button">तुमचा पहिला खेळ सुरू करा</string>
+    <string name="chess_detail_unavailable">खेळ उपलब्ध नाही</string>
+    <string name="chess_delete_title">खेळ हटवायचा?</string>
+    <string name="chess_delete_message">हे खेळ तुमच्या यादीतून काढून टाकते.</string>
+    <string name="chess_ws_connecting">कनेक्ट होत आहे…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">पुन्हा कनेक्ट होत आहे…</string>
+    <string name="chess_ws_failed">कनेक्शन अयशस्वी झाले</string>
+    <string name="chess_move_capture">%1$s ने %2$s घेतले</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

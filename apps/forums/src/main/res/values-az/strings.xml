@@ -2,7 +2,7 @@
 <resources>
 
     <string name="forums_auth_display_name">Göstərilən ad</string>
-    <string name="forums_auth_verification_failed">Yoxla</string>
+    <string name="forums_auth_verification_failed">Doğrulama uğursuz oldu</string>
     <string name="forums_list_title">Forumlar</string>
     <string name="forums_list_close_search">Axtarışı bağla</string>
     <string name="forums_list_search">Axtar</string>

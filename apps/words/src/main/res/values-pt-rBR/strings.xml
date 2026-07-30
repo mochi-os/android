@@ -30,7 +30,6 @@
     <string name="words_detail_action_resign">Desistir</string>
     <string name="words_detail_action_rematch">Revanche</string>
     <string name="words_detail_action_delete">Excluir jogo</string>
-    <string name="words_detail_chat_title">Chat</string>
     <string name="words_detail_invalid_move">Jogada inválida</string>
     <string name="words_detail_recall">Revogar</string>
     <string name="words_detail_submit">Enviar</string>

@@ -3,12 +3,7 @@
 
     <string name="auth_continue">Continuá</string>
     <string name="auth_verify">Verificá</string>
-    <string name="auth_privacy_label">Privacy</string>
-    <string name="auth_link_privacy">Privacy</string>
-    <string name="common_cancel">Cancelá</string>
-    <string name="common_confirm">Confirmá</string>
     <string name="common_save">Guardá</string>
-    <string name="common_edit">Editá</string>
     <string name="common_delete">Eliminá</string>
     <string name="common_add">Agregá</string>
     <string name="common_logout">Cerrá sesión</string>
@@ -19,14 +14,11 @@
     <string name="comment_send_reply">Enviá la respuesta</string>
     <string name="person_picker_search">Buscá usuarios</string>
     <string name="notifications_mark_all_read">Marcá todo como leído</string>
-    <string name="settings_radius_medium">Medium</string>
-    <string name="settings_font_serif">Serif</string>
     <string name="settings_font_size_normal">Normal</string>
     <string name="settings_reset_to_defaults">Reiniciá a los valores predeterminados</string>
     <string name="settings_reset_confirm_title">¿Reiniciás las preferencias?</string>
     <string name="settings_reset">Reiniciá</string>
     <string name="settings_display_reset">Reiniciá a los valores predeterminados</string>
-    <string name="profile_privacy">Privacy</string>
     <string name="game_chat_input_placeholder">Escribí un mensaje…</string>
     <string name="game_chat_send">Enviá el mensaje</string>
 
@@ -69,7 +61,6 @@
     <string name="common_change">Cambiar</string>
     <string name="common_retry">Reintentar</string>
     <string name="common_copy">Copiar</string>
-    <string name="comment_edited">(edited)</string>
     <string name="discovery_recommended">Recomendados</string>
     <string name="discovery_subscribed">Suscripto</string>
     <string name="access_revoke">Revocar</string>
@@ -83,7 +74,6 @@
     <string name="profile_title">Perfil</string>
     <string name="profile_open">Perfil</string>
     <string name="profile_display_name">Nombre visible</string>
-    <string name="profile_save_name">Save name</string>
     <string name="profile_fingerprint">Huella digital</string>
     <string name="game_chat_load_more">Cargar mensajes anteriores</string>
     <string name="game_chat_move_played">%1$s jugó %2$s</string>

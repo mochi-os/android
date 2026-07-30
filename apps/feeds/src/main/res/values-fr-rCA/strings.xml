@@ -57,7 +57,6 @@
     <string name="feeds_access_users">Utilisateurs</string>
     <string name="feeds_access_groups">Groupes</string>
     <string name="feeds_access_no_groups">Aucun groupe disponible</string>
-    <string name="feeds_access_permission">Permission</string>
     <string name="feeds_rss_url_copied">URL du fil RSS copiée dans le presse-papiers</string>
     <string name="feeds_ai_account">Compte IA</string>
     <string name="feeds_ai_account_default">Compte par défaut</string>

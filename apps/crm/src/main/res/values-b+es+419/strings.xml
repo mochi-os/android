@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nombre para mostrar</string>
     <string name="crm_auth_verification_failed">Verificación fallida</string>
-    <string name="crm_list_title">Proyectos</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">Cerrar búsqueda</string>
     <string name="crm_list_search">Buscar</string>
-    <string name="crm_list_find">Buscar proyectos</string>
+    <string name="crm_list_find">Buscar CRMs</string>
     <string name="crm_list_logout">Cerrar sesión</string>
-    <string name="crm_list_create">Crear proyecto</string>
-    <string name="crm_create_title">Crear proyecto</string>
+    <string name="crm_list_create">Crear CRM</string>
+    <string name="crm_create_title">Crear CRM</string>
     <string name="crm_create_name">Nombre</string>
     <string name="crm_create_description">Descripción</string>
     <string name="crm_create_privacy">Privacidad</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Público</string>
     <string name="crm_create_template_none">Ninguno</string>
     <string name="crm_create_action">Crear</string>
-    <string name="crm_find_title">Buscar proyectos</string>
+    <string name="crm_find_title">Buscar CRMs</string>
     <string name="crm_find_recommended">Recomendado</string>
     <string name="crm_find_subscribe">Suscribirse</string>
     <string name="crm_loading">Cargando…</string>
@@ -42,9 +42,9 @@
     <string name="crm_settings_save">Guardar cambios</string>
     <string name="crm_settings_unsubscribe">Cancelar suscripción</string>
     <string name="crm_settings_delete_crm">Eliminar proyecto</string>
-    <string name="crm_settings_delete_confirm_title">Eliminar proyecto</string>
+    <string name="crm_settings_delete_confirm_title">Eliminar CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancelar suscripción</string>
-    <string name="crm_settings_unsubscribe_message">¿Seguro que quieres cancelar la suscripción a este proyecto?</string>
+    <string name="crm_settings_unsubscribe_message">¿Seguro que quieres cancelar la suscripción a este CRM?</string>
     <string name="crm_access_level_owner">Propietario</string>
     <string name="crm_access_level_design">Diseño</string>
     <string name="crm_access_level_comment">Comentario</string>

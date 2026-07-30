@@ -50,7 +50,6 @@
     <string name="feeds_comments">Comentarios</string>
     <string name="feeds_delete_post_confirm">¿Estás seguro de que querés eliminar esta publicación? Esta acción no se puede deshacer.</string>
     <string name="feeds_delete_comment_confirm">¿Seguro que querés eliminar este comentario?</string>
-    <string name="feeds_tags">Tags</string>
     <string name="feeds_add_tag">Agregar etiqueta</string>
     <string name="feeds_write_a_comment">Escribí un comentario…</string>
     <string name="feeds_file">Archivo</string>
@@ -58,22 +57,17 @@
     <string name="feeds_move_down">Mover hacia abajo</string>
     <string name="feeds_tab_access">Acceso</string>
     <string name="feeds_tab_ai">IA</string>
-    <string name="feeds_save_name">Save name</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_clear">Quitar</string>
     <string name="feeds_danger_zone">Zona de peligro</string>
     <string name="feeds_no_members">No hay miembros</string>
     <string name="feeds_access_users">Usuarios</string>
     <string name="feeds_access_groups">Grupos</string>
-    <string name="feeds_access_no_groups">No groups available</string>
-    <string name="feeds_access_permission">Permission</string>
-    <string name="feeds_rss_url_copied">RSS URL copied to clipboard</string>
     <string name="feeds_ai_account">Cuenta de IA</string>
     <string name="feeds_ai_account_default">Cuenta predeterminada</string>
     <string name="feeds_ai_mode_off">Deshabilitada</string>
     <string name="feeds_ai_mode_tag">Etiqueta</string>
     <string name="feeds_post_not_found">Publicación no encontrada</string>
-    <string name="feeds_settings_access_updated">Access updated</string>
     <string name="feeds_settings_member_removed">Miembro eliminado</string>
     <string name="feeds_location">Ubicación</string>
 
@@ -196,8 +190,6 @@
     <string name="feeds_saved_clear_all">Borrar todo</string>
     <string name="feeds_caught_up">Estás al día</string>
     <string name="feeds_view_all_posts">Mirá todos los posteos</string>
-    <string name="feeds_access_level_none_full">No access</string>
-    <string name="feeds_access_level_view_full">View only</string>
     <string name="feeds_access_search_users">Buscá usuarios</string>
     <string name="feeds_access_segment_group">Grupo</string>
     <string name="feeds_access_segment_other">Otro</string>
@@ -207,8 +199,6 @@
     <string name="feeds_access_subject_authenticated">Usuarios autenticados</string>
     <string name="feeds_markdown_supported">Compatible con Markdown</string>
     <string name="feeds_permission_deny">Denegar</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_settings_field_entity_id">Entity ID</string>
     <string name="feeds_settings_field_fingerprint">Huella digital</string>
     <string name="feeds_settings_name_edit_cd">Editá el nombre</string>
     <string name="feeds_settings_section_identity">Identidad</string>

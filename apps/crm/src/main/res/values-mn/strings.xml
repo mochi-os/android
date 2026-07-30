@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Харагдах нэр</string>
     <string name="crm_auth_verification_failed">Баталгаажуулалт амжилтгүй</string>
-    <string name="crm_list_title">Төслүүд</string>
+    <string name="crm_list_title">CRM-үүд</string>
     <string name="crm_list_close_search">Хайлтыг хаах</string>
     <string name="crm_list_search">Хайх</string>
-    <string name="crm_list_find">Төсөл хайх</string>
+    <string name="crm_list_find">CRM хайх</string>
     <string name="crm_list_logout">Гарах</string>
-    <string name="crm_list_create">Төсөл үүсгэх</string>
-    <string name="crm_create_title">Төсөл үүсгэх</string>
+    <string name="crm_list_create">CRM үүсгэх</string>
+    <string name="crm_create_title">CRM үүсгэх</string>
     <string name="crm_create_name">Нэр</string>
     <string name="crm_create_description">Тайлбар</string>
     <string name="crm_create_privacy">Нууцлал</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Нийтийн</string>
     <string name="crm_create_template_none">Алга</string>
     <string name="crm_create_action">Үүсгэх</string>
-    <string name="crm_find_title">Төсөл хайх</string>
+    <string name="crm_find_title">CRM хайх</string>
     <string name="crm_find_recommended">Зөвлөмжтэй</string>
     <string name="crm_find_subscribe">Захиалах</string>
     <string name="crm_loading">Ачаалж байна…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Өөрчлөлт хадгалах</string>
     <string name="crm_settings_unsubscribe">Захиалгаас гарах</string>
     <string name="crm_settings_delete_crm">Төсөл устгах</string>
-    <string name="crm_settings_delete_confirm_title">Төсөл устгах</string>
+    <string name="crm_settings_delete_confirm_title">CRM устгах</string>
     <string name="crm_settings_unsubscribe_title">Захиалгаас гарах</string>
-    <string name="crm_settings_unsubscribe_message">Энэ төслийн захиалгаас гарахдаа итгэлтэй байна уу?</string>
+    <string name="crm_settings_unsubscribe_message">Энэ CRM-ийн захиалгаас гарахдаа итгэлтэй байна уу?</string>
     <string name="crm_access_level_owner">Эзэмшигч</string>
     <string name="crm_access_level_design">Дизайн</string>
     <string name="crm_access_level_comment">Сэтгэгдэл</string>

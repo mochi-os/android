@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Bistaratzeko izena</string>
     <string name="crm_auth_verification_failed">Egiaztatzeak huts egin du</string>
-    <string name="crm_list_title">Proiektuak</string>
+    <string name="crm_list_title">CRMak</string>
     <string name="crm_list_close_search">Itxi bilaketa</string>
     <string name="crm_list_search">Bilatu</string>
-    <string name="crm_list_find">Aurkitu proiektuak</string>
+    <string name="crm_list_find">Aurkitu CRMak</string>
     <string name="crm_list_logout">Amaitu saioa</string>
-    <string name="crm_list_create">Sortu proiektua</string>
-    <string name="crm_create_title">Sortu proiektua</string>
+    <string name="crm_list_create">Sortu CRMa</string>
+    <string name="crm_create_title">Sortu CRMa</string>
     <string name="crm_create_name">Izena</string>
     <string name="crm_create_description">Deskribapena</string>
     <string name="crm_create_privacy">Pribatutasuna</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Publikoa</string>
     <string name="crm_create_template_none">Bat ere ez</string>
     <string name="crm_create_action">Sortu</string>
-    <string name="crm_find_title">Aurkitu proiektuak</string>
+    <string name="crm_find_title">Aurkitu CRMak</string>
     <string name="crm_find_recommended">Gomendatua</string>
     <string name="crm_find_subscribe">Harpidetu</string>
     <string name="crm_loading">Kargatzen…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Gorde aldaketak</string>
     <string name="crm_settings_unsubscribe">Harpidetza kendu</string>
     <string name="crm_settings_delete_crm">Ezabatu proiektua</string>
-    <string name="crm_settings_delete_confirm_title">Ezabatu proiektua</string>
+    <string name="crm_settings_delete_confirm_title">Ezabatu CRMa</string>
     <string name="crm_settings_unsubscribe_title">Harpidetza kendu</string>
-    <string name="crm_settings_unsubscribe_message">Ziur al zaude proiektu honetatik harpidetza kendu nahi duzula?</string>
+    <string name="crm_settings_unsubscribe_message">Ziur al zaude CRM honetatik harpidetza kendu nahi duzula?</string>
     <string name="crm_access_level_owner">Jabea</string>
     <string name="crm_access_level_design">Diseinua</string>
     <string name="crm_access_level_comment">Iruzkina</string>

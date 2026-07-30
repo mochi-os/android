@@ -265,7 +265,7 @@
     <string name="forums_access_select_group">Mä grupo ajlliña</string>
     <string name="forums_access_select_rule">Mä regla ajlliña</string>
     <string name="forums_ai_actions_label">AI luräwinaka qillqatanakan</string>
-    <string name="forums_ai_prompt_custom">Personalizata</string>
+    <string name="forums_ai_prompt_custom">Sapa</string>
     <string name="forums_ai_prompt_score_label">Puntaje prompt</string>
     <string name="forums_ai_prompt_tag_label">Etiqueta prompt</string>
     <string name="forums_ai_prompt_variables">Variablenaka: %1$s</string>

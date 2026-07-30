@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">প্রদর্শনের নাম</string>
     <string name="crm_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
-    <string name="crm_list_title">প্রকল্প</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">অনুসন্ধান বন্ধ করুন</string>
     <string name="crm_list_search">অনুসন্ধান</string>
-    <string name="crm_list_find">প্রকল্প খুঁজুন</string>
+    <string name="crm_list_find">CRM খুঁজুন</string>
     <string name="crm_list_logout">লগ আউট করুন</string>
-    <string name="crm_list_create">প্রজেক্ট তৈরি করুন</string>
-    <string name="crm_create_title">প্রজেক্ট তৈরি করুন</string>
+    <string name="crm_list_create">CRM তৈরি করুন</string>
+    <string name="crm_create_title">CRM তৈরি করুন</string>
     <string name="crm_create_name">নাম</string>
     <string name="crm_create_description">বিবরণ</string>
     <string name="crm_create_privacy">গোপনীয়তা</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">সর্বজনীন</string>
     <string name="crm_create_template_none">কোনোটি নয়</string>
     <string name="crm_create_action">তৈরি করুন</string>
-    <string name="crm_find_title">প্রকল্প খুঁজুন</string>
+    <string name="crm_find_title">CRM খুঁজুন</string>
     <string name="crm_find_recommended">সুপারিশকৃত</string>
     <string name="crm_find_subscribe">সাবস্ক্রাইব করুন</string>
     <string name="crm_loading">লোড হচ্ছে…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">পরিবর্তন সংরক্ষণ করুন</string>
     <string name="crm_settings_unsubscribe">আনসাবস্ক্রাইব করুন</string>
     <string name="crm_settings_delete_crm">প্রজেক্ট মুছুন</string>
-    <string name="crm_settings_delete_confirm_title">প্রজেক্ট মুছুন</string>
+    <string name="crm_settings_delete_confirm_title">CRM মুছুন</string>
     <string name="crm_settings_unsubscribe_title">আনসাবস্ক্রাইব করুন</string>
-    <string name="crm_settings_unsubscribe_message">আপনি কি নিশ্চিত এই প্রজেক্ট থেকে আনসাবস্ক্রাইব করতে চান?</string>
+    <string name="crm_settings_unsubscribe_message">আপনি কি নিশ্চিত এই CRM থেকে আনসাবস্ক্রাইব করতে চান?</string>
     <string name="crm_access_level_owner">মালিক</string>
     <string name="crm_access_level_design">ডিজাইন</string>
     <string name="crm_access_level_comment">মন্তব্য</string>

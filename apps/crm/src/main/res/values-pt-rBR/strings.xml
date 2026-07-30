@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nome de exibição</string>
     <string name="crm_auth_verification_failed">Falha na verificação</string>
-    <string name="crm_list_title">Projetos</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">Fechar pesquisa</string>
     <string name="crm_list_search">Pesquisar</string>
-    <string name="crm_list_find">Encontrar projetos</string>
+    <string name="crm_list_find">Encontrar CRMs</string>
     <string name="crm_list_logout">Sair</string>
-    <string name="crm_list_create">Criar projeto</string>
-    <string name="crm_create_title">Criar projeto</string>
+    <string name="crm_list_create">Criar CRM</string>
+    <string name="crm_create_title">Criar CRM</string>
     <string name="crm_create_name">Nome</string>
     <string name="crm_create_description">Descrição</string>
     <string name="crm_create_privacy">Privacidade</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Público</string>
     <string name="crm_create_template_none">Nenhum</string>
     <string name="crm_create_action">Criar</string>
-    <string name="crm_find_title">Encontrar projetos</string>
+    <string name="crm_find_title">Encontrar CRMs</string>
     <string name="crm_find_recommended">Recomendado</string>
     <string name="crm_find_subscribe">Inscrever-se</string>
     <string name="crm_loading">Carregando…</string>
@@ -42,9 +42,9 @@
     <string name="crm_settings_save">Salvar alterações</string>
     <string name="crm_settings_unsubscribe">Cancelar inscrição</string>
     <string name="crm_settings_delete_crm">Excluir projeto</string>
-    <string name="crm_settings_delete_confirm_title">Excluir projeto</string>
+    <string name="crm_settings_delete_confirm_title">Excluir CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancelar inscrição</string>
-    <string name="crm_settings_unsubscribe_message">Tem certeza de que deseja cancelar a assinatura deste projeto?</string>
+    <string name="crm_settings_unsubscribe_message">Tem certeza de que deseja cancelar a assinatura deste CRM?</string>
     <string name="crm_access_level_owner">Proprietário</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_comment">Comentário</string>
@@ -56,12 +56,10 @@
     <string name="crm_object_tab_activity">Atividade</string>
     <string name="crm_object_tab_requests">Solicitações</string>
     <string name="crm_object_tab_attachments">Anexos</string>
-    <string name="crm_object_tab_links">Links</string>
     <string name="crm_watchers_watch">Observar</string>
     <string name="crm_watchers_unwatch">Parar de observar</string>
     <string name="crm_parent_label">Pai</string>
     <string name="crm_parent_search_placeholder">Pesquisar</string>
-    <string name="crm_links_title">Links</string>
     <string name="crm_links_add">Adicionar link</string>
     <string name="crm_links_section_blocks">Bloqueia</string>
     <string name="crm_links_section_blocked_by">Bloqueado por</string>
@@ -130,7 +128,6 @@
     <string name="crm_field_type_number">Número</string>
     <string name="crm_field_type_user">Usuário</string>
     <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Checklist</string>
     <string name="crm_field_name">Nome</string>
     <string name="crm_field_type">Tipo</string>
     <string name="crm_field_flags">Sinalizações</string>
@@ -179,7 +176,6 @@
     <string name="crm_links_search_placeholder">Pesquisar objetos</string>
 
     <string name="notification_channel_crm">Notificações de CRMs</string>
-    <string name="crm_auth_brand">Mochi CRMs</string>
     <string name="crm_auth_create_identity_failed">Falha ao criar identidade</string>
     <string name="crm_auth_mfa_unsupported">MFA ainda não é suportado no aplicativo móvel</string>
     <string name="crm_auth_enter_code_sent">Digite o código enviado para %1$s</string>

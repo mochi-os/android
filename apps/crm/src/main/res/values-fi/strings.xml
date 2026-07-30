@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Näyttönimi</string>
     <string name="crm_auth_verification_failed">Vahvistus epäonnistui</string>
-    <string name="crm_list_title">Projektit</string>
+    <string name="crm_list_title">CRM:t</string>
     <string name="crm_list_close_search">Sulje haku</string>
     <string name="crm_list_search">Haku</string>
-    <string name="crm_list_find">Etsi projekteja</string>
+    <string name="crm_list_find">Etsi CRM:iä</string>
     <string name="crm_list_logout">Kirjaudu ulos</string>
-    <string name="crm_list_create">Luo projekti</string>
-    <string name="crm_create_title">Luo projekti</string>
+    <string name="crm_list_create">Luo CRM</string>
+    <string name="crm_create_title">Luo CRM</string>
     <string name="crm_create_name">Nimi</string>
     <string name="crm_create_description">Kuvaus</string>
     <string name="crm_create_privacy">Yksityisyys</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Julkinen</string>
     <string name="crm_create_template_none">Ei mitään</string>
     <string name="crm_create_action">Luo</string>
-    <string name="crm_find_title">Etsi projekteja</string>
+    <string name="crm_find_title">Etsi CRM:iä</string>
     <string name="crm_find_recommended">Suositeltu</string>
     <string name="crm_find_subscribe">Tilaa</string>
     <string name="crm_loading">Ladataan…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Tallenna muutokset</string>
     <string name="crm_settings_unsubscribe">Peru tilaus</string>
     <string name="crm_settings_delete_crm">Poista projekti</string>
-    <string name="crm_settings_delete_confirm_title">Poista projekti</string>
+    <string name="crm_settings_delete_confirm_title">Poista CRM</string>
     <string name="crm_settings_unsubscribe_title">Peru tilaus</string>
-    <string name="crm_settings_unsubscribe_message">Haluatko varmasti peruuttaa tämän projektin tilauksen?</string>
+    <string name="crm_settings_unsubscribe_message">Haluatko varmasti peruuttaa tämän CRM:n tilauksen?</string>
     <string name="crm_access_level_owner">Omistaja</string>
     <string name="crm_access_level_design">Suunnittelu</string>
     <string name="crm_access_level_comment">Kommentti</string>

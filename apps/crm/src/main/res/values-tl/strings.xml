@@ -2,7 +2,7 @@
 <resources>
     <string name="crm_auth_display_name">Display name</string>
     <string name="crm_auth_verification_failed">Nabigo ang beripikasyon</string>
-    <string name="crm_list_title">Mga Proyekto</string>
+    <string name="crm_list_title">Mga CRM</string>
     <string name="crm_list_close_search">Isara ang paghahanap</string>
     <string name="crm_list_search">Maghanap</string>
     <string name="crm_list_find">Maghanap ng mga CRM</string>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Խմբագրել կատեգորիան</string>
     <string name="notifprefs_name_label">Անուն</string>
     <string name="notifprefs_destinations">Նպատակակետեր</string>
-    <string name="notifprefs_dest_web">Մոդերացնել, գրառել, մեկնաբանել, քվեարկել և դիտել</string>
+    <string name="notifprefs_dest_web">Mochi վեբ</string>
     <string name="notifprefs_test">Թեստ</string>
     <string name="notifprefs_edit">Խմբագրել</string>
     <string name="notifprefs_delete">Ջնջել</string>
@@ -145,10 +145,10 @@
     <string name="system_settings_setting_updated">Կարգավորումը թարմացվեց</string>
     <string name="system_settings_update_failed">Չհաջողվեց թարմացնել կարգավորումը</string>
     <string name="system_setting_apps_install_user">Թույլատրված է</string>
-    <string name="system_setting_auth_email">Կորած</string>
+    <string name="system_setting_auth_email">Մուտք գործել էլփոստի կոդով</string>
     <string name="system_setting_auth_passkey">Մուտքը կորե՞լ է։ Օգտագործեք վերականգնման կոդ</string>
     <string name="system_setting_auth_totp">Մուտք վերականգնման կոդով</string>
-    <string name="system_setting_auth_recovery">Սիրել</string>
+    <string name="system_setting_auth_recovery">Մուտք գործել վերականգնման կոդով</string>
     <string name="system_setting_auth_oauth">Մուտք անցաբանալիով</string>
     <string name="system_setting_default_theme">Լռելյայն թեմա</string>
     <string name="system_setting_domains_verification">Պահանջել տիրույթի հաստատում</string>

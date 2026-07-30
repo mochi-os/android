@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">Gwerinwr</string>
     <string name="chess_move_played">Chwaraeodd %1$s %2$s</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">Hysbysiadau am symudiadau gwyddbwyll, cynigion gêm gyfartal a chanlyniadau gemau.</string>
+    <string name="chess_open_sidebar">Agor y bar ochr</string>
+    <string name="chess_empty_subtitle">Dechreuwch eich gêm gyntaf i chwarae gwyddbwyll gyda ffrind.</string>
+    <string name="chess_empty_start_button">Dechreuwch eich gêm gyntaf</string>
+    <string name="chess_detail_unavailable">Gêm ddim ar gael</string>
+    <string name="chess_delete_title">Dileu\'r gêm?</string>
+    <string name="chess_delete_message">Mae hyn yn tynnu’r gêm o’ch rhestr.</string>
+    <string name="chess_ws_connecting">Wrthi\'n cysylltu…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">Ailgysylltu…</string>
+    <string name="chess_ws_failed">Methodd y cysylltiad</string>
+    <string name="chess_move_capture">Cymerodd %1$s %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

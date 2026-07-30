@@ -209,7 +209,7 @@
     </plurals>
     <string name="feeds_caught_up">Hər şeyi gördünüz</string>
     <string name="feeds_all_caught_up">Hamısı tutulub</string>
-    <string name="feeds_view_all_posts">Bu istifadəçinin aktiv sessiyalarına baxın və ləğv edin.</string>
+    <string name="feeds_view_all_posts">Bütün yazılara bax</string>
     <string name="feeds_access_level_none_full">Giriş yoxdur</string>
     <string name="feeds_access_level_view_full">Yalnız baxış</string>
     <string name="feeds_access_search_users">İstifadəçi axtar</string>

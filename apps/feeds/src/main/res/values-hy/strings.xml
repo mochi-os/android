@@ -237,7 +237,7 @@
     <string name="feeds_permission_request_title">Թույլտվության հարցում</string>
     <string name="feeds_unsubscribe_confirm">Ապաբաժանորդագրվե՞լ հոսքից</string>
     <string name="feeds_settings_title">%1$s կարգավորումներ</string>
-    <string name="feeds_source_transform_help">Ձախից աջ</string>
+    <string name="feeds_source_transform_help">Թողեք դատարկ՝ անջատելու համար։</string>
     <string name="feeds_settings_name_cancel_cd">Չեղարկել խմբագրումը</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
     <string name="feeds_access_management">Մուտքի կառավարում</string>

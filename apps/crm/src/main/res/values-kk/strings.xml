@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Көрсетілетін атау</string>
     <string name="crm_auth_verification_failed">Тексеру сәтсіз</string>
-    <string name="crm_list_title">Жобалар</string>
+    <string name="crm_list_title">CRM-дер</string>
     <string name="crm_list_close_search">Іздеуді жабу</string>
     <string name="crm_list_search">Іздеу</string>
-    <string name="crm_list_find">Жобаларды табу</string>
+    <string name="crm_list_find">CRM табу</string>
     <string name="crm_list_logout">Шығу</string>
-    <string name="crm_list_create">Жоба құру</string>
-    <string name="crm_create_title">Жоба құру</string>
+    <string name="crm_list_create">CRM құру</string>
+    <string name="crm_create_title">CRM құру</string>
     <string name="crm_create_name">Аты</string>
     <string name="crm_create_description">Сипаттама</string>
     <string name="crm_create_privacy">Құпиялылық</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Қоғамдық</string>
     <string name="crm_create_template_none">Жоқ</string>
     <string name="crm_create_action">Құру</string>
-    <string name="crm_find_title">Жобаларды табу</string>
+    <string name="crm_find_title">CRM табу</string>
     <string name="crm_find_recommended">Ұсынылған</string>
     <string name="crm_find_subscribe">Жазылу</string>
     <string name="crm_loading">Жүктелуде…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Өзгерістерді сақтау</string>
     <string name="crm_settings_unsubscribe">Жазылудан бас тарту</string>
     <string name="crm_settings_delete_crm">Жобаны жою</string>
-    <string name="crm_settings_delete_confirm_title">Жобаны жою</string>
+    <string name="crm_settings_delete_confirm_title">CRM жою</string>
     <string name="crm_settings_unsubscribe_title">Жазылудан бас тарту</string>
-    <string name="crm_settings_unsubscribe_message">Осы жобадан жазылудан бас тартқыңыз келетініне сенімдісіз бе?</string>
+    <string name="crm_settings_unsubscribe_message">Осы CRM-нен жазылудан бас тартқыңыз келетініне сенімдісіз бе?</string>
     <string name="crm_access_level_owner">Иесі</string>
     <string name="crm_access_level_design">Дизайн</string>
     <string name="crm_access_level_comment">Пікір</string>

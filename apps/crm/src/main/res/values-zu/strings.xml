@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Igama lokubonisa</string>
     <string name="crm_auth_verification_failed">Ukuqinisekiswa kuhlulekile</string>
-    <string name="crm_list_title">Amaphrojekthi</string>
+    <string name="crm_list_title">Ama-CRM</string>
     <string name="crm_list_close_search">Vala usesho</string>
     <string name="crm_list_search">Sesha</string>
-    <string name="crm_list_find">Thola amaphrojekthi</string>
+    <string name="crm_list_find">Thola ama-CRM</string>
     <string name="crm_list_logout">Phuma</string>
-    <string name="crm_list_create">Dala iprojekthi</string>
-    <string name="crm_create_title">Dala iprojekthi</string>
+    <string name="crm_list_create">Dala i-CRM</string>
+    <string name="crm_create_title">Dala i-CRM</string>
     <string name="crm_create_name">Igama</string>
     <string name="crm_create_description">Incazelo</string>
     <string name="crm_create_privacy">Ubumfihlo</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Emphakathini</string>
     <string name="crm_create_template_none">Lutho</string>
     <string name="crm_create_action">Dala</string>
-    <string name="crm_find_title">Thola amaphrojekthi</string>
+    <string name="crm_find_title">Thola ama-CRM</string>
     <string name="crm_find_recommended">Kunconywayo</string>
     <string name="crm_find_subscribe">Bhalisa</string>
     <string name="crm_loading">Kulayishwa…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Londoloza izinguquko</string>
     <string name="crm_settings_unsubscribe">Susa ukubhalisa</string>
     <string name="crm_settings_delete_crm">Susa iprojekthi</string>
-    <string name="crm_settings_delete_confirm_title">Susa iprojekthi</string>
+    <string name="crm_settings_delete_confirm_title">Susa i-CRM</string>
     <string name="crm_settings_unsubscribe_title">Susa ukubhalisa</string>
-    <string name="crm_settings_unsubscribe_message">Uqinisekile ufuna ukukhansela ukubhalisa kule projekthi?</string>
+    <string name="crm_settings_unsubscribe_message">Uqinisekile ufuna ukukhansela ukubhalisa kule CRM?</string>
     <string name="crm_access_level_owner">Umnikazi</string>
     <string name="crm_access_level_design">Idizayini</string>
     <string name="crm_access_level_comment">Umbono</string>

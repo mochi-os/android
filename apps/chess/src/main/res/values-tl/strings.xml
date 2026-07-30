@@ -23,7 +23,7 @@
     <string name="chess_open_actions">Buksan ang mga aksyon ng laro</string>
     <string name="chess_offer_draw">Mag-alok ng tabla</string>
     <string name="chess_resign">Sumuko</string>
-    <string name="chess_rematch">Rematch</string>
+    <string name="chess_rematch">Muling maglaban</string>
     <string name="chess_delete_game">I-delete ang game</string>
     <string name="chess_side_white">Puti</string>
     <string name="chess_side_black">Itim</string>
@@ -34,7 +34,7 @@
     <string name="chess_draw_decline">Tanggihan</string>
     <string name="chess_status_checkmate_you_win">Checkmate — nanalo ka!</string>
     <string name="chess_status_stalemate">Stalemate — patas</string>
-    <string name="chess_status_draw">Draw</string>
+    <string name="chess_status_draw">Tabla</string>
     <string name="chess_status_check_your_move">Check — galaw mo na</string>
     <string name="chess_status_your_move">Galaw mo</string>
     <string name="chess_move_subject_you">Ikaw</string>
@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">Peon</string>
     <string name="chess_move_played">Naglaro si %1$s ng %2$s</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">Mga abiso tungkol sa mga galaw sa chess, alok na tabla at resulta ng laro.</string>
+    <string name="chess_open_sidebar">Buksan ang sidebar</string>
+    <string name="chess_empty_subtitle">Simulan ang iyong unang laro upang makipag-chess sa isang kaibigan.</string>
+    <string name="chess_empty_start_button">Simulan ang iyong unang laro</string>
+    <string name="chess_detail_unavailable">Hindi available ang laro</string>
+    <string name="chess_delete_title">Tanggalin ang laro?</string>
+    <string name="chess_delete_message">Aalisin nito ang laro sa iyong listahan.</string>
+    <string name="chess_ws_connecting">Kumokonekta…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">Kumokonekta muli…</string>
+    <string name="chess_ws_failed">Nabigo ang koneksyon</string>
+    <string name="chess_move_capture">Kinuha ni %1$s ang %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

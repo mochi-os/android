@@ -31,15 +31,11 @@
     <string name="people_profile_upload_avatar">Subí un avatar</string>
     <string name="people_profile_upload">Subí</string>
     <string name="people_profile_change_banner">Cambiá el banner</string>
-    <string name="people_common_edit">Editá</string>
     <string name="people_common_delete">Eliminá</string>
-    <string name="people_common_cancel">Cancelá</string>
     <string name="people_common_save">Guardá</string>
     <string name="people_common_send_invitation">Enviá la invitación</string>
-    <string name="people_friends_message">Message</string>
     <string name="people_friends_close_search">Cerrá la búsqueda</string>
     <string name="people_open_sidebar">Abrí la navegación</string>
-    <string name="people_person_message">Message</string>
     <string name="people_person_accept">Aceptá</string>
     <string name="people_person_decline">Rechazá</string>
 
@@ -190,7 +186,6 @@
     <string name="people_friends_invitations_menu">Invitaciones</string>
     <string name="people_friends_groups_menu">Grupos</string>
     <string name="people_friends_profile_menu">Mi perfil</string>
-    <string name="people_sidebar_header">People</string>
     <string name="people_person_banner_alt">Banner de %1$s</string>
     <string name="people_person_fingerprint_label">Huella digital</string>
     <string name="people_person_private">Este perfil es privado</string>

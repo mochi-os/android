@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">బంటు</string>
     <string name="chess_move_played">%1$s %2$s ఆడారు</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">చెస్ ఎత్తుగడలు, డ్రా ఆఫర్లు మరియు ఆట ఫలితాల గురించి నోటిఫికేషన్‌లు.</string>
+    <string name="chess_open_sidebar">సైడ్‌బార్ తెరువు</string>
+    <string name="chess_empty_subtitle">స్నేహితుడితో చెస్ ఆడేందుకు మీ మొదటి ఆటను ప్రారంభించండి.</string>
+    <string name="chess_empty_start_button">మీ మొదటి ఆటను ప్రారంభించండి</string>
+    <string name="chess_detail_unavailable">ఆట అందుబాటులో లేదు</string>
+    <string name="chess_delete_title">గేమ్‌ను తొలగించాలా?</string>
+    <string name="chess_delete_message">ఇది ఆటను మీ జాబితా నుండి తీసివేస్తుంది.</string>
+    <string name="chess_ws_connecting">కనెక్ట్ అవుతోంది…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">మళ్లీ కనెక్ట్ అవుతోంది…</string>
+    <string name="chess_ws_failed">కనెక్షన్ విఫలమైంది</string>
+    <string name="chess_move_capture">%1$s %2$s తీసుకున్నారు</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

@@ -188,7 +188,6 @@
     <string name="staff_config_field_stripe_secret">Geheime sleutel</string>
     <string name="staff_config_group_moderation">Moderatie</string>
     <string name="staff_config_group_payments">Betalingen</string>
-    <string name="staff_config_group_reviews">Reviews</string>
     <string name="staff_config_group_stripe">Stripe</string>
     <string name="staff_config_open_sidebar">Zijbalk openen</string>
     <string name="staff_config_save">Opslaan</string>
@@ -204,7 +203,6 @@
     <string name="staff_dashboard_col_buyer">Koper</string>
     <string name="staff_dashboard_col_date">Datum</string>
     <string name="staff_dashboard_col_detail">Detail</string>
-    <string name="staff_dashboard_col_listing">Listing</string>
     <string name="staff_dashboard_col_moderation">Moderatie</string>
     <string name="staff_dashboard_col_name">Naam</string>
     <string name="staff_dashboard_col_object">Object</string>
@@ -234,7 +232,6 @@
     <string name="staff_dashboard_order_fallback">Bestelling nr. %1$s</string>
     <string name="staff_dashboard_system">Systeem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
-    <string name="staff_dashboard_tab_listings">Listings</string>
     <string name="staff_dashboard_tab_moderation">Moderatie</string>
     <string name="staff_dashboard_tab_orders">Bestellingen</string>
     <string name="staff_dashboard_tab_signups">Aanmeldingen</string>
@@ -256,7 +253,6 @@
     <string name="staff_disputes_meta_chargeback_fee_partial">%1$s terugbetaald</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">terugbetaald</string>
     <string name="staff_disputes_meta_evidence_due">Bewijs in te dienen vóór</string>
-    <string name="staff_disputes_meta_listing">Listing</string>
     <string name="staff_disputes_meta_reason">Reden</string>
     <string name="staff_disputes_meta_refunded">Terugbetaald</string>
     <string name="staff_disputes_meta_refunded_of">van %1$s</string>
@@ -282,7 +278,6 @@
     <string name="staff_disputes_resolve_failed">Geschil oplossen mislukt</string>
     <string name="staff_disputes_resolved_toast">Geschil opgelost</string>
     <string name="staff_disputes_resolving">Oplossen…</string>
-    <string name="staff_disputes_review">Review</string>
     <string name="staff_disputes_status_escalated">Geëscaleerd</string>
     <string name="staff_disputes_status_open">Open</string>
     <string name="staff_disputes_status_resolved_buyer">Opgelost (koper)</string>
@@ -330,7 +325,6 @@
     <string name="staff_listings_moderation_hold">Vasthouden</string>
     <string name="staff_listings_moderation_manual">Handmatig</string>
     <string name="staff_listings_moderation_rejected">Afgewezen</string>
-    <string name="staff_listings_moderation_review">Review</string>
     <string name="staff_listings_moderation_soft_approved">Voorlopig goedgekeurd</string>
     <string name="staff_listings_notes_label">Notities</string>
     <string name="staff_listings_open_sidebar">Zijbalk openen</string>
@@ -351,11 +345,9 @@
     <string name="staff_listings_status_removed">Verwijderd</string>
     <string name="staff_listings_status_sold">Verkocht</string>
     <string name="staff_listings_submitting">Versturen…</string>
-    <string name="staff_listings_title">Listings</string>
     <string name="staff_listings_total_count">Totaal: %1$d</string>
     <string name="staff_moderation_empty">Geen moderatiegegevens</string>
     <string name="staff_moderation_filter_clear">Filter wissen</string>
-    <string name="staff_moderation_listing_filter_placeholder">Listing-ID</string>
     <string name="staff_moderation_open_sidebar">Zijbalk openen</string>
     <string name="staff_moderation_system">Systeem</string>
     <string name="staff_moderation_title">Moderatielog</string>
@@ -403,14 +395,12 @@
     <string name="staff_reports_submit">Indienen</string>
     <string name="staff_reports_submitting">Versturen…</string>
     <string name="staff_reports_title">Rapporten</string>
-    <string name="staff_reports_type_listing">Listing</string>
     <string name="staff_reports_type_user">Gebruiker</string>
     <string name="staff_reports_view">Weergeven</string>
     <string name="staff_reviews_action_hide">Verbergen</string>
     <string name="staff_reviews_action_remove">Verwijderen</string>
     <string name="staff_reviews_action_restore">Herstellen</string>
     <string name="staff_reviews_col_date">Datum</string>
-    <string name="staff_reviews_col_listing">Listing</string>
     <string name="staff_reviews_col_rating">Beoordeling</string>
     <string name="staff_reviews_col_reviewer">Beoordelaar</string>
     <string name="staff_reviews_col_status">Status</string>
@@ -431,7 +421,6 @@
     <string name="staff_reviews_remove_title">Review verwijderen?</string>
     <string name="staff_reviews_role_buyer">Koper</string>
     <string name="staff_reviews_role_seller">Verkoper</string>
-    <string name="staff_reviews_title">Reviews</string>
     <string name="staff_reviews_toast_remove_failed">Review verwijderen mislukt</string>
     <string name="staff_reviews_toast_removed">Review verwijderd</string>
     <string name="staff_reviews_toast_update_failed">Review bijwerken mislukt</string>
@@ -442,13 +431,11 @@
     <string name="staff_sidebar_config">Configuratie</string>
     <string name="staff_sidebar_dashboard">Dashboard</string>
     <string name="staff_sidebar_disputes">Geschillen</string>
-    <string name="staff_sidebar_listings">Listings</string>
     <string name="staff_sidebar_management">Beheer</string>
     <string name="staff_sidebar_market">Markt</string>
     <string name="staff_sidebar_moderation">Moderatielog</string>
     <string name="staff_sidebar_overview">Overzicht</string>
     <string name="staff_sidebar_reports">Rapporten</string>
-    <string name="staff_sidebar_reviews">Reviews</string>
     <string name="staff_sidebar_settings">Instellingen</string>
     <string name="staff_sidebar_team">Team</string>
     <string name="staff_status_actioned">Behandeld</string>
@@ -474,7 +461,6 @@
     <string name="staff_status_resolved_buyer">Opgelost (koper)</string>
     <string name="staff_status_resolved_seller">Opgelost (verkoper)</string>
     <string name="staff_status_responded">Gereageerd</string>
-    <string name="staff_status_review">Review</string>
     <string name="staff_status_reviewed">Beoordeeld</string>
     <string name="staff_status_reviewing">Beoordelen</string>
     <string name="staff_status_soft_approved">Voorlopig goedgekeurd</string>

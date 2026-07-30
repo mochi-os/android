@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">പ്രദർശന നാമം</string>
     <string name="crm_auth_verification_failed">സ്ഥിരീകരണം പരാജയപ്പെട്ടു</string>
-    <string name="crm_list_title">prompt സേവ് ചെയ്തു</string>
+    <string name="crm_list_title">CRM-കൾ</string>
     <string name="crm_list_close_search">തിരയൽ അടയ്ക്കുക</string>
     <string name="crm_list_search">തിരയുക</string>
-    <string name="crm_list_find">പ്രോജക്റ്റുകൾ കണ്ടെത്തുക</string>
+    <string name="crm_list_find">CRM-കൾ കണ്ടെത്തുക</string>
     <string name="crm_list_logout">ലോഗ് ഔട്ട്</string>
-    <string name="crm_list_create">പ്രോജക്റ്റ് സൃഷ്ടിക്കുക</string>
-    <string name="crm_create_title">പ്രോജക്റ്റ് സൃഷ്ടിക്കുക</string>
+    <string name="crm_list_create">CRM സൃഷ്ടിക്കുക</string>
+    <string name="crm_create_title">CRM സൃഷ്ടിക്കുക</string>
     <string name="crm_create_name">പേര്</string>
     <string name="crm_create_description">വിവരണം</string>
     <string name="crm_create_privacy">സ്വകാര്യതാ നയം</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
     <string name="crm_create_template_none">ഒന്നുമില്ല</string>
     <string name="crm_create_action">സൃഷ്ടിക്കുക</string>
-    <string name="crm_find_title">പ്രോജക്റ്റുകൾ കണ്ടെത്തുക</string>
+    <string name="crm_find_title">CRM-കൾ കണ്ടെത്തുക</string>
     <string name="crm_find_recommended">ശുപാർശ ചെയ്യുന്ന CRM-കൾ</string>
     <string name="crm_find_subscribe">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="crm_loading">ലോഡുചെയ്യുന്നു…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">മാറ്റങ്ങൾ സേവ് ചെയ്യുക</string>
     <string name="crm_settings_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="crm_settings_delete_crm">പ്രോജക്റ്റ് ഇല്ലാതാക്കുക</string>
-    <string name="crm_settings_delete_confirm_title">പ്രോജക്റ്റ് ഇല്ലാതാക്കുക</string>
+    <string name="crm_settings_delete_confirm_title">CRM ഇല്ലാതാക്കുക</string>
     <string name="crm_settings_unsubscribe_title">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
-    <string name="crm_settings_unsubscribe_message">ഈ പ്രോജക്റ്റിൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
+    <string name="crm_settings_unsubscribe_message">ഈ CRM-ൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
     <string name="crm_access_level_owner">ഉടമ</string>
     <string name="crm_access_level_design">ഡിസൈൻ</string>
     <string name="crm_access_level_comment">അഭിപ്രായം</string>

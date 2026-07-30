@@ -249,7 +249,7 @@
     <string name="market_listing_detail_save">Imaña</string>
     <string name="market_listing_detail_seller_heading">Aljiri</string>
     <string name="market_listing_detail_share">Anuncio uñacht\'ayaña</string>
-    <string name="market_listing_detail_shipping_heading">Apayañ</string>
+    <string name="market_listing_detail_shipping_heading">Apayañ opcionanaka</string>
     <string name="market_listing_detail_subscribe">Suscribiña</string>
     <string name="market_listing_detail_tags_heading">Tags</string>
     <string name="market_listing_detail_title">Listado</string>
@@ -338,12 +338,12 @@
     <string name="market_purchase_confirm_failed">Janiw confirmaña atinkti</string>
     <string name="market_purchase_continue_payment">Pago sarantaña</string>
     <string name="market_purchase_delivery">Apayaña</string>
-    <string name="market_purchase_dispute_details">Listingax automáticamente uñakipatani ukat inas moderador aprobación munaspa mayni apnaqirinakar uñstayañataki.</string>
+    <string name="market_purchase_dispute_details">Jumat yatiyawinaka</string>
     <string name="market_purchase_dispute_reason">Layku</string>
     <string name="market_purchase_dispute_resolution">Staff resolución</string>
     <string name="market_purchase_dispute_title">Refund mayisiwi</string>
     <string name="market_purchase_download_failed">Janiw apaqaña atinkti</string>
-    <string name="market_purchase_download_section">Kutsumax</string>
+    <string name="market_purchase_download_section">Alatamax wakichtatawa</string>
     <string name="market_purchase_item">Item</string>
     <string name="market_purchase_message_seller">Alxiriri mensaje</string>
     <string name="market_purchase_not_found">Orden jan jikxatasiti</string>
@@ -443,7 +443,7 @@
     <string name="market_sale_ship_success">Apayatap uñacht\'ayatawa</string>
     <string name="market_sale_shipped_label">Apayata</string>
     <string name="market_sale_title">Aljawi</string>
-    <string name="market_sale_tracking_label">Inglés ukar jaqukipam, ukatx bullet pointjam uñstayam.</string>
+    <string name="market_sale_tracking_label">Uñakipañ jakhu</string>
     <string name="market_sales_title">Aljawinaka</string>
     <string name="market_saved_title">Imaña</string>
     <string name="market_search_clear">Thaqaña q\'umachaña</string>

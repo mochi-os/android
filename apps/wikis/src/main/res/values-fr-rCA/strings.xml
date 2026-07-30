@@ -281,7 +281,6 @@
     <string name="wikis_settings_delete_confirm_message">Cette action est irréversible. Elle supprimera définitivement le wiki et tout son contenu.</string>
     <string name="wikis_settings_delete_success">Wiki supprimé</string>
     <string name="wikis_settings_delete_failed">Échec de la suppression du wiki</string>
-    <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_level_edit">Modifier et consulter</string>
     <string name="wikis_access_level_view">Consulter seulement</string>
     <string name="wikis_access_level_none">Aucun accès</string>

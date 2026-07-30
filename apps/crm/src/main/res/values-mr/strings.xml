@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">प्रदर्शित नाव</string>
     <string name="crm_auth_verification_failed">पडताळणी अयशस्वी</string>
-    <string name="crm_list_title">प्रोजेक्ट्स</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">शोध बंद करा</string>
     <string name="crm_list_search">शोधा</string>
-    <string name="crm_list_find">प्रोजेक्ट्स शोधा</string>
+    <string name="crm_list_find">CRMs शोधा</string>
     <string name="crm_list_logout">लॉग आउट करा</string>
-    <string name="crm_list_create">प्रकल्प तयार करा</string>
-    <string name="crm_create_title">प्रकल्प तयार करा</string>
+    <string name="crm_list_create">CRM तयार करा</string>
+    <string name="crm_create_title">CRM तयार करा</string>
     <string name="crm_create_name">नाव</string>
     <string name="crm_create_description">वर्णन</string>
     <string name="crm_create_privacy">गोपनीयता</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">सार्वजनिक</string>
     <string name="crm_create_template_none">काहीही नाही</string>
     <string name="crm_create_action">तयार करा</string>
-    <string name="crm_find_title">प्रोजेक्ट्स शोधा</string>
+    <string name="crm_find_title">CRMs शोधा</string>
     <string name="crm_find_recommended">शिफारस केलेले</string>
     <string name="crm_find_subscribe">सबस्क्राइब करा</string>
     <string name="crm_loading">लोड करत आहे…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">बदल जतन करा</string>
     <string name="crm_settings_unsubscribe">अनसबस्क्राइब करा</string>
     <string name="crm_settings_delete_crm">प्रकल्प हटवा</string>
-    <string name="crm_settings_delete_confirm_title">प्रकल्प हटवा</string>
+    <string name="crm_settings_delete_confirm_title">CRM हटवा</string>
     <string name="crm_settings_unsubscribe_title">अनसबस्क्राइब करा</string>
-    <string name="crm_settings_unsubscribe_message">तुम्हाला खरोखरच या प्रकल्पातून अनसबस्क्राइब करायचे आहे का?</string>
+    <string name="crm_settings_unsubscribe_message">तुम्हाला खरोखरच या CRM मधून अनसबस्क्राइब करायचे आहे का?</string>
     <string name="crm_access_level_owner">मालक</string>
     <string name="crm_access_level_design">डिझाइन</string>
     <string name="crm_access_level_comment">टिप्पणी</string>

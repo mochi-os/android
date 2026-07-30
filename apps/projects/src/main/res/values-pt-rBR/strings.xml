@@ -52,12 +52,10 @@
     <string name="projects_object_tab_activity">Atividade</string>
     <string name="projects_object_tab_requests">Solicitações</string>
     <string name="projects_object_tab_attachments">Anexos</string>
-    <string name="projects_object_tab_links">Links</string>
     <string name="projects_watchers_watch">Observar</string>
     <string name="projects_watchers_unwatch">Parar de observar</string>
     <string name="projects_parent_label">Pai</string>
     <string name="projects_parent_search_placeholder">Pesquisar</string>
-    <string name="projects_links_title">Links</string>
     <string name="projects_links_add">Adicionar link</string>
     <string name="projects_links_section_blocks">Bloqueia</string>
     <string name="projects_links_section_blocked_by">Bloqueado por</string>
@@ -126,7 +124,6 @@
     <string name="projects_field_type_number">Número</string>
     <string name="projects_field_type_user">Usuário</string>
     <string name="projects_field_type_date">Data</string>
-    <string name="projects_field_type_checklist">Checklist</string>
     <string name="projects_field_name">Nome</string>
     <string name="projects_field_type">Tipo</string>
     <string name="projects_field_flags">Sinalizações</string>
@@ -317,7 +314,6 @@
     <string name="projects_create_choose_template">Escolha um modelo</string>
     <string name="projects_create_next">Próximo</string>
     <string name="projects_filter">Filtrar</string>
-    <string name="projects_link">Link</string>
     <string name="projects_filter_clear_all">Limpar tudo</string>
     <string name="projects_filter_all">Todas</string>
     <string name="projects_filter_other">Outro</string>

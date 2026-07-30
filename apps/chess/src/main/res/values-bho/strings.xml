@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">मोहरा</string>
     <string name="chess_move_played">%1$s %2$s खेलल</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">शतरंज के चाल, ड्रॉ के प्रस्ताव आउर खेल के नतीजा के बारे में सूचना।</string>
+    <string name="chess_open_sidebar">साइडबार खोलीं</string>
+    <string name="chess_empty_subtitle">दोस्त के साथे शतरंज खेले खातिर आपन पहिला खेल शुरू करीं।</string>
+    <string name="chess_empty_start_button">आपन पहिला खेल शुरू करीं</string>
+    <string name="chess_detail_unavailable">खेल उपलब्ध नइखे</string>
+    <string name="chess_delete_title">खेल हटाईं?</string>
+    <string name="chess_delete_message">ई खेल के रउआ सूची से हटा देला।</string>
+    <string name="chess_ws_connecting">कनेक्ट होत बा…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">फिर से जुड़ रहल बा…</string>
+    <string name="chess_ws_failed">कनेक्शन असफल रहल</string>
+    <string name="chess_move_capture">%1$s %2$s ले लेलस</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

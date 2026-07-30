@@ -2,7 +2,7 @@
 <resources>
 
     <string name="chat_auth_display_name">Göstərilən ad</string>
-    <string name="chat_auth_verification_failed">Yoxla</string>
+    <string name="chat_auth_verification_failed">Doğrulama uğursuz oldu</string>
     <string name="chat_list_title">Söhbətlər</string>
     <string name="chat_list_close_search">Axtarışı bağla</string>
     <string name="chat_list_search">Axtar</string>

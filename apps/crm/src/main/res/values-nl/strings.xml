@@ -2,10 +2,10 @@
 <resources>
     <string name="crm_auth_display_name">Weergavenaam</string>
     <string name="crm_auth_verification_failed">Verificatie mislukt</string>
-    <string name="crm_list_title">Projecten</string>
+    <string name="crm_list_title">CRM\'s</string>
     <string name="crm_list_close_search">Zoeken sluiten</string>
     <string name="crm_list_search">Zoeken</string>
-    <string name="crm_list_find">Projecten zoeken</string>
+    <string name="crm_list_find">CRM\'s zoeken</string>
     <string name="crm_list_logout">Uitloggen</string>
     <string name="crm_list_create">CRM aanmaken</string>
     <string name="crm_create_title">CRM aanmaken</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Openbaar</string>
     <string name="crm_create_template_none">Geen</string>
     <string name="crm_create_action">Aanmaken</string>
-    <string name="crm_find_title">Projecten zoeken</string>
+    <string name="crm_find_title">CRM\'s zoeken</string>
     <string name="crm_find_recommended">Aanbevolen</string>
     <string name="crm_find_subscribe">Abonneren</string>
     <string name="crm_loading">Laden…</string>

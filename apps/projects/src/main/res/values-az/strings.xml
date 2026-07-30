@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="projects_auth_display_name">Göstərilən ad</string>
-    <string name="projects_auth_verification_failed">Yoxla</string>
+    <string name="projects_auth_verification_failed">Doğrulama uğursuz oldu</string>
     <string name="projects_list_title">Layihələr</string>
     <string name="projects_list_close_search">Axtarışı bağla</string>
     <string name="projects_list_search">Axtar</string>

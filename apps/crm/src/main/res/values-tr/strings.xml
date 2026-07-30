@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Görünen ad</string>
     <string name="crm_auth_verification_failed">Doğrulama başarısız</string>
-    <string name="crm_list_title">Projeler</string>
+    <string name="crm_list_title">CRM\'ler</string>
     <string name="crm_list_close_search">Aramayı kapat</string>
     <string name="crm_list_search">Ara</string>
-    <string name="crm_list_find">Proje bul</string>
+    <string name="crm_list_find">CRM bul</string>
     <string name="crm_list_logout">Oturumu kapat</string>
-    <string name="crm_list_create">Proje oluştur</string>
-    <string name="crm_create_title">Proje oluştur</string>
+    <string name="crm_list_create">CRM oluştur</string>
+    <string name="crm_create_title">CRM oluştur</string>
     <string name="crm_create_name">Ad</string>
     <string name="crm_create_description">Açıklama</string>
     <string name="crm_create_privacy">Gizlilik</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Herkese açık</string>
     <string name="crm_create_template_none">Yok</string>
     <string name="crm_create_action">Oluştur</string>
-    <string name="crm_find_title">Proje bul</string>
+    <string name="crm_find_title">CRM bul</string>
     <string name="crm_find_recommended">Önerilen</string>
     <string name="crm_find_subscribe">Abone ol</string>
     <string name="crm_loading">Yükleniyor…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Değişiklikleri kaydet</string>
     <string name="crm_settings_unsubscribe">Aboneliği iptal et</string>
     <string name="crm_settings_delete_crm">Projeyi sil</string>
-    <string name="crm_settings_delete_confirm_title">Projeyi sil</string>
+    <string name="crm_settings_delete_confirm_title">CRM\'i sil</string>
     <string name="crm_settings_unsubscribe_title">Aboneliği iptal et</string>
-    <string name="crm_settings_unsubscribe_message">Bu proje aboneliğini iptal etmek istediğinizden emin misiniz?</string>
+    <string name="crm_settings_unsubscribe_message">Bu CRM aboneliğini iptal etmek istediğinizden emin misiniz?</string>
     <string name="crm_access_level_owner">Sahip</string>
     <string name="crm_access_level_design">Tasarım</string>
     <string name="crm_access_level_comment">Yorum</string>

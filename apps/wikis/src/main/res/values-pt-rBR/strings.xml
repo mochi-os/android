@@ -21,7 +21,6 @@
     <string name="wikis_page_action_delete">Excluir</string>
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_page_action_search">Pesquisar</string>
-    <string name="wikis_page_action_tags">Tags</string>
     <string name="wikis_page_action_recent_changes">Alterações recentes</string>
     <string name="wikis_page_action_new_page">Nova página</string>
     <string name="wikis_page_action_settings">Configurações</string>
@@ -145,7 +144,6 @@
     <string name="wikis_tag_pages_all_tags_action">Todas as tags</string>
     <string name="wikis_tag_manager_add_failed">Falha ao adicionar tag</string>
     <string name="wikis_tag_manager_remove_failed">Falha ao remover tag</string>
-    <string name="wikis_tag_dialog_label">Tag</string>
     <string name="wikis_tag_dialog_duplicate">A tag já existe</string>
     <string name="wikis_tag_dialog_cancel">Cancelar</string>
     <string name="wikis_tag_dialog_add">Adicionar</string>

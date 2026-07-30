@@ -36,7 +36,7 @@
     <string name="market_bid_dialog_amount_label">നിങ്ങളുടെ ബിഡ്</string>
     <string name="market_bid_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_bid_dialog_ceiling_help">ഈ പരമാവധി വരെ, മുൻപന്തിയിൽ നിൽക്കാൻ ആവശ്യമായ ഏറ്റവും കുറഞ്ഞ തുകയിൽ ഞങ്ങൾ നിങ്ങളുടെ ബിഡ് സ്വയം ഉയർത്തും.</string>
-    <string name="market_bid_dialog_instant_win">വാങ്ങി</string>
+    <string name="market_bid_dialog_instant_win">വാങ്ങൽ സ്ഥിരീകരിച്ചു — പേയ്‌മെന്റ് പൂർത്തിയാക്കുക</string>
     <string name="market_bid_dialog_invalid_ceiling">പരമാവധി ബിഡ് കുറഞ്ഞത് നിങ്ങളുടെ ബിഡ് തുകയെങ്കിലും ആയിരിക്കണം</string>
     <string name="market_bid_dialog_outbid">നിങ്ങളുടെ ബിഡ് സമർപ്പിച്ചു, പക്ഷേ ഉടനെ മറികടന്നു. മറ്റൊരു ബിഡ്ഡർക്ക് ഉയർന്ന പരമാവധി ഉണ്ട്. അവരുടെ ബിഡ് ഇപ്പോൾ %1$s ആണ്.</string>
     <string name="market_bid_dialog_submit">ബിഡ് ചെയ്യുക</string>
@@ -65,7 +65,7 @@
     <string name="market_chargeback_reason_incorrect_account_details">തെറ്റായ അക്കൗണ്ട് വിശദാംശങ്ങൾ</string>
     <string name="market_chargeback_reason_insufficient_funds">അപര്യാപ്തമായ ഫണ്ടുകൾ</string>
     <string name="market_chargeback_reason_product_not_received">ഉൽപ്പന്നം സ്വീകാര്യമല്ല</string>
-    <string name="market_chargeback_reason_product_unacceptable">പ്രൊഫൈൽ</string>
+    <string name="market_chargeback_reason_product_unacceptable">ഉൽപ്പന്നം സ്വീകാര്യമല്ല</string>
     <string name="market_chargeback_reason_subscription_canceled">സബ്സ്ക്രിപ്ഷൻ റദ്ദാക്കി</string>
     <string name="market_chargeback_reason_unrecognized">തിരിച്ചറിയാത്ത ചാർജ്</string>
     <string name="market_checkout_address_city">നഗരം</string>
@@ -357,7 +357,7 @@
     <string name="market_rating_no_reviews">അവലോകനങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="market_rating_reviews">(%1$d അവലോകനം)</string>
     <string name="market_refund_amount_label">തുക</string>
-    <string name="market_refund_body">നൽകിയ Classes</string>
+    <string name="market_refund_body">നിങ്ങളുടെ റീഫണ്ട് അഭ്യർത്ഥനയ്ക്ക് ഒരു കാരണം നൽകുക.</string>
     <string name="market_refund_details_label">വിശദാംശങ്ങൾ</string>
     <string name="market_refund_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_refund_dialog_description_label">വിവരണം</string>

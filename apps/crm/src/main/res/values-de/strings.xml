@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Anzeigename</string>
     <string name="crm_auth_verification_failed">Verifizierung fehlgeschlagen</string>
-    <string name="crm_list_title">Projekte</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">Suche schließen</string>
     <string name="crm_list_search">Suchen</string>
-    <string name="crm_list_find">Projekte finden</string>
+    <string name="crm_list_find">CRMs finden</string>
     <string name="crm_list_logout">Abmelden</string>
-    <string name="crm_list_create">Projekt erstellen</string>
-    <string name="crm_create_title">Projekt erstellen</string>
+    <string name="crm_list_create">CRM erstellen</string>
+    <string name="crm_create_title">CRM erstellen</string>
     <string name="crm_create_name">Name</string>
     <string name="crm_create_description">Beschreibung</string>
     <string name="crm_create_privacy">Datenschutz</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Öffentlich</string>
     <string name="crm_create_template_none">Keine</string>
     <string name="crm_create_action">Erstellen</string>
-    <string name="crm_find_title">Projekte finden</string>
+    <string name="crm_find_title">CRMs finden</string>
     <string name="crm_find_recommended">Empfohlen</string>
     <string name="crm_find_subscribe">Abonnieren</string>
     <string name="crm_loading">Wird geladen…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Änderungen speichern</string>
     <string name="crm_settings_unsubscribe">Abbestellen</string>
     <string name="crm_settings_delete_crm">Projekt löschen</string>
-    <string name="crm_settings_delete_confirm_title">Projekt löschen</string>
+    <string name="crm_settings_delete_confirm_title">CRM löschen</string>
     <string name="crm_settings_unsubscribe_title">Abbestellen</string>
-    <string name="crm_settings_unsubscribe_message">Möchten Sie dieses Projekt wirklich abbestellen?</string>
+    <string name="crm_settings_unsubscribe_message">Möchten Sie dieses CRM wirklich abbestellen?</string>
     <string name="crm_access_level_owner">Eigentümer</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_comment">Kommentar</string>

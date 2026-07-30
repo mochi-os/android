@@ -164,7 +164,7 @@
     <string name="forums_banner_placeholder">ഈ ഫോറത്തിലേക്ക് സ്വാഗതം…</string>
     <string name="forums_ai_mode_label">മോഡ്: %1$s</string>
     <string name="forums_ai_mode_heading">AI മോഡ്</string>
-    <string name="forums_ai_mode_off">ഓഫ്</string>
+    <string name="forums_ai_mode_off">പ്രവർത്തനരഹിതം</string>
     <string name="forums_ai_account">AI അക്കൗണ്ട്</string>
     <string name="forums_ai_prompt_tag">ടാഗിംഗ് പ്രോംപ്റ്റ്</string>
     <string name="forums_ai_prompt_score">സ്കോറിംഗ് പ്രോംപ്റ്റ്</string>
@@ -217,7 +217,7 @@
     <string name="forums_rss_feed">റാങ്ക്</string>
     <string name="forums_rss_mode_posts">പോസ്റ്റുകൾ</string>
     <string name="forums_rss_mode_posts_comments">പോസ്റ്റുകളും അഭിപ്രായങ്ങളും</string>
-    <string name="forums_rss_copied">RSS ഫീഡ്</string>
+    <string name="forums_rss_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="forums_find_results">തിരയൽ ഫലങ്ങൾ</string>
     <string name="forums_markdown_supported">Markdown സപ്പോർട്ടുണ്ട്</string>
     <string name="forums_attachment_file">ഫയൽ</string>

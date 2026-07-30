@@ -218,7 +218,7 @@
     <string name="wikis_access_revoke_success">Mantañ apaqata</string>
     <string name="wikis_access_revoke_failed">Janiw acceso apsuña atinkti</string>
     <string name="wikis_replicas_empty_title">Janira replicanak</string>
-    <string name="wikis_replicas_empty_message">Janq\'u</string>
+    <string name="wikis_replicas_empty_message">Yaqha wikinakax aka wiki replicapxix ukax akanwa uñstani.</string>
     <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Janipuni</string>
     <string name="wikis_replicas_remove_confirm_title">¿Replica aparma?</string>

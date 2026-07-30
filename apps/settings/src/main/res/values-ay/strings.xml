@@ -193,7 +193,7 @@
     <string name="system_users_delete">Usuario chhaqtayaña</string>
     <string name="system_users_delete_title">Usuario chhaqtayaña?</string>
     <string name="system_users_manage_sessions">Sesionanak apnaqaña</string>
-    <string name="system_users_sessions_description">Uñjat controlnaka</string>
+    <string name="system_users_sessions_description">Aka apnaqirin sesionanakap uñjam ukat jaytam.</string>
     <string name="system_users_sessions_empty">Aka wikix mä origen wikir suscribita, ukatpach machaqanak katuqi.</string>
     <string name="system_users_revoke">Aparma</string>
     <string name="system_users_revoke_all">Taqi sesionanak aparma</string>

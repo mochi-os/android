@@ -2,10 +2,10 @@
 <resources>
     <string name="crm_auth_display_name">සංදර්ශන නාමය</string>
     <string name="crm_auth_verification_failed">සත්‍යාපනය අසාර්ථක විය</string>
-    <string name="crm_list_title">ව්‍යාපෘති</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">සෙවුම වසන්න</string>
     <string name="crm_list_search">සොයන්න</string>
-    <string name="crm_list_find">ව්‍යාපෘති සොයන්න</string>
+    <string name="crm_list_find">CRMs සොයන්න</string>
     <string name="crm_list_logout">ඉවත් වන්න</string>
     <string name="crm_list_create">CRM එකක් නිර්මාණය කරන්න</string>
     <string name="crm_create_title">CRM එකක් නිර්මාණය කරන්න</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">ප්‍රසිද්ධ</string>
     <string name="crm_create_template_none">කිසිවක් නැත</string>
     <string name="crm_create_action">නිර්මාණය කරන්න</string>
-    <string name="crm_find_title">ව්‍යාපෘති සොයන්න</string>
+    <string name="crm_find_title">CRMs සොයන්න</string>
     <string name="crm_find_recommended">නිර්දේශිත</string>
     <string name="crm_find_subscribe">දායක වන්න</string>
     <string name="crm_loading">පූරණය වෙමින්…</string>

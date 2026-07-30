@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Адлюстраванае імя</string>
     <string name="crm_auth_verification_failed">Праверка не атрымалася</string>
-    <string name="crm_list_title">Праекты</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Закрыць пошук</string>
     <string name="crm_list_search">Пошук</string>
-    <string name="crm_list_find">Знайсці праекты</string>
+    <string name="crm_list_find">Знайсці CRM</string>
     <string name="crm_list_logout">Выйсці</string>
-    <string name="crm_list_create">Стварыць праект</string>
-    <string name="crm_create_title">Стварыць праект</string>
+    <string name="crm_list_create">Стварыць CRM</string>
+    <string name="crm_create_title">Стварыць CRM</string>
     <string name="crm_create_name">Назва</string>
     <string name="crm_create_description">Апісанне</string>
     <string name="crm_create_privacy">Канфідэнцыяльнасць</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Публічны</string>
     <string name="crm_create_template_none">Няма</string>
     <string name="crm_create_action">Стварыць</string>
-    <string name="crm_find_title">Знайсці праекты</string>
+    <string name="crm_find_title">Знайсці CRM</string>
     <string name="crm_find_recommended">Рэкамендуецца</string>
     <string name="crm_find_subscribe">Падпісацца</string>
     <string name="crm_loading">Загрузка…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Захаваць змены</string>
     <string name="crm_settings_unsubscribe">Адпісацца</string>
     <string name="crm_settings_delete_crm">Выдаліць праект</string>
-    <string name="crm_settings_delete_confirm_title">Выдаліць праект</string>
+    <string name="crm_settings_delete_confirm_title">Выдаліць CRM</string>
     <string name="crm_settings_unsubscribe_title">Адпісацца</string>
-    <string name="crm_settings_unsubscribe_message">Вы ўпэўнены, што хочаце адпісацца ад гэтага праекта?</string>
+    <string name="crm_settings_unsubscribe_message">Вы ўпэўнены, што хочаце адпісацца ад гэтай CRM?</string>
     <string name="crm_access_level_owner">Уладальнік</string>
     <string name="crm_access_level_design">Дызайн</string>
     <string name="crm_access_level_comment">Каментарый</string>

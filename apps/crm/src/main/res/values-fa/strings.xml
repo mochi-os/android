@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">نام نمایشی</string>
     <string name="crm_auth_verification_failed">تأیید ناموفق بود</string>
-    <string name="crm_list_title">پروژه‌ها</string>
+    <string name="crm_list_title">CRMها</string>
     <string name="crm_list_close_search">بستن جست‌وجو</string>
     <string name="crm_list_search">جست‌وجو</string>
-    <string name="crm_list_find">یافتن پروژه‌ها</string>
+    <string name="crm_list_find">یافتن CRMها</string>
     <string name="crm_list_logout">خروج</string>
-    <string name="crm_list_create">ساخت پروژه</string>
-    <string name="crm_create_title">ساخت پروژه</string>
+    <string name="crm_list_create">ساخت CRM</string>
+    <string name="crm_create_title">ساخت CRM</string>
     <string name="crm_create_name">نام</string>
     <string name="crm_create_description">توضیحات</string>
     <string name="crm_create_privacy">حریم خصوصی</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">عمومی</string>
     <string name="crm_create_template_none">هیچ‌کدام</string>
     <string name="crm_create_action">ساختن</string>
-    <string name="crm_find_title">یافتن پروژه‌ها</string>
+    <string name="crm_find_title">یافتن CRMها</string>
     <string name="crm_find_recommended">توصیه‌شده</string>
     <string name="crm_find_subscribe">اشتراک</string>
     <string name="crm_loading">در حال بارگذاری…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">ذخیره تغییرات</string>
     <string name="crm_settings_unsubscribe">لغو اشتراک</string>
     <string name="crm_settings_delete_crm">حذف پروژه</string>
-    <string name="crm_settings_delete_confirm_title">حذف پروژه</string>
+    <string name="crm_settings_delete_confirm_title">حذف CRM</string>
     <string name="crm_settings_unsubscribe_title">لغو اشتراک</string>
-    <string name="crm_settings_unsubscribe_message">آیا از لغو اشتراک این پروژه مطمئن هستید؟</string>
+    <string name="crm_settings_unsubscribe_message">آیا از لغو اشتراک این CRM مطمئن هستید؟</string>
     <string name="crm_access_level_owner">مالک</string>
     <string name="crm_access_level_design">طراحی</string>
     <string name="crm_access_level_comment">نظر</string>

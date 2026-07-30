@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nome visualizzato</string>
     <string name="crm_auth_verification_failed">Verifica non riuscita</string>
-    <string name="crm_list_title">Progetti</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Chiudi ricerca</string>
     <string name="crm_list_search">Cerca</string>
-    <string name="crm_list_find">Trova progetti</string>
+    <string name="crm_list_find">Trova CRM</string>
     <string name="crm_list_logout">Esci</string>
-    <string name="crm_list_create">Crea progetto</string>
-    <string name="crm_create_title">Crea progetto</string>
+    <string name="crm_list_create">Crea CRM</string>
+    <string name="crm_create_title">Crea CRM</string>
     <string name="crm_create_name">Nome</string>
     <string name="crm_create_description">Descrizione</string>
     <string name="crm_create_privacy">Privacy</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Pubblico</string>
     <string name="crm_create_template_none">Nessuno</string>
     <string name="crm_create_action">Crea</string>
-    <string name="crm_find_title">Trova progetti</string>
+    <string name="crm_find_title">Trova CRM</string>
     <string name="crm_find_recommended">Consigliato</string>
     <string name="crm_find_subscribe">Iscriviti</string>
     <string name="crm_loading">Caricamento…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Salva modifiche</string>
     <string name="crm_settings_unsubscribe">Annulla iscrizione</string>
     <string name="crm_settings_delete_crm">Elimina progetto</string>
-    <string name="crm_settings_delete_confirm_title">Elimina progetto</string>
+    <string name="crm_settings_delete_confirm_title">Elimina CRM</string>
     <string name="crm_settings_unsubscribe_title">Annulla iscrizione</string>
-    <string name="crm_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo progetto?</string>
+    <string name="crm_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo CRM?</string>
     <string name="crm_access_level_owner">Proprietario</string>
     <string name="crm_access_level_design">Progetta</string>
     <string name="crm_access_level_comment">Commento</string>
