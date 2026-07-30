@@ -10,6 +10,7 @@ import com.google.gson.annotations.SerializedName
 data class Forum(
     val id: String = "",
     val fingerprint: String = "",
+    @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val name: String = "",
     val updated: Long = 0,
     @SerializedName("can_manage") val canManage: Boolean = false,
@@ -130,6 +131,7 @@ data class RecommendedForum(
     val name: String = "",
     val blurb: String = "",
     val fingerprint: String = "",
+    @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val server: String = ""
 )
 

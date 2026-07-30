@@ -260,21 +260,21 @@ private fun ForumDiscoveryCard(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            // The blurb is the friendlier subtitle; fall back to the fingerprint,
-            // which is all the directory gives for a plain search hit.
-            val blurb = item.blurb.ifBlank { "" }
-            if (blurb.isNotBlank()) {
+            // The blurb is the friendlier subtitle, with the fingerprint below it
+            // rather than instead of it — a plain search hit has only the latter.
+            if (item.blurb.isNotBlank()) {
                 Text(
-                    text = blurb,
+                    text = item.blurb,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
-            } else if (item.subtitle.isNotBlank()) {
+            }
+            if (item.subtitle.isNotBlank()) {
                 Text(
                     text = item.subtitle,
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodySmall,
                     fontFamily = FontFamily.Monospace,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,

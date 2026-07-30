@@ -5,9 +5,12 @@
 
 package org.mochios.projects.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Project(
     val id: String = "",
     val fingerprint: String = "",
+    @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val name: String = "",
     val description: String = "",
     val prefix: String = "",

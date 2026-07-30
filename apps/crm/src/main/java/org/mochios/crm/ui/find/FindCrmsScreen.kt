@@ -48,6 +48,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
@@ -125,9 +126,10 @@ fun FindCrmsScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         items(uiState.searchResults, key = { it.fingerprint.ifEmpty { it.id } }) { crm ->
+                            val subscribeId = crm.id.ifEmpty { crm.fingerprint }
                             DiscoveredCrmCard(
                                 crm = crm,
-                                isSubscribing = uiState.subscribingId == (crm.fingerprint.ifEmpty { crm.id }),
+                                isSubscribing = uiState.subscribingId == subscribeId,
                                 onSubscribe = {
                                     viewModel.subscribe(crm) {
                                         onCrmSubscribed()
@@ -150,9 +152,10 @@ fun FindCrmsScreen(
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             items(uiState.recommendations, key = { it.fingerprint.ifEmpty { it.id } }) { crm ->
+                                val subscribeId = crm.id.ifEmpty { crm.fingerprint }
                                 DiscoveredCrmCard(
                                     crm = crm,
-                                    isSubscribing = uiState.subscribingId == (crm.fingerprint.ifEmpty { crm.id }),
+                                    isSubscribing = uiState.subscribingId == subscribeId,
                                     onSubscribe = {
                                         viewModel.subscribe(crm) {
                                             onCrmSubscribed()
@@ -224,6 +227,19 @@ private fun DiscoveredCrmCard(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            // Fingerprint under the subtitle, as the feeds directory shows it —
+            // the only stable handle for two hits with the same name.
+            val fingerprint = crm.fingerprintHyphens.ifEmpty { crm.fingerprint }
+            if (fingerprint.isNotEmpty()) {
+                Text(
+                    text = fingerprint,
+                    style = MaterialTheme.typography.bodySmall,
+                    fontFamily = FontFamily.Monospace,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
             }

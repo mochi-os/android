@@ -127,7 +127,9 @@ class FindProjectsViewModel @Inject constructor(
     }
 
     fun subscribe(project: Project, onSuccess: () -> Unit) {
-        val id = project.fingerprint.ifEmpty { project.id }
+        // The full entity id is what `-/subscribe` resolves; a bare directory
+        // hit without one leaves the fingerprint as the only handle.
+        val id = project.id.ifEmpty { project.fingerprint }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = id)
             try {

@@ -5,10 +5,13 @@
 
 package org.mochios.wikis.model
 
+import com.google.gson.annotations.SerializedName
+
 data class DirectoryEntry(
     val id: String = "",
     val name: String = "",
     val fingerprint: String = "",
+    @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val location: String? = null,
 )
 

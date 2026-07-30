@@ -5,11 +5,14 @@
 
 package org.mochios.wikis.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Recommendation(
     val id: String = "",
     val name: String = "",
     val blurb: String = "",
     val fingerprint: String = "",
+    @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val server: String = "",
 )
 

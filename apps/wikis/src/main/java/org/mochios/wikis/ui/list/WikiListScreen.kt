@@ -531,7 +531,7 @@ private fun EmptyWikis(
                 SubscribableRow(
                     name = entry.name,
                     subtitle = null,
-                    isSubscribing = state.subscribingId == entry.id,
+                    isSubscribing = state.subscribingId == entry.id.ifEmpty { entry.fingerprint },
                     onSubscribe = { onSubscribeEntry(entry) },
                 )
             }
@@ -556,7 +556,7 @@ private fun EmptyWikis(
                 SubscribableRow(
                     name = rec.name,
                     subtitle = rec.blurb.ifBlank { null },
-                    isSubscribing = state.subscribingId == rec.id,
+                    isSubscribing = state.subscribingId == rec.id.ifEmpty { rec.fingerprint },
                     onSubscribe = { onSubscribeRecommendation(rec) },
                 )
             }

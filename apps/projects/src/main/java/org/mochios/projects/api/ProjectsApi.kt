@@ -100,6 +100,14 @@ data class AccessResponse(val rules: List<AccessRule> = emptyList())
 // due date).
 data class SetValueRequest(val value: String)
 
+// JSON body of `-/subscribe`. `server` is the home-server hint from the
+// directory hit; it is omitted from the payload when null.
+data class SubscribeRequest(val project: String, val server: String? = null)
+
+// JSON body of `-/unsubscribe`. `server` is accepted for symmetry with
+// subscribe but ignored server-side — unsubscribe resolves the project locally.
+data class UnsubscribeRequest(val project: String, val server: String? = null)
+
 // Shareable project link returned by the `-/share` endpoint.
 data class ShareResponse(val link: String = "")
 
@@ -157,18 +165,14 @@ interface ProjectsApi {
     @POST("-/probe")
     suspend fun probe(@Field("url") url: String): Response<ApiResponse<ProjectResponse>>
 
-    @FormUrlEncoded
     @POST("-/subscribe")
     suspend fun subscribe(
-        @Field("project") project: String,
-        @Field("server") server: String?
+        @Body body: SubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
-        @Field("project") project: String,
-        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
+        @Body body: UnsubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded

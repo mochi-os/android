@@ -17,6 +17,8 @@ import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.projects.api.ProjectsApi
 import org.mochios.projects.api.SetValueRequest
+import org.mochios.projects.api.SubscribeRequest
+import org.mochios.projects.api.UnsubscribeRequest
 import org.mochios.projects.api.WarmExportResponse
 import org.mochios.projects.model.Activity
 import org.mochios.projects.model.Branch
@@ -106,11 +108,11 @@ class ProjectsRepository @Inject constructor(
         api.probe(url).unwrap().project
 
     suspend fun subscribe(project: String, server: String? = null) {
-        api.subscribe(project, server).unwrap()
+        api.subscribe(SubscribeRequest(project = project, server = server)).unwrap()
     }
 
     suspend fun unsubscribe(project: String, server: String? = null) {
-        api.unsubscribe(project, server).unwrap()
+        api.unsubscribe(UnsubscribeRequest(project = project, server = server)).unwrap()
     }
 
     suspend fun searchUsers(query: String): List<Person> =

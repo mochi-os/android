@@ -87,6 +87,7 @@ class FindForumsViewModel @Inject constructor(
                         id = forum.id,
                         key = forum.fingerprint.ifEmpty { forum.id },
                         name = forum.name,
+                        subtitle = forum.fingerprintHyphens.ifEmpty { forum.fingerprint },
                         blurb = forum.blurb,
                         server = forum.server.takeIf { server -> server.isNotBlank() },
                     )
@@ -169,7 +170,7 @@ class FindForumsViewModel @Inject constructor(
                     id = r.id,
                     key = r.fingerprint.ifEmpty { r.id },
                     name = r.name,
-                    subtitle = r.fingerprint,
+                    subtitle = r.fingerprintHyphens.ifEmpty { r.fingerprint },
                     server = r.server.takeIf { server -> server.isNotBlank() },
                 ),
             )

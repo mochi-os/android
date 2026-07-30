@@ -39,6 +39,7 @@ import org.mochios.wikis.model.RssTokenResponse
 import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
 import org.mochios.wikis.model.SettingsSetResponse
+import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.TagAddResponse
 import org.mochios.wikis.model.TagPagesResponse
 import org.mochios.wikis.model.TagRemoveResponse
@@ -46,6 +47,7 @@ import org.mochios.wikis.model.TagsResponse
 import org.mochios.wikis.model.UsersSearchResponse
 import org.mochios.wikis.model.WikiInfoResponse
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -103,12 +105,10 @@ interface WikisApi {
         @Field("privacy") privacy: String,
     ): Response<ApiResponse<CreateWikiResponse>>
 
-    
-    @FormUrlEncoded
+
     @POST("-/subscribe")
     suspend fun joinWiki(
-        @Field("target") target: String,
-        @Field("server") server: String?,
+        @Body body: SubscribeRequest,
     ): Response<ApiResponse<JoinWikiResponse>>
 
     

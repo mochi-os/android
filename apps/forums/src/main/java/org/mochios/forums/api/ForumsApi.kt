@@ -5,6 +5,7 @@
 
 package org.mochios.forums.api
 
+import com.google.gson.annotations.SerializedName
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
@@ -215,7 +216,8 @@ data class ProbeForumResponse(
     val id: String = "",
     val name: String = "",
     val fingerprint: String = "",
-    @com.google.gson.annotations.SerializedName("class") val klass: String = "",
+    @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
+    @SerializedName("class") val klass: String = "",
     val server: String = "",
 )
 

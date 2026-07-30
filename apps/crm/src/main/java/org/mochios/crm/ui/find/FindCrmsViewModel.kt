@@ -127,8 +127,9 @@ class FindCrmsViewModel @Inject constructor(
     }
 
     fun subscribe(crm: Crm, onSuccess: () -> Unit) {
-        // subscribe requires the full entity id (server rejects a fingerprint).
-        val id = crm.id
+        // The full entity id is what `-/subscribe` needs — it rejects a bare
+        // fingerprint, which is all a directory hit without an id carries.
+        val id = crm.id.ifEmpty { crm.fingerprint }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = id)
             try {

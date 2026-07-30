@@ -15,6 +15,8 @@ import org.mochios.android.model.Comment
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.crm.api.CrmsApi
+import org.mochios.crm.api.SubscribeRequest
+import org.mochios.crm.api.UnsubscribeRequest
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.Group
@@ -85,11 +87,11 @@ class CrmsRepository @Inject constructor(
         api.probe(url).unwrap().crm
 
     suspend fun subscribe(crm: String, server: String? = null) {
-        api.subscribe(crm, server).unwrap()
+        api.subscribe(SubscribeRequest(crm = crm, server = server)).unwrap()
     }
 
     suspend fun unsubscribe(crm: String, server: String? = null) {
-        api.unsubscribe(crm, server).unwrap()
+        api.unsubscribe(UnsubscribeRequest(crm = crm, server = server)).unwrap()
     }
 
     suspend fun searchUsers(query: String): List<Person> =

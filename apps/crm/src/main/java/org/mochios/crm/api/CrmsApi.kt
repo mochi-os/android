@@ -26,6 +26,7 @@ import org.mochios.crm.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
@@ -73,6 +74,15 @@ data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
 data class PreferenceResponse(val preference: String = "")
 
+// JSON body of `-/subscribe`. `crm` must be the full entity id — the server
+// rejects a fingerprint here. `server` is the home-server hint from the
+// directory hit and is omitted from the payload when null.
+data class SubscribeRequest(val crm: String, val server: String? = null)
+
+// JSON body of `-/unsubscribe`. `server` is accepted for symmetry with
+// subscribe but ignored server-side — unsubscribe resolves the CRM locally.
+data class UnsubscribeRequest(val crm: String, val server: String? = null)
+
 interface CrmsApi {
 
     // ---- Class-level endpoints ----
@@ -104,18 +114,14 @@ interface CrmsApi {
     @POST("-/probe")
     suspend fun probe(@Field("url") url: String): Response<ApiResponse<CrmResponse>>
 
-    @FormUrlEncoded
     @POST("-/subscribe")
     suspend fun subscribe(
-        @Field("crm") crm: String,
-        @Field("server") server: String?
+        @Body body: SubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
-        @Field("crm") crm: String,
-        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
+        @Body body: UnsubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded

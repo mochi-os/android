@@ -34,6 +34,7 @@ import org.mochios.wikis.model.Redirect
 import org.mochios.wikis.model.Replica
 import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
+import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.Tag
 import org.mochios.wikis.model.TagPagesResponse
 import org.mochios.wikis.model.User
@@ -120,7 +121,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun joinWiki(target: String, server: String?): JoinWikiResult {
         return try {
-            val r = api.joinWiki(target, server).unwrap()
+            val r = api.joinWiki(SubscribeRequest(target = target, server = server)).unwrap()
             JoinWikiResult(
                 id = r.id,
                 fingerprint = r.fingerprint,

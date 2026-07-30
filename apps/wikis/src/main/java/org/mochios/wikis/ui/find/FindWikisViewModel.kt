@@ -142,7 +142,10 @@ class FindWikisViewModel @Inject constructor(
      * server hint so the local server falls back to general peer discovery.
      */
     fun subscribeDirectoryEntry(entry: DirectoryEntry) {
-        subscribe(target = entry.id, server = entry.location.takeUnless { it.isNullOrBlank() })
+        subscribe(
+            target = entry.id.ifEmpty { entry.fingerprint },
+            server = entry.location.takeUnless { location -> location.isNullOrBlank() },
+        )
     }
 
     /**
@@ -150,7 +153,10 @@ class FindWikisViewModel @Inject constructor(
      * [subscribeDirectoryEntry] — `server` is the recommendation's hint.
      */
     fun subscribeRecommendation(rec: Recommendation) {
-        subscribe(target = rec.id, server = rec.server.takeIf { it.isNotBlank() })
+        subscribe(
+            target = rec.id.ifEmpty { rec.fingerprint },
+            server = rec.server.takeIf { server -> server.isNotBlank() },
+        )
     }
 
     private fun subscribe(target: String, server: String?) {

@@ -186,9 +186,10 @@ fun FindWikisScreen(
                                 }
                             }
                             items(filteredResults, key = { it.id }) { entry ->
+                                val target = entry.id.ifEmpty { entry.fingerprint }
                                 DirectoryEntryRow(
                                     entry = entry,
-                                    isPending = uiState.pendingId == entry.id,
+                                    isPending = uiState.pendingId == target,
                                     onSubscribe = { viewModel.subscribeDirectoryEntry(entry) },
                                 )
                             }
@@ -205,9 +206,10 @@ fun FindWikisScreen(
                                 )
                             }
                             items(filteredRecommendations, key = { it.id }) { rec ->
+                                val target = rec.id.ifEmpty { rec.fingerprint }
                                 RecommendationRow(
                                     rec = rec,
-                                    isPending = uiState.pendingId == rec.id,
+                                    isPending = uiState.pendingId == target,
                                     onSubscribe = { viewModel.subscribeRecommendation(rec) },
                                 )
                             }
@@ -254,7 +256,8 @@ private fun DirectoryEntryRow(
                 if (entry.fingerprint.isNotBlank()) {
                     Spacer(Modifier.height(2.dp))
                     Text(
-                        text = formatFingerprint(entry.fingerprint),
+                        text = entry.fingerprintHyphens
+                            .ifEmpty { formatFingerprint(entry.fingerprint) },
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
@@ -316,6 +319,17 @@ private fun RecommendationRow(
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                if (rec.fingerprint.isNotBlank()) {
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = rec.fingerprintHyphens
+                            .ifEmpty { formatFingerprint(rec.fingerprint) },
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                     )
                 }

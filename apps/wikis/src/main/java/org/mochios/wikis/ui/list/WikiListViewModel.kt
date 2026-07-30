@@ -236,12 +236,12 @@ class WikiListViewModel @Inject constructor(
      * the comptroller can pick a different replica. Mirrored here.
      */
     fun subscribeFromSearch(entry: DirectoryEntry) {
-        subscribe(target = entry.id, server = entry.location)
+        subscribe(target = entry.id.ifEmpty { entry.fingerprint }, server = entry.location)
     }
 
     /** Subscribe to a recommendation. Recommendations always include a server hint. */
     fun subscribeFromRecommendation(rec: Recommendation) {
-        subscribe(target = rec.id, server = rec.server.ifBlank { null })
+        subscribe(target = rec.id.ifEmpty { rec.fingerprint }, server = rec.server.ifBlank { null })
     }
 
     private fun subscribe(target: String, server: String?) {
