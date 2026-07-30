@@ -22,7 +22,7 @@ import javax.inject.Singleton
 
 /** Generic `{ "ok": true }` envelope used by mutate endpoints across all
  *  settings APIs. Lives here because AccountApi defines the largest set of
- *  endpoints that return it; TokensApi and SessionsApi import from here. */
+ *  endpoints that return it; SessionsApi imports from here. */
 data class OkResponse(val ok: Boolean = false)
 
 /** Step-up re-authentication result. A verify returns `token` once every
@@ -170,9 +170,13 @@ interface AccountApi {
         @Field("name") name: String,
     ): Response<OkResponse>
 
+    /** Delete a passkey. Gated on step-up re-authentication. */
     @FormUrlEncoded
     @POST("settings/-/user/account/passkey/delete")
-    suspend fun deletePasskey(@Field("id") id: String): Response<OkResponse>
+    suspend fun deletePasskey(
+        @Field("token") token: String,
+        @Field("id") id: String,
+    ): Response<OkResponse>
 
     // TOTP
     @GET("settings/-/user/account/totp")
@@ -205,9 +209,13 @@ interface AccountApi {
     @GET("settings/-/user/account/oauth")
     suspend fun listOAuth(): Response<OAuthIdentitiesResponse>
 
+    /** Unlink an OAuth provider. Gated on step-up re-authentication. */
     @FormUrlEncoded
     @POST("settings/-/user/account/oauth/unlink")
-    suspend fun unlinkOAuth(@Field("provider") provider: String): Response<OkResponse>
+    suspend fun unlinkOAuth(
+        @Field("token") token: String,
+        @Field("provider") provider: String,
+    ): Response<OkResponse>
 
     /** Close the user's own account (soft delete + grace period). Gated on
      *  step-up re-authentication. Returns the purge timestamp. */

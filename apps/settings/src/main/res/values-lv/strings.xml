@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Trešās puses pieteikšanās</string>
     <string name="account_oauth_link">Saistīt kontu</string>
     <string name="account_unlink">Atvienot</string>
-    <string name="tokens_create">Izveidot pilnvaru</string>
-    <string name="tokens_name">Nosaukums</string>
-    <string name="tokens_delete_title">Dzēst pilnvaru?</string>
-    <string name="tokens_create_confirm">Izveidot</string>
     <string name="account_cancel">Atcelt</string>
     <string name="account_save">Saglabāt</string>
     <string name="account_done">Pabeigts</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Iestatījumi</string>
     <string name="settings_home_sessions">Sesijas</string>
-    <string name="settings_home_tokens">Marķieri</string>
     <string name="settings_home_privacy">Konfidencialitātes politika</string>
     <string name="settings_home_rules">Noteikumi</string>
     <string name="settings_home_terms">Pakalpojuma noteikumi</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Sasaistīt pakalpojumu sniedzēju</string>
     <string name="account_oauth_unlink_title">Atsaistīt kontu?</string>
     <string name="account_oauth_unlink_message">Jūs vairs nevarēsiet pierakstīties ar %1$s.</string>
-    <string name="tokens_section_title">API marķieri</string>
-    <string name="tokens_title">Autentifikācijas marķieri</string>
-    <string name="tokens_empty">Nav API marķieru.</string>
-    <string name="tokens_create_title">Jauns API marķieris</string>
-    <string name="tokens_new_title">API marķieris izveidots</string>
-    <string name="tokens_new_warning">Kopējiet šo marķieri tagad — tas netiks rādīts vēlreiz.</string>
-    <string name="tokens_delete_message">\"%1$s\" vairs neautentificēs lietotnes, kas to izmanto.</string>
-    <string name="account_created_at">Izveidots %1$s</string>
     <string name="account_last_used">Pēdējoreiz lietots %1$s</string>
-    <string name="tokens_scopes">Tvērumi: %1$s</string>
-    <string name="tokens_expires">Beidzas: %1$s</string>
-    <string name="tokens_never">Nekad</string>
     <string name="route_delete_message">Tas noņems maršrutu ceļam \"%1$s\".</string>
     <string name="route_empty">Nav konfigurētu maršrutu.</string>
     <string name="route_meta">Prioritāte %1$d · %2$s</string>

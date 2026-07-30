@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">اثر انگشت: %1$s</string>
     <string name="forums_settings_clear_notifications">پاک کردن اعلان‌ها</string>
     <string name="forums_moderation_queue_empty">موردی در انتظار نیست</string>
-    <string name="forums_moderation_pending_posts">مطالب در انتظار (%1$d)</string>
-    <string name="forums_moderation_pending_comments">دیدگاه‌های در انتظار (%1$d)</string>
     <string name="forums_moderation_report_details">جزئیات: %1$s</string>
     <string name="forums_moderation_report_resolved_by">حل‌شده توسط %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">هنوز فعالیت ناظری ثبت نشده است</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">لغو اشتراک انجمن</string>
     <string name="forums_share_link_title">پیوند انجمن</string>
     <string name="forums_find_found_by_url">یافت‌شده با نشانی اینترنتی</string>
+    <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$d)</string>
+    <string name="forums_moderation_pending_comments">نظرات در انتظار (%1$d)</string>
 </resources>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Σύνδεση τρίτου</string>
     <string name="account_oauth_link">Σύνδεση λογαριασμού</string>
     <string name="account_unlink">Αποσύνδεση</string>
-    <string name="tokens_create">Δημιουργία διακριτικού</string>
-    <string name="tokens_name">Όνομα</string>
-    <string name="tokens_delete_title">Διαγραφή διακριτικού;</string>
-    <string name="tokens_create_confirm">Δημιουργία</string>
     <string name="account_cancel">Ακύρωση</string>
     <string name="account_save">Αποθήκευση</string>
     <string name="account_done">Ολοκληρώθηκε</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Ρυθμίσεις</string>
     <string name="settings_home_sessions">Συνεδρίες</string>
-    <string name="settings_home_tokens">Διακριτικά</string>
     <string name="settings_home_privacy">Πολιτική απορρήτου</string>
     <string name="settings_home_rules">Κανόνες</string>
     <string name="settings_home_terms">Όροι υπηρεσίας</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Σύνδεση παρόχου</string>
     <string name="account_oauth_unlink_title">Αποσύνδεση λογαριασμού;</string>
     <string name="account_oauth_unlink_message">Δεν θα μπορείτε πλέον να συνδέεστε με %1$s.</string>
-    <string name="tokens_section_title">Διακριτικά API</string>
-    <string name="tokens_title">Διακριτικά ελέγχου ταυτότητας</string>
-    <string name="tokens_empty">Δεν υπάρχουν διακριτικά API.</string>
-    <string name="tokens_create_title">Νέο διακριτικό API</string>
-    <string name="tokens_new_title">Δημιουργήθηκε διακριτικό API</string>
-    <string name="tokens_new_warning">Αντιγράψτε το διακριτικό τώρα — δεν θα εμφανιστεί ξανά.</string>
-    <string name="tokens_delete_message">Το \"%1$s\" δεν θα ελέγχει πλέον την ταυτότητα εφαρμογών που το χρησιμοποιούν.</string>
-    <string name="account_created_at">Δημιουργήθηκε %1$s</string>
     <string name="account_last_used">Τελευταία χρήση %1$s</string>
-    <string name="tokens_scopes">Πεδία: %1$s</string>
-    <string name="tokens_expires">Λήγει: %1$s</string>
-    <string name="tokens_never">Ποτέ</string>
     <string name="route_delete_message">Αυτό θα αφαιρέσει τη διαδρομή για το μονοπάτι \"%1$s\".</string>
     <string name="route_empty">Δεν έχουν διαμορφωθεί διαδρομές.</string>
     <string name="route_meta">Προτεραιότητα %1$d · %2$s</string>

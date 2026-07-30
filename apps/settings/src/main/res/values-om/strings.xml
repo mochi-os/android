@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Seensa qooda sadaffaa</string>
     <string name="account_oauth_link">Akkaawuntii hidhi</string>
     <string name="account_unlink">Hidhuu kaasi</string>
-    <string name="tokens_create">Tokeenii uumi</string>
-    <string name="tokens_name">Maqaa</string>
-    <string name="tokens_delete_title">Tokeenii haqu?</string>
-    <string name="tokens_create_confirm">Uumi</string>
     <string name="account_cancel">Haquu</string>
     <string name="account_save">Olkaa\'i</string>
     <string name="account_done">Xumurame</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Qindaa\'ina</string>
     <string name="settings_home_sessions">Yeroowwan tajaajila</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Imaammata iccitii</string>
     <string name="settings_home_rules">Seerota</string>
     <string name="settings_home_terms">Haalota tajaajilaa</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Dhiyeessaa walitti hidhi</string>
     <string name="account_oauth_unlink_title">Akkounti hiikuu?</string>
     <string name="account_oauth_unlink_message">Siif hin danda\'amu %1$s fayyadamtee seenuu.</string>
-    <string name="tokens_section_title">Tookenii API</string>
-    <string name="tokens_title">Maallima mirkaneessuu</string>
-    <string name="tokens_empty">Tookenii API hin jiru.</string>
-    <string name="tokens_create_title">Tookenii API haaraa</string>
-    <string name="tokens_new_title">Tookenii API uumameera</string>
-    <string name="tokens_new_warning">Tookenii kana amma garagalchi — lammaffaa hin agarsiisamu.</string>
-    <string name="tokens_delete_message">\"%1$s\" lammaffaa apps fayyadamuu hin mirkaneessu.</string>
-    <string name="account_created_at">Uumameera %1$s</string>
     <string name="account_last_used">Yeroo dhumaa fayyadamame %1$s</string>
-    <string name="tokens_scopes">Daangaa: %1$s</string>
-    <string name="tokens_expires">Yeroon dhumate: %1$s</string>
-    <string name="tokens_never">Gonkumaa</string>
     <string name="route_delete_message">Kunis karoora karoora \"%1$s\" haqa.</string>
     <string name="route_empty">Karoorawwan qaroomfaman hin jiran.</string>
     <string name="route_meta">Dursinsii %1$d · %2$s</string>

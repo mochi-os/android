@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Размени (%1$d)</string>
     <string name="words_detail_chat_you_played">Одиграте %1$s</string>
     <string name="words_detail_chat_player_played">%1$s одигра %2$s</string>
+    <string name="words_detail_delete_title">Избриши партија?</string>
+    <string name="words_detail_delete_confirm">Избриши</string>
+    <string name="words_detail_delete_message">Ова трајно ќе ја избрише играта и нејзиниот разговор. Ова дејство не може да се врати.</string>
 </resources>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Tredjepartsinloggning</string>
     <string name="account_oauth_link">Länka konto</string>
     <string name="account_unlink">Avlänka</string>
-    <string name="tokens_create">Skapa token</string>
-    <string name="tokens_name">Namn</string>
-    <string name="tokens_delete_title">Ta bort token?</string>
-    <string name="tokens_create_confirm">Skapa</string>
     <string name="account_cancel">Avbryt</string>
     <string name="account_save">Spara</string>
     <string name="account_done">Klar</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Inställningar</string>
     <string name="settings_home_sessions">Sessioner</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Integritetspolicy</string>
     <string name="settings_home_rules">Regler</string>
     <string name="settings_home_terms">Användarvillkor</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Anslut en leverantör</string>
     <string name="account_oauth_unlink_title">Koppla från konto?</string>
     <string name="account_oauth_unlink_message">Du kan inte längre logga in med %1$s.</string>
-    <string name="tokens_section_title">API-tokens</string>
-    <string name="tokens_title">Autentiseringstokens</string>
-    <string name="tokens_empty">Inga API-tokens.</string>
-    <string name="tokens_create_title">Ny API-token</string>
-    <string name="tokens_new_title">API-token skapad</string>
-    <string name="tokens_new_warning">Kopiera token nu — den visas inte igen.</string>
-    <string name="tokens_delete_message">\"%1$s\" autentiserar inte längre appar som använder den.</string>
-    <string name="account_created_at">Skapad %1$s</string>
     <string name="account_last_used">Senast använd %1$s</string>
-    <string name="tokens_scopes">Räckvidder: %1$s</string>
-    <string name="tokens_expires">Förfaller: %1$s</string>
-    <string name="tokens_never">Aldrig</string>
     <string name="route_delete_message">Detta tar bort rutten för sökvägen \"%1$s\".</string>
     <string name="route_empty">Inga rutter konfigurerade.</string>
     <string name="route_meta">Prioritet %1$d · %2$s</string>

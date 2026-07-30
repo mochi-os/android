@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Du hast %1$s gespielt</string>
     <string name="words_detail_chat_player_played">%1$s hat %2$s gespielt</string>
 
+    <string name="words_detail_delete_title">Partie löschen?</string>
+    <string name="words_detail_delete_confirm">Löschen</string>
+    <string name="words_detail_delete_message">Dadurch werden das Spiel und sein Chat dauerhaft gelöscht. Dies kann nicht rückgängig gemacht werden.</string>
 </resources>

@@ -473,7 +473,6 @@ private fun ViewDialog(
                     onSelect = { sortField = it },
                     allowNone = true,
                     extraOptions = listOf(
-                        "number" to stringResource(R.string.crm_views_sort_number),
                         "created" to stringResource(R.string.crm_views_sort_created),
                         "updated" to stringResource(R.string.crm_views_sort_updated),
                         "rank" to stringResource(R.string.crm_views_sort_rank)

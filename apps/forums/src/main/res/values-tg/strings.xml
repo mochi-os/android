@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Изи ангушт: %1$s</string>
     <string name="forums_settings_clear_notifications">Огоҳномаҳоро тоза кунед</string>
     <string name="forums_moderation_queue_empty">Чизе дар интизорӣ нест</string>
-    <string name="forums_moderation_pending_posts">Паёмҳои дар интизорӣ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Шарҳҳои дар интизорӣ (%1$d)</string>
     <string name="forums_moderation_report_details">Тафсилот: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Ҳалшуда аз тарафи %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ҳанӯз фаъолияти модератор нест</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Обунаро аз форум бекор кунед</string>
     <string name="forums_share_link_title">Пайванди форум</string>
     <string name="forums_find_found_by_url">Тавассути URL ёфт шуд</string>
+    <string name="forums_moderation_pending_posts">Пастҳои интизорӣ (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Шарҳҳои интизорӣ (%1$d)</string>
 </resources>

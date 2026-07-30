@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Tredjepartslogin</string>
     <string name="account_oauth_link">Tilknyt konto</string>
     <string name="account_unlink">Fjern tilknytning</string>
-    <string name="tokens_create">Opret token</string>
-    <string name="tokens_name">Navn</string>
-    <string name="tokens_delete_title">Slet token?</string>
-    <string name="tokens_create_confirm">Opret</string>
     <string name="account_cancel">Annuller</string>
     <string name="account_save">Gem</string>
     <string name="account_done">Færdig</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Indstillinger</string>
     <string name="settings_home_sessions">Sessioner</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Privatlivspolitik</string>
     <string name="settings_home_rules">Regler</string>
     <string name="settings_home_terms">Servicevilkår</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Tilknyt en udbyder</string>
     <string name="account_oauth_unlink_title">Frakobl konto?</string>
     <string name="account_oauth_unlink_message">Du kan ikke længere logge ind med %1$s.</string>
-    <string name="tokens_section_title">API-tokens</string>
-    <string name="tokens_title">Godkendelsestokens</string>
-    <string name="tokens_empty">Ingen API-tokens.</string>
-    <string name="tokens_create_title">Nyt API-token</string>
-    <string name="tokens_new_title">API-token oprettet</string>
-    <string name="tokens_new_warning">Kopiér dette token nu — det vises ikke igen.</string>
-    <string name="tokens_delete_message">\"%1$s\" vil ikke længere autentificere apps, der bruger det.</string>
-    <string name="account_created_at">Oprettet %1$s</string>
     <string name="account_last_used">Sidst brugt %1$s</string>
-    <string name="tokens_scopes">Omfang: %1$s</string>
-    <string name="tokens_expires">Udløber: %1$s</string>
-    <string name="tokens_never">Aldrig</string>
     <string name="route_delete_message">Dette fjerner ruten for stien \"%1$s\".</string>
     <string name="route_empty">Ingen ruter konfigureret.</string>
     <string name="route_meta">Prioritet %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Đăng nhập bên thứ ba</string>
     <string name="account_oauth_link">Liên kết tài khoản</string>
     <string name="account_unlink">Hủy liên kết</string>
-    <string name="tokens_create">Tạo token</string>
-    <string name="tokens_name">Tên</string>
-    <string name="tokens_delete_title">Xóa token?</string>
-    <string name="tokens_create_confirm">Tạo</string>
     <string name="account_cancel">Hủy</string>
     <string name="account_save">Lưu</string>
     <string name="account_done">Xong</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Cài đặt</string>
     <string name="settings_home_sessions">Phiên đăng nhập</string>
-    <string name="settings_home_tokens">Các Token</string>
     <string name="settings_home_privacy">Chính sách quyền riêng tư</string>
     <string name="settings_home_rules">Quy tắc</string>
     <string name="settings_home_terms">Điều khoản dịch vụ</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Liên kết nhà cung cấp</string>
     <string name="account_oauth_unlink_title">Hủy liên kết tài khoản?</string>
     <string name="account_oauth_unlink_message">Bạn sẽ không thể đăng nhập bằng %1$s.</string>
-    <string name="tokens_section_title">Token API</string>
-    <string name="tokens_title">Token xác thực</string>
-    <string name="tokens_empty">Không có token API nào.</string>
-    <string name="tokens_create_title">Token API mới</string>
-    <string name="tokens_new_title">Token API đã được tạo</string>
-    <string name="tokens_new_warning">Sao chép token này ngay bây giờ — nó sẽ không được hiển thị lại.</string>
-    <string name="tokens_delete_message">\"%1$s\" sẽ không còn xác thực các ứng dụng sử dụng nó.</string>
-    <string name="account_created_at">Tạo %1$s</string>
     <string name="account_last_used">Lần cuối sử dụng %1$s</string>
-    <string name="tokens_scopes">Phạm vi: %1$s</string>
-    <string name="tokens_expires">Hết hạn: %1$s</string>
-    <string name="tokens_never">Không bao giờ</string>
     <string name="route_delete_message">Việc này sẽ xóa tuyến cho đường dẫn \"%1$s\".</string>
     <string name="route_empty">Không có tuyến nào được cấu hình.</string>
     <string name="route_meta">Mức ưu tiên %1$d · %2$s</string>

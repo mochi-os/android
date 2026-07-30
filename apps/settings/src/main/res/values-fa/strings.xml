@@ -27,10 +27,6 @@
     <string name="account_section_oauth">ورود شخص ثالث</string>
     <string name="account_oauth_link">اتصال حساب</string>
     <string name="account_unlink">قطع پیوند</string>
-    <string name="tokens_create">ساخت توکن</string>
-    <string name="tokens_name">نام</string>
-    <string name="tokens_delete_title">حذف توکن؟</string>
-    <string name="tokens_create_confirm">ساختن</string>
     <string name="account_cancel">لغو</string>
     <string name="account_save">ذخیره</string>
     <string name="account_done">انجام شد</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">تنظیمات Mochi</string>
     <string name="settings_home_sessions">نشست‌ها</string>
-    <string name="settings_home_tokens">توکن‌ها</string>
     <string name="settings_home_privacy">سیاست حریم خصوصی</string>
     <string name="settings_home_rules">قوانین</string>
     <string name="settings_home_terms">شرایط خدمات</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">اتصال یک ارائه‌دهنده</string>
     <string name="account_oauth_unlink_title">قطع اتصال حساب؟</string>
     <string name="account_oauth_unlink_message">دیگر نمی‌توانید با %1$s وارد شوید.</string>
-    <string name="tokens_section_title">توکن‌های API</string>
-    <string name="tokens_title">توکن‌های احراز هویت</string>
-    <string name="tokens_empty">هیچ توکن APIای وجود ندارد.</string>
-    <string name="tokens_create_title">توکن API جدید</string>
-    <string name="tokens_new_title">توکن API ایجاد شد</string>
-    <string name="tokens_new_warning">این توکن را اکنون کپی کنید — دوباره نمایش داده نخواهد شد.</string>
-    <string name="tokens_delete_message">«%1$s» دیگر برنامه‌هایی که از آن استفاده می‌کنند را احراز نخواهد کرد.</string>
-    <string name="account_created_at">ایجاد شده %1$s</string>
     <string name="account_last_used">آخرین استفاده %1$s</string>
-    <string name="tokens_scopes">دامنه‌ها: %1$s</string>
-    <string name="tokens_expires">انقضا: %1$s</string>
-    <string name="tokens_never">هرگز</string>
     <string name="route_delete_message">این مسیر برای مسیر «%1$s» را حذف می‌کند.</string>
     <string name="route_empty">هیچ مسیری پیکربندی نشده است.</string>
     <string name="route_meta">اولویت %1$d · %2$s</string>

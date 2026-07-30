@@ -26,10 +26,6 @@
     <string name="account_oauth_empty">Nenhuma conta vinculada</string>
     <string name="account_oauth_link">Vincular conta</string>
     <string name="account_unlink">Desvincular</string>
-    <string name="tokens_create">Criar token</string>
-    <string name="tokens_name">Nome</string>
-    <string name="tokens_delete_title">Excluir token?</string>
-    <string name="tokens_create_confirm">Criar</string>
     <string name="account_cancel">Cancelar</string>
     <string name="account_save">Salvar</string>
     <string name="account_done">Pronto</string>
@@ -250,16 +246,7 @@
     <string name="account_oauth_link_title">Vincular um provedor</string>
     <string name="account_oauth_unlink_title">Desvincular conta?</string>
     <string name="account_oauth_unlink_message">Você não poderá entrar com %1$s.</string>
-    <string name="tokens_section_title">Tokens de API</string>
-    <string name="tokens_empty">Nenhum token de API.</string>
-    <string name="tokens_create_title">Novo token de API</string>
-    <string name="tokens_new_title">Token de API criado</string>
-    <string name="tokens_new_warning">Copie este token agora — ele não será exibido novamente.</string>
-    <string name="tokens_delete_message">\"%1$s\" não autenticará mais os aplicativos que o utilizam.</string>
-    <string name="account_created_at">Criado em %1$s</string>
     <string name="account_last_used">Último uso em %1$s</string>
-    <string name="tokens_scopes">Escopos: %1$s</string>
-    <string name="tokens_expires">Expira em: %1$s</string>
     <string name="route_delete_message">Isto removerá a rota para o caminho \"%1$s\".</string>
     <string name="route_empty">Nenhuma rota configurada.</string>
     <string name="route_meta">Prioridade %1$d · %2$s</string>
@@ -310,9 +297,6 @@
     <string name="account_method_passkey_subtitle">Registre uma chave de acesso abaixo para ativar</string>
     <string name="sessions_title">Sessões</string>
     <string name="settings_home_sessions">Sessões</string>
-    <string name="settings_home_tokens">Tokens</string>
-    <string name="tokens_never">Nunca</string>
-    <string name="tokens_title">Tokens de autenticação</string>
     <string name="domain_add">Adicionar domínio</string>
     <string name="domain_add_title">Adicionar domínio</string>
     <string name="domain_delegation_add">Adicionar</string>

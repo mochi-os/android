@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Դադարեցնել ցուցադրումը</string>
     <string name="tags_none">Պիտակներ չկան</string>
     <string name="tags_delete">Հեռացնել պիտակը</string>
+    <string name="person_picker_none">Ոչ մեկը</string>
+    <string name="person_picker_clear">Մաքրել ընտրությունը (Escape)</string>
+    <string name="person_picker_select">Ընտրեք …</string>
+    <string name="person_picker_directory">Տեղեկատու</string>
+    <string name="person_picker_no_people">Մարդիկ չկան</string>
+    <string name="person_picker_project_members">Նախագծի անդամներ</string>
 </resources>

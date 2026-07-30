@@ -88,6 +88,7 @@ interface NotificationPrefsApi {
     @POST("settings/-/notifications/categories/create")
     suspend fun createCategory(
         @Field("label") label: String,
+        // contract-ok: read by the handler's destinations_input() helper, which the checker can't see
         @Field("destinations") destinations: String? = null,
         @Field("default") default: String? = null,
     ): Response<Unit>
@@ -97,6 +98,7 @@ interface NotificationPrefsApi {
     suspend fun updateCategory(
         @Field("id") id: String,
         @Field("label") label: String? = null,
+        // contract-ok: read by the handler's destinations_input() helper, which the checker can't see
         @Field("destinations") destinations: String? = null,
         @Field("default") default: String? = null,
     ): Response<Unit>

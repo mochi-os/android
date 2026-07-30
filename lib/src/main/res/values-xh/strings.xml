@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Yeka ukubonisa</string>
     <string name="tags_none">Akukho maphawu</string>
     <string name="tags_delete">Susa ithegi</string>
+    <string name="person_picker_none">Akukho nanye</string>
+    <string name="person_picker_clear">Cima ukukhetha</string>
+    <string name="person_picker_select">Khetha …</string>
+    <string name="person_picker_directory">Uluhlu</string>
+    <string name="person_picker_no_people">Akukho bantu</string>
+    <string name="person_picker_project_members">Amalungu eprojekthi</string>
 </resources>

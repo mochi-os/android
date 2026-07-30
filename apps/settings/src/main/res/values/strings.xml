@@ -14,7 +14,6 @@
     <string name="settings_home_rules">Rules</string>
     <string name="settings_home_terms">Terms of service</string>
     <string name="settings_home_sessions">Sessions</string>
-    <string name="settings_home_tokens">Tokens</string>
 
     <!-- Account -->
     <string name="account_title">Account</string>
@@ -101,7 +100,6 @@
     <string name="account_disable">Disable</string>
     <string name="account_copy">Copy</string>
     <string name="account_copy_all">Copy all</string>
-    <string name="account_created_at">Created %1$s</string>
     <string name="account_last_used">Last used %1$s</string>
 
     <!-- Sessions -->
@@ -115,20 +113,6 @@
     <string name="sessions_revoke">Revoke</string>
 
     <!-- Tokens -->
-    <string name="tokens_title">Authentication tokens</string>
-    <string name="tokens_section_title">API tokens</string>
-    <string name="tokens_empty">No API tokens.</string>
-    <string name="tokens_create">Create token</string>
-    <string name="tokens_create_title">New API token</string>
-    <string name="tokens_create_confirm">Create</string>
-    <string name="tokens_name">Name</string>
-    <string name="tokens_new_title">API token created</string>
-    <string name="tokens_new_warning">Copy this token now — it won\'t be shown again.</string>
-    <string name="tokens_delete_title">Delete token?</string>
-    <string name="tokens_delete_message">"%1$s" will no longer authenticate apps using it.</string>
-    <string name="tokens_scopes">Scopes: %1$s</string>
-    <string name="tokens_expires">Expires: %1$s</string>
-    <string name="tokens_never">Never</string>
 
     <!-- Replication -->
 

@@ -5,12 +5,15 @@
 
 package org.mochios.wikis.model
 
+import com.google.gson.annotations.SerializedName
+
 data class AccessRule(
     val id: Int? = null,
     val subject: String = "",
     val operation: String = "",
     val grant: Int = 0,
     val name: String? = null,
+    @SerializedName("owner")
     val isOwner: Boolean? = null,
 )
 

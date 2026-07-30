@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Alama ya kidole: %1$s</string>
     <string name="forums_settings_clear_notifications">Futa arifa</string>
     <string name="forums_moderation_queue_empty">Hakuna kinachosubiri</string>
-    <string name="forums_moderation_pending_posts">Machapisho yanayosubiri (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Maoni yanayosubiri (%1$d)</string>
     <string name="forums_moderation_report_details">Maelezo: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Ilitatuliwa na %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Hakuna shughuli ya msimamizi bado</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Jiondoe kwenye jukwaa</string>
     <string name="forums_share_link_title">Kiungo cha jukwaa</string>
     <string name="forums_find_found_by_url">Imepatikana kwa URL</string>
+    <string name="forums_moderation_pending_posts">Machapisho yanayosubiri (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Maoni yanayosubiri (%1$d)</string>
 </resources>

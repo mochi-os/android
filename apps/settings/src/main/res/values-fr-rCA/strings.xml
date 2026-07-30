@@ -9,7 +9,6 @@
     <string name="system_setting_operator_email">Courriel de l\'opérateur</string>
     <string name="system_users_email_label">Courriel</string>
 
-    <string name="tokens_name">Nom</string>
     <string name="notifprefs_name_label">Nom</string>
     <string name="accounts_field_name">Nom</string>
     <string name="account_cancel">Annuler</string>
@@ -84,23 +83,12 @@
     <string name="account_oauth_unlink_title">Dissocier le compte?</string>
     <string name="account_oauth_unlink_message">Vous ne pourrez plus vous connecter avec %1$s.</string>
     <string name="account_unlink">Dissocier</string>
-    <string name="tokens_section_title">Jetons d\'API</string>
-    <string name="tokens_empty">Aucun jeton d\'API.</string>
-    <string name="tokens_create">Créer un jeton</string>
-    <string name="tokens_create_title">Nouveau jeton d\'API</string>
-    <string name="tokens_new_title">Jeton d\'API créé</string>
-    <string name="tokens_new_warning">Copiez ce jeton maintenant — il ne sera plus affiché.</string>
-    <string name="tokens_delete_title">Supprimer le jeton?</string>
-    <string name="tokens_delete_message">« %1$s » ne permettra plus d\'authentifier les applications qui l\'utilisent.</string>
     <string name="account_done">Terminé</string>
     <string name="account_rename">Renommer</string>
     <string name="account_disable">Désactiver</string>
     <string name="account_copy">Copier</string>
     <string name="account_copy_all">Tout copier</string>
-    <string name="account_created_at">Créé %1$s</string>
     <string name="account_last_used">Dernière utilisation %1$s</string>
-    <string name="tokens_scopes">Portées : %1$s</string>
-    <string name="tokens_expires">Expire : %1$s</string>
     <string name="sessions_current">(actuelle)</string>
     <string name="settings_home_section_system">Système</string>
     <string name="route_section">Routes</string>
@@ -311,10 +299,6 @@
     <string name="settings_home_account">Compte</string>
     <string name="settings_home_preferences">Préférences</string>
     <string name="settings_home_sessions">Sessions</string>
-    <string name="settings_home_tokens">Jetons</string>
-    <string name="tokens_create_confirm">Créer</string>
-    <string name="tokens_never">Jamais</string>
-    <string name="tokens_title">Jetons d\'authentification</string>
     <string name="domain_add">Ajouter un domaine</string>
     <string name="domain_add_title">Ajouter un domaine</string>
     <string name="domain_delegation_add">Ajouter</string>

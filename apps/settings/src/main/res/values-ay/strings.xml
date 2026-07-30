@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Mä jaqina ingrayaña</string>
     <string name="account_oauth_link">Cuenta enlazaña</string>
     <string name="account_unlink">Proveedor jaytaña?</string>
-    <string name="tokens_create">Token luraña</string>
-    <string name="tokens_name">Suti</string>
-    <string name="tokens_delete_title">Token chhaqtayaña?</string>
-    <string name="tokens_create_confirm">Luraña</string>
     <string name="account_cancel">Jaytaña</string>
     <string name="account_save">Imaña</string>
     <string name="account_done">Tukuyata</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Aski lurawi</string>
     <string name="settings_home_sessions">Sesionanaka</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Imantasita kamachiwi</string>
     <string name="settings_home_rules">Kamachinaka</string>
     <string name="settings_home_terms">Yanapt\'awi arsuwinaka</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Churir chinjañ</string>
     <string name="account_oauth_unlink_title">Cuenta jiqxataña?</string>
     <string name="account_oauth_unlink_message">Janiw %1$smpi mantantarakimti.</string>
-    <string name="tokens_section_title">API tokenanaka</string>
-    <string name="tokens_title">Yäticha tokenanaka</string>
-    <string name="tokens_empty">Janiw API tokensa kasarakichi.</string>
-    <string name="tokens_create_title">Machaqa API token</string>
-    <string name="tokens_new_title">API token lurata</string>
-    <string name="tokens_new_warning">Aka tokenan jichhakipuni copiata — janiw mä kutilla uñacht\'ayatarakichuksa.</string>
-    <string name="tokens_delete_message">\"%1$s\" janiw mantxiri appsanakar autenticarxiniti.</string>
-    <string name="account_created_at">Lurata %1$s</string>
     <string name="account_last_used">Qhipa apnaqata %1$s</string>
-    <string name="tokens_scopes">Imantaynaka: %1$s</string>
-    <string name="tokens_expires">Tukuyi: %1$s</string>
-    <string name="tokens_never">Janipuni</string>
     <string name="route_delete_message">Akax \"%1$s\" thakhi sat thakhi apsuni.</string>
     <string name="route_empty">Janiw thakhinaksa wakichxatanaka.</string>
     <string name="route_meta">Nayraqat %1$d · %2$s</string>

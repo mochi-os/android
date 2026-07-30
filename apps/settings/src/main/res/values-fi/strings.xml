@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Kolmannen osapuolen kirjautuminen</string>
     <string name="account_oauth_link">Linkitä tili</string>
     <string name="account_unlink">Poista liitos</string>
-    <string name="tokens_create">Luo tunnus</string>
-    <string name="tokens_name">Nimi</string>
-    <string name="tokens_delete_title">Poistetaanko tunnus?</string>
-    <string name="tokens_create_confirm">Luo</string>
     <string name="account_cancel">Peruuta</string>
     <string name="account_save">Tallenna</string>
     <string name="account_done">Valmis</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Asetukset</string>
     <string name="settings_home_sessions">Istunnot</string>
-    <string name="settings_home_tokens">Tunnukset</string>
     <string name="settings_home_privacy">Tietosuojakäytäntö</string>
     <string name="settings_home_rules">Säännöt</string>
     <string name="settings_home_terms">Käyttöehdot</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Yhdistä palveluntarjoaja</string>
     <string name="account_oauth_unlink_title">Poistetaanko tilin yhdistys?</string>
     <string name="account_oauth_unlink_message">Et voi enää kirjautua sisään palvelulla %1$s.</string>
-    <string name="tokens_section_title">API-tunnukset</string>
-    <string name="tokens_title">Todennustunnukset</string>
-    <string name="tokens_empty">Ei API-tunnuksia.</string>
-    <string name="tokens_create_title">Uusi API-tunnus</string>
-    <string name="tokens_new_title">API-tunnus luotu</string>
-    <string name="tokens_new_warning">Kopioi tämä tunnus nyt — sitä ei näytetä uudelleen.</string>
-    <string name="tokens_delete_message">\"%1$s\" ei enää todenna sitä käyttäviä sovelluksia.</string>
-    <string name="account_created_at">Luotu %1$s</string>
     <string name="account_last_used">Viimeksi käytetty %1$s</string>
-    <string name="tokens_scopes">Laajuudet: %1$s</string>
-    <string name="tokens_expires">Vanhenee: %1$s</string>
-    <string name="tokens_never">Ei koskaan</string>
     <string name="route_delete_message">Tämä poistaa reitin polulle \"%1$s\".</string>
     <string name="route_empty">Reittejä ei ole määritetty.</string>
     <string name="route_meta">Prioriteetti %1$d · %2$s</string>

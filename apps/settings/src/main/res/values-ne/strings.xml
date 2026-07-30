@@ -27,10 +27,6 @@
     <string name="account_section_oauth">तेस्रो पक्षको लगइन</string>
     <string name="account_oauth_link">खाता लिङ्क गर्नुहोस्</string>
     <string name="account_unlink">अनलिंक गर्नुहोस्</string>
-    <string name="tokens_create">टोकन सिर्जना गर्नुहोस्</string>
-    <string name="tokens_name">नाम</string>
-    <string name="tokens_delete_title">टोकन मेटाउने?</string>
-    <string name="tokens_create_confirm">सिर्जना गर्नुहोस्</string>
     <string name="account_cancel">रद्द गर्नुहोस्</string>
     <string name="account_save">सुरक्षित गर्नुहोस्</string>
     <string name="account_done">सम्पन्न</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi सेटिङहरू</string>
     <string name="settings_home_sessions">सत्रहरू</string>
-    <string name="settings_home_tokens">टोकनहरू</string>
     <string name="settings_home_privacy">गोपनीयता नीति</string>
     <string name="settings_home_rules">नियमहरू</string>
     <string name="settings_home_terms">सेवाका सर्तहरू</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">प्रदायक जोड्नुहोस्</string>
     <string name="account_oauth_unlink_title">खाता अनलिङ्क गर्ने?</string>
     <string name="account_oauth_unlink_message">तपाईंले अब %1$s सँग साइन इन गर्न सक्नुहुनेछैन।</string>
-    <string name="tokens_section_title">API टोकनहरू</string>
-    <string name="tokens_title">प्रमाणीकरण टोकनहरू</string>
-    <string name="tokens_empty">कुनै API टोकनहरू छैनन्।</string>
-    <string name="tokens_create_title">नयाँ API टोकन</string>
-    <string name="tokens_new_title">API टोकन सिर्जना गरियो</string>
-    <string name="tokens_new_warning">यो टोकन अहिले प्रतिलिपि गर्नुहोस् — यो फेरि देखाइनेछैन।</string>
-    <string name="tokens_delete_message">\"%1$s\" ले अब यसलाई प्रयोग गर्ने एपहरूलाई प्रमाणीकरण गर्नेछैन।</string>
-    <string name="account_created_at">सिर्जना गरियो %1$s</string>
     <string name="account_last_used">अन्तिम पटक प्रयोग गरियो %1$s</string>
-    <string name="tokens_scopes">दायराहरू: %1$s</string>
-    <string name="tokens_expires">म्याद सकिन्छ: %1$s</string>
-    <string name="tokens_never">कहिल्यै होइन</string>
     <string name="route_delete_message">यसले बाटो \"%1$s\" को लागि मार्ग हटाउनेछ।</string>
     <string name="route_empty">कुनै मार्गहरू कन्फिगर गरिएका छैनन्।</string>
     <string name="route_meta">प्राथमिकता %1$d · %2$s</string>

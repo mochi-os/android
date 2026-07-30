@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Shiga ta wani ɓangare</string>
     <string name="account_oauth_link">Haɗa account</string>
     <string name="account_unlink">Cire haɗin</string>
-    <string name="tokens_create">Ƙirƙira token</string>
-    <string name="tokens_name">Suna</string>
-    <string name="tokens_delete_title">Goge token?</string>
-    <string name="tokens_create_confirm">Ƙirƙira</string>
     <string name="account_cancel">Soke</string>
     <string name="account_save">Adana</string>
     <string name="account_done">An gama</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Saituna</string>
     <string name="settings_home_sessions">Zama-zaman</string>
-    <string name="settings_home_tokens">Alamomi</string>
     <string name="settings_home_privacy">Manufar sirri</string>
     <string name="settings_home_rules">Dokoki</string>
     <string name="settings_home_terms">Sharuɗɗan sabis</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Haɗa mai bayarwa</string>
     <string name="account_oauth_unlink_title">Cire haɗin asusu?</string>
     <string name="account_oauth_unlink_message">Ba za ka iya shiga da %1$s ba.</string>
-    <string name="tokens_section_title">Alamomin API</string>
-    <string name="tokens_title">Alamomin tabbatarwa</string>
-    <string name="tokens_empty">Babu alamomin API.</string>
-    <string name="tokens_create_title">Sabuwar alamar API</string>
-    <string name="tokens_new_title">An ƙirƙiri alamar API</string>
-    <string name="tokens_new_warning">Kwafi wannan alama yanzu — ba za a sake nuna ta ba.</string>
-    <string name="tokens_delete_message">\"%1$s\" ba zai sake tabbatar da aikace-aikacen da suke amfani da shi ba.</string>
-    <string name="account_created_at">An ƙirƙira %1$s</string>
     <string name="account_last_used">Amfani na ƙarshe %1$s</string>
-    <string name="tokens_scopes">Iyaka: %1$s</string>
-    <string name="tokens_expires">Ya ƙare: %1$s</string>
-    <string name="tokens_never">Babu lokaci</string>
     <string name="route_delete_message">Wannan zai cire hanya don hanyar \"%1$s\".</string>
     <string name="route_empty">Babu hanyoyin da aka saita.</string>
     <string name="route_meta">Fifiko %1$d · %2$s</string>

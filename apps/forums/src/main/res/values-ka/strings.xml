@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ანაბეჭდი: %1$s</string>
     <string name="forums_settings_clear_notifications">შეტყობინებების გასუფთავება</string>
     <string name="forums_moderation_queue_empty">მოლოდინში არაფერია</string>
-    <string name="forums_moderation_pending_posts">მოლოდინში მყოფი პოსტები (%1$d)</string>
-    <string name="forums_moderation_pending_comments">მოლოდინში მყოფი კომენტარები (%1$d)</string>
     <string name="forums_moderation_report_details">დეტალები: %1$s</string>
     <string name="forums_moderation_report_resolved_by">გადაჭრა %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">მოდერატორის აქტივობა ჯერ არ არის</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">ფორუმიდან გამოწერის გაუქმება</string>
     <string name="forums_share_link_title">ფორუმის ბმული</string>
     <string name="forums_find_found_by_url">ნაპოვნია URL-ით</string>
+    <string name="forums_moderation_pending_posts">მოლოდინში მყოფი პოსტები (%1$d)</string>
+    <string name="forums_moderation_pending_comments">მოლოდინში მყოფი კომენტარები (%1$d)</string>
 </resources>

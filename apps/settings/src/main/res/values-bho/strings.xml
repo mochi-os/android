@@ -27,10 +27,6 @@
     <string name="account_section_oauth">तेसरा पक्ष लॉगिन</string>
     <string name="account_oauth_link">खाता जोड़ीं</string>
     <string name="account_unlink">लिंक हटाईं</string>
-    <string name="tokens_create">टोकन बनाईं</string>
-    <string name="tokens_name">नाम</string>
-    <string name="tokens_delete_title">टोकन मेटाईं?</string>
-    <string name="tokens_create_confirm">बनाईं</string>
     <string name="account_cancel">रद्द करीं</string>
     <string name="account_save">सहेजीं</string>
     <string name="account_done">हो गइल</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi सेटिंग</string>
     <string name="settings_home_sessions">सत्र</string>
-    <string name="settings_home_tokens">टोकन</string>
     <string name="settings_home_privacy">गोपनीयता नीति</string>
     <string name="settings_home_rules">नियम</string>
     <string name="settings_home_terms">सेवा के शर्त</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">प्रदाता जोड़ीं</string>
     <string name="account_oauth_unlink_title">खाता अलग करीं?</string>
     <string name="account_oauth_unlink_message">रउआ अब %1$s से साइन इन ना कर सकेम।</string>
-    <string name="tokens_section_title">API टोकन</string>
-    <string name="tokens_title">प्रमाणीकरण टोकन</string>
-    <string name="tokens_empty">कौनो API टोकन ना बा।</string>
-    <string name="tokens_create_title">नया API टोकन</string>
-    <string name="tokens_new_title">API टोकन बनल</string>
-    <string name="tokens_new_warning">एह टोकन के अब कॉपी करीं — फेर ना देखावल जाई।</string>
-    <string name="tokens_delete_message">\"%1$s\" एकरा के इस्तेमाल करे वाला एप के अब प्रमाणित ना करी।</string>
-    <string name="account_created_at">बनल %1$s</string>
     <string name="account_last_used">आखिरी इस्तेमाल %1$s</string>
-    <string name="tokens_scopes">क्षेत्र: %1$s</string>
-    <string name="tokens_expires">समाप्त: %1$s</string>
-    <string name="tokens_never">कबो ना</string>
     <string name="route_delete_message">ई \"%1$s\" रास्ता खातिर रूट मिटा दी।</string>
     <string name="route_empty">कौनो रास्ता कॉन्फिगर नइखे।</string>
     <string name="route_meta">प्राथमिकता %1$d · %2$s</string>

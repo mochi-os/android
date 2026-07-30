@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Slutt å vise</string>
     <string name="tags_none">Ingen etiketter</string>
     <string name="tags_delete">Fjern etikett</string>
+    <string name="person_picker_none">Ingen</string>
+    <string name="person_picker_clear">Tøm utvalg</string>
+    <string name="person_picker_select">Velg …</string>
+    <string name="person_picker_directory">Katalog</string>
+    <string name="person_picker_no_people">Ingen personer</string>
+    <string name="person_picker_project_members">Prosjektmedlemmer</string>
 </resources>

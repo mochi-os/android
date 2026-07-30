@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Derdeparty-aanmelding</string>
     <string name="account_oauth_link">Koppel rekening</string>
     <string name="account_unlink">Ontkoppel</string>
-    <string name="tokens_create">Skep token</string>
-    <string name="tokens_name">Naam</string>
-    <string name="tokens_delete_title">Verwyder token?</string>
-    <string name="tokens_create_confirm">Skep</string>
     <string name="account_cancel">Kanselleer</string>
     <string name="account_save">Stoor</string>
     <string name="account_done">Klaar</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Instellings</string>
     <string name="settings_home_sessions">Sessies</string>
-    <string name="settings_home_tokens">Tokens</string>
     <string name="settings_home_privacy">Privaatheidsbeleid</string>
     <string name="settings_home_rules">Reëls</string>
     <string name="settings_home_terms">Diensbepalings</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Skakel verskaffer</string>
     <string name="account_oauth_unlink_title">Ontkoppel rekening?</string>
     <string name="account_oauth_unlink_message">Jy sal nie meer met %1$s kan aanteken nie.</string>
-    <string name="tokens_section_title">API-tokens</string>
-    <string name="tokens_title">Verifikasietokens</string>
-    <string name="tokens_empty">Geen API-tokens nie.</string>
-    <string name="tokens_create_title">Nuwe API-token</string>
-    <string name="tokens_new_title">API-token geskep</string>
-    <string name="tokens_new_warning">Kopieer hierdie token nou — dit sal nie weer gewys word nie.</string>
-    <string name="tokens_delete_message">\"%1$s\" sal nie meer toepassings wat dit gebruik verifieer nie.</string>
-    <string name="account_created_at">Geskep %1$s</string>
     <string name="account_last_used">Laaste gebruik %1$s</string>
-    <string name="tokens_scopes">Omvang: %1$s</string>
-    <string name="tokens_expires">Verstryk: %1$s</string>
-    <string name="tokens_never">Nooit</string>
     <string name="route_delete_message">Hierdie sal die roete vir die pad \"%1$s\" verwyder.</string>
     <string name="route_empty">Geen roetes gekonfigureer nie.</string>
     <string name="route_meta">Prioriteit %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Најава од трета страна</string>
     <string name="account_oauth_link">Поврзи сметка</string>
     <string name="account_unlink">Отповрзи</string>
-    <string name="tokens_create">Создај токен</string>
-    <string name="tokens_name">Име</string>
-    <string name="tokens_delete_title">Да се избрише токенот?</string>
-    <string name="tokens_create_confirm">Создај</string>
     <string name="account_cancel">Откажи</string>
     <string name="account_save">Зачувај</string>
     <string name="account_done">Готово</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Поставки</string>
     <string name="settings_home_sessions">Сесии</string>
-    <string name="settings_home_tokens">Токени</string>
     <string name="settings_home_privacy">Политика за приватност</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Услови за услуга</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Поврзи провајдер</string>
     <string name="account_oauth_unlink_title">Откачи ја сметката?</string>
     <string name="account_oauth_unlink_message">Повеќе нема да можете да се најавите со %1$s.</string>
-    <string name="tokens_section_title">API токени</string>
-    <string name="tokens_title">Токени за автентикација</string>
-    <string name="tokens_empty">Нема API токени.</string>
-    <string name="tokens_create_title">Нов API токен</string>
-    <string name="tokens_new_title">API токенот е создаден</string>
-    <string name="tokens_new_warning">Копирајте го овој токен сега — нема да биде прикажан повторно.</string>
-    <string name="tokens_delete_message">„%1$s\" повеќе нема да ги автентицира апликациите што го користат.</string>
-    <string name="account_created_at">Создаден %1$s</string>
     <string name="account_last_used">Последно користен %1$s</string>
-    <string name="tokens_scopes">Опсег: %1$s</string>
-    <string name="tokens_expires">Истекува: %1$s</string>
-    <string name="tokens_never">Никогаш</string>
     <string name="route_delete_message">Ова ќе ја отстрани патеката за патот „%1$s\".</string>
     <string name="route_empty">Нема конфигурирани патеки.</string>
     <string name="route_meta">Приоритет %1$d · %2$s</string>

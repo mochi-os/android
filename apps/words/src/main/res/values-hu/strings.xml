@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Lépésed: %1$s</string>
     <string name="words_detail_chat_player_played">%1$s lépett: %2$s</string>
 
+    <string name="words_detail_delete_title">Játszma törlése?</string>
+    <string name="words_detail_delete_confirm">Törlés</string>
+    <string name="words_detail_delete_message">Ez véglegesen törli a játékot és a hozzá tartozó csevegést. Ez a művelet nem vonható vissza.</string>
 </resources>

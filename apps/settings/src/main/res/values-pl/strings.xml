@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Logowanie zewnętrzne</string>
     <string name="account_oauth_link">Połącz konto</string>
     <string name="account_unlink">Odłącz</string>
-    <string name="tokens_create">Utwórz token</string>
-    <string name="tokens_name">Nazwa</string>
-    <string name="tokens_delete_title">Usunąć token?</string>
-    <string name="tokens_create_confirm">Utwórz</string>
     <string name="account_cancel">Anuluj</string>
     <string name="account_save">Zapisz</string>
     <string name="account_done">Gotowe</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Ustawienia Mochi</string>
     <string name="settings_home_sessions">Sesje</string>
-    <string name="settings_home_tokens">Tokeny</string>
     <string name="settings_home_privacy">Polityka prywatności</string>
     <string name="settings_home_rules">Zasady</string>
     <string name="settings_home_terms">Warunki użytkowania</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Połącz dostawcę</string>
     <string name="account_oauth_unlink_title">Odłączyć konto?</string>
     <string name="account_oauth_unlink_message">Nie będziesz mógł logować się przez %1$s.</string>
-    <string name="tokens_section_title">Tokeny API</string>
-    <string name="tokens_title">Tokeny uwierzytelniania</string>
-    <string name="tokens_empty">Brak tokenów API.</string>
-    <string name="tokens_create_title">Nowy token API</string>
-    <string name="tokens_new_title">Token API utworzony</string>
-    <string name="tokens_new_warning">Skopiuj token teraz — nie zostanie pokazany ponownie.</string>
-    <string name="tokens_delete_message">„%1$s\" nie będzie już uwierzytelniał aplikacji.</string>
-    <string name="account_created_at">Utworzono %1$s</string>
     <string name="account_last_used">Ostatnio użyty %1$s</string>
-    <string name="tokens_scopes">Zakresy: %1$s</string>
-    <string name="tokens_expires">Wygasa: %1$s</string>
-    <string name="tokens_never">Nigdy</string>
     <string name="route_delete_message">To usunie trasę dla ścieżki „%1$s\".</string>
     <string name="route_empty">Brak skonfigurowanych tras.</string>
     <string name="route_meta">Priorytet %1$d · %2$s</string>

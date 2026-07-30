@@ -136,7 +136,7 @@ interface WikisApi {
     // ---- Pages ----
 
     
-    @GET("{wiki}/-/{page}")
+    @GET("{wiki}/-/pages/{page}")
     suspend fun getPage(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -144,7 +144,7 @@ interface WikisApi {
 
     
     @FormUrlEncoded
-    @POST("{wiki}/-/{page}/edit")
+    @POST("{wiki}/-/pages/{page}/edit")
     suspend fun editPage(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -164,7 +164,7 @@ interface WikisApi {
     ): Response<ApiResponse<NewPageResponse>>
 
     
-    @GET("{wiki}/-/{page}/history")
+    @GET("{wiki}/-/pages/{page}/history")
     suspend fun getPageHistory(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -173,7 +173,7 @@ interface WikisApi {
     ): Response<ApiResponse<PageHistoryResponse>>
 
     
-    @GET("{wiki}/-/{page}/history/{version}")
+    @GET("{wiki}/-/pages/{page}/history/{version}")
     suspend fun getPageRevision(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -182,7 +182,7 @@ interface WikisApi {
 
     
     @FormUrlEncoded
-    @POST("{wiki}/-/{page}/revert")
+    @POST("{wiki}/-/pages/{page}/revert")
     suspend fun revertPage(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -191,7 +191,7 @@ interface WikisApi {
     ): Response<ApiResponse<PageRevertResponse>>
 
     
-    @POST("{wiki}/-/{page}/delete")
+    @POST("{wiki}/-/pages/{page}/delete")
     suspend fun deletePage(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -199,7 +199,7 @@ interface WikisApi {
 
     
     @FormUrlEncoded
-    @POST("{wiki}/-/{page}/rename")
+    @POST("{wiki}/-/pages/{page}/rename")
     suspend fun renamePage(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -211,7 +211,7 @@ interface WikisApi {
 
     
     @FormUrlEncoded
-    @POST("{wiki}/-/{page}/tag/add")
+    @POST("{wiki}/-/pages/{page}/tag/add")
     suspend fun addTag(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -220,7 +220,7 @@ interface WikisApi {
 
     
     @FormUrlEncoded
-    @POST("{wiki}/-/{page}/tag/remove")
+    @POST("{wiki}/-/pages/{page}/tag/remove")
     suspend fun removeTag(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -349,12 +349,11 @@ interface WikisApi {
         @Query("search") query: String,
     ): Response<ApiResponse<UsersSearchResponse>>
 
-    /** Proxy to people.groups/list via the wikis backend. */
-    
-    @GET("{wiki}/-/groups")
-    suspend fun listGroups(
-        @Path(value = "wiki", encoded = true) wiki: String,
-    ): Response<ApiResponse<GroupsResponse>>
+    // Proxy to people.groups/list via the wikis backend (class-level).
+    // action_groups takes no wiki: it calls people directly, and app.json
+    // registers only `-/groups`. The entity-scoped form never resolved.
+    @GET("-/groups")
+    suspend fun listGroups(): Response<ApiResponse<GroupsResponse>>
 
     // ---- Wiki delete ----
 
@@ -367,7 +366,7 @@ interface WikisApi {
     // ---- Page comments ----
 
     
-    @GET("{wiki}/-/{page}/comments")
+    @GET("{wiki}/-/pages/{page}/comments")
     suspend fun getPageComments(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -375,7 +374,7 @@ interface WikisApi {
 
     
     @Multipart
-    @POST("{wiki}/-/{page}/comment/create")
+    @POST("{wiki}/-/pages/{page}/comment/create")
     suspend fun createComment(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -386,7 +385,7 @@ interface WikisApi {
 
     
     @FormUrlEncoded
-    @POST("{wiki}/-/{page}/comment/edit")
+    @POST("{wiki}/-/pages/{page}/comment/edit")
     suspend fun editComment(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
@@ -396,7 +395,7 @@ interface WikisApi {
 
     
     @FormUrlEncoded
-    @POST("{wiki}/-/{page}/comment/delete")
+    @POST("{wiki}/-/pages/{page}/comment/delete")
     suspend fun deleteComment(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,

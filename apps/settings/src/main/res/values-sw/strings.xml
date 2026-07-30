@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Kuingia kwa watu wengine</string>
     <string name="account_oauth_link">Unganisha akaunti</string>
     <string name="account_unlink">Tenganisha</string>
-    <string name="tokens_create">Unda tokeni</string>
-    <string name="tokens_name">Jina</string>
-    <string name="tokens_delete_title">Futa tokeni?</string>
-    <string name="tokens_create_confirm">Unda</string>
     <string name="account_cancel">Ghairi</string>
     <string name="account_save">Hifadhi</string>
     <string name="account_done">Imekamilika</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Mipangilio</string>
     <string name="settings_home_sessions">Vipindi</string>
-    <string name="settings_home_tokens">Vitambulisho</string>
     <string name="settings_home_privacy">Sera ya faragha</string>
     <string name="settings_home_rules">Sheria</string>
     <string name="settings_home_terms">Masharti ya huduma</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Unganisha mtoa huduma</string>
     <string name="account_oauth_unlink_title">Tenganisha akaunti?</string>
     <string name="account_oauth_unlink_message">Hutaweza tena kuingia kwa %1$s.</string>
-    <string name="tokens_section_title">Tokeni za API</string>
-    <string name="tokens_title">Vitambulisho vya uthibitishaji</string>
-    <string name="tokens_empty">Hakuna tokeni za API.</string>
-    <string name="tokens_create_title">Tokeni mpya ya API</string>
-    <string name="tokens_new_title">Tokeni ya API imeundwa</string>
-    <string name="tokens_new_warning">Nakili tokeni hii sasa — haitaonyeshwa tena.</string>
-    <string name="tokens_delete_message">\"%1$s\" haitathibitisha tena programu zinazoitumia.</string>
-    <string name="account_created_at">Iliumbwa %1$s</string>
     <string name="account_last_used">Mara ya mwisho kutumika %1$s</string>
-    <string name="tokens_scopes">Mawanda: %1$s</string>
-    <string name="tokens_expires">Inaisha: %1$s</string>
-    <string name="tokens_never">Kamwe</string>
     <string name="route_delete_message">Hii itaondoa njia ya njia \"%1$s\".</string>
     <string name="route_empty">Hakuna njia zilizowekwa.</string>
     <string name="route_meta">Kipaumbele %1$d · %2$s</string>

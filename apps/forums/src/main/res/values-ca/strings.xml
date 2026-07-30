@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Empremta: %1$s</string>
     <string name="forums_settings_clear_notifications">Esborra les notificacions</string>
     <string name="forums_moderation_queue_empty">Res pendent</string>
-    <string name="forums_moderation_pending_posts">Publicacions pendents (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentaris pendents (%1$d)</string>
     <string name="forums_moderation_report_details">Detalls: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Resolt per %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Encara no hi ha activitat del moderador</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Cancel·la la subscripció al fòrum</string>
     <string name="forums_share_link_title">Enllaç del fòrum</string>
     <string name="forums_find_found_by_url">Trobat per URL</string>
+    <string name="forums_moderation_pending_posts">Publicacions pendents (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Comentaris pendents (%1$d)</string>
 </resources>

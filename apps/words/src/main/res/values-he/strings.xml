@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">שיחקת %1$s</string>
     <string name="words_detail_chat_player_played">%1$s שיחק %2$s</string>
 
+    <string name="words_detail_delete_title">מחק משחק?</string>
+    <string name="words_detail_delete_confirm">מחק</string>
+    <string name="words_detail_delete_message">פעולה זו תמחק לצמיתות את המשחק ואת הצ\'אט שלו. לא ניתן לבטל פעולה זו.</string>
 </resources>

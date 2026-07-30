@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ګوته‌نښه: %1$s</string>
     <string name="forums_settings_clear_notifications">خبرتیاوې پاکې کړئ</string>
     <string name="forums_moderation_queue_empty">هیڅ شی په تمه نشته</string>
-    <string name="forums_moderation_pending_posts">په تمه پوسټونه (%1$d)</string>
-    <string name="forums_moderation_pending_comments">په تمه کمنټونه (%1$d)</string>
     <string name="forums_moderation_report_details">تفصیلات: %1$s</string>
     <string name="forums_moderation_report_resolved_by">د %1$s لخوا حل شو — %2$s</string>
     <string name="forums_moderation_log_empty">تر اوسه د مدیر هیڅ فعالیت نشته</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">له فورم څخه ګډون لغوه کړئ</string>
     <string name="forums_share_link_title">د فورم لینک</string>
     <string name="forums_find_found_by_url">د URL له لارې وموندل شو</string>
+    <string name="forums_moderation_pending_posts">پاتې پوسټونه (%1$d)</string>
+    <string name="forums_moderation_pending_comments">پاتې تبصرې (%1$d)</string>
 </resources>

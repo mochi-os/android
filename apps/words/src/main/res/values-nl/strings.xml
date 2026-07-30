@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Je speelde %1$s</string>
     <string name="words_detail_chat_player_played">%1$s speelde %2$s</string>
 
+    <string name="words_detail_delete_title">Partij verwijderen?</string>
+    <string name="words_detail_delete_confirm">Verwijderen</string>
+    <string name="words_detail_delete_message">Hierdoor worden het spel en de bijbehorende chat permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt.</string>
 </resources>

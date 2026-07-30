@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Niet meer tonen</string>
     <string name="tags_none">Geen labels</string>
     <string name="tags_delete">Tag verwijderen</string>
+    <string name="person_picker_none">Geen</string>
+    <string name="person_picker_clear">Selectie wissen</string>
+    <string name="person_picker_select">Selecteren …</string>
+    <string name="person_picker_directory">Gids</string>
+    <string name="person_picker_no_people">Geen personen</string>
+    <string name="person_picker_project_members">Projectleden</string>
 </resources>

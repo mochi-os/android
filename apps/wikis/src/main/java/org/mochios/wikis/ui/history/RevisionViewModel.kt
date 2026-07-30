@@ -100,7 +100,7 @@ class RevisionViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     revision = response.revision,
-                    currentVersion = response.currentVersion,
+                    currentVersion = response.version.current,
                     error = null,
                 )
             } catch (e: Exception) {

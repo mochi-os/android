@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">نمایش نده</string>
     <string name="tags_none">بدون برچسب</string>
     <string name="tags_delete">حذف برچسب</string>
+    <string name="person_picker_none">هیچ‌کدام</string>
+    <string name="person_picker_clear">پاک کردن انتخاب</string>
+    <string name="person_picker_select">انتخاب کنید …</string>
+    <string name="person_picker_directory">دفترچه</string>
+    <string name="person_picker_no_people">کسی نیست</string>
+    <string name="person_picker_project_members">اعضای پروژه</string>
 </resources>

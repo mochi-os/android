@@ -5,7 +5,6 @@
 
     <string name="account_section_oauth">第三方登入</string>
     <string name="account_oauth_empty">未連結任何帳戶</string>
-    <string name="tokens_name">名稱</string>
     <string name="notifprefs_name_label">名稱</string>
     <string name="accounts_field_name">名稱</string>
     <string name="account_cancel">取消</string>
@@ -80,23 +79,12 @@
     <string name="account_oauth_unlink_title">解除連結帳戶?</string>
     <string name="account_oauth_unlink_message">你將唔可以用 %1$s 登入。</string>
     <string name="account_unlink">解除連結</string>
-    <string name="tokens_section_title">API 權杖</string>
-    <string name="tokens_empty">冇 API 權杖。</string>
-    <string name="tokens_create">建立權杖</string>
-    <string name="tokens_create_title">新 API 權杖</string>
-    <string name="tokens_new_title">已建立 API 權杖</string>
-    <string name="tokens_new_warning">請即刻複製呢個權杖 — 佢唔會再顯示。</string>
-    <string name="tokens_delete_title">刪除權杖?</string>
-    <string name="tokens_delete_message">「%1$s」將唔再可以用嚟驗證應用程式。</string>
     <string name="account_done">完成</string>
     <string name="account_rename">重新命名</string>
     <string name="account_disable">停用</string>
     <string name="account_copy">複製</string>
     <string name="account_copy_all">複製全部</string>
-    <string name="account_created_at">建立於 %1$s</string>
     <string name="account_last_used">上次使用 %1$s</string>
-    <string name="tokens_scopes">範圍:%1$s</string>
-    <string name="tokens_expires">到期:%1$s</string>
     <string name="sessions_current">(目前)</string>
     <string name="settings_home_section_system">系統</string>
     <string name="route_section">路由</string>
@@ -311,10 +299,6 @@
     <string name="settings_home_account">帳戶</string>
     <string name="settings_home_preferences">偏好設定</string>
     <string name="settings_home_sessions">工作階段</string>
-    <string name="settings_home_tokens">權杖</string>
-    <string name="tokens_create_confirm">建立</string>
-    <string name="tokens_never">永不</string>
-    <string name="tokens_title">驗證權杖</string>
     <string name="domain_add">新增網域</string>
     <string name="domain_add_title">新增網域</string>
     <string name="domain_delegation_add">加入</string>

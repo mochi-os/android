@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Ungeniso lwabanye</string>
     <string name="account_oauth_link">Dibanisa iakhawunti</string>
     <string name="account_unlink">Yahlula</string>
-    <string name="tokens_create">Yenza itokeni</string>
-    <string name="tokens_name">Igama</string>
-    <string name="tokens_delete_title">Cima itokeni?</string>
-    <string name="tokens_create_confirm">Yenza</string>
     <string name="account_cancel">Rhoxisa</string>
     <string name="account_save">Gcina</string>
     <string name="account_done">Kwenziwe</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Izicwangciso</string>
     <string name="settings_home_sessions">Iindibano</string>
-    <string name="settings_home_tokens">Iitokeni</string>
     <string name="settings_home_privacy">Umgaqo-nkqubo wabucala</string>
     <string name="settings_home_rules">Imithetho</string>
     <string name="settings_home_terms">Imimiselo yenkonzo</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Dibanisa umboneleli</string>
     <string name="account_oauth_unlink_title">Susa ukudibanisa kwe-akhawunti?</string>
     <string name="account_oauth_unlink_message">Akusayi kukwazi ukungena nge-%1$s.</string>
-    <string name="tokens_section_title">Iitokeni ze-API</string>
-    <string name="tokens_title">Iitokeni zoqinisekiso</string>
-    <string name="tokens_empty">Akukho iitokeni ze-API.</string>
-    <string name="tokens_create_title">Itokeni entsha ye-API</string>
-    <string name="tokens_new_title">Itokeni ye-API yenziwe</string>
-    <string name="tokens_new_warning">Khuphela le tokeni ngoku — ayisayi kuphinda iboniswe.</string>
-    <string name="tokens_delete_message">\"%1$s\" akusayi kuqinisekisa iiapp ezisebenzisayo.</string>
-    <string name="account_created_at">Yenziwe %1$s</string>
     <string name="account_last_used">Isetyenziswe kokokugqibela %1$s</string>
-    <string name="tokens_scopes">Imida: %1$s</string>
-    <string name="tokens_expires">Iphelelwe: %1$s</string>
-    <string name="tokens_never">Soze</string>
     <string name="route_delete_message">Oku kuya kususa indlela yendlela \"%1$s\".</string>
     <string name="route_empty">Akukho zindlela zicwangcisiweyo.</string>
     <string name="route_meta">Okubalulekileyo %1$d · %2$s</string>

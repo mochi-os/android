@@ -27,10 +27,6 @@
     <string name="account_section_oauth">တတိယပါတီ ဝင်ရောက်ခြင်း</string>
     <string name="account_oauth_link">အကောင့် ချိတ်ဆက်</string>
     <string name="account_unlink">ချိတ်ဆက်မှု ဖြုတ်မည်</string>
-    <string name="tokens_create">Token ဖန်တီးမည်</string>
-    <string name="tokens_name">အမည်</string>
-    <string name="tokens_delete_title">Token ဖျက်မလား?</string>
-    <string name="tokens_create_confirm">ဖန်တီးမည်</string>
     <string name="account_cancel">မလုပ်တော့ပါ</string>
     <string name="account_save">သိမ်းမည်</string>
     <string name="account_done">ပြီးပါပြီ</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ဆက်တင်များ</string>
     <string name="settings_home_sessions">စက်ရှင်များ</string>
-    <string name="settings_home_tokens">တိုကင်များ</string>
     <string name="settings_home_privacy">ကိုယ်ရေးကိုယ်တာမူဝါဒ</string>
     <string name="settings_home_rules">စည်းမျဉ်းများ</string>
     <string name="settings_home_terms">ဝန်ဆောင်မှု စည်းမျဉ်းများ</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">ဝန်ဆောင်မှုပေးသူ ချိတ်ဆက်ပါ</string>
     <string name="account_oauth_unlink_title">အကောင့်ကို ဖြုတ်မလား?</string>
     <string name="account_oauth_unlink_message">%1$s ဖြင့် ထပ်မံ ဝင်နိုင်တော့မည် မဟုတ်ပါ။</string>
-    <string name="tokens_section_title">API တိုကင်များ</string>
-    <string name="tokens_title">အထောက်အထားစိစစ်မှု တိုကင်များ</string>
-    <string name="tokens_empty">API tokens မရှိပါ။</string>
-    <string name="tokens_create_title">API token အသစ်</string>
-    <string name="tokens_new_title">API token ဖန်တီးပြီးပါပြီ</string>
-    <string name="tokens_new_warning">ဤ token ကို ယခုပင် ကူးပါ — ထပ်ပြ မပြတော့ပါ။</string>
-    <string name="tokens_delete_message">\"%1$s\" သည် ၎င်းကို အသုံးပြုသော အက်ပ်များကို ထပ်မံ စစ်မှန်ကြောင်း အတည်ပြုတော့မည် မဟုတ်ပါ။</string>
-    <string name="account_created_at">ဖန်တီးခဲ့သည် %1$s</string>
     <string name="account_last_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
-    <string name="tokens_scopes">အကွာအဝေး- %1$s</string>
-    <string name="tokens_expires">သက်တမ်းကုန်- %1$s</string>
-    <string name="tokens_never">ဘယ်တော့မှ မဟုတ်</string>
     <string name="route_delete_message">ဤသည် လမ်းကြောင်း \"%1$s\" အတွက် လမ်းကြောင်းကို ဖယ်ရှားပါမည်။</string>
     <string name="route_empty">စီစဉ်ထားသော လမ်းကြောင်းများ မရှိပါ။</string>
     <string name="route_meta">ဦးစားပေး %1$d · %2$s</string>

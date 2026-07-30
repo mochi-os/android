@@ -36,7 +36,6 @@ data class CrmSettingsUiState(
     val isDeleting: Boolean = false,
     val name: String = "",
     val description: String = "",
-    val prefix: String = "",
     val userSearchResults: List<Person> = emptyList(),
     val groups: List<Group> = emptyList()
 )
@@ -69,7 +68,6 @@ class CrmSettingsViewModel @Inject constructor(
                     crm = details.crm,
                     name = details.crm.name,
                     description = details.crm.description,
-                    prefix = details.crm.prefix,
                     isLoading = false
                 )
             } catch (e: Exception) {
@@ -104,10 +102,6 @@ class CrmSettingsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(description = description)
     }
 
-    fun updatePrefix(prefix: String) {
-        _uiState.value = _uiState.value.copy(prefix = prefix)
-    }
-
     fun saveCrm() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true)
@@ -116,8 +110,7 @@ class CrmSettingsViewModel @Inject constructor(
                 repository.updateCrm(
                     crmId,
                     name = state.name,
-                    description = state.description,
-                    prefix = state.prefix
+                    description = state.description
                 )
                 _uiState.value = _uiState.value.copy(isSaving = false)
                 loadCrm()

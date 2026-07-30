@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Mewngofnodi trydydd parti</string>
     <string name="account_oauth_link">Cysylltu cyfrif</string>
     <string name="account_unlink">Datgysylltu</string>
-    <string name="tokens_create">Creu tocyn</string>
-    <string name="tokens_name">Enw</string>
-    <string name="tokens_delete_title">Dileu tocyn?</string>
-    <string name="tokens_create_confirm">Creu</string>
     <string name="account_cancel">Canslo</string>
     <string name="account_save">Cadw</string>
     <string name="account_done">Wedi gorffen</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Gosodiadau</string>
     <string name="settings_home_sessions">Sesiynau</string>
-    <string name="settings_home_tokens">Tocynnau</string>
     <string name="settings_home_privacy">Polisi preifatrwydd</string>
     <string name="settings_home_rules">Rheolau</string>
     <string name="settings_home_terms">Telerau gwasanaeth</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Cysylltu darparwr</string>
     <string name="account_oauth_unlink_title">Datgysylltu cyfrif?</string>
     <string name="account_oauth_unlink_message">Ni fyddwch yn gallu mewngofnodi mwyach gyda %1$s.</string>
-    <string name="tokens_section_title">Tocynnau API</string>
-    <string name="tokens_title">Tocynnau dilysu</string>
-    <string name="tokens_empty">Dim tocynnau API.</string>
-    <string name="tokens_create_title">Tocyn API newydd</string>
-    <string name="tokens_new_title">Tocyn API wedi\'i greu</string>
-    <string name="tokens_new_warning">Copïwch y tocyn hwn nawr — ni chaiff ei ddangos eto.</string>
-    <string name="tokens_delete_message">Ni fydd \"%1$s\" yn dilysu mwyach apiau sy\'n ei ddefnyddio.</string>
-    <string name="account_created_at">Crëwyd %1$s</string>
     <string name="account_last_used">Defnyddiwyd ddiwethaf %1$s</string>
-    <string name="tokens_scopes">Cwmpasau: %1$s</string>
-    <string name="tokens_expires">Yn dod i ben: %1$s</string>
-    <string name="tokens_never">Byth</string>
     <string name="route_delete_message">Bydd hyn yn tynnu\'r llwybr ar gyfer y llwybr \"%1$s\".</string>
     <string name="route_empty">Dim llwybrau wedi\'u ffurfweddu.</string>
     <string name="route_meta">Blaenoriaeth %1$d · %2$s</string>

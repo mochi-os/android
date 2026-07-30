@@ -14,9 +14,7 @@
     <string name="projects_comment_save">Speichern</string>
     <string name="projects_list_logout">Abmelden</string>
     <string name="projects_find_subscribe">Abonnieren</string>
-    <string name="projects_access_level_view">Anzeigen</string>
     <string name="projects_create_template_none">Keine</string>
-    <string name="projects_access_level_none">Keine</string>
     <string name="projects_property_option_none">Keine</string>
     <string name="projects_settings">Einstellungen</string>
     <string name="projects_settings_title">Einstellungen</string>
@@ -43,7 +41,6 @@
     <string name="projects_create_public">Öffentlich</string>
     <string name="projects_create_private">Privat</string>
     <string name="projects_access_level_owner">Eigentümer</string>
-    <string name="projects_access_level_comment">Kommentar</string>
     <string name="projects_loading">Wird geladen…</string>
     <string name="projects_field_position_default">Standard</string>
     <string name="projects_settings_tab_people">Personen</string>
@@ -52,7 +49,6 @@
     <string name="projects_field_type_number">Nummer</string>
     <string name="projects_views_sort_number">Nummer</string>
     <string name="projects_settings_tab_general">Allgemein</string>
-    <string name="projects_settings_save">Änderungen speichern</string>
     <string name="projects_field_save">Änderungen speichern</string>
     <string name="projects_request_status_draft">Entwurf</string>
     <string name="projects_request_field_draft">Entwurf</string>
@@ -74,7 +70,6 @@
     <string name="projects_option_icon">Symbol</string>
     <string name="projects_views_move_up">Nach oben verschieben</string>
     <string name="projects_views_move_down">Nach unten verschieben</string>
-    <string name="projects_settings_danger_zone">Gefahrenbereich</string>
     <string name="projects_object_tab_comments">Kommentare</string>
     <string name="projects_object_tab_attachments">Attachments</string>
     <string name="projects_parent_label">Übergeordnet</string>
@@ -100,7 +95,6 @@
     <string name="projects_field_required">Erforderlich</string>
     <string name="projects_views_sort_by">Sortieren nach</string>
     <string name="projects_design">Design</string>
-    <string name="projects_access_level_design">Design</string>
     <string name="projects_design_title">Design</string>
     <string name="projects_sort_direction">Richtung</string>
     <string name="projects_views_direction">Richtung</string>
@@ -123,8 +117,6 @@
     <string name="projects_search_objects_placeholder">Objekte suchen</string>
     <string name="projects_links_search_placeholder">Objekte suchen</string>
     <string name="projects_create_object">Objekt erstellen</string>
-    <string name="projects_create_object_title">Objekt erstellen</string>
-
     <string name="notification_channel_projects">Projekt-Benachrichtigungen</string>
     <string name="projects_auth_brand">Mochi Projects</string>
     <string name="projects_list_search_placeholder">Projekte suchen</string>
@@ -134,7 +126,6 @@
     <string name="projects_list_empty">Noch keine Projekte</string>
     <string name="projects_create_title">Projekt erstellen</string>
     <string name="projects_create_prefix">Präfix</string>
-    <string name="projects_create_template">Vorlage</string>
     <string name="projects_find_title">Projekte finden</string>
     <string name="projects_find_search_placeholder">Projekte suchen oder URL einfügen</string>
     <string name="projects_find_search_hint">Nach Projekten suchen, die Sie abonnieren möchten</string>
@@ -148,8 +139,6 @@
     <string name="projects_settings_delete_confirm_title">Projekt löschen</string>
     <string name="projects_settings_delete_confirm_message">Möchten Sie dieses Projekt wirklich löschen? Alle Objekte, Kommentare und Einstellungen werden dauerhaft entfernt.</string>
     <string name="projects_settings_unsubscribe_message">Möchten Sie dieses Projekt wirklich nicht mehr abonnieren?</string>
-    <string name="projects_access_user_fingerprint">Benutzer-Fingerabdruck</string>
-    <string name="projects_access_level_write">Schreiben</string>
     <string name="projects_object_unwatch">Nicht mehr beobachten</string>
     <string name="projects_object_tab_properties">Eigenschaften</string>
     <string name="projects_object_tab_requests">Anfragen</string>
@@ -326,4 +315,55 @@
     <string name="projects_design_preview_empty">Nichts anzuzeigen</string>
     <string name="projects_project_not_found">Projekt nicht gefunden</string>
 
+    <string name="projects_create_choose_template">Vorlage auswählen</string>
+    <string name="projects_create_next">Weiter</string>
+    <string name="projects_filter">Filter</string>
+    <string name="projects_link">Link</string>
+    <string name="projects_filter_clear_all">Alle löschen</string>
+    <string name="projects_filter_all">Alle</string>
+    <string name="projects_filter_other">Andere</string>
+    <string name="projects_create_object_title">Neu</string>
+    <string name="projects_settings_section_identity">Identität</string>
+    <string name="projects_settings_access_updated">Access updated</string>
+    <string name="projects_settings_access_revoked">Zugriff entzogen</string>
+    <string name="projects_settings_section_access">Zugriffsverwaltung</string>
+    <string name="projects_people_search">Personen suchen</string>
+    <string name="projects_settings_field_entity_id">Entity ID</string>
+    <string name="projects_settings_field_fingerprint">Fingerabdruck</string>
+    <string name="projects_settings_field_server">Server</string>
+    <string name="projects_access_subject_anyone">Jeder</string>
+    <string name="projects_access_subject_authenticated">Authentifizierte Benutzer</string>
+    <string name="projects_access_select_role">Rolle auswählen</string>
+    <string name="projects_access_role_view">View only</string>
+    <string name="projects_access_role_none">No access</string>
+    <string name="projects_access_tab_users">Benutzer</string>
+    <string name="projects_access_tab_groups">Gruppen</string>
+    <string name="projects_access_tab_other">Andere</string>
+    <string name="projects_access_search_users">Benutzer suchen</string>
+    <string name="projects_access_select_group">Gruppe auswählen</string>
+    <string name="projects_access_no_groups">No groups available</string>
+    <string name="projects_access_select_rule">Regel auswählen</string>
+    <string name="projects_access_authenticated_desc">Alle angemeldeten Benutzer</string>
+    <string name="projects_access_anyone_desc">Einschliesslich anonymer Benutzer</string>
+    <string name="projects_access_target">Ziel</string>
+    <string name="projects_access_target_hint">Entitäts-ID, @gruppe, * (alle) oder + (Mitglieder)</string>
+    <string name="projects_access_selected">Ausgewählt: %1$s</string>
+    <string name="projects_property_select">Auswählen …</string>
+    <string name="projects_activity_attached">hat angehängt</string>
+    <string name="projects_activity_commented">hat kommentiert</string>
+    <string name="projects_attachment_delete_confirm_message">Dieser Anhang wird dauerhaft gelöscht.</string>
+    <string name="projects_attachment_delete_confirm_title">Anhang löschen?</string>
+    <string name="projects_settings_unsubscribe_section">Projekt abbestellen</string>
+    <string name="projects_share_link_title">Projekt teilen</string>
+    <string name="projects_sort_filter_title">Sortieren &amp; filtern</string>
+    <string name="projects_create_prefix_hint">Für lesbare IDs wie %1$s-1, %1$s-2 verwendet</string>
+    <string name="projects_access_role_comment">Kommentieren und ansehen</string>
+    <string name="projects_access_role_design">Entwerfen, erstellen, bearbeiten, kommentieren und ansehen</string>
+    <string name="projects_access_role_write">Erstellen, bearbeiten, kommentieren und ansehen</string>
+    <string name="projects_all_projects">Alle Projekte</string>
+    <string name="projects_create_allow_search">Allen erlauben, nach Projekt zu suchen</string>
+    <string name="projects_create_import_backup">Aus Sicherung importieren (optional)</string>
+    <string name="projects_create_upload_json">.json-Datei hochladen</string>
+    <string name="projects_settings_not_set">Nicht festgelegt</string>
+    <string name="projects_settings_updated">Projekt aktualisiert</string>
 </resources>

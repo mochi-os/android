@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">ማሳየት አቁም</string>
     <string name="tags_none">ምንም መለያዎች የሉም</string>
     <string name="tags_delete">መለያ አስወግድ</string>
+    <string name="person_picker_none">ምንም</string>
+    <string name="person_picker_clear">ምርጫ አጽዳ</string>
+    <string name="person_picker_select">ይምረጡ …</string>
+    <string name="person_picker_directory">ማውጫ</string>
+    <string name="person_picker_no_people">ሰዎች የሉም</string>
+    <string name="person_picker_project_members">የፕሮጀክት አባላት</string>
 </resources>

@@ -12,12 +12,15 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.mochios.android.account.MochiAccount
+import org.mochios.android.api.ApiException
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.Identity
 import org.mochios.android.auth.SessionManager
@@ -43,8 +46,11 @@ import javax.inject.Inject
  *
  * No state can be reached out of order — the JWT request is only issued
  * from [Bootstrapping], which is only entered after a session is committed
- * to local DataStore. "App token required" 403s become architecturally
- * impossible because we never render the main UI before the JWT is in hand.
+ * to local DataStore, so the main UI normally renders with the JWT in hand.
+ * The one exception is deliberate: when the mint fails at the transport
+ * level (offline, DNS, timeout), [Ready] is entered on the JWT cached from
+ * a previous run and the mint retries in the background — an unreachable
+ * server must never be treated as a dead session.
  */
 sealed class AuthStage {
     /** Initial; ViewModel is evaluating account state. */
@@ -101,6 +107,7 @@ class AppBootstrapViewModel @Inject constructor(
     private var prefetchApps: List<String> = emptyList()
     private var justAuthenticated: Boolean = false
     private var readyEpoch: Long = 0L
+    private var remint: Job? = null
 
     init {
         // The ViewModel survives Activity.recreate(), so a `clearAll` in the
@@ -213,6 +220,7 @@ class AppBootstrapViewModel @Inject constructor(
      */
     fun logout() {
         _stage.value = AuthStage.NeedsLogin
+        remint?.cancel()
         viewModelScope.launch {
             // Stop the notifications poller + websocket first: otherwise the
             // socket keeps reconnect-looping and the unread-count call 401s
@@ -273,22 +281,37 @@ class AppBootstrapViewModel @Inject constructor(
 
     private suspend fun bootstrap() {
         _stage.value = AuthStage.Bootstrapping
+        remint?.cancel()
 
-        // Mint the per-app JWT. This is the single source of truth — if it
-        // fails the session is dead, drop to login.
-
+        // Mint the per-app JWT. Only an authoritative 401 — the server saw our
+        // session cookie and rejected it — means the session is dead. Transport
+        // failures (offline, DNS, timeout) and server errors say nothing about
+        // the session, so keep it: continue on the JWT cached by a previous run
+        // (the auth interceptor reads it from DataStore) and re-mint in the
+        // background once the server is reachable. Clearing on any failure
+        // logged users out on every offline launch — and, via the
+        // AccountManager removal, out of every sibling Mochi app on the device.
         val result = authRepository.fetchToken(appName)
-        if (result.isFailure) {
+        val failure = result.exceptionOrNull()
+        if (failure is ApiException && failure.code == 401) {
             sessionManager.clearAll()
             _stage.value = AuthStage.NeedsLogin
             return
+        }
+        val unreachable = result.isFailure
+        if (unreachable) {
+            Log.w(TAG, "Token mint unreachable; continuing with cached credentials", failure)
+            remintWhenReachable(appName)
         }
 
         // Single `_/identity` fetch reused for both the closing-account check
         // below and publishAccount() further down — they used to hit the same
         // endpoint twice per launch. Best-effort: a failed fetch shouldn't wedge
-        // the launch, so fall through to the normal Ready path.
-        val identityInfo = runCatching { authRepository.getIdentityInfo() }
+        // the launch, so fall through to the normal Ready path. Skipped when the
+        // mint already failed at the transport level: every further round-trip
+        // would eat its own connect timeout before failing the same way, holding
+        // the user on the Bootstrapping spinner for no information.
+        val identityInfo = if (unreachable) null else runCatching { authRepository.getIdentityInfo() }
             .onFailure { e -> Log.w(TAG, "getIdentityInfo failed at bootstrap", e) }
             .getOrNull()
 
@@ -310,13 +333,15 @@ class AppBootstrapViewModel @Inject constructor(
         // app: a mint failure (user lacks access to that app on this server,
         // etc.) is swallowed; the cold-start app's mint above is the
         // canonical session check.
-        prefetchApps
-            .filter { other -> other != appName }
-            .forEach { other ->
-                viewModelScope.launch(Dispatchers.IO) {
-                    authRepository.fetchToken(other)
+        if (!unreachable) {
+            prefetchApps
+                .filter { other -> other != appName }
+                .forEach { other ->
+                    viewModelScope.launch(Dispatchers.IO) {
+                        authRepository.fetchToken(other)
+                    }
                 }
-            }
+        }
 
         // Reconcile AccountManager with our just-validated session. The local
         // session is canonical "is logged in"; AccountManager is for sharing.
@@ -326,8 +351,10 @@ class AppBootstrapViewModel @Inject constructor(
         runCatching { publishAccount(identityInfo?.identity) }
 
         // Theme + preferences are best-effort warm-ups.
-        runCatching { themeRepository.fetchAndCacheTheme() }
-        runCatching { preferencesManager.refresh() }
+        if (!unreachable) {
+            runCatching { themeRepository.fetchAndCacheTheme() }
+            runCatching { preferencesManager.refresh() }
+        }
 
         // Language is fetched only after a fresh authentication. Returning
         // users keep whatever locale they last set.
@@ -345,6 +372,32 @@ class AppBootstrapViewModel @Inject constructor(
         }
 
         _stage.value = AuthStage.Ready(epoch = ++readyEpoch, recreateForLocale = recreate)
+    }
+
+    /**
+     * Retry the primary app's token mint after a transport-level failure at
+     * bootstrap, backing off to once a minute. Ends on success, or on an
+     * authoritative 401 — the session really is dead — where clearAll()'s
+     * DataStore emission flips the stage back to login via the currentToken
+     * observer. Cancelled by the next bootstrap (which mints anyway) and by
+     * user logout.
+     */
+    private fun remintWhenReachable(app: String) {
+        remint?.cancel()
+        remint = viewModelScope.launch(Dispatchers.IO) {
+            var wait = 5_000L
+            while (true) {
+                delay(wait)
+                val result = authRepository.fetchToken(app)
+                if (result.isSuccess) return@launch
+                val failure = result.exceptionOrNull()
+                if (failure is ApiException && failure.code == 401) {
+                    sessionManager.clearAll()
+                    return@launch
+                }
+                wait = (wait * 2).coerceAtMost(60_000L)
+            }
+        }
     }
 
     /**

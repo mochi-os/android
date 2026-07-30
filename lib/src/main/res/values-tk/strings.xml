@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Görkezmegi bes et</string>
     <string name="tags_none">Bellik ýok</string>
     <string name="tags_delete">Belligi aýyrmak</string>
+    <string name="person_picker_none">Hiç biri</string>
+    <string name="person_picker_clear">Saýlamany arassalamak</string>
+    <string name="person_picker_select">Saýlaň …</string>
+    <string name="person_picker_directory">Katalog</string>
+    <string name="person_picker_no_people">Adam ýok</string>
+    <string name="person_picker_project_members">Taslamanyň agzalary</string>
 </resources>

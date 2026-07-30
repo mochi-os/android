@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Ìka-ọwọ́: %1$s</string>
     <string name="forums_settings_clear_notifications">Pa àwọn ìfitónilétí rẹ́</string>
     <string name="forums_moderation_queue_empty">Kò sí ohun tí ó dúró</string>
-    <string name="forums_moderation_pending_posts">Àwọn àkọsílẹ̀ tí ó dúró (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Àwọn àlàyé tí ó dúró (%1$d)</string>
     <string name="forums_moderation_report_details">Àlàyé: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Yanjú láti ọwọ́ %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Kò sí iṣẹ́ alábòójútó síbẹ̀</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Yọ ara rẹ kúrò nínú àpéjọ</string>
     <string name="forums_share_link_title">Ọ̀nà àsopọ̀ àpéjọ</string>
     <string name="forums_find_found_by_url">A rí i nípasẹ̀ URL</string>
+    <string name="forums_moderation_pending_posts">Àwọn ìfìwéránṣẹ́ tí ń dúró (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Àwọn àsọyé tí ń dúró (%1$d)</string>
 </resources>

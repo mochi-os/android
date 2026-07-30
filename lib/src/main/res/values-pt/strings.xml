@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Parar de mostrar</string>
     <string name="tags_none">Sem etiquetas</string>
     <string name="tags_delete">Remover etiqueta</string>
+    <string name="person_picker_none">Nenhum</string>
+    <string name="person_picker_clear">Limpar seleção</string>
+    <string name="person_picker_select">Selecionar …</string>
+    <string name="person_picker_directory">Diretório</string>
+    <string name="person_picker_no_people">Sem pessoas</string>
+    <string name="person_picker_project_members">Membros do projeto</string>
 </resources>

@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Huella digital: %1$s</string>
     <string name="forums_settings_clear_notifications">Borrar notificaciones</string>
     <string name="forums_moderation_queue_empty">Nada pendiente</string>
-    <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$d)</string>
     <string name="forums_moderation_report_details">Detalles: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Resuelto por %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Aún no hay actividad de moderadores</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_ai_updated">Ajustes de IA actualizados</string>
     <string name="forums_settings_name_clear_cd">Borrar nombre</string>
     <string name="forums_find_found_by_url">Encontrado por URL</string>
+    <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$d)</string>
 </resources>

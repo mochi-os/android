@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Vous avez joué %1$s</string>
     <string name="words_detail_chat_player_played">%1$s a joué %2$s</string>
 
+    <string name="words_detail_delete_title">Supprimer la partie ?</string>
+    <string name="words_detail_delete_confirm">Supprimer</string>
+    <string name="words_detail_delete_message">Cette action supprime définitivement la partie et son chat. Cette action est irréversible.</string>
 </resources>

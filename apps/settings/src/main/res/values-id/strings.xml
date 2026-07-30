@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Login pihak ketiga</string>
     <string name="account_oauth_link">Tautkan akun</string>
     <string name="account_unlink">Putuskan tautan</string>
-    <string name="tokens_create">Buat token</string>
-    <string name="tokens_name">Nama</string>
-    <string name="tokens_delete_title">Hapus token?</string>
-    <string name="tokens_create_confirm">Buat</string>
     <string name="account_cancel">Batal</string>
     <string name="account_save">Simpan</string>
     <string name="account_done">Selesai</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Pengaturan Mochi</string>
     <string name="settings_home_sessions">Sesi</string>
-    <string name="settings_home_tokens">Token</string>
     <string name="settings_home_privacy">Kebijakan privasi</string>
     <string name="settings_home_rules">Aturan</string>
     <string name="settings_home_terms">Ketentuan layanan</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Hubungkan penyedia</string>
     <string name="account_oauth_unlink_title">Putuskan akun?</string>
     <string name="account_oauth_unlink_message">Anda tidak akan dapat masuk lagi dengan %1$s.</string>
-    <string name="tokens_section_title">Token API</string>
-    <string name="tokens_title">Token autentikasi</string>
-    <string name="tokens_empty">Tidak ada token API.</string>
-    <string name="tokens_create_title">Token API baru</string>
-    <string name="tokens_new_title">Token API dibuat</string>
-    <string name="tokens_new_warning">Salin token ini sekarang — tidak akan ditampilkan lagi.</string>
-    <string name="tokens_delete_message">\"%1$s\" tidak akan lagi mengautentikasi aplikasi yang menggunakannya.</string>
-    <string name="account_created_at">Dibuat %1$s</string>
     <string name="account_last_used">Terakhir digunakan %1$s</string>
-    <string name="tokens_scopes">Cakupan: %1$s</string>
-    <string name="tokens_expires">Berakhir: %1$s</string>
-    <string name="tokens_never">Tidak pernah</string>
     <string name="route_delete_message">Ini akan menghapus rute untuk jalur \"%1$s\".</string>
     <string name="route_empty">Tidak ada rute yang dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$d · %2$s</string>

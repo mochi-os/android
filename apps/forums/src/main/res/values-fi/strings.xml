@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Sormenjälki: %1$s</string>
     <string name="forums_settings_clear_notifications">Tyhjennä ilmoitukset</string>
     <string name="forums_moderation_queue_empty">Ei käsiteltäviä</string>
-    <string name="forums_moderation_pending_posts">Käsittelyä odottavat julkaisut (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Käsittelyä odottavat kommentit (%1$d)</string>
     <string name="forums_moderation_report_details">Tiedot: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Ratkaisija %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ei vielä valvojan toimintaa</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Lopeta foorumin tilaus</string>
     <string name="forums_share_link_title">Foorumin linkki</string>
     <string name="forums_find_found_by_url">Löytyi URL-osoitteella</string>
+    <string name="forums_moderation_pending_posts">Odottavat julkaisut (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Odottavat kommentit (%1$d)</string>
 </resources>

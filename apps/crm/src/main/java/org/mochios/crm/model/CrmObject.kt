@@ -11,7 +11,6 @@ data class CrmObject(
     val id: String = "",
     val crm: String = "",
     @SerializedName("class") val objectClass: String = "",
-    val number: Int = 0,
     val parent: String = "",
     // Fractional-index text key (#53): an opaque, ASCII-sortable ordering key
     // (e.g. "a0"), not a dense integer — compare/sort it as a string. Moves send
@@ -19,7 +18,6 @@ data class CrmObject(
     val rank: String = "",
     val created: Long = 0,
     val updated: Long = 0,
-    val readable: String = "",
     val values: Map<String, Any?> = emptyMap()
 ) {
     fun stringValue(fieldId: String): String = values[fieldId]?.toString() ?: ""

@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">您下了 %1$s</string>
     <string name="words_detail_chat_player_played">%1$s 下了 %2$s</string>
 
+    <string name="words_detail_delete_title">删除对局？</string>
+    <string name="words_detail_delete_confirm">删除</string>
+    <string name="words_detail_delete_message">此操作将永久删除对局及其聊天记录，且无法撤销。</string>
 </resources>

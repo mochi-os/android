@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">停止顯示</string>
     <string name="tags_none">無標籤</string>
     <string name="tags_delete">移除標籤</string>
+    <string name="person_picker_none">無</string>
+    <string name="person_picker_select">選擇 …</string>
+    <string name="person_picker_directory">目錄</string>
+    <string name="person_picker_no_people">沒有人員</string>
+    <string name="person_picker_project_members">專案成員</string>
+    <string name="person_picker_clear">清除選取</string>
 </resources>

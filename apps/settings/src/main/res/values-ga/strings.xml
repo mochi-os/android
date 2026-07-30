@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Logáil isteach tríú páirtí</string>
     <string name="account_oauth_link">Nasc cuntas</string>
     <string name="account_unlink">Dínasc</string>
-    <string name="tokens_create">Cruthaigh comhartha</string>
-    <string name="tokens_name">Ainm</string>
-    <string name="tokens_delete_title">Scrios comhartha?</string>
-    <string name="tokens_create_confirm">Cruthaigh</string>
     <string name="account_cancel">Cealaigh</string>
     <string name="account_save">Sábháil</string>
     <string name="account_done">Críochnaithe</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Socruithe</string>
     <string name="settings_home_sessions">Seisiúin</string>
-    <string name="settings_home_tokens">Comharthaí</string>
     <string name="settings_home_privacy">Polasaí príobháideachta</string>
     <string name="settings_home_rules">Rialacha</string>
     <string name="settings_home_terms">Téarmaí seirbhíse</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Ceangail soláthraí</string>
     <string name="account_oauth_unlink_title">Dícheangail an cuntas?</string>
     <string name="account_oauth_unlink_message">Ní bheidh tú in ann síniú isteach le %1$s a thuilleadh.</string>
-    <string name="tokens_section_title">Comharthaí API</string>
-    <string name="tokens_title">Comharthaí fíordheimhnithe</string>
-    <string name="tokens_empty">Níl aon chomhartha API.</string>
-    <string name="tokens_create_title">Comhartha API nua</string>
-    <string name="tokens_new_title">Comhartha API cruthaithe</string>
-    <string name="tokens_new_warning">Cóipeáil an comhartha seo anois — ní thaispeánfar arís é.</string>
-    <string name="tokens_delete_message">Ní fhíordheimhneoidh \"%1$s\" feidhmchláir a úsáideann é a thuilleadh.</string>
-    <string name="account_created_at">Cruthaithe %1$s</string>
     <string name="account_last_used">Úsáidte go deireanach %1$s</string>
-    <string name="tokens_scopes">Scóip: %1$s</string>
-    <string name="tokens_expires">Imeoidh: %1$s</string>
-    <string name="tokens_never">Riamh</string>
     <string name="route_delete_message">Bainfidh sé seo an cosán don chonair \"%1$s\".</string>
     <string name="route_empty">Níl aon chonair cumraithe.</string>
     <string name="route_meta">Tosaíocht %1$d · %2$s</string>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Вхід через сторонні сервіси</string>
     <string name="account_oauth_link">Прив\'язати обліковий запис</string>
     <string name="account_unlink">Від\'єднати</string>
-    <string name="tokens_create">Створити токен</string>
-    <string name="tokens_name">Ім\'я</string>
-    <string name="tokens_delete_title">Видалити токен?</string>
-    <string name="tokens_create_confirm">Створити</string>
     <string name="account_cancel">Скасувати</string>
     <string name="account_save">Зберегти</string>
     <string name="account_done">Готово</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Налаштування Mochi</string>
     <string name="settings_home_sessions">Сеанси</string>
-    <string name="settings_home_tokens">Токени</string>
     <string name="settings_home_privacy">Політика конфіденційності</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Умови використання</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Підключити провайдера</string>
     <string name="account_oauth_unlink_title">Відключити обліковий запис?</string>
     <string name="account_oauth_unlink_message">Ви більше не зможете входити через %1$s.</string>
-    <string name="tokens_section_title">Токени API</string>
-    <string name="tokens_title">Токени автентифікації</string>
-    <string name="tokens_empty">Немає токенів API.</string>
-    <string name="tokens_create_title">Новий токен API</string>
-    <string name="tokens_new_title">Токен API створено</string>
-    <string name="tokens_new_warning">Скопіюйте токен зараз — його більше не буде показано.</string>
-    <string name="tokens_delete_message">«%1$s» більше не буде автентифікувати додатки, які його використовують.</string>
-    <string name="account_created_at">Створено %1$s</string>
     <string name="account_last_used">Востаннє використано %1$s</string>
-    <string name="tokens_scopes">Області: %1$s</string>
-    <string name="tokens_expires">Закінчується: %1$s</string>
-    <string name="tokens_never">Ніколи</string>
     <string name="route_delete_message">Це видалить маршрут для шляху «%1$s».</string>
     <string name="route_empty">Маршрути не налаштовано.</string>
     <string name="route_meta">Пріоритет %1$d · %2$s</string>

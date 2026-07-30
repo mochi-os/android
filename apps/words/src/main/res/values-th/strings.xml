@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">คุณเล่น %1$s</string>
     <string name="words_detail_chat_player_played">%1$s เล่น %2$s</string>
 
+    <string name="words_detail_delete_title">ลบเกม?</string>
+    <string name="words_detail_delete_confirm">ลบ</string>
+    <string name="words_detail_delete_message">การดำเนินการนี้จะลบเกมและแชทของเกมอย่างถาวร ไม่สามารถยกเลิกการดำเนินการนี้ได้</string>
 </resources>

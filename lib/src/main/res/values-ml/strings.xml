@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">കാണിക്കുന്നത് നിർത്തുക</string>
     <string name="tags_none">ടാഗുകളൊന്നുമില്ല</string>
     <string name="tags_delete">ടാഗ് നീക്കം ചെയ്യുക</string>
+    <string name="person_picker_none">ഒന്നുമില്ല</string>
+    <string name="person_picker_clear">തിരഞ്ഞെടുപ്പ് മായ്ക്കുക</string>
+    <string name="person_picker_select">തിരഞ്ഞെടുക്കുക …</string>
+    <string name="person_picker_directory">ഡയറക്ടറി</string>
+    <string name="person_picker_no_people">ആളുകളില്ല</string>
+    <string name="person_picker_project_members">പ്രോജക്റ്റ് അംഗങ്ങൾ</string>
 </resources>

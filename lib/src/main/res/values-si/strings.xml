@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">පෙන්වීම නවත්වන්න</string>
     <string name="tags_none">ටැග් නැත</string>
     <string name="tags_delete">ටැගය ඉවත් කරන්න</string>
+    <string name="person_picker_none">කිසිවක් නැත</string>
+    <string name="person_picker_clear">තේරීම හිස් කරන්න</string>
+    <string name="person_picker_select">තෝරන්න …</string>
+    <string name="person_picker_directory">නාමාවලිය</string>
+    <string name="person_picker_no_people">පුද්ගලයන් නැත</string>
+    <string name="person_picker_project_members">ව්‍යාපෘති සාමාජිකයන්</string>
 </resources>

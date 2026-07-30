@@ -25,10 +25,6 @@
     <string name="account_oauth_empty">Ingen tilknytte kontoar</string>
     <string name="account_oauth_link">Kopla konto</string>
     <string name="account_unlink">Kople frå</string>
-    <string name="tokens_create">Opprett pollett</string>
-    <string name="tokens_name">Namn</string>
-    <string name="tokens_delete_title">Slette pollett?</string>
-    <string name="tokens_create_confirm">Opprett</string>
     <string name="account_cancel">Avbryt</string>
     <string name="account_save">Lagre</string>
     <string name="account_done">Ferdig</string>
@@ -254,16 +250,7 @@
     <string name="account_oauth_link_title">Kopla til ein leverandør</string>
     <string name="account_oauth_unlink_title">Kopla frå kontoen?</string>
     <string name="account_oauth_unlink_message">Du vil ikkje kunne logge inn med %1$s.</string>
-    <string name="tokens_section_title">API-tokenar</string>
-    <string name="tokens_empty">Ingen API-tokenar.</string>
-    <string name="tokens_create_title">Ny API-token</string>
-    <string name="tokens_new_title">API-token oppretta</string>
-    <string name="tokens_new_warning">Kopier denne tokenen no — han blir ikkje vist igjen.</string>
-    <string name="tokens_delete_message">\"%1$s\" vil ikkje lenger autentisere appar som brukar han.</string>
-    <string name="account_created_at">Oppretta %1$s</string>
     <string name="account_last_used">Sist brukt %1$s</string>
-    <string name="tokens_scopes">Omfang: %1$s</string>
-    <string name="tokens_expires">Går ut: %1$s</string>
     <string name="route_delete_message">Dette fjernar ruta for stien \"%1$s\".</string>
     <string name="route_empty">Ingen ruter er sette opp.</string>
     <string name="route_meta">Prioritet %1$d · %2$s</string>
@@ -312,9 +299,6 @@
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Innstillinger</string>
     <string name="settings_home_sessions">Økter</string>
-    <string name="settings_home_tokens">Tokener</string>
-    <string name="tokens_never">Aldri</string>
-    <string name="tokens_title">Autentiseringstokener</string>
     <string name="domain_add">Legg til domene</string>
     <string name="domain_add_title">Legg til domene</string>
     <string name="domain_delegation_add">Legg til</string>

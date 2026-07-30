@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Odtlačok: %1$s</string>
     <string name="forums_settings_clear_notifications">Vymazať upozornenia</string>
     <string name="forums_moderation_queue_empty">Nič nečaká</string>
-    <string name="forums_moderation_pending_posts">Čakajúce príspevky (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Čakajúce komentáre (%1$d)</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Vyriešil %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Zatiaľ žiadna aktivita moderátorov</string>
@@ -304,4 +302,6 @@
     <string name="forums_settings_unsubscribe_section">Odhlásiť odber fóra</string>
     <string name="forums_share_link_title">Odkaz na fórum</string>
     <string name="forums_find_found_by_url">Nájdené podľa URL</string>
+    <string name="forums_moderation_pending_posts">Čakajúce príspevky (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Čakajúce komentáre (%1$d)</string>
 </resources>

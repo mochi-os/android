@@ -27,10 +27,6 @@
     <string name="account_section_oauth">तृतीय-पक्ष लॉगिन</string>
     <string name="account_oauth_link">खाता लिंक करें</string>
     <string name="account_unlink">अनलिंक करें</string>
-    <string name="tokens_create">टोकन बनाएँ</string>
-    <string name="tokens_name">नाम</string>
-    <string name="tokens_delete_title">टोकन हटाएँ?</string>
-    <string name="tokens_create_confirm">बनाएँ</string>
     <string name="account_cancel">रद्द करें</string>
     <string name="account_save">सेव करें</string>
     <string name="account_done">पूर्ण</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi सेटिंग्स</string>
     <string name="settings_home_sessions">सत्र</string>
-    <string name="settings_home_tokens">टोकन</string>
     <string name="settings_home_privacy">गोपनीयता नीति</string>
     <string name="settings_home_rules">नियम</string>
     <string name="settings_home_terms">सेवा की शर्तें</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">प्रदाता को लिंक करें</string>
     <string name="account_oauth_unlink_title">खाता अनलिंक करें?</string>
     <string name="account_oauth_unlink_message">आप अब %1$s के साथ साइन इन नहीं कर पाएंगे।</string>
-    <string name="tokens_section_title">API टोकन</string>
-    <string name="tokens_title">प्रमाणीकरण टोकन</string>
-    <string name="tokens_empty">कोई API टोकन नहीं।</string>
-    <string name="tokens_create_title">नया API टोकन</string>
-    <string name="tokens_new_title">API टोकन बनाया गया</string>
-    <string name="tokens_new_warning">इस टोकन को अभी कॉपी करें — इसे फिर से नहीं दिखाया जाएगा।</string>
-    <string name="tokens_delete_message">\"%1$s\" अब इसका उपयोग कर रहे ऐप्स को प्रमाणित नहीं करेगा।</string>
-    <string name="account_created_at">बनाया गया %1$s</string>
     <string name="account_last_used">अंतिम बार उपयोग %1$s</string>
-    <string name="tokens_scopes">स्कोप: %1$s</string>
-    <string name="tokens_expires">समाप्ति: %1$s</string>
-    <string name="tokens_never">कभी नहीं</string>
     <string name="route_delete_message">यह पथ \"%1$s\" के लिए मार्ग हटा देगा।</string>
     <string name="route_empty">कोई मार्ग कॉन्फ़िगर नहीं किया गया।</string>
     <string name="route_meta">प्राथमिकता %1$d · %2$s</string>

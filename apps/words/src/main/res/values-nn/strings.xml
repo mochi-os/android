@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Byt (%1$d)</string>
     <string name="words_detail_chat_you_played">Du spela %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spela %2$s</string>
+    <string name="words_detail_delete_title">Slette parti?</string>
+    <string name="words_detail_delete_confirm">Slett</string>
+    <string name="words_detail_delete_message">Dette slettar spelet og praten permanent. Denne handlinga kan ikkje angrast.</string>
 </resources>

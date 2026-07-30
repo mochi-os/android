@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Воридшавӣ аз тариқи тарафи сеюм</string>
     <string name="account_oauth_link">Пайвасткунии ҳисоб</string>
     <string name="account_unlink">Қатъи пайвастшавӣ</string>
-    <string name="tokens_create">Эҷоди токен</string>
-    <string name="tokens_name">Ном</string>
-    <string name="tokens_delete_title">Токенро нест кунем?</string>
-    <string name="tokens_create_confirm">Эҷод кардан</string>
     <string name="account_cancel">Бекор кардан</string>
     <string name="account_save">Захира</string>
     <string name="account_done">Иҷро шуд</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Танзимот</string>
     <string name="settings_home_sessions">Сессияҳо</string>
-    <string name="settings_home_tokens">Токенҳо</string>
     <string name="settings_home_privacy">Сиёсати махфият</string>
     <string name="settings_home_rules">Қоидаҳо</string>
     <string name="settings_home_terms">Шартҳои хидмат</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Таъминкунанда пайваст кунед</string>
     <string name="account_oauth_unlink_title">Ҳисобро ҷудо кунед?</string>
     <string name="account_oauth_unlink_message">Шумо дигар бо %1$s ворид шуда наметавонед.</string>
-    <string name="tokens_section_title">Токенҳои API</string>
-    <string name="tokens_title">Токенҳои аутентификатсия</string>
-    <string name="tokens_empty">Токенҳои API нестанд.</string>
-    <string name="tokens_create_title">Токени нави API</string>
-    <string name="tokens_new_title">Токени API эҷод шуд</string>
-    <string name="tokens_new_warning">Ин токенро ҳозир нусха бардоред — он боз нишон дода намешавад.</string>
-    <string name="tokens_delete_message">\"%1$s\" дигар барномаҳое, ки онро истифода мебаранд, тасдиқ намекунад.</string>
-    <string name="account_created_at">Эҷод шуд %1$s</string>
     <string name="account_last_used">Истифодаи охирин %1$s</string>
-    <string name="tokens_scopes">Доираҳо: %1$s</string>
-    <string name="tokens_expires">Анҷом меёбад: %1$s</string>
-    <string name="tokens_never">Ҳеҷ гоҳ</string>
     <string name="route_delete_message">Ин роҳро барои масири \"%1$s\" нест мекунад.</string>
     <string name="route_empty">Роҳҳои танзимшуда нестанд.</string>
     <string name="route_meta">Афзалият %1$d · %2$s</string>

@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Has jugat %1$s</string>
     <string name="words_detail_chat_player_played">%1$s ha jugat %2$s</string>
 
+    <string name="words_detail_delete_title">Eliminar partida?</string>
+    <string name="words_detail_delete_confirm">Suprimeix</string>
+    <string name="words_detail_delete_message">Això suprimeix permanentment la partida i el seu xat. Aquesta acció no es pot desfer.</string>
 </resources>

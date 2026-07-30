@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Intercambiar (%1$d)</string>
     <string name="words_detail_chat_you_played">Xogaches %1$s</string>
     <string name="words_detail_chat_player_played">%1$s xogou %2$s</string>
+    <string name="words_detail_delete_title">Eliminar partida?</string>
+    <string name="words_detail_delete_confirm">Eliminar</string>
+    <string name="words_detail_delete_message">Isto eliminará permanentemente a partida e a súa conversa. Esta acción non se pode desfacer.</string>
 </resources>

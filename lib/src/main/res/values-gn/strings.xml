@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Ani ehechauka</string>
     <string name="tags_none">Ndaipóri techaukaha</string>
     <string name="tags_delete">Embogue tag</string>
+    <string name="person_picker_none">Mba\'eve</string>
+    <string name="person_picker_clear">Embopotĩ ñemboheka</string>
+    <string name="person_picker_select">Eiporavo …</string>
+    <string name="person_picker_directory">Directorio</string>
+    <string name="person_picker_no_people">Ndaipóri tapicha</string>
+    <string name="person_picker_project_members">Proyecto pegua</string>
 </resources>

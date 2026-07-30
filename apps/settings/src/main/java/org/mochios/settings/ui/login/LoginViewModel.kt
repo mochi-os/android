@@ -184,8 +184,8 @@ class LoginViewModel @Inject constructor(
         refresh()
     }
 
-    fun deletePasskey(id: String) = mutate {
-        api.deletePasskey(id).bodyOrThrow()
+    fun deletePasskey(id: String) = requestStepUp { token ->
+        api.deletePasskey(token, id).bodyOrThrow()
         refresh()
     }
 
@@ -227,7 +227,7 @@ class LoginViewModel @Inject constructor(
         _newRecoveryCodes.value = null
     }
 
-    // ---------- OAuth identities (linking is not step-up gated) ----------
+    // ---------- OAuth identities (linking is not step-up gated; unlinking is) ----------
 
     fun linkOAuth(provider: String) = mutate {
         val token = sessionManager.getToken("settings")
@@ -249,8 +249,8 @@ class LoginViewModel @Inject constructor(
         _oauthLaunchUrl.value = null
     }
 
-    fun unlinkOAuth(provider: String) = mutate {
-        api.unlinkOAuth(provider).bodyOrThrow()
+    fun unlinkOAuth(provider: String) = requestStepUp { token ->
+        api.unlinkOAuth(token, provider).bodyOrThrow()
         refresh()
     }
 

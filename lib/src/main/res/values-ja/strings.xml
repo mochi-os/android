@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">表示しない</string>
     <string name="tags_none">タグなし</string>
     <string name="tags_delete">タグを削除</string>
+    <string name="person_picker_none">なし</string>
+    <string name="person_picker_clear">選択をクリア</string>
+    <string name="person_picker_select">選択 …</string>
+    <string name="person_picker_directory">ディレクトリ</string>
+    <string name="person_picker_no_people">人がいません</string>
+    <string name="person_picker_project_members">プロジェクトメンバー</string>
 </resources>

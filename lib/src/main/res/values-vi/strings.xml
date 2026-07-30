@@ -304,4 +304,10 @@
     <string name="tags_interest_clear">Ngừng hiển thị</string>
     <string name="tags_none">Không có thẻ</string>
     <string name="tags_delete">Xóa thẻ</string>
+    <string name="person_picker_none">Không có</string>
+    <string name="person_picker_clear">Bỏ chọn</string>
+    <string name="person_picker_select">Chọn …</string>
+    <string name="person_picker_directory">Danh bạ</string>
+    <string name="person_picker_no_people">Không có người nào</string>
+    <string name="person_picker_project_members">Thành viên dự án</string>
 </resources>

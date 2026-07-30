@@ -7,7 +7,6 @@
     <string name="system_status_download_from_packages">Download from packages.mochi-os.org</string>
     <string name="system_documents_tab_privacy">Privacy</string>
 
-    <string name="tokens_name">Name</string>
     <string name="notifprefs_name_label">Name</string>
     <string name="accounts_field_name">Name</string>
     <string name="account_cancel">Cancel</string>
@@ -82,23 +81,12 @@
     <string name="account_oauth_unlink_title">Unlink account?</string>
     <string name="account_oauth_unlink_message">You won\'t be able to sign in with %1$s.</string>
     <string name="account_unlink">Unlink</string>
-    <string name="tokens_section_title">API tokens</string>
-    <string name="tokens_empty">No API tokens.</string>
-    <string name="tokens_create">Create token</string>
-    <string name="tokens_create_title">New API token</string>
-    <string name="tokens_new_title">API token created</string>
-    <string name="tokens_new_warning">Copy this token now — it won\'t be shown again.</string>
-    <string name="tokens_delete_title">Delete token?</string>
-    <string name="tokens_delete_message">\"%1$s\" will no longer authenticate apps using it.</string>
     <string name="account_done">Done</string>
     <string name="account_rename">Rename</string>
     <string name="account_disable">Disable</string>
     <string name="account_copy">Copy</string>
     <string name="account_copy_all">Copy all</string>
-    <string name="account_created_at">Created %1$s</string>
     <string name="account_last_used">Last used %1$s</string>
-    <string name="tokens_scopes">Scopes: %1$s</string>
-    <string name="tokens_expires">Expires: %1$s</string>
     <string name="sessions_current">(current)</string>
     <string name="settings_home_section_system">System</string>
     <string name="route_section">Routes</string>
@@ -312,10 +300,6 @@
     <string name="settings_home_account">Account</string>
     <string name="settings_home_preferences">Preferences</string>
     <string name="settings_home_sessions">Sessions</string>
-    <string name="settings_home_tokens">Tokens</string>
-    <string name="tokens_create_confirm">Create</string>
-    <string name="tokens_never">Never</string>
-    <string name="tokens_title">Authentication tokens</string>
     <string name="domain_add">Add domain</string>
     <string name="domain_add_title">Add domain</string>
     <string name="domain_delegation_add">Add</string>

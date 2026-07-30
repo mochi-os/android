@@ -8,8 +8,6 @@
     <string name="account_totp_setup_title">Configurá el autenticador</string>
     <string name="account_totp_verify">Verificá</string>
     <string name="account_totp_disable_title">¿Desactivás el autenticador?</string>
-    <string name="tokens_create">Creá un token</string>
-    <string name="tokens_delete_title">¿Eliminás el token?</string>
     <string name="account_cancel">Cancelá</string>
     <string name="account_save">Guardá</string>
     <string name="account_delete">Eliminá</string>
@@ -61,7 +59,6 @@
     <string name="system_users_sessions_description">Mirá y revocá las sesiones activas de este usuario.</string>
     <string name="system_users_empty_search_hint">Probá ajustando tus criterios de búsqueda</string>
 
-    <string name="tokens_name">Nombre</string>
     <string name="notifprefs_name_label">Nombre</string>
     <string name="accounts_field_name">Nombre</string>
     <string name="settings_home_title">Configuración</string>
@@ -118,18 +115,9 @@
     <string name="account_oauth_unlink_title">¿Desvincular la cuenta?</string>
     <string name="account_oauth_unlink_message">No vas a poder iniciar sesión con %1$s.</string>
     <string name="account_unlink">Desvincular</string>
-    <string name="tokens_section_title">Tokens de API</string>
-    <string name="tokens_empty">No hay tokens de API.</string>
-    <string name="tokens_create_title">Nuevo token de API</string>
-    <string name="tokens_new_title">Token de API creado</string>
-    <string name="tokens_new_warning">Copiá este token ahora: no se va a volver a mostrar.</string>
-    <string name="tokens_delete_message">\"%1$s\" ya no autenticará a las aplicaciones que lo usen.</string>
     <string name="account_done">Listo</string>
     <string name="account_copy">Copiar</string>
-    <string name="account_created_at">Creado %1$s</string>
     <string name="account_last_used">Último uso %1$s</string>
-    <string name="tokens_scopes">Permisos: %1$s</string>
-    <string name="tokens_expires">Vence: %1$s</string>
     <string name="sessions_current">(actual)</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Rutas</string>
@@ -311,10 +299,6 @@
     <string name="settings_home_account">Cuenta</string>
     <string name="settings_home_preferences">Preferencias</string>
     <string name="settings_home_sessions">Sesiones</string>
-    <string name="settings_home_tokens">Tokens</string>
-    <string name="tokens_create_confirm">Crear</string>
-    <string name="tokens_never">Nunca</string>
-    <string name="tokens_title">Tokens de autenticación</string>
     <string name="domain_add">Agregá un dominio</string>
     <string name="domain_add_title">Agregá un dominio</string>
     <string name="domain_delegation_add">Agregá</string>

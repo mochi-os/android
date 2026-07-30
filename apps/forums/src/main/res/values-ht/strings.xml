@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Anprent: %1$s</string>
     <string name="forums_settings_clear_notifications">Efase notifikasyon</string>
     <string name="forums_moderation_queue_empty">Pa gen anyen annatant</string>
-    <string name="forums_moderation_pending_posts">Piblikasyon annatant (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Kòmantè annatant (%1$d)</string>
     <string name="forums_moderation_report_details">Detay: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Rezoud pa %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Poko gen aktivite moderatè</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Dezabone nan fowòm nan</string>
     <string name="forums_share_link_title">Lyen fowòm nan</string>
     <string name="forums_find_found_by_url">Jwenn pa URL</string>
+    <string name="forums_moderation_pending_posts">Piblikasyon k ap tann (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Kòmantè k ap tann (%1$d)</string>
 </resources>

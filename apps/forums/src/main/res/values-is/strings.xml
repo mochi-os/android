@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Fingrafar: %1$s</string>
     <string name="forums_settings_clear_notifications">Hreinsa tilkynningar</string>
     <string name="forums_moderation_queue_empty">Ekkert í bið</string>
-    <string name="forums_moderation_pending_posts">Færslur í bið (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Athugasemdir í bið (%1$d)</string>
     <string name="forums_moderation_report_details">Nánar: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Leyst af %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Engin umsjónarvirkni ennþá</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Segja upp áskrift að spjallborði</string>
     <string name="forums_share_link_title">Tengill á spjallborð</string>
     <string name="forums_find_found_by_url">Fannst með veffangi</string>
+    <string name="forums_moderation_pending_posts">Færslur í bið (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Athugasemdir í bið (%1$d)</string>
 </resources>

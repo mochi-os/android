@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Shkëmbe (%1$d)</string>
     <string name="words_detail_chat_you_played">Luajte %1$s</string>
     <string name="words_detail_chat_player_played">%1$s luajti %2$s</string>
+    <string name="words_detail_delete_title">Fshi ndeshjen?</string>
+    <string name="words_detail_delete_confirm">Fshi</string>
+    <string name="words_detail_delete_message">Kjo do të fshijë përgjithmonë lojën dhe bisedën e saj. Ky veprim nuk mund të zhbëhet.</string>
 </resources>

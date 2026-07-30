@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Zagrałeś %1$s</string>
     <string name="words_detail_chat_player_played">%1$s zagrał %2$s</string>
 
+    <string name="words_detail_delete_title">Usunąć partię?</string>
+    <string name="words_detail_delete_confirm">Usuń</string>
+    <string name="words_detail_delete_message">To trwale usunie grę i jej czat. Tej czynności nie można cofnąć.</string>
 </resources>

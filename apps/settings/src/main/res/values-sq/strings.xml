@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Identifikim i palës së tretë</string>
     <string name="account_oauth_link">Lidh llogarinë</string>
     <string name="account_unlink">Shkëput</string>
-    <string name="tokens_create">Krijo token</string>
-    <string name="tokens_name">Emri</string>
-    <string name="tokens_delete_title">Të fshihet token-i?</string>
-    <string name="tokens_create_confirm">Krijo</string>
     <string name="account_cancel">Anulo</string>
     <string name="account_save">Ruaj</string>
     <string name="account_done">Përfunduar</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Cilësimet</string>
     <string name="settings_home_sessions">Sesionet</string>
-    <string name="settings_home_tokens">Tokenët</string>
     <string name="settings_home_privacy">Politika e privatësisë</string>
     <string name="settings_home_rules">Rregullat</string>
     <string name="settings_home_terms">Kushtet e shërbimit</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Lidh një ofrues</string>
     <string name="account_oauth_unlink_title">Shkëputni llogarinë?</string>
     <string name="account_oauth_unlink_message">Nuk do të jeni më në gjendje të hyni me %1$s.</string>
-    <string name="tokens_section_title">Token-et e API-së</string>
-    <string name="tokens_title">Token autentikimi</string>
-    <string name="tokens_empty">Asnjë token API.</string>
-    <string name="tokens_create_title">Token i ri API</string>
-    <string name="tokens_new_title">Token API i krijuar</string>
-    <string name="tokens_new_warning">Kopjojeni këtë token tani — nuk do të shfaqet sërish.</string>
-    <string name="tokens_delete_message">\"%1$s\" nuk do të vërtetojë më aplikacionet që e përdorin.</string>
-    <string name="account_created_at">Krijuar %1$s</string>
     <string name="account_last_used">Përdorur së fundi %1$s</string>
-    <string name="tokens_scopes">Fushëveprimet: %1$s</string>
-    <string name="tokens_expires">Skadon: %1$s</string>
-    <string name="tokens_never">Asnjëherë</string>
     <string name="route_delete_message">Kjo do të heqë rrugën për shtegun \"%1$s\".</string>
     <string name="route_empty">Asnjë rrugë e konfiguruar.</string>
     <string name="route_meta">Prioriteti %1$d · %2$s</string>

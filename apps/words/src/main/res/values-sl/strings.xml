@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">Izmenjava (%1$d)</string>
     <string name="words_detail_chat_you_played">Igrali ste %1$s</string>
     <string name="words_detail_chat_player_played">%1$s je igral %2$s</string>
+    <string name="words_detail_delete_title">Izbriši partijo?</string>
+    <string name="words_detail_delete_confirm">Izbriši</string>
+    <string name="words_detail_delete_message">To bo trajno izbrisalo igro in njen klepet. Tega dejanja ni mogoče razveljaviti.</string>
 </resources>

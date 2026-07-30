@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Você jogou %1$s</string>
     <string name="words_detail_chat_player_played">%1$s jogou %2$s</string>
 
+    <string name="words_detail_delete_title">Excluir partida?</string>
+    <string name="words_detail_delete_confirm">Excluir</string>
+    <string name="words_detail_delete_message">Isso exclui permanentemente o jogo e seu chat. Esta ação não pode ser desfeita.</string>
 </resources>

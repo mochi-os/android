@@ -27,10 +27,6 @@
     <string name="account_section_oauth">تیسرے فریق کا لاگ ان</string>
     <string name="account_oauth_link">اکاؤنٹ منسلک کریں</string>
     <string name="account_unlink">لنک ختم کریں</string>
-    <string name="tokens_create">Token بنائیں</string>
-    <string name="tokens_name">نام</string>
-    <string name="tokens_delete_title">Token حذف کریں؟</string>
-    <string name="tokens_create_confirm">بنائیں</string>
     <string name="account_cancel">منسوخ کریں</string>
     <string name="account_save">محفوظ کریں</string>
     <string name="account_done">مکمل</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ترتیبات</string>
     <string name="settings_home_sessions">سیشنز</string>
-    <string name="settings_home_tokens">ٹوکنز</string>
     <string name="settings_home_privacy">رازداری کی پالیسی</string>
     <string name="settings_home_rules">اصول</string>
     <string name="settings_home_terms">خدمات کی شرائط</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">فراہم کنندہ لنک کریں</string>
     <string name="account_oauth_unlink_title">اکاؤنٹ ان لنک کریں؟</string>
     <string name="account_oauth_unlink_message">آپ %1$s سے سائن ان نہیں کر سکیں گے۔</string>
-    <string name="tokens_section_title">API ٹوکنز</string>
-    <string name="tokens_title">تصدیقی ٹوکنز</string>
-    <string name="tokens_empty">کوئی API ٹوکنز نہیں۔</string>
-    <string name="tokens_create_title">نیا API ٹوکن</string>
-    <string name="tokens_new_title">API ٹوکن تخلیق ہوا</string>
-    <string name="tokens_new_warning">یہ ٹوکن ابھی کاپی کریں — یہ دوبارہ نہیں دکھایا جائے گا۔</string>
-    <string name="tokens_delete_message">\"%1$s\" اب ان ایپس کی تصدیق نہیں کرے گا جو اسے استعمال کرتی ہیں۔</string>
-    <string name="account_created_at">تخلیق ہوا %1$s</string>
     <string name="account_last_used">آخری استعمال %1$s</string>
-    <string name="tokens_scopes">دائرہ کار: %1$s</string>
-    <string name="tokens_expires">ختم ہوتا ہے: %1$s</string>
-    <string name="tokens_never">کبھی نہیں</string>
     <string name="route_delete_message">یہ راستے \"%1$s\" کا روٹ ہٹا دے گا۔</string>
     <string name="route_empty">کوئی روٹس کنفیگر نہیں ہیں۔</string>
     <string name="route_meta">ترجیح %1$d · %2$s</string>

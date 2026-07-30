@@ -71,6 +71,9 @@ fun AttachmentGallery(
     attachments: List<Attachment>,
     urlBuilder: (Attachment) -> String,
     thumbnailUrlBuilder: ((Attachment) -> String)? = null,
+    // Larger image variant for the full-width grid; the compact (comment)
+    // layout always stays on thumbnails. Falls back to thumbnailUrlBuilder.
+    previewUrlBuilder: ((Attachment) -> String)? = null,
     compact: Boolean = false,
     onDelete: ((Attachment) -> Unit)? = null,
     modifier: Modifier = Modifier
@@ -101,6 +104,10 @@ fun AttachmentGallery(
     val resolvedThumb: ((Attachment) -> String)? = thumbnailUrlBuilder?.let { tb ->
         { att -> resolveAttachmentUrl(serverUrl, tb(att)) }
     }
+    val resolvedPreview: ((Attachment) -> String)? =
+        (previewUrlBuilder ?: thumbnailUrlBuilder)?.let { pb ->
+            { att -> resolveAttachmentUrl(serverUrl, pb(att)) }
+        }
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (images.isNotEmpty()) {
@@ -139,7 +146,7 @@ fun AttachmentGallery(
             } else {
                 MediaGrid(
                     urls = images.map { resolvedUrl(it) },
-                    thumbnailUrls = resolvedThumb?.let { tb -> images.map { tb(it) } },
+                    thumbnailUrls = resolvedPreview?.let { pb -> images.map { pb(it) } },
                     contentDescriptions = images.map { it.name },
                     onClick = { index ->
                         viewerIndex = index

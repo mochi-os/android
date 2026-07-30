@@ -27,10 +27,6 @@
     <string name="account_section_oauth">მესამე მხარის შესვლა</string>
     <string name="account_oauth_link">ანგარიშის დაკავშირება</string>
     <string name="account_unlink">შეუზღუდავი</string>
-    <string name="tokens_create">ტოკენის შექმნა</string>
-    <string name="tokens_name">სახელი</string>
-    <string name="tokens_delete_title">ტოკენის წაშლა?</string>
-    <string name="tokens_create_confirm">შექმნა</string>
     <string name="account_cancel">გაუქმება</string>
     <string name="account_save">შენახვა</string>
     <string name="account_done">მზადაა</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi პარამეტრები</string>
     <string name="settings_home_sessions">სესიები</string>
-    <string name="settings_home_tokens">ტოკენები</string>
     <string name="settings_home_privacy">კონფიდენციალურობის პოლიტიკა</string>
     <string name="settings_home_rules">წესები</string>
     <string name="settings_home_terms">მომსახურების პირობები</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">პროვაიდერის დაკავშირება</string>
     <string name="account_oauth_unlink_title">ანგარიშის გათიშვა?</string>
     <string name="account_oauth_unlink_message">ვეღარ შეძლებთ %1$s-ით შესვლას.</string>
-    <string name="tokens_section_title">API ნიშნულები</string>
-    <string name="tokens_title">ავთენტიფიკაციის ტოკენები</string>
-    <string name="tokens_empty">API ნიშნულები არ არის.</string>
-    <string name="tokens_create_title">ახალი API ნიშნული</string>
-    <string name="tokens_new_title">API ნიშნული შეიქმნა</string>
-    <string name="tokens_new_warning">დააკოპირეთ ეს ნიშნული ახლა — ის აღარ გამოჩნდება.</string>
-    <string name="tokens_delete_message">\"%1$s\" აღარ მოახდენს მის გამომყენებელი აპლიკაციების ავტორიზაციას.</string>
-    <string name="account_created_at">შექმნილია %1$s</string>
     <string name="account_last_used">ბოლოს გამოყენებული %1$s</string>
-    <string name="tokens_scopes">სფეროები: %1$s</string>
-    <string name="tokens_expires">იწურება: %1$s</string>
-    <string name="tokens_never">არასოდეს</string>
     <string name="route_delete_message">ეს წაშლის მარშრუტს გზისთვის \"%1$s\".</string>
     <string name="route_empty">კონფიგურირებული მარშრუტი არ არის.</string>
     <string name="route_meta">პრიორიტეტი %1$d · %2$s</string>

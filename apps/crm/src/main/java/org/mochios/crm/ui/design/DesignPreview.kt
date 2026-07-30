@@ -274,7 +274,8 @@ private fun MiniCard(
 
     val cls = crm.classes.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
-    val title = titleFieldId?.let { obj.stringValue(it) }?.ifBlank { obj.readable } ?: obj.readable
+    val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty()
+        .ifBlank { stringResource(R.string.crm_untitled) }
 
     // Show one extra body field (if present) — pick the first card-eligible
     // field that isn't the title or column/row/border field.
@@ -403,7 +404,8 @@ private fun TreeRowMini(
 ) {
     val cls = crm.classes.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
-    val title = titleFieldId?.let { obj.stringValue(it) }?.ifBlank { obj.readable } ?: obj.readable
+    val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty()
+        .ifBlank { stringResource(R.string.crm_untitled) }
 
     val borderFieldId = view.border.takeIf { it.isNotBlank() }
     val accent = if (borderFieldId != null) {
@@ -574,7 +576,6 @@ private fun buildSampleObjects(
             id = "preview-$index",
             crm = crm.crm.id,
             objectClass = classId,
-            number = index + 1,
             // Make sample 2 a child of sample 1, sample 3 a child of sample 2,
             // so tree previews show nesting (2 levels deep).
             parent = when (index) {
@@ -585,7 +586,6 @@ private fun buildSampleObjects(
             // Sample objects only — a zero-padded index keeps them in order under
             // the string-keyed rank sort (#53).
             rank = index.toString().padStart(4, '0'),
-            readable = name,
             values = values
         )
     }

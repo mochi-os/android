@@ -42,3 +42,12 @@ val NeutralVariant90 = Color(0xFFE0E2E8)
 
 val ErrorRed = Color(0xFFBA1A1A)
 val ErrorRedLight = Color(0xFFFFDAD6)
+
+// Diverging interest scale: red (−) ↔ grey (0) ↔ green (+). Hue carries the sign,
+// saturation the strength, so neutral reads as plain grey rather than a colour you
+// have to interpret. Keep in sync with interestColor() in lib/web/src/components/post-tags.tsx.
+fun interestColor(interest: Double): Color {
+    val magnitude = (kotlin.math.abs(interest) / 100.0).coerceIn(0.0, 1.0).toFloat()
+    val hue = if (interest >= 0) 145f else 4f
+    return Color.hsl(hue, 0.06f + magnitude * 0.72f, 0.50f - magnitude * 0.03f)
+}

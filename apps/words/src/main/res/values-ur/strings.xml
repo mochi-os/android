@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">بدلیں (%1$d)</string>
     <string name="words_detail_chat_you_played">آپ نے %1$s کھیلا</string>
     <string name="words_detail_chat_player_played">%1$s نے %2$s کھیلا</string>
+    <string name="words_detail_delete_title">کھیل حذف کریں؟</string>
+    <string name="words_detail_delete_confirm">حذف کریں</string>
+    <string name="words_detail_delete_message">یہ گیم اور اس کی چیٹ کو مستقل طور پر حذف کر دے گا۔ اس عمل کو واپس نہیں لیا جا سکتا۔</string>
 </resources>

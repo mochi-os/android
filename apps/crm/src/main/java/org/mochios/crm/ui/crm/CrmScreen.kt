@@ -261,8 +261,8 @@ fun CrmScreen(
             templates = listUiState.templates,
             isCreating = listUiState.isCreating,
             onDismiss = { listViewModel.hideCreateDialog() },
-            onCreate = { name, description, prefix, privacy, template ->
-                listViewModel.createCrm(name, description, prefix, privacy, template)
+            onCreate = { name, description, privacy, template ->
+                listViewModel.createCrm(name, description, privacy, template)
             }
         )
     }
@@ -867,7 +867,6 @@ private fun SortRow(viewModel: CrmViewModel) {
 
     val builtIn = listOf(
         "rank" to stringResource(R.string.crm_sort_rank),
-        "number" to stringResource(R.string.crm_sort_number),
         "created" to stringResource(R.string.crm_sort_created),
         "updated" to stringResource(R.string.crm_sort_updated)
     )

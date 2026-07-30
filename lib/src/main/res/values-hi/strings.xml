@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">दिखाना बंद करें</string>
     <string name="tags_none">कोई टैग नहीं</string>
     <string name="tags_delete">टैग हटाएँ</string>
+    <string name="person_picker_none">कोई नहीं</string>
+    <string name="person_picker_clear">चयन साफ़ करें</string>
+    <string name="person_picker_select">चुनें …</string>
+    <string name="person_picker_directory">निर्देशिका</string>
+    <string name="person_picker_no_people">कोई लोग नहीं</string>
+    <string name="person_picker_project_members">परियोजना सदस्य</string>
 </resources>

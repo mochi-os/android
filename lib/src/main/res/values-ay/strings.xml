@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Jan uñacht\'ayañxa</string>
     <string name="tags_none">Janiw sutinakax utjkiti</string>
     <string name="tags_delete">Etiqueta apsuña</string>
+    <string name="person_picker_none">Janiwa</string>
+    <string name="person_picker_clear">Ajllxawi q\'umachaña</string>
+    <string name="person_picker_select">Ajlliña …</string>
+    <string name="person_picker_directory">Directorio</string>
+    <string name="person_picker_no_people">Janiw jaqinakax utjkiti</string>
+    <string name="person_picker_project_members">Proyecto irnaqirinaka</string>
 </resources>

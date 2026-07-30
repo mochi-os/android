@@ -258,7 +258,7 @@ interface MarketApi {
      * dialog.
      */
     @FormUrlEncoded
-    @POST("-/listings/removal_check")
+    @POST("-/listings/removal/check")
     suspend fun removalCheckListing(
         @Field("id") id: String,
     ): Response<ApiResponse<RemovalCheck>>
@@ -287,8 +287,14 @@ interface MarketApi {
         @Field("id") id: String,
     ): Response<ApiResponse<RelistResponse>>
 
-    /** Public search across active listings. */
-    @GET("-/listings/search")
+    /**
+     * Authenticated search across active listings. The Android client always
+     * has a session, so it uses the viewer route, which personalises results
+     * (my_subscription flags, own reserved listings); the public
+     * -/listings/search exists for anonymous web browsing and carries no
+     * personalisation.
+     */
+    @GET("-/listings/viewer/search")
     suspend fun searchListings(
         @Query("query") query: String? = null,
         @Query("category") category: String? = null,
@@ -304,8 +310,12 @@ interface MarketApi {
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<ListingsSearchResponse>>
 
-    /** Public single-listing fetch (includes seller, shipping, assets, etc.). */
-    @GET("-/listings/get")
+    /**
+     * Authenticated single-listing fetch (includes seller, shipping, assets,
+     * my_order / my_reservation / my_subscription, and own-listing fields).
+     * Uses the viewer route for the same reason as searchListings.
+     */
+    @GET("-/listings/viewer/get")
     suspend fun getListing(
         @Query("id") id: String,
     ): Response<ApiResponse<ListingDetailResponse>>

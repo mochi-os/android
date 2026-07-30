@@ -12,7 +12,6 @@ data class Link(
     val target: String = "",
     val linktype: String = "",
     val created: Long = 0,
-    val number: Int = 0,
     @SerializedName("class") val objectClass: String = "",
     val title: String = ""
 )

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">ತೃತೀಯ ಪಕ್ಷದ ಲಾಗಿನ್</string>
     <string name="account_oauth_link">ಖಾತೆ ಲಿಂಕ್ ಮಾಡಿ</string>
     <string name="account_unlink">ಲಿಂಕ್ ತೆಗೆದುಹಾಕಿ</string>
-    <string name="tokens_create">ಟೋಕನ್ ರಚಿಸಿ</string>
-    <string name="tokens_name">ಹೆಸರು</string>
-    <string name="tokens_delete_title">ಟೋಕನ್ ಅಳಿಸಬೇಕೆ?</string>
-    <string name="tokens_create_confirm">ರಚಿಸಿ</string>
     <string name="account_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="account_save">ಉಳಿಸಿ</string>
     <string name="account_done">ಮುಗಿಯಿತು</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="settings_home_sessions">ಸೆಷನ್‌ಗಳು</string>
-    <string name="settings_home_tokens">ಟೋಕನ್‌ಗಳು</string>
     <string name="settings_home_privacy">ಗೌಪ್ಯತೆ ನೀತಿ</string>
     <string name="settings_home_rules">ನಿಯಮಗಳು</string>
     <string name="settings_home_terms">ಸೇವಾ ನಿಬಂಧನೆಗಳು</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">ಪೂರೈಕೆದಾರನನ್ನು ಲಿಂಕ್ ಮಾಡಿ</string>
     <string name="account_oauth_unlink_title">ಖಾತೆಯನ್ನು ಅನ್‌ಲಿಂಕ್ ಮಾಡಬೇಕೇ?</string>
     <string name="account_oauth_unlink_message">ನೀವು ಇನ್ನು ಮುಂದೆ %1$s ಜೊತೆಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
-    <string name="tokens_section_title">API ಟೋಕನ್‌ಗಳು</string>
-    <string name="tokens_title">ದೃಢೀಕರಣ ಟೋಕನ್‌ಗಳು</string>
-    <string name="tokens_empty">ಯಾವುದೇ API ಟೋಕನ್‌ಗಳಿಲ್ಲ.</string>
-    <string name="tokens_create_title">ಹೊಸ API ಟೋಕನ್</string>
-    <string name="tokens_new_title">API ಟೋಕನ್ ರಚಿಸಲಾಗಿದೆ</string>
-    <string name="tokens_new_warning">ಈ ಟೋಕನ್ ಅನ್ನು ಈಗಲೇ ನಕಲಿಸಿ — ಇದನ್ನು ಮತ್ತೊಮ್ಮೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>
-    <string name="tokens_delete_message">\"%1$s\" ಇನ್ನು ಮುಂದೆ ಅದನ್ನು ಬಳಸುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ದೃಢೀಕರಿಸುವುದಿಲ್ಲ.</string>
-    <string name="account_created_at">ರಚಿಸಲಾಗಿದೆ %1$s</string>
     <string name="account_last_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>
-    <string name="tokens_scopes">ವ್ಯಾಪ್ತಿಗಳು: %1$s</string>
-    <string name="tokens_expires">ಮುಕ್ತಾಯ: %1$s</string>
-    <string name="tokens_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>
     <string name="route_delete_message">ಇದು ಮಾರ್ಗ \"%1$s\" ಗಾಗಿನ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
     <string name="route_empty">ಯಾವುದೇ ಮಾರ್ಗಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</string>
     <string name="route_meta">ಆದ್ಯತೆ %1$d · %2$s</string>

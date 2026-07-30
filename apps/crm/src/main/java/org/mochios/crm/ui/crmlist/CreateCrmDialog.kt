@@ -44,11 +44,10 @@ fun CreateCrmDialog(
     templates: List<Template>,
     isCreating: Boolean,
     onDismiss: () -> Unit,
-    onCreate: (name: String, description: String, prefix: String, privacy: String, template: String?) -> Unit
+    onCreate: (name: String, description: String, privacy: String, template: String?) -> Unit
 ) {
     var name by remember { mutableStateOf("") }
     var description by remember { mutableStateOf("") }
-    var prefix by remember { mutableStateOf("") }
     var privacy by remember { mutableStateOf("private") }
     var selectedTemplate by remember { mutableStateOf<String?>(null) }
     var templateExpanded by remember { mutableStateOf(false) }
@@ -72,14 +71,6 @@ fun CreateCrmDialog(
                     onValueChange = { description = it },
                     label = { Text(stringResource(R.string.crm_create_description)) },
                     maxLines = 3,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
-                    value = prefix,
-                    onValueChange = { prefix = it.uppercase() },
-                    label = { Text(stringResource(R.string.crm_create_prefix)) },
-                    singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(12.dp))
@@ -141,7 +132,7 @@ fun CreateCrmDialog(
         },
         confirmButton = {
             TextButton(
-                onClick = { onCreate(name, description, prefix, privacy, selectedTemplate) },
+                onClick = { onCreate(name, description, privacy, selectedTemplate) },
                 enabled = name.isNotBlank() && !isCreating
             ) {
                 if (isCreating) {

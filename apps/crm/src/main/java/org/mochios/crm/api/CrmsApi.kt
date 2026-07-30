@@ -95,7 +95,6 @@ interface CrmsApi {
     suspend fun createCrm(
         @Field("name") name: String,
         @Field("description") description: String?,
-        @Field("prefix") prefix: String?, // contract-ok: crm create ignores prefix server-side (no prefix on create)
         @Field("privacy") privacy: String,
         @Field("template") template: String? // contract-ok: templates applied via design-import, not create
     ): Response<ApiResponse<CrmResponse>>
@@ -141,8 +140,7 @@ interface CrmsApi {
     suspend fun updateCrm(
         @Path("crmId") crmId: String,
         @Field("name") name: String?,
-        @Field("description") description: String?,
-        @Field("prefix") prefix: String? // contract-ok: crm update reads name/description only; prefix not server-supported
+        @Field("description") description: String?
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/delete")

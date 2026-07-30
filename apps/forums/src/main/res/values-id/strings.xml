@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Sidik jari: %1$s</string>
     <string name="forums_settings_clear_notifications">Bersihkan notifikasi</string>
     <string name="forums_moderation_queue_empty">Tidak ada yang tertunda</string>
-    <string name="forums_moderation_pending_posts">Kiriman tertunda (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Komentar tertunda (%1$d)</string>
     <string name="forums_moderation_report_details">Detail: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Diselesaikan oleh %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Belum ada aktivitas moderator</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Berhenti berlangganan forum</string>
     <string name="forums_share_link_title">Tautan forum</string>
     <string name="forums_find_found_by_url">Ditemukan melalui URL</string>
+    <string name="forums_moderation_pending_posts">Kiriman tertunda (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Komentar tertunda (%1$d)</string>
 </resources>

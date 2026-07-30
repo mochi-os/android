@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">פֿינגער־אָפּדרוק: %1$s</string>
     <string name="forums_settings_clear_notifications">רייניקן מעלדונגען</string>
     <string name="forums_moderation_queue_empty">גאָרנישט וואַרט</string>
-    <string name="forums_moderation_pending_posts">וואַרטנדיקע פּאָסטן (%1$d)</string>
-    <string name="forums_moderation_pending_comments">וואַרטנדיקע קאָמענטאַרן (%1$d)</string>
     <string name="forums_moderation_report_details">פּרטים: %1$s</string>
     <string name="forums_moderation_report_resolved_by">באַשיידן פֿון %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">נאָך קײן מאָדעראַטאָר־טעטיקייט</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">אַבאָנירט זיך אָפּ פֿון פֿאָרום</string>
     <string name="forums_share_link_title">פֿאָרום לינק</string>
     <string name="forums_find_found_by_url">געפֿונען דורך URL</string>
+    <string name="forums_moderation_pending_posts">ווארטנדיקע פּאָסטן (%1$d)</string>
+    <string name="forums_moderation_pending_comments">ווארטנדיקע באַמערקונגען (%1$d)</string>
 </resources>

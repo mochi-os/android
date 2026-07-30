@@ -28,6 +28,7 @@ import okio.buffer
 import okio.sink
 import org.json.JSONObject
 import java.io.File
+import java.security.MessageDigest
 import java.util.concurrent.TimeUnit
 
 /**
@@ -65,8 +66,13 @@ class UpdateChecker(
         const val KEY_PENDING = "pending_version"
         const val KEY_PENDING_PATH = "pending_path"
         private const val TRACK = "production"
-        private const val VERSIONS_URL = "https://packages.mochi-os.org/android/versions.json"
-        private const val APK_URL = "https://packages.mochi-os.org/android/mochi.apk"
+        private const val BASE_URL = "https://packages.mochi-os.org/android"
+        private const val VERSIONS_URL = "$BASE_URL/versions.json"
+
+        // Absolute ceiling on a download, whatever the manifest claims. The
+        // APK is ~40 MB; this only bounds how much cache a compromised or
+        // simply wrong manifest can consume.
+        private const val APK_MAXIMUM = 256L * 1024 * 1024
 
         // The ~40 MB APK pull is the fragile step: on mobile data a single
         // transfer often drops mid-stream (throttling, cell handoff, packet
@@ -180,12 +186,13 @@ class UpdateChecker(
             }
             val current = currentVersionName(ctx) ?: return@withContext CheckOutcome.UpToDate
 
-            val latest = try {
-                fetchLatest()
+            val manifest = try {
+                fetchManifest()
             } catch (e: Exception) {
                 Log.i(TAG, "Fetch versions.json failed: ${e.message}")
                 return@withContext CheckOutcome.NetworkError
             } ?: return@withContext CheckOutcome.UpToDate
+            val latest = manifest.version
 
             if (compareVersions(latest, current) <= 0) {
                 Log.d(TAG, "Running $current, latest $latest, nothing to do")
@@ -212,10 +219,23 @@ class UpdateChecker(
             // checkNow calls, across daily polls / repeat button presses) until
             // it completes, instead of forever re-downloading from zero. A
             // newer version landing clears the old partial via purgeStale above.
+            val release = manifest.release
+            if (release == null) {
+                // No integrity data means we cannot tell a good APK from a
+                // truncated or spliced one, and this file goes straight to the
+                // system installer. Refuse rather than stage it blind.
+                Log.w(TAG, "Manifest has no verifiable release entry for $latest; not downloading")
+                return@withContext CheckOutcome.DownloadFailed
+            }
+            if (release.size > APK_MAXIMUM) {
+                Log.w(TAG, "Manifest size ${release.size} for $latest exceeds maximum $APK_MAXIMUM")
+                return@withContext CheckOutcome.DownloadFailed
+            }
+
             var staged = false
             for (attempt in 1..DOWNLOAD_ATTEMPTS) {
                 try {
-                    if (download(target, onProgress)) {
+                    if (download(target, release, onProgress)) {
                         staged = true
                         break
                     }
@@ -242,7 +262,16 @@ class UpdateChecker(
             CheckOutcome.UpdateStaged
         }
 
-        private fun fetchLatest(): String? {
+        private fun fetchLatest(): String? = fetchManifest()?.version
+
+        /**
+         * Fetch and parse versions.json. Returns the production track's
+         * version together with the release entry describing its artifact:
+         * the exact file name, its size, and its SHA-256. A manifest without
+         * a matching release entry yields a null [Manifest.release], which
+         * [download] treats as "cannot verify" and refuses to stage.
+         */
+        private fun fetchManifest(): Manifest? {
             val req = Request.Builder().url(VERSIONS_URL).get().build()
             metaClient().newCall(req).execute().use { resp ->
                 if (!resp.isSuccessful) {
@@ -250,25 +279,50 @@ class UpdateChecker(
                     return null
                 }
                 val body = resp.body?.string().orEmpty()
-                val tracks = JSONObject(body).optJSONObject("tracks") ?: return null
-                return tracks.optString(TRACK).takeIf { it.isNotBlank() }
+                val root = JSONObject(body)
+                val tracks = root.optJSONObject("tracks") ?: return null
+                val version = tracks.optString(TRACK).takeIf { it.isNotBlank() } ?: return null
+                val entry = root.optJSONObject("releases")?.optJSONObject(version)
+                val release = entry?.let {
+                    val file = it.optString("file")
+                    val size = it.optLong("size")
+                    val sha256 = it.optString("sha256")
+                    // A file name, never a path — the manifest must not be
+                    // able to point the download at another host or directory.
+                    if (file.isBlank() || file.contains('/') || file.contains('\\') ||
+                        size <= 0 || sha256.isBlank()
+                    ) {
+                        null
+                    } else {
+                        Release(file, size, sha256)
+                    }
+                }
+                return Manifest(version, release)
             }
         }
 
         /**
          * Download (or resume) the APK to [target]. Sends a Range request from
          * the current partial length so an interrupted transfer continues
-         * rather than restarting. Returns true once the file is complete (its
-         * length matches the server's reported total); a mid-stream drop throws,
-         * leaving the partial in place for the next attempt to resume from.
+         * rather than restarting. Returns true once the file is complete AND
+         * its SHA-256 matches [release]; a mid-stream drop throws, leaving the
+         * partial in place for the next attempt to resume from.
+         *
+         * The URL carries the version, so the bytes a resume appends always
+         * belong to the same artifact as the bytes already on disk. Against the
+         * old unversioned path, a release landing mid-download appended the
+         * tail of the new APK onto the partial of the old one, producing a
+         * spliced file of exactly the expected length — accepted as complete
+         * here and then rejected by the system installer as a bad signature.
          */
         private fun download(
             target: File,
+            release: Release,
             onProgress: (downloaded: Long, total: Long) -> Unit,
         ): Boolean {
             target.parentFile?.mkdirs()
             val have = if (target.exists()) target.length() else 0L
-            val builder = Request.Builder().url(APK_URL).get()
+            val builder = Request.Builder().url("$BASE_URL/${release.file}").get()
             if (have > 0) builder.header("Range", "bytes=$have-")
             downloadClient().newCall(builder.build()).execute().use { resp ->
                 // 206 = resume accepted; 200 = full body (first fetch, or a
@@ -278,13 +332,9 @@ class UpdateChecker(
                 }
                 val body = resp.body ?: throw IllegalStateException("empty body")
                 val resuming = resp.code == 206 && have > 0
-                // Total file size: a 206 reports it as the "/<total>" tail of
-                // Content-Range; a 200 reports it as Content-Length.
-                val total = if (resuming) {
-                    resp.header("Content-Range")?.substringAfterLast('/')?.toLongOrNull()
-                } else {
-                    body.contentLength().takeIf { it > 0 }
-                }
+                // The manifest is authoritative for the total, not the server's
+                // headers — it is the size the digest below belongs to.
+                val total = release.size
                 // Server resent the whole file despite our Range — drop the
                 // partial so we don't append a full body onto it.
                 if (!resuming && have > 0) target.delete()
@@ -298,25 +348,52 @@ class UpdateChecker(
                         val chunk = Buffer()
                         var downloaded = if (resuming) have else 0L
                         var lastReported = downloaded
-                        while (true) {
+                        while (downloaded < total) {
                             val read = src.read(chunk, 64L * 1024)
                             if (read == -1L) break
                             sink.write(chunk, read)
                             downloaded += read
                             // Throttle so we don't write the WorkManager progress
                             // row on every 64 KB chunk.
-                            if (total != null && downloaded - lastReported >= 512L * 1024) {
+                            if (downloaded - lastReported >= 512L * 1024) {
                                 lastReported = downloaded
                                 onProgress(downloaded, total)
                             }
                         }
-                        if (total != null) onProgress(downloaded, total)
+                        onProgress(downloaded, total)
                     }
                 }
-                // Complete only when we know the total AND the file matches it —
-                // never stage a truncated APK as if it were ready to install.
-                return total != null && target.length() == total
+                if (target.length() != total) {
+                    // Overshoot means the server sent more than the manifest
+                    // declared; the file is unusable and must not be resumed.
+                    if (target.length() > total) target.delete()
+                    return false
+                }
+                // Hash the finished file rather than the stream: a resumed
+                // download only streams the tail, so bytes written by earlier
+                // attempts would otherwise never be checked.
+                val sum = sha256(target)
+                if (!sum.equals(release.sha256, ignoreCase = true)) {
+                    Log.w(TAG, "APK sha256 $sum does not match manifest ${release.sha256}; discarding")
+                    target.delete()
+                    return false
+                }
+                return true
             }
+        }
+
+        /** Lowercase hex SHA-256 of a file, streamed so a ~40 MB APK never lands in memory. */
+        private fun sha256(file: File): String {
+            val digest = MessageDigest.getInstance("SHA-256")
+            file.inputStream().use { input ->
+                val buffer = ByteArray(64 * 1024)
+                while (true) {
+                    val read = input.read(buffer)
+                    if (read == -1) break
+                    digest.update(buffer, 0, read)
+                }
+            }
+            return digest.digest().joinToString("") { "%02x".format(it) }
         }
 
         // versions.json poll. A tiny file, so cap the WHOLE call hard with
@@ -397,6 +474,20 @@ class UpdateChecker(
         }
     }
 }
+
+/**
+ * The production track's version, with the release entry describing its
+ * artifact. [release] is null when the manifest carries no verifiable entry
+ * for that version, which blocks the download rather than staging blind.
+ */
+internal data class Manifest(val version: String, val release: Release?)
+
+/**
+ * One downloadable artifact, as declared in versions.json. [file] is a bare
+ * file name relative to the platform directory, so the manifest names the
+ * artifact instead of the client guessing it.
+ */
+internal data class Release(val file: String, val size: Long, val sha256: String)
 
 /**
  * Outcome of one [UpdateChecker.checkNow] cycle (the worker's full check +

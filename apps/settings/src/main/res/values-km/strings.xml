@@ -27,10 +27,6 @@
     <string name="account_section_oauth">ការចូលភាគីទីបី</string>
     <string name="account_oauth_link">ភ្ជាប់គណនី</string>
     <string name="account_unlink">ផ្តាច់</string>
-    <string name="tokens_create">បង្កើតតូខឹន</string>
-    <string name="tokens_name">ឈ្មោះ</string>
-    <string name="tokens_delete_title">លុបតូខឹន?</string>
-    <string name="tokens_create_confirm">បង្កើត</string>
     <string name="account_cancel">បោះបង់</string>
     <string name="account_save">រក្សាទុក</string>
     <string name="account_done">រួចរាល់</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ការកំណត់</string>
     <string name="settings_home_sessions">សម័យ</string>
-    <string name="settings_home_tokens">ថូខឹន</string>
     <string name="settings_home_privacy">គោលនយោបាយឯកជន</string>
     <string name="settings_home_rules">ច្បាប់</string>
     <string name="settings_home_terms">លក្ខខណ្ឌសេវាកម្ម</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">ភ្ជាប់អ្នកផ្ដល់សេវា</string>
     <string name="account_oauth_unlink_title">ផ្ដាច់គណនី?</string>
     <string name="account_oauth_unlink_message">អ្នកនឹងលែងអាចចូលជាមួយ %1$s ទេ។</string>
-    <string name="tokens_section_title">API ថូខឹន</string>
-    <string name="tokens_title">ថូខឹនការផ្ទៀងផ្ទាត់</string>
-    <string name="tokens_empty">គ្មាន API tokens ទេ។</string>
-    <string name="tokens_create_title">API token ថ្មី</string>
-    <string name="tokens_new_title">API token ត្រូវបានបង្កើត</string>
-    <string name="tokens_new_warning">ចម្លង token នេះឥឡូវ — នឹងមិនបង្ហាញម្ដងទៀតទេ។</string>
-    <string name="tokens_delete_message">\"%1$s\" នឹងលែងផ្ទៀងផ្ទាត់កម្មវិធីដែលប្រើវាទេ។</string>
-    <string name="account_created_at">បានបង្កើត %1$s</string>
     <string name="account_last_used">ប្រើចុងក្រោយ %1$s</string>
-    <string name="tokens_scopes">វិសាលភាព៖ %1$s</string>
-    <string name="tokens_expires">ផុតកំណត់៖ %1$s</string>
-    <string name="tokens_never">មិនដែល</string>
     <string name="route_delete_message">វានឹងលុបផ្លូវសម្រាប់ផ្លូវ \"%1$s\"។</string>
     <string name="route_empty">គ្មានផ្លូវដែលបានកំណត់ទេ។</string>
     <string name="route_meta">អាទិភាព %1$d · %2$s</string>

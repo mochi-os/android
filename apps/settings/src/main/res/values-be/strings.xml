@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Уваход праз іншыя сэрвісы</string>
     <string name="account_oauth_link">Звязаць акаўнт</string>
     <string name="account_unlink">Адвязаць</string>
-    <string name="tokens_create">Стварыць токен</string>
-    <string name="tokens_name">Назва</string>
-    <string name="tokens_delete_title">Выдаліць токен?</string>
-    <string name="tokens_create_confirm">Стварыць</string>
     <string name="account_cancel">Адмена</string>
     <string name="account_save">Захаваць</string>
     <string name="account_done">Гатова</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Налады</string>
     <string name="settings_home_sessions">Сеансы</string>
-    <string name="settings_home_tokens">Токены</string>
     <string name="settings_home_privacy">Палітыка прыватнасці</string>
     <string name="settings_home_rules">Правілы</string>
     <string name="settings_home_terms">Умовы выкарыстання</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Звязаць правайдэра</string>
     <string name="account_oauth_unlink_title">Адвязаць уліковы запіс?</string>
     <string name="account_oauth_unlink_message">Вы больш не зможаце ўваходзіць праз %1$s.</string>
-    <string name="tokens_section_title">Токены API</string>
-    <string name="tokens_title">Токены аўтэнтыфікацыі</string>
-    <string name="tokens_empty">Няма токенаў API.</string>
-    <string name="tokens_create_title">Новы токен API</string>
-    <string name="tokens_new_title">Токен API створаны</string>
-    <string name="tokens_new_warning">Скапіруйце токен зараз — ён больш не будзе паказаны.</string>
-    <string name="tokens_delete_message">\"%1$s\" больш не будзе аўтэнтыфікаваць праграмы, якія яго выкарыстоўваюць.</string>
-    <string name="account_created_at">Створаны %1$s</string>
     <string name="account_last_used">Апошняе выкарыстанне %1$s</string>
-    <string name="tokens_scopes">Вобласці: %1$s</string>
-    <string name="tokens_expires">Заканчваецца: %1$s</string>
-    <string name="tokens_never">Ніколі</string>
     <string name="route_delete_message">Гэта выдаліць маршрут для шляху \"%1$s\".</string>
     <string name="route_empty">Маршруты не настроены.</string>
     <string name="route_meta">Прыярытэт %1$d · %2$s</string>

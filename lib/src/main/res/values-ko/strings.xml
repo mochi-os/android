@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">표시 중지</string>
     <string name="tags_none">태그 없음</string>
     <string name="tags_delete">태그 제거</string>
+    <string name="person_picker_none">없음</string>
+    <string name="person_picker_clear">선택 해제</string>
+    <string name="person_picker_select">선택 …</string>
+    <string name="person_picker_directory">디렉터리</string>
+    <string name="person_picker_no_people">사람이 없습니다</string>
+    <string name="person_picker_project_members">프로젝트 구성원</string>
 </resources>

@@ -27,10 +27,6 @@
     <string name="account_section_oauth">התחברות צד שלישי</string>
     <string name="account_oauth_link">קשר חשבון</string>
     <string name="account_unlink">בטל קישור</string>
-    <string name="tokens_create">צור אסימון</string>
-    <string name="tokens_name">שם</string>
-    <string name="tokens_delete_title">למחוק אסימון?</string>
-    <string name="tokens_create_confirm">צור</string>
     <string name="account_cancel">ביטול</string>
     <string name="account_save">שמור</string>
     <string name="account_done">בוצע</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi הגדרות</string>
     <string name="settings_home_sessions">הפעלות</string>
-    <string name="settings_home_tokens">אסימונים</string>
     <string name="settings_home_privacy">מדיניות פרטיות</string>
     <string name="settings_home_rules">חוקים</string>
     <string name="settings_home_terms">תנאי שירות</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">קשר ספק</string>
     <string name="account_oauth_unlink_title">לבטל קישור חשבון?</string>
     <string name="account_oauth_unlink_message">לא תוכל יותר להתחבר עם %1$s.</string>
-    <string name="tokens_section_title">אסימוני API</string>
-    <string name="tokens_title">אסימוני אימות</string>
-    <string name="tokens_empty">אין אסימוני API.</string>
-    <string name="tokens_create_title">אסימון API חדש</string>
-    <string name="tokens_new_title">אסימון API נוצר</string>
-    <string name="tokens_new_warning">העתק את האסימון עכשיו — הוא לא יוצג שוב.</string>
-    <string name="tokens_delete_message">\"%1$s\" כבר לא יאמת אפליקציות שמשתמשות בו.</string>
-    <string name="account_created_at">נוצר %1$s</string>
     <string name="account_last_used">שימוש אחרון %1$s</string>
-    <string name="tokens_scopes">היקפים: %1$s</string>
-    <string name="tokens_expires">פג: %1$s</string>
-    <string name="tokens_never">אף פעם</string>
     <string name="route_delete_message">פעולה זו תסיר את המסלול עבור הנתיב \"%1$s\".</string>
     <string name="route_empty">לא הוגדרו מסלולים.</string>
     <string name="route_meta">עדיפות %1$d · %2$s</string>

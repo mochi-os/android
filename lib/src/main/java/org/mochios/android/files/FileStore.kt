@@ -11,6 +11,7 @@ import android.provider.OpenableColumns
 import android.webkit.MimeTypeMap
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
+import java.io.IOException
 import java.time.LocalDate
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -151,15 +152,27 @@ class FileStore @Inject constructor(
 
     /**
      * Copies each of [uris] into the app cache via [cacheFile], preserving
-     * order. URIs that can't be opened are skipped. Callers own the returned
-     * files and must [deleteAll] them once the upload finishes. This is the
-     * streaming counterpart to reading each uri into memory — the request
-     * bodies built from these files upload straight off disk and survive
-     * request retries.
+     * order. Callers own the returned files and must [deleteAll] them once the
+     * upload finishes. This is the streaming counterpart to reading each uri
+     * into memory — the request bodies built from these files upload straight
+     * off disk and survive request retries.
+     *
+     * @throws IOException when a uri can't be opened, so a picked attachment is
+     * never silently dropped from the upload; files cached before the failure
+     * are cleaned up.
      */
     suspend fun cacheFiles(uris: List<Uri>, fallbackName: String = "file"): List<File> =
         withContext(Dispatchers.IO) {
-            uris.mapNotNull { uri -> copyToCache(uri, fallbackName) }
+            val files = mutableListOf<File>()
+            for (uri in uris) {
+                val file = copyToCache(uri, fallbackName)
+                if (file == null) {
+                    files.forEach { cached -> cached.delete() }
+                    throw IOException("Cannot read $uri")
+                }
+                files.add(file)
+            }
+            files
         }
 
     /** Deletes each temp [files], ignoring individual failures. */
@@ -232,7 +245,18 @@ class FileStore @Inject constructor(
 
     private fun copyToCache(uri: Uri, fallbackName: String): File? {
         val resolver = context.contentResolver
-        val target = File(context.cacheDir, resolveName(uri, fallbackName))
+        // Two picked files can share a display name (and a crashed upload can
+        // leave a stale copy behind); writing to the same path would upload one
+        // file's bytes twice. Disambiguate with a counter before the extension.
+        var target = File(context.cacheDir, resolveName(uri, fallbackName))
+        var counter = 2
+        while (target.exists()) {
+            val extension = target.extension
+            val stem = target.nameWithoutExtension
+            val name = if (extension.isEmpty()) "$stem-$counter" else "$stem-$counter.$extension"
+            target = File(context.cacheDir, name)
+            counter++
+        }
         return resolver.openInputStream(uri)?.use { input ->
             target.outputStream().use { output -> input.copyTo(output) }
             target

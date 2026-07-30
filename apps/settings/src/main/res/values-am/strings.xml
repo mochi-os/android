@@ -27,10 +27,6 @@
     <string name="account_section_oauth">የሶስተኛ ወገን መግቢያ</string>
     <string name="account_oauth_link">መለያ አገናኝ</string>
     <string name="account_unlink">ግንኙነት አቋርጥ</string>
-    <string name="tokens_create">ቶከን ፍጠር</string>
-    <string name="tokens_name">ስም</string>
-    <string name="tokens_delete_title">ቶከን ይሰረዝ?</string>
-    <string name="tokens_create_confirm">ፍጠር</string>
     <string name="account_cancel">ይቅር</string>
     <string name="account_save">ያስቀምጡ</string>
     <string name="account_done">ተጠናቅቋል</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ቅንብሮች</string>
     <string name="settings_home_sessions">ክፍለ-ጊዜዎች</string>
-    <string name="settings_home_tokens">ቶከኖች</string>
     <string name="settings_home_privacy">የግል መረጃ ፖሊሲ</string>
     <string name="settings_home_rules">ህጎች</string>
     <string name="settings_home_terms">የአገልግሎት ውሎች</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">አቅራቢ አገናኝ</string>
     <string name="account_oauth_unlink_title">ሂሳብ ይነቀል?</string>
     <string name="account_oauth_unlink_message">ከአሁን በኋላ በ%1$s መግባት አይችሉም።</string>
-    <string name="tokens_section_title">API ቶከኖች</string>
-    <string name="tokens_title">የማረጋገጫ ቶከኖች</string>
-    <string name="tokens_empty">ምንም API ቶከኖች የሉም።</string>
-    <string name="tokens_create_title">አዲስ API ቶከን</string>
-    <string name="tokens_new_title">API ቶከን ተፈጥሯል</string>
-    <string name="tokens_new_warning">ይህን ቶከን አሁን ይቅዱ — እንደገና አይታይም።</string>
-    <string name="tokens_delete_message">\"%1$s\" ከአሁን በኋላ የሚጠቀሙበትን መተግበሪያዎች አያረጋግጥም።</string>
-    <string name="account_created_at">የተፈጠረው %1$s</string>
     <string name="account_last_used">መጨረሻ የተጠቀመው %1$s</string>
-    <string name="tokens_scopes">ስፋቶች: %1$s</string>
-    <string name="tokens_expires">ይጠናቀቃል: %1$s</string>
-    <string name="tokens_never">በፍፁም</string>
     <string name="route_delete_message">ይህ ለ \"%1$s\" መንገድ ሩትን ያስወግዳል።</string>
     <string name="route_empty">የተዋቀሩ መንገዶች የሉም።</string>
     <string name="route_meta">ቅድሚያ %1$d · %2$s</string>

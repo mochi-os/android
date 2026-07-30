@@ -27,10 +27,6 @@
     <string name="account_section_oauth">மூன்றாம் தரப்பு உள்நுழைவு</string>
     <string name="account_oauth_link">கணக்கை இணை</string>
     <string name="account_unlink">இணைப்பை நீக்கவும்</string>
-    <string name="tokens_create">டோக்கன் உருவாக்கு</string>
-    <string name="tokens_name">பெயர்</string>
-    <string name="tokens_delete_title">டோக்கனை நீக்கவா?</string>
-    <string name="tokens_create_confirm">உருவாக்கு</string>
     <string name="account_cancel">ரத்துசெய்</string>
     <string name="account_save">சேமி</string>
     <string name="account_done">முடிந்தது</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi அமைப்புகள்</string>
     <string name="settings_home_sessions">அமர்வுகள்</string>
-    <string name="settings_home_tokens">டோக்கன்கள்</string>
     <string name="settings_home_privacy">தனியுரிமைக் கொள்கை</string>
     <string name="settings_home_rules">விதிகள்</string>
     <string name="settings_home_terms">சேவை விதிமுறைகள்</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">வழங்குநரை இணை</string>
     <string name="account_oauth_unlink_title">கணக்கை துண்டிக்கவா?</string>
     <string name="account_oauth_unlink_message">நீங்கள் இனி %1$s மூலம் உள்நுழைய முடியாது.</string>
-    <string name="tokens_section_title">API டோக்கன்கள்</string>
-    <string name="tokens_title">அங்கீகார டோக்கன்கள்</string>
-    <string name="tokens_empty">API டோக்கன்கள் இல்லை.</string>
-    <string name="tokens_create_title">புதிய API டோக்கன்</string>
-    <string name="tokens_new_title">API டோக்கன் உருவாக்கப்பட்டது</string>
-    <string name="tokens_new_warning">இந்த டோக்கனை இப்போது நகலெடுக்கவும் — மீண்டும் காட்டப்படாது.</string>
-    <string name="tokens_delete_message">\"%1$s\" இனி அதை பயன்படுத்தும் பயன்பாடுகளை அங்கீகரிக்காது.</string>
-    <string name="account_created_at">உருவாக்கப்பட்டது %1$s</string>
     <string name="account_last_used">கடைசியாக பயன்படுத்தப்பட்டது %1$s</string>
-    <string name="tokens_scopes">நோக்கங்கள்: %1$s</string>
-    <string name="tokens_expires">காலாவதியாகிறது: %1$s</string>
-    <string name="tokens_never">ஒருபோதும் இல்லை</string>
     <string name="route_delete_message">இது பாதை \"%1$s\" க்கான வழியை அகற்றும்.</string>
     <string name="route_empty">கட்டமைக்கப்பட்ட வழிகள் இல்லை.</string>
     <string name="route_meta">முன்னுரிமை %1$d · %2$s</string>

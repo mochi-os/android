@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Prihlásenie cez tretiu stranu</string>
     <string name="account_oauth_link">Prepojiť účet</string>
     <string name="account_unlink">Odpojiť</string>
-    <string name="tokens_create">Vytvoriť token</string>
-    <string name="tokens_name">Názov</string>
-    <string name="tokens_delete_title">Odstrániť token?</string>
-    <string name="tokens_create_confirm">Vytvoriť</string>
     <string name="account_cancel">Zrušiť</string>
     <string name="account_save">Uložiť</string>
     <string name="account_done">Hotovo</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Nastavenia</string>
     <string name="settings_home_sessions">Relácie</string>
-    <string name="settings_home_tokens">Tokeny</string>
     <string name="settings_home_privacy">Zásady ochrany osobných údajov</string>
     <string name="settings_home_rules">Pravidlá</string>
     <string name="settings_home_terms">Podmienky služby</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Prepojiť poskytovateľa</string>
     <string name="account_oauth_unlink_title">Odpojiť účet?</string>
     <string name="account_oauth_unlink_message">Už sa nebudete môcť prihlásiť pomocou %1$s.</string>
-    <string name="tokens_section_title">API tokeny</string>
-    <string name="tokens_title">Autentifikačné tokeny</string>
-    <string name="tokens_empty">Žiadne API tokeny.</string>
-    <string name="tokens_create_title">Nový API token</string>
-    <string name="tokens_new_title">API token vytvorený</string>
-    <string name="tokens_new_warning">Skopírujte tento token teraz — nebude zobrazený znova.</string>
-    <string name="tokens_delete_message">\"%1$s\" už nebude overovať aplikácie, ktoré ho používajú.</string>
-    <string name="account_created_at">Vytvorené %1$s</string>
     <string name="account_last_used">Naposledy použité %1$s</string>
-    <string name="tokens_scopes">Rozsahy: %1$s</string>
-    <string name="tokens_expires">Platnosť do: %1$s</string>
-    <string name="tokens_never">Nikdy</string>
     <string name="route_delete_message">Týmto sa odstráni trasa pre cestu \"%1$s\".</string>
     <string name="route_empty">Nie sú nakonfigurované žiadne trasy.</string>
     <string name="route_meta">Priorita %1$d · %2$s</string>

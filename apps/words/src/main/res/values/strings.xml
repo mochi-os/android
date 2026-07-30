@@ -70,6 +70,9 @@
     <string name="words_detail_blank_title">Choose a letter</string>
     <string name="words_detail_resign_title">Resign game?</string>
     <string name="words_detail_resign_message">Are you sure you want to resign?</string>
+    <string name="words_detail_delete_title">Delete game?</string>
+    <string name="words_detail_delete_message">This permanently deletes the game and its chat. This cannot be undone.</string>
+    <string name="words_detail_delete_confirm">Delete</string>
     <string name="words_detail_failed_move">Failed to submit move</string>
     <string name="words_detail_failed_pass">Failed to pass</string>
     <string name="words_detail_failed_exchange">Failed to exchange</string>

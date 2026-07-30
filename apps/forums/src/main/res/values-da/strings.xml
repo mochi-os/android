@@ -171,8 +171,6 @@
     <string name="forums_settings_fingerprint">Fingeraftryk: %1$s</string>
     <string name="forums_settings_clear_notifications">Ryd notifikationer</string>
     <string name="forums_moderation_queue_empty">Intet afventende</string>
-    <string name="forums_moderation_pending_posts">Afventende opslag (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Afventende kommentarer (%1$d)</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Løst af %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ingen moderatoraktivitet endnu</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Afmeld forummet</string>
     <string name="forums_share_link_title">Forumlink</string>
     <string name="forums_find_found_by_url">Fundet via URL</string>
+    <string name="forums_moderation_pending_posts">Afventende opslag (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Afventende kommentarer (%1$d)</string>
 </resources>

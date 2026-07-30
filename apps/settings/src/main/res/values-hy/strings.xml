@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Երրորդ կողմի մուտք</string>
     <string name="account_oauth_link">Հղումներ</string>
     <string name="account_unlink">Ապակապակցել</string>
-    <string name="tokens_create">Ստեղծել track</string>
-    <string name="tokens_name">Անուն</string>
-    <string name="tokens_delete_title">Ջնջե՞լ թոքենը։</string>
-    <string name="tokens_create_confirm">Ստեղծել CRM</string>
     <string name="account_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="account_save">Պահպանել</string>
     <string name="account_done">Կատարված է</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Կարգավորումներ</string>
     <string name="settings_home_sessions">Նիստեր</string>
-    <string name="settings_home_tokens">Թոքեններ</string>
     <string name="settings_home_privacy">Գաղտնիության քաղաքականություն</string>
     <string name="settings_home_rules">Կանոններ</string>
     <string name="settings_home_terms">Ծառայության պայմաններ</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Կապել մատակարարին</string>
     <string name="account_oauth_unlink_title">Անջատե՞լ հաշիվը։</string>
     <string name="account_oauth_unlink_message">Դուք այլևս չեք կարողանա մուտք գործել %1$s-ով։</string>
-    <string name="tokens_section_title">API նշաներ</string>
-    <string name="tokens_title">Նույնականացման թոքենններ</string>
-    <string name="tokens_empty">API նշաններ չկան։</string>
-    <string name="tokens_create_title">Նոր API նշան</string>
-    <string name="tokens_new_title">API նշանը ստեղծվել է</string>
-    <string name="tokens_new_warning">Պատճենեք այս նշանն այժմ — այն այլևս չի ցուցադրվի։</string>
-    <string name="tokens_delete_message">\"%1$s\"-ն այլևս չի նույնականացնի այն օգտագործող հավելվածները։</string>
-    <string name="account_created_at">Ստեղծվել է %1$s</string>
     <string name="account_last_used">Վերջին օգտագործումը %1$s</string>
-    <string name="tokens_scopes">Շրջանակներ՝ %1$s</string>
-    <string name="tokens_expires">Ավարտվում է՝ %1$s</string>
-    <string name="tokens_never">Երբեք</string>
     <string name="route_delete_message">Սա կհեռացնի ուղին \"%1$s\" արահետի համար։</string>
     <string name="route_empty">Կարգավորված ուղիներ չկան։</string>
     <string name="route_meta">Առաջնահերթություն %1$d · %2$s</string>

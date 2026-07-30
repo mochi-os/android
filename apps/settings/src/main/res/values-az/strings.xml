@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Üçüncü tərəf girişi</string>
     <string name="account_oauth_link">Hesabı bağla</string>
     <string name="account_unlink">{0} əlaqəsi kəsildi</string>
-    <string name="tokens_create">Token yarat</string>
-    <string name="tokens_name">Ad</string>
-    <string name="tokens_delete_title">Token silinsin?</string>
-    <string name="tokens_create_confirm">Yarat</string>
     <string name="account_cancel">Ləğv et</string>
     <string name="account_save">Saxla</string>
     <string name="account_done">Hazırdır</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Parametrlər</string>
     <string name="settings_home_sessions">Sessiyalar</string>
-    <string name="settings_home_tokens">Tokenlər</string>
     <string name="settings_home_privacy">Məxfilik siyasəti</string>
     <string name="settings_home_rules">Qaydalar</string>
     <string name="settings_home_terms">Xidmət şərtləri</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Provayder bağla</string>
     <string name="account_oauth_unlink_title">Hesabı ayır?</string>
     <string name="account_oauth_unlink_message">Artıq %1$s ilə daxil ola bilməyəcəksiniz.</string>
-    <string name="tokens_section_title">API tokenləri</string>
-    <string name="tokens_title">Doğrulama tokenleri</string>
-    <string name="tokens_empty">API tokenləri yoxdur.</string>
-    <string name="tokens_create_title">Yeni API tokeni</string>
-    <string name="tokens_new_title">API tokeni yaradıldı</string>
-    <string name="tokens_new_warning">Bu tokeni indi kopyalayın — yenidən göstərilməyəcək.</string>
-    <string name="tokens_delete_message">\"%1$s\" artıq onu istifadə edən tətbiqləri təsdiqləməyəcək.</string>
-    <string name="account_created_at">Yaradıldı %1$s</string>
     <string name="account_last_used">Son istifadə %1$s</string>
-    <string name="tokens_scopes">Sahələr: %1$s</string>
-    <string name="tokens_expires">Bitir: %1$s</string>
-    <string name="tokens_never">Heç vaxt</string>
     <string name="route_delete_message">Bu \"%1$s\" yolu üçün marşrutu çıxaracaq.</string>
     <string name="route_empty">Konfiqurasiya edilmiş marşrut yoxdur.</string>
     <string name="route_meta">Prioritet %1$d · %2$s</string>

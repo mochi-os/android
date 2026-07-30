@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">ఫింగర్‌ప్రింట్: %1$s</string>
     <string name="forums_settings_clear_notifications">నోటిఫికేషన్‌లను క్లియర్ చేయండి</string>
     <string name="forums_moderation_queue_empty">పెండింగ్‌లో ఏదీ లేదు</string>
-    <string name="forums_moderation_pending_posts">పెండింగ్ పోస్ట్‌లు (%1$d)</string>
-    <string name="forums_moderation_pending_comments">పెండింగ్ వ్యాఖ్యలు (%1$d)</string>
     <string name="forums_moderation_report_details">వివరాలు: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s పరిష్కరించారు — %2$s</string>
     <string name="forums_moderation_log_empty">ఇంకా మోడరేటర్ కార్యకలాపాలు లేవు</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">ఫోరమ్ నుండి చందా రద్దు చేయండి</string>
     <string name="forums_share_link_title">ఫోరమ్ లింక్</string>
     <string name="forums_find_found_by_url">URL ద్వారా కనుగొనబడింది</string>
+    <string name="forums_moderation_pending_posts">పెండింగ్ పోస్ట్‌లు (%1$d)</string>
+    <string name="forums_moderation_pending_comments">పెండింగ్ వ్యాఖ్యలు (%1$d)</string>
 </resources>

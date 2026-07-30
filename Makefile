@@ -40,7 +40,17 @@ clean:
 # both serve the same static tree, so neither depends on the other.
 release: apk
 	mkdir -p $(packages)
+	# Two copies: the stable name for humans clicking a download link, and a
+	# version-stamped name for the in-app updater. The updater resumes a
+	# partial download with a Range request, sometimes across days, so its
+	# target must be immutable — appending the tail of a newly-published APK
+	# onto the partial of the previous one splices two files into a corrupt
+	# APK of exactly the expected length. Pruned to the current version.
+	rm -f $(packages)/mochi-*.apk
 	cp $(apk) $(packages)/mochi.apk
-	echo '{"tracks": {"production": "$(version)"}}' > $(packages)/versions.json
+	cp $(apk) $(packages)/mochi-$(version).apk
+	@sha=`sha256sum $(apk) | cut -d' ' -f1`; size=`wc -c < $(apk) | tr -d ' '`; \
+	  printf '{"tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
+	  '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
 	rsync -av $(packages)/ root@yuzu:/srv/packages/android/
 	rsync -av $(packages)/ root@wasabi:/srv/packages/android/

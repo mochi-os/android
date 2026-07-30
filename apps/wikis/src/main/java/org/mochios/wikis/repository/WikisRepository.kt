@@ -264,9 +264,9 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun listGroups(wiki: String): List<Group> {
+    suspend fun listGroups(): List<Group> {
         return try {
-            api.listGroups(wiki).unwrap().groups
+            api.listGroups().unwrap().groups
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -364,7 +364,7 @@ class WikisRepository @Inject constructor(
             ).unwrap()
             RenamePageResult(
                 renamed = r.renamed.map { it.new },
-                updatedLinks = r.updatedLinks,
+                updatedLinks = r.links.updated,
             )
         } catch (e: Exception) {
             throw e.toMochiError()

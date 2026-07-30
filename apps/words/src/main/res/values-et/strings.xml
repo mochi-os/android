@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">Mängisid %1$s</string>
     <string name="words_detail_chat_player_played">%1$s mängis %2$s</string>
 
+    <string name="words_detail_delete_title">Kustuta partii?</string>
+    <string name="words_detail_delete_confirm">Kustuta</string>
+    <string name="words_detail_delete_message">See kustutab mängu ja selle vestluse jäädavalt. Seda ei saa tagasi võtta.</string>
 </resources>

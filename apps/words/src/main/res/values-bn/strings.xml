@@ -69,4 +69,7 @@
     <string name="words_detail_exchange_count">বিনিময় (%1$d)</string>
     <string name="words_detail_chat_you_played">আপনি %1$s খেলেছেন</string>
     <string name="words_detail_chat_player_played">%1$s %2$s খেলেছে</string>
+    <string name="words_detail_delete_title">গেম মুছবেন?</string>
+    <string name="words_detail_delete_confirm">মুছুন</string>
+    <string name="words_detail_delete_message">এটি গেম এবং এর চ্যাট স্থায়ীভাবে মুছে ফেলবে। এটি ফিরিয়ে আনা যাবে না।</string>
 </resources>

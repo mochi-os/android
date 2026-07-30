@@ -237,7 +237,11 @@ private fun PhotoCell(
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             AsyncImage(
-                model = "/market/-/photo/${photo.id}/thumbnail",
+                // Authenticated "owned" route: the editor shows photos for the
+                // seller's own draft / moderation-held listings, which the
+                // public route hides. Coil sends the market bearer token via
+                // AssetHttpClient, so `from` is the real seller server-side.
+                model = "/market/-/photo/owned/${photo.id}/thumbnail",
                 contentDescription = photo.name,
                 contentScale = androidx.compose.ui.layout.ContentScale.Crop,
                 modifier = Modifier.fillMaxSize(),

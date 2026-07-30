@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Impressão digital: %1$s</string>
     <string name="forums_settings_clear_notifications">Limpar notificações</string>
     <string name="forums_moderation_queue_empty">Nada pendente</string>
-    <string name="forums_moderation_pending_posts">Publicações pendentes (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentários pendentes (%1$d)</string>
     <string name="forums_moderation_report_details">Detalhes: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Resolvido por %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ainda não há atividade de moderação</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Cancelar a subscrição do fórum</string>
     <string name="forums_share_link_title">Ligação do fórum</string>
     <string name="forums_find_found_by_url">Encontrado por URL</string>
+    <string name="forums_moderation_pending_posts">Publicações pendentes (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Comentários pendentes (%1$d)</string>
 </resources>

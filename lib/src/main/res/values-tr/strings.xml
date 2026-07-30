@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Göstermeyi bırak</string>
     <string name="tags_none">Etiket yok</string>
     <string name="tags_delete">Etiketi kaldır</string>
+    <string name="person_picker_none">Yok</string>
+    <string name="person_picker_clear">Seçimi temizle</string>
+    <string name="person_picker_select">Seçin …</string>
+    <string name="person_picker_directory">Rehber</string>
+    <string name="person_picker_no_people">Kişi yok</string>
+    <string name="person_picker_project_members">Proje üyeleri</string>
 </resources>

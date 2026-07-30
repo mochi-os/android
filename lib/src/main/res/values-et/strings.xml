@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Lõpeta näitamine</string>
     <string name="tags_none">Silte pole</string>
     <string name="tags_delete">Eemalda silt</string>
+    <string name="person_picker_none">Puudub</string>
+    <string name="person_picker_clear">Tühjenda valik</string>
+    <string name="person_picker_select">Valige …</string>
+    <string name="person_picker_directory">Kataloog</string>
+    <string name="person_picker_no_people">Inimesi pole</string>
+    <string name="person_picker_project_members">Projekti liikmed</string>
 </resources>

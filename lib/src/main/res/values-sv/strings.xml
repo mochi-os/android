@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Sluta visa</string>
     <string name="tags_none">Inga taggar</string>
     <string name="tags_delete">Ta bort tagg</string>
+    <string name="person_picker_none">Ingen</string>
+    <string name="person_picker_clear">Rensa val</string>
+    <string name="person_picker_select">Välj …</string>
+    <string name="person_picker_directory">Katalog</string>
+    <string name="person_picker_no_people">Inga personer</string>
+    <string name="person_picker_project_members">Projektmedlemmar</string>
 </resources>

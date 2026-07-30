@@ -27,10 +27,6 @@
     <string name="account_section_oauth">ٽئين پارٽي لاگ ان</string>
     <string name="account_oauth_link">اڪائونٽ ڳنڍيو</string>
     <string name="account_unlink">لنڪ ھٽايو</string>
-    <string name="tokens_create">ٽوڪن ٺاهيو</string>
-    <string name="tokens_name">نالو</string>
-    <string name="tokens_delete_title">ٽوڪن ختم ڪجي؟</string>
-    <string name="tokens_create_confirm">ٺاهيو</string>
     <string name="account_cancel">منسوخ ڪريو</string>
     <string name="account_save">محفوظ ڪريو</string>
     <string name="account_done">مڪمل</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi ترتيبون</string>
     <string name="settings_home_sessions">سيشنون</string>
-    <string name="settings_home_tokens">ٽوڪنون</string>
     <string name="settings_home_privacy">رازداري جي پاليسي</string>
     <string name="settings_home_rules">قاعدا</string>
     <string name="settings_home_terms">خدمت جون شرطون</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">فراهم ڪندڙ ڳنڍيو</string>
     <string name="account_oauth_unlink_title">اڪائونٽ ان لنڪ ڪجي؟</string>
     <string name="account_oauth_unlink_message">اوهان وري %1$s سان سائن ان نه ڪري سگهندا.</string>
-    <string name="tokens_section_title">API ٽوڪنز</string>
-    <string name="tokens_title">تصديق ٽوڪن</string>
-    <string name="tokens_empty">ڪي به API ٽوڪنز نه آهن.</string>
-    <string name="tokens_create_title">نئون API ٽوڪن</string>
-    <string name="tokens_new_title">API ٽوڪن ٺهيو</string>
-    <string name="tokens_new_warning">هي ٽوڪن هاڻي ڪاپي ڪريو — اهو وري نه ڏيکاريو ويندو.</string>
-    <string name="tokens_delete_message">\"%1$s\" هاڻي اهي ايپون جيڪي ان کي استعمال ڪن ٿيون انهن جي تصديق نه ڪندو.</string>
-    <string name="account_created_at">ٺاهيل %1$s</string>
     <string name="account_last_used">آخري استعمال %1$s</string>
-    <string name="tokens_scopes">دائرا: %1$s</string>
-    <string name="tokens_expires">ختم ٿئي ٿو: %1$s</string>
-    <string name="tokens_never">ڪڏهن به نه</string>
     <string name="route_delete_message">هي رستي \"%1$s\" لاء روٽ هٽائيندو.</string>
     <string name="route_empty">ڪي به رستا ترتيب ڏنل نه آهن.</string>
     <string name="route_meta">اوليت %1$d · %2$s</string>

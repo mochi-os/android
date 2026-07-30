@@ -303,4 +303,10 @@
     <string name="tags_interest_clear">Διακοπή εμφάνισης</string>
     <string name="tags_none">Χωρίς ετικέτες</string>
     <string name="tags_delete">Αφαίρεση ετικέτας</string>
+    <string name="person_picker_none">Κανένα</string>
+    <string name="person_picker_clear">Εκκαθάριση επιλογής</string>
+    <string name="person_picker_select">Επιλέξτε …</string>
+    <string name="person_picker_directory">Κατάλογος</string>
+    <string name="person_picker_no_people">Δεν υπάρχουν άτομα</string>
+    <string name="person_picker_project_members">Μέλη έργου</string>
 </resources>

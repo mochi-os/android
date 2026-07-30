@@ -72,4 +72,7 @@
     <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s played %2$s</string>
 
+    <string name="words_detail_delete_title">Delete game?</string>
+    <string name="words_detail_delete_confirm">Sguab às</string>
+    <string name="words_detail_delete_message">Sguabaidh seo às an geama agus an cabadaich aige gu buan. Chan urrainn seo a neo-dhèanamh.</string>
 </resources>

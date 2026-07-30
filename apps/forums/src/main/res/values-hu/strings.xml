@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Ujjlenyomat: %1$s</string>
     <string name="forums_settings_clear_notifications">Értesítések törlése</string>
     <string name="forums_moderation_queue_empty">Nincs függőben lévő elem</string>
-    <string name="forums_moderation_pending_posts">Függőben lévő bejegyzések (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Függőben lévő hozzászólások (%1$d)</string>
     <string name="forums_moderation_report_details">Részletek: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Megoldotta: %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Még nincs moderátori tevékenység</string>
@@ -302,4 +300,6 @@
     <string name="forums_settings_unsubscribe_section">Leiratkozás a fórumról</string>
     <string name="forums_share_link_title">Fórum hivatkozása</string>
     <string name="forums_find_found_by_url">URL alapján megtalálva</string>
+    <string name="forums_moderation_pending_posts">Függőben lévő bejegyzések (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Függőben lévő hozzászólások (%1$d)</string>
 </resources>

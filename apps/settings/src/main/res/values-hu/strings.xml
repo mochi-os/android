@@ -27,10 +27,6 @@
     <string name="account_section_oauth">Külső bejelentkezés</string>
     <string name="account_oauth_link">Fiók összekapcsolása</string>
     <string name="account_unlink">Leválasztás</string>
-    <string name="tokens_create">Token létrehozása</string>
-    <string name="tokens_name">Név</string>
-    <string name="tokens_delete_title">Törli a tokent?</string>
-    <string name="tokens_create_confirm">Létrehozás</string>
     <string name="account_cancel">Mégse</string>
     <string name="account_save">Mentés</string>
     <string name="account_done">Kész</string>
@@ -222,7 +218,6 @@
 
     <string name="settings_app_label">Mochi Beállítások</string>
     <string name="settings_home_sessions">Munkamenetek</string>
-    <string name="settings_home_tokens">Tokenek</string>
     <string name="settings_home_privacy">Adatvédelmi szabályzat</string>
     <string name="settings_home_rules">Szabályok</string>
     <string name="settings_home_terms">Szolgáltatási feltételek</string>
@@ -253,18 +248,7 @@
     <string name="account_oauth_link_title">Szolgáltató csatlakoztatása</string>
     <string name="account_oauth_unlink_title">Lekapcsolja a fiókot?</string>
     <string name="account_oauth_unlink_message">Többé nem fog tudni bejelentkezni %1$s segítségével.</string>
-    <string name="tokens_section_title">API-tokenek</string>
-    <string name="tokens_title">Hitelesítési tokenek</string>
-    <string name="tokens_empty">Nincsenek API-tokenek.</string>
-    <string name="tokens_create_title">Új API-token</string>
-    <string name="tokens_new_title">API-token létrehozva</string>
-    <string name="tokens_new_warning">Másolja át most a tokent — többé nem jelenik meg.</string>
-    <string name="tokens_delete_message">„%1$s\" többé nem fog hitelesíteni alkalmazásokat.</string>
-    <string name="account_created_at">Létrehozva %1$s</string>
     <string name="account_last_used">Utoljára használva %1$s</string>
-    <string name="tokens_scopes">Hatókörök: %1$s</string>
-    <string name="tokens_expires">Lejár: %1$s</string>
-    <string name="tokens_never">Soha</string>
     <string name="route_delete_message">Ez eltávolítja az útvonalat a(z) „%1$s\" útvonalhoz.</string>
     <string name="route_empty">Nincsenek beállított útvonalak.</string>
     <string name="route_meta">Prioritás %1$d · %2$s</string>

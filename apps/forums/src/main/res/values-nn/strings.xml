@@ -173,8 +173,6 @@
     <string name="forums_settings_fingerprint">Fingeravtrykk: %1$s</string>
     <string name="forums_settings_clear_notifications">Tøm varsel</string>
     <string name="forums_moderation_queue_empty">Ingenting ventar</string>
-    <string name="forums_moderation_pending_posts">Ventande innlegg (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Ventande kommentarar (%1$d)</string>
     <string name="forums_moderation_report_details">Detaljar: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Løyst av %1$s — %2$s</string>
     <string name="forums_moderation_log_empty">Ingen moderatoraktivitet enno</string>
@@ -298,4 +296,6 @@
     <string name="forums_saved_empty_title">Ingenting lagra enno</string>
     <string name="forums_saved_error_clear">Kunne ikkje tømme lagra innlegg</string>
     <string name="forums_saved_save">Lagra til seinare</string>
+    <string name="forums_moderation_pending_posts">Ventande innlegg (%1$d)</string>
+    <string name="forums_moderation_pending_comments">Ventande kommentarar (%1$d)</string>
 </resources>
