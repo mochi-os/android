@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Fuula agarsiisi</string>
     <string name="wikis_revision_compare_failed">Gosa duraanii wal bira qabuuf fe\'uu hin dandeenye.</string>
     <string name="wikis_revision_changes_from">Jijjiirama gosa %1$d → %2$d irraa</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">yaada %d</item>
+        <item quantity="other">yaadota %d</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">deebii %d</item>
+        <item quantity="other">deebii %d dabalataa</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Fuula %1$d maqaan jijjiirame</item>
+        <item quantity="other">Fuulota %1$d maqaan jijjiirame</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">hidhaa %1$d haaromfame</item>
+        <item quantity="other">hidhaawwan %1$d haaromfaman</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">fuula %d</item>
+        <item quantity="other">fuulota %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">faayilii %d</item>
+        <item quantity="other">faayilolee %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">suuraa %d</item>
+        <item quantity="other">suuraalee %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">sanada %d</item>
+        <item quantity="other">sanadoota %d</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">fuula %d tag kanaan</item>
+        <item quantity="other">fuulota %d tag kanaan</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">bu\'aa %1$d "%2$s" argi</item>
+        <item quantity="other">bu\'aalee %1$d "%2$s" argi</item>
+    </plurals>
 </resources>

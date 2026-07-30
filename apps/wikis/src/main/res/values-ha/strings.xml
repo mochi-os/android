@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Nuna shafin</string>
     <string name="wikis_revision_compare_failed">An kasa loda sigar baya don kwatanta.</string>
     <string name="wikis_revision_changes_from">Canje daga sigar %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">sharhi %d</item>
+        <item quantity="other">sharhi %d</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">Amsa %d</item>
+        <item quantity="other">+%d ƙarin amsoshi</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">An sake masa suna shafi %1$d</item>
+        <item quantity="other">An sake masa suna shafuka %1$d</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">an sabunta link %1$d</item>
+        <item quantity="other">an sabunta links %1$d</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">Shafi %d</item>
+        <item quantity="other">Shafuka %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">Fayil %d</item>
+        <item quantity="other">Fayiloli %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">Hoto %d</item>
+        <item quantity="other">Hotuna %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">Takarda %d</item>
+        <item quantity="other">Takardu %d</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">Shafi %d tare da wannan tag</item>
+        <item quantity="other">Shafuka %d tare da wannan tag</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">An sami Sakamako %1$d don «%2$s»</item>
+        <item quantity="other">An sami Sakamako %1$d don «%2$s»</item>
+    </plurals>
 </resources>

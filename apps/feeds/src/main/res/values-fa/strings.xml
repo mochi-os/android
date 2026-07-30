@@ -273,4 +273,24 @@
     <string name="feeds_link">پیوند</string>
     <string name="feeds_share_link_title">پیوند خوراک</string>
     <string name="feeds_scroll_to_top">بازگشت به بالا</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d تصویر</item>
+        <item quantity="other">%1$d تصویر</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">۱ نظر</item>
+        <item quantity="other">%1$d نظر</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d پیوست</item>
+        <item quantity="other">%1$d پیوست</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d نظر دیگر را ببینید</item>
+        <item quantity="other">%1$d نظر دیگر را ببینید</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">امروز %1$d سال پیش</item>
+        <item quantity="other">امروز %1$d سال پیش</item>
+    </plurals>
 </resources>

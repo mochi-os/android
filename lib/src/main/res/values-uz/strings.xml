@@ -310,4 +310,8 @@
     <string name="person_picker_directory">Katalog</string>
     <string name="person_picker_no_people">Odamlar yo\'q</string>
     <string name="person_picker_project_members">Loyiha a\'zolari</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d obunachi</item>
+        <item quantity="other">%1$d obunachi</item>
+    </plurals>
 </resources>

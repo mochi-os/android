@@ -309,4 +309,12 @@
     <string name="person_picker_directory">الدليل</string>
     <string name="person_picker_no_people">لا يوجد أشخاص</string>
     <string name="person_picker_project_members">أعضاء المشروع</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="zero">لا مشتركين</item>
+        <item quantity="one">مشترك واحد</item>
+        <item quantity="two">مشتركان</item>
+        <item quantity="few">%1$d مشتركين</item>
+        <item quantity="many">%1$d مشتركًا</item>
+        <item quantity="other">%1$d مشترك</item>
+    </plurals>
 </resources>

@@ -337,4 +337,8 @@
     <string name="crm_settings_server">Servidor</string>
     <string name="crm_untitled">Sense títol</string>
     <string name="crm_property_select">Selecciona …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d fitxer en conflicte</item>
+        <item quantity="other">%1$d fitxers en conflicte</item>
+    </plurals>
 </resources>

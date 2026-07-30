@@ -309,4 +309,10 @@
     <string name="person_picker_directory">Каталог</string>
     <string name="person_picker_no_people">Нет людей</string>
     <string name="person_picker_project_members">Участники проекта</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d подписчик</item>
+        <item quantity="few">%1$d подписчика</item>
+        <item quantity="many">%1$d подписчиков</item>
+        <item quantity="other">%1$d подписчика</item>
+    </plurals>
 </resources>

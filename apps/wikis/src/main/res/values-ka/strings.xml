@@ -313,4 +313,34 @@
     <string name="wikis_revision_show_page">გვერდის ჩვენება</string>
     <string name="wikis_revision_compare_failed">შესადარებლად წინა ვერსიის ჩატვირთვა ვერ მოხერხდა.</string>
     <string name="wikis_revision_changes_from">ცვლილებები ვერსიიდან %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d კომენტარი</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="other">%d პასუხი</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">გადაერქვა %1$d გვერდს</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">განახლდა %1$d ბმული</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="other">%d ფაილი</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="other">%d ფაილი ატვირთულია</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="other">%d სურათი</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="other">%d დოკუმენტი</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="other">%d ფაილი ამ ტეგით</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="other">ნაპოვნია %1$d პოსტი „%2$s“-ისთვის</item>
+    </plurals>
 </resources>

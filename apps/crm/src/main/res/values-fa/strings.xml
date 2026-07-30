@@ -335,4 +335,8 @@
     <string name="crm_settings_server">سرور</string>
     <string name="crm_untitled">بدون عنوان</string>
     <string name="crm_property_select">انتخاب کنید …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d فایل متناقض</item>
+        <item quantity="other">%1$d فایل متناقض</item>
+    </plurals>
 </resources>

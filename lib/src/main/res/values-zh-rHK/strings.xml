@@ -309,4 +309,7 @@
     <string name="person_picker_no_people">沒有人員</string>
     <string name="person_picker_project_members">專案成員</string>
     <string name="person_picker_clear">清除選取</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">%1$d 位訂閱者</item>
+    </plurals>
 </resources>

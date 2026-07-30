@@ -309,4 +309,8 @@
     <string name="person_picker_directory">డైరెక్టరీ</string>
     <string name="person_picker_no_people">వ్యక్తులు లేరు</string>
     <string name="person_picker_project_members">ప్రాజెక్ట్ సభ్యులు</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d చందాదారు</item>
+        <item quantity="other">%1$d చందాదారులు</item>
+    </plurals>
 </resources>

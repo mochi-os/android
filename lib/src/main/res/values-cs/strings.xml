@@ -309,4 +309,10 @@
     <string name="person_picker_directory">Adresář</string>
     <string name="person_picker_no_people">Žádné osoby</string>
     <string name="person_picker_project_members">Členové projektu</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d odběratel</item>
+        <item quantity="few">%1$d odběratelé</item>
+        <item quantity="many">%1$d odběratele</item>
+        <item quantity="other">%1$d odběratelů</item>
+    </plurals>
 </resources>

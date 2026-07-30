@@ -276,4 +276,29 @@
     <string name="feeds_link">Saite</string>
     <string name="feeds_share_link_title">Plūsmas saite</string>
     <string name="feeds_scroll_to_top">Atpakaļ uz augšu</string>
+    <plurals name="feeds_image_count">
+        <item quantity="zero">%1$d attēlu</item>
+        <item quantity="one">%1$d attēls</item>
+        <item quantity="other">%1$d attēli</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="zero">%1$d komentāru</item>
+        <item quantity="one">%1$d komentārs</item>
+        <item quantity="other">%1$d komentāri</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="zero">%1$d pielikumu</item>
+        <item quantity="one">%1$d pielikums</item>
+        <item quantity="other">%1$d pielikumi</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="zero">Skatīt vēl %1$d komentāru</item>
+        <item quantity="one">Skatīt vēl %1$d komentāru</item>
+        <item quantity="other">Skatīt vēl %1$d komentārus</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="zero">pirms %1$d gadiem šodien</item>
+        <item quantity="one">pirms %1$d gada šodien</item>
+        <item quantity="other">pirms %1$d gadiem šodien</item>
+    </plurals>
 </resources>

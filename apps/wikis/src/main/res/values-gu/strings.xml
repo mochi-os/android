@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">પૃષ્ઠ બતાવો</string>
     <string name="wikis_revision_compare_failed">સરખામણી માટે અગાઉની આવૃત્તિ લોડ કરી શકાઈ નહીં.</string>
     <string name="wikis_revision_changes_from">આવૃત્તિ %1$d → %2$d થી ફેરફારો</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d ટિપ્પણી</item>
+        <item quantity="other">%d ટિપ્પણીઓ</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d જવાબ</item>
+        <item quantity="other">+%d વધુ જવાબો</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d પૃષ્ઠનું નામ બદલ્યું</item>
+        <item quantity="other">%1$d પૃષ્ઠોના નામ બદલ્યા</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d લિંક અપડેટ કરી</item>
+        <item quantity="other">%1$d લિંક અપડેટ કરી</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d પૃષ્ઠ</item>
+        <item quantity="other">%d પૃષ્ઠ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d ફાઇલ</item>
+        <item quantity="other">%d ફાઇલ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d છબી</item>
+        <item quantity="other">%d છબી</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d દસ્તાવેજ</item>
+        <item quantity="other">%d દસ્તાવેજ</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">આ ટેગ સાથે %d પૃષ્ઠ</item>
+        <item quantity="other">આ ટેગ સાથે %d પૃષ્ઠ</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» માટે %1$d પરિણામ મળ્યું</item>
+        <item quantity="other">«%2$s» માટે %1$d પરિણામ મળ્યું</item>
+    </plurals>
 </resources>

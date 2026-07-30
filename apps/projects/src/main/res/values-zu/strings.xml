@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Yabelana ngephrojekthi</string>
     <string name="projects_sort_filter_title">Hlunga futhi uhlele</string>
     <string name="projects_create_prefix_hint">Isetshenziselwa ama-ID afundekayo njenge-%1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">ifayela eli-%1$d elingqubuzanayo</item>
+        <item quantity="other">amafayela angu-%1$d angqubuzanayo</item>
+    </plurals>
 </resources>

@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Näytä sivu</string>
     <string name="wikis_revision_compare_failed">Aiempaa versiota ei voitu ladata vertailua varten.</string>
     <string name="wikis_revision_changes_from">Muutokset versiosta %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d kommentti</item>
+        <item quantity="other">%d kommenttia</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d vastaus</item>
+        <item quantity="other">+%d lisävastausta</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Nimetty uudelleen %1$d sivu</item>
+        <item quantity="other">Nimetty uudelleen %1$d sivua</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">päivitetty %1$d linkki</item>
+        <item quantity="other">päivitetty %1$d linkkiä</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d sivu</item>
+        <item quantity="other">%d sivua</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d tiedosto</item>
+        <item quantity="other">%d tiedostoa</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d kuva</item>
+        <item quantity="other">%d kuvaa</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d asiakirja</item>
+        <item quantity="other">%d asiakirjaa</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d sivu tällä tunnisteella</item>
+        <item quantity="other">%d sivua tällä tunnisteella</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Löytyi %1$d tulos hakusanalle «%2$s»</item>
+        <item quantity="other">Löytyi %1$d tulosta hakusanalle «%2$s»</item>
+    </plurals>
 </resources>

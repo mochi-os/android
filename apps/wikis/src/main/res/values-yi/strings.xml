@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">ווײַז בלאַט</string>
     <string name="wikis_revision_compare_failed">מע האָט נישט געקענט לאָדן די פֿריִערדיקע ווערסיע פֿאַר פֿאַרגלײַך.</string>
     <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d קאָמענטאַר</item>
+        <item quantity="other">%d קאָמענטאַרן</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d ענטפֿער</item>
+        <item quantity="other">+%d מער ענטפֿערס</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">איבערגענומען %1$d זײַטל</item>
+        <item quantity="other">איבערגענומען %1$d זײַטלעך</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">באַנײַט %1$d לינק</item>
+        <item quantity="other">באַנײַט %1$d לינקס</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d זײַטל</item>
+        <item quantity="other">%d זײַטלעך</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d טעקע</item>
+        <item quantity="other">%d טעקעס</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d בילד</item>
+        <item quantity="other">%d בילדער</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d דאָקומענט</item>
+        <item quantity="other">%d דאָקומענטן</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d זײַטל מיט דעם טאַג</item>
+        <item quantity="other">%d זײַטלעך מיט דעם טאַג</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">געפֿונען %1$d רעזולטאַט פֿאַר „%2$s“</item>
+        <item quantity="other">געפֿונען %1$d רעזולטאַטן פֿאַר „%2$s“</item>
+    </plurals>
 </resources>

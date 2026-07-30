@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Wys bladsy</string>
     <string name="wikis_revision_compare_failed">Kon nie die vorige weergawe vir vergelyking laai nie.</string>
     <string name="wikis_revision_changes_from">Veranderinge van weergawe %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d kommentaar</item>
+        <item quantity="other">%d kommentaar</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d antwoord</item>
+        <item quantity="other">+%d meer antwoorde</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d bladsy hernoem</item>
+        <item quantity="other">%1$d bladsye hernoem</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d skakel opgedateer</item>
+        <item quantity="other">%1$d skakels opgedateer</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d bladsy</item>
+        <item quantity="other">%d bladsye</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d lêer</item>
+        <item quantity="other">%d lêers</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d beeld</item>
+        <item quantity="other">%d beelde</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokument</item>
+        <item quantity="other">%d dokumente</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d bladsy met hierdie etiket</item>
+        <item quantity="other">%d bladsye met hierdie etiket</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d resultaat gevind vir «%2$s»</item>
+        <item quantity="other">%1$d resultate gevind vir «%2$s»</item>
+    </plurals>
 </resources>

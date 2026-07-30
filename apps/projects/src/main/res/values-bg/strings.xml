@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Споделяне на проекта</string>
     <string name="projects_sort_filter_title">Сортиране и филтриране</string>
     <string name="projects_create_prefix_hint">Използва се за четими идентификатори като %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d конфликтен файл</item>
+        <item quantity="other">%1$d конфликтни файла</item>
+    </plurals>
 </resources>

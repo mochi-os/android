@@ -335,4 +335,8 @@
     <string name="crm_settings_server">เซิร์ฟเวอร์</string>
     <string name="crm_untitled">ไม่มีชื่อ</string>
     <string name="crm_property_select">เลือก …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d ไฟล์ที่ขัดแย้ง</item>
+        <item quantity="other">%1$d ไฟล์ที่ขัดแย้ง</item>
+    </plurals>
 </resources>

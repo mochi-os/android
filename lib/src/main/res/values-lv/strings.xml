@@ -309,4 +309,9 @@
     <string name="person_picker_directory">Katalogs</string>
     <string name="person_picker_no_people">Nav cilvēku</string>
     <string name="person_picker_project_members">Projekta dalībnieki</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="zero">%1$d abonentu</item>
+        <item quantity="one">%1$d abonents</item>
+        <item quantity="other">%1$d abonenti</item>
+    </plurals>
 </resources>

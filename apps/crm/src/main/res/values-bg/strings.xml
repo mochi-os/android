@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Сървър</string>
     <string name="crm_untitled">Без заглавие</string>
     <string name="crm_property_select">Изберете …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d конфликтен файл</item>
+        <item quantity="other">%1$d конфликтни файла</item>
+    </plurals>
 </resources>

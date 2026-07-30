@@ -335,4 +335,8 @@
     <string name="crm_settings_server">සේවාදායකය</string>
     <string name="crm_untitled">මාතෘකා රහිත</string>
     <string name="crm_property_select">තෝරන්න …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">ගැටුම් ගොනු %1$d</item>
+        <item quantity="other">ගැටුම් ගොනු %1$d</item>
+    </plurals>
 </resources>

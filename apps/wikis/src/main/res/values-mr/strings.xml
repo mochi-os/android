@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">पृष्ठ दाखवा</string>
     <string name="wikis_revision_compare_failed">तुलनेसाठी मागील आवृत्ती लोड करता आली नाही.</string>
     <string name="wikis_revision_changes_from">आवृत्ती %1$d → %2$d पासूनचे बदल</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d टिप्पणी</item>
+        <item quantity="other">%d टिप्पण्या</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d प्रतिसाद</item>
+        <item quantity="other">+%d अधिक प्रतिसाद</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d पृष्ठाचे नाव बदलले</item>
+        <item quantity="other">%1$d पृष्ठांची नावे बदलली</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d लिंक अद्ययावत केली</item>
+        <item quantity="other">%1$d लिंक्स अद्ययावत केल्या</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d पान</item>
+        <item quantity="other">%d पाने</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d फाइल</item>
+        <item quantity="other">%d फाइल्स</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d प्रतिमा</item>
+        <item quantity="other">%d प्रतिमा</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d दस्तऐवज</item>
+        <item quantity="other">%d दस्तऐवज</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">या टॅगसह %d पान</item>
+        <item quantity="other">या टॅगसह %d पाने</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» साठी %1$d निकाल सापडले</item>
+        <item quantity="other">«%2$s» साठी %1$d निकाल सापडले</item>
+    </plurals>
 </resources>

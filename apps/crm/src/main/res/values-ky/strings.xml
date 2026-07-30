@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Аталышсыз</string>
     <string name="crm_property_select">Тандаңыз …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d карама-каршы файл</item>
+        <item quantity="other">%1$d карама-каршы файл</item>
+    </plurals>
 </resources>

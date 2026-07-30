@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Galmee</string>
     <string name="person_picker_no_people">Namni hin jiru</string>
     <string name="person_picker_project_members">Miseensota pirojektii</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d galmeeffataa</item>
+        <item quantity="other">%1$d galmeeffattoota</item>
+    </plurals>
 </resources>

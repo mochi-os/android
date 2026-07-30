@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Εμφάνιση σελίδας</string>
     <string name="wikis_revision_compare_failed">Δεν ήταν δυνατή η φόρτωση της προηγούμενης έκδοσης για σύγκριση.</string>
     <string name="wikis_revision_changes_from">Αλλαγές από την έκδοση %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d σχόλιο</item>
+        <item quantity="other">%d σχόλια</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d απάντηση</item>
+        <item quantity="other">+%d ακόμα απαντήσεις</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Μετονομάστηκε %1$d σελίδα</item>
+        <item quantity="other">Μετονομάστηκαν %1$d σελίδες</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">ενημερώθηκε %1$d σύνδεσμος</item>
+        <item quantity="other">ενημερώθηκαν %1$d σύνδεσμοι</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d σελίδα</item>
+        <item quantity="other">%d σελίδες</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d αρχείο</item>
+        <item quantity="other">%d αρχεία</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d εικόνα</item>
+        <item quantity="other">%d εικόνες</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d έγγραφο</item>
+        <item quantity="other">%d έγγραφα</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d σελίδα με αυτή την ετικέτα</item>
+        <item quantity="other">%d σελίδες με αυτή την ετικέτα</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Βρέθηκαν %1$d αποτέλεσμα για «%2$s»</item>
+        <item quantity="other">Βρέθηκαν %1$d αποτελέσματα για «%2$s»</item>
+    </plurals>
 </resources>

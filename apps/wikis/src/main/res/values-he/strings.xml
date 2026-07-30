@@ -313,4 +313,64 @@
     <string name="wikis_revision_show_page">הצגת הדף</string>
     <string name="wikis_revision_compare_failed">לא ניתן לטעון את הגרסה הקודמת להשוואה.</string>
     <string name="wikis_revision_changes_from">שינויים מגרסה %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">תגובה אחת</item>
+        <item quantity="two">%d תגובות</item>
+        <item quantity="many">%d תגובות</item>
+        <item quantity="other">%d תגובות</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">תגובה אחת</item>
+        <item quantity="two">+%d תגובות נוספות</item>
+        <item quantity="many">+%d תגובות נוספות</item>
+        <item quantity="other">+%d תגובות נוספות</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">שונה שם של דף אחד</item>
+        <item quantity="two">שונה שם של %1$d דפים</item>
+        <item quantity="many">שונה שם של %1$d דפים</item>
+        <item quantity="other">שונה שם של %1$d דפים</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">עודכן קישור אחד</item>
+        <item quantity="two">עודכנו %1$d קישורים</item>
+        <item quantity="many">עודכנו %1$d קישורים</item>
+        <item quantity="other">עודכנו %1$d קישורים</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">עמוד אחד</item>
+        <item quantity="two">%d עמודים</item>
+        <item quantity="many">%d עמודים</item>
+        <item quantity="other">%d עמודים</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">קובץ אחד</item>
+        <item quantity="two">%d קבצים</item>
+        <item quantity="many">%d קבצים</item>
+        <item quantity="other">%d קבצים</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">תמונה אחת</item>
+        <item quantity="two">%d תמונות</item>
+        <item quantity="many">%d תמונות</item>
+        <item quantity="other">%d תמונות</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">מסמך אחד</item>
+        <item quantity="two">%d מסמכים</item>
+        <item quantity="many">%d מסמכים</item>
+        <item quantity="other">%d מסמכים</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">עמוד אחד עם תגית זו</item>
+        <item quantity="two">%d עמודים עם תגית זו</item>
+        <item quantity="many">%d עמודים עם תגית זו</item>
+        <item quantity="other">%d עמודים עם תגית זו</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">נמצאו תוצאה אחת עבור «%2$s»</item>
+        <item quantity="two">נמצאו %1$d תוצאות עבור «%2$s»</item>
+        <item quantity="many">נמצאו %1$d תוצאות עבור «%2$s»</item>
+        <item quantity="other">נמצאו %1$d תוצאות עבור «%2$s»</item>
+    </plurals>
 </resources>

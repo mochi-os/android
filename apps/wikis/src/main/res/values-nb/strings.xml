@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Vis side</string>
     <string name="wikis_revision_compare_failed">Kunne ikke laste inn forrige versjon for sammenligning.</string>
     <string name="wikis_revision_changes_from">Endringer fra versjon %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d kommentar</item>
+        <item quantity="other">%d kommentarer</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d svar</item>
+        <item quantity="other">+%d flere svar</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Endret navn på %1$d side</item>
+        <item quantity="other">Endret navn på %1$d sider</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">oppdaterte %1$d lenke</item>
+        <item quantity="other">oppdaterte %1$d lenker</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d side</item>
+        <item quantity="other">%d sider</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d fil</item>
+        <item quantity="other">%d filer</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d bilde</item>
+        <item quantity="other">%d bilder</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokument</item>
+        <item quantity="other">%d dokumenter</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d side med denne taggen</item>
+        <item quantity="other">%d sider med denne taggen</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Fant %1$d resultat for «%2$s»</item>
+        <item quantity="other">Fant %1$d resultater for «%2$s»</item>
+    </plurals>
 </resources>

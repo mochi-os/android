@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Kataloog</string>
     <string name="person_picker_no_people">Inimesi pole</string>
     <string name="person_picker_project_members">Projekti liikmed</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d tellija</item>
+        <item quantity="other">%1$d tellijat</item>
+    </plurals>
 </resources>

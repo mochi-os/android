@@ -365,4 +365,10 @@
     <string name="projects_share_link_title">Aqsam il-proġett</string>
     <string name="projects_sort_filter_title">Irranġa u ffiltra</string>
     <string name="projects_create_prefix_hint">Jintuża għal IDs li jinqraw bħal %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d fajl f\'kunflitt</item>
+        <item quantity="few">%1$d fajls f\'kunflitt</item>
+        <item quantity="many">%1$d fajls f\'kunflitt</item>
+        <item quantity="other">%1$d fajls f\'kunflitt</item>
+    </plurals>
 </resources>

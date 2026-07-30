@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Comparteix el projecte</string>
     <string name="projects_sort_filter_title">Ordena i filtra</string>
     <string name="projects_create_prefix_hint">S\'utilitza per a identificadors llegibles com %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d fitxer en conflicte</item>
+        <item quantity="other">%1$d fitxers en conflicte</item>
+    </plurals>
 </resources>

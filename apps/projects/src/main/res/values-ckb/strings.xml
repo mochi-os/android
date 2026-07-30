@@ -367,4 +367,8 @@
     <string name="projects_share_link_title">پڕۆژە هاوبەش بکە</string>
     <string name="projects_sort_filter_title">ڕیزکردن و پاڵاوتن</string>
     <string name="projects_create_prefix_hint">بۆ ناسنامەی خوێندنەوەیی وەک %1$s-1، %1$s-2 بەکاردێت</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d پەڕگەی ناکۆک</item>
+        <item quantity="other">%1$d پەڕگەی ناکۆک</item>
+    </plurals>
 </resources>

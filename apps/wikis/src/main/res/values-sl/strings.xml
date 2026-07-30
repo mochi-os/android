@@ -310,4 +310,64 @@
     <string name="wikis_revision_show_page">Pokaži stran</string>
     <string name="wikis_revision_compare_failed">Prejšnje različice za primerjavo ni bilo mogoče naložiti.</string>
     <string name="wikis_revision_changes_from">Spremembe iz različice %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d komentar</item>
+        <item quantity="two">%d komentarja</item>
+        <item quantity="few">%d komentarji</item>
+        <item quantity="other">%d komentarjev</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d odgovor</item>
+        <item quantity="two">+%d več odgovorov</item>
+        <item quantity="few">+%d več odgovorov</item>
+        <item quantity="other">+%d več odgovorov</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Preimenovana %1$d stran</item>
+        <item quantity="two">Preimenovani %1$d strani</item>
+        <item quantity="few">Preimenovane %1$d strani</item>
+        <item quantity="other">Preimenovanih %1$d strani</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">posodobljena %1$d povezava</item>
+        <item quantity="two">posodobljeni %1$d povezavi</item>
+        <item quantity="few">posodobljene %1$d povezave</item>
+        <item quantity="other">posodobljenih %1$d povezav</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d stran</item>
+        <item quantity="two">%d strani</item>
+        <item quantity="few">%d strani</item>
+        <item quantity="other">%d strani</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d datoteka</item>
+        <item quantity="two">%d datoteki</item>
+        <item quantity="few">%d datoteke</item>
+        <item quantity="other">%d datotek</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d slika</item>
+        <item quantity="two">%d sliki</item>
+        <item quantity="few">%d slike</item>
+        <item quantity="other">%d slik</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokument</item>
+        <item quantity="two">%d dokumenta</item>
+        <item quantity="few">%d dokumenti</item>
+        <item quantity="other">%d dokumentov</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d stran s to oznako</item>
+        <item quantity="two">%d strani s to oznako</item>
+        <item quantity="few">%d strani s to oznako</item>
+        <item quantity="other">%d strani s to oznako</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Najdeno %1$d rezultat za »%2$s«</item>
+        <item quantity="two">Najdeno %1$d rezultata za »%2$s«</item>
+        <item quantity="few">Najdeno %1$d rezultati za »%2$s«</item>
+        <item quantity="other">Najdeno %1$d rezultatov za »%2$s«</item>
+    </plurals>
 </resources>

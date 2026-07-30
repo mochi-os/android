@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Κοινοποίηση έργου</string>
     <string name="projects_sort_filter_title">Ταξινόμηση και φίλτρο</string>
     <string name="projects_create_prefix_hint">Χρησιμοποιείται για ευανάγνωστα αναγνωριστικά όπως %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d αρχείο σε διένεξη</item>
+        <item quantity="other">%1$d αρχεία σε διένεξη</item>
+    </plurals>
 </resources>

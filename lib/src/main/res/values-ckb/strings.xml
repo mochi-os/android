@@ -309,4 +309,8 @@
     <string name="person_picker_directory">ڕابەر</string>
     <string name="person_picker_no_people">کەس نییە</string>
     <string name="person_picker_project_members">ئەندامانی پڕۆژە</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d بەشداربوو</item>
+        <item quantity="other">%1$d بەشداربوو</item>
+    </plurals>
 </resources>

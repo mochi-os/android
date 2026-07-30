@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Баракты көрсөтүү</string>
     <string name="wikis_revision_compare_failed">Салыштыруу үчүн мурунку версияны жүктөө мүмкүн болгон жок.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d версиясынан өзгөртүүлөр</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d комментарий</item>
+        <item quantity="other">%d комментарий</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d жооп</item>
+        <item quantity="other">+%d дагы жооп</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d бет кайра аталды</item>
+        <item quantity="other">%1$d бет кайра аталды</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d шилтеме жаңыртылды</item>
+        <item quantity="other">%1$d шилтеме жаңыртылды</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d бет</item>
+        <item quantity="other">%d бет</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d файл</item>
+        <item quantity="other">%d файл</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d сүрөт</item>
+        <item quantity="other">%d сүрөт</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d документ</item>
+        <item quantity="other">%d документ</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d бет бул тег менен</item>
+        <item quantity="other">%d бет бул тег менен</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">"%2$s" үчүн %1$d натыйжа табылды</item>
+        <item quantity="other">"%2$s" үчүн %1$d натыйжа табылды</item>
+    </plurals>
 </resources>

@@ -275,4 +275,24 @@
     <string name="feeds_link">Enllaç</string>
     <string name="feeds_share_link_title">Enllaç del canal</string>
     <string name="feeds_scroll_to_top">Torna a dalt</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d imatge</item>
+        <item quantity="other">%1$d imatges</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d comentari</item>
+        <item quantity="other">%1$d comentaris</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d adjunt</item>
+        <item quantity="other">%1$d adjunts</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Mostra %1$d comentari més</item>
+        <item quantity="other">Mostra %1$d comentaris més</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">fa %1$d any, avui</item>
+        <item quantity="other">fa %1$d anys, avui</item>
+    </plurals>
 </resources>

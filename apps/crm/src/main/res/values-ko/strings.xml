@@ -335,4 +335,8 @@
     <string name="crm_settings_server">서버</string>
     <string name="crm_untitled">제목 없음</string>
     <string name="crm_property_select">선택 …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">충돌 파일 %1$d 개</item>
+        <item quantity="other">충돌 파일 %1$d 개</item>
+    </plurals>
 </resources>

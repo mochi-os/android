@@ -365,4 +365,10 @@
     <string name="projects_share_link_title">Co-roinn am pròiseact</string>
     <string name="projects_sort_filter_title">Seòrsaich is criathraich</string>
     <string name="projects_create_prefix_hint">Ga chleachdadh airson IDan so-leughta mar %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d fhaidhle le còmhstri</item>
+        <item quantity="two">%1$d fhaidhle le còmhstri</item>
+        <item quantity="few">%1$d faidhlichean le còmhstri</item>
+        <item quantity="other">%1$d faidhle le còmhstri</item>
+    </plurals>
 </resources>

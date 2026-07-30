@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">पृष्ठ दिखाएँ</string>
     <string name="wikis_revision_compare_failed">तुलना के लिए पिछला संस्करण लोड नहीं किया जा सका।</string>
     <string name="wikis_revision_changes_from">संस्करण %1$d → %2$d से परिवर्तन</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d कमेंट</item>
+        <item quantity="other">%d कमेंट</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d उत्तर</item>
+        <item quantity="other">+%d और उत्तर</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d पेज का नाम बदला</item>
+        <item quantity="other">%1$d पेज के नाम बदले</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d लिंक अपडेट हुआ</item>
+        <item quantity="other">%1$d लिंक अपडेट हुए</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d पृष्ठ</item>
+        <item quantity="other">%d पृष्ठ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d फ़ाइल</item>
+        <item quantity="other">%d फ़ाइलें</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d छवि</item>
+        <item quantity="other">%d छवियाँ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d दस्तावेज़</item>
+        <item quantity="other">%d दस्तावेज़</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">इस टैग के साथ %d पृष्ठ</item>
+        <item quantity="other">इस टैग के साथ %d पृष्ठ</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» के लिए %1$d परिणाम मिले</item>
+        <item quantity="other">«%2$s» के लिए %1$d परिणाम मिले</item>
+    </plurals>
 </resources>

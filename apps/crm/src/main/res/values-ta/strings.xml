@@ -335,4 +335,8 @@
     <string name="crm_settings_server">சர்வர்</string>
     <string name="crm_untitled">தலைப்பிடாதது</string>
     <string name="crm_property_select">தேர்ந்தெடுக்கவும் …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d முரண்பாட்டு கோப்பு</item>
+        <item quantity="other">%1$d முரண்பாட்டு கோப்புகள்</item>
+    </plurals>
 </resources>

@@ -273,4 +273,24 @@
     <string name="feeds_link">לינק</string>
     <string name="feeds_share_link_title">פֿיד לינק</string>
     <string name="feeds_scroll_to_top">צוריק אַרויף</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d בילד</item>
+        <item quantity="other">%1$d בילדער</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d קאָמענטאַר</item>
+        <item quantity="other">%1$d קאָמענטאַרן</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d בײַלאַגע</item>
+        <item quantity="other">%1$d בײַלאַגן</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">זעט %1$d מער קאָמענטאַר</item>
+        <item quantity="other">זעט %1$d מער קאָמענטאַרן</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">הײַנט מיט %1$d יאָר צוריק</item>
+        <item quantity="other">הײַנט מיט %1$d יאָר צוריק</item>
+    </plurals>
 </resources>

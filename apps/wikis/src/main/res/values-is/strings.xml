@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Sýna síðu</string>
     <string name="wikis_revision_compare_failed">Ekki tókst að hlaða fyrri útgáfu til samanburðar.</string>
     <string name="wikis_revision_changes_from">Breytingar frá útgáfu %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d athugasemd</item>
+        <item quantity="other">%d athugasemdir</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d svar</item>
+        <item quantity="other">+%d fleiri svör</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Endurnefndi %1$d síðu</item>
+        <item quantity="other">Endurnefndi %1$d síður</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">uppfærði %1$d tengil</item>
+        <item quantity="other">uppfærði %1$d tengla</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d síða</item>
+        <item quantity="other">%d síður</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d skrá</item>
+        <item quantity="other">%d skrár</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d mynd</item>
+        <item quantity="other">%d myndir</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d skjal</item>
+        <item quantity="other">%d skjöl</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d síða með þessu merki</item>
+        <item quantity="other">%d síður með þessu merki</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Fann %1$d niðurstaða fyrir «%2$s»</item>
+        <item quantity="other">Fann %1$d niðurstöður fyrir «%2$s»</item>
+    </plurals>
 </resources>

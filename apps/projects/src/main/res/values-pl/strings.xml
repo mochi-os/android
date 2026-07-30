@@ -365,4 +365,10 @@
     <string name="projects_share_link_title">Udostępnij projekt</string>
     <string name="projects_sort_filter_title">Sortowanie i filtr</string>
     <string name="projects_create_prefix_hint">Używane do czytelnych identyfikatorów, np. %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d plik z konfliktem</item>
+        <item quantity="few">%1$d pliki z konfliktami</item>
+        <item quantity="many">%1$d plików z konfliktami</item>
+        <item quantity="other">%1$d pliku z konfliktem</item>
+    </plurals>
 </resources>

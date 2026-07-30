@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">පිටුව පෙන්වන්න</string>
     <string name="wikis_revision_compare_failed">සංසන්දනය සඳහා පෙර අනුවාදය පූරණය කළ නොහැකි විය.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d අනුවාදයේ වෙනස්කම්</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">අදහස් %dක්</item>
+        <item quantity="other">අදහස් %dක්</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d පිළිතුර</item>
+        <item quantity="other">+%d තවත් පිළිතුරු</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">පිටු %1$dක නම වෙනස් කරන ලදී</item>
+        <item quantity="other">පිටු %1$dක නම වෙනස් කරන ලදී</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">links %1$dක් යාවත්කාලීන කරන ලදී</item>
+        <item quantity="other">links %1$dක් යාවත්කාලීන කරන ලදී</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d පිටුව</item>
+        <item quantity="other">%d පිටු</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d ගොනුව</item>
+        <item quantity="other">%d ගොනු</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d රූපය</item>
+        <item quantity="other">%d රූප</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d ලේඛනය</item>
+        <item quantity="other">%d ලේඛන</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">මෙම ටැගය සමඟ %d පිටුව</item>
+        <item quantity="other">මෙම ටැගය සමඟ %d පිටු</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» සඳහා %1$d ප්‍රතිඵලය සොයා ගත්තා</item>
+        <item quantity="other">«%2$s» සඳහා %1$d ප්‍රතිඵල සොයා ගත්තා</item>
+    </plurals>
 </resources>

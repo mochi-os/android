@@ -335,4 +335,8 @@
     <string name="crm_settings_server">סערווער</string>
     <string name="crm_untitled">אָן קעפּל</string>
     <string name="crm_property_select">קלײַבט אויס …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d קאָנפֿליקט־טעקע</item>
+        <item quantity="other">%1$d קאָנפֿליקט־טעקעס</item>
+    </plurals>
 </resources>

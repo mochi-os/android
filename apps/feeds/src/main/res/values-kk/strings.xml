@@ -273,4 +273,24 @@
     <string name="feeds_link">Сілтеме</string>
     <string name="feeds_share_link_title">Арна сілтемесі</string>
     <string name="feeds_scroll_to_top">Жоғарыға оралу</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d сурет</item>
+        <item quantity="other">%1$d сурет</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d пікір</item>
+        <item quantity="other">%1$d пікір</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d тіркеме</item>
+        <item quantity="other">%1$d тіркеме</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d қосымша пікірді көру</item>
+        <item quantity="other">%1$d қосымша пікірді көру</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">бүгін %1$d жыл бұрын</item>
+        <item quantity="other">бүгін %1$d жыл бұрын</item>
+    </plurals>
 </resources>

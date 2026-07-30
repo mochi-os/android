@@ -335,4 +335,8 @@
     <string name="crm_settings_server">サーバー</string>
     <string name="crm_untitled">無題</string>
     <string name="crm_property_select">選択 …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d 件の競合ファイル</item>
+        <item quantity="other">%1$d 件の競合ファイル</item>
+    </plurals>
 </resources>

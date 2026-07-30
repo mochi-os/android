@@ -273,4 +273,24 @@
     <string name="feeds_link">Шилтеме</string>
     <string name="feeds_share_link_title">Тасма шилтемеси</string>
     <string name="feeds_scroll_to_top">Жогоруга кайтуу</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d сүрөт</item>
+        <item quantity="other">%1$d сүрөт</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d комментарий</item>
+        <item quantity="other">%1$d комментарий</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d тиркеме</item>
+        <item quantity="other">%1$d тиркеме</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d кошумча комментарийди көрүү</item>
+        <item quantity="other">%1$d кошумча комментарийди көрүү</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">бүгүн %1$d жыл мурун</item>
+        <item quantity="other">бүгүн %1$d жыл мурун</item>
+    </plurals>
 </resources>

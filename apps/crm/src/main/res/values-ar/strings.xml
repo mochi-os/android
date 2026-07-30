@@ -335,4 +335,12 @@
     <string name="crm_settings_server">الخادم</string>
     <string name="crm_untitled">بدون عنوان</string>
     <string name="crm_property_select">اختر …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="zero">لا ملفات متعارضة</item>
+        <item quantity="one">ملف متعارض واحد</item>
+        <item quantity="two">ملفان متعارضان</item>
+        <item quantity="few">%1$d ملفات متعارضة</item>
+        <item quantity="many">%1$d ملفًا متعارضًا</item>
+        <item quantity="other">%1$d ملف متعارض</item>
+    </plurals>
 </resources>

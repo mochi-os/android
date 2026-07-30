@@ -335,4 +335,8 @@
     <string name="crm_settings_server">सर्वर</string>
     <string name="crm_untitled">शीर्षकहीन</string>
     <string name="crm_property_select">चुनें …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d विरोधी फ़ाइल</item>
+        <item quantity="other">%1$d विरोधी फ़ाइलें</item>
+    </plurals>
 </resources>

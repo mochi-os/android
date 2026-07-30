@@ -313,4 +313,57 @@
     <string name="wikis_revision_show_page">Zobrazit stránku</string>
     <string name="wikis_revision_compare_failed">Nepodařilo se načíst předchozí verzi pro porovnání.</string>
     <string name="wikis_revision_changes_from">Změny z verze %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d komentář</item>
+        <item quantity="few">%d komentáře</item>
+        <item quantity="many">%d komentáře</item>
+        <item quantity="other">%d komentářů</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d odpověď</item>
+        <item quantity="few">+%d dalších odpovědí</item>
+        <item quantity="other">+%d dalších odpovědí</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Přejmenována %1$d stránka</item>
+        <item quantity="few">Přejmenovány %1$d stránky</item>
+        <item quantity="many">Přejmenovány %1$d stránky</item>
+        <item quantity="other">Přejmenováno %1$d stránek</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">aktualizován %1$d odkaz</item>
+        <item quantity="few">aktualizovány %1$d odkazy</item>
+        <item quantity="many">aktualizovány %1$d odkazy</item>
+        <item quantity="other">aktualizováno %1$d odkazů</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d stránka</item>
+        <item quantity="few">%d stránek</item>
+        <item quantity="other">%d stránek</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d soubor</item>
+        <item quantity="few">%d souborů</item>
+        <item quantity="other">%d souborů</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d obrázek</item>
+        <item quantity="few">%d obrázků</item>
+        <item quantity="other">%d obrázků</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokument</item>
+        <item quantity="few">%d dokumentů</item>
+        <item quantity="other">%d dokumentů</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d stránka s tímto tagem</item>
+        <item quantity="few">%d stránek s tímto tagem</item>
+        <item quantity="other">%d stránek s tímto tagem</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Nalezeno %1$d výsledek pro „%2$s"</item>
+        <item quantity="few">Nalezeno %1$d výsledků pro „%2$s"</item>
+        <item quantity="other">Nalezeno %1$d výsledků pro „%2$s"</item>
+    </plurals>
 </resources>

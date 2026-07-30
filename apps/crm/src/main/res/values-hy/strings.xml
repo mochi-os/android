@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Սերվեր</string>
     <string name="crm_untitled">Անվերնագիր</string>
     <string name="crm_property_select">Ընտրեք …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d հակասող ֆայլ</item>
+        <item quantity="other">%1$d հակասող ֆայլ</item>
+    </plurals>
 </resources>

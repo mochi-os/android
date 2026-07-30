@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Bonisa iphepha</string>
     <string name="wikis_revision_compare_failed">Ayikwazanga ukulayisha inguqulelo yangaphambili ukuze kuthelekiswe.</string>
     <string name="wikis_revision_changes_from">Iinguqu ukusuka kwinguqulelo %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">ilizwi elinye</item>
+        <item quantity="other">amazwi ayi-%d</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">Impendulo %d</item>
+        <item quantity="other">+%d ezinye iimpendulo</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Kuphinde kwathiywa iphepha elinye</item>
+        <item quantity="other">Kuphinde kwathiywa amaphepha ayi-%1$d</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">kuhlaziywe ikhonkco elinye</item>
+        <item quantity="other">kuhlaziywe amakhonkco ayi-%1$d</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">Iphepha %d</item>
+        <item quantity="other">Amaphepha %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">Ifayile %d</item>
+        <item quantity="other">Iifayile %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">Umfanekiso %d</item>
+        <item quantity="other">Imifanekiso %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">Uxwebhu %d</item>
+        <item quantity="other">Amaxwebhu %d</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">Iphepha %d nale thegi</item>
+        <item quantity="other">Amaphepha %d nale thegi</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Kufunyenwe Iziphumo %1$d ku-«%2$s»</item>
+        <item quantity="other">Kufunyenwe Iziphumo %1$d ku-«%2$s»</item>
+    </plurals>
 </resources>

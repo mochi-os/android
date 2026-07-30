@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Shiriki mradi</string>
     <string name="projects_sort_filter_title">Panga na chuja</string>
     <string name="projects_create_prefix_hint">Hutumika kwa vitambulisho vinavyosomeka kama %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">faili %1$d yenye mgongano</item>
+        <item quantity="other">faili %1$d zenye mgongano</item>
+    </plurals>
 </resources>

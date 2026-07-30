@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Proyectota rakiy</string>
     <string name="projects_sort_filter_title">Ñiqichay hinaspa suyachiy</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 hina ñawinchana ID-kunapaq apaykachasqa</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d ch\'aqwaq willañiqi</item>
+        <item quantity="other">%1$d ch\'aqwaq willañiqikuna</item>
+    </plurals>
 </resources>

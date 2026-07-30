@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Seite anzeigen</string>
     <string name="wikis_revision_compare_failed">Die vorherige Version konnte nicht zum Vergleich geladen werden.</string>
     <string name="wikis_revision_changes_from">Änderungen von Version %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d Kommentar</item>
+        <item quantity="other">%d Kommentare</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d Antwort</item>
+        <item quantity="other">+%d weitere Antworten</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d Seite umbenannt</item>
+        <item quantity="other">%1$d Seiten umbenannt</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d Link aktualisiert</item>
+        <item quantity="other">%1$d Links aktualisiert</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d Seite</item>
+        <item quantity="other">%d Seiten</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d Datei</item>
+        <item quantity="other">%d Dateien</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d Bild</item>
+        <item quantity="other">%d Bilder</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d Dokument</item>
+        <item quantity="other">%d Dokumente</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d Seite mit diesem Tag</item>
+        <item quantity="other">%d Seiten mit diesem Tag</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d Ergebnis für „%2$s" gefunden</item>
+        <item quantity="other">%1$d Ergebnisse für „%2$s" gefunden</item>
+    </plurals>
 </resources>

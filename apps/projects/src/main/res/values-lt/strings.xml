@@ -365,4 +365,10 @@
     <string name="projects_share_link_title">Bendrinti projektą</string>
     <string name="projects_sort_filter_title">Rikiuoti ir filtruoti</string>
     <string name="projects_create_prefix_hint">Naudojama skaitomiems ID, pvz., %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d konfliktuojantis failas</item>
+        <item quantity="few">%1$d konfliktuojantys failai</item>
+        <item quantity="many">%1$d konfliktuojančio failo</item>
+        <item quantity="other">%1$d konfliktuojančių failų</item>
+    </plurals>
 </resources>

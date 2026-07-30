@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Partager le projet</string>
     <string name="projects_sort_filter_title">Trier et filtrer</string>
     <string name="projects_create_prefix_hint">Utilisé pour des identifiants lisibles comme %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d fichier en conflit</item>
+        <item quantity="other">%1$d fichiers en conflit</item>
+    </plurals>
 </resources>

@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">திட்டத்தைப் பகிர்</string>
     <string name="projects_sort_filter_title">வரிசைப்படுத்தி வடிகட்டு</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 போன்ற படிக்கக்கூடிய ஐடிகளுக்குப் பயன்படுகிறது</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d முரண்பாட்டு கோப்பு</item>
+        <item quantity="other">%1$d முரண்பாட்டு கோப்புகள்</item>
+    </plurals>
 </resources>

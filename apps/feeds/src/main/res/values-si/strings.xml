@@ -273,4 +273,24 @@
     <string name="feeds_link">සබැඳිය</string>
     <string name="feeds_share_link_title">පෝෂක සබැඳිය</string>
     <string name="feeds_scroll_to_top">ඉහළට ආපසු</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d රූපය</item>
+        <item quantity="other">%1$d රූප</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">අදහස් %1$dක්</item>
+        <item quantity="other">අදහස් %1$dක්</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d ඇමුණුම</item>
+        <item quantity="other">%1$d ඇමුණුම්</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">තවත් අදහස් %1$d බලන්න</item>
+        <item quantity="other">තවත් අදහස් %1$d බලන්න</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">අද %1$d වසරකට පෙර</item>
+        <item quantity="other">අද %1$d වසරකට පෙර</item>
+    </plurals>
 </resources>

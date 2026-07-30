@@ -313,4 +313,64 @@
     <string name="wikis_revision_show_page">Seall an duilleag</string>
     <string name="wikis_revision_compare_failed">Cha b\' urrainn an tionndadh roimhe a luchdadh airson coimeas.</string>
     <string name="wikis_revision_changes_from">Atharraichidhean bho thionndadh %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d bheachd</item>
+        <item quantity="two">2 bheachd</item>
+        <item quantity="few">%d beachdan</item>
+        <item quantity="other">%d beachdan</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d fhreagairt</item>
+        <item quantity="two">+%d barrachd freagairtean</item>
+        <item quantity="few">+%d barrachd freagairtean</item>
+        <item quantity="other">+%d barrachd freagairtean</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Ath-ainmichte %1$d dhuilleag</item>
+        <item quantity="two">Ath-ainmichte %1$d dhuilleag</item>
+        <item quantity="few">Ath-ainmichte %1$d duilleagan</item>
+        <item quantity="other">Ath-ainmichte %1$d duilleagan</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">ùraichte %1$d cheangal</item>
+        <item quantity="two">ùraichte %1$d cheangal</item>
+        <item quantity="few">ùraichte %1$d ceanglaichean</item>
+        <item quantity="other">ùraichte %1$d ceanglaichean</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d duilleag</item>
+        <item quantity="two">%d dhuilleag</item>
+        <item quantity="few">%d duilleagan</item>
+        <item quantity="other">%d duilleagan</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d faidhle</item>
+        <item quantity="two">%d fhaidhle</item>
+        <item quantity="few">%d faidhlichean</item>
+        <item quantity="other">%d faidhlichean</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d dealbh</item>
+        <item quantity="two">%d dhealbh</item>
+        <item quantity="few">%d dealbhan</item>
+        <item quantity="other">%d dealbhan</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d sgrìobhainn</item>
+        <item quantity="two">%d sgrìobhainn</item>
+        <item quantity="few">%d sgrìobhainnean</item>
+        <item quantity="other">%d sgrìobhainnean</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d duilleag leis an taga seo</item>
+        <item quantity="two">%d dhuilleag leis an taga seo</item>
+        <item quantity="few">%d duilleagan leis an taga seo</item>
+        <item quantity="other">%d duilleagan leis an taga seo</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Fhuaras %1$d toradh airson "%2$s"</item>
+        <item quantity="two">Fhuaras %1$d thoradh airson "%2$s"</item>
+        <item quantity="few">Fhuaras %1$d toraidhean airson "%2$s"</item>
+        <item quantity="other">Fhuaras %1$d toraidhean airson "%2$s"</item>
+    </plurals>
 </resources>

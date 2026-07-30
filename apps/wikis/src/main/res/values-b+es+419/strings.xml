@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Mostrar página</string>
     <string name="wikis_revision_compare_failed">No se pudo cargar la versión anterior para la comparación.</string>
     <string name="wikis_revision_changes_from">Cambios de la versión %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d comentario</item>
+        <item quantity="other">%d comentarios</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d respuesta</item>
+        <item quantity="other">+%d respuestas más</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Se renombró %1$d página</item>
+        <item quantity="other">Se renombraron %1$d páginas</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">se actualizó %1$d enlace</item>
+        <item quantity="other">se actualizaron %1$d enlaces</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d página</item>
+        <item quantity="other">%d páginas</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d archivo</item>
+        <item quantity="other">%d archivos</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d imagen</item>
+        <item quantity="other">%d imágenes</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d documento</item>
+        <item quantity="other">%d documentos</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d página con esta etiqueta</item>
+        <item quantity="other">%d páginas con esta etiqueta</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d resultado para "%2$s"</item>
+        <item quantity="other">%1$d resultados para "%2$s"</item>
+    </plurals>
 </resources>

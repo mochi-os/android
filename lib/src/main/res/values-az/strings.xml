@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Kataloq</string>
     <string name="person_picker_no_people">İnsan yoxdur</string>
     <string name="person_picker_project_members">Layihə üzvləri</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d abunəçi</item>
+        <item quantity="other">%1$d abunəçi</item>
+    </plurals>
 </resources>

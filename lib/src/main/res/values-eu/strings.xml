@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Direktorioa</string>
     <string name="person_picker_no_people">Ez dago pertsonarik</string>
     <string name="person_picker_project_members">Proiektuko kideak</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">harpidetu %1$d</item>
+        <item quantity="other">%1$d harpidetu</item>
+    </plurals>
 </resources>

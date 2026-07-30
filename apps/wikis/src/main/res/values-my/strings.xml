@@ -313,4 +313,34 @@
     <string name="wikis_revision_show_page">စာမျက်နှာ ပြပါ</string>
     <string name="wikis_revision_compare_failed">နှိုင်းယှဉ်ရန် ယခင်ဗားရှင်းကို ဖွင့်၍မရပါ။</string>
     <string name="wikis_revision_changes_from">ဗားရှင်း %1$d → %2$d မှ ပြောင်းလဲမှုများ</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">မှတ်ချက် %d</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="other">+ ပြန်ဖြေချက် %d ခု ပိုနေသေးသည်</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">စာမျက်နှာ %1$d ခုကို အမည်ပြောင်းပြီး</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">၊ link %1$d ခု အပ်ဒိတ်လုပ်ပြီး</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="other">စာမျက်နှာ %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="other">ဖိုင် %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="other">ပုံ %d</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="other">စာရွက်စာတမ်း %d</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="other">ဤ tag ပါသော စာမျက်နှာ %d</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="other">"%2$s" အတွက် ရလဒ် %1$d ခု တွေ့ရသည်</item>
+    </plurals>
 </resources>

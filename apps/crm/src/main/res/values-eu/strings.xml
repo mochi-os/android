@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Zerbitzaria</string>
     <string name="crm_untitled">Izengabea</string>
     <string name="crm_property_select">Hautatu …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">gatazkan dagoen fitxategi %1$d</item>
+        <item quantity="other">gatazkan dauden %1$d fitxategi</item>
+    </plurals>
 </resources>

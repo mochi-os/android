@@ -335,4 +335,10 @@
     <string name="crm_settings_server">שרת</string>
     <string name="crm_untitled">ללא כותרת</string>
     <string name="crm_property_select">בחרו …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">קובץ מתנגש אחד</item>
+        <item quantity="two">שני קבצים מתנגשים</item>
+        <item quantity="many">%1$d קבצים מתנגשים</item>
+        <item quantity="other">%1$d קבצים מתנגשים</item>
+    </plurals>
 </resources>

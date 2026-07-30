@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Taslamany paýlaş</string>
     <string name="projects_sort_filter_title">Tertiple we süz</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 ýaly okalýan ID-ler üçin ulanylýar</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d gapma-garşy faýl</item>
+        <item quantity="other">%1$d gapma-garşy faýl</item>
+    </plurals>
 </resources>

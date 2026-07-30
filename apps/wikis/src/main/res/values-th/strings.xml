@@ -313,4 +313,41 @@
     <string name="wikis_revision_show_page">แสดงหน้า</string>
     <string name="wikis_revision_compare_failed">ไม่สามารถโหลดเวอร์ชันก่อนหน้าเพื่อเปรียบเทียบได้</string>
     <string name="wikis_revision_changes_from">การเปลี่ยนแปลงจากเวอร์ชัน %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d ความคิดเห็น</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d การตอบกลับ</item>
+        <item quantity="other">+%d การตอบกลับเพิ่มเติม</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">เปลี่ยนชื่อ %1$d หน้า</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">อัปเดต %1$d ลิงก์</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d หน้า</item>
+        <item quantity="other">%d หน้า</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d ไฟล์</item>
+        <item quantity="other">%d ไฟล์</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d รูปภาพ</item>
+        <item quantity="other">%d รูปภาพ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d เอกสาร</item>
+        <item quantity="other">%d เอกสาร</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d หน้า ที่มีแท็กนี้</item>
+        <item quantity="other">%d หน้า ที่มีแท็กนี้</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">พบ %1$d ผลลัพธ์ สำหรับ «%2$s»</item>
+        <item quantity="other">พบ %1$d ผลลัพธ์ สำหรับ «%2$s»</item>
+    </plurals>
 </resources>

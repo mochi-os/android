@@ -285,4 +285,44 @@
     <string name="feeds_link">رابط</string>
     <string name="feeds_share_link_title">رابط الموجز</string>
     <string name="feeds_scroll_to_top">العودة إلى الأعلى</string>
+    <plurals name="feeds_image_count">
+        <item quantity="zero">%1$d صور</item>
+        <item quantity="one">صورة واحدة</item>
+        <item quantity="two">%1$d صور</item>
+        <item quantity="few">%1$d صور</item>
+        <item quantity="many">%1$d صور</item>
+        <item quantity="other">%1$d صور</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="zero">%1$d تعليقات</item>
+        <item quantity="one">تعليق واحد</item>
+        <item quantity="two">%1$d تعليقات</item>
+        <item quantity="few">%1$d تعليقات</item>
+        <item quantity="many">%1$d تعليقات</item>
+        <item quantity="other">%1$d تعليقات</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="zero">لا مرفقات</item>
+        <item quantity="one">مرفق واحد</item>
+        <item quantity="two">مرفقان</item>
+        <item quantity="few">%1$d مرفقات</item>
+        <item quantity="many">%1$d مرفقًا</item>
+        <item quantity="other">%1$d مرفق</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="zero">لا تعليقات أخرى</item>
+        <item quantity="one">عرض تعليق واحد آخر</item>
+        <item quantity="two">عرض تعليقين آخرين</item>
+        <item quantity="few">عرض %1$d تعليقات أخرى</item>
+        <item quantity="many">عرض %1$d تعليقًا آخر</item>
+        <item quantity="other">عرض %1$d تعليق آخر</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="zero">اليوم</item>
+        <item quantity="one">قبل عام واحد في هذا اليوم</item>
+        <item quantity="two">قبل عامين في هذا اليوم</item>
+        <item quantity="few">قبل %1$d أعوام في هذا اليوم</item>
+        <item quantity="many">قبل %1$d عامًا في هذا اليوم</item>
+        <item quantity="other">قبل %1$d عام في هذا اليوم</item>
+    </plurals>
 </resources>

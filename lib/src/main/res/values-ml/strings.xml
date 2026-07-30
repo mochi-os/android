@@ -309,4 +309,8 @@
     <string name="person_picker_directory">ഡയറക്ടറി</string>
     <string name="person_picker_no_people">ആളുകളില്ല</string>
     <string name="person_picker_project_members">പ്രോജക്റ്റ് അംഗങ്ങൾ</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d വരിക്കാരൻ</item>
+        <item quantity="other">%1$d വരിക്കാർ</item>
+    </plurals>
 </resources>

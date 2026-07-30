@@ -335,4 +335,8 @@
     <string name="crm_settings_server">సర్వర్</string>
     <string name="crm_untitled">శీర్షికలేని</string>
     <string name="crm_property_select">ఎంచుకోండి …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d వైరుధ్య ఫైల్</item>
+        <item quantity="other">%1$d వైరుధ్య ఫైల్‌లు</item>
+    </plurals>
 </resources>

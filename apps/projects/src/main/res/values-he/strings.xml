@@ -365,4 +365,10 @@
     <string name="projects_share_link_title">שיתוף הפרויקט</string>
     <string name="projects_sort_filter_title">מיון וסינון</string>
     <string name="projects_create_prefix_hint">משמש למזהים קריאים כמו %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">קובץ מתנגש אחד</item>
+        <item quantity="two">שני קבצים מתנגשים</item>
+        <item quantity="many">%1$d קבצים מתנגשים</item>
+        <item quantity="other">%1$d קבצים מתנגשים</item>
+    </plurals>
 </resources>

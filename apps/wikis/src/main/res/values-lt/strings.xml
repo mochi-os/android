@@ -313,4 +313,64 @@
     <string name="wikis_revision_show_page">Rodyti puslapį</string>
     <string name="wikis_revision_compare_failed">Nepavyko įkelti ankstesnės versijos palyginimui.</string>
     <string name="wikis_revision_changes_from">Pakeitimai nuo versijos %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d komentaras</item>
+        <item quantity="few">%d komentarai</item>
+        <item quantity="many">%d komentarų</item>
+        <item quantity="other">%d komentarų</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d atsakymas</item>
+        <item quantity="few">+%d daugiau atsakymų</item>
+        <item quantity="many">+%d daugiau atsakymų</item>
+        <item quantity="other">+%d daugiau atsakymų</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Pervadintas %1$d puslapis</item>
+        <item quantity="few">Pervadinti %1$d puslapiai</item>
+        <item quantity="many">Pervadinta %1$d puslapių</item>
+        <item quantity="other">Pervadinta %1$d puslapių</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">atnaujinta %1$d nuoroda</item>
+        <item quantity="few">atnaujintos %1$d nuorodos</item>
+        <item quantity="many">atnaujinta %1$d nuorodų</item>
+        <item quantity="other">atnaujinta %1$d nuorodų</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d puslapis</item>
+        <item quantity="few">%d puslapiai</item>
+        <item quantity="many">%d puslapių</item>
+        <item quantity="other">%d puslapių</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d failas</item>
+        <item quantity="few">%d failai</item>
+        <item quantity="many">%d failų</item>
+        <item quantity="other">%d failų</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d vaizdas</item>
+        <item quantity="few">%d vaizdai</item>
+        <item quantity="many">%d vaizdų</item>
+        <item quantity="other">%d vaizdų</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokumentas</item>
+        <item quantity="few">%d dokumentai</item>
+        <item quantity="many">%d dokumentų</item>
+        <item quantity="other">%d dokumentų</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d puslapis su šia žyma</item>
+        <item quantity="few">%d puslapiai su šia žyma</item>
+        <item quantity="many">%d puslapių su šia žyma</item>
+        <item quantity="other">%d puslapių su šia žyma</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Rasta %1$d rezultatas užklausai „%2$s“</item>
+        <item quantity="few">Rasta %1$d rezultatai užklausai „%2$s“</item>
+        <item quantity="many">Rasta %1$d rezultatų užklausai „%2$s“</item>
+        <item quantity="other">Rasta %1$d rezultatų užklausai „%2$s“</item>
+    </plurals>
 </resources>

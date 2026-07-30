@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Þjónn</string>
     <string name="crm_untitled">Án titils</string>
     <string name="crm_property_select">Veldu …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d skrá í árekstri</item>
+        <item quantity="other">%1$d skrár í árekstri</item>
+    </plurals>
 </resources>

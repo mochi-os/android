@@ -313,4 +313,84 @@
     <string name="wikis_revision_show_page">عرض الصفحة</string>
     <string name="wikis_revision_compare_failed">تعذّر تحميل الإصدار السابق للمقارنة.</string>
     <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="zero">%d تعليقات</item>
+        <item quantity="one">تعليق واحد</item>
+        <item quantity="two">%d تعليقات</item>
+        <item quantity="few">%d تعليقات</item>
+        <item quantity="many">%d تعليقات</item>
+        <item quantity="other">%d تعليقات</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="zero">+%d ردود إضافية</item>
+        <item quantity="one">رد واحد</item>
+        <item quantity="two">+%d ردود إضافية</item>
+        <item quantity="few">+%d ردود إضافية</item>
+        <item quantity="many">+%d ردود إضافية</item>
+        <item quantity="other">+%d ردود إضافية</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="zero">تمت إعادة تسمية %1$d صفحات</item>
+        <item quantity="one">تمت إعادة تسمية صفحة واحدة</item>
+        <item quantity="two">تمت إعادة تسمية %1$d صفحات</item>
+        <item quantity="few">تمت إعادة تسمية %1$d صفحات</item>
+        <item quantity="many">تمت إعادة تسمية %1$d صفحات</item>
+        <item quantity="other">تمت إعادة تسمية %1$d صفحات</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="zero">، تم تحديث %1$d روابط</item>
+        <item quantity="one">، تم تحديث رابط واحد</item>
+        <item quantity="two">، تم تحديث %1$d روابط</item>
+        <item quantity="few">، تم تحديث %1$d روابط</item>
+        <item quantity="many">، تم تحديث %1$d روابط</item>
+        <item quantity="other">، تم تحديث %1$d روابط</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="zero">%d صفحات</item>
+        <item quantity="one">صفحة واحدة</item>
+        <item quantity="two">%d صفحات</item>
+        <item quantity="few">%d صفحات</item>
+        <item quantity="many">%d صفحات</item>
+        <item quantity="other">%d صفحات</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="zero">%d ملفات</item>
+        <item quantity="one">ملف واحد</item>
+        <item quantity="two">%d ملفات</item>
+        <item quantity="few">%d ملفات</item>
+        <item quantity="many">%d ملفات</item>
+        <item quantity="other">%d ملفات</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="zero">%d صور</item>
+        <item quantity="one">صورة واحدة</item>
+        <item quantity="two">%d صور</item>
+        <item quantity="few">%d صور</item>
+        <item quantity="many">%d صور</item>
+        <item quantity="other">%d صور</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="zero">%d مستندات</item>
+        <item quantity="one">مستند واحد</item>
+        <item quantity="two">%d مستندات</item>
+        <item quantity="few">%d مستندات</item>
+        <item quantity="many">%d مستندات</item>
+        <item quantity="other">%d مستندات</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="zero">%d صفحات بهذا الوسم</item>
+        <item quantity="one">صفحة واحدة بهذا الوسم</item>
+        <item quantity="two">%d صفحات بهذا الوسم</item>
+        <item quantity="few">%d صفحات بهذا الوسم</item>
+        <item quantity="many">%d صفحات بهذا الوسم</item>
+        <item quantity="other">%d صفحات بهذا الوسم</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="zero">تم العثور على %1$d نتائج لـ «%2$s»</item>
+        <item quantity="one">تم العثور على نتيجة واحدة لـ «%2$s»</item>
+        <item quantity="two">تم العثور على %1$d نتائج لـ «%2$s»</item>
+        <item quantity="few">تم العثور على %1$d نتائج لـ «%2$s»</item>
+        <item quantity="many">تم العثور على %1$d نتائج لـ «%2$s»</item>
+        <item quantity="other">تم العثور على %1$d نتائج لـ «%2$s»</item>
+    </plurals>
 </resources>

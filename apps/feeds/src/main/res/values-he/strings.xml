@@ -279,4 +279,34 @@
     <string name="feeds_link">קישור</string>
     <string name="feeds_share_link_title">קישור לפיד</string>
     <string name="feeds_scroll_to_top">חזרה למעלה</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">תמונה אחת</item>
+        <item quantity="two">%1$d תמונות</item>
+        <item quantity="many">%1$d תמונות</item>
+        <item quantity="other">%1$d תמונות</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">תגובה אחת</item>
+        <item quantity="two">%1$d תגובות</item>
+        <item quantity="many">%1$d תגובות</item>
+        <item quantity="other">%1$d תגובות</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">קובץ מצורף אחד</item>
+        <item quantity="two">שני קבצים מצורפים</item>
+        <item quantity="many">%1$d קבצים מצורפים</item>
+        <item quantity="other">%1$d קבצים מצורפים</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">הצג תגובה אחת נוספת</item>
+        <item quantity="two">הצג שתי תגובות נוספות</item>
+        <item quantity="many">הצג %1$d תגובות נוספות</item>
+        <item quantity="other">הצג %1$d תגובות נוספות</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">לפני שנה אחת, היום</item>
+        <item quantity="two">לפני שנתיים, היום</item>
+        <item quantity="many">לפני %1$d שנים, היום</item>
+        <item quantity="other">לפני %1$d שנים, היום</item>
+    </plurals>
 </resources>

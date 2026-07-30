@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Pín iṣẹ́ àkanṣe</string>
     <string name="projects_sort_filter_title">Tò kí o sì sẹ́</string>
     <string name="projects_create_prefix_hint">A ń lò fún àwọn ID tí a lè kà bíi %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d fáìlì tó tako</item>
+        <item quantity="other">%1$d fáìlì tó tako</item>
+    </plurals>
 </resources>

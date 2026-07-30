@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Rehber</string>
     <string name="person_picker_no_people">Kişi yok</string>
     <string name="person_picker_project_members">Proje üyeleri</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d abone</item>
+        <item quantity="other">%1$d abone</item>
+    </plurals>
 </resources>

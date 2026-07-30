@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">پاڼه وښیه</string>
     <string name="wikis_revision_compare_failed">د پرتلې لپاره مخکینۍ نسخه نه شوه پورته کیدای.</string>
     <string name="wikis_revision_changes_from">د نسخې له %1$d → %2$d بدلونونه</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d تبصره</item>
+        <item quantity="other">%d تبصرې</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d ځواب</item>
+        <item quantity="other">+%d نور ځوابونه</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d پاڼې نوم بدل شو</item>
+        <item quantity="other">%1$d پاڼو نوم بدل شو</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">، %1$d لینک نوی شو</item>
+        <item quantity="other">، %1$d لینکونه نوي شول</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d پاڼه</item>
+        <item quantity="other">%d پاڼې</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d فایل</item>
+        <item quantity="other">%d فایلونه</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d عکس</item>
+        <item quantity="other">%d عکسونه</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d سند</item>
+        <item quantity="other">%d سندونه</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d پاڼه له دې ټاګ سره</item>
+        <item quantity="other">%d پاڼې له دې ټاګ سره</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">د "%2$s" لپاره %1$d پایله وموندل شو</item>
+        <item quantity="other">د "%2$s" لپاره %1$d پایلې وموندل شو</item>
+    </plurals>
 </resources>

@@ -335,4 +335,9 @@
     <string name="crm_settings_server">Poslužitelj</string>
     <string name="crm_untitled">Bez naslova</string>
     <string name="crm_property_select">Odaberite …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d sukobljena datoteka</item>
+        <item quantity="few">%1$d sukobljene datoteke</item>
+        <item quantity="other">%1$d sukobljenih datoteka</item>
+    </plurals>
 </resources>

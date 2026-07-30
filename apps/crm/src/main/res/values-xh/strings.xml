@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Iseva</string>
     <string name="crm_untitled">Akukho sihloko</string>
     <string name="crm_property_select">Khetha …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">ifayile e-%1$d engqubanayo</item>
+        <item quantity="other">iifayile ezi-%1$d ezingqubanayo</item>
+    </plurals>
 </resources>

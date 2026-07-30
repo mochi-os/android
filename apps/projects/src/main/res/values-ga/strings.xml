@@ -365,4 +365,11 @@
     <string name="projects_share_link_title">Comhroinn an tionscadal</string>
     <string name="projects_sort_filter_title">Sórtáil agus scag</string>
     <string name="projects_create_prefix_hint">Úsáidtear le haghaidh IDanna inléite mar %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d chomhad contrártha</item>
+        <item quantity="two">%1$d chomhad chontrártha</item>
+        <item quantity="few">%1$d chomhad chontrártha</item>
+        <item quantity="many">%1$d gcomhad chontrártha</item>
+        <item quantity="other">%1$d comhad contrártha</item>
+    </plurals>
 </resources>

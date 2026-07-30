@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Yabelana ngeprojekthi</string>
     <string name="projects_sort_filter_title">Hlela uze uhluze</string>
     <string name="projects_create_prefix_hint">Isetyenziselwa ii-ID ezifundekayo ezifana ne-%1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">ifayile e-%1$d engqubanayo</item>
+        <item quantity="other">iifayile ezi-%1$d ezingqubanayo</item>
+    </plurals>
 </resources>

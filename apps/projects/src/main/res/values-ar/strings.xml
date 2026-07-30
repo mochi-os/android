@@ -365,4 +365,12 @@
     <string name="projects_share_link_title">مشاركة المشروع</string>
     <string name="projects_sort_filter_title">فرز وتصفية</string>
     <string name="projects_create_prefix_hint">يُستخدم لمعرّفات مقروءة مثل %1$s-1 و%1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="zero">لا ملفات متعارضة</item>
+        <item quantity="one">ملف متعارض واحد</item>
+        <item quantity="two">ملفان متعارضان</item>
+        <item quantity="few">%1$d ملفات متعارضة</item>
+        <item quantity="many">%1$d ملفًا متعارضًا</item>
+        <item quantity="other">%1$d ملف متعارض</item>
+    </plurals>
 </resources>

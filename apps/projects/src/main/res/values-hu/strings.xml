@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Projekt megosztása</string>
     <string name="projects_sort_filter_title">Rendezés és szűrés</string>
     <string name="projects_create_prefix_hint">Olvasható azonosítókhoz használatos, például %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d ütköző fájl</item>
+        <item quantity="other">%1$d ütköző fájl</item>
+    </plurals>
 </resources>

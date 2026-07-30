@@ -271,4 +271,24 @@
     <string name="feeds_link">Enlace</string>
     <string name="feeds_scroll_to_top">Patxaru kutiña</string>
     <string name="feeds_share_link_title">Feed enlace</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d uñacht\'awi</item>
+        <item quantity="other">%1$d uñacht\'awinaka</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d qhanañchawi</item>
+        <item quantity="other">%1$d qhanañchawinaka</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d chikachawi</item>
+        <item quantity="other">%1$d chikachawinaka</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d juk’a arst’awi uñjaña</item>
+        <item quantity="other">%1$d juk’ampi arst’awinaka uñjaña</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d mara nayra jichhüru</item>
+        <item quantity="other">%1$d maranaka nayra jichhüru</item>
+    </plurals>
 </resources>

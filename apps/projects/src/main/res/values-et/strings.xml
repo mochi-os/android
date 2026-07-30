@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Jaga projekti</string>
     <string name="projects_sort_filter_title">Sortimine ja filter</string>
     <string name="projects_create_prefix_hint">Kasutatakse loetavate ID-de jaoks, nagu %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d vastuoluline fail</item>
+        <item quantity="other">%1$d vastuolulist faili</item>
+    </plurals>
 </resources>

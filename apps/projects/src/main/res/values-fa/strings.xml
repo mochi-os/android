@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">اشتراک‌گذاری پروژه</string>
     <string name="projects_sort_filter_title">مرتب‌سازی و پالایش</string>
     <string name="projects_create_prefix_hint">برای شناسه‌های خوانا مانند %1$s-1 و %1$s-2 استفاده می‌شود</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d فایل متناقض</item>
+        <item quantity="other">%1$d فایل متناقض</item>
+    </plurals>
 </resources>

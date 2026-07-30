@@ -313,4 +313,41 @@
     <string name="wikis_revision_show_page">显示页面</string>
     <string name="wikis_revision_compare_failed">无法加载先前版本进行比较。</string>
     <string name="wikis_revision_changes_from">从版本 %1$d → %2$d 的更改</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d 条评论</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d 条回复</item>
+        <item quantity="other">+%d 条更多回复</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">已重命名 %1$d 个页面</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">,更新 %1$d 个链接</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d 个页面</item>
+        <item quantity="other">%d 个页面</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d 个文件</item>
+        <item quantity="other">%d 个文件</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d 张图片</item>
+        <item quantity="other">%d 张图片</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d 个文档</item>
+        <item quantity="other">%d 个文档</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d 个页面带有此标签</item>
+        <item quantity="other">%d 个页面带有此标签</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">找到 %1$d 个结果,查询「%2$s」</item>
+        <item quantity="other">找到 %1$d 个结果,查询「%2$s」</item>
+    </plurals>
 </resources>

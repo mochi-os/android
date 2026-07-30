@@ -309,4 +309,7 @@
     <string name="person_picker_directory">ディレクトリ</string>
     <string name="person_picker_no_people">人がいません</string>
     <string name="person_picker_project_members">プロジェクトメンバー</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">%1$d 人の購読者</item>
+    </plurals>
 </resources>

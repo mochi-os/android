@@ -281,4 +281,34 @@
     <string name="feeds_link">Ceangal</string>
     <string name="feeds_share_link_title">Ceangal an inbhir</string>
     <string name="feeds_scroll_to_top">Air ais gun mhullach</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d dealbh</item>
+        <item quantity="two">%1$d dhealbh</item>
+        <item quantity="few">%1$d dealbhan</item>
+        <item quantity="other">%1$d dealbhan</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d bheachd</item>
+        <item quantity="two">2 bheachd</item>
+        <item quantity="few">%1$d beachdan</item>
+        <item quantity="other">%1$d beachdan</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d cheanglachan</item>
+        <item quantity="two">%1$d cheanglachan</item>
+        <item quantity="few">%1$d ceanglachain</item>
+        <item quantity="other">%1$d ceanglachan</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Seall %1$d bheachd eile</item>
+        <item quantity="two">Seall %1$d bheachd eile</item>
+        <item quantity="few">Seall %1$d beachdan eile</item>
+        <item quantity="other">Seall %1$d beachd eile</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d bhliadhna air ais an-diugh</item>
+        <item quantity="two">%1$d bhliadhna air ais an-diugh</item>
+        <item quantity="few">%1$d bliadhnaichean air ais an-diugh</item>
+        <item quantity="other">%1$d bliadhna air ais an-diugh</item>
+    </plurals>
 </resources>

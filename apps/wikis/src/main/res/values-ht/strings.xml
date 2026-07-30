@@ -313,4 +313,34 @@
     <string name="wikis_revision_show_page">Montre paj la</string>
     <string name="wikis_revision_compare_failed">Pa t kapab chaje vèsyon anvan an pou konparezon.</string>
     <string name="wikis_revision_changes_from">Chanjman depi vèsyon %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d kòmantè</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="other">+%d plis repons</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">Rebatize %1$d paj</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">mete ajou %1$d lyen</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="other">%d paj</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="other">%d fichye</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="other">%d imaj</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="other">%d dokiman</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="other">%d paj ak tag sa</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="other">Jwenn %1$d rezilta pou "%2$s"</item>
+    </plurals>
 </resources>

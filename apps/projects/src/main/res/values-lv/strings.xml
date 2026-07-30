@@ -365,4 +365,9 @@
     <string name="projects_share_link_title">Kopīgot projektu</string>
     <string name="projects_sort_filter_title">Kārtot un filtrēt</string>
     <string name="projects_create_prefix_hint">Izmanto lasāmiem ID, piemēram, %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="zero">%1$d konfliktējošu failu</item>
+        <item quantity="one">%1$d konfliktējošs fails</item>
+        <item quantity="other">%1$d konfliktējoši faili</item>
+    </plurals>
 </resources>

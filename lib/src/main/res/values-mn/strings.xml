@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Лавлах</string>
     <string name="person_picker_no_people">Хүн алга</string>
     <string name="person_picker_project_members">Төслийн гишүүд</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d захиалагч</item>
+        <item quantity="other">%1$d захиалагч</item>
+    </plurals>
 </resources>

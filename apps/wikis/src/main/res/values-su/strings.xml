@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Témbongkeun kaca</string>
     <string name="wikis_revision_compare_failed">Teu bisa ngamuat versi saméméhna pikeun dibandingkeun.</string>
     <string name="wikis_revision_changes_from">Parobahan ti versi %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d koméntar</item>
+        <item quantity="other">%d koméntar</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d balesan</item>
+        <item quantity="other">+%d balesan deui</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Diganti ngaran %1$d halaman</item>
+        <item quantity="other">Diganti ngaran %1$d halaman</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">diapdet %1$d link</item>
+        <item quantity="other">diapdet %1$d link</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d halaman</item>
+        <item quantity="other">%d halaman</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d file</item>
+        <item quantity="other">%d file</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d gambar</item>
+        <item quantity="other">%d gambar</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokumen</item>
+        <item quantity="other">%d dokumen</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d halaman ku tag ieu</item>
+        <item quantity="other">%d halaman ku tag ieu</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Manggih %1$d hasil pikeun "%2$s"</item>
+        <item quantity="other">Manggih %1$d hasil pikeun "%2$s"</item>
+    </plurals>
 </resources>

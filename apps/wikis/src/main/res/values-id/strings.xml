@@ -313,4 +313,41 @@
     <string name="wikis_revision_show_page">Tampilkan halaman</string>
     <string name="wikis_revision_compare_failed">Tidak dapat memuat versi sebelumnya untuk perbandingan.</string>
     <string name="wikis_revision_changes_from">Perubahan dari versi %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d komentar</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d balasan</item>
+        <item quantity="other">+%d balasan lainnya</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">Mengganti nama %1$d halaman</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">memperbarui %1$d tautan</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d halaman</item>
+        <item quantity="other">%d halaman</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d berkas</item>
+        <item quantity="other">%d berkas</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d gambar</item>
+        <item quantity="other">%d gambar</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokumen</item>
+        <item quantity="other">%d dokumen</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d halaman dengan tag ini</item>
+        <item quantity="other">%d halaman dengan tag ini</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Ditemukan %1$d hasil untuk «%2$s»</item>
+        <item quantity="other">Ditemukan %1$d hasil untuk «%2$s»</item>
+    </plurals>
 </resources>

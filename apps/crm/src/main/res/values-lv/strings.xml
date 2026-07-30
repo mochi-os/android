@@ -335,4 +335,9 @@
     <string name="crm_settings_server">Serveris</string>
     <string name="crm_untitled">Bez nosaukuma</string>
     <string name="crm_property_select">Izvēlieties …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="zero">%1$d konfliktējošu failu</item>
+        <item quantity="one">%1$d konfliktējošs fails</item>
+        <item quantity="other">%1$d konfliktējoši faili</item>
+    </plurals>
 </resources>
