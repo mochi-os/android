@@ -127,7 +127,7 @@ fun CreateObjectDialog(
 
     // Per-field values entered in the dialog, keyed by field id. The title
     // field's value is sent as the object's title on create; the rest are
-    // applied via setValues, mirroring web's create-object flow.
+    // applied one per request afterwards, mirroring web's create-object flow.
     val fieldValues = remember { mutableStateMapOf<String, String>() }
     val classFields = fields[selectedClassId].orEmpty().sortedBy { it.rank }
     val classOptions = options[selectedClassId].orEmpty()
@@ -258,7 +258,7 @@ fun CreateObjectDialog(
 
                 // Dynamic fields for the selected class, including the title
                 // field. Each editor writes into fieldValues; multi-value
-                // fields are stored comma-joined to match setValues.
+                // fields are stored comma-joined, as the value endpoint expects.
                 classFields.forEach { field ->
                     FieldEditor(
                         field = field,

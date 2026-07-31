@@ -28,7 +28,6 @@ import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
-import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Multipart
@@ -54,7 +53,6 @@ data class ObjectListResponse(
     /** Ids of the objects the viewer watches; the list endpoint sends them alongside. */
     val watched: List<String> = emptyList()
 )
-data class ObjectResponse(val `object`: CrmObject = CrmObject())
 data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class CommentResponse(val comment: Comment = Comment(id = ""))
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
@@ -77,6 +75,24 @@ data class UserSearchResponse(@SerializedName("results") val results: List<Perso
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
 data class PreferenceResponse(val preference: String = "")
+
+// JSON body of `-/objects/create`. `class` is a Kotlin keyword, so the field is
+// named classId and mapped back on the wire. `parent` is omitted from the
+// payload when null.
+data class CreateObjectRequest(
+
+    @SerializedName("class")
+    val classId: String,
+
+    val title: String,
+
+    val parent: String? = null
+)
+
+// Body for setting a single field value. The values endpoint expects a JSON
+// object ({"value": "…"}); form encoding fails to update some fields (e.g. a
+// date or a currency amount).
+data class SetValueRequest(val value: String)
 
 // JSON body of `-/subscribe`. `crm` must be the full entity id — the server
 // rejects a fingerprint here. `server` is the home-server hint from the
@@ -191,20 +207,17 @@ interface CrmsApi {
     @GET("{crmId}/-/objects")
     suspend fun getObjects(@Path("crmId") crmId: String): Response<ApiResponse<ObjectListResponse>>
 
-    @FormUrlEncoded
     @POST("{crmId}/-/objects/create")
     suspend fun createObject(
         @Path("crmId") crmId: String,
-        @Field("class") classId: String,
-        @Field("parent") parent: String?,
-        @Field("title") title: String
-    ): Response<ApiResponse<ObjectResponse>>
+        @Body body: CreateObjectRequest
+    ): Response<ApiResponse<CrmObject>>
 
     @GET("{crmId}/-/objects/{objectId}")
     suspend fun getObject(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String
-    ): Response<ApiResponse<ObjectResponse>>
+    ): Response<ApiResponse<CrmObject>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/objects/{objectId}/update")
@@ -236,21 +249,12 @@ interface CrmsApi {
         @Field("promote") promote: String? = null
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
-    @POST("{crmId}/-/objects/{objectId}/values")
-    suspend fun setValues(
-        @Path("crmId") crmId: String,
-        @Path("objectId") objectId: String,
-        @FieldMap values: Map<String, String>
-    ): Response<ApiResponse<SuccessResponse>>
-
-    @FormUrlEncoded
     @POST("{crmId}/-/objects/{objectId}/values/{fieldId}")
     suspend fun setValue(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
         @Path("fieldId") fieldId: String,
-        @Field("value") value: String
+        @Body body: SetValueRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Links ----

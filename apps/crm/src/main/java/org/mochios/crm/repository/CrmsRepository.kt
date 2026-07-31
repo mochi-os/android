@@ -14,7 +14,9 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.crm.api.CreateObjectRequest
 import org.mochios.crm.api.CrmsApi
+import org.mochios.crm.api.SetValueRequest
 import org.mochios.crm.api.SubscribeRequest
 import org.mochios.crm.api.UnsubscribeRequest
 import org.mochios.crm.model.Activity
@@ -162,10 +164,13 @@ class CrmsRepository @Inject constructor(
     fun getWatched(crmId: String): List<String> = watchedCache[crmId] ?: emptyList()
 
     suspend fun createObject(crmId: String, classId: String, parent: String? = null, title: String): CrmObject =
-        api.createObject(crmId, classId, parent, title).unwrap().`object`
+        api.createObject(
+            crmId,
+            CreateObjectRequest(classId = classId, title = title, parent = parent)
+        ).unwrap()
 
     suspend fun getObject(crmId: String, objectId: String): CrmObject =
-        api.getObject(crmId, objectId).unwrap().`object`
+        api.getObject(crmId, objectId).unwrap()
 
     suspend fun updateObject(crmId: String, objectId: String, parent: String? = null) {
         api.updateObject(crmId, objectId, parent).unwrap()
@@ -193,12 +198,8 @@ class CrmsRepository @Inject constructor(
         ).unwrap()
     }
 
-    suspend fun setValues(crmId: String, objectId: String, values: Map<String, String>) {
-        api.setValues(crmId, objectId, values).unwrap()
-    }
-
     suspend fun setValue(crmId: String, objectId: String, fieldId: String, value: String) {
-        api.setValue(crmId, objectId, fieldId, value).unwrap()
+        api.setValue(crmId, objectId, fieldId, SetValueRequest(value)).unwrap()
     }
 
     // ---- Links ----

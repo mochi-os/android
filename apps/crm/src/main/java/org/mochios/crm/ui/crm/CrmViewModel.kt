@@ -404,8 +404,12 @@ class CrmViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isCreatingObject = true)
             try {
                 val obj = repository.createObject(crmId, classId, parent, title)
-                if (initialValues.isNotEmpty()) {
-                    repository.setValues(crmId, obj.id, initialValues)
+                // One field at a time through the per-field endpoint: the bulk
+                // values endpoint is form-encoded and silently drops some field
+                // types (dates, currency amounts), so stage/value/closedate and
+                // friends only land when each is sent as its own JSON body.
+                for ((fieldId, value) in initialValues) {
+                    repository.setValue(crmId, obj.id, fieldId, value)
                 }
                 // Upload any attachments picked in the create dialog, mirroring
                 // web's create-then-upload flow. One failure shouldn't lose the
