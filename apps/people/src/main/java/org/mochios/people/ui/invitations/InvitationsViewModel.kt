@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.attemptAll
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
@@ -158,12 +159,16 @@ class InvitationsViewModel @Inject constructor(
     // box — applying the existing per-invite call to each, then reports whether
     // every one succeeded. Sequential to avoid racing concurrent friend-list
     // mutations on the server; invite lists are short.
+    //
+    // attemptAll, not `list.all { runCatching { … }.isSuccess }`: `all` stops
+    // at the first false, so one invite the server keeps rejecting blocked
+    // every one after it, on every retry.
     fun acceptAll() {
         val list = _uiState.value.received
         if (list.isEmpty() || _uiState.value.batchInProgress) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(batchInProgress = true)
-            val allOk = list.all { runCatching { repository.acceptInvite(it.id) }.isSuccess }
+            val allOk = attemptAll(list) { repository.acceptInvite(it.id) }
             _events.trySend(InvitationsEvent.BatchAccepted(allOk))
             _uiState.value = _uiState.value.copy(batchInProgress = false)
             refresh()
@@ -175,7 +180,7 @@ class InvitationsViewModel @Inject constructor(
         if (list.isEmpty() || _uiState.value.batchInProgress) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(batchInProgress = true)
-            val allOk = list.all { runCatching { repository.ignoreInvite(it.id) }.isSuccess }
+            val allOk = attemptAll(list) { repository.ignoreInvite(it.id) }
             _events.trySend(InvitationsEvent.BatchDeclined(allOk))
             _uiState.value = _uiState.value.copy(batchInProgress = false)
             refresh()
@@ -187,7 +192,7 @@ class InvitationsViewModel @Inject constructor(
         if (list.isEmpty() || _uiState.value.batchInProgress) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(batchInProgress = true)
-            val allOk = list.all { runCatching { repository.deleteFriend(it.id) }.isSuccess }
+            val allOk = attemptAll(list) { repository.deleteFriend(it.id) }
             _events.trySend(InvitationsEvent.BatchCancelled(allOk))
             _uiState.value = _uiState.value.copy(batchInProgress = false)
             refresh()

@@ -42,6 +42,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -128,6 +130,18 @@ fun WordsGameDetailScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val game = state.game
+    val snackbar = remember { SnackbarHostState() }
+
+    // Every mutation writes its failure here — a rejected move, pass, exchange,
+    // resign, delete or rematch. Nothing rendered it, so all six presented as
+    // "nothing happened".
+    LaunchedEffect(state.transientToast) {
+        val toast = state.transientToast
+        if (toast != null) {
+            snackbar.showSnackbar(toast)
+            viewModel.consumeToast()
+        }
+    }
 
     // ─── Lifecycle: refresh on resume ──────────────────────────────────
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -178,6 +192,7 @@ fun WordsGameDetailScreen(
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = {

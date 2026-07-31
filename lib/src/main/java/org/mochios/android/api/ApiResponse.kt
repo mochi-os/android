@@ -61,6 +61,17 @@ fun <T> Response<T>.unwrapRaw(): T {
     throw errorForResponse(code(), errorBody()?.string())
 }
 
+/**
+ * [unwrapRaw] for an endpoint that answers with no content: map the server's
+ * error the same way on failure, and ignore the body on success.
+ *
+ * A `Response<Unit>` whose body is empty deserialises to null, so [unwrapRaw]
+ * would reject a perfectly good 200.
+ */
+fun Response<*>.unwrapEmpty() {
+    if (!isSuccessful) throw errorForResponse(code(), errorBody()?.string())
+}
+
 fun HttpException.extractApiError(): ApiError {
     val body = response()?.errorBody()?.string()?.trimStart()
     if (body.isNullOrEmpty() || !body.startsWith("{")) return ApiError()

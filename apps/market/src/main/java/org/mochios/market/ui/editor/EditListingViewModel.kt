@@ -5,7 +5,7 @@
 
 package org.mochios.market.ui.editor
 
-import android.content.ContentResolver
+import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -40,7 +40,6 @@ import org.mochios.market.model.ShippingOption
 import org.mochios.market.model.ShippingOptionInput
 import org.mochios.market.repository.MarketRepository
 import java.io.File
-import java.io.FileOutputStream
 import javax.inject.Inject
 
 /**
@@ -462,8 +461,7 @@ class EditListingViewModel @Inject constructor(
 
     fun uploadPhoto(
         uris: List<Uri>,
-        contentResolver: ContentResolver,
-        cacheDir: File,
+        context: Context,
     ) {
         if (uris.isEmpty()) return
         // Make sure we have a listing row to attach photos to. The first save
@@ -484,11 +482,10 @@ class EditListingViewModel @Inject constructor(
             val temps = mutableListOf<File>()
             try {
                 for (uri in uris) {
-                    val name = Uploads.fileName(contentResolver, uri, "photo")
-                    val temp = File(cacheDir, "market_photo_${System.nanoTime()}_$name")
-                    contentResolver.openInputStream(uri)?.use { input ->
-                        FileOutputStream(temp).use { out -> input.copyTo(out) }
-                    } ?: throw IllegalStateException("Cannot open $uri")
+                    // The multipart filename is this cached copy's name and the
+                    // server stores it verbatim, so keep the file's real name.
+                    val temp = Uploads.cacheFile(context, uri, "photo")
+                        ?: throw IllegalStateException("Cannot open $uri")
                     temps.add(temp)
                     val photo = repository.uploadPhoto(listingId, temp)
                     _state.value = _state.value.copy(photos = _state.value.photos + photo)
@@ -532,8 +529,7 @@ class EditListingViewModel @Inject constructor(
 
     fun uploadAsset(
         uris: List<Uri>,
-        contentResolver: ContentResolver,
-        cacheDir: File,
+        context: Context,
     ) {
         if (uris.isEmpty()) return
         // Same first-save handling as uploadPhoto: no listing row without a title.
@@ -552,11 +548,10 @@ class EditListingViewModel @Inject constructor(
             val temps = mutableListOf<File>()
             try {
                 for (uri in uris) {
-                    val name = Uploads.fileName(contentResolver, uri, "file")
-                    val temp = File(cacheDir, "market_asset_${System.nanoTime()}_$name")
-                    contentResolver.openInputStream(uri)?.use { input ->
-                        FileOutputStream(temp).use { out -> input.copyTo(out) }
-                    } ?: throw IllegalStateException("Cannot open $uri")
+                    // The multipart filename is this cached copy's name and the
+                    // server stores it verbatim, so keep the file's real name.
+                    val temp = Uploads.cacheFile(context, uri, "file")
+                        ?: throw IllegalStateException("Cannot open $uri")
                     temps.add(temp)
                     val asset = repository.uploadAsset(listingId, temp)
                     _state.value = _state.value.copy(assets = _state.value.assets + asset)

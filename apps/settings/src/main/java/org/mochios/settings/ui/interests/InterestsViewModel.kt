@@ -16,11 +16,12 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.api.Interest
 import org.mochios.settings.api.InterestSearchResult
 import org.mochios.settings.api.InterestsApi
-import retrofit2.Response
 import javax.inject.Inject
 
 data class InterestsUiState(
@@ -51,7 +52,7 @@ class InterestsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val data = api.getInterests().bodyOrThrow()
+                val data = api.getInterests().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     interests = data.interests,
@@ -70,7 +71,7 @@ class InterestsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(interests = next)
         viewModelScope.launch {
             try {
-                api.setInterest(qid, weight).bodyOrThrowUnit()
+                api.setInterest(qid, weight).unwrapEmpty()
             } catch (e: Exception) {
                 // Revert on failure
                 _uiState.value = _uiState.value.copy(
@@ -84,7 +85,7 @@ class InterestsViewModel @Inject constructor(
     fun remove(qid: String) {
         viewModelScope.launch {
             try {
-                api.removeInterest(qid).bodyOrThrowUnit()
+                api.removeInterest(qid).unwrapEmpty()
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -96,7 +97,7 @@ class InterestsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 // Web defaults to weight 50 on add via the search picker
-                api.setInterest(qid = result.qid, weight = 50).bodyOrThrowUnit()
+                api.setInterest(qid = result.qid, weight = 50).unwrapEmpty()
                 _uiState.value = _uiState.value.copy(
                     searchQuery = "",
                     searchResults = emptyList(),
@@ -112,7 +113,7 @@ class InterestsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRegeneratingSummary = true, error = null)
             try {
-                val resp = api.regenerateSummary().bodyOrThrow()
+                val resp = api.regenerateSummary().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isRegeneratingSummary = false,
                     summary = resp.summary,
@@ -138,7 +139,7 @@ class InterestsViewModel @Inject constructor(
             delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isSearching = true)
             try {
-                val resp = api.searchInterests(trimmed).bodyOrThrow()
+                val resp = api.searchInterests(trimmed).unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isSearching = false,
                     searchResults = resp.results,
@@ -155,14 +156,5 @@ class InterestsViewModel @Inject constructor(
 
     fun clearError() {
         _uiState.value = _uiState.value.copy(error = null)
-    }
-
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
-    }
-
-    private fun Response<Unit>.bodyOrThrowUnit() {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
     }
 }

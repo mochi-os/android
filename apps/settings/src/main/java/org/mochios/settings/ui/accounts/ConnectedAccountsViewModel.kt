@@ -17,10 +17,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.ConnectedAccount
 import org.mochios.settings.api.ConnectedAccountsApi
 import org.mochios.settings.api.Provider
-import retrofit2.Response
 import javax.inject.Inject
 
 data class ConnectedAccountsUiState(
@@ -47,8 +48,8 @@ class ConnectedAccountsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val provs = api.providers().bodyOrThrow()
-                val accs = api.list().bodyOrThrow()
+                val provs = api.providers().unwrapRaw()
+                val accs = api.list().unwrapRaw()
                 _uiState.value = ConnectedAccountsUiState(
                     isLoading = false,
                     providers = provs,
@@ -64,34 +65,34 @@ class ConnectedAccountsViewModel @Inject constructor(
         val payload = HashMap<String, String>(fields.size + 1)
         payload["type"] = type
         for ((k, v) in fields) if (v.isNotBlank()) payload[k] = v
-        api.add(payload).bodyOrThrow()
+        api.add(payload).unwrapRaw()
     }
 
-    fun remove(id: String) = mutate { api.remove(id).bodyOrThrow() }
+    fun remove(id: String) = mutate { api.remove(id).unwrapEmpty() }
 
     fun update(id: String, fields: Map<String, String>) = mutate {
         val payload = HashMap<String, String>(fields.size + 1)
         payload["id"] = id
         payload.putAll(fields)
-        api.update(payload).bodyOrThrow()
+        api.update(payload).unwrapEmpty()
     }
 
     fun toggleNotifyDefault(id: String, enabled: Boolean) = mutate {
-        api.update(mapOf("id" to id, "enabled" to if (enabled) "1" else "0")).bodyOrThrow()
+        api.update(mapOf("id" to id, "enabled" to if (enabled) "1" else "0")).unwrapEmpty()
     }
 
     fun setAiDefault(id: String) = mutate {
-        api.setDefault(account = id, type = "ai").bodyOrThrow()
+        api.setDefault(account = id, type = "ai").unwrapEmpty()
     }
 
     fun clearAiDefault(id: String) = mutate {
-        api.setDefault(account = id, type = "").bodyOrThrow()
+        api.setDefault(account = id, type = "").unwrapEmpty()
     }
 
     fun verify(id: String, code: String) {
         viewModelScope.launch {
             try {
-                val resp = api.verify(id = id, code = code).bodyOrThrow()
+                val resp = api.verify(id = id, code = code).unwrapRaw()
                 val ok = resp["ok"] == true || resp["verified"] == true
                 _toasts.emit(if (ok) "Account verified" else "Invalid verification code")
                 refresh()
@@ -104,7 +105,7 @@ class ConnectedAccountsViewModel @Inject constructor(
     fun resend(id: String) {
         viewModelScope.launch {
             try {
-                api.verify(id = id, code = null).bodyOrThrow()
+                api.verify(id = id, code = null).unwrapRaw()
                 _toasts.emit("Verification code sent")
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -115,7 +116,7 @@ class ConnectedAccountsViewModel @Inject constructor(
     fun test(id: String) {
         viewModelScope.launch {
             try {
-                val result = api.test(id).bodyOrThrow()
+                val result = api.test(id).unwrapRaw()
                 _toasts.emit(result.message.ifBlank { if (result.success) "Test sent" else "Test failed" })
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -134,9 +135,8 @@ class ConnectedAccountsViewModel @Inject constructor(
         }
     }
 
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        @Suppress("UNCHECKED_CAST")
-        return body() ?: (Unit as T)
+    /** Dismiss a surfaced error once the screen has shown it. */
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 }

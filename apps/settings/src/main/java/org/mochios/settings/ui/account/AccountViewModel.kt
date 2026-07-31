@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.SessionManager
 import org.mochios.settings.api.AccountApi
 import org.mochios.settings.ui.login.SettingsStepUpClient
@@ -101,7 +102,7 @@ class AccountViewModel @Inject constructor(
      *  soft-deleted with a grace period and every session is revoked. */
     fun closeAccount() {
         stepUp.request { token ->
-            api.closeAccount(token).bodyOrThrow()
+            api.closeAccount(token).unwrapRaw()
             _closed.emit(Unit)
         }
     }
@@ -113,7 +114,7 @@ class AccountViewModel @Inject constructor(
         val pass = passphrase.trim()
         if (pass.isEmpty()) return
         stepUp.request { stepUpToken ->
-            val filename = api.exportData(stepUpToken, pass).bodyOrThrow().filename
+            val filename = api.exportData(stepUpToken, pass).unwrapRaw().filename
             val url = serverUrl +
                 "/settings/-/user/account/export/download?file=" +
                 URLEncoder.encode(filename, "UTF-8")
@@ -125,7 +126,7 @@ class AccountViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val body = api.getIdentity().bodyOrThrow()
+                val body = api.getIdentity().unwrapRaw()
                 val identity = Identity(
                     entity = body.entity,
                     fingerprint = body.fingerprint,
@@ -155,7 +156,7 @@ class AccountViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true, error = null)
             try {
-                api.updateIdentity(name = name).bodyOrThrow()
+                api.updateIdentity(name = name).unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isSaving = false,
                     identity = _uiState.value.identity.copy(name = name),
@@ -172,7 +173,7 @@ class AccountViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true, error = null)
             try {
-                api.updateIdentity(privacy = privacy).bodyOrThrow()
+                api.updateIdentity(privacy = privacy).unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isSaving = false,
                     identity = _uiState.value.identity.copy(privacy = privacy),
@@ -181,10 +182,5 @@ class AccountViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }
         }
-    }
-
-    private fun <T> retrofit2.Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
     }
 }

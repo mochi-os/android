@@ -14,6 +14,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.NetworkInfo
 import org.mochios.settings.api.PeerEntry
 import org.mochios.settings.api.ServerCounts
@@ -51,7 +53,7 @@ class SystemStatusViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val settingsData = api.listSettings().bodyOrThrow()
+                val settingsData = api.listSettings().unwrapRaw()
                 val version = settingsData.settings.firstOrNull { it.name == "server_version" }?.value.orEmpty()
                 val started = settingsData.settings.firstOrNull { it.name == "server_started" }?.value
                     ?.toLongOrNull() ?: 0L
@@ -90,7 +92,7 @@ class SystemStatusViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isInstalling = true, installError = null)
             try {
-                api.installUpdate().bodyOrThrow()
+                api.installUpdate().unwrapEmpty()
                 // Re-fetch update info; pending field will surface "Installing X…".
                 val update = try {
                     api.getUpdate().bodyOrNull()
@@ -102,11 +104,6 @@ class SystemStatusViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isInstalling = false, installError = e.toMochiError())
             }
         }
-    }
-
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
     }
 
     private fun <T> Response<T>.bodyOrNull(): T? = if (isSuccessful) body() else null

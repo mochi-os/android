@@ -297,6 +297,7 @@ class ChessGameViewModel @Inject constructor(
     // ---- Game-flow mutations ----
 
     fun resign() {
+        if (_uiState.value.isResigning) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isResigning = true)
             try {
@@ -311,6 +312,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun offerDraw() {
+        if (_uiState.value.isDrawOffering) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDrawOffering = true)
             try {
@@ -325,6 +327,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun acceptDraw() {
+        if (_uiState.value.isDrawAccepting) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDrawAccepting = true)
             try {
@@ -339,6 +342,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun declineDraw() {
+        if (_uiState.value.isDrawDeclining) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDrawDeclining = true)
             try {
@@ -357,6 +361,10 @@ class ChessGameViewModel @Inject constructor(
         val myIdentity = _uiState.value.identity
         val opponent = if (game.identity == myIdentity) game.opponent else game.identity
         if (opponent.isBlank()) return
+        // Without this a second tap creates a second game: the menu closes on
+        // click, but reopening it while the request is still in flight offers
+        // Rematch again. submitMove has carried the same guard all along.
+        if (_uiState.value.isRematching) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRematching = true)
             try {
@@ -371,6 +379,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun deleteGame() {
+        if (_uiState.value.isDeleting) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {

@@ -726,6 +726,13 @@ class MainActivity : ComponentActivity() {
                 if (id == "invitations") {
                     navController.navigate(PeopleApp.INVITATIONS) { launchSingleTop = true }
                 }
+                // "people?action=add" carries no id, so without this the link
+                // landed on the people home and stopped. Chess emits it to
+                // send a player with no opponents to the add-friend dialog.
+                val action = parseQueryParam(query, "action")
+                if (id == null && !action.isNullOrBlank()) {
+                    navController.navigate(PeopleApp.friends(action)) { launchSingleTop = true }
+                }
             }
             "chess" -> {
                 navController.navigate(ChessApp.HOME) { launchSingleTop = true }

@@ -442,6 +442,10 @@ private fun BoardPane(
                 GameActionsMenu(
                     game = game,
                     myIdentity = myIdentity,
+                    drawOffering = state.isDrawOffering,
+                    resigning = state.isResigning,
+                    rematching = state.isRematching,
+                    deleting = state.isDeleting,
                     onOfferDraw = onOfferDraw,
                     onResign = onOpenResign,
                     onRematch = onRematch,
@@ -496,6 +500,10 @@ private fun BoardPane(
 private fun GameActionsMenu(
     game: Game,
     myIdentity: String,
+    drawOffering: Boolean,
+    resigning: Boolean,
+    rematching: Boolean,
+    deleting: Boolean,
     onOfferDraw: () -> Unit,
     onResign: () -> Unit,
     onRematch: () -> Unit,
@@ -525,6 +533,7 @@ private fun GameActionsMenu(
                             )
                         },
                         text = { Text(stringResource(R.string.chess_offer_draw)) },
+                    enabled = !drawOffering,
                         onClick = {
                             expanded = false
                             onOfferDraw()
@@ -540,6 +549,7 @@ private fun GameActionsMenu(
                         )
                     },
                     text = { Text(stringResource(R.string.chess_resign)) },
+                    enabled = !resigning,
                     onClick = {
                         expanded = false
                         onResign()
@@ -555,6 +565,7 @@ private fun GameActionsMenu(
                         )
                     },
                     text = { Text(stringResource(R.string.chess_rematch)) },
+                    enabled = !rematching,
                     onClick = {
                         expanded = false
                         onRematch()
@@ -569,6 +580,7 @@ private fun GameActionsMenu(
                         )
                     },
                     text = { Text(stringResource(R.string.chess_delete_game)) },
+                    enabled = !deleting,
                     onClick = {
                         expanded = false
                         onDelete()

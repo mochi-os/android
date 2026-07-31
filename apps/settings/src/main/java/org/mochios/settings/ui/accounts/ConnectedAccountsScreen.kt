@@ -37,11 +37,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -78,7 +81,31 @@ fun ConnectedAccountsScreen(
     var settingsOf by remember { mutableStateOf<ConnectedAccount?>(null) }
     var deleting by remember { mutableStateOf<ConnectedAccount?>(null) }
 
+    val snackbar = remember { SnackbarHostState() }
+
+    // An error while content is on screen is shown over it rather than
+
+    // replacing it: the full-screen arm below only fires when there is
+
+    // nothing to show, and nothing on it can reach a refresh to clear it.
+
+    LaunchedEffect(state.error) {
+
+        val failure = state.error
+
+        if (failure != null && (state.accounts.isNotEmpty() || state.providers.isNotEmpty())) {
+
+            snackbar.showSnackbar(failure.userMessage())
+
+            viewModel.clearError()
+
+        }
+
+    }
+
     Scaffold(
+
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.accounts_title)) },
@@ -93,7 +120,7 @@ fun ConnectedAccountsScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
-                state.error != null -> Text(
+                state.error != null && state.accounts.isEmpty() && state.providers.isEmpty() -> Text(
                     text = state.error!!.userMessage(),
                     color = MaterialTheme.colorScheme.error,
                     modifier = Modifier.align(Alignment.Center).padding(16.dp),

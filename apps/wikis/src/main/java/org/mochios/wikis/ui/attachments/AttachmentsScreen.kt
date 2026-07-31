@@ -164,8 +164,7 @@ fun AttachmentsScreen(
         if (uris.isNotEmpty()) {
             viewModel.uploadAttachments(
                 uris = uris,
-                contentResolver = context.contentResolver,
-                cacheDir = context.cacheDir,
+                context = context,
                 uploadFailed = uploadFailedMsg,
                 uploadSuccess = uploadingMsg,
             )
@@ -194,8 +193,7 @@ fun AttachmentsScreen(
                 if (uris.isEmpty()) return false
                 viewModel.uploadAttachments(
                     uris = uris,
-                    contentResolver = context.contentResolver,
-                    cacheDir = context.cacheDir,
+                    context = context,
                     uploadFailed = uploadFailedMsg,
                     uploadSuccess = uploadingMsg,
                 )

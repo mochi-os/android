@@ -41,8 +41,19 @@ data class SaleDetailUiState(
     val reviewError: String? = null,
 )
 
+/** The seller action a dialog on this screen submits. */
+enum class SaleDialog { SHIP, REFUND, DISPUTE }
+
 sealed class SaleDetailEvent {
     data class Toast(val message: String) : SaleDetailEvent()
+
+    /**
+     * A dialog's submit succeeded, so the screen closes it. Dialogs must not
+     * close on submit: each mutation writes its failure into state for the
+     * dialog to show, and a dialog closed on submit renders nothing, so a
+     * failure would reach the seller as silence.
+     */
+    data class Completed(val dialog: SaleDialog) : SaleDetailEvent()
 }
 
 @HiltViewModel
@@ -94,7 +105,7 @@ class SaleDetailViewModel @Inject constructor(
         }
     }
 
-    fun shipOrder(carrier: String, tracking: String, url: String, fallback: String) {
+    fun shipOrder(carrier: String, tracking: String, url: String, success: String, fallback: String) {
         viewModelScope.launch {
             _state.value = _state.value.copy(shipSubmitting = true, shipError = null)
             try {
@@ -109,7 +120,8 @@ class SaleDetailViewModel @Inject constructor(
                     order = current.copy(order = updated),
                     shipSubmitting = false,
                 )
-                _events.emit(SaleDetailEvent.Toast(fallback))
+                _events.emit(SaleDetailEvent.Toast(success))
+                _events.emit(SaleDetailEvent.Completed(SaleDialog.SHIP))
             } catch (e: Exception) {
                 val err = e.toMochiError()
                 _state.value = _state.value.copy(
@@ -141,6 +153,7 @@ class SaleDetailViewModel @Inject constructor(
                 // Description text is appended onto `reason` because the
                 // comptroller surface accepts a single combined reason field.
                 // No need to thread `description` separately into the repo.
+                _events.emit(SaleDetailEvent.Completed(SaleDialog.REFUND))
             } catch (e: Exception) {
                 val err = e.toMochiError()
                 _state.value = _state.value.copy(
@@ -162,6 +175,7 @@ class SaleDetailViewModel @Inject constructor(
                     order = current.copy(dispute = updated),
                     disputeSubmitting = false,
                 )
+                _events.emit(SaleDetailEvent.Completed(SaleDialog.DISPUTE))
             } catch (e: Exception) {
                 val err = e.toMochiError()
                 _state.value = _state.value.copy(

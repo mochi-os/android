@@ -14,9 +14,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.SystemSetting
 import org.mochios.settings.api.SystemSettingsApi
-import retrofit2.Response
 import javax.inject.Inject
 
 data class SystemSettingsUiState(
@@ -40,7 +40,7 @@ class SystemSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val data = api.list().bodyOrThrow()
+                val data = api.list().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     settings = data.settings,
@@ -70,10 +70,5 @@ class SystemSettingsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(savingName = null, error = e.toMochiError())
             }
         }
-    }
-
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
     }
 }

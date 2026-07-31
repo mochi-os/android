@@ -15,8 +15,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.DocumentApi
-import retrofit2.Response
 import javax.inject.Inject
 
 /**
@@ -51,16 +51,11 @@ class DocumentViewModel @Inject constructor(
             try {
                 // `body` is the markdown source; HtmlContent renders it. (The
                 // response also carries server-rendered `html` if ever needed.)
-                val data = api.getDocument(kind).bodyOrThrow()
+                val data = api.getDocument(kind).unwrapRaw()
                 _uiState.value = _uiState.value.copy(isLoading = false, body = data.body)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
-    }
-
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
     }
 }

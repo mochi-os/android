@@ -5,7 +5,7 @@
 
 package org.mochios.wikis.ui.editor
 
-import android.content.ContentResolver
+import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -25,7 +25,6 @@ import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.PageFetchResponse
 import org.mochios.wikis.repository.WikisRepository
 import java.io.File
-import java.io.FileOutputStream
 import javax.inject.Inject
 
 /**
@@ -267,15 +266,15 @@ class PageEditorViewModel @Inject constructor(
 
     /**
      * Upload one or more files picked by the system file picker, then
-     * refresh the attachments list. URIs are materialised into temp files
-     * via the supplied [ContentResolver]; we deliberately copy the bytes
-     * rather than streaming straight to the multipart body so the repository
-     * stays file-based (matches the existing comment-attachments flow).
+     * refresh the attachments list. URIs are materialised into temp files;
+     * we deliberately copy the bytes rather than streaming straight to the
+     * multipart body so the repository stays file-based (matches the existing
+     * comment-attachments flow). The copy keeps the file's real name, which
+     * is what the server records and what the editor writes into the page.
      */
     fun uploadAttachments(
         uris: List<Uri>,
-        contentResolver: ContentResolver,
-        cacheDir: File,
+        context: Context,
         uploadFailed: String,
     ) {
         if (uris.isEmpty()) return
@@ -284,16 +283,9 @@ class PageEditorViewModel @Inject constructor(
         if (_uiState.value.slug.isEmpty() && initialSlug == null) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isUploading = true)
-            val tempFiles = mutableListOf<File>()
+            var tempFiles = emptyList<File>()
             try {
-                for (uri in uris) {
-                    val name = Uploads.fileName(contentResolver, uri, "file")
-                    val temp = File(cacheDir, "wiki_upload_${System.nanoTime()}_$name")
-                    contentResolver.openInputStream(uri)?.use { input ->
-                        FileOutputStream(temp).use { out -> input.copyTo(out) }
-                    } ?: throw IllegalStateException("Cannot open $uri")
-                    tempFiles.add(temp)
-                }
+                tempFiles = Uploads.cacheFiles(context, uris)
                 val uploaded = repository.uploadAttachments(wikiId, tempFiles)
                 _uiState.value = _uiState.value.copy(
                     isUploading = false,

@@ -43,6 +43,8 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -91,6 +93,8 @@ fun GroupDetailScreen(
     val state by viewModel.state.collectAsState()
     var overflowOpen by rememberSaveable { mutableStateOf(false) }
 
+    val snackbar = remember { SnackbarHostState() }
+
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
@@ -99,7 +103,18 @@ fun GroupDetailScreen(
         }
     }
 
+    // With a group loaded, the arms below don't render the error, so every
+    // failed rename, delete or member change showed nothing at all.
+    LaunchedEffect(state.error) {
+        val failure = state.error
+        if (failure != null && state.group != null) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = {

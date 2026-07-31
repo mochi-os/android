@@ -5,7 +5,7 @@
 
 package org.mochios.wikis.ui.attachments
 
-import android.content.ContentResolver
+import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -27,7 +27,6 @@ import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
 import java.io.File
-import java.io.FileOutputStream
 import javax.inject.Inject
 
 /**
@@ -224,28 +223,25 @@ class AttachmentsViewModel @Inject constructor(
      * `PageEditorViewModel.uploadAttachments` — copies each URI to a temp
      * file under the cache dir so the repository call stays file-based
      * (matches the comment-attachments and editor flows), then refreshes
-     * the list on success.
+     * the list on success. The copy keeps the file's real name, which is
+     * what the server records.
      */
     fun uploadAttachments(
         uris: List<Uri>,
-        contentResolver: ContentResolver,
-        cacheDir: File,
+        context: Context,
         uploadFailed: String,
         uploadSuccess: String,
     ) {
         if (uris.isEmpty()) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isUploading = true)
-            val tempFiles = mutableListOf<File>()
+            var tempFiles = emptyList<File>()
             try {
-                for (uri in uris) {
-                    val name = Uploads.fileName(contentResolver, uri, "file")
-                    val temp = File(cacheDir, "wiki_upload_${System.nanoTime()}_$name")
-                    contentResolver.openInputStream(uri)?.use { input ->
-                        FileOutputStream(temp).use { out -> input.copyTo(out) }
-                    } ?: throw IllegalStateException("Cannot open $uri")
-                    tempFiles.add(temp)
-                }
+                // The multipart filename is whatever this cached copy is called,
+                // and the server stores it verbatim, so the cache name has to be
+                // the real one. Uploads.cacheFiles keeps it and disambiguates
+                // collisions with a counter before the extension.
+                tempFiles = Uploads.cacheFiles(context, uris)
                 val uploaded = repository.uploadAttachments(wikiId, tempFiles)
                 _uiState.value = _uiState.value.copy(
                     isUploading = false,

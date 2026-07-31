@@ -52,6 +52,7 @@ import org.mochios.market.model.Currency
 fun PlaceBidDialog(
     open: Boolean,
     auction: Auction?,
+    startingPrice: Long,
     currency: Currency,
     submitting: Boolean = false,
     errorMessage: String? = null,
@@ -65,7 +66,12 @@ fun PlaceBidDialog(
     var validationError by remember { mutableStateOf<String?>(null) }
 
     val hasBids = auction.bids > 0
-    val currentHigh = if (hasBids) auction.bid else auction.reserve
+    // Not auction.reserve: the server redacts it to 0 for anyone but the
+    // seller, so it showed "starting at £0.00" and set the floor to nothing.
+    // Mirror the server's own rule (auctions.star): the minimum is the
+    // listing price until there are bids, then one unit above the high bid.
+    val currentHigh = if (hasBids) auction.bid else startingPrice
+    val minimum = if (hasBids) auction.bid + 1 else startingPrice
 
     LaunchedEffect(open, auction.id) {
         if (open) {
@@ -134,7 +140,7 @@ fun PlaceBidDialog(
                 enabled = !submitting,
                 onClick = {
                     val minor = toMinorUnits(amountInput, currency)
-                    if (minor <= 0L || minor <= currentHigh) {
+                    if (minor <= 0L || minor < minimum) {
                         validationError = invalidAmountText
                         return@TextButton
                     }

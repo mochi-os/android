@@ -14,9 +14,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.SystemDocument
 import org.mochios.settings.api.SystemDocumentsApi
-import retrofit2.Response
 import javax.inject.Inject
 
 enum class DocumentKind(val value: String) {
@@ -54,7 +55,7 @@ class SystemDocumentsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val data = api.list().bodyOrThrow()
+                val data = api.list().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     documents = data.documents,
@@ -81,8 +82,8 @@ class SystemDocumentsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(savingKey = key, saveError = null)
         viewModelScope.launch {
             try {
-                api.set(name, language, body).bodyOrThrow()
-                val data = api.list().bodyOrThrow()
+                api.set(name, language, body).unwrapEmpty()
+                val data = api.list().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     savingKey = null,
                     documents = data.documents,
@@ -103,10 +104,5 @@ class SystemDocumentsViewModel @Inject constructor(
 
     fun consumeSaveError() {
         _uiState.value = _uiState.value.copy(saveError = null)
-    }
-
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
     }
 }

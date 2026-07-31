@@ -405,6 +405,7 @@ fun ListingDetailScreen(
     PlaceBidDialog(
         open = bidOpen,
         auction = state.listing?.auction,
+        startingPrice = state.listing?.listing?.price ?: 0L,
         currency = state.listing?.listing?.currency ?: Currency.GBP,
         submitting = submittingBid,
         errorMessage = bidErrorMessage,

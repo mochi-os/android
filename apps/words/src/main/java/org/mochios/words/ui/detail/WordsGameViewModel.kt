@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
 import org.mochios.android.util.mergeMessage
 import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.DraftStatus
@@ -540,9 +541,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isExchanging = false,
-                        transientToast = e.toMochiError().let { err ->
-                            err.message ?: "exchange_failed"
-                        },
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -562,7 +561,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isPassing = false,
-                        transientToast = e.toMochiError().message ?: "pass_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -601,7 +600,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isSubmittingMove = false,
-                        transientToast = e.toMochiError().message ?: "move_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -629,7 +628,7 @@ class WordsGameViewModel @Inject constructor(
                     it.copy(
                         isResigning = false,
                         showResignDialog = false,
-                        transientToast = e.toMochiError().message ?: "resign_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -646,7 +645,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isDeleting = false,
-                        transientToast = e.toMochiError().message ?: "delete_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -676,7 +675,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isCreatingRematch = false,
-                        transientToast = e.toMochiError().message ?: "rematch_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }

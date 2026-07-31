@@ -14,9 +14,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.SessionsApi
 import org.mochios.settings.api.Session
-import retrofit2.Response
 import javax.inject.Inject
 
 data class SessionsUiState(
@@ -40,7 +40,7 @@ class SessionsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val sessions = api.listSessions().bodyOrThrow().sessions
+                val sessions = api.listSessions().unwrapRaw().sessions
                     .sortedByDescending { it.accessed }
                 _uiState.value = SessionsUiState(isLoading = false, sessions = sessions)
             } catch (e: Exception) {
@@ -52,7 +52,7 @@ class SessionsViewModel @Inject constructor(
     fun revoke(id: String) {
         viewModelScope.launch {
             try {
-                api.revokeSession(id).bodyOrThrow()
+                api.revokeSession(id).unwrapRaw()
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -60,8 +60,8 @@ class SessionsViewModel @Inject constructor(
         }
     }
 
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
+    /** Dismiss a surfaced error once the screen has shown it. */
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 }

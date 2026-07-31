@@ -89,6 +89,16 @@ fun SystemUsersScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val snackbar = remember { SnackbarHostState() }
+    // An error while content is on screen is shown over it rather than
+    // replacing it: the full-screen arm below only fires when there is
+    // nothing to show, and nothing on it can reach a refresh to clear it.
+    LaunchedEffect(state.error) {
+        val failure = state.error
+        if (failure != null && state.users.isNotEmpty()) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
 
     val toastMessages = systemUsersToastMessages(state.sessionsRevokedCount)
     LaunchedEffect(state.toast, state.sessionsRevokedCount) {
@@ -158,7 +168,7 @@ fun SystemUsersScreen(
                         contentAlignment = Alignment.Center,
                     ) { CircularProgressIndicator() }
 
-                    state.error != null -> Text(
+                    state.error != null && state.users.isEmpty() -> Text(
                         text = state.error!!.userMessage(),
                         color = MaterialTheme.colorScheme.error,
                         modifier = Modifier.padding(16.dp),

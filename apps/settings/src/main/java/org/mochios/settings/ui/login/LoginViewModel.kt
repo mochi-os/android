@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.OAuthPkce
 import org.mochios.android.auth.PasskeyManager
@@ -25,7 +26,6 @@ import org.mochios.settings.api.MethodInfo
 import org.mochios.settings.api.OAuthIdentity
 import org.mochios.settings.api.Passkey
 import org.mochios.settings.api.TotpSetupResponse
-import retrofit2.Response
 import javax.inject.Inject
 
 data class LoginUiState(
@@ -96,12 +96,12 @@ class LoginViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val methods = api.getMethods().bodyOrThrow().methods
-                val passkeys = api.listPasskeys().bodyOrThrow().passkeys
+                val methods = api.getMethods().unwrapRaw().methods
+                val passkeys = api.listPasskeys().unwrapRaw().passkeys
                     .sortedWith(compareBy(NaturalCompare) { it.name })
-                val totp = api.getTotp().bodyOrThrow().enabled
-                val recovery = api.recoveryCount().bodyOrThrow().count
-                val oauth = api.listOAuth().bodyOrThrow().identities
+                val totp = api.getTotp().unwrapRaw().enabled
+                val recovery = api.recoveryCount().unwrapRaw().count
+                val oauth = api.listOAuth().unwrapRaw().identities
                     .sortedWith(compareBy(NaturalCompare) { it.provider })
                 // Server-configured OAuth providers (best-effort: a failure
                 // here shouldn't blank the whole security page).
@@ -161,7 +161,7 @@ class LoginViewModel @Inject constructor(
     fun setMethodState(method: String, state: String) = requestStepUp { token ->
         _uiState.value = _uiState.value.copy(methodBusy = true)
         try {
-            api.configureMethod(token, method, state).bodyOrThrow()
+            api.configureMethod(token, method, state).unwrapRaw()
             refresh()
         } finally {
             _uiState.value = _uiState.value.copy(methodBusy = false)
@@ -171,33 +171,33 @@ class LoginViewModel @Inject constructor(
     // ---------- Passkeys ----------
 
     fun registerPasskey(name: String) = requestStepUp { token ->
-        val begin = api.beginPasskeyRegister().bodyOrThrow()
+        val begin = api.beginPasskeyRegister().unwrapRaw()
         if (begin.ceremony.isBlank()) throw RuntimeException("missing ceremony")
         val credentialJson = passkeyManager.register(begin.options)
         val finishName = name.trim().ifBlank { "Passkey" }
-        api.finishPasskeyRegister(token, begin.ceremony, credentialJson, finishName).bodyOrThrow()
+        api.finishPasskeyRegister(token, begin.ceremony, credentialJson, finishName).unwrapRaw()
         refresh()
     }
 
     fun renamePasskey(id: String, name: String) = mutate {
-        api.renamePasskey(id, name).bodyOrThrow()
+        api.renamePasskey(id, name).unwrapRaw()
         refresh()
     }
 
     fun deletePasskey(id: String) = requestStepUp { token ->
-        api.deletePasskey(token, id).bodyOrThrow()
+        api.deletePasskey(token, id).unwrapRaw()
         refresh()
     }
 
     // ---------- TOTP ----------
 
     fun beginTotpSetup() = requestStepUp { token ->
-        val setup = api.setupTotp(token).bodyOrThrow()
+        val setup = api.setupTotp(token).unwrapRaw()
         _newTotpSetup.value = setup
     }
 
     fun verifyTotp(code: String) = mutate {
-        val ok = api.verifyTotp(code).bodyOrThrow().ok == true
+        val ok = api.verifyTotp(code).unwrapRaw().ok == true
         if (ok) {
             _newTotpSetup.value = null
             _uiState.value = _uiState.value.copy(totpEnabled = true)
@@ -211,14 +211,14 @@ class LoginViewModel @Inject constructor(
     }
 
     fun disableTotp() = requestStepUp { token ->
-        api.disableTotp(token).bodyOrThrow()
+        api.disableTotp(token).unwrapRaw()
         _uiState.value = _uiState.value.copy(totpEnabled = false)
     }
 
     // ---------- Recovery codes ----------
 
     fun generateRecovery() = requestStepUp { token ->
-        val codes = api.generateRecovery(token).bodyOrThrow().codes
+        val codes = api.generateRecovery(token).unwrapRaw().codes
         _newRecoveryCodes.value = codes
         _uiState.value = _uiState.value.copy(recoveryCount = codes.size)
     }
@@ -250,7 +250,7 @@ class LoginViewModel @Inject constructor(
     }
 
     fun unlinkOAuth(provider: String) = requestStepUp { token ->
-        api.unlinkOAuth(token, provider).bodyOrThrow()
+        api.unlinkOAuth(token, provider).unwrapRaw()
         refresh()
     }
 
@@ -264,10 +264,5 @@ class LoginViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
-    }
-
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
     }
 }

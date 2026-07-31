@@ -106,20 +106,32 @@ class SavedRepository @Inject constructor(
         }
     }
 
-    // Build the slim snapshot persisted for a post, matching the web schema so a
-    // post saved on Android renders on web and vice versa. Android's `body` is
-    // the rendered HTML and `bodyMarkdown` the raw source (the reverse of the
-    // snapshot's field names). Feeds posts carry no separate author, so fall
-    // back to the external source name or the feed's own name.
-    private fun snapshotOf(post: Post): SavedSnapshot = SavedSnapshot(
-        id = post.id,
-        feedId = post.feed,
-        feedFingerprint = post.feedFingerprint,
-        feedName = post.feedName,
-        author = post.source?.name?.takeIf { it.isNotBlank() } ?: post.feedName,
-        created = post.created,
-        body = post.bodyMarkdown,
-        bodyHtml = post.body,
-        attachments = post.attachments,
-    )
 }
+
+/**
+ * Build the slim snapshot persisted for a post, matching the web schema so a
+ * post saved on Android renders on web and vice versa.
+ *
+ * Despite the name, the server's `body_markdown` is the RENDERED HTML —
+ * `feeds.star` sets it to `markdown(body)` — so it is what the snapshot's
+ * [SavedSnapshot.bodyHtml] holds, while `body` stays the raw source. Web maps
+ * the same way (`adapters.ts`: `bodyHtml: post.body_markdown`). Storing them
+ * the other way round renders the raw source as HTML on the Saved screen,
+ * here and on web.
+ *
+ * Feeds posts carry no separate author, so fall back to the external source
+ * name or the feed's own name.
+ */
+internal fun snapshotOf(post: Post): SavedSnapshot = SavedSnapshot(
+    id = post.id,
+    feedId = post.feed,
+    feedFingerprint = post.feedFingerprint,
+    feedName = post.feedName,
+    author = post.source?.name?.takeIf { it.isNotBlank() } ?: post.feedName,
+    created = post.created,
+    body = post.body,
+    bodyHtml = post.bodyMarkdown,
+    data = post.data,
+    attachments = post.attachments,
+    tags = post.tags,
+)

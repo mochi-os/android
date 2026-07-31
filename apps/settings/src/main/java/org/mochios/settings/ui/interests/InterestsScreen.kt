@@ -38,11 +38,15 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -65,7 +69,19 @@ fun InterestsScreen(
     viewModel: InterestsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
+    val snackbar = remember { SnackbarHostState() }
+    // An error while content is on screen is shown over it rather than
+    // replacing it: the full-screen arm below only fires when there is
+    // nothing to show, and nothing on it can reach a refresh to clear it.
+    LaunchedEffect(state.error) {
+        val failure = state.error
+        if (failure != null && state.interests.isNotEmpty()) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.interests_title)) },
@@ -83,7 +99,7 @@ fun InterestsScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                state.error != null -> Text(
+                state.error != null && state.interests.isEmpty() -> Text(
                     text = state.error!!.userMessage(),
                     color = MaterialTheme.colorScheme.error,
                     modifier = Modifier.align(Alignment.Center).padding(16.dp),

@@ -16,12 +16,13 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.api.SystemUser
 import org.mochios.settings.api.SystemUserSession
 import org.mochios.settings.api.SystemUsersApi
-import retrofit2.Response
 import javax.inject.Inject
 
 enum class SystemUsersSort { USERNAME, STATUS, LAST }
@@ -102,7 +103,7 @@ class SystemUsersViewModel @Inject constructor(
                     search = s.search,
                     sort = s.sort.serial(),
                     order = s.order.serial(),
-                ).bodyOrThrow()
+                ).unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     users = data.users,
@@ -161,7 +162,7 @@ class SystemUsersViewModel @Inject constructor(
             success = SystemUsersToast.USER_CREATED,
             failure = SystemUsersToast.CREATE_FAILED,
             onDone = onDone,
-        ) { api.create(username, role).bodyOrThrow() }
+        ) { api.create(username, role).unwrapRaw() }
     }
 
     fun update(id: Long, username: String?, role: String?, onDone: (Boolean) -> Unit) {
@@ -169,7 +170,7 @@ class SystemUsersViewModel @Inject constructor(
             success = SystemUsersToast.USER_UPDATED,
             failure = SystemUsersToast.UPDATE_FAILED,
             onDone = onDone,
-        ) { api.update(id, username, role).bodyOrThrow() }
+        ) { api.update(id, username, role).unwrapEmpty() }
     }
 
     fun delete(id: Long, onDone: (Boolean) -> Unit) {
@@ -177,7 +178,7 @@ class SystemUsersViewModel @Inject constructor(
             success = SystemUsersToast.USER_DELETED,
             failure = SystemUsersToast.DELETE_FAILED,
             onDone = onDone,
-        ) { api.delete(id).bodyOrThrow() }
+        ) { api.delete(id).unwrapRaw() }
     }
 
     fun toggleStatus(user: SystemUser, onDone: (Boolean) -> Unit) {
@@ -188,8 +189,8 @@ class SystemUsersViewModel @Inject constructor(
             failure = SystemUsersToast.STATUS_FAILED,
             onDone = onDone,
         ) {
-            if (suspended) api.activate(user.id).bodyOrThrow()
-            else api.suspendUser(user.id).bodyOrThrow()
+            if (suspended) api.activate(user.id).unwrapRaw()
+            else api.suspendUser(user.id).unwrapRaw()
         }
     }
 
@@ -197,7 +198,7 @@ class SystemUsersViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(sessionsLoadingFor = id, sessions = emptyList())
             try {
-                val data = api.sessions(id).bodyOrThrow()
+                val data = api.sessions(id).unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     sessionsLoadingFor = null,
                     sessions = data.sessions,
@@ -219,8 +220,8 @@ class SystemUsersViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(mutating = true)
             try {
-                val resp = api.revokeSessions(userId, sessionId).bodyOrThrow()
-                val sessions = api.sessions(userId).bodyOrThrow().sessions
+                val resp = api.revokeSessions(userId, sessionId).unwrapRaw()
+                val sessions = api.sessions(userId).unwrapRaw().sessions
                 _uiState.value = _uiState.value.copy(
                     mutating = false,
                     sessions = sessions,
@@ -276,8 +277,8 @@ class SystemUsersViewModel @Inject constructor(
         SystemUsersOrder.DESC -> "desc"
     }
 
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
+    /** Dismiss a surfaced error once the screen has shown it. */
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 }
