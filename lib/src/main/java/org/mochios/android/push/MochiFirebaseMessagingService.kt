@@ -108,14 +108,17 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
     ) {
         val channelId = channelIdFor(app, link)
 
-        // mochi:notification?link=<encoded>[&id=<encoded>] — same opaque URI
-        // the UnifiedPush dispatcher uses; routed by MainActivity through
-        // claude/plans/mochi-uri-scheme.md. `id` lets MainActivity call the
-        // notifications app's -/read endpoint so the matching web row is
-        // cleared on tap.
+        // mochi:notification?link=<encoded>[&id=<encoded>]&nonce=<encoded> —
+        // same opaque URI the UnifiedPush dispatcher uses; routed by
+        // MainActivity through claude/plans/mochi-uri-scheme.md. `id` lets
+        // MainActivity call the notifications app's -/read endpoint so the
+        // matching web row is cleared on tap, and the nonce is what proves the
+        // tap came from a notification we posted rather than from any app or
+        // web page that can send this exported activity an intent.
         val ssp = buildString {
             append("notification?link=").append(Uri.encode(link))
             if (id.isNotEmpty()) append("&id=").append(Uri.encode(id))
+            append("&nonce=").append(Uri.encode(NonceStore(context).issue()))
         }
         val deepLink = Uri.parse("mochi:$ssp")
         val intent = Intent(Intent.ACTION_VIEW, deepLink).apply {

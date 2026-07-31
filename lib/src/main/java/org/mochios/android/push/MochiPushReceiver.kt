@@ -67,12 +67,18 @@ abstract class MochiPushReceiver : MessagingReceiver() {
      * Deep-link Uri for tapping the notification. When [id] is non-empty
      * the dispatcher should include it on the URI so MainActivity can hit
      * the notifications app's `-/read` endpoint after navigating.
+     *
+     * [nonce] is the single-use proof that the tap came from a notification we
+     * posted, and must be carried on the URI: MainActivity is exported, so it
+     * ignores any `mochi:notification` it cannot match against an outstanding
+     * nonce. See [NonceStore].
      */
     abstract fun deepLinkFor(
         context: Context,
         instance: String,
         link: String,
-        id: String
+        id: String,
+        nonce: String
     ): android.net.Uri
 
     private fun deps(context: Context): PushEntryPoint =
@@ -249,7 +255,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         id: String,
     ) {
         val channelId = channelId(context, instance, app, link)
-        val deepLink = deepLinkFor(context, instance, link, id)
+        val deepLink = deepLinkFor(context, instance, link, id, NonceStore(context).issue())
 
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
             flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or

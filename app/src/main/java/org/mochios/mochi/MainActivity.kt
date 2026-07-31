@@ -47,6 +47,7 @@ import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
+import org.mochios.android.push.NonceStore
 import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PendingDeepLink
 import org.mochios.android.push.PushTransport
@@ -504,7 +505,7 @@ class MainActivity : ComponentActivity() {
         val query = if (qIndex >= 0) ssp.substring(qIndex + 1) else ""
         val params = parseOpaqueQuery(query)
         when (name) {
-            "notification" -> setNotificationDeepLink(params["link"], params["id"])
+            "notification" -> setNotificationDeepLink(params["link"], params["id"], params["nonce"])
             "oauth-return" -> applyOAuthReturn(params["code"], params["error"])
             "oauth-link-return" -> applyOAuthLinkReturn(params["oauth_linked"], params["oauth_error"])
             else -> Log.w(TAG, "Unknown system intent in $uri")
@@ -532,7 +533,11 @@ class MainActivity : ComponentActivity() {
      */
     private fun handleLegacySystemIntent(uri: Uri) {
         when (uri.authority) {
-            "notification" -> setNotificationDeepLink(uri.getQueryParameter("link"), uri.getQueryParameter("id"))
+            "notification" -> setNotificationDeepLink(
+                uri.getQueryParameter("link"),
+                uri.getQueryParameter("id"),
+                uri.getQueryParameter("nonce"),
+            )
             "oauth-return" -> applyOAuthReturn(uri.getQueryParameter("code"), uri.getQueryParameter("error"))
             "oauth-link-return" -> applyOAuthLinkReturn(uri.getQueryParameter("oauth_linked"), uri.getQueryParameter("oauth_error"))
         }
@@ -572,8 +577,25 @@ class MainActivity : ComponentActivity() {
         Log.w(TAG, "Cross-peer URI not yet supported: $uri")
     }
 
-    private fun setNotificationDeepLink(link: String?, id: String?) {
+    /**
+     * Handle a tapped system notification.
+     *
+     * This activity is exported — it has to be, to receive the `mochi:` scheme
+     * — so any app or web page can send it `mochi:notification?link=…&id=…`.
+     * Acting on that would let a caller mark any notification id it can guess
+     * as read, and plant a link of its choosing as pending navigation. Both
+     * halves are gated on consuming a nonce issued when we posted the
+     * notification, so only our own taps are honoured.
+     *
+     * A notification posted by a build before nonces existed no longer has a
+     * tap action; it is dropped rather than trusted.
+     */
+    private fun setNotificationDeepLink(link: String?, id: String?, nonce: String?) {
         link ?: return
+        if (!NonceStore(this).consume(nonce)) {
+            Log.w(TAG, "Ignoring mochi:notification with no outstanding nonce")
+            return
+        }
         PendingDeepLink.set(link)
         // Mirror to disk so the update-installer relaunch (or any other
         // process-death window between tap and consume) can restore it.

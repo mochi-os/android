@@ -43,7 +43,13 @@ class MochiPushDispatcher : MochiPushReceiver() {
         }
     }
 
-    override fun deepLinkFor(context: Context, instance: String, link: String, id: String): Uri {
+    override fun deepLinkFor(
+        context: Context,
+        instance: String,
+        link: String,
+        id: String,
+        nonce: String,
+    ): Uri {
         // Per claude/plans/mochi-uri-scheme.md, system intents use the opaque
         // shape (0 slashes): mochi:notification?link=…
         // Hand-construct via the opaque-URI builder to avoid the //authority/path
@@ -56,6 +62,8 @@ class MochiPushDispatcher : MochiPushReceiver() {
                 append("&id=")
                 append(Uri.encode(id))
             }
+            append("&nonce=")
+            append(Uri.encode(nonce))
         }
         return Uri.parse("mochi:$ssp")
     }
