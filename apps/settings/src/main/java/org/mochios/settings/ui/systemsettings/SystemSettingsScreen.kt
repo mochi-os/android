@@ -265,7 +265,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.section(
     item("section-header-$title") {
         SectionHeader(title = title)
     }
-    items(settings, key = { "row-${'$'}{it.name}" }) { setting ->
+    items(settings, key = { "row-${it.name}" }) { setting ->
         SettingRow(
             setting = setting,
             isSaving = state.savingName == setting.name,

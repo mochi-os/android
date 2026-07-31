@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.go.model.Game
 import org.mochios.go.model.NewGameFriend
 import org.mochios.go.repository.GoRepository
@@ -41,6 +42,13 @@ data class GoGameListUiState(
     val games: List<Game> = emptyList(),
     val error: MochiError? = null,
 
+    /**
+     * The signed-in entity ID, needed to tell which side of a game the user is
+     * on. `opponent_name` holds the invitee's name on both peers, so without
+     * this a game the user did not create names the user back to themselves.
+     */
+    val identity: String? = null,
+
     val newGameDialogOpen: Boolean = false,
     val newGameFriends: List<NewGameFriend>? = null,
     val newGameFriendsLoading: Boolean = false,
@@ -58,6 +66,7 @@ sealed class GoGameListEvent {
 @HiltViewModel
 class GoGameListViewModel @Inject constructor(
     private val repo: GoRepository,
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(GoGameListUiState())
@@ -74,6 +83,11 @@ class GoGameListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                // Resolved alongside the games rather than in init, so a list
+                // loaded before the identity arrives cannot render a card
+                // naming the user back to themselves.
+                val identity = sessionManager.getBoundIdentity()
+                _uiState.value = _uiState.value.copy(identity = identity)
                 val games = repo.listGames()
                 _uiState.value = _uiState.value.copy(games = games, isLoading = false)
             } catch (e: Exception) {
