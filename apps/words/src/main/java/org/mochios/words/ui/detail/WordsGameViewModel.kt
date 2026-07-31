@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.mergeMessage
 import org.mochios.words.engine.DraftStatus
 import org.mochios.words.engine.Placement
 import org.mochios.words.engine.createDraftSignature
@@ -218,7 +219,11 @@ class WordsGameViewModel @Inject constructor(
      */
     fun onWebsocketEvent(type: String, message: GameMessage?) {
         when (type) {
-            "move", "system" -> {
+            // "state" is the snapshot event_sync emits after a P2P convergence
+            // repair. It used to fall through this when with no else, so the
+            // board and scores sat on what the repair had replaced until the
+            // next move or resume.
+            "move", "system", "state" -> {
                 // Refresh the game (board, rack, turn, scores) and message
                 // history — the move payload includes the post-move state.
                 refresh()
@@ -226,9 +231,20 @@ class WordsGameViewModel @Inject constructor(
             }
             "message" -> {
                 if (message != null) {
+                    // The frame carries no id, so the screen synthesises one:
+                    // it never matches the server uid the same row arrives with
+                    // over REST, and two messages from one sender in the same
+                    // second synthesise the SAME id, so an id-keyed guard threw
+                    // the second away. Key on content, as the web does.
                     _uiState.update { state ->
-                        if (state.messages.any { it.id == message.id }) state
-                        else state.copy(messages = state.messages + message)
+                        state.copy(
+                            messages = mergeMessage(
+                                state.messages,
+                                message,
+                                key = ::messageKey,
+                                created = { row -> row.created },
+                            ),
+                        )
                     }
                 } else {
                     loadMessages()
@@ -236,6 +252,10 @@ class WordsGameViewModel @Inject constructor(
             }
         }
     }
+
+    /** Content key for chat dedupe; see [onWebsocketEvent]. */
+    private fun messageKey(message: GameMessage): String =
+        "${message.created}|${message.body}|${message.name}|${message.type}"
 
     // ─── Rack + placement mutations ───────────────────────────────────
 
@@ -633,15 +653,30 @@ class WordsGameViewModel @Inject constructor(
 
     // ─── Sending chat messages ────────────────────────────────────────
 
-    fun sendChatMessage(body: String, onError: (MochiError) -> Unit = {}) {
+    /**
+     * [onFinished] reports whether the send succeeded, so the composer can
+     * clear the draft only once it has. It used to clear synchronously at the
+     * call site, before this coroutine had even started, so a failed send lost
+     * the typed text with no feedback.
+     */
+    fun sendChatMessage(
+        body: String,
+        onError: (MochiError) -> Unit = {},
+        onFinished: (Boolean) -> Unit = {},
+    ) {
         val trimmed = body.trim()
-        if (trimmed.isEmpty()) return
+        if (trimmed.isEmpty()) {
+            onFinished(false)
+            return
+        }
         viewModelScope.launch {
             try {
                 repository.sendMessage(gameId, trimmed)
                 loadMessages()
+                onFinished(true)
             } catch (e: Exception) {
                 onError(e.toMochiError())
+                onFinished(false)
             }
         }
     }

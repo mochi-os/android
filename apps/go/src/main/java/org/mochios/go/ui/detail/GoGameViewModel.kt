@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.mergeMessage
 import org.mochios.go.engine.GoGame
 import org.mochios.go.engine.IllegalMoveException
 import org.mochios.go.engine.Score
@@ -310,9 +311,12 @@ class GoGameViewModel @Inject constructor(
                 // Re-fetch so server-side capture / ko bookkeeping replaces
                 // our optimistic state.
                 loadGame()
-                // Also refresh the move/chat log so our own move row appears
-                // immediately; the websocket frame for our own move isn't
-                // echoed back to us. Web invalidates messages on own move.
+                // Refresh the move/chat log so our own move row appears without
+                // waiting. Our own frame IS echoed back — core's
+                // websockets_send writes to every socket of the acting user on
+                // the key, with no originating-socket exclusion — so this
+                // races the echo, and the content-keyed merge is what keeps the
+                // row from appearing twice.
                 loadMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isMoving = false) }
@@ -374,8 +378,8 @@ class GoGameViewModel @Inject constructor(
                 )
                 _state.update { it.copy(isPassing = false) }
                 loadGame()
-                // Refresh the move/chat log so our own pass row appears
-                // immediately; our own websocket frame isn't echoed back.
+                // As in place(): our own frame is echoed back, so this races it
+                // and the content-keyed merge deduplicates the result.
                 loadMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isPassing = false) }
@@ -532,22 +536,44 @@ class GoGameViewModel @Inject constructor(
     // ------------------------------------------------------------------
 
     /**
+     * Content key for deduplicating a chat row, matching the web client's
+     * created+body+name+type. Ids cannot be used: the WebSocket payload has
+     * none, so a synthesised one never equals the server uid the same row
+     * carries when it arrives over REST.
+     */
+    private fun messageKey(message: GameMessage): String =
+        "${message.created}|${message.body}|${message.name}|${message.type}"
+
+    /**
      * Apply a decoded WebSocket event to the state. The web app uses a
      * react-query invalidate to refetch on every event; we follow the same
      * pattern (server is source of truth) but also append the new message
      * row locally so the chat panel updates without waiting for the round
      * trip.
+     *
+     * The frame carries no id, so the screen synthesises one — which cannot
+     * match the server uid on the REST row, and *can* collide with another
+     * frame from the same member in the same second. Deduplicating on content
+     * instead, as the web does, fixes both.
      */
     fun applyWsEvent(rawType: String, message: GameMessage?) {
-        if (message != null && message.id.isNotBlank()) {
+        if (message != null) {
             _state.update {
-                if (it.messages.any { existing -> existing.id == message.id }) it
-                else it.copy(messages = it.messages + message)
+                it.copy(
+                    messages = mergeMessage(
+                        it.messages,
+                        message,
+                        key = ::messageKey,
+                        created = { row -> row.created },
+                    ),
+                )
             }
         }
-        // Move / system events change the game state too — refresh the
-        // game so the FEN, status, draw_offer, and captures all line up.
-        if (rawType == "move" || rawType == "system") {
+        // Move and system events change the game state; "state" is the
+        // snapshot event_sync emits after a P2P convergence repair, and
+        // ignoring it left the board showing what the repair replaced, with
+        // no pull-to-refresh on this screen to escape it.
+        if (rawType == "move" || rawType == "system" || rawType == "state") {
             loadGame()
         }
     }

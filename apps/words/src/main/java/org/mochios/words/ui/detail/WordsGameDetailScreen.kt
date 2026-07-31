@@ -521,7 +521,7 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
-                        onSend = { body -> viewModel.sendChatMessage(body) },
+                        onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                     )
                 }
             }
@@ -618,7 +618,7 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
-                        onSend = { body -> viewModel.sendChatMessage(body) },
+                        onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                     )
                 }
             }
@@ -770,7 +770,7 @@ private fun GameChatColumn(
     messages: List<GameMessage>,
     myIdentity: String,
     isLoading: Boolean,
-    onSend: (String) -> Unit,
+    onSend: (String, (Boolean) -> Unit) -> Unit,
 ) {
     val chatMessages = remember(messages) {
         messages.map { msg ->
@@ -838,11 +838,16 @@ private fun GameChatColumn(
             text = chatDraft,
             onTextChange = { chatDraft = it },
             onSend = {
-                if (chatDraft.isNotBlank()) {
+                // Clear only once the send has actually succeeded. Clearing
+                // here used to happen before the coroutine started, so a failed
+                // send discarded the text, and isSending was set and unset in
+                // the same frame so the pending state never rendered.
+                if (chatDraft.isNotBlank() && !isSending) {
                     isSending = true
-                    onSend(chatDraft)
-                    chatDraft = ""
-                    isSending = false
+                    onSend(chatDraft) { sent ->
+                        isSending = false
+                        if (sent) chatDraft = ""
+                    }
                 }
             },
             isSending = isSending,
