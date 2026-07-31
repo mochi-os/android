@@ -18,9 +18,20 @@
         xmlns:tools="http://schemas.android.com/tools" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
+    <!--
+      allowBackup="false": the session cookie, every per-app JWT, the OAuth
+      PKCE verifier and the UnifiedPush subscription tokens all sit unencrypted
+      in mochi_session / mochi_distributor / mochi_push, so Auto Backup and
+      device-to-device transfer would carry a working authenticated session onto
+      another device. Nothing else on disk is worth restoring - identity, apps
+      and content live on the user's Mochi server and return on next login, so
+      local state is only a cache. Preferred over dataExtractionRules +
+      fullBackupContent because it cannot drift: a store added later is excluded
+      by default rather than backed up until someone remembers to deny it.
+    -->
     <application
         android:name=".MochiApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
