@@ -52,7 +52,9 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         EntryPointAccessors.fromApplication(context.applicationContext, PushEntryPoint::class.java)
 
     override fun onNewEndpoint(context: Context, endpoint: PushEndpoint, instance: String) {
-        Log.i(TAG, "onNewEndpoint instance=$instance url=${endpoint.url}")
+        // The endpoint URL ends in the subscription id, which is the unguessable
+        // capability anyone can post a push to, so log only its origin.
+        Log.i(TAG, "onNewEndpoint instance=$instance host=${endpointHost(endpoint.url)}")
         val keys = endpoint.pubKeySet
         if (keys == null) {
             Log.w(TAG, "Endpoint has no Web Push keys — server can't encrypt; aborting")
@@ -70,7 +72,8 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                 val endpointToSend = collapseLocalEndpoint(endpoint.url, server)
                 Log.i(
                     TAG,
-                    "register: endpoint.url=${endpoint.url} server=$server collapsed=$endpointToSend"
+                    "register: endpoint host=${endpointHost(endpoint.url)} server=$server " +
+                        "local=${endpointToSend != endpoint.url}"
                 )
                 val accountId = postPushRegister(
                     deps.okHttpClient(),
@@ -100,6 +103,10 @@ abstract class MochiPushReceiver : MessagingReceiver() {
      * (the third-party-distributor case — e.g. ntfy.sh — where the
      * server must POST RFC 8030 to the absolute URL).
      */
+    /** Host of [endpointUrl], for logging that must not carry the subscription id. */
+    private fun endpointHost(endpointUrl: String): String =
+        runCatching { android.net.Uri.parse(endpointUrl).host }.getOrNull() ?: "unparseable"
+
     private fun collapseLocalEndpoint(endpointUrl: String, server: String): String {
         return try {
             val ep = android.net.Uri.parse(endpointUrl)
