@@ -87,4 +87,6 @@ dependencies {
     implementation(libs.firebase.messaging)
 
     implementation(libs.work.runtime)
+
+    testImplementation(libs.junit)
 }

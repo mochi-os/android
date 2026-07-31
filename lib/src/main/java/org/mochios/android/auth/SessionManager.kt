@@ -21,12 +21,34 @@ import kotlinx.coroutines.flow.combine
 import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "mochi_session")
+
+/**
+ * True when [url] is the origin named by [serverUrl]. Compares scheme, host and
+ * effective port ([HttpUrl.port] resolves the default, so an implicit 443
+ * matches an explicit one) rather than the host alone: `http://host/`,
+ * `https://host:8443/` and `https://host/` are three different origins, and a
+ * host comparison alone would also accept a lookalike whose name merely ends
+ * with ours.
+ *
+ * Fails closed — an unparseable or empty [serverUrl] matches nothing, so the
+ * session never rides on a host we cannot confirm.
+ *
+ * Free function so it is exercised directly by SessionOriginTest without an
+ * Android context; [SessionManager] supplies the stored server URL.
+ */
+internal fun isServerOrigin(url: HttpUrl, serverUrl: String): Boolean {
+    val server = serverUrl.toHttpUrlOrNull() ?: return false
+    return url.scheme == server.scheme &&
+        url.host == server.host &&
+        url.port == server.port
+}
 
 @Singleton
 class SessionManager @Inject constructor(
@@ -242,10 +264,32 @@ class SessionManager @Inject constructor(
     /** In-memory per-host cookie cache, cleared on [clearAll]. */
     private val cookieStore = ConcurrentHashMap<String, MutableList<Cookie>>()
 
+    /** True when [url] is the user's own Mochi server. See [isServerOrigin]. */
+    private fun isServerOrigin(url: HttpUrl): Boolean =
+        isServerOrigin(url, getServerUrlBlocking())
+
+    /**
+     * Carries the Mochi session cookie to the user's own server, and nowhere
+     * else. Both directions are gated on [isServerOrigin], because this jar is
+     * shared by clients that deliberately fetch foreign hosts — the asset
+     * client behind Coil loads RSS post images from arbitrary publisher
+     * domains (see AssetHttpModule), and assetAuthHeaders reuses
+     * [loadForRequest] for MediaMetadataRetriever.
+     *
+     * Without the gate a hostile feed image leaked the live session cookie to
+     * its host (full account impersonation), and a `Set-Cookie: session=…` in
+     * that host's reply overwrote the stored session — logging the user out, or
+     * pinning the session to a value the host chose.
+     *
+     * Cookies a foreign host sets for itself are still cached and replayed to
+     * that same host; the cache is keyed by host, so that is ordinary
+     * per-origin behaviour and stays working for CDNs that need it.
+     */
     val cookieJar: CookieJar = object : CookieJar {
 
         override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
             cookieStore[url.host] = cookies.toMutableList()
+            if (!isServerOrigin(url)) return
             val sessionCookie = cookies.find { it.name == "session" }
             // Only *renew* an existing session — never resurrect one that
             // sign-out or a 401 has cleared. Login establishes the session
@@ -259,17 +303,18 @@ class SessionManager @Inject constructor(
 
         override fun loadForRequest(url: HttpUrl): List<Cookie> {
             val stored = cookieStore[url.host]?.toMutableList() ?: mutableListOf()
+            if (!isServerOrigin(url)) return stored
             val sessionValue = getSessionCookieBlocking()
             if (sessionValue != null) {
                 val hasSession = stored.any { it.name == "session" }
                 if (!hasSession) {
-                    val cookie = Cookie.Builder()
+                    val builder = Cookie.Builder()
                         .domain(url.host)
                         .path("/")
                         .name("session")
                         .value(sessionValue)
-                        .build()
-                    stored.add(cookie)
+                    if (url.isHttps) builder.secure()
+                    stored.add(builder.build())
                 }
             }
             return stored
