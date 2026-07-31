@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">מחק משחק?</string>
     <string name="words_detail_delete_confirm">מחק</string>
     <string name="words_detail_delete_message">פעולה זו תמחק לצמיתות את המשחק ואת הצ\'אט שלו. לא ניתן לבטל פעולה זו.</string>
+    <string name="words_detail_chat_passed">%1$s ויתר/ה על התור</string>
+    <string name="words_detail_chat_passed_over">%1$s ויתר/ה על התור — המשחק נגמר</string>
+    <string name="words_detail_chat_exchanged">%1$s החליף/ה אריחים</string>
+    <string name="words_move_error_no_tiles">לא הונחו אריחים</string>
+    <string name="words_move_error_out_of_bounds">ההנחה מחוץ ללוח</string>
+    <string name="words_move_error_square_occupied">המשבצת כבר תפוסה</string>
+    <string name="words_move_error_not_in_line">יש להניח את האריחים בשורה אחת או בעמודה אחת</string>
+    <string name="words_move_error_not_contiguous">האריחים חייבים להיות רצופים (ללא רווחים)</string>
+    <string name="words_move_error_first_move_centre">המהלך הראשון חייב לכסות את המשבצת המרכזית</string>
+    <string name="words_move_error_first_move_two_tiles">במהלך הראשון יש להניח לפחות 2 אריחים</string>
+    <string name="words_move_error_not_connected">האריחים חייבים להתחבר לאריחים שכבר על הלוח</string>
+    <string name="words_move_error_no_words">לא נוצרו מילים תקינות</string>
 </resources>

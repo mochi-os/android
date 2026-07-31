@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Διαγραφή παρτίδας;</string>
     <string name="words_detail_delete_confirm">Διαγραφή</string>
     <string name="words_detail_delete_message">Αυτό θα διαγράψει οριστικά το παιχνίδι και τη συνομιλία του. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
+    <string name="words_detail_chat_passed">Ο/Η %1$s πέρασε</string>
+    <string name="words_detail_chat_passed_over">Ο/Η %1$s πέρασε — τέλος παιχνιδιού</string>
+    <string name="words_detail_chat_exchanged">Ο/Η %1$s αντάλλαξε πλακίδια</string>
+    <string name="words_move_error_no_tiles">Δεν τοποθετήθηκαν πλακίδια</string>
+    <string name="words_move_error_out_of_bounds">Η τοποθέτηση είναι εκτός ταμπλό</string>
+    <string name="words_move_error_square_occupied">Το τετράγωνο είναι ήδη κατειλημμένο</string>
+    <string name="words_move_error_not_in_line">Τα πλακίδια πρέπει να τοποθετηθούν σε μία γραμμή ή στήλη</string>
+    <string name="words_move_error_not_contiguous">Τα πλακίδια πρέπει να είναι συνεχόμενα (χωρίς κενά)</string>
+    <string name="words_move_error_first_move_centre">Η πρώτη κίνηση πρέπει να καλύπτει το κεντρικό τετράγωνο</string>
+    <string name="words_move_error_first_move_two_tiles">Η πρώτη κίνηση πρέπει να τοποθετήσει τουλάχιστον 2 πλακίδια</string>
+    <string name="words_move_error_not_connected">Τα πλακίδια πρέπει να συνδέονται με υπάρχοντα πλακίδια στο ταμπλό</string>
+    <string name="words_move_error_no_words">Δεν σχηματίστηκαν έγκυρες λέξεις</string>
 </resources>

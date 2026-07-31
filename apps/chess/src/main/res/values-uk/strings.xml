@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s взяв %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Білий %1$s</string>
+    <string name="chess_piece_black">Чорний %1$s</string>
 </resources>

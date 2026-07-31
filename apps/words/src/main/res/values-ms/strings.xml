@@ -72,4 +72,16 @@
     <string name="words_detail_delete_title">Padam permainan?</string>
     <string name="words_detail_delete_confirm">Padam</string>
     <string name="words_detail_delete_message">Ini akan memadam permainan dan sembangnya secara kekal. Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="words_detail_chat_passed">%1$s melepasi giliran</string>
+    <string name="words_detail_chat_passed_over">%1$s melepasi giliran — permainan tamat</string>
+    <string name="words_detail_chat_exchanged">%1$s menukar jubin</string>
+    <string name="words_move_error_no_tiles">Tiada jubin diletakkan</string>
+    <string name="words_move_error_out_of_bounds">Peletakan di luar papan</string>
+    <string name="words_move_error_square_occupied">Petak sudah diisi</string>
+    <string name="words_move_error_not_in_line">Jubin mesti diletakkan dalam satu baris atau lajur</string>
+    <string name="words_move_error_not_contiguous">Jubin mesti bersebelahan (tiada ruang kosong)</string>
+    <string name="words_move_error_first_move_centre">Langkah pertama mesti menutupi petak tengah</string>
+    <string name="words_move_error_first_move_two_tiles">Langkah pertama mesti meletakkan sekurang-kurangnya 2 jubin</string>
+    <string name="words_move_error_not_connected">Jubin mesti bersambung dengan jubin sedia ada di papan</string>
+    <string name="words_move_error_no_words">Tiada perkataan sah terbentuk</string>
 </resources>

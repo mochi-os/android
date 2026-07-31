@@ -74,4 +74,16 @@
     <string name="words_detail_delete_title">Excluir partida?</string>
     <string name="words_detail_delete_confirm">Excluir</string>
     <string name="words_detail_delete_message">Isso exclui permanentemente o jogo e seu chat. Esta ação não pode ser desfeita.</string>
+    <string name="words_detail_chat_passed">%1$s passou</string>
+    <string name="words_detail_chat_passed_over">%1$s passou — fim de jogo</string>
+    <string name="words_detail_chat_exchanged">%1$s trocou peças</string>
+    <string name="words_move_error_no_tiles">Nenhuma peça colocada</string>
+    <string name="words_move_error_out_of_bounds">Colocação fora do tabuleiro</string>
+    <string name="words_move_error_square_occupied">Casa já ocupada</string>
+    <string name="words_move_error_not_in_line">As peças devem ficar na mesma linha ou coluna</string>
+    <string name="words_move_error_not_contiguous">As peças devem ficar seguidas (sem espaços)</string>
+    <string name="words_move_error_first_move_centre">A primeira jogada deve cobrir a casa central</string>
+    <string name="words_move_error_first_move_two_tiles">A primeira jogada deve colocar pelo menos 2 peças</string>
+    <string name="words_move_error_not_connected">As peças devem se conectar a peças já no tabuleiro</string>
+    <string name="words_move_error_no_words">Nenhuma palavra válida formada</string>
 </resources>

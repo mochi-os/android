@@ -72,4 +72,16 @@
     <string name="words_detail_delete_title">Выдаліць партыю?</string>
     <string name="words_detail_delete_confirm">Выдаліць</string>
     <string name="words_detail_delete_message">Гэта незваротна выдаліць гульню і яе чат. Гэтае дзеянне нельга адрабіць.</string>
+    <string name="words_detail_chat_passed">%1$s прапусціў ход</string>
+    <string name="words_detail_chat_passed_over">%1$s прапусціў ход — гульня скончана</string>
+    <string name="words_detail_chat_exchanged">%1$s абмяняў фішкі</string>
+    <string name="words_move_error_no_tiles">Фішкі не пастаўлены</string>
+    <string name="words_move_error_out_of_bounds">Размяшчэнне выходзіць за межы дошкі</string>
+    <string name="words_move_error_square_occupied">Клетка ўжо занятая</string>
+    <string name="words_move_error_not_in_line">Фішкі павінны быць у адным радку або слупку</string>
+    <string name="words_move_error_not_contiguous">Фішкі павінны ісці запар (без прабелаў)</string>
+    <string name="words_move_error_first_move_centre">Першы ход павінен накрыць цэнтральную клетку</string>
+    <string name="words_move_error_first_move_two_tiles">Першы ход павінен пакласці не менш за 2 фішкі</string>
+    <string name="words_move_error_not_connected">Фішкі павінны злучацца з фішкамі на дошцы</string>
+    <string name="words_move_error_no_words">Не ўтворана ніводнага слушнага слова</string>
 </resources>

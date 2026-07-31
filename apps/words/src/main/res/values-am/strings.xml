@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">ሰርዝ</string>
     <string name="words_detail_delete_message">ይህ ጨዋታውን እና ውይይቱን በቋሚነት ይሰርዛል። ይህ ወደኋላ ሊመለስ አይችልም።</string>
+    <string name="words_detail_chat_passed">%1$s አሳልፏል</string>
+    <string name="words_detail_chat_passed_over">%1$s አሳልፏል — ጨዋታው አብቅቷል</string>
+    <string name="words_detail_chat_exchanged">%1$s ፊደላትን ለውጧል</string>
+    <string name="words_move_error_no_tiles">ምንም ፊደል አልተቀመጠም</string>
+    <string name="words_move_error_out_of_bounds">አቀማመጡ ከሰሌዳው ውጭ ነው</string>
+    <string name="words_move_error_square_occupied">ካሬው አስቀድሞ ተይዟል</string>
+    <string name="words_move_error_not_in_line">ፊደላት በአንድ ረድፍ ወይም አምድ መቀመጥ አለባቸው</string>
+    <string name="words_move_error_not_contiguous">ፊደላት ተያያዥ መሆን አለባቸው (ክፍተት አይፈቀድም)</string>
+    <string name="words_move_error_first_move_centre">የመጀመሪያው እንቅስቃሴ መሃል ካሬውን መሸፈን አለበት</string>
+    <string name="words_move_error_first_move_two_tiles">የመጀመሪያው እንቅስቃሴ ቢያንስ 2 ፊደላት ማስቀመጥ አለበት</string>
+    <string name="words_move_error_not_connected">ፊደላት በሰሌዳው ላይ ካሉ ፊደላት ጋር መገናኘት አለባቸው</string>
+    <string name="words_move_error_no_words">ምንም ትክክለኛ ቃል አልተፈጠረም</string>
 </resources>

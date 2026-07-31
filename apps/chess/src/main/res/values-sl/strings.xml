@@ -67,4 +67,6 @@
     <string name="chess_ws_failed">Povezava neuspešna</string>
     <string name="chess_move_capture">%1$s je vzel %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_piece_white">Bele %1$s</string>
+    <string name="chess_piece_black">Črna %1$s</string>
 </resources>

@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">ಅಳಿಸಿ</string>
     <string name="words_detail_delete_message">ಇದು ಆಟ ಮತ್ತು ಅದರ ಚಾಟ್ ಅನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ. ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
+    <string name="words_detail_chat_passed">%1$s ಪಾಸ್ ಮಾಡಿದರು</string>
+    <string name="words_detail_chat_passed_over">%1$s ಪಾಸ್ ಮಾಡಿದರು — ಆಟ ಮುಗಿಯಿತು</string>
+    <string name="words_detail_chat_exchanged">%1$s ಟೈಲ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಿದರು</string>
+    <string name="words_move_error_no_tiles">ಯಾವುದೇ ಟೈಲ್ ಇರಿಸಿಲ್ಲ</string>
+    <string name="words_move_error_out_of_bounds">ಇರಿಸುವಿಕೆ ಫಲಕದ ಹೊರಗಿದೆ</string>
+    <string name="words_move_error_square_occupied">ಚೌಕ ಈಗಾಗಲೇ ತುಂಬಿದೆ</string>
+    <string name="words_move_error_not_in_line">ಟೈಲ್‌ಗಳನ್ನು ಒಂದೇ ಸಾಲು ಅಥವಾ ಕಾಲಮ್‌ನಲ್ಲಿ ಇರಿಸಬೇಕು</string>
+    <string name="words_move_error_not_contiguous">ಟೈಲ್‌ಗಳು ಪಕ್ಕಪಕ್ಕದಲ್ಲಿರಬೇಕು (ಅಂತರವಿಲ್ಲದೆ)</string>
+    <string name="words_move_error_first_move_centre">ಮೊದಲ ನಡೆ ಮಧ್ಯದ ಚೌಕವನ್ನು ಆವರಿಸಬೇಕು</string>
+    <string name="words_move_error_first_move_two_tiles">ಮೊದಲ ನಡೆಯಲ್ಲಿ ಕನಿಷ್ಠ 2 ಟೈಲ್‌ಗಳನ್ನು ಇರಿಸಬೇಕು</string>
+    <string name="words_move_error_not_connected">ಟೈಲ್‌ಗಳು ಫಲಕದಲ್ಲಿರುವ ಟೈಲ್‌ಗಳಿಗೆ ಸಂಪರ್ಕಗೊಳ್ಳಬೇಕು</string>
+    <string name="words_move_error_no_words">ಯಾವುದೇ ಮಾನ್ಯ ಪದ ರೂಪುಗೊಂಡಿಲ್ಲ</string>
 </resources>

@@ -67,4 +67,6 @@
     <string name="chess_ws_failed">Conexión fallida</string>
     <string name="chess_move_capture">%1$s capturou %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_piece_white">Branco %1$s</string>
+    <string name="chess_piece_black">Negras %1$s</string>
 </resources>

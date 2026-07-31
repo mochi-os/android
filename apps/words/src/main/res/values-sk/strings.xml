@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Zmazať partiu?</string>
     <string name="words_detail_delete_confirm">Odstrániť</string>
     <string name="words_detail_delete_message">Týmto trvalo odstránite hru a jej chat. Túto akciu nemožno vrátiť späť.</string>
+    <string name="words_detail_chat_passed">%1$s vynechal ťah</string>
+    <string name="words_detail_chat_passed_over">%1$s vynechal ťah — koniec hry</string>
+    <string name="words_detail_chat_exchanged">%1$s vymenil kamene</string>
+    <string name="words_move_error_no_tiles">Nie sú položené žiadne kamene</string>
+    <string name="words_move_error_out_of_bounds">Umiestnenie je mimo hracej plochy</string>
+    <string name="words_move_error_square_occupied">Políčko je už obsadené</string>
+    <string name="words_move_error_not_in_line">Kamene musia byť v jednom riadku alebo stĺpci</string>
+    <string name="words_move_error_not_contiguous">Kamene musia nasledovať za sebou (bez medzier)</string>
+    <string name="words_move_error_first_move_centre">Prvý ťah musí pokryť stredové políčko</string>
+    <string name="words_move_error_first_move_two_tiles">Prvý ťah musí položiť aspoň 2 kamene</string>
+    <string name="words_move_error_not_connected">Kamene sa musia napájať na kamene na hracej ploche</string>
+    <string name="words_move_error_no_words">Nevzniklo žiadne platné slovo</string>
 </resources>

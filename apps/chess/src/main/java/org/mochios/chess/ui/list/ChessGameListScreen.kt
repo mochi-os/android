@@ -282,7 +282,6 @@ private fun GameCardGrid(
             items(activeGames, key = { "active-${it.id}" }) { game ->
                 GameCard(
                     game = game,
-                    statusSuffix = null,
                     onClick = { onOpenGame(game.id) },
                 )
             }
@@ -294,7 +293,6 @@ private fun GameCardGrid(
             items(completedGames, key = { "completed-${it.id}" }) { game ->
                 GameCard(
                     game = game,
-                    statusSuffix = game.statusLabel,
                     onClick = { onOpenGame(game.id) },
                 )
             }
@@ -327,7 +325,6 @@ private fun SectionHeader(text: String) {
 @Composable
 private fun GameCard(
     game: ChessSidebarGame,
-    statusSuffix: String?,
     onClick: () -> Unit,
 ) {
     val avatarUrl = if (game.opponentId.isNotBlank()) {
@@ -363,13 +360,6 @@ private fun GameCard(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
-                if (statusSuffix != null) {
-                    Text(
-                        text = statusSuffix,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
             }
         }
     }

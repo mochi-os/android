@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Haqi</string>
     <string name="words_detail_delete_message">Kun taphicha fi haasawa isaa bara baraan ni haqa. Wanti kun deebi\'ee hin dandeenyu.</string>
+    <string name="words_detail_chat_passed">%1$s dabarse</string>
+    <string name="words_detail_chat_passed_over">%1$s dabarse — taphni xumurame</string>
+    <string name="words_detail_chat_exchanged">%1$s taayilota jijjiire</string>
+    <string name="words_move_error_no_tiles">Taayiliin hin kaa\'amne</string>
+    <string name="words_move_error_out_of_bounds">Kaa\'umsi gabatee ala jira</string>
+    <string name="words_move_error_square_occupied">Bakki kun duraanuu qabameera</string>
+    <string name="words_move_error_not_in_line">Taayilonni sarara ykn utubaa tokko keessa kaa\'amuu qabu</string>
+    <string name="words_move_error_not_contiguous">Taayilonni wal duraa duubaan kaa\'amuu qabu (addaan citiinsi hin jiru)</string>
+    <string name="words_move_error_first_move_centre">Tarkaanfiin jalqabaa bakka walakkaa haguuguu qaba</string>
+    <string name="words_move_error_first_move_two_tiles">Tarkaanfiin jalqabaa yoo xiqqaate taayila 2 kaa\'uu qaba</string>
+    <string name="words_move_error_not_connected">Taayilonni taayiloota gabatee irra jiran wajjin walqabachuu qabu</string>
+    <string name="words_move_error_no_words">Jechi sirrii ta\'e hin uumamne</string>
 </resources>

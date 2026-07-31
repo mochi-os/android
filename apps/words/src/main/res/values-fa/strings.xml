@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">بازی حذف شود؟</string>
     <string name="words_detail_delete_confirm">حذف</string>
     <string name="words_detail_delete_message">این کار بازی و گفتگوی آن را برای همیشه حذف می‌کند. این عمل قابل بازگشت نیست.</string>
+    <string name="words_detail_chat_passed">%1$s رد کرد</string>
+    <string name="words_detail_chat_passed_over">%1$s رد کرد — بازی تمام شد</string>
+    <string name="words_detail_chat_exchanged">%1$s مهره‌ها را عوض کرد</string>
+    <string name="words_move_error_no_tiles">هیچ کاشی‌ای قرار داده نشده است</string>
+    <string name="words_move_error_out_of_bounds">چیدمان بیرون از صفحه است</string>
+    <string name="words_move_error_square_occupied">این خانه از قبل اشغال شده است</string>
+    <string name="words_move_error_not_in_line">کاشی‌ها باید در یک سطر یا یک ستون قرار بگیرند</string>
+    <string name="words_move_error_not_contiguous">کاشی‌ها باید پشت سر هم باشند (بدون فاصله)</string>
+    <string name="words_move_error_first_move_centre">حرکت اول باید خانهٔ مرکزی را بپوشاند</string>
+    <string name="words_move_error_first_move_two_tiles">حرکت اول باید دست‌کم ۲ کاشی قرار دهد</string>
+    <string name="words_move_error_not_connected">کاشی‌ها باید به کاشی‌های موجود روی صفحه متصل شوند</string>
+    <string name="words_move_error_no_words">هیچ واژهٔ معتبری ساخته نشد</string>
 </resources>

@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Busak</string>
     <string name="words_detail_delete_message">Iki bakal mbusak game lan obrolane kanthi permanen. Tindakan iki ora bisa dibatalake.</string>
+    <string name="words_detail_chat_passed">%1$s ngliwati giliran</string>
+    <string name="words_detail_chat_passed_over">%1$s ngliwati giliran — dolanan rampung</string>
+    <string name="words_detail_chat_exchanged">%1$s ngijolake ubin</string>
+    <string name="words_move_error_no_tiles">Ora ana ubin sing diselehake</string>
+    <string name="words_move_error_out_of_bounds">Panyelehan ana ing njaba papan</string>
+    <string name="words_move_error_square_occupied">Kothak wis kaisi</string>
+    <string name="words_move_error_not_in_line">Ubin kudu diselehake ing sabaris utawa salajur</string>
+    <string name="words_move_error_not_contiguous">Ubin kudu gandheng (ora ana selane)</string>
+    <string name="words_move_error_first_move_centre">Langkah pisanan kudu nutupi kothak tengah</string>
+    <string name="words_move_error_first_move_two_tiles">Langkah pisanan kudu nyelehake paling ora 2 ubin</string>
+    <string name="words_move_error_not_connected">Ubin kudu nyambung karo ubin sing wis ana ing papan</string>
+    <string name="words_move_error_no_words">Ora ana tembung sah sing kabentuk</string>
 </resources>

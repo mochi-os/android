@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">حذف اللعبة؟</string>
     <string name="words_detail_delete_confirm">حذف</string>
     <string name="words_detail_delete_message">سيؤدي هذا إلى حذف اللعبة ومحادثتها نهائيًا. لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="words_detail_chat_passed">مرّر %1$s</string>
+    <string name="words_detail_chat_passed_over">مرّر %1$s — انتهت اللعبة</string>
+    <string name="words_detail_chat_exchanged">بدّل %1$s الأحرف</string>
+    <string name="words_move_error_no_tiles">لم يتم وضع أي أحرف</string>
+    <string name="words_move_error_out_of_bounds">الوضع خارج حدود اللوحة</string>
+    <string name="words_move_error_square_occupied">المربع مشغول بالفعل</string>
+    <string name="words_move_error_not_in_line">يجب وضع الأحرف في صف واحد أو عمود واحد</string>
+    <string name="words_move_error_not_contiguous">يجب أن تكون الأحرف متجاورة (بدون فراغات)</string>
+    <string name="words_move_error_first_move_centre">يجب أن تغطي الحركة الأولى المربع الأوسط</string>
+    <string name="words_move_error_first_move_two_tiles">يجب أن تضع الحركة الأولى حرفين على الأقل</string>
+    <string name="words_move_error_not_connected">يجب أن تتصل الأحرف بأحرف موجودة على اللوحة</string>
+    <string name="words_move_error_no_words">لم تتكوّن أي كلمات صحيحة</string>
 </resources>

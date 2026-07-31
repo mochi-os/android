@@ -129,24 +129,22 @@ private fun pieceGlyph(piece: Piece): String? {
 }
 
 /**
- * Auto-generated content description for accessibility services. The web
- * delegates to a translated `pieceName(type)` lookup; we keep the Android
- * fallback in English for now since these are announce-only — the
- * full per-piece names are emitted through [pieceLabel] when callers
- * have a string-resource context to resolve from.
+ * Content description announced for an occupied square.
+ *
+ * The board passes neither `decorative` nor a description, so this is what a
+ * TalkBack user hears for all sixty-four squares — and it used to build
+ * "White pawn" from English literals, in every locale. Composed from the
+ * translated piece nouns, matching the web's `White ${pieceName(type)}`.
  */
+@Composable
 private fun defaultPieceContentDescription(piece: Piece): String {
-    val side = if (piece.pieceSide == Side.WHITE) "White" else "Black"
-    val type = when (piece.pieceType) {
-        PieceType.KING -> "king"
-        PieceType.QUEEN -> "queen"
-        PieceType.ROOK -> "rook"
-        PieceType.BISHOP -> "bishop"
-        PieceType.KNIGHT -> "knight"
-        PieceType.PAWN -> "pawn"
-        else -> ""
+    val name = pieceLabel(piece.pieceType)
+    val template = if (piece.pieceSide == Side.WHITE) {
+        org.mochios.chess.R.string.chess_piece_white
+    } else {
+        org.mochios.chess.R.string.chess_piece_black
     }
-    return "$side $type"
+    return androidx.compose.ui.res.stringResource(template, name)
 }
 
 /**

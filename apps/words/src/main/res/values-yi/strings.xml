@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">אויסמעקן</string>
     <string name="words_detail_delete_message">דאָס וועט אויף שטענדיק אויסמעקן דעם שפּיל און זײַן טשאַט. מע קען דעם ניט מבֿטל מאַכן.</string>
+    <string name="words_detail_chat_passed">%1$s האט דורכגעלאזט</string>
+    <string name="words_detail_chat_passed_over">%1$s האט דורכגעלאזט — שפּיל פארטיק</string>
+    <string name="words_detail_chat_exchanged">%1$s האט געביטן פּלאַטלעך</string>
+    <string name="words_move_error_no_tiles">קיין ציגלען זײַנען ניט געשטעלט</string>
+    <string name="words_move_error_out_of_bounds">די שטעלונג איז אַרויס פֿון ברעט</string>
+    <string name="words_move_error_square_occupied">דאָס קעסטל איז שוין פֿאַרנומען</string>
+    <string name="words_move_error_not_in_line">די ציגלען מוזן שטיין אין איין רייע אָדער איין זײַל</string>
+    <string name="words_move_error_not_contiguous">די ציגלען מוזן שטיין איינע לעבן דער אַנדערער (אָן ליידיקע קעסטלעך)</string>
+    <string name="words_move_error_first_move_centre">דער ערשטער גאַנג מוז דעקן דאָס מיטלסטע קעסטל</string>
+    <string name="words_move_error_first_move_two_tiles">דער ערשטער גאַנג מוז שטעלן לפּחות 2 ציגלען</string>
+    <string name="words_move_error_not_connected">די ציגלען מוזן זיך פֿאַרבינדן מיט די ציגלען אויפֿן ברעט</string>
+    <string name="words_move_error_no_words">קיין גילטיקע ווערטער זײַנען ניט געשאַפֿן געוואָרן</string>
 </resources>

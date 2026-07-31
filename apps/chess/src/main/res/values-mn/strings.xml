@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s %2$s авлаа</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Цагаан %1$s</string>
+    <string name="chess_piece_black">Хар %1$s</string>
 </resources>

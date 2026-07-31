@@ -101,7 +101,6 @@ fun ChessSidebar(
                     items(activeGames, key = { "active-${it.id}" }) { row ->
                         SidebarGameRow(
                             game = row,
-                            statusSuffix = null,
                             onClick = { onOpenGame(row.id) },
                         )
                     }
@@ -113,7 +112,6 @@ fun ChessSidebar(
                     items(completedGames, key = { "completed-${it.id}" }) { row ->
                         SidebarGameRow(
                             game = row,
-                            statusSuffix = row.statusLabel,
                             onClick = { onOpenGame(row.id) },
                         )
                     }
@@ -171,7 +169,6 @@ private fun SidebarSectionHeader(text: String) {
 @Composable
 private fun SidebarGameRow(
     game: ChessSidebarGame,
-    statusSuffix: String?,
     onClick: () -> Unit,
 ) {
     val avatarUrl = if (game.opponentId.isNotBlank()) {
@@ -194,7 +191,7 @@ private fun SidebarGameRow(
             size = 28.dp,
         )
         Text(
-            text = if (statusSuffix != null) "${game.opponentName} ($statusSuffix)" else game.opponentName,
+            text = game.opponentName,
             style = MaterialTheme.typography.bodyMedium,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
@@ -214,9 +211,6 @@ private fun SidebarGameRow(
  *  - [opponentId] is the entity ID of the other player (the side that isn't
  *    the caller).
  *  - [opponentName] is the resolved display name of [opponentId].
- *  - [statusLabel] is the lower-cased status word (`"checkmate"`,
- *    `"stalemate"`, `"draw"`, `"resigned"`) on completed games, null for
- *    active games. Web's `(${game.status})` translates here.
  *  - [updated] is the source row's `updated` timestamp, retained for the
  *    sort-stable secondary key.
  */
@@ -224,7 +218,6 @@ data class ChessSidebarGame(
     val id: String,
     val opponentId: String,
     val opponentName: String,
-    val statusLabel: String? = null,
     val updated: Long = 0,
 )
 

@@ -190,47 +190,57 @@ enum class DraftStatus { INVALID_LOCAL, READY }
 /**
  * Top-level draft state surfaced to the composer. When the placements
  * make a legal move ([status] == [DraftStatus.READY]) the [result] is
- * populated. When they don't ([INVALID_LOCAL]) the [errorMessage] holds
- * the human-readable reason and [result] is null.
+ * populated. When they don't ([INVALID_LOCAL]) the [error] holds the reason
+ * and [result] is null.
  *
- * Empty placements list yields READY+null result (the composer treats
- * empty as a non-error neutral state; the TS engine throws but the
- * `deriveMoveDraft` wrapper in the TS lib reshapes that to an `empty`
- * status — Kotlin collapses to `INVALID_LOCAL` for consistency, and the
- * caller's empty-check happens before we get here).
+ * An empty placements list yields INVALID_LOCAL with [MoveError.NO_TILES_PLACED].
+ * The KDoc used to claim READY, contradicting the code directly below it.
  */
+/**
+ * Why a draft is invalid. An enum rather than a message, because the engine
+ * has no string resources: it used to throw English prose that MoveComposer
+ * rendered verbatim, so every locale saw "Tiles must be contiguous (no gaps)"
+ * in English. The composable resolves this to a translated string.
+ */
+enum class MoveError {
+    NO_TILES_PLACED,
+    OUT_OF_BOUNDS,
+    SQUARE_OCCUPIED,
+    NOT_IN_LINE,
+    NOT_CONTIGUOUS,
+    FIRST_MOVE_MUST_COVER_CENTRE,
+    FIRST_MOVE_NEEDS_TWO_TILES,
+    NOT_CONNECTED,
+    NO_VALID_WORDS,
+}
+
 data class MoveDraft(
     val status: DraftStatus,
-    val errorMessage: String?,
+    val error: MoveError?,
     val result: DraftResult?,
 )
 
 // ─── Validation + scoring ─────────────────────────────────────────────
 
-private class MoveValidationException(message: String) : RuntimeException(message)
+private class MoveValidationException(val error: MoveError) : RuntimeException(error.name)
 
 /**
  * Public entry point used by the move composer. Returns a [MoveDraft] —
  * never throws — so the composer can render preview score / words while
  * the user is mid-placement.
- *
- * [invalidMoveFallback] is the generic error string shown when scoring
- * fails for a reason that doesn't have a more specific message (matches
- * the TS `deriveMoveDraft` second arg).
  */
 fun deriveMoveDraft(
     board: Board,
     placements: List<Placement>,
-    invalidMoveFallback: String,
 ): MoveDraft {
     if (placements.isEmpty()) {
-        return MoveDraft(DraftStatus.INVALID_LOCAL, invalidMoveFallback, null)
+        return MoveDraft(DraftStatus.INVALID_LOCAL, MoveError.NO_TILES_PLACED, null)
     }
     return try {
         val result = validateAndScoreMove(board, placements)
         MoveDraft(DraftStatus.READY, null, result)
     } catch (e: MoveValidationException) {
-        MoveDraft(DraftStatus.INVALID_LOCAL, e.message ?: invalidMoveFallback, null)
+        MoveDraft(DraftStatus.INVALID_LOCAL, e.error, null)
     }
 }
 
@@ -250,15 +260,15 @@ fun deriveMoveDraft(
  *  7. 50-point bingo bonus when all 7 tiles are used in one move.
  */
 fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult {
-    if (placements.isEmpty()) throw MoveValidationException("No tiles placed")
+    if (placements.isEmpty()) throw MoveValidationException(MoveError.NO_TILES_PLACED)
 
     // Bounds + occupancy check.
     for (p in placements) {
         if (p.row < 0 || p.row >= BOARD_SIZE || p.col < 0 || p.col >= BOARD_SIZE) {
-            throw MoveValidationException("Placement out of bounds")
+            throw MoveValidationException(MoveError.OUT_OF_BOUNDS)
         }
         if (board[p.row, p.col] != '.') {
-            throw MoveValidationException("Square already occupied")
+            throw MoveValidationException(MoveError.SQUARE_OCCUPIED)
         }
     }
 
@@ -266,7 +276,7 @@ fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult
     val rows = placements.map { it.row }.toSet()
     val cols = placements.map { it.col }.toSet()
     if (rows.size > 1 && cols.size > 1) {
-        throw MoveValidationException("Tiles must be placed in a single row or column")
+        throw MoveValidationException(MoveError.NOT_IN_LINE)
     }
     val isHorizontal = rows.size == 1
 
@@ -293,7 +303,7 @@ fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult
             val r = if (isHorizontal) fixedAxis else i
             val c = if (isHorizontal) i else fixedAxis
             if (newBoard[r, c] == '.') {
-                throw MoveValidationException("Tiles must be contiguous (no gaps)")
+                throw MoveValidationException(MoveError.NOT_CONTIGUOUS)
             }
         }
     }
@@ -301,8 +311,8 @@ fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult
     // Connectivity check: first move covers centre + ≥2 tiles; else connects.
     if (isBoardEmpty(board)) {
         val coversCenter = placements.any { it.row == 7 && it.col == 7 }
-        if (!coversCenter) throw MoveValidationException("First move must cover the center square")
-        if (placements.size < 2) throw MoveValidationException("First move must place at least 2 tiles")
+        if (!coversCenter) throw MoveValidationException(MoveError.FIRST_MOVE_MUST_COVER_CENTRE)
+        if (placements.size < 2) throw MoveValidationException(MoveError.FIRST_MOVE_NEEDS_TWO_TILES)
     } else {
         var connected = false
         outer@ for (p in placements) {
@@ -321,7 +331,7 @@ fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult
                 }
             }
         }
-        if (!connected) throw MoveValidationException("Tiles must connect to existing tiles on the board")
+        if (!connected) throw MoveValidationException(MoveError.NOT_CONNECTED)
     }
 
     // Find the main word along the placement axis, anchored at the first
@@ -337,7 +347,7 @@ fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult
             ?.let { if (it.word.length >= 2) wordsFormed.add(it) }
     }
 
-    if (wordsFormed.isEmpty()) throw MoveValidationException("No valid words formed")
+    if (wordsFormed.isEmpty()) throw MoveValidationException(MoveError.NO_VALID_WORDS)
 
     var totalScore = wordsFormed.sumOf { it.score }
     if (placements.size == 7) totalScore += 50

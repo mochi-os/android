@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s သည် %2$s ကို ယူသည်</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">အဖြူ %1$s</string>
+    <string name="chess_piece_black">အနက် %1$s</string>
 </resources>

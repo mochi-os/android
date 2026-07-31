@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s paņēma %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Baltais %1$s</string>
+    <string name="chess_piece_black">Melnais %1$s</string>
 </resources>

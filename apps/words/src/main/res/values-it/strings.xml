@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Eliminare la partita?</string>
     <string name="words_detail_delete_confirm">Elimina</string>
     <string name="words_detail_delete_message">Questa azione eliminerà definitivamente la partita e la relativa chat. Questa azione non può essere annullata.</string>
+    <string name="words_detail_chat_passed">%1$s ha passato</string>
+    <string name="words_detail_chat_passed_over">%1$s ha passato — partita finita</string>
+    <string name="words_detail_chat_exchanged">%1$s ha scambiato tessere</string>
+    <string name="words_move_error_no_tiles">Nessuna tessera posizionata</string>
+    <string name="words_move_error_out_of_bounds">Posizionamento fuori dal tabellone</string>
+    <string name="words_move_error_square_occupied">Casella già occupata</string>
+    <string name="words_move_error_not_in_line">Le tessere devono stare su una sola riga o colonna</string>
+    <string name="words_move_error_not_contiguous">Le tessere devono essere adiacenti (senza spazi)</string>
+    <string name="words_move_error_first_move_centre">La prima mossa deve coprire la casella centrale</string>
+    <string name="words_move_error_first_move_two_tiles">La prima mossa deve posizionare almeno 2 tessere</string>
+    <string name="words_move_error_not_connected">Le tessere devono collegarsi a quelle già sul tabellone</string>
+    <string name="words_move_error_no_words">Nessuna parola valida formata</string>
 </resources>

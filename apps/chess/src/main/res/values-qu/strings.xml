@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s %2$sta hapirqan</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Yuraq %1$s</string>
+    <string name="chess_piece_black">Yana %1$s</string>
 </resources>

@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">खेल हटाएँ?</string>
     <string name="words_detail_delete_confirm">हटाएँ</string>
     <string name="words_detail_delete_message">यह गेम और उसकी चैट को स्थायी रूप से हटा देगा। इसे वापस नहीं लाया जा सकता।</string>
+    <string name="words_detail_chat_passed">%1$s ने पास किया</string>
+    <string name="words_detail_chat_passed_over">%1$s ने पास किया — खेल समाप्त</string>
+    <string name="words_detail_chat_exchanged">%1$s ने टाइलें बदलीं</string>
+    <string name="words_move_error_no_tiles">कोई टाइल नहीं रखी गई</string>
+    <string name="words_move_error_out_of_bounds">रखी गई टाइलें बोर्ड से बाहर हैं</string>
+    <string name="words_move_error_square_occupied">यह खाना पहले से भरा है</string>
+    <string name="words_move_error_not_in_line">टाइलें एक ही पंक्ति या स्तंभ में रखनी होंगी</string>
+    <string name="words_move_error_not_contiguous">टाइलें लगातार होनी चाहिए (कोई खाली जगह नहीं)</string>
+    <string name="words_move_error_first_move_centre">पहली चाल में बीच का खाना ढकना ज़रूरी है</string>
+    <string name="words_move_error_first_move_two_tiles">पहली चाल में कम से कम 2 टाइलें रखनी होंगी</string>
+    <string name="words_move_error_not_connected">टाइलें बोर्ड पर मौजूद टाइलों से जुड़ी होनी चाहिए</string>
+    <string name="words_move_error_no_words">कोई मान्य शब्द नहीं बना</string>
 </resources>

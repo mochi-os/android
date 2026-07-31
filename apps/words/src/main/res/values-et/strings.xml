@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Kustuta partii?</string>
     <string name="words_detail_delete_confirm">Kustuta</string>
     <string name="words_detail_delete_message">See kustutab mängu ja selle vestluse jäädavalt. Seda ei saa tagasi võtta.</string>
+    <string name="words_detail_chat_passed">%1$s jättis käigu vahele</string>
+    <string name="words_detail_chat_passed_over">%1$s jättis käigu vahele — mäng läbi</string>
+    <string name="words_detail_chat_exchanged">%1$s vahetas klotse</string>
+    <string name="words_move_error_no_tiles">Ühtegi klotsi pole asetatud</string>
+    <string name="words_move_error_out_of_bounds">Asetus jääb mängulaualt välja</string>
+    <string name="words_move_error_square_occupied">Ruut on juba hõivatud</string>
+    <string name="words_move_error_not_in_line">Klotsid tuleb asetada ühte ritta või veergu</string>
+    <string name="words_move_error_not_contiguous">Klotsid peavad olema järjestikused (ilma tühikuteta)</string>
+    <string name="words_move_error_first_move_centre">Esimene käik peab katma keskmise ruudu</string>
+    <string name="words_move_error_first_move_two_tiles">Esimene käik peab asetama vähemalt 2 klotsi</string>
+    <string name="words_move_error_not_connected">Klotsid peavad ühenduma mängulaual olevate klotsidega</string>
+    <string name="words_move_error_no_words">Ühtegi sobivat sõna ei moodustunud</string>
 </resources>

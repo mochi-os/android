@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s %2$s എടുത്തു</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">വെളുപ്പ് %1$s</string>
+    <string name="chess_piece_black">കറുപ്പ് %1$s</string>
 </resources>

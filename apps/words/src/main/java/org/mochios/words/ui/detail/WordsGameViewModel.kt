@@ -534,7 +534,7 @@ class WordsGameViewModel @Inject constructor(
         val game = state.game ?: return
         val board = parseBoard(game.board)
         val fallback = "Invalid move"
-        val draft = deriveMoveDraft(board, state.pendingPlacements, fallback)
+        val draft = deriveMoveDraft(board, state.pendingPlacements)
         if (draft.status != DraftStatus.READY) return
         val result = draft.result ?: return
 
@@ -708,7 +708,7 @@ class WordsGameViewModel @Inject constructor(
         }
 
         val board = parseBoard(game.board)
-        val draft = deriveMoveDraft(board, state.pendingPlacements, "Invalid move")
+        val draft = deriveMoveDraft(board, state.pendingPlacements)
         if (draft.status != DraftStatus.READY) {
             _uiState.update {
                 it.copy(

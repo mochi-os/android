@@ -70,4 +70,6 @@
     <string name="chess_move_capture">Kinuha ni %1$s ang %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Puting %1$s</string>
+    <string name="chess_piece_black">Itim na %1$s</string>
 </resources>

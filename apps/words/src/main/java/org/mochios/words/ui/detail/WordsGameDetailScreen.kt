@@ -285,9 +285,8 @@ private fun GameDetailContent(
 
     // Derive board, draft, scores from the engine.
     val board = remember(game.board) { parseBoard(game.board) }
-    val invalidMoveFallback = stringResource(R.string.words_detail_invalid_move)
-    val moveDraft: MoveDraft = remember(board, state.pendingPlacements, invalidMoveFallback) {
-        deriveMoveDraft(board, state.pendingPlacements, invalidMoveFallback)
+    val moveDraft: MoveDraft = remember(board, state.pendingPlacements) {
+        deriveMoveDraft(board, state.pendingPlacements)
     }
     val draftWords: List<Pair<String, Int>> = remember(moveDraft) {
         if (moveDraft.status == DraftStatus.READY) {
@@ -857,10 +856,23 @@ private fun GameChatColumn(
 
 @Composable
 private fun WordsMoveRow(msg: GameChatMessage, isSent: Boolean) {
-    val text = if (isSent) {
-        stringResource(R.string.words_detail_chat_you_played, msg.body)
-    } else {
-        stringResource(R.string.words_detail_chat_player_played, msg.name, msg.body)
+    // Passes and exchanges are stored as type "move" too, and the body the
+    // server stores is already a sentence ("Alice passed") in server English.
+    // Wrapping every row in "played" produced "You played Alice passed"; the
+    // event marker is what distinguishes them, exactly as the web does.
+    // Rows with no marker are legacy and keep the old rendering rather than
+    // being guessed at.
+    val actor = if (isSent) stringResource(R.string.words_detail_label_you) else msg.name
+    val marker = msg.event
+    val text = when {
+        marker == "pass" -> stringResource(R.string.words_detail_chat_passed, actor)
+        marker == "pass:over" -> stringResource(R.string.words_detail_chat_passed_over, actor)
+        // The marker carries the tile count, but rendering it needs a
+        // count-inflected noun in every locale's plural categories, so the
+        // sentence omits it — the same call the web made, for the same reason.
+        marker.startsWith("exchange:") -> stringResource(R.string.words_detail_chat_exchanged, actor)
+        isSent -> stringResource(R.string.words_detail_chat_you_played, msg.body)
+        else -> stringResource(R.string.words_detail_chat_player_played, msg.name, msg.body)
     }
     Row(
         modifier = Modifier

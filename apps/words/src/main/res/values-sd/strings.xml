@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">ختم ڪريو</string>
     <string name="words_detail_delete_message">هي عمل گيم ۽ ان جي چيٽ کي مستقل طور ختم ڪندو. هي عمل واپس نه ٿي سگهندو.</string>
+    <string name="words_detail_chat_passed">%1$s پاس ڪيو</string>
+    <string name="words_detail_chat_passed_over">%1$s پاس ڪيو — راند ختم</string>
+    <string name="words_detail_chat_exchanged">%1$s ٽائلون مٽايون</string>
+    <string name="words_move_error_no_tiles">ڪوبه ٽائل نه رکيو ويو</string>
+    <string name="words_move_error_out_of_bounds">رکڻ بورڊ کان ٻاهر آهي</string>
+    <string name="words_move_error_square_occupied">هي خانو اڳ ۾ ئي ڀريل آهي</string>
+    <string name="words_move_error_not_in_line">ٽائلز هڪ ئي قطار يا ڪالم ۾ رکڻ گهرجن</string>
+    <string name="words_move_error_not_contiguous">ٽائلز لڳاتار هجڻ گهرجن (ڪا خالي جڳهه نه)</string>
+    <string name="words_move_error_first_move_centre">پهرين چال ۾ وچ وارو خانو ڍڪڻ لازمي آهي</string>
+    <string name="words_move_error_first_move_two_tiles">پهرين چال ۾ گهٽ ۾ گهٽ 2 ٽائلز رکڻ لازمي آهن</string>
+    <string name="words_move_error_not_connected">ٽائلز بورڊ تي موجود ٽائلز سان ڳنڍجڻ گهرجن</string>
+    <string name="words_move_error_no_words">ڪوبه صحيح لفظ نه ٺهيو</string>
 </resources>

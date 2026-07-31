@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Slet parti?</string>
     <string name="words_detail_delete_confirm">Slet</string>
     <string name="words_detail_delete_message">Dette sletter spillet og dets chat permanent. Dette kan ikke fortrydes.</string>
+    <string name="words_detail_chat_passed">%1$s meldte pas</string>
+    <string name="words_detail_chat_passed_over">%1$s meldte pas — spillet er slut</string>
+    <string name="words_detail_chat_exchanged">%1$s byttede brikker</string>
+    <string name="words_move_error_no_tiles">Ingen brikker lagt</string>
+    <string name="words_move_error_out_of_bounds">Placeringen er uden for brættet</string>
+    <string name="words_move_error_square_occupied">Feltet er allerede optaget</string>
+    <string name="words_move_error_not_in_line">Brikker skal lægges i én række eller kolonne</string>
+    <string name="words_move_error_not_contiguous">Brikker skal ligge i forlængelse af hinanden (uden huller)</string>
+    <string name="words_move_error_first_move_centre">Første træk skal dække midterfeltet</string>
+    <string name="words_move_error_first_move_two_tiles">Første træk skal lægge mindst 2 brikker</string>
+    <string name="words_move_error_not_connected">Brikker skal forbindes med brikker på brættet</string>
+    <string name="words_move_error_no_words">Der blev ikke dannet gyldige ord</string>
 </resources>

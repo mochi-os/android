@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s elvette: %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Világos %1$s</string>
+    <string name="chess_piece_black">Sötét %1$s</string>
 </resources>

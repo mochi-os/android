@@ -68,5 +68,7 @@
     <string name="chess_piece_bishop">象</string>
     <string name="chess_piece_knight">馬</string>
     <string name="chess_piece_pawn">兵</string>
+    <string name="chess_piece_white">白方%1$s</string>
+    <string name="chess_piece_black">黑方%1$s</string>
 
 </resources>

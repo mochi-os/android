@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">Не в сети</string>
     <string name="chess_ws_failed">Ошибка подключения</string>
     <string name="chess_ws_reconnecting">Повторное подключение…</string>
+    <string name="chess_piece_white">Белый %1$s</string>
+    <string name="chess_piece_black">Чёрный %1$s</string>
 </resources>

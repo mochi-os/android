@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Poistetaanko peli?</string>
     <string name="words_detail_delete_confirm">Poista</string>
     <string name="words_detail_delete_message">Tämä poistaa pelin ja sen keskustelun pysyvästi. Tätä ei voi peruuttaa.</string>
+    <string name="words_detail_chat_passed">%1$s passasi</string>
+    <string name="words_detail_chat_passed_over">%1$s passasi — peli päättyi</string>
+    <string name="words_detail_chat_exchanged">%1$s vaihtoi laattoja</string>
+    <string name="words_move_error_no_tiles">Ei asetettuja laattoja</string>
+    <string name="words_move_error_out_of_bounds">Asettelu on laudan ulkopuolella</string>
+    <string name="words_move_error_square_occupied">Ruutu on jo varattu</string>
+    <string name="words_move_error_not_in_line">Laatat on asetettava yhdelle riville tai sarakkeeseen</string>
+    <string name="words_move_error_not_contiguous">Laattojen on oltava peräkkäin (ei aukkoja)</string>
+    <string name="words_move_error_first_move_centre">Ensimmäisen siirron on peitettävä keskiruutu</string>
+    <string name="words_move_error_first_move_two_tiles">Ensimmäisessä siirrossa on asetettava vähintään 2 laattaa</string>
+    <string name="words_move_error_not_connected">Laattojen on liityttävä laudalla oleviin laattoihin</string>
+    <string name="words_move_error_no_words">Yhtään kelvollista sanaa ei muodostunut</string>
 </resources>

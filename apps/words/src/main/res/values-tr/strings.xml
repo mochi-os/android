@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Oyun silinsin mi?</string>
     <string name="words_detail_delete_confirm">Sil</string>
     <string name="words_detail_delete_message">Bu işlem oyunu ve sohbetini kalıcı olarak siler. Bu işlem geri alınamaz.</string>
+    <string name="words_detail_chat_passed">%1$s pas geçti</string>
+    <string name="words_detail_chat_passed_over">%1$s pas geçti — oyun bitti</string>
+    <string name="words_detail_chat_exchanged">%1$s taşları değiştirdi</string>
+    <string name="words_move_error_no_tiles">Hiç taş yerleştirilmedi</string>
+    <string name="words_move_error_out_of_bounds">Yerleştirme tahtanın dışında</string>
+    <string name="words_move_error_square_occupied">Kare zaten dolu</string>
+    <string name="words_move_error_not_in_line">Taşlar tek bir satıra veya sütuna yerleştirilmeli</string>
+    <string name="words_move_error_not_contiguous">Taşlar bitişik olmalı (boşluk olmamalı)</string>
+    <string name="words_move_error_first_move_centre">İlk hamle orta kareyi kapsamalı</string>
+    <string name="words_move_error_first_move_two_tiles">İlk hamlede en az 2 taş oynanmalı</string>
+    <string name="words_move_error_not_connected">Taşlar tahtadaki mevcut taşlara bağlanmalı</string>
+    <string name="words_move_error_no_words">Geçerli kelime oluşmadı</string>
 </resources>

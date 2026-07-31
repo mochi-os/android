@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">ਮਿਟਾਓ</string>
     <string name="words_detail_delete_message">ਇਹ ਗੇਮ ਅਤੇ ਇਸਦੀ ਚੈਟ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾ ਦੇਵੇਗਾ। ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਵਾਪਸ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ।</string>
+    <string name="words_detail_chat_passed">%1$s ਨੇ ਪਾਸ ਕੀਤਾ</string>
+    <string name="words_detail_chat_passed_over">%1$s ਨੇ ਪਾਸ ਕੀਤਾ — ਖੇਡ ਖਤਮ</string>
+    <string name="words_detail_chat_exchanged">%1$s ਨੇ ਟਾਈਲਾਂ ਬਦਲੀਆਂ</string>
+    <string name="words_move_error_no_tiles">ਕੋਈ ਟਾਈਲ ਨਹੀਂ ਰੱਖੀ ਗਈ</string>
+    <string name="words_move_error_out_of_bounds">ਰੱਖਣ ਦੀ ਥਾਂ ਬੋਰਡ ਤੋਂ ਬਾਹਰ ਹੈ</string>
+    <string name="words_move_error_square_occupied">ਇਹ ਖਾਨਾ ਪਹਿਲਾਂ ਹੀ ਭਰਿਆ ਹੋਇਆ ਹੈ</string>
+    <string name="words_move_error_not_in_line">ਟਾਈਲਾਂ ਇੱਕੋ ਕਤਾਰ ਜਾਂ ਕਾਲਮ ਵਿੱਚ ਰੱਖਣੀਆਂ ਲਾਜ਼ਮੀ ਹਨ</string>
+    <string name="words_move_error_not_contiguous">ਟਾਈਲਾਂ ਲਗਾਤਾਰ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ (ਕੋਈ ਖਾਲੀ ਥਾਂ ਨਹੀਂ)</string>
+    <string name="words_move_error_first_move_centre">ਪਹਿਲੀ ਚਾਲ ਵਿੱਚ ਵਿਚਕਾਰਲਾ ਖਾਨਾ ਢੱਕਣਾ ਲਾਜ਼ਮੀ ਹੈ</string>
+    <string name="words_move_error_first_move_two_tiles">ਪਹਿਲੀ ਚਾਲ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ 2 ਟਾਈਲਾਂ ਰੱਖਣੀਆਂ ਲਾਜ਼ਮੀ ਹਨ</string>
+    <string name="words_move_error_not_connected">ਟਾਈਲਾਂ ਬੋਰਡ ਉੱਤੇ ਮੌਜੂਦ ਟਾਈਲਾਂ ਨਾਲ ਜੁੜਨੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ</string>
+    <string name="words_move_error_no_words">ਕੋਈ ਵੈਧ ਸ਼ਬਦ ਨਹੀਂ ਬਣਿਆ</string>
 </resources>

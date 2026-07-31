@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import org.mochios.words.engine.DraftStatus
 import org.mochios.words.R
 import org.mochios.words.engine.MoveDraft
+import org.mochios.words.engine.MoveError
 import org.mochios.words.ui.detail.ValidState
 
 /**
@@ -161,7 +162,9 @@ private fun RowScope.ComposerRow(
 
     val invalidLocal = moveDraft != null &&
         moveDraft.status == DraftStatus.INVALID_LOCAL
-    val invalidMsg = moveDraft?.errorMessage
+    // The engine returns a reason, not prose — it has no string resources, and
+    // returning English here put untranslated text in front of every locale.
+    val invalidMsg = moveDraft?.error?.let { stringResource(moveErrorLabel(it)) }
 
     Row(
         modifier = Modifier
@@ -258,4 +261,18 @@ private fun WordChip(word: String, score: Int, state: ValidState) {
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
+}
+
+/** String resource for a [MoveError]; see WordsEngine's MoveError. */
+@androidx.annotation.StringRes
+private fun moveErrorLabel(error: MoveError): Int = when (error) {
+    MoveError.NO_TILES_PLACED -> R.string.words_move_error_no_tiles
+    MoveError.OUT_OF_BOUNDS -> R.string.words_move_error_out_of_bounds
+    MoveError.SQUARE_OCCUPIED -> R.string.words_move_error_square_occupied
+    MoveError.NOT_IN_LINE -> R.string.words_move_error_not_in_line
+    MoveError.NOT_CONTIGUOUS -> R.string.words_move_error_not_contiguous
+    MoveError.FIRST_MOVE_MUST_COVER_CENTRE -> R.string.words_move_error_first_move_centre
+    MoveError.FIRST_MOVE_NEEDS_TWO_TILES -> R.string.words_move_error_first_move_two_tiles
+    MoveError.NOT_CONNECTED -> R.string.words_move_error_not_connected
+    MoveError.NO_VALID_WORDS -> R.string.words_move_error_no_words
 }

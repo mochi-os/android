@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">Luring</string>
     <string name="chess_ws_failed">Sambungan gagal</string>
     <string name="chess_ws_reconnecting">Menyambungkan ulang…</string>
+    <string name="chess_piece_white">%1$s Putih</string>
+    <string name="chess_piece_black">%1$s Hitam</string>
 </resources>

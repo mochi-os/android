@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Wischuy</string>
     <string name="words_detail_delete_message">Kayqa pukllayta rimanakuywantin wiñaypaq wischun. Kayta mana kutichinachu.</string>
+    <string name="words_detail_chat_passed">%1$s pasarqan</string>
+    <string name="words_detail_chat_passed_over">%1$s pasarqan — pukllay tukusqa</string>
+    <string name="words_detail_chat_exchanged">%1$s tuilakunata chalarqan</string>
+    <string name="words_move_error_no_tiles">Mana ima fichapas churasqachu</string>
+    <string name="words_move_error_out_of_bounds">Churayqa tablero hawapi kachkan</string>
+    <string name="words_move_error_square_occupied">Kay casillaqa ña hunt\'asqaña</string>
+    <string name="words_move_error_not_in_line">Fichakunaqa huk siqipi utaq huk columnapi churasqa kanan</string>
+    <string name="words_move_error_not_contiguous">Fichakunaqa kuska kanan, mana ch\'usaq kaspa</string>
+    <string name="words_move_error_first_move_centre">Ñawpaq puriyqa chawpi casillata qatanan</string>
+    <string name="words_move_error_first_move_two_tiles">Ñawpaq puriypi iskay ficha utaq aswan churana</string>
+    <string name="words_move_error_not_connected">Fichakunaqa tableropi kaq fichakunawan tinkisqa kanan</string>
+    <string name="words_move_error_no_words">Mana allin simi paqarichisqachu</string>
 </resources>

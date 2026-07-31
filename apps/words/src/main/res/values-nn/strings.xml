@@ -72,4 +72,16 @@
     <string name="words_detail_delete_title">Slette parti?</string>
     <string name="words_detail_delete_confirm">Slett</string>
     <string name="words_detail_delete_message">Dette slettar spelet og praten permanent. Denne handlinga kan ikkje angrast.</string>
+    <string name="words_detail_chat_passed">%1$s melde pass</string>
+    <string name="words_detail_chat_passed_over">%1$s melde pass — spelet er over</string>
+    <string name="words_detail_chat_exchanged">%1$s bytte brikker</string>
+    <string name="words_move_error_no_tiles">Ingen brikker lagde ut</string>
+    <string name="words_move_error_out_of_bounds">Plasseringa er utanfor brettet</string>
+    <string name="words_move_error_square_occupied">Ruta er alt oppteken</string>
+    <string name="words_move_error_not_in_line">Brikkene må leggjast i éi rad eller kolonne</string>
+    <string name="words_move_error_not_contiguous">Brikkene må liggje inntil kvarandre (ingen hol)</string>
+    <string name="words_move_error_first_move_centre">Fyrste trekket må dekkje midtruta</string>
+    <string name="words_move_error_first_move_two_tiles">Fyrste trekket må leggje minst 2 brikker</string>
+    <string name="words_move_error_not_connected">Brikkene må henge saman med brikker på brettet</string>
+    <string name="words_move_error_no_words">Ingen gyldige ord vart danna</string>
 </resources>

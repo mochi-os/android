@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">离线</string>
     <string name="chess_ws_failed">连接失败</string>
     <string name="chess_ws_reconnecting">重新连接…</string>
+    <string name="chess_piece_white">白方%1$s</string>
+    <string name="chess_piece_black">黑方%1$s</string>
 </resources>

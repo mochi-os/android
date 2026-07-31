@@ -166,12 +166,10 @@ class ChessGameListViewModel @Inject constructor(
 
     private fun Game.toSidebarRow(identity: String): ChessSidebarGame {
         val routeId = fingerprint?.takeIf { it.isNotBlank() } ?: id
-        val statusLabel = if (status == "active") null else status
         return ChessSidebarGame(
             id = routeId,
             opponentId = opponentId(identity),
             opponentName = opponentName(identity),
-            statusLabel = statusLabel,
             updated = updated,
         )
     }

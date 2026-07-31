@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Жою</string>
     <string name="words_detail_delete_message">Бұл ойын мен оның чатын біржола жояды. Бұл әрекетті болдырмауға болмайды.</string>
+    <string name="words_detail_chat_passed">%1$s жүрісін өткізіп жіберді</string>
+    <string name="words_detail_chat_passed_over">%1$s жүрісін өткізіп жіберді — ойын аяқталды</string>
+    <string name="words_detail_chat_exchanged">%1$s тастарды ауыстырды</string>
+    <string name="words_move_error_no_tiles">Тастар қойылмаған</string>
+    <string name="words_move_error_out_of_bounds">Орналастыру тақтадан тыс</string>
+    <string name="words_move_error_square_occupied">Шаршы бос емес</string>
+    <string name="words_move_error_not_in_line">Тастар бір жолға немесе бағанға қойылуы керек</string>
+    <string name="words_move_error_not_contiguous">Тастар қатар тұруы керек (бос орынсыз)</string>
+    <string name="words_move_error_first_move_centre">Бірінші жүріс ортаңғы шаршыны қамтуы керек</string>
+    <string name="words_move_error_first_move_two_tiles">Бірінші жүрісте кемінде 2 тас қойылуы керек</string>
+    <string name="words_move_error_not_connected">Тастар тақтадағы бар тастарға жалғануы керек</string>
+    <string name="words_move_error_no_words">Жарамды сөз құралмады</string>
 </resources>

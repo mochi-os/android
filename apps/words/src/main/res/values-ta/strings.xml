@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">நீக்கு</string>
     <string name="words_detail_delete_message">இது விளையாட்டையும் அதன் அரட்டையையும் நிரந்தரமாக நீக்கும். இந்தச் செயலை மாற்ற முடியாது.</string>
+    <string name="words_detail_chat_passed">%1$s தவிர்த்தார்</string>
+    <string name="words_detail_chat_passed_over">%1$s தவிர்த்தார் — ஆட்டம் முடிந்தது</string>
+    <string name="words_detail_chat_exchanged">%1$s டைல்களை மாற்றினார்</string>
+    <string name="words_move_error_no_tiles">ஓடுகள் எதுவும் வைக்கப்படவில்லை</string>
+    <string name="words_move_error_out_of_bounds">வைப்பு பலகைக்கு வெளியே உள்ளது</string>
+    <string name="words_move_error_square_occupied">கட்டம் ஏற்கனவே நிரம்பியுள்ளது</string>
+    <string name="words_move_error_not_in_line">ஓடுகள் ஒரே வரிசையிலோ நெடுவரிசையிலோ வைக்கப்பட வேண்டும்</string>
+    <string name="words_move_error_not_contiguous">ஓடுகள் தொடர்ச்சியாக இருக்க வேண்டும் (இடைவெளி கூடாது)</string>
+    <string name="words_move_error_first_move_centre">முதல் நகர்வு மையக் கட்டத்தை உள்ளடக்க வேண்டும்</string>
+    <string name="words_move_error_first_move_two_tiles">முதல் நகர்வில் குறைந்தது 2 ஓடுகள் வைக்க வேண்டும்</string>
+    <string name="words_move_error_not_connected">ஓடுகள் பலகையில் உள்ள ஓடுகளுடன் இணைய வேண்டும்</string>
+    <string name="words_move_error_no_words">செல்லுபடியாகும் சொற்கள் எதுவும் உருவாகவில்லை</string>
 </resources>

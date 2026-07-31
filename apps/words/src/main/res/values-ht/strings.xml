@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Efase</string>
     <string name="words_detail_delete_message">Sa a ap efase jwèt la ak chat li pou tout tan. Aksyon sa a pa ka anile.</string>
+    <string name="words_detail_chat_passed">%1$s pase</string>
+    <string name="words_detail_chat_passed_over">%1$s pase — jwèt fini</string>
+    <string name="words_detail_chat_exchanged">%1$s chanje til yo</string>
+    <string name="words_move_error_no_tiles">Ou pa mete okenn til</string>
+    <string name="words_move_error_out_of_bounds">Plasman an deyò tablo a</string>
+    <string name="words_move_error_square_occupied">Kare a deja okipe</string>
+    <string name="words_move_error_not_in_line">Til yo dwe plase nan yon sèl ranje oswa yon sèl kolòn</string>
+    <string name="words_move_error_not_contiguous">Til yo dwe kole youn ak lòt (san espas)</string>
+    <string name="words_move_error_first_move_centre">Premye kou a dwe kouvri kare mitan an</string>
+    <string name="words_move_error_first_move_two_tiles">Premye kou a dwe mete omwen 2 til</string>
+    <string name="words_move_error_not_connected">Til yo dwe konekte ak til ki deja sou tablo a</string>
+    <string name="words_move_error_no_words">Pa gen okenn mo valab ki fòme</string>
 </resources>

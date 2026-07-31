@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Jê bibe</string>
     <string name="words_detail_delete_message">Ev ê lîstik û sohbeta wê bi awayekî domdar jê bibe. Ev kirin nayê vegerandin.</string>
+    <string name="words_detail_chat_passed">%1$s derbas kir</string>
+    <string name="words_detail_chat_passed_over">%1$s derbas kir — lîstik qediya</string>
+    <string name="words_detail_chat_exchanged">%1$s kevir guhertin</string>
+    <string name="words_move_error_no_tiles">Tu kevir nehatine danîn</string>
+    <string name="words_move_error_out_of_bounds">Danîn li derveyî tabloyê ye</string>
+    <string name="words_move_error_square_occupied">Xane jixwe tije ye</string>
+    <string name="words_move_error_not_in_line">Divê kevir di rêzek an stûnek de bên danîn</string>
+    <string name="words_move_error_not_contiguous">Divê kevir li pey hev bin (bê valahî)</string>
+    <string name="words_move_error_first_move_centre">Divê tevgera yekem xaneya navîn bigire</string>
+    <string name="words_move_error_first_move_two_tiles">Divê di tevgera yekem de kêmî 2 kevir bên danîn</string>
+    <string name="words_move_error_not_connected">Divê kevir bi kevirên li ser tabloyê ve girêbidin</string>
+    <string name="words_move_error_no_words">Tu peyveke derbasdar çênebû</string>
 </resources>

@@ -67,4 +67,6 @@
     <string name="chess_ws_failed">Sambungan gagal</string>
     <string name="chess_move_capture">%1$s mengambil %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_piece_white">%1$s Putih</string>
+    <string name="chess_piece_black">%1$s Hitam</string>
 </resources>

@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Hundi</string>
     <string name="words_detail_delete_message">Kóva ohundíta opa árape g̃uarã ñembosarái ha ijoayhuháicha. Ndaikatuvéima ojejapo jey.</string>
+    <string name="words_detail_chat_passed">%1$s ohasa</string>
+    <string name="words_detail_chat_passed_over">%1$s ohasa — opa ñembosarái</string>
+    <string name="words_detail_chat_exchanged">%1$s ombyekovia ta\'anga\'i</string>
+    <string name="words_move_error_no_tiles">Ndojemoĩri mba\'evéichagua ficha</string>
+    <string name="words_move_error_out_of_bounds">Ñemoĩ osẽ tablero-gui</string>
+    <string name="words_move_error_square_occupied">Ko casilla ojeporúma</string>
+    <string name="words_move_error_not_in_line">Umi ficha oñemoĩ va\'erã peteĩ tysỹipe térã peteĩ columna-pe</string>
+    <string name="words_move_error_not_contiguous">Umi ficha oĩ va\'erã ojoykére (ndaipóri pa\'ũ)</string>
+    <string name="words_move_error_first_move_centre">Ñepyrũrã ojaho\'i va\'erã casilla mbytepegua</string>
+    <string name="words_move_error_first_move_two_tiles">Ñepyrũrãme oñemoĩ va\'erã 2 ficha michĩvéramo</string>
+    <string name="words_move_error_not_connected">Umi ficha ojoaju va\'erã umi ficha oĩmava tablero-pe ndive</string>
+    <string name="words_move_error_no_words">Ndojejapói mba\'eve ñe\'ẽ oikóva</string>
 </resources>

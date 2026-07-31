@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s gba %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">%1$s Funfun</string>
+    <string name="chess_piece_black">%1$s Dúdú</string>
 </resources>

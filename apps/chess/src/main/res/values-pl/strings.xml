@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_failed">Połączenie nieudane</string>
     <string name="chess_ws_reconnecting">Ponowne łączenie…</string>
+    <string name="chess_piece_white">Biały %1$s</string>
+    <string name="chess_piece_black">Czarny %1$s</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s %2$s واخیست</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">سپین %1$s</string>
+    <string name="chess_piece_black">تور %1$s</string>
 </resources>

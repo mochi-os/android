@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Pozmak</string>
     <string name="words_detail_delete_message">Bu oýny we onuň söhbetdeşligini hemişelik pozar. Bu hereketi yzyna gaýtaryp bolmaz.</string>
+    <string name="words_detail_chat_passed">%1$s geçdi</string>
+    <string name="words_detail_chat_passed_over">%1$s geçdi — oýun tamamlandy</string>
+    <string name="words_detail_chat_exchanged">%1$s daşlary çalyşdy</string>
+    <string name="words_move_error_no_tiles">Hiç plitka goýulmady</string>
+    <string name="words_move_error_out_of_bounds">Ýerleşdirme tagtadan daşarda</string>
+    <string name="words_move_error_square_occupied">Öýjük eýýäm eýelenen</string>
+    <string name="words_move_error_not_in_line">Plitkalar bir setirde ýa-da bir sütünde goýulmaly</string>
+    <string name="words_move_error_not_contiguous">Plitkalar yzygiderli bolmaly (boşluksyz)</string>
+    <string name="words_move_error_first_move_centre">Ilkinji hereket merkezi öýjügi tutmaly</string>
+    <string name="words_move_error_first_move_two_tiles">Ilkinji hereketde iň azyndan 2 plitka goýulmaly</string>
+    <string name="words_move_error_not_connected">Plitkalar tagtadaky bar bolan plitkalara birikmeli</string>
+    <string name="words_move_error_no_words">Hiç hili dogry söz döremedi</string>
 </resources>

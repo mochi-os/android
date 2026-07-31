@@ -75,4 +75,16 @@
     <string name="words_detail_delete_title">Partij verwijderen?</string>
     <string name="words_detail_delete_confirm">Verwijderen</string>
     <string name="words_detail_delete_message">Hierdoor worden het spel en de bijbehorende chat permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt.</string>
+    <string name="words_detail_chat_passed">%1$s heeft gepast</string>
+    <string name="words_detail_chat_passed_over">%1$s heeft gepast — spel voorbij</string>
+    <string name="words_detail_chat_exchanged">%1$s heeft stenen geruild</string>
+    <string name="words_move_error_no_tiles">Geen stenen geplaatst</string>
+    <string name="words_move_error_out_of_bounds">Plaatsing valt buiten het bord</string>
+    <string name="words_move_error_square_occupied">Vakje is al bezet</string>
+    <string name="words_move_error_not_in_line">Stenen moeten in één rij of kolom liggen</string>
+    <string name="words_move_error_not_contiguous">Stenen moeten aaneengesloten liggen (geen gaten)</string>
+    <string name="words_move_error_first_move_centre">Eerste zet moet het middelste vakje bedekken</string>
+    <string name="words_move_error_first_move_two_tiles">Eerste zet moet minstens 2 stenen plaatsen</string>
+    <string name="words_move_error_not_connected">Stenen moeten aansluiten op stenen die al op het bord liggen</string>
+    <string name="words_move_error_no_words">Geen geldige woorden gevormd</string>
 </resources>

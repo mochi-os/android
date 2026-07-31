@@ -70,4 +70,6 @@
     <string name="chess_move_capture">U-%1$s uthathe u-%2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">%1$s Omhlophe</string>
+    <string name="chess_piece_black">%1$s Omnyama</string>
 </resources>

@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">Sem ligação</string>
     <string name="chess_ws_failed">Falha na ligação</string>
     <string name="chess_ws_reconnecting">A reconectar…</string>
+    <string name="chess_piece_white">%1$s branco</string>
+    <string name="chess_piece_black">%1$s preto</string>
 </resources>
