@@ -103,10 +103,41 @@ class SessionManager @Inject constructor(
         prefs[KEY_SESSION_COOKIE]
     }
 
+    /**
+     * Point the client at [url].
+     *
+     * Moving to a *different* server invalidates every credential we hold: the
+     * session cookie and the per-app JWTs were issued by the previous server,
+     * are meaningless to the new one, and — since the jar attaches the session
+     * to whichever origin is configured — would otherwise be handed straight to
+     * it. So they are dropped in the same transaction that stores the new URL.
+     *
+     * The two callers that adopt an account belonging to another server
+     * ([adoptSharedSessionIfMissing] and AppBootstrapViewModel.adopt) set the
+     * server first and write that account's session immediately after, so the
+     * clear never races credentials they are about to store.
+     *
+     * "Different" is an origin comparison, not a string one, so retyping the
+     * same server with a trailing slash, different case or an explicit :443
+     * does not sign the user out.
+     */
     suspend fun setServerUrl(url: String) {
+        val server = url.trimEnd('/')
+        var changed = false
         dataStore.edit { prefs ->
-            prefs[KEY_SERVER_URL] = url.trimEnd('/')
+            val previous = prefs[KEY_SERVER_URL]
+            prefs[KEY_SERVER_URL] = server
+            if (previous == null) return@edit
+            val parsed = server.toHttpUrlOrNull()
+            if (parsed != null && isServerOrigin(parsed, previous)) return@edit
+            changed = true
+            for (app in prefs[KEY_TOKEN_NAMES].orEmpty()) {
+                prefs.remove(stringPreferencesKey("$TOKEN_PREFIX$app"))
+            }
+            prefs.remove(KEY_TOKEN_NAMES)
+            prefs.remove(KEY_SESSION_COOKIE)
         }
+        if (changed) cookieStore.clear()
     }
 
     suspend fun saveSession(cookie: String) {
