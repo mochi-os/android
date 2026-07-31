@@ -169,12 +169,20 @@ class EditListingViewModel @Inject constructor(
                     )
                 } else {
                     val detail = repository.getListing(initialId)
+                    // listing.photo is only the cover; the editor manages the
+                    // whole set, so fetch it as the detail view does. Failing
+                    // to load photos must not block editing the listing, so
+                    // fall back to the cover alone.
+                    val photos = runCatching {
+                        repository.listPhotos(initialId).sortedBy { it.rank }
+                    }.getOrElse { listOfNotNull(detail.listing.photo) }
                     _state.value = fromListing(
                         detail.listing,
                         detail.shipping,
                         detail.assets,
                         categories,
                         stripe?.chargesEnabled,
+                        photos,
                     )
                 }
             } catch (e: Exception) {
@@ -193,6 +201,7 @@ class EditListingViewModel @Inject constructor(
         assets: List<Asset>,
         categories: List<Category>,
         stripeOnboarded: Boolean?,
+        photos: List<Photo>,
     ): EditUiState {
         val type = listing.type ?: ListingType.PHYSICAL
         val pricing = listing.pricing ?: PricingModel.FIXED
@@ -226,7 +235,7 @@ class EditListingViewModel @Inject constructor(
             download = type == ListingType.DIGITAL,
             location = listing.location,
             tagsText = tags.joinToString(", "),
-            photos = listing.photo?.let { listOf(it) } ?: emptyList(),
+            photos = photos,
             assets = assets,
             zones = zones,
             categories = categories,

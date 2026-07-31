@@ -95,7 +95,7 @@ class PurchaseDetailViewModel @Inject constructor(
         }
     }
 
-    fun requestRefund(amount: Long, reason: String, description: String) {
+    fun requestRefund(reason: String, description: String) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(submitting = true)
             try {

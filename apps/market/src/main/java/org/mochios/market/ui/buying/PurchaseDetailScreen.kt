@@ -187,13 +187,11 @@ fun PurchaseDetailScreen(
 
     if (refundDialogOpen && detail != null) {
         RequestRefundDialog(
-            orderTotal = detail.order.total,
-            currency = detail.order.currency ?: Currency.GBP,
             submitting = state.submitting,
             onDismiss = { refundDialogOpen = false },
-            onSubmit = { amount, reason, description ->
+            onSubmit = { reason, description ->
                 refundDialogOpen = false
-                viewModel.requestRefund(amount, reason, description)
+                viewModel.requestRefund(reason, description)
             },
         )
     }
