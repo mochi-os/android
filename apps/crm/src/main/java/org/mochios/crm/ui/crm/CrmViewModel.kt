@@ -36,6 +36,10 @@ data class CrmUiState(
     val activeViewId: String? = null,
     val searchQuery: String = "",
     val watchedOnly: Boolean = false,
+    /** Ids of the objects the viewer watches, from the objects endpoint. */
+    val watched: List<String> = emptyList(),
+    /** Selected option ids per field id. Empty when nothing is filtered. */
+    val fieldFilters: Map<String, Set<String>> = emptyMap(),
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
@@ -111,6 +115,7 @@ class CrmViewModel @Inject constructor(
             try {
                 val details = repository.getCrmInfo(crmId)
                 val objects = repository.getObjects(crmId)
+                val watched = repository.getWatched(crmId)
                 val people = runCatching { repository.getPeople(crmId) }
                     .getOrDefault(_uiState.value.people)
                 val activeViewId = _uiState.value.activeViewId
@@ -118,6 +123,7 @@ class CrmViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    watched = watched,
                     people = people,
                     activeViewId = activeViewId,
                     isLoading = false
@@ -135,11 +141,13 @@ class CrmViewModel @Inject constructor(
         try {
             val details = repository.getCrmInfo(crmId)
             val objects = repository.getObjects(crmId)
+            val watched = repository.getWatched(crmId)
             val people = runCatching { repository.getPeople(crmId) }
                 .getOrDefault(_uiState.value.people)
             _uiState.value = _uiState.value.copy(
                 crmDetails = details,
                 objects = objects,
+                watched = watched,
                 people = people
             )
         } catch (_: Exception) {
@@ -153,11 +161,13 @@ class CrmViewModel @Inject constructor(
             try {
                 val details = repository.getCrmInfo(crmId)
                 val objects = repository.getObjects(crmId)
+                val watched = repository.getWatched(crmId)
                 val people = runCatching { repository.getPeople(crmId) }
                     .getOrDefault(_uiState.value.people)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    watched = watched,
                     people = people,
                     isRefreshing = false,
                     error = null
@@ -183,6 +193,94 @@ class CrmViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(watchedOnly = !_uiState.value.watchedOnly)
     }
 
+    /** Adds or removes [optionId] from the selection for [fieldId]. */
+    fun toggleFieldFilter(fieldId: String, optionId: String) {
+        val current = _uiState.value.fieldFilters[fieldId].orEmpty()
+        val updated = if (optionId in current) current - optionId else current + optionId
+        val filters = _uiState.value.fieldFilters.toMutableMap()
+        if (updated.isEmpty()) filters.remove(fieldId) else filters[fieldId] = updated
+        _uiState.value = _uiState.value.copy(fieldFilters = filters)
+    }
+
+    /** Drops every selected value for [fieldId], leaving the field unconstrained. */
+    fun clearFieldFilter(fieldId: String) {
+        _uiState.value = _uiState.value.copy(
+            fieldFilters = _uiState.value.fieldFilters - fieldId,
+        )
+    }
+
+    /**
+     * Resets every filter axis and the sort override for the active view, so
+     * the list falls back to what the view itself defines. The search query is
+     * owned by the top bar and is left alone.
+     */
+    fun clearFilters() {
+        val viewId = _uiState.value.activeViewId
+        _uiState.value = _uiState.value.copy(
+            watchedOnly = false,
+            fieldFilters = emptyMap(),
+            sortByView = if (viewId == null) {
+                _uiState.value.sortByView
+            } else {
+                _uiState.value.sortByView - viewId
+            },
+            sortDirByView = if (viewId == null) {
+                _uiState.value.sortDirByView
+            } else {
+                _uiState.value.sortDirByView - viewId
+            },
+        )
+    }
+
+    /** True when anything beyond the view's own definition narrows the list. */
+    fun hasActiveFilters(): Boolean {
+        val state = _uiState.value
+        return state.watchedOnly ||
+            state.fieldFilters.isNotEmpty() ||
+            state.searchQuery.isNotBlank()
+    }
+
+    /** True when the user overrode the active view's stored sort. */
+    fun hasSortOverride(): Boolean {
+        val viewId = _uiState.value.activeViewId ?: return false
+        return viewId in _uiState.value.sortByView || viewId in _uiState.value.sortDirByView
+    }
+
+    /**
+     * Fields the sheet can filter on: fields flagged "filter" on the active
+     * view's classes that carry a fixed value set — enumerated options, or the
+     * CRM's people for a user field. Free-text and date fields are left out;
+     * search covers the former and sort covers the latter.
+     */
+    fun getFilterableFields(): List<Pair<CrmField, List<FieldOption>>> {
+        val details = _uiState.value.crmDetails ?: return emptyList()
+        val view = getActiveView()
+        val classIds = if (view != null && view.classes.isNotEmpty()) {
+            view.classes
+        } else {
+            details.classes.map { crmClass -> crmClass.id }
+        }
+        val seen = mutableSetOf<String>()
+        val result = mutableListOf<Pair<CrmField, List<FieldOption>>>()
+        for (classId in classIds) {
+            val fields = details.fields[classId] ?: continue
+            for (field in fields) {
+                if (!field.isFilterable) continue
+                if (!seen.add(field.id)) continue
+                val options = if (field.fieldtype == "user") {
+                    _uiState.value.people.map { person ->
+                        FieldOption(id = person.id, name = person.name)
+                    }
+                } else {
+                    getAllOptionsForField(field.id)
+                }
+                if (options.isEmpty()) continue
+                result += field to options
+            }
+        }
+        return result
+    }
+
     /**
      * Active sort field for the current view. Mirrors the web sort key scheme:
      * "rank" | "created" | "updated" | "field:<fieldId>".
@@ -202,6 +300,21 @@ class CrmViewModel @Inject constructor(
             }
         }
         return "rank"
+    }
+
+    /**
+     * Sort key to show as chosen in the sheet, or null when nothing has been
+     * chosen. The list still falls back to "rank" in that case, but the fallback
+     * isn't a selection — showing Manual highlighted would claim the user picked
+     * it. A sort stored on the view itself does count as chosen.
+     */
+    fun getSelectedSortField(): String? {
+        val viewId = _uiState.value.activeViewId
+        val override = viewId?.let { id -> _uiState.value.sortByView[id] }
+        if (override != null) return override
+        val view = getActiveView()
+        if (view != null && view.sort.isNotBlank()) return getActiveSortField()
+        return null
     }
 
     /** Active sort direction for the current view. "asc" or "desc". */
@@ -358,7 +471,8 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val objects = repository.getObjects(crmId)
-                _uiState.value = _uiState.value.copy(objects = objects)
+                val watched = repository.getWatched(crmId)
+                _uiState.value = _uiState.value.copy(objects = objects, watched = watched)
             } catch (_: Exception) { }
         }
     }
@@ -537,11 +651,14 @@ class CrmViewModel @Inject constructor(
 
     fun getFilteredObjects(): List<CrmObject> {
         val state = _uiState.value
-        val view = getActiveView() ?: return sortObjects(state.objects)
+        // A missing view is not a reason to skip the user's own filters, so the
+        // view-derived steps below are guarded individually rather than bailing
+        // out early.
+        val view = getActiveView()
         var objects = state.objects
 
         // Filter by view's class filter
-        if (view.classes.isNotEmpty()) {
+        if (view != null && view.classes.isNotEmpty()) {
             objects = objects.filter { it.objectClass in view.classes }
         }
 
@@ -553,8 +670,17 @@ class CrmViewModel @Inject constructor(
             }
         }
 
+        // Field-value filters: OR within one field, AND across fields
+        for ((fieldId, selected) in state.fieldFilters) {
+            if (selected.isEmpty()) continue
+            objects = objects.filter { obj ->
+                obj.stringValue(fieldId) in selected ||
+                    obj.listValue(fieldId).any { value -> value in selected }
+            }
+        }
+
         // Filter by view's filter field
-        if (view.filter.isNotBlank()) {
+        if (view != null && view.filter.isNotBlank()) {
             val parts = view.filter.split(":")
             if (parts.size == 2) {
                 val filterFieldId = parts[0]
@@ -563,7 +689,39 @@ class CrmViewModel @Inject constructor(
             }
         }
 
+        // Filter to watched objects only
+        if (state.watchedOnly) {
+            val watchedSet = state.watched.toSet()
+            objects = objects.filter { obj -> watchedSet.contains(obj.id) }
+        }
+
         return sortObjects(objects)
+    }
+
+    /**
+     * Ids the board may render, or null when nothing narrows the set — the
+     * board still receives every object so hierarchy, column grouping and
+     * drop ranks stay computed against the real list, and only hides what
+     * falls outside this set.
+     *
+     * Ancestors of a match are included: a board card is a container for its
+     * children, so a matching child keeps its parent card on the board instead
+     * of dropping the whole branch out of sight.
+     */
+    fun getVisibleObjectIds(): Set<String>? {
+        if (!hasActiveFilters()) return null
+        val matched = getFilteredObjects().map { obj -> obj.id }.toSet()
+        val byId = _uiState.value.objects.associateBy { obj -> obj.id }
+        val result = matched.toMutableSet()
+        val walked = mutableSetOf<String>()
+        for (id in matched) {
+            var parent = byId[id]?.parent.orEmpty()
+            while (parent.isNotBlank() && walked.add(parent)) {
+                result += parent
+                parent = byId[parent]?.parent.orEmpty()
+            }
+        }
+        return result
     }
 
     /**

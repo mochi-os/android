@@ -42,6 +42,7 @@ class CrmsRepository @Inject constructor(
     // In-memory cache
     private val crmInfoCache = mutableMapOf<String, Pair<CrmDetails, Long>>()
     private val objectsCache = mutableMapOf<String, Pair<List<CrmObject>, Long>>()
+    private val watchedCache = mutableMapOf<String, List<String>>()
     private val cacheMaxAge = 60_000L // 1 minute
 
     fun getCachedCrmInfo(crmId: String): CrmDetails? {
@@ -59,6 +60,7 @@ class CrmsRepository @Inject constructor(
     fun invalidateCache(crmId: String) {
         crmInfoCache.remove(crmId)
         objectsCache.remove(crmId)
+        watchedCache.remove(crmId)
     }
 
     // ---- Crms ----
@@ -147,10 +149,17 @@ class CrmsRepository @Inject constructor(
     // ---- Objects ----
 
     suspend fun getObjects(crmId: String): List<CrmObject> {
-        val objects = api.getObjects(crmId).unwrap().objects
-        objectsCache[crmId] = objects to System.currentTimeMillis()
-        return objects
+        val response = api.getObjects(crmId).unwrap()
+        objectsCache[crmId] = response.objects to System.currentTimeMillis()
+        watchedCache[crmId] = response.watched
+        return response.objects
     }
+
+    /**
+     * Ids the viewer watches in [crmId], as of the last [getObjects] call.
+     * Empty until the objects have been fetched at least once.
+     */
+    fun getWatched(crmId: String): List<String> = watchedCache[crmId] ?: emptyList()
 
     suspend fun createObject(crmId: String, classId: String, parent: String? = null, title: String): CrmObject =
         api.createObject(crmId, classId, parent, title).unwrap().`object`
