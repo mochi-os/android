@@ -20,6 +20,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.crm.R
 import org.mochios.crm.model.Person
 import org.mochios.crm.model.Crm
 import org.mochios.crm.model.Group
@@ -37,7 +38,9 @@ data class CrmSettingsUiState(
     val name: String = "",
     val description: String = "",
     val userSearchResults: List<Person> = emptyList(),
-    val groups: List<Group> = emptyList()
+    val groups: List<Group> = emptyList(),
+    /** Snackbar confirmation for the last successful edit, or null. */
+    val actionMessage: Int? = null
 )
 
 @HiltViewModel
@@ -57,6 +60,16 @@ class CrmSettingsViewModel @Inject constructor(
     init {
         loadCrm()
         loadAccess()
+    }
+
+    /** Dismisses the snackbar confirmation once it has been shown. */
+    fun clearActionMessage() {
+        _uiState.value = _uiState.value.copy(actionMessage = null)
+    }
+
+    /** Dismisses a transient error once it has been surfaced in the snackbar. */
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 
     private fun loadCrm() {
@@ -112,7 +125,10 @@ class CrmSettingsViewModel @Inject constructor(
                     name = state.name,
                     description = state.description
                 )
-                _uiState.value = _uiState.value.copy(isSaving = false)
+                _uiState.value = _uiState.value.copy(
+                    isSaving = false,
+                    actionMessage = R.string.crm_settings_updated
+                )
                 loadCrm()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
@@ -153,6 +169,9 @@ class CrmSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAccess(crmId, subject, level)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.crm_settings_access_updated
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -212,6 +231,9 @@ class CrmSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.revokeAccess(crmId, subject)
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.crm_settings_access_revoked
+                )
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

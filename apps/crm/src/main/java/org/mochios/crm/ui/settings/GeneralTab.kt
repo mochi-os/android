@@ -5,22 +5,23 @@
 
 package org.mochios.crm.ui.settings
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ContentCopy
-import androidx.compose.material3.Button
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -34,134 +35,97 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
-import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.DataChip
+import org.mochios.android.ui.components.Section
+import org.mochios.android.ui.components.Truncate
 import org.mochios.crm.R
+import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
+/**
+ * Owner "General" tab: an editable identity [Section] over the read-only entity
+ * chips, plus a delete [Section] whose action sits in the header. Styled to match
+ * the projects settings screen. Only a viewer who can manage the CRM reaches this
+ * tab; everyone else gets the read-only [CrmIdentitySection] and an unsubscribe
+ * action from the settings screen, so there is no unsubscribe branch.
+ */
 @Composable
 fun GeneralTab(
     uiState: CrmSettingsUiState,
     viewModel: CrmSettingsViewModel,
-    onCrmDeleted: () -> Unit,
-    onUnsubscribed: () -> Unit
+    onCrmDeleted: () -> Unit
 ) {
+    val crm = uiState.crm ?: return
     var showDeleteConfirm by remember { mutableStateOf(false) }
-    var showUnsubscribeConfirm by remember { mutableStateOf(false) }
-    val isOwner = uiState.crm?.owner == 1
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(16.dp)
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        OutlinedTextField(
-            value = uiState.name,
-            onValueChange = viewModel::updateName,
-            label = { Text(stringResource(R.string.crm_create_name)) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        OutlinedTextField(
-            value = uiState.description,
-            onValueChange = viewModel::updateDescription,
-            label = { Text(stringResource(R.string.crm_create_description)) },
-            maxLines = 4,
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        if (uiState.error != null) {
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(
-                text = uiState.error.userMessage(),
-                color = MaterialTheme.colorScheme.error,
-                style = MaterialTheme.typography.bodySmall
+        Section(title = stringResource(R.string.crm_settings_section_identity)) {
+            EditableIdentityRow(
+                label = stringResource(R.string.crm_create_name),
+                value = uiState.name,
+                allowBlank = false,
+                onSave = { value ->
+                    viewModel.updateName(value)
+                    viewModel.saveCrm()
+                }
             )
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Button(
-            onClick = { viewModel.saveCrm() },
-            enabled = !uiState.isSaving && uiState.name.isNotBlank(),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            if (uiState.isSaving) {
-                CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
-            } else {
-                Text(stringResource(R.string.crm_settings_save))
+            EditableIdentityRow(
+                label = stringResource(R.string.crm_create_description),
+                value = uiState.description,
+                singleLine = false,
+                onSave = { value ->
+                    viewModel.updateDescription(value)
+                    viewModel.saveCrm()
+                }
+            )
+            IdentityFieldRow(label = stringResource(R.string.crm_settings_entity_id)) {
+                DataChip(value = crm.id, truncate = Truncate.MIDDLE)
             }
-        }
-
-        // Entity identity: the CRM's entity ID, fingerprint, and origin server,
-        // each copyable — mirrors web's settings entity-ID / fingerprint / server
-        // rows.
-        uiState.crm?.let { crm ->
-            Spacer(modifier = Modifier.height(24.dp))
-            HorizontalDivider()
-            Spacer(modifier = Modifier.height(12.dp))
-            CrmInfoRow(stringResource(R.string.crm_settings_entity_id), crm.id)
-            crm.fingerprint.takeIf { it.isNotBlank() }?.let {
-                Spacer(modifier = Modifier.height(8.dp))
-                CrmInfoRow(stringResource(R.string.crm_settings_fingerprint), it)
+            if (crm.fingerprint.isNotBlank()) {
+                IdentityFieldRow(label = stringResource(R.string.crm_settings_fingerprint)) {
+                    DataChip(value = crm.fingerprint, truncate = Truncate.MIDDLE)
+                }
             }
-            crm.server?.takeIf { it.isNotBlank() }?.let {
-                Spacer(modifier = Modifier.height(8.dp))
-                CrmInfoRow(stringResource(R.string.crm_settings_server), it)
-            }
-        }
-
-        Spacer(modifier = Modifier.height(32.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Text(
-            text = stringResource(R.string.crm_settings_danger_zone),
-            style = MaterialTheme.typography.titleSmall,
-            color = MaterialTheme.colorScheme.error
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        if (!isOwner) {
-            OutlinedButton(
-                onClick = { showUnsubscribeConfirm = true },
-                colors = ButtonDefaults.outlinedButtonColors(
-                    contentColor = MaterialTheme.colorScheme.error
-                ),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(stringResource(R.string.crm_settings_unsubscribe))
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-        }
-
-        if (isOwner) {
-            OutlinedButton(
-                onClick = { showDeleteConfirm = true },
-                enabled = !uiState.isDeleting,
-                colors = ButtonDefaults.outlinedButtonColors(
-                    contentColor = MaterialTheme.colorScheme.error
-                ),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                if (uiState.isDeleting) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
-                } else {
-                    Text(stringResource(R.string.crm_settings_delete_crm))
+            if (!crm.server.isNullOrBlank()) {
+                IdentityFieldRow(label = stringResource(R.string.crm_settings_server)) {
+                    DataChip(value = crm.server, truncate = Truncate.MIDDLE)
                 }
             }
         }
+
+        Section(
+            title = stringResource(R.string.crm_settings_delete_crm),
+            headerAlignment = Alignment.CenterVertically,
+            action = {
+                OutlinedButton(
+                    onClick = { showDeleteConfirm = true },
+                    enabled = !uiState.isDeleting,
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        contentColor = MaterialTheme.colorScheme.error
+                    )
+                ) {
+                    if (uiState.isDeleting) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(20.dp),
+                            strokeWidth = 2.dp
+                        )
+                    } else {
+                        Text(stringResource(MochiR.string.common_delete))
+                    }
+                }
+            },
+            content = {}
+        )
     }
 
     if (showDeleteConfirm) {
@@ -175,50 +139,144 @@ fun GeneralTab(
             onDismiss = { showDeleteConfirm = false }
         )
     }
+}
 
-    if (showUnsubscribeConfirm) {
-        ConfirmDeleteDialog(
-            title = stringResource(R.string.crm_settings_unsubscribe_title),
-            message = stringResource(R.string.crm_settings_unsubscribe_message),
-            onConfirm = {
-                showUnsubscribeConfirm = false
-                viewModel.unsubscribe { onUnsubscribed() }
-            },
-            onDismiss = { showUnsubscribeConfirm = false }
-        )
+/**
+ * Read-only identity card: the CRM's name, description, entity id, fingerprint,
+ * and server. Shown to a viewer who cannot manage the CRM, mirroring the
+ * projects, forum, and feed subscriber views.
+ */
+@Composable
+fun CrmIdentitySection(
+    crm: Crm,
+    modifier: Modifier = Modifier
+) {
+    Section(
+        title = stringResource(R.string.crm_settings_section_identity),
+        modifier = modifier
+    ) {
+        IdentityFieldRow(label = stringResource(R.string.crm_create_name)) {
+            Text(crm.name)
+        }
+        if (crm.description.isNotBlank()) {
+            IdentityFieldRow(label = stringResource(R.string.crm_create_description)) {
+                Text(crm.description)
+            }
+        }
+        IdentityFieldRow(label = stringResource(R.string.crm_settings_entity_id)) {
+            DataChip(value = crm.id, truncate = Truncate.MIDDLE)
+        }
+        if (crm.fingerprint.isNotBlank()) {
+            IdentityFieldRow(label = stringResource(R.string.crm_settings_fingerprint)) {
+                DataChip(value = crm.fingerprint, truncate = Truncate.MIDDLE)
+            }
+        }
+        if (!crm.server.isNullOrBlank()) {
+            IdentityFieldRow(label = stringResource(R.string.crm_settings_server)) {
+                DataChip(value = crm.server, truncate = Truncate.MIDDLE)
+            }
+        }
     }
 }
 
-/** A read-only identity row (label + monospace value) with a copy button. */
+/** Identity row with a fixed-width label so values align in a column. */
 @Composable
-private fun CrmInfoRow(label: String, value: String) {
-    val clipboard = LocalClipboardManager.current
+private fun IdentityFieldRow(
+    label: String,
+    content: @Composable RowScope.() -> Unit
+) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = label,
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.width(120.dp)
+        )
+        content()
+    }
+}
+
+/**
+ * Editable identity row: shows the value with an edit pencil on the right; the
+ * pencil swaps in an inline text field with confirm/cancel that saves the field
+ * immediately. Mirrors the projects and forum inline editors.
+ *
+ * @param onSave    invoked with the trimmed value when the edit is confirmed.
+ * @param allowBlank when false, the confirm action is disabled for a blank value.
+ */
+@Composable
+private fun EditableIdentityRow(
+    label: String,
+    value: String,
+    onSave: (String) -> Unit,
+    singleLine: Boolean = true,
+    allowBlank: Boolean = true
+) {
+    var isEditing by remember { mutableStateOf(false) }
+    var draft by remember(value) { mutableStateOf(value) }
+
+    IdentityFieldRow(label = label) {
+        if (isEditing) {
+            OutlinedTextField(
+                value = draft,
+                onValueChange = { text -> draft = text },
+                singleLine = singleLine,
+                minLines = if (singleLine) 1 else 3,
+                modifier = Modifier.weight(1f)
             )
-            Text(
-                text = value,
-                style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-        IconButton(
-            onClick = { clipboard.setText(AnnotatedString(value)) },
-            modifier = Modifier.size(36.dp),
-        ) {
-            Icon(
-                Icons.Default.ContentCopy,
-                contentDescription = stringResource(MochiR.string.common_copy),
-                modifier = Modifier.size(18.dp),
-            )
+            IconButton(
+                onClick = {
+                    onSave(draft.trim())
+                    isEditing = false
+                },
+                enabled = allowBlank || draft.isNotBlank()
+            ) {
+                Icon(
+                    Icons.Default.Check,
+                    contentDescription = stringResource(MochiR.string.common_save)
+                )
+            }
+            IconButton(onClick = {
+                draft = value
+                isEditing = false
+            }) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(MochiR.string.common_cancel)
+                )
+            }
+        } else {
+            // The edit pencil sits right after the value (fill = false), and a
+            // blank value reads as an italic "Not set" placeholder instead.
+            if (value.isBlank()) {
+                Text(
+                    text = stringResource(R.string.crm_settings_not_set),
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontStyle = FontStyle.Italic,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f, fill = false)
+                )
+            } else {
+                Text(text = value, modifier = Modifier.weight(1f, fill = false))
+            }
+            IconButton(
+                onClick = {
+                    draft = value
+                    isEditing = true
+                },
+                modifier = Modifier.size(30.dp)
+            ) {
+                Icon(
+                    Icons.Default.Edit,
+                    contentDescription = stringResource(MochiR.string.common_edit),
+                    modifier = Modifier.size(18.dp)
+                )
+            }
         }
     }
 }
