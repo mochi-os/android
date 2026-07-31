@@ -20,6 +20,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.model.Forum
@@ -312,7 +313,12 @@ class ForumViewModel @Inject constructor(
             try {
                 val r = repository.viewForum(forumId, before = cursor, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
                 _uiState.value = _uiState.value.copy(
-                    posts = _uiState.value.posts + r.posts,
+                    // Pinned posts repeat on every page, and paging on a
+                    // `created` cursor while ordering by score repeats any
+                    // earlier post that falls below it. Appended bare those
+                    // become duplicate LazyColumn keys, which Compose throws
+                    // on rather than rendering.
+                    posts = appendDistinct(_uiState.value.posts, r.posts) { it.id },
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
                     isLoadingMore = false

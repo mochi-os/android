@@ -97,16 +97,22 @@ private fun DashboardBody(
     onLoadMore: () -> Unit,
 ) {
     val listState = rememberLazyListState()
-    val shouldLoadMore by remember {
+    // Only the scroll position is derived: `state` is a plain parameter, so
+    // reading it inside this unkeyed remember would pin the tab, its exhausted
+    // flag and its in-flight flag to whatever they were when the block first
+    // composed — after a tab switch the sentinel would still be answering for
+    // the original tab.
+    val reachedEnd by remember {
         derivedStateOf {
             val info = listState.layoutInfo
             val total = info.totalItemsCount
             val last = info.visibleItemsInfo.lastOrNull()?.index ?: 0
-            state.hasMore(state.currentTab) && !state.isLoading(state.currentTab) && last >= total - 4
+            total > 0 && last >= total - 4
         }
     }
-    LaunchedEffect(shouldLoadMore, state.currentTab) {
-        if (shouldLoadMore) onLoadMore()
+    val tab = state.currentTab
+    LaunchedEffect(reachedEnd, tab, state.hasMore(tab), state.isLoading(tab)) {
+        if (reachedEnd && state.hasMore(tab) && !state.isLoading(tab)) onLoadMore()
     }
 
     LazyColumn(

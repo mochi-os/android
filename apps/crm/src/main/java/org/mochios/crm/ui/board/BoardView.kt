@@ -73,12 +73,24 @@ import org.mochios.crm.model.CrmView
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
 
+/**
+ * Kanban board for the active view.
+ *
+ * @param objects Every object in the crm — the board needs the complete set so
+ *   hierarchy, column grouping and drop ranks stay computed against the real
+ *   list even while a filter hides part of it.
+ * @param visibleIds Ids the search/filter state allows on screen, or null when
+ *   nothing narrows the board. Cards outside the set are hidden, but they still
+ *   count towards drop positions, so a drop on a filtered column lands where it
+ *   would have without the filter.
+ */
 @Composable
 fun BoardView(
     objects: List<CrmObject>,
     view: CrmView?,
     viewModel: CrmViewModel,
     onObjectClick: (String) -> Unit,
+    visibleIds: Set<String>? = null,
     onCreateObject: ((classId: String, title: String, initialValues: Map<String, String>) -> Unit)? = null
 ) {
     if (view == null || view.columns.isBlank()) {
@@ -180,6 +192,7 @@ fun BoardView(
         BoardColumn(
             option = columnOption,
             objects = columnObjects,
+            visibleIds = visibleIds,
             viewModel = viewModel,
             columnFieldId = columnFieldId,
             rowFieldId = rowFieldId,
@@ -235,6 +248,7 @@ fun BoardView(
 private fun BoardColumn(
     option: FieldOption,
     objects: List<CrmObject>,
+    visibleIds: Set<String>?,
     viewModel: CrmViewModel,
     columnFieldId: String,
     rowFieldId: String?,
@@ -347,6 +361,13 @@ private fun BoardColumn(
             Spacer(modifier = Modifier.width(8.dp))
             // Card-count pill — the standard kanban column count, in a tonal
             // chip. Replaces the old washed-out primary-tinted header bar.
+            // While a filter is on, the pill reads "shown / total" so the
+            // column still tells you how much it really holds.
+            val visibleCount = if (visibleIds == null) {
+                objects.size
+            } else {
+                objects.count { obj -> obj.id in visibleIds }
+            }
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
@@ -354,7 +375,11 @@ private fun BoardColumn(
                     .padding(horizontal = 8.dp, vertical = 2.dp)
             ) {
                 Text(
-                    text = objects.size.toString(),
+                    text = if (visibleIds == null) {
+                        objects.size.toString()
+                    } else {
+                        "$visibleCount/${objects.size}"
+                    },
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -450,6 +475,12 @@ private fun BoardColumn(
                             obj.listValue(rowFieldId).contains(rowOption.id)
                     })
 
+                    val shownRowObjects = rowObjects.visible(visibleIds)
+                    // A lane that a filter emptied is dropped entirely — a
+                    // screen of bare lane headings under one hit is noise.
+                    // Unfiltered, empty lanes still show as drop targets.
+                    if (visibleIds != null && shownRowObjects.isEmpty()) return@forEach
+
                     item(key = "header_${rowOption.id}") {
                         Text(
                             text = rowOption.name,
@@ -458,7 +489,7 @@ private fun BoardColumn(
                             modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
                         )
                     }
-                    itemsIndexed(rowObjects, key = { _, o -> o.id }) { index, obj ->
+                    itemsIndexed(shownRowObjects, key = { _, o -> o.id }) { _, obj ->
                         BoardCard(
                             obj = obj,
                             viewModel = viewModel,
@@ -467,7 +498,9 @@ private fun BoardColumn(
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = index,
+                            cardIndexInColumn = rowObjects.indexOfFirst { candidate ->
+                                candidate.id == obj.id
+                            },
                             columnObjectsForDrop = rowObjects,
                             targetColumnId = option.id,
                             onClick = { onObjectClick(obj.id) }
@@ -486,7 +519,8 @@ private fun BoardColumn(
                     }.map { it.id }
                 }.toSet()
                 val unassignedRow = viewModel.sortObjects(objects.filter { it.id !in rowAssignedIds })
-                if (unassignedRow.isNotEmpty()) {
+                val shownUnassignedRow = unassignedRow.visible(visibleIds)
+                if (shownUnassignedRow.isNotEmpty()) {
                     item(key = "header_unassigned_row") {
                         Text(
                             text = stringResource(R.string.crm_board_unassigned),
@@ -495,7 +529,7 @@ private fun BoardColumn(
                             modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
                         )
                     }
-                    itemsIndexed(unassignedRow, key = { _, o -> o.id }) { index, obj ->
+                    itemsIndexed(shownUnassignedRow, key = { _, o -> o.id }) { _, obj ->
                         BoardCard(
                             obj = obj,
                             viewModel = viewModel,
@@ -504,7 +538,9 @@ private fun BoardColumn(
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = index,
+                            cardIndexInColumn = unassignedRow.indexOfFirst { candidate ->
+                                candidate.id == obj.id
+                            },
                             columnObjectsForDrop = unassignedRow,
                             targetColumnId = option.id,
                             onClick = { onObjectClick(obj.id) }
@@ -519,6 +555,7 @@ private fun BoardColumn(
             // create); the tap zone sits behind the list so it only
             // receives touches where there are no cards.
             val sortedObjects = viewModel.sortObjects(objects)
+            val shownObjects = sortedObjects.visible(visibleIds)
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -540,14 +577,16 @@ private fun BoardColumn(
                     modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
-                    itemsIndexed(sortedObjects, key = { _, o -> o.id }) { index, obj ->
+                    itemsIndexed(shownObjects, key = { _, o -> o.id }) { _, obj ->
                         BoardCard(
                             obj = obj,
                             viewModel = viewModel,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = index,
+                            cardIndexInColumn = sortedObjects.indexOfFirst { candidate ->
+                                candidate.id == obj.id
+                            },
                             columnObjectsForDrop = sortedObjects,
                             targetColumnId = option.id,
                             onClick = { onObjectClick(obj.id) }
@@ -558,6 +597,13 @@ private fun BoardColumn(
         }
     }
 }
+
+/**
+ * Keeps only the objects the current filter allows on screen. A null [visibleIds]
+ * means nothing is filtered, so the list passes through untouched.
+ */
+private fun List<CrmObject>.visible(visibleIds: Set<String>?): List<CrmObject> =
+    if (visibleIds == null) this else filter { obj -> obj.id in visibleIds }
 
 fun parseColor(hex: String): Color {
     return try {

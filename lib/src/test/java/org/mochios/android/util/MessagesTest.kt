@@ -114,4 +114,58 @@ class MessagesTest {
             mergeMessage(existing, frame, key, created).map { it.body },
         )
     }
+
+    // ---------------- appendDistinct: paginated lists ----------------
+
+    private fun append(existing: List<Message>, incoming: List<Message>) =
+        appendDistinct(existing, incoming, key = { it.id })
+
+    /**
+     * Feeds pages by offset over a time-decaying score and schedules a rescore
+     * of that column when page 1 is fetched, so page 2 legitimately re-sends
+     * rows. Appended bare these become duplicate LazyColumn keys and Compose
+     * throws.
+     */
+    @Test
+    fun `an overlapping page contributes only its new rows`() {
+        val page1 = listOf(
+            Message("a", 300, "first", "X"),
+            Message("b", 200, "second", "X"),
+        )
+        val page2 = listOf(
+            Message("b", 200, "second", "X"),
+            Message("c", 100, "third", "X"),
+        )
+        assertEquals(listOf("a", "b", "c"), append(page1, page2).map { it.id })
+    }
+
+    /** Forums repeats every pinned post on every page. */
+    @Test
+    fun `a wholly repeated page adds nothing`() {
+        val page1 = listOf(Message("pin", 300, "pinned", "X"), Message("a", 200, "one", "X"))
+        assertEquals(page1, append(page1, page1))
+    }
+
+    /**
+     * The reason mergeMessages is wrong for these lists: the server's order is
+     * relevance or pinned-then-score, so nothing may be re-sorted locally.
+     */
+    @Test
+    fun `server order survives, even when it contradicts created`() {
+        val page1 = listOf(
+            Message("low", 100, "most relevant", "X"),
+            Message("high", 900, "less relevant", "X"),
+        )
+        val page2 = listOf(Message("mid", 500, "least relevant", "X"))
+        assertEquals(
+            listOf("low", "high", "mid"),
+            append(page1, page2).map { it.id },
+        )
+    }
+
+    @Test
+    fun `appending nothing returns the original list`() {
+        val existing = listOf(Message("a", 100, "one", "X"))
+        assertEquals(existing, append(existing, emptyList()))
+    }
 }

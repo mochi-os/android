@@ -39,17 +39,24 @@ fun <T> InfiniteList(
         return
     }
 
-    val shouldLoadMore by remember {
+    // Derive only the scroll position, which depends solely on the stably
+    // remembered listState. [hasMore] and [isLoading] are plain parameters, so
+    // reading them inside this unkeyed remember would capture the values from
+    // the composition that created it and never see another: the block is
+    // reached whenever the list is non-empty *or* loading, so a caller that
+    // passes its first-load flag composes here with isLoading = true, freezes
+    // it, and can never load a second page. Read them fresh as effect keys.
+    val reachedEnd by remember {
         derivedStateOf {
             val layoutInfo = listState.layoutInfo
             val totalItems = layoutInfo.totalItemsCount
             val lastVisibleIndex = layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0
-            hasMore && !isLoading && lastVisibleIndex >= totalItems - 3
+            totalItems > 0 && lastVisibleIndex >= totalItems - 3
         }
     }
 
-    LaunchedEffect(shouldLoadMore) {
-        if (shouldLoadMore) {
+    LaunchedEffect(reachedEnd, hasMore, isLoading) {
+        if (reachedEnd && hasMore && !isLoading) {
             onLoadMore()
         }
     }

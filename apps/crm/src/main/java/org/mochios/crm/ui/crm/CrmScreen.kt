@@ -419,6 +419,7 @@ private fun CrmContent(
                             "board" -> {
                                 BoardView(
                                     objects = allObjects,
+                                    visibleIds = viewModel.getVisibleObjectIds(),
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },

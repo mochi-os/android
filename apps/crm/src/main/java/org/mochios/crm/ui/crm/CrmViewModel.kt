@@ -35,6 +35,8 @@ data class CrmUiState(
     val activeViewId: String? = null,
     val searchQuery: String = "",
     val watchedOnly: Boolean = false,
+    /** Object ids the local user watches, from the last objects fetch. */
+    val watched: List<String> = emptyList(),
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
@@ -117,6 +119,7 @@ class CrmViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    watched = repository.getWatched(crmId),
                     people = people,
                     activeViewId = activeViewId,
                     isLoading = false
@@ -139,6 +142,7 @@ class CrmViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(
                 crmDetails = details,
                 objects = objects,
+                watched = repository.getWatched(crmId),
                 people = people
             )
         } catch (_: Exception) {
@@ -157,6 +161,7 @@ class CrmViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    watched = repository.getWatched(crmId),
                     people = people,
                     isRefreshing = false,
                     error = null
@@ -352,7 +357,10 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val objects = repository.getObjects(crmId)
-                _uiState.value = _uiState.value.copy(objects = objects)
+                _uiState.value = _uiState.value.copy(
+                    objects = objects,
+                    watched = repository.getWatched(crmId),
+                )
             } catch (_: Exception) { }
         }
     }
@@ -529,13 +537,48 @@ class CrmViewModel @Inject constructor(
         return result
     }
 
+    /** True when anything beyond the view's own definition narrows the list. */
+    fun hasActiveFilters(): Boolean {
+        val state = _uiState.value
+        return state.watchedOnly || state.searchQuery.isNotBlank()
+    }
+
+    /**
+     * Ids the board may render, or null when nothing narrows the set — the
+     * board still receives every object so hierarchy, column grouping and
+     * drop ranks stay computed against the real list, and only hides what
+     * falls outside this set.
+     *
+     * Ancestors of a match are included: a board card is a container for its
+     * children, so a matching child keeps its parent card on the board
+     * instead of dropping the whole branch out of sight.
+     */
+    fun getVisibleObjectIds(): Set<String>? {
+        if (!hasActiveFilters()) return null
+        val matched = getFilteredObjects().map { obj -> obj.id }.toSet()
+        val byId = _uiState.value.objects.associateBy { obj -> obj.id }
+        val result = matched.toMutableSet()
+        val walked = mutableSetOf<String>()
+        for (id in matched) {
+            var parent = byId[id]?.parent.orEmpty()
+            while (parent.isNotBlank() && walked.add(parent)) {
+                result += parent
+                parent = byId[parent]?.parent.orEmpty()
+            }
+        }
+        return result
+    }
+
     fun getFilteredObjects(): List<CrmObject> {
         val state = _uiState.value
-        val view = getActiveView() ?: return sortObjects(state.objects)
+        // Null-guard each view-derived filter rather than returning early: the
+        // search query and the watched toggle belong to the user, not the view,
+        // and returning early left both unapplied whenever no view was active.
+        val view = getActiveView()
         var objects = state.objects
 
         // Filter by view's class filter
-        if (view.classes.isNotEmpty()) {
+        if (view != null && view.classes.isNotEmpty()) {
             objects = objects.filter { it.objectClass in view.classes }
         }
 
@@ -548,13 +591,19 @@ class CrmViewModel @Inject constructor(
         }
 
         // Filter by view's filter field
-        if (view.filter.isNotBlank()) {
+        if (view != null && view.filter.isNotBlank()) {
             val parts = view.filter.split(":")
             if (parts.size == 2) {
                 val filterFieldId = parts[0]
                 val filterValue = parts[1]
                 objects = objects.filter { it.stringValue(filterFieldId) == filterValue }
             }
+        }
+
+        // Filter to watched objects only
+        if (state.watchedOnly) {
+            val watchedSet = state.watched.toSet()
+            objects = objects.filter { watchedSet.contains(it.id) }
         }
 
         return sortObjects(objects)

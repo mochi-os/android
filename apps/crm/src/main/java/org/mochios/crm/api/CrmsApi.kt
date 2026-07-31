@@ -48,7 +48,10 @@ data class CrmInfoResponse(
     val hierarchy: Map<String, List<String>> = emptyMap()
 )
 data class TemplateListResponse(val templates: List<Template> = emptyList())
-data class ObjectListResponse(val objects: List<CrmObject> = emptyList())
+data class ObjectListResponse(
+    val objects: List<CrmObject> = emptyList(),
+    val watched: List<String> = emptyList(),
+)
 data class ObjectResponse(val `object`: CrmObject = CrmObject())
 data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class CommentResponse(val comment: Comment = Comment(id = ""))

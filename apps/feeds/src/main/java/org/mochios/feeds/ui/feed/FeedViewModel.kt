@@ -25,6 +25,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.MentionSuggestion
+import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Permissions
@@ -660,7 +661,11 @@ class FeedViewModel @Inject constructor(
                 } else {
                     fetchPosts(before = nextCursor.toString())
                 }
-                _posts.value = _posts.value + result.posts
+                // Relevance paging is over a score column the server rescores
+                // as page 1 is fetched, so a later page legitimately repeats
+                // posts. Appended bare they become duplicate LazyColumn keys,
+                // which Compose throws on rather than rendering.
+                _posts.value = appendDistinct(_posts.value, result.posts) { it.id }
                 _hasMore.value = result.hasMore
                 nextCursor = result.nextCursor
             } catch (_: Exception) {
