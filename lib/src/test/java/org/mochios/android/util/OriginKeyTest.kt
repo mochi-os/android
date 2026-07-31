@@ -5,27 +5,37 @@
 
 package org.mochios.android.util
 
-import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Test
 
 /**
- * The cookie cache and the asset client both bucket by origin. Keyed by host,
- * two origins sharing a hostname shared a bucket: a `session` cookie set by
- * `http://host` or `host:8443` was replayed to `https://host`, and it also
- * satisfied the "already has a session" test, suppressing the real stored
- * session in favour of whatever the other origin had set.
+ * The cookie cache buckets by origin. Keyed by host, two origins sharing a
+ * hostname shared a bucket: a `session` cookie set by `http://host` or
+ * `host:8443` was replayed to `https://host`, and it also satisfied the
+ * "already has a session" test, suppressing the real stored session in favour
+ * of whatever the other origin had set.
  *
- * Mirrors SessionManager.originOf; if that changes shape, this is where the
- * separation is asserted.
+ * Calls the production [originOf] that SessionManager's jar keys on. An earlier
+ * version of this suite reimplemented the expression instead, which meant it
+ * would have passed unchanged if production regressed to host-only buckets.
  */
 class OriginKeyTest {
 
-    private fun originOf(url: HttpUrl) = "${url.scheme}://${url.host}:${url.port}"
-
     private fun key(url: String) = originOf(url.toHttpUrl())
+
+    /**
+     * Pins the shape, not just the relations below: a regression to a host-only
+     * key would still satisfy every equality here, so assert what the key
+     * actually renders to.
+     */
+    @Test
+    fun `the key carries scheme, host and effective port`() {
+        assertEquals("https://mochi-os.org:443", key("https://mochi-os.org/x"))
+        assertEquals("http://mochi-os.org:80", key("http://mochi-os.org/x"))
+        assertEquals("https://mochi-os.org:8443", key("https://mochi-os.org:8443/x"))
+    }
 
     @Test
     fun `the same origin shares a bucket regardless of path`() {

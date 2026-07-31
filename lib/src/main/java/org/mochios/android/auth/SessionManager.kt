@@ -24,6 +24,7 @@ import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.util.isServerOrigin
+import org.mochios.android.util.originOf
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -282,8 +283,6 @@ class SessionManager @Inject constructor(
      * stored session in favour of whatever that other origin had set.
      */
     private val cookieStore = ConcurrentHashMap<String, MutableList<Cookie>>()
-
-    private fun originOf(url: HttpUrl) = "${url.scheme}://${url.host}:${url.port}"
 
     /** True when [url] is the user's own Mochi server. See [isServerOrigin]. */
     private fun isServerOrigin(url: HttpUrl): Boolean =

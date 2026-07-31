@@ -31,3 +31,15 @@ internal fun isServerOrigin(url: HttpUrl, serverUrl: String): Boolean {
         url.host == server.host &&
         url.port == server.port
 }
+
+/**
+ * Cache key identifying [url]'s origin — the same scheme, host and effective
+ * port [isServerOrigin] compares on, rendered as a string.
+ *
+ * Keyed by host alone, two origins sharing a hostname shared a bucket: a
+ * `session` cookie set by `http://host` or `host:8443` was replayed to
+ * `https://host`, and it also satisfied the caller's "already has a session"
+ * test, suppressing the real stored session in favour of whatever that origin
+ * had set.
+ */
+internal fun originOf(url: HttpUrl): String = "${url.scheme}://${url.host}:${url.port}"
