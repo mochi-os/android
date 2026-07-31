@@ -262,6 +262,16 @@ fun deriveMoveDraft(
 fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult {
     if (placements.isEmpty()) throw MoveValidationException(MoveError.NO_TILES_PLACED)
 
+    // Two placements on one square. The rest of this function builds the board
+    // from the deduplicated square but counts tilesUsed from the list, so a
+    // duplicate spent two rack tiles for one letter, found and scored the
+    // square's cross-word twice, and let seven placements over six squares
+    // claim the bingo. Rejected here rather than only at the drop handler,
+    // because the engine is what decides whether a move is legal.
+    if (placements.distinctBy { it.row to it.col }.size != placements.size) {
+        throw MoveValidationException(MoveError.SQUARE_OCCUPIED)
+    }
+
     // Bounds + occupancy check.
     for (p in placements) {
         if (p.row < 0 || p.row >= BOARD_SIZE || p.col < 0 || p.col >= BOARD_SIZE) {

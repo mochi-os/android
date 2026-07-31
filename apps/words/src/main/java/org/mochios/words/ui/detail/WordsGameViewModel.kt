@@ -21,6 +21,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.mergeMessage
+import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.DraftStatus
 import org.mochios.words.engine.Placement
 import org.mochios.words.engine.createDraftSignature
@@ -312,6 +313,13 @@ class WordsGameViewModel @Inject constructor(
         val state = _uiState.value
         val cell = state.pendingBlankCell ?: return
         val rackIdx = state.pendingBlankRackIndex ?: return
+        // A blank defers its placement until the letter is chosen, so the drop
+        // check has to be repeated here — the square can have been filled in
+        // between, by this player or by a refresh landing an opponent's move.
+        if (!canDropOn(cell.first, cell.second)) {
+            cancelBlankPrompt()
+            return
+        }
         val upper = letter.uppercaseChar()
         val placement = Placement(row = cell.first, col = cell.second, letter = upper, rackTile = '_')
         _uiState.update {
@@ -385,9 +393,41 @@ class WordsGameViewModel @Inject constructor(
     }
 
     /** Drop the currently-dragged tile on (row, col). */
+    /**
+     * Whether a tile may be dropped on ([row], [col]).
+     *
+     * Rejects a square that already holds a board tile or a pending placement.
+     * Without this the same square could take two placements: the engine builds
+     * the board from the deduplicated square but counts tilesUsed from the
+     * placement list, so two rack tiles were consumed for one visible tile, the
+     * cross-word at that square was found and scored twice, and seven
+     * placements could fire the fifty-point bingo across six distinct squares.
+     * The board renders placements keyed by cell, so the second tile was
+     * invisible and the player only saw it missing from their rack.
+     *
+     * [from] is the drag's own source cell, which does not block its own drop —
+     * dragging a tile back where it started stays a no-op rather than an error.
+     */
+    private fun canDropOn(row: Int, col: Int, from: Pair<Int, Int>? = null): Boolean {
+        val state = _uiState.value
+        if (row !in 0 until BOARD_SIZE || col !in 0 until BOARD_SIZE) return false
+        val board = state.game?.board?.let { parseBoard(it) } ?: return false
+        if (board[row, col] != '.') return false
+        return state.pendingPlacements.none {
+            it.row == row && it.col == col && (from == null || it.row != from.first || it.col != from.second)
+        }
+    }
+
     fun onDropOnBoard(row: Int, col: Int) {
         val state = _uiState.value
         val source = state.dragSource ?: return
+        val from = (source as? DragSource.BoardCell)?.let { it.row to it.col }
+        if (!canDropOn(row, col, from)) {
+            // Clear the drag so the tile returns to where it came from rather
+            // than staying stuck to the pointer.
+            _uiState.update { it.copy(dragSource = null) }
+            return
+        }
         when (source) {
             is DragSource.Rack -> {
                 val tile = state.rackTiles.getOrNull(source.index) ?: return
