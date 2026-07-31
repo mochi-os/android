@@ -212,6 +212,17 @@ class SessionManager @Inject constructor(
         }
     }
 
+    /**
+     * Whether an OAuth ceremony this client started is still outstanding.
+     *
+     * The verifier is written at `/begin` and consumed at exchange, so its
+     * presence is the only local evidence that a `mochi:oauth-return` belongs
+     * to us. Checked without consuming, so asking does not itself invalidate
+     * the ceremony.
+     */
+    suspend fun hasOAuthVerifier(): Boolean =
+        !dataStore.data.first()[KEY_OAUTH_VERIFIER].isNullOrBlank()
+
     suspend fun consumeOAuthVerifier(): String? {
         val prefs = dataStore.data.first()
         val verifier = prefs[KEY_OAUTH_VERIFIER]

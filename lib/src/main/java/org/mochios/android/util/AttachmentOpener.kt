@@ -105,10 +105,17 @@ object AttachmentOpener {
         return "${attachment.id}_$safe"
     }
 
-    /** The server MIME type when present, otherwise inferred from the filename. */
+    /**
+     * The server MIME type when present, otherwise inferred from the filename —
+     * either way reduced to something safe to view. Both branches are
+     * attacker-controlled: the type comes from the peer unvalidated, and so
+     * does the filename the extension is read from. See [coerceMimeType].
+     */
     private fun mimeType(attachment: Attachment): String {
-        if (attachment.type.isNotBlank()) return attachment.type
-        val ext = attachment.name.substringAfterLast('.', "").lowercase()
-        return MimeTypeMap.getSingleton().getMimeTypeFromExtension(ext) ?: "*/*"
+        val stated = attachment.type.ifBlank {
+            val ext = attachment.name.substringAfterLast('.', "").lowercase()
+            MimeTypeMap.getSingleton().getMimeTypeFromExtension(ext).orEmpty()
+        }
+        return coerceMimeType(stated)
     }
 }

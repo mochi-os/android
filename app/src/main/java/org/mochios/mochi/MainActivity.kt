@@ -45,6 +45,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.auth.shouldAcceptOAuthReturn
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.NonceStore
@@ -617,7 +618,15 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun applyOAuthReturn(code: String?, error: String?) {
-        if (code == null && error == null) return
+        // Gated like the notification path above: this activity is exported and
+        // BROWSABLE, so any app or web page can deliver a mochi:oauth-return,
+        // and accepting an unsolicited one burns the ceremony — see
+        // shouldAcceptOAuthReturn.
+        val outstanding = runBlocking { sessionManager.hasOAuthVerifier() }
+        if (!shouldAcceptOAuthReturn(outstanding, code, error)) {
+            Log.w(TAG, "Ignoring mochi:oauth-return with no ceremony outstanding")
+            return
+        }
         runBlocking { sessionManager.setOAuthReturn(code, error) }
     }
 

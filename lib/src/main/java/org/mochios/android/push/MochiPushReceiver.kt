@@ -165,6 +165,17 @@ abstract class MochiPushReceiver : MessagingReceiver() {
     }
 
     override fun onMessage(context: Context, message: PushMessage, instance: String) {
+        // The only authenticity gate on push content. The connector catches a
+        // decryption failure, logs "Could not decrypt message, trying with
+        // plain text", and calls this with decrypted = false anyway — so
+        // without the check anyone who learns the endpoint URL can post an
+        // arbitrary title, body and deep link. onNewEndpoint already refuses an
+        // endpoint that carries no keys; this is the same standard applied to
+        // the messages those keys exist to protect.
+        if (!message.decrypted) {
+            Log.w(TAG, "Push payload was not decrypted; ignoring")
+            return
+        }
         val text = message.content.toString(Charsets.UTF_8)
         val payload = try {
             JSONObject(text)
