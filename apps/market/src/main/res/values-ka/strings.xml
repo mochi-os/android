@@ -320,12 +320,12 @@
     <string name="market_purchase_confirm_failed">დადასტურება ვერ მოხერხდა</string>
     <string name="market_purchase_continue_payment">გადახდის გაგრძელება</string>
     <string name="market_purchase_delivery">მიწოდება</string>
-    <string name="market_purchase_dispute_details">თქვენი კოდია: {devCode}</string>
+    <string name="market_purchase_dispute_details">თქვენი მონაცემები</string>
     <string name="market_purchase_dispute_reason">მიზეზი</string>
     <string name="market_purchase_dispute_resolution">თანამშრომლის გადაწყვეტა</string>
     <string name="market_purchase_dispute_title">დაბრუნების მოთხოვნა</string>
     <string name="market_purchase_download_failed">ჩამოტვირთვა ვერ მოხერხდა</string>
-    <string name="market_purchase_download_section">თქვენი ფასი (მინიმუმ {0})</string>
+    <string name="market_purchase_download_section">თქვენი შენაძენი მზადაა</string>
     <string name="market_purchase_item">ელემენტი</string>
     <string name="market_purchase_message_seller">გამყიდველთან შეტყობინება</string>
     <string name="market_purchase_not_found">შეკვეთა ვერ მოიძებნა</string>
@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">ბოლო ნახვები</string>
     <string name="market_recently_viewed_clear">ყველაფრის გასუფთავება</string>
     <string name="market_listings_create">შექმნა</string>
+    <string name="market_bid_dialog_ceiling_label">მაქსიმალური შეთავაზება (არასავალდებულო)</string>
 </resources>

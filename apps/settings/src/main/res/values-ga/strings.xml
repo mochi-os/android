@@ -321,6 +321,13 @@
     <string name="domain_title">Fearainn</string>
     <string name="domain_verify">Fíoraigh DNS</string>
     <string name="settings_home_domains">Fearainn</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Seoladh an tástáil chuig %1$d cheann scríbe</item>
+        <item quantity="two">Seoladh an tástáil chuig %1$d cheann scríbe</item>
+        <item quantity="few">Seoladh an tástáil chuig %1$d cheann scríbe</item>
+        <item quantity="many">Seoladh an tástáil chuig %1$d gceann scríbe</item>
+        <item quantity="other">Seoladh an tástáil chuig %1$d ceann scríbe</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Cúlghaireadh %1$d sheisiún</item>
         <item quantity="many">Cúlghaireadh %1$d seisiún</item>
@@ -369,4 +376,7 @@
     <string name="system_status_awaiting_routing">Teachtaireachtaí ag fanacht le ródú</string>
     <string name="system_status_relay_service">Seirbhís athsheachadáin</string>
     <string name="system_status_relay_service_value">%1$d / %2$d áirithintí · %3$d ciorcaid · %4$d diúltaithe</string>
+    <string name="route_target_select">Roghnaigh</string>
+    <string name="account_data_description">Íoslódáil cúltaca iomlán is féidir leat a athchóiriú ar an bhfreastalaí Mochi seo nó ar cheann eile.</string>
+    <string name="route_target_none">Níl aon sprioc ar fáil</string>
 </resources>

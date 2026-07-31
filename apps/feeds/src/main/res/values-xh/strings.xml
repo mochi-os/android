@@ -273,4 +273,24 @@
     <string name="feeds_link">Ikhonkco</string>
     <string name="feeds_share_link_title">Ikhonkco lefidi</string>
     <string name="feeds_scroll_to_top">Buyela phezulu</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">Umfanekiso %1$d</item>
+        <item quantity="other">Imifanekiso %1$d</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">ilizwi elinye</item>
+        <item quantity="other">amazwi ayi-%1$d</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">isiqhoboshelo %1$d</item>
+        <item quantity="other">iziqhoboshelo %1$d</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Bona elinye igqabaza %1$d</item>
+        <item quantity="other">Bona amanye amagqabaza %1$d</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">kwiminyaka engu-%1$d eyadlulayo namhlanje</item>
+        <item quantity="other">kwiminyaka engu-%1$d eyadlulayo namhlanje</item>
+    </plurals>
 </resources>

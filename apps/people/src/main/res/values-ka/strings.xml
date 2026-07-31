@@ -13,7 +13,7 @@
     <string name="people_friends_search_placeholder">ძიება…</string>
     <string name="people_friends_remove">მეგობრის წაშლა</string>
     <string name="people_friends_no_people_found">ხალხი ვერ მოიძებნა</string>
-    <string name="people_friends_try_different_search">მოგზაურობა</string>
+    <string name="people_friends_try_different_search">სცადეთ სხვა საძიებო სიტყვა</string>
     <string name="people_friends_try_adjusting">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
     <string name="people_friends_already_friends">უკვე მეგობრები</string>
     <string name="people_friends_pending">მოლოდინში</string>
@@ -22,7 +22,7 @@
     <string name="people_add_friend_search_hint">მოძებნეთ ხალხი და გაგზავნეთ მეგობრობის მოთხოვნა.</string>
     <string name="people_add_friend_search_start">დაიწყეთ ბეჭდვა მომხმარებლების მოსაძებნად</string>
     <string name="people_add_friend_accept_invite">მოწვევის მიღება</string>
-    <string name="people_add_friend_now_friends_title">თქვენ ახლა {friendName}-თან მეგობრები ხართ.</string>
+    <string name="people_add_friend_now_friends_title">თქვენ ახლა მეგობრები ხართ!</string>
     <string name="people_friends_received_tab">მიღებული</string>
     <string name="people_friends_sent_tab">გაგზავნილი</string>
     <string name="people_invitations_incoming">შემომავალი მოწვევები</string>
@@ -79,7 +79,7 @@
     <string name="people_member_select_group">აირჩიეთ ჯგუფი</string>
     <string name="people_member_no_other_groups">სხვა ჯგუფები არ არის</string>
     <string name="people_member_all_groups_added">ყველა ხელმისაწვდომი ჯგუფი უკვე დამატებულია</string>
-    <string name="people_member_type_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="people_member_type_user">მომხმარებელი</string>
     <string name="people_member_type_group">ჯგუფი</string>
     <string name="people_groups_add_member_confirm_back">უკან</string>
     <string name="people_profile_save">შენახვა</string>

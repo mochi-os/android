@@ -47,7 +47,7 @@
     <string name="forums_post_pin">მიმაგრება</string>
     <string name="forums_post_unpin">უსახელო</string>
     <string name="forums_post_lock">დაბლოკვა</string>
-    <string name="forums_post_unlock">{0}-თან კავშირი გაწყდა</string>
+    <string name="forums_post_unlock">განბლოკვა</string>
     <string name="forums_post_approve">დამტკიცება</string>
     <string name="forums_post_remove">წაშლა</string>
     <string name="forums_post_restore">აღდგენა</string>
@@ -97,7 +97,7 @@
     <string name="forums_moderation_new_user_days">ახალი მომხმარებლის ზღვარი:</string>
     <string name="forums_moderation_post_limit">პოსტის ლიმიტი</string>
     <string name="forums_moderation_comment_limit">კომენტარების ლიმიტი</string>
-    <string name="forums_moderation_limit_window">ვიკები</string>
+    <string name="forums_moderation_limit_window">ფანჯრის ხანგრძლივობა</string>
     <string name="forums_report_reason">მიზეზი</string>
     <string name="forums_report_details">დეტალები</string>
     <string name="forums_report_submit">ანგარიშის გაგზავნა</string>
@@ -107,7 +107,7 @@
     <string name="forums_report_reason_misinformation">დეზინფორმაცია</string>
     <string name="forums_report_reason_offtopic">თემის გარეთ</string>
     <string name="forums_report_reason_other">სხვა</string>
-    <string name="forums_post_default_author">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="forums_post_default_author">მომხმარებელი</string>
     <string name="forums_comments">კომენტარები</string>
     <string name="forums_no_comments">კომენტარები ჯერ არ არის</string>
     <string name="forums_comment_save">შენახვა</string>
@@ -241,7 +241,7 @@
     <string name="forums_ai_prompt_default">ნაგულისხმევი</string>
     <string name="forums_moderation_reject">უარყოფა</string>
     <string name="forums_moderation_report_by">%1$s-ის მიხედვით</string>
-    <string name="forums_moderation_restriction_state_banned">Ban-ში</string>
+    <string name="forums_moderation_restriction_state_banned">დაბლოკილი</string>
     <string name="forums_moderation_unit_days">MCP სერვერებთან დაკავშირება</string>
     <string name="forums_settings_banner_saved">ბანერი შენახულია</string>
     <string name="forums_settings_access_updated">წვდომა განახლდა</string>

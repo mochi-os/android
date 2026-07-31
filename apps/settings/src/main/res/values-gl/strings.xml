@@ -321,6 +321,10 @@
     <string name="domain_title">Dominios</string>
     <string name="domain_verify">Verificar DNS</string>
     <string name="settings_home_domains">Dominios</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Proba enviada a %1$d destino</item>
+        <item quantity="other">Proba enviada a %1$d destinos</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Revogada 1 sesión</item>
         <item quantity="other">Revogadas %1$d sesións</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Mensaxes á espera de encamiñamento</string>
     <string name="system_status_relay_service">Servizo de repetidor</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuítos · %4$d rexeitadas</string>
+    <string name="route_target_select">Seleccionar</string>
+    <string name="account_data_description">Descarga unha copia de seguridade completa que podes restaurar neste servidor Mochi ou noutro.</string>
+    <string name="route_target_none">Non hai destinos dispoñibles</string>
 </resources>

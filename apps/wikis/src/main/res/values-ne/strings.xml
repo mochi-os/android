@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">पृष्ठ देखाउनुहोस्</string>
     <string name="wikis_revision_compare_failed">तुलनाका लागि अघिल्लो संस्करण लोड गर्न सकिएन।</string>
     <string name="wikis_revision_changes_from">संस्करण %1$d → %2$d बाटका परिवर्तनहरू</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">१ टिप्पणी</item>
+        <item quantity="other">%d टिप्पणीहरू</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d जवाफ</item>
+        <item quantity="other">+%d थप जवाफहरू</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">१ पृष्ठको नाम परिवर्तन गरियो</item>
+        <item quantity="other">%1$d पृष्ठहरूको नाम परिवर्तन गरियो</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">१ लिङ्क अद्यावधिक गरियो</item>
+        <item quantity="other">%1$d लिङ्कहरू अद्यावधिक गरियो</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d पृष्ठ</item>
+        <item quantity="other">%d पृष्ठहरू</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d फाइल</item>
+        <item quantity="other">%d फाइलहरू</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d तस्बिर</item>
+        <item quantity="other">%d तस्बिरहरू</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d कागजात</item>
+        <item quantity="other">%d कागजातहरू</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">यो ट्यागको साथ %d पृष्ठ</item>
+        <item quantity="other">यो ट्यागको साथ %d पृष्ठहरू</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» का लागि %1$d परिणाम फेला पर्‍यो</item>
+        <item quantity="other">«%2$s» का लागि %1$d परिणामहरू फेला पर्‍यो</item>
+    </plurals>
 </resources>

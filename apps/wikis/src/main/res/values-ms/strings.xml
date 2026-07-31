@@ -310,4 +310,41 @@
     <string name="wikis_revision_show_page">Tunjukkan halaman</string>
     <string name="wikis_revision_compare_failed">Tidak dapat memuatkan versi terdahulu untuk perbandingan.</string>
     <string name="wikis_revision_changes_from">Perubahan daripada versi %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d komen</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d balasan</item>
+        <item quantity="other">+%d balasan lagi</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">Dinamakan semula %1$d halaman</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">dikemas kini %1$d pautan</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d halaman</item>
+        <item quantity="other">%d halaman</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d fail</item>
+        <item quantity="other">%d fail</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d imej</item>
+        <item quantity="other">%d imej</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokumen</item>
+        <item quantity="other">%d dokumen</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d halaman dengan tag ini</item>
+        <item quantity="other">%d halaman dengan tag ini</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Dijumpai %1$d hasil untuk «%2$s»</item>
+        <item quantity="other">Dijumpai %1$d hasil untuk «%2$s»</item>
+    </plurals>
 </resources>

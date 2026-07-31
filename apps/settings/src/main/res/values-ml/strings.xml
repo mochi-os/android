@@ -151,7 +151,7 @@
     <string name="system_setting_auth_recovery">റിക്കവറി കോഡ് ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <string name="system_setting_default_theme">ഡിഫോൾട്ട് തീം</string>
-    <string name="system_setting_domains_verification">ആവശ്യമാണ്</string>
+    <string name="system_setting_domains_verification">ഡൊമെയ്ൻ പരിശോധന ആവശ്യമാണ്</string>
     <string name="system_setting_email_from">സിസ്റ്റം ഇമെയിലുകൾക്കുള്ള ഡിഫോൾട്ട് from വിലാസം</string>
     <string name="system_setting_oauth_public_url">OAuth റീഡയറക്റ്റുകൾക്കുള്ള പൊതു URL</string>
     <string name="system_setting_oauth_google_client_id">Google ക്ലയന്റ് ID</string>
@@ -321,6 +321,10 @@
     <string name="domain_title">ഡൊമെയിനുകൾ</string>
     <string name="domain_verify">DNS സ്ഥിരീകരിക്കുക</string>
     <string name="settings_home_domains">ഡൊമെയിനുകൾ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d ലക്ഷ്യസ്ഥാനത്തേക്ക് പരിശോധന അയച്ചു</item>
+        <item quantity="other">%1$d ലക്ഷ്യസ്ഥാനങ്ങളിലേക്ക് പരിശോധന അയച്ചു</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 സെഷൻ റദ്ദാക്കി</item>
         <item quantity="other">%1$d സെഷനുകൾ റദ്ദാക്കി</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">റൂട്ടിങ്ങിനായി കാത്തിരിക്കുന്ന സന്ദേശങ്ങൾ</string>
     <string name="system_status_relay_service">റിലേ സേവനം</string>
     <string name="system_status_relay_service_value">%1$d / %2$d റിസർവേഷനുകൾ · %3$d സർക്യൂട്ടുകൾ · %4$d നിരസിച്ചു</string>
+    <string name="route_target_select">തിരഞ്ഞെടുക്കുക</string>
+    <string name="account_data_description">ഈ അല്ലെങ്കിൽ മറ്റൊരു Mochi സെർവറിൽ പുനഃസ്ഥാപിക്കാവുന്ന പൂർണ്ണ ബാക്കപ്പ് ഡൗൺലോഡ് ചെയ്യുക.</string>
+    <string name="route_target_none">ലക്ഷ്യങ്ങൾ ലഭ്യമല്ല</string>
 </resources>

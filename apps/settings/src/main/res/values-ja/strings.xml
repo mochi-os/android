@@ -321,6 +321,10 @@
     <string name="domain_title">ドメイン</string>
     <string name="domain_verify">DNSを確認</string>
     <string name="settings_home_domains">ドメイン</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d 件の宛先にテストを送信しました</item>
+        <item quantity="other">%1$d 件の宛先にテストを送信しました</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d件のセッションを取り消しました</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">ルーティング待ちのメッセージ</string>
     <string name="system_status_relay_service">リレーサービス</string>
     <string name="system_status_relay_service_value">%1$d / %2$d 予約 · %3$d 回線 · %4$d 拒否</string>
+    <string name="route_target_select">選択</string>
+    <string name="account_data_description">このサーバーまたは別の Mochi サーバーで復元できる完全なバックアップをダウンロードします。</string>
+    <string name="route_target_none">利用できる宛先がありません</string>
 </resources>

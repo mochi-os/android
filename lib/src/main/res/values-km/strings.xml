@@ -309,4 +309,7 @@
     <string name="person_picker_directory">បញ្ជីឈ្មោះ</string>
     <string name="person_picker_no_people">គ្មានមនុស្ស</string>
     <string name="person_picker_project_members">សមាជិកគម្រោង</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">អ្នកជាវ %1$d នាក់</item>
+    </plurals>
 </resources>

@@ -313,4 +313,34 @@
     <string name="wikis_revision_show_page">Tampilake kaca</string>
     <string name="wikis_revision_compare_failed">Ora bisa ngemot versi sadurunge kanggo dibandhingake.</string>
     <string name="wikis_revision_changes_from">Owahan saka versi %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d komentar</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="other">+%d balesan liyané</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">Diowahi jeneng %1$d halaman</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">dianyari %1$d tautan</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="other">%d halaman</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="other">%d file</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="other">%d gambar</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="other">%d dokumen</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="other">%d halaman kanthi tag iki</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="other">Ditemokaké %1$d asil kanggo "%2$s"</item>
+    </plurals>
 </resources>

@@ -321,6 +321,14 @@
     <string name="domain_title">النطاقات</string>
     <string name="domain_verify">تحقق من DNS</string>
     <string name="settings_home_domains">النطاقات</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="zero">لم يتم إرسال الاختبار إلى أي وجهة</item>
+        <item quantity="one">تم إرسال الاختبار إلى وجهة واحدة</item>
+        <item quantity="two">تم إرسال الاختبار إلى وجهتين</item>
+        <item quantity="few">تم إرسال الاختبار إلى %1$d وجهات</item>
+        <item quantity="many">تم إرسال الاختبار إلى %1$d وجهة</item>
+        <item quantity="other">تم إرسال الاختبار إلى %1$d وجهة</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">تم إلغاء %1$d جلسات</item>
         <item quantity="many">تم إلغاء %1$d جلسة</item>
@@ -370,4 +378,7 @@
     <string name="system_status_awaiting_routing">رسائل في انتظار التوجيه</string>
     <string name="system_status_relay_service">خدمة الترحيل</string>
     <string name="system_status_relay_service_value">%1$d / %2$d حجوزات · %3$d دوائر · %4$d مرفوضة</string>
+    <string name="route_target_select">تحديد</string>
+    <string name="account_data_description">نزّل نسخة احتياطية كاملة يمكنك استعادتها على هذا الخادم أو على خادم Mochi آخر.</string>
+    <string name="route_target_none">لا توجد أهداف متاحة</string>
 </resources>

@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Sayfayı göster</string>
     <string name="wikis_revision_compare_failed">Karşılaştırma için önceki sürüm yüklenemedi.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d sürümünden değişiklikler</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d yorum</item>
+        <item quantity="other">%d yorum</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d yanıt</item>
+        <item quantity="other">+%d yanıt daha</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d sayfa yeniden adlandırıldı</item>
+        <item quantity="other">%1$d sayfa yeniden adlandırıldı</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d bağlantı güncellendi</item>
+        <item quantity="other">%1$d bağlantı güncellendi</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d sayfa</item>
+        <item quantity="other">%d sayfa</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d dosya</item>
+        <item quantity="other">%d dosya</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d görsel</item>
+        <item quantity="other">%d görsel</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d belge</item>
+        <item quantity="other">%d belge</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">Bu etiketle %d sayfa</item>
+        <item quantity="other">Bu etiketle %d sayfa</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">"%2$s" için %1$d sonuç bulundu</item>
+        <item quantity="other">"%2$s" için %1$d sonuç bulundu</item>
+    </plurals>
 </resources>

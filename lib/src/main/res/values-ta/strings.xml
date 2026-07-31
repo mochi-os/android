@@ -309,4 +309,8 @@
     <string name="person_picker_directory">அடைவு</string>
     <string name="person_picker_no_people">நபர்கள் இல்லை</string>
     <string name="person_picker_project_members">திட்ட உறுப்பினர்கள்</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d சந்தாதாரர்</item>
+        <item quantity="other">%1$d சந்தாதாரர்கள்</item>
+    </plurals>
 </resources>

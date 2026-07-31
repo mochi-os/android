@@ -270,4 +270,20 @@
     <string name="feeds_link">Liên kết</string>
     <string name="feeds_share_link_title">Liên kết bảng tin</string>
     <string name="feeds_scroll_to_top">Về đầu trang</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d hình ảnh</item>
+        <item quantity="other">%1$d hình ảnh</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d bình luận</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">%1$d tệp đính kèm</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">Xem thêm %1$d bình luận</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d năm trước vào ngày này</item>
+    </plurals>
 </resources>

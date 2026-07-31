@@ -321,6 +321,10 @@
     <string name="domain_title">Domeenid</string>
     <string name="domain_verify">Kontrolli DNS-i</string>
     <string name="settings_home_domains">Domeenid</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test saadeti %1$d sihtkohta</item>
+        <item quantity="other">Test saadeti %1$d sihtkohta</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Tühistatud 1 sessioon</item>
         <item quantity="other">Tühistatud %1$d sessiooni</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Marsruutimist ootavad sõnumid</string>
     <string name="system_status_relay_service">Releeteenus</string>
     <string name="system_status_relay_service_value">%1$d / %2$d broneeringud · %3$d ahelad · %4$d tagasi lükatud</string>
+    <string name="route_target_select">Vali</string>
+    <string name="account_data_description">Laadige alla täielik varukoopia, mille saate taastada sellel või mõnel teisel Mochi serveril.</string>
+    <string name="route_target_none">Sihtkohti pole saadaval</string>
 </resources>

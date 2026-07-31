@@ -127,10 +127,10 @@
     <string name="market_checkout_summary">Sifariş xülasəsi</string>
     <string name="market_checkout_title">Checkout</string>
     <string name="market_checkout_total">İz</string>
-    <string name="market_checkout_winning_bid">{0} qarşılığında qazandı</string>
+    <string name="market_checkout_winning_bid">Qalib təklif</string>
     <string name="market_condition_new">Yeni</string>
     <string name="market_condition_refurbished">Yenilənmiş</string>
-    <string name="market_condition_used">{0}-1, {1}-2 kimi oxunaqlı ID-lər üçün istifadə olunur</string>
+    <string name="market_condition_used">İstifadə olunub</string>
     <string name="market_dispute_dialog_attach">Sübut əlavə et</string>
     <string name="market_dispute_dialog_attach_count">%1$d fayl əlavə edildi</string>
     <string name="market_dispute_dialog_cancel">Ləğv et</string>
@@ -161,7 +161,7 @@
     <string name="market_editor_condition">Şərt</string>
     <string name="market_editor_condition_new">Yeni</string>
     <string name="market_editor_condition_refurbished">Yenilənmiş</string>
-    <string name="market_editor_condition_used">{0}-1, {1}-2 kimi oxunaqlı ID-lər üçün istifadə olunur</string>
+    <string name="market_editor_condition_used">İstifadə olunub</string>
     <string name="market_editor_currency">Valyuta</string>
     <string name="market_editor_days">%1$d gün</string>
     <string name="market_editor_delete">Elanı sil</string>
@@ -260,7 +260,7 @@
     <string name="market_filter_condition">Şərt</string>
     <string name="market_filter_condition_new">Yeni</string>
     <string name="market_filter_condition_refurbished">Yenilənmiş</string>
-    <string name="market_filter_condition_used">{0}-1, {1}-2 kimi oxunaqlı ID-lər üçün istifadə olunur</string>
+    <string name="market_filter_condition_used">İstifadə olunub</string>
     <string name="market_filter_delivery">Çatdırılma</string>
     <string name="market_filter_delivery_download">Yüklə</string>
     <string name="market_filter_delivery_pickup">Götürmə</string>
@@ -458,7 +458,7 @@
     <string name="market_purchase_review_section">Rəy yazın</string>
     <string name="market_purchase_review_submit">Rəyi təqdim et</string>
     <string name="market_purchase_review_submitted">Rəy təqdim edildi</string>
-    <string name="market_purchase_review_your_review">Sizin {0} e-poçtunuz təsdiqlənməyib</string>
+    <string name="market_purchase_review_your_review">Rəyiniz</string>
     <string name="market_purchase_seller">Satıcı</string>
     <string name="market_purchase_shipping_line">Çatdırılma</string>
     <string name="market_purchase_summary">Sifariş xülasəsi</string>
@@ -742,4 +742,5 @@
     <string name="market_section_recently_viewed">Bu yaxınlarda baxılan</string>
     <string name="market_recently_viewed_clear">Hamısını təmizlə</string>
     <string name="market_listings_create">Yarat</string>
+    <string name="market_bid_dialog_ceiling_label">Maksimum təklif (isteğe bağlı)</string>
 </resources>

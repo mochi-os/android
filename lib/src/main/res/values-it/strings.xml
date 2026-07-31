@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Directory</string>
     <string name="person_picker_no_people">Nessuna persona</string>
     <string name="person_picker_project_members">Membri del progetto</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d iscritto</item>
+        <item quantity="other">%1$d iscritti</item>
+    </plurals>
 </resources>

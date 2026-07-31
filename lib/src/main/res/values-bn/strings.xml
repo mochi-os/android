@@ -309,4 +309,8 @@
     <string name="person_picker_directory">ডিরেক্টরি</string>
     <string name="person_picker_no_people">কোনো ব্যক্তি নেই</string>
     <string name="person_picker_project_members">প্রকল্পের সদস্যরা</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d গ্রাহক</item>
+        <item quantity="other">%1$d গ্রাহক</item>
+    </plurals>
 </resources>

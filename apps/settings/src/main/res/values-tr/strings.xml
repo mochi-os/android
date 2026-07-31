@@ -321,6 +321,10 @@
     <string name="domain_title">Alan adları</string>
     <string name="domain_verify">DNS doğrula</string>
     <string name="settings_home_domains">Alan adları</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test %1$d hedefe gönderildi</item>
+        <item quantity="other">Test %1$d hedefe gönderildi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 oturum iptal edildi</item>
         <item quantity="other">%1$d oturum iptal edildi</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Yönlendirme bekleyen mesajlar</string>
     <string name="system_status_relay_service">Aktarma hizmeti</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervasyonlar · %3$d devreler · %4$d reddedildi</string>
+    <string name="route_target_select">Seç</string>
+    <string name="account_data_description">Bu sunucuda veya başka bir Mochi sunucusunda geri yükleyebileceğiniz tam bir yedeği indirin.</string>
+    <string name="route_target_none">Kullanılabilir hedef yok</string>
 </resources>

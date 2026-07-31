@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nome a apresentar</string>
     <string name="crm_auth_verification_failed">Verificação falhou</string>
-    <string name="crm_list_title">Projetos</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">Fechar pesquisa</string>
     <string name="crm_list_search">Pesquisar</string>
-    <string name="crm_list_find">Encontrar projetos</string>
+    <string name="crm_list_find">Encontrar CRMs</string>
     <string name="crm_list_logout">Terminar sessão</string>
-    <string name="crm_list_create">Criar projeto</string>
-    <string name="crm_create_title">Criar projeto</string>
+    <string name="crm_list_create">Criar CRM</string>
+    <string name="crm_create_title">Criar CRM</string>
     <string name="crm_create_name">Nome</string>
     <string name="crm_create_description">Descrição</string>
     <string name="crm_create_privacy">Privacidade</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Público</string>
     <string name="crm_create_template_none">Nenhum</string>
     <string name="crm_create_action">Criar</string>
-    <string name="crm_find_title">Encontrar projetos</string>
+    <string name="crm_find_title">Encontrar CRMs</string>
     <string name="crm_find_recommended">Recomendado</string>
     <string name="crm_find_subscribe">Subscrever</string>
     <string name="crm_loading">A carregar…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Guardar alterações</string>
     <string name="crm_settings_unsubscribe">Cancelar subscrição</string>
     <string name="crm_settings_delete_crm">Eliminar projeto</string>
-    <string name="crm_settings_delete_confirm_title">Eliminar projeto</string>
+    <string name="crm_settings_delete_confirm_title">Eliminar CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancelar subscrição</string>
-    <string name="crm_settings_unsubscribe_message">Tem a certeza de que pretende cancelar a subscrição deste projeto?</string>
+    <string name="crm_settings_unsubscribe_message">Tem a certeza de que pretende cancelar a subscrição deste CRM?</string>
     <string name="crm_access_level_owner">Proprietário</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_comment">Comentário</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Servidor</string>
     <string name="crm_untitled">Sem título</string>
     <string name="crm_property_select">Selecionar …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d ficheiro em conflito</item>
+        <item quantity="other">%1$d ficheiros em conflito</item>
+    </plurals>
 </resources>

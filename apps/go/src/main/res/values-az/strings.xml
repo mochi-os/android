@@ -14,7 +14,7 @@
     <string name="go_chat_close">Söhbəti bağla</string>
     <string name="go_chat_title">Söhbət</string>
     <string name="go_color_black">Qara</string>
-    <string name="go_color_white">{colLabel}{rowLabel}-də ağ daş</string>
+    <string name="go_color_white">Ağ</string>
     <string name="go_delete_confirm">Sil</string>
     <string name="go_delete_message">Bu oyun sizin siyahınızdan silinəcək. Bunu geri qaytarmaq mümkün deyil.</string>
     <string name="go_delete_title">Oyunu silmək?</string>
@@ -61,7 +61,7 @@
     <string name="go_status_resigned_opponent">%1$s gedişi</string>
     <string name="go_status_resigned_self">Siz təslim oldunuz — %1$s qazanır</string>
     <string name="go_status_score">%1$s wins — B:%2$s W:%3$s</string>
-    <string name="go_status_you_win">Artıq {0} ilə daxil ola bilməyəcəksiniz. Daxil olmaq üçün başqa yolunuzun olduğundan əmin olun.</string>
+    <string name="go_status_you_win">Siz qazandınız!</string>
     <string name="go_status_your_move">Sizin ödənişiniz</string>
 
     <string name="go_channel_name">Go notifications</string>

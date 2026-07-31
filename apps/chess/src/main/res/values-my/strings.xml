@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">စစ်သား</string>
     <string name="chess_move_played">%1$s က %2$s ကို ကစားခဲ့သည်</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">စစ်တုရင်ရွေ့ကွက်များ၊ သရေကမ်းလှမ်းချက်များနှင့် ပွဲရလဒ်များအကြောင်း အကြောင်းကြားချက်များ။</string>
+    <string name="chess_open_sidebar">ဘေးဘားကို ဖွင့်ပါ</string>
+    <string name="chess_empty_subtitle">သူငယ်ချင်းနှင့် စစ်တုရင်ကစားရန် သင့်ပထမပွဲကို စတင်ပါ။</string>
+    <string name="chess_empty_start_button">သင့်ပထမပွဲကို စတင်ပါ</string>
+    <string name="chess_detail_unavailable">ပွဲ မရရှိနိုင်ပါ</string>
+    <string name="chess_delete_title">ဂိမ်းကို ဖျက်မလား?</string>
+    <string name="chess_delete_message">ဤသည် ပွဲကို သင့်စာရင်းမှ ဖယ်ရှားပါမည်။</string>
+    <string name="chess_ws_connecting">ချိတ်ဆက်နေသည်…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">ပြန်လည်ချိတ်ဆက်နေသည်…</string>
+    <string name="chess_ws_failed">ချိတ်ဆက်မှု မအောင်မြင်ပါ</string>
+    <string name="chess_move_capture">%1$s သည် %2$s ကို ယူသည်</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

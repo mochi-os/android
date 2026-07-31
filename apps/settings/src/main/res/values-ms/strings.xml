@@ -321,6 +321,10 @@
     <string name="domain_title">Domain</string>
     <string name="domain_verify">Sahkan DNS</string>
     <string name="settings_home_domains">Domain</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Ujian dihantar ke %1$d destinasi</item>
+        <item quantity="other">Ujian dihantar ke %1$d destinasi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d sesi dibatalkan</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">Mesej menunggu penghalaan</string>
     <string name="system_status_relay_service">Perkhidmatan geganti</string>
     <string name="system_status_relay_service_value">%1$d / %2$d tempahan · %3$d litar · %4$d ditolak</string>
+    <string name="route_target_select">Pilih</string>
+    <string name="account_data_description">Muat turun sandaran lengkap yang boleh anda pulihkan pada pelayan Mochi ini atau pelayan Mochi lain.</string>
+    <string name="route_target_none">Tiada sasaran tersedia</string>
 </resources>

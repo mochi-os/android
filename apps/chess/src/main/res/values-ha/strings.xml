@@ -51,23 +51,23 @@
     <string name="chess_piece_king">Sarki</string>
     <string name="chess_piece_queen">Sarauniya</string>
     <string name="chess_piece_rook">Hasumiya</string>
-    <string name="chess_piece_bishop">Bishop</string>
+    <string name="chess_piece_bishop">Gajah</string>
     <string name="chess_piece_knight">Doki</string>
     <string name="chess_piece_pawn">Soja</string>
     <string name="chess_move_played">%1$s ya yi %2$s</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">Sanarwa game da matakan dara, tayin canjaras da sakamakon wasa.</string>
+    <string name="chess_open_sidebar">Bude gefe</string>
+    <string name="chess_empty_subtitle">Fara wasanka na farko don yin dara tare da aboki.</string>
+    <string name="chess_empty_start_button">Fara wasanka na farko</string>
+    <string name="chess_detail_unavailable">Wasa ba ya samuwa</string>
+    <string name="chess_delete_title">A goge wasan?</string>
+    <string name="chess_delete_message">Wannan yana cire wasan daga jerinka.</string>
+    <string name="chess_ws_connecting">Ana haɗawa…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">Ana sake haɗawa…</string>
+    <string name="chess_ws_failed">Haɗin ya gaza</string>
+    <string name="chess_move_capture">%1$s ya ɗauki %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

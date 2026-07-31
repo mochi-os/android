@@ -270,4 +270,19 @@
     <string name="feeds_link">តំណ</string>
     <string name="feeds_share_link_title">តំណព័ត៌មាន</string>
     <string name="feeds_scroll_to_top">ត្រឡប់ទៅខាងលើ</string>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d រូបភាព</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d មតិយោបល់</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">ឯកសារភ្ជាប់ %1$d</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">មើលមតិ %1$d ទៀត</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d ឆ្នាំមុន ថ្ងៃនេះ</item>
+    </plurals>
 </resources>

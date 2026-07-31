@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Ehechauka kuatiarogue</string>
     <string name="wikis_revision_compare_failed">Ndaikatúi oñembohenda pe versión ymaguare ojojoja hag̃ua.</string>
     <string name="wikis_revision_changes_from">Moambue versión %1$d → %2$d guive</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d ñemoñe\'ẽ</item>
+        <item quantity="other">%d ñemoñe\'ẽ</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d ñembohovái</item>
+        <item quantity="other">+%d ñembohovái ambue</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Téra oñemoambue %1$d rogue</item>
+        <item quantity="other">Téra oñemoambue %1$d rogue</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d link oñembohekopyahu</item>
+        <item quantity="other">%1$d links oñembohekopyahu</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d rogue</item>
+        <item quantity="other">%d rogue</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d archivo</item>
+        <item quantity="other">%d archivos</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d ta\'ãnga</item>
+        <item quantity="other">%d ta\'ãnga</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d kuatia</item>
+        <item quantity="other">%d kuatia</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d rogue ko tag reheve</item>
+        <item quantity="other">%d rogue ko tag reheve</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Oñetopa %1$d ojejuhu "%2$s" peguarã</item>
+        <item quantity="other">Oñetopa %1$d ojejuhu "%2$s" peguarã</item>
+    </plurals>
 </resources>

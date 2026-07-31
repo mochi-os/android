@@ -321,6 +321,10 @@
     <string name="domain_title">도메인</string>
     <string name="domain_verify">DNS 확인</string>
     <string name="settings_home_domains">도메인</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d 개 대상에 테스트를 보냈어요</item>
+        <item quantity="other">%1$d 개 대상에 테스트를 보냈어요</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d개의 세션이 취소되었습니다</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">라우팅 대기 중인 메시지</string>
     <string name="system_status_relay_service">릴레이 서비스</string>
     <string name="system_status_relay_service_value">%1$d / %2$d 예약 · %3$d 회선 · %4$d 거부됨</string>
+    <string name="route_target_select">선택</string>
+    <string name="account_data_description">이 서버 또는 다른 Mochi 서버에서 복원할 수 있는 전체 백업을 다운로드하세요.</string>
+    <string name="route_target_none">사용할 수 있는 대상이 없습니다</string>
 </resources>

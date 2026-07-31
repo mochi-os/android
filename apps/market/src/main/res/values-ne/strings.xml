@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">हालै हेरिएका</string>
     <string name="market_recently_viewed_clear">सबै खाली गर्नुहोस्</string>
     <string name="market_listings_create">सिर्जना गर्नुहोस्</string>
+    <string name="market_bid_dialog_ceiling_label">अधिकतम बोली (वैकल्पिक)</string>
 </resources>

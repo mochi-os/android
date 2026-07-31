@@ -321,6 +321,12 @@
     <string name="domain_title">Domeny</string>
     <string name="domain_verify">Zweryfikuj DNS</string>
     <string name="settings_home_domains">Domeny</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test wysłany do %1$d miejsca docelowego</item>
+        <item quantity="few">Test wysłany do %1$d miejsc docelowych</item>
+        <item quantity="many">Test wysłany do %1$d miejsc docelowych</item>
+        <item quantity="other">Test wysłany do %1$d miejsca docelowego</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Unieważniono %1$d sesje</item>
         <item quantity="many">Unieważniono %1$d sesji</item>
@@ -368,4 +374,7 @@
     <string name="system_status_awaiting_routing">Wiadomości oczekujące na trasowanie</string>
     <string name="system_status_relay_service">Usługa przekaźnika</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezerwacje · %3$d obwody · %4$d odrzucone</string>
+    <string name="route_target_select">Wybierz</string>
+    <string name="account_data_description">Pobierz pełną kopię zapasową, którą możesz przywrócić na tym lub innym serwerze Mochi.</string>
+    <string name="route_target_none">Brak dostępnych celów</string>
 </resources>

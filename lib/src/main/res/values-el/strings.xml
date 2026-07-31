@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Κατάλογος</string>
     <string name="person_picker_no_people">Δεν υπάρχουν άτομα</string>
     <string name="person_picker_project_members">Μέλη έργου</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d συνδρομητής</item>
+        <item quantity="other">%1$d συνδρομητές</item>
+    </plurals>
 </resources>

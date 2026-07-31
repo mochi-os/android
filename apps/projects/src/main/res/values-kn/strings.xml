@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">ಯೋಜನೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="projects_sort_filter_title">ವಿಂಗಡಿಸಿ ಮತ್ತು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 ನಂತಹ ಓದಬಹುದಾದ ID ಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d ಸಂಘರ್ಷದ ಫೈಲ್</item>
+        <item quantity="other">%1$d ಸಂಘರ್ಷದ ಫೈಲ್‌ಗಳು</item>
+    </plurals>
 </resources>

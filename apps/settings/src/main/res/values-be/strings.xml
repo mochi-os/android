@@ -321,6 +321,12 @@
     <string name="domain_title">Дамены</string>
     <string name="domain_verify">Праверыць DNS</string>
     <string name="settings_home_domains">Дамены</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Тэст адпраўлены на %1$d адрас</item>
+        <item quantity="few">Тэст адпраўлены на %1$d адрасы</item>
+        <item quantity="many">Тэст адпраўлены на %1$d адрасоў</item>
+        <item quantity="other">Тэст адпраўлены на %1$d адраса</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Адклікана %1$d сесіі</item>
         <item quantity="many">Адклікана %1$d сесій</item>
@@ -368,4 +374,7 @@
     <string name="system_status_awaiting_routing">Паведамленні ў чаканні маршрутызацыі</string>
     <string name="system_status_relay_service">Служба рэле</string>
     <string name="system_status_relay_service_value">%1$d / %2$d браніраванні · %3$d ланцугі · %4$d адхілена</string>
+    <string name="route_target_select">Выбраць</string>
+    <string name="account_data_description">Спампуйце поўную рэзервовую копію, якую можна аднавіць на гэтым або іншым серверы Mochi.</string>
+    <string name="route_target_none">Няма даступных цэлей</string>
 </resources>

@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">表示名</string>
     <string name="crm_auth_verification_failed">確認に失敗しました</string>
-    <string name="crm_list_title">プロジェクト</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">検索を閉じる</string>
     <string name="crm_list_search">検索</string>
-    <string name="crm_list_find">プロジェクトを検索</string>
+    <string name="crm_list_find">CRM を検索</string>
     <string name="crm_list_logout">ログアウト</string>
-    <string name="crm_list_create">プロジェクトを作成</string>
-    <string name="crm_create_title">プロジェクトを作成</string>
+    <string name="crm_list_create">CRM を作成</string>
+    <string name="crm_create_title">CRM を作成</string>
     <string name="crm_create_name">名前</string>
     <string name="crm_create_description">説明</string>
     <string name="crm_create_privacy">プライバシー</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">公開</string>
     <string name="crm_create_template_none">なし</string>
     <string name="crm_create_action">作成</string>
-    <string name="crm_find_title">プロジェクトを検索</string>
+    <string name="crm_find_title">CRM を検索</string>
     <string name="crm_find_recommended">おすすめ</string>
     <string name="crm_find_subscribe">購読する</string>
     <string name="crm_loading">読み込み中…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">変更を保存</string>
     <string name="crm_settings_unsubscribe">購読解除</string>
     <string name="crm_settings_delete_crm">プロジェクトを削除</string>
-    <string name="crm_settings_delete_confirm_title">プロジェクトを削除</string>
+    <string name="crm_settings_delete_confirm_title">CRMを削除</string>
     <string name="crm_settings_unsubscribe_title">購読解除</string>
-    <string name="crm_settings_unsubscribe_message">このプロジェクトの購読を解除しますか？</string>
+    <string name="crm_settings_unsubscribe_message">このCRMの購読を解除しますか？</string>
     <string name="crm_access_level_owner">オーナー</string>
     <string name="crm_access_level_design">デザイン</string>
     <string name="crm_access_level_comment">コメント</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">サーバー</string>
     <string name="crm_untitled">無題</string>
     <string name="crm_property_select">選択 …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d 件の競合ファイル</item>
+        <item quantity="other">%1$d 件の競合ファイル</item>
+    </plurals>
 </resources>

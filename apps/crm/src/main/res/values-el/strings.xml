@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Εμφανιζόμενο όνομα</string>
     <string name="crm_auth_verification_failed">Η επαλήθευση απέτυχε</string>
-    <string name="crm_list_title">Έργα</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Κλείσιμο αναζήτησης</string>
     <string name="crm_list_search">Αναζήτηση</string>
-    <string name="crm_list_find">Εύρεση έργων</string>
+    <string name="crm_list_find">Εύρεση CRM</string>
     <string name="crm_list_logout">Αποσύνδεση</string>
-    <string name="crm_list_create">Δημιουργία έργου</string>
-    <string name="crm_create_title">Δημιουργία έργου</string>
+    <string name="crm_list_create">Δημιουργία CRM</string>
+    <string name="crm_create_title">Δημιουργία CRM</string>
     <string name="crm_create_name">Όνομα</string>
     <string name="crm_create_description">Περιγραφή</string>
     <string name="crm_create_privacy">Ιδιωτικότητα</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Δημόσιο</string>
     <string name="crm_create_template_none">Κανένα</string>
     <string name="crm_create_action">Δημιουργία</string>
-    <string name="crm_find_title">Εύρεση έργων</string>
+    <string name="crm_find_title">Εύρεση CRM</string>
     <string name="crm_find_recommended">Συνιστώμενο</string>
     <string name="crm_find_subscribe">Εγγραφή</string>
     <string name="crm_loading">Φόρτωση…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Αποθήκευση αλλαγών</string>
     <string name="crm_settings_unsubscribe">Διαγραφή εγγραφής</string>
     <string name="crm_settings_delete_crm">Διαγραφή έργου</string>
-    <string name="crm_settings_delete_confirm_title">Διαγραφή έργου</string>
+    <string name="crm_settings_delete_confirm_title">Διαγραφή CRM</string>
     <string name="crm_settings_unsubscribe_title">Διαγραφή εγγραφής</string>
-    <string name="crm_settings_unsubscribe_message">Είστε βέβαιοι ότι θέλετε να καταργήσετε τη συνδρομή σας από αυτό το έργο;</string>
+    <string name="crm_settings_unsubscribe_message">Είστε βέβαιοι ότι θέλετε να καταργήσετε τη συνδρομή σας από αυτό το CRM;</string>
     <string name="crm_access_level_owner">Ιδιοκτήτης</string>
     <string name="crm_access_level_design">Σχεδιασμός</string>
     <string name="crm_access_level_comment">Σχόλιο</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Διακομιστής</string>
     <string name="crm_untitled">Χωρίς τίτλο</string>
     <string name="crm_property_select">Επιλέξτε …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d αρχείο σε διένεξη</item>
+        <item quantity="other">%1$d αρχεία σε διένεξη</item>
+    </plurals>
 </resources>

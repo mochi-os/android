@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">پيادو</string>
     <string name="chess_move_played">%1$s %2$s کيڏيو</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">شطرنج جي چالن، برابري جي آڇن ۽ راند جي نتيجن بابت اطلاع.</string>
+    <string name="chess_open_sidebar">سائڊبار کوليو</string>
+    <string name="chess_empty_subtitle">دوست سان شطرنج کيڏڻ لاءِ پنهنجي پهرين راند شروع ڪريو.</string>
+    <string name="chess_empty_start_button">پنهنجي پهرين راند شروع ڪريو</string>
+    <string name="chess_detail_unavailable">راند موجود ناهي</string>
+    <string name="chess_delete_title">راند ختم ڪجي؟</string>
+    <string name="chess_delete_message">هي راند کي توهان جي فهرست مان هٽائي ٿو.</string>
+    <string name="chess_ws_connecting">ڳنڍجي رهيو آهي…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">ٻيهر ڳنڍجي رهيو آهي…</string>
+    <string name="chess_ws_failed">ڪنيڪشن ناڪام ٿيو</string>
+    <string name="chess_move_capture">%1$s %2$s کنيو</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

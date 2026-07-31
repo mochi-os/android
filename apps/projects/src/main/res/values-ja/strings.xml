@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">プロジェクトを共有</string>
     <string name="projects_sort_filter_title">並べ替えと絞り込み</string>
     <string name="projects_create_prefix_hint">%1$s-1、%1$s-2 のような読みやすい ID に使用されます</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d 件の競合ファイル</item>
+        <item quantity="other">%1$d 件の競合ファイル</item>
+    </plurals>
 </resources>

@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Diréktori</string>
     <string name="person_picker_no_people">Teu aya jalma</string>
     <string name="person_picker_project_members">Anggota proyék</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d palanggan</item>
+        <item quantity="other">%1$d palanggan</item>
+    </plurals>
 </resources>

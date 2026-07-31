@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Näita lehte</string>
     <string name="wikis_revision_compare_failed">Eelmist versiooni ei õnnestunud võrdlemiseks laadida.</string>
     <string name="wikis_revision_changes_from">Muudatused versioonist %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d kommentaar</item>
+        <item quantity="other">%d kommentaari</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d vastus</item>
+        <item quantity="other">+%d veel vastust</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Ümber nimetatud %1$d leht</item>
+        <item quantity="other">Ümber nimetatud %1$d lehte</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">uuendatud %1$d link</item>
+        <item quantity="other">uuendatud %1$d linki</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d leht</item>
+        <item quantity="other">%d lehte</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d fail</item>
+        <item quantity="other">%d faili</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d pilt</item>
+        <item quantity="other">%d pilti</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokument</item>
+        <item quantity="other">%d dokumenti</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d leht selle sildiga</item>
+        <item quantity="other">%d lehte selle sildiga</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Leiti %1$d tulemus päringule „%2$s“</item>
+        <item quantity="other">Leiti %1$d tulemust päringule „%2$s“</item>
+    </plurals>
 </resources>

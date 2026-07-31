@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">Peón</string>
     <string name="chess_move_played">%1$s jugó %2$s</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">Notificaciones sobre movimientos de ajedrez, ofertas de tablas y resultados de partidas.</string>
+    <string name="chess_open_sidebar">Abrir barra lateral</string>
+    <string name="chess_empty_subtitle">Empieza tu primera partida para jugar al ajedrez con un amigo.</string>
+    <string name="chess_empty_start_button">Empieza tu primera partida</string>
+    <string name="chess_detail_unavailable">Partida no disponible</string>
+    <string name="chess_delete_title">¿Eliminar partida?</string>
+    <string name="chess_delete_message">Esto quita la partida de tu lista.</string>
+    <string name="chess_ws_connecting">Conectando…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">Reconectando…</string>
+    <string name="chess_ws_failed">Falló la conexión</string>
+    <string name="chess_move_capture">%1$s tomó %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

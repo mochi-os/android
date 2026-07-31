@@ -321,6 +321,10 @@
     <string name="domain_title">Domains</string>
     <string name="domain_verify">DNS verifizieren</string>
     <string name="settings_home_domains">Domains</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test an %1$d Ziel gesendet</item>
+        <item quantity="other">Test an %1$d Ziele gesendet</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 Sitzung widerrufen</item>
         <item quantity="other">%1$d Sitzungen widerrufen</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Nachrichten, die auf Routing warten</string>
     <string name="system_status_relay_service">Relaisdienst</string>
     <string name="system_status_relay_service_value">%1$d / %2$d Reservierungen · %3$d Verbindungen · %4$d abgelehnt</string>
+    <string name="route_target_select">Auswählen</string>
+    <string name="account_data_description">Laden Sie eine vollständige Sicherung herunter, die Sie auf diesem oder einem anderen Mochi-Server wiederherstellen können.</string>
+    <string name="route_target_none">Keine Ziele verfügbar</string>
 </resources>

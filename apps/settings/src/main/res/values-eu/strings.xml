@@ -321,6 +321,10 @@
     <string name="domain_title">Domeinuak</string>
     <string name="domain_verify">Egiaztatu DNSa</string>
     <string name="settings_home_domains">Domeinuak</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Proba helmuga %1$d (e)ra bidali da</item>
+        <item quantity="other">Proba %1$d helmugatara bidali da</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 saio baliogabetuta</item>
         <item quantity="other">%1$d saio baliogabetuta</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Bideratzearen zain dauden mezuak</string>
     <string name="system_status_relay_service">Errele-zerbitzua</string>
     <string name="system_status_relay_service_value">%1$d / %2$d erreserbak · %3$d zirkuituak · %4$d ukatuak</string>
+    <string name="route_target_select">Hautatu</string>
+    <string name="account_data_description">Deskargatu babeskopia osoa, zerbitzari honetan edo beste Mochi zerbitzari batean berreskuratu dezakezuna.</string>
+    <string name="route_target_none">Ez dago helbururik erabilgarri</string>
 </resources>

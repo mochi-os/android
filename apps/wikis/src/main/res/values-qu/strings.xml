@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Pankata rikuchiy</string>
     <string name="wikis_revision_compare_failed">Tupachinapaq ñawpaq mit\'a mana chaskichikurqachu.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d mit\'amanta hukchasqakuna</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d comentario</item>
+        <item quantity="other">%d comentariokuna</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d kutichiy</item>
+        <item quantity="other">+%d aswan kutichiykuna</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d página kutimanta sutichasqa</item>
+        <item quantity="other">%1$d páginakuna kutimanta sutichasqa</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d link musuqchasqa</item>
+        <item quantity="other">%1$d linkkuna musuqchasqa</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d página</item>
+        <item quantity="other">%d páginakuna</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d file</item>
+        <item quantity="other">%d filekuna</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d imagen</item>
+        <item quantity="other">%d imagenkuna</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d documento</item>
+        <item quantity="other">%d documentokuna</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">Kay tagniyuq %d página</item>
+        <item quantity="other">Kay tagniyuq %d páginakuna</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d resultado "%2$s"-paq tarisqa</item>
+        <item quantity="other">%1$d resultadokuna "%2$s"-paq tarisqa</item>
+    </plurals>
 </resources>

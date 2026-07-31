@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">მოგებული {0}-ად</string>
-    <string name="words_list_title">მოგებული {0}-ად</string>
+    <string name="words_app_title">სიტყვები</string>
+    <string name="words_list_title">სიტყვები</string>
     <string name="words_list_menu">მენიუ</string>
     <string name="words_list_new">ახალი თამაში</string>
     <string name="words_list_logout">გასვლა</string>
     <string name="words_list_empty_title">თამაშები ჯერ არ არის</string>
-    <string name="words_sidebar_header">მოგებული {0}-ად</string>
+    <string name="words_sidebar_header">სიტყვები</string>
     <string name="words_sidebar_completed">დასრულდა</string>
     <string name="words_sidebar_new_game">ახალი თამაში</string>
     <string name="words_new_game_title">ახალი თამაში</string>
@@ -62,7 +62,7 @@
     <string name="words_detail_title">Game</string>
     <string name="words_detail_coming_soon">Game detail coming soon</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
-    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_status_winner_wins">იგებს %1$s</string>
     <string name="words_detail_player_fallback">Player %1$d</string>
     <string name="words_detail_player_count">%1$d players</string>
     <string name="words_detail_label_tiles_left">%1$d tiles left</string>

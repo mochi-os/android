@@ -273,4 +273,24 @@
     <string name="feeds_link">लिङ्क</string>
     <string name="feeds_share_link_title">फिड लिङ्क</string>
     <string name="feeds_scroll_to_top">माथि फर्कनुहोस्</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d तस्बिर</item>
+        <item quantity="other">%1$d तस्बिरहरू</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">१ टिप्पणी</item>
+        <item quantity="other">%1$d टिप्पणीहरू</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d संलग्न</item>
+        <item quantity="other">%1$d संलग्न</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d थप टिप्पणी देखाउनुहोस्</item>
+        <item quantity="other">%1$d थप टिप्पणीहरू देखाउनुहोस्</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">आज %1$d वर्ष अघि</item>
+        <item quantity="other">आज %1$d वर्ष अघि</item>
+    </plurals>
 </resources>

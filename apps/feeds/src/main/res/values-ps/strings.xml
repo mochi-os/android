@@ -273,4 +273,24 @@
     <string name="feeds_link">لینک</string>
     <string name="feeds_share_link_title">د فیډ لینک</string>
     <string name="feeds_scroll_to_top">بېرته پورته</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d عکس</item>
+        <item quantity="other">%1$d عکسونه</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d تبصره</item>
+        <item quantity="other">%1$d تبصرې</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d نښلونه</item>
+        <item quantity="other">%1$d نښلونې</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">%1$d نور نظر وګورئ</item>
+        <item quantity="other">%1$d نور نظرونه وګورئ</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">نن %1$d کال دمخه</item>
+        <item quantity="other">نن %1$d کاله دمخه</item>
+    </plurals>
 </resources>

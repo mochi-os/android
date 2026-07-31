@@ -321,6 +321,11 @@
     <string name="domain_title">Domény</string>
     <string name="domain_verify">Ověřit DNS</string>
     <string name="settings_home_domains">Domény</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test odeslán na %1$d cíl</item>
+        <item quantity="few">Test odeslán na %1$d cíle</item>
+        <item quantity="other">Test odeslán na %1$d cílů</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">%1$d relace zrušeny</item>
         <item quantity="many">%1$d relací zrušeno</item>
@@ -368,4 +373,7 @@
     <string name="system_status_awaiting_routing">Zprávy čekající na směrování</string>
     <string name="system_status_relay_service">Služba relé</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervace · %3$d okruhy · %4$d odmítnuto</string>
+    <string name="route_target_select">Vybrat</string>
+    <string name="account_data_description">Stáhněte si úplnou záložní kopii, kterou můžete obnovit na tomto nebo jiném serveru Mochi.</string>
+    <string name="route_target_none">Nejsou dostupné žádné cíle</string>
 </resources>

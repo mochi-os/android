@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">လတ်တလော ကြည့်ရှုခဲ့</string>
     <string name="market_recently_viewed_clear">အားလုံး ရှင်းမည်</string>
     <string name="market_listings_create">ဖန်တီးမည်</string>
+    <string name="market_bid_dialog_ceiling_label">အမြင့်ဆုံးဈေးနှုန်း (ရွေးချယ်နိုင်)</string>
 </resources>

@@ -321,6 +321,10 @@
     <string name="domain_title">Domener</string>
     <string name="domain_verify">Bekreft DNS</string>
     <string name="settings_home_domains">Domener</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test sendt til %1$d destinasjon</item>
+        <item quantity="other">Test sendt til %1$d destinasjoner</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 økt tilbakekalt</item>
         <item quantity="other">%1$d økter tilbakekalt</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
     <string name="system_status_relay_service">Relétjeneste</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasjoner · %3$d kretser · %4$d avvist</string>
+    <string name="route_target_select">Velg</string>
+    <string name="account_data_description">Last ned en fullstendig sikkerhetskopi som du kan gjenopprette på denne eller en annen Mochi-tjener.</string>
+    <string name="route_target_none">Ingen tilgjengelige mål</string>
 </resources>

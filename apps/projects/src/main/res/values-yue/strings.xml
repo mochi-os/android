@@ -366,4 +366,7 @@
     <string name="projects_create_upload_json">上傳 .json 檔案</string>
     <string name="projects_settings_not_set">未設定</string>
     <string name="projects_settings_updated">已更新專案</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="other">%1$d 個撞咗嘅檔案</item>
+    </plurals>
 </resources>

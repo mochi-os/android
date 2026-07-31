@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Ìwé àkọsílẹ̀</string>
     <string name="person_picker_no_people">Kò sí ènìyàn</string>
     <string name="person_picker_project_members">Àwọn ọmọ ẹgbẹ́ iṣẹ́ àkanṣe</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">olùtẹ̀lé %1$d</item>
+        <item quantity="other">àwọn olùtẹ̀lé %1$d</item>
+    </plurals>
 </resources>

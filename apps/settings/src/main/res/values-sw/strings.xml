@@ -321,6 +321,10 @@
     <string name="domain_title">Vikoa</string>
     <string name="domain_verify">Thibitisha DNS</string>
     <string name="settings_home_domains">Vikoa</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Jaribio limetumwa kwa marudio %1$d</item>
+        <item quantity="other">Jaribio limetumwa kwa marudio %1$d</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Imefuta kipindi 1</item>
         <item quantity="other">Imefuta vipindi %1$d</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Ujumbe unaosubiri uelekezaji</string>
     <string name="system_status_relay_service">Huduma ya rele</string>
     <string name="system_status_relay_service_value">%1$d / %2$d uhifadhi · %3$d saketi · %4$d zilizokataliwa</string>
+    <string name="route_target_select">Chagua</string>
+    <string name="account_data_description">Pakua hifadhi rudufu kamili ambayo unaweza kurejesha kwenye seva hii ya Mochi au seva nyingine.</string>
+    <string name="route_target_none">Hakuna lengo linalopatikana</string>
 </resources>

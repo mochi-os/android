@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">顯示名稱</string>
     <string name="crm_auth_verification_failed">驗證失敗</string>
-    <string name="crm_list_title">專案</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">關閉搜尋</string>
     <string name="crm_list_search">搜尋</string>
-    <string name="crm_list_find">尋找專案</string>
+    <string name="crm_list_find">尋找 CRM</string>
     <string name="crm_list_logout">登出</string>
-    <string name="crm_list_create">建立專案</string>
-    <string name="crm_create_title">建立專案</string>
+    <string name="crm_list_create">建立 CRM</string>
+    <string name="crm_create_title">建立 CRM</string>
     <string name="crm_create_name">名稱</string>
     <string name="crm_create_description">說明</string>
     <string name="crm_create_privacy">隱私</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">公開</string>
     <string name="crm_create_template_none">無</string>
     <string name="crm_create_action">建立</string>
-    <string name="crm_find_title">尋找專案</string>
+    <string name="crm_find_title">尋找 CRM</string>
     <string name="crm_find_recommended">推薦</string>
     <string name="crm_find_subscribe">訂閱</string>
     <string name="crm_loading">載入中…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">儲存變更</string>
     <string name="crm_settings_unsubscribe">取消訂閱</string>
     <string name="crm_settings_delete_crm">刪除專案</string>
-    <string name="crm_settings_delete_confirm_title">刪除專案</string>
+    <string name="crm_settings_delete_confirm_title">刪除 CRM</string>
     <string name="crm_settings_unsubscribe_title">取消訂閱</string>
-    <string name="crm_settings_unsubscribe_message">您確定要取消訂閱此專案嗎?</string>
+    <string name="crm_settings_unsubscribe_message">您確定要取消訂閱此 CRM 嗎?</string>
     <string name="crm_access_level_owner">擁有者</string>
     <string name="crm_access_level_design">設計</string>
     <string name="crm_access_level_comment">留言</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">伺服器</string>
     <string name="crm_untitled">未命名</string>
     <string name="crm_property_select">選擇 …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d 個衝突檔案</item>
+        <item quantity="other">%1$d 個衝突檔案</item>
+    </plurals>
 </resources>

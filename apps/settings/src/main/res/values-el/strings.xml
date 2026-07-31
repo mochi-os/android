@@ -321,6 +321,10 @@
     <string name="domain_title">Τομείς</string>
     <string name="domain_verify">Επαλήθευση DNS</string>
     <string name="settings_home_domains">Τομείς</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Η δοκιμή στάλθηκε σε %1$d προορισμό</item>
+        <item quantity="other">Η δοκιμή στάλθηκε σε %1$d προορισμούς</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 συνεδρία ανακλήθηκε</item>
         <item quantity="other">%1$d συνεδρίες ανακλήθηκαν</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Μηνύματα σε αναμονή δρομολόγησης</string>
     <string name="system_status_relay_service">Υπηρεσία αναμετάδοσης</string>
     <string name="system_status_relay_service_value">%1$d / %2$d κρατήσεις · %3$d κυκλώματα · %4$d απορρίφθηκαν</string>
+    <string name="route_target_select">Επιλογή</string>
+    <string name="account_data_description">Κατεβάστε ένα πλήρες αντίγραφο ασφαλείας που μπορείτε να επαναφέρετε σε αυτόν ή σε άλλον διακομιστή Mochi.</string>
+    <string name="route_target_none">Δεν υπάρχουν διαθέσιμοι προορισμοί</string>
 </resources>

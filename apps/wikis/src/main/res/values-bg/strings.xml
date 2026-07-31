@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Показване на страницата</string>
     <string name="wikis_revision_compare_failed">Предишната версия не можа да бъде заредена за сравнение.</string>
     <string name="wikis_revision_changes_from">Промени от версия %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d коментар</item>
+        <item quantity="other">%d коментара</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d отговор</item>
+        <item quantity="other">+%d още отговора</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Преименувана %1$d страница</item>
+        <item quantity="other">Преименувани %1$d страници</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">обновена %1$d връзка</item>
+        <item quantity="other">обновени %1$d връзки</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d страница</item>
+        <item quantity="other">%d страници</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d файл</item>
+        <item quantity="other">%d файла</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d изображение</item>
+        <item quantity="other">%d изображения</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d документ</item>
+        <item quantity="other">%d документа</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d страница с този етикет</item>
+        <item quantity="other">%d страници с този етикет</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Намерени %1$d резултат за „%2$s“</item>
+        <item quantity="other">Намерени %1$d резултата за „%2$s“</item>
+    </plurals>
 </resources>

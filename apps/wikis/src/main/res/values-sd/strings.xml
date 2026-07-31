@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">صفحو ڏيکاريو</string>
     <string name="wikis_revision_compare_failed">ڀيٽ لاءِ اڳوڻو نسخو لوڊ نه ٿي سگهيو.</string>
     <string name="wikis_revision_changes_from">نسخي %1$d → %2$d کان تبديليون</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d تبصرو</item>
+        <item quantity="other">%d تبصرا</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d جواب</item>
+        <item quantity="other">+%d وڌيڪ جواب</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d صفحي جو نالو تبديل ٿيو</item>
+        <item quantity="other">%1$d صفحن جو نالو تبديل ٿيو</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d لنڪ اپڊيٽ ٿيو</item>
+        <item quantity="other">%1$d لنڪ اپڊيٽ ٿيا</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d صفحو</item>
+        <item quantity="other">%d صفحا</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d فائل</item>
+        <item quantity="other">%d فائلون</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d تصوير</item>
+        <item quantity="other">%d تصويرون</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d دستاويز</item>
+        <item quantity="other">%d دستاويز</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">ھن ٽيگ سان %d صفحو</item>
+        <item quantity="other">ھن ٽيگ سان %d صفحا</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">"%2$s" لاءِ %1$d نتيجو مليا</item>
+        <item quantity="other">"%2$s" لاءِ %1$d نتيجا مليا</item>
+    </plurals>
 </resources>

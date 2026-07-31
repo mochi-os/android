@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nama tampilan</string>
     <string name="crm_auth_verification_failed">Verifikasi gagal</string>
-    <string name="crm_list_title">Proyek</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Tutup pencarian</string>
     <string name="crm_list_search">Cari</string>
-    <string name="crm_list_find">Cari proyek</string>
+    <string name="crm_list_find">Cari CRM</string>
     <string name="crm_list_logout">Keluar</string>
-    <string name="crm_list_create">Buat proyek</string>
-    <string name="crm_create_title">Buat proyek</string>
+    <string name="crm_list_create">Buat CRM</string>
+    <string name="crm_create_title">Buat CRM</string>
     <string name="crm_create_name">Nama</string>
     <string name="crm_create_description">Deskripsi</string>
     <string name="crm_create_privacy">Privasi</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Publik</string>
     <string name="crm_create_template_none">Tidak ada</string>
     <string name="crm_create_action">Buat</string>
-    <string name="crm_find_title">Cari proyek</string>
+    <string name="crm_find_title">Cari CRM</string>
     <string name="crm_find_recommended">Direkomendasikan</string>
     <string name="crm_find_subscribe">Berlangganan</string>
     <string name="crm_loading">Memuat…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Simpan perubahan</string>
     <string name="crm_settings_unsubscribe">Berhenti berlangganan</string>
     <string name="crm_settings_delete_crm">Hapus proyek</string>
-    <string name="crm_settings_delete_confirm_title">Hapus proyek</string>
+    <string name="crm_settings_delete_confirm_title">Hapus CRM</string>
     <string name="crm_settings_unsubscribe_title">Berhenti berlangganan</string>
-    <string name="crm_settings_unsubscribe_message">Apakah Anda yakin ingin berhenti berlangganan proyek ini?</string>
+    <string name="crm_settings_unsubscribe_message">Apakah Anda yakin ingin berhenti berlangganan CRM ini?</string>
     <string name="crm_access_level_owner">Pemilik</string>
     <string name="crm_access_level_design">Desain</string>
     <string name="crm_access_level_comment">Komentar</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Tanpa judul</string>
     <string name="crm_property_select">Pilih …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d berkas konflik</item>
+        <item quantity="other">%1$d berkas konflik</item>
+    </plurals>
 </resources>

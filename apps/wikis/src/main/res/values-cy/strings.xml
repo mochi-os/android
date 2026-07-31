@@ -313,4 +313,84 @@
     <string name="wikis_revision_show_page">Dangos y dudalen</string>
     <string name="wikis_revision_compare_failed">Methwyd â llwytho\'r fersiwn flaenorol i\'w chymharu.</string>
     <string name="wikis_revision_changes_from">Newidiadau o fersiwn %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="zero">%d sylw</item>
+        <item quantity="one">%d sylw</item>
+        <item quantity="two">%d sylw</item>
+        <item quantity="few">%d sylw</item>
+        <item quantity="many">%d sylw</item>
+        <item quantity="other">%d sylw</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="zero">%d ateb</item>
+        <item quantity="one">%d ateb</item>
+        <item quantity="two">+%d ateb arall</item>
+        <item quantity="few">+%d ateb arall</item>
+        <item quantity="many">+%d ateb arall</item>
+        <item quantity="other">+%d ateb arall</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="zero">Ailenwyd %1$d tudalen</item>
+        <item quantity="one">Ailenwyd %1$d dudalen</item>
+        <item quantity="two">Ailenwyd %1$d dudalen</item>
+        <item quantity="few">Ailenwyd %1$d thudalen</item>
+        <item quantity="many">Ailenwyd %1$d thudalen</item>
+        <item quantity="other">Ailenwyd %1$d tudalen</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="zero">diweddarwyd %1$d dolen</item>
+        <item quantity="one">diweddarwyd %1$d ddolen</item>
+        <item quantity="two">diweddarwyd %1$d ddolen</item>
+        <item quantity="few">diweddarwyd %1$d dolen</item>
+        <item quantity="many">diweddarwyd %1$d dolen</item>
+        <item quantity="other">diweddarwyd %1$d dolen</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="zero">%d tudalen</item>
+        <item quantity="one">%d dudalen</item>
+        <item quantity="two">%d dudalen</item>
+        <item quantity="few">%d thudalen</item>
+        <item quantity="many">%d thudalen</item>
+        <item quantity="other">%d tudalen</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="zero">%d ffeil</item>
+        <item quantity="one">%d ffeil</item>
+        <item quantity="two">%d ffeil</item>
+        <item quantity="few">%d ffeil</item>
+        <item quantity="many">%d ffeil</item>
+        <item quantity="other">%d ffeil</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="zero">%d delwedd</item>
+        <item quantity="one">%d ddelwedd</item>
+        <item quantity="two">%d ddelwedd</item>
+        <item quantity="few">%d delwedd</item>
+        <item quantity="many">%d delwedd</item>
+        <item quantity="other">%d delwedd</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="zero">%d dogfen</item>
+        <item quantity="one">%d ddogfen</item>
+        <item quantity="two">%d ddogfen</item>
+        <item quantity="few">%d dogfen</item>
+        <item quantity="many">%d dogfen</item>
+        <item quantity="other">%d dogfen</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="zero">%d tudalen gyda\'r tag hwn</item>
+        <item quantity="one">%d dudalen gyda\'r tag hwn</item>
+        <item quantity="two">%d dudalen gyda\'r tag hwn</item>
+        <item quantity="few">%d thudalen gyda\'r tag hwn</item>
+        <item quantity="many">%d thudalen gyda\'r tag hwn</item>
+        <item quantity="other">%d tudalen gyda\'r tag hwn</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="zero">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
+        <item quantity="one">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
+        <item quantity="two">Daethpwyd o hyd i %1$d ganlyniad ar gyfer "%2$s"</item>
+        <item quantity="few">Daethpwyd o hyd i %1$d chanlyniad ar gyfer "%2$s"</item>
+        <item quantity="many">Daethpwyd o hyd i %1$d chanlyniad ar gyfer "%2$s"</item>
+        <item quantity="other">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
+    </plurals>
 </resources>

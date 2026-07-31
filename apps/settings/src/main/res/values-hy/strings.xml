@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Խմբագրել կատեգորիան</string>
     <string name="notifprefs_name_label">Անուն</string>
     <string name="notifprefs_destinations">Նպատակակետեր</string>
-    <string name="notifprefs_dest_web">Մոդերացնել, գրառել, մեկնաբանել, քվեարկել և դիտել</string>
+    <string name="notifprefs_dest_web">Mochi վեբ</string>
     <string name="notifprefs_test">Թեստ</string>
     <string name="notifprefs_edit">Խմբագրել</string>
     <string name="notifprefs_delete">Ջնջել</string>
@@ -145,10 +145,10 @@
     <string name="system_settings_setting_updated">Կարգավորումը թարմացվեց</string>
     <string name="system_settings_update_failed">Չհաջողվեց թարմացնել կարգավորումը</string>
     <string name="system_setting_apps_install_user">Թույլատրված է</string>
-    <string name="system_setting_auth_email">Կորած</string>
+    <string name="system_setting_auth_email">Մուտք գործել էլփոստի կոդով</string>
     <string name="system_setting_auth_passkey">Մուտքը կորե՞լ է։ Օգտագործեք վերականգնման կոդ</string>
     <string name="system_setting_auth_totp">Մուտք վերականգնման կոդով</string>
-    <string name="system_setting_auth_recovery">Սիրել</string>
+    <string name="system_setting_auth_recovery">Մուտք գործել վերականգնման կոդով</string>
     <string name="system_setting_auth_oauth">Մուտք անցաբանալիով</string>
     <string name="system_setting_default_theme">Լռելյայն թեմա</string>
     <string name="system_setting_domains_verification">Պահանջել տիրույթի հաստատում</string>
@@ -176,7 +176,7 @@
     <string name="system_users_title">Օգտատերեր</string>
     <string name="system_users_col_user">Օգտատեր</string>
     <string name="system_users_col_status">Կարգավիճակ</string>
-    <string name="system_users_col_last">Վերջին օգտագործումը՝ {0}</string>
+    <string name="system_users_col_last">Վերջին մուտքը</string>
     <string name="system_users_open_actions">Բացել օգտատիրոջ գործողությունները</string>
     <string name="system_users_role_label">Դեր</string>
     <string name="system_users_role_administrator">Համաձայնել</string>
@@ -321,6 +321,10 @@
     <string name="domain_title">Տիրույթներ</string>
     <string name="domain_verify">Ստուգել DNS</string>
     <string name="settings_home_domains">Տիրույթներ</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Փորձնական հաղորդագրությունն ուղարկվել է %1$d հասցեի</item>
+        <item quantity="other">Փորձնական հաղորդագրությունն ուղարկվել է %1$d հասցեի</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Չեղարկվեց 1 սեսիա</item>
         <item quantity="other">Չեղարկվեցին %1$d սեսիա</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Երթուղավորման սպասող հաղորդագրություններ</string>
     <string name="system_status_relay_service">Փոխանցման ծառայություն</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ամրագրումներ · %3$d շղթաներ · %4$d մերժված</string>
+    <string name="route_target_select">Ընտրել</string>
+    <string name="account_data_description">Ներբեռնեք ամբողջական պահուստ, որը կարող եք վերականգնել այս կամ այլ Mochi սերվերում։</string>
+    <string name="route_target_none">Հասանելի նպատակակետեր չկան</string>
 </resources>

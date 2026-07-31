@@ -26,7 +26,7 @@
     <string name="sessions_revoke_title">Sessiyanı geri çağıraq?</string>
     <string name="account_section_oauth">Üçüncü tərəf girişi</string>
     <string name="account_oauth_link">Hesabı bağla</string>
-    <string name="account_unlink">{0} əlaqəsi kəsildi</string>
+    <string name="account_unlink">Bağlantını kəs</string>
     <string name="account_cancel">Ləğv et</string>
     <string name="account_save">Saxla</string>
     <string name="account_done">Hazırdır</string>
@@ -127,7 +127,7 @@
     <string name="settings_home_system_settings">Sistem parametrləri</string>
     <string name="system_settings_title">Sistem parametrləri</string>
     <string name="system_settings_section_login">Daxil ol</string>
-    <string name="system_settings_section_oauth">Bu CRM silinmiş ola bilər və ya sizin ona girişiniz yoxdur.</string>
+    <string name="system_settings_section_oauth">Üçüncü tərəf girişi</string>
     <string name="system_settings_section_user_defaults">İstifadəçi səssizləşdirildi</string>
     <string name="system_settings_section_operator">Operator</string>
     <string name="system_settings_section_push">Push bildirişlər</string>
@@ -164,7 +164,7 @@
     <string name="system_setting_oauth_facebook_client_id">Facebook tətbiq ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook tətbiq sirri</string>
     <string name="system_setting_oauth_x_client_id">İllik</string>
-    <string name="system_setting_oauth_x_client_secret">Bəli</string>
+    <string name="system_setting_oauth_x_client_secret">X müştəri sirri</string>
     <string name="system_setting_fcm_firebase_config">Firebase google-services.json faylı</string>
     <string name="system_setting_fcm_service_account">Firebase şəxsi açar faylı</string>
     <string name="system_setting_operator_name">Operator adı</string>
@@ -193,7 +193,7 @@
     <string name="system_users_delete">İstifadəçini sil</string>
     <string name="system_users_delete_title">İstifadəçi silinsin?</string>
     <string name="system_users_manage_sessions">Sessiyaları idarə et</string>
-    <string name="system_users_sessions_description">Yalnız baxış</string>
+    <string name="system_users_sessions_description">Bu istifadəçinin aktiv sessiyalarına baxın və onları ləğv edin.</string>
     <string name="system_users_sessions_empty">Bu səhifənin yolu olacaq. Kiçik hərflər, rəqəmlər və tirelər istifadə edin.</string>
     <string name="system_users_revoke">Geri çağır</string>
     <string name="system_users_revoke_all">Bütün sessiyaları geri çağır</string>
@@ -321,6 +321,10 @@
     <string name="domain_title">Domenlər</string>
     <string name="domain_verify">E-poçt ünvanını yoxla</string>
     <string name="settings_home_domains">Domenlər</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test %1$d ünvana göndərildi</item>
+        <item quantity="other">Test %1$d ünvana göndərildi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sessiya ləğv edildi</item>
         <item quantity="other">%1$d sessiya ləğv edildi</item>
@@ -330,7 +334,7 @@
     <string name="login_method_email">E-poçt kodu</string>
     <string name="login_method_passkey">Passkey</string>
     <string name="login_method_totp">Authenticator tətbiqi</string>
-    <string name="login_method_oauth">Bu CRM silinmiş ola bilər və ya sizin ona girişiniz yoxdur.</string>
+    <string name="login_method_oauth">Üçüncü tərəf girişi</string>
     <string name="login_method_recovery">Bərpa kodları</string>
     <string name="account_close_section">Hesabı bağla</string>
     <string name="account_close_action">Hesabı bağla</string>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Marşrutlaşma gözləyən mesajlar</string>
     <string name="system_status_relay_service">Relay xidməti</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervasiya · %3$d dövrə · %4$d rədd edilən</string>
+    <string name="route_target_select">Seç</string>
+    <string name="account_data_description">Bu və ya başqa Mochi serverində bərpa edə biləcəyiniz tam ehtiyat nüsxəsini yükləyin.</string>
+    <string name="route_target_none">Heç bir hədəf yoxdur</string>
 </resources>

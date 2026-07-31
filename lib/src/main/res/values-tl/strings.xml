@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Direktoryo</string>
     <string name="person_picker_no_people">Walang mga tao</string>
     <string name="person_picker_project_members">Mga miyembro ng proyekto</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d tagasunod</item>
+        <item quantity="other">%1$d tagasunod</item>
+    </plurals>
 </resources>

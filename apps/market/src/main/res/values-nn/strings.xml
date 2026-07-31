@@ -744,4 +744,6 @@
     <string name="market_section_recently_viewed">Nyleg sett</string>
     <string name="market_recently_viewed_clear">Tøm alle</string>
     <string name="market_listings_create">Opprett</string>
+    <string name="market_bid_dialog_ceiling_label">Maksimalt bod (valfritt)</string>
+    <string name="market_listing_detail_seller_reviews_heading">Vurderingar av seljaren</string>
 </resources>

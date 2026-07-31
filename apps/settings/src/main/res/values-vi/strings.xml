@@ -321,6 +321,10 @@
     <string name="domain_title">Tên miền</string>
     <string name="domain_verify">Xác minh DNS</string>
     <string name="settings_home_domains">Tên miền</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Đã gửi thử nghiệm đến %1$d đích</item>
+        <item quantity="other">Đã gửi thử nghiệm đến %1$d đích</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Đã thu hồi %1$d phiên</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">Tin nhắn đang chờ định tuyến</string>
     <string name="system_status_relay_service">Dịch vụ chuyển tiếp</string>
     <string name="system_status_relay_service_value">%1$d / %2$d đặt chỗ · %3$d mạch · %4$d bị từ chối</string>
+    <string name="route_target_select">Chọn</string>
+    <string name="account_data_description">Tải xuống bản sao lưu đầy đủ mà bạn có thể phục hồi trên máy chủ này hoặc một máy chủ Mochi khác.</string>
+    <string name="route_target_none">Không có đích khả dụng</string>
 </resources>

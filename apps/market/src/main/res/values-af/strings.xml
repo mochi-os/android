@@ -742,4 +742,5 @@
     <string name="market_section_recently_viewed">Onlangs bekyk</string>
     <string name="market_recently_viewed_clear">Maak alles skoon</string>
     <string name="market_listings_create">Skep</string>
+    <string name="market_bid_dialog_ceiling_label">Maksimum bod (opsioneel)</string>
 </resources>

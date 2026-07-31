@@ -311,4 +311,8 @@
     <string name="person_picker_directory">Gids</string>
     <string name="person_picker_no_people">Geen mense</string>
     <string name="person_picker_project_members">Projeklede</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d intekenaar</item>
+        <item quantity="other">%1$d intekenaars</item>
+    </plurals>
 </resources>

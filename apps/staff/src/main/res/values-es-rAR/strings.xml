@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="staff_accounts_cancel">Cancelá</string>
     <string name="staff_accounts_search_placeholder">Buscá</string>
-    <string name="staff_appeals_cancel">Cancelá</string>
     <string name="staff_appeals_decision_placeholder">Seleccioná una decisión</string>
     <string name="staff_appeals_decision_upheld">Aprobá el aviso</string>
     <string name="staff_appeals_submit">Enviá</string>
     <string name="staff_categories_action_delete">Eliminá</string>
-    <string name="staff_categories_action_edit">Editá</string>
     <string name="staff_categories_add">Agregá</string>
     <string name="staff_categories_delete_confirm">Eliminá</string>
     <string name="staff_categories_delete_title">Eliminá la categoría</string>
-    <string name="staff_categories_dialog_cancel">Cancelá</string>
     <string name="staff_categories_dialog_create_title">Creá una categoría</string>
     <string name="staff_categories_dialog_edit_title">Editá la categoría</string>
     <string name="staff_categories_dialog_save">Guardá</string>
     <string name="staff_config_save">Guardá</string>
     <string name="staff_dashboard_kpi_open_disputes">Abrí las disputas</string>
-    <string name="staff_disputes_cancel">Cancelá</string>
     <string name="staff_disputes_resolution_placeholder">Seleccioná una resolución</string>
     <string name="staff_filter_label_query">Buscá</string>
     <string name="staff_listings_action_approve_title">Aprobá el aviso</string>
     <string name="staff_listings_action_reject_title">Rechazá el aviso</string>
     <string name="staff_listings_action_remove_title">Quitá el aviso</string>
     <string name="staff_listings_approve">Aprobá</string>
-    <string name="staff_listings_cancel">Cancelá</string>
     <string name="staff_listings_reject">Rechazá</string>
     <string name="staff_listings_remove">Quitá</string>
     <string name="staff_listings_search_placeholder">Buscá título o descripción</string>
     <string name="staff_reports_action_placeholder">Seleccioná una acción</string>
     <string name="staff_reports_action_remove">Quitá</string>
-    <string name="staff_reports_cancel">Cancelá</string>
     <string name="staff_reports_submit">Enviá</string>
     <string name="staff_reviews_action_remove">Quitá</string>
     <string name="staff_reviews_action_restore">Restaurá</string>
@@ -40,7 +33,6 @@
     <string name="staff_team_add_member">Agregá un miembro</string>
     <string name="staff_team_dialog_add">Agregá</string>
     <string name="staff_team_dialog_add_title">Agregá un miembro al equipo</string>
-    <string name="staff_team_dialog_cancel">Cancelá</string>
     <string name="staff_team_dialog_role_placeholder">Seleccioná un rol</string>
     <string name="staff_team_remove_confirm">Quitá</string>
     <string name="staff_team_remove_desc">¿Quitás a este miembro del equipo de personal?</string>
@@ -221,7 +213,6 @@
     <string name="staff_audit_title">Historial</string>
     <string name="staff_categories_col_parent">Categoría superior</string>
     <string name="staff_categories_col_position">Posición</string>
-    <string name="staff_categories_col_slug">Slug</string>
     <string name="staff_categories_col_types">Tipos</string>
     <string name="staff_categories_delete_deleting">Eliminando…</string>
     <string name="staff_categories_delete_desc">¿Eliminar “%1$s”? Esta acción no se puede deshacer.</string>
@@ -232,7 +223,6 @@
     <string name="staff_categories_dialog_physical">Físico</string>
     <string name="staff_categories_dialog_position">Posición</string>
     <string name="staff_categories_dialog_saving">Guardando…</string>
-    <string name="staff_categories_dialog_slug">Slug</string>
     <string name="staff_categories_empty">Sin categorías</string>
     <string name="staff_categories_status_inactive">Inactiva</string>
     <string name="staff_categories_title">Categorías</string>

@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">ಇತ್ತೀಚೆಗೆ ವೀಕ್ಷಿಸಲಾಗಿದೆ</string>
     <string name="market_recently_viewed_clear">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="market_listings_create">ರಚಿಸಿ</string>
+    <string name="market_bid_dialog_ceiling_label">ಗರಿಷ್ಠ ಬಿಡ್ (ಐಚ್ಛಿಕ)</string>
 </resources>

@@ -365,4 +365,12 @@
     <string name="projects_share_link_title">Rhannu\'r prosiect</string>
     <string name="projects_sort_filter_title">Trefnu a hidlo</string>
     <string name="projects_create_prefix_hint">Defnyddir ar gyfer IDau darllenadwy fel %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="zero">%1$d ffeil yn gwrthdaro</item>
+        <item quantity="one">%1$d ffeil yn gwrthdaro</item>
+        <item quantity="two">%1$d ffeil yn gwrthdaro</item>
+        <item quantity="few">%1$d ffeil yn gwrthdaro</item>
+        <item quantity="many">%1$d ffeil yn gwrthdaro</item>
+        <item quantity="other">%1$d ffeil yn gwrthdaro</item>
+    </plurals>
 </resources>

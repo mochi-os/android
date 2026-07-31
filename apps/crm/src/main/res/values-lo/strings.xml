@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">ຊື່ສະແດງ</string>
     <string name="crm_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
-    <string name="crm_list_title">ໂຄງການ</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">ປິດການຄົ້ນຫາ</string>
     <string name="crm_list_search">ຄົ້ນຫາ</string>
-    <string name="crm_list_find">ຄົ້ນຫາໂປຣເຈັກ</string>
+    <string name="crm_list_find">ຄົ້ນຫາ CRMs</string>
     <string name="crm_list_logout">ອອກຈາກລະບົບ</string>
-    <string name="crm_list_create">ສ້າງໂຄງການ</string>
-    <string name="crm_create_title">ສ້າງໂຄງການ</string>
+    <string name="crm_list_create">ສ້າງ CRM</string>
+    <string name="crm_create_title">ສ້າງ CRM</string>
     <string name="crm_create_name">ຊື່</string>
     <string name="crm_create_description">ລາຍລະອຽດ</string>
     <string name="crm_create_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">ສາທາລະນະ</string>
     <string name="crm_create_template_none">ບໍ່ມີ</string>
     <string name="crm_create_action">ສ້າງ</string>
-    <string name="crm_find_title">ຄົ້ນຫາໂປຣເຈັກ</string>
+    <string name="crm_find_title">ຄົ້ນຫາ CRMs</string>
     <string name="crm_find_recommended">ແນະນຳ</string>
     <string name="crm_find_subscribe">ສະໝັກສະມາຊິກ</string>
     <string name="crm_loading">ກຳລັງໂຫຼດ…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">ບັນທຶກການປ່ຽນແປງ</string>
     <string name="crm_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="crm_settings_delete_crm">ລົບໂຄງການ</string>
-    <string name="crm_settings_delete_confirm_title">ລົບໂຄງການ</string>
+    <string name="crm_settings_delete_confirm_title">ລົບ CRM</string>
     <string name="crm_settings_unsubscribe_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
-    <string name="crm_settings_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍົກເລີກການສະໝັກສະມາຊິກຈາກໂຄງການນີ້?</string>
+    <string name="crm_settings_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍົກເລີກການສະໝັກສະມາຊິກຈາກ CRM ນີ້?</string>
     <string name="crm_access_level_owner">ເຈົ້າຂອງ</string>
     <string name="crm_access_level_design">ການອອກແບບ</string>
     <string name="crm_access_level_comment">ຄຳເຫັນ</string>
@@ -335,4 +335,7 @@
     <string name="crm_settings_server">ເຊີບເວີ</string>
     <string name="crm_untitled">ບໍ່ມີຊື່</string>
     <string name="crm_property_select">ເລືອກ …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="other">%1$d ໄຟລ໌ທີ່ຂັດແຍ້ງ</item>
+    </plurals>
 </resources>

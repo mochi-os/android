@@ -18,7 +18,7 @@
     <string name="words_new_game_no_friends_title">Hələ dost yoxdur</string>
     <string name="words_new_game_add_friends">Dostlar əlavə et</string>
     <string name="words_detail_status_your_move">Sizin ödənişiniz</string>
-    <string name="words_detail_status_you_win">Artıq {0} ilə daxil ola bilməyəcəksiniz. Daxil olmaq üçün başqa yolunuzun olduğundan əmin olun.</string>
+    <string name="words_detail_status_you_win">Siz qazandınız!</string>
     <string name="words_detail_status_game_over">Oyun bitdi</string>
     <string name="words_detail_status_opponent_resigned">Rəqib təslim oldu — qalibsiniz!</string>
     <string name="words_detail_status_you_resigned">Bu söhbətdən silindiniz</string>

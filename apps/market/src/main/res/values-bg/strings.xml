@@ -745,4 +745,5 @@
     <string name="market_section_recently_viewed">Наскоро прегледани</string>
     <string name="market_recently_viewed_clear">Изчисти всички</string>
     <string name="market_listings_create">Създай</string>
+    <string name="market_bid_dialog_ceiling_label">Максимална оферта (по избор)</string>
 </resources>

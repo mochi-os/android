@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Отображаемое имя</string>
     <string name="crm_auth_verification_failed">Подтверждение не удалось</string>
-    <string name="crm_list_title">Проекты</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Закрыть поиск</string>
     <string name="crm_list_search">Поиск</string>
-    <string name="crm_list_find">Найти проекты</string>
+    <string name="crm_list_find">Найти CRM</string>
     <string name="crm_list_logout">Выйти</string>
-    <string name="crm_list_create">Создать проект</string>
-    <string name="crm_create_title">Создать проект</string>
+    <string name="crm_list_create">Создать CRM</string>
+    <string name="crm_create_title">Создать CRM</string>
     <string name="crm_create_name">Имя</string>
     <string name="crm_create_description">Описание</string>
     <string name="crm_create_privacy">Конфиденциальность</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Публичный</string>
     <string name="crm_create_template_none">Нет</string>
     <string name="crm_create_action">Создать</string>
-    <string name="crm_find_title">Найти проекты</string>
+    <string name="crm_find_title">Найти CRM</string>
     <string name="crm_find_recommended">Рекомендуется</string>
     <string name="crm_find_subscribe">Подписаться</string>
     <string name="crm_loading">Загрузка…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Сохранить изменения</string>
     <string name="crm_settings_unsubscribe">Отписаться</string>
     <string name="crm_settings_delete_crm">Удалить проект</string>
-    <string name="crm_settings_delete_confirm_title">Удалить проект</string>
+    <string name="crm_settings_delete_confirm_title">Удалить CRM</string>
     <string name="crm_settings_unsubscribe_title">Отписаться</string>
-    <string name="crm_settings_unsubscribe_message">Вы уверены, что хотите отписаться от этого проекта?</string>
+    <string name="crm_settings_unsubscribe_message">Вы уверены, что хотите отписаться от этой CRM?</string>
     <string name="crm_access_level_owner">Владелец</string>
     <string name="crm_access_level_design">Дизайн</string>
     <string name="crm_access_level_comment">Комментарий</string>
@@ -335,4 +335,10 @@
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Без названия</string>
     <string name="crm_property_select">Выберите …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d конфликтующий файл</item>
+        <item quantity="few">%1$d конфликтующих файла</item>
+        <item quantity="many">%1$d конфликтующих файлов</item>
+        <item quantity="other">%1$d конфликтующего файла</item>
+    </plurals>
 </resources>

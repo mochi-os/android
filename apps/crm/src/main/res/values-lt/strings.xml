@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Rodomas vardas</string>
     <string name="crm_auth_verification_failed">Patvirtinimas nepavyko</string>
-    <string name="crm_list_title">Projektai</string>
+    <string name="crm_list_title">CRM sąrašas</string>
     <string name="crm_list_close_search">Uždaryti paiešką</string>
     <string name="crm_list_search">Ieškoti</string>
-    <string name="crm_list_find">Rasti projektus</string>
+    <string name="crm_list_find">Rasti CRM</string>
     <string name="crm_list_logout">Atsijungti</string>
-    <string name="crm_list_create">Sukurti projektą</string>
-    <string name="crm_create_title">Sukurti projektą</string>
+    <string name="crm_list_create">Sukurti CRM</string>
+    <string name="crm_create_title">Sukurti CRM</string>
     <string name="crm_create_name">Pavadinimas</string>
     <string name="crm_create_description">Aprašymas</string>
     <string name="crm_create_privacy">Privatumas</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Viešas</string>
     <string name="crm_create_template_none">Nėra</string>
     <string name="crm_create_action">Sukurti</string>
-    <string name="crm_find_title">Rasti projektus</string>
+    <string name="crm_find_title">Rasti CRM</string>
     <string name="crm_find_recommended">Rekomenduojama</string>
     <string name="crm_find_subscribe">Prenumeruoti</string>
     <string name="crm_loading">Įkeliama…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Išsaugoti pakeitimus</string>
     <string name="crm_settings_unsubscribe">Atšaukti prenumeratą</string>
     <string name="crm_settings_delete_crm">Ištrinti projektą</string>
-    <string name="crm_settings_delete_confirm_title">Ištrinti projektą</string>
+    <string name="crm_settings_delete_confirm_title">Ištrinti CRM</string>
     <string name="crm_settings_unsubscribe_title">Atšaukti prenumeratą</string>
-    <string name="crm_settings_unsubscribe_message">Ar tikrai norite atsisakyti šio projekto prenumeratos?</string>
+    <string name="crm_settings_unsubscribe_message">Ar tikrai norite atsisakyti šio CRM prenumeratos?</string>
     <string name="crm_access_level_owner">Savininkas</string>
     <string name="crm_access_level_design">Dizainas</string>
     <string name="crm_access_level_comment">Komentaras</string>
@@ -335,4 +335,10 @@
     <string name="crm_settings_server">Serveris</string>
     <string name="crm_untitled">Be pavadinimo</string>
     <string name="crm_property_select">Pasirinkite …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d konfliktuojantis failas</item>
+        <item quantity="few">%1$d konfliktuojantys failai</item>
+        <item quantity="many">%1$d konfliktuojančio failo</item>
+        <item quantity="other">%1$d konfliktuojančių failų</item>
+    </plurals>
 </resources>

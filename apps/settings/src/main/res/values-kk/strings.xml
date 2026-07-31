@@ -321,6 +321,10 @@
     <string name="domain_title">Домендер</string>
     <string name="domain_verify">DNS тексеру</string>
     <string name="settings_home_domains">Домендер</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Сынақ %1$d мекенжайға жіберілді</item>
+        <item quantity="other">Сынақ %1$d мекенжайға жіберілді</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 сеанс қайтарып алынды</item>
         <item quantity="other">%1$d сеанс қайтарып алынды</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Бағдарлауды күтудегі хабарлар</string>
     <string name="system_status_relay_service">Реле қызметі</string>
     <string name="system_status_relay_service_value">%1$d / %2$d брондаулар · %3$d тізбектер · %4$d қабылданбады</string>
+    <string name="route_target_select">Таңдау</string>
+    <string name="account_data_description">Осы немесе басқа Mochi серверінде қалпына келтіруге болатын толық сақтық көшірмені жүктеп алыңыз.</string>
+    <string name="route_target_none">Қолжетімді нысандар жоқ</string>
 </resources>

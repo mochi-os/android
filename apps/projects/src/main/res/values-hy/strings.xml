@@ -30,7 +30,7 @@
     <string name="projects_sort_direction">Ուղղություն</string>
     <string name="projects_sort_rank">Նշել բոլորը կարդացված</string>
     <string name="projects_sort_number">Թիվ</string>
-    <string name="projects_sort_created">Ստեղծված է {0}</string>
+    <string name="projects_sort_created">Ստեղծված</string>
     <string name="projects_sort_updated">Թարմացված</string>
     <string name="projects_create_object_type">Տեսակ</string>
     <string name="projects_create_object_title_field">Վերնագիր</string>
@@ -49,7 +49,7 @@
     <string name="projects_access_level_owner">Սեփականատեր</string>
     <string name="projects_object_watch">Հետևել</string>
     <string name="projects_object_tab_properties">Հատկություններ</string>
-    <string name="projects_object_tab_comments">Մեկնաբանություններ ({0})</string>
+    <string name="projects_object_tab_comments">Մեկնաբանություններ</string>
     <string name="projects_object_tab_activity">Կատարող</string>
     <string name="projects_object_tab_requests">Հարցումներ</string>
     <string name="projects_object_tab_attachments">Աճուրդ</string>
@@ -81,11 +81,11 @@
     <string name="projects_request_status_draft">Սևագիր</string>
     <string name="projects_request_status_open">Բաց</string>
     <string name="projects_request_status_merged">Հաղորդագրություն</string>
-    <string name="projects_request_merge">Միաձուլման հարցումներ ({requestCount})</string>
+    <string name="projects_request_merge">Միաձուլել</string>
     <string name="projects_request_close">Փակել վահանակը</string>
-    <string name="projects_request_merge_dialog_title">Միաձուլման հարցումներ ({requestCount})</string>
+    <string name="projects_request_merge_dialog_title">Միաձուլել</string>
     <string name="projects_request_method">Microsoft հաճախորդի գաղտնիք</string>
-    <string name="projects_request_method_merge">Միաձուլման հարցումներ ({requestCount})</string>
+    <string name="projects_request_method_merge">Միաձուլել</string>
     <string name="projects_request_field_repository">Պահոց</string>
     <string name="projects_request_field_source">Սկզբնաղբյուր ճյուղ</string>
     <string name="projects_request_field_title">Վերնագիր</string>
@@ -109,7 +109,7 @@
     <string name="projects_design_tab_classes">Մաքրել չօգտագործված տարբերակները</string>
     <string name="projects_design_tab_views">Դիտումներ</string>
     <string name="projects_design_import_dialog_title">Ներմուծել ձևավորումը</string>
-    <string name="projects_design_import_choose_template">Ընտրեք լռելյայն ընդարձակվածի, կոմպակտ միայն-պատկերակի կամ լրիվ դասավորության ռեժիմների միջև</string>
+    <string name="projects_design_import_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="projects_design_replace_title">Փոխարինե՞լ ձևավորումը։</string>
     <string name="projects_design_replace">Փոխարինել</string>
     <string name="projects_classes_add">Ավելացնել սյունակ</string>
@@ -142,16 +142,16 @@
     <string name="projects_field_add_field_dialog_title">Ավելացնել ֆայլեր</string>
     <string name="projects_option_add">Ավելացնել անցաբառ</string>
     <string name="projects_option_edit">Խմբագրել տարբերակը</string>
-    <string name="projects_views_add">Ավելացնել {0}-ը զրույցին</string>
-    <string name="projects_views_add_dialog_title">Ավելացնել {0}-ը զրույցին</string>
+    <string name="projects_views_add">Ավելացնել տեսք</string>
+    <string name="projects_views_add_dialog_title">Ավելացնել տեսք</string>
     <string name="projects_views_edit_dialog_title">Խմբագրել տեսքը</string>
     <string name="projects_views_delete_title">Ջնջել տեսքը</string>
     <string name="projects_views_type">Տեսակ</string>
     <string name="projects_views_type_board">Տախտակի չափ</string>
-    <string name="projects_views_type_list">Ցուցակագրված է {0}</string>
+    <string name="projects_views_type_list">Ցանկ</string>
     <string name="projects_views_direction">Ուղղություն</string>
     <string name="projects_views_sort_number">Թիվ</string>
-    <string name="projects_views_sort_created">Ստեղծված է {0}</string>
+    <string name="projects_views_sort_created">Ստեղծված</string>
     <string name="projects_views_sort_updated">Թարմացված</string>
     <string name="projects_views_sort_rank">Աստիճան</string>
     <string name="projects_project_not_found">Նախագիծը չի գտնվել</string>
@@ -314,7 +314,7 @@
     <string name="projects_design_preview_no_options">Սյունակների դաշտում ընտրանքներ չկան</string>
     <string name="projects_design_preview_empty">Ցուցադրելու բան չկա</string>
 
-    <string name="projects_create_choose_template">Ընտրեք լռելյայն ընդարձակվածի, կոմպակտ միայն-պատկերակի կամ լրիվ դասավորության ռեժիմների միջև</string>
+    <string name="projects_create_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="projects_create_next">Հաջորդ</string>
     <string name="projects_filter">Զտել</string>
     <string name="projects_link">Հղում</string>
@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Կիսվել նախագծով</string>
     <string name="projects_sort_filter_title">Դասավորել և զտել</string>
     <string name="projects_create_prefix_hint">Օգտագործվում է ընթեռնելի ID-ների համար, ինչպես %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d հակասող ֆայլ</item>
+        <item quantity="other">%1$d հակասող ֆայլ</item>
+    </plurals>
 </resources>

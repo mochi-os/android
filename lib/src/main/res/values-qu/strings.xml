@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Directorio</string>
     <string name="person_picker_no_people">Mana runakuna kanchu</string>
     <string name="person_picker_project_members">Proyectopi ruraqkuna</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d qatiqaq</item>
+        <item quantity="other">%1$d qatiqaqkuna</item>
+    </plurals>
 </resources>

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="forums_list_close_search">Suche schliessen</string>
-    <string name="forums_create_privacy">Privacy</string>
     <string name="forums_sort_hot">Heiss</string>
     <string name="forums_banner_dismiss">Banner schliessen</string>
     <string name="forums_moderation_report_dismiss">Schliessen</string>
@@ -66,7 +65,6 @@
     <string name="forums_new_post">Neuer Beitrag</string>
     <string name="forums_load_more">Mehr laden</string>
     <string name="forums_sort_label">Sortieren</string>
-    <string name="forums_sort_top">Top</string>
     <string name="forums_sort_interests">Interessen</string>
     <string name="forums_post_body_field">Text</string>
     <string name="forums_post_attach">Dateien anhängen</string>
@@ -199,7 +197,6 @@
     <string name="forums_access_tab_groups">Gruppen</string>
     <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Benutzer suchen</string>
-    <string name="forums_access_no_groups">No groups available</string>
     <string name="forums_saved_title">Gespeichert</string>
     <string name="forums_saved_remove">Aus Gespeicherten entfernen</string>
     <string name="forums_saved_clear_all">Alle löschen</string>

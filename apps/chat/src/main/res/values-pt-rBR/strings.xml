@@ -3,7 +3,6 @@
 
     <string name="chat_auth_display_name">Nome de exibição</string>
     <string name="chat_auth_verification_failed">Falha na verificação</string>
-    <string name="chat_list_title">Chats</string>
     <string name="chat_list_close_search">Fechar pesquisa</string>
     <string name="chat_list_search">Pesquisar</string>
     <string name="chat_list_logout">Sair</string>
@@ -84,7 +83,6 @@
     <string name="chat_delete_own_only">Você só pode excluir suas próprias mensagens</string>
     <string name="chat_selection_title">%1$d selecionada(s)</string>
     <string name="chat_forward_subtitle">Escolha um chat ou amigo para encaminhar as mensagens selecionadas</string>
-    <string name="chat_forward_chats">Chats</string>
     <string name="chat_forward_friends">Amigos</string>
     <string name="chat_policy_title">Conversas recebidas</string>
     <string name="chat_policy_friends">Apenas amigos</string>

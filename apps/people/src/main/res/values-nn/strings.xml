@@ -198,4 +198,15 @@
     <string name="people_person_state_invited">Invitert</string>
     <string name="people_person_add_friend">Legg til som ven</string>
 
+    <string name="people_friends_sort_name">Namn (A–Å)</string>
+    <string name="people_friends_sort_recent">Nyleg lagt til</string>
+    <string name="people_invitations_accept_all">Godta alle</string>
+    <string name="people_invitations_all_accepted">Alle invitasjonar godtekne</string>
+    <string name="people_invitations_all_cancelled">Alle invitasjonar avbrotne</string>
+    <string name="people_invitations_all_declined">Alle invitasjonar avviste</string>
+    <string name="people_invitations_cancel_all">Avbryt alle</string>
+    <string name="people_invitations_decline_all">Avvis alle</string>
+    <string name="people_invitations_some_accept_failed">Nokre invitasjonar kunne ikkje godtakast</string>
+    <string name="people_invitations_some_cancel_failed">Nokre invitasjonar kunne ikkje avbrytast</string>
+    <string name="people_invitations_some_decline_failed">Nokre invitasjonar kunne ikkje avvisast</string>
 </resources>

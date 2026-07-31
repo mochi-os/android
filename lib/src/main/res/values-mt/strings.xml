@@ -310,4 +310,10 @@
     <string name="person_picker_directory">Direttorju</string>
     <string name="person_picker_no_people">L-ebda persuna</string>
     <string name="person_picker_project_members">Membri tal-proġett</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">abbonat %1$d</item>
+        <item quantity="few">%1$d abbonati</item>
+        <item quantity="many">%1$d abbonati</item>
+        <item quantity="other">%1$d abbonati</item>
+    </plurals>
 </resources>

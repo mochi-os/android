@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">प्रदर्शन नाम</string>
     <string name="crm_auth_verification_failed">सत्यापन विफल भइल</string>
-    <string name="crm_list_title">प्रोजेक्ट</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">खोज बंद करीं</string>
     <string name="crm_list_search">खोजीं</string>
-    <string name="crm_list_find">प्रोजेक्ट खोजीं</string>
+    <string name="crm_list_find">CRM खोजीं</string>
     <string name="crm_list_logout">लॉग आउट</string>
-    <string name="crm_list_create">परियोजना बनाईं</string>
-    <string name="crm_create_title">परियोजना बनाईं</string>
+    <string name="crm_list_create">CRM बनाईं</string>
+    <string name="crm_create_title">CRM बनाईं</string>
     <string name="crm_create_name">नाम</string>
     <string name="crm_create_description">विवरण</string>
     <string name="crm_create_privacy">गोपनीयता</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">सार्वजनिक</string>
     <string name="crm_create_template_none">कुछुओ ना</string>
     <string name="crm_create_action">बनाईं</string>
-    <string name="crm_find_title">प्रोजेक्ट खोजीं</string>
+    <string name="crm_find_title">CRM खोजीं</string>
     <string name="crm_find_recommended">सिफारिश कइल</string>
     <string name="crm_find_subscribe">सदस्यता लीं</string>
     <string name="crm_loading">लोड हो रहल बा…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">बदलाव सहेजीं</string>
     <string name="crm_settings_unsubscribe">सदस्यता रद्द करीं</string>
     <string name="crm_settings_delete_crm">परियोजना मेटाईं</string>
-    <string name="crm_settings_delete_confirm_title">परियोजना मेटाईं</string>
+    <string name="crm_settings_delete_confirm_title">CRM मेटाईं</string>
     <string name="crm_settings_unsubscribe_title">सदस्यता रद्द करीं</string>
-    <string name="crm_settings_unsubscribe_message">का रउआ एह परियोजना से सदस्यता वापस लेवे चाहत बानी?</string>
+    <string name="crm_settings_unsubscribe_message">का रउआ एह CRM से सदस्यता वापस लेवे चाहत बानी?</string>
     <string name="crm_access_level_owner">मालिक</string>
     <string name="crm_access_level_design">डिज़ाइन</string>
     <string name="crm_access_level_comment">टिप्पणी</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">सर्वर</string>
     <string name="crm_untitled">बेशीर्षक</string>
     <string name="crm_property_select">चुनीं …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d टकराव वाला फाइल</item>
+        <item quantity="other">%1$d टकराव वाला फाइल</item>
+    </plurals>
 </resources>

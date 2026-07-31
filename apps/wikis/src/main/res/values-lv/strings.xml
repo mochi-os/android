@@ -313,4 +313,54 @@
     <string name="wikis_revision_show_page">Rādīt lapu</string>
     <string name="wikis_revision_compare_failed">Neizdevās ielādēt iepriekšējo versiju salīdzināšanai.</string>
     <string name="wikis_revision_changes_from">Izmaiņas no versijas %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="zero">%d komentāru</item>
+        <item quantity="one">%d komentārs</item>
+        <item quantity="other">%d komentāri</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="zero">%d atbilžu</item>
+        <item quantity="one">%d atbilde</item>
+        <item quantity="other">+%d vēl atbildes</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="zero">Pārdēvētas %1$d lapas</item>
+        <item quantity="one">Pārdēvēta %1$d lapa</item>
+        <item quantity="other">Pārdēvētas %1$d lapas</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="zero">atjauninātas %1$d saites</item>
+        <item quantity="one">atjaunināta %1$d saite</item>
+        <item quantity="other">atjauninātas %1$d saites</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="zero">%d lapu</item>
+        <item quantity="one">%d lapa</item>
+        <item quantity="other">%d lapas</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="zero">%d failu</item>
+        <item quantity="one">%d fails</item>
+        <item quantity="other">%d faili</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="zero">%d attēlu</item>
+        <item quantity="one">%d attēls</item>
+        <item quantity="other">%d attēli</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="zero">%d dokumentu</item>
+        <item quantity="one">%d dokuments</item>
+        <item quantity="other">%d dokumenti</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="zero">%d lapu ar šo tagu</item>
+        <item quantity="one">%d lapa ar šo tagu</item>
+        <item quantity="other">%d lapas ar šo tagu</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="zero">Atrasti %1$d rezultātu priekš "%2$s"</item>
+        <item quantity="one">Atrasti %1$d rezultāts priekš "%2$s"</item>
+        <item quantity="other">Atrasti %1$d rezultāti priekš "%2$s"</item>
+    </plurals>
 </resources>

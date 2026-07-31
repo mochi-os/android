@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="chat_message_placeholder">Message</string>
     <string name="chat_settings_save">儲存</string>
     <string name="chat_list_logout">登出</string>
     <string name="chat_members_you">你</string>
@@ -10,10 +9,6 @@
     <string name="chat_settings_remove_member">移除</string>
     <string name="chat_list_removed_chat">已移除</string>
     <string name="chat_settings_members">成員</string>
-    <string name="chat_attachment_add">Attach files</string>
-    <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_attach">Attach files</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_display_name">顯示名稱</string>
     <string name="chat_auth_login_failed">登入失敗</string>
     <string name="chat_attachment_move_up">上移</string>

@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Címtár</string>
     <string name="person_picker_no_people">Nincsenek személyek</string>
     <string name="person_picker_project_members">Projekttagok</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d feliratkozó</item>
+        <item quantity="other">%1$d feliratkozó</item>
+    </plurals>
 </resources>

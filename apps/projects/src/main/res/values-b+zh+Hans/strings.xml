@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">分享项目</string>
     <string name="projects_sort_filter_title">排序和筛选</string>
     <string name="projects_create_prefix_hint">用于可读的 ID，例如 %1$s-1、%1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d 个冲突文件</item>
+        <item quantity="other">%1$d 个冲突文件</item>
+    </plurals>
 </resources>

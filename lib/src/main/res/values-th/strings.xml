@@ -309,4 +309,7 @@
     <string name="person_picker_directory">ไดเรกทอรี</string>
     <string name="person_picker_no_people">ไม่มีบุคคล</string>
     <string name="person_picker_project_members">สมาชิกโครงการ</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">ผู้ติดตาม %1$d คน</item>
+    </plurals>
 </resources>

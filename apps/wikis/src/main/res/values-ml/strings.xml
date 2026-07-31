@@ -12,7 +12,7 @@
     <string name="wikis_pageview_toc">ഈ പേജിൽ</string>
     <string name="wikis_pageview_not_found_title">പേജ് കണ്ടെത്തിയില്ല</string>
     <string name="wikis_pageview_create_this_page">ഈ പേജ് സൃഷ്ടിക്കുക</string>
-    <string name="wikis_pageview_rss_copied">RSS ഫീഡ്</string>
+    <string name="wikis_pageview_rss_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="wikis_pageview_rss_failed">RSS ടോക്കൺ നേടുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_page_action_section_page">പേജ്</string>
     <string name="wikis_page_action_edit">എഡിറ്റ് ചെയ്യുക</string>
@@ -43,7 +43,7 @@
     <string name="wikis_rss_changes">മാറ്റങ്ങൾ</string>
     <string name="wikis_rss_comments">അഭിപ്രായങ്ങൾ</string>
     <string name="wikis_rss_both">മാറ്റങ്ങളും അഭിപ്രായങ്ങളും</string>
-    <string name="wikis_rss_copied">RSS ഫീഡ്</string>
+    <string name="wikis_rss_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="wikis_rss_failed">RSS ടോക്കൺ നേടുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_find_title">വിക്കികൾ കണ്ടെത്തുക</string>
     <string name="wikis_find_no_results">വിക്കികളൊന്നും കണ്ടെത്തിയില്ല</string>
@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">പേജ് കാണിക്കുക</string>
     <string name="wikis_revision_compare_failed">താരതമ്യത്തിനായി മുൻ പതിപ്പ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.</string>
     <string name="wikis_revision_changes_from">പതിപ്പ് %1$d → %2$d മുതലുള്ള മാറ്റങ്ങൾ</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d കമന്റ്</item>
+        <item quantity="other">%d കമന്റുകൾ</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d മറുപടി</item>
+        <item quantity="other">+%d കൂടുതൽ മറുപടികൾ</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d പേജിന്റെ പേര് മാറ്റി</item>
+        <item quantity="other">%1$d പേജുകളുടെ പേര് മാറ്റി</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d ലിങ്ക് അപ്ഡേറ്റ് ചെയ്തു</item>
+        <item quantity="other">%1$d ലിങ്കുകൾ അപ്ഡേറ്റ് ചെയ്തു</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d പേജ്</item>
+        <item quantity="other">%d പേജുകൾ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d ഫയൽ</item>
+        <item quantity="other">%d ഫയലുകൾ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d ചിത്രം</item>
+        <item quantity="other">%d ചിത്രങ്ങൾ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d രേഖ</item>
+        <item quantity="other">%d രേഖകൾ</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">ഈ ടാഗുള്ള %d പേജ്</item>
+        <item quantity="other">ഈ ടാഗുള്ള %d പേജുകൾ</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» എന്നതിന് %1$d ഫലം കണ്ടെത്തി</item>
+        <item quantity="other">«%2$s» എന്നതിന് %1$d ഫലങ്ങൾ കണ്ടെത്തി</item>
+    </plurals>
 </resources>

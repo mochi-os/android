@@ -309,4 +309,8 @@
     <string name="person_picker_directory">ڊائريڪٽري</string>
     <string name="person_picker_no_people">ڪو به ماڻهو ناهي</string>
     <string name="person_picker_project_members">منصوبي جا ميمبر</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d رڪن</item>
+        <item quantity="other">%1$d رڪن</item>
+    </plurals>
 </resources>

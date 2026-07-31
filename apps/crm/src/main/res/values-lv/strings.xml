@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Parādāmais vārds</string>
     <string name="crm_auth_verification_failed">Verifikācija neizdevās</string>
-    <string name="crm_list_title">Projekti</string>
+    <string name="crm_list_title">CRM saraksts</string>
     <string name="crm_list_close_search">Aizvērt meklēšanu</string>
     <string name="crm_list_search">Meklēt</string>
-    <string name="crm_list_find">Atrast projektus</string>
+    <string name="crm_list_find">Atrast CRM</string>
     <string name="crm_list_logout">Izrakstīties</string>
-    <string name="crm_list_create">Izveidot projektu</string>
-    <string name="crm_create_title">Izveidot projektu</string>
+    <string name="crm_list_create">Izveidot CRM</string>
+    <string name="crm_create_title">Izveidot CRM</string>
     <string name="crm_create_name">Nosaukums</string>
     <string name="crm_create_description">Apraksts</string>
     <string name="crm_create_privacy">Privātums</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Publisks</string>
     <string name="crm_create_template_none">Nav</string>
     <string name="crm_create_action">Izveidot</string>
-    <string name="crm_find_title">Atrast projektus</string>
+    <string name="crm_find_title">Atrast CRM</string>
     <string name="crm_find_recommended">Ieteikts</string>
     <string name="crm_find_subscribe">Abonēt</string>
     <string name="crm_loading">Ielādē…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Saglabāt izmaiņas</string>
     <string name="crm_settings_unsubscribe">Atrakstīties</string>
     <string name="crm_settings_delete_crm">Dzēst projektu</string>
-    <string name="crm_settings_delete_confirm_title">Dzēst projektu</string>
+    <string name="crm_settings_delete_confirm_title">Dzēst CRM</string>
     <string name="crm_settings_unsubscribe_title">Atrakstīties</string>
-    <string name="crm_settings_unsubscribe_message">Vai tiešām vēlies atteikties no šī projekta abonēšanas?</string>
+    <string name="crm_settings_unsubscribe_message">Vai tiešām vēlies atteikties no šī CRM abonēšanas?</string>
     <string name="crm_access_level_owner">Īpašnieks</string>
     <string name="crm_access_level_design">Dizains</string>
     <string name="crm_access_level_comment">Komentārs</string>
@@ -335,4 +335,9 @@
     <string name="crm_settings_server">Serveris</string>
     <string name="crm_untitled">Bez nosaukuma</string>
     <string name="crm_property_select">Izvēlieties …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="zero">%1$d konfliktējošu failu</item>
+        <item quantity="one">%1$d konfliktējošs fails</item>
+        <item quantity="other">%1$d konfliktējoši faili</item>
+    </plurals>
 </resources>

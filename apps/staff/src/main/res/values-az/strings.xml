@@ -227,7 +227,7 @@
     <string name="staff_dashboard_kpi_revenue_currency">%1$s</string>
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Satıcılar</string>
-    <string name="staff_dashboard_kpi_total_orders">\"{track}\" izi silindi</string>
+    <string name="staff_dashboard_kpi_total_orders">Ümumi sifarişlər</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Xeyr</string>
     <string name="staff_dashboard_open_sidebar">Yan paneli aç</string>
@@ -290,7 +290,7 @@
     <string name="staff_disputes_status_responded">Cavablandırıldı</string>
     <string name="staff_disputes_status_reviewing">Nəzərdən keçirilir</string>
     <string name="staff_disputes_title">Mübahisələr</string>
-    <string name="staff_disputes_view">Bütün bildirişlərə bax</string>
+    <string name="staff_disputes_view">Bax</string>
     <string name="staff_filter_chip_remove">Filtri sil</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderasiya</string>
@@ -391,7 +391,7 @@
     <string name="staff_reports_title">Hesabatlar</string>
     <string name="staff_reports_type_listing">Elan</string>
     <string name="staff_reports_type_user">İstifadəçi yaradıldı</string>
-    <string name="staff_reports_view">Bütün bildirişlərə bax</string>
+    <string name="staff_reports_view">Bax</string>
     <string name="staff_reviews_action_hide">Gizlət</string>
     <string name="staff_reviews_action_remove">Sil</string>
     <string name="staff_reviews_action_restore">Bərpa et</string>

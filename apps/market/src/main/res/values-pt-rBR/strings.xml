@@ -87,7 +87,6 @@
     <string name="market_checkout_subscribe_intro">Você está assinando</string>
     <string name="market_checkout_subscribe_title">Inscrever-se</string>
     <string name="market_checkout_summary">Resumo do pedido</string>
-    <string name="market_checkout_title">Checkout</string>
     <string name="market_checkout_total">Total</string>
     <string name="market_checkout_winning_bid">Lance vencedor</string>
     <string name="market_condition_new">Novo</string>
@@ -130,7 +129,6 @@
     <string name="market_editor_section_location">Localização</string>
     <string name="market_editor_section_photos">Fotos</string>
     <string name="market_editor_section_pricing">Preços</string>
-    <string name="market_editor_section_tags">Tags</string>
     <string name="market_editor_shipping">Envio</string>
     <string name="market_editor_stripe_banner_action">Conectar Stripe</string>
     <string name="market_editor_title">Título</string>
@@ -190,7 +188,6 @@
     <string name="market_listing_detail_seller_heading">Vendedor</string>
     <string name="market_listing_detail_shipping_heading">Envio</string>
     <string name="market_listing_detail_subscribe">Inscrever-se</string>
-    <string name="market_listing_detail_tags_heading">Tags</string>
     <string name="market_listing_detail_title">Anúncio</string>
     <string name="market_listing_detail_unsave">Salvo</string>
     <string name="market_listing_detail_verified">Verificado</string>
@@ -207,7 +204,6 @@
     <string name="market_listings_filter_rejected">Recusado</string>
     <string name="market_listings_filter_removed">Removido</string>
     <string name="market_listings_filter_sold">Vendido</string>
-    <string name="market_listings_filter_status">Status</string>
     <string name="market_listings_relist_failed">Falha ao reanunciar</string>
     <string name="market_listings_title">Meus anúncios</string>
     <string name="market_messages_inbox_title">Mensagens</string>
@@ -743,4 +739,5 @@
     <string name="market_section_recently_viewed">Vistos recentemente</string>
     <string name="market_recently_viewed_clear">Limpar tudo</string>
     <string name="market_listings_create">Criar</string>
+    <string name="market_bid_dialog_ceiling_label">Lance máximo (opcional)</string>
 </resources>

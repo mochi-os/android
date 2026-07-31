@@ -321,6 +321,10 @@
     <string name="domain_title">域名</string>
     <string name="domain_verify">验证 DNS</string>
     <string name="settings_home_domains">域名</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">已向 %1$d 个目标发送测试</item>
+        <item quantity="other">已向 %1$d 个目标发送测试</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">已撤销 %1$d 个会话</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">等待路由的消息</string>
     <string name="system_status_relay_service">中继服务</string>
     <string name="system_status_relay_service_value">%1$d / %2$d 预留 · %3$d 线路 · %4$d 拒绝</string>
+    <string name="route_target_select">选择</string>
+    <string name="account_data_description">下载完整备份，你可以在本服务器或其他 Mochi 服务器上还原。</string>
+    <string name="route_target_none">没有可用的目标</string>
 </resources>

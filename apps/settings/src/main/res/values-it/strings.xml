@@ -321,6 +321,10 @@
     <string name="domain_title">Domini</string>
     <string name="domain_verify">Verifica DNS</string>
     <string name="settings_home_domains">Domini</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test inviato a %1$d destinazione</item>
+        <item quantity="other">Test inviato a %1$d destinazioni</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="many">Revocate %1$d sessioni</item>
         <item quantity="one">Revocata 1 sessione</item>
@@ -367,4 +371,7 @@
     <string name="system_status_awaiting_routing">Messaggi in attesa di instradamento</string>
     <string name="system_status_relay_service">Servizio di inoltro</string>
     <string name="system_status_relay_service_value">%1$d / %2$d prenotazioni · %3$d circuiti · %4$d rifiutati</string>
+    <string name="route_target_select">Seleziona</string>
+    <string name="account_data_description">Scarica un backup completo che puoi ripristinare su questo o su un altro server Mochi.</string>
+    <string name="route_target_none">Nessuna destinazione disponibile</string>
 </resources>

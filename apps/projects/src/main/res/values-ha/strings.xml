@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Raba aikin</string>
     <string name="projects_sort_filter_title">Jera da tacewa</string>
     <string name="projects_create_prefix_hint">Ana amfani da shi don ID masu iya karantawa kamar %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">fayil %1$d mai karo</item>
+        <item quantity="other">fayiloli %1$d masu karo</item>
+    </plurals>
 </resources>

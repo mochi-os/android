@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Air an coimhead o chionn ghoirid</string>
     <string name="market_recently_viewed_clear">Falamhaich a h-uile</string>
     <string name="market_listings_create">Cruthaich</string>
+    <string name="market_bid_dialog_ceiling_label">Tairgse as àirde (roghainneil)</string>
 </resources>

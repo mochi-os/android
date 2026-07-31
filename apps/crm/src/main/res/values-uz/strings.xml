@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Koʻrsatish nomi</string>
     <string name="crm_auth_verification_failed">Tasdiqlash muvaffaqiyatsiz</string>
-    <string name="crm_list_title">Loyihalar</string>
+    <string name="crm_list_title">CRM lar</string>
     <string name="crm_list_close_search">Qidiruvni yopish</string>
     <string name="crm_list_search">Qidirish</string>
-    <string name="crm_list_find">Loyihalarni topish</string>
+    <string name="crm_list_find">CRM larni topish</string>
     <string name="crm_list_logout">Chiqish</string>
-    <string name="crm_list_create">Loyiha yaratish</string>
-    <string name="crm_create_title">Loyiha yaratish</string>
+    <string name="crm_list_create">CRM yaratish</string>
+    <string name="crm_create_title">CRM yaratish</string>
     <string name="crm_create_name">Nomi</string>
     <string name="crm_create_description">Tavsif</string>
     <string name="crm_create_privacy">Maxfiylik</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Ommaviy</string>
     <string name="crm_create_template_none">Hech qanday</string>
     <string name="crm_create_action">Yaratish</string>
-    <string name="crm_find_title">Loyihalarni topish</string>
+    <string name="crm_find_title">CRM larni topish</string>
     <string name="crm_find_recommended">Tavsiya etiladi</string>
     <string name="crm_find_subscribe">Obuna boʻlish</string>
     <string name="crm_loading">Yuklanmoqda…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Oʻzgarishlarni saqlash</string>
     <string name="crm_settings_unsubscribe">Obunadan chiqish</string>
     <string name="crm_settings_delete_crm">Loyihani oʻchirish</string>
-    <string name="crm_settings_delete_confirm_title">Loyihani oʻchirish</string>
+    <string name="crm_settings_delete_confirm_title">CRM oʻchirish</string>
     <string name="crm_settings_unsubscribe_title">Obunadan chiqish</string>
-    <string name="crm_settings_unsubscribe_message">Bu loyihadan obunani bekor qilmoqchimisiz?</string>
+    <string name="crm_settings_unsubscribe_message">Bu CRM dan obunani bekor qilmoqchimisiz?</string>
     <string name="crm_access_level_owner">Egasi</string>
     <string name="crm_access_level_design">Dizayn</string>
     <string name="crm_access_level_comment">Izoh</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Sarlavhasiz</string>
     <string name="crm_property_select">Tanlang …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d ziddiyatli fayl</item>
+        <item quantity="other">%1$d ziddiyatli fayl</item>
+    </plurals>
 </resources>

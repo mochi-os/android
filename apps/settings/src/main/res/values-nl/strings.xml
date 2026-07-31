@@ -321,6 +321,10 @@
     <string name="domain_title">Domeinen</string>
     <string name="domain_verify">DNS verifiëren</string>
     <string name="settings_home_domains">Domeinen</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test verzonden naar %1$d bestemming</item>
+        <item quantity="other">Test verzonden naar %1$d bestemmingen</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sessie ingetrokken</item>
         <item quantity="other">%1$d sessies ingetrokken</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Berichten die wachten op routering</string>
     <string name="system_status_relay_service">Relaisdienst</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reserveringen · %3$d circuits · %4$d geweigerd</string>
+    <string name="route_target_select">Selecteren</string>
+    <string name="account_data_description">Download een volledige back-up die je kunt terugzetten op deze of een andere Mochi-server.</string>
+    <string name="route_target_none">Geen doelen beschikbaar</string>
 </resources>

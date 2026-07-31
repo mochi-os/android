@@ -310,4 +310,8 @@
     <string name="person_picker_directory">Анықтамалық</string>
     <string name="person_picker_no_people">Адамдар жоқ</string>
     <string name="person_picker_project_members">Жоба мүшелері</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d жазылушы</item>
+        <item quantity="other">%1$d жазылушы</item>
+    </plurals>
 </resources>

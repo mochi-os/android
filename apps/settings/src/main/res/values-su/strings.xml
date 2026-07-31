@@ -321,6 +321,10 @@
     <string name="domain_title">Doméin</string>
     <string name="domain_verify">Verifikasi DNS</string>
     <string name="settings_home_domains">Doméin</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Tés dikirim ka %1$d tujuan</item>
+        <item quantity="other">Tés dikirim ka %1$d tujuan</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Dicabut %1$d sési</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">Talatah anu ngantosan rute</string>
     <string name="system_status_relay_service">Layanan relay</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservasi · %3$d sirkuit · %4$d ditolak</string>
+    <string name="route_target_select">Pilih</string>
+    <string name="account_data_description">Undeur cadangan lengkep nu tiasa dipulihkeun dina server Mochi ieu atanapi server Mochi séjén.</string>
+    <string name="route_target_none">Teu aya udagan nu sayogi</string>
 </resources>

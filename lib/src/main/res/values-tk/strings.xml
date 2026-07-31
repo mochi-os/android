@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Katalog</string>
     <string name="person_picker_no_people">Adam ýok</string>
     <string name="person_picker_project_members">Taslamanyň agzalary</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d agza</item>
+        <item quantity="other">%1$d agza</item>
+    </plurals>
 </resources>

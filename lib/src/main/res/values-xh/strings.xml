@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Uluhlu</string>
     <string name="person_picker_no_people">Akukho bantu</string>
     <string name="person_picker_project_members">Amalungu eprojekthi</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">umbhalisi %1$d</item>
+        <item quantity="other">ababhalisi %1$d</item>
+    </plurals>
 </resources>

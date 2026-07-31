@@ -365,4 +365,10 @@
     <string name="projects_share_link_title">Падзяліцца праектам</string>
     <string name="projects_sort_filter_title">Сартаванне і фільтр</string>
     <string name="projects_create_prefix_hint">Выкарыстоўваецца для чытэльных ID, напрыклад %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d канфліктны файл</item>
+        <item quantity="few">%1$d канфліктныя файлы</item>
+        <item quantity="many">%1$d канфліктных файлаў</item>
+        <item quantity="other">%1$d канфліктнага файла</item>
+    </plurals>
 </resources>

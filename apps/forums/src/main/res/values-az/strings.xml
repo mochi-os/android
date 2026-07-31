@@ -2,7 +2,7 @@
 <resources>
 
     <string name="forums_auth_display_name">Göstərilən ad</string>
-    <string name="forums_auth_verification_failed">Yoxla</string>
+    <string name="forums_auth_verification_failed">Doğrulama uğursuz oldu</string>
     <string name="forums_list_title">Forumlar</string>
     <string name="forums_list_close_search">Axtarışı bağla</string>
     <string name="forums_list_search">Axtar</string>
@@ -228,7 +228,7 @@
     <string name="forums_create_allow_search">Hər kəsə forumu axtarmağa icazə ver</string>
     <string name="forums_rss_clipboard_label">Forum RSS URL-i</string>
     <string name="forums_tab_moderation">Moderasiya</string>
-    <string name="forums_access_level_view_full">{0} fotoya bax</string>
+    <string name="forums_access_level_view_full">Yalnız baxış</string>
     <string name="forums_access_level_none_full">Giriş yoxdur</string>
     <string name="forums_access_subject_anyone">İstənilən şəxs</string>
     <string name="forums_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>

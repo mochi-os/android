@@ -321,6 +321,11 @@
     <string name="domain_title">Domēni</string>
     <string name="domain_verify">Verificēt DNS</string>
     <string name="settings_home_domains">Domēni</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="zero">Tests nosūtīts uz %1$d galamērķiem</item>
+        <item quantity="one">Tests nosūtīts uz %1$d galamērķi</item>
+        <item quantity="other">Tests nosūtīts uz %1$d galamērķiem</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Atsaukta %1$d sesija</item>
         <item quantity="other">Atsauktas %1$d sesijas</item>
@@ -367,4 +372,7 @@
     <string name="system_status_awaiting_routing">Ziņojumi, kas gaida maršrutēšanu</string>
     <string name="system_status_relay_service">Retranslācijas pakalpojums</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezervācijas · %3$d ķēdes · %4$d noraidīts</string>
+    <string name="route_target_select">Atlasīt</string>
+    <string name="account_data_description">Lejupielādējiet pilnu rezerves kopiju, ko varat atjaunot šajā vai citā Mochi serverī.</string>
+    <string name="route_target_none">Nav pieejamu mērķu</string>
 </resources>

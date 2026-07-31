@@ -193,7 +193,7 @@
     <string name="system_users_delete">Usuario chhaqtayaña</string>
     <string name="system_users_delete_title">Usuario chhaqtayaña?</string>
     <string name="system_users_manage_sessions">Sesionanak apnaqaña</string>
-    <string name="system_users_sessions_description">Uñjat controlnaka</string>
+    <string name="system_users_sessions_description">Aka apnaqirin sesionanakap uñjam ukat jaytam.</string>
     <string name="system_users_sessions_empty">Aka wikix mä origen wikir suscribita, ukatpach machaqanak katuqi.</string>
     <string name="system_users_revoke">Aparma</string>
     <string name="system_users_revoke_all">Taqi sesionanak aparma</string>
@@ -321,6 +321,10 @@
     <string name="domain_title">Dominionaka</string>
     <string name="domain_verify">Verificaña ukat habilitaña</string>
     <string name="settings_home_domains">Dominionaka</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Yant\'awi %1$d cheqaru khitanitawa</item>
+        <item quantity="other">Yant\'awi %1$d cheqanakaru khitanitawa</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d sesion jaktʼaywi</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">Yatiyäwinaka apaña suyaskiri</string>
     <string name="system_status_relay_service">Relay servicio</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservanaka · %3$d circuitos · %4$d jarkʼata</string>
+    <string name="route_target_select">Ajlliña</string>
+    <string name="account_data_description">Aka Mochi servidoran jan ukax yaqha Mochi servidoran kuttayañ chiqa taqpach qhipa qillqa apsuma.</string>
+    <string name="route_target_none">Janiw amtawinaka utjkiti</string>
 </resources>

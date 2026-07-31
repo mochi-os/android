@@ -160,9 +160,6 @@
     <string name="market_bids_ended">Auktion beendet</string>
     <string name="market_bids_tab_outbid">Überboten</string>
     <string name="market_channel_name">Markt</string>
-    <string name="market_checkout_subscribe_failed">Failed to subscribe</string>
-    <string name="market_checkout_subscribing">Subscribing…</string>
-    <string name="market_checkout_total">Total</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Käufer</string>
     <string name="market_editor_photo_uploading">Wird hochgeladen…</string>
     <string name="market_editor_price">Preis</string>
@@ -196,7 +193,6 @@
     <string name="market_purchase_review_body">Prüfen</string>
     <string name="market_purchase_review_rating">Bewertung</string>
     <string name="market_purchase_review_submitted">Bewertung eingereicht</string>
-    <string name="market_purchase_total">Total</string>
     <string name="market_purchases_order_label">Bestellung #%1$s</string>
     <string name="market_rating_label">Bewertung</string>
     <string name="market_refund_details_label">Details</string>
@@ -349,7 +345,6 @@
     <string name="market_filter_condition">Zustand</string>
     <string name="market_filter_condition_refurbished">Generalüberholt</string>
     <string name="market_filter_condition_used">Gebraucht</string>
-    <string name="market_filter_delivery_download">Download</string>
     <string name="market_filter_delivery_pickup">Abholung</string>
     <string name="market_filter_open">Filter</string>
     <string name="market_filter_price_hint">Beträge in ganzen Währungseinheiten. Der Marktplatz filtert in der Währung des jeweiligen Inserats.</string>

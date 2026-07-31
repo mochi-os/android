@@ -273,4 +273,24 @@
     <string name="feeds_link">Lidhje</string>
     <string name="feeds_share_link_title">Lidhja e burimit</string>
     <string name="feeds_scroll_to_top">Kthehu lart</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d imazh</item>
+        <item quantity="other">%1$d imazhe</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d koment</item>
+        <item quantity="other">%1$d komente</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d bashkëngjitje</item>
+        <item quantity="other">%1$d bashkëngjitje</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Shiko %1$d komentim më</item>
+        <item quantity="other">Shiko %1$d komentime më</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">%1$d vit më parë, sot</item>
+        <item quantity="other">%1$d vjet më parë, sot</item>
+    </plurals>
 </resources>

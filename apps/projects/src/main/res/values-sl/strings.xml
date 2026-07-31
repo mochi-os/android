@@ -365,4 +365,10 @@
     <string name="projects_share_link_title">Deli projekt</string>
     <string name="projects_sort_filter_title">Razvrsti in filtriraj</string>
     <string name="projects_create_prefix_hint">Uporablja se za berljive ID-je, kot sta %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d datoteka v sporu</item>
+        <item quantity="two">%1$d datoteki v sporu</item>
+        <item quantity="few">%1$d datoteke v sporu</item>
+        <item quantity="other">%1$d datotek v sporu</item>
+    </plurals>
 </resources>

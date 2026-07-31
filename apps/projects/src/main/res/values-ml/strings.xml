@@ -367,4 +367,8 @@
     <string name="projects_share_link_title">പ്രോജക്റ്റ് പങ്കിടുക</string>
     <string name="projects_sort_filter_title">ക്രമീകരിച്ച് ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 പോലുള്ള വായിക്കാവുന്ന ഐഡികൾക്ക് ഉപയോഗിക്കുന്നു</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d വൈരുദ്ധ്യമുള്ള ഫയൽ</item>
+        <item quantity="other">%1$d വൈരുദ്ധ്യമുള്ള ഫയലുകൾ</item>
+    </plurals>
 </resources>

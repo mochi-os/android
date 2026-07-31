@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Tên hiển thị</string>
     <string name="crm_auth_verification_failed">Xác minh thất bại</string>
-    <string name="crm_list_title">Dự án</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Đóng tìm kiếm</string>
     <string name="crm_list_search">Tìm kiếm</string>
-    <string name="crm_list_find">Tìm dự án</string>
+    <string name="crm_list_find">Tìm CRM</string>
     <string name="crm_list_logout">Đăng xuất</string>
-    <string name="crm_list_create">Tạo dự án</string>
-    <string name="crm_create_title">Tạo dự án</string>
+    <string name="crm_list_create">Tạo CRM</string>
+    <string name="crm_create_title">Tạo CRM</string>
     <string name="crm_create_name">Tên</string>
     <string name="crm_create_description">Mô tả</string>
     <string name="crm_create_privacy">Quyền riêng tư</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Công khai</string>
     <string name="crm_create_template_none">Không có</string>
     <string name="crm_create_action">Tạo</string>
-    <string name="crm_find_title">Tìm dự án</string>
+    <string name="crm_find_title">Tìm CRM</string>
     <string name="crm_find_recommended">Được đề xuất</string>
     <string name="crm_find_subscribe">Đăng ký</string>
     <string name="crm_loading">Đang tải…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Lưu thay đổi</string>
     <string name="crm_settings_unsubscribe">Hủy đăng ký</string>
     <string name="crm_settings_delete_crm">Xóa dự án</string>
-    <string name="crm_settings_delete_confirm_title">Xóa dự án</string>
+    <string name="crm_settings_delete_confirm_title">Xóa CRM</string>
     <string name="crm_settings_unsubscribe_title">Hủy đăng ký</string>
-    <string name="crm_settings_unsubscribe_message">Bạn có chắc muốn hủy đăng ký dự án này?</string>
+    <string name="crm_settings_unsubscribe_message">Bạn có chắc muốn hủy đăng ký CRM này?</string>
     <string name="crm_access_level_owner">Chủ sở hữu</string>
     <string name="crm_access_level_design">Thiết kế</string>
     <string name="crm_access_level_comment">Bình luận</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Máy chủ</string>
     <string name="crm_untitled">Không có tiêu đề</string>
     <string name="crm_property_select">Chọn …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d tệp xung đột</item>
+        <item quantity="other">%1$d tệp xung đột</item>
+    </plurals>
 </resources>

@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Qhaway suti</string>
     <string name="crm_auth_verification_failed">Qhawariy mana atikurqanchu</string>
-    <string name="crm_list_title">Proyectokuna</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">Maskhay wichq\'ay</string>
     <string name="crm_list_search">Maskay</string>
-    <string name="crm_list_find">Proyectokunata tariy</string>
+    <string name="crm_list_find">CRMkunata tariy</string>
     <string name="crm_list_logout">Lluqsiy</string>
-    <string name="crm_list_create">Proyecto kamariy</string>
-    <string name="crm_create_title">Proyecto kamariy</string>
+    <string name="crm_list_create">CRM kamariy</string>
+    <string name="crm_create_title">CRM kamariy</string>
     <string name="crm_create_name">Sutin</string>
     <string name="crm_create_description">Willariy</string>
     <string name="crm_create_privacy">Pakaynin</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Público</string>
     <string name="crm_create_template_none">Mana</string>
     <string name="crm_create_action">Kamariy</string>
-    <string name="crm_find_title">Proyectokunata tariy</string>
+    <string name="crm_find_title">CRMkunata tariy</string>
     <string name="crm_find_recommended">Munasqa</string>
     <string name="crm_find_subscribe">Suscribiy</string>
     <string name="crm_loading">Wichachichkan…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Cambiokunata waqaychay</string>
     <string name="crm_settings_unsubscribe">Suscripcionta saqiy</string>
     <string name="crm_settings_delete_crm">Proyecto wischuy</string>
-    <string name="crm_settings_delete_confirm_title">Proyecto wischuy</string>
+    <string name="crm_settings_delete_confirm_title">CRM Wischuy</string>
     <string name="crm_settings_unsubscribe_title">Suscripcionta saqiy</string>
-    <string name="crm_settings_unsubscribe_message">Kay proyecto-manta lluqsiyta munanki?</string>
+    <string name="crm_settings_unsubscribe_message">Kay CRM-manta lluqsiyta munanki?</string>
     <string name="crm_access_level_owner">Apuq</string>
     <string name="crm_access_level_design">Diseño</string>
     <string name="crm_access_level_comment">Comentario</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Mana sutinchayniyuq</string>
     <string name="crm_property_select">Akllay …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d ch\'aqwaq willañiqi</item>
+        <item quantity="other">%1$d ch\'aqwaq willañiqikuna</item>
+    </plurals>
 </resources>

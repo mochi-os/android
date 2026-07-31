@@ -54,6 +54,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -75,13 +76,16 @@ fun NotificationPrefsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val scope = rememberCoroutineScope()
-    var snack by remember { mutableStateOf<String?>(null) }
+    // pluralStringResource is @Composable, so the count is held in state and
+    // the sentence is built during composition rather than in the collector.
+    var sent by remember { mutableStateOf<Int?>(null) }
 
     androidx.compose.runtime.LaunchedEffect(Unit) {
         scope.launch {
-            viewModel.toasts.collect { snack = it }
+            viewModel.testSent.collect { sent = it }
         }
     }
+    val snack = sent?.let { pluralStringResource(R.plurals.notifprefs_test_sent, it, it) }
 
     var creating by remember { mutableStateOf(false) }
     var editing by remember { mutableStateOf<NotifCategory?>(null) }
@@ -142,7 +146,7 @@ fun NotificationPrefsScreen(
                 }
             }
             if (snack != null) {
-                SnackBanner(snack!!) { snack = null }
+                SnackBanner(snack) { sent = null }
             }
         }
     }

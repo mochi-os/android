@@ -321,6 +321,9 @@
     <string name="domain_title">ដែន</string>
     <string name="domain_verify">ផ្ទៀងផ្ទាត់ DNS</string>
     <string name="settings_home_domains">ដែន</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="other">បានផ្ញើការសាកល្បងទៅកាន់ទិសដៅ %1$d </item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">បានដកហូត %1$d វគ្គ</item>
     </plurals>
@@ -365,4 +368,7 @@
     <string name="system_status_awaiting_routing">សារកំពុងរង់ចាំការនាំផ្លូវ</string>
     <string name="system_status_relay_service">សេវាបញ្ជូនបន្ត</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ការកក់ · %3$d សៀគ្វី · %4$d បានបដិសេធ</string>
+    <string name="route_target_select">ជ្រើសរើស</string>
+    <string name="account_data_description">ទាញយកការបម្រុងទុកពេញលេញដែលអ្នកអាចស្ដារឡើងវិញនៅលើម៉ាស៊ីនមេ Mochi នេះ ឬម៉ាស៊ីនមេផ្សេងទៀត។</string>
+    <string name="route_target_none">មិនមានគោលដៅដែលអាចប្រើបានទេ</string>
 </resources>

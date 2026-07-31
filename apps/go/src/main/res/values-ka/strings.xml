@@ -21,7 +21,7 @@
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_draw_accept">მიღება</string>
     <string name="go_draw_decline">უარის თქმა</string>
-    <string name="go_draw_offered_received">%1$s-მაც გაატარა. დასტური დაასრულებს თამაშს და დაითვლის დაფას.</string>
+    <string name="go_draw_offered_received">%1$s-მა ფრე შემოგთავაზათ</string>
     <string name="go_draw_offered_waiting">შემოთავაზებულია ფრე — ველოდები %1$s-ს</string>
     <string name="go_error_delete_failed">თამაშის წაშლა ვერ მოხერხდა</string>
     <string name="go_error_draw_accept_failed">ფრეს მიღება ვერ მოხერხდა</string>
@@ -43,7 +43,7 @@
     <string name="go_new_game_start">თამაშის დაწყება</string>
     <string name="go_pass_confirm">გამოტოვება</string>
     <string name="go_pass_end_confirm">თამაშის დასრულება</string>
-    <string name="go_pass_end_message">%1$s-ის სვლა</string>
+    <string name="go_pass_end_message">%1$s-მაც გაატარა. დასტური დაასრულებს თამაშს და დაფას შეაფასებს.</string>
     <string name="go_pass_end_title">დაასრულოთ თამაში?</string>
     <string name="go_pass_message">გამოტოვეთ თქვენი სვლა და გადაეცით მოწინააღმდეგეს.</string>
     <string name="go_pass_title">გამოტოვება?</string>

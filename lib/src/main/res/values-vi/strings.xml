@@ -310,4 +310,7 @@
     <string name="person_picker_directory">Danh bạ</string>
     <string name="person_picker_no_people">Không có người nào</string>
     <string name="person_picker_project_members">Thành viên dự án</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">%1$d người đăng ký</item>
+    </plurals>
 </resources>

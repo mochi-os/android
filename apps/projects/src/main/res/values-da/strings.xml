@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Del projekt</string>
     <string name="projects_sort_filter_title">Sortér og filtrér</string>
     <string name="projects_create_prefix_hint">Bruges til læsbare id\'er som %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d modstridende fil</item>
+        <item quantity="other">%1$d modstridende filer</item>
+    </plurals>
 </resources>

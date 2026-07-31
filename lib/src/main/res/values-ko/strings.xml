@@ -309,4 +309,7 @@
     <string name="person_picker_directory">디렉터리</string>
     <string name="person_picker_no_people">사람이 없습니다</string>
     <string name="person_picker_project_members">프로젝트 구성원</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">구독자 %1$d명</item>
+    </plurals>
 </resources>

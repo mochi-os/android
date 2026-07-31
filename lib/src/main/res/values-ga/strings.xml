@@ -309,4 +309,11 @@
     <string name="person_picker_directory">Eolaire</string>
     <string name="person_picker_no_people">Gan daoine</string>
     <string name="person_picker_project_members">Baill an tionscadail</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d síntiúsóir</item>
+        <item quantity="two">%1$d shíntiúsóir</item>
+        <item quantity="few">%1$d shíntiúsóir</item>
+        <item quantity="many">%1$d síntiúsóir</item>
+        <item quantity="other">%1$d síntiúsóir</item>
+    </plurals>
 </resources>

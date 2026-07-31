@@ -104,11 +104,11 @@
     <string name="forums_report_reason_spam">Սպամ</string>
     <string name="forums_report_reason_harassment">Ոտնձգություն</string>
     <string name="forums_report_reason_violence">Բռնություն</string>
-    <string name="forums_report_reason_misinformation">Բացակայում է՝ {0}</string>
+    <string name="forums_report_reason_misinformation">Ապատեղեկատվություն</string>
     <string name="forums_report_reason_offtopic">Թեմայից դուրս</string>
     <string name="forums_report_reason_other">Այլ</string>
     <string name="forums_post_default_author">Օգտատեր</string>
-    <string name="forums_comments">Մեկնաբանություններ ({0})</string>
+    <string name="forums_comments">Մեկնաբանություններ</string>
     <string name="forums_no_comments">Դեռ մեկնաբանություններ չկան</string>
     <string name="forums_comment_save">Պահպանել</string>
     <string name="forums_comment_edit">Խմբագրել մեկնաբանությունը</string>
@@ -223,7 +223,7 @@
     <string name="forums_attachment_remove">Հեռացնել</string>
     <string name="forums_attachment_move_up">Տեղափոխել վերև</string>
     <string name="forums_attachment_move_down">Տեղափոխել ներքև</string>
-    <string name="forums_post_comments">Մեկնաբանություններ ({0})</string>
+    <string name="forums_post_comments">Մեկնաբանություններ</string>
     <string name="forums_all_forums">Բոլոր ֆորումները</string>
     <string name="forums_create_allow_search">Թույլատրել բոլորին որոնել ֆորումը</string>
     <string name="forums_rss_clipboard_label">Ֆորումի RSS URL</string>

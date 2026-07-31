@@ -45,7 +45,7 @@
     <string name="staff_appeals_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="staff_appeals_decide">Որոշել բողոքարկումը</string>
     <string name="staff_appeals_decide_failed">Չհաջողվեց որոշել բողոքարկումը</string>
-    <string name="staff_appeals_decision_denied">Կոմի</string>
+    <string name="staff_appeals_decision_denied">Պահել հայտարարությունը՝ մերժված</string>
     <string name="staff_appeals_decision_label">Հայտարարված է</string>
     <string name="staff_appeals_decision_placeholder">Ընտրել որոշումը</string>
     <string name="staff_appeals_decision_upheld">Հաստատված է</string>
@@ -81,7 +81,7 @@
     <string name="staff_audit_action_category_created">Կատեգորիան ջնջված է</string>
     <string name="staff_audit_action_category_deleted">Այս ծանուցման կատեգորիա</string>
     <string name="staff_audit_action_category_updated">Փոխել բաններն</string>
-    <string name="staff_audit_action_config_thresholds_updated">Ամսական</string>
+    <string name="staff_audit_action_config_thresholds_updated">Մոդերացիայի շեմերը թարմացվեցին</string>
     <string name="staff_audit_action_config_updated">Կոնֆիգուրացիա</string>
     <string name="staff_audit_action_dispute_opened">Վերադարձ պահանջվեց</string>
     <string name="staff_audit_action_dispute_resolved_buyer">Վերադարձը հաստատվեց</string>
@@ -99,9 +99,9 @@
     <string name="staff_audit_action_listing_removed">Հեռացված է</string>
     <string name="staff_audit_action_listing_updated">Ցուցակագրումը հրապարակվեց</string>
     <string name="staff_audit_action_listing_warning">Զգուշացումը տրվեց</string>
-    <string name="staff_audit_action_order_cancelled">Չեղարկված է հրավերը {friendName}-ին։</string>
+    <string name="staff_audit_action_order_cancelled">Չեղարկված</string>
     <string name="staff_audit_action_order_chargeback">Chargeback-ը հաստատված է</string>
-    <string name="staff_audit_action_order_chargeback_lost">Chargeback {0}</string>
+    <string name="staff_audit_action_order_chargeback_lost">Հետգանձումը բավարարվել է</string>
     <string name="staff_audit_action_order_chargeback_won">Chargeback-ի վճար</string>
     <string name="staff_audit_action_order_completed">Պայման</string>
     <string name="staff_audit_action_order_created">Պատվերը կատարված է</string>
@@ -123,9 +123,9 @@
     <string name="staff_audit_action_subscription_activated">Բաժանորդագրությունը ակտիվացվեց</string>
     <string name="staff_audit_action_subscription_active">Վերադարձված է ակտիվ</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">Չեղարկված է</string>
-    <string name="staff_audit_action_subscription_cancelled">Չեղարկված է հրավերը {friendName}-ին։</string>
+    <string name="staff_audit_action_subscription_cancelled">Չեղարկված</string>
     <string name="staff_audit_action_subscription_chargeback">Chargeback-ը հաստատված է</string>
-    <string name="staff_audit_action_subscription_chargeback_lost">Chargeback {0}</string>
+    <string name="staff_audit_action_subscription_chargeback_lost">Հետգանձումը բավարարվել է</string>
     <string name="staff_audit_action_subscription_chargeback_won">Chargeback-ի վճար</string>
     <string name="staff_audit_action_subscription_created">Բաժանորդագրությունը ստեղծվեց</string>
     <string name="staff_audit_action_subscription_past_due">Վճարման ժամկետն անցել է</string>
@@ -376,9 +376,9 @@
     <string name="staff_reports_meta_type">Տեսակ</string>
     <string name="staff_reports_notes_label">Նշումներ</string>
     <string name="staff_reports_open_sidebar">Բացել կողագոտին</string>
-    <string name="staff_reports_reason_counterfeit">Երկիր</string>
+    <string name="staff_reports_reason_counterfeit">Կեղծ կամ գողացված</string>
     <string name="staff_reports_reason_inappropriate">Անպատշաճ բովանդակություն</string>
-    <string name="staff_reports_reason_misleading">Mochi</string>
+    <string name="staff_reports_reason_misleading">Ապակողմնորոշող նկարագրություն</string>
     <string name="staff_reports_reason_other">Այլ</string>
     <string name="staff_reports_reason_prohibited">Արգելված կամ ապօրինի ապրանք</string>
     <string name="staff_reports_reason_spam">Սպամ կամ խաբեություն</string>
@@ -468,8 +468,8 @@
     <string name="staff_team_action_remove">Հեռացնել</string>
     <string name="staff_team_add_member">Ավելացնել նոր հաշիվ</string>
     <string name="staff_team_added_by_system">Համակարգ</string>
-    <string name="staff_team_col_added">Ավելացված է «{0}»</string>
-    <string name="staff_team_col_added_by">{0}-ը ավելացված է խմբին</string>
+    <string name="staff_team_col_added">Ավելացվել է</string>
+    <string name="staff_team_col_added_by">Ավելացրել է</string>
     <string name="staff_team_col_member">Անդամներ</string>
     <string name="staff_team_col_role">Դեր</string>
     <string name="staff_team_dialog_add">Ավելացնել Mochi հոսք</string>

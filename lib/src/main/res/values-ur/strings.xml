@@ -309,4 +309,8 @@
     <string name="person_picker_directory">ڈائریکٹری</string>
     <string name="person_picker_no_people">کوئی لوگ نہیں</string>
     <string name="person_picker_project_members">پروجیکٹ کے اراکین</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d رکن</item>
+        <item quantity="other">%1$d ارکان</item>
+    </plurals>
 </resources>

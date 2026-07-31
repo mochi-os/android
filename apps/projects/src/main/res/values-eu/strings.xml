@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Partekatu proiektua</string>
     <string name="projects_sort_filter_title">Ordenatu eta iragazi</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 bezalako ID irakurgarrietarako erabiltzen da</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">gatazkan dagoen fitxategi %1$d</item>
+        <item quantity="other">gatazkan dauden %1$d fitxategi</item>
+    </plurals>
 </resources>

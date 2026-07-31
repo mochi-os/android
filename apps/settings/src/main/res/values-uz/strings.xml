@@ -321,6 +321,10 @@
     <string name="domain_title">Domenlar</string>
     <string name="domain_verify">DNS ni tasdiqlash</string>
     <string name="settings_home_domains">Domenlar</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Sinov %1$d manzilga yuborildi</item>
+        <item quantity="other">Sinov %1$d manzilga yuborildi</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sessiya bekor qilindi</item>
         <item quantity="other">%1$d sessiya bekor qilindi</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Marshrutlashni kutayotgan xabarlar</string>
     <string name="system_status_relay_service">Relay xizmati</string>
     <string name="system_status_relay_service_value">%1$d / %2$d bronlar · %3$d zanjirlar · %4$d rad etilgan</string>
+    <string name="route_target_select">Tanlash</string>
+    <string name="account_data_description">Bu yoki boshqa Mochi serverida tiklashingiz mumkin boʻlgan toʻliq zaxira nusxasini yuklab oling.</string>
+    <string name="route_target_none">Mavjud maqsadlar yoʻq</string>
 </resources>

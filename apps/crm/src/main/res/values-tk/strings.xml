@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Görkeziş ady</string>
     <string name="crm_auth_verification_failed">Tassyklama şowsuz boldy</string>
-    <string name="crm_list_title">Taslamalar</string>
+    <string name="crm_list_title">CRM-lar</string>
     <string name="crm_list_close_search">Gözlegi ýapmak</string>
     <string name="crm_list_search">Gözle</string>
-    <string name="crm_list_find">Taslamalary tap</string>
+    <string name="crm_list_find">CRM tap</string>
     <string name="crm_list_logout">Çyk</string>
-    <string name="crm_list_create">Proýekt döretmek</string>
-    <string name="crm_create_title">Proýekt döretmek</string>
+    <string name="crm_list_create">CRM döretmek</string>
+    <string name="crm_create_title">CRM döretmek</string>
     <string name="crm_create_name">At</string>
     <string name="crm_create_description">Düşündiriş</string>
     <string name="crm_create_privacy">Gizlinlik</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Köpçülige açyk</string>
     <string name="crm_create_template_none">Hiç biri</string>
     <string name="crm_create_action">Döretmek</string>
-    <string name="crm_find_title">Taslamalary tap</string>
+    <string name="crm_find_title">CRM tap</string>
     <string name="crm_find_recommended">Maslahat berilýän</string>
     <string name="crm_find_subscribe">Abuna ýaz</string>
     <string name="crm_loading">Ýüklenýär…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Üýtgeşiklikleri saklaýyş</string>
     <string name="crm_settings_unsubscribe">Abunadan çyk</string>
     <string name="crm_settings_delete_crm">Proýekt pozmak</string>
-    <string name="crm_settings_delete_confirm_title">Proýekt pozmak</string>
+    <string name="crm_settings_delete_confirm_title">CRM pozmak</string>
     <string name="crm_settings_unsubscribe_title">Abunadan çyk</string>
-    <string name="crm_settings_unsubscribe_message">Bu proýektden abunalykdan çykmak isleýärsiňizmi?</string>
+    <string name="crm_settings_unsubscribe_message">Bu CRM-dan abunalykdan çykmak isleýärsiňizmi?</string>
     <string name="crm_access_level_owner">Eýesi</string>
     <string name="crm_access_level_design">Dizaýn</string>
     <string name="crm_access_level_comment">Teswir</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Atsyz</string>
     <string name="crm_property_select">Saýlaň …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d gapma-garşy faýl</item>
+        <item quantity="other">%1$d gapma-garşy faýl</item>
+    </plurals>
 </resources>

@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Көрсөтүү аты</string>
     <string name="crm_auth_verification_failed">Текшерүү ишке ашкан жок</string>
-    <string name="crm_list_title">Долбоорлор</string>
+    <string name="crm_list_title">CRMдер</string>
     <string name="crm_list_close_search">Издөөнү жабуу</string>
     <string name="crm_list_search">Издөө</string>
-    <string name="crm_list_find">Долбоорлорду табуу</string>
+    <string name="crm_list_find">CRM-дерди табуу</string>
     <string name="crm_list_logout">Чыгуу</string>
-    <string name="crm_list_create">Долбоор түзүү</string>
-    <string name="crm_create_title">Долбоор түзүү</string>
+    <string name="crm_list_create">CRM түзүү</string>
+    <string name="crm_create_title">CRM түзүү</string>
     <string name="crm_create_name">Аты</string>
     <string name="crm_create_description">Сүрөттөмө</string>
     <string name="crm_create_privacy">Купуялык</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Ачык</string>
     <string name="crm_create_template_none">Эч кимиси</string>
     <string name="crm_create_action">Түзүү</string>
-    <string name="crm_find_title">Долбоорлорду табуу</string>
+    <string name="crm_find_title">CRM-дерди табуу</string>
     <string name="crm_find_recommended">Сунушталган</string>
     <string name="crm_find_subscribe">Жазылуу</string>
     <string name="crm_loading">Жүктөлүүдө…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Өзгөрүүлөрдү сактоо</string>
     <string name="crm_settings_unsubscribe">Жазылуудан баш тартуу</string>
     <string name="crm_settings_delete_crm">Долбоорду жок кылуу</string>
-    <string name="crm_settings_delete_confirm_title">Долбоорду жок кылуу</string>
+    <string name="crm_settings_delete_confirm_title">CRM жок кылуу</string>
     <string name="crm_settings_unsubscribe_title">Жазылуудан баш тартуу</string>
-    <string name="crm_settings_unsubscribe_message">Бул долбоордон жазылбоону каалайсызбы?</string>
+    <string name="crm_settings_unsubscribe_message">Бул CRMден жазылбоону каалайсызбы?</string>
     <string name="crm_access_level_owner">Ээси</string>
     <string name="crm_access_level_design">Дизайн</string>
     <string name="crm_access_level_comment">Комментарий</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Аталышсыз</string>
     <string name="crm_property_select">Тандаңыз …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d карама-каршы файл</item>
+        <item quantity="other">%1$d карама-каршы файл</item>
+    </plurals>
 </resources>

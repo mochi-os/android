@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">اخیراً مشاهده‌شده</string>
     <string name="market_recently_viewed_clear">پاک کردن همه</string>
     <string name="market_listings_create">ساختن</string>
+    <string name="market_bid_dialog_ceiling_label">حداکثر پیشنهاد (اختیاری)</string>
 </resources>

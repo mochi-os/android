@@ -321,6 +321,10 @@
     <string name="domain_title">Lén</string>
     <string name="domain_verify">Staðfesta DNS</string>
     <string name="settings_home_domains">Lén</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Prófun send á %1$d áfangastað</item>
+        <item quantity="other">Prófun send á %1$d áfangastaði</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">%1$d lota afturkölluð</item>
         <item quantity="other">%1$d lotur afturkallaðar</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Skilaboð sem bíða leiðarvals</string>
     <string name="system_status_relay_service">Endurvarpsþjónusta</string>
     <string name="system_status_relay_service_value">%1$d / %2$d frátektir · %3$d rásir · %4$d hafnað</string>
+    <string name="route_target_select">Velja</string>
+    <string name="account_data_description">Sæktu heildarafrit sem þú getur endurheimt á þessum eða öðrum Mochi-þjóni.</string>
+    <string name="route_target_none">Engin skotmörk í boði</string>
 </resources>

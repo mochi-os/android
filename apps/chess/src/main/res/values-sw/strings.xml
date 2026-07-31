@@ -51,7 +51,7 @@
     <string name="chess_piece_rook">Ngome</string>
     <string name="chess_piece_bishop">Askofu</string>
     <string name="chess_piece_knight">Farasi</string>
-    <string name="chess_piece_pawn">Pawn</string>
+    <string name="chess_piece_pawn">Askari</string>
     <string name="chess_move_played">%1$s amecheza %2$s</string>
     <string name="chess_channel_name">Arifa za Chess</string>
     <string name="chess_channel_description">Arifa kuhusu hatua, mapendekezo ya sare, na matokeo ya michezo.</string>

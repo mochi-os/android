@@ -321,6 +321,10 @@
     <string name="domain_title">โดเมน</string>
     <string name="domain_verify">ตรวจสอบ DNS</string>
     <string name="settings_home_domains">โดเมน</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">ส่งการทดสอบไปยัง %1$d ปลายทางแล้ว</item>
+        <item quantity="other">ส่งการทดสอบไปยัง %1$d ปลายทางแล้ว</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">เพิกถอน %1$d เซสชัน</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">ข้อความที่รอการกำหนดเส้นทาง</string>
     <string name="system_status_relay_service">บริการรีเลย์</string>
     <string name="system_status_relay_service_value">%1$d / %2$d การจอง · %3$d วงจร · %4$d ถูกปฏิเสธ</string>
+    <string name="route_target_select">เลือก</string>
+    <string name="account_data_description">ดาวน์โหลดข้อมูลสำรองทั้งหมดที่คุณสามารถกู้คืนบนเซิร์ฟเวอร์นี้หรือเซิร์ฟเวอร์ Mochi อื่น</string>
+    <string name="route_target_none">ไม่มีเป้าหมายที่ใช้ได้</string>
 </resources>

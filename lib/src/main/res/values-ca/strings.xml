@@ -311,4 +311,8 @@
     <string name="person_picker_directory">Directori</string>
     <string name="person_picker_no_people">No hi ha persones</string>
     <string name="person_picker_project_members">Membres del projecte</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d subscriptor</item>
+        <item quantity="other">%1$d subscriptors</item>
+    </plurals>
 </resources>

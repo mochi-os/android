@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Ba shi da suna</string>
     <string name="crm_property_select">Zaɓi …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">fayil %1$d mai karo</item>
+        <item quantity="other">fayiloli %1$d masu karo</item>
+    </plurals>
 </resources>

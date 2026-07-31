@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">الاسم المعروض</string>
     <string name="crm_auth_verification_failed">فشل التحقق</string>
-    <string name="crm_list_title">المشاريع</string>
+    <string name="crm_list_title">أنظمة CRM</string>
     <string name="crm_list_close_search">إغلاق البحث</string>
     <string name="crm_list_search">بحث</string>
-    <string name="crm_list_find">البحث عن المشاريع</string>
+    <string name="crm_list_find">البحث عن أنظمة CRM</string>
     <string name="crm_list_logout">تسجيل الخروج</string>
-    <string name="crm_list_create">إنشاء مشروع</string>
-    <string name="crm_create_title">إنشاء مشروع</string>
+    <string name="crm_list_create">إنشاء CRM</string>
+    <string name="crm_create_title">إنشاء CRM</string>
     <string name="crm_create_name">الاسم</string>
     <string name="crm_create_description">الوصف</string>
     <string name="crm_create_privacy">الخصوصية</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">عام</string>
     <string name="crm_create_template_none">لا شيء</string>
     <string name="crm_create_action">إنشاء</string>
-    <string name="crm_find_title">البحث عن المشاريع</string>
+    <string name="crm_find_title">البحث عن أنظمة CRM</string>
     <string name="crm_find_recommended">موصى به</string>
     <string name="crm_find_subscribe">اشتراك</string>
     <string name="crm_loading">جارٍ التحميل…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">حفظ التغييرات</string>
     <string name="crm_settings_unsubscribe">إلغاء الاشتراك</string>
     <string name="crm_settings_delete_crm">حذف المشروع</string>
-    <string name="crm_settings_delete_confirm_title">حذف المشروع</string>
+    <string name="crm_settings_delete_confirm_title">حذف CRM</string>
     <string name="crm_settings_unsubscribe_title">إلغاء الاشتراك</string>
-    <string name="crm_settings_unsubscribe_message">هل أنت متأكد من إلغاء الاشتراك من هذا المشروع؟</string>
+    <string name="crm_settings_unsubscribe_message">هل أنت متأكد من إلغاء الاشتراك من نظام CRM هذا؟</string>
     <string name="crm_access_level_owner">المالك</string>
     <string name="crm_access_level_design">التصميم</string>
     <string name="crm_access_level_comment">تعليق</string>
@@ -335,4 +335,12 @@
     <string name="crm_settings_server">الخادم</string>
     <string name="crm_untitled">بدون عنوان</string>
     <string name="crm_property_select">اختر …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="zero">لا ملفات متعارضة</item>
+        <item quantity="one">ملف متعارض واحد</item>
+        <item quantity="two">ملفان متعارضان</item>
+        <item quantity="few">%1$d ملفات متعارضة</item>
+        <item quantity="many">%1$d ملفًا متعارضًا</item>
+        <item quantity="other">%1$d ملف متعارض</item>
+    </plurals>
 </resources>

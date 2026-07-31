@@ -321,6 +321,12 @@
     <string name="domain_title">Dominji</string>
     <string name="domain_verify">Ivverifika DNS</string>
     <string name="settings_home_domains">Dominji</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">It-test intbagħat lil %1$d destinazzjoni</item>
+        <item quantity="few">It-test intbagħat lil %1$d destinazzjonijiet</item>
+        <item quantity="many">It-test intbagħat lil %1$d destinazzjonijiet</item>
+        <item quantity="other">It-test intbagħat lil %1$d destinazzjonijiet</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="few">Revokati %1$d sessjonijiet</item>
         <item quantity="many">Revokati %1$d sessjonijiet</item>
@@ -369,4 +375,7 @@
     <string name="system_status_awaiting_routing">Messaġġi jistennew l-instradament</string>
     <string name="system_status_relay_service">Servizz tar-relay</string>
     <string name="system_status_relay_service_value">%1$d / %2$d riżervazzjonijiet · %3$d ċirkwiti · %4$d miċħuda</string>
+    <string name="route_target_select">Agħżel</string>
+    <string name="account_data_description">Niżżel kopja ta\' sigurtà sħiħa li tista\' terġa\' ttella\' fuq dan is-server Mochi jew fuq ieħor.</string>
+    <string name="route_target_none">L-ebda mira disponibbli</string>
 </resources>

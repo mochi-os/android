@@ -273,4 +273,24 @@
     <string name="feeds_link">Hanyar haɗi</string>
     <string name="feeds_share_link_title">Hanyar haɗin feed</string>
     <string name="feeds_scroll_to_top">Koma sama</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">Hoto %1$d</item>
+        <item quantity="other">Hotuna %1$d</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">sharhi %1$d</item>
+        <item quantity="other">sharhi %1$d</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">abin haɗe %1$d</item>
+        <item quantity="other">abubuwan haɗe %1$d</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Duba ƙarin sharhi %1$d</item>
+        <item quantity="other">Duba ƙarin sharhi %1$d</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">shekara %1$d da ta wuce yau</item>
+        <item quantity="other">shekaru %1$d da suka wuce yau</item>
+    </plurals>
 </resources>

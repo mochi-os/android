@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">Peón</string>
     <string name="chess_move_played">%1$s ojapo %2$s</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">Marandu ajedrez jeku’e, empate ñemoĩ ha ñembosarái resultado rehegua.</string>
+    <string name="chess_open_sidebar">Embovy yke pe</string>
+    <string name="chess_empty_subtitle">Eñepyrũ ne ñembosarái peteĩha eñembosarái ajedrez peteĩ angirũ ndive.</string>
+    <string name="chess_empty_start_button">Eñepyrũ ne ñembosarái peteĩha</string>
+    <string name="chess_detail_unavailable">Ñembosarái ndaipóri</string>
+    <string name="chess_delete_title">Eheja ñembosarái?</string>
+    <string name="chess_delete_message">Kóva oipe’a ñembosarái ne listagui.</string>
+    <string name="chess_ws_connecting">Ojoajuhína…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">Ojoaju jey…</string>
+    <string name="chess_ws_failed">Ñemoirũ ndoikói</string>
+    <string name="chess_move_capture">%1$s ojagarra %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

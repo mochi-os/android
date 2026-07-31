@@ -51,10 +51,10 @@
     <string name="access_level_view">Դիտել</string>
     <string name="access_level_none">Ոչ մեկը</string>
     <string name="banner_label">Բաններն հանված է</string>
-    <string name="reaction_like">Կապված է {0}</string>
+    <string name="reaction_like">Հավանել</string>
     <string name="reaction_dislike">Չհավանել</string>
     <string name="reaction_laugh">Թողնել</string>
-    <string name="reaction_amazed">Գումար ({0})</string>
+    <string name="reaction_amazed">Զարմացած</string>
     <string name="reaction_love">Համոզվեք, որ պահպանեք նոր կոդերը։</string>
     <string name="reaction_sad">Տխուր</string>
     <string name="reaction_angry">Անանուն</string>
@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Տեղեկատու</string>
     <string name="person_picker_no_people">Մարդիկ չկան</string>
     <string name="person_picker_project_members">Նախագծի անդամներ</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d բաժանորդ</item>
+        <item quantity="other">%1$d բաժանորդ</item>
+    </plurals>
 </resources>

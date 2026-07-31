@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">נצפו לאחרונה</string>
     <string name="market_recently_viewed_clear">נקה הכול</string>
     <string name="market_listings_create">צור</string>
+    <string name="market_bid_dialog_ceiling_label">הצעה מרבית (אופציונלי)</string>
 </resources>

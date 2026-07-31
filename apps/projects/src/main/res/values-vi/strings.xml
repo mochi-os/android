@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Chia sẻ dự án</string>
     <string name="projects_sort_filter_title">Sắp xếp và lọc</string>
     <string name="projects_create_prefix_hint">Dùng cho các ID dễ đọc như %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d tệp xung đột</item>
+        <item quantity="other">%1$d tệp xung đột</item>
+    </plurals>
 </resources>

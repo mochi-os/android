@@ -309,4 +309,9 @@
     <string name="person_picker_directory">Imenik</string>
     <string name="person_picker_no_people">Nema osoba</string>
     <string name="person_picker_project_members">Članovi projekta</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d pretplatnik</item>
+        <item quantity="few">%1$d pretplatnika</item>
+        <item quantity="other">%1$d pretplatnika</item>
+    </plurals>
 </resources>

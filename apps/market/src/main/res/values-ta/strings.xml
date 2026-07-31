@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">சமீபத்தில் பார்க்கப்பட்டவை</string>
     <string name="market_recently_viewed_clear">அனைத்தையும் அழி</string>
     <string name="market_listings_create">உருவாக்கு</string>
+    <string name="market_bid_dialog_ceiling_label">அதிகபட்ச ஏலம் (விருப்பத்தேர்வு)</string>
 </resources>

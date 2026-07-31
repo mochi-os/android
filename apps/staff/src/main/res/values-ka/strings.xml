@@ -227,7 +227,7 @@
     <string name="staff_dashboard_kpi_revenue_currency">%1$s</string>
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">გამყიდველები</string>
-    <string name="staff_dashboard_kpi_total_orders">სულ</string>
+    <string name="staff_dashboard_kpi_total_orders">შეკვეთები სულ</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">არა</string>
     <string name="staff_dashboard_open_sidebar">გვერდითი პანელის გახსნა</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_submitting">იგზავნება…</string>
     <string name="staff_reports_title">ანგარიშები</string>
     <string name="staff_reports_type_listing">ჩამონათვალი</string>
-    <string name="staff_reports_type_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="staff_reports_type_user">მომხმარებელი</string>
     <string name="staff_reports_view">ვიდეოს ესკიზი</string>
     <string name="staff_reviews_action_hide">დამალვა</string>
     <string name="staff_reviews_action_remove">წაშლა</string>

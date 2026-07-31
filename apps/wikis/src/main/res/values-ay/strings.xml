@@ -218,7 +218,7 @@
     <string name="wikis_access_revoke_success">Mantañ apaqata</string>
     <string name="wikis_access_revoke_failed">Janiw acceso apsuña atinkti</string>
     <string name="wikis_replicas_empty_title">Janira replicanak</string>
-    <string name="wikis_replicas_empty_message">Janq\'u</string>
+    <string name="wikis_replicas_empty_message">Yaqha wikinakax aka wiki replicapxix ukax akanwa uñstani.</string>
     <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Janipuni</string>
     <string name="wikis_replicas_remove_confirm_title">¿Replica aparma?</string>
@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Janar uñacht\'ayaña</string>
     <string name="wikis_revision_compare_failed">Uñakipt\'añataki nayra versión janiw apsuñjamäkiti.</string>
     <string name="wikis_revision_changes_from">Versión %1$d → %2$d mayjt\'awinaka</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d qhanañchawi</item>
+        <item quantity="other">%d qhanañchawinaka</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d kutsuwi</item>
+        <item quantity="other">%d mayamp kutsuwinaka</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d janan sutip mayjt\'ayatawa</item>
+        <item quantity="other">%1$d jananakan sutip mayjt\'ayatawa</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d mayacht\'awi machaqachatawa</item>
+        <item quantity="other">%1$d mayacht\'awinaka machaqachatawa</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d post</item>
+        <item quantity="other">%d posts</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d hoja</item>
+        <item quantity="other">%d hojanaka</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d uñacht\'awi</item>
+        <item quantity="other">%d uñacht\'awinaka</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d qillqata</item>
+        <item quantity="other">%d qillqatanaka</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">Aka etiquetampi %d post</item>
+        <item quantity="other">Aka etiquetampi %d posts</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d alja jikxatatawa "%2$s" ukatakix</item>
+        <item quantity="other">%1$d aljas jikxatatawa "%2$s" ukatakix</item>
+    </plurals>
 </resources>

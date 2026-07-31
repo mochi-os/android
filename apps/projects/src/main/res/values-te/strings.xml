@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">ప్రాజెక్ట్‌ను పంచుకోండి</string>
     <string name="projects_sort_filter_title">క్రమబద్ధీకరించి ఫిల్టర్ చేయండి</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 వంటి చదవగలిగే IDల కోసం ఉపయోగించబడుతుంది</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d వైరుధ్య ఫైల్</item>
+        <item quantity="other">%1$d వైరుధ్య ఫైల్‌లు</item>
+    </plurals>
 </resources>

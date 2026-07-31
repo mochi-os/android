@@ -80,13 +80,9 @@
     <string name="projects_request_status_draft">Concept</string>
     <string name="projects_request_status_open">Open</string>
     <string name="projects_request_status_merged">Gemerged</string>
-    <string name="projects_request_merge">Merge</string>
     <string name="projects_request_close">Sluiten</string>
-    <string name="projects_request_merge_dialog_title">Merge</string>
     <string name="projects_request_method">Methode</string>
-    <string name="projects_request_method_merge">Merge</string>
     <string name="projects_request_field_repository">Repository</string>
-    <string name="projects_request_field_source">Source branch</string>
     <string name="projects_request_field_title">Titel</string>
     <string name="projects_request_field_description">Beschrijving</string>
     <string name="projects_request_field_draft">Concept</string>
@@ -159,7 +155,6 @@
     <string name="projects_request_more">Meer</string>
     <string name="projects_comment_send">Verzenden</string>
     <string name="projects_field_position_body">Inhoud</string>
-    <string name="projects_comment_remove_attachment">Remove attachment</string>
     <string name="projects_auth_login_failed">Aanmelding mislukt</string>
     <string name="projects_views_move_up">Omhoog verplaatsen</string>
     <string name="projects_class_move_up">Omhoog verplaatsen</string>
@@ -328,7 +323,6 @@
     <string name="projects_settings_section_access">Toegangsbeheer</string>
     <string name="projects_people_search">Personen zoeken</string>
     <string name="projects_settings_field_entity_id">Entiteit-ID</string>
-    <string name="projects_settings_field_fingerprint">Fingerprint</string>
     <string name="projects_settings_field_server">Server</string>
     <string name="projects_access_subject_anyone">Iedereen</string>
     <string name="projects_access_subject_authenticated">Geverifieerde gebruikers</string>

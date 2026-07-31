@@ -309,4 +309,8 @@
     <string name="person_picker_directory">פֿאַרצייכעניש</string>
     <string name="person_picker_no_people">קיין מענטשן נישטאָ</string>
     <string name="person_picker_project_members">פּראָיעקט מיטגלידער</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d אַבאָנענט</item>
+        <item quantity="other">%1$d אַבאָנענטן</item>
+    </plurals>
 </resources>

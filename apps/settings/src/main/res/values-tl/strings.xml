@@ -321,6 +321,10 @@
     <string name="domain_title">Mga domain</string>
     <string name="domain_verify">I-verify ang DNS</string>
     <string name="settings_home_domains">Mga domain</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Ipinadala ang test sa %1$d destinasyon</item>
+        <item quantity="other">Ipinadala ang test sa %1$d na destinasyon</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Pinawalang-bisa ang %1$d session</item>
         <item quantity="other">Pinawalang-bisa ang %1$d na session</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Mga mensaheng naghihintay ng ruta</string>
     <string name="system_status_relay_service">Serbisyo ng relay</string>
     <string name="system_status_relay_service_value">%1$d / %2$d mga reserbasyon · %3$d mga sirkito · %4$d tinanggihan</string>
+    <string name="route_target_select">Piliin</string>
+    <string name="account_data_description">I-download ang kumpletong backup na maibabalik mo sa server na ito o sa ibang Mochi server.</string>
+    <string name="route_target_none">Walang available na target</string>
 </resources>

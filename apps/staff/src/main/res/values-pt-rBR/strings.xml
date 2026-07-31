@@ -15,7 +15,6 @@
     <string name="staff_accounts_close">Fechar</string>
     <string name="staff_accounts_empty">Nenhuma conta encontrada</string>
     <string name="staff_accounts_filter_seller_label">Vendedor</string>
-    <string name="staff_accounts_filter_status_label">Status</string>
     <string name="staff_accounts_history">Histórico</string>
     <string name="staff_accounts_history_title">Histórico da conta</string>
     <string name="staff_accounts_notes_label">Notas</string>
@@ -142,7 +141,6 @@
     <string name="staff_categories_col_parent">Pai</string>
     <string name="staff_categories_col_position">Posição</string>
     <string name="staff_categories_col_slug">Slug</string>
-    <string name="staff_categories_col_status">Status</string>
     <string name="staff_categories_col_types">Tipos</string>
     <string name="staff_categories_create">Criar</string>
     <string name="staff_categories_delete_confirm">Excluir</string>
@@ -211,7 +209,6 @@
     <string name="staff_dashboard_col_reason">Motivo</string>
     <string name="staff_dashboard_col_score">Pontuação</string>
     <string name="staff_dashboard_col_seller">Vendedor</string>
-    <string name="staff_dashboard_col_status">Status</string>
     <string name="staff_dashboard_col_title">Título</string>
     <string name="staff_dashboard_col_total">Total</string>
     <string name="staff_dashboard_empty_audit">Nenhuma entrada de auditoria</string>
@@ -247,7 +244,6 @@
     <string name="staff_disputes_dialog_title_review">Revisar disputa</string>
     <string name="staff_disputes_dialog_title_view">Visualizar disputa</string>
     <string name="staff_disputes_empty">Nenhuma disputa</string>
-    <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_history">Histórico de disputas</string>
     <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Dados do comprador</string>
@@ -309,9 +305,7 @@
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderação</string>
     <string name="staff_filter_label_query">Pesquisa</string>
-    <string name="staff_filter_label_review_status">Status</string>
     <string name="staff_filter_label_seller">Vendedor</string>
-    <string name="staff_filter_label_status">Status</string>
     <string name="staff_filter_label_type">Tipo</string>
     <string name="staff_listings_action_approve_title">Aprovar anúncio</string>
     <string name="staff_listings_action_failed">Falha ao moderar anúncio</string>
@@ -324,7 +318,6 @@
     <string name="staff_listings_cancel">Cancelar</string>
     <string name="staff_listings_empty">Nenhum anúncio</string>
     <string name="staff_listings_filter_moderation_label">Moderação</string>
-    <string name="staff_listings_filter_status_label">Status</string>
     <string name="staff_listings_history">Histórico do anúncio</string>
     <string name="staff_listings_moderation_auto_approved">Aprovado automaticamente</string>
     <string name="staff_listings_moderation_hold">Reter</string>
@@ -377,7 +370,6 @@
     <string name="staff_reports_dialog_title_action">Tomar ação sobre a denúncia</string>
     <string name="staff_reports_dialog_title_view">Denunciar</string>
     <string name="staff_reports_empty">Nenhuma denúncia</string>
-    <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Tipo</string>
     <string name="staff_reports_history">Histórico de denúncias</string>
     <string name="staff_reports_listing_label">Anúncio nº %1$s</string>
@@ -413,7 +405,6 @@
     <string name="staff_reviews_col_listing">Anúncio</string>
     <string name="staff_reviews_col_rating">Avaliação</string>
     <string name="staff_reviews_col_reviewer">Avaliador</string>
-    <string name="staff_reviews_col_status">Status</string>
     <string name="staff_reviews_col_subject">Assunto</string>
     <string name="staff_reviews_col_text">Texto</string>
     <string name="staff_reviews_empty">Nenhuma avaliação</string>
@@ -421,7 +412,6 @@
     <string name="staff_reviews_filter_hidden">Oculto</string>
     <string name="staff_reviews_filter_published">Publicado</string>
     <string name="staff_reviews_filter_removed">Removido</string>
-    <string name="staff_reviews_filter_status">Status</string>
     <string name="staff_reviews_open_sidebar">Abrir menu lateral</string>
     <string name="staff_reviews_order_label">pedido nº %1$s</string>
     <string name="staff_reviews_overflow_actions">Ações</string>
@@ -453,7 +443,6 @@
     <string name="staff_sidebar_team">Equipe</string>
     <string name="staff_status_actioned">Tratado</string>
     <string name="staff_status_active">Ativo</string>
-    <string name="staff_status_admin">Admin</string>
     <string name="staff_status_appealed">Recorrido</string>
     <string name="staff_status_approved">Aprovado</string>
     <string name="staff_status_auto_approved">Aprovado automaticamente</string>
@@ -502,7 +491,6 @@
     <string name="staff_team_remove_confirm">Remover</string>
     <string name="staff_team_remove_desc">Remover este membro da equipe?</string>
     <string name="staff_team_remove_title">Remover membro da equipe</string>
-    <string name="staff_team_role_admin">Admin</string>
     <string name="staff_team_role_moderator">Moderador</string>
     <string name="staff_team_role_support">Suporte</string>
     <string name="staff_team_title">Equipe</string>

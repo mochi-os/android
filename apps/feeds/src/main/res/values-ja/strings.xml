@@ -270,4 +270,20 @@
     <string name="feeds_link">リンク</string>
     <string name="feeds_share_link_title">フィードのリンク</string>
     <string name="feeds_scroll_to_top">トップに戻る</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d枚の画像</item>
+        <item quantity="other">%1$d枚の画像</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d件のコメント</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">添付ファイル %1$d 件</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">さらに %1$d 件のコメントを表示</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d 年前の今日</item>
+    </plurals>
 </resources>

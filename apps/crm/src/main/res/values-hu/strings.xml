@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Megjelenítendő név</string>
     <string name="crm_auth_verification_failed">Az ellenőrzés sikertelen</string>
-    <string name="crm_list_title">Projektek</string>
+    <string name="crm_list_title">CRM-ek</string>
     <string name="crm_list_close_search">Keresés bezárása</string>
     <string name="crm_list_search">Keresés</string>
-    <string name="crm_list_find">Projektek keresése</string>
+    <string name="crm_list_find">CRM-ek keresése</string>
     <string name="crm_list_logout">Kijelentkezés</string>
-    <string name="crm_list_create">Projekt létrehozása</string>
-    <string name="crm_create_title">Projekt létrehozása</string>
+    <string name="crm_list_create">CRM létrehozása</string>
+    <string name="crm_create_title">CRM létrehozása</string>
     <string name="crm_create_name">Név</string>
     <string name="crm_create_description">Leírás</string>
     <string name="crm_create_privacy">Adatvédelem</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Nyilvános</string>
     <string name="crm_create_template_none">Nincs</string>
     <string name="crm_create_action">Létrehozás</string>
-    <string name="crm_find_title">Projektek keresése</string>
+    <string name="crm_find_title">CRM-ek keresése</string>
     <string name="crm_find_recommended">Ajánlott</string>
     <string name="crm_find_subscribe">Feliratkozás</string>
     <string name="crm_loading">Betöltés…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Módosítások mentése</string>
     <string name="crm_settings_unsubscribe">Leiratkozás</string>
     <string name="crm_settings_delete_crm">Projekt törlése</string>
-    <string name="crm_settings_delete_confirm_title">Projekt törlése</string>
+    <string name="crm_settings_delete_confirm_title">CRM törlése</string>
     <string name="crm_settings_unsubscribe_title">Leiratkozás</string>
-    <string name="crm_settings_unsubscribe_message">Biztosan leiratkozik erről a projektről?</string>
+    <string name="crm_settings_unsubscribe_message">Biztosan leiratkozik erről a CRM-ről?</string>
     <string name="crm_access_level_owner">Tulajdonos</string>
     <string name="crm_access_level_design">Tervezés</string>
     <string name="crm_access_level_comment">Megjegyzés</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Kiszolgáló</string>
     <string name="crm_untitled">Cím nélküli</string>
     <string name="crm_property_select">Válasszon …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d ütköző fájl</item>
+        <item quantity="other">%1$d ütköző fájl</item>
+    </plurals>
 </resources>

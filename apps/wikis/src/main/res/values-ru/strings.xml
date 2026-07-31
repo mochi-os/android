@@ -313,4 +313,64 @@
     <string name="wikis_revision_show_page">Показать страницу</string>
     <string name="wikis_revision_compare_failed">Не удалось загрузить предыдущую версию для сравнения.</string>
     <string name="wikis_revision_changes_from">Изменения с версии %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d комментарий</item>
+        <item quantity="few">%d комментария</item>
+        <item quantity="many">%d комментариев</item>
+        <item quantity="other">%d комментария</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d ответ</item>
+        <item quantity="few">ещё +%d ответов</item>
+        <item quantity="many">ещё +%d ответов</item>
+        <item quantity="other">ещё +%d ответов</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Переименована %1$d страница</item>
+        <item quantity="few">Переименовано %1$d страницы</item>
+        <item quantity="many">Переименовано %1$d страниц</item>
+        <item quantity="other">Переименовано %1$d страницы</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">обновлена %1$d ссылка</item>
+        <item quantity="few">обновлено %1$d ссылки</item>
+        <item quantity="many">обновлено %1$d ссылок</item>
+        <item quantity="other">обновлено %1$d ссылки</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d страница</item>
+        <item quantity="few">%d страниц</item>
+        <item quantity="many">%d страниц</item>
+        <item quantity="other">%d страниц</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d файл</item>
+        <item quantity="few">%d файлов</item>
+        <item quantity="many">%d файлов</item>
+        <item quantity="other">%d файлов</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d изображение</item>
+        <item quantity="few">%d изображений</item>
+        <item quantity="many">%d изображений</item>
+        <item quantity="other">%d изображений</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d документ</item>
+        <item quantity="few">%d документов</item>
+        <item quantity="many">%d документов</item>
+        <item quantity="other">%d документов</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d страница с этим тегом</item>
+        <item quantity="few">%d страниц с этим тегом</item>
+        <item quantity="many">%d страниц с этим тегом</item>
+        <item quantity="other">%d страниц с этим тегом</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Найдено %1$d результат по запросу «%2$s»</item>
+        <item quantity="few">Найдено %1$d результатов по запросу «%2$s»</item>
+        <item quantity="many">Найдено %1$d результатов по запросу «%2$s»</item>
+        <item quantity="other">Найдено %1$d результатов по запросу «%2$s»</item>
+    </plurals>
 </resources>

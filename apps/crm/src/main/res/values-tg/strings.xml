@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Номи намоишӣ</string>
     <string name="crm_auth_verification_failed">Тасдиқ ноком шуд</string>
-    <string name="crm_list_title">Лоиҳаҳо</string>
+    <string name="crm_list_title">CRM-ҳо</string>
     <string name="crm_list_close_search">Пӯшидани ҷустуҷӯ</string>
     <string name="crm_list_search">Ҷустуҷӯ</string>
-    <string name="crm_list_find">Лоиҳаҳоро ёбед</string>
+    <string name="crm_list_find">CRM-ҳоро ёбед</string>
     <string name="crm_list_logout">Баромадан</string>
-    <string name="crm_list_create">Эҷоди лоиҳа</string>
-    <string name="crm_create_title">Эҷоди лоиҳа</string>
+    <string name="crm_list_create">Эҷоди CRM</string>
+    <string name="crm_create_title">Эҷоди CRM</string>
     <string name="crm_create_name">Ном</string>
     <string name="crm_create_description">Тавсиф</string>
     <string name="crm_create_privacy">Махфият</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Ҷамъиятӣ</string>
     <string name="crm_create_template_none">Ҳеҷ кадом</string>
     <string name="crm_create_action">Эҷод кардан</string>
-    <string name="crm_find_title">Лоиҳаҳоро ёбед</string>
+    <string name="crm_find_title">CRM-ҳоро ёбед</string>
     <string name="crm_find_recommended">Тавсияшуда</string>
     <string name="crm_find_subscribe">Обуна шудан</string>
     <string name="crm_loading">Бор карда мешавад…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Захираи тағйиротҳо</string>
     <string name="crm_settings_unsubscribe">Аз обуна баромадан</string>
     <string name="crm_settings_delete_crm">Нест кардани лоиҳа</string>
-    <string name="crm_settings_delete_confirm_title">Нест кардани лоиҳа</string>
+    <string name="crm_settings_delete_confirm_title">Нест кардани CRM</string>
     <string name="crm_settings_unsubscribe_title">Аз обуна баромадан</string>
-    <string name="crm_settings_unsubscribe_message">Шумо мутмаин ҳастед, ки мехоҳед обунаро аз ин лоиҳа бекор кунед?</string>
+    <string name="crm_settings_unsubscribe_message">Шумо мутмаин ҳастед, ки мехоҳед обунаро аз ин CRM бекор кунед?</string>
     <string name="crm_access_level_owner">Соҳиб</string>
     <string name="crm_access_level_design">Дизайн</string>
     <string name="crm_access_level_comment">Шарҳ</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Беном</string>
     <string name="crm_property_select">Интихоб кунед …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d файли мухолиф</item>
+        <item quantity="other">%1$d файли мухолиф</item>
+    </plurals>
 </resources>

@@ -310,4 +310,44 @@
     <string name="wikis_revision_show_page">পৃষ্ঠা দেখান</string>
     <string name="wikis_revision_compare_failed">তুলনার জন্য পূর্ববর্তী সংস্করণ লোড করা যায়নি।</string>
     <string name="wikis_revision_changes_from">সংস্করণ %1$d → %2$d থেকে পরিবর্তনসমূহ</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">১টি মন্তব্য</item>
+        <item quantity="other">%dটি মন্তব্য</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d উত্তর</item>
+        <item quantity="other">+%d আরো উত্তর</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">১টি পৃষ্ঠার নাম পরিবর্তন করা হয়েছে</item>
+        <item quantity="other">%1$dটি পৃষ্ঠার নাম পরিবর্তন করা হয়েছে</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">১টি লিঙ্ক আপডেট হয়েছে</item>
+        <item quantity="other">%1$dটি লিঙ্ক আপডেট হয়েছে</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d পৃষ্ঠা</item>
+        <item quantity="other">%d পৃষ্ঠা</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d ফাইল</item>
+        <item quantity="other">%d ফাইল</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d ছবি</item>
+        <item quantity="other">%d ছবি</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d নথি</item>
+        <item quantity="other">%d নথি</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">এই ট্যাগ সহ %d পৃষ্ঠা</item>
+        <item quantity="other">এই ট্যাগ সহ %d পৃষ্ঠা</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s»-এর জন্য %1$d ফলাফল পাওয়া গেছে</item>
+        <item quantity="other">«%2$s»-এর জন্য %1$d ফলাফল পাওয়া গেছে</item>
+    </plurals>
 </resources>

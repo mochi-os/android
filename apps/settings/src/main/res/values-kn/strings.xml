@@ -321,6 +321,10 @@
     <string name="domain_title">ಡೊಮೇನ್‌ಗಳು</string>
     <string name="domain_verify">DNS ಪರಿಶೀಲಿಸಿ</string>
     <string name="settings_home_domains">ಡೊಮೇನ್‌ಗಳು</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d ಗಮ್ಯಸ್ಥಾನಕ್ಕೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">%1$d ಗಮ್ಯಸ್ಥಾನಗಳಿಗೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
         <item quantity="other">%1$d ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">ರೂಟಿಂಗ್‌ಗಾಗಿ ಕಾಯುತ್ತಿರುವ ಸಂದೇಶಗಳು</string>
     <string name="system_status_relay_service">ರಿಲೇ ಸೇವೆ</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ಕಾಯ್ದಿರಿಸುವಿಕೆಗಳು · %3$d ಸರ್ಕ್ಯೂಟ್‌ಗಳು · %4$d ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
+    <string name="route_target_select">ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="account_data_description">ಈ ಅಥವಾ ಇನ್ನೊಂದು Mochi ಸರ್ವರ್‌ನಲ್ಲಿ ನೀವು ಮರುಸ್ಥಾಪಿಸಬಹುದಾದ ಸಂಪೂರ್ಣ ಬ್ಯಾಕಪ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
+    <string name="route_target_none">ಯಾವುದೇ ಗುರಿಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
 </resources>

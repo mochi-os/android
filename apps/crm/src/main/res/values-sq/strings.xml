@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Emri i shfaqur</string>
     <string name="crm_auth_verification_failed">Verifikimi dështoi</string>
-    <string name="crm_list_title">Projektet</string>
+    <string name="crm_list_title">CRM-të</string>
     <string name="crm_list_close_search">Mbyll kërkimin</string>
     <string name="crm_list_search">Kërko</string>
-    <string name="crm_list_find">Gjej projekte</string>
+    <string name="crm_list_find">Gjej CRM</string>
     <string name="crm_list_logout">Dilni</string>
-    <string name="crm_list_create">Krijo projekt</string>
-    <string name="crm_create_title">Krijo projekt</string>
+    <string name="crm_list_create">Krijo CRM</string>
+    <string name="crm_create_title">Krijo CRM</string>
     <string name="crm_create_name">Emri</string>
     <string name="crm_create_description">Përshkrimi</string>
     <string name="crm_create_privacy">Privatësia</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Publik</string>
     <string name="crm_create_template_none">Asnjë</string>
     <string name="crm_create_action">Krijo</string>
-    <string name="crm_find_title">Gjej projekte</string>
+    <string name="crm_find_title">Gjej CRM</string>
     <string name="crm_find_recommended">I rekomanduar</string>
     <string name="crm_find_subscribe">Abonohu</string>
     <string name="crm_loading">Duke ngarkuar…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Ruaj ndryshimet</string>
     <string name="crm_settings_unsubscribe">Çabonohu</string>
     <string name="crm_settings_delete_crm">Fshi projektin</string>
-    <string name="crm_settings_delete_confirm_title">Fshi projektin</string>
+    <string name="crm_settings_delete_confirm_title">Fshi CRM</string>
     <string name="crm_settings_unsubscribe_title">Çabonohu</string>
-    <string name="crm_settings_unsubscribe_message">Je i sigurt që do të çabonohesh nga ky projekt?</string>
+    <string name="crm_settings_unsubscribe_message">Je i sigurt që do të çabonohesh nga ky CRM?</string>
     <string name="crm_access_level_owner">Pronari</string>
     <string name="crm_access_level_design">Dizajni</string>
     <string name="crm_access_level_comment">Komenti</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Serveri</string>
     <string name="crm_untitled">Pa titull</string>
     <string name="crm_property_select">Zgjidhni …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d skedar në konflikt</item>
+        <item quantity="other">%1$d skedarë në konflikt</item>
+    </plurals>
 </resources>

@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">نمایش صفحه</string>
     <string name="wikis_revision_compare_failed">بارگذاری نسخهٔ پیشین برای مقایسه ممکن نشد.</string>
     <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">۱ نظر</item>
+        <item quantity="other">%d نظر</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d پاسخ</item>
+        <item quantity="other">+%d پاسخ دیگر</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">نام ۱ صفحه تغییر کرد</item>
+        <item quantity="other">نام %1$d صفحه تغییر کرد</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">۱ پیوند به‌روزرسانی شد</item>
+        <item quantity="other">%1$d پیوند به‌روزرسانی شد</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d صفحه</item>
+        <item quantity="other">%d صفحه</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d فایل</item>
+        <item quantity="other">%d فایل</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d تصویر</item>
+        <item quantity="other">%d تصویر</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d سند</item>
+        <item quantity="other">%d سند</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d صفحه با این برچسب</item>
+        <item quantity="other">%d صفحه با این برچسب</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d نتیجه برای «%2$s» یافت شد</item>
+        <item quantity="other">%1$d نتیجه برای «%2$s» یافت شد</item>
+    </plurals>
 </resources>

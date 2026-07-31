@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">પ્રોજેક્ટ શેર કરો</string>
     <string name="projects_sort_filter_title">ગોઠવો અને ફિલ્ટર કરો</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 જેવા વાંચી શકાય તેવા ID માટે વપરાય છે</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d વિરોધાભાસી ફાઇલ</item>
+        <item quantity="other">%1$d વિરોધાભાસી ફાઇલો</item>
+    </plurals>
 </resources>

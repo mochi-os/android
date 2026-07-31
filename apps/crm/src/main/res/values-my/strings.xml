@@ -2,10 +2,10 @@
 <resources>
     <string name="crm_auth_display_name">ဖော်ပြချက် အမည်</string>
     <string name="crm_auth_verification_failed">အတည်ပြုခြင်း မအောင်မြင်ပါ</string>
-    <string name="crm_list_title">ပရောဂျက်များ</string>
+    <string name="crm_list_title">CRM များ</string>
     <string name="crm_list_close_search">ရှာဖွေမှု ပိတ်မည်</string>
     <string name="crm_list_search">ရှာဖွေ</string>
-    <string name="crm_list_find">ပရောဂျက်များ ရှာ</string>
+    <string name="crm_list_find">CRM များ ရှာ</string>
     <string name="crm_list_logout">ထွက်</string>
     <string name="crm_list_create">CRM ဖန်တီးမည်</string>
     <string name="crm_create_title">CRM ဖန်တီးမည်</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">အများသုံး</string>
     <string name="crm_create_template_none">မရှိ</string>
     <string name="crm_create_action">ဖန်တီးမည်</string>
-    <string name="crm_find_title">ပရောဂျက်များ ရှာ</string>
+    <string name="crm_find_title">CRM များ ရှာ</string>
     <string name="crm_find_recommended">အကြံပြုထား</string>
     <string name="crm_find_subscribe">Subscribe လုပ်မည်</string>
     <string name="crm_loading">တင်နေသည်…</string>
@@ -335,4 +335,7 @@
     <string name="crm_settings_server">ဆာဗာ</string>
     <string name="crm_untitled">ခေါင်းစဉ်မရှိ</string>
     <string name="crm_property_select">ရွေးပါ …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="other">%1$d ခု ပဋိပက္ခဖိုင်</item>
+    </plurals>
 </resources>

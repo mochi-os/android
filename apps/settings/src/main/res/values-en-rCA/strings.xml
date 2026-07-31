@@ -326,6 +326,10 @@
     <string name="domain_title">Domains</string>
     <string name="domain_verify">Verify DNS</string>
     <string name="settings_home_domains">Domains</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Test sent to %1$d destination</item>
+        <item quantity="other">Test sent to %1$d destinations</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Revoked 1 session</item>
         <item quantity="other">Revoked %1$d sessions</item>
@@ -347,4 +351,16 @@
     <string name="system_status_awaiting_routing">Messages awaiting routing</string>
     <string name="system_status_relay_service">Relay service</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservations · %3$d circuits · %4$d refused</string>
+    <string name="login_title">Login</string>
+    <string name="login_section_methods">Login methods</string>
+    <string name="login_method_email">Email code</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Third-party login</string>
+    <string name="login_method_recovery">Recovery codes</string>
+    <string name="route_target_select">Select</string>
+    <string name="system_status_users">Users</string>
+    <string name="system_status_reachability_public">Public</string>
+    <string name="system_status_reachability_private">Private</string>
+    <string name="system_status_reachability_unknown">Unknown</string>
 </resources>

@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Ime za prikaz</string>
     <string name="crm_auth_verification_failed">Provjera nije uspjela</string>
-    <string name="crm_list_title">Projekti</string>
+    <string name="crm_list_title">CRM-ovi</string>
     <string name="crm_list_close_search">Zatvori pretragu</string>
     <string name="crm_list_search">Pretraži</string>
-    <string name="crm_list_find">Pronađi projekte</string>
+    <string name="crm_list_find">Pronađi CRM-ove</string>
     <string name="crm_list_logout">Odjavi se</string>
-    <string name="crm_list_create">Stvori projekt</string>
-    <string name="crm_create_title">Stvori projekt</string>
+    <string name="crm_list_create">Stvori CRM</string>
+    <string name="crm_create_title">Stvori CRM</string>
     <string name="crm_create_name">Naziv</string>
     <string name="crm_create_description">Opis</string>
     <string name="crm_create_privacy">Privatnost</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Javno</string>
     <string name="crm_create_template_none">Ništa</string>
     <string name="crm_create_action">Stvori</string>
-    <string name="crm_find_title">Pronađi projekte</string>
+    <string name="crm_find_title">Pronađi CRM-ove</string>
     <string name="crm_find_recommended">Preporučeno</string>
     <string name="crm_find_subscribe">Pretplati se</string>
     <string name="crm_loading">Učitavanje…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Spremi promjene</string>
     <string name="crm_settings_unsubscribe">Otkaži pretplatu</string>
     <string name="crm_settings_delete_crm">Obriši projekt</string>
-    <string name="crm_settings_delete_confirm_title">Obriši projekt</string>
+    <string name="crm_settings_delete_confirm_title">Obriši CRM</string>
     <string name="crm_settings_unsubscribe_title">Otkaži pretplatu</string>
-    <string name="crm_settings_unsubscribe_message">Jeste li sigurni da se želite odjaviti s ovog projekta?</string>
+    <string name="crm_settings_unsubscribe_message">Jeste li sigurni da se želite odjaviti s ovog CRM-a?</string>
     <string name="crm_access_level_owner">Vlasnik</string>
     <string name="crm_access_level_design">Dizajn</string>
     <string name="crm_access_level_comment">Komentar</string>
@@ -335,4 +335,9 @@
     <string name="crm_settings_server">Poslužitelj</string>
     <string name="crm_untitled">Bez naslova</string>
     <string name="crm_property_select">Odaberite …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d sukobljena datoteka</item>
+        <item quantity="few">%1$d sukobljene datoteke</item>
+        <item quantity="other">%1$d sukobljenih datoteka</item>
+    </plurals>
 </resources>

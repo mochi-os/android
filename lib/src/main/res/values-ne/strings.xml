@@ -309,4 +309,8 @@
     <string name="person_picker_directory">निर्देशिका</string>
     <string name="person_picker_no_people">कोही छैनन्</string>
     <string name="person_picker_project_members">परियोजना सदस्यहरू</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d ग्राहक</item>
+        <item quantity="other">%1$d ग्राहक</item>
+    </plurals>
 </resources>

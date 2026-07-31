@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">ڏيکاري وارو نالو</string>
     <string name="crm_auth_verification_failed">تصديق ناڪام ٿي</string>
-    <string name="crm_list_title">پروجيڪٽ</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">ڳولا بند ڪريو</string>
     <string name="crm_list_search">ڳوليو</string>
-    <string name="crm_list_find">پروجيڪٽَ ڳوليو</string>
+    <string name="crm_list_find">CRMs ڳوليو</string>
     <string name="crm_list_logout">لاگ آئوٽ</string>
-    <string name="crm_list_create">پروجيڪٽ ٺاهيو</string>
-    <string name="crm_create_title">پروجيڪٽ ٺاهيو</string>
+    <string name="crm_list_create">CRM ٺاهيو</string>
+    <string name="crm_create_title">CRM ٺاهيو</string>
     <string name="crm_create_name">نالو</string>
     <string name="crm_create_description">تفصيل</string>
     <string name="crm_create_privacy">رازداري</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">عوامي</string>
     <string name="crm_create_template_none">ڪا به نه</string>
     <string name="crm_create_action">ٺاهيو</string>
-    <string name="crm_find_title">پروجيڪٽَ ڳوليو</string>
+    <string name="crm_find_title">CRMs ڳوليو</string>
     <string name="crm_find_recommended">تجويز ڪيل</string>
     <string name="crm_find_subscribe">سبسڪرائب ڪريو</string>
     <string name="crm_loading">لوڊ ٿي رهيو آهي…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">تبديليون محفوظ ڪريو</string>
     <string name="crm_settings_unsubscribe">ان سبسڪرائب ڪريو</string>
     <string name="crm_settings_delete_crm">پروجيڪٽ ختم ڪريو</string>
-    <string name="crm_settings_delete_confirm_title">پروجيڪٽ ختم ڪريو</string>
+    <string name="crm_settings_delete_confirm_title">CRM ختم ڪريو</string>
     <string name="crm_settings_unsubscribe_title">ان سبسڪرائب ڪريو</string>
-    <string name="crm_settings_unsubscribe_message">ڇا توهان پڪ سان هن پروجيڪٽ کان سبسڪرپشن هٽائڻ چاهيو ٿا؟</string>
+    <string name="crm_settings_unsubscribe_message">ڇا توهان پڪ سان هن CRM کان سبسڪرپشن هٽائڻ چاهيو ٿا؟</string>
     <string name="crm_access_level_owner">مالڪ</string>
     <string name="crm_access_level_design">ڊزائن</string>
     <string name="crm_access_level_comment">تبصرو</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">سرور</string>
     <string name="crm_untitled">بي عنوان</string>
     <string name="crm_property_select">چونڊيو …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d تڪراري فائل</item>
+        <item quantity="other">%1$d تڪراري فائلون</item>
+    </plurals>
 </resources>

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="auth_privacy_label">Privacy</string>
-    <string name="auth_link_privacy">Privacy</string>
     <string name="common_close">Schliessen</string>
     <string name="about_close">Schliessen</string>
-    <string name="settings_radius_medium">Medium</string>
-    <string name="settings_font_serif">Serif</string>
     <string name="settings_font_size_normal">Normal</string>
-    <string name="profile_privacy">Privacy</string>
 
     <string name="common_saving">Wird gespeichert…</string>
     <string name="common_saved">Gespeichert</string>
@@ -57,7 +52,6 @@
     <string name="common_change">Ändern</string>
     <string name="common_retry">Erneut versuchen</string>
     <string name="common_copy">Kopieren</string>
-    <string name="comment_edited">(edited)</string>
     <string name="comment_edit_placeholder">Kommentar bearbeiten</string>
     <string name="person_picker_search">Benutzer suchen</string>
     <string name="discovery_recommended">Empfohlen</string>
@@ -74,7 +68,6 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Anzeigename</string>
-    <string name="profile_save_name">Save name</string>
     <string name="profile_fingerprint">Fingerabdruck</string>
     <string name="game_chat_load_more">Ältere Nachrichten laden</string>
     <string name="game_chat_move_played">%1$s spielte %2$s</string>
@@ -247,7 +240,6 @@
     <string name="settings_units">Einheiten</string>
     <string name="settings_units_metric">Metrisch</string>
     <string name="settings_units_imperial">Imperial</string>
-    <string name="settings_units_usa">US</string>
     <string name="settings_time_zone">Zeitzone</string>
     <string name="settings_reset_to_defaults">Auf Standard zurücksetzen</string>
     <string name="settings_reset_confirm_title">Einstellungen zurücksetzen?</string>

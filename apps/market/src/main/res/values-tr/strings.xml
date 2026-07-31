@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Son görüntülenenler</string>
     <string name="market_recently_viewed_clear">Tümünü temizle</string>
     <string name="market_listings_create">Oluştur</string>
+    <string name="market_bid_dialog_ceiling_label">Azami teklif (isteğe bağlı)</string>
 </resources>

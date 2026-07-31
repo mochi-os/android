@@ -33,7 +33,6 @@
     <string name="feeds_tag_clear">Filter zurücksetzen</string>
     <string name="feeds_identity_fingerprint">Fingerabdruck: %1$s</string>
     <string name="feeds_sort_interests">Interessen</string>
-    <string name="feeds_sort_top">Top</string>
     <string name="feeds_sort_ai">KI</string>
     <string name="feeds_image_preview">Vorschau</string>
     <string name="feeds_comments">Kommentare</string>
@@ -51,23 +50,18 @@
     <string name="feeds_move_down">Nach unten verschieben</string>
     <string name="feeds_tab_access">Zugriff</string>
     <string name="feeds_tab_ai">KI</string>
-    <string name="feeds_save_name">Save name</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_clear">Löschen</string>
     <string name="feeds_danger_zone">Gefahrenbereich</string>
     <string name="feeds_no_members">Keine Mitglieder</string>
     <string name="feeds_access_users">Benutzer</string>
     <string name="feeds_access_groups">Gruppen</string>
-    <string name="feeds_access_no_groups">No groups available</string>
-    <string name="feeds_access_permission">Permission</string>
-    <string name="feeds_rss_url_copied">RSS URL copied to clipboard</string>
     <string name="feeds_ai_account">KI-Konto</string>
     <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktiviert</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_reset_default">Auf Standard zurücksetzen</string>
     <string name="feeds_post_not_found">Beitrag nicht gefunden</string>
-    <string name="feeds_settings_access_updated">Access updated</string>
     <string name="feeds_settings_member_removed">Mitglied entfernt</string>
     <string name="feeds_location">Standort</string>
 
@@ -196,8 +190,6 @@
     <string name="feeds_saved_remove">Aus Gespeicherten entfernen</string>
     <string name="feeds_saved_clear_all">Alle löschen</string>
     <string name="feeds_caught_up">Du bist auf dem neuesten Stand</string>
-    <string name="feeds_access_level_none_full">No access</string>
-    <string name="feeds_access_level_view_full">View only</string>
     <string name="feeds_access_search_users">Benutzer suchen</string>
     <string name="feeds_access_segment_group">Gruppe</string>
     <string name="feeds_access_segment_other">Andere</string>
@@ -207,13 +199,10 @@
     <string name="feeds_access_subject_authenticated">Authentifizierte Benutzer</string>
     <string name="feeds_markdown_supported">Markdown wird unterstützt</string>
     <string name="feeds_permission_deny">Ablehnen</string>
-    <string name="feeds_rss_feed">RSS feed</string>
-    <string name="feeds_settings_field_entity_id">Entity ID</string>
     <string name="feeds_settings_field_fingerprint">Fingerabdruck</string>
     <string name="feeds_settings_name_edit_cd">Namen bearbeiten</string>
     <string name="feeds_settings_section_identity">Identität</string>
     <string name="feeds_unsubscribe">Abbestellen</string>
-    <string name="feeds_unsubscribed">Unsubscribed</string>
     <string name="feeds_access_level_comment_full">Kommentieren, reagieren und ansehen</string>
     <string name="feeds_rss_mode_posts_comments">Beiträge und Kommentare</string>
     <string name="feeds_access_add_title">Zugriff hinzufügen</string>

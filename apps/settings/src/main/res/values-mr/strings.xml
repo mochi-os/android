@@ -321,6 +321,10 @@
     <string name="domain_title">डोमेन</string>
     <string name="domain_verify">DNS सत्यापित करा</string>
     <string name="settings_home_domains">डोमेन</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d गंतव्यावर चाचणी पाठवली</item>
+        <item quantity="other">%1$d गंतव्यांवर चाचणी पाठवली</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 सत्र रद्द केले</item>
         <item quantity="other">%1$d सत्रे रद्द केली</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">राउटिंगची प्रतीक्षा करणारे संदेश</string>
     <string name="system_status_relay_service">रिले सेवा</string>
     <string name="system_status_relay_service_value">%1$d / %2$d आरक्षणे · %3$d सर्किट · %4$d नाकारले</string>
+    <string name="route_target_select">निवडा</string>
+    <string name="account_data_description">संपूर्ण बॅकअप डाउनलोड करा जो तुम्ही या किंवा दुसऱ्या Mochi सर्व्हरवर पुनर्संचयित करू शकता.</string>
+    <string name="route_target_none">कोणतेही लक्ष्य उपलब्ध नाही</string>
 </resources>

@@ -365,4 +365,7 @@
     <string name="projects_share_link_title">ပရောဂျက် မျှဝေရန်</string>
     <string name="projects_sort_filter_title">စီစဉ်ပြီး စစ်ထုတ်ရန်</string>
     <string name="projects_create_prefix_hint">%1$s-1၊ %1$s-2 ကဲ့သို့ ဖတ်နိုင်သော ID များအတွက် အသုံးပြုသည်</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="other">%1$d ခု ပဋိပက္ခဖိုင်</item>
+    </plurals>
 </resources>

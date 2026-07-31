@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">ਡਿਸਪਲੇ ਨਾਮ</string>
     <string name="crm_auth_verification_failed">ਪੁਸ਼ਟੀ ਅਸਫਲ</string>
-    <string name="crm_list_title">ਪ੍ਰੋਜੈਕਟ</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">ਖੋਜ ਬੰਦ ਕਰੋ</string>
     <string name="crm_list_search">ਖੋਜ</string>
-    <string name="crm_list_find">ਪ੍ਰੋਜੈਕਟ ਲੱਭੋ</string>
+    <string name="crm_list_find">CRM ਲੱਭੋ</string>
     <string name="crm_list_logout">ਲੌਗ ਆਊਟ</string>
-    <string name="crm_list_create">ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ</string>
-    <string name="crm_create_title">ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ</string>
+    <string name="crm_list_create">CRM ਬਣਾਓ</string>
+    <string name="crm_create_title">CRM ਬਣਾਓ</string>
     <string name="crm_create_name">ਨਾਮ</string>
     <string name="crm_create_description">ਵੇਰਵਾ</string>
     <string name="crm_create_privacy">ਪ੍ਰਾਈਵੇਸੀ</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">ਜਨਤਕ</string>
     <string name="crm_create_template_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="crm_create_action">ਬਣਾਓ</string>
-    <string name="crm_find_title">ਪ੍ਰੋਜੈਕਟ ਲੱਭੋ</string>
+    <string name="crm_find_title">CRM ਲੱਭੋ</string>
     <string name="crm_find_recommended">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ</string>
     <string name="crm_find_subscribe">ਗਾਹਕ ਬਣੋ</string>
     <string name="crm_loading">ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ (ਗ਼ਲਤੀਆਂ ਨਾਲ)</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">ਤਬਦੀਲੀਆਂ ਸੰਭਾਲੋ</string>
     <string name="crm_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="crm_settings_delete_crm">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
-    <string name="crm_settings_delete_confirm_title">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
+    <string name="crm_settings_delete_confirm_title">CRM ਮਿਟਾਓ</string>
     <string name="crm_settings_unsubscribe_title">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
-    <string name="crm_settings_unsubscribe_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="crm_settings_unsubscribe_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ CRM ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="crm_access_level_owner">ਮਾਲਕ</string>
     <string name="crm_access_level_design">ਡਿਜ਼ਾਈਨ</string>
     <string name="crm_access_level_comment">ਟਿੱਪਣੀ</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">ਸਰਵਰ</string>
     <string name="crm_untitled">ਬਿਨਾਂ ਸਿਰਲੇਖ</string>
     <string name="crm_property_select">ਚੁਣੋ …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d ਟਕਰਾਅ ਵਾਲੀ ਫਾਈਲ</item>
+        <item quantity="other">%1$d ਟਕਰਾਅ ਵਾਲੀਆਂ ਫਾਈਲਾਂ</item>
+    </plurals>
 </resources>

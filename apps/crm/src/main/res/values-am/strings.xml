@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">የማሳያ ስም</string>
     <string name="crm_auth_verification_failed">ማረጋገጫ አልተሳካም</string>
-    <string name="crm_list_title">ፕሮጀክቶች</string>
+    <string name="crm_list_title">CRMs</string>
     <string name="crm_list_close_search">ፍለጋን ዝጋ</string>
     <string name="crm_list_search">ይፈልጉ</string>
-    <string name="crm_list_find">ፕሮጀክቶችን ፈልግ</string>
+    <string name="crm_list_find">CRMዎችን ፈልግ</string>
     <string name="crm_list_logout">ውጣ</string>
-    <string name="crm_list_create">ፕሮጀክት ፍጠር</string>
-    <string name="crm_create_title">ፕሮጀክት ፍጠር</string>
+    <string name="crm_list_create">CRM ፍጠር</string>
+    <string name="crm_create_title">CRM ፍጠር</string>
     <string name="crm_create_name">ስም</string>
     <string name="crm_create_description">መግለጫ</string>
     <string name="crm_create_privacy">ግላዊነት</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">ሕዝባዊ</string>
     <string name="crm_create_template_none">ምንም</string>
     <string name="crm_create_action">ፍጠር</string>
-    <string name="crm_find_title">ፕሮጀክቶችን ፈልግ</string>
+    <string name="crm_find_title">CRMዎችን ፈልግ</string>
     <string name="crm_find_recommended">የተመከረ</string>
     <string name="crm_find_subscribe">ይመዝገቡ</string>
     <string name="crm_loading">በመጫን ላይ…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">ለውጦችን ያስቀምጡ</string>
     <string name="crm_settings_unsubscribe">ምዝገባ ያቋርጡ</string>
     <string name="crm_settings_delete_crm">ፕሮጀክት ሰርዝ</string>
-    <string name="crm_settings_delete_confirm_title">ፕሮጀክት ሰርዝ</string>
+    <string name="crm_settings_delete_confirm_title">CRM ሰርዝ</string>
     <string name="crm_settings_unsubscribe_title">ምዝገባ ያቋርጡ</string>
-    <string name="crm_settings_unsubscribe_message">ከዚህ ፕሮጀክት መውጣት እንደምትፈልግ እርግጠኛ ነህ?</string>
+    <string name="crm_settings_unsubscribe_message">ከዚህ CRM መውጣት እንደምትፈልግ እርግጠኛ ነህ?</string>
     <string name="crm_access_level_owner">ባለቤት</string>
     <string name="crm_access_level_design">ንድፍ</string>
     <string name="crm_access_level_comment">አስተያየት</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">ሰርቨር</string>
     <string name="crm_untitled">ርዕስ የለሽ</string>
     <string name="crm_property_select">ይምረጡ …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d የሚጋጭ ፋይል</item>
+        <item quantity="other">%1$d የሚጋጩ ፋይሎች</item>
+    </plurals>
 </resources>

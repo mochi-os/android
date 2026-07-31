@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">పేజీని చూపించు</string>
     <string name="wikis_revision_compare_failed">పోలిక కోసం మునుపటి వెర్షన్‌ను లోడ్ చేయడం సాధ్యం కాలేదు.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d వెర్షన్ నుండి మార్పులు</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d వ్యాఖ్య</item>
+        <item quantity="other">%d వ్యాఖ్యలు</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d జవాబు</item>
+        <item quantity="other">+%d అదనపు జవాబులు</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d పేజీ పేరు మార్చబడింది</item>
+        <item quantity="other">%1$d పేజీలు పేరు మార్చబడ్డాయి</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d లింక్ నవీకరించబడింది</item>
+        <item quantity="other">%1$d లింక్‌లు నవీకరించబడ్డాయి</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d పేజీ</item>
+        <item quantity="other">%d పేజీలు</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d ఫైల్</item>
+        <item quantity="other">%d ఫైళ్లు</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d చిత్రం</item>
+        <item quantity="other">%d చిత్రాలు</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d పత్రం</item>
+        <item quantity="other">%d పత్రాలు</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">ఈ ట్యాగ్‌తో %d పేజీ</item>
+        <item quantity="other">ఈ ట్యాగ్‌తో %d పేజీలు</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» కోసం %1$d ఫలితం కనుగొనబడింది</item>
+        <item quantity="other">«%2$s» కోసం %1$d ఫలితాలు కనుగొనబడింది</item>
+    </plurals>
 </resources>

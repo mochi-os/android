@@ -270,4 +270,19 @@
     <string name="feeds_link">လင့်ခ်</string>
     <string name="feeds_share_link_title">ဖီးဒ် လင့်ခ်</string>
     <string name="feeds_scroll_to_top">ထိပ်သို့ ပြန်သွားရန်</string>
+    <plurals name="feeds_image_count">
+        <item quantity="other">ပုံ %1$d</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">မှတ်ချက် %1$d</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">တွဲဖက်ဖိုင် %1$d ခု</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">မှတ်ချက် %1$d ခု ထပ်ကြည့်ရန်</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">ယနေ့ %1$d နှစ်အကြာ</item>
+    </plurals>
 </resources>

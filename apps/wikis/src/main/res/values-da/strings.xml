@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Vis side</string>
     <string name="wikis_revision_compare_failed">Kunne ikke indlæse den forrige version til sammenligning.</string>
     <string name="wikis_revision_changes_from">Ændringer fra version %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d kommentar</item>
+        <item quantity="other">%d kommentarer</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d svar</item>
+        <item quantity="other">+%d flere svar</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Omdøbte %1$d side</item>
+        <item quantity="other">Omdøbte %1$d sider</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">opdaterede %1$d link</item>
+        <item quantity="other">opdaterede %1$d links</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d side</item>
+        <item quantity="other">%d sider</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d fil</item>
+        <item quantity="other">%d filer</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d billede</item>
+        <item quantity="other">%d billeder</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokument</item>
+        <item quantity="other">%d dokumenter</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d side med dette tag</item>
+        <item quantity="other">%d sider med dette tag</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Fandt %1$d resultat for «%2$s»</item>
+        <item quantity="other">Fandt %1$d resultater for «%2$s»</item>
+    </plurals>
 </resources>

@@ -309,4 +309,8 @@
     <string name="person_picker_directory">ცნობარი</string>
     <string name="person_picker_no_people">ადამიანები არ არის</string>
     <string name="person_picker_project_members">პროექტის წევრები</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d გამომწერი</item>
+        <item quantity="other">%1$d გამომწერი</item>
+    </plurals>
 </resources>

@@ -321,6 +321,9 @@
     <string name="domain_title">Domèn yo</string>
     <string name="domain_verify">Verifye DNS</string>
     <string name="settings_home_domains">Domèn yo</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="other">Tès voye nan %1$d destinasyon</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 sesyon revoke</item>
         <item quantity="other">%1$d sesyon revoke</item>
@@ -366,4 +369,7 @@
     <string name="system_status_awaiting_routing">Mesaj k ap tann acheminman</string>
     <string name="system_status_relay_service">Sèvis rele</string>
     <string name="system_status_relay_service_value">%1$d / %2$d rezèvasyon · %3$d sikui · %4$d refize</string>
+    <string name="route_target_select">Chwazi</string>
+    <string name="account_data_description">Telechaje yon sovgad konplè ou ka retabli sou sèvè sa a oswa sou yon lòt sèvè Mochi.</string>
+    <string name="route_target_none">Pa gen sib ki disponib</string>
 </resources>

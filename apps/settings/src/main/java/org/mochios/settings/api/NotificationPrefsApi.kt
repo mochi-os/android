@@ -67,22 +67,17 @@ data class NotifTopic(
     val created: Long = 0,
 )
 
-// Action responses are wrapped in `{data: ...}` by the settings app.
-data class CategoriesEnvelope(val data: List<NotifCategory> = emptyList())
-data class TopicsEnvelope(val data: List<NotifTopic> = emptyList())
-data class DestinationsEnvelope(val data: DestinationsAvailable = DestinationsAvailable())
 data class TestResult(val sent: Int = 0, val web: Boolean = false)
-data class TestEnvelope(val data: TestResult = TestResult())
 
 interface NotificationPrefsApi {
     @GET("settings/-/notifications/categories")
-    suspend fun getCategories(): Response<CategoriesEnvelope>
+    suspend fun getCategories(): Response<List<NotifCategory>>
 
     @GET("settings/-/notifications/topics")
-    suspend fun getTopics(): Response<TopicsEnvelope>
+    suspend fun getTopics(): Response<List<NotifTopic>>
 
     @GET("settings/-/notifications/destinations")
-    suspend fun getDestinations(): Response<DestinationsEnvelope>
+    suspend fun getDestinations(): Response<DestinationsAvailable>
 
     @FormUrlEncoded
     @POST("settings/-/notifications/categories/create")
@@ -112,7 +107,7 @@ interface NotificationPrefsApi {
 
     @FormUrlEncoded
     @POST("settings/-/notifications/categories/test")
-    suspend fun testCategory(@Field("id") id: String): Response<TestEnvelope>
+    suspend fun testCategory(@Field("id") id: String): Response<TestResult>
 
     // Topics are identified by (app, topic, object), not a row id — that's the
     // tuple the server reads (app="" for server-originated topics).

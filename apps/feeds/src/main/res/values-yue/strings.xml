@@ -267,4 +267,22 @@
     <string name="feeds_saved_error_clear">清除已儲存的貼文失敗</string>
     <string name="feeds_saved_save">稍後儲存</string>
     <string name="feeds_scroll_to_top">回到頂部</string>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d 張圖</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d 條留言</item>
+    </plurals>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">%d 篇新帖</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">%1$d 個附件</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">睇多 %1$d 則留言</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d 年前嘅今日</item>
+    </plurals>
 </resources>

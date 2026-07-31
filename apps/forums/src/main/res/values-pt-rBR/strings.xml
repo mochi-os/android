@@ -56,7 +56,6 @@
     <string name="forums_comment_remove">Remover</string>
     <string name="forums_comment_restore">Restaurar</string>
     <string name="forums_comment_report">Denunciar</string>
-    <string name="forums_post_tag_label">Tag</string>
     <string name="forums_tab_general">Geral</string>
     <string name="forums_tab_access">Acesso</string>
     <string name="forums_tab_members">Membros</string>
@@ -70,7 +69,6 @@
     <string name="forums_access_level_none">Nenhum</string>
     <string name="forums_members_empty">Sem membros</string>
     <string name="forums_banner_dismiss">Dispensar banner</string>
-    <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Conta padrão</string>
     <string name="forums_ai_prompt_reset">Redefinir para o padrão</string>
     <string name="forums_settings_unsubscribe">Cancelar inscrição</string>
@@ -268,7 +266,6 @@
     <string name="forums_ai_prompt_score_label">Prompt de pontuação</string>
     <string name="forums_ai_prompt_tag_label">Prompt de tags</string>
     <string name="forums_ai_prompt_variables">Variáveis: %1$s</string>
-    <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Perde o acesso ao fórum até você remover a restrição.</string>
     <string name="forums_moderation_ban_title">Banir %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Ainda não há ações de moderação registradas</string>

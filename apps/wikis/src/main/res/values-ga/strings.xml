@@ -313,4 +313,74 @@
     <string name="wikis_revision_show_page">Taispeáin an leathanach</string>
     <string name="wikis_revision_compare_failed">Níorbh fhéidir an leagan roimhe seo a lódáil le haghaidh comparáide.</string>
     <string name="wikis_revision_changes_from">Athruithe ó leagan %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d nóta tráchta</item>
+        <item quantity="two">%d nóta tráchta</item>
+        <item quantity="few">%d nóta tráchta</item>
+        <item quantity="many">%d nóta tráchta</item>
+        <item quantity="other">%d nóta tráchta</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d fhreagra</item>
+        <item quantity="two">+%d fhreagra eile</item>
+        <item quantity="few">+%d fhreagraí eile</item>
+        <item quantity="many">+%d bhfreagra eile</item>
+        <item quantity="other">+%d freagraí eile</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Athainmníodh %1$d leathanach</item>
+        <item quantity="two">Athainmníodh %1$d leathanach</item>
+        <item quantity="few">Athainmníodh %1$d leathanach</item>
+        <item quantity="many">Athainmníodh %1$d leathanach</item>
+        <item quantity="other">Athainmníodh %1$d leathanach</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d nasc nuashonraithe</item>
+        <item quantity="two">%1$d nasc nuashonraithe</item>
+        <item quantity="few">%1$d nasc nuashonraithe</item>
+        <item quantity="many">%1$d nasc nuashonraithe</item>
+        <item quantity="other">%1$d nasc nuashonraithe</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d leathanach</item>
+        <item quantity="two">%d leathanach</item>
+        <item quantity="few">%d leathanaigh</item>
+        <item quantity="many">%d leathanach</item>
+        <item quantity="other">%d leathanach</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d chomhad</item>
+        <item quantity="two">%d chomhad</item>
+        <item quantity="few">%d chomhad</item>
+        <item quantity="many">%d gcomhad</item>
+        <item quantity="other">%d comhad</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d íomhá</item>
+        <item quantity="two">%d íomhá</item>
+        <item quantity="few">%d íomhánna</item>
+        <item quantity="many">%d n-íomhá</item>
+        <item quantity="other">%d íomhá</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d cháipéis</item>
+        <item quantity="two">%d cháipéis</item>
+        <item quantity="few">%d cháipéis</item>
+        <item quantity="many">%d gcáipéis</item>
+        <item quantity="other">%d cáipéis</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d leathanach leis an gclib seo</item>
+        <item quantity="two">%d leathanach leis an gclib seo</item>
+        <item quantity="few">%d leathanaigh leis an gclib seo</item>
+        <item quantity="many">%d leathanach leis an gclib seo</item>
+        <item quantity="other">%d leathanach leis an gclib seo</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d thoradh aimsithe do "%2$s"</item>
+        <item quantity="two">%1$d thoradh aimsithe do "%2$s"</item>
+        <item quantity="few">%1$d thoradh aimsithe do "%2$s"</item>
+        <item quantity="many">%1$d dtoradh aimsithe do "%2$s"</item>
+        <item quantity="other">%1$d toradh aimsithe do "%2$s"</item>
+    </plurals>
 </resources>

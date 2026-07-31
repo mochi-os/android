@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Oldal megjelenítése</string>
     <string name="wikis_revision_compare_failed">Az előző verziót nem sikerült betölteni az összehasonlításhoz.</string>
     <string name="wikis_revision_changes_from">Változások a(z) %1$d → %2$d verzióhoz képest</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d hozzászólás</item>
+        <item quantity="other">%d hozzászólás</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d válasz</item>
+        <item quantity="other">+%d további válasz</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d oldal átnevezve</item>
+        <item quantity="other">%1$d oldal átnevezve</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d hivatkozás frissítve</item>
+        <item quantity="other">%1$d hivatkozás frissítve</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d oldal</item>
+        <item quantity="other">%d oldal</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d fájl</item>
+        <item quantity="other">%d fájl</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d kép</item>
+        <item quantity="other">%d kép</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokumentum</item>
+        <item quantity="other">%d dokumentum</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d oldal ezzel a címkével</item>
+        <item quantity="other">%d oldal ezzel a címkével</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d találat találat «%2$s» kifejezésre</item>
+        <item quantity="other">%1$d találat találat «%2$s» kifejezésre</item>
+    </plurals>
 </resources>

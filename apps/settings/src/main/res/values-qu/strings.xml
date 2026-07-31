@@ -321,6 +321,10 @@
     <string name="domain_title">Dominios</string>
     <string name="domain_verify">DNSta qhaway</string>
     <string name="settings_home_domains">Dominios</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d cheqasman pruebata apachisqa</item>
+        <item quantity="other">%1$d cheqaskunaman pruebata apachisqa</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d sessionkuna qichusqa</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">Ñanta suyaq willaykuna</string>
     <string name="system_status_relay_service">Relay servicio</string>
     <string name="system_status_relay_service_value">%1$d / %2$d waqaychay · %3$d circuitos · %4$d mana chaskisqa</string>
+    <string name="route_target_select">Akllay</string>
+    <string name="account_data_description">Hukllawasqa qhipa yachayta uraykachiy, kay utaq huk Mochi servidorpi kutichiyta atinaykipaq.</string>
+    <string name="route_target_none">Manam ima chayana kanchu</string>
 </resources>

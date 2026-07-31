@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Zobrazované jméno</string>
     <string name="crm_auth_verification_failed">Ověření selhalo</string>
-    <string name="crm_list_title">Projekty</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Zavřít hledání</string>
     <string name="crm_list_search">Hledat</string>
-    <string name="crm_list_find">Najít projekty</string>
+    <string name="crm_list_find">Najít CRM</string>
     <string name="crm_list_logout">Odhlásit se</string>
-    <string name="crm_list_create">Vytvořit projekt</string>
-    <string name="crm_create_title">Vytvořit projekt</string>
+    <string name="crm_list_create">Vytvořit CRM</string>
+    <string name="crm_create_title">Vytvořit CRM</string>
     <string name="crm_create_name">Název</string>
     <string name="crm_create_description">Popis</string>
     <string name="crm_create_privacy">Soukromí</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Veřejné</string>
     <string name="crm_create_template_none">Žádné</string>
     <string name="crm_create_action">Vytvořit</string>
-    <string name="crm_find_title">Najít projekty</string>
+    <string name="crm_find_title">Najít CRM</string>
     <string name="crm_find_recommended">Doporučené</string>
     <string name="crm_find_subscribe">Odebírat</string>
     <string name="crm_loading">Načítám…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Uložit změny</string>
     <string name="crm_settings_unsubscribe">Zrušit odběr</string>
     <string name="crm_settings_delete_crm">Smazat projekt</string>
-    <string name="crm_settings_delete_confirm_title">Smazat projekt</string>
+    <string name="crm_settings_delete_confirm_title">Smazat CRM</string>
     <string name="crm_settings_unsubscribe_title">Zrušit odběr</string>
-    <string name="crm_settings_unsubscribe_message">Opravdu se chcete odhlásit z odběru tohoto projektu?</string>
+    <string name="crm_settings_unsubscribe_message">Opravdu se chcete odhlásit z odběru tohoto CRM?</string>
     <string name="crm_access_level_owner">Vlastník</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_comment">Komentář</string>
@@ -335,4 +335,9 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Bez názvu</string>
     <string name="crm_property_select">Vyberte …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d konfliktní soubor</item>
+        <item quantity="few">%1$d konfliktní soubory</item>
+        <item quantity="other">%1$d konfliktních souborů</item>
+    </plurals>
 </resources>

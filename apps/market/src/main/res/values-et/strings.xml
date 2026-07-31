@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Hiljuti vaadatud</string>
     <string name="market_recently_viewed_clear">Tühjenda kõik</string>
     <string name="market_listings_create">Loo</string>
+    <string name="market_bid_dialog_ceiling_label">Maksimaalne pakkumine (valikuline)</string>
 </resources>

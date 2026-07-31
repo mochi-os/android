@@ -313,4 +313,34 @@
     <string name="wikis_revision_show_page">បង្ហាញទំព័រ</string>
     <string name="wikis_revision_compare_failed">មិនអាចផ្ទុកកំណែមុនសម្រាប់ការប្រៀបធៀបបានទេ។</string>
     <string name="wikis_revision_changes_from">ការផ្លាស់ប្ដូរពីកំណែ %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d មតិយោបល់</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="other">+%d ការឆ្លើយតបបន្ថែម</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">បានប្តូរឈ្មោះ %1$d ទំព័រ</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">បានធ្វើបច្ចុប្បន្នភាព %1$d តំណ</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="other">%d ទំព័រ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="other">%d ឯកសារ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="other">%d រូបភាព</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="other">%d ឯកសារ</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="other">%d ទំព័រ ជាមួយស្លាកនេះ</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="other">បានរកឃើញ %1$d លទ្ធផល សម្រាប់ "%2$s"</item>
+    </plurals>
 </resources>

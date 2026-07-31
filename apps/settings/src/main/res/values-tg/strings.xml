@@ -321,6 +321,10 @@
     <string name="domain_title">Доменҳо</string>
     <string name="domain_verify">Тасдиқи DNS</string>
     <string name="settings_home_domains">Доменҳо</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Санҷиш ба %1$d мақсад фиристода шуд</item>
+        <item quantity="other">Санҷиш ба %1$d мақсад фиристода шуд</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d сессия бекор карда шуд</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">Паёмҳои дар интизори масирёбӣ</string>
     <string name="system_status_relay_service">Хидмати реле</string>
     <string name="system_status_relay_service_value">%1$d / %2$d захираҳо · %3$d занҷирҳо · %4$d рад шуд</string>
+    <string name="route_target_select">Интихоб кардан</string>
+    <string name="account_data_description">Нусхаи эҳтиётии пурраро зеркашӣ кунед, ки метавонед дар ин ё дигар сервери Mochi барқарор кунед.</string>
+    <string name="route_target_none">Ҳадафҳои дастрас нестанд</string>
 </resources>

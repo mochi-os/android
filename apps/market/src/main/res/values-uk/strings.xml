@@ -743,4 +743,5 @@
     <string name="market_section_recently_viewed">Нещодавно переглянуті</string>
     <string name="market_recently_viewed_clear">Очистити все</string>
     <string name="market_listings_create">Створити</string>
+    <string name="market_bid_dialog_ceiling_label">Максимальна ставка (необов\'язково)</string>
 </resources>

@@ -321,6 +321,10 @@
     <string name="domain_title">Domains</string>
     <string name="domain_verify">Ehesa\'ỹijo DNS</string>
     <string name="settings_home_domains">Domains</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Ha\'ãha oñemondo %1$d tenda</item>
+        <item quantity="other">Ha\'ãha oñemondo %1$d tenda</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Oñembogue %1$d sesiónkuéra</item>
     </plurals>
@@ -365,4 +369,7 @@
     <string name="system_status_awaiting_routing">Marandu oha’arõva tape</string>
     <string name="system_status_relay_service">Relay servicio</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ñeñongatu · %3$d circuitos · %4$d ojejokóva</string>
+    <string name="route_target_select">Eiporavo</string>
+    <string name="account_data_description">Emboguejy peteĩ ñongatu paha ikatúva emoĩ jey ko térã ambue Mochi servidor-pe.</string>
+    <string name="route_target_none">Ndaipóri tenda oĩva</string>
 </resources>

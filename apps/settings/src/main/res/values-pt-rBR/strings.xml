@@ -76,8 +76,6 @@
     <string name="notifprefs_reassign_label">Alterar notificações atuais para</string>
     <string name="notifprefs_unassigned">Não atribuído</string>
     <string name="notifprefs_topics_empty">Ainda não há tópicos</string>
-    <string name="settings_home_system_status">Status</string>
-    <string name="system_status_title">Status</string>
     <string name="system_status_version">Versão</string>
     <string name="system_status_started">Iniciado</string>
     <string name="system_status_update">Atualizar</string>
@@ -175,7 +173,6 @@
     <string name="system_users_title">Usuários</string>
     <string name="system_users_add_user">Adicionar usuário</string>
     <string name="system_users_col_user">Usuário</string>
-    <string name="system_users_col_status">Status</string>
     <string name="system_users_col_last">Último login</string>
     <string name="system_users_open_actions">Abrir ações do usuário</string>
     <string name="system_users_role_label">Função</string>
@@ -321,6 +318,10 @@
     <string name="domain_title">Domínios</string>
     <string name="domain_verify">Verificar DNS</string>
     <string name="settings_home_domains">Domínios</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Teste enviado para %1$d destino</item>
+        <item quantity="other">Teste enviado para %1$d destinos</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="many">%1$d sessões revogadas</item>
         <item quantity="one">1 sessão revogada</item>
@@ -367,4 +368,7 @@
     <string name="system_status_awaiting_routing">Mensagens aguardando roteamento</string>
     <string name="system_status_relay_service">Serviço de retransmissão</string>
     <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuitos · %4$d recusadas</string>
+    <string name="route_target_select">Selecionar</string>
+    <string name="account_data_description">Baixe um backup completo que você pode restaurar neste ou em outro servidor Mochi.</string>
+    <string name="route_target_none">Nenhum destino disponível</string>
 </resources>

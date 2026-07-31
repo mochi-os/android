@@ -309,4 +309,9 @@
     <string name="person_picker_directory">Director</string>
     <string name="person_picker_no_people">Nicio persoană</string>
     <string name="person_picker_project_members">Membrii proiectului</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d abonat</item>
+        <item quantity="few">%1$d abonați</item>
+        <item quantity="other">%1$d de abonați</item>
+    </plurals>
 </resources>

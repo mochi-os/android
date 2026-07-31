@@ -313,4 +313,64 @@
     <string name="wikis_revision_show_page">Pokaż stronę</string>
     <string name="wikis_revision_compare_failed">Nie udało się wczytać poprzedniej wersji do porównania.</string>
     <string name="wikis_revision_changes_from">Zmiany od wersji %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d komentarz</item>
+        <item quantity="few">%d komentarze</item>
+        <item quantity="many">%d komentarzy</item>
+        <item quantity="other">%d komentarzy</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d odpowiedź</item>
+        <item quantity="few">+%d kolejnych odpowiedzi</item>
+        <item quantity="many">+%d kolejnych odpowiedzi</item>
+        <item quantity="other">+%d kolejnych odpowiedzi</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Przemianowano %1$d stronę</item>
+        <item quantity="few">Przemianowano %1$d strony</item>
+        <item quantity="many">Przemianowano %1$d stron</item>
+        <item quantity="other">Przemianowano %1$d stron</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">zaktualizowano %1$d link</item>
+        <item quantity="few">zaktualizowano %1$d linki</item>
+        <item quantity="many">zaktualizowano %1$d linków</item>
+        <item quantity="other">zaktualizowano %1$d linków</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d strona</item>
+        <item quantity="few">%d stron</item>
+        <item quantity="many">%d stron</item>
+        <item quantity="other">%d stron</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d plik</item>
+        <item quantity="few">%d plików</item>
+        <item quantity="many">%d plików</item>
+        <item quantity="other">%d plików</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d obraz</item>
+        <item quantity="few">%d obrazów</item>
+        <item quantity="many">%d obrazów</item>
+        <item quantity="other">%d obrazów</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d dokument</item>
+        <item quantity="few">%d dokumentów</item>
+        <item quantity="many">%d dokumentów</item>
+        <item quantity="other">%d dokumentów</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d strona z tym tagiem</item>
+        <item quantity="few">%d stron z tym tagiem</item>
+        <item quantity="many">%d stron z tym tagiem</item>
+        <item quantity="other">%d stron z tym tagiem</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Znaleziono %1$d wynik dla zapytania „%2$s"</item>
+        <item quantity="few">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
+        <item quantity="many">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
+        <item quantity="other">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
+    </plurals>
 </resources>

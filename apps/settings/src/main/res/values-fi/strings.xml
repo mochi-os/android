@@ -321,6 +321,10 @@
     <string name="domain_title">Verkkotunnukset</string>
     <string name="domain_verify">Vahvista DNS</string>
     <string name="settings_home_domains">Verkkotunnukset</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Testi lähetetty %1$d kohteeseen</item>
+        <item quantity="other">Testi lähetetty %1$d kohteeseen</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 istunto peruutettu</item>
         <item quantity="other">%1$d istuntoa peruutettu</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Reititystä odottavat viestit</string>
     <string name="system_status_relay_service">Välityspalvelu</string>
     <string name="system_status_relay_service_value">%1$d / %2$d varaukset · %3$d piirit · %4$d hylätty</string>
+    <string name="route_target_select">Valitse</string>
+    <string name="account_data_description">Lataa täydellinen varmuuskopio, jonka voit palauttaa tälle tai toiselle Mochi-palvelimelle.</string>
+    <string name="route_target_none">Kohteita ei ole saatavilla</string>
 </resources>

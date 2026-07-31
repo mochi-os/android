@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Katalog</string>
     <string name="person_picker_no_people">Ingen personar</string>
     <string name="person_picker_project_members">Prosjektmedlemmer</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d abonnent</item>
+        <item quantity="other">%1$d abonnentar</item>
+    </plurals>
 </resources>

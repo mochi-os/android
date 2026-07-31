@@ -270,4 +270,19 @@
     <string name="feeds_link">ລິ້ງ</string>
     <string name="feeds_share_link_title">ລິ້ງຟີດ</string>
     <string name="feeds_scroll_to_top">ກັບໄປດ້ານເທິງ</string>
+    <plurals name="feeds_image_count">
+        <item quantity="other">%1$d ຮູບ</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="other">%1$d ຄຳເຫັນ</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="other">ໄຟລ໌ແນບ %1$d ລາຍການ</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="other">ເບິ່ງຄຳເຫັນອີກ %1$d ລາຍການ</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="other">%1$d ປີກ່ອນ ໃນວັນນີ້</item>
+    </plurals>
 </resources>

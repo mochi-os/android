@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Maqaa mul\'atu</string>
     <string name="crm_auth_verification_failed">Mirkaneessuun hin milkoofne</string>
-    <string name="crm_list_title">Pirojektota</string>
+    <string name="crm_list_title">CRMii</string>
     <string name="crm_list_close_search">Barbaadii cufi</string>
     <string name="crm_list_search">Barbaadi</string>
-    <string name="crm_list_find">Pirojektota argi</string>
+    <string name="crm_list_find">CRM-mota argi</string>
     <string name="crm_list_logout">Ba\'i</string>
-    <string name="crm_list_create">Pirojektii uumi</string>
-    <string name="crm_create_title">Pirojektii uumi</string>
+    <string name="crm_list_create">CRM Uumi</string>
+    <string name="crm_create_title">CRM Uumi</string>
     <string name="crm_create_name">Maqaa</string>
     <string name="crm_create_description">Ibsa</string>
     <string name="crm_create_privacy">Iccitii</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Ifa</string>
     <string name="crm_create_template_none">Tokko illee</string>
     <string name="crm_create_action">Uumi</string>
-    <string name="crm_find_title">Pirojektota argi</string>
+    <string name="crm_find_title">CRM-mota argi</string>
     <string name="crm_find_recommended">Yaadachifame</string>
     <string name="crm_find_subscribe">Galaa\'i</string>
     <string name="crm_loading">Fe\'aa jiraa…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Jijjiiramoota olkaa\'i</string>
     <string name="crm_settings_unsubscribe">Galaa\'uu kaasi</string>
     <string name="crm_settings_delete_crm">Pirojektii haqi</string>
-    <string name="crm_settings_delete_confirm_title">Pirojektii haqi</string>
+    <string name="crm_settings_delete_confirm_title">CRM haqi</string>
     <string name="crm_settings_unsubscribe_title">Galaa\'uu kaasi</string>
-    <string name="crm_settings_unsubscribe_message">Pirojektii kana irraa galmee ofkennuu dhiisuu mirkanaa\'oo dha?</string>
+    <string name="crm_settings_unsubscribe_message">CRM kana irraa galmee ofkennuu dhiisuu mirkanaa\'oo dha?</string>
     <string name="crm_access_level_owner">Abbaa qabeenyaa</string>
     <string name="crm_access_level_design">Boci</string>
     <string name="crm_access_level_comment">Yaada</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Mata dureen hin qabne</string>
     <string name="crm_property_select">Filadhu …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d faayilii wal faalleessu</item>
+        <item quantity="other">%1$d faayiloota wal faalleessan</item>
+    </plurals>
 </resources>

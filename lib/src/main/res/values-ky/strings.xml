@@ -309,4 +309,8 @@
     <string name="person_picker_directory">Каталог</string>
     <string name="person_picker_no_people">Адамдар жок</string>
     <string name="person_picker_project_members">Долбоордун мүчөлөрү</string>
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d жазылуучу</item>
+        <item quantity="other">%1$d жазылуучу</item>
+    </plurals>
 </resources>

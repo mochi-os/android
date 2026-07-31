@@ -31,7 +31,7 @@
     <string name="projects_sort_rank">Manual</string>
     <string name="projects_sort_number">Jakhu</string>
     <string name="projects_sort_created">Lurata</string>
-    <string name="projects_sort_updated">{0}-na machaqachata</string>
+    <string name="projects_sort_updated">Machaqachatawa</string>
     <string name="projects_create_object_type">Mä comando qillqam jan ukax thaqham...</string>
     <string name="projects_create_object_title_field">Suti campo</string>
     <string name="projects_create_object_parent">Awki</string>
@@ -152,7 +152,7 @@
     <string name="projects_views_direction">Dirección</string>
     <string name="projects_views_sort_number">Jakhu</string>
     <string name="projects_views_sort_created">Lurata</string>
-    <string name="projects_views_sort_updated">{0}-na machaqachata</string>
+    <string name="projects_views_sort_updated">Machaqachatawa</string>
     <string name="projects_views_sort_rank">Rango</string>
     <string name="projects_project_not_found">Lurawi jan jikxatasiti</string>
     <string name="projects_list_more">Juk\'ampi</string>
@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">Proyecto churaña</string>
     <string name="projects_sort_filter_title">Sorteo &amp; suyt\'aña</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 ukham uñt\'kaya ID-nakataki apnaqata</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d nuwasiri archivo</item>
+        <item quantity="other">%1$d nuwasiri archivonaka</item>
+    </plurals>
 </resources>

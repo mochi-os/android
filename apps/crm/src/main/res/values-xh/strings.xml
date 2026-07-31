@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Igama elibonisiweyo</string>
     <string name="crm_auth_verification_failed">Uqinisekiso lusilele</string>
-    <string name="crm_list_title">Iiprojekthi</string>
+    <string name="crm_list_title">Ii-CRM</string>
     <string name="crm_list_close_search">Vala ukukhangela</string>
     <string name="crm_list_search">Khangela</string>
-    <string name="crm_list_find">Fumana iiprojekthi</string>
+    <string name="crm_list_find">Fumana ii-CRM</string>
     <string name="crm_list_logout">Phuma</string>
-    <string name="crm_list_create">Yenza iprojekthi</string>
-    <string name="crm_create_title">Yenza iprojekthi</string>
+    <string name="crm_list_create">Yenza i-CRM</string>
+    <string name="crm_create_title">Yenza i-CRM</string>
     <string name="crm_create_name">Igama</string>
     <string name="crm_create_description">Inkcazo</string>
     <string name="crm_create_privacy">Ubumfihlo</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Esidlangalaleni</string>
     <string name="crm_create_template_none">Akukho nanye</string>
     <string name="crm_create_action">Yenza</string>
-    <string name="crm_find_title">Fumana iiprojekthi</string>
+    <string name="crm_find_title">Fumana ii-CRM</string>
     <string name="crm_find_recommended">Iyacetyiswa</string>
     <string name="crm_find_subscribe">Rhuma</string>
     <string name="crm_loading">Kulayishwa…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Gcina utshintsho</string>
     <string name="crm_settings_unsubscribe">Yeka ukurhuma</string>
     <string name="crm_settings_delete_crm">Cima iprojekthi</string>
-    <string name="crm_settings_delete_confirm_title">Cima iprojekthi</string>
+    <string name="crm_settings_delete_confirm_title">Cima i-CRM</string>
     <string name="crm_settings_unsubscribe_title">Yeka ukurhuma</string>
-    <string name="crm_settings_unsubscribe_message">Uqinisekile ufuna ukurhoxa kule projekthi?</string>
+    <string name="crm_settings_unsubscribe_message">Uqinisekile ufuna ukurhoxa kule CRM?</string>
     <string name="crm_access_level_owner">Umnini</string>
     <string name="crm_access_level_design">Uyilo</string>
     <string name="crm_access_level_comment">Isiphawuli</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Iseva</string>
     <string name="crm_untitled">Akukho sihloko</string>
     <string name="crm_property_select">Khetha …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">ifayile e-%1$d engqubanayo</item>
+        <item quantity="other">iifayile ezi-%1$d ezingqubanayo</item>
+    </plurals>
 </resources>

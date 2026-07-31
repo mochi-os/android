@@ -310,4 +310,44 @@
     <string name="wikis_revision_show_page">صفحہ دکھائیں</string>
     <string name="wikis_revision_compare_failed">موازنے کے لیے پچھلا ورژن لوڈ نہیں ہو سکا۔</string>
     <string name="wikis_revision_changes_from">ورژن %1$d → %2$d سے تبدیلیاں</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d تبصرہ</item>
+        <item quantity="other">%d تبصرے</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d جواب</item>
+        <item quantity="other">+%d مزید جوابات</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d صفحے کا نام تبدیل کیا</item>
+        <item quantity="other">%1$d صفحات کے نام تبدیل کیے</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d لنک اپ ڈیٹ ہوا</item>
+        <item quantity="other">%1$d لنکس اپ ڈیٹ ہوئے</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d صفحہ</item>
+        <item quantity="other">%d صفحات</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d فائل</item>
+        <item quantity="other">%d فائلیں</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d تصویر</item>
+        <item quantity="other">%d تصاویر</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d دستاویز</item>
+        <item quantity="other">%d دستاویزات</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">اس ٹیگ کے ساتھ %d صفحہ</item>
+        <item quantity="other">اس ٹیگ کے ساتھ %d صفحات</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">«%2$s» کے لیے %1$d نتیجہ ملے</item>
+        <item quantity="other">«%2$s» کے لیے %1$d نتائج ملے</item>
+    </plurals>
 </resources>

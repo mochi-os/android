@@ -321,6 +321,10 @@
     <string name="domain_title">ڈومینز</string>
     <string name="domain_verify">DNS تصدیق کریں</string>
     <string name="settings_home_domains">ڈومینز</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">%1$d منزل پر ٹیسٹ بھیجا گیا</item>
+        <item quantity="other">%1$d منزلوں پر ٹیسٹ بھیجا گیا</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 سیشن منسوخ کیا</item>
         <item quantity="other">%1$d سیشنز منسوخ کیے</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">روٹنگ کے منتظر پیغامات</string>
     <string name="system_status_relay_service">ریلے سروس</string>
     <string name="system_status_relay_service_value">%1$d / %2$d ریزرویشنز · %3$d سرکٹس · %4$d مسترد</string>
+    <string name="route_target_select">منتخب کریں</string>
+    <string name="account_data_description">مکمل بیک اپ ڈاؤن لوڈ کریں جسے آپ اس یا کسی دوسرے Mochi سرور پر بحال کر سکتے ہیں۔</string>
+    <string name="route_target_none">کوئی ہدف دستیاب نہیں</string>
 </resources>

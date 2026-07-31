@@ -310,4 +310,38 @@
     <string name="wikis_access_subject_anyone">任何人</string>
     <string name="wikis_access_subject_authenticated">已驗證用戶</string>
 
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d 條留言</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="other">+%d 條回覆</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">改咗 %1$d 個頁面嘅名</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">更新咗 %1$d 條連結</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="other">%d 個頁面</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="other">%d 個檔案</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="other">%d 張圖</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="other">%d 份文件</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="other">%d 個頁面有呢個標籤</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="other">搵到 %1$d 個結果，關鍵字「%2$s」</item>
+    </plurals>
+    <string name="wikis_revision_changes_from">由版本 %1$d → %2$d 嘅變更</string>
+    <string name="wikis_revision_compare">比較變更</string>
+    <string name="wikis_revision_compare_failed">載入唔到上一個版本嚟比較。</string>
+    <string name="wikis_revision_show_page">顯示頁面</string>
 </resources>

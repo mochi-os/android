@@ -321,6 +321,10 @@
     <string name="domain_title">Домени</string>
     <string name="domain_verify">Потврди DNS</string>
     <string name="settings_home_domains">Домени</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="one">Тестот е испратен до %1$d дестинација</item>
+        <item quantity="other">Тестот е испратен до %1$d дестинации</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">Отповикана %1$d сесија</item>
         <item quantity="other">Отповикани %1$d сесии</item>
@@ -366,4 +370,7 @@
     <string name="system_status_awaiting_routing">Пораки што чекаат рутирање</string>
     <string name="system_status_relay_service">Релејна услуга</string>
     <string name="system_status_relay_service_value">%1$d / %2$d резервации · %3$d кола · %4$d одбиено</string>
+    <string name="route_target_select">Избери</string>
+    <string name="account_data_description">Преземете целосна резервна копија што можете да ја вратите на овој или на друг Mochi сервер.</string>
+    <string name="route_target_none">Нема достапни цели</string>
 </resources>

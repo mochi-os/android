@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nom visible</string>
     <string name="crm_auth_verification_failed">La verificació ha fallat</string>
-    <string name="crm_list_title">Projectes</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Tanca la cerca</string>
     <string name="crm_list_search">Cerca</string>
-    <string name="crm_list_find">Cerca projectes</string>
+    <string name="crm_list_find">Cerca CRM</string>
     <string name="crm_list_logout">Tanca la sessió</string>
-    <string name="crm_list_create">Crea un projecte</string>
-    <string name="crm_create_title">Crea un projecte</string>
+    <string name="crm_list_create">Crea un CRM</string>
+    <string name="crm_create_title">Crea un CRM</string>
     <string name="crm_create_name">Nom</string>
     <string name="crm_create_description">Descripció</string>
     <string name="crm_create_privacy">Privadesa</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Públic</string>
     <string name="crm_create_template_none">Cap</string>
     <string name="crm_create_action">Crea</string>
-    <string name="crm_find_title">Cerca projectes</string>
+    <string name="crm_find_title">Cerca CRM</string>
     <string name="crm_find_recommended">Recomanat</string>
     <string name="crm_find_subscribe">Subscriu-te</string>
     <string name="crm_loading">S\'està carregant…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Desa els canvis</string>
     <string name="crm_settings_unsubscribe">Cancel·la la subscripció</string>
     <string name="crm_settings_delete_crm">Suprimeix el projecte</string>
-    <string name="crm_settings_delete_confirm_title">Suprimeix el projecte</string>
+    <string name="crm_settings_delete_confirm_title">Suprimeix el CRM</string>
     <string name="crm_settings_unsubscribe_title">Cancel·la la subscripció</string>
-    <string name="crm_settings_unsubscribe_message">Segur que vols cancel·lar la subscripció a aquest projecte?</string>
+    <string name="crm_settings_unsubscribe_message">Segur que vols cancel·lar la subscripció a aquest CRM?</string>
     <string name="crm_access_level_owner">Propietari</string>
     <string name="crm_access_level_design">Disseny</string>
     <string name="crm_access_level_comment">Comentari</string>
@@ -337,4 +337,8 @@
     <string name="crm_settings_server">Servidor</string>
     <string name="crm_untitled">Sense títol</string>
     <string name="crm_property_select">Selecciona …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d fitxer en conflicte</item>
+        <item quantity="other">%1$d fitxers en conflicte</item>
+    </plurals>
 </resources>

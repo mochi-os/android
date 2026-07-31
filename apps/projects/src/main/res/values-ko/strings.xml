@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">프로젝트 공유</string>
     <string name="projects_sort_filter_title">정렬 및 필터</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 같은 읽기 쉬운 ID에 사용됩니다</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">충돌 파일 %1$d 개</item>
+        <item quantity="other">충돌 파일 %1$d 개</item>
+    </plurals>
 </resources>

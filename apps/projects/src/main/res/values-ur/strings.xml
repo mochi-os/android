@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">پروجیکٹ شیئر کریں</string>
     <string name="projects_sort_filter_title">ترتیب دیں اور فلٹر کریں</string>
     <string name="projects_create_prefix_hint">%1$s-1، %1$s-2 جیسی پڑھنے کے قابل IDs کے لیے استعمال ہوتا ہے</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d متضاد فائل</item>
+        <item quantity="other">%1$d متضاد فائلیں</item>
+    </plurals>
 </resources>

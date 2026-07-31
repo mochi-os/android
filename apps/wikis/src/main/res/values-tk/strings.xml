@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">Sahypany görkez</string>
     <string name="wikis_revision_compare_failed">Deňeşdirmek üçin öňki wersiýany ýükläp bolmady.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d wersiýasyndan üýtgeşmeler</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d teswir</item>
+        <item quantity="other">%d teswir</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d jogap</item>
+        <item quantity="other">+%d köp jogap</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">%1$d sahypa täzeden atlandyryldy</item>
+        <item quantity="other">%1$d sahypa täzeden atlandyryldy</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">%1$d baglanyşyk täzelendi</item>
+        <item quantity="other">%1$d baglanyşyk täzelendi</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d sahypa</item>
+        <item quantity="other">%d sahypa</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d faýl</item>
+        <item quantity="other">%d faýl</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d surat</item>
+        <item quantity="other">%d surat</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d resminama</item>
+        <item quantity="other">%d resminama</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">Bu bellik bilen %d sahypa</item>
+        <item quantity="other">Bu bellik bilen %d sahypa</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">"%2$s" üçin %1$d netije tapyldy</item>
+        <item quantity="other">"%2$s" üçin %1$d netije tapyldy</item>
+    </plurals>
 </resources>

@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Име за прикажување</string>
     <string name="crm_auth_verification_failed">Потврдата не успеа</string>
-    <string name="crm_list_title">Проекти</string>
+    <string name="crm_list_title">CRM-и</string>
     <string name="crm_list_close_search">Затвори пребарување</string>
     <string name="crm_list_search">Барај</string>
-    <string name="crm_list_find">Најди проекти</string>
+    <string name="crm_list_find">Најди CRM-и</string>
     <string name="crm_list_logout">Одјави се</string>
-    <string name="crm_list_create">Создај проект</string>
-    <string name="crm_create_title">Создај проект</string>
+    <string name="crm_list_create">Создај CRM</string>
+    <string name="crm_create_title">Создај CRM</string>
     <string name="crm_create_name">Име</string>
     <string name="crm_create_description">Опис</string>
     <string name="crm_create_privacy">Приватност</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Јавно</string>
     <string name="crm_create_template_none">Ништо</string>
     <string name="crm_create_action">Создај</string>
-    <string name="crm_find_title">Најди проекти</string>
+    <string name="crm_find_title">Најди CRM-и</string>
     <string name="crm_find_recommended">Препорачано</string>
     <string name="crm_find_subscribe">Претплати се</string>
     <string name="crm_loading">Се вчитува…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Зачувај промени</string>
     <string name="crm_settings_unsubscribe">Откажи претплата</string>
     <string name="crm_settings_delete_crm">Избриши проект</string>
-    <string name="crm_settings_delete_confirm_title">Избриши проект</string>
+    <string name="crm_settings_delete_confirm_title">Избриши CRM</string>
     <string name="crm_settings_unsubscribe_title">Откажи претплата</string>
-    <string name="crm_settings_unsubscribe_message">Сигурен ли си дека сакаш да се одјавиш од овој проект?</string>
+    <string name="crm_settings_unsubscribe_message">Сигурен ли си дека сакаш да се одјавиш од овој CRM?</string>
     <string name="crm_access_level_owner">Сопственик</string>
     <string name="crm_access_level_design">Дизајн</string>
     <string name="crm_access_level_comment">Коментар</string>
@@ -335,4 +335,8 @@
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Без наслов</string>
     <string name="crm_property_select">Изберете …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d конфликтна датотека</item>
+        <item quantity="other">%1$d конфликтни датотеки</item>
+    </plurals>
 </resources>

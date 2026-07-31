@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">ፕሮጀክት አጋራ</string>
     <string name="projects_sort_filter_title">ደርድር እና አጣራ</string>
     <string name="projects_create_prefix_hint">እንደ %1$s-1፣ %1$s-2 ላሉ ተነባቢ መለያዎች ይውላል</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d የሚጋጭ ፋይል</item>
+        <item quantity="other">%1$d የሚጋጩ ፋይሎች</item>
+    </plurals>
 </resources>

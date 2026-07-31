@@ -2,13 +2,13 @@
 <resources>
     <string name="crm_auth_display_name">Nama paparan</string>
     <string name="crm_auth_verification_failed">Pengesahan gagal</string>
-    <string name="crm_list_title">Projek</string>
+    <string name="crm_list_title">CRM</string>
     <string name="crm_list_close_search">Tutup carian</string>
     <string name="crm_list_search">Cari</string>
-    <string name="crm_list_find">Cari projek</string>
+    <string name="crm_list_find">Cari CRM</string>
     <string name="crm_list_logout">Log keluar</string>
-    <string name="crm_list_create">Cipta projek</string>
-    <string name="crm_create_title">Cipta projek</string>
+    <string name="crm_list_create">Cipta CRM</string>
+    <string name="crm_create_title">Cipta CRM</string>
     <string name="crm_create_name">Nama</string>
     <string name="crm_create_description">Penerangan</string>
     <string name="crm_create_privacy">Privasi</string>
@@ -16,7 +16,7 @@
     <string name="crm_create_public">Awam</string>
     <string name="crm_create_template_none">Tiada</string>
     <string name="crm_create_action">Cipta</string>
-    <string name="crm_find_title">Cari projek</string>
+    <string name="crm_find_title">Cari CRM</string>
     <string name="crm_find_recommended">Disyorkan</string>
     <string name="crm_find_subscribe">Langgan</string>
     <string name="crm_loading">Memuatkan…</string>
@@ -43,9 +43,9 @@
     <string name="crm_settings_save">Simpan perubahan</string>
     <string name="crm_settings_unsubscribe">Berhenti melanggan</string>
     <string name="crm_settings_delete_crm">Padam projek</string>
-    <string name="crm_settings_delete_confirm_title">Padam projek</string>
+    <string name="crm_settings_delete_confirm_title">Padam CRM</string>
     <string name="crm_settings_unsubscribe_title">Berhenti melanggan</string>
-    <string name="crm_settings_unsubscribe_message">Adakah anda pasti mahu berhenti melanggan projek ini?</string>
+    <string name="crm_settings_unsubscribe_message">Adakah anda pasti mahu berhenti melanggan CRM ini?</string>
     <string name="crm_access_level_owner">Pemilik</string>
     <string name="crm_access_level_design">Reka bentuk</string>
     <string name="crm_access_level_comment">Komen</string>
@@ -337,4 +337,8 @@
     <string name="crm_settings_server">Pelayan</string>
     <string name="crm_untitled">Tiada tajuk</string>
     <string name="crm_property_select">Pilih …</string>
+    <plurals name="crm_request_conflicts">
+        <item quantity="one">%1$d fail bercanggah</item>
+        <item quantity="other">%1$d fail bercanggah</item>
+    </plurals>
 </resources>

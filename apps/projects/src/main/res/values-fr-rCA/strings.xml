@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="projects_create_privacy">Privacy</string>
 
     <string name="projects_create_name">Nom</string>
     <string name="projects_class_name">Nom</string>

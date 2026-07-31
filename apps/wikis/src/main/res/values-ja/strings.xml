@@ -313,4 +313,41 @@
     <string name="wikis_revision_show_page">ページを表示</string>
     <string name="wikis_revision_compare_failed">比較用に以前のバージョンを読み込めませんでした。</string>
     <string name="wikis_revision_changes_from">バージョン %1$d → %2$d からの変更点</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="other">%d件のコメント</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d件の返信</item>
+        <item quantity="other">他に+%d件の返信</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="other">%1$dページの名前を変更しました</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="other">%1$d件のリンクを更新</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%dページ</item>
+        <item quantity="other">%dページ</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d件のファイル</item>
+        <item quantity="other">%d件のファイル</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d枚の画像</item>
+        <item quantity="other">%d枚の画像</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d件のドキュメント</item>
+        <item quantity="other">%d件のドキュメント</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">このタグが付いた%dページ</item>
+        <item quantity="other">このタグが付いた%dページ</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">「%2$s」に対して %1$d件の結果 が見つかりました</item>
+        <item quantity="other">「%2$s」に対して %1$d件の結果 が見つかりました</item>
+    </plurals>
 </resources>

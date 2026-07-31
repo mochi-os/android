@@ -365,4 +365,9 @@
     <string name="projects_share_link_title">Partajați proiectul</string>
     <string name="projects_sort_filter_title">Sortare și filtrare</string>
     <string name="projects_create_prefix_hint">Folosit pentru ID-uri lizibile precum %1$s-1, %1$s-2</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d fișier în conflict</item>
+        <item quantity="few">%1$d fișiere în conflict</item>
+        <item quantity="other">%1$d de fișiere în conflict</item>
+    </plurals>
 </resources>

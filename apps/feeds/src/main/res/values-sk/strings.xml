@@ -279,4 +279,34 @@
     <string name="feeds_link">Odkaz</string>
     <string name="feeds_share_link_title">Odkaz na kanál</string>
     <string name="feeds_scroll_to_top">Späť nahor</string>
+    <plurals name="feeds_image_count">
+        <item quantity="one">%1$d obrázok</item>
+        <item quantity="few">%1$d obrázky</item>
+        <item quantity="many">%1$d obrázkov</item>
+        <item quantity="other">%1$d obrázkov</item>
+    </plurals>
+    <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d komentár</item>
+        <item quantity="few">%1$d komentáre</item>
+        <item quantity="many">%1$d komentárov</item>
+        <item quantity="other">%1$d komentárov</item>
+    </plurals>
+    <plurals name="feeds_attachment_count">
+        <item quantity="one">%1$d príloha</item>
+        <item quantity="few">%1$d prílohy</item>
+        <item quantity="many">%1$d prílohy</item>
+        <item quantity="other">%1$d príloh</item>
+    </plurals>
+    <plurals name="feeds_view_more_comments">
+        <item quantity="one">Zobraziť %1$d ďalší komentár</item>
+        <item quantity="few">Zobraziť %1$d ďalšie komentáre</item>
+        <item quantity="many">Zobraziť %1$d ďalšieho komentára</item>
+        <item quantity="other">Zobraziť %1$d ďalších komentárov</item>
+    </plurals>
+    <plurals name="feeds_memory_years_ago_today">
+        <item quantity="one">pred %1$d rokom dnes</item>
+        <item quantity="few">pred %1$d rokmi dnes</item>
+        <item quantity="many">pred %1$d roka dnes</item>
+        <item quantity="other">pred %1$d rokmi dnes</item>
+    </plurals>
 </resources>

@@ -118,7 +118,7 @@
     <string name="system_documents_language">ენა</string>
     <string name="system_documents_no_language">ამ ენისთვის დოკუმენტი მიუწვდომელია.</string>
     <string name="system_documents_customised">მორგებული</string>
-    <string name="system_documents_using_default">მომხმარებლებს შეუძლიათ ამ აპლიკაციის ინსტალაცია ამ იდენტიფიკატორის ჩასმით აპების მართვის გვერდზე.</string>
+    <string name="system_documents_using_default">გამოიყენება ჩაშენებული ნაგულისხმევი</string>
     <string name="system_documents_revert">ნაგულისხმევზე დაბრუნება</string>
     <string name="system_documents_save">შენახვა</string>
     <string name="system_documents_saved">დოკუმენტი შენახულია</string>
@@ -174,13 +174,13 @@
     <string name="system_setting_server_version">სერვერის ვერსია</string>
     <string name="system_setting_signup_enabled">ახალი რეგისტრაციების დაშვება</string>
     <string name="system_users_title">მომხმარებლის სახელი</string>
-    <string name="system_users_col_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="system_users_col_user">მომხმარებელი</string>
     <string name="system_users_col_status">სტატუსი</string>
     <string name="system_users_col_last">ბოლო შესვლა</string>
     <string name="system_users_open_actions">მომხმარებლის მოქმედებების გახსნა</string>
     <string name="system_users_role_label">როლი</string>
     <string name="system_users_role_administrator">ადმინისტრატორი</string>
-    <string name="system_users_role_user">გამოიყენება წასაკითხი ID-ებისთვის, როგორიცაა {0}-1, {1}-2</string>
+    <string name="system_users_role_user">მომხმარებელი</string>
     <string name="system_users_status_suspended">შეჩერებული</string>
     <string name="system_users_last_never">არასოდეს</string>
     <string name="system_users_email_label">ელფოსტა</string>
@@ -313,7 +313,7 @@
     <string name="domain_delete_title">დომენის წაშლა?</string>
     <string name="domain_dns_hint">შექმენით TXT ჩანაწერი:</string>
     <string name="domain_empty_admin">კონფიგურირებული დომენი არ არის.</string>
-    <string name="domain_empty_user">თქვენ ვერ შექმნით ან დაარედაქტირებთ ლისტინგებს და მყიდველები ვერ განათავსებენ ახალ შეკვეთებს, ფსონებს ან გამოწერებს თქვენს ლისტინგებზე. მაინც შეგიძლიათ შეიძინოთ სხვა გამყიდველებისგან.</string>
+    <string name="domain_empty_user">არცერთ დომენზე არ გაქვთ წვდომა.</string>
     <string name="domain_https">ავტომატური HTTPS</string>
     <string name="domain_name">დომენი</string>
     <string name="domain_status_pending">DNS გადამოწმება მოლოდინში</string>
@@ -321,6 +321,9 @@
     <string name="domain_title">დომენები</string>
     <string name="domain_verify">შემოწმება და ჩართვა</string>
     <string name="settings_home_domains">დომენები</string>
+    <plurals name="notifprefs_test_sent">
+        <item quantity="other">ტესტი გაიგზავნა %1$d მიმართულებაზე</item>
+    </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="one">1 სესია გაუქმდა</item>
         <item quantity="other">%1$d სესია გაუქმდა</item>
@@ -366,4 +369,7 @@
     <string name="system_status_awaiting_routing">მარშრუტიზაციას მომლოდინე შეტყობინებები</string>
     <string name="system_status_relay_service">რელეს სერვისი</string>
     <string name="system_status_relay_service_value">%1$d / %2$d დაჯავშნები · %3$d წრედები · %4$d უარყოფილი</string>
+    <string name="route_target_select">არჩევა</string>
+    <string name="account_data_description">ჩამოტვირთეთ სრული სარეზერვო ასლი, რომელიც შეგიძლიათ აღადგინოთ ამ ან სხვა Mochi სერვერზე.</string>
+    <string name="route_target_none">სამიზნეები არ არის ხელმისაწვდომი</string>
 </resources>

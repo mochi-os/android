@@ -365,4 +365,8 @@
     <string name="projects_share_link_title">ව්‍යාපෘතිය බෙදාගන්න</string>
     <string name="projects_sort_filter_title">තෝරා පෙරන්න</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 වැනි කියවිය හැකි ID සඳහා භාවිතා වේ</string>
+    <plurals name="projects_request_conflicts">
+        <item quantity="one">ගැටුම් ගොනු %1$d</item>
+        <item quantity="other">ගැටුම් ගොනු %1$d</item>
+    </plurals>
 </resources>

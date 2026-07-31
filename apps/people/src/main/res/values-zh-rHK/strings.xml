@@ -11,8 +11,6 @@
     <string name="people_profile_saved">個人資料已儲存</string>
     <string name="people_profile_save_profile_failed">儲存個人資料失敗</string>
     <string name="people_profile_preview_title">個人資料預覽</string>
-    <string name="people_friends_message">Message</string>
-    <string name="people_person_message">Message</string>
 
     <string name="people_profile_name">名稱</string>
     <string name="people_groups_add_member_confirm_back">返回</string>
@@ -33,16 +31,9 @@
     <string name="people_person_accept">接受</string>
     <string name="people_welcome_dismiss">關閉</string>
     <string name="people_friends_pending">待處理</string>
-    <string name="people_groups_title">Groups</string>
     <string name="people_invitations_decline">拒絕</string>
     <string name="people_profile_saving">正在儲存…</string>
-    <string name="people_profile_edit_name">Edit name</string>
-    <string name="people_profile_identity">Identity</string>
-    <string name="people_profile_preview">Preview</string>
-    <string name="people_profile_uploading">Uploading…</string>
     <string name="people_common_chat">聊天</string>
-    <string name="people_friends_groups_menu">Groups</string>
-    <string name="people_person_fingerprint_label">Fingerprint</string>
     <string name="people_person_decline">拒絕</string>
     <string name="people_friends_close_search">關閉搜尋</string>
     <string name="people_member_add">加入成員</string>

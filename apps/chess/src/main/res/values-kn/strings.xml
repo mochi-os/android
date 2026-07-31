@@ -56,18 +56,18 @@
     <string name="chess_piece_pawn">ಪದಾತಿ</string>
     <string name="chess_move_played">%1$s %2$s ಆಡಿದರು</string>
     <string name="chess_channel_name">Chess notifications</string>
-    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
-    <string name="chess_open_sidebar">Open sidebar</string>
-    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
-    <string name="chess_empty_start_button">Start your first game</string>
-    <string name="chess_detail_unavailable">Game unavailable</string>
-    <string name="chess_delete_title">Delete game?</string>
-    <string name="chess_delete_message">This removes the game from your list.</string>
-    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_channel_description">ಚದುರಂಗದ ನಡೆಗಳು, ಡ್ರಾ ಪ್ರಸ್ತಾಪಗಳು ಮತ್ತು ಆಟದ ಫಲಿತಾಂಶಗಳ ಬಗ್ಗೆ ಅಧಿಸೂಚನೆಗಳು.</string>
+    <string name="chess_open_sidebar">ಸೈಡ್‌ಬಾರ್ ತೆರೆಯಿರಿ</string>
+    <string name="chess_empty_subtitle">ಸ್ನೇಹಿತರೊಂದಿಗೆ ಚದುರಂಗ ಆಡಲು ನಿಮ್ಮ ಮೊದಲ ಆಟವನ್ನು ಪ್ರಾರಂಭಿಸಿ.</string>
+    <string name="chess_empty_start_button">ನಿಮ್ಮ ಮೊದಲ ಆಟವನ್ನು ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="chess_detail_unavailable">ಆಟ ಲಭ್ಯವಿಲ್ಲ</string>
+    <string name="chess_delete_title">ಆಟವನ್ನು ಅಳಿಸುವುದೇ?</string>
+    <string name="chess_delete_message">ಇದು ಆಟವನ್ನು ನಿಮ್ಮ ಪಟ್ಟಿಯಿಂದ ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
+    <string name="chess_ws_connecting">ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_reconnecting">Reconnecting…</string>
-    <string name="chess_ws_failed">Connection failed</string>
-    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_ws_reconnecting">ಮತ್ತೆ ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="chess_ws_failed">ಸಂಪರ್ಕ ವಿಫಲವಾಗಿದೆ</string>
+    <string name="chess_move_capture">%1$s %2$s ತೆಗೆದುಕೊಂಡರು</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
 </resources>

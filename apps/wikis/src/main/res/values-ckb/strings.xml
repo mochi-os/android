@@ -313,4 +313,44 @@
     <string name="wikis_revision_show_page">پیشاندانی لاپەڕە</string>
     <string name="wikis_revision_compare_failed">نەتوانرا وەشانی پێشوو بۆ بەراوردکردن بار بکرێت.</string>
     <string name="wikis_revision_changes_from">گۆڕانکارییەکان لە وەشانی %1$d → %2$d</string>
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">١ لێدوان</item>
+        <item quantity="other">%d لێدوان</item>
+    </plurals>
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d وەڵام</item>
+        <item quantity="other">+%d وەڵامی زیاتر</item>
+    </plurals>
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">١ لاپەڕە ناوی گۆڕا</item>
+        <item quantity="other">%1$d لاپەڕە ناوی گۆڕا</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">١ بەستەر نوێکرایەوە</item>
+        <item quantity="other">%1$d بەستەر نوێکرانەوە</item>
+    </plurals>
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d لاپەڕە</item>
+        <item quantity="other">%d لاپەڕە</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d فایل</item>
+        <item quantity="other">%d فایل</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d وێنە</item>
+        <item quantity="other">%d وێنە</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d بەڵگە</item>
+        <item quantity="other">%d بەڵگە</item>
+    </plurals>
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d لاپەڕە بەم تاگە</item>
+        <item quantity="other">%d لاپەڕە بەم تاگە</item>
+    </plurals>
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">%1$d ئەنجام بۆ "%2$s" دۆزرایەوە</item>
+        <item quantity="other">%1$d ئەنجام بۆ "%2$s" دۆزرایەوە</item>
+    </plurals>
 </resources>
