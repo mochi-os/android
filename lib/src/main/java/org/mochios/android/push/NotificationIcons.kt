@@ -11,8 +11,47 @@ import androidx.annotation.DrawableRes
 import org.mochios.android.R
 
 /**
+ * Mochi-app slugs that create a notification channel at startup (see the
+ * `setup*NotificationChannel` calls in MochiApplication). Every channel's id
+ * *is* its slug, so routing needs only this set, not the per-module channel
+ * constants — which is what lets both transports share one mapping even though
+ * `lib` cannot see the app modules.
+ *
+ * Keep in step with MochiApplication. NotificationRoutingTest fails if a slug
+ * here has no channel or a created channel is missing here.
+ */
+internal val NOTIFICATION_CHANNELS = setOf(
+    "feeds", "chat", "forums", "projects", "people", "crm",
+    "wikis", "chess", "go", "words", "market", "staff",
+)
+
+/** Channel used when the payload names an app we have no channel for. */
+internal const val FALLBACK_NOTIFICATION_CHANNEL = "feeds"
+
+/**
+ * Channel id for a notification, preferring the server-supplied `app` slug and
+ * falling back to the first path segment of `link` when the server is older
+ * than that field.
+ *
+ * Single source of truth for both transports. It previously existed twice —
+ * ten apps in the UnifiedPush dispatcher, four in the FCM service — and the two
+ * drifted, so on FCM every app beyond the first four posted on the Feeds
+ * channel with the wrong name, importance and sound.
+ */
+fun notificationChannelFor(app: String?, link: String?): String {
+    val key = app.orEmpty().ifBlank {
+        link.orEmpty().trimStart('/').substringBefore('/')
+    }.lowercase()
+    return if (key in NOTIFICATION_CHANNELS) key else FALLBACK_NOTIFICATION_CHANNEL
+}
+
+/**
  * Map a Mochi-app slug to the small notification icon shown in the system
  * tray. Falls back to the generic Mochi mark when the app is unknown.
+ *
+ * Deliberately narrower than [NOTIFICATION_CHANNELS]: only these apps ship a
+ * per-app tray drawable, and the rest correctly show the Mochi mark. Adding
+ * more is an asset change, not a routing one.
  *
  * Used by every notification post path — FCM, UnifiedPush dispatcher, and
  * the foreground-service status notification — so all surfaces show the
@@ -38,13 +77,29 @@ fun notificationIconFor(app: String?): Int = when (app?.lowercase()) {
  * implicit URI form.
  */
 fun launcherComponentFor(context: Context, app: String?): ComponentName? {
-    val name = when (app?.lowercase()) {
-        "feeds" -> "MochiFeedsLauncher"
-        "chat" -> "MochiChatLauncher"
-        "forums" -> "MochiForumsLauncher"
-        "projects" -> "MochiProjectsLauncher"
-        "settings" -> "MochiSettingsLauncher"
-        else -> return null
-    }
+    val name = LAUNCHER_ALIASES[app?.lowercase()] ?: return null
     return ComponentName(context, "${context.packageName}.$name")
 }
+
+/**
+ * Every activity-alias declared in the shell manifest, by slug. All thirteen,
+ * because a missing entry is not a cosmetic gap: the notification falls back to
+ * the implicit `mochi:` intent, which resolves to MainActivity, and the
+ * launcher then stamps the unread badge on every Mochi icon — the exact
+ * behaviour [launcherComponentFor] exists to prevent. Eight were missing.
+ */
+internal val LAUNCHER_ALIASES = mapOf(
+    "feeds" to "MochiFeedsLauncher",
+    "chat" to "MochiChatLauncher",
+    "forums" to "MochiForumsLauncher",
+    "projects" to "MochiProjectsLauncher",
+    "crm" to "MochiCrmLauncher",
+    "people" to "MochiPeopleLauncher",
+    "settings" to "MochiSettingsLauncher",
+    "wikis" to "MochiWikisLauncher",
+    "chess" to "MochiChessLauncher",
+    "go" to "MochiGoLauncher",
+    "words" to "MochiWordsLauncher",
+    "market" to "MochiMarketLauncher",
+    "staff" to "MochiStaffLauncher",
+)

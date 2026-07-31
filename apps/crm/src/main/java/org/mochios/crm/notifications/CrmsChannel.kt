@@ -10,12 +10,16 @@ import android.app.NotificationManager
 import android.content.Context
 import org.mochios.crm.R
 
-const val PROJECTS_NOTIFICATION_CHANNEL_ID = "crm"
+// Was PROJECTS_NOTIFICATION_CHANNEL_ID — the value was always "crm", but the
+// name collided with the projects module's constant, so routing crm alongside
+// projects in the dispatcher would have been an import clash. That is the most
+// likely reason crm was never given an arm there.
+const val CRM_NOTIFICATION_CHANNEL_ID = "crm"
 
 fun setupCrmsNotificationChannel(context: Context) {
     val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     val channel = NotificationChannel(
-        PROJECTS_NOTIFICATION_CHANNEL_ID,
+        CRM_NOTIFICATION_CHANNEL_ID,
         context.getString(R.string.notification_channel_crm),
         NotificationManager.IMPORTANCE_DEFAULT,
     )
