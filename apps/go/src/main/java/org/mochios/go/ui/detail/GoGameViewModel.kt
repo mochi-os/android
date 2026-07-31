@@ -62,6 +62,13 @@ data class GoGameDetailUiState(
     val isLoadingMessages: Boolean = false,
     val isLoadingMoreMessages: Boolean = false,
     val hasMoreMessages: Boolean = false,
+
+    /**
+     * The server's `"<created>:<id>"` cursor for the next older page. Held
+     * here rather than derived from [messages], because a bare `created` is
+     * the server's legacy path and drops rows sharing the boundary second.
+     */
+    val nextMessageCursor: String? = null,
     val messagesError: MochiError? = null,
     val myIdentity: String = "",
     val isMyTurn: Boolean = false,
@@ -180,15 +187,17 @@ class GoGameViewModel @Inject constructor(
             _state.update { it.copy(isLoadingMessages = true, messagesError = null) }
             try {
                 val response = repository.getMessages(gameId)
-                // The endpoint returns newest-first; the panel renders
-                // newest-last so we reverse here. Server-side ordering is
-                // intentional: that's what the cursor-based pagination
-                // expects (older pages append at the front).
+                // The endpoint returns oldest-first: action_messages selects
+                // `order by created desc` and then reverses before responding.
+                // The panel renders newest-last and pins to the last index, so
+                // this order is already what it wants. Sorted rather than taken
+                // on trust, matching chess.
                 _state.update {
                     it.copy(
                         isLoadingMessages = false,
-                        messages = response.messages.asReversed(),
+                        messages = response.messages.sortedBy { message -> message.created },
                         hasMoreMessages = response.hasMore == true,
+                        nextMessageCursor = response.nextCursor,
                     )
                 }
             } catch (e: Exception) {
@@ -205,18 +214,22 @@ class GoGameViewModel @Inject constructor(
     fun loadMoreMessages() {
         val current = _state.value
         if (current.isLoadingMoreMessages || !current.hasMoreMessages) return
-        val oldest = current.messages.firstOrNull()?.created ?: return
+        // The server's own cursor, not a timestamp derived from the list. The
+        // derived form was both wrong (it read the newest message, because the
+        // list was being reversed) and lossy (a bare `created` is the server's
+        // legacy path, which drops rows sharing the boundary second).
+        val cursor = current.nextMessageCursor ?: return
         viewModelScope.launch {
             _state.update { it.copy(isLoadingMoreMessages = true) }
             try {
-                val response = repository.getMessages(gameId, before = oldest)
+                val response = repository.getMessages(gameId, before = cursor)
                 _state.update {
                     it.copy(
                         isLoadingMoreMessages = false,
-                        // Older page comes back newest-first; reverse so
-                        // chronological order is preserved when prepended.
-                        messages = response.messages.asReversed() + it.messages,
+                        messages = (response.messages + it.messages)
+                            .sortedBy { message -> message.created },
                         hasMoreMessages = response.hasMore == true,
+                        nextMessageCursor = response.nextCursor,
                     )
                 }
             } catch (e: Exception) {

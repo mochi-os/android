@@ -90,7 +90,9 @@ data class GameMessage(
 data class GetMessagesResponse(
     val messages: List<GameMessage> = emptyList(),
     val hasMore: Boolean = false,
-    val nextCursor: Long? = null,
+    // "<created>:<id>", not a bare timestamp — created alone is not unique and
+    // paginating on it drops every row sharing the page boundary's second.
+    val nextCursor: String? = null,
 )
 
 /**

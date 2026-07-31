@@ -55,7 +55,7 @@ data class ChessGameUiState(
     val identity: String = "",
     val messages: List<GameMessage> = emptyList(),
     val hasMore: Boolean = false,
-    val nextCursor: Long? = null,
+    val nextCursor: String? = null,
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,

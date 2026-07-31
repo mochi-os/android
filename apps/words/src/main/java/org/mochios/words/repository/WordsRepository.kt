@@ -61,7 +61,7 @@ class WordsRepository @Inject constructor(
 
     suspend fun getMessages(
         gameId: String,
-        before: Long? = null,
+        before: String? = null,
         limit: Int? = null,
     ): GetMessagesResponse =
         api.getMessages(gameId, before, limit).unwrap()

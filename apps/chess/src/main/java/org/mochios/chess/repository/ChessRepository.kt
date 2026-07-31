@@ -71,7 +71,7 @@ class ChessRepository @Inject constructor(
      */
     suspend fun getMessages(
         game: String,
-        before: Long? = null,
+        before: String? = null,
         limit: Int? = null,
     ): GetMessagesResponse =
         try { api.getMessages(game, before, limit).unwrap() } catch (e: Exception) { throw e.toMochiError() }

@@ -58,7 +58,7 @@ interface GoApi {
     @GET("{gameId}/-/messages")
     suspend fun getMessages(
         @Path("gameId") gameId: String,
-        @Query("before") before: Long? = null,
+        @Query("before") before: String? = null,
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<GetMessagesResponse>>
 
