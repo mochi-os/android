@@ -110,10 +110,20 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The canonical entity id for endpoints that reject a fingerprint. The app
+     * navigates by fingerprint, so [forumId] is usually one; prefer the id the
+     * loaded forum carries and fall back only while it has not arrived yet.
+     */
+    private fun entityId(): String {
+        val forum = _uiState.value.forum
+        return forum.id.ifEmpty { forum.fingerprint.ifEmpty { forumId } }
+    }
+
     fun delete() {
         viewModelScope.launch {
             try {
-                repository.deleteForum(forumId)
+                repository.deleteForum(entityId())
                 _uiState.value = _uiState.value.copy(deleted = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -125,7 +135,7 @@ class ForumSettingsViewModel @Inject constructor(
     fun unsubscribe() {
         viewModelScope.launch {
             try {
-                repository.unsubscribe(forumId, _uiState.value.forum.server.ifBlank { null })
+                repository.unsubscribe(entityId(), _uiState.value.forum.server.ifBlank { null })
                 _uiState.value = _uiState.value.copy(unsubscribed = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

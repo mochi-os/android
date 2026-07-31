@@ -184,10 +184,20 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The canonical entity id for endpoints that reject a fingerprint. The app
+     * navigates by fingerprint, so [feedId] is usually one; prefer the id the
+     * loaded feed carries and fall back only while it has not arrived yet.
+     */
+    private fun entityId(): String {
+        val info = _feedInfo.value ?: return feedId
+        return info.id.ifEmpty { info.fingerprint.ifEmpty { feedId } }
+    }
+
     fun deleteFeed(onSuccess: () -> Unit) {
         viewModelScope.launch {
             try {
-                repository.deleteFeed(feedId)
+                repository.deleteFeed(entityId())
                 onSuccess()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -199,14 +209,7 @@ class FeedSettingsViewModel @Inject constructor(
     fun unsubscribe(onSuccess: () -> Unit) {
         viewModelScope.launch {
             try {
-                val info = _feedInfo.value
-                val ident = when {
-                    info == null -> feedId
-                    info.id.isNotEmpty() -> info.id
-                    info.fingerprint.isNotEmpty() -> info.fingerprint
-                    else -> feedId
-                }
-                repository.unsubscribeFeed(ident)
+                repository.unsubscribeFeed(entityId())
                 onSuccess()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()

@@ -123,11 +123,21 @@ class CrmSettingsViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The canonical entity id for endpoints that reject a fingerprint. The app
+     * navigates by fingerprint, so [crmId] is usually one; prefer the id the
+     * loaded CRM carries and fall back only while it has not arrived yet.
+     */
+    private fun entityId(): String {
+        val crm = _uiState.value.crm ?: return crmId
+        return crm.id.ifEmpty { crm.fingerprint.ifEmpty { crmId } }
+    }
+
     fun deleteCrm(onSuccess: () -> Unit) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {
-                repository.deleteCrm(crmId)
+                repository.deleteCrm(entityId())
                 _uiState.value = _uiState.value.copy(isDeleting = false)
                 onSuccess()
             } catch (e: Exception) {

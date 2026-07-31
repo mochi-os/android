@@ -134,11 +134,21 @@ class ProjectSettingsViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The canonical entity id for endpoints that reject a fingerprint. The app
+     * navigates by fingerprint, so [projectId] is usually one; prefer the id the
+     * loaded project carries and fall back only while it has not arrived yet.
+     */
+    private fun entityId(): String {
+        val project = _uiState.value.project ?: return projectId
+        return project.id.ifEmpty { project.fingerprint.ifEmpty { projectId } }
+    }
+
     fun deleteProject(onSuccess: () -> Unit) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {
-                repository.deleteProject(projectId)
+                repository.deleteProject(entityId())
                 _uiState.value = _uiState.value.copy(isDeleting = false)
                 onSuccess()
             } catch (e: Exception) {
@@ -198,7 +208,7 @@ class ProjectSettingsViewModel @Inject constructor(
     fun unsubscribe(onSuccess: () -> Unit) {
         viewModelScope.launch {
             try {
-                repository.unsubscribe(projectId)
+                repository.unsubscribe(entityId())
                 onSuccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
