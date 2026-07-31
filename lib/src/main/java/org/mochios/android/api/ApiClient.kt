@@ -23,7 +23,7 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.auth.isServerOrigin
+import org.mochios.android.util.isServerOrigin
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit

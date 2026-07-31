@@ -3,7 +3,7 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-package org.mochios.android.auth
+package org.mochios.android.util
 
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import org.junit.Assert.assertFalse
@@ -11,16 +11,17 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
- * Guards the origin check that decides whether the Mochi session cookie is
- * attached to a request, and whether a `session` cookie in a reply is allowed
- * to overwrite the stored one.
+ * Guards the shared origin check. Three call sites depend on it, each of which
+ * got the comparison wrong independently before it was shared: whether the
+ * Mochi session cookie is attached to a request and whether a reply may
+ * overwrite it, which origin a pinned Retrofit request is retargeted to, and
+ * whether a push endpoint is local to the user's server.
  *
- * The jar behind these is shared by clients that deliberately fetch foreign
- * hosts — the asset client behind Coil loads RSS post images from arbitrary
- * publisher domains — so every case below is a host the client really does
- * talk to while signed in.
+ * Every case below is a host the client really does talk to while signed in —
+ * the asset client behind Coil loads RSS post images from arbitrary publisher
+ * domains.
  */
-class SessionOriginTest {
+class OriginTest {
 
     private val server = "https://mochi-os.org"
 

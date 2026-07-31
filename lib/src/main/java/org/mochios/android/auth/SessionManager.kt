@@ -23,32 +23,12 @@ import okhttp3.CookieJar
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
+import org.mochios.android.util.isServerOrigin
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "mochi_session")
-
-/**
- * True when [url] is the origin named by [serverUrl]. Compares scheme, host and
- * effective port ([HttpUrl.port] resolves the default, so an implicit 443
- * matches an explicit one) rather than the host alone: `http://host/`,
- * `https://host:8443/` and `https://host/` are three different origins, and a
- * host comparison alone would also accept a lookalike whose name merely ends
- * with ours.
- *
- * Fails closed — an unparseable or empty [serverUrl] matches nothing, so the
- * session never rides on a host we cannot confirm.
- *
- * Free function so it is exercised directly by SessionOriginTest without an
- * Android context; [SessionManager] supplies the stored server URL.
- */
-internal fun isServerOrigin(url: HttpUrl, serverUrl: String): Boolean {
-    val server = serverUrl.toHttpUrlOrNull() ?: return false
-    return url.scheme == server.scheme &&
-        url.host == server.host &&
-        url.port == server.port
-}
 
 @Singleton
 class SessionManager @Inject constructor(

@@ -12,13 +12,40 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.FormBody
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.util.isServerOrigin
 import org.unifiedpush.android.connector.MessagingReceiver
 import org.unifiedpush.android.connector.data.PushEndpoint
 import org.unifiedpush.android.connector.data.PushMessage
+
+/**
+ * If [endpointUrl] is on the same origin as [server] (the Mochi-distributor
+ * case where our user's server allocated this endpoint), return just the path
+ * component so the server detects the local-delivery fast-path. Otherwise
+ * return the URL unchanged (the third-party-distributor case — e.g. ntfy.sh —
+ * where the server must POST RFC 8030 to the absolute URL).
+ *
+ * Compares the whole origin rather than the host, because mislabelling in
+ * either direction loses the push: judged local, the server delivers to itself
+ * instead of to the real endpoint; judged foreign, it POSTs back to its own
+ * still-stubbed inbound handler and gets a 501. A host match alone accepted
+ * `https://host:8443/…` and `http://host/…` as ours.
+ *
+ * Top-level so EndpointCollapseTest can exercise it without a receiver.
+ */
+internal fun collapseLocalEndpoint(endpointUrl: String, server: String): String {
+    val ep = endpointUrl.toHttpUrlOrNull() ?: return endpointUrl
+    // Our distributor never issues an endpoint carrying credentials or a
+    // fragment, so refuse to treat one as local rather than reason about it.
+    if (ep.encodedUsername.isNotEmpty() || ep.encodedPassword.isNotEmpty() || ep.fragment != null) {
+        return endpointUrl
+    }
+    return if (isServerOrigin(ep, server)) ep.encodedPath else endpointUrl
+}
 
 /**
  * Bridges UnifiedPush callbacks into Mochi-shaped events. The Android
@@ -95,28 +122,9 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         }
     }
 
-    /**
-     * If [endpointUrl] is hosted on the same origin as [server] (the
-     * Mochi-distributor case where our user's server allocated this
-     * endpoint), return just the path component so the server detects
-     * the local-delivery fast-path. Otherwise return the URL unchanged
-     * (the third-party-distributor case — e.g. ntfy.sh — where the
-     * server must POST RFC 8030 to the absolute URL).
-     */
     /** Host of [endpointUrl], for logging that must not carry the subscription id. */
     private fun endpointHost(endpointUrl: String): String =
         runCatching { android.net.Uri.parse(endpointUrl).host }.getOrNull() ?: "unparseable"
-
-    private fun collapseLocalEndpoint(endpointUrl: String, server: String): String {
-        return try {
-            val ep = android.net.Uri.parse(endpointUrl)
-            val sv = android.net.Uri.parse(server)
-            if (ep.host != null && ep.host == sv.host) ep.encodedPath ?: endpointUrl
-            else endpointUrl
-        } catch (_: Exception) {
-            endpointUrl
-        }
-    }
 
     override fun onUnregistered(context: Context, instance: String) {
         Log.i(TAG, "onUnregistered instance=$instance")
