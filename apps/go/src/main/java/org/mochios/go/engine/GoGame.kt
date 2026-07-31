@@ -234,11 +234,10 @@ class GoGame private constructor(
     }
 
     /**
-     * Area-scoring result. `winner` is `Stone.BLACK` if Black's total
-     * (stones + black-only territory) strictly exceeds White's total
-     * (stones + white-only territory + [komi]); otherwise `Stone.WHITE`
-     * (i.e. ties go to White, matching the TS engine's `black > white`
-     * test). [komi] defaults to 6.5 to keep parity with the web engine.
+     * Area-scoring result. `winner` is the colour whose total — stones plus
+     * its own territory, with [komi] added to White's — is strictly greater,
+     * or null when the two are equal (jigo). [komi] defaults to 6.5, which
+     * cannot tie; the new-game dialog's komi of 0 can.
      */
     fun score(komi: Double = 6.5): Score {
         val territory = scoreTerritory(grid)
@@ -247,7 +246,15 @@ class GoGame private constructor(
         return Score(
             black = black,
             white = white,
-            winner = if (black > white) Stone.BLACK else Stone.WHITE,
+            winner = when {
+                black > white -> Stone.BLACK
+                white > black -> Stone.WHITE
+                // Jigo. Previously this fell to White, which did not merely
+                // print the wrong result: passTurn resolves the winner to an
+                // identity, so a tie wrote a real player as winner into the
+                // canonical row and the P2P snapshot.
+                else -> null
+            },
         )
     }
 
@@ -550,8 +557,11 @@ enum class Stone {
 /** Captures recorded so far (number of opponent stones each colour removed). */
 data class Captures(val black: Int, val white: Int)
 
-/** Area-scoring result. */
-data class Score(val black: Double, val white: Double, val winner: Stone)
+/**
+ * Area-scoring result. [winner] is null for a tie (jigo), which integer komi
+ * makes reachable — the new-game dialog offers a komi of 0.
+ */
+data class Score(val black: Double, val white: Double, val winner: Stone?)
 
 /** Territory ownership labels for [GoGame.territory]. */
 enum class Territory { BLACK, WHITE, NEUTRAL, OCCUPIED }

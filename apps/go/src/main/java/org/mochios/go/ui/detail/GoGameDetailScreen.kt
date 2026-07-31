@@ -550,7 +550,7 @@ private fun goStatusText(
     val opponentName = game.opponentName(myIdentity)
     return when (game.status) {
         "finished" -> when {
-            score != null -> stringResource(
+            score?.winner != null -> stringResource(
                 R.string.go_status_score,
                 if (score.winner == Stone.BLACK) {
                     stringResource(R.string.go_color_black)
@@ -560,6 +560,10 @@ private fun goStatusText(
                 formatScore(score.black),
                 formatScore(score.white),
             )
+            // A tie now records status "draw", but a peer on an older build —
+            // or the web until its engine is fixed — still writes "finished"
+            // with a winner nobody earned. Read the score rather than repeat it.
+            score != null -> stringResource(R.string.go_status_draw_text)
             game.winner == myIdentity -> stringResource(R.string.go_status_you_win)
             !game.winner.isNullOrBlank() -> stringResource(
                 R.string.go_status_opponent_wins,

@@ -24,6 +24,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.chess.engine.isDrawnPosition
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
 import org.mochios.chess.model.MoveRequest
@@ -224,7 +225,7 @@ class ChessGameViewModel @Inject constructor(
                     winner = _uiState.value.identity
                 } else if (board.isStaleMate) {
                     status = "stalemate"
-                } else if (board.isDraw) {
+                } else if (isDrawnPosition(board)) {
                     status = "draw"
                 }
 

@@ -344,9 +344,19 @@ class GoGameViewModel @Inject constructor(
         val newSgf = if (game.sgf.isBlank()) sgfMove else "${game.sgf};$sgfMove"
 
         val scoreResult: Score? = if (isGameOver) newGame.score(game.komi) else null
-        val winner: String? = if (isGameOver && scoreResult != null) {
-            winnerIdentityFor(game, scoreResult.winner)
+        // A tie scores with no winning colour, so it records status "draw" and
+        // no winner identity — both of which the server accepts. Resolving a
+        // tie to a colour would write a real player as the winner of a game
+        // nobody won, into the canonical row and the P2P snapshot.
+        val winnerColor: Stone? = scoreResult?.winner
+        val winner: String? = if (isGameOver && winnerColor != null) {
+            winnerIdentityFor(game, winnerColor)
         } else null
+        val finalStatus: String? = when {
+            !isGameOver -> null
+            winnerColor == null -> "draw"
+            else -> "finished"
+        }
 
         _state.update { it.copy(isPassing = true) }
         viewModelScope.launch {
@@ -356,7 +366,7 @@ class GoGameViewModel @Inject constructor(
                     PassRequest(
                         fen = newGame.board,
                         sgf = newSgf,
-                        status = if (isGameOver) "finished" else null,
+                        status = finalStatus,
                         winner = winner,
                         scoreBlack = scoreResult?.black,
                         scoreWhite = scoreResult?.white,
