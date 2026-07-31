@@ -486,36 +486,38 @@ internal fun FieldEditor(
             "date" -> {
                 var showDatePicker by remember { mutableStateOf(false) }
                 val format = LocalFormat.current
-                val displayDate = if (stringValue.isNotBlank()) {
-                    try {
-                        val seconds = stringValue.toLongOrNull()
-                        if (seconds != null) {
-                            format.formatDate(seconds)
-                        } else {
-                            stringValue
-                        }
-                    } catch (_: Exception) {
-                        stringValue
-                    }
-                } else ""
+                val dateSeconds = dateFieldSeconds(stringValue)
+                val displayDate = when {
+                    stringValue.isBlank() -> ""
+                    dateSeconds != null -> format.formatDate(dateSeconds)
+                    else -> stringValue
+                }
 
                 if (readOnly) {
                     ReadOnlyDisplay(field.name, displayDate)
                 } else {
-                    OutlinedTextField(
-                        value = displayDate,
-                        onValueChange = {},
-                        readOnly = true,
-                        label = { Text(field.name) },
-                        trailingIcon = {
-                            IconButton(onClick = { showDatePicker = true }) {
-                                Icon(Icons.Default.CalendarToday, contentDescription = stringResource(R.string.crm_property_pick_date))
-                            }
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { showDatePicker = true }
-                    )
+                    // A read-only text field swallows taps, so an overlay on top
+                    // makes the whole box (not just the icon) open the picker.
+                    Box(modifier = Modifier.fillMaxWidth()) {
+                        OutlinedTextField(
+                            value = displayDate,
+                            onValueChange = {},
+                            readOnly = true,
+                            label = { Text(field.name) },
+                            trailingIcon = {
+                                Icon(
+                                    Icons.Default.CalendarToday,
+                                    contentDescription = stringResource(R.string.crm_property_pick_date)
+                                )
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        Box(
+                            modifier = Modifier
+                                .matchParentSize()
+                                .clickable { showDatePicker = true }
+                        )
+                    }
 
                     if (showDatePicker) {
                         // Reroute the date picker through a Configuration with a
@@ -533,7 +535,7 @@ internal fun FieldEditor(
                             androidx.compose.ui.platform.LocalConfiguration provides localizedConfig
                         ) {
                             val datePickerState = rememberDatePickerState(
-                                initialSelectedDateMillis = stringValue.toLongOrNull()?.times(1000)
+                                initialSelectedDateMillis = dateSeconds?.times(1000)
                             )
                             DatePickerDialog(
                                 onDismissRequest = { showDatePicker = false },
@@ -541,7 +543,13 @@ internal fun FieldEditor(
                                     TextButton(onClick = {
                                         val selectedMillis = datePickerState.selectedDateMillis
                                         if (selectedMillis != null) {
-                                            onValueChange((selectedMillis / 1000).toString())
+                                            // The server's values endpoint expects an ISO
+                                            // date string (yyyy-MM-dd), not epoch seconds.
+                                            onValueChange(
+                                                java.time.LocalDate
+                                                    .ofEpochDay(selectedMillis / 86_400_000L)
+                                                    .toString()
+                                            )
                                         }
                                         showDatePicker = false
                                     }) {
@@ -638,6 +646,21 @@ private fun ReadOnlyDisplay(label: String, value: String) {
             text = if (value.isBlank()) "—" else value,
             style = MaterialTheme.typography.bodyLarge
         )
+    }
+}
+
+/**
+ * Parse a date field value into epoch seconds. Accepts either epoch seconds (the
+ * server's read format) or an ISO `yyyy-MM-dd` string, so a value just written as
+ * ISO still displays correctly before the next refresh. Returns null when neither
+ * form parses.
+ */
+private fun dateFieldSeconds(value: String): Long? {
+    value.toLongOrNull()?.let { return it }
+    return try {
+        java.time.LocalDate.parse(value).toEpochDay() * 86_400L
+    } catch (_: Exception) {
+        null
     }
 }
 
