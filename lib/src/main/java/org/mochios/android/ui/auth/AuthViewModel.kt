@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.R
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
@@ -174,6 +175,22 @@ class AuthViewModel @Inject constructor(
     fun validateServer() {
         val url = _uiState.value.serverUrl.trim()
         if (url.isBlank()) {
+            _uiState.value = _uiState.value.copy(
+                error = MochiError.Unknown(AppContext.get().getString(R.string.error_enter_server_url))
+            )
+            return
+        }
+
+        // Parse before persisting. setServerUrl stores whatever it is given and
+        // the request that follows is retargeted from the stored value, so an
+        // unparseable entry left the origin untouched and quietly sent the
+        // validation request to the previously pinned server — the same
+        // "selected server is not the network destination" confusion the
+        // retarget exists to remove.
+        // Reuses the blank-entry string rather than adding a key: "Please enter
+        // a server URL" reads correctly for an unusable entry too, and a new
+        // key would owe 105 translations for a wording nuance.
+        if (url.toHttpUrlOrNull() == null) {
             _uiState.value = _uiState.value.copy(
                 error = MochiError.Unknown(AppContext.get().getString(R.string.error_enter_server_url))
             )

@@ -49,6 +49,19 @@ class OriginTest {
         assertFalse(isServerOrigin("https://cdn.japantimes.co.jp/i.jpg".toHttpUrl(), server))
     }
 
+    /**
+     * The asset paths name the app in the first path segment, and both
+     * assetAuthHeaders and the asset client's interceptor read it to pick which
+     * per-app JWT to attach. A foreign URL shaped like one of ours must still
+     * be foreign — an RSS enclosure's address is used verbatim for video frame
+     * extraction, so this exact shape collected the user's Feeds JWT.
+     */
+    @Test
+    fun `a foreign url shaped like an app path does not match`() {
+        assertFalse(isServerOrigin("https://attacker.example/feeds/video.mp4".toHttpUrl(), server))
+        assertFalse(isServerOrigin("https://attacker.example/chat/x/-/avatar".toHttpUrl(), server))
+    }
+
     /** A host comparison alone would accept these. */
     @Test
     fun `lookalike hosts do not match`() {

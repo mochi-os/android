@@ -272,8 +272,18 @@ class SessionManager @Inject constructor(
         }
     }
 
-    /** In-memory per-host cookie cache, cleared on [clearAll]. */
+    /**
+     * In-memory per-origin cookie cache, cleared on [clearAll].
+     *
+     * Keyed by whole origin rather than host. Keyed by host, two different
+     * origins sharing a hostname shared a bucket, so a `session` cookie set by
+     * `http://host` or `host:8443` was replayed to `https://host` — and it also
+     * satisfied the "already has a session" test below, suppressing the real
+     * stored session in favour of whatever that other origin had set.
+     */
     private val cookieStore = ConcurrentHashMap<String, MutableList<Cookie>>()
+
+    private fun originOf(url: HttpUrl) = "${url.scheme}://${url.host}:${url.port}"
 
     /** True when [url] is the user's own Mochi server. See [isServerOrigin]. */
     private fun isServerOrigin(url: HttpUrl): Boolean =
@@ -299,7 +309,10 @@ class SessionManager @Inject constructor(
     val cookieJar: CookieJar = object : CookieJar {
 
         override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
-            cookieStore[url.host] = cookies.toMutableList()
+            // Safe to cache before the origin check now that the bucket is the
+            // origin: a foreign origin's cookies can only ever be replayed to
+            // that same origin.
+            cookieStore[originOf(url)] = cookies.toMutableList()
             if (!isServerOrigin(url)) return
             val sessionCookie = cookies.find { it.name == "session" }
             // Only *renew* an existing session — never resurrect one that
@@ -313,7 +326,7 @@ class SessionManager @Inject constructor(
         }
 
         override fun loadForRequest(url: HttpUrl): List<Cookie> {
-            val stored = cookieStore[url.host]?.toMutableList() ?: mutableListOf()
+            val stored = cookieStore[originOf(url)]?.toMutableList() ?: mutableListOf()
             if (!isServerOrigin(url)) return stored
             val sessionValue = getSessionCookieBlocking()
             if (sessionValue != null) {
