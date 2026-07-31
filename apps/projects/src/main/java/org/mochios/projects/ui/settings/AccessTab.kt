@@ -331,9 +331,9 @@ private fun subjectIcon(rule: AccessRule): ImageVector = when {
  * kind (User / Group / Other) via a segmented control and select a concrete
  * subject. Step 2: once a subject is selected, choose the role and confirm.
  *
- * The Other segment carries the `*` and `+` wildcards as option rows plus a
- * free-text field for any other entity id or `@group`. Users are searched live;
- * groups are fetched once on the first switch into the Group segment.
+ * The Other segment carries the `*` and `+` wildcards as option rows. Users are
+ * searched live; groups are fetched once on the first switch into the Group
+ * segment.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -346,7 +346,6 @@ private fun AddAccessDialog(
     // 0 = User, 1 = Group, 2 = Other.
     var tab by remember { mutableStateOf(0) }
     var userQuery by remember { mutableStateOf("") }
-    var manualTarget by remember { mutableStateOf("") }
     var selectedSubject by remember { mutableStateOf("") }
     var selectedName by remember { mutableStateOf("") }
     var level by remember { mutableStateOf("view") }
@@ -360,13 +359,6 @@ private fun AddAccessDialog(
         if (tab == 1 && uiState.groups.isEmpty()) {
             viewModel.loadGroups()
         }
-    }
-
-    // A typed target wins over a picked wildcard on the Other segment, so the
-    // field and the option rows can't disagree about what gets added.
-    val effectiveTarget = when {
-        tab == 2 && manualTarget.isNotBlank() -> manualTarget.trim()
-        else -> selectedSubject
     }
 
     AlertDialog(
@@ -490,7 +482,6 @@ private fun AddAccessDialog(
                                 onClick = {
                                     selectedSubject = "+"
                                     selectedName = authenticatedName
-                                    manualTarget = ""
                                 }
                             )
                             SubjectOption(
@@ -501,41 +492,21 @@ private fun AddAccessDialog(
                                 onClick = {
                                     selectedSubject = "*"
                                     selectedName = anyoneName
-                                    manualTarget = ""
                                 }
                             )
                         }
-                        Spacer(Modifier.height(12.dp))
-                        OutlinedTextField(
-                            value = manualTarget,
-                            onValueChange = { value ->
-                                manualTarget = value
-                                if (value.isNotBlank()) {
-                                    selectedSubject = ""
-                                    selectedName = ""
-                                }
-                            },
-                            label = { Text(stringResource(R.string.projects_access_target)) },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                        Text(
-                            text = stringResource(R.string.projects_access_target_hint),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
                     }
                 }
 
                 // Step 2: role, shown once a subject is chosen.
-                if (effectiveTarget.isNotBlank()) {
+                if (selectedSubject.isNotBlank()) {
                     Spacer(Modifier.height(16.dp))
                     HorizontalDivider()
                     Spacer(Modifier.height(12.dp))
                     Text(
                         text = stringResource(
                             R.string.projects_access_selected,
-                            selectedName.ifBlank { effectiveTarget }
+                            selectedName.ifBlank { selectedSubject }
                         ),
                         style = MaterialTheme.typography.bodyMedium
                     )
@@ -577,8 +548,8 @@ private fun AddAccessDialog(
         },
         confirmButton = {
             Button(
-                onClick = { onConfirm(effectiveTarget, level) },
-                enabled = effectiveTarget.isNotBlank()
+                onClick = { onConfirm(selectedSubject, level) },
+                enabled = selectedSubject.isNotBlank()
             ) {
                 Icon(
                     Icons.Default.Add,
