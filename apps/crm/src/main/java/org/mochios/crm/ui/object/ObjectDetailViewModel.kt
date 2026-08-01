@@ -87,6 +87,9 @@ class ObjectDetailViewModel @Inject constructor(
 
     private var currentCrmId: String = ""
     private var currentObjectId: String = ""
+    /** The in-flight detail fetch, cancelled when the sheet switches object. */
+    private var loadJob: Job? = null
+
     private var wsSubscriptionId: String? = null
     private var wsSubscribedCrmId: String = ""
 
@@ -98,16 +101,27 @@ class ObjectDetailViewModel @Inject constructor(
     fun loadWithInitialObject(crmId: String, objectId: String, initialObject: CrmObject?, access: String = "") {
         currentCrmId = crmId
         currentObjectId = objectId
-        if (initialObject != null) {
-            _uiState.value = _uiState.value.copy(obj = initialObject, access = access)
-        } else {
-            _uiState.value = _uiState.value.copy(access = access)
-        }
+        // Reset rather than copy: the previous selection's comments,
+        // attachments, links and watchers would otherwise stay on screen while
+        // the new object's header loads. Projects does the same. An object is
+        // carried over only when it is the one being opened.
+        val carried = initialObject ?: _uiState.value.obj?.takeIf { current -> current.id == objectId }
+        _uiState.value = ObjectDetailUiState(
+            obj = carried,
+            access = access,
+            isLoading = carried == null,
+        )
         subscribeWebSocket(crmId)
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = _uiState.value.obj == null, error = null)
+        // Cancel a fetch still in flight for the object we just left, or a slow
+        // response for A lands after the sheet switched to B and puts one
+        // object's header above another's tabs.
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             try {
                 val fetched = repository.getObject(crmId, objectId)
+                // Cancellation is cooperative and the tab loaders read the
+                // current ids, so re-check before writing anything.
+                if (currentCrmId != crmId || currentObjectId != objectId) return@launch
                 // The single-object endpoint doesn't return values — merge with what we have
                 val existing = _uiState.value.obj
                 val merged = if (fetched.values.isEmpty() && existing != null && existing.values.isNotEmpty()) {
@@ -124,6 +138,7 @@ class ObjectDetailViewModel @Inject constructor(
                 loadSiblingObjects()
                 loadPeople()
             } catch (e: Exception) {
+                if (currentCrmId != crmId || currentObjectId != objectId) return@launch
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     error = e.toMochiError()

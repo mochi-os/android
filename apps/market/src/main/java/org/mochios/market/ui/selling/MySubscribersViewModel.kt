@@ -70,9 +70,12 @@ class MySubscribersViewModel @Inject constructor(
         if (current.isLoading || !current.hasMore) return
         viewModelScope.launch {
             _state.value = current.copy(isLoading = true)
-            page += 1
             try {
-                val response = repo.listSubscribers(page = page, limit = limit)
+                val response = repo.listSubscribers(page = page + 1, limit = limit)
+                // Advance only once the page is in hand. Incrementing first
+                // permanently skips the page on any failure: hasMore stays
+                // true, so the next attempt asks for the one after.
+                page += 1
                 val merged = current.subscriptions + response.subscriptions
                 _state.value = _state.value.copy(
                     subscriptions = merged,

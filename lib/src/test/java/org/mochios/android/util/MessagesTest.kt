@@ -168,4 +168,74 @@ class MessagesTest {
         val existing = listOf(Message("a", 100, "one", "X"))
         assertEquals(existing, append(existing, emptyList()))
     }
+
+    // ---------------- mergeNewest: refresh keeps scrollback ----------------
+
+    private fun refresh(existing: List<Message>, incoming: List<Message>) =
+        mergeNewest(existing, incoming, id = { it.id }, created = { it.created })
+
+    /**
+     * The defect: a chat refetches its newest page on every inbound message,
+     * and assigning it outright discarded everything the reader had paged in.
+     */
+    @Test
+    fun `a refresh keeps messages paged in above the newest page`() {
+        val scrollback = listOf(
+            Message("a", 100, "oldest", "X"),
+            Message("b", 200, "older", "X"),
+            Message("c", 300, "recent", "X"),
+        )
+        val newestPage = listOf(
+            Message("c", 300, "recent", "X"),
+            Message("d", 400, "just arrived", "X"),
+        )
+        assertEquals(
+            listOf("a", "b", "c", "d"),
+            refresh(scrollback, newestPage).map { it.id },
+        )
+    }
+
+    /** The refetched copy wins, which is how an edit or a delete tombstone lands. */
+    @Test
+    fun `the incoming copy replaces the one already held`() {
+        val before = listOf(Message("a", 100, "hello", "X"))
+        val after = listOf(Message("a", 100, "deleted", "X"))
+        assertEquals(listOf("deleted"), refresh(before, after).map { it.body })
+    }
+
+    /**
+     * The case where replacing is correct: no overlap means more than a page
+     * arrived while away, so stitching would show a contiguous list with an
+     * invisible gap in it. Losing scrollback is the better failure.
+     */
+    @Test
+    fun `a page with no overlap replaces rather than leaving a hole`() {
+        val stale = listOf(Message("a", 100, "old", "X"), Message("b", 200, "old", "X"))
+        val fresh = listOf(Message("y", 9000, "new", "X"), Message("z", 9100, "new", "X"))
+        assertEquals(listOf("y", "z"), refresh(stale, fresh).map { it.id })
+    }
+
+    /** Adjacent pages still stitch: the boundary counts as overlap. */
+    @Test
+    fun `an adjacent page merges`() {
+        val held = listOf(Message("a", 100, "one", "X"), Message("b", 200, "two", "X"))
+        val next = listOf(Message("b", 200, "two", "X"), Message("c", 201, "three", "X"))
+        assertEquals(listOf("a", "b", "c"), refresh(held, next).map { it.id })
+    }
+
+    @Test
+    fun `the result is ordered oldest first regardless of arrival`() {
+        val out = refresh(
+            listOf(Message("c", 300, "third", "X")),
+            listOf(Message("a", 100, "first", "X"), Message("b", 200, "second", "X")),
+        )
+        assertEquals(listOf(100L, 200L, 300L), out.map { it.created })
+    }
+
+    @Test
+    fun `an empty refresh keeps what is loaded`() {
+        val held = listOf(Message("a", 100, "one", "X"))
+        assertEquals(held, refresh(held, emptyList()))
+        assertEquals(held, refresh(emptyList(), held))
+    }
 }

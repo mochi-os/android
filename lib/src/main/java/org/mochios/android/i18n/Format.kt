@@ -88,6 +88,16 @@ class Format(val preferences: UserPreferences) {
         return symbol + formatNumberInternal(amountMinor / 100.0, 2)
     }
 
+    /**
+     * The zone [formatDate] and [formatDateTime] render in.
+     *
+     * Exposed because anything that buckets timestamps into days has to bucket
+     * in the same zone it labels them in. [UserPreferences.timezone] defaults
+     * to UTC, so grouping by the device zone instead puts messages near
+     * midnight under a header showing a different date.
+     */
+    val timeZone: TimeZone get() = TimeZone.getTimeZone(preferences.timezone)
+
     private fun formatDateInternal(date: Date): String {
         val tz = TimeZone.getTimeZone(preferences.timezone)
         val pattern = when (preferences.dateFormat) {

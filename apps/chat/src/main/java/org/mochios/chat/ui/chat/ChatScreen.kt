@@ -298,7 +298,10 @@ private fun ChatContent(
     // Whether the leave-chat / delete-locally confirmation dialogs are open.
     var showLeaveDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
-    val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
+    val messageZone = LocalFormat.current.timeZone
+    val grouped = remember(uiState.messages, messageZone) {
+        groupMessagesByDate(uiState.messages, messageZone)
+    }
 
     LaunchedEffect(uiState.chatDeleted) {
         if (uiState.chatDeleted) onChatDeleted()
@@ -321,7 +324,11 @@ private fun ChatContent(
         // Don't yank the list to the bottom while the user is navigating search
         // matches — the match-scroll effect below owns positioning then.
         if (uiState.messages.isNotEmpty() && !uiState.searchOpen) {
-            listState.animateScrollToItem(uiState.messages.size - 1)
+            // The list holds the load-older row plus every date header, not just
+            // the messages, so messages.size - 1 lands short by headers + 1 and
+            // the newest message stays off screen — which is what opening a chat
+            // does. lastLazyIndex counts the same items the list emits.
+            listState.animateScrollToItem(lastLazyIndex(grouped, uiState.hasMore))
         }
     }
 
@@ -785,6 +792,16 @@ private fun messageLazyIndex(
         index++
     }
     return -1
+}
+
+/**
+ * The index of the last item the message list emits: the optional load-older
+ * row, then one item per entry in [grouped] — which interleaves date headers
+ * with messages. Zero when there is nothing to show.
+ */
+internal fun lastLazyIndex(grouped: List<MessageListEntry>, hasMore: Boolean): Int {
+    val leading = if (hasMore) 1 else 0
+    return (leading + grouped.size - 1).coerceAtLeast(0)
 }
 
 /**
@@ -1262,7 +1279,7 @@ private fun chatReactionCounts(counts: Map<String, Int>, myReaction: String?): L
         }
     }.sortedByDescending { reaction -> reaction.count }
 
-private sealed class MessageListEntry {
+internal sealed class MessageListEntry {
     data class DateHeader(val dayKey: String, val epochSeconds: Long) : MessageListEntry()
     data class MessageItem(val message: ChatMessage) : MessageListEntry()
 }
@@ -1385,8 +1402,19 @@ private fun ForwardSectionHeader(text: String) {
     )
 }
 
-private fun groupMessagesByDate(messages: List<ChatMessage>): List<MessageListEntry> {
-    val tz = java.util.TimeZone.getDefault()
+/**
+ * Split [messages] into day buckets, inserting a header at each boundary.
+ *
+ * [zone] must be the one the header is rendered in — LocalFormat's, not the
+ * device's. They differ by default, because the timezone preference starts at
+ * UTC, so grouping by the device zone put messages either side of midnight
+ * under a header showing the wrong date.
+ */
+internal fun groupMessagesByDate(
+    messages: List<ChatMessage>,
+    zone: java.util.TimeZone,
+): List<MessageListEntry> {
+    val tz = zone
     val out = mutableListOf<MessageListEntry>()
     var lastKey: String? = null
     for (msg in messages) {

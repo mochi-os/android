@@ -63,6 +63,41 @@ fun <T> appendDistinct(
     return if (added.isEmpty()) existing else existing + added
 }
 
+/**
+ * Fold a freshly fetched newest page into what is already loaded, so a refresh
+ * keeps the scrollback the user paged in.
+ *
+ * A chat refetches its newest page on every inbound message, reaction and
+ * delete. Assigning that page outright throws away everything the reader
+ * scrolled back to load — so one message arriving wipes minutes of scrolling,
+ * and the list then jumps to the bottom.
+ *
+ * [incoming] wins for any id in both, which is what carries an edit, a reaction
+ * change or a delete tombstone onto a row already on screen.
+ *
+ * The one case where replacing IS right: when the two sets do not overlap at
+ * all, the client has been away long enough that more than a page arrived, and
+ * stitching them would present a contiguous list with an invisible hole in it.
+ * Losing the scrollback is the better failure, so that case replaces.
+ */
+fun <T> mergeNewest(
+    existing: List<T>,
+    incoming: List<T>,
+    id: (T) -> String,
+    created: (T) -> Long,
+): List<T> {
+    if (incoming.isEmpty()) return existing
+    if (existing.isEmpty()) return incoming
+    val known = existing.mapTo(HashSet()) { id(it) }
+    val overlaps = incoming.any { known.contains(id(it)) } ||
+        incoming.minOf(created) <= existing.maxOf(created)
+    if (!overlaps) return incoming
+    val byId = LinkedHashMap<String, T>(existing.size + incoming.size)
+    for (item in existing) byId[id(item)] = item
+    for (item in incoming) byId[id(item)] = item
+    return byId.values.sortedWith(compareBy(created, id))
+}
+
 /** Single-message form of [mergeMessages], for a WebSocket frame. */
 fun <T> mergeMessage(
     existing: List<T>,
