@@ -29,6 +29,17 @@ data class SystemSetting(
     val default: String = "",
     val description: String = "",
     val pattern: String = "",
+    /**
+     * True for a write-only credential. The server blanks [value] for these, so
+     * a secret setting always arrives empty however it is configured.
+     */
+    val secret: Boolean = false,
+    /**
+     * True when a value is stored server-side. Computed before [value] is
+     * blanked (core/server/settings.go), so it is the only way to tell a
+     * configured secret from an unset one.
+     */
+    val set: Boolean = false,
     @SerializedName("user_readable") val userReadable: Boolean = false,
     @SerializedName("read_only") val readOnly: Boolean = false,
     val public: Boolean = false,

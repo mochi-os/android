@@ -5,7 +5,6 @@
 
 package org.mochios.settings.ui.login
 
-import android.content.ClipData
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
@@ -68,6 +67,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.StepUpDialog
+import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
 import org.mochios.settings.api.MethodInfo
 import org.mochios.settings.api.OAuthIdentity
@@ -197,13 +197,13 @@ fun LoginScreen(
             secret = setup.secret,
             onCancel = viewModel::cancelTotpSetup,
             onVerify = { code -> viewModel.verifyTotp(code) },
-            onCopySecret = { clipboard.setClip(ClipData.newPlainText("totp", setup.secret).toClipEntry()) },
+            onCopySecret = { clipboard.setClip(sensitiveClip("totp", setup.secret).toClipEntry()) },
         )
     }
     recoveryCodes?.let { codes ->
         RecoveryCodesDialog(
             codes = codes,
-            onCopyAll = { clipboard.setClip(ClipData.newPlainText("recovery codes", codes.joinToString("\n")).toClipEntry()) },
+            onCopyAll = { clipboard.setClip(sensitiveClip("recovery codes", codes.joinToString("\n")).toClipEntry()) },
             onDone = viewModel::acknowledgeRecoveryCodes,
         )
     }
