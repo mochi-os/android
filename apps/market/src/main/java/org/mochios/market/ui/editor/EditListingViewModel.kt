@@ -389,12 +389,22 @@ class EditListingViewModel @Inject constructor(
             return
         }
         if (current.listingId.isEmpty()) {
-            // Make sure the draft has been saved before publishing.
             viewModelScope.launch {
-                save()
-                if (_state.value.listingId.isNotEmpty()) {
-                    doPublish(_state.value)
+                // saveNow, not save: save() only launches the write and returns
+                // at its first suspension, so the listingId read on the next
+                // line was still empty and publish silently did nothing. The
+                // pending autosave then created the draft anyway, leaving the
+                // seller with a listing that exists and is unpublished.
+                if (_state.value.title.isBlank()) {
+                    // saveNow returns without saving on a blank title, so
+                    // without this publish would be silent again.
+                    _events.emit(EditListingEvent.TitleRequired)
+                    return@launch
                 }
+                saveNow()
+                // Create failed; saveNow already surfaced the error.
+                if (_state.value.listingId.isEmpty()) return@launch
+                doPublish(_state.value)
             }
             return
         }
@@ -595,7 +605,12 @@ class EditListingViewModel @Inject constructor(
         if (filename.isBlank() || reference.isBlank()) return
         viewModelScope.launch {
             if (_state.value.listingId.isEmpty()) {
-                save()
+                // Same reason as publish: save() does not wait for the create.
+                if (_state.value.title.isBlank()) {
+                    _events.emit(EditListingEvent.TitleRequired)
+                    return@launch
+                }
+                saveNow()
                 if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId
