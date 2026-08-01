@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">سڀ صاف ڪريو</string>
     <string name="market_listings_create">ٺاهيو</string>
     <string name="market_bid_dialog_ceiling_label">وڌ ۾ وڌ بولي (اختياري)</string>
+    <string name="market_asset_no_app">ڪابه ايپ هي فائل نه ٿي کولي سگهي</string>
+    <string name="market_asset_download_failed">فائل ڊائون لوڊ نه ٿي سگهي</string>
 </resources>

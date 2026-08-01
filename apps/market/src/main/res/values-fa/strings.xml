@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">پاک کردن همه</string>
     <string name="market_listings_create">ساختن</string>
     <string name="market_bid_dialog_ceiling_label">حداکثر پیشنهاد (اختیاری)</string>
+    <string name="market_asset_no_app">هیچ برنامه‌ای نمی‌تواند این فایل را باز کند</string>
+    <string name="market_asset_download_failed">دانلود فایل ممکن نشد</string>
 </resources>

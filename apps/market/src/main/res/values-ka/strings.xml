@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">ყველაფრის გასუფთავება</string>
     <string name="market_listings_create">შექმნა</string>
     <string name="market_bid_dialog_ceiling_label">მაქსიმალური შეთავაზება (არასავალდებულო)</string>
+    <string name="market_asset_no_app">ამ ფაილის გასახსნელი აპი არ არის</string>
+    <string name="market_asset_download_failed">ფაილის ჩამოტვირთვა ვერ მოხერხდა</string>
 </resources>

@@ -746,4 +746,6 @@
     <string name="market_recently_viewed_clear">Изчисти всички</string>
     <string name="market_listings_create">Създай</string>
     <string name="market_bid_dialog_ceiling_label">Максимална оферта (по избор)</string>
+    <string name="market_asset_no_app">Няма приложение, което може да отвори този файл</string>
+    <string name="market_asset_download_failed">Файлът не можа да се изтегли</string>
 </resources>

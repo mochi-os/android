@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">सबै खाली गर्नुहोस्</string>
     <string name="market_listings_create">सिर्जना गर्नुहोस्</string>
     <string name="market_bid_dialog_ceiling_label">अधिकतम बोली (वैकल्पिक)</string>
+    <string name="market_asset_no_app">यो फाइल खोल्न सक्ने कुनै एप छैन</string>
+    <string name="market_asset_download_failed">फाइल डाउनलोड गर्न सकिएन</string>
 </resources>

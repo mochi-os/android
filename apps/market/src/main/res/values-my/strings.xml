@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">အားလုံး ရှင်းမည်</string>
     <string name="market_listings_create">ဖန်တီးမည်</string>
     <string name="market_bid_dialog_ceiling_label">အမြင့်ဆုံးဈေးနှုန်း (ရွေးချယ်နိုင်)</string>
+    <string name="market_asset_no_app">ဤဖိုင်ကို ဖွင့်နိုင်သော အက်ပ် မရှိပါ</string>
+    <string name="market_asset_download_failed">ဖိုင်ကို ဒေါင်းလုဒ်မလုပ်နိုင်ပါ</string>
 </resources>

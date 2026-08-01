@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Borrar todo</string>
     <string name="market_listings_create">Crear</string>
     <string name="market_bid_dialog_ceiling_label">Poxa máxima (opcional)</string>
+    <string name="market_asset_no_app">Ningunha aplicación pode abrir este ficheiro</string>
+    <string name="market_asset_download_failed">Non se puido descargar o ficheiro</string>
 </resources>

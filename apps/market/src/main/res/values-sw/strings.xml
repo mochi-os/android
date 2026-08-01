@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Futa vyote</string>
     <string name="market_listings_create">Unda</string>
     <string name="market_bid_dialog_ceiling_label">Zabuni ya juu (si lazima)</string>
+    <string name="market_asset_no_app">Hakuna programu inayoweza kufungua faili hili</string>
+    <string name="market_asset_download_failed">Faili haikuweza kupakuliwa</string>
 </resources>

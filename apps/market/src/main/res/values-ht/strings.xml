@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Efase tout</string>
     <string name="market_listings_create">Kreye</string>
     <string name="market_bid_dialog_ceiling_label">Òf maksimòm (opsyonèl)</string>
+    <string name="market_asset_no_app">Pa gen okenn app ki ka ouvri fichye sa a</string>
+    <string name="market_asset_download_failed">Nou pa t kapab telechaje fichye a</string>
 </resources>

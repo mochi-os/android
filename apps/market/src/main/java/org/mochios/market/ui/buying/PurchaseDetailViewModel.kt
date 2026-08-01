@@ -5,10 +5,13 @@
 
 package org.mochios.market.ui.buying
 
+import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -16,9 +19,12 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.AttachmentOpener
+import org.mochios.market.model.AssetDownload
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.OrderDetailResponse
 import org.mochios.market.repository.MarketRepository
@@ -30,18 +36,22 @@ data class PurchaseDetailUiState(
     val audit: List<AuditEvent> = emptyList(),
     val error: MochiError? = null,
     val submitting: Boolean = false,
+    /** True while an asset is being fetched, so the row can show progress. */
+    val downloading: Boolean = false,
 )
 
 sealed interface PurchaseDetailEvent {
     data class Toast(val message: String) : PurchaseDetailEvent
     data class OpenUrl(val url: String) : PurchaseDetailEvent
-    data class DownloadAsset(val assetId: String) : PurchaseDetailEvent
+    /** Bytes are cached and ready; the screen hands them to a viewer. */
+    data class OpenFile(val fileName: String, val mime: String) : PurchaseDetailEvent
 }
 
 @HiltViewModel
 class PurchaseDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: MarketRepository,
+    @ApplicationContext private val context: Context,
 ) : ViewModel() {
 
     val orderId: String = savedStateHandle.get<String>("orderId").orEmpty()
@@ -127,7 +137,44 @@ class PurchaseDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Fetch a purchased asset through the authenticated client.
+     *
+     * This used to emit an event the screen answered with a toast, while the
+     * repository call that does the work had no callers at all — so a buyer
+     * could not download what they had paid for. The other route, handing a URL
+     * to a Custom Tab, cannot work either: the action is not public and a
+     * Custom Tab carries no credentials.
+     *
+     * Saving needs a Context, so the file lands here and the screen only
+     * launches the viewer.
+     */
     fun requestDownload(assetId: String) {
-        _events.tryEmit(PurchaseDetailEvent.DownloadAsset(assetId))
+        if (_uiState.value.downloading) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(downloading = true)
+            try {
+                when (val outcome = repository.downloadAsset(assetId)) {
+                    is AssetDownload.External ->
+                        _events.tryEmit(PurchaseDetailEvent.OpenUrl(outcome.url))
+                    is AssetDownload.Bytes -> {
+                        val saved = withContext(Dispatchers.IO) {
+                            AttachmentOpener.cacheBytes(
+                                context = context,
+                                fileName = outcome.fileName,
+                                body = outcome.body,
+                            )
+                        }
+                        _events.tryEmit(
+                            PurchaseDetailEvent.OpenFile(saved.name, outcome.mime),
+                        )
+                    }
+                }
+            } catch (e: Exception) {
+                _events.tryEmit(PurchaseDetailEvent.Toast(e.toMochiError().userMessage()))
+            } finally {
+                _uiState.value = _uiState.value.copy(downloading = false)
+            }
+        }
     }
 }

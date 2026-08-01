@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">모두 지우기</string>
     <string name="market_listings_create">생성</string>
     <string name="market_bid_dialog_ceiling_label">최대 입찰가(선택 사항)</string>
+    <string name="market_asset_no_app">이 파일을 열 수 있는 앱이 없습니다</string>
+    <string name="market_asset_download_failed">파일을 다운로드하지 못했습니다</string>
 </resources>

@@ -5,9 +5,12 @@
 
 package org.mochios.market.ui.listing
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,12 +20,16 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
+import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
 import org.mochios.market.lib.formatPrice
+import org.mochios.market.model.AssetDownload
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
@@ -47,6 +54,8 @@ data class ListingDetailUiState(
     val categories: List<Category> = emptyList(),
     val sellerReviews: List<Review> = emptyList(),
     val error: MochiError? = null,
+    /** True while a digital asset is being fetched. */
+    val downloadingAsset: Boolean = false,
 )
 
 /**
@@ -72,16 +81,60 @@ data class ListingDetailSnackbar(
  * converts unexpected exceptions via [toMochiError] so the UI can render a
  * localised message instead of stack-trace text.
  */
+/** One-shot outcomes of a digital-asset download. */
+sealed interface ListingDetailEvent {
+    data class Toast(val message: String) : ListingDetailEvent
+    /** Hosted elsewhere: the screen opens this externally. */
+    data class OpenUrl(val url: String) : ListingDetailEvent
+    /** Bytes cached and ready; the screen hands them to a viewer. */
+    data class OpenFile(val fileName: String, val mime: String) : ListingDetailEvent
+}
+
 @HiltViewModel
 class ListingDetailViewModel @Inject constructor(
     private val repository: MarketRepository,
     private val savedRepository: SavedRepository,
     private val recentStore: RecentlyViewedStore,
     private val reportedStore: ReportedStore,
+    @ApplicationContext private val context: Context,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(ListingDetailUiState())
     val state: StateFlow<ListingDetailUiState> = _state.asStateFlow()
+
+    private val _events = MutableSharedFlow<ListingDetailEvent>(extraBufferCapacity = 4)
+    val events: SharedFlow<ListingDetailEvent> = _events.asSharedFlow()
+
+    /**
+     * Fetch a digital asset through the authenticated client.
+     *
+     * The screen used to build a URL and hand it to a Custom Tab, which cannot
+     * work: the path form was wrong (the action takes ?id=, so the wrong shape
+     * fell through to the SPA), and the action is not public, so a browser tab
+     * carrying no token or cookie gets a 401 either way.
+     */
+    fun downloadAsset(assetId: String) {
+        if (_state.value.downloadingAsset) return
+        viewModelScope.launch {
+            _state.value = _state.value.copy(downloadingAsset = true)
+            try {
+                when (val outcome = repository.downloadAsset(assetId)) {
+                    is AssetDownload.External ->
+                        _events.tryEmit(ListingDetailEvent.OpenUrl(outcome.url))
+                    is AssetDownload.Bytes -> {
+                        val saved = withContext(Dispatchers.IO) {
+                            AttachmentOpener.cacheBytes(context, outcome.fileName, outcome.body)
+                        }
+                        _events.tryEmit(ListingDetailEvent.OpenFile(saved.name, outcome.mime))
+                    }
+                }
+            } catch (e: Exception) {
+                _events.tryEmit(ListingDetailEvent.Toast(e.toMochiError().userMessage()))
+            } finally {
+                _state.value = _state.value.copy(downloadingAsset = false)
+            }
+        }
+    }
 
     private val _snackbar = MutableSharedFlow<ListingDetailSnackbar>(extraBufferCapacity = 4)
     val snackbar: SharedFlow<ListingDetailSnackbar> = _snackbar.asSharedFlow()

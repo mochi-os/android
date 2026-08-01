@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Баарын тазалоо</string>
     <string name="market_listings_create">Түзүү</string>
     <string name="market_bid_dialog_ceiling_label">Максималдуу сунуш (милдеттүү эмес)</string>
+    <string name="market_asset_no_app">Бул файлды ача турган колдонмо жок</string>
+    <string name="market_asset_download_failed">Файлды жүктөп алуу мүмкүн болгон жок</string>
 </resources>

@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Tümünü temizle</string>
     <string name="market_listings_create">Oluştur</string>
     <string name="market_bid_dialog_ceiling_label">Azami teklif (isteğe bağlı)</string>
+    <string name="market_asset_no_app">Bu dosyayı açabilecek uygulama yok</string>
+    <string name="market_asset_download_failed">Dosya indirilemedi</string>
 </resources>

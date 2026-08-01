@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Alles wissen</string>
     <string name="market_listings_create">Aanmaken</string>
     <string name="market_bid_dialog_ceiling_label">Maximaal bod (optioneel)</string>
+    <string name="market_asset_no_app">Geen app kan dit bestand openen</string>
+    <string name="market_asset_download_failed">Het bestand kon niet worden gedownload</string>
 </resources>

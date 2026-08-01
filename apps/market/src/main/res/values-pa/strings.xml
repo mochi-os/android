@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
     <string name="market_listings_create">ਬਣਾਓ</string>
     <string name="market_bid_dialog_ceiling_label">ਵੱਧ ਤੋਂ ਵੱਧ ਬੋਲੀ (ਵਿਕਲਪਿਕ)</string>
+    <string name="market_asset_no_app">ਕੋਈ ਐਪ ਇਸ ਫਾਈਲ ਨੂੰ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੀ</string>
+    <string name="market_asset_download_failed">ਫਾਈਲ ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋ ਸਕੀ</string>
 </resources>

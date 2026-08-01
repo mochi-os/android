@@ -730,4 +730,5 @@
     <string name="market_section_recently_viewed">最近瀏覽</string>
     <string name="market_recently_viewed_clear">清除全部</string>
     <string name="market_listings_create">建立</string>
+    <string name="market_asset_no_app">沒有應用程式可以開啟此檔案</string>
 </resources>

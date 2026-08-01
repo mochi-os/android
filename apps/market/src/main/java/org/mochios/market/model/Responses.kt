@@ -310,5 +310,28 @@ data class AssetDownloadInfo(
     val reference: String = "",
 )
 
-/** JSON envelope used by [MarketApi.downloadAssetInfo]. */
-typealias AssetDownloadResponse = AssetDownloadMetadata
+
+/** Envelope shape for an externally-hosted asset: `{"data": {...}}`. */
+data class AssetDownloadEnvelope(
+    val data: AssetDownloadMetadata? = null,
+)
+
+/**
+ * What a purchased asset download turned out to be.
+ *
+ * The seller chooses where the file lives, so the endpoint answers either a
+ * reference to somewhere else or the bytes themselves, and the caller can only
+ * tell from the response.
+ */
+sealed interface AssetDownload {
+
+    /** Hosted elsewhere: open [url] rather than saving anything. */
+    data class External(val url: String) : AssetDownload
+
+    /** Mochi-hosted: the file itself, to be saved and opened. */
+    data class Bytes(
+        val fileName: String,
+        val mime: String,
+        val body: okhttp3.ResponseBody,
+    ) : AssetDownload
+}

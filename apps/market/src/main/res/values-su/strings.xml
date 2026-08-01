@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Bersihkeun sadaya</string>
     <string name="market_listings_create">Jieun</string>
     <string name="market_bid_dialog_ceiling_label">Panawaran maksimum (opsional)</string>
+    <string name="market_asset_no_app">Teu aya aplikasi anu tiasa muka berkas ieu</string>
+    <string name="market_asset_download_failed">Teu bisa ngaunduh berkas</string>
 </resources>

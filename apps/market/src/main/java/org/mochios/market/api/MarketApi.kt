@@ -10,7 +10,6 @@ import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.market.model.Account
 import org.mochios.market.model.AccountFees
-import org.mochios.market.model.AssetDownloadResponse
 import org.mochios.market.model.AssetListResponse
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.AuditListResponse
@@ -450,26 +449,18 @@ interface MarketApi {
     ): Response<ApiResponse<OkResponse>>
 
     /**
-     * Download a purchased digital asset. The Starlark handler returns
-     * either a JSON envelope (`{"data": {"hosting": "external", ...}}`
-     * containing an external URL) or raw file bytes — Android callers
-     * use [unwrapRaw] and branch on `Content-Type`.
+     * Download a purchased digital asset.
+     *
+     * The handler answers either a JSON envelope
+     * (`{"data": {"hosting": "external", ...}}`) naming an external URL, or the
+     * file bytes with a Content-Type and Content-Disposition, depending on
+     * where the seller hosts it. The caller branches on Content-Type; see
+     * MarketRepository.downloadAsset.
      */
     @GET("-/assets/download")
     suspend fun downloadAsset(
         @Query("id") id: String,
     ): Response<okhttp3.ResponseBody>
-
-    /**
-     * JSON-only variant of the asset download that always returns an
-     * envelope: useful when the caller knows the asset is externally
-     * hosted. The server picks the response shape from the input, but
-     * Android's image / file flow generally hits [downloadAsset] above.
-     */
-    @GET("-/assets/download")
-    suspend fun downloadAssetInfo(
-        @Query("id") id: String,
-    ): Response<ApiResponse<AssetDownloadResponse>>
 
     // ---- Bids ----
 

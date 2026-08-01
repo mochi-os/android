@@ -12,6 +12,7 @@ import kotlinx.coroutines.coroutineScope
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.util.Uploads
@@ -19,6 +20,8 @@ import org.mochios.market.api.MarketApi
 import org.mochios.market.model.Account
 import org.mochios.market.model.AccountFees
 import org.mochios.market.model.Asset
+import org.mochios.market.model.AssetDownload
+import org.mochios.market.model.AssetDownloadEnvelope
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Bid
 import org.mochios.market.model.BidResponse
@@ -50,6 +53,7 @@ import org.mochios.market.model.ThreadsListResponse
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
+import retrofit2.HttpException
 
 /**
  * Thin wrapper around [MarketApi]. Mirrors the structure of
@@ -69,6 +73,7 @@ class MarketRepository @Inject constructor(
     private val api: MarketApi,
 ) {
 
+    private val FILENAME_PARAMETER = Regex("filename=\"?([^\";]+)\"?")
     private val text = "text/plain".toMediaTypeOrNull()
     private val gson = Gson()
 
@@ -401,17 +406,46 @@ class MarketRepository @Inject constructor(
      * bytes are streamed; this repo call returns the ResponseBody for the
      * caller to write to disk, or surface the external reference URL.
      */
-    suspend fun downloadAsset(id: String): okhttp3.ResponseBody {
-        return try {
-            api.downloadAsset(id.toString()).also { response ->
-                if (!response.isSuccessful) {
-                    throw IllegalStateException("Asset download failed (${response.code()})")
-                }
-            }.body() ?: throw IllegalStateException("Empty asset download body")
+    /**
+     * Fetch a purchased asset.
+     *
+     * The endpoint answers one of two shapes depending on where the seller
+     * hosts the file: a JSON envelope naming an external URL, or the file
+     * bytes themselves with a Content-Type and Content-Disposition. Only the
+     * response says which, so this returns whichever arrived rather than
+     * making the caller guess.
+     *
+     * It cannot be fetched by handing a URL to a browser: the action is not
+     * public, and a Custom Tab carries neither the bearer token nor the session
+     * cookie, so it answers 401 whatever the path form.
+     */
+    suspend fun downloadAsset(id: String): AssetDownload {
+        val response = try {
+            api.downloadAsset(id)
         } catch (e: Exception) {
             throw e.toMochiError()
         }
+        if (!response.isSuccessful) {
+            throw HttpException(response).toMochiError()
+        }
+        val body = response.body() ?: throw MochiError.Unknown()
+        val contentType = response.headers()["Content-Type"].orEmpty()
+        if (contentType.startsWith("application/json")) {
+            val envelope = gson.fromJson(body.string(), AssetDownloadEnvelope::class.java)
+            val reference = envelope?.data?.asset?.reference.orEmpty()
+            if (reference.isBlank()) throw MochiError.Unknown()
+            return AssetDownload.External(reference)
+        }
+        // Content-Disposition carries the seller's filename; fall back to the
+        // asset id so something sane reaches the cache either way.
+        val name = filenameFrom(response.headers()["Content-Disposition"]) ?: "asset-$id"
+        return AssetDownload.Bytes(name, contentType, body)
     }
+
+    /** The `filename="..."` parameter, when the header carries a usable one. */
+    private fun filenameFrom(disposition: String?): String? =
+        FILENAME_PARAMETER.find(disposition.orEmpty())
+            ?.groupValues?.get(1)?.trim()?.takeIf { it.isNotBlank() }
 
     // ---- Bids ----
 

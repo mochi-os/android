@@ -743,4 +743,6 @@
     <string name="market_recently_viewed_clear">Garbitu dena</string>
     <string name="market_listings_create">Sortu</string>
     <string name="market_bid_dialog_ceiling_label">Gehieneko eskaintza (aukerakoa)</string>
+    <string name="market_asset_no_app">Ezin du aplikaziorik fitxategi hau ireki</string>
+    <string name="market_asset_download_failed">Ezin izan da fitxategia deskargatu</string>
 </resources>

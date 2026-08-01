@@ -746,4 +746,6 @@
     <string name="market_recently_viewed_clear">সব পরিষ্কার করুন</string>
     <string name="market_listings_create">তৈরি করুন</string>
     <string name="market_bid_dialog_ceiling_label">সর্বোচ্চ দর (ঐচ্ছিক)</string>
+    <string name="market_asset_no_app">কোনো অ্যাপ এই ফাইলটি খুলতে পারে না</string>
+    <string name="market_asset_download_failed">ফাইলটি ডাউনলোড করা যায়নি</string>
 </resources>

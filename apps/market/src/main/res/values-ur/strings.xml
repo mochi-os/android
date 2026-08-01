@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">سب صاف کریں</string>
     <string name="market_listings_create">بنائیں</string>
     <string name="market_bid_dialog_ceiling_label">زیادہ سے زیادہ بولی (اختیاری)</string>
+    <string name="market_asset_no_app">کوئی ایپ اس فائل کو نہیں کھول سکتی</string>
+    <string name="market_asset_download_failed">فائل ڈاؤن لوڈ نہیں ہو سکی</string>
 </resources>

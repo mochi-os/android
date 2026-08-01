@@ -746,4 +746,6 @@
     <string name="market_listings_create">Opprett</string>
     <string name="market_bid_dialog_ceiling_label">Maksimalt bod (valfritt)</string>
     <string name="market_listing_detail_seller_reviews_heading">Vurderingar av seljaren</string>
+    <string name="market_asset_no_app">Ingen app kan opne denne fila</string>
+    <string name="market_asset_download_failed">Kunne ikkje lasta ned fila</string>
 </resources>

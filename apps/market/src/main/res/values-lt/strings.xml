@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Išvalyti viską</string>
     <string name="market_listings_create">Sukurti</string>
     <string name="market_bid_dialog_ceiling_label">Didžiausias pasiūlymas (nebūtina)</string>
+    <string name="market_asset_no_app">Nėra programėlės, galinčios atidaryti šį failą</string>
+    <string name="market_asset_download_failed">Nepavyko atsisiųsti failo</string>
 </resources>

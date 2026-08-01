@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Tyhjennä kaikki</string>
     <string name="market_listings_create">Luo</string>
     <string name="market_bid_dialog_ceiling_label">Enimmäistarjous (valinnainen)</string>
+    <string name="market_asset_no_app">Mikään sovellus ei voi avata tätä tiedostoa</string>
+    <string name="market_asset_download_failed">Tiedostoa ei voitu ladata</string>
 </resources>

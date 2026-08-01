@@ -17,6 +17,7 @@ import java.io.IOException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.Request
+import okhttp3.ResponseBody
 import org.mochios.android.api.AssetHttpEntryPoint
 import org.mochios.android.model.Attachment
 
@@ -57,12 +58,70 @@ object AttachmentOpener {
             return OpenResult.FAILED
         }
 
+        return launch(context, file, mimeType(attachment))
+    }
+
+    /**
+     * Cache [body] under [fileName] and open it, for callers that already hold
+     * the bytes rather than a URL.
+     *
+     * The market's purchased-asset download needs this: its endpoint answers
+     * either a JSON envelope or the file itself depending on where the seller
+     * hosts it, so the caller has to make the request, read the content type
+     * and only then decide what to do — by which point the bytes are in hand.
+     *
+     * [mime] is coerced the same way as for an attachment, so a hostile or
+     * absent type cannot turn into something the viewer will execute.
+     */
+    suspend fun openBytes(
+        context: Context,
+        fileName: String,
+        mime: String?,
+        body: ResponseBody,
+    ): OpenResult {
+        val file = try {
+            withContext(Dispatchers.IO) { cacheBytes(context, fileName, body) }
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to save $fileName: ${e.message}")
+            return OpenResult.FAILED
+        }
+        return launch(context, file, coerceMimeType(mime.orEmpty()))
+    }
+
+    /**
+     * Write [body] into the attachment cache under a sanitised [fileName] and
+     * return the file, for a caller that wants to save now and open later.
+     *
+     * Blocking: call it off the main thread.
+     */
+    fun cacheBytes(context: Context, fileName: String, body: ResponseBody): File {
+        val dir = File(context.cacheDir, CACHE_DIR).apply { mkdirs() }
+        val safe = fileName.replace(UNSAFE_FILENAME, "_").takeLast(120).ifBlank { "download" }
+        val target = File(dir, safe)
+        body.use { source ->
+            target.outputStream().use { out -> source.byteStream().copyTo(out) }
+        }
+        return target
+    }
+
+    /**
+     * Open a file already written by [cacheBytes]. [mime] is coerced the same
+     * way as for an attachment, so an absent or hostile type cannot become
+     * something the viewer will execute.
+     */
+    fun openCached(context: Context, fileName: String, mime: String?): OpenResult {
+        val file = File(File(context.cacheDir, CACHE_DIR), fileName)
+        if (!file.exists()) return OpenResult.FAILED
+        return launch(context, file, coerceMimeType(mime.orEmpty()))
+    }
+
+    /** Hand [file] to a viewer through the FileProvider. */
+    private fun launch(context: Context, file: File, mime: String): OpenResult {
         val uri = FileProvider.getUriForFile(
             context,
             context.packageName + AUTHORITY_SUFFIX,
             file,
         )
-        val mime = mimeType(attachment)
         val view = Intent(Intent.ACTION_VIEW).apply {
             setDataAndType(uri, mime)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
@@ -72,7 +131,7 @@ object AttachmentOpener {
             context.startActivity(view)
             OpenResult.OPENED
         } catch (e: ActivityNotFoundException) {
-            Log.w(TAG, "No app can open ${attachment.name} ($mime)")
+            Log.w(TAG, "No app can open ${file.name} ($mime)")
             OpenResult.NO_APP
         }
     }

@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Esborra-ho tot</string>
     <string name="market_listings_create">Crea</string>
     <string name="market_bid_dialog_ceiling_label">Puja màxima (opcional)</string>
+    <string name="market_asset_no_app">Cap aplicació pot obrir aquest fitxer</string>
+    <string name="market_asset_download_failed">No s\'ha pogut baixar el fitxer</string>
 </resources>

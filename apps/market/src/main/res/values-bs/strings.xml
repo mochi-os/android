@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Očisti sve</string>
     <string name="market_listings_create">Kreiraj</string>
     <string name="market_bid_dialog_ceiling_label">Maksimalna ponuda (opcionalno)</string>
+    <string name="market_asset_no_app">Nijedna aplikacija ne može otvoriti ovu datoteku</string>
+    <string name="market_asset_download_failed">Datoteku nije moguće preuzeti</string>
 </resources>

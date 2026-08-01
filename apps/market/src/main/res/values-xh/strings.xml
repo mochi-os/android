@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Cima konke</string>
     <string name="market_listings_create">Yenza</string>
     <string name="market_bid_dialog_ceiling_label">Ibhidi ephezulu (akunyanzelekanga)</string>
+    <string name="market_asset_no_app">Akukho app inokuvula le fayile</string>
+    <string name="market_asset_download_failed">Ayikwazanga ukukhutshelwa ifayile</string>
 </resources>

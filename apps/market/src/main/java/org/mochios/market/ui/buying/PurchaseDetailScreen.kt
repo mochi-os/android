@@ -65,6 +65,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiScaffold
+import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.formatFingerprint
 import org.mochios.market.lib.formatPrice
@@ -109,14 +110,25 @@ fun PurchaseDetailScreen(
             when (event) {
                 is PurchaseDetailEvent.Toast -> snackbar.showSnackbar(event.message)
                 is PurchaseDetailEvent.OpenUrl -> openUrl(context, event.url, snackbar, scope)
-                is PurchaseDetailEvent.DownloadAsset -> {
-                    // Streaming the asset bytes is handled by another agent's
-                    // download manager; the buyer-side screen surfaces a toast
-                    // hint so the action is visible during integration.
-                    snackbar.showSnackbar(
-                        context.getString(R.string.market_asset_download)
-                            + " #" + event.assetId,
+                is PurchaseDetailEvent.OpenFile -> {
+                    // The ViewModel has already fetched and cached the bytes;
+                    // launching a viewer is the part that needs an Activity.
+                    val outcome = AttachmentOpener.openCached(
+                        context = context,
+                        fileName = event.fileName,
+                        mime = event.mime,
                     )
+                    if (outcome != AttachmentOpener.OpenResult.OPENED) {
+                        snackbar.showSnackbar(
+                            context.getString(
+                                if (outcome == AttachmentOpener.OpenResult.NO_APP) {
+                                    R.string.market_asset_no_app
+                                } else {
+                                    R.string.market_asset_download_failed
+                                }
+                            )
+                        )
+                    }
                 }
             }
         }

@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Cancella tutto</string>
     <string name="market_listings_create">Crea</string>
     <string name="market_bid_dialog_ceiling_label">Offerta massima (facoltativo)</string>
+    <string name="market_asset_no_app">Nessuna app può aprire questo file</string>
+    <string name="market_asset_download_failed">Impossibile scaricare il file</string>
 </resources>
