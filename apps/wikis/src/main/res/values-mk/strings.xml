@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">Серверот не е достапен. Се обидува повторно…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Создавање wiki ќе биде достапно во идно ажурирање.</string>
     <string name="wikis_find_search_placeholder">Барај по име, ID, отпечаток или URL…</string>
     <string name="wikis_join_search_button">Барај wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

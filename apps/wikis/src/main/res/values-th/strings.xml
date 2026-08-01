@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">เซิร์ฟเวอร์นั้นไม่สามารถเข้าถึงได้ กำลังลองใหม่…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS ของวิกิ</string>
-    <string name="wikis_create_dialog_stub">การสร้างวิกิจะพร้อมใช้งานในการอัปเดตในอนาคต</string>
     <string name="wikis_find_search_placeholder">ค้นหาตามชื่อ, ID, ลายนิ้วมือ หรือ URL…</string>
     <string name="wikis_join_search_button">ค้นหาวิกิ…</string>
     <string name="wikis_join_id_hint">abc123…</string>

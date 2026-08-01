@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Esse servidor está inacessível. A tentar novamente…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL do RSS do wiki</string>
-    <string name="wikis_create_dialog_stub">A criação de wikis estará disponível numa próxima atualização.</string>
     <string name="wikis_find_search_placeholder">Procurar por nome, ID, impressão digital ou URL…</string>
     <string name="wikis_join_search_button">Procurar wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

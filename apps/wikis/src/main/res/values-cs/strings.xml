@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Server není dostupný. Opakuji…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">RSS URL wiki</string>
-    <string name="wikis_create_dialog_stub">Vytvoření wiki bude k dispozici v budoucí aktualizaci.</string>
     <string name="wikis_find_search_placeholder">Hledat podle názvu, ID, otisku nebo URL…</string>
     <string name="wikis_join_search_button">Hledat wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

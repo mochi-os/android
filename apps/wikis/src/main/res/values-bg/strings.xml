@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Този сървър е недостъпен. Опит отново…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">RSS URL на wiki</string>
-    <string name="wikis_create_dialog_stub">Създаването на wiki ще бъде налично в бъдеща актуализация.</string>
     <string name="wikis_find_search_placeholder">Търсене по име, ID, отпечатък или URL…</string>
     <string name="wikis_join_search_button">Търсене на wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

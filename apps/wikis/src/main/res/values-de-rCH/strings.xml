@@ -12,7 +12,6 @@
     <string name="wikis_page_action_tags">Tags</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_rss_menu_trailing">›</string>
-    <string name="wikis_create_dialog_stub">Wiki creation will be available in a future update.</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_create_name_label">Name</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>

@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">该服务器无法访问。重试中…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Wiki 创建功能将在未来更新中提供。</string>
     <string name="wikis_find_search_placeholder">按名称、ID、指纹或 URL 搜索…</string>
     <string name="wikis_join_search_button">搜索 wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

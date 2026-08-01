@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">الخادم غير متاح. إعادة المحاولة…</string>
     <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">رابط RSS للويكي</string>
-    <string name="wikis_create_dialog_stub">سيكون إنشاء الويكي متاحاً في تحديث مستقبلي.</string>
     <string name="wikis_find_search_placeholder">البحث بالاسم أو المعرف أو البصمة أو الرابط…</string>
     <string name="wikis_join_search_button">البحث عن ويكي…</string>
     <string name="wikis_join_id_hint">abc123…</string>

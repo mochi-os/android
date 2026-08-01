@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Die server is onbereikbaar. Opnieuw proberen…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_create_dialog_stub">Wikis aanmaken is beschikbaar in een toekomstige update.</string>
     <string name="wikis_find_search_placeholder">Zoek op naam, ID, vingerafdruk of URL…</string>
     <string name="wikis_join_search_button">Wikis zoeken…</string>
     <string name="wikis_join_id_hint">abc123…</string>

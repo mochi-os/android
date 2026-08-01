@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Serveris nepasiekiamas. Bandoma vėl…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Wiki kūrimas bus prieinamas būsimame atnaujinime.</string>
     <string name="wikis_find_search_placeholder">Ieškoti pagal pavadinimą, ID, atspaudą arba URL…</string>
     <string name="wikis_join_search_button">Ieškoti wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

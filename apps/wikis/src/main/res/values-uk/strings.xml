@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Цей сервер недоступний. Повторна спроба…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">RSS URL вікі</string>
-    <string name="wikis_create_dialog_stub">Створення вікі буде доступне в майбутньому оновленні.</string>
     <string name="wikis_find_search_placeholder">Пошук за іменем, ID, відбитком або URL…</string>
     <string name="wikis_join_search_button">Пошук вікі…</string>
     <string name="wikis_join_id_hint">abc123…</string>

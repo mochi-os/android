@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">Serveri nuk është i arritshëm. Po provohet përsëri…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS i wiki</string>
-    <string name="wikis_create_dialog_stub">Krijimi i wiki do të jetë i disponueshëm në një përditësim të ardhshëm.</string>
     <string name="wikis_find_search_placeholder">Kërko sipas emrit, ID, gjurmës së gishtit ose URL…</string>
     <string name="wikis_join_search_button">Kërko wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

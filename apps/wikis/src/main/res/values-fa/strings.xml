@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">آن سرور قابل دسترسی نیست. تلاش مجدد…</string>
     <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">URL RSS ویکی</string>
-    <string name="wikis_create_dialog_stub">ایجاد ویکی در یک به‌روزرسانی آینده در دسترس خواهد بود.</string>
     <string name="wikis_find_search_placeholder">جستجو بر اساس نام، شناسه، اثر انگشت یا URL…</string>
     <string name="wikis_join_search_button">جستجوی ویکی‌ها…</string>
     <string name="wikis_join_id_hint">abc123…</string>

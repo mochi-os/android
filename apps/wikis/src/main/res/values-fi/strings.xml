@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Palvelinta ei voi tavoittaa. Yritetään uudelleen…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wikin RSS-URL</string>
-    <string name="wikis_create_dialog_stub">Wikin luonti on saatavilla tulevassa päivityksessä.</string>
     <string name="wikis_find_search_placeholder">Etsi nimellä, ID:llä, sormenjäljellä tai URL:lla…</string>
     <string name="wikis_join_search_button">Etsi wikejä…</string>
     <string name="wikis_join_id_hint">abc123…</string>

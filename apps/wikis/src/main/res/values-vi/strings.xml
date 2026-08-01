@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Máy chủ đó không thể truy cập. Đang thử lại…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS của wiki</string>
-    <string name="wikis_create_dialog_stub">Tạo wiki sẽ có trong bản cập nhật tương lai.</string>
     <string name="wikis_find_search_placeholder">Tìm theo tên, ID, dấu vân tay hoặc URL…</string>
     <string name="wikis_join_search_button">Tìm kiếm wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

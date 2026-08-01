@@ -102,7 +102,6 @@
     <string name="wikis_rss_copied">URL du fil RSS copiée dans le presse-papiers</string>
     <string name="wikis_rss_failed">Échec de l\'obtention du jeton RSS</string>
     <string name="wikis_clipboard_label_rss">URL du fil RSS du wiki</string>
-    <string name="wikis_create_dialog_stub">La création de wiki sera disponible dans une mise à jour future.</string>
     <string name="wikis_find_title">Rechercher des wikis</string>
     <string name="wikis_find_search_placeholder">Rechercher par nom, ID, empreinte ou URL…</string>
     <string name="wikis_find_no_results">Aucun wiki trouvé</string>

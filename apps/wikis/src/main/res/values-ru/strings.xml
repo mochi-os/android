@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Этот сервер недоступен. Повторная попытка…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS вики</string>
-    <string name="wikis_create_dialog_stub">Создание вики будет доступно в будущем обновлении.</string>
     <string name="wikis_find_search_placeholder">Поиск по имени, ID, отпечатку или URL…</string>
     <string name="wikis_join_search_button">Искать вики…</string>
     <string name="wikis_join_id_hint">abc123…</string>

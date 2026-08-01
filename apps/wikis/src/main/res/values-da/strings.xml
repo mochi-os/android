@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Den server er ikke tilgængelig. Prøver igen…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_create_dialog_stub">Wikioprettelse vil være tilgængelig i en fremtidig opdatering.</string>
     <string name="wikis_find_search_placeholder">Søg efter navn, ID, fingeraftryk eller URL…</string>
     <string name="wikis_join_search_button">Søg efter wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

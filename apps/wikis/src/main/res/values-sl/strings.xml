@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">Strežnik ni dosegljiv. Ponoven poskus…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Ustvarjanje wiki bo na voljo v prihodnji posodobitvi.</string>
     <string name="wikis_find_search_placeholder">Išči po imenu, ID, prstnem odtisu ali URL…</string>
     <string name="wikis_join_search_button">Išči wikije…</string>
     <string name="wikis_join_id_hint">abc123…</string>

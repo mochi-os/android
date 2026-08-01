@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Bu sunucuya ulaşılamıyor. Yeniden deneniyor…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL\'si</string>
-    <string name="wikis_create_dialog_stub">Wiki oluşturma gelecek bir güncellemede sunulacak.</string>
     <string name="wikis_find_search_placeholder">İsim, kimlik, parmak izi veya URL\'ye göre ara…</string>
     <string name="wikis_join_search_button">Wikis ara…</string>
     <string name="wikis_join_id_hint">abc123…</string>

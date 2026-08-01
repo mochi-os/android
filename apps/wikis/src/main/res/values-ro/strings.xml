@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Serverul nu poate fi accesat. Se reîncearcă…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS wiki</string>
-    <string name="wikis_create_dialog_stub">Crearea wiki va fi disponibilă într-o actualizare viitoare.</string>
     <string name="wikis_find_search_placeholder">Caută după nume, ID, amprentă sau URL…</string>
     <string name="wikis_join_search_button">Caută wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

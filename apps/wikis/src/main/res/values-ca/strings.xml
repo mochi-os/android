@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Aquest servidor no és accessible. Tornant a provar…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
-    <string name="wikis_create_dialog_stub">La creació de wikis estarà disponible en una propera actualització.</string>
     <string name="wikis_find_search_placeholder">Cerca per nom, ID, empremta o URL…</string>
     <string name="wikis_join_search_button">Cerca wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

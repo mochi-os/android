@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">해당 서버에 연결할 수 없습니다. 재시도 중…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">위키 RSS URL</string>
-    <string name="wikis_create_dialog_stub">위키 생성은 향후 업데이트에서 제공될 예정입니다.</string>
     <string name="wikis_find_search_placeholder">이름, ID, 지문 또는 URL로 검색…</string>
     <string name="wikis_join_search_button">위키 검색…</string>
     <string name="wikis_join_id_hint">abc123…</string>
