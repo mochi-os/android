@@ -170,11 +170,14 @@ class DesignViewModel @Inject constructor(
         multi: Boolean?,
         card: Boolean?,
         position: String?,
-        rows: Int?
+        rows: Int?,
+        pattern: String? = null,
+        minlength: Int? = null,
+        maxlength: Int? = null
     ) {
         viewModelScope.launch {
             try {
-                repository.updateField(projectId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows)
+                repository.updateField(projectId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows, pattern, minlength, maxlength)
                 loadProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

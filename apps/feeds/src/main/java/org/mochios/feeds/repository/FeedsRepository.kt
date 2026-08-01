@@ -202,10 +202,19 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun subscribeFeed(feed: String, server: String? = null) {
+    suspend fun subscribeFeed(feed: String, server: String? = null, peer: String? = null) {
         try {
-            // Server hint omitted from the request body for now.
-            api.subscribe(SubscribeRequest(feed = feed)).unwrap()
+            // Send the hints. Without them the server takes its directory
+            // branch and answers 404 errors.feed_not_in_directory for a feed it
+            // has never seen, so a feed on another server could not be
+            // subscribed to at all.
+            api.subscribe(
+                SubscribeRequest(
+                    feed = feed,
+                    server = server?.takeIf { it.isNotBlank() },
+                    peer = peer?.takeIf { it.isNotBlank() },
+                )
+            ).unwrap()
             _subscriptionChanges.emit(Unit)
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -214,8 +223,9 @@ class FeedsRepository @Inject constructor(
 
     suspend fun unsubscribeFeed(feed: String, server: String? = null) {
         try {
-            // Server hint omitted from the request body for now.
-            api.unsubscribe(UnsubscribeRequest(feed = feed)).unwrap()
+            api.unsubscribe(
+                UnsubscribeRequest(feed = feed, server = server?.takeIf { it.isNotBlank() })
+            ).unwrap()
             _subscriptionChanges.emit(Unit)
         } catch (e: Exception) {
             throw e.toMochiError()

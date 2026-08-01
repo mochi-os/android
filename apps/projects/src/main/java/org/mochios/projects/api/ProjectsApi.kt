@@ -620,7 +620,10 @@ interface ProjectsApi {
         @Field("multi") multi: Boolean?,
         @Field("card") card: Boolean?,
         @Field("position") position: String?,
-        @Field("rows") rows: Int?
+        @Field("rows") rows: Int?,
+        @Field("pattern") pattern: String?,
+        @Field("minlength") minlength: Int?,
+        @Field("maxlength") maxlength: Int?
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/classes/{classId}/fields/{fieldId}/delete")
