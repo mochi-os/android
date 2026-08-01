@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -123,6 +124,9 @@ class GoGameViewModel @Inject constructor(
 
     val gameId: String = savedStateHandle.get<String>("gameId").orEmpty()
 
+    /** The in-flight game fetch; cancelled when a newer one starts. */
+    private var loadJob: Job? = null
+
     private val _state = MutableStateFlow(GoGameDetailUiState(isLoading = true))
     val state: StateFlow<GoGameDetailUiState> = _state.asStateFlow()
 
@@ -140,8 +144,19 @@ class GoGameViewModel @Inject constructor(
     // Loading
     // ------------------------------------------------------------------
 
+    /**
+     * Refetch the game.
+     *
+     * Called from place, pass, resign, all three draw handlers and the
+     * websocket, so several can be in flight at once. Cancelling the previous
+     * one keeps them ordered: without it a slower earlier fetch could land
+     * after a later one and put a stale position back on the board. The writes
+     * themselves were never torn — viewModelScope is Main.immediate, so update
+     * bodies are serialised — the hazard is ordering alone.
+     */
     fun loadGame() {
-        viewModelScope.launch {
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             _state.update {
                 it.copy(
                     isLoading = it.game == null,

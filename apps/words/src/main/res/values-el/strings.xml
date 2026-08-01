@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Η πρώτη κίνηση πρέπει να τοποθετήσει τουλάχιστον 2 πλακίδια</string>
     <string name="words_move_error_not_connected">Τα πλακίδια πρέπει να συνδέονται με υπάρχοντα πλακίδια στο ταμπλό</string>
     <string name="words_move_error_no_words">Δεν σχηματίστηκαν έγκυρες λέξεις</string>
+    <string name="words_validation_offline">Ο έλεγχος είναι εκτός σύνδεσης — μπορείς να υποβάλεις παρ\' όλα αυτά.</string>
+    <string name="words_validation_unknown_words">Περιέχει άγνωστες λέξεις. Μπορείς να υποβάλεις παρ\' όλα αυτά.</string>
 </resources>

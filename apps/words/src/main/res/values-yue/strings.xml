@@ -86,4 +86,6 @@
     <string name="words_move_error_first_move_two_tiles">第一步至少要放 2 個字母</string>
     <string name="words_move_error_not_connected">字母要接住棋盤上面已有嘅字母</string>
     <string name="words_move_error_no_words">砌唔到有效嘅字</string>
+    <string name="words_validation_offline">驗證離線 — 你仍然可以提交。</string>
+    <string name="words_validation_unknown_words">包含未知詞語。你仍然可以提交。</string>
 </resources>

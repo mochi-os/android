@@ -313,4 +313,5 @@
         <item quantity="one">%1$d ተመዝጋቢ</item>
         <item quantity="other">%1$d ተመዝጋቢዎች</item>
     </plurals>
+    <string name="account_token_label">የMochi ክፍለ ጊዜ</string>
 </resources>

@@ -313,4 +313,5 @@
         <item quantity="one">%1$d agza</item>
         <item quantity="other">%1$d agza</item>
     </plurals>
+    <string name="account_token_label">Mochi sessiýasy</string>
 </resources>

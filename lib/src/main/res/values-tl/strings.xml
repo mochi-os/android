@@ -313,4 +313,5 @@
         <item quantity="one">%1$d tagasunod</item>
         <item quantity="other">%1$d tagasunod</item>
     </plurals>
+    <string name="account_token_label">Sesyon ng Mochi</string>
 </resources>

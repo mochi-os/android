@@ -194,7 +194,6 @@ enum class DraftStatus { INVALID_LOCAL, READY }
  * and [result] is null.
  *
  * An empty placements list yields INVALID_LOCAL with [MoveError.NO_TILES_PLACED].
- * The KDoc used to claim READY, contradicting the code directly below it.
  */
 /**
  * Why a draft is invalid. An enum rather than a message, because the engine

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">L-ewwel mossa trid tqiegħed mill-inqas 2 madum</string>
     <string name="words_move_error_not_connected">Il-madum irid jingħaqad mal-madum li diġà hemm fuq it-tabella</string>
     <string name="words_move_error_no_words">L-ebda kelma valida ma ġiet iffurmata</string>
+    <string name="words_validation_offline">Il-validazzjoni hija offline — xorta tista\' tibgħat.</string>
+    <string name="words_validation_unknown_words">Fih kliem mhux magħruf. Xorta tista\' tibgħat.</string>
 </resources>

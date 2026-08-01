@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Motsi na farko dole ne ya sanya aƙalla haruffa 2</string>
     <string name="words_move_error_not_connected">Dole ne haruffa su haɗu da haruffan da ke kan allo</string>
     <string name="words_move_error_no_words">Ba a samar da wata kalma mai inganci ba</string>
+    <string name="words_validation_offline">Tabbatarwa ba ta kan layi ba — har yanzu kana iya aikawa.</string>
+    <string name="words_validation_unknown_words">Yana ƙunshe da kalmomin da ba a sani ba. Har yanzu kana iya aikawa.</string>
 </resources>

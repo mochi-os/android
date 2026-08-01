@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">पहली चाल में कम से कम 2 टाइलें रखनी होंगी</string>
     <string name="words_move_error_not_connected">टाइलें बोर्ड पर मौजूद टाइलों से जुड़ी होनी चाहिए</string>
     <string name="words_move_error_no_words">कोई मान्य शब्द नहीं बना</string>
+    <string name="words_validation_offline">सत्यापन ऑफ़लाइन है — आप फिर भी सबमिट कर सकते हैं।</string>
+    <string name="words_validation_unknown_words">इसमें अज्ञात शब्द हैं। आप फिर भी सबमिट कर सकते हैं।</string>
 </resources>

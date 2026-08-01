@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">पहिलो चालमा कम्तीमा २ टाइल राख्नुपर्छ</string>
     <string name="words_move_error_not_connected">टाइलहरू बोर्डमा भएका टाइलहरूसँग जोडिनुपर्छ</string>
     <string name="words_move_error_no_words">कुनै मान्य शब्द बनेन</string>
+    <string name="words_validation_offline">प्रमाणीकरण अफलाइन छ — तपाईं अझै पनि पेस गर्न सक्नुहुन्छ।</string>
+    <string name="words_validation_unknown_words">अज्ञात शब्दहरू छन्। तपाईं अझै पनि पेस गर्न सक्नुहुन्छ।</string>
 </resources>

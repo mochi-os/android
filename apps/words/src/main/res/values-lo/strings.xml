@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">ຕາທຳອິດຕ້ອງວາງແຜ່ນປ້າຍຢ່າງໜ້ອຍ 2 ແຜ່ນ</string>
     <string name="words_move_error_not_connected">ແຜ່ນປ້າຍຕ້ອງຕໍ່ກັບແຜ່ນປ້າຍທີ່ມີຢູ່ໃນກະດານ</string>
     <string name="words_move_error_no_words">ບໍ່ມີຄຳທີ່ຖືກຕ້ອງເກີດຂຶ້ນ</string>
+    <string name="words_validation_offline">ການກວດສອບອອບລາຍ — ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
+    <string name="words_validation_unknown_words">ມີຄຳສັບທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
 </resources>

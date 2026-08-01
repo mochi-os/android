@@ -5,6 +5,8 @@
 
 package org.mochios.words.ui.detail
 
+import kotlinx.coroutines.CancellationException
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -73,6 +75,10 @@ sealed class DropTarget {
 data class WordsGameDetailUiState(
     val isLoading: Boolean = true,
     val isLoadingMessages: Boolean = false,
+    val isLoadingMoreMessages: Boolean = false,
+    val hasMoreMessages: Boolean = false,
+    /** The server's own "<created>:<id>" cursor, not a derived timestamp. */
+    val nextMessageCursor: String? = null,
     val error: MochiError? = null,
     val game: Game? = null,
     val myIdentity: String = "",
@@ -114,6 +120,8 @@ data class WordsGameDetailUiState(
  * keystrokes can't overwrite a fresher state. Matches the web
  * `useEffect` block at `index.tsx` lines 200-272.
  */
+private const val TAG = "WordsGame"
+
 @HiltViewModel
 class WordsGameViewModel @Inject constructor(
     private val repository: WordsRepository,
@@ -177,11 +185,18 @@ class WordsGameViewModel @Inject constructor(
                     // succeeds, `submitMove` clears placements and a fresh
                     // load supersedes this branch anyway.
                     if (state.pendingPlacements.isEmpty() && !state.exchangeMode) {
+                        // Re-seed the rack only when the server's tiles differ
+                        // as a multiset from what is on screen. Overwriting
+                        // unconditionally threw away the user's shuffle on every
+                        // opponent move and on every resume, which is the one
+                        // people notice. Web compares the value the same way.
+                        val incoming = response.game.my_rack.toList()
+                        val same = incoming.sorted() == state.rackTiles.sorted()
                         state.copy(
                             game = response.game,
                             myIdentity = response.identity,
-                            rackTiles = response.game.my_rack.toList(),
-                            selectedRackIndex = null,
+                            rackTiles = if (same) state.rackTiles else incoming,
+                            selectedRackIndex = if (same) state.selectedRackIndex else null,
                         )
                     } else {
                         state.copy(
@@ -190,9 +205,13 @@ class WordsGameViewModel @Inject constructor(
                         )
                     }
                 }
-            } catch (_: Exception) {
-                // Silently swallow — the websocket will retry, and the next
-                // user action will refresh again. Don't blow up the UI.
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // Deliberately not surfaced: the websocket will retry and the
+                // next user action refreshes again, so a toast here would fire
+                // on transient drops. Logged so it is not wholly invisible.
+                Log.d(TAG, "Background refresh failed", e)
             }
         }
     }
@@ -204,9 +223,51 @@ class WordsGameViewModel @Inject constructor(
                 val response = repository.getMessages(gameId, before = null, limit = 100)
                 // Server returns newest-first; render oldest-first.
                 val ordered = response.messages.sortedBy { it.created }
-                _uiState.update { it.copy(messages = ordered, isLoadingMessages = false) }
-            } catch (_: Exception) {
+                _uiState.update {
+                    it.copy(
+                        messages = ordered,
+                        isLoadingMessages = false,
+                        hasMoreMessages = response.hasMore == true,
+                        nextMessageCursor = response.nextCursor,
+                    )
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.d(TAG, "Message load failed", e)
                 _uiState.update { it.copy(isLoadingMessages = false) }
+            }
+        }
+    }
+
+    /**
+     * Page in older chat. GameChatPanel has always supported this; the screen
+     * passed hasMore = false and an empty onLoadMore, so the capability was
+     * switched off and a game's chat stopped at its first hundred messages.
+     */
+    fun loadMoreMessages() {
+        val current = _uiState.value
+        if (current.isLoadingMoreMessages || !current.hasMoreMessages) return
+        val cursor = current.nextMessageCursor ?: return
+        viewModelScope.launch {
+            _uiState.update { it.copy(isLoadingMoreMessages = true) }
+            try {
+                val response = repository.getMessages(gameId, before = cursor)
+                _uiState.update {
+                    it.copy(
+                        isLoadingMoreMessages = false,
+                        messages = (response.messages + it.messages)
+                            .distinctBy { message -> message.id }
+                            .sortedBy { message -> message.created },
+                        hasMoreMessages = response.hasMore == true,
+                        nextMessageCursor = response.nextCursor,
+                    )
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.d(TAG, "Older messages failed to load", e)
+                _uiState.update { it.copy(isLoadingMoreMessages = false) }
             }
         }
     }
@@ -814,9 +875,14 @@ class WordsGameViewModel @Inject constructor(
                         validationUnavailable = hasUnavailable,
                     )
                 }
+            } catch (e: CancellationException) {
+                // A newer refresh replaced this one. Rethrow: swallowing it
+                // leaves the coroutine looking like it completed normally.
+                throw e
             } catch (_: Exception) {
-                // Job cancelled or other failure — leave the state as-is so
-                // the next refresh has a clean slate to overwrite.
+                // Any other failure leaves the state as-is for the next refresh
+                // to overwrite, so a lookup outage cannot strand the composer.
+                _uiState.update { it.copy(isValidationChecking = false) }
             }
         }
     }

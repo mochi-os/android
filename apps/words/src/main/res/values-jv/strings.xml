@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Langkah pisanan kudu nyelehake paling ora 2 ubin</string>
     <string name="words_move_error_not_connected">Ubin kudu nyambung karo ubin sing wis ana ing papan</string>
     <string name="words_move_error_no_words">Ora ana tembung sah sing kabentuk</string>
+    <string name="words_validation_offline">Validasi offline — sampeyan isih bisa ngirim.</string>
+    <string name="words_validation_unknown_words">Ngandhut tembung sing ora dikenal. Sampeyan isih bisa ngirim.</string>
 </resources>

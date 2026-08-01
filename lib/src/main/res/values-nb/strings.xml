@@ -313,4 +313,5 @@
         <item quantity="one">%1$d abonnent</item>
         <item quantity="other">%1$d abonnenter</item>
     </plurals>
+    <string name="account_token_label">Mochi-økt</string>
 </resources>

@@ -84,4 +84,6 @@
     <string name="words_move_error_first_move_two_tiles">Lehen jokaldian gutxienez 2 fitxa jarri behar dira</string>
     <string name="words_move_error_not_connected">Fitxek taulan dauden fitxekin lotu behar dute</string>
     <string name="words_move_error_no_words">Ez da hitz baliozkorik osatu</string>
+    <string name="words_validation_offline">Balioztapena lineaz kanpo dago — hala ere, bidal dezakezu.</string>
+    <string name="words_validation_unknown_words">Hitz ezezagunak ditu. Hala ere, bidal dezakezu.</string>
 </resources>

@@ -69,6 +69,7 @@ fun MoveComposer(
     canRecallMove: Boolean,
     isSubmitting: Boolean,
     isExchanging: Boolean,
+    validationUnavailable: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     Row(
@@ -94,6 +95,7 @@ fun MoveComposer(
                 canRecallMove = canRecallMove,
                 canSubmit = canSubmit,
                 isSubmitting = isSubmitting,
+                validationUnavailable = validationUnavailable,
                 onRecall = onRecall,
                 onSubmit = onSubmit,
             )
@@ -149,6 +151,7 @@ private fun RowScope.ComposerRow(
     canRecallMove: Boolean,
     canSubmit: Boolean,
     isSubmitting: Boolean,
+    validationUnavailable: Boolean,
     onRecall: () -> Unit,
     onSubmit: () -> Unit,
 ) {
@@ -183,12 +186,36 @@ private fun RowScope.ComposerRow(
                     overflow = TextOverflow.Ellipsis,
                 )
             }
+            // Web shows both of these; Android tracked the state and rendered
+            // neither, so a player had no way to tell an unchecked word from a
+            // checked one or to know validation was offline.
+            validationUnavailable -> {
+                Text(
+                    text = stringResource(R.string.words_validation_offline),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
             draftWords.isNotEmpty() -> {
                 for ((word, score) in draftWords) {
                     WordChip(
                         word = word,
                         score = score,
                         state = wordValidationState[word.uppercase()] ?: ValidState.UNKNOWN,
+                    )
+                }
+                if (draftWords.any { (word, _) ->
+                        wordValidationState[word.uppercase()] == ValidState.INVALID
+                    }
+                ) {
+                    Text(
+                        text = stringResource(R.string.words_validation_unknown_words),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                     )
                 }
                 Spacer(modifier = Modifier.width(4.dp))

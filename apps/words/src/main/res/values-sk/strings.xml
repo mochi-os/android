@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Prvý ťah musí položiť aspoň 2 kamene</string>
     <string name="words_move_error_not_connected">Kamene sa musia napájať na kamene na hracej ploche</string>
     <string name="words_move_error_no_words">Nevzniklo žiadne platné slovo</string>
+    <string name="words_validation_offline">Overenie je nedostupné — stále môžete odoslať ťah.</string>
+    <string name="words_validation_unknown_words">Obsahuje neznáme slová. Stále môžete odoslať ťah.</string>
 </resources>

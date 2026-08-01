@@ -11,7 +11,6 @@
     <string name="go_app_title">Đi</string>
     <string name="go_captures_black_sr">Quân đen bị bắt</string>
     <string name="go_captures_white_sr">Quân trắng bị bắt</string>
-    <string name="go_chat_close">Đóng cuộc trò chuyện</string>
     <string name="go_chat_title">Trò chuyện</string>
     <string name="go_color_black">Đen</string>
     <string name="go_color_white">Trắng</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Đã kết thúc</string>
     <string name="go_status_resigned">Đã đầu hàng</string>
     <string name="go_card_vs">với %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Chi tiết ván cờ sắp ra mắt</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Ván cờ vây mới</string>
     <string name="go_new_game_no_friends">Bạn cần thêm bạn bè trước khi có thể bắt đầu ván cờ.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Điểm cộng cho Trắng để bù đắp việc Đen đi trước</string>
     <string name="go_new_game_create_error">Không thể bắt đầu ván cờ</string>
 
+    <string name="go_board_a11y">Bàn cờ Vây %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Bàn cờ vây %1$d×%1$d, đến lượt bạn đặt quân đen</string>
+    <string name="go_board_a11y_turn_white">Bàn cờ vây %1$d×%1$d, đến lượt bạn đặt quân trắng</string>
 </resources>

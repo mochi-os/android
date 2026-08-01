@@ -117,6 +117,12 @@ class SessionManager @Inject constructor(
             }
             prefs.remove(KEY_TOKEN_NAMES)
             prefs.remove(KEY_SESSION_COOKIE)
+            // The binding names an identity on the OLD server, so it is as
+            // stale as the tokens above. Leaving it lets a surviving
+            // AccountManager row be adopted afterwards and setServerUrl called
+            // back to the previous server, silently undoing this change.
+            prefs.remove(KEY_BOUND_IDENTITY)
+            prefs.remove(KEY_BOUND_SERVER)
         }
         if (changed) cookieStore.clear()
     }

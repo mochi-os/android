@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ensimmäisessä siirrossa on asetettava vähintään 2 laattaa</string>
     <string name="words_move_error_not_connected">Laattojen on liityttävä laudalla oleviin laattoihin</string>
     <string name="words_move_error_no_words">Yhtään kelvollista sanaa ei muodostunut</string>
+    <string name="words_validation_offline">Tarkistus on offline-tilassa — voit silti lähettää.</string>
+    <string name="words_validation_unknown_words">Sisältää tuntemattomia sanoja. Voit silti lähettää.</string>
 </resources>

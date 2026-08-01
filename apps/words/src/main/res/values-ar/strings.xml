@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">يجب أن تضع الحركة الأولى حرفين على الأقل</string>
     <string name="words_move_error_not_connected">يجب أن تتصل الأحرف بأحرف موجودة على اللوحة</string>
     <string name="words_move_error_no_words">لم تتكوّن أي كلمات صحيحة</string>
+    <string name="words_validation_offline">التحقق غير متصل — لا يزال بإمكانك الإرسال.</string>
+    <string name="words_validation_unknown_words">يحتوي على كلمات غير معروفة. لا يزال بإمكانك الإرسال.</string>
 </resources>

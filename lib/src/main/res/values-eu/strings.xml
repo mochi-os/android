@@ -313,4 +313,5 @@
         <item quantity="one">harpidetu %1$d</item>
         <item quantity="other">%1$d harpidetu</item>
     </plurals>
+    <string name="account_token_label">Mochi saioa</string>
 </resources>

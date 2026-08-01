@@ -100,50 +100,6 @@ fun getPlayerNames(game: GameListItem, myIdentity: String): String {
     return names.joinToString(", ")
 }
 
-fun getPlayerNames(game: Game, myIdentity: String): String {
-    val names = mutableListOf<String>()
-    for (i in 1..game.player_count) {
-        val id = playerId(game, i)
-        val name = playerName(game, i)
-        if (!id.isNullOrEmpty() && id != myIdentity && !name.isNullOrEmpty()) {
-            names.add(name)
-        }
-    }
-    return names.joinToString(", ")
-}
-
-/**
- * Return true iff [myIdentity] is the player whose turn it is right now.
- * `current_turn` is 1-based and counts up to `player_count`; players who
- * aren't in the game (or finished/resigned games) always read false. Same
- * shape as the web `isMyTurn` helper.
- */
-fun isMyTurn(game: GameListItem, myIdentity: String): Boolean {
-    if (game.status != "active") return false
-    val myNum = getMyPlayerNumber(game, myIdentity)
-    return game.current_turn == myNum
-}
-
-fun isMyTurn(game: Game, myIdentity: String): Boolean {
-    if (game.status != "active") return false
-    val myNum = getMyPlayerNumber(game, myIdentity)
-    return game.current_turn == myNum
-}
-
-private fun getMyPlayerNumber(game: GameListItem, myIdentity: String): Int {
-    for (i in 1..game.player_count) {
-        if (playerId(game, i) == myIdentity) return i
-    }
-    return 0
-}
-
-private fun getMyPlayerNumber(game: Game, myIdentity: String): Int {
-    for (i in 1..game.player_count) {
-        if (playerId(game, i) == myIdentity) return i
-    }
-    return 0
-}
-
 private fun playerId(game: GameListItem, slot: Int): String? = when (slot) {
     1 -> game.player1
     2 -> game.player2
@@ -184,10 +140,3 @@ fun playerScore(game: GameListItem, slot: Int): Int = when (slot) {
     else -> 0
 }
 
-fun playerScore(game: Game, slot: Int): Int = when (slot) {
-    1 -> game.player1_score
-    2 -> game.player2_score
-    3 -> game.player3_score
-    4 -> game.player4_score
-    else -> 0
-}

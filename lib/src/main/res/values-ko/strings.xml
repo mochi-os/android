@@ -312,4 +312,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">구독자 %1$d명</item>
     </plurals>
+    <string name="account_token_label">Mochi 세션</string>
 </resources>

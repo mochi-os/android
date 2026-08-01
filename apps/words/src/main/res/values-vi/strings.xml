@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Nước đi đầu tiên phải đặt ít nhất 2 quân</string>
     <string name="words_move_error_not_connected">Các quân phải nối với quân đã có trên bàn</string>
     <string name="words_move_error_no_words">Không tạo được từ hợp lệ</string>
+    <string name="words_validation_offline">Kiểm tra ngoại tuyến — bạn vẫn có thể gửi.</string>
+    <string name="words_validation_unknown_words">Có chứa từ không xác định. Bạn vẫn có thể gửi.</string>
 </resources>

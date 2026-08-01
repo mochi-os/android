@@ -312,4 +312,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">ผู้ติดตาม %1$d คน</item>
     </plurals>
+    <string name="account_token_label">เซสชัน Mochi</string>
 </resources>

@@ -312,4 +312,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">ຜູ້ຕິດຕາມ %1$d ຄົນ</item>
     </plurals>
+    <string name="account_token_label">ເຊດຊັນ Mochi</string>
 </resources>

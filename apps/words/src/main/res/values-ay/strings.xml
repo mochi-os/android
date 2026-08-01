@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Nayrïr kuyuwix pä ficha jan ukax juk\'ampi uskuñapawa</string>
     <string name="words_move_error_not_connected">Fichanakax tableron utjkir fichanakampi mayacht\'atäñapawa</string>
     <string name="words_move_error_no_words">Janiw kuna wakisir arus lurkiti</string>
+    <string name="words_validation_offline">Uñakipawix jan internetonkiti — jichhakamaw apaqasma.</string>
+    <string name="words_validation_unknown_words">Jan uñt\'ata arunaka utji. Jichhakamaw apaqasma.</string>
 </resources>

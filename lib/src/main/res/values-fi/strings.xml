@@ -313,4 +313,5 @@
         <item quantity="one">%1$d tilaaja</item>
         <item quantity="other">%1$d tilaajaa</item>
     </plurals>
+    <string name="account_token_label">Mochi-istunto</string>
 </resources>

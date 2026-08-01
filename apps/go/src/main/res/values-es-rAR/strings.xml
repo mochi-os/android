@@ -14,7 +14,7 @@
     <string name="go_status_you_win">¡Ganaste!</string>
 
     <string name="go_app_title">Go</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

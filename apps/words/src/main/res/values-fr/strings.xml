@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Le premier coup doit placer au moins 2 tuiles</string>
     <string name="words_move_error_not_connected">Les tuiles doivent être reliées aux tuiles déjà sur le plateau</string>
     <string name="words_move_error_no_words">Aucun mot valide formé</string>
+    <string name="words_validation_offline">Validation hors ligne — vous pouvez quand même valider.</string>
+    <string name="words_validation_unknown_words">Contient des mots inconnus. Vous pouvez quand même valider.</string>
 </resources>

@@ -313,4 +313,5 @@
         <item quantity="one">%1$d پازوال</item>
         <item quantity="other">%1$d پازوالان</item>
     </plurals>
+    <string name="account_token_label">د Mochi ناسته</string>
 </resources>

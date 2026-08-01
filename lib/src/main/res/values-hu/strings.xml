@@ -313,4 +313,5 @@
         <item quantity="one">%1$d feliratkozó</item>
         <item quantity="other">%1$d feliratkozó</item>
     </plurals>
+    <string name="account_token_label">Mochi munkamenet</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Prvi potez mora postaviti najmanje 2 pločice</string>
     <string name="words_move_error_not_connected">Pločice se moraju spajati s pločicama na ploči</string>
     <string name="words_move_error_no_words">Nijedna važeća riječ nije formirana</string>
+    <string name="words_validation_offline">Provjera je van mreže — i dalje možete poslati.</string>
+    <string name="words_validation_unknown_words">Sadrži nepoznate riječi. I dalje možete poslati.</string>
 </resources>

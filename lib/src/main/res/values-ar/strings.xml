@@ -317,4 +317,5 @@
         <item quantity="many">%1$d مشتركًا</item>
         <item quantity="other">%1$d مشترك</item>
     </plurals>
+    <string name="account_token_label">جلسة Mochi</string>
 </resources>

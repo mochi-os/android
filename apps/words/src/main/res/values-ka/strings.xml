@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">პირველ სვლაზე უნდა განთავსდეს სულ მცირე 2 ფილა</string>
     <string name="words_move_error_not_connected">ფილები უნდა შეუერთდეს დაფაზე არსებულ ფილებს</string>
     <string name="words_move_error_no_words">სწორი სიტყვა არ შედგა</string>
+    <string name="words_validation_offline">ვალიდაცია ხაზგარეშეა — მაინც შეგიძლიათ გაგზავნა.</string>
+    <string name="words_validation_unknown_words">შეიცავს უცნობ სიტყვებს. მაინც შეგიძლიათ გაგზავნა.</string>
 </resources>

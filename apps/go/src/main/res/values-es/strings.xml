@@ -11,7 +11,6 @@
     <string name="go_app_title">Ir</string>
     <string name="go_captures_black_sr">Capturas de negras</string>
     <string name="go_captures_white_sr">Capturas de blancas</string>
-    <string name="go_chat_close">Cerrar chat</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_color_black">Negro</string>
     <string name="go_color_white">Blanco</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Terminada</string>
     <string name="go_status_resigned">Abandonada</string>
     <string name="go_card_vs">contra %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Detalles de la partida próximamente</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nueva partida de Go</string>
     <string name="go_new_game_no_friends">Necesitas añadir un amigo antes de poder empezar una partida.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Puntos añadidos al marcador de Blanco para compensar que Negro empieza primero</string>
     <string name="go_new_game_create_error">Error al iniciar la partida</string>
 
+    <string name="go_board_a11y">Tablero de Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Tablero de Go de %1$d×%1$d, tu turno para colocar una piedra negra</string>
+    <string name="go_board_a11y_turn_white">Tablero de Go de %1$d×%1$d, tu turno para colocar una piedra blanca</string>
 </resources>

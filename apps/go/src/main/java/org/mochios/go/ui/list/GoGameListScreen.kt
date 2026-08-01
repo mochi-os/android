@@ -182,7 +182,7 @@ fun GoGameListScreen(
                                 myIdentity = uiState.identity.orEmpty(),
                                 onOpen = { game ->
                                     navController.navigate(
-                                        GoApp.gameDetail(game.fingerprint ?: game.id),
+                                        GoApp.gameDetail(game.id),
                                     )
                                 },
                             )

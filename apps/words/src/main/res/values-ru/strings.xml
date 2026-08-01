@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">В первом ходе нужно выставить не менее 2 фишек</string>
     <string name="words_move_error_not_connected">Фишки должны соединяться с фишками на доске</string>
     <string name="words_move_error_no_words">Не составлено ни одного допустимого слова</string>
+    <string name="words_validation_offline">Проверка недоступна — вы всё равно можете отправить ход.</string>
+    <string name="words_validation_unknown_words">Содержит неизвестные слова. Вы всё равно можете отправить ход.</string>
 </resources>

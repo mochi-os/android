@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Prima mutare trebuie să plaseze cel puțin 2 piese</string>
     <string name="words_move_error_not_connected">Piesele trebuie să se lege de piesele de pe tablă</string>
     <string name="words_move_error_no_words">Niciun cuvânt valid format</string>
+    <string name="words_validation_offline">Validare offline — poți totuși să trimiți.</string>
+    <string name="words_validation_unknown_words">Conține cuvinte necunoscute. Poți totuși să trimiți.</string>
 </resources>

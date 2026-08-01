@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Eerste zet moet minstens 2 stenen plaatsen</string>
     <string name="words_move_error_not_connected">Stenen moeten aansluiten op stenen die al op het bord liggen</string>
     <string name="words_move_error_no_words">Geen geldige woorden gevormd</string>
+    <string name="words_validation_offline">Validatie offline — je kunt toch indienen.</string>
+    <string name="words_validation_unknown_words">Bevat onbekende woorden. Je kunt toch indienen.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ilkinji hereketde iň azyndan 2 plitka goýulmaly</string>
     <string name="words_move_error_not_connected">Plitkalar tagtadaky bar bolan plitkalara birikmeli</string>
     <string name="words_move_error_no_words">Hiç hili dogry söz döremedi</string>
+    <string name="words_validation_offline">Barlag awtonom — siz ýene-de iberip bilersiňiz.</string>
+    <string name="words_validation_unknown_words">Näbelli sözleri öz içine alýar. Siz ýene-de iberip bilersiňiz.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">لومړی حرکت باید لږ تر لږه ۲ ټایلونه کېږدي</string>
     <string name="words_move_error_not_connected">ټایلونه باید په تخته کې له موجودو ټایلونو سره ونښلي</string>
     <string name="words_move_error_no_words">هیڅ سمه کلمه جوړه نه شوه</string>
+    <string name="words_validation_offline">تاييد آفلاين دی — تاسو لا هم سپارلی شئ.</string>
+    <string name="words_validation_unknown_words">ناڅرګند کلمې لري. تاسو لا هم سپارلی شئ.</string>
 </resources>

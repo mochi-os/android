@@ -94,4 +94,6 @@
     <string name="words_detail_chat_exchanged">%1$s exchanged tiles</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+    <string name="words_validation_offline">Validation offline — you can still submit.</string>
+    <string name="words_validation_unknown_words">Contains unknown words. You can still submit.</string>
 </resources>

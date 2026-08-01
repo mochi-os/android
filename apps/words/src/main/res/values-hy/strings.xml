@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Առաջին քայլով պետք է տեղադրվի առնվազն 2 սալիկ</string>
     <string name="words_move_error_not_connected">Սալիկները պետք է միանան դաշտի առկա սալիկներին</string>
     <string name="words_move_error_no_words">Վավեր բառեր չեն կազմվել</string>
+    <string name="words_validation_offline">Ստուգումն անհասանելի է — կարող ես այնուամենայնիվ ուղարկել։</string>
+    <string name="words_validation_unknown_words">Պարունակում է անծանոթ բառեր։ Կարող ես այնուամենայնիվ ուղարկել։</string>
 </resources>

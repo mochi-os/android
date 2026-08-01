@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Бірінші жүрісте кемінде 2 тас қойылуы керек</string>
     <string name="words_move_error_not_connected">Тастар тақтадағы бар тастарға жалғануы керек</string>
     <string name="words_move_error_no_words">Жарамды сөз құралмады</string>
+    <string name="words_validation_offline">Тексеру желіден тыс — бәрібір жібере аласыз.</string>
+    <string name="words_validation_unknown_words">Белгісіз сөздер бар. Бәрібір жібере аласыз.</string>
 </resources>

@@ -84,4 +84,6 @@
     <string name="words_move_error_first_move_two_tiles">Lëvizja e parë duhet të vendosë të paktën 2 pllaka</string>
     <string name="words_move_error_not_connected">Pllakat duhet të lidhen me pllakat në tabelë</string>
     <string name="words_move_error_no_words">Nuk u formua asnjë fjalë e vlefshme</string>
+    <string name="words_validation_offline">Vërtetimi është jashtë linje — mund ta dorëzosh prapëseprapë.</string>
+    <string name="words_validation_unknown_words">Përmban fjalë të panjohura. Mund ta dorëzosh prapëseprapë.</string>
 </resources>

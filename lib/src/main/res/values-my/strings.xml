@@ -312,4 +312,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">စာဖတ်သူ %1$d ဦး</item>
     </plurals>
+    <string name="account_token_label">Mochi စက်ရှင်</string>
 </resources>

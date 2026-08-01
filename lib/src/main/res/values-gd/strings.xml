@@ -315,4 +315,5 @@
         <item quantity="few">%1$d luchd-fo-sgrìobhaidh</item>
         <item quantity="other">%1$d luchd-fo-sgrìobhaidh</item>
     </plurals>
+    <string name="account_token_label">Seisean Mochi</string>
 </resources>

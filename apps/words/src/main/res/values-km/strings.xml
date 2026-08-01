@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">ការវាយលើកដំបូងត្រូវដាក់ក្បឿងយ៉ាងតិច 2</string>
     <string name="words_move_error_not_connected">ក្បឿងត្រូវភ្ជាប់ទៅក្បឿងដែលមានស្រាប់លើក្តារ</string>
     <string name="words_move_error_no_words">គ្មានពាក្យត្រឹមត្រូវត្រូវបានបង្កើតទេ</string>
+    <string name="words_validation_offline">ការផ្ទៀងផ្ទាត់នៅក្រៅបណ្ដាញ — អ្នកនៅតែអាចដាក់ស្នើបាន។</string>
+    <string name="words_validation_unknown_words">មានពាក្យដែលមិនស្គាល់។ អ្នកនៅតែអាចដាក់ស្នើបាន។</string>
 </resources>

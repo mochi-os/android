@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Eerste skuif moet ten minste 2 teëls plaas</string>
     <string name="words_move_error_not_connected">Teëls moet aan bestaande teëls op die bord raak</string>
     <string name="words_move_error_no_words">Geen geldige woorde gevorm nie</string>
+    <string name="words_validation_offline">Validasie is vanlyn — jy kan steeds indien.</string>
+    <string name="words_validation_unknown_words">Bevat onbekende woorde. Jy kan steeds indien.</string>
 </resources>

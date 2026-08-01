@@ -86,4 +86,6 @@
     <string name="words_move_error_first_move_two_tiles">A primeira jogada deve colocar pelo menos 2 peças</string>
     <string name="words_move_error_not_connected">As peças devem se conectar a peças já no tabuleiro</string>
     <string name="words_move_error_no_words">Nenhuma palavra válida formada</string>
+    <string name="words_validation_offline">Validação offline — você ainda pode enviar.</string>
+    <string name="words_validation_unknown_words">Contém palavras desconhecidas. Você ainda pode enviar.</string>
 </resources>

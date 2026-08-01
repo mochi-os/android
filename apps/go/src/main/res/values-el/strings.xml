@@ -11,7 +11,6 @@
     <string name="go_app_title">Μετάβαση</string>
     <string name="go_captures_black_sr">Μαύρες αιχμαλωσίες</string>
     <string name="go_captures_white_sr">Λευκές αιχμαλωσίες</string>
-    <string name="go_chat_close">Κλείσιμο συνομιλίας</string>
     <string name="go_chat_title">Συνομιλία</string>
     <string name="go_color_black">Μαύρο</string>
     <string name="go_color_white">Λευκό</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Ολοκληρώθηκε</string>
     <string name="go_status_resigned">Παραιτήθηκε</string>
     <string name="go_card_vs">κατά %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Λεπτομέρειες παρτίδας σύντομα</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Νέα παρτίδα Go</string>
     <string name="go_new_game_no_friends">Πρέπει να προσθέσετε έναν φίλο πριν μπορέσετε να ξεκινήσετε μια παρτίδα.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Πόντοι που προστίθενται στο σκορ του Λευκού για να αντισταθμίσουν ότι ο Μαύρος ξεκινάει πρώτος</string>
     <string name="go_new_game_create_error">Η έναρξη της παρτίδας απέτυχε</string>
 
+    <string name="go_board_a11y">Πίνακας Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Ταμπλό Go %1$d×%1$d, σειρά σας να τοποθετήσετε μαύρο πιόνι</string>
+    <string name="go_board_a11y_turn_white">Ταμπλό Go %1$d×%1$d, σειρά σας να τοποθετήσετε λευκό πιόνι</string>
 </resources>

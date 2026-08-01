@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ukunyakaza kokuqala kumele kubeke okungenani amathayela ama-2</string>
     <string name="words_move_error_not_connected">Amathayela kumele axhumane namathayela asevele ekhona ebhodini</string>
     <string name="words_move_error_no_words">Awekho amagama avumelekile akhiwe</string>
+    <string name="words_validation_offline">Ukuqinisekisa akukho ku-inthanethi — usengakwazi ukuthumela.</string>
+    <string name="words_validation_unknown_words">Iqukethe amagama angaziwa. Usengakwazi ukuthumela.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">የመጀመሪያው እንቅስቃሴ ቢያንስ 2 ፊደላት ማስቀመጥ አለበት</string>
     <string name="words_move_error_not_connected">ፊደላት በሰሌዳው ላይ ካሉ ፊደላት ጋር መገናኘት አለባቸው</string>
     <string name="words_move_error_no_words">ምንም ትክክለኛ ቃል አልተፈጠረም</string>
+    <string name="words_validation_offline">ማረጋገጫ ከመስመር ውጪ ነው — አሁንም ማስገባት ይችላሉ።</string>
+    <string name="words_validation_unknown_words">ያልታወቁ ቃላት ይዟል። አሁንም ማስገባት ይችላሉ።</string>
 </resources>

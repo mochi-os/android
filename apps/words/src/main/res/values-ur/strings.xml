@@ -84,4 +84,6 @@
     <string name="words_move_error_first_move_two_tiles">پہلی چال میں کم از کم 2 ٹائلیں رکھنی ہوں گی</string>
     <string name="words_move_error_not_connected">ٹائلیں بورڈ پر موجود ٹائلوں سے جڑنی چاہئیں</string>
     <string name="words_move_error_no_words">کوئی درست لفظ نہیں بنا</string>
+    <string name="words_validation_offline">تصدیق آف لائن ہے — آپ پھر بھی جمع کر سکتے ہیں۔</string>
+    <string name="words_validation_unknown_words">نامعلوم الفاظ پر مشتمل ہے۔ آپ پھر بھی جمع کر سکتے ہیں۔</string>
 </resources>

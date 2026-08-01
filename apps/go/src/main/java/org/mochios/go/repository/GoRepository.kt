@@ -119,7 +119,3 @@ class GoRepository @Inject constructor(
     }
 }
 
-// Convenience extension so screens can do `messages.toList()` without a
-// `GetMessagesResponse.messages` access — kept here rather than in the model
-// file so it stays grouped with the consumer.
-fun GetMessagesResponse.toList(): List<GameMessage> = messages

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Birinchi yurishda kamida 2 ta plitka qoʻyilishi kerak</string>
     <string name="words_move_error_not_connected">Plitkalar doskadagi mavjud plitkalarga ulanishi kerak</string>
     <string name="words_move_error_no_words">Hech qanday toʻgʻri soʻz hosil boʻlmadi</string>
+    <string name="words_validation_offline">Tekshiruv oflayn — baribir yuborishingiz mumkin.</string>
+    <string name="words_validation_unknown_words">Notanish soʻzlar bor. Baribir yuborishingiz mumkin.</string>
 </resources>

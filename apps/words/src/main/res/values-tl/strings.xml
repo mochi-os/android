@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Dapat maglagay ng hindi bababa sa 2 tile ang unang galaw</string>
     <string name="words_move_error_not_connected">Dapat dumikit ang mga tile sa mga tile na nasa board</string>
     <string name="words_move_error_no_words">Walang nabuong balidong salita</string>
+    <string name="words_validation_offline">Offline ang pagpapatunay — puwede ka pa ring magsumite.</string>
+    <string name="words_validation_unknown_words">May mga salitang hindi kilala. Puwede ka pa ring magsumite.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Rhaid i\'r symudiad cyntaf osod o leiaf 2 deilsen</string>
     <string name="words_move_error_not_connected">Rhaid i\'r teils gysylltu â theils sydd eisoes ar y bwrdd</string>
     <string name="words_move_error_no_words">Ni ffurfiwyd unrhyw air dilys</string>
+    <string name="words_validation_offline">Dilysu all-lein — gallwch gyflwyno o hyd.</string>
+    <string name="words_validation_unknown_words">Mae\'n cynnwys geiriau anhysbys. Gallwch gyflwyno o hyd.</string>
 </resources>

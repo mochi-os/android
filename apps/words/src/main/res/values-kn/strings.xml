@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">ಮೊದಲ ನಡೆಯಲ್ಲಿ ಕನಿಷ್ಠ 2 ಟೈಲ್‌ಗಳನ್ನು ಇರಿಸಬೇಕು</string>
     <string name="words_move_error_not_connected">ಟೈಲ್‌ಗಳು ಫಲಕದಲ್ಲಿರುವ ಟೈಲ್‌ಗಳಿಗೆ ಸಂಪರ್ಕಗೊಳ್ಳಬೇಕು</string>
     <string name="words_move_error_no_words">ಯಾವುದೇ ಮಾನ್ಯ ಪದ ರೂಪುಗೊಂಡಿಲ್ಲ</string>
+    <string name="words_validation_offline">ಪರಿಶೀಲನೆ ಆಫ್‌ಲೈನ್ — ನೀವು ಇನ್ನೂ ಸಲ್ಲಿಸಬಹುದು.</string>
+    <string name="words_validation_unknown_words">ತಿಳಿದಿಲ್ಲದ ಪದಗಳಿವೆ. ನೀವು ಇನ್ನೂ ಸಲ್ಲಿಸಬಹುದು.</string>
 </resources>

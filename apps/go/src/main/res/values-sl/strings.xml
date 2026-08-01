@@ -10,7 +10,6 @@
     <string name="go_app_title">Pojdi</string>
     <string name="go_captures_black_sr">Črne ujetnice</string>
     <string name="go_captures_white_sr">Bele ujetnice</string>
-    <string name="go_chat_close">Zapri klepet</string>
     <string name="go_chat_title">Klepet</string>
     <string name="go_color_black">Črna</string>
     <string name="go_color_white">Bele</string>
@@ -71,11 +70,13 @@
     <string name="go_status_finished">Končana</string>
     <string name="go_status_resigned">Predan</string>
     <string name="go_card_vs">proti %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Podrobnosti partije kmalu</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nova Go partija</string>
     <string name="go_new_game_no_friends">Morate dodati prijatelja, preden lahko začnete partijo.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Točke, dodane rezultatu Belega, da kompenzirajo, da Črni začne prvi</string>
     <string name="go_new_game_create_error">Začetek partije ni uspel</string>
+    <string name="go_board_a11y">Tabla Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Go plošča %1$d×%1$d, na vrsti ste s črnim kamnom</string>
+    <string name="go_board_a11y_turn_white">Go plošča %1$d×%1$d, na vrsti ste z belim kamnom</string>
 </resources>

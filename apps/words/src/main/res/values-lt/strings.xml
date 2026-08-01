@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Pirmu ėjimu reikia padėti bent 2 korteles</string>
     <string name="words_move_error_not_connected">Kortelės turi jungtis su lentoje esančiomis kortelėmis</string>
     <string name="words_move_error_no_words">Nesudaryta nė vieno tinkamo žodžio</string>
+    <string name="words_validation_offline">Tikrinimas neprisijungus — vis tiek galite pateikti.</string>
+    <string name="words_validation_unknown_words">Yra nežinomų žodžių. Vis tiek galite pateikti.</string>
 </resources>

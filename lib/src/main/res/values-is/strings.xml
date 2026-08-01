@@ -313,4 +313,5 @@
         <item quantity="one">%1$d áskrifandi</item>
         <item quantity="other">%1$d áskrifendur</item>
     </plurals>
+    <string name="account_token_label">Mochi-lota</string>
 </resources>

@@ -84,4 +84,6 @@
     <string name="words_move_error_first_move_two_tiles">Prva poteza mora položiti vsaj 2 ploščici</string>
     <string name="words_move_error_not_connected">Ploščice se morajo dotikati ploščic na plošči</string>
     <string name="words_move_error_no_words">Nobena veljavna beseda ni nastala</string>
+    <string name="words_validation_offline">Preverjanje ni na voljo – potezo lahko vseeno oddate.</string>
+    <string name="words_validation_unknown_words">Vsebuje neznane besede. Potezo lahko vseeno oddate.</string>
 </resources>

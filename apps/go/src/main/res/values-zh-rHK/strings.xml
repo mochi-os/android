@@ -11,7 +11,6 @@
     <string name="go_app_title">圍棋</string>
     <string name="go_captures_black_sr">黑棋俘獲</string>
     <string name="go_captures_white_sr">白棋俘獲</string>
-    <string name="go_chat_close">關閉聊天</string>
     <string name="go_chat_title">聊天</string>
     <string name="go_color_black">黑色</string>
     <string name="go_color_white">白方</string>
@@ -64,7 +63,7 @@
     <string name="go_status_you_win">您贏了!</string>
     <string name="go_status_your_move">輪到您</string>
 
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
 
 </resources>

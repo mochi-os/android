@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Der erste Zug muss mindestens 2 Steine legen</string>
     <string name="words_move_error_not_connected">Steine müssen an vorhandene Steine auf dem Brett anschließen</string>
     <string name="words_move_error_no_words">Keine gültigen Wörter gebildet</string>
+    <string name="words_validation_offline">Validierung offline – du kannst trotzdem einreichen.</string>
+    <string name="words_validation_unknown_words">Enthält unbekannte Wörter. Du kannst trotzdem einreichen.</string>
 </resources>

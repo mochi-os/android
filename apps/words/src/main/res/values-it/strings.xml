@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">La prima mossa deve posizionare almeno 2 tessere</string>
     <string name="words_move_error_not_connected">Le tessere devono collegarsi a quelle già sul tabellone</string>
     <string name="words_move_error_no_words">Nessuna parola valida formata</string>
+    <string name="words_validation_offline">Convalida offline — puoi comunque inviare.</string>
+    <string name="words_validation_unknown_words">Contiene parole sconosciute. Puoi comunque inviare.</string>
 </resources>

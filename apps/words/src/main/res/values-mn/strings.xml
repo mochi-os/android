@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Эхний нүүдэлд дор хаяж 2 хавтан тавих ёстой</string>
     <string name="words_move_error_not_connected">Хавтангууд самбар дээрх хавтангуудтай холбогдох ёстой</string>
     <string name="words_move_error_no_words">Зөв үг үүсээгүй байна</string>
+    <string name="words_validation_offline">Шалгалт офлайн байна — та одоо ч илгээж болно.</string>
+    <string name="words_validation_unknown_words">Үл мэдэгдэх үгс агуулсан байна. Та одоо ч илгээж болно.</string>
 </resources>

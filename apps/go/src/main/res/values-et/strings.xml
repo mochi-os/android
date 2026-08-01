@@ -11,7 +11,6 @@
     <string name="go_app_title">Mine</string>
     <string name="go_captures_black_sr">Mustad vangistused</string>
     <string name="go_captures_white_sr">Valged vangistused</string>
-    <string name="go_chat_close">Sulge vestlus</string>
     <string name="go_chat_title">Vestlus</string>
     <string name="go_color_black">Must</string>
     <string name="go_color_white">Valge</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Lõpetatud</string>
     <string name="go_status_resigned">Andis alla</string>
     <string name="go_card_vs">vastu %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Partii üksikasjad varsti</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Uus Go partii</string>
     <string name="go_new_game_no_friends">Enne partii alustamist pead lisama sõbra.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Valgele lisatud punktid, et kompenseerida Musta esimene käik</string>
     <string name="go_new_game_create_error">Partii alustamine ebaõnnestus</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go laud</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d Go laud, teie kord asetada must kivi</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d Go laud, teie kord asetada valge kivi</string>
 </resources>

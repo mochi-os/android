@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Fyrsti leikur verður að leggja að minnsta kosti 2 stafi</string>
     <string name="words_move_error_not_connected">Stafir verða að tengjast stöfum sem fyrir eru á borðinu</string>
     <string name="words_move_error_no_words">Engin gild orð mynduð</string>
+    <string name="words_validation_offline">Staðfesting án nettengingar — þú getur samt sent inn.</string>
+    <string name="words_validation_unknown_words">Inniheldur óþekkt orð. Þú getur samt sent inn.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">మొదటి ఎత్తులో కనీసం 2 టైల్స్ ఉంచాలి</string>
     <string name="words_move_error_not_connected">టైల్స్ బోర్డుపై ఉన్న టైల్స్‌తో అనుసంధానం కావాలి</string>
     <string name="words_move_error_no_words">చెల్లుబాటు అయ్యే పదాలు ఏవీ ఏర్పడలేదు</string>
+    <string name="words_validation_offline">ధ్రువీకరణ ఆఫ్‌లైన్‌లో ఉంది — మీరు ఇప్పటికీ సమర్పించవచ్చు.</string>
+    <string name="words_validation_unknown_words">తెలియని పదాలు ఉన్నాయి. మీరు ఇప్పటికీ సమర్పించవచ్చు.</string>
 </resources>

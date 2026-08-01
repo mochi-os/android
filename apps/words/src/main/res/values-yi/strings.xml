@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">דער ערשטער גאַנג מוז שטעלן לפּחות 2 ציגלען</string>
     <string name="words_move_error_not_connected">די ציגלען מוזן זיך פֿאַרבינדן מיט די ציגלען אויפֿן ברעט</string>
     <string name="words_move_error_no_words">קיין גילטיקע ווערטער זײַנען ניט געשאַפֿן געוואָרן</string>
+    <string name="words_validation_offline">באַשטעטיקונג אָפֿלײַן — איר קענט נאָך אַלץ אַרײַנגעבן.</string>
+    <string name="words_validation_unknown_words">אַנטהאַלט אומבאַקאַנטע ווערטער. איר קענט נאָך אַלץ אַרײַנגעבן.</string>
 </resources>

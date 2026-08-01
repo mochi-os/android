@@ -11,7 +11,6 @@
     <string name="go_app_title">Siirry</string>
     <string name="go_captures_black_sr">Mustan vangit</string>
     <string name="go_captures_white_sr">Valkean vangit</string>
-    <string name="go_chat_close">Sulje keskustelu</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_color_black">Musta</string>
     <string name="go_color_white">Valkoinen</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Päättynyt</string>
     <string name="go_status_resigned">Luovutettu</string>
     <string name="go_card_vs">vastaan %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Pelin tiedot tulossa pian</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Uusi Go-peli</string>
     <string name="go_new_game_no_friends">Sinun on lisättävä ystävä, ennen kuin voit aloittaa pelin.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Valkoisen pistemäärään lisättävät pisteet kompensoimaan Mustan ensimmäistä siirtoa</string>
     <string name="go_new_game_create_error">Pelin aloitus epäonnistui</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go-lauta</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-lauta, vuorosi asettaa musta kivi</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-lauta, vuorosi asettaa valkoinen kivi</string>
 </resources>

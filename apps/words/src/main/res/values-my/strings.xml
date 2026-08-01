@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">ပထမအလှည့်တွင် ကြွေပြား အနည်းဆုံး ၂ ခု ချရမည်</string>
     <string name="words_move_error_not_connected">ကြွေပြားများသည် ကစားခုံပေါ်ရှိ ကြွေပြားများနှင့် ဆက်စပ်ရမည်</string>
     <string name="words_move_error_no_words">မှန်ကန်သော စကားလုံး မဖြစ်ပေါ်ပါ</string>
+    <string name="words_validation_offline">အတည်ပြုစစ်ဆေးမှု အော့ဖ်လိုင်းဖြစ်နေသည် — သင် ဆက်လက်တင်သွင်းနိုင်ပါသေးသည်။</string>
+    <string name="words_validation_unknown_words">မသိသော စကားလုံးများ ပါဝင်နေသည်။ သင် ဆက်လက်တင်သွင်းနိုင်ပါသေးသည်။</string>
 </resources>

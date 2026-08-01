@@ -316,4 +316,5 @@
         <item quantity="many">%1$d síntiúsóir</item>
         <item quantity="other">%1$d síntiúsóir</item>
     </plurals>
+    <string name="account_token_label">Seisiún Mochi</string>
 </resources>

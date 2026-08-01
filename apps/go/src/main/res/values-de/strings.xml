@@ -11,7 +11,6 @@
     <string name="go_app_title">Los</string>
     <string name="go_captures_black_sr">Schwarz Gefangene</string>
     <string name="go_captures_white_sr">Weiß Gefangene</string>
-    <string name="go_chat_close">Chat schließen</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_color_black">Schwarz</string>
     <string name="go_color_white">Weiß</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Beendet</string>
     <string name="go_status_resigned">Aufgegeben</string>
     <string name="go_card_vs">gegen %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Partiedetails folgen in Kürze</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Neue Go-Partie</string>
     <string name="go_new_game_no_friends">Du musst einen Freund hinzufügen, bevor du eine Partie starten kannst.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Punkte, die Weiß zur Kompensation gutgeschrieben werden, weil Schwarz zuerst zieht</string>
     <string name="go_new_game_create_error">Start der Partie fehlgeschlagen</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go-Brett</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-Brett, Sie sind am Zug mit einem schwarzen Stein</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-Brett, Sie sind am Zug mit einem weißen Stein</string>
 </resources>

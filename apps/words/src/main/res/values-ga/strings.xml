@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ní mór don chéad bhogadh 2 thíl ar a laghad a chur síos</string>
     <string name="words_move_error_not_connected">Ní mór do na tíleanna nascadh le tíleanna atá ar an gclár cheana</string>
     <string name="words_move_error_no_words">Níor cruthaíodh aon fhocal bailí</string>
+    <string name="words_validation_offline">Bailíochtú as líne — is féidir leat é a sheoladh fós.</string>
+    <string name="words_validation_unknown_words">Tá focail anaithnide ann. Is féidir leat é a sheoladh fós.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ñawpaq puriypi iskay ficha utaq aswan churana</string>
     <string name="words_move_error_not_connected">Fichakunaqa tableropi kaq fichakunawan tinkisqa kanan</string>
     <string name="words_move_error_no_words">Mana allin simi paqarichisqachu</string>
+    <string name="words_validation_offline">Chiqaqchay offline kachkan — hinapas apachiyta atinkim.</string>
+    <string name="words_validation_unknown_words">Mana riqsisqa simikuna kachkan. Hinapas apachiyta atinkim.</string>
 </resources>

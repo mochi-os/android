@@ -11,7 +11,6 @@
     <string name="go_app_title">Перейти</string>
     <string name="go_captures_black_sr">Захваты чёрных</string>
     <string name="go_captures_white_sr">Захваты белых</string>
-    <string name="go_chat_close">Закрыть чат</string>
     <string name="go_chat_title">Чат</string>
     <string name="go_color_black">Чёрный</string>
     <string name="go_color_white">Белый</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Завершена</string>
     <string name="go_status_resigned">Сдалась</string>
     <string name="go_card_vs">против %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Подробности партии скоро будут доступны</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Новая партия Го</string>
     <string name="go_new_game_no_friends">Нужно добавить друга, прежде чем начать партию.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Очки, добавляемые к счёту Белых, чтобы компенсировать первый ход Чёрных</string>
     <string name="go_new_game_create_error">Не удалось начать партию</string>
 
+    <string name="go_board_a11y">Доска Го %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Доска го %1$d×%1$d, ваш ход поставить чёрный камень</string>
+    <string name="go_board_a11y_turn_white">Доска го %1$d×%1$d, ваш ход поставить белый камень</string>
 </resources>

@@ -11,7 +11,6 @@
     <string name="go_app_title">செல்</string>
     <string name="go_captures_black_sr">கருப்பு பிடிப்புகள்</string>
     <string name="go_captures_white_sr">வெள்ளை பிடிப்புகள்</string>
-    <string name="go_chat_close">அரட்டையை மூடு</string>
     <string name="go_chat_title">அரட்டை</string>
     <string name="go_color_black">கருப்பு</string>
     <string name="go_color_white">வெள்ளை</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Game detail coming soon</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">New Go game</string>
     <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
     <string name="go_new_game_create_error">Failed to start game</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go பலகை</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d கோ பலகை, கருப்புக் கல்லை வைக்க உங்கள் முறை</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d கோ பலகை, வெள்ளைக் கல்லை வைக்க உங்கள் முறை</string>
 </resources>

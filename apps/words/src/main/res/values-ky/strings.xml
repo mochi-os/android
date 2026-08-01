@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Биринчи жүрүштө кеминде 2 таш коюлушу керек</string>
     <string name="words_move_error_not_connected">Таштар тактайдагы бар таштарга уланышы керек</string>
     <string name="words_move_error_no_words">Жарактуу сөз түзүлгөн жок</string>
+    <string name="words_validation_offline">Текшерүү желиден тышкары — сиз дагы эле жөнөтө аласыз.</string>
+    <string name="words_validation_unknown_words">Белгисиз сөздөр бар. Сиз дагы эле жөнөтө аласыз.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">První tah musí položit alespoň 2 kameny</string>
     <string name="words_move_error_not_connected">Kameny musí navazovat na kameny už položené na desce</string>
     <string name="words_move_error_no_words">Nevzniklo žádné platné slovo</string>
+    <string name="words_validation_offline">Ověřování je offline – přesto můžeš odeslat.</string>
+    <string name="words_validation_unknown_words">Obsahuje neznámá slova. Přesto můžeš odeslat.</string>
 </resources>

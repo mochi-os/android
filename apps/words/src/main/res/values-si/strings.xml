@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">පළමු ගමනේදී අවම වශයෙන් ටයිල් 2ක් තැබිය යුතුය</string>
     <string name="words_move_error_not_connected">ටයිල් පුවරුවේ ඇති ටයිල් සමඟ සම්බන්ධ විය යුතුය</string>
     <string name="words_move_error_no_words">වලංගු වචන කිසිවක් සෑදී නැත</string>
+    <string name="words_validation_offline">තහවුරු කිරීම නොබැඳිය — ඔබට තවමත් ඉදිරිපත් කළ හැකිය.</string>
+    <string name="words_validation_unknown_words">නොදන්නා වචන අඩංගුයි. ඔබට තවමත් ඉදිරිපත් කළ හැකිය.</string>
 </resources>

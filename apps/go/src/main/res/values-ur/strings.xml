@@ -10,7 +10,6 @@
     <string name="go_app_title">جائیں</string>
     <string name="go_captures_black_sr">سیاہ پکڑے گئے</string>
     <string name="go_captures_white_sr">سفید پکڑے گئے</string>
-    <string name="go_chat_close">چیٹ بند کریں</string>
     <string name="go_chat_title">چیٹ</string>
     <string name="go_color_black">کالا</string>
     <string name="go_color_white">سفید</string>
@@ -71,11 +70,13 @@
     <string name="go_status_finished">مکمل</string>
     <string name="go_status_resigned">ہار مان لی</string>
     <string name="go_card_vs">بمقابلہ %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">کھیل کی تفصیلات جلد آ رہی ہیں</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">نیا Go کھیل</string>
     <string name="go_new_game_no_friends">کھیل شروع کرنے سے پہلے آپ کو دوست شامل کرنا ہوگا۔</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">سیاہ کے پہلے چلنے کی تلافی کے لیے سفید کے اسکور میں شامل کردہ پوائنٹس</string>
     <string name="go_new_game_create_error">کھیل شروع کرنے میں ناکام</string>
+    <string name="go_board_a11y">%1$d×%1$d Go بورڈ</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d گو بورڈ، سیاہ مہرہ رکھنے کی آپ کی باری</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d گو بورڈ، سفید مہرہ رکھنے کی آپ کی باری</string>
 </resources>

@@ -313,4 +313,5 @@
         <item quantity="one">%1$d വരിക്കാരൻ</item>
         <item quantity="other">%1$d വരിക്കാർ</item>
     </plurals>
+    <string name="account_token_label">Mochi സെഷൻ</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ñepyrũrãme oñemoĩ va\'erã 2 ficha michĩvéramo</string>
     <string name="words_move_error_not_connected">Umi ficha ojoaju va\'erã umi ficha oĩmava tablero-pe ndive</string>
     <string name="words_move_error_no_words">Ndojejapói mba\'eve ñe\'ẽ oikóva</string>
+    <string name="words_validation_offline">Jehechajey offline — ikatu gueteri remondo.</string>
+    <string name="words_validation_unknown_words">Oguereko ñe\'ẽ ojekuaa\'ỹva. Ikatu gueteri remondo.</string>
 </resources>

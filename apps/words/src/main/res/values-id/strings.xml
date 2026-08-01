@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Langkah pertama harus meletakkan minimal 2 ubin</string>
     <string name="words_move_error_not_connected">Ubin harus terhubung dengan ubin yang sudah ada di papan</string>
     <string name="words_move_error_no_words">Tidak ada kata valid yang terbentuk</string>
+    <string name="words_validation_offline">Validasi offline — kamu tetap bisa mengirim.</string>
+    <string name="words_validation_unknown_words">Berisi kata yang tidak dikenal. Kamu tetap bisa mengirim.</string>
 </resources>

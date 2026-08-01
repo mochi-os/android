@@ -18,15 +18,6 @@ data class GameViewResponse(
     val identity: String = "",
 )
 
-/**
- * The list endpoint returns the games array as the `data` value directly
- * (i.e. `{"data": [game, game, ...]}`), so the wrapper here mirrors that
- * shape — the `games` field comes from the repository wrapping the unwrapped
- * list, not from a server-side key.
- */
-data class GetGamesResponse(
-    val games: List<Game> = emptyList(),
-)
 
 data class GetMessagesResponse(
     val messages: List<GameMessage> = emptyList(),

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">ਪਹਿਲੀ ਚਾਲ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ 2 ਟਾਈਲਾਂ ਰੱਖਣੀਆਂ ਲਾਜ਼ਮੀ ਹਨ</string>
     <string name="words_move_error_not_connected">ਟਾਈਲਾਂ ਬੋਰਡ ਉੱਤੇ ਮੌਜੂਦ ਟਾਈਲਾਂ ਨਾਲ ਜੁੜਨੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ</string>
     <string name="words_move_error_no_words">ਕੋਈ ਵੈਧ ਸ਼ਬਦ ਨਹੀਂ ਬਣਿਆ</string>
+    <string name="words_validation_offline">ਪੁਸ਼ਟੀ ਔਫ਼ਲਾਈਨ ਹੈ — ਤੁਸੀਂ ਫਿਰ ਵੀ ਜਮ੍ਹਾਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string name="words_validation_unknown_words">ਅਣਜਾਣ ਸ਼ਬਦ ਹਨ। ਤੁਸੀਂ ਫਿਰ ਵੀ ਜਮ੍ਹਾਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
 </resources>

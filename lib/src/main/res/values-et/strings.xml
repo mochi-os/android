@@ -313,4 +313,5 @@
         <item quantity="one">%1$d tellija</item>
         <item quantity="other">%1$d tellijat</item>
     </plurals>
+    <string name="account_token_label">Mochi seanss</string>
 </resources>

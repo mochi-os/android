@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">पहिल चाल में कम से कम 2 टाइल रखे के पड़ी</string>
     <string name="words_move_error_not_connected">टाइल सब बोर्ड पर पहिले से रखल टाइल से जुड़ल होखे के चाहीं</string>
     <string name="words_move_error_no_words">कौनो सही शब्द ना बनल</string>
+    <string name="words_validation_offline">जाँच ऑफलाइन बा — रउआ अबहियों जमा कर सकेनी।</string>
+    <string name="words_validation_unknown_words">अनजान शब्द बा। रउआ अबहियों जमा कर सकेनी।</string>
 </resources>

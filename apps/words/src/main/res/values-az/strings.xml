@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">İlk gedişdə ən azı 2 daş qoyulmalıdır</string>
     <string name="words_move_error_not_connected">Daşlar lövhədəki mövcud daşlara birləşməlidir</string>
     <string name="words_move_error_no_words">Heç bir düzgün söz yaranmadı</string>
+    <string name="words_validation_offline">Yoxlama oflayndır — yenə də göndərə bilərsiniz.</string>
+    <string name="words_validation_unknown_words">Tanınmayan sözlər var. Yenə də göndərə bilərsiniz.</string>
 </resources>

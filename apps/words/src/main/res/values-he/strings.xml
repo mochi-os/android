@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">במהלך הראשון יש להניח לפחות 2 אריחים</string>
     <string name="words_move_error_not_connected">האריחים חייבים להתחבר לאריחים שכבר על הלוח</string>
     <string name="words_move_error_no_words">לא נוצרו מילים תקינות</string>
+    <string name="words_validation_offline">האימות לא זמין — עדיין אפשר לשלוח.</string>
+    <string name="words_validation_unknown_words">מכיל מילים לא מוכרות. עדיין אפשר לשלוח.</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Pirmajā gājienā jānovieto vismaz 2 kauliņi</string>
     <string name="words_move_error_not_connected">Kauliņiem jāsavienojas ar laukumā esošajiem kauliņiem</string>
     <string name="words_move_error_no_words">Nav izveidots neviens derīgs vārds</string>
+    <string name="words_validation_offline">Pārbaude ir bezsaistē — joprojām varat iesniegt.</string>
+    <string name="words_validation_unknown_words">Satur nezināmus vārdus. Joprojām varat iesniegt.</string>
 </resources>

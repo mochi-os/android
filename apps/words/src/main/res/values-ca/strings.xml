@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">La primera jugada ha de col·locar almenys 2 fitxes</string>
     <string name="words_move_error_not_connected">Les fitxes han de connectar amb fitxes ja col·locades al tauler</string>
     <string name="words_move_error_no_words">No s\'ha format cap paraula vàlida</string>
+    <string name="words_validation_offline">Validació fora de línia: tot i així pots enviar-ho.</string>
+    <string name="words_validation_unknown_words">Conté paraules desconegudes. Tot i així pots enviar-ho.</string>
 </resources>

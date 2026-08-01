@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">ആദ്യ നീക്കത്തിൽ കുറഞ്ഞത് 2 ടൈലുകൾ വയ്ക്കണം</string>
     <string name="words_move_error_not_connected">ടൈലുകൾ ബോർഡിലുള്ള ടൈലുകളുമായി ചേരണം</string>
     <string name="words_move_error_no_words">സാധുവായ വാക്കുകളൊന്നും ഉണ്ടായില്ല</string>
+    <string name="words_validation_offline">സ്ഥിരീകരണം ഓഫ്‌ലൈനാണ് — നിങ്ങൾക്ക് ഇപ്പോഴും സമർപ്പിക്കാം.</string>
+    <string name="words_validation_unknown_words">അജ്ഞാതമായ വാക്കുകൾ അടങ്ങിയിരിക്കുന്നു. നിങ്ങൾക്ക് ഇപ്പോഴും സമർപ്പിക്കാം.</string>
 </resources>

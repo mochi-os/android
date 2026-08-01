@@ -315,4 +315,5 @@
         <item quantity="many">%1$d odberateľa</item>
         <item quantity="other">%1$d odberateľov</item>
     </plurals>
+    <string name="account_token_label">Relácia Mochi</string>
 </resources>

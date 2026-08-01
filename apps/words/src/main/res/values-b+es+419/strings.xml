@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">La primera jugada debe colocar al menos 2 fichas</string>
     <string name="words_move_error_not_connected">Las fichas deben conectarse con fichas ya colocadas en el tablero</string>
     <string name="words_move_error_no_words">No se formó ninguna palabra válida</string>
+    <string name="words_validation_offline">Validación sin conexión: de todos modos puedes enviarlo.</string>
+    <string name="words_validation_unknown_words">Contiene palabras desconocidas. De todos modos puedes enviarlo.</string>
 </resources>

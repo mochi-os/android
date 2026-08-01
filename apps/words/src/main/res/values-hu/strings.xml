@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Az első lépésben legalább 2 követ kell lerakni</string>
     <string name="words_move_error_not_connected">A köveknek kapcsolódniuk kell a táblán lévő kövekhez</string>
     <string name="words_move_error_no_words">Nem jött létre érvényes szó</string>
+    <string name="words_validation_offline">Az ellenőrzés offline — ettől még beküldheted.</string>
+    <string name="words_validation_unknown_words">Ismeretlen szavakat tartalmaz. Ettől még beküldheted.</string>
 </resources>

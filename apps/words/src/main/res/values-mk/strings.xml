@@ -84,4 +84,6 @@
     <string name="words_move_error_first_move_two_tiles">Првиот потег мора да постави најмалку 2 плочки</string>
     <string name="words_move_error_not_connected">Плочките мора да се поврзат со постојните плочки на таблата</string>
     <string name="words_move_error_no_words">Не е формиран валиден збор</string>
+    <string name="words_validation_offline">Проверката е офлајн — сепак можете да го испратите.</string>
+    <string name="words_validation_unknown_words">Содржи непознати зборови. Сепак можете да го испратите.</string>
 </resources>

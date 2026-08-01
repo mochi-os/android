@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ìṣíkiri àkọ́kọ́ gbọ́dọ̀ gbé tile 2 sí ó kéré tán</string>
     <string name="words_move_error_not_connected">Àwọn tile gbọ́dọ̀ so mọ́ àwọn tile tó wà lórí pátákó</string>
     <string name="words_move_error_no_words">Kò sí ọ̀rọ̀ tó tọ́ tí a dá</string>
+    <string name="words_validation_offline">Ìfọwọ́sí kò sí lórí Íńtánẹ́ẹ̀tì — o ṣì lè fi sílẹ̀.</string>
+    <string name="words_validation_unknown_words">Ó ní àwọn ọ̀rọ̀ tí a kò mọ̀. O ṣì lè fi sílẹ̀.</string>
 </resources>

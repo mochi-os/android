@@ -315,4 +315,5 @@
         <item quantity="one">%1$d subscriptor</item>
         <item quantity="other">%1$d subscriptors</item>
     </plurals>
+    <string name="account_token_label">Sessió de Mochi</string>
 </resources>

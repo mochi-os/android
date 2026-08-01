@@ -50,6 +50,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -145,11 +146,12 @@ fun WordsGameDetailScreen(
 
     // ─── Lifecycle: refresh on resume ──────────────────────────────────
     val lifecycleOwner = LocalLifecycleOwner.current
-    LaunchedEffect(lifecycleOwner) {
+    DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) viewModel.refresh()
         }
         lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
     // ─── Live word validation ────────────────────────────────────────
@@ -311,9 +313,14 @@ private fun GameDetailContent(
     val draftScore: Int = remember(moveDraft) {
         if (moveDraft.status == DraftStatus.READY) moveDraft.result!!.totalScore else 0
     }
+    // Validation has to have finished. Web whitelists ready,
+    // ready_with_invalid_words and validation_unavailable but never 'checking';
+    // Android's enum has no checking state, so the flag carries it. Without
+    // this, submit stayed live through the 350ms debounce and the round-trip.
     val canSubmit = isMyTurn &&
         !state.exchangeMode &&
         moveDraft.status == DraftStatus.READY &&
+        !state.isValidationChecking &&
         !state.isSubmittingMove
     val canRecallMove = isMyTurn && state.pendingPlacements.isNotEmpty() && !state.isSubmittingMove
 
@@ -518,6 +525,7 @@ private fun GameDetailContent(
                                 canRecallMove = canRecallMove,
                                 isSubmitting = state.isSubmittingMove,
                                 isExchanging = state.isExchanging,
+                                validationUnavailable = state.validationUnavailable,
                             )
                         }
                     }
@@ -535,6 +543,9 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
+                        hasMore = state.hasMoreMessages,
+                        isLoadingMore = state.isLoadingMoreMessages,
+                        onLoadMore = { viewModel.loadMoreMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                     )
                 }
@@ -632,6 +643,9 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
+                        hasMore = state.hasMoreMessages,
+                        isLoadingMore = state.isLoadingMoreMessages,
+                        onLoadMore = { viewModel.loadMoreMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                     )
                 }
@@ -784,6 +798,9 @@ private fun GameChatColumn(
     messages: List<GameMessage>,
     myIdentity: String,
     isLoading: Boolean,
+    hasMore: Boolean,
+    isLoadingMore: Boolean,
+    onLoadMore: () -> Unit,
     onSend: (String, (Boolean) -> Unit) -> Unit,
 ) {
     val chatMessages = remember(messages) {
@@ -831,9 +848,9 @@ private fun GameChatColumn(
                 currentUserIdentity = myIdentity,
                 isLoading = isLoading,
                 isError = false,
-                hasMore = false,
-                isLoadingMore = false,
-                onLoadMore = {},
+                hasMore = hasMore,
+                isLoadingMore = isLoadingMore,
+                onLoadMore = onLoadMore,
                 onRetry = {},
                 moveMessageRenderer = { msg, isSent ->
                     {

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Първият ход трябва да постави поне 2 плочки</string>
     <string name="words_move_error_not_connected">Плочките трябва да се свързват с плочки на дъската</string>
     <string name="words_move_error_no_words">Не са образувани валидни думи</string>
+    <string name="words_validation_offline">Проверката е офлайн — все пак можете да изпратите.</string>
+    <string name="words_validation_unknown_words">Съдържа непознати думи. Все пак можете да изпратите.</string>
 </resources>

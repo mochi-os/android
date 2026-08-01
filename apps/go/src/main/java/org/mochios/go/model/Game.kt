@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName
  */
 data class Game(
     val id: String = "",
-    val fingerprint: String? = null,
     val identity: String = "",
     @SerializedName("identity_name")
     val identityName: String = "",
@@ -47,8 +46,6 @@ data class Game(
     val updated: Long = 0,
     val created: Long = 0,
 ) {
-    val isFinished: Boolean
-        get() = status == "finished" || status == "resigned" || status == "draw"
 
     /** Returns the opponent's display name relative to [myIdentity]. */
     fun opponentName(myIdentity: String): String =

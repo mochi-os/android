@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Први потез мора поставити најмање 2 плочице</string>
     <string name="words_move_error_not_connected">Плочице морају бити повезане с постојећим плочицама на табли</string>
     <string name="words_move_error_no_words">Није формирана ниједна важећа реч</string>
+    <string name="words_validation_offline">Провера је ван мреже — и даље можете да пошаљете потез.</string>
+    <string name="words_validation_unknown_words">Садржи непознате речи. И даље можете да пошаљете потез.</string>
 </resources>

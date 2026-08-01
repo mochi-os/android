@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Esimene käik peab asetama vähemalt 2 klotsi</string>
     <string name="words_move_error_not_connected">Klotsid peavad ühenduma mängulaual olevate klotsidega</string>
     <string name="words_move_error_no_words">Ühtegi sobivat sõna ei moodustunud</string>
+    <string name="words_validation_offline">Valideerimine on vallasrežiimis – saad ikkagi esitada.</string>
+    <string name="words_validation_unknown_words">Sisaldab tundmatuid sõnu. Saad ikkagi esitada.</string>
 </resources>

@@ -77,6 +77,9 @@ object AttachmentOpener {
         }
     }
 
+    /** Anything outside this class is replaced before a value reaches a path. */
+    private val UNSAFE_FILENAME = Regex("[^A-Za-z0-9._-]")
+
     private fun download(context: Context, url: String, attachment: Attachment): File {
         val dir = File(context.cacheDir, CACHE_DIR).apply { mkdirs() }
         val target = File(dir, cacheName(attachment))
@@ -97,12 +100,24 @@ object AttachmentOpener {
         return target
     }
 
-    /** Stable per-attachment cache filename, prefixed with the id to avoid collisions. */
+    /**
+     * Stable per-attachment cache filename, prefixed with the id to avoid
+     * collisions.
+     *
+     * The id is sanitised on the same terms as the name. It arrives from the
+     * server and is interpolated into a path that is written to before the
+     * FileProvider call that would reject an escaping one, so a `../`-bearing
+     * id would be an arbitrary write inside the app sandbox. Mochi's own server
+     * cannot emit one — mochi.attachment.store gates a peer-supplied id against
+     * ^[0-9a-z]{32}$ — but the user can point this app at any server, so the
+     * client should not be relying on that.
+     */
     private fun cacheName(attachment: Attachment): String {
         val safe = attachment.name.ifBlank { attachment.id }
-            .replace(Regex("[^A-Za-z0-9._-]"), "_")
+            .replace(UNSAFE_FILENAME, "_")
             .takeLast(100)
-        return "${attachment.id}_$safe"
+        val id = attachment.id.replace(UNSAFE_FILENAME, "_").takeLast(64)
+        return "${id}_$safe"
     }
 
     /**

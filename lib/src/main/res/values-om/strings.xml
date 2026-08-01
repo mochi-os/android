@@ -313,4 +313,5 @@
         <item quantity="one">%1$d galmeeffataa</item>
         <item quantity="other">%1$d galmeeffattoota</item>
     </plurals>
+    <string name="account_token_label">Wal-gahiinsa Mochi</string>
 </resources>

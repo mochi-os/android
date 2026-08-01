@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Første træk skal lægge mindst 2 brikker</string>
     <string name="words_move_error_not_connected">Brikker skal forbindes med brikker på brættet</string>
     <string name="words_move_error_no_words">Der blev ikke dannet gyldige ord</string>
+    <string name="words_validation_offline">Validering er offline – du kan stadig indsende.</string>
+    <string name="words_validation_unknown_words">Indeholder ukendte ord. Du kan stadig indsende.</string>
 </resources>

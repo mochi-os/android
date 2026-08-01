@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">İlk hamlede en az 2 taş oynanmalı</string>
     <string name="words_move_error_not_connected">Taşlar tahtadaki mevcut taşlara bağlanmalı</string>
     <string name="words_move_error_no_words">Geçerli kelime oluşmadı</string>
+    <string name="words_validation_offline">Doğrulama çevrimdışı — yine de gönderebilirsin.</string>
+    <string name="words_validation_unknown_words">Bilinmeyen sözcükler içeriyor. Yine de gönderebilirsin.</string>
 </resources>

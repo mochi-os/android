@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Tarkaanfiin jalqabaa yoo xiqqaate taayila 2 kaa\'uu qaba</string>
     <string name="words_move_error_not_connected">Taayilonni taayiloota gabatee irra jiran wajjin walqabachuu qabu</string>
     <string name="words_move_error_no_words">Jechi sirrii ta\'e hin uumamne</string>
+    <string name="words_validation_offline">Mirkaneessuun offline — amma illee galchuu dandeessa.</string>
+    <string name="words_validation_unknown_words">Jechoota hin beekamne qabata. Amma illee galchuu dandeessa.</string>
 </resources>

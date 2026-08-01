@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Första draget måste lägga minst 2 brickor</string>
     <string name="words_move_error_not_connected">Brickorna måste ansluta till befintliga brickor på spelplanen</string>
     <string name="words_move_error_no_words">Inga giltiga ord bildades</string>
+    <string name="words_validation_offline">Valideringen är offline – du kan ändå skicka in draget.</string>
+    <string name="words_validation_unknown_words">Innehåller okända ord. Du kan ändå skicka in draget.</string>
 </resources>

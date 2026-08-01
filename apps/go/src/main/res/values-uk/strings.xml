@@ -11,7 +11,6 @@
     <string name="go_app_title">Перейти</string>
     <string name="go_captures_black_sr">Чорні захоплення</string>
     <string name="go_captures_white_sr">Білі захоплення</string>
-    <string name="go_chat_close">Закрити чат</string>
     <string name="go_chat_title">Чат</string>
     <string name="go_color_black">Чорний</string>
     <string name="go_color_white">Білий</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Завершена</string>
     <string name="go_status_resigned">Здана</string>
     <string name="go_card_vs">проти %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Деталі партії незабаром</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Нова партія Го</string>
     <string name="go_new_game_no_friends">Вам потрібно додати друга, перш ніж ви зможете розпочати партію.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Очки, додані до рахунку Білого, щоб компенсувати, що Чорний ходить першим</string>
     <string name="go_new_game_create_error">Не вдалося розпочати партію</string>
 
+    <string name="go_board_a11y">Дошка Ґо %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Дошка ґо %1$d×%1$d, ваш хід поставити чорний камінь</string>
+    <string name="go_board_a11y_turn_white">Дошка ґо %1$d×%1$d, ваш хід поставити білий камінь</string>
 </resources>

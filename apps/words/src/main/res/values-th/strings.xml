@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">ตาแรกต้องวางอย่างน้อย 2 ตัว</string>
     <string name="words_move_error_not_connected">ตัวอักษรต้องเชื่อมกับตัวอักษรที่มีอยู่บนกระดาน</string>
     <string name="words_move_error_no_words">ไม่เกิดคำที่ถูกต้อง</string>
+    <string name="words_validation_offline">การตรวจสอบออฟไลน์ — คุณยังส่งได้</string>
+    <string name="words_validation_unknown_words">มีคำที่ไม่รู้จัก คุณยังส่งได้</string>
 </resources>

@@ -84,4 +84,6 @@
     <string name="words_move_error_first_move_two_tiles">Першы ход павінен пакласці не менш за 2 фішкі</string>
     <string name="words_move_error_not_connected">Фішкі павінны злучацца з фішкамі на дошцы</string>
     <string name="words_move_error_no_words">Не ўтворана ніводнага слушнага слова</string>
+    <string name="words_validation_offline">Праверка недаступная — вы ўсё роўна можаце адправіць.</string>
+    <string name="words_validation_unknown_words">Утрымлівае невядомыя словы. Вы ўсё роўна можаце адправіць.</string>
 </resources>

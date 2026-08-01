@@ -11,7 +11,6 @@
     <string name="go_app_title">Choď</string>
     <string name="go_captures_black_sr">Čierne zajatia</string>
     <string name="go_captures_white_sr">Biele zajatia</string>
-    <string name="go_chat_close">Zavrieť chat</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_color_black">Čierne</string>
     <string name="go_color_white">Biely</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Dokončená</string>
     <string name="go_status_resigned">Vzdaná</string>
     <string name="go_card_vs">proti %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Detaily partie už čoskoro</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nová partia Go</string>
     <string name="go_new_game_no_friends">Pred začatím partie musíte pridať priateľa.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Body pridané k skóre Bieleho ako kompenzácia za to, že Čierny ťahá prvý</string>
     <string name="go_new_game_create_error">Začatie partie zlyhalo</string>
 
+    <string name="go_board_a11y">Doska Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Doska go %1$d×%1$d, ste na ťahu s čiernym kameňom</string>
+    <string name="go_board_a11y_turn_white">Doska go %1$d×%1$d, ste na ťahu s bielym kameňom</string>
 </resources>

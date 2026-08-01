@@ -314,4 +314,5 @@
         <item quantity="few">%1$d abonați</item>
         <item quantity="other">%1$d de abonați</item>
     </plurals>
+    <string name="account_token_label">Sesiune Mochi</string>
 </resources>

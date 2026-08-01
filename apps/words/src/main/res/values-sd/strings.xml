@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">پهرين چال ۾ گهٽ ۾ گهٽ 2 ٽائلز رکڻ لازمي آهن</string>
     <string name="words_move_error_not_connected">ٽائلز بورڊ تي موجود ٽائلز سان ڳنڍجڻ گهرجن</string>
     <string name="words_move_error_no_words">ڪوبه صحيح لفظ نه ٺهيو</string>
+    <string name="words_validation_offline">تصديق آف لائن آهي — توهان اڃا به جمع ڪرائي سگهو ٿا.</string>
+    <string name="words_validation_unknown_words">نامعلوم لفظ شامل آهن. توهان اڃا به جمع ڪرائي سگهو ٿا.</string>
 </resources>

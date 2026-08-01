@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">یەکەم جوڵە دەبێت لانیکەم 2 پارچە دابنێت</string>
     <string name="words_move_error_not_connected">پارچەکان دەبێت بەو پارچانەوە ببەسترێن کە لەسەر تەختەن</string>
     <string name="words_move_error_no_words">هیچ وشەیەکی دروست پێکنەهات</string>
+    <string name="words_validation_offline">پشتڕاستکردنەوە بێ ئینتەرنێتە — هێشتا دەتوانیت بینێریت.</string>
+    <string name="words_validation_unknown_words">وشەی نەناسراوی تێدایە. هێشتا دەتوانیت بینێریت.</string>
 </resources>

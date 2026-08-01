@@ -313,4 +313,5 @@
         <item quantity="one">%1$d pajtimtar</item>
         <item quantity="other">%1$d pajtimtarë</item>
     </plurals>
+    <string name="account_token_label">Sesioni Mochi</string>
 </resources>

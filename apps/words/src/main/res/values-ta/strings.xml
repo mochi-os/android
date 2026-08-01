@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">முதல் நகர்வில் குறைந்தது 2 ஓடுகள் வைக்க வேண்டும்</string>
     <string name="words_move_error_not_connected">ஓடுகள் பலகையில் உள்ள ஓடுகளுடன் இணைய வேண்டும்</string>
     <string name="words_move_error_no_words">செல்லுபடியாகும் சொற்கள் எதுவும் உருவாகவில்லை</string>
+    <string name="words_validation_offline">சரிபார்ப்பு ஆஃப்லைனில் உள்ளது — நீங்கள் இன்னும் சமர்ப்பிக்கலாம்.</string>
+    <string name="words_validation_unknown_words">தெரியாத சொற்களைக் கொண்டுள்ளது. நீங்கள் இன்னும் சமர்ப்பிக்கலாம்.</string>
 </resources>

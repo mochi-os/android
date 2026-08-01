@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Premye kou a dwe mete omwen 2 til</string>
     <string name="words_move_error_not_connected">Til yo dwe konekte ak til ki deja sou tablo a</string>
     <string name="words_move_error_no_words">Pa gen okenn mo valab ki fòme</string>
+    <string name="words_validation_offline">Validasyon an pa disponib — ou ka voye l kanmenm.</string>
+    <string name="words_validation_unknown_words">Gen mo ki pa rekonèt. Ou ka voye l kanmenm.</string>
 </resources>

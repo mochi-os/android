@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Léngkah munggaran kudu neundeun sahenteuna 2 ubin</string>
     <string name="words_move_error_not_connected">Ubin kudu nyambung ka ubin nu geus aya dina papan</string>
     <string name="words_move_error_no_words">Teu aya kecap sah nu kabentuk</string>
+    <string name="words_validation_offline">Validasi offline — anjeun tetep tiasa ngalebetkeun.</string>
+    <string name="words_validation_unknown_words">Ngandung kecap nu teu dipikawanoh. Anjeun tetep tiasa ngalebetkeun.</string>
 </resources>

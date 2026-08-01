@@ -11,7 +11,6 @@
     <string name="go_app_title">اذهب</string>
     <string name="go_captures_black_sr">القطع السوداء المأسورة</string>
     <string name="go_captures_white_sr">القطع البيضاء المأسورة</string>
-    <string name="go_chat_close">إغلاق الدردشة</string>
     <string name="go_chat_title">الدردشة</string>
     <string name="go_color_black">أسود</string>
     <string name="go_color_white">أبيض</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">منتهية</string>
     <string name="go_status_resigned">تم الاستسلام</string>
     <string name="go_card_vs">ضد %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">تفاصيل المباراة قريباً</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">مباراة Go جديدة</string>
     <string name="go_new_game_no_friends">يجب إضافة صديق قبل بدء المباراة.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">النقاط التي تُضاف إلى نتيجة الأبيض لتعويض الأسود الذي يبدأ أولاً</string>
     <string name="go_new_game_create_error">فشل بدء المباراة</string>
 
+    <string name="go_board_a11y">لوحة Go بحجم %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">لوحة غو %1$d×%1$d، دورك لوضع حجر أسود</string>
+    <string name="go_board_a11y_turn_white">لوحة غو %1$d×%1$d، دورك لوضع حجر أبيض</string>
 </resources>

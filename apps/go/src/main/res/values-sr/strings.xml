@@ -11,7 +11,6 @@
     <string name="go_app_title">Иди</string>
     <string name="go_captures_black_sr">Црна заробљавања</string>
     <string name="go_captures_white_sr">Бела заробљавања</string>
-    <string name="go_chat_close">Затвори ћаскање</string>
     <string name="go_chat_title">Разговор</string>
     <string name="go_color_black">Црно</string>
     <string name="go_color_white">Бели</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Завршена</string>
     <string name="go_status_resigned">Предана</string>
     <string name="go_card_vs">против %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Детаљи партије ускоро</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Нова Go партија</string>
     <string name="go_new_game_no_friends">Морате додати пријатеља пре него што можете да покренете партију.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Бодови додати резултату Белог да би се компензовало то што Црни игра први</string>
     <string name="go_new_game_create_error">Покретање партије није успело</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go табла</string>
+    <string name="go_board_a11y_turn_black">Го табла %1$d×%1$d, ваш је ред да поставите црни камен</string>
+    <string name="go_board_a11y_turn_white">Го табла %1$d×%1$d, ваш је ред да поставите бели камен</string>
 </resources>

@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">حرکت اول باید دست‌کم ۲ کاشی قرار دهد</string>
     <string name="words_move_error_not_connected">کاشی‌ها باید به کاشی‌های موجود روی صفحه متصل شوند</string>
     <string name="words_move_error_no_words">هیچ واژهٔ معتبری ساخته نشد</string>
+    <string name="words_validation_offline">اعتبارسنجی آفلاین است — هنوز هم می‌توانید ثبت کنید.</string>
+    <string name="words_validation_unknown_words">حاوی واژه‌های ناشناخته است. هنوز هم می‌توانید ثبت کنید.</string>
 </resources>

@@ -313,4 +313,5 @@
         <item quantity="one">%1$d אַבאָנענט</item>
         <item quantity="other">%1$d אַבאָנענטן</item>
     </plurals>
+    <string name="account_token_label">Mochi סעסיע</string>
 </resources>

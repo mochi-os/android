@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Ҳаракати аввал бояд ҳадди ақал 2 плитка гузорад</string>
     <string name="words_move_error_not_connected">Плитаҳо бояд ба плитаҳои дар тахта мавҷудбуда пайваст шаванд</string>
     <string name="words_move_error_no_words">Ягон калимаи дуруст сохта нашуд</string>
+    <string name="words_validation_offline">Тасдиқ офлайн аст — шумо ҳоло ҳам метавонед фиристед.</string>
+    <string name="words_validation_unknown_words">Калимаҳои номаълумро дар бар мегирад. Шумо ҳоло ҳам метавонед фиристед.</string>
 </resources>

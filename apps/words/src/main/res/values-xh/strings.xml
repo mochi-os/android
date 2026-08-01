@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Intshukumo yokuqala kufuneka ibeke ubuncinane amathayile ama-2</string>
     <string name="words_move_error_not_connected">Amathayile kufuneka adibane namathayile asele ekho ebhodini</string>
     <string name="words_move_error_no_words">Akukho magama asebenzayo enziweyo</string>
+    <string name="words_validation_offline">Uqinisekiso alukho kwi-intanethi — usenako ukungenisa.</string>
+    <string name="words_validation_unknown_words">Iqulethe amagama angaziwayo. Usenako ukungenisa.</string>
 </resources>

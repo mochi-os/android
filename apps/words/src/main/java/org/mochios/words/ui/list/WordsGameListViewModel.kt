@@ -15,6 +15,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.NaturalCompare
 import org.mochios.words.model.GameListItem
 import org.mochios.words.model.NewGameFriend
 import org.mochios.words.repository.WordsRepository
@@ -96,7 +97,11 @@ class WordsGameListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoadingFriends = true, friendsError = null)
             try {
+                // The service orders by entity id, which is opaque, so the
+                // picker listed friends in no order a reader could follow.
+                // Sorting belongs here rather than in SQL — chess does the same.
                 val friends = repository.getNewGameFriends()
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(newGameFriends = friends, isLoadingFriends = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(

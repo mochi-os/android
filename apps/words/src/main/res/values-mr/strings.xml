@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">पहिल्या चालीत किमान 2 टाइल्स ठेवाव्यात</string>
     <string name="words_move_error_not_connected">टाइल्स फलकावरील विद्यमान टाइल्सना जोडल्या पाहिजेत</string>
     <string name="words_move_error_no_words">कोणताही वैध शब्द तयार झाला नाही</string>
+    <string name="words_validation_offline">पडताळणी ऑफलाइन आहे — तुम्ही तरीही सबमिट करू शकता.</string>
+    <string name="words_validation_unknown_words">अज्ञात शब्द आहेत. तुम्ही तरीही सबमिट करू शकता.</string>
 </resources>

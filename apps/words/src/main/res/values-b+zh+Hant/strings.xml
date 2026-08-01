@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">第一步必須至少放置 2 個字塊</string>
     <string name="words_move_error_not_connected">字塊必須與棋盤上已有的字塊相連</string>
     <string name="words_move_error_no_words">未組成有效單字</string>
+    <string name="words_validation_offline">驗證服務離線 — 你仍然可以提交。</string>
+    <string name="words_validation_unknown_words">包含未知單字。你仍然可以提交。</string>
 </resources>

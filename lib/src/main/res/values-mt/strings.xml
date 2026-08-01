@@ -316,4 +316,5 @@
         <item quantity="many">%1$d abbonati</item>
         <item quantity="other">%1$d abbonati</item>
     </plurals>
+    <string name="account_token_label">Sessjoni ta\' Mochi</string>
 </resources>

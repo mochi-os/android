@@ -87,4 +87,6 @@
     <string name="words_move_error_first_move_two_tiles">Divê di tevgera yekem de kêmî 2 kevir bên danîn</string>
     <string name="words_move_error_not_connected">Divê kevir bi kevirên li ser tabloyê ve girêbidin</string>
     <string name="words_move_error_no_words">Tu peyveke derbasdar çênebû</string>
+    <string name="words_validation_offline">Verastkirin negirêdayî ye — tu hîn jî dikarî bişînî.</string>
+    <string name="words_validation_unknown_words">Peyvên nenas tê de hene. Tu hîn jî dikarî bişînî.</string>
 </resources>
