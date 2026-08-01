@@ -373,4 +373,16 @@
     <string name="route_target_select">Vali</string>
     <string name="account_data_description">Laadige alla täielik varukoopia, mille saate taastada sellel või mõnel teisel Mochi serveril.</string>
     <string name="route_target_none">Sihtkohti pole saadaval</string>
+    <string name="login_invalid_code">Vigane kood</string>
+    <string name="accounts_provider_browser">Brauseri teavitused</string>
+    <string name="accounts_provider_fcm">Androidi tõuketeade</string>
+    <string name="accounts_provider_mcp">MCP server</string>
+    <string name="accounts_provider_unifiedpush">Tõuketeatis</string>
+    <string name="accounts_provider_url">Väline URL</string>
+    <string name="accounts_provider_web">Mochi veeb</string>
+    <string name="accounts_verified">Konto kinnitatud</string>
+    <string name="accounts_verify_invalid">Vigane kinnituskood</string>
+    <string name="accounts_verify_sent">Kontrollkood saadetud</string>
+    <string name="accounts_test_failed">Test ebaõnnestus</string>
+    <string name="accounts_test_sent">Test saadetud</string>
 </resources>

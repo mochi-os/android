@@ -377,4 +377,16 @@
     <string name="route_target_select">Izberi</string>
     <string name="account_data_description">Prenesite celotno varnostno kopijo, ki jo lahko obnovite na tem ali drugem strežniku Mochi.</string>
     <string name="route_target_none">Ni razpoložljivih ciljev</string>
+    <string name="login_invalid_code">Neveljavna koda</string>
+    <string name="accounts_provider_browser">Obvestila brskalnika</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">Strežnik MCP</string>
+    <string name="accounts_provider_unifiedpush">Push obvestilo</string>
+    <string name="accounts_provider_url">Zunanji URL</string>
+    <string name="accounts_provider_web">Mochi splet</string>
+    <string name="accounts_verified">Račun potrjen</string>
+    <string name="accounts_verify_invalid">Neveljavna potrditvena koda</string>
+    <string name="accounts_verify_sent">Koda za preverjanje poslana</string>
+    <string name="accounts_test_failed">Test ni uspel</string>
+    <string name="accounts_test_sent">Test poslan</string>
 </resources>

@@ -376,4 +376,16 @@
     <string name="route_target_select">Vybrat</string>
     <string name="account_data_description">Stáhněte si úplnou záložní kopii, kterou můžete obnovit na tomto nebo jiném serveru Mochi.</string>
     <string name="route_target_none">Nejsou dostupné žádné cíle</string>
+    <string name="login_invalid_code">Neplatný kód</string>
+    <string name="accounts_provider_browser">Oznámení prohlížeče</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">Server MCP</string>
+    <string name="accounts_provider_unifiedpush">Push oznámení</string>
+    <string name="accounts_provider_url">Externí URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Účet ověřen</string>
+    <string name="accounts_verify_invalid">Neplatný ověřovací kód</string>
+    <string name="accounts_verify_sent">Ověřovací kód odeslán</string>
+    <string name="accounts_test_failed">Test selhal</string>
+    <string name="accounts_test_sent">Test odeslán</string>
 </resources>

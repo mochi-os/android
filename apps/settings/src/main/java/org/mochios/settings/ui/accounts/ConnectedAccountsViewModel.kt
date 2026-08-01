@@ -15,10 +15,12 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.mochios.android.i18n.AppContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
+import org.mochios.settings.R
 import org.mochios.settings.api.ConnectedAccount
 import org.mochios.settings.api.ConnectedAccountsApi
 import org.mochios.settings.api.Provider
@@ -94,7 +96,9 @@ class ConnectedAccountsViewModel @Inject constructor(
             try {
                 val resp = api.verify(id = id, code = code).unwrapRaw()
                 val ok = resp["ok"] == true || resp["verified"] == true
-                _toasts.emit(if (ok) "Account verified" else "Invalid verification code")
+                _toasts.emit(
+                    string(if (ok) R.string.accounts_verified else R.string.accounts_verify_invalid)
+                )
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -106,7 +110,7 @@ class ConnectedAccountsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 api.verify(id = id, code = null).unwrapRaw()
-                _toasts.emit("Verification code sent")
+                _toasts.emit(string(R.string.accounts_verify_sent))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -117,7 +121,11 @@ class ConnectedAccountsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val result = api.test(id).unwrapRaw()
-                _toasts.emit(result.message.ifBlank { if (result.success) "Test sent" else "Test failed" })
+                _toasts.emit(
+                    result.message.ifBlank {
+                        string(if (result.success) R.string.accounts_test_sent else R.string.accounts_test_failed)
+                    }
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -139,4 +147,7 @@ class ConnectedAccountsViewModel @Inject constructor(
     fun clearError() {
         _uiState.value = _uiState.value.copy(error = null)
     }
+
+    /** Resource lookup from the view model, as AuthViewModel does. */
+    private fun string(id: Int): String = AppContext.get().getString(id)
 }

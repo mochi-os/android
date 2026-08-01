@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">சில அழைப்புகளை ஏற்க முடியவில்லை</string>
     <string name="people_invitations_some_decline_failed">சில அழைப்புகளை நிராகரிக்க முடியவில்லை</string>
     <string name="people_invitations_some_cancel_failed">சில அழைப்புகளை ரத்துசெய்ய முடியவில்லை</string>
+    <string name="people_profile_too_long">சுயவிவரம் மிக நீளமானது</string>
 </resources>

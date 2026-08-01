@@ -372,4 +372,7 @@
     <string name="account_data_description">下載完整備份，你可以在本伺服器或其他 Mochi 伺服器上還原。</string>
     <string name="account_data_passphrase_hint">您的私鑰已包含在內，使用此密碼短語加密。請妥善保存。還原時將需要用到它。</string>
     <string name="route_target_none">沒有可用的目標</string>
+    <string name="accounts_verified">賬戶已驗證</string>
+    <string name="accounts_provider_url">外部網址</string>
+    <string name="accounts_provider_web">Mochi 網頁版</string>
 </resources>

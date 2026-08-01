@@ -373,4 +373,16 @@
     <string name="route_target_select">Chagua</string>
     <string name="account_data_description">Pakua hifadhi rudufu kamili ambayo unaweza kurejesha kwenye seva hii ya Mochi au seva nyingine.</string>
     <string name="route_target_none">Hakuna lengo linalopatikana</string>
+    <string name="login_invalid_code">Msimbo batili</string>
+    <string name="accounts_provider_browser">Arifa za kivinjari</string>
+    <string name="accounts_provider_fcm">Push ya Android</string>
+    <string name="accounts_provider_mcp">Seva ya MCP</string>
+    <string name="accounts_provider_unifiedpush">Arifa ya push</string>
+    <string name="accounts_provider_url">URL ya nje</string>
+    <string name="accounts_provider_web">Mochi wavuti</string>
+    <string name="accounts_verified">Akaunti imethibitishwa</string>
+    <string name="accounts_verify_invalid">Msimbo wa uthibitisho batili</string>
+    <string name="accounts_verify_sent">Msimbo wa uthibitishaji umetumwa</string>
+    <string name="accounts_test_failed">Jaribio limeshindwa</string>
+    <string name="accounts_test_sent">Jaribio limetumwa</string>
 </resources>

@@ -239,7 +239,7 @@
     <string name="feeds_access_level_comment_full">Comment, react, and view</string>
     <string name="feeds_source_polling_interval">Polling every %1$s</string>
     <string name="feeds_access_add_title">Add access</string>
-    <string name="feeds_access_management">Access Management</string>
+    <string name="feeds_access_management">Access management</string>
     <string name="feeds_permission_allow">Allow</string>
     <string name="feeds_unsubscribe_confirm_message">You will stop receiving updates from this feed. You can re-subscribe at any time.</string>
     <string name="feeds_enable_memories">Enable memories</string>

@@ -375,4 +375,16 @@
     <string name="route_target_select">Selectează</string>
     <string name="account_data_description">Descarcă o copie de rezervă completă pe care o poți restaura pe acest server Mochi sau pe altul.</string>
     <string name="route_target_none">Nu există destinații disponibile</string>
+    <string name="login_invalid_code">Cod invalid</string>
+    <string name="accounts_provider_browser">Notificări de browser</string>
+    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_mcp">Server MCP</string>
+    <string name="accounts_provider_unifiedpush">Notificare push</string>
+    <string name="accounts_provider_url">URL extern</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Cont verificat</string>
+    <string name="accounts_verify_invalid">Cod de verificare invalid</string>
+    <string name="accounts_verify_sent">Cod de verificare trimis</string>
+    <string name="accounts_test_failed">Testul a eșuat</string>
+    <string name="accounts_test_sent">Test trimis</string>
 </resources>

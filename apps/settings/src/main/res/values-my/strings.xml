@@ -371,4 +371,16 @@
     <string name="route_target_select">ရွေးချယ်ရန်</string>
     <string name="account_data_description">ဤ သို့မဟုတ် အခြား Mochi ဆာဗာတွင် ပြန်လည်ရယူနိုင်သော အပြည့်အစုံ အရန်သိမ်းမှုကို ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="route_target_none">ရရှိနိုင်သော ပစ်မှတ်များ မရှိပါ</string>
+    <string name="login_invalid_code">မမှန်ကန်သော ကုဒ်</string>
+    <string name="accounts_provider_browser">Browser အကြောင်းကြားချက်များ</string>
+    <string name="accounts_provider_fcm">Android push အကြောင်းကြားချက်</string>
+    <string name="accounts_provider_mcp">MCP ဆာဗာ</string>
+    <string name="accounts_provider_unifiedpush">Push အကြောင်းကြားချက်</string>
+    <string name="accounts_provider_url">ပြင်ပ URL</string>
+    <string name="accounts_provider_web">Mochi ဝဘ်</string>
+    <string name="accounts_verified">အကောင့် အတည်ပြုပြီး</string>
+    <string name="accounts_verify_invalid">မမှန်ကန်သော အတည်ပြု ကုဒ်</string>
+    <string name="accounts_verify_sent">အတည်ပြု ကုဒ် ပို့ပြီး</string>
+    <string name="accounts_test_failed">စမ်းသပ်မှု မအောင်မြင်ပါ</string>
+    <string name="accounts_test_sent">စမ်းသပ်မှု ပို့ပြီးပါပြီ</string>
 </resources>

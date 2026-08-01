@@ -225,7 +225,7 @@
     <string name="feeds_source_transform_help">Leave empty to disable.</string>
     <string name="feeds_settings_name_cancel_cd">Cancel editing</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
-    <string name="feeds_access_management">Access Management</string>
+    <string name="feeds_access_management">Access management</string>
     <string name="feeds_settings_field_server">Server</string>
     <string name="feeds_access_anyone_desc">Including anonymous users</string>
     <string name="feeds_access_add_subtitle">Select a user, group, or other rule to grant access.</string>

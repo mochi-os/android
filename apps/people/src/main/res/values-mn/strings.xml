@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Зарим урилгыг хүлээн авч чадсангүй</string>
     <string name="people_invitations_some_decline_failed">Зарим урилгаас татгалзаж чадсангүй</string>
     <string name="people_invitations_some_cancel_failed">Зарим урилгыг цуцалж чадсангүй</string>
+    <string name="people_profile_too_long">Профайл хэт урт байна</string>
 </resources>

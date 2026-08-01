@@ -372,4 +372,16 @@
     <string name="route_target_select">Ajlliña</string>
     <string name="account_data_description">Aka Mochi servidoran jan ukax yaqha Mochi servidoran kuttayañ chiqa taqpach qhipa qillqa apsuma.</string>
     <string name="route_target_none">Janiw amtawinaka utjkiti</string>
+    <string name="login_invalid_code">Jan wakisir código</string>
+    <string name="accounts_provider_browser">Browser yatiyäwinaka</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP servidor</string>
+    <string name="accounts_provider_unifiedpush">Push yatiyawi</string>
+    <string name="accounts_provider_url">Anqax URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Cuenta uñakipata</string>
+    <string name="accounts_verify_invalid">Jan wakisir verificación código</string>
+    <string name="accounts_verify_sent">Verificación jan walt\'awi</string>
+    <string name="accounts_test_failed">Yant\'awix jan walt\'awiyat</string>
+    <string name="accounts_test_sent">Yant\'awi apayata</string>
 </resources>

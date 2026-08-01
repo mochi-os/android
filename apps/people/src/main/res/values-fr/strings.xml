@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Certaines invitations n\'ont pas pu être acceptées</string>
     <string name="people_invitations_some_decline_failed">Certaines invitations n\'ont pas pu être refusées</string>
     <string name="people_invitations_some_cancel_failed">Certaines invitations n\'ont pas pu être annulées</string>
+    <string name="people_profile_too_long">Le profil est trop long</string>
 </resources>

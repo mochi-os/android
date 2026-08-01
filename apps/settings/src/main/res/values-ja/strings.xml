@@ -372,4 +372,16 @@
     <string name="route_target_select">選択</string>
     <string name="account_data_description">このサーバーまたは別の Mochi サーバーで復元できる完全なバックアップをダウンロードします。</string>
     <string name="route_target_none">利用できる宛先がありません</string>
+    <string name="login_invalid_code">コードが無効です</string>
+    <string name="accounts_provider_browser">ブラウザ通知</string>
+    <string name="accounts_provider_fcm">Android プッシュ</string>
+    <string name="accounts_provider_mcp">MCP サーバー</string>
+    <string name="accounts_provider_unifiedpush">プッシュ通知</string>
+    <string name="accounts_provider_url">外部 URL</string>
+    <string name="accounts_provider_web">Mochiウェブ</string>
+    <string name="accounts_verified">アカウントを確認しました</string>
+    <string name="accounts_verify_invalid">確認コードが無効です</string>
+    <string name="accounts_verify_sent">確認コードを送信しました</string>
+    <string name="accounts_test_failed">テストに失敗しました</string>
+    <string name="accounts_test_sent">テストを送信しました</string>
 </resources>

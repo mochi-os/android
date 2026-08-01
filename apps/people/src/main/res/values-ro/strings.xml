@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Unele invitații nu au putut fi acceptate</string>
     <string name="people_invitations_some_decline_failed">Unele invitații nu au putut fi refuzate</string>
     <string name="people_invitations_some_cancel_failed">Unele invitații nu au putut fi anulate</string>
+    <string name="people_profile_too_long">Profilul este prea lung</string>
 </resources>

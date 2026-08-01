@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Neki pozivi nisu mogli biti prihvaćeni</string>
     <string name="people_invitations_some_decline_failed">Neki pozivi nisu mogli biti odbijeni</string>
     <string name="people_invitations_some_cancel_failed">Neki pozivi nisu mogli biti otkazani</string>
+    <string name="people_profile_too_long">Profil je predug</string>
 </resources>

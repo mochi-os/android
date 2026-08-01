@@ -499,8 +499,12 @@ fun FeedScreen(
                 TopAppBar(
                     title = {
                         Text(
-                            text = feedInfo?.name
-                                ?: stringResource(R.string.feeds_feed_title_default),
+                            text = feedInfo?.name?.takeIf { it.isNotBlank() }
+                                ?: if (viewModel.isAllFeeds) {
+                                    stringResource(R.string.feeds_all_feeds)
+                                } else {
+                                    stringResource(R.string.feeds_feed_title_default)
+                                },
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -951,7 +955,7 @@ fun FeedScreen(
                                             },
                                             onToggleSave = { viewModel.toggleSave(post) },
                                             onAddTag = { label ->
-                                                viewModel.addTag(post.id, label, null)
+                                                viewModel.addTag(routeFeedId, post.id, label, null)
                                             },
                                             onAdjustInterest = { tag, direction ->
                                                 viewModel.adjustInterest(

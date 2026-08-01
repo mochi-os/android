@@ -367,4 +367,6 @@
     <string name="login_method_oauth">Inicio de sesión con terceros</string>
     <string name="login_method_recovery">Códigos de recuperación</string>
     <string name="route_target_select">Seleccionar</string>
+    <string name="accounts_provider_url">URL externa</string>
+    <string name="accounts_provider_web">Mochi web</string>
 </resources>

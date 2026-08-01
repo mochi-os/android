@@ -373,4 +373,16 @@
     <string name="route_target_select">אויסקלײַבן</string>
     <string name="account_data_description">לאָדט אַראָפּ אַ פֿולע רעזערוו־קאָפּיע וואָס איר קענט צוריקשטעלן אויף דעם אָדער אַן אַנדער Mochi סערווער.</string>
     <string name="route_target_none">קײן צילן זײַנען נישט פֿאַראַן</string>
+    <string name="login_invalid_code">ניט גילטיקער קאָד</string>
+    <string name="accounts_provider_browser">בראָוזער נאָטיפֿיקאַציעס</string>
+    <string name="accounts_provider_fcm">Android פּוש</string>
+    <string name="accounts_provider_mcp">MCP סערװער</string>
+    <string name="accounts_provider_unifiedpush">פּוש־מעלדונג</string>
+    <string name="accounts_provider_url">אינדרויסנדיקער URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">קאָנטע באַשטעטיקט</string>
+    <string name="accounts_verify_invalid">ניט גילטיקער פֿאַרזיכערונג־קאָד</string>
+    <string name="accounts_verify_sent">פֿאַריפֿיקאַציע־קאָד געשיקט</string>
+    <string name="accounts_test_failed">טעסט דורכגעפֿאַלן</string>
+    <string name="accounts_test_sent">טעסט געשיקט</string>
 </resources>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Không thể chấp nhận một số lời mời</string>
     <string name="people_invitations_some_decline_failed">Không thể từ chối một số lời mời</string>
     <string name="people_invitations_some_cancel_failed">Không thể hủy một số lời mời</string>
+    <string name="people_profile_too_long">Hồ sơ quá dài</string>
 </resources>

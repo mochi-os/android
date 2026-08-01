@@ -373,4 +373,16 @@
     <string name="route_target_select">انتخاب</string>
     <string name="account_data_description">یک نسخهٔ پشتیبان کامل دانلود کنید که می‌توانید روی این کارساز یا کارساز Mochi دیگری بازیابی کنید.</string>
     <string name="route_target_none">هدفی موجود نیست</string>
+    <string name="login_invalid_code">کد نامعتبر</string>
+    <string name="accounts_provider_browser">اعلان‌های مرورگر</string>
+    <string name="accounts_provider_fcm">اعلان Android</string>
+    <string name="accounts_provider_mcp">سرور MCP</string>
+    <string name="accounts_provider_unifiedpush">اعلان فوری</string>
+    <string name="accounts_provider_url">آدرس خارجی</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">حساب تأیید شد</string>
+    <string name="accounts_verify_invalid">کد تأیید نامعتبر</string>
+    <string name="accounts_verify_sent">کد تأیید ارسال شد</string>
+    <string name="accounts_test_failed">آزمون ناموفق بود</string>
+    <string name="accounts_test_sent">آزمایش ارسال شد</string>
 </resources>

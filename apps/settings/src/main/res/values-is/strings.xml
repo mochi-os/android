@@ -373,4 +373,16 @@
     <string name="route_target_select">Velja</string>
     <string name="account_data_description">Sæktu heildarafrit sem þú getur endurheimt á þessum eða öðrum Mochi-þjóni.</string>
     <string name="route_target_none">Engin skotmörk í boði</string>
+    <string name="login_invalid_code">Ógildur kóði</string>
+    <string name="accounts_provider_browser">Tilkynningar vafra</string>
+    <string name="accounts_provider_fcm">Android-ýting</string>
+    <string name="accounts_provider_mcp">MCP-þjónn</string>
+    <string name="accounts_provider_unifiedpush">Ýtitilkynning</string>
+    <string name="accounts_provider_url">Ytri slóð</string>
+    <string name="accounts_provider_web">Mochi-vefur</string>
+    <string name="accounts_verified">Reikningur staðfestur</string>
+    <string name="accounts_verify_invalid">Ógildur staðfestingarkóði</string>
+    <string name="accounts_verify_sent">Sannprófunarkóði sendur</string>
+    <string name="accounts_test_failed">Prófun mistókst</string>
+    <string name="accounts_test_sent">Prófun send</string>
 </resources>

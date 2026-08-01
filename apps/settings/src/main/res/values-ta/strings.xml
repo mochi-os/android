@@ -373,4 +373,16 @@
     <string name="route_target_select">தேர்ந்தெடு</string>
     <string name="account_data_description">இந்த அல்லது வேறு Mochi சேவையகத்தில் மீட்டெடுக்கக்கூடிய முழுமையான காப்புப்பிரதியைப் பதிவிறக்கவும்.</string>
     <string name="route_target_none">இலக்குகள் இல்லை</string>
+    <string name="login_invalid_code">தவறான குறியீடு</string>
+    <string name="accounts_provider_browser">உலாவி அறிவிப்புகள்</string>
+    <string name="accounts_provider_fcm">Android புஷ்</string>
+    <string name="accounts_provider_mcp">MCP சேவையகம்</string>
+    <string name="accounts_provider_unifiedpush">புஷ் அறிவிப்பு</string>
+    <string name="accounts_provider_url">வெளிப்புற URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">கணக்கு சரிபார்க்கப்பட்டது</string>
+    <string name="accounts_verify_invalid">தவறான சரிபார்ப்பு குறியீடு</string>
+    <string name="accounts_verify_sent">சரிபார்ப்பு குறியீடு அனுப்பப்பட்டது</string>
+    <string name="accounts_test_failed">சோதனை தோல்வியடைந்தது</string>
+    <string name="accounts_test_sent">சோதனை அனுப்பப்பட்டது</string>
 </resources>

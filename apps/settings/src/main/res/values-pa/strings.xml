@@ -373,4 +373,16 @@
     <string name="route_target_select">ਚੁਣੋ</string>
     <string name="account_data_description">ਪੂਰਾ ਬੈਕਅੱਪ ਡਾਊਨਲੋਡ ਕਰੋ ਜਿਸਨੂੰ ਤੁਸੀਂ ਇਸ ਜਾਂ ਕਿਸੇ ਹੋਰ Mochi ਸਰਵਰ ਉੱਤੇ ਬਹਾਲ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="route_target_none">ਕੋਈ ਟਿਕਾਣਾ ਉਪਲਬਧ ਨਹੀਂ</string>
+    <string name="login_invalid_code">ਅਯੋਗ ਕੋਡ</string>
+    <string name="accounts_provider_browser">ਬ੍ਰਾਊਜ਼ਰ ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ</string>
+    <string name="accounts_provider_fcm">Android ਪੁਸ਼</string>
+    <string name="accounts_provider_mcp">MCP ਸਰਵਰ</string>
+    <string name="accounts_provider_unifiedpush">ਪੁਸ਼ ਸੂਚਨਾ</string>
+    <string name="accounts_provider_url">ਬਾਹਰੀ URL</string>
+    <string name="accounts_provider_web">Mochi ਵੈੱਬ</string>
+    <string name="accounts_verified">ਖਾਤਾ ਤਸਦੀਕ ਕੀਤਾ ਗਿਆ</string>
+    <string name="accounts_verify_invalid">ਅਯੋਗ ਤਸਦੀਕ ਕੋਡ</string>
+    <string name="accounts_verify_sent">ਪੁਸ਼ਟੀ ਕੋਡ ਭੇਜਿਆ ਗਿਆ</string>
+    <string name="accounts_test_failed">ਟੈਸਟ ਅਸਫਲ</string>
+    <string name="accounts_test_sent">ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</string>
 </resources>

@@ -326,7 +326,7 @@
     <string name="projects_settings_section_identity">Identity</string>
     <string name="projects_settings_access_updated">Access updated</string>
     <string name="projects_settings_access_revoked">Access revoked</string>
-    <string name="projects_settings_section_access">Access Management</string>
+    <string name="projects_settings_section_access">Access management</string>
     <string name="projects_people_search">Search people</string>
     <string name="projects_settings_field_entity_id">Entity ID</string>
     <string name="projects_settings_field_fingerprint">Fingerprint</string>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Àwọn ìpè kan kò ṣeé gbà</string>
     <string name="people_invitations_some_decline_failed">Àwọn ìpè kan kò ṣeé kọ̀</string>
     <string name="people_invitations_some_cancel_failed">Àwọn ìpè kan kò ṣeé fagilé</string>
+    <string name="people_profile_too_long">Profaili gùn ju</string>
 </resources>

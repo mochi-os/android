@@ -406,7 +406,10 @@ class FeedViewModel @Inject constructor(
     }
 
     private suspend fun loadAllFeeds() {
-        _feedInfo.value = Feed(name = "All feeds")
+        // No name: the screen supplies the localised R.string.feeds_all_feeds,
+        // which is what the drawer entry already uses. A literal here rendered
+        // English in the title while the drawer showed the translation.
+        _feedInfo.value = Feed()
         _permissions.value = Permissions()
         // The "All feeds" aggregate is served by the class-level -/posts
         // endpoint (posts across every subscribed feed in one indexed query),
@@ -750,13 +753,21 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    fun addTag(postId: String, label: String, qid: String? = null) {
+    /**
+     * [feed] is the post's own feed, not the screen's. Both endpoints are
+     * entity-scoped, so in the aggregate view the "__all__" sentinel resolves
+     * to no feed and the server answers 404 "Feed not found" — which the catch
+     * below then swallowed, so tagging simply did nothing there. Every other
+     * per-post action already routes this way.
+     */
+    fun addTag(feed: String, postId: String, label: String, qid: String? = null) {
+        val target = feed.takeIf { it.isNotBlank() && it != "__all__" } ?: return
         viewModelScope.launch {
             try {
-                repository.addTag(feedId, postId, label, qid)
+                repository.addTag(target, postId, label, qid)
                 // Refresh just this post's tags so the card's tag list reflects
                 // the addition without reloading the whole feed.
-                val updated = repository.getPostTags(feedId, postId)
+                val updated = repository.getPostTags(target, postId)
                 _posts.value = _posts.value.map { post ->
                     if (post.id == postId) post.copy(tags = updated) else post
                 }
@@ -877,7 +888,12 @@ class FeedViewModel @Inject constructor(
         if (rss.link.isEmpty()) return
         if (!lazyImageAttempted.add(postId)) return
         viewModelScope.launch {
-            val image = repository.getPostImage(feedId, postId)
+            // The post's own feed, not the screen's — resolvePostImage above
+            // already routes this way. Against the "__all__" sentinel the
+            // endpoint answers 200 with an empty image, so in the aggregate
+            // view a post that arrived without one never acquired one.
+            val feed = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { feedId }
+            val image = repository.getPostImage(feed, postId)
             if (image.isBlank()) return@launch
             _posts.value = _posts.value.map { p ->
                 if (p.id != postId) p

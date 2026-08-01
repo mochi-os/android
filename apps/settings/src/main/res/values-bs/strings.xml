@@ -375,4 +375,16 @@
     <string name="route_target_select">Odaberi</string>
     <string name="account_data_description">Preuzmite potpunu rezervnu kopiju koju možete vratiti na ovom ili drugom Mochi serveru.</string>
     <string name="route_target_none">Nema dostupnih odredišta</string>
+    <string name="login_invalid_code">Nevažeći kod</string>
+    <string name="accounts_provider_browser">Browser obavještenja</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP server</string>
+    <string name="accounts_provider_unifiedpush">Push obavijest</string>
+    <string name="accounts_provider_url">Vanjski URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Račun verifikovan</string>
+    <string name="accounts_verify_invalid">Nevažeći verifikacioni kod</string>
+    <string name="accounts_verify_sent">Verifikacijski kod poslan</string>
+    <string name="accounts_test_failed">Test neuspješan</string>
+    <string name="accounts_test_sent">Test poslan</string>
 </resources>

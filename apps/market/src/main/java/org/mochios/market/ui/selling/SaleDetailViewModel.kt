@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.market.R
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.OrderDetailResponse
 import org.mochios.market.repository.MarketRepository
@@ -78,7 +79,7 @@ class SaleDetailViewModel @Inject constructor(
         if (orderId.isEmpty()) {
             _state.value = _state.value.copy(
                 isLoading = false,
-                error = MochiError.NotFoundError("Order id is missing"),
+                error = MochiError.Local(R.string.market_purchase_not_found),
             )
             return
         }

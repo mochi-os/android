@@ -138,7 +138,7 @@
     <string name="market_sidebar_saved">Saved</string>
     <string name="market_listing_detail_title">Listing</string>
     <string name="market_messages_thread_listing_chip">Listing</string>
-    <string name="market_section_listings">Recent Listings</string>
+    <string name="market_section_listings">Recent listings</string>
     <string name="market_sidebar_listings">Listings</string>
     <string name="market_account_seller_title">Become a seller</string>
     <string name="market_account_seller_subtitle">Reach buyers and sell your items on Mochi. Payments are handled securely via Stripe.</string>
@@ -207,7 +207,7 @@
     <string name="market_sale_dispute_state_resolved">Resolved</string>
     <string name="market_sale_shipped_label">Shipped</string>
     <string name="market_search_clear">Clear search</string>
-    <string name="market_section_categories">Browse Categories</string>
+    <string name="market_section_categories">Browse categories</string>
     <string name="market_shipping_days_value">%1$s days</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_sidebar_messages">Messages</string>
@@ -487,7 +487,7 @@
     <string name="market_messages_thread_title">Conversation</string>
     <string name="market_messages_unread_badge">%1$d unread</string>
     <string name="market_open_sidebar">Open menu</string>
-    <string name="market_price_from">from %1$s</string>
+    <string name="market_price_from">From %1$s</string>
     <string name="market_price_high_bid">High bid: %1$s</string>
     <string name="market_price_instant_buy">instant buy: %1$s</string>
     <string name="market_price_per_month">%1$s / month</string>

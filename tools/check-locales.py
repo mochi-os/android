@@ -185,6 +185,46 @@ def check_values(module_dir: Path) -> tuple[list[str], list[str]]:
     return arguments, placeholders
 
 
+def check_overlays(module_dir: Path) -> list[str]:
+    """Return findings for English regional overlays.
+
+    These are the one thing OVERLAY_RE skips, and the skip is right in intent -
+    a regional English catalogue should not have to restate the neutral English
+    default. But it means an overlay holding a WRONG English copy is invisible,
+    and a present key beats an inherited one, so English-locale users see the
+    wrong text with nothing to catch it.
+
+    An overlay cannot be judged by "differs from the default", because differing
+    is the entire point: colour/color, cancelled/canceled, Postcode/ZIP code are
+    all legitimate. So only two mechanical classes are flagged, neither of which
+    a real regional spelling can trip:
+
+      case    - identical ignoring case. A regional variant differs by more than
+                capitalisation, so this is drift, and it silently overrode the
+                project's sentence-case convention with Title Case.
+      escape  - identical once doubled backslashes collapse. `\\"` renders as a
+                literal backslash then a quote, so the reader sees Tag \\"foo\\".
+    """
+    res = module_dir / "src" / "main" / "res"
+    english = load_strings(res / "values" / "strings.xml")
+    if not english:
+        return []
+    findings = []
+    for vd in sorted(res.iterdir()):
+        if not vd.is_dir() or not OVERLAY_RE.match(vd.name):
+            continue
+        for key, value in load_strings(vd / "strings.xml").items():
+            source = english.get(key)
+            if source is None or source == value:
+                continue
+            if value.replace('\\\\"', '\\"') == source:
+                findings.append(f"{vd.name} {key}: escaping differs from values/")
+            elif value.lower() == source.lower():
+                findings.append(f"{vd.name} {key}: case differs from values/ "
+                                f"({source.strip()[:32]!r} vs {value.strip()[:32]!r})")
+    return findings
+
+
 def discover(root: Path) -> list[Path]:
     """Every Android module under `root`, found by its source catalogue.
 
@@ -218,7 +258,8 @@ def main():
         module = Path(module_str).resolve()
         problems = check_module(module)
         arguments, placeholders = check_values(module)
-        if not problems and not arguments and not placeholders:
+        overlays = check_overlays(module)
+        if not problems and not arguments and not placeholders and not overlays:
             print(f"{module}: ok")
             continue
         any_problems = True
@@ -234,6 +275,10 @@ def main():
         if placeholders:
             print(f"{module}: {len(placeholders)} value(s) carry web placeholder syntax", file=sys.stderr)
             for finding in placeholders[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if overlays:
+            print(f"{module}: {len(overlays)} English overlay value(s) drifted", file=sys.stderr)
+            for finding in overlays[:10]:
                 print(f"  {finding}", file=sys.stderr)
 
     if any_problems and args.strict:

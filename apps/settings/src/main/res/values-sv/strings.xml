@@ -373,4 +373,16 @@
     <string name="route_target_select">Välj</string>
     <string name="account_data_description">Ladda ner en fullständig säkerhetskopia som du kan återställa på den här eller en annan Mochi-server.</string>
     <string name="route_target_none">Inga mål tillgängliga</string>
+    <string name="login_invalid_code">Ogiltig kod</string>
+    <string name="accounts_provider_browser">Webbläsaraviseringar</string>
+    <string name="accounts_provider_fcm">Android-push</string>
+    <string name="accounts_provider_mcp">MCP-server</string>
+    <string name="accounts_provider_unifiedpush">Push-avisering</string>
+    <string name="accounts_provider_url">Extern URL</string>
+    <string name="accounts_provider_web">Mochi webb</string>
+    <string name="accounts_verified">Konto verifierat</string>
+    <string name="accounts_verify_invalid">Ogiltig verifieringskod</string>
+    <string name="accounts_verify_sent">Verifieringskod skickad</string>
+    <string name="accounts_test_failed">Test misslyckades</string>
+    <string name="accounts_test_sent">Test skickat</string>
 </resources>

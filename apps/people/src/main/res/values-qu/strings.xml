@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Wakin minkakuykuna mana chaskiyta atikurqachu</string>
     <string name="people_invitations_some_decline_failed">Wakin minkakuykuna mana wikch\'uyta atikurqachu</string>
     <string name="people_invitations_some_cancel_failed">Wakin minkakuykuna mana wikch\'uyta atikurqachu</string>
+    <string name="people_profile_too_long">Perfilqa nishu suni</string>
 </resources>

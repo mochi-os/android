@@ -247,7 +247,7 @@
     <string name="forums_settings_name_edit_cd">Edit name</string>
     <string name="forums_settings_name_cancel_cd">Cancel editing</string>
     <string name="forums_settings_save_name">Save name</string>
-    <string name="forums_access_management">Access Management</string>
+    <string name="forums_access_management">Access management</string>
     <string name="forums_link">Link</string>
     <string name="forums_share_link_title">Forum link</string>
     <string name="forums_access_level_moderate_full">Moderate, post, comment, vote, and view</string>

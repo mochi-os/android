@@ -270,7 +270,7 @@
     <string name="crm_class_add_field">Add field</string>
     <string name="crm_class_delete">Delete class</string>
     <string name="crm_class_delete_title">Delete class</string>
-    <string name="crm_class_delete_message">Are you sure you want to delete the class \\"%1$s\\"? All fields and their options will also be deleted.</string>
+    <string name="crm_class_delete_message">Are you sure you want to delete the class \"%1$s\"? All fields and their options will also be deleted.</string>
     <string name="crm_field_type_text">Text</string>
     <string name="crm_field_type_enumerated">Enumerated</string>
     <string name="crm_field_type_checklist">Checklist</string>

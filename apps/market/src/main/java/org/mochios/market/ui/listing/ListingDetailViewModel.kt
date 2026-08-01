@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.market.R
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
 import org.mochios.market.lib.formatPrice
@@ -116,7 +117,7 @@ class ListingDetailViewModel @Inject constructor(
         if (id.isBlank()) {
             _state.value = _state.value.copy(
                 isLoading = false,
-                error = MochiError.Unknown("Invalid listing id"),
+                error = MochiError.Local(R.string.market_listing_detail_not_found),
             )
             return
         }

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Някои покани не можаха да бъдат приети</string>
     <string name="people_invitations_some_decline_failed">Някои покани не можаха да бъдат отхвърлени</string>
     <string name="people_invitations_some_cancel_failed">Някои покани не можаха да бъдат отменени</string>
+    <string name="people_profile_too_long">Профилът е твърде дълъг</string>
 </resources>

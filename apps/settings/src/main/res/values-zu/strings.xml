@@ -373,4 +373,16 @@
     <string name="route_target_select">Khetha</string>
     <string name="account_data_description">Landa isipele esiphelele ongasibuyisela kule seva ye-Mochi noma kwenye.</string>
     <string name="route_target_none">Awekho amagondolozelo atholakalayo</string>
+    <string name="login_invalid_code">Ikhodi engalungile</string>
+    <string name="accounts_provider_browser">Izaziso zebhrawuza</string>
+    <string name="accounts_provider_fcm">I-push ye-Android</string>
+    <string name="accounts_provider_mcp">Iseva ye-MCP</string>
+    <string name="accounts_provider_unifiedpush">Isaziso se-push</string>
+    <string name="accounts_provider_url">I-URL yangaphandle</string>
+    <string name="accounts_provider_web">Iwebhu ye-Mochi</string>
+    <string name="accounts_verified">I-akhawunti iqinisekisiwe</string>
+    <string name="accounts_verify_invalid">Ikhodi yokuqinisekisa engalungile</string>
+    <string name="accounts_verify_sent">Ikhodi yokuqinisekiswa ithunyelwe</string>
+    <string name="accounts_test_failed">Ukuhlola kuhlulekile</string>
+    <string name="accounts_test_sent">Ukuhlolwa kuthunyelwe</string>
 </resources>

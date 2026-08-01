@@ -371,4 +371,16 @@
     <string name="route_target_select">ជ្រើសរើស</string>
     <string name="account_data_description">ទាញយកការបម្រុងទុកពេញលេញដែលអ្នកអាចស្ដារឡើងវិញនៅលើម៉ាស៊ីនមេ Mochi នេះ ឬម៉ាស៊ីនមេផ្សេងទៀត។</string>
     <string name="route_target_none">មិនមានគោលដៅដែលអាចប្រើបានទេ</string>
+    <string name="login_invalid_code">កូដមិនត្រឹមត្រូវ</string>
+    <string name="accounts_provider_browser">ការជូនដំណឹងពីកម្មវិធីរុករក</string>
+    <string name="accounts_provider_fcm">ការជូនដំណឹង Android</string>
+    <string name="accounts_provider_mcp">ម៉ាស៊ីនមេ MCP</string>
+    <string name="accounts_provider_unifiedpush">ការជូនដំណឹងរុញ</string>
+    <string name="accounts_provider_url">URL ខាងក្រៅ</string>
+    <string name="accounts_provider_web">Mochi វេប</string>
+    <string name="accounts_verified">គណនីត្រូវបានផ្ទៀងផ្ទាត់</string>
+    <string name="accounts_verify_invalid">កូដផ្ទៀងផ្ទាត់មិនត្រឹមត្រូវ</string>
+    <string name="accounts_verify_sent">បានផ្ញើកូដផ្ទៀងផ្ទាត់</string>
+    <string name="accounts_test_failed">ការសាកល្បងបរាជ័យ</string>
+    <string name="accounts_test_sent">បានផ្ញើការសាកល្បង</string>
 </resources>

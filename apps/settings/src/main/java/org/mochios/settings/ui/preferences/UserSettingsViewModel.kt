@@ -14,7 +14,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.i18n.PreferencesManager
+import org.mochios.settings.api.LanguagesApi
 import javax.inject.Inject
 
 data class UserSettingsUiState(
@@ -23,11 +25,17 @@ data class UserSettingsUiState(
     val values: Map<String, String> = emptyMap(),
     val error: MochiError? = null,
     val isSaving: Boolean = false,
+    /**
+     * Language tags this server has catalogues for, from GET /_/languages.
+     * Empty until it answers; the picker then shows only the current value.
+     */
+    val languages: List<String> = emptyList(),
 )
 
 @HiltViewModel
 class UserSettingsViewModel @Inject constructor(
     private val preferences: PreferencesManager,
+    private val languagesApi: LanguagesApi,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(UserSettingsUiState())
@@ -35,6 +43,20 @@ class UserSettingsViewModel @Inject constructor(
 
     init {
         refresh()
+        loadLanguages()
+    }
+
+    /**
+     * Ask the server which catalogues it has rather than shipping a list. The
+     * hardcoded one this replaces had drifted 54 locales behind, and any
+     * replacement list would drift again on the next locale added.
+     */
+    private fun loadLanguages() {
+        viewModelScope.launch {
+            val installed = runCatching { languagesApi.list().unwrapRaw().languages }
+                .getOrDefault(emptyList())
+            _uiState.value = _uiState.value.copy(languages = installed)
+        }
     }
 
     fun refresh() {

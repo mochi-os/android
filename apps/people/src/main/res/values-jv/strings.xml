@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Sawetara undhangan ora bisa ditampa</string>
     <string name="people_invitations_some_decline_failed">Sawetara undhangan ora bisa ditolak</string>
     <string name="people_invitations_some_cancel_failed">Sawetara undhangan ora bisa dibatalake</string>
+    <string name="people_profile_too_long">Profil kedawan</string>
 </resources>

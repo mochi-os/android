@@ -372,4 +372,16 @@
     <string name="route_target_select">Eiporavo</string>
     <string name="account_data_description">Emboguejy peteĩ ñongatu paha ikatúva emoĩ jey ko térã ambue Mochi servidor-pe.</string>
     <string name="route_target_none">Ndaipóri tenda oĩva</string>
+    <string name="login_invalid_code">Código ndoikóiva</string>
+    <string name="accounts_provider_browser">Browser ñe\'ẽmondokuéra</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP mohendaha</string>
+    <string name="accounts_provider_unifiedpush">Push marandu</string>
+    <string name="accounts_provider_url">URL okápe</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Tetãygua oñemoneĩma</string>
+    <string name="accounts_verify_invalid">Verificación código ndoikóiva</string>
+    <string name="accounts_verify_sent">Verificación código mondopyre</string>
+    <string name="accounts_test_failed">Ehecha ndoiporãi</string>
+    <string name="accounts_test_sent">Ojehepyme\'ẽma jehecha</string>
 </resources>

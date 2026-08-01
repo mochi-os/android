@@ -373,4 +373,16 @@
     <string name="route_target_select">Ընտրել</string>
     <string name="account_data_description">Ներբեռնեք ամբողջական պահուստ, որը կարող եք վերականգնել այս կամ այլ Mochi սերվերում։</string>
     <string name="route_target_none">Հասանելի նպատակակետեր չկան</string>
+    <string name="login_invalid_code">Անվավեր վերականգնման կոդ</string>
+    <string name="accounts_provider_browser">Build ֆայլ (.zip)</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP սերվեր</string>
+    <string name="accounts_provider_unifiedpush">Push ծանուցում</string>
+    <string name="accounts_provider_url">Արտաքին URL</string>
+    <string name="accounts_provider_web">Mochi վեբ</string>
+    <string name="accounts_verified">Հաշիվներ</string>
+    <string name="accounts_verify_invalid">Հրավերը չեղարկվեց</string>
+    <string name="accounts_verify_sent">Ստուգման կոդը ուղարկվեց</string>
+    <string name="accounts_test_failed">Թեստը ձախողվեց</string>
+    <string name="accounts_test_sent">Փորձնական հաղորդագրությունն ուղարկվեց</string>
 </resources>

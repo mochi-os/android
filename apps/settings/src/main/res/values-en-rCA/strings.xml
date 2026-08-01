@@ -363,4 +363,6 @@
     <string name="system_status_reachability_public">Public</string>
     <string name="system_status_reachability_private">Private</string>
     <string name="system_status_reachability_unknown">Unknown</string>
+    <string name="accounts_provider_url">External URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
 </resources>

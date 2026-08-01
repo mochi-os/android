@@ -373,4 +373,16 @@
     <string name="route_target_select">Сонгох</string>
     <string name="account_data_description">Энэ болон бусад Mochi серверт сэргээж болох бүрэн нөөцлөлтийг татаж авна уу.</string>
     <string name="route_target_none">Боломжтой зорилтууд байхгүй</string>
+    <string name="login_invalid_code">Код хүчингүй</string>
+    <string name="accounts_provider_browser">Хөтчийн мэдэгдэл</string>
+    <string name="accounts_provider_fcm">Android push мэдэгдэл</string>
+    <string name="accounts_provider_mcp">MCP сервер</string>
+    <string name="accounts_provider_unifiedpush">Push мэдэгдэл</string>
+    <string name="accounts_provider_url">Гадаад URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Бүртгэл баталгаажсан</string>
+    <string name="accounts_verify_invalid">Баталгаажуулах код хүчингүй</string>
+    <string name="accounts_verify_sent">Баталгаажуулах код илгээгдсэн</string>
+    <string name="accounts_test_failed">Тест амжилтгүй</string>
+    <string name="accounts_test_sent">Туршилт илгээгдлээ</string>
 </resources>

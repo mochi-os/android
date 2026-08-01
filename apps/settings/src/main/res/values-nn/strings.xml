@@ -375,4 +375,16 @@
     <string name="account_data_dialog_body">Dette er ein fullstendig tryggingskopi du kan gjenopprette på denne eller ein annan Mochi-tenar. Stadfest at det er deg for å halde fram.</string>
     <string name="account_data_passphrase_hint">Dei private nøklane dine er med, krypterte med denne passfrasen. Oppbevar han trygt. Du treng han for å gjenopprette.</string>
     <string name="route_target_none">Ingen tilgjengelege mål</string>
+    <string name="login_invalid_code">Ugyldig kode</string>
+    <string name="accounts_provider_browser">Nettlesarvarsel</string>
+    <string name="accounts_provider_fcm">Android-push</string>
+    <string name="accounts_provider_mcp">MCP-tenar</string>
+    <string name="accounts_provider_unifiedpush">Push-varsel</string>
+    <string name="accounts_provider_url">Ekstern URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Konto stadfesta</string>
+    <string name="accounts_verify_invalid">Ugyldig stadfestingskode</string>
+    <string name="accounts_verify_sent">Stadfestingskode sendt</string>
+    <string name="accounts_test_failed">Test mislukkast</string>
+    <string name="accounts_test_sent">Test sendt</string>
 </resources>

@@ -373,4 +373,16 @@
     <string name="route_target_select">Zgjidh</string>
     <string name="account_data_description">Shkarkoni një kopje rezervë të plotë që mund ta rikthesh në këtë ose në një server tjetër Mochi.</string>
     <string name="route_target_none">Nuk ka objektiva të disponueshme</string>
+    <string name="login_invalid_code">Kod i pavlefshëm</string>
+    <string name="accounts_provider_browser">Njoftime të shfletuesit</string>
+    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_mcp">Server MCP</string>
+    <string name="accounts_provider_unifiedpush">Njoftim push</string>
+    <string name="accounts_provider_url">URL e jashtme</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Llogaria u verifikua</string>
+    <string name="accounts_verify_invalid">Kod verifikimi i pavlefshëm</string>
+    <string name="accounts_verify_sent">Kodi i verifikimit u dërgua</string>
+    <string name="accounts_test_failed">Testi dështoi</string>
+    <string name="accounts_test_sent">Testi u dërgua</string>
 </resources>

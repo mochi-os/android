@@ -66,6 +66,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R as MochiR
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
@@ -179,7 +180,7 @@ fun LoginScreen(
             )
 
             state.error?.let { err ->
-                Text(text = err.toString(), color = MaterialTheme.colorScheme.error)
+                Text(text = err.userMessage(), color = MaterialTheme.colorScheme.error)
             }
         }
     }

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">ڪجهه دعوتون قبول نه ٿي سگھيون</string>
     <string name="people_invitations_some_decline_failed">ڪجهه دعوتون رد نه ٿي سگھيون</string>
     <string name="people_invitations_some_cancel_failed">ڪجهه دعوتون منسوخ نه ٿي سگھيون</string>
+    <string name="people_profile_too_long">پروفائل تمام ڊگهو آهي</string>
 </resources>

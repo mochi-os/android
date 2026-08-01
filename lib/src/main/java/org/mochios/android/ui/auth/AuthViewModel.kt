@@ -71,7 +71,7 @@ class AuthViewModel @Inject constructor(
                     sessionManager.clearOAuthReturn()
                     _uiState.value = _uiState.value.copy(
                         isLoading = false,
-                        error = MochiError.Unknown("OAuth: $error")
+                        error = MochiError.Local(R.string.stepup_error_oauth)
                     )
                 } else if (code != null) {
                     sessionManager.clearOAuthReturn()
@@ -439,7 +439,7 @@ class AuthViewModel @Inject constructor(
                 if (verifier == null) {
                     _uiState.value = _uiState.value.copy(
                         isLoading = false,
-                        error = MochiError.Unknown("OAuth: missing verifier")
+                        error = MochiError.Local(R.string.stepup_error_oauth)
                     )
                     return@launch
                 }

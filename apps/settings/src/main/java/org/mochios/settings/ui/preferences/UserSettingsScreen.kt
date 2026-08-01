@@ -47,6 +47,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R
+import org.mochios.android.util.NaturalCompare
+import java.util.Locale
 
 /** Public, shared by the dropdown row. Display screen owns its own dropdown. */
 internal data class PrefSpec(
@@ -69,16 +71,23 @@ internal val REGIONAL_PREF_KEYS: List<String> = listOf(
 )
 
 @Composable
-private fun prefSchema(): List<PrefSpec> = listOf(
+private fun prefSchema(
+    languages: List<String>,
+    currentLanguage: String,
+): List<PrefSpec> = listOf(
     PrefSpec(
         key = "language",
         label = stringResource(R.string.settings_language),
-        options = LANGUAGE_OPTIONS,
+        options = languageOptions(
+            tags = languages,
+            current = currentLanguage,
+            defaultLabel = stringResource(R.string.settings_value_auto),
+        ),
     ),
     PrefSpec(
         key = "timezone",
         label = stringResource(R.string.settings_time_zone),
-        options = TIMEZONE_OPTIONS,
+        options = timezoneOptions(),
     ),
     PrefSpec(
         key = "date_format",
@@ -153,69 +162,77 @@ private fun prefSchema(): List<PrefSpec> = listOf(
  * for the full IANA list and prepend "auto" so users can keep the device
  * default. Computed lazily at first read.
  */
-private val TIMEZONE_OPTIONS: List<Pair<String, String>> by lazy {
+private val TIMEZONE_OPTIONS: List<String> by lazy {
     val zones = java.util.TimeZone.getAvailableIDs()
         .filter { it.contains('/') } // drop short aliases like "EST"
         .sorted()
-    val auto = "auto" to "Auto-detect"
-    listOf(auto) + zones.map { it to it }
+    zones
 }
 
-private val LANGUAGE_OPTIONS: List<Pair<String, String>> = listOf(
-    "" to "(default)",
-    "ar" to "العربية",
-    "bn" to "বাংলা",
-    "ca" to "Català",
-    "cs" to "Čeština",
-    "da" to "Dansk",
-    "de" to "Deutsch",
-    "el" to "Ελληνικά",
-    "en" to "English",
-    "en-US" to "English (US)",
-    "es" to "Español",
-    "es-419" to "Español (Latinoamérica)",
-    "et" to "Eesti",
-    "eu" to "Euskara",
-    "fa" to "فارسی",
-    "fi" to "Suomi",
-    "fr" to "Français",
-    "fr-CA" to "Français (Canada)",
-    "ga" to "Gaeilge",
-    "he" to "עברית",
-    "hi" to "हिन्दी",
-    "hr" to "Hrvatski",
-    "hu" to "Magyar",
-    "id" to "Bahasa Indonesia",
-    "is" to "Íslenska",
-    "it" to "Italiano",
-    "ja" to "日本語",
-    "ka" to "ქართული",
-    "ko" to "한국어",
-    "lt" to "Lietuvių",
-    "lv" to "Latviešu",
-    "ms" to "Bahasa Melayu",
-    "nb" to "Norsk bokmål",
-    "nl" to "Nederlands",
-    "nn" to "Nynorsk",
-    "pl" to "Polski",
-    "pt" to "Português",
-    "pt-BR" to "Português (Brasil)",
-    "ro" to "Română",
-    "ru" to "Русский",
-    "sk" to "Slovenčina",
-    "sl" to "Slovenščina",
-    "sr" to "Српски",
-    "sv" to "Svenska",
-    "sw" to "Kiswahili",
-    "ta" to "தமிழ்",
-    "th" to "ไทย",
-    "tr" to "Türkçe",
-    "uk" to "Українська",
-    "ur" to "اردو",
-    "vi" to "Tiếng Việt",
-    "zh-Hans" to "简体中文",
-    "zh-Hant" to "繁體中文",
+/** The zone rows, with the localised automatic row in front. */
+@Composable
+private fun timezoneOptions(): List<Pair<String, String>> =
+    listOf("auto" to stringResource(R.string.settings_value_auto)) +
+        TIMEZONE_OPTIONS.map { it to it }
+
+/**
+ * Display-name overrides, keyed by lower-cased BCP 47 tag, where the platform's
+ * own name is not the wording Mochi wants. Mirrors the same map in
+ * apps/settings/web/src/features/user/preferences.tsx so the two clients agree:
+ * `en` is Mochi's neutral English source catalogue, neither UK nor US.
+ */
+private val LANGUAGE_NAMES = mapOf(
+    "en" to "English (international)",
+    "en-us" to "English (USA)",
+    "es" to "Español (España)",
+    "es-419" to "Español (latinoamericano)",
 )
+
+/**
+ * Each language renders as its own native name, so a reader recognises theirs
+ * by sight without already being able to read the current UI language.
+ */
+private fun languageName(tag: String): String {
+    LANGUAGE_NAMES[tag.lowercase()]?.let { return it }
+    val locale = Locale.forLanguageTag(tag)
+    val native = locale.getDisplayName(locale)
+    if (native.isBlank()) return tag
+    return native.replaceFirstChar { it.titlecase(locale) }
+}
+
+/**
+ * Latin-script names first, then the rest, each bucket by native name. The
+ * server returns tags alphabetically, which puts Arabic at the top — accurate
+ * but not what a reader scanning for their own language expects.
+ */
+private fun scriptBucket(native: String): Int {
+    val first = native.firstOrNull { it.isLetter() } ?: return 0
+    return if (first.code < 0x0250) 0 else 1
+}
+
+/**
+ * The picker's options, built from the tags the server reports installed.
+ *
+ * [defaultLabel] is the "use the server default" row. [current] is kept even if
+ * the server does not list it, so a value already saved never silently vanishes
+ * from the picker that is meant to show it.
+ */
+internal fun languageOptions(
+    tags: List<String>,
+    current: String,
+    defaultLabel: String,
+): List<Pair<String, String>> {
+    val installed = (tags + current.takeIf { it.isNotBlank() }.orEmpty())
+        .filter { it.isNotBlank() }
+        .distinct()
+    val sorted = installed
+        .map { it to languageName(it) }
+        .sortedWith(
+            compareBy<Pair<String, String>> { scriptBucket(it.second) }
+                .thenComparing({ it.second }, NaturalCompare),
+        )
+    return listOf("" to defaultLabel) + sorted
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -224,7 +241,10 @@ fun UserSettingsScreen(
     viewModel: UserSettingsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val schema = prefSchema()
+    val schema = prefSchema(
+        languages = uiState.languages,
+        currentLanguage = uiState.values["language"].orEmpty(),
+    )
 
     Scaffold(
         topBar = {

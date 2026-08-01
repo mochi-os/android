@@ -373,4 +373,16 @@
     <string name="route_target_select">ምረጥ</string>
     <string name="account_data_description">በዚህ ወይም በሌላ የMochi አገልጋይ ላይ መመለስ የሚችሉትን ሙሉ ምትኬ ያውርዱ።</string>
     <string name="route_target_none">ምንም ዒላማዎች አይገኙም</string>
+    <string name="login_invalid_code">ልክ ያልሆነ ኮድ</string>
+    <string name="accounts_provider_browser">የአሳሽ ማሳወቂያዎች</string>
+    <string name="accounts_provider_fcm">የAndroid ግፋ</string>
+    <string name="accounts_provider_mcp">የMCP አገልጋይ</string>
+    <string name="accounts_provider_unifiedpush">የግፋ ማሳወቂያ</string>
+    <string name="accounts_provider_url">ውጫዊ URL</string>
+    <string name="accounts_provider_web">Mochi ድር</string>
+    <string name="accounts_verified">መለያ ተረጋግጧል</string>
+    <string name="accounts_verify_invalid">ልክ ያልሆነ የማረጋገጫ ኮድ</string>
+    <string name="accounts_verify_sent">የማረጋገጫ ኮድ ተልኳል</string>
+    <string name="accounts_test_failed">ሙከራ አልተሳካም</string>
+    <string name="accounts_test_sent">ሙከራ ተልኳል</string>
 </resources>

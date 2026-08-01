@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">ਕੁਝ ਸੱਦੇ ਸਵੀਕਾਰ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</string>
     <string name="people_invitations_some_decline_failed">ਕੁਝ ਸੱਦੇ ਅਸਵੀਕਾਰ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</string>
     <string name="people_invitations_some_cancel_failed">ਕੁਝ ਸੱਦੇ ਰੱਦ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</string>
+    <string name="people_profile_too_long">ਪ੍ਰੋਫਾਈਲ ਬਹੁਤ ਲੰਬੀ ਹੈ</string>
 </resources>

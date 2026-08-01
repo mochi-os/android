@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapRaw
@@ -21,6 +22,7 @@ import org.mochios.android.auth.PasskeyManager
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.StepUpClient
 import org.mochios.android.util.NaturalCompare
+import org.mochios.settings.R
 import org.mochios.settings.api.AccountApi
 import org.mochios.settings.api.MethodInfo
 import org.mochios.settings.api.OAuthIdentity
@@ -84,7 +86,7 @@ class LoginViewModel @Inject constructor(
                 sessionManager.clearOAuthLinkReturn()
                 if (error != null) {
                     _uiState.value = _uiState.value.copy(
-                        error = MochiError.Unknown("OAuth link: $error"),
+                        error = MochiError.Local(MochiR.string.stepup_error_oauth),
                     )
                 }
                 refresh()
@@ -202,7 +204,7 @@ class LoginViewModel @Inject constructor(
             _newTotpSetup.value = null
             _uiState.value = _uiState.value.copy(totpEnabled = true)
         } else {
-            _uiState.value = _uiState.value.copy(error = MochiError.Unknown("Invalid code"))
+            _uiState.value = _uiState.value.copy(error = MochiError.Local(R.string.login_invalid_code))
         }
     }
 

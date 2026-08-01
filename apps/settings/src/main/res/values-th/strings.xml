@@ -372,4 +372,16 @@
     <string name="route_target_select">เลือก</string>
     <string name="account_data_description">ดาวน์โหลดข้อมูลสำรองทั้งหมดที่คุณสามารถกู้คืนบนเซิร์ฟเวอร์นี้หรือเซิร์ฟเวอร์ Mochi อื่น</string>
     <string name="route_target_none">ไม่มีเป้าหมายที่ใช้ได้</string>
+    <string name="login_invalid_code">รหัสไม่ถูกต้อง</string>
+    <string name="accounts_provider_browser">การแจ้งเตือนของเบราว์เซอร์</string>
+    <string name="accounts_provider_fcm">พุช Android</string>
+    <string name="accounts_provider_mcp">เซิร์ฟเวอร์ MCP</string>
+    <string name="accounts_provider_unifiedpush">การแจ้งเตือนแบบพุช</string>
+    <string name="accounts_provider_url">URL ภายนอก</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">ยืนยันบัญชีแล้ว</string>
+    <string name="accounts_verify_invalid">รหัสยืนยันไม่ถูกต้อง</string>
+    <string name="accounts_verify_sent">ส่งรหัสยืนยันแล้ว</string>
+    <string name="accounts_test_failed">ทดสอบไม่สำเร็จ</string>
+    <string name="accounts_test_sent">ส่งการทดสอบแล้ว</string>
 </resources>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Баъзе даъватҳоро қабул кардан имконнопазир буд</string>
     <string name="people_invitations_some_decline_failed">Баъзе даъватҳоро рад кардан имконнопазир буд</string>
     <string name="people_invitations_some_cancel_failed">Баъзе даъватҳоро бекор кардан имконнопазир буд</string>
+    <string name="people_profile_too_long">Профил хеле дароз аст</string>
 </resources>

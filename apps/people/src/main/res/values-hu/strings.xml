@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Néhány meghívást nem sikerült elfogadni</string>
     <string name="people_invitations_some_decline_failed">Néhány meghívást nem sikerült elutasítani</string>
     <string name="people_invitations_some_cancel_failed">Néhány meghívást nem sikerült visszavonni</string>
+    <string name="people_profile_too_long">A profil túl hosszú</string>
 </resources>

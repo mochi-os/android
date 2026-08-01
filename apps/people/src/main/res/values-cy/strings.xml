@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Ni ellid derbyn rhai gwahoddiadau</string>
     <string name="people_invitations_some_decline_failed">Ni ellid gwrthod rhai gwahoddiadau</string>
     <string name="people_invitations_some_cancel_failed">Ni ellid canslo rhai gwahoddiadau</string>
+    <string name="people_profile_too_long">Mae\'r proffil yn rhy hir</string>
 </resources>

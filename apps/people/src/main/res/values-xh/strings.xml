@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Ezinye izimemo azikwazanga ukwamkelwa</string>
     <string name="people_invitations_some_decline_failed">Ezinye izimemo azikwazanga ukwaliwa</string>
     <string name="people_invitations_some_cancel_failed">Ezinye izimemo azikwazanga ukurhoxiswa</string>
+    <string name="people_profile_too_long">Iprofayili inde kakhulu</string>
 </resources>

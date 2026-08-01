@@ -295,7 +295,7 @@
     <string name="crm_field_no_options">No options defined</string>
     <string name="crm_field_delete">Delete field</string>
     <string name="crm_field_delete_title">Delete field</string>
-    <string name="crm_field_delete_message">Are you sure you want to delete the field \\"%1$s\\"? All options and values will be lost.</string>
+    <string name="crm_field_delete_message">Are you sure you want to delete the field \"%1$s\"? All options and values will be lost.</string>
     <string name="crm_field_add_field_dialog_title">Add field</string>
     <string name="crm_option_add">Add option</string>
     <string name="crm_option_color">Color</string>
@@ -305,7 +305,7 @@
     <string name="crm_views_add_dialog_title">Add view</string>
     <string name="crm_views_edit_dialog_title">Edit view</string>
     <string name="crm_views_delete_title">Delete view</string>
-    <string name="crm_views_delete_message">Are you sure you want to delete the view \\"%1$s\\"?</string>
+    <string name="crm_views_delete_message">Are you sure you want to delete the view \"%1$s\"?</string>
     <string name="crm_views_type_board">Board</string>
     <string name="crm_views_type_list">List</string>
     <string name="crm_views_columns_field">Columns field</string>

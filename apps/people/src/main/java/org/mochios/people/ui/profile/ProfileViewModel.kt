@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.PersonStyle
 import org.mochios.people.repository.PeopleRepository
@@ -140,7 +141,7 @@ class ProfileViewModel @Inject constructor(
         val value = _uiState.value.bioDraft
         if (value == info.profile) return
         if (value.length > BIO_MAX) {
-            onError(MochiError.Unknown("Profile too long"))
+            onError(MochiError.Local(R.string.people_profile_too_long))
             return
         }
         launchSave(ProfileField.BIO, onSuccess, onError) { person ->
@@ -155,7 +156,7 @@ class ProfileViewModel @Inject constructor(
         val trimmed = _uiState.value.accentDraft.trim()
         if (trimmed == info.style.accent.orEmpty()) return
         if (trimmed.isNotEmpty() && !ACCENT_PATTERN.matches(trimmed)) {
-            onError(MochiError.Unknown("Invalid colour"))
+            onError(MochiError.Local(R.string.people_profile_accent_invalid))
             return
         }
         launchSave(ProfileField.ACCENT, onSuccess, onError) { person ->

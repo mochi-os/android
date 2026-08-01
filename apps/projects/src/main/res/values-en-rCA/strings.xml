@@ -263,7 +263,7 @@
     <string name="projects_class_add_field">Add field</string>
     <string name="projects_class_delete">Delete class</string>
     <string name="projects_class_delete_title">Delete class</string>
-    <string name="projects_class_delete_message">Are you sure you want to delete the class \\"%1$s\\"? All fields and their options will also be deleted.</string>
+    <string name="projects_class_delete_message">Are you sure you want to delete the class \"%1$s\"? All fields and their options will also be deleted.</string>
     <string name="projects_field_type_text">Text</string>
     <string name="projects_field_type_enumerated">Enumerated</string>
     <string name="projects_field_type_checklist">Checklist</string>
@@ -327,7 +327,7 @@
     <string name="projects_settings_section_identity">Identity</string>
     <string name="projects_settings_access_updated">Access updated</string>
     <string name="projects_settings_access_revoked">Access revoked</string>
-    <string name="projects_settings_section_access">Access Management</string>
+    <string name="projects_settings_section_access">Access management</string>
     <string name="projects_people_search">Search people</string>
     <string name="projects_settings_field_entity_id">Entity ID</string>
     <string name="projects_settings_field_fingerprint">Fingerprint</string>

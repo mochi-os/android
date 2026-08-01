@@ -373,4 +373,16 @@
     <string name="route_target_select">Seç</string>
     <string name="account_data_description">Bu və ya başqa Mochi serverində bərpa edə biləcəyiniz tam ehtiyat nüsxəsini yükləyin.</string>
     <string name="route_target_none">Heç bir hədəf yoxdur</string>
+    <string name="login_invalid_code">Etibarsız kod</string>
+    <string name="accounts_provider_browser">Brauzer bildirişləri</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP serveri</string>
+    <string name="accounts_provider_unifiedpush">Push bildirişi</string>
+    <string name="accounts_provider_url">Xarici URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Hesab təsdiqləndi</string>
+    <string name="accounts_verify_invalid">Etibarsız doğrulama kodu</string>
+    <string name="accounts_verify_sent">Yoxlanıldı</string>
+    <string name="accounts_test_failed">Test uğursuz oldu</string>
+    <string name="accounts_test_sent">Test göndərildi</string>
 </resources>

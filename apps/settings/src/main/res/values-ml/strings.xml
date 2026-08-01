@@ -373,4 +373,16 @@
     <string name="route_target_select">തിരഞ്ഞെടുക്കുക</string>
     <string name="account_data_description">ഈ അല്ലെങ്കിൽ മറ്റൊരു Mochi സെർവറിൽ പുനഃസ്ഥാപിക്കാവുന്ന പൂർണ്ണ ബാക്കപ്പ് ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="route_target_none">ലക്ഷ്യങ്ങൾ ലഭ്യമല്ല</string>
+    <string name="login_invalid_code">അസാധുവായ കോഡ്</string>
+    <string name="accounts_provider_browser">ബ്രൗസർ അറിയിപ്പുകൾ</string>
+    <string name="accounts_provider_fcm">Android പുഷ്</string>
+    <string name="accounts_provider_mcp">MCP സെർവർ</string>
+    <string name="accounts_provider_unifiedpush">പുഷ് അറിയിപ്പ്</string>
+    <string name="accounts_provider_url">ബാഹ്യ URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">അക്കൗണ്ട് പരിശോധിച്ചുറപ്പിച്ചു</string>
+    <string name="accounts_verify_invalid">അസാധുവായ സ്ഥിരീകരണ കോഡ്</string>
+    <string name="accounts_verify_sent">സ്ഥിരീകരണ കോഡ് അയച്ചു</string>
+    <string name="accounts_test_failed">ടെസ്റ്റ് പരാജയപ്പെട്ടു</string>
+    <string name="accounts_test_sent">പരിശോധന അയച്ചു</string>
 </resources>

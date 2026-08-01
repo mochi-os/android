@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">一部の招待を承認できませんでした</string>
     <string name="people_invitations_some_decline_failed">一部の招待を辞退できませんでした</string>
     <string name="people_invitations_some_cancel_failed">一部の招待をキャンセルできませんでした</string>
+    <string name="people_profile_too_long">プロフィールが長すぎます</string>
 </resources>

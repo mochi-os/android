@@ -467,7 +467,10 @@ private fun AccountSettingsDialog(
     onDismiss: () -> Unit,
     onSave: (String, String) -> Unit,
 ) {
-    var name by remember { mutableStateOf(account.label.ifBlank { displayName(account) }) }
+    // Resolved outside the remember: displayName reads string resources, and a
+    // remember calculation is not a composable context.
+    val fallbackName = displayName(account)
+    var name by remember { mutableStateOf(account.label.ifBlank { fallbackName }) }
     val isAi = account.type == "openai" || account.type == "claude"
     var model by remember {
         mutableStateOf(if (account.identifier == "default") "" else account.identifier)
@@ -519,26 +522,29 @@ private fun SnackBanner(message: String, onDismiss: () -> Unit) {
     }
 }
 
+@Composable
 private fun displayName(account: ConnectedAccount): String {
     if (account.label.isNotBlank()) return account.label
     if (account.type == "email" && account.identifier.isNotBlank()) return account.identifier
     return providerTypeLabel(account.type)
 }
 
-// Mirrors PROVIDER_LABELS in lib/web/src/features/accounts/types.ts. These are
-// proper-noun product names (Mochi web, Claude, OpenAI, etc.) that stay verbatim
-// across locales per the glossary; no i18n needed.
+// Mirrors providerLabels() in lib/web/src/features/accounts/types.ts, which
+// wraps seven of these eleven in t`` — including "Mochi web", where only the
+// brand is fixed. Only Claude, ntfy, OpenAI and Pushbullet are bare product
+// names that stay verbatim across locales per the glossary.
+@Composable
 private fun providerTypeLabel(type: String): String = when (type) {
-    "browser" -> "Browser notifications"
+    "browser" -> stringResource(R.string.accounts_provider_browser)
     "claude" -> "Claude"
-    "email" -> "Email"
-    "fcm" -> "Android push"
-    "mcp" -> "MCP server"
+    "email" -> stringResource(R.string.accounts_field_email)
+    "fcm" -> stringResource(R.string.accounts_provider_fcm)
+    "mcp" -> stringResource(R.string.accounts_provider_mcp)
     "ntfy" -> "ntfy"
     "openai" -> "OpenAI"
     "pushbullet" -> "Pushbullet"
-    "unifiedpush" -> "Push notification"
-    "url" -> "External URL"
-    "web" -> "Mochi web"
+    "unifiedpush" -> stringResource(R.string.accounts_provider_unifiedpush)
+    "url" -> stringResource(R.string.accounts_provider_url)
+    "web" -> stringResource(R.string.accounts_provider_web)
     else -> type
 }

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">לא ניתן היה לקבל חלק מההזמנות</string>
     <string name="people_invitations_some_decline_failed">לא ניתן היה לדחות חלק מההזמנות</string>
     <string name="people_invitations_some_cancel_failed">לא ניתן היה לבטל חלק מההזמנות</string>
+    <string name="people_profile_too_long">הפרופיל ארוך מדי</string>
 </resources>

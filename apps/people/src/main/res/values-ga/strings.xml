@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Níorbh fhéidir glacadh le roinnt cuirí</string>
     <string name="people_invitations_some_decline_failed">Níorbh fhéidir roinnt cuirí a dhiúltú</string>
     <string name="people_invitations_some_cancel_failed">Níorbh fhéidir roinnt cuirí a chur ar ceal</string>
+    <string name="people_profile_too_long">Tá an phróifíl rófhada</string>
 </resources>

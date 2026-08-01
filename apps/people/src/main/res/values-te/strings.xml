@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">కొన్ని ఆహ్వానాలను అంగీకరించలేకపోయాం</string>
     <string name="people_invitations_some_decline_failed">కొన్ని ఆహ్వానాలను తిరస్కరించలేకపోయాం</string>
     <string name="people_invitations_some_cancel_failed">కొన్ని ఆహ్వానాలను రద్దు చేయలేకపోయాం</string>
+    <string name="people_profile_too_long">ప్రొఫైల్ చాలా పొడవుగా ఉంది</string>
 </resources>

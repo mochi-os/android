@@ -373,4 +373,16 @@
     <string name="route_target_select">چونڊيو</string>
     <string name="account_data_description">مڪمل بيڪ اپ ڊائون لوڊ ڪريو جنهن کي توهان هن يا ٻئي Mochi سرور تي بحال ڪري سگهو ٿا.</string>
     <string name="route_target_none">ڪوئي منزل موجود ناهي</string>
+    <string name="login_invalid_code">غلط ڪوڊ</string>
+    <string name="accounts_provider_browser">براؤزر اطلاع</string>
+    <string name="accounts_provider_fcm">Android پش</string>
+    <string name="accounts_provider_mcp">MCP سرور</string>
+    <string name="accounts_provider_unifiedpush">پش اطلاع</string>
+    <string name="accounts_provider_url">خارجي URL</string>
+    <string name="accounts_provider_web">Mochi ويب</string>
+    <string name="accounts_verified">اڪائونٽ تصديق ٿيل</string>
+    <string name="accounts_verify_invalid">غلط تصديق ڪوڊ</string>
+    <string name="accounts_verify_sent">تصديق ڪوڊ موڪليو ويو</string>
+    <string name="accounts_test_failed">ٽيسٽ ناڪام ٿيو</string>
+    <string name="accounts_test_sent">ٽيسٽ موڪلي وئي</string>
 </resources>

@@ -51,6 +51,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import org.mochios.android.api.userMessage
 import org.mochios.settings.ui.login.StepUpHost
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -140,7 +141,7 @@ fun AccountScreen(
             }
 
             state.error?.let { err ->
-                Text(text = err.toString(), color = MaterialTheme.colorScheme.error)
+                Text(text = err.userMessage(), color = MaterialTheme.colorScheme.error)
             }
         }
     }
