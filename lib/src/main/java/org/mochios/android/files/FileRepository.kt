@@ -30,9 +30,12 @@ abstract class FileRepository(protected val fileStore: FileStore) {
      * Copies picked content into the cache so it can be uploaded straight off
      * disk, keeping each file's real name and extension.
      *
+     * All or nothing: one unreadable URI deletes everything already staged and
+     * throws, so the result always holds a file for every entry in [uris].
      * Callers own the result and must [discardStaged] it once the upload
-     * finishes. URIs that can't be opened are skipped, so the result may be
-     * shorter than [uris].
+     * finishes.
+     *
+     * @throws java.io.IOException when any [uris] entry can't be opened.
      */
     suspend fun stageFiles(uris: List<Uri>, fallbackName: String = "file"): List<File> =
         fileStore.cacheFiles(uris, fallbackName)
