@@ -344,4 +344,32 @@
         <item quantity="many">%1$d gcomhad chontrártha</item>
         <item quantity="other">%1$d comhad contrártha</item>
     </plurals>
+    <string name="crm_filter">Scag</string>
+    <string name="crm_sort_filter_title">Sórtáil agus scag</string>
+    <string name="crm_filter_clear_all">Glan an t-iomlán</string>
+    <string name="crm_filter_all">Uile</string>
+    <string name="crm_filter_other">Eile</string>
+    <string name="crm_settings_section_identity">Aitheantas</string>
+    <string name="crm_settings_section_access">Bainistíocht Rochtana</string>
+    <string name="crm_settings_not_set">Gan socrú</string>
+    <string name="crm_settings_access_updated">Rochtain nuashonraithe</string>
+    <string name="crm_settings_access_revoked">Cuireadh deireadh leis an rochtain</string>
+    <string name="crm_people_search">Cuardaigh daoine</string>
+    <string name="crm_access_tab_other">Eile</string>
+    <string name="crm_access_select_group">Roghnaigh grúpa</string>
+    <string name="crm_access_select_rule">Roghnaigh riail</string>
+    <string name="crm_access_select_role">Roghnaigh ról</string>
+    <string name="crm_access_selected">Roghnaithe: %1$s</string>
+    <string name="crm_access_subject_anyone">Aon duine</string>
+    <string name="crm_access_subject_authenticated">Úsáideoirí fíordheimhnithe</string>
+    <string name="crm_access_authenticated_desc">Duine ar bith atá logáilte isteach</string>
+    <string name="crm_access_anyone_desc">Úsáideoirí anaithnide san áireamh</string>
+    <string name="crm_access_role_design">Dear, cruthaigh, cuir in eagar, déan trácht agus féach</string>
+    <string name="crm_access_role_write">Cruthaigh, cuir in eagar, déan trácht agus féach</string>
+    <string name="crm_access_role_comment">Nóta tráchta agus amharc</string>
+    <string name="crm_access_role_view">Féach amháin</string>
+    <string name="crm_access_role_none">Gan rochtain</string>
+    <string name="crm_all_crms">Gach CRM</string>
+    <string name="crm_settings_unsubscribe_section">Díliostáil ón CRM</string>
+    <string name="crm_settings_updated">CRM nuashonraithe</string>
 </resources>

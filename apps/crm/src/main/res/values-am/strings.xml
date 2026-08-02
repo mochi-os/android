@@ -339,4 +339,32 @@
         <item quantity="one">%1$d የሚጋጭ ፋይል</item>
         <item quantity="other">%1$d የሚጋጩ ፋይሎች</item>
     </plurals>
+    <string name="crm_filter">ማጣሪያ</string>
+    <string name="crm_sort_filter_title">ደርድር እና አጣራ</string>
+    <string name="crm_filter_clear_all">ሁሉንም አጽዳ</string>
+    <string name="crm_filter_all">ሁሉም</string>
+    <string name="crm_filter_other">ሌላ</string>
+    <string name="crm_settings_section_identity">ማንነት</string>
+    <string name="crm_settings_section_access">የመዳረሻ አስተዳደር</string>
+    <string name="crm_settings_not_set">አልተዋቀረም</string>
+    <string name="crm_settings_access_updated">መዳረሻ ተዘምኗል</string>
+    <string name="crm_settings_access_revoked">ጭቅም ተርሿል</string>
+    <string name="crm_people_search">ሰዎችን ይፈልጉ</string>
+    <string name="crm_access_tab_other">ሌላ</string>
+    <string name="crm_access_select_group">ቡድን ይምረጡ</string>
+    <string name="crm_access_select_rule">ደንብ ይምረጡ</string>
+    <string name="crm_access_select_role">ሚና ይምረጡ</string>
+    <string name="crm_access_selected">የተመረጠ: %1$s</string>
+    <string name="crm_access_subject_anyone">ማንኛውም ሰው</string>
+    <string name="crm_access_subject_authenticated">የተረጋገጡ ተጠቃሚዎች</string>
+    <string name="crm_access_authenticated_desc">የገባ ማንኛውም ሰው</string>
+    <string name="crm_access_anyone_desc">ስም-አልባ ተጠቃሚዎችን ጨምሮ</string>
+    <string name="crm_access_role_design">ይንደፉ፣ ይፍጠሩ፣ ያርትዑ፣ አስተያየት ይስጡ እና ይመልከቱ</string>
+    <string name="crm_access_role_write">ይፍጠሩ፣ ያርትዑ፣ አስተያየት ይስጡ እና ይመልከቱ</string>
+    <string name="crm_access_role_comment">አስተያየት እና እይታ</string>
+    <string name="crm_access_role_view">እይታ ብቻ</string>
+    <string name="crm_access_role_none">ምንም ድረሳ የለም</string>
+    <string name="crm_all_crms">ሁሉም CRMs</string>
+    <string name="crm_settings_unsubscribe_section">ከCRM ይውጡ</string>
+    <string name="crm_settings_updated">CRM ተዘምኗል</string>
 </resources>

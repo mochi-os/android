@@ -339,4 +339,32 @@
         <item quantity="one">fayil %1$d mai karo</item>
         <item quantity="other">fayiloli %1$d masu karo</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Jera da tacewa</string>
+    <string name="crm_filter_clear_all">Share duka</string>
+    <string name="crm_filter_all">Duka</string>
+    <string name="crm_filter_other">Sauran</string>
+    <string name="crm_settings_section_identity">Asali</string>
+    <string name="crm_settings_section_access">Sarrafa damar shiga</string>
+    <string name="crm_settings_not_set">Ba a saita ba</string>
+    <string name="crm_settings_access_updated">An sabunta damar shiga</string>
+    <string name="crm_settings_access_revoked">An hana shiga</string>
+    <string name="crm_people_search">Nemo mutane</string>
+    <string name="crm_access_tab_other">Sauran</string>
+    <string name="crm_access_select_group">Zaɓi rukuni</string>
+    <string name="crm_access_select_rule">Zaɓi doka</string>
+    <string name="crm_access_select_role">Zaɓi matsayi</string>
+    <string name="crm_access_selected">An zaɓa: %1$s</string>
+    <string name="crm_access_subject_anyone">Kowa</string>
+    <string name="crm_access_subject_authenticated">Masu amfani da aka tabbatar</string>
+    <string name="crm_access_authenticated_desc">Duk wanda ya shiga</string>
+    <string name="crm_access_anyone_desc">Har da masu amfani da ba a san su ba</string>
+    <string name="crm_access_role_design">Tsara, ƙirƙira, gyara, sharhi, da kallo</string>
+    <string name="crm_access_role_write">Ƙirƙira, gyara, sharhi, da kallo</string>
+    <string name="crm_access_role_comment">Yi sharhi da kallo</string>
+    <string name="crm_access_role_view">Kalla kawai</string>
+    <string name="crm_access_role_none">Babu damar shiga</string>
+    <string name="crm_all_crms">Duk CRM</string>
+    <string name="crm_settings_unsubscribe_section">Soke biyan kuɗi na CRM</string>
+    <string name="crm_settings_updated">An sabunta CRM</string>
 </resources>

@@ -339,4 +339,32 @@
         <item quantity="one">%1$d fil med konflikt</item>
         <item quantity="other">%1$d filer med konflikt</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sorter og filtrer</string>
+    <string name="crm_filter_clear_all">Tøm alle</string>
+    <string name="crm_filter_all">Alle</string>
+    <string name="crm_filter_other">Anna</string>
+    <string name="crm_settings_section_identity">Identitet</string>
+    <string name="crm_settings_section_access">Tilgangshandsaming</string>
+    <string name="crm_settings_not_set">Ikkje sett</string>
+    <string name="crm_settings_access_updated">Tilgang oppdatert</string>
+    <string name="crm_settings_access_revoked">Tilgang oppheva</string>
+    <string name="crm_people_search">Søk etter personar</string>
+    <string name="crm_access_tab_other">Anna</string>
+    <string name="crm_access_select_group">Vel ei gruppe</string>
+    <string name="crm_access_select_rule">Vel ein regel</string>
+    <string name="crm_access_select_role">Vel rolle</string>
+    <string name="crm_access_selected">Vald: %1$s</string>
+    <string name="crm_access_subject_anyone">Alle</string>
+    <string name="crm_access_subject_authenticated">Autentiserte brukarar</string>
+    <string name="crm_access_authenticated_desc">Alle som er innlogga</string>
+    <string name="crm_access_anyone_desc">Inkludert anonyme brukarar</string>
+    <string name="crm_access_role_design">Utform, opprett, rediger, kommenter og vis</string>
+    <string name="crm_access_role_write">Opprett, rediger, kommenter og vis</string>
+    <string name="crm_access_role_comment">Kommenter og sjå</string>
+    <string name="crm_access_role_view">Berre lese</string>
+    <string name="crm_access_role_none">Ingen tilgang</string>
+    <string name="crm_all_crms">Alle CRM-ar</string>
+    <string name="crm_settings_unsubscribe_section">Avslutt abonnement på CRM</string>
+    <string name="crm_settings_updated">CRM oppdatert</string>
 </resources>

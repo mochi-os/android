@@ -339,4 +339,32 @@
         <item quantity="one">%1$d pelê nakok</item>
         <item quantity="other">%1$d pelên nakok</item>
     </plurals>
+    <string name="crm_filter">Parzûna</string>
+    <string name="crm_sort_filter_title">Rêz bike û parzûn bike</string>
+    <string name="crm_filter_clear_all">Hemûyan paqij bike</string>
+    <string name="crm_filter_all">Hemû</string>
+    <string name="crm_filter_other">Yên din</string>
+    <string name="crm_settings_section_identity">Nasname</string>
+    <string name="crm_settings_section_access">Birêvebirina gihîştinê</string>
+    <string name="crm_settings_not_set">Nehatiye danîn</string>
+    <string name="crm_settings_access_updated">Gihîştin hat nûkirin</string>
+    <string name="crm_settings_access_revoked">Gihiştin hate betalkirin</string>
+    <string name="crm_people_search">Li kesan bigere</string>
+    <string name="crm_access_tab_other">Yên din</string>
+    <string name="crm_access_select_group">Komekê hilbijêre</string>
+    <string name="crm_access_select_rule">Rêzikekê hilbijêre</string>
+    <string name="crm_access_select_role">Rolê hilbijêre</string>
+    <string name="crm_access_selected">Hilbijartî: %1$s</string>
+    <string name="crm_access_subject_anyone">Her kes</string>
+    <string name="crm_access_subject_authenticated">Bikarhênerên erêkirî</string>
+    <string name="crm_access_authenticated_desc">Her kesê ku têketî ye</string>
+    <string name="crm_access_anyone_desc">Bikarhênerên nenas jî tê de</string>
+    <string name="crm_access_role_design">Sêwirandin, afirandin, sererastkirin, şîrovekirin û dîtin</string>
+    <string name="crm_access_role_write">Afirandin, sererastkirin, şîrovekirin û dîtin</string>
+    <string name="crm_access_role_comment">Şîrove û dîtin</string>
+    <string name="crm_access_role_view">Tenê dîtin</string>
+    <string name="crm_access_role_none">Bê destpêkirin</string>
+    <string name="crm_all_crms">Hemû CRM</string>
+    <string name="crm_settings_unsubscribe_section">Bihelîne abonetiya CRM</string>
+    <string name="crm_settings_updated">CRM hate nûkirin</string>
 </resources>

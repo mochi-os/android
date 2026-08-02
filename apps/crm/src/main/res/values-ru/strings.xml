@@ -341,4 +341,32 @@
         <item quantity="many">%1$d конфликтующих файлов</item>
         <item quantity="other">%1$d конфликтующего файла</item>
     </plurals>
+    <string name="crm_filter">Фильтр</string>
+    <string name="crm_sort_filter_title">Сортировка и фильтр</string>
+    <string name="crm_filter_clear_all">Очистить всё</string>
+    <string name="crm_filter_all">Все</string>
+    <string name="crm_filter_other">Другое</string>
+    <string name="crm_settings_section_identity">Личность</string>
+    <string name="crm_settings_section_access">Управление доступом</string>
+    <string name="crm_settings_not_set">Не задано</string>
+    <string name="crm_settings_access_updated">Доступ обновлён</string>
+    <string name="crm_settings_access_revoked">Доступ отозван</string>
+    <string name="crm_people_search">Поиск людей</string>
+    <string name="crm_access_tab_other">Другое</string>
+    <string name="crm_access_select_group">Выберите группу</string>
+    <string name="crm_access_select_rule">Выберите правило</string>
+    <string name="crm_access_select_role">Выберите роль</string>
+    <string name="crm_access_selected">Выбрано: %1$s</string>
+    <string name="crm_access_subject_anyone">Кто угодно</string>
+    <string name="crm_access_subject_authenticated">Аутентифицированные пользователи</string>
+    <string name="crm_access_authenticated_desc">Все, кто вошёл в систему</string>
+    <string name="crm_access_anyone_desc">Включая анонимных пользователей</string>
+    <string name="crm_access_role_design">Проектирование, создание, редактирование, комментирование и просмотр</string>
+    <string name="crm_access_role_write">Создание, редактирование, комментирование и просмотр</string>
+    <string name="crm_access_role_comment">Комментировать и просматривать</string>
+    <string name="crm_access_role_view">Только просмотр</string>
+    <string name="crm_access_role_none">Нет доступа</string>
+    <string name="crm_all_crms">Все CRM</string>
+    <string name="crm_settings_unsubscribe_section">Отписаться от CRM</string>
+    <string name="crm_settings_updated">CRM обновлён</string>
 </resources>

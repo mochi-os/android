@@ -369,4 +369,11 @@
         <item quantity="one">%1$d የሚጋጭ ፋይል</item>
         <item quantity="other">%1$d የሚጋጩ ፋይሎች</item>
     </plurals>
+    <string name="projects_design_export_saved">ንድፉ ተቀምጧል</string>
+    <string name="projects_design_import_failed">ያንን ፋይል ማንበብ አልተቻለም</string>
+    <string name="projects_design_or_upload_json">ወይም ፋይል ይጫኑ</string>
+    <string name="projects_export">ውሂብ ላክ</string>
+    <string name="projects_export_failed">ወደ ውጪ መላኩን ማስቀመጥ አልተቻለም</string>
+    <string name="projects_export_saved">የፕሮጀክት ውሂብ ተቀምጧል</string>
+    <string name="projects_exporting">ወደ ውጪ መላክ በመዘጋጀት ላይ…</string>
 </resources>

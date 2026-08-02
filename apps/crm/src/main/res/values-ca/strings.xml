@@ -341,4 +341,32 @@
         <item quantity="one">%1$d fitxer en conflicte</item>
         <item quantity="other">%1$d fitxers en conflicte</item>
     </plurals>
+    <string name="crm_filter">Filtra</string>
+    <string name="crm_sort_filter_title">Ordena i filtra</string>
+    <string name="crm_filter_clear_all">Esborra-ho tot</string>
+    <string name="crm_filter_all">Totes</string>
+    <string name="crm_filter_other">Altres</string>
+    <string name="crm_settings_section_identity">Identitat</string>
+    <string name="crm_settings_section_access">Gestió d\'accés</string>
+    <string name="crm_settings_not_set">No establert</string>
+    <string name="crm_settings_access_updated">Accés actualitzat</string>
+    <string name="crm_settings_access_revoked">Accés revocat</string>
+    <string name="crm_people_search">Cerca persones</string>
+    <string name="crm_access_tab_other">Altres</string>
+    <string name="crm_access_select_group">Selecciona un grup</string>
+    <string name="crm_access_select_rule">Selecciona una regla</string>
+    <string name="crm_access_select_role">Selecciona rol</string>
+    <string name="crm_access_selected">Seleccionat: %1$s</string>
+    <string name="crm_access_subject_anyone">Qualsevol</string>
+    <string name="crm_access_subject_authenticated">Usuaris autenticats</string>
+    <string name="crm_access_authenticated_desc">Qualsevol persona que hagi iniciat sessió</string>
+    <string name="crm_access_anyone_desc">Inclosos els usuaris anònims</string>
+    <string name="crm_access_role_design">Dissenya, crea, edita, comenta i visualitza</string>
+    <string name="crm_access_role_write">Crea, edita, comenta i visualitza</string>
+    <string name="crm_access_role_comment">Comentar i veure</string>
+    <string name="crm_access_role_view">Només visualització</string>
+    <string name="crm_access_role_none">Sense accés</string>
+    <string name="crm_all_crms">Tots els CRM</string>
+    <string name="crm_settings_unsubscribe_section">Cancel·la la subscripció al CRM</string>
+    <string name="crm_settings_updated">CRM actualitzat</string>
 </resources>

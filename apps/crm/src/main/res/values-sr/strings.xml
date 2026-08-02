@@ -340,4 +340,32 @@
         <item quantity="few">%1$d сукобљене датотеке</item>
         <item quantity="other">%1$d сукобљених датотека</item>
     </plurals>
+    <string name="crm_filter">Филтер</string>
+    <string name="crm_sort_filter_title">Сортирање и филтер</string>
+    <string name="crm_filter_clear_all">Очисти све</string>
+    <string name="crm_filter_all">Све</string>
+    <string name="crm_filter_other">Друго</string>
+    <string name="crm_settings_section_identity">Идентитет</string>
+    <string name="crm_settings_section_access">Управљање приступом</string>
+    <string name="crm_settings_not_set">Није постављено</string>
+    <string name="crm_settings_access_updated">Приступ ажуриран</string>
+    <string name="crm_settings_access_revoked">Приступ је опозван</string>
+    <string name="crm_people_search">Претражи људе</string>
+    <string name="crm_access_tab_other">Друго</string>
+    <string name="crm_access_select_group">Изаберите групу</string>
+    <string name="crm_access_select_rule">Изаберите правило</string>
+    <string name="crm_access_select_role">Изабери улогу</string>
+    <string name="crm_access_selected">Izabrano: %1$s</string>
+    <string name="crm_access_subject_anyone">Било ко</string>
+    <string name="crm_access_subject_authenticated">Аутентификовани корисници</string>
+    <string name="crm_access_authenticated_desc">Свако ко је пријављен</string>
+    <string name="crm_access_anyone_desc">Укључујући анонимне кориснике</string>
+    <string name="crm_access_role_design">Дизајнирање, креирање, уређивање, коментарисање и преглед</string>
+    <string name="crm_access_role_write">Креирање, уређивање, коментарисање и преглед</string>
+    <string name="crm_access_role_comment">Коментариши и прегледај</string>
+    <string name="crm_access_role_view">Само приказ</string>
+    <string name="crm_access_role_none">Нема приступа</string>
+    <string name="crm_all_crms">Сви CRM-ови</string>
+    <string name="crm_settings_unsubscribe_section">Откажи претплату на CRM</string>
+    <string name="crm_settings_updated">CRM је ажуриран</string>
 </resources>

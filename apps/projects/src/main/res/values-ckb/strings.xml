@@ -371,4 +371,11 @@
         <item quantity="one">%1$d پەڕگەی ناکۆک</item>
         <item quantity="other">%1$d پەڕگەی ناکۆک</item>
     </plurals>
+    <string name="projects_design_export_saved">دیزاین پاشەکەوت کرا</string>
+    <string name="projects_design_import_failed">نەتوانرا ئەو فایلە بخوێنرێتەوە</string>
+    <string name="projects_design_or_upload_json">یان فایلێک بارکە</string>
+    <string name="projects_export">داتا هەناردە بکە</string>
+    <string name="projects_export_failed">نەتوانرا هەناردەکە پاشەکەوت بکرێت</string>
+    <string name="projects_export_saved">داتای پڕۆژە پاشەکەوت کرا</string>
+    <string name="projects_exporting">هەناردە ئامادە دەکرێت…</string>
 </resources>

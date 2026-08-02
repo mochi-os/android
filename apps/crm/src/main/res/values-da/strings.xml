@@ -339,4 +339,32 @@
         <item quantity="one">%1$d modstridende fil</item>
         <item quantity="other">%1$d modstridende filer</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sortér og filtrér</string>
+    <string name="crm_filter_clear_all">Ryd alle</string>
+    <string name="crm_filter_all">Alle</string>
+    <string name="crm_filter_other">Andet</string>
+    <string name="crm_settings_section_identity">Identitet</string>
+    <string name="crm_settings_section_access">Adgangsstyring</string>
+    <string name="crm_settings_not_set">Ikke angivet</string>
+    <string name="crm_settings_access_updated">Adgang opdateret</string>
+    <string name="crm_settings_access_revoked">Adgang tilbagekaldt</string>
+    <string name="crm_people_search">Søg efter personer</string>
+    <string name="crm_access_tab_other">Andet</string>
+    <string name="crm_access_select_group">Vælg en gruppe</string>
+    <string name="crm_access_select_rule">Vælg en regel</string>
+    <string name="crm_access_select_role">Vælg rolle</string>
+    <string name="crm_access_selected">Valgt: %1$s</string>
+    <string name="crm_access_subject_anyone">Alle</string>
+    <string name="crm_access_subject_authenticated">Godkendte brugere</string>
+    <string name="crm_access_authenticated_desc">Alle, der er logget ind</string>
+    <string name="crm_access_anyone_desc">Inklusive anonyme brugere</string>
+    <string name="crm_access_role_design">Design, opret, rediger, kommenter og se</string>
+    <string name="crm_access_role_write">Opret, rediger, kommenter og se</string>
+    <string name="crm_access_role_comment">Kommenter og se</string>
+    <string name="crm_access_role_view">Kun læseadgang</string>
+    <string name="crm_access_role_none">Ingen adgang</string>
+    <string name="crm_all_crms">Alle CRM\'er</string>
+    <string name="crm_settings_unsubscribe_section">Afmeld CRM</string>
+    <string name="crm_settings_updated">CRM opdateret</string>
 </resources>

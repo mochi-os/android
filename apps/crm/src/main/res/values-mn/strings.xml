@@ -339,4 +339,32 @@
         <item quantity="one">%1$d зөрчилтэй файл</item>
         <item quantity="other">%1$d зөрчилтэй файл</item>
     </plurals>
+    <string name="crm_filter">Шүүлтүүр</string>
+    <string name="crm_sort_filter_title">Эрэмбэлэх ба шүүх</string>
+    <string name="crm_filter_clear_all">Бүгдийг цэвэрлэх</string>
+    <string name="crm_filter_all">Бүгд</string>
+    <string name="crm_filter_other">Бусад</string>
+    <string name="crm_settings_section_identity">Identity</string>
+    <string name="crm_settings_section_access">Хандалтын удирдлага</string>
+    <string name="crm_settings_not_set">Тохируулаагүй</string>
+    <string name="crm_settings_access_updated">Хандалт шинэчлэгдсэн</string>
+    <string name="crm_settings_access_revoked">Нэвтрэх эрхийг цуцалсан</string>
+    <string name="crm_people_search">Хүмүүсийг хайх</string>
+    <string name="crm_access_tab_other">Бусад</string>
+    <string name="crm_access_select_group">Бүлэг сонгоно уу</string>
+    <string name="crm_access_select_rule">Дүрэм сонгоно уу</string>
+    <string name="crm_access_select_role">Дүр сонгох</string>
+    <string name="crm_access_selected">Сонгосон: %1$s</string>
+    <string name="crm_access_subject_anyone">Хэн ч</string>
+    <string name="crm_access_subject_authenticated">Баталгаажсан хэрэглэгчид</string>
+    <string name="crm_access_authenticated_desc">Нэвтэрсэн хэн ч</string>
+    <string name="crm_access_anyone_desc">Нэргүй хэрэглэгчдийг оруулаад</string>
+    <string name="crm_access_role_design">Загварчлах, үүсгэх, засварлах, сэтгэгдэл бичих, үзэх</string>
+    <string name="crm_access_role_write">Үүсгэх, засварлах, сэтгэгдэл бичих, үзэх</string>
+    <string name="crm_access_role_comment">Сэтгэгдэл болон харах</string>
+    <string name="crm_access_role_view">Зөвхөн үзэх</string>
+    <string name="crm_access_role_none">Хандах эрх байхгүй</string>
+    <string name="crm_all_crms">Бүх CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM-ээс бүртгэлээ цуцлах</string>
+    <string name="crm_settings_updated">CRM шинэчлэгдлээ</string>
 </resources>

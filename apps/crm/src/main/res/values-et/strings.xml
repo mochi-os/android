@@ -339,4 +339,32 @@
         <item quantity="one">%1$d vastuoluline fail</item>
         <item quantity="other">%1$d vastuolulist faili</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sortimine ja filter</string>
+    <string name="crm_filter_clear_all">Tühjenda kõik</string>
+    <string name="crm_filter_all">Kõik</string>
+    <string name="crm_filter_other">Muu</string>
+    <string name="crm_settings_section_identity">Identiteet</string>
+    <string name="crm_settings_section_access">Juurdepääsu haldus</string>
+    <string name="crm_settings_not_set">Pole määratud</string>
+    <string name="crm_settings_access_updated">Juurdepääs uuendatud</string>
+    <string name="crm_settings_access_revoked">Juurdepääs tühistati</string>
+    <string name="crm_people_search">Otsi inimesi</string>
+    <string name="crm_access_tab_other">Muu</string>
+    <string name="crm_access_select_group">Valige rühm</string>
+    <string name="crm_access_select_rule">Valige reegel</string>
+    <string name="crm_access_select_role">Vali roll</string>
+    <string name="crm_access_selected">Valitud: %1$s</string>
+    <string name="crm_access_subject_anyone">Kõik</string>
+    <string name="crm_access_subject_authenticated">Autenditud kasutajad</string>
+    <string name="crm_access_authenticated_desc">Kõik sisselogitud kasutajad</string>
+    <string name="crm_access_anyone_desc">Kaasa arvatud anonüümsed kasutajad</string>
+    <string name="crm_access_role_design">Kujunda, loo, muuda, kommenteeri ja vaata</string>
+    <string name="crm_access_role_write">Loo, muuda, kommenteeri ja vaata</string>
+    <string name="crm_access_role_comment">Kommenteeri ja vaata</string>
+    <string name="crm_access_role_view">Ainult vaatamine</string>
+    <string name="crm_access_role_none">Juurdepääs puudub</string>
+    <string name="crm_all_crms">Kõik CRM-id</string>
+    <string name="crm_settings_unsubscribe_section">Lõpeta CRM-i tellimus</string>
+    <string name="crm_settings_updated">CRM uuendatud</string>
 </resources>

@@ -369,4 +369,11 @@
         <item quantity="one">%1$d fil med konflikt</item>
         <item quantity="other">%1$d filer med konflikter</item>
     </plurals>
+    <string name="projects_design_export_saved">Design lagret</string>
+    <string name="projects_design_import_failed">Kunne ikke lese filen</string>
+    <string name="projects_design_or_upload_json">Eller last opp en fil</string>
+    <string name="projects_export">Eksporter data</string>
+    <string name="projects_export_failed">Kunne ikke lagre eksporten</string>
+    <string name="projects_export_saved">Prosjektdata lagret</string>
+    <string name="projects_exporting">Forbereder eksport…</string>
 </resources>

@@ -369,4 +369,11 @@
         <item quantity="one">%1$d skedar në konflikt</item>
         <item quantity="other">%1$d skedarë në konflikt</item>
     </plurals>
+    <string name="projects_design_export_saved">Dizajni u ruajt</string>
+    <string name="projects_design_import_failed">Skedari nuk u lexua dot</string>
+    <string name="projects_design_or_upload_json">Ose ngarko një skedar</string>
+    <string name="projects_export">Eksporto të dhënat</string>
+    <string name="projects_export_failed">Eksporti nuk u ruajt dot</string>
+    <string name="projects_export_saved">Të dhënat e projektit u ruajtën</string>
+    <string name="projects_exporting">Po përgatitet eksporti…</string>
 </resources>

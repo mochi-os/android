@@ -339,4 +339,32 @@
         <item quantity="one">%1$d gapma-garşy faýl</item>
         <item quantity="other">%1$d gapma-garşy faýl</item>
     </plurals>
+    <string name="crm_filter">Süzgüç</string>
+    <string name="crm_sort_filter_title">Tertiple we süz</string>
+    <string name="crm_filter_clear_all">Hemmesini arassalamak</string>
+    <string name="crm_filter_all">Hemmesi</string>
+    <string name="crm_filter_other">Beýleki</string>
+    <string name="crm_settings_section_identity">Şahsyýet</string>
+    <string name="crm_settings_section_access">Giriş dolandyryşy</string>
+    <string name="crm_settings_not_set">Bellenilmedik</string>
+    <string name="crm_settings_access_updated">Giriş täzelendi</string>
+    <string name="crm_settings_access_revoked">Giriş ret edildi</string>
+    <string name="crm_people_search">Adamlary gözle</string>
+    <string name="crm_access_tab_other">Beýleki</string>
+    <string name="crm_access_select_group">Topar saýlaň</string>
+    <string name="crm_access_select_rule">Düzgün saýlaň</string>
+    <string name="crm_access_select_role">Roly saýla</string>
+    <string name="crm_access_selected">Saýlanan: %1$s</string>
+    <string name="crm_access_subject_anyone">Islendik adam</string>
+    <string name="crm_access_subject_authenticated">Tassyklanan ulanyjylar</string>
+    <string name="crm_access_authenticated_desc">Ulgama giren islendik adam</string>
+    <string name="crm_access_anyone_desc">Anonim ulanyjylar bilen birlikde</string>
+    <string name="crm_access_role_design">Dizaýn etmek, döretmek, redaktirlemek, teswir ýazmak we görmek</string>
+    <string name="crm_access_role_write">Döretmek, redaktirlemek, teswir ýazmak we görmek</string>
+    <string name="crm_access_role_comment">Teswir we görmek</string>
+    <string name="crm_access_role_view">Diňe görkez</string>
+    <string name="crm_access_role_none">Girip bolmaýar</string>
+    <string name="crm_all_crms">Ähli CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM abunaligyny ýatyr</string>
+    <string name="crm_settings_updated">CRM täzelendi</string>
 </resources>

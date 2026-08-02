@@ -339,4 +339,32 @@
         <item quantity="one">%1$d فایل متناقض</item>
         <item quantity="other">%1$d فایل متناقض</item>
     </plurals>
+    <string name="crm_filter">فیلتر</string>
+    <string name="crm_sort_filter_title">مرتب‌سازی و پالایش</string>
+    <string name="crm_filter_clear_all">پاک کردن همه</string>
+    <string name="crm_filter_all">همه</string>
+    <string name="crm_filter_other">سایر</string>
+    <string name="crm_settings_section_identity">هویت</string>
+    <string name="crm_settings_section_access">مدیریت دسترسی</string>
+    <string name="crm_settings_not_set">تنظیم نشده</string>
+    <string name="crm_settings_access_updated">دسترسی به‌روزرسانی شد</string>
+    <string name="crm_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="crm_people_search">جستجوی افراد</string>
+    <string name="crm_access_tab_other">سایر</string>
+    <string name="crm_access_select_group">یک گروه انتخاب کنید</string>
+    <string name="crm_access_select_rule">یک قانون انتخاب کنید</string>
+    <string name="crm_access_select_role">انتخاب نقش</string>
+    <string name="crm_access_selected">انتخاب‌شده: %1$s</string>
+    <string name="crm_access_subject_anyone">هر کسی</string>
+    <string name="crm_access_subject_authenticated">کاربران احراز هویت‌شده</string>
+    <string name="crm_access_authenticated_desc">هر کسی که وارد شده باشد</string>
+    <string name="crm_access_anyone_desc">شامل کاربران ناشناس</string>
+    <string name="crm_access_role_design">طراحی، ساخت، ویرایش، نظردادن و مشاهده</string>
+    <string name="crm_access_role_write">ساخت، ویرایش، نظردادن و مشاهده</string>
+    <string name="crm_access_role_comment">نظر دادن و دیدن</string>
+    <string name="crm_access_role_view">فقط نمایش</string>
+    <string name="crm_access_role_none">بدون دسترسی</string>
+    <string name="crm_all_crms">همه CRMها</string>
+    <string name="crm_settings_unsubscribe_section">لغو اشتراک از CRM</string>
+    <string name="crm_settings_updated">CRM به‌روزرسانی شد</string>
 </resources>

@@ -369,4 +369,11 @@
         <item quantity="one">%1$d nuwasiri archivo</item>
         <item quantity="other">%1$d nuwasiri archivonaka</item>
     </plurals>
+    <string name="projects_design_export_saved">Uñstawi imantata</string>
+    <string name="projects_design_import_failed">Uka qillqata ullañjamäkiti</string>
+    <string name="projects_design_or_upload_json">Jan ukax mä qillqata apsuña</string>
+    <string name="projects_export">Yatiyawi apsuña</string>
+    <string name="projects_export_failed">Apsuta imantañjamäkiti</string>
+    <string name="projects_export_saved">Proyecto yatiyawi imantata</string>
+    <string name="projects_exporting">Apsuña wakichaña…</string>
 </resources>

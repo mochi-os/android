@@ -368,4 +368,11 @@
     <plurals name="projects_request_conflicts">
         <item quantity="other">%1$d ឯកសារជម្លោះ</item>
     </plurals>
+    <string name="projects_design_export_saved">បានរក្សាទុកការរចនា</string>
+    <string name="projects_design_import_failed">មិនអាចអានឯកសារនោះបានទេ</string>
+    <string name="projects_design_or_upload_json">ឬបញ្ចូលឯកសារ</string>
+    <string name="projects_export">នាំចេញទិន្នន័យ</string>
+    <string name="projects_export_failed">មិនអាចរក្សាទុកការនាំចេញបានទេ</string>
+    <string name="projects_export_saved">បានរក្សាទុកទិន្នន័យគម្រោង</string>
+    <string name="projects_exporting">កំពុងរៀបចំការនាំចេញ…</string>
 </resources>

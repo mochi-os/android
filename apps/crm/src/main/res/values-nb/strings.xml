@@ -339,4 +339,32 @@
         <item quantity="one">%1$d fil med konflikt</item>
         <item quantity="other">%1$d filer med konflikter</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sorter og filtrer</string>
+    <string name="crm_filter_clear_all">Tøm alt</string>
+    <string name="crm_filter_all">Alle</string>
+    <string name="crm_filter_other">Annet</string>
+    <string name="crm_settings_section_identity">Identitet</string>
+    <string name="crm_settings_section_access">Tilgangsstyring</string>
+    <string name="crm_settings_not_set">Ikke satt</string>
+    <string name="crm_settings_access_updated">Tilgang oppdatert</string>
+    <string name="crm_settings_access_revoked">Tilgang opphevet</string>
+    <string name="crm_people_search">Søk etter personer</string>
+    <string name="crm_access_tab_other">Annet</string>
+    <string name="crm_access_select_group">Velg en gruppe</string>
+    <string name="crm_access_select_rule">Velg en regel</string>
+    <string name="crm_access_select_role">Velg rolle</string>
+    <string name="crm_access_selected">Valgt: %1$s</string>
+    <string name="crm_access_subject_anyone">Alle</string>
+    <string name="crm_access_subject_authenticated">Autentiserte brukere</string>
+    <string name="crm_access_authenticated_desc">Alle som er logget inn</string>
+    <string name="crm_access_anyone_desc">Inkludert anonyme brukere</string>
+    <string name="crm_access_role_design">Utform, opprett, rediger, kommenter og vis</string>
+    <string name="crm_access_role_write">Opprett, rediger, kommenter og vis</string>
+    <string name="crm_access_role_comment">Kommenter og se</string>
+    <string name="crm_access_role_view">Bare visning</string>
+    <string name="crm_access_role_none">Ingen tilgang</string>
+    <string name="crm_all_crms">Alle CRM-er</string>
+    <string name="crm_settings_unsubscribe_section">Avslutt abonnement på CRM</string>
+    <string name="crm_settings_updated">CRM oppdatert</string>
 </resources>

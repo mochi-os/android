@@ -339,4 +339,32 @@
         <item quantity="one">%1$d टकराव वाला फाइल</item>
         <item quantity="other">%1$d टकराव वाला फाइल</item>
     </plurals>
+    <string name="crm_filter">फिल्टर</string>
+    <string name="crm_sort_filter_title">छाँटीं आ छानीं</string>
+    <string name="crm_filter_clear_all">सब साफ करीं</string>
+    <string name="crm_filter_all">सब</string>
+    <string name="crm_filter_other">दोसर</string>
+    <string name="crm_settings_section_identity">पहचान</string>
+    <string name="crm_settings_section_access">पहुंच प्रबंधन</string>
+    <string name="crm_settings_not_set">सेट नइखे</string>
+    <string name="crm_settings_access_updated">पहुंच अद्यतन कइल गइल</string>
+    <string name="crm_settings_access_revoked">पहुँच हटा देहल गइल</string>
+    <string name="crm_people_search">लोग खोजीं</string>
+    <string name="crm_access_tab_other">दोसर</string>
+    <string name="crm_access_select_group">एगो समूह चुनीं</string>
+    <string name="crm_access_select_rule">एगो नियम चुनीं</string>
+    <string name="crm_access_select_role">भूमिका चुनीं</string>
+    <string name="crm_access_selected">चुनल: %1$s</string>
+    <string name="crm_access_subject_anyone">केहू भी</string>
+    <string name="crm_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
+    <string name="crm_access_authenticated_desc">जे केहू लॉग इन बा</string>
+    <string name="crm_access_anyone_desc">अनाम प्रयोगकर्ता लोग समेत</string>
+    <string name="crm_access_role_design">डिजाइन करीं, बनाईं, संपादित करीं, टिप्पणी करीं, आ देखीं</string>
+    <string name="crm_access_role_write">बनाईं, संपादित करीं, टिप्पणी करीं, आ देखीं</string>
+    <string name="crm_access_role_comment">टिप्पणी आ देखीं</string>
+    <string name="crm_access_role_view">खाली देखीं</string>
+    <string name="crm_access_role_none">पहुँच नइखे</string>
+    <string name="crm_all_crms">सब CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM से सदस्यता छोड़ीं</string>
+    <string name="crm_settings_updated">CRM अपडेट भइल</string>
 </resources>

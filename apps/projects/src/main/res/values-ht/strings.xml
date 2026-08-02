@@ -368,4 +368,11 @@
     <plurals name="projects_request_conflicts">
         <item quantity="other">%1$d fichye ki an konfli</item>
     </plurals>
+    <string name="projects_design_export_saved">Konsèp anrejistre</string>
+    <string name="projects_design_import_failed">Nou pa t kapab li fichye sa a</string>
+    <string name="projects_design_or_upload_json">Oswa telechaje yon fichye</string>
+    <string name="projects_export">Ekspòte done</string>
+    <string name="projects_export_failed">Nou pa t kapab anrejistre ekspòtasyon an</string>
+    <string name="projects_export_saved">Done pwojè a anrejistre</string>
+    <string name="projects_exporting">Prepare ekspòtasyon an…</string>
 </resources>

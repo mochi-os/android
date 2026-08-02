@@ -369,4 +369,11 @@
         <item quantity="one">%1$d ütköző fájl</item>
         <item quantity="other">%1$d ütköző fájl</item>
     </plurals>
+    <string name="projects_design_export_saved">Terv mentve</string>
+    <string name="projects_design_import_failed">A fájlt nem sikerült beolvasni</string>
+    <string name="projects_design_or_upload_json">Vagy töltsön fel egy fájlt</string>
+    <string name="projects_export">Adatok exportálása</string>
+    <string name="projects_export_failed">Az exportálást nem sikerült menteni</string>
+    <string name="projects_export_saved">A projekt adatai mentve</string>
+    <string name="projects_exporting">Exportálás előkészítése…</string>
 </resources>

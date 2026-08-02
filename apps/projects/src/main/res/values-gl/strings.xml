@@ -369,4 +369,11 @@
         <item quantity="one">%1$d ficheiro en conflito</item>
         <item quantity="other">%1$d ficheiros en conflito</item>
     </plurals>
+    <string name="projects_design_export_saved">Deseño gardado</string>
+    <string name="projects_design_import_failed">Non se puido ler ese ficheiro</string>
+    <string name="projects_design_or_upload_json">Ou carga un ficheiro</string>
+    <string name="projects_export">Exportar datos</string>
+    <string name="projects_export_failed">Non se puido gardar a exportación</string>
+    <string name="projects_export_saved">Datos do proxecto gardados</string>
+    <string name="projects_exporting">Preparando a exportación…</string>
 </resources>

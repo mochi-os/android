@@ -339,4 +339,32 @@
         <item quantity="one">%1$d קאָנפֿליקט־טעקע</item>
         <item quantity="other">%1$d קאָנפֿליקט־טעקעס</item>
     </plurals>
+    <string name="crm_filter">פֿילטער</string>
+    <string name="crm_sort_filter_title">סאָרטירן און פֿילטרירן</string>
+    <string name="crm_filter_clear_all">רייניקן אַלץ</string>
+    <string name="crm_filter_all">אַלע</string>
+    <string name="crm_filter_other">אַנדער</string>
+    <string name="crm_settings_section_identity">אידענטיטעט</string>
+    <string name="crm_settings_section_access">צוטריט פֿאַרוואַלטונג</string>
+    <string name="crm_settings_not_set">ניט געשטעלט</string>
+    <string name="crm_settings_access_updated">צוטריט באַנײַט</string>
+    <string name="crm_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="crm_people_search">זוך מענטשן</string>
+    <string name="crm_access_tab_other">אַנדער</string>
+    <string name="crm_access_select_group">קלייַבט אויס אַ גרופּע</string>
+    <string name="crm_access_select_rule">קלייַבט אויס אַ כּלל</string>
+    <string name="crm_access_select_role">קלײַב ראָלע</string>
+    <string name="crm_access_selected">אויסגעקליבן: %1$s</string>
+    <string name="crm_access_subject_anyone">עמעצער</string>
+    <string name="crm_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
+    <string name="crm_access_authenticated_desc">יעדער וואָס איז אײַנגעלאָגט</string>
+    <string name="crm_access_anyone_desc">אַרײַנגערעכנט אַנאָנימע באַניצער</string>
+    <string name="crm_access_role_design">פּלאַנירן, שאַפֿן, רעדאַקטירן, קאָמענטירן, און באַקוקן</string>
+    <string name="crm_access_role_write">שאַפֿן, רעדאַקטירן, קאָמענטירן, און באַקוקן</string>
+    <string name="crm_access_role_comment">קאָמענטירן און זען</string>
+    <string name="crm_access_role_view">בלויז זען</string>
+    <string name="crm_access_role_none">קיין צוטריט</string>
+    <string name="crm_all_crms">אַלע CRM</string>
+    <string name="crm_settings_unsubscribe_section">אַנטאַבאָנירן פֿון CRM</string>
+    <string name="crm_settings_updated">CRM דערהײַנטיקט</string>
 </resources>

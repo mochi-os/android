@@ -371,4 +371,11 @@
         <item quantity="one">%1$d വൈരുദ്ധ്യമുള്ള ഫയൽ</item>
         <item quantity="other">%1$d വൈരുദ്ധ്യമുള്ള ഫയലുകൾ</item>
     </plurals>
+    <string name="projects_design_export_saved">ഡിസൈൻ സംരക്ഷിച്ചു</string>
+    <string name="projects_design_import_failed">ആ ഫയൽ വായിക്കാനായില്ല</string>
+    <string name="projects_design_or_upload_json">അല്ലെങ്കിൽ ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
+    <string name="projects_export">ഡാറ്റ കയറ്റുമതി ചെയ്യുക</string>
+    <string name="projects_export_failed">കയറ്റുമതി സംരക്ഷിക്കാനായില്ല</string>
+    <string name="projects_export_saved">പ്രോജക്റ്റ് ഡാറ്റ സംരക്ഷിച്ചു</string>
+    <string name="projects_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
 </resources>

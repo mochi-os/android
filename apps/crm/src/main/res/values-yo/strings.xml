@@ -339,4 +339,32 @@
         <item quantity="one">%1$d fáìlì tó tako</item>
         <item quantity="other">%1$d fáìlì tó tako</item>
     </plurals>
+    <string name="crm_filter">Yọ́</string>
+    <string name="crm_sort_filter_title">Tò kí o sì sẹ́</string>
+    <string name="crm_filter_clear_all">Pa gbogbo rẹ̀ rẹ́</string>
+    <string name="crm_filter_all">Gbogbo</string>
+    <string name="crm_filter_other">Mìíràn</string>
+    <string name="crm_settings_section_identity">Ìdánimọ̀</string>
+    <string name="crm_settings_section_access">Ìṣàkóso Ìwọlé</string>
+    <string name="crm_settings_not_set">A kò ṣètò</string>
+    <string name="crm_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
+    <string name="crm_settings_access_revoked">Ati gba aṣèsẹbí</string>
+    <string name="crm_people_search">Wa awọn eniyan</string>
+    <string name="crm_access_tab_other">Mìíràn</string>
+    <string name="crm_access_select_group">Yan ẹgbẹ́ kan</string>
+    <string name="crm_access_select_rule">Yan òfin kan</string>
+    <string name="crm_access_select_role">Yan ipa</string>
+    <string name="crm_access_selected">Tí a yàn: %1$s</string>
+    <string name="crm_access_subject_anyone">Ẹnikẹ́ni</string>
+    <string name="crm_access_subject_authenticated">Àwọn olùmúlò tí a fọwọ́sí</string>
+    <string name="crm_access_authenticated_desc">Ẹnikẹ́ni tí ó ti wọlé</string>
+    <string name="crm_access_anyone_desc">Pẹ̀lú àwọn aṣàmúlò aláìlórúkọ</string>
+    <string name="crm_access_role_design">Ṣe àpẹrẹ, ṣẹ̀dá, ṣàtúnṣe, sọ̀rọ̀, kí o sì wò</string>
+    <string name="crm_access_role_write">Ṣẹ̀dá, ṣàtúnṣe, sọ̀rọ̀, kí o sì wò</string>
+    <string name="crm_access_role_comment">Ṣàlàyé àti wo</string>
+    <string name="crm_access_role_view">Wíwò nìkan</string>
+    <string name="crm_access_role_none">Kò sí àyè</string>
+    <string name="crm_all_crms">Gbogbo CRM</string>
+    <string name="crm_settings_unsubscribe_section">Yọ ìforúkọsílẹ̀ CRM kúrò</string>
+    <string name="crm_settings_updated">A ti ṣàtúnṣe CRM</string>
 </resources>

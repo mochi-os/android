@@ -339,4 +339,32 @@
         <item quantity="one">%1$d қайшылықты файл</item>
         <item quantity="other">%1$d қайшылықты файл</item>
     </plurals>
+    <string name="crm_filter">Сүзгі</string>
+    <string name="crm_sort_filter_title">Сұрыптау және сүзгі</string>
+    <string name="crm_filter_clear_all">Барлығын тазалау</string>
+    <string name="crm_filter_all">Барлығы</string>
+    <string name="crm_filter_other">Басқа</string>
+    <string name="crm_settings_section_identity">Жеке басы</string>
+    <string name="crm_settings_section_access">Қол жеткізуді басқару</string>
+    <string name="crm_settings_not_set">Орнатылмаған</string>
+    <string name="crm_settings_access_updated">Қол жеткізу жаңартылды</string>
+    <string name="crm_settings_access_revoked">Қатынасу жойылды</string>
+    <string name="crm_people_search">Адамдарды іздеу</string>
+    <string name="crm_access_tab_other">Басқа</string>
+    <string name="crm_access_select_group">Топты таңдаңыз</string>
+    <string name="crm_access_select_rule">Ережені таңдаңыз</string>
+    <string name="crm_access_select_role">Рөлді таңдау</string>
+    <string name="crm_access_selected">Таңдалды: %1$s</string>
+    <string name="crm_access_subject_anyone">Кез келген адам</string>
+    <string name="crm_access_subject_authenticated">Аутентификацияланған пайдаланушылар</string>
+    <string name="crm_access_authenticated_desc">Жүйеге кірген кез келген адам</string>
+    <string name="crm_access_anyone_desc">Анонимді пайдаланушыларды қоса алғанда</string>
+    <string name="crm_access_role_design">Әзірлеу, жасау, өңдеу, пікір қалдыру және қарау</string>
+    <string name="crm_access_role_write">Жасау, өңдеу, пікір қалдыру және қарау</string>
+    <string name="crm_access_role_comment">Пікір қалдыру және көру</string>
+    <string name="crm_access_role_view">Тек көру</string>
+    <string name="crm_access_role_none">Қолжетімсіз</string>
+    <string name="crm_all_crms">Барлық CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM жазылымын тоқтату</string>
+    <string name="crm_settings_updated">CRM жаңартылды</string>
 </resources>

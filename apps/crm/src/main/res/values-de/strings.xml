@@ -341,4 +341,32 @@
         <item quantity="one">%1$d Datei mit Konflikt</item>
         <item quantity="other">%1$d Dateien mit Konflikten</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sortieren &amp; filtern</string>
+    <string name="crm_filter_clear_all">Alle leeren</string>
+    <string name="crm_filter_all">Alle</string>
+    <string name="crm_filter_other">Sonstige</string>
+    <string name="crm_settings_section_identity">Identität</string>
+    <string name="crm_settings_section_access">Zugriffsverwaltung</string>
+    <string name="crm_settings_not_set">Nicht festgelegt</string>
+    <string name="crm_settings_access_updated">Zugriff aktualisiert</string>
+    <string name="crm_settings_access_revoked">Zugriff widerrufen</string>
+    <string name="crm_people_search">Personen suchen</string>
+    <string name="crm_access_tab_other">Sonstige</string>
+    <string name="crm_access_select_group">Gruppe auswählen</string>
+    <string name="crm_access_select_rule">Regel auswählen</string>
+    <string name="crm_access_select_role">Rolle auswählen</string>
+    <string name="crm_access_selected">Ausgewählt: %1$s</string>
+    <string name="crm_access_subject_anyone">Jeder</string>
+    <string name="crm_access_subject_authenticated">Authentifizierte Benutzer</string>
+    <string name="crm_access_authenticated_desc">Alle angemeldeten Benutzer</string>
+    <string name="crm_access_anyone_desc">Einschließlich anonymer Benutzer</string>
+    <string name="crm_access_role_design">Entwerfen, erstellen, bearbeiten, kommentieren und ansehen</string>
+    <string name="crm_access_role_write">Erstellen, bearbeiten, kommentieren und ansehen</string>
+    <string name="crm_access_role_comment">Kommentieren und ansehen</string>
+    <string name="crm_access_role_view">Nur Ansicht</string>
+    <string name="crm_access_role_none">Kein Zugriff</string>
+    <string name="crm_all_crms">Alle CRMs</string>
+    <string name="crm_settings_unsubscribe_section">CRM-Abo beenden</string>
+    <string name="crm_settings_updated">CRM aktualisiert</string>
 </resources>

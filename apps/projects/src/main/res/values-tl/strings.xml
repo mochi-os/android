@@ -369,4 +369,11 @@
         <item quantity="one">%1$d salungat na file</item>
         <item quantity="other">%1$d na salungat na file</item>
     </plurals>
+    <string name="projects_design_export_saved">Na-save ang disenyo</string>
+    <string name="projects_design_import_failed">Hindi mabasa ang file na iyon</string>
+    <string name="projects_design_or_upload_json">O mag-upload ng file</string>
+    <string name="projects_export">I-export ang data</string>
+    <string name="projects_export_failed">Hindi ma-save ang export</string>
+    <string name="projects_export_saved">Na-save ang data ng proyekto</string>
+    <string name="projects_exporting">Inihahanda ang export…</string>
 </resources>

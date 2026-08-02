@@ -339,4 +339,32 @@
         <item quantity="one">%1$d հակասող ֆայլ</item>
         <item quantity="other">%1$d հակասող ֆայլ</item>
     </plurals>
+    <string name="crm_filter">Զտել</string>
+    <string name="crm_sort_filter_title">Դասավորել և զտել</string>
+    <string name="crm_filter_clear_all">Մաքրել զտիչները</string>
+    <string name="crm_filter_all">Բոլորը</string>
+    <string name="crm_filter_other">Այլ</string>
+    <string name="crm_settings_section_identity">Ինքնություն</string>
+    <string name="crm_settings_section_access">Մուտքի կառավարում</string>
+    <string name="crm_settings_not_set">Չի սահմանված</string>
+    <string name="crm_settings_access_updated">Մուտքը թարմացված է</string>
+    <string name="crm_settings_access_revoked">Մուտքը հետ է կանչված</string>
+    <string name="crm_people_search">Փնտրել մարդկանց</string>
+    <string name="crm_access_tab_other">Այլ</string>
+    <string name="crm_access_select_group">Ընտրեք խումբ</string>
+    <string name="crm_access_select_rule">Ընտրեք կանոն</string>
+    <string name="crm_access_select_role">Ընտրել դերը</string>
+    <string name="crm_access_selected">Ընտրված է՝ %1$s</string>
+    <string name="crm_access_subject_anyone">Ցանկացած ոք</string>
+    <string name="crm_access_subject_authenticated">Վավերացված օգտվողներ</string>
+    <string name="crm_access_authenticated_desc">Ցանկացած ոք, ով մուտք է գործել</string>
+    <string name="crm_access_anyone_desc">Ներառյալ անանուն օգտատերերը</string>
+    <string name="crm_access_role_design">Ձևավորել, ստեղծել, խմբագրել, մեկնաբանել և դիտել</string>
+    <string name="crm_access_role_write">Ստեղծել, խմբագրել, մեկնաբանել և դիտել</string>
+    <string name="crm_access_role_comment">Մեկնաբանությունը հաստատված է</string>
+    <string name="crm_access_role_view">Միայն դիտել</string>
+    <string name="crm_access_role_none">Մուտք չկա</string>
+    <string name="crm_all_crms">Բոլոր CRM-ները</string>
+    <string name="crm_settings_unsubscribe_section">Չեղարկել CRM-ի բաժանորդագրությունը</string>
+    <string name="crm_settings_updated">CRM-ը թարմացվեց</string>
 </resources>

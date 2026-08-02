@@ -372,4 +372,11 @@
         <item quantity="many">%1$d gcomhad chontrártha</item>
         <item quantity="other">%1$d comhad contrártha</item>
     </plurals>
+    <string name="projects_design_export_saved">Sábháladh an dearadh</string>
+    <string name="projects_design_import_failed">Níorbh fhéidir an comhad sin a léamh</string>
+    <string name="projects_design_or_upload_json">Nó uaslódáil comhad</string>
+    <string name="projects_export">Easpórtáil sonraí</string>
+    <string name="projects_export_failed">Níorbh fhéidir an easpórtáil a shábháil</string>
+    <string name="projects_export_saved">Sábháladh sonraí an tionscadail</string>
+    <string name="projects_exporting">Easpórtáil á hullmhú…</string>
 </resources>

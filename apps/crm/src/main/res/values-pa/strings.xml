@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ਟਕਰਾਅ ਵਾਲੀ ਫਾਈਲ</item>
         <item quantity="other">%1$d ਟਕਰਾਅ ਵਾਲੀਆਂ ਫਾਈਲਾਂ</item>
     </plurals>
+    <string name="crm_filter">ਫਿਲਟਰ</string>
+    <string name="crm_sort_filter_title">ਲੜੀਬੱਧ ਅਤੇ ਫਿਲਟਰ</string>
+    <string name="crm_filter_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
+    <string name="crm_filter_all">ਸਾਰੇ</string>
+    <string name="crm_filter_other">ਹੋਰ</string>
+    <string name="crm_settings_section_identity">ਪਛਾਣ</string>
+    <string name="crm_settings_section_access">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
+    <string name="crm_settings_not_set">ਸੈੱਟ ਨਹੀਂ</string>
+    <string name="crm_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
+    <string name="crm_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
+    <string name="crm_people_search">ਲੋਕ ਖੋਜੋ</string>
+    <string name="crm_access_tab_other">ਹੋਰ</string>
+    <string name="crm_access_select_group">ਇੱਕ ਗਰੁੱਪ ਚੁਣੋ</string>
+    <string name="crm_access_select_rule">ਇੱਕ ਨਿਯਮ ਚੁਣੋ</string>
+    <string name="crm_access_select_role">ਭੂਮਿਕਾ ਚੁਣੋ</string>
+    <string name="crm_access_selected">ਚੁਣਿਆ ਗਿਆ: %1$s</string>
+    <string name="crm_access_subject_anyone">ਕੋਈ ਵੀ</string>
+    <string name="crm_access_subject_authenticated">ਪ੍ਰਮਾਣਿਤ ਵਰਤੋਂਕਾਰ</string>
+    <string name="crm_access_authenticated_desc">ਕੋਈ ਵੀ ਜੋ ਲਾਗਇਨ ਹੈ</string>
+    <string name="crm_access_anyone_desc">ਅਗਿਆਤ ਵਰਤੋਂਕਾਰਾਂ ਸਮੇਤ</string>
+    <string name="crm_access_role_design">ਡਿਜ਼ਾਈਨ ਕਰੋ, ਬਣਾਓ, ਸੋਧੋ, ਟਿੱਪਣੀ ਕਰੋ ਅਤੇ ਵੇਖੋ</string>
+    <string name="crm_access_role_write">ਬਣਾਓ, ਸੋਧੋ, ਟਿੱਪਣੀ ਕਰੋ ਅਤੇ ਵੇਖੋ</string>
+    <string name="crm_access_role_comment">ਟਿੱਪਣੀ ਅਤੇ ਵੇਖੋ</string>
+    <string name="crm_access_role_view">ਸਿਰਫ਼ ਦੇਖੋ</string>
+    <string name="crm_access_role_none">ਪਹੁੰਚ ਨਹੀਂ</string>
+    <string name="crm_all_crms">ਸਾਰੇ CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="crm_settings_updated">CRM ਅੱਪਡੇਟ ਕੀਤਾ</string>
 </resources>

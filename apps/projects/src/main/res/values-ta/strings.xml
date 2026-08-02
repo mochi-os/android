@@ -369,4 +369,11 @@
         <item quantity="one">%1$d முரண்பாட்டு கோப்பு</item>
         <item quantity="other">%1$d முரண்பாட்டு கோப்புகள்</item>
     </plurals>
+    <string name="projects_design_export_saved">வடிவமைப்பு சேமிக்கப்பட்டது</string>
+    <string name="projects_design_import_failed">அந்தக் கோப்பைப் படிக்க முடியவில்லை</string>
+    <string name="projects_design_or_upload_json">அல்லது கோப்பைப் பதிவேற்றவும்</string>
+    <string name="projects_export">தரவை ஏற்றுமதி செய்</string>
+    <string name="projects_export_failed">ஏற்றுமதியைச் சேமிக்க முடியவில்லை</string>
+    <string name="projects_export_saved">திட்டத் தரவு சேமிக்கப்பட்டது</string>
+    <string name="projects_exporting">ஏற்றுமதி தயாராகிறது…</string>
 </resources>

@@ -341,4 +341,32 @@
         <item quantity="many">%1$d konfliktuojančio failo</item>
         <item quantity="other">%1$d konfliktuojančių failų</item>
     </plurals>
+    <string name="crm_filter">Filtras</string>
+    <string name="crm_sort_filter_title">Rikiuoti ir filtruoti</string>
+    <string name="crm_filter_clear_all">Išvalyti viską</string>
+    <string name="crm_filter_all">Visi</string>
+    <string name="crm_filter_other">Kita</string>
+    <string name="crm_settings_section_identity">Tapatybė</string>
+    <string name="crm_settings_section_access">Prieigos valdymas</string>
+    <string name="crm_settings_not_set">Nenustatyta</string>
+    <string name="crm_settings_access_updated">Prieiga atnaujinta</string>
+    <string name="crm_settings_access_revoked">Prieiga atšaukta</string>
+    <string name="crm_people_search">Ieškoti žmonių</string>
+    <string name="crm_access_tab_other">Kita</string>
+    <string name="crm_access_select_group">Pasirinkite grupę</string>
+    <string name="crm_access_select_rule">Pasirinkite taisyklę</string>
+    <string name="crm_access_select_role">Pasirinkite vaidmenį</string>
+    <string name="crm_access_selected">Pasirinkta: %1$s</string>
+    <string name="crm_access_subject_anyone">Bet kas</string>
+    <string name="crm_access_subject_authenticated">Autentifikuoti naudotojai</string>
+    <string name="crm_access_authenticated_desc">Visi prisijungę naudotojai</string>
+    <string name="crm_access_anyone_desc">Įskaitant anoniminius naudotojus</string>
+    <string name="crm_access_role_design">Kurkite dizainą, kurkite, redaguokite, komentuokite ir peržiūrėkite</string>
+    <string name="crm_access_role_write">Kurkite, redaguokite, komentuokite ir peržiūrėkite</string>
+    <string name="crm_access_role_comment">Komentuoti ir peržiūrėti</string>
+    <string name="crm_access_role_view">Tik peržiūra</string>
+    <string name="crm_access_role_none">Nėra prieigos</string>
+    <string name="crm_all_crms">Visos CRM</string>
+    <string name="crm_settings_unsubscribe_section">Atsisakyti CRM prenumeratos</string>
+    <string name="crm_settings_updated">CRM atnaujinta</string>
 </resources>

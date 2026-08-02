@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ütköző fájl</item>
         <item quantity="other">%1$d ütköző fájl</item>
     </plurals>
+    <string name="crm_filter">Szűrő</string>
+    <string name="crm_sort_filter_title">Rendezés és szűrés</string>
+    <string name="crm_filter_clear_all">Összes törlése</string>
+    <string name="crm_filter_all">Összes</string>
+    <string name="crm_filter_other">Egyéb</string>
+    <string name="crm_settings_section_identity">Azonosító</string>
+    <string name="crm_settings_section_access">Hozzáférés-kezelés</string>
+    <string name="crm_settings_not_set">Nincs beállítva</string>
+    <string name="crm_settings_access_updated">Hozzáférés frissítve</string>
+    <string name="crm_settings_access_revoked">Hozzáférés visszavonva</string>
+    <string name="crm_people_search">Emberek keresése</string>
+    <string name="crm_access_tab_other">Egyéb</string>
+    <string name="crm_access_select_group">Válasszon csoportot</string>
+    <string name="crm_access_select_rule">Válasszon szabályt</string>
+    <string name="crm_access_select_role">Szerep kiválasztása</string>
+    <string name="crm_access_selected">Kiválasztva: %1$s</string>
+    <string name="crm_access_subject_anyone">Bárki</string>
+    <string name="crm_access_subject_authenticated">Hitelesített felhasználók</string>
+    <string name="crm_access_authenticated_desc">Bárki, aki be van jelentkezve</string>
+    <string name="crm_access_anyone_desc">Beleértve a névtelen felhasználókat is</string>
+    <string name="crm_access_role_design">Tervezés, létrehozás, szerkesztés, hozzászólás és megtekintés</string>
+    <string name="crm_access_role_write">Létrehozás, szerkesztés, hozzászólás és megtekintés</string>
+    <string name="crm_access_role_comment">Megjegyzés és megtekintés</string>
+    <string name="crm_access_role_view">Csak megtekintés</string>
+    <string name="crm_access_role_none">Nincs hozzáférés</string>
+    <string name="crm_all_crms">Összes CRM</string>
+    <string name="crm_settings_unsubscribe_section">Leiratkozás a CRM-ről</string>
+    <string name="crm_settings_updated">CRM frissítve</string>
 </resources>

@@ -339,4 +339,32 @@
         <item quantity="one">ගැටුම් ගොනු %1$d</item>
         <item quantity="other">ගැටුම් ගොනු %1$d</item>
     </plurals>
+    <string name="crm_filter">පෙරහන</string>
+    <string name="crm_sort_filter_title">තෝරා පෙරන්න</string>
+    <string name="crm_filter_clear_all">සියල්ල හිස් කරන්න</string>
+    <string name="crm_filter_all">සියල්ල</string>
+    <string name="crm_filter_other">වෙනත්</string>
+    <string name="crm_settings_section_identity">අනන්‍යතාවය</string>
+    <string name="crm_settings_section_access">ප්‍රවේශ කළමනාකරණය</string>
+    <string name="crm_settings_not_set">සකසා නැත</string>
+    <string name="crm_settings_access_updated">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
+    <string name="crm_settings_access_revoked">ප්‍රවේශය අයිඪ ගත්ති</string>
+    <string name="crm_people_search">පුද්ගලයන් සොයන්න</string>
+    <string name="crm_access_tab_other">වෙනත්</string>
+    <string name="crm_access_select_group">කණ්ඩායමක් තෝරන්න</string>
+    <string name="crm_access_select_rule">නීතියක් තෝරන්න</string>
+    <string name="crm_access_select_role">භූමිකාව තෝරන්න</string>
+    <string name="crm_access_selected">තෝරාගත්: %1$s</string>
+    <string name="crm_access_subject_anyone">ඕනෑම කෙනෙක්</string>
+    <string name="crm_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
+    <string name="crm_access_authenticated_desc">පුරනය වී සිටින ඕනෑම අයෙක්</string>
+    <string name="crm_access_anyone_desc">නිර්නාමික පරිශීලකයන් ඇතුළුව</string>
+    <string name="crm_access_role_design">සැලසුම් කිරීම, සෑදීම, සංස්කරණය, අදහස් දැක්වීම සහ බැලීම</string>
+    <string name="crm_access_role_write">සෑදීම, සංස්කරණය, අදහස් දැක්වීම සහ බැලීම</string>
+    <string name="crm_access_role_comment">අදහස් දැක්වීම සහ බැලීම</string>
+    <string name="crm_access_role_view">බැලීම පමණි</string>
+    <string name="crm_access_role_none">ප්‍රවේශය නැත</string>
+    <string name="crm_all_crms">සියලු CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM වෙතින් දායකත්වය අවලංගු කරන්න</string>
+    <string name="crm_settings_updated">CRM යාවත්කාලීන කරන ලදී</string>
 </resources>

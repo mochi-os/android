@@ -331,4 +331,13 @@
     <string name="crm_settings_server">Servidor</string>
     <string name="crm_untitled">Sem título</string>
     <string name="crm_property_select">Selecionar …</string>
+    <string name="crm_settings_section_access">Gerenciamento de acesso</string>
+    <string name="crm_access_select_role">Selecionar função</string>
+    <string name="crm_access_subject_authenticated">Usuários autenticados</string>
+    <string name="crm_access_authenticated_desc">Qualquer pessoa conectada</string>
+    <string name="crm_access_anyone_desc">Incluindo usuários anônimos</string>
+    <string name="crm_access_role_design">Projetar, criar, editar, comentar e visualizar</string>
+    <string name="crm_access_role_write">Criar, editar, comentar e visualizar</string>
+    <string name="crm_access_role_comment">Comentar e visualizar</string>
+    <string name="crm_access_role_view">Apenas visualizar</string>
 </resources>

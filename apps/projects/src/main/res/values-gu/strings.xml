@@ -369,4 +369,11 @@
         <item quantity="one">%1$d વિરોધાભાસી ફાઇલ</item>
         <item quantity="other">%1$d વિરોધાભાસી ફાઇલો</item>
     </plurals>
+    <string name="projects_design_export_saved">ડિઝાઇન સાચવી</string>
+    <string name="projects_design_import_failed">તે ફાઇલ વાંચી શકાઈ નથી</string>
+    <string name="projects_design_or_upload_json">અથવા ફાઇલ અપલોડ કરો</string>
+    <string name="projects_export">ડેટા નિકાસ કરો</string>
+    <string name="projects_export_failed">નિકાસ સાચવી શકાઈ નથી</string>
+    <string name="projects_export_saved">પ્રોજેક્ટ ડેટા સાચવ્યો</string>
+    <string name="projects_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>
 </resources>

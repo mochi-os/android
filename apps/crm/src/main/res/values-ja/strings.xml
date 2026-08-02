@@ -339,4 +339,32 @@
         <item quantity="one">%1$d 件の競合ファイル</item>
         <item quantity="other">%1$d 件の競合ファイル</item>
     </plurals>
+    <string name="crm_filter">フィルター</string>
+    <string name="crm_sort_filter_title">並べ替えと絞り込み</string>
+    <string name="crm_filter_clear_all">すべてクリア</string>
+    <string name="crm_filter_all">すべて</string>
+    <string name="crm_filter_other">その他</string>
+    <string name="crm_settings_section_identity">アイデンティティ</string>
+    <string name="crm_settings_section_access">アクセス管理</string>
+    <string name="crm_settings_not_set">未設定</string>
+    <string name="crm_settings_access_updated">アクセスを更新しました</string>
+    <string name="crm_settings_access_revoked">アクセスを取り消しました</string>
+    <string name="crm_people_search">ユーザーを検索</string>
+    <string name="crm_access_tab_other">その他</string>
+    <string name="crm_access_select_group">グループを選択</string>
+    <string name="crm_access_select_rule">ルールを選択</string>
+    <string name="crm_access_select_role">役割を選択</string>
+    <string name="crm_access_selected">選択中: %1$s</string>
+    <string name="crm_access_subject_anyone">誰でも</string>
+    <string name="crm_access_subject_authenticated">認証済みユーザー</string>
+    <string name="crm_access_authenticated_desc">ログインしているすべてのユーザー</string>
+    <string name="crm_access_anyone_desc">匿名ユーザーを含む</string>
+    <string name="crm_access_role_design">デザイン、作成、編集、コメント、閲覧</string>
+    <string name="crm_access_role_write">作成、編集、コメント、閲覧</string>
+    <string name="crm_access_role_comment">コメントと閲覧</string>
+    <string name="crm_access_role_view">閲覧のみ</string>
+    <string name="crm_access_role_none">アクセスなし</string>
+    <string name="crm_all_crms">すべての CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM の購読を解除</string>
+    <string name="crm_settings_updated">CRM を更新しました</string>
 </resources>

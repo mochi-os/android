@@ -339,4 +339,32 @@
         <item quantity="one">%1$d विरोधाभासी फाइल</item>
         <item quantity="other">%1$d विरोधाभासी फाइल्स</item>
     </plurals>
+    <string name="crm_filter">फिल्टर</string>
+    <string name="crm_sort_filter_title">क्रमवारी आणि फिल्टर</string>
+    <string name="crm_filter_clear_all">सर्व साफ करा</string>
+    <string name="crm_filter_all">सर्व</string>
+    <string name="crm_filter_other">इतर</string>
+    <string name="crm_settings_section_identity">ओळख</string>
+    <string name="crm_settings_section_access">प्रवेश व्यवस्थापन</string>
+    <string name="crm_settings_not_set">सेट केलेले नाही</string>
+    <string name="crm_settings_access_updated">प्रवेश अद्ययावत केला</string>
+    <string name="crm_settings_access_revoked">प्रवेश रद्द केला</string>
+    <string name="crm_people_search">लोक शोधा</string>
+    <string name="crm_access_tab_other">इतर</string>
+    <string name="crm_access_select_group">एक गट निवडा</string>
+    <string name="crm_access_select_rule">एक नियम निवडा</string>
+    <string name="crm_access_select_role">भूमिका निवडा</string>
+    <string name="crm_access_selected">निवडलेले: %1$s</string>
+    <string name="crm_access_subject_anyone">कोणीही</string>
+    <string name="crm_access_subject_authenticated">प्रमाणित वापरकर्ते</string>
+    <string name="crm_access_authenticated_desc">लॉग इन केलेली कोणतीही व्यक्ती</string>
+    <string name="crm_access_anyone_desc">अनामिक वापरकर्त्यांसह</string>
+    <string name="crm_access_role_design">रचना करा, तयार करा, संपादित करा, टिप्पणी द्या आणि पाहा</string>
+    <string name="crm_access_role_write">तयार करा, संपादित करा, टिप्पणी द्या आणि पाहा</string>
+    <string name="crm_access_role_comment">टिप्पणी करा आणि पहा</string>
+    <string name="crm_access_role_view">फक्त पहा</string>
+    <string name="crm_access_role_none">प्रवेश नाही</string>
+    <string name="crm_all_crms">सर्व CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM ची सदस्यता रद्द करा</string>
+    <string name="crm_settings_updated">CRM अद्यतनित केले</string>
 </resources>

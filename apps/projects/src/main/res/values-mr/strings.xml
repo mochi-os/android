@@ -369,4 +369,11 @@
         <item quantity="one">%1$d विरोधाभासी फाइल</item>
         <item quantity="other">%1$d विरोधाभासी फाइल्स</item>
     </plurals>
+    <string name="projects_design_export_saved">डिझाइन जतन केले</string>
+    <string name="projects_design_import_failed">ती फाइल वाचता आली नाही</string>
+    <string name="projects_design_or_upload_json">किंवा फाइल अपलोड करा</string>
+    <string name="projects_export">डेटा निर्यात करा</string>
+    <string name="projects_export_failed">निर्यात जतन करता आले नाही</string>
+    <string name="projects_export_saved">प्रकल्प डेटा जतन केला</string>
+    <string name="projects_exporting">निर्यात तयार करत आहे…</string>
 </resources>

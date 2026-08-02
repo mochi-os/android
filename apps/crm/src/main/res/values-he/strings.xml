@@ -341,4 +341,32 @@
         <item quantity="many">%1$d קבצים מתנגשים</item>
         <item quantity="other">%1$d קבצים מתנגשים</item>
     </plurals>
+    <string name="crm_filter">סינון</string>
+    <string name="crm_sort_filter_title">מיון וסינון</string>
+    <string name="crm_filter_clear_all">נקה הכול</string>
+    <string name="crm_filter_all">הכול</string>
+    <string name="crm_filter_other">אחר</string>
+    <string name="crm_settings_section_identity">זהות</string>
+    <string name="crm_settings_section_access">ניהול גישה</string>
+    <string name="crm_settings_not_set">לא הוגדר</string>
+    <string name="crm_settings_access_updated">הגישה עודכנה</string>
+    <string name="crm_settings_access_revoked">הגישה בוטלה</string>
+    <string name="crm_people_search">חיפוש אנשים</string>
+    <string name="crm_access_tab_other">אחר</string>
+    <string name="crm_access_select_group">בחר קבוצה</string>
+    <string name="crm_access_select_rule">בחר כלל</string>
+    <string name="crm_access_select_role">בחר תפקיד</string>
+    <string name="crm_access_selected">נבחר: %1$s</string>
+    <string name="crm_access_subject_anyone">כל אחד</string>
+    <string name="crm_access_subject_authenticated">משתמשים מאומתים</string>
+    <string name="crm_access_authenticated_desc">כל מי שמחובר</string>
+    <string name="crm_access_anyone_desc">כולל משתמשים אנונימיים</string>
+    <string name="crm_access_role_design">עיצוב, יצירה, עריכה, הוספת תגובות וצפייה</string>
+    <string name="crm_access_role_write">יצירה, עריכה, הוספת תגובות וצפייה</string>
+    <string name="crm_access_role_comment">תגובה וצפייה</string>
+    <string name="crm_access_role_view">תצוגה בלבד</string>
+    <string name="crm_access_role_none">אין גישה</string>
+    <string name="crm_all_crms">כל מערכות ה-CRM</string>
+    <string name="crm_settings_unsubscribe_section">ביטול מנוי ל-CRM</string>
+    <string name="crm_settings_updated">ה-CRM עודכן</string>
 </resources>

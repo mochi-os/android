@@ -343,4 +343,32 @@
         <item quantity="many">%1$d ffeil yn gwrthdaro</item>
         <item quantity="other">%1$d ffeil yn gwrthdaro</item>
     </plurals>
+    <string name="crm_filter">Hidlo</string>
+    <string name="crm_sort_filter_title">Trefnu a hidlo</string>
+    <string name="crm_filter_clear_all">Clirio popeth</string>
+    <string name="crm_filter_all">Popeth</string>
+    <string name="crm_filter_other">Arall</string>
+    <string name="crm_settings_section_identity">Hunaniaeth</string>
+    <string name="crm_settings_section_access">Rheoli mynediad</string>
+    <string name="crm_settings_not_set">Heb ei osod</string>
+    <string name="crm_settings_access_updated">Mynediad wedi\'i ddiweddaru</string>
+    <string name="crm_settings_access_revoked">Mynediad wedi’i ddirymu</string>
+    <string name="crm_people_search">Chwilio am bobl</string>
+    <string name="crm_access_tab_other">Arall</string>
+    <string name="crm_access_select_group">Dewiswch grŵp</string>
+    <string name="crm_access_select_rule">Dewiswch reol</string>
+    <string name="crm_access_select_role">Dewis rôl</string>
+    <string name="crm_access_selected">Wedi\'i ddewis: %1$s</string>
+    <string name="crm_access_subject_anyone">Unrhyw un</string>
+    <string name="crm_access_subject_authenticated">Defnyddwyr dilys</string>
+    <string name="crm_access_authenticated_desc">Unrhyw un sydd wedi mewngofnodi</string>
+    <string name="crm_access_anyone_desc">Gan gynnwys defnyddwyr dienw</string>
+    <string name="crm_access_role_design">Dylunio, creu, golygu, gwneud sylwadau, a gweld</string>
+    <string name="crm_access_role_write">Creu, golygu, gwneud sylwadau, a gweld</string>
+    <string name="crm_access_role_comment">Sylwi a gweld</string>
+    <string name="crm_access_role_view">Gweld yn unig</string>
+    <string name="crm_access_role_none">Dim mynediad</string>
+    <string name="crm_all_crms">Pob CRM</string>
+    <string name="crm_settings_unsubscribe_section">Dad-danysgrifio o\'r CRM</string>
+    <string name="crm_settings_updated">CRM wedi\'i ddiweddaru</string>
 </resources>

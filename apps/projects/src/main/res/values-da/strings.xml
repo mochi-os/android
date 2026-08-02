@@ -369,4 +369,11 @@
         <item quantity="one">%1$d modstridende fil</item>
         <item quantity="other">%1$d modstridende filer</item>
     </plurals>
+    <string name="projects_design_export_saved">Design gemt</string>
+    <string name="projects_design_import_failed">Filen kunne ikke læses</string>
+    <string name="projects_design_or_upload_json">Eller upload en fil</string>
+    <string name="projects_export">Eksportér data</string>
+    <string name="projects_export_failed">Eksporten kunne ikke gemmes</string>
+    <string name="projects_export_saved">Projektdata gemt</string>
+    <string name="projects_exporting">Forbereder eksport…</string>
 </resources>

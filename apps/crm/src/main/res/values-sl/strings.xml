@@ -341,4 +341,32 @@
         <item quantity="few">%1$d datoteke v sporu</item>
         <item quantity="other">%1$d datotek v sporu</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Razvrsti in filtriraj</string>
+    <string name="crm_filter_clear_all">Počisti vse</string>
+    <string name="crm_filter_all">Vse</string>
+    <string name="crm_filter_other">Drugo</string>
+    <string name="crm_settings_section_identity">Identiteta</string>
+    <string name="crm_settings_section_access">Upravljanje dostopa</string>
+    <string name="crm_settings_not_set">Ni nastavljeno</string>
+    <string name="crm_settings_access_updated">Dostop posodobljen</string>
+    <string name="crm_settings_access_revoked">Dostop preklican</string>
+    <string name="crm_people_search">Iskanje oseb</string>
+    <string name="crm_access_tab_other">Drugo</string>
+    <string name="crm_access_select_group">Izberite skupino</string>
+    <string name="crm_access_select_rule">Izberite pravilo</string>
+    <string name="crm_access_select_role">Izberi vlogo</string>
+    <string name="crm_access_selected">Izbrano: %1$s</string>
+    <string name="crm_access_subject_anyone">Kdorkoli</string>
+    <string name="crm_access_subject_authenticated">Overjeni uporabniki</string>
+    <string name="crm_access_authenticated_desc">Vsi, ki so prijavljeni</string>
+    <string name="crm_access_anyone_desc">Vključno z anonimnimi uporabniki</string>
+    <string name="crm_access_role_design">Oblikovanje, ustvarjanje, urejanje, komentiranje in ogled</string>
+    <string name="crm_access_role_write">Ustvarjanje, urejanje, komentiranje in ogled</string>
+    <string name="crm_access_role_comment">Komentiranje in ogled</string>
+    <string name="crm_access_role_view">Samo za branje</string>
+    <string name="crm_access_role_none">Brez dostopa</string>
+    <string name="crm_all_crms">Vsi CRM</string>
+    <string name="crm_settings_unsubscribe_section">Prekliči naročnino na CRM</string>
+    <string name="crm_settings_updated">CRM posodobljen</string>
 </resources>

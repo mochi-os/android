@@ -339,4 +339,32 @@
         <item quantity="one">%1$d nuwasiri archivo</item>
         <item quantity="other">%1$d nuwasiri archivonaka</item>
     </plurals>
+    <string name="crm_filter">Suk\'a</string>
+    <string name="crm_sort_filter_title">Sorteo &amp; suyt\'aña</string>
+    <string name="crm_filter_clear_all">Taqpach q\'umachaña</string>
+    <string name="crm_filter_all">Taqpacha</string>
+    <string name="crm_filter_other">Yaqha</string>
+    <string name="crm_settings_section_identity">Identidad</string>
+    <string name="crm_settings_section_access">Mantaña Apnaqaña</string>
+    <string name="crm_settings_not_set">Jan wakichata</string>
+    <string name="crm_settings_access_updated">Mantañ machaqachata</string>
+    <string name="crm_settings_access_revoked">Mantanas jark’aqata</string>
+    <string name="crm_people_search">Jaqinak thaqhaña</string>
+    <string name="crm_access_tab_other">Yaqha</string>
+    <string name="crm_access_select_group">Mä grupo ajlliña</string>
+    <string name="crm_access_select_rule">Mä regla ajlliña</string>
+    <string name="crm_access_select_role">Rol ajlliña</string>
+    <string name="crm_access_selected">Ajllita: %1$s</string>
+    <string name="crm_access_subject_anyone">Khitisa</string>
+    <string name="crm_access_subject_authenticated">Yatiyat apnaqirinaka</string>
+    <string name="crm_access_authenticated_desc">Taqi khitinakatix mantatäpki ukanaka</string>
+    <string name="crm_access_anyone_desc">Jan uñt\'ata apnaqirinakampi</string>
+    <string name="crm_access_role_design">Lurawi, luraña, askichaña, arsuña, ukat uñjaña</string>
+    <string name="crm_access_role_write">Luraña, askichaña, arsuña, ukat uñjaña</string>
+    <string name="crm_access_role_comment">Comentaña ukat uñakipaña</string>
+    <string name="crm_access_role_view">Uñjañ opcionanaka</string>
+    <string name="crm_access_role_none">Jan mantañ</string>
+    <string name="crm_all_crms">Taqi CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM tuqita mistuña</string>
+    <string name="crm_settings_updated">CRM machaqachata</string>
 </resources>

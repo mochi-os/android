@@ -369,4 +369,11 @@
         <item quantity="one">%1$d 件の競合ファイル</item>
         <item quantity="other">%1$d 件の競合ファイル</item>
     </plurals>
+    <string name="projects_design_export_saved">デザインを保存しました</string>
+    <string name="projects_design_import_failed">そのファイルを読み取れませんでした</string>
+    <string name="projects_design_or_upload_json">またはファイルをアップロード</string>
+    <string name="projects_export">データをエクスポート</string>
+    <string name="projects_export_failed">エクスポートを保存できませんでした</string>
+    <string name="projects_export_saved">プロジェクトデータを保存しました</string>
+    <string name="projects_exporting">エクスポートを準備中…</string>
 </resources>

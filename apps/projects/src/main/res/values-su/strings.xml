@@ -369,4 +369,11 @@
         <item quantity="one">%1$d koropak konflik</item>
         <item quantity="other">%1$d koropak konflik</item>
     </plurals>
+    <string name="projects_design_export_saved">Desain disimpen</string>
+    <string name="projects_design_import_failed">Éta berkas teu kabaca</string>
+    <string name="projects_design_or_upload_json">Atawa unggah berkas</string>
+    <string name="projects_export">Ékspor data</string>
+    <string name="projects_export_failed">Ékspor teu bisa disimpen</string>
+    <string name="projects_export_saved">Data proyék disimpen</string>
+    <string name="projects_exporting">Nyiapkeun ékspor…</string>
 </resources>

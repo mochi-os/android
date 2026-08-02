@@ -370,4 +370,11 @@
         <item quantity="few">%1$d fișiere în conflict</item>
         <item quantity="other">%1$d de fișiere în conflict</item>
     </plurals>
+    <string name="projects_design_export_saved">Design salvat</string>
+    <string name="projects_design_import_failed">Fișierul nu a putut fi citit</string>
+    <string name="projects_design_or_upload_json">Sau încarcă un fișier</string>
+    <string name="projects_export">Exportă datele</string>
+    <string name="projects_export_failed">Exportul nu a putut fi salvat</string>
+    <string name="projects_export_saved">Datele proiectului au fost salvate</string>
+    <string name="projects_exporting">Se pregătește exportul…</string>
 </resources>

@@ -371,4 +371,11 @@
         <item quantity="few">%1$d faidhlichean le còmhstri</item>
         <item quantity="other">%1$d faidhle le còmhstri</item>
     </plurals>
+    <string name="projects_design_export_saved">Chaidh an dealbhachd a shàbhaladh</string>
+    <string name="projects_design_import_failed">Cha b\' urrainn am faidhle sin a leughadh</string>
+    <string name="projects_design_or_upload_json">No luchdaich faidhle suas</string>
+    <string name="projects_export">Às-phortaich dàta</string>
+    <string name="projects_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
+    <string name="projects_export_saved">Chaidh dàta a\' phròiseict a shàbhaladh</string>
+    <string name="projects_exporting">A\' deasachadh an às-phortaidh…</string>
 </resources>

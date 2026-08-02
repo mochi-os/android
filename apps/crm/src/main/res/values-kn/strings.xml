@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ಸಂಘರ್ಷದ ಫೈಲ್</item>
         <item quantity="other">%1$d ಸಂಘರ್ಷದ ಫೈಲ್‌ಗಳು</item>
     </plurals>
+    <string name="crm_filter">ಫಿಲ್ಟರ್</string>
+    <string name="crm_sort_filter_title">ವಿಂಗಡಿಸಿ ಮತ್ತು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
+    <string name="crm_filter_clear_all">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="crm_filter_all">ಎಲ್ಲಾ</string>
+    <string name="crm_filter_other">ಇತರ</string>
+    <string name="crm_settings_section_identity">ಗುರುತು</string>
+    <string name="crm_settings_section_access">ಪ್ರವೇಶ ನಿರ್ವಹಣೆ</string>
+    <string name="crm_settings_not_set">ಸೆಟ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
+    <string name="crm_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="crm_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="crm_people_search">ಜನರನ್ನು ಹುಡುಕಿ</string>
+    <string name="crm_access_tab_other">ಇತರ</string>
+    <string name="crm_access_select_group">ಗುಂಪನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="crm_access_select_rule">ನಿಯಮವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="crm_access_select_role">ಪಾತ್ರ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="crm_access_selected">ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ: %1$s</string>
+    <string name="crm_access_subject_anyone">ಯಾರಾದರೂ</string>
+    <string name="crm_access_subject_authenticated">ದೃಢೀಕರಿಸಿದ ಬಳಕೆದಾರರು</string>
+    <string name="crm_access_authenticated_desc">ಲಾಗಿನ್ ಆಗಿರುವ ಯಾರಾದರೂ</string>
+    <string name="crm_access_anyone_desc">ಅನಾಮಧೇಯ ಬಳಕೆದಾರರು ಸೇರಿದಂತೆ</string>
+    <string name="crm_access_role_design">ವಿನ್ಯಾಸ, ರಚನೆ, ಸಂಪಾದನೆ, ಕಾಮೆಂಟ್ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
+    <string name="crm_access_role_write">ರಚನೆ, ಸಂಪಾದನೆ, ಕಾಮೆಂಟ್ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
+    <string name="crm_access_role_comment">ಕಾಮೆಂಟ್ ಮಾಡಿ ಮತ್ತು ವೀಕ್ಷಿಸಿ</string>
+    <string name="crm_access_role_view">ನೋಡುವುದು ಮಾತ್ರ</string>
+    <string name="crm_access_role_none">ಪ್ರವೇಶವಿಲ್ಲ</string>
+    <string name="crm_all_crms">ಎಲ್ಲಾ CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM ಅನ್ನು ಅನ್‌ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಿ</string>
+    <string name="crm_settings_updated">CRM ನವೀಕರಿಸಲಾಗಿದೆ</string>
 </resources>

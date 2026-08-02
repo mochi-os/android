@@ -368,4 +368,11 @@
     <plurals name="projects_request_conflicts">
         <item quantity="other">%1$d ໄຟລ໌ທີ່ຂັດແຍ້ງ</item>
     </plurals>
+    <string name="projects_design_export_saved">ບັນທຶກການອອກແບບແລ້ວ</string>
+    <string name="projects_design_import_failed">ບໍ່ສາມາດອ່ານໄຟລ໌ນັ້ນໄດ້</string>
+    <string name="projects_design_or_upload_json">ຫຼືອັບໂຫຼດໄຟລ໌</string>
+    <string name="projects_export">ສົ່ງອອກຂໍ້ມູນ</string>
+    <string name="projects_export_failed">ບໍ່ສາມາດບັນທຶກການສົ່ງອອກໄດ້</string>
+    <string name="projects_export_saved">ບັນທຶກຂໍ້ມູນໂຄງການແລ້ວ</string>
+    <string name="projects_exporting">ກຳລັງກຽມການສົ່ງອອກ…</string>
 </resources>

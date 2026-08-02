@@ -369,4 +369,11 @@
         <item quantity="one">%1$d skrá í árekstri</item>
         <item quantity="other">%1$d skrár í árekstri</item>
     </plurals>
+    <string name="projects_design_export_saved">Hönnun vistuð</string>
+    <string name="projects_design_import_failed">Ekki tókst að lesa skrána</string>
+    <string name="projects_design_or_upload_json">Eða hlaðið upp skrá</string>
+    <string name="projects_export">Flytja út gögn</string>
+    <string name="projects_export_failed">Ekki tókst að vista útflutninginn</string>
+    <string name="projects_export_saved">Verkefnagögn vistuð</string>
+    <string name="projects_exporting">Undirbý útflutning…</string>
 </resources>

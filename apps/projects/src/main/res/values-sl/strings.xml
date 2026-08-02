@@ -371,4 +371,11 @@
         <item quantity="few">%1$d datoteke v sporu</item>
         <item quantity="other">%1$d datotek v sporu</item>
     </plurals>
+    <string name="projects_design_export_saved">Oblikovanje shranjeno</string>
+    <string name="projects_design_import_failed">Datoteke ni bilo mogoče prebrati</string>
+    <string name="projects_design_or_upload_json">Ali naložite datoteko</string>
+    <string name="projects_export">Izvozi podatke</string>
+    <string name="projects_export_failed">Izvoza ni bilo mogoče shraniti</string>
+    <string name="projects_export_saved">Podatki projekta shranjeni</string>
+    <string name="projects_exporting">Priprava izvoza…</string>
 </resources>

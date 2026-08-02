@@ -339,4 +339,32 @@
         <item quantity="one">%1$d متناقضه دوتنه</item>
         <item quantity="other">%1$d متناقضې دوتنې</item>
     </plurals>
+    <string name="crm_filter">فلټر</string>
+    <string name="crm_sort_filter_title">ترتیب او فلټر</string>
+    <string name="crm_filter_clear_all">ټول پاک کړئ</string>
+    <string name="crm_filter_all">ټول</string>
+    <string name="crm_filter_other">نور</string>
+    <string name="crm_settings_section_identity">هویت</string>
+    <string name="crm_settings_section_access">د لاسرسي اداره</string>
+    <string name="crm_settings_not_set">نه دی ټاکل شوی</string>
+    <string name="crm_settings_access_updated">لاسرسی نوی شو</string>
+    <string name="crm_settings_access_revoked">لاسرسی پرېګدل و</string>
+    <string name="crm_people_search">خلک ولټوئ</string>
+    <string name="crm_access_tab_other">نور</string>
+    <string name="crm_access_select_group">یوه ډله وټاکئ</string>
+    <string name="crm_access_select_rule">یو قانون وټاکئ</string>
+    <string name="crm_access_select_role">رول وټاکئ</string>
+    <string name="crm_access_selected">ټاکل شوي: %1$s</string>
+    <string name="crm_access_subject_anyone">هر څوک</string>
+    <string name="crm_access_subject_authenticated">تصدیق شوي کاروونکي</string>
+    <string name="crm_access_authenticated_desc">هر څوک چې ننوتلی وي</string>
+    <string name="crm_access_anyone_desc">د بېنومو کاروونکو په ګډون</string>
+    <string name="crm_access_role_design">ډیزاین، جوړول، سمول، تبصره او لیدل</string>
+    <string name="crm_access_role_write">جوړول، سمول، تبصره او لیدل</string>
+    <string name="crm_access_role_comment">تبصره او لیدنه</string>
+    <string name="crm_access_role_view">یوازې لیدل</string>
+    <string name="crm_access_role_none">د لاسرسي اجازه نشته</string>
+    <string name="crm_all_crms">ټول CRM</string>
+    <string name="crm_settings_unsubscribe_section">له CRM څخه ګډون لغوه کړئ</string>
+    <string name="crm_settings_updated">CRM تازه شو</string>
 </resources>

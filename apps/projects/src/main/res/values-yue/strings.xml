@@ -369,4 +369,11 @@
     <plurals name="projects_request_conflicts">
         <item quantity="other">%1$d 個撞咗嘅檔案</item>
     </plurals>
+    <string name="projects_design_export_saved">設計已儲存</string>
+    <string name="projects_design_import_failed">無法讀取該檔案</string>
+    <string name="projects_design_or_upload_json">或上傳檔案</string>
+    <string name="projects_export">匯出資料</string>
+    <string name="projects_export_failed">無法儲存匯出內容</string>
+    <string name="projects_export_saved">專案資料已儲存</string>
+    <string name="projects_exporting">正在準備匯出…</string>
 </resources>

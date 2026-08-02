@@ -369,4 +369,11 @@
         <item quantity="one">ifayela eli-%1$d elingqubuzanayo</item>
         <item quantity="other">amafayela angu-%1$d angqubuzanayo</item>
     </plurals>
+    <string name="projects_design_export_saved">Umklamo ulondoloziwe</string>
+    <string name="projects_design_import_failed">Ayikwazanga ukufundwa leyo fayela</string>
+    <string name="projects_design_or_upload_json">Noma layisha ifayela</string>
+    <string name="projects_export">Thumela idatha</string>
+    <string name="projects_export_failed">Ayikwazanga ukulondolozwa okuthunyelwe</string>
+    <string name="projects_export_saved">Idatha yephrojekthi ilondoloziwe</string>
+    <string name="projects_exporting">Ilungiselela okuthunyelwayo…</string>
 </resources>

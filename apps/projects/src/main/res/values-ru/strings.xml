@@ -371,4 +371,11 @@
         <item quantity="many">%1$d конфликтующих файлов</item>
         <item quantity="other">%1$d конфликтующего файла</item>
     </plurals>
+    <string name="projects_design_export_saved">Дизайн сохранён</string>
+    <string name="projects_design_import_failed">Не удалось прочитать файл</string>
+    <string name="projects_design_or_upload_json">Или загрузите файл</string>
+    <string name="projects_export">Экспорт данных</string>
+    <string name="projects_export_failed">Не удалось сохранить экспорт</string>
+    <string name="projects_export_saved">Данные проекта сохранены</string>
+    <string name="projects_exporting">Подготовка экспорта…</string>
 </resources>

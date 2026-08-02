@@ -341,4 +341,32 @@
         <item quantity="many">%1$d fajls f\'kunflitt</item>
         <item quantity="other">%1$d fajls f\'kunflitt</item>
     </plurals>
+    <string name="crm_filter">Iffiltra</string>
+    <string name="crm_sort_filter_title">Irranġa u ffiltra</string>
+    <string name="crm_filter_clear_all">Naddaf kollox</string>
+    <string name="crm_filter_all">Kollha</string>
+    <string name="crm_filter_other">Oħra</string>
+    <string name="crm_settings_section_identity">Identità</string>
+    <string name="crm_settings_section_access">Mmaniġġjar tal-aċċess</string>
+    <string name="crm_settings_not_set">Mhux issettjat</string>
+    <string name="crm_settings_access_updated">Aċċess aġġornat</string>
+    <string name="crm_settings_access_revoked">L-acess gie revokat</string>
+    <string name="crm_people_search">Fittex nies</string>
+    <string name="crm_access_tab_other">Oħra</string>
+    <string name="crm_access_select_group">Agħżel grupp</string>
+    <string name="crm_access_select_rule">Agħżel regola</string>
+    <string name="crm_access_select_role">Agħżel rwol</string>
+    <string name="crm_access_selected">Magħżul: %1$s</string>
+    <string name="crm_access_subject_anyone">Kulħadd</string>
+    <string name="crm_access_subject_authenticated">Utenti awtentikati</string>
+    <string name="crm_access_authenticated_desc">Kull min hu illoggjat</string>
+    <string name="crm_access_anyone_desc">Inklużi utenti anonimi</string>
+    <string name="crm_access_role_design">Iddisinja, oħloq, editja, ikkummenta u ara</string>
+    <string name="crm_access_role_write">Oħloq, editja, ikkummenta u ara</string>
+    <string name="crm_access_role_comment">Ikkummenta u ara</string>
+    <string name="crm_access_role_view">Ara biss</string>
+    <string name="crm_access_role_none">L-ebda aċċess</string>
+    <string name="crm_all_crms">Il-CRMs kollha</string>
+    <string name="crm_settings_unsubscribe_section">Ħassar l-abbonament tas-CRM</string>
+    <string name="crm_settings_updated">CRM aġġornat</string>
 </resources>

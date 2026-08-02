@@ -369,4 +369,11 @@
         <item quantity="one">%1$d fail bercanggah</item>
         <item quantity="other">%1$d fail bercanggah</item>
     </plurals>
+    <string name="projects_design_export_saved">Reka bentuk disimpan</string>
+    <string name="projects_design_import_failed">Fail itu tidak dapat dibaca</string>
+    <string name="projects_design_or_upload_json">Atau muat naik fail</string>
+    <string name="projects_export">Eksport data</string>
+    <string name="projects_export_failed">Eksport tidak dapat disimpan</string>
+    <string name="projects_export_saved">Data projek disimpan</string>
+    <string name="projects_exporting">Menyediakan eksport…</string>
 </resources>

@@ -369,4 +369,11 @@
         <item quantity="one">%1$d ਟਕਰਾਅ ਵਾਲੀ ਫਾਈਲ</item>
         <item quantity="other">%1$d ਟਕਰਾਅ ਵਾਲੀਆਂ ਫਾਈਲਾਂ</item>
     </plurals>
+    <string name="projects_design_export_saved">ਡਿਜ਼ਾਈਨ ਸੰਭਾਲਿਆ</string>
+    <string name="projects_design_import_failed">ਉਹ ਫਾਈਲ ਪੜ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
+    <string name="projects_design_or_upload_json">ਜਾਂ ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string name="projects_export">ਡਾਟਾ ਐਕਸਪੋਰਟ ਕਰੋ</string>
+    <string name="projects_export_failed">ਐਕਸਪੋਰਟ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
+    <string name="projects_export_saved">ਪ੍ਰੋਜੈਕਟ ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
+    <string name="projects_exporting">ਐਕਸਪੋਰਟ ਤਿਆਰ ਕਰ ਰਹੇ ਹਾਂ…</string>
 </resources>

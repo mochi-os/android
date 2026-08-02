@@ -371,4 +371,11 @@
         <item quantity="many">%1$d konfliktných súborov</item>
         <item quantity="other">%1$d konfliktného súboru</item>
     </plurals>
+    <string name="projects_design_export_saved">Návrh uložený</string>
+    <string name="projects_design_import_failed">Súbor sa nepodarilo prečítať</string>
+    <string name="projects_design_or_upload_json">Alebo nahrajte súbor</string>
+    <string name="projects_export">Exportovať dáta</string>
+    <string name="projects_export_failed">Export sa nepodarilo uložiť</string>
+    <string name="projects_export_saved">Dáta projektu uložené</string>
+    <string name="projects_exporting">Pripravuje sa export…</string>
 </resources>

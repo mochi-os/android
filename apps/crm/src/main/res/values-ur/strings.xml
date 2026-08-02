@@ -339,4 +339,32 @@
         <item quantity="one">%1$d متضاد فائل</item>
         <item quantity="other">%1$d متضاد فائلیں</item>
     </plurals>
+    <string name="crm_filter">فلٹر</string>
+    <string name="crm_sort_filter_title">ترتیب دیں اور فلٹر کریں</string>
+    <string name="crm_filter_clear_all">سب صاف کریں</string>
+    <string name="crm_filter_all">سب</string>
+    <string name="crm_filter_other">دیگر</string>
+    <string name="crm_settings_section_identity">شناخت</string>
+    <string name="crm_settings_section_access">رسائی کا انتظام</string>
+    <string name="crm_settings_not_set">سیٹ نہیں ہے</string>
+    <string name="crm_settings_access_updated">رسائی اپ ڈیٹ ہو گئی</string>
+    <string name="crm_settings_access_revoked">رسائی منسوخ کر دی گئی</string>
+    <string name="crm_people_search">لوگ تلاش کریں</string>
+    <string name="crm_access_tab_other">دیگر</string>
+    <string name="crm_access_select_group">ایک گروپ منتخب کریں</string>
+    <string name="crm_access_select_rule">ایک اصول منتخب کریں</string>
+    <string name="crm_access_select_role">کردار منتخب کریں</string>
+    <string name="crm_access_selected">منتخب شدہ: %1$s</string>
+    <string name="crm_access_subject_anyone">کوئی بھی</string>
+    <string name="crm_access_subject_authenticated">تصدیق شدہ صارفین</string>
+    <string name="crm_access_authenticated_desc">کوئی بھی جو لاگ ان ہو</string>
+    <string name="crm_access_anyone_desc">گمنام صارفین سمیت</string>
+    <string name="crm_access_role_design">ڈیزائن کرنا، بنانا، ترمیم کرنا، تبصرہ کرنا اور دیکھنا</string>
+    <string name="crm_access_role_write">بنانا، ترمیم کرنا، تبصرہ کرنا اور دیکھنا</string>
+    <string name="crm_access_role_comment">تبصرہ اور دیکھیں</string>
+    <string name="crm_access_role_view">صرف دیکھنا</string>
+    <string name="crm_access_role_none">کوئی رسائی نہیں</string>
+    <string name="crm_all_crms">تمام CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM سے رکنیت ختم کریں</string>
+    <string name="crm_settings_updated">CRM اپ ڈیٹ ہو گیا</string>
 </resources>

@@ -338,4 +338,32 @@
     <plurals name="crm_request_conflicts">
         <item quantity="other">%1$d ခု ပဋိပက္ခဖိုင်</item>
     </plurals>
+    <string name="crm_filter">စိစစ်</string>
+    <string name="crm_sort_filter_title">စီစဉ်ပြီး စစ်ထုတ်ရန်</string>
+    <string name="crm_filter_clear_all">အားလုံး ရှင်းမည်</string>
+    <string name="crm_filter_all">အားလုံး</string>
+    <string name="crm_filter_other">အခြား</string>
+    <string name="crm_settings_section_identity">ကိုယ်ပိုင်</string>
+    <string name="crm_settings_section_access">ဝင်ရောက်ခွင့် စီမံခန့်ခွဲမှု</string>
+    <string name="crm_settings_not_set">မသတ်မှတ်ထားပါ</string>
+    <string name="crm_settings_access_updated">ဝင်ရောက်ခွင့် ပြောင်းပြီး</string>
+    <string name="crm_settings_access_revoked">လာရောက်ခွင့် ပယ်သထားပါပြီ</string>
+    <string name="crm_people_search">လူများကို ရှာဖွေရန်</string>
+    <string name="crm_access_tab_other">အခြား</string>
+    <string name="crm_access_select_group">အုပ်စုတစ်ခု ရွေးပါ</string>
+    <string name="crm_access_select_rule">စည်းမျဉ်းတစ်ခု ရွေးပါ</string>
+    <string name="crm_access_select_role">အခန်းကဏ္ဍကို ရွေးပါ</string>
+    <string name="crm_access_selected">ရွေးချယ်ထား: %1$s</string>
+    <string name="crm_access_subject_anyone">မည်သူမဆို</string>
+    <string name="crm_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
+    <string name="crm_access_authenticated_desc">အကောင့်ဝင်ထားသူ မည်သူမဆို</string>
+    <string name="crm_access_anyone_desc">အမည်မသိ အသုံးပြုသူများ အပါအဝင်</string>
+    <string name="crm_access_role_design">ဒီဇိုင်းဆွဲ၊ ဖန်တီး၊ တည်းဖြတ်၊ မှတ်ချက်ပေး၊ ကြည့်ရှု</string>
+    <string name="crm_access_role_write">ဖန်တီး၊ တည်းဖြတ်၊ မှတ်ချက်ပေး၊ ကြည့်ရှု</string>
+    <string name="crm_access_role_comment">မှတ်ချက်ပြုခြင်းနှင့် ကြည့်ရှုခြင်း</string>
+    <string name="crm_access_role_view">ကြည့်ရှုရုံသာ</string>
+    <string name="crm_access_role_none">ဝင်ရောက်ခွင့်မရှိ</string>
+    <string name="crm_all_crms">CRM အားလုံး</string>
+    <string name="crm_settings_unsubscribe_section">CRM မှ စာရင်းသွင်းမှု ရုပ်သိမ်းရန်</string>
+    <string name="crm_settings_updated">CRM ကို အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
 </resources>

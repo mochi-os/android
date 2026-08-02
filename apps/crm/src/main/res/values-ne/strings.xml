@@ -339,4 +339,32 @@
         <item quantity="one">%1$d द्वन्द्वपूर्ण फाइल</item>
         <item quantity="other">%1$d द्वन्द्वपूर्ण फाइल</item>
     </plurals>
+    <string name="crm_filter">फिल्टर</string>
+    <string name="crm_sort_filter_title">क्रमबद्ध र फिल्टर</string>
+    <string name="crm_filter_clear_all">सबै खाली गर्नुहोस्</string>
+    <string name="crm_filter_all">सबै</string>
+    <string name="crm_filter_other">अन्य</string>
+    <string name="crm_settings_section_identity">पहिचान</string>
+    <string name="crm_settings_section_access">पहुँच व्यवस्थापन</string>
+    <string name="crm_settings_not_set">सेट गरिएको छैन</string>
+    <string name="crm_settings_access_updated">पहुँच अद्यावधिक गरियो</string>
+    <string name="crm_settings_access_revoked">पहुँच रद्द गरियो</string>
+    <string name="crm_people_search">मानिसहरू खोज्नुहोस्</string>
+    <string name="crm_access_tab_other">अन्य</string>
+    <string name="crm_access_select_group">समूह छान्नुहोस्</string>
+    <string name="crm_access_select_rule">नियम छान्नुहोस्</string>
+    <string name="crm_access_select_role">भूमिका छान्नुहोस्</string>
+    <string name="crm_access_selected">चयन गरिएको: %1$s</string>
+    <string name="crm_access_subject_anyone">जोसुकै</string>
+    <string name="crm_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
+    <string name="crm_access_authenticated_desc">लगइन गरेको जो कोही</string>
+    <string name="crm_access_anyone_desc">बेनामी प्रयोगकर्ताहरू सहित</string>
+    <string name="crm_access_role_design">डिजाइन गर्नुहोस्, सिर्जना गर्नुहोस्, सम्पादन गर्नुहोस्, टिप्पणी गर्नुहोस् र हेर्नुहोस्</string>
+    <string name="crm_access_role_write">सिर्जना गर्नुहोस्, सम्पादन गर्नुहोस्, टिप्पणी गर्नुहोस् र हेर्नुहोस्</string>
+    <string name="crm_access_role_comment">टिप्पणी र हेर्नुहोस्</string>
+    <string name="crm_access_role_view">मात्र हेर्नुहोस्</string>
+    <string name="crm_access_role_none">पहुँच छैन</string>
+    <string name="crm_all_crms">सबै CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM बाट सदस्यता रद्द गर्नुहोस्</string>
+    <string name="crm_settings_updated">CRM अद्यावधिक गरियो</string>
 </resources>

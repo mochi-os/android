@@ -371,4 +371,11 @@
         <item quantity="many">%1$d канфліктных файлаў</item>
         <item quantity="other">%1$d канфліктнага файла</item>
     </plurals>
+    <string name="projects_design_export_saved">Дызайн захаваны</string>
+    <string name="projects_design_import_failed">Не ўдалося прачытаць файл</string>
+    <string name="projects_design_or_upload_json">Або запампуйце файл</string>
+    <string name="projects_export">Экспарт даных</string>
+    <string name="projects_export_failed">Не ўдалося захаваць экспарт</string>
+    <string name="projects_export_saved">Даныя праекта захаваны</string>
+    <string name="projects_exporting">Падрыхтоўка экспарту…</string>
 </resources>

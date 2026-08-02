@@ -368,4 +368,11 @@
     <plurals name="projects_request_conflicts">
         <item quantity="other">%1$d კონფლიქტური ფაილი</item>
     </plurals>
+    <string name="projects_design_export_saved">დიზაინი შენახულია</string>
+    <string name="projects_design_import_failed">ამ ფაილის წაკითხვა ვერ მოხერხდა</string>
+    <string name="projects_design_or_upload_json">ან ატვირთეთ ფაილი</string>
+    <string name="projects_export">მონაცემების ექსპორტი</string>
+    <string name="projects_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
+    <string name="projects_export_saved">პროექტის მონაცემები შენახულია</string>
+    <string name="projects_exporting">ექსპორტის მომზადება…</string>
 </resources>

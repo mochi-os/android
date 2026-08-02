@@ -369,4 +369,11 @@
         <item quantity="one">%1$d వైరుధ్య ఫైల్</item>
         <item quantity="other">%1$d వైరుధ్య ఫైల్‌లు</item>
     </plurals>
+    <string name="projects_design_export_saved">డిజైన్ సేవ్ చేయబడింది</string>
+    <string name="projects_design_import_failed">ఆ ఫైల్‌ను చదవలేకపోయాము</string>
+    <string name="projects_design_or_upload_json">లేదా ఫైల్‌ను అప్‌లోడ్ చేయండి</string>
+    <string name="projects_export">డేటాను ఎగుమతి చేయండి</string>
+    <string name="projects_export_failed">ఎగుమతిని సేవ్ చేయలేకపోయాము</string>
+    <string name="projects_export_saved">ప్రాజెక్ట్ డేటా సేవ్ చేయబడింది</string>
+    <string name="projects_exporting">ఎగుమతిని సిద్ధం చేస్తోంది…</string>
 </resources>

@@ -369,4 +369,11 @@
         <item quantity="one">%1$d tệp xung đột</item>
         <item quantity="other">%1$d tệp xung đột</item>
     </plurals>
+    <string name="projects_design_export_saved">Đã lưu thiết kế</string>
+    <string name="projects_design_import_failed">Không thể đọc tệp đó</string>
+    <string name="projects_design_or_upload_json">Hoặc tải lên một tệp</string>
+    <string name="projects_export">Xuất dữ liệu</string>
+    <string name="projects_export_failed">Không thể lưu bản xuất</string>
+    <string name="projects_export_saved">Đã lưu dữ liệu dự án</string>
+    <string name="projects_exporting">Đang chuẩn bị bản xuất…</string>
 </resources>

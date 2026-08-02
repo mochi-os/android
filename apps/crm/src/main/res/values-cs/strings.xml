@@ -340,4 +340,32 @@
         <item quantity="few">%1$d konfliktní soubory</item>
         <item quantity="other">%1$d konfliktních souborů</item>
     </plurals>
+    <string name="crm_filter">Filtr</string>
+    <string name="crm_sort_filter_title">Řazení a filtr</string>
+    <string name="crm_filter_clear_all">Vymazat vše</string>
+    <string name="crm_filter_all">Vše</string>
+    <string name="crm_filter_other">Ostatní</string>
+    <string name="crm_settings_section_identity">Identita</string>
+    <string name="crm_settings_section_access">Správa přístupu</string>
+    <string name="crm_settings_not_set">Nenastaveno</string>
+    <string name="crm_settings_access_updated">Přístup aktualizován</string>
+    <string name="crm_settings_access_revoked">Přístup odvolán</string>
+    <string name="crm_people_search">Hledat lidi</string>
+    <string name="crm_access_tab_other">Ostatní</string>
+    <string name="crm_access_select_group">Vyberte skupinu</string>
+    <string name="crm_access_select_rule">Vyberte pravidlo</string>
+    <string name="crm_access_select_role">Vyberte roli</string>
+    <string name="crm_access_selected">Vybráno: %1$s</string>
+    <string name="crm_access_subject_anyone">Kdokoli</string>
+    <string name="crm_access_subject_authenticated">Ověření uživatelé</string>
+    <string name="crm_access_authenticated_desc">Kdokoli, kdo je přihlášen</string>
+    <string name="crm_access_anyone_desc">Včetně anonymních uživatelů</string>
+    <string name="crm_access_role_design">Navrhovat, vytvářet, upravovat, komentovat a zobrazovat</string>
+    <string name="crm_access_role_write">Vytvářet, upravovat, komentovat a zobrazovat</string>
+    <string name="crm_access_role_comment">Komentovat a zobrazit</string>
+    <string name="crm_access_role_view">Pouze pro čtení</string>
+    <string name="crm_access_role_none">Žádný přístup</string>
+    <string name="crm_all_crms">Všechny CRM</string>
+    <string name="crm_settings_unsubscribe_section">Odhlásit odběr CRM</string>
+    <string name="crm_settings_updated">CRM aktualizován</string>
 </resources>

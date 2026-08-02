@@ -369,4 +369,11 @@
         <item quantity="one">%1$d конфликтна датотека</item>
         <item quantity="other">%1$d конфликтни датотеки</item>
     </plurals>
+    <string name="projects_design_export_saved">Дизајнот е зачуван</string>
+    <string name="projects_design_import_failed">Датотеката не можеше да се прочита</string>
+    <string name="projects_design_or_upload_json">Или прикачете датотека</string>
+    <string name="projects_export">Извези податоци</string>
+    <string name="projects_export_failed">Извозот не можеше да се зачува</string>
+    <string name="projects_export_saved">Податоците за проектот се зачувани</string>
+    <string name="projects_exporting">Се подготвува извозот…</string>
 </resources>

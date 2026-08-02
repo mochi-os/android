@@ -339,4 +339,32 @@
         <item quantity="one">%1$d વિરોધાભાસી ફાઇલ</item>
         <item quantity="other">%1$d વિરોધાભાસી ફાઇલો</item>
     </plurals>
+    <string name="crm_filter">ફિલ્ટર</string>
+    <string name="crm_sort_filter_title">ગોઠવો અને ફિલ્ટર કરો</string>
+    <string name="crm_filter_clear_all">બધું સાફ કરો</string>
+    <string name="crm_filter_all">બધી</string>
+    <string name="crm_filter_other">અન્ય</string>
+    <string name="crm_settings_section_identity">ઓળખ</string>
+    <string name="crm_settings_section_access">ઍક્સેસ વ્યવસ્થાપન</string>
+    <string name="crm_settings_not_set">સેટ કર્યું નથી</string>
+    <string name="crm_settings_access_updated">ઍક્સેસ અપડેટ થયું</string>
+    <string name="crm_settings_access_revoked">એક્સેસ રદ કર્યો</string>
+    <string name="crm_people_search">લોકો શોધો</string>
+    <string name="crm_access_tab_other">અન્ય</string>
+    <string name="crm_access_select_group">એક જૂથ પસંદ કરો</string>
+    <string name="crm_access_select_rule">એક નિયમ પસંદ કરો</string>
+    <string name="crm_access_select_role">ભૂમિકા પસંદ કરો</string>
+    <string name="crm_access_selected">પસંદ કરેલ: %1$s</string>
+    <string name="crm_access_subject_anyone">કોઈપણ</string>
+    <string name="crm_access_subject_authenticated">પ્રમાણિત વપરાશકર્તાઓ</string>
+    <string name="crm_access_authenticated_desc">લૉગ ઇન કરેલ કોઈપણ વ્યક્તિ</string>
+    <string name="crm_access_anyone_desc">અનામી વપરાશકર્તાઓ સહિત</string>
+    <string name="crm_access_role_design">ડિઝાઇન કરો, બનાવો, સંપાદિત કરો, ટિપ્પણી કરો અને જુઓ</string>
+    <string name="crm_access_role_write">બનાવો, સંપાદિત કરો, ટિપ્પણી કરો અને જુઓ</string>
+    <string name="crm_access_role_comment">ટિપ્પણી અને જુઓ</string>
+    <string name="crm_access_role_view">ફક્ત જુઓ</string>
+    <string name="crm_access_role_none">કોઈ ઍક્સેસ નથી</string>
+    <string name="crm_all_crms">બધા CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM માંથી અનસબ્સ્ક્રાઇબ કરો</string>
+    <string name="crm_settings_updated">CRM અપડેટ થયું</string>
 </resources>

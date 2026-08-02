@@ -339,4 +339,32 @@
         <item quantity="one">%1$d botsende lêer</item>
         <item quantity="other">%1$d botsende lêers</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sorteer &amp; filtreer</string>
+    <string name="crm_filter_clear_all">Maak alles skoon</string>
+    <string name="crm_filter_all">Almal</string>
+    <string name="crm_filter_other">Ander</string>
+    <string name="crm_settings_section_identity">Identiteit</string>
+    <string name="crm_settings_section_access">Toegangsbestuur</string>
+    <string name="crm_settings_not_set">Nie ingestel nie</string>
+    <string name="crm_settings_access_updated">Toegang opgedateer</string>
+    <string name="crm_settings_access_revoked">Toegang ingetrek</string>
+    <string name="crm_people_search">Soek mense</string>
+    <string name="crm_access_tab_other">Ander</string>
+    <string name="crm_access_select_group">Kies \'n groep</string>
+    <string name="crm_access_select_rule">Kies \'n reël</string>
+    <string name="crm_access_select_role">Kies rol</string>
+    <string name="crm_access_selected">Gekies: %1$s</string>
+    <string name="crm_access_subject_anyone">Enigiemand</string>
+    <string name="crm_access_subject_authenticated">Geverifieerde gebruikers</string>
+    <string name="crm_access_authenticated_desc">Enigiemand wat aangemeld is</string>
+    <string name="crm_access_anyone_desc">Insluitend anonieme gebruikers</string>
+    <string name="crm_access_role_design">Ontwerp, skep, redigeer, lewer kommentaar en bekyk</string>
+    <string name="crm_access_role_write">Skep, redigeer, lewer kommentaar en bekyk</string>
+    <string name="crm_access_role_comment">Kommentaar lewer en bekyk</string>
+    <string name="crm_access_role_view">Slegs bekyk</string>
+    <string name="crm_access_role_none">Geen toegang</string>
+    <string name="crm_all_crms">Alle CRM\'e</string>
+    <string name="crm_settings_unsubscribe_section">Teken af van CRM</string>
+    <string name="crm_settings_updated">CRM opgedateer</string>
 </resources>

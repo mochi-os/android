@@ -326,4 +326,11 @@
     <string name="crm_board_add_column">Spalte hinzufügen</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_property_select">Auswählen …</string>
+    <string name="crm_filter_clear_all">Alle löschen</string>
+    <string name="crm_filter_other">Andere</string>
+    <string name="crm_settings_access_revoked">Zugriff entzogen</string>
+    <string name="crm_access_tab_other">Andere</string>
+    <string name="crm_access_anyone_desc">Einschliesslich anonymer Benutzer</string>
+    <string name="crm_field_flags">Kennzeichen</string>
+    <string name="crm_views_type_board">Tafel</string>
 </resources>

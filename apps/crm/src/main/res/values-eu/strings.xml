@@ -339,4 +339,32 @@
         <item quantity="one">gatazkan dagoen fitxategi %1$d</item>
         <item quantity="other">gatazkan dauden %1$d fitxategi</item>
     </plurals>
+    <string name="crm_filter">Iragazi</string>
+    <string name="crm_sort_filter_title">Ordenatu eta iragazi</string>
+    <string name="crm_filter_clear_all">Garbitu dena</string>
+    <string name="crm_filter_all">Guztiak</string>
+    <string name="crm_filter_other">Bestelakoa</string>
+    <string name="crm_settings_section_identity">Identitatea</string>
+    <string name="crm_settings_section_access">Sarbide kudeaketa</string>
+    <string name="crm_settings_not_set">Ezarri gabe</string>
+    <string name="crm_settings_access_updated">Sarbidea eguneratua</string>
+    <string name="crm_settings_access_revoked">Sarbidea kendu da</string>
+    <string name="crm_people_search">Bilatu pertsonak</string>
+    <string name="crm_access_tab_other">Bestelakoa</string>
+    <string name="crm_access_select_group">Hautatu talde bat</string>
+    <string name="crm_access_select_rule">Hautatu arau bat</string>
+    <string name="crm_access_select_role">Hautatu rola</string>
+    <string name="crm_access_selected">Hautatuta: %1$s</string>
+    <string name="crm_access_subject_anyone">Edonor</string>
+    <string name="crm_access_subject_authenticated">Autentifikatutako erabiltzaileak</string>
+    <string name="crm_access_authenticated_desc">Saioa hasi duen edonor</string>
+    <string name="crm_access_anyone_desc">Erabiltzaile anonimoak barne</string>
+    <string name="crm_access_role_design">Diseinatu, sortu, editatu, iruzkindu eta ikusi</string>
+    <string name="crm_access_role_write">Sortu, editatu, iruzkindu eta ikusi</string>
+    <string name="crm_access_role_comment">Iruzkindu eta ikusi</string>
+    <string name="crm_access_role_view">Ikusi soilik</string>
+    <string name="crm_access_role_none">Sarbiderik ez</string>
+    <string name="crm_all_crms">CRM guztiak</string>
+    <string name="crm_settings_unsubscribe_section">Utzi CRM-a harpidetzeari</string>
+    <string name="crm_settings_updated">CRM eguneratuta</string>
 </resources>

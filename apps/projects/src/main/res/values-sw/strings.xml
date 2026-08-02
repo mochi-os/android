@@ -369,4 +369,11 @@
         <item quantity="one">faili %1$d yenye mgongano</item>
         <item quantity="other">faili %1$d zenye mgongano</item>
     </plurals>
+    <string name="projects_design_export_saved">Muundo umehifadhiwa</string>
+    <string name="projects_design_import_failed">Faili hiyo haikuweza kusomwa</string>
+    <string name="projects_design_or_upload_json">Au pakia faili</string>
+    <string name="projects_export">Hamisha data</string>
+    <string name="projects_export_failed">Uhamishaji haukuweza kuhifadhiwa</string>
+    <string name="projects_export_saved">Data ya mradi imehifadhiwa</string>
+    <string name="projects_exporting">Inaandaa uhamishaji…</string>
 </resources>

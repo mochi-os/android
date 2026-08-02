@@ -327,4 +327,9 @@
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Naamloos</string>
     <string name="crm_property_select">Selecteren …</string>
+    <string name="crm_filter_other">Andere</string>
+    <string name="crm_access_tab_other">Andere</string>
+    <string name="crm_access_select_role">Selecteer rol</string>
+    <string name="crm_access_authenticated_desc">Iedereen die aangemeld is</string>
+    <string name="crm_access_role_view">Alleen-lezen</string>
 </resources>

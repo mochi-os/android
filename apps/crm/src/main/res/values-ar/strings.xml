@@ -343,4 +343,32 @@
         <item quantity="many">%1$d ملفًا متعارضًا</item>
         <item quantity="other">%1$d ملف متعارض</item>
     </plurals>
+    <string name="crm_filter">تصفية</string>
+    <string name="crm_sort_filter_title">فرز وتصفية</string>
+    <string name="crm_filter_clear_all">مسح الكل</string>
+    <string name="crm_filter_all">الكل</string>
+    <string name="crm_filter_other">أخرى</string>
+    <string name="crm_settings_section_identity">الهوية</string>
+    <string name="crm_settings_section_access">إدارة الوصول</string>
+    <string name="crm_settings_not_set">غير محدد</string>
+    <string name="crm_settings_access_updated">تم تحديث الوصول</string>
+    <string name="crm_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="crm_people_search">البحث عن أشخاص</string>
+    <string name="crm_access_tab_other">أخرى</string>
+    <string name="crm_access_select_group">اختر مجموعة</string>
+    <string name="crm_access_select_rule">اختر قاعدة</string>
+    <string name="crm_access_select_role">اختر الدور</string>
+    <string name="crm_access_selected">المحدد: %1$s</string>
+    <string name="crm_access_subject_anyone">أي شخص</string>
+    <string name="crm_access_subject_authenticated">المستخدمون المُوثَّقون</string>
+    <string name="crm_access_authenticated_desc">أي شخص مسجّل الدخول</string>
+    <string name="crm_access_anyone_desc">بما في ذلك المستخدمون المجهولون</string>
+    <string name="crm_access_role_design">التصميم والإنشاء والتعديل والتعليق والعرض</string>
+    <string name="crm_access_role_write">الإنشاء والتعديل والتعليق والعرض</string>
+    <string name="crm_access_role_comment">التعليق والعرض</string>
+    <string name="crm_access_role_view">عرض فقط</string>
+    <string name="crm_access_role_none">لا يوجد وصول</string>
+    <string name="crm_all_crms">كل أنظمة CRM</string>
+    <string name="crm_settings_unsubscribe_section">إلغاء الاشتراك من CRM</string>
+    <string name="crm_settings_updated">تم تحديث CRM</string>
 </resources>

@@ -341,4 +341,32 @@
         <item quantity="few">%1$d faidhlichean le còmhstri</item>
         <item quantity="other">%1$d faidhle le còmhstri</item>
     </plurals>
+    <string name="crm_filter">Sìolachan</string>
+    <string name="crm_sort_filter_title">Seòrsaich is criathraich</string>
+    <string name="crm_filter_clear_all">Falamhaich a h-uile</string>
+    <string name="crm_filter_all">Na h-uile</string>
+    <string name="crm_filter_other">Eile</string>
+    <string name="crm_settings_section_identity">Dearbh-aithne</string>
+    <string name="crm_settings_section_access">Stiùireadh inntrigidh</string>
+    <string name="crm_settings_not_set">Cha deach a shuidheachadh</string>
+    <string name="crm_settings_access_updated">Inntrigeadh air ùrachadh</string>
+    <string name="crm_settings_access_revoked">Chaidh cothrom inntrigidh a thoirmeasg</string>
+    <string name="crm_people_search">Lorg daoine</string>
+    <string name="crm_access_tab_other">Eile</string>
+    <string name="crm_access_select_group">Tagh buidheann</string>
+    <string name="crm_access_select_rule">Tagh riaghailt</string>
+    <string name="crm_access_select_role">Tagh dreuchd</string>
+    <string name="crm_access_selected">Air a thaghadh: %1$s</string>
+    <string name="crm_access_subject_anyone">Duine sam bith</string>
+    <string name="crm_access_subject_authenticated">Cleachdaichean dearbhte</string>
+    <string name="crm_access_authenticated_desc">Duine sam bith a tha air clàradh a-steach</string>
+    <string name="crm_access_anyone_desc">A\' gabhail a-steach cleachdaichean gun ainm</string>
+    <string name="crm_access_role_design">Dealbhaich, cruthaich, deasaich, thoir beachd agus seall</string>
+    <string name="crm_access_role_write">Cruthaich, deasaich, thoir beachd agus seall</string>
+    <string name="crm_access_role_comment">Cuir beachd ris agus seall</string>
+    <string name="crm_access_role_view">Seall a-mhàin</string>
+    <string name="crm_access_role_none">Gun chothrom</string>
+    <string name="crm_all_crms">A h-uile CRM</string>
+    <string name="crm_settings_unsubscribe_section">Sguir de fho-sgrìobhadh a\' CRM</string>
+    <string name="crm_settings_updated">Chaidh an CRM ùrachadh</string>
 </resources>

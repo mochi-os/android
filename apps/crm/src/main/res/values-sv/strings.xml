@@ -339,4 +339,32 @@
         <item quantity="one">%1$d fil med konflikt</item>
         <item quantity="other">%1$d filer med konflikter</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sortera och filtrera</string>
+    <string name="crm_filter_clear_all">Rensa allt</string>
+    <string name="crm_filter_all">Alla</string>
+    <string name="crm_filter_other">Övrigt</string>
+    <string name="crm_settings_section_identity">Identitet</string>
+    <string name="crm_settings_section_access">Åtkomsthantering</string>
+    <string name="crm_settings_not_set">Ej inställd</string>
+    <string name="crm_settings_access_updated">Åtkomst uppdaterad</string>
+    <string name="crm_settings_access_revoked">Åtkomst återkallad</string>
+    <string name="crm_people_search">Sök efter personer</string>
+    <string name="crm_access_tab_other">Övrigt</string>
+    <string name="crm_access_select_group">Välj en grupp</string>
+    <string name="crm_access_select_rule">Välj en regel</string>
+    <string name="crm_access_select_role">Välj roll</string>
+    <string name="crm_access_selected">Valt: %1$s</string>
+    <string name="crm_access_subject_anyone">Vem som helst</string>
+    <string name="crm_access_subject_authenticated">Autentiserade användare</string>
+    <string name="crm_access_authenticated_desc">Alla som är inloggade</string>
+    <string name="crm_access_anyone_desc">Inklusive anonyma användare</string>
+    <string name="crm_access_role_design">Utforma, skapa, redigera, kommentera och visa</string>
+    <string name="crm_access_role_write">Skapa, redigera, kommentera och visa</string>
+    <string name="crm_access_role_comment">Kommentera och visa</string>
+    <string name="crm_access_role_view">Endast visning</string>
+    <string name="crm_access_role_none">Ingen åtkomst</string>
+    <string name="crm_all_crms">Alla CRM</string>
+    <string name="crm_settings_unsubscribe_section">Avsluta prenumeration på CRM</string>
+    <string name="crm_settings_updated">CRM uppdaterat</string>
 </resources>

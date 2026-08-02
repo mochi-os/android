@@ -29,9 +29,12 @@ tasks.register<Exec>("checkLocaleCompleteness") {
     description = "Fail if any Android string catalogue is incomplete or mis-filled."
     group = "verification"
     val checker = rootDir.resolve("tools/check-locales.py")
-    // Re-run when any catalogue or the checker itself changes; skip otherwise.
-    inputs.files(fileTree(rootDir) { include("**/src/main/res/values*/strings.xml") })
-    inputs.file(checker)
+    // Always runs: the whole check is under two seconds across every module, and
+    // it declares no outputs to be up-to-date against, so inputs would not let
+    // Gradle skip it in any case. Do not add a fileTree(rootDir) input to try -
+    // Gradle then tracks every module's build directory as an input location and
+    // fails validation against the tasks that write there, which only shows up
+    // on the release variant.
     outputs.upToDateWhen { false }
     commandLine("python3", checker.absolutePath, "--discover", rootDir.absolutePath, "--strict")
 }

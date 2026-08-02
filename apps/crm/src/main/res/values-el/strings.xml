@@ -339,4 +339,32 @@
         <item quantity="one">%1$d αρχείο σε διένεξη</item>
         <item quantity="other">%1$d αρχεία σε διένεξη</item>
     </plurals>
+    <string name="crm_filter">Φίλτρο</string>
+    <string name="crm_sort_filter_title">Ταξινόμηση και φίλτρο</string>
+    <string name="crm_filter_clear_all">Εκκαθάριση όλων</string>
+    <string name="crm_filter_all">Όλες</string>
+    <string name="crm_filter_other">Άλλο</string>
+    <string name="crm_settings_section_identity">Ταυτότητα</string>
+    <string name="crm_settings_section_access">Διαχείριση πρόσβασης</string>
+    <string name="crm_settings_not_set">Δεν έχει οριστεί</string>
+    <string name="crm_settings_access_updated">Η πρόσβαση ενημερώθηκε</string>
+    <string name="crm_settings_access_revoked">Η πρόσβαση ανακλήθηκε</string>
+    <string name="crm_people_search">Αναζήτηση ατόμων</string>
+    <string name="crm_access_tab_other">Άλλο</string>
+    <string name="crm_access_select_group">Επιλέξτε ομάδα</string>
+    <string name="crm_access_select_rule">Επιλέξτε κανόνα</string>
+    <string name="crm_access_select_role">Επιλέξτε ρόλο</string>
+    <string name="crm_access_selected">Επιλεγμένο: %1$s</string>
+    <string name="crm_access_subject_anyone">Οποιοσδήποτε</string>
+    <string name="crm_access_subject_authenticated">Πιστοποιημένοι χρήστες</string>
+    <string name="crm_access_authenticated_desc">Οποιοσδήποτε είναι συνδεδεμένος</string>
+    <string name="crm_access_anyone_desc">Συμπεριλαμβανομένων ανώνυμων χρηστών</string>
+    <string name="crm_access_role_design">Σχεδίαση, δημιουργία, επεξεργασία, σχολιασμός και προβολή</string>
+    <string name="crm_access_role_write">Δημιουργία, επεξεργασία, σχολιασμός και προβολή</string>
+    <string name="crm_access_role_comment">Σχόλιο και προβολή</string>
+    <string name="crm_access_role_view">Μόνο προβολή</string>
+    <string name="crm_access_role_none">Χωρίς πρόσβαση</string>
+    <string name="crm_all_crms">Όλα τα CRM</string>
+    <string name="crm_settings_unsubscribe_section">Κατάργηση εγγραφής από το CRM</string>
+    <string name="crm_settings_updated">Το CRM ενημερώθηκε</string>
 </resources>

@@ -371,4 +371,11 @@
         <item quantity="many">%1$d konfliktuojančio failo</item>
         <item quantity="other">%1$d konfliktuojančių failų</item>
     </plurals>
+    <string name="projects_design_export_saved">Dizainas išsaugotas</string>
+    <string name="projects_design_import_failed">Nepavyko perskaityti failo</string>
+    <string name="projects_design_or_upload_json">Arba įkelkite failą</string>
+    <string name="projects_export">Eksportuoti duomenis</string>
+    <string name="projects_export_failed">Nepavyko išsaugoti eksporto</string>
+    <string name="projects_export_saved">Projekto duomenys išsaugoti</string>
+    <string name="projects_exporting">Ruošiamas eksportas…</string>
 </resources>

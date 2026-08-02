@@ -369,4 +369,11 @@
         <item quantity="one">%1$d fitxer en conflicte</item>
         <item quantity="other">%1$d fitxers en conflicte</item>
     </plurals>
+    <string name="projects_design_export_saved">Disseny desat</string>
+    <string name="projects_design_import_failed">No s\'ha pogut llegir el fitxer</string>
+    <string name="projects_design_or_upload_json">O carrega un fitxer</string>
+    <string name="projects_export">Exporta les dades</string>
+    <string name="projects_export_failed">No s\'ha pogut desar l\'exportació</string>
+    <string name="projects_export_saved">Dades del projecte desades</string>
+    <string name="projects_exporting">S\'està preparant l\'exportació…</string>
 </resources>

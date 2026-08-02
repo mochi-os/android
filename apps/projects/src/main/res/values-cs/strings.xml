@@ -370,4 +370,11 @@
         <item quantity="few">%1$d konfliktní soubory</item>
         <item quantity="other">%1$d konfliktních souborů</item>
     </plurals>
+    <string name="projects_design_export_saved">Návrh uložen</string>
+    <string name="projects_design_import_failed">Soubor se nepodařilo přečíst</string>
+    <string name="projects_design_or_upload_json">Nebo nahrajte soubor</string>
+    <string name="projects_export">Exportovat data</string>
+    <string name="projects_export_failed">Export se nepodařilo uložit</string>
+    <string name="projects_export_saved">Data projektu uložena</string>
+    <string name="projects_exporting">Připravuje se export…</string>
 </resources>

@@ -369,4 +369,11 @@
         <item quantity="one">%1$d vastuoluline fail</item>
         <item quantity="other">%1$d vastuolulist faili</item>
     </plurals>
+    <string name="projects_design_export_saved">Kujundus salvestatud</string>
+    <string name="projects_design_import_failed">Faili ei õnnestunud lugeda</string>
+    <string name="projects_design_or_upload_json">Või laadige fail üles</string>
+    <string name="projects_export">Ekspordi andmed</string>
+    <string name="projects_export_failed">Eksporti salvestamine ebaõnnestus</string>
+    <string name="projects_export_saved">Projekti andmed salvestatud</string>
+    <string name="projects_exporting">Ekspordi ettevalmistamine…</string>
 </resources>

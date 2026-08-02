@@ -339,4 +339,32 @@
         <item quantity="one">%1$d پەڕگەی ناکۆک</item>
         <item quantity="other">%1$d پەڕگەی ناکۆک</item>
     </plurals>
+    <string name="crm_filter">فلتەر</string>
+    <string name="crm_sort_filter_title">ڕیزکردن و پاڵاوتن</string>
+    <string name="crm_filter_clear_all">پاککردنەوەی هەموو</string>
+    <string name="crm_filter_all">هەموو</string>
+    <string name="crm_filter_other">هیتر</string>
+    <string name="crm_settings_section_identity">ناسنامە</string>
+    <string name="crm_settings_section_access">بەڕێوەبردنی دەستڕاگەیشتن</string>
+    <string name="crm_settings_not_set">دانەنراوە</string>
+    <string name="crm_settings_access_updated">دەستڕاگەیشتن نوێکرایەوە</string>
+    <string name="crm_settings_access_revoked">دەستپێگەیشتن هەڵوەشایەوە</string>
+    <string name="crm_people_search">گەڕان بۆ کەسان</string>
+    <string name="crm_access_tab_other">هیتر</string>
+    <string name="crm_access_select_group">گرووپێک هەڵبژێرە</string>
+    <string name="crm_access_select_rule">یاسایەک هەڵبژێرە</string>
+    <string name="crm_access_select_role">ڕۆڵ هەڵبژێرە</string>
+    <string name="crm_access_selected">هەڵبژێردراو: %1$s</string>
+    <string name="crm_access_subject_anyone">هەر کەسێک</string>
+    <string name="crm_access_subject_authenticated">بەکارهێنەرە پشتڕاستکراوەکان</string>
+    <string name="crm_access_authenticated_desc">هەر کەسێک کە چووەتە ژوورەوە</string>
+    <string name="crm_access_anyone_desc">بە بەکارهێنەرە نەناسراوەکانیشەوە</string>
+    <string name="crm_access_role_design">دیزاین، دروستکردن، دەستکاری، لێدوان، و بینین</string>
+    <string name="crm_access_role_write">دروستکردن، دەستکاری، لێدوان، و بینین</string>
+    <string name="crm_access_role_comment">لێدوان و بینین</string>
+    <string name="crm_access_role_view">تەنها بینین</string>
+    <string name="crm_access_role_none">دەستڕاگەیشتن نییە</string>
+    <string name="crm_all_crms">هەموو CRMەکان</string>
+    <string name="crm_settings_unsubscribe_section">بەشداری CRM هەڵوەشێنەوە</string>
+    <string name="crm_settings_updated">CRM نوێکرایەوە</string>
 </resources>

@@ -339,4 +339,32 @@
         <item quantity="one">%1$d বিরোধপূর্ণ ফাইল</item>
         <item quantity="other">%1$d বিরোধপূর্ণ ফাইল</item>
     </plurals>
+    <string name="crm_filter">ফিল্টার</string>
+    <string name="crm_sort_filter_title">সাজান ও ফিল্টার</string>
+    <string name="crm_filter_clear_all">সব পরিষ্কার করুন</string>
+    <string name="crm_filter_all">সব</string>
+    <string name="crm_filter_other">অন্যান্য</string>
+    <string name="crm_settings_section_identity">পরিচয়</string>
+    <string name="crm_settings_section_access">অ্যাক্সেস ব্যবস্থাপনা</string>
+    <string name="crm_settings_not_set">সেট করা নেই</string>
+    <string name="crm_settings_access_updated">অ্যাক্সেস আপডেট হয়েছে</string>
+    <string name="crm_settings_access_revoked">অ্যাক্সেস প্রত্যাহার করা হয়েছে</string>
+    <string name="crm_people_search">মানুষ খুঁজুন</string>
+    <string name="crm_access_tab_other">অন্যান্য</string>
+    <string name="crm_access_select_group">একটি গ্রুপ বেছে নিন</string>
+    <string name="crm_access_select_rule">একটি নিয়ম বেছে নিন</string>
+    <string name="crm_access_select_role">ভূমিকা নির্বাচন করুন</string>
+    <string name="crm_access_selected">নির্বাচিত: %1$s</string>
+    <string name="crm_access_subject_anyone">যে কেউ</string>
+    <string name="crm_access_subject_authenticated">প্রমাণীকৃত ব্যবহারকারী</string>
+    <string name="crm_access_authenticated_desc">লগ ইন করা যে কেউ</string>
+    <string name="crm_access_anyone_desc">বেনামী ব্যবহারকারী সহ</string>
+    <string name="crm_access_role_design">ডিজাইন, তৈরি, সম্পাদনা, মন্তব্য এবং দেখুন</string>
+    <string name="crm_access_role_write">তৈরি, সম্পাদনা, মন্তব্য এবং দেখুন</string>
+    <string name="crm_access_role_comment">মন্তব্য এবং দেখুন</string>
+    <string name="crm_access_role_view">শুধুমাত্র দেখুন</string>
+    <string name="crm_access_role_none">অ্যাক্সেস নেই</string>
+    <string name="crm_all_crms">সব CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM থেকে আনসাবস্ক্রাইব করুন</string>
+    <string name="crm_settings_updated">CRM আপডেট হয়েছে</string>
 </resources>

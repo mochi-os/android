@@ -339,4 +339,32 @@
         <item quantity="one">ifayela eli-%1$d elingqubuzanayo</item>
         <item quantity="other">amafayela angu-%1$d angqubuzanayo</item>
     </plurals>
+    <string name="crm_filter">Hlunga</string>
+    <string name="crm_sort_filter_title">Hlunga futhi uhlele</string>
+    <string name="crm_filter_clear_all">Sula konke</string>
+    <string name="crm_filter_all">Konke</string>
+    <string name="crm_filter_other">Okunye</string>
+    <string name="crm_settings_section_identity">Ubunikazi</string>
+    <string name="crm_settings_section_access">Ukuphathwa Kokufinyelela</string>
+    <string name="crm_settings_not_set">Akusethiwe</string>
+    <string name="crm_settings_access_updated">Ukufinyelela kubuyekeziwe</string>
+    <string name="crm_settings_access_revoked">Ukufinyelela kuhoxisiwe</string>
+    <string name="crm_people_search">Sesha abantu</string>
+    <string name="crm_access_tab_other">Okunye</string>
+    <string name="crm_access_select_group">Khetha iqembu</string>
+    <string name="crm_access_select_rule">Khetha umthetho</string>
+    <string name="crm_access_select_role">Khetha indima</string>
+    <string name="crm_access_selected">Okukhethiwe: %1$s</string>
+    <string name="crm_access_subject_anyone">Noma ubani</string>
+    <string name="crm_access_subject_authenticated">Abasebenzisi abaqinisekisiwe</string>
+    <string name="crm_access_authenticated_desc">Noma ubani ongene ngemvume</string>
+    <string name="crm_access_anyone_desc">Kuhlanganisa nabasebenzisi abangaziwa</string>
+    <string name="crm_access_role_design">Klama, dala, hlela, phawula, futhi ubuke</string>
+    <string name="crm_access_role_write">Dala, hlela, phawula, futhi ubuke</string>
+    <string name="crm_access_role_comment">Phawula futhi ubuke</string>
+    <string name="crm_access_role_view">Bukela kuphela</string>
+    <string name="crm_access_role_none">Akukho ukufinyelela</string>
+    <string name="crm_all_crms">Wonke ama-CRM</string>
+    <string name="crm_settings_unsubscribe_section">Yeka ukubhalisa ku-CRM</string>
+    <string name="crm_settings_updated">I-CRM ibuyekeziwe</string>
 </resources>

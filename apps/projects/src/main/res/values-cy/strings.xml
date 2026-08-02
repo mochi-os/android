@@ -373,4 +373,11 @@
         <item quantity="many">%1$d ffeil yn gwrthdaro</item>
         <item quantity="other">%1$d ffeil yn gwrthdaro</item>
     </plurals>
+    <string name="projects_design_export_saved">Cadwyd y cynllun</string>
+    <string name="projects_design_import_failed">Methwyd darllen y ffeil honno</string>
+    <string name="projects_design_or_upload_json">Neu uwchlwythwch ffeil</string>
+    <string name="projects_export">Allforio data</string>
+    <string name="projects_export_failed">Methwyd cadw\'r allforio</string>
+    <string name="projects_export_saved">Cadwyd data\'r prosiect</string>
+    <string name="projects_exporting">Yn paratoi\'r allforio…</string>
 </resources>

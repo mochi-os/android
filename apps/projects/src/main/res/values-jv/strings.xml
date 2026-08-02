@@ -368,4 +368,11 @@
     <plurals name="projects_request_conflicts">
         <item quantity="other">%1$d berkas konflik</item>
     </plurals>
+    <string name="projects_design_export_saved">Desain kasimpen</string>
+    <string name="projects_design_import_failed">Berkas kuwi ora bisa diwaca</string>
+    <string name="projects_design_or_upload_json">Utawa unggah berkas</string>
+    <string name="projects_export">Ekspor data</string>
+    <string name="projects_export_failed">Ekspor ora bisa disimpen</string>
+    <string name="projects_export_saved">Data proyek kasimpen</string>
+    <string name="projects_exporting">Nyiapake ekspor…</string>
 </resources>

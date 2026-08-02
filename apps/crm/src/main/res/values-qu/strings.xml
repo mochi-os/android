@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ch\'aqwaq willañiqi</item>
         <item quantity="other">%1$d ch\'aqwaq willañiqikuna</item>
     </plurals>
+    <string name="crm_filter">Suysuy</string>
+    <string name="crm_sort_filter_title">Ñiqichay hinaspa suyachiy</string>
+    <string name="crm_filter_clear_all">Llapan pichay</string>
+    <string name="crm_filter_all">Llapan</string>
+    <string name="crm_filter_other">Huk</string>
+    <string name="crm_settings_section_identity">Identity</string>
+    <string name="crm_settings_section_access">Yaykuy Kamachiy</string>
+    <string name="crm_settings_not_set">Mana churasqa</string>
+    <string name="crm_settings_access_updated">Yaykuy musuqchasqa</string>
+    <string name="crm_settings_access_revoked">Yaykuna anchurisqa</string>
+    <string name="crm_people_search">Runakunata maskay</string>
+    <string name="crm_access_tab_other">Huk</string>
+    <string name="crm_access_select_group">Huk huñuta akllay</string>
+    <string name="crm_access_select_rule">Huk kamachiyta akllay</string>
+    <string name="crm_access_select_role">Rolta akllay</string>
+    <string name="crm_access_selected">Akllasqa: %1$s</string>
+    <string name="crm_access_subject_anyone">Pipas</string>
+    <string name="crm_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
+    <string name="crm_access_authenticated_desc">Yaykusqa kaq pipas</string>
+    <string name="crm_access_anyone_desc">Mana sutiyuq ruwaqkunapas</string>
+    <string name="crm_access_role_design">Kamariy, ruway, allichay, rimariy, qhaway ima</string>
+    <string name="crm_access_role_write">Ruway, allichay, rimariy, qhaway ima</string>
+    <string name="crm_access_role_comment">Comentariy hinaspa qhaway</string>
+    <string name="crm_access_role_view">Qhawayllapaq</string>
+    <string name="crm_access_role_none">Mana yaykuy</string>
+    <string name="crm_all_crms">Llapa CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM manaña qatiy</string>
+    <string name="crm_settings_updated">CRM musuqchasqa</string>
 </resources>

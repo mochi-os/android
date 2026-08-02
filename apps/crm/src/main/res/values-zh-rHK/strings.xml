@@ -325,4 +325,11 @@
         <item quantity="one">%1$d 個衝突檔案</item>
         <item quantity="other">%1$d 個衝突檔案</item>
     </plurals>
+    <string name="crm_filter_clear_all">清除全部</string>
+    <string name="crm_settings_section_identity">身份</string>
+    <string name="crm_settings_access_updated">存取權限已更新</string>
+    <string name="crm_access_selected">已選擇:%1$s</string>
+    <string name="crm_access_subject_authenticated">已驗證用戶</string>
+    <string name="crm_access_authenticated_desc">任何已登入的用戶</string>
+    <string name="crm_access_anyone_desc">包括匿名用戶</string>
 </resources>

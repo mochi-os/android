@@ -339,4 +339,32 @@
         <item quantity="one">%1$d వైరుధ్య ఫైల్</item>
         <item quantity="other">%1$d వైరుధ్య ఫైల్‌లు</item>
     </plurals>
+    <string name="crm_filter">ఫిల్టర్</string>
+    <string name="crm_sort_filter_title">క్రమబద్ధీకరించి ఫిల్టర్ చేయండి</string>
+    <string name="crm_filter_clear_all">అన్నీ క్లియర్ చేయండి</string>
+    <string name="crm_filter_all">అన్నీ</string>
+    <string name="crm_filter_other">ఇతర</string>
+    <string name="crm_settings_section_identity">గుర్తింపు</string>
+    <string name="crm_settings_section_access">యాక్సెస్ నిర్వహణ</string>
+    <string name="crm_settings_not_set">సెట్ చేయబడలేదు</string>
+    <string name="crm_settings_access_updated">యాక్సెస్ నవీకరించబడింది</string>
+    <string name="crm_settings_access_revoked">ప్రవేశీఙీ రద్దు చేయబడింది</string>
+    <string name="crm_people_search">వ్యక్తులను వెతకండి</string>
+    <string name="crm_access_tab_other">ఇతర</string>
+    <string name="crm_access_select_group">ఒక సమూహాన్ని ఎంచుకోండి</string>
+    <string name="crm_access_select_rule">ఒక నియమాన్ని ఎంచుకోండి</string>
+    <string name="crm_access_select_role">పాత్రను ఎంచుకోండి</string>
+    <string name="crm_access_selected">ఎంచుకున్నవి: %1$s</string>
+    <string name="crm_access_subject_anyone">ఎవరైనా</string>
+    <string name="crm_access_subject_authenticated">ప్రామాణీకరించిన వినియోగదారులు</string>
+    <string name="crm_access_authenticated_desc">లాగిన్ అయిన ఎవరైనా</string>
+    <string name="crm_access_anyone_desc">అనామక వినియోగదారులతో సహా</string>
+    <string name="crm_access_role_design">రూపకల్పన, సృష్టి, సవరణ, వ్యాఖ్య మరియు వీక్షణ</string>
+    <string name="crm_access_role_write">సృష్టి, సవరణ, వ్యాఖ్య మరియు వీక్షణ</string>
+    <string name="crm_access_role_comment">వ్యాఖ్యానించండి మరియు చూడండి</string>
+    <string name="crm_access_role_view">వీక్షణ మాత్రమే</string>
+    <string name="crm_access_role_none">యాక్సెస్ లేదు</string>
+    <string name="crm_all_crms">అన్ని CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM నుండి అన్‌సబ్‌స్క్రైబ్ చేయండి</string>
+    <string name="crm_settings_updated">CRM నవీకరించబడింది</string>
 </resources>

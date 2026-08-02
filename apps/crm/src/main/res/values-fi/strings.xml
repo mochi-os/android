@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ristiriitainen tiedosto</item>
         <item quantity="other">%1$d ristiriitaista tiedostoa</item>
     </plurals>
+    <string name="crm_filter">Suodata</string>
+    <string name="crm_sort_filter_title">Lajittele ja suodata</string>
+    <string name="crm_filter_clear_all">Tyhjennä kaikki</string>
+    <string name="crm_filter_all">Kaikki</string>
+    <string name="crm_filter_other">Muu</string>
+    <string name="crm_settings_section_identity">Identiteetti</string>
+    <string name="crm_settings_section_access">Käyttöoikeuksien hallinta</string>
+    <string name="crm_settings_not_set">Ei asetettu</string>
+    <string name="crm_settings_access_updated">Käyttöoikeus päivitetty</string>
+    <string name="crm_settings_access_revoked">Käyttöoikeus peruutettu</string>
+    <string name="crm_people_search">Hae henkilöitä</string>
+    <string name="crm_access_tab_other">Muu</string>
+    <string name="crm_access_select_group">Valitse ryhmä</string>
+    <string name="crm_access_select_rule">Valitse sääntö</string>
+    <string name="crm_access_select_role">Valitse rooli</string>
+    <string name="crm_access_selected">Valittu: %1$s</string>
+    <string name="crm_access_subject_anyone">Kuka tahansa</string>
+    <string name="crm_access_subject_authenticated">Todennetut käyttäjät</string>
+    <string name="crm_access_authenticated_desc">Kaikki kirjautuneet käyttäjät</string>
+    <string name="crm_access_anyone_desc">Mukaan lukien anonyymit käyttäjät</string>
+    <string name="crm_access_role_design">Suunnittele, luo, muokkaa, kommentoi ja katsele</string>
+    <string name="crm_access_role_write">Luo, muokkaa, kommentoi ja katsele</string>
+    <string name="crm_access_role_comment">Kommentoi ja katsele</string>
+    <string name="crm_access_role_view">Vain katselu</string>
+    <string name="crm_access_role_none">Ei käyttöoikeutta</string>
+    <string name="crm_all_crms">Kaikki CRM:t</string>
+    <string name="crm_settings_unsubscribe_section">Lopeta CRM:n tilaus</string>
+    <string name="crm_settings_updated">CRM päivitetty</string>
 </resources>

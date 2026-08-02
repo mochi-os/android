@@ -338,4 +338,32 @@
     <plurals name="crm_request_conflicts">
         <item quantity="other">%1$d კონფლიქტური ფაილი</item>
     </plurals>
+    <string name="crm_filter">ფილტრი</string>
+    <string name="crm_sort_filter_title">დალაგება და გაფილტვრა</string>
+    <string name="crm_filter_clear_all">ყველაფრის გასუფთავება</string>
+    <string name="crm_filter_all">ყველა</string>
+    <string name="crm_filter_other">სხვა</string>
+    <string name="crm_settings_section_identity">ვინაობა</string>
+    <string name="crm_settings_section_access">წვდომის მართვა</string>
+    <string name="crm_settings_not_set">არ არის დაყენებული</string>
+    <string name="crm_settings_access_updated">წვდომა განახლდა</string>
+    <string name="crm_settings_access_revoked">წვდომა გაუქმდა</string>
+    <string name="crm_people_search">ხალხის ძებნა</string>
+    <string name="crm_access_tab_other">სხვა</string>
+    <string name="crm_access_select_group">აირჩიეთ ჯგუფი</string>
+    <string name="crm_access_select_rule">აირჩიეთ წესი</string>
+    <string name="crm_access_select_role">აირჩიეთ როლი</string>
+    <string name="crm_access_selected">არჩეული: %1$s</string>
+    <string name="crm_access_subject_anyone">ნებისმიერი</string>
+    <string name="crm_access_subject_authenticated">ავთენტიფიცირებული მომხმარებლები</string>
+    <string name="crm_access_authenticated_desc">ნებისმიერი ავტორიზებული მომხმარებელი</string>
+    <string name="crm_access_anyone_desc">ანონიმური მომხმარებლების ჩათვლით</string>
+    <string name="crm_access_role_design">დიზაინი, შექმნა, რედაქტირება, კომენტირება და ნახვა</string>
+    <string name="crm_access_role_write">შექმნა, რედაქტირება, კომენტირება და ნახვა</string>
+    <string name="crm_access_role_comment">კომენტარი და ნახვა</string>
+    <string name="crm_access_role_view">ხედის კონტროლები</string>
+    <string name="crm_access_role_none">წვდომა არ არის</string>
+    <string name="crm_all_crms">ყველა CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM-ის გამოწერის გაუქმება</string>
+    <string name="crm_settings_updated">CRM განახლდა</string>
 </resources>

@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ficheiro en conflito</item>
         <item quantity="other">%1$d ficheiros en conflito</item>
     </plurals>
+    <string name="crm_filter">Filtrar</string>
+    <string name="crm_sort_filter_title">Ordenar e filtrar</string>
+    <string name="crm_filter_clear_all">Borrar todo</string>
+    <string name="crm_filter_all">Todas</string>
+    <string name="crm_filter_other">Outro</string>
+    <string name="crm_settings_section_identity">Identidade</string>
+    <string name="crm_settings_section_access">Xestión de acceso</string>
+    <string name="crm_settings_not_set">Non definido</string>
+    <string name="crm_settings_access_updated">Acceso actualizado</string>
+    <string name="crm_settings_access_revoked">Acceso revogado</string>
+    <string name="crm_people_search">Buscar persoas</string>
+    <string name="crm_access_tab_other">Outro</string>
+    <string name="crm_access_select_group">Selecciona un grupo</string>
+    <string name="crm_access_select_rule">Selecciona unha regra</string>
+    <string name="crm_access_select_role">Seleccionar rol</string>
+    <string name="crm_access_selected">Seleccionado: %1$s</string>
+    <string name="crm_access_subject_anyone">Calquera</string>
+    <string name="crm_access_subject_authenticated">Usuarios autenticados</string>
+    <string name="crm_access_authenticated_desc">Calquera persoa con sesión iniciada</string>
+    <string name="crm_access_anyone_desc">Incluídos os usuarios anónimos</string>
+    <string name="crm_access_role_design">Deseñar, crear, editar, comentar e ver</string>
+    <string name="crm_access_role_write">Crear, editar, comentar e ver</string>
+    <string name="crm_access_role_comment">Comentar e ver</string>
+    <string name="crm_access_role_view">Só ver</string>
+    <string name="crm_access_role_none">Sen acceso</string>
+    <string name="crm_all_crms">Todos os CRM</string>
+    <string name="crm_settings_unsubscribe_section">Cancelar a subscrición ao CRM</string>
+    <string name="crm_settings_updated">CRM actualizado</string>
 </resources>

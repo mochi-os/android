@@ -340,4 +340,32 @@
         <item quantity="one">%1$d konfliktējošs fails</item>
         <item quantity="other">%1$d konfliktējoši faili</item>
     </plurals>
+    <string name="crm_filter">Filtrēt</string>
+    <string name="crm_sort_filter_title">Kārtot un filtrēt</string>
+    <string name="crm_filter_clear_all">Notīrīt visu</string>
+    <string name="crm_filter_all">Visi</string>
+    <string name="crm_filter_other">Cits</string>
+    <string name="crm_settings_section_identity">Identitāte</string>
+    <string name="crm_settings_section_access">Piekļuves pārvaldība</string>
+    <string name="crm_settings_not_set">Nav iestatīts</string>
+    <string name="crm_settings_access_updated">Piekļuve atjaunināta</string>
+    <string name="crm_settings_access_revoked">Piekļuve atsaukta</string>
+    <string name="crm_people_search">Meklēt cilvēkus</string>
+    <string name="crm_access_tab_other">Cits</string>
+    <string name="crm_access_select_group">Izvēlieties grupu</string>
+    <string name="crm_access_select_rule">Izvēlieties noteikumu</string>
+    <string name="crm_access_select_role">Izvēlieties lomu</string>
+    <string name="crm_access_selected">Atlasīts: %1$s</string>
+    <string name="crm_access_subject_anyone">Jebkurš</string>
+    <string name="crm_access_subject_authenticated">Autentificēti lietotāji</string>
+    <string name="crm_access_authenticated_desc">Ikviens, kurš ir pierakstījies</string>
+    <string name="crm_access_anyone_desc">Ieskaitot anonīmos lietotājus</string>
+    <string name="crm_access_role_design">Veidot, izveidot, rediģēt, komentēt un skatīt</string>
+    <string name="crm_access_role_write">Izveidot, rediģēt, komentēt un skatīt</string>
+    <string name="crm_access_role_comment">Komentēt un skatīt</string>
+    <string name="crm_access_role_view">Tikai skatīt</string>
+    <string name="crm_access_role_none">Nav piekļuves</string>
+    <string name="crm_all_crms">Visi CRM</string>
+    <string name="crm_settings_unsubscribe_section">Atteikties no CRM abonementa</string>
+    <string name="crm_settings_updated">CRM atjaunināts</string>
 </resources>

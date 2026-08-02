@@ -339,4 +339,32 @@
         <item quantity="one">ifayile e-%1$d engqubanayo</item>
         <item quantity="other">iifayile ezi-%1$d ezingqubanayo</item>
     </plurals>
+    <string name="crm_filter">Hluza</string>
+    <string name="crm_sort_filter_title">Hlela uze uhluze</string>
+    <string name="crm_filter_clear_all">Cima konke</string>
+    <string name="crm_filter_all">Zonke</string>
+    <string name="crm_filter_other">Okunye</string>
+    <string name="crm_settings_section_identity">Isazisi</string>
+    <string name="crm_settings_section_access">Ulawulo Lofikelelo</string>
+    <string name="crm_settings_not_set">Akumiselwanga</string>
+    <string name="crm_settings_access_updated">Ufikelelo luhlaziyiwe</string>
+    <string name="crm_settings_access_revoked">Ufikelelo lurhoxisiwe</string>
+    <string name="crm_people_search">Khangela abantu</string>
+    <string name="crm_access_tab_other">Okunye</string>
+    <string name="crm_access_select_group">Khetha iqela</string>
+    <string name="crm_access_select_rule">Khetha umthetho</string>
+    <string name="crm_access_select_role">Khetha indima</string>
+    <string name="crm_access_selected">Ekhethiweyo: %1$s</string>
+    <string name="crm_access_subject_anyone">Nabani na</string>
+    <string name="crm_access_subject_authenticated">Abasebenzisi abaqinisekisiweyo</string>
+    <string name="crm_access_authenticated_desc">Nabani na ongene ngemvume</string>
+    <string name="crm_access_anyone_desc">Kuquka abasebenzisi abangaziwayo</string>
+    <string name="crm_access_role_design">Yila, dala, hlela, phawula, kwaye ubone</string>
+    <string name="crm_access_role_write">Dala, hlela, phawula, kwaye ubone</string>
+    <string name="crm_access_role_comment">Phawula ujonge</string>
+    <string name="crm_access_role_view">Bonisa kuphela</string>
+    <string name="crm_access_role_none">Akukho lufikelelo</string>
+    <string name="crm_all_crms">Zonke ii-CRM</string>
+    <string name="crm_settings_unsubscribe_section">Rhoxisa ukubhalisa kwi-CRM</string>
+    <string name="crm_settings_updated">I-CRM ihlaziyiwe</string>
 </resources>

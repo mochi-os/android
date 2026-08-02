@@ -369,4 +369,11 @@
         <item quantity="one">%1$d Datei mit Konflikt</item>
         <item quantity="other">%1$d Dateien mit Konflikten</item>
     </plurals>
+    <string name="projects_design_export_saved">Design gespeichert</string>
+    <string name="projects_design_import_failed">Die Datei konnte nicht gelesen werden</string>
+    <string name="projects_design_or_upload_json">Oder eine Datei hochladen</string>
+    <string name="projects_export">Daten exportieren</string>
+    <string name="projects_export_failed">Der Export konnte nicht gespeichert werden</string>
+    <string name="projects_export_saved">Projektdaten gespeichert</string>
+    <string name="projects_exporting">Export wird vorbereitet…</string>
 </resources>

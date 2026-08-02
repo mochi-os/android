@@ -338,4 +338,32 @@
     <plurals name="crm_request_conflicts">
         <item quantity="other">%1$d fichye ki an konfli</item>
     </plurals>
+    <string name="crm_filter">Filtre</string>
+    <string name="crm_sort_filter_title">Triye ak filtre</string>
+    <string name="crm_filter_clear_all">Efase tout</string>
+    <string name="crm_filter_all">Tout</string>
+    <string name="crm_filter_other">Lòt</string>
+    <string name="crm_settings_section_identity">Idantite</string>
+    <string name="crm_settings_section_access">Jesyon Aksè</string>
+    <string name="crm_settings_not_set">Pa defini</string>
+    <string name="crm_settings_access_updated">Aksè mete ajou</string>
+    <string name="crm_settings_access_revoked">Akè retire</string>
+    <string name="crm_people_search">Chèche moun</string>
+    <string name="crm_access_tab_other">Lòt</string>
+    <string name="crm_access_select_group">Chwazi yon gwoup</string>
+    <string name="crm_access_select_rule">Chwazi yon règ</string>
+    <string name="crm_access_select_role">Chwazi wòl</string>
+    <string name="crm_access_selected">Chwazi: %1$s</string>
+    <string name="crm_access_subject_anyone">Nenpòt moun</string>
+    <string name="crm_access_subject_authenticated">Itilizatè otantifye</string>
+    <string name="crm_access_authenticated_desc">Nenpòt moun ki konekte</string>
+    <string name="crm_access_anyone_desc">Enkli itilizatè anonim yo</string>
+    <string name="crm_access_role_design">Konsevwa, kreye, modifye, kòmante, epi gade</string>
+    <string name="crm_access_role_write">Kreye, modifye, kòmante, epi gade</string>
+    <string name="crm_access_role_comment">Kòmante ak gade</string>
+    <string name="crm_access_role_view">Wè sèlman</string>
+    <string name="crm_access_role_none">Pa gen aksè</string>
+    <string name="crm_all_crms">Tout CRM</string>
+    <string name="crm_settings_unsubscribe_section">Dezabòne nan CRM</string>
+    <string name="crm_settings_updated">CRM mete ajou</string>
 </resources>

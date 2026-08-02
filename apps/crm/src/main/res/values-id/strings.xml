@@ -339,4 +339,32 @@
         <item quantity="one">%1$d berkas konflik</item>
         <item quantity="other">%1$d berkas konflik</item>
     </plurals>
+    <string name="crm_filter">Saring</string>
+    <string name="crm_sort_filter_title">Urutkan &amp; saring</string>
+    <string name="crm_filter_clear_all">Bersihkan semua</string>
+    <string name="crm_filter_all">Semua</string>
+    <string name="crm_filter_other">Lainnya</string>
+    <string name="crm_settings_section_identity">Identitas</string>
+    <string name="crm_settings_section_access">Manajemen Akses</string>
+    <string name="crm_settings_not_set">Belum diatur</string>
+    <string name="crm_settings_access_updated">Akses diperbarui</string>
+    <string name="crm_settings_access_revoked">Akses dicabut</string>
+    <string name="crm_people_search">Cari orang</string>
+    <string name="crm_access_tab_other">Lainnya</string>
+    <string name="crm_access_select_group">Pilih grup</string>
+    <string name="crm_access_select_rule">Pilih aturan</string>
+    <string name="crm_access_select_role">Pilih peran</string>
+    <string name="crm_access_selected">Dipilih: %1$s</string>
+    <string name="crm_access_subject_anyone">Siapa saja</string>
+    <string name="crm_access_subject_authenticated">Pengguna terautentikasi</string>
+    <string name="crm_access_authenticated_desc">Siapa pun yang sudah masuk</string>
+    <string name="crm_access_anyone_desc">Termasuk pengguna anonim</string>
+    <string name="crm_access_role_design">Merancang, membuat, mengedit, mengomentari, dan melihat</string>
+    <string name="crm_access_role_write">Membuat, mengedit, mengomentari, dan melihat</string>
+    <string name="crm_access_role_comment">Komentar dan lihat</string>
+    <string name="crm_access_role_view">Hanya lihat</string>
+    <string name="crm_access_role_none">Tidak ada akses</string>
+    <string name="crm_all_crms">Semua CRM</string>
+    <string name="crm_settings_unsubscribe_section">Berhenti berlangganan CRM</string>
+    <string name="crm_settings_updated">CRM diperbarui</string>
 </resources>

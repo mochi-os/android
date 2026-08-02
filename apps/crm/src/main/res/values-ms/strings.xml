@@ -341,4 +341,32 @@
         <item quantity="one">%1$d fail bercanggah</item>
         <item quantity="other">%1$d fail bercanggah</item>
     </plurals>
+    <string name="crm_filter">Tapis</string>
+    <string name="crm_sort_filter_title">Isih &amp; tapis</string>
+    <string name="crm_filter_clear_all">Kosongkan semua</string>
+    <string name="crm_filter_all">Semua</string>
+    <string name="crm_filter_other">Lain-lain</string>
+    <string name="crm_settings_section_identity">Identiti</string>
+    <string name="crm_settings_section_access">Pengurusan Akses</string>
+    <string name="crm_settings_not_set">Tidak ditetapkan</string>
+    <string name="crm_settings_access_updated">Akses dikemas kini</string>
+    <string name="crm_settings_access_revoked">Akses dibatalkan</string>
+    <string name="crm_people_search">Cari orang</string>
+    <string name="crm_access_tab_other">Lain-lain</string>
+    <string name="crm_access_select_group">Pilih kumpulan</string>
+    <string name="crm_access_select_rule">Pilih peraturan</string>
+    <string name="crm_access_select_role">Pilih peranan</string>
+    <string name="crm_access_selected">Dipilih: %1$s</string>
+    <string name="crm_access_subject_anyone">Sesiapa sahaja</string>
+    <string name="crm_access_subject_authenticated">Pengguna disahkan</string>
+    <string name="crm_access_authenticated_desc">Sesiapa sahaja yang telah log masuk</string>
+    <string name="crm_access_anyone_desc">Termasuk pengguna tanpa nama</string>
+    <string name="crm_access_role_design">Reka bentuk, cipta, edit, komen dan lihat</string>
+    <string name="crm_access_role_write">Cipta, edit, komen dan lihat</string>
+    <string name="crm_access_role_comment">Komen dan lihat</string>
+    <string name="crm_access_role_view">Lihat sahaja</string>
+    <string name="crm_access_role_none">Tiada akses</string>
+    <string name="crm_all_crms">Semua CRM</string>
+    <string name="crm_settings_unsubscribe_section">Berhenti melanggan CRM</string>
+    <string name="crm_settings_updated">CRM dikemas kini</string>
 </resources>

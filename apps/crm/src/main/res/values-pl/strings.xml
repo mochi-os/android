@@ -341,4 +341,32 @@
         <item quantity="many">%1$d plików z konfliktami</item>
         <item quantity="other">%1$d pliku z konfliktem</item>
     </plurals>
+    <string name="crm_filter">Filtr</string>
+    <string name="crm_sort_filter_title">Sortowanie i filtr</string>
+    <string name="crm_filter_clear_all">Wyczyść wszystko</string>
+    <string name="crm_filter_all">Wszystkie</string>
+    <string name="crm_filter_other">Inne</string>
+    <string name="crm_settings_section_identity">Tożsamość</string>
+    <string name="crm_settings_section_access">Zarządzanie dostępem</string>
+    <string name="crm_settings_not_set">Nie ustawiono</string>
+    <string name="crm_settings_access_updated">Dostęp zaktualizowany</string>
+    <string name="crm_settings_access_revoked">Dostęp unieważniony</string>
+    <string name="crm_people_search">Szukaj osób</string>
+    <string name="crm_access_tab_other">Inne</string>
+    <string name="crm_access_select_group">Wybierz grupę</string>
+    <string name="crm_access_select_rule">Wybierz regułę</string>
+    <string name="crm_access_select_role">Wybierz rolę</string>
+    <string name="crm_access_selected">Zaznaczone: %1$s</string>
+    <string name="crm_access_subject_anyone">Każdy</string>
+    <string name="crm_access_subject_authenticated">Uwierzytelnieni użytkownicy</string>
+    <string name="crm_access_authenticated_desc">Każdy, kto jest zalogowany</string>
+    <string name="crm_access_anyone_desc">W tym użytkownicy anonimowi</string>
+    <string name="crm_access_role_design">Projektowanie, tworzenie, edycja, komentowanie i przeglądanie</string>
+    <string name="crm_access_role_write">Tworzenie, edycja, komentowanie i przeglądanie</string>
+    <string name="crm_access_role_comment">Komentuj i przeglądaj</string>
+    <string name="crm_access_role_view">Tylko podgląd</string>
+    <string name="crm_access_role_none">Brak dostępu</string>
+    <string name="crm_all_crms">Wszystkie CRM</string>
+    <string name="crm_settings_unsubscribe_section">Anuluj subskrypcję CRM</string>
+    <string name="crm_settings_updated">CRM zaktualizowany</string>
 </resources>

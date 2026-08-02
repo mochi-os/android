@@ -339,4 +339,32 @@
         <item quantity="one">%1$d tệp xung đột</item>
         <item quantity="other">%1$d tệp xung đột</item>
     </plurals>
+    <string name="crm_filter">Bộ lọc</string>
+    <string name="crm_sort_filter_title">Sắp xếp và lọc</string>
+    <string name="crm_filter_clear_all">Xóa tất cả</string>
+    <string name="crm_filter_all">Tất cả</string>
+    <string name="crm_filter_other">Khác</string>
+    <string name="crm_settings_section_identity">Danh tính</string>
+    <string name="crm_settings_section_access">Quản lý truy cập</string>
+    <string name="crm_settings_not_set">Chưa đặt</string>
+    <string name="crm_settings_access_updated">Đã cập nhật truy cập</string>
+    <string name="crm_settings_access_revoked">Quyền truy cập đã bị thu hồi</string>
+    <string name="crm_people_search">Tìm người</string>
+    <string name="crm_access_tab_other">Khác</string>
+    <string name="crm_access_select_group">Chọn một nhóm</string>
+    <string name="crm_access_select_rule">Chọn một quy tắc</string>
+    <string name="crm_access_select_role">Chọn vai trò</string>
+    <string name="crm_access_selected">Đã chọn: %1$s</string>
+    <string name="crm_access_subject_anyone">Bất kỳ ai</string>
+    <string name="crm_access_subject_authenticated">Người dùng đã xác thực</string>
+    <string name="crm_access_authenticated_desc">Bất kỳ ai đã đăng nhập</string>
+    <string name="crm_access_anyone_desc">Bao gồm cả người dùng ẩn danh</string>
+    <string name="crm_access_role_design">Thiết kế, tạo, chỉnh sửa, bình luận và xem</string>
+    <string name="crm_access_role_write">Tạo, chỉnh sửa, bình luận và xem</string>
+    <string name="crm_access_role_comment">Bình luận và xem</string>
+    <string name="crm_access_role_view">Chỉ xem</string>
+    <string name="crm_access_role_none">Không có quyền truy cập</string>
+    <string name="crm_all_crms">Tất cả CRM</string>
+    <string name="crm_settings_unsubscribe_section">Hủy đăng ký CRM</string>
+    <string name="crm_settings_updated">Đã cập nhật CRM</string>
 </resources>

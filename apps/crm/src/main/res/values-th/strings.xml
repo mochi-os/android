@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ไฟล์ที่ขัดแย้ง</item>
         <item quantity="other">%1$d ไฟล์ที่ขัดแย้ง</item>
     </plurals>
+    <string name="crm_filter">กรอง</string>
+    <string name="crm_sort_filter_title">จัดเรียงและกรอง</string>
+    <string name="crm_filter_clear_all">ล้างทั้งหมด</string>
+    <string name="crm_filter_all">ทั้งหมด</string>
+    <string name="crm_filter_other">อื่น ๆ</string>
+    <string name="crm_settings_section_identity">Identity</string>
+    <string name="crm_settings_section_access">การจัดการการเข้าถึง</string>
+    <string name="crm_settings_not_set">ยังไม่ได้ตั้งค่า</string>
+    <string name="crm_settings_access_updated">อัปเดตการเข้าถึงแล้ว</string>
+    <string name="crm_settings_access_revoked">เพิกถอนการเข้าถึงแล้ว</string>
+    <string name="crm_people_search">ค้นหาผู้คน</string>
+    <string name="crm_access_tab_other">อื่น ๆ</string>
+    <string name="crm_access_select_group">เลือกกลุ่ม</string>
+    <string name="crm_access_select_rule">เลือกกฎ</string>
+    <string name="crm_access_select_role">เลือกบทบาท</string>
+    <string name="crm_access_selected">เลือกแล้ว: %1$s</string>
+    <string name="crm_access_subject_anyone">ใครก็ได้</string>
+    <string name="crm_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>
+    <string name="crm_access_authenticated_desc">ทุกคนที่เข้าสู่ระบบแล้ว</string>
+    <string name="crm_access_anyone_desc">รวมถึงผู้ใช้ที่ไม่ระบุตัวตน</string>
+    <string name="crm_access_role_design">ออกแบบ สร้าง แก้ไข แสดงความคิดเห็น และดู</string>
+    <string name="crm_access_role_write">สร้าง แก้ไข แสดงความคิดเห็น และดู</string>
+    <string name="crm_access_role_comment">แสดงความคิดเห็นและดู</string>
+    <string name="crm_access_role_view">ดูอย่างเดียว</string>
+    <string name="crm_access_role_none">ไม่มีสิทธิ์เข้าถึง</string>
+    <string name="crm_all_crms">CRM ทั้งหมด</string>
+    <string name="crm_settings_unsubscribe_section">เลิกติดตาม CRM</string>
+    <string name="crm_settings_updated">อัปเดต CRM แล้ว</string>
 </resources>

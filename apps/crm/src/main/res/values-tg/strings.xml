@@ -339,4 +339,32 @@
         <item quantity="one">%1$d файли мухолиф</item>
         <item quantity="other">%1$d файли мухолиф</item>
     </plurals>
+    <string name="crm_filter">Филтр</string>
+    <string name="crm_sort_filter_title">Мураттабсозӣ ва филтр</string>
+    <string name="crm_filter_clear_all">Ҳамаро тоза кардан</string>
+    <string name="crm_filter_all">Ҳама</string>
+    <string name="crm_filter_other">Дигар</string>
+    <string name="crm_settings_section_identity">Шахсият</string>
+    <string name="crm_settings_section_access">Идоракунии дастрасӣ</string>
+    <string name="crm_settings_not_set">Танзим нашудааст</string>
+    <string name="crm_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
+    <string name="crm_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
+    <string name="crm_people_search">Ҷустуҷӯи одамон</string>
+    <string name="crm_access_tab_other">Дигар</string>
+    <string name="crm_access_select_group">Гурӯҳро интихоб кунед</string>
+    <string name="crm_access_select_rule">Қоидаро интихоб кунед</string>
+    <string name="crm_access_select_role">Нақшро интихоб кунед</string>
+    <string name="crm_access_selected">Интихобшуда: %1$s</string>
+    <string name="crm_access_subject_anyone">Ҳар кас</string>
+    <string name="crm_access_subject_authenticated">Корбарони тасдиқшуда</string>
+    <string name="crm_access_authenticated_desc">Ҳар касе, ки ворид шудааст</string>
+    <string name="crm_access_anyone_desc">Аз ҷумла корбарони беном</string>
+    <string name="crm_access_role_design">Тарроҳӣ, эҷод, таҳрир, шарҳ ва дидан</string>
+    <string name="crm_access_role_write">Эҷод, таҳрир, шарҳ ва дидан</string>
+    <string name="crm_access_role_comment">Шарҳ ва дидан</string>
+    <string name="crm_access_role_view">Танҳо назар</string>
+    <string name="crm_access_role_none">Дастрасӣ нест</string>
+    <string name="crm_all_crms">Ҳамаи CRM</string>
+    <string name="crm_settings_unsubscribe_section">Обунаро аз CRM бекор кунед</string>
+    <string name="crm_settings_updated">CRM навсозӣ шуд</string>
 </resources>

@@ -338,4 +338,32 @@
     <plurals name="crm_request_conflicts">
         <item quantity="other">%1$d berkas konflik</item>
     </plurals>
+    <string name="crm_filter">Saring</string>
+    <string name="crm_sort_filter_title">Urutake lan saring</string>
+    <string name="crm_filter_clear_all">Resiki kabèh</string>
+    <string name="crm_filter_all">Kabèh</string>
+    <string name="crm_filter_other">Liyané</string>
+    <string name="crm_settings_section_identity">Identitas</string>
+    <string name="crm_settings_section_access">Manajemen Akses</string>
+    <string name="crm_settings_not_set">Ora disetel</string>
+    <string name="crm_settings_access_updated">Akses dianyari</string>
+    <string name="crm_settings_access_revoked">Akses dibatalake</string>
+    <string name="crm_people_search">Golek wong</string>
+    <string name="crm_access_tab_other">Liyané</string>
+    <string name="crm_access_select_group">Pilih grup</string>
+    <string name="crm_access_select_rule">Pilih aturan</string>
+    <string name="crm_access_select_role">Pilih peran</string>
+    <string name="crm_access_selected">Dipilih: %1$s</string>
+    <string name="crm_access_subject_anyone">Sapa wae</string>
+    <string name="crm_access_subject_authenticated">Pangguna sing wis dipriksa</string>
+    <string name="crm_access_authenticated_desc">Sapa wae sing wis mlebu</string>
+    <string name="crm_access_anyone_desc">Kalebu pangguna anonim</string>
+    <string name="crm_access_role_design">Ngrancang, nggawe, nyunting, menehi komentar, lan ndeleng</string>
+    <string name="crm_access_role_write">Nggawe, nyunting, menehi komentar, lan ndeleng</string>
+    <string name="crm_access_role_comment">Komentar lan ndelok</string>
+    <string name="crm_access_role_view">Mung deleng</string>
+    <string name="crm_access_role_none">Ora ana akses</string>
+    <string name="crm_all_crms">Kabeh CRM</string>
+    <string name="crm_settings_unsubscribe_section">Mandheg langganan CRM</string>
+    <string name="crm_settings_updated">CRM dianyari</string>
 </resources>

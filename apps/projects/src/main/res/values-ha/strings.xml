@@ -369,4 +369,11 @@
         <item quantity="one">fayil %1$d mai karo</item>
         <item quantity="other">fayiloli %1$d masu karo</item>
     </plurals>
+    <string name="projects_design_export_saved">An adana ƙira</string>
+    <string name="projects_design_import_failed">An kasa karanta wannan fayil ɗin</string>
+    <string name="projects_design_or_upload_json">Ko kuma loda fayil</string>
+    <string name="projects_export">Fitar da bayanai</string>
+    <string name="projects_export_failed">An kasa ajiye fitarwar</string>
+    <string name="projects_export_saved">An adana bayanan aikin</string>
+    <string name="projects_exporting">Ana shirya fitarwa…</string>
 </resources>

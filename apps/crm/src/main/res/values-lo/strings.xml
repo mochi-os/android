@@ -338,4 +338,32 @@
     <plurals name="crm_request_conflicts">
         <item quantity="other">%1$d ໄຟລ໌ທີ່ຂັດແຍ້ງ</item>
     </plurals>
+    <string name="crm_filter">ຕົວກອງ</string>
+    <string name="crm_sort_filter_title">ຈັດຮຽງ ແລະ ກັ່ນຕອງ</string>
+    <string name="crm_filter_clear_all">ລ້າງທັງໝົດ</string>
+    <string name="crm_filter_all">ທັງໝົດ</string>
+    <string name="crm_filter_other">ອື່ນໆ</string>
+    <string name="crm_settings_section_identity">ຕົວຕົນ</string>
+    <string name="crm_settings_section_access">ການຈັດການການເຂົ້າເຖິງ</string>
+    <string name="crm_settings_not_set">ບໍ່ໄດ້ຕັ້ງຄ່າ</string>
+    <string name="crm_settings_access_updated">ອັບເດດການເຂົ້າເຖິງແລ້ວ</string>
+    <string name="crm_settings_access_revoked">ການກ຺ົົາຣເສີບຖ້ມີໄດ້ຖືກຖ຾ກໂອ຺ກ</string>
+    <string name="crm_people_search">ຄົ້ນຫາຄົນ</string>
+    <string name="crm_access_tab_other">ອື່ນໆ</string>
+    <string name="crm_access_select_group">ເລືອກກຸ່ມ</string>
+    <string name="crm_access_select_rule">ເລືອກກົດ</string>
+    <string name="crm_access_select_role">ເລືອກບົດບາດ</string>
+    <string name="crm_access_selected">ເລືອກແລ້ວ: %1$s</string>
+    <string name="crm_access_subject_anyone">ໃຜກໍໄດ້</string>
+    <string name="crm_access_subject_authenticated">ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ</string>
+    <string name="crm_access_authenticated_desc">ທຸກຄົນທີ່ເຂົ້າສູ່ລະບົບແລ້ວ</string>
+    <string name="crm_access_anyone_desc">ລວມທັງຜູ້ໃຊ້ບໍ່ລະບຸຊື່</string>
+    <string name="crm_access_role_design">ອອກແບບ, ສ້າງ, ແກ້ໄຂ, ໃຫ້ຄຳເຫັນ ແລະ ເບິ່ງ</string>
+    <string name="crm_access_role_write">ສ້າງ, ແກ້ໄຂ, ໃຫ້ຄຳເຫັນ ແລະ ເບິ່ງ</string>
+    <string name="crm_access_role_comment">ຄຳເຫັນ ແລະ ເບິ່ງ</string>
+    <string name="crm_access_role_view">ເບິ່ງເທົ່ານັ້ນ</string>
+    <string name="crm_access_role_none">ບໍ່ມີການເຂົ້າເຖິງ</string>
+    <string name="crm_all_crms">CRM ທັງໝົດ</string>
+    <string name="crm_settings_unsubscribe_section">ຍົກເລີກການສະໝັກ CRM</string>
+    <string name="crm_settings_updated">ອັບເດດ CRM ແລ້ວ</string>
 </resources>

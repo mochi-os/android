@@ -369,4 +369,11 @@
         <item quantity="one">ගැටුම් ගොනු %1$d</item>
         <item quantity="other">ගැටුම් ගොනු %1$d</item>
     </plurals>
+    <string name="projects_design_export_saved">සැලසුම සුරකින ලදී</string>
+    <string name="projects_design_import_failed">එම ගොනුව කියවිය නොහැකි විය</string>
+    <string name="projects_design_or_upload_json">නැතහොත් ගොනුවක් උඩුගත කරන්න</string>
+    <string name="projects_export">දත්ත නිර්යාත කරන්න</string>
+    <string name="projects_export_failed">නිර්යාතය සුරැකිය නොහැකි විය</string>
+    <string name="projects_export_saved">ව්‍යාපෘති දත්ත සුරකින ලදී</string>
+    <string name="projects_exporting">නිර්යාතය සූදානම් කරමින්…</string>
 </resources>

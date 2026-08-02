@@ -373,4 +373,11 @@
         <item quantity="many">%1$d ملفًا متعارضًا</item>
         <item quantity="other">%1$d ملف متعارض</item>
     </plurals>
+    <string name="projects_design_export_saved">تم حفظ التصميم</string>
+    <string name="projects_design_import_failed">تعذّرت قراءة ذلك الملف</string>
+    <string name="projects_design_or_upload_json">أو ارفع ملفًا</string>
+    <string name="projects_export">تصدير البيانات</string>
+    <string name="projects_export_failed">تعذّر حفظ التصدير</string>
+    <string name="projects_export_saved">تم حفظ بيانات المشروع</string>
+    <string name="projects_exporting">جارٍ تحضير التصدير…</string>
 </resources>

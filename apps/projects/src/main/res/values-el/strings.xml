@@ -369,4 +369,11 @@
         <item quantity="one">%1$d αρχείο σε διένεξη</item>
         <item quantity="other">%1$d αρχεία σε διένεξη</item>
     </plurals>
+    <string name="projects_design_export_saved">Η σχεδίαση αποθηκεύτηκε</string>
+    <string name="projects_design_import_failed">Δεν ήταν δυνατή η ανάγνωση του αρχείου</string>
+    <string name="projects_design_or_upload_json">Ή ανεβάστε ένα αρχείο</string>
+    <string name="projects_export">Εξαγωγή δεδομένων</string>
+    <string name="projects_export_failed">Δεν ήταν δυνατή η αποθήκευση της εξαγωγής</string>
+    <string name="projects_export_saved">Τα δεδομένα του έργου αποθηκεύτηκαν</string>
+    <string name="projects_exporting">Προετοιμασία εξαγωγής…</string>
 </resources>

@@ -338,4 +338,32 @@
     <plurals name="crm_request_conflicts">
         <item quantity="other">%1$d ឯកសារជម្លោះ</item>
     </plurals>
+    <string name="crm_filter">តម្រង</string>
+    <string name="crm_sort_filter_title">តម្រៀប និងត្រង</string>
+    <string name="crm_filter_clear_all">សម្អាតទាំងអស់</string>
+    <string name="crm_filter_all">ទាំងអស់</string>
+    <string name="crm_filter_other">ផ្សេងទៀត</string>
+    <string name="crm_settings_section_identity">អត្តសញ្ញាណ</string>
+    <string name="crm_settings_section_access">ការគ្រប់គ្រងការចូលប្រើ</string>
+    <string name="crm_settings_not_set">មិនបានកំណត់</string>
+    <string name="crm_settings_access_updated">បានធ្វើបច្ចុប្បន្នភាពការចូលប្រើ</string>
+    <string name="crm_settings_access_revoked">សិទ្ធិបែររបស៴គទែរ</string>
+    <string name="crm_people_search">ស្វែងរកមនុស្ស</string>
+    <string name="crm_access_tab_other">ផ្សេងទៀត</string>
+    <string name="crm_access_select_group">ជ្រើសរើសក្រុម</string>
+    <string name="crm_access_select_rule">ជ្រើសរើសច្បាប់</string>
+    <string name="crm_access_select_role">ជ្រើសរើសតួនាទី</string>
+    <string name="crm_access_selected">បានជ្រើសរើស៖ %1$s</string>
+    <string name="crm_access_subject_anyone">នរណាម្នាក់</string>
+    <string name="crm_access_subject_authenticated">អ្នកប្រើដែលបានផ្ទៀងផ្ទាត់</string>
+    <string name="crm_access_authenticated_desc">នរណាក៏ដោយដែលបានចូលគណនី</string>
+    <string name="crm_access_anyone_desc">រួមទាំងអ្នកប្រើប្រាស់អនាមិកផងដែរ</string>
+    <string name="crm_access_role_design">រចនា បង្កើត កែសម្រួល បញ្ចេញមតិ និងមើល</string>
+    <string name="crm_access_role_write">បង្កើត កែសម្រួល បញ្ចេញមតិ និងមើល</string>
+    <string name="crm_access_role_comment">មតិយោបល់ និងមើល</string>
+    <string name="crm_access_role_view">មើលតែប៉ុណ្ណោះ</string>
+    <string name="crm_access_role_none">គ្មានសិទ្ធិចូលប្រើ</string>
+    <string name="crm_all_crms">CRM ទាំងអស់</string>
+    <string name="crm_settings_unsubscribe_section">ឈប់ជាវ CRM</string>
+    <string name="crm_settings_updated">បានធ្វើបច្ចុប្បន្នភាព CRM</string>
 </resources>

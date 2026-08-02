@@ -371,4 +371,11 @@
         <item quantity="many">%1$d fajls f\'kunflitt</item>
         <item quantity="other">%1$d fajls f\'kunflitt</item>
     </plurals>
+    <string name="projects_design_export_saved">Id-disinn ġie salvat</string>
+    <string name="projects_design_import_failed">Ma setax jinqara dak il-fajl</string>
+    <string name="projects_design_or_upload_json">Jew tella\' fajl</string>
+    <string name="projects_export">Esporta d-data</string>
+    <string name="projects_export_failed">L-esportazzjoni ma setgħetx tiġi salvata</string>
+    <string name="projects_export_saved">Id-data tal-proġett ġiet salvata</string>
+    <string name="projects_exporting">Qed titħejja l-esportazzjoni…</string>
 </resources>

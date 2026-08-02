@@ -369,4 +369,11 @@
         <item quantity="one">%1$d فایل متناقض</item>
         <item quantity="other">%1$d فایل متناقض</item>
     </plurals>
+    <string name="projects_design_export_saved">طرح ذخیره شد</string>
+    <string name="projects_design_import_failed">خواندن آن فایل ممکن نشد</string>
+    <string name="projects_design_or_upload_json">یا یک فایل بارگذاری کنید</string>
+    <string name="projects_export">خروجی گرفتن از داده‌ها</string>
+    <string name="projects_export_failed">ذخیره خروجی ممکن نشد</string>
+    <string name="projects_export_saved">داده‌های پروژه ذخیره شد</string>
+    <string name="projects_exporting">در حال آماده‌سازی خروجی…</string>
 </resources>

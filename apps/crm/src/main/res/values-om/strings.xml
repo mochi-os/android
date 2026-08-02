@@ -339,4 +339,32 @@
         <item quantity="one">%1$d faayilii wal faalleessu</item>
         <item quantity="other">%1$d faayiloota wal faalleessan</item>
     </plurals>
+    <string name="crm_filter">Filannoo</string>
+    <string name="crm_sort_filter_title">Tartiibessi fi calaali</string>
+    <string name="crm_filter_clear_all">Hunda cilliisi</string>
+    <string name="crm_filter_all">Hunda</string>
+    <string name="crm_filter_other">Biraa</string>
+    <string name="crm_settings_section_identity">Eenyummaa</string>
+    <string name="crm_settings_section_access">Bulchiinsa Seensaa</string>
+    <string name="crm_settings_not_set">Hin qabamne</string>
+    <string name="crm_settings_access_updated">Seensi haaromfame</string>
+    <string name="crm_settings_access_revoked">Galmaa\'iinsi haqamee jira</string>
+    <string name="crm_people_search">Namoota barbaadi</string>
+    <string name="crm_access_tab_other">Biraa</string>
+    <string name="crm_access_select_group">Garee filadhu</string>
+    <string name="crm_access_select_rule">Seera filadhu</string>
+    <string name="crm_access_select_role">Gahee filadhu</string>
+    <string name="crm_access_selected">Filatame: %1$s</string>
+    <string name="crm_access_subject_anyone">Nama kamiyyuu</string>
+    <string name="crm_access_subject_authenticated">Fayyadamtoota mirkanaa\'an</string>
+    <string name="crm_access_authenticated_desc">Nama seenee jiru kamiyyuu</string>
+    <string name="crm_access_anyone_desc">Fayyadamtoota maqaan isaanii hin beekamne dabalatee</string>
+    <string name="crm_access_role_design">Dizaayinii, uumuu, gulaaluu, yaada kennuu fi ilaaluu</string>
+    <string name="crm_access_role_write">Uumuu, gulaaluu, yaada kennuu fi ilaaluu</string>
+    <string name="crm_access_role_comment">Yaada fi mul\'isi</string>
+    <string name="crm_access_role_view">Daawwannaa qofa</string>
+    <string name="crm_access_role_none">Itti seenuun hin jiru</string>
+    <string name="crm_all_crms">CRM hunda</string>
+    <string name="crm_settings_unsubscribe_section">CRM irraa of haquu</string>
+    <string name="crm_settings_updated">CRM haaromfameera</string>
 </resources>

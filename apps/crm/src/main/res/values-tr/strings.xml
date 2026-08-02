@@ -339,4 +339,32 @@
         <item quantity="one">%1$d çakışan dosya</item>
         <item quantity="other">%1$d çakışan dosya</item>
     </plurals>
+    <string name="crm_filter">Filtrele</string>
+    <string name="crm_sort_filter_title">Sırala ve filtrele</string>
+    <string name="crm_filter_clear_all">Tümünü temizle</string>
+    <string name="crm_filter_all">Tümü</string>
+    <string name="crm_filter_other">Diğer</string>
+    <string name="crm_settings_section_identity">Kimlik</string>
+    <string name="crm_settings_section_access">Erişim yönetimi</string>
+    <string name="crm_settings_not_set">Ayarlanmamış</string>
+    <string name="crm_settings_access_updated">Erişim güncellendi</string>
+    <string name="crm_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="crm_people_search">Kişileri ara</string>
+    <string name="crm_access_tab_other">Diğer</string>
+    <string name="crm_access_select_group">Bir grup seçin</string>
+    <string name="crm_access_select_rule">Bir kural seçin</string>
+    <string name="crm_access_select_role">Rol seç</string>
+    <string name="crm_access_selected">Seçilen: %1$s</string>
+    <string name="crm_access_subject_anyone">Herkes</string>
+    <string name="crm_access_subject_authenticated">Kimliği doğrulanmış kullanıcılar</string>
+    <string name="crm_access_authenticated_desc">Oturum açmış olan herkes</string>
+    <string name="crm_access_anyone_desc">Anonim kullanıcılar dahil</string>
+    <string name="crm_access_role_design">Tasarlama, oluşturma, düzenleme, yorum yapma ve görüntüleme</string>
+    <string name="crm_access_role_write">Oluşturma, düzenleme, yorum yapma ve görüntüleme</string>
+    <string name="crm_access_role_comment">Yorum yap ve görüntüle</string>
+    <string name="crm_access_role_view">Yalnızca görüntüleme</string>
+    <string name="crm_access_role_none">Erişim yok</string>
+    <string name="crm_all_crms">Tüm CRM\'ler</string>
+    <string name="crm_settings_unsubscribe_section">CRM aboneliğinden çık</string>
+    <string name="crm_settings_updated">CRM güncellendi</string>
 </resources>

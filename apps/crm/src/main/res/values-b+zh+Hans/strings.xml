@@ -339,4 +339,32 @@
         <item quantity="one">%1$d 个冲突文件</item>
         <item quantity="other">%1$d 个冲突文件</item>
     </plurals>
+    <string name="crm_filter">筛选</string>
+    <string name="crm_sort_filter_title">排序和筛选</string>
+    <string name="crm_filter_clear_all">全部清除</string>
+    <string name="crm_filter_all">全部</string>
+    <string name="crm_filter_other">其他</string>
+    <string name="crm_settings_section_identity">身份</string>
+    <string name="crm_settings_section_access">访问管理</string>
+    <string name="crm_settings_not_set">未设置</string>
+    <string name="crm_settings_access_updated">访问权限已更新</string>
+    <string name="crm_settings_access_revoked">访问权限已撤销</string>
+    <string name="crm_people_search">搜索用户</string>
+    <string name="crm_access_tab_other">其他</string>
+    <string name="crm_access_select_group">选择一个群组</string>
+    <string name="crm_access_select_rule">选择一条规则</string>
+    <string name="crm_access_select_role">选择角色</string>
+    <string name="crm_access_selected">已选择：%1$s</string>
+    <string name="crm_access_subject_anyone">任何人</string>
+    <string name="crm_access_subject_authenticated">已认证用户</string>
+    <string name="crm_access_authenticated_desc">任何已登录的用户</string>
+    <string name="crm_access_anyone_desc">包括匿名用户</string>
+    <string name="crm_access_role_design">设计、创建、编辑、评论和查看</string>
+    <string name="crm_access_role_write">创建、编辑、评论和查看</string>
+    <string name="crm_access_role_comment">评论和查看</string>
+    <string name="crm_access_role_view">仅查看</string>
+    <string name="crm_access_role_none">无访问权限</string>
+    <string name="crm_all_crms">所有 CRM</string>
+    <string name="crm_settings_unsubscribe_section">取消订阅该 CRM</string>
+    <string name="crm_settings_updated">CRM 已更新</string>
 </resources>

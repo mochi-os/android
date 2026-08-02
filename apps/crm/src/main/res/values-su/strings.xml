@@ -339,4 +339,32 @@
         <item quantity="one">%1$d koropak konflik</item>
         <item quantity="other">%1$d koropak konflik</item>
     </plurals>
+    <string name="crm_filter">Saring</string>
+    <string name="crm_sort_filter_title">Susun jeung saring</string>
+    <string name="crm_filter_clear_all">Bersihkeun sadaya</string>
+    <string name="crm_filter_all">Sadaya</string>
+    <string name="crm_filter_other">Séjén</string>
+    <string name="crm_settings_section_identity">Identitas</string>
+    <string name="crm_settings_section_access">Manajemén Aksés</string>
+    <string name="crm_settings_not_set">Teu disetel</string>
+    <string name="crm_settings_access_updated">Aksés diropéa</string>
+    <string name="crm_settings_access_revoked">Akses dicabut</string>
+    <string name="crm_people_search">Téangan jalma</string>
+    <string name="crm_access_tab_other">Séjén</string>
+    <string name="crm_access_select_group">Pilih grup</string>
+    <string name="crm_access_select_rule">Pilih aturan</string>
+    <string name="crm_access_select_role">Pilih peran</string>
+    <string name="crm_access_selected">Dipilih: %1$s</string>
+    <string name="crm_access_subject_anyone">Saha waé</string>
+    <string name="crm_access_subject_authenticated">Pangguna anu disahkeun</string>
+    <string name="crm_access_authenticated_desc">Saha waé anu parantos asup log</string>
+    <string name="crm_access_anyone_desc">Kalebet pamaké anonim</string>
+    <string name="crm_access_role_design">Ngarancang, nyieun, ngédit, méré koméntar, jeung nempo</string>
+    <string name="crm_access_role_write">Nyieun, ngédit, méré koméntar, jeung nempo</string>
+    <string name="crm_access_role_comment">Koméntar jeung tempo</string>
+    <string name="crm_access_role_view">Tingali wungkul</string>
+    <string name="crm_access_role_none">Teu boga aksés</string>
+    <string name="crm_all_crms">Sadaya CRM</string>
+    <string name="crm_settings_unsubscribe_section">Eureun langganan CRM</string>
+    <string name="crm_settings_updated">CRM diropéa</string>
 </resources>

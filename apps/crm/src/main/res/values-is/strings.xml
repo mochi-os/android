@@ -339,4 +339,32 @@
         <item quantity="one">%1$d skrá í árekstri</item>
         <item quantity="other">%1$d skrár í árekstri</item>
     </plurals>
+    <string name="crm_filter">Sía</string>
+    <string name="crm_sort_filter_title">Raða og sía</string>
+    <string name="crm_filter_clear_all">Hreinsa allt</string>
+    <string name="crm_filter_all">Allt</string>
+    <string name="crm_filter_other">Annað</string>
+    <string name="crm_settings_section_identity">Auðkenni</string>
+    <string name="crm_settings_section_access">Aðgangsstjórnun</string>
+    <string name="crm_settings_not_set">Ekki stillt</string>
+    <string name="crm_settings_access_updated">Aðgangur uppfærður</string>
+    <string name="crm_settings_access_revoked">Aðgangur afturkallaður</string>
+    <string name="crm_people_search">Leita að fólki</string>
+    <string name="crm_access_tab_other">Annað</string>
+    <string name="crm_access_select_group">Veldu hóp</string>
+    <string name="crm_access_select_rule">Veldu reglu</string>
+    <string name="crm_access_select_role">Veldu hlutverk</string>
+    <string name="crm_access_selected">Valið: %1$s</string>
+    <string name="crm_access_subject_anyone">Hver sem er</string>
+    <string name="crm_access_subject_authenticated">Auðkenndir notendur</string>
+    <string name="crm_access_authenticated_desc">Allir sem eru innskráðir</string>
+    <string name="crm_access_anyone_desc">Þar með taldir nafnlausir notendur</string>
+    <string name="crm_access_role_design">Hanna, búa til, breyta, gera athugasemdir og skoða</string>
+    <string name="crm_access_role_write">Búa til, breyta, gera athugasemdir og skoða</string>
+    <string name="crm_access_role_comment">Gera athugasemdir og skoða</string>
+    <string name="crm_access_role_view">Aðeins skoða</string>
+    <string name="crm_access_role_none">Enginn aðgangur</string>
+    <string name="crm_all_crms">Öll CRM</string>
+    <string name="crm_settings_unsubscribe_section">Segja upp áskrift að CRM</string>
+    <string name="crm_settings_updated">CRM uppfært</string>
 </resources>

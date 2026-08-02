@@ -340,4 +340,32 @@
         <item quantity="few">%1$d fișiere în conflict</item>
         <item quantity="other">%1$d de fișiere în conflict</item>
     </plurals>
+    <string name="crm_filter">Filtrează</string>
+    <string name="crm_sort_filter_title">Sortare și filtrare</string>
+    <string name="crm_filter_clear_all">Golește tot</string>
+    <string name="crm_filter_all">Toate</string>
+    <string name="crm_filter_other">Altele</string>
+    <string name="crm_settings_section_identity">Identitate</string>
+    <string name="crm_settings_section_access">Gestionare acces</string>
+    <string name="crm_settings_not_set">Nesetat</string>
+    <string name="crm_settings_access_updated">Acces actualizat</string>
+    <string name="crm_settings_access_revoked">Accesul a fost revocat</string>
+    <string name="crm_people_search">Caută persoane</string>
+    <string name="crm_access_tab_other">Altele</string>
+    <string name="crm_access_select_group">Selectează un grup</string>
+    <string name="crm_access_select_rule">Selectează o regulă</string>
+    <string name="crm_access_select_role">Selectează rolul</string>
+    <string name="crm_access_selected">Selectat: %1$s</string>
+    <string name="crm_access_subject_anyone">Oricine</string>
+    <string name="crm_access_subject_authenticated">Utilizatori autentificați</string>
+    <string name="crm_access_authenticated_desc">Oricine este autentificat</string>
+    <string name="crm_access_anyone_desc">Inclusiv utilizatorii anonimi</string>
+    <string name="crm_access_role_design">Proiectare, creare, editare, comentare și vizualizare</string>
+    <string name="crm_access_role_write">Creare, editare, comentare și vizualizare</string>
+    <string name="crm_access_role_comment">Comentează și vezi</string>
+    <string name="crm_access_role_view">Doar vizualizare</string>
+    <string name="crm_access_role_none">Fără acces</string>
+    <string name="crm_all_crms">Toate CRM-urile</string>
+    <string name="crm_settings_unsubscribe_section">Dezabonare de la CRM</string>
+    <string name="crm_settings_updated">CRM actualizat</string>
 </resources>

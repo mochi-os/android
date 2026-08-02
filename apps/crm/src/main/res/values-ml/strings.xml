@@ -339,4 +339,32 @@
         <item quantity="one">%1$d വൈരുദ്ധ്യമുള്ള ഫയൽ</item>
         <item quantity="other">%1$d വൈരുദ്ധ്യമുള്ള ഫയലുകൾ</item>
     </plurals>
+    <string name="crm_filter">ഫിൽട്ടർ</string>
+    <string name="crm_sort_filter_title">ക്രമീകരിച്ച് ഫിൽട്ടർ ചെയ്യുക</string>
+    <string name="crm_filter_clear_all">എല്ലാം മായ്ക്കുക</string>
+    <string name="crm_filter_all">എല്ലാം</string>
+    <string name="crm_filter_other">മറ്റുള്ളവ</string>
+    <string name="crm_settings_section_identity">സ്വത്വം</string>
+    <string name="crm_settings_section_access">ആക്സസ് മാനേജ്മെന്റ്</string>
+    <string name="crm_settings_not_set">സജ്ജമാക്കിയിട്ടില്ല</string>
+    <string name="crm_settings_access_updated">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
+    <string name="crm_settings_access_revoked">ആക്സസ്സ് റദ്ദാക്കി</string>
+    <string name="crm_people_search">ആളുകളെ തിരയുക</string>
+    <string name="crm_access_tab_other">മറ്റുള്ളവ</string>
+    <string name="crm_access_select_group">ഒരു ഗ്രൂപ്പ് തിരഞ്ഞെടുക്കുക</string>
+    <string name="crm_access_select_rule">ഒരു നിയമം തിരഞ്ഞെടുക്കുക</string>
+    <string name="crm_access_select_role">റോൾ തിരഞ്ഞെടുക്കുക</string>
+    <string name="crm_access_selected">തിരഞ്ഞെടുത്തത്: %1$s</string>
+    <string name="crm_access_subject_anyone">ആർക്കും</string>
+    <string name="crm_access_subject_authenticated">പ്രാമാണീകരിച്ച ഉപയോക്താക്കൾ</string>
+    <string name="crm_access_authenticated_desc">ലോഗിൻ ചെയ്തിട്ടുള്ള ആർക്കും</string>
+    <string name="crm_access_anyone_desc">അജ്ഞാത ഉപയോക്താക്കൾ ഉൾപ്പെടെ</string>
+    <string name="crm_access_role_design">രൂപകൽപ്പന ചെയ്യുക, സൃഷ്ടിക്കുക, എഡിറ്റ് ചെയ്യുക, അഭിപ്രായമിടുക, കാണുക</string>
+    <string name="crm_access_role_write">സൃഷ്ടിക്കുക, എഡിറ്റ് ചെയ്യുക, അഭിപ്രായമിടുക, കാണുക</string>
+    <string name="crm_access_role_comment">അഭിപ്രായം പറയുകയും കാണുകയും ചെയ്യുക</string>
+    <string name="crm_access_role_view">കാണുക മാത്രം</string>
+    <string name="crm_access_role_none">ആക്സസ് ഇല്ല</string>
+    <string name="crm_all_crms">എല്ലാ CRM-കളും</string>
+    <string name="crm_settings_unsubscribe_section">CRM അൺസബ്‌സ്‌ക്രൈബ് ചെയ്യുക</string>
+    <string name="crm_settings_updated">CRM അപ്‌ഡേറ്റ് ചെയ്തു</string>
 </resources>

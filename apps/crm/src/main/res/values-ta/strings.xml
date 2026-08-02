@@ -339,4 +339,32 @@
         <item quantity="one">%1$d முரண்பாட்டு கோப்பு</item>
         <item quantity="other">%1$d முரண்பாட்டு கோப்புகள்</item>
     </plurals>
+    <string name="crm_filter">வடிகட்டி</string>
+    <string name="crm_sort_filter_title">வரிசைப்படுத்தி வடிகட்டு</string>
+    <string name="crm_filter_clear_all">அனைத்தையும் அழி</string>
+    <string name="crm_filter_all">அனைத்தும்</string>
+    <string name="crm_filter_other">மற்றவை</string>
+    <string name="crm_settings_section_identity">அடையாளம்</string>
+    <string name="crm_settings_section_access">அணுகல் மேலாண்மை</string>
+    <string name="crm_settings_not_set">அமைக்கப்படவில்லை</string>
+    <string name="crm_settings_access_updated">அணுகல் புதுப்பிக்கப்பட்டது</string>
+    <string name="crm_settings_access_revoked">அணுகல் ரதுச்சையை மீண்டது</string>
+    <string name="crm_people_search">நபர்களைத் தேடு</string>
+    <string name="crm_access_tab_other">மற்றவை</string>
+    <string name="crm_access_select_group">ஒரு குழுவைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="crm_access_select_rule">ஒரு விதியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="crm_access_select_role">பங்கை தேர்ந்தெடு</string>
+    <string name="crm_access_selected">தேர்ந்தெடுக்கப்பட்டவை: %1$s</string>
+    <string name="crm_access_subject_anyone">எவரும்</string>
+    <string name="crm_access_subject_authenticated">அங்கீகரிக்கப்பட்ட பயனர்கள்</string>
+    <string name="crm_access_authenticated_desc">உள்நுழைந்த எவரும்</string>
+    <string name="crm_access_anyone_desc">அநாமதேய பயனர்கள் உட்பட</string>
+    <string name="crm_access_role_design">வடிவமைத்தல், உருவாக்குதல், திருத்துதல், கருத்திடுதல் மற்றும் பார்வையிடுதல்</string>
+    <string name="crm_access_role_write">உருவாக்குதல், திருத்துதல், கருத்திடுதல் மற்றும் பார்வையிடுதல்</string>
+    <string name="crm_access_role_comment">கருத்து தெரிவித்து பார்</string>
+    <string name="crm_access_role_view">காட்சி மட்டும்</string>
+    <string name="crm_access_role_none">அணுகல் இல்லை</string>
+    <string name="crm_all_crms">அனைத்து CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM இலிருந்து குழுவிலகு</string>
+    <string name="crm_settings_updated">CRM புதுப்பிக்கப்பட்டது</string>
 </resources>

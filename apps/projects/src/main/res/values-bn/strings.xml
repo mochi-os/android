@@ -369,4 +369,11 @@
         <item quantity="one">%1$d বিরোধপূর্ণ ফাইল</item>
         <item quantity="other">%1$d বিরোধপূর্ণ ফাইল</item>
     </plurals>
+    <string name="projects_design_export_saved">ডিজাইন সংরক্ষিত হয়েছে</string>
+    <string name="projects_design_import_failed">সেই ফাইলটি পড়া যায়নি</string>
+    <string name="projects_design_or_upload_json">অথবা একটি ফাইল আপলোড করুন</string>
+    <string name="projects_export">ডেটা রপ্তানি করুন</string>
+    <string name="projects_export_failed">রপ্তানি সংরক্ষণ করা যায়নি</string>
+    <string name="projects_export_saved">প্রকল্পের ডেটা সংরক্ষিত হয়েছে</string>
+    <string name="projects_exporting">রপ্তানি প্রস্তুত করা হচ্ছে…</string>
 </resources>

@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ziddiyatli fayl</item>
         <item quantity="other">%1$d ziddiyatli fayl</item>
     </plurals>
+    <string name="crm_filter">Filtr</string>
+    <string name="crm_sort_filter_title">Saralash va filtrlash</string>
+    <string name="crm_filter_clear_all">Hammasini tozalash</string>
+    <string name="crm_filter_all">Barchasi</string>
+    <string name="crm_filter_other">Boshqa</string>
+    <string name="crm_settings_section_identity">Identifikatsiya</string>
+    <string name="crm_settings_section_access">Kirishni boshqarish</string>
+    <string name="crm_settings_not_set">Oʻrnatilmagan</string>
+    <string name="crm_settings_access_updated">Kirish yangilandi</string>
+    <string name="crm_settings_access_revoked">Kirish bekor qilindi</string>
+    <string name="crm_people_search">Odamlarni qidirish</string>
+    <string name="crm_access_tab_other">Boshqa</string>
+    <string name="crm_access_select_group">Guruhni tanlang</string>
+    <string name="crm_access_select_rule">Qoidani tanlang</string>
+    <string name="crm_access_select_role">Rolni tanlang</string>
+    <string name="crm_access_selected">Tanlangan: %1$s</string>
+    <string name="crm_access_subject_anyone">Har kim</string>
+    <string name="crm_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
+    <string name="crm_access_authenticated_desc">Tizimga kirgan har qanday foydalanuvchi</string>
+    <string name="crm_access_anyone_desc">Shu jumladan anonim foydalanuvchilar</string>
+    <string name="crm_access_role_design">Dizayn qilish, yaratish, tahrirlash, izoh qoldirish va ko\'rish</string>
+    <string name="crm_access_role_write">Yaratish, tahrirlash, izoh qoldirish va ko\'rish</string>
+    <string name="crm_access_role_comment">Izoh va koʻrish</string>
+    <string name="crm_access_role_view">Faqat koʻrish</string>
+    <string name="crm_access_role_none">Ruxsat yoʻq</string>
+    <string name="crm_all_crms">Barcha CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM obunasini bekor qilish</string>
+    <string name="crm_settings_updated">CRM yangilandi</string>
 </resources>

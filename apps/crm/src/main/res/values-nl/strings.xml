@@ -339,4 +339,32 @@
         <item quantity="one">%1$d conflicterend bestand</item>
         <item quantity="other">%1$d conflicterende bestanden</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sorteren en filteren</string>
+    <string name="crm_filter_clear_all">Alles wissen</string>
+    <string name="crm_filter_all">Alle</string>
+    <string name="crm_filter_other">Overig</string>
+    <string name="crm_settings_section_identity">Identiteit</string>
+    <string name="crm_settings_section_access">Toegangsbeheer</string>
+    <string name="crm_settings_not_set">Niet ingesteld</string>
+    <string name="crm_settings_access_updated">Toegang bijgewerkt</string>
+    <string name="crm_settings_access_revoked">Toegang ingetrokken</string>
+    <string name="crm_people_search">Personen zoeken</string>
+    <string name="crm_access_tab_other">Overig</string>
+    <string name="crm_access_select_group">Selecteer een groep</string>
+    <string name="crm_access_select_rule">Selecteer een regel</string>
+    <string name="crm_access_select_role">Kies rol</string>
+    <string name="crm_access_selected">Geselecteerd: %1$s</string>
+    <string name="crm_access_subject_anyone">Iedereen</string>
+    <string name="crm_access_subject_authenticated">Geverifieerde gebruikers</string>
+    <string name="crm_access_authenticated_desc">Iedereen die is ingelogd</string>
+    <string name="crm_access_anyone_desc">Inclusief anonieme gebruikers</string>
+    <string name="crm_access_role_design">Ontwerpen, aanmaken, bewerken, reageren en bekijken</string>
+    <string name="crm_access_role_write">Aanmaken, bewerken, reageren en bekijken</string>
+    <string name="crm_access_role_comment">Reageren en bekijken</string>
+    <string name="crm_access_role_view">Alleen bekijken</string>
+    <string name="crm_access_role_none">Geen toegang</string>
+    <string name="crm_all_crms">Alle CRM\'s</string>
+    <string name="crm_settings_unsubscribe_section">Abonnement op CRM opzeggen</string>
+    <string name="crm_settings_updated">CRM bijgewerkt</string>
 </resources>

@@ -339,4 +339,32 @@
         <item quantity="one">faili %1$d yenye mgongano</item>
         <item quantity="other">faili %1$d zenye mgongano</item>
     </plurals>
+    <string name="crm_filter">Chuja</string>
+    <string name="crm_sort_filter_title">Panga na chuja</string>
+    <string name="crm_filter_clear_all">Futa vyote</string>
+    <string name="crm_filter_all">Zote</string>
+    <string name="crm_filter_other">Nyingine</string>
+    <string name="crm_settings_section_identity">Utambulisho</string>
+    <string name="crm_settings_section_access">Usimamizi wa Ufikiaji</string>
+    <string name="crm_settings_not_set">Haijawekwa</string>
+    <string name="crm_settings_access_updated">Ufikiaji umesasishwa</string>
+    <string name="crm_settings_access_revoked">Ufikiaji umebatilishwa</string>
+    <string name="crm_people_search">Tafuta watu</string>
+    <string name="crm_access_tab_other">Nyingine</string>
+    <string name="crm_access_select_group">Chagua kikundi</string>
+    <string name="crm_access_select_rule">Chagua sheria</string>
+    <string name="crm_access_select_role">Chagua wajibu</string>
+    <string name="crm_access_selected">Imechaguliwa: %1$s</string>
+    <string name="crm_access_subject_anyone">Mtu yeyote</string>
+    <string name="crm_access_subject_authenticated">Watumiaji waliothibitishwa</string>
+    <string name="crm_access_authenticated_desc">Mtu yeyote aliyeingia</string>
+    <string name="crm_access_anyone_desc">Ikijumuisha watumiaji wasiojulikana</string>
+    <string name="crm_access_role_design">Buni, unda, hariri, toa maoni na tazama</string>
+    <string name="crm_access_role_write">Unda, hariri, toa maoni na tazama</string>
+    <string name="crm_access_role_comment">Toa maoni na uone</string>
+    <string name="crm_access_role_view">Tazama tu</string>
+    <string name="crm_access_role_none">Hakuna ufikiaji</string>
+    <string name="crm_all_crms">CRM zote</string>
+    <string name="crm_settings_unsubscribe_section">Jiondoe kwenye CRM</string>
+    <string name="crm_settings_updated">CRM imesasishwa</string>
 </resources>

@@ -370,4 +370,11 @@
         <item quantity="few">%1$d sukobljene datoteke</item>
         <item quantity="other">%1$d sukobljenih datoteka</item>
     </plurals>
+    <string name="projects_design_export_saved">Dizajn spremljen</string>
+    <string name="projects_design_import_failed">Datoteku nije moguće pročitati</string>
+    <string name="projects_design_or_upload_json">Ili otpremite datoteku</string>
+    <string name="projects_export">Izvezi podatke</string>
+    <string name="projects_export_failed">Izvoz nije moguće spremiti</string>
+    <string name="projects_export_saved">Podaci projekta spremljeni</string>
+    <string name="projects_exporting">Priprema izvoza…</string>
 </resources>

@@ -339,4 +339,32 @@
         <item quantity="one">%1$d تڪراري فائل</item>
         <item quantity="other">%1$d تڪراري فائلون</item>
     </plurals>
+    <string name="crm_filter">فلٽر</string>
+    <string name="crm_sort_filter_title">ترتيب ۽ فلٽر</string>
+    <string name="crm_filter_clear_all">سڀ صاف ڪريو</string>
+    <string name="crm_filter_all">سڀ</string>
+    <string name="crm_filter_other">ٻيو</string>
+    <string name="crm_settings_section_identity">سڃاڻپ</string>
+    <string name="crm_settings_section_access">رسائي جو انتظام</string>
+    <string name="crm_settings_not_set">سيٽ نه ٿيل</string>
+    <string name="crm_settings_access_updated">رسائي اپڊيٽ ڪئي وئي</string>
+    <string name="crm_settings_access_revoked">رسائی ژلائی ٽکدایو</string>
+    <string name="crm_people_search">ماڻهو ڳوليو</string>
+    <string name="crm_access_tab_other">ٻيو</string>
+    <string name="crm_access_select_group">هڪ گروپ چونڊيو</string>
+    <string name="crm_access_select_rule">هڪ قاعدو چونڊيو</string>
+    <string name="crm_access_select_role">ڪردار چونڊيو</string>
+    <string name="crm_access_selected">چونڊيل: %1$s</string>
+    <string name="crm_access_subject_anyone">ڪوبه</string>
+    <string name="crm_access_subject_authenticated">تصديق ٿيل استعمال ڪندڙ</string>
+    <string name="crm_access_authenticated_desc">ڪو به جيڪو لاگ ان ٿيل آهي</string>
+    <string name="crm_access_anyone_desc">گمنام استعمال ڪندڙن سميت</string>
+    <string name="crm_access_role_design">ڊيزائن، تخليق، ترميم، تبصرو ۽ ڏسڻ</string>
+    <string name="crm_access_role_write">تخليق، ترميم، تبصرو ۽ ڏسڻ</string>
+    <string name="crm_access_role_comment">تبصرو ۽ ڏسو</string>
+    <string name="crm_access_role_view">صرف ڏسڻ</string>
+    <string name="crm_access_role_none">ڪو رسائي نه</string>
+    <string name="crm_all_crms">سڀ CRM</string>
+    <string name="crm_settings_unsubscribe_section">CRM کان ان سبسڪرائب ڪريو</string>
+    <string name="crm_settings_updated">CRM اپڊيٽ ٿيو</string>
 </resources>

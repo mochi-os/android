@@ -339,4 +339,32 @@
         <item quantity="one">%1$d ziddiyyətli fayl</item>
         <item quantity="other">%1$d ziddiyyətli fayl</item>
     </plurals>
+    <string name="crm_filter">Filtr</string>
+    <string name="crm_sort_filter_title">Sırala və filtrlə</string>
+    <string name="crm_filter_clear_all">Hamısını təmizlə</string>
+    <string name="crm_filter_all">Hamısı</string>
+    <string name="crm_filter_other">Digər</string>
+    <string name="crm_settings_section_identity">Şəxsiyyət</string>
+    <string name="crm_settings_section_access">Giriş idarəetməsi</string>
+    <string name="crm_settings_not_set">Təyin edilməyib</string>
+    <string name="crm_settings_access_updated">Giriş yeniləndi</string>
+    <string name="crm_settings_access_revoked">İcaxə ləğv edildi</string>
+    <string name="crm_people_search">İnsanları axtar</string>
+    <string name="crm_access_tab_other">Digər</string>
+    <string name="crm_access_select_group">Qrup seçin</string>
+    <string name="crm_access_select_rule">Qayda seçin</string>
+    <string name="crm_access_select_role">Rolu seçin</string>
+    <string name="crm_access_selected">Seçilmiş: %1$s</string>
+    <string name="crm_access_subject_anyone">İstənilən şəxs</string>
+    <string name="crm_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>
+    <string name="crm_access_authenticated_desc">Daxil olmuş hər kəs</string>
+    <string name="crm_access_anyone_desc">Anonim istifadəçilər daxil olmaqla</string>
+    <string name="crm_access_role_design">Dizayn, yaratma, redaktə, şərh və baxış</string>
+    <string name="crm_access_role_write">Yaratma, redaktə, şərh və baxış</string>
+    <string name="crm_access_role_comment">Şərh və bax</string>
+    <string name="crm_access_role_view">Yalnız baxış</string>
+    <string name="crm_access_role_none">Giriş yoxdur</string>
+    <string name="crm_all_crms">Bütün CRM-lər</string>
+    <string name="crm_settings_unsubscribe_section">CRM-dən abunəlikdən çıx</string>
+    <string name="crm_settings_updated">CRM yeniləndi</string>
 </resources>

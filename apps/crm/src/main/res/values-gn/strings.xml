@@ -339,4 +339,32 @@
         <item quantity="one">%1$d marandu joavy</item>
         <item quantity="other">%1$d marandu joavy</item>
     </plurals>
+    <string name="crm_filter">Mboaty</string>
+    <string name="crm_sort_filter_title">Emohenda ha emboyke</string>
+    <string name="crm_filter_clear_all">Embopotĩ opaite</string>
+    <string name="crm_filter_all">Opavave</string>
+    <string name="crm_filter_other">Ambue</string>
+    <string name="crm_settings_section_identity">Identidad</string>
+    <string name="crm_settings_section_access">Jeike Sãmbyhy</string>
+    <string name="crm_settings_not_set">Noñemoĩri</string>
+    <string name="crm_settings_access_updated">Jeike oñembojeguáma</string>
+    <string name="crm_settings_access_revoked">Jeike oje’ói</string>
+    <string name="crm_people_search">Eheka tapicha</string>
+    <string name="crm_access_tab_other">Ambue</string>
+    <string name="crm_access_select_group">Eiporavo peteĩ atyguasu</string>
+    <string name="crm_access_select_rule">Eiporavo peteĩ tekome\'ẽ</string>
+    <string name="crm_access_select_role">Eiporavo tembiapo</string>
+    <string name="crm_access_selected">Oñeporavóva: %1$s</string>
+    <string name="crm_access_subject_anyone">Oimeraẽva</string>
+    <string name="crm_access_subject_authenticated">Puruhára jeikuaapyre</string>
+    <string name="crm_access_authenticated_desc">Oimeraẽva oike va\'ekue</string>
+    <string name="crm_access_anyone_desc">Oike avei puruhára hérava\'ỹva</string>
+    <string name="crm_access_role_design">Embosako\'i, ejapo, embosako\'i jey, eñe\'ẽmbohovái ha ehecha</string>
+    <string name="crm_access_role_write">Ejapo, embosako\'i jey, eñe\'ẽmbohovái ha ehecha</string>
+    <string name="crm_access_role_comment">Comentario ha hecha</string>
+    <string name="crm_access_role_view">Ehecha mante</string>
+    <string name="crm_access_role_none">Ojeikese\'ỹ</string>
+    <string name="crm_all_crms">Opa CRM</string>
+    <string name="crm_settings_unsubscribe_section">Ehejarei CRM</string>
+    <string name="crm_settings_updated">CRM oñembohekopyahu</string>
 </resources>

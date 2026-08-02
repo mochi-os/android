@@ -340,4 +340,32 @@
         <item quantity="few">%1$d sukobljene datoteke</item>
         <item quantity="other">%1$d sukobljenih datoteka</item>
     </plurals>
+    <string name="crm_filter">Filter</string>
+    <string name="crm_sort_filter_title">Sortiranje i filtar</string>
+    <string name="crm_filter_clear_all">Očisti sve</string>
+    <string name="crm_filter_all">Sve</string>
+    <string name="crm_filter_other">Ostalo</string>
+    <string name="crm_settings_section_identity">Identitet</string>
+    <string name="crm_settings_section_access">Upravljanje pristupom</string>
+    <string name="crm_settings_not_set">Nije postavljeno</string>
+    <string name="crm_settings_access_updated">Pristup ažuriran</string>
+    <string name="crm_settings_access_revoked">Pristup opozvan</string>
+    <string name="crm_people_search">Pretraži ljude</string>
+    <string name="crm_access_tab_other">Ostalo</string>
+    <string name="crm_access_select_group">Odaberite grupu</string>
+    <string name="crm_access_select_rule">Odaberite pravilo</string>
+    <string name="crm_access_select_role">Odaberi ulogu</string>
+    <string name="crm_access_selected">Odabrano: %1$s</string>
+    <string name="crm_access_subject_anyone">Bilo tko</string>
+    <string name="crm_access_subject_authenticated">Autenticirani korisnici</string>
+    <string name="crm_access_authenticated_desc">Svi koji su prijavljeni</string>
+    <string name="crm_access_anyone_desc">Uključujući anonimne korisnike</string>
+    <string name="crm_access_role_design">Oblikuj, izradi, uredi, komentiraj i pregledaj</string>
+    <string name="crm_access_role_write">Izradi, uredi, komentiraj i pregledaj</string>
+    <string name="crm_access_role_comment">Komentar i pregled</string>
+    <string name="crm_access_role_view">Samo pregled</string>
+    <string name="crm_access_role_none">Nema pristupa</string>
+    <string name="crm_all_crms">Svi CRM-ovi</string>
+    <string name="crm_settings_unsubscribe_section">Otkaži pretplatu na CRM</string>
+    <string name="crm_settings_updated">CRM ažuriran</string>
 </resources>

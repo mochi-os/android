@@ -369,4 +369,11 @@
         <item quantity="one">%1$d ziddiyyətli fayl</item>
         <item quantity="other">%1$d ziddiyyətli fayl</item>
     </plurals>
+    <string name="projects_design_export_saved">Dizayn saxlanıldı</string>
+    <string name="projects_design_import_failed">Həmin fayl oxuna bilmədi</string>
+    <string name="projects_design_or_upload_json">Yaxud fayl yükləyin</string>
+    <string name="projects_export">Məlumatı ixrac et</string>
+    <string name="projects_export_failed">İxrac saxlanıla bilmədi</string>
+    <string name="projects_export_saved">Layihə məlumatı saxlanıldı</string>
+    <string name="projects_exporting">İxrac hazırlanır…</string>
 </resources>

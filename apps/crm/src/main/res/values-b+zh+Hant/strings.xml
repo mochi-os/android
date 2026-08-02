@@ -339,4 +339,32 @@
         <item quantity="one">%1$d 個衝突檔案</item>
         <item quantity="other">%1$d 個衝突檔案</item>
     </plurals>
+    <string name="crm_filter">篩選</string>
+    <string name="crm_sort_filter_title">排序與篩選</string>
+    <string name="crm_filter_clear_all">全部清除</string>
+    <string name="crm_filter_all">全部</string>
+    <string name="crm_filter_other">其他</string>
+    <string name="crm_settings_section_identity">身分</string>
+    <string name="crm_settings_section_access">存取管理</string>
+    <string name="crm_settings_not_set">未設定</string>
+    <string name="crm_settings_access_updated">存取已更新</string>
+    <string name="crm_settings_access_revoked">存取權限已撤銷</string>
+    <string name="crm_people_search">搜尋使用者</string>
+    <string name="crm_access_tab_other">其他</string>
+    <string name="crm_access_select_group">選擇一個群組</string>
+    <string name="crm_access_select_rule">選擇一條規則</string>
+    <string name="crm_access_select_role">選擇角色</string>
+    <string name="crm_access_selected">已選取:%1$s</string>
+    <string name="crm_access_subject_anyone">任何人</string>
+    <string name="crm_access_subject_authenticated">已驗證使用者</string>
+    <string name="crm_access_authenticated_desc">任何已登入的使用者</string>
+    <string name="crm_access_anyone_desc">包括匿名使用者</string>
+    <string name="crm_access_role_design">設計、建立、編輯、留言和檢視</string>
+    <string name="crm_access_role_write">建立、編輯、留言和檢視</string>
+    <string name="crm_access_role_comment">留言與檢視</string>
+    <string name="crm_access_role_view">僅檢視</string>
+    <string name="crm_access_role_none">無存取權</string>
+    <string name="crm_all_crms">所有 CRM</string>
+    <string name="crm_settings_unsubscribe_section">取消訂閱該 CRM</string>
+    <string name="crm_settings_updated">CRM 已更新</string>
 </resources>

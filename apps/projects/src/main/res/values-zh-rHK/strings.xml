@@ -351,4 +351,6 @@
         <item quantity="one">%1$d 個衝突檔案</item>
         <item quantity="other">%1$d 個衝突檔案</item>
     </plurals>
+    <string name="projects_settings_section_identity">身份</string>
+    <string name="projects_settings_access_updated">存取權限已更新</string>
 </resources>
