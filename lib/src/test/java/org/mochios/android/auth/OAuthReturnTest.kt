@@ -37,4 +37,23 @@ class OAuthReturnTest {
         assertFalse(shouldAcceptOAuthReturn(hasVerifier = true, code = null, error = null))
         assertFalse(shouldAcceptOAuthReturn(hasVerifier = false, code = null, error = null))
     }
+
+    @Test
+    fun `a link return is accepted while our own link ceremony is outstanding`() {
+        assertTrue(shouldAcceptOAuthLinkReturn(pending = true, provider = "google", error = null))
+        assertTrue(shouldAcceptOAuthLinkReturn(pending = true, provider = null, error = "denied"))
+    }
+
+    /** The injection: a fabricated success or failure on the security page. */
+    @Test
+    fun `a link return with no ceremony outstanding is refused`() {
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = false, provider = "google", error = null))
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = false, provider = null, error = "denied"))
+    }
+
+    @Test
+    fun `an empty link return is refused either way`() {
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = true, provider = null, error = null))
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = false, provider = null, error = null))
+    }
 }

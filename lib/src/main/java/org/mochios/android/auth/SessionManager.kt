@@ -47,6 +47,7 @@ class SessionManager @Inject constructor(
         private val KEY_OAUTH_RETURN_ERROR = stringPreferencesKey("oauth_return_error")
         private val KEY_OAUTH_LINK_PROVIDER = stringPreferencesKey("oauth_link_provider")
         private val KEY_OAUTH_LINK_ERROR = stringPreferencesKey("oauth_link_error")
+        private val KEY_OAUTH_LINK_PENDING = stringPreferencesKey("oauth_link_pending")
         private val KEY_BOUND_IDENTITY = stringPreferencesKey("bound_identity")
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
@@ -276,6 +277,32 @@ class SessionManager @Inject constructor(
             prefs.remove(KEY_OAUTH_LINK_PROVIDER)
             prefs.remove(KEY_OAUTH_LINK_ERROR)
         }
+    }
+
+    /**
+     * Records that this client started a link ceremony for [provider].
+     *
+     * The link flow has no exchange step — the server completes the link and
+     * redirects — so unlike a login there is no verifier consumed at the end to
+     * stand as evidence the ceremony was ours. This marker is that evidence,
+     * and it is written to its own key: the login verifier is consumed by the
+     * exchange, and a link borrowing it would leave one behind that no code
+     * path clears, permanently satisfying [hasOAuthVerifier] and with it the
+     * login return's own gate.
+     */
+    suspend fun saveOAuthLinkPending(provider: String) {
+        dataStore.edit { prefs ->
+            prefs[KEY_OAUTH_LINK_PENDING] = provider
+        }
+    }
+
+    /** Consumes the outstanding link ceremony, returning the provider it was for. */
+    suspend fun consumeOAuthLinkPending(): String? {
+        val provider = dataStore.data.first()[KEY_OAUTH_LINK_PENDING]
+        if (provider != null) {
+            dataStore.edit { prefs -> prefs.remove(KEY_OAUTH_LINK_PENDING) }
+        }
+        return provider
     }
 
     fun getServerUrlBlocking(): String {

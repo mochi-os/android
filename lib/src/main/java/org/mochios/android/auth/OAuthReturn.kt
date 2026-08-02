@@ -33,3 +33,21 @@ fun shouldAcceptOAuthReturn(hasVerifier: Boolean, code: String?, error: String?)
     if (code == null && error == null) return false
     return hasVerifier
 }
+
+/**
+ * Whether a `mochi:oauth-link-return` should be acted on.
+ *
+ * The same exported-activity reasoning as [shouldAcceptOAuthReturn]: any app or
+ * web page can deliver one. The server stays authoritative on whether a link
+ * actually happened, so an injected return cannot link an attacker's account —
+ * what it can do is show the user a fabricated success or failure on their
+ * security page and drive a burst of refresh requests.
+ *
+ * [pending] is the local evidence, written when the link flow launches and
+ * consumed here. Unlike a login there is no code to exchange, so nothing else
+ * in the flow would ever clear it.
+ */
+fun shouldAcceptOAuthLinkReturn(pending: Boolean, provider: String?, error: String?): Boolean {
+    if (provider == null && error == null) return false
+    return pending
+}

@@ -45,6 +45,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.auth.shouldAcceptOAuthLinkReturn
 import org.mochios.android.auth.shouldAcceptOAuthReturn
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
@@ -631,7 +632,15 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun applyOAuthLinkReturn(provider: String?, error: String?) {
-        if (provider == null && error == null) return
+        // Gated like the login return above: this activity is exported and
+        // BROWSABLE, so any app or web page can deliver a
+        // mochi:oauth-link-return. Consuming the marker here is what makes a
+        // second, injected return inert — see shouldAcceptOAuthLinkReturn.
+        val outstanding = runBlocking { sessionManager.consumeOAuthLinkPending() != null }
+        if (!shouldAcceptOAuthLinkReturn(outstanding, provider, error)) {
+            Log.w(TAG, "Ignoring mochi:oauth-link-return with no ceremony outstanding")
+            return
+        }
         runBlocking { sessionManager.setOAuthLinkReturn(provider, error) }
     }
 

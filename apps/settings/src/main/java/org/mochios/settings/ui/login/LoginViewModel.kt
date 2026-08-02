@@ -234,9 +234,12 @@ class LoginViewModel @Inject constructor(
     fun linkOAuth(provider: String) = mutate {
         val token = sessionManager.getToken("settings")
             ?: throw RuntimeException("no settings token to authorise OAuth link")
-        val verifier = OAuthPkce.generateVerifier()
-        sessionManager.saveOAuthVerifier(verifier)
-        val challenge = OAuthPkce.challengeFor(verifier)
+        // The challenge goes to the server; the verifier is not stored, because
+        // the link flow has no exchange step to consume it. A stored one would
+        // outlive the ceremony and leave the login return's gate permanently
+        // satisfied. The pending marker is what records that this is ours.
+        val challenge = OAuthPkce.challengeFor(OAuthPkce.generateVerifier())
+        sessionManager.saveOAuthLinkPending(provider)
         val url = authRepository.beginOAuthLink(
             provider = provider,
             scheme = "mochi",
