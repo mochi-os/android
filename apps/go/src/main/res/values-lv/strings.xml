@@ -11,7 +11,6 @@
     <string name="go_app_title">Iet</string>
     <string name="go_captures_black_sr">Melnais sagūstītie</string>
     <string name="go_captures_white_sr">Baltais sagūstītie</string>
-    <string name="go_chat_close">Aizvērt tērzēšanu</string>
     <string name="go_chat_title">Saruna</string>
     <string name="go_color_black">Melnais</string>
     <string name="go_color_white">Baltais</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Pabeigta</string>
     <string name="go_status_resigned">Padevās</string>
     <string name="go_card_vs">pret %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Spēles detaļas drīzumā</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Jauna Go spēle</string>
     <string name="go_new_game_no_friends">Pirms spēles sākšanas jums jāpievieno draugs.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Punkti, kas pievienoti Baltā rezultātam, lai kompensētu, ka Melnais sāk pirmais</string>
     <string name="go_new_game_create_error">Spēles sākšana neizdevās</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go dēlis</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d Go galdiņš, jūsu kārta likt melno akmeni</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d Go galdiņš, jūsu kārta likt balto akmeni</string>
 </resources>

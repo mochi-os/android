@@ -372,4 +372,16 @@
     <string name="route_target_select">選取</string>
     <string name="account_data_description">下載完整備份，你可以在本伺服器或其他 Mochi 伺服器上還原。</string>
     <string name="route_target_none">沒有可用的目標</string>
+    <string name="login_invalid_code">無效的代碼</string>
+    <string name="accounts_provider_browser">瀏覽器通知</string>
+    <string name="accounts_provider_fcm">Android 推播</string>
+    <string name="accounts_provider_mcp">MCP 伺服器</string>
+    <string name="accounts_provider_unifiedpush">推播通知</string>
+    <string name="accounts_provider_url">外部網址</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">帳戶已驗證</string>
+    <string name="accounts_verify_invalid">無效的驗證碼</string>
+    <string name="accounts_verify_sent">驗證碼已傳送</string>
+    <string name="accounts_test_failed">測試失敗</string>
+    <string name="accounts_test_sent">測試已傳送</string>
 </resources>

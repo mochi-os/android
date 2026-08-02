@@ -292,6 +292,9 @@ private fun SecretField(
             onValueChange = { v -> onLocalChange(key, v) },
             singleLine = true,
             visualTransformation = PasswordVisualTransformation(),
+            // Masking alone still leaves the IME doing personalised learning on
+            // a live Stripe secret; the password type is what opts it out.
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             modifier = Modifier.fillMaxWidth(),
         )
     }

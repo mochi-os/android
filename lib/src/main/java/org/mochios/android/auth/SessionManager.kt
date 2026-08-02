@@ -21,7 +21,10 @@ import kotlinx.coroutines.flow.combine
 import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
+import org.mochios.android.util.isServerOrigin
+import org.mochios.android.util.originOf
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -81,10 +84,47 @@ class SessionManager @Inject constructor(
         prefs[KEY_SESSION_COOKIE]
     }
 
+    /**
+     * Point the client at [url].
+     *
+     * Moving to a *different* server invalidates every credential we hold: the
+     * session cookie and the per-app JWTs were issued by the previous server,
+     * are meaningless to the new one, and — since the jar attaches the session
+     * to whichever origin is configured — would otherwise be handed straight to
+     * it. So they are dropped in the same transaction that stores the new URL.
+     *
+     * The two callers that adopt an account belonging to another server
+     * ([adoptSharedSessionIfMissing] and AppBootstrapViewModel.adopt) set the
+     * server first and write that account's session immediately after, so the
+     * clear never races credentials they are about to store.
+     *
+     * "Different" is an origin comparison, not a string one, so retyping the
+     * same server with a trailing slash, different case or an explicit :443
+     * does not sign the user out.
+     */
     suspend fun setServerUrl(url: String) {
+        val server = url.trimEnd('/')
+        var changed = false
         dataStore.edit { prefs ->
-            prefs[KEY_SERVER_URL] = url.trimEnd('/')
+            val previous = prefs[KEY_SERVER_URL]
+            prefs[KEY_SERVER_URL] = server
+            if (previous == null) return@edit
+            val parsed = server.toHttpUrlOrNull()
+            if (parsed != null && isServerOrigin(parsed, previous)) return@edit
+            changed = true
+            for (app in prefs[KEY_TOKEN_NAMES].orEmpty()) {
+                prefs.remove(stringPreferencesKey("$TOKEN_PREFIX$app"))
+            }
+            prefs.remove(KEY_TOKEN_NAMES)
+            prefs.remove(KEY_SESSION_COOKIE)
+            // The binding names an identity on the OLD server, so it is as
+            // stale as the tokens above. Leaving it lets a surviving
+            // AccountManager row be adopted afterwards and setServerUrl called
+            // back to the previous server, silently undoing this change.
+            prefs.remove(KEY_BOUND_IDENTITY)
+            prefs.remove(KEY_BOUND_SERVER)
         }
+        if (changed) cookieStore.clear()
     }
 
     suspend fun saveSession(cookie: String) {
@@ -178,6 +218,17 @@ class SessionManager @Inject constructor(
         }
     }
 
+    /**
+     * Whether an OAuth ceremony this client started is still outstanding.
+     *
+     * The verifier is written at `/begin` and consumed at exchange, so its
+     * presence is the only local evidence that a `mochi:oauth-return` belongs
+     * to us. Checked without consuming, so asking does not itself invalidate
+     * the ceremony.
+     */
+    suspend fun hasOAuthVerifier(): Boolean =
+        !dataStore.data.first()[KEY_OAUTH_VERIFIER].isNullOrBlank()
+
     suspend fun consumeOAuthVerifier(): String? {
         val prefs = dataStore.data.first()
         val verifier = prefs[KEY_OAUTH_VERIFIER]
@@ -239,13 +290,46 @@ class SessionManager @Inject constructor(
         }
     }
 
-    /** In-memory per-host cookie cache, cleared on [clearAll]. */
+    /**
+     * In-memory per-origin cookie cache, cleared on [clearAll].
+     *
+     * Keyed by whole origin rather than host. Keyed by host, two different
+     * origins sharing a hostname shared a bucket, so a `session` cookie set by
+     * `http://host` or `host:8443` was replayed to `https://host` — and it also
+     * satisfied the "already has a session" test below, suppressing the real
+     * stored session in favour of whatever that other origin had set.
+     */
     private val cookieStore = ConcurrentHashMap<String, MutableList<Cookie>>()
 
+    /** True when [url] is the user's own Mochi server. See [isServerOrigin]. */
+    private fun isServerOrigin(url: HttpUrl): Boolean =
+        isServerOrigin(url, getServerUrlBlocking())
+
+    /**
+     * Carries the Mochi session cookie to the user's own server, and nowhere
+     * else. Both directions are gated on [isServerOrigin], because this jar is
+     * shared by clients that deliberately fetch foreign hosts — the asset
+     * client behind Coil loads RSS post images from arbitrary publisher
+     * domains (see AssetHttpModule), and assetAuthHeaders reuses
+     * [loadForRequest] for MediaMetadataRetriever.
+     *
+     * Without the gate a hostile feed image leaked the live session cookie to
+     * its host (full account impersonation), and a `Set-Cookie: session=…` in
+     * that host's reply overwrote the stored session — logging the user out, or
+     * pinning the session to a value the host chose.
+     *
+     * Cookies a foreign host sets for itself are still cached and replayed to
+     * that same host; the cache is keyed by host, so that is ordinary
+     * per-origin behaviour and stays working for CDNs that need it.
+     */
     val cookieJar: CookieJar = object : CookieJar {
 
         override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
-            cookieStore[url.host] = cookies.toMutableList()
+            // Safe to cache before the origin check now that the bucket is the
+            // origin: a foreign origin's cookies can only ever be replayed to
+            // that same origin.
+            cookieStore[originOf(url)] = cookies.toMutableList()
+            if (!isServerOrigin(url)) return
             val sessionCookie = cookies.find { it.name == "session" }
             // Only *renew* an existing session — never resurrect one that
             // sign-out or a 401 has cleared. Login establishes the session
@@ -258,18 +342,19 @@ class SessionManager @Inject constructor(
         }
 
         override fun loadForRequest(url: HttpUrl): List<Cookie> {
-            val stored = cookieStore[url.host]?.toMutableList() ?: mutableListOf()
+            val stored = cookieStore[originOf(url)]?.toMutableList() ?: mutableListOf()
+            if (!isServerOrigin(url)) return stored
             val sessionValue = getSessionCookieBlocking()
             if (sessionValue != null) {
                 val hasSession = stored.any { it.name == "session" }
                 if (!hasSession) {
-                    val cookie = Cookie.Builder()
+                    val builder = Cookie.Builder()
                         .domain(url.host)
                         .path("/")
                         .name("session")
                         .value(sessionValue)
-                        .build()
-                    stored.add(cookie)
+                    if (url.isHttps) builder.secure()
+                    stored.add(builder.build())
                 }
             }
             return stored

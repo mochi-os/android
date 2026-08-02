@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">پاککردنەوەی هەموو</string>
     <string name="market_listings_create">دروستکردن</string>
     <string name="market_bid_dialog_ceiling_label">بەرزترین نرخ (ئارەزوومەندانە)</string>
+    <string name="market_asset_no_app">هیچ ئەپێک ناتوانێت ئەم پەڕگەیە بکاتەوە</string>
+    <string name="market_asset_download_failed">نەتوانرا فایلەکە دابەزێنرێت</string>
 </resources>

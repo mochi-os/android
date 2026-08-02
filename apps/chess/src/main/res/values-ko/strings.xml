@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">오프라인</string>
     <string name="chess_ws_failed">연결 실패</string>
     <string name="chess_ws_reconnecting">재연결 중…</string>
+    <string name="chess_piece_white">백 %1$s</string>
+    <string name="chess_piece_black">흑 %1$s</string>
 </resources>

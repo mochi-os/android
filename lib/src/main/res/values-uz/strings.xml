@@ -314,4 +314,5 @@
         <item quantity="one">%1$d obunachi</item>
         <item quantity="other">%1$d obunachi</item>
     </plurals>
+    <string name="account_token_label">Mochi seansi</string>
 </resources>

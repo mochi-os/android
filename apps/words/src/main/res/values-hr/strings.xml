@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Izbrisati partiju?</string>
     <string name="words_detail_delete_confirm">Obriši</string>
     <string name="words_detail_delete_message">Ovo će trajno izbrisati igru i njezin razgovor. Ova radnja ne može se poništiti.</string>
+    <string name="words_detail_chat_passed">%1$s je preskočio potez</string>
+    <string name="words_detail_chat_passed_over">%1$s je preskočio potez — igra je gotova</string>
+    <string name="words_detail_chat_exchanged">%1$s je zamijenio pločice</string>
+    <string name="words_move_error_no_tiles">Nijedna pločica nije postavljena</string>
+    <string name="words_move_error_out_of_bounds">Postavljanje je izvan ploče</string>
+    <string name="words_move_error_square_occupied">Polje je već zauzeto</string>
+    <string name="words_move_error_not_in_line">Pločice moraju biti u jednom retku ili stupcu</string>
+    <string name="words_move_error_not_contiguous">Pločice moraju biti jedna do druge (bez praznina)</string>
+    <string name="words_move_error_first_move_centre">Prvi potez mora pokriti središnje polje</string>
+    <string name="words_move_error_first_move_two_tiles">Prvi potez mora postaviti najmanje 2 pločice</string>
+    <string name="words_move_error_not_connected">Pločice se moraju spajati s pločicama koje su već na ploči</string>
+    <string name="words_move_error_no_words">Nije sastavljena nijedna valjana riječ</string>
+    <string name="words_validation_offline">Provjera nije dostupna — svejedno možeš poslati.</string>
+    <string name="words_validation_unknown_words">Sadrži nepoznate riječi. Svejedno možeš poslati.</string>
 </resources>

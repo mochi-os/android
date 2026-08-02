@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s het %2$s geneem</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Wit %1$s</string>
+    <string name="chess_piece_black">Swart %1$s</string>
 </resources>

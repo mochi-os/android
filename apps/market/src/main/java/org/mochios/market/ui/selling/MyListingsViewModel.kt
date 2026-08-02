@@ -168,14 +168,18 @@ class MyListingsViewModel @Inject constructor(
         if (current.isLoading || !current.hasMore) return
         viewModelScope.launch {
             _state.value = current.copy(isLoading = true)
-            page += 1
             try {
                 val response = repo.mineListings(
                     status = current.statusFilter.wire,
                     query = null,
-                    page = page,
+                    page = page + 1,
                     limit = pageLimit,
                 )
+                // Advance only once the page is in hand. Incrementing before
+                // the request permanently skips the page whenever it fails:
+                // hasMore stays true, so the next attempt asks for the one
+                // after, and those listings are unreachable until a refresh.
+                page += 1
                 val merged = current.listings + response.listings
                 _state.value = _state.value.copy(
                     listings = merged,

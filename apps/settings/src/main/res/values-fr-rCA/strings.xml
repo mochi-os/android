@@ -366,4 +366,6 @@
     <string name="login_method_oauth">Connexion tierce</string>
     <string name="login_method_recovery">Codes de récupération</string>
     <string name="route_target_select">Sélectionner</string>
+    <string name="accounts_provider_url">URL externe</string>
+    <string name="accounts_provider_web">Mochi web</string>
 </resources>

@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Usunąć partię?</string>
     <string name="words_detail_delete_confirm">Usuń</string>
     <string name="words_detail_delete_message">To trwale usunie grę i jej czat. Tej czynności nie można cofnąć.</string>
+    <string name="words_detail_chat_passed">%1$s spasował</string>
+    <string name="words_detail_chat_passed_over">%1$s spasował — koniec gry</string>
+    <string name="words_detail_chat_exchanged">%1$s wymienił płytki</string>
+    <string name="words_move_error_no_tiles">Nie ułożono żadnych płytek</string>
+    <string name="words_move_error_out_of_bounds">Ułożenie poza planszą</string>
+    <string name="words_move_error_square_occupied">Pole jest już zajęte</string>
+    <string name="words_move_error_not_in_line">Płytki muszą leżeć w jednym wierszu lub jednej kolumnie</string>
+    <string name="words_move_error_not_contiguous">Płytki muszą leżeć obok siebie (bez przerw)</string>
+    <string name="words_move_error_first_move_centre">Pierwszy ruch musi zakrywać pole środkowe</string>
+    <string name="words_move_error_first_move_two_tiles">Pierwszy ruch musi ułożyć co najmniej 2 płytki</string>
+    <string name="words_move_error_not_connected">Płytki muszą stykać się z płytkami na planszy</string>
+    <string name="words_move_error_no_words">Nie utworzono żadnego poprawnego słowa</string>
+    <string name="words_validation_offline">Walidacja offline — nadal możesz przesłać.</string>
+    <string name="words_validation_unknown_words">Zawiera nieznane słowa. Nadal możesz przesłać.</string>
 </resources>

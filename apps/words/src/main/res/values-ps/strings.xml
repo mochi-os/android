@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">ړنګ کړئ</string>
     <string name="words_detail_delete_message">دا به لوبه او د هغې چیټ د تل لپاره ړنګ کړي. دا کړنه بیرته نشي کیدی.</string>
+    <string name="words_detail_chat_passed">%1$s تېر شو</string>
+    <string name="words_detail_chat_passed_over">%1$s تېر شو — لوبه پای ته ورسېده</string>
+    <string name="words_detail_chat_exchanged">%1$s ټوټې بدلې کړې</string>
+    <string name="words_move_error_no_tiles">هیڅ ټایل نه دی ایښودل شوی</string>
+    <string name="words_move_error_out_of_bounds">ایښودنه د تختې څخه بهر ده</string>
+    <string name="words_move_error_square_occupied">دا خانه لا دمخه ډکه ده</string>
+    <string name="words_move_error_not_in_line">ټایلونه باید په یوه کرښه یا یوه ستنه کې کېښودل شي</string>
+    <string name="words_move_error_not_contiguous">ټایلونه باید پرله پسې وي (هیڅ تشه نه)</string>
+    <string name="words_move_error_first_move_centre">لومړی حرکت باید منځنۍ خانه پوښي</string>
+    <string name="words_move_error_first_move_two_tiles">لومړی حرکت باید لږ تر لږه ۲ ټایلونه کېږدي</string>
+    <string name="words_move_error_not_connected">ټایلونه باید په تخته کې له موجودو ټایلونو سره ونښلي</string>
+    <string name="words_move_error_no_words">هیڅ سمه کلمه جوړه نه شوه</string>
+    <string name="words_validation_offline">تاييد آفلاين دی — تاسو لا هم سپارلی شئ.</string>
+    <string name="words_validation_unknown_words">ناڅرګند کلمې لري. تاسو لا هم سپارلی شئ.</string>
 </resources>

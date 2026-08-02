@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Verwyder</string>
     <string name="words_detail_delete_message">Dit verwyder die spel en die klets permanent. Dit kan nie ontdaan word nie.</string>
+    <string name="words_detail_chat_passed">%1$s het gepas</string>
+    <string name="words_detail_chat_passed_over">%1$s het gepas — spel verby</string>
+    <string name="words_detail_chat_exchanged">%1$s het teëls geruil</string>
+    <string name="words_move_error_no_tiles">Geen teëls geplaas nie</string>
+    <string name="words_move_error_out_of_bounds">Plasing val buite die bord</string>
+    <string name="words_move_error_square_occupied">Blokkie is reeds beset</string>
+    <string name="words_move_error_not_in_line">Teëls moet in een ry of kolom geplaas word</string>
+    <string name="words_move_error_not_contiguous">Teëls moet aaneenlopend wees (geen gapings nie)</string>
+    <string name="words_move_error_first_move_centre">Eerste skuif moet die middelblokkie dek</string>
+    <string name="words_move_error_first_move_two_tiles">Eerste skuif moet ten minste 2 teëls plaas</string>
+    <string name="words_move_error_not_connected">Teëls moet aan bestaande teëls op die bord raak</string>
+    <string name="words_move_error_no_words">Geen geldige woorde gevorm nie</string>
+    <string name="words_validation_offline">Validasie is vanlyn — jy kan steeds indien.</string>
+    <string name="words_validation_unknown_words">Bevat onbekende woorde. Jy kan steeds indien.</string>
 </resources>

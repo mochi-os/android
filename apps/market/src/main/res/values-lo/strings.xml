@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">ລ້າງທັງໝົດ</string>
     <string name="market_listings_create">ສ້າງ</string>
     <string name="market_bid_dialog_ceiling_label">ການປະມູນສູງສຸດ (ທາງເລືອກ)</string>
+    <string name="market_asset_no_app">ບໍ່ມີແອັບໃດສາມາດເປີດໄຟລ໌ນີ້ໄດ້</string>
+    <string name="market_asset_download_failed">ບໍ່ສາມາດດາວໂຫຼດໄຟລ໌ໄດ້</string>
 </resources>

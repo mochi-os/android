@@ -80,6 +80,20 @@
     <string name="words_detail_failed_rematch">Failed to create rematch</string>
     <string name="words_detail_failed_delete">Failed to delete game</string>
     <string name="words_detail_game_deleted">Game deleted</string>
+    <string name="words_move_error_no_tiles">No tiles placed</string>
+    <string name="words_move_error_out_of_bounds">Placement out of bounds</string>
+    <string name="words_move_error_square_occupied">Square already occupied</string>
+    <string name="words_move_error_not_in_line">Tiles must be placed in a single row or column</string>
+    <string name="words_move_error_not_contiguous">Tiles must be contiguous (no gaps)</string>
+    <string name="words_move_error_first_move_centre">First move must cover the centre square</string>
+    <string name="words_move_error_first_move_two_tiles">First move must place at least 2 tiles</string>
+    <string name="words_move_error_not_connected">Tiles must connect to existing tiles on the board</string>
+    <string name="words_move_error_no_words">No valid words formed</string>
+    <string name="words_detail_chat_passed">%1$s passed</string>
+    <string name="words_detail_chat_passed_over">%1$s passed — game over</string>
+    <string name="words_detail_chat_exchanged">%1$s exchanged tiles</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+    <string name="words_validation_offline">Validation offline — you can still submit.</string>
+    <string name="words_validation_unknown_words">Contains unknown words. You can still submit.</string>
 </resources>

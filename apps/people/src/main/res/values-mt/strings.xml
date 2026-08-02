@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Xi stediniet ma setgħux jiġu aċċettati</string>
     <string name="people_invitations_some_decline_failed">Xi stediniet ma setgħux jiġu rifjutati</string>
     <string name="people_invitations_some_cancel_failed">Xi stediniet ma setgħux jiġu kkanċellati</string>
+    <string name="people_profile_too_long">Il-profil huwa twil wisq</string>
 </resources>

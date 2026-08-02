@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Server tidak dapat dijangkau. Mencoba lagi…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS wiki</string>
-    <string name="wikis_create_dialog_stub">Pembuatan wiki akan tersedia dalam pembaruan mendatang.</string>
     <string name="wikis_find_search_placeholder">Cari berdasarkan nama, ID, sidik jari, atau URL…</string>
     <string name="wikis_join_search_button">Cari wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s %2$s girt</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">Spî %1$s</string>
+    <string name="chess_piece_black">Reş %1$s</string>
 </resources>

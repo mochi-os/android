@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Partie löschen?</string>
     <string name="words_detail_delete_confirm">Löschen</string>
     <string name="words_detail_delete_message">Dadurch werden das Spiel und sein Chat dauerhaft gelöscht. Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="words_detail_chat_passed">%1$s hat gepasst</string>
+    <string name="words_detail_chat_passed_over">%1$s hat gepasst — Spiel vorbei</string>
+    <string name="words_detail_chat_exchanged">%1$s hat Steine getauscht</string>
+    <string name="words_move_error_no_tiles">Keine Steine gelegt</string>
+    <string name="words_move_error_out_of_bounds">Platzierung außerhalb des Spielfelds</string>
+    <string name="words_move_error_square_occupied">Feld ist bereits belegt</string>
+    <string name="words_move_error_not_in_line">Steine müssen in einer Reihe oder Spalte liegen</string>
+    <string name="words_move_error_not_contiguous">Steine müssen zusammenhängen (keine Lücken)</string>
+    <string name="words_move_error_first_move_centre">Der erste Zug muss das Mittelfeld abdecken</string>
+    <string name="words_move_error_first_move_two_tiles">Der erste Zug muss mindestens 2 Steine legen</string>
+    <string name="words_move_error_not_connected">Steine müssen an vorhandene Steine auf dem Brett anschließen</string>
+    <string name="words_move_error_no_words">Keine gültigen Wörter gebildet</string>
+    <string name="words_validation_offline">Validierung offline – du kannst trotzdem einreichen.</string>
+    <string name="words_validation_unknown_words">Enthält unbekannte Wörter. Du kannst trotzdem einreichen.</string>
 </resources>

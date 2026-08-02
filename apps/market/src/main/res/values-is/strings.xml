@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Hreinsa allt</string>
     <string name="market_listings_create">Búa til</string>
     <string name="market_bid_dialog_ceiling_label">Hámarksboð (valfrjálst)</string>
+    <string name="market_asset_no_app">Ekkert forrit getur opnað þessa skrá</string>
+    <string name="market_asset_download_failed">Ekki tókst að sækja skrána</string>
 </resources>

@@ -17,6 +17,8 @@ data class Feed(
     val subscribers: Int = 0,
     val updated: Long = 0,
     val server: String? = null,
+    /** libp2p peer id, when the feed was reached through a share link. */
+    val peer: String? = null,
     val location: String? = null,
     val read: Int = 0,
     val unread: Int = 0,

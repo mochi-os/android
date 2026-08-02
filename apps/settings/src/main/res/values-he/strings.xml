@@ -376,4 +376,16 @@
     <string name="route_target_select">בחר</string>
     <string name="account_data_description">הורד גיבוי מלא שתוכל לשחזר בשרת הזה או בשרת Mochi אחר.</string>
     <string name="route_target_none">אין יעדים זמינים</string>
+    <string name="login_invalid_code">קוד לא תקין</string>
+    <string name="accounts_provider_browser">התראות דפדפן</string>
+    <string name="accounts_provider_fcm">פוש ל-Android</string>
+    <string name="accounts_provider_mcp">שרת MCP</string>
+    <string name="accounts_provider_unifiedpush">התראת פוש</string>
+    <string name="accounts_provider_url">כתובת URL חיצונית</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">החשבון אומת</string>
+    <string name="accounts_verify_invalid">קוד אימות לא תקין</string>
+    <string name="accounts_verify_sent">קוד האימות נשלח</string>
+    <string name="accounts_test_failed">הבדיקה נכשלה</string>
+    <string name="accounts_test_sent">הבדיקה נשלחה</string>
 </resources>

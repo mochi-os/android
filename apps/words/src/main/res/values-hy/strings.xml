@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Ջնջել</string>
     <string name="words_detail_delete_message">Սա ընդմիշտ կջնջի խաղը և դրա չաթը։ Այս գործողությունը հնարավոր չէ հետարկել։</string>
+    <string name="words_detail_chat_passed">%1$s-ը բաց թողեց քայլը</string>
+    <string name="words_detail_chat_passed_over">%1$s-ը բաց թողեց քայլը — խաղն ավարտվեց</string>
+    <string name="words_detail_chat_exchanged">%1$s-ը փոխանակեց սալիկները</string>
+    <string name="words_move_error_no_tiles">Սալիկներ տեղադրված չեն</string>
+    <string name="words_move_error_out_of_bounds">Տեղադրումը դաշտից դուրս է</string>
+    <string name="words_move_error_square_occupied">Վանդակն արդեն զբաղված է</string>
+    <string name="words_move_error_not_in_line">Սալիկները պետք է տեղադրվեն մեկ տողում կամ սյունակում</string>
+    <string name="words_move_error_not_contiguous">Սալիկները պետք է լինեն կից (առանց բացերի)</string>
+    <string name="words_move_error_first_move_centre">Առաջին քայլը պետք է ծածկի կենտրոնական վանդակը</string>
+    <string name="words_move_error_first_move_two_tiles">Առաջին քայլով պետք է տեղադրվի առնվազն 2 սալիկ</string>
+    <string name="words_move_error_not_connected">Սալիկները պետք է միանան դաշտի առկա սալիկներին</string>
+    <string name="words_move_error_no_words">Վավեր բառեր չեն կազմվել</string>
+    <string name="words_validation_offline">Ստուգումն անհասանելի է — կարող ես այնուամենայնիվ ուղարկել։</string>
+    <string name="words_validation_unknown_words">Պարունակում է անծանոթ բառեր։ Կարող ես այնուամենայնիվ ուղարկել։</string>
 </resources>

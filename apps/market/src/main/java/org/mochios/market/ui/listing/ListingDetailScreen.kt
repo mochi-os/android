@@ -102,6 +102,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.locationName
@@ -197,6 +198,37 @@ fun ListingDetailScreen(
                 *message.args.toTypedArray(),
             )
             snackbarHostState.showSnackbar(text)
+        }
+    }
+
+    // Digital-asset download outcomes.
+    LaunchedEffect(viewModel) {
+        viewModel.events.collect { event ->
+            when (event) {
+                is ListingDetailEvent.Toast -> snackbarHostState.showSnackbar(event.message)
+                is ListingDetailEvent.OpenUrl -> {
+                    val intent = CustomTabsIntent.Builder().build()
+                    runCatching { intent.launchUrl(snackbarContext, Uri.parse(event.url)) }
+                }
+                is ListingDetailEvent.OpenFile -> {
+                    val outcome = AttachmentOpener.openCached(
+                        snackbarContext,
+                        event.fileName,
+                        event.mime,
+                    )
+                    if (outcome != AttachmentOpener.OpenResult.OPENED) {
+                        snackbarHostState.showSnackbar(
+                            snackbarContext.getString(
+                                if (outcome == AttachmentOpener.OpenResult.NO_APP) {
+                                    R.string.market_asset_no_app
+                                } else {
+                                    R.string.market_asset_download_failed
+                                }
+                            )
+                        )
+                    }
+                }
+            }
         }
     }
 
@@ -346,24 +378,10 @@ fun ListingDetailScreen(
                             navController.navigate(MarketApp.listingEdit(listing.id.toString()))
                         },
                         onRelist = { viewModel.relistListing() },
-                        onAssetDownload = { asset ->
-                            scope.launch {
-                                try {
-                                    // Hit the server-side download endpoint; for
-                                    // externally-hosted assets the response is the
-                                    // metadata JSON whose `reference` URL we hand
-                                    // off to Custom Tabs.
-                                    val baseUrl = sessionManager.getServerUrlBlocking()
-                                        .trimEnd('/')
-                                    val url = "$baseUrl/market/-/assets/download/${asset.id}"
-                                    val intent = CustomTabsIntent.Builder().build()
-                                    intent.launchUrl(context, Uri.parse(url))
-                                } catch (_: Exception) {
-                                    // No browser / malformed URL — silently noop;
-                                    // matches the wikis pattern for link taps.
-                                }
-                            }
-                        },
+                        // Through the authenticated client, not a browser: the
+                        // action is not public, so a Custom Tab carrying no
+                        // token and no cookie could never authenticate to it.
+                        onAssetDownload = { asset -> viewModel.downloadAsset(asset.id) },
                         currentUserId = currentUserId,
                     )
                 }
@@ -405,6 +423,7 @@ fun ListingDetailScreen(
     PlaceBidDialog(
         open = bidOpen,
         auction = state.listing?.auction,
+        startingPrice = state.listing?.listing?.price ?: 0L,
         currency = state.listing?.listing?.currency ?: Currency.GBP,
         submitting = submittingBid,
         errorMessage = bidErrorMessage,

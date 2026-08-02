@@ -90,6 +90,14 @@ class ListingsViewModel @Inject constructor(
 
     private var loadJob: Job? = null
 
+    /**
+     * Pages actually fetched, which is what decides the next one to ask for.
+     * Deriving it from the rows held — (size / PAGE_SIZE) + 1 — breaks as soon
+     * as a row is optimistically removed: 20 loaded minus 1 gives page 1 again,
+     * so the first page is refetched and appended as 19 duplicates.
+     */
+    private var pagesLoaded = 0
+
     init {
         reload()
         // Refresh in place whenever the moderation queue changes on the
@@ -143,6 +151,7 @@ class ListingsViewModel @Inject constructor(
                     page = 1,
                     limit = PAGE_SIZE,
                 )
+                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     listings = r.listings,
@@ -160,7 +169,7 @@ class ListingsViewModel @Inject constructor(
     fun loadMore() {
         val s = _state.value
         if (s.isLoadingMore || s.isLoading || s.listings.size >= s.total) return
-        val nextPage = (s.listings.size / PAGE_SIZE) + 1
+        val nextPage = pagesLoaded + 1
         viewModelScope.launch {
             _state.value = s.copy(isLoadingMore = true)
             try {
@@ -171,6 +180,7 @@ class ListingsViewModel @Inject constructor(
                     page = nextPage,
                     limit = PAGE_SIZE,
                 )
+                pagesLoaded = nextPage
                 _state.value = _state.value.copy(
                     isLoadingMore = false,
                     listings = _state.value.listings + r.listings,

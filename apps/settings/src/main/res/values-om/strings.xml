@@ -373,4 +373,16 @@
     <string name="route_target_select">Filadhu</string>
     <string name="account_data_description">Kuusaa guutuu Mochi sarvarii kana irratti yookaan kan biraa irratti deebisuu dandeessu buufadhu.</string>
     <string name="route_target_none">Galmi jiru hin jiru</string>
+    <string name="login_invalid_code">Koodii sirrii hin taane</string>
+    <string name="accounts_provider_browser">Beeksisa barreessaa</string>
+    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_mcp">Sarvara MCP</string>
+    <string name="accounts_provider_unifiedpush">Beeksisa push</string>
+    <string name="accounts_provider_url">URL alaa</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Akkaawuntiin mirkanaa\'e</string>
+    <string name="accounts_verify_invalid">Koodii mirkanaa sirrii hin taane</string>
+    <string name="accounts_verify_sent">Koodiin mirkaneessaa ergameera</string>
+    <string name="accounts_test_failed">Qoraannoon hin milkoofne</string>
+    <string name="accounts_test_sent">Qormaanni ergameera</string>
 </resources>

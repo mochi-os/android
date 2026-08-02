@@ -381,4 +381,16 @@
     <string name="route_target_select">تحديد</string>
     <string name="account_data_description">نزّل نسخة احتياطية كاملة يمكنك استعادتها على هذا الخادم أو على خادم Mochi آخر.</string>
     <string name="route_target_none">لا توجد أهداف متاحة</string>
+    <string name="login_invalid_code">رمز غير صالح</string>
+    <string name="accounts_provider_browser">إشعارات المتصفح</string>
+    <string name="accounts_provider_fcm">إشعار Android</string>
+    <string name="accounts_provider_mcp">خادم MCP</string>
+    <string name="accounts_provider_unifiedpush">إشعار فوري</string>
+    <string name="accounts_provider_url">URL خارجي</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">تم التحقق من الحساب</string>
+    <string name="accounts_verify_invalid">رمز التحقق غير صالح</string>
+    <string name="accounts_verify_sent">تم إرسال رمز التحقق</string>
+    <string name="accounts_test_failed">فشل الاختبار</string>
+    <string name="accounts_test_sent">تم إرسال الاختبار</string>
 </resources>

@@ -313,4 +313,5 @@
         <item quantity="one">%1$d చందాదారు</item>
         <item quantity="other">%1$d చందాదారులు</item>
     </plurals>
+    <string name="account_token_label">Mochi సెషన్</string>
 </resources>

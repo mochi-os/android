@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Noen invitasjoner kunne ikke godtas</string>
     <string name="people_invitations_some_decline_failed">Noen invitasjoner kunne ikke avslås</string>
     <string name="people_invitations_some_cancel_failed">Noen invitasjoner kunne ikke avbrytes</string>
+    <string name="people_profile_too_long">Profilen er for lang</string>
 </resources>

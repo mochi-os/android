@@ -19,7 +19,7 @@ import org.mochios.words.ui.list.WordsGameListScreen
  *
  * - [HOME] is the games-list landing page (`/words` in the web URL scheme).
  * - [GAME] is the detail screen for a single game (`/words/<gameId>`),
- *   where `gameId` is either the game's `id` or `fingerprint`.
+ *   where `gameId` is the game's `id`.
  *
  * Deep link `https://<host>/words/{gameId}` is registered so notification
  * payloads carrying a "/words/<id>" link route directly to the game

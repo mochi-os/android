@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">Çevrimdışı</string>
     <string name="chess_ws_failed">Bağlantı başarısız</string>
     <string name="chess_ws_reconnecting">Yeniden bağlanıyor…</string>
+    <string name="chess_piece_white">Beyaz %1$s</string>
+    <string name="chess_piece_black">Siyah %1$s</string>
 </resources>

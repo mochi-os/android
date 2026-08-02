@@ -372,4 +372,16 @@
     <string name="route_target_select">Интихоб кардан</string>
     <string name="account_data_description">Нусхаи эҳтиётии пурраро зеркашӣ кунед, ки метавонед дар ин ё дигар сервери Mochi барқарор кунед.</string>
     <string name="route_target_none">Ҳадафҳои дастрас нестанд</string>
+    <string name="login_invalid_code">Рамзи нодуруст</string>
+    <string name="accounts_provider_browser">Огоҳиномаҳои браузер</string>
+    <string name="accounts_provider_fcm">Push барои Android</string>
+    <string name="accounts_provider_mcp">Сервери MCP</string>
+    <string name="accounts_provider_unifiedpush">Огоҳиномаи push</string>
+    <string name="accounts_provider_url">URL-и берунӣ</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Ҳисоб тасдиқ карда шуд</string>
+    <string name="accounts_verify_invalid">Рамзи тасдиқ нодуруст</string>
+    <string name="accounts_verify_sent">Рамзи тасдиқ фиристода шуд</string>
+    <string name="accounts_test_failed">Санҷиш ноком шуд</string>
+    <string name="accounts_test_sent">Санҷиш фиристода шуд</string>
 </resources>

@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">Hors ligne</string>
     <string name="chess_ws_failed">Échec de la connexion</string>
     <string name="chess_ws_reconnecting">Reconnexion…</string>
+    <string name="chess_piece_white">%1$s blanc</string>
+    <string name="chess_piece_black">%1$s noir</string>
 </resources>

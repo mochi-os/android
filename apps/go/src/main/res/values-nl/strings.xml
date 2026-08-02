@@ -11,7 +11,6 @@
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Zwarte vangsten</string>
     <string name="go_captures_white_sr">Witte vangsten</string>
-    <string name="go_chat_close">Chat sluiten</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_color_black">Zwart</string>
     <string name="go_color_white">Wit</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Beëindigd</string>
     <string name="go_status_resigned">Opgegeven</string>
     <string name="go_card_vs">tegen %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Partijdetails komen binnenkort</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nieuwe Go-partij</string>
     <string name="go_new_game_no_friends">Je moet een vriend toevoegen voordat je een partij kunt beginnen.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Punten toegevoegd aan Wits score om te compenseren dat Zwart eerst zet</string>
     <string name="go_new_game_create_error">Starten van partij mislukt</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go-bord</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-bord, u bent aan zet met een zwarte steen</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-bord, u bent aan zet met een witte steen</string>
 </resources>

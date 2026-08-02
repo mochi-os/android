@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import org.mochios.words.engine.DraftStatus
 import org.mochios.words.R
 import org.mochios.words.engine.MoveDraft
+import org.mochios.words.engine.MoveError
 import org.mochios.words.ui.detail.ValidState
 
 /**
@@ -68,6 +69,7 @@ fun MoveComposer(
     canRecallMove: Boolean,
     isSubmitting: Boolean,
     isExchanging: Boolean,
+    validationUnavailable: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     Row(
@@ -93,6 +95,7 @@ fun MoveComposer(
                 canRecallMove = canRecallMove,
                 canSubmit = canSubmit,
                 isSubmitting = isSubmitting,
+                validationUnavailable = validationUnavailable,
                 onRecall = onRecall,
                 onSubmit = onSubmit,
             )
@@ -148,6 +151,7 @@ private fun RowScope.ComposerRow(
     canRecallMove: Boolean,
     canSubmit: Boolean,
     isSubmitting: Boolean,
+    validationUnavailable: Boolean,
     onRecall: () -> Unit,
     onSubmit: () -> Unit,
 ) {
@@ -161,7 +165,9 @@ private fun RowScope.ComposerRow(
 
     val invalidLocal = moveDraft != null &&
         moveDraft.status == DraftStatus.INVALID_LOCAL
-    val invalidMsg = moveDraft?.errorMessage
+    // The engine returns a reason, not prose — it has no string resources, and
+    // returning English here put untranslated text in front of every locale.
+    val invalidMsg = moveDraft?.error?.let { stringResource(moveErrorLabel(it)) }
 
     Row(
         modifier = Modifier
@@ -180,12 +186,36 @@ private fun RowScope.ComposerRow(
                     overflow = TextOverflow.Ellipsis,
                 )
             }
+            // Web shows both of these; Android tracked the state and rendered
+            // neither, so a player had no way to tell an unchecked word from a
+            // checked one or to know validation was offline.
+            validationUnavailable -> {
+                Text(
+                    text = stringResource(R.string.words_validation_offline),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
             draftWords.isNotEmpty() -> {
                 for ((word, score) in draftWords) {
                     WordChip(
                         word = word,
                         score = score,
                         state = wordValidationState[word.uppercase()] ?: ValidState.UNKNOWN,
+                    )
+                }
+                if (draftWords.any { (word, _) ->
+                        wordValidationState[word.uppercase()] == ValidState.INVALID
+                    }
+                ) {
+                    Text(
+                        text = stringResource(R.string.words_validation_unknown_words),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                     )
                 }
                 Spacer(modifier = Modifier.width(4.dp))
@@ -258,4 +288,18 @@ private fun WordChip(word: String, score: Int, state: ValidState) {
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
+}
+
+/** String resource for a [MoveError]; see WordsEngine's MoveError. */
+@androidx.annotation.StringRes
+private fun moveErrorLabel(error: MoveError): Int = when (error) {
+    MoveError.NO_TILES_PLACED -> R.string.words_move_error_no_tiles
+    MoveError.OUT_OF_BOUNDS -> R.string.words_move_error_out_of_bounds
+    MoveError.SQUARE_OCCUPIED -> R.string.words_move_error_square_occupied
+    MoveError.NOT_IN_LINE -> R.string.words_move_error_not_in_line
+    MoveError.NOT_CONTIGUOUS -> R.string.words_move_error_not_contiguous
+    MoveError.FIRST_MOVE_MUST_COVER_CENTRE -> R.string.words_move_error_first_move_centre
+    MoveError.FIRST_MOVE_NEEDS_TWO_TILES -> R.string.words_move_error_first_move_two_tiles
+    MoveError.NOT_CONNECTED -> R.string.words_move_error_not_connected
+    MoveError.NO_VALID_WORDS -> R.string.words_move_error_no_words
 }

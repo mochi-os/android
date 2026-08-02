@@ -15,10 +15,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.text.drawText
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
+import org.mochios.go.R
 import org.mochios.go.engine.GoGame
+import org.mochios.go.engine.Territory
 import org.mochios.go.engine.Stone
+import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -52,6 +62,15 @@ private val WhiteStoneStroke = Color(0xFF666666)
 private val GridLine = Color(0xFF3E2A18)
 /** Last-move marker fill — vivid red for visibility on both stone colours. */
 private val LastMoveMarker = Color(0xFFE53935)
+/** Territory overlay fills, translucent so the grid stays readable beneath. */
+private val BlackTerritory = Color(0x591A1A1A)
+private val WhiteTerritory = Color(0x59FAFAFA)
+
+/**
+ * Column labels. I is skipped by Go convention, so the 19th column is T.
+ * Matches the web board's `ABCDEFGHJKLMNOPQRST`.
+ */
+private const val COLUMN_LETTERS = "ABCDEFGHJKLMNOPQRST"
 
 /**
  * Compose `Canvas`-based rendering of a 9/13/19-line Go board.
@@ -105,6 +124,20 @@ fun GoBoard(
     val isActive = gameStatus == "active"
     val canPlay = isActive && isMyTurn && game != null
 
+    // The canvas carried no semantics at all, so the board was invisible to a
+    // screen reader. Web pairs role="application" with the same description.
+    val description = when {
+        !canPlay -> stringResource(R.string.go_board_a11y, size)
+        myColor == Stone.WHITE -> stringResource(R.string.go_board_a11y_turn_white, size)
+        else -> stringResource(R.string.go_board_a11y_turn_black, size)
+    }
+    val textMeasurer = rememberTextMeasurer()
+    // Territory is only meaningful once the game is scored, and only web showed
+    // it — the engine has computed it all along with no reader.
+    val territory = remember(fen, isActive) {
+        if (isActive || game == null) null else runCatching { game.territory() }.getOrNull()
+    }
+
     BoxWithConstraints(modifier = modifier.aspectRatio(1f)) {
         val sidePx = with(androidx.compose.ui.platform.LocalDensity.current) {
             min(maxWidth.toPx(), maxHeight.toPx())
@@ -132,12 +165,15 @@ fun GoBoard(
                     // Reject taps that landed too far from any intersection
                     // (e.g. on the coordinate margin); helps prevent the
                     // border tap from being interpreted as a 0,0 move.
-                    val nearestX = padding + col * cellPx
-                    val nearestY = padding + row * cellPx
-                    val dx = tap.x - nearestX
-                    val dy = tap.y - nearestY
+                    val dx = tap.x - (padding + col * cellPx)
+                    val dy = tap.y - (padding + row * cellPx)
                     val tolerance = cellPx * 0.5f
-                    if (dx * dx + dy * dy > tolerance * tolerance) return@detectTapGestures
+                    // Per-axis, not radial. roundToInt has already chosen the
+                    // nearest intersection, so the only job left is rejecting a
+                    // tap that landed outside the board. A radial test rejected
+                    // the corners of each cell too — the inscribed circle covers
+                    // pi/4 of a square, so about 21% of every cell was dead.
+                    if (abs(dx) > tolerance || abs(dy) > tolerance) return@detectTapGestures
                     val safeGame = game ?: return@detectTapGestures
                     if (!safeGame.isLegal(row, col)) return@detectTapGestures
                     onPlace(row, col)
@@ -147,7 +183,12 @@ fun GoBoard(
             Modifier
         }
 
-        Canvas(modifier = Modifier.matchParentSize().then(tapModifier)) {
+        Canvas(
+            modifier = Modifier
+                .matchParentSize()
+                .semantics { contentDescription = description }
+                .then(tapModifier)
+        ) {
             // Board background fills the whole composable rect — wood-tan
             // matches the web `--go-board-bg` token.
             drawRect(color = BoardBackground)
@@ -220,6 +261,30 @@ fun GoBoard(
                     }
                 }
 
+                // Territory overlay on a finished game: a translucent square at
+                // each point the scoring counts, so the result is legible on the
+                // board rather than only in the score line.
+                if (territory != null) {
+                    val half = cellPx * 0.16f
+                    for (r in 0 until size) {
+                        for (c in 0 until size) {
+                            val owner = territory[r][c]
+                            val fill = when (owner) {
+                                Territory.BLACK -> BlackTerritory
+                                Territory.WHITE -> WhiteTerritory
+                                else -> null
+                            } ?: continue
+                            val cx = padding + c * cellPx
+                            val cy = padding + r * cellPx
+                            drawRect(
+                                color = fill,
+                                topLeft = Offset(cx - half, cy - half),
+                                size = androidx.compose.ui.geometry.Size(half * 2, half * 2),
+                            )
+                        }
+                    }
+                }
+
                 // Last-move marker: small red dot on top of the most recent
                 // stone. Red was chosen for legibility on both black and
                 // white stones — the web uses a coloured ring of the
@@ -227,7 +292,12 @@ fun GoBoard(
                 // tighter pixel densities phones produce.
                 if (lastMove != null) {
                     val (lr, lc) = lastMove
-                    if (lr in 0 until size && lc in 0 until size) {
+                    // The stone check matters: lastMove is never cleared, so
+                    // once a reply captures that stone the marker would sit on
+                    // a bare intersection. Web guards the same way.
+                    val stillThere = lr in 0 until size && lc in 0 until size &&
+                        game.getStone(lr, lc) != GoGame.EMPTY
+                    if (stillThere) {
                         val cx = padding + lc * cellPx
                         val cy = padding + lr * cellPx
                         drawCircle(
@@ -237,6 +307,37 @@ fun GoBoard(
                         )
                     }
                 }
+            }
+
+            // Coordinates. The 5% padding above exists to leave room for these;
+            // until now nothing drew them. Letters along the top and bottom,
+            // numbers counting up from the bottom, as web does.
+            val labelStyle = TextStyle(color = GridLine, fontSize = (cellPx * 0.30f).toSp())
+            for (i in 0 until size) {
+                val letter = COLUMN_LETTERS.getOrNull(i)?.toString() ?: continue
+                val number = (size - i).toString()
+                val x = padding + i * cellPx
+                val y = padding + i * cellPx
+                val column = textMeasurer.measure(letter, labelStyle)
+                val row = textMeasurer.measure(number, labelStyle)
+                // Top and bottom.
+                drawText(column, topLeft = Offset(x - column.size.width / 2f, padding * 0.05f))
+                drawText(
+                    column,
+                    topLeft = Offset(
+                        x - column.size.width / 2f,
+                        padding + boardPx + padding * 0.05f - column.size.height * 0.1f,
+                    ),
+                )
+                // Left and right.
+                drawText(row, topLeft = Offset(padding * 0.05f, y - row.size.height / 2f))
+                drawText(
+                    row,
+                    topLeft = Offset(
+                        padding + boardPx + padding * 0.10f,
+                        y - row.size.height / 2f,
+                    ),
+                )
             }
         }
     }

@@ -371,4 +371,16 @@
     <string name="route_target_select">ເລືອກ</string>
     <string name="account_data_description">ດາວໂຫຼດສຳຮອງຂໍ້ມູນທັງໝົດທີ່ທ່ານສາມາດກູ້ຄືນໃນເຊີບເວີນີ້ ຫຼື ເຊີບເວີ Mochi ອື່ນ.</string>
     <string name="route_target_none">ບໍ່ມີເປົ້າໝາຍທີ່ໃຊ້ໄດ້</string>
+    <string name="login_invalid_code">ລະຫັດບໍ່ຖືກຕ້ອງ</string>
+    <string name="accounts_provider_browser">ການແຈ້ງເຕືອນຕົວທ່ອງເວັບ</string>
+    <string name="accounts_provider_fcm">ການແຈ້ງເຕືອນ Android</string>
+    <string name="accounts_provider_mcp">ເຊີບເວີ MCP</string>
+    <string name="accounts_provider_unifiedpush">ການແຈ້ງເຕືອນ push</string>
+    <string name="accounts_provider_url">URL ພາຍນອກ</string>
+    <string name="accounts_provider_web">Mochi ເວັບ</string>
+    <string name="accounts_verified">ບັນຊີຢືນຢັນແລ້ວ</string>
+    <string name="accounts_verify_invalid">ລະຫັດຢືນຢັນບໍ່ຖືກຕ້ອງ</string>
+    <string name="accounts_verify_sent">ລະຫັດການຢືນຢັນຖືກສົ່ງແລ້ວ</string>
+    <string name="accounts_test_failed">ການທົດສອບລົ້ມເຫຼວ</string>
+    <string name="accounts_test_sent">ສົ່ງການທົດສອບແລ້ວ</string>
 </resources>

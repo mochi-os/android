@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Удалить партию?</string>
     <string name="words_detail_delete_confirm">Удалить</string>
     <string name="words_detail_delete_message">Это навсегда удалит игру и её чат. Это действие нельзя отменить.</string>
+    <string name="words_detail_chat_passed">%1$s пропустил ход</string>
+    <string name="words_detail_chat_passed_over">%1$s пропустил ход — игра окончена</string>
+    <string name="words_detail_chat_exchanged">%1$s обменял фишки</string>
+    <string name="words_move_error_no_tiles">Фишки не выставлены</string>
+    <string name="words_move_error_out_of_bounds">Размещение за пределами доски</string>
+    <string name="words_move_error_square_occupied">Клетка уже занята</string>
+    <string name="words_move_error_not_in_line">Фишки должны стоять в одной строке или одном столбце</string>
+    <string name="words_move_error_not_contiguous">Фишки должны идти подряд (без пропусков)</string>
+    <string name="words_move_error_first_move_centre">Первый ход должен закрывать центральную клетку</string>
+    <string name="words_move_error_first_move_two_tiles">В первом ходе нужно выставить не менее 2 фишек</string>
+    <string name="words_move_error_not_connected">Фишки должны соединяться с фишками на доске</string>
+    <string name="words_move_error_no_words">Не составлено ни одного допустимого слова</string>
+    <string name="words_validation_offline">Проверка недоступна — вы всё равно можете отправить ход.</string>
+    <string name="words_validation_unknown_words">Содержит неизвестные слова. Вы всё равно можете отправить ход.</string>
 </resources>

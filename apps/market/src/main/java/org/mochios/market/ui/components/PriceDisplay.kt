@@ -58,7 +58,12 @@ fun PriceDisplay(
                 val hasBids = auction != null && auction.bids > 0
                 val headlineAmount = when {
                     hasBids -> auction!!.bid
-                    else -> auction?.reserve ?: listing.price
+                    // Not the reserve: the server redacts it to 0 for anyone
+                    // but the seller, so this rendered "£0.00" on every auction
+                    // with no bids. The starting bid is the listing price —
+                    // which is also what the server enforces as the minimum,
+                    // and what web shows.
+                    else -> listing.price
                 }
                 val headlineKey = if (hasBids) {
                     R.string.market_price_high_bid

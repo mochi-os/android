@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Обрисати партију?</string>
     <string name="words_detail_delete_confirm">Обриши</string>
     <string name="words_detail_delete_message">Ово ће трајно обрисати игру и њено ћаскање. Ова радња се не може опозвати.</string>
+    <string name="words_detail_chat_passed">%1$s је прескочио потез</string>
+    <string name="words_detail_chat_passed_over">%1$s је прескочио потез — игра је готова</string>
+    <string name="words_detail_chat_exchanged">%1$s је заменио плочице</string>
+    <string name="words_move_error_no_tiles">Нема постављених плочица</string>
+    <string name="words_move_error_out_of_bounds">Постављање је ван табле</string>
+    <string name="words_move_error_square_occupied">Поље је већ заузето</string>
+    <string name="words_move_error_not_in_line">Плочице морају бити у једном реду или колони</string>
+    <string name="words_move_error_not_contiguous">Плочице морају бити спојене (без празнина)</string>
+    <string name="words_move_error_first_move_centre">Први потез мора покрити централно поље</string>
+    <string name="words_move_error_first_move_two_tiles">Први потез мора поставити најмање 2 плочице</string>
+    <string name="words_move_error_not_connected">Плочице морају бити повезане с постојећим плочицама на табли</string>
+    <string name="words_move_error_no_words">Није формирана ниједна важећа реч</string>
+    <string name="words_validation_offline">Провера је ван мреже — и даље можете да пошаљете потез.</string>
+    <string name="words_validation_unknown_words">Садржи непознате речи. И даље можете да пошаљете потез.</string>
 </resources>

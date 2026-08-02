@@ -24,6 +24,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.mergeMessages
+import org.mochios.chess.engine.isDrawnPosition
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
 import org.mochios.chess.model.MoveRequest
@@ -55,7 +57,7 @@ data class ChessGameUiState(
     val identity: String = "",
     val messages: List<GameMessage> = emptyList(),
     val hasMore: Boolean = false,
-    val nextCursor: Long? = null,
+    val nextCursor: String? = null,
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,
@@ -123,7 +125,7 @@ class ChessGameViewModel @Inject constructor(
                     messages = msgs.messages.sortedBy { it.created },
                     hasMore = msgs.hasMore,
                     nextCursor = msgs.nextCursor,
-                    lastMove = deriveLastMove(msgs.messages),
+                    lastMove = deriveLastMove(view.game.pgn),
                     isLoading = false,
                 )
             } catch (e: Exception) {
@@ -144,10 +146,18 @@ class ChessGameViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     game = view.game,
                     identity = view.identity,
-                    messages = msgs.messages.sortedBy { it.created },
-                    hasMore = msgs.hasMore,
-                    nextCursor = msgs.nextCursor,
-                    lastMove = deriveLastMove(msgs.messages),
+                    // Merge, don't replace. refresh() runs on every websocket
+                    // frame, so assigning the newest page threw away whatever
+                    // loadMoreOlder had paged in the moment the opponent moved.
+                    // hasMore/nextCursor stay put for the same reason: they
+                    // describe how far back we have scrolled, not this page.
+                    messages = mergeMessages(
+                        _uiState.value.messages,
+                        msgs.messages,
+                        key = ::messageKey,
+                        created = { row -> row.created },
+                    ),
+                    lastMove = deriveLastMove(view.game.pgn),
                     isRefreshing = false,
                     error = null,
                 )
@@ -168,7 +178,12 @@ class ChessGameViewModel @Inject constructor(
             try {
                 val older = repo.getMessages(gameId, before = cursor)
                 _uiState.value = _uiState.value.copy(
-                    messages = (older.messages + _uiState.value.messages).sortedBy { it.created },
+                    messages = mergeMessages(
+                        _uiState.value.messages,
+                        older.messages,
+                        key = ::messageKey,
+                        created = { row -> row.created },
+                    ),
                     hasMore = older.hasMore,
                     nextCursor = older.nextCursor,
                     isLoadingMore = false,
@@ -224,7 +239,7 @@ class ChessGameViewModel @Inject constructor(
                     winner = _uiState.value.identity
                 } else if (board.isStaleMate) {
                     status = "stalemate"
-                } else if (board.isDraw) {
+                } else if (isDrawnPosition(board)) {
                     status = "draw"
                 }
 
@@ -282,6 +297,7 @@ class ChessGameViewModel @Inject constructor(
     // ---- Game-flow mutations ----
 
     fun resign() {
+        if (_uiState.value.isResigning) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isResigning = true)
             try {
@@ -296,6 +312,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun offerDraw() {
+        if (_uiState.value.isDrawOffering) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDrawOffering = true)
             try {
@@ -310,6 +327,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun acceptDraw() {
+        if (_uiState.value.isDrawAccepting) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDrawAccepting = true)
             try {
@@ -324,6 +342,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun declineDraw() {
+        if (_uiState.value.isDrawDeclining) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDrawDeclining = true)
             try {
@@ -342,6 +361,10 @@ class ChessGameViewModel @Inject constructor(
         val myIdentity = _uiState.value.identity
         val opponent = if (game.identity == myIdentity) game.opponent else game.identity
         if (opponent.isBlank()) return
+        // Without this a second tap creates a second game: the menu closes on
+        // click, but reopening it while the request is still in flight offers
+        // Rematch again. submitMove has carried the same guard all along.
+        if (_uiState.value.isRematching) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRematching = true)
             try {
@@ -356,6 +379,7 @@ class ChessGameViewModel @Inject constructor(
     }
 
     fun deleteGame() {
+        if (_uiState.value.isDeleting) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {
@@ -388,30 +412,30 @@ class ChessGameViewModel @Inject constructor(
     }
 
     /**
-     * Walk the message list backwards to find the last `"move"` entry and
-     * derive its from/to pair. We only know the SAN from the server, so we
-     * replay the moves from the starting position to learn the
-     * coordinates. This is O(N) per refresh — the move list is at most a
-     * few hundred entries even in a long game, so cheap enough.
+     * From/to of the game's last move, replayed from the stored [pgn].
+     *
+     * The SAN is only meaningful from the starting position, so the input has
+     * to be the complete game. It used to be the message list, which is a
+     * single page — so once a game passed the page size the replay started
+     * mid-game from the opening position, and either threw (highlight silently
+     * gone for the rest of the game) or, when the page happened to be legal
+     * from the start, produced entirely the wrong squares.
      */
-    private fun deriveLastMove(messages: List<GameMessage>): Pair<String, String>? {
-        val moves = messages
-            .asSequence()
-            .filter { it.type == "move" }
-            .sortedBy { it.created }
-            .map { it.body }
-            .toList()
-        if (moves.isEmpty()) return null
-
+    private fun deriveLastMove(pgn: String): Pair<String, String>? {
+        if (pgn.isBlank()) return null
         return try {
             val list = MoveList()
-            for (san in moves) list.addSanMove(san, true, true)
+            list.loadFromSan(pgn)
             val last = list.lastOrNull() ?: return null
             last.from.value().lowercase() to last.to.value().lowercase()
         } catch (_: Exception) {
             null
         }
     }
+
+    /** Content key for chat dedupe; the websocket frame carries no id. */
+    private fun messageKey(message: GameMessage): String =
+        "${message.created}|${message.body}|${message.name}|${message.type}"
 
     private fun buildMoveText(from: String, to: String, promotion: String?): String {
         return if (promotion.isNullOrBlank()) "${from.lowercase()}${to.lowercase()}"

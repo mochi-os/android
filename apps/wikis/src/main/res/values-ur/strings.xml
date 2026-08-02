@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">سرور تک رسائی نہیں ہے۔ دوبارہ کوشش کر رہے ہیں…</string>
     <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">وکی تخلیق مستقبل کے اپ ڈیٹ میں دستیاب ہوگی۔</string>
     <string name="wikis_find_search_placeholder">نام، ID، فنگرپرنٹ یا URL سے تلاش کریں…</string>
     <string name="wikis_join_search_button">وکیز تلاش کریں…</string>
     <string name="wikis_join_id_hint">abc123…</string>

@@ -372,4 +372,16 @@
     <string name="route_target_select">Chwazi</string>
     <string name="account_data_description">Telechaje yon sovgad konplè ou ka retabli sou sèvè sa a oswa sou yon lòt sèvè Mochi.</string>
     <string name="route_target_none">Pa gen sib ki disponib</string>
+    <string name="login_invalid_code">Kòd envalid</string>
+    <string name="accounts_provider_browser">Notifikasyon navigatè</string>
+    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_mcp">Sèvè MCP</string>
+    <string name="accounts_provider_unifiedpush">Notifikasyon push</string>
+    <string name="accounts_provider_url">URL Ekstèn</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Kont verifye</string>
+    <string name="accounts_verify_invalid">Kòd verifikasyon envalid</string>
+    <string name="accounts_verify_sent">Kòd verifikasyon voye</string>
+    <string name="accounts_test_failed">Tès echwe</string>
+    <string name="accounts_test_sent">Tès voye</string>
 </resources>

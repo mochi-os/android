@@ -743,4 +743,6 @@
     <string name="market_recently_viewed_clear">Hamısını təmizlə</string>
     <string name="market_listings_create">Yarat</string>
     <string name="market_bid_dialog_ceiling_label">Maksimum təklif (isteğe bağlı)</string>
+    <string name="market_asset_no_app">Bu faylı aça biləcək tətbiq yoxdur</string>
+    <string name="market_asset_download_failed">Fayl endirilə bilmədi</string>
 </resources>

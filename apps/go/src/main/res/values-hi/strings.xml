@@ -11,7 +11,6 @@
     <string name="go_app_title">जाएँ</string>
     <string name="go_captures_black_sr">काले बंदी</string>
     <string name="go_captures_white_sr">सफेद बंदी</string>
-    <string name="go_chat_close">चैट बंद करें</string>
     <string name="go_chat_title">चैट</string>
     <string name="go_color_black">काला</string>
     <string name="go_color_white">सफ़ेद</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">समाप्त</string>
     <string name="go_status_resigned">त्याग</string>
     <string name="go_card_vs">बनाम %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">खेल विवरण जल्द ही</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">नया Go खेल</string>
     <string name="go_new_game_no_friends">खेल शुरू करने से पहले आपको एक मित्र जोड़ना होगा।</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">काले को पहले चलने की भरपाई के लिए सफेद के स्कोर में जोड़े गए अंक</string>
     <string name="go_new_game_create_error">खेल शुरू करने में विफल</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go बोर्ड</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d गो बोर्ड, काला पत्थर रखने की आपकी बारी</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d गो बोर्ड, सफेद पत्थर रखने की आपकी बारी</string>
 </resources>

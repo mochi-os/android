@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Yaqhip jawsäwinakax janiw katuqkataynati</string>
     <string name="people_invitations_some_decline_failed">Yaqhip jawsäwinakax janiw jan katuqkataynati</string>
     <string name="people_invitations_some_cancel_failed">Yaqhip jawsäwinakax janiw jarq\'kataynati</string>
+    <string name="people_profile_too_long">Uñstawi sinti jach\'a</string>
 </resources>

@@ -5,7 +5,7 @@
 
 package org.mochios.wikis.ui.attachments
 
-import android.content.ContentResolver
+import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -26,7 +26,6 @@ import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
 import java.io.File
-import java.io.FileOutputStream
 import javax.inject.Inject
 
 /**
@@ -223,7 +222,8 @@ class AttachmentsViewModel @Inject constructor(
      * `PageEditorViewModel.uploadAttachments` — copies each URI to a temp
      * file under the cache dir so the repository call stays file-based
      * (matches the comment-attachments and editor flows), then refreshes
-     * the list on success.
+     * the list on success. The copy keeps the file's real name, which is
+     * what the server records.
      */
     fun uploadAttachments(
         uris: List<Uri>,

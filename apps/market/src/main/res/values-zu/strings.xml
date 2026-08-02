@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Sula konke</string>
     <string name="market_listings_create">Dala</string>
     <string name="market_bid_dialog_ceiling_label">Ibhidi ephezulu (ongakhetha)</string>
+    <string name="market_asset_no_app">Alikho i-app elingavula leli fayela</string>
+    <string name="market_asset_download_failed">Ayikwazanga ukulanda ifayela</string>
 </resources>

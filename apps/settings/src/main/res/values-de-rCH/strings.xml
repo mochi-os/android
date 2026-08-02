@@ -365,4 +365,6 @@
     <string name="login_method_oauth">Anmeldung über Drittanbieter</string>
     <string name="login_method_recovery">Wiederherstellungscodes</string>
     <string name="route_target_select">Auswählen</string>
+    <string name="accounts_provider_url">Externe URL</string>
+    <string name="accounts_provider_web">Mochi Web</string>
 </resources>

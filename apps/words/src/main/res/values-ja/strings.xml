@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">対局を削除しますか？</string>
     <string name="words_detail_delete_confirm">削除</string>
     <string name="words_detail_delete_message">この操作でゲームとそのチャットが完全に削除されます。この操作は元に戻せません。</string>
+    <string name="words_detail_chat_passed">%1$sがパスしました</string>
+    <string name="words_detail_chat_passed_over">%1$sがパスしました — ゲーム終了</string>
+    <string name="words_detail_chat_exchanged">%1$sがタイルを交換しました</string>
+    <string name="words_move_error_no_tiles">タイルが置かれていません</string>
+    <string name="words_move_error_out_of_bounds">ボードの範囲外です</string>
+    <string name="words_move_error_square_occupied">このマスはすでに使われています</string>
+    <string name="words_move_error_not_in_line">タイルは1つの行または列に置いてください</string>
+    <string name="words_move_error_not_contiguous">タイルは間を空けずに並べてください</string>
+    <string name="words_move_error_first_move_centre">最初の手は中央のマスを通る必要があります</string>
+    <string name="words_move_error_first_move_two_tiles">最初の手はタイルを2枚以上置く必要があります</string>
+    <string name="words_move_error_not_connected">タイルはボード上の既存のタイルにつなげてください</string>
+    <string name="words_move_error_no_words">有効な単語ができていません</string>
+    <string name="words_validation_offline">検証はオフラインです — そのまま送信できます。</string>
+    <string name="words_validation_unknown_words">辞書にない単語が含まれています。そのまま送信できます。</string>
 </resources>

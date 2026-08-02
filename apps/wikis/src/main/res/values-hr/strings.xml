@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Poslužitelj nije dostupan. Pokušavam ponovno…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Stvaranje wiki bit će dostupno u budućem ažuriranju.</string>
     <string name="wikis_find_search_placeholder">Pretraži po imenu, ID, otisku ili URL…</string>
     <string name="wikis_join_search_button">Pretraži wikie…</string>
     <string name="wikis_join_id_hint">abc123…</string>

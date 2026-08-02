@@ -5,6 +5,8 @@
 
 package org.mochios.words.ui.detail
 
+import kotlinx.coroutines.CancellationException
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -20,6 +22,9 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
+import org.mochios.android.util.mergeMessage
+import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.DraftStatus
 import org.mochios.words.engine.Placement
 import org.mochios.words.engine.createDraftSignature
@@ -70,6 +75,10 @@ sealed class DropTarget {
 data class WordsGameDetailUiState(
     val isLoading: Boolean = true,
     val isLoadingMessages: Boolean = false,
+    val isLoadingMoreMessages: Boolean = false,
+    val hasMoreMessages: Boolean = false,
+    /** The server's own "<created>:<id>" cursor, not a derived timestamp. */
+    val nextMessageCursor: String? = null,
     val error: MochiError? = null,
     val game: Game? = null,
     val myIdentity: String = "",
@@ -111,6 +120,8 @@ data class WordsGameDetailUiState(
  * keystrokes can't overwrite a fresher state. Matches the web
  * `useEffect` block at `index.tsx` lines 200-272.
  */
+private const val TAG = "WordsGame"
+
 @HiltViewModel
 class WordsGameViewModel @Inject constructor(
     private val repository: WordsRepository,
@@ -174,11 +185,18 @@ class WordsGameViewModel @Inject constructor(
                     // succeeds, `submitMove` clears placements and a fresh
                     // load supersedes this branch anyway.
                     if (state.pendingPlacements.isEmpty() && !state.exchangeMode) {
+                        // Re-seed the rack only when the server's tiles differ
+                        // as a multiset from what is on screen. Overwriting
+                        // unconditionally threw away the user's shuffle on every
+                        // opponent move and on every resume, which is the one
+                        // people notice. Web compares the value the same way.
+                        val incoming = response.game.my_rack.toList()
+                        val same = incoming.sorted() == state.rackTiles.sorted()
                         state.copy(
                             game = response.game,
                             myIdentity = response.identity,
-                            rackTiles = response.game.my_rack.toList(),
-                            selectedRackIndex = null,
+                            rackTiles = if (same) state.rackTiles else incoming,
+                            selectedRackIndex = if (same) state.selectedRackIndex else null,
                         )
                     } else {
                         state.copy(
@@ -187,9 +205,13 @@ class WordsGameViewModel @Inject constructor(
                         )
                     }
                 }
-            } catch (_: Exception) {
-                // Silently swallow — the websocket will retry, and the next
-                // user action will refresh again. Don't blow up the UI.
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // Deliberately not surfaced: the websocket will retry and the
+                // next user action refreshes again, so a toast here would fire
+                // on transient drops. Logged so it is not wholly invisible.
+                Log.d(TAG, "Background refresh failed", e)
             }
         }
     }
@@ -201,9 +223,51 @@ class WordsGameViewModel @Inject constructor(
                 val response = repository.getMessages(gameId, before = null, limit = 100)
                 // Server returns newest-first; render oldest-first.
                 val ordered = response.messages.sortedBy { it.created }
-                _uiState.update { it.copy(messages = ordered, isLoadingMessages = false) }
-            } catch (_: Exception) {
+                _uiState.update {
+                    it.copy(
+                        messages = ordered,
+                        isLoadingMessages = false,
+                        hasMoreMessages = response.hasMore == true,
+                        nextMessageCursor = response.nextCursor,
+                    )
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.d(TAG, "Message load failed", e)
                 _uiState.update { it.copy(isLoadingMessages = false) }
+            }
+        }
+    }
+
+    /**
+     * Page in older chat. GameChatPanel has always supported this; the screen
+     * passed hasMore = false and an empty onLoadMore, so the capability was
+     * switched off and a game's chat stopped at its first hundred messages.
+     */
+    fun loadMoreMessages() {
+        val current = _uiState.value
+        if (current.isLoadingMoreMessages || !current.hasMoreMessages) return
+        val cursor = current.nextMessageCursor ?: return
+        viewModelScope.launch {
+            _uiState.update { it.copy(isLoadingMoreMessages = true) }
+            try {
+                val response = repository.getMessages(gameId, before = cursor)
+                _uiState.update {
+                    it.copy(
+                        isLoadingMoreMessages = false,
+                        messages = (response.messages + it.messages)
+                            .distinctBy { message -> message.id }
+                            .sortedBy { message -> message.created },
+                        hasMoreMessages = response.hasMore == true,
+                        nextMessageCursor = response.nextCursor,
+                    )
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.d(TAG, "Older messages failed to load", e)
+                _uiState.update { it.copy(isLoadingMoreMessages = false) }
             }
         }
     }
@@ -218,7 +282,11 @@ class WordsGameViewModel @Inject constructor(
      */
     fun onWebsocketEvent(type: String, message: GameMessage?) {
         when (type) {
-            "move", "system" -> {
+            // "state" is the snapshot event_sync emits after a P2P convergence
+            // repair. It used to fall through this when with no else, so the
+            // board and scores sat on what the repair had replaced until the
+            // next move or resume.
+            "move", "system", "state" -> {
                 // Refresh the game (board, rack, turn, scores) and message
                 // history — the move payload includes the post-move state.
                 refresh()
@@ -226,9 +294,20 @@ class WordsGameViewModel @Inject constructor(
             }
             "message" -> {
                 if (message != null) {
+                    // The frame carries no id, so the screen synthesises one:
+                    // it never matches the server uid the same row arrives with
+                    // over REST, and two messages from one sender in the same
+                    // second synthesise the SAME id, so an id-keyed guard threw
+                    // the second away. Key on content, as the web does.
                     _uiState.update { state ->
-                        if (state.messages.any { it.id == message.id }) state
-                        else state.copy(messages = state.messages + message)
+                        state.copy(
+                            messages = mergeMessage(
+                                state.messages,
+                                message,
+                                key = ::messageKey,
+                                created = { row -> row.created },
+                            ),
+                        )
                     }
                 } else {
                     loadMessages()
@@ -236,6 +315,10 @@ class WordsGameViewModel @Inject constructor(
             }
         }
     }
+
+    /** Content key for chat dedupe; see [onWebsocketEvent]. */
+    private fun messageKey(message: GameMessage): String =
+        "${message.created}|${message.body}|${message.name}|${message.type}"
 
     // ─── Rack + placement mutations ───────────────────────────────────
 
@@ -292,6 +375,13 @@ class WordsGameViewModel @Inject constructor(
         val state = _uiState.value
         val cell = state.pendingBlankCell ?: return
         val rackIdx = state.pendingBlankRackIndex ?: return
+        // A blank defers its placement until the letter is chosen, so the drop
+        // check has to be repeated here — the square can have been filled in
+        // between, by this player or by a refresh landing an opponent's move.
+        if (!canDropOn(cell.first, cell.second)) {
+            cancelBlankPrompt()
+            return
+        }
         val upper = letter.uppercaseChar()
         val placement = Placement(row = cell.first, col = cell.second, letter = upper, rackTile = '_')
         _uiState.update {
@@ -365,9 +455,41 @@ class WordsGameViewModel @Inject constructor(
     }
 
     /** Drop the currently-dragged tile on (row, col). */
+    /**
+     * Whether a tile may be dropped on ([row], [col]).
+     *
+     * Rejects a square that already holds a board tile or a pending placement.
+     * Without this the same square could take two placements: the engine builds
+     * the board from the deduplicated square but counts tilesUsed from the
+     * placement list, so two rack tiles were consumed for one visible tile, the
+     * cross-word at that square was found and scored twice, and seven
+     * placements could fire the fifty-point bingo across six distinct squares.
+     * The board renders placements keyed by cell, so the second tile was
+     * invisible and the player only saw it missing from their rack.
+     *
+     * [from] is the drag's own source cell, which does not block its own drop —
+     * dragging a tile back where it started stays a no-op rather than an error.
+     */
+    private fun canDropOn(row: Int, col: Int, from: Pair<Int, Int>? = null): Boolean {
+        val state = _uiState.value
+        if (row !in 0 until BOARD_SIZE || col !in 0 until BOARD_SIZE) return false
+        val board = state.game?.board?.let { parseBoard(it) } ?: return false
+        if (board[row, col] != '.') return false
+        return state.pendingPlacements.none {
+            it.row == row && it.col == col && (from == null || it.row != from.first || it.col != from.second)
+        }
+    }
+
     fun onDropOnBoard(row: Int, col: Int) {
         val state = _uiState.value
         val source = state.dragSource ?: return
+        val from = (source as? DragSource.BoardCell)?.let { it.row to it.col }
+        if (!canDropOn(row, col, from)) {
+            // Clear the drag so the tile returns to where it came from rather
+            // than staying stuck to the pointer.
+            _uiState.update { it.copy(dragSource = null) }
+            return
+        }
         when (source) {
             is DragSource.Rack -> {
                 val tile = state.rackTiles.getOrNull(source.index) ?: return
@@ -480,9 +602,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isExchanging = false,
-                        transientToast = e.toMochiError().let { err ->
-                            err.message ?: "exchange_failed"
-                        },
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -502,7 +622,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isPassing = false,
-                        transientToast = e.toMochiError().message ?: "pass_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -514,7 +634,7 @@ class WordsGameViewModel @Inject constructor(
         val game = state.game ?: return
         val board = parseBoard(game.board)
         val fallback = "Invalid move"
-        val draft = deriveMoveDraft(board, state.pendingPlacements, fallback)
+        val draft = deriveMoveDraft(board, state.pendingPlacements)
         if (draft.status != DraftStatus.READY) return
         val result = draft.result ?: return
 
@@ -541,7 +661,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isSubmittingMove = false,
-                        transientToast = e.toMochiError().message ?: "move_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -569,7 +689,7 @@ class WordsGameViewModel @Inject constructor(
                     it.copy(
                         isResigning = false,
                         showResignDialog = false,
-                        transientToast = e.toMochiError().message ?: "resign_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -586,7 +706,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isDeleting = false,
-                        transientToast = e.toMochiError().message ?: "delete_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -616,7 +736,7 @@ class WordsGameViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isCreatingRematch = false,
-                        transientToast = e.toMochiError().message ?: "rematch_failed",
+                        transientToast = e.toMochiError().userMessage(),
                     )
                 }
             }
@@ -633,15 +753,30 @@ class WordsGameViewModel @Inject constructor(
 
     // ─── Sending chat messages ────────────────────────────────────────
 
-    fun sendChatMessage(body: String, onError: (MochiError) -> Unit = {}) {
+    /**
+     * [onFinished] reports whether the send succeeded, so the composer can
+     * clear the draft only once it has. It used to clear synchronously at the
+     * call site, before this coroutine had even started, so a failed send lost
+     * the typed text with no feedback.
+     */
+    fun sendChatMessage(
+        body: String,
+        onError: (MochiError) -> Unit = {},
+        onFinished: (Boolean) -> Unit = {},
+    ) {
         val trimmed = body.trim()
-        if (trimmed.isEmpty()) return
+        if (trimmed.isEmpty()) {
+            onFinished(false)
+            return
+        }
         viewModelScope.launch {
             try {
                 repository.sendMessage(gameId, trimmed)
                 loadMessages()
+                onFinished(true)
             } catch (e: Exception) {
                 onError(e.toMochiError())
+                onFinished(false)
             }
         }
     }
@@ -673,7 +808,7 @@ class WordsGameViewModel @Inject constructor(
         }
 
         val board = parseBoard(game.board)
-        val draft = deriveMoveDraft(board, state.pendingPlacements, "Invalid move")
+        val draft = deriveMoveDraft(board, state.pendingPlacements)
         if (draft.status != DraftStatus.READY) {
             _uiState.update {
                 it.copy(
@@ -740,9 +875,14 @@ class WordsGameViewModel @Inject constructor(
                         validationUnavailable = hasUnavailable,
                     )
                 }
+            } catch (e: CancellationException) {
+                // A newer refresh replaced this one. Rethrow: swallowing it
+                // leaves the coroutine looking like it completed normally.
+                throw e
             } catch (_: Exception) {
-                // Job cancelled or other failure — leave the state as-is so
-                // the next refresh has a clean slate to overwrite.
+                // Any other failure leaves the state as-is for the next refresh
+                // to overwrite, so a lookup outage cannot strand the composer.
+                _uiState.update { it.copy(isValidationChecking = false) }
             }
         }
     }

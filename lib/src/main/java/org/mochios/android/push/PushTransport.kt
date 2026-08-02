@@ -35,9 +35,11 @@ import org.mochios.android.auth.SessionManager
  *     back to the existing UnifiedPush flow: [PushService] runs as a FG
  *     service and [MochiPushClient.register] picks a distributor.
  *
- * The result is cached in a SharedPreferences pref keyed by server URL so
- * later launches (and the boot receiver / watchdog) can honour the choice
- * without re-fetching every time.
+ * The result is cached in SharedPreferences alongside the server it was
+ * decided for, so later launches (and the boot receiver / watchdog) can honour
+ * the choice without re-fetching every time. [current] compares that recorded
+ * server before answering, because a transport chosen for one server says
+ * nothing about another.
  */
 object PushTransport {
 
@@ -196,9 +198,18 @@ object PushTransport {
         }
     }
 
-    /** Last-known transport for this server. Used by boot receiver + watchdog. */
-    fun current(context: Context): String? {
+    /**
+     * Last-known transport, or null when none was recorded for [server].
+     *
+     * [server] null means "whatever was recorded", which is the old behaviour
+     * and is right only for a caller that has no server in hand. Passing the
+     * current one matters after a server switch: the recorded transport belongs
+     * to the previous server, and honouring it can leave the client running the
+     * wrong push path until the next successful configure().
+     */
+    fun current(context: Context, server: String? = null): String? {
         val prefs = context.applicationContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        if (server != null && prefs.getString(KEY_SERVER, null) != server) return null
         return prefs.getString(KEY_TRANSPORT, null)
     }
 

@@ -10,7 +10,6 @@
     <string name="go_app_title">Перайсці</string>
     <string name="go_captures_black_sr">Чорныя ўзяцці</string>
     <string name="go_captures_white_sr">Белыя ўзяцці</string>
-    <string name="go_chat_close">Закрыць чат</string>
     <string name="go_chat_title">Чат</string>
     <string name="go_color_black">Чорныя</string>
     <string name="go_color_white">Белыя</string>
@@ -71,11 +70,13 @@
     <string name="go_status_finished">Завершана</string>
     <string name="go_status_resigned">Здаўся</string>
     <string name="go_card_vs">супраць %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Дэталі партыі неўзабаве</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Новая Go партыя</string>
     <string name="go_new_game_no_friends">Вам трэба дадаць сябра перад тым, як пачаць партыю.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Балы, дададзеныя да рахунку Белага, каб кампенсаваць, што Чорны ходзіць першым</string>
     <string name="go_new_game_create_error">Не атрымалася пачаць партыю</string>
+    <string name="go_board_a11y">Дошка для Го %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Дошка го %1$d×%1$d, ваш ход паставіць чорны камень</string>
+    <string name="go_board_a11y_turn_white">Дошка го %1$d×%1$d, ваш ход паставіць белы камень</string>
 </resources>

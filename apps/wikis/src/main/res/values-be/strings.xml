@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">Сервер недаступны. Паўторная спроба…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Стварэнне wiki будзе даступна ў будучым абнаўленні.</string>
     <string name="wikis_find_search_placeholder">Пошук па імені, ID, адбітку або URL…</string>
     <string name="wikis_join_search_button">Пошук wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

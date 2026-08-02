@@ -315,4 +315,5 @@
         <item quantity="many">%1$d падпісчыкаў</item>
         <item quantity="other">%1$d падпісчыка</item>
     </plurals>
+    <string name="account_token_label">Сеанс Mochi</string>
 </resources>

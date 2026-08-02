@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">वह सर्वर पहुंच से बाहर है। पुनः प्रयास किया जा रहा है…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">विकि RSS URL</string>
-    <string name="wikis_create_dialog_stub">विकि निर्माण भविष्य के अपडेट में उपलब्ध होगा।</string>
     <string name="wikis_find_search_placeholder">नाम, ID, फ़िंगरप्रिंट या URL से खोजें…</string>
     <string name="wikis_join_search_button">विकि खोजें…</string>
     <string name="wikis_join_id_hint">abc123…</string>

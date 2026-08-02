@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Ba\'zi takliflar qabul qilinmadi</string>
     <string name="people_invitations_some_decline_failed">Ba\'zi takliflar rad etilmadi</string>
     <string name="people_invitations_some_cancel_failed">Ba\'zi takliflar bekor qilinmadi</string>
+    <string name="people_profile_too_long">Profil juda uzun</string>
 </resources>

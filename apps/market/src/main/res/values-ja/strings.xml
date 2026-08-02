@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">すべてクリア</string>
     <string name="market_listings_create">作成</string>
     <string name="market_bid_dialog_ceiling_label">上限入札額（任意）</string>
+    <string name="market_asset_no_app">このファイルを開けるアプリがありません</string>
+    <string name="market_asset_download_failed">ファイルをダウンロードできませんでした</string>
 </resources>

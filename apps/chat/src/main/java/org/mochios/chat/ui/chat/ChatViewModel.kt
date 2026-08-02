@@ -24,6 +24,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.android.util.mergeNewest
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.chat.R
 import org.mochios.chat.data.PinnedChatsStore
@@ -188,11 +189,24 @@ class ChatViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val msgs = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE)
+                val held = _uiState.value.messages
+                val merged = mergeNewest(
+                    existing = held,
+                    incoming = msgs.messages,
+                    id = { message -> message.id },
+                    created = { message -> message.created },
+                )
+                // This runs on every inbound message, reaction and delete, so
+                // it must not discard the scrollback the reader paged in.
+                // Keep the older-end cursor too: it points below everything
+                // loaded, while the refetch's cursor points below only its own
+                // newest page, so adopting it would re-fetch pages already held.
+                val stitched = merged !== msgs.messages && held.isNotEmpty()
                 _uiState.value = _uiState.value.copy(
-                    messages = msgs.messages,
-                    hasMore = msgs.hasMore,
-                    nextCursor = msgs.nextCursor,
-                    nextCursorId = msgs.nextCursorId,
+                    messages = merged,
+                    hasMore = if (stitched) _uiState.value.hasMore else msgs.hasMore,
+                    nextCursor = if (stitched) _uiState.value.nextCursor else msgs.nextCursor,
+                    nextCursorId = if (stitched) _uiState.value.nextCursorId else msgs.nextCursorId,
                     isRefreshing = false,
                     error = null
                 )
@@ -235,6 +249,13 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteMessages(chatId, messageIds)
+                // Drop them locally first: the merge in refresh() keeps rows the
+                // newest page does not mention, so a message the server omits
+                // rather than tombstoning would otherwise come straight back.
+                val gone = messageIds.toSet()
+                _uiState.value = _uiState.value.copy(
+                    messages = _uiState.value.messages.filterNot { gone.contains(it.id) },
+                )
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

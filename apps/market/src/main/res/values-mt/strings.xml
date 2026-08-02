@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Naddaf kollox</string>
     <string name="market_listings_create">Oħloq</string>
     <string name="market_bid_dialog_ceiling_label">Offerta massima (mhux obbligatorja)</string>
+    <string name="market_asset_no_app">L-ebda app ma tista\' tiftaħ dan il-fajl</string>
+    <string name="market_asset_download_failed">Ma setax jitniżżel il-fajl</string>
 </resources>

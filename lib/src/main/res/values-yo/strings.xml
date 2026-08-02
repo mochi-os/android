@@ -313,4 +313,5 @@
         <item quantity="one">olùtẹ̀lé %1$d</item>
         <item quantity="other">àwọn olùtẹ̀lé %1$d</item>
     </plurals>
+    <string name="account_token_label">Ìpàdé Mochi</string>
 </resources>

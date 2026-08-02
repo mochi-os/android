@@ -28,17 +28,18 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.github.bhlangonijr.chesslib.Board
 import com.github.bhlangonijr.chesslib.Piece
 import com.github.bhlangonijr.chesslib.PieceType
 import com.github.bhlangonijr.chesslib.Side
 import com.github.bhlangonijr.chesslib.Square
+import org.mochios.chess.engine.loadPosition
 
 // Web tokens — `--chess-sq-light` / `--chess-sq-dark`. Inlined here because
 // the Android theme system doesn't carry app-specific tokens yet; matches the
@@ -99,16 +100,14 @@ fun ChessBoard(
     lastMove: Pair<String, String>?,
     modifier: Modifier = Modifier,
 ) {
-    val board = remember(fen) {
-        Board().also {
-            try {
-                it.loadFromFen(fen)
-            } catch (_: Exception) {
-                // Leave at starting position on malformed FEN. The board
-                // will simply look like a fresh game until the next valid
-                // update arrives.
-            }
-        }
+    // Validated once, up front. A kingless position parses fine and then throws
+    // from isKingAttacked / legalMoves / getKingSquare below, so guarding only
+    // the load left eight call sites able to crash — on every open, for a
+    // position a peer can write and the server accepts.
+    val board = remember(fen) { loadPosition(fen) }
+    if (board == null) {
+        CorruptPosition(modifier)
+        return
     }
 
     val isActive = gameStatus == "active"
@@ -376,5 +375,26 @@ private fun BoardSquare(
                 )
             }
         }
+    }
+}
+
+/**
+ * Stand-in for a position that cannot be rendered. Deliberately a surface
+ * rather than a thrown exception: the header's resign and delete actions sit
+ * outside this composable, so leaving the rest of the screen alive is what lets
+ * the user get out of a game whose row a peer has corrupted. The web makes the
+ * same call, with a comment noting that throwing here crash-looped the view.
+ */
+@Composable
+private fun CorruptPosition(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier.aspectRatio(1f),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = stringResource(org.mochios.android.R.string.error_unexpected),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }

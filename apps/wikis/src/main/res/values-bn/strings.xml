@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">সেই সার্ভারে পৌঁছানো যাচ্ছে না। আবার চেষ্টা করছে…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Wiki তৈরি ভবিষ্যৎ আপডেটে উপলব্ধ হবে।</string>
     <string name="wikis_find_search_placeholder">নাম, আইডি, ফিঙ্গারপ্রিন্ট বা URL দিয়ে খুঁজুন…</string>
     <string name="wikis_join_search_button">wikis খুঁজুন…</string>
     <string name="wikis_join_id_hint">abc123…</string>

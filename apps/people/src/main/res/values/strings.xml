@@ -242,4 +242,5 @@
     <string name="people_person_message">Message</string>
     <string name="people_person_accept">Accept</string>
     <string name="people_person_decline">Decline</string>
+    <string name="people_profile_too_long">Profile is too long</string>
 </resources>

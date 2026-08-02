@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Eyða</string>
     <string name="words_detail_delete_message">Þetta eyðir leiknum og spjallinu varanlega. Ekki er hægt að afturkalla þessa aðgerð.</string>
+    <string name="words_detail_chat_passed">%1$s sagði pass</string>
+    <string name="words_detail_chat_passed_over">%1$s sagði pass — leik lokið</string>
+    <string name="words_detail_chat_exchanged">%1$s skipti um stafi</string>
+    <string name="words_move_error_no_tiles">Engir stafir lagðir</string>
+    <string name="words_move_error_out_of_bounds">Staðsetning utan borðs</string>
+    <string name="words_move_error_square_occupied">Reiturinn er þegar upptekinn</string>
+    <string name="words_move_error_not_in_line">Stafir verða að liggja í einni röð eða dálki</string>
+    <string name="words_move_error_not_contiguous">Stafir verða að liggja saman (engin eyða)</string>
+    <string name="words_move_error_first_move_centre">Fyrsti leikur verður að ná yfir miðreitinn</string>
+    <string name="words_move_error_first_move_two_tiles">Fyrsti leikur verður að leggja að minnsta kosti 2 stafi</string>
+    <string name="words_move_error_not_connected">Stafir verða að tengjast stöfum sem fyrir eru á borðinu</string>
+    <string name="words_move_error_no_words">Engin gild orð mynduð</string>
+    <string name="words_validation_offline">Staðfesting án nettengingar — þú getur samt sent inn.</string>
+    <string name="words_validation_unknown_words">Inniheldur óþekkt orð. Þú getur samt sent inn.</string>
 </resources>

@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Supprimer la partie ?</string>
     <string name="words_detail_delete_confirm">Supprimer</string>
     <string name="words_detail_delete_message">Cette action supprime définitivement la partie et son chat. Cette action est irréversible.</string>
+    <string name="words_detail_chat_passed">%1$s a passé</string>
+    <string name="words_detail_chat_passed_over">%1$s a passé — partie terminée</string>
+    <string name="words_detail_chat_exchanged">%1$s a échangé des tuiles</string>
+    <string name="words_move_error_no_tiles">Aucune tuile placée</string>
+    <string name="words_move_error_out_of_bounds">Placement hors du plateau</string>
+    <string name="words_move_error_square_occupied">Case déjà occupée</string>
+    <string name="words_move_error_not_in_line">Les tuiles doivent être placées sur une seule ligne ou colonne</string>
+    <string name="words_move_error_not_contiguous">Les tuiles doivent être contiguës (sans trou)</string>
+    <string name="words_move_error_first_move_centre">Le premier coup doit couvrir la case centrale</string>
+    <string name="words_move_error_first_move_two_tiles">Le premier coup doit placer au moins 2 tuiles</string>
+    <string name="words_move_error_not_connected">Les tuiles doivent être reliées aux tuiles déjà sur le plateau</string>
+    <string name="words_move_error_no_words">Aucun mot valide formé</string>
+    <string name="words_validation_offline">Validation hors ligne — vous pouvez quand même valider.</string>
+    <string name="words_validation_unknown_words">Contient des mots inconnus. Vous pouvez quand même valider.</string>
 </resources>

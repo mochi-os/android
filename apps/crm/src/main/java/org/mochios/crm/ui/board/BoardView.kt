@@ -73,14 +73,25 @@ import org.mochios.crm.model.CrmView
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
 
+/**
+ * Kanban board for the active view.
+ *
+ * @param objects Every object in the crm — the board needs the complete set so
+ *   hierarchy, column grouping and drop ranks stay computed against the real
+ *   list even while a filter hides part of it.
+ * @param visibleIds Ids the search/filter state allows on screen, or null when
+ *   nothing narrows the board. Cards outside the set are hidden, but they still
+ *   count towards drop positions, so a drop on a filtered column lands where it
+ *   would have without the filter.
+ */
 @Composable
 fun BoardView(
     objects: List<CrmObject>,
     view: CrmView?,
     viewModel: CrmViewModel,
     onObjectClick: (String) -> Unit,
-    onCreateObject: ((classId: String, title: String, initialValues: Map<String, String>) -> Unit)? = null,
     visibleIds: Set<String>? = null,
+    onCreateObject: ((classId: String, title: String, initialValues: Map<String, String>) -> Unit)? = null,
 ) {
     if (view == null || view.columns.isBlank()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -350,6 +361,13 @@ private fun BoardColumn(
             Spacer(modifier = Modifier.width(8.dp))
             // Card-count pill — the standard kanban column count, in a tonal
             // chip. Replaces the old washed-out primary-tinted header bar.
+            // While a filter is on, the pill reads "shown / total" so the
+            // column still tells you how much it really holds.
+            val visibleCount = if (visibleIds == null) {
+                objects.size
+            } else {
+                objects.count { obj -> obj.id in visibleIds }
+            }
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
@@ -463,6 +481,7 @@ private fun BoardColumn(
                         obj.stringValue(rowFieldId) == rowOption.id ||
                             obj.listValue(rowFieldId).contains(rowOption.id)
                     })
+
                     val shownRowObjects = rowObjects.visible(visibleIds)
                     // A lane that a filter emptied is dropped entirely — a
                     // screen of bare lane headings under one hit is noise.

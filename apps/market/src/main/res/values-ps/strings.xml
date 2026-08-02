@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">ټول پاک کړئ</string>
     <string name="market_listings_create">جوړ کړئ</string>
     <string name="market_bid_dialog_ceiling_label">اعظمي وړاندیز (اختیاري)</string>
+    <string name="market_asset_no_app">هیڅ اپلیکیشن دا فایل نه شي پرانیستلی</string>
+    <string name="market_asset_download_failed">فایل ښکته نه شو</string>
 </resources>

@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Сервер није доступан. Покушавам поново…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Креирање wiki-ја биће доступно у будућем ажурирању.</string>
     <string name="wikis_find_search_placeholder">Претражи по имену, ID, отиску или URL…</string>
     <string name="wikis_join_search_button">Претражи wikije…</string>
     <string name="wikis_join_id_hint">abc123…</string>

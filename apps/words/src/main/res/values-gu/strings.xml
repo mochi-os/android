@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">કાઢી નાખો</string>
     <string name="words_detail_delete_message">આ ગેમ અને તેની ચેટને કાયમ માટે કાઢી નાખશે. આ ક્રિયા પાછી લઈ શકાશે નહીં.</string>
+    <string name="words_detail_chat_passed">%1$s પાસ થયા</string>
+    <string name="words_detail_chat_passed_over">%1$s પાસ થયા — રમત પૂરી</string>
+    <string name="words_detail_chat_exchanged">%1$s ટાઇલ્સ બદલી</string>
+    <string name="words_move_error_no_tiles">કોઈ ટાઇલ મૂકી નથી</string>
+    <string name="words_move_error_out_of_bounds">ગોઠવણી બોર્ડની બહાર છે</string>
+    <string name="words_move_error_square_occupied">આ ખાનું પહેલેથી ભરેલું છે</string>
+    <string name="words_move_error_not_in_line">ટાઇલ્સ એક જ હરોળ કે સ્તંભમાં મૂકવી જોઈએ</string>
+    <string name="words_move_error_not_contiguous">ટાઇલ્સ સળંગ હોવી જોઈએ (કોઈ ખાલી જગ્યા નહીં)</string>
+    <string name="words_move_error_first_move_centre">પહેલી ચાલમાં વચ્ચેનું ખાનું આવરી લેવું જોઈએ</string>
+    <string name="words_move_error_first_move_two_tiles">પહેલી ચાલમાં ઓછામાં ઓછી 2 ટાઇલ્સ મૂકવી જોઈએ</string>
+    <string name="words_move_error_not_connected">ટાઇલ્સ બોર્ડ પરની હાલની ટાઇલ્સ સાથે જોડાયેલી હોવી જોઈએ</string>
+    <string name="words_move_error_no_words">કોઈ માન્ય શબ્દ બન્યો નથી</string>
+    <string name="words_validation_offline">માન્યતા ઑફલાઇન છે — તેમ છતાં તમે સબમિટ કરી શકો છો.</string>
+    <string name="words_validation_unknown_words">અજાણ્યા શબ્દો ધરાવે છે. તેમ છતાં તમે સબમિટ કરી શકો છો.</string>
 </resources>

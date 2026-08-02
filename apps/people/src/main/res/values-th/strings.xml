@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">ไม่สามารถยอมรับคำเชิญบางรายการได้</string>
     <string name="people_invitations_some_decline_failed">ไม่สามารถปฏิเสธคำเชิญบางรายการได้</string>
     <string name="people_invitations_some_cancel_failed">ไม่สามารถยกเลิกคำเชิญบางรายการได้</string>
+    <string name="people_profile_too_long">โปรไฟล์ยาวเกินไป</string>
 </resources>

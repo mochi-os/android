@@ -67,4 +67,6 @@
     <string name="chess_ws_failed">Lidhja dështoi</string>
     <string name="chess_move_capture">%1$s mori %2$s</string>
     <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_piece_white">I bardhi %1$s</string>
+    <string name="chess_piece_black">I zi %1$s</string>
 </resources>

@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Goge</string>
     <string name="words_detail_delete_message">Wannan zai goge wasan da hirarsa har abada. Ba za a iya sokewa ba.</string>
+    <string name="words_detail_chat_passed">%1$s ya wuce</string>
+    <string name="words_detail_chat_passed_over">%1$s ya wuce — wasa ya ƙare</string>
+    <string name="words_detail_chat_exchanged">%1$s ya musanya alluna</string>
+    <string name="words_move_error_no_tiles">Ba a sanya wani harafi ba</string>
+    <string name="words_move_error_out_of_bounds">Wurin sanyawa ya wuce iyakar allo</string>
+    <string name="words_move_error_square_occupied">An riga an cika wannan murabba\'in</string>
+    <string name="words_move_error_not_in_line">Dole ne a sanya haruffa a sahu ɗaya ko ginshiƙi ɗaya</string>
+    <string name="words_move_error_not_contiguous">Dole ne haruffa su kasance a haɗe (ba tazara)</string>
+    <string name="words_move_error_first_move_centre">Motsi na farko dole ne ya rufe murabba\'in tsakiya</string>
+    <string name="words_move_error_first_move_two_tiles">Motsi na farko dole ne ya sanya aƙalla haruffa 2</string>
+    <string name="words_move_error_not_connected">Dole ne haruffa su haɗu da haruffan da ke kan allo</string>
+    <string name="words_move_error_no_words">Ba a samar da wata kalma mai inganci ba</string>
+    <string name="words_validation_offline">Tabbatarwa ba ta kan layi ba — har yanzu kana iya aikawa.</string>
+    <string name="words_validation_unknown_words">Yana ƙunshe da kalmomin da ba a sani ba. Har yanzu kana iya aikawa.</string>
 </resources>

@@ -50,8 +50,7 @@ data class CrmInfoResponse(
 data class TemplateListResponse(val templates: List<Template> = emptyList())
 data class ObjectListResponse(
     val objects: List<CrmObject> = emptyList(),
-    /** Ids of the objects the viewer watches; the list endpoint sends them alongside. */
-    val watched: List<String> = emptyList()
+    val watched: List<String> = emptyList(),
 )
 data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class CommentResponse(val comment: Comment = Comment(id = ""))

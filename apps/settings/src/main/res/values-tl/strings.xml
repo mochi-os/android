@@ -373,4 +373,16 @@
     <string name="route_target_select">Piliin</string>
     <string name="account_data_description">I-download ang kumpletong backup na maibabalik mo sa server na ito o sa ibang Mochi server.</string>
     <string name="route_target_none">Walang available na target</string>
+    <string name="login_invalid_code">Invalid na code</string>
+    <string name="accounts_provider_browser">Mga notification ng browser</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP server</string>
+    <string name="accounts_provider_unifiedpush">Push notification</string>
+    <string name="accounts_provider_url">Panlabas na URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Na-verify ang account</string>
+    <string name="accounts_verify_invalid">Invalid na verification code</string>
+    <string name="accounts_verify_sent">Naipadala ang verification code</string>
+    <string name="accounts_test_failed">Nabigo ang test</string>
+    <string name="accounts_test_sent">Naipadala ang pagsubok</string>
 </resources>

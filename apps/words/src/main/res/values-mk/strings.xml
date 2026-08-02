@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">Избриши партија?</string>
     <string name="words_detail_delete_confirm">Избриши</string>
     <string name="words_detail_delete_message">Ова трајно ќе ја избрише играта и нејзиниот разговор. Ова дејство не може да се врати.</string>
+    <string name="words_detail_chat_passed">%1$s пропушти потег</string>
+    <string name="words_detail_chat_passed_over">%1$s пропушти потег — играта заврши</string>
+    <string name="words_detail_chat_exchanged">%1$s замени плочки</string>
+    <string name="words_move_error_no_tiles">Не се поставени плочки</string>
+    <string name="words_move_error_out_of_bounds">Поставувањето е надвор од таблата</string>
+    <string name="words_move_error_square_occupied">Полето е веќе зафатено</string>
+    <string name="words_move_error_not_in_line">Плочките мора да се постават во еден ред или колона</string>
+    <string name="words_move_error_not_contiguous">Плочките мора да се надоврзуваат (без празнини)</string>
+    <string name="words_move_error_first_move_centre">Првиот потег мора да го покрие централното поле</string>
+    <string name="words_move_error_first_move_two_tiles">Првиот потег мора да постави најмалку 2 плочки</string>
+    <string name="words_move_error_not_connected">Плочките мора да се поврзат со постојните плочки на таблата</string>
+    <string name="words_move_error_no_words">Не е формиран валиден збор</string>
+    <string name="words_validation_offline">Проверката е офлајн — сепак можете да го испратите.</string>
+    <string name="words_validation_unknown_words">Содржи непознати зборови. Сепак можете да го испратите.</string>
 </resources>

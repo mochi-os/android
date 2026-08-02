@@ -11,7 +11,6 @@
     <string name="go_app_title">이동</string>
     <string name="go_captures_black_sr">흑 잡힘</string>
     <string name="go_captures_white_sr">백 잡힘</string>
-    <string name="go_chat_close">채팅 닫기</string>
     <string name="go_chat_title">채팅</string>
     <string name="go_color_black">검정</string>
     <string name="go_color_white">백</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">종료됨</string>
     <string name="go_status_resigned">기권함</string>
     <string name="go_card_vs">%1$s 대전</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">게임 세부 정보 곧 제공 예정</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">새 바둑 게임</string>
     <string name="go_new_game_no_friends">게임을 시작하려면 먼저 친구를 추가해야 합니다.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">흑이 먼저 두는 것을 보완하기 위해 백의 점수에 추가되는 점수</string>
     <string name="go_new_game_create_error">게임 시작 실패</string>
 
+    <string name="go_board_a11y">%1$d×%1$d 바둑판</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d 바둑판, 흑돌을 놓을 차례입니다</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d 바둑판, 백돌을 놓을 차례입니다</string>
 </resources>

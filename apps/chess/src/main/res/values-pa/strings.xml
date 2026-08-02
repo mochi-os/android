@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s ਨੇ %2$s ਲਿਆ</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">ਚਿੱਟਾ %1$s</string>
+    <string name="chess_piece_black">ਕਾਲਾ %1$s</string>
 </resources>

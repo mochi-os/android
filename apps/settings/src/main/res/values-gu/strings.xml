@@ -373,4 +373,16 @@
     <string name="route_target_select">પસંદ કરો</string>
     <string name="account_data_description">સંપૂર્ણ બેકઅપ ડાઉનલોડ કરો જે તમે આ અથવા અન્ય Mochi સર્વર પર પુનઃસ્થાપિત કરી શકો છો.</string>
     <string name="route_target_none">કોઈ લક્ષ્ય ઉપલબ્ધ નથી</string>
+    <string name="login_invalid_code">અમાન્ય કોડ</string>
+    <string name="accounts_provider_browser">બ્રાઉઝર સૂચનાઓ</string>
+    <string name="accounts_provider_fcm">Android પુશ</string>
+    <string name="accounts_provider_mcp">MCP સર્વર</string>
+    <string name="accounts_provider_unifiedpush">પુશ સૂચના</string>
+    <string name="accounts_provider_url">બાહ્ય URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">ખાતું ચકાસાયું</string>
+    <string name="accounts_verify_invalid">અમાન્ય ચકાસણી કોડ</string>
+    <string name="accounts_verify_sent">ચકાસણી કોડ મોકલ્યો</string>
+    <string name="accounts_test_failed">ટેસ્ટ નિષ્ફળ</string>
+    <string name="accounts_test_sent">પરીક્ષણ મોકલ્યું</string>
 </resources>

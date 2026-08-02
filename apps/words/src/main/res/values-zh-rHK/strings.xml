@@ -74,4 +74,16 @@
     <string name="words_detail_delete_title">刪除對局?</string>
     <string name="words_detail_delete_message">此操作將永久刪除對局及其聊天記錄，且無法復原。</string>
     <string name="words_detail_delete_confirm">刪除</string>
+    <string name="words_detail_chat_passed">%1$s跳過咗回合</string>
+    <string name="words_detail_chat_passed_over">%1$s跳過咗回合 — 遊戲結束</string>
+    <string name="words_detail_chat_exchanged">%1$s換咗字粒</string>
+    <string name="words_move_error_no_tiles">未放置任何字母</string>
+    <string name="words_move_error_out_of_bounds">放置超出棋盤範圍</string>
+    <string name="words_move_error_square_occupied">該格已被佔用</string>
+    <string name="words_move_error_not_in_line">字母必須放喺同一行或同一列</string>
+    <string name="words_move_error_not_contiguous">字母必須相連（不可有空格）</string>
+    <string name="words_move_error_first_move_centre">第一步必須覆蓋中央方格</string>
+    <string name="words_move_error_first_move_two_tiles">第一步最少要放 2 個字母</string>
+    <string name="words_move_error_not_connected">字母必須連接棋盤上已有嘅字母</string>
+    <string name="words_move_error_no_words">未組成有效嘅字詞</string>
 </resources>

@@ -34,8 +34,9 @@ import kotlinx.coroutines.launch
  * `push/register/fcm` action so the server can replace any stale entry.
  *
  * The service is plumbed in the lib so all per-feature channels see the same
- * routing; channel IDs are the feature slugs ("feeds" / "chat" / "forums" /
- * "projects") shipped by the per-feature modules' channel-setup helpers.
+ * routing; channel IDs are the feature slugs shipped by the per-feature
+ * modules' channel-setup helpers, and both transports resolve them through
+ * [notificationChannelFor].
  */
 class MochiFirebaseMessagingService : FirebaseMessagingService() {
 
@@ -80,22 +81,8 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 
-    /**
-     * Channel routing is identical to the UnifiedPush path's
-     * MochiPushDispatcher.channelId: prefer the server-supplied `app`
-     * slug, fall back to the first path segment of `link`. Both refer to
-     * channels created by the per-feature `setup*NotificationChannel`
-     * helpers using the slug as the channel ID.
-     */
-    private fun channelIdFor(app: String, link: String): String {
-        val key = app.ifBlank {
-            link.trimStart('/').substringBefore('/')
-        }.lowercase()
-        return when (key) {
-            "feeds", "chat", "forums", "projects" -> key
-            else -> "feeds"
-        }
-    }
+    private fun channelIdFor(app: String, link: String): String =
+        notificationChannelFor(app, link)
 
     private fun postSystemNotification(
         context: Context,
@@ -108,14 +95,17 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
     ) {
         val channelId = channelIdFor(app, link)
 
-        // mochi:notification?link=<encoded>[&id=<encoded>] — same opaque URI
-        // the UnifiedPush dispatcher uses; routed by MainActivity through
-        // claude/plans/mochi-uri-scheme.md. `id` lets MainActivity call the
-        // notifications app's -/read endpoint so the matching web row is
-        // cleared on tap.
+        // mochi:notification?link=<encoded>[&id=<encoded>]&nonce=<encoded> —
+        // same opaque URI the UnifiedPush dispatcher uses; routed by
+        // MainActivity through claude/plans/mochi-uri-scheme.md. `id` lets
+        // MainActivity call the notifications app's -/read endpoint so the
+        // matching web row is cleared on tap, and the nonce is what proves the
+        // tap came from a notification we posted rather than from any app or
+        // web page that can send this exported activity an intent.
         val ssp = buildString {
             append("notification?link=").append(Uri.encode(link))
             if (id.isNotEmpty()) append("&id=").append(Uri.encode(id))
+            append("&nonce=").append(Uri.encode(NonceStore(context).issue()))
         }
         val deepLink = Uri.parse("mochi:$ssp")
         val intent = Intent(Intent.ACTION_VIEW, deepLink).apply {

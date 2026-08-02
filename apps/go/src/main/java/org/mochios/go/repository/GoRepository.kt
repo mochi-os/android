@@ -42,13 +42,15 @@ class GoRepository @Inject constructor(
         api.viewGame(gameId).unwrap()
 
     /**
-     * In-game chat + move log. [before] is the cursor (`created` timestamp of
-     * the oldest message already loaded) for paging older messages; [limit] is
-     * an optional page-size override (the server caps at 100).
+     * In-game chat + move log. [before] is the previous response's `nextCursor`
+     * — a `"<created>:<id>"` pair, not a bare timestamp, because `created`
+     * alone is not unique and paging on it drops every row sharing the page
+     * boundary's second. [limit] is an optional page-size override (the server
+     * caps at 100).
      */
     suspend fun getMessages(
         gameId: String,
-        before: Long? = null,
+        before: String? = null,
         limit: Int? = null,
     ): GetMessagesResponse =
         api.getMessages(gameId, before, limit).unwrap()
@@ -117,7 +119,3 @@ class GoRepository @Inject constructor(
     }
 }
 
-// Convenience extension so screens can do `messages.toList()` without a
-// `GetMessagesResponse.messages` access — kept here rather than in the model
-// file so it stays grouped with the consumer.
-fun GetMessagesResponse.toList(): List<GameMessage> = messages

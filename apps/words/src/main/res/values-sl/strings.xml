@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">Izbriši partijo?</string>
     <string name="words_detail_delete_confirm">Izbriši</string>
     <string name="words_detail_delete_message">To bo trajno izbrisalo igro in njen klepet. Tega dejanja ni mogoče razveljaviti.</string>
+    <string name="words_detail_chat_passed">%1$s je izpustil potezo</string>
+    <string name="words_detail_chat_passed_over">%1$s je izpustil potezo — konec igre</string>
+    <string name="words_detail_chat_exchanged">%1$s je zamenjal ploščice</string>
+    <string name="words_move_error_no_tiles">Nobena ploščica ni položena</string>
+    <string name="words_move_error_out_of_bounds">Postavitev je zunaj plošče</string>
+    <string name="words_move_error_square_occupied">Polje je že zasedeno</string>
+    <string name="words_move_error_not_in_line">Ploščice morajo biti v eni vrstici ali enem stolpcu</string>
+    <string name="words_move_error_not_contiguous">Ploščice morajo biti sklenjene (brez vrzeli)</string>
+    <string name="words_move_error_first_move_centre">Prva poteza mora pokriti sredinsko polje</string>
+    <string name="words_move_error_first_move_two_tiles">Prva poteza mora položiti vsaj 2 ploščici</string>
+    <string name="words_move_error_not_connected">Ploščice se morajo dotikati ploščic na plošči</string>
+    <string name="words_move_error_no_words">Nobena veljavna beseda ni nastala</string>
+    <string name="words_validation_offline">Preverjanje ni na voljo – potezo lahko vseeno oddate.</string>
+    <string name="words_validation_unknown_words">Vsebuje neznane besede. Potezo lahko vseeno oddate.</string>
 </resources>

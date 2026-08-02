@@ -374,4 +374,16 @@
     <string name="route_target_select">Selecionar</string>
     <string name="account_data_description">Descarregue uma cópia de segurança completa que pode restaurar neste ou noutro servidor Mochi.</string>
     <string name="route_target_none">Sem destinos disponíveis</string>
+    <string name="login_invalid_code">Código inválido</string>
+    <string name="accounts_provider_browser">Notificações do navegador</string>
+    <string name="accounts_provider_fcm">Push do Android</string>
+    <string name="accounts_provider_mcp">Servidor MCP</string>
+    <string name="accounts_provider_unifiedpush">Notificação push</string>
+    <string name="accounts_provider_url">URL externo</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Conta verificada</string>
+    <string name="accounts_verify_invalid">Código de verificação inválido</string>
+    <string name="accounts_verify_sent">Código de verificação enviado</string>
+    <string name="accounts_test_failed">Teste falhou</string>
+    <string name="accounts_test_sent">Teste enviado</string>
 </resources>

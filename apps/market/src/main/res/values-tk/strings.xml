@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Hemmesini arassalamak</string>
     <string name="market_listings_create">Döretmek</string>
     <string name="market_bid_dialog_ceiling_label">Iň ýokary teklip (hökman däl)</string>
+    <string name="market_asset_no_app">Bu faýly açyp biljek programma ýok</string>
+    <string name="market_asset_download_failed">Faýly ýükläp bolmady</string>
 </resources>

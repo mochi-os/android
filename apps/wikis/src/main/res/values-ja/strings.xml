@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">そのサーバーに到達できません。再試行中…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">WikiのRSS URL</string>
-    <string name="wikis_create_dialog_stub">wikiの作成は将来のアップデートで利用可能になります。</string>
     <string name="wikis_find_search_placeholder">名前、ID、フィンガープリント、またはURLで検索…</string>
     <string name="wikis_join_search_button">wikiを検索…</string>
     <string name="wikis_join_id_hint">abc123…</string>

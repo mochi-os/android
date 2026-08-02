@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Rensa allt</string>
     <string name="market_listings_create">Skapa</string>
     <string name="market_bid_dialog_ceiling_label">Högsta bud (valfritt)</string>
+    <string name="market_asset_no_app">Ingen app kan öppna den här filen</string>
+    <string name="market_asset_download_failed">Filen kunde inte hämtas</string>
 </resources>

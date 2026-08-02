@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">అన్నీ క్లియర్ చేయండి</string>
     <string name="market_listings_create">సృష్టించండి</string>
     <string name="market_bid_dialog_ceiling_label">గరిష్ట బిడ్ (ఐచ్ఛికం)</string>
+    <string name="market_asset_no_app">ఈ ఫైల్‌ను తెరవగల యాప్ ఏదీ లేదు</string>
+    <string name="market_asset_download_failed">ఫైల్‌ను డౌన్‌లోడ్ చేయలేకపోయాము</string>
 </resources>

@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">Ngoại tuyến</string>
     <string name="chess_ws_failed">Kết nối thất bại</string>
     <string name="chess_ws_reconnecting">Đang kết nối lại…</string>
+    <string name="chess_piece_white">%1$s trắng</string>
+    <string name="chess_piece_black">%1$s đen</string>
 </resources>

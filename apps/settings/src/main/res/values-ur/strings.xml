@@ -373,4 +373,16 @@
     <string name="route_target_select">منتخب کریں</string>
     <string name="account_data_description">مکمل بیک اپ ڈاؤن لوڈ کریں جسے آپ اس یا کسی دوسرے Mochi سرور پر بحال کر سکتے ہیں۔</string>
     <string name="route_target_none">کوئی ہدف دستیاب نہیں</string>
+    <string name="login_invalid_code">غلط کوڈ</string>
+    <string name="accounts_provider_browser">براؤزر نوٹیفکیشنز</string>
+    <string name="accounts_provider_fcm">Android پش</string>
+    <string name="accounts_provider_mcp">MCP سرور</string>
+    <string name="accounts_provider_unifiedpush">پش اطلاع</string>
+    <string name="accounts_provider_url">بیرونی URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">اکاؤنٹ تصدیق شدہ</string>
+    <string name="accounts_verify_invalid">غلط تصدیقی کوڈ</string>
+    <string name="accounts_verify_sent">تصدیقی کوڈ بھیج دیا گیا</string>
+    <string name="accounts_test_failed">ٹیسٹ ناکام</string>
+    <string name="accounts_test_sent">ٹیسٹ بھیج دیا گیا</string>
 </resources>

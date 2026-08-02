@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">എല്ലാം മായ്ക്കുക</string>
     <string name="market_listings_create">സൃഷ്ടിക്കുക</string>
     <string name="market_bid_dialog_ceiling_label">പരമാവധി ലേലം (ഓപ്ഷണൽ)</string>
+    <string name="market_asset_no_app">ഈ ഫയൽ തുറക്കാൻ കഴിയുന്ന ആപ്പ് ഇല്ല</string>
+    <string name="market_asset_download_failed">ഫയൽ ഡൗൺലോഡ് ചെയ്യാനായില്ല</string>
 </resources>

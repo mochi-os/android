@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Taqpach q\'umachaña</string>
     <string name="market_listings_create">Luraña</string>
     <string name="market_bid_dialog_ceiling_label">Jach\'a jakhu (munañani)</string>
+    <string name="market_asset_no_app">Janiw aka archivo jist\'arañ app utjkiti</string>
+    <string name="market_asset_download_failed">Janiw qillqata apsuñjamäkiti</string>
 </resources>

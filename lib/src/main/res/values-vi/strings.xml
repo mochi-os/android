@@ -313,4 +313,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">%1$d người đăng ký</item>
     </plurals>
+    <string name="account_token_label">Phiên Mochi</string>
 </resources>

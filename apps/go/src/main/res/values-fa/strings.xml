@@ -11,7 +11,6 @@
     <string name="go_app_title">برو</string>
     <string name="go_captures_black_sr">اسیران سیاه</string>
     <string name="go_captures_white_sr">اسیران سفید</string>
-    <string name="go_chat_close">بستن گپ</string>
     <string name="go_chat_title">گفت‌وگو</string>
     <string name="go_color_black">سیاه</string>
     <string name="go_color_white">سفید</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">پایان یافته</string>
     <string name="go_status_resigned">تسلیم شده</string>
     <string name="go_card_vs">در برابر %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">جزئیات بازی به‌زودی</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">بازی Go جدید</string>
     <string name="go_new_game_no_friends">قبل از شروع بازی باید یک دوست اضافه کنید.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">امتیازاتی که به امتیاز سفید اضافه می‌شود تا اولین حرکت سیاه را جبران کند</string>
     <string name="go_new_game_create_error">شروع بازی شکست خورد</string>
 
+    <string name="go_board_a11y">تخته Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">تخته گو %1$d×%1$d، نوبت شماست که سنگ سیاه بگذارید</string>
+    <string name="go_board_a11y_turn_white">تخته گو %1$d×%1$d، نوبت شماست که سنگ سفید بگذارید</string>
 </resources>

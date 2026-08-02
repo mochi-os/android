@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">Den tenaren er ikkje tilgjengeleg. Prøver igjen…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_create_dialog_stub">Wikioppretting vil vere tilgjengeleg i ei framtidig oppdatering.</string>
     <string name="wikis_find_search_placeholder">Søk etter namn, ID, fingeravtrykk eller URL…</string>
     <string name="wikis_join_search_button">Søk etter wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

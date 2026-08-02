@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">Futa mchezo?</string>
     <string name="words_detail_delete_confirm">Futa</string>
     <string name="words_detail_delete_message">Hatua hii itafuta mchezo na mazungumzo yake kabisa. Hatua hii haiwezi kutenduliwa.</string>
+    <string name="words_detail_chat_passed">%1$s aliruka zamu</string>
+    <string name="words_detail_chat_passed_over">%1$s aliruka zamu — mchezo umeisha</string>
+    <string name="words_detail_chat_exchanged">%1$s alibadilisha vigae</string>
+    <string name="words_move_error_no_tiles">Hakuna vigae vilivyowekwa</string>
+    <string name="words_move_error_out_of_bounds">Uwekaji uko nje ya ubao</string>
+    <string name="words_move_error_square_occupied">Kisanduku tayari kimechukuliwa</string>
+    <string name="words_move_error_not_in_line">Vigae lazima viwekwe katika safu mlalo moja au safu wima moja</string>
+    <string name="words_move_error_not_contiguous">Vigae lazima vifuatane (bila mapengo)</string>
+    <string name="words_move_error_first_move_centre">Hatua ya kwanza lazima ifunike kisanduku cha katikati</string>
+    <string name="words_move_error_first_move_two_tiles">Hatua ya kwanza lazima iweke angalau vigae 2</string>
+    <string name="words_move_error_not_connected">Vigae lazima viunganishwe na vigae vilivyopo ubaoni</string>
+    <string name="words_move_error_no_words">Hakuna maneno sahihi yaliyoundwa</string>
+    <string name="words_validation_offline">Uthibitishaji haupatikani — bado unaweza kuwasilisha.</string>
+    <string name="words_validation_unknown_words">Ina maneno yasiyojulikana. Bado unaweza kuwasilisha.</string>
 </resources>

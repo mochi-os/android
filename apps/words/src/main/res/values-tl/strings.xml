@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">I-delete</string>
     <string name="words_detail_delete_message">Permanenteng buburahin nito ang laro at ang chat nito. Hindi na maaaring bawiin ang aksyong ito.</string>
+    <string name="words_detail_chat_passed">Nag-pass si %1$s</string>
+    <string name="words_detail_chat_passed_over">Nag-pass si %1$s — tapos na ang laro</string>
+    <string name="words_detail_chat_exchanged">Nagpalit ng tiles si %1$s</string>
+    <string name="words_move_error_no_tiles">Walang inilagay na tile</string>
+    <string name="words_move_error_out_of_bounds">Nasa labas ng board ang paglalagay</string>
+    <string name="words_move_error_square_occupied">May laman na ang kahon</string>
+    <string name="words_move_error_not_in_line">Dapat nasa iisang hanay o kolum ang mga tile</string>
+    <string name="words_move_error_not_contiguous">Dapat magkadikit ang mga tile (walang puwang)</string>
+    <string name="words_move_error_first_move_centre">Dapat sakupin ng unang galaw ang gitnang kahon</string>
+    <string name="words_move_error_first_move_two_tiles">Dapat maglagay ng hindi bababa sa 2 tile ang unang galaw</string>
+    <string name="words_move_error_not_connected">Dapat dumikit ang mga tile sa mga tile na nasa board</string>
+    <string name="words_move_error_no_words">Walang nabuong balidong salita</string>
+    <string name="words_validation_offline">Offline ang pagpapatunay — puwede ka pa ring magsumite.</string>
+    <string name="words_validation_unknown_words">May mga salitang hindi kilala. Puwede ka pa ring magsumite.</string>
 </resources>

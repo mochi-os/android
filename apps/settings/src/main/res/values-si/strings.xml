@@ -373,4 +373,16 @@
     <string name="route_target_select">තෝරන්න</string>
     <string name="account_data_description">මෙම හෝ වෙනත් Mochi සේවාදායකයක ප්‍රතිසාධනය කළ හැකි සම්පූර්ණ උපස්ථයක් බාගන්න.</string>
     <string name="route_target_none">ඉලක්ක නොමැත</string>
+    <string name="login_invalid_code">අවලංගු කේතය</string>
+    <string name="accounts_provider_browser">බ්‍රවුසර දැනුම්දීම්</string>
+    <string name="accounts_provider_fcm">Android තල්ලුව</string>
+    <string name="accounts_provider_mcp">MCP සේවාදායකය</string>
+    <string name="accounts_provider_unifiedpush">තල්ලු දැනුම්දීම</string>
+    <string name="accounts_provider_url">බාහිර URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">ගිණුම සත්‍යාපනය කරන ලදී</string>
+    <string name="accounts_verify_invalid">අවලංගු සත්‍යාපන කේතය</string>
+    <string name="accounts_verify_sent">සත්‍යාපන කේතය යවන ලදී</string>
+    <string name="accounts_test_failed">පරීක්ෂණය අසාර්ථක විය</string>
+    <string name="accounts_test_sent">පරීක්ෂණය යවන ලදී</string>
 </resources>

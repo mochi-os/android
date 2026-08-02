@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Sguab às</string>
     <string name="words_detail_delete_message">Sguabaidh seo às an geama agus an cabadaich aige gu buan. Chan urrainn seo a neo-dhèanamh.</string>
+    <string name="words_detail_chat_passed">Leig %1$s seachad</string>
+    <string name="words_detail_chat_passed_over">Leig %1$s seachad — geama seachad</string>
+    <string name="words_detail_chat_exchanged">Dh\'iomlaid %1$s leacagan</string>
+    <string name="words_move_error_no_tiles">Cha deach leacag sam bith a chur sìos</string>
+    <string name="words_move_error_out_of_bounds">Tha an t-suidheachadh taobh a-muigh a\' bhùird</string>
+    <string name="words_move_error_square_occupied">Tha a\' cheàrnag làn mu thràth</string>
+    <string name="words_move_error_not_in_line">Feumaidh na leacagan a bhith ann an aon sreath no aon cholbh</string>
+    <string name="words_move_error_not_contiguous">Feumaidh na leacagan a bhith ri taobh a chèile (gun bheàrn)</string>
+    <string name="words_move_error_first_move_centre">Feumaidh a\' chiad ghluasad a\' cheàrnag mheadhain a chòmhdach</string>
+    <string name="words_move_error_first_move_two_tiles">Feumaidh a\' chiad ghluasad co-dhiù 2 leacag a chur sìos</string>
+    <string name="words_move_error_not_connected">Feumaidh na leacagan ceangal ri leacagan a tha air a\' bhòrd mu thràth</string>
+    <string name="words_move_error_no_words">Cha deach facal dligheach a chruthachadh</string>
+    <string name="words_validation_offline">Tha an dearbhadh far loidhne — \'s urrainn dhut a chur a-null fhathast.</string>
+    <string name="words_validation_unknown_words">Tha faclan neo-aithnichte ann. \'S urrainn dhut a chur a-null fhathast.</string>
 </resources>

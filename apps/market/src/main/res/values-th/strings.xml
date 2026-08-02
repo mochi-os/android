@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">ล้างทั้งหมด</string>
     <string name="market_listings_create">สร้าง</string>
     <string name="market_bid_dialog_ceiling_label">ราคาเสนอสูงสุด (ไม่บังคับ)</string>
+    <string name="market_asset_no_app">ไม่มีแอปที่เปิดไฟล์นี้ได้</string>
+    <string name="market_asset_download_failed">ดาวน์โหลดไฟล์ไม่สำเร็จ</string>
 </resources>

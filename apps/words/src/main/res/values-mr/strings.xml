@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">हटवा</string>
     <string name="words_detail_delete_message">यामुळे गेम आणि त्याचे चॅट कायमचे हटवले जाईल. ही क्रिया पूर्ववत केली जाऊ शकत नाही.</string>
+    <string name="words_detail_chat_passed">%1$s यांनी पास केले</string>
+    <string name="words_detail_chat_passed_over">%1$s यांनी पास केले — खेळ संपला</string>
+    <string name="words_detail_chat_exchanged">%1$s यांनी टाइल्स बदलल्या</string>
+    <string name="words_move_error_no_tiles">कोणतीही टाइल ठेवलेली नाही</string>
+    <string name="words_move_error_out_of_bounds">मांडणी फलकाबाहेर आहे</string>
+    <string name="words_move_error_square_occupied">हा चौकोन आधीच वापरलेला आहे</string>
+    <string name="words_move_error_not_in_line">टाइल्स एकाच ओळीत किंवा स्तंभात ठेवाव्यात</string>
+    <string name="words_move_error_not_contiguous">टाइल्स लागोपाठ असाव्यात (मध्ये जागा नको)</string>
+    <string name="words_move_error_first_move_centre">पहिल्या चालीने मधला चौकोन व्यापला पाहिजे</string>
+    <string name="words_move_error_first_move_two_tiles">पहिल्या चालीत किमान 2 टाइल्स ठेवाव्यात</string>
+    <string name="words_move_error_not_connected">टाइल्स फलकावरील विद्यमान टाइल्सना जोडल्या पाहिजेत</string>
+    <string name="words_move_error_no_words">कोणताही वैध शब्द तयार झाला नाही</string>
+    <string name="words_validation_offline">पडताळणी ऑफलाइन आहे — तुम्ही तरीही सबमिट करू शकता.</string>
+    <string name="words_validation_unknown_words">अज्ञात शब्द आहेत. तुम्ही तरीही सबमिट करू शकता.</string>
 </resources>

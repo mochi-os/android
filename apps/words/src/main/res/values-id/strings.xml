@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Hapus permainan?</string>
     <string name="words_detail_delete_confirm">Hapus</string>
     <string name="words_detail_delete_message">Ini akan menghapus permainan dan obrolannya secara permanen. Tindakan ini tidak dapat dibatalkan.</string>
+    <string name="words_detail_chat_passed">%1$s melewati giliran</string>
+    <string name="words_detail_chat_passed_over">%1$s melewati giliran — permainan selesai</string>
+    <string name="words_detail_chat_exchanged">%1$s menukar ubin</string>
+    <string name="words_move_error_no_tiles">Tidak ada ubin yang diletakkan</string>
+    <string name="words_move_error_out_of_bounds">Penempatan di luar papan</string>
+    <string name="words_move_error_square_occupied">Kotak sudah terisi</string>
+    <string name="words_move_error_not_in_line">Ubin harus diletakkan dalam satu baris atau kolom</string>
+    <string name="words_move_error_not_contiguous">Ubin harus berdampingan (tanpa celah)</string>
+    <string name="words_move_error_first_move_centre">Langkah pertama harus menutupi kotak tengah</string>
+    <string name="words_move_error_first_move_two_tiles">Langkah pertama harus meletakkan minimal 2 ubin</string>
+    <string name="words_move_error_not_connected">Ubin harus terhubung dengan ubin yang sudah ada di papan</string>
+    <string name="words_move_error_no_words">Tidak ada kata valid yang terbentuk</string>
+    <string name="words_validation_offline">Validasi offline — kamu tetap bisa mengirim.</string>
+    <string name="words_validation_unknown_words">Berisi kata yang tidak dikenal. Kamu tetap bisa mengirim.</string>
 </resources>

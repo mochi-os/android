@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">ບໍ່ສາມາດຍອมรับบางคำเชิญได้</string>
     <string name="people_invitations_some_decline_failed">ບໍ່ສາມາດປະຕິເສດບາງຄຳເຊີນໄດ້</string>
     <string name="people_invitations_some_cancel_failed">ບໍ່ສາມາດຍົກເລີกบางคำเชิญได้</string>
+    <string name="people_profile_too_long">ໂປຣໄຟລ໌ຍາວເກີນໄປ</string>
 </resources>

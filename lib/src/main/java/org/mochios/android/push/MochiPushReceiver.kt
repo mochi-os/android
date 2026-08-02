@@ -12,13 +12,40 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.FormBody
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.util.isServerOrigin
 import org.unifiedpush.android.connector.MessagingReceiver
 import org.unifiedpush.android.connector.data.PushEndpoint
 import org.unifiedpush.android.connector.data.PushMessage
+
+/**
+ * If [endpointUrl] is on the same origin as [server] (the Mochi-distributor
+ * case where our user's server allocated this endpoint), return just the path
+ * component so the server detects the local-delivery fast-path. Otherwise
+ * return the URL unchanged (the third-party-distributor case — e.g. ntfy.sh —
+ * where the server must POST RFC 8030 to the absolute URL).
+ *
+ * Compares the whole origin rather than the host, because mislabelling in
+ * either direction loses the push: judged local, the server delivers to itself
+ * instead of to the real endpoint; judged foreign, it POSTs back to its own
+ * still-stubbed inbound handler and gets a 501. A host match alone accepted
+ * `https://host:8443/…` and `http://host/…` as ours.
+ *
+ * Top-level so EndpointCollapseTest can exercise it without a receiver.
+ */
+internal fun collapseLocalEndpoint(endpointUrl: String, server: String): String {
+    val ep = endpointUrl.toHttpUrlOrNull() ?: return endpointUrl
+    // Our distributor never issues an endpoint carrying credentials or a
+    // fragment, so refuse to treat one as local rather than reason about it.
+    if (ep.encodedUsername.isNotEmpty() || ep.encodedPassword.isNotEmpty() || ep.fragment != null) {
+        return endpointUrl
+    }
+    return if (isServerOrigin(ep, server)) ep.encodedPath else endpointUrl
+}
 
 /**
  * Bridges UnifiedPush callbacks into Mochi-shaped events. The Android
@@ -40,19 +67,27 @@ abstract class MochiPushReceiver : MessagingReceiver() {
      * Deep-link Uri for tapping the notification. When [id] is non-empty
      * the dispatcher should include it on the URI so MainActivity can hit
      * the notifications app's `-/read` endpoint after navigating.
+     *
+     * [nonce] is the single-use proof that the tap came from a notification we
+     * posted, and must be carried on the URI: MainActivity is exported, so it
+     * ignores any `mochi:notification` it cannot match against an outstanding
+     * nonce. See [NonceStore].
      */
     abstract fun deepLinkFor(
         context: Context,
         instance: String,
         link: String,
-        id: String
+        id: String,
+        nonce: String
     ): android.net.Uri
 
     private fun deps(context: Context): PushEntryPoint =
         EntryPointAccessors.fromApplication(context.applicationContext, PushEntryPoint::class.java)
 
     override fun onNewEndpoint(context: Context, endpoint: PushEndpoint, instance: String) {
-        Log.i(TAG, "onNewEndpoint instance=$instance url=${endpoint.url}")
+        // The endpoint URL ends in the subscription id, which is the unguessable
+        // capability anyone can post a push to, so log only its origin.
+        Log.i(TAG, "onNewEndpoint instance=$instance host=${endpointHost(endpoint.url)}")
         val keys = endpoint.pubKeySet
         if (keys == null) {
             Log.w(TAG, "Endpoint has no Web Push keys — server can't encrypt; aborting")
@@ -70,7 +105,8 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                 val endpointToSend = collapseLocalEndpoint(endpoint.url, server)
                 Log.i(
                     TAG,
-                    "register: endpoint.url=${endpoint.url} server=$server collapsed=$endpointToSend"
+                    "register: endpoint host=${endpointHost(endpoint.url)} server=$server " +
+                        "local=${endpointToSend != endpoint.url}"
                 )
                 val accountId = postPushRegister(
                     deps.okHttpClient(),
@@ -92,24 +128,9 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         }
     }
 
-    /**
-     * If [endpointUrl] is hosted on the same origin as [server] (the
-     * Mochi-distributor case where our user's server allocated this
-     * endpoint), return just the path component so the server detects
-     * the local-delivery fast-path. Otherwise return the URL unchanged
-     * (the third-party-distributor case — e.g. ntfy.sh — where the
-     * server must POST RFC 8030 to the absolute URL).
-     */
-    private fun collapseLocalEndpoint(endpointUrl: String, server: String): String {
-        return try {
-            val ep = android.net.Uri.parse(endpointUrl)
-            val sv = android.net.Uri.parse(server)
-            if (ep.host != null && ep.host == sv.host) ep.encodedPath ?: endpointUrl
-            else endpointUrl
-        } catch (_: Exception) {
-            endpointUrl
-        }
-    }
+    /** Host of [endpointUrl], for logging that must not carry the subscription id. */
+    private fun endpointHost(endpointUrl: String): String =
+        runCatching { android.net.Uri.parse(endpointUrl).host }.getOrNull() ?: "unparseable"
 
     override fun onUnregistered(context: Context, instance: String) {
         Log.i(TAG, "onUnregistered instance=$instance")
@@ -144,6 +165,17 @@ abstract class MochiPushReceiver : MessagingReceiver() {
     }
 
     override fun onMessage(context: Context, message: PushMessage, instance: String) {
+        // The only authenticity gate on push content. The connector catches a
+        // decryption failure, logs "Could not decrypt message, trying with
+        // plain text", and calls this with decrypted = false anyway — so
+        // without the check anyone who learns the endpoint URL can post an
+        // arbitrary title, body and deep link. onNewEndpoint already refuses an
+        // endpoint that carries no keys; this is the same standard applied to
+        // the messages those keys exist to protect.
+        if (!message.decrypted) {
+            Log.w(TAG, "Push payload was not decrypted; ignoring")
+            return
+        }
         val text = message.content.toString(Charsets.UTF_8)
         val payload = try {
             JSONObject(text)
@@ -234,7 +266,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         id: String,
     ) {
         val channelId = channelId(context, instance, app, link)
-        val deepLink = deepLinkFor(context, instance, link, id)
+        val deepLink = deepLinkFor(context, instance, link, id, NonceStore(context).issue())
 
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
             flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or

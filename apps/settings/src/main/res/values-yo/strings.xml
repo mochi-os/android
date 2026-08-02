@@ -372,4 +372,16 @@
     <string name="route_target_select">Yàn</string>
     <string name="account_data_description">Ṣe àgbàsílẹ̀ ẹ̀dà ìpamọ́ pípé tí o lè dá padà sí olùpèsè Mochi yìí tàbí sí òmíràn.</string>
     <string name="route_target_none">Kò sí ibi tí a lè fi sí</string>
+    <string name="login_invalid_code">Kóòdù aláìdára</string>
+    <string name="accounts_provider_browser">Àwọn ìfitónilétí browser</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">Sáà MCP</string>
+    <string name="accounts_provider_unifiedpush">Ìfitónilétí push</string>
+    <string name="accounts_provider_url">URL òde</string>
+    <string name="accounts_provider_web">Web Mochi</string>
+    <string name="accounts_verified">A ti fọwọ́sí àkáǹtì</string>
+    <string name="accounts_verify_invalid">Kóòdù ìjẹ́rìí aláìdára</string>
+    <string name="accounts_verify_sent">Kóòdù ìjẹ́rìísí ti ránṣẹ́</string>
+    <string name="accounts_test_failed">Ìdánwò kùnà</string>
+    <string name="accounts_test_sent">A ti fi ìdánwò ránṣẹ́</string>
 </resources>

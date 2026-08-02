@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Видалити партію?</string>
     <string name="words_detail_delete_confirm">Видалити</string>
     <string name="words_detail_delete_message">Це назавжди видалить гру та її чат. Цю дію не можна скасувати.</string>
+    <string name="words_detail_chat_passed">%1$s пропустив хід</string>
+    <string name="words_detail_chat_passed_over">%1$s пропустив хід — гру завершено</string>
+    <string name="words_detail_chat_exchanged">%1$s обміняв фішки</string>
+    <string name="words_move_error_no_tiles">Не розміщено жодної фішки</string>
+    <string name="words_move_error_out_of_bounds">Розміщення за межами дошки</string>
+    <string name="words_move_error_square_occupied">Клітинку вже зайнято</string>
+    <string name="words_move_error_not_in_line">Фішки мають бути в одному рядку або стовпці</string>
+    <string name="words_move_error_not_contiguous">Фішки мають бути суміжними (без пропусків)</string>
+    <string name="words_move_error_first_move_centre">Перший хід має накрити центральну клітинку</string>
+    <string name="words_move_error_first_move_two_tiles">Перший хід має містити щонайменше 2 фішки</string>
+    <string name="words_move_error_not_connected">Фішки мають прилягати до наявних фішок на дошці</string>
+    <string name="words_move_error_no_words">Не утворено жодного дійсного слова</string>
+    <string name="words_validation_offline">Перевірка офлайн — ви все одно можете надіслати.</string>
+    <string name="words_validation_unknown_words">Містить невідомі слова. Ви все одно можете надіслати.</string>
 </resources>

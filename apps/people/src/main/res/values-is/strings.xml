@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Ekki tókst að samþykkja sum boð</string>
     <string name="people_invitations_some_decline_failed">Ekki tókst að hafna sumum boðum</string>
     <string name="people_invitations_some_cancel_failed">Ekki tókst að aflýsa sumum boðum</string>
+    <string name="people_profile_too_long">Sniðið er of langt</string>
 </resources>

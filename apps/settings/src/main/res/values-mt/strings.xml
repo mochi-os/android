@@ -378,4 +378,16 @@
     <string name="route_target_select">Agħżel</string>
     <string name="account_data_description">Niżżel kopja ta\' sigurtà sħiħa li tista\' terġa\' ttella\' fuq dan is-server Mochi jew fuq ieħor.</string>
     <string name="route_target_none">L-ebda mira disponibbli</string>
+    <string name="login_invalid_code">Kodiċi invalidu</string>
+    <string name="accounts_provider_browser">Notifiki tal-browser</string>
+    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_mcp">Server MCP</string>
+    <string name="accounts_provider_unifiedpush">Notifika push</string>
+    <string name="accounts_provider_url">URL Estern</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Kont ivverifikat</string>
+    <string name="accounts_verify_invalid">Kodiċi tal-verifika invalidu</string>
+    <string name="accounts_verify_sent">Kodiċi ta\' verifika mibgħut</string>
+    <string name="accounts_test_failed">Test falla</string>
+    <string name="accounts_test_sent">It-test intbagħat</string>
 </resources>

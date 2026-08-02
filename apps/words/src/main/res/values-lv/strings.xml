@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Dzēst spēli?</string>
     <string name="words_detail_delete_confirm">Dzēst</string>
     <string name="words_detail_delete_message">Tas neatgriezeniski dzēsīs spēli un tās tērzēšanu. Šo darbību nevar atsaukt.</string>
+    <string name="words_detail_chat_passed">%1$s izlaida gājienu</string>
+    <string name="words_detail_chat_passed_over">%1$s izlaida gājienu — spēle beigusies</string>
+    <string name="words_detail_chat_exchanged">%1$s apmainīja kauliņus</string>
+    <string name="words_move_error_no_tiles">Nav novietots neviens kauliņš</string>
+    <string name="words_move_error_out_of_bounds">Novietojums ārpus laukuma</string>
+    <string name="words_move_error_square_occupied">Lauciņš jau ir aizņemts</string>
+    <string name="words_move_error_not_in_line">Kauliņi jānovieto vienā rindā vai kolonnā</string>
+    <string name="words_move_error_not_contiguous">Kauliņiem jābūt blakus (bez atstarpēm)</string>
+    <string name="words_move_error_first_move_centre">Pirmajam gājienam jāsedz centrālais lauciņš</string>
+    <string name="words_move_error_first_move_two_tiles">Pirmajā gājienā jānovieto vismaz 2 kauliņi</string>
+    <string name="words_move_error_not_connected">Kauliņiem jāsavienojas ar laukumā esošajiem kauliņiem</string>
+    <string name="words_move_error_no_words">Nav izveidots neviens derīgs vārds</string>
+    <string name="words_validation_offline">Pārbaude ir bezsaistē — joprojām varat iesniegt.</string>
+    <string name="words_validation_unknown_words">Satur nezināmus vārdus. Joprojām varat iesniegt.</string>
 </resources>

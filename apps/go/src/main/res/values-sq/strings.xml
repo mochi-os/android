@@ -10,7 +10,6 @@
     <string name="go_app_title">Shko</string>
     <string name="go_captures_black_sr">Kapje të ziu</string>
     <string name="go_captures_white_sr">Kapje të bardhë</string>
-    <string name="go_chat_close">Mbyll bisedën</string>
     <string name="go_chat_title">Bisedë</string>
     <string name="go_color_black">I zi</string>
     <string name="go_color_white">I bardhë</string>
@@ -71,11 +70,13 @@
     <string name="go_status_finished">E përfunduar</string>
     <string name="go_status_resigned">U dorëzua</string>
     <string name="go_card_vs">kundër %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Detajet e ndeshjes së shpejti</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Ndeshje e re Go</string>
     <string name="go_new_game_no_friends">Duhet të shtosh një mik para se të fillosh një ndeshje.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Pikët e shtuara në rezultatin e të Bardhit për të kompensuar që i Ziu luan i pari</string>
     <string name="go_new_game_create_error">Dështoi fillimi i ndeshjes</string>
+    <string name="go_board_a11y">Tabela Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Tabela e Go-s %1$d×%1$d, radha juaj të vendosni një gur të zi</string>
+    <string name="go_board_a11y_turn_white">Tabela e Go-s %1$d×%1$d, radha juaj të vendosni një gur të bardhë</string>
 </resources>

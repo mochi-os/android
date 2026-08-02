@@ -312,4 +312,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">អ្នកជាវ %1$d នាក់</item>
     </plurals>
+    <string name="account_token_label">វគ្គ Mochi</string>
 </resources>

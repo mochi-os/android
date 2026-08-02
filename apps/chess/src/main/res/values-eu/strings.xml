@@ -67,4 +67,6 @@
     <string name="chess_ws_failed">Konexioak huts egin du</string>
     <string name="chess_move_capture">%1$sek %2$s hartu du</string>
     <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_piece_white">Zuria %1$s</string>
+    <string name="chess_piece_black">Beltza %1$s</string>
 </resources>

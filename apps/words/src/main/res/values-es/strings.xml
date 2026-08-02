@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">¿Eliminar la partida?</string>
     <string name="words_detail_delete_confirm">Eliminar</string>
     <string name="words_detail_delete_message">Esto elimina permanentemente la partida y su chat. Esta acción no se puede deshacer.</string>
+    <string name="words_detail_chat_passed">%1$s pasó</string>
+    <string name="words_detail_chat_passed_over">%1$s pasó — fin de la partida</string>
+    <string name="words_detail_chat_exchanged">%1$s cambió fichas</string>
+    <string name="words_move_error_no_tiles">No se colocaron fichas</string>
+    <string name="words_move_error_out_of_bounds">Colocación fuera del tablero</string>
+    <string name="words_move_error_square_occupied">La casilla ya está ocupada</string>
+    <string name="words_move_error_not_in_line">Las fichas deben colocarse en una sola fila o columna</string>
+    <string name="words_move_error_not_contiguous">Las fichas deben estar seguidas (sin huecos)</string>
+    <string name="words_move_error_first_move_centre">La primera jugada debe cubrir la casilla central</string>
+    <string name="words_move_error_first_move_two_tiles">La primera jugada debe colocar al menos 2 fichas</string>
+    <string name="words_move_error_not_connected">Las fichas deben conectar con las fichas ya puestas en el tablero</string>
+    <string name="words_move_error_no_words">No se formó ninguna palabra válida</string>
+    <string name="words_validation_offline">Validación sin conexión: aun así puedes enviarlo.</string>
+    <string name="words_validation_unknown_words">Contiene palabras desconocidas. Aun así puedes enviarlo.</string>
 </resources>

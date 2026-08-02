@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Ο διακομιστής δεν είναι προσβάσιμος. Επαναπροσπάθεια…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS του wiki</string>
-    <string name="wikis_create_dialog_stub">Η δημιουργία wiki θα είναι διαθέσιμη σε μελλοντική ενημέρωση.</string>
     <string name="wikis_find_search_placeholder">Αναζήτηση με όνομα, ID, αποτύπωμα ή URL…</string>
     <string name="wikis_join_search_button">Αναζήτηση για wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

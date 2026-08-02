@@ -377,4 +377,16 @@
     <string name="route_target_select">Tagh</string>
     <string name="account_data_description">Luchdaich a-nuas lethbhreac-glèidhidh slàn as urrainn dhut aiseag air an fhrithealaiche Mochi seo no air fear eile.</string>
     <string name="route_target_none">Chan eil targaidean ri làimh</string>
+    <string name="login_invalid_code">Còd mì-dhligheach</string>
+    <string name="accounts_provider_browser">Brathan brabhsair</string>
+    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_mcp">Frithealaiche MCP</string>
+    <string name="accounts_provider_unifiedpush">Brath push</string>
+    <string name="accounts_provider_url">URL on taobh a-muigh</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Cunntas dearbhte</string>
+    <string name="accounts_verify_invalid">Còd dearbhaidh mì-dhligheach</string>
+    <string name="accounts_verify_sent">Còd dearbhaidh air a chur</string>
+    <string name="accounts_test_failed">Dh\'fhàillig an deuchainn</string>
+    <string name="accounts_test_sent">Chaidh an deuchainn a chur</string>
 </resources>

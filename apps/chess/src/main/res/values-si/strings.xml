@@ -70,4 +70,6 @@
     <string name="chess_move_capture">%1$s %2$s ගත්තා</string>
     <string name="chess_captured_multiplier">×%1$d</string>
 
+    <string name="chess_piece_white">සුදු %1$s</string>
+    <string name="chess_piece_black">කළු %1$s</string>
 </resources>

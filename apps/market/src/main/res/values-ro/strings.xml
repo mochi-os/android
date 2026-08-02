@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Golește tot</string>
     <string name="market_listings_create">Creează</string>
     <string name="market_bid_dialog_ceiling_label">Ofertă maximă (opțional)</string>
+    <string name="market_asset_no_app">Nicio aplicație nu poate deschide acest fișier</string>
+    <string name="market_asset_download_failed">Fișierul nu a putut fi descărcat</string>
 </resources>

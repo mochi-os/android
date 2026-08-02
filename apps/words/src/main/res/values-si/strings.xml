@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">මකන්න</string>
     <string name="words_detail_delete_message">මෙය ක්‍රීඩාව සහ එහි කතාබස් ස්ථිරවම මකා දමයි. මෙම ක්‍රියාව අහෝසි කළ නොහැක.</string>
+    <string name="words_detail_chat_passed">%1$s මගහැරියා</string>
+    <string name="words_detail_chat_passed_over">%1$s මගහැරියා — ක්‍රීඩාව අවසන්</string>
+    <string name="words_detail_chat_exchanged">%1$s ටයිල් මාරු කළා</string>
+    <string name="words_move_error_no_tiles">ටයිල් තබා නැත</string>
+    <string name="words_move_error_out_of_bounds">තැබීම පුවරුවෙන් පිටත ය</string>
+    <string name="words_move_error_square_occupied">එම කොටුව දැනටමත් පිරී ඇත</string>
+    <string name="words_move_error_not_in_line">ටයිල් එකම පේළියක හෝ තීරුවක තැබිය යුතුය</string>
+    <string name="words_move_error_not_contiguous">ටයිල් එකට යාව තිබිය යුතුය (හිස් තැන් නොමැතිව)</string>
+    <string name="words_move_error_first_move_centre">පළමු ගමනින් මධ්‍ය කොටුව ආවරණය කළ යුතුය</string>
+    <string name="words_move_error_first_move_two_tiles">පළමු ගමනේදී අවම වශයෙන් ටයිල් 2ක් තැබිය යුතුය</string>
+    <string name="words_move_error_not_connected">ටයිල් පුවරුවේ ඇති ටයිල් සමඟ සම්බන්ධ විය යුතුය</string>
+    <string name="words_move_error_no_words">වලංගු වචන කිසිවක් සෑදී නැත</string>
+    <string name="words_validation_offline">තහවුරු කිරීම නොබැඳිය — ඔබට තවමත් ඉදිරිපත් කළ හැකිය.</string>
+    <string name="words_validation_unknown_words">නොදන්නා වචන අඩංගුයි. ඔබට තවමත් ඉදිරිපත් කළ හැකිය.</string>
 </resources>

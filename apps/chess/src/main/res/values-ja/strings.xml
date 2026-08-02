@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">オフライン</string>
     <string name="chess_ws_failed">接続に失敗しました</string>
     <string name="chess_ws_reconnecting">再接続中…</string>
+    <string name="chess_piece_white">白の%1$s</string>
+    <string name="chess_piece_black">黒の%1$s</string>
 </resources>

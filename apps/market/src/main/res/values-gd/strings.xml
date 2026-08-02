@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Falamhaich a h-uile</string>
     <string name="market_listings_create">Cruthaich</string>
     <string name="market_bid_dialog_ceiling_label">Tairgse as àirde (roghainneil)</string>
+    <string name="market_asset_no_app">Chan eil aplacaid ann as urrainn am faidhle seo fhosgladh</string>
+    <string name="market_asset_download_failed">Cha b\' urrainn am faidhle a luchdachadh a-nuas</string>
 </resources>

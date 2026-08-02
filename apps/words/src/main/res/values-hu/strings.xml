@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Játszma törlése?</string>
     <string name="words_detail_delete_confirm">Törlés</string>
     <string name="words_detail_delete_message">Ez véglegesen törli a játékot és a hozzá tartozó csevegést. Ez a művelet nem vonható vissza.</string>
+    <string name="words_detail_chat_passed">%1$s passzolt</string>
+    <string name="words_detail_chat_passed_over">%1$s passzolt — játék vége</string>
+    <string name="words_detail_chat_exchanged">%1$s zsetont cserélt</string>
+    <string name="words_move_error_no_tiles">Nincs lerakott kő</string>
+    <string name="words_move_error_out_of_bounds">A lerakás kilóg a tábláról</string>
+    <string name="words_move_error_square_occupied">A mező már foglalt</string>
+    <string name="words_move_error_not_in_line">A köveket egyetlen sorba vagy oszlopba kell lerakni</string>
+    <string name="words_move_error_not_contiguous">A köveknek egymás mellett kell lenniük (kihagyás nélkül)</string>
+    <string name="words_move_error_first_move_centre">Az első lépésnek le kell fednie a középső mezőt</string>
+    <string name="words_move_error_first_move_two_tiles">Az első lépésben legalább 2 követ kell lerakni</string>
+    <string name="words_move_error_not_connected">A köveknek kapcsolódniuk kell a táblán lévő kövekhez</string>
+    <string name="words_move_error_no_words">Nem jött létre érvényes szó</string>
+    <string name="words_validation_offline">Az ellenőrzés offline — ettől még beküldheted.</string>
+    <string name="words_validation_unknown_words">Ismeretlen szavakat tartalmaz. Ettől még beküldheted.</string>
 </resources>

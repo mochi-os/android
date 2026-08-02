@@ -379,4 +379,16 @@
     <string name="route_target_select">Roghnaigh</string>
     <string name="account_data_description">Íoslódáil cúltaca iomlán is féidir leat a athchóiriú ar an bhfreastalaí Mochi seo nó ar cheann eile.</string>
     <string name="route_target_none">Níl aon sprioc ar fáil</string>
+    <string name="login_invalid_code">Cód neamhbhailí</string>
+    <string name="accounts_provider_browser">Fógraí brabhsálaí</string>
+    <string name="accounts_provider_fcm">Brú Android</string>
+    <string name="accounts_provider_mcp">Freastalaí MCP</string>
+    <string name="accounts_provider_unifiedpush">Fógra brú</string>
+    <string name="accounts_provider_url">URL seachtrach</string>
+    <string name="accounts_provider_web">Mochi gréasáin</string>
+    <string name="accounts_verified">Cuntas fíoraithe</string>
+    <string name="accounts_verify_invalid">Cód fíoraithe neamhbhailí</string>
+    <string name="accounts_verify_sent">Cód fíoraithe seolta</string>
+    <string name="accounts_test_failed">Theip ar an tástáil</string>
+    <string name="accounts_test_sent">Tástáil seolta</string>
 </resources>

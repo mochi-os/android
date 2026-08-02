@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">मेटाईं</string>
     <string name="words_detail_delete_message">ई खेल आ ओकर चैट के स्थायी रूप से मेटा दी। एकरा वापस नइखे कईल जा सकत।</string>
+    <string name="words_detail_chat_passed">%1$s पास कइलें</string>
+    <string name="words_detail_chat_passed_over">%1$s पास कइलें — खेल खतम</string>
+    <string name="words_detail_chat_exchanged">%1$s गोटी बदललें</string>
+    <string name="words_move_error_no_tiles">कौनो टाइल ना रखल गइल</string>
+    <string name="words_move_error_out_of_bounds">रखनाई बोर्ड से बाहर बा</string>
+    <string name="words_move_error_square_occupied">ई खाना पहिले से भरल बा</string>
+    <string name="words_move_error_not_in_line">टाइल सब एके पंक्ति भा एके स्तंभ में रखे के पड़ी</string>
+    <string name="words_move_error_not_contiguous">टाइल सब सटल होखे के चाहीं (बीच में खाली जगह ना)</string>
+    <string name="words_move_error_first_move_centre">पहिल चाल में बीच के खाना ढंके के पड़ी</string>
+    <string name="words_move_error_first_move_two_tiles">पहिल चाल में कम से कम 2 टाइल रखे के पड़ी</string>
+    <string name="words_move_error_not_connected">टाइल सब बोर्ड पर पहिले से रखल टाइल से जुड़ल होखे के चाहीं</string>
+    <string name="words_move_error_no_words">कौनो सही शब्द ना बनल</string>
+    <string name="words_validation_offline">जाँच ऑफलाइन बा — रउआ अबहियों जमा कर सकेनी।</string>
+    <string name="words_validation_unknown_words">अनजान शब्द बा। रउआ अबहियों जमा कर सकेनी।</string>
 </resources>

@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">該伺服器無法存取。重試中…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Wiki 建立功能將在未來更新中提供。</string>
     <string name="wikis_find_search_placeholder">依名稱、ID、指紋或 URL 搜尋…</string>
     <string name="wikis_join_search_button">搜尋 wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

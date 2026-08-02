@@ -10,7 +10,6 @@
     <string name="go_app_title">Pergi</string>
     <string name="go_captures_black_sr">Tangkapan hitam</string>
     <string name="go_captures_white_sr">Tangkapan putih</string>
-    <string name="go_chat_close">Tutup sembang</string>
     <string name="go_chat_title">Sembang</string>
     <string name="go_color_black">Hitam</string>
     <string name="go_color_white">Putih</string>
@@ -71,11 +70,13 @@
     <string name="go_status_finished">Selesai</string>
     <string name="go_status_resigned">Menyerah</string>
     <string name="go_card_vs">lawan %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Butiran permainan tidak lama lagi</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Permainan Go baharu</string>
     <string name="go_new_game_no_friends">Anda perlu menambah rakan sebelum boleh memulakan permainan.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Mata ditambah ke skor Putih untuk mengimbangi Hitam yang bergerak dahulu</string>
     <string name="go_new_game_create_error">Gagal memulakan permainan</string>
+    <string name="go_board_a11y">Papan Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Papan Go %1$d×%1$d, giliran anda meletakkan batu hitam</string>
+    <string name="go_board_a11y_turn_white">Papan Go %1$d×%1$d, giliran anda meletakkan batu putih</string>
 </resources>

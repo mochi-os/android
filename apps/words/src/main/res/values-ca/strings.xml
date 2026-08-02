@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Eliminar partida?</string>
     <string name="words_detail_delete_confirm">Suprimeix</string>
     <string name="words_detail_delete_message">Això suprimeix permanentment la partida i el seu xat. Aquesta acció no es pot desfer.</string>
+    <string name="words_detail_chat_passed">%1$s ha passat</string>
+    <string name="words_detail_chat_passed_over">%1$s ha passat — partida acabada</string>
+    <string name="words_detail_chat_exchanged">%1$s ha canviat fitxes</string>
+    <string name="words_move_error_no_tiles">No s\'ha col·locat cap fitxa</string>
+    <string name="words_move_error_out_of_bounds">La col·locació queda fora del tauler</string>
+    <string name="words_move_error_square_occupied">La casella ja està ocupada</string>
+    <string name="words_move_error_not_in_line">Les fitxes s\'han de col·locar en una sola fila o columna</string>
+    <string name="words_move_error_not_contiguous">Les fitxes han de ser contigües (sense buits)</string>
+    <string name="words_move_error_first_move_centre">La primera jugada ha de cobrir la casella central</string>
+    <string name="words_move_error_first_move_two_tiles">La primera jugada ha de col·locar almenys 2 fitxes</string>
+    <string name="words_move_error_not_connected">Les fitxes han de connectar amb fitxes ja col·locades al tauler</string>
+    <string name="words_move_error_no_words">No s\'ha format cap paraula vàlida</string>
+    <string name="words_validation_offline">Validació fora de línia: tot i així pots enviar-ho.</string>
+    <string name="words_validation_unknown_words">Conté paraules desconegudes. Tot i així pots enviar-ho.</string>
 </resources>

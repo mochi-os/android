@@ -69,4 +69,6 @@
     <string name="chess_ws_disconnected">غير متصل</string>
     <string name="chess_ws_failed">فشل الاتصال</string>
     <string name="chess_ws_reconnecting">جارٍ إعادة الاتصال…</string>
+    <string name="chess_piece_white">%1$s الأبيض</string>
+    <string name="chess_piece_black">%1$s الأسود</string>
 </resources>

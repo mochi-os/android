@@ -110,14 +110,16 @@ class MochiWebSocket @Inject constructor(
             .replace("http://", "ws://")
             .trimEnd('/')
         val storedToken = tokens[key]
-        val url = if (storedToken != null) {
-            "$wsUrl/_/websocket?key=$fingerprint&token=$storedToken"
-        } else {
-            "$wsUrl/_/websocket?key=$fingerprint"
-        }
-
+        // The token goes in a header, never the query. A browser cannot set one
+        // on a WebSocket handshake, which is why the server also accepts ?token=
+        // — but OkHttp can, and the URL form leaks: RealWebSocket.connect()
+        // preserves the client's application interceptors, so the unguarded
+        // HttpLoggingInterceptor writes the full URL, and with it a year-long
+        // credential, into logcat on release builds. The server accepts
+        // Authorization: Bearer at websockets.go:33-44.
         val request = Request.Builder()
-            .url(url)
+            .url(socketUrl(wsUrl, fingerprint))
+            .apply { if (storedToken != null) header("Authorization", "Bearer $storedToken") }
             .build()
 
         reconnecting[key] = true
@@ -202,3 +204,12 @@ class MochiWebSocket @Inject constructor(
         }.start()
     }
 }
+
+/**
+ * Handshake URL for a subscription. Carries no credential: the token travels in
+ * an Authorization header, because the URL is written to logcat by the client's
+ * logging interceptor, which survives into the WebSocket call.
+ */
+internal fun socketUrl(wsBase: String, fingerprint: String): String =
+    "$wsBase/_/websocket?key=$fingerprint"
+

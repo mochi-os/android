@@ -10,7 +10,6 @@
     <string name="go_app_title">যান</string>
     <string name="go_captures_black_sr">কালো বন্দি</string>
     <string name="go_captures_white_sr">সাদা বন্দি</string>
-    <string name="go_chat_close">চ্যাট বন্ধ করুন</string>
     <string name="go_chat_title">চ্যাট</string>
     <string name="go_color_black">কালো</string>
     <string name="go_color_white">সাদা</string>
@@ -71,11 +70,13 @@
     <string name="go_status_finished">শেষ হয়েছে</string>
     <string name="go_status_resigned">ছেড়ে দিয়েছে</string>
     <string name="go_card_vs">বনাম %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">গেমের বিবরণ শীঘ্রই</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">নতুন Go গেম</string>
     <string name="go_new_game_no_friends">গেম শুরু করার আগে আপনাকে একজন বন্ধু যোগ করতে হবে।</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">কালো প্রথমে চাল দেওয়ার ক্ষতিপূরণ হিসেবে সাদার স্কোরে যোগ করা পয়েন্ট</string>
     <string name="go_new_game_create_error">গেম শুরু করতে ব্যর্থ</string>
+    <string name="go_board_a11y">%1$d×%1$d Go বোর্ড</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d গো বোর্ড, কালো পাথর রাখার আপনার পালা</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d গো বোর্ড, সাদা পাথর রাখার আপনার পালা</string>
 </resources>

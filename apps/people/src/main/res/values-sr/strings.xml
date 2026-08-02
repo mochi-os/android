@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Неке позиве није било могуће прихватити</string>
     <string name="people_invitations_some_decline_failed">Неке позиве није било могуће одбити</string>
     <string name="people_invitations_some_cancel_failed">Неке позиве није било могуће отказати</string>
+    <string name="people_profile_too_long">Профил је предугачак</string>
 </resources>

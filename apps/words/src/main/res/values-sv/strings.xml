@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Radera parti?</string>
     <string name="words_detail_delete_confirm">Ta bort</string>
     <string name="words_detail_delete_message">Detta tar bort partiet och dess chatt permanent. Detta går inte att ångra.</string>
+    <string name="words_detail_chat_passed">%1$s passade</string>
+    <string name="words_detail_chat_passed_over">%1$s passade — spelet är slut</string>
+    <string name="words_detail_chat_exchanged">%1$s bytte brickor</string>
+    <string name="words_move_error_no_tiles">Inga brickor placerade</string>
+    <string name="words_move_error_out_of_bounds">Placeringen är utanför spelplanen</string>
+    <string name="words_move_error_square_occupied">Rutan är redan upptagen</string>
+    <string name="words_move_error_not_in_line">Brickorna måste placeras i en och samma rad eller kolumn</string>
+    <string name="words_move_error_not_contiguous">Brickorna måste ligga i följd (inga luckor)</string>
+    <string name="words_move_error_first_move_centre">Första draget måste täcka mittrutan</string>
+    <string name="words_move_error_first_move_two_tiles">Första draget måste lägga minst 2 brickor</string>
+    <string name="words_move_error_not_connected">Brickorna måste ansluta till befintliga brickor på spelplanen</string>
+    <string name="words_move_error_no_words">Inga giltiga ord bildades</string>
+    <string name="words_validation_offline">Valideringen är offline – du kan ändå skicka in draget.</string>
+    <string name="words_validation_unknown_words">Innehåller okända ord. Du kan ändå skicka in draget.</string>
 </resources>

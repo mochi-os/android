@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
@@ -37,11 +38,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -52,6 +56,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
@@ -78,7 +84,31 @@ fun ConnectedAccountsScreen(
     var settingsOf by remember { mutableStateOf<ConnectedAccount?>(null) }
     var deleting by remember { mutableStateOf<ConnectedAccount?>(null) }
 
+    val snackbar = remember { SnackbarHostState() }
+
+    // An error while content is on screen is shown over it rather than
+
+    // replacing it: the full-screen arm below only fires when there is
+
+    // nothing to show, and nothing on it can reach a refresh to clear it.
+
+    LaunchedEffect(state.error) {
+
+        val failure = state.error
+
+        if (failure != null && (state.accounts.isNotEmpty() || state.providers.isNotEmpty())) {
+
+            snackbar.showSnackbar(failure.userMessage())
+
+            viewModel.clearError()
+
+        }
+
+    }
+
     Scaffold(
+
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.accounts_title)) },
@@ -93,7 +123,7 @@ fun ConnectedAccountsScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
-                state.error != null -> Text(
+                state.error != null && state.accounts.isEmpty() && state.providers.isEmpty() -> Text(
                     text = state.error!!.userMessage(),
                     color = MaterialTheme.colorScheme.error,
                     modifier = Modifier.align(Alignment.Center).padding(16.dp),
@@ -339,6 +369,10 @@ private fun AddAccountDialog(
                             onValueChange = { apiKey = it },
                             label = { Text(stringResource(R.string.accounts_field_api_key)) },
                             singleLine = true,
+                            // A live third-party bearer credential: mask it, and
+                            // keep it off the IME's personalised-learning path.
+                            visualTransformation = PasswordVisualTransformation(),
+                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                             modifier = Modifier.fillMaxWidth(),
                         )
                         OutlinedTextField(
@@ -433,7 +467,10 @@ private fun AccountSettingsDialog(
     onDismiss: () -> Unit,
     onSave: (String, String) -> Unit,
 ) {
-    var name by remember { mutableStateOf(account.label.ifBlank { displayName(account) }) }
+    // Resolved outside the remember: displayName reads string resources, and a
+    // remember calculation is not a composable context.
+    val fallbackName = displayName(account)
+    var name by remember { mutableStateOf(account.label.ifBlank { fallbackName }) }
     val isAi = account.type == "openai" || account.type == "claude"
     var model by remember {
         mutableStateOf(if (account.identifier == "default") "" else account.identifier)
@@ -485,26 +522,29 @@ private fun SnackBanner(message: String, onDismiss: () -> Unit) {
     }
 }
 
+@Composable
 private fun displayName(account: ConnectedAccount): String {
     if (account.label.isNotBlank()) return account.label
     if (account.type == "email" && account.identifier.isNotBlank()) return account.identifier
     return providerTypeLabel(account.type)
 }
 
-// Mirrors PROVIDER_LABELS in lib/web/src/features/accounts/types.ts. These are
-// proper-noun product names (Mochi web, Claude, OpenAI, etc.) that stay verbatim
-// across locales per the glossary; no i18n needed.
+// Mirrors providerLabels() in lib/web/src/features/accounts/types.ts, which
+// wraps seven of these eleven in t`` — including "Mochi web", where only the
+// brand is fixed. Only Claude, ntfy, OpenAI and Pushbullet are bare product
+// names that stay verbatim across locales per the glossary.
+@Composable
 private fun providerTypeLabel(type: String): String = when (type) {
-    "browser" -> "Browser notifications"
+    "browser" -> stringResource(R.string.accounts_provider_browser)
     "claude" -> "Claude"
-    "email" -> "Email"
-    "fcm" -> "Android push"
-    "mcp" -> "MCP server"
+    "email" -> stringResource(R.string.accounts_field_email)
+    "fcm" -> stringResource(R.string.accounts_provider_fcm)
+    "mcp" -> stringResource(R.string.accounts_provider_mcp)
     "ntfy" -> "ntfy"
     "openai" -> "OpenAI"
     "pushbullet" -> "Pushbullet"
-    "unifiedpush" -> "Push notification"
-    "url" -> "External URL"
-    "web" -> "Mochi web"
+    "unifiedpush" -> stringResource(R.string.accounts_provider_unifiedpush)
+    "url" -> stringResource(R.string.accounts_provider_url)
+    "web" -> stringResource(R.string.accounts_provider_web)
     else -> type
 }

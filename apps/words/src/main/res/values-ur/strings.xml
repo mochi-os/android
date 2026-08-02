@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">کھیل حذف کریں؟</string>
     <string name="words_detail_delete_confirm">حذف کریں</string>
     <string name="words_detail_delete_message">یہ گیم اور اس کی چیٹ کو مستقل طور پر حذف کر دے گا۔ اس عمل کو واپس نہیں لیا جا سکتا۔</string>
+    <string name="words_detail_chat_passed">%1$s نے پاس کیا</string>
+    <string name="words_detail_chat_passed_over">%1$s نے پاس کیا — گیم ختم</string>
+    <string name="words_detail_chat_exchanged">%1$s نے ٹائلیں بدلیں</string>
+    <string name="words_move_error_no_tiles">کوئی ٹائل نہیں رکھی گئی</string>
+    <string name="words_move_error_out_of_bounds">جگہ بورڈ سے باہر ہے</string>
+    <string name="words_move_error_square_occupied">خانہ پہلے سے بھرا ہوا ہے</string>
+    <string name="words_move_error_not_in_line">ٹائلیں ایک ہی قطار یا کالم میں رکھنی ہوں گی</string>
+    <string name="words_move_error_not_contiguous">ٹائلیں متصل ہونی چاہئیں (کوئی خلا نہیں)</string>
+    <string name="words_move_error_first_move_centre">پہلی چال میں درمیانی خانہ ڈھکنا ضروری ہے</string>
+    <string name="words_move_error_first_move_two_tiles">پہلی چال میں کم از کم 2 ٹائلیں رکھنی ہوں گی</string>
+    <string name="words_move_error_not_connected">ٹائلیں بورڈ پر موجود ٹائلوں سے جڑنی چاہئیں</string>
+    <string name="words_move_error_no_words">کوئی درست لفظ نہیں بنا</string>
+    <string name="words_validation_offline">تصدیق آف لائن ہے — آپ پھر بھی جمع کر سکتے ہیں۔</string>
+    <string name="words_validation_unknown_words">نامعلوم الفاظ پر مشتمل ہے۔ آپ پھر بھی جمع کر سکتے ہیں۔</string>
 </resources>

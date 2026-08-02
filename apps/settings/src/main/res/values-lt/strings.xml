@@ -377,4 +377,16 @@
     <string name="route_target_select">Pasirinkti</string>
     <string name="account_data_description">Atsisiųskite visą atsarginę kopiją, kurią galite atkurti šiame arba kitame Mochi serveryje.</string>
     <string name="route_target_none">Nėra galimų tikslų</string>
+    <string name="login_invalid_code">Netinkamas kodas</string>
+    <string name="accounts_provider_browser">Naršyklės pranešimai</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP serveris</string>
+    <string name="accounts_provider_unifiedpush">Push pranešimas</string>
+    <string name="accounts_provider_url">Išorinis URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Paskyra patvirtinta</string>
+    <string name="accounts_verify_invalid">Netinkamas patvirtinimo kodas</string>
+    <string name="accounts_verify_sent">Patvirtinimo kodas išsiųstas</string>
+    <string name="accounts_test_failed">Bandymas nepavyko</string>
+    <string name="accounts_test_sent">Bandymas išsiųstas</string>
 </resources>

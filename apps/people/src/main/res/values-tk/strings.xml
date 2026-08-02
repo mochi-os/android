@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Käbir çakylyklary kabul edip bolmady</string>
     <string name="people_invitations_some_decline_failed">Käbir çakylyklary ret edip bolmady</string>
     <string name="people_invitations_some_cancel_failed">Käbir çakylyklary ýatyryp bolmady</string>
+    <string name="people_profile_too_long">Profil aşa uzyn</string>
 </resources>

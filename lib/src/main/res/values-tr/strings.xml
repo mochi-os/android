@@ -313,4 +313,5 @@
         <item quantity="one">%1$d abone</item>
         <item quantity="other">%1$d abone</item>
     </plurals>
+    <string name="account_token_label">Mochi oturumu</string>
 </resources>

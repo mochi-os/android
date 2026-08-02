@@ -11,7 +11,6 @@
     <string name="go_app_title">ទៅ</string>
     <string name="go_captures_black_sr">ការចាប់ខ្មៅ</string>
     <string name="go_captures_white_sr">ការចាប់ស</string>
-    <string name="go_chat_close">បិទការជជែក</string>
     <string name="go_chat_title">ជជែក</string>
     <string name="go_color_black">ខ្មៅ</string>
     <string name="go_color_white">ស</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Game detail coming soon</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">New Go game</string>
     <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
     <string name="go_new_game_create_error">Failed to start game</string>
 
+    <string name="go_board_a11y">ក្តារ Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">ក្តារ Go %1$d×%1$d វេនរបស់អ្នកដាក់ត្បូងខ្មៅ</string>
+    <string name="go_board_a11y_turn_white">ក្តារ Go %1$d×%1$d វេនរបស់អ្នកដាក់ត្បូងស</string>
 </resources>

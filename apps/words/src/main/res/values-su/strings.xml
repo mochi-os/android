@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">Hapus</string>
     <string name="words_detail_delete_message">Ieu bakal ngahapus kaulinan sareng obrolanana sacara permanén. Tindakan ieu teu tiasa dibatalkeun.</string>
+    <string name="words_detail_chat_passed">%1$s ngaliwat</string>
+    <string name="words_detail_chat_passed_over">%1$s ngaliwat — kaulinan réngsé</string>
+    <string name="words_detail_chat_exchanged">%1$s nukeuran ubin</string>
+    <string name="words_move_error_no_tiles">Teu aya ubin nu diteundeun</string>
+    <string name="words_move_error_out_of_bounds">Panempatan kaluar tina papan</string>
+    <string name="words_move_error_square_occupied">Kotak geus dieusi</string>
+    <string name="words_move_error_not_in_line">Ubin kudu diteundeun dina hiji baris atawa hiji kolom</string>
+    <string name="words_move_error_not_contiguous">Ubin kudu nyambung (teu meunang aya rohangan kosong)</string>
+    <string name="words_move_error_first_move_centre">Léngkah munggaran kudu nutupan kotak tengah</string>
+    <string name="words_move_error_first_move_two_tiles">Léngkah munggaran kudu neundeun sahenteuna 2 ubin</string>
+    <string name="words_move_error_not_connected">Ubin kudu nyambung ka ubin nu geus aya dina papan</string>
+    <string name="words_move_error_no_words">Teu aya kecap sah nu kabentuk</string>
+    <string name="words_validation_offline">Validasi offline — anjeun tetep tiasa ngalebetkeun.</string>
+    <string name="words_validation_unknown_words">Ngandung kecap nu teu dipikawanoh. Anjeun tetep tiasa ngalebetkeun.</string>
 </resources>

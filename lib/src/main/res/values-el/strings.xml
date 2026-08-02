@@ -313,4 +313,5 @@
         <item quantity="one">%1$d συνδρομητής</item>
         <item quantity="other">%1$d συνδρομητές</item>
     </plurals>
+    <string name="account_token_label">Συνεδρία Mochi</string>
 </resources>

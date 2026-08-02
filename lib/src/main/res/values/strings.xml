@@ -373,4 +373,5 @@
     <string name="reactivation_reactivate">Reactivate my account</string>
     <string name="reactivation_sign_out">Continue closing and sign out</string>
 
+    <string name="account_token_label">Mochi session</string>
 </resources>

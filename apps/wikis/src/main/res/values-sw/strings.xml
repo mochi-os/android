@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">Seva hiyo haipatikani. Inajaribu tena…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL ya RSS ya Wiki</string>
-    <string name="wikis_create_dialog_stub">Uundaji wa wiki utapatikana katika sasisho la baadaye.</string>
     <string name="wikis_find_search_placeholder">Tafuta kwa jina, ID, alama ya kidole, au URL…</string>
     <string name="wikis_join_search_button">Tafuta wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

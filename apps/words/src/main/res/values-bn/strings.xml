@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">গেম মুছবেন?</string>
     <string name="words_detail_delete_confirm">মুছুন</string>
     <string name="words_detail_delete_message">এটি গেম এবং এর চ্যাট স্থায়ীভাবে মুছে ফেলবে। এটি ফিরিয়ে আনা যাবে না।</string>
+    <string name="words_detail_chat_passed">%1$s পাস করেছেন</string>
+    <string name="words_detail_chat_passed_over">%1$s পাস করেছেন — খেলা শেষ</string>
+    <string name="words_detail_chat_exchanged">%1$s টাইল বদল করেছেন</string>
+    <string name="words_move_error_no_tiles">কোনো টাইল বসানো হয়নি</string>
+    <string name="words_move_error_out_of_bounds">বসানো বোর্ডের বাইরে চলে গেছে</string>
+    <string name="words_move_error_square_occupied">ঘরটি আগে থেকেই দখল করা আছে</string>
+    <string name="words_move_error_not_in_line">টাইলগুলি একই সারি বা কলামে বসাতে হবে</string>
+    <string name="words_move_error_not_contiguous">টাইলগুলি পাশাপাশি হতে হবে (ফাঁক রাখা যাবে না)</string>
+    <string name="words_move_error_first_move_centre">প্রথম চালে মাঝের ঘরটি ঢাকতে হবে</string>
+    <string name="words_move_error_first_move_two_tiles">প্রথম চালে অন্তত ২টি টাইল বসাতে হবে</string>
+    <string name="words_move_error_not_connected">টাইলগুলি বোর্ডে থাকা টাইলের সঙ্গে যুক্ত হতে হবে</string>
+    <string name="words_move_error_no_words">কোনো বৈধ শব্দ তৈরি হয়নি</string>
+    <string name="words_validation_offline">যাচাই অফলাইন — আপনি এখনও জমা দিতে পারেন।</string>
+    <string name="words_validation_unknown_words">অজানা শব্দ রয়েছে। আপনি এখনও জমা দিতে পারেন।</string>
 </resources>

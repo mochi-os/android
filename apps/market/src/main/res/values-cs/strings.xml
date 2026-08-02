@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Vymazat vše</string>
     <string name="market_listings_create">Vytvořit</string>
     <string name="market_bid_dialog_ceiling_label">Maximální nabídka (volitelné)</string>
+    <string name="market_asset_no_app">Tento soubor nelze otevřít žádnou aplikací</string>
+    <string name="market_asset_download_failed">Soubor se nepodařilo stáhnout</string>
 </resources>

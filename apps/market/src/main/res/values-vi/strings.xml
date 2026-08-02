@@ -746,4 +746,6 @@
     <string name="market_recently_viewed_clear">Xóa tất cả</string>
     <string name="market_listings_create">Tạo</string>
     <string name="market_bid_dialog_ceiling_label">Giá đặt tối đa (tùy chọn)</string>
+    <string name="market_asset_no_app">Không có ứng dụng nào có thể mở tệp này</string>
+    <string name="market_asset_download_failed">Không thể tải xuống tệp</string>
 </resources>

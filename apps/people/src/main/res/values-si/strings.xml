@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">සමහර ආරාධනා පිළිගත නොහැකි විය</string>
     <string name="people_invitations_some_decline_failed">සමහර ආරාධනා ප්‍රතික්ෂේප කළ නොහැකි විය</string>
     <string name="people_invitations_some_cancel_failed">සමහර ආරාධනා අවලංගු කළ නොහැකි විය</string>
+    <string name="people_profile_too_long">පැතිකඩ දිග වැඩියි</string>
 </resources>

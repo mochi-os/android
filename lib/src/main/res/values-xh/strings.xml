@@ -313,4 +313,5 @@
         <item quantity="one">umbhalisi %1$d</item>
         <item quantity="other">ababhalisi %1$d</item>
     </plurals>
+    <string name="account_token_label">Iseshoni ye-Mochi</string>
 </resources>

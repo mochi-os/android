@@ -179,9 +179,10 @@ fun GoGameListScreen(
                         } else {
                             GameList(
                                 games = visibleGames,
+                                myIdentity = uiState.identity.orEmpty(),
                                 onOpen = { game ->
                                     navController.navigate(
-                                        GoApp.gameDetail(game.fingerprint ?: game.id),
+                                        GoApp.gameDetail(game.id),
                                     )
                                 },
                             )
@@ -256,20 +257,20 @@ private fun EmptyState(filter: GoSidebarFilter, onNewGame: () -> Unit) {
 }
 
 @Composable
-private fun GameList(games: List<Game>, onOpen: (Game) -> Unit) {
+private fun GameList(games: List<Game>, myIdentity: String, onOpen: (Game) -> Unit) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         items(games, key = { it.id }) { game ->
-            GameCard(game = game, onOpen = { onOpen(game) })
+            GameCard(game = game, myIdentity = myIdentity, onOpen = { onOpen(game) })
         }
     }
 }
 
 @Composable
-private fun GameCard(game: Game, onOpen: () -> Unit) {
+private fun GameCard(game: Game, myIdentity: String, onOpen: () -> Unit) {
     Card(
         onClick = onOpen,
         shape = RoundedCornerShape(12.dp),
@@ -287,7 +288,10 @@ private fun GameCard(game: Game, onOpen: () -> Unit) {
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = stringResource(R.string.go_card_vs, game.opponentName.ifBlank { game.identityName }),
+                    // opponent_name holds the INVITEE's name on both peers, so
+                    // the raw field names the user back to themselves on any
+                    // game they did not create. The helper picks the other side.
+                    text = stringResource(R.string.go_card_vs, game.opponentName(myIdentity)),
                     style = MaterialTheme.typography.bodyLarge,
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1,

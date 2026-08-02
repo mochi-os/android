@@ -372,4 +372,16 @@
     <string name="route_target_select">선택</string>
     <string name="account_data_description">이 서버 또는 다른 Mochi 서버에서 복원할 수 있는 전체 백업을 다운로드하세요.</string>
     <string name="route_target_none">사용할 수 있는 대상이 없습니다</string>
+    <string name="login_invalid_code">잘못된 코드</string>
+    <string name="accounts_provider_browser">브라우저 알림</string>
+    <string name="accounts_provider_fcm">Android 푸시</string>
+    <string name="accounts_provider_mcp">MCP 서버</string>
+    <string name="accounts_provider_unifiedpush">푸시 알림</string>
+    <string name="accounts_provider_url">외부 URL</string>
+    <string name="accounts_provider_web">Mochi 웹</string>
+    <string name="accounts_verified">계정이 인증되었어요</string>
+    <string name="accounts_verify_invalid">잘못된 인증 코드</string>
+    <string name="accounts_verify_sent">확인 코드가 전송되었어요</string>
+    <string name="accounts_test_failed">테스트에 실패했어요</string>
+    <string name="accounts_test_sent">테스트를 보냈습니다</string>
 </resources>

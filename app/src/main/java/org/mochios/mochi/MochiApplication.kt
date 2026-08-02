@@ -26,6 +26,7 @@ import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.push.PushServiceWatchdog
 import org.mochios.android.update.UpdateChecker
 import org.mochios.chat.notifications.setupChatNotificationChannel
+import org.mochios.crm.notifications.setupCrmsNotificationChannel
 import org.mochios.feeds.notifications.setupFeedsNotificationChannel
 import org.mochios.forums.notifications.setupForumsNotificationChannel
 import org.mochios.people.notifications.setupPeopleNotificationChannel
@@ -92,6 +93,7 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
         setupChatNotificationChannel(this)
         setupForumsNotificationChannel(this)
         setupProjectsNotificationChannel(this)
+        setupCrmsNotificationChannel(this)
         setupPeopleNotificationChannel(this)
         setupWikisNotificationChannel(this)
         setupChessNotificationChannel(this)

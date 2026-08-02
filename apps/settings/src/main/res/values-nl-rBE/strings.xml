@@ -368,4 +368,15 @@
     <string name="route_target_select">Selecteren</string>
     <string name="account_data_description">Download een volledige back-up die je kunt terugzetten op deze of een andere Mochi-server.</string>
     <string name="route_target_none">Geen doelen beschikbaar</string>
+    <string name="login_invalid_code">Ongeldige code</string>
+    <string name="accounts_provider_browser">Browsermeldingen</string>
+    <string name="accounts_provider_fcm">Android-push</string>
+    <string name="accounts_provider_mcp">MCP-server</string>
+    <string name="accounts_provider_unifiedpush">Pushmelding</string>
+    <string name="accounts_provider_url">Externe URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Account geverifieerd</string>
+    <string name="accounts_verify_invalid">Ongeldige verificatiecode</string>
+    <string name="accounts_verify_sent">Verificatiecode verzonden</string>
+    <string name="accounts_test_failed">Test mislukt</string>
 </resources>

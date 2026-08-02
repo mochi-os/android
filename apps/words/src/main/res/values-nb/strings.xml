@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Slette parti?</string>
     <string name="words_detail_delete_confirm">Slett</string>
     <string name="words_detail_delete_message">Dette sletter spillet og chatten permanent. Dette kan ikke angres.</string>
+    <string name="words_detail_chat_passed">%1$s meldte pass</string>
+    <string name="words_detail_chat_passed_over">%1$s meldte pass — spillet er over</string>
+    <string name="words_detail_chat_exchanged">%1$s byttet brikker</string>
+    <string name="words_move_error_no_tiles">Ingen brikker lagt ut</string>
+    <string name="words_move_error_out_of_bounds">Plasseringen er utenfor brettet</string>
+    <string name="words_move_error_square_occupied">Ruten er allerede opptatt</string>
+    <string name="words_move_error_not_in_line">Brikkene må legges i én rad eller kolonne</string>
+    <string name="words_move_error_not_contiguous">Brikkene må ligge inntil hverandre (ingen hull)</string>
+    <string name="words_move_error_first_move_centre">Første trekk må dekke midtruten</string>
+    <string name="words_move_error_first_move_two_tiles">Første trekk må legge minst 2 brikker</string>
+    <string name="words_move_error_not_connected">Brikkene må henge sammen med brikker på brettet</string>
+    <string name="words_move_error_no_words">Ingen gyldige ord dannet</string>
+    <string name="words_validation_offline">Validering er frakoblet — du kan fortsatt sende inn.</string>
+    <string name="words_validation_unknown_words">Inneholder ukjente ord. Du kan fortsatt sende inn.</string>
 </resources>

@@ -42,12 +42,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -128,14 +131,27 @@ fun WordsGameDetailScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val game = state.game
+    val snackbar = remember { SnackbarHostState() }
+
+    // Every mutation writes its failure here — a rejected move, pass, exchange,
+    // resign, delete or rematch. Nothing rendered it, so all six presented as
+    // "nothing happened".
+    LaunchedEffect(state.transientToast) {
+        val toast = state.transientToast
+        if (toast != null) {
+            snackbar.showSnackbar(toast)
+            viewModel.consumeToast()
+        }
+    }
 
     // ─── Lifecycle: refresh on resume ──────────────────────────────────
     val lifecycleOwner = LocalLifecycleOwner.current
-    LaunchedEffect(lifecycleOwner) {
+    DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) viewModel.refresh()
         }
         lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
     // ─── Live word validation ────────────────────────────────────────
@@ -178,6 +194,7 @@ fun WordsGameDetailScreen(
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = {
@@ -285,9 +302,8 @@ private fun GameDetailContent(
 
     // Derive board, draft, scores from the engine.
     val board = remember(game.board) { parseBoard(game.board) }
-    val invalidMoveFallback = stringResource(R.string.words_detail_invalid_move)
-    val moveDraft: MoveDraft = remember(board, state.pendingPlacements, invalidMoveFallback) {
-        deriveMoveDraft(board, state.pendingPlacements, invalidMoveFallback)
+    val moveDraft: MoveDraft = remember(board, state.pendingPlacements) {
+        deriveMoveDraft(board, state.pendingPlacements)
     }
     val draftWords: List<Pair<String, Int>> = remember(moveDraft) {
         if (moveDraft.status == DraftStatus.READY) {
@@ -297,9 +313,14 @@ private fun GameDetailContent(
     val draftScore: Int = remember(moveDraft) {
         if (moveDraft.status == DraftStatus.READY) moveDraft.result!!.totalScore else 0
     }
+    // Validation has to have finished. Web whitelists ready,
+    // ready_with_invalid_words and validation_unavailable but never 'checking';
+    // Android's enum has no checking state, so the flag carries it. Without
+    // this, submit stayed live through the 350ms debounce and the round-trip.
     val canSubmit = isMyTurn &&
         !state.exchangeMode &&
         moveDraft.status == DraftStatus.READY &&
+        !state.isValidationChecking &&
         !state.isSubmittingMove
     val canRecallMove = isMyTurn && state.pendingPlacements.isNotEmpty() && !state.isSubmittingMove
 
@@ -504,6 +525,7 @@ private fun GameDetailContent(
                                 canRecallMove = canRecallMove,
                                 isSubmitting = state.isSubmittingMove,
                                 isExchanging = state.isExchanging,
+                                validationUnavailable = state.validationUnavailable,
                             )
                         }
                     }
@@ -521,7 +543,10 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
-                        onSend = { body -> viewModel.sendChatMessage(body) },
+                        hasMore = state.hasMoreMessages,
+                        isLoadingMore = state.isLoadingMoreMessages,
+                        onLoadMore = { viewModel.loadMoreMessages() },
+                        onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                     )
                 }
             }
@@ -618,7 +643,10 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
-                        onSend = { body -> viewModel.sendChatMessage(body) },
+                        hasMore = state.hasMoreMessages,
+                        isLoadingMore = state.isLoadingMoreMessages,
+                        onLoadMore = { viewModel.loadMoreMessages() },
+                        onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                     )
                 }
             }
@@ -770,7 +798,10 @@ private fun GameChatColumn(
     messages: List<GameMessage>,
     myIdentity: String,
     isLoading: Boolean,
-    onSend: (String) -> Unit,
+    hasMore: Boolean,
+    isLoadingMore: Boolean,
+    onLoadMore: () -> Unit,
+    onSend: (String, (Boolean) -> Unit) -> Unit,
 ) {
     val chatMessages = remember(messages) {
         messages.map { msg ->
@@ -817,9 +848,9 @@ private fun GameChatColumn(
                 currentUserIdentity = myIdentity,
                 isLoading = isLoading,
                 isError = false,
-                hasMore = false,
-                isLoadingMore = false,
-                onLoadMore = {},
+                hasMore = hasMore,
+                isLoadingMore = isLoadingMore,
+                onLoadMore = onLoadMore,
                 onRetry = {},
                 moveMessageRenderer = { msg, isSent ->
                     {
@@ -838,11 +869,16 @@ private fun GameChatColumn(
             text = chatDraft,
             onTextChange = { chatDraft = it },
             onSend = {
-                if (chatDraft.isNotBlank()) {
+                // Clear only once the send has actually succeeded. Clearing
+                // here used to happen before the coroutine started, so a failed
+                // send discarded the text, and isSending was set and unset in
+                // the same frame so the pending state never rendered.
+                if (chatDraft.isNotBlank() && !isSending) {
                     isSending = true
-                    onSend(chatDraft)
-                    chatDraft = ""
-                    isSending = false
+                    onSend(chatDraft) { sent ->
+                        isSending = false
+                        if (sent) chatDraft = ""
+                    }
                 }
             },
             isSending = isSending,
@@ -852,10 +888,23 @@ private fun GameChatColumn(
 
 @Composable
 private fun WordsMoveRow(msg: GameChatMessage, isSent: Boolean) {
-    val text = if (isSent) {
-        stringResource(R.string.words_detail_chat_you_played, msg.body)
-    } else {
-        stringResource(R.string.words_detail_chat_player_played, msg.name, msg.body)
+    // Passes and exchanges are stored as type "move" too, and the body the
+    // server stores is already a sentence ("Alice passed") in server English.
+    // Wrapping every row in "played" produced "You played Alice passed"; the
+    // event marker is what distinguishes them, exactly as the web does.
+    // Rows with no marker are legacy and keep the old rendering rather than
+    // being guessed at.
+    val actor = if (isSent) stringResource(R.string.words_detail_label_you) else msg.name
+    val marker = msg.event
+    val text = when {
+        marker == "pass" -> stringResource(R.string.words_detail_chat_passed, actor)
+        marker == "pass:over" -> stringResource(R.string.words_detail_chat_passed_over, actor)
+        // The marker carries the tile count, but rendering it needs a
+        // count-inflected noun in every locale's plural categories, so the
+        // sentence omits it — the same call the web made, for the same reason.
+        marker.startsWith("exchange:") -> stringResource(R.string.words_detail_chat_exchanged, actor)
+        isSent -> stringResource(R.string.words_detail_chat_you_played, msg.body)
+        else -> stringResource(R.string.words_detail_chat_player_played, msg.name, msg.body)
     }
     Row(
         modifier = Modifier

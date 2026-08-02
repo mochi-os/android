@@ -40,4 +40,6 @@ dependencies {
 
     // Chess move generation + check / checkmate / stalemate detection.
     implementation("com.github.bhlangonijr:chesslib:1.3.4")
+
+    testImplementation(libs.junit)
 }

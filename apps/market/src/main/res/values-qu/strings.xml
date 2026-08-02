@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Llapan pichay</string>
     <string name="market_listings_create">Kamariy</string>
     <string name="market_bid_dialog_ceiling_label">Aswan hatun rantiy (munaspa)</string>
+    <string name="market_asset_no_app">Mana app kay archivota kichayta atinchu</string>
+    <string name="market_asset_download_failed">Manam willañiqta uraykachiyta atinchu</string>
 </resources>

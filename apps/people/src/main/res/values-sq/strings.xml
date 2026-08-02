@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Disa ftesa nuk u pranuan dot</string>
     <string name="people_invitations_some_decline_failed">Disa ftesa nuk u refuzuan dot</string>
     <string name="people_invitations_some_cancel_failed">Disa ftesa nuk u anuluan dot</string>
+    <string name="people_profile_too_long">Profili është shumë i gjatë</string>
 </resources>

@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Ištrinti partiją?</string>
     <string name="words_detail_delete_confirm">Ištrinti</string>
     <string name="words_detail_delete_message">Tai visam laikui ištrins žaidimą ir jo pokalbį. Šio veiksmo negalima anuliuoti.</string>
+    <string name="words_detail_chat_passed">%1$s praleido ėjimą</string>
+    <string name="words_detail_chat_passed_over">%1$s praleido ėjimą — žaidimas baigtas</string>
+    <string name="words_detail_chat_exchanged">%1$s pakeitė korteles</string>
+    <string name="words_move_error_no_tiles">Nepadėta nė viena kortelė</string>
+    <string name="words_move_error_out_of_bounds">Padėta už lentos ribų</string>
+    <string name="words_move_error_square_occupied">Langelis jau užimtas</string>
+    <string name="words_move_error_not_in_line">Kortelės turi būti vienoje eilutėje arba stulpelyje</string>
+    <string name="words_move_error_not_contiguous">Kortelės turi būti greta (be tarpų)</string>
+    <string name="words_move_error_first_move_centre">Pirmas ėjimas turi dengti centrinį langelį</string>
+    <string name="words_move_error_first_move_two_tiles">Pirmu ėjimu reikia padėti bent 2 korteles</string>
+    <string name="words_move_error_not_connected">Kortelės turi jungtis su lentoje esančiomis kortelėmis</string>
+    <string name="words_move_error_no_words">Nesudaryta nė vieno tinkamo žodžio</string>
+    <string name="words_validation_offline">Tikrinimas neprisijungus — vis tiek galite pateikti.</string>
+    <string name="words_validation_unknown_words">Yra nežinomų žodžių. Vis tiek galite pateikti.</string>
 </resources>

@@ -18,20 +18,13 @@ data class GameViewResponse(
     val identity: String = "",
 )
 
-/**
- * The list endpoint returns the games array as the `data` value directly
- * (i.e. `{"data": [game, game, ...]}`), so the wrapper here mirrors that
- * shape — the `games` field comes from the repository wrapping the unwrapped
- * list, not from a server-side key.
- */
-data class GetGamesResponse(
-    val games: List<Game> = emptyList(),
-)
 
 data class GetMessagesResponse(
     val messages: List<GameMessage> = emptyList(),
     val hasMore: Boolean? = null,
-    val nextCursor: Long? = null,
+    // "<created>:<id>", not a bare timestamp — created alone is not unique and
+    // paginating on it drops every row sharing the page boundary's second.
+    val nextCursor: String? = null,
 )
 
 data class CreateGameResponse(

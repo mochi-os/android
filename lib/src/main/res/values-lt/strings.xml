@@ -315,4 +315,5 @@
         <item quantity="many">%1$d prenumeratoriaus</item>
         <item quantity="other">%1$d prenumeratorių</item>
     </plurals>
+    <string name="account_token_label">Mochi seansas</string>
 </resources>

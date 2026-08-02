@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Quel server non è raggiungibile. Nuovo tentativo…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
-    <string name="wikis_create_dialog_stub">La creazione di wiki sarà disponibile in un aggiornamento futuro.</string>
     <string name="wikis_find_search_placeholder">Cerca per nome, ID, fingerprint o URL…</string>
     <string name="wikis_join_search_button">Cerca wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>

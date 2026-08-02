@@ -70,7 +70,7 @@ interface ChessApi {
     @GET("{game}/-/messages")
     suspend fun getMessages(
         @Path("game") game: String,
-        @Query("before") before: Long? = null,
+        @Query("before") before: String? = null,
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<GetMessagesResponse>>
 

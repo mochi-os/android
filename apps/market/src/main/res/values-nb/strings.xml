@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Tøm alt</string>
     <string name="market_listings_create">Opprett</string>
     <string name="market_bid_dialog_ceiling_label">Maksimalt bud (valgfritt)</string>
+    <string name="market_asset_no_app">Ingen app kan åpne denne filen</string>
+    <string name="market_asset_download_failed">Kunne ikke laste ned filen</string>
 </resources>

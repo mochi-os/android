@@ -105,6 +105,13 @@ fun SaleDetailScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is SaleDetailEvent.Toast -> snackbarHostState.showSnackbar(event.message)
+                // Dialogs close here rather than on submit, so a failed
+                // mutation leaves the dialog up to show its error.
+                is SaleDetailEvent.Completed -> when (event.dialog) {
+                    SaleDialog.SHIP -> shipDialogOpen = false
+                    SaleDialog.REFUND -> refundDialogOpen = false
+                    SaleDialog.DISPUTE -> disputeDialogOpen = false
+                }
             }
         }
     }
@@ -177,21 +184,23 @@ fun SaleDetailScreen(
             submitting = state.shipSubmitting,
             errorMessage = state.shipError,
             onSubmit = { carrier, tracking, url ->
-                viewModel.shipOrder(carrier, tracking, url, shipSuccessText)
-                shipDialogOpen = false
+                viewModel.shipOrder(carrier, tracking, url, shipSuccessText, shipFailedFallback)
             },
             onDismiss = { shipDialogOpen = false },
         )
         IssueRefundDialog(
             open = refundDialogOpen,
             currency = detail.order.currency ?: Currency.GBP,
-            priorRefundedAmount = if (detail.order.refunded > 0L) detail.order.total else 0L,
+            // `refunded` is the cumulative refunded amount in minor units, not
+            // a flag — the comptroller accumulates into it — so it is the value
+            // itself that the seller needs when deciding how much more to
+            // refund. Treating it as a flag reported the whole order total.
+            priorRefundedAmount = detail.order.refunded,
             priorRefunds = detail.refunds,
             submitting = state.refundSubmitting,
             errorMessage = state.refundError,
             onSubmit = { amount, reason, description ->
                 viewModel.refundOrder(amount, reason, description, refundFailedFallback)
-                refundDialogOpen = false
             },
             onDismiss = { refundDialogOpen = false },
         )
@@ -212,7 +221,6 @@ fun SaleDetailScreen(
                     // already collects the URIs so a follow-up wiring is
                     // additive, not destructive.
                     viewModel.respondToDispute(response, disputeFailedFallback)
-                    disputeDialogOpen = false
                 },
                 onDismiss = { disputeDialogOpen = false },
             )

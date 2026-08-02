@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">删除对局？</string>
     <string name="words_detail_delete_confirm">删除</string>
     <string name="words_detail_delete_message">此操作将永久删除对局及其聊天记录，且无法撤销。</string>
+    <string name="words_detail_chat_passed">%1$s跳过了回合</string>
+    <string name="words_detail_chat_passed_over">%1$s跳过了回合 — 对局结束</string>
+    <string name="words_detail_chat_exchanged">%1$s交换了字块</string>
+    <string name="words_move_error_no_tiles">未放置字块</string>
+    <string name="words_move_error_out_of_bounds">放置超出棋盘范围</string>
+    <string name="words_move_error_square_occupied">该格已被占用</string>
+    <string name="words_move_error_not_in_line">字块必须放在同一行或同一列</string>
+    <string name="words_move_error_not_contiguous">字块必须相连（中间不能有空格）</string>
+    <string name="words_move_error_first_move_centre">第一步必须覆盖中心格</string>
+    <string name="words_move_error_first_move_two_tiles">第一步必须至少放置 2 个字块</string>
+    <string name="words_move_error_not_connected">字块必须与棋盘上已有的字块相连</string>
+    <string name="words_move_error_no_words">未组成有效单词</string>
+    <string name="words_validation_offline">验证服务离线 — 你仍然可以提交。</string>
+    <string name="words_validation_unknown_words">包含未知单词。你仍然可以提交。</string>
 </resources>

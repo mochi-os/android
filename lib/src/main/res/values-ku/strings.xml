@@ -313,4 +313,5 @@
         <item quantity="one">%1$d beşdar</item>
         <item quantity="other">%1$d beşdar</item>
     </plurals>
+    <string name="account_token_label">Danişîna Mochi</string>
 </resources>

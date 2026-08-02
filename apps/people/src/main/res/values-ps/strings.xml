@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">ځینې بلنې ونه منل شوې</string>
     <string name="people_invitations_some_decline_failed">ځینې بلنې رد نشوې</string>
     <string name="people_invitations_some_cancel_failed">ځینې بلنې لغوه نشوې</string>
+    <string name="people_profile_too_long">پروفایل ډېر اوږد دی</string>
 </resources>

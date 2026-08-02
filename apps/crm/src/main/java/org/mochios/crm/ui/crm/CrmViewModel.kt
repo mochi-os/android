@@ -36,7 +36,7 @@ data class CrmUiState(
     val activeViewId: String? = null,
     val searchQuery: String = "",
     val watchedOnly: Boolean = false,
-    /** Ids of the objects the viewer watches, from the objects endpoint. */
+    /** Object ids the local user watches, from the last objects fetch. */
     val watched: List<String> = emptyList(),
     /** Selected option ids per field id. Empty when nothing is filtered. */
     val fieldFilters: Map<String, Set<String>> = emptyMap(),
@@ -653,11 +653,37 @@ class CrmViewModel @Inject constructor(
         return result
     }
 
+    /**
+     * Ids the board may render, or null when nothing narrows the set — the
+     * board still receives every object so hierarchy, column grouping and
+     * drop ranks stay computed against the real list, and only hides what
+     * falls outside this set.
+     *
+     * Ancestors of a match are included: a board card is a container for its
+     * children, so a matching child keeps its parent card on the board
+     * instead of dropping the whole branch out of sight.
+     */
+    fun getVisibleObjectIds(): Set<String>? {
+        if (!hasActiveFilters()) return null
+        val matched = getFilteredObjects().map { obj -> obj.id }.toSet()
+        val byId = _uiState.value.objects.associateBy { obj -> obj.id }
+        val result = matched.toMutableSet()
+        val walked = mutableSetOf<String>()
+        for (id in matched) {
+            var parent = byId[id]?.parent.orEmpty()
+            while (parent.isNotBlank() && walked.add(parent)) {
+                result += parent
+                parent = byId[parent]?.parent.orEmpty()
+            }
+        }
+        return result
+    }
+
     fun getFilteredObjects(): List<CrmObject> {
         val state = _uiState.value
-        // A missing view is not a reason to skip the user's own filters, so the
-        // view-derived steps below are guarded individually rather than bailing
-        // out early.
+        // Null-guard each view-derived filter rather than returning early: the
+        // search query and the watched toggle belong to the user, not the view,
+        // and returning early left both unapplied whenever no view was active.
         val view = getActiveView()
         var objects = state.objects
 
@@ -700,32 +726,6 @@ class CrmViewModel @Inject constructor(
         }
 
         return sortObjects(objects)
-    }
-
-    /**
-     * Ids the board may render, or null when nothing narrows the set — the
-     * board still receives every object so hierarchy, column grouping and
-     * drop ranks stay computed against the real list, and only hides what
-     * falls outside this set.
-     *
-     * Ancestors of a match are included: a board card is a container for its
-     * children, so a matching child keeps its parent card on the board instead
-     * of dropping the whole branch out of sight.
-     */
-    fun getVisibleObjectIds(): Set<String>? {
-        if (!hasActiveFilters()) return null
-        val matched = getFilteredObjects().map { obj -> obj.id }.toSet()
-        val byId = _uiState.value.objects.associateBy { obj -> obj.id }
-        val result = matched.toMutableSet()
-        val walked = mutableSetOf<String>()
-        for (id in matched) {
-            var parent = byId[id]?.parent.orEmpty()
-            while (parent.isNotBlank() && walked.add(parent)) {
-                result += parent
-                parent = byId[parent]?.parent.orEmpty()
-            }
-        }
-        return result
     }
 
     /**

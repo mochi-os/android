@@ -61,6 +61,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.SecretField
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.SystemSetting
@@ -131,6 +132,19 @@ private fun isUserDefault(name: String) = USER_DEFAULT_SETTINGS.contains(name)
 
 private fun isBoolean(setting: SystemSetting) = setting.pattern == "^(true|false)$"
 private fun isFileUpload(setting: SystemSetting) = setting.pattern == "text"
+
+/**
+ * Whether a value is stored server-side, and so whether the row offers to
+ * clear it.
+ *
+ * A secret cannot be judged by its value: the server blanks it, so a configured
+ * OAuth client secret arrives as `value == ""` with `default == ""` too — the
+ * `value == default` test every other row uses reads "unset" no matter how the
+ * server is configured, which is why the clear affordance used to vanish. `set`
+ * is computed before the blanking and is the only signal that survives.
+ */
+internal fun hasStoredValue(setting: SystemSetting): Boolean =
+    if (setting.secret) setting.set else setting.value.isNotEmpty()
 
 private fun enumOptions(setting: SystemSetting): List<String>? {
     val match = Regex("""^\^\(([^)]+)\)\$$""").find(setting.pattern) ?: return null
@@ -265,7 +279,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.section(
     item("section-header-$title") {
         SectionHeader(title = title)
     }
-    items(settings, key = { "row-${'$'}{it.name}" }) { setting ->
+    items(settings, key = { "row-${it.name}" }) { setting ->
         SettingRow(
             setting = setting,
             isSaving = state.savingName == setting.name,
@@ -310,6 +324,30 @@ private fun SettingRow(
 
         when {
             setting.readOnly -> ReadOnlyValue(setting)
+            // Before the pattern branches: a secret is declared with
+            // Pattern:"line", so it would otherwise fall through to the plain
+            // text field below and an admin would type a live client secret in
+            // clear. The server blanks the value, so `set` is the only signal
+            // that one is stored — without it a configured OAuth secret looked
+            // identical to an unset one.
+            setting.secret -> Row(verticalAlignment = Alignment.CenterVertically) {
+                SecretField(
+                    configured = setting.set,
+                    onSave = onSave,
+                    enabled = !isSaving,
+                    saving = isSaving,
+                    modifier = Modifier.weight(1f),
+                )
+                if (hasStoredValue(setting)) {
+                    Spacer(Modifier.size(8.dp))
+                    OutlinedButton(
+                        onClick = { onSave("") },
+                        enabled = !isSaving,
+                    ) {
+                        Text(stringResource(R.string.system_settings_clear))
+                    }
+                }
+            }
             methodStates != null -> MethodStatePicker(
                 value = localValue,
                 slots = methodStates,

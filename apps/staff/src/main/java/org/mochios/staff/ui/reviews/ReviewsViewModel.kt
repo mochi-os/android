@@ -106,12 +106,15 @@ class ReviewsViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = s.copy(isLoadingMore = true)
             try {
-                page += 1
                 val resp = repo.listReviews(
                     status = s.filter.wireValue(),
-                    page = page,
+                    page = page + 1,
                     limit = PAGE_LIMIT,
                 )
+                // Advance only once the page is in hand. Incrementing first
+                // permanently skips the page on any failure: hasMore stays
+                // true, so the next attempt asks for the one after.
+                page += 1
                 val merged = _state.value.reviews + resp.reviews
                 _state.value = _state.value.copy(
                     reviews = merged,

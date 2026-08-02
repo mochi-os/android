@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">सर्व साफ करा</string>
     <string name="market_listings_create">तयार करा</string>
     <string name="market_bid_dialog_ceiling_label">कमाल बोली (पर्यायी)</string>
+    <string name="market_asset_no_app">ही फाइल उघडू शकेल असे कोणतेही अॅप नाही</string>
+    <string name="market_asset_download_failed">फाइल डाउनलोड करता आली नाही</string>
 </resources>

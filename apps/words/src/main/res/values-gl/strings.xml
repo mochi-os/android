@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">Eliminar partida?</string>
     <string name="words_detail_delete_confirm">Eliminar</string>
     <string name="words_detail_delete_message">Isto eliminará permanentemente a partida e a súa conversa. Esta acción non se pode desfacer.</string>
+    <string name="words_detail_chat_passed">%1$s pasou</string>
+    <string name="words_detail_chat_passed_over">%1$s pasou — fin da partida</string>
+    <string name="words_detail_chat_exchanged">%1$s cambiou fichas</string>
+    <string name="words_move_error_no_tiles">Non se colocou ningunha ficha</string>
+    <string name="words_move_error_out_of_bounds">Colocación fóra do taboleiro</string>
+    <string name="words_move_error_square_occupied">A casa xa está ocupada</string>
+    <string name="words_move_error_not_in_line">As fichas deben colocarse nunha soa fila ou columna</string>
+    <string name="words_move_error_not_contiguous">As fichas deben estar seguidas (sen ocos)</string>
+    <string name="words_move_error_first_move_centre">A primeira xogada debe cubrir a casa central</string>
+    <string name="words_move_error_first_move_two_tiles">A primeira xogada debe colocar polo menos 2 fichas</string>
+    <string name="words_move_error_not_connected">As fichas deben conectar coas fichas xa postas no taboleiro</string>
+    <string name="words_move_error_no_words">Non se formou ningunha palabra válida</string>
+    <string name="words_validation_offline">Validación sen conexión — aínda así, podes envialo.</string>
+    <string name="words_validation_unknown_words">Contén palabras descoñecidas. Aínda así, podes envialo.</string>
 </resources>

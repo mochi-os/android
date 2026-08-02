@@ -11,7 +11,6 @@
     <string name="go_app_title">Git</string>
     <string name="go_captures_black_sr">Siyah yakalamalar</string>
     <string name="go_captures_white_sr">Beyaz yakalamalar</string>
-    <string name="go_chat_close">Sohbeti kapat</string>
     <string name="go_chat_title">Sohbet</string>
     <string name="go_color_black">Siyah</string>
     <string name="go_color_white">Beyaz</string>
@@ -73,12 +72,14 @@
     <string name="go_status_finished">Bitti</string>
     <string name="go_status_resigned">Çekildi</string>
     <string name="go_card_vs">%1$s\'e karşı</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Oyun ayrıntıları yakında</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Yeni Go oyunu</string>
     <string name="go_new_game_no_friends">Oyuna başlamadan önce bir arkadaş eklemeniz gerekiyor.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Siyahın ilk hamleyi yapmasını telafi etmek için Beyaz\'ın puanına eklenen puanlar</string>
     <string name="go_new_game_create_error">Oyun başlatılamadı</string>
 
+    <string name="go_board_a11y">%1$d×%1$d Go tahtası</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d Go tahtası, siyah taş koyma sırası sizde</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d Go tahtası, beyaz taş koyma sırası sizde</string>
 </resources>

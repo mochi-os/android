@@ -10,7 +10,6 @@
     <string name="go_app_title">Ir</string>
     <string name="go_captures_black_sr">Capturas de negras</string>
     <string name="go_captures_white_sr">Capturas de brancas</string>
-    <string name="go_chat_close">Pechar a conversa</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_color_black">Negras</string>
     <string name="go_color_white">Branco</string>
@@ -71,11 +70,13 @@
     <string name="go_status_finished">Rematada</string>
     <string name="go_status_resigned">Abandonada</string>
     <string name="go_card_vs">contra %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
-    <string name="go_game_detail_placeholder">Detalles da partida proximamente</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nova partida de Go</string>
     <string name="go_new_game_no_friends">Precisas engadir un amigo antes de comezar unha partida.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Puntos engadidos ao marcador do Branco para compensar que o Negro empeza primeiro</string>
     <string name="go_new_game_create_error">Erro ao iniciar a partida</string>
+    <string name="go_board_a11y">Taboleiro de Go %1$d×%1$d</string>
+    <string name="go_board_a11y_turn_black">Taboleiro de Go de %1$d×%1$d, é a túa quenda de poñer unha pedra negra</string>
+    <string name="go_board_a11y_turn_white">Taboleiro de Go de %1$d×%1$d, é a túa quenda de poñer unha pedra branca</string>
 </resources>

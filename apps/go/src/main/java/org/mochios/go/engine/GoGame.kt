@@ -41,10 +41,6 @@ class GoGame private constructor(
     val lastMove: Pair<Int, Int>?,
 ) {
 
-    /** Captures recorded so far for each colour. */
-    val captures: Captures
-        get() = Captures(black = capturesBlack, white = capturesWhite)
-
     /**
      * Current board serialised as a FEN-like string (see class doc for
      * format). This is the value the server stores in `games.fen`.
@@ -52,24 +48,8 @@ class GoGame private constructor(
     val board: String
         get() = serialize()
 
-    /**
-     * Previous-position board string (rows joined by `/`, no metadata) used
-     * for ko detection. Returned without metadata to match the TS getter —
-     * the metadata of a "previous" position isn't meaningful to consumers.
-     */
-    val previousBoard: String?
-        get() = previousGrid?.let { rowsToString(it) }
 
-    /**
-     * Read-only view of the grid. Indexed `[row][col]`; the returned arrays
-     * are defensive copies so callers can't mutate internal state.
-     */
-    val gridView: Array<CharArray>
-        get() = Array(size) { r -> grid[r].copyOf() }
 
-    /** True after two consecutive passes — the game has ended. */
-    val isOver: Boolean
-        get() = consecutivePasses >= 2
 
     // ------------------------------------------------------------------
     // Public constructors
@@ -118,9 +98,14 @@ class GoGame private constructor(
      *
      * Throws [IllegalMoveException] when the move is illegal:
      *   - the intersection is occupied
-     *   - the move repeats the previous position (simple ko)
+     *   - the move retakes the ko point recorded by the previous capture
      *   - the move would leave the placed stone's group with no liberties
      *     (suicide — Chinese / area-scoring rules forbid it)
+     *
+     * Ko is enforced by the single recorded ko point, not by comparing whole
+     * positions: [isLegal] reads `koPoint` and nothing else. That is simple ko,
+     * not positional superko, and it matches the TypeScript engine the web
+     * client uses, so the two agree on legality.
      *
      * Returns a new [GoGame] reflecting the placement, any captured
      * opponent stones removed, the capture counters incremented, the turn
@@ -234,11 +219,10 @@ class GoGame private constructor(
     }
 
     /**
-     * Area-scoring result. `winner` is `Stone.BLACK` if Black's total
-     * (stones + black-only territory) strictly exceeds White's total
-     * (stones + white-only territory + [komi]); otherwise `Stone.WHITE`
-     * (i.e. ties go to White, matching the TS engine's `black > white`
-     * test). [komi] defaults to 6.5 to keep parity with the web engine.
+     * Area-scoring result. `winner` is the colour whose total — stones plus
+     * its own territory, with [komi] added to White's — is strictly greater,
+     * or null when the two are equal (jigo). [komi] defaults to 6.5, which
+     * cannot tie; the new-game dialog's komi of 0 can.
      */
     fun score(komi: Double = 6.5): Score {
         val territory = scoreTerritory(grid)
@@ -247,7 +231,15 @@ class GoGame private constructor(
         return Score(
             black = black,
             white = white,
-            winner = if (black > white) Stone.BLACK else Stone.WHITE,
+            winner = when {
+                black > white -> Stone.BLACK
+                white > black -> Stone.WHITE
+                // Jigo. Previously this fell to White, which did not merely
+                // print the wrong result: passTurn resolves the winner to an
+                // identity, so a tie wrote a real player as winner into the
+                // canonical row and the P2P snapshot.
+                else -> null
+            },
         )
     }
 
@@ -547,11 +539,11 @@ enum class Stone {
         get() = if (this == BLACK) GoGame.BLACK else GoGame.WHITE
 }
 
-/** Captures recorded so far (number of opponent stones each colour removed). */
-data class Captures(val black: Int, val white: Int)
-
-/** Area-scoring result. */
-data class Score(val black: Double, val white: Double, val winner: Stone)
+/**
+ * Area-scoring result. [winner] is null for a tie (jigo), which integer komi
+ * makes reachable — the new-game dialog offers a komi of 0.
+ */
+data class Score(val black: Double, val white: Double, val winner: Stone?)
 
 /** Territory ownership labels for [GoGame.territory]. */
 enum class Territory { BLACK, WHITE, NEUTRAL, OCCUPIED }

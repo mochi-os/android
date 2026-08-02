@@ -377,4 +377,16 @@
     <string name="route_target_select">Выбрать</string>
     <string name="account_data_description">Скачайте полную резервную копию, которую можно восстановить на этом или другом сервере Mochi.</string>
     <string name="route_target_none">Нет доступных целей</string>
+    <string name="login_invalid_code">Недопустимый код</string>
+    <string name="accounts_provider_browser">Уведомления браузера</string>
+    <string name="accounts_provider_fcm">Push для Android</string>
+    <string name="accounts_provider_mcp">MCP-сервер</string>
+    <string name="accounts_provider_unifiedpush">Push-уведомление</string>
+    <string name="accounts_provider_url">Внешний URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Аккаунт подтверждён</string>
+    <string name="accounts_verify_invalid">Недопустимый код подтверждения</string>
+    <string name="accounts_verify_sent">Код подтверждения отправлен</string>
+    <string name="accounts_test_failed">Тест не пройден</string>
+    <string name="accounts_test_sent">Тест отправлен</string>
 </resources>

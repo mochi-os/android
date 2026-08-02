@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Xoá ván cờ?</string>
     <string name="words_detail_delete_confirm">Xóa</string>
     <string name="words_detail_delete_message">Thao tác này sẽ xóa vĩnh viễn trận đấu và cuộc trò chuyện của nó. Không thể hoàn tác thao tác này.</string>
+    <string name="words_detail_chat_passed">%1$s đã bỏ lượt</string>
+    <string name="words_detail_chat_passed_over">%1$s đã bỏ lượt — ván đấu kết thúc</string>
+    <string name="words_detail_chat_exchanged">%1$s đã đổi quân</string>
+    <string name="words_move_error_no_tiles">Chưa đặt quân nào</string>
+    <string name="words_move_error_out_of_bounds">Vị trí đặt nằm ngoài bàn</string>
+    <string name="words_move_error_square_occupied">Ô này đã có quân</string>
+    <string name="words_move_error_not_in_line">Các quân phải nằm trên cùng một hàng hoặc một cột</string>
+    <string name="words_move_error_not_contiguous">Các quân phải liền nhau (không có khoảng trống)</string>
+    <string name="words_move_error_first_move_centre">Nước đi đầu tiên phải phủ ô trung tâm</string>
+    <string name="words_move_error_first_move_two_tiles">Nước đi đầu tiên phải đặt ít nhất 2 quân</string>
+    <string name="words_move_error_not_connected">Các quân phải nối với quân đã có trên bàn</string>
+    <string name="words_move_error_no_words">Không tạo được từ hợp lệ</string>
+    <string name="words_validation_offline">Kiểm tra ngoại tuyến — bạn vẫn có thể gửi.</string>
+    <string name="words_validation_unknown_words">Có chứa từ không xác định. Bạn vẫn có thể gửi.</string>
 </resources>

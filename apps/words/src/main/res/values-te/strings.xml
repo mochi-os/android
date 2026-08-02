@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">తొలగించండి</string>
     <string name="words_detail_delete_message">ఇది గేమ్‌ను మరియు దాని చాట్‌ను శాశ్వతంగా తొలగిస్తుంది. ఈ చర్యను తిరిగి మార్చలేరు.</string>
+    <string name="words_detail_chat_passed">%1$s పాస్ చేశారు</string>
+    <string name="words_detail_chat_passed_over">%1$s పాస్ చేశారు — గేమ్ ముగిసింది</string>
+    <string name="words_detail_chat_exchanged">%1$s టైల్స్ మార్చారు</string>
+    <string name="words_move_error_no_tiles">టైల్స్ ఏవీ ఉంచలేదు</string>
+    <string name="words_move_error_out_of_bounds">ఉంచడం బోర్డు వెలుపల ఉంది</string>
+    <string name="words_move_error_square_occupied">గడి ఇప్పటికే నిండి ఉంది</string>
+    <string name="words_move_error_not_in_line">టైల్స్‌ను ఒకే అడ్డు వరుసలో లేదా నిలువు వరుసలో ఉంచాలి</string>
+    <string name="words_move_error_not_contiguous">టైల్స్ వరుసగా ఉండాలి (ఖాళీలు ఉండకూడదు)</string>
+    <string name="words_move_error_first_move_centre">మొదటి ఎత్తు మధ్య గడిని కప్పాలి</string>
+    <string name="words_move_error_first_move_two_tiles">మొదటి ఎత్తులో కనీసం 2 టైల్స్ ఉంచాలి</string>
+    <string name="words_move_error_not_connected">టైల్స్ బోర్డుపై ఉన్న టైల్స్‌తో అనుసంధానం కావాలి</string>
+    <string name="words_move_error_no_words">చెల్లుబాటు అయ్యే పదాలు ఏవీ ఏర్పడలేదు</string>
+    <string name="words_validation_offline">ధ్రువీకరణ ఆఫ్‌లైన్‌లో ఉంది — మీరు ఇప్పటికీ సమర్పించవచ్చు.</string>
+    <string name="words_validation_unknown_words">తెలియని పదాలు ఉన్నాయి. మీరు ఇప్పటికీ సమర్పించవచ్చు.</string>
 </resources>

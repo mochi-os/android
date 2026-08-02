@@ -93,6 +93,9 @@ class ObjectDetailViewModel @Inject constructor(
 
     private var currentProjectId: String = ""
     private var currentObjectId: String = ""
+    /** The in-flight detail fetch, cancelled when the sheet switches object. */
+    private var loadJob: Job? = null
+
     private var wsSubscriptionId: String? = null
     private var wsSubscribedProjectId: String = ""
 
@@ -116,9 +119,18 @@ class ObjectDetailViewModel @Inject constructor(
             isLoading = carried == null,
         )
         subscribeWebSocket(projectId)
-        viewModelScope.launch {
+        // Cancel any fetch still in flight for the object we just left. Without
+        // this a slow response for A lands after the sheet has switched to B and
+        // overwrites its header, leaving one object's header above another's
+        // tabs — reachable in ordinary use, since tapping a linked object in the
+        // Links tab swaps the id under an in-flight fetch.
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             try {
                 val fetched = repository.getObject(projectId, objectId)
+                // Cancellation is cooperative and the tab loaders below read the
+                // current ids, so re-check before writing anything.
+                if (currentProjectId != projectId || currentObjectId != objectId) return@launch
                 // The single-object endpoint doesn't return values — merge with what we have
                 val existing = _uiState.value.obj
                 val merged = if (fetched.values.isEmpty() && existing != null && existing.values.isNotEmpty()) {
@@ -136,6 +148,7 @@ class ObjectDetailViewModel @Inject constructor(
                 loadSiblingObjects()
                 loadPeople()
             } catch (e: Exception) {
+                if (currentProjectId != projectId || currentObjectId != objectId) return@launch
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     error = e.toMochiError()

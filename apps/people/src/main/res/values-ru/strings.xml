@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Некоторые приглашения не удалось принять</string>
     <string name="people_invitations_some_decline_failed">Некоторые приглашения не удалось отклонить</string>
     <string name="people_invitations_some_cancel_failed">Некоторые приглашения не удалось отменить</string>
+    <string name="people_profile_too_long">Профиль слишком длинный</string>
 </resources>

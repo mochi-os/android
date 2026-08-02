@@ -20,10 +20,9 @@
 
     <!-- Game card -->
     <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$dx%2$d · %3$s</string>
+    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
 
     <!-- Game detail -->
-    <string name="go_game_detail_placeholder">Game detail coming soon</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_color_black">Black</string>
     <string name="go_color_white">White</string>
@@ -58,7 +57,6 @@
     <string name="go_delete_message">This game will be removed from your list. This can\'t be undone.</string>
     <string name="go_delete_confirm">Delete</string>
     <string name="go_chat_title">Chat</string>
-    <string name="go_chat_close">Close chat</string>
     <string name="go_draw_offered_waiting">Draw offered — waiting for %1$s</string>
     <string name="go_draw_offered_received">%1$s offered a draw</string>
     <string name="go_draw_accept">Accept</string>
@@ -88,4 +86,7 @@
     <string name="go_new_game_start">Start game</string>
     <string name="go_new_game_cancel">Cancel</string>
     <string name="go_new_game_create_error">Failed to start game</string>
+    <string name="go_board_a11y">%1$d×%1$d Go board</string>
+    <string name="go_board_a11y_turn_black">%1$d×%1$d Go board, your turn to place a black stone</string>
+    <string name="go_board_a11y_turn_white">%1$d×%1$d Go board, your turn to place a white stone</string>
 </resources>

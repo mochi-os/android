@@ -314,4 +314,5 @@
         <item quantity="one">%1$d abonents</item>
         <item quantity="other">%1$d abonenti</item>
     </plurals>
+    <string name="account_token_label">Mochi sesija</string>
 </resources>

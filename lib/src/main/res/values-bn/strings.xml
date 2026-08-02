@@ -313,4 +313,5 @@
         <item quantity="one">%1$d গ্রাহক</item>
         <item quantity="other">%1$d গ্রাহক</item>
     </plurals>
+    <string name="account_token_label">Mochi সেশন</string>
 </resources>

@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">השרת אינו נגיש. מנסה שוב…</string>
     <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">כתובת RSS של ויקי</string>
-    <string name="wikis_create_dialog_stub">יצירת ויקי תהיה זמינה בעדכון עתידי.</string>
     <string name="wikis_find_search_placeholder">חיפוש לפי שם, מזהה, טביעת אצבע או URL…</string>
     <string name="wikis_join_search_button">חפש ויקי…</string>
     <string name="wikis_join_id_hint">abc123…</string>

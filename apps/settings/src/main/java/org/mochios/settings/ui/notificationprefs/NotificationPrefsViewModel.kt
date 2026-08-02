@@ -18,12 +18,13 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
 import org.mochios.settings.api.NotificationPrefsApi
-import retrofit2.Response
 import javax.inject.Inject
 
 enum class NotifTab { CATEGORIES, TOPICS }
@@ -62,9 +63,9 @@ class NotificationPrefsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val cats = api.getCategories().bodyOrThrow()
-                val topics = api.getTopics().bodyOrThrow()
-                val dests = api.getDestinations().bodyOrThrow()
+                val cats = api.getCategories().unwrapRaw()
+                val topics = api.getTopics().unwrapRaw()
+                val dests = api.getDestinations().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     categories = cats,
@@ -78,15 +79,15 @@ class NotificationPrefsViewModel @Inject constructor(
     }
 
     fun createCategory(label: String) = mutate {
-        api.createCategory(label = label.trim(), destinations = null, default = null).bodyOrThrow()
+        api.createCategory(label = label.trim(), destinations = null, default = null).unwrapEmpty()
     }
 
     fun renameCategory(category: NotifCategory, label: String) = mutate {
-        api.updateCategory(id = category.id, label = label.trim()).bodyOrThrow()
+        api.updateCategory(id = category.id, label = label.trim()).unwrapEmpty()
     }
 
     fun deleteCategory(id: String, reassignTo: String) = mutate {
-        api.deleteCategory(id = id, reassignTo = reassignTo).bodyOrThrow()
+        api.deleteCategory(id = id, reassignTo = reassignTo).unwrapEmpty()
     }
 
     fun toggleDestination(category: NotifCategory, row: DestinationRow, checked: Boolean) = mutate {
@@ -100,24 +101,24 @@ class NotificationPrefsViewModel @Inject constructor(
         api.updateCategory(
             id = category.id,
             destinations = gson.toJson(current),
-        ).bodyOrThrow()
+        ).unwrapEmpty()
     }
 
     fun setTopicCategory(topic: NotifTopic, categoryId: String?) = mutate {
         val value = categoryId ?: ""
         api.setTopicCategory(
             app = topic.app, topic = topic.topic, obj = topic.`object`, category = value,
-        ).bodyOrThrow()
+        ).unwrapEmpty()
     }
 
     fun removeTopic(topic: NotifTopic) = mutate {
-        api.deleteTopic(app = topic.app, topic = topic.topic, obj = topic.`object`).bodyOrThrow()
+        api.deleteTopic(app = topic.app, topic = topic.topic, obj = topic.`object`).unwrapEmpty()
     }
 
     fun testCategory(category: NotifCategory) {
         viewModelScope.launch {
             try {
-                val result = api.testCategory(id = category.id).bodyOrThrow()
+                val result = api.testCategory(id = category.id).unwrapRaw()
                 _testSent.emit(result.sent)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -136,9 +137,8 @@ class NotificationPrefsViewModel @Inject constructor(
         }
     }
 
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        @Suppress("UNCHECKED_CAST")
-        return body() ?: (Unit as T).also { /* allow Unit endpoints */ }
+    /** Dismiss a surfaced error once the screen has shown it. */
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 }

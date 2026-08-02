@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">Hindi matanggap ang ilang imbitasyon</string>
     <string name="people_invitations_some_decline_failed">Hindi matanggihan ang ilang imbitasyon</string>
     <string name="people_invitations_some_cancel_failed">Hindi makansela ang ilang imbitasyon</string>
+    <string name="people_profile_too_long">Masyadong mahaba ang profile</string>
 </resources>

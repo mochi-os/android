@@ -314,4 +314,5 @@
         <item quantity="few">%1$d pretplatnika</item>
         <item quantity="other">%1$d pretplatnika</item>
     </plurals>
+    <string name="account_token_label">Mochi sesija</string>
 </resources>

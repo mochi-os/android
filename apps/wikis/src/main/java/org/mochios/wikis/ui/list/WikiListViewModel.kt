@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.SEARCH_DEBOUNCE
@@ -188,7 +189,7 @@ class WikiListViewModel @Inject constructor(
                 _events.emit(WikiListEvent.OpenWiki(created.fingerprint.ifBlank { created.id }, created.home))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(createPending = false)
-                val message = errorToMessage(e.toMochiError()) ?: "Failed to create wiki"
+                val message = e.toMochiError().userMessage()
                 _events.emit(WikiListEvent.Toast(message))
             }
         }
@@ -257,8 +258,8 @@ class WikiListViewModel @Inject constructor(
                 refresh()
                 _events.emit(WikiListEvent.OpenWiki(join.fingerprint.ifBlank { join.id }, join.home))
             } else {
-                val err = result.exceptionOrNull()?.toMochiError()
-                val message = err?.let { errorToMessage(it) } ?: "Failed to subscribe"
+                val message = result.exceptionOrNull()?.toMochiError()?.userMessage()
+                    ?: MochiError.Unknown().userMessage()
                 _events.emit(WikiListEvent.Toast(message))
             }
         }
@@ -288,17 +289,6 @@ class WikiListViewModel @Inject constructor(
         }
     }
 
-    private fun errorToMessage(err: MochiError): String? {
-        return when (err) {
-            is MochiError.AuthError -> err.message
-            is MochiError.ForbiddenError -> err.message
-            is MochiError.NotFoundError -> err.message
-            is MochiError.ServerError -> err.message
-            is MochiError.Unknown -> err.message
-            else -> null
-        }
-    }
-
     // ---------------- unsubscribe ----------------
 
     fun requestUnsubscribe(wiki: WikiInfo) {
@@ -324,7 +314,7 @@ class WikiListViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(unsubscribingId = null)
-                val message = errorToMessage(e.toMochiError()) ?: "Failed to unsubscribe"
+                val message = e.toMochiError().userMessage()
                 _events.emit(WikiListEvent.Toast(message))
             }
         }

@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.login
 
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.OAuthPkce
 import org.mochios.android.auth.PasskeyManager
 import org.mochios.android.auth.StepUpClient
@@ -12,7 +13,6 @@ import org.mochios.android.auth.StepUpResult
 import org.mochios.settings.api.AccountApi
 import org.mochios.settings.api.MethodInfo
 import org.mochios.settings.api.StepUpResponse
-import retrofit2.Response
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -33,7 +33,7 @@ class SettingsStepUpClient @Inject constructor(
     private var oauthVerifier: String? = null
 
     private suspend fun states(): Map<String, MethodInfo> =
-        api.getMethods().bodyOrThrow().methods
+        api.getMethods().unwrapRaw().methods
 
     // The required step-up factors, mirroring reauthentication_required: the
     // methods whose state is "required", recovery excluded.
@@ -54,20 +54,20 @@ class SettingsStepUpClient @Inject constructor(
     }
 
     override suspend fun send() {
-        api.sendCode().bodyOrThrow()
+        api.sendCode().unwrapRaw()
     }
 
     override suspend fun verifyEmail(code: String): StepUpResult =
-        api.verifyCode(code).bodyOrThrow().toResult()
+        api.verifyCode(code).unwrapRaw().toResult()
 
     override suspend fun verifyTotp(code: String): StepUpResult =
-        api.verifyTotp(code).bodyOrThrow().toResult()
+        api.verifyTotp(code).unwrapRaw().toResult()
 
     override suspend fun passkey(): StepUpResult {
-        val begin = api.beginPasskeyVerify().bodyOrThrow()
+        val begin = api.beginPasskeyVerify().unwrapRaw()
         if (begin.ceremony.isBlank()) throw RuntimeException("missing ceremony")
         val assertion = passkeyManager.authenticateRaw(begin.options)
-        return api.finishPasskeyVerify(begin.ceremony, assertion).bodyOrThrow().toResult()
+        return api.finishPasskeyVerify(begin.ceremony, assertion).unwrapRaw().toResult()
     }
 
     override suspend fun oauthProviders(): List<String> {
@@ -80,25 +80,20 @@ class SettingsStepUpClient @Inject constructor(
         val acceptable = required.contains("oauth") ||
             (required.isEmpty() && oauth != null && oauth.state != "disabled")
         if (!acceptable) return emptyList()
-        return api.listOAuth().bodyOrThrow().identities.map { it.provider }.distinct()
+        return api.listOAuth().unwrapRaw().identities.map { it.provider }.distinct()
     }
 
     override suspend fun oauthBegin(provider: String): String {
         val verifier = OAuthPkce.generateVerifier()
         oauthVerifier = verifier
         val challenge = OAuthPkce.challengeFor(verifier)
-        return api.beginOauthVerify(provider, challenge).bodyOrThrow().url
+        return api.beginOauthVerify(provider, challenge).unwrapRaw().url
     }
 
     override suspend fun oauthPoll(): StepUpResult {
         val verifier = oauthVerifier ?: return StepUpResult()
-        return api.finishOauthVerify(verifier).bodyOrThrow().toResult()
+        return api.finishOauthVerify(verifier).unwrapRaw().toResult()
     }
 
     private fun StepUpResponse.toResult() = StepUpResult(token = token, remaining = remaining)
-
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        return body() ?: throw RuntimeException("empty body")
-    }
 }

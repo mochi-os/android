@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">წაშლა</string>
     <string name="words_detail_delete_message">ეს სამუდამოდ წაშლის თამაშსა და მის ჩატს. ამ მოქმედების გაუქმება შეუძლებელია.</string>
+    <string name="words_detail_chat_passed">%1$s-მა გაატარა სვლა</string>
+    <string name="words_detail_chat_passed_over">%1$s-მა გაატარა სვლა — თამაში დასრულდა</string>
+    <string name="words_detail_chat_exchanged">%1$s-მა გაცვალა ფილები</string>
+    <string name="words_move_error_no_tiles">ფილები არ არის განთავსებული</string>
+    <string name="words_move_error_out_of_bounds">განთავსება დაფის გარეთაა</string>
+    <string name="words_move_error_square_occupied">უჯრა უკვე დაკავებულია</string>
+    <string name="words_move_error_not_in_line">ფილები უნდა განთავსდეს ერთ სტრიქონში ან სვეტში</string>
+    <string name="words_move_error_not_contiguous">ფილები უნდა იყოს ერთმანეთის გვერდით (უფსკრულების გარეშე)</string>
+    <string name="words_move_error_first_move_centre">პირველმა სვლამ უნდა დაფაროს ცენტრალური უჯრა</string>
+    <string name="words_move_error_first_move_two_tiles">პირველ სვლაზე უნდა განთავსდეს სულ მცირე 2 ფილა</string>
+    <string name="words_move_error_not_connected">ფილები უნდა შეუერთდეს დაფაზე არსებულ ფილებს</string>
+    <string name="words_move_error_no_words">სწორი სიტყვა არ შედგა</string>
+    <string name="words_validation_offline">ვალიდაცია ხაზგარეშეა — მაინც შეგიძლიათ გაგზავნა.</string>
+    <string name="words_validation_unknown_words">შეიცავს უცნობ სიტყვებს. მაინც შეგიძლიათ გაგზავნა.</string>
 </resources>

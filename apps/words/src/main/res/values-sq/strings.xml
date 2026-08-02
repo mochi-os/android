@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">Fshi ndeshjen?</string>
     <string name="words_detail_delete_confirm">Fshi</string>
     <string name="words_detail_delete_message">Kjo do të fshijë përgjithmonë lojën dhe bisedën e saj. Ky veprim nuk mund të zhbëhet.</string>
+    <string name="words_detail_chat_passed">%1$s kaloi radhën</string>
+    <string name="words_detail_chat_passed_over">%1$s kaloi radhën — loja mbaroi</string>
+    <string name="words_detail_chat_exchanged">%1$s ndërroi pllakat</string>
+    <string name="words_move_error_no_tiles">Nuk u vendos asnjë pllakë</string>
+    <string name="words_move_error_out_of_bounds">Vendosja është jashtë tabelës</string>
+    <string name="words_move_error_square_occupied">Katrori është tashmë i zënë</string>
+    <string name="words_move_error_not_in_line">Pllakat duhen vendosur në një rresht ose kolonë të vetme</string>
+    <string name="words_move_error_not_contiguous">Pllakat duhen vendosur ngjitur (pa boshllëqe)</string>
+    <string name="words_move_error_first_move_centre">Lëvizja e parë duhet të mbulojë katrorin qendror</string>
+    <string name="words_move_error_first_move_two_tiles">Lëvizja e parë duhet të vendosë të paktën 2 pllaka</string>
+    <string name="words_move_error_not_connected">Pllakat duhet të lidhen me pllakat në tabelë</string>
+    <string name="words_move_error_no_words">Nuk u formua asnjë fjalë e vlefshme</string>
+    <string name="words_validation_offline">Vërtetimi është jashtë linje — mund ta dorëzosh prapëseprapë.</string>
+    <string name="words_validation_unknown_words">Përmban fjalë të panjohura. Mund ta dorëzosh prapëseprapë.</string>
 </resources>

@@ -16,6 +16,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.api.Delegation
@@ -26,7 +28,6 @@ import org.mochios.settings.api.Route
 import org.mochios.settings.api.RouteApp
 import org.mochios.settings.api.RouteEntity
 import org.mochios.settings.api.UserSearchResult
-import retrofit2.Response
 import javax.inject.Inject
 
 data class DomainsUiState(
@@ -63,7 +64,7 @@ class DomainsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val data = api.getDomains().bodyOrThrow()
+                val data = api.getDomains().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     domains = data.domains,
@@ -83,7 +84,7 @@ class DomainsViewModel @Inject constructor(
                 loadingDetails = _uiState.value.loadingDetails + domain,
             )
             try {
-                val data = api.getDomain(domain).bodyOrThrow()
+                val data = api.getDomain(domain).unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     details = _uiState.value.details + (domain to data),
                     loadingDetails = _uiState.value.loadingDetails - domain,
@@ -97,14 +98,14 @@ class DomainsViewModel @Inject constructor(
         }
     }
 
-    fun createDomain(name: String) = mutate { api.createDomain(name).bodyOrThrow() }
+    fun createDomain(name: String) = mutate { api.createDomain(name).unwrapEmpty() }
 
-    fun deleteDomain(name: String) = mutate { api.deleteDomain(name).bodyOrThrow() }
+    fun deleteDomain(name: String) = mutate { api.deleteDomain(name).unwrapEmpty() }
 
-    fun verifyDomain(name: String) = mutate { api.verifyDomain(name).bodyOrThrow() }
+    fun verifyDomain(name: String) = mutate { api.verifyDomain(name).unwrapRaw() }
 
     fun setTls(name: String, enabled: Boolean) =
-        mutate { api.updateDomain(name, tls = enabled.toString()).bodyOrThrow() }
+        mutate { api.updateDomain(name, tls = enabled.toString()).unwrapEmpty() }
 
     fun createRoute(
         domain: String,
@@ -113,7 +114,7 @@ class DomainsViewModel @Inject constructor(
         target: String,
         priority: Int,
     ) = mutate {
-        api.createRoute(domain, path, method, target, priority).bodyOrThrow()
+        api.createRoute(domain, path, method, target, priority).unwrapEmpty()
         loadDetails(domain)
     }
 
@@ -125,22 +126,22 @@ class DomainsViewModel @Inject constructor(
         priority: Int,
         enabled: Boolean,
     ) = mutate {
-        api.updateRoute(domain, path, method, target, priority, enabled.toString()).bodyOrThrow()
+        api.updateRoute(domain, path, method, target, priority, enabled.toString()).unwrapEmpty()
         loadDetails(domain)
     }
 
     fun deleteRoute(domain: String, path: String) = mutate {
-        api.deleteRoute(domain, path).bodyOrThrow()
+        api.deleteRoute(domain, path).unwrapEmpty()
         loadDetails(domain)
     }
 
     fun createDelegation(domain: String, path: String, owner: String) = mutate {
-        api.createDelegation(domain, path, owner).bodyOrThrow()
+        api.createDelegation(domain, path, owner).unwrapEmpty()
         loadDetails(domain)
     }
 
     fun deleteDelegation(domain: String, path: String, owner: String) = mutate {
-        api.deleteDelegation(domain, path, owner).bodyOrThrow()
+        api.deleteDelegation(domain, path, owner).unwrapEmpty()
         loadDetails(domain)
     }
 
@@ -151,14 +152,14 @@ class DomainsViewModel @Inject constructor(
         if (_uiState.value.apps.isNotEmpty() && _uiState.value.entities.isNotEmpty()) return
         viewModelScope.launch {
             try {
-                val apps = api.listApps().bodyOrThrow().apps
+                val apps = api.listApps().unwrapRaw().apps
                     .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(apps = apps)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
             try {
-                val entities = api.listEntities().bodyOrThrow().entities
+                val entities = api.listEntities().unwrapRaw().entities
                     .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(entities = entities)
             } catch (e: Exception) {
@@ -182,7 +183,7 @@ class DomainsViewModel @Inject constructor(
         userSearchJob = viewModelScope.launch {
             delay(SEARCH_DEBOUNCE)
             try {
-                val users = api.searchUsers(q).bodyOrThrow().users
+                val users = api.searchUsers(q).unwrapRaw().users
                 _uiState.value = _uiState.value.copy(userResults = users)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -209,11 +210,6 @@ class DomainsViewModel @Inject constructor(
         }
     }
 
-    private fun <T> Response<T>.bodyOrThrow(): T {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
-        @Suppress("UNCHECKED_CAST")
-        return (body() ?: Unit) as T
-    }
 }
 
 // Convenience aliases used by the screen

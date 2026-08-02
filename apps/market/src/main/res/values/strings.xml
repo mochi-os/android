@@ -742,4 +742,6 @@
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Physical</string>
     <string name="market_warnings_title">Warnings</string>
+    <string name="market_asset_no_app">No app can open this file</string>
+    <string name="market_asset_download_failed">Couldn\'t download the file</string>
 </resources>

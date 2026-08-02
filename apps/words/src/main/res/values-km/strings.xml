@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">លុប</string>
     <string name="words_detail_delete_message">សកម្មភាពនេះនឹងលុបហ្គេម និងជជែកកំសាន្តរបស់វាជាអចិន្ត្រៃយ៍។ សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
+    <string name="words_detail_chat_passed">%1$s បានរំលង</string>
+    <string name="words_detail_chat_passed_over">%1$s បានរំលង — ល្បែងចប់</string>
+    <string name="words_detail_chat_exchanged">%1$s បានប្ដូរក្បឿង</string>
+    <string name="words_move_error_no_tiles">មិនបានដាក់ក្បឿងទេ</string>
+    <string name="words_move_error_out_of_bounds">ការដាក់ហួសពីក្តារ</string>
+    <string name="words_move_error_square_occupied">ប្រអប់ត្រូវបានប្រើរួចហើយ</string>
+    <string name="words_move_error_not_in_line">ក្បឿងត្រូវដាក់ក្នុងជួរដេក ឬជួរឈរតែមួយ</string>
+    <string name="words_move_error_not_contiguous">ក្បឿងត្រូវជាប់គ្នា (គ្មានចន្លោះ)</string>
+    <string name="words_move_error_first_move_centre">ការវាយលើកដំបូងត្រូវគ្របលើប្រអប់កណ្តាល</string>
+    <string name="words_move_error_first_move_two_tiles">ការវាយលើកដំបូងត្រូវដាក់ក្បឿងយ៉ាងតិច 2</string>
+    <string name="words_move_error_not_connected">ក្បឿងត្រូវភ្ជាប់ទៅក្បឿងដែលមានស្រាប់លើក្តារ</string>
+    <string name="words_move_error_no_words">គ្មានពាក្យត្រឹមត្រូវត្រូវបានបង្កើតទេ</string>
+    <string name="words_validation_offline">ការផ្ទៀងផ្ទាត់នៅក្រៅបណ្ដាញ — អ្នកនៅតែអាចដាក់ស្នើបាន។</string>
+    <string name="words_validation_unknown_words">មានពាក្យដែលមិនស្គាល់។ អ្នកនៅតែអាចដាក់ស្នើបាន។</string>
 </resources>

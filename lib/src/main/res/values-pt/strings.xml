@@ -313,4 +313,5 @@
         <item quantity="one">%1$d subscritor</item>
         <item quantity="other">%1$d subscritores</item>
     </plurals>
+    <string name="account_token_label">Sessão do Mochi</string>
 </resources>

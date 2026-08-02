@@ -743,4 +743,6 @@
     <string name="market_recently_viewed_clear">Ачысціць усё</string>
     <string name="market_listings_create">Стварыць</string>
     <string name="market_bid_dialog_ceiling_label">Максімальная стаўка (неабавязкова)</string>
+    <string name="market_asset_no_app">Няма праграмы, якая можа адкрыць гэты файл</string>
+    <string name="market_asset_download_failed">Не ўдалося спампаваць файл</string>
 </resources>

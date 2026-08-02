@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">That server is unreachable. Retrying…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">Wiki creation will be available in a future update.</string>
     <string name="wikis_find_search_placeholder">Search by name, ID, fingerprint, or URL…</string>
     <string name="wikis_join_search_button">Search for wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>

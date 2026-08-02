@@ -72,4 +72,18 @@
     <string name="words_detail_delete_title">Partida ezabatu?</string>
     <string name="words_detail_delete_confirm">Ezabatu</string>
     <string name="words_detail_delete_message">Honek jokoa eta bere txata betiko ezabatuko ditu. Ekintza hau ezin da desegin.</string>
+    <string name="words_detail_chat_passed">%1$s(e)k pasatu du</string>
+    <string name="words_detail_chat_passed_over">%1$s(e)k pasatu du — partida amaituta</string>
+    <string name="words_detail_chat_exchanged">%1$s(e)k fitxak aldatu ditu</string>
+    <string name="words_move_error_no_tiles">Ez da fitxarik jarri</string>
+    <string name="words_move_error_out_of_bounds">Kokapena taulatik kanpo dago</string>
+    <string name="words_move_error_square_occupied">Laukia beteta dago jada</string>
+    <string name="words_move_error_not_in_line">Fitxak errenkada edo zutabe bakarrean jarri behar dira</string>
+    <string name="words_move_error_not_contiguous">Fitxek elkarren ondoan egon behar dute (hutsunerik gabe)</string>
+    <string name="words_move_error_first_move_centre">Lehen jokaldiak erdiko laukia estali behar du</string>
+    <string name="words_move_error_first_move_two_tiles">Lehen jokaldian gutxienez 2 fitxa jarri behar dira</string>
+    <string name="words_move_error_not_connected">Fitxek taulan dauden fitxekin lotu behar dute</string>
+    <string name="words_move_error_no_words">Ez da hitz baliozkorik osatu</string>
+    <string name="words_validation_offline">Balioztapena lineaz kanpo dago — hala ere, bidal dezakezu.</string>
+    <string name="words_validation_unknown_words">Hitz ezezagunak ditu. Hala ere, bidal dezakezu.</string>
 </resources>

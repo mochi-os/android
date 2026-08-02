@@ -372,4 +372,16 @@
     <string name="route_target_select">Pilih</string>
     <string name="account_data_description">Muat turun sandaran lengkap yang boleh anda pulihkan pada pelayan Mochi ini atau pelayan Mochi lain.</string>
     <string name="route_target_none">Tiada sasaran tersedia</string>
+    <string name="login_invalid_code">Kod tidak sah</string>
+    <string name="accounts_provider_browser">Pemberitahuan pelayar</string>
+    <string name="accounts_provider_fcm">Push Android</string>
+    <string name="accounts_provider_mcp">Pelayan MCP</string>
+    <string name="accounts_provider_unifiedpush">Pemberitahuan push</string>
+    <string name="accounts_provider_url">URL Luaran</string>
+    <string name="accounts_provider_web">Web Mochi</string>
+    <string name="accounts_verified">Akaun disahkan</string>
+    <string name="accounts_verify_invalid">Kod pengesahan tidak sah</string>
+    <string name="accounts_verify_sent">Kod pengesahan dihantar</string>
+    <string name="accounts_test_failed">Ujian gagal</string>
+    <string name="accounts_test_sent">Ujian dihantar</string>
 </resources>

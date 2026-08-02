@@ -63,7 +63,12 @@ fun ObjectDetailSheet(
     projectDetails: ProjectDetails,
     initialObject: org.mochios.projects.model.ProjectObject? = null,
     onDismiss: () -> Unit,
-    onObjectDeleted: () -> Unit,
+    /**
+     * Delete this object. Imperative, not a past-tense notification: the sheet
+     * does not delete anything itself, and naming it `onObjectDeleted` is how
+     * a caller came to satisfy it by merely closing the sheet and refreshing.
+     */
+    onDeleteObject: () -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
     onNavigateToObject: (String) -> Unit = {},
     /**
@@ -284,7 +289,7 @@ fun ObjectDetailSheet(
             message = stringResource(R.string.projects_object_delete_message),
             onConfirm = {
                 showDeleteConfirm = false
-                onObjectDeleted()
+                onDeleteObject()
             },
             onDismiss = { showDeleteConfirm = false }
         )

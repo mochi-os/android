@@ -372,4 +372,16 @@
     <string name="route_target_select">选择</string>
     <string name="account_data_description">下载完整备份，你可以在本服务器或其他 Mochi 服务器上还原。</string>
     <string name="route_target_none">没有可用的目标</string>
+    <string name="login_invalid_code">代码无效</string>
+    <string name="accounts_provider_browser">浏览器通知</string>
+    <string name="accounts_provider_fcm">Android 推送</string>
+    <string name="accounts_provider_mcp">MCP 服务器</string>
+    <string name="accounts_provider_unifiedpush">推送通知</string>
+    <string name="accounts_provider_url">外部 URL</string>
+    <string name="accounts_provider_web">Mochi 网页版</string>
+    <string name="accounts_verified">账户已验证</string>
+    <string name="accounts_verify_invalid">验证码无效</string>
+    <string name="accounts_verify_sent">验证码已发送</string>
+    <string name="accounts_test_failed">测试失败</string>
+    <string name="accounts_test_sent">测试已发送</string>
 </resources>

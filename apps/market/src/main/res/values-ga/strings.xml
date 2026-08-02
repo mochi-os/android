@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Glan an t-iomlán</string>
     <string name="market_listings_create">Cruthaigh</string>
     <string name="market_bid_dialog_ceiling_label">Tairiscint uasta (roghnach)</string>
+    <string name="market_asset_no_app">Níl aon aip in ann an comhad seo a oscailt</string>
+    <string name="market_asset_download_failed">Níorbh fhéidir an comhad a íoslódáil</string>
 </resources>

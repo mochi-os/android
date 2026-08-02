@@ -45,8 +45,15 @@ class DistributorStore(context: Context) {
 
     fun put(entry: Entry) {
         prefs.edit().putString(keyFor(entry.token), entryToJson(entry).toString()).apply()
-        Log.i(TAG, "stored token=${entry.token} pkg=${entry.appPackage} sub=${entry.subId}")
+        // Neither the token nor the subscription id is logged: the token is the
+        // capability that authenticates the owning app to this distributor, and
+        // the subscription id is the unguessable path segment of its push
+        // endpoint. Both are credentials, so the package alone is logged.
+        Log.i(TAG, "stored registration for ${entry.appPackage}")
     }
+
+    /** Number of registrations held, for the receiver's cap. */
+    fun count(): Int = prefs.all.keys.count { it.startsWith(KEY_PREFIX) }
 
     fun get(token: String): Entry? {
         val json = prefs.getString(keyFor(token), null) ?: return null
@@ -66,7 +73,7 @@ class DistributorStore(context: Context) {
 
     fun remove(token: String) {
         prefs.edit().remove(keyFor(token)).apply()
-        Log.i(TAG, "removed token=$token")
+        Log.i(TAG, "removed registration")
     }
 
     private fun keyFor(token: String) = KEY_PREFIX + token

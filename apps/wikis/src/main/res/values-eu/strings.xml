@@ -249,7 +249,6 @@
     <string name="wikis_subscribe_failed_502">Zerbitzaria ezin da iritsi. Berriro saiatzen…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wikiaren RSS URLa</string>
-    <string name="wikis_create_dialog_stub">Wikiak sortzeko aukera etorkizuneko eguneratze batean egongo da eskuragarri.</string>
     <string name="wikis_find_search_placeholder">Bilatu izenez, IDz, hatz-markaz edo URLz…</string>
     <string name="wikis_join_search_button">Bilatu wikiak…</string>
     <string name="wikis_join_id_hint">abc123…</string>

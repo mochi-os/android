@@ -163,7 +163,7 @@ class FindFeedsViewModel @Inject constructor(
             try {
                 // The subscribe request identifies the feed by its full id; the
                 // fingerprint-preferred [feedId] is only the local tracking key.
-                repository.subscribeFeed(feed.id.ifEmpty { feed.fingerprint }, feed.server)
+                repository.subscribeFeed(feed.id.ifEmpty { feed.fingerprint }, feed.server, feed.peer)
                 _subscribedFeeds.value = _subscribedFeeds.value + feedId
                 // Open the just-subscribed feed.
                 _navigateToFeed.emit(feedId)

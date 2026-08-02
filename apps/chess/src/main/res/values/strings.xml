@@ -87,6 +87,8 @@
     <string name="chess_captured_multiplier">×%1$d</string>
 
     <!-- Piece names -->
+    <string name="chess_piece_white">White %1$s</string>
+    <string name="chess_piece_black">Black %1$s</string>
     <string name="chess_piece_king">King</string>
     <string name="chess_piece_queen">Queen</string>
     <string name="chess_piece_rook">Rook</string>

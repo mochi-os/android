@@ -313,4 +313,5 @@
         <item quantity="one">%1$d مشترک</item>
         <item quantity="other">%1$d مشترک</item>
     </plurals>
+    <string name="account_token_label">نشست Mochi</string>
 </resources>

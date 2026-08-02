@@ -312,4 +312,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">%1$d 人の購読者</item>
     </plurals>
+    <string name="account_token_label">Mochi セッション</string>
 </resources>

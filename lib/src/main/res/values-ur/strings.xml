@@ -313,4 +313,5 @@
         <item quantity="one">%1$d رکن</item>
         <item quantity="other">%1$d ارکان</item>
     </plurals>
+    <string name="account_token_label">Mochi سیشن</string>
 </resources>

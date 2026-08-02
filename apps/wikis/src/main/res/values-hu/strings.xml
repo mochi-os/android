@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">A szerver nem érhető el. Újrapróbálkozás…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_create_dialog_stub">A wiki létrehozása egy jövőbeli frissítésben lesz elérhető.</string>
     <string name="wikis_find_search_placeholder">Keresés név, ID, ujjlenyomat vagy URL alapján…</string>
     <string name="wikis_join_search_button">Wiki keresése…</string>
     <string name="wikis_join_id_hint">abc123…</string>

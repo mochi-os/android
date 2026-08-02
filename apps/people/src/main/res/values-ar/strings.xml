@@ -209,4 +209,5 @@
     <string name="people_invitations_some_accept_failed">تعذّر قبول بعض الدعوات</string>
     <string name="people_invitations_some_decline_failed">تعذّر رفض بعض الدعوات</string>
     <string name="people_invitations_some_cancel_failed">تعذّر إلغاء بعض الدعوات</string>
+    <string name="people_profile_too_long">الملف الشخصي طويل جدًا</string>
 </resources>

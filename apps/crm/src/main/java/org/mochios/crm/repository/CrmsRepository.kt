@@ -44,6 +44,7 @@ class CrmsRepository @Inject constructor(
     // In-memory cache
     private val crmInfoCache = mutableMapOf<String, Pair<CrmDetails, Long>>()
     private val objectsCache = mutableMapOf<String, Pair<List<CrmObject>, Long>>()
+    // Watched object ids for the local user, keyed by crm, from the last objects fetch.
     private val watchedCache = mutableMapOf<String, List<String>>()
     private val cacheMaxAge = 60_000L // 1 minute
 
@@ -157,10 +158,7 @@ class CrmsRepository @Inject constructor(
         return response.objects
     }
 
-    /**
-     * Ids the viewer watches in [crmId], as of the last [getObjects] call.
-     * Empty until the objects have been fetched at least once.
-     */
+    /** Watched object ids for the local user from the last [getObjects] fetch. */
     fun getWatched(crmId: String): List<String> = watchedCache[crmId] ?: emptyList()
 
     suspend fun createObject(crmId: String, classId: String, parent: String? = null, title: String): CrmObject =

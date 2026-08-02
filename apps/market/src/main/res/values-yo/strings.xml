@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Pa gbogbo rẹ̀ rẹ́</string>
     <string name="market_listings_create">Dá</string>
     <string name="market_bid_dialog_ceiling_label">Ìdíyelé tó pọ̀ jù (àṣàyàn)</string>
+    <string name="market_asset_no_app">Kò sí app tó lè ṣí fáìlì yìí</string>
+    <string name="market_asset_download_failed">A kò lè gba fáìlì náà</string>
 </resources>

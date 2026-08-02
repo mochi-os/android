@@ -313,4 +313,5 @@
         <item quantity="one">%1$d обунашаванда</item>
         <item quantity="other">%1$d обунашаванда</item>
     </plurals>
+    <string name="account_token_label">Ҷаласаи Mochi</string>
 </resources>

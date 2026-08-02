@@ -746,4 +746,6 @@
     <string name="market_recently_viewed_clear">सब साफ करीं</string>
     <string name="market_listings_create">बनाईं</string>
     <string name="market_bid_dialog_ceiling_label">अधिकतम बोली (वैकल्पिक)</string>
+    <string name="market_asset_no_app">ई फाइल खोले वाला कवनो ऐप नइखे</string>
+    <string name="market_asset_download_failed">फाइल डाउनलोड ना हो सकल</string>
 </resources>

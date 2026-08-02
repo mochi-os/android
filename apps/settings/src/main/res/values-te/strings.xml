@@ -373,4 +373,16 @@
     <string name="route_target_select">ఎంచుకోండి</string>
     <string name="account_data_description">ఈ లేదా మరొక Mochi సర్వర్‌లో పునరుద్ధరించగల పూర్తి బ్యాకప్‌ను డౌన్‌లోడ్ చేయండి.</string>
     <string name="route_target_none">లక్ష్యాలు అందుబాటులో లేవు</string>
+    <string name="login_invalid_code">చెల్లని కోడ్</string>
+    <string name="accounts_provider_browser">బ్రౌజర్ నోటిఫికేషన్‌లు</string>
+    <string name="accounts_provider_fcm">Android పుష్</string>
+    <string name="accounts_provider_mcp">MCP సర్వర్</string>
+    <string name="accounts_provider_unifiedpush">పుష్ నోటిఫికేషన్</string>
+    <string name="accounts_provider_url">బాహ్య URL</string>
+    <string name="accounts_provider_web">Mochi వెబ్</string>
+    <string name="accounts_verified">ఖాతా ధృవీకరించబడింది</string>
+    <string name="accounts_verify_invalid">చెల్లని ధృవీకరణ కోడ్</string>
+    <string name="accounts_verify_sent">ధృవీకరణ కోడ్ పంపబడింది</string>
+    <string name="accounts_test_failed">టెస్ట్ విఫలమైంది</string>
+    <string name="accounts_test_sent">పరీక్ష పంపబడింది</string>
 </resources>

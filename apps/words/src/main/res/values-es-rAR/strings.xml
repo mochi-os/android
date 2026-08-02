@@ -19,4 +19,16 @@
 
     <string name="words_detail_delete_confirm">Eliminá</string>
     <string name="words_detail_delete_message">Esto elimina permanentemente la partida y su chat. Esta acción no se puede deshacer.</string>
+    <string name="words_detail_chat_passed">%1$s pasó</string>
+    <string name="words_detail_chat_passed_over">%1$s pasó — fin del juego</string>
+    <string name="words_detail_chat_exchanged">%1$s cambió fichas</string>
+    <string name="words_move_error_no_tiles">No colocaste ninguna ficha</string>
+    <string name="words_move_error_out_of_bounds">La colocación queda fuera del tablero</string>
+    <string name="words_move_error_square_occupied">El casillero ya está ocupado</string>
+    <string name="words_move_error_not_in_line">Las fichas tienen que ir en una sola fila o columna</string>
+    <string name="words_move_error_not_contiguous">Las fichas tienen que estar seguidas (sin huecos)</string>
+    <string name="words_move_error_first_move_centre">La primera jugada tiene que cubrir el casillero central</string>
+    <string name="words_move_error_first_move_two_tiles">La primera jugada tiene que colocar al menos 2 fichas</string>
+    <string name="words_move_error_not_connected">Las fichas tienen que conectarse con las fichas del tablero</string>
+    <string name="words_move_error_no_words">No se formó ninguna palabra válida</string>
 </resources>

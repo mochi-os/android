@@ -21,10 +21,18 @@ import org.unifiedpush.android.connector.UnifiedPush
  * `unifiedpush` account row, and from then on notifications fan out
  * through it.
  *
- * Distributor selection: if the user has multiple distributors
- * installed, [tryUseDefaultDistributor] picks the saved default (or the
- * first available). Apps can prompt the user to pick one explicitly via
- * [showDistributorPicker] when first onboarding push.
+ * Distributor selection: [ensureDistributor] keeps a saved choice if there is
+ * one, and otherwise prefers this app's own distributor over any third party.
+ * That preference matters because the Mochi shell ships a distributor itself,
+ * and the connector returns installed distributors in PackageManager order —
+ * so taking the first would silently route a self-hosted user's notifications
+ * through ntfy or NextPush if either happened to be installed.
+ *
+ * There is deliberately no picker yet. This KDoc used to promise
+ * `tryUseDefaultDistributor` and `showDistributorPicker`, neither of which
+ * exists; `availableDistributors` and `selectDistributor` are present but have
+ * no callers, so a user who wants a third-party distributor has to select it
+ * through that API from an app that calls it.
  */
 object MochiPushClient {
 
@@ -61,9 +69,10 @@ object MochiPushClient {
     }
 
     /**
-     * Ensure a distributor is selected. Picks the saved default or, if
-     * none, falls back to the first available distributor on device.
-     * Returns true when a distributor is selected.
+     * Ensure a distributor is selected: keeps the saved choice when there is
+     * one, otherwise adopts this app's own distributor in preference to any
+     * third party (see [preferOwnDistributor]). Returns true when a
+     * distributor is selected.
      */
     fun ensureDistributor(context: Context): Boolean {
         val saved = UnifiedPush.getSavedDistributor(context)
@@ -73,7 +82,9 @@ object MochiPushClient {
             Log.w(TAG, "No UnifiedPush distributor installed")
             return false
         }
-        UnifiedPush.saveDistributor(context, available.first())
+        val chosen = preferOwnDistributor(available, context.packageName)
+        UnifiedPush.saveDistributor(context, chosen)
+        Log.i(TAG, "Selected UnifiedPush distributor $chosen of ${available.size}")
         return true
     }
 
@@ -104,3 +115,15 @@ object MochiPushClient {
         }
     }
 }
+
+/**
+ * Which distributor to adopt when the user has not chosen one.
+ *
+ * Prefers [own]. The connector lists installed distributors in PackageManager
+ * order with no preference for the caller, and the Mochi shell registers a
+ * distributor itself, so taking the first entry would hand a self-hosted user's
+ * notifications to whichever third-party distributor happened to sort earlier.
+ */
+internal fun preferOwnDistributor(available: List<String>, own: String): String =
+    available.firstOrNull { it == own } ?: available.first()
+

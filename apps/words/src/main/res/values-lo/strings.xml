@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">Delete game?</string>
     <string name="words_detail_delete_confirm">ລົບ</string>
     <string name="words_detail_delete_message">ການດຳເນີນການນີ້ຈະລົບເກມ ແລະ ການສົນທະນາຂອງມັນຖາວອນ. ບໍ່ສາມາດຍົກເລີກການດຳເນີນການນີ້ໄດ້.</string>
+    <string name="words_detail_chat_passed">%1$s ຂ້າມຕາ</string>
+    <string name="words_detail_chat_passed_over">%1$s ຂ້າມຕາ — ເກມຈົບແລ້ວ</string>
+    <string name="words_detail_chat_exchanged">%1$s ປ່ຽນແຜ່ນປ້າຍ</string>
+    <string name="words_move_error_no_tiles">ບໍ່ໄດ້ວາງແຜ່ນປ້າຍໃດເລີຍ</string>
+    <string name="words_move_error_out_of_bounds">ການວາງຢູ່ນອກກະດານ</string>
+    <string name="words_move_error_square_occupied">ຊ່ອງນີ້ຖືກໃຊ້ແລ້ວ</string>
+    <string name="words_move_error_not_in_line">ຕ້ອງວາງແຜ່ນປ້າຍໃນແຖວ ຫຼື ຖັນດຽວ</string>
+    <string name="words_move_error_not_contiguous">ແຜ່ນປ້າຍຕ້ອງຕິດກັນ (ບໍ່ມີຊ່ອງຫວ່າງ)</string>
+    <string name="words_move_error_first_move_centre">ຕາທຳອິດຕ້ອງກວມເອົາຊ່ອງກາງ</string>
+    <string name="words_move_error_first_move_two_tiles">ຕາທຳອິດຕ້ອງວາງແຜ່ນປ້າຍຢ່າງໜ້ອຍ 2 ແຜ່ນ</string>
+    <string name="words_move_error_not_connected">ແຜ່ນປ້າຍຕ້ອງຕໍ່ກັບແຜ່ນປ້າຍທີ່ມີຢູ່ໃນກະດານ</string>
+    <string name="words_move_error_no_words">ບໍ່ມີຄຳທີ່ຖືກຕ້ອງເກີດຂຶ້ນ</string>
+    <string name="words_validation_offline">ການກວດສອບອອບລາຍ — ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
+    <string name="words_validation_unknown_words">ມີຄຳສັບທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
 </resources>

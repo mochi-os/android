@@ -17,10 +17,13 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
+import okhttp3.HttpUrl
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.isServerOrigin
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -38,6 +41,45 @@ annotation class AppContext
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class InvalidationInterceptor
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class ServerInterceptor
+
+/**
+ * Rewrite [url]'s origin — scheme, host and port — to the one named by
+ * [serverUrl], leaving the path, query and fragment alone. Returns [url]
+ * unchanged when it is already on that origin, or when [serverUrl] is
+ * unparseable (nothing to retarget to, so leave the request as the caller
+ * built it).
+ *
+ * Retrofit fixes its `baseUrl` when the instance is built, and every Retrofit
+ * here is a `@Singleton` constructed from the server URL that happened to be
+ * stored at first injection — for the core one that is before the user has had
+ * a chance to choose a server at all. This lets the pinned `baseUrl` supply
+ * only the path prefix (`/feeds/`, `/crm/`, …) while the origin follows the
+ * user's current server.
+ */
+internal fun retargetToServer(url: HttpUrl, serverUrl: String): HttpUrl {
+    val server = serverUrl.toHttpUrlOrNull() ?: return url
+    if (isServerOrigin(url, serverUrl)) return url
+    return url.newBuilder()
+        .scheme(server.scheme)
+        .host(server.host)
+        .port(server.port)
+        .build()
+}
+
+/**
+ * Interceptor form of [retargetToServer]. Takes the server as a supplier so it
+ * is read per request rather than captured, and so ServerRetargetTest can drive
+ * it without an Android context.
+ */
+internal fun serverInterceptor(server: () -> String): Interceptor = Interceptor { chain ->
+    val request = chain.request()
+    val target = retargetToServer(request.url, server())
+    chain.proceed(if (target == request.url) request else request.newBuilder().url(target).build())
+}
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -129,7 +171,14 @@ object ApiClient {
 
     @Provides
     @Singleton
+    @ServerInterceptor
+    fun provideServerInterceptor(sessionManager: SessionManager): Interceptor =
+        serverInterceptor { sessionManager.getServerUrlBlocking() }
+
+    @Provides
+    @Singleton
     fun provideOkHttpClient(
+        @ServerInterceptor serverInterceptor: Interceptor,
         @AuthInterceptor authInterceptor: Interceptor,
         @InvalidationInterceptor invalidationInterceptor: Interceptor,
         sessionManager: SessionManager
@@ -138,6 +187,17 @@ object ApiClient {
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
+            // Outermost, so the auth, invalidation and logging interceptors
+            // below — and the cookie jar, which OkHttp consults in
+            // BridgeInterceptor after every application interceptor — all see
+            // the corrected origin rather than the one Retrofit was pinned to.
+            // Every module's client is built via okHttpClient.newBuilder(), so
+            // all sixteen Retrofit instances inherit this; the clients that
+            // deliberately fetch foreign hosts (AssetHttp, NominatimService,
+            // UpdateChecker) build from a fresh OkHttpClient.Builder() and must
+            // keep doing so, or an RSS image URL would be rewritten to the
+            // user's server.
+            .addInterceptor(serverInterceptor)
             // Ask the server for JSON errors on every request. The Mochi server
             // content-negotiates (Action.error in core/server/actions.go):
             // without this header it serves an HTML error page, which the client

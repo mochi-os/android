@@ -744,4 +744,6 @@
     <string name="market_recently_viewed_clear">Embopotĩ opaite</string>
     <string name="market_listings_create">Embojeguáva</string>
     <string name="market_bid_dialog_ceiling_label">Ñemuhague tuichavéva (eiporavokuaáva)</string>
+    <string name="market_asset_no_app">Ndaipóri tembiporu ojuruja hag̃ua ko archivo</string>
+    <string name="market_asset_download_failed">Ndaikatúi oñemboguejy pe ñongatupyre</string>
 </resources>

@@ -75,4 +75,18 @@
     <string name="words_detail_delete_title">ลบเกม?</string>
     <string name="words_detail_delete_confirm">ลบ</string>
     <string name="words_detail_delete_message">การดำเนินการนี้จะลบเกมและแชทของเกมอย่างถาวร ไม่สามารถยกเลิกการดำเนินการนี้ได้</string>
+    <string name="words_detail_chat_passed">%1$s ข้ามตา</string>
+    <string name="words_detail_chat_passed_over">%1$s ข้ามตา — จบเกม</string>
+    <string name="words_detail_chat_exchanged">%1$s เปลี่ยนตัวอักษร</string>
+    <string name="words_move_error_no_tiles">ยังไม่ได้วางตัวอักษร</string>
+    <string name="words_move_error_out_of_bounds">วางนอกกระดาน</string>
+    <string name="words_move_error_square_occupied">ช่องนี้มีตัวอักษรอยู่แล้ว</string>
+    <string name="words_move_error_not_in_line">ต้องวางตัวอักษรในแถวหรือคอลัมน์เดียวกัน</string>
+    <string name="words_move_error_not_contiguous">ตัวอักษรต้องติดกัน (ห้ามมีช่องว่าง)</string>
+    <string name="words_move_error_first_move_centre">ตาแรกต้องวางทับช่องกลาง</string>
+    <string name="words_move_error_first_move_two_tiles">ตาแรกต้องวางอย่างน้อย 2 ตัว</string>
+    <string name="words_move_error_not_connected">ตัวอักษรต้องเชื่อมกับตัวอักษรที่มีอยู่บนกระดาน</string>
+    <string name="words_move_error_no_words">ไม่เกิดคำที่ถูกต้อง</string>
+    <string name="words_validation_offline">การตรวจสอบออฟไลน์ — คุณยังส่งได้</string>
+    <string name="words_validation_unknown_words">มีคำที่ไม่รู้จัก คุณยังส่งได้</string>
 </resources>

@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -50,6 +51,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import org.mochios.android.api.userMessage
 import org.mochios.settings.ui.login.StepUpHost
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -60,6 +62,8 @@ import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R as MochiR
@@ -137,7 +141,7 @@ fun AccountScreen(
             }
 
             state.error?.let { err ->
-                Text(text = err.toString(), color = MaterialTheme.colorScheme.error)
+                Text(text = err.userMessage(), color = MaterialTheme.colorScheme.error)
             }
         }
     }
@@ -179,6 +183,10 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
                         onValueChange = { passphrase = it },
                         singleLine = true,
                         label = { Text(stringResource(R.string.account_data_passphrase)) },
+                        // Masked, and typed on a password keyboard so the IME
+                        // does not learn it or offer it back as a suggestion.
+                        visualTransformation = PasswordVisualTransformation(),
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                         modifier = Modifier.fillMaxWidth(),
                     )
                     Spacer(Modifier.height(8.dp))

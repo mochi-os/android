@@ -373,4 +373,16 @@
     <string name="route_target_select">Tanlash</string>
     <string name="account_data_description">Bu yoki boshqa Mochi serverida tiklashingiz mumkin boʻlgan toʻliq zaxira nusxasini yuklab oling.</string>
     <string name="route_target_none">Mavjud maqsadlar yoʻq</string>
+    <string name="login_invalid_code">Notoʻgʻri kod</string>
+    <string name="accounts_provider_browser">Brauzer bildirishnomalari</string>
+    <string name="accounts_provider_fcm">Android push</string>
+    <string name="accounts_provider_mcp">MCP serveri</string>
+    <string name="accounts_provider_unifiedpush">Push bildirishnoma</string>
+    <string name="accounts_provider_url">Tashqi URL</string>
+    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_verified">Hisob tasdiqlandi</string>
+    <string name="accounts_verify_invalid">Notoʻgʻri tasdiqlash kodi</string>
+    <string name="accounts_verify_sent">Tasdiqlash kodi yuborildi</string>
+    <string name="accounts_test_failed">Sinov muvaffaqiyatsiz</string>
+    <string name="accounts_test_sent">Sinov yuborildi</string>
 </resources>

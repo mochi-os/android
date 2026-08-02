@@ -740,4 +740,5 @@
     <string name="market_recently_viewed_clear">Limpar tudo</string>
     <string name="market_listings_create">Criar</string>
     <string name="market_bid_dialog_ceiling_label">Lance máximo (opcional)</string>
+    <string name="market_asset_no_app">Nenhum aplicativo pode abrir este arquivo</string>
 </resources>

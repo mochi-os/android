@@ -251,7 +251,6 @@
     <string name="wikis_subscribe_failed_502">Den servern är inte tillgänglig. Försöker igen…</string>
     <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_create_dialog_stub">Wiki-skapande kommer i en framtida uppdatering.</string>
     <string name="wikis_find_search_placeholder">Sök efter namn, ID, fingeravtryck eller URL…</string>
     <string name="wikis_join_search_button">Sök efter wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
