@@ -17,7 +17,7 @@ because that directory is its own git repo: a standalone checkout has to be able
 to fail its own build. claude/scripts/check-android-i18n.py is a thin wrapper
 kept for the path CLAUDE.md documents.
 
-Five checks, each catching a class the others cannot:
+Six checks, each catching a class the others cannot:
   key presence         a locale missing a key the source has
   argument survival    a translation that drops a %1$s the English carries, so
                        the value never reaches the reader
@@ -30,6 +30,13 @@ Five checks, each catching a class the others cannot:
   plural completeness  a <plurals> missing a quantity its language needs, which
                        Android silently serves from `other` - fluent, wrong text
                        for the counts the missing category covers
+  locale coverage      a values-<locale> directory holding no strings at all, so
+                       the locale serves English throughout, and keys a locale
+                       still defines that the source has dropped
+
+Every check reads EVERY xml file in a values directory rather than strings.xml
+alone: Android merges them all, so a split catalogue would otherwise be half
+invisible to a gate whose entire purpose is seeing all of it.
 
 Usage:
     check-locales.py --discover <dir> [--strict]
@@ -61,10 +68,27 @@ OVERLAY_RE = re.compile(r"^values-en(-|$)")
 KEY_RE = re.compile(r'<(?:string|plurals) name="([^"]+)"')
 
 
-def load_keys(path: Path) -> set[str]:
-    if not path.exists():
-        return set()
-    return set(KEY_RE.findall(path.read_text(encoding="utf-8")))
+def catalogues(directory: Path) -> list[Path]:
+    """Every resource file in a values directory, not just strings.xml.
+
+    Matching one filename was an assumption, not a rule: Android merges every
+    XML file under values*/ and nothing stops a large catalogue being split into
+    strings_extra.xml. The checker would then have gone silently blind to the
+    split-off half - reporting ok for keys it never read - which is the failure
+    mode this gate exists to prevent, so the assumption is now removed rather
+    than documented.
+    """
+    if not directory.is_dir():
+        return []
+    return sorted(directory.glob("*.xml"))
+
+
+def read_catalogues(directory: Path) -> str:
+    return "\n".join(path.read_text(encoding="utf-8") for path in catalogues(directory))
+
+
+def load_keys(directory: Path) -> set[str]:
+    return set(KEY_RE.findall(read_catalogues(directory)))
 
 
 # Region-qualified locales whose nearest localised catalogue is a script one
@@ -124,10 +148,8 @@ ARGUMENT_RE = re.compile(r"%(?:\d+\$)?[ds]|%s")
 PLACEHOLDER_RE = re.compile(r"\{[A-Za-z_][A-Za-z0-9_]*\}|\{\d+\}|&lt;\d+&gt;")
 
 
-def load_strings(path: Path) -> dict[str, str]:
-    if not path.exists():
-        return {}
-    return dict(STRING_RE.findall(path.read_text(encoding="utf-8")))
+def load_strings(directory: Path) -> dict[str, str]:
+    return dict(STRING_RE.findall(read_catalogues(directory)))
 
 
 PLURALS_RE = re.compile(r'<plurals name="([^"]+)">(.*?)</plurals>', re.S)
@@ -204,10 +226,7 @@ def check_plurals(module_dir: Path) -> list[str]:
         required = PLURAL_QUANTITY.get(language_of(vd.name))
         if not required:
             continue
-        xml = vd / "strings.xml"
-        if not xml.exists():
-            continue
-        for name, body in PLURALS_RE.findall(xml.read_text(encoding="utf-8")):
+        for name, body in PLURALS_RE.findall(read_catalogues(vd)):
             missing = required - set(QUANTITY_RE.findall(body))
             if missing:
                 findings.append(f"{vd.name} {name}: no {', '.join(sorted(missing))}")
@@ -217,7 +236,7 @@ def check_plurals(module_dir: Path) -> list[str]:
 def check_module(module_dir: Path) -> list[tuple[str, set[str]]]:
     """Return list of (locale-qualifier, missing-key-set) for incomplete catalogs."""
     res = module_dir / "src" / "main" / "res"
-    source = load_keys(res / "values" / "strings.xml")
+    source = load_keys(res / "values")
     if not source:
         raise SystemExit(f"{module_dir}: no readable values/strings.xml - "
                          "a wrong path here would otherwise report ok")
@@ -228,12 +247,9 @@ def check_module(module_dir: Path) -> list[tuple[str, set[str]]]:
             continue
         if OVERLAY_RE.match(vd.name):
             continue
-        xml = vd / "strings.xml"
-        if not xml.exists():
-            continue
-        have = load_keys(xml)
+        have = load_keys(vd)
         for parent in ancestors(vd.name, present):
-            have |= load_keys(res / parent / "strings.xml")
+            have |= load_keys(res / parent)
         missing = source - have
         if missing:
             problems.append((vd.name, missing))
@@ -251,7 +267,7 @@ def check_values(module_dir: Path) -> tuple[list[str], list[str]]:
     substitutes at all.
     """
     res = module_dir / "src" / "main" / "res"
-    english = load_strings(res / "values" / "strings.xml")
+    english = load_strings(res / "values")
     if not english:
         return [], []
     arguments, placeholders = [], []
@@ -260,7 +276,7 @@ def check_values(module_dir: Path) -> tuple[list[str], list[str]]:
             continue
         if OVERLAY_RE.match(vd.name):
             continue
-        for key, value in load_strings(vd / "strings.xml").items():
+        for key, value in load_strings(vd).items():
             source = english.get(key)
             if source is None:
                 continue
@@ -293,14 +309,14 @@ def check_overlays(module_dir: Path) -> list[str]:
                 literal backslash then a quote, so the reader sees Tag \\"foo\\".
     """
     res = module_dir / "src" / "main" / "res"
-    english = load_strings(res / "values" / "strings.xml")
+    english = load_strings(res / "values")
     if not english:
         return []
     findings = []
     for vd in sorted(res.iterdir()):
         if not vd.is_dir() or not OVERLAY_RE.match(vd.name):
             continue
-        for key, value in load_strings(vd / "strings.xml").items():
+        for key, value in load_strings(vd).items():
             source = english.get(key)
             if source is None or source == value:
                 continue
@@ -310,6 +326,52 @@ def check_overlays(module_dir: Path) -> list[str]:
                 findings.append(f"{vd.name} {key}: case differs from values/ "
                                 f"({source.strip()[:32]!r} vs {value.strip()[:32]!r})")
     return findings
+
+
+# values-* qualifiers that are NOT locales. Android's locale qualifier is a two
+# or three letter language, so most configuration qualifiers (night, land, v29,
+# hdpi) cannot be mistaken for one - but these three can, and a UI-mode
+# directory holding no strings is not a translation gap.
+NOT_LOCALE = {"tv", "car", "vr"}
+
+
+def check_coverage(module_dir: Path) -> tuple[list[str], list[str]]:
+    """Return (silent-locale, stale-key) findings.
+
+    Two gaps that key presence cannot see, because both are about catalogues it
+    never opens or keys it never asks about:
+
+      silent   a values-<locale> directory carrying no string resources at all.
+               The old code skipped a directory with no strings.xml and reported
+               the module ok, so a locale that served English for every single
+               string looked identical to one that was complete.
+      stale    a key a locale defines that the source no longer has. Harmless to
+               the reader, but it is dead weight every future translation pass
+               re-reads, and it usually means a rename landed in the source and
+               nowhere else.
+    """
+    res = module_dir / "src" / "main" / "res"
+    source = load_keys(res / "values")
+    silent, stale = [], []
+    for vd in sorted(res.iterdir()):
+        if not vd.is_dir() or not vd.name.startswith("values-"):
+            continue
+        qualifier = vd.name[len("values-"):]
+        if language_of(vd.name) in NOT_LOCALE:
+            continue
+        keys = load_keys(vd)
+        if not keys:
+            silent.append(f"{vd.name}: no string resources at all"
+                          f"{' (empty directory)' if not catalogues(vd) else ''}")
+            continue
+        if OVERLAY_RE.match(vd.name):
+            continue
+        extra = keys - source
+        if extra:
+            sample = sorted(extra)[:3]
+            stale.append(f"{vd.name}: {len(extra)} key(s) the source does not have "
+                         f"({', '.join(sample)}{'…' if len(extra) > 3 else ''})")
+    return silent, stale
 
 
 def discover(root: Path) -> list[Path]:
@@ -347,7 +409,8 @@ def main():
         arguments, placeholders = check_values(module)
         overlays = check_overlays(module)
         plurals = check_plurals(module)
-        if not problems and not arguments and not placeholders and not overlays and not plurals:
+        silent, stale = check_coverage(module)
+        if not any((problems, arguments, placeholders, overlays, plurals, silent, stale)):
             print(f"{module}: ok")
             continue
         any_problems = True
@@ -371,6 +434,14 @@ def main():
         if plurals:
             print(f"{module}: {len(plurals)} plural(s) missing a quantity the language needs", file=sys.stderr)
             for finding in plurals[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if silent:
+            print(f"{module}: {len(silent)} locale(s) carry no strings and serve English throughout", file=sys.stderr)
+            for finding in silent[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if stale:
+            print(f"{module}: {len(stale)} locale(s) define keys the source dropped", file=sys.stderr)
+            for finding in stale[:10]:
                 print(f"  {finding}", file=sys.stderr)
 
     if any_problems and args.strict:

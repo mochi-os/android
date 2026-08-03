@@ -45,5 +45,15 @@ subprojects {
         tasks.matching { it.name == "preBuild" }.configureEach {
             dependsOn(rootProject.tasks.named("checkLocaleCompleteness"))
         }
+        // One lint policy for every module, in lint.xml beside this file, for
+        // the same reason the locale gate lives in one script: per-module copies
+        // of a rule drift, and a @Suppress at each call site would restate the
+        // same explanation at each call site. Each entry there carries its own
+        // rationale, including why one is scoped rather than disabled.
+        extensions.configure<com.android.build.api.dsl.CommonExtension<*, *, *, *, *, *>>("android") {
+            lint {
+                lintConfig = rootProject.file("lint.xml")
+            }
+        }
     }
 }

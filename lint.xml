@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright © 2026 Mochisoft OÜ
+  SPDX-License-Identifier: AGPL-3.0-only
+
+  Lint policy for every module. Pointed at by the shared lint block in the root
+  build.gradle.kts, so this is the one place a rule is turned off - the same
+  reasoning that keeps the locale gate in one script rather than one copy per
+  module.
+-->
+<lint>
+
+    <!--
+      Scoped to the English regional overlays rather than disabled outright.
+
+      values-en-rUS and values-en-rCA carry spelling-only differences and fall
+      through to values/, which is neutral English by design. Lint does not
+      model that fallback, so it reports every string in the source as
+      untranslated for "en" - 734 errors in apps/market alone, none of them a
+      real gap. Filling them would mean duplicating English under an English
+      qualifier, which is the thing the design exists to avoid.
+
+      The ignore matches the message rather than a path because lint reports
+      these against values/strings.xml, the SOURCE file, so a path-scoped ignore
+      cannot tell one locale's complaint from another's.
+
+      Do NOT read the scoping as preserved coverage. Measured on this tree:
+      deleting a real string from apps/market values-de and running lint with
+      this ignore removed entirely produced the same 734 findings, all of them
+      "en", and never mentioned German. MissingTranslation is not catching real
+      locale gaps here, so the scope is precaution against a future lint that
+      does, not a check anyone should rely on. tools/check-locales.py is what
+      actually finds these - it caught that same deleted German string
+      immediately, and failed the build before lint even ran.
+    -->
+    <issue id="MissingTranslation">
+        <ignore regexp="is not translated in &quot;en&quot;" />
+    </issue>
+
+    <!--
+      Fires on EVERY produceState call in the tree regardless of shape, including
+      textbook ones whose only statement is an assignment to value. Confirmed
+      against both call sites, and against three rewrites of one of them -
+      hoisting the suspend call into a local, positional instead of named
+      arguments, and dropping the `by` delegation - none of which it accepted.
+      Compose BOM 2024.12.01; re-evaluate on a Compose upgrade.
+    -->
+    <issue id="ProduceStateDoesNotAssignValue" severity="ignore" />
+
+</lint>
