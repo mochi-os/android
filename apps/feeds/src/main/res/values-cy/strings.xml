@@ -202,6 +202,7 @@
     <string name="feeds_saved_empty_subtitle">Tapiwch y nod tudalen ar unrhyw bostiad i\'w gadw yma at nes ymlaen.</string>
     <string name="feeds_saved_error_clear">Methwyd clirio\'r postiadau cadwedig</string>
     <plurals name="feeds_new_posts">
+        <item quantity="zero">%d postiad newydd</item>
         <item quantity="one">%d postiad newydd</item>
         <item quantity="two">%d bostiad newydd</item>
         <item quantity="few">%d postiad newydd</item>
@@ -301,6 +302,7 @@
         <item quantity="other">%1$d sylw</item>
     </plurals>
     <plurals name="feeds_attachment_count">
+        <item quantity="zero">%1$d atodiad</item>
         <item quantity="one">%1$d atodiad</item>
         <item quantity="two">%1$d atodiad</item>
         <item quantity="few">%1$d atodiad</item>
@@ -308,6 +310,7 @@
         <item quantity="other">%1$d atodiad</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
+        <item quantity="zero">Gweld %1$d sylw arall</item>
         <item quantity="one">Gweld %1$d sylw arall</item>
         <item quantity="two">Gweld %1$d sylw arall</item>
         <item quantity="few">Gweld %1$d sylw arall</item>
@@ -315,6 +318,7 @@
         <item quantity="other">Gweld %1$d sylw arall</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
+        <item quantity="zero">%1$d blynedd yn ôl heddiw</item>
         <item quantity="one">%1$d flwyddyn yn ôl heddiw</item>
         <item quantity="two">%1$d flynedd yn ôl heddiw</item>
         <item quantity="few">%1$d blynedd yn ôl heddiw</item>

@@ -211,6 +211,7 @@
     <string name="forums_saved_error_clear">Ma rnexxiex jitnaddfu l-postijiet salvati</string>
     <plurals name="forums_new_posts">
         <item quantity="one">%d post ġdid</item>
+        <item quantity="two">%d postijiet ġodda</item>
         <item quantity="few">%d postijiet ġodda</item>
         <item quantity="many">%d post ġdid</item>
         <item quantity="other">%d post ġdid</item>

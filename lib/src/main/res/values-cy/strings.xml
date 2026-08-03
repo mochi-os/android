@@ -311,6 +311,7 @@
     <string name="person_picker_no_people">Dim pobl</string>
     <string name="person_picker_project_members">Aelodau\'r prosiect</string>
     <plurals name="discovery_subscriber_count">
+        <item quantity="zero">%1$d tanysgrifiwr</item>
         <item quantity="one">%1$d tanysgrifiwr</item>
         <item quantity="two">%1$d danysgrifiwr</item>
         <item quantity="few">%1$d thanysgrifiwr</item>

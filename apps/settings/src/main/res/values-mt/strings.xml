@@ -323,6 +323,7 @@
     <string name="settings_home_domains">Dominji</string>
     <plurals name="notifprefs_test_sent">
         <item quantity="one">It-test intbagħat lil %1$d destinazzjoni</item>
+        <item quantity="two">It-test intbagħat lil %1$d destinazzjonijiet</item>
         <item quantity="few">It-test intbagħat lil %1$d destinazzjonijiet</item>
         <item quantity="many">It-test intbagħat lil %1$d destinazzjonijiet</item>
         <item quantity="other">It-test intbagħat lil %1$d destinazzjonijiet</item>

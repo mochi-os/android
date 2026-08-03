@@ -314,60 +314,70 @@
     <string name="wikis_revision_changes_from">Bidliet mill-verżjoni %1$d → %2$d</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%d kumment</item>
+        <item quantity="two">%d kummenti</item>
         <item quantity="few">%d kummenti</item>
         <item quantity="many">%d kummenti</item>
         <item quantity="other">%d kummenti</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d tweġiba</item>
+        <item quantity="two">+%d tweġibiet aktar</item>
         <item quantity="few">+%d tweġibiet aktar</item>
         <item quantity="many">+%d tweġibiet aktar</item>
         <item quantity="other">+%d tweġibiet aktar</item>
     </plurals>
     <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Renamed %1$d paġna</item>
-        <item quantity="few">Renamed %1$d paġni</item>
-        <item quantity="many">Renamed %1$d paġni</item>
-        <item quantity="other">Renamed %1$d paġni</item>
+        <item quantity="one">Issemmiet mill-ġdid %1$d paġna</item>
+        <item quantity="two">Issemmew mill-ġdid %1$d paġni</item>
+        <item quantity="few">Issemmew mill-ġdid %1$d paġni</item>
+        <item quantity="many">Issemmew mill-ġdid %1$d paġni</item>
+        <item quantity="other">Issemmew mill-ġdid %1$d paġni</item>
     </plurals>
     <plurals name="wikis_rename_page_updated_links">
         <item quantity="one">aġġornat %1$d link</item>
+        <item quantity="two">aġġornati %1$d links</item>
         <item quantity="few">aġġornati %1$d links</item>
         <item quantity="many">aġġornati %1$d links</item>
         <item quantity="other">aġġornati %1$d links</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d paġna</item>
+        <item quantity="two">%d paġni</item>
         <item quantity="few">%d paġni</item>
         <item quantity="many">%d paġni</item>
         <item quantity="other">%d paġni</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
         <item quantity="one">%d fajl</item>
+        <item quantity="two">%d fajls</item>
         <item quantity="few">%d fajls</item>
         <item quantity="many">%d fajls</item>
         <item quantity="other">%d fajls</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">%d stampa</item>
+        <item quantity="two">%d stampi</item>
         <item quantity="few">%d stampi</item>
         <item quantity="many">%d stampi</item>
         <item quantity="other">%d stampi</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
         <item quantity="one">%d dokument</item>
+        <item quantity="two">%d dokumenti</item>
         <item quantity="few">%d dokumenti</item>
         <item quantity="many">%d dokumenti</item>
         <item quantity="other">%d dokumenti</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="one">%d paġna b\'dan it-tag</item>
+        <item quantity="two">%d paġni b\'dan it-tag</item>
         <item quantity="few">%d paġni b\'dan it-tag</item>
         <item quantity="many">%d paġni b\'dan it-tag</item>
         <item quantity="other">%d paġni b\'dan it-tag</item>
     </plurals>
     <plurals name="wikis_search_results_count">
         <item quantity="one">Instabu %1$d riżultat għal "%2$s"</item>
+        <item quantity="two">Instabu %1$d riżultati għal "%2$s"</item>
         <item quantity="few">Instabu %1$d riżultati għal "%2$s"</item>
         <item quantity="many">Instabu %1$d riżultati għal "%2$s"</item>
         <item quantity="other">Instabu %1$d riżultati għal "%2$s"</item>

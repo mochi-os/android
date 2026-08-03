@@ -210,6 +210,7 @@
     <string name="forums_saved_empty_subtitle">Tapiwch y nod tudalen ar unrhyw bostiad i\'w gadw yma at nes ymlaen.</string>
     <string name="forums_saved_error_clear">Methwyd clirio\'r postiadau cadwedig</string>
     <plurals name="forums_new_posts">
+        <item quantity="zero">%d postiad newydd</item>
         <item quantity="one">%d postiad newydd</item>
         <item quantity="two">%d bostiad newydd</item>
         <item quantity="few">%d postiad newydd</item>

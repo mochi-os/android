@@ -17,7 +17,7 @@ because that directory is its own git repo: a standalone checkout has to be able
 to fail its own build. claude/scripts/check-android-i18n.py is a thin wrapper
 kept for the path CLAUDE.md documents.
 
-Four checks, each catching a class the others cannot:
+Five checks, each catching a class the others cannot:
   key presence         a locale missing a key the source has
   argument survival    a translation that drops a %1$s the English carries, so
                        the value never reaches the reader
@@ -27,6 +27,9 @@ Four checks, each catching a class the others cannot:
                        came from a different key
   fallback awareness    a region catalogue is judged against its parent, so
                        values-de-rCH is not reported for keys values-de supplies
+  plural completeness  a <plurals> missing a quantity its language needs, which
+                       Android silently serves from `other` - fluent, wrong text
+                       for the counts the missing category covers
 
 Usage:
     check-locales.py --discover <dir> [--strict]
@@ -125,6 +128,90 @@ def load_strings(path: Path) -> dict[str, str]:
     if not path.exists():
         return {}
     return dict(STRING_RE.findall(path.read_text(encoding="utf-8")))
+
+
+PLURALS_RE = re.compile(r'<plurals name="([^"]+)">(.*?)</plurals>', re.S)
+QUANTITY_RE = re.compile(r'quantity="(\w+)"')
+
+# Quantity categories each language needs, for the languages that need more than
+# one and other. Absent means one/other, which is the overwhelming majority.
+#
+# A missing category is not a lint nicety: Android serves `other` in its place,
+# so Maltese loses its dual and Welsh mishandles zero. The reader sees fluent,
+# grammatically wrong text, and nothing else in the toolchain reports it.
+#
+# Listed here only where a category is REACHABLE through an integer count, which
+# is all Android plurals can express. Two exclusions follow from that, and both
+# would otherwise demand translations of forms no reader ever sees:
+#
+#   fr, es, it, pt   CLDR's `many` for these is compact notation for large
+#                    numbers (1M and up). No catalogue in this tree supplies it.
+#   cs, sk, lt       their `many` selects on v != 0 / f != 0 - a visible
+#                    fractional part, as in "1,5 dne". getQuantityString takes
+#                    an int, so the rule cannot fire. Their integer forms are
+#                    one/few/other, which is what is required below.
+#
+# Add a language when its rules affect real counts, not whenever CLDR grows a
+# category.
+PLURAL_QUANTITY = {
+    "ar": {"zero", "one", "two", "few", "many", "other"},
+    "cy": {"zero", "one", "two", "few", "many", "other"},
+    "br": {"one", "two", "few", "many", "other"},
+    "ga": {"one", "two", "few", "many", "other"},
+    "mt": {"one", "two", "few", "many", "other"},
+    "gd": {"one", "two", "few", "other"},
+    "sl": {"one", "two", "few", "other"},
+    "be": {"one", "few", "many", "other"},
+    "pl": {"one", "few", "many", "other"},
+    "ru": {"one", "few", "many", "other"},
+    "uk": {"one", "few", "many", "other"},
+    "bs": {"one", "few", "other"},
+    "cs": {"one", "few", "other"},
+    "hr": {"one", "few", "other"},
+    "lt": {"one", "few", "other"},
+    "ro": {"one", "few", "other"},
+    "sk": {"one", "few", "other"},
+    "sr": {"one", "few", "other"},
+    "he": {"one", "two", "other"},
+    "lv": {"zero", "one", "other"},
+}
+
+
+def language_of(qualifier: str) -> str:
+    """The language a values-* qualifier resolves to."""
+    tag = qualifier[len("values-"):]
+    if tag.startswith("b+"):
+        return tag[2:].split("+")[0].lower()
+    return tag.split("-r")[0].lower()
+
+
+def check_plurals(module_dir: Path) -> list[str]:
+    """Return findings for <plurals> blocks missing a quantity their language needs.
+
+    Judged per file with no parent merging, unlike key presence: Android resolves
+    a <plurals> as ONE resource, so a block present in values-de-rCH replaces the
+    values-de block outright rather than topping it up. An absent block therefore
+    inherits correctly and is fine, while a partial one is a real gap - the
+    opposite of how a missing key behaves.
+    """
+    res = module_dir / "src" / "main" / "res"
+    findings = []
+    for vd in sorted(res.iterdir()):
+        if not vd.is_dir() or not vd.name.startswith("values-"):
+            continue
+        if OVERLAY_RE.match(vd.name):
+            continue
+        required = PLURAL_QUANTITY.get(language_of(vd.name))
+        if not required:
+            continue
+        xml = vd / "strings.xml"
+        if not xml.exists():
+            continue
+        for name, body in PLURALS_RE.findall(xml.read_text(encoding="utf-8")):
+            missing = required - set(QUANTITY_RE.findall(body))
+            if missing:
+                findings.append(f"{vd.name} {name}: no {', '.join(sorted(missing))}")
+    return findings
 
 
 def check_module(module_dir: Path) -> list[tuple[str, set[str]]]:
@@ -259,7 +346,8 @@ def main():
         problems = check_module(module)
         arguments, placeholders = check_values(module)
         overlays = check_overlays(module)
-        if not problems and not arguments and not placeholders and not overlays:
+        plurals = check_plurals(module)
+        if not problems and not arguments and not placeholders and not overlays and not plurals:
             print(f"{module}: ok")
             continue
         any_problems = True
@@ -279,6 +367,10 @@ def main():
         if overlays:
             print(f"{module}: {len(overlays)} English overlay value(s) drifted", file=sys.stderr)
             for finding in overlays[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if plurals:
+            print(f"{module}: {len(plurals)} plural(s) missing a quantity the language needs", file=sys.stderr)
+            for finding in plurals[:10]:
                 print(f"  {finding}", file=sys.stderr)
 
     if any_problems and args.strict:
