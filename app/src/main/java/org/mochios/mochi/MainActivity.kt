@@ -631,6 +631,23 @@ class MainActivity : ComponentActivity() {
         runBlocking { sessionManager.setOAuthReturn(code, error) }
     }
 
+    /**
+     * NOTHING LEGITIMATE CALLS THIS TODAY. The server never sends a
+     * mochi:oauth-link-return: core's oauth_link passes its target through
+     * redirect_local, which keeps only paths beginning with a single "/", so
+     * the custom scheme is dropped and the browser is sent to
+     * /login/settings/oauth instead. The link itself still succeeds — the row
+     * is written before that redirect — so what is missing is the journey back
+     * to the app, not the linking.
+     *
+     * Left in place because the client half is complete and correct; if core
+     * ever routes link ceremonies through oauth_mobile_redirect the way login
+     * ceremonies go, this starts working with no change here. Until then treat
+     * any mochi:oauth-link-return as necessarily forged, which is what the
+     * guard below already does.
+     *
+     * Android LOGIN is a different path (mochi:oauth-return) and is unaffected.
+     */
     private fun applyOAuthLinkReturn(provider: String?, error: String?) {
         // Gated like the login return above: this activity is exported and
         // BROWSABLE, so any app or web page can deliver a

@@ -239,6 +239,15 @@ class LoginViewModel @Inject constructor(
         // outlive the ceremony and leave the login return's gate permanently
         // satisfied. The pending marker is what records that this is ours.
         val challenge = OAuthPkce.challengeFor(OAuthPkce.generateVerifier())
+        // This target is currently discarded by the server. core's oauth_link
+        // runs it through redirect_local, which keeps only paths starting with
+        // a single "/", so the custom scheme is dropped and the browser is sent
+        // to /login/settings/oauth. The account IS linked - the row is written
+        // before that redirect - but the user finishes on a web page rather
+        // than back here, and MainActivity's mochi:oauth-link-return handler
+        // never fires. Sent anyway, so that routing link ceremonies through
+        // oauth_mobile_redirect (as login ceremonies already are) is all that
+        // would be needed to close the loop.
         val url = authRepository.beginOAuthLink(
             provider = provider,
             scheme = "mochi",
