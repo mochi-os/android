@@ -322,6 +322,7 @@
     <string name="domain_verify">შემოწმება და ჩართვა</string>
     <string name="settings_home_domains">დომენები</string>
     <plurals name="notifprefs_test_sent">
+        <item quantity="one">ტესტი გაიგზავნა %1$d მიმართულებაზე</item>
         <item quantity="other">ტესტი გაიგზავნა %1$d მიმართულებაზე</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">

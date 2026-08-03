@@ -366,6 +366,7 @@
     <string name="projects_sort_filter_title">დალაგება და გაფილტვრა</string>
     <string name="projects_create_prefix_hint">გამოიყენება წაკითხვადი ID-ებისთვის, როგorc %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
+        <item quantity="one">%1$d კონფლიქტური ფაილი</item>
         <item quantity="other">%1$d კონფლიქტური ფაილი</item>
     </plurals>
     <string name="projects_design_export_saved">დიზაინი შენახულია</string>

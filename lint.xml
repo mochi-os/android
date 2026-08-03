@@ -38,6 +38,26 @@
     </issue>
 
     <!--
+      Scoped to the quantities no integer count can reach, so lint and
+      tools/check-locales.py enforce one rule rather than two.
+
+      CLDR declares `many` for these languages, but its rule selects on a
+      visible fractional part - lint's own message offers "10.0 dne" as the
+      Czech example - and getQuantityString takes an int, so nothing a reader
+      does can select it. Requiring it would mean translating a form that
+      cannot appear. Everything else MissingQuantity reports is kept: it is
+      what found the Georgian catalogues declaring only `other`, fifteen blocks
+      of which the checker had been silent about.
+
+      Derived, not recalled. For each shipped language tag, node's Intl
+      .PluralRules gives the categories an integer 0..1000 actually selects;
+      only cs, sk and lt declare a category no integer reaches AND appear here.
+    -->
+    <issue id="MissingQuantity">
+        <ignore regexp="For locale &quot;(cs|sk|lt)&quot;.*defined: .many." />
+    </issue>
+
+    <!--
       Fires on EVERY produceState call in the tree regardless of shape, including
       textbook ones whose only statement is an assignment to value. Confirmed
       against both call sites, and against three rewrites of one of them -

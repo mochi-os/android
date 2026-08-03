@@ -155,38 +155,64 @@ def load_strings(directory: Path) -> dict[str, str]:
 PLURALS_RE = re.compile(r'<plurals name="([^"]+)">(.*?)</plurals>', re.S)
 QUANTITY_RE = re.compile(r'quantity="(\w+)"')
 
-# Quantity categories each language needs, for the languages that need more than
-# one and other. Absent means one/other, which is the overwhelming majority.
+# Format arguments inside <plurals> are deliberately NOT checked here. The
+# obvious rule - require what the source's same quantity carries - reports
+# Arabic "صورة واحدة" and Hebrew "שני קבצים מתנגשים", which are correct: both
+# languages express one and two lexically rather than with a numeral, and both
+# categories match exactly one number, so nothing is ambiguous. The rule that
+# works needs to know which categories span SEVERAL numbers per locale, and
+# Android lint already implements it as ImpliedQuantity - which is what found
+# the Bengali and Persian `one` and the Gaelic `two` that hardcoded their
+# digits. Left to lint rather than approximated here.
+
+# Quantity categories each language needs, keyed by language, for every locale
+# this project ships. Generated from CLDR rather than written by hand - see
+# REGENERATE below - because the rules are not guessable and getting one wrong
+# fails in whichever direction nobody notices: demanding a form that does not
+# exist, or accepting a catalogue that is missing one.
 #
-# A missing category is not a lint nicety: Android serves `other` in its place,
-# so Maltese loses its dual and Welsh mishandles zero. The reader sees fluent,
-# grammatically wrong text, and nothing else in the toolchain reports it.
+# A missing category is not a lint nicety. Android serves `other` in its place,
+# so Maltese loses its dual, Welsh mishandles zero and Georgian renders its
+# plural for a count of one. The reader sees fluent, grammatically wrong text.
 #
-# Listed here only where a category is REACHABLE through an integer count, which
-# is all Android plurals can express. Two exclusions follow from that, and both
-# would otherwise demand translations of forms no reader ever sees:
+# The set is what an INTEGER count can actually select, plus `other`, which
+# Android requires as the fallback whether or not any number reaches it. That
+# distinction is load-bearing in both directions:
 #
-#   fr, es, it, pt   CLDR's `many` for these is compact notation for large
-#                    numbers (1M and up). No catalogue in this tree supplies it.
-#   cs, sk, lt       their `many` selects on v != 0 / f != 0 - a visible
-#                    fractional part, as in "1,5 dne". getQuantityString takes
-#                    an int, so the rule cannot fire. Their integer forms are
-#                    one/few/other, which is what is required below.
+#   cs, sk, lt      CLDR declares `many` for these, but it selects on a visible
+#   fr, es, it, pt  fractional part (1,5 dne) or on compact notation for large
+#   ca              numbers. getQuantityString takes an int, so no reader ever
+#                   reaches those forms and they are not required here.
+#   be, pl, ru, uk  the converse: no integer selects `other` at all, yet it is
+#                   still required, because Android falls back to it.
 #
-# Add a language when its rules affect real counts, not whenever CLDR grows a
-# category.
+# Fourteen languages need ONLY `other` (ja, zh, ko, th, vi and friends), which
+# is why there is no one/other default for anything absent from this table -
+# such a default would report every one of them for a form their grammar has no
+# use for. A language not listed is not checked; ay, gn, ht, qu and tg are
+# absent because this CLDR build has no rules for them.
+#
+# REGENERATE when a locale is added, with node (its ICU carries CLDR):
+#   for each shipped language tag L:
+#     r = new Intl.PluralRules(L)
+#     required = { r.select(n) for n in 0..1000 } + { "other" }
+# Verify r.resolvedOptions().locale still matches L - an unsupported tag falls
+# back to en-GB silently and would otherwise be recorded as one/other.
 PLURAL_QUANTITY = {
     "ar": {"zero", "one", "two", "few", "many", "other"},
     "cy": {"zero", "one", "two", "few", "many", "other"},
-    "br": {"one", "two", "few", "many", "other"},
+
     "ga": {"one", "two", "few", "many", "other"},
     "mt": {"one", "two", "few", "many", "other"},
-    "gd": {"one", "two", "few", "other"},
-    "sl": {"one", "two", "few", "other"},
+
     "be": {"one", "few", "many", "other"},
     "pl": {"one", "few", "many", "other"},
     "ru": {"one", "few", "many", "other"},
     "uk": {"one", "few", "many", "other"},
+
+    "gd": {"one", "two", "few", "other"},
+    "sl": {"one", "two", "few", "other"},
+
     "bs": {"one", "few", "other"},
     "cs": {"one", "few", "other"},
     "hr": {"one", "few", "other"},
@@ -194,8 +220,83 @@ PLURAL_QUANTITY = {
     "ro": {"one", "few", "other"},
     "sk": {"one", "few", "other"},
     "sr": {"one", "few", "other"},
+
     "he": {"one", "two", "other"},
+
     "lv": {"zero", "one", "other"},
+
+    "af": {"one", "other"},
+    "am": {"one", "other"},
+    "az": {"one", "other"},
+    "bg": {"one", "other"},
+    "bho": {"one", "other"},
+    "bn": {"one", "other"},
+    "ca": {"one", "other"},
+    "ckb": {"one", "other"},
+    "da": {"one", "other"},
+    "de": {"one", "other"},
+    "el": {"one", "other"},
+    "es": {"one", "other"},
+    "et": {"one", "other"},
+    "eu": {"one", "other"},
+    "fa": {"one", "other"},
+    "fi": {"one", "other"},
+    "fr": {"one", "other"},
+    "gl": {"one", "other"},
+    "gu": {"one", "other"},
+    "ha": {"one", "other"},
+    "hi": {"one", "other"},
+    "hu": {"one", "other"},
+    "hy": {"one", "other"},
+    "is": {"one", "other"},
+    "it": {"one", "other"},
+    "ka": {"one", "other"},
+    "kk": {"one", "other"},
+    "kn": {"one", "other"},
+    "ku": {"one", "other"},
+    "ky": {"one", "other"},
+    "mk": {"one", "other"},
+    "ml": {"one", "other"},
+    "mn": {"one", "other"},
+    "mr": {"one", "other"},
+    "nb": {"one", "other"},
+    "ne": {"one", "other"},
+    "nl": {"one", "other"},
+    "nn": {"one", "other"},
+    "om": {"one", "other"},
+    "pa": {"one", "other"},
+    "ps": {"one", "other"},
+    "pt": {"one", "other"},
+    "sd": {"one", "other"},
+    "si": {"one", "other"},
+    "sq": {"one", "other"},
+    "sv": {"one", "other"},
+    "sw": {"one", "other"},
+    "ta": {"one", "other"},
+    "te": {"one", "other"},
+    "tk": {"one", "other"},
+    "tl": {"one", "other"},
+    "tr": {"one", "other"},
+    "ur": {"one", "other"},
+    "uz": {"one", "other"},
+    "xh": {"one", "other"},
+    "yi": {"one", "other"},
+    "zu": {"one", "other"},
+
+    "id": {"other"},
+    "ja": {"other"},
+    "jv": {"other"},
+    "km": {"other"},
+    "ko": {"other"},
+    "lo": {"other"},
+    "ms": {"other"},
+    "my": {"other"},
+    "su": {"other"},
+    "th": {"other"},
+    "vi": {"other"},
+    "yo": {"other"},
+    "yue": {"other"},
+    "zh": {"other"},
 }
 
 
@@ -285,6 +386,7 @@ def check_values(module_dir: Path) -> tuple[list[str], list[str]]:
                     arguments.append(f"{vd.name} {key}: {argument} absent")
             if PLACEHOLDER_RE.search(value):
                 placeholders.append(f"{vd.name} {key}: {value.strip()[:48]}")
+
     return arguments, placeholders
 
 

@@ -274,9 +274,11 @@
     <string name="feeds_share_link_title">ნაკადის ბმული</string>
     <string name="feeds_scroll_to_top">დაბრუნება ზემოთ</string>
     <plurals name="feeds_image_count">
+        <item quantity="one">%1$d სურათი</item>
         <item quantity="other">%1$d სურათი</item>
     </plurals>
     <plurals name="feeds_comment_count">
+        <item quantity="one">%1$d კომენტარი</item>
         <item quantity="other">%1$d კომენტარი</item>
     </plurals>
     <plurals name="feeds_attachment_count">

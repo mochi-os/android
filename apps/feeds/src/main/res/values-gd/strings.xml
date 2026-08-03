@@ -289,7 +289,7 @@
     </plurals>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$d bheachd</item>
-        <item quantity="two">2 bheachd</item>
+        <item quantity="two">%1$d bheachd</item>
         <item quantity="few">%1$d beachdan</item>
         <item quantity="other">%1$d beachdan</item>
     </plurals>

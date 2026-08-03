@@ -278,7 +278,7 @@
         <item quantity="other">%1$d تصویر</item>
     </plurals>
     <plurals name="feeds_comment_count">
-        <item quantity="one">۱ نظر</item>
+        <item quantity="one">%1$d نظر</item>
         <item quantity="other">%1$d نظر</item>
     </plurals>
     <plurals name="feeds_attachment_count">

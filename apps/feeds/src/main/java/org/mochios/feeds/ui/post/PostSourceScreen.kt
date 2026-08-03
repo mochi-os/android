@@ -339,12 +339,15 @@ fun PostSourceScreen(
                         settings.builtInZoomControls = true
                         settings.displayZoomControls = false
                         settings.userAgentString = CHROME_USER_AGENT
-                        // Many RSS publishers still serve their CDN images
-                        // over HTTP even when the article itself is HTTPS;
-                        // compatibility mode lets those assets load instead
-                        // of leaving a broken article.
+                        // The article is arbitrary third-party content on an
+                        // unrestricted URL, so an HTTPS page keeps the
+                        // guarantee it came with: no subresource loads over
+                        // plain HTTP, where anyone on the path could replace
+                        // it. The cost is a publisher still serving CDN images
+                        // over HTTP renders without them, which is a visibly
+                        // broken image rather than a silently substituted one.
                         settings.mixedContentMode =
-                            android.webkit.WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE
+                            android.webkit.WebSettings.MIXED_CONTENT_NEVER_ALLOW
                         webViewClient = object : WebViewClient() {
                             override fun shouldOverrideUrlLoading(
                                 view: WebView?,
