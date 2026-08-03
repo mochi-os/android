@@ -296,13 +296,22 @@ class SessionManager @Inject constructor(
         }
     }
 
-    /** Consumes the outstanding link ceremony, returning the provider it was for. */
-    suspend fun consumeOAuthLinkPending(): String? {
-        val provider = dataStore.data.first()[KEY_OAUTH_LINK_PENDING]
-        if (provider != null) {
-            dataStore.edit { prefs -> prefs.remove(KEY_OAUTH_LINK_PENDING) }
-        }
-        return provider
+    /**
+     * The provider whose link ceremony is outstanding, or null if none is.
+     *
+     * Read WITHOUT consuming, matching [hasOAuthVerifier] on the login side and
+     * for the same reason: asking must not itself invalidate the ceremony. A
+     * check that consumed would let one injected return — even an empty one
+     * that is then rejected — burn the marker, so the genuine callback that
+     * follows finds nothing outstanding and is ignored. Clear it with
+     * [clearOAuthLinkPending] only once a return has been accepted.
+     */
+    suspend fun oauthLinkPending(): String? =
+        dataStore.data.first()[KEY_OAUTH_LINK_PENDING]
+
+    /** Retires the outstanding link ceremony. */
+    suspend fun clearOAuthLinkPending() {
+        dataStore.edit { prefs -> prefs.remove(KEY_OAUTH_LINK_PENDING) }
     }
 
     fun getServerUrlBlocking(): String {

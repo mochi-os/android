@@ -634,14 +634,18 @@ class MainActivity : ComponentActivity() {
     private fun applyOAuthLinkReturn(provider: String?, error: String?) {
         // Gated like the login return above: this activity is exported and
         // BROWSABLE, so any app or web page can deliver a
-        // mochi:oauth-link-return. Consuming the marker here is what makes a
-        // second, injected return inert — see shouldAcceptOAuthLinkReturn.
-        val outstanding = runBlocking { sessionManager.consumeOAuthLinkPending() != null }
-        if (!shouldAcceptOAuthLinkReturn(outstanding, provider, error)) {
-            Log.w(TAG, "Ignoring mochi:oauth-link-return with no ceremony outstanding")
+        // mochi:oauth-link-return. Read the marker without consuming and retire
+        // it only on the branch that accepts, so a rejected return cannot burn
+        // a live ceremony — see shouldAcceptOAuthLinkReturn.
+        val pending = runBlocking { sessionManager.oauthLinkPending() }
+        if (!shouldAcceptOAuthLinkReturn(pending, provider, error)) {
+            Log.w(TAG, "Ignoring mochi:oauth-link-return that matches no outstanding ceremony")
             return
         }
-        runBlocking { sessionManager.setOAuthLinkReturn(provider, error) }
+        runBlocking {
+            sessionManager.clearOAuthLinkPending()
+            sessionManager.setOAuthLinkReturn(provider, error)
+        }
     }
 
     private fun navigateToLink(navController: NavController, link: String) {

@@ -40,20 +40,33 @@ class OAuthReturnTest {
 
     @Test
     fun `a link return is accepted while our own link ceremony is outstanding`() {
-        assertTrue(shouldAcceptOAuthLinkReturn(pending = true, provider = "google", error = null))
-        assertTrue(shouldAcceptOAuthLinkReturn(pending = true, provider = null, error = "denied"))
+        assertTrue(shouldAcceptOAuthLinkReturn(pending = "google", provider = "google", error = null))
+        assertTrue(shouldAcceptOAuthLinkReturn(pending = "google", provider = null, error = "denied"))
     }
 
     /** The injection: a fabricated success or failure on the security page. */
     @Test
     fun `a link return with no ceremony outstanding is refused`() {
-        assertFalse(shouldAcceptOAuthLinkReturn(pending = false, provider = "google", error = null))
-        assertFalse(shouldAcceptOAuthLinkReturn(pending = false, provider = null, error = "denied"))
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = null, provider = "google", error = null))
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = null, provider = null, error = "denied"))
     }
 
+    /**
+     * The empty return is the one that matters for call order. It is refused,
+     * and because the caller reads the marker without consuming and retires it
+     * only after this returns true, being refused means the live ceremony
+     * survives — where a consume-then-decide check would have burned it and
+     * silently dropped the genuine callback that followed.
+     */
     @Test
-    fun `an empty link return is refused either way`() {
-        assertFalse(shouldAcceptOAuthLinkReturn(pending = true, provider = null, error = null))
-        assertFalse(shouldAcceptOAuthLinkReturn(pending = false, provider = null, error = null))
+    fun `an empty link return is refused, outstanding ceremony or not`() {
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = "google", provider = null, error = null))
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = null, provider = null, error = null))
+    }
+
+    /** A success naming a provider we did not start is somebody else's. */
+    @Test
+    fun `a link return for a different provider is refused`() {
+        assertFalse(shouldAcceptOAuthLinkReturn(pending = "google", provider = "github", error = null))
     }
 }

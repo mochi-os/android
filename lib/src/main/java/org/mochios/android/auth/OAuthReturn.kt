@@ -43,11 +43,21 @@ fun shouldAcceptOAuthReturn(hasVerifier: Boolean, code: String?, error: String?)
  * what it can do is show the user a fabricated success or failure on their
  * security page and drive a burst of refresh requests.
  *
- * [pending] is the local evidence, written when the link flow launches and
- * consumed here. Unlike a login there is no code to exchange, so nothing else
- * in the flow would ever clear it.
+ * [pending] is the provider whose ceremony this client started, read without
+ * being consumed. The caller must retire it only when this returns true:
+ * consuming first would let an injected return — including an empty one that
+ * this function rejects — burn a live ceremony, after which the genuine
+ * callback finds nothing outstanding and is dropped.
+ *
+ * A success return names its provider, so it must match the one we started.
+ * An error return carries no provider and therefore cannot be matched, which
+ * is the residual hole: a forged error delivered during an active ceremony
+ * still ends it. Closing that needs a nonce round-tripped through the server's
+ * redirect, which currently carries only `oauth_linked` / `oauth_error`.
  */
-fun shouldAcceptOAuthLinkReturn(pending: Boolean, provider: String?, error: String?): Boolean {
+fun shouldAcceptOAuthLinkReturn(pending: String?, provider: String?, error: String?): Boolean {
     if (provider == null && error == null) return false
-    return pending
+    if (pending == null) return false
+    if (provider != null && provider != pending) return false
+    return true
 }

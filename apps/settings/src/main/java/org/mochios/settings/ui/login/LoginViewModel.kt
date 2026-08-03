@@ -239,7 +239,6 @@ class LoginViewModel @Inject constructor(
         // outlive the ceremony and leave the login return's gate permanently
         // satisfied. The pending marker is what records that this is ours.
         val challenge = OAuthPkce.challengeFor(OAuthPkce.generateVerifier())
-        sessionManager.saveOAuthLinkPending(provider)
         val url = authRepository.beginOAuthLink(
             provider = provider,
             scheme = "mochi",
@@ -247,6 +246,11 @@ class LoginViewModel @Inject constructor(
             challenge = challenge,
             bearerToken = token,
         )
+        // Recorded only once the server has given us somewhere to go: marking a
+        // ceremony outstanding before the request could leave the marker behind
+        // for good if it fails, and a stale marker is what a later injected
+        // return needs to be accepted.
+        sessionManager.saveOAuthLinkPending(provider)
         _oauthLaunchUrl.value = url
     }
 
