@@ -326,7 +326,7 @@
         <item quantity="other">%1$d गंतव्य पर टेस्ट भेजल गइल</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 सत्र निरस्त कइल गइल</item>
+        <item quantity="one">%1$d सत्र निरस्त कइल गइल</item>
         <item quantity="other">%1$d सत्र निरस्त कइल गइल</item>
     </plurals>
     <string name="login_title">लॉगिन</string>

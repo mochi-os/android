@@ -326,7 +326,7 @@
         <item quantity="other">%1$d ಗಮ್ಯಸ್ಥಾನಗಳಿಗೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
+        <item quantity="one">%1$d ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
         <item quantity="other">%1$d ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
     </plurals>
     <string name="login_title">ಲಾಗಿನ್</string>

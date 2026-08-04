@@ -326,7 +326,7 @@
         <item quantity="other">آزمایش به %1$d مقصد ارسال شد</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">۱ نشست لغو شد</item>
+        <item quantity="one">%1$d نشست لغو شد</item>
         <item quantity="other">%1$d نشست لغو شد</item>
     </plurals>
     <string name="login_title">ورود</string>

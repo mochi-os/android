@@ -787,6 +787,7 @@ private fun CrmContent(
                             "board" -> {
                                 BoardView(
                                     objects = allObjects,
+                                    crmDetails = details,
                                     visibleIds = viewModel.getVisibleObjectIds(),
                                     view = activeView,
                                     viewModel = viewModel,
@@ -799,6 +800,9 @@ private fun CrmContent(
                             else -> {
                                 TreeView(
                                     objects = filteredObjects,
+                                    crmDetails = details,
+                                    people = uiState.people,
+                                    allObjects = allObjects,
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) }

@@ -326,7 +326,7 @@
         <item quantity="other">ሙከራ ወደ %1$d መድረሻዎች ተልኳል</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 ክፍለ ጊዜ ተሰርዟል</item>
+        <item quantity="one">%1$d ክፍለ ጊዜ ተሰርዟል</item>
         <item quantity="other">%1$d ክፍለ ጊዜዎች ተሰርዘዋል</item>
     </plurals>
     <string name="login_title">ግባ</string>

@@ -314,7 +314,7 @@
     <string name="wikis_revision_changes_from">Atharraichidhean bho thionndadh %1$d → %2$d</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%d bheachd</item>
-        <item quantity="two">2 bheachd</item>
+        <item quantity="two">%d bheachd</item>
         <item quantity="few">%d beachdan</item>
         <item quantity="other">%d beachdan</item>
     </plurals>

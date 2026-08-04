@@ -61,6 +61,7 @@ import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.crm.R
+import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
@@ -72,6 +73,12 @@ private const val MAX_NESTING_DEPTH = 3
 fun BoardCard(
     obj: CrmObject,
     viewModel: CrmViewModel,
+    // Passed in rather than read off viewModel.uiState here: a direct .value
+    // read is a snapshot Compose does not subscribe to, so a card whose own
+    // parameters had not changed kept rendering stale class definitions. The
+    // screen already collects the state; this follows the same route its
+    // siblings do.
+    crmDetails: CrmDetails?,
     borderFieldId: String?,
     childrenByParent: Map<String, List<CrmObject>>,
     columnFieldId: String = "",
@@ -102,7 +109,6 @@ fun BoardCard(
         } else null
     } else null
 
-    val crmDetails = viewModel.uiState.value.crmDetails
     val cls = crmDetails?.classes?.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
     val untitled = stringResource(R.string.crm_untitled)
@@ -329,6 +335,7 @@ fun BoardCard(
                                 BoardCard(
                                     obj = child,
                                     viewModel = viewModel,
+                                    crmDetails = crmDetails,
                                     borderFieldId = borderFieldId,
                                     childrenByParent = childrenByParent,
                                     columnFieldId = columnFieldId,

@@ -23,7 +23,9 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.crm.R
+import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmObject
+import org.mochios.crm.model.Person
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.ui.crm.CrmViewModel
 
@@ -39,6 +41,12 @@ fun TreeView(
     objects: List<CrmObject>,
     view: CrmView?,
     viewModel: CrmViewModel,
+    // Threaded to TreeRow, which must not snapshot the flow itself. allObjects
+    // is the UNFILTERED list, distinct from `objects` above: the reparent
+    // dialog offers parents the current view filters out.
+    crmDetails: CrmDetails?,
+    people: List<Person>,
+    allObjects: List<CrmObject>,
     onObjectClick: (String) -> Unit
 ) {
     val expandedState = remember { mutableStateMapOf<String, Boolean>() }
@@ -90,6 +98,9 @@ fun TreeView(
             TreeRow(
                 node = node,
                 viewModel = viewModel,
+                crmDetails = crmDetails,
+                people = people,
+                allObjects = allObjects,
                 dragState = dragState,
                 onToggleExpand = {
                     expandedState[node.obj.id] = !(expandedState[node.obj.id] ?: true)

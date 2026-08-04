@@ -59,6 +59,9 @@ import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.crm.R
+import org.mochios.crm.model.CrmDetails
+import org.mochios.crm.model.CrmObject
+import org.mochios.crm.model.Person
 import org.mochios.crm.ui.board.parseColor
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
@@ -74,18 +77,27 @@ fun TreeRow(
     onReparent: ((newParentId: String) -> Unit)? = null,
     dragState: DragState? = null,
     onDragDrop: ((sourceId: String, edge: DragEdge) -> Unit)? = null,
+    // Passed in rather than read off viewModel.uiState here. A direct .value
+    // read is a snapshot Compose does not subscribe to, so a row whose own
+    // parameters had not changed kept rendering stale class definitions and
+    // people. Parameters also keep the subscription in the screen, which
+    // already collects: a row that collected for itself would recompose on
+    // every state change, including whole-list ones, for each row on screen.
+    crmDetails: CrmDetails?,
+    people: List<Person>,
+    // The UNFILTERED list: the reparent dialog must offer parents that the
+    // current view filters out.
+    allObjects: List<CrmObject>,
 ) {
     var showContextMenu by remember { mutableStateOf(false) }
     var showReparentDialog by remember { mutableStateOf(false) }
     val indent = (node.depth * 24).dp
     val obj = node.obj
-    val crmDetails = viewModel.uiState.value.crmDetails
     val titleFieldId = crmDetails?.classes?.find { it.id == obj.objectClass }
         ?.title?.takeIf { it.isNotBlank() }
     val untitled = stringResource(R.string.crm_untitled)
     val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty().ifBlank { untitled }
     val cardFields = viewModel.getCardFields(obj.objectClass)
-    val people = viewModel.uiState.value.people
 
     val isBeingDragged = dragState != null && dragState.isDragging(obj.id)
     val isDropTarget = dragState != null &&
@@ -281,7 +293,6 @@ fun TreeRow(
     }
 
     if (showReparentDialog && onReparent != null) {
-        val allObjects = viewModel.uiState.value.objects
         val possibleParents = allObjects.filter { it.id != obj.id }
         AlertDialog(
             onDismissRequest = { showReparentDialog = false },

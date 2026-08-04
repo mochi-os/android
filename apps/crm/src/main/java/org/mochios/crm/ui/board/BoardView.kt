@@ -68,6 +68,7 @@ import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.crm.R
 import org.mochios.crm.model.FieldOption
+import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.ui.crm.CrmViewModel
@@ -89,6 +90,8 @@ fun BoardView(
     objects: List<CrmObject>,
     view: CrmView?,
     viewModel: CrmViewModel,
+    // Threaded to BoardCard, which must not snapshot the flow itself.
+    crmDetails: CrmDetails?,
     onObjectClick: (String) -> Unit,
     visibleIds: Set<String>? = null,
     onCreateObject: ((classId: String, title: String, initialValues: Map<String, String>) -> Unit)? = null,
@@ -191,6 +194,7 @@ fun BoardView(
         val columnObjects = if (isUnassigned) unassigned else (objectsByColumn[columnOption.id] ?: emptyList())
         BoardColumn(
             option = columnOption,
+            crmDetails = crmDetails,
             objects = columnObjects,
             visibleIds = visibleIds,
             viewModel = viewModel,
@@ -250,6 +254,7 @@ private fun BoardColumn(
     objects: List<CrmObject>,
     visibleIds: Set<String>?,
     viewModel: CrmViewModel,
+    crmDetails: CrmDetails?,
     columnFieldId: String,
     rowFieldId: String?,
     rowOptions: List<FieldOption>,
@@ -500,6 +505,7 @@ private fun BoardColumn(
                         BoardCard(
                             obj = obj,
                             viewModel = viewModel,
+                            crmDetails = crmDetails,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             columnFieldId = columnFieldId,
@@ -540,6 +546,7 @@ private fun BoardColumn(
                         BoardCard(
                             obj = obj,
                             viewModel = viewModel,
+                            crmDetails = crmDetails,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             columnFieldId = columnFieldId,
@@ -588,6 +595,7 @@ private fun BoardColumn(
                         BoardCard(
                             obj = obj,
                             viewModel = viewModel,
+                            crmDetails = crmDetails,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             cardDragState = cardDragState,

@@ -326,7 +326,7 @@
         <item quantity="other">%1$d গন্তব্যে পরীক্ষা পাঠানো হয়েছে</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1টি সেশন প্রত্যাহার করা হয়েছে</item>
+        <item quantity="one">%1$dটি সেশন প্রত্যাহার করা হয়েছে</item>
         <item quantity="other">%1$d সেশন প্রত্যাহার করা হয়েছে</item>
     </plurals>
     <string name="login_title">লগইন</string>

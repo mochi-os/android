@@ -326,7 +326,7 @@
         <item quantity="other">Փորձնական հաղորդագրությունն ուղարկվել է %1$d հասցեի</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Չեղարկվեց 1 սեսիա</item>
+        <item quantity="one">Չեղարկվեց %1$d սեսիա</item>
         <item quantity="other">Չեղարկվեցին %1$d սեսիա</item>
     </plurals>
     <string name="login_title">Մուտքի նիստի ժամկետը լրացել է, խնդրում ենք կրկին փորձել</string>

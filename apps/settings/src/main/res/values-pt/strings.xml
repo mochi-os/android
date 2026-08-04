@@ -327,7 +327,7 @@
     </plurals>
     <plurals name="system_users_sessions_revoked">
         <item quantity="many">%1$d sessões revogadas</item>
-        <item quantity="one">1 sessão revogada</item>
+        <item quantity="one">%1$d sessão revogada</item>
         <item quantity="other">%1$d sessões revogadas</item>
     </plurals>
     <string name="login_title">Iniciar sessão</string>

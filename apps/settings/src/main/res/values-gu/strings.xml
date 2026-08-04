@@ -326,7 +326,7 @@
         <item quantity="other">%1$d ગંતવ્યો પર પરીક્ષણ મોકલાયું</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 સત્ર રદ કર્યું</item>
+        <item quantity="one">%1$d સત્ર રદ કર્યું</item>
         <item quantity="other">%1$d સત્રો રદ કર્યા</item>
     </plurals>
     <string name="login_title">લૉગિન</string>
