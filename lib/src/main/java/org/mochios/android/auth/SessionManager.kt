@@ -43,11 +43,9 @@ class SessionManager @Inject constructor(
         private val KEY_THEME_CHROMA = stringPreferencesKey("theme_chroma")
         private val KEY_THEME_HUE_BG = stringPreferencesKey("theme_hue_bg")
         private val KEY_OAUTH_VERIFIER = stringPreferencesKey("oauth_verifier")
+        private val KEY_OAUTH_NONCE = stringPreferencesKey("oauth_nonce")
         private val KEY_OAUTH_RETURN_CODE = stringPreferencesKey("oauth_return_code")
         private val KEY_OAUTH_RETURN_ERROR = stringPreferencesKey("oauth_return_error")
-        private val KEY_OAUTH_LINK_PROVIDER = stringPreferencesKey("oauth_link_provider")
-        private val KEY_OAUTH_LINK_ERROR = stringPreferencesKey("oauth_link_error")
-        private val KEY_OAUTH_LINK_PENDING = stringPreferencesKey("oauth_link_pending")
         private val KEY_BOUND_IDENTITY = stringPreferencesKey("bound_identity")
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
@@ -213,28 +211,58 @@ class SessionManager @Inject constructor(
         return candidate
     }
 
-    suspend fun saveOAuthVerifier(verifier: String) {
+    /**
+     * Records an outstanding sign-in ceremony.
+     *
+     * [nonce] is the value the server echoes on the deep-link return. Written
+     * in the same edit as the verifier so the two cannot disagree: a return
+     * arriving between two writes would see a verifier with no nonce to check
+     * and be accepted unauthenticated. Null when the server sent none.
+     */
+    suspend fun saveOAuthVerifier(verifier: String, nonce: String? = null) {
         dataStore.edit { prefs ->
             prefs[KEY_OAUTH_VERIFIER] = verifier
+            if (nonce != null) prefs[KEY_OAUTH_NONCE] = nonce else prefs.remove(KEY_OAUTH_NONCE)
         }
     }
 
     /**
-     * Whether an OAuth ceremony this client started is still outstanding.
+     * The outstanding ceremony's local evidence.
      *
-     * The verifier is written at `/begin` and consumed at exchange, so its
-     * presence is the only local evidence that a `mochi:oauth-return` belongs
-     * to us. Checked without consuming, so asking does not itself invalidate
-     * the ceremony.
+     * [hasVerifier] is written at `/begin` and consumed at exchange, so its
+     * presence is what says a `mochi:oauth-return` belongs to us at all.
+     * [nonce] is the value the server echoes on that return, absent when the
+     * server does not send one.
+     *
+     * Both come from ONE snapshot, deliberately. Reading them separately lets a
+     * ceremony be replaced between the two reads, pairing one ceremony's nonce
+     * with another's verifier — a narrow race, but the whole point of the pair
+     * is that they describe the same ceremony.
+     *
+     * Read without consuming, so asking does not itself invalidate the
+     * ceremony: a check that consumed would let one injected return burn the
+     * marker and silently drop the genuine callback behind it.
      */
-    suspend fun hasOAuthVerifier(): Boolean =
-        !dataStore.data.first()[KEY_OAUTH_VERIFIER].isNullOrBlank()
+    data class OAuthCeremony(val hasVerifier: Boolean, val nonce: String?)
+
+    suspend fun oauthCeremony(): OAuthCeremony {
+        val prefs = dataStore.data.first()
+        return OAuthCeremony(
+            hasVerifier = !prefs[KEY_OAUTH_VERIFIER].isNullOrBlank(),
+            nonce = prefs[KEY_OAUTH_NONCE],
+        )
+    }
 
     suspend fun consumeOAuthVerifier(): String? {
         val prefs = dataStore.data.first()
         val verifier = prefs[KEY_OAUTH_VERIFIER]
         if (verifier != null) {
-            dataStore.edit { p -> p.remove(KEY_OAUTH_VERIFIER) }
+            // The nonce goes with it: it authenticates the return for THIS
+            // ceremony, and one left behind would be checked against the next.
+            dataStore.edit { p ->
+                p.remove(KEY_OAUTH_VERIFIER)
+                p.remove(KEY_OAUTH_NONCE)
+            }
         }
         return verifier
     }
@@ -255,63 +283,6 @@ class SessionManager @Inject constructor(
             prefs.remove(KEY_OAUTH_RETURN_CODE)
             prefs.remove(KEY_OAUTH_RETURN_ERROR)
         }
-    }
-
-    /** Separate channel from the login OAuth return — the link flow's server
-     *  callback sends back `?oauth_linked=<provider>` or `?oauth_error=...`
-     *  rather than a code to exchange. SecurityViewModel listens for these
-     *  to know when to refresh the OAuth-identities list. */
-    val oauthLinkReturn: Flow<Pair<String?, String?>> = dataStore.data.map { prefs ->
-        prefs[KEY_OAUTH_LINK_PROVIDER] to prefs[KEY_OAUTH_LINK_ERROR]
-    }
-
-    suspend fun setOAuthLinkReturn(provider: String?, error: String?) {
-        dataStore.edit { prefs ->
-            if (provider != null) prefs[KEY_OAUTH_LINK_PROVIDER] = provider else prefs.remove(KEY_OAUTH_LINK_PROVIDER)
-            if (error != null) prefs[KEY_OAUTH_LINK_ERROR] = error else prefs.remove(KEY_OAUTH_LINK_ERROR)
-        }
-    }
-
-    suspend fun clearOAuthLinkReturn() {
-        dataStore.edit { prefs ->
-            prefs.remove(KEY_OAUTH_LINK_PROVIDER)
-            prefs.remove(KEY_OAUTH_LINK_ERROR)
-        }
-    }
-
-    /**
-     * Records that this client started a link ceremony for [provider].
-     *
-     * The link flow has no exchange step — the server completes the link and
-     * redirects — so unlike a login there is no verifier consumed at the end to
-     * stand as evidence the ceremony was ours. This marker is that evidence,
-     * and it is written to its own key: the login verifier is consumed by the
-     * exchange, and a link borrowing it would leave one behind that no code
-     * path clears, permanently satisfying [hasOAuthVerifier] and with it the
-     * login return's own gate.
-     */
-    suspend fun saveOAuthLinkPending(provider: String) {
-        dataStore.edit { prefs ->
-            prefs[KEY_OAUTH_LINK_PENDING] = provider
-        }
-    }
-
-    /**
-     * The provider whose link ceremony is outstanding, or null if none is.
-     *
-     * Read WITHOUT consuming, matching [hasOAuthVerifier] on the login side and
-     * for the same reason: asking must not itself invalidate the ceremony. A
-     * check that consumed would let one injected return — even an empty one
-     * that is then rejected — burn the marker, so the genuine callback that
-     * follows finds nothing outstanding and is ignored. Clear it with
-     * [clearOAuthLinkPending] only once a return has been accepted.
-     */
-    suspend fun oauthLinkPending(): String? =
-        dataStore.data.first()[KEY_OAUTH_LINK_PENDING]
-
-    /** Retires the outstanding link ceremony. */
-    suspend fun clearOAuthLinkPending() {
-        dataStore.edit { prefs -> prefs.remove(KEY_OAUTH_LINK_PENDING) }
     }
 
     fun getServerUrlBlocking(): String {

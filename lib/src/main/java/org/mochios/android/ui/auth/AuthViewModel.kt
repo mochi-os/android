@@ -397,12 +397,17 @@ class AuthViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val verifier = OAuthPkce.generateVerifier()
-                sessionManager.saveOAuthVerifier(verifier)
                 val challenge = OAuthPkce.challengeFor(verifier)
-                val url = authRepository.beginOAuth(provider, scheme, challenge)
+                val begun = authRepository.beginOAuth(provider, scheme, challenge)
+                // Both recorded only once the server has answered. Storing the
+                // verifier first would leave one behind if /begin failed, and a
+                // stale verifier is exactly what an injected return needs: it
+                // satisfies the outstanding-ceremony check with no nonce beside
+                // it to disagree.
+                sessionManager.saveOAuthVerifier(verifier, begun.nonce)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    oauthLaunchUrl = url
+                    oauthLaunchUrl = begun.url
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(

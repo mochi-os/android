@@ -171,12 +171,16 @@ class AuthRepository @Inject constructor(
         return authApi.getAvailableMethods().unwrapRaw()
     }
 
-    suspend fun beginOAuth(provider: String, scheme: String, challenge: String): String {
-        val resp = authApi.oauthBegin(
+    /**
+     * Begin a sign-in ceremony. Returns the provider URL to open and the
+     * return nonce to hold until the deep link comes back; the nonce is null
+     * against a server that does not send one.
+     */
+    suspend fun beginOAuth(provider: String, scheme: String, challenge: String): OAuthBeginResponse {
+        return authApi.oauthBegin(
             provider,
             OAuthBeginRequest(mode = "mobile", scheme = scheme, challenge = challenge)
         ).unwrapRaw()
-        return resp.url
     }
 
     /**
@@ -185,9 +189,11 @@ class AuthRepository @Inject constructor(
      * needs a Bearer JWT for any of the user's apps; any settings/feeds/...
      * token works since the JWT verification is core-level.
      *
-     * Server redirects to `<target>?oauth_linked=<provider>` on success or
-     * `<target>?oauth_error=<reason>` on failure. The host MainActivity
-     * parses the return URI and routes into `SessionManager.setOAuthLinkReturn`.
+     * The link completes server-side and the user finishes in the browser:
+     * core runs the target through redirect_local, which drops a custom scheme,
+     * so no deep link comes back to the app. Nothing here waits for one — see
+     * LoginViewModel.linkOAuth for why the return handling was removed rather
+     * than hardened.
      */
     suspend fun beginOAuthLink(
         provider: String,

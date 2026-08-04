@@ -78,13 +78,21 @@ data class OAuthBeginRequest(
      *  user instead of starting a sign-in. Requires an authenticated Bearer
      *  token in the request (Authorization header). */
     val link: Boolean = false,
-    /** Mobile target the server redirects back to with `?oauth_linked=` or
-     *  `?oauth_error=`. Should be a `<scheme>://oauth-link-return` URI. */
+    /** Where the server should send the browser after a link. Currently
+     *  DISCARDED for a custom scheme: core runs it through redirect_local,
+     *  which keeps only paths starting with a single "/". No deep link comes
+     *  back, and this client no longer listens for one. */
     val target: String = ""
 )
 
 data class OAuthBeginResponse(
-    val url: String = ""
+    val url: String = "",
+    /**
+     * Single-use value the server echoes on the deep-link return, so this
+     * client can tell its own return from one delivered by another app.
+     * Mobile mode only, and null against a server that predates it.
+     */
+    val nonce: String? = null
 )
 
 data class OAuthExchangeRequest(

@@ -45,7 +45,6 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.auth.shouldAcceptOAuthLinkReturn
 import org.mochios.android.auth.shouldAcceptOAuthReturn
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
@@ -508,8 +507,7 @@ class MainActivity : ComponentActivity() {
         val params = parseOpaqueQuery(query)
         when (name) {
             "notification" -> setNotificationDeepLink(params["link"], params["id"], params["nonce"])
-            "oauth-return" -> applyOAuthReturn(params["code"], params["error"])
-            "oauth-link-return" -> applyOAuthLinkReturn(params["oauth_linked"], params["oauth_error"])
+            "oauth-return" -> applyOAuthReturn(params["code"], params["error"], params["nonce"])
             else -> Log.w(TAG, "Unknown system intent in $uri")
         }
     }
@@ -540,8 +538,11 @@ class MainActivity : ComponentActivity() {
                 uri.getQueryParameter("id"),
                 uri.getQueryParameter("nonce"),
             )
-            "oauth-return" -> applyOAuthReturn(uri.getQueryParameter("code"), uri.getQueryParameter("error"))
-            "oauth-link-return" -> applyOAuthLinkReturn(uri.getQueryParameter("oauth_linked"), uri.getQueryParameter("oauth_error"))
+            "oauth-return" -> applyOAuthReturn(
+                uri.getQueryParameter("code"),
+                uri.getQueryParameter("error"),
+                uri.getQueryParameter("nonce"),
+            )
         }
     }
 
@@ -618,51 +619,19 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun applyOAuthReturn(code: String?, error: String?) {
+    private fun applyOAuthReturn(code: String?, error: String?, nonce: String?) {
         // Gated like the notification path above: this activity is exported and
         // BROWSABLE, so any app or web page can deliver a mochi:oauth-return,
         // and accepting an unsolicited one burns the ceremony — see
         // shouldAcceptOAuthReturn.
-        val outstanding = runBlocking { sessionManager.hasOAuthVerifier() }
-        if (!shouldAcceptOAuthReturn(outstanding, code, error)) {
-            Log.w(TAG, "Ignoring mochi:oauth-return with no ceremony outstanding")
+        // One snapshot: the verifier and the nonce must describe the SAME
+        // ceremony, and two reads can straddle a replacement.
+        val ceremony = runBlocking { sessionManager.oauthCeremony() }
+        if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
+            Log.w(TAG, "Ignoring mochi:oauth-return that matches no outstanding ceremony")
             return
         }
         runBlocking { sessionManager.setOAuthReturn(code, error) }
-    }
-
-    /**
-     * NOTHING LEGITIMATE CALLS THIS TODAY. The server never sends a
-     * mochi:oauth-link-return: core's oauth_link passes its target through
-     * redirect_local, which keeps only paths beginning with a single "/", so
-     * the custom scheme is dropped and the browser is sent to
-     * /login/settings/oauth instead. The link itself still succeeds — the row
-     * is written before that redirect — so what is missing is the journey back
-     * to the app, not the linking.
-     *
-     * Left in place because the client half is complete and correct; if core
-     * ever routes link ceremonies through oauth_mobile_redirect the way login
-     * ceremonies go, this starts working with no change here. Until then treat
-     * any mochi:oauth-link-return as necessarily forged, which is what the
-     * guard below already does.
-     *
-     * Android LOGIN is a different path (mochi:oauth-return) and is unaffected.
-     */
-    private fun applyOAuthLinkReturn(provider: String?, error: String?) {
-        // Gated like the login return above: this activity is exported and
-        // BROWSABLE, so any app or web page can deliver a
-        // mochi:oauth-link-return. Read the marker without consuming and retire
-        // it only on the branch that accepts, so a rejected return cannot burn
-        // a live ceremony — see shouldAcceptOAuthLinkReturn.
-        val pending = runBlocking { sessionManager.oauthLinkPending() }
-        if (!shouldAcceptOAuthLinkReturn(pending, provider, error)) {
-            Log.w(TAG, "Ignoring mochi:oauth-link-return that matches no outstanding ceremony")
-            return
-        }
-        runBlocking {
-            sessionManager.clearOAuthLinkPending()
-            sessionManager.setOAuthLinkReturn(provider, error)
-        }
     }
 
     private fun navigateToLink(navController: NavController, link: String) {
@@ -861,7 +830,7 @@ class MainActivity : ComponentActivity() {
         // navigates to SettingsApp.NOTIFICATIONS; the Mochi Settings launcher
         // alias targets SettingsApp.HOME via `targetApp = "settings"`.
 
-        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
+        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return")
 
         /**
          * Every Mochi-app the Android client bundles. The bootstrap path mints

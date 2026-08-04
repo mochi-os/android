@@ -78,20 +78,6 @@ class LoginViewModel @Inject constructor(
 
     init {
         refresh()
-        // OAuth-link callbacks the host MainActivity feeds into
-        // sessionManager.oauthLinkReturn after parsing the return deep link.
-        viewModelScope.launch {
-            sessionManager.oauthLinkReturn.collect { (provider, error) ->
-                if (provider == null && error == null) return@collect
-                sessionManager.clearOAuthLinkReturn()
-                if (error != null) {
-                    _uiState.value = _uiState.value.copy(
-                        error = MochiError.Local(MochiR.string.stepup_error_oauth),
-                    )
-                }
-                refresh()
-            }
-        }
     }
 
     fun refresh() {
@@ -237,17 +223,24 @@ class LoginViewModel @Inject constructor(
         // The challenge goes to the server; the verifier is not stored, because
         // the link flow has no exchange step to consume it. A stored one would
         // outlive the ceremony and leave the login return's gate permanently
-        // satisfied. The pending marker is what records that this is ours.
+        // satisfied.
         val challenge = OAuthPkce.challengeFor(OAuthPkce.generateVerifier())
-        // This target is currently discarded by the server. core's oauth_link
-        // runs it through redirect_local, which keeps only paths starting with
-        // a single "/", so the custom scheme is dropped and the browser is sent
-        // to /login/settings/oauth. The account IS linked - the row is written
-        // before that redirect - but the user finishes on a web page rather
-        // than back here, and MainActivity's mochi:oauth-link-return handler
-        // never fires. Sent anyway, so that routing link ceremonies through
-        // oauth_mobile_redirect (as login ceremonies already are) is all that
-        // would be needed to close the loop.
+        // The link COMPLETES on the server — the row is written before it
+        // redirects — but the user finishes on a web page instead of back here:
+        // core's oauth_link runs this target through redirect_local, which keeps
+        // only paths starting with a single "/", so the custom scheme is
+        // dropped and the browser goes to /login/settings/oauth.
+        //
+        // Nothing on this side waits for a return, deliberately. There used to
+        // be a handler and a pending marker, and because no legitimate return
+        // could ever retire that marker it stayed set for good after the first
+        // link attempt — leaving an exported activity permanently willing to
+        // accept a forged success naming that provider, or any forged error.
+        // A guard that can only ever see forgeries is not a guard.
+        //
+        // Reinstating it needs core to route link ceremonies through
+        // oauth_mobile_redirect the way login ceremonies go, so the return
+        // carries the ceremony nonce that shouldAcceptOAuthReturn checks.
         val url = authRepository.beginOAuthLink(
             provider = provider,
             scheme = "mochi",
@@ -255,11 +248,6 @@ class LoginViewModel @Inject constructor(
             challenge = challenge,
             bearerToken = token,
         )
-        // Recorded only once the server has given us somewhere to go: marking a
-        // ceremony outstanding before the request could leave the marker behind
-        // for good if it fails, and a stale marker is what a later injected
-        // return needs to be accepted.
-        sessionManager.saveOAuthLinkPending(provider)
         _oauthLaunchUrl.value = url
     }
 
