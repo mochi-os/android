@@ -71,6 +71,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.people.R
 import org.mochios.people.model.Friend
 import org.mochios.people.ui.components.PeopleEmptyState
@@ -373,19 +374,7 @@ private fun FriendsContent(
             }
         }
         state.error != null && state.friends.isEmpty() -> {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        text = state.error.userMessage(),
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    TextButton(onClick = onRetryLoad) {
-                        Text(stringResource(MochiR.string.common_retry))
-                    }
-                }
-            }
+            ErrorState(error = state.error, onRetry = onRetryLoad)
         }
         else -> {
             LazyColumn(

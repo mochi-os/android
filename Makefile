@@ -44,11 +44,10 @@ clean:
 # --------------------------------------------------------------------------
 
 # Build the signed APK, stage it into the published packages tree with a
-# matching versions.json, then publish to both hosts. Target the stable SSH
-# aliases (root@yuzu, root@wasabi), each with a pinned key in known_hosts —
-# NOT packages.mochi-os.org, whose A/AAAA float between hosts and present a
-# host key that fails strict checking. yuzu is the primary, wasabi the backup;
-# both serve the same static tree, so neither depends on the other.
+# matching versions.json, then publish to yuzu, which serves the static tree.
+# Target the stable SSH alias (root@yuzu) with its pinned key in known_hosts —
+# NOT packages.mochi-os.org, whose A/AAAA have moved between hosts and present
+# a host key that fails strict checking.
 release: apk
 	mkdir -p $(packages)
 	# Two copies: the stable name for humans clicking a download link, and a
@@ -64,4 +63,3 @@ release: apk
 	  printf '{"tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
 	  '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
 	rsync -av $(packages)/ root@yuzu:/srv/packages/android/
-	rsync -av $(packages)/ root@wasabi:/srv/packages/android/

@@ -59,7 +59,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
@@ -134,13 +136,14 @@ fun AccountSettingsScreen(
                     Modifier
                         .fillMaxSize()
                         .padding(padding),
-                    contentAlignment = Alignment.Center,
                 ) {
-                    Text(
-                        text = state.error?.userMessage()
-                            ?: stringResource(R.string.market_account_load_failed),
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(24.dp),
+                    ErrorState(
+                        // The account can come back null with no error attached;
+                        // carry the existing fallback so the state still says
+                        // what failed rather than "unexpected error".
+                        error = state.error
+                            ?: MochiError.Unknown(stringResource(R.string.market_account_load_failed)),
+                        onRetry = viewModel::retry,
                     )
                 }
             }

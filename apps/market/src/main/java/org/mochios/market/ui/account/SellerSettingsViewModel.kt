@@ -76,6 +76,16 @@ class SellerSettingsViewModel @Inject constructor(
         loadFees()
     }
 
+    /**
+     * Re-runs the initial load for the error state's retry button. Passes
+     * initial = true so the error is cleared and the spinner returns, which is
+     * what the retry is asking for; the background variant leaves both alone.
+     */
+    fun retry() {
+        load(initial = true)
+        loadFees()
+    }
+
     private fun load(initial: Boolean) {
         viewModelScope.launch {
             if (initial) _state.value = _state.value.copy(isLoading = true, error = null)

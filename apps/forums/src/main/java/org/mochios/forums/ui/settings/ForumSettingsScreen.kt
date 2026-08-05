@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.Section
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
@@ -203,12 +204,10 @@ fun ForumSettingsScreen(
                     contentAlignment = Alignment.Center,
                 ) { CircularProgressIndicator() }
 
-                uiState.error != null && uiState.forum.id.isEmpty() -> Box(
-                    Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Text(uiState.error!!.userMessage(), color = MaterialTheme.colorScheme.error)
-                }
+                uiState.error != null && uiState.forum.id.isEmpty() -> ErrorState(
+                    error = uiState.error!!,
+                    onRetry = viewModel::load,
+                )
 
                 !canManage -> SubscriberSettings(
                     forum = uiState.forum,

@@ -64,6 +64,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.DestinationRow
@@ -148,10 +149,9 @@ fun NotificationPrefsScreen(
                     state.isLoading -> Box(Modifier.fillMaxSize()) {
                         CircularProgressIndicator(Modifier.align(Alignment.Center))
                     }
-                    state.error != null && state.categories.isEmpty() && state.topics.isEmpty() -> Text(
-                        text = state.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(16.dp),
+                    state.error != null && state.categories.isEmpty() && state.topics.isEmpty() -> ErrorState(
+                        error = state.error!!,
+                        onRetry = viewModel::refresh,
                     )
                     state.tab == NotifTab.CATEGORIES -> CategoriesList(
                         categories = state.categories,

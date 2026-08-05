@@ -50,6 +50,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.settings.R
 import org.mochios.settings.api.Session
 import org.mochios.android.R as MochiR
@@ -91,10 +92,9 @@ fun SessionsScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                state.error != null && state.sessions.isEmpty() -> Text(
-                    text = state.error!!.userMessage(),
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.align(Alignment.Center).padding(16.dp),
+                state.error != null && state.sessions.isEmpty() -> ErrorState(
+                    error = state.error!!,
+                    onRetry = viewModel::refresh,
                 )
                 state.sessions.isEmpty() -> Text(
                     text = stringResource(R.string.sessions_empty),

@@ -64,8 +64,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
@@ -204,19 +206,11 @@ fun GoGameDetailScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(padding),
-                    contentAlignment = Alignment.Center,
                 ) {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(
-                            text = state.error?.userMessage()
-                                ?: stringResource(MochiR.string.error_unexpected),
-                            color = MaterialTheme.colorScheme.error,
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        TextButton(onClick = { viewModel.loadGame() }) {
-                            Text(stringResource(MochiR.string.common_retry))
-                        }
-                    }
+                    ErrorState(
+                        error = state.error ?: MochiError.Unknown(),
+                        onRetry = { viewModel.loadGame() },
+                    )
                 }
             }
             game != null -> {

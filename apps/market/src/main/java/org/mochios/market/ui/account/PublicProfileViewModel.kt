@@ -86,6 +86,12 @@ class PublicProfileViewModel @Inject constructor(
         loadReviewsFirstPage()
     }
 
+    /** Re-runs the initial load for the error state's retry button. */
+    fun retry() {
+        loadAccount()
+        loadReviewsFirstPage()
+    }
+
     private fun loadAccount() {
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)

@@ -42,6 +42,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
 import org.mochios.market.model.MarketThread
@@ -79,12 +80,9 @@ fun MessagesInboxScreen(
         ) {
             when {
                 state.error != null && state.threads.isEmpty() -> {
-                    Text(
-                        text = state.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier
-                            .align(Alignment.Center)
-                            .padding(24.dp),
+                    ErrorState(
+                        error = state.error!!,
+                        onRetry = viewModel::refresh,
                     )
                 }
                 state.threads.isEmpty() && !state.isLoading -> {

@@ -61,6 +61,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.SecretField
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
@@ -100,10 +101,9 @@ fun SystemSettingsScreen(
                 state.isLoading -> CircularProgressIndicator(
                     modifier = Modifier.align(Alignment.Center)
                 )
-                state.error != null && state.settings.isEmpty() -> Text(
-                    text = state.error!!.userMessage(),
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.align(Alignment.Center).padding(16.dp),
+                state.error != null && state.settings.isEmpty() -> ErrorState(
+                    error = state.error!!,
+                    onRetry = viewModel::refresh,
                 )
                 else -> SystemSettingsContent(
                     state = state,

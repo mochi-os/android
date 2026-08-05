@@ -56,6 +56,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.theme.interestColor
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -99,10 +100,9 @@ fun InterestsScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                state.error != null && state.interests.isEmpty() -> Text(
-                    text = state.error!!.userMessage(),
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.align(Alignment.Center).padding(16.dp),
+                state.error != null && state.interests.isEmpty() -> ErrorState(
+                    error = state.error!!,
+                    onRetry = viewModel::refresh,
                 )
                 else -> LazyColumn(
                     contentPadding = PaddingValues(16.dp),

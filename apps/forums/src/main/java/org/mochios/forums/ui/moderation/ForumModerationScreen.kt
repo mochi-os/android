@@ -77,6 +77,7 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.forums.R
@@ -177,12 +178,10 @@ fun ForumModerationScreen(
                 uiState.isLoading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     CircularProgressIndicator()
                 }
-                uiState.error != null -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text(
-                        uiState.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
+                uiState.error != null -> ErrorState(
+                    error = uiState.error!!,
+                    onRetry = viewModel::retry,
+                )
                 else -> when (uiState.selectedTab) {
                     ModerationTab.QUEUE -> QueueTab(uiState, viewModel)
                     ModerationTab.REPORTS -> ReportsTab(uiState, viewModel)

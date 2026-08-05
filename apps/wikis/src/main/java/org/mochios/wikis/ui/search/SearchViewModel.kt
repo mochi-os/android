@@ -99,6 +99,16 @@ class SearchViewModel @Inject constructor(
         _queryFlow.value = value
     }
 
+    /**
+     * Re-runs the current search for the error state's retry button. Calls
+     * runSearch directly rather than re-setting _queryFlow: that flow is
+     * distinctUntilChanged, so re-emitting the query the search just failed on
+     * would be dropped and the button would do nothing.
+     */
+    fun retry() {
+        viewModelScope.launch { runSearch(_uiState.value.debouncedQuery) }
+    }
+
     private suspend fun runSearch(q: String) {
         val trimmed = q.trim()
         if (trimmed.isEmpty()) {

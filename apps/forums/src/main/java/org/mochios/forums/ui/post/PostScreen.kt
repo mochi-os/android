@@ -6,6 +6,7 @@
 package org.mochios.forums.ui.post
 
 import org.mochios.android.ui.components.CommentItem
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.PostTagsButton
 import androidx.compose.material.icons.automirrored.outlined.Reply
@@ -259,9 +260,10 @@ fun PostScreen(
                     )
                 }
                 uiState.error != null && uiState.post.id.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(uiState.error!!.userMessage(), color = MaterialTheme.colorScheme.error)
-                    }
+                    ErrorState(
+                        error = uiState.error!!,
+                        onRetry = viewModel::load,
+                    )
                 }
                 else -> {
                     LazyColumn(

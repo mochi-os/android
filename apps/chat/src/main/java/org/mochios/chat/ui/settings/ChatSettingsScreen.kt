@@ -64,6 +64,7 @@ import org.mochios.android.ui.components.CompactTextField
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.Truncate
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
@@ -140,11 +141,10 @@ fun ChatSettingsScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(padding),
-                    contentAlignment = Alignment.Center
                 ) {
-                    Text(
-                        text = uiState.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error
+                    ErrorState(
+                        error = uiState.error!!,
+                        onRetry = viewModel::load,
                     )
                 }
             }

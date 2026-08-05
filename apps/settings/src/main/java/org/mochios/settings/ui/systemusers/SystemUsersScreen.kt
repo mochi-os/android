@@ -76,6 +76,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUser
@@ -168,10 +169,9 @@ fun SystemUsersScreen(
                         contentAlignment = Alignment.Center,
                     ) { CircularProgressIndicator() }
 
-                    state.error != null && state.users.isEmpty() -> Text(
-                        text = state.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(16.dp),
+                    state.error != null && state.users.isEmpty() -> ErrorState(
+                        error = state.error!!,
+                        onRetry = viewModel::refresh,
                     )
 
                     state.users.isEmpty() -> EmptyUsers(searchActive = state.search.isNotBlank())

@@ -109,6 +109,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.HtmlContent
@@ -650,12 +651,10 @@ private fun ForumContent(
                     }
 
                     uiState.error != null && uiState.posts.isEmpty() -> {
-                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                uiState.error!!.userMessage(),
-                                color = MaterialTheme.colorScheme.error
-                            )
-                        }
+                        ErrorState(
+                            error = uiState.error!!,
+                            onRetry = viewModel::load,
+                        )
                     }
 
                     uiState.posts.isEmpty() -> {

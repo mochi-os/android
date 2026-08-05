@@ -50,6 +50,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.Section
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
@@ -126,12 +127,10 @@ fun ProjectSettingsScreen(
             val project = uiState.project
             val error = uiState.error
             when {
-                project == null && error != null -> Box(
-                    Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(error.userMessage(), color = MaterialTheme.colorScheme.error)
-                }
+                project == null && error != null -> ErrorState(
+                    error = error,
+                    onRetry = { viewModel.retry() }
+                )
 
                 project == null -> Box(
                     Modifier.fillMaxSize(),
