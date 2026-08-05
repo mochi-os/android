@@ -151,7 +151,9 @@ fun CreateObjectDialog(
         if (activeView?.viewtype == "board" && activeView.columns.isNotBlank() &&
             activeView.columns in classFieldIds
         ) {
-            val columnOptions = viewModel.getAllOptionsForField(activeView.columns)
+            // Options are defined per class: on a board that mixes classes,
+            // another class's option for this field is an invalid value here.
+            val columnOptions = classOptions[activeView.columns].orEmpty()
             if (columnOptions.isNotEmpty()) {
                 fieldValues[activeView.columns] = columnOptions.first().id
             }
