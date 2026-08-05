@@ -237,8 +237,7 @@ fun FeedListScreen(
                             modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
                         )
                         FindFeedsContent(
-                            viewModel = findFeedsViewModel,
-                            onNavigateToFeed = onNavigateToFeed
+                            viewModel = findFeedsViewModel
                         )
                     }
                 }

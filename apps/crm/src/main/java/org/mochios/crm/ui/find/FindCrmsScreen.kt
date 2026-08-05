@@ -6,7 +6,6 @@
 package org.mochios.crm.ui.find
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,13 +25,11 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -124,6 +121,18 @@ fun FindCrmsScreen(
                 onRefresh = { viewModel.refresh() },
                 modifier = Modifier.fillMaxSize()
             ) {
+            // A CRM the user already has belongs in their own list, not in the
+            // directory, so it drops out of both sections rather than sitting
+            // there behind a dead "Subscribed" chip. Filtering here rather than
+            // in the view model keeps the branches below testing the same lists
+            // they render, so a search whose every hit is already subscribed
+            // lands on the empty state instead of an empty LazyColumn.
+            val searchResults = uiState.searchResults.filter { crm ->
+                crm.id.ifEmpty { crm.fingerprint } !in uiState.subscribedIds
+            }
+            val recommendations = uiState.recommendations.filter { crm ->
+                crm.id.ifEmpty { crm.fingerprint } !in uiState.subscribedIds
+            }
             when {
                 uiState.isLoading -> {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -131,30 +140,32 @@ fun FindCrmsScreen(
                     }
                 }
 
-                uiState.searchResults.isNotEmpty() -> {
+                searchResults.isNotEmpty() -> {
                     LazyColumn(
                         contentPadding = PaddingValues(16.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        items(uiState.searchResults, key = { it.fingerprint.ifEmpty { it.id } }) { crm ->
+                        items(searchResults, key = { it.fingerprint.ifEmpty { it.id } }) { crm ->
                             val subscribeId = crm.id.ifEmpty { crm.fingerprint }
                             DiscoveredCrmCard(
                                 crm = crm,
-                                isSubscribed = subscribeId in uiState.subscribedIds,
                                 isSubscribing = uiState.subscribingId == subscribeId,
                                 onSubscribe = {
                                     keyboardController?.hide()
                                     viewModel.subscribe(crm) { landingId ->
                                         onCrmSubscribed(landingId)
                                     }
-                                },
-                                onOpen = { onCrmSubscribed(crm.fingerprint.ifEmpty { crm.id }) }
+                                }
                             )
                         }
                     }
                 }
 
-                uiState.recommendations.isNotEmpty() -> {
+                // A live search owns the screen. Without the blank-query guard,
+                // a search whose every hit is already subscribed would fall
+                // through to the recommendations and look like the search had
+                // never run; the empty state below is the honest answer.
+                recommendations.isNotEmpty() && uiState.searchQuery.isBlank() -> {
                     Column {
                         Text(
                             text = stringResource(R.string.crm_find_recommended),
@@ -165,19 +176,17 @@ fun FindCrmsScreen(
                             contentPadding = PaddingValues(16.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            items(uiState.recommendations, key = { it.fingerprint.ifEmpty { it.id } }) { crm ->
+                            items(recommendations, key = { it.fingerprint.ifEmpty { it.id } }) { crm ->
                                 val subscribeId = crm.id.ifEmpty { crm.fingerprint }
                                 DiscoveredCrmCard(
                                     crm = crm,
-                                    isSubscribed = subscribeId in uiState.subscribedIds,
                                     isSubscribing = uiState.subscribingId == subscribeId,
                                     onSubscribe = {
                                         keyboardController?.hide()
                                         viewModel.subscribe(crm) { landingId ->
                                             onCrmSubscribed(landingId)
                                         }
-                                    },
-                                    onOpen = { onCrmSubscribed(crm.fingerprint.ifEmpty { crm.id }) }
+                                    }
                                 )
                             }
                         }
@@ -200,22 +209,19 @@ fun FindCrmsScreen(
 }
 
 /**
- * A directory hit, with a subscribe button that becomes a disabled "Subscribed"
- * chip once the user has the CRM. Tapping a subscribed row opens it.
+ * A directory hit, with a subscribe button. The screen only ever hands this
+ * CRMs the user has not subscribed to, so there is no subscribed state to draw.
  */
 @Composable
 private fun DiscoveredCrmCard(
     crm: Crm,
-    isSubscribed: Boolean,
     isSubscribing: Boolean,
-    onSubscribe: () -> Unit,
-    onOpen: () -> Unit
+    onSubscribe: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .clickable(enabled = isSubscribed, onClick = onOpen)
             .padding(horizontal = 8.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -283,19 +289,11 @@ private fun DiscoveredCrmCard(
             }
         }
         Spacer(Modifier.width(12.dp))
-        if (isSubscribed) {
-            FilledTonalButton(onClick = {}, enabled = false) {
-                Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(Modifier.width(4.dp))
-                Text(stringResource(MochiR.string.discovery_subscribed))
-            }
-        } else {
-            Button(onClick = onSubscribe, enabled = !isSubscribing) {
-                if (isSubscribing) {
-                    CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
-                } else {
-                    Text(stringResource(MochiR.string.common_subscribe))
-                }
+        Button(onClick = onSubscribe, enabled = !isSubscribing) {
+            if (isSubscribing) {
+                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+            } else {
+                Text(stringResource(MochiR.string.common_subscribe))
             }
         }
     }

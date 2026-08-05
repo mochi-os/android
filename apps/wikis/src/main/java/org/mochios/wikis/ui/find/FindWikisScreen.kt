@@ -5,7 +5,6 @@
 
 package org.mochios.wikis.ui.find
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,7 +21,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
@@ -30,7 +28,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -165,6 +162,19 @@ fun FindWikisScreen(
 
             val showRecommendations = uiState.searchQuery.isBlank()
 
+            // A wiki the user already has belongs in their own list, not in the
+            // directory, so it drops out of both sections rather than sitting
+            // there behind a dead "Subscribed" chip. Filtering here rather than
+            // in the view model keeps the checks below testing the same lists
+            // they render, so a search whose every hit is already subscribed
+            // shows the no-results message instead of nothing at all.
+            val results = uiState.results.filter { entry ->
+                entry.id.ifEmpty { entry.fingerprint } !in uiState.subscribedIds
+            }
+            val recommendations = uiState.recommendations.filter { rec ->
+                rec.id.ifEmpty { rec.fingerprint } !in uiState.subscribedIds
+            }
+
             when {
                 // Empty query + still loading recommendations
                 showRecommendations && uiState.isLoadingRecommendations &&
@@ -182,7 +192,7 @@ fun FindWikisScreen(
                     ) {
                         // Search results
                         if (!showRecommendations) {
-                            if (uiState.results.isEmpty() && !uiState.isSearching) {
+                            if (results.isEmpty() && !uiState.isSearching) {
                                 item {
                                     Box(
                                         Modifier
@@ -197,23 +207,21 @@ fun FindWikisScreen(
                                     }
                                 }
                             }
-                            items(uiState.results, key = { it.id }) { entry ->
+                            items(results, key = { it.id }) { entry ->
                                 val target = entry.id.ifEmpty { entry.fingerprint }
                                 DirectoryEntryRow(
                                     entry = entry,
-                                    isSubscribed = target in uiState.subscribedIds,
                                     isPending = uiState.pendingId == target,
                                     onSubscribe = {
                                         keyboardController?.hide()
                                         viewModel.subscribeDirectoryEntry(entry)
                                     },
-                                    onOpen = { onSubscribed(entry.fingerprint.ifEmpty { entry.id }) },
                                 )
                             }
                         }
 
                         // Recommendations
-                        if (uiState.recommendations.isNotEmpty()) {
+                        if (recommendations.isNotEmpty()) {
                             item {
                                 Text(
                                     text = stringResource(R.string.wikis_find_recommended_section),
@@ -222,17 +230,15 @@ fun FindWikisScreen(
                                     modifier = Modifier.padding(top = 8.dp, bottom = 4.dp),
                                 )
                             }
-                            items(uiState.recommendations, key = { it.id }) { rec ->
+                            items(recommendations, key = { it.id }) { rec ->
                                 val target = rec.id.ifEmpty { rec.fingerprint }
                                 RecommendationRow(
                                     rec = rec,
-                                    isSubscribed = target in uiState.subscribedIds,
                                     isPending = uiState.pendingId == target,
                                     onSubscribe = {
                                         keyboardController?.hide()
                                         viewModel.subscribeRecommendation(rec)
                                     },
-                                    onOpen = { onSubscribed(rec.fingerprint.ifEmpty { rec.id }) },
                                 )
                             }
                         }
@@ -250,15 +256,11 @@ fun FindWikisScreen(
 @Composable
 private fun DirectoryEntryRow(
     entry: DirectoryEntry,
-    isSubscribed: Boolean,
     isPending: Boolean,
     onSubscribe: () -> Unit,
-    onOpen: () -> Unit,
 ) {
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(enabled = isSubscribed, onClick = onOpen),
+        modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface,
         ),
@@ -297,7 +299,6 @@ private fun DirectoryEntryRow(
             }
             Spacer(Modifier.width(12.dp))
             SubscribeControl(
-                isSubscribed = isSubscribed,
                 isPending = isPending,
                 onSubscribe = onSubscribe,
             )
@@ -312,15 +313,11 @@ private fun DirectoryEntryRow(
 @Composable
 private fun RecommendationRow(
     rec: Recommendation,
-    isSubscribed: Boolean,
     isPending: Boolean,
     onSubscribe: () -> Unit,
-    onOpen: () -> Unit,
 ) {
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(enabled = isSubscribed, onClick = onOpen),
+        modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface,
         ),
@@ -369,7 +366,6 @@ private fun RecommendationRow(
             }
             Spacer(Modifier.width(12.dp))
             SubscribeControl(
-                isSubscribed = isSubscribed,
                 isPending = isPending,
                 onSubscribe = onSubscribe,
             )
@@ -377,29 +373,20 @@ private fun RecommendationRow(
     }
 }
 
-/** The trailing control both rows share: Subscribe, spinner, or Subscribed. */
+/** The trailing control both rows share: Subscribe, or a spinner while pending. */
 @Composable
 private fun SubscribeControl(
-    isSubscribed: Boolean,
     isPending: Boolean,
     onSubscribe: () -> Unit,
 ) {
-    if (isSubscribed) {
-        FilledTonalButton(onClick = {}, enabled = false) {
-            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
-            Spacer(Modifier.width(4.dp))
-            Text(stringResource(MochiR.string.discovery_subscribed))
-        }
-    } else {
-        Button(onClick = onSubscribe, enabled = !isPending) {
-            if (isPending) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(18.dp),
-                    strokeWidth = 2.dp,
-                )
-            } else {
-                Text(stringResource(MochiR.string.common_subscribe))
-            }
+    Button(onClick = onSubscribe, enabled = !isPending) {
+        if (isPending) {
+            CircularProgressIndicator(
+                modifier = Modifier.size(18.dp),
+                strokeWidth = 2.dp,
+            )
+        } else {
+            Text(stringResource(MochiR.string.common_subscribe))
         }
     }
 }
