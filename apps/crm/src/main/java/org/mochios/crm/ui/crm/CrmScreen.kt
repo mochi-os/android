@@ -39,6 +39,7 @@ import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.HomeMax
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
@@ -49,6 +50,8 @@ import androidx.compose.material.icons.filled.ViewColumn
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.outlined.Dashboard
+import androidx.compose.material.icons.outlined.FormatListBulleted
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
@@ -58,14 +61,14 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.ScrollableTabRow
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
@@ -675,6 +678,49 @@ private fun CrmContent(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
+                                // Views the CRM defines, checked one at a time.
+                                // Listed even when there is only one, so the menu
+                                // always says which view is on screen and how it
+                                // is drawn.
+                                val views = details?.views.orEmpty()
+                                if (views.isNotEmpty()) {
+                                    views.forEach { view ->
+                                        val isActive = view.id == activeView?.id
+                                        DropdownMenuItem(
+                                            text = { Text(view.name) },
+                                            onClick = {
+                                                showOverflow = false
+                                                viewModel.setActiveView(view.id)
+                                            },
+                                            leadingIcon = {
+                                                Icon(
+                                                    if (view.viewtype == "board") {
+                                                        Icons.Outlined.Dashboard
+                                                    } else {
+                                                        Icons.Outlined.FormatListBulleted
+                                                    },
+                                                    contentDescription = null,
+                                                    tint = if (isActive) {
+                                                        MaterialTheme.colorScheme.primary
+                                                    } else {
+                                                        LocalContentColor.current
+                                                    },
+                                                )
+                                            },
+                                            trailingIcon = {
+                                                if (isActive) {
+                                                    Icon(
+                                                        Icons.Default.Check,
+                                                        contentDescription = null,
+                                                        tint = MaterialTheme.colorScheme.primary,
+                                                    )
+                                                }
+                                            },
+                                        )
+                                    }
+                                    HorizontalDivider()
+                                }
+
                                 // Add column — only meaningful on a board view that
                                 // groups by a field (mirrors web's overflow "Add
                                 // column"). Creates a new option on the grouping field.
@@ -753,29 +799,8 @@ private fun CrmContent(
                         orientation = Orientation.Vertical
                     )
             ) {
-                // View tabs
-                if (details != null && details.views.isNotEmpty()) {
-                    val views = details.views
-                    val selectedIndex = views.indexOfFirst { it.id == uiState.activeViewId }.coerceAtLeast(0)
-                    ScrollableTabRow(
-                        selectedTabIndex = selectedIndex,
-                        edgePadding = 16.dp
-                    ) {
-                        views.forEachIndexed { index, view ->
-                            Tab(
-                                selected = index == selectedIndex,
-                                onClick = { viewModel.setActiveView(view.id) },
-                                text = {
-                                    Text(
-                                        text = view.name,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                            )
-                        }
-                    }
-                }
+                // Views moved to the overflow menu, which names the active one
+                // and its type, so the row of tabs that used to sit here is gone.
 
                 // Main content
                 when {
