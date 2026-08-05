@@ -203,6 +203,7 @@
     <string name="place_destination">Destinasyon</string>
     <string name="discovery_search_placeholder">Chèche %1$ss</string>
     <string name="discovery_no_results">Pa jwenn okenn %1$ss</string>
+    <string name="discovery_no_results_hint">Eseye ajiste rechèch ou</string>
     <string name="discovery_no_recommendations">Pa gen rekòmandasyon</string>
     <string name="discovery_search_hint">Eseye chèche yon %1$s pou abòne</string>
     <string name="access_no_rules">Pa gen règ aksè</string>

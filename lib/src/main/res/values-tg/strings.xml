@@ -200,6 +200,7 @@
     <string name="place_destination">Таъинот</string>
     <string name="discovery_search_placeholder">Ҷустуҷӯи %1$ss</string>
     <string name="discovery_no_results">Ягон %1$ss ёфт нашуд</string>
+    <string name="discovery_no_results_hint">Ҷустуҷӯи худро танзим кунед</string>
     <string name="discovery_no_recommendations">Тавсияҳо нестанд</string>
     <string name="discovery_search_hint">Кӯшиш кунед %1$s-ро барои обуна шудан ҷустуҷӯ кунед</string>
     <string name="access_no_rules">Қоидаҳои дастрасӣ нестанд</string>

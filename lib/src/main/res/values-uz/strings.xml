@@ -202,6 +202,7 @@
     <string name="place_destination">Manzil</string>
     <string name="discovery_search_placeholder">%1$s qidirish</string>
     <string name="discovery_no_results">%1$s topilmadi</string>
+    <string name="discovery_no_results_hint">Qidiruvingizni sozlashga harakat qiling</string>
     <string name="discovery_no_recommendations">Tavsiyalar yo\'q</string>
     <string name="discovery_search_hint">Obuna bo\'lish uchun %1$s qidirib ko\'ring</string>
     <string name="access_no_rules">Kirish qoidalari yo\'q</string>

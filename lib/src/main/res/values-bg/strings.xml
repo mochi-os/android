@@ -199,6 +199,7 @@
     <string name="place_destination">Дестинация</string>
     <string name="discovery_search_placeholder">Търсене на %1$s</string>
     <string name="discovery_no_results">Не са намерени %1$s</string>
+    <string name="discovery_no_results_hint">Опитайте да коригирате търсенето си</string>
     <string name="discovery_no_recommendations">Няма препоръки</string>
     <string name="discovery_search_hint">Опитайте да потърсите %1$s, за който да се абонирате</string>
     <string name="access_no_rules">Няма правила за достъп</string>

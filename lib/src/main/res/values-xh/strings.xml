@@ -202,6 +202,7 @@
     <string name="place_destination">Indawo eyiyo</string>
     <string name="discovery_search_placeholder">Khangela u-%1$ss</string>
     <string name="discovery_no_results">Akukho %1$ss ifunyenweyo</string>
+    <string name="discovery_no_results_hint">Zama ukulungisa ukhangelo lwakho</string>
     <string name="discovery_no_recommendations">Akukho zindululo</string>
     <string name="discovery_search_hint">Zama ukukhangela u-%1$s ozakurhuma kuye</string>
     <string name="access_no_rules">Akukho mithetho yokufikelela</string>

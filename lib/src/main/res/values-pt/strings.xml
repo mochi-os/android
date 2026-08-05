@@ -200,6 +200,7 @@
     <string name="place_destination">Destino</string>
     <string name="discovery_search_placeholder">Pesquisar %1$ss</string>
     <string name="discovery_no_results">Nenhum %1$s encontrado</string>
+    <string name="discovery_no_results_hint">Experimente ajustar a sua pesquisa</string>
     <string name="discovery_no_recommendations">Sem recomendações</string>
     <string name="discovery_search_hint">Tente pesquisar um %1$s para subscrever</string>
     <string name="access_no_rules">Sem regras de acesso</string>

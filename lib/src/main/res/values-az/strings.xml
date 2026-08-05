@@ -199,6 +199,7 @@
     <string name="place_destination">Təyinat</string>
     <string name="discovery_search_placeholder">%1$s axtar</string>
     <string name="discovery_no_results">%1$s tapılmadı</string>
+    <string name="discovery_no_results_hint">Axtarış terminlərinizi tənzimləməyə cəhd edin</string>
     <string name="discovery_no_recommendations">Tövsiyə yoxdur</string>
     <string name="discovery_search_hint">Abunə olmaq üçün bir %1$s axtarmağa cəhd edin</string>
     <string name="access_no_rules">Giriş qaydaları yoxdur</string>

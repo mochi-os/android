@@ -199,6 +199,7 @@
     <string name="place_destination">መድረሻ</string>
     <string name="discovery_search_placeholder">%1$ssን ይፈልጉ</string>
     <string name="discovery_no_results">ምንም %1$ss አልተገኘም</string>
+    <string name="discovery_no_results_hint">ፍለጋዎን ማስተካከል ይሞክሩ</string>
     <string name="discovery_no_recommendations">ምንም ምክሮች የሉም</string>
     <string name="discovery_search_hint">ለመመዝገብ %1$s ለመፈለግ ይሞክሩ</string>
     <string name="access_no_rules">ምንም የመዳረሻ ደንቦች የሉም</string>

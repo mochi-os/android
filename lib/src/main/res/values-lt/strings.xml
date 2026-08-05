@@ -200,6 +200,7 @@
     <string name="place_destination">Paskirtis</string>
     <string name="discovery_search_placeholder">Ieškoti %1$ss</string>
     <string name="discovery_no_results">%1$ss nerasta</string>
+    <string name="discovery_no_results_hint">Pabandykite koreguoti paiešką</string>
     <string name="discovery_no_recommendations">Nėra rekomendacijų</string>
     <string name="discovery_search_hint">Pabandykite ieškoti %1$s, kad užsiprenumeruotumėte</string>
     <string name="access_no_rules">Nėra prieigos taisyklių</string>

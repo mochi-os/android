@@ -59,6 +59,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.android.R as MochiR
@@ -207,16 +208,11 @@ fun FindFeedsContent(
                 CircularProgressIndicator()
             }
         } else if (displayFeeds.isEmpty() && searchQuery.isNotBlank() && !isSearching && !isProbing) {
-            Box(
-                modifier = Modifier.fillMaxWidth().padding(32.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = stringResource(R.string.feeds_no_feeds_found),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+            EmptyState(
+                icon = Icons.Default.Search,
+                title = stringResource(R.string.feeds_no_feeds_found),
+                subtitle = stringResource(MochiR.string.discovery_no_results_hint)
+            )
         } else {
             LazyColumn(
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),

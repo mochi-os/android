@@ -200,6 +200,7 @@
     <string name="place_destination">Destinație</string>
     <string name="discovery_search_placeholder">Caută %1$ss</string>
     <string name="discovery_no_results">Nu s-au găsit %1$ss</string>
+    <string name="discovery_no_results_hint">Încearcă să ajustezi căutarea</string>
     <string name="discovery_no_recommendations">Nicio recomandare</string>
     <string name="discovery_search_hint">Încearcă să cauți un %1$s la care să te abonezi</string>
     <string name="access_no_rules">Nicio regulă de acces</string>

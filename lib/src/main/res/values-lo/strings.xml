@@ -202,6 +202,7 @@
     <string name="place_destination">ປາຍທາງ</string>
     <string name="discovery_search_placeholder">ຄົ້ນຫາ %1$s</string>
     <string name="discovery_no_results">ບໍ່ພົບ %1$s</string>
+    <string name="discovery_no_results_hint">ລອງປັບປ່ຽນການຄົ້ນຫາຂອງທ່ານ</string>
     <string name="discovery_no_recommendations">ບໍ່ມີຄຳແນະນຳ</string>
     <string name="discovery_search_hint">ລອງຄົ້ນຫາ %1$s ເພື່ອສະໝັກຮັບ</string>
     <string name="access_no_rules">ບໍ່ມີກົດການເຂົ້າເຖິງ</string>

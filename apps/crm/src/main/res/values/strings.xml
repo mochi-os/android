@@ -42,6 +42,7 @@
     <string name="crm_find_search_placeholder">Search CRM or paste URL</string>
     <string name="crm_find_recommended">Recommended</string>
     <string name="crm_find_search_hint">Search for CRM to subscribe to</string>
+    <string name="crm_no_crms_found">No CRMs found</string>
     <string name="crm_find_subscribe">Subscribe</string>
 
     <!-- Crm screen -->

@@ -200,6 +200,7 @@
     <string name="place_destination">Bestemming</string>
     <string name="discovery_search_placeholder">Zoek %1$ss</string>
     <string name="discovery_no_results">Geen %1$ss gevonden</string>
+    <string name="discovery_no_results_hint">Probeer je zoekopdracht aan te passen</string>
     <string name="discovery_no_recommendations">Geen aanbevelingen</string>
     <string name="discovery_search_hint">Probeer te zoeken naar een %1$s om op te abonneren</string>
     <string name="access_no_rules">Geen toegangsregels</string>

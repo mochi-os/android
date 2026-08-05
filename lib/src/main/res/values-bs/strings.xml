@@ -199,6 +199,7 @@
     <string name="place_destination">Odredište</string>
     <string name="discovery_search_placeholder">Pretraži %1$ss</string>
     <string name="discovery_no_results">Nije pronađeno %1$ss</string>
+    <string name="discovery_no_results_hint">Pokušaj prilagoditi pretragu</string>
     <string name="discovery_no_recommendations">Nema preporuka</string>
     <string name="discovery_search_hint">Pokušajte pretražiti %1$s za pretplatu</string>
     <string name="access_no_rules">Nema pravila pristupa</string>

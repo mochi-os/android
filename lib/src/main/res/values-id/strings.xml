@@ -200,6 +200,7 @@
     <string name="place_destination">Tujuan</string>
     <string name="discovery_search_placeholder">Cari %1$s</string>
     <string name="discovery_no_results">Tidak ada %1$s ditemukan</string>
+    <string name="discovery_no_results_hint">Coba sesuaikan pencarian Anda</string>
     <string name="discovery_no_recommendations">Tidak ada rekomendasi</string>
     <string name="discovery_search_hint">Coba cari %1$s untuk berlangganan</string>
     <string name="access_no_rules">Tidak ada aturan akses</string>

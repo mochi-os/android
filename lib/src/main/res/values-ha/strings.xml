@@ -203,6 +203,7 @@
     <string name="place_destination">Inda za a tafi</string>
     <string name="discovery_search_placeholder">Nemi %1$ss</string>
     <string name="discovery_no_results">Ba a samu %1$ss ba</string>
+    <string name="discovery_no_results_hint">Gwada gyara binciken ku</string>
     <string name="discovery_no_recommendations">Babu shawarwari</string>
     <string name="discovery_search_hint">Gwada neman %1$s don biyan kuɗi</string>
     <string name="access_no_rules">Babu dokokin shiga</string>

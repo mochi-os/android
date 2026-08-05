@@ -202,6 +202,7 @@
     <string name="place_destination">Barjak ýeri</string>
     <string name="discovery_search_placeholder">%1$ss gözle</string>
     <string name="discovery_no_results">%1$ss tapylmady</string>
+    <string name="discovery_no_results_hint">Gözlegiňi düzelt</string>
     <string name="discovery_no_recommendations">Maslahatlar ýok</string>
     <string name="discovery_search_hint">Abuna ýazylmak üçin %1$s gözläp görüň</string>
     <string name="access_no_rules">Giriş düzgünleri ýok</string>

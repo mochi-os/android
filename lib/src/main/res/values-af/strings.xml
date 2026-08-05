@@ -252,6 +252,7 @@
     <string name="place_destination">Bestemming</string>
     <string name="discovery_search_placeholder">Soek %1$ss</string>
     <string name="discovery_no_results">Geen %1$ss gevind nie</string>
+    <string name="discovery_no_results_hint">Probeer jou soektog aanpas</string>
     <string name="discovery_no_recommendations">Geen aanbevelings nie</string>
     <string name="discovery_search_hint">Probeer soek vir \'n %1$s om op in te teken</string>
     <string name="access_no_rules">Geen toegangsreëls nie</string>

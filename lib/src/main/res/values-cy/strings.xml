@@ -199,6 +199,7 @@
     <string name="place_destination">Cyrchfan</string>
     <string name="discovery_search_placeholder">Chwilio %1$ss</string>
     <string name="discovery_no_results">Heb ganfod %1$ss</string>
+    <string name="discovery_no_results_hint">Ceisiwch addasu eich chwiliad</string>
     <string name="discovery_no_recommendations">Dim argymhellion</string>
     <string name="discovery_search_hint">Rhowch gynnig ar chwilio am %1$s i danysgrifio iddo</string>
     <string name="access_no_rules">Dim rheolau mynediad</string>

@@ -202,6 +202,7 @@
     <string name="place_destination">Patutunguhan</string>
     <string name="discovery_search_placeholder">Maghanap ng mga %1$s</string>
     <string name="discovery_no_results">Walang nahanap na %1$s</string>
+    <string name="discovery_no_results_hint">Subukang ayusin ang iyong paghahanap</string>
     <string name="discovery_no_recommendations">Walang mga rekomendasyon</string>
     <string name="discovery_search_hint">Subukang maghanap ng %1$s na sa-subscribe-an</string>
     <string name="access_no_rules">Walang mga panuntunan sa pag-access</string>

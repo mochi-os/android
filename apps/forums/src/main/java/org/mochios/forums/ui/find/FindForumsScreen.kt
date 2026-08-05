@@ -57,6 +57,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
@@ -185,7 +186,11 @@ fun FindForumsScreen(
                 }
                 displayForums.isEmpty() && uiState.searchQuery.isNotBlank() &&
                     !uiState.isSearching && !uiState.isProbing -> {
-                    EmptyMessage(stringResource(R.string.forums_find_no_results))
+                    EmptyState(
+                        icon = Icons.Default.Search,
+                        title = stringResource(R.string.forums_find_no_results),
+                        subtitle = stringResource(MochiR.string.discovery_no_results_hint)
+                    )
                 }
                 displayForums.isEmpty() && uiState.searchQuery.isBlank() -> {
                     EmptyMessage(stringResource(R.string.forums_find_search_hint))

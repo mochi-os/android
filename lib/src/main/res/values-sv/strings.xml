@@ -200,6 +200,7 @@
     <string name="place_destination">Destination</string>
     <string name="discovery_search_placeholder">Sök %1$ss</string>
     <string name="discovery_no_results">Inga %1$ss hittades</string>
+    <string name="discovery_no_results_hint">Försök justera din sökning</string>
     <string name="discovery_no_recommendations">Inga rekommendationer</string>
     <string name="discovery_search_hint">Försök söka efter en %1$s att prenumerera på</string>
     <string name="access_no_rules">Inga åtkomstregler</string>

@@ -199,6 +199,7 @@
     <string name="place_destination">Mål</string>
     <string name="discovery_search_placeholder">Søk i %1$ss</string>
     <string name="discovery_no_results">Ingen %1$ss funne</string>
+    <string name="discovery_no_results_hint">Prøv å justere søket</string>
     <string name="discovery_no_recommendations">Ingen tilrådingar</string>
     <string name="discovery_search_hint">Prøv å søkja etter ein %1$s å abonnera på</string>
     <string name="access_add_rule">Legg til regel</string>

@@ -59,6 +59,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
 import org.mochios.android.R as MochiR
@@ -192,6 +193,17 @@ fun FindProjectsScreen(
                             }
                         }
                     }
+                }
+
+                // Searched and came back with nothing to subscribe to. This is a
+                // result, not a prompt, so it gets the shared empty state rather
+                // than the "go and search" hint the blank screen below shows.
+                uiState.searchQuery.isNotBlank() -> {
+                    EmptyState(
+                        icon = Icons.Default.Search,
+                        title = stringResource(R.string.projects_list_no_matching),
+                        subtitle = stringResource(MochiR.string.discovery_no_results_hint)
+                    )
                 }
 
                 else -> {

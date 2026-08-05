@@ -51,6 +51,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
@@ -184,6 +185,18 @@ fun FindWikisScreen(
                     }
                 }
 
+                // Searched and came back with nothing left to subscribe to. It
+                // sits outside the list rather than as a first item because the
+                // shared empty state fills its parent, which a LazyColumn item
+                // cannot give it.
+                !showRecommendations && results.isEmpty() && !uiState.isSearching -> {
+                    EmptyState(
+                        icon = Icons.Default.Search,
+                        title = stringResource(R.string.wikis_find_no_results),
+                        subtitle = stringResource(MochiR.string.discovery_no_results_hint)
+                    )
+                }
+
                 else -> {
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
@@ -192,21 +205,6 @@ fun FindWikisScreen(
                     ) {
                         // Search results
                         if (!showRecommendations) {
-                            if (results.isEmpty() && !uiState.isSearching) {
-                                item {
-                                    Box(
-                                        Modifier
-                                            .fillMaxWidth()
-                                            .padding(vertical = 32.dp),
-                                        contentAlignment = Alignment.Center,
-                                    ) {
-                                        Text(
-                                            text = stringResource(R.string.wikis_find_no_results),
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        )
-                                    }
-                                }
-                            }
                             items(results, key = { it.id }) { entry ->
                                 val target = entry.id.ifEmpty { entry.fingerprint }
                                 DirectoryEntryRow(

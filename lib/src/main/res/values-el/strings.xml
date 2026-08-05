@@ -204,6 +204,7 @@
     <string name="place_destination">Προορισμός</string>
     <string name="discovery_search_placeholder">Αναζήτηση %1$ss</string>
     <string name="discovery_no_results">Δεν βρέθηκαν %1$ss</string>
+    <string name="discovery_no_results_hint">Δοκιμάστε να προσαρμόσετε την αναζήτησή σας</string>
     <string name="discovery_no_recommendations">Καμία πρόταση</string>
     <string name="discovery_search_hint">Δοκιμάστε να αναζητήσετε ένα %1$s για να εγγραφείτε</string>
     <string name="access_no_rules">Δεν υπάρχουν κανόνες πρόσβασης</string>

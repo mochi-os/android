@@ -200,6 +200,7 @@
     <string name="place_destination">Varış</string>
     <string name="discovery_search_placeholder">%1$s ara</string>
     <string name="discovery_no_results">%1$s bulunamadı</string>
+    <string name="discovery_no_results_hint">Aramanı ayarlamayı dene</string>
     <string name="discovery_no_recommendations">Öneri yok</string>
     <string name="discovery_search_hint">Abone olmak için bir %1$s aramayı deneyin</string>
     <string name="access_no_rules">Erişim kuralı yok</string>

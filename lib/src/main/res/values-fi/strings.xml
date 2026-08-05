@@ -204,6 +204,7 @@
     <string name="place_destination">Määränpää</string>
     <string name="discovery_search_placeholder">Hae: %1$s</string>
     <string name="discovery_no_results">Hakua %1$s vastaavia ei löytynyt</string>
+    <string name="discovery_no_results_hint">Kokeile muuttaa hakuasi</string>
     <string name="discovery_no_recommendations">Ei suosituksia</string>
     <string name="discovery_search_hint">Kokeile hakea kohdetta %1$s, jota tilata</string>
     <string name="access_no_rules">Ei käyttöoikeussääntöjä</string>
