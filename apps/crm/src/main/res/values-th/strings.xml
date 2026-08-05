@@ -24,6 +24,7 @@
     <string name="crm_create_object">สร้างวัตถุ</string>
     <string name="crm_search">ค้นหา</string>
     <string name="crm_settings">การตั้งค่า</string>
+    <string name="crm_link">ลิงก์</string>
     <string name="crm_design">ออกแบบ</string>
     <string name="crm_sort_label">เรียงลำดับ</string>
     <string name="crm_sort_direction">ทิศทาง</string>

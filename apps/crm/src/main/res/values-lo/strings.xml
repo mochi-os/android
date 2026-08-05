@@ -24,6 +24,7 @@
     <string name="crm_create_object">ສ້າງວັດຖຸ</string>
     <string name="crm_search">ຄົ້ນຫາ</string>
     <string name="crm_settings">ການຕັ້ງຄ່າ</string>
+    <string name="crm_link">ລິ້ງ</string>
     <string name="crm_design">ການອອກແບບ</string>
     <string name="crm_sort_label">ຈັດລຽງ</string>
     <string name="crm_sort_direction">ທິດທາງ</string>

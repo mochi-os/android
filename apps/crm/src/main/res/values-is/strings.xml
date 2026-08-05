@@ -24,6 +24,7 @@
     <string name="crm_create_object">Búa til hlut</string>
     <string name="crm_search">Leita</string>
     <string name="crm_settings">Stillingar</string>
+    <string name="crm_link">Tengill</string>
     <string name="crm_design">Hönnun</string>
     <string name="crm_sort_label">Raða</string>
     <string name="crm_sort_direction">Stefna</string>

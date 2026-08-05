@@ -24,6 +24,7 @@
     <string name="crm_create_object">オブジェクトを作成</string>
     <string name="crm_search">検索</string>
     <string name="crm_settings">設定</string>
+    <string name="crm_link">リンク</string>
     <string name="crm_design">デザイン</string>
     <string name="crm_sort_label">並べ替え</string>
     <string name="crm_sort_direction">方向</string>

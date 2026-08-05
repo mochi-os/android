@@ -24,6 +24,7 @@
     <string name="crm_create_object">Opprett objekt</string>
     <string name="crm_search">Søk</string>
     <string name="crm_settings">Innstillinger</string>
+    <string name="crm_link">Lenke</string>
     <string name="crm_design">Design</string>
     <string name="crm_sort_label">Sorter</string>
     <string name="crm_sort_direction">Retning</string>

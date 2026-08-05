@@ -10,8 +10,11 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -77,6 +80,10 @@ class CrmViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CrmUiState())
     val uiState: StateFlow<CrmUiState> = _uiState.asStateFlow()
+
+    /** Emits the CRM's share link once fetched, for the screen to share. */
+    private val _shareLink = MutableSharedFlow<String>()
+    val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
 
     private var wsSubscriptionId: String? = null
 
@@ -183,6 +190,20 @@ class CrmViewModel @Inject constructor(
 
     fun setActiveView(viewId: String) {
         _uiState.value = _uiState.value.copy(activeViewId = viewId)
+    }
+
+    /** Fetch the CRM's share link and emit it for the screen to share. */
+    fun shareCrm() {
+        viewModelScope.launch {
+            try {
+                val link = repository.getShareLink(crmId)
+                if (link.isNotBlank()) {
+                    _shareLink.emit(link)
+                }
+            } catch (_: Exception) {
+                // Best-effort: a failed share link simply does nothing.
+            }
+        }
     }
 
     fun updateSearchQuery(query: String) {

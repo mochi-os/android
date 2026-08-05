@@ -24,6 +24,7 @@
     <string name="crm_create_object">创建对象</string>
     <string name="crm_search">搜索</string>
     <string name="crm_settings">设置</string>
+    <string name="crm_link">链接</string>
     <string name="crm_design">设计</string>
     <string name="crm_sort_label">排序</string>
     <string name="crm_sort_direction">方向</string>

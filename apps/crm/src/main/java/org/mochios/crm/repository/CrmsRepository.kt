@@ -138,6 +138,10 @@ class CrmsRepository @Inject constructor(
     suspend fun getPeople(crmId: String): List<Person> =
         api.getPeople(crmId).unwrap().people
 
+    /** A shareable link for the CRM, from the `-/share` endpoint. */
+    suspend fun getShareLink(crmId: String): String =
+        api.getShareLink(crmId).unwrap().link
+
     suspend fun getAccess(crmId: String): List<AccessRule> =
         api.getAccess(crmId).unwrap().rules
 

@@ -24,6 +24,7 @@
     <string name="crm_create_object">צור אובייקט</string>
     <string name="crm_search">חיפוש</string>
     <string name="crm_settings">הגדרות</string>
+    <string name="crm_link">קישור</string>
     <string name="crm_design">עיצוב</string>
     <string name="crm_sort_label">מיין</string>
     <string name="crm_sort_direction">כיוון</string>

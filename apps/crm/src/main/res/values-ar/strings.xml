@@ -24,6 +24,7 @@
     <string name="crm_create_object">إنشاء كائن</string>
     <string name="crm_search">بحث</string>
     <string name="crm_settings">الإعدادات</string>
+    <string name="crm_link">رابط</string>
     <string name="crm_design">التصميم</string>
     <string name="crm_sort_label">ترتيب</string>
     <string name="crm_sort_direction">الاتجاه</string>

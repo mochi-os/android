@@ -24,6 +24,7 @@
     <string name="crm_create_object">ობიექტის შექმნა</string>
     <string name="crm_search">ძიება</string>
     <string name="crm_settings">პარამეტრები</string>
+    <string name="crm_link">ბმული</string>
     <string name="crm_design">დიზაინი</string>
     <string name="crm_sort_label">დახარისხება</string>
     <string name="crm_sort_direction">მიმართულება</string>

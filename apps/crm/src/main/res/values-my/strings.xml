@@ -24,6 +24,7 @@
     <string name="crm_create_object">object ဖန်တီးမည်</string>
     <string name="crm_search">ရှာဖွေ</string>
     <string name="crm_settings">ဆက်တင်များ</string>
+    <string name="crm_link">လင့်ခ်</string>
     <string name="crm_design">ဒီဇိုင်း</string>
     <string name="crm_sort_label">စီမည်</string>
     <string name="crm_sort_direction">ဦးတည်ရာ</string>

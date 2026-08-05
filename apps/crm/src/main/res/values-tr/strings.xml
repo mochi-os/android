@@ -24,6 +24,7 @@
     <string name="crm_create_object">Nesne oluştur</string>
     <string name="crm_search">Ara</string>
     <string name="crm_settings">Ayarlar</string>
+    <string name="crm_link">Bağlantı</string>
     <string name="crm_design">Tasarım</string>
     <string name="crm_sort_label">Sırala</string>
     <string name="crm_sort_direction">Yön</string>

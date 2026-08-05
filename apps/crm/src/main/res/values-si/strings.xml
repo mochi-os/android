@@ -24,6 +24,7 @@
     <string name="crm_create_object">වස්තුවක් නිර්මාණය කරන්න</string>
     <string name="crm_search">සොයන්න</string>
     <string name="crm_settings">සැකසුම්</string>
+    <string name="crm_link">සබැඳිය</string>
     <string name="crm_design">Design</string>
     <string name="crm_sort_label">වර්ග කරන්න</string>
     <string name="crm_sort_direction">දිශාව</string>

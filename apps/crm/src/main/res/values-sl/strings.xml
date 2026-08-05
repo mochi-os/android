@@ -24,6 +24,7 @@
     <string name="crm_create_object">Ustvari objekt</string>
     <string name="crm_search">Iskanje</string>
     <string name="crm_settings">Nastavitve</string>
+    <string name="crm_link">Povezava</string>
     <string name="crm_design">Oblikovanje</string>
     <string name="crm_sort_label">Razvrsti</string>
     <string name="crm_sort_direction">Smer</string>

@@ -24,6 +24,7 @@
     <string name="crm_create_object">Δημιουργία αντικειμένου</string>
     <string name="crm_search">Αναζήτηση</string>
     <string name="crm_settings">Ρυθμίσεις</string>
+    <string name="crm_link">Σύνδεσμος</string>
     <string name="crm_design">Σχεδιασμός</string>
     <string name="crm_sort_label">Ταξινόμηση</string>
     <string name="crm_sort_direction">Κατεύθυνση</string>

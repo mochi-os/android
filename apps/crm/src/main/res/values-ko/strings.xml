@@ -24,6 +24,7 @@
     <string name="crm_create_object">오브젝트 생성</string>
     <string name="crm_search">검색</string>
     <string name="crm_settings">설정</string>
+    <string name="crm_link">링크</string>
     <string name="crm_design">디자인</string>
     <string name="crm_sort_label">정렬</string>
     <string name="crm_sort_direction">방향</string>

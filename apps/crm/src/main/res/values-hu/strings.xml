@@ -24,6 +24,7 @@
     <string name="crm_create_object">Objektum létrehozása</string>
     <string name="crm_search">Keresés</string>
     <string name="crm_settings">Beállítások</string>
+    <string name="crm_link">Hivatkozás</string>
     <string name="crm_design">Tervezés</string>
     <string name="crm_sort_label">Rendezés</string>
     <string name="crm_sort_direction">Irány</string>

@@ -24,6 +24,7 @@
     <string name="crm_create_object">Ստեղծեք մեկը՝ սկսելու համար։</string>
     <string name="crm_search">Որոնել</string>
     <string name="crm_settings">Կարգավորումներ</string>
+    <string name="crm_link">Հղում</string>
     <string name="crm_design">Դիզայն</string>
     <string name="crm_sort_label">Տեսակավորել</string>
     <string name="crm_sort_direction">Ուղղություն</string>

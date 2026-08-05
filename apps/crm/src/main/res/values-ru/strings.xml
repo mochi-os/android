@@ -24,6 +24,7 @@
     <string name="crm_create_object">Создать объект</string>
     <string name="crm_search">Поиск</string>
     <string name="crm_settings">Настройки</string>
+    <string name="crm_link">Ссылка</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_sort_label">Сортировка</string>
     <string name="crm_sort_direction">Направление</string>

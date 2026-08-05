@@ -24,6 +24,7 @@
     <string name="crm_create_object">Object aanmaken</string>
     <string name="crm_search">Zoeken</string>
     <string name="crm_settings">Instellingen</string>
+    <string name="crm_link">Link</string>
     <string name="crm_design">Ontwerp</string>
     <string name="crm_sort_label">Sorteren</string>
     <string name="crm_sort_direction">Richting</string>

@@ -24,6 +24,7 @@
     <string name="crm_create_object">Luo objekti</string>
     <string name="crm_search">Haku</string>
     <string name="crm_settings">Asetukset</string>
+    <string name="crm_link">Linkki</string>
     <string name="crm_design">Suunnittelu</string>
     <string name="crm_sort_label">Lajittele</string>
     <string name="crm_sort_direction">Suunta</string>

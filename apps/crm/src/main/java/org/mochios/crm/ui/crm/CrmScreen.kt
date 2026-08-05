@@ -5,6 +5,7 @@
 
 package org.mochios.crm.ui.crm
 
+import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
@@ -39,6 +40,7 @@ import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.HomeMax
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
@@ -593,6 +595,14 @@ private fun CrmContent(
         }
     }
 
+    val context = LocalContext.current
+    val shareTitle = stringResource(R.string.crm_share_link_title)
+    LaunchedEffect(viewModel) {
+        viewModel.shareLink.collect { link ->
+            shareCrmLink(context, link, shareTitle)
+        }
+    }
+
     val details = uiState.crmDetails
     val activeView = viewModel.getActiveView()
 
@@ -678,6 +688,18 @@ private fun CrmContent(
                                         leadingIcon = {
                                             Icon(Icons.Default.ViewColumn, contentDescription = null)
                                         }
+                                    )
+                                }
+                                // Sharing a link is only offered on CRMs the user
+                                // owns; it's hidden on subscribed ones.
+                                if (details?.crm?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.crm_link)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            viewModel.shareCrm()
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
                                     )
                                 }
                                 DropdownMenuItem(
@@ -890,6 +912,20 @@ private fun CrmContent(
             onDismiss = { showFilters = false },
         )
     }
+}
+
+/** Opens the system share sheet with the CRM's [link]. */
+private fun shareCrmLink(context: Context, link: String, title: String) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, link)
+        // Names the sheet's content preview. Android 10+ ignores the
+        // createChooser title, so without this the sheet reads "Sharing text".
+        putExtra(Intent.EXTRA_TITLE, title)
+    }
+    val chooser = Intent.createChooser(intent, title)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
 }
 
 /** Sort keys the server understands regardless of the CRM's own fields. */

@@ -24,6 +24,7 @@
     <string name="crm_create_object">Buat objek</string>
     <string name="crm_search">Cari</string>
     <string name="crm_settings">Pengaturan</string>
+    <string name="crm_link">Tautan</string>
     <string name="crm_design">Desain</string>
     <string name="crm_sort_label">Urutkan</string>
     <string name="crm_sort_direction">Arah</string>

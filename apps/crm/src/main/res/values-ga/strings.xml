@@ -24,6 +24,7 @@
     <string name="crm_create_object">Cruthaigh oibiacht</string>
     <string name="crm_search">Cuardach</string>
     <string name="crm_settings">Socruithe</string>
+    <string name="crm_link">Nasc</string>
     <string name="crm_design">Dearadh</string>
     <string name="crm_sort_label">Sórtáil</string>
     <string name="crm_sort_direction">Treo</string>

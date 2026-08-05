@@ -24,6 +24,7 @@
     <string name="crm_create_object">वस्तु सिर्जना गर्नुहोस्</string>
     <string name="crm_search">खोज्नुहोस्</string>
     <string name="crm_settings">सेटिङहरू</string>
+    <string name="crm_link">लिङ्क</string>
     <string name="crm_design">डिजाइन</string>
     <string name="crm_sort_label">क्रमबद्ध गर्नुहोस्</string>
     <string name="crm_sort_direction">दिशा</string>

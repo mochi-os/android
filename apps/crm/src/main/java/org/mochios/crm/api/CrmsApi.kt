@@ -117,6 +117,9 @@ data class SubscribeResponse(
 // subscribe but ignored server-side — unsubscribe resolves the CRM locally.
 data class UnsubscribeRequest(val crm: String, val server: String? = null)
 
+// Shareable CRM link returned by the `-/share` endpoint.
+data class ShareResponse(val link: String = "")
+
 interface CrmsApi {
 
     // ---- Class-level endpoints ----
@@ -168,6 +171,9 @@ interface CrmsApi {
 
     @GET("{crmId}/-/info")
     suspend fun getCrmInfo(@Path("crmId") crmId: String): Response<ApiResponse<CrmInfoResponse>>
+
+    @POST("{crmId}/-/share")
+    suspend fun getShareLink(@Path("crmId") crmId: String): Response<ApiResponse<ShareResponse>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/update")
