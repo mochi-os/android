@@ -771,7 +771,17 @@ private fun CrmContent(
             }
         },
         floatingActionButton = {
-            if (details != null) {
+            // A board carries a "+" in every column, and those start the create
+            // with the column's own value already set. The FAB would be a second
+            // way in that knows nothing about where the object should land, so
+            // it stands down wherever the columns are there to take over. A
+            // board with no grouping field draws no columns, so the FAB stays.
+            val boardHasColumns = activeView?.viewtype == "board" &&
+                activeView.columns.isNotBlank()
+            // A CRM with no class defined has nothing an object could be created
+            // as, so the dialog would open with its Create permanently disabled
+            // and no way to tell why. Hidden rather than dead.
+            if (details != null && details.classes.isNotEmpty() && !boardHasColumns) {
                 FloatingActionButton(onClick = { viewModel.showCreateObjectDialog() }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_create_object))
                 }
@@ -839,8 +849,12 @@ private fun CrmContent(
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
-                                    onCreateObject = { classId, title, initialValues ->
-                                        viewModel.createObject(classId, title, initialValues = initialValues)
+                                    // Same dialog the FAB opens, seeded with the
+                                    // column tapped. It used to create outright,
+                                    // which produced a titleless object with no
+                                    // chance to fill anything in.
+                                    onStartCreate = { initialValues ->
+                                        viewModel.showCreateObjectDialog(presetValues = initialValues)
                                     }
                                 )
                             }
@@ -872,6 +886,7 @@ private fun CrmContent(
             people = uiState.people,
             objects = uiState.objects,
             presetParent = uiState.createObjectParent,
+            presetValues = uiState.createObjectPresetValues,
             isCreating = uiState.isCreatingObject,
             activeView = activeView,
             viewModel = viewModel,

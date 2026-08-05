@@ -54,6 +54,7 @@
     <string name="crm_filter">Filter</string>
     <string name="crm_more">More</string>
     <string name="crm_settings">Settings</string>
+    <string name="crm_create_blocked_no_options">Can\'t create: %1$s is required but has no options to choose from. Add options in Design.</string>
     <string name="crm_link">Link</string>
     <string name="crm_share_link_title">Share CRM</string>
     <string name="crm_design">Design</string>

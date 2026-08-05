@@ -94,7 +94,13 @@ fun BoardView(
     crmDetails: CrmDetails?,
     onObjectClick: (String) -> Unit,
     visibleIds: Set<String>? = null,
-    onCreateObject: ((classId: String, title: String, initialValues: Map<String, String>) -> Unit)? = null,
+    /**
+     * Starts a create from a column's "+", passing the field values that place
+     * the object in that column. The caller opens the same dialog the FAB does
+     * rather than creating outright, so a board object gets a title and its
+     * fields like any other.
+     */
+    onStartCreate: ((initialValues: Map<String, String>) -> Unit)? = null,
 ) {
     if (view == null || view.columns.isBlank()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -106,6 +112,18 @@ fun BoardView(
         }
         return
     }
+
+    // The class a column's "+" would create into: the view's own first, else
+    // the CRM's first. Null when the CRM defines no classes at all, which is
+    // what hides the button instead of letting it swallow the tap.
+    //
+    // The view's ids are checked against the CRM's classes rather than trusted.
+    // A view naming a deleted class used to pass that id straight to create,
+    // and the post failed on a class the server no longer had - a "+" that
+    // looked like it did nothing.
+    val definedClassIds = crmDetails?.classes.orEmpty().map { cls -> cls.id }.toSet()
+    val createClassId = view.classes.firstOrNull { id -> id in definedClassIds }
+        ?: crmDetails?.classes?.firstOrNull()?.id?.takeIf { id -> id.isNotBlank() }
 
     val columnFieldId = view.columns
     val columnOptions = viewModel.getAllOptionsForField(columnFieldId)
@@ -233,15 +251,17 @@ fun BoardView(
             onDelete = if (isUnassigned) null else {
                 { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
             },
-            onCreateInColumn = if (onCreateObject != null && !isUnassigned) {
-                {
-                    val details = viewModel.uiState.value.crmDetails
-                    val classId = view.classes.firstOrNull() ?: details?.classes?.firstOrNull()?.id ?: ""
-                    if (classId.isNotBlank()) {
-                        onCreateObject(classId, "", mapOf(columnFieldId to columnOption.id))
-                    }
-                }
-            } else null,
+            // The class is resolved before the button is offered rather than
+            // inside its click handler. With no class to create into there is
+            // nothing the tap could do, and the handler used to swallow it
+            // silently — a "+" that looks live and does nothing.
+            onCreateInColumn = if (onStartCreate != null && !isUnassigned &&
+                createClassId != null
+            ) {
+                { onStartCreate(mapOf(columnFieldId to columnOption.id)) }
+            } else {
+                null
+            },
         )
     }
 }

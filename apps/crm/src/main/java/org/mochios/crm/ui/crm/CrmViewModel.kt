@@ -54,6 +54,13 @@ data class CrmUiState(
      * none) themselves.
      */
     val createObjectParent: String? = null,
+    /**
+     * Field values the create-object dialog opens pre-filled with, keyed by
+     * field id. Set when a board column's "+" starts the create, so the object
+     * lands in the column it was started from. Empty from the FAB, which
+     * carries no such context.
+     */
+    val createObjectPresetValues: Map<String, String> = emptyMap(),
     val isCreatingObject: Boolean = false,
     val selectedObjectId: String? = null,
     /**
@@ -391,10 +398,14 @@ class CrmViewModel @Inject constructor(
         return result
     }
 
-    fun showCreateObjectDialog(parent: String? = null) {
+    fun showCreateObjectDialog(
+        parent: String? = null,
+        presetValues: Map<String, String> = emptyMap(),
+    ) {
         _uiState.value = _uiState.value.copy(
             showCreateObjectDialog = true,
             createObjectParent = parent,
+            createObjectPresetValues = presetValues,
         )
     }
 
@@ -402,6 +413,7 @@ class CrmViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(
             showCreateObjectDialog = false,
             createObjectParent = null,
+            createObjectPresetValues = emptyMap(),
         )
     }
 
@@ -444,6 +456,7 @@ class CrmViewModel @Inject constructor(
                     isCreatingObject = false,
                     showCreateObjectDialog = false,
                     createObjectParent = null,
+                    createObjectPresetValues = emptyMap(),
                 )
                 refreshObjects()
             } catch (e: Exception) {
