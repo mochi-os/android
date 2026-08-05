@@ -86,7 +86,11 @@ fun CreateObjectDialog(
     val allowedParentClasses = hierarchy[selectedClassId] ?: emptyList()
     val parentCandidates = remember(objects, allowedParentClasses) {
         if (allowedParentClasses.isEmpty()) emptyList()
+        // The dropdown shows readable ids (PREFIX-number); ordering by the
+        // number gives their natural order, which a lexical sort would not
+        // (PROJ-10 would sort before PROJ-2).
         else objects.filter { it.objectClass in allowedParentClasses }
+            .sortedBy { it.number }
     }
     var selectedParentId by remember(initialClassId) {
         mutableStateOf(presetParent.takeIf { presetParentObj != null })

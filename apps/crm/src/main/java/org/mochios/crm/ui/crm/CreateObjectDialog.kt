@@ -111,14 +111,15 @@ fun CreateObjectDialog(
     // parent classes (hierarchy[selectedClassId]) intersected with the
     // crm's existing objects.
     val allowedParentClasses = hierarchy[selectedClassId] ?: emptyList()
-    val parentCandidates = remember(objects, allowedParentClasses) {
-        if (allowedParentClasses.isEmpty()) emptyList()
-        else objects.filter { it.objectClass in allowedParentClasses }
-    }
     val untitled = stringResource(R.string.crm_untitled)
     fun parentLabel(o: CrmObject): String {
         val titleField = classes.find { it.id == o.objectClass }?.title?.takeIf { it.isNotBlank() }
         return titleField?.let { o.stringValue(it) }.orEmpty().ifBlank { untitled }
+    }
+    val parentCandidates = remember(objects, allowedParentClasses, classes) {
+        if (allowedParentClasses.isEmpty()) emptyList()
+        else objects.filter { it.objectClass in allowedParentClasses }
+            .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { parentLabel(it) })
     }
     var selectedParentId by remember(initialClassId) {
         mutableStateOf(presetParent.takeIf { presetParentObj != null })
