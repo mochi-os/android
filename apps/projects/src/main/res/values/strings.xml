@@ -289,6 +289,7 @@
     <string name="projects_board_no_options">No options configured for column field</string>
     <string name="projects_board_unassigned">Unassigned</string>
     <string name="projects_board_new">New</string>
+    <string name="projects_board_add_column">Add column</string>
     <string name="projects_board_column_options">Column options</string>
     <string name="projects_board_rename">Rename</string>
     <string name="projects_board_rename_column">Rename column</string>

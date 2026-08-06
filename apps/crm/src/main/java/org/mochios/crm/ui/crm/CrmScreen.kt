@@ -28,11 +28,12 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.FilterList
@@ -104,6 +105,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
@@ -117,7 +119,6 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.board.BoardView
-import org.mochios.crm.ui.board.parseColor
 import org.mochios.crm.ui.`object`.ObjectDetailSheet
 import org.mochios.crm.ui.crmlist.CreateCrmDialog
 import org.mochios.crm.ui.crmlist.CrmListViewModel
@@ -979,8 +980,8 @@ private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
 )
 
 // Add a new board column (= a new option on the board's grouping field).
-// Name + a preset colour, mirroring web's OptionDialog used for "Add column".
-// Boards render the option colour, not its icon, so no icon field here.
+// Name + a colour, mirroring web's OptionDialog used for "Add column". Boards
+// render the option colour, not its icon, so no icon field here.
 @Composable
 private fun AddColumnDialog(
     onDismiss: () -> Unit,
@@ -988,51 +989,32 @@ private fun AddColumnDialog(
 ) {
     var name by remember { mutableStateOf("") }
     var colour by remember { mutableStateOf("#3b82f6") }
-    val presetColours = listOf(
-        "#ef4444", "#f97316", "#eab308", "#22c55e",
-        "#06b6d4", "#3b82f6", "#8b5cf6", "#ec4899",
-        "#6b7280", "#000000"
-    )
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.crm_board_add_column)) },
         text = {
-            Column {
+            // The picker is taller than the dialog on a short screen, so the
+            // body scrolls. Its saturation field consumes its own drags, so
+            // dragging inside it doesn't scroll the dialog out from under it.
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 OutlinedTextField(
                     value = name,
-                    onValueChange = { name = it },
+                    onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.crm_field_name)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
-                Spacer(modifier = Modifier.height(12.dp))
-                Text(stringResource(R.string.crm_option_color), style = MaterialTheme.typography.labelMedium)
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    stringResource(R.string.crm_option_color),
+                    style = MaterialTheme.typography.labelMedium
+                )
                 Spacer(modifier = Modifier.height(8.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    presetColours.take(5).forEach { hex ->
-                        IconButton(onClick = { colour = hex }, modifier = Modifier.size(32.dp)) {
-                            Icon(
-                                Icons.Default.Circle,
-                                contentDescription = hex,
-                                tint = parseColor(hex),
-                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
-                            )
-                        }
-                    }
-                }
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    presetColours.drop(5).forEach { hex ->
-                        IconButton(onClick = { colour = hex }, modifier = Modifier.size(32.dp)) {
-                            Icon(
-                                Icons.Default.Circle,
-                                contentDescription = hex,
-                                tint = parseColor(hex),
-                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
-                            )
-                        }
-                    }
-                }
+                ColorPicker(
+                    hex = colour,
+                    onHexChange = { hex -> colour = hex },
+                )
             }
         },
         confirmButton = {
