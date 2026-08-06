@@ -53,6 +53,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.ColorPicker
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectField
@@ -496,62 +497,32 @@ private fun OptionDialog(
     var colour by remember { mutableStateOf(initialColour) }
     var icon by remember { mutableStateOf(initialIcon) }
 
-    val presetColours = listOf(
-        "#ef4444", "#f97316", "#eab308", "#22c55e",
-        "#06b6d4", "#3b82f6", "#8b5cf6", "#ec4899",
-        "#6b7280", "#000000"
-    )
-
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(title) },
         text = {
-            Column {
+            // The picker is taller than the dialog on a short screen, so the
+            // body scrolls. Its saturation field consumes its own drags, so
+            // dragging inside it doesn't scroll the dialog out from under it.
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 OutlinedTextField(
                     value = name,
-                    onValueChange = { name = it },
+                    onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.projects_field_name)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
-                Spacer(modifier = Modifier.height(12.dp))
-                Text(stringResource(R.string.projects_option_color), style = MaterialTheme.typography.labelMedium)
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    stringResource(R.string.projects_option_color),
+                    style = MaterialTheme.typography.labelMedium
+                )
                 Spacer(modifier = Modifier.height(8.dp))
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    presetColours.take(5).forEach { hex ->
-                        IconButton(
-                            onClick = { colour = hex },
-                            modifier = Modifier.size(32.dp)
-                        ) {
-                            Icon(
-                                Icons.Default.Circle,
-                                contentDescription = hex,
-                                tint = parseColor(hex),
-                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
-                            )
-                        }
-                    }
-                }
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    presetColours.drop(5).forEach { hex ->
-                        IconButton(
-                            onClick = { colour = hex },
-                            modifier = Modifier.size(32.dp)
-                        ) {
-                            Icon(
-                                Icons.Default.Circle,
-                                contentDescription = hex,
-                                tint = parseColor(hex),
-                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
-                            )
-                        }
-                    }
-                }
-                Spacer(modifier = Modifier.height(12.dp))
+                ColorPicker(
+                    hex = colour,
+                    onHexChange = { hex -> colour = hex },
+                )
+                Spacer(modifier = Modifier.height(16.dp))
                 Text(stringResource(R.string.projects_option_icon), style = MaterialTheme.typography.labelMedium)
                 Spacer(modifier = Modifier.height(8.dp))
                 OutlinedTextField(
