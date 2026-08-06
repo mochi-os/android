@@ -190,7 +190,7 @@ class ProjectListViewModel @Inject constructor(
                 )
                 val newProjectId = project.fingerprint.ifEmpty { project.id }
                 if (importing) {
-                    restoreBackup(newProjectId, backupJson)
+                    restoreBackup(project, backupJson)
                 }
                 // The create response only carries id/fingerprint, so reload the
                 // full list before opening the project — this way the drawer and
@@ -216,7 +216,8 @@ class ProjectListViewModel @Inject constructor(
         }
     }
 
-    private suspend fun restoreBackup(projectId: String, backupJson: String) {
+    private suspend fun restoreBackup(created: Project, backupJson: String) {
+        val projectId = created.fingerprint.ifEmpty { created.id }
         try {
             val root = JsonParser.parseString(backupJson).asJsonObject
             val design = root.getAsJsonObject("design") ?: root
@@ -230,7 +231,9 @@ class ProjectListViewModel @Inject constructor(
                 repository.importData(projectId, backupJson)
             }
         } catch (e: Exception) {
-            runCatching { repository.deleteProject(projectId) }
+            // delete rejects a fingerprint, so roll back with the canonical id
+            // — see ProjectSettingsViewModel.entityId().
+            runCatching { repository.deleteProject(created.id.ifEmpty { projectId }) }
             throw e
         }
     }

@@ -215,13 +215,19 @@ fun NavGraphBuilder.feedsNavGraph(
             onFeedDeleted = {
                 // Feed deletion drops the user back to the router so the
                 // last-viewed lookup re-runs (the deleted feed shouldn't
-                // come back as the destination).
-                navController.popBackStack(FeedsApp.ROUTER, inclusive = false)
+                // come back as the destination). Navigate rather than pop: the
+                // router removes itself from the stack once it resolves, so
+                // popping back to it found no entry and went nowhere.
+                navController.navigate(FeedsApp.ROUTER) {
+                    popUpTo(FeedsApp.FEED) { inclusive = true }
+                }
             },
             onUnsubscribed = {
                 // Same as delete: the user no longer follows this feed, so
                 // bounce to the router rather than back to the now-empty feed.
-                navController.popBackStack(FeedsApp.ROUTER, inclusive = false)
+                navController.navigate(FeedsApp.ROUTER) {
+                    popUpTo(FeedsApp.FEED) { inclusive = true }
+                }
             },
         )
     }

@@ -186,7 +186,7 @@ class CrmListViewModel @Inject constructor(
                 )
                 val newCrmId = created.fingerprint.ifEmpty { created.id }
                 if (importing) {
-                    restoreBackup(newCrmId, backupJson)
+                    restoreBackup(created, backupJson)
                 }
                 // The create response only carries id/fingerprint, so reload the
                 // full list before opening the CRM — this way the drawer and
@@ -218,7 +218,8 @@ class CrmListViewModel @Inject constructor(
      * objects when the file carries any. A half-restored CRM is worse than
      * none, so a failure deletes it and reports the error.
      */
-    private suspend fun restoreBackup(crmId: String, backupJson: String) {
+    private suspend fun restoreBackup(created: Crm, backupJson: String) {
+        val crmId = created.fingerprint.ifEmpty { created.id }
         try {
             val root = JsonParser.parseString(backupJson).asJsonObject
             val design = root.getAsJsonObject("design") ?: root
@@ -232,7 +233,9 @@ class CrmListViewModel @Inject constructor(
                 repository.importData(crmId, backupJson)
             }
         } catch (e: Exception) {
-            runCatching { repository.deleteCrm(crmId) }
+            // delete rejects a fingerprint, so roll back with the canonical id
+            // — see CrmSettingsViewModel.entityId().
+            runCatching { repository.deleteCrm(created.id.ifEmpty { crmId }) }
             throw e
         }
     }
