@@ -56,9 +56,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.market.R
 import org.mochios.market.lib.locationName
@@ -119,12 +121,14 @@ fun PublicProfileScreen(
                 }
             }
             state.account == null -> {
-                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-                    Text(
-                        text = state.error?.userMessage()
-                            ?: stringResource(R.string.market_profile_load_failed),
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(24.dp),
+                Box(Modifier.fillMaxSize().padding(padding)) {
+                    ErrorState(
+                        // The profile can come back null with no error attached;
+                        // carry the existing fallback so the state still says
+                        // what failed rather than "unexpected error".
+                        error = state.error
+                            ?: MochiError.Unknown(stringResource(R.string.market_profile_load_failed)),
+                        onRetry = viewModel::retry,
                     )
                 }
             }

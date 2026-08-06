@@ -105,6 +105,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityIconCircle
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
@@ -355,13 +356,10 @@ private fun AllProjectsContent(
                     }
 
                     uiState.error != null && uiState.projects.isEmpty() -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = uiState.error!!.userMessage(),
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.error
-                            )
-                        }
+                        ErrorState(
+                            error = uiState.error!!,
+                            onRetry = { viewModel.loadProjects() }
+                        )
                     }
 
                     else -> {
@@ -654,7 +652,13 @@ private fun ProjectContent(
                 TopAppBar(
                     title = {
                         Text(
-                            text = details?.project?.name ?: stringResource(R.string.projects_loading),
+                            // Only claim to be loading while it is: on a failed
+                            // load details stays null, and "Loading…" would sit
+                            // there for good beside the error state's retry.
+                            text = details?.project?.name ?: stringResource(
+                                if (uiState.error != null) R.string.projects_list_title
+                                else R.string.projects_loading
+                            ),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -837,13 +841,10 @@ private fun ProjectContent(
                     }
 
                     uiState.error != null && details == null -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = uiState.error!!.userMessage(),
-                                color = MaterialTheme.colorScheme.error,
-                                style = MaterialTheme.typography.bodyLarge
-                            )
-                        }
+                        ErrorState(
+                            error = uiState.error!!,
+                            onRetry = { viewModel.loadProject() }
+                        )
                     }
 
                     details != null -> {

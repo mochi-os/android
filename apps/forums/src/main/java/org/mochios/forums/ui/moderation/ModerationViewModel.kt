@@ -73,6 +73,15 @@ class ModerationViewModel @Inject constructor(
         loadTab(_uiState.value.selectedTab, refreshing = true)
     }
 
+    /**
+     * Re-runs the current tab's load for the error state's retry button. Not
+     * refresh(): that reports through the pull-to-refresh indicator, which sits
+     * over content this screen does not have when the load is what failed.
+     */
+    fun retry() {
+        loadTab(_uiState.value.selectedTab)
+    }
+
     private fun loadTab(tab: ModerationTab, refreshing: Boolean = false) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(

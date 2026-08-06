@@ -88,6 +88,11 @@ class AccountSettingsViewModel @Inject constructor(
         loadAccount()
     }
 
+    /** Re-runs the initial load for the error state's retry button. */
+    fun retry() {
+        loadAccount()
+    }
+
     private fun loadAccount() {
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)

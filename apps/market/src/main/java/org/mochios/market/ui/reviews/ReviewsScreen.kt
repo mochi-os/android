@@ -50,6 +50,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
 import org.mochios.market.model.Review
@@ -110,6 +111,7 @@ fun ReviewsScreen(
                         ReceivedTab(
                             state = state.received,
                             onLoadMore = { viewModel.loadMore(ReviewsTab.RECEIVED) },
+                            onRetry = viewModel::retry,
                             onDraftChange = { id, v -> viewModel.setResponseDraft(id, v) },
                             onSubmit = viewModel::submitResponse,
                         )
@@ -118,6 +120,7 @@ fun ReviewsScreen(
                         SentTab(
                             state = state.sent,
                             onLoadMore = { viewModel.loadMore(ReviewsTab.SENT) },
+                            onRetry = viewModel::retry,
                             onListingTap = { listingId ->
                                 if (listingId.isNotEmpty()) {
                                     navController.navigate(
@@ -137,10 +140,11 @@ fun ReviewsScreen(
 private fun ReceivedTab(
     state: ReviewsTabState,
     onLoadMore: () -> Unit,
+    onRetry: () -> Unit,
     onDraftChange: (String, String) -> Unit,
     onSubmit: (String) -> Unit,
 ) {
-    EmptyOrError(state, R.string.market_reviews_empty_received_title, R.string.market_reviews_empty_received_subtitle) {
+    EmptyOrError(state, R.string.market_reviews_empty_received_title, R.string.market_reviews_empty_received_subtitle, onRetry) {
         InfiniteList(
             items = state.reviews,
             isLoading = state.isLoading,
@@ -162,9 +166,10 @@ private fun ReceivedTab(
 private fun SentTab(
     state: ReviewsTabState,
     onLoadMore: () -> Unit,
+    onRetry: () -> Unit,
     onListingTap: (String) -> Unit,
 ) {
-    EmptyOrError(state, R.string.market_reviews_empty_sent_title, R.string.market_reviews_empty_sent_subtitle) {
+    EmptyOrError(state, R.string.market_reviews_empty_sent_title, R.string.market_reviews_empty_sent_subtitle, onRetry) {
         InfiniteList(
             items = state.reviews,
             isLoading = state.isLoading,
@@ -182,17 +187,12 @@ private fun EmptyOrError(
     state: ReviewsTabState,
     titleRes: Int,
     subtitleRes: Int,
+    onRetry: () -> Unit,
     content: @Composable () -> Unit,
 ) {
     when {
         state.error != null && state.reviews.isEmpty() -> {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(
-                    text = state.error.userMessage(),
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.padding(24.dp),
-                )
-            }
+            ErrorState(error = state.error, onRetry = onRetry)
         }
         state.reviews.isEmpty() && !state.isLoading -> {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

@@ -62,6 +62,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.words.R
 import org.mochios.words.model.GameListItem
 import org.mochios.words.model.getPlayerNames
@@ -177,13 +178,10 @@ fun WordsGameListScreen(
                         }
                     }
                     uiState.error != null && uiState.games.isEmpty() -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = uiState.error!!.userMessage(),
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                        ErrorState(
+                            error = uiState.error!!,
+                            onRetry = viewModel::load,
+                        )
                     }
                     uiState.games.isEmpty() -> {
                         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

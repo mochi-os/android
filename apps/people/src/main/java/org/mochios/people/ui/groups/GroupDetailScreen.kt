@@ -67,6 +67,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.people.R
@@ -184,7 +185,7 @@ fun GroupDetailScreen(
                     )
                 }
                 state.error != null && state.group == null -> {
-                    ErrorContent(message = state.error!!.userMessage())
+                    ErrorState(error = state.error!!, onRetry = viewModel::refresh)
                 }
                 state.group != null -> {
                     GroupDetailContent(
@@ -521,19 +522,6 @@ private fun LoadingContent() {
     }
 }
 
-@Composable
-private fun ErrorContent(message: String) {
-    Box(
-        modifier = Modifier.fillMaxSize().padding(24.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = message,
-            color = MaterialTheme.colorScheme.error,
-            style = MaterialTheme.typography.bodyLarge,
-        )
-    }
-}
 
 @Composable
 private fun SingleFieldDialog(

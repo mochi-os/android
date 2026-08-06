@@ -108,6 +108,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityIconCircle
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
@@ -355,13 +356,10 @@ private fun AllCrmsContent(
                     }
 
                     uiState.error != null && uiState.crm.isEmpty() -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = uiState.error!!.userMessage(),
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.error
-                            )
-                        }
+                        ErrorState(
+                            error = uiState.error!!,
+                            onRetry = { viewModel.loadCrms() }
+                        )
                     }
 
                     else -> {
@@ -633,7 +631,13 @@ private fun CrmContent(
                 TopAppBar(
                     title = {
                         Text(
-                            text = details?.crm?.name ?: stringResource(R.string.crm_loading),
+                            // Only claim to be loading while it is: on a failed
+                            // load details stays null, and "Loading…" would sit
+                            // there for good beside the error state's retry.
+                            text = details?.crm?.name ?: stringResource(
+                                if (uiState.error != null) R.string.crm_list_title
+                                else R.string.crm_loading
+                            ),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -829,13 +833,10 @@ private fun CrmContent(
                     }
 
                     uiState.error != null && details == null -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = uiState.error!!.userMessage(),
-                                color = MaterialTheme.colorScheme.error,
-                                style = MaterialTheme.typography.bodyLarge
-                            )
-                        }
+                        ErrorState(
+                            error = uiState.error!!,
+                            onRetry = { viewModel.loadCrm() }
+                        )
                     }
 
                     details != null -> {

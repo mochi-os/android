@@ -651,6 +651,20 @@ class ProjectViewModel @Inject constructor(
         return emptyList()
     }
 
+    /**
+     * Whether a preset field value can be applied when creating an object of
+     * [classId]: the field must exist on the class and, for enumerated
+     * fields, the value must be among that class's own options — a board
+     * that mixes classes can hand the create dialog a column option
+     * belonging to another class, which the server rejects.
+     */
+    fun usableValue(classId: String, fieldId: String, value: String): Boolean {
+        val details = _uiState.value.projectDetails ?: return false
+        val field = details.fields[classId]?.firstOrNull { it.id == fieldId } ?: return false
+        if (field.fieldtype != "enumerated") return true
+        return getOptionsForField(classId, fieldId).any { it.id == value }
+    }
+
     fun reparentObject(objectId: String, newParentId: String) {
         viewModelScope.launch {
             try {

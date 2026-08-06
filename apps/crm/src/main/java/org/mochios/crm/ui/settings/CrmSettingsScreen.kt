@@ -50,6 +50,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.Section
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
@@ -129,12 +130,10 @@ fun CrmSettingsScreen(
             val crm = uiState.crm
             val error = uiState.error
             when {
-                crm == null && error != null -> Box(
-                    Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(error.userMessage(), color = MaterialTheme.colorScheme.error)
-                }
+                crm == null && error != null -> ErrorState(
+                    error = error,
+                    onRetry = { viewModel.retry() }
+                )
 
                 crm == null -> Box(
                     Modifier.fillMaxSize(),

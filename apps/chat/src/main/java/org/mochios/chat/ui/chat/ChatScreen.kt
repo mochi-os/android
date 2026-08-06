@@ -110,6 +110,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
@@ -559,13 +560,10 @@ private fun ChatContent(
                     )
                 }
                 uiState.error != null && uiState.messages.isEmpty() -> {
-                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(
-                            text = uiState.error!!.userMessage(),
-                            style = MaterialTheme.typography.bodyLarge,
-                            color = MaterialTheme.colorScheme.error
-                        )
-                    }
+                    ErrorState(
+                        error = uiState.error!!,
+                        onRetry = viewModel::load,
+                    )
                 }
                 uiState.messages.isEmpty() -> {
                     Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {

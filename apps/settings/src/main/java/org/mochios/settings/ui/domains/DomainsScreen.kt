@@ -59,6 +59,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.Delegation
@@ -97,10 +98,9 @@ fun DomainsScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                state.error != null && state.domains.isEmpty() -> Text(
-                    text = state.error!!.userMessage(),
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.align(Alignment.Center).padding(16.dp),
+                state.error != null && state.domains.isEmpty() -> ErrorState(
+                    error = state.error!!,
+                    onRetry = viewModel::refresh,
                 )
                 state.domains.isEmpty() -> Text(
                     text = stringResource(

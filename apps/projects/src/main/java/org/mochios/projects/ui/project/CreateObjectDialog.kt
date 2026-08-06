@@ -86,7 +86,11 @@ fun CreateObjectDialog(
     val allowedParentClasses = hierarchy[selectedClassId] ?: emptyList()
     val parentCandidates = remember(objects, allowedParentClasses) {
         if (allowedParentClasses.isEmpty()) emptyList()
+        // The dropdown shows readable ids (PREFIX-number); ordering by the
+        // number gives their natural order, which a lexical sort would not
+        // (PROJ-10 would sort before PROJ-2).
         else objects.filter { it.objectClass in allowedParentClasses }
+            .sortedBy { it.number }
     }
     var selectedParentId by remember(initialClassId) {
         mutableStateOf(presetParent.takeIf { presetParentObj != null })
@@ -195,14 +199,18 @@ fun CreateObjectDialog(
         confirmButton = {
             TextButton(
                 onClick = {
-                    val initialValues = presetValues.toMutableMap()
+                    // A preset from a mixed-class board can carry another
+                    // class's option; keep only values the chosen class takes.
+                    val initialValues = presetValues
+                        .filter { (field, value) -> viewModel.usableValue(selectedClassId, field, value) }
+                        .toMutableMap()
                     // On a board, an object with no column value would land in
                     // "Unassigned" — fall back to the first column unless the
                     // caller already said which one (the tapped column header).
                     if (activeView?.viewtype == "board" && activeView.columns.isNotBlank() &&
                         !initialValues.containsKey(activeView.columns)
                     ) {
-                        val options = viewModel.getAllOptionsForField(activeView.columns)
+                        val options = viewModel.getOptionsForField(selectedClassId, activeView.columns)
                         if (options.isNotEmpty()) {
                             initialValues[activeView.columns] = options.first().id
                         }

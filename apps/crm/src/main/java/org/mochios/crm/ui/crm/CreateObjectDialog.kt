@@ -125,14 +125,15 @@ fun CreateObjectDialog(
     // parent classes (hierarchy[selectedClassId]) intersected with the
     // crm's existing objects.
     val allowedParentClasses = hierarchy[selectedClassId] ?: emptyList()
-    val parentCandidates = remember(objects, allowedParentClasses) {
-        if (allowedParentClasses.isEmpty()) emptyList()
-        else objects.filter { it.objectClass in allowedParentClasses }
-    }
     val untitled = stringResource(R.string.crm_untitled)
     fun parentLabel(o: CrmObject): String {
         val titleField = classes.find { it.id == o.objectClass }?.title?.takeIf { it.isNotBlank() }
         return titleField?.let { o.stringValue(it) }.orEmpty().ifBlank { untitled }
+    }
+    val parentCandidates = remember(objects, allowedParentClasses, classes) {
+        if (allowedParentClasses.isEmpty()) emptyList()
+        else objects.filter { it.objectClass in allowedParentClasses }
+            .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { parentLabel(it) })
     }
     var selectedParentId by remember(initialClassId) {
         mutableStateOf(presetParent.takeIf { presetParentObj != null })
@@ -171,7 +172,9 @@ fun CreateObjectDialog(
         fieldValues.clear()
         // Whatever started the create gets first say - a board column's "+"
         // puts its own stage here - and the required-field defaults below only
-        // fill what it left blank.
+        // fill what it left blank. Values the chosen class cannot take are
+        // dropped: options are defined per class, so on a board that mixes
+        // classes another class's option is invalid here.
         val classFieldIds = fields[selectedClassId].orEmpty().map { field -> field.id }.toSet()
         presetValues.forEach { (fieldId, value) ->
             if (fieldId in classFieldIds && value.isNotBlank()) {

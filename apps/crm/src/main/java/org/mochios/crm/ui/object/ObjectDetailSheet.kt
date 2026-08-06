@@ -46,6 +46,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.crm.R
@@ -124,15 +125,23 @@ fun ObjectDetailSheet(
             }
 
             uiState.error != null && uiState.obj == null -> {
+                // Same height as the loading branch above: the error state needs
+                // room for its icon and retry button, which 200.dp would clip.
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(200.dp),
-                    contentAlignment = Alignment.Center
+                        .height(300.dp)
                 ) {
-                    Text(
-                        text = uiState.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error
+                    ErrorState(
+                        error = uiState.error!!,
+                        onRetry = {
+                            viewModel.loadWithInitialObject(
+                                crmId,
+                                objectId,
+                                initialObject,
+                                crmDetails.crm.access
+                            )
+                        }
                     )
                 }
             }

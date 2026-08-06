@@ -46,6 +46,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.chat.R
 import org.mochios.chat.model.Friend
 import org.mochios.android.R as MochiR
@@ -96,12 +97,10 @@ fun NewChatScreen(
                     }
                 }
                 uiState.error != null && uiState.friends.isEmpty() -> {
-                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(
-                            text = uiState.error!!.userMessage(),
-                            color = MaterialTheme.colorScheme.error
-                        )
-                    }
+                    ErrorState(
+                        error = uiState.error!!,
+                        onRetry = viewModel::load,
+                    )
                 }
                 else -> {
                     uiState.error?.let { error ->

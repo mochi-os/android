@@ -64,6 +64,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
@@ -122,9 +123,15 @@ fun DesignScreen(
     }
 
     LaunchedEffect(uiState.error) {
-        uiState.error?.let {
-            snackbarHostState.showSnackbar(it.userMessage())
-            viewModel.clearError()
+        // Only transient failures (export, import) belong in a snackbar, and
+        // only those have content to sit over. A failed initial load is owned
+        // by the error state below: clearing it here would dismiss that state
+        // and its retry when the snackbar times out, leaving a blank screen.
+        if (uiState.projectDetails != null) {
+            uiState.error?.let {
+                snackbarHostState.showSnackbar(it.userMessage())
+                viewModel.clearError()
+            }
         }
     }
 
@@ -186,12 +193,10 @@ fun DesignScreen(
                 }
 
                 uiState.error != null && uiState.projectDetails == null -> {
-                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(
-                            text = uiState.error!!.userMessage(),
-                            color = MaterialTheme.colorScheme.error
-                        )
-                    }
+                    ErrorState(
+                        error = uiState.error!!,
+                        onRetry = { viewModel.loadProject() }
+                    )
                 }
 
                 uiState.projectDetails != null -> {

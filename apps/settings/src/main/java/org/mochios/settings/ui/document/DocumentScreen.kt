@@ -31,6 +31,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -74,10 +75,9 @@ fun DocumentScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                state.error != null -> Text(
-                    text = state.error!!.userMessage(),
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.align(Alignment.Center).padding(16.dp),
+                state.error != null -> ErrorState(
+                    error = state.error!!,
+                    onRetry = viewModel::refresh,
                 )
                 else -> Column(
                     modifier = Modifier

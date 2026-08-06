@@ -57,6 +57,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.wikis.R
 import org.mochios.wikis.model.SearchResult
 import org.mochios.wikis.navigation.WikisApp
@@ -141,13 +142,10 @@ fun SearchScreen(
                         }
                     }
                     state.error != null -> {
-                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = state.error!!.userMessage(),
-                                color = MaterialTheme.colorScheme.error,
-                                modifier = Modifier.padding(24.dp),
-                            )
-                        }
+                        ErrorState(
+                            error = state.error!!,
+                            onRetry = viewModel::retry,
+                        )
                     }
                     state.results.isEmpty() -> {
                         EmptyHint(

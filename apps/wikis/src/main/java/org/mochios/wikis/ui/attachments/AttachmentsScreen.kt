@@ -104,6 +104,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.files.FileStore
@@ -239,7 +240,7 @@ fun AttachmentsScreen(
                     }
                 }
                 wikiInfo == null && state.error != null && state.attachments.isEmpty() -> {
-                    ErrorRetry(message = state.error!!.userMessage(), onRetry = { viewModel.loadAttachments() })
+                    ErrorState(error = state.error!!, onRetry = { viewModel.loadAttachments() })
                 }
                 wikiInfo == null -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -433,7 +434,7 @@ private fun AttachmentsBody(
         ) {
             when {
                 state.error != null && state.attachments.isEmpty() -> {
-                    ErrorRetry(message = state.error.userMessage(), onRetry = onRetry)
+                    ErrorState(error = state.error, onRetry = onRetry)
                 }
                 filtered.isEmpty() && state.attachments.isEmpty() -> {
                     EmptyState(
@@ -1024,25 +1025,6 @@ private fun AttachmentListRow(
     }
 }
 
-@Composable
-private fun ErrorRetry(message: String, onRetry: () -> Unit) {
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(
-                text = message,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.padding(horizontal = 24.dp),
-            )
-            Spacer(Modifier.height(12.dp))
-            TextButton(onClick = onRetry) {
-                Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(16.dp))
-                Spacer(Modifier.width(4.dp))
-                Text(stringResource(MochiR.string.common_retry))
-            }
-        }
-    }
-}
 
 // ----------------------------------------------------------------------------
 // Helpers

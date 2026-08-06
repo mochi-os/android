@@ -52,6 +52,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.projects.R
 import org.mochios.projects.repository.ProjectsRepository
 import javax.inject.Inject
@@ -309,10 +310,9 @@ fun DiffViewerScreen(
                 }
 
                 uiState.error != null -> {
-                    Text(
-                        text = uiState.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.align(Alignment.Center)
+                    ErrorState(
+                        error = uiState.error!!,
+                        onRetry = { viewModel.loadDiff() }
                     )
                 }
 

@@ -34,10 +34,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -69,13 +71,13 @@ fun MySubscribersScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.error != null && state.subscriptions.isEmpty() -> {
-                    Text(
-                        text = state.error!!.userMessage()
-                            .ifEmpty { stringResource(R.string.market_subscribers_load_failed) },
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier
-                            .align(Alignment.Center)
-                            .padding(24.dp),
+                    // userMessage() comes back empty when the server sends an
+                    // empty error body; keep the specific fallback rather than
+                    // rendering an error state with no message in it.
+                    ErrorState(
+                        error = state.error!!.takeIf { it.userMessage().isNotEmpty() }
+                            ?: MochiError.Unknown(stringResource(R.string.market_subscribers_load_failed)),
+                        onRetry = viewModel::refresh,
                     )
                 }
                 state.subscriptions.isEmpty() && !state.isLoading -> {

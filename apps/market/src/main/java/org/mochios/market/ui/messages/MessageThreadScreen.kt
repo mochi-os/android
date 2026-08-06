@@ -57,6 +57,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ws.GameWsEvent
 import org.mochios.android.ws.rememberGameWebSocket
 import org.mochios.market.R
@@ -177,13 +178,10 @@ fun MessageThreadScreen(
                         }
                     }
                     state.error != null && state.messages.isEmpty() -> {
-                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = state.error!!.userMessage(),
-                                color = MaterialTheme.colorScheme.error,
-                                modifier = Modifier.padding(24.dp),
-                            )
-                        }
+                        ErrorState(
+                            error = state.error!!,
+                            onRetry = viewModel::refresh,
+                        )
                     }
                     else -> {
                         val mine = state.thread?.buyer.orEmpty()

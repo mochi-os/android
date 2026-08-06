@@ -61,6 +61,18 @@ class ProjectSettingsViewModel @Inject constructor(
         loadAccess()
     }
 
+    /**
+     * Re-runs the initial load for the error state's retry button. Clears the
+     * error first: the screen selects its error branch on `error != null`, so
+     * leaving the previous one set would keep the retry on screen behind a
+     * successful reload.
+     */
+    fun retry() {
+        _uiState.value = _uiState.value.copy(error = null)
+        loadProject()
+        loadAccess()
+    }
+
     private fun loadProject() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true)

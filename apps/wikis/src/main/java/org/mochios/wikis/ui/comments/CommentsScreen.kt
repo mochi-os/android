@@ -44,6 +44,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.wikis.R
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
@@ -115,13 +116,10 @@ fun CommentsScreen(
                     CommentsSkeleton()
                 }
                 wikiInfo == null && state.error != null -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(
-                            text = state.error!!.userMessage(),
-                            color = MaterialTheme.colorScheme.error,
-                            modifier = Modifier.padding(24.dp),
-                        )
-                    }
+                    ErrorState(
+                        error = state.error!!,
+                        onRetry = viewModel::loadComments,
+                    )
                 }
                 wikiInfo == null -> {
                     CommentsSkeleton()

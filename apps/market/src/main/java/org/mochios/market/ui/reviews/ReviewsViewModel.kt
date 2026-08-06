@@ -75,6 +75,15 @@ class ReviewsViewModel @Inject constructor(
         loadFirstPage(ReviewsTab.RECEIVED)
     }
 
+    /**
+     * Re-runs the first page for the error state's retry button. Reloads the
+     * tab on screen rather than the one init started with, since either can be
+     * the one that failed.
+     */
+    fun retry() {
+        loadFirstPage(_state.value.selectedTab)
+    }
+
     fun selectTab(tab: ReviewsTab) {
         if (_state.value.selectedTab == tab) return
         _state.value = _state.value.copy(selectedTab = tab)

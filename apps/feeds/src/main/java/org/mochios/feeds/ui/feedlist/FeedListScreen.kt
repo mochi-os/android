@@ -80,10 +80,12 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityListRow
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.ui.find.FindFeedsContent
@@ -207,22 +209,10 @@ fun FeedListScreen(
                     }
                 }
                 error != null && feeds.isEmpty() -> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(
-                                text = error?.userMessage() ?: stringResource(MochiR.string.error_unexpected),
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.error
-                            )
-                            Spacer(modifier = Modifier.height(16.dp))
-                            TextButton(onClick = { viewModel.loadFeeds() }) {
-                                Text(stringResource(MochiR.string.common_retry))
-                            }
-                        }
-                    }
+                    ErrorState(
+                        error = error ?: MochiError.Unknown(),
+                        onRetry = { viewModel.loadFeeds() },
+                    )
                 }
                 feeds.isEmpty() -> {
                     // Onboarding: render the Find Feeds search + recommendations

@@ -134,6 +134,7 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipBook
@@ -808,22 +809,10 @@ fun FeedScreen(
                         }
 
                         error != null && posts.isEmpty() -> {
-                            Box(
-                                modifier = Modifier.fillMaxSize(),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                    Text(
-                                        text = error!!.userMessage(),
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        color = MaterialTheme.colorScheme.error
-                                    )
-                                    Spacer(modifier = Modifier.height(16.dp))
-                                    TextButton(onClick = { viewModel.loadFeed() }) {
-                                        Text(stringResource(MochiR.string.common_retry))
-                                    }
-                                }
-                            }
+                            ErrorState(
+                                error = error!!,
+                                onRetry = { viewModel.loadFeed() },
+                            )
                         }
 
                         else -> {

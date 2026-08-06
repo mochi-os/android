@@ -76,6 +76,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityListRow
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.android.R as MochiR
@@ -208,12 +209,10 @@ fun ForumListScreen(
                         }
                     }
                     uiState.error != null && uiState.forums.isEmpty() -> {
-                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(
-                                text = uiState.error!!.userMessage(),
-                                color = MaterialTheme.colorScheme.error
-                            )
-                        }
+                        ErrorState(
+                            error = uiState.error!!,
+                            onRetry = viewModel::load,
+                        )
                     }
                     else -> {
                         val filtered = viewModel.filteredForums()

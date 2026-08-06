@@ -82,6 +82,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlin.math.roundToInt
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
@@ -229,18 +230,10 @@ fun WordsGameDetailScreen(
                     }
                 }
                 state.error != null && game == null -> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Text(
-                            text = state.error!!.userMessage(),
-                            style = MaterialTheme.typography.bodyLarge,
-                            color = MaterialTheme.colorScheme.error,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.padding(16.dp),
-                        )
-                    }
+                    ErrorState(
+                        error = state.error!!,
+                        onRetry = viewModel::load,
+                    )
                 }
                 game != null -> GameDetailContent(
                     state = state,
