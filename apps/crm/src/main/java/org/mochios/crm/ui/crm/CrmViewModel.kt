@@ -956,17 +956,17 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Builds a spreadsheet of what the active view is showing — the same
-     * objects, in the same order, narrowed by the same filters — and parks it
-     * for the save dialog. Local work only: everything it needs is already
-     * loaded, so unlike [exportCrm] it never waits on the server.
+     * Builds a spreadsheet of the objects the active view is showing — the
+     * same ones, in the same order, narrowed by the same filters — and parks
+     * it for the save dialog. Local work only: everything it needs is already
+     * loaded, so unlike [exportCrm] it never touches the server.
      */
     fun exportCsv() {
         val csv = buildCsv()
         val name = _uiState.value.crmDetails?.crm?.name
         _uiState.value = _uiState.value.copy(
             pendingExport = PendingExport(
-                suggestedName = repository.exportFileName(name, "crm-export", "csv"),
+                suggestedName = repository.exportDisplayName(name, "csv"),
                 mimeType = MIME_CSV,
                 content = csv,
             )
@@ -974,36 +974,56 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * A CSV of the active view: one row per object, one column per field of
-     * the classes the view shows, with the class and the object's title in
-     * front. Values are written as they read on screen — an option's name
-     * rather than its id, a person's name rather than their entity id.
+     * A CSV in the shape web exports: `ID`, `Class` and `Parent` in front,
+     * then one column for every field of every class in the CRM, in class
+     * order and deduped by field id so a field two classes share is written
+     * once.
+     *
+     * There is no separate title column. A class titles itself with one of its
+     * own fields, so a title column would repeat that field's column on every
+     * row — which is what the earlier shape did.
+     *
+     * Columns cover the whole CRM, but rows are the active view's objects, so
+     * what is filtered out on screen stays out of the file. Values are written
+     * as they read on screen — an option's name rather than its id, a person's
+     * name rather than their entity id.
      */
     private fun buildCsv(): String {
         val details = _uiState.value.crmDetails
         val objects = getFilteredObjects()
-        val view = getActiveView()
-        val classIds = if (view != null && view.classes.isNotEmpty()) {
-            view.classes
-        } else {
-            details?.classes?.map { crmClass -> crmClass.id }.orEmpty()
-        }
-        val fields = mutableListOf<CrmField>()
+        // Columns are field names, not field ids. Each class defines its own
+        // fields, so the "Owner" on a task and the "Owner" on a deal are two
+        // ids wearing one label — web gives them a single column, and a
+        // spreadsheet reader expects that too.
+        // Both orders come from the design, by rank — the same order the
+        // classes and fields are listed in everywhere else in the app, and
+        // the one web lays the columns out in. Server order is not it.
+        val columns = mutableListOf<String>()
         val seen = mutableSetOf<String>()
-        for (classId in classIds) {
-            for (field in details?.fields?.get(classId).orEmpty()) {
-                if (seen.add(field.id)) fields += field
+        val orderedClasses = details?.classes.orEmpty().sortedBy { crmClass -> crmClass.rank }
+        for (crmClass in orderedClasses) {
+            val classFields = details?.fields?.get(crmClass.id).orEmpty()
+                .sortedBy { field -> field.rank }
+            for (field in classFields) {
+                if (seen.add(field.name)) columns += field.name
             }
         }
         val rows = mutableListOf<List<String>>()
-        rows += listOf("Class", "Title") + fields.map { field -> field.name }
+        rows += listOf("ID", "Class", "Parent") + columns
         for (obj in objects) {
-            val crmClass = getClassById(obj.objectClass)
-            val titleFieldId = crmClass?.title.orEmpty()
+            // Resolve each column against this object's own class, so a shared
+            // label still reads that class's field. A class without the field
+            // leaves the cell empty.
+            val byName = details?.fields?.get(obj.objectClass)
+                ?.associateBy { field -> field.name }
+                .orEmpty()
             rows += listOf(
-                crmClass?.name.orEmpty(),
-                if (titleFieldId.isBlank()) "" else obj.stringValue(titleFieldId),
-            ) + fields.map { field -> csvValue(obj, field) }
+                obj.id,
+                getClassById(obj.objectClass)?.name.orEmpty(),
+                obj.parent,
+            ) + columns.map { column ->
+                byName[column]?.let { field -> csvValue(obj, field) }.orEmpty()
+            }
         }
         return rows.joinToString("\n") { row ->
             row.joinToString(",") { cell -> csvCell(cell) }

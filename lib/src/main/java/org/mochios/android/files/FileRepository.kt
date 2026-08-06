@@ -82,4 +82,11 @@ abstract class FileRepository(protected val fileStore: FileStore) {
     /** Suggested save-dialog name for an export of [kind] taken from [subject]. */
     fun exportFileName(subject: String?, kind: String, extension: String = "json"): String =
         fileStore.exportFileName(subject, kind, extension)
+
+    /**
+     * Suggested save-dialog name that keeps [subject] as the user wrote it,
+     * e.g. `Crm Testing.csv`. For an export they open rather than archive.
+     */
+    fun exportDisplayName(subject: String?, extension: String): String =
+        fileStore.exportDisplayName(subject, extension)
 }

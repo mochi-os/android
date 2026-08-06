@@ -159,6 +159,31 @@ class FileStore @Inject constructor(
         return "$slug-$kind-$date.$extension"
     }
 
+    /**
+     * Names an export after the thing it came from, keeping the subject as the
+     * user wrote it: `Crm Testing.csv`.
+     *
+     * Unlike [exportFileName] there is no slug, kind or date. A backup is a
+     * file you keep, so it says what it is and when it was taken; a
+     * spreadsheet is a file you open, so it is named the way the user named
+     * the thing it came from. Characters a file system won't take become
+     * spaces.
+     *
+     * @param subject what the export belongs to; blank or null falls back to
+     *   `unknown`.
+     * @param extension the file's extension, without the dot.
+     * @return the suggested file name for the system save dialog.
+     */
+    fun exportDisplayName(subject: String?, extension: String): String {
+        val name = subject
+            ?.replace(FILENAME_RESERVED, " ")
+            ?.replace(WHITESPACE_RUN, " ")
+            ?.trim()
+            ?.takeIf { value -> value.isNotEmpty() }
+            ?: "unknown"
+        return "$name.$extension"
+    }
+
     // ---- Names and types ----
 
     /**
@@ -356,6 +381,11 @@ class FileStore @Inject constructor(
 
         // Resource-fork folder a Mac adds when it re-zips an archive.
         private const val MAC_METADATA_DIR = "__MACOSX/"
+
+        // Characters no common file system takes in a name, and control codes.
+        private val FILENAME_RESERVED = Regex("""[\\/:*?"<>|]|\p{Cntrl}""")
+
+        private val WHITESPACE_RUN = Regex("""\s+""")
 
         // Types Android's MimeTypeMap commonly omits (mainly Office formats).
         // Kept here so a File-based upload keeps the right type instead of
