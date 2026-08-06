@@ -75,15 +75,6 @@ abstract class FileRepository(protected val fileStore: FileStore) {
     suspend fun saveTextFile(uri: Uri, text: String): Boolean =
         fileStore.writeText(uri, text)
 
-    /**
-     * Writes [text] to the document the user picked as a zip, under a single
-     * entry named [entryName].
-     *
-     * @return true when the file was written in full.
-     */
-    suspend fun saveZipFile(uri: Uri, entryName: String, text: String): Boolean =
-        fileStore.writeZip(uri, entryName, text)
-
     /** The picked file's real name, for labelling it back to the user. */
     suspend fun fileName(uri: Uri, fallback: String = ""): String =
         fileStore.displayName(uri, fallback)

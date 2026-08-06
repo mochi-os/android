@@ -20,7 +20,6 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.files.MANIFEST_JSON
 import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
@@ -906,10 +905,23 @@ class CrmViewModel @Inject constructor(
     // ---- Export ----
 
     /**
-     * Fetches the CRM's data as a backup payload, then parks it for the screen
-     * to route into a save dialog. Attachments are staged first — the export
-     * endpoint only includes what has been warmed — so this can take a while on
-     * a CRM with many files.
+     * The handle the data endpoints want: the CRM's canonical id, falling back
+     * to its fingerprint and then to whatever the screen was routed with.
+     * Mirrors `CrmSettingsViewModel.entityId()`.
+     */
+    private fun entityId(): String {
+        val crm = _uiState.value.crmDetails?.crm ?: return crmId
+        return crm.id.ifEmpty { crm.fingerprint.ifEmpty { crmId } }
+    }
+
+    /**
+     * Stages the CRM's attachments, then asks the screen for somewhere to put
+     * the backup. The export endpoint only includes what has been warmed, so
+     * this can take a while on a CRM with many files.
+     *
+     * Nothing is downloaded here. The server builds the zip and it runs to
+     * megabytes, so it is fetched straight into the file the user picks — see
+     * [writeExportTo].
      */
     fun exportCrm() {
         if (_uiState.value.isExporting) {
@@ -920,20 +932,17 @@ class CrmViewModel @Inject constructor(
             try {
                 var rounds = 0
                 while (rounds < MAX_WARM_ROUNDS) {
-                    val warm = repository.warmExport(crmId)
+                    val warm = repository.warmExport(entityId())
                     if (warm.remaining <= 0) {
                         break
                     }
                     rounds++
                 }
-                val data = repository.exportData(crmId)
                 val name = _uiState.value.crmDetails?.crm?.name
                 _uiState.value = _uiState.value.copy(
                     pendingExport = PendingExport(
-                        content = data.toString(),
                         suggestedName = repository.exportFileName(name, "crm-backup", "zip"),
                         mimeType = MIME_ZIP,
-                        zipEntryName = MANIFEST_JSON,
                     )
                 )
             } catch (error: Exception) {
@@ -955,9 +964,9 @@ class CrmViewModel @Inject constructor(
         val name = _uiState.value.crmDetails?.crm?.name
         _uiState.value = _uiState.value.copy(
             pendingExport = PendingExport(
-                content = csv,
                 suggestedName = repository.exportFileName(name, "crm-export", "csv"),
                 mimeType = MIME_CSV,
+                content = csv,
             )
         )
     }
@@ -1026,18 +1035,26 @@ class CrmViewModel @Inject constructor(
         return "\"${value.replace("\"", "\"\"")}\""
     }
 
-    /** Writes the pending export to the destination the user picked. */
+    /**
+     * Puts the pending export in the destination the user picked: writes the
+     * CSV the app built, or downloads the server's backup zip into it.
+     */
     fun writeExportTo(uri: Uri) {
         val pending = _uiState.value.pendingExport ?: return
         viewModelScope.launch {
-            val entryName = pending.zipEntryName
-            val ok = if (entryName != null) {
-                repository.saveZipFile(uri, entryName, pending.content)
-            } else {
-                repository.saveTextFile(uri, pending.content)
+            _uiState.value = _uiState.value.copy(pendingExport = null, isExporting = true)
+            val content = pending.content
+            val ok = try {
+                if (content != null) {
+                    repository.saveTextFile(uri, content)
+                } else {
+                    repository.downloadExport(entityId(), uri)
+                }
+            } catch (_: Exception) {
+                false
             }
             _uiState.value = _uiState.value.copy(
-                pendingExport = null,
+                isExporting = false,
                 exportSaved = ok,
                 exportFailed = !ok
             )

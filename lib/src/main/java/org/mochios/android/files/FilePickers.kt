@@ -38,32 +38,22 @@ const val MIME_CSV = "text/csv"
 const val MIME_ZIP = "application/zip"
 
 /**
- * What a zipped export calls the document inside it.
+ * An export that still needs somewhere to go.
  *
- * One name for every export, so an import can find the payload without being
- * told which app or which backup it came out of.
- */
-const val MANIFEST_JSON = "manifest.json"
-
-/**
- * An export that has been fetched but still needs somewhere to go.
- *
- * Held in ViewModel state between the export call returning and the user
+ * Held in ViewModel state between the export being asked for and the user
  * picking a destination, so nothing large sits in composition.
  *
- * @property content the payload to write.
  * @property suggestedName name to offer in the system save dialog.
  * @property mimeType what the payload is, so a screen offering more than one
  *   kind of export knows which save dialog to open.
- * @property zipEntryName when set, [content] is written inside a zip under
- *   this name rather than straight to the file. A backup carries its
- *   attachments inline, so it runs to megabytes of text that compresses well.
+ * @property content the payload, for an export the app builds itself. Null
+ *   means the server holds it: a backup is a zip that runs to megabytes, so it
+ *   is streamed to the destination once there is one rather than parked here.
  */
 data class PendingExport(
-    val content: String,
     val suggestedName: String,
     val mimeType: String = MIME_JSON,
-    val zipEntryName: String? = null,
+    val content: String? = null,
 )
 
 /** Opens the system save dialog. See [rememberFileSaveLauncher]. */

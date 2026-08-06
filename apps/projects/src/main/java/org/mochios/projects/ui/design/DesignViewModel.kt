@@ -348,8 +348,8 @@ class DesignViewModel @Inject constructor(
                 val name = _uiState.value.projectDetails?.project?.name
                 _uiState.value = _uiState.value.copy(
                     pendingExport = PendingExport(
+                        suggestedName = repository.exportFileName(name, "design"),
                         content = json.toString(),
-                        suggestedName = repository.exportFileName(name, "design")
                     )
                 )
             } catch (e: Exception) {
@@ -358,11 +358,14 @@ class DesignViewModel @Inject constructor(
         }
     }
 
-    /** Writes the pending export to the destination the user picked. */
+    /**
+     * Writes the pending export to the destination the user picked. A design
+     * is built here rather than downloaded, so it always carries its content.
+     */
     fun writeExportTo(uri: Uri) {
-        val pending = _uiState.value.pendingExport ?: return
+        val content = _uiState.value.pendingExport?.content ?: return
         viewModelScope.launch {
-            val ok = repository.saveTextFile(uri, pending.content)
+            val ok = repository.saveTextFile(uri, content)
             _uiState.value = _uiState.value.copy(
                 pendingExport = null,
                 exportSaved = ok,

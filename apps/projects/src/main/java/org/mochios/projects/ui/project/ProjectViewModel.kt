@@ -21,7 +21,6 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
-import org.mochios.android.files.MANIFEST_JSON
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
 import org.mochios.android.websocket.MochiWebSocket
@@ -226,6 +225,21 @@ class ProjectViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The handle the data endpoints want: the project's canonical id, falling
+     * back to its fingerprint and then to whatever the screen was routed with.
+     */
+    private fun entityId(): String {
+        val project = _uiState.value.projectDetails?.project ?: return projectId
+        return project.id.ifEmpty { project.fingerprint.ifEmpty { projectId } }
+    }
+
+    /**
+     * Stages the project's attachments, then asks the screen for somewhere to
+     * put the backup. Nothing is downloaded here — the server builds the zip
+     * and it runs to megabytes, so it is fetched straight into the file the
+     * user picks. See [writeExportTo].
+     */
     fun exportProject() {
         if (_uiState.value.isExporting) {
             return
@@ -235,20 +249,17 @@ class ProjectViewModel @Inject constructor(
             try {
                 var rounds = 0
                 while (rounds < MAX_WARM_ROUNDS) {
-                    val warm = repository.warmExport(projectId)
+                    val warm = repository.warmExport(entityId())
                     if (warm.remaining <= 0) {
                         break
                     }
                     rounds++
                 }
-                val data = repository.exportData(projectId)
                 val name = _uiState.value.projectDetails?.project?.name
                 _uiState.value = _uiState.value.copy(
                     pendingExport = PendingExport(
-                        content = data.toString(),
                         suggestedName = repository.exportFileName(name, "projects-backup", "zip"),
                         mimeType = MIME_ZIP,
-                        zipEntryName = MANIFEST_JSON,
                     )
                 )
             } catch (error: Exception) {
@@ -259,18 +270,25 @@ class ProjectViewModel @Inject constructor(
         }
     }
 
-    /** Writes the pending export to the destination the user picked. */
+    /**
+     * Downloads the pending export into the destination the user picked.
+     */
     fun writeExportTo(uri: Uri) {
         val pending = _uiState.value.pendingExport ?: return
         viewModelScope.launch {
-            val entryName = pending.zipEntryName
-            val ok = if (entryName != null) {
-                repository.saveZipFile(uri, entryName, pending.content)
-            } else {
-                repository.saveTextFile(uri, pending.content)
+            _uiState.value = _uiState.value.copy(pendingExport = null, isExporting = true)
+            val content = pending.content
+            val ok = try {
+                if (content != null) {
+                    repository.saveTextFile(uri, content)
+                } else {
+                    repository.downloadExport(entityId(), uri)
+                }
+            } catch (_: Exception) {
+                false
             }
             _uiState.value = _uiState.value.copy(
-                pendingExport = null,
+                isExporting = false,
                 exportSaved = ok,
                 exportFailed = !ok
             )

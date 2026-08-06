@@ -25,6 +25,7 @@ import org.mochios.crm.model.Template
 import org.mochios.crm.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -35,6 +36,7 @@ import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.Streaming
 
 // Response wrappers
 data class CrmListResponse(@SerializedName("crms") val crms: List<Crm> = emptyList())
@@ -410,10 +412,14 @@ interface CrmsApi {
         @Path("crmId") crmId: String
     ): Response<ApiResponse<WarmExportResponse>>
 
+    // Answers with the zip itself, not a JSON envelope, so this is the one
+    // endpoint here that isn't an ApiResponse. @Streaming keeps the body off
+    // the heap — a warmed export carries every attachment.
+    @Streaming
     @GET("{crmId}/-/data/export")
     suspend fun exportData(
         @Path("crmId") crmId: String
-    ): Response<ApiResponse<JsonObject>>
+    ): Response<ResponseBody>
 
     @Multipart
     @POST("{crmId}/-/data/import")

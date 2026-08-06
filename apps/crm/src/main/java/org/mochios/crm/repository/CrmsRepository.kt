@@ -5,10 +5,12 @@
 
 package org.mochios.crm.repository
 
+import android.net.Uri
 import com.google.gson.JsonObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
@@ -308,9 +310,19 @@ class CrmsRepository @Inject constructor(
     suspend fun warmExport(crmId: String): WarmExportResponse =
         api.warmExport(crmId).unwrap()
 
-    /** The CRM's objects, links and attachments, as a backup payload. */
-    suspend fun exportData(crmId: String): JsonObject =
-        api.exportData(crmId).unwrap()
+    /**
+     * Downloads the CRM's backup — objects, links and attachments, zipped by
+     * the server — straight into [destination].
+     *
+     * Streamed rather than returned, so a big export never has to fit in
+     * memory on its way to the file.
+     *
+     * @return true when the whole zip reached the file.
+     */
+    suspend fun downloadExport(crmId: String, destination: Uri): Boolean {
+        val body = api.exportData(crmId).unwrapRaw()
+        return body.byteStream().use { stream -> fileStore.writeStream(destination, stream) }
+    }
 
     /** Restores the objects held in a backup file, uploaded as a JSON part. */
     suspend fun importData(crmId: String, backupJson: String) {

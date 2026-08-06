@@ -15,9 +15,7 @@ import java.io.File
 import java.io.IOException
 import java.io.InputStream
 import java.time.LocalDate
-import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
-import java.util.zip.ZipOutputStream
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.Dispatchers
@@ -115,21 +113,20 @@ class FileStore @Inject constructor(
     }
 
     /**
-     * Writes [text] to the document at [uri] as a zip holding one entry named
-     * [entryName], replacing whatever is there.
+     * Copies [source] into the document at [uri], replacing whatever is there.
+     *
+     * For a payload that arrives as bytes off the network — a server-built
+     * export zip — so it goes to disk as it downloads instead of being held in
+     * memory whole. Closing [source] is the caller's job.
      *
      * @return true when the whole write went through, false on any I/O failure.
      */
-    suspend fun writeZip(uri: Uri, entryName: String, text: String): Boolean =
+    suspend fun writeStream(uri: Uri, source: InputStream): Boolean =
         withContext(Dispatchers.IO) {
             try {
                 val stream = context.contentResolver.openOutputStream(uri)
                     ?: return@withContext false
-                ZipOutputStream(stream.buffered()).use { zip ->
-                    zip.putNextEntry(ZipEntry(entryName))
-                    zip.write(text.toByteArray())
-                    zip.closeEntry()
-                }
+                stream.use { output -> source.copyTo(output) }
                 true
             } catch (_: Exception) {
                 false
