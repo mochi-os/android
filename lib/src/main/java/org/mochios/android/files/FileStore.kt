@@ -93,12 +93,14 @@ class FileStore @Inject constructor(
      * @param subject what the export belongs to; blank or null falls back to
      *   `unknown`.
      * @param kind what the file holds — `design`, `projects-backup`, ...
+     * @param extension the file's extension, without the dot.
      * @param date stamped into the name; defaults to today.
      * @return the suggested file name for the system save dialog.
      */
     fun exportFileName(
         subject: String?,
         kind: String,
+        extension: String = "json",
         date: LocalDate = LocalDate.now()
     ): String {
         val slug = subject
@@ -107,7 +109,7 @@ class FileStore @Inject constructor(
             ?.trim('-')
             ?.takeIf { value -> value.isNotEmpty() }
             ?: "unknown"
-        return "$slug-$kind-$date.json"
+        return "$slug-$kind-$date.$extension"
     }
 
     // ---- Names and types ----

@@ -61,6 +61,9 @@ data class CrmInfoResponse(
     val hierarchy: Map<String, List<String>> = emptyMap()
 )
 data class TemplateListResponse(val templates: List<Template> = emptyList())
+// data/export/warm reports how many attachments are still to be pulled in, so
+// the caller keeps warming until nothing remains before fetching the export.
+data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
 data class ObjectListResponse(
     val objects: List<CrmObject> = emptyList(),
     val watched: List<String> = emptyList(),
@@ -400,7 +403,17 @@ interface CrmsApi {
         @Field("template_version") templateVersion: Int?
     ): Response<ApiResponse<SuccessResponse>>
 
-    // ---- Data: Import ----
+    // ---- Data: Export / Import ----
+
+    @POST("{crmId}/-/data/export/warm")
+    suspend fun warmExport(
+        @Path("crmId") crmId: String
+    ): Response<ApiResponse<WarmExportResponse>>
+
+    @GET("{crmId}/-/data/export")
+    suspend fun exportData(
+        @Path("crmId") crmId: String
+    ): Response<ApiResponse<JsonObject>>
 
     @Multipart
     @POST("{crmId}/-/data/import")

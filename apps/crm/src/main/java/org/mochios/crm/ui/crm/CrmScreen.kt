@@ -7,6 +7,7 @@ package org.mochios.crm.ui.crm
 
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
@@ -47,9 +48,11 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.FileDownload
 import androidx.compose.material.icons.filled.ViewColumn
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.TableChart
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.FormatListBulleted
@@ -70,6 +73,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
@@ -96,6 +100,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
@@ -104,6 +110,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.MIME_CSV
+import org.mochios.android.files.MIME_JSON
+import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.AboutDialog
@@ -606,6 +615,34 @@ private fun CrmContent(
         }
     }
 
+    val exportSaved = stringResource(R.string.crm_export_saved)
+    val exportFailed = stringResource(R.string.crm_export_failed)
+    // The picker only reports where the file goes; the ViewModel writes it.
+    // A launcher's type is fixed when it is remembered, so the two exports
+    // need one each, chosen by what the pending export holds.
+    val saveJson = rememberFileSaveLauncher(MIME_JSON) { uri ->
+        if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
+    }
+    val saveCsv = rememberFileSaveLauncher(MIME_CSV) { uri ->
+        if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
+    }
+    LaunchedEffect(uiState.pendingExport) {
+        uiState.pendingExport?.let { pending ->
+            if (pending.mimeType == MIME_CSV) {
+                saveCsv.launch(pending.suggestedName)
+            } else {
+                saveJson.launch(pending.suggestedName)
+            }
+        }
+    }
+    LaunchedEffect(uiState.exportSaved, uiState.exportFailed) {
+        if (uiState.exportSaved || uiState.exportFailed) {
+            val message = if (uiState.exportSaved) exportSaved else exportFailed
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+            viewModel.clearExportResult()
+        }
+    }
+
     val details = uiState.crmDetails
     val activeView = viewModel.getActiveView()
 
@@ -770,6 +807,26 @@ private fun CrmContent(
                                     },
                                     leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
                                 )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.crm_export)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        viewModel.exportCrm()
+                                    },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.FileDownload, contentDescription = null)
+                                    }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.crm_export_csv)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        viewModel.exportCsv()
+                                    },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.TableChart, contentDescription = null)
+                                    }
+                                )
                             }
                         }
                     }
@@ -900,6 +957,10 @@ private fun CrmContent(
         )
     }
 
+    if (uiState.isExporting) {
+        ExportProgressDialog()
+    }
+
     // Add-column dialog (board views). Creates a new option on the board's
     // grouping field, mirroring web's overflow "Add column".
     if (showAddColumn && activeView != null && activeView.columns.isNotBlank()) {
@@ -978,6 +1039,31 @@ private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
     "created" to stringResource(R.string.crm_sort_created),
     "updated" to stringResource(R.string.crm_sort_updated)
 )
+
+@Composable
+private fun ExportProgressDialog() {
+    Dialog(
+        onDismissRequest = {},
+        properties = DialogProperties(
+            dismissOnBackPress = false,
+            dismissOnClickOutside = false
+        )
+    ) {
+        Surface(
+            shape = MaterialTheme.shapes.large,
+            tonalElevation = 6.dp
+        ) {
+            Row(
+                modifier = Modifier.padding(24.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(stringResource(R.string.crm_exporting))
+            }
+        }
+    }
+}
 
 // Add a new board column (= a new option on the board's grouping field).
 // Name + a colour, mirroring web's OptionDialog used for "Add column". Boards

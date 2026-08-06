@@ -19,6 +19,7 @@ import org.mochios.crm.api.CrmsApi
 import org.mochios.crm.api.SetValueRequest
 import org.mochios.crm.api.SubscribeRequest
 import org.mochios.crm.api.UnsubscribeRequest
+import org.mochios.crm.api.WarmExportResponse
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.Group
@@ -298,6 +299,18 @@ class CrmsRepository @Inject constructor(
     ) {
         api.importDesign(crmId, data, template, templateVersion).unwrap()
     }
+
+    /**
+     * Pulls the CRM's attachments into the export staging area.
+     *
+     * @return how much is still outstanding; call again while it is above zero.
+     */
+    suspend fun warmExport(crmId: String): WarmExportResponse =
+        api.warmExport(crmId).unwrap()
+
+    /** The CRM's objects, links and attachments, as a backup payload. */
+    suspend fun exportData(crmId: String): JsonObject =
+        api.exportData(crmId).unwrap()
 
     /** Restores the objects held in a backup file, uploaded as a JSON part. */
     suspend fun importData(crmId: String, backupJson: String) {

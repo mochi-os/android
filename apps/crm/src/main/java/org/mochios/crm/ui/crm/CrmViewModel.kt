@@ -21,6 +21,8 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.User
+import org.mochios.android.files.PendingExport
+import org.mochios.android.files.MIME_CSV
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.model.FieldOption
@@ -77,6 +79,12 @@ data class CrmUiState(
     val sortDirByView: Map<String, String> = emptyMap(),
     /** CRM members, for resolving user-field display names in list/board views. */
     val people: List<org.mochios.crm.model.Person> = emptyList(),
+    /** True while an export is being fetched, before the save dialog opens. */
+    val isExporting: Boolean = false,
+    /** An export waiting for the user to say where it goes. */
+    val pendingExport: PendingExport? = null,
+    val exportSaved: Boolean = false,
+    val exportFailed: Boolean = false,
 )
 
 @HiltViewModel
@@ -893,6 +901,149 @@ class CrmViewModel @Inject constructor(
         }
     }
 
+    // ---- Export ----
+
+    /**
+     * Fetches the CRM's data as a backup payload, then parks it for the screen
+     * to route into a save dialog. Attachments are staged first — the export
+     * endpoint only includes what has been warmed — so this can take a while on
+     * a CRM with many files.
+     */
+    fun exportCrm() {
+        if (_uiState.value.isExporting) {
+            return
+        }
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isExporting = true)
+            try {
+                var rounds = 0
+                while (rounds < MAX_WARM_ROUNDS) {
+                    val warm = repository.warmExport(crmId)
+                    if (warm.remaining <= 0) {
+                        break
+                    }
+                    rounds++
+                }
+                val data = repository.exportData(crmId)
+                val name = _uiState.value.crmDetails?.crm?.name
+                _uiState.value = _uiState.value.copy(
+                    pendingExport = PendingExport(
+                        content = data.toString(),
+                        suggestedName = repository.exportFileName(name, "crm-backup")
+                    )
+                )
+            } catch (error: Exception) {
+                _uiState.value = _uiState.value.copy(error = error.toMochiError())
+            } finally {
+                _uiState.value = _uiState.value.copy(isExporting = false)
+            }
+        }
+    }
+
+    /**
+     * Builds a spreadsheet of what the active view is showing — the same
+     * objects, in the same order, narrowed by the same filters — and parks it
+     * for the save dialog. Local work only: everything it needs is already
+     * loaded, so unlike [exportCrm] it never waits on the server.
+     */
+    fun exportCsv() {
+        val csv = buildCsv()
+        val name = _uiState.value.crmDetails?.crm?.name
+        _uiState.value = _uiState.value.copy(
+            pendingExport = PendingExport(
+                content = csv,
+                suggestedName = repository.exportFileName(name, "crm-export", "csv"),
+                mimeType = MIME_CSV,
+            )
+        )
+    }
+
+    /**
+     * A CSV of the active view: one row per object, one column per field of
+     * the classes the view shows, with the class and the object's title in
+     * front. Values are written as they read on screen — an option's name
+     * rather than its id, a person's name rather than their entity id.
+     */
+    private fun buildCsv(): String {
+        val details = _uiState.value.crmDetails
+        val objects = getFilteredObjects()
+        val view = getActiveView()
+        val classIds = if (view != null && view.classes.isNotEmpty()) {
+            view.classes
+        } else {
+            details?.classes?.map { crmClass -> crmClass.id }.orEmpty()
+        }
+        val fields = mutableListOf<CrmField>()
+        val seen = mutableSetOf<String>()
+        for (classId in classIds) {
+            for (field in details?.fields?.get(classId).orEmpty()) {
+                if (seen.add(field.id)) fields += field
+            }
+        }
+        val rows = mutableListOf<List<String>>()
+        rows += listOf("Class", "Title") + fields.map { field -> field.name }
+        for (obj in objects) {
+            val crmClass = getClassById(obj.objectClass)
+            val titleFieldId = crmClass?.title.orEmpty()
+            rows += listOf(
+                crmClass?.name.orEmpty(),
+                if (titleFieldId.isBlank()) "" else obj.stringValue(titleFieldId),
+            ) + fields.map { field -> csvValue(obj, field) }
+        }
+        return rows.joinToString("\n") { row ->
+            row.joinToString(",") { cell -> csvCell(cell) }
+        }
+    }
+
+    /** One cell's text: option and person ids resolved to their names. */
+    private fun csvValue(obj: CrmObject, field: CrmField): String {
+        val values = obj.listValue(field.id).ifEmpty {
+            obj.stringValue(field.id).takeIf { value -> value.isNotBlank() }?.let { value ->
+                listOf(value)
+            }.orEmpty()
+        }
+        if (values.isEmpty()) return ""
+        return values.joinToString(", ") { value ->
+            when (field.fieldtype) {
+                "enumerated" -> getAllOptionsForField(field.id)
+                    .find { option -> option.id == value }?.name ?: value
+                "user" -> _uiState.value.people
+                    .find { person -> person.id == value }?.name ?: value
+                else -> value
+            }
+        }
+    }
+
+    /** Quotes a cell when it holds a comma, a quote or a newline. */
+    private fun csvCell(value: String): String {
+        if (value.none { char -> char == ',' || char == '"' || char == '\n' || char == '\r' }) {
+            return value
+        }
+        return "\"${value.replace("\"", "\"\"")}\""
+    }
+
+    /** Writes the pending export to the destination the user picked. */
+    fun writeExportTo(uri: Uri) {
+        val pending = _uiState.value.pendingExport ?: return
+        viewModelScope.launch {
+            val ok = repository.saveTextFile(uri, pending.content)
+            _uiState.value = _uiState.value.copy(
+                pendingExport = null,
+                exportSaved = ok,
+                exportFailed = !ok
+            )
+        }
+    }
+
+    /** Drops the pending export when the user backs out of the save dialog. */
+    fun cancelExport() {
+        _uiState.value = _uiState.value.copy(pendingExport = null)
+    }
+
+    fun clearExportResult() {
+        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
+    }
+
     fun getCardFields(classId: String): List<CrmField> {
         val details = _uiState.value.crmDetails ?: return emptyList()
         val allFields = details.fields[classId] ?: return emptyList()
@@ -902,5 +1053,10 @@ class CrmViewModel @Inject constructor(
             return allFields.filter { it.id in viewFieldIds }
         }
         return allFields.filter { it.showOnCard }
+    }
+
+    private companion object {
+        /** Cap on export warm-up rounds, so a stuck stage can't spin forever. */
+        const val MAX_WARM_ROUNDS = 60
     }
 }

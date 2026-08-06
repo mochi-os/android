@@ -348,7 +348,7 @@ class DesignViewModel @Inject constructor(
                 val name = _uiState.value.projectDetails?.project?.name
                 _uiState.value = _uiState.value.copy(
                     pendingExport = PendingExport(
-                        json = json.toString(),
+                        content = json.toString(),
                         suggestedName = repository.exportFileName(name, "design")
                     )
                 )
@@ -362,7 +362,7 @@ class DesignViewModel @Inject constructor(
     fun writeExportTo(uri: Uri) {
         val pending = _uiState.value.pendingExport ?: return
         viewModelScope.launch {
-            val ok = repository.saveTextFile(uri, pending.json)
+            val ok = repository.saveTextFile(uri, pending.content)
             _uiState.value = _uiState.value.copy(
                 pendingExport = null,
                 exportSaved = ok,

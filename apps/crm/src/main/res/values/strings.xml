@@ -61,6 +61,11 @@
     <string name="crm_link">Link</string>
     <string name="crm_share_link_title">Share CRM</string>
     <string name="crm_design">Design</string>
+    <string name="crm_export">Export data</string>
+    <string name="crm_export_csv">Export CSV</string>
+    <string name="crm_exporting">Preparing export…</string>
+    <string name="crm_export_saved">CRM data saved</string>
+    <string name="crm_export_failed">Couldn\'t save export</string>
     <string name="crm_untitled">Untitled</string>
 
     <!-- Sort &amp; filter -->

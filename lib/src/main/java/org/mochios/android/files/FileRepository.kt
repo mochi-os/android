@@ -70,6 +70,6 @@ abstract class FileRepository(protected val fileStore: FileStore) {
         fileStore.displayName(uri, fallback)
 
     /** Suggested save-dialog name for an export of [kind] taken from [subject]. */
-    fun exportFileName(subject: String?, kind: String): String =
-        fileStore.exportFileName(subject, kind)
+    fun exportFileName(subject: String?, kind: String, extension: String = "json"): String =
+        fileStore.exportFileName(subject, kind, extension)
 }
