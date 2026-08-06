@@ -56,6 +56,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.files.MIME_JSON
+import org.mochios.android.files.MIME_ZIP
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
 import org.mochios.android.R as MochiR
@@ -102,8 +104,11 @@ fun CreateProjectDialog(
     var step by remember { mutableStateOf(0) }
     val hasTemplates = templates.isNotEmpty()
 
+    // OpenDocument, not GetContent: exports are zipped now, and only this
+    // contract takes more than one type, so both the zip and a bare .json
+    // from an older backup stay selectable.
     val backupPicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetContent()
+        contract = ActivityResultContracts.OpenDocument()
     ) { uri: Uri? ->
         if (uri != null) {
             onPickBackup(uri)
@@ -192,7 +197,7 @@ fun CreateProjectDialog(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     OutlinedButton(
-                        onClick = { backupPicker.launch("application/json") },
+                        onClick = { backupPicker.launch(arrayOf(MIME_ZIP, MIME_JSON)) },
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Icon(

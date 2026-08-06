@@ -144,7 +144,7 @@ class CrmListViewModel @Inject constructor(
      */
     fun readBackup(uri: Uri) {
         viewModelScope.launch {
-            val content = repository.readTextFile(uri)
+            val content = repository.readTextOrZippedFile(uri)
             val root = content
                 ?.let { text -> runCatching { JsonParser.parseString(text).asJsonObject }.getOrNull() }
             if (content == null || root == null) {

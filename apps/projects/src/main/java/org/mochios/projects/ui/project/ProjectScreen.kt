@@ -119,6 +119,7 @@ import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
@@ -613,7 +614,7 @@ private fun ProjectContent(
     val exportSaved = stringResource(R.string.projects_export_saved)
     val exportFailed = stringResource(R.string.projects_export_failed)
     // The picker only reports where the file goes; the ViewModel writes it.
-    val saveExport = rememberFileSaveLauncher { uri ->
+    val saveExport = rememberFileSaveLauncher(MIME_ZIP) { uri ->
         if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
     }
     LaunchedEffect(uiState.pendingExport) {

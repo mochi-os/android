@@ -20,17 +20,19 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.model.User
-import org.mochios.android.files.PendingExport
+import org.mochios.android.files.MANIFEST_JSON
 import org.mochios.android.files.MIME_CSV
+import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.files.PendingExport
+import org.mochios.android.model.User
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
-import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
+import org.mochios.crm.model.FieldOption
 import org.mochios.crm.repository.CrmsRepository
 import java.io.File
 import java.time.LocalDate
@@ -929,7 +931,9 @@ class CrmViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     pendingExport = PendingExport(
                         content = data.toString(),
-                        suggestedName = repository.exportFileName(name, "crm-backup")
+                        suggestedName = repository.exportFileName(name, "crm-backup", "zip"),
+                        mimeType = MIME_ZIP,
+                        zipEntryName = MANIFEST_JSON,
                     )
                 )
             } catch (error: Exception) {
@@ -1026,7 +1030,12 @@ class CrmViewModel @Inject constructor(
     fun writeExportTo(uri: Uri) {
         val pending = _uiState.value.pendingExport ?: return
         viewModelScope.launch {
-            val ok = repository.saveTextFile(uri, pending.content)
+            val entryName = pending.zipEntryName
+            val ok = if (entryName != null) {
+                repository.saveZipFile(uri, entryName, pending.content)
+            } else {
+                repository.saveTextFile(uri, pending.content)
+            }
             _uiState.value = _uiState.value.copy(
                 pendingExport = null,
                 exportSaved = ok,

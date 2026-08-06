@@ -58,12 +58,31 @@ abstract class FileRepository(protected val fileStore: FileStore) {
         fileStore.readText(uri)
 
     /**
+     * Reads a document the user picked, unwrapping it when it is a zipped
+     * export rather than the bare file. Use this wherever a backup is read
+     * back: the user has both to hand and no reason to know which we want.
+     *
+     * @return its contents, or null when the file can't be read.
+     */
+    suspend fun readTextOrZippedFile(uri: Uri): String? =
+        fileStore.readTextOrZipped(uri)
+
+    /**
      * Writes [text] to the document the user picked.
      *
      * @return true when the file was written in full.
      */
     suspend fun saveTextFile(uri: Uri, text: String): Boolean =
         fileStore.writeText(uri, text)
+
+    /**
+     * Writes [text] to the document the user picked as a zip, under a single
+     * entry named [entryName].
+     *
+     * @return true when the file was written in full.
+     */
+    suspend fun saveZipFile(uri: Uri, entryName: String, text: String): Boolean =
+        fileStore.writeZip(uri, entryName, text)
 
     /** The picked file's real name, for labelling it back to the user. */
     suspend fun fileName(uri: Uri, fallback: String = ""): String =

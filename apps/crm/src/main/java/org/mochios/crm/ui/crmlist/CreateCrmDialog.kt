@@ -40,6 +40,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.files.MIME_JSON
+import org.mochios.android.files.MIME_ZIP
 import org.mochios.crm.R
 import org.mochios.android.R as MochiR
 
@@ -67,8 +69,11 @@ fun CreateCrmDialog(
     var backupJson by remember { mutableStateOf<String?>(null) }
     var backupName by remember { mutableStateOf<String?>(null) }
 
+    // OpenDocument, not GetContent: exports are zipped now, and only this
+    // contract takes more than one type, so both the zip and a bare .json
+    // from an older backup stay selectable.
     val backupPicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetContent()
+        contract = ActivityResultContracts.OpenDocument()
     ) { uri: Uri? ->
         if (uri != null) {
             onPickBackup(uri)
@@ -122,7 +127,7 @@ fun CreateCrmDialog(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 OutlinedButton(
-                    onClick = { backupPicker.launch("application/json") },
+                    onClick = { backupPicker.launch(arrayOf(MIME_ZIP, MIME_JSON)) },
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Icon(

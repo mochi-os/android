@@ -111,7 +111,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_CSV
-import org.mochios.android.files.MIME_JSON
+import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.ColorPicker
@@ -620,7 +620,7 @@ private fun CrmContent(
     // The picker only reports where the file goes; the ViewModel writes it.
     // A launcher's type is fixed when it is remembered, so the two exports
     // need one each, chosen by what the pending export holds.
-    val saveJson = rememberFileSaveLauncher(MIME_JSON) { uri ->
+    val saveZip = rememberFileSaveLauncher(MIME_ZIP) { uri ->
         if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
     }
     val saveCsv = rememberFileSaveLauncher(MIME_CSV) { uri ->
@@ -631,7 +631,7 @@ private fun CrmContent(
             if (pending.mimeType == MIME_CSV) {
                 saveCsv.launch(pending.suggestedName)
             } else {
-                saveJson.launch(pending.suggestedName)
+                saveZip.launch(pending.suggestedName)
             }
         }
     }

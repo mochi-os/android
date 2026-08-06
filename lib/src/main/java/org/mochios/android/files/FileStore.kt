@@ -10,9 +10,14 @@ import android.net.Uri
 import android.provider.OpenableColumns
 import android.webkit.MimeTypeMap
 import dagger.hilt.android.qualifiers.ApplicationContext
+import java.io.BufferedInputStream
 import java.io.File
 import java.io.IOException
+import java.io.InputStream
 import java.time.LocalDate
+import java.util.zip.ZipEntry
+import java.util.zip.ZipInputStream
+import java.util.zip.ZipOutputStream
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.Dispatchers
@@ -85,6 +90,51 @@ class FileStore @Inject constructor(
             false
         }
     }
+
+    /**
+     * Reads the document at [uri] as text, unwrapping it first when it is a
+     * zip.
+     *
+     * Backups are written zipped, so a file the user picks back is as likely
+     * to be the zip as the document inside it. Which one it is comes from the
+     * leading bytes rather than the name or the type the provider reports,
+     * since neither survives a trip through every file manager and mail app.
+     *
+     * @return the text, or null when the uri can't be opened, can't be read,
+     *   or is a zip holding nothing usable.
+     */
+    suspend fun readTextOrZipped(uri: Uri): String? = withContext(Dispatchers.IO) {
+        try {
+            context.contentResolver.openInputStream(uri)?.use { input ->
+                val stream = input.buffered()
+                if (isZip(stream)) unzipText(stream) else stream.reader().readText()
+            }
+        } catch (_: Exception) {
+            null
+        }
+    }
+
+    /**
+     * Writes [text] to the document at [uri] as a zip holding one entry named
+     * [entryName], replacing whatever is there.
+     *
+     * @return true when the whole write went through, false on any I/O failure.
+     */
+    suspend fun writeZip(uri: Uri, entryName: String, text: String): Boolean =
+        withContext(Dispatchers.IO) {
+            try {
+                val stream = context.contentResolver.openOutputStream(uri)
+                    ?: return@withContext false
+                ZipOutputStream(stream.buffered()).use { zip ->
+                    zip.putNextEntry(ZipEntry(entryName))
+                    zip.write(text.toByteArray())
+                    zip.closeEntry()
+                }
+                true
+            } catch (_: Exception) {
+                false
+            }
+        }
 
     /**
      * Names an export after the thing it came from, e.g.
@@ -223,6 +273,40 @@ class FileStore @Inject constructor(
 
     // ---- Internals ----
 
+    /** True when [stream] starts with a zip's local file header signature. */
+    private fun isZip(stream: BufferedInputStream): Boolean {
+        stream.mark(ZIP_MAGIC.size)
+        val header = ByteArray(ZIP_MAGIC.size)
+        val read = stream.read(header)
+        stream.reset()
+        return read == ZIP_MAGIC.size && header.contentEquals(ZIP_MAGIC)
+    }
+
+    /**
+     * The text held in a zipped export: the JSON entry, or the first real file
+     * when nothing inside ends in `.json`. Directories and the `__MACOSX`
+     * folder a Mac adds when it re-zips are skipped, so a backup that has been
+     * through a desktop still reads.
+     */
+    private fun unzipText(stream: InputStream): String? {
+        val zip = ZipInputStream(stream)
+        var fallback: String? = null
+        var entry = zip.nextEntry
+        while (entry != null) {
+            val name = entry.name
+            if (!entry.isDirectory && !name.startsWith(MAC_METADATA_DIR)) {
+                if (name.endsWith(".json", ignoreCase = true)) {
+                    return zip.readBytes().decodeToString()
+                }
+                if (fallback == null) {
+                    fallback = zip.readBytes().decodeToString()
+                }
+            }
+            entry = zip.nextEntry
+        }
+        return fallback
+    }
+
     private fun resolveName(uri: Uri, fallback: String): String {
         val resolver = context.contentResolver
         val displayName = resolver
@@ -269,6 +353,12 @@ class FileStore @Inject constructor(
 
         /** Fallback content type when a real MIME type can't be determined. */
         const val DEFAULT_MIME = "application/octet-stream"
+
+        // "PK" — the signature every zip opens with.
+        private val ZIP_MAGIC = byteArrayOf(0x50, 0x4B, 0x03, 0x04)
+
+        // Resource-fork folder a Mac adds when it re-zips an archive.
+        private const val MAC_METADATA_DIR = "__MACOSX/"
 
         // Types Android's MimeTypeMap commonly omits (mainly Office formats).
         // Kept here so a File-based upload keeps the right type instead of
