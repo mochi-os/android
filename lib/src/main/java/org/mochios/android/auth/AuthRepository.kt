@@ -201,6 +201,7 @@ class AuthRepository @Inject constructor(
         target: String,
         challenge: String,
         bearerToken: String,
+        stepUpToken: String,
     ): String {
         val resp = authApi.oauthBeginAuthorised(
             provider,
@@ -211,6 +212,7 @@ class AuthRepository @Inject constructor(
                 challenge = challenge,
                 link = true,
                 target = target,
+                token = stepUpToken,
             )
         ).unwrapRaw()
         return resp.url

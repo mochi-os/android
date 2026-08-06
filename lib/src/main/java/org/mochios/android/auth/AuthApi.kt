@@ -76,13 +76,18 @@ data class OAuthBeginRequest(
     val challenge: String,
     /** When true, server attaches the OAuth identity to the current session's
      *  user instead of starting a sign-in. Requires an authenticated Bearer
-     *  token in the request (Authorization header). */
+     *  token in the request (Authorization header) AND a step-up proof in
+     *  [token]: linking adds a way to sign in, so a session alone is not
+     *  enough. */
     val link: Boolean = false,
     /** Where the server should send the browser after a link. Currently
      *  DISCARDED for a custom scheme: core runs it through redirect_local,
      *  which keeps only paths starting with a single "/". No deep link comes
      *  back, and this client no longer listens for one. */
-    val target: String = ""
+    val target: String = "",
+    /** Step-up re-authentication proof, required by the server when [link] is
+     *  true and ignored otherwise (signing in is not a credential change). */
+    val token: String = ""
 )
 
 data class OAuthBeginResponse(

@@ -215,9 +215,13 @@ class LoginViewModel @Inject constructor(
         _newRecoveryCodes.value = null
     }
 
-    // ---------- OAuth identities (linking is not step-up gated; unlinking is) ----------
+    // ---------- OAuth identities (both directions are step-up gated) ----------
 
-    fun linkOAuth(provider: String) = mutate {
+    // Linking ADDS a way to sign in, under an identity the caller names, and it
+    // outlives every later passphrase, passkey and TOTP change - so it earns a
+    // step-up proof exactly as unlinking does. Core requires the proof on the
+    // begin request; without it the link is refused.
+    fun linkOAuth(provider: String) = requestStepUp { proof ->
         val token = sessionManager.getToken("settings")
             ?: throw RuntimeException("no settings token to authorise OAuth link")
         // The challenge goes to the server; the verifier is not stored, because
@@ -247,6 +251,7 @@ class LoginViewModel @Inject constructor(
             target = "mochi:oauth-link-return",
             challenge = challenge,
             bearerToken = token,
+            stepUpToken = proof,
         )
         _oauthLaunchUrl.value = url
     }
