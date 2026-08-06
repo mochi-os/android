@@ -258,11 +258,12 @@ fun CrmScreen(
 
     if (listUiState.showCreateDialog) {
         CreateCrmDialog(
-            templates = listUiState.templates,
             isCreating = listUiState.isCreating,
+            backupPrefill = listUiState.backupPrefill,
+            onPickBackup = { uri -> listViewModel.readBackup(uri) },
             onDismiss = { listViewModel.hideCreateDialog() },
-            onCreate = { name, description, privacy, template ->
-                listViewModel.createCrm(name, description, privacy, template)
+            onCreate = { name, privacy, backupJson ->
+                listViewModel.createCrm(name, privacy, backupJson)
             }
         )
     }

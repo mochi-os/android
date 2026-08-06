@@ -46,20 +46,15 @@ import retrofit2.http.Query
 data class ProjectListResponse(val projects: List<Project> = emptyList())
 data class ProjectResponse(val project: Project = Project())
 
-// `-/create` returns the new project. The backend may send it flat (id,
-// fingerprint, … at the top level, like objects/create) or nested under
-// `project`, so this captures both and the repository resolves whichever is set.
+// `-/create` answers with the new project's identity flat in `data`:
+// {"data": {"fingerprint": "…", "id": "…"}}, the way objects/create does.
+// The nested `project` is kept for the wrapped shape other endpoints use, and
+// the repository resolves whichever the backend sent.
 data class ProjectCreateResponse(
 
     val id: String = "",
 
     val fingerprint: String = "",
-
-    val name: String = "",
-
-    val description: String = "",
-
-    val prefix: String = "",
 
     val project: Project? = null
 )

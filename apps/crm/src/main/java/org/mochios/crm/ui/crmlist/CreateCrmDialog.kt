@@ -5,6 +5,10 @@
 
 package org.mochios.crm.ui.crmlist
 
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,18 +18,20 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,24 +41,49 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.crm.R
-import org.mochios.crm.model.Template
 import org.mochios.android.R as MochiR
 
+/**
+ * Create dialog for a CRM, optionally seeded from a backup file. There is no
+ * template step: a CRM is always created with the CRM template, and a picked
+ * backup supplies the design instead.
+ *
+ * @param backupPrefill what the ViewModel read out of the picked backup, or
+ *   null when no file has been chosen; seeds the name and payload.
+ * @param onPickBackup hands the picked file's uri to the ViewModel to read.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateCrmDialog(
-    templates: List<Template>,
     isCreating: Boolean,
+    backupPrefill: BackupPrefill?,
+    onPickBackup: (Uri) -> Unit,
     onDismiss: () -> Unit,
-    onCreate: (name: String, description: String, privacy: String, template: String?) -> Unit
+    onCreate: (name: String, privacy: String, backupJson: String?) -> Unit
 ) {
     var name by remember { mutableStateOf("") }
-    var description by remember { mutableStateOf("") }
-    var privacy by remember { mutableStateOf("private") }
-    var selectedTemplate by remember { mutableStateOf<String?>(null) }
-    var templateExpanded by remember { mutableStateOf(false) }
+    // The toggle reads "Allow anyone to search for CRM" — on means public.
+    var allowSearch by remember { mutableStateOf(true) }
+    var backupJson by remember { mutableStateOf<String?>(null) }
+    var backupName by remember { mutableStateOf<String?>(null) }
 
-    val templateNoneLabel = stringResource(R.string.crm_create_template_none)
+    val backupPicker = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.GetContent()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            onPickBackup(uri)
+        }
+    }
+
+    // Seed the fields once the ViewModel has read the picked backup.
+    LaunchedEffect(backupPrefill) {
+        backupPrefill?.let { prefill ->
+            backupJson = prefill.json
+            backupName = prefill.fileName
+            prefill.name?.let { value -> name = value }
+        }
+    }
+
     AlertDialog(
         onDismissRequest = { if (!isCreating) onDismiss() },
         title = { Text(stringResource(R.string.crm_create_title)) },
@@ -60,79 +91,56 @@ fun CreateCrmDialog(
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 OutlinedTextField(
                     value = name,
-                    onValueChange = { name = it },
+                    onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.crm_create_name)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
-                Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
-                    value = description,
-                    onValueChange = { description = it },
-                    label = { Text(stringResource(R.string.crm_create_description)) },
-                    maxLines = 3,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(12.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-                Text(stringResource(R.string.crm_create_privacy))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    RadioButton(
-                        selected = privacy == "private",
-                        onClick = { privacy = "private" }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = stringResource(R.string.crm_create_allow_search),
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(end = 16.dp)
                     )
-                    Text(stringResource(R.string.crm_create_private), modifier = Modifier.padding(end = 16.dp))
-                    RadioButton(
-                        selected = privacy == "public",
-                        onClick = { privacy = "public" }
+                    Switch(
+                        checked = allowSearch,
+                        onCheckedChange = { checked -> allowSearch = checked }
                     )
-                    Text(stringResource(R.string.crm_create_public))
                 }
 
-                if (templates.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    ExposedDropdownMenuBox(
-                        expanded = templateExpanded,
-                        onExpandedChange = { templateExpanded = it }
-                    ) {
-                        OutlinedTextField(
-                            value = templates.find { it.id == selectedTemplate }?.name ?: templateNoneLabel,
-                            onValueChange = {},
-                            readOnly = true,
-                            label = { Text(stringResource(R.string.crm_create_template)) },
-                            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = templateExpanded) },
-                            modifier = Modifier
-                                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
-                                .fillMaxWidth()
-                        )
-                        ExposedDropdownMenu(
-                            expanded = templateExpanded,
-                            onDismissRequest = { templateExpanded = false }
-                        ) {
-                            DropdownMenuItem(
-                                text = { Text(templateNoneLabel) },
-                                onClick = {
-                                    selectedTemplate = null
-                                    templateExpanded = false
-                                }
-                            )
-                            templates.forEach { tmpl ->
-                                DropdownMenuItem(
-                                    text = { Text(tmpl.name) },
-                                    onClick = {
-                                        selectedTemplate = tmpl.id
-                                        templateExpanded = false
-                                    }
-                                )
-                            }
-                        }
-                    }
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text = stringResource(R.string.crm_create_import_backup),
+                    style = MaterialTheme.typography.titleSmall
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                OutlinedButton(
+                    onClick = { backupPicker.launch("application/json") },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Icon(
+                        Icons.Default.UploadFile,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = Modifier.size(8.dp))
+                    Text(backupName ?: stringResource(R.string.crm_create_upload_json))
                 }
             }
         },
         confirmButton = {
             TextButton(
-                onClick = { onCreate(name, description, privacy, selectedTemplate) },
+                onClick = {
+                    val privacy = if (allowSearch) "public" else "private"
+                    onCreate(name, privacy, backupJson)
+                },
                 enabled = name.isNotBlank() && !isCreating
             ) {
                 if (isCreating) {

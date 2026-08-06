@@ -76,7 +76,13 @@ class CrmsRepository @Inject constructor(
         description: String? = null,
         privacy: String = "private",
         template: String? = null
-    ): Crm = api.createCrm(name, description, privacy, template).unwrap().crm
+    ): Crm {
+        val r = api.createCrm(name, description, privacy, template).unwrap()
+        // Prefer the nested crm when the backend sends one; otherwise build it
+        // from the flat id and fingerprint. Only the identity comes back here —
+        // callers reload the list for the rest.
+        return r.crm ?: Crm(id = r.id, fingerprint = r.fingerprint)
+    }
 
     suspend fun getTemplates(): List<Template> =
         api.getTemplates().unwrap().templates
@@ -291,6 +297,17 @@ class CrmsRepository @Inject constructor(
         templateVersion: Int? = null
     ) {
         api.importDesign(crmId, data, template, templateVersion).unwrap()
+    }
+
+    /** Restores the objects held in a backup file, uploaded as a JSON part. */
+    suspend fun importData(crmId: String, backupJson: String) {
+        val part = fileStore.bytesPart(
+            field = "file",
+            fileName = "import.json",
+            mimeType = "application/json",
+            bytes = backupJson.toByteArray()
+        )
+        api.importData(crmId, part).unwrap()
     }
 
     // ---- Views ----

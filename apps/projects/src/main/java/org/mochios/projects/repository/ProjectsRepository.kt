@@ -84,15 +84,10 @@ class ProjectsRepository @Inject constructor(
         template: String? = null
     ): Project {
         val r = api.createProject(name, description, prefix, privacy, template).unwrap()
-        // Prefer the nested project when the backend sends one; otherwise build it
-        // from the flat top-level fields.
-        return r.project ?: Project(
-            id = r.id,
-            fingerprint = r.fingerprint,
-            name = r.name,
-            description = r.description,
-            prefix = r.prefix
-        )
+        // Prefer the nested project when the backend sends one; otherwise build
+        // it from the flat id and fingerprint. Only the identity comes back
+        // here — callers reload the list for the rest.
+        return r.project ?: Project(id = r.id, fingerprint = r.fingerprint)
     }
 
     suspend fun getTemplates(): List<Template> =

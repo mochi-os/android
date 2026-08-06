@@ -39,6 +39,19 @@ import retrofit2.http.Query
 // Response wrappers
 data class CrmListResponse(@SerializedName("crms") val crms: List<Crm> = emptyList())
 data class CrmResponse(val crm: Crm = Crm())
+
+// `-/create` answers with the new CRM's identity flat in `data`:
+// {"data": {"fingerprint": "…", "id": "…"}}, the way objects/create does.
+// The nested `crm` is kept for the wrapped shape other endpoints use, and
+// the repository resolves whichever the backend sent.
+data class CrmCreateResponse(
+
+    val id: String = "",
+
+    val fingerprint: String = "",
+
+    val crm: Crm? = null
+)
 data class CrmInfoResponse(
     val crm: Crm = Crm(),
     val classes: List<CrmClass> = emptyList(),
@@ -134,7 +147,7 @@ interface CrmsApi {
         @Field("description") description: String?,
         @Field("privacy") privacy: String,
         @Field("template") template: String? // contract-ok: templates applied via design-import, not create
-    ): Response<ApiResponse<CrmResponse>>
+    ): Response<ApiResponse<CrmCreateResponse>>
 
     @GET("-/templates")
     suspend fun getTemplates(): Response<ApiResponse<TemplateListResponse>>
@@ -385,6 +398,15 @@ interface CrmsApi {
         @Field("data") data: String?,
         @Field("template") template: String?,
         @Field("template_version") templateVersion: Int?
+    ): Response<ApiResponse<SuccessResponse>>
+
+    // ---- Data: Import ----
+
+    @Multipart
+    @POST("{crmId}/-/data/import")
+    suspend fun importData(
+        @Path("crmId") crmId: String,
+        @Part file: MultipartBody.Part
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Views ----
