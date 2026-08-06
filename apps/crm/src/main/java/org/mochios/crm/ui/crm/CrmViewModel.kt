@@ -31,7 +31,11 @@ import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.repository.CrmsRepository
 import java.io.File
+import java.time.LocalDate
 import javax.inject.Inject
+
+/** Seconds in a day, for turning an ISO date into an epoch-second sort key. */
+private const val SECONDS_PER_DAY = 86_400L
 
 data class CrmUiState(
     val crmDetails: CrmDetails? = null,
@@ -373,25 +377,27 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Sort field options available for the current view. Matches the web bar:
-     * built-in fields plus class fields whose flags include "sort". When a view
-     * filters to specific classes, only those classes' fields are offered.
+     * Sort field options available for the current view: every field flagged
+     * "sort", across all of the CRM's classes, matching the web sort menu.
+     *
+     * Order comes from the info response's own `fields` map — its keys, then
+     * each class's field list — not from the `classes` array, which arrives in
+     * a different order and put the wrong class's fields first.
      */
     fun getSortFieldOptions(): List<Pair<String, String>> {
         val details = _uiState.value.crmDetails ?: return emptyList()
-        val view = getActiveView()
-        val classIds = if (view != null && view.classes.isNotEmpty()) {
-            view.classes
-        } else {
-            details.classes.map { it.id }
-        }
-        val seen = mutableSetOf<String>()
+        val seenIds = mutableSetOf<String>()
+        val seenNames = mutableSetOf<String>()
         val result = mutableListOf<Pair<String, String>>()
-        for (classId in classIds) {
-            val fields = details.fields[classId] ?: continue
+        for ((_, fields) in details.fields) {
             for (field in fields) {
                 if (!field.isSortable) continue
-                if (!seen.add(field.id)) continue
+                if (!seenIds.add(field.id)) continue
+                // Classes routinely repeat a field name ("Name", "Due"). One
+                // chip covers all of them — the comparator resolves each
+                // object's own same-named field, so the twins sort together
+                // instead of crowding the sheet with identical chips.
+                if (!seenNames.add(field.name.lowercase())) continue
                 result += "field:${field.id}" to field.name
             }
         }
@@ -765,8 +771,9 @@ class CrmViewModel @Inject constructor(
     /**
      * Sort objects by the active sort field/direction. Mirrors the web logic
      * in `web/src/features/board/components/board-container.tsx::sortObjects`
-     * — built-in numeric fields compare numerically, custom fields compare as
-     * strings (case-insensitive).
+     * — built-in numeric fields compare numerically. Custom fields compare by
+     * their type: numbers as numbers, dates as dates, enumerated values by
+     * option rank, everything else as case-insensitive text.
      */
     fun sortObjects(objects: List<CrmObject>): List<CrmObject> {
         val field = getActiveSortField()
@@ -794,11 +801,95 @@ class CrmViewModel @Inject constructor(
             })
         } else {
             val fieldId = if (field.startsWith("field:")) field.substring(6) else field
+            val sortField = getFieldById(fieldId)
+            val optionsCache = mutableMapOf<String, List<FieldOption>>()
+            val optionFor = { id: String, value: String ->
+                optionsCache.getOrPut(id) { getAllOptionsForField(id) }
+                    .find { option -> option.id == value }
+            }
             objects.sortedWith(Comparator { a, b ->
-                val av = a.stringValue(fieldId).lowercase()
-                val bv = b.stringValue(fieldId).lowercase()
-                av.compareTo(bv) * multiplier
+                val aId = sortFieldIdFor(a, sortField, fieldId)
+                val bId = sortFieldIdFor(b, sortField, fieldId)
+                val av = a.stringValue(aId)
+                val bv = b.stringValue(bId)
+                // Empty values sink to the bottom whichever way the sort runs.
+                // Flipping to descending is meant to bring the far end of the
+                // data into view, not a wall of objects that never filled the
+                // field in.
+                if (av.isBlank() || bv.isBlank()) {
+                    return@Comparator when {
+                        av.isBlank() && bv.isBlank() -> 0
+                        av.isBlank() -> 1
+                        else -> -1
+                    }
+                }
+                val comparison = when (sortField?.fieldtype) {
+                    "number" -> {
+                        val an = av.toDoubleOrNull()
+                        val bn = bv.toDoubleOrNull()
+                        if (an != null && bn != null) {
+                            an.compareTo(bn)
+                        } else {
+                            av.compareTo(bv, ignoreCase = true)
+                        }
+                    }
+                    "date" -> {
+                        val ad = dateSortKey(av)
+                        val bd = dateSortKey(bv)
+                        if (ad != null && bd != null) {
+                            ad.compareTo(bd)
+                        } else {
+                            av.compareTo(bv, ignoreCase = true)
+                        }
+                    }
+                    // Enumerated values are stored as opaque option ids, so
+                    // compare the options themselves: their rank is the order
+                    // the designer gave them (the board's column order), which
+                    // beats alphabetising a pipeline.
+                    "enumerated" -> {
+                        val ao = optionFor(aId, av)
+                        val bo = optionFor(bId, bv)
+                        if (ao != null && bo != null) {
+                            ao.rank.compareTo(bo.rank)
+                        } else {
+                            (ao?.name ?: av).compareTo(bo?.name ?: bv, ignoreCase = true)
+                        }
+                    }
+                    else -> av.compareTo(bv, ignoreCase = true)
+                }
+                comparison * multiplier
             })
+        }
+    }
+
+    /**
+     * Field id to read on [obj] when sorting by [sortField]. The sheet offers
+     * one chip per field name, so an object of another class carries its own
+     * same-named field — fall back to that twin rather than reading a blank
+     * and dumping every object of that class at the end of the list.
+     *
+     * @param fallbackId Used when the sort key names no field the CRM knows.
+     */
+    private fun sortFieldIdFor(obj: CrmObject, sortField: CrmField?, fallbackId: String): String {
+        if (sortField == null) return fallbackId
+        if (obj.values.containsKey(sortField.id)) return sortField.id
+        val fields = _uiState.value.crmDetails?.fields?.get(obj.objectClass) ?: return sortField.id
+        val twin = fields.find { candidate ->
+            candidate.name.equals(sortField.name, ignoreCase = true)
+        }
+        return twin?.id ?: sortField.id
+    }
+
+    /**
+     * Epoch seconds for a date field value, which the server stores either as
+     * epoch seconds or as an ISO date. Null when it is neither.
+     */
+    private fun dateSortKey(value: String): Long? {
+        value.toLongOrNull()?.let { seconds -> return seconds }
+        return try {
+            LocalDate.parse(value).toEpochDay() * SECONDS_PER_DAY
+        } catch (_: Exception) {
+            null
         }
     }
 
