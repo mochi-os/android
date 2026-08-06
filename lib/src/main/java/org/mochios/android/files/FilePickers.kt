@@ -56,6 +56,23 @@ data class PendingExport(
     val content: String? = null,
 )
 
+/**
+ * An export that has been written, and where it went.
+ *
+ * Held in ViewModel state so the screen can offer the finished file to the
+ * share sheet. The destination is the document the user picked, which the app
+ * holds a read grant for, so it can be passed on to whatever they share to.
+ *
+ * @property uri the document that was written.
+ * @property mimeType what it holds, so the sheet offers sensible targets.
+ * @property name the file's name, for the sheet's content preview.
+ */
+data class SavedExport(
+    val uri: Uri,
+    val mimeType: String,
+    val name: String,
+)
+
 /** Opens the system save dialog. See [rememberFileSaveLauncher]. */
 fun interface FileSaveLauncher {
 

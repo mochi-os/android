@@ -23,6 +23,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
+import org.mochios.android.files.SavedExport
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.FieldOption
@@ -68,7 +69,8 @@ data class ProjectUiState(
     val isExporting: Boolean = false,
     /** Export data fetched and waiting for the user to pick a destination. */
     val pendingExport: PendingExport? = null,
-    val exportSaved: Boolean = false,
+    /** An export that landed, ready to be offered to the share sheet. */
+    val savedExport: SavedExport? = null,
     val exportFailed: Boolean = false,
     val selectedObjectId: String? = null,
     /**
@@ -289,7 +291,11 @@ class ProjectViewModel @Inject constructor(
             }
             _uiState.value = _uiState.value.copy(
                 isExporting = false,
-                exportSaved = ok,
+                savedExport = if (ok) {
+                    SavedExport(uri, pending.mimeType, pending.suggestedName)
+                } else {
+                    null
+                },
                 exportFailed = !ok
             )
         }
@@ -301,7 +307,7 @@ class ProjectViewModel @Inject constructor(
     }
 
     fun clearExportResult() {
-        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
+        _uiState.value = _uiState.value.copy(savedExport = null, exportFailed = false)
     }
 
     /**

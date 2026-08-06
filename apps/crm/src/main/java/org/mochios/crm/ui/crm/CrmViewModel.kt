@@ -23,6 +23,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
+import org.mochios.android.files.SavedExport
 import org.mochios.android.model.User
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
@@ -84,7 +85,8 @@ data class CrmUiState(
     val isExporting: Boolean = false,
     /** An export waiting for the user to say where it goes. */
     val pendingExport: PendingExport? = null,
-    val exportSaved: Boolean = false,
+    /** An export that landed, ready to be offered to the share sheet. */
+    val savedExport: SavedExport? = null,
     val exportFailed: Boolean = false,
 )
 
@@ -1055,7 +1057,11 @@ class CrmViewModel @Inject constructor(
             }
             _uiState.value = _uiState.value.copy(
                 isExporting = false,
-                exportSaved = ok,
+                savedExport = if (ok) {
+                    SavedExport(uri, pending.mimeType, pending.suggestedName)
+                } else {
+                    null
+                },
                 exportFailed = !ok
             )
         }
@@ -1067,7 +1073,7 @@ class CrmViewModel @Inject constructor(
     }
 
     fun clearExportResult() {
-        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
+        _uiState.value = _uiState.value.copy(savedExport = null, exportFailed = false)
     }
 
     fun getCardFields(classId: String): List<CrmField> {

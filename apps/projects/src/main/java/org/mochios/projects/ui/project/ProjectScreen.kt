@@ -5,6 +5,7 @@
 
 package org.mochios.projects.ui.project
 
+import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
@@ -120,6 +121,7 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.files.SavedExport
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
@@ -622,10 +624,16 @@ private fun ProjectContent(
             saveExport.launch(pending.suggestedName)
         }
     }
-    LaunchedEffect(uiState.exportSaved, uiState.exportFailed) {
-        if (uiState.exportSaved || uiState.exportFailed) {
-            val message = if (uiState.exportSaved) exportSaved else exportFailed
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+    // A saved export goes straight to the share sheet. The file is already on
+    // disk either way, so backing out of the sheet costs the user nothing.
+    LaunchedEffect(uiState.savedExport, uiState.exportFailed) {
+        val saved = uiState.savedExport
+        if (saved != null) {
+            Toast.makeText(context, exportSaved, Toast.LENGTH_SHORT).show()
+            shareExportFile(context, saved)
+            viewModel.clearExportResult()
+        } else if (uiState.exportFailed) {
+            Toast.makeText(context, exportFailed, Toast.LENGTH_SHORT).show()
             viewModel.clearExportResult()
         }
     }
@@ -1047,6 +1055,28 @@ private fun AddColumnDialog(
 }
 
 /** Opens the system share sheet with the project's [link]. */
+/**
+ * Opens the system share sheet with a finished export.
+ *
+ * The uri is the document the picker handed back, so the grant has to travel
+ * with the intent for the receiving app to read it — as a flag, and as
+ * [ClipData], which is what makes the grant stick on the targets that ignore
+ * `EXTRA_STREAM` alone.
+ */
+private fun shareExportFile(context: Context, export: SavedExport) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = export.mimeType
+        putExtra(Intent.EXTRA_STREAM, export.uri)
+        // Names the sheet's content preview — see shareProjectLink.
+        putExtra(Intent.EXTRA_TITLE, export.name)
+        clipData = ClipData.newRawUri(export.name, export.uri)
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    }
+    val chooser = Intent.createChooser(intent, export.name)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    context.startActivity(chooser)
+}
+
 private fun shareProjectLink(context: Context, link: String, title: String) {
     val intent = Intent(Intent.ACTION_SEND).apply {
         type = "text/plain"
