@@ -105,7 +105,7 @@ fun BoardCard(
     val borderColor = if (borderFieldId != null) {
         val borderValue = obj.stringValue(borderFieldId)
         if (borderValue.isNotBlank()) {
-            val options = viewModel.getAllOptionsForField(borderFieldId)
+            val options = viewModel.getOptionsForObject(obj.objectClass, borderFieldId)
             val option = options.find { it.id == borderValue }
             if (option != null && option.colour.isNotBlank()) {
                 parseColor(option.colour)
@@ -284,7 +284,10 @@ fun BoardCard(
                                 val value = obj.stringValue(field.id)
                                 when (field.fieldtype) {
                                     "enumerated" -> {
-                                        val options = viewModel.getAllOptionsForField(field.id)
+                                        val options = viewModel.getOptionsForObject(
+                                            obj.objectClass,
+                                            field.id,
+                                        )
                                         val opt = options.find { it.id == value }
                                         Row(verticalAlignment = Alignment.CenterVertically) {
                                             if (opt != null && opt.colour.isNotBlank()) {

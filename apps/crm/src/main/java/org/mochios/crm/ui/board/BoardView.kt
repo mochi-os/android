@@ -128,27 +128,42 @@ fun BoardView(
         ?: crmDetails?.classes?.firstOrNull()?.id?.takeIf { id -> id.isNotBlank() }
 
     val columnFieldId = view.columns
-    val columnOptions = viewModel.getAllOptionsForField(columnFieldId)
+    // Drawn from every class the view shows, not just the first one that
+    // defines the field: each class holds its own options under a shared field
+    // id, and a column missing from the board leaves its cards in Unassigned.
+    val columnOptions = viewModel.getOptionsForClasses(columnFieldId, view.classes)
     val rowFieldId = view.rows.takeIf { it.isNotBlank() }
-    val rowOptions = rowFieldId?.let { viewModel.getAllOptionsForField(it) } ?: emptyList()
+    val rowOptions = rowFieldId?.let { fieldId ->
+        viewModel.getOptionsForClasses(fieldId, view.classes)
+    } ?: emptyList()
     val borderFieldId = view.border.takeIf { it.isNotBlank() }
 
-    // Build parent-child map from all objects
-    val childrenByParent = remember(objects) {
+    // The objects the view admits. Everything below — nesting, top-level
+    // cards, drop ranks — is computed against this set rather than the whole
+    // crm, the way the tree does it. A deal parented to a company on a
+    // deals-only board is a card in its own right here: measuring its parent
+    // against the unfiltered list made it neither a top-level card nor a
+    // nested one, and emptied the board.
+    val classObjects = objects.filter { obj ->
+        view.classes.isEmpty() || obj.objectClass in view.classes
+    }
+    val classObjectIds = classObjects.map { obj -> obj.id }.toSet()
+
+    // Build parent-child map from the objects the view shows
+    val childrenByParent = remember(classObjects) {
         val map = mutableMapOf<String, MutableList<CrmObject>>()
-        val objectIds = objects.map { it.id }.toSet()
-        for (obj in objects) {
-            if (obj.parent.isNotBlank() && obj.parent in objectIds) {
+        for (obj in classObjects) {
+            if (obj.parent.isNotBlank() && obj.parent in classObjectIds) {
                 map.getOrPut(obj.parent) { mutableListOf() }.add(obj)
             }
         }
         map
     }
 
-    // Only show top-level objects (no parent in this set) that match the view's class filter
-    val filteredObjects = objects.filter { obj ->
-        (obj.parent.isBlank() || obj.parent !in objects.map { it.id }.toSet()) &&
-            (view.classes.isEmpty() || obj.objectClass in view.classes)
+    // Only show top-level objects — those whose parent the view doesn't show,
+    // so they have no card to nest inside.
+    val filteredObjects = classObjects.filter { obj ->
+        obj.parent.isBlank() || obj.parent !in classObjectIds
     }
 
     if (columnOptions.isEmpty()) {

@@ -599,14 +599,50 @@ class CrmViewModel @Inject constructor(
         }
     }
 
-    fun getAllOptionsForField(fieldId: String): List<FieldOption> {
+    /**
+     * Every option [fieldId] can take across [classIds], in class order and
+     * deduplicated by option id.
+     *
+     * Options belong to a class, not to a field id, and classes share field
+     * ids — a board that mixes classes needs a column per distinct option,
+     * not just the ones whichever class came first in the response defines.
+     *
+     * @param classIds the classes to draw from; empty means every class the
+     *   CRM defines.
+     */
+    fun getOptionsForClasses(fieldId: String, classIds: List<String>): List<FieldOption> {
         val details = _uiState.value.crmDetails ?: return emptyList()
-        for ((_, classOptions) in details.options) {
-            val options = classOptions[fieldId]
-            if (!options.isNullOrEmpty()) return options
+        val ids = classIds.ifEmpty { details.classes.map { crmClass -> crmClass.id } }
+        val seen = mutableSetOf<String>()
+        val result = mutableListOf<FieldOption>()
+        for (classId in ids) {
+            for (option in details.options[classId]?.get(fieldId).orEmpty()) {
+                if (seen.add(option.id)) {
+                    result += option
+                }
+            }
         }
-        return emptyList()
+        return result
     }
+
+    /**
+     * Options for [fieldId] as an object of [classId] can take them. An
+     * object's stored value is an id from its own class's set, so resolving
+     * it against another class's set is what renders a raw id in place of the
+     * option's name and colour.
+     *
+     * Falls back to every class's options when the class defines none of its
+     * own, which keeps a value set before the class was reshaped readable.
+     */
+    fun getOptionsForObject(classId: String, fieldId: String): List<FieldOption> {
+        val own = getOptionsForField(classId, fieldId)
+        if (own.isNotEmpty()) return own
+        return getAllOptionsForField(fieldId)
+    }
+
+    /** Every option [fieldId] can take, across all of the CRM's classes. */
+    fun getAllOptionsForField(fieldId: String): List<FieldOption> =
+        getOptionsForClasses(fieldId, emptyList())
 
     fun reparentObject(objectId: String, newParentId: String) {
         viewModelScope.launch {
@@ -813,10 +849,14 @@ class CrmViewModel @Inject constructor(
         } else {
             val fieldId = if (field.startsWith("field:")) field.substring(6) else field
             val sortField = getFieldById(fieldId)
-            val optionsCache = mutableMapOf<String, List<FieldOption>>()
-            val optionFor = { id: String, value: String ->
-                optionsCache.getOrPut(id) { getAllOptionsForField(id) }
-                    .find { option -> option.id == value }
+            // Keyed by class as well as field: two classes sharing a field id
+            // hold their own options under it, and an object's value only
+            // means anything against its own class's set.
+            val optionsCache = mutableMapOf<Pair<String, String>, List<FieldOption>>()
+            val optionFor = { obj: CrmObject, id: String, value: String ->
+                optionsCache.getOrPut(obj.objectClass to id) {
+                    getOptionsForObject(obj.objectClass, id)
+                }.find { option -> option.id == value }
             }
             objects.sortedWith(Comparator { a, b ->
                 val aId = sortFieldIdFor(a, sortField, fieldId)
@@ -858,8 +898,8 @@ class CrmViewModel @Inject constructor(
                     // the designer gave them (the board's column order), which
                     // beats alphabetising a pipeline.
                     "enumerated" -> {
-                        val ao = optionFor(aId, av)
-                        val bo = optionFor(bId, bv)
+                        val ao = optionFor(a, aId, av)
+                        val bo = optionFor(b, bId, bv)
                         if (ao != null && bo != null) {
                             ao.rank.compareTo(bo.rank)
                         } else {
@@ -1040,7 +1080,7 @@ class CrmViewModel @Inject constructor(
         if (values.isEmpty()) return ""
         return values.joinToString(", ") { value ->
             when (field.fieldtype) {
-                "enumerated" -> getAllOptionsForField(field.id)
+                "enumerated" -> getOptionsForObject(obj.objectClass, field.id)
                     .find { option -> option.id == value }?.name ?: value
                 "user" -> _uiState.value.people
                     .find { person -> person.id == value }?.name ?: value
