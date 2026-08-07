@@ -98,25 +98,33 @@ fun CreateObjectDialog(
     val presetParentObj = remember(presetParent, objects) {
         presetParent?.let { p -> objects.firstOrNull { it.id == p } }
     }
-    val initialClassId = remember(presetParentObj, activeView, classes, hierarchy) {
-        when {
-            // If pre-selected from "Add child", pick a class that permits
-            // the parent's class as a parent (first match).
-            presetParentObj != null -> {
-                classes.firstOrNull { cls ->
-                    (hierarchy[cls.id] ?: emptyList()).contains(presetParentObj.objectClass)
-                }?.id ?: classes.firstOrNull()?.id ?: ""
+    val initialClassId = remember(presetParentObj, activeView, classes, hierarchy, objects) {
+        // A class the design gives parent classes cannot be created until an
+        // object exists to parent it, and the dialog has nothing but the
+        // blocked message to show for one. So the opening class is the first
+        // that can actually be created, not simply the first on offer.
+        fun creatable(classId: String): Boolean {
+            val parentClasses = (hierarchy[classId] ?: emptyList()).filter { id -> id.isNotBlank() }
+            return parentClasses.isEmpty() || objects.any { obj -> obj.objectClass in parentClasses }
+        }
+        val preferred = when {
+            // If pre-selected from "Add child", the classes that permit the
+            // parent's class as a parent.
+            presetParentObj != null -> classes.filter { cls ->
+                (hierarchy[cls.id] ?: emptyList()).contains(presetParentObj.objectClass)
             }
             // The view's own classes, but only ones the CRM still defines. A
             // view that names a deleted class used to hand its id straight
             // through: Create looked enabled, the type box was blank, no fields
             // rendered, and the post failed on a class the server never had.
-            activeView != null && activeView.classes.isNotEmpty() -> {
-                activeView.classes.firstOrNull { id -> classes.any { cls -> cls.id == id } }
-                    ?: classes.firstOrNull()?.id ?: ""
-            }
-            else -> classes.firstOrNull()?.id ?: ""
+            activeView != null && activeView.classes.isNotEmpty() ->
+                activeView.classes.mapNotNull { id -> classes.find { cls -> cls.id == id } }
+            else -> emptyList()
         }
+        // What the caller asked for first, every class after it as the fallback.
+        val ordered = preferred + classes
+        val chosen = ordered.firstOrNull { cls -> creatable(cls.id) } ?: ordered.firstOrNull()
+        chosen?.id ?: ""
     }
     var selectedClassId by remember { mutableStateOf(initialClassId) }
     var classExpanded by remember { mutableStateOf(false) }
@@ -139,6 +147,17 @@ fun CreateObjectDialog(
         mutableStateOf(presetParent.takeIf { presetParentObj != null })
     }
     var parentExpanded by remember { mutableStateOf(false) }
+
+    // The picker offers no "none" entry, so a child object always names its
+    // parent. Nothing selected - the dialog just opened, or changing class
+    // cleared a parent the new class cannot take - falls back to the first
+    // candidate, the one the picker lists at the top.
+    LaunchedEffect(selectedClassId, parentCandidates) {
+        val stillValid = parentCandidates.any { candidate -> candidate.id == selectedParentId }
+        if (!stillValid) {
+            selectedParentId = parentCandidates.firstOrNull()?.id
+        }
+    }
 
     // Per-field values entered in the dialog, keyed by field id. The title
     // field's value is sent as the object's title on create; the rest are
@@ -201,6 +220,38 @@ fun CreateObjectDialog(
             classOptions[field.id].orEmpty().isEmpty()
     }
 
+    // The selected class is a child type - the design gives it parent classes -
+    // and nothing exists to parent it, so no create can succeed. Every field
+    // below would be busywork, so the dialog holds the message alone: Create is
+    // dead and Cancel is the way out.
+    val blockedNoParent = allowedParentClasses.any { id -> id.isNotBlank() } &&
+        parentCandidates.isEmpty()
+
+    if (blockedNoParent) {
+        AlertDialog(
+            onDismissRequest = onDismiss,
+            title = { Text(stringResource(R.string.crm_create_object_title)) },
+            text = {
+                Text(
+                    text = stringResource(R.string.crm_create_blocked_no_parents),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {}, enabled = false) {
+                    Text(stringResource(R.string.crm_create_action))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = onDismiss) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
+            }
+        )
+        return
+    }
+
     AlertDialog(
         onDismissRequest = { if (!isCreating) onDismiss() },
         title = { Text(stringResource(R.string.crm_create_object_title)) },
@@ -254,9 +305,9 @@ fun CreateObjectDialog(
                 }
 
                 // Parent picker — only shown when the selected class has
-                // allowed parent classes per crm.hierarchy. "None" is
-                // always an option so root-level objects can still be
-                // created from the dialog.
+                // allowed parent classes per crm.hierarchy. Every entry is a
+                // real object: a class the design gives parent classes is a
+                // child type, so creating one at the root is not on offer.
                 if (parentCandidates.isNotEmpty()) {
                     val selectedParentLabel = selectedParentId?.let { id ->
                         objects.firstOrNull { it.id == id }?.let { parentLabel(it) } ?: untitled
@@ -279,13 +330,6 @@ fun CreateObjectDialog(
                             expanded = parentExpanded,
                             onDismissRequest = { parentExpanded = false }
                         ) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.crm_create_object_parent_none)) },
-                                onClick = {
-                                    selectedParentId = null
-                                    parentExpanded = false
-                                }
-                            )
                             parentCandidates.forEach { p ->
                                 DropdownMenuItem(
                                     text = { Text(parentLabel(p)) },
