@@ -109,6 +109,15 @@ class CrmViewModel @Inject constructor(
     private val _shareLink = MutableSharedFlow<String>()
     val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
 
+    /**
+     * Failures from an action taken while the CRM is already on screen, for
+     * the screen to surface as a toast. [CrmUiState.error] cannot carry these:
+     * it only renders when the CRM itself failed to load, so a create that the
+     * server rejected left the dialog sitting open with nothing said.
+     */
+    private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
+    val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
+
     private var wsSubscriptionId: String? = null
 
     init {
@@ -491,10 +500,10 @@ class CrmViewModel @Inject constructor(
                 )
                 refreshObjects()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isCreatingObject = false,
-                    error = e.toMochiError()
-                )
+                // The dialog stays open so the entered values survive a retry;
+                // the toast is what says why Create did nothing.
+                _uiState.value = _uiState.value.copy(isCreatingObject = false)
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }

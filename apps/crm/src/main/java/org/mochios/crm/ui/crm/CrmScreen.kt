@@ -616,6 +616,14 @@ private fun CrmContent(
         }
     }
 
+    // A rejected create is invisible otherwise: the dialog just sits there
+    // with the spinner gone. Say what the server said.
+    LaunchedEffect(viewModel) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
+        }
+    }
+
     val exportSaved = stringResource(R.string.crm_export_saved)
     val exportFailed = stringResource(R.string.crm_export_failed)
     // The picker only reports where the file goes; the ViewModel writes it.
