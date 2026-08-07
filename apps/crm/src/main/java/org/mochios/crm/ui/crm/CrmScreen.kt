@@ -1008,13 +1008,6 @@ private fun CrmContent(
             // refreshes — so this must not pre-clear the selection it needs.
             onDeleteObject = { viewModel.deleteObject(uiState.selectedObjectId!!) },
             onNavigateToObject = { id -> viewModel.selectObject(id) },
-            onAddChild = { parentId ->
-                // Close the sheet, then open the create dialog with the
-                // parent pre-selected. The dialog reads crm.hierarchy
-                // and seeds the class to one that permits this parent.
-                viewModel.selectObject(null)
-                viewModel.showCreateObjectDialog(parent = parentId)
-            },
         )
     }
 

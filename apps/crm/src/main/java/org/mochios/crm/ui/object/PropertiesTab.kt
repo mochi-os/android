@@ -39,7 +39,6 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
@@ -83,7 +82,6 @@ fun PropertiesTab(
      * whole class in rank order.
      */
     viewFieldIds: List<String> = emptyList(),
-    onAddChild: () -> Unit = {},
     onNavigateToObject: (String) -> Unit = {},
     crmId: String = "",
 ) {
@@ -93,11 +91,6 @@ fun PropertiesTab(
     val canWrite = canWriteAccess(uiState.access)
     val titleFieldId = crmDetails.classes.find { cls -> cls.id == obj.objectClass }?.title
         .orEmpty()
-    // "Can this object have children?" — true when at least one class
-    // lists obj.objectClass in its allowed parent classes.
-    val canHaveChildren = remember(crmDetails.hierarchy, obj.objectClass) {
-        crmDetails.hierarchy.any { (_, parents) -> obj.objectClass in parents }
-    }
     // Every field the class defines, the same set the create dialog offers: a
     // field the view leaves out is still the object's, and the sheet is where
     // it gets edited. The view's pinned fields lead, in the order it lists
@@ -176,27 +169,6 @@ fun PropertiesTab(
                 }
                 Spacer(modifier = Modifier.height(12.dp))
                 parentPending = false
-            }
-        }
-
-        // "Add child" affordance — shown when this object's class is
-        // listed as an allowed parent in any other class's hierarchy,
-        // and the user has write access. Tap routes through CrmScreen
-        // to open CreateObjectDialog with parent pre-selected to this
-        // object's id.
-        if (canHaveChildren && canWrite) {
-            Spacer(modifier = Modifier.height(8.dp))
-            OutlinedButton(
-                onClick = onAddChild,
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Icon(
-                    Icons.Default.Add,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp),
-                )
-                Spacer(modifier = Modifier.size(8.dp))
-                Text(stringResource(R.string.crm_add_child))
             }
         }
 

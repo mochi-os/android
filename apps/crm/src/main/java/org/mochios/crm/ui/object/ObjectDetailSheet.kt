@@ -62,8 +62,8 @@ fun ObjectDetailSheet(
     crmDetails: CrmDetails,
     initialObject: org.mochios.crm.model.CrmObject? = null,
     /**
-     * Field ids the active view pins, in the order it lists them. When empty
-     * the Properties tab falls back to every field of the object's class.
+     * Field ids the active view pins, in the order it lists them. The
+     * Properties tab leads with these and follows with the rest of the class.
      */
     viewFieldIds: List<String> = emptyList(),
     onDismiss: () -> Unit,
@@ -74,13 +74,6 @@ fun ObjectDetailSheet(
      */
     onDeleteObject: () -> Unit,
     onNavigateToObject: (String) -> Unit = {},
-    /**
-     * Invoked when the user taps "Add child" inside the PropertiesTab.
-     * The caller closes the sheet and opens CreateObjectDialog with the
-     * given parent pre-selected. Falls back to a no-op so embedded uses
-     * (e.g. tests) don't have to wire it.
-     */
-    onAddChild: (parent: String) -> Unit = {},
     viewModel: ObjectDetailViewModel = hiltViewModel()
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -257,7 +250,6 @@ fun ObjectDetailSheet(
                             crmDetails = crmDetails,
                             viewModel = viewModel,
                             viewFieldIds = viewFieldIds,
-                            onAddChild = { onAddChild(obj.id) },
                             onNavigateToObject = onNavigateToObject,
                             crmId = crmId,
                         )
