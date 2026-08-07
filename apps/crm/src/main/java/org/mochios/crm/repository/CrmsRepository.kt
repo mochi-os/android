@@ -180,8 +180,11 @@ class CrmsRepository @Inject constructor(
             CreateObjectRequest(classId = classId, title = title, parent = parent)
         ).unwrap()
 
-    suspend fun getObject(crmId: String, objectId: String): CrmObject =
-        api.getObject(crmId, objectId).unwrap()
+    suspend fun getObject(crmId: String, objectId: String): CrmObject {
+        val response = api.getObject(crmId, objectId).unwrap()
+        // Values arrive beside the object, not within it.
+        return response.`object`.copy(values = response.values)
+    }
 
     suspend fun updateObject(crmId: String, objectId: String, parent: String? = null) {
         api.updateObject(crmId, objectId, parent).unwrap()

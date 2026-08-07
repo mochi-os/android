@@ -70,6 +70,22 @@ data class ObjectListResponse(
     val objects: List<CrmObject> = emptyList(),
     val watched: List<String> = emptyList(),
 )
+/**
+ * The single-object endpoint's payload. The object carries only its own
+ * columns — class, parent, timestamps — while its field values ride alongside
+ * as a sibling map, so the two are stitched back together on the way out.
+ *
+ * Deserialising this envelope straight into a [CrmObject] is what left the
+ * detail sheet blank: nothing matched, so the object came back on its defaults
+ * with no class, and a class with no fields renders no properties.
+ *
+ * The payload also carries `incoming`, `outgoing`, `watching` and
+ * `comment_count`; the sheet fetches those through their own endpoints.
+ */
+data class ObjectResponse(
+    val `object`: CrmObject = CrmObject(),
+    val values: Map<String, Any?> = emptyMap(),
+)
 data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class CommentResponse(val comment: Comment = Comment(id = ""))
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
@@ -240,7 +256,7 @@ interface CrmsApi {
     suspend fun getObject(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String
-    ): Response<ApiResponse<CrmObject>>
+    ): Response<ApiResponse<ObjectResponse>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/objects/{objectId}/update")

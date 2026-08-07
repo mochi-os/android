@@ -123,7 +123,8 @@ class ObjectDetailViewModel @Inject constructor(
                 // Cancellation is cooperative and the tab loaders read the
                 // current ids, so re-check before writing anything.
                 if (currentCrmId != crmId || currentObjectId != objectId) return@launch
-                // The single-object endpoint doesn't return values — merge with what we have
+                // Keep the values already on screen when the fetch carries
+                // none, so the fields do not blank out mid-load.
                 val existing = _uiState.value.obj
                 val merged = if (fetched.values.isEmpty() && existing != null && existing.values.isNotEmpty()) {
                     fetched.copy(values = existing.values)
