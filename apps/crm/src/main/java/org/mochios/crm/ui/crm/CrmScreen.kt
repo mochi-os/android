@@ -5,7 +5,6 @@
 
 package org.mochios.crm.ui.crm
 
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
@@ -113,7 +112,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
-import org.mochios.android.files.SavedExport
+import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.ColorPicker
@@ -1043,28 +1042,6 @@ private fun shareCrmLink(context: Context, link: String, title: String) {
     }
     val chooser = Intent.createChooser(intent, title)
     chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
-}
-
-/**
- * Opens the system share sheet with a finished export.
- *
- * The uri is the document the picker handed back, so the grant has to travel
- * with the intent for the receiving app to read it — as a flag, and as
- * [ClipData], which is what makes the grant stick on the targets that ignore
- * `EXTRA_STREAM` alone.
- */
-private fun shareExportFile(context: Context, export: SavedExport) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = export.mimeType
-        putExtra(Intent.EXTRA_STREAM, export.uri)
-        // Names the sheet's content preview — see shareCrmLink.
-        putExtra(Intent.EXTRA_TITLE, export.name)
-        clipData = ClipData.newRawUri(export.name, export.uri)
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-    }
-    val chooser = Intent.createChooser(intent, export.name)
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION)
     context.startActivity(chooser)
 }
 

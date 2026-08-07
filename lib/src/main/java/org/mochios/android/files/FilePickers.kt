@@ -5,6 +5,7 @@
 
 package org.mochios.android.files
 
+import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -72,6 +73,33 @@ data class SavedExport(
     val mimeType: String,
     val name: String,
 )
+
+/**
+ * Opens the system share sheet with a finished export.
+ *
+ * The uri is the document the picker handed back, so the grant has to travel
+ * with the intent for the receiving app to read it — as a flag, and as
+ * [ClipData], which is what makes the grant stick on the targets that ignore
+ * `EXTRA_STREAM` alone.
+ *
+ * @param context whatever the screen has to hand; the chooser is started with
+ *   `NEW_TASK` so a non-activity context works too.
+ * @param export the file that was written, from [SavedExport].
+ */
+fun shareExportFile(context: Context, export: SavedExport) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = export.mimeType
+        putExtra(Intent.EXTRA_STREAM, export.uri)
+        // Names the sheet's content preview; without it the sheet reads as a
+        // bare file with no title.
+        putExtra(Intent.EXTRA_TITLE, export.name)
+        clipData = ClipData.newRawUri(export.name, export.uri)
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    }
+    val chooser = Intent.createChooser(intent, export.name)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    context.startActivity(chooser)
+}
 
 /** Opens the system save dialog. See [rememberFileSaveLauncher]. */
 fun interface FileSaveLauncher {

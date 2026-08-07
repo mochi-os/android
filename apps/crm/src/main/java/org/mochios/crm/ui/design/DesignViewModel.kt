@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.files.PendingExport
+import org.mochios.android.files.SavedExport
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmDetails
@@ -36,7 +37,7 @@ data class DesignUiState(
     val isSaving: Boolean = false,
     // Design JSON fetched and waiting for the user to pick a destination.
     val pendingExport: PendingExport? = null,
-    val exportSaved: Boolean = false,
+    val savedExport: SavedExport? = null,
     val exportFailed: Boolean = false,
     val templates: List<Template> = emptyList(),
     val isLoadingTemplates: Boolean = false,
@@ -367,12 +368,17 @@ class DesignViewModel @Inject constructor(
      * is built here rather than downloaded, so it always carries its content.
      */
     fun writeExportTo(uri: Uri) {
-        val content = _uiState.value.pendingExport?.content ?: return
+        val pending = _uiState.value.pendingExport ?: return
+        val content = pending.content ?: return
         viewModelScope.launch {
             val ok = repository.saveTextFile(uri, content)
             _uiState.value = _uiState.value.copy(
                 pendingExport = null,
-                exportSaved = ok,
+                savedExport = if (ok) {
+                    SavedExport(uri, pending.mimeType, pending.suggestedName)
+                } else {
+                    null
+                },
                 exportFailed = !ok
             )
         }
@@ -384,7 +390,7 @@ class DesignViewModel @Inject constructor(
     }
 
     fun clearExportResult() {
-        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
+        _uiState.value = _uiState.value.copy(savedExport = null, exportFailed = false)
     }
 
     fun loadTemplates() {

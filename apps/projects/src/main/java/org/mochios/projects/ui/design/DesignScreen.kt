@@ -59,6 +59,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -66,6 +67,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.files.rememberFileSaveLauncher
+import org.mochios.android.files.shareExportFile
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
 import org.mochios.android.R as MochiR
@@ -82,6 +84,7 @@ fun DesignScreen(
     var showImportDialog by remember { mutableStateOf(false) }
     var confirmTemplate by remember { mutableStateOf<Template?>(null) }
 
+    val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     val importedMsg = stringResource(R.string.projects_design_imported)
     val importFailedMsg = stringResource(R.string.projects_design_import_failed)
@@ -99,11 +102,17 @@ fun DesignScreen(
         }
     }
 
-    LaunchedEffect(uiState.exportSaved, uiState.exportFailed) {
-        if (uiState.exportSaved || uiState.exportFailed) {
-            snackbarHostState.showSnackbar(
-                if (uiState.exportSaved) exportSavedMsg else exportFailedMsg
-            )
+    // A saved design goes straight to the share sheet, the same as a data
+    // export. The file is already on disk either way, so backing out of the
+    // sheet costs the user nothing.
+    LaunchedEffect(uiState.savedExport, uiState.exportFailed) {
+        val saved = uiState.savedExport
+        if (saved != null) {
+            snackbarHostState.showSnackbar(exportSavedMsg)
+            shareExportFile(context, saved)
+            viewModel.clearExportResult()
+        } else if (uiState.exportFailed) {
+            snackbarHostState.showSnackbar(exportFailedMsg)
             viewModel.clearExportResult()
         }
     }
