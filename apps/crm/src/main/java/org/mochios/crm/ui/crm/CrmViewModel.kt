@@ -611,6 +611,21 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
+     * Whether a preset field value can be applied when creating an object of
+     * [classId]: the field must exist on the class and, for enumerated fields,
+     * the value must be among that class's own options — a board that mixes
+     * classes hands the create dialog the column it was tapped in, which can
+     * be an option belonging to another class, and the server rejects it.
+     */
+    fun usableValue(classId: String, fieldId: String, value: String): Boolean {
+        if (value.isBlank()) return false
+        val details = _uiState.value.crmDetails ?: return false
+        val field = details.fields[classId]?.find { it.id == fieldId } ?: return false
+        if (field.fieldtype != "enumerated") return true
+        return getOptionsForField(classId, fieldId).any { it.id == value }
+    }
+
+    /**
      * Live user search for FieldEditor's user-type fields in the create dialog.
      * Mirrors ObjectDetailViewModel.searchPeople — the PersonPicker wants
      * [User]s whose fingerprint is the person's entity id.

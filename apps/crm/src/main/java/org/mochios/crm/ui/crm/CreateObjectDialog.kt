@@ -166,8 +166,8 @@ fun CreateObjectDialog(
     // the first stage rather than anything the user had in view. A silently
     // defaulted pipeline stage is worse than an empty one, so the field is left
     // to the picker below, which renders it like any other enumerated field.
-    // Creating from a board column still sets its stage: that path passes the
-    // column straight to createObject and never opens this dialog.
+    // Creating from a board column still sets its stage: that path opens this
+    // dialog with the column in presetValues, seeded below.
     LaunchedEffect(selectedClassId) {
         fieldValues.clear()
         // Whatever started the create gets first say - a board column's "+"
@@ -175,9 +175,8 @@ fun CreateObjectDialog(
         // fill what it left blank. Values the chosen class cannot take are
         // dropped: options are defined per class, so on a board that mixes
         // classes another class's option is invalid here.
-        val classFieldIds = fields[selectedClassId].orEmpty().map { field -> field.id }.toSet()
         presetValues.forEach { (fieldId, value) ->
-            if (fieldId in classFieldIds && value.isNotBlank()) {
+            if (viewModel.usableValue(selectedClassId, fieldId, value)) {
                 fieldValues[fieldId] = value
             }
         }
