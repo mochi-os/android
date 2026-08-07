@@ -27,6 +27,7 @@ import org.mochios.android.files.SavedExport
 import org.mochios.android.model.User
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.crm.lib.ActiveViewStore
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
@@ -95,7 +96,8 @@ class CrmViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: CrmsRepository,
     private val webSocket: MochiWebSocket,
-    private val sessionManager: SessionManager
+    private val sessionManager: SessionManager,
+    private val activeViewStore: ActiveViewStore
 ) : ViewModel() {
 
     val crmId: String = savedStateHandle.get<String>("crmId") ?: ""
@@ -128,6 +130,7 @@ class CrmViewModel @Inject constructor(
             val cachedObjects = repository.getCachedObjects(crmId)
             if (cachedDetails != null && cachedObjects != null) {
                 val activeViewId = _uiState.value.activeViewId
+                    ?: rememberedViewId(cachedDetails.views)
                     ?: cachedDetails.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     crmDetails = cachedDetails,
@@ -148,6 +151,7 @@ class CrmViewModel @Inject constructor(
                 val people = runCatching { repository.getPeople(crmId) }
                     .getOrDefault(_uiState.value.people)
                 val activeViewId = _uiState.value.activeViewId
+                    ?: rememberedViewId(details.views)
                     ?: details.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
@@ -212,6 +216,16 @@ class CrmViewModel @Inject constructor(
 
     fun setActiveView(viewId: String) {
         _uiState.value = _uiState.value.copy(activeViewId = viewId)
+        activeViewStore.set(crmId, viewId)
+    }
+
+    /**
+     * The view the user last opened in this CRM, if it still exists — a view
+     * deleted since then falls back to the CRM's own first view.
+     */
+    private fun rememberedViewId(views: List<CrmView>): String? {
+        val remembered = activeViewStore.get(crmId) ?: return null
+        return remembered.takeIf { id -> views.any { view -> view.id == id } }
     }
 
     /** Fetch the CRM's share link and emit it for the screen to share. */
@@ -569,6 +583,18 @@ class CrmViewModel @Inject constructor(
         val details = _uiState.value.crmDetails ?: return null
         val activeId = _uiState.value.activeViewId ?: return details.views.firstOrNull()
         return details.views.find { it.id == activeId } ?: details.views.firstOrNull()
+    }
+
+    /**
+     * Field ids the active view pins. Empty when there is no active view or it
+     * pins none — callers then fall back to their own default (card flags for
+     * cards, every field of the class for the object detail form).
+     */
+    fun getActiveViewFieldIds(): List<String> {
+        val view = getActiveView() ?: return emptyList()
+        return view.fields.split(",")
+            .map { part -> part.trim() }
+            .filter { part -> part.isNotBlank() }
     }
 
     fun getFieldById(fieldId: String): CrmField? {
@@ -1139,9 +1165,8 @@ class CrmViewModel @Inject constructor(
     fun getCardFields(classId: String): List<CrmField> {
         val details = _uiState.value.crmDetails ?: return emptyList()
         val allFields = details.fields[classId] ?: return emptyList()
-        val view = getActiveView()
-        if (view != null && view.fields.isNotBlank()) {
-            val viewFieldIds = view.fields.split(",").map { it.trim() }.toSet()
+        val viewFieldIds = getActiveViewFieldIds().toSet()
+        if (viewFieldIds.isNotEmpty()) {
             return allFields.filter { it.id in viewFieldIds }
         }
         return allFields.filter { it.showOnCard }
