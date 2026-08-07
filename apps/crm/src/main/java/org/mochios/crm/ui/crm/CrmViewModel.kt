@@ -140,7 +140,7 @@ class CrmViewModel @Inject constructor(
             if (cachedDetails != null && cachedObjects != null) {
                 val activeViewId = _uiState.value.activeViewId
                     ?: rememberedViewId(cachedDetails.views)
-                    ?: cachedDetails.views.firstOrNull()?.id
+                    ?: defaultViewId(cachedDetails, cachedObjects)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = cachedDetails,
                     objects = cachedObjects,
@@ -161,7 +161,7 @@ class CrmViewModel @Inject constructor(
                     .getOrDefault(_uiState.value.people)
                 val activeViewId = _uiState.value.activeViewId
                     ?: rememberedViewId(details.views)
-                    ?: details.views.firstOrNull()?.id
+                    ?: defaultViewId(details, objects)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
@@ -235,6 +235,31 @@ class CrmViewModel @Inject constructor(
     private fun rememberedViewId(views: List<CrmView>): String? {
         val remembered = activeViewStore.get(crmId) ?: return null
         return remembered.takeIf { id -> views.any { view -> view.id == id } }
+    }
+
+    /**
+     * The view to open in a CRM the user has never picked a view in: the first
+     * one showing a class they can actually create. A design that lists its
+     * child classes first — Contacts ahead of Companies — otherwise opens an
+     * empty list whose "+" leads straight to "create the parent first", with
+     * the view that does work a menu away.
+     *
+     * A view naming no classes shows all of them, so it always qualifies.
+     * Falls back to the CRM's first view when nothing can be created yet.
+     */
+    private fun defaultViewId(details: CrmDetails, objects: List<CrmObject>): String? {
+        val creatable = details.classes
+            .filter { cls ->
+                val parents = (details.hierarchy[cls.id] ?: emptyList())
+                    .filter { id -> id.isNotBlank() }
+                parents.isEmpty() || objects.any { obj -> obj.objectClass in parents }
+            }
+            .map { cls -> cls.id }
+            .toSet()
+        val opening = details.views.firstOrNull { view ->
+            view.classes.isEmpty() || view.classes.any { id -> id in creatable }
+        }
+        return (opening ?: details.views.firstOrNull())?.id
     }
 
     /** Fetch the CRM's share link and emit it for the screen to share. */
