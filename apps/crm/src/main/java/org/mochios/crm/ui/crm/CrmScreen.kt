@@ -913,6 +913,7 @@ private fun CrmContent(
                                 BoardView(
                                     objects = allObjects,
                                     crmDetails = details,
+                                    people = uiState.people,
                                     visibleIds = viewModel.getVisibleObjectIds(),
                                     view = activeView,
                                     viewModel = viewModel,

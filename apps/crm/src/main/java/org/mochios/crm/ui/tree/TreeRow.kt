@@ -7,6 +7,7 @@ package org.mochios.crm.ui.tree
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,24 +19,26 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ChevronRight
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.DriveFileMove
-import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material.icons.filled.MoreHoriz
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DriveFileMove
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -52,6 +55,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -60,6 +65,7 @@ import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
+import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.Person
 import org.mochios.crm.ui.board.parseColor
@@ -93,10 +99,6 @@ fun TreeRow(
     var showReparentDialog by remember { mutableStateOf(false) }
     val indent = (node.depth * 24).dp
     val obj = node.obj
-    val titleFieldId = crmDetails?.classes?.find { it.id == obj.objectClass }
-        ?.title?.takeIf { it.isNotBlank() }
-    val untitled = stringResource(R.string.crm_untitled)
-    val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty().ifBlank { untitled }
     val cardFields = viewModel.getCardFields(obj.objectClass)
 
     val isBeingDragged = dragState != null && dragState.isDragging(obj.id)
@@ -112,7 +114,11 @@ fun TreeRow(
         sourceId != obj.id && obj.id !in viewModel.collectDescendants(sourceId)
     }
 
-    val dragHintLabel = if (dragState != null && onDragDrop != null) stringResource(R.string.crm_drag_row) else ""
+    val dragHintLabel = if (dragState != null && onDragDrop != null) {
+        stringResource(R.string.crm_drag_row)
+    } else {
+        ""
+    }
     val dragModifier = if (dragState != null && onDragDrop != null) {
         Modifier
             .semantics { contentDescription = dragHintLabel }
@@ -152,148 +158,185 @@ fun TreeRow(
             .alpha(0.9f)
     } else Modifier
 
-    Row(
+    // One card per object: class line, title, optional description, then a meta
+    // row of field values. Fields land in slots by type — enumerated renders as
+    // a colour dot plus label, a user field resolves to a member avatar, a date
+    // formats and turns red once it is past, and the first multi-line text
+    // field becomes the description.
+    // The class names the field its objects are titled by, so leaving it in the
+    // card fields would print the title a second time at the end of the meta row.
+    val cls = crmDetails?.classes?.find { klass -> klass.id == obj.objectClass }
+    val titleFieldId = cls?.title.orEmpty()
+    val untitled = stringResource(R.string.crm_untitled)
+    val title = obj.stringValue(titleFieldId).ifBlank { untitled }
+    val bodyFields = cardFields.filter { field -> field.id != titleFieldId }
+    // Prefer a multi-line text field for the description, but a single-line one
+    // is the description in most schemas too — only the title is special.
+    val descriptionField = bodyFields.firstOrNull { field ->
+        field.fieldtype == "text" && field.rows > 1
+    } ?: bodyFields.firstOrNull { field -> field.fieldtype == "text" }
+    val description = descriptionField
+        ?.let { field -> obj.stringValue(field.id).takeIf { value -> value.isNotBlank() } }
+    // Ordered by type rather than by the class's field order, so the status and
+    // priority always open the meta row directly under the description instead
+    // of landing on a wrapped second line behind an owner or a date.
+    val metaOrder = listOf("enumerated", "user", "date")
+    val metaFields = bodyFields
+        .filter { field ->
+            field.id != descriptionField?.id && obj.stringValue(field.id).isNotBlank()
+        }
+        .sortedBy { field ->
+            metaOrder.indexOf(field.fieldtype).takeIf { rank -> rank >= 0 } ?: metaOrder.size
+        }
+
+    OutlinedCard(
         modifier = Modifier
             .fillMaxWidth()
+            .padding(start = indent, top = 3.dp, bottom = 3.dp)
             .then(dragModifier)
             .then(visualModifier)
             .then(edgeBorderModifier)
-            .clickable(onClick = onClick)
-            .padding(start = indent + 4.dp, end = 8.dp, top = 8.dp, bottom = 8.dp),
-        verticalAlignment = Alignment.CenterVertically
+            .clickable(onClick = onClick),
     ) {
-        // Expand/collapse
-        if (node.hasChildren) {
-            IconButton(
-                onClick = onToggleExpand,
-                modifier = Modifier.size(28.dp)
-            ) {
-                Icon(
-                    imageVector = if (node.isExpanded) Icons.Default.ExpandMore else Icons.Default.ChevronRight,
-                    contentDescription = if (node.isExpanded) stringResource(MochiR.string.common_collapse) else stringResource(MochiR.string.common_expand),
-                    modifier = Modifier.size(20.dp)
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp)
+        ) {
+            // Class line: expander ahead of the class name, overflow menu on the
+            // trailing edge. Only rows with children draw the expander — nothing
+            // else shifts, so the title, description and meta stay on the card's
+            // 12dp inset.
+            // Title, description and meta line up under the class name: on a row
+            // with children the expander pushes it right, so the text below
+            // shifts by the same amount rather than sitting under the button.
+            val bodyStart = if (node.hasChildren) 36.dp else 0.dp
+
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (node.hasChildren) {
+                    IconButton(onClick = onToggleExpand, modifier = Modifier.size(32.dp)) {
+                        Icon(
+                            imageVector = if (node.isExpanded) {
+                                Icons.Default.ExpandLess
+                            } else {
+                                Icons.Default.ExpandMore
+                            },
+                            contentDescription = if (node.isExpanded) {
+                                stringResource(MochiR.string.common_collapse)
+                            } else {
+                                stringResource(MochiR.string.common_expand)
+                            },
+                            modifier = Modifier.size(24.dp),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(4.dp))
+                }
+
+                Text(
+                    text = cls?.name.orEmpty(),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
+
+                Spacer(modifier = Modifier.weight(1f))
+
+                Box {
+                    IconButton(
+                        onClick = { showContextMenu = true },
+                        modifier = Modifier.size(32.dp)
+                    ) {
+                        Icon(
+                            Icons.Default.MoreHoriz,
+                            contentDescription = stringResource(MochiR.string.common_more_options),
+                            modifier = Modifier.size(24.dp),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    DropdownMenu(
+                        expanded = showContextMenu,
+                        onDismissRequest = { showContextMenu = false }
+                    ) {
+                        if (onReparent != null) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.crm_tree_move)) },
+                                onClick = {
+                                    showContextMenu = false
+                                    showReparentDialog = true
+                                },
+                                leadingIcon = {
+                                    Icon(Icons.Default.DriveFileMove, contentDescription = null)
+                                }
+                            )
+                        }
+                        DropdownMenuItem(
+                            text = { Text(stringResource(MochiR.string.common_delete)) },
+                            onClick = {
+                                showContextMenu = false
+                                onDelete()
+                            },
+                            leadingIcon = {
+                                Icon(
+                                    Icons.Default.Delete,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.error
+                                )
+                            }
+                        )
+                    }
+                }
             }
-        } else {
-            Spacer(modifier = Modifier.width(28.dp))
-        }
 
-        Spacer(modifier = Modifier.width(4.dp))
-
-        // Title and field chips
-        Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = title,
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium,
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold,
                 maxLines = 1,
-                overflow = TextOverflow.Ellipsis
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = bodyStart)
             )
-            // Field values rendered inline (matching web's list columns and the
-            // board card) rather than as heavy chips: enumerated shows a colour
-            // dot + name, user resolves to the member name, everything else is
-            // plain secondary text.
-            val fieldsWithValues = cardFields.filter { obj.stringValue(it.id).isNotBlank() }
-            if (fieldsWithValues.isNotEmpty()) {
-                Spacer(modifier = Modifier.size(3.dp))
+
+            if (description != null) {
+                Text(
+                    text = description,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 3,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = bodyStart, top = 4.dp)
+                )
+            }
+
+            if (metaFields.isNotEmpty()) {
                 FlowRow(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
-                    verticalArrangement = Arrangement.spacedBy(2.dp)
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = bodyStart, top = 6.dp)
                 ) {
-                    fieldsWithValues.forEach { field ->
-                        val value = obj.stringValue(field.id)
-                        when (field.fieldtype) {
-                            "enumerated" -> {
-                                val opt = viewModel.getAllOptionsForField(field.id).find { it.id == value }
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    if (opt != null && opt.colour.isNotBlank()) {
-                                        Box(
-                                            modifier = Modifier
-                                                .size(8.dp)
-                                                .background(parseColor(opt.colour), MaterialTheme.shapes.extraSmall)
-                                        )
-                                        Spacer(modifier = Modifier.width(4.dp))
-                                    }
-                                    Text(
-                                        text = opt?.name ?: value,
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                            }
-                            "user" -> {
-                                val resolved = people.find { it.id == value }?.name?.takeIf { it.isNotBlank() } ?: value
-                                Text(
-                                    text = resolved,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
-                                )
-                            }
-                            else -> {
-                                Text(
-                                    text = value,
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
-                                )
-                            }
-                        }
+                    metaFields.forEach { field ->
+                        MetaValue(
+                            field = field,
+                            value = obj.stringValue(field.id),
+                            viewModel = viewModel,
+                            people = people,
+                            modifier = Modifier.alignByBaseline(),
+                        )
                     }
                 }
-            }
-        }
-
-        // Overflow menu — accessible fallback for the move/delete actions
-        // now that long-press is reserved for drag-start.
-        Box {
-            IconButton(
-                onClick = { showContextMenu = true },
-                modifier = Modifier.size(28.dp)
-            ) {
-                Icon(
-                    Icons.Default.MoreHoriz,
-                    contentDescription = stringResource(MochiR.string.common_more_options),
-                    modifier = Modifier.size(20.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            DropdownMenu(
-                expanded = showContextMenu,
-                onDismissRequest = { showContextMenu = false }
-            ) {
-                if (onReparent != null) {
-                    DropdownMenuItem(
-                        text = { Text(stringResource(R.string.crm_tree_move)) },
-                        onClick = {
-                            showContextMenu = false
-                            showReparentDialog = true
-                        },
-                        leadingIcon = {
-                            Icon(Icons.Default.DriveFileMove, contentDescription = null)
-                        }
-                    )
-                }
-                DropdownMenuItem(
-                    text = { Text(stringResource(MochiR.string.common_delete)) },
-                    onClick = {
-                        showContextMenu = false
-                        onDelete()
-                    },
-                    leadingIcon = {
-                        Icon(Icons.Default.Delete, contentDescription = null, tint = MaterialTheme.colorScheme.error)
-                    }
-                )
             }
         }
     }
 
     if (showReparentDialog && onReparent != null) {
-        val possibleParents = allObjects.filter { it.id != obj.id }
+        val possibleParents = allObjects.filter { candidate -> candidate.id != obj.id }
         AlertDialog(
             onDismissRequest = { showReparentDialog = false },
             title = { Text(stringResource(R.string.crm_tree_move_to_parent)) },
@@ -310,13 +353,17 @@ fun TreeRow(
                                 .padding(vertical = 10.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Text(stringResource(R.string.crm_tree_root_level), style = MaterialTheme.typography.bodyMedium)
+                            Text(
+                                text = stringResource(R.string.crm_tree_root_level),
+                                style = MaterialTheme.typography.bodyMedium
+                            )
                         }
                         HorizontalDivider()
                     }
                     items(possibleParents) { parent ->
-                        val parentTitleField = crmDetails?.classes?.find { it.id == parent.objectClass }
-                            ?.title?.takeIf { it.isNotBlank() }
+                        val parentTitleField = crmDetails?.classes
+                            ?.find { klass -> klass.id == parent.objectClass }
+                            ?.title?.takeIf { fieldId -> fieldId.isNotBlank() }
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -328,7 +375,10 @@ fun TreeRow(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Text(
-                                text = parentTitleField?.let { parent.stringValue(it) }.orEmpty().ifBlank { untitled },
+                                text = parentTitleField
+                                    ?.let { fieldId -> parent.stringValue(fieldId) }
+                                    .orEmpty()
+                                    .ifBlank { untitled },
                                 style = MaterialTheme.typography.bodyMedium
                             )
                         }
@@ -338,8 +388,107 @@ fun TreeRow(
             },
             confirmButton = {},
             dismissButton = {
-                TextButton(onClick = { showReparentDialog = false }) { Text(stringResource(MochiR.string.common_cancel)) }
+                TextButton(onClick = { showReparentDialog = false }) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
             }
         )
     }
+}
+
+/**
+ * One field value in a card's meta row, styled by field type: an enumerated
+ * option shows its colour dot and name, a user field shows the member avatar
+ * and name, a date is formatted and turns red once it is past, and anything
+ * else falls back to plain muted text.
+ */
+@Composable
+private fun MetaValue(
+    field: CrmField,
+    value: String,
+    viewModel: CrmViewModel,
+    people: List<Person>,
+    modifier: Modifier = Modifier,
+) {
+    // Each item aligns to its text baseline in the FlowRow (via [modifier]).
+    val rowModifier = modifier
+    when (field.fieldtype) {
+        "enumerated" -> {
+            val option = viewModel.getAllOptionsForField(field.id)
+                .find { candidate -> candidate.id == value }
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
+                if (option != null && option.colour.isNotBlank()) {
+                    Box(
+                        modifier = Modifier
+                            .size(10.dp)
+                            .background(parseColor(option.colour), CircleShape)
+                    )
+                    Spacer(modifier = Modifier.width(6.dp))
+                }
+                MetaText(option?.name ?: value)
+            }
+        }
+
+        "user" -> {
+            val person = people.find { candidate -> candidate.id == value }
+            val name = person?.name?.takeIf { personName -> personName.isNotBlank() } ?: value
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
+                EntityAvatar(name = name, seed = value, size = 22.dp)
+                Spacer(modifier = Modifier.width(6.dp))
+                MetaText(name)
+            }
+        }
+
+        "date" -> {
+            val format = LocalFormat.current
+            val seconds = value.toLongOrNull() ?: value.toDoubleOrNull()?.toLong()
+            val label = seconds
+                ?.let { epoch -> format.formatDate(epoch) }
+                ?.takeIf { formatted -> formatted.isNotBlank() } ?: value
+            val overdue = seconds != null &&
+                seconds > 0 &&
+                seconds < System.currentTimeMillis() / 1000
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    Icons.Default.Schedule,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp),
+                    tint = if (overdue) {
+                        MaterialTheme.colorScheme.error
+                    } else {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    },
+                )
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(
+                    text = label,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (overdue) {
+                        MaterialTheme.colorScheme.error
+                    } else {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    },
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
+        }
+
+        else -> {
+            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
+                MetaText(value)
+            }
+        }
+    }
+}
+
+@Composable
+private fun MetaText(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.bodyMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+    )
 }

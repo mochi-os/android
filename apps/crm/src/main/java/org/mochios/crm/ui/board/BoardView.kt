@@ -70,6 +70,7 @@ import org.mochios.crm.R
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmObject
+import org.mochios.crm.model.Person
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
@@ -92,6 +93,7 @@ fun BoardView(
     viewModel: CrmViewModel,
     // Threaded to BoardCard, which must not snapshot the flow itself.
     crmDetails: CrmDetails?,
+    people: List<Person>,
     onObjectClick: (String) -> Unit,
     visibleIds: Set<String>? = null,
     /**
@@ -213,6 +215,7 @@ fun BoardView(
         BoardColumn(
             option = columnOption,
             crmDetails = crmDetails,
+            people = people,
             objects = columnObjects,
             visibleIds = visibleIds,
             viewModel = viewModel,
@@ -275,6 +278,7 @@ private fun BoardColumn(
     visibleIds: Set<String>?,
     viewModel: CrmViewModel,
     crmDetails: CrmDetails?,
+    people: List<Person>,
     columnFieldId: String,
     rowFieldId: String?,
     rowOptions: List<FieldOption>,
@@ -496,7 +500,12 @@ private fun BoardColumn(
 
         // Column body
         if (rowFieldId != null && rowOptions.isNotEmpty()) {
-            // Swimlane mode
+            // Swimlane mode.
+            // Drop ranks are scoped to the column, not the lane: the server's
+            // rank_move_key lists every object sharing the target column value
+            // and knows nothing about rows, so a lane-local position would be
+            // applied as a column position.
+            val columnOrder = viewModel.sortObjects(objects)
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
@@ -514,11 +523,34 @@ private fun BoardColumn(
                     if (visibleIds != null && shownRowObjects.isEmpty()) return@forEach
 
                     item(key = "header_${rowOption.id}") {
+                        // The lane's own drop target. The column-level one below
+                        // has no lane to report, so without this a drop anywhere
+                        // but on another card could not change lane at all —
+                        // including into a lane that is currently empty.
                         Text(
                             text = rowOption.name,
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .dropTarget(
+                                    state = cardDragState,
+                                    itemId = "lane:${option.id}:${rowOption.id}",
+                                    orientation = DropOrientation.OnOnly,
+                                    onDrop = { sourceId, _ ->
+                                        viewModel.moveObject(
+                                            objectId = sourceId,
+                                            field = columnFieldId,
+                                            value = option.id,
+                                            rank = columnOrder.count { candidate ->
+                                                candidate.id != sourceId
+                                            } + 1,
+                                            rowField = rowFieldId,
+                                            rowValue = rowOption.id,
+                                        )
+                                    },
+                                )
+                                .padding(horizontal = 4.dp, vertical = 4.dp)
                         )
                     }
                     itemsIndexed(shownRowObjects, key = { _, o -> o.id }) { _, obj ->
@@ -526,16 +558,18 @@ private fun BoardColumn(
                             obj = obj,
                             viewModel = viewModel,
                             crmDetails = crmDetails,
+                            people = people,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = rowObjects.indexOfFirst { candidate ->
+                            cardIndexInColumn = columnOrder.indexOfFirst { candidate ->
                                 candidate.id == obj.id
                             },
-                            columnObjectsForDrop = rowObjects,
+                            columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
+                            targetRowId = rowOption.id,
                             onClick = { onObjectClick(obj.id) }
                         )
                     }
@@ -567,16 +601,18 @@ private fun BoardColumn(
                             obj = obj,
                             viewModel = viewModel,
                             crmDetails = crmDetails,
+                            people = people,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = unassignedRow.indexOfFirst { candidate ->
+                            cardIndexInColumn = columnOrder.indexOfFirst { candidate ->
                                 candidate.id == obj.id
                             },
-                            columnObjectsForDrop = unassignedRow,
+                            columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
+                            targetRowId = "",
                             onClick = { onObjectClick(obj.id) }
                         )
                     }
@@ -616,6 +652,7 @@ private fun BoardColumn(
                             obj = obj,
                             viewModel = viewModel,
                             crmDetails = crmDetails,
+                            people = people,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             cardDragState = cardDragState,
