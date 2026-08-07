@@ -953,6 +953,7 @@ private fun ProjectContent(
             objectId = uiState.selectedObjectId!!,
             projectDetails = details,
             initialObject = uiState.objects.find { it.id == uiState.selectedObjectId },
+            viewFieldIds = viewModel.getActiveViewFieldIds(),
             onDismiss = { viewModel.selectObject(null) },
             // deleteObject deletes, clears the selection when it matches, and
             // refreshes — so this must not pre-clear the selection it needs.

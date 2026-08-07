@@ -27,7 +27,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ScrollableTabRow
+import androidx.compose.material3.SecondaryTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -40,6 +40,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -60,6 +61,11 @@ fun ObjectDetailSheet(
     objectId: String,
     crmDetails: CrmDetails,
     initialObject: org.mochios.crm.model.CrmObject? = null,
+    /**
+     * Field ids the active view pins, in the order it lists them. When empty
+     * the Properties tab falls back to every field of the object's class.
+     */
+    viewFieldIds: List<String> = emptyList(),
     onDismiss: () -> Unit,
     /**
      * Delete this object. Imperative, not a past-tense notification: the sheet
@@ -185,8 +191,7 @@ fun ObjectDetailSheet(
                         IconButton(onClick = { viewModel.toggleWatch() }) {
                             Icon(
                                 imageVector = if (uiState.isWatching) Icons.Default.Visibility else Icons.Default.VisibilityOff,
-                                contentDescription = if (uiState.isWatching) stringResource(R.string.crm_object_unwatch) else stringResource(R.string.crm_object_watch),
-                                tint = if (uiState.isWatching) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
+                                contentDescription = if (uiState.isWatching) stringResource(R.string.crm_object_unwatch) else stringResource(R.string.crm_object_watch)
                             )
                         }
 
@@ -207,8 +212,7 @@ fun ObjectDetailSheet(
                                     leadingIcon = {
                                         Icon(
                                             Icons.Default.Delete,
-                                            contentDescription = null,
-                                            tint = MaterialTheme.colorScheme.error
+                                            contentDescription = null
                                         )
                                     }
                                 )
@@ -216,44 +220,24 @@ fun ObjectDetailSheet(
                         }
                     }
 
-                    // Editable title in the header (parity with web), backed by
-                    // the class's title field. Hidden from the Properties tab.
-                    val titleField = crmDetails.fields[obj.objectClass]
-                        ?.find { it.id == objClass?.title }
-                    if (titleField != null) {
-                        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
-                            FieldEditor(
-                                field = titleField,
-                                value = obj.values[titleField.id],
-                                options = emptyList(),
-                                canWrite = canWriteAccess(uiState.access),
-                                people = uiState.people,
-                                onValueChange = { viewModel.setValue(titleField.id, it) },
-                                onMultiValueChange = { viewModel.setMultiValue(titleField.id, it) },
-                                onSearchUsers = { query -> viewModel.searchPeople(query) }
-                            )
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(8.dp))
-
                     SaveStatusIndicator(
                         status = uiState.saveStatus,
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp),
                     )
-
-                    // Tabs
-                    // Tab structure matches web CRM (Properties/Comments/Activity).
-                    // Attachments + links + watchers fold into Properties / header
-                    // actions on the web; we mirror that here.
+                    // Tabs match the web layout: Properties / Comments /
+                    // Activity. Attachments + links fold into Properties as
+                    // inline sections; watch/unwatch is the Eye icon in the
+                    // header above, and the title is edited in Properties with
+                    // the rest of the fields.
                     val tabs = listOf(
                         stringResource(R.string.crm_object_tab_properties),
                         stringResource(R.string.crm_object_tab_comments),
                         stringResource(R.string.crm_object_tab_activity),
                     )
-                    ScrollableTabRow(
-                        selectedTabIndex = uiState.selectedTab,
-                        edgePadding = 16.dp
+                    SecondaryTabRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        containerColor = Color.Transparent,
+                        selectedTabIndex = uiState.selectedTab
                     ) {
                         tabs.forEachIndexed { index, title ->
                             Tab(
@@ -264,12 +248,15 @@ fun ObjectDetailSheet(
                         }
                     }
 
+                    Spacer(modifier = Modifier.height(8.dp))
+
                     // Tab content
                     when (uiState.selectedTab) {
                         0 -> PropertiesTab(
                             obj = obj,
                             crmDetails = crmDetails,
                             viewModel = viewModel,
+                            viewFieldIds = viewFieldIds,
                             onAddChild = { onAddChild(obj.id) },
                             onNavigateToObject = onNavigateToObject,
                             crmId = crmId,

@@ -662,6 +662,18 @@ class ProjectViewModel @Inject constructor(
         return details.views.find { it.id == activeId } ?: details.views.firstOrNull()
     }
 
+    /**
+     * Field ids the active view pins. Empty when there is no active view or it
+     * pins none — callers then fall back to their own default (card flags for
+     * cards, every field of the class for the object detail form).
+     */
+    fun getActiveViewFieldIds(): List<String> {
+        val view = getActiveView() ?: return emptyList()
+        return view.fields.split(",")
+            .map { part -> part.trim() }
+            .filter { part -> part.isNotBlank() }
+    }
+
     fun getFieldById(fieldId: String): ProjectField? {
         val details = _uiState.value.projectDetails ?: return null
         for ((_, fields) in details.fields) {
@@ -912,9 +924,8 @@ class ProjectViewModel @Inject constructor(
     fun getCardFields(classId: String): List<ProjectField> {
         val details = _uiState.value.projectDetails ?: return emptyList()
         val allFields = details.fields[classId] ?: return emptyList()
-        val view = getActiveView()
-        if (view != null && view.fields.isNotBlank()) {
-            val viewFieldIds = view.fields.split(",").map { it.trim() }.toSet()
+        val viewFieldIds = getActiveViewFieldIds().toSet()
+        if (viewFieldIds.isNotEmpty()) {
             return allFields.filter { it.id in viewFieldIds }
         }
         return allFields.filter { it.showOnCard }

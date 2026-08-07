@@ -77,6 +77,11 @@ fun PropertiesTab(
     obj: ProjectObject,
     projectDetails: ProjectDetails,
     viewModel: ObjectDetailViewModel,
+    /**
+     * Field ids the active view pins. Empty means the view pins none, so every
+     * field of the object's class is shown instead.
+     */
+    viewFieldIds: List<String> = emptyList(),
     onAddChild: () -> Unit = {},
     onNavigateToObject: (String) -> Unit = {},
     projectId: String = "",
@@ -85,10 +90,25 @@ fun PropertiesTab(
     val fields = projectDetails.fields[obj.objectClass] ?: emptyList()
     val classOptions = projectDetails.options[obj.objectClass] ?: emptyMap()
     val canWrite = canWriteAccess(uiState.access)
+    val titleFieldId = projectDetails.classes.find { cls -> cls.id == obj.objectClass }?.title
+        .orEmpty()
     // "Can this object have children?" — true when at least one class
     // lists obj.objectClass in its allowed parent classes.
     val canHaveChildren = remember(projectDetails.hierarchy, obj.objectClass) {
         projectDetails.hierarchy.any { (_, parents) -> obj.objectClass in parents }
+    }
+    // Which fields the form shows: the active view's selection when it pins
+    // any, otherwise the whole class. Either way they run in rank order, the
+    // same ordering the board cards use. The title field is always kept — a
+    // view that leaves it out would otherwise make the object's name
+    // uneditable, since nothing else in the sheet edits it.
+    val visibleFields = remember(fields, viewFieldIds, titleFieldId) {
+        val pinned = viewFieldIds.toSet()
+        fields
+            .filter { field ->
+                pinned.isEmpty() || field.id in pinned || field.id == titleFieldId
+            }
+            .sortedBy { field -> field.rank }
     }
 
     Column(
@@ -99,7 +119,6 @@ fun PropertiesTab(
             .padding(bottom = 16.dp)
             .padding(top = 8.dp)
     ) {
-        // Parent picker
         val allowedParentClasses = (projectDetails.hierarchy[obj.objectClass] ?: emptyList())
             .filter { it.isNotBlank() }
         val descendants = remember(uiState.siblingObjects, obj.id) {
@@ -108,31 +127,56 @@ fun PropertiesTab(
         val parentOptions = uiState.siblingObjects
             .filter { it.objectClass in allowedParentClasses && it.id !in descendants }
         val currentParent = uiState.siblingObjects.find { it.id == obj.parent }
+        val showParent = parentOptions.isNotEmpty() || currentParent != null
+        val parentLabel = stringResource(R.string.projects_parent_label)
 
-        if (parentOptions.isNotEmpty() || currentParent != null) {
-            ParentPicker(
-                projectDetails = projectDetails,
-                currentParent = currentParent,
-                parentOptions = parentOptions,
-                canWrite = canWrite,
-                onSelect = { newParent -> viewModel.updateParent(newParent) }
-            )
+        // The parent picker sits directly under the title field, matching the
+        // web form. With no title field among the visible ones it leads instead
+        // — `parentPending` tracks whether it still owes a slot.
+        var parentPending = showParent
+        if (parentPending && visibleFields.none { field -> field.id == titleFieldId }) {
+            PropertyRow(label = parentLabel) {
+                ParentPicker(
+                    projectDetails = projectDetails,
+                    currentParent = currentParent,
+                    parentOptions = parentOptions,
+                    canWrite = canWrite,
+                    onSelect = { newParent -> viewModel.updateParent(newParent) }
+                )
+            }
             Spacer(modifier = Modifier.height(12.dp))
+            parentPending = false
         }
 
-        // Dynamic fields, including the class's title field, ordered by rank.
-        fields.sortedBy { it.rank }.forEach { field ->
-            FieldEditor(
-                field = field,
-                value = obj.values[field.id],
-                options = classOptions[field.id] ?: emptyList(),
-                canWrite = canWrite,
-                people = uiState.people,
-                onValueChange = { viewModel.setValue(field.id, it) },
-                onMultiValueChange = { viewModel.setMultiValue(field.id, it) },
-                onSearchUsers = { query -> viewModel.searchPeople(query) }
-            )
+        visibleFields.forEach { field ->
+            PropertyRow(label = field.name) {
+                FieldEditor(
+                    field = field,
+                    value = obj.values[field.id],
+                    options = classOptions[field.id] ?: emptyList(),
+                    canWrite = canWrite,
+                    people = uiState.people,
+                    showLabel = false,
+                    onValueChange = { viewModel.setValue(field.id, it) },
+                    onMultiValueChange = { viewModel.setMultiValue(field.id, it) },
+                    onSearchUsers = { query -> viewModel.searchPeople(query) }
+                )
+            }
             Spacer(modifier = Modifier.height(12.dp))
+
+            if (parentPending && field.id == titleFieldId) {
+                PropertyRow(label = parentLabel) {
+                    ParentPicker(
+                        projectDetails = projectDetails,
+                        currentParent = currentParent,
+                        parentOptions = parentOptions,
+                        canWrite = canWrite,
+                        onSelect = { newParent -> viewModel.updateParent(newParent) }
+                    )
+                }
+                Spacer(modifier = Modifier.height(12.dp))
+                parentPending = false
+            }
         }
 
         // "Add child" affordance — shown when this object's class is
@@ -189,6 +233,38 @@ fun PropertiesTab(
 internal fun canWriteAccess(access: String): Boolean =
     access == "owner" || access == "design" || access == "write"
 
+/** Width of the label column in the object-detail form. */
+private val PROPERTY_LABEL_WIDTH = 96.dp
+
+/**
+ * One row of the object-detail form: the property's name in a fixed-width
+ * column on the left, its editor filling the rest — the same shape as the web
+ * object-detail panel. The label is padded down so it sits against the middle
+ * of a single-line text field rather than its top edge.
+ */
+@Composable
+private fun PropertyRow(
+    label: String,
+    content: @Composable () -> Unit
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.Top
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier
+                .width(PROPERTY_LABEL_WIDTH)
+                .padding(top = 18.dp, end = 8.dp)
+        )
+        Box(modifier = Modifier.weight(1f)) {
+            content()
+        }
+    }
+}
+
 private fun collectDescendants(objects: List<ProjectObject>, rootId: String): Set<String> {
     val result = mutableSetOf<String>()
     fun walk(id: String) {
@@ -223,16 +299,15 @@ private fun ParentPicker(
     val noParentLabel = stringResource(R.string.projects_parent_none)
     val displayText = currentParent?.let { objectDisplayTitle(it, projectDetails) } ?: noParentLabel
 
+    // The label lives in the enclosing PropertyRow, so nothing here repeats it.
     if (!canWrite) {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Text(
-                text = stringResource(R.string.projects_parent_label),
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = displayText, style = MaterialTheme.typography.bodyLarge)
-        }
+        Text(
+            text = displayText,
+            style = MaterialTheme.typography.bodyLarge,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp)
+        )
         return
     }
 
@@ -247,7 +322,7 @@ private fun ParentPicker(
             value = displayText,
             onValueChange = {},
             readOnly = true,
-            label = { Text(stringResource(R.string.projects_parent_label)) },
+            singleLine = true,
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
             modifier = Modifier
                 .menuAnchor(MenuAnchorType.PrimaryNotEditable)
@@ -310,6 +385,12 @@ internal fun FieldEditor(
     options: List<FieldOption>,
     canWrite: Boolean,
     people: List<org.mochios.projects.model.Person>,
+    /**
+     * Whether the editor draws the field's name itself. False in the
+     * object-detail form, where the name already sits in the label column of
+     * the enclosing row; true for the create dialog's stacked layout.
+     */
+    showLabel: Boolean = true,
     onValueChange: (String) -> Unit,
     onMultiValueChange: (List<String>) -> Unit,
     onSearchUsers: suspend (String) -> List<User>
@@ -318,17 +399,22 @@ internal fun FieldEditor(
     val listValue = (value as? List<*>)?.mapNotNull { it?.toString() } ?: emptyList()
     // Effective read-only: field-readonly OR user lacks write access
     val readOnly = field.isReadonly || !canWrite
+    val fieldLabel: (@Composable () -> Unit)? = if (showLabel) {
+        { Text(field.name) }
+    } else {
+        null
+    }
 
     Column(modifier = Modifier.fillMaxWidth()) {
         when (field.fieldtype) {
             "text" -> {
                 if (readOnly) {
-                    ReadOnlyDisplay(field.name, stringValue)
+                    ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
                 } else {
                     OutlinedTextField(
                         value = stringValue,
                         onValueChange = onValueChange,
-                        label = { Text(field.name) },
+                        label = fieldLabel,
                         readOnly = false,
                         singleLine = field.rows <= 1,
                         maxLines = if (field.rows > 1) field.rows else 1,
@@ -340,7 +426,7 @@ internal fun FieldEditor(
 
             "number" -> {
                 if (readOnly) {
-                    ReadOnlyDisplay(field.name, stringValue)
+                    ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
                 } else {
                     OutlinedTextField(
                         value = stringValue,
@@ -349,7 +435,7 @@ internal fun FieldEditor(
                                 onValueChange(newVal)
                             }
                         },
-                        label = { Text(field.name) },
+                        label = fieldLabel,
                         singleLine = true,
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                         modifier = Modifier.fillMaxWidth()
@@ -360,12 +446,14 @@ internal fun FieldEditor(
             "enumerated" -> {
                 if (field.isMulti) {
                     // Multi-select chips
-                    Text(
-                        text = field.name,
-                        style = MaterialTheme.typography.labelLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    if (showLabel) {
+                        Text(
+                            text = field.name,
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                    }
                     if (readOnly) {
                         val selectedNames = options
                             .filter { it.id in listValue || it.id == stringValue }
@@ -402,7 +490,7 @@ internal fun FieldEditor(
                     // Single select dropdown
                     val selectedOption = options.find { it.id == stringValue }
                     if (readOnly) {
-                        ReadOnlyDisplay(field.name, selectedOption?.name.orEmpty())
+                        ReadOnlyDisplay(labelOrNull(showLabel, field.name), selectedOption?.name.orEmpty())
                     } else {
                         var expanded by remember { mutableStateOf(false) }
                         ExposedDropdownMenuBox(
@@ -413,7 +501,7 @@ internal fun FieldEditor(
                                 value = selectedOption?.name ?: "",
                                 onValueChange = {},
                                 readOnly = true,
-                                label = { Text(field.name) },
+                                label = fieldLabel,
                                 placeholder = { Text(stringResource(R.string.projects_property_select)) },
                                 leadingIcon = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
                                     { OptionColourSwatch(selectedOption.colour) }
@@ -450,12 +538,14 @@ internal fun FieldEditor(
             }
 
             "user" -> {
-                Text(
-                    text = field.name,
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Spacer(modifier = Modifier.height(4.dp))
+                if (showLabel) {
+                    Text(
+                        text = field.name,
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                }
                 val resolvedName = people.find { it.id == stringValue }?.name
                 if (readOnly) {
                     val displayName = when {
@@ -496,7 +586,7 @@ internal fun FieldEditor(
                 }
 
                 if (readOnly) {
-                    ReadOnlyDisplay(field.name, displayDate)
+                    ReadOnlyDisplay(labelOrNull(showLabel, field.name), displayDate)
                 } else {
                     // A read-only text field swallows taps, so an overlay on top
                     // makes the whole box (not just the icon) open the picker.
@@ -505,7 +595,7 @@ internal fun FieldEditor(
                             value = displayDate,
                             onValueChange = {},
                             readOnly = true,
-                            label = { Text(field.name) },
+                            label = fieldLabel,
                             trailingIcon = {
                                 Icon(Icons.Default.CalendarToday, contentDescription = stringResource(R.string.projects_property_pick_date))
                             },
@@ -576,11 +666,13 @@ internal fun FieldEditor(
                     val checked = stringValue == "1" || stringValue.equals("true", ignoreCase = true)
                     if (readOnly) {
                         Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = field.name,
-                                style = MaterialTheme.typography.labelLarge,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
+                            if (showLabel) {
+                                Text(
+                                    text = field.name,
+                                    style = MaterialTheme.typography.labelLarge,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
                             Text(
                                 text = if (checked) stringResource(R.string.projects_field_yes) else stringResource(R.string.projects_field_no),
                                 style = MaterialTheme.typography.bodyLarge
@@ -591,15 +683,19 @@ internal fun FieldEditor(
                             checked = checked,
                             onCheckedChange = { onValueChange(if (it) "1" else "0") }
                         )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(text = field.name, style = MaterialTheme.typography.bodyLarge)
+                        // Without the label column the checkbox is the whole
+                        // control, so the name isn't repeated beside it.
+                        if (showLabel) {
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(text = field.name, style = MaterialTheme.typography.bodyLarge)
+                        }
                     }
                 }
             }
 
             "checklist" -> {
                 ChecklistEditor(
-                    fieldName = field.name,
+                    fieldName = labelOrNull(showLabel, field.name),
                     value = stringValue,
                     isReadonly = readOnly,
                     onValueChange = onValueChange
@@ -608,12 +704,12 @@ internal fun FieldEditor(
 
             else -> {
                 if (readOnly) {
-                    ReadOnlyDisplay(field.name, stringValue)
+                    ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
                 } else {
                     OutlinedTextField(
                         value = stringValue,
                         onValueChange = onValueChange,
-                        label = { Text(field.name) },
+                        label = fieldLabel,
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -633,20 +729,27 @@ internal fun FieldEditor(
 }
 
 @Composable
-private fun ReadOnlyDisplay(label: String, value: String) {
+private fun ReadOnlyDisplay(label: String?, value: String) {
     Column {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(modifier = Modifier.height(4.dp))
+        if (label != null) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+        }
         Text(
             text = if (value.isBlank()) "—" else value,
-            style = MaterialTheme.typography.bodyLarge
+            style = MaterialTheme.typography.bodyLarge,
+            modifier = if (label == null) Modifier.padding(top = 16.dp) else Modifier
         )
     }
 }
+
+/** The field name when the editor draws its own label, null when it doesn't. */
+private fun labelOrNull(showLabel: Boolean, name: String): String? =
+    if (showLabel) name else null
 
 /**
  * Parse a date field value into epoch seconds. Accepts either epoch seconds (the
@@ -685,7 +788,7 @@ private fun parseOptionColour(hex: String): Color {
 
 @Composable
 private fun ChecklistEditor(
-    fieldName: String,
+    fieldName: String?,
     value: String,
     isReadonly: Boolean,
     onValueChange: (String) -> Unit
@@ -708,12 +811,14 @@ private fun ChecklistEditor(
     }
 
     Column {
-        Text(
-            text = fieldName,
-            style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(modifier = Modifier.height(4.dp))
+        if (fieldName != null) {
+            Text(
+                text = fieldName,
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+        }
 
         items.forEachIndexed { index, item ->
             Row(
