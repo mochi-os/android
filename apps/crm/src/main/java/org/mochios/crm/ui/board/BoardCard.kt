@@ -54,12 +54,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmObject
@@ -316,13 +318,27 @@ fun BoardCard(
                                         // fall back to the raw value if unknown.
                                         val resolved = people.find { person -> person.id == value }
                                             ?.name?.takeIf { name -> name.isNotBlank() } ?: value
-                                        Text(
-                                            text = resolved,
-                                            fontSize = 10.sp,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis
-                                        )
+                                        // Avatar then name, as the tree rows show
+                                        // it. The value is the person's entity id,
+                                        // which is the id the people app serves an
+                                        // avatar under; initials stand in when
+                                        // there is no photo to load.
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            EntityAvatar(
+                                                name = resolved,
+                                                src = personAvatarPath(value),
+                                                seed = value,
+                                                size = 14.dp,
+                                            )
+                                            Spacer(modifier = Modifier.width(4.dp))
+                                            Text(
+                                                text = resolved,
+                                                fontSize = 10.sp,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                                maxLines = 1,
+                                                overflow = TextOverflow.Ellipsis
+                                            )
+                                        }
                                     }
                                     else -> {
                                         Text(

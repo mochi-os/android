@@ -63,6 +63,7 @@ import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
@@ -436,7 +437,15 @@ private fun MetaValue(
             val person = people.find { candidate -> candidate.id == value }
             val name = person?.name?.takeIf { personName -> personName.isNotBlank() } ?: value
             Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                EntityAvatar(name = name, seed = value, size = 22.dp)
+                // The field value is the person's entity id, which is what the
+                // people app serves an avatar under — without src the avatar
+                // could only ever be seeded initials, never the real photo.
+                EntityAvatar(
+                    name = name,
+                    src = personAvatarPath(value),
+                    seed = value,
+                    size = 22.dp,
+                )
                 Spacer(modifier = Modifier.width(6.dp))
                 MetaText(name)
             }
