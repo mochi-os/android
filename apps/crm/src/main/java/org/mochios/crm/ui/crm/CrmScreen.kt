@@ -807,14 +807,19 @@ private fun CrmContent(
                                     },
                                     leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
                                 )
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.crm_design)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        onDesign(viewModel.crmId)
-                                    },
-                                    leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
-                                )
+                                // Reshaping the design is the owner's to do, so
+                                // it is offered on the same terms as the link
+                                // above rather than on every subscribed CRM.
+                                if (details?.crm?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.crm_design)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            onDesign(viewModel.crmId)
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                    )
+                                }
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.crm_export)) },
                                     onClick = {

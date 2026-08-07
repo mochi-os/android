@@ -800,14 +800,19 @@ private fun ProjectContent(
                                     },
                                     leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
                                 )
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.projects_design)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        onDesign(viewModel.projectId)
-                                    },
-                                    leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
-                                )
+                                // Reshaping the design is the owner's to do, so
+                                // it is offered on the same terms as the link
+                                // above rather than on every subscribed project.
+                                if (details?.project?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.projects_design)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            onDesign(viewModel.projectId)
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                    )
+                                }
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.projects_export)) },
                                     onClick = {
