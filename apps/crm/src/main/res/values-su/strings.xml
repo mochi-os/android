@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">ngosongkeun %1$s</string>
     <string name="crm_activity_updated">ngapdet %1$s</string>
     <string name="crm_activity_made_change">ngalakukeun parobahan</string>
+    <string name="crm_activity_attached">ngalampirkeun</string>
+    <string name="crm_activity_commented">ngoméntaran</string>
     <string name="crm_attachment_empty">Euweuh lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

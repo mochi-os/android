@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s ತೆರವುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="crm_activity_updated">%1$s ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="crm_activity_made_change">ಬದಲಾವಣೆ ಮಾಡಿದರು</string>
+    <string name="crm_activity_attached">ಲಗತ್ತಿಸಿದರು</string>
+    <string name="crm_activity_commented">ಕಾಮೆಂಟ್ ಮಾಡಿದರು</string>
     <string name="crm_attachment_empty">ಯಾವುದೇ ಲಗತ್ತುಗಳಿಲ್ಲ</string>
     <string name="crm_attachment_default_name">ಲಗತ್ತು</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

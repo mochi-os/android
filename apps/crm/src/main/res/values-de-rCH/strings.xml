@@ -178,6 +178,8 @@
     <string name="crm_activity_cleared">hat %1$s zurückgesetzt</string>
     <string name="crm_activity_updated">hat %1$s aktualisiert</string>
     <string name="crm_activity_made_change">hat eine Änderung vorgenommen</string>
+    <string name="crm_activity_attached">hat angehängt</string>
+    <string name="crm_activity_commented">hat kommentiert</string>
     <string name="crm_attachment_empty">Keine Anhänge</string>
     <string name="crm_attachment_add">Anhang hinzufügen</string>
     <string name="crm_attachment_default_name">Anhang</string>

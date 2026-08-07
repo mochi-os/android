@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s tozalandi</string>
     <string name="crm_activity_updated">%1$s yangilandi</string>
     <string name="crm_activity_made_change">o\'zgartirish kiritdi</string>
+    <string name="crm_activity_attached">biriktirdi</string>
+    <string name="crm_activity_commented">izoh qoldirdi</string>
     <string name="crm_attachment_empty">Ilovalar yo\'q</string>
     <string name="crm_attachment_default_name">ilova</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

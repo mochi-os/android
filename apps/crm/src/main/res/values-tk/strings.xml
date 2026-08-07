@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s arassalady</string>
     <string name="crm_activity_updated">%1$s täzeledi</string>
     <string name="crm_activity_made_change">üýtgeşme etdi</string>
+    <string name="crm_activity_attached">goşdy</string>
+    <string name="crm_activity_commented">teswir ýazdy</string>
     <string name="crm_attachment_empty">Goşundy ýok</string>
     <string name="crm_attachment_default_name">goşundy</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

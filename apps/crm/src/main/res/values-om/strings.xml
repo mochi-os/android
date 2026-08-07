@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s balleesse</string>
     <string name="crm_activity_updated">%1$s haaromse</string>
     <string name="crm_activity_made_change">jijjiirama godhe</string>
+    <string name="crm_activity_attached">maxxanse</string>
+    <string name="crm_activity_commented">yaada kenne</string>
     <string name="crm_attachment_empty">Maxxansaawwan hin jiran</string>
     <string name="crm_attachment_default_name">maxxansa</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

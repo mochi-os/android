@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">%1$s təmizləndi</string>
     <string name="crm_activity_updated">%1$s yeniləndi</string>
     <string name="crm_activity_made_change">dəyişiklik etdi</string>
+    <string name="crm_activity_attached">əlavə etdi</string>
+    <string name="crm_activity_commented">şərh yazdı</string>
     <string name="crm_attachment_empty">Qoşma yoxdur</string>
     <string name="crm_attachment_default_name">qoşma</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

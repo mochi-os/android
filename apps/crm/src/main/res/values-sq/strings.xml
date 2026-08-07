@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">pastroi %1$s</string>
     <string name="crm_activity_updated">përditësoi %1$s</string>
     <string name="crm_activity_made_change">bëri një ndryshim</string>
+    <string name="crm_activity_attached">bashkëngjiti</string>
+    <string name="crm_activity_commented">komentoi</string>
     <string name="crm_attachment_empty">Pa bashkëngjitje</string>
     <string name="crm_attachment_default_name">bashkëngjitje</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

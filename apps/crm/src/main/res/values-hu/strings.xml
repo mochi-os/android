@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">törölte: %1$s</string>
     <string name="crm_activity_updated">frissítette: %1$s</string>
     <string name="crm_activity_made_change">módosítást hajtott végre</string>
+    <string name="crm_activity_attached">csatolta</string>
+    <string name="crm_activity_commented">hozzászólt</string>
     <string name="crm_attachment_empty">Nincsenek mellékletek</string>
     <string name="crm_attachment_default_name">melléklet</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">tyhjensi %1$s</string>
     <string name="crm_activity_updated">päivitti %1$s</string>
     <string name="crm_activity_made_change">teki muutoksen</string>
+    <string name="crm_activity_attached">liitti</string>
+    <string name="crm_activity_commented">kommentoi</string>
     <string name="crm_attachment_empty">Ei liitteitä</string>
     <string name="crm_attachment_default_name">liite</string>
     <string name="crm_attachment_size_bytes">%1$d t</string>

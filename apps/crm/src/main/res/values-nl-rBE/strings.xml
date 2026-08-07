@@ -222,6 +222,8 @@
     <string name="crm_activity_cleared">heeft %1$s gewist</string>
     <string name="crm_activity_updated">heeft %1$s bijgewerkt</string>
     <string name="crm_activity_made_change">heeft een wijziging doorgevoerd</string>
+    <string name="crm_activity_attached">heeft bijgevoegd</string>
+    <string name="crm_activity_commented">heeft gereageerd</string>
     <string name="crm_attachment_empty">Geen bijlagen</string>
     <string name="crm_attachment_default_name">bijlage</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

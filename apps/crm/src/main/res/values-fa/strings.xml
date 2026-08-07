@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s را پاک کرد</string>
     <string name="crm_activity_updated">%1$s را به‌روزرسانی کرد</string>
     <string name="crm_activity_made_change">تغییری اعمال کرد</string>
+    <string name="crm_activity_attached">پیوست کرد</string>
+    <string name="crm_activity_commented">نظر داد</string>
     <string name="crm_attachment_empty">بدون پیوست</string>
     <string name="crm_attachment_default_name">پیوست</string>
     <string name="crm_attachment_size_bytes">%1$d بایت</string>

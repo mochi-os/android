@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">%1$s پاککرایەوە</string>
     <string name="crm_activity_updated">%1$s نوێکرایەوە</string>
     <string name="crm_activity_made_change">گۆڕانکارییەکی کرد</string>
+    <string name="crm_activity_attached">هاوپێچی کرد</string>
+    <string name="crm_activity_commented">لێدوانی دا</string>
     <string name="crm_attachment_empty">هیچ هاوپێچێک نییە</string>
     <string name="crm_attachment_default_name">هاوپێچ</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">a effacé %1$s</string>
     <string name="crm_activity_updated">a mis à jour %1$s</string>
     <string name="crm_activity_made_change">a effectué une modification</string>
+    <string name="crm_activity_attached">a joint</string>
+    <string name="crm_activity_commented">a commenté</string>
     <string name="crm_attachment_empty">Aucune pièce jointe</string>
     <string name="crm_attachment_default_name">pièce jointe</string>
     <string name="crm_attachment_size_bytes">%1$d o</string>

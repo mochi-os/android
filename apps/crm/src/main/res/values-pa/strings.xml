@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s ਸਾਫ਼ ਕੀਤਾ</string>
     <string name="crm_activity_updated">%1$s ਅੱਪਡੇਟ ਕੀਤਾ</string>
     <string name="crm_activity_made_change">ਇੱਕ ਬਦਲਾਅ ਕੀਤਾ</string>
+    <string name="crm_activity_attached">ਨੱਥੀ ਕੀਤਾ</string>
+    <string name="crm_activity_commented">ਟਿੱਪਣੀ ਕੀਤੀ</string>
     <string name="crm_attachment_empty">ਕੋਈ ਨੱਥੀ ਨਹੀਂ</string>
     <string name="crm_attachment_default_name">ਨੱਥੀ</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

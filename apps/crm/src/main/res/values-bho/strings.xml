@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">%1$s साफ कइलें</string>
     <string name="crm_activity_updated">%1$s अद्यतन कइलें</string>
     <string name="crm_activity_made_change">एगो बदलाव कइलें</string>
+    <string name="crm_activity_attached">जोड़लस</string>
+    <string name="crm_activity_commented">टिप्पणी कइलस</string>
     <string name="crm_attachment_empty">कवनो अनुलग्नक नइखे</string>
     <string name="crm_attachment_default_name">अनुलग्नक</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

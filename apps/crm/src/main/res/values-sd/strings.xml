@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s صاف ڪيو</string>
     <string name="crm_activity_updated">%1$s اپڊيٽ ڪيو</string>
     <string name="crm_activity_made_change">هڪ تبديلي ڪئي</string>
+    <string name="crm_activity_attached">ڳنڍيو</string>
+    <string name="crm_activity_commented">تبصرو ڪيو</string>
     <string name="crm_attachment_empty">ڪوبه ڳنڍيل فائيل ناهي</string>
     <string name="crm_attachment_default_name">ڳنڍيل فائيل</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

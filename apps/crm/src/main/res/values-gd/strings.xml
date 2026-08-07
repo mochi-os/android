@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">ghlan e %1$s</string>
     <string name="crm_activity_updated">dh\'ùraich e %1$s</string>
     <string name="crm_activity_made_change">rinn e atharrachadh</string>
+    <string name="crm_activity_attached">cheangail</string>
+    <string name="crm_activity_commented">thug seachad beachd</string>
     <string name="crm_attachment_empty">Chan eil ceanglachain ann</string>
     <string name="crm_attachment_default_name">ceanglachan</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

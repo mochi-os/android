@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s paqij kir</string>
     <string name="crm_activity_updated">%1$s rojane kir</string>
     <string name="crm_activity_made_change">guhertinek çêkir</string>
+    <string name="crm_activity_attached">pêve kir</string>
+    <string name="crm_activity_commented">şîrove kir</string>
     <string name="crm_attachment_empty">Pêvek tune</string>
     <string name="crm_attachment_default_name">pêvek</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

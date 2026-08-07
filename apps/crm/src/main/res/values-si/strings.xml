@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s හිස් කළා</string>
     <string name="crm_activity_updated">%1$s යාවත්කාලීන කළා</string>
     <string name="crm_activity_made_change">වෙනසක් කළා</string>
+    <string name="crm_activity_attached">අමුණන ලදී</string>
+    <string name="crm_activity_commented">අදහස් දැක්වීය</string>
     <string name="crm_attachment_empty">ඇමුණුම් නැත</string>
     <string name="crm_attachment_default_name">ඇමුණුම</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

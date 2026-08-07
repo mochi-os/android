@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">binura ang %1$s</string>
     <string name="crm_activity_updated">ina-update ang %1$s</string>
     <string name="crm_activity_made_change">gumawa ng pagbabago</string>
+    <string name="crm_activity_attached">nag-attach</string>
+    <string name="crm_activity_commented">nagkomento</string>
     <string name="crm_attachment_empty">Walang attachment</string>
     <string name="crm_attachment_default_name">attachment</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

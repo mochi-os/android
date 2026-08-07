@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s صاف کیا</string>
     <string name="crm_activity_updated">%1$s اپ ڈیٹ کیا</string>
     <string name="crm_activity_made_change">ایک تبدیلی کی</string>
+    <string name="crm_activity_attached">منسلک کیا</string>
+    <string name="crm_activity_commented">تبصرہ کیا</string>
     <string name="crm_attachment_empty">کوئی منسلکات نہیں</string>
     <string name="crm_attachment_default_name">منسلک</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

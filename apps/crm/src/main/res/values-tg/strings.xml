@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s-ро пок кард</string>
     <string name="crm_activity_updated">%1$s-ро навсозӣ кард</string>
     <string name="crm_activity_made_change">тағйирот ворид кард</string>
+    <string name="crm_activity_attached">замима кард</string>
+    <string name="crm_activity_commented">шарҳ дод</string>
     <string name="crm_attachment_empty">Замимаҳо нестанд</string>
     <string name="crm_attachment_default_name">замима</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>

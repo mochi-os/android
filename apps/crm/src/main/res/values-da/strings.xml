@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">ryddede %1$s</string>
     <string name="crm_activity_updated">opdaterede %1$s</string>
     <string name="crm_activity_made_change">foretog en ændring</string>
+    <string name="crm_activity_attached">vedhæftede</string>
+    <string name="crm_activity_commented">kommenterede</string>
     <string name="crm_attachment_empty">Ingen vedhæftninger</string>
     <string name="crm_attachment_default_name">vedhæftning</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

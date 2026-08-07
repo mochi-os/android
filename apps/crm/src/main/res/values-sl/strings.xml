@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">je počistil %1$s</string>
     <string name="crm_activity_updated">je posodobil %1$s</string>
     <string name="crm_activity_made_change">je naredil spremembo</string>
+    <string name="crm_activity_attached">je priložil(a)</string>
+    <string name="crm_activity_commented">je komentiral(a)</string>
     <string name="crm_attachment_empty">Ni prilog</string>
     <string name="crm_attachment_default_name">priloga</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

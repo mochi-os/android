@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">մաքրեց %1$s</string>
     <string name="crm_activity_updated">թարմացրեց %1$s</string>
     <string name="crm_activity_made_change">կատարեց փոփոխություն</string>
+    <string name="crm_activity_attached">կցեց</string>
+    <string name="crm_activity_commented">մեկնաբանեց</string>
     <string name="crm_attachment_empty">Կցորդներ չկան</string>
     <string name="crm_attachment_default_name">կցորդ</string>
     <string name="crm_attachment_size_bytes">%1$d Բ</string>

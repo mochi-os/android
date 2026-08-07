@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s يې پاک کړ</string>
     <string name="crm_activity_updated">%1$s يې تازه کړ</string>
     <string name="crm_activity_made_change">بدلون يې راوست</string>
+    <string name="crm_activity_attached">ضمیمه یې کړه</string>
+    <string name="crm_activity_commented">تبصره یې وکړه</string>
     <string name="crm_attachment_empty">هیڅ ضمیمه نشته</string>
     <string name="crm_attachment_default_name">ضمیمه</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

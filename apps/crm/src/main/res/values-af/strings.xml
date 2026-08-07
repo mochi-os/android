@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">het %1$s skoongemaak</string>
     <string name="crm_activity_updated">het %1$s opgedateer</string>
     <string name="crm_activity_made_change">het \'n verandering aangebring</string>
+    <string name="crm_activity_attached">aangeheg</string>
+    <string name="crm_activity_commented">kommentaar gelewer</string>
     <string name="crm_attachment_empty">Geen aanhangsels nie</string>
     <string name="crm_attachment_default_name">aanhangsel</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

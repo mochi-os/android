@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">%1$s সাফ করেছেন</string>
     <string name="crm_activity_updated">%1$s আপডেট করেছেন</string>
     <string name="crm_activity_made_change">একটি পরিবর্তন করেছেন</string>
+    <string name="crm_activity_attached">সংযুক্ত করেছেন</string>
+    <string name="crm_activity_commented">মন্তব্য করেছেন</string>
     <string name="crm_attachment_empty">কোনো সংযুক্তি নেই</string>
     <string name="crm_attachment_default_name">সংযুক্তি</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

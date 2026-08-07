@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">%1$s ukax q\'umachawayi</string>
     <string name="crm_activity_updated">%1$s ukax machaqar tukuyawayi</string>
     <string name="crm_activity_made_change">mä mayjt\'äwix lurawayi</string>
+    <string name="crm_activity_attached">chinuqata</string>
+    <string name="crm_activity_commented">arsuwi uchata</string>
     <string name="crm_attachment_empty">Janiw yapatanakax utjkiti</string>
     <string name="crm_attachment_default_name">yapata</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

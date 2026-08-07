@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">ya share %1$s</string>
     <string name="crm_activity_updated">ya sabunta %1$s</string>
     <string name="crm_activity_made_change">ya yi canji</string>
+    <string name="crm_activity_attached">ya makala</string>
+    <string name="crm_activity_commented">ya yi sharhi</string>
     <string name="crm_attachment_empty">Babu abubuwan da aka haɗa</string>
     <string name="crm_attachment_default_name">abin da aka haɗa</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

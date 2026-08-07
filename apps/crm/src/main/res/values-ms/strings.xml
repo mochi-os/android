@@ -287,6 +287,8 @@
     <string name="crm_activity_cleared">mengosongkan %1$s</string>
     <string name="crm_activity_updated">mengemas kini %1$s</string>
     <string name="crm_activity_made_change">membuat perubahan</string>
+    <string name="crm_activity_attached">melampirkan</string>
+    <string name="crm_activity_commented">mengulas</string>
     <string name="crm_attachment_empty">Tiada lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

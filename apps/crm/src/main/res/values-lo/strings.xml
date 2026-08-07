@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">ໄດ້ລ້າງ %1$s</string>
     <string name="crm_activity_updated">ໄດ້ປັບປຸງ %1$s</string>
     <string name="crm_activity_made_change">ໄດ້ປ່ຽນແປງ</string>
+    <string name="crm_activity_attached">ໄດ້ແນບ</string>
+    <string name="crm_activity_commented">ໄດ້ສະແດງຄຳເຫັນ</string>
     <string name="crm_attachment_empty">ບໍ່ມີໄຟລ໌ແນບ</string>
     <string name="crm_attachment_default_name">ໄຟລ໌ແນບ</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">menghapus %1$s</string>
     <string name="crm_activity_updated">memperbarui %1$s</string>
     <string name="crm_activity_made_change">membuat perubahan</string>
+    <string name="crm_activity_attached">melampirkan</string>
+    <string name="crm_activity_commented">mengomentari</string>
     <string name="crm_attachment_empty">Tidak ada lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

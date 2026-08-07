@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">បានសម្អាត %1$s</string>
     <string name="crm_activity_updated">បានធ្វើបច្ចុប្បន្នភាព %1$s</string>
     <string name="crm_activity_made_change">បានធ្វើការផ្លាស់ប្តូរ</string>
+    <string name="crm_activity_attached">បានភ្ជាប់</string>
+    <string name="crm_activity_commented">បានបញ្ចេញមតិ</string>
     <string name="crm_attachment_empty">គ្មានឯកសារភ្ជាប់</string>
     <string name="crm_attachment_default_name">ឯកសារភ្ជាប់</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

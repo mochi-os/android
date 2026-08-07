@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">διέγραψε %1$s</string>
     <string name="crm_activity_updated">ενημέρωσε %1$s</string>
     <string name="crm_activity_made_change">έκανε μια αλλαγή</string>
+    <string name="crm_activity_attached">επισύναψε</string>
+    <string name="crm_activity_commented">σχολίασε</string>
     <string name="crm_attachment_empty">Δεν υπάρχουν συνημμένα</string>
     <string name="crm_attachment_default_name">συνημμένο</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

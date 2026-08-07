@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s ஐ அழித்தார்</string>
     <string name="crm_activity_updated">%1$s ஐப் புதுப்பித்தார்</string>
     <string name="crm_activity_made_change">ஒரு மாற்றம் செய்தார்</string>
+    <string name="crm_activity_attached">இணைத்தார்</string>
+    <string name="crm_activity_commented">கருத்திட்டார்</string>
     <string name="crm_attachment_empty">இணைப்புகள் இல்லை</string>
     <string name="crm_attachment_default_name">இணைப்பு</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

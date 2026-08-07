@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s garbitu du</string>
     <string name="crm_activity_updated">%1$s eguneratu du</string>
     <string name="crm_activity_made_change">aldaketa bat egin du</string>
+    <string name="crm_activity_attached">erantsi du</string>
+    <string name="crm_activity_commented">iruzkindu du</string>
     <string name="crm_attachment_empty">Eranskinik ez</string>
     <string name="crm_attachment_default_name">eranskina</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">naddaf %1$s</string>
     <string name="crm_activity_updated">aġġorna %1$s</string>
     <string name="crm_activity_made_change">għamel bidla</string>
+    <string name="crm_activity_attached">hemeż</string>
+    <string name="crm_activity_commented">ikkummenta</string>
     <string name="crm_attachment_empty">L-ebda mehmuża</string>
     <string name="crm_attachment_default_name">mehmuża</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">notīrīja %1$s</string>
     <string name="crm_activity_updated">atjaunināja %1$s</string>
     <string name="crm_activity_made_change">veica izmaiņas</string>
+    <string name="crm_activity_attached">pievienoja</string>
+    <string name="crm_activity_commented">komentēja</string>
     <string name="crm_attachment_empty">Nav pielikumu</string>
     <string name="crm_attachment_default_name">pielikums</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

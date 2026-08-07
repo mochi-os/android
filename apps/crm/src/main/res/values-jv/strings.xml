@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">ngresiki %1$s</string>
     <string name="crm_activity_updated">nganyari %1$s</string>
     <string name="crm_activity_made_change">nggawe owah-owahan</string>
+    <string name="crm_activity_attached">nglampirake</string>
+    <string name="crm_activity_commented">menehi komentar</string>
     <string name="crm_attachment_empty">Ora ana lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

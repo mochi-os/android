@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s ကို ရှင်းလင်းခဲ့သည်</string>
     <string name="crm_activity_updated">%1$s ကို မွမ်းမံခဲ့သည်</string>
     <string name="crm_activity_made_change">ပြောင်းလဲမှု ပြုလုပ်ခဲ့သည်</string>
+    <string name="crm_activity_attached">ပူးတွဲခဲ့သည်</string>
+    <string name="crm_activity_commented">မှတ်ချက်ပေးခဲ့သည်</string>
     <string name="crm_attachment_empty">ပူးတွဲဖိုင်များ မရှိပါ</string>
     <string name="crm_attachment_default_name">ပူးတွဲဖိုင်</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

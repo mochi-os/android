@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">مسح %1$s</string>
     <string name="crm_activity_updated">حدّث %1$s</string>
     <string name="crm_activity_made_change">أجرى تغييراً</string>
+    <string name="crm_activity_attached">أرفق</string>
+    <string name="crm_activity_commented">علّق</string>
     <string name="crm_attachment_empty">لا توجد مرفقات</string>
     <string name="crm_attachment_default_name">مرفق</string>
     <string name="crm_attachment_size_bytes">%1$d بايت</string>

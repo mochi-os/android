@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">האָט אױסגעלײדיקט %1$s</string>
     <string name="crm_activity_updated">האָט דערהײַנטיקט %1$s</string>
     <string name="crm_activity_made_change">האָט געמאַכט אַ ענדערונג</string>
+    <string name="crm_activity_attached">צוגעטשעפּעט</string>
+    <string name="crm_activity_commented">באַמערקט</string>
     <string name="crm_attachment_empty">קײן בײַלאַגעס</string>
     <string name="crm_attachment_default_name">בײַלאַגע</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

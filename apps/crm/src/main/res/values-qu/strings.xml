@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s-ta picharqa</string>
     <string name="crm_activity_updated">%1$s-ta musuqyacharqa</string>
     <string name="crm_activity_made_change">tikrayta rurarqa</string>
+    <string name="crm_activity_attached">churarqa</string>
+    <string name="crm_activity_commented">rimarirqa</string>
     <string name="crm_attachment_empty">Mana yapakuqkuna</string>
     <string name="crm_attachment_default_name">yapakuq</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">efase %1$s</string>
     <string name="crm_activity_updated">mete %1$s ajou</string>
     <string name="crm_activity_made_change">fè yon chanjman</string>
+    <string name="crm_activity_attached">tache</string>
+    <string name="crm_activity_commented">kòmante</string>
     <string name="crm_attachment_empty">Pa gen atachman</string>
     <string name="crm_attachment_default_name">atachman</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

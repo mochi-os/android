@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">amefuta %1$s</string>
     <string name="crm_activity_updated">amesasisha %1$s</string>
     <string name="crm_activity_made_change">amefanya mabadiliko</string>
+    <string name="crm_activity_attached">aliambatisha</string>
+    <string name="crm_activity_commented">alitoa maoni</string>
     <string name="crm_attachment_empty">Hakuna viambatisho</string>
     <string name="crm_attachment_default_name">kiambatisho</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

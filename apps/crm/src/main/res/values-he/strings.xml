@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">ניקה %1$s</string>
     <string name="crm_activity_updated">עדכן %1$s</string>
     <string name="crm_activity_made_change">ביצע שינוי</string>
+    <string name="crm_activity_attached">צירף/ה</string>
+    <string name="crm_activity_commented">הגיב/ה</string>
     <string name="crm_attachment_empty">אין קבצים מצורפים</string>
     <string name="crm_attachment_default_name">קובץ מצורף</string>
     <string name="crm_attachment_size_bytes">%1$d ב׳</string>

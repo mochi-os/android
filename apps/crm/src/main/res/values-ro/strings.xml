@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">a șters %1$s</string>
     <string name="crm_activity_updated">a actualizat %1$s</string>
     <string name="crm_activity_made_change">a făcut o modificare</string>
+    <string name="crm_activity_attached">a atașat</string>
+    <string name="crm_activity_commented">a comentat</string>
     <string name="crm_attachment_empty">Niciun atașament</string>
     <string name="crm_attachment_default_name">atașament</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

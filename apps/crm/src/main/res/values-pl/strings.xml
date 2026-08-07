@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">wyczyścił %1$s</string>
     <string name="crm_activity_updated">zaktualizował %1$s</string>
     <string name="crm_activity_made_change">wprowadził zmianę</string>
+    <string name="crm_activity_attached">załączył(a)</string>
+    <string name="crm_activity_commented">skomentował(a)</string>
     <string name="crm_attachment_empty">Brak załączników</string>
     <string name="crm_attachment_default_name">załącznik</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

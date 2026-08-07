@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">usule i-%1$s</string>
     <string name="crm_activity_updated">ubuyekeze i-%1$s</string>
     <string name="crm_activity_made_change">wenze ushintsho</string>
+    <string name="crm_activity_attached">unamathisele</string>
+    <string name="crm_activity_commented">uphawulile</string>
     <string name="crm_attachment_empty">Azikho izinamathiselo</string>
     <string name="crm_attachment_default_name">isinamathiselo</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">ачысціў %1$s</string>
     <string name="crm_activity_updated">абнавіў %1$s</string>
     <string name="crm_activity_made_change">унёс змяненне</string>
+    <string name="crm_activity_attached">далучыў(-ла)</string>
+    <string name="crm_activity_commented">пракаментаваў(-ла)</string>
     <string name="crm_attachment_empty">Няма ўкладанняў</string>
     <string name="crm_attachment_default_name">укладанне</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>

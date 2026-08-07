@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">გაასუფთავა %1$s</string>
     <string name="crm_activity_updated">განაახლა %1$s</string>
     <string name="crm_activity_made_change">შეიტანა ცვლილება</string>
+    <string name="crm_activity_attached">დაურთო</string>
+    <string name="crm_activity_commented">დააკომენტარა</string>
     <string name="crm_attachment_empty">დანართები არ არის</string>
     <string name="crm_attachment_default_name">დანართი</string>
     <string name="crm_attachment_size_bytes">%1$d ბ</string>

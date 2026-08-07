@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s മായ്ച്ചു</string>
     <string name="crm_activity_updated">%1$s അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="crm_activity_made_change">ഒരു മാറ്റം വരുത്തി</string>
+    <string name="crm_activity_attached">അറ്റാച്ച് ചെയ്തു</string>
+    <string name="crm_activity_commented">അഭിപ്രായമിട്ടു</string>
     <string name="crm_attachment_empty">അറ്റാച്ച്മെന്റുകൾ ഇല്ല</string>
     <string name="crm_attachment_default_name">അറ്റാച്ച്മെന്റ്</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

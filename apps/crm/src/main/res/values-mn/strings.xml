@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s-г арилгав</string>
     <string name="crm_activity_updated">%1$s-г шинэчлэв</string>
     <string name="crm_activity_made_change">өөрчлөлт хийв</string>
+    <string name="crm_activity_attached">хавсаргасан</string>
+    <string name="crm_activity_commented">сэтгэгдэл үлдээсэн</string>
     <string name="crm_attachment_empty">Хавсралт байхгүй</string>
     <string name="crm_attachment_default_name">хавсралт</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>

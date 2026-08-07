@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">usule %1$s</string>
     <string name="crm_activity_updated">uhlaziye %1$s</string>
     <string name="crm_activity_made_change">wenze utshintsho</string>
+    <string name="crm_activity_attached">uqhoboshele</string>
+    <string name="crm_activity_commented">uphawule</string>
     <string name="crm_attachment_empty">Akukho ziqhotyoshelwa</string>
     <string name="crm_attachment_default_name">isiqhotyoshelwa</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

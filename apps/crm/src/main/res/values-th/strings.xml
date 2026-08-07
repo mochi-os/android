@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">ล้าง %1$s</string>
     <string name="crm_activity_updated">อัปเดต %1$s</string>
     <string name="crm_activity_made_change">ทำการเปลี่ยนแปลง</string>
+    <string name="crm_activity_attached">แนบแล้ว</string>
+    <string name="crm_activity_commented">แสดงความคิดเห็นแล้ว</string>
     <string name="crm_attachment_empty">ไม่มีไฟล์แนบ</string>
     <string name="crm_attachment_default_name">ไฟล์แนบ</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

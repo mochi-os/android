@@ -226,6 +226,8 @@
     <string name="crm_activity_cleared">vymazal %1$s</string>
     <string name="crm_activity_updated">aktualizoval %1$s</string>
     <string name="crm_activity_made_change">provedl změnu</string>
+    <string name="crm_activity_attached">přiložil(a)</string>
+    <string name="crm_activity_commented">okomentoval(a)</string>
     <string name="crm_attachment_empty">Žádné přílohy</string>
     <string name="crm_attachment_default_name">příloha</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

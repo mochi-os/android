@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s साफ़ किया</string>
     <string name="crm_activity_updated">%1$s अपडेट किया</string>
     <string name="crm_activity_made_change">एक बदलाव किया</string>
+    <string name="crm_activity_attached">संलग्न किया</string>
+    <string name="crm_activity_commented">टिप्पणी की</string>
     <string name="crm_attachment_empty">कोई अनुलग्नक नहीं</string>
     <string name="crm_attachment_default_name">अनुलग्नक</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

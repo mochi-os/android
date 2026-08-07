@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s тазаланды</string>
     <string name="crm_activity_updated">%1$s жаңыртылды</string>
     <string name="crm_activity_made_change">өзгөртүү киргизди</string>
+    <string name="crm_activity_attached">тиркеди</string>
+    <string name="crm_activity_commented">пикир калтырды</string>
     <string name="crm_attachment_empty">Тиркемелер жок</string>
     <string name="crm_attachment_default_name">тиркеме</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>

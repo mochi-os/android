@@ -288,6 +288,8 @@
     <string name="crm_activity_cleared">ha esborrat %1$s</string>
     <string name="crm_activity_updated">ha actualitzat %1$s</string>
     <string name="crm_activity_made_change">ha fet un canvi</string>
+    <string name="crm_activity_attached">ha adjuntat</string>
+    <string name="crm_activity_commented">ha comentat</string>
     <string name="crm_attachment_empty">Cap adjunt</string>
     <string name="crm_attachment_default_name">adjunt</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

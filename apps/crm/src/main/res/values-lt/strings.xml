@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">išvalė %1$s</string>
     <string name="crm_activity_updated">atnaujino %1$s</string>
     <string name="crm_activity_made_change">atliko pakeitimą</string>
+    <string name="crm_activity_attached">pridėjo</string>
+    <string name="crm_activity_commented">pakomentavo</string>
     <string name="crm_attachment_empty">Priedų nėra</string>
     <string name="crm_attachment_default_name">priedas</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

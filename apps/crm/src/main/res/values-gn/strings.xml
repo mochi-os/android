@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">omopotĩ %1$s</string>
     <string name="crm_activity_updated">ombopyahu %1$s</string>
     <string name="crm_activity_made_change">ojapo moambue</string>
+    <string name="crm_activity_attached">omoĩ</string>
+    <string name="crm_activity_commented">he\'i</string>
     <string name="crm_attachment_empty">Ndaipóri kuatia mboapoha</string>
     <string name="crm_attachment_default_name">kuatia mboapoha</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

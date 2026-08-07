@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">исчисти %1$s</string>
     <string name="crm_activity_updated">ажурира %1$s</string>
     <string name="crm_activity_made_change">направи промена</string>
+    <string name="crm_activity_attached">прикачи</string>
+    <string name="crm_activity_commented">коментираше</string>
     <string name="crm_attachment_empty">Нема прилози</string>
     <string name="crm_attachment_default_name">прилог</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

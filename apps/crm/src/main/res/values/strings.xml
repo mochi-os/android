@@ -223,6 +223,8 @@
     <string name="crm_activity_cleared">cleared %1$s</string>
     <string name="crm_activity_updated">updated %1$s</string>
     <string name="crm_activity_made_change">made a change</string>
+    <string name="crm_activity_attached">attached</string>
+    <string name="crm_activity_commented">commented</string>
 
     <!-- Attachments -->
     <string name="crm_attachments">Attachments</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">pa %1$s rẹ́</string>
     <string name="crm_activity_updated">ṣe àtúnṣe %1$s</string>
     <string name="crm_activity_made_change">ṣe àyípadà</string>
+    <string name="crm_activity_attached">so mọ́</string>
+    <string name="crm_activity_commented">sọ àsọyé</string>
     <string name="crm_attachment_empty">Kò sí àfikún</string>
     <string name="crm_attachment_default_name">àfikún</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

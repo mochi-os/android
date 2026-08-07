@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">borró %1$s</string>
     <string name="crm_activity_updated">actualizó %1$s</string>
     <string name="crm_activity_made_change">realizó un cambio</string>
+    <string name="crm_activity_attached">adjuntó</string>
+    <string name="crm_activity_commented">comentó</string>
     <string name="crm_attachment_empty">Sin archivos adjuntos</string>
     <string name="crm_attachment_default_name">archivo adjunto</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

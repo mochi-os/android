@@ -231,6 +231,8 @@
     <string name="crm_activity_cleared">tømde %1$s</string>
     <string name="crm_activity_updated">oppdaterte %1$s</string>
     <string name="crm_activity_made_change">gjorde ei endring</string>
+    <string name="crm_activity_attached">la ved</string>
+    <string name="crm_activity_commented">kommenterte</string>
     <string name="crm_attachment_empty">Ingen vedlegg</string>
     <string name="crm_attachment_default_name">vedlegg</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

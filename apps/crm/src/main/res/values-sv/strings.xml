@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">rensade %1$s</string>
     <string name="crm_activity_updated">uppdaterade %1$s</string>
     <string name="crm_activity_made_change">gjorde en ändring</string>
+    <string name="crm_activity_attached">bifogade</string>
+    <string name="crm_activity_commented">kommenterade</string>
     <string name="crm_attachment_empty">Inga bilagor</string>
     <string name="crm_attachment_default_name">bilaga</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

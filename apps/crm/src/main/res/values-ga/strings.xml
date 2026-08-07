@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">glanadh %1$s</string>
     <string name="crm_activity_updated">nuashonraíodh %1$s</string>
     <string name="crm_activity_made_change">rinneadh athrú</string>
+    <string name="crm_activity_attached">cheangail</string>
+    <string name="crm_activity_commented">rinne trácht</string>
     <string name="crm_attachment_empty">Níl aon iatáin ann</string>
     <string name="crm_attachment_default_name">iatán</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s temizlendi</string>
     <string name="crm_activity_updated">%1$s güncellendi</string>
     <string name="crm_activity_made_change">bir değişiklik yaptı</string>
+    <string name="crm_activity_attached">ekledi</string>
+    <string name="crm_activity_commented">yorum yaptı</string>
     <string name="crm_attachment_empty">Ek yok</string>
     <string name="crm_attachment_default_name">ek</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

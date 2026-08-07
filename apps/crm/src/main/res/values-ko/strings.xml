@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">%1$s 지움</string>
     <string name="crm_activity_updated">%1$s 업데이트됨</string>
     <string name="crm_activity_made_change">변경했습니다</string>
+    <string name="crm_activity_attached">첨부함</string>
+    <string name="crm_activity_commented">댓글 남김</string>
     <string name="crm_attachment_empty">첨부 파일 없음</string>
     <string name="crm_attachment_default_name">첨부 파일</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>

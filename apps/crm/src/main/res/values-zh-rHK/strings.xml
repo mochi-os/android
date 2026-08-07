@@ -171,6 +171,8 @@
     <string name="crm_activity_cleared">清除了 %1$s</string>
     <string name="crm_activity_updated">更新了 %1$s</string>
     <string name="crm_activity_made_change">進行了變更</string>
+    <string name="crm_activity_attached">加入了附件</string>
+    <string name="crm_activity_commented">發表了留言</string>
     <string name="crm_attachment_empty">沒有附件</string>
     <string name="crm_attachment_add">新增附件</string>
     <string name="crm_attachment_default_name">附件</string>

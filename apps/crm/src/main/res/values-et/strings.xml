@@ -232,6 +232,8 @@
     <string name="crm_activity_cleared">tühjendas %1$s</string>
     <string name="crm_activity_updated">uuendas %1$s</string>
     <string name="crm_activity_made_change">tegi muudatuse</string>
+    <string name="crm_activity_attached">lisas manuse</string>
+    <string name="crm_activity_commented">kommenteeris</string>
     <string name="crm_attachment_empty">Manuseid pole</string>
     <string name="crm_attachment_default_name">manus</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
