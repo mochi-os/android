@@ -78,8 +78,9 @@ fun PropertiesTab(
     crmDetails: CrmDetails,
     viewModel: ObjectDetailViewModel,
     /**
-     * Field ids the active view pins. Empty means the view pins none, so every
-     * field of the object's class is shown instead.
+     * Field ids the active view pins, in the order it lists them. They lead the
+     * form; the rest of the class follows. Empty pins nothing, leaving the
+     * whole class in rank order.
      */
     viewFieldIds: List<String> = emptyList(),
     onAddChild: () -> Unit = {},
@@ -97,17 +98,16 @@ fun PropertiesTab(
     val canHaveChildren = remember(crmDetails.hierarchy, obj.objectClass) {
         crmDetails.hierarchy.any { (_, parents) -> obj.objectClass in parents }
     }
-    // Which fields the form shows: the active view's selection when it pins
-    // any, otherwise the whole class. Either way they run in rank order, the
-    // same ordering the board cards use. The title field is always kept — a
-    // view that leaves it out would otherwise make the object's name
-    // uneditable, since nothing else in the sheet edits it.
-    val visibleFields = remember(fields, viewFieldIds, titleFieldId) {
-        val pinned = viewFieldIds.toSet()
-        fields
-            .filter { field ->
-                pinned.isEmpty() || field.id in pinned || field.id == titleFieldId
-            }
+    // Every field the class defines, the same set the create dialog offers: a
+    // field the view leaves out is still the object's, and the sheet is where
+    // it gets edited. The view's pinned fields lead, in the order it lists
+    // them, so the sheet opens on what the rows and cards already show; the
+    // rest follow in rank order.
+    val visibleFields = remember(fields, viewFieldIds) {
+        val pinned = viewFieldIds.mapNotNull { id -> fields.find { field -> field.id == id } }
+        val pinnedIds = pinned.map { field -> field.id }.toSet()
+        pinned + fields
+            .filterNot { field -> field.id in pinnedIds }
             .sortedBy { field -> field.rank }
     }
 
