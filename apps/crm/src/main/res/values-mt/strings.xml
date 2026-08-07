@@ -26,6 +26,7 @@
     <string name="crm_settings">Settings</string>
     <string name="crm_link">Ħolqa</string>
     <string name="crm_design">Disinn</string>
+    <string name="crm_export_failed">L-esportazzjoni ma setgħetx tiġi salvata</string>
     <string name="crm_sort_label">Issortja</string>
     <string name="crm_sort_direction">Direzzjoni</string>
     <string name="crm_sort_rank">Manwali</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Esporta d-disinn</string>
     <string name="crm_design_import">Importa d-disinn</string>
     <string name="crm_design_imported">Disinn impurtat</string>
+    <string name="crm_design_export_saved">Id-disinn ġie salvat</string>
+    <string name="crm_design_import_failed">Ma setax jinqara dak il-fajl</string>
+    <string name="crm_design_or_upload_json">Jew tella\' fajl</string>
+    <string name="crm_design_upload_json">Tella\' fajl .json</string>
     <string name="crm_design_tab_classes">Klassijiet</string>
     <string name="crm_design_tab_views">Vista</string>
     <string name="crm_design_import_dialog_title">Importa d-disinn</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Iġbed il-kolonna</string>
     <string name="crm_drag_hint">Agħfas fit-tul u iġbed biex tmexxi</string>
     <string name="crm_design_more_options">Aktar għażliet</string>
-    <string name="crm_design_clipboard_label">JSON tad-disinn</string>
-    <string name="crm_design_export_subject">Disinn CRM</string>
-    <string name="crm_design_share_chooser">Ikkondividi d-disinn</string>
-    <string name="crm_design_export_copied">Id-disinn ġie kkupjat fuq il-clipboard</string>
     <string name="crm_design_no_templates">L-ebda mudell disponibbli</string>
-    <string name="crm_design_or_paste_json">Jew waħħal JSON</string>
-    <string name="crm_design_paste_placeholder">Waħħal id-disinn JSON esportat</string>
-    <string name="crm_design_import_json">Importa JSON</string>
     <string name="crm_design_use">Uża</string>
     <string name="crm_design_replace_message">Dan se jissostitwixxi d-disinn attwali b\'%1$s. Il-klassijiet, il-kampijiet, l-għażliet u l-veduti eżistenti kollha jitħassru. L-oġġetti eżistenti mhux se jitħassru imma jista\' jkun li ma jidhrux aktar fil-veduti.</string>
-    <string name="crm_design_pasted_json_label">JSON imwaħħal</string>
     <string name="crm_classes_empty">L-ebda klassi definita</string>
     <string name="crm_class_label">Klassi: %1$s</string>
     <string name="crm_class_title_field_description">Liema kamp għandu jintuża bħala t-titlu tal-wiri għall-oġġetti ta\' din il-klassi.</string>

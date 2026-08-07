@@ -26,6 +26,7 @@
     <string name="crm_settings">Կարգավորումներ</string>
     <string name="crm_link">Հղում</string>
     <string name="crm_design">Դիզայն</string>
+    <string name="crm_export_failed">Չհաջողվեց պահպանել արտահանումը</string>
     <string name="crm_sort_label">Տեսակավորել</string>
     <string name="crm_sort_direction">Ուղղություն</string>
     <string name="crm_sort_rank">Նշել բոլորը կարդացված</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Արտահանել ձևավորումը</string>
     <string name="crm_design_import">Ներմուծել ձևավորումը</string>
     <string name="crm_design_imported">Դիզայնը ներմուծված է</string>
+    <string name="crm_design_export_saved">Դիզայնը պահպանվեց</string>
+    <string name="crm_design_import_failed">Չհաջողվեց կարդալ այդ ֆայլը</string>
+    <string name="crm_design_or_upload_json">Կամ վերբեռնեք ֆայլ</string>
+    <string name="crm_design_upload_json">Վերբեռնել .json ֆայլ</string>
     <string name="crm_design_tab_classes">Մաքրել չօգտագործված տարբերակները</string>
     <string name="crm_design_tab_views">Դիտումներ</string>
     <string name="crm_design_import_dialog_title">Ներմուծել ձևավորումը</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Քաշել սյունակը</string>
     <string name="crm_drag_hint">Տեղափոխելու համար երկար սեղմեք և քաշեք</string>
     <string name="crm_design_more_options">Լրացուցիչ ընտրանքներ</string>
-    <string name="crm_design_clipboard_label">Ձևավորման JSON</string>
-    <string name="crm_design_export_subject">CRM ձևավորում</string>
-    <string name="crm_design_share_chooser">Կիսվել ձևավորմամբ</string>
-    <string name="crm_design_export_copied">Ձևավորումը պատճենվել է սեղմատախտակին</string>
     <string name="crm_design_no_templates">Հասանելի կաղապարներ չկան</string>
-    <string name="crm_design_or_paste_json">Կամ տեղադրեք JSON</string>
-    <string name="crm_design_paste_placeholder">Տեղադրեք արտահանված ձևավորման JSON</string>
-    <string name="crm_design_import_json">Ներմուծել JSON</string>
     <string name="crm_design_use">Օգտագործել</string>
     <string name="crm_design_replace_message">Սա կփոխարինի ներկայիս ձևավորումը %1$s-ով։ Բոլոր առկա դասերը, դաշտերը, ընտրանքները և տեսքերը կջնջվեն։ Առկա օբյեկտները չեն ջնջվի, սակայն կարող են այլևս չհայտնվել տեսքերում։</string>
-    <string name="crm_design_pasted_json_label">տեղադրված JSON</string>
     <string name="crm_classes_empty">Դասեր սահմանված չեն</string>
     <string name="crm_class_label">Դաս՝ %1$s</string>
     <string name="crm_class_title_field_description">Որ դաշտն օգտագործել որպես այս դասի օբյեկտների ցուցադրման վերնագիր։</string>

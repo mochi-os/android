@@ -26,6 +26,7 @@
     <string name="crm_settings">Stillingar</string>
     <string name="crm_link">Tengill</string>
     <string name="crm_design">Hönnun</string>
+    <string name="crm_export_failed">Ekki tókst að vista útflutninginn</string>
     <string name="crm_sort_label">Raða</string>
     <string name="crm_sort_direction">Stefna</string>
     <string name="crm_sort_rank">Handvirkt</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Flytja út hönnun</string>
     <string name="crm_design_import">Flytja inn hönnun</string>
     <string name="crm_design_imported">Hönnun innflutt</string>
+    <string name="crm_design_export_saved">Hönnun vistuð</string>
+    <string name="crm_design_import_failed">Ekki tókst að lesa skrána</string>
+    <string name="crm_design_or_upload_json">Eða hlaðið upp skrá</string>
+    <string name="crm_design_upload_json">Hlaða upp .json-skrá</string>
     <string name="crm_design_tab_classes">Flokkar</string>
     <string name="crm_design_tab_views">Áhorf</string>
     <string name="crm_design_import_dialog_title">Flytja inn hönnun</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Draga dálk</string>
     <string name="crm_drag_hint">Haltu inni og dragðu til að færa</string>
     <string name="crm_design_more_options">Fleiri valkostir</string>
-    <string name="crm_design_clipboard_label">Hönnunar-JSON</string>
-    <string name="crm_design_export_subject">CRM-hönnun</string>
-    <string name="crm_design_share_chooser">Deila hönnun</string>
-    <string name="crm_design_export_copied">Hönnun afrituð á klippiborð</string>
     <string name="crm_design_no_templates">Engin sniðmát í boði</string>
-    <string name="crm_design_or_paste_json">Eða límdu JSON</string>
-    <string name="crm_design_paste_placeholder">Límdu útflutta hönnunar-JSON</string>
-    <string name="crm_design_import_json">Flytja inn JSON</string>
     <string name="crm_design_use">Nota</string>
     <string name="crm_design_replace_message">Þetta mun skipta núverandi hönnun út fyrir %1$s. Öllum flokkum, reitum, valkostum og sýnum verður eytt. Núverandi hlutum verður ekki eytt en þeir gætu hætt að birtast í sýnum.</string>
-    <string name="crm_design_pasted_json_label">límd JSON</string>
     <string name="crm_classes_empty">Engir flokkar skilgreindir</string>
     <string name="crm_class_label">Flokkur: %1$s</string>
     <string name="crm_class_title_field_description">Hvaða reit á að nota sem birtitil fyrir hluti af þessum flokki.</string>

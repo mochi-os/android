@@ -26,6 +26,7 @@
     <string name="crm_settings">Instellings</string>
     <string name="crm_link">Skakel</string>
     <string name="crm_design">Ontwerp</string>
+    <string name="crm_export_failed">Kon nie die uitvoer stoor nie</string>
     <string name="crm_sort_label">Sorteer</string>
     <string name="crm_sort_direction">Rigting</string>
     <string name="crm_sort_rank">Handmatig</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Voer ontwerp uit</string>
     <string name="crm_design_import">Voer ontwerp in</string>
     <string name="crm_design_imported">Ontwerp ingevoer</string>
+    <string name="crm_design_export_saved">Ontwerp gestoor</string>
+    <string name="crm_design_import_failed">Kon nie daardie lêer lees nie</string>
+    <string name="crm_design_or_upload_json">Of laai \'n lêer op</string>
+    <string name="crm_design_upload_json">Laai .json-lêer op</string>
     <string name="crm_design_tab_classes">Klasse</string>
     <string name="crm_design_tab_views">Bekykings</string>
     <string name="crm_design_import_dialog_title">Voer ontwerp in</string>
@@ -265,17 +270,9 @@
     <string name="crm_drag_column">Sleep kolom</string>
     <string name="crm_drag_hint">Hou lank en sleep om te skuif</string>
     <string name="crm_design_more_options">Meer opsies</string>
-    <string name="crm_design_clipboard_label">Ontwerp-JSON</string>
-    <string name="crm_design_export_subject">CRM-ontwerp</string>
-    <string name="crm_design_share_chooser">Deel ontwerp</string>
-    <string name="crm_design_export_copied">Ontwerp na knipbord gekopieer</string>
     <string name="crm_design_no_templates">Geen sjablone beskikbaar nie</string>
-    <string name="crm_design_or_paste_json">Of plak JSON</string>
-    <string name="crm_design_paste_placeholder">Plak uitgevoerde ontwerp-JSON</string>
-    <string name="crm_design_import_json">Voer JSON in</string>
     <string name="crm_design_use">Gebruik</string>
     <string name="crm_design_replace_message">Dit sal die huidige ontwerp met %1$s vervang. Alle bestaande klasse, velde, opsies en aansigte sal uitgevee word. Bestaande objekte sal nie uitgevee word nie, maar mag dalk nie meer in aansigte verskyn nie.</string>
-    <string name="crm_design_pasted_json_label">geplakte JSON</string>
     <string name="crm_classes_empty">Geen klasse gedefinieer nie</string>
     <string name="crm_class_label">Klas: %1$s</string>
     <string name="crm_class_title_field_description">Watter veld om as die vertoontitel vir objekte van hierdie klas te gebruik.</string>

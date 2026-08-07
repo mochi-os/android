@@ -26,6 +26,7 @@
     <string name="crm_settings">Налады</string>
     <string name="crm_link">Спасылка</string>
     <string name="crm_design">Дызайн</string>
+    <string name="crm_export_failed">Не ўдалося захаваць экспарт</string>
     <string name="crm_sort_label">Сартаваць</string>
     <string name="crm_sort_direction">Напрамак</string>
     <string name="crm_sort_rank">Уручную</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Экспартаваць дызайн</string>
     <string name="crm_design_import">Імпартаваць дызайн</string>
     <string name="crm_design_imported">Дызайн імпартаваны</string>
+    <string name="crm_design_export_saved">Дызайн захаваны</string>
+    <string name="crm_design_import_failed">Не ўдалося прачытаць файл</string>
+    <string name="crm_design_or_upload_json">Або запампуйце файл</string>
+    <string name="crm_design_upload_json">Загрузіць .json-файл</string>
     <string name="crm_design_tab_classes">Класы</string>
     <string name="crm_design_tab_views">Прагляды</string>
     <string name="crm_design_import_dialog_title">Імпартаваць дызайн</string>
@@ -265,17 +270,9 @@
     <string name="crm_drag_column">Перацягнуць слупок</string>
     <string name="crm_drag_hint">Утрымлівайце і перацягніце, каб перамясціць</string>
     <string name="crm_design_more_options">Дадатковыя параметры</string>
-    <string name="crm_design_clipboard_label">JSON дызайну</string>
-    <string name="crm_design_export_subject">Дызайн CRM</string>
-    <string name="crm_design_share_chooser">Падзяліцца дызайнам</string>
-    <string name="crm_design_export_copied">Дызайн скапіраваны ў буфер абмену</string>
     <string name="crm_design_no_templates">Шаблоны недаступныя</string>
-    <string name="crm_design_or_paste_json">Або ўстаўце JSON</string>
-    <string name="crm_design_paste_placeholder">Устаўце экспартаваны JSON дызайну</string>
-    <string name="crm_design_import_json">Імпартаваць JSON</string>
     <string name="crm_design_use">Выкарыстаць</string>
     <string name="crm_design_replace_message">Гэта заменіць бягучы дызайн на %1$s. Усе існуючыя класы, палі, параметры і выгляды будуць выдалены. Існуючыя аб\'екты не будуць выдалены, але могуць больш не з\'яўляцца ў выглядах.</string>
-    <string name="crm_design_pasted_json_label">устаўлены JSON</string>
     <string name="crm_classes_empty">Класы не вызначаны</string>
     <string name="crm_class_label">Клас: %1$s</string>
     <string name="crm_class_title_field_description">Якое поле выкарыстоўваць як адлюстраваную назву для аб\'ектаў гэтага класа.</string>

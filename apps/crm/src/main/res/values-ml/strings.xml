@@ -26,6 +26,7 @@
     <string name="crm_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="crm_link">ലിങ്ക്</string>
     <string name="crm_design">ഡിസൈൻ</string>
+    <string name="crm_export_failed">കയറ്റുമതി സംരക്ഷിക്കാനായില്ല</string>
     <string name="crm_sort_label">അടുക്കുക</string>
     <string name="crm_sort_direction">ദിശ</string>
     <string name="crm_sort_rank">മാനുവൽ</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">ഡിസൈൻ എക്‌സ്‌പോർട്ട് ചെയ്യുക</string>
     <string name="crm_design_import">ഡിസൈൻ ഇംപോർട്ട് ചെയ്യുക</string>
     <string name="crm_design_imported">ഡിസൈൻ ഇറക്കുമതി ചെയ്തു</string>
+    <string name="crm_design_export_saved">ഡിസൈൻ സംരക്ഷിച്ചു</string>
+    <string name="crm_design_import_failed">ആ ഫയൽ വായിക്കാനായില്ല</string>
+    <string name="crm_design_or_upload_json">അല്ലെങ്കിൽ ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
+    <string name="crm_design_upload_json">.json ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="crm_design_tab_classes">ക്ലാസുകൾ</string>
     <string name="crm_design_tab_views">കാഴ്ചകൾ</string>
     <string name="crm_design_import_dialog_title">ഡിസൈൻ ഇംപോർട്ട് ചെയ്യുക</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">കോളം വലിച്ചിടുക</string>
     <string name="crm_drag_hint">നീക്കാൻ ദീർഘനേരം അമർത്തി വലിച്ചിടുക</string>
     <string name="crm_design_more_options">കൂടുതൽ ഓപ്ഷനുകൾ</string>
-    <string name="crm_design_clipboard_label">ഡിസൈൻ JSON</string>
-    <string name="crm_design_export_subject">CRM ഡിസൈൻ</string>
-    <string name="crm_design_share_chooser">ഡിസൈൻ പങ്കിടുക</string>
-    <string name="crm_design_export_copied">ഡിസൈൻ ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="crm_design_no_templates">ടെംപ്ലേറ്റുകളൊന്നും ലഭ്യമല്ല</string>
-    <string name="crm_design_or_paste_json">അല്ലെങ്കിൽ JSON ഒട്ടിക്കുക</string>
-    <string name="crm_design_paste_placeholder">എക്സ്പോർട്ട് ചെയ്ത ഡിസൈൻ JSON ഒട്ടിക്കുക</string>
-    <string name="crm_design_import_json">JSON ഇംപോർട്ട് ചെയ്യുക</string>
     <string name="crm_design_use">ഉപയോഗിക്കുക</string>
     <string name="crm_design_replace_message">ഇത് നിലവിലെ ഡിസൈൻ %1$s ഉപയോഗിച്ച് മാറ്റിസ്ഥാപിക്കും. നിലവിലുള്ള എല്ലാ ക്ലാസുകളും, ഫീൽഡുകളും, ഓപ്ഷനുകളും, വ്യൂകളും ഇല്ലാതാക്കും. നിലവിലുള്ള ഒബ്ജക്റ്റുകൾ ഇല്ലാതാക്കില്ല, പക്ഷേ വ്യൂകളിൽ ഇനി ദൃശ്യമാകില്ലായിരിക്കാം.</string>
-    <string name="crm_design_pasted_json_label">ഒട്ടിച്ച JSON</string>
     <string name="crm_classes_empty">ക്ലാസുകളൊന്നും നിർവചിച്ചിട്ടില്ല</string>
     <string name="crm_class_label">ക്ലാസ്: %1$s</string>
     <string name="crm_class_title_field_description">ഈ ക്ലാസിലെ ഒബ്ജക്റ്റുകൾക്കായി ഡിസ്പ്ലേ ടൈറ്റിലായി ഉപയോഗിക്കേണ്ട ഫീൽഡ്.</string>

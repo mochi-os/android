@@ -26,6 +26,7 @@
     <string name="crm_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="crm_link">ಲಿಂಕ್</string>
     <string name="crm_design">ವಿನ್ಯಾಸ</string>
+    <string name="crm_export_failed">ರಫ್ತು ಉಳಿಸಲಾಗಲಿಲ್ಲ</string>
     <string name="crm_sort_label">ವಿಂಗಡಿಸಿ</string>
     <string name="crm_sort_direction">ದಿಕ್ಕು</string>
     <string name="crm_sort_rank">ಮ್ಯಾನುಯಲ್</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">ಡಿಸೈನ್ ಎಕ್ಸ್‌ಪೋರ್ಟ್</string>
     <string name="crm_design_import">ಡಿಸೈನ್ ಇಂಪೋರ್ಟ್</string>
     <string name="crm_design_imported">ವಿನ್ಯಾಸ ಆಮದು ಮಾಡಲಾಗಿದೆ</string>
+    <string name="crm_design_export_saved">ವಿನ್ಯಾಸ ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="crm_design_import_failed">ಆ ಫೈಲ್ ಓದಲಾಗಲಿಲ್ಲ</string>
+    <string name="crm_design_or_upload_json">ಅಥವಾ ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="crm_design_upload_json">.json ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="crm_design_tab_classes">ಕ್ಲಾಸ್‌ಗಳು</string>
     <string name="crm_design_tab_views">ವೀಕ್ಷಣೆಗಳು</string>
     <string name="crm_design_import_dialog_title">ಡಿಸೈನ್ ಇಂಪೋರ್ಟ್</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">ಕಾಲಮ್ ಎಳೆಯಿರಿ</string>
     <string name="crm_drag_hint">ಸರಿಸಲು ದೀರ್ಘಕಾಲ ಒತ್ತಿ ಎಳೆಯಿರಿ</string>
     <string name="crm_design_more_options">ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳು</string>
-    <string name="crm_design_clipboard_label">ಡಿಸೈನ್ JSON</string>
-    <string name="crm_design_export_subject">CRM ಡಿಸೈನ್</string>
-    <string name="crm_design_share_chooser">ಡಿಸೈನ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
-    <string name="crm_design_export_copied">ಡಿಸೈನ್ ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ</string>
     <string name="crm_design_no_templates">ಯಾವುದೇ ಟೆಂಪ್ಲೇಟ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
-    <string name="crm_design_or_paste_json">ಅಥವಾ JSON ಅಂಟಿಸಿ</string>
-    <string name="crm_design_paste_placeholder">ರಫ್ತು ಮಾಡಿದ ಡಿಸೈನ್ JSON ಅಂಟಿಸಿ</string>
-    <string name="crm_design_import_json">JSON ಆಮದು ಮಾಡಿ</string>
     <string name="crm_design_use">ಬಳಸಿ</string>
     <string name="crm_design_replace_message">ಇದು ಪ್ರಸ್ತುತ ಡಿಸೈನ್ ಅನ್ನು %1$s ನೊಂದಿಗೆ ಬದಲಾಯಿಸುತ್ತದೆ. ಎಲ್ಲಾ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಕ್ಲಾಸ್‌ಗಳು, ಕ್ಷೇತ್ರಗಳು, ಆಯ್ಕೆಗಳು ಮತ್ತು ವೀಕ್ಷಣೆಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ. ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಆಬ್ಜೆಕ್ಟ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ ಆದರೆ ವೀಕ್ಷಣೆಗಳಲ್ಲಿ ಇನ್ನು ಮುಂದೆ ಗೋಚರಿಸದಿರಬಹುದು.</string>
-    <string name="crm_design_pasted_json_label">ಅಂಟಿಸಿದ JSON</string>
     <string name="crm_classes_empty">ಯಾವುದೇ ಕ್ಲಾಸ್‌ಗಳನ್ನು ವ್ಯಾಖ್ಯಾನಿಸಿಲ್ಲ</string>
     <string name="crm_class_label">ಕ್ಲಾಸ್: %1$s</string>
     <string name="crm_class_title_field_description">ಈ ಕ್ಲಾಸ್‌ನ ಆಬ್ಜೆಕ್ಟ್‌ಗಳ ಪ್ರದರ್ಶನ ಶೀರ್ಷಿಕೆಯಾಗಿ ಯಾವ ಕ್ಷೇತ್ರವನ್ನು ಬಳಸಬೇಕು.</string>

@@ -26,6 +26,7 @@
     <string name="crm_settings">সেটিংস</string>
     <string name="crm_link">লিঙ্ক</string>
     <string name="crm_design">ডিজাইন</string>
+    <string name="crm_export_failed">রপ্তানি সংরক্ষণ করা যায়নি</string>
     <string name="crm_sort_label">সাজান</string>
     <string name="crm_sort_direction">দিক</string>
     <string name="crm_sort_rank">ম্যানুয়াল</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">ডিজাইন এক্সপোর্ট করুন</string>
     <string name="crm_design_import">ডিজাইন ইম্পোর্ট করুন</string>
     <string name="crm_design_imported">ডিজাইন আমদানি করা হয়েছে</string>
+    <string name="crm_design_export_saved">ডিজাইন সংরক্ষিত হয়েছে</string>
+    <string name="crm_design_import_failed">সেই ফাইলটি পড়া যায়নি</string>
+    <string name="crm_design_or_upload_json">অথবা একটি ফাইল আপলোড করুন</string>
+    <string name="crm_design_upload_json">.json ফাইল আপলোড করুন</string>
     <string name="crm_design_tab_classes">ক্লাস</string>
     <string name="crm_design_tab_views">ভিউ</string>
     <string name="crm_design_import_dialog_title">ডিজাইন ইম্পোর্ট করুন</string>
@@ -265,17 +270,9 @@
     <string name="crm_drag_column">কলাম ড্র্যাগ করুন</string>
     <string name="crm_drag_hint">সরাতে দীর্ঘক্ষণ চেপে ধরে টানুন</string>
     <string name="crm_design_more_options">আরও অপশন</string>
-    <string name="crm_design_clipboard_label">ডিজাইন JSON</string>
-    <string name="crm_design_export_subject">CRM ডিজাইন</string>
-    <string name="crm_design_share_chooser">ডিজাইন শেয়ার করুন</string>
-    <string name="crm_design_export_copied">ডিজাইন ক্লিপবোর্ডে কপি করা হয়েছে</string>
     <string name="crm_design_no_templates">কোনো টেমপ্লেট উপলব্ধ নেই</string>
-    <string name="crm_design_or_paste_json">অথবা JSON পেস্ট করুন</string>
-    <string name="crm_design_paste_placeholder">এক্সপোর্ট করা ডিজাইন JSON পেস্ট করুন</string>
-    <string name="crm_design_import_json">JSON ইমপোর্ট করুন</string>
     <string name="crm_design_use">ব্যবহার করুন</string>
     <string name="crm_design_replace_message">এটি বর্তমান ডিজাইনকে %1$s দিয়ে প্রতিস্থাপন করবে। বিদ্যমান সব ক্লাস, ফিল্ড, অপশন এবং ভিউ মুছে ফেলা হবে। বিদ্যমান অবজেক্ট মুছবে না তবে ভিউয়ে আর দেখা নাও যেতে পারে।</string>
-    <string name="crm_design_pasted_json_label">পেস্ট করা JSON</string>
     <string name="crm_classes_empty">কোনো ক্লাস সংজ্ঞায়িত নেই</string>
     <string name="crm_class_label">ক্লাস: %1$s</string>
     <string name="crm_class_title_field_description">এই ক্লাসের অবজেক্টগুলোর প্রদর্শন শিরোনাম হিসেবে কোন ফিল্ড ব্যবহার করা হবে।</string>

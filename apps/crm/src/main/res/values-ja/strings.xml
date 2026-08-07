@@ -26,6 +26,7 @@
     <string name="crm_settings">設定</string>
     <string name="crm_link">リンク</string>
     <string name="crm_design">デザイン</string>
+    <string name="crm_export_failed">エクスポートを保存できませんでした</string>
     <string name="crm_sort_label">並べ替え</string>
     <string name="crm_sort_direction">方向</string>
     <string name="crm_sort_rank">手動</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">デザインをエクスポート</string>
     <string name="crm_design_import">デザインをインポート</string>
     <string name="crm_design_imported">デザインをインポートしました</string>
+    <string name="crm_design_export_saved">デザインを保存しました</string>
+    <string name="crm_design_import_failed">そのファイルを読み取れませんでした</string>
+    <string name="crm_design_or_upload_json">またはファイルをアップロード</string>
+    <string name="crm_design_upload_json">.json ファイルをアップロード</string>
     <string name="crm_design_tab_classes">クラス</string>
     <string name="crm_design_tab_views">ビュー</string>
     <string name="crm_design_import_dialog_title">デザインをインポート</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">列をドラッグ</string>
     <string name="crm_drag_hint">長押ししてドラッグで移動します</string>
     <string name="crm_design_more_options">その他のオプション</string>
-    <string name="crm_design_clipboard_label">デザイン JSON</string>
-    <string name="crm_design_export_subject">CRM デザイン</string>
-    <string name="crm_design_share_chooser">デザインを共有</string>
-    <string name="crm_design_export_copied">デザインをクリップボードにコピーしました</string>
     <string name="crm_design_no_templates">利用可能なテンプレートがありません</string>
-    <string name="crm_design_or_paste_json">または JSON を貼り付け</string>
-    <string name="crm_design_paste_placeholder">エクスポートしたデザイン JSON を貼り付けてください</string>
-    <string name="crm_design_import_json">JSON をインポート</string>
     <string name="crm_design_use">使用</string>
     <string name="crm_design_replace_message">現在のデザインを %1$s で置き換えます。既存のクラス、フィールド、オプション、ビューはすべて削除されます。既存のオブジェクトは削除されませんが、ビューに表示されなくなる場合があります。</string>
-    <string name="crm_design_pasted_json_label">貼り付けた JSON</string>
     <string name="crm_classes_empty">クラスが定義されていません</string>
     <string name="crm_class_label">クラス: %1$s</string>
     <string name="crm_class_title_field_description">このクラスのオブジェクトの表示タイトルに使用するフィールドです。</string>

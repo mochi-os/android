@@ -26,6 +26,7 @@
     <string name="crm_settings">설정</string>
     <string name="crm_link">링크</string>
     <string name="crm_design">디자인</string>
+    <string name="crm_export_failed">내보내기를 저장하지 못했습니다</string>
     <string name="crm_sort_label">정렬</string>
     <string name="crm_sort_direction">방향</string>
     <string name="crm_sort_rank">수동</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">디자인 내보내기</string>
     <string name="crm_design_import">디자인 가져오기</string>
     <string name="crm_design_imported">디자인을 가져왔어요</string>
+    <string name="crm_design_export_saved">디자인이 저장됨</string>
+    <string name="crm_design_import_failed">해당 파일을 읽지 못했습니다</string>
+    <string name="crm_design_or_upload_json">또는 파일 업로드</string>
+    <string name="crm_design_upload_json">.json 파일 업로드</string>
     <string name="crm_design_tab_classes">클래스</string>
     <string name="crm_design_tab_views">조회수</string>
     <string name="crm_design_import_dialog_title">디자인 가져오기</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">열 끌기</string>
     <string name="crm_drag_hint">길게 누른 후 끌어서 이동하세요</string>
     <string name="crm_design_more_options">추가 옵션</string>
-    <string name="crm_design_clipboard_label">디자인 JSON</string>
-    <string name="crm_design_export_subject">CRM 디자인</string>
-    <string name="crm_design_share_chooser">디자인 공유</string>
-    <string name="crm_design_export_copied">디자인이 클립보드에 복사되었습니다</string>
     <string name="crm_design_no_templates">사용할 수 있는 템플릿이 없습니다</string>
-    <string name="crm_design_or_paste_json">또는 JSON 붙여넣기</string>
-    <string name="crm_design_paste_placeholder">내보낸 디자인 JSON을 붙여넣으세요</string>
-    <string name="crm_design_import_json">JSON 가져오기</string>
     <string name="crm_design_use">사용</string>
     <string name="crm_design_replace_message">현재 디자인을 %1$s(으)로 바꿉니다. 기존의 모든 클래스, 필드, 옵션 및 보기가 삭제됩니다. 기존 객체는 삭제되지 않지만 보기에 더 이상 표시되지 않을 수 있습니다.</string>
-    <string name="crm_design_pasted_json_label">붙여넣은 JSON</string>
     <string name="crm_classes_empty">정의된 클래스가 없습니다</string>
     <string name="crm_class_label">클래스: %1$s</string>
     <string name="crm_class_title_field_description">이 클래스의 객체 표시 제목으로 사용할 필드입니다.</string>

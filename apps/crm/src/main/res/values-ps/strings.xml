@@ -26,6 +26,7 @@
     <string name="crm_settings">ترتیبات</string>
     <string name="crm_link">لینک</string>
     <string name="crm_design">ډیزاین</string>
+    <string name="crm_export_failed">صادرول خوندي نه شو</string>
     <string name="crm_sort_label">ترتیب</string>
     <string name="crm_sort_direction">لوری</string>
     <string name="crm_sort_rank">لاسي</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">ډیزاین صادر کړئ</string>
     <string name="crm_design_import">ډیزاین وارد کړئ</string>
     <string name="crm_design_imported">ډیزاین وارد شو</string>
+    <string name="crm_design_export_saved">ډیزاین خوندي شو</string>
+    <string name="crm_design_import_failed">هغه فایل نه شو لوستل</string>
+    <string name="crm_design_or_upload_json">یا یو فایل پورته کړئ</string>
+    <string name="crm_design_upload_json">د .json فایل اپلوډ کړئ</string>
     <string name="crm_design_tab_classes">ټولګي</string>
     <string name="crm_design_tab_views">لیدنې</string>
     <string name="crm_design_import_dialog_title">ډیزاین وارد کړئ</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">کالم کش کړئ</string>
     <string name="crm_drag_hint">د حرکت لپاره اوږد فشار ورکړئ او کش یې کړئ</string>
     <string name="crm_design_more_options">نور اختیارونه</string>
-    <string name="crm_design_clipboard_label">د ډیزاین JSON</string>
-    <string name="crm_design_export_subject">د CRM ډیزاین</string>
-    <string name="crm_design_share_chooser">ډیزاین شریک کړئ</string>
-    <string name="crm_design_export_copied">ډیزاین کلیپ بورډ ته کاپي شو</string>
     <string name="crm_design_no_templates">هیڅ ټیمپلیټونه شتون نه لري</string>
-    <string name="crm_design_or_paste_json">یا JSON پیسټ کړئ</string>
-    <string name="crm_design_paste_placeholder">صادر شوی د ډیزاین JSON پیسټ کړئ</string>
-    <string name="crm_design_import_json">JSON واردول</string>
     <string name="crm_design_use">وکاروئ</string>
     <string name="crm_design_replace_message">دا به اوسنی ډیزاین د %1$s سره ځای په ځای کړي. ټول موجود ټولګي، ساحې، اختیارونه او لیدلوري به حذف شي. موجود اعتراضونه به حذف نشي خو ښایي په لیدلوریو کې ښکاره نشي.</string>
-    <string name="crm_design_pasted_json_label">پیسټ شوی JSON</string>
     <string name="crm_classes_empty">هیڅ ټولګي ندي ټاکل شوي</string>
     <string name="crm_class_label">ټولګی: %1$s</string>
     <string name="crm_class_title_field_description">د دې ټولګي د اعتراضونو لپاره د ښودلو سرلیک په توګه کومه ساحه وکارول شي.</string>

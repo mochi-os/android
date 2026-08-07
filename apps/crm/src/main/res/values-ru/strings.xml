@@ -26,6 +26,7 @@
     <string name="crm_settings">Настройки</string>
     <string name="crm_link">Ссылка</string>
     <string name="crm_design">Дизайн</string>
+    <string name="crm_export_failed">Не удалось сохранить экспорт</string>
     <string name="crm_sort_label">Сортировка</string>
     <string name="crm_sort_direction">Направление</string>
     <string name="crm_sort_rank">Вручную</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Экспортировать макет</string>
     <string name="crm_design_import">Импортировать макет</string>
     <string name="crm_design_imported">Дизайн импортирован</string>
+    <string name="crm_design_export_saved">Дизайн сохранён</string>
+    <string name="crm_design_import_failed">Не удалось прочитать файл</string>
+    <string name="crm_design_or_upload_json">Или загрузите файл</string>
+    <string name="crm_design_upload_json">Загрузить файл .json</string>
     <string name="crm_design_tab_classes">Классы</string>
     <string name="crm_design_tab_views">Просмотры</string>
     <string name="crm_design_import_dialog_title">Импортировать макет</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Перетащить столбец</string>
     <string name="crm_drag_hint">Нажмите и удерживайте, затем перетащите</string>
     <string name="crm_design_more_options">Дополнительные параметры</string>
-    <string name="crm_design_clipboard_label">JSON дизайна</string>
-    <string name="crm_design_export_subject">Дизайн CRM</string>
-    <string name="crm_design_share_chooser">Поделиться дизайном</string>
-    <string name="crm_design_export_copied">Дизайн скопирован в буфер обмена</string>
     <string name="crm_design_no_templates">Шаблоны недоступны</string>
-    <string name="crm_design_or_paste_json">Или вставьте JSON</string>
-    <string name="crm_design_paste_placeholder">Вставьте экспортированный JSON дизайна</string>
-    <string name="crm_design_import_json">Импортировать JSON</string>
     <string name="crm_design_use">Использовать</string>
     <string name="crm_design_replace_message">Текущий дизайн будет заменён на %1$s. Все существующие классы, поля, варианты и виды будут удалены. Существующие объекты не будут удалены, но могут перестать отображаться в видах.</string>
-    <string name="crm_design_pasted_json_label">вставленный JSON</string>
     <string name="crm_classes_empty">Классы не определены</string>
     <string name="crm_class_label">Класс: %1$s</string>
     <string name="crm_class_title_field_description">Какое поле использовать в качестве отображаемого заголовка объектов этого класса.</string>

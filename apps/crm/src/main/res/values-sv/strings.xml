@@ -26,6 +26,7 @@
     <string name="crm_settings">Inställningar</string>
     <string name="crm_link">Länk</string>
     <string name="crm_design">Design</string>
+    <string name="crm_export_failed">Exporten kunde inte sparas</string>
     <string name="crm_sort_label">Sortera</string>
     <string name="crm_sort_direction">Riktning</string>
     <string name="crm_sort_rank">Manuell</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Exportera design</string>
     <string name="crm_design_import">Importera design</string>
     <string name="crm_design_imported">Design importerad</string>
+    <string name="crm_design_export_saved">Design sparad</string>
+    <string name="crm_design_import_failed">Filen kunde inte läsas</string>
+    <string name="crm_design_or_upload_json">Eller ladda upp en fil</string>
+    <string name="crm_design_upload_json">Ladda upp .json-fil</string>
     <string name="crm_design_tab_classes">Klasser</string>
     <string name="crm_design_tab_views">Visningar</string>
     <string name="crm_design_import_dialog_title">Importera design</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Dra kolumn</string>
     <string name="crm_drag_hint">Tryck länge och dra för att flytta</string>
     <string name="crm_design_more_options">Fler alternativ</string>
-    <string name="crm_design_clipboard_label">Design-JSON</string>
-    <string name="crm_design_export_subject">CRM-design</string>
-    <string name="crm_design_share_chooser">Dela design</string>
-    <string name="crm_design_export_copied">Designen har kopierats till urklipp</string>
     <string name="crm_design_no_templates">Inga mallar tillgängliga</string>
-    <string name="crm_design_or_paste_json">Eller klistra in JSON</string>
-    <string name="crm_design_paste_placeholder">Klistra in exporterad design-JSON</string>
-    <string name="crm_design_import_json">Importera JSON</string>
     <string name="crm_design_use">Använd</string>
     <string name="crm_design_replace_message">Detta ersätter den nuvarande designen med %1$s. Alla befintliga klasser, fält, alternativ och vyer raderas. Befintliga objekt raderas inte men kan eventuellt inte längre visas i vyer.</string>
-    <string name="crm_design_pasted_json_label">inklistrad JSON</string>
     <string name="crm_classes_empty">Inga klasser definierade</string>
     <string name="crm_class_label">Klass: %1$s</string>
     <string name="crm_class_title_field_description">Vilket fält som ska användas som visningstitel för objekt av denna klass.</string>

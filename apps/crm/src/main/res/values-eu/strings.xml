@@ -26,6 +26,7 @@
     <string name="crm_settings">Ezarpenak</string>
     <string name="crm_link">Esteka</string>
     <string name="crm_design">Diseinua</string>
+    <string name="crm_export_failed">Ezin izan da esportazioa gorde</string>
     <string name="crm_sort_label">Ordenatu</string>
     <string name="crm_sort_direction">Norabidea</string>
     <string name="crm_sort_rank">Eskuz</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Esportatu diseinua</string>
     <string name="crm_design_import">Inportatu diseinua</string>
     <string name="crm_design_imported">Diseinua inportatu da</string>
+    <string name="crm_design_export_saved">Diseinua gordeta</string>
+    <string name="crm_design_import_failed">Ezin izan da fitxategi hori irakurri</string>
+    <string name="crm_design_or_upload_json">Edo igo fitxategi bat</string>
+    <string name="crm_design_upload_json">Igo .json fitxategia</string>
     <string name="crm_design_tab_classes">Klaseak</string>
     <string name="crm_design_tab_views">Ikuspegiak</string>
     <string name="crm_design_import_dialog_title">Inportatu diseinua</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Arrastatu zutabea</string>
     <string name="crm_drag_hint">Sakatu luze eta arrastatu mugitzeko</string>
     <string name="crm_design_more_options">Aukera gehiago</string>
-    <string name="crm_design_clipboard_label">Diseinuaren JSON</string>
-    <string name="crm_design_export_subject">CRM diseinua</string>
-    <string name="crm_design_share_chooser">Partekatu diseinua</string>
-    <string name="crm_design_export_copied">Diseinua arbelean kopiatu da</string>
     <string name="crm_design_no_templates">Ez dago txantiloirik eskuragarri</string>
-    <string name="crm_design_or_paste_json">Edo itsatsi JSON</string>
-    <string name="crm_design_paste_placeholder">Itsatsi esportatutako diseinuaren JSON</string>
-    <string name="crm_design_import_json">Inportatu JSON</string>
     <string name="crm_design_use">Erabili</string>
     <string name="crm_design_replace_message">Honek uneko diseinua %1$s diseinuarekin ordeztuko du. Lehendik dauden klase, eremu, aukera eta ikuspegi guztiak ezabatuko dira. Lehendik dauden objektuak ez dira ezabatuko, baina baliteke ikuspegietan ez agertzea.</string>
-    <string name="crm_design_pasted_json_label">itsatsitako JSON</string>
     <string name="crm_classes_empty">Ez dago klaserik definituta</string>
     <string name="crm_class_label">Klasea: %1$s</string>
     <string name="crm_class_title_field_description">Klase honetako objektuen bistaratze-izenburu gisa zein eremu erabili.</string>

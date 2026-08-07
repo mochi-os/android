@@ -26,6 +26,7 @@
     <string name="crm_settings">Parametrlər</string>
     <string name="crm_link">Keçid</string>
     <string name="crm_design">Dizayn</string>
+    <string name="crm_export_failed">İxrac saxlanıla bilmədi</string>
     <string name="crm_sort_label">Sırala</string>
     <string name="crm_sort_direction">İstiqamət</string>
     <string name="crm_sort_rank">Manual</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Dizaynı ixrac et</string>
     <string name="crm_design_import">Dizaynı idxal et</string>
     <string name="crm_design_imported">Dizayn idxal edildi</string>
+    <string name="crm_design_export_saved">Dizayn saxlanıldı</string>
+    <string name="crm_design_import_failed">Həmin fayl oxuna bilmədi</string>
+    <string name="crm_design_or_upload_json">Yaxud fayl yükləyin</string>
+    <string name="crm_design_upload_json">Versiyanı yüklə</string>
     <string name="crm_design_tab_classes">Siniflər</string>
     <string name="crm_design_tab_views">Səs ver və bax</string>
     <string name="crm_design_import_dialog_title">Dizaynı idxal et</string>
@@ -265,17 +270,9 @@
     <string name="crm_drag_column">Sütunu dartın</string>
     <string name="crm_drag_hint">Köçürmək üçün uzun basıb dartın</string>
     <string name="crm_design_more_options">Daha çox seçim</string>
-    <string name="crm_design_clipboard_label">Dizayn JSON</string>
-    <string name="crm_design_export_subject">CRM dizaynı</string>
-    <string name="crm_design_share_chooser">Dizaynı paylaş</string>
-    <string name="crm_design_export_copied">Dizayn mübadilə buferinə kopyalandı</string>
     <string name="crm_design_no_templates">Şablon mövcud deyil</string>
-    <string name="crm_design_or_paste_json">Və ya JSON yapışdırın</string>
-    <string name="crm_design_paste_placeholder">İxrac edilmiş dizayn JSON yapışdırın</string>
-    <string name="crm_design_import_json">JSON idxal et</string>
     <string name="crm_design_use">İstifadə et</string>
     <string name="crm_design_replace_message">Bu, cari dizaynı %1$s ilə əvəz edəcək. Bütün mövcud siniflər, sahələr, seçimlər və görünüşlər silinəcək. Mövcud obyektlər silinməyəcək, lakin görünüşlərdə artıq görünməyə bilər.</string>
-    <string name="crm_design_pasted_json_label">yapışdırılmış JSON</string>
     <string name="crm_classes_empty">Sinif təyin edilməyib</string>
     <string name="crm_class_label">Sinif: %1$s</string>
     <string name="crm_class_title_field_description">Bu sinifin obyektləri üçün göstərilən başlıq kimi hansı sahənin istifadə ediləcəyi.</string>

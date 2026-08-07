@@ -26,6 +26,7 @@
     <string name="crm_settings">Configuración</string>
     <string name="crm_link">Enlace</string>
     <string name="crm_design">Diseño</string>
+    <string name="crm_export_failed">Apsuta imantañjamäkiti</string>
     <string name="crm_sort_label">Sumaña</string>
     <string name="crm_sort_direction">Dirección</string>
     <string name="crm_sort_rank">Manual</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Diseño mistuyaña</string>
     <string name="crm_design_import">Diseño mantayaña</string>
     <string name="crm_design_imported">Diseño apanitata</string>
+    <string name="crm_design_export_saved">Uñstawi imantata</string>
+    <string name="crm_design_import_failed">Uka qillqata ullañjamäkiti</string>
+    <string name="crm_design_or_upload_json">Jan ukax mä qillqata apsuña</string>
+    <string name="crm_design_upload_json">Machaq Versión Apayaña</string>
     <string name="crm_design_tab_classes">Classes</string>
     <string name="crm_design_tab_views">Nuwasiña</string>
     <string name="crm_design_import_dialog_title">Diseño mantayaña</string>
@@ -265,17 +270,9 @@
     <string name="crm_drag_column">Columna qatatiña</string>
     <string name="crm_drag_hint">Astañatakix jach\'a-limt\'asaw qatatim</string>
     <string name="crm_design_more_options">Yaqha chhijllañanaka</string>
-    <string name="crm_design_clipboard_label">Lurawi JSON</string>
-    <string name="crm_design_export_subject">CRM lurawi</string>
-    <string name="crm_design_share_chooser">Lurawi laqhachaña</string>
-    <string name="crm_design_export_copied">Lurawix portapapelar copiataw</string>
     <string name="crm_design_no_templates">Janiw plantillanakax utjkiti</string>
-    <string name="crm_design_or_paste_json">Jan ukax JSON aytaña</string>
-    <string name="crm_design_paste_placeholder">Mistuyat lurawi JSON aytam</string>
-    <string name="crm_design_import_json">JSON apaqaña</string>
     <string name="crm_design_use">Apnaqaña</string>
     <string name="crm_design_replace_message">Akax jichha luräwix %1$s ukampiw turkasini. Taqi utjir clasenaka, camponaka, chhijllañanaka ukat uñakipawinaka ukax chhaqtayatäniwa. Utjirinaka ukax janiw chhaqtayaskaniti, ukampis uñakipawinakanx janiw uñstxañapakiti.</string>
-    <string name="crm_design_pasted_json_label">aytat JSON</string>
     <string name="crm_classes_empty">Janiw clasenakax wakichatakiti</string>
     <string name="crm_class_label">Clase: %1$s</string>
     <string name="crm_class_title_field_description">Aka clase utjirinakatakix kuna campompis uñstayañ qillqa uñacht\'ayañatakix apnaqasini.</string>

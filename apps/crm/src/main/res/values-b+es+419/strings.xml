@@ -26,6 +26,7 @@
     <string name="crm_settings">Configuración</string>
     <string name="crm_link">Enlace</string>
     <string name="crm_design">Diseño</string>
+    <string name="crm_export_failed">No se pudo guardar la exportación</string>
     <string name="crm_sort_label">Ordenar</string>
     <string name="crm_sort_direction">Dirección</string>
     <string name="crm_sort_rank">Manual</string>
@@ -110,6 +111,10 @@
     <string name="crm_design_export">Exportar diseño</string>
     <string name="crm_design_import">Importar diseño</string>
     <string name="crm_design_imported">Diseño importado</string>
+    <string name="crm_design_export_saved">Diseño guardado</string>
+    <string name="crm_design_import_failed">No se pudo leer ese archivo</string>
+    <string name="crm_design_or_upload_json">O sube un archivo</string>
+    <string name="crm_design_upload_json">Subir archivo .json</string>
     <string name="crm_design_tab_classes">Clases</string>
     <string name="crm_design_tab_views">Vistas</string>
     <string name="crm_design_import_dialog_title">Importar diseño</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Arrastrar columna</string>
     <string name="crm_drag_hint">Mantén presionado y arrastra para mover</string>
     <string name="crm_design_more_options">Más opciones</string>
-    <string name="crm_design_clipboard_label">JSON del diseño</string>
-    <string name="crm_design_export_subject">Diseño de CRM</string>
-    <string name="crm_design_share_chooser">Compartir diseño</string>
-    <string name="crm_design_export_copied">Diseño copiado al portapapeles</string>
     <string name="crm_design_no_templates">No hay plantillas disponibles</string>
-    <string name="crm_design_or_paste_json">O pega JSON</string>
-    <string name="crm_design_paste_placeholder">Pega el JSON del diseño exportado</string>
-    <string name="crm_design_import_json">Importar JSON</string>
     <string name="crm_design_use">Usar</string>
     <string name="crm_design_replace_message">Esto reemplazará el diseño actual con %1$s. Se eliminarán todas las clases, campos, opciones y vistas existentes. Los objetos existentes no se eliminarán, pero podrían dejar de aparecer en las vistas.</string>
-    <string name="crm_design_pasted_json_label">JSON pegado</string>
     <string name="crm_classes_empty">No hay clases definidas</string>
     <string name="crm_class_label">Clase: %1$s</string>
     <string name="crm_class_title_field_description">Qué campo usar como título de visualización para los objetos de esta clase.</string>

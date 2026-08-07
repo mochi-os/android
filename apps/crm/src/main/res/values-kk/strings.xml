@@ -26,6 +26,7 @@
     <string name="crm_settings">Параметрлер</string>
     <string name="crm_link">Сілтеме</string>
     <string name="crm_design">Дизайн</string>
+    <string name="crm_export_failed">Экспортты сақтау мүмкін болмады</string>
     <string name="crm_sort_label">Сұрыптау</string>
     <string name="crm_sort_direction">Бағыт</string>
     <string name="crm_sort_rank">Қолмен</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Дизайнды экспорттау</string>
     <string name="crm_design_import">Дизайнды импорттау</string>
     <string name="crm_design_imported">Дизайн импортталды</string>
+    <string name="crm_design_export_saved">Дизайн сақталды</string>
+    <string name="crm_design_import_failed">Бұл файлды оқу мүмкін болмады</string>
+    <string name="crm_design_or_upload_json">Немесе файл жүктеңіз</string>
+    <string name="crm_design_upload_json">.json файлын жүктеп салу</string>
     <string name="crm_design_tab_classes">Сыныптар</string>
     <string name="crm_design_tab_views">Көрулер</string>
     <string name="crm_design_import_dialog_title">Дизайнды импорттау</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Бағанды сүйреу</string>
     <string name="crm_drag_hint">Жылжыту үшін ұзақ басып, сүйреңіз</string>
     <string name="crm_design_more_options">Қосымша опциялар</string>
-    <string name="crm_design_clipboard_label">Дизайн JSON</string>
-    <string name="crm_design_export_subject">CRM дизайны</string>
-    <string name="crm_design_share_chooser">Дизайнмен бөлісу</string>
-    <string name="crm_design_export_copied">Дизайн алмасу буферіне көшірілді</string>
     <string name="crm_design_no_templates">Қолжетімді үлгілер жоқ</string>
-    <string name="crm_design_or_paste_json">Немесе JSON қойыңыз</string>
-    <string name="crm_design_paste_placeholder">Экспортталған дизайн JSON қойыңыз</string>
-    <string name="crm_design_import_json">JSON импорттау</string>
     <string name="crm_design_use">Қолдану</string>
     <string name="crm_design_replace_message">Бұл әрекет ағымдағы дизайнды %1$s дизайнымен ауыстырады. Барлық қолданыстағы сыныптар, өрістер, опциялар мен көріністер жойылады. Қолданыстағы нысандар жойылмайды, бірақ көріністерде енді көрінбеуі мүмкін.</string>
-    <string name="crm_design_pasted_json_label">қойылған JSON</string>
     <string name="crm_classes_empty">Анықталған сыныптар жоқ</string>
     <string name="crm_class_label">Сынып: %1$s</string>
     <string name="crm_class_title_field_description">Осы сыныптың нысандарына көрсетілетін атау ретінде қай өрісті пайдалану.</string>

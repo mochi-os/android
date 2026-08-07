@@ -26,6 +26,7 @@
     <string name="crm_settings">Socruithe</string>
     <string name="crm_link">Nasc</string>
     <string name="crm_design">Dearadh</string>
+    <string name="crm_export_failed">Níorbh fhéidir an easpórtáil a shábháil</string>
     <string name="crm_sort_label">Sórtáil</string>
     <string name="crm_sort_direction">Treo</string>
     <string name="crm_sort_rank">Láimhe</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Easpórtáil dearadh</string>
     <string name="crm_design_import">Iompórtáil dearadh</string>
     <string name="crm_design_imported">Dearadh iompórtáilte</string>
+    <string name="crm_design_export_saved">Sábháladh an dearadh</string>
+    <string name="crm_design_import_failed">Níorbh fhéidir an comhad sin a léamh</string>
+    <string name="crm_design_or_upload_json">Nó uaslódáil comhad</string>
+    <string name="crm_design_upload_json">Uaslódáil comhad .json</string>
     <string name="crm_design_tab_classes">Ranganna</string>
     <string name="crm_design_tab_views">Radhairc</string>
     <string name="crm_design_import_dialog_title">Iompórtáil dearadh</string>
@@ -273,17 +278,9 @@
     <string name="crm_drag_column">Tarraing colún</string>
     <string name="crm_drag_hint">Brúigh agus coinnigh agus tarraing chun bogadh</string>
     <string name="crm_design_more_options">Tuilleadh roghanna</string>
-    <string name="crm_design_clipboard_label">JSON dearaidh</string>
-    <string name="crm_design_export_subject">Dearadh CRM</string>
-    <string name="crm_design_share_chooser">Comhroinn dearadh</string>
-    <string name="crm_design_export_copied">Cóipeáladh an dearadh chuig an ngearrthaisce</string>
     <string name="crm_design_no_templates">Níl aon teimpléid ar fáil</string>
-    <string name="crm_design_or_paste_json">Nó greamaigh JSON</string>
-    <string name="crm_design_paste_placeholder">Greamaigh JSON dearaidh easpórtáilte</string>
-    <string name="crm_design_import_json">Iompórtáil JSON</string>
     <string name="crm_design_use">Úsáid</string>
     <string name="crm_design_replace_message">Cuirfidh sé seo %1$s in ionad an dearaidh reatha. Scriosfar gach aicme, réimse, rogha agus amharc atá ann faoi láthair. Ní scriosfar réada atá ann cheana ach b\'fhéidir nach mbeidh siad le feiceáil i radhairc a thuilleadh.</string>
-    <string name="crm_design_pasted_json_label">JSON greamaithe</string>
     <string name="crm_classes_empty">Níl aon aicme sainithe</string>
     <string name="crm_class_label">Aicme: %1$s</string>
     <string name="crm_class_title_field_description">Cén réimse le húsáid mar theideal taispeána do réada den aicme seo.</string>

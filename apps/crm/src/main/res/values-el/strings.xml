@@ -26,6 +26,7 @@
     <string name="crm_settings">Ρυθμίσεις</string>
     <string name="crm_link">Σύνδεσμος</string>
     <string name="crm_design">Σχεδιασμός</string>
+    <string name="crm_export_failed">Δεν ήταν δυνατή η αποθήκευση της εξαγωγής</string>
     <string name="crm_sort_label">Ταξινόμηση</string>
     <string name="crm_sort_direction">Κατεύθυνση</string>
     <string name="crm_sort_rank">Χειροκίνητο</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Εξαγωγή σχεδίασης</string>
     <string name="crm_design_import">Εισαγωγή σχεδίασης</string>
     <string name="crm_design_imported">Ο σχεδιασμός εισήχθη</string>
+    <string name="crm_design_export_saved">Η σχεδίαση αποθηκεύτηκε</string>
+    <string name="crm_design_import_failed">Δεν ήταν δυνατή η ανάγνωση του αρχείου</string>
+    <string name="crm_design_or_upload_json">Ή ανεβάστε ένα αρχείο</string>
+    <string name="crm_design_upload_json">Μεταφόρτωση αρχείου .json</string>
     <string name="crm_design_tab_classes">Κλάσεις</string>
     <string name="crm_design_tab_views">Προβολές</string>
     <string name="crm_design_import_dialog_title">Εισαγωγή σχεδίασης</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Σύρετε τη στήλη</string>
     <string name="crm_drag_hint">Πατήστε παρατεταμένα και σύρετε για μετακίνηση</string>
     <string name="crm_design_more_options">Περισσότερες επιλογές</string>
-    <string name="crm_design_clipboard_label">JSON σχεδίασης</string>
-    <string name="crm_design_export_subject">Σχεδίαση CRM</string>
-    <string name="crm_design_share_chooser">Κοινοποίηση σχεδίασης</string>
-    <string name="crm_design_export_copied">Η σχεδίαση αντιγράφηκε στο πρόχειρο</string>
     <string name="crm_design_no_templates">Δεν υπάρχουν διαθέσιμα πρότυπα</string>
-    <string name="crm_design_or_paste_json">Ή επικολλήστε JSON</string>
-    <string name="crm_design_paste_placeholder">Επικολλήστε εξαγόμενο JSON σχεδίασης</string>
-    <string name="crm_design_import_json">Εισαγωγή JSON</string>
     <string name="crm_design_use">Χρήση</string>
     <string name="crm_design_replace_message">Αυτό θα αντικαταστήσει την τρέχουσα σχεδίαση με %1$s. Όλες οι υπάρχουσες κλάσεις, πεδία, επιλογές και προβολές θα διαγραφούν. Τα υπάρχοντα αντικείμενα δεν θα διαγραφούν αλλά ενδέχεται να μην εμφανίζονται πλέον στις προβολές.</string>
-    <string name="crm_design_pasted_json_label">επικολλημένο JSON</string>
     <string name="crm_classes_empty">Δεν έχουν οριστεί κλάσεις</string>
     <string name="crm_class_label">Κλάση: %1$s</string>
     <string name="crm_class_title_field_description">Ποιο πεδίο θα χρησιμοποιηθεί ως τίτλος εμφάνισης για αντικείμενα αυτής της κλάσης.</string>

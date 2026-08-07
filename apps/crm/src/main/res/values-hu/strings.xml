@@ -26,6 +26,7 @@
     <string name="crm_settings">Beállítások</string>
     <string name="crm_link">Hivatkozás</string>
     <string name="crm_design">Tervezés</string>
+    <string name="crm_export_failed">Az exportálást nem sikerült menteni</string>
     <string name="crm_sort_label">Rendezés</string>
     <string name="crm_sort_direction">Irány</string>
     <string name="crm_sort_rank">Kézikönyv</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Terv exportálása</string>
     <string name="crm_design_import">Terv importálása</string>
     <string name="crm_design_imported">Terv importálva</string>
+    <string name="crm_design_export_saved">Terv mentve</string>
+    <string name="crm_design_import_failed">A fájlt nem sikerült beolvasni</string>
+    <string name="crm_design_or_upload_json">Vagy töltsön fel egy fájlt</string>
+    <string name="crm_design_upload_json">.json fájl feltöltése</string>
     <string name="crm_design_tab_classes">Osztályok</string>
     <string name="crm_design_tab_views">Megtekintések</string>
     <string name="crm_design_import_dialog_title">Terv importálása</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Oszlop húzása</string>
     <string name="crm_drag_hint">Tartsa lenyomva és húzza az áthelyezéshez</string>
     <string name="crm_design_more_options">További beállítások</string>
-    <string name="crm_design_clipboard_label">Design JSON</string>
-    <string name="crm_design_export_subject">CRM design</string>
-    <string name="crm_design_share_chooser">Design megosztása</string>
-    <string name="crm_design_export_copied">Design vágólapra másolva</string>
     <string name="crm_design_no_templates">Nincs elérhető sablon</string>
-    <string name="crm_design_or_paste_json">Vagy illesszen be JSON-t</string>
-    <string name="crm_design_paste_placeholder">Illessze be az exportált design JSON-t</string>
-    <string name="crm_design_import_json">JSON importálása</string>
     <string name="crm_design_use">Használat</string>
     <string name="crm_design_replace_message">Ez lecseréli a jelenlegi designt erre: %1$s. Minden meglévő osztály, mező, opció és nézet törölve lesz. A meglévő objektumok nem lesznek törölve, de előfordulhat, hogy többé nem jelennek meg a nézetekben.</string>
-    <string name="crm_design_pasted_json_label">beillesztett JSON</string>
     <string name="crm_classes_empty">Nincsenek osztályok meghatározva</string>
     <string name="crm_class_label">Osztály: %1$s</string>
     <string name="crm_class_title_field_description">Melyik mezőt használja az ebbe az osztályba tartozó objektumok megjelenítési címeként.</string>

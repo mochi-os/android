@@ -26,6 +26,7 @@
     <string name="crm_settings">Nastavenia</string>
     <string name="crm_link">Odkaz</string>
     <string name="crm_design">Dizajn</string>
+    <string name="crm_export_failed">Export sa nepodarilo uložiť</string>
     <string name="crm_sort_label">Zoradiť</string>
     <string name="crm_sort_direction">Smer</string>
     <string name="crm_sort_rank">Manuálne</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Exportovať návrh</string>
     <string name="crm_design_import">Importovať návrh</string>
     <string name="crm_design_imported">Dizajn importovaný</string>
+    <string name="crm_design_export_saved">Návrh uložený</string>
+    <string name="crm_design_import_failed">Súbor sa nepodarilo prečítať</string>
+    <string name="crm_design_or_upload_json">Alebo nahrajte súbor</string>
+    <string name="crm_design_upload_json">Nahrať súbor .json</string>
     <string name="crm_design_tab_classes">Triedy</string>
     <string name="crm_design_tab_views">Zobrazenia</string>
     <string name="crm_design_import_dialog_title">Importovať návrh</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Presunúť stĺpec</string>
     <string name="crm_drag_hint">Dlhým stlačením a potiahnutím presuniete</string>
     <string name="crm_design_more_options">Ďalšie možnosti</string>
-    <string name="crm_design_clipboard_label">JSON návrhu</string>
-    <string name="crm_design_export_subject">Návrh CRM</string>
-    <string name="crm_design_share_chooser">Zdieľať návrh</string>
-    <string name="crm_design_export_copied">Návrh skopírovaný do schránky</string>
     <string name="crm_design_no_templates">Žiadne dostupné šablóny</string>
-    <string name="crm_design_or_paste_json">Alebo vložte JSON</string>
-    <string name="crm_design_paste_placeholder">Vložte exportovaný JSON návrhu</string>
-    <string name="crm_design_import_json">Importovať JSON</string>
     <string name="crm_design_use">Použiť</string>
     <string name="crm_design_replace_message">Tým sa aktuálny návrh nahradí návrhom %1$s. Všetky existujúce triedy, polia, možnosti a zobrazenia budú odstránené. Existujúce objekty nebudú odstránené, ale možno sa už nezobrazia v zobrazeniach.</string>
-    <string name="crm_design_pasted_json_label">vložený JSON</string>
     <string name="crm_classes_empty">Nie sú definované žiadne triedy</string>
     <string name="crm_class_label">Trieda: %1$s</string>
     <string name="crm_class_title_field_description">Ktoré pole sa má použiť ako zobrazovaný názov objektov tejto triedy.</string>

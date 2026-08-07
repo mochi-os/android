@@ -26,6 +26,7 @@
     <string name="crm_settings">सेटिंग सब</string>
     <string name="crm_link">लिंक</string>
     <string name="crm_design">डिज़ाइन</string>
+    <string name="crm_export_failed">एक्सपोर्ट सेव ना हो सकल</string>
     <string name="crm_sort_label">क्रमबद्ध करीं</string>
     <string name="crm_sort_direction">दिशा</string>
     <string name="crm_sort_rank">मैनुअल</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">डिजाइन निर्यात करीं</string>
     <string name="crm_design_import">डिजाइन आयात करीं</string>
     <string name="crm_design_imported">डिज़ाइन आयात कइल गइल</string>
+    <string name="crm_design_export_saved">डिज़ाइन सेव भइल</string>
+    <string name="crm_design_import_failed">ऊ फाइल पढ़ल ना जा सकल</string>
+    <string name="crm_design_or_upload_json">या फाइल अपलोड करीं</string>
+    <string name="crm_design_upload_json">.json फ़ाइल अपलोड करीं</string>
     <string name="crm_design_tab_classes">वर्ग</string>
     <string name="crm_design_tab_views">दृश्य</string>
     <string name="crm_design_import_dialog_title">डिजाइन आयात करीं</string>
@@ -265,17 +270,9 @@
     <string name="crm_drag_column">कॉलम घींचीं</string>
     <string name="crm_drag_hint">खिसकावे खातिर देर ले दबाईं आ घींचीं</string>
     <string name="crm_design_more_options">अउरी विकल्प</string>
-    <string name="crm_design_clipboard_label">डिज़ाइन JSON</string>
-    <string name="crm_design_export_subject">CRM डिज़ाइन</string>
-    <string name="crm_design_share_chooser">डिज़ाइन साझा करीं</string>
-    <string name="crm_design_export_copied">डिज़ाइन क्लिपबोर्ड में कॉपी हो गइल</string>
     <string name="crm_design_no_templates">कौनो टेम्पलेट उपलब्ध नइखे</string>
-    <string name="crm_design_or_paste_json">भा JSON पेस्ट करीं</string>
-    <string name="crm_design_paste_placeholder">निर्यात कइल डिज़ाइन JSON पेस्ट करीं</string>
-    <string name="crm_design_import_json">JSON आयात करीं</string>
     <string name="crm_design_use">इस्तेमाल करीं</string>
     <string name="crm_design_replace_message">एह से वर्तमान डिज़ाइन %1$s से बदल जाई। सभ मौजूदा क्लास, फील्ड, विकल्प आ दृश्य मिटा दिहल जइहें। मौजूदा वस्तु ना मिटइहें बाकिर दृश्य में अब ना देखाई।</string>
-    <string name="crm_design_pasted_json_label">पेस्ट कइल JSON</string>
     <string name="crm_classes_empty">कौनो क्लास परिभाषित नइखे</string>
     <string name="crm_class_label">क्लास: %1$s</string>
     <string name="crm_class_title_field_description">एह क्लास के वस्तु खातिर प्रदर्शन शीर्षक के रूप में कवन फील्ड इस्तेमाल कइल जाव।</string>

@@ -26,6 +26,7 @@
     <string name="crm_settings">ການຕັ້ງຄ່າ</string>
     <string name="crm_link">ລິ້ງ</string>
     <string name="crm_design">ການອອກແບບ</string>
+    <string name="crm_export_failed">ບໍ່ສາມາດບັນທຶກການສົ່ງອອກໄດ້</string>
     <string name="crm_sort_label">ຈັດລຽງ</string>
     <string name="crm_sort_direction">ທິດທາງ</string>
     <string name="crm_sort_rank">ດ້ວຍຕົນເອງ</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">ສົ່ງອອກການອອກແບບ</string>
     <string name="crm_design_import">ນຳເຂົ້າການອອກແບບ</string>
     <string name="crm_design_imported">ນຳເຂົ້າການອອກແບບແລ້ວ</string>
+    <string name="crm_design_export_saved">ບັນທຶກການອອກແບບແລ້ວ</string>
+    <string name="crm_design_import_failed">ບໍ່ສາມາດອ່ານໄຟລ໌ນັ້ນໄດ້</string>
+    <string name="crm_design_or_upload_json">ຫຼືອັບໂຫຼດໄຟລ໌</string>
+    <string name="crm_design_upload_json">ອັບໂຫຼດໄຟລ໌ .json</string>
     <string name="crm_design_tab_classes">ຄລາສ</string>
     <string name="crm_design_tab_views">ການເບິ່ງ</string>
     <string name="crm_design_import_dialog_title">ນຳເຂົ້າການອອກແບບ</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">ລາກຖັນ</string>
     <string name="crm_drag_hint">ກົດຄ້າງແລ້ວລາກເພື່ອຍ້າຍ</string>
     <string name="crm_design_more_options">ຕົວເລືອກເພີ່ມເຕີມ</string>
-    <string name="crm_design_clipboard_label">ການອອກແບບ JSON</string>
-    <string name="crm_design_export_subject">ການອອກແບບ CRM</string>
-    <string name="crm_design_share_chooser">ແບ່ງປັນການອອກແບບ</string>
-    <string name="crm_design_export_copied">ສຳເນົາການອອກແບບໄປຍັງຄລິບບອດແລ້ວ</string>
     <string name="crm_design_no_templates">ບໍ່ມີແມ່ແບບໃຫ້ໃຊ້</string>
-    <string name="crm_design_or_paste_json">ຫຼືວາງ JSON</string>
-    <string name="crm_design_paste_placeholder">ວາງການອອກແບບ JSON ທີ່ສົ່ງອອກມາ</string>
-    <string name="crm_design_import_json">ນຳເຂົ້າ JSON</string>
     <string name="crm_design_use">ໃຊ້</string>
     <string name="crm_design_replace_message">ການກະທຳນີ້ຈະປ່ຽນແທນການອອກແບບປັດຈຸບັນດ້ວຍ %1$s. ຄລາສ, ຊ່ອງຂໍ້ມູນ, ຕົວເລືອກ ແລະ ມຸມມອງທີ່ມີຢູ່ທັງໝົດຈະຖືກລຶບ. ວັດຖຸທີ່ມີຢູ່ຈະບໍ່ຖືກລຶບ ແຕ່ອາດຈະບໍ່ປາກົດໃນມຸມມອງອີກຕໍ່ໄປ.</string>
-    <string name="crm_design_pasted_json_label">JSON ທີ່ວາງມາ</string>
     <string name="crm_classes_empty">ບໍ່ມີຄລາສທີ່ກຳນົດໄວ້</string>
     <string name="crm_class_label">ຄລາສ: %1$s</string>
     <string name="crm_class_title_field_description">ຊ່ອງຂໍ້ມູນໃດທີ່ຈະໃຊ້ເປັນຫົວຂໍ້ສະແດງສຳລັບວັດຖຸໃນຄລາສນີ້.</string>

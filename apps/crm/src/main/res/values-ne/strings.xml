@@ -26,6 +26,7 @@
     <string name="crm_settings">सेटिङहरू</string>
     <string name="crm_link">लिङ्क</string>
     <string name="crm_design">डिजाइन</string>
+    <string name="crm_export_failed">निर्यात सुरक्षित गर्न सकिएन</string>
     <string name="crm_sort_label">क्रमबद्ध गर्नुहोस्</string>
     <string name="crm_sort_direction">दिशा</string>
     <string name="crm_sort_rank">म्यानुअल</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">डिजाइन निर्यात गर्नुहोस्</string>
     <string name="crm_design_import">डिजाइन आयात गर्नुहोस्</string>
     <string name="crm_design_imported">डिजाइन आयात गरियो</string>
+    <string name="crm_design_export_saved">डिजाइन सुरक्षित गरियो</string>
+    <string name="crm_design_import_failed">त्यो फाइल पढ्न सकिएन</string>
+    <string name="crm_design_or_upload_json">वा फाइल अपलोड गर्नुहोस्</string>
+    <string name="crm_design_upload_json">.json फाइल अपलोड गर्नुहोस्</string>
     <string name="crm_design_tab_classes">क्लासहरू</string>
     <string name="crm_design_tab_views">दृश्यहरू</string>
     <string name="crm_design_import_dialog_title">डिजाइन आयात गर्नुहोस्</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">स्तम्भ तान्नुहोस्</string>
     <string name="crm_drag_hint">सार्नका लागि लामो थिच्नुहोस् र तान्नुहोस्</string>
     <string name="crm_design_more_options">थप विकल्पहरू</string>
-    <string name="crm_design_clipboard_label">डिजाइन JSON</string>
-    <string name="crm_design_export_subject">CRM डिजाइन</string>
-    <string name="crm_design_share_chooser">डिजाइन साझा गर्नुहोस्</string>
-    <string name="crm_design_export_copied">डिजाइन क्लिपबोर्डमा प्रतिलिपि गरियो</string>
     <string name="crm_design_no_templates">कुनै टेम्प्लेट उपलब्ध छैन</string>
-    <string name="crm_design_or_paste_json">वा JSON टाँस्नुहोस्</string>
-    <string name="crm_design_paste_placeholder">निर्यात गरिएको डिजाइन JSON टाँस्नुहोस्</string>
-    <string name="crm_design_import_json">JSON आयात गर्नुहोस्</string>
     <string name="crm_design_use">प्रयोग गर्नुहोस्</string>
     <string name="crm_design_replace_message">यसले हालको डिजाइनलाई %1$s ले प्रतिस्थापन गर्नेछ। सबै विद्यमान क्लास, क्षेत्र, विकल्प र दृश्यहरू मेटिनेछन्। विद्यमान वस्तुहरू मेटिने छैनन् तर दृश्यहरूमा देखा नपर्न सक्छन्।</string>
-    <string name="crm_design_pasted_json_label">टाँसिएको JSON</string>
     <string name="crm_classes_empty">कुनै क्लास परिभाषित गरिएको छैन</string>
     <string name="crm_class_label">क्लास: %1$s</string>
     <string name="crm_class_title_field_description">यस क्लासका वस्तुहरूका लागि प्रदर्शन शीर्षकका रूपमा कुन क्षेत्र प्रयोग गर्ने।</string>

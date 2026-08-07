@@ -26,6 +26,7 @@
     <string name="crm_settings">تنظیمات</string>
     <string name="crm_link">پیوند</string>
     <string name="crm_design">طراحی</string>
+    <string name="crm_export_failed">ذخیره خروجی ممکن نشد</string>
     <string name="crm_sort_label">مرتب‌سازی</string>
     <string name="crm_sort_direction">جهت</string>
     <string name="crm_sort_rank">دستی</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">خروجی طراحی</string>
     <string name="crm_design_import">وارد کردن طراحی</string>
     <string name="crm_design_imported">طرح وارد شد</string>
+    <string name="crm_design_export_saved">طرح ذخیره شد</string>
+    <string name="crm_design_import_failed">خواندن آن فایل ممکن نشد</string>
+    <string name="crm_design_or_upload_json">یا یک فایل بارگذاری کنید</string>
+    <string name="crm_design_upload_json">بارگذاری فایل .json</string>
     <string name="crm_design_tab_classes">کلاس‌ها</string>
     <string name="crm_design_tab_views">نماها</string>
     <string name="crm_design_import_dialog_title">وارد کردن طراحی</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">کشیدن ستون</string>
     <string name="crm_drag_hint">برای جابجایی، نگه دارید و بکشید</string>
     <string name="crm_design_more_options">گزینه‌های بیشتر</string>
-    <string name="crm_design_clipboard_label">JSON طراحی</string>
-    <string name="crm_design_export_subject">طراحی CRM</string>
-    <string name="crm_design_share_chooser">اشتراک‌گذاری طراحی</string>
-    <string name="crm_design_export_copied">طراحی در کلیپ‌بورد کپی شد</string>
     <string name="crm_design_no_templates">هیچ الگویی در دسترس نیست</string>
-    <string name="crm_design_or_paste_json">یا JSON را جای‌گذاری کنید</string>
-    <string name="crm_design_paste_placeholder">JSON طراحی صادر شده را جای‌گذاری کنید</string>
-    <string name="crm_design_import_json">وارد کردن JSON</string>
     <string name="crm_design_use">استفاده</string>
     <string name="crm_design_replace_message">این کار طراحی فعلی را با %1$s جایگزین می‌کند. همه کلاس‌ها، فیلدها، گزینه‌ها و نماهای موجود حذف خواهند شد. اشیاء موجود حذف نخواهند شد اما ممکن است دیگر در نماها ظاهر نشوند.</string>
-    <string name="crm_design_pasted_json_label">JSON جای‌گذاری شده</string>
     <string name="crm_classes_empty">هیچ کلاسی تعریف نشده است</string>
     <string name="crm_class_label">کلاس: %1$s</string>
     <string name="crm_class_title_field_description">کدام فیلد به عنوان عنوان نمایشی برای اشیاء این کلاس استفاده شود.</string>

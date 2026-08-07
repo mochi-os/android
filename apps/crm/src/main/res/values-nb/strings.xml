@@ -26,6 +26,7 @@
     <string name="crm_settings">Innstillinger</string>
     <string name="crm_link">Lenke</string>
     <string name="crm_design">Design</string>
+    <string name="crm_export_failed">Kunne ikke lagre eksporten</string>
     <string name="crm_sort_label">Sorter</string>
     <string name="crm_sort_direction">Retning</string>
     <string name="crm_sort_rank">Manuell</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Eksporter design</string>
     <string name="crm_design_import">Importer design</string>
     <string name="crm_design_imported">Design importert</string>
+    <string name="crm_design_export_saved">Design lagret</string>
+    <string name="crm_design_import_failed">Kunne ikke lese filen</string>
+    <string name="crm_design_or_upload_json">Eller last opp en fil</string>
+    <string name="crm_design_upload_json">Last opp .json-fil</string>
     <string name="crm_design_tab_classes">Klasser</string>
     <string name="crm_design_tab_views">Visninger</string>
     <string name="crm_design_import_dialog_title">Importer design</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Dra kolonne</string>
     <string name="crm_drag_hint">Trykk og hold for å flytte</string>
     <string name="crm_design_more_options">Flere alternativer</string>
-    <string name="crm_design_clipboard_label">Design-JSON</string>
-    <string name="crm_design_export_subject">CRM-design</string>
-    <string name="crm_design_share_chooser">Del design</string>
-    <string name="crm_design_export_copied">Design kopiert til utklippstavlen</string>
     <string name="crm_design_no_templates">Ingen maler tilgjengelig</string>
-    <string name="crm_design_or_paste_json">Eller lim inn JSON</string>
-    <string name="crm_design_paste_placeholder">Lim inn eksportert design-JSON</string>
-    <string name="crm_design_import_json">Importer JSON</string>
     <string name="crm_design_use">Bruk</string>
     <string name="crm_design_replace_message">Dette vil erstatte gjeldende design med %1$s. Alle eksisterende klasser, felt, alternativer og visninger vil bli slettet. Eksisterende objekter vil ikke bli slettet, men vises kanskje ikke lenger i visninger.</string>
-    <string name="crm_design_pasted_json_label">innlimt JSON</string>
     <string name="crm_classes_empty">Ingen klasser definert</string>
     <string name="crm_class_label">Klasse: %1$s</string>
     <string name="crm_class_title_field_description">Hvilket felt som skal brukes som visningstittel for objekter av denne klassen.</string>

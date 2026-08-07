@@ -26,6 +26,7 @@
     <string name="crm_settings">Поставке</string>
     <string name="crm_link">Веза</string>
     <string name="crm_design">Дизајн</string>
+    <string name="crm_export_failed">Извоз није могуће сачувати</string>
     <string name="crm_sort_label">Сортирај</string>
     <string name="crm_sort_direction">Смер</string>
     <string name="crm_sort_rank">Ручно</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Извези дизајн</string>
     <string name="crm_design_import">Увези дизајн</string>
     <string name="crm_design_imported">Дизајн увезен</string>
+    <string name="crm_design_export_saved">Дизајн је сачуван</string>
+    <string name="crm_design_import_failed">Датотеку није могуће прочитати</string>
+    <string name="crm_design_or_upload_json">Или отпремите датотеку</string>
+    <string name="crm_design_upload_json">Отпреми .json фајл</string>
     <string name="crm_design_tab_classes">Класе</string>
     <string name="crm_design_tab_views">Прегледи</string>
     <string name="crm_design_import_dialog_title">Увези дизајн</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Prevucite kolonu</string>
     <string name="crm_drag_hint">Dugo pritisnite i prevucite za pomeranje</string>
     <string name="crm_design_more_options">Više opcija</string>
-    <string name="crm_design_clipboard_label">Dizajn JSON</string>
-    <string name="crm_design_export_subject">CRM dizajn</string>
-    <string name="crm_design_share_chooser">Podeli dizajn</string>
-    <string name="crm_design_export_copied">Dizajn je kopiran u privremenu memoriju</string>
     <string name="crm_design_no_templates">Nema dostupnih šablona</string>
-    <string name="crm_design_or_paste_json">Ili nalepite JSON</string>
-    <string name="crm_design_paste_placeholder">Nalepite izvezeni JSON dizajna</string>
-    <string name="crm_design_import_json">Uvezi JSON</string>
     <string name="crm_design_use">Koristi</string>
     <string name="crm_design_replace_message">Ovo će zameniti trenutni dizajn sa %1$s. Sve postojeće klase, polja, opcije i prikazi biće obrisani. Postojeći objekti neće biti obrisani, ali se možda više neće pojavljivati u prikazima.</string>
-    <string name="crm_design_pasted_json_label">nalepljeni JSON</string>
     <string name="crm_classes_empty">Nijedna klasa nije definisana</string>
     <string name="crm_class_label">Klasa: %1$s</string>
     <string name="crm_class_title_field_description">Koje polje koristiti kao prikazni naslov za objekte ove klase.</string>

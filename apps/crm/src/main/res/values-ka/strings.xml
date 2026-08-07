@@ -26,6 +26,7 @@
     <string name="crm_settings">პარამეტრები</string>
     <string name="crm_link">ბმული</string>
     <string name="crm_design">დიზაინი</string>
+    <string name="crm_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
     <string name="crm_sort_label">დახარისხება</string>
     <string name="crm_sort_direction">მიმართულება</string>
     <string name="crm_sort_rank">სახელმძღვანელო</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">დიზაინის ექსპორტი</string>
     <string name="crm_design_import">დიზაინის იმპორტი</string>
     <string name="crm_design_imported">დიზაინი იმპორტირებულია</string>
+    <string name="crm_design_export_saved">დიზაინი შენახულია</string>
+    <string name="crm_design_import_failed">ამ ფაილის წაკითხვა ვერ მოხერხდა</string>
+    <string name="crm_design_or_upload_json">ან ატვირთეთ ფაილი</string>
+    <string name="crm_design_upload_json">ატვირთვა</string>
     <string name="crm_design_tab_classes">კლასები</string>
     <string name="crm_design_tab_views">ნახვები</string>
     <string name="crm_design_import_dialog_title">დიზაინის იმპორტი</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">სვეტის გადატანა</string>
     <string name="crm_drag_hint">გადასატანად ხანგრძლივად დააჭირეთ და გადაიტანეთ</string>
     <string name="crm_design_more_options">მეტი ვარიანტი</string>
-    <string name="crm_design_clipboard_label">დიზაინის JSON</string>
-    <string name="crm_design_export_subject">CRM დიზაინი</string>
-    <string name="crm_design_share_chooser">დიზაინის გაზიარება</string>
-    <string name="crm_design_export_copied">დიზაინი დაკოპირდა გაცვლის ბუფერში</string>
     <string name="crm_design_no_templates">შაბლონები მიუწვდომელია</string>
-    <string name="crm_design_or_paste_json">ან ჩასვით JSON</string>
-    <string name="crm_design_paste_placeholder">ჩასვით ექსპორტირებული დიზაინის JSON</string>
-    <string name="crm_design_import_json">JSON-ის იმპორტი</string>
     <string name="crm_design_use">გამოყენება</string>
     <string name="crm_design_replace_message">ეს ჩაანაცვლებს მიმდინარე დიზაინს %1$s-ით. ყველა არსებული კლასი, ველი, ვარიანტი და ხედი წაიშლება. არსებული ობიექტები არ წაიშლება, მაგრამ შესაძლოა ხედებში აღარ გამოჩნდეს.</string>
-    <string name="crm_design_pasted_json_label">ჩასმული JSON</string>
     <string name="crm_classes_empty">კლასები არ არის განსაზღვრული</string>
     <string name="crm_class_label">კლასი: %1$s</string>
     <string name="crm_class_title_field_description">რომელი ველი გამოვიყენოთ ამ კლასის ობიექტების სათაურად.</string>

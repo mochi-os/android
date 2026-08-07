@@ -26,6 +26,7 @@
     <string name="crm_settings">Sazlamalar</string>
     <string name="crm_link">Salgy</string>
     <string name="crm_design">Dizaýn</string>
+    <string name="crm_export_failed">Eksporty saklap bolmady</string>
     <string name="crm_sort_label">Tertiple</string>
     <string name="crm_sort_direction">Ugur</string>
     <string name="crm_sort_rank">El bilen</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Dizaýny eksport et</string>
     <string name="crm_design_import">Dizaýny import et</string>
     <string name="crm_design_imported">Dizaýn import edildi</string>
+    <string name="crm_design_export_saved">Dizaýn saklandy</string>
+    <string name="crm_design_import_failed">Ol faýly okap bolmady</string>
+    <string name="crm_design_or_upload_json">Ýa-da faýl ýükläň</string>
+    <string name="crm_design_upload_json">Ýükle .json faýl</string>
     <string name="crm_design_tab_classes">Klaslar</string>
     <string name="crm_design_tab_views">Görnüşler</string>
     <string name="crm_design_import_dialog_title">Dizaýny import et</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Sütüni süýre</string>
     <string name="crm_drag_hint">Hereket etmek üçin uzyn basyp süýräň</string>
     <string name="crm_design_more_options">Goşmaça opsiýalar</string>
-    <string name="crm_design_clipboard_label">Dizaýn JSON</string>
-    <string name="crm_design_export_subject">CRM dizaýny</string>
-    <string name="crm_design_share_chooser">Dizaýny paýlaş</string>
-    <string name="crm_design_export_copied">Dizaýn alyş-çalyş ýadyna göçürildi</string>
     <string name="crm_design_no_templates">Şablonlar ýok</string>
-    <string name="crm_design_or_paste_json">Ýa-da JSON ýelmeşdiriň</string>
-    <string name="crm_design_paste_placeholder">Eksport edilen dizaýn JSON-y ýelmeşdiriň</string>
-    <string name="crm_design_import_json">JSON import et</string>
     <string name="crm_design_use">Ulan</string>
     <string name="crm_design_replace_message">Bu häzirki dizaýny %1$s bilen çalşar. Ähli bar bolan klaslar, meýdanlar, opsiýalar we görnüşler pozular. Bar bolan obýektler pozulmaz, ýöne görnüşlerde indi görünmezligi mümkin.</string>
-    <string name="crm_design_pasted_json_label">ýelmeşdirilen JSON</string>
     <string name="crm_classes_empty">Kesgitlenen klaslar ýok</string>
     <string name="crm_class_label">Klas: %1$s</string>
     <string name="crm_class_title_field_description">Bu klasdaky obýektler üçin görkeziş ady hökmünde haýsy meýdany ulanmaly.</string>

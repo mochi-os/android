@@ -26,6 +26,7 @@
     <string name="crm_settings">Nastavení</string>
     <string name="crm_link">Odkaz</string>
     <string name="crm_design">Design</string>
+    <string name="crm_export_failed">Export se nepodařilo uložit</string>
     <string name="crm_sort_label">Třídit</string>
     <string name="crm_sort_direction">Směr</string>
     <string name="crm_sort_rank">Ručně</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Exportovat návrh</string>
     <string name="crm_design_import">Importovat návrh</string>
     <string name="crm_design_imported">Design importován</string>
+    <string name="crm_design_export_saved">Návrh uložen</string>
+    <string name="crm_design_import_failed">Soubor se nepodařilo přečíst</string>
+    <string name="crm_design_or_upload_json">Nebo nahrajte soubor</string>
+    <string name="crm_design_upload_json">Nahrát soubor .json</string>
     <string name="crm_design_tab_classes">Třídy</string>
     <string name="crm_design_tab_views">Zobrazení</string>
     <string name="crm_design_import_dialog_title">Importovat návrh</string>
@@ -265,17 +270,9 @@
     <string name="crm_drag_column">Přetáhnout sloupec</string>
     <string name="crm_drag_hint">Pro přesun dlouze stiskněte a přetáhněte</string>
     <string name="crm_design_more_options">Další možnosti</string>
-    <string name="crm_design_clipboard_label">JSON návrhu</string>
-    <string name="crm_design_export_subject">Návrh CRM</string>
-    <string name="crm_design_share_chooser">Sdílet návrh</string>
-    <string name="crm_design_export_copied">Návrh zkopírován do schránky</string>
     <string name="crm_design_no_templates">Žádné dostupné šablony</string>
-    <string name="crm_design_or_paste_json">Nebo vložte JSON</string>
-    <string name="crm_design_paste_placeholder">Vložte exportovaný JSON návrhu</string>
-    <string name="crm_design_import_json">Importovat JSON</string>
     <string name="crm_design_use">Použít</string>
     <string name="crm_design_replace_message">Tímto nahradíte aktuální návrh za %1$s. Všechny existující třídy, pole, možnosti a pohledy budou smazány. Existující objekty smazány nebudou, ale nemusí se nadále zobrazovat v pohledech.</string>
-    <string name="crm_design_pasted_json_label">vložený JSON</string>
     <string name="crm_classes_empty">Nejsou definovány žádné třídy</string>
     <string name="crm_class_label">Třída: %1$s</string>
     <string name="crm_class_title_field_description">Které pole použít jako zobrazovaný název pro objekty této třídy.</string>

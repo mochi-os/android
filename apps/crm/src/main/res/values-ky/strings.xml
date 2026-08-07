@@ -26,6 +26,7 @@
     <string name="crm_settings">Жөндөөлөр</string>
     <string name="crm_link">Шилтеме</string>
     <string name="crm_design">Дизайн</string>
+    <string name="crm_export_failed">Экспортту сактоо мүмкүн болгон жок</string>
     <string name="crm_sort_label">Сорттоо</string>
     <string name="crm_sort_direction">Багыт</string>
     <string name="crm_sort_rank">Кол менен</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Дизайнды экспорттоо</string>
     <string name="crm_design_import">Дизайнды импорттоо</string>
     <string name="crm_design_imported">Дизайн импорттолду</string>
+    <string name="crm_design_export_saved">Дизайн сакталды</string>
+    <string name="crm_design_import_failed">Ал файлды окуу мүмкүн болгон жок</string>
+    <string name="crm_design_or_upload_json">Же файл жүктөңүз</string>
+    <string name="crm_design_upload_json">.json файлды жүктөө</string>
     <string name="crm_design_tab_classes">Класстар</string>
     <string name="crm_design_tab_views">Көрүүлөр</string>
     <string name="crm_design_import_dialog_title">Дизайнды импорттоо</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Тилкени сүйрөө</string>
     <string name="crm_drag_hint">Жылдыруу үчүн узак басып, сүйрөңүз</string>
     <string name="crm_design_more_options">Дагы варианттар</string>
-    <string name="crm_design_clipboard_label">Дизайн JSON</string>
-    <string name="crm_design_export_subject">CRM дизайны</string>
-    <string name="crm_design_share_chooser">Дизайн менен бөлүшүү</string>
-    <string name="crm_design_export_copied">Дизайн алмашуу буферине көчүрүлдү</string>
     <string name="crm_design_no_templates">Калыптар жок</string>
-    <string name="crm_design_or_paste_json">Же JSON чаптаңыз</string>
-    <string name="crm_design_paste_placeholder">Экспорттолгон дизайндын JSON\'ун чаптаңыз</string>
-    <string name="crm_design_import_json">JSON импорттоо</string>
     <string name="crm_design_use">Колдонуу</string>
     <string name="crm_design_replace_message">Бул учурдагы дизайнды %1$s менен алмаштырат. Бардык учурдагы класстар, талаалар, варианттар жана көрүнүштөр өчүрүлөт. Учурдагы объекттер өчүрүлбөйт, бирок көрүнүштөрдө мындан ары көрүнбөшү мүмкүн.</string>
-    <string name="crm_design_pasted_json_label">чапталган JSON</string>
     <string name="crm_classes_empty">Класстар аныкталган эмес</string>
     <string name="crm_class_label">Класс: %1$s</string>
     <string name="crm_class_title_field_description">Бул класстын объекттери үчүн көрүнүүчү аталыш катары кайсы талааны колдонуу керек.</string>

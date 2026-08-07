@@ -26,6 +26,7 @@
     <string name="crm_settings">Iestatījumi</string>
     <string name="crm_link">Saite</string>
     <string name="crm_design">Dizains</string>
+    <string name="crm_export_failed">Neizdevās saglabāt eksportu</string>
     <string name="crm_sort_label">Kārtot</string>
     <string name="crm_sort_direction">Virziens</string>
     <string name="crm_sort_rank">Manuāls</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Eksportēt dizainu</string>
     <string name="crm_design_import">Importēt dizainu</string>
     <string name="crm_design_imported">Dizains importēts</string>
+    <string name="crm_design_export_saved">Dizains saglabāts</string>
+    <string name="crm_design_import_failed">Neizdevās nolasīt šo failu</string>
+    <string name="crm_design_or_upload_json">Vai augšupielādējiet failu</string>
+    <string name="crm_design_upload_json">Augšupielādēt .json failu</string>
     <string name="crm_design_tab_classes">Klases</string>
     <string name="crm_design_tab_views">Skatījumi</string>
     <string name="crm_design_import_dialog_title">Importēt dizainu</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Vilkt kolonnu</string>
     <string name="crm_drag_hint">Turiet nospiestu un velciet, lai pārvietotu</string>
     <string name="crm_design_more_options">Vairāk opciju</string>
-    <string name="crm_design_clipboard_label">Dizaina JSON</string>
-    <string name="crm_design_export_subject">CRM dizains</string>
-    <string name="crm_design_share_chooser">Kopīgot dizainu</string>
-    <string name="crm_design_export_copied">Dizains nokopēts starpliktuvē</string>
     <string name="crm_design_no_templates">Nav pieejamu veidņu</string>
-    <string name="crm_design_or_paste_json">Vai ielīmējiet JSON</string>
-    <string name="crm_design_paste_placeholder">Ielīmējiet eksportēto dizaina JSON</string>
-    <string name="crm_design_import_json">Importēt JSON</string>
     <string name="crm_design_use">Izmantot</string>
     <string name="crm_design_replace_message">Tas aizstās pašreizējo dizainu ar %1$s. Visas esošās klases, lauki, opcijas un skati tiks dzēsti. Esošie objekti netiks dzēsti, bet, iespējams, vairs neparādīsies skatos.</string>
-    <string name="crm_design_pasted_json_label">ielīmētais JSON</string>
     <string name="crm_classes_empty">Nav definētu klašu</string>
     <string name="crm_class_label">Klase: %1$s</string>
     <string name="crm_class_title_field_description">Kuru lauku izmantot kā attēloto virsrakstu šīs klases objektiem.</string>

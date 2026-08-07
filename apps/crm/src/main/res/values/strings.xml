@@ -321,24 +321,20 @@
     <string name="crm_design_more_options">More options</string>
     <string name="crm_design_export">Export design</string>
     <string name="crm_design_import">Import design</string>
-    <string name="crm_design_clipboard_label">Design JSON</string>
-    <string name="crm_design_export_subject">CRM design</string>
-    <string name="crm_design_share_chooser">Share design</string>
-    <string name="crm_design_export_copied">Design copied to clipboard</string>
     <string name="crm_design_imported">Design imported</string>
+    <string name="crm_design_export_saved">Design saved</string>
+    <string name="crm_design_import_failed">Couldn\'t read that file</string>
+    <string name="crm_design_or_upload_json">Or upload a file</string>
+    <string name="crm_design_upload_json">Upload .json file</string>
     <string name="crm_design_tab_classes">Classes</string>
     <string name="crm_design_tab_views">Views</string>
     <string name="crm_design_import_dialog_title">Import design</string>
     <string name="crm_design_import_choose_template">Choose a template</string>
     <string name="crm_design_no_templates">No templates available</string>
-    <string name="crm_design_or_paste_json">Or paste JSON</string>
-    <string name="crm_design_paste_placeholder">Paste exported design JSON</string>
-    <string name="crm_design_import_json">Import JSON</string>
     <string name="crm_design_use">Use</string>
     <string name="crm_design_replace_title">Replace design?</string>
     <string name="crm_design_replace_message">This will replace the current design with %1$s. All existing classes, fields, options, and views will be deleted. Existing objects will not be deleted but may no longer appear in views.</string>
     <string name="crm_design_replace">Replace</string>
-    <string name="crm_design_pasted_json_label">pasted JSON</string>
 
     <!-- Classes -->
     <string name="crm_classes_empty">No classes defined</string>

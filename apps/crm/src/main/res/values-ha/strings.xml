@@ -26,6 +26,7 @@
     <string name="crm_settings">Saitunan</string>
     <string name="crm_link">Hanyar haɗi</string>
     <string name="crm_design">Zane</string>
+    <string name="crm_export_failed">An kasa ajiye fitarwar</string>
     <string name="crm_sort_label">Jera</string>
     <string name="crm_sort_direction">Hanya</string>
     <string name="crm_sort_rank">Hannu</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Fitar da design</string>
     <string name="crm_design_import">Shigar da design</string>
     <string name="crm_design_imported">An shigo da zane</string>
+    <string name="crm_design_export_saved">An adana ƙira</string>
+    <string name="crm_design_import_failed">An kasa karanta wannan fayil ɗin</string>
+    <string name="crm_design_or_upload_json">Ko kuma loda fayil</string>
+    <string name="crm_design_upload_json">Loda fayil ɗin .json</string>
     <string name="crm_design_tab_classes">Classes</string>
     <string name="crm_design_tab_views">Views</string>
     <string name="crm_design_import_dialog_title">Shigar da design</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Ja shafi</string>
     <string name="crm_drag_hint">Danna ka riƙe sannan ka ja don motsawa</string>
     <string name="crm_design_more_options">Ƙarin zaɓuɓɓuka</string>
-    <string name="crm_design_clipboard_label">Zanen JSON</string>
-    <string name="crm_design_export_subject">Zanen CRM</string>
-    <string name="crm_design_share_chooser">Raba zane</string>
-    <string name="crm_design_export_copied">An kwafi zane zuwa allon hannu</string>
     <string name="crm_design_no_templates">Babu samfura da ake da su</string>
-    <string name="crm_design_or_paste_json">Ko liƙa JSON</string>
-    <string name="crm_design_paste_placeholder">Liƙa zanen JSON da aka fitar</string>
-    <string name="crm_design_import_json">Shigo da JSON</string>
     <string name="crm_design_use">Yi amfani</string>
     <string name="crm_design_replace_message">Wannan zai maye gurbin zanen yanzu da %1$s. Za a goge dukan azuzuwa, filaye, zaɓuɓɓuka, da ra\'ayoyin da ke akwai. Ba za a goge abubuwa da ke akwai ba amma wataƙila ba za su sake bayyana a ra\'ayoyi ba.</string>
-    <string name="crm_design_pasted_json_label">JSON da aka liƙa</string>
     <string name="crm_classes_empty">Babu azuzuwan da aka ayyana</string>
     <string name="crm_class_label">Aji: %1$s</string>
     <string name="crm_class_title_field_description">Wane filin za a yi amfani da shi a matsayin taken nuni ga abubuwan wannan ajin.</string>

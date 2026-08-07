@@ -26,6 +26,7 @@
     <string name="crm_settings">Iisetingi</string>
     <string name="crm_link">Ikhonkco</string>
     <string name="crm_design">Uyilo</string>
+    <string name="crm_export_failed">Ayikwazanga ukugcinwa into ethunyelwe</string>
     <string name="crm_sort_label">Hlela</string>
     <string name="crm_sort_direction">Icala</string>
     <string name="crm_sort_rank">Ngesandla</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Khuphela uyilo</string>
     <string name="crm_design_import">Ngenisa uyilo</string>
     <string name="crm_design_imported">Uyilo lungenisiwe</string>
+    <string name="crm_design_export_saved">Uyilo lugciniwe</string>
+    <string name="crm_design_import_failed">Ayikwazanga ukufundwa loo fayile</string>
+    <string name="crm_design_or_upload_json">Okanye layisha ifayile</string>
+    <string name="crm_design_upload_json">Layisha ifayile ye-.json</string>
     <string name="crm_design_tab_classes">Iiklasi</string>
     <string name="crm_design_tab_views">Imiboniso</string>
     <string name="crm_design_import_dialog_title">Ngenisa uyilo</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Tsala ikhalamu</string>
     <string name="crm_drag_hint">Cinezela ixesha elide uze utsale ukuze uyise</string>
     <string name="crm_design_more_options">Ezinye ezikhethwayo</string>
-    <string name="crm_design_clipboard_label">I-JSON yoyilo</string>
-    <string name="crm_design_export_subject">Uyilo lwe-CRM</string>
-    <string name="crm_design_share_chooser">Yabelana ngoyilo</string>
-    <string name="crm_design_export_copied">Uyilo lukotshelwe kwi-clipboard</string>
     <string name="crm_design_no_templates">Akukho zixhobo zoyilo ezikhoyo</string>
-    <string name="crm_design_or_paste_json">Okanye ncamathisa i-JSON</string>
-    <string name="crm_design_paste_placeholder">Ncamathisa i-JSON yoyilo olukhutshelweyo</string>
-    <string name="crm_design_import_json">Ngenisa i-JSON</string>
     <string name="crm_design_use">Sebenzisa</string>
     <string name="crm_design_replace_message">Oku kuya kubuyisela uyilo lwangoku ngo-%1$s. Zonke iiklasi ezikhoyo, iifildi, ezikhethwayo, kunye nezimbonakaliso ziya kucinywa. Izinto ezikhoyo aziyi kucinywa kodwa zingenakuvela kwizimbonakaliso.</string>
-    <string name="crm_design_pasted_json_label">i-JSON encamathiselweyo</string>
     <string name="crm_classes_empty">Akukho klasi zichaziweyo</string>
     <string name="crm_class_label">Iklasi: %1$s</string>
     <string name="crm_class_title_field_description">Yiyiphi ifildi emele isetyenziselwe ukubonisa isihloko sezinto zale klasi.</string>

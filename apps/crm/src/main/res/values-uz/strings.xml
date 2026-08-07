@@ -26,6 +26,7 @@
     <string name="crm_settings">Sozlamalar</string>
     <string name="crm_link">Havola</string>
     <string name="crm_design">Dizayn</string>
+    <string name="crm_export_failed">Eksportni saqlab bo\'lmadi</string>
     <string name="crm_sort_label">Saralash</string>
     <string name="crm_sort_direction">Yoʻnalish</string>
     <string name="crm_sort_rank">Qoʻlda</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Dizaynni eksport qilish</string>
     <string name="crm_design_import">Dizaynni import qilish</string>
     <string name="crm_design_imported">Dizayn import qilindi</string>
+    <string name="crm_design_export_saved">Dizayn saqlandi</string>
+    <string name="crm_design_import_failed">Bu faylni o\'qib bo\'lmadi</string>
+    <string name="crm_design_or_upload_json">Yoki fayl yuklang</string>
+    <string name="crm_design_upload_json">JSON faylni yuklash</string>
     <string name="crm_design_tab_classes">Sinflar</string>
     <string name="crm_design_tab_views">Koʻrishlar</string>
     <string name="crm_design_import_dialog_title">Dizaynni import qilish</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Ustunni sudrang</string>
     <string name="crm_drag_hint">Ko\'chirish uchun uzoq bosib turing va sudrang</string>
     <string name="crm_design_more_options">Qo\'shimcha variantlar</string>
-    <string name="crm_design_clipboard_label">Dizayn JSON</string>
-    <string name="crm_design_export_subject">CRM dizayni</string>
-    <string name="crm_design_share_chooser">Dizaynni ulashish</string>
-    <string name="crm_design_export_copied">Dizayn vaqtinchalik xotiraga nusxalandi</string>
     <string name="crm_design_no_templates">Shablonlar mavjud emas</string>
-    <string name="crm_design_or_paste_json">Yoki JSON joylang</string>
-    <string name="crm_design_paste_placeholder">Eksport qilingan dizayn JSON-ini joylang</string>
-    <string name="crm_design_import_json">JSON-ni import qilish</string>
     <string name="crm_design_use">Ishlatish</string>
     <string name="crm_design_replace_message">Bu joriy dizaynni %1$s bilan almashtiradi. Mavjud barcha sinflar, maydonlar, variantlar va ko\'rinishlar o\'chiriladi. Mavjud obyektlar o\'chirilmaydi, lekin ko\'rinishlarda ko\'rinmasligi mumkin.</string>
-    <string name="crm_design_pasted_json_label">joylangan JSON</string>
     <string name="crm_classes_empty">Sinflar belgilanmagan</string>
     <string name="crm_class_label">Sinf: %1$s</string>
     <string name="crm_class_title_field_description">Ushbu sinf obyektlari uchun sarlavha sifatida qaysi maydondan foydalanish.</string>

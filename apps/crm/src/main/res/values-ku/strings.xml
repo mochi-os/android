@@ -26,6 +26,7 @@
     <string name="crm_settings">Mîheng</string>
     <string name="crm_link">Girêdan</string>
     <string name="crm_design">Sêwiran</string>
+    <string name="crm_export_failed">Nekarî hinardekirin tomar bike</string>
     <string name="crm_sort_label">Rêz bike</string>
     <string name="crm_sort_direction">Arasteyî</string>
     <string name="crm_sort_rank">Destî</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Sêwiranê derxe</string>
     <string name="crm_design_import">Sêwiranê bîne</string>
     <string name="crm_design_imported">Sêwiran hat îthal kirin</string>
+    <string name="crm_design_export_saved">Sêwirandin hate tomarkirin</string>
+    <string name="crm_design_import_failed">Nekarî wê pelê bixwîne</string>
+    <string name="crm_design_or_upload_json">An jî pelekê bar bike</string>
+    <string name="crm_design_upload_json">Pelê .json bar bike</string>
     <string name="crm_design_tab_classes">Pol</string>
     <string name="crm_design_tab_views">Dîtin</string>
     <string name="crm_design_import_dialog_title">Sêwiranê bîne</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Stûnê bikişîne</string>
     <string name="crm_drag_hint">Ji bo veguheztinê dirêj bitikîne û bikişîne</string>
     <string name="crm_design_more_options">Bêtir vebijêrk</string>
-    <string name="crm_design_clipboard_label">JSONa sêwiranê</string>
-    <string name="crm_design_export_subject">Sêwirana CRMê</string>
-    <string name="crm_design_share_chooser">Sêwiranê parve bike</string>
-    <string name="crm_design_export_copied">Sêwiran li tabloya rûnê hat kopîkirin</string>
     <string name="crm_design_no_templates">Ti şablon nînin</string>
-    <string name="crm_design_or_paste_json">An JSONê bipêve</string>
-    <string name="crm_design_paste_placeholder">JSONa sêwirana hinardekirî bipêve</string>
-    <string name="crm_design_import_json">JSONê hinde bike</string>
     <string name="crm_design_use">Bikar bîne</string>
     <string name="crm_design_replace_message">Ev ê sêwirana niha bi %1$s veguherîne. Hemû çîn, qad, vebijêrk û dîtinên heyî dê werin jêbirin. Tiştên heyî dê neyên jêbirin lê dibe ku êdî di dîtinan de xuya nebin.</string>
-    <string name="crm_design_pasted_json_label">JSONa pêvekirî</string>
     <string name="crm_classes_empty">Ti çîn nehatine danasîn</string>
     <string name="crm_class_label">Çîn: %1$s</string>
     <string name="crm_class_title_field_description">Kîjan qad wekî sernavê nîşandanê ji bo tiştên vê çînê were bikaranîn.</string>

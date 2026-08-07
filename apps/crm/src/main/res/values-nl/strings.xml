@@ -26,6 +26,7 @@
     <string name="crm_settings">Instellingen</string>
     <string name="crm_link">Link</string>
     <string name="crm_design">Ontwerp</string>
+    <string name="crm_export_failed">De export kon niet worden opgeslagen</string>
     <string name="crm_sort_label">Sorteren</string>
     <string name="crm_sort_direction">Richting</string>
     <string name="crm_sort_rank">Handmatig</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">Ontwerp exporteren</string>
     <string name="crm_design_import">Ontwerp importeren</string>
     <string name="crm_design_imported">Ontwerp geïmporteerd</string>
+    <string name="crm_design_export_saved">Ontwerp opgeslagen</string>
+    <string name="crm_design_import_failed">Dat bestand kon niet worden gelezen</string>
+    <string name="crm_design_or_upload_json">Of upload een bestand</string>
+    <string name="crm_design_upload_json">.json-bestand uploaden</string>
     <string name="crm_design_tab_classes">Klassen</string>
     <string name="crm_design_tab_views">Weergaven</string>
     <string name="crm_design_import_dialog_title">Ontwerp importeren</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">Kolom slepen</string>
     <string name="crm_drag_hint">Lang indrukken en slepen om te verplaatsen</string>
     <string name="crm_design_more_options">Meer opties</string>
-    <string name="crm_design_clipboard_label">Ontwerp-JSON</string>
-    <string name="crm_design_export_subject">CRM-ontwerp</string>
-    <string name="crm_design_share_chooser">Ontwerp delen</string>
-    <string name="crm_design_export_copied">Ontwerp gekopieerd naar klembord</string>
     <string name="crm_design_no_templates">Geen sjablonen beschikbaar</string>
-    <string name="crm_design_or_paste_json">Of plak JSON</string>
-    <string name="crm_design_paste_placeholder">Plak geëxporteerde ontwerp-JSON</string>
-    <string name="crm_design_import_json">JSON importeren</string>
     <string name="crm_design_use">Gebruiken</string>
     <string name="crm_design_replace_message">Hiermee wordt het huidige ontwerp vervangen door %1$s. Alle bestaande klassen, velden, opties en weergaven worden verwijderd. Bestaande objecten worden niet verwijderd, maar verschijnen mogelijk niet meer in weergaven.</string>
-    <string name="crm_design_pasted_json_label">geplakte JSON</string>
     <string name="crm_classes_empty">Geen klassen gedefinieerd</string>
     <string name="crm_class_label">Klasse: %1$s</string>
     <string name="crm_class_title_field_description">Welk veld als weergavetitel voor objecten van deze klasse wordt gebruikt.</string>

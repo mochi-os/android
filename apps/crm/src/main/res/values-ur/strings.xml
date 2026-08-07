@@ -26,6 +26,7 @@
     <string name="crm_settings">سیٹنگز</string>
     <string name="crm_link">لنک</string>
     <string name="crm_design">ڈیزائن</string>
+    <string name="crm_export_failed">ایکسپورٹ محفوظ نہیں ہو سکا</string>
     <string name="crm_sort_label">ترتیب دیں</string>
     <string name="crm_sort_direction">سمت</string>
     <string name="crm_sort_rank">دستی</string>
@@ -111,6 +112,10 @@
     <string name="crm_design_export">ڈیزائن ایکسپورٹ کریں</string>
     <string name="crm_design_import">ڈیزائن امپورٹ کریں</string>
     <string name="crm_design_imported">ڈیزائن درآمد ہو گیا</string>
+    <string name="crm_design_export_saved">ڈیزائن محفوظ ہو گیا</string>
+    <string name="crm_design_import_failed">وہ فائل پڑھی نہیں جا سکی</string>
+    <string name="crm_design_or_upload_json">یا فائل اپ لوڈ کریں</string>
+    <string name="crm_design_upload_json">.json فائل اپ لوڈ کریں</string>
     <string name="crm_design_tab_classes">کلاسز</string>
     <string name="crm_design_tab_views">ویوز</string>
     <string name="crm_design_import_dialog_title">ڈیزائن امپورٹ کریں</string>
@@ -271,17 +276,9 @@
     <string name="crm_drag_column">کالم گھسیٹیں</string>
     <string name="crm_drag_hint">منتقل کرنے کے لیے دبائے رکھیں اور گھسیٹیں</string>
     <string name="crm_design_more_options">مزید آپشنز</string>
-    <string name="crm_design_clipboard_label">ڈیزائن JSON</string>
-    <string name="crm_design_export_subject">CRM ڈیزائن</string>
-    <string name="crm_design_share_chooser">ڈیزائن کا اشتراک کریں</string>
-    <string name="crm_design_export_copied">ڈیزائن کلپ بورڈ پر کاپی ہو گیا</string>
     <string name="crm_design_no_templates">کوئی ٹیمپلیٹ دستیاب نہیں</string>
-    <string name="crm_design_or_paste_json">یا JSON پیسٹ کریں</string>
-    <string name="crm_design_paste_placeholder">برآمد شدہ ڈیزائن JSON پیسٹ کریں</string>
-    <string name="crm_design_import_json">JSON درآمد کریں</string>
     <string name="crm_design_use">استعمال کریں</string>
     <string name="crm_design_replace_message">یہ موجودہ ڈیزائن کو %1$s سے تبدیل کر دے گا۔ تمام موجودہ کلاسز، فیلڈز، آپشنز اور ویوز حذف ہو جائیں گے۔ موجودہ آبجیکٹس حذف نہیں ہوں گے لیکن ممکن ہے ویوز میں مزید ظاہر نہ ہوں۔</string>
-    <string name="crm_design_pasted_json_label">پیسٹ کیا گیا JSON</string>
     <string name="crm_classes_empty">کوئی کلاسز متعین نہیں کی گئیں</string>
     <string name="crm_class_label">کلاس: %1$s</string>
     <string name="crm_class_title_field_description">اس کلاس کے آبجیکٹس کے لیے ڈسپلے عنوان کے طور پر کون سی فیلڈ استعمال کی جائے۔</string>
