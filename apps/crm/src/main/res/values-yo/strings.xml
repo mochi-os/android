@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">sọ àsọyé</string>
     <string name="crm_attachment_empty">Kò sí àfikún</string>
     <string name="crm_attachment_default_name">àfikún</string>
+    <string name="crm_attachment_delete_confirm_title">Pa àfikún rẹ́?</string>
+    <string name="crm_attachment_delete_confirm_message">A ó pa àfikún yìí rẹ́ pátápátá.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

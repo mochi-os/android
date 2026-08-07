@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">បានបញ្ចេញមតិ</string>
     <string name="crm_attachment_empty">គ្មានឯកសារភ្ជាប់</string>
     <string name="crm_attachment_default_name">ឯកសារភ្ជាប់</string>
+    <string name="crm_attachment_delete_confirm_title">លុបឯកសារភ្ជាប់?</string>
+    <string name="crm_attachment_delete_confirm_message">ឯកសារភ្ជាប់នេះនឹងត្រូវលុបជាអចិន្ត្រៃយ៍។</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

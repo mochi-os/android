@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">ಕಾಮೆಂಟ್ ಮಾಡಿದರು</string>
     <string name="crm_attachment_empty">ಯಾವುದೇ ಲಗತ್ತುಗಳಿಲ್ಲ</string>
     <string name="crm_attachment_default_name">ಲಗತ್ತು</string>
+    <string name="crm_attachment_delete_confirm_title">ಲಗತ್ತನ್ನು ಅಳಿಸುವುದೇ?</string>
+    <string name="crm_attachment_delete_confirm_message">ಈ ಲಗತ್ತನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

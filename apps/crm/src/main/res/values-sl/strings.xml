@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">je komentiral(a)</string>
     <string name="crm_attachment_empty">Ni prilog</string>
     <string name="crm_attachment_default_name">priloga</string>
+    <string name="crm_attachment_delete_confirm_title">Izbrišem prilogo?</string>
+    <string name="crm_attachment_delete_confirm_message">Ta priloga bo trajno izbrisana.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

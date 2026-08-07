@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">टिप्पणी गरे</string>
     <string name="crm_attachment_empty">कुनै संलग्नक छैन</string>
     <string name="crm_attachment_default_name">संलग्नक</string>
+    <string name="crm_attachment_delete_confirm_title">संलग्नक मेट्ने?</string>
+    <string name="crm_attachment_delete_confirm_message">यो संलग्नक स्थायी रूपमा मेटाइनेछ।</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

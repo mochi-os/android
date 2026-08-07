@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">发表了评论</string>
     <string name="crm_attachment_empty">无附件</string>
     <string name="crm_attachment_default_name">附件</string>
+    <string name="crm_attachment_delete_confirm_title">删除附件?</string>
+    <string name="crm_attachment_delete_confirm_message">此附件将被永久删除。</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

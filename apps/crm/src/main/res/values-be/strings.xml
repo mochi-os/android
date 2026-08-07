@@ -230,6 +230,8 @@
     <string name="crm_activity_commented">пракаментаваў(-ла)</string>
     <string name="crm_attachment_empty">Няма ўкладанняў</string>
     <string name="crm_attachment_default_name">укладанне</string>
+    <string name="crm_attachment_delete_confirm_title">Выдаліць далучэнне?</string>
+    <string name="crm_attachment_delete_confirm_message">Гэта далучэнне будзе выдалена назаўсёды.</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>
     <string name="crm_attachment_size_kb">%1$d КБ</string>
     <string name="crm_attachment_size_mb">%1$d МБ</string>

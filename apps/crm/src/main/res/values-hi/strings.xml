@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">टिप्पणी की</string>
     <string name="crm_attachment_empty">कोई अनुलग्नक नहीं</string>
     <string name="crm_attachment_default_name">अनुलग्नक</string>
+    <string name="crm_attachment_delete_confirm_title">अनुलग्नक हटाएँ?</string>
+    <string name="crm_attachment_delete_confirm_message">यह अनुलग्नक स्थायी रूप से हटा दिया जाएगा।</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

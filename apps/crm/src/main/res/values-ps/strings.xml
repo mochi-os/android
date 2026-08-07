@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">تبصره یې وکړه</string>
     <string name="crm_attachment_empty">هیڅ ضمیمه نشته</string>
     <string name="crm_attachment_default_name">ضمیمه</string>
+    <string name="crm_attachment_delete_confirm_title">ضمیمه ړنګه شي؟</string>
+    <string name="crm_attachment_delete_confirm_message">دا ضمیمه به د تل لپاره ړنګه شي.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

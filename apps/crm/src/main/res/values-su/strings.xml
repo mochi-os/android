@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">ngoméntaran</string>
     <string name="crm_attachment_empty">Euweuh lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
+    <string name="crm_attachment_delete_confirm_title">Hapus lampiran?</string>
+    <string name="crm_attachment_delete_confirm_message">Lampiran ieu bakal dihapus permanén.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

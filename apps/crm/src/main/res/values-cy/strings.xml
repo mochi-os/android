@@ -230,6 +230,8 @@
     <string name="crm_activity_commented">gwnaeth sylw</string>
     <string name="crm_attachment_empty">Dim atodiadau</string>
     <string name="crm_attachment_default_name">atodiad</string>
+    <string name="crm_attachment_delete_confirm_title">Dileu\'r atodiad?</string>
+    <string name="crm_attachment_delete_confirm_message">Bydd yr atodiad hwn yn cael ei ddileu am byth.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

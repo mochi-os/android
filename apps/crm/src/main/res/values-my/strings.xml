@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">မှတ်ချက်ပေးခဲ့သည်</string>
     <string name="crm_attachment_empty">ပူးတွဲဖိုင်များ မရှိပါ</string>
     <string name="crm_attachment_default_name">ပူးတွဲဖိုင်</string>
+    <string name="crm_attachment_delete_confirm_title">ပူးတွဲဖိုင်ကို ဖျက်မလား?</string>
+    <string name="crm_attachment_delete_confirm_message">ဤပူးတွဲဖိုင်ကို အပြီးအပိုင် ဖျက်ပါမည်။</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

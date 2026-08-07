@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">uphawulile</string>
     <string name="crm_attachment_empty">Azikho izinamathiselo</string>
     <string name="crm_attachment_default_name">isinamathiselo</string>
+    <string name="crm_attachment_delete_confirm_title">Susa isinamathiselo?</string>
+    <string name="crm_attachment_delete_confirm_message">Lesi sinamathiselo sizosuswa unomphela.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

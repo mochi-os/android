@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">a comentat</string>
     <string name="crm_attachment_empty">Niciun atașament</string>
     <string name="crm_attachment_default_name">atașament</string>
+    <string name="crm_attachment_delete_confirm_title">Ștergeți atașamentul?</string>
+    <string name="crm_attachment_delete_confirm_message">Acest atașament va fi șters definitiv.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

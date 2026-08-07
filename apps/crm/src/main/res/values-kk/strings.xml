@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">пікір қалдырды</string>
     <string name="crm_attachment_empty">Тіркемелер жоқ</string>
     <string name="crm_attachment_default_name">тіркеме</string>
+    <string name="crm_attachment_delete_confirm_title">Тіркеме жойылсын ба?</string>
+    <string name="crm_attachment_delete_confirm_message">Бұл тіркеме біржола жойылады.</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>
     <string name="crm_attachment_size_kb">%1$d КБ</string>
     <string name="crm_attachment_size_mb">%1$d МБ</string>

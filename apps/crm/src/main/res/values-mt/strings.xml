@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">ikkummenta</string>
     <string name="crm_attachment_empty">L-ebda mehmuża</string>
     <string name="crm_attachment_default_name">mehmuża</string>
+    <string name="crm_attachment_delete_confirm_title">Tħassar l-anness?</string>
+    <string name="crm_attachment_delete_confirm_message">Dan l-anness se jitħassar għal dejjem.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">ha commentato</string>
     <string name="crm_attachment_empty">Nessun allegato</string>
     <string name="crm_attachment_default_name">allegato</string>
+    <string name="crm_attachment_delete_confirm_title">Eliminare l\'allegato?</string>
+    <string name="crm_attachment_delete_confirm_message">Questo allegato verrà eliminato definitivamente.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

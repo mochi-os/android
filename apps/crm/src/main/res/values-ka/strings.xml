@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">დააკომენტარა</string>
     <string name="crm_attachment_empty">დანართები არ არის</string>
     <string name="crm_attachment_default_name">დანართი</string>
+    <string name="crm_attachment_delete_confirm_title">წაიშალოს დანართი?</string>
+    <string name="crm_attachment_delete_confirm_message">ეს დანართი სამუდამოდ წაიშლება.</string>
     <string name="crm_attachment_size_bytes">%1$d ბ</string>
     <string name="crm_attachment_size_kb">%1$d კბ</string>
     <string name="crm_attachment_size_mb">%1$d მბ</string>

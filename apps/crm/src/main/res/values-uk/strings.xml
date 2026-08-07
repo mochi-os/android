@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">прокоментував(ла)</string>
     <string name="crm_attachment_empty">Немає вкладень</string>
     <string name="crm_attachment_default_name">вкладення</string>
+    <string name="crm_attachment_delete_confirm_title">Видалити вкладення?</string>
+    <string name="crm_attachment_delete_confirm_message">Це вкладення буде видалено назавжди.</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>
     <string name="crm_attachment_size_kb">%1$d КБ</string>
     <string name="crm_attachment_size_mb">%1$d МБ</string>

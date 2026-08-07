@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">ਟਿੱਪਣੀ ਕੀਤੀ</string>
     <string name="crm_attachment_empty">ਕੋਈ ਨੱਥੀ ਨਹੀਂ</string>
     <string name="crm_attachment_default_name">ਨੱਥੀ</string>
+    <string name="crm_attachment_delete_confirm_title">ਨੱਥੀ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="crm_attachment_delete_confirm_message">ਇਹ ਨੱਥੀ ਹਮੇਸ਼ਾ ਲਈ ਮਿਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

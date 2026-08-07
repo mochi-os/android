@@ -230,6 +230,8 @@
     <string name="crm_activity_commented">علّق</string>
     <string name="crm_attachment_empty">لا توجد مرفقات</string>
     <string name="crm_attachment_default_name">مرفق</string>
+    <string name="crm_attachment_delete_confirm_title">حذف المرفق؟</string>
+    <string name="crm_attachment_delete_confirm_message">سيتم حذف هذا المرفق نهائيًا.</string>
     <string name="crm_attachment_size_bytes">%1$d بايت</string>
     <string name="crm_attachment_size_kb">%1$d كيلوبايت</string>
     <string name="crm_attachment_size_mb">%1$d ميغابايت</string>

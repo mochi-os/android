@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">izoh qoldirdi</string>
     <string name="crm_attachment_empty">Ilovalar yo\'q</string>
     <string name="crm_attachment_default_name">ilova</string>
+    <string name="crm_attachment_delete_confirm_title">Biriktirma o\'chirilsinmi?</string>
+    <string name="crm_attachment_delete_confirm_message">Bu biriktirma butunlay o\'chiriladi.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

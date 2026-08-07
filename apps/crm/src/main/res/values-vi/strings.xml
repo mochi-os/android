@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">đã bình luận</string>
     <string name="crm_attachment_empty">Không có tệp đính kèm</string>
     <string name="crm_attachment_default_name">tệp đính kèm</string>
+    <string name="crm_attachment_delete_confirm_title">Xóa tệp đính kèm?</string>
+    <string name="crm_attachment_delete_confirm_message">Tệp đính kèm này sẽ bị xóa vĩnh viễn.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

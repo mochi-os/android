@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">comentou</string>
     <string name="crm_attachment_empty">Nenhum anexo</string>
     <string name="crm_attachment_default_name">anexo</string>
+    <string name="crm_attachment_delete_confirm_title">Eliminar o anexo?</string>
+    <string name="crm_attachment_delete_confirm_message">Este anexo será eliminado permanentemente.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

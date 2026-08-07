@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">մեկնաբանեց</string>
     <string name="crm_attachment_empty">Կցորդներ չկան</string>
     <string name="crm_attachment_default_name">կցորդ</string>
+    <string name="crm_attachment_delete_confirm_title">Ջնջե՞լ կցորդը։</string>
+    <string name="crm_attachment_delete_confirm_message">Այս կցորդը ընդմիշտ կջնջվի։</string>
     <string name="crm_attachment_size_bytes">%1$d Բ</string>
     <string name="crm_attachment_size_kb">%1$d ԿԲ</string>
     <string name="crm_attachment_size_mb">%1$d ՄԲ</string>

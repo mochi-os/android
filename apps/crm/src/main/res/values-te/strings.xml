@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">వ్యాఖ్యానించారు</string>
     <string name="crm_attachment_empty">జోడింపులు లేవు</string>
     <string name="crm_attachment_default_name">జోడింపు</string>
+    <string name="crm_attachment_delete_confirm_title">జోడింపును తొలగించాలా?</string>
+    <string name="crm_attachment_delete_confirm_message">ఈ జోడింపు శాశ్వతంగా తొలగించబడుతుంది.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

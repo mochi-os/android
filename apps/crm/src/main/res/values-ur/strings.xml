@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">تبصرہ کیا</string>
     <string name="crm_attachment_empty">کوئی منسلکات نہیں</string>
     <string name="crm_attachment_default_name">منسلک</string>
+    <string name="crm_attachment_delete_confirm_title">منسلکہ حذف کریں؟</string>
+    <string name="crm_attachment_delete_confirm_message">یہ منسلکہ مستقل طور پر حذف کر دیا جائے گا۔</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

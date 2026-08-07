@@ -230,6 +230,8 @@
     <string name="crm_activity_commented">মন্তব্য করেছেন</string>
     <string name="crm_attachment_empty">কোনো সংযুক্তি নেই</string>
     <string name="crm_attachment_default_name">সংযুক্তি</string>
+    <string name="crm_attachment_delete_confirm_title">সংযুক্তি মুছবেন?</string>
+    <string name="crm_attachment_delete_confirm_message">এই সংযুক্তি স্থায়ীভাবে মুছে ফেলা হবে।</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

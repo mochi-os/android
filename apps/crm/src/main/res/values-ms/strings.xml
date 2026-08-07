@@ -291,6 +291,8 @@
     <string name="crm_activity_commented">mengulas</string>
     <string name="crm_attachment_empty">Tiada lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
+    <string name="crm_attachment_delete_confirm_title">Padamkan lampiran?</string>
+    <string name="crm_attachment_delete_confirm_message">Lampiran ini akan dipadamkan secara kekal.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

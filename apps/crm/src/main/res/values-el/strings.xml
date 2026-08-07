@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">σχολίασε</string>
     <string name="crm_attachment_empty">Δεν υπάρχουν συνημμένα</string>
     <string name="crm_attachment_default_name">συνημμένο</string>
+    <string name="crm_attachment_delete_confirm_title">Διαγραφή συνημμένου;</string>
+    <string name="crm_attachment_delete_confirm_message">Αυτό το συνημμένο θα διαγραφεί οριστικά.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

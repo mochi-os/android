@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">heeft gereageerd</string>
     <string name="crm_attachment_empty">Geen bijlagen</string>
     <string name="crm_attachment_default_name">bijlage</string>
+    <string name="crm_attachment_delete_confirm_title">Bijlage verwijderen?</string>
+    <string name="crm_attachment_delete_confirm_message">Deze bijlage wordt permanent verwijderd.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

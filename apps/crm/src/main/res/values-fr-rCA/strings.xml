@@ -189,6 +189,8 @@
     <string name="crm_attachment_empty">Aucune pièce jointe</string>
     <string name="crm_attachment_add">Ajouter une pièce jointe</string>
     <string name="crm_attachment_default_name">pièce jointe</string>
+    <string name="crm_attachment_delete_confirm_title">Supprimer la pièce jointe ?</string>
+    <string name="crm_attachment_delete_confirm_message">Cette pièce jointe sera définitivement supprimée.</string>
     <string name="crm_attachment_size_bytes">%1$d o</string>
     <string name="crm_attachment_size_kb">%1$d Ko</string>
     <string name="crm_attachment_size_mb">%1$d Mo</string>

@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">コメントしました</string>
     <string name="crm_attachment_empty">添付ファイルがありません</string>
     <string name="crm_attachment_default_name">添付ファイル</string>
+    <string name="crm_attachment_delete_confirm_title">添付ファイルを削除しますか?</string>
+    <string name="crm_attachment_delete_confirm_message">この添付ファイルは完全に削除されます。</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

@@ -230,6 +230,8 @@
     <string name="crm_activity_commented">şərh yazdı</string>
     <string name="crm_attachment_empty">Qoşma yoxdur</string>
     <string name="crm_attachment_default_name">qoşma</string>
+    <string name="crm_attachment_delete_confirm_title">Qoşma silinsin?</string>
+    <string name="crm_attachment_delete_confirm_message">Bu qoşma həmişəlik silinəcək.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">באַמערקט</string>
     <string name="crm_attachment_empty">קײן בײַלאַגעס</string>
     <string name="crm_attachment_default_name">בײַלאַגע</string>
+    <string name="crm_attachment_delete_confirm_title">אויסמעקן דעם צוגאָב?</string>
+    <string name="crm_attachment_delete_confirm_message">דער צוגאָב וועט אויף אייביק אויסגעמעקט ווערן.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

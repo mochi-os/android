@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">alitoa maoni</string>
     <string name="crm_attachment_empty">Hakuna viambatisho</string>
     <string name="crm_attachment_default_name">kiambatisho</string>
+    <string name="crm_attachment_delete_confirm_title">Futa kiambatisho?</string>
+    <string name="crm_attachment_delete_confirm_message">Kiambatisho hiki kitafutwa kabisa.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

@@ -230,6 +230,8 @@
     <string name="crm_activity_commented">አስተያየት ሰጥቷል</string>
     <string name="crm_attachment_empty">ምንም አባሪዎች የሉም</string>
     <string name="crm_attachment_default_name">አባሪ</string>
+    <string name="crm_attachment_delete_confirm_title">አባሪ ይሰረዝ?</string>
+    <string name="crm_attachment_delete_confirm_message">ይህ አባሪ እስከመጨረሻው ይሰረዛል።</string>
     <string name="crm_attachment_size_bytes">%1$d ባ</string>
     <string name="crm_attachment_size_kb">%1$d ኪባ</string>
     <string name="crm_attachment_size_mb">%1$d ሜባ</string>

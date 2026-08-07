@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">nagkomento</string>
     <string name="crm_attachment_empty">Walang attachment</string>
     <string name="crm_attachment_default_name">attachment</string>
+    <string name="crm_attachment_delete_confirm_title">Burahin ang attachment?</string>
+    <string name="crm_attachment_delete_confirm_message">Permanenteng buburahin ang attachment na ito.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

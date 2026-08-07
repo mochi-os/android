@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">hozzászólt</string>
     <string name="crm_attachment_empty">Nincsenek mellékletek</string>
     <string name="crm_attachment_default_name">melléklet</string>
+    <string name="crm_attachment_delete_confirm_title">Törli a mellékletet?</string>
+    <string name="crm_attachment_delete_confirm_message">Ez a melléklet véglegesen törlődik.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

@@ -183,6 +183,8 @@
     <string name="crm_attachment_empty">Keine Anhänge</string>
     <string name="crm_attachment_add">Anhang hinzufügen</string>
     <string name="crm_attachment_default_name">Anhang</string>
+    <string name="crm_attachment_delete_confirm_title">Anhang löschen?</string>
+    <string name="crm_attachment_delete_confirm_message">Dieser Anhang wird dauerhaft gelöscht.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

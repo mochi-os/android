@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">අදහස් දැක්වීය</string>
     <string name="crm_attachment_empty">ඇමුණුම් නැත</string>
     <string name="crm_attachment_default_name">ඇමුණුම</string>
+    <string name="crm_attachment_delete_confirm_title">ඇමුණුම මකන්නද?</string>
+    <string name="crm_attachment_delete_confirm_message">මෙම ඇමුණුම ස්ථිරවම මකා දැමෙනු ඇත.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

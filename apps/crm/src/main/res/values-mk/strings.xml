@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">коментираше</string>
     <string name="crm_attachment_empty">Нема прилози</string>
     <string name="crm_attachment_default_name">прилог</string>
+    <string name="crm_attachment_delete_confirm_title">Да се избрише прилогот?</string>
+    <string name="crm_attachment_delete_confirm_message">Овој прилог ќе биде трајно избришан.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

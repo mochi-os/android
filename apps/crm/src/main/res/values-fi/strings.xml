@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">kommentoi</string>
     <string name="crm_attachment_empty">Ei liitteitä</string>
     <string name="crm_attachment_default_name">liite</string>
+    <string name="crm_attachment_delete_confirm_title">Poistetaanko liite?</string>
+    <string name="crm_attachment_delete_confirm_message">Tämä liite poistetaan pysyvästi.</string>
     <string name="crm_attachment_size_bytes">%1$d t</string>
     <string name="crm_attachment_size_kb">%1$d kt</string>
     <string name="crm_attachment_size_mb">%1$d Mt</string>

@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">he\'i</string>
     <string name="crm_attachment_empty">Ndaipóri kuatia mboapoha</string>
     <string name="crm_attachment_default_name">kuatia mboapoha</string>
+    <string name="crm_attachment_delete_confirm_title">¿Emboguéta jehai\'atã?</string>
+    <string name="crm_attachment_delete_confirm_message">Ko jehai\'atã oñemboguéta opa árape g̃uarã.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

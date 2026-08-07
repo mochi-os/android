@@ -230,6 +230,8 @@
     <string name="crm_activity_commented">arsuwi uchata</string>
     <string name="crm_attachment_empty">Janiw yapatanakax utjkiti</string>
     <string name="crm_attachment_default_name">yapata</string>
+    <string name="crm_attachment_delete_confirm_title">¿Chinuqata chhaqtayaña?</string>
+    <string name="crm_attachment_delete_confirm_message">Aka chinuqatax wiñayataki chhaqtayasiniwa.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

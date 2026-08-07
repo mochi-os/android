@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">댓글 남김</string>
     <string name="crm_attachment_empty">첨부 파일 없음</string>
     <string name="crm_attachment_default_name">첨부 파일</string>
+    <string name="crm_attachment_delete_confirm_title">첨부 파일을 삭제할까요?</string>
+    <string name="crm_attachment_delete_confirm_message">이 첨부 파일은 영구적으로 삭제됩니다.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>

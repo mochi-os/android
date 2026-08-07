@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">сэтгэгдэл үлдээсэн</string>
     <string name="crm_attachment_empty">Хавсралт байхгүй</string>
     <string name="crm_attachment_default_name">хавсралт</string>
+    <string name="crm_attachment_delete_confirm_title">Хавсралтыг устгах уу?</string>
+    <string name="crm_attachment_delete_confirm_message">Энэ хавсралт бүрмөсөн устгагдана.</string>
     <string name="crm_attachment_size_bytes">%1$d Б</string>
     <string name="crm_attachment_size_kb">%1$d КБ</string>
     <string name="crm_attachment_size_mb">%1$d МБ</string>

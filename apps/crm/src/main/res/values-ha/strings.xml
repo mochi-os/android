@@ -236,6 +236,8 @@
     <string name="crm_activity_commented">ya yi sharhi</string>
     <string name="crm_attachment_empty">Babu abubuwan da aka haɗa</string>
     <string name="crm_attachment_default_name">abin da aka haɗa</string>
+    <string name="crm_attachment_delete_confirm_title">A goge abin da aka makala?</string>
+    <string name="crm_attachment_delete_confirm_message">Za a goge wannan abin da aka makala har abada.</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
     <string name="crm_attachment_size_mb">%1$d MB</string>
