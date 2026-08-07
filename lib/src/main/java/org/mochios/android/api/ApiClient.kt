@@ -5,6 +5,7 @@
 
 package org.mochios.android.api
 
+import org.mochios.android.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.TypeAdapter
@@ -216,10 +217,18 @@ object ApiClient {
             .addInterceptor(invalidationInterceptor)
             .cookieJar(sessionManager.cookieJar)
 
-        val loggingInterceptor = HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BASIC
+        // Debug builds only. BASIC still logs the full request URL, and OkHttp
+        // preserves application interceptors on WebSocket handshakes, so on a
+        // release build this wrote every URL - and any credential or capability
+        // carried in a query string - into logcat. MochiWebSocket already moved
+        // its token to a header for exactly this reason; that was the workaround,
+        // and this is the cause.
+        if (BuildConfig.DEBUG) {
+            val loggingInterceptor = HttpLoggingInterceptor().apply {
+                level = HttpLoggingInterceptor.Level.BASIC
+            }
+            builder.addInterceptor(loggingInterceptor)
         }
-        builder.addInterceptor(loggingInterceptor)
 
         return builder.build()
     }

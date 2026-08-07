@@ -3,6 +3,16 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+// "major.minor" -> a monotonically rising integer, major * 10000 + minor.
+// Minor is bounded at 9999 so a major bump always outranks everything before it.
+fun versionNameToCode(name: String): Int {
+    val parts = name.split(".")
+    val major = parts.getOrNull(0)?.toIntOrNull() ?: 0
+    val minor = parts.getOrNull(1)?.toIntOrNull() ?: 0
+    require(minor in 0..9999) { "version minor out of range: $name" }
+    return major * 10000 + minor
+}
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -27,7 +37,12 @@ android {
         applicationId = "org.mochios.mochi"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
+        // Derived from versionName so it rises with every release. It was
+        // pinned at 1 through every version to date, and Android's downgrade
+        // protection keys on versionCode alone: on a sideload channel an older
+        // signed APK installed straight over a newer one. "0.113" -> 113,
+        // "1.4" -> 10004, so the sequence keeps rising across a major bump.
+        versionCode = versionNameToCode("0.113")
         versionName = "0.113"
     }
 

@@ -31,6 +31,11 @@ android {
 
     buildFeatures {
         compose = true
+        // For BuildConfig.DEBUG, which gates the HTTP logging interceptor in
+        // ApiClient: it writes every request URL, and OkHttp keeps application
+        // interceptors on WebSocket handshakes, so an unguarded one puts URLs
+        // (and anything carried in their query) into release logcat.
+        buildConfig = true
     }
 }
 
