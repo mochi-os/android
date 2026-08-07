@@ -24,22 +24,18 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.Reply
-import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -49,20 +45,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.model.Comment
-import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.ui.components.EntityAvatar
-import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.model.Comment
+import org.mochios.android.ui.components.CommentItem as SharedCommentItem
+import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.crm.R
-import java.io.File
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -80,7 +70,6 @@ fun CommentsTab(
     // "/crm/<crm>/-/comment/<comment.id>/asset/avatar".
     avatarUrlBuilder: ((Comment) -> String?)? = null
 ) {
-    val context = LocalContext.current
     var newComment by remember { mutableStateOf("") }
     var replyToId by remember { mutableStateOf<String?>(null) }
     var replyToName by remember { mutableStateOf<String?>(null) }
@@ -94,7 +83,48 @@ fun CommentsTab(
     }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        // Comment input
+        // Comment list — takes the remaining height so the composer stays pinned
+        // to the bottom, matching the feeds comment composer.
+        if (comments.isEmpty()) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .padding(32.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = stringResource(R.string.crm_comment_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        } else {
+            LazyColumn(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+            ) {
+                items(comments, key = { comment -> comment.id }) { comment ->
+                    CommentItem(
+                        comment = comment,
+                        depth = 0,
+                        crmId = crmId,
+                        avatarUrlBuilder = avatarUrlBuilder,
+                        onReply = { id, name ->
+                            replyToId = id
+                            replyToName = name
+                        },
+                        onEdit = onUpdateComment,
+                        onDelete = onDeleteComment
+                    )
+                }
+            }
+        }
+
+        HorizontalDivider()
+
+        // Comment input, pinned below the list
         Column(modifier = Modifier.padding(16.dp)) {
             if (replyToName != null) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -142,13 +172,16 @@ fun CommentsTab(
                 }
                 Spacer(modifier = Modifier.height(4.dp))
             }
+            // Attachments ride along with a comment rather than standing in for
+            // one, so text is what makes a comment sendable.
+            val canSend = newComment.isNotBlank()
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 MentionTextField(
                     value = newComment,
-                    onValueChange = { newComment = it },
+                    onValueChange = { value -> newComment = value },
                     onSearch = onSearchUsers ?: { emptyList() },
                     placeholder = { Text(stringResource(R.string.crm_comment_placeholder)) },
                     maxLines = 4,
@@ -163,60 +196,35 @@ fun CommentsTab(
                         contentDescription = stringResource(R.string.crm_comment_attach)
                     )
                 }
-                IconButton(
-                    onClick = {
-                        if (newComment.isNotBlank() || pendingFiles.isNotEmpty()) {
+                // Send appears only once there is something to send — an empty
+                // composer shows no button rather than a dead greyed-out one.
+                if (canSend) {
+                    IconButton(
+                        onClick = {
                             onCreateComment(newComment, replyToId, pendingFiles.toList())
                             newComment = ""
                             replyToId = null
                             replyToName = null
                             pendingFiles.clear()
                         }
-                    },
-                    enabled = newComment.isNotBlank() || pendingFiles.isNotEmpty()
-                ) {
-                    Icon(Icons.AutoMirrored.Filled.Send, contentDescription = stringResource(R.string.crm_comment_send))
-                }
-            }
-        }
-
-        HorizontalDivider()
-
-        // Comment list
-        if (comments.isEmpty()) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(32.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = stringResource(R.string.crm_comment_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        } else {
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
-                items(comments, key = { it.id }) { comment ->
-                    CommentItem(
-                        comment = comment,
-                        depth = 0,
-                        crmId = crmId,
-                        avatarUrlBuilder = avatarUrlBuilder,
-                        onReply = { id, name ->
-                            replyToId = id
-                            replyToName = name
-                        },
-                        onEdit = onUpdateComment,
-                        onDelete = onDeleteComment
-                    )
+                    ) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.Send,
+                            contentDescription = stringResource(R.string.crm_comment_send)
+                        )
+                    }
                 }
             }
         }
     }
 }
 
+/**
+ * One comment rendered with the shared [SharedCommentItem] layout (avatar,
+ * name, relative time, HTML body, compact attachments, and a coloured thread
+ * bar for replies) — the same look as the feeds and forums comment lists. The
+ * actions slot carries reply, edit, and delete; children recurse below.
+ */
 @Composable
 private fun CommentItem(
     comment: Comment,
@@ -227,134 +235,80 @@ private fun CommentItem(
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit
 ) {
-    val avatarUrl = avatarUrlBuilder?.invoke(comment)
-    var showOverflow by remember { mutableStateOf(false) }
     var isEditing by remember { mutableStateOf(false) }
-    var editContent by remember { mutableStateOf(comment.text) }
-    val indent = (depth * 16).dp
+    var editText by remember(comment.id) { mutableStateOf(comment.text) }
 
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = indent + 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp)
+    SharedCommentItem(
+        name = comment.name,
+        body = comment.text,
+        created = comment.created,
+        edited = comment.edited,
+        depth = depth,
+        seed = comment.authorId,
+        avatarUrl = avatarUrlBuilder?.invoke(comment),
+        attachments = comment.attachments,
+        attachmentUrl = { att ->
+            att.url ?: "/crm/$crmId/-/attachments/${att.id}"
+        },
+        attachmentThumbnailUrl = { att ->
+            att.thumbnailUrl ?: "/crm/$crmId/-/attachments/${att.id}/thumbnail"
+        },
+        isEditing = isEditing,
+        editText = editText,
+        onEditTextChange = { value -> editText = value },
+        onSaveEdit = {
+            onEdit(comment.id, editText)
+            isEditing = false
+        },
+        onCancelEdit = { isEditing = false }
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = comment.name.orEmpty(),
-                src = avatarUrl,
-                seed = comment.author,
-                size = 20.dp,
-            )
-            Spacer(modifier = Modifier.width(6.dp))
-            Text(
-                text = comment.name.orEmpty(),
-                style = MaterialTheme.typography.labelMedium,
-                fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.weight(1f)
-            )
-            Text(
-                text = LocalFormat.current.formatTimestamp(comment.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Box {
-                IconButton(
-                    onClick = { showOverflow = true },
-                    modifier = Modifier.size(28.dp)
-                ) {
-                    Icon(
-                        Icons.Default.MoreVert,
-                        contentDescription = stringResource(MochiR.string.common_more_options),
-                        modifier = Modifier.size(16.dp)
-                    )
-                }
-                DropdownMenu(
-                    expanded = showOverflow,
-                    onDismissRequest = { showOverflow = false }
-                ) {
-                    DropdownMenuItem(
-                        text = { Text(stringResource(MochiR.string.comment_reply)) },
-                        onClick = {
-                            showOverflow = false
-                            onReply(comment.id, comment.name)
-                        },
-                        leadingIcon = { Icon(Icons.Default.Reply, contentDescription = null) }
-                    )
-                    DropdownMenuItem(
-                        text = { Text(stringResource(MochiR.string.common_edit)) },
-                        onClick = {
-                            showOverflow = false
-                            isEditing = true
-                            editContent = comment.text
-                        },
-                        leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) }
-                    )
-                    DropdownMenuItem(
-                        text = { Text(stringResource(MochiR.string.common_delete)) },
-                        onClick = {
-                            showOverflow = false
-                            onDelete(comment.id)
-                        },
-                        leadingIcon = {
-                            Icon(Icons.Default.Delete, contentDescription = null, tint = MaterialTheme.colorScheme.error)
-                        }
-                    )
-                }
-            }
-        }
-
-        if (isEditing) {
-            OutlinedTextField(
-                value = editContent,
-                onValueChange = { editContent = it },
-                modifier = Modifier.fillMaxWidth(),
-                maxLines = 6
-            )
-            Row {
-                IconButton(onClick = {
-                    onEdit(comment.id, editContent)
-                    isEditing = false
-                }) {
-                    Icon(Icons.AutoMirrored.Filled.Send, contentDescription = stringResource(MochiR.string.common_save))
-                }
-                IconButton(onClick = { isEditing = false }) {
-                    Text(stringResource(MochiR.string.common_cancel), style = MaterialTheme.typography.labelSmall)
-                }
-            }
-        } else {
-            Text(
-                text = comment.text.orEmpty(),
-                style = MaterialTheme.typography.bodyMedium
+        IconButton(
+            onClick = { onReply(comment.id, comment.name) },
+            modifier = Modifier.size(32.dp)
+        ) {
+            Icon(
+                Icons.AutoMirrored.Outlined.Reply,
+                contentDescription = stringResource(MochiR.string.comment_reply),
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-
-        if (comment.attachments.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(8.dp))
-            AttachmentGallery(
-                attachments = comment.attachments,
-                urlBuilder = { att ->
-                    att.url ?: "/crm/$crmId/-/attachments/${att.id}"
-                },
-                thumbnailUrlBuilder = { att ->
-                    att.thumbnailUrl ?: "/crm/$crmId/-/attachments/${att.id}/thumbnail"
-                }
+        IconButton(
+            onClick = {
+                editText = comment.text
+                isEditing = true
+            },
+            modifier = Modifier.size(32.dp)
+        ) {
+            Icon(
+                Icons.Outlined.Edit,
+                contentDescription = stringResource(MochiR.string.common_edit),
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-
-        // Render children
-        if (comment.children.isNotEmpty()) {
-            comment.children.forEach { child ->
-                CommentItem(
-                    comment = child,
-                    depth = depth + 1,
-                    crmId = crmId,
-                    avatarUrlBuilder = avatarUrlBuilder,
-                    onReply = onReply,
-                    onEdit = onEdit,
-                    onDelete = onDelete
-                )
-            }
+        IconButton(
+            onClick = { onDelete(comment.id) },
+            modifier = Modifier.size(32.dp)
+        ) {
+            Icon(
+                Icons.Outlined.Delete,
+                contentDescription = stringResource(MochiR.string.common_delete),
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         }
     }
-}
 
+    comment.children.forEach { child ->
+        CommentItem(
+            comment = child,
+            depth = depth + 1,
+            crmId = crmId,
+            avatarUrlBuilder = avatarUrlBuilder,
+            onReply = onReply,
+            onEdit = onEdit,
+            onDelete = onDelete
+        )
+    }
+}
