@@ -90,6 +90,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.flattenComments
@@ -233,15 +234,12 @@ fun PostSourceScreen(
                                 },
                                 onClick = {
                                     showOverflowMenu = false
-                                    try {
-                                        context.startActivity(
-                                            Intent(
-                                                Intent.ACTION_VIEW,
-                                                Uri.parse(sourceUrl)
-                                            )
-                                        )
-                                    } catch (_: Exception) {
-                                        // invalid URL
+                                    webUri(sourceUrl)?.let { uri ->
+                                        try {
+                                            context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+                                        } catch (_: Exception) {
+                                            // no browser
+                                        }
                                     }
                                 }
                             )
@@ -334,6 +332,12 @@ fun PostSourceScreen(
                         )
                         settings.javaScriptEnabled = true
                         settings.domStorageEnabled = true
+                        // The URL is peer-supplied and JS is on, so the file
+                        // and content providers must be out of reach: both
+                        // default to allowed on API 26-29, and a page that
+                        // reached file: could read app-private storage.
+                        settings.allowFileAccess = false
+                        settings.allowContentAccess = false
                         settings.loadWithOverviewMode = true
                         settings.useWideViewPort = true
                         settings.builtInZoomControls = true
@@ -389,7 +393,15 @@ fun PostSourceScreen(
                                 loadProgress = newProgress
                             }
                         }
-                        loadUrl(sourceUrl)
+                        // The source URL is peer-supplied: only a web page may
+                        // load. A javascript: or file: URL here would run in
+                        // this JS-enabled WebView as the app.
+                        val safe = webUri(sourceUrl)
+                        if (safe != null) {
+                            loadUrl(safe.toString())
+                        } else {
+                            loadError = ctx.getString(R.string.feeds_unable_to_load)
+                        }
                         webView = this
                     }
                 },
@@ -397,7 +409,7 @@ fun PostSourceScreen(
                     // Reload on retry. Keyed off the nonce so we only reload
                     // when the user explicitly asked for it.
                     if (reloadNonce > 0) {
-                        view.loadUrl(sourceUrl)
+                        webUri(sourceUrl)?.let { view.loadUrl(it.toString()) }
                     }
                 }
             )
@@ -418,10 +430,12 @@ fun PostSourceScreen(
                         reloadNonce += 1
                     },
                     onOpenExternal = {
-                        try {
-                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(sourceUrl)))
-                        } catch (_: Exception) {
-                            // invalid URL
+                        webUri(sourceUrl)?.let { uri ->
+                            try {
+                                context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+                            } catch (_: Exception) {
+                                // no browser
+                            }
                         }
                     },
                     onViewPost = {

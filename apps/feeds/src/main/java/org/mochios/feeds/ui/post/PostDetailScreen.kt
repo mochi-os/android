@@ -96,6 +96,7 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -557,12 +558,13 @@ private fun PostContent(
         // The body, embedded videos, RSS preview image and source link are
         // suppressed when this content renders inside the source-view sheet —
         // the WebView already shows the same article above the sheet.
-        val sourceArticleUrl = post.data?.rss?.link?.takeIf { it.isNotEmpty() }
-        val onBodyClick: (() -> Unit)? = sourceArticleUrl?.let { url ->
+        // The link is RSS content authored by the feed's source: web only.
+        val sourceArticleUrl = post.data?.rss?.link?.let { webUri(it) }
+        val onBodyClick: (() -> Unit)? = sourceArticleUrl?.let { uri ->
             {
                 try {
-                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                } catch (_: Exception) { /* invalid URL */
+                    context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+                } catch (_: Exception) { /* no browser */
                 }
             }
         }
@@ -635,11 +637,12 @@ private fun PostContent(
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.clickable {
-                            try {
-                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(source.url))
-                                context.startActivity(intent)
-                            } catch (_: Exception) {
-                                // Invalid URL
+                            webUri(source.url)?.let { uri ->
+                                try {
+                                    context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+                                } catch (_: Exception) {
+                                    // no browser
+                                }
                             }
                         }
                     )

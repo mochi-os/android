@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.util.webUri
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -121,11 +122,13 @@ fun CommentAttachments(
                         modifier = Modifier
                             .clickable {
                                 val url = "${baseURL}attachments/${file.id}"
-                                runCatching {
-                                    context.startActivity(
-                                        Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                                    )
+                                webUri(url)?.let { uri ->
+                                    runCatching {
+                                        context.startActivity(
+                                            Intent(Intent.ACTION_VIEW, uri)
+                                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                        )
+                                    }
                                 }
                             }
                             .padding(vertical = 2.dp),

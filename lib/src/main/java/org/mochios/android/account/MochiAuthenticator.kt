@@ -10,7 +10,9 @@ import android.accounts.Account
 import android.accounts.AccountAuthenticatorResponse
 import android.accounts.AccountManager
 import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Process
 import org.mochios.android.R
 
 /**
@@ -29,11 +31,11 @@ import org.mochios.android.R
  * — the value is the full-account session, so a request for some other token
  * type should not silently receive it.
  *
- * No caller check is made beyond the account type's signature protection. The
- * `options` bundle carries KEY_CALLER_UID and KEY_ANDROID_PACKAGE_NAME, so one
- * could be, but a foreign package reaching this is expected to meet the
- * framework's own consent screen first, and there is exactly one applicationId
- * in this project, so nothing exercises the path today.
+ * The caller must be signed with our certificate. The framework has enforced
+ * that for account visibility and token grants since API 23 (and minSdk is
+ * above that), so this is defence-in-depth rather than the only gate — but
+ * the value handed out is the full-account session, and a one-line signature
+ * check is the standard posture for an authenticator holding one.
  */
 class MochiAuthenticator(private val context: Context) :
     AbstractAccountAuthenticator(context) {
@@ -64,6 +66,19 @@ class MochiAuthenticator(private val context: Context) :
                 AccountManager.KEY_ERROR_MESSAGE,
                 "Unsupported token type: $authTokenType",
             )
+            return result
+        }
+        // The framework puts the requesting app's uid in the options bundle.
+        // Refuse anything not signed with our certificate — and refuse when
+        // the uid is absent, since a request the framework didn't stamp has
+        // no business receiving a session.
+        val caller = options?.getInt(AccountManager.KEY_CALLER_UID, -1) ?: -1
+        val match = caller >= 0 &&
+            context.packageManager.checkSignatures(caller, Process.myUid()) ==
+            PackageManager.SIGNATURE_MATCH
+        if (!match) {
+            result.putInt(AccountManager.KEY_ERROR_CODE, AccountManager.ERROR_CODE_BAD_REQUEST)
+            result.putString(AccountManager.KEY_ERROR_MESSAGE, "Caller not permitted")
             return result
         }
         val am = AccountManager.get(context)

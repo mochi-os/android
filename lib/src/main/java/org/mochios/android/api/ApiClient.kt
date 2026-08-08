@@ -104,8 +104,10 @@ object ApiClient {
                 if (value == null) writer.nullValue() else writer.value(value)
             }
         }
+        // Strict parsing on purpose: lenient mode silently accepts malformed
+        // JSON, which turns a server contract break into a wrong value instead
+        // of an error the contract check can chase.
         return GsonBuilder()
-            .setLenient()
             .registerTypeAdapter(Boolean::class.java, boolAdapter)
             .registerTypeAdapter(Boolean::class.javaPrimitiveType, boolAdapter)
             .create()

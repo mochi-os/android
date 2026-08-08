@@ -64,6 +64,7 @@ import org.commonmark.parser.Parser
 import org.mochios.android.ui.components.ClickableLinkTextView
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.util.webUri
 import java.text.Normalizer
 
 /**
@@ -876,13 +877,17 @@ private class WikiLinkResolver(
             return
         }
 
+        // The link text is peer-authored page content: only web schemes may
+        // leave the app. Anything else — tel:, intent:, another app's custom
+        // scheme — is dropped rather than launched.
+        val uri = webUri(resolved) ?: return
         try {
             val intent = CustomTabsIntent.Builder().build()
-            intent.launchUrl(view.context, Uri.parse(resolved))
+            intent.launchUrl(view.context, uri)
         } catch (_: Exception) {
-            // Malformed URL or no browser; swallow so a bad link doesn't
-            // crash the page. Markwon's default behaviour here is to
-            // throw, which would propagate to the user.
+            // No browser; swallow so a bad link doesn't crash the page.
+            // Markwon's default behaviour here is to throw, which would
+            // propagate to the user.
         }
     }
 }

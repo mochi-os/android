@@ -108,6 +108,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.files.FileStore
+import org.mochios.android.util.webUri
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -1108,7 +1109,11 @@ private fun startAttachmentDownload(
     token: String?,
 ): Long {
     val dm = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-    val req = DownloadManager.Request(Uri.parse(url))
+    // The URL is origin-pinned by construction (baseURL prefix), but gate the
+    // scheme anyway: DownloadManager throws on non-web URIs, and the Bearer
+    // header below must never ride on anything but a web request.
+    val uri = webUri(url) ?: return -1
+    val req = DownloadManager.Request(uri)
         .setTitle(name)
         .setDescription(context.getString(R.string.wikis_attachments_downloading))
         .setMimeType(mimeType.ifBlank { FileStore.DEFAULT_MIME })

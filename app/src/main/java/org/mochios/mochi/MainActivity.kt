@@ -471,13 +471,24 @@ class MainActivity : ComponentActivity() {
      * the success deep link is purely a UX nudge to the buyer; the
      * authoritative confirmation arrives via the purchases / subscriptions
      * list refresh.
+     *
+     * Deliberately not nonce-gated, unlike the OAuth returns beside it: an
+     * injected one navigates to a screen and changes nothing, so there is no
+     * ceremony to burn and nothing to fabricate. (Unlike the OAuth LINK
+     * return, this one is genuinely reachable — the Comptroller hands the
+     * mochi:// URI straight to Stripe as the checkout session's return URL,
+     * with no redirect_local hop to drop the custom scheme.)
      */
     private fun handleMarketCheckoutDeepLink(uri: Uri) {
         val outcome = uri.pathSegments.getOrNull(1) ?: return
         val link = when (outcome) {
             "success" -> "/market/purchases?paid=1"
             "cancel" -> {
+                // The listing id rides in an intent any app can send; accept
+                // only an identifier shape so it cannot smuggle path segments
+                // or a query of its own into the navigation route.
                 val listing = uri.getQueryParameter("listing")
+                    ?.takeIf { it.matches(Regex("[A-Za-z0-9]{1,64}")) }
                 if (listing.isNullOrBlank()) "/market" else "/market/listing/$listing"
             }
             else -> {

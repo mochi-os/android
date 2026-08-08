@@ -148,10 +148,11 @@ class GameWebSocketController internal constructor(
         if (closed) return
         _status.value = if (_retries.value > 0) GameWsStatus.RECONNECTING else GameWsStatus.CONNECTING
 
-        // Server URL → WebSocket URL: `wss://server/_/websocket?key=<gameKey>`
-        // (plus optional `&token=…` when an app token is configured). The
-        // session cookie is added below if present so the server can resolve
-        // the user without a per-app token.
+        // Server URL → WebSocket URL: `wss://server/_/websocket?key=<gameKey>`.
+        // The key rides in the query because that is the only place the server
+        // reads it from; moving it to a header needs a core change (left open,
+        // 2026-08-08). No token or cookie is attached — the subscription key
+        // alone selects the stream.
         val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
         val wsBase = serverUrl
             .replace("https://", "wss://")

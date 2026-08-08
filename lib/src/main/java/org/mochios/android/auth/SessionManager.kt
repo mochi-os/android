@@ -181,16 +181,6 @@ class SessionManager @Inject constructor(
     }
 
     /**
-     * Reserved for future reconciliation hooks. Today we trust the local
-     * session as the source of truth for authentication; AccountManager is
-     * a sharing mechanism, not the canonical store. Cross-app logouts are
-     * detected through the runtime [MochiAccount.watch] listener, not via
-     * a startup state diff (which can't distinguish a genuine logout from
-     * a missing-because-never-written record).
-     */
-    suspend fun validateLocalAgainstAccount(): Boolean = true
-
-    /**
      * If we have no local session, look for a sibling Mochi account whose
      * server matches what this app is already bound to (or the most recently
      * registered account, when this is a fresh install with no binding).

@@ -14,7 +14,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
+import io.noties.markwon.AbstractMarkwonPlugin
+import io.noties.markwon.LinkResolverDef
 import io.noties.markwon.Markwon
+import io.noties.markwon.MarkwonConfiguration
 import io.noties.markwon.SoftBreakAddsNewLinePlugin
 import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
 import io.noties.markwon.ext.tables.TableAwareMovementMethod
@@ -23,6 +26,7 @@ import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.html.HtmlPlugin
 import io.noties.markwon.image.ImagesPlugin
 import io.noties.markwon.linkify.LinkifyPlugin
+import org.mochios.android.util.webUri
 
 @Composable
 fun HtmlContent(
@@ -48,6 +52,17 @@ fun HtmlContent(
             .usePlugin(StrikethroughPlugin.create())
             .usePlugin(TaskListPlugin.create(context))
             .usePlugin(LinkifyPlugin.create())
+            // The body is peer-authored content; Markwon's default resolver
+            // fires ACTION_VIEW on whatever scheme a link carries. Only web
+            // links may leave the app — tel:, intent:, file: and custom
+            // schemes are dropped rather than launched.
+            .usePlugin(object : AbstractMarkwonPlugin() {
+                override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
+                    builder.linkResolver { view, link ->
+                        webUri(link)?.let { LinkResolverDef().resolve(view, it.toString()) }
+                    }
+                }
+            })
             .build()
     }
 
