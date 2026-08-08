@@ -203,6 +203,7 @@
     <string name="place_destination">Ceann scríbe</string>
     <string name="discovery_search_placeholder">Cuardaigh %1$ss</string>
     <string name="discovery_no_results">Níor aimsíodh aon %1$ss</string>
+    <string name="discovery_no_results_hint">Bain triail as do chuardach a choigeartú</string>
     <string name="discovery_no_recommendations">Gan moltaí</string>
     <string name="discovery_search_hint">Bain triail as %1$s a chuardach le liostáil leis</string>
     <string name="access_no_rules">Gan rialacha rochtana</string>

@@ -200,6 +200,7 @@
     <string name="place_destination">终点</string>
     <string name="discovery_search_placeholder">搜索 %1$s</string>
     <string name="discovery_no_results">未找到 %1$s</string>
+    <string name="discovery_no_results_hint">尝试调整您的搜索</string>
     <string name="discovery_no_recommendations">无推荐</string>
     <string name="discovery_search_hint">尝试搜索要订阅的 %1$s</string>
     <string name="access_no_rules">无访问规则</string>

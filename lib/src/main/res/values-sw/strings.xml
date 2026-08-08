@@ -200,6 +200,7 @@
     <string name="place_destination">Mwisho</string>
     <string name="discovery_search_placeholder">Tafuta %1$ss</string>
     <string name="discovery_no_results">Hakuna %1$ss iliyopatikana</string>
+    <string name="discovery_no_results_hint">Jaribu kurekebisha utafutaji wako</string>
     <string name="discovery_no_recommendations">Hakuna mapendekezo</string>
     <string name="discovery_search_hint">Jaribu kutafuta %1$s ya kujiandikisha</string>
     <string name="access_no_rules">Hakuna sheria za ufikiaji</string>

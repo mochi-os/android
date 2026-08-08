@@ -5,8 +5,9 @@
 
 package org.mochios.crm.ui.design
 
-import android.content.ClipData
-import android.content.Intent
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,12 +21,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Upload
+import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -36,7 +40,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -56,15 +60,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.files.rememberFileSaveLauncher
+import org.mochios.android.files.shareExportFile
 import org.mochios.crm.R
 import org.mochios.crm.model.Template
 import org.mochios.android.R as MochiR
@@ -80,29 +84,37 @@ fun DesignScreen(
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showImportDialog by remember { mutableStateOf(false) }
     var confirmTemplate by remember { mutableStateOf<Template?>(null) }
-    var confirmPastedJson by remember { mutableStateOf<String?>(null) }
 
     val context = LocalContext.current
-    val clipboard = LocalClipboardManager.current
     val snackbarHostState = remember { SnackbarHostState() }
-    val clipboardLabel = stringResource(R.string.crm_design_clipboard_label)
-    val exportSubject = stringResource(R.string.crm_design_export_subject)
-    val shareChooser = stringResource(R.string.crm_design_share_chooser)
-    val exportCopiedMsg = stringResource(R.string.crm_design_export_copied)
     val importedMsg = stringResource(R.string.crm_design_imported)
+    val importFailedMsg = stringResource(R.string.crm_design_import_failed)
+    val exportSavedMsg = stringResource(R.string.crm_design_export_saved)
+    val exportFailedMsg = stringResource(R.string.crm_export_failed)
 
-    LaunchedEffect(uiState.exportedJson) {
-        uiState.exportedJson?.let { json ->
-            // Copy to clipboard and offer share
-            clipboard.setClip(ClipData.newPlainText(clipboardLabel, json).toClipEntry())
-            val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                type = "application/json"
-                putExtra(Intent.EXTRA_TEXT, json)
-                putExtra(Intent.EXTRA_SUBJECT, exportSubject)
-            }
-            context.startActivity(Intent.createChooser(shareIntent, shareChooser))
-            snackbarHostState.showSnackbar(exportCopiedMsg)
-            viewModel.clearExportedJson()
+    // The picker only reports where the file goes; the ViewModel writes it.
+    val saveExport = rememberFileSaveLauncher { uri ->
+        if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
+    }
+
+    LaunchedEffect(uiState.pendingExport) {
+        uiState.pendingExport?.let { pending ->
+            saveExport.launch(pending.suggestedName)
+        }
+    }
+
+    // A saved design goes straight to the share sheet, the same as a data
+    // export. The file is already on disk either way, so backing out of the
+    // sheet costs the user nothing.
+    LaunchedEffect(uiState.savedExport, uiState.exportFailed) {
+        val saved = uiState.savedExport
+        if (saved != null) {
+            snackbarHostState.showSnackbar(exportSavedMsg)
+            shareExportFile(context, saved)
+            viewModel.clearExportResult()
+        } else if (uiState.exportFailed) {
+            snackbarHostState.showSnackbar(exportFailedMsg)
+            viewModel.clearExportResult()
         }
     }
 
@@ -110,6 +122,13 @@ fun DesignScreen(
         if (uiState.importSuccess) {
             snackbarHostState.showSnackbar(importedMsg)
             viewModel.clearImportSuccess()
+        }
+    }
+
+    LaunchedEffect(uiState.importFailed) {
+        if (uiState.importFailed) {
+            snackbarHostState.showSnackbar(importFailedMsg)
+            viewModel.clearImportFailed()
         }
     }
 
@@ -274,9 +293,9 @@ fun DesignScreen(
                 showImportDialog = false
                 confirmTemplate = template
             },
-            onPasteJson = { json ->
+            onPickFile = { uri ->
                 showImportDialog = false
-                confirmPastedJson = json
+                viewModel.readImportFile(uri)
             }
         )
     }
@@ -292,14 +311,11 @@ fun DesignScreen(
         )
     }
 
-    confirmPastedJson?.let { json ->
+    uiState.pendingImport?.let { pending ->
         ConfirmReplaceDialog(
-            label = stringResource(R.string.crm_design_pasted_json_label),
-            onDismiss = { confirmPastedJson = null },
-            onConfirm = {
-                viewModel.importFromJson(json)
-                confirmPastedJson = null
-            }
+            label = pending.label,
+            onDismiss = { viewModel.cancelPendingImport() },
+            onConfirm = { viewModel.confirmPendingImport() }
         )
     }
 }
@@ -310,15 +326,21 @@ private fun ImportDesignDialog(
     isLoadingTemplates: Boolean,
     onDismiss: () -> Unit,
     onSelectTemplate: (Template) -> Unit,
-    onPasteJson: (String) -> Unit
+    onPickFile: (Uri) -> Unit
 ) {
-    var pastedJson by remember { mutableStateOf("") }
+    val filePicker = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.GetContent()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            onPickFile(uri)
+        }
+    }
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.crm_design_import_dialog_title)) },
         text = {
-            Column {
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 Text(
                     text = stringResource(R.string.crm_design_import_choose_template),
                     style = MaterialTheme.typography.labelMedium,
@@ -382,30 +404,28 @@ private fun ImportDesignDialog(
 
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    text = stringResource(R.string.crm_design_or_paste_json),
+                    text = stringResource(R.string.crm_design_or_upload_json),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.SemiBold
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
-                    value = pastedJson,
-                    onValueChange = { pastedJson = it },
-                    placeholder = { Text(stringResource(R.string.crm_design_paste_placeholder)) },
-                    modifier = Modifier.fillMaxWidth().height(120.dp)
-                )
+                OutlinedButton(
+                    onClick = { filePicker.launch("application/json") },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Icon(
+                        Icons.Default.UploadFile,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = Modifier.size(8.dp))
+                    Text(stringResource(R.string.crm_design_upload_json))
+                }
             }
         },
         confirmButton = {
-            TextButton(
-                onClick = { onPasteJson(pastedJson) },
-                enabled = pastedJson.isNotBlank()
-            ) {
-                Text(stringResource(R.string.crm_design_import_json))
-            }
-        },
-        dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
+                Text(stringResource(MochiR.string.common_close))
             }
         }
     )

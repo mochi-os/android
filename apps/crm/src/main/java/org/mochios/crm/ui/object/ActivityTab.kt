@@ -6,23 +6,17 @@
 package org.mochios.crm.ui.`object`
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,11 +25,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.crm.R
 import org.mochios.crm.model.Activity
@@ -67,13 +61,13 @@ fun ActivityTab(
     LazyColumn(
         modifier = Modifier.fillMaxSize()
     ) {
-        items(activity, key = { it.id }) { item ->
+        items(activity, key = { entry -> entry.id }) { item ->
             ActivityItem(
                 item = item,
                 crmDetails = crmDetails,
                 avatarUrl = avatarUrlBuilder?.invoke(item)
             )
-            HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
+            HorizontalDivider()
         }
     }
 }
@@ -84,17 +78,11 @@ private fun ActivityItem(
     crmDetails: CrmDetails,
     avatarUrl: String?
 ) {
-    val icon = when (item.action) {
-        "created" -> Icons.Default.Add
-        "deleted" -> Icons.Default.Delete
-        else -> Icons.Default.Edit
-    }
-
     val fieldName = if (item.field.isNotBlank()) {
         // Try to find field name from crm details
         var name = item.field
         for ((_, fields) in crmDetails.fields) {
-            val found = fields.find { it.id == item.field }
+            val found = fields.find { field -> field.id == item.field }
             if (found != null) {
                 name = found.name
                 break
@@ -108,7 +96,7 @@ private fun ActivityItem(
         if (value.isBlank()) return value
         for ((_, classOptions) in crmDetails.options) {
             for ((_, fieldOptions) in classOptions) {
-                val opt = fieldOptions.find { it.id == value }
+                val opt = fieldOptions.find { option -> option.id == value }
                 if (opt != null) return opt.name
             }
         }
@@ -118,68 +106,66 @@ private fun ActivityItem(
     val oldDisplay = resolveValue(item.oldvalue)
     val newDisplay = resolveValue(item.newvalue)
 
-    val description = when (item.action) {
+    // The action phrase — "updated <field>", "attached", "commented", etc. Value
+    // changes (old → new) are appended below with the old value struck through.
+    val actionPhrase = when (item.action) {
         "created" -> stringResource(R.string.crm_activity_created)
         "deleted" -> stringResource(R.string.crm_activity_deleted)
-        else -> {
-            if (fieldName.isNotBlank()) {
-                if (oldDisplay.isNotBlank() && newDisplay.isNotBlank()) {
-                    stringResource(R.string.crm_activity_changed, fieldName, oldDisplay, newDisplay)
-                } else if (newDisplay.isNotBlank()) {
-                    stringResource(R.string.crm_activity_set, fieldName, newDisplay)
-                } else if (oldDisplay.isNotBlank()) {
-                    stringResource(R.string.crm_activity_cleared, fieldName)
-                } else {
-                    stringResource(R.string.crm_activity_updated, fieldName)
-                }
-            } else {
-                stringResource(R.string.crm_activity_made_change)
-            }
+        "attached" -> stringResource(R.string.crm_activity_attached)
+        "commented" -> stringResource(R.string.crm_activity_commented)
+        // Field name is shown lower-cased (e.g. "updated title"), not title-cased.
+        else -> if (fieldName.isNotBlank()) {
+            stringResource(R.string.crm_activity_updated, fieldName.lowercase())
+        } else {
+            stringResource(R.string.crm_activity_made_change)
         }
     }
+    val mutedColor = MaterialTheme.colorScheme.onSurfaceVariant
 
-    Row(
+    Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.Top
+            .padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
-        EntityAvatar(
-            name = item.name,
-            src = avatarUrl,
-            seed = item.user,
-            size = 20.dp
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        Icon(
-            imageVector = icon,
-            contentDescription = null,
-            modifier = Modifier.size(18.dp),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(modifier = Modifier.width(12.dp))
-        // Actor name + change description as one flowing paragraph. Two
-        // separate Texts in a Row starved the description of width when the
-        // name was long, wrapping it one character per line.
         Text(
             text = buildAnnotatedString {
-                withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) {
-                    append(item.name)
-                }
-                append(" ")
-                withStyle(SpanStyle(color = MaterialTheme.colorScheme.onSurfaceVariant)) {
-                    append(description)
+                append(actionPhrase)
+                if (oldDisplay.isNotBlank() || newDisplay.isNotBlank()) {
+                    append(": ")
+                    if (oldDisplay.isNotBlank()) {
+                        withStyle(
+                            SpanStyle(
+                                textDecoration = TextDecoration.LineThrough,
+                                color = mutedColor
+                            )
+                        ) {
+                            append(oldDisplay)
+                        }
+                        if (newDisplay.isNotBlank()) {
+                            append(" → ")
+                        }
+                    }
+                    if (newDisplay.isNotBlank()) {
+                        append(newDisplay)
+                    }
                 }
             },
-            style = MaterialTheme.typography.bodyMedium,
-            modifier = Modifier.weight(1f)
+            style = MaterialTheme.typography.bodyMedium
         )
-        Spacer(modifier = Modifier.width(8.dp))
-        Text(
-            text = LocalFormat.current.formatTimestamp(item.created),
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
+        Spacer(modifier = Modifier.height(4.dp))
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            EntityAvatar(
+                name = item.name,
+                src = avatarUrl,
+                seed = item.user,
+                size = 18.dp
+            )
+            Spacer(modifier = Modifier.width(6.dp))
+            Text(
+                text = "${item.name} · ${LocalFormat.current.formatRelativeTime(item.created)}",
+                style = MaterialTheme.typography.labelSmall,
+                color = mutedColor
+            )
+        }
     }
 }
-

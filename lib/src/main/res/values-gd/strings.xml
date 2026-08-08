@@ -203,6 +203,7 @@
     <string name="place_destination">Ceann-uidhe</string>
     <string name="discovery_search_placeholder">Lorg %1$ss</string>
     <string name="discovery_no_results">Cha deach %1$ss a lorg</string>
+    <string name="discovery_no_results_hint">Feuch ri an lorg agad atharrachadh</string>
     <string name="discovery_no_recommendations">Gun mholaidhean</string>
     <string name="discovery_search_hint">Feuch ri %1$s a lorg airson fo-sgrìobhadh ris</string>
     <string name="access_no_rules">Gun riaghailtean inntrigidh</string>

@@ -203,6 +203,7 @@
     <string name="place_destination">Ñeg̃uahẽha</string>
     <string name="discovery_search_placeholder">Eheka %1$s</string>
     <string name="discovery_no_results">Ndojejuhúi %1$s</string>
+    <string name="discovery_no_results_hint">Eha\'ã embohekopyahu ne jeheka</string>
     <string name="discovery_no_recommendations">Ndaipóri je\'ehague</string>
     <string name="discovery_search_hint">Eha\'ã eheka peteĩ %1$s ehupyty hag̃ua</string>
     <string name="access_no_rules">Ndaipóri jeike léi</string>

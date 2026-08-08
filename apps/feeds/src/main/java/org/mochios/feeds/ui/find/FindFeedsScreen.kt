@@ -6,7 +6,6 @@
 package org.mochios.feeds.ui.find
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,13 +25,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -62,6 +59,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.android.R as MochiR
@@ -109,7 +107,6 @@ fun FindFeedsScreen(
     ) { paddingValues ->
         FindFeedsContent(
             viewModel = viewModel,
-            onNavigateToFeed = onNavigateToFeed,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
@@ -124,7 +121,6 @@ fun FindFeedsScreen(
 @Composable
 fun FindFeedsContent(
     viewModel: FindFeedsViewModel,
-    onNavigateToFeed: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val searchQuery by viewModel.searchQuery.collectAsState()
@@ -173,12 +169,21 @@ fun FindFeedsContent(
         Spacer(modifier = Modifier.height(8.dp))
 
         val probe = probeResult
-        val displayFeeds = if (probe != null) {
+        val sourceFeeds = if (probe != null) {
             listOf(probe)
         } else if (searchQuery.isNotBlank()) {
             searchResults
         } else {
             recommendations
+        }
+        // A feed the user already has belongs in their own list, not in the
+        // directory, so it drops out of whichever section would have carried it
+        // rather than sitting there behind a dead "Subscribed" chip. Filtering
+        // the composed list — not each source — means the empty branch below
+        // tests what actually renders, so "everything found is already
+        // subscribed" reads as no results rather than a blank list.
+        val displayFeeds = sourceFeeds.filter { feed ->
+            feed.fingerprint.ifEmpty { feed.id } !in subscribedFeeds
         }
         val sectionTitle = when {
             probe != null -> stringResource(R.string.feeds_url_result)
@@ -203,16 +208,11 @@ fun FindFeedsContent(
                 CircularProgressIndicator()
             }
         } else if (displayFeeds.isEmpty() && searchQuery.isNotBlank() && !isSearching && !isProbing) {
-            Box(
-                modifier = Modifier.fillMaxWidth().padding(32.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = stringResource(R.string.feeds_no_feeds_found),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+            EmptyState(
+                icon = Icons.Default.Search,
+                title = stringResource(R.string.feeds_no_feeds_found),
+                subtitle = stringResource(MochiR.string.discovery_no_results_hint)
+            )
         } else {
             LazyColumn(
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
@@ -220,21 +220,13 @@ fun FindFeedsContent(
             ) {
                 items(displayFeeds, key = { it.fingerprint.ifEmpty { it.id } }) { feed ->
                     val feedId = feed.fingerprint.ifEmpty { feed.id }
-                    val isSubscribed = feedId in subscribedFeeds
-                    val isSubscribing = subscribingFeed == feedId
 
                     FeedDiscoveryCard(
                         feed = feed,
-                        isSubscribed = isSubscribed,
-                        isSubscribing = isSubscribing,
+                        isSubscribing = subscribingFeed == feedId,
                         onSubscribe = {
                             keyboardController?.hide()
                             viewModel.subscribe(feed)
-                        },
-                        onClick = {
-                            if (isSubscribed) {
-                                onNavigateToFeed(feedId)
-                            }
                         }
                     )
                 }
@@ -246,17 +238,14 @@ fun FindFeedsContent(
 @Composable
 private fun FeedDiscoveryCard(
     feed: Feed,
-    isSubscribed: Boolean,
     isSubscribing: Boolean,
-    onSubscribe: () -> Unit,
-    onClick: () -> Unit
+    onSubscribe: () -> Unit
 ) {
     val rssOrange = Color(0xFFF26B21)
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .clickable(onClick = onClick)
             .padding(horizontal = 8.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -296,22 +285,14 @@ private fun FeedDiscoveryCard(
             }
         }
         Spacer(modifier = Modifier.width(12.dp))
-        if (isSubscribed) {
-            FilledTonalButton(onClick = {}, enabled = false) {
-                Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(stringResource(MochiR.string.discovery_subscribed))
-            }
-        } else {
-            Button(
-                onClick = onSubscribe,
-                enabled = !isSubscribing
-            ) {
-                if (isSubscribing) {
-                    CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
-                } else {
-                    Text(stringResource(MochiR.string.common_subscribe))
-                }
+        Button(
+            onClick = onSubscribe,
+            enabled = !isSubscribing
+        ) {
+            if (isSubscribing) {
+                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+            } else {
+                Text(stringResource(MochiR.string.common_subscribe))
             }
         }
     }

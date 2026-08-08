@@ -199,6 +199,7 @@
     <string name="place_destination">গন্তব্য</string>
     <string name="discovery_search_placeholder">%1$s খুঁজুন</string>
     <string name="discovery_no_results">কোনো %1$s পাওয়া যায়নি</string>
+    <string name="discovery_no_results_hint">আপনার অনুসন্ধান সমন্বয় করার চেষ্টা করুন</string>
     <string name="discovery_no_recommendations">কোনো সুপারিশ নেই</string>
     <string name="discovery_search_hint">সাবস্ক্রাইব করার জন্য একটি %1$s খোঁজার চেষ্টা করুন</string>
     <string name="access_no_rules">কোনো অ্যাক্সেস নিয়ম নেই</string>

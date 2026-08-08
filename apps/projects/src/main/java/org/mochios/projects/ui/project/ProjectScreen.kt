@@ -19,11 +19,14 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.text.KeyboardOptions
@@ -47,8 +50,10 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.ViewColumn
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.FormatListBulleted
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
@@ -63,11 +68,13 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -102,6 +109,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EntityIconCircle
@@ -111,6 +119,8 @@ import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
@@ -592,6 +602,7 @@ private fun ProjectContent(
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
     var showFilters by remember { mutableStateOf(false) }
+    var showAddColumn by remember { mutableStateOf(false) }
 
     val context = LocalContext.current
     val shareTitle = stringResource(R.string.projects_share_link_title)
@@ -604,7 +615,7 @@ private fun ProjectContent(
     val exportSaved = stringResource(R.string.projects_export_saved)
     val exportFailed = stringResource(R.string.projects_export_failed)
     // The picker only reports where the file goes; the ViewModel writes it.
-    val saveExport = rememberFileSaveLauncher { uri ->
+    val saveExport = rememberFileSaveLauncher(MIME_ZIP) { uri ->
         if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
     }
     LaunchedEffect(uiState.pendingExport) {
@@ -612,10 +623,16 @@ private fun ProjectContent(
             saveExport.launch(pending.suggestedName)
         }
     }
-    LaunchedEffect(uiState.exportSaved, uiState.exportFailed) {
-        if (uiState.exportSaved || uiState.exportFailed) {
-            val message = if (uiState.exportSaved) exportSaved else exportFailed
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+    // A saved export goes straight to the share sheet. The file is already on
+    // disk either way, so backing out of the sheet costs the user nothing.
+    LaunchedEffect(uiState.savedExport, uiState.exportFailed) {
+        val saved = uiState.savedExport
+        if (saved != null) {
+            Toast.makeText(context, exportSaved, Toast.LENGTH_SHORT).show()
+            shareExportFile(context, saved)
+            viewModel.clearExportResult()
+        } else if (uiState.exportFailed) {
+            Toast.makeText(context, exportFailed, Toast.LENGTH_SHORT).show()
             viewModel.clearExportResult()
         }
     }
@@ -747,6 +764,21 @@ private fun ProjectContent(
                                     HorizontalDivider()
                                 }
 
+                                // Add column — only meaningful on a board view that
+                                // groups by a field (mirrors web's overflow "Add
+                                // column"). Creates a new option on the grouping field.
+                                if (activeView?.viewtype == "board" && activeView.columns.isNotBlank()) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.projects_board_add_column)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            showAddColumn = true
+                                        },
+                                        leadingIcon = {
+                                            Icon(Icons.Default.ViewColumn, contentDescription = null)
+                                        }
+                                    )
+                                }
                                 // Sharing a link is only offered on projects the
                                 // user owns; it's hidden on subscribed ones.
                                 if (details?.project?.owner == 1) {
@@ -767,14 +799,19 @@ private fun ProjectContent(
                                     },
                                     leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
                                 )
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.projects_design)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        onDesign(viewModel.projectId)
-                                    },
-                                    leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
-                                )
+                                // Reshaping the design is the owner's to do, so
+                                // it is offered on the same terms as the link
+                                // above rather than on every subscribed project.
+                                if (details?.project?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.projects_design)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            onDesign(viewModel.projectId)
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                    )
+                                }
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.projects_export)) },
                                     onClick = {
@@ -896,6 +933,19 @@ private fun ProjectContent(
         )
     }
 
+    // Add-column dialog (board views). Creates a new option on the board's
+    // grouping field, mirroring web's overflow "Add column".
+    if (showAddColumn && activeView != null && activeView.columns.isNotBlank()) {
+        val columnFieldId = activeView.columns
+        AddColumnDialog(
+            onDismiss = { showAddColumn = false },
+            onAdd = { name, colour ->
+                viewModel.addColumnOption(columnFieldId, name, colour)
+                showAddColumn = false
+            }
+        )
+    }
+
     // Object detail sheet
     if (uiState.selectedObjectId != null && details != null) {
         ObjectDetailSheet(
@@ -903,6 +953,7 @@ private fun ProjectContent(
             objectId = uiState.selectedObjectId!!,
             projectDetails = details,
             initialObject = uiState.objects.find { it.id == uiState.selectedObjectId },
+            viewFieldIds = viewModel.getActiveViewFieldIds(),
             onDismiss = { viewModel.selectObject(null) },
             // deleteObject deletes, clears the selection when it matches, and
             // refreshes — so this must not pre-clear the selection it needs.
@@ -954,6 +1005,59 @@ private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
     "updated" to stringResource(R.string.projects_sort_updated)
 )
 
+// Add a new board column (= a new option on the board's grouping field).
+// Name + a colour, mirroring web's OptionDialog used for "Add column". Boards
+// render the option colour, not its icon, so no icon field here.
+@Composable
+private fun AddColumnDialog(
+    onDismiss: () -> Unit,
+    onAdd: (name: String, colour: String?) -> Unit,
+) {
+    var name by remember { mutableStateOf("") }
+    var colour by remember { mutableStateOf("#3b82f6") }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.projects_board_add_column)) },
+        text = {
+            // The picker is taller than the dialog on a short screen, so the
+            // body scrolls. Its saturation field consumes its own drags, so
+            // dragging inside it doesn't scroll the dialog out from under it.
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                OutlinedTextField(
+                    value = name,
+                    onValueChange = { value -> name = value },
+                    label = { Text(stringResource(R.string.projects_field_name)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    stringResource(R.string.projects_option_color),
+                    style = MaterialTheme.typography.labelMedium
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                ColorPicker(
+                    hex = colour,
+                    onHexChange = { hex -> colour = hex },
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(
+                onClick = { onAdd(name.trim(), colour.ifBlank { null }) },
+                enabled = name.isNotBlank()
+            ) {
+                Text(stringResource(MochiR.string.common_add))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        }
+    )
+}
 
 /** Opens the system share sheet with the project's [link]. */
 private fun shareProjectLink(context: Context, link: String, title: String) {

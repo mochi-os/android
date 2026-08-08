@@ -200,6 +200,7 @@
     <string name="place_destination">Destinasi</string>
     <string name="discovery_search_placeholder">Cari %1$s</string>
     <string name="discovery_no_results">Tiada %1$s ditemui</string>
+    <string name="discovery_no_results_hint">Cuba laraskan carian anda</string>
     <string name="discovery_no_recommendations">Tiada cadangan</string>
     <string name="discovery_search_hint">Cuba cari %1$s untuk dilanggan</string>
     <string name="access_no_rules">Tiada peraturan akses</string>

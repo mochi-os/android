@@ -70,6 +70,7 @@ import org.mochios.crm.R
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmObject
+import org.mochios.crm.model.Person
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
@@ -92,9 +93,16 @@ fun BoardView(
     viewModel: CrmViewModel,
     // Threaded to BoardCard, which must not snapshot the flow itself.
     crmDetails: CrmDetails?,
+    people: List<Person>,
     onObjectClick: (String) -> Unit,
     visibleIds: Set<String>? = null,
-    onCreateObject: ((classId: String, title: String, initialValues: Map<String, String>) -> Unit)? = null,
+    /**
+     * Starts a create from a column's "+", passing the field values that place
+     * the object in that column. The caller opens the same dialog the FAB does
+     * rather than creating outright, so a board object gets a title and its
+     * fields like any other.
+     */
+    onStartCreate: ((initialValues: Map<String, String>) -> Unit)? = null,
 ) {
     if (view == null || view.columns.isBlank()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -107,28 +115,55 @@ fun BoardView(
         return
     }
 
+    // The class a column's "+" would create into: the view's own first, else
+    // the CRM's first. Null when the CRM defines no classes at all, which is
+    // what hides the button instead of letting it swallow the tap.
+    //
+    // The view's ids are checked against the CRM's classes rather than trusted.
+    // A view naming a deleted class used to pass that id straight to create,
+    // and the post failed on a class the server no longer had - a "+" that
+    // looked like it did nothing.
+    val definedClassIds = crmDetails?.classes.orEmpty().map { cls -> cls.id }.toSet()
+    val createClassId = view.classes.firstOrNull { id -> id in definedClassIds }
+        ?: crmDetails?.classes?.firstOrNull()?.id?.takeIf { id -> id.isNotBlank() }
+
     val columnFieldId = view.columns
-    val columnOptions = viewModel.getAllOptionsForField(columnFieldId)
+    // Drawn from every class the view shows, not just the first one that
+    // defines the field: each class holds its own options under a shared field
+    // id, and a column missing from the board leaves its cards in Unassigned.
+    val columnOptions = viewModel.getOptionsForClasses(columnFieldId, view.classes)
     val rowFieldId = view.rows.takeIf { it.isNotBlank() }
-    val rowOptions = rowFieldId?.let { viewModel.getAllOptionsForField(it) } ?: emptyList()
+    val rowOptions = rowFieldId?.let { fieldId ->
+        viewModel.getOptionsForClasses(fieldId, view.classes)
+    } ?: emptyList()
     val borderFieldId = view.border.takeIf { it.isNotBlank() }
 
-    // Build parent-child map from all objects
-    val childrenByParent = remember(objects) {
+    // The objects the view admits. Everything below — nesting, top-level
+    // cards, drop ranks — is computed against this set rather than the whole
+    // crm, the way the tree does it. A deal parented to a company on a
+    // deals-only board is a card in its own right here: measuring its parent
+    // against the unfiltered list made it neither a top-level card nor a
+    // nested one, and emptied the board.
+    val classObjects = objects.filter { obj ->
+        view.classes.isEmpty() || obj.objectClass in view.classes
+    }
+    val classObjectIds = classObjects.map { obj -> obj.id }.toSet()
+
+    // Build parent-child map from the objects the view shows
+    val childrenByParent = remember(classObjects) {
         val map = mutableMapOf<String, MutableList<CrmObject>>()
-        val objectIds = objects.map { it.id }.toSet()
-        for (obj in objects) {
-            if (obj.parent.isNotBlank() && obj.parent in objectIds) {
+        for (obj in classObjects) {
+            if (obj.parent.isNotBlank() && obj.parent in classObjectIds) {
                 map.getOrPut(obj.parent) { mutableListOf() }.add(obj)
             }
         }
         map
     }
 
-    // Only show top-level objects (no parent in this set) that match the view's class filter
-    val filteredObjects = objects.filter { obj ->
-        (obj.parent.isBlank() || obj.parent !in objects.map { it.id }.toSet()) &&
-            (view.classes.isEmpty() || obj.objectClass in view.classes)
+    // Only show top-level objects — those whose parent the view doesn't show,
+    // so they have no card to nest inside.
+    val filteredObjects = classObjects.filter { obj ->
+        obj.parent.isBlank() || obj.parent !in classObjectIds
     }
 
     if (columnOptions.isEmpty()) {
@@ -195,6 +230,7 @@ fun BoardView(
         BoardColumn(
             option = columnOption,
             crmDetails = crmDetails,
+            people = people,
             objects = columnObjects,
             visibleIds = visibleIds,
             viewModel = viewModel,
@@ -233,15 +269,17 @@ fun BoardView(
             onDelete = if (isUnassigned) null else {
                 { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
             },
-            onCreateInColumn = if (onCreateObject != null && !isUnassigned) {
-                {
-                    val details = viewModel.uiState.value.crmDetails
-                    val classId = view.classes.firstOrNull() ?: details?.classes?.firstOrNull()?.id ?: ""
-                    if (classId.isNotBlank()) {
-                        onCreateObject(classId, "", mapOf(columnFieldId to columnOption.id))
-                    }
-                }
-            } else null,
+            // The class is resolved before the button is offered rather than
+            // inside its click handler. With no class to create into there is
+            // nothing the tap could do, and the handler used to swallow it
+            // silently — a "+" that looks live and does nothing.
+            onCreateInColumn = if (onStartCreate != null && !isUnassigned &&
+                createClassId != null
+            ) {
+                { onStartCreate(mapOf(columnFieldId to columnOption.id)) }
+            } else {
+                null
+            },
         )
     }
 }
@@ -255,6 +293,7 @@ private fun BoardColumn(
     visibleIds: Set<String>?,
     viewModel: CrmViewModel,
     crmDetails: CrmDetails?,
+    people: List<Person>,
     columnFieldId: String,
     rowFieldId: String?,
     rowOptions: List<FieldOption>,
@@ -476,7 +515,12 @@ private fun BoardColumn(
 
         // Column body
         if (rowFieldId != null && rowOptions.isNotEmpty()) {
-            // Swimlane mode
+            // Swimlane mode.
+            // Drop ranks are scoped to the column, not the lane: the server's
+            // rank_move_key lists every object sharing the target column value
+            // and knows nothing about rows, so a lane-local position would be
+            // applied as a column position.
+            val columnOrder = viewModel.sortObjects(objects)
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
@@ -494,11 +538,34 @@ private fun BoardColumn(
                     if (visibleIds != null && shownRowObjects.isEmpty()) return@forEach
 
                     item(key = "header_${rowOption.id}") {
+                        // The lane's own drop target. The column-level one below
+                        // has no lane to report, so without this a drop anywhere
+                        // but on another card could not change lane at all —
+                        // including into a lane that is currently empty.
                         Text(
                             text = rowOption.name,
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .dropTarget(
+                                    state = cardDragState,
+                                    itemId = "lane:${option.id}:${rowOption.id}",
+                                    orientation = DropOrientation.OnOnly,
+                                    onDrop = { sourceId, _ ->
+                                        viewModel.moveObject(
+                                            objectId = sourceId,
+                                            field = columnFieldId,
+                                            value = option.id,
+                                            rank = columnOrder.count { candidate ->
+                                                candidate.id != sourceId
+                                            } + 1,
+                                            rowField = rowFieldId,
+                                            rowValue = rowOption.id,
+                                        )
+                                    },
+                                )
+                                .padding(horizontal = 4.dp, vertical = 4.dp)
                         )
                     }
                     itemsIndexed(shownRowObjects, key = { _, o -> o.id }) { _, obj ->
@@ -506,16 +573,18 @@ private fun BoardColumn(
                             obj = obj,
                             viewModel = viewModel,
                             crmDetails = crmDetails,
+                            people = people,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = rowObjects.indexOfFirst { candidate ->
+                            cardIndexInColumn = columnOrder.indexOfFirst { candidate ->
                                 candidate.id == obj.id
                             },
-                            columnObjectsForDrop = rowObjects,
+                            columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
+                            targetRowId = rowOption.id,
                             onClick = { onObjectClick(obj.id) }
                         )
                     }
@@ -547,16 +616,18 @@ private fun BoardColumn(
                             obj = obj,
                             viewModel = viewModel,
                             crmDetails = crmDetails,
+                            people = people,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = unassignedRow.indexOfFirst { candidate ->
+                            cardIndexInColumn = columnOrder.indexOfFirst { candidate ->
                                 candidate.id == obj.id
                             },
-                            columnObjectsForDrop = unassignedRow,
+                            columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
+                            targetRowId = "",
                             onClick = { onObjectClick(obj.id) }
                         )
                     }
@@ -596,6 +667,7 @@ private fun BoardColumn(
                             obj = obj,
                             viewModel = viewModel,
                             crmDetails = crmDetails,
+                            people = people,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
                             cardDragState = cardDragState,

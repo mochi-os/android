@@ -202,6 +202,7 @@
     <string name="place_destination">ലക്ഷ്യസ്ഥാനം</string>
     <string name="discovery_search_placeholder">%1$ss തിരയുക</string>
     <string name="discovery_no_results">%1$ss ഒന്നും കണ്ടെത്തിയില്ല</string>
+    <string name="discovery_no_results_hint">നിങ്ങളുടെ തിരച്ചിൽ ക്രമീകരിക്കാൻ ശ്രമിക്കുക</string>
     <string name="discovery_no_recommendations">ശുപാർശകൾ ഇല്ല</string>
     <string name="discovery_search_hint">സബ്സ്ക്രൈബ് ചെയ്യാൻ ഒരു %1$s തിരയാൻ ശ്രമിക്കുക</string>
     <string name="access_no_rules">ആക്സസ് നിയമങ്ങൾ ഇല്ല</string>

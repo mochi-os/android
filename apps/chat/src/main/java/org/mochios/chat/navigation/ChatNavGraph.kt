@@ -116,7 +116,12 @@ fun NavGraphBuilder.chatNavGraph(
             onChatLeft = {
                 // Drop back to the router so last-viewed re-resolves (the
                 // left chat shouldn't reappear as the next destination).
-                navController.popBackStack(ChatApp.ROUTER, inclusive = false)
+                // Navigate rather than pop, the same way onChatDeleted does:
+                // the router removes itself from the stack once it resolves,
+                // so popping back to it found no entry and went nowhere.
+                navController.navigate(ChatApp.ROUTER) {
+                    popUpTo(ChatApp.CHAT) { inclusive = true }
+                }
             },
         )
     }

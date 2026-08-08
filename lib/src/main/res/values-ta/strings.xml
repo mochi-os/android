@@ -202,6 +202,7 @@
     <string name="place_destination">சேருமிடம்</string>
     <string name="discovery_search_placeholder">%1$ss தேடவும்</string>
     <string name="discovery_no_results">%1$ss எதுவும் கிடைக்கவில்லை</string>
+    <string name="discovery_no_results_hint">உங்கள் தேடலை சரிசெய்ய முயற்சி செய்யுங்கள்</string>
     <string name="discovery_no_recommendations">பரிந்துரைகள் இல்லை</string>
     <string name="discovery_search_hint">சந்தா செய்ய ஒரு %1$s ஐத் தேட முயற்சிக்கவும்</string>
     <string name="access_no_rules">அணுகல் விதிகள் இல்லை</string>

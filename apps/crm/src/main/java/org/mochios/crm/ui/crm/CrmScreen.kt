@@ -5,7 +5,9 @@
 
 package org.mochios.crm.ui.crm
 
+import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
@@ -27,26 +29,33 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.HomeMax
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.FileDownload
 import androidx.compose.material.icons.filled.ViewColumn
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.TableChart
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.outlined.Dashboard
+import androidx.compose.material.icons.outlined.FormatListBulleted
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
@@ -56,14 +65,15 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.ScrollableTabRow
-import androidx.compose.material3.Tab
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
@@ -90,6 +100,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
@@ -98,7 +110,12 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.MIME_CSV
+import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.files.shareExportFile
+import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
@@ -112,7 +129,6 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.board.BoardView
-import org.mochios.crm.ui.board.parseColor
 import org.mochios.crm.ui.`object`.ObjectDetailSheet
 import org.mochios.crm.ui.crmlist.CreateCrmDialog
 import org.mochios.crm.ui.crmlist.CrmListViewModel
@@ -254,11 +270,12 @@ fun CrmScreen(
 
     if (listUiState.showCreateDialog) {
         CreateCrmDialog(
-            templates = listUiState.templates,
             isCreating = listUiState.isCreating,
+            backupPrefill = listUiState.backupPrefill,
+            onPickBackup = { uri -> listViewModel.readBackup(uri) },
             onDismiss = { listViewModel.hideCreateDialog() },
-            onCreate = { name, description, privacy, template ->
-                listViewModel.createCrm(name, description, privacy, template)
+            onCreate = { name, privacy, backupJson ->
+                listViewModel.createCrm(name, privacy, backupJson)
             }
         )
     }
@@ -591,6 +608,56 @@ private fun CrmContent(
         }
     }
 
+    val context = LocalContext.current
+    val shareTitle = stringResource(R.string.crm_share_link_title)
+    LaunchedEffect(viewModel) {
+        viewModel.shareLink.collect { link ->
+            shareCrmLink(context, link, shareTitle)
+        }
+    }
+
+    // A rejected create is invisible otherwise: the dialog just sits there
+    // with the spinner gone. Say what the server said.
+    LaunchedEffect(viewModel) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
+        }
+    }
+
+    val exportSaved = stringResource(R.string.crm_export_saved)
+    val exportFailed = stringResource(R.string.crm_export_failed)
+    // The picker only reports where the file goes; the ViewModel writes it.
+    // A launcher's type is fixed when it is remembered, so the two exports
+    // need one each, chosen by what the pending export holds.
+    val saveZip = rememberFileSaveLauncher(MIME_ZIP) { uri ->
+        if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
+    }
+    val saveCsv = rememberFileSaveLauncher(MIME_CSV) { uri ->
+        if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
+    }
+    LaunchedEffect(uiState.pendingExport) {
+        uiState.pendingExport?.let { pending ->
+            if (pending.mimeType == MIME_CSV) {
+                saveCsv.launch(pending.suggestedName)
+            } else {
+                saveZip.launch(pending.suggestedName)
+            }
+        }
+    }
+    // A saved export goes straight to the share sheet. The file is already on
+    // disk either way, so backing out of the sheet costs the user nothing.
+    LaunchedEffect(uiState.savedExport, uiState.exportFailed) {
+        val saved = uiState.savedExport
+        if (saved != null) {
+            Toast.makeText(context, exportSaved, Toast.LENGTH_SHORT).show()
+            shareExportFile(context, saved)
+            viewModel.clearExportResult()
+        } else if (uiState.exportFailed) {
+            Toast.makeText(context, exportFailed, Toast.LENGTH_SHORT).show()
+            viewModel.clearExportResult()
+        }
+    }
+
     val details = uiState.crmDetails
     val activeView = viewModel.getActiveView()
 
@@ -669,6 +736,49 @@ private fun CrmContent(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
+                                // Views the CRM defines, checked one at a time.
+                                // Listed even when there is only one, so the menu
+                                // always says which view is on screen and how it
+                                // is drawn.
+                                val views = details?.views.orEmpty()
+                                if (views.isNotEmpty()) {
+                                    views.forEach { view ->
+                                        val isActive = view.id == activeView?.id
+                                        DropdownMenuItem(
+                                            text = { Text(view.name) },
+                                            onClick = {
+                                                showOverflow = false
+                                                viewModel.setActiveView(view.id)
+                                            },
+                                            leadingIcon = {
+                                                Icon(
+                                                    if (view.viewtype == "board") {
+                                                        Icons.Outlined.Dashboard
+                                                    } else {
+                                                        Icons.Outlined.FormatListBulleted
+                                                    },
+                                                    contentDescription = null,
+                                                    tint = if (isActive) {
+                                                        MaterialTheme.colorScheme.primary
+                                                    } else {
+                                                        LocalContentColor.current
+                                                    },
+                                                )
+                                            },
+                                            trailingIcon = {
+                                                if (isActive) {
+                                                    Icon(
+                                                        Icons.Default.Check,
+                                                        contentDescription = null,
+                                                        tint = MaterialTheme.colorScheme.primary,
+                                                    )
+                                                }
+                                            },
+                                        )
+                                    }
+                                    HorizontalDivider()
+                                }
+
                                 // Add column — only meaningful on a board view that
                                 // groups by a field (mirrors web's overflow "Add
                                 // column"). Creates a new option on the grouping field.
@@ -684,6 +794,18 @@ private fun CrmContent(
                                         }
                                     )
                                 }
+                                // Sharing a link is only offered on CRMs the user
+                                // owns; it's hidden on subscribed ones.
+                                if (details?.crm?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.crm_link)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            viewModel.shareCrm()
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
+                                    )
+                                }
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.crm_settings)) },
                                     onClick = {
@@ -692,13 +814,38 @@ private fun CrmContent(
                                     },
                                     leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
                                 )
+                                // Reshaping the design is the owner's to do, so
+                                // it is offered on the same terms as the link
+                                // above rather than on every subscribed CRM.
+                                if (details?.crm?.owner == 1) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.crm_design)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            onDesign(viewModel.crmId)
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                    )
+                                }
                                 DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.crm_design)) },
+                                    text = { Text(stringResource(R.string.crm_export)) },
                                     onClick = {
                                         showOverflow = false
-                                        onDesign(viewModel.crmId)
+                                        viewModel.exportCrm()
                                     },
-                                    leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                    leadingIcon = {
+                                        Icon(Icons.Default.FileDownload, contentDescription = null)
+                                    }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.crm_export_csv)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        viewModel.exportCsv()
+                                    },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.TableChart, contentDescription = null)
+                                    }
                                 )
                             }
                         }
@@ -707,7 +854,17 @@ private fun CrmContent(
             }
         },
         floatingActionButton = {
-            if (details != null) {
+            // A board carries a "+" in every column, and those start the create
+            // with the column's own value already set. The FAB would be a second
+            // way in that knows nothing about where the object should land, so
+            // it stands down wherever the columns are there to take over. A
+            // board with no grouping field draws no columns, so the FAB stays.
+            val boardHasColumns = activeView?.viewtype == "board" &&
+                activeView.columns.isNotBlank()
+            // A CRM with no class defined has nothing an object could be created
+            // as, so the dialog would open with its Create permanently disabled
+            // and no way to tell why. Hidden rather than dead.
+            if (details != null && details.classes.isNotEmpty() && !boardHasColumns) {
                 FloatingActionButton(onClick = { viewModel.showCreateObjectDialog() }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_create_object))
                 }
@@ -735,29 +892,8 @@ private fun CrmContent(
                         orientation = Orientation.Vertical
                     )
             ) {
-                // View tabs
-                if (details != null && details.views.isNotEmpty()) {
-                    val views = details.views
-                    val selectedIndex = views.indexOfFirst { it.id == uiState.activeViewId }.coerceAtLeast(0)
-                    ScrollableTabRow(
-                        selectedTabIndex = selectedIndex,
-                        edgePadding = 16.dp
-                    ) {
-                        views.forEachIndexed { index, view ->
-                            Tab(
-                                selected = index == selectedIndex,
-                                onClick = { viewModel.setActiveView(view.id) },
-                                text = {
-                                    Text(
-                                        text = view.name,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                            )
-                        }
-                    }
-                }
+                // Views moved to the overflow menu, which names the active one
+                // and its type, so the row of tabs that used to sit here is gone.
 
                 // Main content
                 when {
@@ -789,12 +925,17 @@ private fun CrmContent(
                                 BoardView(
                                     objects = allObjects,
                                     crmDetails = details,
+                                    people = uiState.people,
                                     visibleIds = viewModel.getVisibleObjectIds(),
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
-                                    onCreateObject = { classId, title, initialValues ->
-                                        viewModel.createObject(classId, title, initialValues = initialValues)
+                                    // Same dialog the FAB opens, seeded with the
+                                    // column tapped. It used to create outright,
+                                    // which produced a titleless object with no
+                                    // chance to fill anything in.
+                                    onStartCreate = { initialValues ->
+                                        viewModel.showCreateObjectDialog(presetValues = initialValues)
                                     }
                                 )
                             }
@@ -826,6 +967,7 @@ private fun CrmContent(
             people = uiState.people,
             objects = uiState.objects,
             presetParent = uiState.createObjectParent,
+            presetValues = uiState.createObjectPresetValues,
             isCreating = uiState.isCreatingObject,
             activeView = activeView,
             viewModel = viewModel,
@@ -834,6 +976,10 @@ private fun CrmContent(
                 viewModel.createObject(classId, title, parent, initialValues, files)
             }
         )
+    }
+
+    if (uiState.isExporting) {
+        ExportProgressDialog()
     }
 
     // Add-column dialog (board views). Creates a new option on the board's
@@ -856,18 +1002,12 @@ private fun CrmContent(
             objectId = uiState.selectedObjectId!!,
             crmDetails = details,
             initialObject = uiState.objects.find { it.id == uiState.selectedObjectId },
+            viewFieldIds = viewModel.getActiveViewFieldIds(),
             onDismiss = { viewModel.selectObject(null) },
             // deleteObject deletes, clears the selection when it matches, and
             // refreshes — so this must not pre-clear the selection it needs.
             onDeleteObject = { viewModel.deleteObject(uiState.selectedObjectId!!) },
             onNavigateToObject = { id -> viewModel.selectObject(id) },
-            onAddChild = { parentId ->
-                // Close the sheet, then open the create dialog with the
-                // parent pre-selected. The dialog reads crm.hierarchy
-                // and seeds the class to one that permits this parent.
-                viewModel.selectObject(null)
-                viewModel.showCreateObjectDialog(parent = parentId)
-            },
         )
     }
 
@@ -893,6 +1033,20 @@ private fun CrmContent(
     }
 }
 
+/** Opens the system share sheet with the CRM's [link]. */
+private fun shareCrmLink(context: Context, link: String, title: String) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, link)
+        // Names the sheet's content preview. Android 10+ ignores the
+        // createChooser title, so without this the sheet reads "Sharing text".
+        putExtra(Intent.EXTRA_TITLE, title)
+    }
+    val chooser = Intent.createChooser(intent, title)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
+}
+
 /** Sort keys the server understands regardless of the CRM's own fields. */
 @Composable
 private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
@@ -901,9 +1055,34 @@ private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
     "updated" to stringResource(R.string.crm_sort_updated)
 )
 
+@Composable
+private fun ExportProgressDialog() {
+    Dialog(
+        onDismissRequest = {},
+        properties = DialogProperties(
+            dismissOnBackPress = false,
+            dismissOnClickOutside = false
+        )
+    ) {
+        Surface(
+            shape = MaterialTheme.shapes.large,
+            tonalElevation = 6.dp
+        ) {
+            Row(
+                modifier = Modifier.padding(24.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(stringResource(R.string.crm_exporting))
+            }
+        }
+    }
+}
+
 // Add a new board column (= a new option on the board's grouping field).
-// Name + a preset colour, mirroring web's OptionDialog used for "Add column".
-// Boards render the option colour, not its icon, so no icon field here.
+// Name + a colour, mirroring web's OptionDialog used for "Add column". Boards
+// render the option colour, not its icon, so no icon field here.
 @Composable
 private fun AddColumnDialog(
     onDismiss: () -> Unit,
@@ -911,51 +1090,32 @@ private fun AddColumnDialog(
 ) {
     var name by remember { mutableStateOf("") }
     var colour by remember { mutableStateOf("#3b82f6") }
-    val presetColours = listOf(
-        "#ef4444", "#f97316", "#eab308", "#22c55e",
-        "#06b6d4", "#3b82f6", "#8b5cf6", "#ec4899",
-        "#6b7280", "#000000"
-    )
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.crm_board_add_column)) },
         text = {
-            Column {
+            // The picker is taller than the dialog on a short screen, so the
+            // body scrolls. Its saturation field consumes its own drags, so
+            // dragging inside it doesn't scroll the dialog out from under it.
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 OutlinedTextField(
                     value = name,
-                    onValueChange = { name = it },
+                    onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.crm_field_name)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
-                Spacer(modifier = Modifier.height(12.dp))
-                Text(stringResource(R.string.crm_option_color), style = MaterialTheme.typography.labelMedium)
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    stringResource(R.string.crm_option_color),
+                    style = MaterialTheme.typography.labelMedium
+                )
                 Spacer(modifier = Modifier.height(8.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    presetColours.take(5).forEach { hex ->
-                        IconButton(onClick = { colour = hex }, modifier = Modifier.size(32.dp)) {
-                            Icon(
-                                Icons.Default.Circle,
-                                contentDescription = hex,
-                                tint = parseColor(hex),
-                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
-                            )
-                        }
-                    }
-                }
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    presetColours.drop(5).forEach { hex ->
-                        IconButton(onClick = { colour = hex }, modifier = Modifier.size(32.dp)) {
-                            Icon(
-                                Icons.Default.Circle,
-                                contentDescription = hex,
-                                tint = parseColor(hex),
-                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
-                            )
-                        }
-                    }
-                }
+                ColorPicker(
+                    hex = colour,
+                    onHexChange = { hex -> colour = hex },
+                )
             }
         },
         confirmButton = {

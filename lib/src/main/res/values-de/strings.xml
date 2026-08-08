@@ -204,6 +204,7 @@
     <string name="place_destination">Zielort</string>
     <string name="discovery_search_placeholder">%1$ss suchen</string>
     <string name="discovery_no_results">Keine %1$ss gefunden</string>
+    <string name="discovery_no_results_hint">Passen Sie Ihre Suche an</string>
     <string name="discovery_no_recommendations">Keine Empfehlungen</string>
     <string name="discovery_search_hint">Suchen Sie nach einem %1$s, den Sie abonnieren möchten</string>
     <string name="access_no_rules">Keine Zugriffsregeln</string>

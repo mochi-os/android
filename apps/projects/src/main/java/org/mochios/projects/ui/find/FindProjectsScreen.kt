@@ -6,7 +6,6 @@
 package org.mochios.projects.ui.find
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,13 +26,11 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -62,6 +59,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
 import org.mochios.android.R as MochiR
@@ -125,6 +123,18 @@ fun FindProjectsScreen(
                 onRefresh = { viewModel.refresh() },
                 modifier = Modifier.fillMaxSize()
             ) {
+            // A project the user already has belongs in their own list, not in
+            // the directory, so it drops out of both sections rather than
+            // sitting there behind a dead "Subscribed" chip. Filtering here
+            // rather than in the view model keeps the branches below testing the
+            // same lists they render, so a search whose every hit is already
+            // subscribed lands on the empty state instead of an empty LazyColumn.
+            val searchResults = uiState.searchResults.filter { project ->
+                project.id.ifEmpty { project.fingerprint } !in uiState.subscribedIds
+            }
+            val recommendations = uiState.recommendations.filter { project ->
+                project.id.ifEmpty { project.fingerprint } !in uiState.subscribedIds
+            }
             when {
                 uiState.isLoading -> {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -132,32 +142,32 @@ fun FindProjectsScreen(
                     }
                 }
 
-                uiState.searchResults.isNotEmpty() -> {
+                searchResults.isNotEmpty() -> {
                     LazyColumn(
                         contentPadding = PaddingValues(16.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        items(uiState.searchResults, key = { it.fingerprint.ifEmpty { it.id } }) { project ->
+                        items(searchResults, key = { it.fingerprint.ifEmpty { it.id } }) { project ->
                             val subscribeId = project.id.ifEmpty { project.fingerprint }
                             DiscoveredProjectCard(
                                 project = project,
-                                isSubscribed = subscribeId in uiState.subscribedIds,
                                 isSubscribing = uiState.subscribingId == subscribeId,
                                 onSubscribe = {
                                     keyboardController?.hide()
                                     viewModel.subscribe(project) { landingId ->
                                         onProjectSubscribed(landingId)
                                     }
-                                },
-                                onOpen = {
-                                    onProjectSubscribed(project.fingerprint.ifEmpty { project.id })
                                 }
                             )
                         }
                     }
                 }
 
-                uiState.recommendations.isNotEmpty() -> {
+                // A live search owns the screen. Without the blank-query guard,
+                // a search whose every hit is already subscribed would fall
+                // through to the recommendations and look like the search had
+                // never run; the empty state below is the honest answer.
+                recommendations.isNotEmpty() && uiState.searchQuery.isBlank() -> {
                     Column {
                         Text(
                             text = stringResource(R.string.projects_find_recommended),
@@ -168,25 +178,32 @@ fun FindProjectsScreen(
                             contentPadding = PaddingValues(16.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            items(uiState.recommendations, key = { it.fingerprint.ifEmpty { it.id } }) { project ->
+                            items(recommendations, key = { it.fingerprint.ifEmpty { it.id } }) { project ->
                                 val subscribeId = project.id.ifEmpty { project.fingerprint }
                                 DiscoveredProjectCard(
                                     project = project,
-                                    isSubscribed = subscribeId in uiState.subscribedIds,
                                     isSubscribing = uiState.subscribingId == subscribeId,
                                     onSubscribe = {
                                         keyboardController?.hide()
                                         viewModel.subscribe(project) { landingId ->
                                             onProjectSubscribed(landingId)
                                         }
-                                    },
-                                    onOpen = {
-                                        onProjectSubscribed(project.fingerprint.ifEmpty { project.id })
                                     }
                                 )
                             }
                         }
                     }
+                }
+
+                // Searched and came back with nothing to subscribe to. This is a
+                // result, not a prompt, so it gets the shared empty state rather
+                // than the "go and search" hint the blank screen below shows.
+                uiState.searchQuery.isNotBlank() -> {
+                    EmptyState(
+                        icon = Icons.Default.Search,
+                        title = stringResource(R.string.projects_list_no_matching),
+                        subtitle = stringResource(MochiR.string.discovery_no_results_hint)
+                    )
                 }
 
                 else -> {
@@ -205,22 +222,20 @@ fun FindProjectsScreen(
 }
 
 /**
- * A directory hit, with a subscribe button that becomes a disabled "Subscribed"
- * chip once the user has the project. Tapping a subscribed row opens it.
+ * A directory hit, with a subscribe button. The screen only ever hands this
+ * projects the user has not subscribed to, so there is no subscribed state to
+ * draw.
  */
 @Composable
 private fun DiscoveredProjectCard(
     project: Project,
-    isSubscribed: Boolean,
     isSubscribing: Boolean,
-    onSubscribe: () -> Unit,
-    onOpen: () -> Unit
+    onSubscribe: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .clickable(enabled = isSubscribed, onClick = onOpen)
             .padding(horizontal = 8.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -288,19 +303,11 @@ private fun DiscoveredProjectCard(
             }
         }
         Spacer(Modifier.width(12.dp))
-        if (isSubscribed) {
-            FilledTonalButton(onClick = {}, enabled = false) {
-                Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(Modifier.width(4.dp))
-                Text(stringResource(MochiR.string.discovery_subscribed))
-            }
-        } else {
-            Button(onClick = onSubscribe, enabled = !isSubscribing) {
-                if (isSubscribing) {
-                    CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
-                } else {
-                    Text(stringResource(MochiR.string.common_subscribe))
-                }
+        Button(onClick = onSubscribe, enabled = !isSubscribing) {
+            if (isSubscribing) {
+                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+            } else {
+                Text(stringResource(MochiR.string.common_subscribe))
             }
         }
     }

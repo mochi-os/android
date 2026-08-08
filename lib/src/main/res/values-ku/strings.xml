@@ -202,6 +202,7 @@
     <string name="place_destination">Armanc</string>
     <string name="discovery_search_placeholder">%1$ss bigere</string>
     <string name="discovery_no_results">Ti %1$ss nehat dîtin</string>
+    <string name="discovery_no_results_hint">Lêgerîna xwe eyar bike</string>
     <string name="discovery_no_recommendations">Ti pêşniyar tune</string>
     <string name="discovery_search_hint">Biceribîne %1$sek bibîne ku bibî abone</string>
     <string name="access_no_rules">Ti qaîdeyên gihîştinê tune</string>

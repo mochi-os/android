@@ -200,6 +200,7 @@
     <string name="place_destination">منزل</string>
     <string name="discovery_search_placeholder">%1$ss تلاش کریں</string>
     <string name="discovery_no_results">کوئی %1$ss نہیں ملا</string>
+    <string name="discovery_no_results_hint">اپنی تلاش کو تبدیل کرنے کی کوشش کریں</string>
     <string name="discovery_no_recommendations">کوئی تجاویز نہیں</string>
     <string name="discovery_search_hint">سبسکرائب کرنے کے لیے کسی %1$s کو تلاش کر کے دیکھیں</string>
     <string name="access_no_rules">کوئی رسائی قوانین نہیں</string>

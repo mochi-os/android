@@ -176,7 +176,7 @@ fun PersonPicker(
             if (hasSelection) {
                 EntityAvatar(
                     name = displayName.orEmpty(),
-                    src = avatarPath(selectedId),
+                    src = personAvatarPath(selectedId),
                     seed = selectedId,
                     size = 28.dp
                 )
@@ -394,7 +394,7 @@ private fun PersonRow(
         Spacer(modifier = Modifier.size(8.dp))
         EntityAvatar(
             name = user.name,
-            src = avatarPath(user.fingerprint),
+            src = personAvatarPath(user.fingerprint),
             seed = user.fingerprint,
             size = 32.dp
         )
@@ -407,10 +407,6 @@ private fun PersonRow(
         )
     }
 }
-
-/** Server-relative avatar path for a person entity id, or null when unknown. */
-private fun avatarPath(entityId: String?): String? =
-    entityId?.takeIf { it.isNotBlank() }?.let { id -> "/people/$id/-/avatar" }
 
 /**
  * Places the picker popup at the anchor's left edge. It hangs below the field

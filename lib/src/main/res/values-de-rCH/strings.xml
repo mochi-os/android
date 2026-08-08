@@ -137,6 +137,7 @@
     <string name="discovery_search_placeholder">%1$ss suchen</string>
     <string name="discovery_results">Ergebnisse</string>
     <string name="discovery_no_results">Keine %1$ss gefunden</string>
+    <string name="discovery_no_results_hint">Passen Sie Ihre Suche an</string>
     <string name="discovery_no_recommendations">Keine Empfehlungen</string>
     <string name="discovery_search_hint">Versuchen Sie, nach einem %1$s zu suchen, um ihn zu abonnieren</string>
     <string name="access_add_rule">Regel hinzufügen</string>

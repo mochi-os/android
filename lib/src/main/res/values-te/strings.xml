@@ -202,6 +202,7 @@
     <string name="place_destination">గమ్యస్థానం</string>
     <string name="discovery_search_placeholder">%1$sలను శోధించండి</string>
     <string name="discovery_no_results">%1$sలు ఏవీ కనుగొనబడలేదు</string>
+    <string name="discovery_no_results_hint">మీ శోధనను సర్దుబాటు చేయడం ప్రయత్నించండి</string>
     <string name="discovery_no_recommendations">సిఫార్సులు లేవు</string>
     <string name="discovery_search_hint">సభ్యత్వం పొందడానికి ఒక %1$s కోసం శోధించడానికి ప్రయత్నించండి</string>
     <string name="access_no_rules">యాక్సెస్ నియమాలు లేవు</string>

@@ -6,7 +6,6 @@
 package org.mochios.forums.ui.find
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,13 +25,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Forum
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -60,6 +57,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
@@ -148,10 +146,19 @@ fun FindForumsScreen(
             Spacer(Modifier.height(8.dp))
 
             val probe = uiState.probeResult
-            val displayForums = when {
+            val sourceForums = when {
                 probe != null -> listOf(probe)
                 uiState.searchQuery.isNotBlank() -> uiState.results
                 else -> uiState.recommended
+            }
+            // A forum the user already has belongs in their own list, not in the
+            // directory, so it drops out of whichever section would have carried
+            // it rather than sitting there behind a dead "Subscribed" chip.
+            // Filtering the composed list — not each source — means the empty
+            // branches below test what actually renders, so a search whose every
+            // hit is already subscribed reads as no results, not a blank list.
+            val displayForums = sourceForums.filter { item ->
+                item.key !in uiState.subscribed
             }
             val sectionTitle = when {
                 probe != null -> stringResource(R.string.forums_find_found_by_url)
@@ -179,7 +186,11 @@ fun FindForumsScreen(
                 }
                 displayForums.isEmpty() && uiState.searchQuery.isNotBlank() &&
                     !uiState.isSearching && !uiState.isProbing -> {
-                    EmptyMessage(stringResource(R.string.forums_find_no_results))
+                    EmptyState(
+                        icon = Icons.Default.Search,
+                        title = stringResource(R.string.forums_find_no_results),
+                        subtitle = stringResource(MochiR.string.discovery_no_results_hint)
+                    )
                 }
                 displayForums.isEmpty() && uiState.searchQuery.isBlank() -> {
                     EmptyMessage(stringResource(R.string.forums_find_search_hint))
@@ -190,16 +201,13 @@ fun FindForumsScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         items(displayForums, key = { item -> item.key }) { item ->
-                            val isSubscribed = item.key in uiState.subscribed
                             ForumDiscoveryCard(
                                 item = item,
-                                isSubscribed = isSubscribed,
                                 isSubscribing = uiState.subscribingKey == item.key,
                                 onSubscribe = {
                                     keyboardController?.hide()
                                     viewModel.subscribe(item)
                                 },
-                                onClick = { if (isSubscribed) viewModel.openForum(item) },
                             )
                         }
                     }
@@ -225,22 +233,19 @@ private fun EmptyMessage(text: String) {
 
 /**
  * A discovery row: forum avatar, name over its fingerprint (or blurb), and a
- * Subscribe button that becomes a disabled "Subscribed" chip. Tapping a
- * subscribed row opens the forum.
+ * Subscribe button. The screen only ever hands this forums the user has not
+ * subscribed to, so there is no subscribed state to draw.
  */
 @Composable
 private fun ForumDiscoveryCard(
     item: ForumDirectoryItem,
-    isSubscribed: Boolean,
     isSubscribing: Boolean,
-    onSubscribe: () -> Unit,
-    onClick: () -> Unit
+    onSubscribe: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .clickable(enabled = isSubscribed, onClick = onClick)
             .padding(horizontal = 8.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -290,19 +295,11 @@ private fun ForumDiscoveryCard(
             }
         }
         Spacer(Modifier.width(12.dp))
-        if (isSubscribed) {
-            FilledTonalButton(onClick = {}, enabled = false) {
-                Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(Modifier.width(4.dp))
-                Text(stringResource(MochiR.string.discovery_subscribed))
-            }
-        } else {
-            Button(onClick = onSubscribe, enabled = !isSubscribing) {
-                if (isSubscribing) {
-                    CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
-                } else {
-                    Text(stringResource(R.string.forums_find_subscribe))
-                }
+        Button(onClick = onSubscribe, enabled = !isSubscribing) {
+            if (isSubscribing) {
+                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+            } else {
+                Text(stringResource(R.string.forums_find_subscribe))
             }
         }
     }

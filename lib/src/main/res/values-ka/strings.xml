@@ -202,6 +202,7 @@
     <string name="place_destination">დანიშნულება</string>
     <string name="discovery_search_placeholder">%1$s-ის ძიება</string>
     <string name="discovery_no_results">%1$s ვერ მოიძებნა</string>
+    <string name="discovery_no_results_hint">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
     <string name="discovery_no_recommendations">რეკომენდაციები არ არის</string>
     <string name="discovery_search_hint">სცადეთ %1$s-ის ძიება გამოსაწერად</string>
     <string name="access_no_rules">წვდომის წესები არ არის</string>

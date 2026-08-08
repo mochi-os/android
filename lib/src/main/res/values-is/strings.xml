@@ -202,6 +202,7 @@
     <string name="place_destination">Áfangastaður</string>
     <string name="discovery_search_placeholder">Leita að %1$s</string>
     <string name="discovery_no_results">Engin %1$s fundust</string>
+    <string name="discovery_no_results_hint">Reyndu að breyta leitinni þinni</string>
     <string name="discovery_no_recommendations">Engar tillögur</string>
     <string name="discovery_search_hint">Prófaðu að leita að %1$s til að gerast áskrifandi að</string>
     <string name="access_no_rules">Engar aðgangsreglur</string>

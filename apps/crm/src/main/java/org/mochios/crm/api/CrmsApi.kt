@@ -25,6 +25,7 @@ import org.mochios.crm.model.Template
 import org.mochios.crm.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -35,10 +36,24 @@ import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.Streaming
 
 // Response wrappers
 data class CrmListResponse(@SerializedName("crms") val crms: List<Crm> = emptyList())
 data class CrmResponse(val crm: Crm = Crm())
+
+// `-/create` answers with the new CRM's identity flat in `data`:
+// {"data": {"fingerprint": "…", "id": "…"}}, the way objects/create does.
+// The nested `crm` is kept for the wrapped shape other endpoints use, and
+// the repository resolves whichever the backend sent.
+data class CrmCreateResponse(
+
+    val id: String = "",
+
+    val fingerprint: String = "",
+
+    val crm: Crm? = null
+)
 data class CrmInfoResponse(
     val crm: Crm = Crm(),
     val classes: List<CrmClass> = emptyList(),
@@ -48,9 +63,28 @@ data class CrmInfoResponse(
     val hierarchy: Map<String, List<String>> = emptyMap()
 )
 data class TemplateListResponse(val templates: List<Template> = emptyList())
+// data/export/warm reports how many attachments are still to be pulled in, so
+// the caller keeps warming until nothing remains before fetching the export.
+data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
 data class ObjectListResponse(
     val objects: List<CrmObject> = emptyList(),
     val watched: List<String> = emptyList(),
+)
+/**
+ * The single-object endpoint's payload. The object carries only its own
+ * columns — class, parent, timestamps — while its field values ride alongside
+ * as a sibling map, so the two are stitched back together on the way out.
+ *
+ * Deserialising this envelope straight into a [CrmObject] is what left the
+ * detail sheet blank: nothing matched, so the object came back on its defaults
+ * with no class, and a class with no fields renders no properties.
+ *
+ * The payload also carries `incoming`, `outgoing`, `watching` and
+ * `comment_count`; the sheet fetches those through their own endpoints.
+ */
+data class ObjectResponse(
+    val `object`: CrmObject = CrmObject(),
+    val values: Map<String, Any?> = emptyMap(),
 )
 data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class CommentResponse(val comment: Comment = Comment(id = ""))
@@ -117,6 +151,9 @@ data class SubscribeResponse(
 // subscribe but ignored server-side — unsubscribe resolves the CRM locally.
 data class UnsubscribeRequest(val crm: String, val server: String? = null)
 
+// Shareable CRM link returned by the `-/share` endpoint.
+data class ShareResponse(val link: String = "")
+
 interface CrmsApi {
 
     // ---- Class-level endpoints ----
@@ -131,7 +168,7 @@ interface CrmsApi {
         @Field("description") description: String?,
         @Field("privacy") privacy: String,
         @Field("template") template: String? // contract-ok: templates applied via design-import, not create
-    ): Response<ApiResponse<CrmResponse>>
+    ): Response<ApiResponse<CrmCreateResponse>>
 
     @GET("-/templates")
     suspend fun getTemplates(): Response<ApiResponse<TemplateListResponse>>
@@ -168,6 +205,9 @@ interface CrmsApi {
 
     @GET("{crmId}/-/info")
     suspend fun getCrmInfo(@Path("crmId") crmId: String): Response<ApiResponse<CrmInfoResponse>>
+
+    @POST("{crmId}/-/share")
+    suspend fun getShareLink(@Path("crmId") crmId: String): Response<ApiResponse<ShareResponse>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/update")
@@ -216,7 +256,7 @@ interface CrmsApi {
     suspend fun getObject(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String
-    ): Response<ApiResponse<CrmObject>>
+    ): Response<ApiResponse<ObjectResponse>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/objects/{objectId}/update")
@@ -379,6 +419,29 @@ interface CrmsApi {
         @Field("data") data: String?,
         @Field("template") template: String?,
         @Field("template_version") templateVersion: Int?
+    ): Response<ApiResponse<SuccessResponse>>
+
+    // ---- Data: Export / Import ----
+
+    @POST("{crmId}/-/data/export/warm")
+    suspend fun warmExport(
+        @Path("crmId") crmId: String
+    ): Response<ApiResponse<WarmExportResponse>>
+
+    // Answers with the zip itself, not a JSON envelope, so this is the one
+    // endpoint here that isn't an ApiResponse. @Streaming keeps the body off
+    // the heap — a warmed export carries every attachment.
+    @Streaming
+    @GET("{crmId}/-/data/export")
+    suspend fun exportData(
+        @Path("crmId") crmId: String
+    ): Response<ResponseBody>
+
+    @Multipart
+    @POST("{crmId}/-/data/import")
+    suspend fun importData(
+        @Path("crmId") crmId: String,
+        @Part file: MultipartBody.Part
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Views ----

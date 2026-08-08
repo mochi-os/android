@@ -201,6 +201,7 @@
     <string name="place_destination">יעד</string>
     <string name="discovery_search_placeholder">חיפוש %1$ss</string>
     <string name="discovery_no_results">לא נמצאו %1$ss</string>
+    <string name="discovery_no_results_hint">נסה להתאים את החיפוש שלך</string>
     <string name="discovery_no_recommendations">אין המלצות</string>
     <string name="discovery_search_hint">נסו לחפש %1$s להרשמה</string>
     <string name="access_no_rules">אין כללי גישה</string>

@@ -202,6 +202,7 @@
     <string name="place_destination">Indawo yokufika</string>
     <string name="discovery_search_placeholder">Sesha ama-%1$s</string>
     <string name="discovery_no_results">Awekho ama-%1$s atholakele</string>
+    <string name="discovery_no_results_hint">Zama ukulungisa ukusesha kwakho</string>
     <string name="discovery_search_hint">Zama ukusesha i-%1$s ozobhalisa kuyo</string>
     <string name="discovery_no_recommendations">Azikho izincomo</string>
     <string name="access_no_rules">Ayikho imithetho yokufinyelela</string>

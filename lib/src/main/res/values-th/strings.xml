@@ -200,6 +200,7 @@
     <string name="place_destination">ปลายทาง</string>
     <string name="discovery_search_placeholder">ค้นหา %1$s</string>
     <string name="discovery_no_results">ไม่พบ %1$s</string>
+    <string name="discovery_no_results_hint">ลองปรับการค้นหาของคุณ</string>
     <string name="discovery_no_recommendations">ไม่มีคำแนะนำ</string>
     <string name="discovery_search_hint">ลองค้นหา %1$s เพื่อสมัครรับข้อมูล</string>
     <string name="access_no_rules">ไม่มีกฎการเข้าถึง</string>

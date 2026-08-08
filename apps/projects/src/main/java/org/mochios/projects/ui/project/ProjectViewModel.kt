@@ -21,7 +21,9 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
+import org.mochios.android.files.SavedExport
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.FieldOption
@@ -67,7 +69,8 @@ data class ProjectUiState(
     val isExporting: Boolean = false,
     /** Export data fetched and waiting for the user to pick a destination. */
     val pendingExport: PendingExport? = null,
-    val exportSaved: Boolean = false,
+    /** An export that landed, ready to be offered to the share sheet. */
+    val savedExport: SavedExport? = null,
     val exportFailed: Boolean = false,
     val selectedObjectId: String? = null,
     /**
@@ -224,6 +227,21 @@ class ProjectViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The handle the data endpoints want: the project's canonical id, falling
+     * back to its fingerprint and then to whatever the screen was routed with.
+     */
+    private fun entityId(): String {
+        val project = _uiState.value.projectDetails?.project ?: return projectId
+        return project.id.ifEmpty { project.fingerprint.ifEmpty { projectId } }
+    }
+
+    /**
+     * Stages the project's attachments, then asks the screen for somewhere to
+     * put the backup. Nothing is downloaded here — the server builds the zip
+     * and it runs to megabytes, so it is fetched straight into the file the
+     * user picks. See [writeExportTo].
+     */
     fun exportProject() {
         if (_uiState.value.isExporting) {
             return
@@ -233,18 +251,17 @@ class ProjectViewModel @Inject constructor(
             try {
                 var rounds = 0
                 while (rounds < MAX_WARM_ROUNDS) {
-                    val warm = repository.warmExport(projectId)
+                    val warm = repository.warmExport(entityId())
                     if (warm.remaining <= 0) {
                         break
                     }
                     rounds++
                 }
-                val data = repository.exportData(projectId)
                 val name = _uiState.value.projectDetails?.project?.name
                 _uiState.value = _uiState.value.copy(
                     pendingExport = PendingExport(
-                        json = data.toString(),
-                        suggestedName = repository.exportFileName(name, "projects-backup")
+                        suggestedName = repository.exportFileName(name, "projects-backup", "zip"),
+                        mimeType = MIME_ZIP,
                     )
                 )
             } catch (error: Exception) {
@@ -255,14 +272,30 @@ class ProjectViewModel @Inject constructor(
         }
     }
 
-    /** Writes the pending export to the destination the user picked. */
+    /**
+     * Downloads the pending export into the destination the user picked.
+     */
     fun writeExportTo(uri: Uri) {
         val pending = _uiState.value.pendingExport ?: return
         viewModelScope.launch {
-            val ok = repository.saveTextFile(uri, pending.json)
+            _uiState.value = _uiState.value.copy(pendingExport = null, isExporting = true)
+            val content = pending.content
+            val ok = try {
+                if (content != null) {
+                    repository.saveTextFile(uri, content)
+                } else {
+                    repository.downloadExport(entityId(), uri)
+                }
+            } catch (_: Exception) {
+                false
+            }
             _uiState.value = _uiState.value.copy(
-                pendingExport = null,
-                exportSaved = ok,
+                isExporting = false,
+                savedExport = if (ok) {
+                    SavedExport(uri, pending.mimeType, pending.suggestedName)
+                } else {
+                    null
+                },
                 exportFailed = !ok
             )
         }
@@ -274,7 +307,7 @@ class ProjectViewModel @Inject constructor(
     }
 
     fun clearExportResult() {
-        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
+        _uiState.value = _uiState.value.copy(savedExport = null, exportFailed = false)
     }
 
     /**
@@ -629,6 +662,18 @@ class ProjectViewModel @Inject constructor(
         return details.views.find { it.id == activeId } ?: details.views.firstOrNull()
     }
 
+    /**
+     * Field ids the active view pins. Empty when there is no active view or it
+     * pins none — callers then fall back to their own default (card flags for
+     * cards, every field of the class for the object detail form).
+     */
+    fun getActiveViewFieldIds(): List<String> {
+        val view = getActiveView() ?: return emptyList()
+        return view.fields.split(",")
+            .map { part -> part.trim() }
+            .filter { part -> part.isNotBlank() }
+    }
+
     fun getFieldById(fieldId: String): ProjectField? {
         val details = _uiState.value.projectDetails ?: return null
         for ((_, fields) in details.fields) {
@@ -879,9 +924,8 @@ class ProjectViewModel @Inject constructor(
     fun getCardFields(classId: String): List<ProjectField> {
         val details = _uiState.value.projectDetails ?: return emptyList()
         val allFields = details.fields[classId] ?: return emptyList()
-        val view = getActiveView()
-        if (view != null && view.fields.isNotBlank()) {
-            val viewFieldIds = view.fields.split(",").map { it.trim() }.toSet()
+        val viewFieldIds = getActiveViewFieldIds().toSet()
+        if (viewFieldIds.isNotEmpty()) {
             return allFields.filter { it.id in viewFieldIds }
         }
         return allFields.filter { it.showOnCard }

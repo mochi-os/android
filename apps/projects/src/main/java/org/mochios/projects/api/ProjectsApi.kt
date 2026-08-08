@@ -30,6 +30,7 @@ import org.mochios.projects.model.Template
 import org.mochios.projects.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -41,25 +42,21 @@ import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.Streaming
 
 // Response wrappers
 data class ProjectListResponse(val projects: List<Project> = emptyList())
 data class ProjectResponse(val project: Project = Project())
 
-// `-/create` returns the new project. The backend may send it flat (id,
-// fingerprint, … at the top level, like objects/create) or nested under
-// `project`, so this captures both and the repository resolves whichever is set.
+// `-/create` answers with the new project's identity flat in `data`:
+// {"data": {"fingerprint": "…", "id": "…"}}, the way objects/create does.
+// The nested `project` is kept for the wrapped shape other endpoints use, and
+// the repository resolves whichever the backend sent.
 data class ProjectCreateResponse(
 
     val id: String = "",
 
     val fingerprint: String = "",
-
-    val name: String = "",
-
-    val description: String = "",
-
-    val prefix: String = "",
 
     val project: Project? = null
 )
@@ -516,10 +513,14 @@ interface ProjectsApi {
         @Path("projectId") projectId: String
     ): Response<ApiResponse<WarmExportResponse>>
 
+    // Answers with the zip itself, not a JSON envelope, so this is the one
+    // endpoint here that isn't an ApiResponse. @Streaming keeps the body off
+    // the heap — a warmed export carries every attachment.
+    @Streaming
     @GET("{projectId}/-/data/export")
     suspend fun exportData(
         @Path("projectId") projectId: String
-    ): Response<ApiResponse<JsonObject>>
+    ): Response<ResponseBody>
 
     @Multipart
     @POST("{projectId}/-/data/import")

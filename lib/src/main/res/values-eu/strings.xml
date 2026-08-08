@@ -206,6 +206,7 @@
     <string name="place_destination">Helmuga</string>
     <string name="discovery_search_placeholder">Bilatu %1$ss</string>
     <string name="discovery_no_results">Ez da %1$ss aurkitu</string>
+    <string name="discovery_no_results_hint">Saiatu zure bilaketa doitzen</string>
     <string name="discovery_no_recommendations">Gomendiorik ez</string>
     <string name="discovery_search_hint">Saiatu %1$s bat bilatzen harpidetzeko</string>
     <string name="access_no_rules">Sarbide-araurik ez</string>

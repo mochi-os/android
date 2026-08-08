@@ -5,7 +5,13 @@
 
 package org.mochios.android.files
 
+import android.content.ClipData
+import android.content.Context
+import android.content.Intent
 import android.net.Uri
+import android.os.Build
+import android.os.Environment
+import android.provider.DocumentsContract
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
@@ -23,16 +29,77 @@ import androidx.compose.runtime.remember
  * hand back nothing but a [Uri].
  */
 
+/** Mime type of a JSON export, and the save dialog's default. */
+const val MIME_JSON = "application/json"
+
+/** Mime type of a CSV export. */
+const val MIME_CSV = "text/csv"
+
+/** Mime type of a zipped export. */
+const val MIME_ZIP = "application/zip"
+
 /**
- * An export that has been fetched but still needs somewhere to go.
+ * An export that still needs somewhere to go.
  *
- * Held in ViewModel state between the export call returning and the user
+ * Held in ViewModel state between the export being asked for and the user
  * picking a destination, so nothing large sits in composition.
  *
- * @property json the payload to write.
  * @property suggestedName name to offer in the system save dialog.
+ * @property mimeType what the payload is, so a screen offering more than one
+ *   kind of export knows which save dialog to open.
+ * @property content the payload, for an export the app builds itself. Null
+ *   means the server holds it: a backup is a zip that runs to megabytes, so it
+ *   is streamed to the destination once there is one rather than parked here.
  */
-data class PendingExport(val json: String, val suggestedName: String)
+data class PendingExport(
+    val suggestedName: String,
+    val mimeType: String = MIME_JSON,
+    val content: String? = null,
+)
+
+/**
+ * An export that has been written, and where it went.
+ *
+ * Held in ViewModel state so the screen can offer the finished file to the
+ * share sheet. The destination is the document the user picked, which the app
+ * holds a read grant for, so it can be passed on to whatever they share to.
+ *
+ * @property uri the document that was written.
+ * @property mimeType what it holds, so the sheet offers sensible targets.
+ * @property name the file's name, for the sheet's content preview.
+ */
+data class SavedExport(
+    val uri: Uri,
+    val mimeType: String,
+    val name: String,
+)
+
+/**
+ * Opens the system share sheet with a finished export.
+ *
+ * The uri is the document the picker handed back, so the grant has to travel
+ * with the intent for the receiving app to read it — as a flag, and as
+ * [ClipData], which is what makes the grant stick on the targets that ignore
+ * `EXTRA_STREAM` alone.
+ *
+ * @param context whatever the screen has to hand; the chooser is started with
+ *   `NEW_TASK` so a non-activity context works too.
+ * @param export the file that was written, from [SavedExport].
+ */
+fun shareExportFile(context: Context, export: SavedExport) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = export.mimeType
+        putExtra(Intent.EXTRA_STREAM, export.uri)
+        // Names the sheet's content preview; without it the sheet reads as a
+        // bare file with no title.
+        putExtra(Intent.EXTRA_TITLE, export.name)
+        clipData = ClipData.newRawUri(export.name, export.uri)
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    }
+    val chooser = Intent.createChooser(intent, export.name)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    context.startActivity(chooser)
+}
 
 /** Opens the system save dialog. See [rememberFileSaveLauncher]. */
 fun interface FileSaveLauncher {
@@ -42,26 +109,70 @@ fun interface FileSaveLauncher {
 }
 
 /**
- * Remembers a save dialog for JSON documents.
+ * Remembers a save dialog for documents of [mimeType].
  *
  * Only the destination comes back through here — [onResult] hands the uri
  * straight to the caller, who writes to it through `FileRepository`. Nothing
  * is held in composition, so an export interrupted by process death loses
  * nothing that wasn't already lost.
  *
+ * The type is fixed when the launcher is remembered, so a screen that exports
+ * both JSON and CSV remembers one launcher per type. The dialog is hinted to
+ * open on Downloads — see [CreateDocumentInDownloads] for how far that goes.
+ *
+ * @param mimeType what the file will hold — [MIME_JSON] or [MIME_CSV].
  * @param onResult called with the chosen destination, or with null when the
  *   user backs out. Callers must handle the null case: leaving a cancelled
  *   export pending would stall the next one.
  */
 @Composable
-fun rememberFileSaveLauncher(onResult: (Uri?) -> Unit): FileSaveLauncher {
-    val launcher = rememberLauncherForActivityResult(
-        ActivityResultContracts.CreateDocument("application/json")
-    ) { uri: Uri? ->
+fun rememberFileSaveLauncher(
+    mimeType: String = MIME_JSON,
+    onResult: (Uri?) -> Unit,
+): FileSaveLauncher {
+    val contract = remember(mimeType) { CreateDocumentInDownloads(mimeType) }
+    val launcher = rememberLauncherForActivityResult(contract) { uri: Uri? ->
         onResult(uri)
     }
     return remember(launcher) {
         FileSaveLauncher { fileName -> launcher.launch(fileName) }
+    }
+}
+
+/**
+ * `CreateDocument` that opens on Downloads.
+ *
+ * The base contract sends only the suggested name, so the dialog lands
+ * wherever the picker was last left — which for an export is rarely where the
+ * user wants it. `EXTRA_INITIAL_URI` is a hint, not a setting: a picker that
+ * remembers its own last location, or an OEM picker that ignores the extra,
+ * still decides. The user can navigate anywhere from there either way.
+ */
+private class CreateDocumentInDownloads(
+    mimeType: String,
+) : ActivityResultContracts.CreateDocument(mimeType) {
+
+    override fun createIntent(context: Context, input: String): Intent {
+        val intent = super.createIntent(context, input)
+        downloadsUri()?.let { uri -> intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, uri) }
+        return intent
+    }
+
+    /**
+     * The Downloads folder as a documents-provider uri.
+     *
+     * Only meaningful from API 26, where the external storage provider exposes
+     * it under a stable document id; below that the hint is skipped and the
+     * picker opens wherever it would have.
+     */
+    private fun downloadsUri(): Uri? {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+            return null
+        }
+        return DocumentsContract.buildDocumentUri(
+            "com.android.externalstorage.documents",
+            "primary:${Environment.DIRECTORY_DOWNLOADS}",
+        )
     }
 }
 

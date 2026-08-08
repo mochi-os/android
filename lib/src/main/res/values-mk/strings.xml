@@ -202,6 +202,7 @@
     <string name="place_destination">Дестинација</string>
     <string name="discovery_search_placeholder">Пребарувај %1$ss</string>
     <string name="discovery_no_results">Не се пронајдени %1$ss</string>
+    <string name="discovery_no_results_hint">Обидете се да го прилагодите вашето пребарување</string>
     <string name="discovery_no_recommendations">Нема препораки</string>
     <string name="discovery_search_hint">Обидете се да пребарате %1$s за да се претплатите</string>
     <string name="access_no_rules">Нема правила за пристап</string>

@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.files.PendingExport
+import org.mochios.android.files.SavedExport
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.Template
 import org.mochios.projects.repository.ProjectsRepository
@@ -32,7 +33,7 @@ data class DesignUiState(
     val isSaving: Boolean = false,
     // Design JSON fetched and waiting for the user to pick a destination.
     val pendingExport: PendingExport? = null,
-    val exportSaved: Boolean = false,
+    val savedExport: SavedExport? = null,
     val exportFailed: Boolean = false,
     val templates: List<Template> = emptyList(),
     val isLoadingTemplates: Boolean = false,
@@ -348,8 +349,8 @@ class DesignViewModel @Inject constructor(
                 val name = _uiState.value.projectDetails?.project?.name
                 _uiState.value = _uiState.value.copy(
                     pendingExport = PendingExport(
-                        json = json.toString(),
-                        suggestedName = repository.exportFileName(name, "design")
+                        suggestedName = repository.exportFileName(name, "design"),
+                        content = json.toString(),
                     )
                 )
             } catch (e: Exception) {
@@ -358,14 +359,22 @@ class DesignViewModel @Inject constructor(
         }
     }
 
-    /** Writes the pending export to the destination the user picked. */
+    /**
+     * Writes the pending export to the destination the user picked. A design
+     * is built here rather than downloaded, so it always carries its content.
+     */
     fun writeExportTo(uri: Uri) {
         val pending = _uiState.value.pendingExport ?: return
+        val content = pending.content ?: return
         viewModelScope.launch {
-            val ok = repository.saveTextFile(uri, pending.json)
+            val ok = repository.saveTextFile(uri, content)
             _uiState.value = _uiState.value.copy(
                 pendingExport = null,
-                exportSaved = ok,
+                savedExport = if (ok) {
+                    SavedExport(uri, pending.mimeType, pending.suggestedName)
+                } else {
+                    null
+                },
                 exportFailed = !ok
             )
         }
@@ -377,7 +386,7 @@ class DesignViewModel @Inject constructor(
     }
 
     fun clearExportResult() {
-        _uiState.value = _uiState.value.copy(exportSaved = false, exportFailed = false)
+        _uiState.value = _uiState.value.copy(savedExport = null, exportFailed = false)
     }
 
     fun loadTemplates() {

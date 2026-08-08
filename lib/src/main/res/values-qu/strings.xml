@@ -202,6 +202,7 @@
     <string name="place_destination">Chayanan</string>
     <string name="discovery_search_placeholder">%1$s-kunata maskay</string>
     <string name="discovery_no_results">Mana %1$s-kuna tarisqachu</string>
+    <string name="discovery_no_results_hint">Maskayniykita allichayta ruway</string>
     <string name="discovery_no_recommendations">Mana yuyaychaykuna</string>
     <string name="discovery_search_hint">Huk %1$s-ta maskay qatipanaykipaq</string>
     <string name="access_no_rules">Mana yaykuy kamachikuykuna</string>

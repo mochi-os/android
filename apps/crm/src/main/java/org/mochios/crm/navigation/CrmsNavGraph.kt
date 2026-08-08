@@ -136,7 +136,16 @@ fun NavGraphBuilder.crmsNavGraph(
     ) {
         CrmSettingsScreen(
             onBack = { navController.popBackStack() },
-            onCrmDeleted = { navController.popBackStack(CrmsApp.ROUTER, inclusive = false) },
+            // The CRM is gone, so close settings and land on All. Popping back
+            // to the router did nothing: it removes itself from the stack once
+            // it resolves, so there was no entry to pop to and the user was
+            // left sitting on the settings page of a deleted CRM.
+            onCrmDeleted = {
+                navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
+                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
         )
     }
 

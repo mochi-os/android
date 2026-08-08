@@ -252,6 +252,7 @@
     <string name="place_destination">Destinació</string>
     <string name="discovery_search_placeholder">Cerca %1$ss</string>
     <string name="discovery_no_results">No s\'ha trobat cap %1$s</string>
+    <string name="discovery_no_results_hint">Prova d\'ajustar la cerca</string>
     <string name="discovery_no_recommendations">Sense recomanacions</string>
     <string name="discovery_search_hint">Proveu de cercar un %1$s al qual subscriure-us</string>
     <string name="access_no_rules">Sense regles d\'accés</string>

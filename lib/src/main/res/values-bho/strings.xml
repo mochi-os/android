@@ -199,6 +199,7 @@
     <string name="place_destination">गंतव्य</string>
     <string name="discovery_search_placeholder">%1$ss खोजीं</string>
     <string name="discovery_no_results">कवनो %1$ss ना मिलल</string>
+    <string name="discovery_no_results_hint">अपना खोज समायोजित करे के कोशिश करीं</string>
     <string name="discovery_no_recommendations">कवनो सिफारिश ना</string>
     <string name="discovery_search_hint">सब्सक्राइब करे खातिर एगो %1$s खोजे के कोशिश करीं</string>
     <string name="access_no_rules">कवनो पहुँच नियम ना</string>

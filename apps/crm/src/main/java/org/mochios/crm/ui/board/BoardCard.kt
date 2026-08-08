@@ -54,15 +54,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmObject
+import org.mochios.crm.model.Person
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
 
@@ -79,6 +82,7 @@ fun BoardCard(
     // screen already collects the state; this follows the same route its
     // siblings do.
     crmDetails: CrmDetails?,
+    people: List<Person>,
     borderFieldId: String?,
     childrenByParent: Map<String, List<CrmObject>>,
     columnFieldId: String = "",
@@ -88,6 +92,8 @@ fun BoardCard(
     cardIndexInColumn: Int = -1,
     columnObjectsForDrop: List<CrmObject> = emptyList(),
     targetColumnId: String = "",
+    /** The lane this card sits in, sent as row_value so a drop changes lane. */
+    targetRowId: String = "",
     onClick: () -> Unit
 ) {
     var showMoveSheet by rememberSaveable(obj.id) { mutableStateOf(false) }
@@ -101,7 +107,7 @@ fun BoardCard(
     val borderColor = if (borderFieldId != null) {
         val borderValue = obj.stringValue(borderFieldId)
         if (borderValue.isNotBlank()) {
-            val options = viewModel.getAllOptionsForField(borderFieldId)
+            val options = viewModel.getOptionsForObject(obj.objectClass, borderFieldId)
             val option = options.find { it.id == borderValue }
             if (option != null && option.colour.isNotBlank()) {
                 parseColor(option.colour)
@@ -135,30 +141,24 @@ fun BoardCard(
                 orientation = DropOrientation.Vertical,
                 acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                 onDrop = { sourceId, edge ->
-                    // Compute new rank (1-based) within the target column.
-                    // Index in the rendered list; if source is in the same
-                    // column we exclude it from the count so the rank lines
-                    // up with what the server sees post-removal.
-                    val sameColumn = columnObjectsForDrop.any { it.id == sourceId }
-                    val effectiveIndex = if (sameColumn) {
-                        // Count target's position excluding source.
-                        var seen = 0
-                        var pos = 0
-                        for (o in columnObjectsForDrop) {
-                            if (o.id == sourceId) continue
-                            if (o.id == obj.id) { pos = seen; break }
-                            seen++
-                        }
-                        pos
-                    } else {
-                        cardIndexInColumn
-                    }
-                    val rank = when (edge) {
-                        DragEdge.Top -> effectiveIndex + 1
-                        DragEdge.Bottom -> effectiveIndex + 2
-                        else -> effectiveIndex + 1
-                    }
-                    viewModel.moveObject(sourceId, columnFieldId, targetColumnId, rank)
+                    val rank = dropRank(
+                        columnObjects = columnObjectsForDrop.map { candidate -> candidate.id },
+                        targetId = obj.id,
+                        sourceId = sourceId,
+                        below = edge == DragEdge.Bottom,
+                    )
+                    // rowField/rowValue carry the lane. Without them the server
+                    // leaves the row value untouched (crm.star only writes it
+                    // under `if row_field:`), so a cross-lane drag was a no-op
+                    // and the refresh put the card back where it started.
+                    viewModel.moveObject(
+                        objectId = sourceId,
+                        field = columnFieldId,
+                        value = targetColumnId,
+                        rank = rank,
+                        rowField = rowFieldId,
+                        rowValue = if (rowFieldId != null) targetRowId else null,
+                    )
                 }
             )
     } else Modifier
@@ -286,7 +286,10 @@ fun BoardCard(
                                 val value = obj.stringValue(field.id)
                                 when (field.fieldtype) {
                                     "enumerated" -> {
-                                        val options = viewModel.getAllOptionsForField(field.id)
+                                        val options = viewModel.getOptionsForObject(
+                                            obj.objectClass,
+                                            field.id,
+                                        )
                                         val opt = options.find { it.id == value }
                                         Row(verticalAlignment = Alignment.CenterVertically) {
                                             if (opt != null && opt.colour.isNotBlank()) {
@@ -302,6 +305,34 @@ fun BoardCard(
                                             }
                                             Text(
                                                 text = opt?.name ?: value,
+                                                fontSize = 10.sp,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                                maxLines = 1,
+                                                overflow = TextOverflow.Ellipsis
+                                            )
+                                        }
+                                    }
+                                    "user" -> {
+                                        // Resolve the entity ID to a member name
+                                        // (matching the detail view and web);
+                                        // fall back to the raw value if unknown.
+                                        val resolved = people.find { person -> person.id == value }
+                                            ?.name?.takeIf { name -> name.isNotBlank() } ?: value
+                                        // Avatar then name, as the tree rows show
+                                        // it. The value is the person's entity id,
+                                        // which is the id the people app serves an
+                                        // avatar under; initials stand in when
+                                        // there is no photo to load.
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            EntityAvatar(
+                                                name = resolved,
+                                                src = personAvatarPath(value),
+                                                seed = value,
+                                                size = 14.dp,
+                                            )
+                                            Spacer(modifier = Modifier.width(4.dp))
+                                            Text(
+                                                text = resolved,
                                                 fontSize = 10.sp,
                                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                                 maxLines = 1,
@@ -336,6 +367,7 @@ fun BoardCard(
                                     obj = child,
                                     viewModel = viewModel,
                                     crmDetails = crmDetails,
+                                    people = people,
                                     borderFieldId = borderFieldId,
                                     childrenByParent = childrenByParent,
                                     columnFieldId = columnFieldId,
@@ -369,4 +401,28 @@ fun BoardCard(
 private fun countDeepChildren(parentId: String, childrenByParent: Map<String, List<CrmObject>>): Int {
     val direct = childrenByParent[parentId] ?: return 0
     return direct.size + direct.sumOf { countDeepChildren(it.id, childrenByParent) }
+}
+
+/**
+ * The 1-based position to ask the server to place a dragged card at.
+ *
+ * [columnObjects] must be the whole COLUMN in rank order, not one swimlane of
+ * it: the server scopes the slot to (field, value) — `rank_move_key` in crm.star
+ * lists every object sharing the target column value — and has no lane
+ * dimension. Passing a lane-local list made position 2 of a lane land as
+ * position 2 of the column.
+ *
+ * A source already in this column is excluded from the count, because the
+ * server sees the list with it removed.
+ */
+internal fun dropRank(
+    columnObjects: List<String>,
+    targetId: String,
+    sourceId: String,
+    below: Boolean,
+): Int {
+    val others = columnObjects.filter { candidate -> candidate != sourceId }
+    val index = others.indexOf(targetId)
+    if (index < 0) return others.size + 1
+    return if (below) index + 2 else index + 1
 }

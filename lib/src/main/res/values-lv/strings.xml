@@ -200,6 +200,7 @@
     <string name="place_destination">Galamērķis</string>
     <string name="discovery_search_placeholder">Meklēt %1$s</string>
     <string name="discovery_no_results">Nav atrasts neviens %1$s</string>
+    <string name="discovery_no_results_hint">Mēģiniet pielāgot meklēšanu</string>
     <string name="discovery_no_recommendations">Nav ieteikumu</string>
     <string name="discovery_search_hint">Mēģiniet meklēt %1$s, kam abonēt</string>
     <string name="access_no_rules">Nav piekļuves noteikumu</string>

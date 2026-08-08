@@ -200,6 +200,7 @@
     <string name="place_destination">Cieľ</string>
     <string name="discovery_search_placeholder">Hľadať %1$ss</string>
     <string name="discovery_no_results">Nenašli sa žiadne %1$ss</string>
+    <string name="discovery_no_results_hint">Skúste upraviť vyhľadávanie</string>
     <string name="discovery_no_recommendations">Žiadne odporúčania</string>
     <string name="discovery_search_hint">Skúste vyhľadať %1$s na odber</string>
     <string name="access_no_rules">Žiadne pravidlá prístupu</string>

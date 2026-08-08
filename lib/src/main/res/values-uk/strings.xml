@@ -200,6 +200,7 @@
     <string name="place_destination">Призначення</string>
     <string name="discovery_search_placeholder">Пошук %1$ss</string>
     <string name="discovery_no_results">%1$ss не знайдено</string>
+    <string name="discovery_no_results_hint">Спробуйте змінити пошуковий запит</string>
     <string name="discovery_no_recommendations">Немає рекомендацій</string>
     <string name="discovery_search_hint">Спробуйте знайти %1$s, на який можна підписатися</string>
     <string name="access_no_rules">Немає правил доступу</string>

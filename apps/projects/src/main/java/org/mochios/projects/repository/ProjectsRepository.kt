@@ -10,6 +10,7 @@ import com.google.gson.JsonObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
@@ -84,15 +85,10 @@ class ProjectsRepository @Inject constructor(
         template: String? = null
     ): Project {
         val r = api.createProject(name, description, prefix, privacy, template).unwrap()
-        // Prefer the nested project when the backend sends one; otherwise build it
-        // from the flat top-level fields.
-        return r.project ?: Project(
-            id = r.id,
-            fingerprint = r.fingerprint,
-            name = r.name,
-            description = r.description,
-            prefix = r.prefix
-        )
+        // Prefer the nested project when the backend sends one; otherwise build
+        // it from the flat id and fingerprint. Only the identity comes back
+        // here — callers reload the list for the rest.
+        return r.project ?: Project(id = r.id, fingerprint = r.fingerprint)
     }
 
     suspend fun getTemplates(): List<Template> =
@@ -385,8 +381,19 @@ class ProjectsRepository @Inject constructor(
     suspend fun warmExport(projectId: String): WarmExportResponse =
         api.warmExport(projectId).unwrap()
 
-    suspend fun exportData(projectId: String): JsonObject =
-        api.exportData(projectId).unwrap()
+    /**
+     * Downloads the project's backup — objects, links and attachments, zipped
+     * by the server — straight into [destination].
+     *
+     * Streamed rather than returned, so a big export never has to fit in
+     * memory on its way to the file.
+     *
+     * @return true when the whole zip reached the file.
+     */
+    suspend fun downloadExport(projectId: String, destination: Uri): Boolean {
+        val body = api.exportData(projectId).unwrapRaw()
+        return body.byteStream().use { stream -> fileStore.writeStream(destination, stream) }
+    }
 
     suspend fun importData(projectId: String, backupJson: String) {
         val part = fileStore.bytesPart(

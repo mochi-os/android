@@ -70,11 +70,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.people.R
 import org.mochios.people.model.Friend
-import org.mochios.people.ui.components.PeopleEmptyState
 import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.android.R as MochiR
@@ -403,7 +403,7 @@ private fun FriendsContent(
 
 @Composable
 private fun EmptyFriendsHint(searchQuery: String) {
-    PeopleEmptyState(
+    EmptyState(
         icon = Icons.Default.Group,
         title = stringResource(R.string.people_friends_empty),
         subtitle = if (searchQuery.isNotBlank()) {
@@ -411,7 +411,8 @@ private fun EmptyFriendsHint(searchQuery: String) {
         } else {
             stringResource(R.string.people_friends_add_to_start)
         },
-        modifier = Modifier.padding(top = 64.dp),
+        modifier = Modifier.padding(top = 64.dp, start = 32.dp, end = 32.dp),
+        verticalArrangement = Arrangement.Top,
     )
 }
 

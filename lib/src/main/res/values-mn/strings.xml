@@ -202,6 +202,7 @@
     <string name="place_destination">Хүрэх газар</string>
     <string name="discovery_search_placeholder">%1$s хайх</string>
     <string name="discovery_no_results">%1$s олдсонгүй</string>
+    <string name="discovery_no_results_hint">Хайлтаа засахыг туршаад үз</string>
     <string name="discovery_no_recommendations">Зөвлөмж байхгүй</string>
     <string name="discovery_search_hint">Захиалах %1$s хайж үзнэ үү</string>
     <string name="access_no_rules">Хандалтын дүрэм байхгүй</string>

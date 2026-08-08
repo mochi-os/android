@@ -179,6 +179,9 @@ fun CommentsTab(
                 }
                 Spacer(modifier = Modifier.height(4.dp))
             }
+            // Attachments ride along with a comment rather than standing in for
+            // one, so text is what makes a comment sendable.
+            val canSend = newComment.isNotBlank()
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.fillMaxWidth()
@@ -200,19 +203,23 @@ fun CommentsTab(
                         contentDescription = stringResource(R.string.projects_comment_attach)
                     )
                 }
-                IconButton(
-                    onClick = {
-                        if (newComment.isNotBlank() || pendingFiles.isNotEmpty()) {
+                // Send appears only once there is something to send — an empty
+                // composer shows no button rather than a dead greyed-out one.
+                if (canSend) {
+                    IconButton(
+                        onClick = {
                             onCreateComment(newComment, replyToId, pendingFiles.toList())
                             newComment = ""
                             replyToId = null
                             replyToName = null
                             pendingFiles.clear()
                         }
-                    },
-                    enabled = newComment.isNotBlank() || pendingFiles.isNotEmpty()
-                ) {
-                    Icon(Icons.AutoMirrored.Filled.Send, contentDescription = stringResource(R.string.projects_comment_send))
+                    ) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.Send,
+                            contentDescription = stringResource(R.string.projects_comment_send)
+                        )
+                    }
                 }
             }
         }

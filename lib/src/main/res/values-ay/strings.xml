@@ -199,6 +199,7 @@
     <string name="place_destination">Puriña</string>
     <string name="discovery_search_placeholder">%1$s thaqhaña</string>
     <string name="discovery_no_results">Janiw %1$s jikxatasiti</string>
+    <string name="discovery_no_results_hint">Thaqhañ criterionak yapxat\'am yant\'am</string>
     <string name="discovery_no_recommendations">Janiw iwxanak utjkiti</string>
     <string name="discovery_search_hint">Mä %1$s suscribiñatakix thaqham</string>
     <string name="access_no_rules">Janiw mantañ kamachinakax utjkiti</string>

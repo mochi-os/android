@@ -202,6 +202,7 @@
     <string name="place_destination">ទិសដៅ</string>
     <string name="discovery_search_placeholder">ស្វែងរក %1$s</string>
     <string name="discovery_no_results">រកមិនឃើញ %1$s ទេ</string>
+    <string name="discovery_no_results_hint">សាកល្បងកែតម្រូវការស្វែងរករបស់អ្នក</string>
     <string name="discovery_no_recommendations">គ្មានការណែនាំ</string>
     <string name="discovery_search_hint">សាកល្បងស្វែងរក %1$s ដើម្បីជាវ</string>
     <string name="access_no_rules">គ្មានច្បាប់ចូលប្រើ</string>

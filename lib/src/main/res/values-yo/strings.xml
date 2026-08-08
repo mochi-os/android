@@ -202,6 +202,7 @@
     <string name="place_destination">Ibi àfojúsùn</string>
     <string name="discovery_search_placeholder">Wá %1$ss</string>
     <string name="discovery_no_results">Kò rí %1$ss kankan</string>
+    <string name="discovery_no_results_hint">Gbìyànjú láti ṣàtúnṣe ìwákiri rẹ</string>
     <string name="discovery_no_recommendations">Kò sí àbá</string>
     <string name="discovery_search_hint">Gbìyànjú láti wá %1$s láti forúkọsílẹ̀ sí</string>
     <string name="access_no_rules">Kò sí òfin ìráyè</string>

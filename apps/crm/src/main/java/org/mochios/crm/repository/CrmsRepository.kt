@@ -5,10 +5,12 @@
 
 package org.mochios.crm.repository
 
+import android.net.Uri
 import com.google.gson.JsonObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
@@ -19,6 +21,7 @@ import org.mochios.crm.api.CrmsApi
 import org.mochios.crm.api.SetValueRequest
 import org.mochios.crm.api.SubscribeRequest
 import org.mochios.crm.api.UnsubscribeRequest
+import org.mochios.crm.api.WarmExportResponse
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.Group
@@ -76,7 +79,13 @@ class CrmsRepository @Inject constructor(
         description: String? = null,
         privacy: String = "private",
         template: String? = null
-    ): Crm = api.createCrm(name, description, privacy, template).unwrap().crm
+    ): Crm {
+        val r = api.createCrm(name, description, privacy, template).unwrap()
+        // Prefer the nested crm when the backend sends one; otherwise build it
+        // from the flat id and fingerprint. Only the identity comes back here —
+        // callers reload the list for the rest.
+        return r.crm ?: Crm(id = r.id, fingerprint = r.fingerprint)
+    }
 
     suspend fun getTemplates(): List<Template> =
         api.getTemplates().unwrap().templates
@@ -138,6 +147,10 @@ class CrmsRepository @Inject constructor(
     suspend fun getPeople(crmId: String): List<Person> =
         api.getPeople(crmId).unwrap().people
 
+    /** A shareable link for the CRM, from the `-/share` endpoint. */
+    suspend fun getShareLink(crmId: String): String =
+        api.getShareLink(crmId).unwrap().link
+
     suspend fun getAccess(crmId: String): List<AccessRule> =
         api.getAccess(crmId).unwrap().rules
 
@@ -167,8 +180,11 @@ class CrmsRepository @Inject constructor(
             CreateObjectRequest(classId = classId, title = title, parent = parent)
         ).unwrap()
 
-    suspend fun getObject(crmId: String, objectId: String): CrmObject =
-        api.getObject(crmId, objectId).unwrap()
+    suspend fun getObject(crmId: String, objectId: String): CrmObject {
+        val response = api.getObject(crmId, objectId).unwrap()
+        // Values arrive beside the object, not within it.
+        return response.`object`.copy(values = response.values)
+    }
 
     suspend fun updateObject(crmId: String, objectId: String, parent: String? = null) {
         api.updateObject(crmId, objectId, parent).unwrap()
@@ -287,6 +303,39 @@ class CrmsRepository @Inject constructor(
         templateVersion: Int? = null
     ) {
         api.importDesign(crmId, data, template, templateVersion).unwrap()
+    }
+
+    /**
+     * Pulls the CRM's attachments into the export staging area.
+     *
+     * @return how much is still outstanding; call again while it is above zero.
+     */
+    suspend fun warmExport(crmId: String): WarmExportResponse =
+        api.warmExport(crmId).unwrap()
+
+    /**
+     * Downloads the CRM's backup — objects, links and attachments, zipped by
+     * the server — straight into [destination].
+     *
+     * Streamed rather than returned, so a big export never has to fit in
+     * memory on its way to the file.
+     *
+     * @return true when the whole zip reached the file.
+     */
+    suspend fun downloadExport(crmId: String, destination: Uri): Boolean {
+        val body = api.exportData(crmId).unwrapRaw()
+        return body.byteStream().use { stream -> fileStore.writeStream(destination, stream) }
+    }
+
+    /** Restores the objects held in a backup file, uploaded as a JSON part. */
+    suspend fun importData(crmId: String, backupJson: String) {
+        val part = fileStore.bytesPart(
+            field = "file",
+            fileName = "import.json",
+            mimeType = "application/json",
+            bytes = backupJson.toByteArray()
+        )
+        api.importData(crmId, part).unwrap()
     }
 
     // ---- Views ----

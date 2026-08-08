@@ -200,6 +200,7 @@
     <string name="place_destination">Cilj</string>
     <string name="discovery_search_placeholder">Iskanje %1$ss</string>
     <string name="discovery_no_results">Ni najdenih %1$ss</string>
+    <string name="discovery_no_results_hint">Poskusi prilagoditi iskanje</string>
     <string name="discovery_no_recommendations">Ni priporočil</string>
     <string name="discovery_search_hint">Poskusite poiskati %1$s za naročnino</string>
     <string name="access_no_rules">Ni pravil dostopa</string>

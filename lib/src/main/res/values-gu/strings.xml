@@ -203,6 +203,7 @@
     <string name="place_destination">ગંતવ્ય</string>
     <string name="discovery_search_placeholder">%1$s શોધો</string>
     <string name="discovery_no_results">કોઈ %1$s મળ્યું નથી</string>
+    <string name="discovery_no_results_hint">તમારી શોધને સમાયોજિત કરવાનો પ્રયાસ કરો</string>
     <string name="discovery_no_recommendations">કોઈ ભલામણો નથી</string>
     <string name="discovery_search_hint">સબ્સ્ક્રાઇબ કરવા માટે %1$s શોધવાનો પ્રયાસ કરો</string>
     <string name="access_no_rules">કોઈ ઍક્સેસ નિયમો નથી</string>

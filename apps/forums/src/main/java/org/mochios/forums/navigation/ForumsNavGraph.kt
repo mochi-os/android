@@ -157,11 +157,22 @@ fun NavGraphBuilder.forumsNavGraph(
     ) {
         ForumSettingsScreen(
             onBack = { navController.popBackStack() },
-            onForumDeleted = { navController.popBackStack(ForumsApp.ROUTER, inclusive = false) },
+            // Navigate rather than pop: the router removes itself from the
+            // stack once it resolves, so popping back to it found no entry and
+            // left the user on the settings page of a forum that was gone.
+            onForumDeleted = {
+                navController.navigate(ForumsApp.ROUTER) {
+                    popUpTo(ForumsApp.FORUM) { inclusive = true }
+                }
+            },
             // Leaving the forum leaves its screens too — the user is no longer a
             // subscriber, so the forum behind settings is no longer theirs to
             // return to.
-            onUnsubscribed = { navController.popBackStack(ForumsApp.ROUTER, inclusive = false) },
+            onUnsubscribed = {
+                navController.navigate(ForumsApp.ROUTER) {
+                    popUpTo(ForumsApp.FORUM) { inclusive = true }
+                }
+            },
         )
     }
 

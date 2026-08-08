@@ -202,6 +202,7 @@
     <string name="place_destination">गंतव्यस्थान</string>
     <string name="discovery_search_placeholder">%1$ss शोधा</string>
     <string name="discovery_no_results">कोणतेही %1$ss सापडले नाहीत</string>
+    <string name="discovery_no_results_hint">तुमचा शोध समायोजित करून पहा</string>
     <string name="discovery_no_recommendations">कोणत्याही शिफारशी नाहीत</string>
     <string name="discovery_search_hint">सबस्क्राइब करण्यासाठी %1$s शोधण्याचा प्रयत्न करा</string>
     <string name="access_no_rules">कोणतेही प्रवेश नियम नाहीत</string>

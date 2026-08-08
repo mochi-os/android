@@ -202,6 +202,7 @@
     <string name="place_destination">ගමනාන්තය</string>
     <string name="discovery_search_placeholder">%1$ss සොයන්න</string>
     <string name="discovery_no_results">%1$ss හමු නොවීය</string>
+    <string name="discovery_no_results_hint">ඔබේ සෙවීම සකස් කිරීම උත්සාහ කරන්න</string>
     <string name="discovery_no_recommendations">නිර්දේශ නැත</string>
     <string name="discovery_search_hint">දායක වීමට %1$s එකක් සෙවීමට උත්සාහ කරන්න</string>
     <string name="access_no_rules">ප්‍රවේශ නීති නැත</string>

@@ -38,6 +38,22 @@ import org.mochios.android.R
 import org.mochios.android.auth.SessionEntryPoint
 
 /**
+ * The people app's avatar path for a person entity id, as an [EntityAvatar]
+ * `src`. Null when the id is blank, which reads as "no image" and leaves the
+ * initials placeholder in charge.
+ *
+ * One definition for every caller: a person shown in a board card, a tree row
+ * and a field editor is the same person, and a path assembled separately at
+ * each site is a path that can drift at each site. `RelativeAssetUrlMapper`
+ * expands the leading slash against the session server.
+ *
+ * @param entityId The person's entity id, as stored in a user field's value.
+ * @return The server-relative avatar path, or null when [entityId] is blank.
+ */
+fun personAvatarPath(entityId: String?): String? =
+    entityId?.takeIf { id -> id.isNotBlank() }?.let { id -> "/people/$id/-/avatar" }
+
+/**
  * Circular avatar for a person entity. When `src` is provided the image is
  * loaded asynchronously and falls back to an initials circle on load failure.
  * Apps should typically point `src` at their own avatar proxy action

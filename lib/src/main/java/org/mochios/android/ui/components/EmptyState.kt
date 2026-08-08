@@ -25,17 +25,33 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
+/**
+ * The shared empty state: a tinted circular badge over a title, an optional
+ * subtitle, and an optional action.
+ *
+ * @param icon vector drawn inside the circular badge.
+ * @param title primary message.
+ * @param subtitle secondary hint shown beneath the title.
+ * @param modifier applied before the column claims the space it is given, so a
+ *   caller can inset or constrain it. Padding here insets the fill rather than
+ *   being swallowed by it.
+ * @param verticalArrangement how the content sits in that space. Centred by
+ *   default; pass [Arrangement.Top] to anchor it under a caller's top padding.
+ * @param action optional control rendered below the text.
+ */
 @Composable
 fun EmptyState(
     icon: ImageVector,
     title: String,
     subtitle: String? = null,
+    modifier: Modifier = Modifier,
+    verticalArrangement: Arrangement.Vertical = Arrangement.Center,
     action: (@Composable () -> Unit)? = null
 ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = verticalArrangement
     ) {
         // Icon on a tinted disc, matching the web empty states: the disc is the
         // primary colour held well back, so the icon still carries the accent.

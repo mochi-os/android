@@ -204,6 +204,7 @@
     <string name="place_destination">مقصد</string>
     <string name="discovery_search_placeholder">جستجوی %1$ss</string>
     <string name="discovery_no_results">هیچ %1$ss یافت نشد</string>
+    <string name="discovery_no_results_hint">جست‌وجوی خود را تنظیم کنید</string>
     <string name="discovery_no_recommendations">پیشنهادی وجود ندارد</string>
     <string name="discovery_search_hint">برای اشتراک، یک %1$s را جستجو کنید</string>
     <string name="access_no_rules">هیچ قانون دسترسی وجود ندارد</string>

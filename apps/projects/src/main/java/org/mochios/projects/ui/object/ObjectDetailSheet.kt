@@ -63,6 +63,11 @@ fun ObjectDetailSheet(
     objectId: String,
     projectDetails: ProjectDetails,
     initialObject: org.mochios.projects.model.ProjectObject? = null,
+    /**
+     * Field ids the active view pins, in the order it lists them. When empty
+     * the Properties tab falls back to every field of the object's class.
+     */
+    viewFieldIds: List<String> = emptyList(),
     onDismiss: () -> Unit,
     /**
      * Delete this object. Imperative, not a past-tense notification: the sheet
@@ -251,6 +256,7 @@ fun ObjectDetailSheet(
                             obj = obj,
                             projectDetails = projectDetails,
                             viewModel = viewModel,
+                            viewFieldIds = viewFieldIds,
                             onAddChild = { onAddChild(obj.id) },
                             onNavigateToObject = onNavigateToObject,
                             projectId = projectId,

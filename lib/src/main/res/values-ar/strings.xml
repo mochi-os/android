@@ -199,6 +199,7 @@
     <string name="place_destination">الوجهة</string>
     <string name="discovery_search_placeholder">البحث عن %1$s</string>
     <string name="discovery_no_results">لم يتم العثور على %1$s</string>
+    <string name="discovery_no_results_hint">حاول تعديل البحث</string>
     <string name="discovery_no_recommendations">لا توجد توصيات</string>
     <string name="discovery_search_hint">حاول البحث عن %1$s للاشتراك فيه</string>
     <string name="access_no_rules">لا توجد قواعد وصول</string>

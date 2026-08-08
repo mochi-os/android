@@ -202,6 +202,7 @@
     <string name="place_destination">Galma</string>
     <string name="discovery_search_placeholder">%1$ss barbaadi</string>
     <string name="discovery_no_results">%1$ss hin argamne</string>
+    <string name="discovery_no_results_hint">Barbaacha kee sirreessuu yaali</string>
     <string name="discovery_no_recommendations">Yaadni hin jiru</string>
     <string name="discovery_search_hint">%1$s itti galmaa\'uuf barbaaduu yaali</string>
     <string name="access_no_rules">Seerri seensaa hin jiru</string>

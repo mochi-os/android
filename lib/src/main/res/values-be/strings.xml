@@ -199,6 +199,7 @@
     <string name="place_destination">Прызначэнне</string>
     <string name="discovery_search_placeholder">Пошук: %1$ss</string>
     <string name="discovery_no_results">%1$ss не знойдзена</string>
+    <string name="discovery_no_results_hint">Паспрабуйце наладзіць пошук</string>
     <string name="discovery_search_hint">Паспрабуйце знайсці %1$s, каб падпісацца</string>
     <string name="discovery_no_recommendations">Няма рэкамендацый</string>
     <string name="access_no_rules">Няма правіл доступу</string>

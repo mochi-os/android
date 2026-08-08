@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
@@ -82,6 +83,12 @@ fun CreateObjectDialog(
      * "Add child" affordance on an existing object.
      */
     presetParent: String?,
+    /**
+     * Field values to open pre-filled, keyed by field id. Carries the column a
+     * board's "+" was tapped in; empty from the FAB. Only entries belonging to
+     * the selected class are applied, so switching class drops the rest.
+     */
+    presetValues: Map<String, String>,
     isCreating: Boolean,
     activeView: CrmView?,
     viewModel: CrmViewModel,
@@ -91,18 +98,33 @@ fun CreateObjectDialog(
     val presetParentObj = remember(presetParent, objects) {
         presetParent?.let { p -> objects.firstOrNull { it.id == p } }
     }
-    val initialClassId = remember(presetParentObj, activeView, classes, hierarchy) {
-        when {
-            // If pre-selected from "Add child", pick a class that permits
-            // the parent's class as a parent (first match).
-            presetParentObj != null -> {
-                classes.firstOrNull { cls ->
-                    (hierarchy[cls.id] ?: emptyList()).contains(presetParentObj.objectClass)
-                }?.id ?: classes.firstOrNull()?.id ?: ""
-            }
-            activeView != null && activeView.classes.isNotEmpty() -> activeView.classes.first()
-            else -> classes.firstOrNull()?.id ?: ""
+    val initialClassId = remember(presetParentObj, activeView, classes, hierarchy, objects) {
+        // A class the design gives parent classes cannot be created until an
+        // object exists to parent it, and the dialog has nothing but the
+        // blocked message to show for one. So the opening class is the first
+        // that can actually be created, not simply the first on offer.
+        fun creatable(classId: String): Boolean {
+            val parentClasses = (hierarchy[classId] ?: emptyList()).filter { id -> id.isNotBlank() }
+            return parentClasses.isEmpty() || objects.any { obj -> obj.objectClass in parentClasses }
         }
+        val preferred = when {
+            // If pre-selected from "Add child", the classes that permit the
+            // parent's class as a parent.
+            presetParentObj != null -> classes.filter { cls ->
+                (hierarchy[cls.id] ?: emptyList()).contains(presetParentObj.objectClass)
+            }
+            // The view's own classes, but only ones the CRM still defines. A
+            // view that names a deleted class used to hand its id straight
+            // through: Create looked enabled, the type box was blank, no fields
+            // rendered, and the post failed on a class the server never had.
+            activeView != null && activeView.classes.isNotEmpty() ->
+                activeView.classes.mapNotNull { id -> classes.find { cls -> cls.id == id } }
+            else -> emptyList()
+        }
+        // What the caller asked for first, every class after it as the fallback.
+        val ordered = preferred + classes
+        val chosen = ordered.firstOrNull { cls -> creatable(cls.id) } ?: ordered.firstOrNull()
+        chosen?.id ?: ""
     }
     var selectedClassId by remember { mutableStateOf(initialClassId) }
     var classExpanded by remember { mutableStateOf(false) }
@@ -126,6 +148,17 @@ fun CreateObjectDialog(
     }
     var parentExpanded by remember { mutableStateOf(false) }
 
+    // The picker offers no "none" entry, so a child object always names its
+    // parent. Nothing selected - the dialog just opened, or changing class
+    // cleared a parent the new class cannot take - falls back to the first
+    // candidate, the one the picker lists at the top.
+    LaunchedEffect(selectedClassId, parentCandidates) {
+        val stillValid = parentCandidates.any { candidate -> candidate.id == selectedParentId }
+        if (!stillValid) {
+            selectedParentId = parentCandidates.firstOrNull()?.id
+        }
+    }
+
     // Per-field values entered in the dialog, keyed by field id. The title
     // field's value is sent as the object's title on create; the rest are
     // applied one per request afterwards, mirroring web's create-object flow.
@@ -143,20 +176,27 @@ fun CreateObjectDialog(
         pendingFiles.addAll(uris)
     }
 
-    // Seed defaults whenever the selected class changes: clear prior values,
-    // pre-fill the board column from the active view, and auto-select the
-    // first option for any required enumerated field (matches web).
+    // Seed defaults whenever the selected class changes: clear prior values and
+    // auto-select the first option for any required enumerated field.
+    //
+    // The grouping field is deliberately not pre-filled. It used to be seeded to
+    // the first column option, but only on board views, so the same dialog set a
+    // stage on a board and left it empty on a table - and on a board it picked
+    // the first stage rather than anything the user had in view. A silently
+    // defaulted pipeline stage is worse than an empty one, so the field is left
+    // to the picker below, which renders it like any other enumerated field.
+    // Creating from a board column still sets its stage: that path opens this
+    // dialog with the column in presetValues, seeded below.
     LaunchedEffect(selectedClassId) {
         fieldValues.clear()
-        val classFieldIds = fields[selectedClassId].orEmpty().map { it.id }.toSet()
-        if (activeView?.viewtype == "board" && activeView.columns.isNotBlank() &&
-            activeView.columns in classFieldIds
-        ) {
-            // Options are defined per class: on a board that mixes classes,
-            // another class's option for this field is an invalid value here.
-            val columnOptions = classOptions[activeView.columns].orEmpty()
-            if (columnOptions.isNotEmpty()) {
-                fieldValues[activeView.columns] = columnOptions.first().id
+        // Whatever started the create gets first say - a board column's "+"
+        // puts its own stage here - and the required-field defaults below only
+        // fill what it left blank. Values the chosen class cannot take are
+        // dropped: options are defined per class, so on a board that mixes
+        // classes another class's option is invalid here.
+        presetValues.forEach { (fieldId, value) ->
+            if (viewModel.usableValue(selectedClassId, fieldId, value)) {
+                fieldValues[fieldId] = value
             }
         }
         fields[selectedClassId].orEmpty().forEach { field ->
@@ -171,11 +211,63 @@ fun CreateObjectDialog(
 
     val missingRequired = classFields.any { it.isRequired && fieldValues[it.id].isNullOrBlank() }
 
+    // A required enumerated field with no options can never be filled in: the
+    // seeding effect above only pre-selects when options exist, and the dialog
+    // offers nothing to pick. Without naming them, Create is simply dead and
+    // the reason is invisible.
+    val unsatisfiableFields = classFields.filter { field ->
+        field.isRequired && field.fieldtype == "enumerated" &&
+            classOptions[field.id].orEmpty().isEmpty()
+    }
+
+    // The selected class is a child type - the design gives it parent classes -
+    // and nothing exists to parent it, so no create can succeed. Every field
+    // below would be busywork, so the dialog holds the message alone: Create is
+    // dead and Cancel is the way out.
+    val blockedNoParent = allowedParentClasses.any { id -> id.isNotBlank() } &&
+        parentCandidates.isEmpty()
+
+    if (blockedNoParent) {
+        AlertDialog(
+            onDismissRequest = onDismiss,
+            title = { Text(stringResource(R.string.crm_create_object_title)) },
+            text = {
+                Text(
+                    text = stringResource(R.string.crm_create_blocked_no_parents),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {}, enabled = false) {
+                    Text(stringResource(R.string.crm_create_action))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = onDismiss) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
+            }
+        )
+        return
+    }
+
     AlertDialog(
         onDismissRequest = { if (!isCreating) onDismiss() },
         title = { Text(stringResource(R.string.crm_create_object_title)) },
         text = {
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                if (unsatisfiableFields.isNotEmpty()) {
+                    Text(
+                        text = stringResource(
+                            R.string.crm_create_blocked_no_options,
+                            unsatisfiableFields.joinToString(", ") { field -> field.name }
+                        ),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.error,
+                        modifier = Modifier.padding(bottom = 12.dp)
+                    )
+                }
                 if (classes.size > 1) {
                     ExposedDropdownMenuBox(
                         expanded = classExpanded,
@@ -213,9 +305,9 @@ fun CreateObjectDialog(
                 }
 
                 // Parent picker — only shown when the selected class has
-                // allowed parent classes per crm.hierarchy. "None" is
-                // always an option so root-level objects can still be
-                // created from the dialog.
+                // allowed parent classes per crm.hierarchy. Every entry is a
+                // real object: a class the design gives parent classes is a
+                // child type, so creating one at the root is not on offer.
                 if (parentCandidates.isNotEmpty()) {
                     val selectedParentLabel = selectedParentId?.let { id ->
                         objects.firstOrNull { it.id == id }?.let { parentLabel(it) } ?: untitled
@@ -238,13 +330,6 @@ fun CreateObjectDialog(
                             expanded = parentExpanded,
                             onDismissRequest = { parentExpanded = false }
                         ) {
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.crm_create_object_parent_none)) },
-                                onClick = {
-                                    selectedParentId = null
-                                    parentExpanded = false
-                                }
-                            )
                             parentCandidates.forEach { p ->
                                 DropdownMenuItem(
                                     text = { Text(parentLabel(p)) },

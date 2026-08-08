@@ -202,6 +202,7 @@
     <string name="place_destination">منزل</string>
     <string name="discovery_search_placeholder">د %1$ss لټون</string>
     <string name="discovery_no_results">هیڅ %1$ss ونه موندل شو</string>
+    <string name="discovery_no_results_hint">خپل لټون سمول هڅه وکړئ</string>
     <string name="discovery_no_recommendations">هیڅ سپارښتنه نشته</string>
     <string name="discovery_search_hint">هڅه وکړئ یو %1$s ولټوئ ترڅو ګډون وکړئ</string>
     <string name="access_no_rules">د لاسرسي قواعد نشته</string>

@@ -66,10 +66,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
-import org.mochios.people.ui.components.PeopleEmptyState
 import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.android.R as MochiR
@@ -433,7 +433,7 @@ private fun SentRow(
 // prompt.
 @Composable
 private fun InvitationsEmptyState(isSearching: Boolean) {
-    PeopleEmptyState(
+    EmptyState(
         icon = Icons.Default.PersonAddAlt,
         title = stringResource(R.string.people_invitations_empty),
         subtitle = stringResource(
@@ -443,9 +443,8 @@ private fun InvitationsEmptyState(isSearching: Boolean) {
                 R.string.people_invitations_empty_hint
             },
         ),
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(top = 64.dp),
+        modifier = Modifier.padding(top = 64.dp, start = 32.dp, end = 32.dp),
+        verticalArrangement = Arrangement.Top,
     )
 }
 

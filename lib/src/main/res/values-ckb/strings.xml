@@ -199,6 +199,7 @@
     <string name="place_destination">مەبەست</string>
     <string name="discovery_search_placeholder">گەڕان بۆ %1$ss</string>
     <string name="discovery_no_results">هیچ %1$ss نەدۆزرایەوە</string>
+    <string name="discovery_no_results_hint">هەوڵبدە گەڕانەکەت ڕێکبخەیت</string>
     <string name="discovery_no_recommendations">هیچ پێشنیارێک نییە</string>
     <string name="discovery_search_hint">هەوڵبدە %1$s بدۆزیتەوە بۆ بەشداریکردن</string>
     <string name="access_no_rules">هیچ ڕێسایەکی دەستپێگەیشتن نییە</string>

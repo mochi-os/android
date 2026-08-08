@@ -58,6 +58,16 @@ abstract class FileRepository(protected val fileStore: FileStore) {
         fileStore.readText(uri)
 
     /**
+     * Reads a document the user picked, unwrapping it when it is a zipped
+     * export rather than the bare file. Use this wherever a backup is read
+     * back: the user has both to hand and no reason to know which we want.
+     *
+     * @return its contents, or null when the file can't be read.
+     */
+    suspend fun readTextOrZippedFile(uri: Uri): String? =
+        fileStore.readTextOrZipped(uri)
+
+    /**
      * Writes [text] to the document the user picked.
      *
      * @return true when the file was written in full.
@@ -70,6 +80,13 @@ abstract class FileRepository(protected val fileStore: FileStore) {
         fileStore.displayName(uri, fallback)
 
     /** Suggested save-dialog name for an export of [kind] taken from [subject]. */
-    fun exportFileName(subject: String?, kind: String): String =
-        fileStore.exportFileName(subject, kind)
+    fun exportFileName(subject: String?, kind: String, extension: String = "json"): String =
+        fileStore.exportFileName(subject, kind, extension)
+
+    /**
+     * Suggested save-dialog name that keeps [subject] as the user wrote it,
+     * e.g. `Crm Testing.csv`. For an export they open rather than archive.
+     */
+    fun exportDisplayName(subject: String?, extension: String): String =
+        fileStore.exportDisplayName(subject, extension)
 }

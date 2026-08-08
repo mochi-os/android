@@ -201,6 +201,7 @@
     <string name="place_destination">Cél</string>
     <string name="discovery_search_placeholder">%1$s keresése</string>
     <string name="discovery_no_results">Nem található %1$s</string>
+    <string name="discovery_no_results_hint">Próbálja módosítani a keresést</string>
     <string name="discovery_no_recommendations">Nincsenek ajánlások</string>
     <string name="discovery_search_hint">Próbáljon meg %1$s nevet keresni a feliratkozáshoz</string>
     <string name="access_no_rules">Nincsenek hozzáférési szabályok</string>

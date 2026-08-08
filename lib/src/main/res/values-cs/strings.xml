@@ -199,6 +199,7 @@
     <string name="place_destination">Cíl</string>
     <string name="discovery_search_placeholder">Hledat %1$ss</string>
     <string name="discovery_no_results">Žádné výsledky pro %1$ss</string>
+    <string name="discovery_no_results_hint">Zkuste upravit hledaný výraz</string>
     <string name="discovery_no_recommendations">Žádná doporučení</string>
     <string name="discovery_search_hint">Zkuste hledat %1$s k odběru</string>
     <string name="access_no_rules">Žádná pravidla přístupu</string>

@@ -202,6 +202,7 @@
     <string name="place_destination">ಗಮ್ಯಸ್ಥಾನ</string>
     <string name="discovery_search_placeholder">%1$sಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="discovery_no_results">%1$sಗಳು ಕಂಡುಬಂದಿಲ್ಲ</string>
+    <string name="discovery_no_results_hint">ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಸರಿಹೊಂದಿಸಲು ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="discovery_no_recommendations">ಯಾವುದೇ ಶಿಫಾರಸುಗಳಿಲ್ಲ</string>
     <string name="discovery_search_hint">ಚಂದಾದಾರರಾಗಲು %1$s ಅನ್ನು ಹುಡುಕಲು ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="access_no_rules">ಯಾವುದೇ ಪ್ರವೇಶ ನಿಯಮಗಳಿಲ್ಲ</string>
