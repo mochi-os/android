@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Duk CRM</string>
     <string name="crm_settings_unsubscribe_section">Soke biyan kuɗi na CRM</string>
     <string name="crm_settings_updated">An sabunta CRM</string>
+    <string name="crm_create_import_backup">Shigo da daga backup (na zaɓi)</string>
+    <string name="crm_export">Fitar da bayanai</string>
+    <string name="crm_exporting">Ana shirya fitarwa…</string>
+    <string name="crm_create_allow_search">Ba kowa damar nemo CRM</string>
+    <string name="crm_no_crms_found">Babu CRMs da aka samu</string>
+    <string name="crm_create_blocked_no_parents">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>
+    <string name="crm_export_csv">Fitar da CSV</string>
+    <string name="crm_share_link_title">Raba CRM</string>
+    <string name="crm_export_saved">An adana bayanan CRM</string>
+    <string name="crm_create_upload_json">Loda fayil ɗin .zip ko .json</string>
+    <string name="crm_create_blocked_no_options">Ba a iya ƙirƙira ba: ana buƙatar %1$s amma ba shi da zaɓuɓɓuka. Ƙara zaɓuɓɓuka a Ƙira.</string>
 </resources>

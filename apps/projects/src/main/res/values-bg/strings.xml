@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Експортът не можа да се запази</string>
     <string name="projects_export_saved">Данните за проекта са запазени</string>
     <string name="projects_exporting">Подготвяне на експорта…</string>
+    <string name="projects_board_add_column">Добави колона</string>
 </resources>

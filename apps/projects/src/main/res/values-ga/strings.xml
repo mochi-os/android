@@ -379,4 +379,5 @@
     <string name="projects_export_failed">Níorbh fhéidir an easpórtáil a shábháil</string>
     <string name="projects_export_saved">Sábháladh sonraí an tionscadail</string>
     <string name="projects_exporting">Easpórtáil á hullmhú…</string>
+    <string name="projects_board_add_column">Cuir colún leis</string>
 </resources>

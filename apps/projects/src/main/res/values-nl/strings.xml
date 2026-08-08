@@ -376,4 +376,5 @@
     <string name="projects_export_failed">De export kon niet worden opgeslagen</string>
     <string name="projects_export_saved">Projectgegevens opgeslagen</string>
     <string name="projects_exporting">Export voorbereiden…</string>
+    <string name="projects_board_add_column">Kolom toevoegen</string>
 </resources>

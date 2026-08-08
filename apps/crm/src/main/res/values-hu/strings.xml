@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Összes CRM</string>
     <string name="crm_settings_unsubscribe_section">Leiratkozás a CRM-ről</string>
     <string name="crm_settings_updated">CRM frissítve</string>
+    <string name="crm_create_import_backup">Importálás biztonsági mentésből (opcionális)</string>
+    <string name="crm_export">Adatok exportálása</string>
+    <string name="crm_exporting">Exportálás előkészítése…</string>
+    <string name="crm_create_allow_search">Bárki kereshet a CRM-re</string>
+    <string name="crm_no_crms_found">Nem található CRM</string>
+    <string name="crm_create_blocked_no_parents">Egyetlen elemtípus sem hozható még létre. Először hozza létre a szükséges szülőelemeket.</string>
+    <string name="crm_export_csv">CSV exportálása</string>
+    <string name="crm_share_link_title">CRM megosztása</string>
+    <string name="crm_export_saved">A CRM adatai mentve</string>
+    <string name="crm_create_upload_json">Töltsön fel .zip vagy .json fájlt</string>
+    <string name="crm_create_blocked_no_options">Nem hozható létre: a(z) %1$s kötelező, de nincsenek választható lehetőségei. Adjon hozzá lehetőségeket a Tervben.</string>
 </resources>

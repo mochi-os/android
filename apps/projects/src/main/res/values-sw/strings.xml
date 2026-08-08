@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Uhamishaji haukuweza kuhifadhiwa</string>
     <string name="projects_export_saved">Data ya mradi imehifadhiwa</string>
     <string name="projects_exporting">Inaandaa uhamishaji…</string>
+    <string name="projects_board_add_column">Ongeza safu</string>
 </resources>

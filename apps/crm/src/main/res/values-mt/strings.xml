@@ -372,4 +372,15 @@
     <string name="crm_all_crms">Il-CRMs kollha</string>
     <string name="crm_settings_unsubscribe_section">Ħassar l-abbonament tas-CRM</string>
     <string name="crm_settings_updated">CRM aġġornat</string>
+    <string name="crm_create_import_backup">Importa mill-backup (mhux obbligatorju)</string>
+    <string name="crm_export">Esporta d-data</string>
+    <string name="crm_exporting">Qed titħejja l-esportazzjoni…</string>
+    <string name="crm_create_allow_search">Ippermetti lil kulħadd ifittex CRM</string>
+    <string name="crm_no_crms_found">Ma nstabu l-ebda CRMs</string>
+    <string name="crm_create_blocked_no_parents">L-ebda tipi ta\' oġġetti jistgħu jinħolqu għadhom. Oħloq l-oġġetti tal-ġenitur meħtieġa l-ewwel.</string>
+    <string name="crm_export_csv">Esporta CSV</string>
+    <string name="crm_share_link_title">Aqsam is-CRM</string>
+    <string name="crm_export_saved">Id-data tas-CRM ġiet salvata</string>
+    <string name="crm_create_upload_json">Tella\' fajl .zip jew .json</string>
+    <string name="crm_create_blocked_no_options">Ma jistax jinħoloq: %1$s huwa meħtieġ imma m\'għandu ebda għażla. Żid għażliet fid-Disinn.</string>
 </resources>

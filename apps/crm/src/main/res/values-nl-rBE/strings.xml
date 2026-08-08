@@ -330,4 +330,10 @@
     <string name="crm_access_select_role">Selecteer rol</string>
     <string name="crm_access_authenticated_desc">Iedereen die aangemeld is</string>
     <string name="crm_access_role_view">Alleen-lezen</string>
+    <string name="crm_create_import_backup">Importeren uit back-up (optioneel)</string>
+    <string name="crm_create_allow_search">Iedereen toestaan om naar CRM te zoeken</string>
+    <string name="crm_no_crms_found">Geen CRM\'s gevonden</string>
+    <string name="crm_create_blocked_no_parents">Er kunnen nog geen itemtypes aangemaakt worden. Maak eerst de vereiste bovenliggende items aan.</string>
+    <string name="crm_export">Gegevens exporteren</string>
+    <string name="crm_export_csv">CSV exporteren</string>
 </resources>

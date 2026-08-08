@@ -369,4 +369,15 @@
     <string name="crm_all_crms">అన్ని CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM నుండి అన్‌సబ్‌స్క్రైబ్ చేయండి</string>
     <string name="crm_settings_updated">CRM నవీకరించబడింది</string>
+    <string name="crm_create_import_backup">బ్యాకప్ నుండి దిగుమతి (ఐచ్ఛికం)</string>
+    <string name="crm_export">డేటాను ఎగుమతి చేయండి</string>
+    <string name="crm_exporting">ఎగుమతిని సిద్ధం చేస్తోంది…</string>
+    <string name="crm_create_allow_search">CRM కోసం ఎవరైనా శోధించడానికి అనుమతించండి</string>
+    <string name="crm_no_crms_found">CRMలు ఏవీ కనుగొనబడలేదు</string>
+    <string name="crm_create_blocked_no_parents">ఇంకా ఏ ఐటెం రకాలను సృష్టించలేము. మొదట అవసరమైన పేరెంట్ ఐటెంలను సృష్టించండి.</string>
+    <string name="crm_export_csv">CSVని ఎగుమతి చేయండి</string>
+    <string name="crm_share_link_title">CRM భాగస్వామ్యం</string>
+    <string name="crm_export_saved">CRM డేటా సేవ్ చేయబడింది</string>
+    <string name="crm_create_upload_json">.zip లేదా .json ఫైల్‌ను అప్‌లోడ్ చేయండి</string>
+    <string name="crm_create_blocked_no_options">సృష్టించలేరు: %1$s అవసరం కానీ ఎంచుకోవడానికి ఎంపికలు లేవు. డిజైన్‌లో ఎంపికలను జోడించండి.</string>
 </resources>

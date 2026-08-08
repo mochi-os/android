@@ -369,4 +369,15 @@
     <string name="crm_all_crms">ਸਾਰੇ CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="crm_settings_updated">CRM ਅੱਪਡੇਟ ਕੀਤਾ</string>
+    <string name="crm_create_import_backup">ਬੈਕਅੱਪ ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ (ਵਿਕਲਪਿਕ)</string>
+    <string name="crm_export">ਡਾਟਾ ਐਕਸਪੋਰਟ ਕਰੋ</string>
+    <string name="crm_exporting">ਐਕਸਪੋਰਟ ਤਿਆਰ ਕਰ ਰਹੇ ਹਾਂ…</string>
+    <string name="crm_create_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ CRM ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
+    <string name="crm_no_crms_found">ਕੋਈ CRM ਨਹੀਂ ਮਿਲਿਆ</string>
+    <string name="crm_create_blocked_no_parents">ਅਜੇ ਕੋਈ ਆਈਟਮ ਕਿਸਮ ਨਹੀਂ ਬਣਾਈ ਜਾ ਸਕਦੀ। ਪਹਿਲਾਂ ਜ਼ਰੂਰੀ ਪੇਰੈਂਟ ਆਈਟਮਾਂ ਬਣਾਓ।</string>
+    <string name="crm_export_csv">CSV ਨਿਰਯਾਤ ਕਰੋ</string>
+    <string name="crm_share_link_title">CRM ਸਾਂਝਾ ਕਰੋ</string>
+    <string name="crm_export_saved">CRM ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
+    <string name="crm_create_upload_json">.zip ਜਾਂ .json ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string name="crm_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>
 </resources>

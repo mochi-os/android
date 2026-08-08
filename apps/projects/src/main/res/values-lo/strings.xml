@@ -375,4 +375,5 @@
     <string name="projects_export_failed">ບໍ່ສາມາດບັນທຶກການສົ່ງອອກໄດ້</string>
     <string name="projects_export_saved">ບັນທຶກຂໍ້ມູນໂຄງການແລ້ວ</string>
     <string name="projects_exporting">ກຳລັງກຽມການສົ່ງອອກ…</string>
+    <string name="projects_board_add_column">ເພີ່ມຖັນ</string>
 </resources>

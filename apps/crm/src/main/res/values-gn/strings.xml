@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Opa CRM</string>
     <string name="crm_settings_unsubscribe_section">Ehejarei CRM</string>
     <string name="crm_settings_updated">CRM oñembohekopyahu</string>
+    <string name="crm_create_import_backup">Embojuaju respaldo-gui (opcional)</string>
+    <string name="crm_export">Emosẽ mba\'ekuaarã</string>
+    <string name="crm_exporting">Oñembosako\'i ñesẽ…</string>
+    <string name="crm_create_allow_search">Eipysyrõ opavavépe oheka CRM</string>
+    <string name="crm_no_crms_found">Ndojejuhúi CRM</string>
+    <string name="crm_create_blocked_no_parents">Ndaikatúi oñemoheñói item peteĩchagua. Emoheñói raẽ peteĩchagua oñeikotevẽva.</string>
+    <string name="crm_export_csv">Esẽ CSV</string>
+    <string name="crm_share_link_title">Emoherakuã CRM</string>
+    <string name="crm_export_saved">Ojeguardáma CRM mba\'ekuaarã</string>
+    <string name="crm_create_upload_json">Emyenyhe .zip térãpa .json ñongatupyre</string>
+    <string name="crm_create_blocked_no_options">Ndaikatúi ojejapo: %1$s tekotevẽ ha ndoguerekói mba\'eporavorã. Embojoapy poravorã Design-pe.</string>
 </resources>

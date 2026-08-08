@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Kõik CRM-id</string>
     <string name="crm_settings_unsubscribe_section">Lõpeta CRM-i tellimus</string>
     <string name="crm_settings_updated">CRM uuendatud</string>
+    <string name="crm_create_import_backup">Impordi varukoopiast (valikuline)</string>
+    <string name="crm_export">Ekspordi andmed</string>
+    <string name="crm_exporting">Ekspordi ettevalmistamine…</string>
+    <string name="crm_create_allow_search">Luba kõigil otsida CRM-i</string>
+    <string name="crm_no_crms_found">CRM-e ei leitud</string>
+    <string name="crm_create_blocked_no_parents">Ühtegi tüüpi ei saa veel luua. Loo kõigepealt vajalikud vanemüksused.</string>
+    <string name="crm_export_csv">Ekspordi CSV</string>
+    <string name="crm_share_link_title">Jaga CRM</string>
+    <string name="crm_export_saved">CRM-i andmed salvestatud</string>
+    <string name="crm_create_upload_json">Laadige üles .zip- või .json-fail</string>
+    <string name="crm_create_blocked_no_options">Ei saa luua: %1$s on nõutav, kuid sellel pole valikuid. Lisage valikud Kujunduses.</string>
 </resources>

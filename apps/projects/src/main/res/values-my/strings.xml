@@ -375,4 +375,5 @@
     <string name="projects_export_failed">တင်ပို့မှုကို သိမ်းဆည်း၍မရပါ</string>
     <string name="projects_export_saved">ပရောဂျက်ဒေတာ သိမ်းဆည်းပြီး</string>
     <string name="projects_exporting">တင်ပို့မှု ပြင်ဆင်နေသည်…</string>
+    <string name="projects_board_add_column">ကော်လံ ထည့်မည်</string>
 </resources>

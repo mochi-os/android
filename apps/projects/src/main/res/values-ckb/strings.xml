@@ -378,4 +378,5 @@
     <string name="projects_export_failed">نەتوانرا هەناردەکە پاشەکەوت بکرێت</string>
     <string name="projects_export_saved">داتای پڕۆژە پاشەکەوت کرا</string>
     <string name="projects_exporting">هەناردە ئامادە دەکرێت…</string>
+    <string name="projects_board_add_column">زیادکردنی ستوون</string>
 </resources>

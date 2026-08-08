@@ -376,4 +376,5 @@
     <string name="projects_export_failed">නිර්යාතය සුරැකිය නොහැකි විය</string>
     <string name="projects_export_saved">ව්‍යාපෘති දත්ත සුරකින ලදී</string>
     <string name="projects_exporting">නිර්යාතය සූදානම් කරමින්…</string>
+    <string name="projects_board_add_column">තීරුවක් එක් කරන්න</string>
 </resources>

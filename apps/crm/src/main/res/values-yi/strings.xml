@@ -369,4 +369,15 @@
     <string name="crm_all_crms">אַלע CRM</string>
     <string name="crm_settings_unsubscribe_section">אַנטאַבאָנירן פֿון CRM</string>
     <string name="crm_settings_updated">CRM דערהײַנטיקט</string>
+    <string name="crm_create_import_backup">אימפּאָרטירן פֿון זיכערונג (אָפּציאָנעל)</string>
+    <string name="crm_export">עקספּאָרטירן דאַטן</string>
+    <string name="crm_exporting">גרייטן דעם עקספּאָרט…</string>
+    <string name="crm_create_allow_search">דערלויבן עמעצן צו זוכן פֿאַר CRM</string>
+    <string name="crm_no_crms_found">קיין CRMס ניט געפֿונען</string>
+    <string name="crm_create_blocked_no_parents">קיין עלעמענט טיפּן קענען נאָך ניט זײַן באַשאַפֿן. באַשאַף די נייטיקע עלטערן עלעמענטן ערשט.</string>
+    <string name="crm_export_csv">עקספּאָרטירן CSV</string>
+    <string name="crm_share_link_title">טיילן CRM</string>
+    <string name="crm_export_saved">CRM־דאַטן געשפּיכלערט</string>
+    <string name="crm_create_upload_json">אַרויפֿלאָדן אַ .zip אָדער .json טעקע</string>
+    <string name="crm_create_blocked_no_options">מ׳קען נישט שאַפֿן: %1$s איז נייטיק אָבער האָט נישט קיין אויסוואַלן. לייגט צו אויסוואַלן אין דיזײַן.</string>
 </resources>

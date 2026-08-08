@@ -371,4 +371,15 @@
     <string name="crm_all_crms">Alle CRMs</string>
     <string name="crm_settings_unsubscribe_section">CRM-Abo beenden</string>
     <string name="crm_settings_updated">CRM aktualisiert</string>
+    <string name="crm_create_import_backup">Aus Sicherung importieren (optional)</string>
+    <string name="crm_export">Daten exportieren</string>
+    <string name="crm_exporting">Export wird vorbereitet…</string>
+    <string name="crm_create_allow_search">Allen erlauben, nach CRM zu suchen</string>
+    <string name="crm_no_crms_found">Keine CRMs gefunden</string>
+    <string name="crm_create_blocked_no_parents">Es können noch keine Elementtypen erstellt werden. Erstellen Sie zunächst die erforderlichen übergeordneten Elemente.</string>
+    <string name="crm_export_csv">CSV exportieren</string>
+    <string name="crm_share_link_title">CRM teilen</string>
+    <string name="crm_export_saved">CRM-Daten gespeichert</string>
+    <string name="crm_create_upload_json">.zip- oder .json-Datei hochladen</string>
+    <string name="crm_create_blocked_no_options">Erstellen nicht möglich: %1$s ist erforderlich, hat aber keine Optionen zur Auswahl. Fügen Sie Optionen im Design hinzu.</string>
 </resources>

@@ -378,4 +378,5 @@
     <string name="projects_export_failed">לא ניתן היה לשמור את הייצוא</string>
     <string name="projects_export_saved">נתוני הפרויקט נשמרו</string>
     <string name="projects_exporting">מכין את הייצוא…</string>
+    <string name="projects_board_add_column">הוסף עמודה</string>
 </resources>

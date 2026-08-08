@@ -376,4 +376,5 @@
     <string name="projects_export_failed">निर्यात सहेजा नहीं जा सका</string>
     <string name="projects_export_saved">प्रोजेक्ट डेटा सहेजा गया</string>
     <string name="projects_exporting">निर्यात तैयार हो रहा है…</string>
+    <string name="projects_board_add_column">कॉलम जोड़ें</string>
 </resources>

@@ -376,4 +376,5 @@
     <string name="projects_export_failed">ايڪسپورٽ محفوظ نه ٿي سگهيو</string>
     <string name="projects_export_saved">پروجيڪٽ ڊيٽا محفوظ ٿي</string>
     <string name="projects_exporting">ايڪسپورٽ تيار ٿي رهيو آهي…</string>
+    <string name="projects_board_add_column">ڪالم شامل ڪريو</string>
 </resources>

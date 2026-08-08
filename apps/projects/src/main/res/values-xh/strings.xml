@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Ayikwazanga ukugcinwa into ethunyelwe</string>
     <string name="projects_export_saved">Idatha yeprojekthi igciniwe</string>
     <string name="projects_exporting">Ilungiselela ukuthunyelwa…</string>
+    <string name="projects_board_add_column">Yongeza ikholamu</string>
 </resources>

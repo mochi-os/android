@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Alla CRM</string>
     <string name="crm_settings_unsubscribe_section">Avsluta prenumeration på CRM</string>
     <string name="crm_settings_updated">CRM uppdaterat</string>
+    <string name="crm_create_import_backup">Importera från säkerhetskopia (valfritt)</string>
+    <string name="crm_export">Exportera data</string>
+    <string name="crm_exporting">Förbereder export…</string>
+    <string name="crm_create_allow_search">Tillåt alla att söka efter CRM</string>
+    <string name="crm_no_crms_found">Inga CRM-system hittades</string>
+    <string name="crm_create_blocked_no_parents">Inga objekttyper kan skapas ännu. Skapa de obligatoriska överordnade objekten först.</string>
+    <string name="crm_export_csv">Exportera CSV</string>
+    <string name="crm_share_link_title">Dela CRM</string>
+    <string name="crm_export_saved">CRM-data sparad</string>
+    <string name="crm_create_upload_json">Ladda upp en .zip- eller .json-fil</string>
+    <string name="crm_create_blocked_no_options">Kan inte skapa: %1$s krävs men har inga alternativ att välja mellan. Lägg till alternativ i Design.</string>
 </resources>

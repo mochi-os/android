@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Չհաջողվեց պահպանել արտահանումը</string>
     <string name="projects_export_saved">Նախագծի տվյալները պահպանվեցին</string>
     <string name="projects_exporting">Արտահանման նախապատրաստում…</string>
+    <string name="projects_board_add_column">Ավելացնել պատվիրակություն</string>
 </resources>

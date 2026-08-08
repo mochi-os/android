@@ -337,4 +337,10 @@
     <string name="crm_access_role_write">Criar, editar, comentar e visualizar</string>
     <string name="crm_access_role_comment">Comentar e visualizar</string>
     <string name="crm_access_role_view">Apenas visualizar</string>
+    <string name="crm_create_import_backup">Importar do backup (opcional)</string>
+    <string name="crm_create_allow_search">Permitir que qualquer pessoa pesquise o CRM</string>
+    <string name="crm_no_crms_found">Nenhum CRM encontrado</string>
+    <string name="crm_create_blocked_no_parents">Nenhum tipo de item pode ser criado ainda. Crie primeiro os itens pais obrigatórios.</string>
+    <string name="crm_export">Exportar dados</string>
+    <string name="crm_export_csv">Exportar CSV</string>
 </resources>

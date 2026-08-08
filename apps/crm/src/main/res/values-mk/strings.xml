@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Сите CRM</string>
     <string name="crm_settings_unsubscribe_section">Одјави се од CRM</string>
     <string name="crm_settings_updated">CRM е ажуриран</string>
+    <string name="crm_create_import_backup">Увези од резерва (опционално)</string>
+    <string name="crm_export">Извези податоци</string>
+    <string name="crm_exporting">Се подготвува извозот…</string>
+    <string name="crm_create_allow_search">Дозволи на секого да пребарува CRM</string>
+    <string name="crm_no_crms_found">Не се пронајдени CRM-и</string>
+    <string name="crm_create_blocked_no_parents">Сè уште не може да се креираат типови ставки. Прво креирајте ги потребните родителски ставки.</string>
+    <string name="crm_export_csv">Извези CSV</string>
+    <string name="crm_share_link_title">Сподели CRM</string>
+    <string name="crm_export_saved">Податоците за CRM се зачувани</string>
+    <string name="crm_create_upload_json">Прикачете .zip или .json датотека</string>
+    <string name="crm_create_blocked_no_options">Не може да се создаде: %1$s е задолжително, но нема опции за избор. Додајте опции во Дизајн.</string>
 </resources>

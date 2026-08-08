@@ -370,4 +370,15 @@
     <string name="crm_all_crms">Visi CRM</string>
     <string name="crm_settings_unsubscribe_section">Atteikties no CRM abonementa</string>
     <string name="crm_settings_updated">CRM atjaunināts</string>
+    <string name="crm_create_import_backup">Importēt no rezerves kopijas (neobligāti)</string>
+    <string name="crm_export">Eksportēt datus</string>
+    <string name="crm_exporting">Sagatavo eksportu…</string>
+    <string name="crm_create_allow_search">Ļaut jebkuram meklēt CRM</string>
+    <string name="crm_no_crms_found">CRM nav atrasti</string>
+    <string name="crm_create_blocked_no_parents">Vēl nevar izveidot vienumu tipus. Vispirms izveidojiet nepieciešamos vecākvienumus.</string>
+    <string name="crm_export_csv">Eksportēt CSV</string>
+    <string name="crm_share_link_title">Kopīgot CRM</string>
+    <string name="crm_export_saved">CRM dati saglabāti</string>
+    <string name="crm_create_upload_json">Augšupielādējiet .zip vai .json failu</string>
+    <string name="crm_create_blocked_no_options">Nevar izveidot: %1$s ir obligāts, taču tam nav izvēles iespēju. Pievienojiet opcijas Dizainā.</string>
 </resources>

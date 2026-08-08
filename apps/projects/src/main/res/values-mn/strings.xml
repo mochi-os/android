@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Экспортыг хадгалж чадсангүй</string>
     <string name="projects_export_saved">Төслийн өгөгдөл хадгалагдлаа</string>
     <string name="projects_exporting">Экспортыг бэлтгэж байна…</string>
+    <string name="projects_board_add_column">Багана нэмэх</string>
 </resources>

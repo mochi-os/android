@@ -369,4 +369,15 @@
     <string name="crm_all_crms">CRM ทั้งหมด</string>
     <string name="crm_settings_unsubscribe_section">เลิกติดตาม CRM</string>
     <string name="crm_settings_updated">อัปเดต CRM แล้ว</string>
+    <string name="crm_create_import_backup">นำเข้าจากข้อมูลสำรอง (ไม่บังคับ)</string>
+    <string name="crm_export">ส่งออกข้อมูล</string>
+    <string name="crm_exporting">กำลังเตรียมการส่งออก…</string>
+    <string name="crm_create_allow_search">อนุญาตให้ใครก็ได้ค้นหา CRM</string>
+    <string name="crm_no_crms_found">ไม่พบ CRM</string>
+    <string name="crm_create_blocked_no_parents">ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน</string>
+    <string name="crm_export_csv">ส่งออก CSV</string>
+    <string name="crm_share_link_title">แชร์ CRM</string>
+    <string name="crm_export_saved">บันทึกข้อมูล CRM แล้ว</string>
+    <string name="crm_create_upload_json">อัปโหลดไฟล์ .zip หรือ .json</string>
+    <string name="crm_create_blocked_no_options">สร้างไม่ได้: %1$s จำเป็นแต่ไม่มีตัวเลือกให้เลือก เพิ่มตัวเลือกในการออกแบบ</string>
 </resources>

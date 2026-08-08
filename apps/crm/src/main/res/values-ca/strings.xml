@@ -371,4 +371,15 @@
     <string name="crm_all_crms">Tots els CRM</string>
     <string name="crm_settings_unsubscribe_section">Cancel·la la subscripció al CRM</string>
     <string name="crm_settings_updated">CRM actualitzat</string>
+    <string name="crm_create_import_backup">Importa des d\'una còpia de seguretat (opcional)</string>
+    <string name="crm_export">Exporta les dades</string>
+    <string name="crm_exporting">S\'està preparant l\'exportació…</string>
+    <string name="crm_create_allow_search">Permet que qualsevol cerqui el CRM</string>
+    <string name="crm_no_crms_found">No s\'ha trobat cap CRM</string>
+    <string name="crm_create_blocked_no_parents">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>
+    <string name="crm_export_csv">Exporta CSV</string>
+    <string name="crm_share_link_title">Comparteix el CRM</string>
+    <string name="crm_export_saved">Dades del CRM desades</string>
+    <string name="crm_create_upload_json">Carrega un fitxer .zip o .json</string>
+    <string name="crm_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>
 </resources>

@@ -379,4 +379,5 @@
     <string name="projects_export_failed">L-esportazzjoni ma setgħetx tiġi salvata</string>
     <string name="projects_export_saved">Id-data tal-proġett ġiet salvata</string>
     <string name="projects_exporting">Qed titħejja l-esportazzjoni…</string>
+    <string name="projects_board_add_column">Żid kolonna</string>
 </resources>

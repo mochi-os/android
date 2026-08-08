@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Todos os CRM</string>
     <string name="crm_settings_unsubscribe_section">Cancelar a subscrición ao CRM</string>
     <string name="crm_settings_updated">CRM actualizado</string>
+    <string name="crm_create_import_backup">Importar desde copia de seguridade (opcional)</string>
+    <string name="crm_export">Exportar datos</string>
+    <string name="crm_exporting">Preparando a exportación…</string>
+    <string name="crm_create_allow_search">Permitir que calquera busque o CRM</string>
+    <string name="crm_no_crms_found">Non se atoparon CRMs</string>
+    <string name="crm_create_blocked_no_parents">Aínda non se poden crear tipos de elementos. Crea primeiro os elementos pai requiridos.</string>
+    <string name="crm_export_csv">Exportar CSV</string>
+    <string name="crm_share_link_title">Compartir CRM</string>
+    <string name="crm_export_saved">Datos do CRM gardados</string>
+    <string name="crm_create_upload_json">Carga un ficheiro .zip ou .json</string>
+    <string name="crm_create_blocked_no_options">Non se pode crear: %1$s é obrigatorio pero non ten opcións para escoller. Engade opcións en Deseño.</string>
 </resources>

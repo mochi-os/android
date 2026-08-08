@@ -380,4 +380,5 @@
     <string name="projects_export_failed">Methwyd cadw\'r allforio</string>
     <string name="projects_export_saved">Cadwyd data\'r prosiect</string>
     <string name="projects_exporting">Yn paratoi\'r allforio…</string>
+    <string name="projects_board_add_column">Ychwanegu colofn</string>
 </resources>

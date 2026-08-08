@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Alle CRM\'e</string>
     <string name="crm_settings_unsubscribe_section">Teken af van CRM</string>
     <string name="crm_settings_updated">CRM opgedateer</string>
+    <string name="crm_create_import_backup">Voer in vanaf rugsteun (opsioneel)</string>
+    <string name="crm_export">Voer data uit</string>
+    <string name="crm_exporting">Berei uitvoer voor…</string>
+    <string name="crm_create_allow_search">Laat enigiemand toe om vir CRM te soek</string>
+    <string name="crm_no_crms_found">Geen CRMs gevind nie</string>
+    <string name="crm_create_blocked_no_parents">Geen itemtipes kan nog geskep word nie. Skep eers die vereiste ouer-items.</string>
+    <string name="crm_export_csv">Voer CSV uit</string>
+    <string name="crm_share_link_title">Deel CRM</string>
+    <string name="crm_export_saved">CRM-data gestoor</string>
+    <string name="crm_create_upload_json">Laai \'n .zip- of .json-lêer op</string>
+    <string name="crm_create_blocked_no_options">Kan nie skep nie: %1$s is verpligtend maar het geen opsies om uit te kies nie. Voeg opsies by in Ontwerp.</string>
 </resources>

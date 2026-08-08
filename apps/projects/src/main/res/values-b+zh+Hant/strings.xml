@@ -376,4 +376,5 @@
     <string name="projects_export_failed">無法儲存匯出內容</string>
     <string name="projects_export_saved">專案資料已儲存</string>
     <string name="projects_exporting">正在準備匯出…</string>
+    <string name="projects_board_add_column">新增欄位</string>
 </resources>

@@ -375,4 +375,5 @@
     <string name="projects_export_failed">Nou pa t kapab anrejistre ekspòtasyon an</string>
     <string name="projects_export_saved">Done pwojè a anrejistre</string>
     <string name="projects_exporting">Prepare ekspòtasyon an…</string>
+    <string name="projects_board_add_column">Ajoute kolòn</string>
 </resources>

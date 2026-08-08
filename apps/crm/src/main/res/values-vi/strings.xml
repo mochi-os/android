@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Tất cả CRM</string>
     <string name="crm_settings_unsubscribe_section">Hủy đăng ký CRM</string>
     <string name="crm_settings_updated">Đã cập nhật CRM</string>
+    <string name="crm_create_import_backup">Nhập từ bản sao lưu (tùy chọn)</string>
+    <string name="crm_export">Xuất dữ liệu</string>
+    <string name="crm_exporting">Đang chuẩn bị bản xuất…</string>
+    <string name="crm_create_allow_search">Cho phép mọi người tìm kiếm CRM</string>
+    <string name="crm_no_crms_found">Không tìm thấy CRM nào</string>
+    <string name="crm_create_blocked_no_parents">Chưa thể tạo loại mục nào. Hãy tạo các mục cha cần thiết trước.</string>
+    <string name="crm_export_csv">Xuất CSV</string>
+    <string name="crm_share_link_title">Chia sẻ CRM</string>
+    <string name="crm_export_saved">Đã lưu dữ liệu CRM</string>
+    <string name="crm_create_upload_json">Tải lên tệp .zip hoặc .json</string>
+    <string name="crm_create_blocked_no_options">Không thể tạo: %1$s là bắt buộc nhưng không có tùy chọn nào để chọn. Thêm tùy chọn trong Thiết kế.</string>
 </resources>

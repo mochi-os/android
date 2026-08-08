@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Gbogbo CRM</string>
     <string name="crm_settings_unsubscribe_section">Yọ ìforúkọsílẹ̀ CRM kúrò</string>
     <string name="crm_settings_updated">A ti ṣàtúnṣe CRM</string>
+    <string name="crm_create_import_backup">Gbé wọlé láti backup (àṣàyàn)</string>
+    <string name="crm_export">Kó dátà jáde</string>
+    <string name="crm_exporting">Ń múra ìkójáde sílẹ̀…</string>
+    <string name="crm_create_allow_search">Jẹ́ kí ẹnikẹ́ni wá CRM</string>
+    <string name="crm_no_crms_found">A kò rí CRM kankan</string>
+    <string name="crm_create_blocked_no_parents">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
+    <string name="crm_export_csv">Mú CSV jáde</string>
+    <string name="crm_share_link_title">Pín CRM</string>
+    <string name="crm_export_saved">A ti fi dátà CRM pamọ́</string>
+    <string name="crm_create_upload_json">Gbé fáìlì .zip tàbí .json sókè</string>
+    <string name="crm_create_blocked_no_options">A kò lè ṣẹ̀dá: %1$s ni a nílò ṣùgbọ́n kò ní àṣàyàn kankan. Fi àṣàyàn kún ní Àpẹẹrẹ.</string>
 </resources>

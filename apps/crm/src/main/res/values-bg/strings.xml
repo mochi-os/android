@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Всички CRM</string>
     <string name="crm_settings_unsubscribe_section">Отписване от CRM</string>
     <string name="crm_settings_updated">CRM е актуализиран</string>
+    <string name="crm_create_import_backup">Импортиране от резервно копие (по избор)</string>
+    <string name="crm_export">Експортиране на данни</string>
+    <string name="crm_exporting">Подготвяне на експорта…</string>
+    <string name="crm_create_allow_search">Позволи на всеки да търси CRM</string>
+    <string name="crm_no_crms_found">Не са намерени CRM системи</string>
+    <string name="crm_create_blocked_no_parents">Все още не може да се създават типове елементи. Първо създайте необходимите родителски елементи.</string>
+    <string name="crm_export_csv">Експорт CSV</string>
+    <string name="crm_share_link_title">Споделяне на CRM</string>
+    <string name="crm_export_saved">Данните за CRM са запазени</string>
+    <string name="crm_create_upload_json">Качете файл .zip или .json</string>
+    <string name="crm_create_blocked_no_options">Не може да се създаде: %1$s е задължително, но няма опции за избор. Добавете опции в Дизайн.</string>
 </resources>

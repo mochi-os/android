@@ -376,4 +376,5 @@
     <string name="projects_export_failed">નિકાસ સાચવી શકાઈ નથી</string>
     <string name="projects_export_saved">પ્રોજેક્ટ ડેટા સાચવ્યો</string>
     <string name="projects_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>
+    <string name="projects_board_add_column">કૉલમ ઉમેરો</string>
 </resources>

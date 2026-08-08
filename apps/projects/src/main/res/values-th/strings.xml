@@ -376,4 +376,5 @@
     <string name="projects_export_failed">บันทึกการส่งออกไม่สำเร็จ</string>
     <string name="projects_export_saved">บันทึกข้อมูลโครงการแล้ว</string>
     <string name="projects_exporting">กำลังเตรียมการส่งออก…</string>
+    <string name="projects_board_add_column">เพิ่มคอลัมน์</string>
 </resources>

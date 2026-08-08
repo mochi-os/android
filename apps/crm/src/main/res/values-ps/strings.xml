@@ -369,4 +369,15 @@
     <string name="crm_all_crms">ټول CRM</string>
     <string name="crm_settings_unsubscribe_section">له CRM څخه ګډون لغوه کړئ</string>
     <string name="crm_settings_updated">CRM تازه شو</string>
+    <string name="crm_create_import_backup">له بیک اپ څخه وارد کړئ (اختیاري)</string>
+    <string name="crm_export">ډاټا صادر کړئ</string>
+    <string name="crm_exporting">صادرول چمتو کیږي…</string>
+    <string name="crm_create_allow_search">هر چا ته اجازه ورکړئ چې د CRM لټون وکړي</string>
+    <string name="crm_no_crms_found">هیڅ CRM ونه موندل شو</string>
+    <string name="crm_create_blocked_no_parents">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
+    <string name="crm_export_csv">CSV صادر کړئ</string>
+    <string name="crm_share_link_title">CRM شریک کړئ</string>
+    <string name="crm_export_saved">د CRM ډاټا خوندي شوه</string>
+    <string name="crm_create_upload_json">د .zip یا .json فایل پورته کړئ</string>
+    <string name="crm_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>
 </resources>

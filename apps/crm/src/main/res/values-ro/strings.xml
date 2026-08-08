@@ -370,4 +370,15 @@
     <string name="crm_all_crms">Toate CRM-urile</string>
     <string name="crm_settings_unsubscribe_section">Dezabonare de la CRM</string>
     <string name="crm_settings_updated">CRM actualizat</string>
+    <string name="crm_create_import_backup">Importă din backup (opțional)</string>
+    <string name="crm_export">Exportă datele</string>
+    <string name="crm_exporting">Se pregătește exportul…</string>
+    <string name="crm_create_allow_search">Permite oricui să caute CRM-ul</string>
+    <string name="crm_no_crms_found">Nu s-au găsit CRM-uri</string>
+    <string name="crm_create_blocked_no_parents">Încă nu pot fi create tipuri de elemente. Creează mai întâi elementele părinte necesare.</string>
+    <string name="crm_export_csv">Exportă CSV</string>
+    <string name="crm_share_link_title">Partajează CRM</string>
+    <string name="crm_export_saved">Datele CRM au fost salvate</string>
+    <string name="crm_create_upload_json">Încarcă un fișier .zip sau .json</string>
+    <string name="crm_create_blocked_no_options">Nu se poate crea: %1$s este obligatoriu, dar nu are opțiuni de ales. Adaugă opțiuni în Design.</string>
 </resources>

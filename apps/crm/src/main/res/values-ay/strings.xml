@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Taqi CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM tuqita mistuña</string>
     <string name="crm_settings_updated">CRM machaqachata</string>
+    <string name="crm_create_import_backup">Backupata mantayaña (jan wakisiri)</string>
+    <string name="crm_export">Yatiyawi apsuña</string>
+    <string name="crm_exporting">Apsuña wakichaña…</string>
+    <string name="crm_create_allow_search">Khitirus CRM thaqaña iyawsaña</string>
+    <string name="crm_no_crms_found">CRM jan jikxatasiti</string>
+    <string name="crm_create_blocked_no_parents">Janiraw item tipo lurañ atititi. Nayraqat parent itemanak munaski lurma.</string>
+    <string name="crm_export_csv">CSV mistuyaña</string>
+    <string name="crm_share_link_title">CRM kichaña</string>
+    <string name="crm_export_saved">CRM yatiyawi imantata</string>
+    <string name="crm_create_upload_json">.zip jan .json qillqata apsuña</string>
+    <string name="crm_create_blocked_no_options">Jan luraña: %1$s wakisiwa ukampi janiw ajlliñanakapa utjkiti. Uñstawin ajlliñanaka uchaña.</string>
 </resources>

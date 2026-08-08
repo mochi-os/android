@@ -376,4 +376,5 @@
     <string name="projects_export_failed">ఎగుమతిని సేవ్ చేయలేకపోయాము</string>
     <string name="projects_export_saved">ప్రాజెక్ట్ డేటా సేవ్ చేయబడింది</string>
     <string name="projects_exporting">ఎగుమతిని సిద్ధం చేస్తోంది…</string>
+    <string name="projects_board_add_column">కాలమ్‌ను జోడించండి</string>
 </resources>

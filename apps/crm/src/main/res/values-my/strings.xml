@@ -368,4 +368,15 @@
     <string name="crm_all_crms">CRM အားလုံး</string>
     <string name="crm_settings_unsubscribe_section">CRM မှ စာရင်းသွင်းမှု ရုပ်သိမ်းရန်</string>
     <string name="crm_settings_updated">CRM ကို အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
+    <string name="crm_create_import_backup">အရန်မှ တင်သွင်းရန် (မရွေးချယ်လည်းရသည်)</string>
+    <string name="crm_export">ဒေတာ တင်ပို့ရန်</string>
+    <string name="crm_exporting">တင်ပို့မှု ပြင်ဆင်နေသည်…</string>
+    <string name="crm_create_allow_search">မည်သူမဆို CRM ကို ရှာဖွေခွင့်ပြုမည်</string>
+    <string name="crm_no_crms_found">CRM များ မတွေ့ပါ</string>
+    <string name="crm_create_blocked_no_parents">item အမျိုးအစားအသစ်များ မဖန်တီးနိုင်သေးပါ။ လိုအပ်သော parent item များကို ဦးစွာဖန်တီးပါ။</string>
+    <string name="crm_export_csv">CSV ထုတ်ယူ</string>
+    <string name="crm_share_link_title">CRM မျှဝေရန်</string>
+    <string name="crm_export_saved">CRM ဒေတာ သိမ်းဆည်းပြီး</string>
+    <string name="crm_create_upload_json">.zip သို့မဟုတ် .json ဖိုင် အပ်လုဒ်လုပ်ပါ</string>
+    <string name="crm_create_blocked_no_options">ဖန်တီး၍မရပါ- %1$s လိုအပ်သော်လည်း ရွေးချယ်စရာ မရှိပါ။ ဒီဇိုင်းတွင် ရွေးချယ်စရာများ ထည့်ပါ။</string>
 </resources>

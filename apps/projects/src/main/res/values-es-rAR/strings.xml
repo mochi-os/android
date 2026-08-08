@@ -356,4 +356,5 @@
     <string name="projects_settings_not_set">Sin establecer</string>
     <string name="projects_settings_updated">Proyecto actualizado</string>
     <string name="projects_class_save_name">Guardá el nombre</string>
+    <string name="projects_board_add_column">Agregá una columna</string>
 </resources>

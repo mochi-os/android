@@ -368,4 +368,15 @@
     <string name="crm_all_crms">CRM ទាំងអស់</string>
     <string name="crm_settings_unsubscribe_section">ឈប់ជាវ CRM</string>
     <string name="crm_settings_updated">បានធ្វើបច្ចុប្បន្នភាព CRM</string>
+    <string name="crm_create_import_backup">នាំចូលពីការបម្រុងទុក (ស្រេចចិត្ត)</string>
+    <string name="crm_export">នាំចេញទិន្នន័យ</string>
+    <string name="crm_exporting">កំពុងរៀបចំការនាំចេញ…</string>
+    <string name="crm_create_allow_search">អនុញ្ញាតឱ្យអ្នកណាក៏អាចស្វែងរក CRM</string>
+    <string name="crm_no_crms_found">រកមិនឃើញ CRM</string>
+    <string name="crm_create_blocked_no_parents">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>
+    <string name="crm_export_csv">នាំចេញ CSV</string>
+    <string name="crm_share_link_title">ចែករំលែក CRM</string>
+    <string name="crm_export_saved">បានរក្សាទុកទិន្នន័យ CRM</string>
+    <string name="crm_create_upload_json">បញ្ចូលឯកសារ .zip ឬ .json</string>
+    <string name="crm_create_blocked_no_options">មិនអាចបង្កើតបានទេ៖ %1$s ត្រូវការ ប៉ុន្តែគ្មានជម្រើសឱ្យជ្រើសរើសទេ។ បន្ថែមជម្រើសក្នុងការរចនា។</string>
 </resources>

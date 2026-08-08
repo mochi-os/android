@@ -376,4 +376,5 @@
     <string name="projects_export_failed">ਐਕਸਪੋਰਟ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
     <string name="projects_export_saved">ਪ੍ਰੋਜੈਕਟ ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
     <string name="projects_exporting">ਐਕਸਪੋਰਟ ਤਿਆਰ ਕਰ ਰਹੇ ਹਾਂ…</string>
+    <string name="projects_board_add_column">ਕਾਲਮ ਜੋੜੋ</string>
 </resources>

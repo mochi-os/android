@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Barcha CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM obunasini bekor qilish</string>
     <string name="crm_settings_updated">CRM yangilandi</string>
+    <string name="crm_create_import_backup">Zaxira nusxasidan import (ixtiyoriy)</string>
+    <string name="crm_export">Ma\'lumotni eksport qilish</string>
+    <string name="crm_exporting">Eksport tayyorlanmoqda…</string>
+    <string name="crm_create_allow_search">Hammaga CRM ni qidirishga ruxsat berish</string>
+    <string name="crm_no_crms_found">CRM topilmadi</string>
+    <string name="crm_create_blocked_no_parents">Hozircha hech qanday element turi yaratib boʻlmaydi. Avval kerakli ota elementlarni yarating.</string>
+    <string name="crm_export_csv">CSV eksport qilish</string>
+    <string name="crm_share_link_title">CRM ni ulashish</string>
+    <string name="crm_export_saved">CRM ma\'lumotlari saqlandi</string>
+    <string name="crm_create_upload_json">.zip yoki .json fayl yuklang</string>
+    <string name="crm_create_blocked_no_options">Yaratib bo\'lmaydi: %1$s talab qilinadi, lekin tanlash uchun variantlari yo\'q. Dizaynda variantlar qo\'shing.</string>
 </resources>

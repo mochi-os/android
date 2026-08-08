@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Kaikki CRM:t</string>
     <string name="crm_settings_unsubscribe_section">Lopeta CRM:n tilaus</string>
     <string name="crm_settings_updated">CRM päivitetty</string>
+    <string name="crm_create_import_backup">Tuo varmuuskopiosta (valinnainen)</string>
+    <string name="crm_export">Vie tiedot</string>
+    <string name="crm_exporting">Valmistellaan vientiä…</string>
+    <string name="crm_create_allow_search">Salli kenen tahansa etsiä CRM:ää</string>
+    <string name="crm_no_crms_found">CRM-järjestelmiä ei löytynyt</string>
+    <string name="crm_create_blocked_no_parents">Mitään kohdetyyppiä ei voi vielä luoda. Luo ensin vaaditut yläkohteet.</string>
+    <string name="crm_export_csv">Vie CSV</string>
+    <string name="crm_share_link_title">Jaa CRM</string>
+    <string name="crm_export_saved">CRM-tiedot tallennettu</string>
+    <string name="crm_create_upload_json">Lataa .zip- tai .json-tiedosto</string>
+    <string name="crm_create_blocked_no_options">Ei voi luoda: %1$s on pakollinen, mutta sillä ei ole valittavia vaihtoehtoja. Lisää vaihtoehtoja Suunnittelussa.</string>
 </resources>

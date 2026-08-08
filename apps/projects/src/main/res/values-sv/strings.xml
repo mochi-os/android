@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Exporten kunde inte sparas</string>
     <string name="projects_export_saved">Projektdata sparad</string>
     <string name="projects_exporting">Förbereder export…</string>
+    <string name="projects_board_add_column">Lägg till kolumn</string>
 </resources>

@@ -368,4 +368,15 @@
     <string name="crm_all_crms">CRM ທັງໝົດ</string>
     <string name="crm_settings_unsubscribe_section">ຍົກເລີກການສະໝັກ CRM</string>
     <string name="crm_settings_updated">ອັບເດດ CRM ແລ້ວ</string>
+    <string name="crm_create_import_backup">ນຳເຂົ້າຈາກສຳຮອງຂໍ້ມູນ (ບໍ່ບັງຄັບ)</string>
+    <string name="crm_export">ສົ່ງອອກຂໍ້ມູນ</string>
+    <string name="crm_exporting">ກຳລັງກຽມການສົ່ງອອກ…</string>
+    <string name="crm_create_allow_search">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາ CRM</string>
+    <string name="crm_no_crms_found">ບໍ່ພົບ CRM</string>
+    <string name="crm_create_blocked_no_parents">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>
+    <string name="crm_export_csv">ສົ່ງອອກ CSV</string>
+    <string name="crm_share_link_title">ແບ່ງປັນ CRM</string>
+    <string name="crm_export_saved">ບັນທຶກຂໍ້ມູນ CRM ແລ້ວ</string>
+    <string name="crm_create_upload_json">ອັບໂຫຼດໄຟລ໌ .zip ຫຼື .json</string>
+    <string name="crm_create_blocked_no_options">ສ້າງບໍ່ໄດ້: %1$s ຈຳເປັນ ແຕ່ບໍ່ມີຕົວເລືອກໃຫ້ເລືອກ. ເພີ່ມຕົວເລືອກໃນການອອກແບບ.</string>
 </resources>

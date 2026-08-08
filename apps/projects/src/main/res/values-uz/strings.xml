@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Eksportni saqlab bo\'lmadi</string>
     <string name="projects_export_saved">Loyiha ma\'lumotlari saqlandi</string>
     <string name="projects_exporting">Eksport tayyorlanmoqda…</string>
+    <string name="projects_board_add_column">Ustun qoʻshish</string>
 </resources>

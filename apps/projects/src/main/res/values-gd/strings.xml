@@ -378,4 +378,5 @@
     <string name="projects_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
     <string name="projects_export_saved">Chaidh dàta a\' phròiseict a shàbhaladh</string>
     <string name="projects_exporting">A\' deasachadh an às-phortaidh…</string>
+    <string name="projects_board_add_column">Cuir colbh ris</string>
 </resources>

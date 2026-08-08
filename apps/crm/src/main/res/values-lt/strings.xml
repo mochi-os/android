@@ -371,4 +371,15 @@
     <string name="crm_all_crms">Visos CRM</string>
     <string name="crm_settings_unsubscribe_section">Atsisakyti CRM prenumeratos</string>
     <string name="crm_settings_updated">CRM atnaujinta</string>
+    <string name="crm_create_import_backup">Importuoti iš atsarginės kopijos (neprivaloma)</string>
+    <string name="crm_export">Eksportuoti duomenis</string>
+    <string name="crm_exporting">Ruošiamas eksportas…</string>
+    <string name="crm_create_allow_search">Leisti bet kam ieškoti CRM</string>
+    <string name="crm_no_crms_found">CRM nerasta</string>
+    <string name="crm_create_blocked_no_parents">Kol kas negalima sukurti jokių elementų tipų. Pirma sukurkite reikalingus tėvinius elementus.</string>
+    <string name="crm_export_csv">Eksportuoti CSV</string>
+    <string name="crm_share_link_title">Bendrinti CRM</string>
+    <string name="crm_export_saved">CRM duomenys išsaugoti</string>
+    <string name="crm_create_upload_json">Įkelkite .zip arba .json failą</string>
+    <string name="crm_create_blocked_no_options">Nepavyko sukurti: %1$s privalomas, bet neturi pasirinkimų. Pridėkite parinkčių Dizaine.</string>
 </resources>

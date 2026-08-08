@@ -365,4 +365,5 @@
     <string name="projects_create_upload_json">Téléverser un fichier .json</string>
     <string name="projects_settings_not_set">Non défini</string>
     <string name="projects_settings_updated">Projet mis à jour</string>
+    <string name="projects_board_add_column">Ajouter une colonne</string>
 </resources>

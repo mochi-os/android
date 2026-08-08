@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Eksporti nuk u ruajt dot</string>
     <string name="projects_export_saved">Të dhënat e projektit u ruajtën</string>
     <string name="projects_exporting">Po përgatitet eksporti…</string>
+    <string name="projects_board_add_column">Shto kolonë</string>
 </resources>

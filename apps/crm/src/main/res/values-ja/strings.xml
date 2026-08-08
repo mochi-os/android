@@ -369,4 +369,15 @@
     <string name="crm_all_crms">すべての CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM の購読を解除</string>
     <string name="crm_settings_updated">CRM を更新しました</string>
+    <string name="crm_create_import_backup">バックアップからインポート（任意）</string>
+    <string name="crm_export">データをエクスポート</string>
+    <string name="crm_exporting">エクスポートを準備中…</string>
+    <string name="crm_create_allow_search">誰でも CRM を検索できるようにする</string>
+    <string name="crm_no_crms_found">CRM が見つかりません</string>
+    <string name="crm_create_blocked_no_parents">まだ作成可能な項目タイプがありません。必要な親項目を先に作成してください。</string>
+    <string name="crm_export_csv">CSV をエクスポート</string>
+    <string name="crm_share_link_title">CRM を共有</string>
+    <string name="crm_export_saved">CRM データを保存しました</string>
+    <string name="crm_create_upload_json">.zip または .json ファイルをアップロード</string>
+    <string name="crm_create_blocked_no_options">作成できません: %1$s は必須ですが、選択肢がありません。デザインで選択肢を追加してください。</string>
 </resources>

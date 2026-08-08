@@ -378,4 +378,5 @@
     <string name="projects_export_failed">Не ўдалося захаваць экспарт</string>
     <string name="projects_export_saved">Даныя праекта захаваны</string>
     <string name="projects_exporting">Падрыхтоўка экспарту…</string>
+    <string name="projects_board_add_column">Дадаць слупок</string>
 </resources>

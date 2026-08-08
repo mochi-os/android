@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Eksport tidak dapat disimpan</string>
     <string name="projects_export_saved">Data projek disimpan</string>
     <string name="projects_exporting">Menyediakan eksport…</string>
+    <string name="projects_board_add_column">Tambah lajur</string>
 </resources>

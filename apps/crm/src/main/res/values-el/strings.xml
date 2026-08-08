@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Όλα τα CRM</string>
     <string name="crm_settings_unsubscribe_section">Κατάργηση εγγραφής από το CRM</string>
     <string name="crm_settings_updated">Το CRM ενημερώθηκε</string>
+    <string name="crm_create_import_backup">Εισαγωγή από αντίγραφο ασφαλείας (προαιρετικό)</string>
+    <string name="crm_export">Εξαγωγή δεδομένων</string>
+    <string name="crm_exporting">Προετοιμασία εξαγωγής…</string>
+    <string name="crm_create_allow_search">Να επιτρέπεται σε όλους η αναζήτηση CRM</string>
+    <string name="crm_no_crms_found">Δεν βρέθηκαν CRM</string>
+    <string name="crm_create_blocked_no_parents">Δεν μπορούν να δημιουργηθούν ακόμη τύποι στοιχείων. Δημιουργήστε πρώτα τα απαιτούμενα γονικά στοιχεία.</string>
+    <string name="crm_export_csv">Εξαγωγή CSV</string>
+    <string name="crm_share_link_title">Κοινή χρήση CRM</string>
+    <string name="crm_export_saved">Τα δεδομένα CRM αποθηκεύτηκαν</string>
+    <string name="crm_create_upload_json">Ανεβάστε αρχείο .zip ή .json</string>
+    <string name="crm_create_blocked_no_options">Δεν είναι δυνατή η δημιουργία: το %1$s απαιτείται αλλά δεν έχει επιλογές. Προσθέστε επιλογές στη Σχεδίαση.</string>
 </resources>

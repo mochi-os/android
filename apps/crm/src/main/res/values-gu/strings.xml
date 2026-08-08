@@ -369,4 +369,15 @@
     <string name="crm_all_crms">બધા CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM માંથી અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="crm_settings_updated">CRM અપડેટ થયું</string>
+    <string name="crm_create_import_backup">બેકઅપમાંથી ઇમ્પોર્ટ કરો (વૈકલ્પિક)</string>
+    <string name="crm_export">ડેટા નિકાસ કરો</string>
+    <string name="crm_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>
+    <string name="crm_create_allow_search">કોઈને પણ CRM શોધવાની મંજૂરી આપો</string>
+    <string name="crm_no_crms_found">કોઈ CRMs મળ્યા નથી</string>
+    <string name="crm_create_blocked_no_parents">હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો.</string>
+    <string name="crm_export_csv">CSV એક્સપોર્ટ કરો</string>
+    <string name="crm_share_link_title">CRM શેર કરો</string>
+    <string name="crm_export_saved">CRM ડેટા સાચવ્યો</string>
+    <string name="crm_create_upload_json">.zip અથવા .json ફાઇલ અપલોડ કરો</string>
+    <string name="crm_create_blocked_no_options">બનાવી શકાતું નથી: %1$s જરૂરી છે પણ પસંદ કરવા માટે કોઈ વિકલ્પ નથી. ડિઝાઇનમાં વિકલ્પો ઉમેરો.</string>
 </resources>

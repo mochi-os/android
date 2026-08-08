@@ -369,4 +369,15 @@
     <string name="crm_all_crms">سڀ CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM کان ان سبسڪرائب ڪريو</string>
     <string name="crm_settings_updated">CRM اپڊيٽ ٿيو</string>
+    <string name="crm_create_import_backup">بيڪ اپ مان درآمد ڪريو (اختياري)</string>
+    <string name="crm_export">ڊيٽا ايڪسپورٽ ڪريو</string>
+    <string name="crm_exporting">ايڪسپورٽ تيار ٿي رهيو آهي…</string>
+    <string name="crm_create_allow_search">ڪنهن کي به CRM ڳولڻ جي اجازت ڏيو</string>
+    <string name="crm_no_crms_found">ڪا به CRM نه ملي</string>
+    <string name="crm_create_blocked_no_parents">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
+    <string name="crm_export_csv">CSV ايڪسپورٽ ڪريو</string>
+    <string name="crm_share_link_title">CRM شيئر ڪريو</string>
+    <string name="crm_export_saved">CRM ڊيٽا محفوظ ٿي</string>
+    <string name="crm_create_upload_json">.zip يا .json فائل اپلوڊ ڪريو</string>
+    <string name="crm_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>
 </resources>

@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Wonke ama-CRM</string>
     <string name="crm_settings_unsubscribe_section">Yeka ukubhalisa ku-CRM</string>
     <string name="crm_settings_updated">I-CRM ibuyekeziwe</string>
+    <string name="crm_create_import_backup">Ngenisa kusukela kwisipele (okuzikhethelayo)</string>
+    <string name="crm_export">Thumela idatha</string>
+    <string name="crm_exporting">Ilungiselela okuthunyelwayo…</string>
+    <string name="crm_create_allow_search">Vumela noma ngubani ukuthi asesheshe i-CRM</string>
+    <string name="crm_no_crms_found">Awekho ama-CRM atholakele</string>
+    <string name="crm_create_blocked_no_parents">Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala.</string>
+    <string name="crm_export_csv">Thumela ngaphandle i-CSV</string>
+    <string name="crm_share_link_title">Yabelana nge-CRM</string>
+    <string name="crm_export_saved">Idatha ye-CRM ilondoloziwe</string>
+    <string name="crm_create_upload_json">Layisha ifayela le-.zip noma le-.json</string>
+    <string name="crm_create_blocked_no_options">Ayikwazi ukudala: %1$s iyadingeka kodwa ayinazo izinketho. Engeza izinketho kuMklamo.</string>
 </resources>

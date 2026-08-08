@@ -369,4 +369,15 @@
     <string name="crm_all_crms">CRM hunda</string>
     <string name="crm_settings_unsubscribe_section">CRM irraa of haquu</string>
     <string name="crm_settings_updated">CRM haaromfameera</string>
+    <string name="crm_create_import_backup">Kuusaa irraa galchi (filannoo)</string>
+    <string name="crm_export">Daataa alergi</string>
+    <string name="crm_exporting">Alergiinsa qopheessaa jira…</string>
+    <string name="crm_create_allow_search">Eenyu iyyuu CRM barbaaduu hayyami</string>
+    <string name="crm_no_crms_found">CRMn hin argamne</string>
+    <string name="crm_create_blocked_no_parents">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
+    <string name="crm_export_csv">CSV ergi</string>
+    <string name="crm_share_link_title">CRM qooddu</string>
+    <string name="crm_export_saved">Daataan CRM olkaa\'ameera</string>
+    <string name="crm_create_upload_json">Faayilii .zip yookaan .json ol kaa\'i</string>
+    <string name="crm_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>
 </resources>

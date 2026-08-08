@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Eksporten kunne ikke gemmes</string>
     <string name="projects_export_saved">Projektdata gemt</string>
     <string name="projects_exporting">Forbereder eksport…</string>
+    <string name="projects_board_add_column">Tilføj kolonne</string>
 </resources>

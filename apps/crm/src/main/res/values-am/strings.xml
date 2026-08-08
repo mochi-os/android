@@ -369,4 +369,15 @@
     <string name="crm_all_crms">ሁሉም CRMs</string>
     <string name="crm_settings_unsubscribe_section">ከCRM ይውጡ</string>
     <string name="crm_settings_updated">CRM ተዘምኗል</string>
+    <string name="crm_create_import_backup">ከመጠባበቂያ አስመጣ (አማራጭ)</string>
+    <string name="crm_export">ውሂብ ላክ</string>
+    <string name="crm_exporting">ወደ ውጪ መላክ በመዘጋጀት ላይ…</string>
+    <string name="crm_create_allow_search">ማንኛውም ሰው CRM እንዲፈልግ ፍቀድ</string>
+    <string name="crm_no_crms_found">ምንም CRMs አልተገኙም</string>
+    <string name="crm_create_blocked_no_parents">እስካሁን ምንም የንጥል አይነቶች ሊፈጠሩ አይችሉም። መጀመሪያ የሚያስፈልጉትን የወላጅ ንጥሎች ይፍጠሩ።</string>
+    <string name="crm_export_csv">CSV ላክ</string>
+    <string name="crm_share_link_title">CRM አጋራ</string>
+    <string name="crm_export_saved">የCRM ውሂብ ተቀምጧል</string>
+    <string name="crm_create_upload_json">.zip ወይም .json ፋይል ይጫኑ</string>
+    <string name="crm_create_blocked_no_options">መፍጠር አልተቻለም፦ %1$s ያስፈልጋል ግን የሚመረጡ አማራጮች የሉትም። በንድፍ ውስጥ አማራጮችን ያክሉ።</string>
 </resources>

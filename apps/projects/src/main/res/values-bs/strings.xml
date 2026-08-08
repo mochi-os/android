@@ -377,4 +377,5 @@
     <string name="projects_export_failed">Izvoz nije moguće spremiti</string>
     <string name="projects_export_saved">Podaci projekta spremljeni</string>
     <string name="projects_exporting">Priprema izvoza…</string>
+    <string name="projects_board_add_column">Dodaj kolonu</string>
 </resources>

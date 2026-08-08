@@ -369,4 +369,15 @@
     <string name="crm_all_crms">सब CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM से सदस्यता छोड़ीं</string>
     <string name="crm_settings_updated">CRM अपडेट भइल</string>
+    <string name="crm_create_import_backup">बैकअप से आयात करीं (वैकल्पिक)</string>
+    <string name="crm_export">डेटा एक्सपोर्ट करीं</string>
+    <string name="crm_exporting">एक्सपोर्ट तइयार हो रहल बा…</string>
+    <string name="crm_create_allow_search">केहू के CRM खोजे के अनुमति दीं</string>
+    <string name="crm_no_crms_found">कौनो CRM ना मिलल</string>
+    <string name="crm_create_blocked_no_parents">अबहीं कौनो आइटम प्रकार ना बन सके। पहिले जरूरी मूल आइटम बनाईं।</string>
+    <string name="crm_export_csv">CSV निर्यात करीं</string>
+    <string name="crm_share_link_title">CRM साझा करीं</string>
+    <string name="crm_export_saved">CRM डेटा सेव भइल</string>
+    <string name="crm_create_upload_json">.zip भा .json फाइल अपलोड करीं</string>
+    <string name="crm_create_blocked_no_options">बनावल ना जा सकल: %1$s जरूरी बा बाकिर एकरा में चुने खातिर कवनो विकल्प नइखे। डिज़ाइन में विकल्प जोड़ीं।</string>
 </resources>

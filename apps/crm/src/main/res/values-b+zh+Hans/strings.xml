@@ -369,4 +369,15 @@
     <string name="crm_all_crms">所有 CRM</string>
     <string name="crm_settings_unsubscribe_section">取消订阅该 CRM</string>
     <string name="crm_settings_updated">CRM 已更新</string>
+    <string name="crm_create_import_backup">从备份导入（可选）</string>
+    <string name="crm_export">导出数据</string>
+    <string name="crm_exporting">正在准备导出…</string>
+    <string name="crm_create_allow_search">允许任何人搜索 CRM</string>
+    <string name="crm_no_crms_found">未找到 CRM</string>
+    <string name="crm_create_blocked_no_parents">尚无可创建的条目类型。请先创建所需的父级条目。</string>
+    <string name="crm_export_csv">导出 CSV</string>
+    <string name="crm_share_link_title">分享 CRM</string>
+    <string name="crm_export_saved">CRM 数据已保存</string>
+    <string name="crm_create_upload_json">上传 .zip 或 .json 文件</string>
+    <string name="crm_create_blocked_no_options">无法创建：%1$s 为必填项，但没有可选选项。请在设计中添加选项。</string>
 </resources>

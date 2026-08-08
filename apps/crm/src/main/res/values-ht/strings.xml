@@ -368,4 +368,15 @@
     <string name="crm_all_crms">Tout CRM</string>
     <string name="crm_settings_unsubscribe_section">Dezabòne nan CRM</string>
     <string name="crm_settings_updated">CRM mete ajou</string>
+    <string name="crm_create_import_backup">Enpòte soti nan backup (opsyonèl)</string>
+    <string name="crm_export">Ekspòte done</string>
+    <string name="crm_exporting">Prepare ekspòtasyon an…</string>
+    <string name="crm_create_allow_search">Pèmèt nenpòt moun chèche CRM</string>
+    <string name="crm_no_crms_found">Pa gen CRM ki jwenn</string>
+    <string name="crm_create_blocked_no_parents">Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò.</string>
+    <string name="crm_export_csv">Ekspòte CSV</string>
+    <string name="crm_share_link_title">Pataje CRM</string>
+    <string name="crm_export_saved">Done CRM anrejistre</string>
+    <string name="crm_create_upload_json">Telechaje yon fichye .zip oswa .json</string>
+    <string name="crm_create_blocked_no_options">Pa ka kreye: %1$s obligatwa men li pa gen opsyon pou chwazi. Ajoute opsyon nan Konsèp.</string>
 </resources>

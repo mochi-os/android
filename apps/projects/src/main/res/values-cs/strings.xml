@@ -377,4 +377,5 @@
     <string name="projects_export_failed">Export se nepodařilo uložit</string>
     <string name="projects_export_saved">Data projektu uložena</string>
     <string name="projects_exporting">Připravuje se export…</string>
+    <string name="projects_board_add_column">Přidat sloupec</string>
 </resources>

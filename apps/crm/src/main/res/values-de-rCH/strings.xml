@@ -331,4 +331,5 @@
     <string name="crm_access_anyone_desc">Einschliesslich anonymer Benutzer</string>
     <string name="crm_field_flags">Kennzeichen</string>
     <string name="crm_views_type_board">Tafel</string>
+    <string name="crm_create_import_backup">Aus Sicherung importieren (optional)</string>
 </resources>

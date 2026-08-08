@@ -371,4 +371,15 @@
     <string name="crm_all_crms">A h-uile CRM</string>
     <string name="crm_settings_unsubscribe_section">Sguir de fho-sgrìobhadh a\' CRM</string>
     <string name="crm_settings_updated">Chaidh an CRM ùrachadh</string>
+    <string name="crm_create_import_backup">Ion-phortaich o lethbhreac-glèidhidh (roghainneil)</string>
+    <string name="crm_export">Às-phortaich dàta</string>
+    <string name="crm_exporting">A\' deasachadh an às-phortaidh…</string>
+    <string name="crm_create_allow_search">Ceadaich do dhuine sam bith CRM a lorg</string>
+    <string name="crm_no_crms_found">Cha deach CRM a lorg</string>
+    <string name="crm_create_blocked_no_parents">Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach.</string>
+    <string name="crm_export_csv">Às-phortaich CSV</string>
+    <string name="crm_share_link_title">Co-roinn CRM</string>
+    <string name="crm_export_saved">Chaidh dàta CRM a shàbhaladh</string>
+    <string name="crm_create_upload_json">Luchdaich suas faidhle .zip no .json</string>
+    <string name="crm_create_blocked_no_options">Cha ghabh a chruthachadh: tha %1$s riatanach ach chan eil roghainnean aige. Cuir roghainnean ris san Dealbhachd.</string>
 </resources>

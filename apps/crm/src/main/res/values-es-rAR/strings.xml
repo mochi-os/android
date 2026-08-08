@@ -327,4 +327,6 @@
     <string name="crm_property_select">Seleccionar …</string>
     <string name="crm_access_select_role">Seleccioná un rol</string>
     <string name="crm_class_save_name">Guardá el nombre</string>
+    <string name="crm_create_import_backup">Importar desde copia de seguridad (opcional)</string>
+    <string name="crm_create_allow_search">Permití que cualquiera busque el CRM</string>
 </resources>

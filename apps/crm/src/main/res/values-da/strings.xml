@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Alle CRM\'er</string>
     <string name="crm_settings_unsubscribe_section">Afmeld CRM</string>
     <string name="crm_settings_updated">CRM opdateret</string>
+    <string name="crm_create_import_backup">Importér fra sikkerhedskopi (valgfrit)</string>
+    <string name="crm_export">Eksportér data</string>
+    <string name="crm_exporting">Forbereder eksport…</string>
+    <string name="crm_create_allow_search">Tillad alle at søge efter CRM</string>
+    <string name="crm_no_crms_found">Ingen CRM\'er fundet</string>
+    <string name="crm_create_blocked_no_parents">Ingen emnetyper kan oprettes endnu. Opret først de nødvendige overordnede emner.</string>
+    <string name="crm_export_csv">Eksportér CSV</string>
+    <string name="crm_share_link_title">Del CRM</string>
+    <string name="crm_export_saved">CRM-data gemt</string>
+    <string name="crm_create_upload_json">Upload en .zip- eller .json-fil</string>
+    <string name="crm_create_blocked_no_options">Kan ikke oprette: %1$s er påkrævet, men har ingen valgmuligheder. Tilføj valgmuligheder i Design.</string>
 </resources>

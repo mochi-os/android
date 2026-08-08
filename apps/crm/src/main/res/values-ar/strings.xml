@@ -373,4 +373,15 @@
     <string name="crm_all_crms">كل أنظمة CRM</string>
     <string name="crm_settings_unsubscribe_section">إلغاء الاشتراك من CRM</string>
     <string name="crm_settings_updated">تم تحديث CRM</string>
+    <string name="crm_create_import_backup">استيراد من نسخة احتياطية (اختياري)</string>
+    <string name="crm_export">تصدير البيانات</string>
+    <string name="crm_exporting">جارٍ تحضير التصدير…</string>
+    <string name="crm_create_allow_search">السماح لأي شخص بالبحث عن CRM</string>
+    <string name="crm_no_crms_found">لم يتم العثور على CRM</string>
+    <string name="crm_create_blocked_no_parents">لا يمكن إنشاء أنواع عناصر بعد. أنشئ العناصر الأصلية المطلوبة أولاً.</string>
+    <string name="crm_export_csv">تصدير CSV</string>
+    <string name="crm_share_link_title">مشاركة CRM</string>
+    <string name="crm_export_saved">تم حفظ بيانات CRM</string>
+    <string name="crm_create_upload_json">ارفع ملف ‎.zip‎ أو ‎.json‎</string>
+    <string name="crm_create_blocked_no_options">تعذّر الإنشاء: %1$s مطلوب لكن ليس له خيارات للاختيار منها. أضف خيارات في التصميم.</string>
 </resources>

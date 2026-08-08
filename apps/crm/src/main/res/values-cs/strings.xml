@@ -370,4 +370,15 @@
     <string name="crm_all_crms">Všechny CRM</string>
     <string name="crm_settings_unsubscribe_section">Odhlásit odběr CRM</string>
     <string name="crm_settings_updated">CRM aktualizován</string>
+    <string name="crm_create_import_backup">Import ze zálohy (volitelné)</string>
+    <string name="crm_export">Exportovat data</string>
+    <string name="crm_exporting">Připravuje se export…</string>
+    <string name="crm_create_allow_search">Povolit komukoli vyhledávat CRM</string>
+    <string name="crm_no_crms_found">Žádná CRM nenalezena</string>
+    <string name="crm_create_blocked_no_parents">Zatím nelze vytvořit žádné typy položek. Nejprve vytvořte potřebné nadřazené položky.</string>
+    <string name="crm_export_csv">Exportovat CSV</string>
+    <string name="crm_share_link_title">Sdílet CRM</string>
+    <string name="crm_export_saved">Data CRM uložena</string>
+    <string name="crm_create_upload_json">Nahrajte soubor .zip nebo .json</string>
+    <string name="crm_create_blocked_no_options">Nelze vytvořit: %1$s je povinné, ale nemá žádné možnosti k výběru. Přidejte možnosti v Návrhu.</string>
 </resources>

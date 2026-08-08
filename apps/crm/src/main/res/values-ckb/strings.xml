@@ -369,4 +369,15 @@
     <string name="crm_all_crms">هەموو CRMەکان</string>
     <string name="crm_settings_unsubscribe_section">بەشداری CRM هەڵوەشێنەوە</string>
     <string name="crm_settings_updated">CRM نوێکرایەوە</string>
+    <string name="crm_create_import_backup">لە باکئەپەوە هاوردە بکە (ئارەزوومەندانە)</string>
+    <string name="crm_export">داتا هەناردە بکە</string>
+    <string name="crm_exporting">هەناردە ئامادە دەکرێت…</string>
+    <string name="crm_create_allow_search">ڕێگە بدە بە هەرکەسێک بگەڕێت بۆ CRM</string>
+    <string name="crm_no_crms_found">هیچ CRMێک نەدۆزرایەوە</string>
+    <string name="crm_create_blocked_no_parents">هێشتا هیچ جۆرە بڕگەیەک ناتوانرێت دروست بکرێت. سەرەتا بڕگە باوانە پێویستەکان دروست بکە.</string>
+    <string name="crm_export_csv">هەناردەکردنی CSV</string>
+    <string name="crm_share_link_title">CRM هاوبەش بکە</string>
+    <string name="crm_export_saved">داتای CRM پاشەکەوت کرا</string>
+    <string name="crm_create_upload_json">فایلی .zip یان .json بارکە</string>
+    <string name="crm_create_blocked_no_options">ناتوانرێت دروست بکرێت: %1$s پێویستە بەڵام هیچ هەڵبژاردەیەکی نییە. لە دیزایندا هەڵبژاردە زیاد بکە.</string>
 </resources>

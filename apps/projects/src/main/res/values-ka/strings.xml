@@ -376,4 +376,5 @@
     <string name="projects_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
     <string name="projects_export_saved">პროექტის მონაცემები შენახულია</string>
     <string name="projects_exporting">ექსპორტის მომზადება…</string>
+    <string name="projects_board_add_column">სვეტის დამატება</string>
 </resources>

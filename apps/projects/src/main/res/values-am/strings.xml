@@ -376,4 +376,5 @@
     <string name="projects_export_failed">ወደ ውጪ መላኩን ማስቀመጥ አልተቻለም</string>
     <string name="projects_export_saved">የፕሮጀክት ውሂብ ተቀምጧል</string>
     <string name="projects_exporting">ወደ ውጪ መላክ በመዘጋጀት ላይ…</string>
+    <string name="projects_board_add_column">ዓምድ ጨምር</string>
 </resources>

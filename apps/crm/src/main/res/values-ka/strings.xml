@@ -369,4 +369,15 @@
     <string name="crm_all_crms">ყველა CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM-ის გამოწერის გაუქმება</string>
     <string name="crm_settings_updated">CRM განახლდა</string>
+    <string name="crm_create_import_backup">იმპორტი სარეზერვო ასლიდან (არასავალდებულო)</string>
+    <string name="crm_export">მონაცემების ექსპორტი</string>
+    <string name="crm_exporting">ექსპორტის მომზადება…</string>
+    <string name="crm_create_allow_search">ნებისმიერს CRM-ის ძიების ნება დართე</string>
+    <string name="crm_no_crms_found">CRM-ები ვერ მოიძებნა</string>
+    <string name="crm_create_blocked_no_parents">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>
+    <string name="crm_export_csv">CSV-ის ექსპორტი</string>
+    <string name="crm_share_link_title">CRM-ის გაზიარება</string>
+    <string name="crm_export_saved">CRM-ის მონაცემები შენახულია</string>
+    <string name="crm_create_upload_json">ატვირთეთ .zip ან .json ფაილი</string>
+    <string name="crm_create_blocked_no_options">შექმნა შეუძლებელია: %1$s სავალდებულოა, მაგრამ არჩევანი არ აქვს. დაამატეთ ვარიანტები დიზაინში.</string>
 </resources>

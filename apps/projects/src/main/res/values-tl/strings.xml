@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Hindi ma-save ang export</string>
     <string name="projects_export_saved">Na-save ang data ng proyekto</string>
     <string name="projects_exporting">Inihahanda ang export…</string>
+    <string name="projects_board_add_column">Magdagdag ng column</string>
 </resources>

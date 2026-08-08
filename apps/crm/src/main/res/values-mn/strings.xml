@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Бүх CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM-ээс бүртгэлээ цуцлах</string>
     <string name="crm_settings_updated">CRM шинэчлэгдлээ</string>
+    <string name="crm_create_import_backup">Нөөцлөлтөөс импортлох (заавал биш)</string>
+    <string name="crm_export">Өгөгдөл экспортлох</string>
+    <string name="crm_exporting">Экспортыг бэлтгэж байна…</string>
+    <string name="crm_create_allow_search">Хэн ч CRM-ийг хайх боломжтой</string>
+    <string name="crm_no_crms_found">CRM олдсонгүй</string>
+    <string name="crm_create_blocked_no_parents">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>
+    <string name="crm_export_csv">CSV экспортлох</string>
+    <string name="crm_share_link_title">CRM хуваалцах</string>
+    <string name="crm_export_saved">CRM өгөгдөл хадгалагдлаа</string>
+    <string name="crm_create_upload_json">.zip эсвэл .json файл байршуулна уу</string>
+    <string name="crm_create_blocked_no_options">Үүсгэх боломжгүй: %1$s шаардлагатай боловч сонгох сонголт байхгүй. Загварт сонголт нэмнэ үү.</string>
 </resources>

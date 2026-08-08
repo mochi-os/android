@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Semua CRM</string>
     <string name="crm_settings_unsubscribe_section">Berhenti berlangganan CRM</string>
     <string name="crm_settings_updated">CRM diperbarui</string>
+    <string name="crm_create_import_backup">Impor dari cadangan (opsional)</string>
+    <string name="crm_export">Ekspor data</string>
+    <string name="crm_exporting">Menyiapkan ekspor…</string>
+    <string name="crm_create_allow_search">Izinkan siapa saja mencari CRM</string>
+    <string name="crm_no_crms_found">Tidak ada CRM yang ditemukan</string>
+    <string name="crm_create_blocked_no_parents">Belum ada jenis item yang dapat dibuat. Buat item induk yang diperlukan terlebih dahulu.</string>
+    <string name="crm_export_csv">Ekspor CSV</string>
+    <string name="crm_share_link_title">Bagikan CRM</string>
+    <string name="crm_export_saved">Data CRM disimpan</string>
+    <string name="crm_create_upload_json">Unggah berkas .zip atau .json</string>
+    <string name="crm_create_blocked_no_options">Tidak dapat membuat: %1$s wajib diisi tetapi tidak memiliki pilihan. Tambahkan pilihan di Desain.</string>
 </resources>

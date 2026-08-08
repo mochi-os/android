@@ -371,4 +371,15 @@
     <string name="crm_all_crms">כל מערכות ה-CRM</string>
     <string name="crm_settings_unsubscribe_section">ביטול מנוי ל-CRM</string>
     <string name="crm_settings_updated">ה-CRM עודכן</string>
+    <string name="crm_create_import_backup">ייבוא מגיבוי (אופציונלי)</string>
+    <string name="crm_export">ייצוא נתונים</string>
+    <string name="crm_exporting">מכין את הייצוא…</string>
+    <string name="crm_create_allow_search">אפשר לכולם לחפש את ה-CRM</string>
+    <string name="crm_no_crms_found">לא נמצאו מערכות CRM</string>
+    <string name="crm_create_blocked_no_parents">עדיין לא ניתן ליצור סוגי פריטים. צור תחילה את פריטי האב הנדרשים.</string>
+    <string name="crm_export_csv">ייצוא CSV</string>
+    <string name="crm_share_link_title">שיתוף CRM</string>
+    <string name="crm_export_saved">נתוני ה-CRM נשמרו</string>
+    <string name="crm_create_upload_json">העלה קובץ .zip או .json</string>
+    <string name="crm_create_blocked_no_options">לא ניתן ליצור: %1$s נדרש אך אין לו אפשרויות לבחירה. הוסף אפשרויות בעיצוב.</string>
 </resources>

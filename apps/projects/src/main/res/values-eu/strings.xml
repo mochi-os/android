@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Ezin izan da esportazioa gorde</string>
     <string name="projects_export_saved">Proiektuaren datuak gordeta</string>
     <string name="projects_exporting">Esportazioa prestatzen…</string>
+    <string name="projects_board_add_column">Gehitu zutabea</string>
 </resources>

@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Eksporty saklap bolmady</string>
     <string name="projects_export_saved">Taslamanyň maglumaty saklandy</string>
     <string name="projects_exporting">Eksport taýýarlanýar…</string>
+    <string name="projects_board_add_column">Sütün goşmak</string>
 </resources>

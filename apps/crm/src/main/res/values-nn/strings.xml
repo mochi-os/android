@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Alle CRM-ar</string>
     <string name="crm_settings_unsubscribe_section">Avslutt abonnement på CRM</string>
     <string name="crm_settings_updated">CRM oppdatert</string>
+    <string name="crm_create_import_backup">Importer fra sikkerhetskopi (valgfritt)</string>
+    <string name="crm_export">Eksporter data</string>
+    <string name="crm_exporting">Førebur eksport…</string>
+    <string name="crm_create_allow_search">Tillat alle å søkje etter CRM</string>
+    <string name="crm_no_crms_found">Ingen CRM-ar funne</string>
+    <string name="crm_create_blocked_no_parents">Ingen elementtypar kan opprettast enno. Opprett dei påkravde overordna elementa først.</string>
+    <string name="crm_export_csv">Eksporter CSV</string>
+    <string name="crm_share_link_title">Del CRM</string>
+    <string name="crm_export_saved">CRM-data lagra</string>
+    <string name="crm_create_upload_json">Last opp ei .zip- eller .json-fil</string>
+    <string name="crm_create_blocked_no_options">Kan ikkje opprette: %1$s er påkravd, men har ingen alternativ å velje mellom. Legg til alternativ i Design.</string>
 </resources>

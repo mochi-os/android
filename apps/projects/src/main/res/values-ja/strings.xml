@@ -376,4 +376,5 @@
     <string name="projects_export_failed">エクスポートを保存できませんでした</string>
     <string name="projects_export_saved">プロジェクトデータを保存しました</string>
     <string name="projects_exporting">エクスポートを準備中…</string>
+    <string name="projects_board_add_column">列を追加</string>
 </resources>

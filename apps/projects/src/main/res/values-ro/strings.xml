@@ -377,4 +377,5 @@
     <string name="projects_export_failed">Exportul nu a putut fi salvat</string>
     <string name="projects_export_saved">Datele proiectului au fost salvate</string>
     <string name="projects_exporting">Se pregătește exportul…</string>
+    <string name="projects_board_add_column">Adaugă coloană</string>
 </resources>

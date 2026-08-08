@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Öll CRM</string>
     <string name="crm_settings_unsubscribe_section">Segja upp áskrift að CRM</string>
     <string name="crm_settings_updated">CRM uppfært</string>
+    <string name="crm_create_import_backup">Flytja inn úr öryggisafriti (valfrjálst)</string>
+    <string name="crm_export">Flytja út gögn</string>
+    <string name="crm_exporting">Undirbý útflutning…</string>
+    <string name="crm_create_allow_search">Leyfa öllum að leita að CRM</string>
+    <string name="crm_no_crms_found">Engin CRM fundust</string>
+    <string name="crm_create_blocked_no_parents">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
+    <string name="crm_export_csv">Flytja út CSV</string>
+    <string name="crm_share_link_title">Deila CRM</string>
+    <string name="crm_export_saved">CRM-gögn vistuð</string>
+    <string name="crm_create_upload_json">Hlaðið upp .zip- eða .json-skrá</string>
+    <string name="crm_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>
 </resources>

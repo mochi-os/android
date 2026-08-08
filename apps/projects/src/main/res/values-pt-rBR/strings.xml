@@ -361,4 +361,5 @@
     <string name="projects_share_link_title">Compartilhar projeto</string>
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Usado para IDs legíveis como %1$s-1, %1$s-2</string>
+    <string name="projects_board_add_column">Adicionar coluna</string>
 </resources>

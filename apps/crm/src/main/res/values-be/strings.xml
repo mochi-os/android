@@ -371,4 +371,15 @@
     <string name="crm_all_crms">Усе CRM</string>
     <string name="crm_settings_unsubscribe_section">Адпісацца ад CRM</string>
     <string name="crm_settings_updated">CRM абноўлены</string>
+    <string name="crm_create_import_backup">Імпарт з рэзервовай копіі (неабавязкова)</string>
+    <string name="crm_export">Экспарт даных</string>
+    <string name="crm_exporting">Падрыхтоўка экспарту…</string>
+    <string name="crm_create_allow_search">Дазволіць усім шукаць CRM</string>
+    <string name="crm_no_crms_found">CRM не знойдзены</string>
+    <string name="crm_create_blocked_no_parents">Пакуль нельга стварыць тыпы элементаў. Спачатку стварыце патрэбныя бацькоўскія элементы.</string>
+    <string name="crm_export_csv">Экспартаваць CSV</string>
+    <string name="crm_share_link_title">Падзяліцца CRM</string>
+    <string name="crm_export_saved">Даныя CRM захаваны</string>
+    <string name="crm_create_upload_json">Запампуйце файл .zip або .json</string>
+    <string name="crm_create_blocked_no_options">Немагчыма стварыць: %1$s абавязковы, але не мае варыянтаў выбару. Дадайце варыянты ў Дызайне.</string>
 </resources>

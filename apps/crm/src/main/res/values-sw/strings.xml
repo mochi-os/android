@@ -369,4 +369,15 @@
     <string name="crm_all_crms">CRM zote</string>
     <string name="crm_settings_unsubscribe_section">Jiondoe kwenye CRM</string>
     <string name="crm_settings_updated">CRM imesasishwa</string>
+    <string name="crm_create_import_backup">Leta kutoka kwenye nakala rudufu (hiari)</string>
+    <string name="crm_export">Hamisha data</string>
+    <string name="crm_exporting">Inaandaa uhamishaji…</string>
+    <string name="crm_create_allow_search">Ruhusu mtu yeyote kutafuta CRM</string>
+    <string name="crm_no_crms_found">Hakuna CRM zilizopatikana</string>
+    <string name="crm_create_blocked_no_parents">Hakuna aina za vipengele zinazoweza kuundwa bado. Unda vipengele vya mzazi vinavyohitajika kwanza.</string>
+    <string name="crm_export_csv">Hamisha CSV</string>
+    <string name="crm_share_link_title">Shiriki CRM</string>
+    <string name="crm_export_saved">Data ya CRM imehifadhiwa</string>
+    <string name="crm_create_upload_json">Pakia faili ya .zip au .json</string>
+    <string name="crm_create_blocked_no_options">Haiwezi kuunda: %1$s inahitajika lakini haina chaguo za kuchagua. Ongeza chaguo katika Muundo.</string>
 </resources>

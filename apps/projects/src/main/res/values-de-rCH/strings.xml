@@ -354,4 +354,5 @@
     <string name="projects_create_upload_json">.json-Datei hochladen</string>
     <string name="projects_settings_not_set">Nicht festgelegt</string>
     <string name="projects_settings_updated">Projekt aktualisiert</string>
+    <string name="projects_board_add_column">Spalte hinzufügen</string>
 </resources>

@@ -335,4 +335,5 @@
     <string name="crm_settings_server">Serveur</string>
     <string name="crm_property_select">Sélectionner …</string>
     <string name="crm_access_role_view">Consulter seulement</string>
+    <string name="crm_create_import_backup">Importer depuis une sauvegarde (facultatif)</string>
 </resources>

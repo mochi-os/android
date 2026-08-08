@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Ҳамаи CRM</string>
     <string name="crm_settings_unsubscribe_section">Обунаро аз CRM бекор кунед</string>
     <string name="crm_settings_updated">CRM навсозӣ шуд</string>
+    <string name="crm_create_import_backup">Ворид кардан аз нусхаи захиравӣ (ихтиёрӣ)</string>
+    <string name="crm_export">Содироти маълумот</string>
+    <string name="crm_exporting">Содирот омода мешавад…</string>
+    <string name="crm_create_allow_search">Иҷозат додан, ки ҳар кас CRM-ро ҷустуҷӯ кунад</string>
+    <string name="crm_no_crms_found">Ягон CRM ёфт нашуд</string>
+    <string name="crm_create_blocked_no_parents">Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед.</string>
+    <string name="crm_export_csv">Содироти CSV</string>
+    <string name="crm_share_link_title">Мубодилаи CRM</string>
+    <string name="crm_export_saved">Маълумоти CRM нигоҳ дошта шуд</string>
+    <string name="crm_create_upload_json">Файли .zip ё .json бор кунед</string>
+    <string name="crm_create_blocked_no_options">Эҷод кардан ғайриимкон: %1$s ҳатмист, аммо имконоти интихоб надорад. Дар Тарҳ имконот илова кунед.</string>
 </resources>

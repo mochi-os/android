@@ -373,4 +373,15 @@
     <string name="crm_all_crms">Pob CRM</string>
     <string name="crm_settings_unsubscribe_section">Dad-danysgrifio o\'r CRM</string>
     <string name="crm_settings_updated">CRM wedi\'i ddiweddaru</string>
+    <string name="crm_create_import_backup">Mewnforio o gopi wrth gefn (dewisol)</string>
+    <string name="crm_export">Allforio data</string>
+    <string name="crm_exporting">Yn paratoi\'r allforio…</string>
+    <string name="crm_create_allow_search">Caniatáu i unrhyw un chwilio am CRM</string>
+    <string name="crm_no_crms_found">Heb ddod o hyd i CRMau</string>
+    <string name="crm_create_blocked_no_parents">Ni ellir creu unrhyw fathau o eitemau eto. Crëwch yr eitemau rhiant gofynnol yn gyntaf.</string>
+    <string name="crm_export_csv">Allforio CSV</string>
+    <string name="crm_share_link_title">Rhannu CRM</string>
+    <string name="crm_export_saved">Cadwyd data CRM</string>
+    <string name="crm_create_upload_json">Uwchlwythwch ffeil .zip neu .json</string>
+    <string name="crm_create_blocked_no_options">Methu creu: mae %1$s yn ofynnol ond nid oes ganddo opsiynau i ddewis ohonynt. Ychwanegwch opsiynau yn y Cynllun.</string>
 </resources>

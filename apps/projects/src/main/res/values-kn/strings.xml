@@ -376,4 +376,5 @@
     <string name="projects_export_failed">ರಫ್ತು ಉಳಿಸಲಾಗಲಿಲ್ಲ</string>
     <string name="projects_export_saved">ಯೋಜನೆಯ ಡೇಟಾ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="projects_exporting">ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="projects_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
 </resources>

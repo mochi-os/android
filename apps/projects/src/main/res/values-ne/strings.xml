@@ -376,4 +376,5 @@
     <string name="projects_export_failed">निर्यात सुरक्षित गर्न सकिएन</string>
     <string name="projects_export_saved">परियोजना डेटा सुरक्षित गरियो</string>
     <string name="projects_exporting">निर्यात तयार गर्दै…</string>
+    <string name="projects_board_add_column">स्तम्भ थप्नुहोस्</string>
 </resources>

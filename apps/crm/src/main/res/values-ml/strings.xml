@@ -369,4 +369,15 @@
     <string name="crm_all_crms">എല്ലാ CRM-കളും</string>
     <string name="crm_settings_unsubscribe_section">CRM അൺസബ്‌സ്‌ക്രൈബ് ചെയ്യുക</string>
     <string name="crm_settings_updated">CRM അപ്‌ഡേറ്റ് ചെയ്തു</string>
+    <string name="crm_create_import_backup">ബാക്കപ്പിൽ നിന്ന് ഇംപോർട്ട് ചെയ്യുക (ഓപ്ഷണൽ)</string>
+    <string name="crm_export">ഡാറ്റ കയറ്റുമതി ചെയ്യുക</string>
+    <string name="crm_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
+    <string name="crm_create_allow_search">ആർക്കും CRM തിരയാൻ അനുവദിക്കുക</string>
+    <string name="crm_no_crms_found">CRM-കളൊന്നും കണ്ടെത്തിയില്ല</string>
+    <string name="crm_create_blocked_no_parents">ഇതുവരെ ഒരു item type-ഉം സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ parent items ആദ്യം സൃഷ്ടിക്കുക.</string>
+    <string name="crm_export_csv">CSV എക്‌സ്‌പോർട്ട് ചെയ്യുക</string>
+    <string name="crm_share_link_title">CRM പങ്കിടുക</string>
+    <string name="crm_export_saved">CRM ഡാറ്റ സംരക്ഷിച്ചു</string>
+    <string name="crm_create_upload_json">.zip അല്ലെങ്കിൽ .json ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
+    <string name="crm_create_blocked_no_options">സൃഷ്ടിക്കാനാകില്ല: %1$s ആവശ്യമാണ്, പക്ഷേ തിരഞ്ഞെടുക്കാൻ ഓപ്ഷനുകളില്ല. ഡിസൈനിൽ ഓപ്ഷനുകൾ ചേർക്കുക.</string>
 </resources>

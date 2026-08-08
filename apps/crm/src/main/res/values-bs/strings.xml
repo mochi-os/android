@@ -370,4 +370,15 @@
     <string name="crm_all_crms">Svi CRM-ovi</string>
     <string name="crm_settings_unsubscribe_section">Otkaži pretplatu na CRM</string>
     <string name="crm_settings_updated">CRM ažuriran</string>
+    <string name="crm_create_import_backup">Uvoz iz rezervne kopije (opcionalno)</string>
+    <string name="crm_export">Izvezi podatke</string>
+    <string name="crm_exporting">Priprema izvoza…</string>
+    <string name="crm_create_allow_search">Dozvoli svima da pretražuju CRM</string>
+    <string name="crm_no_crms_found">Nema pronađenih CRM-ova</string>
+    <string name="crm_create_blocked_no_parents">Nijedan tip stavke se još ne može kreirati. Prvo kreirajte potrebne nadređene stavke.</string>
+    <string name="crm_export_csv">Izvezi CSV</string>
+    <string name="crm_share_link_title">Podijeli CRM</string>
+    <string name="crm_export_saved">Podaci CRM-a spremljeni</string>
+    <string name="crm_create_upload_json">Otpremite .zip ili .json datoteku</string>
+    <string name="crm_create_blocked_no_options">Nije moguće kreirati: %1$s je obavezno, ali nema opcija za odabir. Dodajte opcije u Dizajnu.</string>
 </resources>

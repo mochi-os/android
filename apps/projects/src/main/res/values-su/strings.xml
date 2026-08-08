@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Ékspor teu bisa disimpen</string>
     <string name="projects_export_saved">Data proyék disimpen</string>
     <string name="projects_exporting">Nyiapkeun ékspor…</string>
+    <string name="projects_board_add_column">Tambah kolom</string>
 </resources>

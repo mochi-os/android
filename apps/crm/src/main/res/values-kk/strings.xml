@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Барлық CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM жазылымын тоқтату</string>
     <string name="crm_settings_updated">CRM жаңартылды</string>
+    <string name="crm_create_import_backup">Сақтық көшірмеден импорттау (міндетті емес)</string>
+    <string name="crm_export">Деректерді экспорттау</string>
+    <string name="crm_exporting">Экспорт дайындалуда…</string>
+    <string name="crm_create_allow_search">Кез келгенге CRM іздеуге рұқсат ету</string>
+    <string name="crm_no_crms_found">CRM табылмады</string>
+    <string name="crm_create_blocked_no_parents">Әлі бірде-бір элемент түрі жасалмайды. Алдымен қажетті ата-аналық элементтерді жасаңыз.</string>
+    <string name="crm_export_csv">CSV экспорттау</string>
+    <string name="crm_share_link_title">CRM бөлісу</string>
+    <string name="crm_export_saved">CRM деректері сақталды</string>
+    <string name="crm_create_upload_json">.zip немесе .json файлын жүктеңіз</string>
+    <string name="crm_create_blocked_no_options">Жасау мүмкін емес: %1$s міндетті, бірақ таңдау нұсқалары жоқ. Дизайнда нұсқалар қосыңыз.</string>
 </resources>

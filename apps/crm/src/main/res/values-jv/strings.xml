@@ -368,4 +368,15 @@
     <string name="crm_all_crms">Kabeh CRM</string>
     <string name="crm_settings_unsubscribe_section">Mandheg langganan CRM</string>
     <string name="crm_settings_updated">CRM dianyari</string>
+    <string name="crm_create_import_backup">Impor saka backup (opsional)</string>
+    <string name="crm_export">Ekspor data</string>
+    <string name="crm_exporting">Nyiapake ekspor…</string>
+    <string name="crm_create_allow_search">Idini sapa waé nggolèki CRM</string>
+    <string name="crm_no_crms_found">Ora ana CRM ditemokaké</string>
+    <string name="crm_create_blocked_no_parents">Durung ana jenis item sing bisa digawé. Gawé item induk sing dibutuhaké luwih dhisik.</string>
+    <string name="crm_export_csv">Ekspor CSV</string>
+    <string name="crm_share_link_title">Bagi CRM</string>
+    <string name="crm_export_saved">Data CRM kasimpen</string>
+    <string name="crm_create_upload_json">Unggah berkas .zip utawa .json</string>
+    <string name="crm_create_blocked_no_options">Ora bisa nggawe: %1$s wajib nanging ora duwe pilihan. Tambahake pilihan ing Desain.</string>
 </resources>

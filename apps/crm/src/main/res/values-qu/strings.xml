@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Llapa CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM manaña qatiy</string>
     <string name="crm_settings_updated">CRM musuqchasqa</string>
+    <string name="crm_create_import_backup">Backupmanta apaykuy (akllayllapaq)</string>
+    <string name="crm_export">Willañiqkuna apachiy</string>
+    <string name="crm_exporting">Apachisqata wakichaspa…</string>
+    <string name="crm_create_allow_search">Pillapas maskhayta atichun CRM-ta</string>
+    <string name="crm_no_crms_found">Mana CRMkuna tarisqachu</string>
+    <string name="crm_create_blocked_no_parents">Manaraq item niraqkuna ruwakuyta atin. Ñawpaqta munasqa parent itemkunata ruway.</string>
+    <string name="crm_export_csv">CSV-ta hurquy</string>
+    <string name="crm_share_link_title">CRM rakiy</string>
+    <string name="crm_export_saved">CRM willañiqkuna waqaychasqa</string>
+    <string name="crm_create_upload_json">.zip utaq .json willañiqta apachiy</string>
+    <string name="crm_create_blocked_no_options">Manam kamachiyta atinchu: %1$s necesitasqa ichaqa manam akllanan kanchu. Design nisqapi akllanakunata yapay.</string>
 </resources>

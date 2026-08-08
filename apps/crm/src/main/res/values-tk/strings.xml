@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Ähli CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM abunaligyny ýatyr</string>
     <string name="crm_settings_updated">CRM täzelendi</string>
+    <string name="crm_create_import_backup">Ätiýaçlyk nusgasyndan import (hökmany däl)</string>
+    <string name="crm_export">Maglumaty eksport et</string>
+    <string name="crm_exporting">Eksport taýýarlanýar…</string>
+    <string name="crm_create_allow_search">Islendik adamyň CRM gözlemegine rugsat bermek</string>
+    <string name="crm_no_crms_found">CRM tapylmady</string>
+    <string name="crm_create_blocked_no_parents">Heniz hiç bir element görnüşi döredilip bilinmez. Ilki bilen zerur ene-atalar elementlerini dörediň.</string>
+    <string name="crm_export_csv">CSV eksport et</string>
+    <string name="crm_share_link_title">CRM paýlaş</string>
+    <string name="crm_export_saved">CRM maglumaty saklandy</string>
+    <string name="crm_create_upload_json">.zip ýa-da .json faýly ýükläň</string>
+    <string name="crm_create_blocked_no_options">Döredip bolmady: %1$s hökmany, ýöne saýlamak üçin warianty ýok. Dizaýnda wariant goşuň.</string>
 </resources>

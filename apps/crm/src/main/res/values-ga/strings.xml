@@ -374,4 +374,15 @@
     <string name="crm_all_crms">Gach CRM</string>
     <string name="crm_settings_unsubscribe_section">Díliostáil ón CRM</string>
     <string name="crm_settings_updated">CRM nuashonraithe</string>
+    <string name="crm_create_import_backup">Iompórtáil ó chúltaca (roghnach)</string>
+    <string name="crm_export">Easpórtáil sonraí</string>
+    <string name="crm_exporting">Easpórtáil á hullmhú…</string>
+    <string name="crm_create_allow_search">Ceadaigh d\'aon duine cuardach do CRM</string>
+    <string name="crm_no_crms_found">Níor aimsíodh aon CRM</string>
+    <string name="crm_create_blocked_no_parents">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>
+    <string name="crm_export_csv">Easpórtáil CSV</string>
+    <string name="crm_share_link_title">Comhroinn CRM</string>
+    <string name="crm_export_saved">Sábháladh sonraí CRM</string>
+    <string name="crm_create_upload_json">Uaslódáil comhad .zip nó .json</string>
+    <string name="crm_create_blocked_no_options">Ní féidir a chruthú: tá %1$s riachtanach ach níl aon roghanna aige. Cuir roghanna leis sa Dearadh.</string>
 </resources>

@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Impossibile salvare l\'esportazione</string>
     <string name="projects_export_saved">Dati del progetto salvati</string>
     <string name="projects_exporting">Preparazione dell\'esportazione…</string>
+    <string name="projects_board_add_column">Aggiungi colonna</string>
 </resources>

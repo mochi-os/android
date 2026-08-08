@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Apsuta imantañjamäkiti</string>
     <string name="projects_export_saved">Proyecto yatiyawi imantata</string>
     <string name="projects_exporting">Apsuña wakichaña…</string>
+    <string name="projects_board_add_column">Columna yapxataña</string>
 </resources>

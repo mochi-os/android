@@ -371,4 +371,15 @@
     <string name="crm_all_crms">Vsi CRM</string>
     <string name="crm_settings_unsubscribe_section">Prekliči naročnino na CRM</string>
     <string name="crm_settings_updated">CRM posodobljen</string>
+    <string name="crm_create_import_backup">Uvoz iz varnostne kopije (neobvezno)</string>
+    <string name="crm_export">Izvozi podatke</string>
+    <string name="crm_exporting">Priprava izvoza…</string>
+    <string name="crm_create_allow_search">Dovoli vsem iskanje CRM-a</string>
+    <string name="crm_no_crms_found">Najdenih ni nobenih CRM-jev</string>
+    <string name="crm_create_blocked_no_parents">Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente.</string>
+    <string name="crm_export_csv">Izvozi CSV</string>
+    <string name="crm_share_link_title">Deli CRM</string>
+    <string name="crm_export_saved">Podatki CRM shranjeni</string>
+    <string name="crm_create_upload_json">Naložite datoteko .zip ali .json</string>
+    <string name="crm_create_blocked_no_options">Ni mogoče ustvariti: %1$s je obvezno, vendar nima možnosti za izbiro. Dodajte možnosti v Oblikovanju.</string>
 </resources>

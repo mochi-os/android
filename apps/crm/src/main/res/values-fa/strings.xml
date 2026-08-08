@@ -369,4 +369,15 @@
     <string name="crm_all_crms">همه CRMها</string>
     <string name="crm_settings_unsubscribe_section">لغو اشتراک از CRM</string>
     <string name="crm_settings_updated">CRM به‌روزرسانی شد</string>
+    <string name="crm_create_import_backup">وارد کردن از پشتیبان (اختیاری)</string>
+    <string name="crm_export">خروجی گرفتن از داده‌ها</string>
+    <string name="crm_exporting">در حال آماده‌سازی خروجی…</string>
+    <string name="crm_create_allow_search">همه بتوانند CRM را جست‌وجو کنند</string>
+    <string name="crm_no_crms_found">هیچ CRMی یافت نشد</string>
+    <string name="crm_create_blocked_no_parents">هیچ نوع آیتمی هنوز قابل ایجاد نیست. ابتدا آیتم‌های والد مورد نیاز را ایجاد کنید.</string>
+    <string name="crm_export_csv">خروجی CSV</string>
+    <string name="crm_share_link_title">اشتراک‌گذاری CRM</string>
+    <string name="crm_export_saved">داده‌های CRM ذخیره شد</string>
+    <string name="crm_create_upload_json">یک فایل .zip یا .json بارگذاری کنید</string>
+    <string name="crm_create_blocked_no_options">امکان ایجاد نیست: %1$s الزامی است اما گزینه‌ای برای انتخاب ندارد. در طرح گزینه اضافه کنید.</string>
 </resources>

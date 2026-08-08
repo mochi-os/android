@@ -369,4 +369,15 @@
     <string name="crm_all_crms">सबै CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM बाट सदस्यता रद्द गर्नुहोस्</string>
     <string name="crm_settings_updated">CRM अद्यावधिक गरियो</string>
+    <string name="crm_create_import_backup">ब्याकअपबाट आयात गर्नुहोस् (वैकल्पिक)</string>
+    <string name="crm_export">डेटा निर्यात गर्नुहोस्</string>
+    <string name="crm_exporting">निर्यात तयार गर्दै…</string>
+    <string name="crm_create_allow_search">जोसुकैलाई CRM खोज्न अनुमति दिनुहोस्</string>
+    <string name="crm_no_crms_found">कुनै CRM भेटिएन</string>
+    <string name="crm_create_blocked_no_parents">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
+    <string name="crm_export_csv">CSV निर्यात गर्नुहोस्</string>
+    <string name="crm_share_link_title">CRM साझेदारी गर्नुहोस्</string>
+    <string name="crm_export_saved">CRM डेटा सुरक्षित गरियो</string>
+    <string name="crm_create_upload_json">.zip वा .json फाइल अपलोड गर्नुहोस्</string>
+    <string name="crm_create_blocked_no_options">सिर्जना गर्न सकिँदैन: %1$s आवश्यक छ तर छनोट गर्न कुनै विकल्प छैन। डिजाइनमा विकल्पहरू थप्नुहोस्।</string>
 </resources>

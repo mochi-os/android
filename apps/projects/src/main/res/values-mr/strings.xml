@@ -376,4 +376,5 @@
     <string name="projects_export_failed">निर्यात जतन करता आले नाही</string>
     <string name="projects_export_saved">प्रकल्प डेटा जतन केला</string>
     <string name="projects_exporting">निर्यात तयार करत आहे…</string>
+    <string name="projects_board_add_column">कॉलम जोडा</string>
 </resources>

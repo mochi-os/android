@@ -330,4 +330,5 @@
     <string name="crm_access_subject_authenticated">已驗證用戶</string>
     <string name="crm_access_authenticated_desc">任何已登入的用戶</string>
     <string name="crm_access_anyone_desc">包括匿名用戶</string>
+    <string name="crm_create_import_backup">從備份匯入（選用）</string>
 </resources>

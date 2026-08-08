@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Hemû CRM</string>
     <string name="crm_settings_unsubscribe_section">Bihelîne abonetiya CRM</string>
     <string name="crm_settings_updated">CRM hate nûkirin</string>
+    <string name="crm_create_import_backup">Ji paşvekêşê împort bike (vebijarkî)</string>
+    <string name="crm_export">Daneyan derxîne</string>
+    <string name="crm_exporting">Hinardekirin tê amadekirin…</string>
+    <string name="crm_create_allow_search">Destûr bide her kesî ku li CRM bigere</string>
+    <string name="crm_no_crms_found">Tu CRM nehatin dîtin</string>
+    <string name="crm_create_blocked_no_parents">Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne.</string>
+    <string name="crm_export_csv">CSV derxe</string>
+    <string name="crm_share_link_title">CRM parve bike</string>
+    <string name="crm_export_saved">Daneyên CRM hatin tomarkirin</string>
+    <string name="crm_create_upload_json">Pelê .zip an .json bar bike</string>
+    <string name="crm_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>
 </resources>

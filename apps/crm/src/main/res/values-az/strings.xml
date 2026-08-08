@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Bütün CRM-lər</string>
     <string name="crm_settings_unsubscribe_section">CRM-dən abunəlikdən çıx</string>
     <string name="crm_settings_updated">CRM yeniləndi</string>
+    <string name="crm_create_import_backup">Ehtiyat nüsxədən idxal (istəyə bağlı)</string>
+    <string name="crm_export">Məlumatı ixrac et</string>
+    <string name="crm_exporting">İxrac hazırlanır…</string>
+    <string name="crm_create_allow_search">Hər kəsə CRM axtarmağa icazə ver</string>
+    <string name="crm_no_crms_found">CRM tapılmadı</string>
+    <string name="crm_create_blocked_no_parents">Hələ heç bir element növü yaradıla bilməz. Əvvəlcə tələb olunan əsas elementləri yaradın.</string>
+    <string name="crm_export_csv">CSV ixrac et</string>
+    <string name="crm_share_link_title">CRM-i paylaş</string>
+    <string name="crm_export_saved">CRM məlumatı saxlanıldı</string>
+    <string name="crm_create_upload_json">.zip və ya .json faylı yükləyin</string>
+    <string name="crm_create_blocked_no_options">Yaradıla bilmir: %1$s tələb olunur, lakin seçim üçün variantı yoxdur. Dizayn bölməsində variant əlavə edin.</string>
 </resources>

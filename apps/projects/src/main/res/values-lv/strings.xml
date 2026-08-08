@@ -377,4 +377,5 @@
     <string name="projects_export_failed">Neizdevās saglabāt eksportu</string>
     <string name="projects_export_saved">Projekta dati saglabāti</string>
     <string name="projects_exporting">Sagatavo eksportu…</string>
+    <string name="projects_board_add_column">Pievienot kolonnu</string>
 </resources>

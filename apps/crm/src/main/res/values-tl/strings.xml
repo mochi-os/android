@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Lahat ng CRM</string>
     <string name="crm_settings_unsubscribe_section">Mag-unsubscribe sa CRM</string>
     <string name="crm_settings_updated">Na-update ang CRM</string>
+    <string name="crm_create_import_backup">I-import mula sa backup (opsyonal)</string>
+    <string name="crm_export">I-export ang data</string>
+    <string name="crm_exporting">Inihahanda ang export…</string>
+    <string name="crm_create_allow_search">Payagan ang sinuman na maghanap ng CRM</string>
+    <string name="crm_no_crms_found">Walang nakitang CRM</string>
+    <string name="crm_create_blocked_no_parents">Wala pang uri ng item na magagawa. Gumawa muna ng kinakailangang parent item.</string>
+    <string name="crm_export_csv">I-export ang CSV</string>
+    <string name="crm_share_link_title">Ibahagi ang CRM</string>
+    <string name="crm_export_saved">Na-save ang data ng CRM</string>
+    <string name="crm_create_upload_json">Mag-upload ng .zip o .json file</string>
+    <string name="crm_create_blocked_no_options">Hindi makagawa: kailangan ang %1$s ngunit walang mapagpipiliang opsyon. Magdagdag ng opsyon sa Disenyo.</string>
 </resources>

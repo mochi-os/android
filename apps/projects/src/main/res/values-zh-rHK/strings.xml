@@ -353,4 +353,5 @@
     </plurals>
     <string name="projects_settings_section_identity">身份</string>
     <string name="projects_settings_access_updated">存取權限已更新</string>
+    <string name="projects_board_add_column">新增欄位</string>
 </resources>

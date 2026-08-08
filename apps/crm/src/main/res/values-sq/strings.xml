@@ -369,4 +369,15 @@
     <string name="crm_all_crms">Të gjitha CRM-të</string>
     <string name="crm_settings_unsubscribe_section">Çabonohu nga CRM</string>
     <string name="crm_settings_updated">CRM u përditësua</string>
+    <string name="crm_create_import_backup">Importo nga kopja rezervë (opsionale)</string>
+    <string name="crm_export">Eksporto të dhënat</string>
+    <string name="crm_exporting">Po përgatitet eksporti…</string>
+    <string name="crm_create_allow_search">Lejo këdo të kërkojë për CRM</string>
+    <string name="crm_no_crms_found">S\'u gjet asnjë CRM</string>
+    <string name="crm_create_blocked_no_parents">Asnjë lloj artikulli nuk mund të krijohet ende. Krijoni fillimisht artikujt prind të kërkuar.</string>
+    <string name="crm_export_csv">Eksporto CSV</string>
+    <string name="crm_share_link_title">Ndaje CRM</string>
+    <string name="crm_export_saved">Të dhënat e CRM u ruajtën</string>
+    <string name="crm_create_upload_json">Ngarko një skedar .zip ose .json</string>
+    <string name="crm_create_blocked_no_options">Nuk mund të krijohet: %1$s kërkohet por nuk ka opsione për të zgjedhur. Shto opsione te Dizajni.</string>
 </resources>

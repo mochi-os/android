@@ -369,4 +369,15 @@
     <string name="crm_all_crms">সব CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM থেকে আনসাবস্ক্রাইব করুন</string>
     <string name="crm_settings_updated">CRM আপডেট হয়েছে</string>
+    <string name="crm_create_import_backup">ব্যাকআপ থেকে ইম্পোর্ট করুন (ঐচ্ছিক)</string>
+    <string name="crm_export">ডেটা রপ্তানি করুন</string>
+    <string name="crm_exporting">রপ্তানি প্রস্তুত করা হচ্ছে…</string>
+    <string name="crm_create_allow_search">যেকেউ CRM খুঁজতে অনুমতি দিন</string>
+    <string name="crm_no_crms_found">কোনো CRM পাওয়া যায়নি</string>
+    <string name="crm_create_blocked_no_parents">এখনও কোনো আইটেম টাইপ তৈরি করা যাবে না। প্রথমে প্রয়োজনীয় প্যারেন্ট আইটেম তৈরি করুন।</string>
+    <string name="crm_export_csv">CSV এক্সপোর্ট করুন</string>
+    <string name="crm_share_link_title">CRM শেয়ার করুন</string>
+    <string name="crm_export_saved">CRM ডেটা সংরক্ষিত হয়েছে</string>
+    <string name="crm_create_upload_json">.zip বা .json ফাইল আপলোড করুন</string>
+    <string name="crm_create_blocked_no_options">তৈরি করা যায়নি: %1$s আবশ্যক কিন্তু বেছে নেওয়ার মতো কোনো বিকল্প নেই। ডিজাইনে বিকল্প যোগ করুন।</string>
 </resources>

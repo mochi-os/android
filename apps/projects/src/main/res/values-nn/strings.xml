@@ -376,4 +376,5 @@
     <string name="projects_export_failed">Kunne ikkje lagra eksporten</string>
     <string name="projects_export_saved">Prosjektdata lagra</string>
     <string name="projects_exporting">Førebur eksport…</string>
+    <string name="projects_board_add_column">Legg til kolonne</string>
 </resources>

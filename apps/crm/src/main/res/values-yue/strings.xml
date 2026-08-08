@@ -370,4 +370,15 @@
     <string name="crm_all_crms">所有 CRM</string>
     <string name="crm_settings_unsubscribe_section">取消訂閱該 CRM</string>
     <string name="crm_settings_updated">CRM 已更新</string>
+    <string name="crm_create_import_backup">從備份匯入（選用）</string>
+    <string name="crm_export">匯出資料</string>
+    <string name="crm_exporting">正在準備匯出…</string>
+    <string name="crm_share_link_title">分享 CRM</string>
+    <string name="crm_export_saved">CRM 資料已儲存</string>
+    <string name="crm_create_upload_json">上傳 .zip 或 .json 檔案</string>
+    <string name="crm_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
+    <string name="crm_create_allow_search">容許任何人搜尋 CRM</string>
+    <string name="crm_no_crms_found">搵唔到 CRM</string>
+    <string name="crm_create_blocked_no_parents">而家仲未可以建立任何項目類型。請先建立所需嘅上層項目。</string>
+    <string name="crm_export_csv">匯出 CSV</string>
 </resources>

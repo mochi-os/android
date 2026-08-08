@@ -376,4 +376,5 @@
     <string name="projects_export_failed">एक्सपोर्ट सेव ना हो सकल</string>
     <string name="projects_export_saved">प्रोजेक्ट डेटा सेव भइल</string>
     <string name="projects_exporting">एक्सपोर्ट तइयार हो रहल बा…</string>
+    <string name="projects_board_add_column">कॉलम जोड़ीं</string>
 </resources>

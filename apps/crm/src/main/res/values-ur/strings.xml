@@ -369,4 +369,15 @@
     <string name="crm_all_crms">تمام CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM سے رکنیت ختم کریں</string>
     <string name="crm_settings_updated">CRM اپ ڈیٹ ہو گیا</string>
+    <string name="crm_create_import_backup">بیک اپ سے درآمد کریں (اختیاری)</string>
+    <string name="crm_export">ڈیٹا ایکسپورٹ کریں</string>
+    <string name="crm_exporting">ایکسپورٹ تیار کیا جا رہا ہے…</string>
+    <string name="crm_create_allow_search">کسی کو بھی CRM تلاش کرنے کی اجازت دیں</string>
+    <string name="crm_no_crms_found">کوئی CRMs نہیں ملے</string>
+    <string name="crm_create_blocked_no_parents">ابھی کوئی item types نہیں بنائے جا سکتے۔ پہلے درکار parent items بنائیں۔</string>
+    <string name="crm_export_csv">CSV ایکسپورٹ کریں</string>
+    <string name="crm_share_link_title">CRM شیئر کریں</string>
+    <string name="crm_export_saved">CRM ڈیٹا محفوظ ہو گیا</string>
+    <string name="crm_create_upload_json">.zip یا .json فائل اپ لوڈ کریں</string>
+    <string name="crm_create_blocked_no_options">بنایا نہیں جا سکتا: %1$s درکار ہے مگر اس میں منتخب کرنے کے لیے کوئی اختیار نہیں۔ ڈیزائن میں اختیارات شامل کریں۔</string>
 </resources>
