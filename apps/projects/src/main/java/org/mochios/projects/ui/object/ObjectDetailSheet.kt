@@ -233,16 +233,21 @@ fun ObjectDetailSheet(
                         stringResource(R.string.projects_object_tab_activity),
                         stringResource(R.string.projects_object_tab_requests),
                     )
-                    SecondaryTabRow(
+                    // Scrollable, not fixed: a fixed row splits the width into
+                    // equal columns, and a quarter of a phone is too narrow for
+                    // "Properties"/"Comments", which then wrap to two lines.
+                    // Sizing each tab to its label keeps every one on one line.
+                    SecondaryScrollableTabRow(
                         modifier = Modifier.fillMaxWidth(),
                         containerColor = Color.Transparent,
-                        selectedTabIndex = uiState.selectedTab
+                        selectedTabIndex = uiState.selectedTab,
+                        edgePadding = 0.dp
                     ) {
                         tabs.forEachIndexed { index, title ->
                             Tab(
                                 selected = uiState.selectedTab == index,
                                 onClick = { viewModel.selectTab(index) },
-                                text = { Text(title) }
+                                text = { Text(title, maxLines = 1) }
                             )
                         }
                     }

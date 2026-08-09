@@ -27,7 +27,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SecondaryTabRow
+import androidx.compose.material3.SecondaryScrollableTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -227,16 +227,21 @@ fun ObjectDetailSheet(
                         stringResource(R.string.crm_object_tab_comments),
                         stringResource(R.string.crm_object_tab_activity),
                     )
-                    SecondaryTabRow(
+                    // Scrollable, not fixed: a fixed row splits the width into
+                    // equal columns, and a third of a phone is too narrow for
+                    // "Properties", which then wraps to two lines. Sizing each
+                    // tab to its label keeps every one on one line.
+                    SecondaryScrollableTabRow(
                         modifier = Modifier.fillMaxWidth(),
                         containerColor = Color.Transparent,
-                        selectedTabIndex = uiState.selectedTab
+                        selectedTabIndex = uiState.selectedTab,
+                        edgePadding = 0.dp
                     ) {
                         tabs.forEachIndexed { index, title ->
                             Tab(
                                 selected = uiState.selectedTab == index,
                                 onClick = { viewModel.selectTab(index) },
-                                text = { Text(title) }
+                                text = { Text(title, maxLines = 1) }
                             )
                         }
                     }
