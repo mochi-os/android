@@ -392,7 +392,6 @@
     <string name="staff_reports_type_listing">Listing</string>
     <string name="staff_reports_type_user">User</string>
     <string name="staff_reports_view">Tingnan</string>
-    <string name="staff_reviews_action_hide">Itago</string>
     <string name="staff_reviews_action_remove">Alisin</string>
     <string name="staff_reviews_action_restore">Ibalik</string>
     <string name="staff_reviews_col_date">Petsa</string>
@@ -404,7 +403,6 @@
     <string name="staff_reviews_col_text">Teksto</string>
     <string name="staff_reviews_empty">Walang review</string>
     <string name="staff_reviews_filter_all">Lahat ng status</string>
-    <string name="staff_reviews_filter_hidden">Nakatago</string>
     <string name="staff_reviews_filter_published">Na-publish</string>
     <string name="staff_reviews_filter_removed">Naalis</string>
     <string name="staff_reviews_filter_status">Status</string>

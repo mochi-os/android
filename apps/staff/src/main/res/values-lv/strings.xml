@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Sludinājums</string>
     <string name="staff_reports_type_user">Lietotājs</string>
     <string name="staff_reports_view">Skatīt</string>
-    <string name="staff_reviews_action_hide">Slēpt</string>
     <string name="staff_reviews_action_remove">Noņemt</string>
     <string name="staff_reviews_action_restore">Atjaunot</string>
     <string name="staff_reviews_col_date">Datums</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Teksts</string>
     <string name="staff_reviews_empty">Nav atsauksmju</string>
     <string name="staff_reviews_filter_all">Visi statusi</string>
-    <string name="staff_reviews_filter_hidden">Slēpts</string>
     <string name="staff_reviews_filter_published">Publicēts</string>
     <string name="staff_reviews_filter_removed">Noņemts</string>
     <string name="staff_reviews_filter_status">Statuss</string>

@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Anunț</string>
     <string name="staff_reports_type_user">Utilizator</string>
     <string name="staff_reports_view">Vizualizează</string>
-    <string name="staff_reviews_action_hide">Ascunde</string>
     <string name="staff_reviews_action_remove">Elimină</string>
     <string name="staff_reviews_action_restore">Restaurează</string>
     <string name="staff_reviews_col_date">Dată</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Text</string>
     <string name="staff_reviews_empty">Nicio recenzie</string>
     <string name="staff_reviews_filter_all">Toate stările</string>
-    <string name="staff_reviews_filter_hidden">Ascuns</string>
     <string name="staff_reviews_filter_published">Publicat</string>
     <string name="staff_reviews_filter_removed">Eliminat</string>
     <string name="staff_reviews_filter_status">Stare</string>

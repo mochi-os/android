@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Annons</string>
     <string name="staff_reports_type_user">Användare</string>
     <string name="staff_reports_view">Visa</string>
-    <string name="staff_reviews_action_hide">Dölj</string>
     <string name="staff_reviews_action_remove">Ta bort</string>
     <string name="staff_reviews_action_restore">Återställ</string>
     <string name="staff_reviews_col_date">Datum</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Text</string>
     <string name="staff_reviews_empty">Inga omdömen</string>
     <string name="staff_reviews_filter_all">Alla statusar</string>
-    <string name="staff_reviews_filter_hidden">Dold</string>
     <string name="staff_reviews_filter_published">Publicerad</string>
     <string name="staff_reviews_filter_removed">Borttagen</string>
     <string name="staff_reviews_filter_status">Status</string>

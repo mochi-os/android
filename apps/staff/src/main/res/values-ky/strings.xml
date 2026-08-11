@@ -378,7 +378,6 @@
     <string name="staff_reports_type_listing">Жарнама</string>
     <string name="staff_reports_type_user">Колдонуучу</string>
     <string name="staff_reports_view">Көрүү</string>
-    <string name="staff_reviews_action_hide">Жашыруу</string>
     <string name="staff_reviews_action_remove">Алуу</string>
     <string name="staff_reviews_action_restore">Калыбына келтирүү</string>
     <string name="staff_reviews_col_date">Күн</string>
@@ -390,7 +389,6 @@
     <string name="staff_reviews_col_text">Текст</string>
     <string name="staff_reviews_empty">Пикирлер жок</string>
     <string name="staff_reviews_filter_all">Бардык абалдар</string>
-    <string name="staff_reviews_filter_hidden">Жашырылган</string>
     <string name="staff_reviews_filter_published">Жарыяланды</string>
     <string name="staff_reviews_filter_removed">Алынды</string>
     <string name="staff_reviews_filter_status">Абалы</string>

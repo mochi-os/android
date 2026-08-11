@@ -379,7 +379,6 @@
     <string name="staff_reports_type_listing">Liosta</string>
     <string name="staff_reports_type_user">Cleachdaiche</string>
     <string name="staff_reports_view">Seall</string>
-    <string name="staff_reviews_action_hide">Falaich</string>
     <string name="staff_reviews_action_remove">Thoir air falbh</string>
     <string name="staff_reviews_action_restore">Aiseag</string>
     <string name="staff_reviews_col_date">Ceann-là</string>
@@ -391,7 +390,6 @@
     <string name="staff_reviews_col_text">Teacsa</string>
     <string name="staff_reviews_empty">Chan eil lèirmheasan</string>
     <string name="staff_reviews_filter_all">Na corachan uile</string>
-    <string name="staff_reviews_filter_hidden">Falaichte</string>
     <string name="staff_reviews_filter_published">Foillsichte</string>
     <string name="staff_reviews_filter_removed">Air a thoirt air falbh</string>
     <string name="staff_reviews_filter_status">Cor</string>

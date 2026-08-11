@@ -443,14 +443,12 @@
     <string name="staff_reports_status_dismissed">已駁回</string>
     <string name="staff_reports_status_reviewed">已審核</string>
     <string name="staff_reports_title">舉報</string>
-    <string name="staff_reviews_action_hide">隱藏</string>
     <string name="staff_reviews_col_rating">評分</string>
     <string name="staff_reviews_col_reviewer">評論人</string>
     <string name="staff_reviews_col_subject">對象</string>
     <string name="staff_reviews_col_text">內容</string>
     <string name="staff_reviews_empty">冇評論</string>
     <string name="staff_reviews_filter_all">所有狀態</string>
-    <string name="staff_reviews_filter_hidden">已隱藏</string>
     <string name="staff_reviews_filter_published">已發布</string>
     <string name="staff_reviews_order_label">訂單 #%1$s</string>
     <string name="staff_reviews_overflow_actions">操作</string>

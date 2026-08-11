@@ -365,7 +365,6 @@
     <string name="staff_reports_type_listing">Listado</string>
     <string name="staff_reports_type_user">Mboapurevahára</string>
     <string name="staff_reports_view">Ehecha</string>
-    <string name="staff_reviews_action_hide">Emokañy</string>
     <string name="staff_reviews_action_remove">Embogue</string>
     <string name="staff_reviews_action_restore">Embojevy</string>
     <string name="staff_reviews_col_date">Ára</string>
@@ -377,7 +376,6 @@
     <string name="staff_reviews_col_text">Tai</string>
     <string name="staff_reviews_empty">Ndaipóri reseñas</string>
     <string name="staff_reviews_filter_all">Opaite estado</string>
-    <string name="staff_reviews_filter_hidden">Okañy</string>
     <string name="staff_reviews_filter_published">Oñemoherakuãma</string>
     <string name="staff_reviews_filter_removed">Oñembogueta</string>
     <string name="staff_reviews_filter_status">Mba\'éichapa</string>

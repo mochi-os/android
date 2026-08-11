@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">목록</string>
     <string name="staff_reports_type_user">사용자</string>
     <string name="staff_reports_view">보기</string>
-    <string name="staff_reviews_action_hide">숨기기</string>
     <string name="staff_reviews_action_remove">제거</string>
     <string name="staff_reviews_action_restore">복원</string>
     <string name="staff_reviews_col_date">날짜</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">텍스트</string>
     <string name="staff_reviews_empty">리뷰가 없어요</string>
     <string name="staff_reviews_filter_all">모든 상태</string>
-    <string name="staff_reviews_filter_hidden">숨김</string>
     <string name="staff_reviews_filter_published">게시됨</string>
     <string name="staff_reviews_filter_removed">제거됨</string>
     <string name="staff_reviews_filter_status">상태</string>

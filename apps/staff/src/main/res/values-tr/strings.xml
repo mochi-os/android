@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">İlan</string>
     <string name="staff_reports_type_user">Kullanıcı</string>
     <string name="staff_reports_view">Görüntüle</string>
-    <string name="staff_reviews_action_hide">Gizle</string>
     <string name="staff_reviews_action_remove">Kaldır</string>
     <string name="staff_reviews_action_restore">Geri yükle</string>
     <string name="staff_reviews_col_date">Tarih</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Metin</string>
     <string name="staff_reviews_empty">Yorum yok</string>
     <string name="staff_reviews_filter_all">Tüm durumlar</string>
-    <string name="staff_reviews_filter_hidden">Gizli</string>
     <string name="staff_reviews_filter_published">Yayınlandı</string>
     <string name="staff_reviews_filter_removed">Kaldırıldı</string>
     <string name="staff_reviews_filter_status">Durum</string>

@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">ਲਿਸਟਿੰਗ</string>
     <string name="staff_reports_type_user">ਉਪਭੋਗਤਾ</string>
     <string name="staff_reports_view">ਦੇਖੋ</string>
-    <string name="staff_reviews_action_hide">ਲੁਕਾਓ</string>
     <string name="staff_reviews_action_remove">ਹਟਾਓ</string>
     <string name="staff_reviews_action_restore">ਬਹਾਲ ਕਰੋ</string>
     <string name="staff_reviews_col_date">ਮਿਤੀ</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">ਟੈਕਸਟ</string>
     <string name="staff_reviews_empty">ਕੋਈ ਸਮੀਖਿਆਵਾਂ ਨਹੀਂ</string>
     <string name="staff_reviews_filter_all">ਸਾਰੀਆਂ ਸਥਿਤੀਆਂ</string>
-    <string name="staff_reviews_filter_hidden">ਲੁਕਾਇਆ ਗਿਆ</string>
     <string name="staff_reviews_filter_published">ਪ੍ਰਕਾਸ਼ਿਤ</string>
     <string name="staff_reviews_filter_removed">ਹਟਾਇਆ ਗਿਆ</string>
     <string name="staff_reviews_filter_status">ਸਥਿਤੀ</string>

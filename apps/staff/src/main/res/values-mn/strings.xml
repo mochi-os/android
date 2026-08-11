@@ -382,7 +382,6 @@
     <string name="staff_reports_type_listing">Зар</string>
     <string name="staff_reports_type_user">Хэрэглэгч</string>
     <string name="staff_reports_view">Үзэх</string>
-    <string name="staff_reviews_action_hide">Нуух</string>
     <string name="staff_reviews_action_remove">Хасах</string>
     <string name="staff_reviews_action_restore">Сэргээх</string>
     <string name="staff_reviews_col_date">Огноо</string>
@@ -394,7 +393,6 @@
     <string name="staff_reviews_col_text">Текст</string>
     <string name="staff_reviews_empty">Шүүмж алга</string>
     <string name="staff_reviews_filter_all">Бүх төлөв</string>
-    <string name="staff_reviews_filter_hidden">Нуугдсан</string>
     <string name="staff_reviews_filter_published">Нийтлэгдсэн</string>
     <string name="staff_reviews_filter_removed">Хасагдсан</string>
     <string name="staff_reviews_filter_status">Төлөв</string>

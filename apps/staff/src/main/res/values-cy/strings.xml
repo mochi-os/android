@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Rhestriad</string>
     <string name="staff_reports_type_user">Defnyddiwr</string>
     <string name="staff_reports_view">Gweld</string>
-    <string name="staff_reviews_action_hide">Cuddio</string>
     <string name="staff_reviews_action_remove">Tynnu</string>
     <string name="staff_reviews_action_restore">Adfer</string>
     <string name="staff_reviews_col_date">Dyddiad</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Testun</string>
     <string name="staff_reviews_empty">Dim adolygiadau</string>
     <string name="staff_reviews_filter_all">Pob statws</string>
-    <string name="staff_reviews_filter_hidden">Cudd</string>
     <string name="staff_reviews_filter_published">Wedi\'i gyhoeddi</string>
     <string name="staff_reviews_filter_removed">Wedi\'i dynnu</string>
     <string name="staff_reviews_filter_status">Statws</string>

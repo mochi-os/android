@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Hirdetés</string>
     <string name="staff_reports_type_user">Felhasználó</string>
     <string name="staff_reports_view">Megtekintés</string>
-    <string name="staff_reviews_action_hide">Elrejtés</string>
     <string name="staff_reviews_action_remove">Eltávolítás</string>
     <string name="staff_reviews_action_restore">Visszaállítás</string>
     <string name="staff_reviews_col_date">Dátum</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Szöveg</string>
     <string name="staff_reviews_empty">Nincsenek értékelések</string>
     <string name="staff_reviews_filter_all">Összes állapot</string>
-    <string name="staff_reviews_filter_hidden">Rejtett</string>
     <string name="staff_reviews_filter_published">Közzétéve</string>
     <string name="staff_reviews_filter_removed">Eltávolítva</string>
     <string name="staff_reviews_filter_status">Állapot</string>

@@ -367,7 +367,6 @@
     <string name="staff_reports_type_listing">Tarreeffama</string>
     <string name="staff_reports_type_user">Fayyadamaa</string>
     <string name="staff_reports_view">Daawwadhu</string>
-    <string name="staff_reviews_action_hide">Dhoksi</string>
     <string name="staff_reviews_action_remove">Haqi</string>
     <string name="staff_reviews_action_restore">Deebisi</string>
     <string name="staff_reviews_col_date">Guyyaa</string>
@@ -379,7 +378,6 @@
     <string name="staff_reviews_col_text">Barreeffama</string>
     <string name="staff_reviews_empty">Gamaaggamni hin jiru</string>
     <string name="staff_reviews_filter_all">Haalota hunda</string>
-    <string name="staff_reviews_filter_hidden">Dhokse</string>
     <string name="staff_reviews_filter_published">Maxxansame</string>
     <string name="staff_reviews_filter_removed">Haqame</string>
     <string name="staff_reviews_filter_status">Haala</string>

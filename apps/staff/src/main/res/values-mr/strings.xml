@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">लिस्टिंग</string>
     <string name="staff_reports_type_user">वापरकर्ता</string>
     <string name="staff_reports_view">पहा</string>
-    <string name="staff_reviews_action_hide">लपवा</string>
     <string name="staff_reviews_action_remove">काढा</string>
     <string name="staff_reviews_action_restore">पुनर्संचयित करा</string>
     <string name="staff_reviews_col_date">तारीख</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">मजकूर</string>
     <string name="staff_reviews_empty">रिव्ह्यूज नाहीत</string>
     <string name="staff_reviews_filter_all">सर्व स्थिती</string>
-    <string name="staff_reviews_filter_hidden">लपलेले</string>
     <string name="staff_reviews_filter_published">प्रकाशित</string>
     <string name="staff_reviews_filter_removed">काढले</string>
     <string name="staff_reviews_filter_status">स्थिती</string>

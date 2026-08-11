@@ -369,7 +369,6 @@
     <string name="staff_reports_type_listing">Sanaw</string>
     <string name="staff_reports_type_user">Ulanyjy</string>
     <string name="staff_reports_view">Görkez</string>
-    <string name="staff_reviews_action_hide">Gizle</string>
     <string name="staff_reviews_action_remove">Aýyr</string>
     <string name="staff_reviews_action_restore">Dikeld</string>
     <string name="staff_reviews_col_date">Sene</string>
@@ -381,7 +380,6 @@
     <string name="staff_reviews_col_text">Tekst</string>
     <string name="staff_reviews_empty">Synlar ýok</string>
     <string name="staff_reviews_filter_all">Ähli ýagdaýlar</string>
-    <string name="staff_reviews_filter_hidden">Gizlin</string>
     <string name="staff_reviews_filter_published">Çap edildi</string>
     <string name="staff_reviews_filter_removed">Aýryldy</string>
     <string name="staff_reviews_filter_status">Ýagdaý</string>

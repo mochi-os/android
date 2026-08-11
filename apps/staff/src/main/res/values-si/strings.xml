@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">ලැයිස්තුගත කිරීම</string>
     <string name="staff_reports_type_user">පරිශීලකයා</string>
     <string name="staff_reports_view">බලන්න</string>
-    <string name="staff_reviews_action_hide">සඟවන්න</string>
     <string name="staff_reviews_action_remove">ඉවත් කරන්න</string>
     <string name="staff_reviews_action_restore">ප්‍රතිසාධනය කරන්න</string>
     <string name="staff_reviews_col_date">දිනය</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">පෙළ</string>
     <string name="staff_reviews_empty">සමාලෝචන නැත</string>
     <string name="staff_reviews_filter_all">සියලු තත්ත්ව</string>
-    <string name="staff_reviews_filter_hidden">සැඟවී ඇත</string>
     <string name="staff_reviews_filter_published">ප්‍රකාශයට පත් කරන ලදී</string>
     <string name="staff_reviews_filter_removed">ඉවත් කරන ලදී</string>
     <string name="staff_reviews_filter_status">තත්ත්වය</string>

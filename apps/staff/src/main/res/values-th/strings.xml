@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">ประกาศ</string>
     <string name="staff_reports_type_user">ผู้ใช้</string>
     <string name="staff_reports_view">ดู</string>
-    <string name="staff_reviews_action_hide">ซ่อน</string>
     <string name="staff_reviews_action_remove">ลบ</string>
     <string name="staff_reviews_action_restore">กู้คืน</string>
     <string name="staff_reviews_col_date">วันที่</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">ข้อความ</string>
     <string name="staff_reviews_empty">ไม่มีรีวิว</string>
     <string name="staff_reviews_filter_all">สถานะทั้งหมด</string>
-    <string name="staff_reviews_filter_hidden">ซ่อนอยู่</string>
     <string name="staff_reviews_filter_published">เผยแพร่แล้ว</string>
     <string name="staff_reviews_filter_removed">ลบแล้ว</string>
     <string name="staff_reviews_filter_status">สถานะ</string>

@@ -371,7 +371,6 @@
     <string name="staff_reports_type_listing">Listing</string>
     <string name="staff_reports_type_user">Panganggo</string>
     <string name="staff_reports_view">Deleng</string>
-    <string name="staff_reviews_action_hide">Singidaké</string>
     <string name="staff_reviews_action_remove">Cabut</string>
     <string name="staff_reviews_action_restore">Pulihaké</string>
     <string name="staff_reviews_col_date">Tanggal</string>
@@ -383,7 +382,6 @@
     <string name="staff_reviews_col_text">Teks</string>
     <string name="staff_reviews_empty">Ora ana review</string>
     <string name="staff_reviews_filter_all">Kabèh status</string>
-    <string name="staff_reviews_filter_hidden">Disingidaké</string>
     <string name="staff_reviews_filter_published">Dipublikasikaké</string>
     <string name="staff_reviews_filter_removed">Wis dicabut</string>
     <string name="staff_reviews_filter_status">Status</string>

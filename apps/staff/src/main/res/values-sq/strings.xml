@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Shpallja</string>
     <string name="staff_reports_type_user">Përdoruesi</string>
     <string name="staff_reports_view">Shiko</string>
-    <string name="staff_reviews_action_hide">Fshih</string>
     <string name="staff_reviews_action_remove">Hiq</string>
     <string name="staff_reviews_action_restore">Rivendos</string>
     <string name="staff_reviews_col_date">Data</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Teksti</string>
     <string name="staff_reviews_empty">Asnjë vlerësim</string>
     <string name="staff_reviews_filter_all">Të gjithë statuset</string>
-    <string name="staff_reviews_filter_hidden">I fshehur</string>
     <string name="staff_reviews_filter_published">I publikuar</string>
     <string name="staff_reviews_filter_removed">I hequr</string>
     <string name="staff_reviews_filter_status">Statusi</string>

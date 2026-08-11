@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">စာရင်း</string>
     <string name="staff_reports_type_user">သုံးစွဲသူ</string>
     <string name="staff_reports_view">ကြည့်ရှုမည်</string>
-    <string name="staff_reviews_action_hide">ဝှက်</string>
     <string name="staff_reviews_action_remove">ဖယ်ရှား</string>
     <string name="staff_reviews_action_restore">ပြန်ဆယ်ယူ</string>
     <string name="staff_reviews_col_date">ရက်စွဲ</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">စာသား</string>
     <string name="staff_reviews_empty">သုံးသပ်ချက်များ မရှိ</string>
     <string name="staff_reviews_filter_all">အခြေအနေအားလုံး</string>
-    <string name="staff_reviews_filter_hidden">ဝှက်ထား</string>
     <string name="staff_reviews_filter_published">ထုတ်ဝေပြီးသည်</string>
     <string name="staff_reviews_filter_removed">ဖယ်ရှားပြီး</string>
     <string name="staff_reviews_filter_status">အခြေအနေ</string>

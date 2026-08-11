@@ -366,7 +366,6 @@
     <string name="staff_reports_type_listing">Qhatuy</string>
     <string name="staff_reports_type_user">Apaykachaq</string>
     <string name="staff_reports_view">Qhaway</string>
-    <string name="staff_reviews_action_hide">Pakay</string>
     <string name="staff_reviews_action_remove">Qichuy</string>
     <string name="staff_reviews_action_restore">Kutichipuy</string>
     <string name="staff_reviews_col_date">P\'unchaw</string>
@@ -378,7 +377,6 @@
     <string name="staff_reviews_col_text">Qillqa</string>
     <string name="staff_reviews_empty">Mana reseñakuna</string>
     <string name="staff_reviews_filter_all">Llapan kayniyoq</string>
-    <string name="staff_reviews_filter_hidden">Pakasqa</string>
     <string name="staff_reviews_filter_published">Publishasqa</string>
     <string name="staff_reviews_filter_removed">Qichusqa</string>
     <string name="staff_reviews_filter_status">Estado</string>

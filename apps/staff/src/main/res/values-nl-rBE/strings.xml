@@ -397,7 +397,6 @@
     <string name="staff_reports_title">Rapporten</string>
     <string name="staff_reports_type_user">Gebruiker</string>
     <string name="staff_reports_view">Weergeven</string>
-    <string name="staff_reviews_action_hide">Verbergen</string>
     <string name="staff_reviews_action_remove">Verwijderen</string>
     <string name="staff_reviews_action_restore">Herstellen</string>
     <string name="staff_reviews_col_date">Datum</string>
@@ -408,7 +407,6 @@
     <string name="staff_reviews_col_text">Tekst</string>
     <string name="staff_reviews_empty">Geen reviews</string>
     <string name="staff_reviews_filter_all">Alle statussen</string>
-    <string name="staff_reviews_filter_hidden">Verborgen</string>
     <string name="staff_reviews_filter_published">Gepubliceerd</string>
     <string name="staff_reviews_filter_removed">Verwijderd</string>
     <string name="staff_reviews_filter_status">Status</string>

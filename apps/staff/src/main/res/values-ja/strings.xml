@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">リスティング</string>
     <string name="staff_reports_type_user">ユーザー</string>
     <string name="staff_reports_view">ビュー</string>
-    <string name="staff_reviews_action_hide">非表示</string>
     <string name="staff_reviews_action_remove">削除</string>
     <string name="staff_reviews_action_restore">復元</string>
     <string name="staff_reviews_col_date">日付</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">テキスト</string>
     <string name="staff_reviews_empty">レビューはありません</string>
     <string name="staff_reviews_filter_all">すべてのステータス</string>
-    <string name="staff_reviews_filter_hidden">非表示</string>
     <string name="staff_reviews_filter_published">公開済み</string>
     <string name="staff_reviews_filter_removed">削除済み</string>
     <string name="staff_reviews_filter_status">ステータス</string>

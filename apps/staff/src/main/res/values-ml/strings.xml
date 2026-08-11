@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">ലിസ്റ്റിംഗ്</string>
     <string name="staff_reports_type_user">ഉപയോക്താവ്</string>
     <string name="staff_reports_view">കാണുക</string>
-    <string name="staff_reviews_action_hide">മറയ്ക്കുക</string>
     <string name="staff_reviews_action_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
     <string name="staff_reviews_action_restore">പുനഃസ്ഥാപിക്കുക</string>
     <string name="staff_reviews_col_date">തീയതി</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">ടെക്സ്റ്റ്</string>
     <string name="staff_reviews_empty">അവലോകനങ്ങളൊന്നുമില്ല</string>
     <string name="staff_reviews_filter_all">എല്ലാ സ്റ്റാറ്റസുകളും</string>
-    <string name="staff_reviews_filter_hidden">മറച്ചത്</string>
     <string name="staff_reviews_filter_published">പ്രസാധകൻ</string>
     <string name="staff_reviews_filter_removed">നീക്കംചെയ്തു</string>
     <string name="staff_reviews_filter_status">സ്റ്റാറ്റസ്</string>

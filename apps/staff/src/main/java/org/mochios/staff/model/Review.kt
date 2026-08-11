@@ -70,12 +70,10 @@ enum class ReviewStatus {
  * Action a moderator can take on a review. The Comptroller validates against
  * this exact set (see `event_staff_reviews_action`):
  *
- * - [HIDE] hides a published review (status -> hidden).
  * - [REMOVE] removes a review (status -> removed).
- * - [RESTORE] restores a hidden/removed review (status -> published).
+ * - [RESTORE] restores a removed review (status -> published).
  */
 enum class ReviewAction {
-    @SerializedName("hide") HIDE,
     @SerializedName("remove") REMOVE,
     @SerializedName("restore") RESTORE,
 }

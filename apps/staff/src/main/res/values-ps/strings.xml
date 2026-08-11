@@ -368,7 +368,6 @@
     <string name="staff_reports_type_listing">لیسټینګ</string>
     <string name="staff_reports_type_user">کاروونکی</string>
     <string name="staff_reports_view">ولید</string>
-    <string name="staff_reviews_action_hide">پټ کړه</string>
     <string name="staff_reviews_action_remove">لرې کول</string>
     <string name="staff_reviews_action_restore">بیرته راګرځول</string>
     <string name="staff_reviews_col_date">نېټه</string>
@@ -380,7 +379,6 @@
     <string name="staff_reviews_col_text">متن</string>
     <string name="staff_reviews_empty">هیڅ بیاکتنې نشته</string>
     <string name="staff_reviews_filter_all">ټول حالتونه</string>
-    <string name="staff_reviews_filter_hidden">پټ</string>
     <string name="staff_reviews_filter_published">خپور شوی</string>
     <string name="staff_reviews_filter_removed">لرې شوی</string>
     <string name="staff_reviews_filter_status">حالت</string>

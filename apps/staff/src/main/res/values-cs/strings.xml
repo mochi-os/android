@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Nabídka</string>
     <string name="staff_reports_type_user">Uživatel</string>
     <string name="staff_reports_view">Zobrazit</string>
-    <string name="staff_reviews_action_hide">Skrýt</string>
     <string name="staff_reviews_action_remove">Odebrat</string>
     <string name="staff_reviews_action_restore">Obnovit</string>
     <string name="staff_reviews_col_date">Datum</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Text</string>
     <string name="staff_reviews_empty">Žádné recenze</string>
     <string name="staff_reviews_filter_all">Všechny stavy</string>
-    <string name="staff_reviews_filter_hidden">Skryté</string>
     <string name="staff_reviews_filter_published">Publikováno</string>
     <string name="staff_reviews_filter_removed">Odebráno</string>
     <string name="staff_reviews_filter_status">Stav</string>

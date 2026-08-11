@@ -365,7 +365,6 @@
     <string name="staff_reports_type_listing">Listado</string>
     <string name="staff_reports_type_user">Apnaqiri banata</string>
     <string name="staff_reports_view">Taqi uñjaña</string>
-    <string name="staff_reviews_action_hide">Imantaña</string>
     <string name="staff_reviews_action_remove">Aparma</string>
     <string name="staff_reviews_action_restore">Kutiyama</string>
     <string name="staff_reviews_col_date">Uru</string>
@@ -377,7 +376,6 @@
     <string name="staff_reviews_col_text">Texto</string>
     <string name="staff_reviews_empty">Jan reviewanak</string>
     <string name="staff_reviews_filter_all">Taqpach estado</string>
-    <string name="staff_reviews_filter_hidden">Imantata</string>
     <string name="staff_reviews_filter_published">Publicata</string>
     <string name="staff_reviews_filter_removed">Aparata</string>
     <string name="staff_reviews_filter_status">Estado</string>

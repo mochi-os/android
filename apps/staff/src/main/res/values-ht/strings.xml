@@ -376,7 +376,6 @@
     <string name="staff_reports_type_listing">Lis</string>
     <string name="staff_reports_type_user">Itilizatè</string>
     <string name="staff_reports_view">Wè</string>
-    <string name="staff_reviews_action_hide">Kache</string>
     <string name="staff_reviews_action_remove">Retire</string>
     <string name="staff_reviews_action_restore">Restore</string>
     <string name="staff_reviews_col_date">Dat</string>
@@ -388,7 +387,6 @@
     <string name="staff_reviews_col_text">Tèks</string>
     <string name="staff_reviews_empty">Pa gen revizyon</string>
     <string name="staff_reviews_filter_all">Tout estati</string>
-    <string name="staff_reviews_filter_hidden">Kache</string>
     <string name="staff_reviews_filter_published">Pibliye</string>
     <string name="staff_reviews_filter_removed">Retire</string>
     <string name="staff_reviews_filter_status">Estati</string>

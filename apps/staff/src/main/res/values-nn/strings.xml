@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Oppføring</string>
     <string name="staff_reports_type_user">Brukar</string>
     <string name="staff_reports_view">Vis</string>
-    <string name="staff_reviews_action_hide">Skjul</string>
     <string name="staff_reviews_action_remove">Fjern</string>
     <string name="staff_reviews_action_restore">Gjenopprett</string>
     <string name="staff_reviews_col_date">Dato</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Tekst</string>
     <string name="staff_reviews_empty">Ingen vurderingar</string>
     <string name="staff_reviews_filter_all">Alle statusar</string>
-    <string name="staff_reviews_filter_hidden">Skjult</string>
     <string name="staff_reviews_filter_published">Publisert</string>
     <string name="staff_reviews_filter_removed">Fjerna</string>
     <string name="staff_reviews_filter_status">Status</string>

@@ -368,7 +368,6 @@
     <string name="staff_reports_type_listing">Lîste</string>
     <string name="staff_reports_type_user">Bikarhêner</string>
     <string name="staff_reports_view">Bibîne</string>
-    <string name="staff_reviews_action_hide">Veşêre</string>
     <string name="staff_reviews_action_remove">Rake</string>
     <string name="staff_reviews_action_restore">Vegerîne</string>
     <string name="staff_reviews_col_date">Dîrok</string>
@@ -380,7 +379,6 @@
     <string name="staff_reviews_col_text">Nivîs</string>
     <string name="staff_reviews_empty">Tu nirxandin tune</string>
     <string name="staff_reviews_filter_all">Hemû rewş</string>
-    <string name="staff_reviews_filter_hidden">Veşartî</string>
     <string name="staff_reviews_filter_published">Hatiye weşandin</string>
     <string name="staff_reviews_filter_removed">Hatiye rakirin</string>
     <string name="staff_reviews_filter_status">Rewş</string>

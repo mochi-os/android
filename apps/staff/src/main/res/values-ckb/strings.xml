@@ -376,7 +376,6 @@
     <string name="staff_reports_type_listing">ناونووسکراو</string>
     <string name="staff_reports_type_user">بەکارهێنەر</string>
     <string name="staff_reports_view">بینین</string>
-    <string name="staff_reviews_action_hide">شاردنەوە</string>
     <string name="staff_reviews_action_remove">لابردن</string>
     <string name="staff_reviews_action_restore">گەڕاندنەوە</string>
     <string name="staff_reviews_col_date">بەروار</string>
@@ -388,7 +387,6 @@
     <string name="staff_reviews_col_text">دەق</string>
     <string name="staff_reviews_empty">هیچ هەڵسەنگاندنێک نییە</string>
     <string name="staff_reviews_filter_all">هەموو دۆخەکان</string>
-    <string name="staff_reviews_filter_hidden">شاراوە</string>
     <string name="staff_reviews_filter_published">بڵاوکراوە</string>
     <string name="staff_reviews_filter_removed">لابرا</string>
     <string name="staff_reviews_filter_status">دۆخ</string>

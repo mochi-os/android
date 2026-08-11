@@ -382,7 +382,6 @@
     <string name="staff_reports_type_listing">Eʼlon</string>
     <string name="staff_reports_type_user">Foydalanuvchi</string>
     <string name="staff_reports_view">Koʻrish</string>
-    <string name="staff_reviews_action_hide">Yashirish</string>
     <string name="staff_reviews_action_remove">Olib tashlash</string>
     <string name="staff_reviews_action_restore">Tiklash</string>
     <string name="staff_reviews_col_date">Sana</string>
@@ -394,7 +393,6 @@
     <string name="staff_reviews_col_text">Matn</string>
     <string name="staff_reviews_empty">Sharhlar yoʻq</string>
     <string name="staff_reviews_filter_all">Barcha holatlar</string>
-    <string name="staff_reviews_filter_hidden">Yashirin</string>
     <string name="staff_reviews_filter_published">Nashr qilingan</string>
     <string name="staff_reviews_filter_removed">Olib tashlandi</string>
     <string name="staff_reviews_filter_status">Holat</string>

@@ -417,7 +417,6 @@
     <string name="staff_reports_submitting">Wird gesendet…</string>
     <string name="staff_reports_title">Meldungen</string>
     <string name="staff_reports_type_listing">Inserat</string>
-    <string name="staff_reviews_action_hide">Ausblenden</string>
     <string name="staff_reviews_action_restore">Wiederherstellen</string>
     <string name="staff_reviews_col_date">Datum</string>
     <string name="staff_reviews_col_listing">Inserat</string>
@@ -427,7 +426,6 @@
     <string name="staff_reviews_col_text">Text</string>
     <string name="staff_reviews_empty">Keine Bewertungen</string>
     <string name="staff_reviews_filter_all">Alle Status</string>
-    <string name="staff_reviews_filter_hidden">Ausgeblendet</string>
     <string name="staff_reviews_filter_published">Veröffentlicht</string>
     <string name="staff_reviews_filter_removed">Entfernt</string>
     <string name="staff_reviews_order_label">Bestellung #%1$s</string>

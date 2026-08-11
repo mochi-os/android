@@ -336,7 +336,6 @@
     <string name="staff_reports_submitting">Soumission…</string>
     <string name="staff_reports_title">Signalements</string>
     <string name="staff_reports_type_listing">Annonce</string>
-    <string name="staff_reviews_action_hide">Masquer</string>
     <string name="staff_reviews_action_restore">Restaurer</string>
     <string name="staff_reviews_col_date">Date</string>
     <string name="staff_reviews_col_listing">Annonce</string>
@@ -346,7 +345,6 @@
     <string name="staff_reviews_col_text">Texte</string>
     <string name="staff_reviews_empty">Aucun avis</string>
     <string name="staff_reviews_filter_all">Tous les statuts</string>
-    <string name="staff_reviews_filter_hidden">Masqués</string>
     <string name="staff_reviews_filter_published">Publiés</string>
     <string name="staff_reviews_filter_removed">Supprimés</string>
     <string name="staff_reviews_order_label">commande nº %1$s</string>

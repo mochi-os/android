@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">لسٹنگ</string>
     <string name="staff_reports_type_user">صارف</string>
     <string name="staff_reports_view">دیکھیں</string>
-    <string name="staff_reviews_action_hide">چھپائیں</string>
     <string name="staff_reviews_action_remove">ہٹائیں</string>
     <string name="staff_reviews_action_restore">بحال کریں</string>
     <string name="staff_reviews_col_date">تاریخ</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">متن</string>
     <string name="staff_reviews_empty">کوئی reviews نہیں</string>
     <string name="staff_reviews_filter_all">تمام حیثیتیں</string>
-    <string name="staff_reviews_filter_hidden">چھپا ہوا</string>
     <string name="staff_reviews_filter_published">publish ہو گیا</string>
     <string name="staff_reviews_filter_removed">ہٹا دیا گیا</string>
     <string name="staff_reviews_filter_status">اسٹیٹس</string>

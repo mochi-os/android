@@ -392,7 +392,6 @@
     <string name="staff_reports_type_listing">Orodha</string>
     <string name="staff_reports_type_user">Mtumiaji</string>
     <string name="staff_reports_view">Tazama</string>
-    <string name="staff_reviews_action_hide">Ficha</string>
     <string name="staff_reviews_action_remove">Ondoa</string>
     <string name="staff_reviews_action_restore">Rejesha</string>
     <string name="staff_reviews_col_date">Tarehe</string>
@@ -404,7 +403,6 @@
     <string name="staff_reviews_col_text">Maandishi</string>
     <string name="staff_reviews_empty">Hakuna maoni</string>
     <string name="staff_reviews_filter_all">Hali zote</string>
-    <string name="staff_reviews_filter_hidden">Imefichwa</string>
     <string name="staff_reviews_filter_published">Imechapishwa</string>
     <string name="staff_reviews_filter_removed">Imeondolewa</string>
     <string name="staff_reviews_filter_status">Hali</string>

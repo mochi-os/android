@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Оглас</string>
     <string name="staff_reports_type_user">Корисник</string>
     <string name="staff_reports_view">Прикажи</string>
-    <string name="staff_reviews_action_hide">Сокриј</string>
     <string name="staff_reviews_action_remove">Отстрани</string>
     <string name="staff_reviews_action_restore">Врати</string>
     <string name="staff_reviews_col_date">Датум</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Текст</string>
     <string name="staff_reviews_empty">Нема прегледи</string>
     <string name="staff_reviews_filter_all">Сите статуси</string>
-    <string name="staff_reviews_filter_hidden">Скриено</string>
     <string name="staff_reviews_filter_published">Објавено</string>
     <string name="staff_reviews_filter_removed">Отстрането</string>
     <string name="staff_reviews_filter_status">Статус</string>

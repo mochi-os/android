@@ -376,7 +376,6 @@
     <string name="staff_reports_type_listing">Listing</string>
     <string name="staff_reports_type_user">Utent</string>
     <string name="staff_reports_view">Ara</string>
-    <string name="staff_reviews_action_hide">Aħbi</string>
     <string name="staff_reviews_action_remove">Neħħi</string>
     <string name="staff_reviews_action_restore">Restawra</string>
     <string name="staff_reviews_col_date">Data</string>
@@ -388,7 +387,6 @@
     <string name="staff_reviews_col_text">Test</string>
     <string name="staff_reviews_empty">L-ebda reviews</string>
     <string name="staff_reviews_filter_all">L-istatuses kollha</string>
-    <string name="staff_reviews_filter_hidden">Moħbi</string>
     <string name="staff_reviews_filter_published">Ippubblikat</string>
     <string name="staff_reviews_filter_removed">Imneħħi</string>
     <string name="staff_reviews_filter_status">Status</string>

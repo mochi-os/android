@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">قائمة</string>
     <string name="staff_reports_type_user">المستخدم</string>
     <string name="staff_reports_view">عرض</string>
-    <string name="staff_reviews_action_hide">إخفاء</string>
     <string name="staff_reviews_action_remove">إزالة</string>
     <string name="staff_reviews_action_restore">استعادة</string>
     <string name="staff_reviews_col_date">التاريخ</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">نص</string>
     <string name="staff_reviews_empty">لا توجد مراجعات</string>
     <string name="staff_reviews_filter_all">جميع الحالات</string>
-    <string name="staff_reviews_filter_hidden">مخفي</string>
     <string name="staff_reviews_filter_published">منشور</string>
     <string name="staff_reviews_filter_removed">تمت الإزالة</string>
     <string name="staff_reviews_filter_status">الحالة</string>

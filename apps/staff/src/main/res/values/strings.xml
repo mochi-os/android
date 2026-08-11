@@ -408,7 +408,6 @@
     <string name="staff_reports_type_listing">Listing</string>
     <string name="staff_reports_type_user">User</string>
     <string name="staff_reports_view">View</string>
-    <string name="staff_reviews_action_hide">Hide</string>
     <string name="staff_reviews_action_remove">Remove</string>
     <string name="staff_reviews_action_restore">Restore</string>
     <string name="staff_reviews_col_date">Date</string>
@@ -420,7 +419,6 @@
     <string name="staff_reviews_col_text">Text</string>
     <string name="staff_reviews_empty">No reviews</string>
     <string name="staff_reviews_filter_all">All statuses</string>
-    <string name="staff_reviews_filter_hidden">Hidden</string>
     <string name="staff_reviews_filter_published">Published</string>
     <string name="staff_reviews_filter_removed">Removed</string>
     <string name="staff_reviews_filter_status">Status</string>

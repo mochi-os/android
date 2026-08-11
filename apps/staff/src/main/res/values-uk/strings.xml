@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Оголошення</string>
     <string name="staff_reports_type_user">Користувач</string>
     <string name="staff_reports_view">Переглянути</string>
-    <string name="staff_reviews_action_hide">Приховати</string>
     <string name="staff_reviews_action_remove">Видалити</string>
     <string name="staff_reviews_action_restore">Відновити</string>
     <string name="staff_reviews_col_date">Дата</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Текст</string>
     <string name="staff_reviews_empty">Немає відгуків</string>
     <string name="staff_reviews_filter_all">Усі статуси</string>
-    <string name="staff_reviews_filter_hidden">Приховано</string>
     <string name="staff_reviews_filter_published">Опубліковано</string>
     <string name="staff_reviews_filter_removed">Видалено</string>
     <string name="staff_reviews_filter_status">Статус</string>

@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">ການລົງປະກາດຂາຍ</string>
     <string name="staff_reports_type_user">ຜູ້ໃຊ້</string>
     <string name="staff_reports_view">ເບິ່ງ</string>
-    <string name="staff_reviews_action_hide">ເຊື່ອງ</string>
     <string name="staff_reviews_action_remove">ລຶບອອກ</string>
     <string name="staff_reviews_action_restore">ກູ້ຄືນ</string>
     <string name="staff_reviews_col_date">ວັນທີ</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">ຂໍ້ຄວາມ</string>
     <string name="staff_reviews_empty">ບໍ່ມີຄຳວິຈານ</string>
     <string name="staff_reviews_filter_all">ສະຖານະທັງໝົດ</string>
-    <string name="staff_reviews_filter_hidden">ເຊື່ອງໄວ້</string>
     <string name="staff_reviews_filter_published">ເຜີຍແຜ່ແລ້ວ</string>
     <string name="staff_reviews_filter_removed">ລຶບແລ້ວ</string>
     <string name="staff_reviews_filter_status">ສະຖານະ</string>
