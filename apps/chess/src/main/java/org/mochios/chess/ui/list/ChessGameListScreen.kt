@@ -44,6 +44,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -57,6 +58,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
@@ -64,7 +68,6 @@ import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.ui.components.ChessSidebar
 import org.mochios.chess.ui.components.ChessSidebarGame
-import org.mochios.chess.ui.dialog.NewChessGameDialog
 import org.mochios.android.R as MochiR
 
 /**
@@ -79,13 +82,12 @@ import org.mochios.android.R as MochiR
  *    [ChessApp.gameDetail].
  *  - Empty state when the user has no games — `GameEmptyState` parity:
  *    icon + "No games yet" + a primary "New game" button that opens the
- *    new-game dialog.
+ *    new-game screen.
  *  - Error state with retry when the initial fetch fails.
  *
- * The new-game dialog (when [ChessGameListUiState.newGameDialogOpen] is
- * true) is rendered alongside the screen and routes its success path
- * through the ViewModel's [ChessGameListEvent.OpenGame] event so this
- * screen owns the navigation away to the detail.
+ * Starting a game lives on its own screen ([ChessApp.NEW_GAME]); the list
+ * reloads when it comes back to the foreground so a game started there is
+ * present when the user backs out of its detail.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -100,6 +102,17 @@ fun ChessGameListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
+
+    // Reload when the screen returns to the foreground, most importantly after
+    // starting a game on the new-game screen.
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) viewModel.refresh()
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
@@ -124,7 +137,7 @@ fun ChessGameListScreen(
                 },
                 onOpenNewGame = {
                     drawerScope.launch { drawerState.close() }
-                    viewModel.openNewGameDialog()
+                    navController.navigate(ChessApp.NEW_GAME)
                 },
                 // websocketStatusLabel is null here — only the detail screen
                 // (a parallel agent's work) has an open WS to report on.
@@ -172,7 +185,7 @@ fun ChessGameListScreen(
                         onRetry = { viewModel.load() },
                     )
                     uiState.games.isEmpty() -> EmptyState(
-                        onNewGame = { viewModel.openNewGameDialog() },
+                        onNewGame = { navController.navigate(ChessApp.NEW_GAME) },
                     )
                     else -> GameCardGrid(
                         activeGames = uiState.activeSidebar,
@@ -180,20 +193,11 @@ fun ChessGameListScreen(
                         onOpenGame = { gameId ->
                             navController.navigate(ChessApp.gameDetail(gameId))
                         },
-                        onNewGame = { viewModel.openNewGameDialog() },
+                        onNewGame = { navController.navigate(ChessApp.NEW_GAME) },
                     )
                 }
             }
         }
-    }
-
-    if (uiState.newGameDialogOpen) {
-        NewChessGameDialog(
-            onDismiss = { viewModel.closeNewGameDialog() },
-            onCreated = { gameId -> viewModel.onGameCreated(gameId) },
-            onAddFriends = { onOpenLink("people?action=add") },
-            onToast = { message -> viewModel.onToast(message) },
-        )
     }
 }
 

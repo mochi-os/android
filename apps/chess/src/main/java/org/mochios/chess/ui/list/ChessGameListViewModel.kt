@@ -135,35 +135,6 @@ class ChessGameListViewModel @Inject constructor(
         )
     }
 
-    // ---- New-game dialog ----
-
-    fun openNewGameDialog() {
-        _uiState.value = _uiState.value.copy(newGameDialogOpen = true)
-    }
-
-    fun closeNewGameDialog() {
-        _uiState.value = _uiState.value.copy(newGameDialogOpen = false)
-    }
-
-    /**
-     * Called by the new-game dialog after a successful create. Refresh the
-     * list so the new game shows up and emit an [OpenGame] event so the
-     * screen can navigate straight in.
-     */
-    fun onGameCreated(gameId: String) {
-        closeNewGameDialog()
-        refresh()
-        viewModelScope.launch {
-            _events.emit(ChessGameListEvent.OpenGame(gameId))
-        }
-    }
-
-    fun onToast(message: String) {
-        viewModelScope.launch {
-            _events.emit(ChessGameListEvent.Toast(message))
-        }
-    }
-
     private fun Game.toSidebarRow(identity: String): ChessSidebarGame {
         val routeId = fingerprint?.takeIf { it.isNotBlank() } ?: id
         return ChessSidebarGame(

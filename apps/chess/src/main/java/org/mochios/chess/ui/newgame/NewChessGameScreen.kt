@@ -3,39 +3,45 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-package org.mochios.chess.ui.dialog
+package org.mochios.chess.ui.newgame
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.RadioButtonChecked
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -52,95 +58,109 @@ import org.mochios.chess.model.NewGameFriend
 import org.mochios.android.R as MochiR
 
 /**
- * AlertDialog for "Start a new chess game". Mirrors the web `NewGame` dialog:
+ * Full screen for "Start a new chess game". Mirrors the web `NewGame` flow:
  *
- *  - Loading state — small spinner inside the dialog body.
- *  - Error state — short error + retry, the simplest viable equivalent of
- *    web's `<GeneralError minimal mode="inline" reset={refetch} />`.
- *  - Empty state — "No friends yet" message with an "Add friends" button
- *    that fires [onAddFriends] (the host navigates to the People app's
- *    add-friend route).
- *  - Populated state — single-select scrollable friends list (auto-focuses
- *    by opening with a max-height bounded list rather than a separate
- *    auto-opened combobox; this is the Compose-native equivalent of the
- *    web's PersonPicker, which itself appears as a combobox-as-list inside
- *    the dialog body once data lands).
+ *  - Loading state — spinner while the friends list is fetched.
+ *  - Error state — short error + retry.
+ *  - Empty state — "No friends yet" with an "Add friends" button that fires
+ *    [onAddFriends] (the host jumps to the People app's add-friend route).
+ *  - Populated state — single-select friends list filling the screen.
  *
- * On submit, [onCreated] receives the new game UID; [onToast] reports any
- * create error as a snackbar through the parent screen.
+ * The top bar carries the back button and Start game sits in the bottom bar.
+ *
+ * @param onBack leaves the screen without starting a game.
+ * @param onCreated receives the new game's UID so the host can open it.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun NewChessGameDialog(
-    onDismiss: () -> Unit,
+fun NewChessGameScreen(
+    onBack: () -> Unit,
     onCreated: (gameId: String) -> Unit,
     onAddFriends: () -> Unit,
-    onToast: (String) -> Unit,
     viewModel: NewChessGameViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val toastFailedToCreate = stringResource(R.string.chess_new_failed)
 
-    AlertDialog(
-        onDismissRequest = { if (!state.isCreating) onDismiss() },
-        title = { Text(stringResource(R.string.chess_new_title)) },
-        text = {
-            Column {
-                Text(
-                    text = stringResource(R.string.chess_new_pick_opponent),
-                    style = MaterialTheme.typography.labelLarge,
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                when {
-                    state.isLoadingFriends -> LoadingBox()
-                    state.friendsError != null -> ErrorBox(
-                        message = state.friendsError?.userMessage()
-                            ?: stringResource(MochiR.string.error_unexpected),
-                        onRetry = { viewModel.loadFriends() },
-                    )
-                    state.friends.isEmpty() -> NoFriendsBox(onAddFriends = onAddFriends)
-                    else -> FriendsPicker(
-                        friends = state.friends,
-                        selectedId = state.selectedId,
-                        onSelect = viewModel::select,
-                    )
-                }
-            }
-        },
-        confirmButton = {
-            Button(
-                onClick = {
-                    viewModel.create(
-                        onCreated = onCreated,
-                        onError = { message ->
-                            onToast(message.ifBlank { toastFailedToCreate })
-                        },
-                    )
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.chess_new_title)) },
+                navigationIcon = {
+                    IconButton(onClick = onBack, enabled = !state.isCreating) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back),
+                        )
+                    }
                 },
-                enabled = state.selectedId.isNotBlank() && !state.isCreating,
-            ) {
-                if (state.isCreating) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                    Spacer(modifier = Modifier.size(8.dp))
-                    Text(stringResource(R.string.chess_new_creating))
-                } else {
-                    Icon(Icons.Default.Add, contentDescription = null)
-                    Spacer(modifier = Modifier.size(8.dp))
-                    Text(stringResource(R.string.chess_new_start_button))
+            )
+        },
+        bottomBar = {
+            Surface(color = MaterialTheme.colorScheme.surface) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .navigationBarsPadding()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                ) {
+                    state.createError?.let { error ->
+                        Text(
+                            text = error.userMessage(),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.error,
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                    }
+                    Button(
+                        onClick = { viewModel.create(onCreated = onCreated, onError = {}) },
+                        enabled = state.selectedId.isNotBlank() && !state.isCreating,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        if (state.isCreating) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(18.dp),
+                                strokeWidth = 2.dp,
+                                color = MaterialTheme.colorScheme.onPrimary,
+                            )
+                            Spacer(modifier = Modifier.size(8.dp))
+                            Text(stringResource(R.string.chess_new_creating))
+                        } else {
+                            Icon(Icons.Default.Add, contentDescription = null)
+                            Spacer(modifier = Modifier.size(8.dp))
+                            Text(stringResource(R.string.chess_new_start_button))
+                        }
+                    }
                 }
             }
         },
-        dismissButton = {
-            TextButton(
-                onClick = onDismiss,
-                enabled = !state.isCreating,
-            ) {
-                Text(stringResource(MochiR.string.common_cancel))
+    ) { padding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .padding(horizontal = 16.dp, vertical = 16.dp),
+        ) {
+            Text(
+                text = stringResource(R.string.chess_new_pick_opponent),
+                style = MaterialTheme.typography.labelLarge,
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            when {
+                state.isLoadingFriends -> LoadingBox()
+                state.friendsError != null -> ErrorBox(
+                    message = state.friendsError?.userMessage()
+                        ?: stringResource(MochiR.string.error_unexpected),
+                    onRetry = { viewModel.loadFriends() },
+                )
+                state.friends.isEmpty() -> NoFriendsBox(onAddFriends = onAddFriends)
+                else -> FriendsPicker(
+                    friends = state.friends,
+                    selectedId = state.selectedId,
+                    onSelect = viewModel::select,
+                )
             }
-        },
-    )
+        }
+    }
 }
 
 @Composable
@@ -222,13 +242,11 @@ private fun FriendsPicker(
     onSelect: (String) -> Unit,
 ) {
     LazyColumn(
-        modifier = Modifier
-            .fillMaxWidth()
-            .heightIn(max = 280.dp),
+        modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(vertical = 4.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
-        items(friends, key = { it.id }) { friend ->
+        items(friends, key = { friend -> friend.id }) { friend ->
             FriendRow(
                 friend = friend,
                 selected = friend.id == selectedId,
@@ -253,13 +271,9 @@ private fun FriendRow(
         onClick = onClick,
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (selected) {
-                MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-            } else {
-                MaterialTheme.colorScheme.surface
-            },
+            containerColor = MaterialTheme.colorScheme.surface,
         ),
-        border = androidx.compose.foundation.BorderStroke(1.dp, borderColor),
+        border = BorderStroke(1.dp, borderColor),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Row(
@@ -270,9 +284,17 @@ private fun FriendRow(
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Icon(
-                imageVector = if (selected) Icons.Default.RadioButtonChecked else Icons.Default.RadioButtonUnchecked,
+                imageVector = if (selected) {
+                    Icons.Default.RadioButtonChecked
+                } else {
+                    Icons.Default.RadioButtonUnchecked
+                },
                 contentDescription = null,
-                tint = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                tint = if (selected) {
+                    MaterialTheme.colorScheme.primary
+                } else {
+                    MaterialTheme.colorScheme.onSurfaceVariant
+                },
             )
             Icon(
                 imageVector = Icons.Default.Person,
