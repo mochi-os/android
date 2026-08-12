@@ -130,7 +130,6 @@ import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.board.BoardView
 import org.mochios.crm.ui.`object`.ObjectDetailSheet
-import org.mochios.crm.ui.crmlist.CreateCrmDialog
 import org.mochios.crm.ui.crmlist.CrmListViewModel
 import org.mochios.crm.ui.router.PROJECTS_FEATURE
 import org.mochios.crm.ui.tree.TreeView
@@ -143,6 +142,7 @@ fun CrmScreen(
     onSelectCrm: (String) -> Unit,
     onSelectAll: () -> Unit,
     onFindCrms: () -> Unit,
+    onCreateCrm: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
     onOpenNotifications: () -> Unit = {},
@@ -162,15 +162,6 @@ fun CrmScreen(
         if (crmId.isNotBlank()) {
             LastViewedStore.set(context, PROJECTS_FEATURE, crmId)
             SystemNotifications.cancelFor(context, "crm", crmId)
-        }
-    }
-
-    // Open the CRM detail right after a create, then clear the signal so
-    // it doesn't re-fire on recomposition.
-    LaunchedEffect(listUiState.createdCrmId) {
-        listUiState.createdCrmId?.let { newId ->
-            onSelectCrm(newId)
-            listViewModel.consumeCreatedCrm()
         }
     }
 
@@ -215,7 +206,7 @@ fun CrmScreen(
                 icon = Icons.Default.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
-                    listViewModel.showCreateDialog()
+                    onCreateCrm()
                 },
             )
             DrawerActionRow(
@@ -266,18 +257,6 @@ fun CrmScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-
-    if (listUiState.showCreateDialog) {
-        CreateCrmDialog(
-            isCreating = listUiState.isCreating,
-            backupPrefill = listUiState.backupPrefill,
-            onPickBackup = { uri -> listViewModel.readBackup(uri) },
-            onDismiss = { listViewModel.hideCreateDialog() },
-            onCreate = { name, privacy, backupJson ->
-                listViewModel.createCrm(name, privacy, backupJson)
-            }
-        )
     }
 }
 

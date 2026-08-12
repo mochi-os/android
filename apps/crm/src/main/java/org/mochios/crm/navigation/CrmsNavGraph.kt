@@ -15,6 +15,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.crm.ui.design.DesignScreen
 import org.mochios.crm.ui.find.FindCrmsScreen
 import org.mochios.crm.ui.crm.CrmScreen
+import org.mochios.crm.ui.crmlist.CreateCrmScreen
 import org.mochios.crm.ui.router.CrmsRouter
 import org.mochios.crm.ui.settings.CrmSettingsScreen
 
@@ -28,6 +29,7 @@ object CrmsApp {
     const val PROJECT = "crm/crm/{crmId}"
     const val PROJECT_OBJECT = "crm/crm/{crmId}/object/{objectId}"
     const val FIND_PROJECTS = "crm/discover"
+    const val CREATE_CRM = "crm/create"
     const val PROJECT_SETTINGS = "crm/crm/{crmId}/settings"
     const val PROJECT_DESIGN = "crm/crm/{crmId}/design"
 
@@ -74,6 +76,7 @@ fun NavGraphBuilder.crmsNavGraph(
                 }
             },
             onFindCrms = { navController.navigate(CrmsApp.FIND_PROJECTS) },
+            onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
             onOpenNotifications = onOpenNotifications,
@@ -107,6 +110,7 @@ fun NavGraphBuilder.crmsNavGraph(
                 }
             },
             onFindCrms = { navController.navigate(CrmsApp.FIND_PROJECTS) },
+            onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
             onLogout = onLogout,
@@ -125,6 +129,22 @@ fun NavGraphBuilder.crmsNavGraph(
             onCrmSubscribed = { crmId ->
                 navController.navigate(CrmsApp.crm(crmId)) {
                     popUpTo(CrmsApp.FIND_PROJECTS) { inclusive = true }
+                }
+            },
+        )
+    }
+
+    composable(CrmsApp.CREATE_CRM) {
+        CreateCrmScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the CRM just made. Popping back
+            // would land on the CRM entry that was already there, whose list
+            // view model still holds the CRMs fetched before the create — so
+            // the new one wouldn't show in the drawer until a manual refresh.
+            // Navigating builds a fresh entry that reloads.
+            onCreated = { crmId ->
+                navController.navigate(CrmsApp.crm(crmId)) {
+                    popUpTo(CrmsApp.CREATE_CRM) { inclusive = true }
                 }
             },
         )
