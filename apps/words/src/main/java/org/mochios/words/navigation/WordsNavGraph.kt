@@ -13,6 +13,7 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.words.ui.detail.WordsGameDetailScreen
 import org.mochios.words.ui.list.WordsGameListScreen
+import org.mochios.words.ui.newgame.NewWordsGameScreen
 
 /**
  * Route constants and helpers for the Words Android module.
@@ -29,6 +30,9 @@ object WordsApp {
     const val HOME = "words"
     const val GAME = "words/{gameId}"
 
+    /** Start-a-new-game screen (opponent picker + language). */
+    const val NEW_GAME = "words/new"
+
     fun gameDetail(gameId: String) = "words/$gameId"
 }
 
@@ -43,9 +47,24 @@ fun NavGraphBuilder.wordsNavGraph(
             onGameClick = { gameId ->
                 navController.navigate(WordsApp.gameDetail(gameId))
             },
+            onNewGame = { navController.navigate(WordsApp.NEW_GAME) },
             onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
             onOpenLink = onOpenLink,
+        )
+    }
+
+    composable(WordsApp.NEW_GAME) {
+        NewWordsGameScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the new-game screen and open the game just started, so Back
+            // from the board returns to the list rather than the picker.
+            onCreated = { gameId ->
+                navController.navigate(WordsApp.gameDetail(gameId)) {
+                    popUpTo(WordsApp.NEW_GAME) { inclusive = true }
+                }
+            },
+            onAddFriends = { onOpenLink("people") },
         )
     }
 

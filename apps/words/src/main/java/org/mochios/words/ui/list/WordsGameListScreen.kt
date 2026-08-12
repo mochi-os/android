@@ -43,7 +43,6 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -68,7 +67,6 @@ import org.mochios.words.model.GameListItem
 import org.mochios.words.model.getPlayerNames
 import org.mochios.words.model.playerScore
 import org.mochios.words.ui.components.WordsSidebar
-import org.mochios.words.ui.dialog.NewWordsGameDialog
 import org.mochios.android.R as MochiR
 
 /**
@@ -80,12 +78,14 @@ import org.mochios.android.R as MochiR
  * The hamburger opens [WordsSidebar] (same composable used by the
  * detail screen) so the user has a single navigation surface across
  * the app. The FAB and the sidebar's New Game button both open the
- * [NewWordsGameDialog].
+ * new-game screen; the list reloads on resume so a game started there is
+ * present when the user backs out of the board.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WordsGameListScreen(
     onGameClick: (String) -> Unit,
+    onNewGame: () -> Unit,
     onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
@@ -95,7 +95,6 @@ fun WordsGameListScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     var showOverflow by remember { mutableStateOf(false) }
-    var showNewGameDialog by remember { mutableStateOf(false) }
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -104,13 +103,6 @@ fun WordsGameListScreen(
         }
         lifecycleOwner.lifecycle.addObserver(observer)
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
-    }
-
-    LaunchedEffect(uiState.createdGameId) {
-        val id = uiState.createdGameId ?: return@LaunchedEffect
-        viewModel.consumeCreatedGame()
-        showNewGameDialog = false
-        onGameClick(id)
     }
 
     ModalNavigationDrawer(
@@ -126,7 +118,7 @@ fun WordsGameListScreen(
                 },
                 onNewGame = {
                     drawerScope.launch { drawerState.close() }
-                    showNewGameDialog = true
+                    onNewGame()
                 },
             )
         },
@@ -165,7 +157,7 @@ fun WordsGameListScreen(
                 )
             },
             floatingActionButton = {
-                FloatingActionButton(onClick = { showNewGameDialog = true }) {
+                FloatingActionButton(onClick = onNewGame) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.words_list_new))
                 }
             },
@@ -219,23 +211,6 @@ fun WordsGameListScreen(
                 }
             }
         }
-    }
-
-    if (showNewGameDialog) {
-        NewWordsGameDialog(
-            isOpen = true,
-            onDismiss = { showNewGameDialog = false },
-            friends = uiState.newGameFriends,
-            isLoadingFriends = uiState.isLoadingFriends,
-            friendsError = uiState.friendsError,
-            isCreating = uiState.isCreatingGame,
-            onLoadFriends = { viewModel.loadNewGameFriends() },
-            onCreate = { opponents, language -> viewModel.createGame(opponents, language) },
-            onAddFriends = {
-                showNewGameDialog = false
-                onOpenLink("people")
-            },
-        )
     }
 }
 

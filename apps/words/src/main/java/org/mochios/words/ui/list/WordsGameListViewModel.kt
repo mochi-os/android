@@ -15,9 +15,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.util.NaturalCompare
 import org.mochios.words.model.GameListItem
-import org.mochios.words.model.NewGameFriend
 import org.mochios.words.repository.WordsRepository
 import javax.inject.Inject
 
@@ -32,12 +30,6 @@ data class WordsGameListUiState(
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
     val myIdentity: String = "",
-    val newGameFriends: List<NewGameFriend> = emptyList(),
-    val isLoadingFriends: Boolean = false,
-    val friendsError: MochiError? = null,
-    val isCreatingGame: Boolean = false,
-    val createGameError: MochiError? = null,
-    val createdGameId: String? = null,
 )
 
 @HiltViewModel
@@ -91,63 +83,5 @@ class WordsGameListViewModel @Inject constructor(
             val identity = sessionManager.getBoundIdentity().orEmpty()
             _uiState.value = _uiState.value.copy(myIdentity = identity)
         }
-    }
-
-    fun loadNewGameFriends() {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoadingFriends = true, friendsError = null)
-            try {
-                // The service orders by entity id, which is opaque, so the
-                // picker listed friends in no order a reader could follow.
-                // Sorting belongs here rather than in SQL — chess does the same.
-                val friends = repository.getNewGameFriends()
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(newGameFriends = friends, isLoadingFriends = false)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isLoadingFriends = false,
-                    friendsError = e.toMochiError(),
-                )
-            }
-        }
-    }
-
-    fun createGame(opponents: List<String>, language: String) {
-        if (opponents.isEmpty() || opponents.size > 3) return
-        if (language != "en_US" && language != "en_UK") return
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isCreatingGame = true, createGameError = null)
-            try {
-                val gameId = repository.createGame(opponents, language)
-                _uiState.value = _uiState.value.copy(
-                    isCreatingGame = false,
-                    createdGameId = gameId,
-                )
-                // Refresh the games list so the new game shows up in the
-                // sidebar/landing immediately rather than waiting for the
-                // next on-resume tick.
-                refresh()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isCreatingGame = false,
-                    createGameError = e.toMochiError(),
-                )
-            }
-        }
-    }
-
-    /** Mark the created-game id as consumed so the dialog can dismiss without re-firing. */
-    fun consumeCreatedGame() {
-        _uiState.value = _uiState.value.copy(createdGameId = null)
-    }
-
-    /** Clear the friends-load error after the user dismisses an inline error. */
-    fun clearFriendsError() {
-        _uiState.value = _uiState.value.copy(friendsError = null)
-    }
-
-    /** Clear the create-game error (used after toast surfaces it). */
-    fun clearCreateError() {
-        _uiState.value = _uiState.value.copy(createGameError = null)
     }
 }
