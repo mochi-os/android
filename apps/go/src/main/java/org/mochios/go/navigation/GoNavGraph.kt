@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.go.ui.detail.GoGameDetailScreen
 import org.mochios.go.ui.list.GoGameListScreen
+import org.mochios.go.ui.newgame.NewGoGameScreen
 
 /**
  * Routes for the Go app module. The list page is the landing screen reached
@@ -22,6 +23,9 @@ object GoApp {
     /** Landing screen — the active + completed games list. */
     const val HOME = "go"
     const val GAME = "go/{gameId}"
+
+    /** Start-a-new-game screen (opponent, board size, komi). */
+    const val NEW_GAME = "go/new"
 
     fun gameDetail(gameId: String): String = "go/$gameId"
 }
@@ -51,6 +55,20 @@ fun NavGraphBuilder.goNavGraph(
             onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
             onOpenLink = onOpenLink,
+        )
+    }
+
+    composable(GoApp.NEW_GAME) {
+        NewGoGameScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the new-game screen and open the game just started, so Back
+            // from the board returns to the list rather than the form.
+            onCreated = { gameId ->
+                navController.navigate(GoApp.gameDetail(gameId)) {
+                    popUpTo(GoApp.NEW_GAME) { inclusive = true }
+                }
+            },
+            onAddFriends = { onOpenLink("people") },
         )
     }
 

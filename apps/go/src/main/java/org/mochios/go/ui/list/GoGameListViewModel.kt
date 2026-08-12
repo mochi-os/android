@@ -19,7 +19,6 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.go.model.Game
-import org.mochios.go.model.NewGameFriend
 import org.mochios.go.repository.GoRepository
 import javax.inject.Inject
 
@@ -48,13 +47,6 @@ data class GoGameListUiState(
      * this a game the user did not create names the user back to themselves.
      */
     val identity: String? = null,
-
-    val newGameDialogOpen: Boolean = false,
-    val newGameFriends: List<NewGameFriend>? = null,
-    val newGameFriendsLoading: Boolean = false,
-    val newGameFriendsError: MochiError? = null,
-
-    val creatingGame: Boolean = false,
 )
 
 /** Side-effect events the screen listens for (snackbar + open-game nav). */
@@ -115,83 +107,6 @@ class GoGameListViewModel @Inject constructor(
                     error = e.toMochiError(),
                 )
             }
-        }
-    }
-
-    // ---------------- new-game dialog ----------------
-
-    fun openNewGameDialog() {
-        _uiState.value = _uiState.value.copy(newGameDialogOpen = true)
-        // Lazy-load the friends list the first time the dialog opens —
-        // refresh on every reopen so a friend added in another app
-        // surfaces without restarting the app.
-        loadNewGameFriends()
-    }
-
-    fun closeNewGameDialog() {
-        _uiState.value = _uiState.value.copy(
-            newGameDialogOpen = false,
-            // Reset any in-flight error so the next open starts fresh.
-            newGameFriendsError = null,
-        )
-    }
-
-    private fun loadNewGameFriends() {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(
-                newGameFriendsLoading = true,
-                newGameFriendsError = null,
-            )
-            try {
-                val friends = repo.getNewGameFriends()
-                _uiState.value = _uiState.value.copy(
-                    newGameFriends = friends,
-                    newGameFriendsLoading = false,
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    newGameFriendsLoading = false,
-                    newGameFriendsError = e.toMochiError(),
-                )
-            }
-        }
-    }
-
-    /**
-     * Submit the new-game request and, on success, close the dialog,
-     * refresh the list and navigate to the new game's detail page. Toast
-     * on failure — matches the web behaviour.
-     */
-    fun createGame(opponent: String, boardSize: Int, komi: Double, errorMessage: String) {
-        if (_uiState.value.creatingGame) return
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(creatingGame = true)
-            try {
-                val resp = repo.createGame(opponent, boardSize, komi)
-                _uiState.value = _uiState.value.copy(
-                    creatingGame = false,
-                    newGameDialogOpen = false,
-                )
-                // Refresh so the new game appears under Active when the user
-                // taps back from the detail screen.
-                loadGames()
-                _events.emit(GoGameListEvent.OpenGame(resp.id))
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(creatingGame = false)
-                val mochi = e.toMochiError()
-                _events.emit(GoGameListEvent.Toast(messageOr(mochi, errorMessage)))
-            }
-        }
-    }
-
-    private fun messageOr(err: MochiError, fallback: String): String {
-        return when (err) {
-            is MochiError.AuthError -> err.message ?: fallback
-            is MochiError.ForbiddenError -> err.message ?: fallback
-            is MochiError.NotFoundError -> err.message ?: fallback
-            is MochiError.ServerError -> err.message ?: fallback
-            is MochiError.Unknown -> err.message ?: fallback
-            else -> fallback
         }
     }
 }

@@ -39,6 +39,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -54,6 +55,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.NotificationBell
@@ -62,7 +66,6 @@ import org.mochios.go.model.Game
 import org.mochios.go.navigation.GoApp
 import org.mochios.go.ui.components.GoSidebar
 import org.mochios.go.ui.components.GoSidebarFilter
-import org.mochios.go.ui.dialog.NewGoGameDialog
 import org.mochios.android.R as MochiR
 
 /**
@@ -78,10 +81,10 @@ import org.mochios.android.R as MochiR
  *    the detail screen.
  *  - Empty state matches the web "No games yet — start one" prompt.
  *  - Pull-to-refresh re-fetches the list.
- *  - The New-game button on the sidebar (and an empty-state CTA) opens
- *    [NewGoGameDialog]. Submitting it calls into the view model, which
- *    creates the game, refreshes the list, and emits an OpenGame event so
- *    we navigate straight into the new game.
+ *  - The New-game button on the sidebar (and an empty-state CTA) opens the
+ *    new-game screen ([GoApp.NEW_GAME]), which starts the game and navigates
+ *    into it. The list reloads on resume so the game is there when the user
+ *    backs out of the board.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -98,7 +101,16 @@ fun GoGameListScreen(
     val drawerScope = rememberCoroutineScope()
     var currentFilter by remember { mutableStateOf(GoSidebarFilter.ACTIVE) }
 
-    val createErrorMessage = stringResource(R.string.go_new_game_create_error)
+    // Reload when the screen returns to the foreground, most importantly after
+    // starting a game on the new-game screen.
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) viewModel.refresh()
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
 
     // Side-effect events from the ViewModel.
     LaunchedEffect(Unit) {
@@ -123,7 +135,7 @@ fun GoGameListScreen(
                 },
                 onNewGame = {
                     drawerScope.launch { drawerState.close() }
-                    viewModel.openNewGameDialog()
+                    navController.navigate(GoApp.NEW_GAME)
                 },
             )
         },
@@ -174,7 +186,7 @@ fun GoGameListScreen(
                         if (visibleGames.isEmpty()) {
                             EmptyState(
                                 filter = currentFilter,
-                                onNewGame = { viewModel.openNewGameDialog() },
+                                onNewGame = { navController.navigate(GoApp.NEW_GAME) },
                             )
                         } else {
                             GameList(
@@ -192,22 +204,6 @@ fun GoGameListScreen(
             }
         }
     }
-
-    val friends = uiState.newGameFriends.orEmpty()
-    NewGoGameDialog(
-        open = uiState.newGameDialogOpen,
-        friends = friends,
-        friendsLoading = uiState.newGameFriendsLoading,
-        isPending = uiState.creatingGame,
-        onDismiss = { viewModel.closeNewGameDialog() },
-        onStart = { opponent, boardSize, komi ->
-            viewModel.createGame(opponent, boardSize, komi, createErrorMessage)
-        },
-        onAddFriends = {
-            viewModel.closeNewGameDialog()
-            onOpenLink("people")
-        },
-    )
 }
 
 @Composable
