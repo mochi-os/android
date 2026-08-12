@@ -79,7 +79,6 @@ import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.WikisSidebar
-import org.mochios.wikis.ui.dialog.CreateWikiDialog
 import org.mochios.android.R as MochiR
 
 /**
@@ -147,7 +146,7 @@ fun WikiListScreen(
                 },
                 onCreateWiki = {
                     drawerScope.launch { drawerState.close() }
-                    viewModel.openCreateDialog()
+                    navController.navigate(WikisApp.CREATE)
                 },
             )
         },
@@ -242,7 +241,7 @@ fun WikiListScreen(
                             onQueryChange = viewModel::setSearchQuery,
                             onSubscribeEntry = viewModel::subscribeFromSearch,
                             onSubscribeRecommendation = viewModel::subscribeFromRecommendation,
-                            onCreate = { viewModel.openCreateDialog() },
+                            onCreate = { navController.navigate(WikisApp.CREATE) },
                         )
                     }
                     else -> {
@@ -269,18 +268,6 @@ fun WikiListScreen(
             isDestructive = true,
             onConfirm = { viewModel.confirmUnsubscribe() },
             onDismiss = { viewModel.cancelUnsubscribe() },
-        )
-    }
-
-    // Create-wiki dialog. Pure-input; onSubmit calls the ViewModel, which talks
-    // to the repository and emits OpenWiki to navigate to the new wiki on
-    // success. Stays open showing a spinner while the request is in flight.
-    if (uiState.createDialogOpen) {
-        CreateWikiDialog(
-            open = true,
-            onDismiss = { viewModel.closeCreateDialog() },
-            onSubmit = { name, privacy -> viewModel.createWiki(name, privacy) },
-            isPending = uiState.createPending,
         )
     }
 }

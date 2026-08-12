@@ -44,9 +44,8 @@ import org.mochios.wikis.navigation.WikisApp
  *
  * [currentRoute] is matched against the rendered entry's route so the active
  * row is highlighted; [onNavigate] is invoked with a [WikisApp] route
- * string for navigable rows. "Create wiki" is a dialog (not a route) — it
- * fires [onCreateWiki] so the host (typically `WikiListScreen`) can open the
- * `CreateWikiDialog` directly.
+ * string for navigable rows. "Create wiki" fires [onCreateWiki] so the host
+ * (typically `WikiListScreen`) can open the create screen.
  */
 @Composable
 fun WikisSidebar(

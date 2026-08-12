@@ -45,9 +45,8 @@ import javax.inject.Inject
  *  - [subscribingId] / [unsubscribingId] disable per-row Subscribe /
  *    Unsubscribe buttons while a request is in flight, matching the web's
  *    `pendingWikiId` + mutation `isPending` flags.
- *  - [createDialogOpen] / [createPending] back the Create-wiki dialog
- *    ([CreateWikiDialog]); [createWiki] calls the repository and emits
- *    [WikiListEvent.OpenWiki] to navigate to the new wiki on success.
+ *  - Creating a wiki lives on its own screen ([CreateWikiScreen]); this
+ *    ViewModel only lists and subscribes.
  */
 data class WikiListUiState(
     val isLoading: Boolean = false,
@@ -55,9 +54,6 @@ data class WikiListUiState(
     val wikis: List<WikiInfo> = emptyList(),
     val recommendations: List<Recommendation> = emptyList(),
     val error: MochiError? = null,
-
-    val createDialogOpen: Boolean = false,
-    val createPending: Boolean = false,
 
     val searchQuery: String = "",
     val searchResults: List<DirectoryEntry> = emptyList(),
@@ -154,43 +150,6 @@ class WikiListViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(recommendations = recs)
             } catch (_: Exception) {
                 // Non-critical — recommendations are decorative; web swallows the error too.
-            }
-        }
-    }
-
-    // ---------------- create dialog ----------------
-
-    fun openCreateDialog() {
-        _uiState.value = _uiState.value.copy(createDialogOpen = true)
-    }
-
-    fun closeCreateDialog() {
-        _uiState.value = _uiState.value.copy(createDialogOpen = false)
-    }
-
-    /**
-     * Create a new (owned) wiki and navigate to its home, mirroring the web
-     * `CreateEntityDialog` flow. On success the dialog closes, the list is
-     * refreshed (so the wiki is present if the user backs out of its home),
-     * and an [WikiListEvent.OpenWiki] navigates to the new wiki. On failure the
-     * dialog stays open and the error is surfaced as a toast.
-     */
-    fun createWiki(name: String, privacy: String) {
-        if (_uiState.value.createPending) return
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(createPending = true)
-            try {
-                val created = repo.createWiki(name, privacy)
-                _uiState.value = _uiState.value.copy(
-                    createPending = false,
-                    createDialogOpen = false,
-                )
-                refresh()
-                _events.emit(WikiListEvent.OpenWiki(created.fingerprint.ifBlank { created.id }, created.home))
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(createPending = false)
-                val message = e.toMochiError().userMessage()
-                _events.emit(WikiListEvent.Toast(message))
             }
         }
     }

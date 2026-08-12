@@ -18,6 +18,7 @@ import org.mochios.wikis.ui.find.FindWikisScreen
 import org.mochios.wikis.ui.history.PageHistoryScreen
 import org.mochios.wikis.ui.history.RevisionViewScreen
 import org.mochios.wikis.ui.join.JoinWikiScreen
+import org.mochios.wikis.ui.list.CreateWikiScreen
 import org.mochios.wikis.ui.list.WikiListScreen
 import org.mochios.wikis.ui.page.PageDeleteScreen
 import org.mochios.wikis.ui.page.PageRevertScreen
@@ -42,6 +43,7 @@ object WikisApp {
     const val HOME = "wikis"
     const val FIND = "wikis/find"
     const val JOIN = "wikis/join"
+    const val CREATE = "wikis/create"
 
     // ---- Builders for entity-context routes ----
     fun wikiHome(wikiId: String) = "wikis/$wikiId"
@@ -100,6 +102,19 @@ fun NavGraphBuilder.wikisNavGraph(
             onSubscribed = { wikiId ->
                 navController.navigate(WikisApp.wikiHome(wikiId)) {
                     popUpTo(WikisApp.HOME)
+                }
+            },
+        )
+    }
+
+    composable(WikisApp.CREATE) {
+        CreateWikiScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the new wiki's home, so Back from
+            // there returns to the wiki list rather than the form.
+            onCreated = { wikiId ->
+                navController.navigate(WikisApp.wikiHome(wikiId)) {
+                    popUpTo(WikisApp.CREATE) { inclusive = true }
                 }
             },
         )
