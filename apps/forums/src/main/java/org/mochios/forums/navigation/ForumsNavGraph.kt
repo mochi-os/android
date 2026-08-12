@@ -13,6 +13,7 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.forums.ui.find.FindForumsScreen
 import org.mochios.forums.ui.forum.ForumScreen
+import org.mochios.forums.ui.forumlist.CreateForumScreen
 import org.mochios.forums.ui.moderation.ForumModerationScreen
 import org.mochios.forums.ui.newpost.NewPostScreen
 import org.mochios.forums.ui.post.PostScreen
@@ -33,6 +34,7 @@ object ForumsApp {
     // an optional query arg, a new post omits it.
     const val NEW_POST = "forums/forum/{forumId}/new?postId={postId}"
     const val FIND_FORUMS = "forums/discover"
+    const val CREATE_FORUM = "forums/create"
     const val FORUM_SETTINGS = "forums/forum/{forumId}/settings"
     const val MODERATION = "forums/forum/{forumId}/moderation"
     const val SAVED = "forums/saved"
@@ -82,6 +84,7 @@ fun NavGraphBuilder.forumsNavGraph(
             onPostClick = { fId, pId -> navController.navigate(ForumsApp.post(fId, pId)) },
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },
             onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
+            onCreateForum = { navController.navigate(ForumsApp.CREATE_FORUM) },
             onSettings = { fId -> navController.navigate(ForumsApp.forumSettings(fId)) },
             onModeration = { fId -> navController.navigate(ForumsApp.moderation(fId)) },
             onNavigateToSaved = { navController.navigate(ForumsApp.SAVED) },
@@ -134,6 +137,19 @@ fun NavGraphBuilder.forumsNavGraph(
                 // ForumsRepository.postCreated; an edited post refreshes over its
                 // live subscription.
                 navController.popBackStack()
+            },
+        )
+    }
+
+    composable(ForumsApp.CREATE_FORUM) {
+        CreateForumScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the forum just made, so Back
+            // returns to the forum the user came from, not to the form.
+            onCreated = { forumId ->
+                navController.navigate(ForumsApp.forum(forumId)) {
+                    popUpTo(ForumsApp.CREATE_FORUM) { inclusive = true }
+                }
             },
         )
     }

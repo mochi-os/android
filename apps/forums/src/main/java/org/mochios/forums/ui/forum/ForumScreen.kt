@@ -120,7 +120,6 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.forums.R
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
-import org.mochios.forums.ui.forumlist.CreateForumDialog
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
@@ -161,6 +160,7 @@ fun ForumScreen(
     onPostClick: (String, String) -> Unit,
     onNewPost: (String) -> Unit,
     onFindForums: () -> Unit,
+    onCreateForum: () -> Unit,
     onSettings: (String) -> Unit,
     onModeration: (String) -> Unit = {},
     onNavigateToSaved: () -> Unit = {},
@@ -180,14 +180,6 @@ fun ForumScreen(
         if (forumId.isNotBlank()) {
             LastViewedStore.set(context, FORUMS_FEATURE, forumId)
             SystemNotifications.cancelFor(context, "forums", forumId)
-        }
-    }
-
-    // Opening the forum the user just created saves them hunting for it in the
-    // freshly reloaded drawer.
-    LaunchedEffect(listViewModel) {
-        listViewModel.forumCreated.collect { newForumId ->
-            if (newForumId != forumId) onSelectForum(newForumId)
         }
     }
 
@@ -237,7 +229,7 @@ fun ForumScreen(
                 icon = Icons.Default.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
-                    listViewModel.showCreateDialog()
+                    onCreateForum()
                 },
             )
             DrawerActionRow(
@@ -282,14 +274,6 @@ fun ForumScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-
-    if (listUiState.showCreateDialog) {
-        CreateForumDialog(
-            isCreating = listUiState.isCreating,
-            onDismiss = { listViewModel.hideCreateDialog() },
-            onCreate = { name, privacy -> listViewModel.createForum(name, privacy) },
-        )
     }
 }
 

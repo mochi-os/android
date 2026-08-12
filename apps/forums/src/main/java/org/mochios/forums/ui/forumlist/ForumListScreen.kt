@@ -12,13 +12,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -35,7 +31,6 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
@@ -47,14 +42,11 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -86,6 +78,7 @@ import org.mochios.android.R as MochiR
 fun ForumListScreen(
     onForumClick: (String) -> Unit,
     onFindForums: () -> Unit,
+    onCreateForum: () -> Unit,
     onLogout: () -> Unit,
     viewModel: ForumListViewModel = hiltViewModel()
 ) {
@@ -100,10 +93,6 @@ fun ForumListScreen(
         }
         lifecycleOwner.lifecycle.addObserver(observer)
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
-    }
-
-    LaunchedEffect(viewModel) {
-        viewModel.forumCreated.collect { newForumId -> onForumClick(newForumId) }
     }
 
     Scaffold(
@@ -181,7 +170,7 @@ fun ForumListScreen(
             )
         },
         floatingActionButton = {
-            FloatingActionButton(onClick = { viewModel.showCreateDialog() }) {
+            FloatingActionButton(onClick = onCreateForum) {
                 Icon(Icons.Default.Add, contentDescription = stringResource(R.string.forums_list_create))
             }
         }
@@ -256,14 +245,6 @@ fun ForumListScreen(
                 }
             }
         }
-    }
-
-    if (uiState.showCreateDialog) {
-        CreateForumDialog(
-            isCreating = uiState.isCreating,
-            onDismiss = { viewModel.hideCreateDialog() },
-            onCreate = { name, privacy -> viewModel.createForum(name, privacy) }
-        )
     }
 }
 
@@ -350,68 +331,4 @@ private fun ForumRow(
             onDismiss = { showUnsubscribeConfirm = false }
         )
     }
-}
-
-/**
- * Create-forum dialog, shared by [ForumListScreen] and the forum drawer's
- * "Create forum" action. The privacy choice is a single switch — on means the
- * forum is listed in the directory and anyone can search for it (`public`),
- * off keeps it out (`private`).
- */
-@Composable
-internal fun CreateForumDialog(
-    isCreating: Boolean,
-    onDismiss: () -> Unit,
-    onCreate: (String, String) -> Unit
-) {
-    var name by remember { mutableStateOf("") }
-    var allowSearch by remember { mutableStateOf(true) }
-
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.forums_create_title)) },
-        text = {
-            Column {
-                OutlinedTextField(
-                    value = name,
-                    onValueChange = { value -> name = value },
-                    label = { Text(stringResource(R.string.forums_create_name)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(Modifier.height(16.dp))
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(stringResource(R.string.forums_create_allow_search))
-                    Switch(
-                        checked = allowSearch,
-                        onCheckedChange = { checked -> allowSearch = checked }
-                    )
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(
-                onClick = { onCreate(name, if (allowSearch) "public" else "private") },
-                enabled = name.isNotBlank() && !isCreating
-            ) {
-                if (isCreating) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp
-                    )
-                } else {
-                    Text(stringResource(R.string.forums_create_action))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
-    )
 }
