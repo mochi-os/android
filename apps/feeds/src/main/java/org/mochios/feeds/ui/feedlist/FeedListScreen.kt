@@ -20,7 +20,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -50,7 +49,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -81,7 +79,6 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityListRow
@@ -98,6 +95,7 @@ fun FeedListScreen(
     onNavigateToFeed: (String) -> Unit,
     onNavigateToCreatePost: () -> Unit,
     onNavigateToFindFeeds: () -> Unit,
+    onNavigateToCreateFeed: () -> Unit,
     onLogout: () -> Unit = {},
     viewModel: FeedListViewModel = hiltViewModel()
 ) {
@@ -105,7 +103,6 @@ fun FeedListScreen(
     val isLoading by viewModel.isLoading.collectAsState()
     val isRefreshing by viewModel.isRefreshing.collectAsState()
     val error by viewModel.error.collectAsState()
-    val showCreateDialog by viewModel.showCreateDialog.collectAsState()
     val rssCopiedMessage by viewModel.rssCopiedMessage.collectAsState()
 
     var showOverflowMenu by remember { mutableStateOf(false) }
@@ -116,13 +113,6 @@ fun FeedListScreen(
         rssCopiedMessage?.let {
             snackbarHostState.showSnackbar(it)
             viewModel.clearRssCopiedMessage()
-        }
-    }
-
-    // Open a freshly created feed so the user lands on its empty state.
-    LaunchedEffect(Unit) {
-        viewModel.feedCreated.collect { feedId ->
-            if (feedId.isNotEmpty()) onNavigateToFeed(feedId)
         }
     }
 
@@ -150,7 +140,7 @@ fun FeedListScreen(
                     IconButton(onClick = onNavigateToFindFeeds) {
                         Icon(Icons.Default.Search, contentDescription = stringResource(R.string.feeds_find_feeds))
                     }
-                    IconButton(onClick = { viewModel.showCreateDialog() }) {
+                    IconButton(onClick = onNavigateToCreateFeed) {
                         Icon(Icons.Default.Add, contentDescription = stringResource(R.string.feeds_create_feed))
                     }
                     Box {
@@ -254,14 +244,6 @@ fun FeedListScreen(
                 }
             }
         }
-    }
-
-    if (showCreateDialog) {
-        CreateFeedDialog(
-            onDismiss = { viewModel.hideCreateDialog() },
-            onCreate = { name, privacy, memories -> viewModel.createFeed(name, privacy, memories) },
-            viewModel = viewModel
-        )
     }
 
     if (showRssDialog) {
@@ -406,85 +388,3 @@ private fun FeedRow(
         }
     }
 }
-
-@Composable
-internal fun CreateFeedDialog(
-    onDismiss: () -> Unit,
-    onCreate: (String, String, Boolean) -> Unit,
-    viewModel: FeedListViewModel
-) {
-    var name by remember { mutableStateOf("") }
-    // The toggle reads "Allow anyone to search for feed" — on means public.
-    var allowSearch by remember { mutableStateOf(true) }
-    var memoriesEnabled by remember { mutableStateOf(true) }
-    val isCreating by viewModel.isCreating.collectAsState()
-    val createError by viewModel.createError.collectAsState()
-
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_create_feed)) },
-        text = {
-            Column {
-                OutlinedTextField(
-                    value = name,
-                    onValueChange = { name = it },
-                    label = { Text(stringResource(R.string.feeds_feed_name)) },
-                    modifier = Modifier.fillMaxWidth(),
-                    singleLine = true
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(stringResource(R.string.feeds_allow_search))
-                    Switch(
-                        checked = allowSearch,
-                        onCheckedChange = { allowSearch = it }
-                    )
-                }
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(stringResource(R.string.feeds_enable_memories))
-                    Switch(
-                        checked = memoriesEnabled,
-                        onCheckedChange = { memoriesEnabled = it }
-                    )
-                }
-                createError?.let {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = it.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                        style = MaterialTheme.typography.bodySmall
-                    )
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val privacy = if (allowSearch) "public" else "private"
-                    onCreate(name, privacy, memoriesEnabled)
-                },
-                enabled = name.isNotBlank() && !isCreating
-            ) {
-                if (isCreating) {
-                    CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
-                } else {
-                    Text(stringResource(R.string.feeds_create))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
-    )
-}
-

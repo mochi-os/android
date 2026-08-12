@@ -11,6 +11,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.feeds.ui.feed.FeedScreen
+import org.mochios.feeds.ui.feedlist.CreateFeedScreen
 import org.mochios.feeds.ui.find.FindFeedsScreen
 import org.mochios.feeds.ui.post.CreatePostScreen
 import org.mochios.feeds.ui.post.PostDetailScreen
@@ -36,6 +37,7 @@ object FeedsApp {
     const val POST_SOURCE = "feeds/postSource/{feedId}/{postId}?url={url}&expand={expand}"
     const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}"
     const val FIND_FEEDS = "feeds/findFeeds"
+    const val CREATE_FEED = "feeds/createFeed"
     const val FEED_SETTINGS = "feeds/feedSettings/{feedId}"
     const val FEED_SOURCES = "feeds/feedSources/{feedId}?source={source}"
     const val SAVED = "feeds/saved"
@@ -111,8 +113,23 @@ fun NavGraphBuilder.feedsNavGraph(
                 }
             },
             onNavigateToFindFeeds = { navController.navigate(FeedsApp.FIND_FEEDS) },
+            onNavigateToCreateFeed = { navController.navigate(FeedsApp.CREATE_FEED) },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
+        )
+    }
+
+    composable(FeedsApp.CREATE_FEED) {
+        CreateFeedScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the new feed, so it lands on its
+            // empty "create the first post" state and Back returns to the feed
+            // the user came from.
+            onCreated = { feedId ->
+                navController.navigate(FeedsApp.feed(feedId)) {
+                    popUpTo(FeedsApp.CREATE_FEED) { inclusive = true }
+                }
+            },
         )
     }
 

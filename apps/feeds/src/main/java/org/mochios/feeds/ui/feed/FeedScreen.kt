@@ -160,7 +160,6 @@ import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.rssDisplayTitle
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
-import org.mochios.feeds.ui.feedlist.CreateFeedDialog
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.post.CommentInputBar
 import org.mochios.feeds.ui.post.PostTagsButton
@@ -178,6 +177,7 @@ fun FeedScreen(
     onNavigateToSaved: () -> Unit = {},
     onSelectFeed: (String) -> Unit,
     onNavigateToFindFeeds: () -> Unit,
+    onNavigateToCreateFeed: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     viewModel: FeedViewModel = hiltViewModel(),
@@ -188,7 +188,6 @@ fun FeedScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
-    val showCreateFeedDialog by feedListViewModel.showCreateDialog.collectAsState()
 
     // Persist the last-viewed feed so the next cold start lands here. The
     // router composable reads this back via [LastViewedStore.get].
@@ -250,12 +249,6 @@ fun FeedScreen(
                 is InterestFeedback.Failure -> fb.error?.message ?: interestFailed
             }
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-        }
-    }
-    // Creating a feed from the drawer opens it, landing on its empty state.
-    LaunchedEffect(Unit) {
-        feedListViewModel.feedCreated.collect { newFeedId ->
-            if (newFeedId.isNotEmpty()) onSelectFeed(newFeedId)
         }
     }
     // Reload when the screen returns to the foreground — most importantly after
@@ -482,7 +475,7 @@ fun FeedScreen(
                 icon = Icons.Default.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
-                    feedListViewModel.showCreateDialog()
+                    onNavigateToCreateFeed()
                 },
             )
             DrawerActionRow(
@@ -1074,16 +1067,6 @@ fun FeedScreen(
                         Text(stringResource(MochiR.string.common_cancel))
                     }
                 }
-            )
-        }
-
-        if (showCreateFeedDialog) {
-            CreateFeedDialog(
-                onDismiss = { feedListViewModel.hideCreateDialog() },
-                onCreate = { name, privacy, memories ->
-                    feedListViewModel.createFeed(name, privacy, memories)
-                },
-                viewModel = feedListViewModel,
             )
         }
 
