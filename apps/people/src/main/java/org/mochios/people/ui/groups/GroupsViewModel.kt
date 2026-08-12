@@ -25,9 +25,7 @@ data class GroupsUiState(
     val groups: List<Group> = emptyList(),
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
-    val isCreating: Boolean = false,
     val error: MochiError? = null,
-    val createDialogOpen: Boolean = false,
 )
 
 /**
@@ -120,41 +118,4 @@ class GroupsViewModel @Inject constructor(
     }
 
     fun retry() = load()
-
-    fun openCreate() {
-        _uiState.value = _uiState.value.copy(createDialogOpen = true)
-    }
-
-    fun closeCreate() {
-        if (!_uiState.value.isCreating) {
-            _uiState.value = _uiState.value.copy(createDialogOpen = false)
-        }
-    }
-
-    fun createGroup(name: String, description: String) {
-        val trimmedName = name.trim()
-        if (trimmedName.isEmpty()) return
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isCreating = true, error = null)
-            try {
-                val id = repository.createGroup(
-                    name = trimmedName,
-                    description = description.trim().ifBlank { null },
-                )
-                _uiState.value = _uiState.value.copy(
-                    isCreating = false,
-                    createDialogOpen = false,
-                )
-                _events.send(GroupsEvent.OpenGroup(id))
-                // Refresh in the background so the list reflects the new
-                // group when the user comes back from the detail screen.
-                refresh()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isCreating = false,
-                    error = e.toMochiError(),
-                )
-            }
-        }
-    }
 }

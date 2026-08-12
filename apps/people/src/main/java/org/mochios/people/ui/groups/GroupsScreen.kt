@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -21,7 +20,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -30,10 +28,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -41,8 +37,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -64,6 +58,7 @@ import org.mochios.people.ui.components.PeopleSidebarSection
 @Composable
 fun GroupsScreen(
     onOpenGroup: (id: String) -> Unit,
+    onCreateGroup: () -> Unit,
     onSwitchSection: (PeopleSidebarSection) -> Unit,
     onOpenNotifications: () -> Unit,
     viewModel: GroupsViewModel = hiltViewModel(),
@@ -110,7 +105,7 @@ fun GroupsScreen(
             )
         },
         floatingActionButton = {
-            FloatingActionButton(onClick = { viewModel.openCreate() }) {
+            FloatingActionButton(onClick = onCreateGroup) {
                 Icon(
                     Icons.Default.Add,
                     contentDescription = stringResource(R.string.people_groups_create),
@@ -158,14 +153,6 @@ fun GroupsScreen(
         }
     }
     }
-
-    if (uiState.createDialogOpen) {
-        GroupCreateDialog(
-            isCreating = uiState.isCreating,
-            onDismiss = { viewModel.closeCreate() },
-            onCreate = { name, description -> viewModel.createGroup(name, description) },
-        )
-    }
 }
 
 @Composable
@@ -202,63 +189,4 @@ private fun EmptyGroups() {
             textAlign = TextAlign.Center,
         )
     }
-}
-
-@Composable
-private fun GroupCreateDialog(
-    isCreating: Boolean,
-    onDismiss: () -> Unit,
-    onCreate: (name: String, description: String) -> Unit,
-) {
-    var name by remember { mutableStateOf("") }
-    var description by remember { mutableStateOf("") }
-    val nameInvalid = name.isBlank()
-
-    AlertDialog(
-        onDismissRequest = { if (!isCreating) onDismiss() },
-        title = { Text(stringResource(R.string.people_groups_create)) },
-        text = {
-            Column {
-                OutlinedTextField(
-                    value = name,
-                    onValueChange = { name = it },
-                    label = { Text(stringResource(R.string.people_group_name)) },
-                    singleLine = true,
-                    isError = name.isNotEmpty() && nameInvalid,
-                    supportingText = if (name.isNotEmpty() && nameInvalid) {
-                        { Text(stringResource(R.string.people_group_name_required)) }
-                    } else null,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
-                    value = description,
-                    onValueChange = { description = it },
-                    label = { Text(stringResource(R.string.people_group_description_optional)) },
-                    maxLines = 4,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
-        },
-        confirmButton = {
-            TextButton(
-                onClick = { onCreate(name, description) },
-                enabled = !nameInvalid && !isCreating,
-            ) {
-                if (isCreating) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Text(stringResource(R.string.people_groups_create))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !isCreating) {
-                Text(stringResource(R.string.people_common_cancel))
-            }
-        },
-    )
 }

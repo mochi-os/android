@@ -13,6 +13,7 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.people.ui.friends.FriendsScreen
+import org.mochios.people.ui.groups.CreateGroupScreen
 import org.mochios.people.ui.groups.GroupDetailScreen
 import org.mochios.people.ui.groups.GroupsScreen
 import org.mochios.people.ui.invitations.InvitationsScreen
@@ -31,6 +32,7 @@ object PeopleApp {
     const val PROFILE = "people/profile"
     const val GROUPS = "people/groups"
     const val GROUP_DETAIL = "people/groups/{id}"
+    const val GROUP_CREATE = "people/groups/create"
     const val PERSON_VIEW = "people/person/{id}"
 
     fun groupDetail(id: String) = "people/groups/$id"
@@ -129,8 +131,22 @@ fun NavGraphBuilder.peopleNavGraph(
     composable(PeopleApp.GROUPS) {
         GroupsScreen(
             onOpenGroup = { id -> navController.navigate(PeopleApp.groupDetail(id)) },
+            onCreateGroup = { navController.navigate(PeopleApp.GROUP_CREATE) },
             onSwitchSection = { navController.openPeopleSection(it) },
             onOpenNotifications = onOpenNotifications,
+        )
+    }
+
+    composable(PeopleApp.GROUP_CREATE) {
+        CreateGroupScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the new group, so Back from the
+            // detail lands on the list — which reloads and shows the group.
+            onCreated = { id ->
+                navController.navigate(PeopleApp.groupDetail(id)) {
+                    popUpTo(PeopleApp.GROUP_CREATE) { inclusive = true }
+                }
+            },
         )
     }
 
