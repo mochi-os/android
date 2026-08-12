@@ -126,7 +126,6 @@ import org.mochios.projects.R
 import org.mochios.projects.model.Project
 import org.mochios.projects.ui.board.BoardView
 import org.mochios.projects.ui.`object`.ObjectDetailSheet
-import org.mochios.projects.ui.projectlist.CreateProjectDialog
 import org.mochios.projects.ui.projectlist.ProjectListViewModel
 import org.mochios.projects.ui.router.PROJECTS_FEATURE
 import org.mochios.projects.ui.tree.TreeView
@@ -139,6 +138,7 @@ fun ProjectScreen(
     onSelectProject: (String) -> Unit,
     onSelectAll: () -> Unit,
     onFindProjects: () -> Unit,
+    onCreateProject: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
@@ -159,15 +159,6 @@ fun ProjectScreen(
         if (projectId.isNotBlank()) {
             LastViewedStore.set(context, PROJECTS_FEATURE, projectId)
             SystemNotifications.cancelFor(context, "projects", projectId)
-        }
-    }
-
-    // Open the project detail right after a create, then clear the signal so
-    // it doesn't re-fire on recomposition.
-    LaunchedEffect(listUiState.createdProjectId) {
-        listUiState.createdProjectId?.let { newId ->
-            onSelectProject(newId)
-            listViewModel.consumeCreatedProject()
         }
     }
 
@@ -212,7 +203,7 @@ fun ProjectScreen(
                 icon = Icons.Default.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
-                    listViewModel.showCreateDialog()
+                    onCreateProject()
                 },
             )
             DrawerActionRow(
@@ -264,19 +255,6 @@ fun ProjectScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-
-    if (listUiState.showCreateDialog) {
-        CreateProjectDialog(
-            templates = listUiState.templates,
-            isCreating = listUiState.isCreating,
-            backupPrefill = listUiState.backupPrefill,
-            onPickBackup = { uri -> listViewModel.readBackup(uri) },
-            onDismiss = { listViewModel.hideCreateDialog() },
-            onCreate = { name, prefix, privacy, template, backupJson ->
-                listViewModel.createProject(name, prefix, privacy, template, backupJson)
-            }
-        )
     }
 }
 

@@ -16,6 +16,7 @@ import org.mochios.projects.ui.find.FindProjectsScreen
 import org.mochios.projects.ui.`object`.DiffViewerScreen
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.projects.ui.project.ProjectScreen
+import org.mochios.projects.ui.projectlist.CreateProjectScreen
 import org.mochios.projects.ui.router.ProjectsRouter
 import org.mochios.projects.ui.settings.ProjectSettingsScreen
 
@@ -29,6 +30,7 @@ object ProjectsApp {
     const val PROJECT = "projects/project/{projectId}"
     const val PROJECT_OBJECT = "projects/project/{projectId}/object/{objectId}"
     const val FIND_PROJECTS = "projects/discover"
+    const val CREATE_PROJECT = "projects/create"
     const val PROJECT_SETTINGS = "projects/project/{projectId}/settings"
     const val PROJECT_DESIGN = "projects/project/{projectId}/design"
     const val DIFF_VIEWER = "projects/project/{projectId}/diff/{repo}?source={source}&target={target}"
@@ -78,6 +80,7 @@ fun NavGraphBuilder.projectsNavGraph(
                 }
             },
             onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
+            onCreateProject = { navController.navigate(ProjectsApp.CREATE_PROJECT) },
             onSettings = { id -> navController.navigate(ProjectsApp.projectSettings(id)) },
             onDesign = { id -> navController.navigate(ProjectsApp.projectDesign(id)) },
             onViewDiff = { id, repo, source, target ->
@@ -114,6 +117,7 @@ fun NavGraphBuilder.projectsNavGraph(
                 }
             },
             onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
+            onCreateProject = { navController.navigate(ProjectsApp.CREATE_PROJECT) },
             onSettings = { id -> navController.navigate(ProjectsApp.projectSettings(id)) },
             onDesign = { id -> navController.navigate(ProjectsApp.projectDesign(id)) },
             onViewDiff = { id, repo, source, target ->
@@ -135,6 +139,22 @@ fun NavGraphBuilder.projectsNavGraph(
             onProjectSubscribed = { projectId ->
                 navController.navigate(ProjectsApp.project(projectId)) {
                     popUpTo(ProjectsApp.FIND_PROJECTS) { inclusive = true }
+                }
+            },
+        )
+    }
+
+    composable(ProjectsApp.CREATE_PROJECT) {
+        CreateProjectScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the project just made. Popping back
+            // would land on the project entry that was already there, whose list
+            // view model still holds the projects fetched before the create — so
+            // the new one wouldn't show in the drawer until a manual refresh.
+            // Navigating builds a fresh entry that reloads.
+            onCreated = { projectId ->
+                navController.navigate(ProjectsApp.project(projectId)) {
+                    popUpTo(ProjectsApp.CREATE_PROJECT) { inclusive = true }
                 }
             },
         )
