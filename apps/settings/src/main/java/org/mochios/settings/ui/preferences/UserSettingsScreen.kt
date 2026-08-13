@@ -26,7 +26,6 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -279,7 +278,6 @@ fun UserSettingsScreen(
                     current = uiState.values[spec.key] ?: "",
                     onChange = { value -> viewModel.set(spec.key, value) },
                 )
-                HorizontalDivider()
             }
             item(key = "reset") {
                 Spacer(Modifier.height(16.dp))
