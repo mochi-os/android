@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.friends.AddFriendScreen
 import org.mochios.people.ui.friends.FriendsScreen
 import org.mochios.people.ui.groups.CreateGroupScreen
 import org.mochios.people.ui.groups.GroupDetailScreen
@@ -28,6 +29,7 @@ object PeopleApp {
     const val ROUTER = "people/router"
 
     const val FRIENDS = "people/friends?action={action}"
+    const val FRIENDS_ADD = "people/friends/add"
     const val INVITATIONS = "people/invitations"
     const val PROFILE = "people/profile"
     const val GROUPS = "people/groups"
@@ -108,7 +110,23 @@ fun NavGraphBuilder.peopleNavGraph(
             onMessage = { friendId ->
                 onOpenLink("chat/new?friend=${friendId}")
             },
+            onAddFriend = { navController.navigate(PeopleApp.FRIENDS_ADD) },
             initialAction = action.ifBlank { null },
+        )
+    }
+
+    composable(PeopleApp.FRIENDS_ADD) {
+        AddFriendScreen(
+            onBack = { navController.popBackStack() },
+            // An accepted invite is a new friend, and popping back would land on
+            // the friends entry that was already there, whose view model still
+            // holds the list fetched before. Navigating builds a fresh entry
+            // that reloads.
+            onFriendsChanged = {
+                navController.navigate(PeopleApp.friends()) {
+                    popUpTo(PeopleApp.FRIENDS_ADD) { inclusive = true }
+                }
+            },
         )
     }
 

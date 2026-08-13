@@ -60,6 +60,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -91,11 +92,11 @@ import org.mochios.android.R as MochiR
  *    sections (Friends / Invitations / Groups / Profile) — matches the web
  *    sidebar.
  *  - Top-bar search icon + ellipsis menu (logout).
- *  - FAB to open [AddFriendDialog].
+ *  - FAB to open [AddFriendScreen].
  *  - Pull-to-refresh.
  *  - One-shot welcome banner on first visit (dismissable, persists server-side).
  *
- *  Deep-link: when [initialAction] == "add" we open the AddFriendDialog on
+ *  Deep-link: when [initialAction] == "add" we open the add-friend screen on
  *  first composition. That lets `mochi://people?action=add` (or a notification
  *  PendingIntent) drop the user directly into the invite flow.
  */
@@ -107,6 +108,7 @@ fun FriendsScreen(
     onOpenNotifications: () -> Unit,
     onLogout: () -> Unit,
     onMessage: (String) -> Unit = {},
+    onAddFriend: () -> Unit = {},
     initialAction: String? = null,
     viewModel: FriendsViewModel = hiltViewModel(),
 ) {
@@ -116,10 +118,15 @@ fun FriendsScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
 
-    // Deep-link entry: `?action=add` opens the dialog once on first compose.
+    // Deep-link entry: `?action=add` opens the add-friend screen once. Saved
+    // rather than remembered, so coming back from that screen — which composes
+    // this one afresh with the same argument — doesn't bounce straight into it
+    // again.
+    var addOpened by rememberSaveable { mutableStateOf(false) }
     LaunchedEffect(initialAction) {
-        if (initialAction == "add" && !uiState.addDialogOpen) {
-            viewModel.openAddDialog()
+        if (initialAction == "add" && !addOpened) {
+            addOpened = true
+            onAddFriend()
         }
     }
 
@@ -193,7 +200,7 @@ fun FriendsScreen(
                 )
             },
             floatingActionButton = {
-                FloatingActionButton(onClick = { viewModel.openAddDialog() }) {
+                FloatingActionButton(onClick = onAddFriend) {
                     Icon(
                         Icons.Default.PersonAdd,
                         contentDescription = stringResource(R.string.people_add_friend),
@@ -291,19 +298,6 @@ fun FriendsScreen(
                 }
             }
         }
-    }
-
-    if (uiState.addDialogOpen) {
-        AddFriendDialog(
-            state = uiState,
-            onQueryChange = viewModel::updateAddSearchQuery,
-            onRetry = viewModel::retryAddSearch,
-            onOpenPreview = viewModel::openAddPreview,
-            onClosePreview = viewModel::closeAddPreview,
-            onRetryPreview = viewModel::retryAddPreview,
-            onAddFriend = viewModel::addFriend,
-            onDismiss = viewModel::closeAddDialog,
-        )
     }
 
     val removing = uiState.removingFriend

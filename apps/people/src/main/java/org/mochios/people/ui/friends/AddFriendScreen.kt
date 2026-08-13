@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.friends
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,9 +13,11 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -29,16 +32,22 @@ import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -49,6 +58,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
@@ -62,94 +72,126 @@ import org.mochios.people.model.User
 import org.mochios.android.R as MochiR
 
 /**
- * Add-friend dialog. Mirrors `apps/people/web/src/features/friends/components/add-friend-dialog.tsx`:
- * a debounced search field, a paged list of matched users whose row action
+ * Add-friend screen. Mirrors
+ * `apps/people/web/src/features/friends/components/add-friend-dialog.tsx`: a
+ * debounced search field over a paged list of matched users, whose row action
  * always routes through a profile-preview step (avatar + banner + bio + accent)
  * before the actual invite fires. From the preview the user confirms with
- * "Send invitation" / "Accept invite" or returns with "Back". A Close button
- * in the footer dismisses the entire dialog from either step.
+ * "Send invitation" / "Accept invite"; back returns to the list, and back again
+ * leaves the screen.
+ *
+ * @param onBack leaves the screen with the friends list untouched.
+ * @param onFriendsChanged leaves the screen after an accepted invite, so the
+ *   caller can reload the list it will land on.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AddFriendDialog(
-    state: FriendsUiState,
-    onQueryChange: (String) -> Unit,
-    onRetry: () -> Unit,
-    onOpenPreview: (User) -> Unit,
-    onClosePreview: () -> Unit,
-    onRetryPreview: () -> Unit,
-    onAddFriend: (User) -> Unit,
-    onDismiss: () -> Unit,
+fun AddFriendScreen(
+    onBack: () -> Unit,
+    onFriendsChanged: () -> Unit,
+    viewModel: AddFriendViewModel = hiltViewModel(),
 ) {
-    val preview = state.addPreview
+    val uiState by viewModel.uiState.collectAsState()
+    val preview = uiState.preview
 
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = {
-            Text(
-                text = preview?.targetUser?.name?.takeIf { it.isNotBlank() }
-                    ?: stringResource(R.string.people_add_friend),
+    // Back steps out of the preview first, so a mistaken tap on a result costs
+    // one press rather than the whole search.
+    fun goBack() {
+        when {
+            preview != null -> viewModel.closePreview()
+            uiState.friendsChanged -> onFriendsChanged()
+            else -> onBack()
+        }
+    }
+
+    BackHandler { goBack() }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = preview?.targetUser?.name?.takeIf { name -> name.isNotBlank() }
+                            ?: stringResource(R.string.people_add_friend),
+                    )
+                },
+                navigationIcon = {
+                    IconButton(onClick = { goBack() }) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back),
+                        )
+                    }
+                },
             )
         },
-        text = {
+        bottomBar = {
+            if (preview != null) {
+                Surface(color = MaterialTheme.colorScheme.surface) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .imePadding()
+                            .navigationBarsPadding()
+                            .padding(horizontal = 16.dp, vertical = 12.dp),
+                    ) {
+                        uiState.inviteError?.let { error ->
+                            Text(
+                                text = error.userMessage(),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.error,
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                        }
+                        PreviewConfirmButton(
+                            preview = preview,
+                            invited = preview.targetUser.id in uiState.invitedUserIds,
+                            adding = uiState.addingUserId == preview.targetUser.id,
+                            onAddFriend = viewModel::addFriend,
+                        )
+                    }
+                }
+            }
+        },
+    ) { padding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding),
+        ) {
             if (preview != null) {
                 PreviewBody(
                     preview = preview,
-                    onRetry = onRetryPreview,
+                    onRetry = viewModel::retryPreview,
                 )
             } else {
                 SearchBody(
-                    state = state,
-                    onQueryChange = onQueryChange,
-                    onRetry = onRetry,
-                    onTapResult = onOpenPreview,
+                    state = uiState,
+                    onQueryChange = viewModel::updateSearchQuery,
+                    onRetry = viewModel::retrySearch,
+                    onTapResult = viewModel::openPreview,
                 )
             }
-        },
-        confirmButton = {
-            if (preview != null) {
-                PreviewConfirmButton(
-                    preview = preview,
-                    invited = preview.targetUser.id in state.invitedUserIds,
-                    adding = state.addingUserId == preview.targetUser.id,
-                    onAddFriend = onAddFriend,
-                )
-            } else {
-                TextButton(onClick = onDismiss) {
-                    Text(stringResource(R.string.people_common_close))
-                }
-            }
-        },
-        dismissButton = if (preview != null) {
-            {
-                TextButton(
-                    onClick = onClosePreview,
-                    enabled = state.addingUserId != preview.targetUser.id,
-                ) {
-                    Icon(
-                        Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = null,
-                        modifier = Modifier.size(16.dp),
-                    )
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Text(stringResource(R.string.people_common_back))
-                }
-            }
-        } else null,
-    )
+        }
+    }
 }
 
 @Composable
 private fun SearchBody(
-    state: FriendsUiState,
+    state: AddFriendUiState,
     onQueryChange: (String) -> Unit,
     onRetry: () -> Unit,
     onTapResult: (User) -> Unit,
 ) {
-    val hasQuery = state.addSearchQuery.isNotBlank()
+    val hasQuery = state.searchQuery.isNotBlank()
 
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 16.dp, vertical = 16.dp),
+    ) {
         OutlinedTextField(
-            value = state.addSearchQuery,
+            value = state.searchQuery,
             onValueChange = onQueryChange,
             placeholder = { Text(stringResource(R.string.people_add_friend_search_placeholder)) },
             leadingIcon = {
@@ -159,11 +201,7 @@ private fun SearchBody(
             modifier = Modifier.fillMaxWidth(),
         )
         Spacer(modifier = Modifier.height(12.dp))
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .defaultMinSize(minHeight = 160.dp),
-        ) {
+        Box(modifier = Modifier.fillMaxSize()) {
             when {
                 !hasQuery -> {
                     EmptyHint(
@@ -171,7 +209,7 @@ private fun SearchBody(
                         description = stringResource(R.string.people_add_friend_search_hint),
                     )
                 }
-                state.addSearchLoading -> {
+                state.searchLoading -> {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -181,7 +219,7 @@ private fun SearchBody(
                         CircularProgressIndicator()
                     }
                 }
-                state.addSearchError != null -> {
+                state.searchError != null -> {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -189,7 +227,7 @@ private fun SearchBody(
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Text(
-                            text = state.addSearchError.userMessage(),
+                            text = state.searchError.userMessage(),
                             color = MaterialTheme.colorScheme.error,
                             style = MaterialTheme.typography.bodyMedium,
                         )
@@ -199,7 +237,7 @@ private fun SearchBody(
                         }
                     }
                 }
-                state.addSearchResults.isEmpty() -> {
+                state.searchResults.isEmpty() -> {
                     EmptyHint(
                         title = stringResource(R.string.people_friends_no_people_found),
                         description = stringResource(R.string.people_friends_try_different_search),
@@ -207,13 +245,11 @@ private fun SearchBody(
                 }
                 else -> {
                     LazyColumn(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(320.dp),
+                        modifier = Modifier.fillMaxSize(),
                         contentPadding = PaddingValues(vertical = 4.dp),
                         verticalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
-                        items(state.addSearchResults, key = { it.id }) { user ->
+                        items(state.searchResults, key = { user -> user.id }) { user ->
                             AddFriendRow(
                                 user = user,
                                 invited = user.id in state.invitedUserIds,
@@ -361,9 +397,9 @@ private fun PreviewBody(
 ) {
     Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .height(420.dp)
-            .verticalScroll(rememberScrollState()),
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(horizontal = 16.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         when {
@@ -413,8 +449,9 @@ private fun PreviewProfile(
     val avatarUrl = avatarUrlFor(info, user)
     val bannerUrl = bannerUrlFor(info, user)
     val accent = info.style.accent
-    val displayName = info.name.takeIf { it.isNotBlank() } ?: user.name
-    val fingerprint = info.fingerprint.takeIf { it.isNotBlank() } ?: user.fingerprintHyphens
+    val displayName = info.name.takeIf { name -> name.isNotBlank() } ?: user.name
+    val fingerprint = info.fingerprint.takeIf { value -> value.isNotBlank() }
+        ?: user.fingerprintHyphens
 
     if (bannerUrl != null) {
         AsyncImage(
@@ -482,22 +519,23 @@ private fun PreviewConfirmButton(
         invited -> RelationshipStatus.INVITED
         else -> user.relationshipStatus
     }
-    // Disabled while the details fetch is still in flight so the dialog
-    // doesn't fire an invite before the user has seen the profile.
+    // Disabled while the details fetch is still in flight so the screen doesn't
+    // fire an invite before the user has seen the profile.
     val ready = !preview.isLoading
     val terminal = effectiveStatus == RelationshipStatus.FRIEND ||
         effectiveStatus == RelationshipStatus.INVITED ||
         effectiveStatus == RelationshipStatus.SELF
     val enabled = ready && !adding && !terminal
+    val fill = Modifier.fillMaxWidth()
 
     when (effectiveStatus) {
         RelationshipStatus.SELF -> {
-            Button(onClick = {}, enabled = false) {
+            Button(onClick = {}, enabled = false, modifier = fill) {
                 Text(stringResource(R.string.people_friends_thats_you))
             }
         }
         RelationshipStatus.FRIEND -> {
-            Button(onClick = {}, enabled = false) {
+            Button(onClick = {}, enabled = false, modifier = fill) {
                 Icon(
                     Icons.Default.Check,
                     contentDescription = null,
@@ -508,7 +546,7 @@ private fun PreviewConfirmButton(
             }
         }
         RelationshipStatus.INVITED -> {
-            Button(onClick = {}, enabled = false) {
+            Button(onClick = {}, enabled = false, modifier = fill) {
                 Icon(
                     Icons.AutoMirrored.Filled.Send,
                     contentDescription = null,
@@ -522,6 +560,7 @@ private fun PreviewConfirmButton(
             Button(
                 onClick = { onAddFriend(user) },
                 enabled = enabled,
+                modifier = fill,
             ) {
                 if (adding) {
                     CircularProgressIndicator(
@@ -543,6 +582,7 @@ private fun PreviewConfirmButton(
             Button(
                 onClick = { onAddFriend(user) },
                 enabled = enabled,
+                modifier = fill,
             ) {
                 if (adding) {
                     CircularProgressIndicator(
@@ -590,8 +630,8 @@ private fun avatarUrlFor(
     fallback: User,
 ): String? {
     val id = info.id.ifBlank { fallback.id }.ifBlank { return null }
-    val v = info.avatar
-    return if (v.isBlank()) "/people/$id/-/avatar" else "/people/$id/-/avatar?v=$v"
+    val version = info.avatar
+    return if (version.isBlank()) "/people/$id/-/avatar" else "/people/$id/-/avatar?v=$version"
 }
 
 private fun bannerUrlFor(

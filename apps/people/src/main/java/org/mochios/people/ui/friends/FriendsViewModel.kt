@@ -8,8 +8,6 @@ package org.mochios.people.ui.friends
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -20,11 +18,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
-import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.people.model.Friend
-import org.mochios.people.model.PersonInformation
-import org.mochios.people.model.RelationshipStatus
-import org.mochios.people.model.User
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
@@ -54,44 +48,12 @@ data class FriendsUiState(
     val removingFriend: Friend? = null,
     val isRemoving: Boolean = false,
 
-    // Add-friend dialog
-    val addDialogOpen: Boolean = false,
-    val addSearchQuery: String = "",
-    val addSearchLoading: Boolean = false,
-    val addSearchError: MochiError? = null,
-    val addSearchResults: List<User> = emptyList(),
-    val invitedUserIds: Set<String> = emptySet(),
-    val addingUserId: String? = null,
-
-    /**
-     * Profile-preview substate of the add-friend dialog. Null when the dialog
-     * is on the search results step; non-null after the user taps a result and
-     * the second-stage "peek before inviting" view replaces the list. Mirrors
-     * the web add-friend-dialog's two-stage flow.
-     */
-    val addPreview: AddFriendPreview? = null,
-
     /**
      * One-shot welcome banner shown on first visit. True only after
      * `-/welcome` reports `seen == false`; flipped back to false (and persisted
      * server-side via `-/welcome/seen`) when the user dismisses it.
      */
     val showWelcome: Boolean = false,
-)
-
-/**
- * Second stage of the add-friend dialog. Carries the user the search row was
- * built from (so the dialog still has display name / fingerprint while the
- * details fetch is in flight) plus the fetched `PersonInformation` (banner,
- * avatar, bio, accent). `isLoading` is true between tap and response; `error`
- * is set if the fetch failed so the user can either retry or go back to the
- * search list.
- */
-data class AddFriendPreview(
-    val targetUser: User,
-    val information: PersonInformation? = null,
-    val isLoading: Boolean = true,
-    val error: MochiError? = null,
 )
 
 /**
@@ -116,9 +78,6 @@ class FriendsViewModel @Inject constructor(
 
     private val _events = MutableSharedFlow<FriendsEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<FriendsEvent> = _events.asSharedFlow()
-
-    private var searchJob: Job? = null
-    private var previewJob: Job? = null
 
     init {
         loadFriends()
@@ -243,163 +202,6 @@ class FriendsViewModel @Inject constructor(
     fun messageFriend(friend: Friend) {
         viewModelScope.launch {
             _events.emit(FriendsEvent.MessageFriend(friend.id, friend.name))
-        }
-    }
-
-    // ---------------- add-friend dialog ----------------
-
-    fun openAddDialog() {
-        _uiState.value = _uiState.value.copy(
-            addDialogOpen = true,
-            addSearchQuery = "",
-            addSearchResults = emptyList(),
-            addSearchError = null,
-            invitedUserIds = emptySet(),
-            addingUserId = null,
-            addPreview = null,
-        )
-    }
-
-    fun closeAddDialog() {
-        searchJob?.cancel()
-        previewJob?.cancel()
-        _uiState.value = _uiState.value.copy(
-            addDialogOpen = false,
-            addSearchQuery = "",
-            addSearchResults = emptyList(),
-            addSearchError = null,
-            addSearchLoading = false,
-            invitedUserIds = emptySet(),
-            addingUserId = null,
-            addPreview = null,
-        )
-    }
-
-    /**
-     * Tap on a search result. Transitions the dialog from the list step to
-     * the profile-preview step and kicks off a [PeopleRepository.getPersonInformation]
-     * fetch. Mirrors the web `startConnect` flow but without the
-     * "has-profile-content" short-circuit — Android always shows the preview
-     * so the user has a consistent confirmation step (the web's skip-on-empty
-     * is an optimisation for keyboard-heavy desktop use).
-     */
-    fun openAddPreview(user: User) {
-        previewJob?.cancel()
-        _uiState.value = _uiState.value.copy(
-            addPreview = AddFriendPreview(targetUser = user, isLoading = true),
-        )
-        previewJob = viewModelScope.launch {
-            try {
-                val info = repository.getPersonInformation(user.id)
-                val current = _uiState.value.addPreview
-                if (current != null && current.targetUser.id == user.id) {
-                    _uiState.value = _uiState.value.copy(
-                        addPreview = current.copy(information = info, isLoading = false),
-                    )
-                }
-            } catch (e: Exception) {
-                val current = _uiState.value.addPreview
-                if (current != null && current.targetUser.id == user.id) {
-                    _uiState.value = _uiState.value.copy(
-                        addPreview = current.copy(
-                            isLoading = false,
-                            error = e.toMochiError(),
-                        ),
-                    )
-                }
-            }
-        }
-    }
-
-    /** Back-button from the profile-preview step returns to the search list. */
-    fun closeAddPreview() {
-        previewJob?.cancel()
-        _uiState.value = _uiState.value.copy(addPreview = null)
-    }
-
-    /** Retry the [PersonInformation] fetch after a transient failure. */
-    fun retryAddPreview() {
-        val current = _uiState.value.addPreview ?: return
-        openAddPreview(current.targetUser)
-    }
-
-    fun updateAddSearchQuery(query: String) {
-        _uiState.value = _uiState.value.copy(addSearchQuery = query)
-        searchJob?.cancel()
-        if (query.isBlank()) {
-            _uiState.value = _uiState.value.copy(
-                addSearchResults = emptyList(),
-                addSearchLoading = false,
-                addSearchError = null,
-            )
-            return
-        }
-        searchJob = viewModelScope.launch {
-            delay(SEARCH_DEBOUNCE)
-            _uiState.value = _uiState.value.copy(addSearchLoading = true, addSearchError = null)
-            try {
-                val results = repository.searchFriends(query)
-                _uiState.value = _uiState.value.copy(
-                    addSearchResults = results,
-                    addSearchLoading = false,
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    addSearchLoading = false,
-                    addSearchError = e.toMochiError(),
-                )
-            }
-        }
-    }
-
-    fun retryAddSearch() {
-        val q = _uiState.value.addSearchQuery
-        if (q.isBlank()) return
-        updateAddSearchQuery(q)
-    }
-
-    /**
-     * Send an invite (or accept an incoming invite if [user.relationshipStatus]
-     * is `pending`). "self" results no-op with a toast — the user can't friend
-     * themselves.
-     */
-    fun addFriend(user: User) {
-        val status = if (user.id in _uiState.value.invitedUserIds) {
-            RelationshipStatus.INVITED
-        } else {
-            user.relationshipStatus
-        }
-        if (status == RelationshipStatus.FRIEND ||
-            status == RelationshipStatus.INVITED ||
-            status == RelationshipStatus.SELF
-        ) {
-            return
-        }
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(addingUserId = user.id)
-            try {
-                if (status == RelationshipStatus.PENDING) {
-                    repository.acceptInvite(user.id)
-                    _uiState.value = _uiState.value.copy(
-                        addingUserId = null,
-                        invitedUserIds = _uiState.value.invitedUserIds + user.id,
-                        addPreview = null,
-                    )
-                    refresh()
-                } else {
-                    repository.createFriend(user.id, user.name)
-                    _uiState.value = _uiState.value.copy(
-                        addingUserId = null,
-                        invitedUserIds = _uiState.value.invitedUserIds + user.id,
-                        addPreview = null,
-                    )
-                }
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    addingUserId = null,
-                    error = e.toMochiError(),
-                )
-            }
         }
     }
 }
