@@ -14,6 +14,7 @@ import androidx.navigation.navDeepLink
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.people.ui.friends.AddFriendScreen
 import org.mochios.people.ui.friends.FriendsScreen
+import org.mochios.people.ui.groups.AddMemberScreen
 import org.mochios.people.ui.groups.CreateGroupScreen
 import org.mochios.people.ui.groups.GroupDetailScreen
 import org.mochios.people.ui.groups.GroupsScreen
@@ -35,9 +36,11 @@ object PeopleApp {
     const val GROUPS = "people/groups"
     const val GROUP_DETAIL = "people/groups/{id}"
     const val GROUP_CREATE = "people/groups/create"
+    const val GROUP_ADD_MEMBER = "people/groups/{id}/add-member"
     const val PERSON_VIEW = "people/person/{id}"
 
     fun groupDetail(id: String) = "people/groups/$id"
+    fun groupAddMember(id: String) = "people/groups/$id/add-member"
     fun personView(id: String) = "people/person/$id"
     fun friends(action: String? = null): String = if (action.isNullOrBlank()) {
         "people/friends"
@@ -171,10 +174,30 @@ fun NavGraphBuilder.peopleNavGraph(
     composable(
         route = PeopleApp.GROUP_DETAIL,
         arguments = listOf(navArgument("id") { type = NavType.StringType }),
-    ) {
+    ) { backStackEntry ->
+        val groupId = backStackEntry.arguments?.getString("id").orEmpty()
         GroupDetailScreen(
             onBack = { navController.popBackStack() },
             onOpenPerson = { id -> navController.navigate(PeopleApp.personView(id)) },
+            onAddMember = { navController.navigate(PeopleApp.groupAddMember(groupId)) },
+        )
+    }
+
+    composable(
+        route = PeopleApp.GROUP_ADD_MEMBER,
+        arguments = listOf(navArgument("id") { type = NavType.StringType }),
+    ) { backStackEntry ->
+        val groupId = backStackEntry.arguments?.getString("id").orEmpty()
+        AddMemberScreen(
+            onBack = { navController.popBackStack() },
+            // Rebuild the group in place once a member has joined: popping back
+            // would land on the detail entry that was already there, whose view
+            // model still holds the members fetched before the add.
+            onAdded = {
+                navController.navigate(PeopleApp.groupDetail(groupId)) {
+                    popUpTo(PeopleApp.GROUP_DETAIL) { inclusive = true }
+                }
+            },
         )
     }
 

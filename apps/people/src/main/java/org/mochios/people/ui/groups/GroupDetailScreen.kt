@@ -88,6 +88,7 @@ import org.mochios.android.R as MochiR
 fun GroupDetailScreen(
     onBack: () -> Unit,
     onOpenPerson: (id: String) -> Unit,
+    onAddMember: () -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     viewModel: GroupDetailViewModel = hiltViewModel(),
 ) {
@@ -137,7 +138,7 @@ fun GroupDetailScreen(
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
                     if (state.group != null) {
-                        IconButton(onClick = { viewModel.openAddDialog() }) {
+                        IconButton(onClick = onAddMember) {
                             Icon(
                                 Icons.Default.PersonAdd,
                                 contentDescription = stringResource(R.string.people_member_add),
@@ -191,6 +192,7 @@ fun GroupDetailScreen(
                     GroupDetailContent(
                         state = state,
                         viewModel = viewModel,
+                        onAddMember = onAddMember,
                     )
                 }
             }
@@ -198,15 +200,6 @@ fun GroupDetailScreen(
     }
 
     // ---- Dialogs ----
-
-    if (state.addDialogOpen) {
-        AddMemberDialog(
-            state = state,
-            onSearch = viewModel::search,
-            onPick = viewModel::addMember,
-            onDismiss = viewModel::closeAddDialog,
-        )
-    }
 
     if (state.editNameOpen) {
         SingleFieldDialog(
@@ -266,6 +259,7 @@ fun GroupDetailScreen(
 private fun GroupDetailContent(
     state: GroupDetailViewModel.UiState,
     viewModel: GroupDetailViewModel,
+    onAddMember: () -> Unit,
 ) {
     val group = state.group ?: return
     LazyColumn(
@@ -354,7 +348,7 @@ private fun GroupDetailContent(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Spacer(Modifier.height(16.dp))
-                        Button(onClick = viewModel::openAddDialog) {
+                        Button(onClick = onAddMember) {
                             Icon(
                                 Icons.Default.PersonAdd,
                                 contentDescription = null,
