@@ -5,6 +5,7 @@
 
 package org.mochios.crm.navigation
 
+import android.net.Uri
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -14,6 +15,7 @@ import androidx.navigation.navDeepLink
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.crm.ui.design.DesignScreen
 import org.mochios.crm.ui.find.FindCrmsScreen
+import org.mochios.crm.ui.crm.CreateObjectScreen
 import org.mochios.crm.ui.crm.CrmScreen
 import org.mochios.crm.ui.crmlist.CreateCrmScreen
 import org.mochios.crm.ui.router.CrmsRouter
@@ -32,11 +34,26 @@ object CrmsApp {
     const val CREATE_CRM = "crm/create"
     const val PROJECT_SETTINGS = "crm/crm/{crmId}/settings"
     const val PROJECT_DESIGN = "crm/crm/{crmId}/design"
+    // Deliberately not `crm/crm/{crmId}/object/create`, which the PROJECT_OBJECT
+    // pattern above also matches, with objectId='create'.
+    const val CREATE_OBJECT = "crm/crm/{crmId}/create-object?field={field}&value={value}"
 
     fun crm(crmId: String) = "crm/crm/$crmId"
     fun crmObject(crmId: String, objectId: String) = "crm/crm/$crmId/object/$objectId"
     fun crmSettings(crmId: String) = "crm/crm/$crmId/settings"
     fun crmDesign(crmId: String) = "crm/crm/$crmId/design"
+
+    /**
+     * The create-object form for [crmId], optionally seeded with the one field
+     * value a board column's "+" carries. Field ids and option ids are opaque
+     * server strings, so both are encoded before they go in the query.
+     */
+    fun createObject(crmId: String, presetValues: Map<String, String>): String {
+        val preset = presetValues.entries.firstOrNull()
+        val field = Uri.encode(preset?.key.orEmpty())
+        val value = Uri.encode(preset?.value.orEmpty())
+        return "crm/crm/$crmId/create-object?field=$field&value=$value"
+    }
 }
 
 fun NavGraphBuilder.crmsNavGraph(
@@ -79,6 +96,9 @@ fun NavGraphBuilder.crmsNavGraph(
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
+            onCreateObject = { presetValues ->
+                navController.navigate(CrmsApp.createObject(crmId, presetValues))
+            },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
         )
@@ -113,6 +133,9 @@ fun NavGraphBuilder.crmsNavGraph(
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
+            onCreateObject = { presetValues ->
+                navController.navigate(CrmsApp.createObject(crmId, presetValues))
+            },
             onLogout = onLogout,
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
         )
@@ -145,6 +168,36 @@ fun NavGraphBuilder.crmsNavGraph(
             onCreated = { crmId ->
                 navController.navigate(CrmsApp.crm(crmId)) {
                     popUpTo(CrmsApp.CREATE_CRM) { inclusive = true }
+                }
+            },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CREATE_OBJECT,
+        arguments = listOf(
+            navArgument("crmId") { type = NavType.StringType },
+            navArgument("field") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+            navArgument("value") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+        )
+    ) { backStackEntry ->
+        val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
+        CreateObjectScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the object just made. Popping back
+            // would land on the CRM entry that was already there, whose view
+            // model still holds the objects fetched before the create — so the
+            // new one wouldn't show until a manual refresh. Navigating builds a
+            // fresh entry that reloads.
+            onCreated = { objectId ->
+                navController.navigate(CrmsApp.crmObject(crmId, objectId)) {
+                    popUpTo(CrmsApp.CREATE_OBJECT) { inclusive = true }
                 }
             },
         )

@@ -109,7 +109,6 @@ import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.shareExportFile
@@ -145,6 +144,7 @@ fun CrmScreen(
     onCreateCrm: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
+    onCreateObject: (presetValues: Map<String, String>) -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     initialObjectId: String? = null,
@@ -248,6 +248,7 @@ fun CrmScreen(
                     onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                     onSettings = onSettings,
                     onDesign = onDesign,
+                    onCreateObject = onCreateObject,
                     onOpenNotifications = onOpenNotifications,
                     initialObjectId = initialObjectId,
                 )
@@ -571,6 +572,7 @@ private fun CrmContent(
     onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
+    onCreateObject: (presetValues: Map<String, String>) -> Unit,
     onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
     viewModel: CrmViewModel = hiltViewModel()
@@ -592,14 +594,6 @@ private fun CrmContent(
     LaunchedEffect(viewModel) {
         viewModel.shareLink.collect { link ->
             shareCrmLink(context, link, shareTitle)
-        }
-    }
-
-    // A rejected create is invisible otherwise: the dialog just sits there
-    // with the spinner gone. Say what the server said.
-    LaunchedEffect(viewModel) {
-        viewModel.actionFailed.collect { error ->
-            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
         }
     }
 
@@ -841,10 +835,10 @@ private fun CrmContent(
             val boardHasColumns = activeView?.viewtype == "board" &&
                 activeView.columns.isNotBlank()
             // A CRM with no class defined has nothing an object could be created
-            // as, so the dialog would open with its Create permanently disabled
+            // as, so the form would open with its Create permanently disabled
             // and no way to tell why. Hidden rather than dead.
             if (details != null && details.classes.isNotEmpty() && !boardHasColumns) {
-                FloatingActionButton(onClick = { viewModel.showCreateObjectDialog() }) {
+                FloatingActionButton(onClick = { onCreateObject(emptyMap()) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_create_object))
                 }
             }
@@ -909,12 +903,12 @@ private fun CrmContent(
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
-                                    // Same dialog the FAB opens, seeded with the
+                                    // Same form the FAB opens, seeded with the
                                     // column tapped. It used to create outright,
                                     // which produced a titleless object with no
                                     // chance to fill anything in.
                                     onStartCreate = { initialValues ->
-                                        viewModel.showCreateObjectDialog(presetValues = initialValues)
+                                        onCreateObject(initialValues)
                                     }
                                 )
                             }
@@ -934,27 +928,6 @@ private fun CrmContent(
                 }
             }
         }
-    }
-
-    // Create object dialog
-    if (uiState.showCreateObjectDialog && details != null) {
-        CreateObjectDialog(
-            classes = details.classes,
-            hierarchy = details.hierarchy,
-            fields = details.fields,
-            options = details.options,
-            people = uiState.people,
-            objects = uiState.objects,
-            presetParent = uiState.createObjectParent,
-            presetValues = uiState.createObjectPresetValues,
-            isCreating = uiState.isCreatingObject,
-            activeView = activeView,
-            viewModel = viewModel,
-            onDismiss = { viewModel.hideCreateObjectDialog() },
-            onCreate = { classId, title, parent, initialValues, files ->
-                viewModel.createObject(classId, title, parent, initialValues, files)
-            }
-        )
     }
 
     if (uiState.isExporting) {

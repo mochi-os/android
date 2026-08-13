@@ -24,7 +24,6 @@ import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
-import org.mochios.android.model.User
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.lib.ActiveViewStore
@@ -55,22 +54,6 @@ data class CrmUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val showCreateObjectDialog: Boolean = false,
-    /**
-     * Pre-selected parent for the create-object dialog when invoked from
-     * an "Add child" affordance on an existing object. Null means the
-     * dialog is opened from the FAB and lets the user pick a parent (or
-     * none) themselves.
-     */
-    val createObjectParent: String? = null,
-    /**
-     * Field values the create-object dialog opens pre-filled with, keyed by
-     * field id. Set when a board column's "+" starts the create, so the object
-     * lands in the column it was started from. Empty from the FAB, which
-     * carries no such context.
-     */
-    val createObjectPresetValues: Map<String, String> = emptyMap(),
-    val isCreatingObject: Boolean = false,
     val selectedObjectId: String? = null,
     /**
      * Sort field per view id. Field is one of "rank", "created",
@@ -108,15 +91,6 @@ class CrmViewModel @Inject constructor(
     /** Emits the CRM's share link once fetched, for the screen to share. */
     private val _shareLink = MutableSharedFlow<String>()
     val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
-
-    /**
-     * Failures from an action taken while the CRM is already on screen, for
-     * the screen to surface as a toast. [CrmUiState.error] cannot carry these:
-     * it only renders when the CRM itself failed to load, so a create that the
-     * server rejected left the dialog sitting open with nothing said.
-     */
-    private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
-    val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 
     private var wsSubscriptionId: String? = null
 
@@ -463,25 +437,6 @@ class CrmViewModel @Inject constructor(
         return result
     }
 
-    fun showCreateObjectDialog(
-        parent: String? = null,
-        presetValues: Map<String, String> = emptyMap(),
-    ) {
-        _uiState.value = _uiState.value.copy(
-            showCreateObjectDialog = true,
-            createObjectParent = parent,
-            createObjectPresetValues = presetValues,
-        )
-    }
-
-    fun hideCreateObjectDialog() {
-        _uiState.value = _uiState.value.copy(
-            showCreateObjectDialog = false,
-            createObjectParent = null,
-            createObjectPresetValues = emptyMap(),
-        )
-    }
-
     fun selectObject(objectId: String?) {
         val closing = objectId == null && _uiState.value.selectedObjectId != null
         _uiState.value = _uiState.value.copy(selectedObjectId = objectId)
@@ -490,51 +445,6 @@ class CrmViewModel @Inject constructor(
         // refresh on sheet close to reflect any field changes (card placement).
         if (closing) refreshObjects()
     }
-
-    fun createObject(
-        classId: String,
-        title: String,
-        parent: String? = null,
-        initialValues: Map<String, String> = emptyMap(),
-        uris: List<Uri> = emptyList(),
-    ) {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isCreatingObject = true)
-            try {
-                val obj = repository.createObject(crmId, classId, parent, title)
-                // One field at a time through the per-field endpoint: the bulk
-                // values endpoint is form-encoded and silently drops some field
-                // types (dates, currency amounts), so stage/value/closedate and
-                // friends only land when each is sent as its own JSON body.
-                for ((fieldId, value) in initialValues) {
-                    repository.setValue(crmId, obj.id, fieldId, value)
-                }
-                // Upload any attachments picked in the create dialog, mirroring
-                // web's create-then-upload flow. One failure shouldn't lose the
-                // object or the other files, so each upload is isolated.
-                val files = repository.stageFiles(uris)
-                for (file in files) {
-                    runCatching { repository.createAttachment(crmId, obj.id, file) }
-                }
-                repository.discardStaged(files)
-                _uiState.value = _uiState.value.copy(
-                    isCreatingObject = false,
-                    showCreateObjectDialog = false,
-                    createObjectParent = null,
-                    createObjectPresetValues = emptyMap(),
-                )
-                refreshObjects()
-            } catch (e: Exception) {
-                // The dialog stays open so the entered values survive a retry;
-                // the toast is what says why Create did nothing.
-                _uiState.value = _uiState.value.copy(isCreatingObject = false)
-                _actionFailed.tryEmit(e.toMochiError())
-            }
-        }
-    }
-
-    /** The picked file's real name, for labelling a draft attachment. */
-    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     fun deleteObject(objectId: String) {
         viewModelScope.launch {
@@ -642,36 +552,6 @@ class CrmViewModel @Inject constructor(
     fun getOptionsForField(classId: String, fieldId: String): List<FieldOption> {
         val details = _uiState.value.crmDetails ?: return emptyList()
         return details.options[classId]?.get(fieldId) ?: emptyList()
-    }
-
-    /**
-     * Whether a preset field value can be applied when creating an object of
-     * [classId]: the field must exist on the class and, for enumerated fields,
-     * the value must be among that class's own options — a board that mixes
-     * classes hands the create dialog the column it was tapped in, which can
-     * be an option belonging to another class, and the server rejects it.
-     */
-    fun usableValue(classId: String, fieldId: String, value: String): Boolean {
-        if (value.isBlank()) return false
-        val details = _uiState.value.crmDetails ?: return false
-        val field = details.fields[classId]?.find { it.id == fieldId } ?: return false
-        if (field.fieldtype != "enumerated") return true
-        return getOptionsForField(classId, fieldId).any { it.id == value }
-    }
-
-    /**
-     * Live user search for FieldEditor's user-type fields in the create dialog.
-     * Mirrors ObjectDetailViewModel.searchPeople — the PersonPicker wants
-     * [User]s whose fingerprint is the person's entity id.
-     */
-    suspend fun searchPeople(query: String): List<User> {
-        return try {
-            repository.searchUsers(query).map {
-                User(id = 0, name = it.name, fingerprint = it.id)
-            }
-        } catch (_: Exception) {
-            emptyList()
-        }
     }
 
     /**
