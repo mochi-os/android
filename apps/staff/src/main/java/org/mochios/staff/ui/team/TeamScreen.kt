@@ -56,7 +56,6 @@ import org.mochios.staff.R
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.ui.components.LocalStaffMe
 import org.mochios.staff.ui.components.StaffStatusBadge
-import org.mochios.staff.ui.dialog.AddTeamMemberDialog
 
 /**
  * Staff Team management screen. Mirrors web's
@@ -110,17 +109,6 @@ fun TeamScreen(
         SnackbarHost(
             hostState = snackbarHostState,
             modifier = Modifier.align(Alignment.BottomCenter),
-        )
-    }
-
-    if (state.showAddDialog) {
-        AddTeamMemberDialog(
-            state = state,
-            onSearchChange = viewModel::setAddSearch,
-            onSelectPerson = viewModel::selectAddPerson,
-            onRoleChange = viewModel::setAddRole,
-            onSubmit = viewModel::submitAdd,
-            onCancel = viewModel::closeAddDialog,
         )
     }
 

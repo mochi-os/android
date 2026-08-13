@@ -40,8 +40,8 @@ import org.mochios.staff.ui.listings.ListingsScreen
 import org.mochios.staff.ui.moderation.ModerationLogScreen
 import org.mochios.staff.ui.reports.ReportsScreen
 import org.mochios.staff.ui.reviews.ReviewsScreen
+import org.mochios.staff.ui.team.AddTeamMemberScreen
 import org.mochios.staff.ui.team.TeamScreen
-import org.mochios.staff.ui.team.TeamViewModel
 
 /**
  * Route constants and helpers for the staff Android module.
@@ -66,6 +66,7 @@ object StaffApp {
     const val CATEGORIES = "staff/categories"
     const val CONFIG = "staff/config"
     const val TEAM = "staff/team"
+    const val TEAM_ADD = "staff/team/add"
 }
 
 /**
@@ -165,10 +166,9 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
             }
         }
     }
-    // Team needs an admin-only "Add member" topbar action; mount the VM
-    // at the route and gate the button on LocalStaffMe.current.role.
+    // Team needs an admin-only "Add member" topbar action, gated on
+    // LocalStaffMe.current.role.
     composable(StaffApp.TEAM) {
-        val viewModel: TeamViewModel = hiltViewModel()
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.TEAM,
@@ -177,7 +177,7 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
                 val isAdmin = LocalStaffMe.current?.role == "admin"
                 if (isAdmin) {
                     Button(
-                        onClick = { viewModel.openAddDialog() },
+                        onClick = { navController.navigate(StaffApp.TEAM_ADD) },
                         modifier = Modifier.padding(end = 8.dp),
                     ) {
                         Icon(
@@ -190,8 +190,22 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
                 }
             },
         ) {
-            TeamScreen(navController = navController, viewModel = viewModel)
+            TeamScreen(navController = navController)
         }
+    }
+
+    composable(StaffApp.TEAM_ADD) {
+        AddTeamMemberScreen(
+            onBack = { navController.popBackStack() },
+            // Rebuild the team in place once a member has joined: popping back
+            // would land on the team entry that was already there, whose view
+            // model still holds the list fetched before the add.
+            onAdded = {
+                navController.navigate(StaffApp.TEAM) {
+                    popUpTo(StaffApp.TEAM) { inclusive = true }
+                }
+            },
+        )
     }
 }
 
