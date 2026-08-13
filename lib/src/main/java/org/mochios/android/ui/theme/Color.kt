@@ -40,8 +40,20 @@ val NeutralVariant70 = Color(0xFFA8ABB1)
 val NeutralVariant80 = Color(0xFFC4C6CC)
 val NeutralVariant90 = Color(0xFFE0E2E8)
 
-val ErrorRed = Color(0xFFBA1A1A)
-val ErrorRedLight = Color(0xFFFFDAD6)
+/** Error fill in light mode. Web's `#E7000B`. */
+val ErrorRed = Color(0xFFE7000B)
+
+/** Error fill in dark mode. Web's `#FF6467`. */
+val ErrorRedDark = Color(0xFFFF6467)
+
+/** Error container in light mode, and text over error surfaces in dark mode. */
+val ErrorRedLight = Color(0xFFFFDBD5)
+
+/** Text over a light error container. 6.39:1 on [ErrorRedLight]. */
+val ErrorRedDeep = Color(0xFFA30005)
+
+/** Text over [ErrorRedDark], and the error container in dark mode. 6.61:1. */
+val ErrorRedOnDark = Color(0xFF2A0003)
 
 // Diverging interest scale: red (−) ↔ grey (0) ↔ green (+). Hue carries the sign,
 // saturation the strength, so neutral reads as plain grey rather than a colour you

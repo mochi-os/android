@@ -19,9 +19,19 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /** Subset of the `themes` array returned by `/settings/-/user/preferences/data`.
- *  Per-theme metadata for rendering theme-picker swatches. */
+ *  Per-theme metadata for rendering theme-picker swatches.
+ *
+ *  @property id the theme's server id, which is what the `theme` preference
+ *    stores and what the picker writes back.
+ *  @property label what the picker shows for it. Falls back to [id] for a
+ *    server that sends no label, so a theme is never nameless on screen.
+ *  @property hue the OKLCH hue anchor the colour scheme is generated from.
+ *  @property chroma the OKLCH chroma anchor.
+ *  @property hueBg the hue anchor for background tones.
+ */
 data class ThemeInfo(
     val id: String,
+    val label: String,
     val hue: Float,
     val chroma: Float,
     val hueBg: Float,
@@ -129,7 +139,8 @@ class PreferencesManager @Inject internal constructor(
             val hue = t.hue?.toFloat() ?: return@mapNotNull null
             val chroma = t.chroma?.toFloat() ?: return@mapNotNull null
             val hueBg = t.hue_bg?.toFloat() ?: 0f
-            ThemeInfo(id = id, hue = hue, chroma = chroma, hueBg = hueBg)
+            val label = t.label?.takeIf { value -> value.isNotBlank() } ?: id
+            ThemeInfo(id = id, label = label, hue = hue, chroma = chroma, hueBg = hueBg)
         }
         defaultThemeId = body.default_theme
         _preferences.value = resolveAuto(raw)

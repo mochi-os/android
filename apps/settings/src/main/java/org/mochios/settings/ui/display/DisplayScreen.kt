@@ -33,7 +33,6 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -51,13 +50,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R
 import org.mochios.android.i18n.ThemeInfo
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.theme.oklch
 import org.mochios.settings.ui.preferences.PrefRow
 import org.mochios.settings.ui.preferences.PrefSpec
 
@@ -188,7 +187,6 @@ fun DisplayScreen(
                     current = uiState.values[spec.key] ?: "",
                     onChange = { value -> viewModel.set(spec.key, value) },
                 )
-                HorizontalDivider()
             }
 
             if (uiState.themes.isNotEmpty()) {
@@ -198,7 +196,6 @@ fun DisplayScreen(
                         currentThemeId = currentTheme,
                         onClick = { showThemeSheet = true },
                     )
-                    HorizontalDivider()
                 }
             }
 
@@ -208,7 +205,6 @@ fun DisplayScreen(
                     current = uiState.values[spec.key] ?: "",
                     onChange = { value -> viewModel.set(spec.key, value) },
                 )
-                HorizontalDivider()
             }
 
             item(key = "reset") {
@@ -290,7 +286,7 @@ private fun ThemeRow(
                 if (current != null) {
                     ThemeSwatch(theme = current, size = 18.dp)
                     Spacer(Modifier.size(8.dp))
-                    Text(current.id, style = MaterialTheme.typography.bodyMedium)
+                    Text(current.label, style = MaterialTheme.typography.bodyMedium)
                 } else {
                     Text(
                         stringResource(R.string.settings_theme_default),
@@ -364,28 +360,37 @@ private fun ThemeCard(
         Row(verticalAlignment = Alignment.CenterVertically) {
             ThemeSwatch(theme = theme, size = 24.dp)
             Spacer(Modifier.size(8.dp))
-            ThemeSwatch(theme = theme, size = 16.dp, useChroma = false)
+            ThemeSwatch(theme = theme, size = 16.dp, neutral = true)
         }
         Spacer(Modifier.height(8.dp))
         Text(
-            text = theme.id,
+            text = theme.label,
             style = MaterialTheme.typography.bodyMedium,
         )
     }
 }
 
+/**
+ * One dot of a theme's palette, built from the same anchors and the same OKLCH
+ * conversion [ColorSchemeGenerator] uses, so the swatch is a preview of the
+ * real thing rather than a lookalike.
+ *
+ * @param neutral shows the theme's background tint (`hue_bg` at low chroma)
+ *   instead of its accent.
+ */
 @Composable
 private fun ThemeSwatch(
     theme: ThemeInfo,
     size: androidx.compose.ui.unit.Dp,
-    useChroma: Boolean = true,
+    neutral: Boolean = false,
 ) {
-    // Build a Color approximation from the OKLCH-style anchors. We use HSL so
-    // the swatch matches what ColorSchemeGenerator renders on a real device:
-    // chroma → saturation (capped at ~0.20 OKLCH = full HSL saturation),
-    // lightness fixed at 0.55 so swatches read well against either appearance.
-    val sat = if (useChroma) (theme.chroma / 0.20f).coerceIn(0.15f, 1f) else 0.05f
-    val color = Color.hsl(theme.hue.mod(360f), sat, 0.55f)
+    // Lightness is fixed at the accent tone the light scheme uses, so a swatch
+    // reads as the button colour the theme will actually paint.
+    val color = if (neutral) {
+        oklch(0.55f, theme.chroma * 0.06f, theme.hueBg)
+    } else {
+        oklch(0.55f, theme.chroma, theme.hue)
+    }
     Box(
         modifier = Modifier
             .size(size)

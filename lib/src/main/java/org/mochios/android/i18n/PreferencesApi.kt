@@ -18,6 +18,7 @@ internal data class FullPrefsResponse(
 
 internal data class RawTheme(
     val id: String?,
+    val label: String?,
     val hue: Double?,
     val chroma: Double?,
     val hue_bg: Double?,

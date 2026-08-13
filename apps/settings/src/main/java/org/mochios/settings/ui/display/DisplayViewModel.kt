@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.i18n.ThemeInfo
 import javax.inject.Inject
@@ -31,6 +32,7 @@ data class DisplayUiState(
 @HiltViewModel
 class DisplayViewModel @Inject constructor(
     private val preferences: PreferencesManager,
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(DisplayUiState())
@@ -51,6 +53,7 @@ class DisplayViewModel @Inject constructor(
                     themes = preferences.availableThemes(),
                     defaultThemeId = preferences.defaultTheme(),
                 )
+                cacheActiveThemeAnchors()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -68,6 +71,7 @@ class DisplayViewModel @Inject constructor(
                     themes = preferences.availableThemes(),
                     defaultThemeId = preferences.defaultTheme(),
                 )
+                cacheActiveThemeAnchors()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }
@@ -86,9 +90,32 @@ class DisplayViewModel @Inject constructor(
                     themes = preferences.availableThemes(),
                     defaultThemeId = preferences.defaultTheme(),
                 )
+                cacheActiveThemeAnchors()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }
         }
+    }
+
+    /**
+     * Writes the active theme's anchors to the session store, which is what
+     * `MochiTheme` builds its colour scheme from.
+     *
+     * Saving the `theme` preference only tells the server; the running app
+     * reads its colours from the cached anchors, so without this a picked theme
+     * moved the tick in the picker and changed nothing on screen until the next
+     * cold start re-ran `ThemeRepository.fetchAndCacheTheme()`.
+     */
+    private suspend fun cacheActiveThemeAnchors() {
+        val state = _uiState.value
+        val activeId = state.values["theme"]?.takeIf { id -> id.isNotBlank() }
+            ?: state.defaultThemeId
+            ?: return
+        val theme = state.themes.firstOrNull { candidate -> candidate.id == activeId } ?: return
+        sessionManager.saveTheme(
+            hue = theme.hue,
+            chroma = theme.chroma,
+            hueBg = theme.hueBg,
+        )
     }
 }

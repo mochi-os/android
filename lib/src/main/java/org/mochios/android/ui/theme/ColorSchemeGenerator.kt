@@ -11,83 +11,83 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
 /**
- * Generates a Material 3 ColorScheme from OKLCH-style hue and chroma anchors.
+ * Generates a Material 3 ColorScheme from the server's OKLCH theme anchors.
  *
- * The web uses OKLCH (--hue, --hue-chroma, --hue-bg) to drive the entire palette.
- * This maps those values to HSL-based tonal palettes for Android. The hue mapping
- * is approximate (OKLCH and HSL hues are not identical) but close enough to produce
- * a visually consistent theme across platforms.
+ * The web drives its whole palette from `--hue`, `--hue-chroma` and `--hue-bg`
+ * in OKLCH, so this builds every role in OKLCH too and converts to sRGB at the
+ * end via [oklch]. Tones vary lightness and scale chroma while holding the hue,
+ * which is what keeps a theme recognisably the same colour across the ramp.
+ *
+ * Accent roles (primary / secondary / tertiary) take `--hue`; the neutrals
+ * (background / surface / outline) take `--hue-bg`, which a theme may set to a
+ * different angle to tint its greys independently of its accent.
  */
 object ColorSchemeGenerator {
 
     /**
      * Generate a full Material 3 ColorScheme from theme anchors.
-     * @param hue OKLCH hue (0-360)
-     * @param chroma OKLCH chroma (typically 0.05-0.30)
-     * @param isDark whether to generate a dark color scheme
+     *
+     * @param hue OKLCH hue (0-360), driving the accent families.
+     * @param chroma OKLCH chroma (typically 0.05-0.30). Passed through as-is —
+     *   sRGB cannot hold every lightness at every chroma, and [oklch] backs off
+     *   where it must rather than the palette pre-flattening everything.
+     * @param hueBg OKLCH hue for the neutrals.
+     * @param isDark whether to generate a dark color scheme.
      */
-    fun generate(hue: Float, chroma: Float, isDark: Boolean): ColorScheme {
-        // Map OKLCH chroma to HSL saturation (OKLCH ~0.20 = fully saturated)
-        val sat = (chroma / 0.20f).coerceIn(0.2f, 1f)
+    fun generate(hue: Float, chroma: Float, hueBg: Float, isDark: Boolean): ColorScheme =
+        if (isDark) darkScheme(hue, hueBg, chroma) else lightScheme(hue, hueBg, chroma)
 
-        return if (isDark) darkScheme(hue, sat) else lightScheme(hue, sat)
-    }
-
-    private fun lightScheme(hue: Float, sat: Float): ColorScheme = lightColorScheme(
-        primary = hsl(hue, sat * 0.85f, 0.45f),
+    private fun lightScheme(hue: Float, hueBg: Float, chroma: Float): ColorScheme = lightColorScheme(
+        primary = oklch(0.52f, chroma, hue),
         onPrimary = Color.White,
-        primaryContainer = hsl(hue, sat * 0.5f, 0.90f),
-        onPrimaryContainer = hsl(hue, sat * 0.8f, 0.15f),
-        secondary = hsl(hue, sat * 0.12f, 0.40f),
+        primaryContainer = oklch(0.92f, chroma * 0.35f, hue),
+        onPrimaryContainer = oklch(0.30f, chroma * 0.85f, hue),
+        secondary = oklch(0.52f, chroma * 0.28f, hue),
         onSecondary = Color.White,
-        secondaryContainer = hsl(hue, sat * 0.10f, 0.92f),
-        onSecondaryContainer = hsl(hue, sat * 0.10f, 0.15f),
-        tertiary = hsl(hue + 60f, sat * 0.5f, 0.42f),
+        secondaryContainer = oklch(0.93f, chroma * 0.14f, hue),
+        onSecondaryContainer = oklch(0.28f, chroma * 0.30f, hue),
+        tertiary = oklch(0.52f, chroma * 0.55f, hue + 60f),
         onTertiary = Color.White,
-        tertiaryContainer = hsl(hue + 60f, sat * 0.3f, 0.90f),
-        onTertiaryContainer = hsl(hue + 60f, sat * 0.5f, 0.15f),
+        tertiaryContainer = oklch(0.92f, chroma * 0.28f, hue + 60f),
+        onTertiaryContainer = oklch(0.30f, chroma * 0.55f, hue + 60f),
         error = ErrorRed,
         onError = Color.White,
         errorContainer = ErrorRedLight,
-        onErrorContainer = ErrorRed,
-        background = hsl(hue, sat * 0.02f, 0.98f),
-        onBackground = hsl(hue, sat * 0.02f, 0.10f),
-        surface = hsl(hue, sat * 0.02f, 0.98f),
-        onSurface = hsl(hue, sat * 0.02f, 0.10f),
-        surfaceVariant = hsl(hue, sat * 0.05f, 0.93f),
-        onSurfaceVariant = hsl(hue, sat * 0.05f, 0.30f),
-        outline = hsl(hue, sat * 0.05f, 0.50f),
-        outlineVariant = hsl(hue, sat * 0.04f, 0.80f),
+        onErrorContainer = ErrorRedDeep,
+        background = oklch(0.985f, chroma * 0.02f, hueBg),
+        onBackground = oklch(0.22f, chroma * 0.05f, hueBg),
+        surface = oklch(0.985f, chroma * 0.02f, hueBg),
+        onSurface = oklch(0.22f, chroma * 0.05f, hueBg),
+        surfaceVariant = oklch(0.94f, chroma * 0.05f, hueBg),
+        onSurfaceVariant = oklch(0.45f, chroma * 0.08f, hueBg),
+        outline = oklch(0.62f, chroma * 0.06f, hueBg),
+        outlineVariant = oklch(0.87f, chroma * 0.04f, hueBg),
     )
 
-    private fun darkScheme(hue: Float, sat: Float): ColorScheme = darkColorScheme(
-        primary = hsl(hue, sat * 0.65f, 0.75f),
-        onPrimary = hsl(hue, sat * 0.80f, 0.15f),
-        primaryContainer = hsl(hue, sat * 0.60f, 0.25f),
-        onPrimaryContainer = hsl(hue, sat * 0.45f, 0.88f),
-        secondary = hsl(hue, sat * 0.10f, 0.75f),
-        onSecondary = hsl(hue, sat * 0.08f, 0.15f),
-        secondaryContainer = hsl(hue, sat * 0.10f, 0.22f),
-        onSecondaryContainer = hsl(hue, sat * 0.08f, 0.88f),
-        tertiary = hsl(hue + 60f, sat * 0.40f, 0.72f),
-        onTertiary = hsl(hue + 60f, sat * 0.40f, 0.15f),
-        tertiaryContainer = hsl(hue + 60f, sat * 0.30f, 0.25f),
-        onTertiaryContainer = hsl(hue + 60f, sat * 0.30f, 0.88f),
-        error = ErrorRedLight,
-        onError = ErrorRed,
-        errorContainer = ErrorRed,
+    private fun darkScheme(hue: Float, hueBg: Float, chroma: Float): ColorScheme = darkColorScheme(
+        primary = oklch(0.78f, chroma * 0.75f, hue),
+        onPrimary = oklch(0.26f, chroma * 0.60f, hue),
+        primaryContainer = oklch(0.38f, chroma * 0.70f, hue),
+        onPrimaryContainer = oklch(0.90f, chroma * 0.30f, hue),
+        secondary = oklch(0.78f, chroma * 0.22f, hue),
+        onSecondary = oklch(0.26f, chroma * 0.20f, hue),
+        secondaryContainer = oklch(0.34f, chroma * 0.20f, hue),
+        onSecondaryContainer = oklch(0.90f, chroma * 0.15f, hue),
+        tertiary = oklch(0.78f, chroma * 0.45f, hue + 60f),
+        onTertiary = oklch(0.26f, chroma * 0.40f, hue + 60f),
+        tertiaryContainer = oklch(0.38f, chroma * 0.40f, hue + 60f),
+        onTertiaryContainer = oklch(0.90f, chroma * 0.25f, hue + 60f),
+        error = ErrorRedDark,
+        onError = ErrorRedOnDark,
+        errorContainer = ErrorRedOnDark,
         onErrorContainer = ErrorRedLight,
-        background = hsl(hue, sat * 0.03f, 0.08f),
-        onBackground = hsl(hue, sat * 0.02f, 0.90f),
-        surface = hsl(hue, sat * 0.03f, 0.08f),
-        onSurface = hsl(hue, sat * 0.02f, 0.90f),
-        surfaceVariant = hsl(hue, sat * 0.04f, 0.15f),
-        onSurfaceVariant = hsl(hue, sat * 0.04f, 0.80f),
-        outline = hsl(hue, sat * 0.04f, 0.45f),
-        outlineVariant = hsl(hue, sat * 0.04f, 0.25f),
+        background = oklch(0.145f, chroma * 0.02f, hueBg),
+        onBackground = oklch(0.92f, chroma * 0.03f, hueBg),
+        surface = oklch(0.145f, chroma * 0.02f, hueBg),
+        onSurface = oklch(0.92f, chroma * 0.03f, hueBg),
+        surfaceVariant = oklch(0.255f, chroma * 0.03f, hueBg),
+        onSurfaceVariant = oklch(0.78f, chroma * 0.04f, hueBg),
+        outline = oklch(0.55f, chroma * 0.04f, hueBg),
+        outlineVariant = oklch(0.32f, chroma * 0.03f, hueBg),
     )
-
-    private fun hsl(hue: Float, saturation: Float, lightness: Float): Color {
-        return Color.hsl(hue.mod(360f), saturation.coerceIn(0f, 1f), lightness.coerceIn(0f, 1f))
-    }
 }

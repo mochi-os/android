@@ -44,7 +44,7 @@ private val LightColorScheme = lightColorScheme(
     error = ErrorRed,
     onError = Neutral99,
     errorContainer = ErrorRedLight,
-    onErrorContainer = ErrorRed,
+    onErrorContainer = ErrorRedDeep,
     background = Neutral99,
     onBackground = Neutral10,
     surface = Neutral99,
@@ -68,9 +68,9 @@ private val DarkColorScheme = darkColorScheme(
     onTertiary = Blue20,
     tertiaryContainer = Blue30,
     onTertiaryContainer = Blue90,
-    error = ErrorRedLight,
-    onError = ErrorRed,
-    errorContainer = ErrorRed,
+    error = ErrorRedDark,
+    onError = ErrorRedOnDark,
+    errorContainer = ErrorRedOnDark,
     onErrorContainer = ErrorRedLight,
     background = Neutral10,
     onBackground = Neutral90,
@@ -107,7 +107,12 @@ fun MochiTheme(
     val colorScheme = when {
         // Server theme takes priority when available
         themeAnchors != null -> {
-            ColorSchemeGenerator.generate(themeAnchors.hue, themeAnchors.chroma, isDark)
+            ColorSchemeGenerator.generate(
+                hue = themeAnchors.hue,
+                chroma = themeAnchors.chroma,
+                hueBg = themeAnchors.hueBg,
+                isDark = isDark,
+            )
         }
         // Android 12+ dynamic color from wallpaper
         Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
