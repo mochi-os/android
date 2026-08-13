@@ -15,7 +15,6 @@ fun versionNameToCode(name: String): Int {
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
@@ -31,7 +30,7 @@ val releaseStoreFile: File? = releaseStorePath?.let(::File)?.takeIf { it.exists(
 
 android {
     namespace = "org.mochios.mochi"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "org.mochios.mochi"
@@ -76,10 +75,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
     }
 
     buildFeatures {

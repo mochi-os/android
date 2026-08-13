@@ -88,7 +88,7 @@ class FeedViewModel @Inject constructor(
     private val savedRepository: SavedRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : ViewModel() {
 
     /** The picked file's real name, for labelling a draft attachment. */

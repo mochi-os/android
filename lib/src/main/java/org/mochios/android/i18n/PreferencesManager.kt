@@ -48,7 +48,7 @@ data class ThemeInfo(
  */
 @Singleton
 class PreferencesManager @Inject internal constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
     private val sessionManager: SessionManager,
     private val api: PreferencesApi,
     private val authRepository: AuthRepository,

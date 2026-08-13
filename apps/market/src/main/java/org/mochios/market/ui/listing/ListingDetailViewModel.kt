@@ -96,7 +96,7 @@ class ListingDetailViewModel @Inject constructor(
     private val savedRepository: SavedRepository,
     private val recentStore: RecentlyViewedStore,
     private val reportedStore: ReportedStore,
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(ListingDetailUiState())

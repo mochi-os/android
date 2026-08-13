@@ -20,7 +20,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.wikis.R
 import org.mochios.wikis.ui.redirects.RedirectsBody
 import org.mochios.wikis.ui.redirects.RedirectsViewModel

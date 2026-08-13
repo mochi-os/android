@@ -36,7 +36,7 @@ class NotificationsUnreadStore @Inject constructor(
     private val repository: NotificationsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 

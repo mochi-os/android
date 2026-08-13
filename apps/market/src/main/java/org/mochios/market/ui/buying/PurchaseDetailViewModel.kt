@@ -51,7 +51,7 @@ sealed interface PurchaseDetailEvent {
 class PurchaseDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: MarketRepository,
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : ViewModel() {
 
     val orderId: String = savedStateHandle.get<String>("orderId").orEmpty()

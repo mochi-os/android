@@ -53,7 +53,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
  */
 @Singleton
 class FileStore @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) {
 
     // ---- Documents ----

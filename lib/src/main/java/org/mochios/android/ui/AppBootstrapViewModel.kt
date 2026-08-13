@@ -97,7 +97,7 @@ class AppBootstrapViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager,
     private val webSocket: MochiWebSocket,
     private val unreadStore: NotificationsUnreadStore,
-    @ApplicationContext private val context: Context
+    @param:ApplicationContext private val context: Context
 ) : ViewModel() {
 
     private val _stage = MutableStateFlow<AuthStage>(AuthStage.Booting)

@@ -6,7 +6,6 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
-    alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.ksp) apply false
@@ -50,9 +49,19 @@ subprojects {
         // of a rule drift, and a @Suppress at each call site would restate the
         // same explanation at each call site. Each entry there carries its own
         // rationale, including why one is scoped rather than disabled.
-        extensions.configure<com.android.build.api.dsl.CommonExtension<*, *, *, *, *, *>>("android") {
-            lint {
-                lintConfig = rootProject.file("lint.xml")
+        // AGP 9 dropped CommonExtension's six type parameters, and the raw
+        // interface no longer resolves the `lint` block, so each plugin's own
+        // extension type is configured instead. Both branches set the same one
+        // policy — the split is a typing detail, not two rules.
+        val lintFile = rootProject.file("lint.xml")
+        plugins.withId("com.android.application") {
+            extensions.configure<com.android.build.api.dsl.ApplicationExtension>("android") {
+                lint { lintConfig = lintFile }
+            }
+        }
+        plugins.withId("com.android.library") {
+            extensions.configure<com.android.build.api.dsl.LibraryExtension>("android") {
+                lint { lintConfig = lintFile }
             }
         }
     }

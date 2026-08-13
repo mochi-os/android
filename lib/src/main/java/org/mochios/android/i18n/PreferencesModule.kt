@@ -16,6 +16,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object PreferencesModule {
 
+    @JvmName("providePreferencesApi")
     @Provides
     @Singleton
     internal fun providePreferencesApi(retrofit: Retrofit): PreferencesApi {

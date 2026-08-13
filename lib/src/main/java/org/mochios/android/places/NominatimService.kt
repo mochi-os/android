@@ -63,7 +63,7 @@ data class NominatimPlace(
 
 @Singleton
 class NominatimService @Inject constructor(
-    @NominatimClient private val client: OkHttpClient
+    @param:NominatimClient private val client: OkHttpClient
 ) {
     companion object {
         private const val BASE = "https://nominatim.openstreetmap.org"
