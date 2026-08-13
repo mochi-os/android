@@ -48,7 +48,7 @@ object Reauth {
     /** Called by PushService when /_/token returns 401 for the given server. */
     fun report401(context: Context, server: String) {
         val n = consecutiveFailures.compute(server) { _, prev -> (prev ?: 0) + 1 }!!
-        Log.w(TAG, "401 from $server (consecutive=$n)")
+        Log.w(TAG, "401 from the user's server (consecutive=$n)")
         if (n >= THRESHOLD) {
             postSignInRequired(context)
         }

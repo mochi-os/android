@@ -16,6 +16,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
+import org.mochios.android.BuildConfig
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 
@@ -79,7 +80,11 @@ object PushTransport {
         client: OkHttpClient,
     ) {
         val server = sessionManager.getServerUrlBlocking()
-        Log.i(TAG, "configure() server=$server")
+        // Which server the user is on is theirs, and this runs on every resume,
+        // so it stays out of a release log. Same reason ApiClient keeps its HTTP
+        // logging to debug builds.
+        Log.i(TAG, "configure() starting")
+        if (BuildConfig.DEBUG) Log.d(TAG, "configure() server=$server")
         if (server.isBlank()) {
             Log.w(TAG, "configure(): blank server URL, bailing")
             return
@@ -91,10 +96,15 @@ object PushTransport {
         val setup = try {
             fetchSetup(authRepository, client, server)
         } catch (e: Exception) {
-            Log.w(TAG, "fetchSetup($server) failed: ${e.javaClass.simpleName}: ${e.message}", e)
+            Log.w(TAG, "fetchSetup failed: ${e.javaClass.simpleName}: ${e.message}", e)
             null
         }
-        Log.i(TAG, "configure() setup response: $setup")
+        // The transport is the decision everything below branches on, and is all
+        // a release log needs. The response body carries firebase_config - the
+        // server admin's project id, app id, sender id and API key - which was
+        // written to logcat verbatim on every resume.
+        Log.i(TAG, "configure() transport=${setup?.optString("transport") ?: "none"}")
+        if (BuildConfig.DEBUG) Log.d(TAG, "configure() setup response: $setup")
 
         if (setup == null) {
             // Offline / server unreachable / 401. We *don't* know whether
