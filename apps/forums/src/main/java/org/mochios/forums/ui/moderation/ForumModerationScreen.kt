@@ -32,7 +32,6 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -41,6 +40,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
@@ -75,6 +75,7 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.forums.R
@@ -928,7 +929,7 @@ private fun AddRestrictionDialog(
                         onDismissRequest = { typeExpanded = false },
                     ) {
                         typeLabels.forEach { (code, label) ->
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(label) },
                                 onClick = {
                                     type = code

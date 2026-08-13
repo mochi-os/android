@@ -24,7 +24,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -33,6 +32,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -48,6 +48,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.projects.R
 import org.mochios.projects.model.Link
 import org.mochios.projects.model.ProjectDetails
@@ -331,12 +332,12 @@ private fun AddLinkSheet(
                     onDismissRequest = { typeExpanded = false }
                 ) {
                     linkTypes.forEach { (key, label) ->
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(label) },
                             onClick = {
                                 selectedType = key
                                 typeExpanded = false
-                            }
+                            },
                         )
                     }
                 }

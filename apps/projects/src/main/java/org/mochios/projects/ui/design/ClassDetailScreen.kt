@@ -30,7 +30,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -40,6 +39,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Switch
@@ -56,6 +56,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectField
@@ -177,22 +178,22 @@ fun ClassDetailScreen(
                 expanded = titleExpanded,
                 onDismissRequest = { titleExpanded = false }
             ) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(defaultReadableLabel) },
                     onClick = {
                         titleFieldId = ""
                         titleExpanded = false
                         viewModel.updateClass(cls.id, title = "")
-                    }
+                    },
                 )
                 fields.forEach { field ->
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(field.name) },
                         onClick = {
                             titleFieldId = field.id
                             titleExpanded = false
                             viewModel.updateClass(cls.id, title = field.id)
-                        }
+                        },
                     )
                 }
             }
@@ -418,12 +419,12 @@ private fun AddFieldDialog(
                         onDismissRequest = { typeExpanded = false }
                     ) {
                         FIELD_TYPE_KEYS.forEach { value ->
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(fieldTypeLabel(value)) },
                                 onClick = {
                                     fieldtype = value
                                     typeExpanded = false
-                                }
+                                },
                             )
                         }
                     }

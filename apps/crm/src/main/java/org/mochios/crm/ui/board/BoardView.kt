@@ -29,12 +29,10 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -58,6 +56,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.board.PagedZoomableBoard
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
@@ -455,28 +455,28 @@ private fun BoardColumn(
                             modifier = Modifier.size(18.dp)
                         )
                     }
-                    DropdownMenu(
+                    MochiDropdownMenu(
                         expanded = showMenu,
                         onDismissRequest = { showMenu = false }
                     ) {
                         if (onRename != null) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.crm_board_rename)) },
-                                leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) },
                                 onClick = {
                                     showMenu = false
                                     showRenameDialog = true
-                                }
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
                             )
                         }
                         if (onDelete != null) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(MochiR.string.common_delete)) },
-                                leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
                                 onClick = {
                                     showMenu = false
                                     onDelete()
-                                }
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                             )
                         }
                     }

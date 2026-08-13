@@ -37,7 +37,6 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -46,6 +45,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
@@ -81,6 +81,7 @@ import org.mochios.android.ui.components.LocationPreviewMap
 import org.mochios.android.ui.components.MapMarkerPoint
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
 import org.mochios.android.files.rememberFileLabel
@@ -204,7 +205,7 @@ fun CreatePostScreen(
                         onDismissRequest = { feedDropdownExpanded = false }
                     ) {
                         if (isLoadingFeeds) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = {
                                     Row(verticalAlignment = Alignment.CenterVertically) {
                                         CircularProgressIndicator(
@@ -215,16 +216,16 @@ fun CreatePostScreen(
                                         Text(stringResource(R.string.feeds_loading_feeds))
                                     }
                                 },
-                                onClick = {}
+                                onClick = {},
                             )
                         } else {
                             availableFeeds.forEach { feed ->
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(feed.name) },
                                     onClick = {
                                         viewModel.setSelectedFeed(feed.fingerprint.ifEmpty { feed.id })
                                         feedDropdownExpanded = false
-                                    }
+                                    },
                                 )
                             }
                         }

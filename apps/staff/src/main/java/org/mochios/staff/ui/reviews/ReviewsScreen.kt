@@ -21,6 +21,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Restore
+import androidx.compose.material.icons.outlined.VisibilityOff
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -28,8 +33,6 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
 import androidx.compose.material3.Button
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -61,6 +64,8 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -235,22 +240,32 @@ private fun FilterBar(
                 Text(label)
                 Icon(Icons.Default.ArrowDropDown, contentDescription = null)
             }
-            DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
                 ReviewStatusFilter.values().forEach { option ->
-                    DropdownMenuItem(
-                        text = {
-                            Text(
-                                when (option) {
-                                    ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
-                                    ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
-                                    ReviewStatusFilter.HIDDEN -> stringResource(R.string.staff_reviews_filter_hidden)
-                                    ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
-                                },
-                            )
-                        },
+                    MochiDropdownMenuItem(
+                        text = { Text(when (option) {
+                            ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
+                            ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
+                            ReviewStatusFilter.HIDDEN -> stringResource(R.string.staff_reviews_filter_hidden)
+                            ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
+                        }) },
                         onClick = {
                             expanded = false
                             onChange(option)
+                        },
+                        trailingIcon = if (current == option) {
+                            { Icon(Icons.Outlined.Check, contentDescription = null) }
+                        } else {
+                            null
+                        },
+                        colors = if (current == option) {
+                            MenuDefaults.itemColors(
+                                textColor = MaterialTheme.colorScheme.primary,
+                                leadingIconColor = MaterialTheme.colorScheme.primary,
+                                trailingIconColor = MaterialTheme.colorScheme.primary,
+                            )
+                        } else {
+                            MenuDefaults.itemColors()
                         },
                     )
                 }
@@ -387,32 +402,35 @@ private fun OverflowMenu(
                 contentDescription = stringResource(R.string.staff_reviews_overflow_actions),
             )
         }
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             if (review.status == "published") {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.staff_reviews_action_hide)) },
                     onClick = {
                         expanded = false
                         onAction(review, "hide")
                     },
+                    leadingIcon = { Icon(Icons.Outlined.VisibilityOff, contentDescription = null) },
                 )
             }
             if (review.status == "hidden" || review.status == "removed") {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.staff_reviews_action_restore)) },
                     onClick = {
                         expanded = false
                         onAction(review, "restore")
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Restore, contentDescription = null) },
                 )
             }
             if (review.status != "removed") {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.staff_reviews_action_remove)) },
                     onClick = {
                         expanded = false
                         onAskRemove(review)
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Block, contentDescription = null) },
                 )
             }
         }

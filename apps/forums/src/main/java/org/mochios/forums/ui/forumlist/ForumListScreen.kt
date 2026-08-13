@@ -19,26 +19,25 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Forum
-import androidx.compose.material.icons.filled.HomeMax
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.HomeMax
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -68,6 +67,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.android.R as MochiR
@@ -119,7 +120,7 @@ fun ForumListScreen(
                                 contentDescription = stringResource(R.string.forums_list_default_sort)
                             )
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showSortMenu,
                             onDismissRequest = { showSortMenu = false }
                         ) {
@@ -132,17 +133,26 @@ fun ForumListScreen(
                                 "top" to R.string.forums_sort_top
                             ).forEach { (key, labelRes) ->
                                 val current = uiState.defaultSort.ifEmpty { "new" }
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(labelRes)) },
-                                    trailingIcon = {
-                                        if (key == current) {
-                                            Icon(Icons.Default.Check, contentDescription = null)
-                                        }
-                                    },
                                     onClick = {
                                         showSortMenu = false
                                         viewModel.setDefaultSort(key)
-                                    }
+                                    },
+                                    trailingIcon = if (key == current) {
+                                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                                    } else {
+                                        null
+                                    },
+                                    colors = if (key == current) {
+                                        MenuDefaults.itemColors(
+                                            textColor = MaterialTheme.colorScheme.primary,
+                                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                                        )
+                                    } else {
+                                        MenuDefaults.itemColors()
+                                    },
                                 )
                             }
                         }
@@ -151,17 +161,17 @@ fun ForumListScreen(
                         IconButton(onClick = { showOverflow = true }) {
                             Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.forums_list_more))
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflow,
                             onDismissRequest = { showOverflow = false }
                         ) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.forums_list_logout)) },
                                 onClick = {
                                     showOverflow = false
                                     onLogout()
                                 },
-                                leadingIcon = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) }
+                                leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                             )
                         }
                     }
@@ -278,13 +288,12 @@ private fun ForumRow(
                 }
             }
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = showMenu,
             onDismissRequest = { showMenu = false }
         ) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.forums_list_add_to_home)) },
-                leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
                 onClick = {
                     showMenu = false
                     // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
@@ -303,15 +312,16 @@ private fun ForumRow(
                         .setIntent(intent)
                         .build()
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
-                }
+                },
+                leadingIcon = { Icon(Icons.Outlined.HomeMax, contentDescription = null) },
             )
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(unsubscribeLabel) },
-                leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
                 onClick = {
                     showMenu = false
                     showUnsubscribeConfirm = true
-                }
+                },
+                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
             )
         }
     }

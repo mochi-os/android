@@ -24,15 +24,15 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.MoreHoriz
-import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Flag
+import androidx.compose.material.icons.outlined.Handshake
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.SkipNext
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -74,6 +74,8 @@ import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.rememberGameWebSocket
@@ -300,62 +302,58 @@ fun GoGameDetailScreen(
                                                 contentDescription = stringResource(R.string.go_action_more),
                                             )
                                         }
-                                        DropdownMenu(
+                                        MochiDropdownMenu(
                                             expanded = menuOpen,
                                             onDismissRequest = { menuOpen = false },
                                         ) {
                                             if (isActive) {
                                                 if (canPass) {
-                                                    DropdownMenuItem(
+                                                    MochiDropdownMenuItem(
                                                         text = { Text(stringResource(R.string.go_action_pass)) },
-                                                        leadingIcon = {
-                                                            Icon(Icons.Default.SkipNext, contentDescription = null)
-                                                        },
-                                                        enabled = !state.isPassing,
                                                         onClick = {
                                                             menuOpen = false
                                                             showPassDialog = true
                                                         },
+                                                        leadingIcon = { Icon(Icons.Outlined.SkipNext, contentDescription = null) },
+                                                        enabled = !state.isPassing,
                                                     )
                                                 }
                                                 if (game.drawOffer != state.myIdentity) {
-                                                    DropdownMenuItem(
+                                                    MochiDropdownMenuItem(
                                                         text = { Text(stringResource(R.string.go_action_offer_draw)) },
-                                                        enabled = !state.isDrawOffering,
                                                         onClick = {
                                                             menuOpen = false
                                                             viewModel.offerDraw(errDrawOffer)
                                                         },
+                                                        leadingIcon = { Icon(Icons.Outlined.Handshake, contentDescription = null) },
+                                                        enabled = !state.isDrawOffering,
                                                     )
                                                 }
-                                                DropdownMenuItem(
+                                                MochiDropdownMenuItem(
                                                     text = { Text(stringResource(R.string.go_action_resign)) },
-                                                    leadingIcon = {
-                                                        Icon(Icons.Default.Flag, contentDescription = null)
-                                                    },
                                                     onClick = {
                                                         menuOpen = false
                                                         showResignDialog = true
                                                     },
+                                                    leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
                                                 )
                                             } else {
-                                                DropdownMenuItem(
+                                                MochiDropdownMenuItem(
                                                     text = { Text(stringResource(R.string.go_action_rematch)) },
-                                                    enabled = !state.isCreatingRematch,
                                                     onClick = {
                                                         menuOpen = false
                                                         viewModel.rematch(errRematch)
                                                     },
+                                                    leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
+                                                    enabled = !state.isCreatingRematch,
                                                 )
-                                                DropdownMenuItem(
+                                                MochiDropdownMenuItem(
                                                     text = { Text(stringResource(R.string.go_action_delete)) },
-                                                    leadingIcon = {
-                                                        Icon(Icons.Default.Delete, contentDescription = null)
-                                                    },
                                                     onClick = {
                                                         menuOpen = false
                                                         showDeleteDialog = true
                                                     },
+                                                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                                                 )
                                             }
                                         }

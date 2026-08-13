@@ -35,39 +35,39 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.outlined.ArrowBack
+import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.BrokenImage
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.DoneAll
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.RssFeed
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -144,6 +144,9 @@ import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuDivider
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.VideoPlayer
 import org.mochios.android.ui.components.rememberServerUrl
@@ -545,7 +548,7 @@ fun FeedScreen(
                                     contentDescription = stringResource(MochiR.string.common_more_options)
                                 )
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = showOverflowMenu,
                                 onDismissRequest = {
                                     showOverflowMenu = false
@@ -554,40 +557,29 @@ fun FeedScreen(
                             ) {
                                 if (showRssSubmenu) {
                                     // Header row taps back to the main menu.
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.feeds_rss_feed)) },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.AutoMirrored.Filled.ArrowBack,
-                                                contentDescription = null
-                                            )
-                                        },
-                                        onClick = { showRssSubmenu = false }
+                                        onClick = { showRssSubmenu = false },
+                                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.ArrowBack, contentDescription = null) },
                                     )
-                                    HorizontalDivider()
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(R.string.feeds_rss_mode_posts))
-                                        },
+                                    MochiDropdownMenuDivider()
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_rss_mode_posts)) },
                                         onClick = {
                                             viewModel.copyRssUrl("posts")
                                             showRssSubmenu = false
                                             showOverflowMenu = false
-                                        }
-                                    )
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(
-                                                stringResource(
-                                                    R.string.feeds_rss_mode_posts_comments
-                                                )
-                                            )
                                         },
+                                    )
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(
+                                                    R.string.feeds_rss_mode_posts_comments
+                                                )) },
                                         onClick = {
                                             viewModel.copyRssUrl("all")
                                             showRssSubmenu = false
                                             showOverflowMenu = false
-                                        }
+                                        },
                                     )
                                 } else {
                                     // Sort options — listed inline (no nested menu)
@@ -607,52 +599,50 @@ fun FeedScreen(
                                         "top" to R.string.feeds_sort_top,
                                     )
                                     sortOptions.forEach { (value, labelRes) ->
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(stringResource(labelRes)) },
+                                            onClick = {
+                                                viewModel.setSort(value)
+                                                showOverflowMenu = false
+                                            },
                                             leadingIcon = {
                                                 if (currentSort == value) {
-                                                    Icon(Icons.Default.Check, contentDescription = null)
+                                                    Icon(Icons.Outlined.Check, contentDescription = null)
                                                 } else {
                                                     Spacer(Modifier.size(24.dp))
                                                 }
                                             },
-                                            onClick = {
-                                                viewModel.setSort(value)
-                                                showOverflowMenu = false
-                                            }
                                         )
                                     }
 
-                                    HorizontalDivider()
+                                    MochiDropdownMenuDivider()
 
                                     // Unread-only toggle. Tapping flips state; the
                                     // leading checkmark indicates the current value.
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.feeds_unread_only)) },
+                                        onClick = {
+                                            viewModel.setUnreadOnly(!unreadOnly)
+                                            showOverflowMenu = false
+                                        },
                                         leadingIcon = {
                                             if (unreadOnly) {
-                                                Icon(Icons.Default.Check, contentDescription = null)
+                                                Icon(Icons.Outlined.Check, contentDescription = null)
                                             } else {
                                                 Spacer(Modifier.size(24.dp))
                                             }
                                         },
-                                        onClick = {
-                                            viewModel.setUnreadOnly(!unreadOnly)
-                                            showOverflowMenu = false
-                                        }
                                     )
 
-                                    HorizontalDivider()
+                                    MochiDropdownMenuDivider()
 
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.feeds_mark_all_read)) },
-                                        leadingIcon = {
-                                            Icon(Icons.Default.DoneAll, contentDescription = null)
-                                        },
                                         onClick = {
                                             viewModel.markAllRead { feedListViewModel.refreshSilently() }
                                             showOverflowMenu = false
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.DoneAll, contentDescription = null) },
                                     )
                                     // Sources are only editable by managers, so
                                     // hide the entry for plain subscribers. In the
@@ -676,11 +666,8 @@ fun FeedScreen(
                                         permissions.manage
                                     }
                                     if (sourcesAllowed && sourcesFeedId.isNotEmpty()) {
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_tab_sources)) },
-                                            leadingIcon = {
-                                                Icon(Icons.Default.Link, contentDescription = null)
-                                            },
                                             onClick = {
                                                 // Open the Sources list scrolled to the
                                                 // source of the post currently in view.
@@ -689,7 +676,8 @@ fun FeedScreen(
                                                     sourcesPost?.source?.url,
                                                 )
                                                 showOverflowMenu = false
-                                            }
+                                            },
+                                            leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
                                         )
                                     }
                                     // Per-feed settings stay hidden on the
@@ -697,60 +685,44 @@ fun FeedScreen(
                                     // Subscribers get in too: their view is the
                                     // read-only identity card plus unsubscribe.
                                     if (!viewModel.isAllFeeds) {
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_settings)) },
-                                            leadingIcon = {
-                                                Icon(Icons.Default.Settings, contentDescription = null)
-                                            },
                                             onClick = {
                                                 onNavigateToSettings(viewModel.feedId)
                                                 showOverflowMenu = false
-                                            }
+                                            },
+                                            leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                         )
                                     }
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.feeds_rss_feed)) },
-                                        leadingIcon = {
-                                            Icon(Icons.Default.RssFeed, contentDescription = null)
-                                        },
-                                        trailingIcon = {
-                                            Icon(
-                                                Icons.AutoMirrored.Filled.KeyboardArrowRight,
-                                                contentDescription = null
-                                            )
-                                        },
-                                        onClick = { showRssSubmenu = true }
+                                        onClick = { showRssSubmenu = true },
+                                        leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
+                                        trailingIcon = { Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, contentDescription = null) },
                                     )
                                     // Sharing a feed is an owner's call, so this
                                     // sits behind the same gate as Settings. The
                                     // aggregate has no single feed to share.
                                     if (!viewModel.isAllFeeds && permissions.manage) {
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_link)) },
-                                            leadingIcon = {
-                                                Icon(Icons.Default.Link, contentDescription = null)
-                                            },
                                             onClick = {
                                                 viewModel.shareLink()
                                                 showOverflowMenu = false
-                                            }
+                                            },
+                                            leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
                                         )
                                     }
                                     // Unsubscribe only for member feeds — owners/admins
                                     // manage (and delete) the feed instead.
                                     if (!viewModel.isAllFeeds && !permissions.manage) {
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(stringResource(R.string.feeds_unsubscribe)) },
-                                            leadingIcon = {
-                                                Icon(
-                                                    Icons.AutoMirrored.Filled.Logout,
-                                                    contentDescription = null
-                                                )
-                                            },
                                             onClick = {
                                                 pendingUnsubscribe = true
                                                 showOverflowMenu = false
-                                            }
+                                            },
+                                            leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                         )
                                     }
                                 }

@@ -26,15 +26,13 @@ import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
-import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -73,6 +71,8 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
@@ -172,22 +172,22 @@ fun WikiListScreen(
                                     contentDescription = stringResource(MochiR.string.common_more_options),
                                 )
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = showOverflow,
                                 onDismissRequest = {
                                     showOverflow = false
                                     rssSubmenuOpen = false
                                 },
                             ) {
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.wikis_rss_menu)) },
+                                    onClick = { rssSubmenuOpen = !rssSubmenuOpen },
                                     leadingIcon = {
-                                        Icon(Icons.Default.RssFeed, contentDescription = null)
+                                        Icon(Icons.Outlined.RssFeed, contentDescription = null)
                                     },
                                     trailingIcon = {
                                         Text(stringResource(R.string.wikis_rss_menu_trailing))
                                     },
-                                    onClick = { rssSubmenuOpen = !rssSubmenuOpen },
                                 )
                                 if (rssSubmenuOpen) {
                                     RssSubmenu(
@@ -275,15 +275,15 @@ fun WikiListScreen(
 @Composable
 private fun RssSubmenu(onSelect: (String) -> Unit) {
     Column(modifier = Modifier.padding(start = 16.dp)) {
-        DropdownMenuItem(
+        MochiDropdownMenuItem(
             text = { Text(stringResource(R.string.wikis_rss_changes)) },
             onClick = { onSelect("changes") },
         )
-        DropdownMenuItem(
+        MochiDropdownMenuItem(
             text = { Text(stringResource(R.string.wikis_rss_comments)) },
             onClick = { onSelect("comments") },
         )
-        DropdownMenuItem(
+        MochiDropdownMenuItem(
             text = { Text(stringResource(R.string.wikis_rss_both)) },
             onClick = { onSelect("all") },
         )
@@ -403,7 +403,7 @@ private fun WikiCard(
                             contentDescription = stringResource(MochiR.string.common_more_options),
                         )
                     }
-                    DropdownMenu(
+                    MochiDropdownMenu(
                         expanded = showMenu,
                         onDismissRequest = { showMenu = false },
                     ) {
@@ -412,13 +412,13 @@ private fun WikiCard(
                         } else {
                             stringResource(R.string.wikis_unsubscribe_action)
                         }
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(unsubLabel) },
-                            enabled = !isUnsubscribing,
                             onClick = {
                                 showMenu = false
                                 onUnsubscribe()
                             },
+                            enabled = !isUnsubscribing,
                         )
                     }
                 }

@@ -18,13 +18,13 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -41,6 +41,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -145,7 +146,7 @@ fun IssueRefundDialog(
                         onDismissRequest = { reasonOpen = false },
                     ) {
                         for ((wireValue, labelRes) in SELLER_REFUND_REASONS) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(labelRes)) },
                                 onClick = {
                                     reason = wireValue

@@ -22,7 +22,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Chat
-import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Menu
@@ -33,17 +33,17 @@ import androidx.compose.material.icons.filled.PersonRemove
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -74,6 +74,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.people.R
 import org.mochios.people.model.Friend
 import org.mochios.people.ui.components.PeopleSidebar
@@ -182,17 +184,17 @@ fun FriendsScreen(
                                     contentDescription = stringResource(R.string.people_friends_more),
                                 )
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false },
                             ) {
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(MochiR.string.common_logout)) },
-                                    leadingIcon = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) },
                                     onClick = {
                                         showOverflow = false
                                         onLogout()
                                     },
+                                    leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                 )
                             }
                         }
@@ -260,22 +262,60 @@ fun FriendsScreen(
                                     )
                                     Icon(Icons.Default.ArrowDropDown, contentDescription = null)
                                 }
-                                DropdownMenu(
+                                MochiDropdownMenu(
                                     expanded = sortMenuOpen,
                                     onDismissRequest = { sortMenuOpen = false },
                                 ) {
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.people_friends_sort_name)) },
                                         onClick = {
                                             viewModel.setSortBy(FriendSortBy.NAME)
                                             sortMenuOpen = false
                                         },
+                                        trailingIcon = if (uiState.sortBy == FriendSortBy.NAME) {
+                                            {
+                                                Icon(
+                                                    Icons.Outlined.Check,
+                                                    contentDescription = null,
+                                                )
+                                            }
+                                        } else {
+                                            null
+                                        },
+                                        colors = if (uiState.sortBy == FriendSortBy.NAME) {
+                                            MenuDefaults.itemColors(
+                                                textColor = MaterialTheme.colorScheme.primary,
+                                                leadingIconColor = MaterialTheme.colorScheme.primary,
+                                                trailingIconColor = MaterialTheme.colorScheme.primary,
+                                            )
+                                        } else {
+                                            MenuDefaults.itemColors()
+                                        },
                                     )
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.people_friends_sort_recent)) },
                                         onClick = {
                                             viewModel.setSortBy(FriendSortBy.RECENT)
                                             sortMenuOpen = false
+                                        },
+                                        trailingIcon = if (uiState.sortBy == FriendSortBy.RECENT) {
+                                            {
+                                                Icon(
+                                                    Icons.Outlined.Check,
+                                                    contentDescription = null,
+                                                )
+                                            }
+                                        } else {
+                                            null
+                                        },
+                                        colors = if (uiState.sortBy == FriendSortBy.RECENT) {
+                                            MenuDefaults.itemColors(
+                                                textColor = MaterialTheme.colorScheme.primary,
+                                                leadingIconColor = MaterialTheme.colorScheme.primary,
+                                                trailingIconColor = MaterialTheme.colorScheme.primary,
+                                            )
+                                        } else {
+                                            MenuDefaults.itemColors()
                                         },
                                     )
                                 }

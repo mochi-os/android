@@ -18,14 +18,14 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -40,6 +40,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.text.KeyboardOptions
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
 import org.mochios.staff.ui.categories.CategoryDialogMode
@@ -200,24 +202,52 @@ private fun ParentDropdown(
                 )
                 Icon(Icons.Default.ArrowDropDown, contentDescription = null)
             }
-            DropdownMenu(
+            MochiDropdownMenu(
                 expanded = expanded,
                 onDismissRequest = { expanded = false },
             ) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.staff_categories_dialog_parent_none)) },
                     onClick = {
                         expanded = false
                         onChange("")
                     },
+                    trailingIcon = if (current == "") {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (current == "") {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
                 )
                 val options = categories.filter { it.id != excludeId }
                 options.forEach { cat ->
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(cat.name) },
                         onClick = {
                             expanded = false
                             onChange(cat.id)
+                        },
+                        trailingIcon = if (current == cat.id) {
+                            { Icon(Icons.Outlined.Check, contentDescription = null) }
+                        } else {
+                            null
+                        },
+                        colors = if (current == cat.id) {
+                            MenuDefaults.itemColors(
+                                textColor = MaterialTheme.colorScheme.primary,
+                                leadingIconColor = MaterialTheme.colorScheme.primary,
+                                trailingIconColor = MaterialTheme.colorScheme.primary,
+                            )
+                        } else {
+                            MenuDefaults.itemColors()
                         },
                     )
                 }

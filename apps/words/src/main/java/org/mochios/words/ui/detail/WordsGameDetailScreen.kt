@@ -26,17 +26,15 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.MoreHoriz
-import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.Shuffle
-import androidx.compose.material.icons.filled.SkipNext
-import androidx.compose.material.icons.filled.SwapHoriz
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Flag
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.Shuffle
+import androidx.compose.material.icons.outlined.SkipNext
+import androidx.compose.material.icons.outlined.SwapHoriz
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -89,6 +87,8 @@ import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ws.rememberGameWebSocket
 import org.mochios.words.R
 import org.mochios.words.engine.BOARD_SIZE
@@ -717,31 +717,27 @@ private fun WordsGameHeader(
                         modifier = Modifier.size(20.dp),
                     )
                 }
-                DropdownMenu(
+                MochiDropdownMenu(
                     expanded = menuOpen,
                     onDismissRequest = { menuOpen = false },
                 ) {
                     if (isActive) {
                         if (isMyTurn && !exchangeMode) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.words_detail_action_shuffle)) },
                                 onClick = { menuOpen = false; onShuffle() },
-                                leadingIcon = {
-                                    Icon(Icons.Filled.Shuffle, contentDescription = null)
-                                },
+                                leadingIcon = { Icon(Icons.Outlined.Shuffle, contentDescription = null) },
                             )
                         }
                         if (isMyTurn && pendingCount == 0) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.words_detail_action_pass)) },
                                 onClick = { menuOpen = false; onPass() },
-                                leadingIcon = {
-                                    Icon(Icons.Filled.SkipNext, contentDescription = null)
-                                },
+                                leadingIcon = { Icon(Icons.Outlined.SkipNext, contentDescription = null) },
                             )
                         }
                         if (isMyTurn) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = {
                                     val label = if (exchangeMode) {
                                         stringResource(R.string.words_detail_action_cancel_exchange)
@@ -752,32 +748,26 @@ private fun WordsGameHeader(
                                 },
                                 onClick = { menuOpen = false; onToggleExchange() },
                                 leadingIcon = {
-                                    Icon(Icons.Filled.SwapHoriz, contentDescription = null)
+                                    Icon(Icons.Outlined.SwapHoriz, contentDescription = null)
                                 },
                             )
                         }
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.words_detail_action_resign)) },
                             onClick = { menuOpen = false; onResign() },
-                            leadingIcon = {
-                                Icon(Icons.Filled.Flag, contentDescription = null)
-                            },
+                            leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
                         )
                     } else {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.words_detail_action_rematch)) },
                             onClick = { menuOpen = false; onRematch() },
+                            leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
                             enabled = !isRematchInflight,
-                            leadingIcon = {
-                                Icon(Icons.Filled.Refresh, contentDescription = null)
-                            },
                         )
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.words_detail_action_delete)) },
                             onClick = { menuOpen = false; onDelete() },
-                            leadingIcon = {
-                                Icon(Icons.Filled.Delete, contentDescription = null)
-                            },
+                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                         )
                     }
                 }

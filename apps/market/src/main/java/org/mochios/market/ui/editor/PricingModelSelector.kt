@@ -18,17 +18,17 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Event
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
@@ -49,6 +49,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.text.KeyboardOptions
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -206,16 +208,30 @@ private fun CurrencyDropdown(
                 .fillMaxWidth()
                 .menuAnchor(),
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
             Currency.entries.forEach { c ->
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(c.name) },
                     onClick = {
                         onChange(c)
                         expanded = false
+                    },
+                    trailingIcon = if (currency == c) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (currency == c) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
                     },
                 )
             }
@@ -248,17 +264,45 @@ private fun IntervalDropdown(
                 .fillMaxWidth()
                 .menuAnchor(),
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.market_editor_interval_monthly)) },
                 onClick = { onChange(Interval.MONTHLY); expanded = false },
+                trailingIcon = if (interval == Interval.MONTHLY) {
+                    { Icon(Icons.Outlined.Check, contentDescription = null) }
+                } else {
+                    null
+                },
+                colors = if (interval == Interval.MONTHLY) {
+                    MenuDefaults.itemColors(
+                        textColor = MaterialTheme.colorScheme.primary,
+                        leadingIconColor = MaterialTheme.colorScheme.primary,
+                        trailingIconColor = MaterialTheme.colorScheme.primary,
+                    )
+                } else {
+                    MenuDefaults.itemColors()
+                },
             )
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.market_editor_interval_yearly)) },
                 onClick = { onChange(Interval.YEARLY); expanded = false },
+                trailingIcon = if (interval == Interval.YEARLY) {
+                    { Icon(Icons.Outlined.Check, contentDescription = null) }
+                } else {
+                    null
+                },
+                colors = if (interval == Interval.YEARLY) {
+                    MenuDefaults.itemColors(
+                        textColor = MaterialTheme.colorScheme.primary,
+                        leadingIconColor = MaterialTheme.colorScheme.primary,
+                        trailingIconColor = MaterialTheme.colorScheme.primary,
+                    )
+                } else {
+                    MenuDefaults.itemColors()
+                },
             )
         }
     }
@@ -285,14 +329,28 @@ private fun DurationDropdown(
                 .fillMaxWidth()
                 .menuAnchor(),
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
             AUCTION_DURATIONS.forEach { d ->
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_editor_days, d)) },
                     onClick = { onChange(d); expanded = false },
+                    trailingIcon = if (days == d) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (days == d) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
                 )
             }
         }

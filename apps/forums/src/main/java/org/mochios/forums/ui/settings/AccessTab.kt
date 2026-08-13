@@ -29,7 +29,6 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -38,6 +37,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
@@ -61,6 +61,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.AccessRule
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.Section
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
@@ -284,7 +285,7 @@ private fun AccessRuleRow(
                     onDismissRequest = { expanded = false },
                 ) {
                     levels.forEach { level ->
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(accessLevelLabel(level)) },
                             onClick = {
                                 expanded = false
@@ -549,7 +550,7 @@ private fun AddAccessDialog(
                             onDismissRequest = { levelExpanded = false },
                         ) {
                             levels.forEach { code ->
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(accessLevelLabel(code)) },
                                     onClick = {
                                         level = code

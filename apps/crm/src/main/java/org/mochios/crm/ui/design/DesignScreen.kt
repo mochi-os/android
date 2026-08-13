@@ -26,16 +26,14 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.Upload
 import androidx.compose.material.icons.filled.UploadFile
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Upload
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -69,6 +67,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.files.shareExportFile
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.crm.R
 import org.mochios.crm.model.Template
 import org.mochios.android.R as MochiR
@@ -160,26 +160,26 @@ fun DesignScreen(
                         IconButton(onClick = { showOverflowMenu = true }) {
                             Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.crm_design_more_options))
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflowMenu,
                             onDismissRequest = { showOverflowMenu = false }
                         ) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.crm_design_export)) },
-                                leadingIcon = { Icon(Icons.Default.Download, contentDescription = null) },
                                 onClick = {
                                     showOverflowMenu = false
                                     viewModel.exportDesign()
-                                }
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Download, contentDescription = null) },
                             )
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.crm_design_import)) },
-                                leadingIcon = { Icon(Icons.Default.Upload, contentDescription = null) },
                                 onClick = {
                                     showOverflowMenu = false
                                     showImportDialog = true
                                     viewModel.loadTemplates()
-                                }
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Upload, contentDescription = null) },
                             )
                         }
                     }

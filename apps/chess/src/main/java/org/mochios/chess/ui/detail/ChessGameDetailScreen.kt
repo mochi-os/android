@@ -25,16 +25,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Flag
-import androidx.compose.material.icons.filled.Handshake
 import androidx.compose.material.icons.filled.MoreHoriz
-import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Flag
+import androidx.compose.material.icons.outlined.Handshake
+import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -82,6 +80,8 @@ import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.GameWsEvent
 import org.mochios.android.ws.GameWsStatus
@@ -518,73 +518,49 @@ private fun GameActionsMenu(
                 modifier = Modifier.size(20.dp),
             )
         }
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
             if (game.status == "active") {
                 if (game.drawOffer != myIdentity) {
-                    DropdownMenuItem(
-                        leadingIcon = {
-                            Icon(
-                                imageVector = Icons.Filled.Handshake,
-                                contentDescription = null,
-                                modifier = Modifier.size(18.dp),
-                            )
-                        },
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.chess_offer_draw)) },
-                    enabled = !drawOffering,
                         onClick = {
                             expanded = false
                             onOfferDraw()
                         },
+                        leadingIcon = { Icon(Icons.Outlined.Handshake, contentDescription = null) },
+                        enabled = !drawOffering,
                     )
                 }
-                DropdownMenuItem(
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Filled.Flag,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
-                        )
-                    },
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.chess_resign)) },
-                    enabled = !resigning,
                     onClick = {
                         expanded = false
                         onResign()
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
+                    enabled = !resigning,
                 )
             } else {
-                DropdownMenuItem(
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Filled.Refresh,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
-                        )
-                    },
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.chess_rematch)) },
-                    enabled = !rematching,
                     onClick = {
                         expanded = false
                         onRematch()
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
+                    enabled = !rematching,
                 )
-                DropdownMenuItem(
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Filled.Delete,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
-                        )
-                    },
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.chess_delete_game)) },
-                    enabled = !deleting,
                     onClick = {
                         expanded = false
                         onDelete()
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                    enabled = !deleting,
                 )
             }
         }

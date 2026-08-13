@@ -29,12 +29,11 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PersonAddAlt
 import androidx.compose.material.icons.filled.PersonOff
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -68,6 +67,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.ui.components.PeopleSidebar
@@ -149,16 +150,17 @@ fun InvitationsScreen(
                                 contentDescription = stringResource(MochiR.string.common_more_options),
                             )
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflow,
                             onDismissRequest = { showOverflow = false },
                         ) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.people_invite_settings)) },
                                 onClick = {
                                     showOverflow = false
                                     viewModel.openSettings()
                                 },
+                                leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                             )
                         }
                     }

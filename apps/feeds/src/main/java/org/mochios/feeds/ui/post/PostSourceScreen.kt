@@ -37,20 +37,20 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.OpenInBrowser
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ChatBubbleOutline
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.BottomSheetScaffold
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -88,6 +88,8 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.CommentItem
@@ -221,15 +223,12 @@ fun PostSourceScreen(
                                 contentDescription = stringResource(MochiR.string.common_more_options)
                             )
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflowMenu,
                             onDismissRequest = { showOverflowMenu = false }
                         ) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.feeds_open_in_browser)) },
-                                leadingIcon = {
-                                    Icon(Icons.Default.OpenInBrowser, contentDescription = null)
-                                },
                                 onClick = {
                                     showOverflowMenu = false
                                     webUri(sourceUrl)?.let { uri ->
@@ -239,7 +238,8 @@ fun PostSourceScreen(
                                             // no browser
                                         }
                                     }
-                                }
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.OpenInBrowser, contentDescription = null) },
                             )
                             if (permissions.manage) {
                                 // Sources is manager-only, like the feed screen's
@@ -248,40 +248,35 @@ fun PostSourceScreen(
                                 // to — not the article URL in this screen's
                                 // sourceUrl parameter.
                                 post?.source?.url?.takeIf { it.isNotEmpty() }?.let { ingestionUrl ->
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.feeds_tab_sources)) },
-                                        leadingIcon = {
-                                            Icon(Icons.Default.Link, contentDescription = null)
-                                        },
                                         onClick = {
                                             showOverflowMenu = false
                                             onNavigateToSources(viewModel.feedId, ingestionUrl)
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
                                     )
                                 }
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(MochiR.string.common_edit)) },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.Edit, contentDescription = null)
-                                    },
                                     onClick = {
                                         showOverflowMenu = false
                                         onEditPost(viewModel.feedId, viewModel.postId)
-                                    }
-                                )
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.common_delete)) },
-                                    leadingIcon = {
-                                        Icon(
-                                            Icons.Default.Delete,
-                                            contentDescription = null,
-                                            tint = MaterialTheme.colorScheme.error
-                                        )
                                     },
+                                    leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
+                                )
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.common_delete)) },
                                     onClick = {
                                         showOverflowMenu = false
                                         showDeleteDialog = true
-                                    }
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                                    colors = MenuDefaults.itemColors(
+                                        textColor = MaterialTheme.colorScheme.error,
+                                        leadingIconColor = MaterialTheme.colorScheme.error,
+                                        trailingIconColor = MaterialTheme.colorScheme.error,
+                                    ),
                                 )
                             }
                         }

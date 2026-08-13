@@ -27,10 +27,9 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.foundation.border
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.outlined.SwapHoriz
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -55,6 +54,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -254,16 +255,17 @@ fun BoardCard(
                                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.projects_move_to_column)) },
                                     onClick = {
                                         showOverflow = false
                                         showMoveSheet = true
-                                    }
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.SwapHoriz, contentDescription = null) },
                                 )
                             }
                         }

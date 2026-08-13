@@ -12,11 +12,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -29,6 +28,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 import org.mochios.market.model.ReportReason
 
@@ -111,12 +112,12 @@ fun ReportListingDialog(
                             .menuAnchor()
                             .fillMaxWidth(),
                     )
-                    DropdownMenu(
+                    MochiDropdownMenu(
                         expanded = expanded,
                         onDismissRequest = { expanded = false },
                     ) {
                         REPORT_REASONS.forEach { (reason, labelRes) ->
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(labelRes)) },
                                 onClick = {
                                     selectedReason = reason

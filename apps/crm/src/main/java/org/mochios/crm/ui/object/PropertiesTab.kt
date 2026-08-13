@@ -32,7 +32,6 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -41,6 +40,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -61,6 +61,7 @@ import androidx.compose.ui.unit.dp
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.mochios.android.model.User
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.PersonPicker
 import org.mochios.crm.R
 import org.mochios.android.i18n.LocalFormat
@@ -315,7 +316,7 @@ private fun ParentPicker(
                     .padding(horizontal = 8.dp, vertical = 4.dp)
             )
             // (no parent) option
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = {
                     Text(
                         text = stringResource(R.string.crm_parent_none),
@@ -326,20 +327,20 @@ private fun ParentPicker(
                     onSelect("")
                     expanded = false
                     query = ""
-                }
+                },
             )
             val q = query.trim().lowercase()
             parentOptions
                 .map { it to objectDisplayTitle(it, crmDetails, untitled) }
                 .filter { (_, title) -> q.isEmpty() || title.lowercase().contains(q) }
                 .forEach { (parentObj, title) ->
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(title) },
                         onClick = {
                             onSelect(parentObj.id)
                             expanded = false
                             query = ""
-                        }
+                        },
                     )
                 }
         }
@@ -487,17 +488,17 @@ internal fun FieldEditor(
                                 onDismissRequest = { expanded = false }
                             ) {
                                 options.sortedBy { it.rank }.forEach { option ->
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(option.name) },
+                                        onClick = {
+                                            onValueChange(option.id)
+                                            expanded = false
+                                        },
                                         leadingIcon = if (option.colour.isNotBlank()) {
                                             { OptionColourSwatch(option.colour) }
                                         } else {
                                             null
                                         },
-                                        onClick = {
-                                            onValueChange(option.id)
-                                            expanded = false
-                                        }
                                     )
                                 }
                             }

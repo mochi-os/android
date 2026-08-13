@@ -18,9 +18,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Repeat
+import androidx.compose.material.icons.outlined.Cancel
+import androidx.compose.material.icons.outlined.Pause
+import androidx.compose.material.icons.outlined.PlayArrow
+import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -48,6 +50,8 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -206,28 +210,32 @@ private fun SubscriptionRow(
                     contentDescription = stringResource(R.string.market_subscriptions_actions_label),
                 )
             }
-            DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+            MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                 if (sub.status == SubscriptionStatus.ACTIVE && sub.cancelled == 0L) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.market_subscriptions_action_pause)) },
                         onClick = { menu = false; onPause() },
+                        leadingIcon = { Icon(Icons.Outlined.Pause, contentDescription = null) },
                     )
                 }
                 if (sub.status == SubscriptionStatus.PAUSED && sub.cancelled == 0L) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.market_subscriptions_action_resume)) },
                         onClick = { menu = false; onResume() },
+                        leadingIcon = { Icon(Icons.Outlined.PlayArrow, contentDescription = null) },
                     )
                 }
                 if (sub.cancelled > 0L && sub.status != SubscriptionStatus.CANCELLED) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.market_subscriptions_action_reactivate)) },
                         onClick = { menu = false; onReactivate() },
+                        leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
                     )
                 } else if (sub.status != SubscriptionStatus.CANCELLED && sub.cancelled == 0L) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.market_subscriptions_action_cancel)) },
                         onClick = { menu = false; onCancelRequested() },
+                        leadingIcon = { Icon(Icons.Outlined.Cancel, contentDescription = null) },
                     )
                 }
             }

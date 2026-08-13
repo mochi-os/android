@@ -38,7 +38,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -47,6 +46,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
@@ -73,6 +73,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Source
 import org.mochios.android.i18n.LocalFormat
@@ -531,12 +532,12 @@ private fun AddSourceDialog(
                         onDismissRequest = { typeExpanded = false }
                     ) {
                         typeOptions.forEach { (value, label) ->
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(label) },
                                 onClick = {
                                     type = value
                                     typeExpanded = false
-                                }
+                                },
                             )
                         }
                     }

@@ -23,11 +23,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.DeleteSweep
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -57,6 +56,8 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -97,16 +98,17 @@ fun NotificationsScreen(
                                 contentDescription = stringResource(R.string.common_more_options),
                             )
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflow,
                             onDismissRequest = { showOverflow = false },
                         ) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.notifications_clear_all)) },
                                 onClick = {
                                     showOverflow = false
                                     showClearConfirm = true
                                 },
+                                leadingIcon = { Icon(Icons.Outlined.DeleteSweep, contentDescription = null) },
                             )
                         }
                     }

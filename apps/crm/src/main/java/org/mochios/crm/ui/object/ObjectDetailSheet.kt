@@ -16,13 +16,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -49,6 +47,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
@@ -192,22 +192,17 @@ fun ObjectDetailSheet(
                             IconButton(onClick = { showOverflow = true }) {
                                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(MochiR.string.common_delete)) },
                                     onClick = {
                                         showOverflow = false
                                         showDeleteConfirm = true
                                     },
-                                    leadingIcon = {
-                                        Icon(
-                                            Icons.Default.Delete,
-                                            contentDescription = null
-                                        )
-                                    }
+                                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                                 )
                             }
                         }

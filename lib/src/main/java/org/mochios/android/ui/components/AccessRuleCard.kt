@@ -17,14 +17,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -115,13 +115,27 @@ fun AccessRuleCard(
                         },
                         colors = chipColors,
                     )
-                    DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                    MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
                         levels.forEach { level ->
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(levelLabel(level)) },
                                 onClick = {
                                     expanded = false
                                     if (level != rule.operation) onLevelChange(level)
+                                },
+                                trailingIcon = if (rule.operation == level) {
+                                    { Icon(Icons.Outlined.Check, contentDescription = null) }
+                                } else {
+                                    null
+                                },
+                                colors = if (rule.operation == level) {
+                                    MenuDefaults.itemColors(
+                                        textColor = MaterialTheme.colorScheme.primary,
+                                        leadingIconColor = MaterialTheme.colorScheme.primary,
+                                        trailingIconColor = MaterialTheme.colorScheme.primary,
+                                    )
+                                } else {
+                                    MenuDefaults.itemColors()
                                 },
                             )
                         }

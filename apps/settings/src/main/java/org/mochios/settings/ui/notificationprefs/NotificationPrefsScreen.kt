@@ -25,18 +25,18 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -65,6 +65,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.DestinationRow
@@ -396,20 +398,48 @@ private fun TopicRow(
                     val current = categories.firstOrNull { it.id == topic.category }
                     Text(current?.label ?: stringResource(R.string.notifprefs_unassigned))
                 }
-                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    DropdownMenuItem(
+                MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.notifprefs_unassigned)) },
                         onClick = {
                             menu = false
                             onSetCategory(topic, null)
                         },
+                        trailingIcon = if (topic.category == null) {
+                            { Icon(Icons.Outlined.Check, contentDescription = null) }
+                        } else {
+                            null
+                        },
+                        colors = if (topic.category == null) {
+                            MenuDefaults.itemColors(
+                                textColor = MaterialTheme.colorScheme.primary,
+                                leadingIconColor = MaterialTheme.colorScheme.primary,
+                                trailingIconColor = MaterialTheme.colorScheme.primary,
+                            )
+                        } else {
+                            MenuDefaults.itemColors()
+                        },
                     )
                     for (cat in categories) {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(cat.label) },
                             onClick = {
                                 menu = false
                                 onSetCategory(topic, cat.id)
+                            },
+                            trailingIcon = if (topic.category == cat.id) {
+                                { Icon(Icons.Outlined.Check, contentDescription = null) }
+                            } else {
+                                null
+                            },
+                            colors = if (topic.category == cat.id) {
+                                MenuDefaults.itemColors(
+                                    textColor = MaterialTheme.colorScheme.primary,
+                                    leadingIconColor = MaterialTheme.colorScheme.primary,
+                                    trailingIconColor = MaterialTheme.colorScheme.primary,
+                                )
+                            } else {
+                                MenuDefaults.itemColors()
                             },
                         )
                     }
@@ -476,9 +506,9 @@ private fun DeleteCategoryDialog(
                         val cur = others.firstOrNull { it.id == target }
                         Text(cur?.label ?: "")
                     }
-                    DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                         for (c in others) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(c.label) },
                                 onClick = {
                                     target = c.id

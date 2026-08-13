@@ -30,7 +30,6 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -38,6 +37,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -63,6 +63,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.ui.`object`.FieldEditor
@@ -379,7 +380,7 @@ fun CreateObjectScreen(
                                     onDismissRequest = { classExpanded = false }
                                 ) {
                                     classes.forEach { cls ->
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(cls.name) },
                                             onClick = {
                                                 selectedClassId = cls.id
@@ -388,7 +389,7 @@ fun CreateObjectScreen(
                                                 // no longer be allowed.
                                                 selectedParentId = null
                                                 classExpanded = false
-                                            }
+                                            },
                                         )
                                     }
                                 }
@@ -433,12 +434,12 @@ fun CreateObjectScreen(
                                     onDismissRequest = { parentExpanded = false }
                                 ) {
                                     parentCandidates.forEach { candidate ->
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(parentLabel(candidate)) },
                                             onClick = {
                                                 selectedParentId = candidate.id
                                                 parentExpanded = false
-                                            }
+                                            },
                                         )
                                     }
                                 }

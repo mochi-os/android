@@ -19,12 +19,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Group
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -52,6 +52,8 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.ui.components.LocalStaffMe
@@ -274,13 +276,27 @@ private fun RoleDropdown(
             Text(label)
             Icon(Icons.Default.ArrowDropDown, contentDescription = null)
         }
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             ROLE_OPTIONS.forEach { value ->
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(roleLabel(value)) },
                     onClick = {
                         expanded = false
                         if (value != current) onChange(value)
+                    },
+                    trailingIcon = if (current == value) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (current == value) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
                     },
                 )
             }

@@ -19,8 +19,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.DriveFileMove
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MoreHoriz
@@ -29,10 +27,11 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.DriveFileMove
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -58,6 +57,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -244,35 +245,32 @@ fun TreeRow(
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-                    DropdownMenu(
+                    MochiDropdownMenu(
                         expanded = showContextMenu,
                         onDismissRequest = { showContextMenu = false }
                     ) {
                         if (onReparent != null) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.projects_tree_move)) },
                                 onClick = {
                                     showContextMenu = false
                                     showReparentDialog = true
                                 },
-                                leadingIcon = {
-                                    Icon(Icons.Default.DriveFileMove, contentDescription = null)
-                                }
+                                leadingIcon = { Icon(Icons.Outlined.DriveFileMove, contentDescription = null) },
                             )
                         }
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(MochiR.string.common_delete)) },
                             onClick = {
                                 showContextMenu = false
                                 onDelete()
                             },
-                            leadingIcon = {
-                                Icon(
-                                    Icons.Default.Delete,
-                                    contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.error
-                                )
-                            }
+                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                            colors = MenuDefaults.itemColors(
+                                textColor = MaterialTheme.colorScheme.error,
+                                leadingIconColor = MaterialTheme.colorScheme.error,
+                                trailingIconColor = MaterialTheme.colorScheme.error,
+                            ),
                         )
                     }
                 }

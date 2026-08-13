@@ -35,14 +35,17 @@ import androidx.compose.material.icons.automirrored.filled.Forward
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.Reply
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.automirrored.outlined.Forward
+import androidx.compose.material.icons.automirrored.outlined.Logout
+import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
-import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.outlined.CheckBox
 import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
@@ -52,16 +55,13 @@ import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -115,6 +115,8 @@ import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -433,78 +435,58 @@ private fun ChatContent(
                                     contentDescription = stringResource(MochiR.string.common_more_options)
                                 )
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = menuExpanded,
                                 onDismissRequest = { menuExpanded = false }
                             ) {
-                                DropdownMenuItem(
-                                    text = {
-                                        Text(
-                                            stringResource(
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(
                                                 if (uiState.isPinned) R.string.chat_unpin
                                                 else R.string.chat_pin
-                                            )
-                                        )
-                                    },
-                                    leadingIcon = {
-                                        Icon(
-                                            imageVector = if (uiState.isPinned) {
-                                                ImageVector.vectorResource(R.drawable.ic_push_pin_off)
-                                            } else {
-                                                Icons.Outlined.PushPin
-                                            },
-                                            contentDescription = null,
-                                        )
-                                    },
+                                            )) },
                                     onClick = {
                                         menuExpanded = false
                                         viewModel.togglePin()
-                                    }
-                                )
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.chat_mark_read)) },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.DoneAll, contentDescription = null)
                                     },
+                                    leadingIcon = { Icon(if (uiState.isPinned) {
+                                                ImageVector.vectorResource(R.drawable.ic_push_pin_off)
+                                            } else {
+                                                Icons.Outlined.PushPin
+                                            }, contentDescription = null) },
+                                )
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.chat_mark_read)) },
                                     onClick = {
                                         menuExpanded = false
                                         viewModel.markReadNow()
-                                    }
-                                )
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.settings_title)) },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.Settings, contentDescription = null)
                                     },
+                                    leadingIcon = { Icon(Icons.Outlined.DoneAll, contentDescription = null) },
+                                )
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.settings_title)) },
                                     onClick = {
                                         menuExpanded = false
                                         onSettings(uiState.chat.fingerprint.ifEmpty { chatId })
-                                    }
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
                                 if (uiState.chat.status == ChatStatus.ACTIVE) {
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.chat_settings_leave)) },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.AutoMirrored.Filled.Logout,
-                                                contentDescription = null,
-                                            )
-                                        },
                                         onClick = {
                                             menuExpanded = false
                                             showLeaveDialog = true
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                     )
                                 } else {
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.chat_settings_delete)) },
-                                        leadingIcon = {
-                                            Icon(Icons.Outlined.Delete, contentDescription = null)
-                                        },
                                         onClick = {
                                             menuExpanded = false
                                             showDeleteDialog = true
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                                     )
                                 }
                             }
@@ -1049,45 +1031,45 @@ private fun MessageBubble(
                 }
             }
             if (hasMenu && !selectionMode) {
-                DropdownMenu(
+                MochiDropdownMenu(
                     expanded = menuExpanded,
                     onDismissRequest = { menuExpanded = false },
                 ) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.chat_message_select)) },
-                        leadingIcon = { Icon(Icons.Outlined.CheckBox, contentDescription = null) },
                         onClick = {
                             menuExpanded = false
                             onStartSelect()
                         },
+                        leadingIcon = { Icon(Icons.Outlined.CheckBox, contentDescription = null) },
                     )
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.chat_message_reply)) },
-                        leadingIcon = {
-                            Icon(Icons.AutoMirrored.Filled.Reply, contentDescription = null)
-                        },
                         onClick = {
                             menuExpanded = false
                             onReply()
                         },
+                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Reply, contentDescription = null) },
                     )
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.chat_message_forward)) },
-                        leadingIcon = {
-                            Icon(Icons.AutoMirrored.Filled.Forward, contentDescription = null)
-                        },
                         onClick = {
                             menuExpanded = false
                             onForward()
                         },
+                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Forward, contentDescription = null) },
                     )
                     if (canDelete) {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = {
                                 Text(
                                     stringResource(MochiR.string.common_delete),
                                     color = MaterialTheme.colorScheme.error,
                                 )
+                            },
+                            onClick = {
+                                menuExpanded = false
+                                onDelete()
                             },
                             leadingIcon = {
                                 Icon(
@@ -1095,10 +1077,6 @@ private fun MessageBubble(
                                     contentDescription = null,
                                     tint = MaterialTheme.colorScheme.error,
                                 )
-                            },
-                            onClick = {
-                                menuExpanded = false
-                                onDelete()
                             },
                         )
                     }

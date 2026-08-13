@@ -23,9 +23,6 @@ import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.LocalOffer
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -109,15 +106,15 @@ fun PostTagsButton(
         }
     }
 
-    DropdownMenu(
+    MochiDropdownMenu(
         expanded = open,
         onDismissRequest = { open = false; newLabel = "" },
     ) {
         if (tags.isEmpty()) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.tags_none)) },
-                enabled = false,
                 onClick = {},
+                enabled = false,
             )
         }
         tags.forEach { tag ->
@@ -134,7 +131,7 @@ fun PostTagsButton(
         }
         if (onAddTag != null) {
             if (tags.isNotEmpty()) {
-                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+                MochiDropdownMenuDivider()
             }
             val submit = {
                 val label = newLabel.trim()

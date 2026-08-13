@@ -5,8 +5,21 @@
 
 package org.mochios.forums.ui.post
 
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.FormatQuote
+import androidx.compose.material.icons.outlined.Lock
+import androidx.compose.material.icons.outlined.LockOpen
+import androidx.compose.material.icons.outlined.PushPin
+import androidx.compose.material.icons.outlined.Report
+import androidx.compose.material.icons.outlined.Restore
+import androidx.compose.material3.MenuDefaults
 import org.mochios.android.ui.components.CommentItem
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.PostTagsButton
 import androidx.compose.material.icons.automirrored.outlined.Reply
@@ -35,20 +48,15 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.ThumbUp
@@ -56,8 +64,6 @@ import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -577,12 +583,12 @@ private fun ReportDialog(
                         onDismissRequest = { reasonExpanded = false }
                     ) {
                         reasons.forEach { (code, label) ->
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(label) },
                                 onClick = {
                                     selectedReason = code
                                     reasonExpanded = false
-                                }
+                                },
                             )
                         }
                     }
@@ -673,68 +679,79 @@ private fun PostActionsMenu(
     onReport: () -> Unit,
     onQuote: () -> Unit,
 ) {
-    DropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
+    MochiDropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
         if (canEdit) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.forums_post_edit)) },
-                onClick = { onDismiss(); onEdit() }
+                onClick = { onDismiss(); onEdit() },
+                leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
             )
         }
         if (canModerate) {
             if (post.pinned) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_post_unpin)) },
-                    onClick = { onDismiss(); onUnpin() }
+                    onClick = { onDismiss(); onUnpin() },
+                    leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
                 )
             } else {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_post_pin)) },
-                    onClick = { onDismiss(); onPin() }
+                    onClick = { onDismiss(); onPin() },
+                    leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
                 )
             }
             if (post.locked) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_post_unlock)) },
-                    onClick = { onDismiss(); onUnlock() }
+                    onClick = { onDismiss(); onUnlock() },
+                    leadingIcon = { Icon(Icons.Outlined.LockOpen, contentDescription = null) },
                 )
             } else {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_post_lock)) },
-                    onClick = { onDismiss(); onLock() }
+                    onClick = { onDismiss(); onLock() },
+                    leadingIcon = { Icon(Icons.Outlined.Lock, contentDescription = null) },
                 )
             }
             if (post.status == "pending") {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_post_approve)) },
-                    onClick = { onDismiss(); onApprove() }
+                    onClick = { onDismiss(); onApprove() },
+                    leadingIcon = { Icon(Icons.Outlined.Check, contentDescription = null) },
                 )
             }
             if (post.status == "removed") {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_post_restore)) },
-                    onClick = { onDismiss(); onRestore() }
+                    onClick = { onDismiss(); onRestore() },
+                    leadingIcon = { Icon(Icons.Outlined.Restore, contentDescription = null) },
                 )
             } else {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_post_remove)) },
-                    onClick = { onDismiss(); onRemove() }
+                    onClick = { onDismiss(); onRemove() },
+                    leadingIcon = { Icon(Icons.Outlined.Block, contentDescription = null) },
                 )
             }
         }
-        DropdownMenuItem(
+        MochiDropdownMenuItem(
             text = { Text(stringResource(R.string.forums_post_quote)) },
-            onClick = { onDismiss(); onQuote() }
+            onClick = { onDismiss(); onQuote() },
+            leadingIcon = { Icon(Icons.Outlined.FormatQuote, contentDescription = null) },
         )
         if (!isAuthor) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.forums_post_report)) },
-                onClick = { onDismiss(); onReport() }
+                onClick = { onDismiss(); onReport() },
+                leadingIcon = { Icon(Icons.Outlined.Report, contentDescription = null) },
             )
         }
         if (canEdit) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.forums_post_delete)) },
-                onClick = { onDismiss(); onDelete() }
+                onClick = { onDismiss(); onDelete() },
+                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
             )
         }
     }
@@ -1010,46 +1027,53 @@ private fun CommentCard(
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+            MochiDropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
                 if (canEdit) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.forums_comment_edit)) },
-                        onClick = { showMenu = false; onEdit() }
+                        onClick = { showMenu = false; onEdit() },
+                        leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
                     )
                 }
                 if (canModerate) {
                     if (comment.status == "pending") {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.forums_comment_approve)) },
-                            onClick = { showMenu = false; onApprove() }
+                            onClick = { showMenu = false; onApprove() },
+                            leadingIcon = { Icon(Icons.Outlined.Check, contentDescription = null) },
                         )
                     }
                     if (comment.status == "removed") {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.forums_comment_restore)) },
-                            onClick = { showMenu = false; onRestore() }
+                            onClick = { showMenu = false; onRestore() },
+                            leadingIcon = { Icon(Icons.Outlined.Restore, contentDescription = null) },
                         )
                     } else {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.forums_comment_remove)) },
-                            onClick = { showMenu = false; onRemove() }
+                            onClick = { showMenu = false; onRemove() },
+                            leadingIcon = { Icon(Icons.Outlined.Block, contentDescription = null) },
                         )
                     }
                 }
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.forums_comment_quote)) },
-                    onClick = { showMenu = false; onQuote() }
+                    onClick = { showMenu = false; onQuote() },
+                    leadingIcon = { Icon(Icons.Outlined.FormatQuote, contentDescription = null) },
                 )
                 if (!isAuthor) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.forums_comment_report)) },
-                        onClick = { showMenu = false; onReport() }
+                        onClick = { showMenu = false; onReport() },
+                        leadingIcon = { Icon(Icons.Outlined.Report, contentDescription = null) },
                     )
                 }
                 if (canEdit) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.forums_comment_delete)) },
-                        onClick = { showMenu = false; onDelete() }
+                        onClick = { showMenu = false; onDelete() },
+                        leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                     )
                 }
             }

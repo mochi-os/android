@@ -24,7 +24,6 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -32,6 +31,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -59,6 +59,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemDocument
@@ -256,7 +257,7 @@ private fun LanguagePicker(
                 onDismissRequest = { expanded = false },
             ) {
                 languages.forEach { lang ->
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(languageDisplayName(lang)) },
                         onClick = {
                             expanded = false

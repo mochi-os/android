@@ -25,31 +25,32 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.outlined.ArrowBack
+import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.ChatBubble
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Forum
-import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
-import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.EmojiEvents
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
@@ -57,13 +58,11 @@ import androidx.compose.material.icons.outlined.Whatshot
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -114,6 +113,9 @@ import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuDivider
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -418,7 +420,7 @@ private fun ForumContent(
                                 )
                             )
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflowMenu,
                             onDismissRequest = {
                                 showOverflowMenu = false
@@ -427,40 +429,29 @@ private fun ForumContent(
                         ) {
                             if (showRssSubmenu) {
                                 // Header row taps back to the main menu.
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.forums_rss_feed)) },
-                                    leadingIcon = {
-                                        Icon(
-                                            Icons.AutoMirrored.Filled.ArrowBack,
-                                            contentDescription = null
-                                        )
-                                    },
-                                    onClick = { showRssSubmenu = false }
+                                    onClick = { showRssSubmenu = false },
+                                    leadingIcon = { Icon(Icons.AutoMirrored.Outlined.ArrowBack, contentDescription = null) },
                                 )
-                                HorizontalDivider()
-                                DropdownMenuItem(
-                                    text = {
-                                        Text(stringResource(R.string.forums_rss_mode_posts))
-                                    },
+                                MochiDropdownMenuDivider()
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_rss_mode_posts)) },
                                     onClick = {
                                         viewModel.copyRssUrl("posts")
                                         showRssSubmenu = false
                                         showOverflowMenu = false
-                                    }
-                                )
-                                DropdownMenuItem(
-                                    text = {
-                                        Text(
-                                            stringResource(
-                                                R.string.forums_rss_mode_posts_comments
-                                            )
-                                        )
                                     },
+                                )
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(
+                                                R.string.forums_rss_mode_posts_comments
+                                            )) },
                                     onClick = {
                                         viewModel.copyRssUrl("all")
                                         showRssSubmenu = false
                                         showOverflowMenu = false
-                                    }
+                                    },
                                 )
                             } else {
                                 // Sort options listed inline, each with its own
@@ -474,129 +465,96 @@ private fun ForumContent(
                                     ),
                                 )
                                 SORT_OPTIONS.forEach { option ->
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(option.labelRes)) },
-                                        leadingIcon = {
-                                            Icon(option.icon, contentDescription = null)
-                                        },
-                                        trailingIcon = {
-                                            if (uiState.sort == option.key) {
-                                                Icon(
-                                                    Icons.Default.Check,
-                                                    contentDescription = null,
-                                                )
-                                            }
-                                        },
                                         onClick = {
                                             showOverflowMenu = false
                                             viewModel.setSort(option.key)
-                                        }
+                                        },
+                                        leadingIcon = { Icon(option.icon, contentDescription = null) },
+                                        trailingIcon = if (uiState.sort == option.key) {
+                                            {
+                                                Icon(
+                                                    Icons.Outlined.Check,
+                                                    contentDescription = null,
+                                                )
+                                            }
+                                        } else {
+                                            null
+                                        },
+                                        colors = if (uiState.sort == option.key) {
+                                            MenuDefaults.itemColors(
+                                                textColor = MaterialTheme.colorScheme.primary,
+                                                leadingIconColor = MaterialTheme.colorScheme.primary,
+                                                trailingIconColor = MaterialTheme.colorScheme.primary,
+                                            )
+                                        } else {
+                                            MenuDefaults.itemColors()
+                                        },
                                     )
                                 }
 
-                                HorizontalDivider()
+                                MochiDropdownMenuDivider()
 
                                 // Moderation is a moderator's tool — a wider gate
                                 // than Settings, which is managers only.
                                 if (!isAll && uiState.canModerate && uiState.forum.id.isNotEmpty()) {
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(R.string.forums_moderation_title))
-                                        },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.Default.Gavel,
-                                                contentDescription = null
-                                            )
-                                        },
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.forums_moderation_title)) },
                                         onClick = {
                                             showOverflowMenu = false
                                             onModeration(forumIdForCallbacks)
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Gavel, contentDescription = null) },
                                     )
                                 }
                                 // The aggregate exports a class-level RSS feed
                                 // but has no single forum to unsubscribe from.
                                 if (isAll || uiState.forum.id.isNotEmpty()) {
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(R.string.forums_rss_feed))
-                                        },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.Default.RssFeed,
-                                                contentDescription = null
-                                            )
-                                        },
-                                        trailingIcon = {
-                                            Icon(
-                                                Icons.AutoMirrored.Filled.KeyboardArrowRight,
-                                                contentDescription = null
-                                            )
-                                        },
-                                        onClick = { showRssSubmenu = true }
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.forums_rss_feed)) },
+                                        onClick = { showRssSubmenu = true },
+                                        leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
+                                        trailingIcon = { Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, contentDescription = null) },
                                     )
                                 }
                                 // Sharing a forum is a manager's call, so this
                                 // sits behind the same gate as Settings. The
                                 // aggregate has no single forum to share.
                                 if (!isAll && uiState.canManage && uiState.forum.id.isNotEmpty()) {
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(R.string.forums_link))
-                                        },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.Default.Link,
-                                                contentDescription = null
-                                            )
-                                        },
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.forums_link)) },
                                         onClick = {
                                             showOverflowMenu = false
                                             viewModel.shareLink()
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
                                     )
                                 }
                                 // Subscribers reach settings too — their view is
                                 // the read-only identity card plus unsubscribe.
                                 if (!isAll && uiState.forum.id.isNotEmpty()) {
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(R.string.forums_settings))
-                                        },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.Default.Settings,
-                                                contentDescription = null
-                                            )
-                                        },
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.forums_settings)) },
                                         onClick = {
                                             showOverflowMenu = false
                                             onSettings(forumIdForCallbacks)
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                     )
                                 }
                                 // Managers delete the forum from settings rather
                                 // than unsubscribing from something they own.
                                 if (!isAll && !uiState.canManage && uiState.forum.id.isNotEmpty()) {
-                                    DropdownMenuItem(
-                                        text = {
-                                            Text(
-                                                stringResource(
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(
                                                     R.string.forums_list_unsubscribe
-                                                )
-                                            )
-                                        },
-                                        leadingIcon = {
-                                            Icon(
-                                                Icons.AutoMirrored.Filled.Logout,
-                                                contentDescription = null
-                                            )
-                                        },
+                                                )) },
                                         onClick = {
                                             showOverflowMenu = false
                                             showUnsubscribeConfirm = true
-                                        }
+                                        },
+                                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                     )
                                 }
                             }

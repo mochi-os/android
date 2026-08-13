@@ -30,7 +30,6 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -39,6 +38,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
@@ -62,6 +62,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.AccessRule
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.Section
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
@@ -308,7 +309,7 @@ private fun AccessRuleRow(
                     onDismissRequest = { expanded = false },
                 ) {
                     ACCESS_LEVEL_CHANGE_KEYS.forEach { level ->
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(feedsAccessLevelLabel(level)) },
                             onClick = {
                                 expanded = false
@@ -562,7 +563,7 @@ private fun AddAccessDialog(
                             onDismissRequest = { levelExpanded = false },
                         ) {
                             ACCESS_LEVEL_CHANGE_KEYS.forEach { lvl ->
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(feedsAccessLevelLabel(lvl)) },
                                     onClick = {
                                         level = lvl

@@ -22,7 +22,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -32,6 +31,7 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -47,6 +47,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 
 /**
@@ -259,7 +260,7 @@ private fun CategoryDropdown(
                 expanded = expanded,
                 onDismissRequest = { expanded = false },
             ) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_filter_all)) },
                     onClick = {
                         onUpdate(Filter.CATEGORY, null)
@@ -267,7 +268,7 @@ private fun CategoryDropdown(
                     },
                 )
                 for (category in state.categories) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(category.name) },
                         onClick = {
                             onUpdate(Filter.CATEGORY, category.id.toString())
@@ -317,7 +318,7 @@ private fun SortDropdown(
                 onDismissRequest = { expanded = false },
             ) {
                 for ((value, label) in sortOptions) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(label) },
                         onClick = {
                             onUpdate(Filter.SORT, value)

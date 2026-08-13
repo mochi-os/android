@@ -21,21 +21,18 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PersonAdd
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -68,6 +65,8 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.people.R
@@ -151,19 +150,17 @@ fun GroupDetailScreen(
                                     contentDescription = stringResource(R.string.people_group_actions),
                                 )
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = overflowOpen,
                                 onDismissRequest = { overflowOpen = false },
                             ) {
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.people_group_delete)) },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.Delete, contentDescription = null)
-                                    },
                                     onClick = {
                                         overflowOpen = false
                                         viewModel.openDeleteConfirm()
                                     },
+                                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                                 )
                             }
                         }

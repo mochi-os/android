@@ -24,9 +24,13 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.Share
+import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -35,6 +39,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -59,6 +64,8 @@ import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingStatus
@@ -339,7 +346,7 @@ private fun FilterRow(
                 onDismissRequest = { open = false },
             ) {
                 for (filter in ListingsStatusFilter.entries) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(filter.labelRes())) },
                         onClick = {
                             onStatusChange(filter)
@@ -380,56 +387,62 @@ private fun ListingOverflow(
                 contentDescription = stringResource(MochiR.string.common_more_options),
             )
         }
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.market_listings_action_edit)) },
                 onClick = {
                     expanded = false
                     onEdit()
                 },
+                leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
             )
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.market_listings_action_view)) },
                 onClick = {
                     expanded = false
                     onView()
                 },
+                leadingIcon = { Icon(Icons.Outlined.Visibility, contentDescription = null) },
             )
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.market_listings_action_share)) },
                 onClick = {
                     expanded = false
                     onShare()
                 },
+                leadingIcon = { Icon(Icons.Outlined.Share, contentDescription = null) },
             )
             if (listing.status == ListingStatus.DRAFT) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_listings_action_delete)) },
                     onClick = {
                         expanded = false
                         onDelete()
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                 )
             }
             if (listing.status == ListingStatus.SOLD || listing.status == ListingStatus.EXPIRED) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_listings_action_relist)) },
                     onClick = {
                         expanded = false
                         onRelist()
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
                 )
             }
             if (listing.status == ListingStatus.REMOVED) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_listings_action_appeal)) },
                     onClick = {
                         expanded = false
                         onAppeal()
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Gavel, contentDescription = null) },
                 )
             }
         }

@@ -18,11 +18,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -37,6 +37,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
 import org.mochios.staff.model.Appeal
 import org.mochios.staff.ui.components.StaffAuditTimeline
@@ -173,16 +175,30 @@ private fun DecisionDropdown(
                 Text(text = current, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Icon(Icons.Default.ArrowDropDown, contentDescription = null)
             }
-            DropdownMenu(
+            MochiDropdownMenu(
                 expanded = expanded,
                 onDismissRequest = { expanded = false },
             ) {
                 options.forEach { (value, label) ->
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(label) },
                         onClick = {
                             expanded = false
                             onDecisionChange(value)
+                        },
+                        trailingIcon = if (decision == value) {
+                            { Icon(Icons.Outlined.Check, contentDescription = null) }
+                        } else {
+                            null
+                        },
+                        colors = if (decision == value) {
+                            MenuDefaults.itemColors(
+                                textColor = MaterialTheme.colorScheme.primary,
+                                leadingIconColor = MaterialTheme.colorScheme.primary,
+                                trailingIconColor = MaterialTheme.colorScheme.primary,
+                            )
+                        } else {
+                            MenuDefaults.itemColors()
                         },
                     )
                 }

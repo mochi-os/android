@@ -19,9 +19,6 @@ import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Share
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -30,6 +27,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuDivider
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiPermissions
 
@@ -81,7 +81,7 @@ fun PageOverflowMenu(
     // the same set as web's overflow, but every callback is already pre-bound
     // by the host — the menu itself doesn't navigate from these arguments.
 
-    DropdownMenu(
+    MochiDropdownMenu(
         expanded = expanded,
         onDismissRequest = onDismiss,
         modifier = modifier,
@@ -123,7 +123,7 @@ fun PageOverflowMenu(
             )
         }
 
-        HorizontalDivider()
+        MochiDropdownMenuDivider()
 
         // -------- Wiki section --------
         SectionLabel(stringResource(R.string.wikis_page_action_section_wiki))
@@ -183,7 +183,7 @@ fun PageOverflowMenu(
         )
 
         if (canUnsubscribe) {
-            HorizontalDivider()
+            MochiDropdownMenuDivider()
             MenuRow(
                 icon = Icons.AutoMirrored.Filled.Logout,
                 label = stringResource(R.string.wikis_page_action_unsubscribe),
@@ -209,9 +209,9 @@ private fun MenuRow(
     label: String,
     onClick: () -> Unit,
 ) {
-    DropdownMenuItem(
-        leadingIcon = { Icon(icon, contentDescription = null) },
+    MochiDropdownMenuItem(
         text = { Text(label) },
         onClick = onClick,
+        leadingIcon = { Icon(icon, contentDescription = null) },
     )
 }

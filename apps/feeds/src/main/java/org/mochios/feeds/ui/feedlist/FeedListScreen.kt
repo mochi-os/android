@@ -25,17 +25,17 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.AddToHomeScreen
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Logout
+import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Badge
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
@@ -81,6 +81,8 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.ui.find.FindFeedsContent
@@ -145,26 +147,25 @@ fun FeedListScreen(
                         IconButton(onClick = { showOverflowMenu = true }) {
                             Icon(Icons.Default.MoreHoriz, contentDescription = stringResource(MochiR.string.common_more_options))
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflowMenu,
                             onDismissRequest = { showOverflowMenu = false }
                         ) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.feeds_global_rss_export)) },
                                 onClick = {
                                     showOverflowMenu = false
                                     showRssDialog = true
-                                }
-                            )
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.feeds_logout)) },
-                                leadingIcon = {
-                                    Icon(Icons.Default.Logout, contentDescription = null)
                                 },
+                                leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
+                            )
+                            MochiDropdownMenuItem(
+                                text = { Text(stringResource(R.string.feeds_logout)) },
                                 onClick = {
                                     showOverflowMenu = false
                                     onLogout()
-                                }
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Logout, contentDescription = null) },
                             )
                         }
                     }
@@ -359,11 +360,11 @@ private fun FeedRow(
                 }
             } else null
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = showMenu,
             onDismissRequest = { showMenu = false }
         ) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.feeds_add_to_home_screen)) },
                 onClick = {
                     showMenu = false
@@ -381,7 +382,8 @@ private fun FeedRow(
                         .setIntent(intent)
                         .build()
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
-                }
+                },
+                leadingIcon = { Icon(Icons.AutoMirrored.Outlined.AddToHomeScreen, contentDescription = null) },
             )
         }
     }

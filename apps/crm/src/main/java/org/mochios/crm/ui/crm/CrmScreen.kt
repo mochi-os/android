@@ -36,40 +36,37 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
-import androidx.compose.material.icons.filled.HomeMax
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.FileDownload
-import androidx.compose.material.icons.filled.ViewColumn
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.TableChart
-import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Dashboard
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FormatListBulleted
+import androidx.compose.material.icons.outlined.HomeMax
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.TableChart
+import androidx.compose.material.icons.outlined.Tune
+import androidx.compose.material.icons.outlined.ViewColumn
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -122,6 +119,9 @@ import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuDivider
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
@@ -510,13 +510,12 @@ private fun CrmRow(
                         contentDescription = stringResource(MochiR.string.common_more_options)
                     )
                 }
-                DropdownMenu(
+                MochiDropdownMenu(
                     expanded = showMenu,
                     onDismissRequest = { showMenu = false }
                 ) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.crm_list_add_to_home)) },
-                        leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
                         onClick = {
                             showMenu = false
                             // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
@@ -533,16 +532,17 @@ private fun CrmRow(
                                 .setIntent(intent)
                                 .build()
                             ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
-                        }
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.HomeMax, contentDescription = null) },
                     )
                     if (canUnsubscribe) {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(unsubscribeLabel) },
-                            leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
                             onClick = {
                                 showMenu = false
                                 showUnsubscribeConfirm = true
-                            }
+                            },
+                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                         )
                     }
                 }
@@ -705,7 +705,7 @@ private fun CrmContent(
                                     contentDescription = stringResource(R.string.crm_more)
                                 )
                             }
-                            DropdownMenu(
+                            MochiDropdownMenu(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
@@ -715,9 +715,14 @@ private fun CrmContent(
                                 // is drawn.
                                 val views = details?.views.orEmpty()
                                 if (views.isNotEmpty()) {
+                                    val activeViewColors = MenuDefaults.itemColors(
+                                        textColor = MaterialTheme.colorScheme.primary,
+                                        leadingIconColor = MaterialTheme.colorScheme.primary,
+                                        trailingIconColor = MaterialTheme.colorScheme.primary,
+                                    )
                                     views.forEach { view ->
                                         val isActive = view.id == activeView?.id
-                                        DropdownMenuItem(
+                                        MochiDropdownMenuItem(
                                             text = { Text(view.name) },
                                             onClick = {
                                                 showOverflow = false
@@ -731,94 +736,89 @@ private fun CrmContent(
                                                         Icons.Outlined.FormatListBulleted
                                                     },
                                                     contentDescription = null,
-                                                    tint = if (isActive) {
-                                                        MaterialTheme.colorScheme.primary
-                                                    } else {
-                                                        LocalContentColor.current
-                                                    },
                                                 )
                                             },
-                                            trailingIcon = {
-                                                if (isActive) {
+                                            trailingIcon = if (isActive) {
+                                                {
                                                     Icon(
-                                                        Icons.Default.Check,
+                                                        Icons.Outlined.Check,
                                                         contentDescription = null,
-                                                        tint = MaterialTheme.colorScheme.primary,
                                                     )
                                                 }
+                                            } else {
+                                                null
+                                            },
+                                            colors = if (isActive) {
+                                                activeViewColors
+                                            } else {
+                                                MenuDefaults.itemColors()
                                             },
                                         )
                                     }
-                                    HorizontalDivider()
+                                    MochiDropdownMenuDivider()
                                 }
 
                                 // Add column — only meaningful on a board view that
                                 // groups by a field (mirrors web's overflow "Add
                                 // column"). Creates a new option on the grouping field.
                                 if (activeView?.viewtype == "board" && activeView.columns.isNotBlank()) {
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.crm_board_add_column)) },
                                         onClick = {
                                             showOverflow = false
                                             showAddColumn = true
                                         },
-                                        leadingIcon = {
-                                            Icon(Icons.Default.ViewColumn, contentDescription = null)
-                                        }
+                                        leadingIcon = { Icon(Icons.Outlined.ViewColumn, contentDescription = null) },
                                     )
                                 }
                                 // Sharing a link is only offered on CRMs the user
                                 // owns; it's hidden on subscribed ones.
                                 if (details?.crm?.owner == 1) {
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.crm_link)) },
                                         onClick = {
                                             showOverflow = false
                                             viewModel.shareCrm()
                                         },
-                                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
+                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
                                     )
                                 }
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.crm_settings)) },
                                     onClick = {
                                         showOverflow = false
                                         onSettings(viewModel.crmId)
                                     },
-                                    leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
+                                    leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
                                 // Reshaping the design is the owner's to do, so
                                 // it is offered on the same terms as the link
                                 // above rather than on every subscribed CRM.
                                 if (details?.crm?.owner == 1) {
-                                    DropdownMenuItem(
+                                    MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.crm_design)) },
                                         onClick = {
                                             showOverflow = false
                                             onDesign(viewModel.crmId)
                                         },
-                                        leadingIcon = { Icon(Icons.Default.Tune, contentDescription = null) }
+                                        leadingIcon = { Icon(Icons.Outlined.Tune, contentDescription = null) },
                                     )
                                 }
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.crm_export)) },
                                     onClick = {
                                         showOverflow = false
                                         viewModel.exportCrm()
                                     },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.FileDownload, contentDescription = null)
-                                    }
+                                    leadingIcon = { Icon(Icons.Outlined.FileDownload, contentDescription = null) },
                                 )
-                                DropdownMenuItem(
+                                MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.crm_export_csv)) },
                                     onClick = {
                                         showOverflow = false
                                         viewModel.exportCsv()
                                     },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.TableChart, contentDescription = null)
-                                    }
+                                    leadingIcon = { Icon(Icons.Outlined.TableChart, contentDescription = null) },
                                 )
                             }
                         }

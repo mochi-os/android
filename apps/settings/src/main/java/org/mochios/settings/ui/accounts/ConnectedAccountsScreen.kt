@@ -24,12 +24,15 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.material.icons.outlined.AutoAwesome
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.MonitorHeart
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.VerifiedUser
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
@@ -63,6 +66,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.ConnectedAccount
@@ -284,30 +289,35 @@ private fun AccountRow(
                 IconButton(onClick = { menu = true }) {
                     Icon(Icons.Default.MoreHoriz, contentDescription = null)
                 }
-                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                     if (needsVerify) {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.accounts_verify)) },
                             onClick = { menu = false; onVerify() },
+                            leadingIcon = { Icon(Icons.Outlined.VerifiedUser, contentDescription = null) },
                         )
                     }
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.accounts_test)) },
                         onClick = { menu = false; onTest() },
+                        leadingIcon = { Icon(Icons.Outlined.MonitorHeart, contentDescription = null) },
                     )
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.accounts_settings)) },
                         onClick = { menu = false; onSettings() },
+                        leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                     )
                     if (isAi && account.default != "ai") {
-                        DropdownMenuItem(
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.accounts_set_default_ai)) },
                             onClick = { menu = false; onSetAiDefault() },
+                            leadingIcon = { Icon(Icons.Outlined.AutoAwesome, contentDescription = null) },
                         )
                     }
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.accounts_remove)) },
                         onClick = { menu = false; onRemove() },
+                        leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                     )
                 }
             }

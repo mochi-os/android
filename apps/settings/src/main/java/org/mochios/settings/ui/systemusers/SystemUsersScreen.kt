@@ -22,24 +22,22 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ArrowUpward
-import androidx.compose.material.icons.filled.Block
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Key
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -49,6 +47,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -77,6 +76,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUser
@@ -464,52 +465,47 @@ private fun UserCard(
                         contentDescription = stringResource(R.string.system_users_open_actions),
                     )
                 }
-                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    DropdownMenuItem(
-                        leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) },
+                MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.system_users_edit)) },
                         onClick = {
                             menu = false
                             onEdit()
                         },
+                        leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
                     )
-                    DropdownMenuItem(
-                        leadingIcon = { Icon(Icons.Default.Key, contentDescription = null) },
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.system_users_manage_sessions)) },
                         onClick = {
                             menu = false
                             onSessions()
                         },
+                        leadingIcon = { Icon(Icons.Outlined.Key, contentDescription = null) },
                     )
                     if (!isSelf) {
-                        DropdownMenuItem(
-                            leadingIcon = { Icon(Icons.Default.Block, contentDescription = null) },
-                            text = {
-                                Text(
-                                    stringResource(
+                        MochiDropdownMenuItem(
+                            text = { Text(stringResource(
                                         if (isSuspended) R.string.system_users_remove_suspension
                                         else R.string.system_users_suspend,
-                                    )
-                                )
-                            },
+                                    )) },
                             onClick = {
                                 menu = false
                                 onToggleStatus()
                             },
+                            leadingIcon = { Icon(Icons.Outlined.Block, contentDescription = null) },
                         )
-                        DropdownMenuItem(
-                            leadingIcon = {
-                                Icon(
-                                    Icons.Default.Delete,
-                                    contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.error,
-                                )
-                            },
+                        MochiDropdownMenuItem(
                             text = { Text(stringResource(R.string.system_users_delete)) },
                             onClick = {
                                 menu = false
                                 onDelete()
                             },
+                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                            colors = MenuDefaults.itemColors(
+                                textColor = MaterialTheme.colorScheme.error,
+                                leadingIconColor = MaterialTheme.colorScheme.error,
+                                trailingIconColor = MaterialTheme.colorScheme.error,
+                            ),
                         )
                     }
                 }
@@ -585,19 +581,47 @@ private fun RoleDropdown(role: String, onChange: (String) -> Unit) {
                     .menuAnchor(MenuAnchorType.PrimaryNotEditable)
                     .fillMaxWidth(),
             )
-            DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-                DropdownMenuItem(
+            MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                MochiDropdownMenuItem(
                     text = { Text(labelAdmin) },
                     onClick = {
                         expanded = false
                         onChange("administrator")
                     },
+                    trailingIcon = if (role == "administrator") {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (role == "administrator") {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
                 )
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(labelUser) },
                     onClick = {
                         expanded = false
                         onChange("user")
+                    },
+                    trailingIcon = if (role == "user") {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (role == "user") {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
                     },
                 )
             }
@@ -752,13 +776,27 @@ private fun PageSizeDropdown(limit: Int, onChange: (Int) -> Unit) {
                 .menuAnchor(MenuAnchorType.PrimaryNotEditable)
                 .width(96.dp),
         )
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             listOf(10, 25, 50, 100).forEach { size ->
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(size.toString()) },
                     onClick = {
                         expanded = false
                         onChange(size)
+                    },
+                    trailingIcon = if (limit == size) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (limit == size) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
                     },
                 )
             }

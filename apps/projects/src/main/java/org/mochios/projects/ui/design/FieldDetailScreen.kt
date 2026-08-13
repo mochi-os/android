@@ -27,7 +27,6 @@ import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -36,6 +35,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Switch
@@ -53,6 +53,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.ColorPicker
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectField
@@ -169,12 +170,12 @@ fun FieldDetailScreen(
                 onDismissRequest = { typeExpanded = false }
             ) {
                 FIELD_TYPE_KEYS.forEach { value ->
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(fieldTypeLabel(value)) },
                         onClick = {
                             editFieldtype = value
                             typeExpanded = false
-                        }
+                        },
                     )
                 }
             }
@@ -222,12 +223,12 @@ fun FieldDetailScreen(
                 onDismissRequest = { posExpanded = false }
             ) {
                 POSITION_KEYS.forEach { value ->
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(positionLabel(value)) },
                         onClick = {
                             editPosition = value
                             posExpanded = false
-                        }
+                        },
                     )
                 }
             }

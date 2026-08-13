@@ -23,19 +23,17 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.HomeMax
-import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.HomeMax
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -70,6 +68,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.chat.R
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatStatus
@@ -121,25 +121,25 @@ fun ChatListScreen(
                         IconButton(onClick = { showOverflow = true }) {
                             Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.chat_list_more))
                         }
-                        DropdownMenu(
+                        MochiDropdownMenu(
                             expanded = showOverflow,
                             onDismissRequest = { showOverflow = false }
                         ) {
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.chat_policy_title)) },
                                 onClick = {
                                     showOverflow = false
                                     showChatPolicy = true
                                 },
-                                leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null) }
+                                leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                             )
-                            DropdownMenuItem(
+                            MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.chat_list_logout)) },
                                 onClick = {
                                     showOverflow = false
                                     onLogout()
                                 },
-                                leadingIcon = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) }
+                                leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                             )
                         }
                     }
@@ -278,13 +278,12 @@ private fun ChatRow(
                 }
             }
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = showMenu,
             onDismissRequest = { showMenu = false }
         ) {
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.chat_list_add_to_home)) },
-                leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
                 onClick = {
                     showMenu = false
                     // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
@@ -301,16 +300,17 @@ private fun ChatRow(
                         .setIntent(intent)
                         .build()
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
-                }
+                },
+                leadingIcon = { Icon(Icons.Outlined.HomeMax, contentDescription = null) },
             )
             if (chat.status != ChatStatus.ACTIVE) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(deleteLabel) },
-                    leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
                     onClick = {
                         showMenu = false
                         showDeleteConfirm = true
-                    }
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                 )
             }
         }

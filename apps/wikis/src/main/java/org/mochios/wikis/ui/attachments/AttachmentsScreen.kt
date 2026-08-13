@@ -16,6 +16,10 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.draganddrop.dragAndDropTarget
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.ContentCopy
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.ui.draganddrop.DragAndDropEvent
 import androidx.compose.ui.draganddrop.DragAndDropTarget
 import androidx.compose.ui.draganddrop.toAndroidDragEvent
@@ -55,14 +59,11 @@ import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.PictureAsPdf
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Upload
 import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -106,6 +107,8 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.files.FileStore
 import org.mochios.android.util.webUri
@@ -602,19 +605,32 @@ private fun FilterMenu(
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.wikis_attachments_filter_all)) },
-                onClick = { onChange(AttachmentsFilter.ALL); expanded = false },
-            )
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.wikis_attachments_filter_images)) },
-                onClick = { onChange(AttachmentsFilter.IMAGES); expanded = false },
-            )
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.wikis_attachments_filter_documents)) },
-                onClick = { onChange(AttachmentsFilter.DOCUMENTS); expanded = false },
-            )
+        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            AttachmentsFilter.entries.forEach { option ->
+                val chosen = option == filter
+                MochiDropdownMenuItem(
+                    text = { Text(when (option) {
+                        AttachmentsFilter.ALL -> stringResource(R.string.wikis_attachments_filter_all)
+                        AttachmentsFilter.IMAGES -> stringResource(R.string.wikis_attachments_filter_images)
+                        AttachmentsFilter.DOCUMENTS -> stringResource(R.string.wikis_attachments_filter_documents)
+                    }) },
+                    onClick = { onChange(option); expanded = false },
+                    trailingIcon = if (chosen) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (chosen) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
+                )
+            }
         }
     }
 }
@@ -644,19 +660,32 @@ private fun SortMenu(
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.wikis_attachments_sort_date)) },
-                onClick = { onChange(AttachmentsSort.DATE); expanded = false },
-            )
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.wikis_attachments_sort_name)) },
-                onClick = { onChange(AttachmentsSort.NAME); expanded = false },
-            )
-            DropdownMenuItem(
-                text = { Text(stringResource(R.string.wikis_attachments_sort_size)) },
-                onClick = { onChange(AttachmentsSort.SIZE); expanded = false },
-            )
+        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            AttachmentsSort.entries.forEach { option ->
+                val chosen = option == sort
+                MochiDropdownMenuItem(
+                    text = { Text(when (option) {
+                        AttachmentsSort.DATE -> stringResource(R.string.wikis_attachments_sort_date)
+                        AttachmentsSort.NAME -> stringResource(R.string.wikis_attachments_sort_name)
+                        AttachmentsSort.SIZE -> stringResource(R.string.wikis_attachments_sort_size)
+                    }) },
+                    onClick = { onChange(option); expanded = false },
+                    trailingIcon = if (chosen) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (chosen) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
+                )
+            }
         }
     }
 }
@@ -864,40 +893,32 @@ private fun AttachmentGridCell(
             }
 
             // Long-press menu
-            DropdownMenu(
+            MochiDropdownMenu(
                 expanded = menuOpen,
                 onDismissRequest = { menuOpen = false },
             ) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(copyLabel) },
-                    leadingIcon = {
-                        Icon(
-                            if (copied) Icons.Default.Check else Icons.Default.ContentCopy,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
-                        )
-                    },
                     onClick = {
                         val markdown = buildMarkdown(attachment)
                         clipboard.setText(AnnotatedString(markdown))
                         copied = true
                         menuOpen = false
                     },
+                    leadingIcon = { Icon(if (copied) Icons.Outlined.Check else Icons.Outlined.ContentCopy, contentDescription = null) },
                 )
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(deleteLabel) },
-                    leadingIcon = {
-                        Icon(
-                            Icons.Default.Delete,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
-                            tint = MaterialTheme.colorScheme.error,
-                        )
-                    },
                     onClick = {
                         menuOpen = false
                         onRequestDelete()
                     },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                    colors = MenuDefaults.itemColors(
+                        textColor = MaterialTheme.colorScheme.error,
+                        leadingIconColor = MaterialTheme.colorScheme.error,
+                        trailingIconColor = MaterialTheme.colorScheme.error,
+                    ),
                 )
             }
         }

@@ -17,15 +17,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Reply
 import androidx.compose.material.icons.filled.Send
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -172,30 +170,26 @@ private fun CommentItem(
                         modifier = Modifier.size(16.dp)
                     )
                 }
-                DropdownMenu(
+                MochiDropdownMenu(
                     expanded = showMenu,
                     onDismissRequest = { showMenu = false }
                 ) {
-                    DropdownMenuItem(
+                    MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.common_edit)) },
-                        leadingIcon = {
-                            Icon(Icons.Default.Edit, contentDescription = null, modifier = Modifier.size(18.dp))
-                        },
                         onClick = {
                             showMenu = false
                             showEditField = true
                             showReplyField = false
-                        }
-                    )
-                    DropdownMenuItem(
-                        text = { Text(stringResource(R.string.common_delete)) },
-                        leadingIcon = {
-                            Icon(Icons.Default.Delete, contentDescription = null, modifier = Modifier.size(18.dp))
                         },
+                        leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
+                    )
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.common_delete)) },
                         onClick = {
                             showMenu = false
                             onDelete(comment.id)
-                        }
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                     )
                 }
             }

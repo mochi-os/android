@@ -22,22 +22,21 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -60,6 +59,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.Delegation
@@ -640,21 +641,60 @@ private fun MethodPicker(value: String, onChange: (String) -> Unit) {
         OutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
             Text(stringResource(R.string.route_method) + ": " + stringResource(labelRes))
         }
-        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
-            DropdownMenuItem(
+        MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.route_method_app)) },
                 onClick = { onChange("app"); open = false },
-                trailingIcon = { if (value == "app") Icon(Icons.Default.Check, null) },
+                trailingIcon = if (value == "app") {
+                    { Icon(Icons.Outlined.Check, contentDescription = null) }
+                } else {
+                    null
+                },
+                colors = if (value == "app") {
+                    MenuDefaults.itemColors(
+                        textColor = MaterialTheme.colorScheme.primary,
+                        leadingIconColor = MaterialTheme.colorScheme.primary,
+                        trailingIconColor = MaterialTheme.colorScheme.primary,
+                    )
+                } else {
+                    MenuDefaults.itemColors()
+                },
             )
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.route_method_entity)) },
                 onClick = { onChange("entity"); open = false },
-                trailingIcon = { if (value == "entity") Icon(Icons.Default.Check, null) },
+                trailingIcon = if (value == "entity") {
+                    { Icon(Icons.Outlined.Check, contentDescription = null) }
+                } else {
+                    null
+                },
+                colors = if (value == "entity") {
+                    MenuDefaults.itemColors(
+                        textColor = MaterialTheme.colorScheme.primary,
+                        leadingIconColor = MaterialTheme.colorScheme.primary,
+                        trailingIconColor = MaterialTheme.colorScheme.primary,
+                    )
+                } else {
+                    MenuDefaults.itemColors()
+                },
             )
-            DropdownMenuItem(
+            MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.route_method_redirect)) },
                 onClick = { onChange("redirect"); open = false },
-                trailingIcon = { if (value == "redirect") Icon(Icons.Default.Check, null) },
+                trailingIcon = if (value == "redirect") {
+                    { Icon(Icons.Outlined.Check, contentDescription = null) }
+                } else {
+                    null
+                },
+                colors = if (value == "redirect") {
+                    MenuDefaults.itemColors(
+                        textColor = MaterialTheme.colorScheme.primary,
+                        leadingIconColor = MaterialTheme.colorScheme.primary,
+                        trailingIconColor = MaterialTheme.colorScheme.primary,
+                    )
+                } else {
+                    MenuDefaults.itemColors()
+                },
             )
         }
     }
@@ -677,19 +717,32 @@ private fun TargetPicker(
         OutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
             Text(label + ": " + (selectedLabel ?: stringResource(R.string.route_target_select)))
         }
-        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+        MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             if (options.isEmpty()) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.route_target_none)) },
                     onClick = { open = false },
                     enabled = false,
                 )
             }
             options.forEach { (id, name) ->
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(name) },
                     onClick = { onSelect(id); open = false },
-                    trailingIcon = { if (selectedLabel == name) Icon(Icons.Default.Check, null) },
+                    trailingIcon = if (selectedLabel == name) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (selectedLabel == name) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
                 )
             }
         }

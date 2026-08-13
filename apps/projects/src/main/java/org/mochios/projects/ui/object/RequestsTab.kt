@@ -25,16 +25,14 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -44,6 +42,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.SuggestionChipDefaults
@@ -64,6 +63,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.projects.R
 import org.mochios.projects.model.Branch
 import org.mochios.projects.model.MergeCheck
@@ -175,19 +176,22 @@ private fun RequestItem(
             IconButton(onClick = { showOverflow = true }) {
                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
             }
-            DropdownMenu(
+            MochiDropdownMenu(
                 expanded = showOverflow,
                 onDismissRequest = { showOverflow = false }
             ) {
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(stringResource(MochiR.string.common_delete)) },
                     onClick = {
                         showOverflow = false
                         onDelete()
                     },
-                    leadingIcon = {
-                        Icon(Icons.Default.Delete, contentDescription = null, tint = MaterialTheme.colorScheme.error)
-                    }
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                    colors = MenuDefaults.itemColors(
+                        textColor = MaterialTheme.colorScheme.error,
+                        leadingIconColor = MaterialTheme.colorScheme.error,
+                        trailingIconColor = MaterialTheme.colorScheme.error,
+                    ),
                 )
             }
         }
@@ -600,17 +604,31 @@ private fun RepositoryDropdown(
                 .fillMaxWidth()
                 .menuAnchor(MenuAnchorType.PrimaryNotEditable)
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false }
         ) {
             repositories.forEach { repo ->
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(repo.name) },
                     onClick = {
                         onSelect(repo)
                         expanded = false
-                    }
+                    },
+                    trailingIcon = if (selected == repo) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (selected == repo) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
                 )
             }
         }
@@ -643,17 +661,31 @@ private fun BranchDropdown(
                 .fillMaxWidth()
                 .menuAnchor(MenuAnchorType.PrimaryNotEditable)
         )
-        DropdownMenu(
+        MochiDropdownMenu(
             expanded = expanded && enabled,
             onDismissRequest = { expanded = false }
         ) {
             branches.forEach { branch ->
-                DropdownMenuItem(
+                MochiDropdownMenuItem(
                     text = { Text(branch.name) },
                     onClick = {
                         onSelect(branch)
                         expanded = false
-                    }
+                    },
+                    trailingIcon = if (selected == branch) {
+                        { Icon(Icons.Outlined.Check, contentDescription = null) }
+                    } else {
+                        null
+                    },
+                    colors = if (selected == branch) {
+                        MenuDefaults.itemColors(
+                            textColor = MaterialTheme.colorScheme.primary,
+                            leadingIconColor = MaterialTheme.colorScheme.primary,
+                            trailingIconColor = MaterialTheme.colorScheme.primary,
+                        )
+                    } else {
+                        MenuDefaults.itemColors()
+                    },
                 )
             }
         }
