@@ -52,20 +52,6 @@ data class ProjectUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val showCreateObjectDialog: Boolean = false,
-    /**
-     * Pre-selected parent for the create-object dialog when invoked from
-     * an "Add child" affordance on an existing object. Null means the
-     * dialog is opened from the FAB and lets the user pick a parent (or
-     * none) themselves.
-     */
-    val createObjectParent: String? = null,
-    /**
-     * Field values the create-object dialog opens with — the tapped board
-     * column, so the new object lands where the user asked for it.
-     */
-    val createObjectValues: Map<String, String> = emptyMap(),
-    val isCreatingObject: Boolean = false,
     val isExporting: Boolean = false,
     /** Export data fetched and waiting for the user to pick a destination. */
     val pendingExport: PendingExport? = null,
@@ -504,25 +490,6 @@ class ProjectViewModel @Inject constructor(
         return result
     }
 
-    fun showCreateObjectDialog(
-        parent: String? = null,
-        values: Map<String, String> = emptyMap(),
-    ) {
-        _uiState.value = _uiState.value.copy(
-            showCreateObjectDialog = true,
-            createObjectParent = parent,
-            createObjectValues = values,
-        )
-    }
-
-    fun hideCreateObjectDialog() {
-        _uiState.value = _uiState.value.copy(
-            showCreateObjectDialog = false,
-            createObjectParent = null,
-            createObjectValues = emptyMap(),
-        )
-    }
-
     fun selectObject(objectId: String?) {
         val closing = objectId == null && _uiState.value.selectedObjectId != null
         _uiState.value = _uiState.value.copy(selectedObjectId = objectId)
@@ -530,42 +497,6 @@ class ProjectViewModel @Inject constructor(
         // writes don't reach the websocket (projects has no commit hook) — so
         // refresh on sheet close to reflect any field changes (card placement).
         if (closing) refreshObjects()
-    }
-
-    fun createObject(
-        classId: String,
-        title: String,
-        parent: String? = null,
-        initialValues: Map<String, String> = emptyMap(),
-    ) {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isCreatingObject = true)
-            try {
-                val objectId = repository.createObject(projectId, classId, parent, title)
-                if (initialValues.isNotEmpty()) {
-                    repository.setValues(projectId, objectId, initialValues)
-                }
-                // Reload the list before opening the sheet so the new object —
-                // with its field values, which the single-object endpoint omits —
-                // is on hand to seed the detail. Opening first would show a
-                // half-populated object until a later fetch filled it in.
-                refreshObjectsNow()
-                _uiState.value = _uiState.value.copy(
-                    isCreatingObject = false,
-                    showCreateObjectDialog = false,
-                    createObjectParent = null,
-                    createObjectValues = emptyMap(),
-                    // Open the new object's detail sheet so its content can be
-                    // edited straight after creation.
-                    selectedObjectId = objectId,
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isCreatingObject = false,
-                    error = e.toMochiError()
-                )
-            }
-        }
     }
 
     fun deleteObject(objectId: String) {
@@ -682,11 +613,6 @@ class ProjectViewModel @Inject constructor(
         return null
     }
 
-    fun getOptionsForField(classId: String, fieldId: String): List<FieldOption> {
-        val details = _uiState.value.projectDetails ?: return emptyList()
-        return details.options[classId]?.get(fieldId) ?: emptyList()
-    }
-
     fun getAllOptionsForField(fieldId: String): List<FieldOption> {
         val details = _uiState.value.projectDetails ?: return emptyList()
         for ((_, classOptions) in details.options) {
@@ -694,20 +620,6 @@ class ProjectViewModel @Inject constructor(
             if (!options.isNullOrEmpty()) return options
         }
         return emptyList()
-    }
-
-    /**
-     * Whether a preset field value can be applied when creating an object of
-     * [classId]: the field must exist on the class and, for enumerated
-     * fields, the value must be among that class's own options — a board
-     * that mixes classes can hand the create dialog a column option
-     * belonging to another class, which the server rejects.
-     */
-    fun usableValue(classId: String, fieldId: String, value: String): Boolean {
-        val details = _uiState.value.projectDetails ?: return false
-        val field = details.fields[classId]?.firstOrNull { it.id == fieldId } ?: return false
-        if (field.fieldtype != "enumerated") return true
-        return getOptionsForField(classId, fieldId).any { it.id == value }
     }
 
     fun reparentObject(objectId: String, newParentId: String) {

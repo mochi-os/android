@@ -142,6 +142,7 @@ fun ProjectScreen(
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
+    onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit = { _, _ -> },
     onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     initialObjectId: String? = null,
@@ -246,6 +247,7 @@ fun ProjectScreen(
                     onSettings = onSettings,
                     onDesign = onDesign,
                     onViewDiff = onViewDiff,
+                    onCreateObject = onCreateObject,
                     onOpenNotifications = onOpenNotifications,
                     initialObjectId = initialObjectId,
                 )
@@ -572,6 +574,7 @@ private fun ProjectContent(
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
+    onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit,
     onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
     viewModel: ProjectViewModel = hiltViewModel()
@@ -810,7 +813,7 @@ private fun ProjectContent(
             // The board view creates objects from its own per-column plus
             // buttons, so the FAB is only offered on the list views.
             if (details != null && activeView?.viewtype != "board") {
-                FloatingActionButton(onClick = { viewModel.showCreateObjectDialog() }) {
+                FloatingActionButton(onClick = { onCreateObject(null, emptyMap()) }) {
                     Icon(
                         Icons.Default.Add,
                         contentDescription = stringResource(R.string.projects_create_object)
@@ -874,7 +877,7 @@ private fun ProjectContent(
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
                                     onCreateObject = { initialValues ->
-                                        viewModel.showCreateObjectDialog(values = initialValues)
+                                        onCreateObject(null, initialValues)
                                     }
                                 )
                             }
@@ -891,24 +894,6 @@ private fun ProjectContent(
                 }
             }
         }
-    }
-
-    // Create object dialog
-    if (uiState.showCreateObjectDialog && details != null) {
-        CreateObjectDialog(
-            classes = details.classes,
-            hierarchy = details.hierarchy,
-            objects = uiState.objects,
-            presetParent = uiState.createObjectParent,
-            presetValues = uiState.createObjectValues,
-            isCreating = uiState.isCreatingObject,
-            activeView = activeView,
-            viewModel = viewModel,
-            onDismiss = { viewModel.hideCreateObjectDialog() },
-            onCreate = { classId, title, parent, initialValues ->
-                viewModel.createObject(classId, title, parent, initialValues)
-            }
-        )
     }
 
     // Add-column dialog (board views). Creates a new option on the board's
@@ -939,11 +924,11 @@ private fun ProjectContent(
             onViewDiff = onViewDiff,
             onNavigateToObject = { id -> viewModel.selectObject(id) },
             onAddChild = { parentId ->
-                // Close the sheet, then open the create dialog with the
-                // parent pre-selected. The dialog reads project.hierarchy
-                // and seeds the class to one that permits this parent.
+                // Close the sheet, then open the create form with the parent
+                // pre-selected. The form reads project.hierarchy and seeds the
+                // class to one that permits this parent.
                 viewModel.selectObject(null)
-                viewModel.showCreateObjectDialog(parent = parentId)
+                onCreateObject(parentId, emptyMap())
             },
         )
     }

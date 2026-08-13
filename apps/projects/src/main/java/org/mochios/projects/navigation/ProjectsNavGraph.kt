@@ -5,6 +5,7 @@
 
 package org.mochios.projects.navigation
 
+import android.net.Uri
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -15,6 +16,7 @@ import org.mochios.projects.ui.design.DesignScreen
 import org.mochios.projects.ui.find.FindProjectsScreen
 import org.mochios.projects.ui.`object`.DiffViewerScreen
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.projects.ui.project.CreateObjectScreen
 import org.mochios.projects.ui.project.ProjectScreen
 import org.mochios.projects.ui.projectlist.CreateProjectScreen
 import org.mochios.projects.ui.router.ProjectsRouter
@@ -34,6 +36,10 @@ object ProjectsApp {
     const val PROJECT_SETTINGS = "projects/project/{projectId}/settings"
     const val PROJECT_DESIGN = "projects/project/{projectId}/design"
     const val DIFF_VIEWER = "projects/project/{projectId}/diff/{repo}?source={source}&target={target}"
+    // Deliberately not `projects/project/{projectId}/object/create`, which the
+    // PROJECT_OBJECT pattern above also matches, with objectId='create'.
+    const val CREATE_OBJECT =
+        "projects/project/{projectId}/create-object?parent={parent}&field={field}&value={value}"
 
     fun project(projectId: String) = "projects/project/$projectId"
     fun projectObject(projectId: String, objectId: String) = "projects/project/$projectId/object/$objectId"
@@ -41,6 +47,25 @@ object ProjectsApp {
     fun projectDesign(projectId: String) = "projects/project/$projectId/design"
     fun diffViewer(projectId: String, repo: String, source: String, target: String) =
         "projects/project/$projectId/diff/$repo?source=$source&target=$target"
+
+    /**
+     * The create-object form for [projectId], optionally seeded with the parent
+     * an "Add child" started from and the one field value a board column's "+"
+     * carries. Object, field and option ids are opaque server strings, so each
+     * is encoded before it goes in the query.
+     */
+    fun createObject(
+        projectId: String,
+        parent: String? = null,
+        presetValues: Map<String, String> = emptyMap(),
+    ): String {
+        val preset = presetValues.entries.firstOrNull()
+        val parentArg = Uri.encode(parent.orEmpty())
+        val field = Uri.encode(preset?.key.orEmpty())
+        val value = Uri.encode(preset?.value.orEmpty())
+        return "projects/project/$projectId/create-object" +
+            "?parent=$parentArg&field=$field&value=$value"
+    }
 }
 
 fun NavGraphBuilder.projectsNavGraph(
@@ -86,6 +111,11 @@ fun NavGraphBuilder.projectsNavGraph(
             onViewDiff = { id, repo, source, target ->
                 navController.navigate(ProjectsApp.diffViewer(id, repo, source, target))
             },
+            onCreateObject = { parent, presetValues ->
+                navController.navigate(
+                    ProjectsApp.createObject(projectId, parent, presetValues)
+                )
+            },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
         )
@@ -123,6 +153,11 @@ fun NavGraphBuilder.projectsNavGraph(
             onViewDiff = { id, repo, source, target ->
                 navController.navigate(ProjectsApp.diffViewer(id, repo, source, target))
             },
+            onCreateObject = { parent, presetValues ->
+                navController.navigate(
+                    ProjectsApp.createObject(projectId, parent, presetValues)
+                )
+            },
             onLogout = onLogout,
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
         )
@@ -155,6 +190,41 @@ fun NavGraphBuilder.projectsNavGraph(
             onCreated = { projectId ->
                 navController.navigate(ProjectsApp.project(projectId)) {
                     popUpTo(ProjectsApp.CREATE_PROJECT) { inclusive = true }
+                }
+            },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.CREATE_OBJECT,
+        arguments = listOf(
+            navArgument("projectId") { type = NavType.StringType },
+            navArgument("parent") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+            navArgument("field") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+            navArgument("value") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+        )
+    ) { backStackEntry ->
+        val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
+        CreateObjectScreen(
+            onBack = { navController.popBackStack() },
+            // Drop the create screen and open the object just made, which is
+            // where the create dialog used to leave the user. Popping back would
+            // land on the project entry that was already there, whose view model
+            // still holds the objects fetched before the create — so the new one
+            // wouldn't show until a manual refresh. Navigating builds a fresh
+            // entry that reloads.
+            onCreated = { objectId ->
+                navController.navigate(ProjectsApp.projectObject(projectId, objectId)) {
+                    popUpTo(ProjectsApp.CREATE_OBJECT) { inclusive = true }
                 }
             },
         )
