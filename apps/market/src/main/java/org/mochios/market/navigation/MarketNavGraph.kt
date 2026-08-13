@@ -28,6 +28,7 @@ import org.mochios.market.ui.listing.ListingDetailScreen
 import org.mochios.market.ui.messages.MessageThreadScreen
 import org.mochios.market.ui.messages.MessagesInboxScreen
 import org.mochios.market.ui.reviews.ReviewsScreen
+import org.mochios.market.ui.selling.CreateListingScreen
 import org.mochios.market.ui.selling.MyListingsScreen
 import org.mochios.market.ui.selling.MySalesScreen
 import org.mochios.market.ui.selling.MySubscribersScreen
@@ -67,6 +68,7 @@ object MarketApp {
     // ---- Detail route patterns ----
     const val LISTING_DETAIL = "market/listing/{id}"
     const val LISTING_EDIT = "market/listing/{id}/edit"
+    const val CREATE_LISTING = "market/listings/create"
     const val NEW_LISTING = "market/listings/new?title={title}"
     const val CHECKOUT = "market/checkout/{listingId}"
     const val PURCHASE_DETAIL = "market/purchases/{orderId}"
@@ -78,8 +80,8 @@ object MarketApp {
     // ---- Detail route builders ----
     fun listingDetail(id: String) = "market/listing/$id"
     fun listingEdit(id: String) = "market/listing/$id/edit"
-    // Title comes from the new-listing dialog; the editor seeds its state with
-    // it and still creates the listing row lazily on first save.
+    // Title comes from CreateListingScreen; the editor seeds its state with it
+    // and still creates the listing row lazily on first save.
     fun newListing(title: String) = "market/listings/new?title=" + Uri.encode(title)
     fun checkout(listingId: String) = "market/checkout/$listingId"
     fun purchaseDetail(orderId: String) = "market/purchases/$orderId"
@@ -132,6 +134,7 @@ fun NavGraphBuilder.marketNavGraph(navController: NavController) {
     composable(MarketApp.NOTIFICATION_PREFERENCES) { NotificationPreferencesScreen(navController = navController) }
 
     // ---- Detail routes ----
+    composable(MarketApp.CREATE_LISTING) { CreateListingScreen(navController = navController) }
     composable(
         route = MarketApp.NEW_LISTING,
         arguments = listOf(navArgument("title") { type = NavType.StringType; defaultValue = "" }),
