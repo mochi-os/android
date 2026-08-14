@@ -110,6 +110,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -193,6 +194,7 @@ fun ChatScreen(
 
     FeatureListDrawer(
         drawerState = drawerState,
+        header = { DrawerTitle(stringResource(R.string.chat_list_title)) },
         items = drawerItems,
         selectedId = chatId,
         onItemClick = { item ->

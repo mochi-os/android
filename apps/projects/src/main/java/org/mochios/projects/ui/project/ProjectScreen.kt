@@ -112,6 +112,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
@@ -188,6 +189,7 @@ fun ProjectScreen(
 
     FeatureListDrawer(
         drawerState = drawerState,
+        header = { DrawerTitle(stringResource(R.string.projects_list_title)) },
         items = drawerItems,
         allItem = drawerAll,
         selectedId = projectId,

@@ -157,6 +157,22 @@ fun FeatureListDrawer(
  * it carries no enforced min-height or wide content padding, so the actions sit
  * tight together and align with the drawer items above.
  */
+/**
+ * The drawer's headline: the app's own name above the item list, in the
+ * Material drawer-headline style. Every list app passes its title here so
+ * the drawer says where you are — without it the first item sat flush
+ * against the top of the screen.
+ */
+@Composable
+fun DrawerTitle(title: String) {
+    Text(
+        text = title,
+        style = MaterialTheme.typography.titleSmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 12.dp),
+    )
+}
+
 @Composable
 fun DrawerActionRow(
     title: String,
