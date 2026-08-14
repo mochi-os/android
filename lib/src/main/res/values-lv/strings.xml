@@ -316,4 +316,7 @@
         <item quantity="other">%1$d abonenti</item>
     </plurals>
     <string name="account_token_label">Mochi sesija</string>
+    <string name="attachment_caption">Paraksts</string>
+    <string name="attachment_caption_add">Pievienot parakstu</string>
+    <string name="attachment_caption_edit">Rediģēt parakstu</string>
 </resources>

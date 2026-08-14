@@ -349,4 +349,5 @@
         <item quantity="one">พบ %1$d ผลลัพธ์ สำหรับ «%2$s»</item>
         <item quantity="other">พบ %1$d ผลลัพธ์ สำหรับ «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">ไม่สามารถบันทึกคำบรรยายภาพได้</string>
 </resources>

@@ -317,4 +317,7 @@
         <item quantity="other">%1$d subskrybenta</item>
     </plurals>
     <string name="account_token_label">Sesja Mochi</string>
+    <string name="attachment_caption">Podpis</string>
+    <string name="attachment_caption_add">Dodaj podpis</string>
+    <string name="attachment_caption_edit">Edytuj podpis</string>
 </resources>

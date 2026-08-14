@@ -316,4 +316,7 @@
         <item quantity="other">%1$d жазылушы</item>
     </plurals>
     <string name="account_token_label">Mochi сеансы</string>
+    <string name="attachment_caption">Түсіндірме</string>
+    <string name="attachment_caption_add">Түсіндірме қосу</string>
+    <string name="attachment_caption_edit">Түсіндірмені өңдеу</string>
 </resources>

@@ -349,4 +349,5 @@
         <item quantity="one">Tìm thấy %1$d kết quả cho «%2$s»</item>
         <item quantity="other">Tìm thấy %1$d kết quả cho «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Không thể lưu chú thích</string>
 </resources>

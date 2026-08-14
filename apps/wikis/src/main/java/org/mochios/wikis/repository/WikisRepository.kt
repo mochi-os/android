@@ -532,6 +532,14 @@ class WikisRepository @Inject constructor(
         }
     }
 
+    suspend fun updateAttachment(wiki: String, id: String, caption: String): Attachment {
+        return try {
+            api.updateAttachment(wiki, id, caption).unwrap().attachment
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun deleteAttachment(wiki: String, id: String) {
         try {
             api.deleteAttachment(wiki, id).unwrap()

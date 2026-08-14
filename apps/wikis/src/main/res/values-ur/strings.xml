@@ -349,4 +349,5 @@
         <item quantity="one">«%2$s» کے لیے %1$d نتیجہ ملے</item>
         <item quantity="other">«%2$s» کے لیے %1$d نتائج ملے</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">کیپشن محفوظ نہیں ہو سکا</string>
 </resources>

@@ -17,6 +17,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.draganddrop.dragAndDropTarget
 import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.ClosedCaption
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.ui.draganddrop.DragAndDropEvent
@@ -50,6 +51,7 @@ import androidx.compose.material.icons.automirrored.filled.ViewList
 import androidx.compose.material.icons.filled.Audiotrack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ClosedCaption
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Description
@@ -102,6 +104,7 @@ import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
@@ -270,6 +273,7 @@ fun AttachmentsScreen(
                             onViewModeChange = viewModel::setViewMode,
                             onRefresh = viewModel::refresh,
                             onRequestDelete = viewModel::requestDelete,
+                            onRequestCaption = viewModel::requestCaption,
                             onRetry = viewModel::loadAttachments,
                         )
                     }
@@ -293,6 +297,18 @@ fun AttachmentsScreen(
             isDestructive = true,
             onConfirm = { viewModel.confirmDelete(deleteSuccess, deleteFailed) },
             onDismiss = { viewModel.cancelDelete() },
+        )
+    }
+
+    // Caption editor
+    val captioningAttachment = state.captioning
+    if (captioningAttachment != null) {
+        val saveFailed = stringResource(R.string.wikis_attachments_caption_save_failed)
+        AttachmentCaptionDialog(
+            name = captioningAttachment.name,
+            initial = captioningAttachment.caption,
+            onSave = { caption -> viewModel.saveCaption(caption, saveFailed) },
+            onDismiss = { viewModel.cancelCaption() },
         )
     }
 }
@@ -370,6 +386,7 @@ private fun AttachmentsBody(
     onViewModeChange: (AttachmentsViewMode) -> Unit,
     onRefresh: () -> Unit,
     onRequestDelete: (Attachment) -> Unit,
+    onRequestCaption: (Attachment) -> Unit,
     onRetry: () -> Unit,
 ) {
     val filtered = remember(state.attachments, state.searchQuery, state.filter, state.sort) {
@@ -480,6 +497,7 @@ private fun AttachmentsBody(
                             if (idx >= 0) lightboxIndex = idx
                         },
                         onRequestDelete = onRequestDelete,
+                        onRequestCaption = onRequestCaption,
                     )
                 }
                 else -> {
@@ -493,6 +511,7 @@ private fun AttachmentsBody(
                             if (idx >= 0) lightboxIndex = idx
                         },
                         onRequestDelete = onRequestDelete,
+                        onRequestCaption = onRequestCaption,
                     )
                 }
             }
@@ -507,6 +526,7 @@ private fun AttachmentsBody(
             images = urls,
             initialIndex = openIdx.coerceIn(0, urls.size - 1),
             onDismiss = { lightboxIndex = null },
+            captions = imageAttachments.map { it.caption },
         )
     }
 }
@@ -711,6 +731,7 @@ private fun AttachmentsGrid(
     deletingId: String?,
     onOpenImageAt: (String) -> Unit,
     onRequestDelete: (Attachment) -> Unit,
+    onRequestCaption: (Attachment) -> Unit,
 ) {
     val context = LocalContext.current
     LazyVerticalGrid(
@@ -739,6 +760,7 @@ private fun AttachmentsGrid(
                     }
                 },
                 onRequestDelete = { onRequestDelete(attachment) },
+                onRequestCaption = { onRequestCaption(attachment) },
             )
         }
     }
@@ -756,6 +778,7 @@ private fun AttachmentsList(
     deletingId: String?,
     onOpenImageAt: (String) -> Unit,
     onRequestDelete: (Attachment) -> Unit,
+    onRequestCaption: (Attachment) -> Unit,
 ) {
     val context = LocalContext.current
     LazyColumn(
@@ -781,6 +804,7 @@ private fun AttachmentsList(
                     }
                 },
                 onRequestDelete = { onRequestDelete(attachment) },
+                onRequestCaption = { onRequestCaption(attachment) },
             )
             HorizontalDivider()
         }
@@ -800,10 +824,15 @@ private fun AttachmentGridCell(
     isDeleting: Boolean,
     onTap: () -> Unit,
     onRequestDelete: () -> Unit,
+    onRequestCaption: () -> Unit,
 ) {
     val clipboard = LocalClipboardManager.current
     val copyLabel = stringResource(R.string.wikis_attachments_copy_embed)
     val deleteLabel = stringResource(R.string.wikis_attachments_delete)
+    val captionLabel = stringResource(
+        if (attachment.caption.isEmpty()) MochiR.string.attachment_caption_add
+        else MochiR.string.attachment_caption_edit
+    )
     var menuOpen by remember { mutableStateOf(false) }
     var copied by remember { mutableStateOf(false) }
     val format = LocalFormat.current
@@ -829,7 +858,7 @@ private fun AttachmentGridCell(
                 if (isImage(attachment.type)) {
                     AsyncImage(
                         model = "${baseURL}attachments/${attachment.id}/thumbnail",
-                        contentDescription = attachment.name,
+                        contentDescription = attachment.caption.ifEmpty { attachment.name },
                         contentScale = ContentScale.Crop,
                         modifier = Modifier.fillMaxSize(),
                     )
@@ -857,7 +886,8 @@ private fun AttachmentGridCell(
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = format.formatFileSize(attachment.size),
+                    // The caption takes the size's line, as the web grid does.
+                    text = attachment.caption.ifEmpty { format.formatFileSize(attachment.size) },
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
@@ -880,6 +910,16 @@ private fun AttachmentGridCell(
                     },
                     leadingIcon = { Icon(if (copied) Icons.Outlined.Check else Icons.Outlined.ContentCopy, contentDescription = null) },
                 )
+                if (isImage(attachment.type)) {
+                    MochiDropdownMenuItem(
+                        text = { Text(captionLabel) },
+                        onClick = {
+                            menuOpen = false
+                            onRequestCaption()
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.ClosedCaption, contentDescription = null) },
+                    )
+                }
                 MochiDropdownMenuItem(
                     text = { Text(deleteLabel) },
                     onClick = {
@@ -913,6 +953,7 @@ private fun AttachmentListRow(
     isDeleting: Boolean,
     onOpen: () -> Unit,
     onRequestDelete: () -> Unit,
+    onRequestCaption: () -> Unit,
 ) {
     val clipboard = LocalClipboardManager.current
     val format = LocalFormat.current
@@ -937,7 +978,7 @@ private fun AttachmentListRow(
             if (isImage(attachment.type)) {
                 AsyncImage(
                     model = "${baseURL}attachments/${attachment.id}/thumbnail",
-                    contentDescription = attachment.name,
+                    contentDescription = attachment.caption.ifEmpty { attachment.name },
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize(),
                 )
@@ -957,6 +998,15 @@ private fun AttachmentListRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
+            if (attachment.caption.isNotEmpty()) {
+                Text(
+                    text = attachment.caption,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
             Text(
                 text = if (createdLabel.isNotEmpty()) "$sizeLabel · $createdLabel" else sizeLabel,
                 style = MaterialTheme.typography.bodySmall,
@@ -971,6 +1021,19 @@ private fun AttachmentListRow(
                 contentDescription = stringResource(R.string.wikis_attachments_open),
                 modifier = Modifier.size(20.dp),
             )
+        }
+        if (isImage(attachment.type)) {
+            IconButton(onClick = onRequestCaption) {
+                Icon(
+                    Icons.Default.ClosedCaption,
+                    contentDescription = stringResource(
+                        if (attachment.caption.isEmpty()) MochiR.string.attachment_caption_add
+                        else MochiR.string.attachment_caption_edit
+                    ),
+                    modifier = Modifier.size(20.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
         }
         IconButton(
             onClick = {
@@ -1070,7 +1133,9 @@ private fun filterAndSort(
     var result = attachments
     if (searchQuery.isNotBlank()) {
         val q = searchQuery.lowercase()
-        result = result.filter { it.name.lowercase().contains(q) }
+        result = result.filter {
+            it.name.lowercase().contains(q) || it.caption.lowercase().contains(q)
+        }
     }
     result = when (filter) {
         AttachmentsFilter.ALL -> result

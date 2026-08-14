@@ -77,6 +77,14 @@ class NewPostViewModel @Inject constructor(
     private val _removedExistingIds = MutableStateFlow<Set<String>>(emptySet())
     val removedExistingIds: StateFlow<Set<String>> = _removedExistingIds.asStateFlow()
 
+    // Captions keyed by the new file's Uri and the saved attachment's id, so
+    // neither removal nor reorder can re-attach a caption to the wrong item.
+    private val _newCaptions = MutableStateFlow<Map<Uri, String>>(emptyMap())
+    val newCaptions: StateFlow<Map<Uri, String>> = _newCaptions.asStateFlow()
+
+    private val _existingCaptions = MutableStateFlow<Map<String, String>>(emptyMap())
+    val existingCaptions: StateFlow<Map<String, String>> = _existingCaptions.asStateFlow()
+
     init {
         if (isEditing) {
             loadExistingPost()
@@ -91,6 +99,9 @@ class NewPostViewModel @Inject constructor(
                 _title.value = r.post.title
                 _body.value = r.post.body
                 _existingAttachments.value = r.post.attachments
+                _existingCaptions.value = r.post.attachments
+                    .filter { attachment -> attachment.caption.isNotEmpty() }
+                    .associate { attachment -> attachment.id to attachment.caption }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -130,6 +141,19 @@ class NewPostViewModel @Inject constructor(
         _removedExistingIds.value = if (id in current) current - id else current + id
     }
 
+    /** An empty caption removes the entry; saving empty is how a caption is cleared. */
+    fun setAttachmentCaption(uri: Uri, caption: String) {
+        _newCaptions.value =
+            if (caption.isEmpty()) _newCaptions.value - uri
+            else _newCaptions.value + (uri to caption)
+    }
+
+    fun setExistingAttachmentCaption(id: String, caption: String) {
+        _existingCaptions.value =
+            if (caption.isEmpty()) _existingCaptions.value - id
+            else _existingCaptions.value + (id to caption)
+    }
+
     /** Move an existing attachment one slot towards the head (-1) or tail (+1). */
     fun moveExistingAttachment(attachmentId: String, direction: Int) {
         val current = _existingAttachments.value.toMutableList()
@@ -165,6 +189,16 @@ class NewPostViewModel @Inject constructor(
                     val keptExisting = _existingAttachments.value
                         .filterNot { attachment -> attachment.id in _removedExistingIds.value }
                         .map { attachment -> attachment.id }
+                    // Caption edits keyed by order entry. Kept ids always
+                    // appear, so clearing a caption reaches the server as an
+                    // empty string; placeholders only when captioned.
+                    val captions = buildMap {
+                        keptExisting.forEach { id -> put(id, _existingCaptions.value[id] ?: "") }
+                        _attachments.value.forEachIndexed { index, uri ->
+                            _newCaptions.value[uri]?.takeIf { it.isNotEmpty() }
+                                ?.let { put("new:$index", it) }
+                        }
+                    }
                     repository.editPostFromUris(
                         forumId = forumId,
                         postId = postId,
@@ -172,6 +206,7 @@ class NewPostViewModel @Inject constructor(
                         body = body,
                         keptAttachmentIds = keptExisting,
                         newFileUris = _attachments.value,
+                        captions = captions,
                         context = application,
                     )
                     _uiState.value = _uiState.value.copy(
@@ -186,6 +221,7 @@ class NewPostViewModel @Inject constructor(
                         title = title,
                         body = body,
                         uris = _attachments.value,
+                        captions = _attachments.value.map { _newCaptions.value[it] ?: "" },
                         context = application,
                     )
                     _uiState.value = _uiState.value.copy(

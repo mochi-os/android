@@ -317,4 +317,7 @@
         <item quantity="other">%1$d падпісчыка</item>
     </plurals>
     <string name="account_token_label">Сеанс Mochi</string>
+    <string name="attachment_caption">Подпіс</string>
+    <string name="attachment_caption_add">Дадаць подпіс</string>
+    <string name="attachment_caption_edit">Рэдагаваць подпіс</string>
 </resources>

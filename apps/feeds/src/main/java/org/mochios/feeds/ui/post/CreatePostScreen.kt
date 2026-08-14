@@ -29,6 +29,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ClosedCaption
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Flight
@@ -76,6 +77,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.PlaceData
+import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.LocationPreviewMap
 import org.mochios.android.ui.components.MapMarkerPoint
 import org.mochios.android.ui.components.MentionTextField
@@ -99,6 +101,8 @@ fun CreatePostScreen(
     val attachments by viewModel.attachments.collectAsState()
     val existingAttachments by viewModel.existingAttachments.collectAsState()
     val removedExistingIds by viewModel.removedExistingIds.collectAsState()
+    val newCaptions by viewModel.newCaptions.collectAsState()
+    val existingCaptions by viewModel.existingCaptions.collectAsState()
     val checkin by viewModel.checkin.collectAsState()
     val travellingOrigin by viewModel.travellingOrigin.collectAsState()
     val travellingDestination by viewModel.travellingDestination.collectAsState()
@@ -111,6 +115,9 @@ fun CreatePostScreen(
     var showCheckinSheet by remember { mutableStateOf(false) }
     var showTravellingSheet by remember { mutableStateOf(false) }
     var feedDropdownExpanded by remember { mutableStateOf(false) }
+    // Which attachment's caption is being edited: a saved attachment's id or
+    // a staged file's Uri, with the display name for the dialog. null = closed.
+    var captioning by remember { mutableStateOf<CaptionTarget?>(null) }
 
     val hasTravelling = travellingOrigin != null || travellingDestination != null
 
@@ -409,6 +416,28 @@ fun CreatePostScreen(
                                     )
                                 }
                             )
+                            if ((attachment.isImage || attachment.isVideo) && !isRemoved) {
+                                IconButton(
+                                    onClick = {
+                                        captioning = CaptionTarget(
+                                            existingId = attachment.id,
+                                            uri = null,
+                                            name = attachment.name
+                                        )
+                                    },
+                                    modifier = Modifier.size(24.dp)
+                                ) {
+                                    Icon(
+                                        Icons.Default.ClosedCaption,
+                                        contentDescription = stringResource(
+                                            if ((existingCaptions[attachment.id] ?: "").isEmpty())
+                                                MochiR.string.attachment_caption_add
+                                            else MochiR.string.attachment_caption_edit
+                                        ),
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
+                            }
                         }
                     }
                     attachments.forEachIndexed { index, uri ->
@@ -459,6 +488,34 @@ fun CreatePostScreen(
                                     )
                                 }
                             )
+                            val context = LocalContext.current
+                            val isMedia = remember(uri) {
+                                context.contentResolver.getType(uri)?.let {
+                                    it.startsWith("image/") || it.startsWith("video/")
+                                } == true
+                            }
+                            if (isMedia) {
+                                IconButton(
+                                    onClick = {
+                                        captioning = CaptionTarget(
+                                            existingId = null,
+                                            uri = uri,
+                                            name = label
+                                        )
+                                    },
+                                    modifier = Modifier.size(24.dp)
+                                ) {
+                                    Icon(
+                                        Icons.Default.ClosedCaption,
+                                        contentDescription = stringResource(
+                                            if ((newCaptions[uri] ?: "").isEmpty())
+                                                MochiR.string.attachment_caption_add
+                                            else MochiR.string.attachment_caption_edit
+                                        ),
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
+                            }
                         }
                     }
                 }
@@ -489,7 +546,30 @@ fun CreatePostScreen(
             onDismiss = { showTravellingSheet = false }
         )
     }
+
+    captioning?.let { target ->
+        AttachmentCaptionDialog(
+            name = target.name,
+            initial = target.existingId?.let { existingCaptions[it] }
+                ?: target.uri?.let { newCaptions[it] }
+                ?: "",
+            onSave = { caption ->
+                target.existingId?.let { viewModel.setExistingAttachmentCaption(it, caption) }
+                target.uri?.let { viewModel.setAttachmentCaption(it, caption) }
+                captioning = null
+            },
+            onDismiss = { captioning = null }
+        )
+    }
 }
+
+// Which attachment a caption edit addresses: a saved attachment by id, or a
+// staged file by Uri, with the display name shown in the dialog.
+private data class CaptionTarget(
+    val existingId: String?,
+    val uri: Uri?,
+    val name: String,
+)
 
 /** Origin/check-in pin colour, matching the web preview. */
 private val LocationPinBlue = Color(0xFF2563EB)

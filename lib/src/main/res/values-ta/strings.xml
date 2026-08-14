@@ -315,4 +315,7 @@
         <item quantity="other">%1$d சந்தாதாரர்கள்</item>
     </plurals>
     <string name="account_token_label">Mochi அமர்வு</string>
+    <string name="attachment_caption">படக்குறிப்பு</string>
+    <string name="attachment_caption_add">படக்குறிப்பைச் சேர்</string>
+    <string name="attachment_caption_edit">படக்குறிப்பைத் திருத்து</string>
 </resources>

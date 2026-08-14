@@ -315,4 +315,7 @@
         <item quantity="other">%1$d مشترک</item>
     </plurals>
     <string name="account_token_label">نشست Mochi</string>
+    <string name="attachment_caption">شرح</string>
+    <string name="attachment_caption_add">افزودن شرح</string>
+    <string name="attachment_caption_edit">ویرایش شرح</string>
 </resources>

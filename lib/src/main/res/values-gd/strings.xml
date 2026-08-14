@@ -317,4 +317,7 @@
         <item quantity="other">%1$d luchd-fo-sgrìobhaidh</item>
     </plurals>
     <string name="account_token_label">Seisean Mochi</string>
+    <string name="attachment_caption">Caipsean</string>
+    <string name="attachment_caption_add">Cuir caipsean ris</string>
+    <string name="attachment_caption_edit">Deasaich an caipsean</string>
 </resources>

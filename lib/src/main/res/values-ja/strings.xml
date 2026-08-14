@@ -314,4 +314,7 @@
         <item quantity="other">%1$d 人の購読者</item>
     </plurals>
     <string name="account_token_label">Mochi セッション</string>
+    <string name="attachment_caption">キャプション</string>
+    <string name="attachment_caption_add">キャプションを追加</string>
+    <string name="attachment_caption_edit">キャプションを編集</string>
 </resources>

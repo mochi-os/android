@@ -372,4 +372,5 @@
         <item quantity="many">Nájdené %1$d výsledkov pre „%2$s“</item>
         <item quantity="other">Nájdené %1$d výsledkov pre „%2$s“</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Popis sa nepodarilo uložiť</string>
 </resources>

@@ -8,12 +8,15 @@ package org.mochios.android.ui.components
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTransformGestures
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BrokenImage
 import androidx.compose.material.icons.filled.Close
@@ -30,12 +33,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
@@ -55,6 +61,10 @@ fun LightboxScreen(
     images: List<String>,
     initialIndex: Int,
     onDismiss: () -> Unit,
+    // Per-image captions (same length / order as `images`); an empty or
+    // absent entry shows none. Shares the bottom chrome with the position
+    // counter so the two never fight for the same edge.
+    captions: List<String> = emptyList(),
 ) {
     BackHandler { onDismiss() }
 
@@ -99,19 +109,41 @@ fun LightboxScreen(
                 )
             }
 
-            if (images.size > 1) {
-                Text(
-                    text = stringResource(
-                        R.string.lightbox_position,
-                        pagerState.currentPage + 1,
-                        images.size
-                    ),
-                    color = Color.White,
-                    style = MaterialTheme.typography.bodyMedium,
+            val caption = captions.getOrNull(pagerState.currentPage)?.takeIf { it.isNotEmpty() }
+            if (caption != null || images.size > 1) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .padding(16.dp)
-                )
+                ) {
+                    if (caption != null) {
+                        Text(
+                            text = caption,
+                            color = Color.White,
+                            style = MaterialTheme.typography.bodyMedium,
+                            textAlign = TextAlign.Center,
+                            maxLines = 4,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(Color.Black.copy(alpha = 0.5f))
+                                .padding(horizontal = 12.dp, vertical = 6.dp)
+                        )
+                    }
+                    if (images.size > 1) {
+                        Text(
+                            text = stringResource(
+                                R.string.lightbox_position,
+                                pagerState.currentPage + 1,
+                                images.size
+                            ),
+                            color = Color.White,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                }
             }
         }
     }

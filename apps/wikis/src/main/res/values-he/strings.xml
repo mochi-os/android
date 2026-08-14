@@ -372,4 +372,5 @@
         <item quantity="many">נמצאו %1$d תוצאות עבור «%2$s»</item>
         <item quantity="other">נמצאו %1$d תוצאות עבור «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">שמירת הכיתוב נכשלה</string>
 </resources>

@@ -315,4 +315,7 @@
         <item quantity="other">%1$d ಚಂದಾದಾರರು</item>
     </plurals>
     <string name="account_token_label">Mochi ಅವಧಿ</string>
+    <string name="attachment_caption">ಅಡಿಬರಹ</string>
+    <string name="attachment_caption_add">ಅಡಿಬರಹ ಸೇರಿಸಿ</string>
+    <string name="attachment_caption_edit">ಅಡಿಬರಹ ಸಂಪಾದಿಸಿ</string>
 </resources>

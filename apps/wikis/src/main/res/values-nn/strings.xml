@@ -349,4 +349,5 @@
     <string name="wikis_revision_compare_failed">Klarte ikkje å laste førre versjon for samanlikning.</string>
     <string name="wikis_revision_show_page">Vis sida</string>
     <string name="wikis_revision_changes_from">Endringar frå versjon %1$d → %2$d</string>
+    <string name="wikis_attachments_caption_save_failed">Klarte ikkje lagre bileteksten</string>
 </resources>

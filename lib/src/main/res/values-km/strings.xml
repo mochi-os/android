@@ -314,4 +314,7 @@
         <item quantity="other">អ្នកជាវ %1$d នាក់</item>
     </plurals>
     <string name="account_token_label">វគ្គ Mochi</string>
+    <string name="attachment_caption">ចំណងជើង</string>
+    <string name="attachment_caption_add">បន្ថែមចំណងជើង</string>
+    <string name="attachment_caption_edit">កែសម្រួលចំណងជើង</string>
 </resources>

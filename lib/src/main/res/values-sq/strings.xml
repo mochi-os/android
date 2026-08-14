@@ -315,4 +315,7 @@
         <item quantity="other">%1$d pajtimtarë</item>
     </plurals>
     <string name="account_token_label">Sesioni Mochi</string>
+    <string name="attachment_caption">Legjenda</string>
+    <string name="attachment_caption_add">Shto legjendë</string>
+    <string name="attachment_caption_edit">Modifiko legjendën</string>
 </resources>

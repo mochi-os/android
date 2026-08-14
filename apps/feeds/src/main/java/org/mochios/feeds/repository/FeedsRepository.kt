@@ -443,6 +443,8 @@ class FeedsRepository @Inject constructor(
         body: String,
         uris: List<Uri>,
         context: Context,
+        // Per-file captions aligned with `uris`; sent only when one is set.
+        captions: List<String> = emptyList(),
         checkin: PlaceData? = null,
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null
@@ -452,6 +454,9 @@ class FeedsRepository @Inject constructor(
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
             for (file in files) {
                 multipartBody.addPart(fileStore.filePart("files", file))
+            }
+            if (captions.any { it.isNotEmpty() }) {
+                multipartBody.addFormDataPart("captions", Gson().toJson(captions))
             }
             api.createPost(feedId, multipartBody.build()).unwrap()
         } catch (e: Exception) {
@@ -509,6 +514,8 @@ class FeedsRepository @Inject constructor(
         order: List<String>,
         newFiles: List<Uri>,
         context: Context,
+        // Caption edits keyed by attachment id or "new:N" placeholder.
+        captions: Map<String, String> = emptyMap(),
         checkin: PlaceData? = null,
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null
@@ -541,6 +548,9 @@ class FeedsRepository @Inject constructor(
 
             for (file in files) {
                 builder.addPart(fileStore.filePart("files", file))
+            }
+            if (captions.isNotEmpty()) {
+                builder.addFormDataPart("captions", Gson().toJson(captions))
             }
             api.editPost(feedId, postId, builder.build()).unwrap()
         } catch (e: Exception) {

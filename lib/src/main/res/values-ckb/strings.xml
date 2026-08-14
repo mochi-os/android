@@ -315,4 +315,7 @@
         <item quantity="other">%1$d بەشداربوو</item>
     </plurals>
     <string name="account_token_label">دانیشتنی Mochi</string>
+    <string name="attachment_caption">ژێرنووس</string>
+    <string name="attachment_caption_add">زیادکردنی ژێرنووس</string>
+    <string name="attachment_caption_edit">دەستکاریکردنی ژێرنووس</string>
 </resources>

@@ -382,4 +382,5 @@
         <item quantity="many">Instabu %1$d riżultati għal "%2$s"</item>
         <item quantity="other">Instabu %1$d riżultati għal "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Id-didaskalija ma setgħetx tiġi salvata</string>
 </resources>

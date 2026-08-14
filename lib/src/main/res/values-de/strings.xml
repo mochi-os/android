@@ -315,4 +315,7 @@
         <item quantity="other">%1$d Abonnenten</item>
     </plurals>
     <string name="account_token_label">Mochi-Sitzung</string>
+    <string name="attachment_caption">Bildunterschrift</string>
+    <string name="attachment_caption_add">Bildunterschrift hinzufügen</string>
+    <string name="attachment_caption_edit">Bildunterschrift bearbeiten</string>
 </resources>

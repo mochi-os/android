@@ -362,4 +362,5 @@
         <item quantity="few">S-au găsit %1$d rezultate pentru „%2$s”</item>
         <item quantity="other">S-au găsit %1$d de rezultate pentru „%2$s”</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Legenda nu a putut fi salvată</string>
 </resources>

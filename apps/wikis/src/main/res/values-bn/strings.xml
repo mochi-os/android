@@ -349,4 +349,5 @@
         <item quantity="one">«%2$s»-এর জন্য %1$d ফলাফল পাওয়া গেছে</item>
         <item quantity="other">«%2$s»-এর জন্য %1$d ফলাফল পাওয়া গেছে</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">ক্যাপশন সংরক্ষণ করা যায়নি</string>
 </resources>

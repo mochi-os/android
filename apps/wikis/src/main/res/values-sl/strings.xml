@@ -369,4 +369,5 @@
         <item quantity="few">Najdeno %1$d rezultati za »%2$s«</item>
         <item quantity="other">Najdeno %1$d rezultatov za »%2$s«</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Napisa ni bilo mogoče shraniti</string>
 </resources>

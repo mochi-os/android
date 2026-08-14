@@ -372,4 +372,5 @@
         <item quantity="many">Знайдено %1$d результатів за запитом «%2$s»</item>
         <item quantity="other">Знайдено %1$d результатів за запитом «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Не вдалося зберегти підпис</string>
 </resources>

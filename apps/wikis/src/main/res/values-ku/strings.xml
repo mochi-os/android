@@ -352,4 +352,5 @@
         <item quantity="one">%1$d encam ji bo "%2$s" hat dîtin</item>
         <item quantity="other">%1$d encam ji bo "%2$s" hat dîtin</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Binnivîs nehat tomarkirin</string>
 </resources>

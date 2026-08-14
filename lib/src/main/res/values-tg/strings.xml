@@ -315,4 +315,7 @@
         <item quantity="other">%1$d обунашаванда</item>
     </plurals>
     <string name="account_token_label">Ҷаласаи Mochi</string>
+    <string name="attachment_caption">Зернавис</string>
+    <string name="attachment_caption_add">Илова кардани зернавис</string>
+    <string name="attachment_caption_edit">Таҳрири зернавис</string>
 </resources>

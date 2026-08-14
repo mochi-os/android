@@ -349,4 +349,5 @@
         <item quantity="one">Imepatikana Matokeo %1$d kwa «%2$s»</item>
         <item quantity="other">Imepatikana Matokeo %1$d kwa «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Imeshindwa kuhifadhi maelezo mafupi</string>
 </resources>

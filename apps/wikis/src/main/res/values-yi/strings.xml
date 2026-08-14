@@ -352,4 +352,5 @@
         <item quantity="one">געפֿונען %1$d רעזולטאַט פֿאַר „%2$s“</item>
         <item quantity="other">געפֿונען %1$d רעזולטאַטן פֿאַר „%2$s“</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">מען האָט נישט געקענט אָפּהיטן די אונטערשריפֿט</string>
 </resources>

@@ -315,4 +315,7 @@
         <item quantity="other">%1$d subscritores</item>
     </plurals>
     <string name="account_token_label">Sessão do Mochi</string>
+    <string name="attachment_caption">Legenda</string>
+    <string name="attachment_caption_add">Adicionar legenda</string>
+    <string name="attachment_caption_edit">Editar legenda</string>
 </resources>

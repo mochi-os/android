@@ -314,4 +314,7 @@
         <item quantity="other">စာဖတ်သူ %1$d ဦး</item>
     </plurals>
     <string name="account_token_label">Mochi စက်ရှင်</string>
+    <string name="attachment_caption">စာတန်း</string>
+    <string name="attachment_caption_add">စာတန်းထည့်ရန်</string>
+    <string name="attachment_caption_edit">စာတန်းကို ပြင်ဆင်ရန်</string>
 </resources>

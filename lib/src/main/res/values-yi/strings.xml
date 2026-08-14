@@ -315,4 +315,7 @@
         <item quantity="other">%1$d אַבאָנענטן</item>
     </plurals>
     <string name="account_token_label">Mochi סעסיע</string>
+    <string name="attachment_caption">אונטערשריפֿט</string>
+    <string name="attachment_caption_add">צוגעבן אן אונטערשריפֿט</string>
+    <string name="attachment_caption_edit">רעדאַקטירן די אונטערשריפֿט</string>
 </resources>

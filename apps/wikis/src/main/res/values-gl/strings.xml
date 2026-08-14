@@ -349,4 +349,5 @@
         <item quantity="one">Atopáronse %1$d resultado para "%2$s"</item>
         <item quantity="other">Atopáronse %1$d resultados para "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Non se puido gardar a lenda</string>
 </resources>

@@ -316,4 +316,7 @@
         <item quantity="other">%1$d obunachi</item>
     </plurals>
     <string name="account_token_label">Mochi seansi</string>
+    <string name="attachment_caption">Izoh</string>
+    <string name="attachment_caption_add">Izoh qoʻshish</string>
+    <string name="attachment_caption_edit">Izohni tahrirlash</string>
 </resources>

@@ -352,4 +352,5 @@
         <item quantity="one">"%2$s" uchun %1$d natija topildi</item>
         <item quantity="other">"%2$s" uchun %1$d natijalar topildi</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Izohni saqlab boʻlmadi</string>
 </resources>

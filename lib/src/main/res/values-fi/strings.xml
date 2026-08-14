@@ -315,4 +315,7 @@
         <item quantity="other">%1$d tilaajaa</item>
     </plurals>
     <string name="account_token_label">Mochi-istunto</string>
+    <string name="attachment_caption">Kuvateksti</string>
+    <string name="attachment_caption_add">Lisää kuvateksti</string>
+    <string name="attachment_caption_edit">Muokkaa kuvatekstiä</string>
 </resources>

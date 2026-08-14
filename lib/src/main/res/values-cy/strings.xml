@@ -320,4 +320,7 @@
         <item quantity="other">%1$d tanysgrifiwr</item>
     </plurals>
     <string name="account_token_label">Sesiwn Mochi</string>
+    <string name="attachment_caption">Capsiwn</string>
+    <string name="attachment_caption_add">Ychwanegu capsiwn</string>
+    <string name="attachment_caption_edit">Golygu capsiwn</string>
 </resources>

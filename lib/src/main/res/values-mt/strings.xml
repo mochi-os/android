@@ -319,4 +319,7 @@
         <item quantity="other">%1$d abbonati</item>
     </plurals>
     <string name="account_token_label">Sessjoni ta\' Mochi</string>
+    <string name="attachment_caption">Didaskalija</string>
+    <string name="attachment_caption_add">Żid didaskalija</string>
+    <string name="attachment_caption_edit">Editja d-didaskalija</string>
 </resources>

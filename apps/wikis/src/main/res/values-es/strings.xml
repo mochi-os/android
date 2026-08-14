@@ -352,4 +352,5 @@
         <item quantity="one">%1$d resultado para «%2$s»</item>
         <item quantity="other">%1$d resultados para «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">No se pudo guardar la leyenda</string>
 </resources>

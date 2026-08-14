@@ -352,4 +352,5 @@
         <item quantity="one">Nakahanap ng %1$d resulta para sa «%2$s»</item>
         <item quantity="other">Nakahanap ng %1$d resulta para sa «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Hindi na-save ang caption</string>
 </resources>

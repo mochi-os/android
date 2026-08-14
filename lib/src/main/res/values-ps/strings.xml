@@ -315,4 +315,7 @@
         <item quantity="other">%1$d پازوالان</item>
     </plurals>
     <string name="account_token_label">د Mochi ناسته</string>
+    <string name="attachment_caption">تشریح</string>
+    <string name="attachment_caption_add">تشریح ورزیادول</string>
+    <string name="attachment_caption_edit">تشریح سمول</string>
 </resources>

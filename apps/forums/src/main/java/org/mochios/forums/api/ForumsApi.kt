@@ -336,7 +336,9 @@ interface ForumsApi {
         @Part("forum") forum: RequestBody,
         @Part("title") title: RequestBody,
         @Part("body") body: RequestBody,
-        @Part attachments: List<MultipartBody.Part>
+        @Part attachments: List<MultipartBody.Part>,
+        // JSON array of per-file captions aligned with `attachments`
+        @Part("captions") captions: RequestBody? = null
     ): Response<ApiResponse<CreatePostResponse>>
 
     @GET("{forumId}/-/{postId}")
@@ -361,7 +363,9 @@ interface ForumsApi {
         @Part("title") title: RequestBody,
         @Part("body") body: RequestBody,
         @Part("order") order: RequestBody?,
-        @Part attachments: List<MultipartBody.Part>
+        @Part attachments: List<MultipartBody.Part>,
+        // JSON object of caption edits keyed by attachment id or "new:N"
+        @Part("captions") captions: RequestBody? = null
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{forumId}/-/{postId}/delete")

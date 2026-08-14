@@ -352,4 +352,5 @@
         <item quantity="one">%1$d Ergebnis für „%2$s" gefunden</item>
         <item quantity="other">%1$d Ergebnisse für „%2$s" gefunden</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Bildunterschrift konnte nicht gespeichert werden</string>
 </resources>

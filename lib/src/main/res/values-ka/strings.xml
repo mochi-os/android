@@ -315,4 +315,7 @@
         <item quantity="other">%1$d გამომწერი</item>
     </plurals>
     <string name="account_token_label">Mochi სესია</string>
+    <string name="attachment_caption">წარწერა</string>
+    <string name="attachment_caption_add">წარწერის დამატება</string>
+    <string name="attachment_caption_edit">წარწერის რედაქტირება</string>
 </resources>

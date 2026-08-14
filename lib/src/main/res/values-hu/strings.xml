@@ -315,4 +315,7 @@
         <item quantity="other">%1$d feliratkozó</item>
     </plurals>
     <string name="account_token_label">Mochi munkamenet</string>
+    <string name="attachment_caption">Képaláírás</string>
+    <string name="attachment_caption_add">Képaláírás hozzáadása</string>
+    <string name="attachment_caption_edit">Képaláírás szerkesztése</string>
 </resources>

@@ -315,4 +315,7 @@
         <item quantity="other">wafuatiliaji %1$d</item>
     </plurals>
     <string name="account_token_label">Kipindi cha Mochi</string>
+    <string name="attachment_caption">Maelezo mafupi</string>
+    <string name="attachment_caption_add">Ongeza maelezo mafupi</string>
+    <string name="attachment_caption_edit">Badilisha maelezo mafupi</string>
 </resources>

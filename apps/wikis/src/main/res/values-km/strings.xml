@@ -342,4 +342,5 @@
     <plurals name="wikis_search_results_count">
         <item quantity="other">បានរកឃើញ %1$d លទ្ធផល សម្រាប់ "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">មិនអាចរក្សាទុកចំណងជើងបានទេ</string>
 </resources>

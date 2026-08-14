@@ -352,4 +352,5 @@
         <item quantity="one">Fann %1$d niðurstaða fyrir «%2$s»</item>
         <item quantity="other">Fann %1$d niðurstöður fyrir «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Ekki tókst að vista myndatextann</string>
 </resources>

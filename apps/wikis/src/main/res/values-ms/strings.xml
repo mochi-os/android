@@ -346,4 +346,5 @@
         <item quantity="one">Dijumpai %1$d hasil untuk «%2$s»</item>
         <item quantity="other">Dijumpai %1$d hasil untuk «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Kapsyen tidak dapat disimpan</string>
 </resources>

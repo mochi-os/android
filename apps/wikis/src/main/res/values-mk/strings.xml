@@ -349,4 +349,5 @@
         <item quantity="one">Пронајдени се %1$d резултат за „%2$s“</item>
         <item quantity="other">Пронајдени се %1$d резултати за „%2$s“</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Натписот не можеше да се зачува</string>
 </resources>

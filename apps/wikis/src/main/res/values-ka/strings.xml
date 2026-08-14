@@ -352,4 +352,5 @@
         <item quantity="one">ნაპოვნია %1$d პოსტი „%2$s“-ისთვის</item>
         <item quantity="other">ნაპოვნია %1$d პოსტი „%2$s“-ისთვის</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">წარწერის შენახვა ვერ მოხერხდა</string>
 </resources>

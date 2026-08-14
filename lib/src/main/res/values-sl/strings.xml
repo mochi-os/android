@@ -317,4 +317,7 @@
         <item quantity="other">%1$d naročnikov</item>
     </plurals>
     <string name="account_token_label">Seja Mochi</string>
+    <string name="attachment_caption">Napis</string>
+    <string name="attachment_caption_add">Dodaj napis</string>
+    <string name="attachment_caption_edit">Uredi napis</string>
 </resources>

@@ -372,4 +372,5 @@
         <item quantity="many">Найдено %1$d результатов по запросу «%2$s»</item>
         <item quantity="other">Найдено %1$d результатов по запросу «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Не удалось сохранить подпись</string>
 </resources>

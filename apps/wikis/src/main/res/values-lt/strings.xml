@@ -372,4 +372,5 @@
         <item quantity="many">Rasta %1$d rezultatų užklausai „%2$s“</item>
         <item quantity="other">Rasta %1$d rezultatų užklausai „%2$s“</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Nepavyko išsaugoti antraštės</string>
 </resources>

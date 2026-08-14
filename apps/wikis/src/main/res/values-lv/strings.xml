@@ -362,4 +362,5 @@
         <item quantity="one">Atrasti %1$d rezultāts priekš "%2$s"</item>
         <item quantity="other">Atrasti %1$d rezultāti priekš "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Neizdevās saglabāt parakstu</string>
 </resources>

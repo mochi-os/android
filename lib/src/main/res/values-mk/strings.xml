@@ -315,4 +315,7 @@
         <item quantity="other">%1$d претплатници</item>
     </plurals>
     <string name="account_token_label">Mochi сесија</string>
+    <string name="attachment_caption">Натпис</string>
+    <string name="attachment_caption_add">Додај натпис</string>
+    <string name="attachment_caption_edit">Уреди натпис</string>
 </resources>

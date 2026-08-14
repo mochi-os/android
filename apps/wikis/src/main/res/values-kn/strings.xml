@@ -352,4 +352,5 @@
         <item quantity="one">«%2$s» ಗೆ %1$d ಫಲಿತಾಂಶ ಸಿಕ್ಕಿತು</item>
         <item quantity="other">«%2$s» ಗೆ %1$d ಫಲಿತಾಂಶಗಳು ಸಿಕ್ಕಿತು</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">ಅಡಿಬರಹವನ್ನು ಉಳಿಸಲಾಗಲಿಲ್ಲ</string>
 </resources>

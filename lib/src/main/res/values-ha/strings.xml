@@ -315,4 +315,7 @@
         <item quantity="other">masu biyayya %1$d</item>
     </plurals>
     <string name="account_token_label">Zaman Mochi</string>
+    <string name="attachment_caption">Bayanin hoto</string>
+    <string name="attachment_caption_add">Ƙara bayanin hoto</string>
+    <string name="attachment_caption_edit">Gyara bayanin hoto</string>
 </resources>

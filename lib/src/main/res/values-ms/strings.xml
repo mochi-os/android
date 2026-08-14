@@ -315,4 +315,7 @@
         <item quantity="other">%1$d pelanggan</item>
     </plurals>
     <string name="account_token_label">Sesi Mochi</string>
+    <string name="attachment_caption">Kapsyen</string>
+    <string name="attachment_caption_add">Tambah kapsyen</string>
+    <string name="attachment_caption_edit">Edit kapsyen</string>
 </resources>

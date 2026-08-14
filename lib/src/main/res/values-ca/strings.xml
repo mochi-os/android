@@ -317,4 +317,7 @@
         <item quantity="other">%1$d subscriptors</item>
     </plurals>
     <string name="account_token_label">Sessió de Mochi</string>
+    <string name="attachment_caption">Llegenda</string>
+    <string name="attachment_caption_add">Afegeix una llegenda</string>
+    <string name="attachment_caption_edit">Edita la llegenda</string>
 </resources>

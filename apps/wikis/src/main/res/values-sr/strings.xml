@@ -362,4 +362,5 @@
         <item quantity="few">Пронађено %1$d резултата за „%2$s“</item>
         <item quantity="other">Пронађено %1$d резултата за „%2$s“</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Натпис није могуће сачувати</string>
 </resources>

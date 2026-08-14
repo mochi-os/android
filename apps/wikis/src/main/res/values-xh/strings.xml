@@ -352,4 +352,5 @@
         <item quantity="one">Kufunyenwe Iziphumo %1$d ku-«%2$s»</item>
         <item quantity="other">Kufunyenwe Iziphumo %1$d ku-«%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Ayikwazanga ukugcina umbhalo</string>
 </resources>

@@ -314,4 +314,7 @@
         <item quantity="other">구독자 %1$d명</item>
     </plurals>
     <string name="account_token_label">Mochi 세션</string>
+    <string name="attachment_caption">캡션</string>
+    <string name="attachment_caption_add">캡션 추가</string>
+    <string name="attachment_caption_edit">캡션 편집</string>
 </resources>

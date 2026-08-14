@@ -372,4 +372,5 @@
         <item quantity="few">Fhuaras %1$d toraidhean airson "%2$s"</item>
         <item quantity="other">Fhuaras %1$d toraidhean airson "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Cha b\' urrainn dhuinn an caipsean a shàbhaladh</string>
 </resources>

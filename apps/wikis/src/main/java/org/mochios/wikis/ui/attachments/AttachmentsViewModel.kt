@@ -70,6 +70,8 @@ data class AttachmentsUiState(
     val pendingDelete: Attachment? = null,
     /** ID of the attachment currently being deleted. */
     val deletingId: String? = null,
+    /** Attachment currently open in the caption editor dialog. */
+    val captioning: Attachment? = null,
 )
 
 /**
@@ -284,6 +286,41 @@ class AttachmentsViewModel @Inject constructor(
                     deletingId = null,
                 )
                 _events.send(AttachmentsEvent.Toast(e.toMochiError().messageOrFallback(deleteFailed)))
+            }
+        }
+    }
+
+    // ---------------- Caption ----------------
+
+    /** Open the caption editor for [attachment]. */
+    fun requestCaption(attachment: Attachment) {
+        _uiState.value = _uiState.value.copy(captioning = attachment)
+    }
+
+    /** Close the caption editor without saving. */
+    fun cancelCaption() {
+        _uiState.value = _uiState.value.copy(captioning = null)
+    }
+
+    /**
+     * Save the editor's caption. An unchanged value is a no-op; an empty one
+     * clears the caption. The row updates in place on success, mirroring
+     * web's query invalidation without a full reload.
+     */
+    fun saveCaption(caption: String, saveFailed: String) {
+        val attachment = _uiState.value.captioning ?: return
+        _uiState.value = _uiState.value.copy(captioning = null)
+        if (caption == attachment.caption) return
+        viewModelScope.launch {
+            try {
+                val updated = repository.updateAttachment(wikiId, attachment.id, caption)
+                _uiState.value = _uiState.value.copy(
+                    attachments = _uiState.value.attachments.map {
+                        if (it.id == attachment.id) it.copy(caption = updated.caption) else it
+                    },
+                )
+            } catch (e: Exception) {
+                _events.send(AttachmentsEvent.Toast(e.toMochiError().messageOrFallback(saveFailed)))
             }
         }
     }

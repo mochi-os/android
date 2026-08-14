@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -21,9 +22,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import org.mochios.android.R
@@ -50,6 +53,10 @@ fun MediaGrid(
     modifier: Modifier = Modifier,
     thumbnailUrls: List<String>? = null,
     contentDescriptions: List<String>? = null,
+    // Per-image captions (same length / order as `urls`); an empty or absent
+    // entry draws no scrim. The "+N" overlay cell keeps its count instead —
+    // the caption is still in the lightbox, the count is nowhere else.
+    captions: List<String>? = null,
     maxDisplay: Int = 4,
 ) {
     if (urls.isEmpty()) return
@@ -59,19 +66,25 @@ fun MediaGrid(
 
     fun thumbOrUrl(i: Int): String = thumbnailUrls?.getOrNull(i) ?: urls[i]
     fun describe(i: Int): String? = contentDescriptions?.getOrNull(i)
+    fun captionFor(i: Int): String? = captions?.getOrNull(i)?.takeIf { it.isNotEmpty() }
 
     when (displayCount) {
         1 -> {
-            AsyncImage(
-                model = thumbOrUrl(0),
-                contentDescription = describe(0),
-                contentScale = ContentScale.Crop,
+            Box(
                 modifier = modifier
                     .fillMaxWidth()
                     .height(200.dp)
                     .clip(shape)
                     .clickable { onClick(0) }
-            )
+            ) {
+                AsyncImage(
+                    model = thumbOrUrl(0),
+                    contentDescription = describe(0),
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize()
+                )
+                captionFor(0)?.let { AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter)) }
+            }
         }
         2 -> {
             Row(
@@ -79,16 +92,21 @@ fun MediaGrid(
                 modifier = modifier.fillMaxWidth()
             ) {
                 for (i in 0 until 2) {
-                    AsyncImage(
-                        model = thumbOrUrl(i),
-                        contentDescription = describe(i),
-                        contentScale = ContentScale.Crop,
+                    Box(
                         modifier = Modifier
                             .weight(1f)
                             .height(160.dp)
                             .clip(shape)
                             .clickable { onClick(i) }
-                    )
+                    ) {
+                        AsyncImage(
+                            model = thumbOrUrl(i),
+                            contentDescription = describe(i),
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.fillMaxSize()
+                        )
+                        captionFor(i)?.let { AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter)) }
+                    }
                 }
             }
         }
@@ -97,16 +115,21 @@ fun MediaGrid(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
                 modifier = modifier
             ) {
-                AsyncImage(
-                    model = thumbOrUrl(0),
-                    contentDescription = describe(0),
-                    contentScale = ContentScale.Crop,
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(160.dp)
                         .clip(shape)
                         .clickable { onClick(0) }
-                )
+                ) {
+                    AsyncImage(
+                        model = thumbOrUrl(0),
+                        contentDescription = describe(0),
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier.fillMaxSize()
+                    )
+                    captionFor(0)?.let { AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter)) }
+                }
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(4.dp),
                     modifier = Modifier.fillMaxWidth()
@@ -125,7 +148,8 @@ fun MediaGrid(
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier.fillMaxSize()
                             )
-                            if (i == displayCount - 1 && urls.size > maxDisplay) {
+                            val overflow = i == displayCount - 1 && urls.size > maxDisplay
+                            if (overflow) {
                                 Box(
                                     modifier = Modifier
                                         .fillMaxSize()
@@ -141,11 +165,42 @@ fun MediaGrid(
                                         style = MaterialTheme.typography.titleLarge
                                     )
                                 }
+                            } else {
+                                captionFor(i)?.let {
+                                    AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter))
+                                }
                             }
                         }
                     }
                 }
             }
         }
+    }
+}
+
+/**
+ * The caption drawn over a media cell's bottom edge, on a fading scrim.
+ * Public so the app modules' own tile layouts (the feeds mosaic, the wikis
+ * attachments grid) draw the same treatment as [MediaGrid].
+ */
+@Composable
+fun AttachmentCaptionScrim(caption: String, modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .background(
+                Brush.verticalGradient(
+                    listOf(Color.Transparent, Color.Black.copy(alpha = 0.7f))
+                )
+            )
+    ) {
+        Text(
+            text = caption,
+            color = Color.White,
+            style = MaterialTheme.typography.labelSmall,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp)
+        )
     }
 }

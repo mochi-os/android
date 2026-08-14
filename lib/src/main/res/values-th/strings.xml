@@ -314,4 +314,7 @@
         <item quantity="other">ผู้ติดตาม %1$d คน</item>
     </plurals>
     <string name="account_token_label">เซสชัน Mochi</string>
+    <string name="attachment_caption">คำบรรยายภาพ</string>
+    <string name="attachment_caption_add">เพิ่มคำบรรยายภาพ</string>
+    <string name="attachment_caption_edit">แก้ไขคำบรรยายภาพ</string>
 </resources>

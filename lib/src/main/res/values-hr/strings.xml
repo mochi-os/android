@@ -316,4 +316,7 @@
         <item quantity="other">%1$d pretplatnika</item>
     </plurals>
     <string name="account_token_label">Mochi sesija</string>
+    <string name="attachment_caption">Opis</string>
+    <string name="attachment_caption_add">Dodaj opis</string>
+    <string name="attachment_caption_edit">Uredi opis</string>
 </resources>

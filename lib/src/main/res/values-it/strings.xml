@@ -315,4 +315,7 @@
         <item quantity="other">%1$d iscritti</item>
     </plurals>
     <string name="account_token_label">Sessione Mochi</string>
+    <string name="attachment_caption">Didascalia</string>
+    <string name="attachment_caption_add">Aggiungi didascalia</string>
+    <string name="attachment_caption_edit">Modifica didascalia</string>
 </resources>

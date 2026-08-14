@@ -349,4 +349,5 @@
         <item quantity="one">U gjetën %1$d rezultat për "%2$s"</item>
         <item quantity="other">U gjetën %1$d rezultate për "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Legjenda nuk u ruajt dot</string>
 </resources>

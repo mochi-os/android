@@ -352,4 +352,5 @@
         <item quantity="one">Oñetopa %1$d ojejuhu "%2$s" peguarã</item>
         <item quantity="other">Oñetopa %1$d ojejuhu "%2$s" peguarã</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Ndaikatúi oñeñongatu ñemyesakã</string>
 </resources>

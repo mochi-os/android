@@ -123,7 +123,7 @@ fun AttachmentGallery(
                         Box {
                             AsyncImage(
                                 model = resolvedThumb?.let { tb -> tb(image) } ?: resolvedUrl(image),
-                                contentDescription = image.name,
+                                contentDescription = image.caption.ifEmpty { image.name },
                                 // Fixed height; width follows the image's aspect ratio.
                                 contentScale = ContentScale.FillHeight,
                                 modifier = Modifier
@@ -147,7 +147,8 @@ fun AttachmentGallery(
                 MediaGrid(
                     urls = images.map { resolvedUrl(it) },
                     thumbnailUrls = resolvedPreview?.let { pb -> images.map { pb(it) } },
-                    contentDescriptions = images.map { it.name },
+                    contentDescriptions = images.map { it.caption.ifEmpty { it.name } },
+                    captions = images.map { it.caption },
                     onClick = { index ->
                         viewerIndex = index
                         showViewer = true
@@ -228,7 +229,8 @@ fun AttachmentGallery(
         LightboxScreen(
             images = images.map { resolvedUrl(it) },
             initialIndex = viewerIndex,
-            onDismiss = { showViewer = false }
+            onDismiss = { showViewer = false },
+            captions = images.map { it.caption }
         )
     }
 

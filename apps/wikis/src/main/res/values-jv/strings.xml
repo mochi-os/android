@@ -342,4 +342,5 @@
     <plurals name="wikis_search_results_count">
         <item quantity="other">Ditemokaké %1$d asil kanggo "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Ora bisa nyimpen katrangan</string>
 </resources>

@@ -352,4 +352,5 @@
         <item quantity="one">A rí Èsì %1$d fún «%2$s»</item>
         <item quantity="other">A rí Èsì %1$d fún «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Kò ṣeé ṣe láti fi àlàyé pamọ́</string>
 </resources>

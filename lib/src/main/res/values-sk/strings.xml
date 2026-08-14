@@ -317,4 +317,7 @@
         <item quantity="other">%1$d odberateľov</item>
     </plurals>
     <string name="account_token_label">Relácia Mochi</string>
+    <string name="attachment_caption">Popis</string>
+    <string name="attachment_caption_add">Pridať popis</string>
+    <string name="attachment_caption_edit">Upraviť popis</string>
 </resources>

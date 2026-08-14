@@ -352,4 +352,5 @@
         <item quantity="one">Kutholakale Umphumela %1$d ku-«%2$s»</item>
         <item quantity="other">Kutholakale Imiphumela %1$d ku-«%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Yehlulekile ukulondoloza umbhalo ochazayo</string>
 </resources>

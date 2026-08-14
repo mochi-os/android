@@ -352,4 +352,5 @@
         <item quantity="one">%1$d resultado "%2$s"-paq tarisqa</item>
         <item quantity="other">%1$d resultadokuna "%2$s"-paq tarisqa</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Sut\'inchayta waqaychayta mana atikunchu</string>
 </resources>

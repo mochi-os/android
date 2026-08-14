@@ -315,4 +315,7 @@
         <item quantity="other">%1$d agza</item>
     </plurals>
     <string name="account_token_label">Mochi sessiýasy</string>
+    <string name="attachment_caption">Düşündiriş</string>
+    <string name="attachment_caption_add">Düşündiriş goşmak</string>
+    <string name="attachment_caption_edit">Düşündirişi üýtgetmek</string>
 </resources>

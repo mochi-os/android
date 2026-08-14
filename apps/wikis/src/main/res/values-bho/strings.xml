@@ -352,4 +352,5 @@
         <item quantity="one">"%2$s" खातिर %1$d परिणाम मिलल</item>
         <item quantity="other">"%2$s" खातिर %1$d परिणाम मिलल</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">कैप्शन सहेजल ना जा सकल</string>
 </resources>

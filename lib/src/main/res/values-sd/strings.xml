@@ -315,4 +315,7 @@
         <item quantity="other">%1$d رڪن</item>
     </plurals>
     <string name="account_token_label">Mochi سيشن</string>
+    <string name="attachment_caption">ڪيپشن</string>
+    <string name="attachment_caption_add">ڪيپشن شامل ڪريو</string>
+    <string name="attachment_caption_edit">ڪيپشن ۾ ترميم ڪريو</string>
 </resources>

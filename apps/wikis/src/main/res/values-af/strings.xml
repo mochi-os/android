@@ -352,4 +352,5 @@
         <item quantity="one">%1$d resultaat gevind vir «%2$s»</item>
         <item quantity="other">%1$d resultate gevind vir «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Kon nie byskrif stoor nie</string>
 </resources>

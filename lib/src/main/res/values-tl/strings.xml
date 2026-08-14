@@ -315,4 +315,7 @@
         <item quantity="other">%1$d tagasunod</item>
     </plurals>
     <string name="account_token_label">Sesyon ng Mochi</string>
+    <string name="attachment_caption">Caption</string>
+    <string name="attachment_caption_add">Magdagdag ng caption</string>
+    <string name="attachment_caption_edit">I-edit ang caption</string>
 </resources>

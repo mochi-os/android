@@ -315,4 +315,7 @@
         <item quantity="other">%1$d abonnees</item>
     </plurals>
     <string name="account_token_label">Mochi-sessie</string>
+    <string name="attachment_caption">Bijschrift</string>
+    <string name="attachment_caption_add">Bijschrift toevoegen</string>
+    <string name="attachment_caption_edit">Bijschrift bewerken</string>
 </resources>

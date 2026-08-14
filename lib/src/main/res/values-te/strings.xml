@@ -315,4 +315,7 @@
         <item quantity="other">%1$d చందాదారులు</item>
     </plurals>
     <string name="account_token_label">Mochi సెషన్</string>
+    <string name="attachment_caption">క్యాప్షన్</string>
+    <string name="attachment_caption_add">క్యాప్షన్ జోడించండి</string>
+    <string name="attachment_caption_edit">క్యాప్షన్ సవరించండి</string>
 </resources>

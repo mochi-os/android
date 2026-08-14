@@ -190,15 +190,20 @@ class ForumsRepository @Inject constructor(
         body: String,
         uris: List<android.net.Uri>,
         context: android.content.Context,
+        // Per-file captions aligned with `uris`; sent only when one is set.
+        captions: List<String> = emptyList(),
     ): CreatePostResponse {
         val files = fileStore.cacheFiles(uris)
         try {
             val parts = fileStore.fileParts("attachments", files)
+            val captionsJson = captions.takeIf { list -> list.any { it.isNotEmpty() } }
+                ?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
             val response = api.createPost(
                 forum = forumId.toRequestBody(text),
                 title = title.toRequestBody(text),
                 body = body.toRequestBody(text),
                 attachments = parts,
+                captions = captionsJson,
             ).unwrap()
             _postCreated.tryEmit(forumId)
             return response
@@ -223,6 +228,8 @@ class ForumsRepository @Inject constructor(
         keptAttachmentIds: List<String>?,
         newFileUris: List<android.net.Uri>,
         context: android.content.Context,
+        // Caption edits keyed by attachment id or "new:N" placeholder.
+        captions: Map<String, String> = emptyMap(),
     ) {
         val files = fileStore.cacheFiles(newFileUris)
         try {
@@ -232,6 +239,8 @@ class ForumsRepository @Inject constructor(
                 else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
             }
             val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
+            val captionsJson = captions.takeIf { it.isNotEmpty() }
+                ?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
             api.editPost(
                 forumId = forumId,
                 postId = postId,
@@ -239,6 +248,7 @@ class ForumsRepository @Inject constructor(
                 body = body.toRequestBody(text),
                 order = orderJson,
                 attachments = newParts,
+                captions = captionsJson,
             ).unwrap()
         } finally {
             fileStore.deleteAll(files)

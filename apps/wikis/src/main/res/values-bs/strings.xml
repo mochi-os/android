@@ -362,4 +362,5 @@
         <item quantity="few">Pronađeno %1$d rezultata za "%2$s"</item>
         <item quantity="other">Pronađeno %1$d rezultata za "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Spremanje opisa nije uspjelo</string>
 </resources>

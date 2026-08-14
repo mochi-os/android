@@ -315,4 +315,7 @@
         <item quantity="other">%1$d жазылуучу</item>
     </plurals>
     <string name="account_token_label">Mochi сеансы</string>
+    <string name="attachment_caption">Түшүндүрмө</string>
+    <string name="attachment_caption_add">Түшүндүрмө кошуу</string>
+    <string name="attachment_caption_edit">Түшүндүрмөнү оңдоо</string>
 </resources>

@@ -352,4 +352,5 @@
         <item quantity="one">«%2$s» साठी %1$d निकाल सापडले</item>
         <item quantity="other">«%2$s» साठी %1$d निकाल सापडले</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">कॅप्शन जतन करता आले नाही</string>
 </resources>

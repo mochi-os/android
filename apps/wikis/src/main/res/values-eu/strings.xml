@@ -349,4 +349,5 @@
         <item quantity="one">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
         <item quantity="other">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Ezin izan da epigrafea gorde</string>
 </resources>

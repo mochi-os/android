@@ -372,4 +372,5 @@
         <item quantity="many">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
         <item quantity="other">Znaleziono %1$d wyników dla zapytania „%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Nie udało się zapisać podpisu</string>
 </resources>

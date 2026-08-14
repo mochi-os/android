@@ -308,4 +308,7 @@
     <string name="person_picker_directory">Gids</string>
     <string name="person_picker_no_people">Geen personen</string>
     <string name="person_picker_project_members">Projectleden</string>
+    <string name="attachment_caption">Bijschrift</string>
+    <string name="attachment_caption_add">Bijschrift toevoegen</string>
+    <string name="attachment_caption_edit">Bijschrift bewerken</string>
 </resources>

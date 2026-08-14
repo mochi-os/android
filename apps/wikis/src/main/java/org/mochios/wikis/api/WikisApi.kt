@@ -10,6 +10,7 @@ import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.wikis.model.AccessListResponse
 import org.mochios.wikis.model.AttachmentDeleteResponse
+import org.mochios.wikis.model.AttachmentUpdateResponse
 import org.mochios.wikis.model.AttachmentUploadResponse
 import org.mochios.wikis.model.AttachmentsResponse
 import org.mochios.wikis.model.ChangesResponse
@@ -420,6 +421,14 @@ interface WikisApi {
     ): Response<ApiResponse<AttachmentUploadResponse>>
 
     
+    @FormUrlEncoded
+    @POST("{wiki}/-/attachment/update")
+    suspend fun updateAttachment(
+        @Path(value = "wiki", encoded = true) wiki: String,
+        @Field("id") id: String,
+        @Field("caption") caption: String,
+    ): Response<ApiResponse<AttachmentUpdateResponse>>
+
     @FormUrlEncoded
     @POST("{wiki}/-/attachment/delete")
     suspend fun deleteAttachment(

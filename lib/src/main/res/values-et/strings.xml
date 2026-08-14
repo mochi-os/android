@@ -315,4 +315,7 @@
         <item quantity="other">%1$d tellijat</item>
     </plurals>
     <string name="account_token_label">Mochi seanss</string>
+    <string name="attachment_caption">Pealdis</string>
+    <string name="attachment_caption_add">Lisa pealdis</string>
+    <string name="attachment_caption_edit">Muuda pealdist</string>
 </resources>

@@ -315,4 +315,7 @@
         <item quantity="other">%1$d सदस्य</item>
     </plurals>
     <string name="account_token_label">Mochi सत्र</string>
+    <string name="attachment_caption">कैप्शन</string>
+    <string name="attachment_caption_add">कैप्शन जोड़ें</string>
+    <string name="attachment_caption_edit">कैप्शन संपादित करें</string>
 </resources>

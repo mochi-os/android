@@ -342,4 +342,5 @@
     <plurals name="wikis_search_results_count">
         <item quantity="other">"%2$s" အတွက် ရလဒ် %1$d ခု တွေ့ရသည်</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">စာတန်းကို သိမ်းဆည်း၍မရပါ</string>
 </resources>

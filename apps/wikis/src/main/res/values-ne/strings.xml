@@ -352,4 +352,5 @@
         <item quantity="one">«%2$s» का लागि %1$d परिणाम फेला पर्‍यो</item>
         <item quantity="other">«%2$s» का लागि %1$d परिणामहरू फेला पर्‍यो</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">क्याप्शन बचत गर्न सकिएन</string>
 </resources>

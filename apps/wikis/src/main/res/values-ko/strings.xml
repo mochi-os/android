@@ -349,4 +349,5 @@
         <item quantity="one">「%2$s」에 대해 결과 %1$d개을(를) 찾았습니다</item>
         <item quantity="other">「%2$s」에 대해 결과 %1$d개을(를) 찾았습니다</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">캡션을 저장하지 못했습니다</string>
 </resources>

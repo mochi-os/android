@@ -315,4 +315,7 @@
         <item quantity="other">%1$d harpidetu</item>
     </plurals>
     <string name="account_token_label">Mochi saioa</string>
+    <string name="attachment_caption">Epigrafea</string>
+    <string name="attachment_caption_add">Gehitu epigrafea</string>
+    <string name="attachment_caption_edit">Editatu epigrafea</string>
 </resources>

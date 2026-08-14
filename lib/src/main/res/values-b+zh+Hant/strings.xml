@@ -314,4 +314,7 @@
         <item quantity="other">%1$d 位訂閱者</item>
     </plurals>
     <string name="account_token_label">Mochi 工作階段</string>
+    <string name="attachment_caption">說明文字</string>
+    <string name="attachment_caption_add">新增說明文字</string>
+    <string name="attachment_caption_edit">編輯說明文字</string>
 </resources>

@@ -352,4 +352,5 @@
         <item quantity="one">%1$d resultaat gevonden voor "%2$s"</item>
         <item quantity="other">%1$d resultaten gevonden voor "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Bijschrift kan niet worden opgeslagen</string>
 </resources>

@@ -342,4 +342,5 @@
     <plurals name="wikis_search_results_count">
         <item quantity="other">Jwenn %1$d rezilta pou "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Nou pa t ka anrejistre lejand lan</string>
 </resources>

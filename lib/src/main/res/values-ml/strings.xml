@@ -315,4 +315,7 @@
         <item quantity="other">%1$d വരിക്കാർ</item>
     </plurals>
     <string name="account_token_label">Mochi സെഷൻ</string>
+    <string name="attachment_caption">അടിക്കുറിപ്പ്</string>
+    <string name="attachment_caption_add">അടിക്കുറിപ്പ് ചേർക്കുക</string>
+    <string name="attachment_caption_edit">അടിക്കുറിപ്പ് എഡിറ്റ് ചെയ്യുക</string>
 </resources>

@@ -343,4 +343,5 @@
     <string name="wikis_revision_compare">比較變更</string>
     <string name="wikis_revision_compare_failed">載入唔到上一個版本嚟比較。</string>
     <string name="wikis_revision_show_page">顯示頁面</string>
+    <string name="wikis_attachments_caption_save_failed">無法儲存說明文字</string>
 </resources>

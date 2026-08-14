@@ -352,4 +352,5 @@
         <item quantity="one">Намерени %1$d резултат за „%2$s“</item>
         <item quantity="other">Намерени %1$d резултата за „%2$s“</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Надписът не можа да бъде запазен</string>
 </resources>

@@ -352,4 +352,5 @@
         <item quantity="one">Fant %1$d resultat for «%2$s»</item>
         <item quantity="other">Fant %1$d resultater for «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Kunne ikke lagre bildeteksten</string>
 </resources>

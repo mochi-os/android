@@ -61,6 +61,14 @@ class CreatePostViewModel @Inject constructor(
     private val _removedExistingIds = MutableStateFlow<Set<String>>(emptySet())
     val removedExistingIds: StateFlow<Set<String>> = _removedExistingIds.asStateFlow()
 
+    // Captions keyed by the new file's Uri and the saved attachment's id, so
+    // neither removal nor reorder can re-attach a caption to the wrong item.
+    private val _newCaptions = MutableStateFlow<Map<Uri, String>>(emptyMap())
+    val newCaptions: StateFlow<Map<Uri, String>> = _newCaptions.asStateFlow()
+
+    private val _existingCaptions = MutableStateFlow<Map<String, String>>(emptyMap())
+    val existingCaptions: StateFlow<Map<String, String>> = _existingCaptions.asStateFlow()
+
     private val _checkin = MutableStateFlow<PlaceData?>(null)
     val checkin: StateFlow<PlaceData?> = _checkin.asStateFlow()
 
@@ -117,6 +125,9 @@ class CreatePostViewModel @Inject constructor(
                 val result = repository.getPost(feedId, postId)
                 _body.value = result.post.body
                 _existingAttachments.value = result.post.attachments
+                _existingCaptions.value = result.post.attachments
+                    .filter { it.caption.isNotEmpty() }
+                    .associate { it.id to it.caption }
                 // Load location data from post.data if present
                 result.post.data?.checkin?.let { _checkin.value = it }
                 result.post.data?.travelling?.origin?.let { _travellingOrigin.value = it }
@@ -130,6 +141,19 @@ class CreatePostViewModel @Inject constructor(
     fun toggleRemoveExistingAttachment(id: String) {
         val current = _removedExistingIds.value
         _removedExistingIds.value = if (id in current) current - id else current + id
+    }
+
+    /** An empty caption removes the entry; saving empty is how a caption is cleared. */
+    fun setAttachmentCaption(uri: Uri, caption: String) {
+        _newCaptions.value =
+            if (caption.isEmpty()) _newCaptions.value - uri
+            else _newCaptions.value + (uri to caption)
+    }
+
+    fun setExistingAttachmentCaption(id: String, caption: String) {
+        _existingCaptions.value =
+            if (caption.isEmpty()) _existingCaptions.value - id
+            else _existingCaptions.value + (id to caption)
     }
 
     fun setSelectedFeed(feedId: String) {
@@ -223,6 +247,16 @@ class CreatePostViewModel @Inject constructor(
                     val newPlaceholders = _attachments.value.indices.map { "new:$it" }
                     val order = keptExisting + newPlaceholders
                     val newFileUris = _attachments.value
+                    // Caption edits keyed by order entry. Kept ids always
+                    // appear, so clearing a caption reaches the server as an
+                    // empty string; placeholders only when captioned.
+                    val captions = buildMap {
+                        keptExisting.forEach { id -> put(id, _existingCaptions.value[id] ?: "") }
+                        newFileUris.forEachIndexed { index, uri ->
+                            _newCaptions.value[uri]?.takeIf { it.isNotEmpty() }
+                                ?.let { put("new:$index", it) }
+                        }
+                    }
                     // Read new files into byte arrays for the repo method
                     repository.editPost(
                         feedId = feedId,
@@ -230,6 +264,7 @@ class CreatePostViewModel @Inject constructor(
                         body = bodyText,
                         order = order,
                         newFiles = newFileUris,
+                        captions = captions,
                         context = application,
                         checkin = _checkin.value,
                         travellingOrigin = _travellingOrigin.value,
@@ -240,6 +275,7 @@ class CreatePostViewModel @Inject constructor(
                         feedId = feedId,
                         body = bodyText,
                         uris = _attachments.value,
+                        captions = _attachments.value.map { _newCaptions.value[it] ?: "" },
                         context = application,
                         checkin = _checkin.value,
                         travellingOrigin = _travellingOrigin.value,

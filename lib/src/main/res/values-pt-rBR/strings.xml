@@ -308,4 +308,7 @@
     <string name="person_picker_directory">Diretório</string>
     <string name="person_picker_no_people">Sem pessoas</string>
     <string name="person_picker_project_members">Membros do projeto</string>
+    <string name="attachment_caption">Legenda</string>
+    <string name="attachment_caption_add">Adicionar legenda</string>
+    <string name="attachment_caption_edit">Editar legenda</string>
 </resources>

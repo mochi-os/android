@@ -382,4 +382,5 @@
         <item quantity="many">%1$d dtoradh aimsithe do "%2$s"</item>
         <item quantity="other">%1$d toradh aimsithe do "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Níorbh fhéidir an fhoscríbhinn a shábháil</string>
 </resources>

@@ -352,4 +352,5 @@
         <item quantity="one">%1$d találat találat «%2$s» kifejezésre</item>
         <item quantity="other">%1$d találat találat «%2$s» kifejezésre</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Nem sikerült menteni a képaláírást</string>
 </resources>

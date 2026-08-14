@@ -349,4 +349,5 @@
         <item quantity="one">「%2$s」に対して %1$d件の結果 が見つかりました</item>
         <item quantity="other">「%2$s」に対して %1$d件の結果 が見つかりました</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">キャプションを保存できませんでした</string>
 </resources>

@@ -349,4 +349,5 @@
         <item quantity="one">找到 %1$d 个结果,查询「%2$s」</item>
         <item quantity="other">找到 %1$d 个结果,查询「%2$s」</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">无法保存说明文字</string>
 </resources>

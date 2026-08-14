@@ -352,4 +352,5 @@
         <item quantity="one">Löytyi %1$d tulos hakusanalle «%2$s»</item>
         <item quantity="other">Löytyi %1$d tulosta hakusanalle «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Kuvatekstin tallentaminen epäonnistui</string>
 </resources>

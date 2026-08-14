@@ -352,4 +352,5 @@
         <item quantity="one">ለ«%2$s» %1$d ውጤት ተገኘ</item>
         <item quantity="other">ለ«%2$s» %1$d ውጤቶች ተገኘ</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">መግለጫ ጽሑፍን ማስቀመጥ አልተቻለም</string>
 </resources>

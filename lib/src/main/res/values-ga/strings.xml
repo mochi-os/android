@@ -318,4 +318,7 @@
         <item quantity="other">%1$d síntiúsóir</item>
     </plurals>
     <string name="account_token_label">Seisiún Mochi</string>
+    <string name="attachment_caption">Foscríbhinn</string>
+    <string name="attachment_caption_add">Cuir foscríbhinn leis</string>
+    <string name="attachment_caption_edit">Cuir an fhoscríbhinn in eagar</string>
 </resources>

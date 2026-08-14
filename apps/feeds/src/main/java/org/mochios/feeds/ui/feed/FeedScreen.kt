@@ -134,6 +134,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.AttachmentCaptionScrim
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
@@ -1239,6 +1240,14 @@ private fun PostImage(
 // it, and at most a caption of text alongside the images/videos.
 private const val GALLERY_CAPTION_LIMIT = 200
 
+// What an image tap asks the lightbox to show: the image set, the per-image
+// captions aligned with it, and where to start. null = closed.
+private data class LightboxRequest(
+    val urls: List<String>,
+    val captions: List<String>,
+    val index: Int,
+)
+
 // Mosaic tiles shown before the last one collapses into a "+N" overlay.
 private const val GALLERY_TILE_LIMIT = 6
 
@@ -1581,7 +1590,7 @@ private fun GalleryTile(
             Box(modifier = Modifier.matchParentSize().background(Color.Black))
             AsyncImage(
                 model = model,
-                contentDescription = attachment.name,
+                contentDescription = attachment.caption.ifEmpty { attachment.name },
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize(),
             )
@@ -1596,9 +1605,17 @@ private fun GalleryTile(
         } else {
             PostImage(
                 url = model as String,
-                contentDescription = attachment.name,
+                contentDescription = attachment.caption.ifEmpty { attachment.name },
                 contentScale = contentScale,
                 modifier = Modifier.fillMaxSize(),
+            )
+        }
+        // The "+N" overlay owns the last tile's face; the caption is still in
+        // the lightbox, the count is nowhere else.
+        if (more == 0 && attachment.caption.isNotEmpty()) {
+            AttachmentCaptionScrim(
+                caption = attachment.caption,
+                modifier = Modifier.align(Alignment.BottomCenter),
             )
         }
         if (more > 0) {
@@ -1637,11 +1654,10 @@ private fun PostCard(
     onEdit: () -> Unit,
     onDelete: () -> Unit,
 ) {
-    // Lightbox open-state: (image urls list, starting index). null = closed.
-    // Tapping an image populates this; the lightbox dialog renders above the
-    // page. Matches web's per-card image-tap behaviour (open lightbox, not
-    // navigate to post detail).
-    var lightboxState by remember { mutableStateOf<Pair<List<String>, Int>?>(null) }
+    // Lightbox open-state. Tapping an image populates this; the lightbox
+    // dialog renders above the page. Matches web's per-card image-tap
+    // behaviour (open lightbox, not navigate to post detail).
+    var lightboxState by remember { mutableStateOf<LightboxRequest?>(null) }
     // Magazine-style page: full-screen surface, no card chrome. The
     // VerticalPager wrapper handles the 3D flip; the page itself is just
     // content on the theme background. The action row is hoisted out of
@@ -1659,6 +1675,7 @@ private fun PostCard(
     val attachmentImageUrls = attachmentImages.map { att ->
         att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}"
     }
+    val attachmentImageCaptions = attachmentImages.map { it.caption }
     val rssImageUrl = upgradedRssImage?.takeIf { it.isNotEmpty() }
         ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
@@ -1692,7 +1709,9 @@ private fun PostCard(
                 caption = captionText,
                 fallbackFeedId = fallbackFeedId,
                 onOpenImage = { imageIndex ->
-                    lightboxState = attachmentImageUrls to imageIndex
+                    lightboxState = LightboxRequest(
+                        attachmentImageUrls, attachmentImageCaptions, imageIndex
+                    )
                 },
                 onPlayVideo = { url -> playingVideoUrl = url },
                 onOpenPost = onClick,
@@ -1741,9 +1760,9 @@ private fun PostCard(
                 modifier = heroModifier,
                 onClick = {
                     lightboxState = if (heroFromAttachment) {
-                        attachmentImageUrls to 0
+                        LightboxRequest(attachmentImageUrls, attachmentImageCaptions, 0)
                     } else {
-                        listOf(heroUrl) to 0
+                        LightboxRequest(listOf(heroUrl), emptyList(), 0)
                     }
                 },
             )
@@ -1840,9 +1859,14 @@ private fun PostCard(
                                     ?: att.thumbnailUrl
                                     ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
                             },
-                            contentDescriptions = gridImages.map { it.name },
+                            contentDescriptions = gridImages.map { it.caption.ifEmpty { it.name } },
+                            captions = gridImages.map { it.caption },
                             onClick = { index ->
-                                lightboxState = attachmentImageUrls to (index + gridStartIndex)
+                                lightboxState = LightboxRequest(
+                                    attachmentImageUrls,
+                                    attachmentImageCaptions,
+                                    index + gridStartIndex
+                                )
                             }
                         )
                     }
@@ -1871,7 +1895,7 @@ private fun PostCard(
                                 .fillMaxWidth()
                                 .aspectRatio(16f / 9f)
                                 .clip(RoundedCornerShape(8.dp)),
-                            onClick = { lightboxState = listOf(rssImageUrl) to 0 },
+                            onClick = { lightboxState = LightboxRequest(listOf(rssImageUrl), emptyList(), 0) },
                         )
                     }
 
@@ -1973,11 +1997,12 @@ private fun PostCard(
         )
     }
 
-    lightboxState?.let { (urls, index) ->
+    lightboxState?.let { request ->
         LightboxScreen(
-            images = urls,
-            initialIndex = index,
+            images = request.urls,
+            initialIndex = request.index,
             onDismiss = { lightboxState = null },
+            captions = request.captions,
         )
     }
 

@@ -13,6 +13,7 @@ data class Attachment(
     val size: Long = 0,
     val type: String = "",
     val created: Long = 0,
+    val caption: String = "",
     val url: String? = null,
     @SerializedName("thumbnail_url") val thumbnailUrl: String? = null,
     @SerializedName("preview_url") val previewUrl: String? = null

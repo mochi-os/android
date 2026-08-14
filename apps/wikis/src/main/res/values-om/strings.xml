@@ -352,4 +352,5 @@
         <item quantity="one">bu\'aa %1$d "%2$s" argi</item>
         <item quantity="other">bu\'aalee %1$d "%2$s" argi</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Ibsa olkaa\'uun hin milkoofne</string>
 </resources>

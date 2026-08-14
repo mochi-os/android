@@ -349,6 +349,7 @@
     <string name="wikis_attachments_delete_confirm_message">Delete \"%1$s\"? This cannot be undone.</string>
     <string name="wikis_attachments_delete_success">Attachment deleted</string>
     <string name="wikis_attachments_delete_failed">Failed to delete attachment</string>
+    <string name="wikis_attachments_caption_save_failed">Failed to save caption</string>
 
     <string name="wikis_attachments_open">Open</string>
     <string name="wikis_attachments_downloading">Downloading…</string>

@@ -369,4 +369,5 @@
         <item quantity="many">Знойдзена %1$d вынікаў для «%2$s»</item>
         <item quantity="other">Знойдзена %1$d выніку для «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Не ўдалося захаваць подпіс</string>
 </resources>

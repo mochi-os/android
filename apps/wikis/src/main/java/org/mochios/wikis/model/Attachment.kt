@@ -11,6 +11,11 @@ data class Attachment(
     val size: Long = 0,
     val type: String = "",
     val created: Long = 0,
+    val caption: String = "",
+)
+
+data class AttachmentUpdateResponse(
+    val attachment: Attachment = Attachment(),
 )
 
 data class AttachmentsResponse(

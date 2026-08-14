@@ -352,4 +352,5 @@
         <item quantity="one">«%2$s» എന്നതിന് %1$d ഫലം കണ്ടെത്തി</item>
         <item quantity="other">«%2$s» എന്നതിന് %1$d ഫലങ്ങൾ കണ്ടെത്തി</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">അടിക്കുറിപ്പ് സംരക്ഷിക്കാനായില്ല</string>
 </resources>

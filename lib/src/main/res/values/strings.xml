@@ -189,6 +189,11 @@
     <!-- Lightbox -->
     <string name="lightbox_position">%1$d / %2$d</string>
 
+    <!-- Attachment captions -->
+    <string name="attachment_caption">Caption</string>
+    <string name="attachment_caption_add">Add caption</string>
+    <string name="attachment_caption_edit">Edit caption</string>
+
     <!-- Format: relative timestamps (used by org.mochi.android.i18n.Format) -->
     <string name="format_time_just_now">Just now</string>
     <string name="format_time_minutes_ago">%1$dm ago</string>

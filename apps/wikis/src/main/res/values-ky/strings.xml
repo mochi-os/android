@@ -352,4 +352,5 @@
         <item quantity="one">"%2$s" үчүн %1$d натыйжа табылды</item>
         <item quantity="other">"%2$s" үчүн %1$d натыйжа табылды</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Түшүндүрмөнү сактоо мүмкүн болгон жок</string>
 </resources>

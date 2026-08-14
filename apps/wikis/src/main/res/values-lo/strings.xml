@@ -342,4 +342,5 @@
     <plurals name="wikis_search_results_count">
         <item quantity="other">ພົບ %1$d ຜົນ ສຳລັບ "%2$s"</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">ບໍ່ສາມາດບັນທຶກຄຳບັນຍາຍໄດ້</string>
 </resources>

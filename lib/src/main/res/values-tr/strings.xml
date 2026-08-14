@@ -315,4 +315,7 @@
         <item quantity="other">%1$d abone</item>
     </plurals>
     <string name="account_token_label">Mochi oturumu</string>
+    <string name="attachment_caption">Resim yazısı</string>
+    <string name="attachment_caption_add">Resim yazısı ekle</string>
+    <string name="attachment_caption_edit">Resim yazısını düzenle</string>
 </resources>

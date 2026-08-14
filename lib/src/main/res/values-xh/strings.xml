@@ -315,4 +315,7 @@
         <item quantity="other">ababhalisi %1$d</item>
     </plurals>
     <string name="account_token_label">Iseshoni ye-Mochi</string>
+    <string name="attachment_caption">Umbhalo</string>
+    <string name="attachment_caption_add">Yongeza umbhalo</string>
+    <string name="attachment_caption_edit">Hlela umbhalo</string>
 </resources>

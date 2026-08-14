@@ -315,4 +315,7 @@
         <item quantity="other">%1$d abonnentar</item>
     </plurals>
     <string name="account_token_label">Mochi-økt</string>
+    <string name="attachment_caption">Bilettekst</string>
+    <string name="attachment_caption_add">Legg til bilettekst</string>
+    <string name="attachment_caption_edit">Rediger bileteksten</string>
 </resources>

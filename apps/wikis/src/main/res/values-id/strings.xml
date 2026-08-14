@@ -349,4 +349,5 @@
         <item quantity="one">Ditemukan %1$d hasil untuk «%2$s»</item>
         <item quantity="other">Ditemukan %1$d hasil untuk «%2$s»</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Gagal menyimpan keterangan</string>
 </resources>

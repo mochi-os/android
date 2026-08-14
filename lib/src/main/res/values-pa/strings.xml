@@ -315,4 +315,7 @@
         <item quantity="other">%1$d ਗਾਹਕ</item>
     </plurals>
     <string name="account_token_label">Mochi ਸੈਸ਼ਨ</string>
+    <string name="attachment_caption">ਕੈਪਸ਼ਨ</string>
+    <string name="attachment_caption_add">ਕੈਪਸ਼ਨ ਜੋੜੋ</string>
+    <string name="attachment_caption_edit">ਕੈਪਸ਼ਨ ਸੰਪਾਦਿਤ ਕਰੋ</string>
 </resources>

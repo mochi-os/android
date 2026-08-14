@@ -352,4 +352,5 @@
         <item quantity="one">Leiti %1$d tulemus päringule „%2$s“</item>
         <item quantity="other">Leiti %1$d tulemust päringule „%2$s“</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">Pealdise salvestamine ebaõnnestus</string>
 </resources>

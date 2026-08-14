@@ -352,4 +352,5 @@
         <item quantity="one">«%2$s» ਲਈ %1$d ਨਤੀਜਾ ਮਿਲਿਆ</item>
         <item quantity="other">«%2$s» ਲਈ %1$d ਨਤੀਜੇ ਮਿਲਿਆ</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">ਕੈਪਸ਼ਨ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ</string>
 </resources>

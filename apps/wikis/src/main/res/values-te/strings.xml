@@ -352,4 +352,5 @@
         <item quantity="one">«%2$s» కోసం %1$d ఫలితం కనుగొనబడింది</item>
         <item quantity="other">«%2$s» కోసం %1$d ఫలితాలు కనుగొనబడింది</item>
     </plurals>
+    <string name="wikis_attachments_caption_save_failed">క్యాప్షన్ సేవ్ చేయడం సాధ్యపడలేదు</string>
 </resources>

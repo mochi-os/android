@@ -316,4 +316,7 @@
         <item quantity="other">%1$d de abonați</item>
     </plurals>
     <string name="account_token_label">Sesiune Mochi</string>
+    <string name="attachment_caption">Legendă</string>
+    <string name="attachment_caption_add">Adaugă legendă</string>
+    <string name="attachment_caption_edit">Editează legenda</string>
 </resources>
