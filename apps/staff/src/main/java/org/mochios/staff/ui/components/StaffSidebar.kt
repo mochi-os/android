@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.Report
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.SpaceDashboard
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -32,11 +33,17 @@ import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.staff.R
 import org.mochios.staff.navigation.StaffApp
 
@@ -70,6 +77,7 @@ fun StaffSidebar(
     @Suppress("UNUSED_PARAMETER") navController: NavController,
     onNavigate: (String) -> Unit,
 ) {
+    var showAbout by remember { mutableStateOf(false) }
     ModalDrawerSheet(modifier = Modifier.fillMaxHeight()) {
         Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
             // Overview
@@ -166,8 +174,18 @@ fun StaffSidebar(
                 )
             }
 
+            SidebarRow(
+                route = null,
+                currentRoute = currentRoute,
+                icon = Icons.Outlined.Info,
+                labelRes = MochiR.string.about_label,
+                onClick = { showAbout = true },
+            )
             Spacer(modifier = Modifier.height(12.dp))
         }
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

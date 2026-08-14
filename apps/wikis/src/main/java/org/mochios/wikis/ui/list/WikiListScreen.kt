@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -70,6 +71,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -114,6 +116,7 @@ fun WikiListScreen(
     val clipboard = LocalClipboardManager.current
 
     var showOverflow by remember { mutableStateOf(false) }
+    var showAbout by remember { mutableStateOf(false) }
     var rssSubmenuOpen by remember { mutableStateOf(false) }
 
     val rssCopiedMessage = stringResource(R.string.wikis_rss_copied)
@@ -212,6 +215,14 @@ fun WikiListScreen(
                                         },
                                     )
                                 }
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.about_label)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        showAbout = true
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
+                                )
                             }
                         }
                     },
@@ -269,6 +280,9 @@ fun WikiListScreen(
             onConfirm = { viewModel.confirmUnsubscribe() },
             onDismiss = { viewModel.cancelUnsubscribe() },
         )
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

@@ -31,6 +31,7 @@ import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.SettingsApplications
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -41,11 +42,16 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.settings.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -70,6 +76,7 @@ fun SettingsHomeScreen(
     onOpenSystemDocuments: () -> Unit,
     onLogout: () -> Unit,
 ) {
+    var showAbout by remember { mutableStateOf(false) }
     Scaffold(
         topBar = {
             TopAppBar(
@@ -192,6 +199,15 @@ fun SettingsHomeScreen(
                 )
                 HorizontalDivider()
             }
+            item {
+                ListItem(
+                    modifier = Modifier.clickable(onClick = { showAbout = true }),
+                    headlineContent = { Text(stringResource(MochiR.string.about_label)) },
+                    leadingContent = { Icon(Icons.Outlined.Info, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                )
+                HorizontalDivider()
+            }
             // System group: administrator-only (Status / Users / Settings /
             // Documents), matching web's admin-gated sidebar.
             if (isAdmin) {
@@ -300,5 +316,8 @@ fun SettingsHomeScreen(
                 )
             }
         }
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }

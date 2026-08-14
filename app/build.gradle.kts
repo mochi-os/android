@@ -41,8 +41,8 @@ android {
         // protection keys on versionCode alone: on a sideload channel an older
         // signed APK installed straight over a newer one. "0.113" -> 113,
         // "1.4" -> 10004, so the sequence keeps rising across a major bump.
-        versionCode = versionNameToCode("0.118")
-        versionName = "0.118"
+        versionCode = versionNameToCode("0.119")
+        versionName = "0.119"
     }
 
     signingConfigs {

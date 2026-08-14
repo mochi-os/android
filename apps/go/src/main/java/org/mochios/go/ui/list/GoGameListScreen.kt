@@ -21,6 +21,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -60,6 +62,9 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.go.R
 import org.mochios.go.model.Game
@@ -99,6 +104,8 @@ fun GoGameListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
+    var showOverflow by remember { mutableStateOf(false) }
+    var showAbout by remember { mutableStateOf(false) }
     var currentFilter by remember { mutableStateOf(GoSidebarFilter.ACTIVE) }
 
     // Reload when the screen returns to the foreground, most importantly after
@@ -155,6 +162,24 @@ fun GoGameListScreen(
                     },
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
+                        Box {
+                            IconButton(onClick = { showOverflow = true }) {
+                                Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
+                            }
+                            MochiDropdownMenu(
+                                expanded = showOverflow,
+                                onDismissRequest = { showOverflow = false },
+                            ) {
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.about_label)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        showAbout = true
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
+                                )
+                            }
+                        }
                     },
                 )
             },
@@ -203,6 +228,9 @@ fun GoGameListScreen(
                 }
             }
         }
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

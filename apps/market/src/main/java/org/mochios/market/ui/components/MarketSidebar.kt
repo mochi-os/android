@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.Receipt
 import androidx.compose.material.icons.filled.Repeat
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Storefront
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Badge
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -34,11 +35,17 @@ import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 
@@ -76,6 +83,7 @@ fun MarketSidebar(
     savedBadge: Int = 0,
     inboxUnreadBadge: Int = 0,
 ) {
+    var showAbout by remember { mutableStateOf(false) }
     ModalDrawerSheet(modifier = Modifier.fillMaxHeight()) {
         Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
             // Browse
@@ -188,8 +196,18 @@ fun MarketSidebar(
                 labelRes = R.string.market_sidebar_account,
                 onClick = { onNavigate(MarketApp.ACCOUNT) },
             )
+            SidebarRow(
+                route = null,
+                currentRoute = currentRoute,
+                icon = Icons.Outlined.Info,
+                labelRes = MochiR.string.about_label,
+                onClick = { showAbout = true },
+            )
             Spacer(modifier = Modifier.height(12.dp))
         }
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

@@ -24,6 +24,7 @@ import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Badge
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -59,6 +60,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -95,6 +97,7 @@ fun WordsGameListScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     var showOverflow by remember { mutableStateOf(false) }
+    var showAbout by remember { mutableStateOf(false) }
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -148,6 +151,14 @@ fun WordsGameListScreen(
                                         onLogout()
                                     },
                                     leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
+                                )
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.about_label)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        showAbout = true
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
                                 )
                             }
                         }
@@ -209,6 +220,9 @@ fun WordsGameListScreen(
                 }
             }
         }
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

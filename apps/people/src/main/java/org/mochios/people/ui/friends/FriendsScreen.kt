@@ -33,6 +33,7 @@ import androidx.compose.material.icons.filled.PersonRemove
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -69,6 +70,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
@@ -115,6 +117,7 @@ fun FriendsScreen(
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     var showOverflow by remember { mutableStateOf(false) }
+    var showAbout by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
 
@@ -193,6 +196,14 @@ fun FriendsScreen(
                                         onLogout()
                                     },
                                     leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
+                                )
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.about_label)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        showAbout = true
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
                                 )
                             }
                         }
@@ -309,6 +320,9 @@ fun FriendsScreen(
             onConfirm = { viewModel.confirmRemoveFriend() },
             onDismiss = { viewModel.cancelRemoveFriend() },
         )
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

@@ -50,6 +50,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PlayCircle
@@ -132,6 +133,7 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
@@ -304,6 +306,7 @@ fun FeedScreen(
 
 
     var showOverflowMenu by remember { mutableStateOf(false) }
+    var showAbout by remember { mutableStateOf(false) }
     // Whether the overflow menu is showing its nested "RSS feed" submenu.
     var showRssSubmenu by remember { mutableStateOf(false) }
     // True while the unsubscribe confirmation dialog is open.
@@ -489,6 +492,14 @@ fun FeedScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Default.Info,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
                 },
             )
         },
@@ -1081,6 +1092,9 @@ fun FeedScreen(
                 }
             }
         }
+    }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 
