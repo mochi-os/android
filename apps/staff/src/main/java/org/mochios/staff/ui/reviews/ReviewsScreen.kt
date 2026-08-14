@@ -22,10 +22,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.outlined.Block
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Restore
 import androidx.compose.material.icons.outlined.VisibilityOff
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -253,20 +251,7 @@ private fun FilterBar(
                             expanded = false
                             onChange(option)
                         },
-                        trailingIcon = if (current == option) {
-                            { Icon(Icons.Outlined.Check, contentDescription = null) }
-                        } else {
-                            null
-                        },
-                        colors = if (current == option) {
-                            MenuDefaults.itemColors(
-                                textColor = MaterialTheme.colorScheme.primary,
-                                leadingIconColor = MaterialTheme.colorScheme.primary,
-                                trailingIconColor = MaterialTheme.colorScheme.primary,
-                            )
-                        } else {
-                            MenuDefaults.itemColors()
-                        },
+                        selected = current == option,
                     )
                 }
             }

@@ -19,7 +19,6 @@ import androidx.compose.foundation.draganddrop.dragAndDropTarget
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.ui.draganddrop.DragAndDropEvent
 import androidx.compose.ui.draganddrop.DragAndDropTarget
 import androidx.compose.ui.draganddrop.toAndroidDragEvent
@@ -615,20 +614,7 @@ private fun FilterMenu(
                         AttachmentsFilter.DOCUMENTS -> stringResource(R.string.wikis_attachments_filter_documents)
                     }) },
                     onClick = { onChange(option); expanded = false },
-                    trailingIcon = if (chosen) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (chosen) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = chosen,
                 )
             }
         }
@@ -670,20 +656,7 @@ private fun SortMenu(
                         AttachmentsSort.SIZE -> stringResource(R.string.wikis_attachments_sort_size)
                     }) },
                     onClick = { onChange(option); expanded = false },
-                    trailingIcon = if (chosen) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (chosen) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = chosen,
                 )
             }
         }
@@ -914,11 +887,7 @@ private fun AttachmentGridCell(
                         onRequestDelete()
                     },
                     leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                    colors = MenuDefaults.itemColors(
-                        textColor = MaterialTheme.colorScheme.error,
-                        leadingIconColor = MaterialTheme.colorScheme.error,
-                        trailingIconColor = MaterialTheme.colorScheme.error,
-                    ),
+                    destructive = true,
                 )
             }
         }

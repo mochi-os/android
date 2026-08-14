@@ -18,11 +18,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -186,20 +184,7 @@ private fun DecisionDropdown(
                             expanded = false
                             onDecisionChange(value)
                         },
-                        trailingIcon = if (decision == value) {
-                            { Icon(Icons.Outlined.Check, contentDescription = null) }
-                        } else {
-                            null
-                        },
-                        colors = if (decision == value) {
-                            MenuDefaults.itemColors(
-                                textColor = MaterialTheme.colorScheme.primary,
-                                leadingIconColor = MaterialTheme.colorScheme.primary,
-                                trailingIconColor = MaterialTheme.colorScheme.primary,
-                            )
-                        } else {
-                            MenuDefaults.itemColors()
-                        },
+                        selected = decision == value,
                     )
                 }
             }

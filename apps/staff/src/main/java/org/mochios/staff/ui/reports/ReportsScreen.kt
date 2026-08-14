@@ -21,12 +21,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Flag
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -356,20 +354,7 @@ private fun FilterDropdown(
                     expanded = false
                     onSelect(null)
                 },
-                trailingIcon = if (current == null) {
-                    { Icon(Icons.Outlined.Check, contentDescription = null) }
-                } else {
-                    null
-                },
-                colors = if (current == null) {
-                    MenuDefaults.itemColors(
-                        textColor = MaterialTheme.colorScheme.primary,
-                        leadingIconColor = MaterialTheme.colorScheme.primary,
-                        trailingIconColor = MaterialTheme.colorScheme.primary,
-                    )
-                } else {
-                    MenuDefaults.itemColors()
-                },
+                selected = current == null,
             )
             options.forEach { (value, l) ->
                 MochiDropdownMenuItem(
@@ -378,20 +363,7 @@ private fun FilterDropdown(
                         expanded = false
                         onSelect(value)
                     },
-                    trailingIcon = if (current == value) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (current == value) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = current == value,
                 )
             }
         }

@@ -33,7 +33,6 @@ import androidx.compose.material.icons.filled.PersonRemove
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -43,7 +42,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -272,25 +270,7 @@ fun FriendsScreen(
                                             viewModel.setSortBy(FriendSortBy.NAME)
                                             sortMenuOpen = false
                                         },
-                                        trailingIcon = if (uiState.sortBy == FriendSortBy.NAME) {
-                                            {
-                                                Icon(
-                                                    Icons.Outlined.Check,
-                                                    contentDescription = null,
-                                                )
-                                            }
-                                        } else {
-                                            null
-                                        },
-                                        colors = if (uiState.sortBy == FriendSortBy.NAME) {
-                                            MenuDefaults.itemColors(
-                                                textColor = MaterialTheme.colorScheme.primary,
-                                                leadingIconColor = MaterialTheme.colorScheme.primary,
-                                                trailingIconColor = MaterialTheme.colorScheme.primary,
-                                            )
-                                        } else {
-                                            MenuDefaults.itemColors()
-                                        },
+                                        selected = uiState.sortBy == FriendSortBy.NAME,
                                     )
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.people_friends_sort_recent)) },
@@ -298,25 +278,7 @@ fun FriendsScreen(
                                             viewModel.setSortBy(FriendSortBy.RECENT)
                                             sortMenuOpen = false
                                         },
-                                        trailingIcon = if (uiState.sortBy == FriendSortBy.RECENT) {
-                                            {
-                                                Icon(
-                                                    Icons.Outlined.Check,
-                                                    contentDescription = null,
-                                                )
-                                            }
-                                        } else {
-                                            null
-                                        },
-                                        colors = if (uiState.sortBy == FriendSortBy.RECENT) {
-                                            MenuDefaults.itemColors(
-                                                textColor = MaterialTheme.colorScheme.primary,
-                                                leadingIconColor = MaterialTheme.colorScheme.primary,
-                                                trailingIconColor = MaterialTheme.colorScheme.primary,
-                                            )
-                                        } else {
-                                            MenuDefaults.itemColors()
-                                        },
+                                        selected = uiState.sortBy == FriendSortBy.RECENT,
                                     )
                                 }
                             }

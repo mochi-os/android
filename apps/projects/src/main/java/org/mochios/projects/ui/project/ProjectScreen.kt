@@ -43,7 +43,6 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.FileDownload
@@ -65,7 +64,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextField
@@ -710,11 +708,6 @@ private fun ProjectContent(
                                 // and how it is drawn.
                                 val views = details?.views.orEmpty()
                                 if (views.isNotEmpty()) {
-                                    val activeViewColors = MenuDefaults.itemColors(
-                                        textColor = MaterialTheme.colorScheme.primary,
-                                        leadingIconColor = MaterialTheme.colorScheme.primary,
-                                        trailingIconColor = MaterialTheme.colorScheme.primary,
-                                    )
                                     views.forEach { view ->
                                         val isActive = view.id == activeView?.id
                                         MochiDropdownMenuItem(
@@ -733,21 +726,7 @@ private fun ProjectContent(
                                                     contentDescription = null,
                                                 )
                                             },
-                                            trailingIcon = if (isActive) {
-                                                {
-                                                    Icon(
-                                                        Icons.Outlined.Check,
-                                                        contentDescription = null,
-                                                    )
-                                                }
-                                            } else {
-                                                null
-                                            },
-                                            colors = if (isActive) {
-                                                activeViewColors
-                                            } else {
-                                                MenuDefaults.itemColors()
-                                            },
+                                            selected = isActive,
                                         )
                                     }
                                     MochiDropdownMenuDivider()

@@ -31,7 +31,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DriveFileMove
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -266,11 +265,7 @@ fun TreeRow(
                                 onDelete()
                             },
                             leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                            colors = MenuDefaults.itemColors(
-                                textColor = MaterialTheme.colorScheme.error,
-                                leadingIconColor = MaterialTheme.colorScheme.error,
-                                trailingIconColor = MaterialTheme.colorScheme.error,
-                            ),
+                            destructive = true,
                         )
                     }
                 }

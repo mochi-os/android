@@ -15,7 +15,6 @@ import androidx.compose.material.icons.outlined.LockOpen
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Report
 import androidx.compose.material.icons.outlined.Restore
-import androidx.compose.material3.MenuDefaults
 import org.mochios.android.ui.components.CommentItem
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiDropdownMenu

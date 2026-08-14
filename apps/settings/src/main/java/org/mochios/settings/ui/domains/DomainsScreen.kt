@@ -26,7 +26,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -36,7 +35,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -645,56 +643,17 @@ private fun MethodPicker(value: String, onChange: (String) -> Unit) {
             MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.route_method_app)) },
                 onClick = { onChange("app"); open = false },
-                trailingIcon = if (value == "app") {
-                    { Icon(Icons.Outlined.Check, contentDescription = null) }
-                } else {
-                    null
-                },
-                colors = if (value == "app") {
-                    MenuDefaults.itemColors(
-                        textColor = MaterialTheme.colorScheme.primary,
-                        leadingIconColor = MaterialTheme.colorScheme.primary,
-                        trailingIconColor = MaterialTheme.colorScheme.primary,
-                    )
-                } else {
-                    MenuDefaults.itemColors()
-                },
+                selected = value == "app",
             )
             MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.route_method_entity)) },
                 onClick = { onChange("entity"); open = false },
-                trailingIcon = if (value == "entity") {
-                    { Icon(Icons.Outlined.Check, contentDescription = null) }
-                } else {
-                    null
-                },
-                colors = if (value == "entity") {
-                    MenuDefaults.itemColors(
-                        textColor = MaterialTheme.colorScheme.primary,
-                        leadingIconColor = MaterialTheme.colorScheme.primary,
-                        trailingIconColor = MaterialTheme.colorScheme.primary,
-                    )
-                } else {
-                    MenuDefaults.itemColors()
-                },
+                selected = value == "entity",
             )
             MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.route_method_redirect)) },
                 onClick = { onChange("redirect"); open = false },
-                trailingIcon = if (value == "redirect") {
-                    { Icon(Icons.Outlined.Check, contentDescription = null) }
-                } else {
-                    null
-                },
-                colors = if (value == "redirect") {
-                    MenuDefaults.itemColors(
-                        textColor = MaterialTheme.colorScheme.primary,
-                        leadingIconColor = MaterialTheme.colorScheme.primary,
-                        trailingIconColor = MaterialTheme.colorScheme.primary,
-                    )
-                } else {
-                    MenuDefaults.itemColors()
-                },
+                selected = value == "redirect",
             )
         }
     }
@@ -729,20 +688,7 @@ private fun TargetPicker(
                 MochiDropdownMenuItem(
                     text = { Text(name) },
                     onClick = { onSelect(id); open = false },
-                    trailingIcon = if (selectedLabel == name) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (selectedLabel == name) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = selectedLabel == name,
                 )
             }
         }

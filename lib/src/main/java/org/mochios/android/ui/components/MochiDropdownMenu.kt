@@ -12,9 +12,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.MenuItemColors
@@ -39,6 +42,18 @@ private val ItemPadding = PaddingValues(horizontal = 16.dp, vertical = 6.dp)
  * A [DropdownMenu] with the rounded, tinted, shadowless container the rest of the app
  * uses. Corners follow [LocalEntityRadius] so the user's radius preference still applies,
  * floored at [MenuMinRadius] because the Material default of 4dp reads as a square panel.
+ *
+ * Four values here depart from `MenuTokens` on purpose, so leave them be rather than
+ * restoring the Material defaults:
+ *
+ *  - **Container** `surfaceContainerHigh`, a step above the spec's `SurfaceContainer`,
+ *    to hold the menu apart from the surfaces it opens over now that it casts no shadow.
+ *  - **Elevation** 0dp against the spec's 3dp — the app draws floating surfaces flat and
+ *    leans on tone for separation. Change both this and the container together or the
+ *    menu loses every cue that it sits above the page.
+ *  - **Corners** floored at [MenuMinRadius] against the spec's 4dp, per the note above.
+ *  - **Row padding** 16dp against the spec's 12dp, see [ItemPadding]. The vertical 6dp
+ *    sits inside Material's 48dp minimum row height, so a single-line row is unaffected.
  *
  * @param expanded Whether the menu is showing.
  * @param onDismissRequest Called when the user taps away or presses back.
@@ -75,22 +90,29 @@ fun MochiDropdownMenu(
 
 /**
  * A row inside [MochiDropdownMenu]. Takes the same slots as Material's
- * `DropdownMenuItem` and adds only the shared padding, so a row styled here cannot
- * drift from every other menu in the app.
+ * `DropdownMenuItem` and adds the shared padding plus the app's two recoloured
+ * states, so a row styled here cannot drift from every other menu in the app.
  *
- * Recolour a row through [colors]: the primary colour for the chosen row of a picker,
- * the error colour for a delete. Set the text and both icon colours together, or a
- * coloured icon ends up beside a default-coloured label. Pair a picker's colour with a
- * [trailingIcon] check — colour alone would not carry the state for a colour-blind user.
+ * Mark the chosen row of a picker with [selected] and a delete with [destructive]
+ * rather than colouring by hand. [selected] also supplies the trailing check, so the
+ * colour can never disagree with the mark — colour alone would not carry the state
+ * for a colour-blind user, and the two drifting apart is exactly the bug this
+ * parameter exists to prevent. Reach for [colors] only for a row neither flag covers.
  *
  * @param text The row's label content.
  * @param onClick Called when the row is tapped.
  * @param modifier Applied to the row.
  * @param leadingIcon Content before the label; rows read as a flat list without one,
  *   so prefer passing it.
- * @param trailingIcon Content on the trailing edge, typically a check on the chosen row.
+ * @param trailingIcon Content on the trailing edge. Leave null on a [selected] row to
+ *   get the standard check; pass a value only to show something else there.
  * @param enabled Whether the row responds to taps.
- * @param colors Label and icon colours; defaults to Material's menu-item colours.
+ * @param selected Whether this row is the chosen one in a picker. Tints the label and
+ *   icons with the primary colour and adds the trailing check.
+ * @param destructive Whether this row deletes something. Tints the label and icons
+ *   with the error colour. Ignored when [selected] is true; no row is both.
+ * @param colors Overrides the colours [selected] and [destructive] would apply. Null
+ *   derives them from those flags.
  */
 @Composable
 fun MochiDropdownMenuItem(
@@ -100,18 +122,39 @@ fun MochiDropdownMenuItem(
     leadingIcon: (@Composable () -> Unit)? = null,
     trailingIcon: (@Composable () -> Unit)? = null,
     enabled: Boolean = true,
-    colors: MenuItemColors = MenuDefaults.itemColors()
+    selected: Boolean = false,
+    destructive: Boolean = false,
+    colors: MenuItemColors? = null
 ) {
+    val accent = when {
+        selected -> MaterialTheme.colorScheme.primary
+        destructive -> MaterialTheme.colorScheme.error
+        else -> null
+    }
+    val resolvedColors = colors ?: if (accent == null) {
+        MenuDefaults.itemColors()
+    } else {
+        MenuDefaults.itemColors(
+            textColor = accent,
+            leadingIconColor = accent,
+            trailingIconColor = accent
+        )
+    }
     DropdownMenuItem(
         text = text,
         onClick = onClick,
         modifier = modifier,
         leadingIcon = leadingIcon,
-        trailingIcon = trailingIcon,
+        trailingIcon = trailingIcon ?: if (selected) SelectedCheck else null,
         enabled = enabled,
-        colors = colors,
+        colors = resolvedColors,
         contentPadding = ItemPadding
     )
+}
+
+/** The mark on a [MochiDropdownMenuItem] the user has chosen. */
+private val SelectedCheck: @Composable () -> Unit = {
+    Icon(Icons.Outlined.Check, contentDescription = null)
 }
 
 /**

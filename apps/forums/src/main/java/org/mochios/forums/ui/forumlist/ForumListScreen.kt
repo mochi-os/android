@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.HomeMax
 import androidx.compose.material3.CircularProgressIndicator
@@ -37,7 +36,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -139,20 +137,7 @@ fun ForumListScreen(
                                         showSortMenu = false
                                         viewModel.setDefaultSort(key)
                                     },
-                                    trailingIcon = if (key == current) {
-                                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                                    } else {
-                                        null
-                                    },
-                                    colors = if (key == current) {
-                                        MenuDefaults.itemColors(
-                                            textColor = MaterialTheme.colorScheme.primary,
-                                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                                        )
-                                    } else {
-                                        MenuDefaults.itemColors()
-                                    },
+                                    selected = key == current,
                                 )
                             }
                         }

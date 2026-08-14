@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Block
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Key
@@ -47,7 +46,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -501,11 +499,7 @@ private fun UserCard(
                                 onDelete()
                             },
                             leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                            colors = MenuDefaults.itemColors(
-                                textColor = MaterialTheme.colorScheme.error,
-                                leadingIconColor = MaterialTheme.colorScheme.error,
-                                trailingIconColor = MaterialTheme.colorScheme.error,
-                            ),
+                            destructive = true,
                         )
                     }
                 }
@@ -588,20 +582,7 @@ private fun RoleDropdown(role: String, onChange: (String) -> Unit) {
                         expanded = false
                         onChange("administrator")
                     },
-                    trailingIcon = if (role == "administrator") {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (role == "administrator") {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = role == "administrator",
                 )
                 MochiDropdownMenuItem(
                     text = { Text(labelUser) },
@@ -609,20 +590,7 @@ private fun RoleDropdown(role: String, onChange: (String) -> Unit) {
                         expanded = false
                         onChange("user")
                     },
-                    trailingIcon = if (role == "user") {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (role == "user") {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = role == "user",
                 )
             }
         }
@@ -784,20 +752,7 @@ private fun PageSizeDropdown(limit: Int, onChange: (Int) -> Unit) {
                         expanded = false
                         onChange(size)
                     },
-                    trailingIcon = if (limit == size) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (limit == size) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = limit == size,
                 )
             }
         }

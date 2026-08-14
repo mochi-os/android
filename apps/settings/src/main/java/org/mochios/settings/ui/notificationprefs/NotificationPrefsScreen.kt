@@ -25,7 +25,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -36,7 +35,6 @@ import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -405,20 +403,7 @@ private fun TopicRow(
                             menu = false
                             onSetCategory(topic, null)
                         },
-                        trailingIcon = if (topic.category == null) {
-                            { Icon(Icons.Outlined.Check, contentDescription = null) }
-                        } else {
-                            null
-                        },
-                        colors = if (topic.category == null) {
-                            MenuDefaults.itemColors(
-                                textColor = MaterialTheme.colorScheme.primary,
-                                leadingIconColor = MaterialTheme.colorScheme.primary,
-                                trailingIconColor = MaterialTheme.colorScheme.primary,
-                            )
-                        } else {
-                            MenuDefaults.itemColors()
-                        },
+                        selected = topic.category == null,
                     )
                     for (cat in categories) {
                         MochiDropdownMenuItem(
@@ -427,20 +412,7 @@ private fun TopicRow(
                                 menu = false
                                 onSetCategory(topic, cat.id)
                             },
-                            trailingIcon = if (topic.category == cat.id) {
-                                { Icon(Icons.Outlined.Check, contentDescription = null) }
-                            } else {
-                                null
-                            },
-                            colors = if (topic.category == cat.id) {
-                                MenuDefaults.itemColors(
-                                    textColor = MaterialTheme.colorScheme.primary,
-                                    leadingIconColor = MaterialTheme.colorScheme.primary,
-                                    trailingIconColor = MaterialTheme.colorScheme.primary,
-                                )
-                            } else {
-                                MenuDefaults.itemColors()
-                            },
+                            selected = topic.category == cat.id,
                         )
                     }
                 }

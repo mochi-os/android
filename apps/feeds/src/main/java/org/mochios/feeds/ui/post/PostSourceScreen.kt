@@ -41,7 +41,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.OpenInBrowser
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -272,11 +271,7 @@ fun PostSourceScreen(
                                         showDeleteDialog = true
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                                    colors = MenuDefaults.itemColors(
-                                        textColor = MaterialTheme.colorScheme.error,
-                                        leadingIconColor = MaterialTheme.colorScheme.error,
-                                        trailingIconColor = MaterialTheme.colorScheme.error,
-                                    ),
+                                    destructive = true,
                                 )
                             }
                         }

@@ -37,7 +37,6 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.text.input.KeyboardType
@@ -531,20 +530,7 @@ private fun CategoryDropdown(
                         onChange(cat.id)
                         expanded = false
                     },
-                    trailingIcon = if (selected == cat.id) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (selected == cat.id) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = selected == cat.id,
                 )
             }
         }

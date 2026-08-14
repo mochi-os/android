@@ -18,7 +18,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Event
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
@@ -28,7 +27,6 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
@@ -219,20 +217,7 @@ private fun CurrencyDropdown(
                         onChange(c)
                         expanded = false
                     },
-                    trailingIcon = if (currency == c) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (currency == c) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = currency == c,
                 )
             }
         }
@@ -271,38 +256,12 @@ private fun IntervalDropdown(
             MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.market_editor_interval_monthly)) },
                 onClick = { onChange(Interval.MONTHLY); expanded = false },
-                trailingIcon = if (interval == Interval.MONTHLY) {
-                    { Icon(Icons.Outlined.Check, contentDescription = null) }
-                } else {
-                    null
-                },
-                colors = if (interval == Interval.MONTHLY) {
-                    MenuDefaults.itemColors(
-                        textColor = MaterialTheme.colorScheme.primary,
-                        leadingIconColor = MaterialTheme.colorScheme.primary,
-                        trailingIconColor = MaterialTheme.colorScheme.primary,
-                    )
-                } else {
-                    MenuDefaults.itemColors()
-                },
+                selected = interval == Interval.MONTHLY,
             )
             MochiDropdownMenuItem(
                 text = { Text(stringResource(R.string.market_editor_interval_yearly)) },
                 onClick = { onChange(Interval.YEARLY); expanded = false },
-                trailingIcon = if (interval == Interval.YEARLY) {
-                    { Icon(Icons.Outlined.Check, contentDescription = null) }
-                } else {
-                    null
-                },
-                colors = if (interval == Interval.YEARLY) {
-                    MenuDefaults.itemColors(
-                        textColor = MaterialTheme.colorScheme.primary,
-                        leadingIconColor = MaterialTheme.colorScheme.primary,
-                        trailingIconColor = MaterialTheme.colorScheme.primary,
-                    )
-                } else {
-                    MenuDefaults.itemColors()
-                },
+                selected = interval == Interval.YEARLY,
             )
         }
     }
@@ -337,20 +296,7 @@ private fun DurationDropdown(
                 MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_editor_days, d)) },
                     onClick = { onChange(d); expanded = false },
-                    trailingIcon = if (days == d) {
-                        { Icon(Icons.Outlined.Check, contentDescription = null) }
-                    } else {
-                        null
-                    },
-                    colors = if (days == d) {
-                        MenuDefaults.itemColors(
-                            textColor = MaterialTheme.colorScheme.primary,
-                            leadingIconColor = MaterialTheme.colorScheme.primary,
-                            trailingIconColor = MaterialTheme.colorScheme.primary,
-                        )
-                    } else {
-                        MenuDefaults.itemColors()
-                    },
+                    selected = days == d,
                 )
             }
         }
