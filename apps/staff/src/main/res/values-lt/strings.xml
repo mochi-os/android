@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Skelbimas</string>
     <string name="staff_reports_type_user">Vartotojas</string>
     <string name="staff_reports_view">Peržiūrėti</string>
-    <string name="staff_reviews_action_hide">Slėpti</string>
     <string name="staff_reviews_action_remove">Šalinti</string>
     <string name="staff_reviews_action_restore">Atkurti</string>
     <string name="staff_reviews_col_date">Data</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Tekstas</string>
     <string name="staff_reviews_empty">Atsiliepimų nėra</string>
     <string name="staff_reviews_filter_all">Visos būsenos</string>
-    <string name="staff_reviews_filter_hidden">Paslėptas</string>
     <string name="staff_reviews_filter_published">Paskelbta</string>
     <string name="staff_reviews_filter_removed">Pašalinta</string>
     <string name="staff_reviews_filter_status">Būsena</string>

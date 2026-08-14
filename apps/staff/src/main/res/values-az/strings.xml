@@ -392,7 +392,6 @@
     <string name="staff_reports_type_listing">Elan</string>
     <string name="staff_reports_type_user">İstifadəçi yaradıldı</string>
     <string name="staff_reports_view">Bax</string>
-    <string name="staff_reviews_action_hide">Gizlət</string>
     <string name="staff_reviews_action_remove">Sil</string>
     <string name="staff_reviews_action_restore">Bərpa et</string>
     <string name="staff_reviews_col_date">Tarix</string>
@@ -404,7 +403,6 @@
     <string name="staff_reviews_col_text">Mətn</string>
     <string name="staff_reviews_empty">Rəy yoxdur</string>
     <string name="staff_reviews_filter_all">Bütün statuslar</string>
-    <string name="staff_reviews_filter_hidden">Gizli</string>
     <string name="staff_reviews_filter_published">Dərc edildi</string>
     <string name="staff_reviews_filter_removed">Silindi</string>
     <string name="staff_reviews_filter_status">Status</string>

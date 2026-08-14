@@ -383,7 +383,6 @@
     <string name="staff_reports_type_listing">ჩამონათვალი</string>
     <string name="staff_reports_type_user">მომხმარებელი</string>
     <string name="staff_reports_view">ვიდეოს ესკიზი</string>
-    <string name="staff_reviews_action_hide">დამალვა</string>
     <string name="staff_reviews_action_remove">წაშლა</string>
     <string name="staff_reviews_action_restore">აღდგენა</string>
     <string name="staff_reviews_col_date">თარიღი</string>
@@ -395,7 +394,6 @@
     <string name="staff_reviews_col_text">ტექსტი</string>
     <string name="staff_reviews_empty">მიმოხილვები არ არის</string>
     <string name="staff_reviews_filter_all">ყველა სტატუსი</string>
-    <string name="staff_reviews_filter_hidden">დამალული</string>
     <string name="staff_reviews_filter_published">გამოქვეყნებული</string>
     <string name="staff_reviews_filter_removed">წაშლილი</string>
     <string name="staff_reviews_filter_status">სტატუსი</string>

@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Auglýsing</string>
     <string name="staff_reports_type_user">Notandi</string>
     <string name="staff_reports_view">Skoða</string>
-    <string name="staff_reviews_action_hide">Fela</string>
     <string name="staff_reviews_action_remove">Fjarlægja</string>
     <string name="staff_reviews_action_restore">Endurheimta</string>
     <string name="staff_reviews_col_date">Dagsetning</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Texti</string>
     <string name="staff_reviews_empty">Engar umsagnir</string>
     <string name="staff_reviews_filter_all">Allar stöður</string>
-    <string name="staff_reviews_filter_hidden">Falið</string>
     <string name="staff_reviews_filter_published">Birt</string>
     <string name="staff_reviews_filter_removed">Fjarlægt</string>
     <string name="staff_reviews_filter_status">Staða</string>

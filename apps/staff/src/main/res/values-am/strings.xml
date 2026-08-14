@@ -375,7 +375,6 @@
     <string name="staff_reports_type_listing">ዝርዝር</string>
     <string name="staff_reports_type_user">ተጠቃሚ</string>
     <string name="staff_reports_view">ይመልከቱ</string>
-    <string name="staff_reviews_action_hide">ደብቅ</string>
     <string name="staff_reviews_action_remove">አስወግድ</string>
     <string name="staff_reviews_action_restore">ይመልሱ</string>
     <string name="staff_reviews_col_date">ቀን</string>
@@ -387,7 +386,6 @@
     <string name="staff_reviews_col_text">ጽሁፍ</string>
     <string name="staff_reviews_empty">ምንም ግምገማዎች የሉም</string>
     <string name="staff_reviews_filter_all">ሁሉም ሁኔታዎች</string>
-    <string name="staff_reviews_filter_hidden">ተደብቋል</string>
     <string name="staff_reviews_filter_published">ታትሟል</string>
     <string name="staff_reviews_filter_removed">ተወግዷል</string>
     <string name="staff_reviews_filter_status">ሁኔታ</string>

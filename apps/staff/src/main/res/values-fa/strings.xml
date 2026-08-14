@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">آگهی</string>
     <string name="staff_reports_type_user">کاربر</string>
     <string name="staff_reports_view">نمایش</string>
-    <string name="staff_reviews_action_hide">پنهان کردن</string>
     <string name="staff_reviews_action_remove">حذف</string>
     <string name="staff_reviews_action_restore">بازیابی</string>
     <string name="staff_reviews_col_date">تاریخ</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">متن</string>
     <string name="staff_reviews_empty">هیچ بازبینی‌ای وجود ندارد</string>
     <string name="staff_reviews_filter_all">همهٔ وضعیت‌ها</string>
-    <string name="staff_reviews_filter_hidden">پنهان</string>
     <string name="staff_reviews_filter_published">منتشر شد</string>
     <string name="staff_reviews_filter_removed">حذف شد</string>
     <string name="staff_reviews_filter_status">وضعیت</string>

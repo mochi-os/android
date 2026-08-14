@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">מודעה</string>
     <string name="staff_reports_type_user">משתמש</string>
     <string name="staff_reports_view">הצג</string>
-    <string name="staff_reviews_action_hide">הסתר</string>
     <string name="staff_reviews_action_remove">הסר</string>
     <string name="staff_reviews_action_restore">שחזר</string>
     <string name="staff_reviews_col_date">תאריך</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">טקסט</string>
     <string name="staff_reviews_empty">אין ביקורות</string>
     <string name="staff_reviews_filter_all">כל הסטטוסים</string>
-    <string name="staff_reviews_filter_hidden">מוסתר</string>
     <string name="staff_reviews_filter_published">פורסם</string>
     <string name="staff_reviews_filter_removed">הוסר</string>
     <string name="staff_reviews_filter_status">סטטוס</string>

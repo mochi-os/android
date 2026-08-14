@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Anunci</string>
     <string name="staff_reports_type_user">Usuari</string>
     <string name="staff_reports_view">Visualitza</string>
-    <string name="staff_reviews_action_hide">Amaga</string>
     <string name="staff_reviews_action_remove">Elimina</string>
     <string name="staff_reviews_action_restore">Restaura</string>
     <string name="staff_reviews_col_date">Data</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Text</string>
     <string name="staff_reviews_empty">Sense ressenyes</string>
     <string name="staff_reviews_filter_all">Tots els estats</string>
-    <string name="staff_reviews_filter_hidden">Amagat</string>
     <string name="staff_reviews_filter_published">Publicat</string>
     <string name="staff_reviews_filter_removed">Eliminat</string>
     <string name="staff_reviews_filter_status">Estat</string>

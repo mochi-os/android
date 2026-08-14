@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Ilmoitus</string>
     <string name="staff_reports_type_user">Käyttäjä</string>
     <string name="staff_reports_view">Näytä</string>
-    <string name="staff_reviews_action_hide">Piilota</string>
     <string name="staff_reviews_action_remove">Poista</string>
     <string name="staff_reviews_action_restore">Palauta</string>
     <string name="staff_reviews_col_date">Päivämäärä</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Teksti</string>
     <string name="staff_reviews_empty">Ei arvosteluja</string>
     <string name="staff_reviews_filter_all">Kaikki tilat</string>
-    <string name="staff_reviews_filter_hidden">Piilotettu</string>
     <string name="staff_reviews_filter_published">Julkaistu</string>
     <string name="staff_reviews_filter_removed">Poistettu</string>
     <string name="staff_reviews_filter_status">Tila</string>

@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Daftar</string>
     <string name="staff_reports_type_user">Pengguna</string>
     <string name="staff_reports_view">Lihat</string>
-    <string name="staff_reviews_action_hide">Sembunyikan</string>
     <string name="staff_reviews_action_remove">Hapus</string>
     <string name="staff_reviews_action_restore">Pulihkan</string>
     <string name="staff_reviews_col_date">Tanggal</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Teks</string>
     <string name="staff_reviews_empty">Tidak ada ulasan</string>
     <string name="staff_reviews_filter_all">Semua status</string>
-    <string name="staff_reviews_filter_hidden">Disembunyikan</string>
     <string name="staff_reviews_filter_published">Diterbitkan</string>
     <string name="staff_reviews_filter_removed">Dihapus</string>
     <string name="staff_reviews_filter_status">Status</string>

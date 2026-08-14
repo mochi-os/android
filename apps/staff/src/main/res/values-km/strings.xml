@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">ការដាក់លក់</string>
     <string name="staff_reports_type_user">អ្នកប្រើប្រាស់</string>
     <string name="staff_reports_view">មើល</string>
-    <string name="staff_reviews_action_hide">លាក់</string>
     <string name="staff_reviews_action_remove">យកចេញ</string>
     <string name="staff_reviews_action_restore">ស្តារ</string>
     <string name="staff_reviews_col_date">កាលបរិច្ឆេទ</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">អត្ថបទ</string>
     <string name="staff_reviews_empty">មិនមានការវាយតម្លៃ</string>
     <string name="staff_reviews_filter_all">ស្ថានភាពទាំងអស់</string>
-    <string name="staff_reviews_filter_hidden">លាក់</string>
     <string name="staff_reviews_filter_published">បានផ្សព្វផ្សាយ</string>
     <string name="staff_reviews_filter_removed">បានយកចេញ</string>
     <string name="staff_reviews_filter_status">ស្ថានភាព</string>

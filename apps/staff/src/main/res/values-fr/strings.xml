@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Annonce</string>
     <string name="staff_reports_type_user">Utilisateur</string>
     <string name="staff_reports_view">Vue</string>
-    <string name="staff_reviews_action_hide">Masquer</string>
     <string name="staff_reviews_action_remove">Retirer</string>
     <string name="staff_reviews_action_restore">Restaurer</string>
     <string name="staff_reviews_col_date">Date</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Texte</string>
     <string name="staff_reviews_empty">Aucun avis</string>
     <string name="staff_reviews_filter_all">Tous les statuts</string>
-    <string name="staff_reviews_filter_hidden">Masqué</string>
     <string name="staff_reviews_filter_published">Publié</string>
     <string name="staff_reviews_filter_removed">Supprimé</string>
     <string name="staff_reviews_filter_status">Statut</string>

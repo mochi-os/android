@@ -120,7 +120,7 @@ object FcmRegistrar {
             if (accountId != null && identity.isNotBlank()) {
                 deps.pushAccountStore().store(identity, accountId)
             }
-            Log.i(TAG, "Registered FCM token with $server (install=$installId)")
+            Log.i(TAG, "Registered FCM token")
             true
         } catch (e: Exception) {
             Log.w(TAG, "Posting FCM token to server failed: ${e.message}")

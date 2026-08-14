@@ -56,10 +56,21 @@ release: apk
 	# target must be immutable — appending the tail of a newly-published APK
 	# onto the partial of the previous one splices two files into a corrupt
 	# APK of exactly the expected length. Pruned to the current version.
+	#
+	# The stable name is a relative symlink to the stamped file, not a second
+	# copy, so the 42MB APK is uploaded once rather than twice. Relative and
+	# naming a file in this same directory: the server opens it through os.Root
+	# and refuses a link that leaves the served directory.
 	rm -f $(packages)/mochi-*.apk
-	cp $(apk) $(packages)/mochi.apk
 	cp $(apk) $(packages)/mochi-$(version).apk
+	ln -sfn mochi-$(version).apk $(packages)/mochi.apk
 	@sha=`sha256sum $(apk) | cut -d' ' -f1`; size=`wc -c < $(apk) | tr -d ' '`; \
 	  printf '{"tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
 	  '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
+	# Two passes: rsync creates a symlink up front but transfers the file it
+	# points at minutes later, so a single pass would leave the download URL
+	# pointing at nothing for the whole upload. The first pass carries the new
+	# APK while the previous one stays in place and the existing link keeps
+	# resolving; the second repoints the link once its target is there.
+	rsync -av --exclude=/mochi.apk $(packages)/ root@yuzu:/srv/packages/android/
 	rsync -av $(packages)/ root@yuzu:/srv/packages/android/

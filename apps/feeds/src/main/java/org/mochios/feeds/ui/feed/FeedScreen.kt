@@ -133,6 +133,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
@@ -449,6 +450,7 @@ fun FeedScreen(
 
     FeatureListDrawer(
         drawerState = drawerState,
+        header = { DrawerTitle(stringResource(R.string.feeds_title)) },
         items = drawerItems,
         allItem = drawerAll,
         selectedId = currentDrawerId,
@@ -1771,7 +1773,7 @@ private fun PostCard(
                             // carries the tap-to-open without a highlight background.
                             modifier = Modifier.noRippleClickable(onClick),
                         )
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(12.dp))
                     }
 
                     // Byline: source/feed name + timestamp, below the title,

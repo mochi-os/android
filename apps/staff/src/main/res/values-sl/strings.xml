@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Oglas</string>
     <string name="staff_reports_type_user">Uporabnik</string>
     <string name="staff_reports_view">Pogled</string>
-    <string name="staff_reviews_action_hide">Skrij</string>
     <string name="staff_reviews_action_remove">Odstrani</string>
     <string name="staff_reviews_action_restore">Obnovi</string>
     <string name="staff_reviews_col_date">Datum</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Besedilo</string>
     <string name="staff_reviews_empty">Brez ocen</string>
     <string name="staff_reviews_filter_all">Vsa stanja</string>
-    <string name="staff_reviews_filter_hidden">Skrito</string>
     <string name="staff_reviews_filter_published">Objavljeno</string>
     <string name="staff_reviews_filter_removed">Odstranjeno</string>
     <string name="staff_reviews_filter_status">Stanje</string>

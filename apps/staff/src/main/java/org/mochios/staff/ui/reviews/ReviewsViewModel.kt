@@ -26,13 +26,12 @@ import javax.inject.Inject
  * `apps/staff/web/src/features/reviews/reviews-page.tsx`. [ALL] sends no
  * `status` parameter so the Comptroller returns every status.
  */
-enum class ReviewStatusFilter { ALL, PUBLISHED, HIDDEN, REMOVED }
+enum class ReviewStatusFilter { ALL, PUBLISHED, REMOVED }
 
 /** Wire value the Comptroller expects for the status query (or null for ALL). */
 fun ReviewStatusFilter.wireValue(): String? = when (this) {
     ReviewStatusFilter.ALL -> null
     ReviewStatusFilter.PUBLISHED -> "published"
-    ReviewStatusFilter.HIDDEN -> "hidden"
     ReviewStatusFilter.REMOVED -> "removed"
 }
 
@@ -62,8 +61,8 @@ sealed interface ReviewsEvent {
 
 /**
  * Backing ViewModel for the staff reviews moderation screen. Loads the first
- * page on init, refetches on filter change, and exposes `hide` / `restore` /
- * `remove` actions that map to the Comptroller's `reviews/action` endpoint.
+ * page on init, refetches on filter change, and exposes `restore` / `remove`
+ * actions that map to the Comptroller's `reviews/action` endpoint.
  *
  * The reviews screen renders avatars via the Comptroller asset proxy
  * (`/staff/-/user/:user/asset/avatar`), built as a server-relative path at
@@ -130,7 +129,7 @@ class ReviewsViewModel @Inject constructor(
     }
 
     fun runAction(review: Review, action: String) {
-        // Hide / restore both run inline (no confirmation). Remove flows through
+        // Restore runs inline (no confirmation). Remove flows through
         // [askRemove] -> [confirmRemove] so the user gets the ConfirmDialog.
         viewModelScope.launch {
             try {

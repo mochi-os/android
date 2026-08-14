@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Lys</string>
     <string name="staff_reports_type_user">Gebruiker</string>
     <string name="staff_reports_view">Bekyk</string>
-    <string name="staff_reviews_action_hide">Versteek</string>
     <string name="staff_reviews_action_remove">Verwyder</string>
     <string name="staff_reviews_action_restore">Herstel</string>
     <string name="staff_reviews_col_date">Datum</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Teks</string>
     <string name="staff_reviews_empty">Geen resensies</string>
     <string name="staff_reviews_filter_all">Alle statusse</string>
-    <string name="staff_reviews_filter_hidden">Versteek</string>
     <string name="staff_reviews_filter_published">Gepubliseer</string>
     <string name="staff_reviews_filter_removed">Verwyder</string>
     <string name="staff_reviews_filter_status">Status</string>

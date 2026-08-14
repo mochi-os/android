@@ -367,7 +367,6 @@
     <string name="staff_reports_type_listing">Listing</string>
     <string name="staff_reports_type_user">Pamaké</string>
     <string name="staff_reports_view">Tingali</string>
-    <string name="staff_reviews_action_hide">Sumputkeun</string>
     <string name="staff_reviews_action_remove">Pupus</string>
     <string name="staff_reviews_action_restore">Pulihkeun</string>
     <string name="staff_reviews_col_date">Tanggal</string>
@@ -379,7 +378,6 @@
     <string name="staff_reviews_col_text">Téks</string>
     <string name="staff_reviews_empty">Teu aya ulasan</string>
     <string name="staff_reviews_filter_all">Sadaya status</string>
-    <string name="staff_reviews_filter_hidden">Disumputkeun</string>
     <string name="staff_reviews_filter_published">Dipasarkeun</string>
     <string name="staff_reviews_filter_removed">Dicabut</string>
     <string name="staff_reviews_filter_status">Status</string>

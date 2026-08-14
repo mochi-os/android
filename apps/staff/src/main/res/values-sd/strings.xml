@@ -368,7 +368,6 @@
     <string name="staff_reports_type_listing">لسٽنگ</string>
     <string name="staff_reports_type_user">صارف</string>
     <string name="staff_reports_view">ڏسو</string>
-    <string name="staff_reviews_action_hide">لڪايو</string>
     <string name="staff_reviews_action_remove">هٽايو</string>
     <string name="staff_reviews_action_restore">بحال ڪريو</string>
     <string name="staff_reviews_col_date">تاريخ</string>
@@ -380,7 +379,6 @@
     <string name="staff_reviews_col_text">ٽيڪسٽ</string>
     <string name="staff_reviews_empty">ڪا جائزو نه آهي</string>
     <string name="staff_reviews_filter_all">سڀ حالتون</string>
-    <string name="staff_reviews_filter_hidden">لڪيل</string>
     <string name="staff_reviews_filter_published">شايع ٿيو</string>
     <string name="staff_reviews_filter_removed">هٽايو ويو</string>
     <string name="staff_reviews_filter_status">حالت</string>

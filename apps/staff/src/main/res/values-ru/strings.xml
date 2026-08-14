@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Объявление</string>
     <string name="staff_reports_type_user">Пользователь</string>
     <string name="staff_reports_view">Просмотр</string>
-    <string name="staff_reviews_action_hide">Скрыть</string>
     <string name="staff_reviews_action_remove">Удалить</string>
     <string name="staff_reviews_action_restore">Восстановить</string>
     <string name="staff_reviews_col_date">Дата</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Текст</string>
     <string name="staff_reviews_empty">Нет отзывов</string>
     <string name="staff_reviews_filter_all">Все статусы</string>
-    <string name="staff_reviews_filter_hidden">Скрыто</string>
     <string name="staff_reviews_filter_published">Опубликовано</string>
     <string name="staff_reviews_filter_removed">Удалено</string>
     <string name="staff_reviews_filter_status">Статус</string>

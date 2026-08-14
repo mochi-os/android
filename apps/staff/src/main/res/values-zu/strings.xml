@@ -368,7 +368,6 @@
     <string name="staff_reports_type_listing">Uhlu</string>
     <string name="staff_reports_type_user">Umsebenzisi</string>
     <string name="staff_reports_view">Buka</string>
-    <string name="staff_reviews_action_hide">Fihla</string>
     <string name="staff_reviews_action_remove">Khipha</string>
     <string name="staff_reviews_action_restore">Buyisela</string>
     <string name="staff_reviews_col_date">Usuku</string>
@@ -380,7 +379,6 @@
     <string name="staff_reviews_col_text">Umbhalo</string>
     <string name="staff_reviews_empty">Akukho ukubuyekezwa</string>
     <string name="staff_reviews_filter_all">Zonke izimo</string>
-    <string name="staff_reviews_filter_hidden">Kufihliwe</string>
     <string name="staff_reviews_filter_published">Kushicilelwe</string>
     <string name="staff_reviews_filter_removed">Kukhishiwe</string>
     <string name="staff_reviews_filter_status">Isimo</string>

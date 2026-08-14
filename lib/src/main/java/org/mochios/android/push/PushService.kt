@@ -158,7 +158,7 @@ class PushService : Service() {
         // Drop subscriptions whose identity is no longer present.
         for ((identity, id) in subscriptions) {
             if (identity !in current) {
-                Log.i(TAG, "Identity $identity gone; unsubscribing")
+                Log.i(TAG, "Identity gone; unsubscribing")
                 if (id != PENDING) webSocket.unsubscribe(id)
                 subscriptions.remove(identity)
             }
@@ -308,7 +308,7 @@ class PushService : Service() {
                 val raw = resp.body?.string().orEmpty()
                 val events = JSONObject(raw).optJSONArray("data") ?: return@use
                 if (events.length() == 0) return@use
-                Log.i(TAG, "Draining ${events.length()} queued event(s) from $server")
+                Log.i(TAG, "Draining ${events.length()} queued event(s)")
                 val acks = org.json.JSONArray()
                 for (i in 0 until events.length()) {
                     val ev = events.getJSONObject(i)

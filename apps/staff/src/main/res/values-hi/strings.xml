@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">लिस्टिंग</string>
     <string name="staff_reports_type_user">यूज़र</string>
     <string name="staff_reports_view">देखें</string>
-    <string name="staff_reviews_action_hide">छिपाएँ</string>
     <string name="staff_reviews_action_remove">हटाएँ</string>
     <string name="staff_reviews_action_restore">पुनर्स्थापित करें</string>
     <string name="staff_reviews_col_date">दिनांक</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">टेक्स्ट</string>
     <string name="staff_reviews_empty">कोई समीक्षा नहीं</string>
     <string name="staff_reviews_filter_all">सभी स्थितियाँ</string>
-    <string name="staff_reviews_filter_hidden">छिपा हुआ</string>
     <string name="staff_reviews_filter_published">पब्लिश किया गया</string>
     <string name="staff_reviews_filter_removed">हटाया गया</string>
     <string name="staff_reviews_filter_status">स्टेटस</string>

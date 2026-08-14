@@ -392,7 +392,6 @@
     <string name="staff_reports_type_listing">Аб\'ява</string>
     <string name="staff_reports_type_user">Карыстальнік</string>
     <string name="staff_reports_view">Прагляд</string>
-    <string name="staff_reviews_action_hide">Схаваць</string>
     <string name="staff_reviews_action_remove">Выдаліць</string>
     <string name="staff_reviews_action_restore">Аднавіць</string>
     <string name="staff_reviews_col_date">Дата</string>
@@ -404,7 +403,6 @@
     <string name="staff_reviews_col_text">Тэкст</string>
     <string name="staff_reviews_empty">Водгукаў няма</string>
     <string name="staff_reviews_filter_all">Усе статусы</string>
-    <string name="staff_reviews_filter_hidden">Схавана</string>
     <string name="staff_reviews_filter_published">Апублікавана</string>
     <string name="staff_reviews_filter_removed">Выдалена</string>
     <string name="staff_reviews_filter_status">Статус</string>

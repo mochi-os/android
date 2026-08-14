@@ -375,7 +375,6 @@
     <string name="staff_reports_type_listing">Эълон</string>
     <string name="staff_reports_type_user">Корбар</string>
     <string name="staff_reports_view">Намоиш</string>
-    <string name="staff_reviews_action_hide">Пинҳон кардан</string>
     <string name="staff_reviews_action_remove">Хориҷ кардан</string>
     <string name="staff_reviews_action_restore">Барқарор кардан</string>
     <string name="staff_reviews_col_date">Сана</string>
@@ -387,7 +386,6 @@
     <string name="staff_reviews_col_text">Матн</string>
     <string name="staff_reviews_empty">Ягон шарҳ нест</string>
     <string name="staff_reviews_filter_all">Ҳама ҳолатҳо</string>
-    <string name="staff_reviews_filter_hidden">Пинҳон</string>
     <string name="staff_reviews_filter_published">Нашршуда</string>
     <string name="staff_reviews_filter_removed">Хориҷшуда</string>
     <string name="staff_reviews_filter_status">Ҳолат</string>

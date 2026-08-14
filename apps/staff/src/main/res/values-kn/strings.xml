@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">ಲಿಸ್ಟಿಂಗ್</string>
     <string name="staff_reports_type_user">ಬಳಕೆದಾರ</string>
     <string name="staff_reports_view">ವೀಕ್ಷಿಸಿ</string>
-    <string name="staff_reviews_action_hide">ಮರೆಮಾಡಿ</string>
     <string name="staff_reviews_action_remove">ತೆಗೆದುಹಾಕಿ</string>
     <string name="staff_reviews_action_restore">ಮರುಸ್ಥಾಪಿಸಿ</string>
     <string name="staff_reviews_col_date">ದಿನಾಂಕ</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">ಪಠ್ಯ</string>
     <string name="staff_reviews_empty">ಯಾವುದೇ ರಿವ್ಯೂಗಳಿಲ್ಲ</string>
     <string name="staff_reviews_filter_all">ಎಲ್ಲಾ ಸ್ಥಿತಿಗಳು</string>
-    <string name="staff_reviews_filter_hidden">ಮರೆಮಾಡಲಾಗಿದೆ</string>
     <string name="staff_reviews_filter_published">ಪಬ್ಲಿಷ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="staff_reviews_filter_removed">ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="staff_reviews_filter_status">ಸ್ಥಿತಿ</string>

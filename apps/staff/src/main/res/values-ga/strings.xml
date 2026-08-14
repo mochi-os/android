@@ -392,7 +392,6 @@
     <string name="staff_reports_type_listing">Liostú</string>
     <string name="staff_reports_type_user">Úsáideoir</string>
     <string name="staff_reports_view">Féach</string>
-    <string name="staff_reviews_action_hide">Folaigh</string>
     <string name="staff_reviews_action_remove">Bain</string>
     <string name="staff_reviews_action_restore">Athchóirigh</string>
     <string name="staff_reviews_col_date">Dáta</string>
@@ -404,7 +403,6 @@
     <string name="staff_reviews_col_text">Téacs</string>
     <string name="staff_reviews_empty">Níl aon athbhreithniú</string>
     <string name="staff_reviews_filter_all">Gach stádas</string>
-    <string name="staff_reviews_filter_hidden">Folaithe</string>
     <string name="staff_reviews_filter_published">Foilsithe</string>
     <string name="staff_reviews_filter_removed">Bainte</string>
     <string name="staff_reviews_filter_status">Stádas</string>

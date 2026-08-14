@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">सूची</string>
     <string name="staff_reports_type_user">प्रयोगकर्ता</string>
     <string name="staff_reports_view">हेर्नुहोस्</string>
-    <string name="staff_reviews_action_hide">लुकाउनुहोस्</string>
     <string name="staff_reviews_action_remove">हटाउनुहोस्</string>
     <string name="staff_reviews_action_restore">पुनर्स्थापना गर्नुहोस्</string>
     <string name="staff_reviews_col_date">मिति</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">पाठ</string>
     <string name="staff_reviews_empty">कुनै समीक्षा छैन</string>
     <string name="staff_reviews_filter_all">सबै स्थितिहरू</string>
-    <string name="staff_reviews_filter_hidden">लुकेको</string>
     <string name="staff_reviews_filter_published">प्रकाशित</string>
     <string name="staff_reviews_filter_removed">हटाइयो</string>
     <string name="staff_reviews_filter_status">स्थिति</string>

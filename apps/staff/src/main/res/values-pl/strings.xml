@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Oferta</string>
     <string name="staff_reports_type_user">Użytkownik</string>
     <string name="staff_reports_view">Zobacz</string>
-    <string name="staff_reviews_action_hide">Ukryj</string>
     <string name="staff_reviews_action_remove">Usuń</string>
     <string name="staff_reviews_action_restore">Przywróć</string>
     <string name="staff_reviews_col_date">Data</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Tekst</string>
     <string name="staff_reviews_empty">Brak opinii</string>
     <string name="staff_reviews_filter_all">Wszystkie statusy</string>
-    <string name="staff_reviews_filter_hidden">Ukryte</string>
     <string name="staff_reviews_filter_published">Opublikowano</string>
     <string name="staff_reviews_filter_removed">Usunięto</string>
     <string name="staff_reviews_filter_status">Status</string>

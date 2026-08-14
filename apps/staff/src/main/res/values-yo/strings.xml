@@ -366,7 +366,6 @@
     <string name="staff_reports_type_listing">Àkójọ</string>
     <string name="staff_reports_type_user">User</string>
     <string name="staff_reports_view">Wo</string>
-    <string name="staff_reviews_action_hide">Fi pamọ́</string>
     <string name="staff_reviews_action_remove">Yọ kúrò</string>
     <string name="staff_reviews_action_restore">Mú padà</string>
     <string name="staff_reviews_col_date">Ọjọ́</string>
@@ -378,7 +377,6 @@
     <string name="staff_reviews_col_text">Ọ̀rọ̀</string>
     <string name="staff_reviews_empty">Kò sí àyẹ̀wò</string>
     <string name="staff_reviews_filter_all">Gbogbo ipò</string>
-    <string name="staff_reviews_filter_hidden">Tí a fi pamọ́</string>
     <string name="staff_reviews_filter_published">Ti gbé jáde</string>
     <string name="staff_reviews_filter_removed">Ti yọ kúrò</string>
     <string name="staff_reviews_filter_status">Ìpò</string>

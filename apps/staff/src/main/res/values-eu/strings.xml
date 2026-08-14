@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Zerrendapena</string>
     <string name="staff_reports_type_user">Erabiltzailea</string>
     <string name="staff_reports_view">Ikusi</string>
-    <string name="staff_reviews_action_hide">Ezkutatu</string>
     <string name="staff_reviews_action_remove">Kendu</string>
     <string name="staff_reviews_action_restore">Berrezarri</string>
     <string name="staff_reviews_col_date">Data</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Testua</string>
     <string name="staff_reviews_empty">Iritzirik ez</string>
     <string name="staff_reviews_filter_all">Egoera guztiak</string>
-    <string name="staff_reviews_filter_hidden">Ezkutatuta</string>
     <string name="staff_reviews_filter_published">Argitaratuta</string>
     <string name="staff_reviews_filter_removed">Kenduta</string>
     <string name="staff_reviews_filter_status">Egoera</string>

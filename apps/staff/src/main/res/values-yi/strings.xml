@@ -368,7 +368,6 @@
     <string name="staff_reports_type_listing">רשימה</string>
     <string name="staff_reports_type_user">באַניצער</string>
     <string name="staff_reports_view">בליק</string>
-    <string name="staff_reviews_action_hide">באַהאַלטן</string>
     <string name="staff_reviews_action_remove">אַראָפּנעמען</string>
     <string name="staff_reviews_action_restore">אויפֿשטעלן</string>
     <string name="staff_reviews_col_date">דאַטע</string>
@@ -380,7 +379,6 @@
     <string name="staff_reviews_col_text">טעקסט</string>
     <string name="staff_reviews_empty">קיין רעצענזיעס</string>
     <string name="staff_reviews_filter_all">אַלע סטאַטוסן</string>
-    <string name="staff_reviews_filter_hidden">באַהאַלטן</string>
     <string name="staff_reviews_filter_published">פֿאַרעפֿנטלעכט</string>
     <string name="staff_reviews_filter_removed">אַראָפּגענומען</string>
     <string name="staff_reviews_filter_status">סטאַטוס</string>

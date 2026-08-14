@@ -398,7 +398,6 @@
     <string name="staff_reports_type_listing">Anúncio</string>
     <string name="staff_reports_type_user">Usuário</string>
     <string name="staff_reports_view">Visualizar</string>
-    <string name="staff_reviews_action_hide">Ocultar</string>
     <string name="staff_reviews_action_remove">Remover</string>
     <string name="staff_reviews_action_restore">Restaurar</string>
     <string name="staff_reviews_col_date">Data</string>
@@ -409,7 +408,6 @@
     <string name="staff_reviews_col_text">Texto</string>
     <string name="staff_reviews_empty">Nenhuma avaliação</string>
     <string name="staff_reviews_filter_all">Todos os status</string>
-    <string name="staff_reviews_filter_hidden">Oculto</string>
     <string name="staff_reviews_filter_published">Publicado</string>
     <string name="staff_reviews_filter_removed">Removido</string>
     <string name="staff_reviews_open_sidebar">Abrir menu lateral</string>

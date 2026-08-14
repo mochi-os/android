@@ -457,9 +457,8 @@ interface StaffApi {
     ): Response<ApiResponse<ReviewsListResponse>>
 
     /**
-     * Take action on a review (`approve` / `hide` / `remove`;
-     * staff.star forwards the action verbatim and the Comptroller
-     * validates it).
+     * Take action on a review (`remove` / `restore`; staff.star forwards
+     * the action verbatim and the Comptroller validates it).
      */
     @FormUrlEncoded
     @POST("-/reviews/action")

@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Καταχώριση</string>
     <string name="staff_reports_type_user">Χρήστης</string>
     <string name="staff_reports_view">Προβολή</string>
-    <string name="staff_reviews_action_hide">Απόκρυψη</string>
     <string name="staff_reviews_action_remove">Αφαίρεση</string>
     <string name="staff_reviews_action_restore">Επαναφορά</string>
     <string name="staff_reviews_col_date">Ημερομηνία</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Κείμενο</string>
     <string name="staff_reviews_empty">Καμία κριτική</string>
     <string name="staff_reviews_filter_all">Όλες οι καταστάσεις</string>
-    <string name="staff_reviews_filter_hidden">Κρυφό</string>
     <string name="staff_reviews_filter_published">Δημοσιεύτηκε</string>
     <string name="staff_reviews_filter_removed">Αφαιρέθηκε</string>
     <string name="staff_reviews_filter_status">Κατάσταση</string>

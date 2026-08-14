@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Annonce</string>
     <string name="staff_reports_type_user">Bruger</string>
     <string name="staff_reports_view">Vis</string>
-    <string name="staff_reviews_action_hide">Skjul</string>
     <string name="staff_reviews_action_remove">Fjern</string>
     <string name="staff_reviews_action_restore">Gendan</string>
     <string name="staff_reviews_col_date">Dato</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Tekst</string>
     <string name="staff_reviews_empty">Ingen anmeldelser</string>
     <string name="staff_reviews_filter_all">Alle statusser</string>
-    <string name="staff_reviews_filter_hidden">Skjult</string>
     <string name="staff_reviews_filter_published">Udgivet</string>
     <string name="staff_reviews_filter_removed">Fjernet</string>
     <string name="staff_reviews_filter_status">Status</string>

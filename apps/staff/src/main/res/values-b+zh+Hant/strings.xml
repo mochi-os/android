@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">刊登</string>
     <string name="staff_reports_type_user">使用者</string>
     <string name="staff_reports_view">檢視</string>
-    <string name="staff_reviews_action_hide">隱藏</string>
     <string name="staff_reviews_action_remove">移除</string>
     <string name="staff_reviews_action_restore">還原</string>
     <string name="staff_reviews_col_date">日期</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">文字</string>
     <string name="staff_reviews_empty">無評論</string>
     <string name="staff_reviews_filter_all">所有狀態</string>
-    <string name="staff_reviews_filter_hidden">已隱藏</string>
     <string name="staff_reviews_filter_published">已發佈</string>
     <string name="staff_reviews_filter_removed">已移除</string>
     <string name="staff_reviews_filter_status">狀態</string>

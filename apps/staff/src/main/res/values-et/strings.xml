@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Kuulutus</string>
     <string name="staff_reports_type_user">Kasutaja</string>
     <string name="staff_reports_view">Vaata</string>
-    <string name="staff_reviews_action_hide">Peida</string>
     <string name="staff_reviews_action_remove">Eemalda</string>
     <string name="staff_reviews_action_restore">Taasta</string>
     <string name="staff_reviews_col_date">Kuupäev</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Tekst</string>
     <string name="staff_reviews_empty">Arvustusi pole</string>
     <string name="staff_reviews_filter_all">Kõik olekud</string>
-    <string name="staff_reviews_filter_hidden">Peidetud</string>
     <string name="staff_reviews_filter_published">Avaldatud</string>
     <string name="staff_reviews_filter_removed">Eemaldatud</string>
     <string name="staff_reviews_filter_status">Olek</string>

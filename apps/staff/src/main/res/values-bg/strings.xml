@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">Обява</string>
     <string name="staff_reports_type_user">Потребител</string>
     <string name="staff_reports_view">Преглед</string>
-    <string name="staff_reviews_action_hide">Скрий</string>
     <string name="staff_reviews_action_remove">Премахни</string>
     <string name="staff_reviews_action_restore">Възстанови</string>
     <string name="staff_reviews_col_date">Дата</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">Текст</string>
     <string name="staff_reviews_empty">Няма ревюта</string>
     <string name="staff_reviews_filter_all">Всички състояния</string>
-    <string name="staff_reviews_filter_hidden">Скрит</string>
     <string name="staff_reviews_filter_published">Публикуван</string>
     <string name="staff_reviews_filter_removed">Премахнато</string>
     <string name="staff_reviews_filter_status">Състояние</string>

@@ -392,7 +392,6 @@
     <string name="staff_reports_type_listing">Ցուցակագրումը հաստատվեց</string>
     <string name="staff_reports_type_user">Օգտատեր</string>
     <string name="staff_reports_view">Դիտել</string>
-    <string name="staff_reviews_action_hide">Թաքցնել</string>
     <string name="staff_reviews_action_remove">Հեռացնել</string>
     <string name="staff_reviews_action_restore">Վերականգնել</string>
     <string name="staff_reviews_col_date">Ամսաթվի ձևաչափ</string>
@@ -404,7 +403,6 @@
     <string name="staff_reviews_col_text">Տեքստ</string>
     <string name="staff_reviews_empty">Կարծիքներ չկան</string>
     <string name="staff_reviews_filter_all">Բոլոր պիտակները</string>
-    <string name="staff_reviews_filter_hidden">Թաքնված</string>
     <string name="staff_reviews_filter_published">Հրապարակված է</string>
     <string name="staff_reviews_filter_removed">Հեռացված է</string>
     <string name="staff_reviews_filter_status">Կարգավիճակ</string>

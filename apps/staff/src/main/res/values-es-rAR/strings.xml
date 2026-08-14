@@ -416,7 +416,6 @@
     <string name="staff_reports_submitting">Enviando…</string>
     <string name="staff_reports_title">Reportes</string>
     <string name="staff_reports_type_listing">Publicación</string>
-    <string name="staff_reviews_action_hide">Ocultar</string>
     <string name="staff_reviews_col_date">Fecha</string>
     <string name="staff_reviews_col_listing">Publicación</string>
     <string name="staff_reviews_col_rating">Calificación</string>
@@ -425,7 +424,6 @@
     <string name="staff_reviews_col_text">Texto</string>
     <string name="staff_reviews_empty">Sin reseñas</string>
     <string name="staff_reviews_filter_all">Todos los estados</string>
-    <string name="staff_reviews_filter_hidden">Ocultas</string>
     <string name="staff_reviews_filter_published">Publicadas</string>
     <string name="staff_reviews_filter_removed">Eliminadas</string>
     <string name="staff_reviews_order_label">pedido #%1$s</string>

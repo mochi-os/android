@@ -392,7 +392,6 @@
     <string name="staff_reports_type_listing">Хабарландыру</string>
     <string name="staff_reports_type_user">Пайдаланушы</string>
     <string name="staff_reports_view">Көру</string>
-    <string name="staff_reviews_action_hide">Жасыру</string>
     <string name="staff_reviews_action_remove">Жою</string>
     <string name="staff_reviews_action_restore">Қалпына келтіру</string>
     <string name="staff_reviews_col_date">Күн</string>
@@ -404,7 +403,6 @@
     <string name="staff_reviews_col_text">Мәтін</string>
     <string name="staff_reviews_empty">Шолулар жоқ</string>
     <string name="staff_reviews_filter_all">Барлық күйлер</string>
-    <string name="staff_reviews_filter_hidden">Жасырын</string>
     <string name="staff_reviews_filter_published">Жарияланды</string>
     <string name="staff_reviews_filter_removed">Жойылды</string>
     <string name="staff_reviews_filter_status">Күй</string>

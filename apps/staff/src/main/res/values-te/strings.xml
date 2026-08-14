@@ -370,7 +370,6 @@
     <string name="staff_reports_type_listing">లిస్టింగ్</string>
     <string name="staff_reports_type_user">యూజర్</string>
     <string name="staff_reports_view">వీక్షించండి</string>
-    <string name="staff_reviews_action_hide">దాచండి</string>
     <string name="staff_reviews_action_remove">తొలగించండి</string>
     <string name="staff_reviews_action_restore">పునరుద్ధరించండి</string>
     <string name="staff_reviews_col_date">తేదీ</string>
@@ -382,7 +381,6 @@
     <string name="staff_reviews_col_text">టెక్స్ట్</string>
     <string name="staff_reviews_empty">రివ్యూలు లేవు</string>
     <string name="staff_reviews_filter_all">అన్ని స్థితులు</string>
-    <string name="staff_reviews_filter_hidden">దాచబడింది</string>
     <string name="staff_reviews_filter_published">పబ్లిష్ చేయబడింది</string>
     <string name="staff_reviews_filter_removed">తొలగించబడింది</string>
     <string name="staff_reviews_filter_status">స్థితి</string>

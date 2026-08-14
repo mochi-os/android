@@ -406,7 +406,6 @@
     <string name="staff_reports_type_listing">তালিকা</string>
     <string name="staff_reports_type_user">ব্যবহারকারী</string>
     <string name="staff_reports_view">দেখুন</string>
-    <string name="staff_reviews_action_hide">লুকান</string>
     <string name="staff_reviews_action_remove">সরান</string>
     <string name="staff_reviews_action_restore">পুনরুদ্ধার করুন</string>
     <string name="staff_reviews_col_date">তারিখ</string>
@@ -418,7 +417,6 @@
     <string name="staff_reviews_col_text">টেক্সট</string>
     <string name="staff_reviews_empty">কোনো রিভিউ নেই</string>
     <string name="staff_reviews_filter_all">সব স্ট্যাটাস</string>
-    <string name="staff_reviews_filter_hidden">লুকানো</string>
     <string name="staff_reviews_filter_published">প্রকাশিত</string>
     <string name="staff_reviews_filter_removed">সরানো হয়েছে</string>
     <string name="staff_reviews_filter_status">স্ট্যাটাস</string>

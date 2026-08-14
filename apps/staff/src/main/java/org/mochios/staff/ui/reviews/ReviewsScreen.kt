@@ -23,7 +23,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.Restore
-import androidx.compose.material.icons.outlined.VisibilityOff
 import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -75,11 +74,11 @@ import org.mochios.staff.ui.components.StaffStatusBadge
  * `apps/staff/web/src/features/reviews/reviews-page.tsx`:
  *
  *  - Drawer-driven nav via the parent [StaffLayout]'s [StaffSidebar].
- *  - Status filter row (All / Published / Hidden / Removed).
+ *  - Status filter row (All / Published / Removed).
  *  - Table-style list of reviews with reviewer / subject / listing / rating /
  *    body / status / created columns.
- *  - Per-row overflow menu offering `Hide` (when published), `Restore` (when
- *    hidden or removed), and `Remove` (when not already removed).
+ *  - Per-row overflow menu offering `Restore` (when removed) and `Remove`
+ *    (when not already removed).
  *  - Remove flows through a [ConfirmDialog] with the
  *    `reviewer → subject on listing` summary; the action is destructive and
  *    cannot be undone.
@@ -224,7 +223,6 @@ private fun FilterBar(
     val label = when (current) {
         ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
         ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
-        ReviewStatusFilter.HIDDEN -> stringResource(R.string.staff_reviews_filter_hidden)
         ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
     }
     Row(
@@ -244,7 +242,6 @@ private fun FilterBar(
                         text = { Text(when (option) {
                             ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
                             ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
-                            ReviewStatusFilter.HIDDEN -> stringResource(R.string.staff_reviews_filter_hidden)
                             ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
                         }) },
                         onClick = {
@@ -278,7 +275,6 @@ private fun ActiveFilterChips(
     val value = when (filter) {
         ReviewStatusFilter.ALL -> stringResource(R.string.staff_reviews_filter_all)
         ReviewStatusFilter.PUBLISHED -> stringResource(R.string.staff_reviews_filter_published)
-        ReviewStatusFilter.HIDDEN -> stringResource(R.string.staff_reviews_filter_hidden)
         ReviewStatusFilter.REMOVED -> stringResource(R.string.staff_reviews_filter_removed)
     }
     FilterChipsRow(
@@ -388,17 +384,7 @@ private fun OverflowMenu(
             )
         }
         MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-            if (review.status == "published") {
-                MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.staff_reviews_action_hide)) },
-                    onClick = {
-                        expanded = false
-                        onAction(review, "hide")
-                    },
-                    leadingIcon = { Icon(Icons.Outlined.VisibilityOff, contentDescription = null) },
-                )
-            }
-            if (review.status == "hidden" || review.status == "removed") {
+            if (review.status == "removed") {
                 MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.staff_reviews_action_restore)) },
                     onClick = {
