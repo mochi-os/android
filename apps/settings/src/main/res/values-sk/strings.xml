@@ -389,4 +389,5 @@
     <string name="accounts_verify_sent">Overovací kód odoslaný</string>
     <string name="accounts_test_failed">Test zlyhal</string>
     <string name="accounts_test_sent">Test odoslaný</string>
+    <string name="account_oauth_link_failed">Nepodarilo sa prepojiť účet</string>
 </resources>

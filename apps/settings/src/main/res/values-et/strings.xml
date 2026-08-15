@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Kontrollkood saadetud</string>
     <string name="accounts_test_failed">Test ebaõnnestus</string>
     <string name="accounts_test_sent">Test saadetud</string>
+    <string name="account_oauth_link_failed">Konto sidumine ebaõnnestus</string>
 </resources>

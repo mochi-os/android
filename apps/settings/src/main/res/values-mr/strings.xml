@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">पडताळणी कोड पाठवला</string>
     <string name="accounts_test_failed">टेस्ट अयशस्वी</string>
     <string name="accounts_test_sent">चाचणी पाठवली</string>
+    <string name="account_oauth_link_failed">खाते लिंक करता आले नाही</string>
 </resources>

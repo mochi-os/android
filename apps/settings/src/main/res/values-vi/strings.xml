@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">Đã gửi mã xác minh</string>
     <string name="accounts_test_failed">Kiểm tra thất bại</string>
     <string name="accounts_test_sent">Đã gửi thử nghiệm</string>
+    <string name="account_oauth_link_failed">Không thể liên kết tài khoản</string>
 </resources>

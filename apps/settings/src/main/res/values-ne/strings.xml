@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">प्रमाणीकरण कोड पठाइयो</string>
     <string name="accounts_test_failed">परीक्षण असफल भयो</string>
     <string name="accounts_test_sent">परीक्षण पठाइयो</string>
+    <string name="account_oauth_link_failed">खाता लिङ्क गर्न सकिएन</string>
 </resources>

@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Тексеру коды жіберілді</string>
     <string name="accounts_test_failed">Тест сәтсіз</string>
     <string name="accounts_test_sent">Сынақ жіберілді</string>
+    <string name="account_oauth_link_failed">Тіркелгіні байланыстыру мүмкін болмады</string>
 </resources>

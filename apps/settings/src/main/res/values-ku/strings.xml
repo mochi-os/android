@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Koda verifîkasyonê hat şandin</string>
     <string name="accounts_test_failed">Test têk çû</string>
     <string name="accounts_test_sent">Test hate şandin</string>
+    <string name="account_oauth_link_failed">Hesab nikarîbû were girêdan</string>
 </resources>

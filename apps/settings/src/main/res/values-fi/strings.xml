@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Vahvistuskoodi lähetetty</string>
     <string name="accounts_test_failed">Testi epäonnistui</string>
     <string name="accounts_test_sent">Testi lähetetty</string>
+    <string name="account_oauth_link_failed">Tiliä ei voitu yhdistää</string>
 </resources>

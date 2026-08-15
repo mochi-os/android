@@ -383,4 +383,5 @@
     <string name="accounts_verify_sent">အတည်ပြု ကုဒ် ပို့ပြီး</string>
     <string name="accounts_test_failed">စမ်းသပ်မှု မအောင်မြင်ပါ</string>
     <string name="accounts_test_sent">စမ်းသပ်မှု ပို့ပြီးပါပြီ</string>
+    <string name="account_oauth_link_failed">အကောင့် ချိတ်ဆက်၍ မရပါ</string>
 </resources>

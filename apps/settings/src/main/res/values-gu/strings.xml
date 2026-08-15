@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">ચકાસણી કોડ મોકલ્યો</string>
     <string name="accounts_test_failed">ટેસ્ટ નિષ્ફળ</string>
     <string name="accounts_test_sent">પરીક્ષણ મોકલ્યું</string>
+    <string name="account_oauth_link_failed">ખાતું લિંક કરી શક્યા નહીં</string>
 </resources>

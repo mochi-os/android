@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">የማረጋገጫ ኮድ ተልኳል</string>
     <string name="accounts_test_failed">ሙከራ አልተሳካም</string>
     <string name="accounts_test_sent">ሙከራ ተልኳል</string>
+    <string name="account_oauth_link_failed">መለያ ሊገናኝ አልቻለም</string>
 </resources>

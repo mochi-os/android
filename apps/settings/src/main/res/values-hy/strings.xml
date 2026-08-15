@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Ստուգման կոդը ուղարկվեց</string>
     <string name="accounts_test_failed">Թեստը ձախողվեց</string>
     <string name="accounts_test_sent">Փորձնական հաղորդագրությունն ուղարկվեց</string>
+    <string name="account_oauth_link_failed">Չհաջողվեց բեռնել այս փաստաթուղթը։ Խնդրում ենք փորձել ավելի ուշ։</string>
 </resources>

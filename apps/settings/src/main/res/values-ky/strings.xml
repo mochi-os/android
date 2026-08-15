@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Текшерүү коду жөнөтүлдү</string>
     <string name="accounts_test_failed">Тест ишке ашкан жок</string>
     <string name="accounts_test_sent">Сыноо жөнөтүлдү</string>
+    <string name="account_oauth_link_failed">Аккаунтту байланыштыруу мүмкүн болбоду</string>
 </resources>

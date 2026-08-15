@@ -389,4 +389,5 @@
     <string name="accounts_verify_sent">Còd dearbhaidh air a chur</string>
     <string name="accounts_test_failed">Dh\'fhàillig an deuchainn</string>
     <string name="accounts_test_sent">Chaidh an deuchainn a chur</string>
+    <string name="account_oauth_link_failed">Cha b\' urrainn an cunntas a cheangal</string>
 </resources>

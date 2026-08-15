@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Ikhowudi yoqinisekiso ithunyelwe</string>
     <string name="accounts_test_failed">Uvavanyo lusilele</string>
     <string name="accounts_test_sent">Uvavanyo luthunyelwe</string>
+    <string name="account_oauth_link_failed">Ayikwazanga ukudibanisa i-akhawunti</string>
 </resources>

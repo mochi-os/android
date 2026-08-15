@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">Рамзи тасдиқ фиристода шуд</string>
     <string name="accounts_test_failed">Санҷиш ноком шуд</string>
     <string name="accounts_test_sent">Санҷиш фиристода шуд</string>
+    <string name="account_oauth_link_failed">Ҳисобро пайваст карда натавонист</string>
 </resources>

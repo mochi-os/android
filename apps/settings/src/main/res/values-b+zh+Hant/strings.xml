@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">驗證碼已傳送</string>
     <string name="accounts_test_failed">測試失敗</string>
     <string name="accounts_test_sent">測試已傳送</string>
+    <string name="account_oauth_link_failed">無法連結帳戶</string>
 </resources>

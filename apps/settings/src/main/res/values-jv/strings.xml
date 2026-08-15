@@ -383,4 +383,5 @@
     <string name="accounts_verify_sent">Kode verifikasi dikirim</string>
     <string name="accounts_test_failed">Tes gagal</string>
     <string name="accounts_test_sent">Tes wis dikirim</string>
+    <string name="account_oauth_link_failed">Ora bisa nyambungaké akun</string>
 </resources>

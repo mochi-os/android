@@ -105,6 +105,11 @@ data class OAuthExchangeRequest(
     val verifier: String
 )
 
+/** What the exchange returns for a LINK ceremony: the provider now attached. */
+data class OAuthLinkResponse(
+    val linked: String = ""
+)
+
 // Request bodies
 data class EmailRequest(val email: String)
 data class CodeRequest(val code: String)
@@ -179,6 +184,17 @@ interface AuthApi {
 
     @POST("_/auth/oauth/exchange")
     suspend fun oauthExchange(@Body body: OAuthExchangeRequest): Response<VerifyResponse>
+
+    /**
+     * Exchange for a LINK ceremony. The Bearer is not optional here: the
+     * server writes the identity link only for the user the token names, and
+     * the browser that carried the callback proved nothing about who that is.
+     */
+    @POST("_/auth/oauth/exchange")
+    suspend fun oauthExchangeLink(
+        @retrofit2.http.Header("Authorization") authorization: String,
+        @Body body: OAuthExchangeRequest
+    ): Response<OAuthLinkResponse>
 
     /** Cancel a pending self-service closure, reactivating the account. */
     @POST("_/auth/close/cancel")

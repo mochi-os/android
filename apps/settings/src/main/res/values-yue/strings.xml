@@ -75,6 +75,7 @@
     <string name="sessions_revoke_title">撤銷工作階段?</string>
     <string name="sessions_revoke_message">使用呢個工作階段嘅裝置會被登出。</string>
     <string name="account_oauth_link">連結帳戶</string>
+    <string name="account_oauth_link_failed">無法連結帳戶</string>
     <string name="account_oauth_link_title">連結供應商</string>
     <string name="account_oauth_unlink_title">解除連結帳戶?</string>
     <string name="account_oauth_unlink_message">你將唔可以用 %1$s 登入。</string>

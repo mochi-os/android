@@ -386,4 +386,5 @@
     <string name="accounts_verify_sent">Codi de verificació enviat</string>
     <string name="accounts_test_failed">La prova ha fallat</string>
     <string name="accounts_test_sent">Prova enviada</string>
+    <string name="account_oauth_link_failed">No s\'ha pogut vincular el compte</string>
 </resources>

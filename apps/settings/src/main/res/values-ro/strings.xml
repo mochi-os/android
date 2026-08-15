@@ -387,4 +387,5 @@
     <string name="accounts_verify_sent">Cod de verificare trimis</string>
     <string name="accounts_test_failed">Testul a eșuat</string>
     <string name="accounts_test_sent">Test trimis</string>
+    <string name="account_oauth_link_failed">Nu s-a putut conecta contul</string>
 </resources>

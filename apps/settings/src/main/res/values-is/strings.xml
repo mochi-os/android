@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Sannprófunarkóði sendur</string>
     <string name="accounts_test_failed">Prófun mistókst</string>
     <string name="accounts_test_sent">Prófun send</string>
+    <string name="account_oauth_link_failed">Tókst ekki að tengja reikning</string>
 </resources>

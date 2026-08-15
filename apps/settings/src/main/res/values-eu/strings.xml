@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Egiaztatze-kodea bidali da</string>
     <string name="accounts_test_failed">Probak huts egin du</string>
     <string name="accounts_test_sent">Proba bidali da</string>
+    <string name="account_oauth_link_failed">Ezin izan da kontua estekatu</string>
 </resources>

@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Verifikasiekode gestuur</string>
     <string name="accounts_test_failed">Toets het misluk</string>
     <string name="accounts_test_sent">Toets gestuur</string>
+    <string name="account_oauth_link_failed">Kon nie rekening koppel nie</string>
 </resources>

@@ -389,4 +389,5 @@
     <string name="accounts_verify_sent">Код подтверждения отправлен</string>
     <string name="accounts_test_failed">Тест не пройден</string>
     <string name="accounts_test_sent">Тест отправлен</string>
+    <string name="account_oauth_link_failed">Не удалось привязать аккаунт</string>
 </resources>

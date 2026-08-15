@@ -387,4 +387,5 @@
     <string name="accounts_verify_sent">Verifikācijas kods nosūtīts</string>
     <string name="accounts_test_failed">Tests neizdevās</string>
     <string name="accounts_test_sent">Tests nosūtīts</string>
+    <string name="account_oauth_link_failed">Nevarēja saistīt kontu</string>
 </resources>

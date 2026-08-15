@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">ਪੁਸ਼ਟੀ ਕੋਡ ਭੇਜਿਆ ਗਿਆ</string>
     <string name="accounts_test_failed">ਟੈਸਟ ਅਸਫਲ</string>
     <string name="accounts_test_sent">ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</string>
+    <string name="account_oauth_link_failed">ਖਾਤਾ ਲਿੰਕ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</string>
 </resources>

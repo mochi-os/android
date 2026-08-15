@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">സ്ഥിരീകരണ കോഡ് അയച്ചു</string>
     <string name="accounts_test_failed">ടെസ്റ്റ് പരാജയപ്പെട്ടു</string>
     <string name="accounts_test_sent">പരിശോധന അയച്ചു</string>
+    <string name="account_oauth_link_failed">അക്കൗണ്ട് ലിങ്ക് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
 </resources>

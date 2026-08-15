@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Verifizierungscode gesendet</string>
     <string name="accounts_test_failed">Test fehlgeschlagen</string>
     <string name="accounts_test_sent">Test gesendet</string>
+    <string name="account_oauth_link_failed">Konto konnte nicht verknüpft werden</string>
 </resources>

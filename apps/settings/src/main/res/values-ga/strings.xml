@@ -391,4 +391,5 @@
     <string name="accounts_verify_sent">Cód fíoraithe seolta</string>
     <string name="accounts_test_failed">Theip ar an tástáil</string>
     <string name="accounts_test_sent">Tástáil seolta</string>
+    <string name="account_oauth_link_failed">Níorbh fhéidir an cuntas a nascadh</string>
 </resources>

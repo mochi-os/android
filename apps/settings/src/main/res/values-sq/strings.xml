@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Kodi i verifikimit u dërgua</string>
     <string name="accounts_test_failed">Testi dështoi</string>
     <string name="accounts_test_sent">Testi u dërgua</string>
+    <string name="account_oauth_link_failed">Nuk mund të lidhej llogaria</string>
 </resources>

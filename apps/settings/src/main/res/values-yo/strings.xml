@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">Kóòdù ìjẹ́rìísí ti ránṣẹ́</string>
     <string name="accounts_test_failed">Ìdánwò kùnà</string>
     <string name="accounts_test_sent">A ti fi ìdánwò ránṣẹ́</string>
+    <string name="account_oauth_link_failed">Kò lè so àkáǹtì pọ̀</string>
 </resources>

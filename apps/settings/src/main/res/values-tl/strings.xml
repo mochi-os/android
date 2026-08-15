@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Naipadala ang verification code</string>
     <string name="accounts_test_failed">Nabigo ang test</string>
     <string name="accounts_test_sent">Naipadala ang pagsubok</string>
+    <string name="account_oauth_link_failed">Hindi na-link ang account</string>
 </resources>

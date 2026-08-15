@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">An aika lambar tabbatarwa</string>
     <string name="accounts_test_failed">Gwaji ya gaza</string>
     <string name="accounts_test_sent">An aika gwaji</string>
+    <string name="account_oauth_link_failed">Ba a iya haɗa asusu ba</string>
 </resources>

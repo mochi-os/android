@@ -46,6 +46,14 @@ class SessionManager @Inject constructor(
         private val KEY_OAUTH_NONCE = stringPreferencesKey("oauth_nonce")
         private val KEY_OAUTH_RETURN_CODE = stringPreferencesKey("oauth_return_code")
         private val KEY_OAUTH_RETURN_ERROR = stringPreferencesKey("oauth_return_error")
+        // A LINK ceremony keeps its own slots. Sharing the sign-in ones would
+        // let the login collector consume a link's return and try to
+        // establish a session from it, and a link begun while a sign-in was
+        // outstanding would overwrite the sign-in's verifier.
+        private val KEY_OAUTH_LINK_VERIFIER = stringPreferencesKey("oauth_link_verifier")
+        private val KEY_OAUTH_LINK_NONCE = stringPreferencesKey("oauth_link_nonce")
+        private val KEY_OAUTH_LINK_RETURN_CODE = stringPreferencesKey("oauth_link_return_code")
+        private val KEY_OAUTH_LINK_RETURN_ERROR = stringPreferencesKey("oauth_link_return_error")
         private val KEY_BOUND_IDENTITY = stringPreferencesKey("bound_identity")
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
@@ -272,6 +280,63 @@ class SessionManager @Inject constructor(
         dataStore.edit { prefs ->
             prefs.remove(KEY_OAUTH_RETURN_CODE)
             prefs.remove(KEY_OAUTH_RETURN_ERROR)
+        }
+    }
+
+    // ---- OAuth LINK ceremony -------------------------------------------
+    //
+    // The same shape as the sign-in ceremony above and for the same reasons:
+    // the verifier says a ceremony of ours is outstanding, the nonce says a
+    // return came from the server we started it with, and both are written
+    // and consumed together so the pair always describes one ceremony.
+    //
+    // The link's verifier is not decoration. The server writes the identity
+    // link only at the exchange, against this verifier plus our Bearer, so
+    // that a browser holding the callback cannot write it - see core's
+    // oauth_mobile_link.
+
+    suspend fun saveOAuthLinkVerifier(verifier: String, nonce: String? = null) {
+        dataStore.edit { prefs ->
+            prefs[KEY_OAUTH_LINK_VERIFIER] = verifier
+            if (nonce != null) prefs[KEY_OAUTH_LINK_NONCE] = nonce else prefs.remove(KEY_OAUTH_LINK_NONCE)
+        }
+    }
+
+    suspend fun oauthLinkCeremony(): OAuthCeremony {
+        val prefs = dataStore.data.first()
+        return OAuthCeremony(
+            hasVerifier = !prefs[KEY_OAUTH_LINK_VERIFIER].isNullOrBlank(),
+            nonce = prefs[KEY_OAUTH_LINK_NONCE],
+        )
+    }
+
+    suspend fun consumeOAuthLinkVerifier(): String? {
+        val prefs = dataStore.data.first()
+        val verifier = prefs[KEY_OAUTH_LINK_VERIFIER]
+        if (verifier != null) {
+            dataStore.edit { p ->
+                p.remove(KEY_OAUTH_LINK_VERIFIER)
+                p.remove(KEY_OAUTH_LINK_NONCE)
+            }
+        }
+        return verifier
+    }
+
+    val oauthLinkReturn: Flow<Pair<String?, String?>> = dataStore.data.map { prefs ->
+        prefs[KEY_OAUTH_LINK_RETURN_CODE] to prefs[KEY_OAUTH_LINK_RETURN_ERROR]
+    }
+
+    suspend fun setOAuthLinkReturn(code: String?, error: String?) {
+        dataStore.edit { prefs ->
+            if (code != null) prefs[KEY_OAUTH_LINK_RETURN_CODE] = code else prefs.remove(KEY_OAUTH_LINK_RETURN_CODE)
+            if (error != null) prefs[KEY_OAUTH_LINK_RETURN_ERROR] = error else prefs.remove(KEY_OAUTH_LINK_RETURN_ERROR)
+        }
+    }
+
+    suspend fun clearOAuthLinkReturn() {
+        dataStore.edit { prefs ->
+            prefs.remove(KEY_OAUTH_LINK_RETURN_CODE)
+            prefs.remove(KEY_OAUTH_LINK_RETURN_ERROR)
         }
     }
 

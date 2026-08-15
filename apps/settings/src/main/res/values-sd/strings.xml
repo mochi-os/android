@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">تصديق ڪوڊ موڪليو ويو</string>
     <string name="accounts_test_failed">ٽيسٽ ناڪام ٿيو</string>
     <string name="accounts_test_sent">ٽيسٽ موڪلي وئي</string>
+    <string name="account_oauth_link_failed">اڪائونٽ ڳنڍي نه سگهيو</string>
 </resources>

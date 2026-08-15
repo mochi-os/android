@@ -5,7 +5,10 @@
 
 package org.mochios.android.auth
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotEquals
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -21,7 +24,7 @@ import org.junit.Test
  * marker could never be retired, because core's redirect_local drops the custom
  * scheme so no legitimate return ever arrived — which left the guard armed for
  * good after the first link attempt rather than for the length of a ceremony.
- * The machinery was removed instead of hardened; see LoginViewModel.linkOAuth.
+ * The link flow now carries the same machinery; see LoginViewModel.linkOAuth.
  */
 class OAuthReturnTest {
 
@@ -59,9 +62,9 @@ class OAuthReturnTest {
 
     /**
      * A forged ERROR is the cheaper attack — it needs no plausible exchange
-     * code — so it must be held to the same check as a success. This is the
-     * hole the link flow was left with and the reason core echoes the nonce on
-     * the error branch too.
+     * code — so it must be held to the same check as a success, which is why
+     * core echoes the nonce on the error branch too. The link flow, which
+     * once had no return handling at all, now goes through this same gate.
      */
     @Test
     fun `a forged error is refused mid-ceremony`() {
@@ -88,5 +91,27 @@ class OAuthReturnTest {
         assertTrue(shouldAcceptOAuthReturn(true, "", null, code = "abc", error = null))
         assertTrue(shouldAcceptOAuthReturn(true, null, "unexpected", code = "abc", error = null))
         assertFalse(shouldAcceptOAuthReturn(false, null, null, code = "abc", error = null))
+    }
+
+    /**
+     * The sign-in and link returns must stay distinct all the way from the
+     * deep-link name. Collapsing them is not cosmetic: a link return handled
+     * as a login is exchanged for a session, and a login return handled as a
+     * link burns the link ceremony's verifier.
+     */
+    @Test
+    fun `the two OAuth returns are routed apart`() {
+        assertEquals(OAuthReturnKind.LOGIN, oauthReturnKind("oauth-return"))
+        assertEquals(OAuthReturnKind.LINK, oauthReturnKind("oauth-link-return"))
+        assertNotEquals(oauthReturnKind("oauth-return"), oauthReturnKind("oauth-link-return"))
+    }
+
+    /** Anything else is not an OAuth return and must not reach either handler. */
+    @Test
+    fun `other deep-link names are not OAuth returns`() {
+        assertNull(oauthReturnKind("notification"))
+        assertNull(oauthReturnKind(""))
+        assertNull(oauthReturnKind("oauth"))
+        assertNull(oauthReturnKind("oauth-return-x"))
     }
 }

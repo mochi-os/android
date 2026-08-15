@@ -383,4 +383,5 @@
     <string name="accounts_verify_sent">បានផ្ញើកូដផ្ទៀងផ្ទាត់</string>
     <string name="accounts_test_failed">ការសាកល្បងបរាជ័យ</string>
     <string name="accounts_test_sent">បានផ្ញើការសាកល្បង</string>
+    <string name="account_oauth_link_failed">មិនអាចភ្ជាប់គណនី</string>
 </resources>

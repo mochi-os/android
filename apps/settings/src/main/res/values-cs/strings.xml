@@ -388,4 +388,5 @@
     <string name="accounts_verify_sent">Ověřovací kód odeslán</string>
     <string name="accounts_test_failed">Test selhal</string>
     <string name="accounts_test_sent">Test odeslán</string>
+    <string name="account_oauth_link_failed">Nelze propojit účet</string>
 </resources>

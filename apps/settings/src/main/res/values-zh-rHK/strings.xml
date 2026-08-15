@@ -375,4 +375,5 @@
     <string name="accounts_verified">賬戶已驗證</string>
     <string name="accounts_provider_url">外部網址</string>
     <string name="accounts_provider_web">Mochi 網頁版</string>
+    <string name="account_oauth_link_failed">無法關聯賬戶</string>
 </resources>

@@ -78,6 +78,20 @@ class LoginViewModel @Inject constructor(
 
     init {
         refresh()
+        viewModelScope.launch {
+            sessionManager.oauthLinkReturn.collect { (code, error) ->
+                if (error != null) {
+                    sessionManager.clearOAuthLinkReturn()
+                    sessionManager.consumeOAuthLinkVerifier()
+                    _uiState.value = _uiState.value.copy(
+                        error = MochiError.Local(R.string.account_oauth_link_failed)
+                    )
+                } else if (code != null) {
+                    sessionManager.clearOAuthLinkReturn()
+                    completeOAuthLink(code)
+                }
+            }
+        }
     }
 
     fun refresh() {
@@ -224,28 +238,15 @@ class LoginViewModel @Inject constructor(
     fun linkOAuth(provider: String) = requestStepUp { proof ->
         val token = sessionManager.getToken("settings")
             ?: throw RuntimeException("no settings token to authorise OAuth link")
-        // The challenge goes to the server; the verifier is not stored, because
-        // the link flow has no exchange step to consume it. A stored one would
-        // outlive the ceremony and leave the login return's gate permanently
-        // satisfied.
-        val challenge = OAuthPkce.challengeFor(OAuthPkce.generateVerifier())
-        // The link COMPLETES on the server — the row is written before it
-        // redirects — but the user finishes on a web page instead of back here:
-        // core's oauth_link runs this target through redirect_local, which keeps
-        // only paths starting with a single "/", so the custom scheme is
-        // dropped and the browser goes to /login/settings/oauth.
-        //
-        // Nothing on this side waits for a return, deliberately. There used to
-        // be a handler and a pending marker, and because no legitimate return
-        // could ever retire that marker it stayed set for good after the first
-        // link attempt — leaving an exported activity permanently willing to
-        // accept a forged success naming that provider, or any forged error.
-        // A guard that can only ever see forgeries is not a guard.
-        //
-        // Reinstating it needs core to route link ceremonies through
-        // oauth_mobile_redirect the way login ceremonies go, so the return
-        // carries the ceremony nonce that shouldAcceptOAuthReturn checks.
-        val url = authRepository.beginOAuthLink(
+        // The verifier IS kept now, because the link has an exchange step to
+        // consume it: core stashes the provider profile at the callback and
+        // writes the link only when this app presents the verifier and its
+        // Bearer. Without holding it there is nothing tying the ceremony to
+        // this device, and the browser completing the callback could be
+        // anyone's - see core's oauth_mobile_link.
+        val verifier = OAuthPkce.generateVerifier()
+        val challenge = OAuthPkce.challengeFor(verifier)
+        val begun = authRepository.beginOAuthLink(
             provider = provider,
             scheme = "mochi",
             target = "mochi:oauth-link-return",
@@ -253,7 +254,37 @@ class LoginViewModel @Inject constructor(
             bearerToken = token,
             stepUpToken = proof,
         )
-        _oauthLaunchUrl.value = url
+        // Recorded only once the server has answered, and in one write with
+        // the nonce: a verifier left behind by a failed /begin is exactly what
+        // an injected return needs to satisfy the outstanding-ceremony check.
+        sessionManager.saveOAuthLinkVerifier(verifier, begun.nonce)
+        _oauthLaunchUrl.value = begun.url
+    }
+
+    /**
+     * Complete the link once the browser deep-links back. The exchange is
+     * where the link is actually written, so a return that never arrives
+     * leaves nothing attached - which is the point.
+     */
+    private fun completeOAuthLink(code: String) {
+        viewModelScope.launch {
+            try {
+                val verifier = sessionManager.consumeOAuthLinkVerifier()
+                if (verifier == null) {
+                    _uiState.value = _uiState.value.copy(error = MochiError.Local(R.string.account_oauth_link_failed))
+                    return@launch
+                }
+                val token = sessionManager.getToken("settings")
+                if (token == null) {
+                    _uiState.value = _uiState.value.copy(error = MochiError.Local(R.string.account_oauth_link_failed))
+                    return@launch
+                }
+                authRepository.exchangeOAuthLink(code, verifier, token)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
     }
 
     fun consumeOAuthLaunchUrl() {

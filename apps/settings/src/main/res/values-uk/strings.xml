@@ -389,4 +389,5 @@
     <string name="accounts_verify_sent">Код підтвердження надіслано</string>
     <string name="accounts_test_failed">Тест не пройшов</string>
     <string name="accounts_test_sent">Тест надіслано</string>
+    <string name="account_oauth_link_failed">Не вдалося прив\'язати обліковий запис</string>
 </resources>

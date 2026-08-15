@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Verifikationskode sendt</string>
     <string name="accounts_test_failed">Test mislykkedes</string>
     <string name="accounts_test_sent">Test sendt</string>
+    <string name="account_oauth_link_failed">Kunne ikke forbinde konto</string>
 </resources>

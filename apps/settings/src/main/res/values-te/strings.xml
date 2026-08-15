@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">ధృవీకరణ కోడ్ పంపబడింది</string>
     <string name="accounts_test_failed">టెస్ట్ విఫలమైంది</string>
     <string name="accounts_test_sent">పరీక్ష పంపబడింది</string>
+    <string name="account_oauth_link_failed">ఖాతాను లింక్ చేయలేకపోయింది</string>
 </resources>

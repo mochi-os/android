@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">ಪರಿಶೀಲನೆ ಕೋಡ್ ಕಳುಹಿಸಲಾಗಿದೆ</string>
     <string name="accounts_test_failed">ಪರೀಕ್ಷೆ ವಿಫಲವಾಗಿದೆ</string>
     <string name="accounts_test_sent">ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</string>
+    <string name="account_oauth_link_failed">ಖಾತೆಯನ್ನು ಲಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
 </resources>

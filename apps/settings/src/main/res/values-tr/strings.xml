@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Doğrulama kodu gönderildi</string>
     <string name="accounts_test_failed">Test başarısız</string>
     <string name="accounts_test_sent">Test gönderildi</string>
+    <string name="account_oauth_link_failed">Hesap bağlanamadı</string>
 </resources>

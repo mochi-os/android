@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">Kòd verifikasyon voye</string>
     <string name="accounts_test_failed">Tès echwe</string>
     <string name="accounts_test_sent">Tès voye</string>
+    <string name="account_oauth_link_failed">Pa t kapab lye kont</string>
 </resources>

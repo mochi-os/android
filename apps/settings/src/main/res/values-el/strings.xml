@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Ο κωδικός επαλήθευσης στάλθηκε</string>
     <string name="accounts_test_failed">Η δοκιμή απέτυχε</string>
     <string name="accounts_test_sent">Η δοκιμή στάλθηκε</string>
+    <string name="account_oauth_link_failed">Δεν ήταν δυνατή η σύνδεση λογαριασμού</string>
 </resources>

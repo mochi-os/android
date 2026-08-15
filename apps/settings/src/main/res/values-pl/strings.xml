@@ -389,4 +389,5 @@
     <string name="accounts_verify_sent">Kod weryfikacyjny wysłany</string>
     <string name="accounts_test_failed">Test nie powiódł się</string>
     <string name="accounts_test_sent">Test wysłany</string>
+    <string name="account_oauth_link_failed">Nie można połączyć konta</string>
 </resources>

@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Кодот за потврда е испратен</string>
     <string name="accounts_test_failed">Тестот не успеа</string>
     <string name="accounts_test_sent">Тестот е испратен</string>
+    <string name="account_oauth_link_failed">Сметката не можеше да се поврзе</string>
 </resources>

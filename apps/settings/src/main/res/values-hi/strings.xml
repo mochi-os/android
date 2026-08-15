@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">वेरिफ़िकेशन कोड भेजा गया</string>
     <string name="accounts_test_failed">टेस्ट विफल</string>
     <string name="accounts_test_sent">परीक्षण भेजा गया</string>
+    <string name="account_oauth_link_failed">अकाउंट लिंक नहीं किया जा सका</string>
 </resources>

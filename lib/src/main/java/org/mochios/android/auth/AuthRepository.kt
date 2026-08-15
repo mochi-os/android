@@ -189,11 +189,11 @@ class AuthRepository @Inject constructor(
      * needs a Bearer JWT for any of the user's apps; any settings/feeds/...
      * token works since the JWT verification is core-level.
      *
-     * The link completes server-side and the user finishes in the browser:
-     * core runs the target through redirect_local, which drops a custom scheme,
-     * so no deep link comes back to the app. Nothing here waits for one — see
-     * LoginViewModel.linkOAuth for why the return handling was removed rather
-     * than hardened.
+     * The link is NOT written when the browser reaches the callback. Core
+     * stashes the provider profile and deep-links `mochi:oauth-link-return`;
+     * the link is written at [exchangeOAuthLink], against the verifier whose
+     * challenge is passed here plus this user's Bearer. Hold the verifier and
+     * the returned nonce until then.
      */
     suspend fun beginOAuthLink(
         provider: String,
@@ -202,8 +202,8 @@ class AuthRepository @Inject constructor(
         challenge: String,
         bearerToken: String,
         stepUpToken: String,
-    ): String {
-        val resp = authApi.oauthBeginAuthorised(
+    ): OAuthBeginResponse {
+        return authApi.oauthBeginAuthorised(
             provider,
             "Bearer $bearerToken",
             OAuthBeginRequest(
@@ -215,7 +215,18 @@ class AuthRepository @Inject constructor(
                 token = stepUpToken,
             )
         ).unwrapRaw()
-        return resp.url
+    }
+
+    /**
+     * Complete a link ceremony: the verifier proves this is the app instance
+     * that began it, the Bearer proves which user it acts for, and the server
+     * attaches the identity only to that user. Returns the provider linked.
+     */
+    suspend fun exchangeOAuthLink(code: String, verifier: String, bearerToken: String): String {
+        return authApi.oauthExchangeLink(
+            "Bearer $bearerToken",
+            OAuthExchangeRequest(code, verifier)
+        ).unwrapRaw().linked
     }
 
     suspend fun exchangeOAuth(code: String, verifier: String): AuthResult {

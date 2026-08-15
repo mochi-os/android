@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">د تصدیق کوډ ولېږل شو</string>
     <string name="accounts_test_failed">ازموینه ناکامه شوه</string>
     <string name="accounts_test_sent">ازموینه واستول شوه</string>
+    <string name="account_oauth_link_failed">حساب نشي لینک کیدلی</string>
 </resources>

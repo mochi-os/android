@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">פֿאַריפֿיקאַציע־קאָד געשיקט</string>
     <string name="accounts_test_failed">טעסט דורכגעפֿאַלן</string>
     <string name="accounts_test_sent">טעסט געשיקט</string>
+    <string name="account_oauth_link_failed">האָט נישט געקאָנט פֿאַרבינדן קאָנטע</string>
 </resources>

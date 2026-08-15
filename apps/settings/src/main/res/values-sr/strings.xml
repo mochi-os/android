@@ -387,4 +387,5 @@
     <string name="accounts_verify_sent">Верификациони код послат</string>
     <string name="accounts_test_failed">Тест није успео</string>
     <string name="accounts_test_sent">Тест је послат</string>
+    <string name="account_oauth_link_failed">Није могуће повезати налог</string>
 </resources>

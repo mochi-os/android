@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">შემოწმების კოდი</string>
     <string name="accounts_test_failed">ტესტი ვერ შესრულდა</string>
     <string name="accounts_test_sent">ტესტი გაიგზავნა</string>
+    <string name="account_oauth_link_failed">ანგარიშის დაკავშირება ვერ მოხერხდა</string>
 </resources>

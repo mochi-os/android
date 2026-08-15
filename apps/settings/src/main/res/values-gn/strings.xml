@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">Verificación código mondopyre</string>
     <string name="accounts_test_failed">Ehecha ndoiporãi</string>
     <string name="accounts_test_sent">Ojehepyme\'ẽma jehecha</string>
+    <string name="account_oauth_link_failed">Ndaikatúi embojuaju tetãygua</string>
 </resources>

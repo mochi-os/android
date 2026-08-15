@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Tasdiqlash kodi yuborildi</string>
     <string name="accounts_test_failed">Sinov muvaffaqiyatsiz</string>
     <string name="accounts_test_sent">Sinov yuborildi</string>
+    <string name="account_oauth_link_failed">Hisobni bogʻlab boʻlmadi</string>
 </resources>

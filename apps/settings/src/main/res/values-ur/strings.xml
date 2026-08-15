@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">تصدیقی کوڈ بھیج دیا گیا</string>
     <string name="accounts_test_failed">ٹیسٹ ناکام</string>
     <string name="accounts_test_sent">ٹیسٹ بھیج دیا گیا</string>
+    <string name="account_oauth_link_failed">اکاؤنٹ لنک نہیں ہو سکا</string>
 </resources>

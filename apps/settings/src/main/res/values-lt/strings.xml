@@ -389,4 +389,5 @@
     <string name="accounts_verify_sent">Patvirtinimo kodas išsiųstas</string>
     <string name="accounts_test_failed">Bandymas nepavyko</string>
     <string name="accounts_test_sent">Bandymas išsiųstas</string>
+    <string name="account_oauth_link_failed">Nepavyko susieti paskyros</string>
 </resources>

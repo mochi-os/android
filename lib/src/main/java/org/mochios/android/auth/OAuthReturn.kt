@@ -38,6 +38,10 @@ package org.mochios.android.auth
  * attacker cannot downgrade us by inventing a nonce, only by our not having
  * one.
  *
+ * Both the sign-in return (`mochi:oauth-return`) and the link return
+ * (`mochi:oauth-link-return`) are gated by this, each against its own
+ * outstanding ceremony — see [oauthReturnKind] for why they are separate.
+ *
  * RELEASE ORDER, and it is load-bearing: deploy CORE FIRST, then this client.
  * The fallback is what keeps a deploy from stranding in-flight logins, and
  * against an older core it is the only branch that ever runs — so a client
@@ -57,4 +61,23 @@ fun shouldAcceptOAuthReturn(
     if (!hasVerifier) return false
     if (expected.isNullOrEmpty()) return true
     return expected == returned
+}
+
+/**
+ * Which OAuth ceremony a `mochi:` deep-link name belongs to, or null when the
+ * name is not an OAuth return at all.
+ *
+ * The two are deliberately different names rather than one name carrying a
+ * discriminator, and they are gated against different stored ceremonies. A
+ * link return fed to the sign-in handler would be exchanged as a login; a
+ * sign-in return fed to the link handler would burn the link's verifier. The
+ * split is also what lets core bind them differently: a link is written only
+ * at the exchange, against the app's Bearer as well as its verifier.
+ */
+enum class OAuthReturnKind { LOGIN, LINK }
+
+fun oauthReturnKind(name: String): OAuthReturnKind? = when (name) {
+    "oauth-return" -> OAuthReturnKind.LOGIN
+    "oauth-link-return" -> OAuthReturnKind.LINK
+    else -> null
 }

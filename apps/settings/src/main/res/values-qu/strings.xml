@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">Qhawariy codigo apachisqa</string>
     <string name="accounts_test_failed">Prueba mana atikurqanchu</string>
     <string name="accounts_test_sent">Yanapa apachisqa</string>
+    <string name="account_oauth_link_failed">Cuenta tinkichiyta mana atirqachu</string>
 </resources>

@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Código de verificación enviado</string>
     <string name="accounts_test_failed">A proba fallou</string>
     <string name="accounts_test_sent">Proba enviada</string>
+    <string name="account_oauth_link_failed">Non se puido vincular a conta</string>
 </resources>

@@ -389,4 +389,5 @@
     <string name="accounts_verify_sent">Код праверкі адпраўлены</string>
     <string name="accounts_test_failed">Тэст не пройдзены</string>
     <string name="accounts_test_sent">Тэст адпраўлены</string>
+    <string name="account_oauth_link_failed">Не атрымалася звязаць уліковы запіс</string>
 </resources>

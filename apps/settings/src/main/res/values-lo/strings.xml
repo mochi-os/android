@@ -383,4 +383,5 @@
     <string name="accounts_verify_sent">ລະຫັດການຢືນຢັນຖືກສົ່ງແລ້ວ</string>
     <string name="accounts_test_failed">ການທົດສອບລົ້ມເຫຼວ</string>
     <string name="accounts_test_sent">ສົ່ງການທົດສອບແລ້ວ</string>
+    <string name="account_oauth_link_failed">ບໍ່ສາມາດເຊື່ອມຕໍ່ບັນຊີໄດ້</string>
 </resources>

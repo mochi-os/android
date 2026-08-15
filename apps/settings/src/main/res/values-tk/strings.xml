@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Tassyklama kody iberildi</string>
     <string name="accounts_test_failed">Synag şowsuz boldy</string>
     <string name="accounts_test_sent">Synag iberildi</string>
+    <string name="account_oauth_link_failed">Hasap baglanyp bolmady</string>
 </resources>

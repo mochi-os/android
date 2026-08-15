@@ -386,4 +386,5 @@
     <string name="accounts_verify_sent">Codice di verifica inviato</string>
     <string name="accounts_test_failed">Test non riuscito</string>
     <string name="accounts_test_sent">Test inviato</string>
+    <string name="account_oauth_link_failed">Impossibile collegare l\'account</string>
 </resources>

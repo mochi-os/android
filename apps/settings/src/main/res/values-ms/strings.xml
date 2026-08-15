@@ -384,4 +384,5 @@
     <string name="accounts_verify_sent">Kod pengesahan dihantar</string>
     <string name="accounts_test_failed">Ujian gagal</string>
     <string name="accounts_test_sent">Ujian dihantar</string>
+    <string name="account_oauth_link_failed">Tidak dapat memautkan akaun</string>
 </resources>

@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Ikhodi yokuqinisekiswa ithunyelwe</string>
     <string name="accounts_test_failed">Ukuhlola kuhlulekile</string>
     <string name="accounts_test_sent">Ukuhlolwa kuthunyelwe</string>
+    <string name="account_oauth_link_failed">Akukwazanga ukuxhuma i-akhawunti</string>
 </resources>

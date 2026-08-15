@@ -385,4 +385,5 @@
     <string name="accounts_verify_sent">Msimbo wa uthibitishaji umetumwa</string>
     <string name="accounts_test_failed">Jaribio limeshindwa</string>
     <string name="accounts_test_sent">Jaribio limetumwa</string>
+    <string name="account_oauth_link_failed">Haikuweza kuunganisha akaunti</string>
 </resources>

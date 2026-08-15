@@ -45,6 +45,8 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.auth.OAuthReturnKind
+import org.mochios.android.auth.oauthReturnKind
 import org.mochios.android.auth.shouldAcceptOAuthReturn
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
@@ -518,8 +520,11 @@ class MainActivity : ComponentActivity() {
         val params = parseOpaqueQuery(query)
         when (name) {
             "notification" -> setNotificationDeepLink(params["link"], params["id"], params["nonce"])
-            "oauth-return" -> applyOAuthReturn(params["code"], params["error"], params["nonce"])
-            else -> Log.w(TAG, "Unknown system intent in $uri")
+            else -> when (oauthReturnKind(name)) {
+                OAuthReturnKind.LOGIN -> applyOAuthReturn(params["code"], params["error"], params["nonce"])
+                OAuthReturnKind.LINK -> applyOAuthLinkReturn(params["code"], params["error"], params["nonce"])
+                null -> Log.w(TAG, "Unknown system intent in $uri")
+            }
         }
     }
 
@@ -549,11 +554,19 @@ class MainActivity : ComponentActivity() {
                 uri.getQueryParameter("id"),
                 uri.getQueryParameter("nonce"),
             )
-            "oauth-return" -> applyOAuthReturn(
-                uri.getQueryParameter("code"),
-                uri.getQueryParameter("error"),
-                uri.getQueryParameter("nonce"),
-            )
+            else -> when (oauthReturnKind(uri.authority.orEmpty())) {
+                OAuthReturnKind.LOGIN -> applyOAuthReturn(
+                    uri.getQueryParameter("code"),
+                    uri.getQueryParameter("error"),
+                    uri.getQueryParameter("nonce"),
+                )
+                OAuthReturnKind.LINK -> applyOAuthLinkReturn(
+                    uri.getQueryParameter("code"),
+                    uri.getQueryParameter("error"),
+                    uri.getQueryParameter("nonce"),
+                )
+                null -> Unit
+            }
         }
     }
 
@@ -643,6 +656,21 @@ class MainActivity : ComponentActivity() {
             return
         }
         runBlocking { sessionManager.setOAuthReturn(code, error) }
+    }
+
+    /**
+     * The LINK ceremony's return, gated against the link ceremony rather than
+     * the sign-in one. Kept separate all the way down: a link return handed to
+     * the sign-in handler would be exchanged as a login, and a sign-in return
+     * handed to the link handler would burn the link's verifier.
+     */
+    private fun applyOAuthLinkReturn(code: String?, error: String?, nonce: String?) {
+        val ceremony = runBlocking { sessionManager.oauthLinkCeremony() }
+        if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
+            Log.w(TAG, "Ignoring mochi:oauth-link-return that matches no outstanding ceremony")
+            return
+        }
+        runBlocking { sessionManager.setOAuthLinkReturn(code, error) }
     }
 
     private fun navigateToLink(navController: NavController, link: String) {
@@ -841,7 +869,7 @@ class MainActivity : ComponentActivity() {
         // navigates to SettingsApp.NOTIFICATIONS; the Mochi Settings launcher
         // alias targets SettingsApp.HOME via `targetApp = "settings"`.
 
-        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return")
+        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
 
         /**
          * Every Mochi-app the Android client bundles. The bootstrap path mints

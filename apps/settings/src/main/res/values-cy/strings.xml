@@ -393,4 +393,5 @@
     <string name="accounts_verify_sent">Cod dilysu wedi\'i anfon</string>
     <string name="accounts_test_failed">Prawf wedi methu</string>
     <string name="accounts_test_sent">Prawf wedi\'i anfon</string>
+    <string name="account_oauth_link_failed">Methwyd cysylltu cyfrif</string>
 </resources>

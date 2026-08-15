@@ -75,6 +75,7 @@
     <string name="account_oauth_empty">No accounts linked</string>
     <string name="account_oauth_link">Link account</string>
     <string name="account_oauth_link_title">Link a provider</string>
+    <string name="account_oauth_link_failed">Could not link account</string>
     <string name="account_oauth_unlink_title">Unlink account?</string>
     <string name="account_oauth_unlink_message">You won\'t be able to sign in with %1$s.</string>
     <string name="account_unlink">Unlink</string>
