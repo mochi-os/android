@@ -1806,7 +1806,7 @@ private fun PostCard(
                             // carries the tap-to-open without a highlight background.
                             modifier = Modifier.noRippleClickable(onClick),
                         )
-                        Spacer(modifier = Modifier.height(12.dp))
+                        Spacer(modifier = Modifier.height(16.dp))
                     }
 
                     // Byline: source/feed name + timestamp, below the title,
