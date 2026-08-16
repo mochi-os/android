@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -32,10 +33,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import kotlinx.coroutines.CancellationException
+import androidx.compose.ui.window.DialogProperties
 import kotlinx.coroutines.launch
 import org.mochios.android.R
-import org.mochios.android.update.CheckOutcome
+import org.mochios.android.update.DownloadState
 import org.mochios.android.update.UpdateChecker
 import org.mochios.android.update.UpdateInstaller
 import org.mochios.android.update.UpdateStatus
@@ -44,11 +45,6 @@ private sealed interface CheckUi {
     data object Idle : CheckUi
     data object Checking : CheckUi
     data object UpToDate : CheckUi
-    /**
-     * A newer [version] was found and is downloading in the background.
-     * [progress] is the percent complete, or null while it's still unknown.
-     */
-    data class Downloading(val version: String, val progress: Int?) : CheckUi
     data object Offline : CheckUi
     data object DownloadFailed : CheckUi
 }
@@ -58,10 +54,11 @@ private sealed interface CheckUi {
  * installed Mochi client's versionName via PackageManager so a single
  * dialog works for every feature — no need to thread BuildConfig through.
  *
- * Also surfaces a "Check for updates" button that runs
- * [UpdateChecker.checkNow] inline. On UpdateStaged the dialog dismisses
- * itself and immediately calls [UpdateInstaller.promptIfPending], which
- * hands the downloaded APK to the system installer.
+ * Also surfaces a "Check for updates" button. The download itself belongs to
+ * [UpdateChecker], not to this dialog: closing the dialog leaves it running,
+ * and re-opening attaches to the same transfer via [UpdateChecker.state]. Once
+ * it is staged the dialog dismisses itself and calls
+ * [UpdateInstaller.forcePrompt], which hands the APK to the system installer.
  */
 @Composable
 fun AboutDialog(onDismiss: () -> Unit) {
@@ -75,6 +72,16 @@ fun AboutDialog(onDismiss: () -> Unit) {
     }
     var state by remember { mutableStateOf<CheckUi>(CheckUi.Idle) }
 
+    // The process-wide download, so a transfer another dialog (or the daily
+    // worker) started shows here rather than reading as "nothing happening".
+    val update by UpdateChecker.state.collectAsState()
+    val running = update as? DownloadState.Running
+
+    // True once this dialog has seen the download running, so it reacts to the
+    // outcome. Without it, a Staged left over from an earlier check would fire
+    // the installer the moment the dialog opened, unasked.
+    var watching by remember { mutableStateOf(false) }
+
     // A staged APK is ready — hand off to the system installer. forcePrompt (vs
     // promptIfPending) because the user explicitly asked, so an
     // already-declined-this-version suppression shouldn't apply. Needs an
@@ -84,8 +91,36 @@ fun AboutDialog(onDismiss: () -> Unit) {
         onDismiss()
     }
 
+    LaunchedEffect(update) {
+        when (update) {
+            is DownloadState.Running -> {
+                watching = true
+                state = CheckUi.Idle
+            }
+            is DownloadState.Staged -> if (watching) promptInstall()
+            is DownloadState.Failed -> if (watching) {
+                watching = false
+                state = CheckUi.DownloadFailed
+            }
+            is DownloadState.Idle -> Unit
+        }
+    }
+
     AlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = {
+            // Closing mid-download no longer abandons it, but the process can
+            // still be killed — hand it to WorkManager so it resumes on the
+            // next start instead of waiting for tomorrow's poll.
+            if (running != null) UpdateChecker.enqueueBackgroundDownload(context)
+            onDismiss()
+        },
+        properties = DialogProperties(
+            // A tap on the scrim is the one gesture that dismisses without
+            // meaning to, and losing sight of a 40 MB download to it reads as
+            // the download having stopped. Back press and the button still
+            // close the dialog; both are deliberate.
+            dismissOnClickOutside = running == null,
+        ),
         title = { Text(stringResource(R.string.about_title)) },
         text = {
             Column(
@@ -99,43 +134,40 @@ fun AboutDialog(onDismiss: () -> Unit) {
                         onClick = {
                             state = CheckUi.Checking
                             scope.launch {
-                                when (val result = UpdateChecker.checkForUpdate(context)) {
+                                when (UpdateChecker.checkForUpdate(context)) {
                                     is UpdateStatus.UpToDate -> state = CheckUi.UpToDate
                                     is UpdateStatus.Offline -> state = CheckUi.Offline
                                     is UpdateStatus.Ready -> promptInstall()
                                     is UpdateStatus.Available -> {
-                                        state = CheckUi.Downloading(result.version, null)
-                                        // Download in the FOREGROUND so it runs at full
-                                        // network speed (a WorkManager background job's
-                                        // network is throttled as background data on many
-                                        // phones — slow even on fast wifi), updating the
-                                        // bar straight from the progress callback.
-                                        val outcome = try {
-                                            UpdateChecker.checkNow(context) { done, total ->
-                                                val pct = if (total > 0L) ((done * 100L) / total).toInt().coerceIn(0, 100) else null
-                                                state = CheckUi.Downloading(result.version, pct)
-                                            }
-                                        } catch (cancel: CancellationException) {
-                                            // Dialog closed mid-download — finish the
-                                            // partial in the background so it isn't lost.
-                                            UpdateChecker.enqueueBackgroundDownload(context)
-                                            throw cancel
-                                        }
-                                        when (outcome) {
-                                            CheckOutcome.UpdateStaged -> promptInstall()
-                                            CheckOutcome.UpToDate -> state = CheckUi.UpToDate
-                                            CheckOutcome.NetworkError -> state = CheckUi.Offline
-                                            CheckOutcome.DownloadFailed -> state = CheckUi.DownloadFailed
+                                        // Owned by UpdateChecker, not by this
+                                        // composition: it runs in the foreground for
+                                        // full network speed (a WorkManager background
+                                        // job's network is throttled as background data
+                                        // on many phones — slow even on fast wifi) and
+                                        // survives the dialog closing. Joining it is
+                                        // what gets cancelled if the dialog goes away;
+                                        // the download itself carries on, and the
+                                        // progress bar below tracks it from
+                                        // UpdateChecker.state either way.
+                                        UpdateChecker.startDownload(context).join()
+                                        state = when (UpdateChecker.state.value) {
+                                            // Staged is handled by the effect above,
+                                            // which hands off to the installer.
+                                            is DownloadState.Staged -> CheckUi.Idle
+                                            is DownloadState.Failed -> CheckUi.DownloadFailed
+                                            else -> CheckUi.Idle
                                         }
                                     }
                                 }
                             }
                         },
-                        enabled = state !is CheckUi.Checking && state !is CheckUi.Downloading,
+                        enabled = state !is CheckUi.Checking && running == null,
                     ) {
                         Text(stringResource(R.string.about_check_updates))
                     }
-                    if (state is CheckUi.Checking) {
+                    // Only until the download starts reporting — after that the
+                    // progress bar below is the indicator, and two at once is noise.
+                    if (state is CheckUi.Checking && running == null) {
                         Spacer(modifier = Modifier.size(12.dp))
                         CircularProgressIndicator(
                             modifier = Modifier.size(20.dp),
@@ -145,45 +177,56 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 }
                 // Status line below the button — spells out whether a new version
                 // was found and that it's downloading, so a tap is never silent.
-                when (val s = state) {
-                    is CheckUi.Downloading -> {
-                        AboutStatus(stringResource(R.string.about_check_downloading, s.version), isError = false)
-                        Spacer(modifier = Modifier.height(8.dp))
-                        val pct = s.progress
-                        if (pct != null) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                modifier = Modifier.fillMaxWidth(),
-                            ) {
-                                LinearProgressIndicator(
-                                    progress = { pct / 100f },
-                                    modifier = Modifier.weight(1f),
-                                )
-                                Spacer(modifier = Modifier.size(8.dp))
-                                Text(
-                                    text = "$pct%",
-                                    style = MaterialTheme.typography.labelMedium,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                )
-                            }
-                        } else {
-                            // Total size not known yet — indeterminate sweep.
-                            LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
-                        }
+                // A live download wins over the local state: it is the thing the
+                // user most needs to see, whoever started it.
+                if (running != null) {
+                    AboutStatus(
+                        stringResource(R.string.about_check_downloading, running.version),
+                        isError = false,
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        LinearProgressIndicator(
+                            progress = { running.percent / 100f },
+                            modifier = Modifier.weight(1f),
+                        )
+                        Spacer(modifier = Modifier.size(8.dp))
+                        Text(
+                            text = "${running.percent}%",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
                     }
-                    is CheckUi.UpToDate ->
-                        AboutStatus(stringResource(R.string.about_up_to_date), isError = false)
-                    is CheckUi.Offline ->
-                        AboutStatus(stringResource(R.string.about_check_network_error), isError = true)
-                    is CheckUi.DownloadFailed ->
-                        AboutStatus(stringResource(R.string.about_check_download_failed), isError = true)
-                    is CheckUi.Idle, is CheckUi.Checking -> Unit
+                } else {
+                    when (state) {
+                        is CheckUi.UpToDate ->
+                            AboutStatus(stringResource(R.string.about_up_to_date), isError = false)
+                        is CheckUi.Offline ->
+                            AboutStatus(stringResource(R.string.about_check_network_error), isError = true)
+                        is CheckUi.DownloadFailed ->
+                            AboutStatus(stringResource(R.string.about_check_download_failed), isError = true)
+                        is CheckUi.Idle, is CheckUi.Checking -> Unit
+                    }
                 }
             }
         },
         confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(R.string.about_close))
+            TextButton(
+                onClick = {
+                    if (running != null) UpdateChecker.enqueueBackgroundDownload(context)
+                    onDismiss()
+                },
+            ) {
+                // Say what closing does while a download is running, so the
+                // answer to "is it still going?" is on the button itself.
+                Text(
+                    stringResource(
+                        if (running != null) R.string.about_check_background else R.string.about_close
+                    )
+                )
             }
         },
     )

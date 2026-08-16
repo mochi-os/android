@@ -319,4 +319,5 @@
     <string name="attachment_caption">Түсіндірме</string>
     <string name="attachment_caption_add">Түсіндірме қосу</string>
     <string name="attachment_caption_edit">Түсіндірмені өңдеу</string>
+    <string name="about_check_background">Фонда жалғастыру</string>
 </resources>

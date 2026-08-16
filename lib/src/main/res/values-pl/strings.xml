@@ -320,4 +320,5 @@
     <string name="attachment_caption">Podpis</string>
     <string name="attachment_caption_add">Dodaj podpis</string>
     <string name="attachment_caption_edit">Edytuj podpis</string>
+    <string name="about_check_background">Kontynuuj w tle</string>
 </resources>

@@ -318,4 +318,5 @@
     <string name="attachment_caption">Bildtext</string>
     <string name="attachment_caption_add">Lägg till bildtext</string>
     <string name="attachment_caption_edit">Redigera bildtext</string>
+    <string name="about_check_background">Fortsätt i bakgrunden</string>
 </resources>

@@ -183,7 +183,7 @@
     <string name="staff_config_field_hold">Парог затрымкі</string>
     <string name="staff_config_field_platform_fee">Камісія платформы</string>
     <string name="staff_config_field_review_window">Акно праверкі</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">ID кліента OAuth</string>
     <string name="staff_config_field_stripe_publishable">Публікуемы ключ</string>
     <string name="staff_config_field_stripe_secret">Сакрэтны ключ</string>
     <string name="staff_config_group_moderation">Мадэрацыя</string>

@@ -131,7 +131,7 @@
     <string name="forums_comment_edit_body_field">ವಿಷಯ</string>
     <string name="forums_tag_clear">ಫಿಲ್ಟರ್ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">ಕಾಮೆಂಟ್ ಬರೆಯಿರಿ…</string>
     <string name="forums_auth_login_failed">ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ</string>
     <string name="forums_list_add_to_home">ಮುಖಪುಟಕ್ಕೆ ಸೇರಿಸಿ</string>
 

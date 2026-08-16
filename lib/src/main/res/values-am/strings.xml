@@ -318,4 +318,5 @@
     <string name="attachment_caption">መግለጫ ጽሑፍ</string>
     <string name="attachment_caption_add">መግለጫ ጽሑፍ አክል</string>
     <string name="attachment_caption_edit">መግለጫ ጽሑፍን አርትዕ</string>
+    <string name="about_check_background">በጀርባ ቀጥል</string>
 </resources>

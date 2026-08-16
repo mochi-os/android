@@ -320,4 +320,5 @@
     <string name="attachment_caption">Caipsean</string>
     <string name="attachment_caption_add">Cuir caipsean ris</string>
     <string name="attachment_caption_edit">Deasaich an caipsean</string>
+    <string name="about_check_background">Lean air adhart sa chùl-raon</string>
 </resources>

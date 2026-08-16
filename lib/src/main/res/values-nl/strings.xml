@@ -318,4 +318,5 @@
     <string name="attachment_caption">Bijschrift</string>
     <string name="attachment_caption_add">Bijschrift toevoegen</string>
     <string name="attachment_caption_edit">Bijschrift bewerken</string>
+    <string name="about_check_background">Doorgaan op de achtergrond</string>
 </resources>

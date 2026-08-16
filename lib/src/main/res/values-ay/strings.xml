@@ -97,7 +97,7 @@
     <string name="settings_language">Aru</string>
     <string name="settings_date_format">Uru formato</string>
     <string name="settings_time_format">Pacha qhipart\'i</string>
-    <string name="settings_week_start">Yaqha wikinakax aka wiki replicapxix ukax akan uñstapxani.</string>
+    <string name="settings_week_start">Semana qalltañ uru</string>
     <string name="settings_week_monday">Lunes</string>
     <string name="settings_week_tuesday">Tipo</string>
     <string name="settings_week_wednesday">Semanax aka uru qalltani</string>
@@ -318,4 +318,5 @@
     <string name="attachment_caption">Qhanañchawi</string>
     <string name="attachment_caption_add">Qhanañchawi yapaña</string>
     <string name="attachment_caption_edit">Qhanañchawi askichaña</string>
+    <string name="about_check_background">Qhipankañ sarantaña</string>
 </resources>

@@ -318,4 +318,5 @@
     <string name="attachment_caption">Chú thích</string>
     <string name="attachment_caption_add">Thêm chú thích</string>
     <string name="attachment_caption_edit">Sửa chú thích</string>
+    <string name="about_check_background">Tiếp tục chạy nền</string>
 </resources>

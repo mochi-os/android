@@ -73,7 +73,7 @@
     <string name="notifprefs_test">ടെസ്റ്റ്</string>
     <string name="notifprefs_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="notifprefs_delete">ഇല്ലാതാക്കുക</string>
-    <string name="notifprefs_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="notifprefs_remove">നീക്കം ചെയ്യുക</string>
     <string name="notifprefs_reassign_label">നിലവിലെ അറിയിപ്പുകൾ ഇതിലേക്ക് മാറ്റുക</string>
     <string name="notifprefs_unassigned">നിയോഗിച്ചിട്ടില്ല</string>
     <string name="notifprefs_topics_empty">വിഷയങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
@@ -108,7 +108,7 @@
     <string name="accounts_test">ടെസ്റ്റ്</string>
     <string name="accounts_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="accounts_verify">സ്ഥിരീകരിക്കുക</string>
-    <string name="accounts_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="accounts_remove">നീക്കം ചെയ്യുക</string>
     <string name="accounts_remove_title">check-in നീക്കം ചെയ്യുക</string>
     <string name="system_documents_title">ഡോക്യുമെന്റുകൾ</string>
     <string name="system_documents_description">നിങ്ങളുടെ ഉപയോക്താക്കൾക്ക് കാണിക്കുന്ന സെർവർ നിയമങ്ങൾ, നിബന്ധനകളും വ്യവസ്ഥകളും, സ്വകാര്യതാ അറിയിപ്പ്</string>
@@ -139,7 +139,7 @@
     <string name="system_settings_configured">ക്രമീകരിച്ചു</string>
     <string name="system_settings_save">സേവ് ചെയ്യുക</string>
     <string name="system_settings_clear">മായ്ക്കുക</string>
-    <string name="system_settings_reset">എല്ലാ സെറ്റിങ്ങുകളും ഡിഫോൾട്ട് മൂല്യങ്ങളിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
+    <string name="system_settings_reset">പുനഃസജ്ജമാക്കുക</string>
     <string name="system_settings_reset_to_default">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യണോ?</string>
     <string name="system_settings_reset_title">ഡിഫോൾട്ടുകളിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
     <string name="system_settings_setting_updated">ക്രമീകരണം അപ്ഡേറ്റ് ചെയ്തു</string>
@@ -158,8 +158,8 @@
     <string name="system_setting_oauth_google_client_secret">Google ക്ലയന്റ് രഹസ്യം</string>
     <string name="system_setting_oauth_github_client_id">GitHub ക്ലയന്റ് ID</string>
     <string name="system_setting_oauth_github_client_secret">GitHub ക്ലയന്റ് രഹസ്യം</string>
-    <string name="system_setting_oauth_microsoft_client_id">Microsoft client ID</string>
-    <string name="system_setting_oauth_microsoft_client_secret">Microsoft client secret</string>
+    <string name="system_setting_oauth_microsoft_client_id">Microsoft ക്ലയന്റ് ID</string>
+    <string name="system_setting_oauth_microsoft_client_secret">Microsoft ക്ലയന്റ് സീക്രട്ട്</string>
     <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook ആപ്പ് ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook ആപ്പ് രഹസ്യം</string>

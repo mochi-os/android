@@ -94,8 +94,8 @@
     <string name="system_status_peer_queued">Հերթում գտնվող հաղորդագրություններ</string>
     <string name="system_status_peer_oldest">Հերթի ամենահին հաղորդագրությունը</string>
     <string name="accounts_title">Կապվեք ադմինիստրատորի հետ պատվիրակություն ստանալու համար։</string>
-    <string name="accounts_add">Ավելացնել հաշիվ ծանուցումներ ստանալու և ծառայություններ օգտագործելու համար։</string>
-    <string name="accounts_add_title">Ավելացնել հաշիվ ծանուցումներ ստանալու և ծառայություններ օգտագործելու համար։</string>
+    <string name="accounts_add">Ավելացնել հաշիվ</string>
+    <string name="accounts_add_title">Ավելացնել հաշիվ</string>
     <string name="accounts_empty">Կապակցված հաշիվներ չկան</string>
     <string name="accounts_type_label">Տեսակ</string>
     <string name="accounts_field_email">Էլ․ փոստ</string>
@@ -126,7 +126,7 @@
     <string name="settings_home_system_documents">Փաստաթղթեր</string>
     <string name="settings_home_system_settings">Համակարգի կարգավորումներ</string>
     <string name="system_settings_title">Համակարգի կարգավորումներ</string>
-    <string name="system_settings_section_login">Մուտքի նիստի ժամկետը լրացել է, խնդրում ենք կրկին փորձել</string>
+    <string name="system_settings_section_login">Մուտք</string>
     <string name="system_settings_section_oauth">Երրորդ կողմի մուտք</string>
     <string name="system_settings_section_user_defaults">Օգտատիրոջ կանխադրվածներ</string>
     <string name="system_settings_section_operator">Օպերատոր</string>
@@ -329,7 +329,7 @@
         <item quantity="one">Չեղարկվեց %1$d սեսիա</item>
         <item quantity="other">Չեղարկվեցին %1$d սեսիա</item>
     </plurals>
-    <string name="login_title">Մուտքի նիստի ժամկետը լրացել է, խնդրում ենք կրկին փորձել</string>
+    <string name="login_title">Մուտք</string>
     <string name="login_section_methods">Մուտքի եղանակներ</string>
     <string name="login_method_email">Էլ․ փոստի կոդ</string>
     <string name="login_method_passkey">Անցաբանալի</string>
@@ -347,7 +347,7 @@
     <string name="account_data_section">Ձer tvyalnery</string>
     <string name="account_data_dialog_title">Ներբեռնեք ձեր տվյալները</string>
     <string name="account_data_dialog_body">Սա ամբողջական պահուստ է, որը կարող եք վերականգնել այս կամ մեկ այլ Mochi սերվերում։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
-    <string name="account_data_passphrase">Գաղtnapар</string>
+    <string name="account_data_passphrase">Գաղտնաբառ</string>
     <string name="account_data_passphrase_hint">Ձեր մասնավոր բանալիները ներառված են, գաղտնագրված այս գաղտնաբառ-արտահայտությամբ: Պահեք այն անվտանգ: Վերականգնման համար ձեզ անհրաժեշտ կլինի:</string>
     <string name="system_status_peer_unreachable">Անհասանելի</string>
     <string name="system_status_peer_address">Հասցե</string>

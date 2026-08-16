@@ -318,4 +318,5 @@
     <string name="attachment_caption">Түшүндүрмө</string>
     <string name="attachment_caption_add">Түшүндүрмө кошуу</string>
     <string name="attachment_caption_edit">Түшүндүрмөнү оңдоо</string>
+    <string name="about_check_background">Фондо улантуу</string>
 </resources>

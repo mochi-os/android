@@ -31,7 +31,7 @@
     <string name="crm_sort_direction">მიმართულება</string>
     <string name="crm_sort_rank">სახელმძღვანელო</string>
     <string name="crm_sort_created">შექმნილია</string>
-    <string name="crm_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
+    <string name="crm_sort_updated">განახლებულია</string>
     <string name="crm_create_object_title">ობიექტის შექმნა</string>
     <string name="crm_create_object_type">სამშაბათი</string>
     <string name="crm_create_object_title_field">სათაური</string>
@@ -101,7 +101,7 @@
     <string name="crm_diff_unified">კულისებში</string>
     <string name="crm_diff_split">გაყოფა</string>
     <string name="crm_diff_empty">diff მიუწვდომელია</string>
-    <string name="crm_board_unassigned">ფიდების სერვისთან სინქრონიზება ვერ ხერხდება. ნაჩვენებია ქეშირებული მონაცემები.</string>
+    <string name="crm_board_unassigned">მიუნიჭებელი</string>
     <string name="crm_board_new">ახალი</string>
     <string name="crm_board_rename">სახელის შეცვლა</string>
     <string name="crm_board_rename_column">სვეტის სახელის შეცვლა</string>
@@ -161,7 +161,7 @@
     <string name="crm_views_type_list">სია</string>
     <string name="crm_views_direction">მიმართულება</string>
     <string name="crm_views_sort_created">შექმნილია</string>
-    <string name="crm_views_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
+    <string name="crm_views_sort_updated">განახლებულია</string>
     <string name="crm_views_sort_rank">რანკი</string>
     <string name="crm_not_found">პროექტი ვერ მოიძებნა</string>
     <string name="crm_list_more">მეტი</string>

@@ -97,7 +97,7 @@
     <string name="feeds_send">Илгээх</string>
     <string name="feeds_tag_clear">Шүүлтүүр цэвэрлэх</string>
     <string name="feeds_add_tag">Add tag</string>
-    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_write_a_comment">Сэтгэгдэл бичих…</string>
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Дээш зөөх</string>
     <string name="feeds_move_down">Доош зөөх</string>

@@ -137,7 +137,7 @@
     <string name="forums_list_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
     <string name="forums_tag_clear">ફિલ્ટર સાફ કરો</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">ટિપ્પણી લખો…</string>
 
     <string name="notification_channel_forums">ફોરમ સૂચનાઓ</string>
     <string name="forums_auth_brand">Mochi Forums</string>

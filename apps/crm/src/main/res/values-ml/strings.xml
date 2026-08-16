@@ -57,7 +57,7 @@
     <string name="crm_object_tab_properties">സവിശേഷതകൾ</string>
     <string name="crm_object_tab_comments">അഭിപ്രായങ്ങൾ</string>
     <string name="crm_object_tab_activity">പ്രവർത്തനം</string>
-    <string name="crm_object_tab_requests">ലോഗിൻ ചെയ്യാൻ തിരഞ്ഞെടുത്ത എല്ലാ രീതികളും ആവശ്യപ്പെടുക</string>
+    <string name="crm_object_tab_requests">അഭ്യർത്ഥനകൾ</string>
     <string name="crm_object_tab_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="crm_object_tab_links">ലിങ്കുകൾ</string>
     <string name="crm_watchers_watch">നിരീക്ഷിക്കുക</string>
@@ -79,7 +79,7 @@
     <string name="crm_comment_save">സേവ് ചെയ്യുക</string>
     <string name="crm_comment_empty">അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="crm_comment_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
-    <string name="crm_property_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="crm_property_remove">നീക്കം ചെയ്യുക</string>
     <string name="crm_property_option_none">ഒന്നുമില്ല</string>
     <string name="crm_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="crm_attachment_add">അറ്റാച്ച്മെന്റ് ചേർക്കുക</string>

@@ -324,7 +324,7 @@
     <string name="projects_create_object_title">ਨਵਾਂ</string>
     <string name="projects_settings_section_identity">ਪਛਾਣ</string>
     <string name="projects_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="projects_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
+    <string name="projects_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
     <string name="projects_settings_section_access">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
     <string name="projects_people_search">ਲੋਕ ਖੋਜੋ</string>
     <string name="projects_settings_field_entity_id">ਇਕਾਈ ID</string>

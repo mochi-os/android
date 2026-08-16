@@ -137,7 +137,7 @@
     <string name="forums_list_add_to_home">Cuir leis an scáileán baile</string>
     <string name="forums_tag_clear">Glan scagaire</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">Scríobh tuairim…</string>
 
     <string name="notification_channel_forums">Fógraí fóram</string>
     <string name="forums_auth_brand">Mochi Forums</string>

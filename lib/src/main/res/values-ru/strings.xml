@@ -320,4 +320,5 @@
     <string name="attachment_caption">Подпись</string>
     <string name="attachment_caption_add">Добавить подпись</string>
     <string name="attachment_caption_edit">Изменить подпись</string>
+    <string name="about_check_background">Продолжить в фоновом режиме</string>
 </resources>

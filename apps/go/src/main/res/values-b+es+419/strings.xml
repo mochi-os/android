@@ -64,20 +64,20 @@
     <string name="go_status_your_move">Tu turno</string>
 
     <string name="go_channel_name">Go notifications</string>
-    <string name="go_channel_description">Notifications about Go moves, passes, draw offers, and game outcomes.</string>
+    <string name="go_channel_description">Notificaciones sobre jugadas de Go, pases, ofertas de tablas y resultados de partidas.</string>
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
-    <string name="go_empty_active">No active games yet.</string>
-    <string name="go_empty_completed">No completed games yet.</string>
+    <string name="go_empty_active">Aún no hay partidas activas.</string>
+    <string name="go_empty_completed">Aún no hay partidas terminadas.</string>
     <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_card_vs">vs %1$s</string>
     <string name="go_card_meta">%1$d×%2$d · %3$s</string>
-    <string name="go_new_game_title">New Go game</string>
-    <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
+    <string name="go_new_game_title">Nueva partida de Go</string>
+    <string name="go_new_game_no_friends">Necesitas agregar un amigo antes de poder iniciar una partida.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
-    <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
-    <string name="go_new_game_create_error">Failed to start game</string>
+    <string name="go_new_game_komi_hint">Puntos añadidos al marcador de las blancas para compensar que las negras juegan primero</string>
+    <string name="go_new_game_create_error">No se pudo iniciar la partida</string>
 
     <string name="go_board_a11y">Tablero de Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Tablero de Go de %1$d×%1$d, tu turno para colocar una piedra negra</string>

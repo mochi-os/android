@@ -183,7 +183,7 @@
     <string name="staff_config_field_hold">Праг на задържане</string>
     <string name="staff_config_field_platform_fee">Платформена такса</string>
     <string name="staff_config_field_review_window">Период за преглед</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">ID на клиента OAuth</string>
     <string name="staff_config_field_stripe_publishable">Publishable key</string>
     <string name="staff_config_field_stripe_secret">Secret key</string>
     <string name="staff_config_group_moderation">Модерация</string>

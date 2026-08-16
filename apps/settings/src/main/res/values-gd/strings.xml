@@ -163,8 +163,8 @@
     <string name="system_setting_oauth_microsoft_tenant">Tenant Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ID app Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Rùn dìomhair app Facebook</string>
-    <string name="system_setting_oauth_x_client_id">X client ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
+    <string name="system_setting_oauth_x_client_id">ID cliant X</string>
+    <string name="system_setting_oauth_x_client_secret">Rùn cliant X</string>
     <string name="system_setting_fcm_firebase_config">Faidhle google-services.json Firebase</string>
     <string name="system_setting_fcm_service_account">Faidhle iuchrach phrìobhaideach Firebase</string>
     <string name="system_setting_operator_name">Ainm an obraiche</string>

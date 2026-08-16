@@ -41,7 +41,7 @@
     <string name="feeds_restore">აღდგენა</string>
     <string name="feeds_location">მდებარეობა</string>
     <string name="feeds_check_in">შემოწმება</string>
-    <string name="feeds_travelling">თარგმნე ინგლისურად და აჩვენე ჩამონათვალის სახით.</string>
+    <string name="feeds_travelling">მოგზაურობა</string>
     <string name="feeds_tab_general">ზოგადი</string>
     <string name="feeds_tab_sources">წყაროები</string>
     <string name="feeds_sources_title">წყაროები</string>
@@ -97,7 +97,7 @@
     <string name="feeds_send">გაგზავნა</string>
     <string name="feeds_tag_clear">ფილტრის გასუფთავება</string>
     <string name="feeds_add_tag">Add tag</string>
-    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_write_a_comment">დაწერეთ კომენტარი…</string>
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">აწევა</string>
     <string name="feeds_move_down">ჩამოწევა</string>

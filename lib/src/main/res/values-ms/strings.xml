@@ -318,4 +318,5 @@
     <string name="attachment_caption">Kapsyen</string>
     <string name="attachment_caption_add">Tambah kapsyen</string>
     <string name="attachment_caption_edit">Edit kapsyen</string>
+    <string name="about_check_background">Teruskan di latar belakang</string>
 </resources>

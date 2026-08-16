@@ -31,7 +31,7 @@
     <string name="projects_sort_rank">სახელმძღვანელო</string>
     <string name="projects_sort_number">ნომერი</string>
     <string name="projects_sort_created">შექმნილია</string>
-    <string name="projects_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
+    <string name="projects_sort_updated">განახლებულია</string>
     <string name="projects_create_object_type">სამშაბათი</string>
     <string name="projects_create_object_title_field">სათაური</string>
     <string name="projects_create_object_parent">მშობელი</string>
@@ -95,7 +95,7 @@
     <string name="projects_diff_unified">კულისებში</string>
     <string name="projects_diff_split">გაყოფა</string>
     <string name="projects_diff_empty">diff მიუწვდომელია</string>
-    <string name="projects_board_unassigned">ფიდების სერვისთან სინქრონიზება ვერ ხერხდება. ნაჩვენებია ქეშირებული მონაცემები.</string>
+    <string name="projects_board_unassigned">მიუნიჭებელი</string>
     <string name="projects_board_new">ახალი</string>
     <string name="projects_board_rename">სახელის შეცვლა</string>
     <string name="projects_board_rename_column">სვეტის სახელის შეცვლა</string>
@@ -152,7 +152,7 @@
     <string name="projects_views_direction">მიმართულება</string>
     <string name="projects_views_sort_number">ნომერი</string>
     <string name="projects_views_sort_created">შექმნილია</string>
-    <string name="projects_views_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
+    <string name="projects_views_sort_updated">განახლებულია</string>
     <string name="projects_views_sort_rank">რანკი</string>
     <string name="projects_project_not_found">პროექტი ვერ მოიძებნა</string>
     <string name="projects_list_more">მეტი</string>

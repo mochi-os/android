@@ -318,4 +318,5 @@
     <string name="attachment_caption">படக்குறிப்பு</string>
     <string name="attachment_caption_add">படக்குறிப்பைச் சேர்</string>
     <string name="attachment_caption_edit">படக்குறிப்பைத் திருத்து</string>
+    <string name="about_check_background">பின்னணியில் தொடரவும்</string>
 </resources>

@@ -174,7 +174,7 @@
     <string name="staff_config_field_hold">Hap\'iy umbral</string>
     <string name="staff_config_field_platform_fee">Plataforma fee</string>
     <string name="staff_config_field_review_window">Reseña ventana</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">OAuth cliente ID</string>
     <string name="staff_config_field_stripe_publishable">Publishable key</string>
     <string name="staff_config_field_stripe_secret">Pakana key</string>
     <string name="staff_config_group_moderation">Moderacion</string>

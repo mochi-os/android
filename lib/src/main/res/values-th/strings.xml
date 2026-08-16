@@ -317,4 +317,5 @@
     <string name="attachment_caption">คำบรรยายภาพ</string>
     <string name="attachment_caption_add">เพิ่มคำบรรยายภาพ</string>
     <string name="attachment_caption_edit">แก้ไขคำบรรยายภาพ</string>
+    <string name="about_check_background">ดำเนินการต่อเบื้องหลัง</string>
 </resources>

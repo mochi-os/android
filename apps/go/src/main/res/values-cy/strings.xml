@@ -64,20 +64,20 @@
     <string name="go_status_your_move">Eich symudiad</string>
 
     <string name="go_channel_name">Go notifications</string>
-    <string name="go_channel_description">Notifications about Go moves, passes, draw offers, and game outcomes.</string>
+    <string name="go_channel_description">Hysbysiadau am symudiadau Go, pasys, cynigion gêm gyfartal a chanlyniadau gemau.</string>
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
-    <string name="go_empty_active">No active games yet.</string>
-    <string name="go_empty_completed">No completed games yet.</string>
+    <string name="go_empty_active">Dim gemau gweithredol eto.</string>
+    <string name="go_empty_completed">Dim gemau wedi’u cwblhau eto.</string>
     <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_card_vs">vs %1$s</string>
     <string name="go_card_meta">%1$d×%2$d · %3$s</string>
-    <string name="go_new_game_title">New Go game</string>
-    <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
+    <string name="go_new_game_title">Gêm Go newydd</string>
+    <string name="go_new_game_no_friends">Mae angen i chi ychwanegu ffrind cyn i chi allu dechrau gêm.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
-    <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
-    <string name="go_new_game_create_error">Failed to start game</string>
+    <string name="go_new_game_komi_hint">Pwyntiau a ychwanegwyd at sgôr Gwyn i wneud iawn am fod Du yn mynd gyntaf</string>
+    <string name="go_new_game_create_error">Methu dechrau’r gêm</string>
 
     <string name="go_board_a11y">Bwrdd Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Bwrdd Go %1$d×%1$d, eich tro i osod carreg ddu</string>

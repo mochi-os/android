@@ -350,7 +350,7 @@
     <string name="crm_settings_section_access">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
     <string name="crm_settings_not_set">ਸੈੱਟ ਨਹੀਂ</string>
     <string name="crm_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="crm_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
+    <string name="crm_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
     <string name="crm_people_search">ਲੋਕ ਖੋਜੋ</string>
     <string name="crm_access_tab_other">ਹੋਰ</string>
     <string name="crm_access_select_group">ਇੱਕ ਗਰੁੱਪ ਚੁਣੋ</string>

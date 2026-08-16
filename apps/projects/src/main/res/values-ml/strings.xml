@@ -11,7 +11,7 @@
     <string name="projects_create_title">പ്രോജക്റ്റ് സൃഷ്ടിക്കുക</string>
     <string name="projects_create_name">പേര്</string>
     <string name="projects_create_description">വിവരണം</string>
-    <string name="projects_create_prefix">ഉപയോക്താക്കൾക്ക് എത്ര തവണ പോസ്റ്റ് ചെയ്യാമെന്ന് നിയന്ത്രിച്ച് സ്പാം തടയുക</string>
+    <string name="projects_create_prefix">പ്രിഫിക്സ്</string>
     <string name="projects_create_privacy">സ്വകാര്യതാ നയം</string>
     <string name="projects_create_private">തുടരുക</string>
     <string name="projects_create_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
@@ -51,7 +51,7 @@
     <string name="projects_object_tab_properties">സവിശേഷതകൾ</string>
     <string name="projects_object_tab_comments">അഭിപ്രായങ്ങൾ</string>
     <string name="projects_object_tab_activity">പ്രവർത്തനം</string>
-    <string name="projects_object_tab_requests">ലോഗിൻ ചെയ്യാൻ തിരഞ്ഞെടുത്ത എല്ലാ രീതികളും ആവശ്യപ്പെടുക</string>
+    <string name="projects_object_tab_requests">അഭ്യർത്ഥനകൾ</string>
     <string name="projects_object_tab_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="projects_object_tab_links">ലിങ്കുകൾ</string>
     <string name="projects_watchers_watch">നിരീക്ഷിക്കുക</string>
@@ -73,7 +73,7 @@
     <string name="projects_comment_save">സേവ് ചെയ്യുക</string>
     <string name="projects_comment_empty">അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="projects_comment_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
-    <string name="projects_property_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="projects_property_remove">നീക്കം ചെയ്യുക</string>
     <string name="projects_property_option_none">ഒന്നുമില്ല</string>
     <string name="projects_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="projects_attachment_add">അറ്റാച്ച്മെന്റ് ചേർക്കുക</string>

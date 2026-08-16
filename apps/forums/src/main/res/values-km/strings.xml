@@ -131,7 +131,7 @@
     <string name="forums_comment_edit_body_field">តួអត្ថបទ</string>
     <string name="forums_tag_clear">សម្អាតតម្រង</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">សរសេរមតិយោបល់…</string>
     <string name="forums_auth_login_failed">ការចូលបានបរាជ័យ</string>
     <string name="forums_list_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
 

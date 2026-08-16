@@ -318,4 +318,5 @@
     <string name="attachment_caption">شرح</string>
     <string name="attachment_caption_add">افزودن شرح</string>
     <string name="attachment_caption_edit">ویرایش شرح</string>
+    <string name="about_check_background">ادامه در پس‌زمینه</string>
 </resources>

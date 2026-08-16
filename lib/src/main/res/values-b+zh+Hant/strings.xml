@@ -317,4 +317,5 @@
     <string name="attachment_caption">說明文字</string>
     <string name="attachment_caption_add">新增說明文字</string>
     <string name="attachment_caption_edit">編輯說明文字</string>
+    <string name="about_check_background">在背景繼續</string>
 </resources>

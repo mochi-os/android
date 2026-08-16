@@ -64,20 +64,20 @@
     <string name="go_status_your_move">ਤੁਹਾਡੀ ਚਾਲ</string>
 
     <string name="go_channel_name">Go notifications</string>
-    <string name="go_channel_description">Notifications about Go moves, passes, draw offers, and game outcomes.</string>
+    <string name="go_channel_description">Go ਚਾਲਾਂ, ਪਾਸ, ਬਰਾਬਰੀ ਪੇਸ਼ਕਸ਼ਾਂ ਅਤੇ ਖੇਡ ਨਤੀਜਿਆਂ ਬਾਰੇ ਸੂਚਨਾਵਾਂ।</string>
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
-    <string name="go_empty_active">No active games yet.</string>
-    <string name="go_empty_completed">No completed games yet.</string>
+    <string name="go_empty_active">ਹਾਲੇ ਕੋਈ ਸਰਗਰਮ ਖੇਡ ਨਹੀਂ।</string>
+    <string name="go_empty_completed">ਹਾਲੇ ਕੋਈ ਪੂਰੀ ਹੋਈ ਖੇਡ ਨਹੀਂ।</string>
     <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_card_vs">vs %1$s</string>
     <string name="go_card_meta">%1$d×%2$d · %3$s</string>
-    <string name="go_new_game_title">New Go game</string>
-    <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
+    <string name="go_new_game_title">ਨਵੀਂ Go ਖੇਡ</string>
+    <string name="go_new_game_no_friends">ਖੇਡ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ ਦੋਸਤ ਜੋੜਨਾ ਪਵੇਗਾ।</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
-    <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
-    <string name="go_new_game_create_error">Failed to start game</string>
+    <string name="go_new_game_komi_hint">ਕਾਲੇ ਦੇ ਪਹਿਲਾਂ ਚੱਲਣ ਦੀ ਭਰਪਾਈ ਲਈ ਚਿੱਟੇ ਦੇ ਸਕੋਰ ਵਿੱਚ ਜੋੜੇ ਅੰਕ</string>
+    <string name="go_new_game_create_error">ਖੇਡ ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go ਬੋਰਡ</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d ਗੋ ਬੋਰਡ, ਕਾਲਾ ਪੱਥਰ ਰੱਖਣ ਦੀ ਤੁਹਾਡੀ ਵਾਰੀ</string>

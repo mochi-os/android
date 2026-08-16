@@ -318,4 +318,5 @@
     <string name="attachment_caption">Λεζάντα</string>
     <string name="attachment_caption_add">Προσθήκη λεζάντας</string>
     <string name="attachment_caption_edit">Επεξεργασία λεζάντας</string>
+    <string name="about_check_background">Συνέχεια στο παρασκήνιο</string>
 </resources>

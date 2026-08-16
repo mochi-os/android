@@ -183,7 +183,7 @@
     <string name="staff_config_field_hold">เกณฑ์การระงับ</string>
     <string name="staff_config_field_platform_fee">ค่าธรรมเนียมแพลตฟอร์ม</string>
     <string name="staff_config_field_review_window">หน้าต่างรีวิว</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">ID ไคลเอ็นต์ OAuth</string>
     <string name="staff_config_field_stripe_publishable">คีย์ที่เผยแพร่ได้</string>
     <string name="staff_config_field_stripe_secret">คีย์ลับ</string>
     <string name="staff_config_group_moderation">การดูแล</string>

@@ -113,7 +113,7 @@
     <string name="settings_reset_to_defaults">പിന്മാറുക</string>
     <string name="settings_reset_confirm_title">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
     <string name="settings_reset_confirm_message">ഇത് എല്ലാ മുൻഗണനകളും അവയുടെ സ്ഥിരസ്ഥിതി മൂല്യങ്ങളിലേക്ക് റീസെറ്റ് ചെയ്യും.</string>
-    <string name="settings_reset">എല്ലാ സെറ്റിങ്ങുകളും ഡിഫോൾട്ട് മൂല്യങ്ങളിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
+    <string name="settings_reset">പുനഃസജ്ജമാക്കുക</string>
     <string name="settings_display_title">പ്രദർശിപ്പിക്കുക</string>
     <string name="settings_display_reset">പിന്മാറുക</string>
     <string name="settings_display_reset_confirm_title">ഡിസ്പ്ലേ പുനഃക്രമീകരിക്കണോ?</string>
@@ -318,4 +318,5 @@
     <string name="attachment_caption">അടിക്കുറിപ്പ്</string>
     <string name="attachment_caption_add">അടിക്കുറിപ്പ് ചേർക്കുക</string>
     <string name="attachment_caption_edit">അടിക്കുറിപ്പ് എഡിറ്റ് ചെയ്യുക</string>
+    <string name="about_check_background">പശ്ചാത്തലത്തിൽ തുടരുക</string>
 </resources>

@@ -21,7 +21,7 @@
     <string name="projects_find_recommended">Tövsiyə olunur</string>
     <string name="projects_find_subscribe">Abunə ol</string>
     <string name="projects_loading">Yüklənir…</string>
-    <string name="projects_watched">Sizin üçün heç bir tətbiq tapa bilmədik. Bu gözlənilməzdir.</string>
+    <string name="projects_watched">İzlənilən</string>
     <string name="projects_create_object">Obyekt yarat</string>
     <string name="projects_search">Axtar</string>
     <string name="projects_settings">Parametrlər</string>
@@ -335,7 +335,7 @@
     <string name="projects_access_select_role">Rolu seçin</string>
     <string name="projects_access_role_view">Yalnız baxış</string>
     <string name="projects_access_role_none">Giriş yoxdur</string>
-    <string name="projects_access_tab_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="projects_access_tab_users">İstifadəçilər</string>
     <string name="projects_access_tab_groups">Qruplar</string>
     <string name="projects_access_tab_other">Digər</string>
     <string name="projects_access_search_users">İstifadəçi axtar</string>

@@ -317,4 +317,5 @@
     <string name="attachment_caption">ຄຳບັນຍາຍ</string>
     <string name="attachment_caption_add">ເພີ່ມຄຳບັນຍາຍ</string>
     <string name="attachment_caption_edit">ແກ້ໄຂຄຳບັນຍາຍ</string>
+    <string name="about_check_background">ສືບຕໍ່ໃນພື້ນຫຼັງ</string>
 </resources>

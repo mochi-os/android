@@ -347,7 +347,7 @@
     <string name="staff_reports_action_remove">წაშლა</string>
     <string name="staff_reports_action_suspend">გამყიდველის შეჩერება</string>
     <string name="staff_reports_action_taken_toast">მოქმედება მიღებულია</string>
-    <string name="staff_reports_action_warn">თქვენი რიგის მოლოდინში ფილების დასადებად.</string>
+    <string name="staff_reports_action_warn">გაფრთხილება</string>
     <string name="staff_reports_any_status">ყველა სტატუსი</string>
     <string name="staff_reports_any_type">ყველა ტიპი</string>
     <string name="staff_reports_cancel">გაუქმება</string>

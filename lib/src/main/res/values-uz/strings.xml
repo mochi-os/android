@@ -319,4 +319,5 @@
     <string name="attachment_caption">Izoh</string>
     <string name="attachment_caption_add">Izoh qoʻshish</string>
     <string name="attachment_caption_edit">Izohni tahrirlash</string>
+    <string name="about_check_background">Fon rejimida davom etish</string>
 </resources>

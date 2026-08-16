@@ -64,20 +64,20 @@
     <string name="go_status_your_move">Lengkah anjeun</string>
 
     <string name="go_channel_name">Go notifications</string>
-    <string name="go_channel_description">Notifications about Go moves, passes, draw offers, and game outcomes.</string>
+    <string name="go_channel_description">Bewara ngeunaan léngkah Go, pas, tawaran seri, jeung hasil kaulinan.</string>
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
-    <string name="go_empty_active">No active games yet.</string>
-    <string name="go_empty_completed">No completed games yet.</string>
+    <string name="go_empty_active">Can aya kaulinan aktif.</string>
+    <string name="go_empty_completed">Can aya kaulinan anu réngsé.</string>
     <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_card_vs">vs %1$s</string>
     <string name="go_card_meta">%1$d×%2$d · %3$s</string>
-    <string name="go_new_game_title">New Go game</string>
-    <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
+    <string name="go_new_game_title">Kaulinan Go anyar</string>
+    <string name="go_new_game_no_friends">Anjeun kudu nambahan babaturan saméméh bisa ngamimitian kaulinan.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
-    <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
-    <string name="go_new_game_create_error">Failed to start game</string>
+    <string name="go_new_game_komi_hint">Poin anu ditambahkeun kana skor Bodas pikeun ngimbangan Hideung anu maju heula</string>
+    <string name="go_new_game_create_error">Gagal ngamimitian kaulinan</string>
 
     <string name="go_board_a11y">Papan Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Papan Go %1$d×%1$d, giliran anjeun nunda batu hideung</string>

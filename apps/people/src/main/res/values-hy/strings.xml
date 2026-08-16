@@ -2,7 +2,7 @@
 <resources>
 
     <string name="people_friends_title">Ընկերներ</string>
-    <string name="people_invitations_title">Հրավերները հայտնվում են հրավերներում, և ձեզ ուղարկվում է ծանուցում (լռելյայն)։</string>
+    <string name="people_invitations_title">Հրավերներ</string>
     <string name="people_profile_title">Պրոֆիլ</string>
     <string name="people_groups_title">Խմբեր</string>
     <string name="people_group_title">Խումբ</string>
@@ -124,17 +124,17 @@
     <string name="people_toasts_decline_failed">Չհաջողվեց մերժել հրավերը</string>
     <string name="people_toasts_cancel_failed">Չհաջողվեց չեղարկել հրավերը</string>
     <string name="people_welcome_dismiss">Հեռացնել</string>
-    <string name="people_friends_message">Հաղորդագրեք ձեր ընկերներին, անհատապես կամ խմբերով, peer-to-peer և կոդավորված։</string>
+    <string name="people_friends_message">Հաղորդագրություն</string>
     <string name="people_friends_close_search">Կոդը պատճենված է</string>
     <string name="people_friends_invitation_sent_title">Հրավերի կարգավորումներ</string>
-    <string name="people_friends_invitations_menu">Հրավերները հայտնվում են հրավերներում, և ձեզ ուղարկվում է ծանուցում (լռելյայն)։</string>
+    <string name="people_friends_invitations_menu">Հրավերներ</string>
     <string name="people_friends_groups_menu">Խմբեր</string>
     <string name="people_sidebar_header">Մարդիկ</string>
     <string name="people_open_sidebar">Բացել նավիգացիան</string>
     <string name="people_person_fingerprint_label">Մատնահետք</string>
     <string name="people_person_state_friend">Ընկերներ</string>
     <string name="people_person_state_self">Դուք</string>
-    <string name="people_person_message">Հաղորդագրեք ձեր ընկերներին, անհատապես կամ խմբերով, peer-to-peer և կոդավորված։</string>
+    <string name="people_person_message">Հաղորդագրություն</string>
     <string name="people_person_accept">Ընդունել</string>
     <string name="people_person_decline">Մերժել</string>
 

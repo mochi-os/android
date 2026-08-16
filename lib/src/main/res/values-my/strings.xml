@@ -317,4 +317,5 @@
     <string name="attachment_caption">စာတန်း</string>
     <string name="attachment_caption_add">စာတန်းထည့်ရန်</string>
     <string name="attachment_caption_edit">စာတန်းကို ပြင်ဆင်ရန်</string>
+    <string name="about_check_background">နောက်ခံတွင် ဆက်လုပ်ရန်</string>
 </resources>

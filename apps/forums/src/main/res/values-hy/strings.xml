@@ -77,7 +77,7 @@
     <string name="forums_moderation_title">Մոդերացիայի բաժիններ</string>
     <string name="forums_moderation_tab_queue">Հերթ</string>
     <string name="forums_moderation_tab_reports">Հաղորդումներ</string>
-    <string name="forums_moderation_tab_log">Մուտք գործել առաջարկ ներկայացնելու համար</string>
+    <string name="forums_moderation_tab_log">Մատյան</string>
     <string name="forums_moderation_tab_restrictions">Սահմանափակումներ</string>
     <string name="forums_moderation_reports_pending">Սպասվող</string>
     <string name="forums_moderation_reports_resolved">Լուծվել է</string>
@@ -137,7 +137,7 @@
     <string name="forums_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
     <string name="forums_tag_clear">Մաքրել զտիչը</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">Գրեք մեկնաբանություն…</string>
 
     <string name="notification_channel_forums">Ֆորումների ծանուցումներ</string>
     <string name="forums_auth_brand">Mochi Forums</string>

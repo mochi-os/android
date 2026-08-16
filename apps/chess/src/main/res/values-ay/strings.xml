@@ -36,7 +36,7 @@
     <string name="chess_status_stalemate">Inakacht\'ata — empate</string>
     <string name="chess_status_draw">Sallqa</string>
     <string name="chess_status_check_your_move">Shaq — jumam saraña</string>
-    <string name="chess_status_your_move">Sutimax, kunjaman mayninakax uñjapxañpa muntax</string>
+    <string name="chess_status_your_move">Jumankiwa</string>
     <string name="chess_move_subject_you">Aka masimamp mä chat utjxiwa</string>
     <string name="chess_promotion_title">Promotema:</string>
 

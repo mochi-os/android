@@ -100,7 +100,7 @@
     <string name="settings_week_start">Ağ</string>
     <string name="settings_week_monday">Bazar ertəsi</string>
     <string name="settings_week_tuesday">Əmr yazın və ya axtarın...</string>
-    <string name="settings_week_wednesday">Digər wiki-lər bu wiki-ni replikasiya etdikdə burada görünəcəklər.</string>
+    <string name="settings_week_wednesday">Çərşənbə</string>
     <string name="settings_week_thursday">Qalan vaxt</string>
     <string name="settings_week_friday">Cümə</string>
     <string name="settings_week_saturday">Şənbə</string>
@@ -318,4 +318,5 @@
     <string name="attachment_caption">İzah</string>
     <string name="attachment_caption_add">İzah əlavə et</string>
     <string name="attachment_caption_edit">İzahı redaktə et</string>
+    <string name="about_check_background">Arxa fonda davam et</string>
 </resources>

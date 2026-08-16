@@ -318,4 +318,5 @@
     <string name="attachment_caption">Keterangan</string>
     <string name="attachment_caption_add">Tambahkan keterangan</string>
     <string name="attachment_caption_edit">Edit keterangan</string>
+    <string name="about_check_background">Lanjutkan di latar belakang</string>
 </resources>

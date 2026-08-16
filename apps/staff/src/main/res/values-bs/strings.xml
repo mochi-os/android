@@ -183,7 +183,7 @@
     <string name="staff_config_field_hold">Prag zadržavanja</string>
     <string name="staff_config_field_platform_fee">Naknada platforme</string>
     <string name="staff_config_field_review_window">Prozor za pregled</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">ID klijenta OAuth</string>
     <string name="staff_config_field_stripe_publishable">Publishable key</string>
     <string name="staff_config_field_stripe_secret">Tajni ključ</string>
     <string name="staff_config_group_moderation">Moderacija</string>

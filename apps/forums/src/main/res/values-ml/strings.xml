@@ -49,11 +49,11 @@
     <string name="forums_post_lock">ലോക്ക്</string>
     <string name="forums_post_unlock">അൺലോക്ക് ചെയ്യുക</string>
     <string name="forums_post_approve">അംഗീകരിക്കുക</string>
-    <string name="forums_post_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="forums_post_remove">നീക്കം ചെയ്യുക</string>
     <string name="forums_post_restore">പുനഃസ്ഥാപിക്കുക</string>
     <string name="forums_post_report">റിപ്പോർട്ട് നടപടി സ്വീകരിച്ചു</string>
     <string name="forums_comment_approve">അംഗീകരിക്കുക</string>
-    <string name="forums_comment_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="forums_comment_remove">നീക്കം ചെയ്യുക</string>
     <string name="forums_comment_restore">പുനഃസ്ഥാപിക്കുക</string>
     <string name="forums_comment_report">റിപ്പോർട്ട് നടപടി സ്വീകരിച്ചു</string>
     <string name="forums_post_tag_label">ടാഗ്</string>
@@ -85,7 +85,7 @@
     <string name="forums_moderation_reports_empty">റിപ്പോർട്ടുകളൊന്നുമില്ല</string>
     <string name="forums_moderation_report_dismiss">ഒഴിവാക്കുക</string>
     <string name="forums_moderation_restrictions_empty">നിയന്ത്രണങ്ങളൊന്നുമില്ല</string>
-    <string name="forums_moderation_restriction_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="forums_moderation_restriction_remove">നീക്കം ചെയ്യുക</string>
     <string name="forums_moderation_restriction_type">തരം</string>
     <string name="forums_moderation_restriction_type_muted">നിശബ്ദമാക്കുക</string>
     <string name="forums_moderation_restriction_type_banned">വിലക്കുക</string>
@@ -131,7 +131,7 @@
     <string name="forums_comment_edit_body_field">ഉള്ളടക്കം</string>
     <string name="forums_tag_clear">ഫിൽട്ടർ മായ്ക്കുക</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">ഒരു അഭിപ്രായം എഴുതുക…</string>
     <string name="forums_auth_login_failed">ലോഗിൻ പരാജയപ്പെട്ടു</string>
     <string name="forums_list_add_to_home">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
 
@@ -220,7 +220,7 @@
     <string name="forums_find_results">തിരയൽ ഫലങ്ങൾ</string>
     <string name="forums_markdown_supported">Markdown സപ്പോർട്ടുണ്ട്</string>
     <string name="forums_attachment_file">ഫയൽ</string>
-    <string name="forums_attachment_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="forums_attachment_remove">നീക്കം ചെയ്യുക</string>
     <string name="forums_attachment_move_up">മുകളിലേക്ക് നീക്കുക</string>
     <string name="forums_attachment_move_down">താഴേക്ക് നീക്കുക</string>
     <string name="forums_post_comments">അഭിപ്രായങ്ങൾ</string>
@@ -243,11 +243,11 @@
     <string name="forums_moderation_report_by">%1$s പ്രകാരം</string>
     <string name="forums_moderation_restriction_state_banned">വിലക്കി</string>
     <string name="forums_moderation_unit_days">ദിവസങ്ങൾ</string>
-    <string name="forums_settings_banner_saved">ബാനറ് സർക്ഷിක്කു</string>
+    <string name="forums_settings_banner_saved">ബാനർ സേവ് ചെയ്തു</string>
     <string name="forums_settings_access_updated">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="forums_settings_access_revoked">ആക്സസ്സ് റദ്ദാക്കി</string>
     <string name="forums_settings_member_removed">അംഗത്തെ നീക്കം ചെയ്തു</string>
-    <string name="forums_settings_prompt_saved">നിങ്ങളുടെ റീഫണ്ട് അഭ്യർത്ഥനയ്ക്ക് ഒരു കാരണം നൽകുക.</string>
+    <string name="forums_settings_prompt_saved">പ്രോംപ്റ്റ് സേവ് ചെയ്തു</string>
     <string name="forums_settings_section_identity">സ്വത്വം</string>
     <string name="forums_settings_field_name">പേര്</string>
     <string name="forums_settings_field_entity_id">എന്റിറ്റി ID</string>

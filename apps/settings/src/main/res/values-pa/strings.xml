@@ -163,8 +163,8 @@
     <string name="system_setting_oauth_microsoft_tenant">Microsoft ਟੈਨੈਂਟ</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook ਐਪ ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook ਐਪ ਸੀਕ੍ਰੇਟ</string>
-    <string name="system_setting_oauth_x_client_id">X client ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
+    <string name="system_setting_oauth_x_client_id">X ਕਲਾਇੰਟ ID</string>
+    <string name="system_setting_oauth_x_client_secret">X ਕਲਾਇੰਟ ਸੀਕ੍ਰੇਟ</string>
     <string name="system_setting_fcm_firebase_config">Firebase google-services.json ਫਾਈਲ</string>
     <string name="system_setting_fcm_service_account">Firebase ਨਿੱਜੀ ਕੁੰਜੀ ਫਾਈਲ</string>
     <string name="system_setting_operator_name">ਆਪਰੇਟਰ ਨਾਮ</string>

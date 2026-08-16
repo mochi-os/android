@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Շախմատի տախտակ։ Օգտագործեք սլաքները նավարկելու, Enter կամ Space՝ ընտրելու համար։</string>
-    <string name="chess_sidebar_header">Շախմատի տախտակ։ Օգտագործեք սլաքները նավարկելու, Enter կամ Space՝ ընտրելու համար։</string>
+    <string name="chess_app_title">Շախմատ</string>
+    <string name="chess_sidebar_header">Շախմատ</string>
     <string name="chess_sidebar_active">Ակտիվ ցուցակներ</string>
     <string name="chess_sidebar_completed">Պայման</string>
     <string name="chess_sidebar_new_game">Նոր խաղ</string>
@@ -14,7 +14,7 @@
     <string name="chess_new_pick_opponent">Ընտրել հակառակորդ</string>
     <string name="chess_new_no_friends_title">Դեռ ընկերներ չկան</string>
     <string name="chess_new_no_friends_subtitle">Ավելացրեք ընկերներ կապ հաստատելու համար</string>
-    <string name="chess_new_add_friends">Ավելացրեք ընկերներ People հավելվածում խաղալ սկսելու համար</string>
+    <string name="chess_new_add_friends">Ավելացնել ընկերներ</string>
     <string name="chess_new_start_button">Սկսել խաղը</string>
     <string name="chess_new_creating">Արժանահավատություն</string>
     <string name="chess_new_failed">Չհաջողվեց ստեղծել խաղը</string>

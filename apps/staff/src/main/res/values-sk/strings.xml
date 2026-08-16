@@ -183,7 +183,7 @@
     <string name="staff_config_field_hold">Prah pozdržania</string>
     <string name="staff_config_field_platform_fee">Poplatok platformy</string>
     <string name="staff_config_field_review_window">Okno na recenziu</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">ID klienta OAuth</string>
     <string name="staff_config_field_stripe_publishable">Zverejniteľný kľúč</string>
     <string name="staff_config_field_stripe_secret">Tajný kľúč</string>
     <string name="staff_config_group_moderation">Moderácia</string>

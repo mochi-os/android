@@ -357,7 +357,7 @@
     <string name="staff_reports_action_taken_toast">Հաղորդման գործողությունը կատարվեց</string>
     <string name="staff_reports_action_warn">Զգուշացնել</string>
     <string name="staff_reports_any_status">Բոլոր պիտակները</string>
-    <string name="staff_reports_any_type">Այս հավելվածի համար բոլոր վերբեռնված Build ֆայլերը</string>
+    <string name="staff_reports_any_type">Բոլոր տեսակները</string>
     <string name="staff_reports_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="staff_reports_close">Փակել վահանակը</string>
     <string name="staff_reports_dialog_title_action">Քայլ ձեռնարկել զեկույցի վերաբերյալ</string>

@@ -156,7 +156,7 @@
     <string name="system_setting_oauth_microsoft_client_id">Microsoft klient-ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft klient-løyndom</string>
     <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
-    <string name="system_setting_oauth_facebook_client_id">Facebook App ID</string>
+    <string name="system_setting_oauth_facebook_client_id">Facebook-app-ID</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook App-løyndom</string>
     <string name="system_setting_oauth_x_client_id">X-klient-ID</string>
     <string name="system_setting_oauth_x_client_secret">X-klient-løyndom</string>

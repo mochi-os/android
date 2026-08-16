@@ -318,4 +318,5 @@
     <string name="attachment_caption">Тайлбар</string>
     <string name="attachment_caption_add">Тайлбар нэмэх</string>
     <string name="attachment_caption_edit">Тайлбар засах</string>
+    <string name="about_check_background">Дэвсгэрт үргэлжлүүлэх</string>
 </resources>

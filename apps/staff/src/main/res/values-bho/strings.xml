@@ -174,7 +174,7 @@
     <string name="staff_config_field_hold">रोके के सीमा</string>
     <string name="staff_config_field_platform_fee">प्लेटफॉर्म शुल्क</string>
     <string name="staff_config_field_review_window">समीक्षा खिड़की</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">OAuth क्लाइंट ID</string>
     <string name="staff_config_field_stripe_publishable">प्रकाशन योग्य कुंजी</string>
     <string name="staff_config_field_stripe_secret">गुप्त कुंजी</string>
     <string name="staff_config_group_moderation">मॉडरेशन</string>

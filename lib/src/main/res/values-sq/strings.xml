@@ -318,4 +318,5 @@
     <string name="attachment_caption">Legjenda</string>
     <string name="attachment_caption_add">Shto legjendë</string>
     <string name="attachment_caption_edit">Modifiko legjendën</string>
+    <string name="about_check_background">Vazhdo në sfond</string>
 </resources>

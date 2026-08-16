@@ -85,8 +85,15 @@ object UpdateInstaller {
         }
 
         val apk = UpdateChecker.apkFile(ctx, pending)
-        if (!apk.exists() || apk.length() == 0L) {
-            Log.w(TAG, "Pending update $pending has no APK on disk; clearing")
+        // Length only, not the digest: this runs on the main thread from every
+        // onResume, and hashing 40 MB there would be felt. It still catches the
+        // damage that matters — a file that grew or shrank since it was staged
+        // — and UpdateChecker re-hashes it on the next check. Handing a bad APK
+        // to the installer costs the user a bare "the file is corrupt" with no
+        // way back, so err towards discarding it.
+        val size = prefs.getLong(UpdateChecker.KEY_PENDING_SIZE, 0L)
+        if (!apk.exists() || apk.length() == 0L || (size > 0L && apk.length() != size)) {
+            Log.w(TAG, "Pending update $pending is ${apk.length()} bytes, expected $size; clearing")
             clear(ctx)
             return
         }
@@ -149,6 +156,8 @@ object UpdateInstaller {
         prefs.edit()
             .remove(UpdateChecker.KEY_PENDING)
             .remove(UpdateChecker.KEY_PENDING_PATH)
+            .remove(UpdateChecker.KEY_PENDING_SIZE)
+            .remove(UpdateChecker.KEY_PENDING_SHA)
             .remove(KEY_PROMPTED_VERSION)
             .apply()
         UpdateChecker.updatesDir(ctx).listFiles()?.forEach { it.delete() }

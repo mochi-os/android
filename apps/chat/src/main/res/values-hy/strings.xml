@@ -3,7 +3,7 @@
 
     <string name="chat_auth_display_name">Ցուցադրման անուն</string>
     <string name="chat_auth_verification_failed">Ստուգումը ձախողվեց</string>
-    <string name="chat_list_title">Զրույցները ընկերների միջև են։ Նախ ավելացրեք ընկեր People հավելվածում։</string>
+    <string name="chat_list_title">Զրույցներ</string>
     <string name="chat_list_close_search">Կոդը պատճենված է</string>
     <string name="chat_list_search">Որոնել</string>
     <string name="chat_list_logout">Դուրս է եկել հաջողությամբ</string>
@@ -12,7 +12,7 @@
     <string name="chat_new_title">Նոր զրույց</string>
     <string name="chat_new_name">Խմբի անուն</string>
     <string name="chat_new_friends">Ընկերներ</string>
-    <string name="chat_message_placeholder">Հաղորդագրեք ձեր ընկերներին, անհատապես կամ խմբերով, peer-to-peer և կոդավորված։</string>
+    <string name="chat_message_placeholder">Հաղորդագրություն</string>
     <string name="chat_attachment_add">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_message_attach">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_settings_title">Զրույցներ</string>
@@ -84,7 +84,7 @@
     <string name="chat_delete_own_only">Կարող եք ջնջել միայն ձեր սեփական հաղորդագրությունները</string>
     <string name="chat_selection_title">%1$d ընտրված</string>
     <string name="chat_forward_subtitle">Ընտրեք զրույց կամ ընկեր՝ ընտրված հաղորդագրությունները փոխանցելու համար</string>
-    <string name="chat_forward_chats">Զրույցները ընկերների միջև են։ Նախ ավելացրեք ընկեր People հավելվածում։</string>
+    <string name="chat_forward_chats">Զրույցներ</string>
     <string name="chat_forward_friends">Ընկերներ</string>
     <string name="chat_policy_title">Մուտքային զրույցներ</string>
     <string name="chat_policy_friends">Միայն ընկերներ</string>

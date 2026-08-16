@@ -318,4 +318,5 @@
     <string name="attachment_caption">ক্যাপশন</string>
     <string name="attachment_caption_add">ক্যাপশন যোগ করুন</string>
     <string name="attachment_caption_edit">ক্যাপশন সম্পাদনা করুন</string>
+    <string name="about_check_background">ব্যাকগ্রাউন্ডে চালিয়ে যান</string>
 </resources>

@@ -173,7 +173,7 @@
     <string name="system_setting_server_started">Server başladıldı</string>
     <string name="system_setting_server_version">Server versiyası</string>
     <string name="system_setting_signup_enabled">Yeni qeydiyyatlara icazə ver</string>
-    <string name="system_users_title">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="system_users_title">İstifadəçilər</string>
     <string name="system_users_col_user">İstifadəçi yaradıldı</string>
     <string name="system_users_col_status">Status</string>
     <string name="system_users_col_last">Son giriş</string>
@@ -352,7 +352,7 @@
     <string name="system_status_peer_unreachable">Əlçatmaz</string>
     <string name="system_status_peer_address">Ünvan</string>
     <string name="system_status_peer_seen">Son görülmə</string>
-    <string name="system_status_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="system_status_users">İstifadəçilər</string>
     <string name="system_status_entities">Varlıqlar</string>
     <string name="system_status_reachability">Əlçatanlıq</string>
     <string name="system_status_reachability_public">Açıq</string>

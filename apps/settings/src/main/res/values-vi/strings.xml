@@ -163,8 +163,8 @@
     <string name="system_setting_oauth_microsoft_tenant">Tenant Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ID ứng dụng Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Khoá bí mật ứng dụng Facebook</string>
-    <string name="system_setting_oauth_x_client_id">X client ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
+    <string name="system_setting_oauth_x_client_id">ID ứng dụng khách X</string>
+    <string name="system_setting_oauth_x_client_secret">Khóa bí mật ứng dụng khách X</string>
     <string name="system_setting_fcm_firebase_config">Tệp Firebase google-services.json</string>
     <string name="system_setting_fcm_service_account">Tệp khóa riêng Firebase</string>
     <string name="system_setting_operator_name">Tên nhà điều hành</string>

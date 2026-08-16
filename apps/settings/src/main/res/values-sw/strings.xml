@@ -163,8 +163,8 @@
     <string name="system_setting_oauth_microsoft_tenant">Mpangaji wa Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">Kitambulisho cha Programu ya Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">Siri ya Programu ya Facebook</string>
-    <string name="system_setting_oauth_x_client_id">X client ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
+    <string name="system_setting_oauth_x_client_id">Kitambulisho cha mteja cha X</string>
+    <string name="system_setting_oauth_x_client_secret">Siri ya mteja ya X</string>
     <string name="system_setting_fcm_firebase_config">Faili la Firebase google-services.json</string>
     <string name="system_setting_fcm_service_account">Faili la ufunguo wa faragha la Firebase</string>
     <string name="system_setting_operator_name">Jina la mwendeshaji</string>

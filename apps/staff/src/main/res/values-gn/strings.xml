@@ -173,7 +173,7 @@
     <string name="staff_config_field_hold">Eipyhy threshold</string>
     <string name="staff_config_field_platform_fee">Plataforma costo</string>
     <string name="staff_config_field_review_window">Reseña ovetana</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">OAuth cliente ID</string>
     <string name="staff_config_field_stripe_publishable">Publishable key</string>
     <string name="staff_config_field_stripe_secret">Secret key</string>
     <string name="staff_config_group_moderation">Moderación</string>

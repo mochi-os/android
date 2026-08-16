@@ -252,6 +252,7 @@
     <string name="about_check_downloading">Version %1$s available, downloading…</string>
     <string name="about_check_network_error">Couldn\'t reach update server</string>
     <string name="about_check_download_failed">Download failed</string>
+    <string name="about_check_background">Continue in background</string>
 
     <!-- Notifications inbox + bell -->
     <string name="notifications_open">Notifications</string>

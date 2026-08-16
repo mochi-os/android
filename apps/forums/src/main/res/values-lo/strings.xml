@@ -131,7 +131,7 @@
     <string name="forums_comment_edit_body_field">ເນື້ອຫາ</string>
     <string name="forums_tag_clear">ລ້າງຕົວກອງ</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">ຂຽນຄຳເຫັນ…</string>
     <string name="forums_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
     <string name="forums_list_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
 
@@ -242,7 +242,7 @@
     <string name="forums_moderation_report_by">ໂດຍ %1$s</string>
     <string name="forums_moderation_restriction_state_banned">ຖືກແບນ</string>
     <string name="forums_moderation_unit_days">ມື້</string>
-    <string name="forums_settings_banner_saved">றສັນແນ຺ກສຳລັບໄວ້ແລ້ວ</string>
+    <string name="forums_settings_banner_saved">ບັນທຶກແບນເນີແລ້ວ</string>
     <string name="forums_settings_access_updated">ອັບເດດການເຂົ້າເຖິງແລ້ວ</string>
     <string name="forums_settings_access_revoked">ການກ຺ົົາຣເສີບຖ້ມີໄດ້ຖືກຖ຾ກໂອ຺ກ</string>
     <string name="forums_settings_member_removed">ຍ້າຍສະມາຊິກແລ້ວ</string>
@@ -264,8 +264,8 @@
     <string name="forums_access_select_rule">ເລືອກກົດ</string>
     <string name="forums_ai_actions_label">ການດຳເນີນການ AI ຕໍ່ໂພສ</string>
     <string name="forums_ai_prompt_custom">ກຳນົດເອງ</string>
-    <string name="forums_ai_prompt_score_label">ພรອມທ໌ໃຫ້ຄະແນນ</string>
-    <string name="forums_ai_prompt_tag_label">ພรອມທ໌ແທັກ</string>
+    <string name="forums_ai_prompt_score_label">ພຣອມທ໌ໃຫ້ຄະແນນ</string>
+    <string name="forums_ai_prompt_tag_label">ພຣອມທ໌ແທັກ</string>
     <string name="forums_ai_prompt_variables">ຕົວແປ: %1$s</string>
     <string name="forums_link">ລິ້ງ</string>
     <string name="forums_moderation_ban_message">ຈະສູນເສຍການເຂົ້າເຖິງເວທີຈົນກວ່າທ່ານຈະຍົກເລີກຂໍ້ຈຳກັດ.</string>

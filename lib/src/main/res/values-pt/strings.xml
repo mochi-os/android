@@ -318,4 +318,5 @@
     <string name="attachment_caption">Legenda</string>
     <string name="attachment_caption_add">Adicionar legenda</string>
     <string name="attachment_caption_edit">Editar legenda</string>
+    <string name="about_check_background">Continuar em segundo plano</string>
 </resources>

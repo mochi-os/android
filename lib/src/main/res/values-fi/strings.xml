@@ -318,4 +318,5 @@
     <string name="attachment_caption">Kuvateksti</string>
     <string name="attachment_caption_add">Lisää kuvateksti</string>
     <string name="attachment_caption_edit">Muokkaa kuvatekstiä</string>
+    <string name="about_check_background">Jatka taustalla</string>
 </resources>

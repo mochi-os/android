@@ -20,7 +20,7 @@
     <string name="crm_find_recommended">Tövsiyə olunur</string>
     <string name="crm_find_subscribe">Abunə ol</string>
     <string name="crm_loading">Yüklənir…</string>
-    <string name="crm_watched">Sizin üçün heç bir tətbiq tapa bilmədik. Bu gözlənilməzdir.</string>
+    <string name="crm_watched">İzlənilən</string>
     <string name="crm_create_object">Obyekt yarat</string>
     <string name="crm_search">Axtar</string>
     <string name="crm_settings">Parametrlər</string>
@@ -43,10 +43,10 @@
     <string name="crm_option_icon">İkon</string>
     <string name="crm_option_icon_placeholder">məs. Check, Star, Flag</string>
     <string name="crm_settings_save">Dəyişiklikləri saxla</string>
-    <string name="crm_settings_unsubscribe">CRM-dən abunəlikdən çıx</string>
+    <string name="crm_settings_unsubscribe">Abunəlikdən çıx</string>
     <string name="crm_settings_delete_crm">Layihəni sil</string>
     <string name="crm_settings_delete_confirm_title">CRM-i sil</string>
-    <string name="crm_settings_unsubscribe_title">CRM-dən abunəlikdən çıx</string>
+    <string name="crm_settings_unsubscribe_title">Abunəlikdən çıx</string>
     <string name="crm_settings_unsubscribe_message">Bu CRM-dən abunəliyi ləğv etmək istədiyinizə əminsiniz?</string>
     <string name="crm_access_level_owner">Sahibi</string>
     <string name="crm_access_level_design">Dizayn</string>
@@ -326,7 +326,7 @@
     <string name="crm_access_tab_manual">Manual</string>
     <string name="crm_access_search_users">İstifadəçi axtar</string>
     <string name="crm_access_no_groups">Mövcud qrup yoxdur</string>
-    <string name="crm_access_tab_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="crm_access_tab_users">İstifadəçilər</string>
     <string name="crm_access_tab_groups">Qruplar</string>
     <string name="crm_access_target">Hədəf</string>
     <string name="crm_access_target_hint">Subyekt ID, @qrup, * (hamı) və ya + (üzvlər)</string>

@@ -319,4 +319,5 @@
     <string name="attachment_caption">Legendă</string>
     <string name="attachment_caption_add">Adaugă legendă</string>
     <string name="attachment_caption_edit">Editează legenda</string>
+    <string name="about_check_background">Continuă în fundal</string>
 </resources>

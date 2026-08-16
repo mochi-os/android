@@ -154,11 +154,11 @@
     <string name="system_setting_domains_verification">Eikotevẽ dominio verificación</string>
     <string name="system_setting_email_from">Default tape sistema email-gua</string>
     <string name="system_setting_oauth_public_url">URL público OAuth redirects rehegua</string>
-    <string name="system_setting_oauth_google_client_id">Google client ID</string>
+    <string name="system_setting_oauth_google_client_id">Google cliente ID</string>
     <string name="system_setting_oauth_google_client_secret">Google client secret-pe</string>
-    <string name="system_setting_oauth_github_client_id">GitHub client ID</string>
+    <string name="system_setting_oauth_github_client_id">GitHub cliente ID</string>
     <string name="system_setting_oauth_github_client_secret">GitHub client secret-pe</string>
-    <string name="system_setting_oauth_microsoft_client_id">Microsoft client ID</string>
+    <string name="system_setting_oauth_microsoft_client_id">Microsoft cliente ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft client secret-pe</string>
     <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook App ID</string>

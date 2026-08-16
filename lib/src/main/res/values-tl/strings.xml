@@ -164,7 +164,7 @@
     <string name="auth_send_code">Magpadala ng code</string>
     <string name="auth_check_email">Tingnan ang iyong email para sa verification code</string>
     <string name="auth_six_digit_code">6-digit na code</string>
-    <string name="auth_mfa_title">Multi-factor authentication</string>
+    <string name="auth_mfa_title">Multi-factor na pagpapatunay</string>
     <string name="auth_mfa_subtitle">Kumpletuhin ang natitirang mga hakbang sa pagpapatunay</string>
     <string name="auth_recover_account">Bawiin ang account</string>
     <string name="auth_login_title">Mag-log in sa Mochi</string>
@@ -318,4 +318,5 @@
     <string name="attachment_caption">Caption</string>
     <string name="attachment_caption_add">Magdagdag ng caption</string>
     <string name="attachment_caption_edit">I-edit ang caption</string>
+    <string name="about_check_background">Magpatuloy sa background</string>
 </resources>

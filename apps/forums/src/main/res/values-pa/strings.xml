@@ -131,7 +131,7 @@
     <string name="forums_comment_edit_body_field">ਮੁੱਖ ਭਾਗ</string>
     <string name="forums_tag_clear">ਫਿਲਟਰ ਸਾਫ਼ ਕਰੋ</string>
     <string name="forums_post_tag_add">Add tag</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">ਟਿੱਪਣੀ ਲਿਖੋ…</string>
     <string name="forums_auth_login_failed">ਲਾਗਇਨ ਅਸਫਲ</string>
     <string name="forums_list_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
 
@@ -245,7 +245,7 @@
     <string name="forums_moderation_unit_days">ਦਿਨ</string>
     <string name="forums_settings_banner_saved">ਬੈਨਰ ਸੈਵ ਹੋ ਗਿਆ</string>
     <string name="forums_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="forums_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
+    <string name="forums_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
     <string name="forums_settings_member_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="forums_settings_prompt_saved">ਪ੍ਰਾਂਪਟ ਸੇਵ ਹੋ ਗਿਆ</string>
     <string name="forums_settings_section_identity">ਪਛਾਣ</string>

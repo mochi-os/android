@@ -41,7 +41,7 @@
     <string name="feeds_restore">Bərpa et</string>
     <string name="feeds_location">Yer</string>
     <string name="feeds_check_in">Yoxla</string>
-    <string name="feeds_travelling">Fərqli axtarış termini və ya filtri sınayın.</string>
+    <string name="feeds_travelling">Səyahət</string>
     <string name="feeds_tab_general">Ümumi</string>
     <string name="feeds_tab_sources">Mənbələr</string>
     <string name="feeds_sources_title">Mənbələr</string>
@@ -56,7 +56,7 @@
     <string name="feeds_delete_feed">Feed-i sil</string>
     <string name="feeds_no_members">Üzv yoxdur</string>
     <string name="feeds_user">İstifadəçi yaradıldı</string>
-    <string name="feeds_access_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="feeds_access_users">İstifadəçilər</string>
     <string name="feeds_access_groups">Qruplar</string>
     <string name="feeds_access_no_groups">Mövcud qrup yoxdur</string>
     <string name="feeds_add_source">Mənbə əlavə et</string>

@@ -163,8 +163,8 @@
     <string name="system_setting_oauth_microsoft_tenant">Tenantـی Microsoft</string>
     <string name="system_setting_oauth_facebook_client_id">ناسنامەی ئەپی Facebook</string>
     <string name="system_setting_oauth_facebook_client_secret">نهێنی ئەپی Facebook</string>
-    <string name="system_setting_oauth_x_client_id">X client ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
+    <string name="system_setting_oauth_x_client_id">ID ی کڵاینتی X</string>
+    <string name="system_setting_oauth_x_client_secret">نهێنی کڵاینتی X</string>
     <string name="system_setting_fcm_firebase_config">پەڕگەی Firebase google-services.json</string>
     <string name="system_setting_fcm_service_account">پەڕگەی کلیلی تایبەتی Firebase</string>
     <string name="system_setting_operator_name">ناوی بەکارهێنەر</string>

@@ -25,7 +25,7 @@
     <string name="chess_resign">ჩაბარება</string>
     <string name="chess_rematch">რევანში</string>
     <string name="chess_delete_game">თამაშის წაშლა</string>
-    <string name="chess_side_white">როდესაც სხვა ვიკები ამ ვიკს რეპლიცირებენ, ისინი აქ გამოჩნდებიან.</string>
+    <string name="chess_side_white">თეთრი</string>
     <string name="chess_side_black">შავი</string>
     <string name="chess_resign_title">თამაშის ჩაბარება?</string>
     <string name="chess_resign_confirm">ჩაბარება</string>
@@ -36,7 +36,7 @@
     <string name="chess_status_stalemate">უმოქმედო — ფრე</string>
     <string name="chess_status_draw">ფრე</string>
     <string name="chess_status_check_your_move">შაჰი — თქვენი სვლაა</string>
-    <string name="chess_status_your_move">თქვენი ლისტინგი ავტომატურად განიხილება და შესაძლოა მოითხოვოს მოდერატორის დამტკიცება, სანამ სხვა მომხმარებლებისთვის ხილული გახდება.</string>
+    <string name="chess_status_your_move">თქვენი სვლა</string>
     <string name="chess_move_subject_you">დიახ, ძალით</string>
     <string name="chess_promotion_title">დაწინაურება:</string>
 
@@ -54,7 +54,7 @@
     <string name="chess_piece_bishop">Დაბანილი</string>
     <string name="chess_piece_knight">Მეფე</string>
     <string name="chess_piece_pawn">Passkey</string>
-    <string name="chess_move_played">%1$s 走了 %2$s</string>
+    <string name="chess_move_played">%1$s-მა ითამაშა %2$s</string>
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">შეტყობინებები ჭადრაკის სვლების, ფრეს შეთავაზებებისა და თამაშის შედეგების შესახებ.</string>
     <string name="chess_open_sidebar">გვერდითი პანელის გახსნა</string>

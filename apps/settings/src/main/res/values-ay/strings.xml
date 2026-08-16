@@ -18,7 +18,7 @@
     <string name="account_section_totp">Autenticador app</string>
     <string name="account_totp_setup">Autenticador wakichaña</string>
     <string name="account_totp_setup_title">Autenticador wakichaña</string>
-    <string name="account_totp_verify">Verificaña ukat habilitaña</string>
+    <string name="account_totp_verify">Verificaña</string>
     <string name="account_totp_disable_title">Authenticator jark\'aña?</string>
     <string name="account_section_recovery">Recovery códigonaka</string>
     <string name="account_recovery_codes_title">Recovery códigonaka</string>
@@ -107,7 +107,7 @@
     <string name="accounts_default_for_ai">Inteligencia artificial qhatxata</string>
     <string name="accounts_test">Yant\'aña</string>
     <string name="accounts_settings">Configuración</string>
-    <string name="accounts_verify">Verificaña ukat habilitaña</string>
+    <string name="accounts_verify">Verificaña</string>
     <string name="accounts_remove">Aparma</string>
     <string name="accounts_remove_title">¿Cuenta aparma?</string>
     <string name="system_documents_title">Documentonaka</string>
@@ -154,11 +154,11 @@
     <string name="system_setting_domains_verification">Dominio verificación munaski</string>
     <string name="system_setting_email_from">Default from dirección sistema email taqi</string>
     <string name="system_setting_oauth_public_url">Public URL OAuth redirectanak</string>
-    <string name="system_setting_oauth_google_client_id">Google client ID</string>
+    <string name="system_setting_oauth_google_client_id">Google cliente ID</string>
     <string name="system_setting_oauth_google_client_secret">Google client imantata</string>
-    <string name="system_setting_oauth_github_client_id">GitHub client ID</string>
+    <string name="system_setting_oauth_github_client_id">GitHub cliente ID</string>
     <string name="system_setting_oauth_github_client_secret">GitHub client imantata</string>
-    <string name="system_setting_oauth_microsoft_client_id">Microsoft client ID</string>
+    <string name="system_setting_oauth_microsoft_client_id">Microsoft cliente ID</string>
     <string name="system_setting_oauth_microsoft_client_secret">Microsoft client imantata</string>
     <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook App ID</string>
@@ -173,7 +173,7 @@
     <string name="system_setting_server_started">Servidor qalltawayi</string>
     <string name="system_setting_server_version">Servidor versión</string>
     <string name="system_setting_signup_enabled">Machaq signupanak iyawsaña</string>
-    <string name="system_users_title">Aka tamar mantapki uka apnaqirinakampi tamanakampi</string>
+    <string name="system_users_title">Apnaqirinaka</string>
     <string name="system_users_col_user">Apnaqiri banata</string>
     <string name="system_users_col_status">Estado</string>
     <string name="system_users_col_last">Qhipïr login</string>
@@ -351,7 +351,7 @@
     <string name="system_status_peer_unreachable">Jan puriñjama</string>
     <string name="system_status_peer_address">Dirección</string>
     <string name="system_status_peer_seen">Qhipa uñjata</string>
-    <string name="system_status_users">Aka tamar mantapki uka apnaqirinakampi tamanakampi</string>
+    <string name="system_status_users">Apnaqirinaka</string>
     <string name="system_status_entities">Entidadanaka</string>
     <string name="system_status_reachability">Puriñjama</string>
     <string name="system_status_reachability_public">Taqiniru</string>

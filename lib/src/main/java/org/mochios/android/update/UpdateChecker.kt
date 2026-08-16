@@ -17,8 +17,17 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -50,21 +59,31 @@ class UpdateChecker(
     params: WorkerParameters,
 ) : CoroutineWorker(context, params) {
 
-    override suspend fun doWork(): Result =
-        when (checkNow(applicationContext)) {
+    override suspend fun doWork(): Result {
+        // A foreground download already holds the gate. Waiting on it would
+        // burn this worker's ten-minute window (and a wakelock) doing nothing,
+        // so back off and let WorkManager re-run us once it has finished.
+        if (state.value is DownloadState.Running) return Result.retry()
+        return when (checkNow(applicationContext)) {
             CheckOutcome.UpToDate, CheckOutcome.UpdateStaged -> Result.success()
             CheckOutcome.NetworkError, CheckOutcome.DownloadFailed -> Result.retry()
         }
+    }
 
     companion object {
         private const val TAG = "MochiUpdateCheck"
         private const val WORK_NAME = "mochi_update_check"
-        // Background download used to finish an update if the dialog is closed
+        // Background download used to finish an update if the process is killed
         // mid-download (the foreground inline path is the primary one).
         private const val ONESHOT_WORK = "mochi_update_check_oneshot"
         const val PREFS = "mochi_update"
         const val KEY_PENDING = "pending_version"
         const val KEY_PENDING_PATH = "pending_path"
+        // Size and digest of the APK as staged. Re-checked before the file is
+        // offered to the installer, so a pending update that was damaged after
+        // it was verified is discarded rather than handed over as good.
+        const val KEY_PENDING_SIZE = "pending_size"
+        const val KEY_PENDING_SHA = "pending_sha256"
         private const val TRACK = "production"
         private const val BASE_URL = "https://packages.mochi-os.org/android"
         private const val VERSIONS_URL = "$BASE_URL/versions.json"
@@ -84,6 +103,61 @@ class UpdateChecker(
         // "download failed" at ~90% when a couple more would have completed it.
         private const val DOWNLOAD_ATTEMPTS = 6
         private const val DOWNLOAD_RETRY_DELAY_MS = 2_000L
+
+        // The download belongs to the process, not to whichever dialog asked
+        // for it. It used to run in the About dialog's composition scope, so
+        // one stray tap outside the dialog cancelled that scope - while the
+        // transfer itself carried on regardless, because download() is blocking
+        // IO with no suspension point for cancellation to land on. The user got
+        // an invisible download, and a second "Check for updates" press started
+        // a SECOND writer appending to the same partial file. Interleaved
+        // appends produce an APK the length checks accept and the system
+        // installer rejects as corrupt.
+        private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
+        // One download at a time, whatever started it - the About dialog, a
+        // second dialog, or the daily worker.
+        private val gate = Mutex()
+
+        private val _state = MutableStateFlow<DownloadState>(DownloadState.Idle)
+
+        /**
+         * Live state of the update download, shared across the process so any
+         * dialog that opens attaches to a transfer already in flight instead of
+         * starting its own.
+         */
+        val state: StateFlow<DownloadState> = _state.asStateFlow()
+
+        // The download in flight, so a second request joins it rather than
+        // starting another.
+        @Volatile
+        private var active: Job? = null
+
+        /**
+         * Start the APK download, owned by the process, and return its job. A
+         * second call while one is running returns the SAME job rather than
+         * starting another. Callers may join the job to learn when it settles
+         * — cancelling that join (closing the dialog) does not touch the
+         * download, which belongs to this object's own scope.
+         */
+        @Synchronized
+        fun startDownload(context: Context): Job {
+            active?.takeIf { it.isActive }?.let { return it }
+            val ctx = context.applicationContext
+            val job = scope.launch {
+                try {
+                    checkNow(ctx)
+                } catch (e: Exception) {
+                    // Nothing is awaiting this coroutine, so an escaping
+                    // exception would reach the default handler and take the
+                    // app down. Report it and leave the button usable instead.
+                    Log.w(TAG, "Update download failed: ${e.message}")
+                    _state.value = DownloadState.Idle
+                }
+            }
+            active = job
+            return job
+        }
 
         /**
          * Idempotent daily schedule. Call from the host Application's
@@ -122,31 +196,30 @@ class UpdateChecker(
             val ctx = context.applicationContext
             if (InstallSource.isStoreInstalled(ctx)) return@withContext UpdateStatus.UpToDate
             val current = currentVersionName(ctx) ?: return@withContext UpdateStatus.UpToDate
-            val latest = try {
-                fetchLatest()
+            val manifest = try {
+                fetchManifest()
             } catch (e: Exception) {
                 Log.i(TAG, "Fetch versions.json failed: ${e.message}")
                 return@withContext UpdateStatus.Offline
             } ?: return@withContext UpdateStatus.UpToDate
+            val latest = manifest.version
             if (compareVersions(latest, current) <= 0) {
                 clearPending(ctx)
                 return@withContext UpdateStatus.UpToDate
             }
-            // KEY_PENDING is only written after a complete download, so it == latest
-            // means the APK is fully staged and ready to install right now.
-            val target = apkFile(ctx, latest)
-            val pending = prefs(ctx).getString(KEY_PENDING, "") ?: ""
-            if (pending == latest && target.exists() && target.length() > 0) {
-                return@withContext UpdateStatus.Ready(latest)
-            }
+            // Re-verify rather than trusting the preference: staged() confirms
+            // the file still hashes to the manifest's digest, and discards it if
+            // not, so a damaged APK cannot be offered here for good.
+            if (staged(ctx, latest, manifest.release)) return@withContext UpdateStatus.Ready(latest)
             UpdateStatus.Available(latest)
         }
 
         /**
          * Continue the APK download in the background (resuming any partial).
-         * The dialog calls this only when it's dismissed mid-download, so the
-         * foreground inline download isn't simply abandoned — the next time the
-         * app comes forward, [UpdateInstaller.promptIfPending] offers to install.
+         * The dialog calls this when it's dismissed mid-download: the in-process
+         * download survives the dialog, but not the process being killed, and a
+         * WorkManager request does — so the transfer resumes on the next app
+         * start rather than waiting for the daily poll.
          */
         fun enqueueBackgroundDownload(context: Context) {
             val request = OneTimeWorkRequestBuilder<UpdateChecker>()
@@ -162,21 +235,19 @@ class UpdateChecker(
 
         /**
          * Run one check-and-stage cycle inline (no WorkManager). The full path —
-         * version poll AND the resumable APK download (reporting [onProgress]) —
-         * used by the periodic worker via [doWork] AND by the About dialog, which
-         * runs it in the foreground for full-speed download with a live progress
-         * bar.
+         * version poll AND the resumable APK download — used by the periodic
+         * worker via [doWork] and by [startDownload], which the About dialog
+         * calls so the download runs in the foreground at full speed (a
+         * WorkManager background job's network is throttled as background data
+         * on many phones — slow even on fast wifi). Progress is published on
+         * [state] rather than returned, so every observer sees the one download.
          *
          * Heavy (blocking IO), so wrapped in Dispatchers.IO — callers can invoke
-         * from the main dispatcher (the dialog uses rememberCoroutineScope, which
-         * is Main) without tripping NetworkOnMainThreadException; OkHttp's
-         * synchronous execute() is blocking. CoroutineWorker.doWork runs off-main
-         * on its own, but this entry point may not.
+         * from the main dispatcher without tripping NetworkOnMainThreadException;
+         * OkHttp's synchronous execute() is blocking. CoroutineWorker.doWork runs
+         * off-main on its own, but this entry point may not.
          */
-        suspend fun checkNow(
-            context: Context,
-            onProgress: (downloaded: Long, total: Long) -> Unit = { _, _ -> },
-        ): CheckOutcome = withContext(Dispatchers.IO) {
+        suspend fun checkNow(context: Context): CheckOutcome = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
             if (InstallSource.isStoreInstalled(ctx)) {
                 // The store is responsible for updates here. About-dialog
@@ -197,72 +268,119 @@ class UpdateChecker(
             if (compareVersions(latest, current) <= 0) {
                 Log.d(TAG, "Running $current, latest $latest, nothing to do")
                 clearPending(ctx)
+                _state.value = DownloadState.Idle
                 return@withContext CheckOutcome.UpToDate
             }
 
-            val target = apkFile(ctx, latest)
-            val prefs = prefs(ctx)
-            val pending = prefs.getString(KEY_PENDING, "") ?: ""
-            if (pending == latest && target.exists() && target.length() > 0) {
-                Log.d(TAG, "$latest already downloaded at ${target.absolutePath}")
-                return@withContext CheckOutcome.UpdateStaged
-            }
+            // Everything from here writes the APK file, so it runs under the
+            // gate: two callers appending to the same partial produce a file of
+            // the right length whose bytes are garbage, which the system
+            // installer then rejects as corrupt. Waiting here is cancellable,
+            // and the waiter re-checks below — normally finding the file already
+            // staged by whoever held the gate.
+            gate.withLock {
+                val target = apkFile(ctx, latest)
+                if (staged(ctx, latest, manifest.release)) {
+                    Log.d(TAG, "$latest already downloaded at ${target.absolutePath}")
+                    _state.value = DownloadState.Staged(latest)
+                    return@withLock CheckOutcome.UpdateStaged
+                }
 
-            // Stale entries for prior versions — drop them so cacheDir doesn't
-            // accumulate APKs from every release the user ever skipped.
-            purgeStale(ctx, keep = latest)
+                // Stale entries for prior versions — drop them so cacheDir doesn't
+                // accumulate APKs from every release the user ever skipped.
+                purgeStale(ctx, keep = latest)
 
-            // Resumable: each attempt continues from the partial file via a
-            // Range request rather than restarting, and the partial is KEPT on
-            // failure — so a connection that drops every few MB accumulates
-            // progress across attempts (and, because the file survives between
-            // checkNow calls, across daily polls / repeat button presses) until
-            // it completes, instead of forever re-downloading from zero. A
-            // newer version landing clears the old partial via purgeStale above.
-            val release = manifest.release
-            if (release == null) {
-                // No integrity data means we cannot tell a good APK from a
-                // truncated or spliced one, and this file goes straight to the
-                // system installer. Refuse rather than stage it blind.
-                Log.w(TAG, "Manifest has no verifiable release entry for $latest; not downloading")
-                return@withContext CheckOutcome.DownloadFailed
-            }
-            if (release.size > APK_MAXIMUM) {
-                Log.w(TAG, "Manifest size ${release.size} for $latest exceeds maximum $APK_MAXIMUM")
-                return@withContext CheckOutcome.DownloadFailed
-            }
+                // Resumable: each attempt continues from the partial file via a
+                // Range request rather than restarting, and the partial is KEPT on
+                // failure — so a connection that drops every few MB accumulates
+                // progress across attempts (and, because the file survives between
+                // checkNow calls, across daily polls / repeat button presses) until
+                // it completes, instead of forever re-downloading from zero. A
+                // newer version landing clears the old partial via purgeStale above.
+                val release = manifest.release
+                if (release == null) {
+                    // No integrity data means we cannot tell a good APK from a
+                    // truncated or spliced one, and this file goes straight to the
+                    // system installer. Refuse rather than stage it blind.
+                    Log.w(TAG, "Manifest has no verifiable release entry for $latest; not downloading")
+                    _state.value = DownloadState.Failed(latest)
+                    return@withLock CheckOutcome.DownloadFailed
+                }
+                if (release.size > APK_MAXIMUM) {
+                    Log.w(TAG, "Manifest size ${release.size} for $latest exceeds maximum $APK_MAXIMUM")
+                    _state.value = DownloadState.Failed(latest)
+                    return@withLock CheckOutcome.DownloadFailed
+                }
 
-            var staged = false
-            for (attempt in 1..DOWNLOAD_ATTEMPTS) {
-                try {
-                    if (download(target, release, onProgress)) {
-                        staged = true
-                        break
+                _state.value = DownloadState.Running(latest, target.length().coerceAtMost(release.size), release.size)
+                var complete = false
+                for (attempt in 1..DOWNLOAD_ATTEMPTS) {
+                    try {
+                        val done = download(target, release) { downloaded, total ->
+                            _state.value = DownloadState.Running(latest, downloaded, total)
+                        }
+                        if (done) {
+                            complete = true
+                            break
+                        }
+                        Log.i(TAG, "APK incomplete at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS)")
+                    } catch (e: Exception) {
+                        Log.i(TAG, "APK download dropped at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS): ${e.message}")
                     }
-                    Log.i(TAG, "APK incomplete at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS)")
-                } catch (e: Exception) {
-                    Log.i(TAG, "APK download dropped at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS): ${e.message}")
+                    // Keep the partial — the next attempt resumes from it.
+                    if (attempt < DOWNLOAD_ATTEMPTS) {
+                        // Linear backoff: 2s, then 4s.
+                        delay(DOWNLOAD_RETRY_DELAY_MS * attempt)
+                    }
                 }
-                // Keep the partial — the next attempt resumes from it.
-                if (attempt < DOWNLOAD_ATTEMPTS) {
-                    // Linear backoff: 2s, then 4s.
-                    delay(DOWNLOAD_RETRY_DELAY_MS * attempt)
+                if (!complete) {
+                    // Leave the partial in place on purpose: the next check resumes it.
+                    _state.value = DownloadState.Failed(latest)
+                    return@withLock CheckOutcome.DownloadFailed
                 }
-            }
-            if (!staged) {
-                // Leave the partial in place on purpose: the next check resumes it.
-                return@withContext CheckOutcome.DownloadFailed
-            }
 
-            prefs.edit()
-                .putString(KEY_PENDING, latest)
-                .putString(KEY_PENDING_PATH, target.absolutePath)
-                .apply()
-            Log.i(TAG, "Update $latest staged at ${target.absolutePath} (running $current)")
-            CheckOutcome.UpdateStaged
+                prefs(ctx).edit()
+                    .putString(KEY_PENDING, latest)
+                    .putString(KEY_PENDING_PATH, target.absolutePath)
+                    .putLong(KEY_PENDING_SIZE, release.size)
+                    .putString(KEY_PENDING_SHA, release.sha256)
+                    .apply()
+                Log.i(TAG, "Update $latest staged at ${target.absolutePath} (running $current)")
+                _state.value = DownloadState.Staged(latest)
+                CheckOutcome.UpdateStaged
+            }
         }
 
-        private fun fetchLatest(): String? = fetchManifest()?.version
+        /**
+         * True when [version]'s APK is on disk and still matches the size and
+         * digest it is supposed to have — [release] from the manifest when we
+         * have it, otherwise what was recorded at stage time. Re-checking
+         * matters because the staged file goes straight to the system installer,
+         * which will not tell us why it refused it: an APK damaged after it was
+         * verified otherwise stays pending for good, because every later check
+         * short-circuits on "pending == latest" and re-offers the same bad
+         * bytes. A mismatch discards the file and the preference so the next
+         * check downloads it again from scratch.
+         */
+        private fun staged(ctx: Context, version: String, release: Release?): Boolean {
+            val prefs = prefs(ctx)
+            if ((prefs.getString(KEY_PENDING, "") ?: "") != version) return false
+            val apk = apkFile(ctx, version)
+            val size = release?.size ?: prefs.getLong(KEY_PENDING_SIZE, 0L)
+            val sum = release?.sha256 ?: prefs.getString(KEY_PENDING_SHA, "") ?: ""
+            if (size > 0 && sum.isNotBlank() && apk.length() == size &&
+                sha256(apk).equals(sum, ignoreCase = true)
+            ) {
+                return true
+            }
+            Log.w(TAG, "Staged $version no longer verifies at ${apk.length()} bytes; discarding")
+            apk.delete()
+            prefs.edit()
+                .remove(KEY_PENDING).remove(KEY_PENDING_PATH)
+                .remove(KEY_PENDING_SIZE).remove(KEY_PENDING_SHA)
+                .apply()
+            return false
+        }
 
         /**
          * Fetch and parse versions.json. Returns the production track's
@@ -322,6 +440,12 @@ class UpdateChecker(
         ): Boolean {
             target.parentFile?.mkdirs()
             val have = if (target.exists()) target.length() else 0L
+            // Already at (or past) the declared length — there is nothing left
+            // to fetch, so check what is on disk instead of asking for a range
+            // beyond the end, which answers 416 and would fail every attempt.
+            // Reached whenever a previously staged file failed re-verification
+            // and has to be judged again from scratch.
+            if (have >= release.size) return verify(target, release)
             val builder = Request.Builder().url("$BASE_URL/${release.file}").get()
             if (have > 0) builder.header("Range", "bytes=$have-")
             downloadClient().newCall(builder.build()).execute().use { resp ->
@@ -363,23 +487,32 @@ class UpdateChecker(
                         onProgress(downloaded, total)
                     }
                 }
-                if (target.length() != total) {
-                    // Overshoot means the server sent more than the manifest
-                    // declared; the file is unusable and must not be resumed.
-                    if (target.length() > total) target.delete()
-                    return false
-                }
-                // Hash the finished file rather than the stream: a resumed
-                // download only streams the tail, so bytes written by earlier
-                // attempts would otherwise never be checked.
-                val sum = sha256(target)
-                if (!sum.equals(release.sha256, ignoreCase = true)) {
-                    Log.w(TAG, "APK sha256 $sum does not match manifest ${release.sha256}; discarding")
-                    target.delete()
-                    return false
-                }
-                return true
+                return verify(target, release)
             }
+        }
+
+        /**
+         * True when [target] is exactly the length the manifest declares and
+         * hashes to its digest. Hashes the finished file rather than the
+         * stream: a resumed download only streams the tail, so bytes written by
+         * earlier attempts would otherwise never be checked. A file that fails
+         * either test is deleted — no resume can repair it, and it must never
+         * reach the installer.
+         */
+        private fun verify(target: File, release: Release): Boolean {
+            if (target.length() != release.size) {
+                // Overshoot means more arrived than the manifest declared; the
+                // file is unusable and must not be resumed.
+                if (target.length() > release.size) target.delete()
+                return false
+            }
+            val sum = sha256(target)
+            if (!sum.equals(release.sha256, ignoreCase = true)) {
+                Log.w(TAG, "APK sha256 $sum does not match manifest ${release.sha256}; discarding")
+                target.delete()
+                return false
+            }
+            return true
         }
 
         /** Lowercase hex SHA-256 of a file, streamed so a ~40 MB APK never lands in memory. */
@@ -438,7 +571,10 @@ class UpdateChecker(
         private fun clearPending(ctx: Context) {
             val prefs = prefs(ctx)
             if (!prefs.contains(KEY_PENDING)) return
-            prefs.edit().remove(KEY_PENDING).remove(KEY_PENDING_PATH).apply()
+            prefs.edit()
+                .remove(KEY_PENDING).remove(KEY_PENDING_PATH)
+                .remove(KEY_PENDING_SIZE).remove(KEY_PENDING_SHA)
+                .apply()
             purgeStale(ctx, keep = "") // empty keep → delete everything
         }
 
@@ -498,6 +634,26 @@ enum class CheckOutcome {
     UpdateStaged,
     NetworkError,
     DownloadFailed,
+}
+
+/**
+ * State of the one APK download the process runs at a time, published on
+ * [UpdateChecker.state]. It outlives the dialog that started it, so closing
+ * the dialog does not lose the transfer and re-opening it shows the same
+ * progress rather than offering to start again.
+ */
+sealed interface DownloadState {
+    /** Nothing downloading. */
+    data object Idle : DownloadState
+    /** [version] is downloading; [downloaded] of [total] bytes are on disk. */
+    data class Running(val version: String, val downloaded: Long, val total: Long) : DownloadState {
+        val percent: Int
+            get() = if (total > 0L) ((downloaded * 100L) / total).toInt().coerceIn(0, 100) else 0
+    }
+    /** [version] is downloaded, verified, and ready for the installer. */
+    data class Staged(val version: String) : DownloadState
+    /** [version] could not be downloaded; the partial is kept for a later resume. */
+    data class Failed(val version: String) : DownloadState
 }
 
 /** Outcome of an on-demand [UpdateChecker.checkForUpdate], for the About dialog. */

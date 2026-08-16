@@ -303,4 +303,5 @@
     <plurals name="discovery_subscriber_count">
         <item quantity="other">%1$d 位訂閱者</item>
     </plurals>
+    <string name="about_check_background">在背景繼續</string>
 </resources>

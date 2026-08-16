@@ -318,4 +318,5 @@
     <string name="attachment_caption">Maelezo mafupi</string>
     <string name="attachment_caption_add">Ongeza maelezo mafupi</string>
     <string name="attachment_caption_edit">Badilisha maelezo mafupi</string>
+    <string name="about_check_background">Endelea chinichini</string>
 </resources>

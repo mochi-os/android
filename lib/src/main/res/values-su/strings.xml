@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Dina telepon Samsung, pariksa ogé Setélan → Device care → Sleeping apps sareng cabut Mochi upami aya dina daptar.</string>
     <string name="oem_hint_allow">Widian latar tukang</string>
     <string name="oem_hint_dismiss">Tong tembongkeun deui</string>
-    <string name="about_title">Mochi Client for Android</string>
+    <string name="about_title">Klién Mochi pikeun Android</string>
     <string name="about_version">Vérsi %1$s</string>
     <string name="about_check_updates">Pariksa apdet</string>
     <string name="about_up_to_date">Énggal kénéh</string>
@@ -318,4 +318,5 @@
     <string name="attachment_caption">Katerangan</string>
     <string name="attachment_caption_add">Tambahkeun katerangan</string>
     <string name="attachment_caption_edit">Édit katerangan</string>
+    <string name="about_check_background">Teruskeun di latar tukang</string>
 </resources>

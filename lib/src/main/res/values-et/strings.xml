@@ -318,4 +318,5 @@
     <string name="attachment_caption">Pealdis</string>
     <string name="attachment_caption_add">Lisa pealdis</string>
     <string name="attachment_caption_edit">Muuda pealdist</string>
+    <string name="about_check_background">Jätka taustal</string>
 </resources>

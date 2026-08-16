@@ -322,4 +322,5 @@
     <string name="attachment_caption">التسمية التوضيحية</string>
     <string name="attachment_caption_add">إضافة تسمية توضيحية</string>
     <string name="attachment_caption_edit">تعديل التسمية التوضيحية</string>
+    <string name="about_check_background">المتابعة في الخلفية</string>
 </resources>

@@ -176,7 +176,7 @@
     <string name="staff_config_field_hold">ကိုင်ထား အကန့်အသတ်</string>
     <string name="staff_config_field_platform_fee">Platform အခကြေးငွေ</string>
     <string name="staff_config_field_review_window">သုံးသပ် ဝင်းဒိုး</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">OAuth ကလိုင်းယင့် ID</string>
     <string name="staff_config_field_stripe_publishable">ထုတ်ဝေနိုင်သော သော့</string>
     <string name="staff_config_field_stripe_secret">လျှို့ဝှက်သော့</string>
     <string name="staff_config_group_moderation">စိစစ်မှု</string>

@@ -3,7 +3,7 @@
 
     <string name="error_access_denied">Մուտքը մերժված է</string>
     <string name="auth_email">Էլ․ փոստ</string>
-    <string name="auth_continue">Շարունակել վճարումը</string>
+    <string name="auth_continue">Շարունակել</string>
     <string name="auth_verification_code">Ստուգման կոդ</string>
     <string name="auth_verify">Ստուգել</string>
     <string name="auth_authenticator_app">Authenticator հավելվածն անջատված է</string>
@@ -78,7 +78,7 @@
     <string name="settings_appearance_light">Կապել հաշիվը</string>
     <string name="settings_appearance_dark">Մուգ ռեժիմ</string>
     <string name="settings_density">Խտություն</string>
-    <string name="settings_density_compact">Ավարտեք Stripe-ի գրանցումը՝ հաստատվելու համար</string>
+    <string name="settings_density_compact">Կոմպակտ</string>
     <string name="settings_density_comfortable">Շուտով!</string>
     <string name="settings_density_spacious">Ընդարձակ</string>
     <string name="settings_radius_none">Ոչ մեկը</string>
@@ -318,4 +318,5 @@
     <string name="attachment_caption">Մակագրություն</string>
     <string name="attachment_caption_add">Ավելացնել մակագրություն</string>
     <string name="attachment_caption_edit">Խմբագրել մակագրությունը</string>
+    <string name="about_check_background">Շարունակել ֆոնային ռեժիմում</string>
 </resources>

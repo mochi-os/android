@@ -178,7 +178,7 @@
     <string name="staff_config_field_hold">Watesan tahan</string>
     <string name="staff_config_field_platform_fee">Biaya platform</string>
     <string name="staff_config_field_review_window">Jendhéla review</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">ID klien OAuth</string>
     <string name="staff_config_field_stripe_publishable">Publishable key</string>
     <string name="staff_config_field_stripe_secret">Kunci rahasia</string>
     <string name="staff_config_group_moderation">Moderasi</string>

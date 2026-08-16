@@ -318,4 +318,5 @@
     <string name="attachment_caption">Didascalia</string>
     <string name="attachment_caption_add">Aggiungi didascalia</string>
     <string name="attachment_caption_edit">Modifica didascalia</string>
+    <string name="about_check_background">Continua in background</string>
 </resources>

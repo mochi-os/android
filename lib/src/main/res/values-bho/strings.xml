@@ -318,4 +318,5 @@
     <string name="attachment_caption">कैप्शन</string>
     <string name="attachment_caption_add">कैप्शन जोड़ीं</string>
     <string name="attachment_caption_edit">कैप्शन संपादित करीं</string>
+    <string name="about_check_background">बैकग्राउंड में जारी रखीं</string>
 </resources>

@@ -67,10 +67,10 @@
     <string name="crm_links_title">Ցուցակի տեսք</string>
     <string name="crm_links_add">Ավելացնել անդամ</string>
     <string name="crm_links_section_blocks">Հատված</string>
-    <string name="crm_links_section_blocked_by">Արգելափակված է անվստահելի հղման նավարկումը</string>
+    <string name="crm_links_section_blocked_by">Արգելափակված է</string>
     <string name="crm_links_section_duplicates">Կրկնօրինակներ</string>
     <string name="crm_links_type_blocks">Հատված</string>
-    <string name="crm_links_type_blocked_by">Արգելափակված է անվստահելի հղման նավարկումը</string>
+    <string name="crm_links_type_blocked_by">Արգելափակված է</string>
     <string name="crm_links_type_duplicates">Կրկնօրինակներ</string>
     <string name="crm_links_no_matches">Համապատասխան օբյեկտներ չկան</string>
     <string name="crm_field_yes">Այո</string>

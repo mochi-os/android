@@ -321,4 +321,5 @@
     <string name="attachment_caption">Foscríbhinn</string>
     <string name="attachment_caption_add">Cuir foscríbhinn leis</string>
     <string name="attachment_caption_edit">Cuir an fhoscríbhinn in eagar</string>
+    <string name="about_check_background">Lean ar aghaidh sa chúlra</string>
 </resources>

@@ -176,7 +176,7 @@
     <string name="staff_config_field_hold">Saklama bosagasy</string>
     <string name="staff_config_field_platform_fee">Platforma tölegi</string>
     <string name="staff_config_field_review_window">Syn penjiresi</string>
-    <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
+    <string name="staff_config_field_stripe_oauth_client">OAuth müşderi ID</string>
     <string name="staff_config_field_stripe_publishable">Çap edilýän açar</string>
     <string name="staff_config_field_stripe_secret">Gizlin açar</string>
     <string name="staff_config_group_moderation">Moderasiýa</string>

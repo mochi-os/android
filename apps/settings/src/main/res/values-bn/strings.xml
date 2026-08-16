@@ -163,8 +163,8 @@
     <string name="system_setting_oauth_microsoft_tenant">Microsoft টেন্যান্ট</string>
     <string name="system_setting_oauth_facebook_client_id">Facebook অ্যাপ আইডি</string>
     <string name="system_setting_oauth_facebook_client_secret">Facebook অ্যাপ সিক্রেট</string>
-    <string name="system_setting_oauth_x_client_id">X client ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
+    <string name="system_setting_oauth_x_client_id">X ক্লায়েন্ট ID</string>
+    <string name="system_setting_oauth_x_client_secret">X ক্লায়েন্ট সিক্রেট</string>
     <string name="system_setting_fcm_firebase_config">Firebase google-services.json ফাইল</string>
     <string name="system_setting_fcm_service_account">Firebase ব্যক্তিগত কী ফাইল</string>
     <string name="system_setting_operator_name">অপারেটরের নাম</string>

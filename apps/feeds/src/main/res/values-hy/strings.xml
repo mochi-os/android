@@ -65,7 +65,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Տեսակ</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi-ն ներկայումս 0.3 տարբերակն է։ Այն պատրաստ է ամենօրյա օգտագործման համար, եթե դուք միջին մակարդակի տեխնիկապես պատրաստված եք և սխալների նկատմամբ հանդուրժող։ Եթե դուք ծրագրավորող եք, այն նաև պատրաստ է, որ դուք հավելվածներ ստեղծեք, քանի դեռ դեմ չեք մի քանի API փոփոխությունների։</string>
+    <string name="feeds_source_type_feed_posts">Mochi հոսք</string>
     <string name="feeds_source_type_feed_memories">Միաձուլել</string>
     <string name="feeds_remove_source">Հեռացնել աղբյուրը</string>
     <string name="feeds_suggested_credibility_accept">Ընդունել</string>
@@ -99,7 +99,7 @@
     <string name="feeds_add_to_home_screen">Ավելացնել գլխավոր էկրանին</string>
     <string name="feeds_tag_clear">Մաքրել զտիչը</string>
     <string name="feeds_add_tag">Add tag</string>
-    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_write_a_comment">Գրեք մեկնաբանություն…</string>
     <string name="feeds_file">Ֆայլ</string>
     <string name="feeds_move_up">Տեղափոխել վերև</string>
     <string name="feeds_move_down">Տեղափոխել ներքև</string>
