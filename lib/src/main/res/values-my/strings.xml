@@ -318,4 +318,6 @@
     <string name="attachment_caption_add">စာတန်းထည့်ရန်</string>
     <string name="attachment_caption_edit">စာတန်းကို ပြင်ဆင်ရန်</string>
     <string name="about_check_background">နောက်ခံတွင် ဆက်လုပ်ရန်</string>
+    <string name="notifications_category_unassigned">မသတ်မှတ်ထား</string>
+    <string name="notifications_change_category">အသိပေးချက် အမျိုးအစား ပြောင်းရန်</string>
 </resources>

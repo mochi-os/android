@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">წარწერის დამატება</string>
     <string name="attachment_caption_edit">წარწერის რედაქტირება</string>
     <string name="about_check_background">გაგრძელება ფონურ რეჟიმში</string>
+    <string name="notifications_category_unassigned">მიუნიჭებელი</string>
+    <string name="notifications_change_category">შეტყობინების კატეგორიის შეცვლა</string>
 </resources>

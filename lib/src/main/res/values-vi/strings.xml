@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Thêm chú thích</string>
     <string name="attachment_caption_edit">Sửa chú thích</string>
     <string name="about_check_background">Tiếp tục chạy nền</string>
+    <string name="notifications_category_unassigned">Chưa phân công</string>
+    <string name="notifications_change_category">Đổi danh mục thông báo</string>
 </resources>

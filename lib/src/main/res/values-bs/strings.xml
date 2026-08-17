@@ -320,4 +320,6 @@
     <string name="attachment_caption_add">Dodaj opis</string>
     <string name="attachment_caption_edit">Uredi opis</string>
     <string name="about_check_background">Nastavi u pozadini</string>
+    <string name="notifications_category_unassigned">Nedodijeljeno</string>
+    <string name="notifications_change_category">Promijeni kategoriju obavještenja</string>
 </resources>

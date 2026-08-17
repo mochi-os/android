@@ -324,4 +324,6 @@
     <string name="attachment_caption_add">Ychwanegu capsiwn</string>
     <string name="attachment_caption_edit">Golygu capsiwn</string>
     <string name="about_check_background">Parhau yn y cefndir</string>
+    <string name="notifications_category_unassigned">Heb ei neilltuo</string>
+    <string name="notifications_change_category">Newid categori hysbysu</string>
 </resources>

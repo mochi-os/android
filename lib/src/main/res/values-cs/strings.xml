@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Přidat popisek</string>
     <string name="attachment_caption_edit">Upravit popisek</string>
     <string name="about_check_background">Pokračovat na pozadí</string>
+    <string name="notifications_category_unassigned">Nepřiřazeno</string>
+    <string name="notifications_change_category">Změnit kategorii oznámení</string>
 </resources>

@@ -318,4 +318,6 @@
     <string name="attachment_caption_add">캡션 추가</string>
     <string name="attachment_caption_edit">캡션 편집</string>
     <string name="about_check_background">백그라운드에서 계속</string>
+    <string name="notifications_category_unassigned">할당되지 않음</string>
+    <string name="notifications_change_category">알림 카테고리 변경</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">അടിക്കുറിപ്പ് ചേർക്കുക</string>
     <string name="attachment_caption_edit">അടിക്കുറിപ്പ് എഡിറ്റ് ചെയ്യുക</string>
     <string name="about_check_background">പശ്ചാത്തലത്തിൽ തുടരുക</string>
+    <string name="notifications_category_unassigned">നിയോഗിച്ചിട്ടില്ല</string>
+    <string name="notifications_change_category">അറിയിപ്പ് വിഭാഗം മാറ്റുക</string>
 </resources>

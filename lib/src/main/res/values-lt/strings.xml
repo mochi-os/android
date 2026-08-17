@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Pridėti antraštę</string>
     <string name="attachment_caption_edit">Redaguoti antraštę</string>
     <string name="about_check_background">Tęsti fone</string>
+    <string name="notifications_category_unassigned">Nepriskirta</string>
+    <string name="notifications_change_category">Keisti pranešimo kategoriją</string>
 </resources>

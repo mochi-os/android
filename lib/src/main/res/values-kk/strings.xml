@@ -320,4 +320,6 @@
     <string name="attachment_caption_add">Түсіндірме қосу</string>
     <string name="attachment_caption_edit">Түсіндірмені өңдеу</string>
     <string name="about_check_background">Фонда жалғастыру</string>
+    <string name="notifications_category_unassigned">Тағайындалмаған</string>
+    <string name="notifications_change_category">Хабарландыру санатын өзгерту</string>
 </resources>

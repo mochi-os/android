@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">कैप्शन जोड़ें</string>
     <string name="attachment_caption_edit">कैप्शन संपादित करें</string>
     <string name="about_check_background">पृष्ठभूमि में जारी रखें</string>
+    <string name="notifications_category_unassigned">असाइन नहीं किया गया</string>
+    <string name="notifications_change_category">नोटिफ़िकेशन श्रेणी बदलें</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Magdagdag ng caption</string>
     <string name="attachment_caption_edit">I-edit ang caption</string>
     <string name="about_check_background">Magpatuloy sa background</string>
+    <string name="notifications_category_unassigned">Walang nakatalaga</string>
+    <string name="notifications_change_category">Baguhin ang category ng notification</string>
 </resources>

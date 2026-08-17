@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Cuir caipsean ris</string>
     <string name="attachment_caption_edit">Deasaich an caipsean</string>
     <string name="about_check_background">Lean air adhart sa chùl-raon</string>
+    <string name="notifications_category_unassigned">Gun shònrachadh</string>
+    <string name="notifications_change_category">Atharraich roinn-seòrsa nam brathan</string>
 </resources>

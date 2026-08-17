@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Tambahkan keterangan</string>
     <string name="attachment_caption_edit">Edit keterangan</string>
     <string name="about_check_background">Lanjutkan di latar belakang</string>
+    <string name="notifications_category_unassigned">Tidak ditugaskan</string>
+    <string name="notifications_change_category">Ubah kategori notifikasi</string>
 </resources>

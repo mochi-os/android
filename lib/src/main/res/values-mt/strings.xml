@@ -323,4 +323,6 @@
     <string name="attachment_caption_add">Żid didaskalija</string>
     <string name="attachment_caption_edit">Editja d-didaskalija</string>
     <string name="about_check_background">Kompli fl-isfond</string>
+    <string name="notifications_category_unassigned">Mhux assenjat</string>
+    <string name="notifications_change_category">Ibdel il-kategorija tan-notifiki</string>
 </resources>

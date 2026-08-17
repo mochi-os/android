@@ -23,6 +23,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.outlined.DeleteSweep
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -32,12 +33,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -51,6 +55,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
+import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
@@ -58,6 +63,8 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.settings.api.NotifCategory
+import org.mochios.settings.api.NotifTopic
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -69,8 +76,20 @@ fun NotificationsScreen(
     val uiState by viewModel.uiState.collectAsState()
     var showOverflow by remember { mutableStateOf(false) }
     var showClearConfirm by remember { mutableStateOf(false) }
+    val snackbar = remember { SnackbarHostState() }
+
+    // A failed recategorisation is reported over the list rather than replacing
+    // it: the notifications loaded fine, and only the picker's own call failed.
+    LaunchedEffect(uiState.error) {
+        val failure = uiState.error
+        if (failure != null && uiState.items.isNotEmpty()) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.notifications_title)) },
@@ -187,6 +206,9 @@ fun NotificationsScreen(
                             items(displayItems, key = { it.id }) { n ->
                                 NotificationCard(
                                     notification = n,
+                                    topic = uiState.topicFor(n),
+                                    categories = uiState.categories,
+                                    onSetCategory = { topic, id -> viewModel.setCategory(topic, id) },
                                     onClick = {
                                         if (n.read == 0L) viewModel.markRead(n.id)
                                         if (n.link.isNotBlank()) onOpenLink(n.link)
@@ -219,6 +241,9 @@ fun NotificationsScreen(
 @Composable
 private fun NotificationCard(
     notification: MochiNotification,
+    topic: NotifTopic?,
+    categories: List<NotifCategory>,
+    onSetCategory: (NotifTopic, String?) -> Unit,
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -279,6 +304,66 @@ private fun NotificationCard(
                         )
                     }
                 }
+                // Only offered when the server already holds a topic row: the
+                // set-category call requires one and does not create it, so
+                // without a row the control could not do anything.
+                if (topic != null && categories.isNotEmpty()) {
+                    CategoryPicker(
+                        topic = topic,
+                        categories = categories,
+                        onSetCategory = onSetCategory,
+                    )
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Moves every notification on this topic to another category, the same change
+ * the Topics tab of notification preferences makes - this is the shortcut from
+ * a notification you have just received.
+ */
+@Composable
+private fun CategoryPicker(
+    topic: NotifTopic,
+    categories: List<NotifCategory>,
+    onSetCategory: (NotifTopic, String?) -> Unit,
+) {
+    var menu by remember { mutableStateOf(false) }
+    // "No notifications" is the seeded id "0" and belongs at the end as the
+    // opt-out; the rest read alphabetically, which is where a reader looks.
+    val ordered = remember(categories) {
+        categories.sortedWith(
+            compareBy<NotifCategory> { it.id == "0" }
+                .thenBy(String.CASE_INSENSITIVE_ORDER) { it.label },
+        )
+    }
+    Box {
+        IconButton(onClick = { menu = true }) {
+            Icon(
+                Icons.Default.Tune,
+                contentDescription = stringResource(R.string.notifications_change_category),
+            )
+        }
+        MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(R.string.notifications_category_unassigned)) },
+                onClick = {
+                    menu = false
+                    onSetCategory(topic, null)
+                },
+                selected = topic.category == null,
+            )
+            for (category in ordered) {
+                MochiDropdownMenuItem(
+                    text = { Text(category.label) },
+                    onClick = {
+                        menu = false
+                        onSetCategory(topic, category.id)
+                    },
+                    selected = topic.category == category.id,
+                )
             }
         }
     }

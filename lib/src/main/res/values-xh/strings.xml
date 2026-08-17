@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Yongeza umbhalo</string>
     <string name="attachment_caption_edit">Hlela umbhalo</string>
     <string name="about_check_background">Qhubeka ngasemva</string>
+    <string name="notifications_category_unassigned">Akwabelwanga</string>
+    <string name="notifications_change_category">Tshintsha udidi lwesaziso</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">படக்குறிப்பைச் சேர்</string>
     <string name="attachment_caption_edit">படக்குறிப்பைத் திருத்து</string>
     <string name="about_check_background">பின்னணியில் தொடரவும்</string>
+    <string name="notifications_category_unassigned">ஒதுக்கப்படாதது</string>
+    <string name="notifications_change_category">அறிவிப்பு வகையை மாற்று</string>
 </resources>

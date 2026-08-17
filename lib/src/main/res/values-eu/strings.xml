@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Gehitu epigrafea</string>
     <string name="attachment_caption_edit">Editatu epigrafea</string>
     <string name="about_check_background">Jarraitu atzeko planoan</string>
+    <string name="notifications_category_unassigned">Esleitu gabe</string>
+    <string name="notifications_change_category">Aldatu jakinarazpen-kategoria</string>
 </resources>

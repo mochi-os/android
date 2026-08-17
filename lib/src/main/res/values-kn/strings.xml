@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">ಅಡಿಬರಹ ಸೇರಿಸಿ</string>
     <string name="attachment_caption_edit">ಅಡಿಬರಹ ಸಂಪಾದಿಸಿ</string>
     <string name="about_check_background">ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಮುಂದುವರಿಸಿ</string>
+    <string name="notifications_category_unassigned">ನಿಯೋಜಿಸದ</string>
+    <string name="notifications_change_category">ನೋಟಿಫಿಕೇಶನ್ ವರ್ಗ ಬದಲಾಯಿಸಿ</string>
 </resources>

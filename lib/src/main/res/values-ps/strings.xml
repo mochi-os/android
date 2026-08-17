@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">تشریح ورزیادول</string>
     <string name="attachment_caption_edit">تشریح سمول</string>
     <string name="about_check_background">په شالید کې دوام ورکړئ</string>
+    <string name="notifications_category_unassigned">نه ګمارل شوی</string>
+    <string name="notifications_change_category">د خبرتیا کټګوري بدله کړئ</string>
 </resources>

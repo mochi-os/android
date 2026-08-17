@@ -311,4 +311,5 @@
     <string name="attachment_caption">Legenda</string>
     <string name="attachment_caption_add">Adicionar legenda</string>
     <string name="attachment_caption_edit">Editar legenda</string>
+    <string name="notifications_category_unassigned">Não atribuído</string>
 </resources>

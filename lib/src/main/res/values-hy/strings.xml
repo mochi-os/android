@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Ավելացնել մակագրություն</string>
     <string name="attachment_caption_edit">Խմբագրել մակագրությունը</string>
     <string name="about_check_background">Շարունակել ֆոնային ռեժիմում</string>
+    <string name="notifications_category_unassigned">Չվերագրված</string>
+    <string name="notifications_change_category">Փոխել ծանուցման կատեգորիան</string>
 </resources>

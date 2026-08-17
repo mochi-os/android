@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Sut\'inchayta yapay</string>
     <string name="attachment_caption_edit">Sut\'inchayta allinchay</string>
     <string name="about_check_background">Qhipanchaypi qatiy</string>
+    <string name="notifications_category_unassigned">Mana akllasqa</string>
+    <string name="notifications_change_category">Notificacion categoríata hukchay</string>
 </resources>

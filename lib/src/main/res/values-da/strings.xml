@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Tilføj billedtekst</string>
     <string name="attachment_caption_edit">Rediger billedtekst</string>
     <string name="about_check_background">Fortsæt i baggrunden</string>
+    <string name="notifications_category_unassigned">Ikke tildelt</string>
+    <string name="notifications_change_category">Skift notifikationskategori</string>
 </resources>

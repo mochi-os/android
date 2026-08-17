@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Engeza umbhalo ochazayo</string>
     <string name="attachment_caption_edit">Hlela umbhalo ochazayo</string>
     <string name="about_check_background">Qhubeka ngemuva</string>
+    <string name="notifications_category_unassigned">Akwabelwanga</string>
+    <string name="notifications_change_category">Shintsha isigaba sesaziso</string>
 </resources>

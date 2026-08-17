@@ -320,4 +320,6 @@
     <string name="attachment_caption_add">Додај натпис</string>
     <string name="attachment_caption_edit">Уреди натпис</string>
     <string name="about_check_background">Настави у позадини</string>
+    <string name="notifications_category_unassigned">Недодељено</string>
+    <string name="notifications_change_category">Промени категорију обавештења</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Bæta við myndatexta</string>
     <string name="attachment_caption_edit">Breyta myndatexta</string>
     <string name="about_check_background">Halda áfram í bakgrunni</string>
+    <string name="notifications_category_unassigned">Ekki úthlutað</string>
+    <string name="notifications_change_category">Breyta tilkynningaflokki</string>
 </resources>

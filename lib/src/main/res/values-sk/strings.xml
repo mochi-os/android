@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Pridať popis</string>
     <string name="attachment_caption_edit">Upraviť popis</string>
     <string name="about_check_background">Pokračovať na pozadí</string>
+    <string name="notifications_category_unassigned">Nepriradené</string>
+    <string name="notifications_change_category">Zmeniť kategóriu notifikácie</string>
 </resources>

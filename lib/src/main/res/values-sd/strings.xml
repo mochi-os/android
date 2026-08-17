@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">ڪيپشن شامل ڪريو</string>
     <string name="attachment_caption_edit">ڪيپشن ۾ ترميم ڪريو</string>
     <string name="about_check_background">پس منظر ۾ جاري رکو</string>
+    <string name="notifications_category_unassigned">غير تفويض ٿيل</string>
+    <string name="notifications_change_category">اطلاع جو زمرو تبديل ڪريو</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Düşündiriş goşmak</string>
     <string name="attachment_caption_edit">Düşündirişi üýtgetmek</string>
     <string name="about_check_background">Arkaplanda dowam etmek</string>
+    <string name="notifications_category_unassigned">Bellenilmedik</string>
+    <string name="notifications_change_category">Bildiriş kategoriýasyny üýtget</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Bijschrift toevoegen</string>
     <string name="attachment_caption_edit">Bijschrift bewerken</string>
     <string name="about_check_background">Doorgaan op de achtergrond</string>
+    <string name="notifications_category_unassigned">Niet toegewezen</string>
+    <string name="notifications_change_category">Meldingscategorie wijzigen</string>
 </resources>

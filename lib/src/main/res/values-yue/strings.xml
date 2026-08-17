@@ -318,4 +318,6 @@
     <string name="attachment_caption_add">加入說明文字</string>
     <string name="attachment_caption_edit">編輯說明文字</string>
     <string name="about_check_background">喺背景繼續</string>
+    <string name="notifications_category_unassigned">未指派</string>
+    <string name="notifications_change_category">更改通知類別</string>
 </resources>

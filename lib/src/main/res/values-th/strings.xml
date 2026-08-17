@@ -318,4 +318,6 @@
     <string name="attachment_caption_add">เพิ่มคำบรรยายภาพ</string>
     <string name="attachment_caption_edit">แก้ไขคำบรรยายภาพ</string>
     <string name="about_check_background">ดำเนินการต่อเบื้องหลัง</string>
+    <string name="notifications_category_unassigned">ยังไม่กำหนด</string>
+    <string name="notifications_change_category">เปลี่ยนหมวดหมู่การแจ้งเตือน</string>
 </resources>

@@ -318,4 +318,6 @@
     <string name="attachment_caption_add">ເພີ່ມຄຳບັນຍາຍ</string>
     <string name="attachment_caption_edit">ແກ້ໄຂຄຳບັນຍາຍ</string>
     <string name="about_check_background">ສືບຕໍ່ໃນພື້ນຫຼັງ</string>
+    <string name="notifications_category_unassigned">ບໍ່ໄດ້ມອບໝາຍ</string>
+    <string name="notifications_change_category">ປ່ຽນໝວດໝູ່ການແຈ້ງເຕືອນ</string>
 </resources>

@@ -320,4 +320,6 @@
     <string name="attachment_caption_add">Pievienot parakstu</string>
     <string name="attachment_caption_edit">Rediģēt parakstu</string>
     <string name="about_check_background">Turpināt fonā</string>
+    <string name="notifications_category_unassigned">Nepiešķirts</string>
+    <string name="notifications_change_category">Mainīt paziņojuma kategoriju</string>
 </resources>

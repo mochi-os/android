@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Dodaj podpis</string>
     <string name="attachment_caption_edit">Edytuj podpis</string>
     <string name="about_check_background">Kontynuuj w tle</string>
+    <string name="notifications_category_unassigned">Nieprzypisane</string>
+    <string name="notifications_change_category">Zmień kategorię powiadomienia</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Shto legjendë</string>
     <string name="attachment_caption_edit">Modifiko legjendën</string>
     <string name="about_check_background">Vazhdo në sfond</string>
+    <string name="notifications_category_unassigned">I pacaktuar</string>
+    <string name="notifications_change_category">Ndrysho kategorinë e njoftimit</string>
 </resources>

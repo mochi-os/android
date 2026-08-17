@@ -323,4 +323,6 @@
     <string name="attachment_caption_add">إضافة تسمية توضيحية</string>
     <string name="attachment_caption_edit">تعديل التسمية التوضيحية</string>
     <string name="about_check_background">المتابعة في الخلفية</string>
+    <string name="notifications_category_unassigned">غير معين</string>
+    <string name="notifications_change_category">تغيير فئة الإشعار</string>
 </resources>

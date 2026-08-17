@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Aggiungi didascalia</string>
     <string name="attachment_caption_edit">Modifica didascalia</string>
     <string name="about_check_background">Continua in background</string>
+    <string name="notifications_category_unassigned">Non assegnato</string>
+    <string name="notifications_change_category">Modifica categoria di notifica</string>
 </resources>

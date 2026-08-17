@@ -268,6 +268,8 @@
     <string name="notifications_clear_all_message">This will remove every notification. They can\'t be recovered.</string>
     <string name="notifications_loading">Loading…</string>
     <string name="notifications_count_n">%1$d new</string>
+    <string name="notifications_change_category">Change notification category</string>
+    <string name="notifications_category_unassigned">Unassigned</string>
 
     <!-- User settings -->
     <string name="settings_title">Settings</string>

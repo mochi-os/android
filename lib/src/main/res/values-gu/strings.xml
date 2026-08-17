@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">કૅપ્શન ઉમેરો</string>
     <string name="attachment_caption_edit">કૅપ્શન સંપાદિત કરો</string>
     <string name="about_check_background">બેકગ્રાઉન્ડમાં ચાલુ રાખો</string>
+    <string name="notifications_category_unassigned">અસોંપાયેલ</string>
+    <string name="notifications_change_category">સૂચના કેટેગરી બદલો</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Προσθήκη λεζάντας</string>
     <string name="attachment_caption_edit">Επεξεργασία λεζάντας</string>
     <string name="about_check_background">Συνέχεια στο παρασκήνιο</string>
+    <string name="notifications_category_unassigned">Χωρίς ανάθεση</string>
+    <string name="notifications_change_category">Αλλαγή κατηγορίας ειδοποίησης</string>
 </resources>

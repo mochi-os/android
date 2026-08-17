@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">ক্যাপশন যোগ করুন</string>
     <string name="attachment_caption_edit">ক্যাপশন সম্পাদনা করুন</string>
     <string name="about_check_background">ব্যাকগ্রাউন্ডে চালিয়ে যান</string>
+    <string name="notifications_category_unassigned">অ্যাসাইন করা হয়নি</string>
+    <string name="notifications_change_category">বিজ্ঞপ্তির ক্যাটাগরি পরিবর্তন করুন</string>
 </resources>

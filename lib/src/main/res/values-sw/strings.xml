@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Ongeza maelezo mafupi</string>
     <string name="attachment_caption_edit">Badilisha maelezo mafupi</string>
     <string name="about_check_background">Endelea chinichini</string>
+    <string name="notifications_category_unassigned">Haijapewa</string>
+    <string name="notifications_change_category">Badilisha kategoria ya arifa</string>
 </resources>

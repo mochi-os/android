@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Додати підпис</string>
     <string name="attachment_caption_edit">Редагувати підпис</string>
     <string name="about_check_background">Продовжити у фоновому режимі</string>
+    <string name="notifications_category_unassigned">Не призначено</string>
+    <string name="notifications_change_category">Змінити категорію сповіщення</string>
 </resources>

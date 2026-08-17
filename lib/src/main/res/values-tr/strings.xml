@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Resim yazısı ekle</string>
     <string name="attachment_caption_edit">Resim yazısını düzenle</string>
     <string name="about_check_background">Arka planda devam et</string>
+    <string name="notifications_category_unassigned">Atanmamış</string>
+    <string name="notifications_change_category">Bildirim kategorisini değiştir</string>
 </resources>

@@ -318,4 +318,6 @@
     <string name="attachment_caption_add">キャプションを追加</string>
     <string name="attachment_caption_edit">キャプションを編集</string>
     <string name="about_check_background">バックグラウンドで続行</string>
+    <string name="notifications_category_unassigned">未割り当て</string>
+    <string name="notifications_change_category">通知カテゴリを変更</string>
 </resources>

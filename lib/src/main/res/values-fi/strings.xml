@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Lisää kuvateksti</string>
     <string name="attachment_caption_edit">Muokkaa kuvatekstiä</string>
     <string name="about_check_background">Jatka taustalla</string>
+    <string name="notifications_category_unassigned">Ei määritetty</string>
+    <string name="notifications_change_category">Vaihda ilmoituskategoriaa</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Ajouter une légende</string>
     <string name="attachment_caption_edit">Modifier la légende</string>
     <string name="about_check_background">Continuer en arrière-plan</string>
+    <string name="notifications_category_unassigned">Non assigné</string>
+    <string name="notifications_change_category">Modifier la catégorie de notification</string>
 </resources>

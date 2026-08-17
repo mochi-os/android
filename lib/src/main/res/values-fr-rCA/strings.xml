@@ -306,4 +306,5 @@
     <string name="person_picker_no_people">Aucune personne</string>
     <string name="person_picker_project_members">Membres du projet</string>
     <string name="person_picker_clear">Effacer la sélection</string>
+    <string name="notifications_category_unassigned">Non assigné</string>
 </resources>

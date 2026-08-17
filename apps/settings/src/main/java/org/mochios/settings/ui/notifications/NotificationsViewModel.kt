@@ -14,11 +14,16 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrapEmpty
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationsRepository
 import org.mochios.android.notifications.NotificationsUnreadStore
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.settings.api.NotifCategory
+import org.mochios.settings.api.NotifTopic
+import org.mochios.settings.api.NotificationPrefsApi
 import javax.inject.Inject
 
 /** Notifications list filter, surfaced as the two top tabs. */
@@ -30,8 +35,27 @@ data class NotificationsUiState(
     val items: List<MochiNotification> = emptyList(),
     val unreadCount: Int = 0,
     val tab: NotificationsTab = NotificationsTab.UNREAD,
+    /**
+     * Categories a notification's topic can be moved to, and the topic rows
+     * that say which one it is in now. Empty when the settings app could not
+     * be read, which simply hides the picker - the list itself comes from the
+     * notifications app and must not fail with it.
+     */
+    val categories: List<NotifCategory> = emptyList(),
+    val topics: List<NotifTopic> = emptyList(),
     val error: MochiError? = null,
-)
+) {
+    /**
+     * The topic row a notification belongs to, or null if the server has none.
+     * The set-category call requires an existing row - it does not create one -
+     * so a notification without one cannot be recategorised yet.
+     */
+    fun topicFor(notification: MochiNotification): NotifTopic? = topics.firstOrNull {
+        it.app == notification.app &&
+            it.topic == notification.topic &&
+            it.`object` == notification.`object`
+    }
+}
 
 @HiltViewModel
 class NotificationsViewModel @Inject constructor(
@@ -39,6 +63,7 @@ class NotificationsViewModel @Inject constructor(
     private val unread: NotificationsUnreadStore,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
+    private val prefs: NotificationPrefsApi,
 ) : ViewModel() {
 
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
@@ -81,7 +106,58 @@ class NotificationsViewModel @Inject constructor(
                     error = e.toMochiError(),
                 )
             }
+            loadCategories()
         }
+    }
+
+    /**
+     * Categories and topic rows for the per-notification picker. Failure is
+     * swallowed on purpose: these come from the settings app, the list comes
+     * from the notifications app, and losing the picker must not put an error
+     * over a list that loaded perfectly well. The picker just does not appear.
+     */
+    private suspend fun loadCategories() {
+        try {
+            val categories = prefs.getCategories().unwrapRaw()
+            val topics = prefs.getTopics().unwrapRaw()
+            _uiState.value = _uiState.value.copy(categories = categories, topics = topics)
+        } catch (_: Exception) {
+            _uiState.value = _uiState.value.copy(categories = emptyList(), topics = emptyList())
+        }
+    }
+
+    /**
+     * Move a notification's topic to [categoryId], or to no category when it is
+     * null. Applied locally first so the row updates immediately, then reverted
+     * if the server refuses.
+     */
+    fun setCategory(topic: NotifTopic, categoryId: String?) {
+        viewModelScope.launch {
+            val before = _uiState.value.topics
+            _uiState.value = _uiState.value.copy(
+                topics = before.map {
+                    if (it.app == topic.app && it.topic == topic.topic && it.`object` == topic.`object`) {
+                        it.copy(category = categoryId)
+                    } else {
+                        it
+                    }
+                },
+            )
+            try {
+                prefs.setTopicCategory(
+                    app = topic.app,
+                    topic = topic.topic,
+                    obj = topic.`object`,
+                    category = categoryId ?: "",
+                ).unwrapEmpty()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(topics = before, error = e.toMochiError())
+            }
+        }
+    }
+
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 
     fun markRead(id: String) {

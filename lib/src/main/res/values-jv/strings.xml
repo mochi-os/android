@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Tambahake katrangan</string>
     <string name="attachment_caption_edit">Sunting katrangan</string>
     <string name="about_check_background">Terus ing latar mburi</string>
+    <string name="notifications_category_unassigned">Ora ditugasaké</string>
+    <string name="notifications_change_category">Owahi kategori notifikasi</string>
 </resources>

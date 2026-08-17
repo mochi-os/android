@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Tambahkeun katerangan</string>
     <string name="attachment_caption_edit">Édit katerangan</string>
     <string name="about_check_background">Teruskeun di latar tukang</string>
+    <string name="notifications_category_unassigned">Teu ditugaskeun</string>
+    <string name="notifications_change_category">Ganti katégori bewara</string>
 </resources>

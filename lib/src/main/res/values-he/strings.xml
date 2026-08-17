@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">הוספת כיתוב</string>
     <string name="attachment_caption_edit">עריכת כיתוב</string>
     <string name="about_check_background">המשך ברקע</string>
+    <string name="notifications_category_unassigned">לא משויך</string>
+    <string name="notifications_change_category">שינוי קטגוריית ההתראה</string>
 </resources>

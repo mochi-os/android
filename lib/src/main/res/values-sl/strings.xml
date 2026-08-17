@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Dodaj napis</string>
     <string name="attachment_caption_edit">Uredi napis</string>
     <string name="about_check_background">Nadaljuj v ozadju</string>
+    <string name="notifications_category_unassigned">Nedodeljeno</string>
+    <string name="notifications_change_category">Spremeni kategorijo obvestila</string>
 </resources>

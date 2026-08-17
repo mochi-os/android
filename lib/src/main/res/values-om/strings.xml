@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Ibsa dabaluu</string>
     <string name="attachment_caption_edit">Ibsa gulaaluu</string>
     <string name="about_check_background">Duubaan itti fufi</string>
+    <string name="notifications_category_unassigned">Hin ramadamne</string>
+    <string name="notifications_change_category">Ramaddii beeksisaa jijjiiri</string>
 </resources>

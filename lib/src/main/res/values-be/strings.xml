@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Дадаць подпіс</string>
     <string name="attachment_caption_edit">Рэдагаваць подпіс</string>
     <string name="about_check_background">Працягнуць у фоне</string>
+    <string name="notifications_category_unassigned">Не прызначана</string>
+    <string name="notifications_change_category">Змяніць катэгорыю апавяшчэння</string>
 </resources>

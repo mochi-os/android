@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">افزودن شرح</string>
     <string name="attachment_caption_edit">ویرایش شرح</string>
     <string name="about_check_background">ادامه در پس‌زمینه</string>
+    <string name="notifications_category_unassigned">بدون اختصاص</string>
+    <string name="notifications_change_category">تغییر دسته اعلان</string>
 </resources>

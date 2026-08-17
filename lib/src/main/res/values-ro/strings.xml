@@ -320,4 +320,6 @@
     <string name="attachment_caption_add">Adaugă legendă</string>
     <string name="attachment_caption_edit">Editează legenda</string>
     <string name="about_check_background">Continuă în fundal</string>
+    <string name="notifications_category_unassigned">Neatribuit</string>
+    <string name="notifications_change_category">Schimbă categoria notificării</string>
 </resources>

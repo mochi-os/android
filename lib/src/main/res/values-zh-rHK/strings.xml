@@ -304,4 +304,6 @@
         <item quantity="other">%1$d 位訂閱者</item>
     </plurals>
     <string name="about_check_background">在背景繼續</string>
+    <string name="notifications_category_unassigned">未指派</string>
+    <string name="notifications_change_category">更改通知類別</string>
 </resources>

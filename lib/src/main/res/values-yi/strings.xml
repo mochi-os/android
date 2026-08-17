@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">צוגעבן אן אונטערשריפֿט</string>
     <string name="attachment_caption_edit">רעדאַקטירן די אונטערשריפֿט</string>
     <string name="about_check_background">ממשיך אין הינטערגרונט</string>
+    <string name="notifications_category_unassigned">אומצוגעטיילט</string>
+    <string name="notifications_change_category">טוישט די מעלדונג־קאַטעגאָריע</string>
 </resources>

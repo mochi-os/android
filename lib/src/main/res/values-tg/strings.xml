@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Илова кардани зернавис</string>
     <string name="attachment_caption_edit">Таҳрири зернавис</string>
     <string name="about_check_background">Дар замина идома додан</string>
+    <string name="notifications_category_unassigned">Таъин нашудааст</string>
+    <string name="notifications_change_category">Тағйири категорияи огоҳинома</string>
 </resources>

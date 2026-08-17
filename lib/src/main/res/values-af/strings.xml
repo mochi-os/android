@@ -321,4 +321,6 @@
     <string name="attachment_caption_add">Voeg byskrif by</string>
     <string name="attachment_caption_edit">Wysig byskrif</string>
     <string name="about_check_background">Gaan voort in die agtergrond</string>
+    <string name="notifications_category_unassigned">Nie toegewys nie</string>
+    <string name="notifications_change_category">Verander kennisgewingkategorie</string>
 </resources>

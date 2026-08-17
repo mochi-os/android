@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">සිරස්තලයක් එක් කරන්න</string>
     <string name="attachment_caption_edit">සිරස්තලය සංස්කරණය කරන්න</string>
     <string name="about_check_background">පසුබිමෙහි ඉදිරියට</string>
+    <string name="notifications_category_unassigned">පවරා නැත</string>
+    <string name="notifications_change_category">දැනුම්දීම් කාණ්ඩය වෙනස් කරන්න</string>
 </resources>

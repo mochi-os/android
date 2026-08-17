@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">መግለጫ ጽሑፍ አክል</string>
     <string name="attachment_caption_edit">መግለጫ ጽሑፍን አርትዕ</string>
     <string name="about_check_background">በጀርባ ቀጥል</string>
+    <string name="notifications_category_unassigned">ያልተመደበ</string>
+    <string name="notifications_change_category">የማሳወቂያ ምድብ ቀይር</string>
 </resources>

@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">ਕੈਪਸ਼ਨ ਜੋੜੋ</string>
     <string name="attachment_caption_edit">ਕੈਪਸ਼ਨ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="about_check_background">ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="notifications_category_unassigned">ਨਾ ਨਿਰਧਾਰਤ</string>
+    <string name="notifications_change_category">ਨੋਟੀਫਿਕੇਸ਼ਨ ਸ਼੍ਰੇਣੀ ਬਦਲੋ</string>
 </resources>

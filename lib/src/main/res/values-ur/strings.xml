@@ -62,8 +62,8 @@
     <string name="reaction_disagree">اختلاف</string>
     <string name="push_service_action_hide">چھپائیں</string>
     <string name="about_close">بند کریں</string>
-    <string name="notifications_open">notifications</string>
-    <string name="notifications_title">notifications</string>
+    <string name="notifications_open">اطلاعات</string>
+    <string name="notifications_title">اطلاعات</string>
     <string name="notifications_empty">کوئی notifications نہیں</string>
     <string name="notifications_empty_unread">آپ سب دیکھ چکے ہیں</string>
     <string name="notifications_tab_unread">غیر پڑھی</string>
@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">کیپشن شامل کریں</string>
     <string name="attachment_caption_edit">کیپشن میں ترمیم کریں</string>
     <string name="about_check_background">پس منظر میں جاری رکھیں</string>
+    <string name="notifications_category_unassigned">غیر تفویض شدہ</string>
+    <string name="notifications_change_category">اطلاع کا زمرہ تبدیل کریں</string>
 </resources>

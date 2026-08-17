@@ -319,4 +319,6 @@
     <string name="attachment_caption_add">Fi àlàyé kún</string>
     <string name="attachment_caption_edit">Ṣàtúnṣe àlàyé</string>
     <string name="about_check_background">Tẹ̀síwájú ní ẹ̀hìn</string>
+    <string name="notifications_category_unassigned">Aláìyàn</string>
+    <string name="notifications_change_category">Yí ẹ̀ka ìfìtọ́nisí padà</string>
 </resources>
