@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -296,14 +297,17 @@ fun ObjectDetailSheet(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = stringResource(R.string.projects_object_delete_title),
-            message = stringResource(R.string.projects_object_delete_message),
+            text = stringResource(R.string.projects_object_delete_message),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteConfirm = false
                 onDeleteObject()
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

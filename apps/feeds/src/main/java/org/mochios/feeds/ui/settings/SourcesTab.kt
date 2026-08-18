@@ -32,8 +32,6 @@ import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Shield
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
@@ -46,13 +44,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -72,6 +68,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Source
@@ -244,7 +241,7 @@ private fun PermissionRequestDialog(
     onAllow: () -> Unit,
     onDeny: () -> Unit
 ) {
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDeny,
         icon = {
             Icon(
@@ -253,13 +250,9 @@ private fun PermissionRequestDialog(
                 tint = MaterialTheme.colorScheme.primary
             )
         },
-        title = {
-            Text(
-                text = stringResource(R.string.feeds_permission_request_title),
-                textAlign = TextAlign.Center
-            )
-        },
-        text = {
+        title = stringResource(R.string.feeds_permission_request_title),
+        titleAlign = TextAlign.Center,
+        content = {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
                     text = stringResource(R.string.feeds_permission_request_message, appId),
@@ -280,16 +273,9 @@ private fun PermissionRequestDialog(
                 }
             }
         },
-        confirmButton = {
-            Button(onClick = onAllow) {
-                Text(stringResource(R.string.feeds_permission_allow))
-            }
-        },
-        dismissButton = {
-            OutlinedButton(onClick = onDeny) {
-                Text(stringResource(R.string.feeds_permission_deny))
-            }
-        }
+        confirmText = stringResource(R.string.feeds_permission_allow),
+        onConfirm = onAllow,
+        dismissText = stringResource(R.string.feeds_permission_deny),
     )
 }
 
@@ -485,10 +471,10 @@ private fun AddSourceDialog(
         else -> ""
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_add_source)) },
-        text = {
+        title = stringResource(R.string.feeds_add_source),
+        content = {
             Column {
                 if (urlRequired) {
                     OutlinedTextField(
@@ -543,19 +529,10 @@ private fun AddSourceDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onAdd(url, type) },
-                enabled = !urlRequired || url.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_add),
+        onConfirm = { onAdd(url, type) },
+        confirmEnabled = !urlRequired || url.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -576,10 +553,10 @@ private fun EditSourceDialog(
     var credibility by remember { mutableFloatStateOf(initialCredibility.toFloat()) }
     var transform by remember { mutableStateOf(source.transform) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_edit_source)) },
-        text = {
+        title = stringResource(R.string.feeds_edit_source),
+        content = {
             Column {
                 OutlinedTextField(
                     value = name,
@@ -641,25 +618,16 @@ private fun EditSourceDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val credibilityValue = credibility.toInt()
-                    onSave(
-                        name.takeIf { it != source.name },
-                        credibilityValue.takeIf { value -> isRss && value != initialCredibility },
-                        transform.takeIf { it != source.transform }
-                    )
-                }
-            ) {
-                Text(stringResource(MochiR.string.common_save))
-            }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = {
+            val credibilityValue = credibility.toInt()
+            onSave(
+                name.takeIf { it != source.name },
+                credibilityValue.takeIf { value -> isRss && value != initialCredibility },
+                transform.takeIf { it != source.transform }
+            )
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -669,20 +637,13 @@ private fun SuggestedCredibilityDialog(
     onAccept: () -> Unit,
     onDismiss: () -> Unit
 ) {
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_suggested_credibility_title)) },
-        text = { Text(stringResource(R.string.feeds_suggested_credibility_body, suggested)) },
-        confirmButton = {
-            TextButton(onClick = onAccept) {
-                Text(stringResource(R.string.feeds_suggested_credibility_accept))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(R.string.feeds_suggested_credibility_keep))
-            }
-        }
+        title = stringResource(R.string.feeds_suggested_credibility_title),
+        text = stringResource(R.string.feeds_suggested_credibility_body, suggested),
+        confirmText = stringResource(R.string.feeds_suggested_credibility_accept),
+        onConfirm = onAccept,
+        dismissText = stringResource(R.string.feeds_suggested_credibility_keep),
     )
 }
 
@@ -694,10 +655,10 @@ private fun RemoveSourceDialog(
 ) {
     var deletePosts by remember { mutableStateOf(false) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_remove_source)) },
-        text = {
+        title = stringResource(R.string.feeds_remove_source),
+        content = {
             Column {
                 Text(stringResource(R.string.feeds_remove_source_confirm, source.name.ifEmpty { source.url }))
                 Spacer(modifier = Modifier.height(8.dp))
@@ -711,15 +672,9 @@ private fun RemoveSourceDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onRemove(deletePosts) }) {
-                Text(stringResource(R.string.feeds_remove), color = MaterialTheme.colorScheme.error)
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(R.string.feeds_remove),
+        onConfirm = { onRemove(deletePosts) },
+        destructive = true,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

@@ -18,7 +18,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -29,7 +28,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -42,6 +40,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
@@ -233,15 +232,11 @@ private fun ZoneDialog(
     val regionLabel = REGION_CHOICES.firstOrNull { it.wireCode == region }
         ?.let { stringResource(it.labelRes) } ?: region
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = {
-            Text(
-                if (initial == null) stringResource(R.string.market_editor_zone_add)
-                else stringResource(R.string.market_editor_zone_edit),
-            )
-        },
-        text = {
+        title = if (initial == null) stringResource(R.string.market_editor_zone_add)
+        else stringResource(R.string.market_editor_zone_edit),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 ExposedDropdownMenuBox(
                     expanded = regionExpanded,
@@ -299,31 +294,22 @@ private fun ZoneDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val minor = toMinorUnits(priceText, currency)
-                    onSave(
-                        ShippingOption(
-                            id = initial?.id ?: "",
-                            listing = initial?.listing ?: "",
-                            region = region,
-                            price = minor,
-                            currency = currency.name.lowercase(),
-                            days = daysText.trim(),
-                            notes = notesText.trim(),
-                        ),
-                    )
-                },
-            ) {
-                Text(stringResource(R.string.market_editor_zone_save))
-            }
+        confirmText = stringResource(R.string.market_editor_zone_save),
+        onConfirm = {
+            val minor = toMinorUnits(priceText, currency)
+            onSave(
+                ShippingOption(
+                    id = initial?.id ?: "",
+                    listing = initial?.listing ?: "",
+                    region = region,
+                    price = minor,
+                    currency = currency.name.lowercase(),
+                    days = daysText.trim(),
+                    notes = notesText.trim(),
+                ),
+            )
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(R.string.market_editor_zone_cancel))
-            }
-        },
+        dismissText = stringResource(R.string.market_editor_zone_cancel),
     )
 }
 

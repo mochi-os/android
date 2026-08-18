@@ -30,7 +30,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -39,7 +38,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -55,6 +53,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
 import org.mochios.android.i18n.ThemeInfo
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.theme.oklch
 import org.mochios.settings.ui.preferences.PrefRow
@@ -219,23 +218,16 @@ fun DisplayScreen(
         }
 
         if (showResetConfirm) {
-            AlertDialog(
+            MochiAlertDialog(
                 onDismissRequest = { showResetConfirm = false },
-                title = { Text(stringResource(R.string.settings_display_reset_confirm_title)) },
-                text = { Text(stringResource(R.string.settings_display_reset_confirm_message)) },
-                confirmButton = {
-                    TextButton(
-                        onClick = {
-                            showResetConfirm = false
-                            viewModel.reset(DISPLAY_RESET_KEYS)
-                        },
-                    ) { Text(stringResource(R.string.settings_reset)) }
+                title = stringResource(R.string.settings_display_reset_confirm_title),
+                text = stringResource(R.string.settings_display_reset_confirm_message),
+                confirmText = stringResource(R.string.settings_reset),
+                onConfirm = {
+                    showResetConfirm = false
+                    viewModel.reset(DISPLAY_RESET_KEYS)
                 },
-                dismissButton = {
-                    TextButton(onClick = { showResetConfirm = false }) {
-                        Text(stringResource(R.string.common_cancel))
-                    }
-                },
+                dismissText = stringResource(R.string.common_cancel),
             )
         }
 

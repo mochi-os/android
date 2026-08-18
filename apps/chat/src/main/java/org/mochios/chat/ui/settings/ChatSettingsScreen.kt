@@ -61,10 +61,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CompactTextField
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.Truncate
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
@@ -318,32 +318,32 @@ fun ChatSettingsScreen(
     val cancelLabel = stringResource(MochiR.string.common_cancel)
 
     memberToRemove?.let { member ->
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { memberToRemove = null },
             title = removeTitle,
-            message = removeMessageTemplate.format(member.name),
-            confirmLabel = removeLabel,
-            dismissLabel = cancelLabel,
-            isDestructive = true,
+            text = removeMessageTemplate.format(member.name),
+            confirmText = removeLabel,
             onConfirm = {
                 viewModel.removeMember(member)
                 memberToRemove = null
             },
-            onDismiss = { memberToRemove = null }
+            destructive = true,
+            dismissText = cancelLabel,
         )
     }
 
     if (showDeleteDialog) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteDialog = false },
             title = stringResource(R.string.chat_settings_delete_title),
-            message = stringResource(R.string.chat_settings_delete_message),
-            confirmLabel = stringResource(R.string.chat_settings_delete),
-            dismissLabel = cancelLabel,
-            isDestructive = true,
+            text = stringResource(R.string.chat_settings_delete_message),
+            confirmText = stringResource(R.string.chat_settings_delete),
             onConfirm = {
                 showDeleteDialog = false
                 viewModel.deleteLocally()
             },
-            onDismiss = { showDeleteDialog = false }
+            destructive = true,
+            dismissText = cancelLabel,
         )
     }
 
@@ -371,10 +371,10 @@ private fun AddMemberDialog(
     val filtered = if (query.isBlank()) friends
     else friends.filter { it.name.contains(query, ignoreCase = true) }
 
-    androidx.compose.material3.AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.chat_settings_add_member)) },
-        text = {
+        title = stringResource(R.string.chat_settings_add_member),
+        content = {
             Column {
                 OutlinedTextField(
                     value = query,
@@ -418,12 +418,7 @@ private fun AddMemberDialog(
                 }
             }
         },
-        confirmButton = {},
-        dismissButton = {
-            androidx.compose.material3.TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

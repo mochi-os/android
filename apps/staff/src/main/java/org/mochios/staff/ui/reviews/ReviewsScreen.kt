@@ -54,13 +54,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
@@ -79,7 +80,7 @@ import org.mochios.staff.ui.components.StaffStatusBadge
  *    body / status / created columns.
  *  - Per-row overflow menu offering `Restore` (when removed) and `Remove`
  *    (when not already removed).
- *  - Remove flows through a [ConfirmDialog] with the
+ *  - Remove flows through a [MochiAlertDialog] with the
  *    `reviewer → subject on listing` summary; the action is destructive and
  *    cannot be undone.
  *
@@ -133,7 +134,7 @@ fun ReviewsScreen(
         )
     }
 
-    // Remove confirmation. Uses lib's ConfirmDialog with the
+    // Remove confirmation. Uses lib's MochiAlertDialog with the
     // "reviewer → subject on listing" body string the web version composes.
     val pending = state.pendingRemove
     if (pending != null) {
@@ -149,13 +150,14 @@ fun ReviewsScreen(
         } else {
             stringResource(R.string.staff_reviews_remove_desc_short, reviewerName, subjectName)
         }
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelRemove,
             title = stringResource(R.string.staff_reviews_remove_title),
-            message = message,
-            confirmLabel = stringResource(R.string.staff_reviews_remove_confirm),
-            isDestructive = true,
+            text = message,
+            confirmText = stringResource(R.string.staff_reviews_remove_confirm),
             onConfirm = viewModel::confirmRemove,
-            onDismiss = viewModel::cancelRemove,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

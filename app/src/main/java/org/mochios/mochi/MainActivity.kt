@@ -56,7 +56,7 @@ import org.mochios.android.push.PendingDeepLink
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.ui.AppBootstrapHost
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.theme.MochiTheme
 import org.mochios.android.R as MochiR
 import org.mochios.android.update.UpdateInstaller
@@ -321,16 +321,17 @@ class MainActivity : ComponentActivity() {
                             }
 
                             if (showLogoutConfirm) {
-                                ConfirmDialog(
+                                MochiAlertDialog(
+                                    onDismissRequest = { showLogoutConfirm = false },
                                     title = stringResource(MochiR.string.common_logout),
-                                    message = stringResource(MochiR.string.common_logout_confirm_message),
-                                    confirmLabel = stringResource(MochiR.string.common_logout),
-                                    isDestructive = true,
+                                    text = stringResource(MochiR.string.common_logout_confirm_message),
+                                    confirmText = stringResource(MochiR.string.common_logout),
                                     onConfirm = {
                                         showLogoutConfirm = false
                                         onLogout()
                                     },
-                                    onDismiss = { showLogoutConfirm = false },
+                                    destructive = true,
+                                    dismissText = stringResource(MochiR.string.common_cancel),
                                 )
                             }
                         }

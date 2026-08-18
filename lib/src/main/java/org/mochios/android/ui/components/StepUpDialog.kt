@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -188,10 +187,10 @@ fun StepUpDialog(
         )
     val showFooterVerify = !loading && (remaining.contains("email") || remaining.contains("totp"))
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!busy) onDismiss() },
-        title = { Text(stringResource(R.string.stepup_title)) },
-        text = {
+        title = stringResource(R.string.stepup_title),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(
                     stringResource(R.string.stepup_description),
@@ -280,17 +279,12 @@ fun StepUpDialog(
                 }
             }
         },
-        confirmButton = {
-            if (showFooterVerify) {
-                TextButton(onClick = { submit() }, enabled = canVerify) {
-                    Text(stringResource(R.string.stepup_verify))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !busy) {
-                Text(stringResource(R.string.common_cancel))
-            }
-        },
+        // The verify button is absent until a code is actually being asked for.
+        confirmText = if (showFooterVerify) stringResource(R.string.stepup_verify) else null,
+        onConfirm = { submit() },
+        confirmEnabled = canVerify,
+        dismissText = stringResource(R.string.common_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !busy,
     )
 }

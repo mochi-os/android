@@ -62,12 +62,13 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
+import org.mochios.android.R as MochiR
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -98,7 +99,7 @@ import org.mochios.market.ui.components.StatusBadge
  *    stays visible so the user can see where future history will appear.
  *  - Action button row: Pause / Resume / Reactivate / Cancel, gated by
  *    the lifecycle status the same way [MySubscriptionsScreen]'s overflow
- *    menu does. Cancel goes through a [ConfirmDialog].
+ *    menu does. Cancel goes through a [MochiAlertDialog].
  */
 @Composable
 fun SubscriptionDetailScreen(
@@ -176,16 +177,17 @@ fun SubscriptionDetailScreen(
     }
 
     if (pendingCancel) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingCancel = false },
             title = stringResource(R.string.market_subscriptions_cancel_title),
-            message = stringResource(R.string.market_subscriptions_cancel_body),
-            confirmLabel = stringResource(R.string.market_subscriptions_cancel_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.market_subscriptions_cancel_body),
+            confirmText = stringResource(R.string.market_subscriptions_cancel_confirm),
             onConfirm = {
                 viewModel.cancel()
                 pendingCancel = false
             },
-            onDismiss = { pendingCancel = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

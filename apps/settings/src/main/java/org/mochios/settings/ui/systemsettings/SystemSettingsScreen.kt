@@ -24,7 +24,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Restore
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -40,7 +39,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -61,6 +59,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.SecretField
 import org.mochios.android.util.NaturalCompare
@@ -553,33 +552,24 @@ private fun ResetButton(
         )
     }
     if (confirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirm = false },
-            title = { Text(stringResource(R.string.system_settings_reset_title)) },
-            text = {
-                Text(
-                    if (setting.default.isNotEmpty()) {
-                        stringResource(
-                            R.string.system_settings_reset_message,
-                            label,
-                            setting.default,
-                        )
-                    } else {
-                        stringResource(R.string.system_settings_reset_message_empty, label)
-                    }
+            title = stringResource(R.string.system_settings_reset_title),
+            text = if (setting.default.isNotEmpty()) {
+                stringResource(
+                    R.string.system_settings_reset_message,
+                    label,
+                    setting.default,
                 )
+            } else {
+                stringResource(R.string.system_settings_reset_message_empty, label)
             },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirm = false
-                    onConfirm()
-                }) { Text(stringResource(R.string.system_settings_reset)) }
+            confirmText = stringResource(R.string.system_settings_reset),
+            onConfirm = {
+                confirm = false
+                onConfirm()
             },
-            dismissButton = {
-                TextButton(onClick = { confirm = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

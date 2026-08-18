@@ -10,10 +10,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -28,6 +26,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.feeds.model.Post
 import org.mochios.android.R as MochiR
 
@@ -127,14 +126,11 @@ fun PostBody(
     }
 
     altText?.let { text ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { altText = null },
-            text = { Text(text) },
-            confirmButton = {
-                TextButton(onClick = { altText = null }) {
-                    Text(stringResource(MochiR.string.common_close))
-                }
-            },
+            text = text,
+            confirmText = stringResource(MochiR.string.common_close),
+            onConfirm = { altText = null },
         )
     }
 }

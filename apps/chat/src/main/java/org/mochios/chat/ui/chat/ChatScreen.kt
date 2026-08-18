@@ -57,7 +57,6 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -115,6 +114,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -651,80 +651,47 @@ private fun ChatContent(
             }
 
             pendingDelete?.let { ids ->
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { pendingDelete = null },
-                    title = { Text(stringResource(R.string.chat_delete_confirm_title)) },
-                    text = { Text(stringResource(R.string.chat_delete_confirm_body)) },
-                    confirmButton = {
-                        TextButton(
-                            onClick = {
-                                viewModel.deleteMessages(ids)
-                                pendingDelete = null
-                            }
-                        ) {
-                            Text(
-                                stringResource(MochiR.string.common_delete),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.chat_delete_confirm_title),
+                    text = stringResource(R.string.chat_delete_confirm_body),
+                    confirmText = stringResource(MochiR.string.common_delete),
+                    onConfirm = {
+                        viewModel.deleteMessages(ids)
+                        pendingDelete = null
                     },
-                    dismissButton = {
-                        TextButton(onClick = { pendingDelete = null }) {
-                            Text(stringResource(MochiR.string.common_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
                 )
             }
 
             if (showLeaveDialog) {
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { showLeaveDialog = false },
-                    title = { Text(stringResource(R.string.chat_settings_leave_title)) },
-                    text = { Text(stringResource(R.string.chat_settings_leave_message)) },
-                    confirmButton = {
-                        TextButton(
-                            onClick = {
-                                showLeaveDialog = false
-                                viewModel.leaveChat()
-                            }
-                        ) {
-                            Text(
-                                stringResource(R.string.chat_settings_leave),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.chat_settings_leave_title),
+                    text = stringResource(R.string.chat_settings_leave_message),
+                    confirmText = stringResource(R.string.chat_settings_leave),
+                    onConfirm = {
+                        showLeaveDialog = false
+                        viewModel.leaveChat()
                     },
-                    dismissButton = {
-                        TextButton(onClick = { showLeaveDialog = false }) {
-                            Text(stringResource(MochiR.string.common_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
                 )
             }
 
             if (showDeleteDialog) {
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { showDeleteDialog = false },
-                    title = { Text(stringResource(R.string.chat_settings_delete_title)) },
-                    text = { Text(stringResource(R.string.chat_settings_delete_message)) },
-                    confirmButton = {
-                        TextButton(
-                            onClick = {
-                                showDeleteDialog = false
-                                viewModel.deleteChat()
-                            }
-                        ) {
-                            Text(
-                                stringResource(R.string.chat_settings_delete),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.chat_settings_delete_title),
+                    text = stringResource(R.string.chat_settings_delete_message),
+                    confirmText = stringResource(R.string.chat_settings_delete),
+                    onConfirm = {
+                        showDeleteDialog = false
+                        viewModel.deleteChat()
                     },
-                    dismissButton = {
-                        TextButton(onClick = { showDeleteDialog = false }) {
-                            Text(stringResource(MochiR.string.common_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
                 )
             }
             }

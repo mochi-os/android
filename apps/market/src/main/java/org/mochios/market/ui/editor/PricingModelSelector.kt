@@ -18,7 +18,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Event
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -47,6 +46,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.text.KeyboardOptions
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
@@ -432,41 +432,36 @@ private fun StartTimeField(
             initialHour = initial.get(java.util.Calendar.HOUR_OF_DAY),
             initialMinute = initial.get(java.util.Calendar.MINUTE),
         )
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showTime = false },
-            title = { Text(stringResource(R.string.market_editor_start_time)) },
-            text = { TimePicker(state = timeState) },
-            confirmButton = {
-                TextButton(onClick = {
-                    val dm = pickedDateMillis
-                    if (dm != null) {
-                        // DatePicker returns UTC-midnight millis; read the
-                        // calendar date in UTC, then rebuild in the local zone
-                        // with the picked time so the epoch matches the user's
-                        // local datetime (as web's datetime-local does).
-                        val utc = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
-                            .apply { timeInMillis = dm }
-                        val local = java.util.Calendar.getInstance().apply {
-                            set(
-                                utc.get(java.util.Calendar.YEAR),
-                                utc.get(java.util.Calendar.MONTH),
-                                utc.get(java.util.Calendar.DAY_OF_MONTH),
-                                timeState.hour,
-                                timeState.minute,
-                                0,
-                            )
-                            set(java.util.Calendar.MILLISECOND, 0)
-                        }
-                        onChange(local.timeInMillis / 1000L)
+            title = stringResource(R.string.market_editor_start_time),
+            content = { TimePicker(state = timeState) },
+            confirmText = stringResource(MochiR.string.common_save),
+            onConfirm = {
+                val dm = pickedDateMillis
+                if (dm != null) {
+                    // DatePicker returns UTC-midnight millis; read the
+                    // calendar date in UTC, then rebuild in the local zone
+                    // with the picked time so the epoch matches the user's
+                    // local datetime (as web's datetime-local does).
+                    val utc = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
+                        .apply { timeInMillis = dm }
+                    val local = java.util.Calendar.getInstance().apply {
+                        set(
+                            utc.get(java.util.Calendar.YEAR),
+                            utc.get(java.util.Calendar.MONTH),
+                            utc.get(java.util.Calendar.DAY_OF_MONTH),
+                            timeState.hour,
+                            timeState.minute,
+                            0,
+                        )
+                        set(java.util.Calendar.MILLISECOND, 0)
                     }
-                    showTime = false
-                }) { Text(stringResource(MochiR.string.common_save)) }
-            },
-            dismissButton = {
-                TextButton(onClick = { showTime = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
+                    onChange(local.timeInMillis / 1000L)
                 }
+                showTime = false
             },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

@@ -43,9 +43,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -67,7 +67,7 @@ import org.mochios.android.R as MochiR
  *  - [CommentAttachments] below the body.
  *  - Action chips: Reply (always), Edit (`author == currentUserId`),
  *    Delete (`author == currentUserId || isOwner`). Delete opens
- *    [ConfirmDialog] before firing.
+ *    [MochiAlertDialog] before firing.
  *  - Each child is indented by `(depth + 1) * 16dp` and renders via the same
  *    composable, allowing arbitrary thread depth.
  *  - Collapse toggle on the avatar — when the user taps the avatar to
@@ -367,16 +367,17 @@ fun WikiCommentThread(
         }
 
         if (deleting) {
-            ConfirmDialog(
+            MochiAlertDialog(
+                onDismissRequest = { deleting = false },
                 title = stringResource(R.string.wikis_comment_delete_confirm_title),
-                message = stringResource(R.string.wikis_comment_delete_confirm_message),
-                confirmLabel = stringResource(R.string.wikis_comment_action_delete),
-                isDestructive = true,
+                text = stringResource(R.string.wikis_comment_delete_confirm_message),
+                confirmText = stringResource(R.string.wikis_comment_action_delete),
                 onConfirm = {
                     deleting = false
                     onDelete?.invoke(comment.id)
                 },
-                onDismiss = { deleting = false },
+                destructive = true,
+                dismissText = stringResource(MochiR.string.common_cancel),
             )
         }
     }

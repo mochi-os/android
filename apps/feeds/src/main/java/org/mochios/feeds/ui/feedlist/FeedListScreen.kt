@@ -33,7 +33,6 @@ import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Logout
 import androidx.compose.material.icons.outlined.RssFeed
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Badge
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -48,7 +47,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -81,6 +79,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.feeds.R
@@ -267,10 +266,10 @@ private fun GlobalRssExportDialog(
     val clipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
     val copiedMessage = stringResource(R.string.feeds_rss_url_copied)
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feeds_global_rss_export)) },
-        text = {
+        title = stringResource(R.string.feeds_global_rss_export),
+        content = {
             Column {
                 Text(
                     text = stringResource(R.string.feeds_rss_description),
@@ -323,11 +322,8 @@ private fun GlobalRssExportDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_close))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_close),
+        onConfirm = onDismiss,
     )
 }
 

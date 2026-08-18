@@ -130,7 +130,7 @@ class ReviewsViewModel @Inject constructor(
 
     fun runAction(review: Review, action: String) {
         // Restore runs inline (no confirmation). Remove flows through
-        // [askRemove] -> [confirmRemove] so the user gets the ConfirmDialog.
+        // [askRemove] -> [confirmRemove] so the user gets the confirmation dialog.
         viewModelScope.launch {
             try {
                 val updated = repo.actionReview(review.id, action)

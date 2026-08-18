@@ -20,7 +20,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -32,7 +31,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -51,6 +49,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.settings.R
 import org.mochios.settings.api.Session
 import org.mochios.android.R as MochiR
@@ -167,21 +166,17 @@ private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Uni
         }
     }
     if (confirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirm = false },
-            title = { Text(stringResource(R.string.sessions_revoke_title)) },
-            text = { Text(stringResource(R.string.sessions_revoke_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirm = false
-                    onRevoke()
-                }) { Text(stringResource(R.string.sessions_revoke), color = MaterialTheme.colorScheme.error) }
+            title = stringResource(R.string.sessions_revoke_title),
+            text = stringResource(R.string.sessions_revoke_message),
+            confirmText = stringResource(R.string.sessions_revoke),
+            onConfirm = {
+                confirm = false
+                onRevoke()
             },
-            dismissButton = {
-                TextButton(onClick = { confirm = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }

@@ -18,10 +18,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -45,6 +43,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.util.NaturalCompare
 import java.util.Locale
@@ -291,23 +290,16 @@ fun UserSettingsScreen(
         }
 
         if (showResetConfirm) {
-            AlertDialog(
+            MochiAlertDialog(
                 onDismissRequest = { showResetConfirm = false },
-                title = { Text(stringResource(R.string.settings_reset_confirm_title)) },
-                text = { Text(stringResource(R.string.settings_reset_confirm_message)) },
-                confirmButton = {
-                    TextButton(
-                        onClick = {
-                            showResetConfirm = false
-                            viewModel.reset(REGIONAL_PREF_KEYS)
-                        },
-                    ) { Text(stringResource(R.string.settings_reset)) }
+                title = stringResource(R.string.settings_reset_confirm_title),
+                text = stringResource(R.string.settings_reset_confirm_message),
+                confirmText = stringResource(R.string.settings_reset),
+                onConfirm = {
+                    showResetConfirm = false
+                    viewModel.reset(REGIONAL_PREF_KEYS)
                 },
-                dismissButton = {
-                    TextButton(onClick = { showResetConfirm = false }) {
-                        Text(stringResource(R.string.common_cancel))
-                    }
-                },
+                dismissText = stringResource(R.string.common_cancel),
             )
         }
     }

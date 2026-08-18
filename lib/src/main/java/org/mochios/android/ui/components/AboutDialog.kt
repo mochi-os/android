@@ -13,13 +13,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -106,7 +104,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
         }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = {
             // Closing mid-download no longer abandons it, but the process can
             // still be killed — hand it to WorkManager so it resumes on the
@@ -121,8 +119,17 @@ fun AboutDialog(onDismiss: () -> Unit) {
             // close the dialog; both are deliberate.
             dismissOnClickOutside = running == null,
         ),
-        title = { Text(stringResource(R.string.about_title)) },
-        text = {
+        title = stringResource(R.string.about_title),
+        // Say what closing does while a download is running, so the answer to
+        // "is it still going?" is on the button itself.
+        confirmText = stringResource(
+            if (running != null) R.string.about_check_background else R.string.about_close
+        ),
+        onConfirm = {
+            if (running != null) UpdateChecker.enqueueBackgroundDownload(context)
+            onDismiss()
+        },
+        content = {
             Column(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -211,22 +218,6 @@ fun AboutDialog(onDismiss: () -> Unit) {
                         is CheckUi.Idle, is CheckUi.Checking -> Unit
                     }
                 }
-            }
-        },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    if (running != null) UpdateChecker.enqueueBackgroundDownload(context)
-                    onDismiss()
-                },
-            ) {
-                // Say what closing does while a download is running, so the
-                // answer to "is it still going?" is on the button itself.
-                Text(
-                    stringResource(
-                        if (running != null) R.string.about_check_background else R.string.about_close
-                    )
-                )
             }
         },
     )

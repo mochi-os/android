@@ -62,7 +62,6 @@ import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
@@ -76,7 +75,6 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -147,6 +145,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MediaGrid
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
@@ -1005,54 +1004,32 @@ fun FeedScreen(
         }
 
         pendingDelete?.let { target ->
-            AlertDialog(
+            MochiAlertDialog(
                 onDismissRequest = { pendingDelete = null },
-                title = { Text(stringResource(R.string.feeds_delete_post)) },
-                text = { Text(stringResource(R.string.feeds_delete_post_confirm)) },
-                confirmButton = {
-                    TextButton(
-                        onClick = {
-                            viewModel.deletePost(target.id)
-                            pendingDelete = null
-                        }
-                    ) {
-                        Text(
-                            stringResource(MochiR.string.common_delete),
-                            color = MaterialTheme.colorScheme.error
-                        )
-                    }
+                title = stringResource(R.string.feeds_delete_post),
+                text = stringResource(R.string.feeds_delete_post_confirm),
+                confirmText = stringResource(MochiR.string.common_delete),
+                onConfirm = {
+                    viewModel.deletePost(target.id)
+                    pendingDelete = null
                 },
-                dismissButton = {
-                    TextButton(onClick = { pendingDelete = null }) {
-                        Text(stringResource(MochiR.string.common_cancel))
-                    }
-                }
+                destructive = true,
+                dismissText = stringResource(MochiR.string.common_cancel),
             )
         }
 
         if (pendingUnsubscribe) {
-            AlertDialog(
+            MochiAlertDialog(
                 onDismissRequest = { pendingUnsubscribe = false },
-                title = { Text(stringResource(R.string.feeds_unsubscribe_confirm)) },
-                text = { Text(stringResource(R.string.feeds_unsubscribe_confirm_message)) },
-                confirmButton = {
-                    TextButton(
-                        onClick = {
-                            viewModel.unsubscribe()
-                            pendingUnsubscribe = false
-                        }
-                    ) {
-                        Text(
-                            stringResource(R.string.feeds_unsubscribe),
-                            color = MaterialTheme.colorScheme.error
-                        )
-                    }
+                title = stringResource(R.string.feeds_unsubscribe_confirm),
+                text = stringResource(R.string.feeds_unsubscribe_confirm_message),
+                confirmText = stringResource(R.string.feeds_unsubscribe),
+                onConfirm = {
+                    viewModel.unsubscribe()
+                    pendingUnsubscribe = false
                 },
-                dismissButton = {
-                    TextButton(onClick = { pendingUnsubscribe = false }) {
-                        Text(stringResource(MochiR.string.common_cancel))
-                    }
-                }
+                destructive = true,
+                dismissText = stringResource(MochiR.string.common_cancel),
             )
         }
 

@@ -19,13 +19,11 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -36,6 +34,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
@@ -78,10 +77,10 @@ fun ReportActionDialog(
     val title = if (readOnly) stringResource(R.string.staff_reports_dialog_title_view)
     else stringResource(R.string.staff_reports_dialog_title_action)
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(
                 modifier = Modifier.verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -111,30 +110,19 @@ fun ReportActionDialog(
                 )
             }
         },
-        confirmButton = {
-            if (!readOnly) {
-                TextButton(
-                    enabled = !submitting && action.isNotBlank(),
-                    onClick = { onSubmit(action, notes) },
-                ) {
-                    Text(
-                        if (submitting) stringResource(R.string.staff_reports_submitting)
-                        else stringResource(R.string.staff_reports_submit),
-                    )
-                }
-            }
+        // A read-only report has nothing to submit, so it keeps only the close button.
+        confirmText = when {
+            readOnly -> null
+            submitting -> stringResource(R.string.staff_reports_submitting)
+            else -> stringResource(R.string.staff_reports_submit)
         },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = onDismiss,
-            ) {
-                Text(
-                    if (readOnly) stringResource(R.string.staff_reports_close)
-                    else stringResource(R.string.staff_reports_cancel),
-                )
-            }
-        },
+        onConfirm = { onSubmit(action, notes) },
+        confirmEnabled = action.isNotBlank(),
+        confirmLoading = submitting,
+        dismissText = if (readOnly) stringResource(R.string.staff_reports_close)
+            else stringResource(R.string.staff_reports_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !submitting,
     )
 }
 

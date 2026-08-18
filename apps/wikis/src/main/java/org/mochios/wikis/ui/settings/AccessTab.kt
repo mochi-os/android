@@ -21,8 +21,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -55,6 +53,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.wikis.R
 import org.mochios.android.R as MochiR
@@ -288,10 +287,10 @@ private fun AddAccessDialog(
 
     val levels = listOf("edit", "view", "none")
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(MochiR.string.access_add_rule_title)) },
-        text = {
+        title = stringResource(MochiR.string.access_add_rule_title),
+        content = {
             Column {
                 TabRow(selectedTabIndex = selectedTab) {
                     Tab(
@@ -433,18 +432,9 @@ private fun AddAccessDialog(
                 }
             }
         },
-        confirmButton = {
-            Button(
-                onClick = { onAdd(selectedSubject, level) },
-                enabled = selectedSubject.isNotEmpty(),
-            ) {
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(MochiR.string.common_add),
+        onConfirm = { onAdd(selectedSubject, level) },
+        confirmEnabled = selectedSubject.isNotEmpty(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

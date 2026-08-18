@@ -72,7 +72,7 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.wikis.R
@@ -93,7 +93,7 @@ import org.mochios.android.R as MochiR
  *    card uses the [Icons.Default.Book] icon for owned wikis and
  *    [Icons.Default.Link] for subscribed wikis (the latter has a non-null
  *    `source`). Subscribed cards have a per-row overflow with a single
- *    Unsubscribe item that opens a [ConfirmDialog].
+ *    Unsubscribe item that opens a [MochiAlertDialog].
  *  - Empty state when the user has no wikis — a hint, a Create wiki button
  *    (opens [CreateWikiDialog]), an inline debounced directory search, and a
  *    "Recommended wikis" rail. Search results and recommendations both
@@ -272,13 +272,14 @@ fun WikiListScreen(
 
     val candidate = uiState.unsubscribeCandidate
     if (candidate != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { viewModel.cancelUnsubscribe() },
             title = stringResource(R.string.wikis_unsubscribe_confirm_title),
-            message = stringResource(R.string.wikis_unsubscribe_confirm_message, candidate.name),
-            confirmLabel = stringResource(R.string.wikis_unsubscribe_action),
-            isDestructive = true,
+            text = stringResource(R.string.wikis_unsubscribe_confirm_message, candidate.name),
+            confirmText = stringResource(R.string.wikis_unsubscribe_action),
             onConfirm = { viewModel.confirmUnsubscribe() },
-            onDismiss = { viewModel.cancelUnsubscribe() },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
     if (showAbout) {

@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.outlined.Check
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -66,6 +65,7 @@ import androidx.navigation.NavController
 import com.google.gson.Gson
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.PlaceData
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.PlacePicker
@@ -406,32 +406,25 @@ fun EditListingScreen(
     }
 
     if (showDeleteConfirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showDeleteConfirm = false },
-            title = { Text(stringResource(R.string.market_editor_delete_confirm_title)) },
-            text = { Text(stringResource(R.string.market_editor_delete_confirm_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    showDeleteConfirm = false
-                    viewModel.deleteListing()
-                }) {
-                    Text(stringResource(R.string.market_editor_delete))
-                }
+            title = stringResource(R.string.market_editor_delete_confirm_title),
+            text = stringResource(R.string.market_editor_delete_confirm_message),
+            confirmText = stringResource(R.string.market_editor_delete),
+            onConfirm = {
+                showDeleteConfirm = false
+                viewModel.deleteListing()
             },
-            dismissButton = {
-                TextButton(onClick = { showDeleteConfirm = false }) {
-                    Text(stringResource(R.string.market_editor_zone_cancel))
-                }
-            },
+            dismissText = stringResource(R.string.market_editor_zone_cancel),
         )
     }
 
     if (showAppealDialog) {
         var reason by remember { mutableStateOf("") }
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showAppealDialog = false },
-            title = { Text(stringResource(R.string.market_editor_appeal)) },
-            text = {
+            title = stringResource(R.string.market_editor_appeal),
+            content = {
                 OutlinedTextField(
                     value = reason,
                     onValueChange = { reason = it },
@@ -440,22 +433,13 @@ fun EditListingScreen(
                     modifier = Modifier.fillMaxWidth(),
                 )
             },
-            confirmButton = {
-                TextButton(
-                    enabled = reason.isNotBlank(),
-                    onClick = {
-                        viewModel.appeal(reason)
-                        showAppealDialog = false
-                    },
-                ) {
-                    Text(stringResource(R.string.market_editor_appeal_submit))
-                }
+            confirmText = stringResource(R.string.market_editor_appeal_submit),
+            onConfirm = {
+                viewModel.appeal(reason)
+                showAppealDialog = false
             },
-            dismissButton = {
-                TextButton(onClick = { showAppealDialog = false }) {
-                    Text(stringResource(R.string.market_editor_zone_cancel))
-                }
-            },
+            confirmEnabled = reason.isNotBlank(),
+            dismissText = stringResource(R.string.market_editor_zone_cancel),
         )
     }
 }

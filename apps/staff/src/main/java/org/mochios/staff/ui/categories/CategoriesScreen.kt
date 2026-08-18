@@ -39,10 +39,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
 import org.mochios.staff.ui.components.StaffStatusBadge
@@ -57,7 +58,7 @@ import org.mochios.staff.ui.dialog.CategoryEditDialog
  *    opens the create dialog.
  *  - Table-style list of every category with Name / Slug / Parent / Types /
  *    Position / Status columns, plus per-row Edit + Delete buttons.
- *  - Delete confirmation via lib's [ConfirmDialog].
+ *  - Delete confirmation via lib's [MochiAlertDialog].
  *
  * The dialog body itself lives in [CategoryEditDialog] (see the shared
  * dialog package) so both create and edit can be opened by the same shell.
@@ -120,13 +121,14 @@ fun CategoriesScreen(
     // Delete confirmation
     val deleteTarget = state.deleteTarget
     if (deleteTarget != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelDelete,
             title = stringResource(R.string.staff_categories_delete_title),
-            message = stringResource(R.string.staff_categories_delete_desc, deleteTarget.name),
-            confirmLabel = stringResource(R.string.staff_categories_delete_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.staff_categories_delete_desc, deleteTarget.name),
+            confirmText = stringResource(R.string.staff_categories_delete_confirm),
             onConfirm = viewModel::confirmDelete,
-            onDismiss = viewModel::cancelDelete,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

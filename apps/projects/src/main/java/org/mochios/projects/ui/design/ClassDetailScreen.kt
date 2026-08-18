@@ -27,7 +27,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -55,11 +54,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectField
-import org.mochios.projects.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
 private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checklist")
@@ -358,15 +357,18 @@ fun ClassDetailScreen(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = stringResource(R.string.projects_class_delete_title),
-            message = stringResource(R.string.projects_class_delete_message, cls.name),
+            text = stringResource(R.string.projects_class_delete_message, cls.name),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteConfirm = false
                 viewModel.deleteClass(cls.id)
                 onBack()
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -386,10 +388,10 @@ private fun AddFieldDialog(
     var isFilterable by remember { mutableStateOf(false) }
     var isMulti by remember { mutableStateOf(false) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_field_add_field_dialog_title)) },
-        text = {
+        title = stringResource(R.string.projects_field_add_field_dialog_title),
+        content = {
             Column {
                 OutlinedTextField(
                     value = name,
@@ -453,26 +455,17 @@ private fun AddFieldDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val flags = buildList {
-                        if (isRequired) add("required")
-                        if (isReadonly) add("readonly")
-                        if (isSortable) add("sort")
-                        if (isFilterable) add("filter")
-                    }.joinToString(",").ifEmpty { null }
-                    onAdd(name, fieldtype, flags, if (fieldtype == "enumerated" && isMulti) true else null)
-                },
-                enabled = name.isNotBlank()
-            ) {
-                Text(stringResource(R.string.projects_classes_create))
-            }
+        confirmText = stringResource(R.string.projects_classes_create),
+        onConfirm = {
+            val flags = buildList {
+                if (isRequired) add("required")
+                if (isReadonly) add("readonly")
+                if (isSortable) add("sort")
+                if (isFilterable) add("filter")
+            }.joinToString(",").ifEmpty { null }
+            onAdd(name, fieldtype, flags, if (fieldtype == "enumerated" && isMulti) true else null)
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

@@ -25,8 +25,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Link
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -58,7 +56,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Redirect
 import org.mochios.android.R as MochiR
@@ -216,20 +214,21 @@ fun RedirectsBody(
 
     val toDelete = pendingDelete
     if (toDelete != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingDelete = null },
             title = stringResource(R.string.wikis_redirect_delete_confirm_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.wikis_redirect_delete_confirm_message,
                 toDelete.source,
                 toDelete.target,
             ),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 viewModel.delete(toDelete.source)
                 pendingDelete = null
             },
-            onDismiss = { pendingDelete = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -301,10 +300,10 @@ private fun AddRedirectDialog(
     var source by remember { mutableStateOf("") }
     var target by remember { mutableStateOf("") }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.wikis_redirect_create_title)) },
-        text = {
+        title = stringResource(R.string.wikis_redirect_create_title),
+        content = {
             Column {
                 OutlinedTextField(
                     value = source,
@@ -323,18 +322,9 @@ private fun AddRedirectDialog(
                 )
             }
         },
-        confirmButton = {
-            Button(
-                onClick = { onCreate(source, target) },
-                enabled = source.isNotBlank() && target.isNotBlank(),
-            ) {
-                Text(stringResource(R.string.wikis_redirect_create_action))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.wikis_redirect_create_action),
+        onConfirm = { onCreate(source, target) },
+        confirmEnabled = source.isNotBlank() && target.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

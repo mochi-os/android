@@ -30,7 +30,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -67,6 +66,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
@@ -338,10 +338,10 @@ private fun PasskeysSection(
 
     if (showRegister) {
         var draft by remember { mutableStateOf("") }
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showRegister = false; draft = "" },
-            title = { Text(stringResource(R.string.account_passkey_register_title)) },
-            text = {
+            title = stringResource(R.string.account_passkey_register_title),
+            content = {
                 Column {
                     Text(
                         stringResource(R.string.account_passkey_register_message),
@@ -356,18 +356,13 @@ private fun PasskeysSection(
                     )
                 }
             },
-            confirmButton = {
-                TextButton(onClick = {
-                    showRegister = false
-                    onRegister(draft)
-                    draft = ""
-                }) { Text(stringResource(R.string.account_passkey_register)) }
+            confirmText = stringResource(R.string.account_passkey_register),
+            onConfirm = {
+                showRegister = false
+                onRegister(draft)
+                draft = ""
             },
-            dismissButton = {
-                TextButton(onClick = { showRegister = false; draft = "" }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
@@ -423,26 +418,17 @@ private fun PasskeyRow(
     }
 
     if (confirmDelete) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirmDelete = false },
-            title = { Text(stringResource(R.string.account_passkey_delete_title)) },
-            text = { Text(stringResource(R.string.account_passkey_delete_message, passkey.name)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirmDelete = false
-                    onDelete(passkey.id)
-                }) {
-                    Text(
-                        stringResource(R.string.account_delete),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
+            title = stringResource(R.string.account_passkey_delete_title),
+            text = stringResource(R.string.account_passkey_delete_message, passkey.name),
+            confirmText = stringResource(R.string.account_delete),
+            onConfirm = {
+                confirmDelete = false
+                onDelete(passkey.id)
             },
-            dismissButton = {
-                TextButton(onClick = { confirmDelete = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
@@ -479,26 +465,17 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
     }
 
     if (confirmDisable) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirmDisable = false },
-            title = { Text(stringResource(R.string.account_totp_disable_title)) },
-            text = { Text(stringResource(R.string.account_totp_disable_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirmDisable = false
-                    onDisable()
-                }) {
-                    Text(
-                        stringResource(R.string.account_disable),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
+            title = stringResource(R.string.account_totp_disable_title),
+            text = stringResource(R.string.account_totp_disable_message),
+            confirmText = stringResource(R.string.account_disable),
+            onConfirm = {
+                confirmDisable = false
+                onDisable()
             },
-            dismissButton = {
-                TextButton(onClick = { confirmDisable = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
@@ -511,10 +488,10 @@ private fun TotpSetupDialog(
     onCopySecret: () -> Unit,
 ) {
     var code by remember { mutableStateOf("") }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onCancel,
-        title = { Text(stringResource(R.string.account_totp_setup_title)) },
-        text = {
+        title = stringResource(R.string.account_totp_setup_title),
+        content = {
             Column {
                 Text(stringResource(R.string.account_totp_setup_step1))
                 Spacer(Modifier.height(8.dp))
@@ -547,14 +524,10 @@ private fun TotpSetupDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onVerify(code) }, enabled = code.length == 6) {
-                Text(stringResource(R.string.account_totp_verify))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onCancel) { Text(stringResource(R.string.account_cancel)) }
-        },
+        confirmText = stringResource(R.string.account_totp_verify),
+        onConfirm = { onVerify(code) },
+        confirmEnabled = code.length == 6,
+        dismissText = stringResource(R.string.account_cancel),
     )
 }
 
@@ -580,36 +553,27 @@ private fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
         )
     }
     if (confirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirm = false },
-            title = { Text(stringResource(R.string.account_recovery_regen_title)) },
-            text = { Text(stringResource(R.string.account_recovery_regen_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirm = false
-                    onGenerate()
-                }) {
-                    Text(
-                        stringResource(R.string.account_recovery_regenerate),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
+            title = stringResource(R.string.account_recovery_regen_title),
+            text = stringResource(R.string.account_recovery_regen_message),
+            confirmText = stringResource(R.string.account_recovery_regenerate),
+            onConfirm = {
+                confirm = false
+                onGenerate()
             },
-            dismissButton = {
-                TextButton(onClick = { confirm = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
 
 @Composable
 private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDone: () -> Unit) {
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDone,
-        title = { Text(stringResource(R.string.account_recovery_codes_title)) },
-        text = {
+        title = stringResource(R.string.account_recovery_codes_title),
+        content = {
             Column {
                 Box(
                     modifier = Modifier
@@ -634,12 +598,9 @@ private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDo
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = onCopyAll) { Text(stringResource(R.string.account_copy_all)) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDone) { Text(stringResource(R.string.account_done)) }
-        },
+        confirmText = stringResource(R.string.account_copy_all),
+        onConfirm = onCopyAll,
+        dismissText = stringResource(R.string.account_done),
     )
 }
 
@@ -680,26 +641,17 @@ private fun OAuthSection(
                 }
             }
             if (confirm) {
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { confirm = false },
-                    title = { Text(stringResource(R.string.account_oauth_unlink_title)) },
-                    text = { Text(stringResource(R.string.account_oauth_unlink_message, id.provider)) },
-                    confirmButton = {
-                        TextButton(onClick = {
-                            confirm = false
-                            onUnlink(id.provider)
-                        }) {
-                            Text(
-                                stringResource(R.string.account_unlink),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.account_oauth_unlink_title),
+                    text = stringResource(R.string.account_oauth_unlink_message, id.provider),
+                    confirmText = stringResource(R.string.account_unlink),
+                    onConfirm = {
+                        confirm = false
+                        onUnlink(id.provider)
                     },
-                    dismissButton = {
-                        TextButton(onClick = { confirm = false }) {
-                            Text(stringResource(R.string.account_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(R.string.account_cancel),
                 )
             }
         }
@@ -715,10 +667,10 @@ private fun OAuthSection(
             Text(stringResource(R.string.account_oauth_link))
         }
         if (showLink) {
-            AlertDialog(
+            MochiAlertDialog(
                 onDismissRequest = { showLink = false },
-                title = { Text(stringResource(R.string.account_oauth_link_title)) },
-                text = {
+                title = stringResource(R.string.account_oauth_link_title),
+                content = {
                     Column {
                         available.forEach { provider ->
                             TextButton(
@@ -733,11 +685,8 @@ private fun OAuthSection(
                         }
                     }
                 },
-                confirmButton = {
-                    TextButton(onClick = { showLink = false }) {
-                        Text(stringResource(R.string.account_cancel))
-                    }
-                },
+                confirmText = stringResource(R.string.account_cancel),
+                onConfirm = { showLink = false },
             )
         }
     }

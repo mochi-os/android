@@ -58,7 +58,6 @@ import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -70,7 +69,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
@@ -111,13 +109,13 @@ import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -551,17 +549,17 @@ private fun CrmRow(
     }
 
     if (showUnsubscribeConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showUnsubscribeConfirm = false },
             title = unsubscribeTitle,
-            message = unsubscribeMessage,
-            confirmLabel = unsubscribeLabel,
-            dismissLabel = cancelLabel,
-            isDestructive = true,
+            text = unsubscribeMessage,
+            confirmText = unsubscribeLabel,
             onConfirm = {
                 showUnsubscribeConfirm = false
                 onUnsubscribe()
             },
-            onDismiss = { showUnsubscribeConfirm = false }
+            destructive = true,
+            dismissText = cancelLabel,
         )
     }
 }
@@ -1024,10 +1022,10 @@ private fun AddColumnDialog(
     var name by remember { mutableStateOf("") }
     var colour by remember { mutableStateOf("#3b82f6") }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.crm_board_add_column)) },
-        text = {
+        title = stringResource(R.string.crm_board_add_column),
+        content = {
             // The picker is taller than the dialog on a short screen, so the
             // body scrolls. Its saturation field consumes its own drags, so
             // dragging inside it doesn't scroll the dialog out from under it.
@@ -1051,18 +1049,9 @@ private fun AddColumnDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onAdd(name.trim(), colour.ifBlank { null }) },
-                enabled = name.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_add),
+        onConfirm = { onAdd(name.trim(), colour.ifBlank { null }) },
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

@@ -29,9 +29,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DriveFileMove
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -56,6 +54,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.dnd.DragEdge
@@ -320,10 +319,10 @@ fun TreeRow(
     if (showReparentDialog && onReparent != null) {
         val allObjects = uiState.objects
         val possibleParents = allObjects.filter { it.id != obj.id }
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showReparentDialog = false },
-            title = { Text(stringResource(R.string.projects_tree_move_to_parent)) },
-            text = {
+            title = stringResource(R.string.projects_tree_move_to_parent),
+            content = {
                 LazyColumn {
                     item {
                         Row(
@@ -360,10 +359,7 @@ fun TreeRow(
                     }
                 }
             },
-            confirmButton = {},
-            dismissButton = {
-                TextButton(onClick = { showReparentDialog = false }) { Text(stringResource(MochiR.string.common_cancel)) }
-            }
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

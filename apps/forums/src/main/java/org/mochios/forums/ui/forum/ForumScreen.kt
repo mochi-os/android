@@ -103,7 +103,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
@@ -112,6 +111,7 @@ import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -666,17 +666,17 @@ private fun ForumContent(
     }
 
     if (showUnsubscribeConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showUnsubscribeConfirm = false },
             title = stringResource(R.string.forums_list_unsubscribe_title),
-            message = stringResource(R.string.forums_list_unsubscribe_message),
-            confirmLabel = stringResource(R.string.forums_list_unsubscribe),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.forums_list_unsubscribe_message),
+            confirmText = stringResource(R.string.forums_list_unsubscribe),
             onConfirm = {
                 showUnsubscribeConfirm = false
                 viewModel.unsubscribe()
             },
-            onDismiss = { showUnsubscribeConfirm = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

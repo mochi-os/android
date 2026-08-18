@@ -44,12 +44,13 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiScaffold
@@ -69,7 +70,7 @@ import org.mochios.market.ui.components.StatusBadge
  * Each row shows the subscription title, the recurring amount with
  * interval suffix, the lifecycle [StatusBadge], and an overflow menu
  * with the available actions (pause / resume / reactivate / cancel).
- * Cancel routes through a [ConfirmDialog] before firing the API call so
+ * Cancel routes through a [MochiAlertDialog] before firing the API call so
  * a misclick on the small overflow target can't accidentally end the
  * subscription.
  */
@@ -133,16 +134,17 @@ fun MySubscriptionsScreen(
     }
 
     pendingCancel?.let { sub ->
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingCancel = null },
             title = stringResource(R.string.market_subscriptions_cancel_title),
-            message = stringResource(R.string.market_subscriptions_cancel_body),
-            confirmLabel = stringResource(R.string.market_subscriptions_cancel_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.market_subscriptions_cancel_body),
+            confirmText = stringResource(R.string.market_subscriptions_cancel_confirm),
             onConfirm = {
                 viewModel.cancel(sub.id)
                 pendingCancel = null
             },
-            onDismiss = { pendingCancel = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

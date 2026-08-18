@@ -51,7 +51,7 @@ import org.mochios.words.engine.getLetterValue
  *
  * In normal mode each tile is a button:
  *  - Tap → toggle selection (the screen places the selected tile on the
- *    next board-cell tap, or opens the BlankTileDialog for blanks).
+ *    next board-cell tap, or opens the blank-letter picker for blanks).
  *  - Long-press + drag → start a continuous drag from this slot. The screen
  *    renders a ghost tile under the finger and resolves the drop target on
  *    release (board cell / rack slot / cancel).

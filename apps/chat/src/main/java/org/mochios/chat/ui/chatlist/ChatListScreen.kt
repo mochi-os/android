@@ -65,9 +65,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.chat.R
@@ -317,17 +317,17 @@ private fun ChatRow(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = deleteTitle,
-            message = deleteMessage,
-            confirmLabel = deleteLabel,
-            dismissLabel = cancelLabel,
-            isDestructive = true,
+            text = deleteMessage,
+            confirmText = deleteLabel,
             onConfirm = {
                 showDeleteConfirm = false
                 onDeleteLocally()
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = cancelLabel,
         )
     }
 }

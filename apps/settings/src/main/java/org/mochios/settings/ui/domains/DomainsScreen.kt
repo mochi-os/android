@@ -26,7 +26,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -57,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
@@ -341,15 +341,16 @@ private fun DomainCard(
     }
 
     if (showDeleteDomain) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteDomain = false },
             title = stringResource(R.string.domain_delete_title),
-            message = stringResource(R.string.domain_delete_message, domain.domain),
+            text = stringResource(R.string.domain_delete_message, domain.domain),
             confirmText = stringResource(R.string.domain_delete),
             onConfirm = {
                 showDeleteDomain = false
                 onDelete()
             },
-            onDismiss = { showDeleteDomain = false },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
     if (showAddRoute) {
@@ -460,15 +461,16 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
         }
     }
     if (confirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { confirm = false },
             title = stringResource(R.string.route_delete_title),
-            message = stringResource(R.string.route_delete_message, route.path.ifBlank { "/" }),
+            text = stringResource(R.string.route_delete_message, route.path.ifBlank { "/" }),
             confirmText = stringResource(R.string.route_delete),
             onConfirm = {
                 confirm = false
                 onDelete()
             },
-            onDismiss = { confirm = false },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -501,15 +503,16 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
         }
     }
     if (confirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { confirm = false },
             title = stringResource(R.string.domain_delegation_delete_title),
-            message = stringResource(R.string.domain_delegation_delete_message, delegation.username),
+            text = stringResource(R.string.domain_delegation_delete_message, delegation.username),
             confirmText = stringResource(R.string.domain_delegation_delete),
             onConfirm = {
                 confirm = false
                 onDelete()
             },
-            onDismiss = { confirm = false },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -517,10 +520,10 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
 @Composable
 private fun AddDomainDialog(onConfirm: (String) -> Unit, onDismiss: () -> Unit) {
     var name by remember { mutableStateOf("") }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.domain_add_title)) },
-        text = {
+        title = stringResource(R.string.domain_add_title),
+        content = {
             OutlinedTextField(
                 value = name,
                 onValueChange = { name = it },
@@ -529,15 +532,10 @@ private fun AddDomainDialog(onConfirm: (String) -> Unit, onDismiss: () -> Unit) 
                 modifier = Modifier.fillMaxWidth(),
             )
         },
-        confirmButton = {
-            TextButton(
-                onClick = { if (name.isNotBlank()) onConfirm(name.trim()) },
-                enabled = name.isNotBlank(),
-            ) { Text(stringResource(R.string.domain_add)) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(R.string.domain_add),
+        onConfirm = { if (name.isNotBlank()) onConfirm(name.trim()) },
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -556,10 +554,10 @@ private fun RouteDialog(
     var enabled by remember { mutableStateOf((initial?.enabled ?: 1) == 1) }
     val editing = initial != null
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(if (editing) R.string.route_edit_title else R.string.route_add_title)) },
-        text = {
+        title = stringResource(if (editing) R.string.route_edit_title else R.string.route_add_title),
+        content = {
             Column {
                 OutlinedTextField(
                     value = path,
@@ -613,17 +611,12 @@ private fun RouteDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    onConfirm(path.trim(), method, target.trim(), priority.toIntOrNull() ?: 0, enabled)
-                },
-                enabled = target.isNotBlank(),
-            ) { Text(stringResource(if (editing) R.string.route_save else R.string.route_add)) }
+        confirmText = stringResource(if (editing) R.string.route_save else R.string.route_add),
+        onConfirm = {
+            onConfirm(path.trim(), method, target.trim(), priority.toIntOrNull() ?: 0, enabled)
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmEnabled = target.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -708,10 +701,10 @@ private fun DelegationDialog(
     // dropdown; editing the query again re-opens the search.
     var selected by remember { mutableStateOf<org.mochios.settings.api.UserSearchResult?>(null) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.domain_delegation_add_title)) },
-        text = {
+        title = stringResource(R.string.domain_delegation_add_title),
+        content = {
             Column {
                 OutlinedTextField(
                     value = query,
@@ -752,36 +745,12 @@ private fun DelegationDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val uid = selected?.uid ?: return@TextButton
-                    onConfirm(path.trim(), uid)
-                },
-                enabled = selected != null,
-            ) { Text(stringResource(R.string.domain_delegation_add)) }
+        confirmText = stringResource(R.string.domain_delegation_add),
+        onConfirm = {
+            val uid = selected?.uid ?: return@MochiAlertDialog
+            onConfirm(path.trim(), uid)
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
-    )
-}
-
-@Composable
-private fun ConfirmDialog(
-    title: String,
-    message: String,
-    confirmText: String,
-    onConfirm: () -> Unit,
-    onDismiss: () -> Unit,
-) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = { Text(message) },
-        confirmButton = { TextButton(onClick = onConfirm) { Text(confirmText) } },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmEnabled = selected != null,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

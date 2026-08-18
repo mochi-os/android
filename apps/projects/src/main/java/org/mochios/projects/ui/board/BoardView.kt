@@ -32,13 +32,11 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -56,6 +54,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.board.PagedZoomableBoard
@@ -424,10 +423,10 @@ private fun BoardColumn(
                 }
                 if (showRenameDialog && onRename != null) {
                     var newName by remember { mutableStateOf(option.name) }
-                    AlertDialog(
+                    MochiAlertDialog(
                         onDismissRequest = { showRenameDialog = false },
-                        title = { Text(stringResource(R.string.projects_board_rename_column)) },
-                        text = {
+                        title = stringResource(R.string.projects_board_rename_column),
+                        content = {
                             OutlinedTextField(
                                 value = newName,
                                 onValueChange = { newName = it },
@@ -435,18 +434,13 @@ private fun BoardColumn(
                                 modifier = Modifier.fillMaxWidth()
                             )
                         },
-                        confirmButton = {
-                            TextButton(
-                                onClick = {
-                                    onRename(newName)
-                                    showRenameDialog = false
-                                },
-                                enabled = newName.isNotBlank()
-                            ) { Text(stringResource(R.string.projects_board_rename)) }
+                        confirmText = stringResource(R.string.projects_board_rename),
+                        onConfirm = {
+                            onRename(newName)
+                            showRenameDialog = false
                         },
-                        dismissButton = {
-                            TextButton(onClick = { showRenameDialog = false }) { Text(stringResource(MochiR.string.common_cancel)) }
-                        }
+                        confirmEnabled = newName.isNotBlank(),
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
             }

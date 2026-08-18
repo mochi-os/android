@@ -31,7 +31,6 @@ import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Key
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Card
@@ -74,6 +73,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
@@ -246,25 +246,18 @@ fun SystemUsersScreen(
     }
 
     deleteTarget?.let { user ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { deleteTarget = null },
-            title = { Text(stringResource(R.string.system_users_delete_title)) },
-            text = { Text(stringResource(R.string.system_users_delete_message, user.username)) },
-            confirmButton = {
-                TextButton(
-                    enabled = !state.mutating,
-                    onClick = {
-                        viewModel.delete(user.id) { ok ->
-                            if (ok) deleteTarget = null
-                        }
-                    },
-                ) { Text(stringResource(R.string.system_users_delete)) }
-            },
-            dismissButton = {
-                TextButton(onClick = { deleteTarget = null }) {
-                    Text(stringResource(MochiR.string.common_cancel))
+            title = stringResource(R.string.system_users_delete_title),
+            text = stringResource(R.string.system_users_delete_message, user.username),
+            confirmText = stringResource(R.string.system_users_delete),
+            onConfirm = {
+                viewModel.delete(user.id) { ok ->
+                    if (ok) deleteTarget = null
                 }
             },
+            confirmEnabled = !state.mutating,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
@@ -285,24 +278,17 @@ fun SystemUsersScreen(
 
     if (revokeAllConfirm) {
         val user = sessionsTarget
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { revokeAllConfirm = false },
-            title = { Text(stringResource(R.string.system_users_revoke_all_title)) },
-            text = { Text(stringResource(R.string.system_users_revoke_all_message)) },
-            confirmButton = {
-                TextButton(
-                    enabled = !state.mutating,
-                    onClick = {
-                        revokeAllConfirm = false
-                        if (user != null) viewModel.revokeSession(user.id, null)
-                    },
-                ) { Text(stringResource(R.string.system_users_revoke_all)) }
+            title = stringResource(R.string.system_users_revoke_all_title),
+            text = stringResource(R.string.system_users_revoke_all_message),
+            confirmText = stringResource(R.string.system_users_revoke_all),
+            onConfirm = {
+                revokeAllConfirm = false
+                if (user != null) viewModel.revokeSession(user.id, null)
             },
-            dismissButton = {
-                TextButton(onClick = { revokeAllConfirm = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
+            confirmEnabled = !state.mutating,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -524,10 +510,10 @@ private fun UserDialog(
     var role by remember { mutableStateOf(initialRole) }
     val canSubmit = username.isNotBlank() && (!requireEmail || username.contains('@'))
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 OutlinedTextField(
                     value = username,
@@ -539,15 +525,10 @@ private fun UserDialog(
                 RoleDropdown(role = role, onChange = { role = it })
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = canSubmit && !saving,
-                onClick = { onConfirm(username.trim(), role) },
-            ) { Text(confirmLabel) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = confirmLabel,
+        onConfirm = { onConfirm(username.trim(), role) },
+        confirmEnabled = canSubmit && !saving,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -608,10 +589,10 @@ private fun SessionsDialog(
     onClose: () -> Unit,
 ) {
     val format = LocalFormat.current
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onClose,
-        title = { Text(stringResource(R.string.system_users_sessions_title, user.username)) },
-        text = {
+        title = stringResource(R.string.system_users_sessions_title, user.username),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
                     stringResource(R.string.system_users_sessions_description),
@@ -644,20 +625,14 @@ private fun SessionsDialog(
                 }
             }
         },
-        confirmButton = {
-            if (sessions.isNotEmpty()) {
-                TextButton(enabled = !mutating, onClick = onRevokeAll) {
-                    Text(stringResource(R.string.system_users_revoke_all))
-                }
-            } else {
-                TextButton(onClick = onClose) { Text(stringResource(MochiR.string.common_close)) }
-            }
-        },
-        dismissButton = {
-            if (sessions.isNotEmpty()) {
-                TextButton(onClick = onClose) { Text(stringResource(MochiR.string.common_close)) }
-            }
-        },
+        // With no sessions to revoke there is nothing to confirm, so close takes
+        // the confirm slot rather than leaving the dialog with a lone dismiss.
+        confirmText = if (sessions.isNotEmpty()) stringResource(R.string.system_users_revoke_all)
+            else stringResource(MochiR.string.common_close),
+        onConfirm = if (sessions.isNotEmpty()) onRevokeAll else onClose,
+        confirmEnabled = sessions.isEmpty() || !mutating,
+        dismissText = if (sessions.isNotEmpty()) stringResource(MochiR.string.common_close) else null,
+        onDismiss = onClose,
     )
 }
 

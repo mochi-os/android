@@ -7,7 +7,8 @@ package org.mochios.people.ui.friends
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.people.R
 
 /**
@@ -21,13 +22,13 @@ fun RemoveFriendConfirmDialog(
     onConfirm: () -> Unit,
     onDismiss: () -> Unit,
 ) {
-    ConfirmDialog(
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
         title = stringResource(R.string.people_friends_remove),
-        message = stringResource(R.string.people_friends_remove_confirm, friendName),
-        confirmLabel = stringResource(R.string.people_friends_remove),
-        dismissLabel = stringResource(R.string.people_common_cancel),
-        isDestructive = true,
+        text = stringResource(R.string.people_friends_remove_confirm, friendName),
+        confirmText = stringResource(R.string.people_friends_remove),
         onConfirm = onConfirm,
-        onDismiss = onDismiss,
+        destructive = true,
+        dismissText = stringResource(R.string.people_common_cancel),
     )
 }

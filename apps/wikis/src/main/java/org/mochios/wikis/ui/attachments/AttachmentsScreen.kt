@@ -105,10 +105,10 @@ import coil3.compose.AsyncImage
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.AttachmentCaptionDialog
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.util.NaturalCompare
@@ -287,16 +287,17 @@ fun AttachmentsScreen(
     if (pending != null) {
         val deleteSuccess = stringResource(R.string.wikis_attachments_delete_success)
         val deleteFailed = stringResource(R.string.wikis_attachments_delete_failed)
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { viewModel.cancelDelete() },
             title = stringResource(R.string.wikis_attachments_delete_confirm_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.wikis_attachments_delete_confirm_message,
                 pending.name,
             ),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = { viewModel.confirmDelete(deleteSuccess, deleteFailed) },
-            onDismiss = { viewModel.cancelDelete() },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 

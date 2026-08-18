@@ -62,9 +62,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.forums.R
@@ -312,17 +312,17 @@ private fun ForumRow(
     }
 
     if (showUnsubscribeConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showUnsubscribeConfirm = false },
             title = unsubscribeTitle,
-            message = unsubscribeMessage,
-            confirmLabel = unsubscribeLabel,
-            dismissLabel = cancelLabel,
-            isDestructive = true,
+            text = unsubscribeMessage,
+            confirmText = unsubscribeLabel,
             onConfirm = {
                 showUnsubscribeConfirm = false
                 onUnsubscribe()
             },
-            onDismiss = { showUnsubscribeConfirm = false }
+            destructive = true,
+            dismissText = cancelLabel,
         )
     }
 }

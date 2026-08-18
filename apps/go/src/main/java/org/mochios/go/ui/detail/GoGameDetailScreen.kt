@@ -65,7 +65,6 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
@@ -73,6 +72,7 @@ import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -435,52 +435,55 @@ fun GoGameDetailScreen(
 
                 if (showPassDialog) {
                     val isEndGame = state.goGame?.consecutivePasses == 1
-                    ConfirmDialog(
+                    MochiAlertDialog(
+                        onDismissRequest = { showPassDialog = false },
                         title = stringResource(
                             if (isEndGame) R.string.go_pass_end_title else R.string.go_pass_title,
                         ),
-                        message = if (isEndGame) {
+                        text = if (isEndGame) {
                             stringResource(R.string.go_pass_end_message, opponentName)
                         } else {
                             stringResource(R.string.go_pass_message)
                         },
-                        confirmLabel = stringResource(
+                        confirmText = stringResource(
                             if (isEndGame) R.string.go_pass_end_confirm else R.string.go_pass_confirm,
                         ),
-                        isDestructive = isEndGame,
                         onConfirm = {
                             showPassDialog = false
                             viewModel.passTurn(errPass)
                         },
-                        onDismiss = { showPassDialog = false },
+                        destructive = isEndGame,
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
 
                 if (showResignDialog) {
-                    ConfirmDialog(
+                    MochiAlertDialog(
+                        onDismissRequest = { showResignDialog = false },
                         title = stringResource(R.string.go_resign_title),
-                        message = stringResource(R.string.go_resign_message, opponentName),
-                        confirmLabel = stringResource(R.string.go_resign_confirm),
-                        isDestructive = true,
+                        text = stringResource(R.string.go_resign_message, opponentName),
+                        confirmText = stringResource(R.string.go_resign_confirm),
                         onConfirm = {
                             showResignDialog = false
                             viewModel.resign(errResign)
                         },
-                        onDismiss = { showResignDialog = false },
+                        destructive = true,
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
 
                 if (showDeleteDialog) {
-                    ConfirmDialog(
+                    MochiAlertDialog(
+                        onDismissRequest = { showDeleteDialog = false },
                         title = stringResource(R.string.go_delete_title),
-                        message = stringResource(R.string.go_delete_message),
-                        confirmLabel = stringResource(R.string.go_delete_confirm),
-                        isDestructive = true,
+                        text = stringResource(R.string.go_delete_message),
+                        confirmText = stringResource(R.string.go_delete_confirm),
                         onConfirm = {
                             showDeleteDialog = false
                             viewModel.deleteGame(errDelete, msgDeleted)
                         },
-                        onDismiss = { showDeleteDialog = false },
+                        destructive = true,
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
 

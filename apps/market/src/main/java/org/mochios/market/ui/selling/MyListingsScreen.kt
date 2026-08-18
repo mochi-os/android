@@ -61,8 +61,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
@@ -284,16 +284,17 @@ fun MyListingsScreen(
 
     // Delete confirmation.
     deleteCandidate?.let { candidate ->
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { deleteCandidate = null },
             title = stringResource(R.string.market_listings_delete_title),
-            message = stringResource(R.string.market_listings_delete_message),
-            confirmLabel = stringResource(R.string.market_listings_delete_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.market_listings_delete_message),
+            confirmText = stringResource(R.string.market_listings_delete_confirm),
             onConfirm = {
                 viewModel.deleteListing(candidate, deleteFailedFallback)
                 deleteCandidate = null
             },
-            onDismiss = { deleteCandidate = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 

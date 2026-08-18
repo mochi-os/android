@@ -30,8 +30,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -52,6 +50,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.settings.ui.login.StepUpHost
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -167,10 +166,10 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
 
     if (showDialog) {
         var passphrase by remember { mutableStateOf("") }
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showDialog = false },
-            title = { Text(stringResource(R.string.account_data_dialog_title)) },
-            text = {
+            title = stringResource(R.string.account_data_dialog_title),
+            content = {
                 Column {
                     Text(
                         text = stringResource(R.string.account_data_dialog_body),
@@ -197,21 +196,14 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
                     )
                 }
             },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        val pass = passphrase.trim()
-                        showDialog = false
-                        onExport(pass)
-                    },
-                    enabled = passphrase.trim().isNotEmpty(),
-                ) { Text(stringResource(R.string.account_data_download)) }
+            confirmText = stringResource(R.string.account_data_download),
+            onConfirm = {
+                val pass = passphrase.trim()
+                showDialog = false
+                onExport(pass)
             },
-            dismissButton = {
-                TextButton(onClick = { showDialog = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            confirmEnabled = passphrase.trim().isNotEmpty(),
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
@@ -255,26 +247,17 @@ private fun CloseAccountSection(onClose: () -> Unit) {
     }
 
     if (confirming) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirming = false },
-            title = { Text(stringResource(R.string.account_close_confirm_title)) },
-            text = { Text(stringResource(R.string.account_close_confirm_body)) },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        confirming = false
-                        onClose()
-                    },
-                    colors = ButtonDefaults.textButtonColors(
-                        contentColor = MaterialTheme.colorScheme.error,
-                    ),
-                ) { Text(stringResource(R.string.account_close_action)) }
+            title = stringResource(R.string.account_close_confirm_title),
+            text = stringResource(R.string.account_close_confirm_body),
+            confirmText = stringResource(R.string.account_close_action),
+            onConfirm = {
+                confirming = false
+                onClose()
             },
-            dismissButton = {
-                TextButton(onClick = { confirming = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }

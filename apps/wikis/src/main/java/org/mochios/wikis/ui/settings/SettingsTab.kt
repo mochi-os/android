@@ -47,9 +47,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.FieldRow
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
@@ -362,16 +363,17 @@ private fun DeleteSection(
     )
 
     if (showConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showConfirm = false },
             title = stringResource(R.string.wikis_settings_delete_confirm_title),
-            message = stringResource(R.string.wikis_settings_delete_confirm_message),
-            confirmLabel = stringResource(R.string.wikis_settings_delete_action),
-            isDestructive = true,
+            text = stringResource(R.string.wikis_settings_delete_confirm_message),
+            confirmText = stringResource(R.string.wikis_settings_delete_action),
             onConfirm = {
                 showConfirm = false
                 onDelete()
             },
-            onDismiss = { showConfirm = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

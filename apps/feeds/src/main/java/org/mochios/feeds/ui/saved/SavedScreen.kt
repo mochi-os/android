@@ -26,7 +26,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.outlined.LocalOffer
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Icon
@@ -56,6 +55,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.model.SavedItem
@@ -131,23 +131,16 @@ fun SavedScreen(
     }
 
     if (showClearConfirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showClearConfirm = false },
-            title = { Text(stringResource(R.string.feeds_saved_clear_confirm_title)) },
-            text = { Text(stringResource(R.string.feeds_saved_clear_confirm_body)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    showClearConfirm = false
-                    viewModel.clearAll()
-                }) {
-                    Text(stringResource(R.string.feeds_saved_clear_all))
-                }
+            title = stringResource(R.string.feeds_saved_clear_confirm_title),
+            text = stringResource(R.string.feeds_saved_clear_confirm_body),
+            confirmText = stringResource(R.string.feeds_saved_clear_all),
+            onConfirm = {
+                showClearConfirm = false
+                viewModel.clearAll()
             },
-            dismissButton = {
-                TextButton(onClick = { showClearConfirm = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

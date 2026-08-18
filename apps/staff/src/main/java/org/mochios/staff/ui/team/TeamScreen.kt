@@ -43,13 +43,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.staff.R
@@ -68,7 +69,7 @@ import org.mochios.staff.ui.components.StaffStatusBadge
  *    (inline dropdown for admins, static badge otherwise), added timestamp,
  *    added-by avatar + name (or "System" when seeded by the server), and
  *    per-row Remove (admins only).
- *  - Remove confirmation via lib's [ConfirmDialog].
+ *  - Remove confirmation via lib's [MochiAlertDialog].
  *
  * Admin gating is purely cosmetic — the server still enforces it on every
  * action.
@@ -114,13 +115,14 @@ fun TeamScreen(
 
     val removeTarget = state.removeTarget
     if (removeTarget != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelRemove,
             title = stringResource(R.string.staff_team_remove_title),
-            message = stringResource(R.string.staff_team_remove_desc),
-            confirmLabel = stringResource(R.string.staff_team_remove_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.staff_team_remove_desc),
+            confirmText = stringResource(R.string.staff_team_remove_confirm),
             onConfirm = viewModel::confirmRemove,
-            onDismiss = viewModel::cancelRemove,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

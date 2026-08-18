@@ -9,14 +9,10 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -27,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.chat.R
 import org.mochios.android.R as MochiR
 
@@ -59,10 +56,10 @@ fun ChatPolicyDialog(
         ),
     )
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.chat_policy_title)) },
-        text = {
+        title = stringResource(R.string.chat_policy_title),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 for (option in options) {
                     androidx.compose.foundation.layout.Row(
@@ -94,24 +91,12 @@ fun ChatPolicyDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { viewModel.save() },
-                enabled = !uiState.isSaving && !uiState.isLoading,
-            ) {
-                if (uiState.isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.height(16.dp).padding(end = 8.dp),
-                        strokeWidth = 2.dp,
-                    )
-                }
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !uiState.isSaving) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { viewModel.save() },
+        confirmEnabled = !uiState.isLoading,
+        confirmLoading = uiState.isSaving,
+        dismissText = stringResource(MochiR.string.common_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !uiState.isSaving,
     )
 }

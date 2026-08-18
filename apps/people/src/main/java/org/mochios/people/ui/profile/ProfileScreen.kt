@@ -36,7 +36,6 @@ import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -61,7 +60,6 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
@@ -91,6 +89,7 @@ import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.ui.components.PeopleSidebar
@@ -330,15 +329,12 @@ private fun Editor(
     }
 
     showSizeWarning?.let { msg ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showSizeWarning = null },
-            title = { Text(stringResource(R.string.people_profile_file_too_large)) },
-            text = { Text(msg) },
-            confirmButton = {
-                TextButton(onClick = { showSizeWarning = null }) {
-                    Text(stringResource(R.string.people_common_close))
-                }
-            },
+            title = stringResource(R.string.people_profile_file_too_large),
+            text = msg,
+            confirmText = stringResource(R.string.people_common_close),
+            onConfirm = { showSizeWarning = null },
         )
     }
 }
@@ -555,10 +551,10 @@ private fun EditNameDialog(
     val trimmed = name.trim()
     val valid = trimmed.isNotEmpty()
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!isSaving) onDismiss() },
-        title = { Text(stringResource(R.string.people_profile_edit_name)) },
-        text = {
+        title = stringResource(R.string.people_profile_edit_name),
+        content = {
             OutlinedTextField(
                 value = name,
                 onValueChange = { value -> name = value },
@@ -571,23 +567,13 @@ private fun EditNameDialog(
                 modifier = Modifier.fillMaxWidth(),
             )
         },
-        confirmButton = {
-            TextButton(onClick = { onSave(trimmed) }, enabled = valid && !isSaving) {
-                if (isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(ButtonDefaults.IconSize),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Text(stringResource(R.string.people_profile_save))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !isSaving) {
-                Text(stringResource(R.string.people_common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.people_profile_save),
+        onConfirm = { onSave(trimmed) },
+        confirmEnabled = valid,
+        confirmLoading = isSaving,
+        dismissText = stringResource(R.string.people_common_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !isSaving,
     )
 }
 

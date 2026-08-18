@@ -29,7 +29,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.MonitorHeart
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.VerifiedUser
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -66,6 +65,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
@@ -211,19 +211,16 @@ fun ConnectedAccountsScreen(
         )
     }
     deleting?.let { acc ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { deleting = null },
-            title = { Text(stringResource(R.string.accounts_remove_title)) },
-            text = { Text(stringResource(R.string.accounts_remove_message, displayName(acc))) },
-            confirmButton = {
-                TextButton(onClick = {
-                    viewModel.remove(acc.id)
-                    deleting = null
-                }) { Text(stringResource(R.string.accounts_remove)) }
+            title = stringResource(R.string.accounts_remove_title),
+            text = stringResource(R.string.accounts_remove_message, displayName(acc)),
+            confirmText = stringResource(R.string.accounts_remove),
+            onConfirm = {
+                viewModel.remove(acc.id)
+                deleting = null
             },
-            dismissButton = {
-                TextButton(onClick = { deleting = null }) { Text(stringResource(MochiR.string.common_cancel)) }
-            },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -346,10 +343,10 @@ private fun AddAccountDialog(
         else -> false
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.accounts_add_title)) },
-        text = {
+        title = stringResource(R.string.accounts_add_title),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.accounts_type_label), style = MaterialTheme.typography.labelMedium)
                 for (t in visibleTypes) {
@@ -408,26 +405,21 @@ private fun AddAccountDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val fields = HashMap<String, String>()
-                    when (selectedType) {
-                        "email" -> fields["address"] = address.trim()
-                        "openai", "claude" -> {
-                            fields["api_key"] = apiKey.trim()
-                            if (model.isNotBlank()) fields["model"] = model.trim()
-                        }
-                        "mcp" -> fields["url"] = url.trim()
-                    }
-                    onSave(selectedType, fields)
-                },
-                enabled = canSave,
-            ) { Text(stringResource(MochiR.string.common_save)) }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = {
+            val fields = HashMap<String, String>()
+            when (selectedType) {
+                "email" -> fields["address"] = address.trim()
+                "openai", "claude" -> {
+                    fields["api_key"] = apiKey.trim()
+                    if (model.isNotBlank()) fields["model"] = model.trim()
+                }
+                "mcp" -> fields["url"] = url.trim()
+            }
+            onSave(selectedType, fields)
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmEnabled = canSave,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -439,10 +431,10 @@ private fun VerifyDialog(
     onResend: () -> Unit,
 ) {
     var code by remember { mutableStateOf("") }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.accounts_verify)) },
-        text = {
+        title = stringResource(R.string.accounts_verify),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
                     stringResource(R.string.accounts_verify_hint, account.identifier.ifBlank { account.label }),
@@ -460,14 +452,10 @@ private fun VerifyDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onVerify(code.trim()) }, enabled = code.trim().isNotEmpty()) {
-                Text(stringResource(R.string.accounts_verify))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(R.string.accounts_verify),
+        onConfirm = { onVerify(code.trim()) },
+        confirmEnabled = code.trim().isNotEmpty(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -485,10 +473,10 @@ private fun AccountSettingsDialog(
     var model by remember {
         mutableStateOf(if (account.identifier == "default") "" else account.identifier)
     }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.accounts_settings)) },
-        text = {
+        title = stringResource(R.string.accounts_settings),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedTextField(
                     value = name,
@@ -508,14 +496,9 @@ private fun AccountSettingsDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onSave(name.trim(), model.trim()) }) {
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { onSave(name.trim(), model.trim()) },
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

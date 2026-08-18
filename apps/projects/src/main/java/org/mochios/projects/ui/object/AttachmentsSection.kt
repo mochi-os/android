@@ -28,8 +28,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.R as MochiR
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.projects.R
 import java.io.File
 
@@ -104,14 +106,17 @@ fun AttachmentsSection(
 
     val toDelete = pendingDelete
     if (toDelete != null) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingDelete = null },
             title = stringResource(R.string.projects_attachment_delete_confirm_title),
-            message = stringResource(R.string.projects_attachment_delete_confirm_message),
+            text = stringResource(R.string.projects_attachment_delete_confirm_message),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 onDeleteAttachment(toDelete.id)
                 pendingDelete = null
             },
-            onDismiss = { pendingDelete = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

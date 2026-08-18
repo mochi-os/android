@@ -59,8 +59,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.api.NotifCategory
@@ -223,17 +223,17 @@ fun NotificationsScreen(
     }
 
     if (showClearConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showClearConfirm = false },
             title = stringResource(R.string.notifications_clear_all_title),
-            message = stringResource(R.string.notifications_clear_all_message),
-            confirmLabel = stringResource(R.string.notifications_clear_all),
-            dismissLabel = stringResource(R.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.notifications_clear_all_message),
+            confirmText = stringResource(R.string.notifications_clear_all),
             onConfirm = {
                 showClearConfirm = false
                 viewModel.clearAll()
             },
-            onDismiss = { showClearConfirm = false },
+            destructive = true,
+            dismissText = stringResource(R.string.common_cancel),
         )
     }
 }

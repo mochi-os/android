@@ -25,7 +25,6 @@ import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -52,11 +51,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.ColorPicker
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.crm.R
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmField
-import org.mochios.crm.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
 private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checklist")
@@ -450,15 +449,18 @@ fun FieldDetailScreen(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = stringResource(R.string.crm_field_delete_title),
-            message = stringResource(R.string.crm_field_delete_message, field.name),
+            text = stringResource(R.string.crm_field_delete_message, field.name),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteConfirm = false
                 viewModel.deleteField(classId, field.id)
                 onBack()
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -495,10 +497,10 @@ private fun OptionDialog(
     var colour by remember { mutableStateOf(initialColour) }
     var icon by remember { mutableStateOf(initialIcon) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             // The picker is taller than the dialog on a short screen, so the
             // body scrolls. Its saturation field consumes its own drags, so
             // dragging inside it doesn't scroll the dialog out from under it.
@@ -532,18 +534,9 @@ private fun OptionDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onSave(name, colour.ifBlank { null }, icon.ifBlank { null }) },
-                enabled = name.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { onSave(name, colour.ifBlank { null }, icon.ifBlank { null }) },
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

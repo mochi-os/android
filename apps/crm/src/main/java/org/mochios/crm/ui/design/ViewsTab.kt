@@ -31,7 +31,6 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.FormatListBulleted
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -48,7 +47,6 @@ import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -60,13 +58,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmView
-import org.mochios.crm.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
 @Composable
@@ -217,14 +215,17 @@ fun ViewsTab(
     }
 
     deletingView?.let { view ->
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { deletingView = null },
             title = stringResource(R.string.crm_views_delete_title),
-            message = stringResource(R.string.crm_views_delete_message, view.name),
+            text = stringResource(R.string.crm_views_delete_message, view.name),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 viewModel.deleteView(view.id)
                 deletingView = null
             },
-            onDismiss = { deletingView = null }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -363,10 +364,10 @@ private fun ViewDialog(
         border = borderField
     )
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(
                 modifier = Modifier
                     .padding(vertical = 4.dp)
@@ -527,31 +528,22 @@ private fun ViewDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    onSave(
-                        name,
-                        viewtype,
-                        columnsField.ifBlank { null },
-                        rowsField.ifBlank { null },
-                        sortField.ifBlank { null },
-                        direction,
-                        selectedClasses.joinToString(",").ifBlank { null },
-                        borderField.ifBlank { null },
-                        filterField.ifBlank { null },
-                    )
-                },
-                enabled = name.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_save))
-            }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = {
+            onSave(
+                name,
+                viewtype,
+                columnsField.ifBlank { null },
+                rowsField.ifBlank { null },
+                sortField.ifBlank { null },
+                direction,
+                selectedClasses.joinToString(",").ifBlank { null },
+                borderField.ifBlank { null },
+                filterField.ifBlank { null },
+            )
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

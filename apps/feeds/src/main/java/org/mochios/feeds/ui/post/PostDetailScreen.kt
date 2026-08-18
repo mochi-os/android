@@ -37,7 +37,6 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.LocalOffer
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -82,6 +81,7 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotFoundState
@@ -238,55 +238,33 @@ fun PostDetailScreen(
 
     // Delete post dialog
     if (showDeleteDialog) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showDeleteDialog = false },
-            title = { Text(stringResource(R.string.feeds_delete_post)) },
-            text = { Text(stringResource(R.string.feeds_delete_post_confirm)) },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        showDeleteDialog = false
-                        viewModel.deletePost { onNavigateBack() }
-                    }
-                ) {
-                    Text(
-                        stringResource(MochiR.string.common_delete),
-                        color = MaterialTheme.colorScheme.error
-                    )
-                }
+            title = stringResource(R.string.feeds_delete_post),
+            text = stringResource(R.string.feeds_delete_post_confirm),
+            confirmText = stringResource(MochiR.string.common_delete),
+            onConfirm = {
+                showDeleteDialog = false
+                viewModel.deletePost { onNavigateBack() }
             },
-            dismissButton = {
-                TextButton(onClick = { showDeleteDialog = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
     // Delete comment dialog
     showDeleteCommentDialog?.let { commentId ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showDeleteCommentDialog = null },
-            title = { Text(stringResource(R.string.feeds_delete_comment)) },
-            text = { Text(stringResource(R.string.feeds_delete_comment_confirm)) },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        showDeleteCommentDialog = null
-                        viewModel.deleteComment(commentId)
-                    }
-                ) {
-                    Text(
-                        stringResource(MochiR.string.common_delete),
-                        color = MaterialTheme.colorScheme.error
-                    )
-                }
+            title = stringResource(R.string.feeds_delete_comment),
+            text = stringResource(R.string.feeds_delete_comment_confirm),
+            confirmText = stringResource(MochiR.string.common_delete),
+            onConfirm = {
+                showDeleteCommentDialog = null
+                viewModel.deleteComment(commentId)
             },
-            dismissButton = {
-                TextButton(onClick = { showDeleteCommentDialog = null }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 

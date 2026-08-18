@@ -55,7 +55,7 @@ import org.mochios.words.ui.detail.DragSource
  *
  * Tap behaviour:
  *  - Empty cell + selected rack tile → places the tile (calls `onCellClick`).
- *    Blank tiles open the BlankTileDialog via the ViewModel.
+ *    Blank tiles open the blank-letter picker via the ViewModel.
  *  - Cell with a pending placement → removes it (calls `onRemovePlacement`).
  *
  * Drag-and-drop:

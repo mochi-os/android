@@ -341,7 +341,7 @@ class WordsGameViewModel @Inject constructor(
 
     /**
      * Try to place the currently-selected rack tile at (row, col). If the
-     * selected tile is a blank ('_'), open the BlankTileDialog instead;
+     * selected tile is a blank ('_'), open the blank-letter picker instead;
      * the dialog's `selectBlankLetter` finishes the placement.
      */
     fun placeAtCursor(row: Int, col: Int) {

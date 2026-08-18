@@ -9,14 +9,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -27,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -84,10 +81,10 @@ fun PlaceBidDialog(
     val invalidAmountText = stringResource(R.string.market_bid_dialog_invalid_amount)
     val invalidCeilingText = stringResource(R.string.market_bid_dialog_invalid_ceiling)
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(stringResource(R.string.market_bid_dialog_title)) },
-        text = {
+        title = stringResource(R.string.market_bid_dialog_title),
+        content = {
             Column {
                 val high = formatPrice(currentHigh, currency)
                 val label = if (hasBids) {
@@ -135,47 +132,31 @@ fun PlaceBidDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = {
-                    val minor = toMinorUnits(amountInput, currency)
-                    if (minor <= 0L || minor < minimum) {
-                        validationError = invalidAmountText
-                        return@TextButton
-                    }
-                    val ceiling = if (ceilingInput.isBlank()) {
-                        null
-                    } else {
-                        val c = toMinorUnits(ceilingInput, currency)
-                        if (c < minor) {
-                            validationError = invalidCeilingText
-                            return@TextButton
-                        }
-                        c
-                    }
-                    onSubmit(minor, ceiling, currency)
-                },
-            ) {
-                if (submitting) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                    Spacer(Modifier.height(2.dp))
-                    Text(stringResource(R.string.market_bid_dialog_submitting))
-                } else {
-                    Text(stringResource(R.string.market_bid_dialog_submit))
+        confirmText = if (submitting) {
+            stringResource(R.string.market_bid_dialog_submitting)
+        } else {
+            stringResource(R.string.market_bid_dialog_submit)
+        },
+        onConfirm = {
+            val minor = toMinorUnits(amountInput, currency)
+            if (minor <= 0L || minor < minimum) {
+                validationError = invalidAmountText
+                return@MochiAlertDialog
+            }
+            val ceiling = if (ceilingInput.isBlank()) {
+                null
+            } else {
+                val c = toMinorUnits(ceilingInput, currency)
+                if (c < minor) {
+                    validationError = invalidCeilingText
+                    return@MochiAlertDialog
                 }
+                c
             }
+            onSubmit(minor, ceiling, currency)
         },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = { if (!submitting) onDismiss() },
-            ) {
-                Text(stringResource(R.string.market_bid_dialog_cancel))
-            }
-        },
+        confirmLoading = submitting,
+        dismissText = stringResource(R.string.market_bid_dialog_cancel),
+        dismissEnabled = !submitting,
     )
 }

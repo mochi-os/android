@@ -39,11 +39,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Replica
@@ -99,19 +100,20 @@ fun ReplicasTab(
 
     val toRemove = pendingRemove
     if (toRemove != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingRemove = null },
             title = stringResource(R.string.wikis_replicas_remove_confirm_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.wikis_replicas_remove_confirm_message,
                 toRemove.name ?: toRemove.id,
             ),
-            confirmLabel = stringResource(R.string.wikis_replicas_remove_confirm_action),
-            isDestructive = true,
+            confirmText = stringResource(R.string.wikis_replicas_remove_confirm_action),
             onConfirm = {
                 viewModel.remove(toRemove.id)
                 pendingRemove = null
             },
-            onDismiss = { pendingRemove = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

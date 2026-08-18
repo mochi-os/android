@@ -17,6 +17,7 @@ import androidx.compose.material.icons.outlined.Report
 import androidx.compose.material.icons.outlined.Restore
 import org.mochios.android.ui.components.CommentItem
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.TagItem
@@ -62,7 +63,6 @@ import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -74,7 +74,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -104,7 +103,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.StatusBadgeSize
@@ -359,32 +357,32 @@ fun PostScreen(
     }
 
     if (showDeletePostConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeletePostConfirm = false },
             title = stringResource(R.string.forums_post_delete_title),
-            message = stringResource(R.string.forums_post_delete_message),
-            confirmLabel = stringResource(R.string.forums_post_delete),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.forums_post_delete_message),
+            confirmText = stringResource(R.string.forums_post_delete),
             onConfirm = {
                 showDeletePostConfirm = false
                 viewModel.deletePost()
             },
-            onDismiss = { showDeletePostConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
     commentToDelete?.let { c ->
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { commentToDelete = null },
             title = stringResource(R.string.forums_comment_delete_title),
-            message = stringResource(R.string.forums_comment_delete_message),
-            confirmLabel = stringResource(R.string.forums_comment_delete),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.forums_comment_delete_message),
+            confirmText = stringResource(R.string.forums_comment_delete),
             onConfirm = {
                 viewModel.deleteComment(c.id)
                 commentToDelete = null
             },
-            onDismiss = { commentToDelete = null }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
@@ -444,10 +442,10 @@ private fun EditCommentDialog(
         contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
     ) { uris -> newUris.addAll(uris) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.forums_comment_edit_title)) },
-        text = {
+        title = stringResource(R.string.forums_comment_edit_title),
+        content = {
             Column {
                 OutlinedTextField(
                     value = body,
@@ -519,19 +517,10 @@ private fun EditCommentDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onConfirm(body, keptIds.toList(), newUris.toList()) },
-                enabled = body.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { onConfirm(body, keptIds.toList(), newUris.toList()) },
+        confirmEnabled = body.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -556,10 +545,10 @@ private fun ReportDialog(
     var reasonExpanded by remember { mutableStateOf(false) }
     val selectedLabel = reasons.firstOrNull { it.first == selectedReason }?.second ?: ""
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column {
                 ExposedDropdownMenuBox(
                     expanded = reasonExpanded,
@@ -603,19 +592,10 @@ private fun ReportDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onConfirm(selectedReason, details) },
-                enabled = selectedReason != "other" || details.isNotBlank()
-            ) {
-                Text(stringResource(R.string.forums_report_submit))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(R.string.forums_report_submit),
+        onConfirm = { onConfirm(selectedReason, details) },
+        confirmEnabled = selectedReason != "other" || details.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

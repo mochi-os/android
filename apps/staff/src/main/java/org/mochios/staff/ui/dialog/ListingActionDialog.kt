@@ -10,11 +10,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -25,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.staff.R
 import org.mochios.staff.ui.components.StaffAuditTimeline
 import org.mochios.staff.ui.listings.ListingActionType
@@ -73,10 +72,10 @@ fun ListingActionDialog(
         action.type == ListingActionType.REJECT || action.type == ListingActionType.REMOVE
     val confirmEnabled = !submitting && (!requiresReason || reason.isNotBlank())
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(
                     text = "${action.listing.title} (#${action.listing.id})",
@@ -109,24 +108,12 @@ fun ListingActionDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = confirmEnabled,
-                onClick = { onSubmit(reason, notes) },
-            ) {
-                Text(
-                    if (submitting) stringResource(R.string.staff_listings_submitting)
-                    else confirmLabel,
-                )
-            }
-        },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = onDismiss,
-            ) {
-                Text(stringResource(R.string.staff_listings_cancel))
-            }
-        },
+        confirmText = if (submitting) stringResource(R.string.staff_listings_submitting)
+            else confirmLabel,
+        onConfirm = { onSubmit(reason, notes) },
+        confirmEnabled = confirmEnabled,
+        dismissText = stringResource(R.string.staff_listings_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !submitting,
     )
 }

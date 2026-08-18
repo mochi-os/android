@@ -12,11 +12,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountActionType
 import org.mochios.staff.ui.accounts.PendingAccountAction
@@ -76,10 +75,10 @@ fun AccountActionDialog(
         stringResource(R.string.staff_accounts_unnamed)
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(
                 verticalArrangement = Arrangement.spacedBy(10.dp),
                 modifier = Modifier.verticalScroll(rememberScrollState()),
@@ -123,24 +122,12 @@ fun AccountActionDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = confirmEnabled,
-                onClick = { onSubmit(reason, notes) },
-            ) {
-                Text(
-                    if (submitting) stringResource(R.string.staff_accounts_submitting)
-                    else confirmLabel,
-                )
-            }
-        },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = onDismiss,
-            ) {
-                Text(stringResource(R.string.staff_accounts_cancel))
-            }
-        },
+        confirmText = if (submitting) stringResource(R.string.staff_accounts_submitting)
+            else confirmLabel,
+        onConfirm = { onSubmit(reason, notes) },
+        confirmEnabled = confirmEnabled,
+        dismissText = stringResource(R.string.staff_accounts_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !submitting,
     )
 }

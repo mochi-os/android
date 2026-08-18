@@ -39,11 +39,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.DataChip
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
-import org.mochios.projects.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
 /**
@@ -139,14 +139,17 @@ fun GeneralTab(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = stringResource(R.string.projects_settings_delete_confirm_title),
-            message = stringResource(R.string.projects_settings_delete_confirm_message),
+            text = stringResource(R.string.projects_settings_delete_confirm_message),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteConfirm = false
                 viewModel.deleteProject { onProjectDeleted() }
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

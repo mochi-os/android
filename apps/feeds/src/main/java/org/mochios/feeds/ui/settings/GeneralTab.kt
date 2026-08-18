@@ -41,8 +41,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DataChip
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.feeds.R
@@ -152,16 +152,17 @@ fun GeneralTab(
     }
 
     if (showDeleteDialog) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteDialog = false },
             title = stringResource(R.string.feeds_delete_feed),
-            message = stringResource(R.string.feeds_delete_feed_confirm),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
+            text = stringResource(R.string.feeds_delete_feed_confirm),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteDialog = false
                 viewModel.deleteFeed { onFeedDeleted() }
             },
-            onDismiss = { showDeleteDialog = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

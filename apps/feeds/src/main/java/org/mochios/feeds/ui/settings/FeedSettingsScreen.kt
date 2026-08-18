@@ -50,7 +50,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.Section
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
@@ -239,16 +239,17 @@ private fun SubscriberSettings(
     }
 
     if (showConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showConfirm = false },
             title = stringResource(R.string.feeds_unsubscribe_confirm),
-            message = stringResource(R.string.feeds_unsubscribe_confirm_message),
-            confirmLabel = stringResource(R.string.feeds_unsubscribe),
-            isDestructive = true,
+            text = stringResource(R.string.feeds_unsubscribe_confirm_message),
+            confirmText = stringResource(R.string.feeds_unsubscribe),
             onConfirm = {
                 showConfirm = false
                 onUnsubscribe()
             },
-            onDismiss = { showConfirm = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

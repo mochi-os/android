@@ -25,7 +25,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
@@ -43,7 +42,6 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -63,6 +61,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.settings.R
@@ -432,10 +431,10 @@ private fun CategoryNameDialog(
     onSave: (String) -> Unit,
 ) {
     var name by remember { mutableStateOf(initial) }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             OutlinedTextField(
                 value = name,
                 onValueChange = { name = it },
@@ -444,15 +443,10 @@ private fun CategoryNameDialog(
                 modifier = Modifier.fillMaxWidth(),
             )
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onSave(name) },
-                enabled = name.trim().isNotEmpty(),
-            ) { Text(stringResource(MochiR.string.common_save)) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { onSave(name) },
+        confirmEnabled = name.trim().isNotEmpty(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -466,10 +460,10 @@ private fun DeleteCategoryDialog(
     val preferred = others.firstOrNull { it.default == 1 } ?: others.firstOrNull { it.id != "0" } ?: others.firstOrNull()
     var target by remember { mutableStateOf(preferred?.id ?: "0") }
     var menu by remember { mutableStateOf(false) }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.notifprefs_delete_title, category.label)) },
-        text = {
+        title = stringResource(R.string.notifprefs_delete_title, category.label),
+        content = {
             Column {
                 Text(stringResource(R.string.notifprefs_reassign_label))
                 Spacer(Modifier.height(8.dp))
@@ -492,14 +486,9 @@ private fun DeleteCategoryDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onConfirm(target) }) {
-                Text(stringResource(R.string.notifprefs_delete))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(R.string.notifprefs_delete),
+        onConfirm = { onConfirm(target) },
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

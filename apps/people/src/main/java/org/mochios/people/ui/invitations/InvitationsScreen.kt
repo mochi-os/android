@@ -30,7 +30,6 @@ import androidx.compose.material.icons.filled.PersonAddAlt
 import androidx.compose.material.icons.filled.PersonOff
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -67,6 +66,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.people.R
@@ -481,10 +481,10 @@ private fun InviteSettingsDialog(
         ),
     )
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.people_invitations_incoming)) },
-        text = {
+        title = stringResource(R.string.people_invitations_incoming),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 for (option in options) {
                     Row(
@@ -515,27 +515,11 @@ private fun InviteSettingsDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onSave(selected) },
-                enabled = !isSaving,
-            ) {
-                if (isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier
-                            .height(16.dp)
-                            .padding(end = 8.dp),
-                        strokeWidth = 2.dp,
-                    )
-                }
-                Text(stringResource(R.string.people_common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !isSaving) {
-                Text(stringResource(R.string.people_common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.people_common_save),
+        onConfirm = { onSave(selected) },
+        confirmLoading = isSaving,
+        dismissText = stringResource(R.string.people_common_cancel),
+        dismissEnabled = !isSaving,
     )
 }
 

@@ -27,7 +27,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
@@ -61,6 +60,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.projects.R
@@ -411,10 +411,10 @@ private fun MergeDialog(
         "rebase" to stringResource(R.string.projects_request_method_rebase)
     )
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_request_merge_dialog_title)) },
-        text = {
+        title = stringResource(R.string.projects_request_merge_dialog_title),
+        content = {
             Column {
                 OutlinedTextField(
                     value = message,
@@ -440,19 +440,10 @@ private fun MergeDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onMerge(message, method) },
-                enabled = message.isNotBlank()
-            ) {
-                Text(stringResource(R.string.projects_request_merge))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(R.string.projects_request_merge),
+        onConfirm = { onMerge(message, method) },
+        confirmEnabled = message.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -494,10 +485,10 @@ private fun CreateRequestDialog(
         selectedTarget = branches.firstOrNull { it.isDefault }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_request_create_title)) },
-        text = {
+        title = stringResource(R.string.projects_request_create_title),
+        content = {
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 RepositoryDropdown(
                     repositories = repositories,
@@ -546,32 +537,23 @@ private fun CreateRequestDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val repo = selectedRepo ?: return@TextButton
-                    val source = selectedSource ?: return@TextButton
-                    val target = selectedTarget ?: return@TextButton
-                    onCreate(
-                        repo.id,
-                        source.name,
-                        target.name,
-                        title,
-                        description.ifBlank { null },
-                        draft
-                    )
-                },
-                enabled = title.isNotBlank() && selectedRepo != null &&
-                    selectedSource != null && selectedTarget != null
-            ) {
-                Text(stringResource(R.string.projects_request_create_action))
-            }
+        confirmText = stringResource(R.string.projects_request_create_action),
+        onConfirm = {
+            val repo = selectedRepo ?: return@MochiAlertDialog
+            val source = selectedSource ?: return@MochiAlertDialog
+            val target = selectedTarget ?: return@MochiAlertDialog
+            onCreate(
+                repo.id,
+                source.name,
+                target.name,
+                title,
+                description.ifBlank { null },
+                draft
+            )
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmEnabled = title.isNotBlank() && selectedRepo != null &&
+            selectedSource != null && selectedTarget != null,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

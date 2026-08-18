@@ -25,7 +25,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.SearchOff
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -37,7 +36,6 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -71,6 +69,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPage
@@ -349,56 +348,40 @@ fun PageViewScreen(
     }
 
     if (unsubscribeDialogOpen) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { if (!isUnsubscribing) unsubscribeDialogOpen = false },
-            title = { Text(stringResource(R.string.wikis_unsubscribe_confirm_title)) },
-            text = {
-                Text(
-                    stringResource(
-                        R.string.wikis_unsubscribe_confirm_message,
-                        state.wiki?.name ?: "",
-                    )
-                )
-            },
-            confirmButton = {
-                TextButton(
-                    enabled = !isUnsubscribing,
-                    onClick = {
-                        isUnsubscribing = true
-                        scope.launch {
-                            try {
-                                viewModel.unsubscribe()
-                                snackbar.showSnackbar(
-                                    context.getString(R.string.wikis_unsubscribe_success)
-                                )
-                                unsubscribeDialogOpen = false
-                                navController.popBackStack(WikisApp.HOME, inclusive = false)
-                            } catch (e: Exception) {
-                                snackbar.showSnackbar(
-                                    e.message?.takeIf { it.isNotBlank() }
-                                        ?: context.getString(R.string.wikis_subscribe_failed)
-                                )
-                            } finally {
-                                isUnsubscribing = false
-                            }
-                        }
-                    },
-                ) {
-                    Text(
-                        if (isUnsubscribing) stringResource(R.string.wikis_unsubscribing)
-                        else stringResource(R.string.wikis_unsubscribe_action),
-                        color = MaterialTheme.colorScheme.error,
-                    )
+            title = stringResource(R.string.wikis_unsubscribe_confirm_title),
+            text = stringResource(
+                R.string.wikis_unsubscribe_confirm_message,
+                state.wiki?.name ?: "",
+            ),
+            confirmText = if (isUnsubscribing) stringResource(R.string.wikis_unsubscribing)
+                else stringResource(R.string.wikis_unsubscribe_action),
+            onConfirm = {
+                isUnsubscribing = true
+                scope.launch {
+                    try {
+                        viewModel.unsubscribe()
+                        snackbar.showSnackbar(
+                            context.getString(R.string.wikis_unsubscribe_success)
+                        )
+                        unsubscribeDialogOpen = false
+                        navController.popBackStack(WikisApp.HOME, inclusive = false)
+                    } catch (e: Exception) {
+                        snackbar.showSnackbar(
+                            e.message?.takeIf { it.isNotBlank() }
+                                ?: context.getString(R.string.wikis_subscribe_failed)
+                        )
+                    } finally {
+                        isUnsubscribing = false
+                    }
                 }
             },
-            dismissButton = {
-                TextButton(
-                    enabled = !isUnsubscribing,
-                    onClick = { unsubscribeDialogOpen = false },
-                ) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
+            confirmEnabled = !isUnsubscribing,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+            onDismiss = { unsubscribeDialogOpen = false },
+            dismissEnabled = !isUnsubscribing,
         )
     }
 
