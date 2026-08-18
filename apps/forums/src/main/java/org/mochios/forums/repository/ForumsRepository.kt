@@ -168,12 +168,12 @@ class ForumsRepository @Inject constructor(
     }
 
     suspend fun createPost(forumId: String, title: String, body: String, files: List<File> = emptyList()): CreatePostResponse {
-        val parts = fileStore.fileParts("attachments", files)
+        val parts = fileStore.fileParts("files", files)
         val response = api.createPost(
             forum = forumId.toRequestBody(text),
             title = title.toRequestBody(text),
             body = body.toRequestBody(text),
-            attachments = parts
+            files = parts
         ).unwrap()
         _postCreated.tryEmit(forumId)
         return response
@@ -195,14 +195,14 @@ class ForumsRepository @Inject constructor(
     ): CreatePostResponse {
         val files = fileStore.cacheFiles(uris)
         try {
-            val parts = fileStore.fileParts("attachments", files)
+            val parts = fileStore.fileParts("files", files)
             val captionsJson = captions.takeIf { list -> list.any { it.isNotEmpty() } }
                 ?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
             val response = api.createPost(
                 forum = forumId.toRequestBody(text),
                 title = title.toRequestBody(text),
                 body = body.toRequestBody(text),
-                attachments = parts,
+                files = parts,
                 captions = captionsJson,
             ).unwrap()
             _postCreated.tryEmit(forumId)
@@ -233,7 +233,7 @@ class ForumsRepository @Inject constructor(
     ) {
         val files = fileStore.cacheFiles(newFileUris)
         try {
-            val newParts = fileStore.fileParts("attachments", files)
+            val newParts = fileStore.fileParts("files", files)
             val order: List<String>? = when {
                 keptAttachmentIds == null && files.isEmpty() -> null
                 else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
@@ -247,7 +247,7 @@ class ForumsRepository @Inject constructor(
                 title = title.toRequestBody(text),
                 body = body.toRequestBody(text),
                 order = orderJson,
-                attachments = newParts,
+                files = newParts,
                 captions = captionsJson,
             ).unwrap()
         } finally {
