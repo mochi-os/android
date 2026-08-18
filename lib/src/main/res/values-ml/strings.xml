@@ -321,4 +321,14 @@
     <string name="about_check_background">പശ്ചാത്തലത്തിൽ തുടരുക</string>
     <string name="notifications_category_unassigned">നിയോഗിച്ചിട്ടില്ല</string>
     <string name="notifications_change_category">അറിയിപ്പ് വിഭാഗം മാറ്റുക</string>
+    <string name="lightbox_comments_none">ഈ ചിത്രത്തിൽ ഇതുവരെ അഭിപ്രായങ്ങളില്ല.</string>
+    <string name="lightbox_comments_only">ഈ ചിത്രത്തിലെ അഭിപ്രായങ്ങൾ മാത്രം കാണിക്കുക</string>
+    <string name="lightbox_comment_placeholder">ഈ ചിത്രത്തിൽ അഭിപ്രായം പറയുക…</string>
+    <string name="comment_anchor_open">ഈ അഭിപ്രായം ഏത് ചിത്രത്തെക്കുറിച്ചാണെന്ന് കാണുക</string>
+    <string name="comment_anchor_default">ഈ ചിത്രത്തിൽ</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">ഈ പോസ്റ്റിലെ മറ്റൊരു %1$d അഭിപ്രായം കാണിക്കുക</item>
+        <item quantity="other">ഈ പോസ്റ്റിലെ മറ്റ് %1$d അഭിപ്രായങ്ങൾ കാണിക്കുക</item>
+    </plurals>
+    <string name="lightbox_comments">അഭിപ്രായങ്ങൾ</string>
 </resources>

@@ -445,6 +445,8 @@ interface ForumsApi {
         @Part("post") post: RequestBody,
         @Part("body") body: RequestBody,
         @Part("parent") parent: RequestBody?,
+        // Anchors a top-level comment to one of the post's own attachments.
+        @Part("attachment") attachment: RequestBody?,
         @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<CreateCommentResponse>>
 

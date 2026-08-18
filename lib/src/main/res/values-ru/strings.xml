@@ -323,4 +323,16 @@
     <string name="about_check_background">Продолжить в фоновом режиме</string>
     <string name="notifications_category_unassigned">Не назначено</string>
     <string name="notifications_change_category">Изменить категорию уведомления</string>
+    <string name="lightbox_comments_none">К этому изображению пока нет комментариев.</string>
+    <string name="lightbox_comments_only">Показывать только комментарии к этому изображению</string>
+    <string name="lightbox_comment_placeholder">Прокомментировать это изображение…</string>
+    <string name="comment_anchor_open">Посмотреть изображение, о котором этот комментарий</string>
+    <string name="comment_anchor_default">К этому изображению</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Показать ещё %1$d комментарий к этой публикации</item>
+        <item quantity="few">Показать ещё %1$d комментария к этой публикации</item>
+        <item quantity="many">Показать ещё %1$d комментариев к этой публикации</item>
+        <item quantity="other">Показать ещё %1$d комментария к этой публикации</item>
+    </plurals>
+    <string name="lightbox_comments">Комментарии</string>
 </resources>

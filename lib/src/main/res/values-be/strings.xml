@@ -323,4 +323,16 @@
     <string name="about_check_background">Працягнуць у фоне</string>
     <string name="notifications_category_unassigned">Не прызначана</string>
     <string name="notifications_change_category">Змяніць катэгорыю апавяшчэння</string>
+    <string name="lightbox_comments_none">На гэтым здымку пакуль няма каментарыяў.</string>
+    <string name="lightbox_comments_only">Паказваць толькі каментарыі да гэтага здымка</string>
+    <string name="lightbox_comment_placeholder">Пракаментаваць гэты здымак…</string>
+    <string name="comment_anchor_open">Паглядзець здымак, пра які гэты каментарый</string>
+    <string name="comment_anchor_default">На гэтым здымку</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Паказаць яшчэ %1$d каментарый да гэтага допісу</item>
+        <item quantity="few">Паказаць яшчэ %1$d каментарыі да гэтага допісу</item>
+        <item quantity="many">Паказаць яшчэ %1$d каментарыяў да гэтага допісу</item>
+        <item quantity="other">Паказаць яшчэ %1$d каментарыяў да гэтага допісу</item>
+    </plurals>
+    <string name="lightbox_comments">Каментарыі</string>
 </resources>

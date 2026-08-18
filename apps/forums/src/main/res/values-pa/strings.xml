@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL ਰਾਹੀਂ ਮਿਲਿਆ</string>
     <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$d)</string>
     <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$d)</string>
+    <string name="forums_moderation_on_image">ਤਸਵੀਰ \'ਤੇ: %1$s</string>
 </resources>

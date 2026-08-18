@@ -321,4 +321,14 @@
     <string name="about_check_background">Tiếp tục chạy nền</string>
     <string name="notifications_category_unassigned">Chưa phân công</string>
     <string name="notifications_change_category">Đổi danh mục thông báo</string>
+    <string name="lightbox_comments_none">Chưa có bình luận nào về hình ảnh này.</string>
+    <string name="lightbox_comments_only">Chỉ hiển thị bình luận về hình ảnh này</string>
+    <string name="lightbox_comment_placeholder">Bình luận về hình ảnh này…</string>
+    <string name="comment_anchor_open">Xem hình ảnh mà bình luận này nói đến</string>
+    <string name="comment_anchor_default">Về hình ảnh này</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Hiển thị %1$d bình luận khác trên bài đăng này</item>
+        <item quantity="other">Hiển thị %1$d bình luận khác trên bài đăng này</item>
+    </plurals>
+    <string name="lightbox_comments">Bình luận</string>
 </resources>

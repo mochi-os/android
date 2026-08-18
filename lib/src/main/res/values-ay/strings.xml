@@ -321,4 +321,14 @@
     <string name="about_check_background">Qhipankañ sarantaña</string>
     <string name="notifications_category_unassigned">Janiw permitidakit</string>
     <string name="notifications_change_category">Yatiyaw categoría mayjt’aña</string>
+    <string name="lightbox_comments_none">Aka jamuqat tuqit janïra arst\'äwinakax utjkiti.</string>
+    <string name="lightbox_comments_only">Aka jamuqat tuqit arst\'äwinak sapaki uñachayaña</string>
+    <string name="lightbox_comment_placeholder">Aka jamuqat tuqit arst\'aña…</string>
+    <string name="comment_anchor_open">Aka arst\'äwix kawkïr jamuqat parlki uk uñjaña</string>
+    <string name="comment_anchor_default">Aka jamuqan</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Aka publicación tuqit %1$d yaqha arst\'äwi uñachayaña</item>
+        <item quantity="other">Aka publicación tuqit %1$d yaqha arst\'äwinaka uñachayaña</item>
+    </plurals>
+    <string name="lightbox_comments">Comentarionaka</string>
 </resources>

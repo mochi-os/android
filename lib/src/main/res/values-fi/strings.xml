@@ -321,4 +321,14 @@
     <string name="about_check_background">Jatka taustalla</string>
     <string name="notifications_category_unassigned">Ei määritetty</string>
     <string name="notifications_change_category">Vaihda ilmoituskategoriaa</string>
+    <string name="lightbox_comments_none">Tällä kuvalla ei ole vielä kommentteja.</string>
+    <string name="lightbox_comments_only">Näytä vain tämän kuvan kommentit</string>
+    <string name="lightbox_comment_placeholder">Kommentoi tätä kuvaa…</string>
+    <string name="comment_anchor_open">Näytä kuva, jota tämä kommentti koskee</string>
+    <string name="comment_anchor_default">Tässä kuvassa</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Näytä %1$d muu kommentti tähän julkaisuun</item>
+        <item quantity="other">Näytä %1$d muuta kommenttia tähän julkaisuun</item>
+    </plurals>
+    <string name="lightbox_comments">Kommentit</string>
 </resources>

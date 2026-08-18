@@ -28,8 +28,19 @@ data class Comment(
     val children: List<Comment> = emptyList(),
     val attachments: List<Attachment> = emptyList(),
     @SerializedName("my_reaction") val myReaction: String = "",
-    val reactions: List<Reaction> = emptyList()
+    val reactions: List<Reaction> = emptyList(),
+    // Anchor: the id of one of the post's own attachments this comment is
+    // about, with its display name (caption, else file name) and its caption
+    // alone (empty when it has none). Empty when unanchored; replies inherit
+    // their parent's context and are not anchored themselves. Nullable for
+    // the same Gson reason as [author].
+    val attachment: String? = null,
+    @SerializedName("attachment_name") val attachmentName: String? = null,
+    @SerializedName("attachment_caption") val attachmentCaption: String? = null,
 ) {
+    /** The anchored attachment's id, or "" when the comment is not about one. */
+    val anchor: String get() = attachment.orEmpty()
+
     /** Returns body text — projects uses 'content', feeds uses 'body'. */
     val text: String get() = content.orEmpty().ifBlank { body }
 

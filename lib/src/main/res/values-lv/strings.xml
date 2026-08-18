@@ -322,4 +322,15 @@
     <string name="about_check_background">Turpināt fonā</string>
     <string name="notifications_category_unassigned">Nepiešķirts</string>
     <string name="notifications_change_category">Mainīt paziņojuma kategoriju</string>
+    <string name="lightbox_comments_none">Šim attēlam vēl nav komentāru.</string>
+    <string name="lightbox_comments_only">Rādīt tikai šī attēla komentārus</string>
+    <string name="lightbox_comment_placeholder">Komentēt šo attēlu…</string>
+    <string name="comment_anchor_open">Skatīt attēlu, uz kuru attiecas šis komentārs</string>
+    <string name="comment_anchor_default">Pie šī attēla</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="zero">Rādīt vēl %1$d šī ieraksta komentāru</item>
+        <item quantity="one">Rādīt vēl %1$d šī ieraksta komentāru</item>
+        <item quantity="other">Rādīt vēl %1$d šī ieraksta komentārus</item>
+    </plurals>
+    <string name="lightbox_comments">Komentāri</string>
 </resources>

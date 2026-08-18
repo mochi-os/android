@@ -110,8 +110,22 @@ data class ForumComment(
     @SerializedName("can_comment") val canComment: Boolean = false,
     val status: String = "",
     val remover: String = "",
-    val reason: String = ""
-)
+    val reason: String = "",
+    // Anchor: the id of one of the post's own attachments this comment is
+    // about, with its display name (caption, else file name) and its caption
+    // alone (empty when it has none). Empty when unanchored; replies inherit
+    // their parent's context and are not anchored themselves.
+    val attachment: String? = null,
+    @SerializedName("attachment_name") val attachmentName: String? = null,
+    @SerializedName("attachment_caption") val attachmentCaption: String? = null,
+) {
+    /** The anchored attachment's id, or "" when the comment is not about one. */
+    val anchor: String get() = attachment.orEmpty()
+}
+
+/** Every comment in the trees, replies included - what a lightbox comments count shows. */
+fun countComments(comments: List<ForumComment>): Int =
+    comments.sumOf { 1 + countComments(it.children) }
 
 data class DirectoryEntry(
     val id: String = "",

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">በURL ተገኝቷል</string>
     <string name="forums_moderation_pending_posts">በመጠባበቅ ላይ ያሉ ልጥፎች (%1$d)</string>
     <string name="forums_moderation_pending_comments">በመጠባበቅ ላይ ያሉ አስተያየቶች (%1$d)</string>
+    <string name="forums_moderation_on_image">በምስል ላይ፦ %1$s</string>
 </resources>

@@ -323,4 +323,16 @@
     <string name="about_check_background">Nadaljuj v ozadju</string>
     <string name="notifications_category_unassigned">Nedodeljeno</string>
     <string name="notifications_change_category">Spremeni kategorijo obvestila</string>
+    <string name="lightbox_comments_none">Ta slika še nima komentarjev.</string>
+    <string name="lightbox_comments_only">Pokaži samo komentarje k tej sliki</string>
+    <string name="lightbox_comment_placeholder">Komentiraj to sliko…</string>
+    <string name="comment_anchor_open">Poglej sliko, na katero se nanaša ta komentar</string>
+    <string name="comment_anchor_default">Pri tej sliki</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Pokaži še %1$d komentar k tej objavi</item>
+        <item quantity="two">Pokaži še %1$d komentarja k tej objavi</item>
+        <item quantity="few">Pokaži še %1$d komentarje k tej objavi</item>
+        <item quantity="other">Pokaži še %1$d komentarjev k tej objavi</item>
+    </plurals>
+    <string name="lightbox_comments">Komentarji</string>
 </resources>

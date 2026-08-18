@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Գտնվել է URL-ով</string>
     <string name="forums_moderation_pending_posts">Սպասող հրապարակումներ (%1$d)</string>
     <string name="forums_moderation_pending_comments">Սպասող մեկնաբանություններ (%1$d)</string>
+    <string name="forums_moderation_on_image">Պատկերի վերաբերյալ՝ %1$s</string>
 </resources>

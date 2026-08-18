@@ -323,4 +323,16 @@
     <string name="about_check_background">Продовжити у фоновому режимі</string>
     <string name="notifications_category_unassigned">Не призначено</string>
     <string name="notifications_change_category">Змінити категорію сповіщення</string>
+    <string name="lightbox_comments_none">До цього зображення ще немає коментарів.</string>
+    <string name="lightbox_comments_only">Показувати лише коментарі до цього зображення</string>
+    <string name="lightbox_comment_placeholder">Прокоментувати це зображення…</string>
+    <string name="comment_anchor_open">Переглянути зображення, про яке цей коментар</string>
+    <string name="comment_anchor_default">До цього зображення</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Показати ще %1$d коментар до цього допису</item>
+        <item quantity="few">Показати ще %1$d коментарі до цього допису</item>
+        <item quantity="many">Показати ще %1$d коментарів до цього допису</item>
+        <item quantity="other">Показати ще %1$d коментаря до цього допису</item>
+    </plurals>
+    <string name="lightbox_comments">Коментарі</string>
 </resources>

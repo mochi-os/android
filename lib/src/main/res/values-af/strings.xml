@@ -323,4 +323,14 @@
     <string name="about_check_background">Gaan voort in die agtergrond</string>
     <string name="notifications_category_unassigned">Nie toegewys nie</string>
     <string name="notifications_change_category">Verander kennisgewingkategorie</string>
+    <string name="lightbox_comments_none">Nog geen kommentaar op hierdie beeld nie.</string>
+    <string name="lightbox_comments_only">Wys slegs kommentaar op hierdie beeld</string>
+    <string name="lightbox_comment_placeholder">Lewer kommentaar op hierdie beeld…</string>
+    <string name="comment_anchor_open">Bekyk die beeld waaroor hierdie kommentaar gaan</string>
+    <string name="comment_anchor_default">Op hierdie beeld</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Wys %1$d ander kommentaar op hierdie plasing</item>
+        <item quantity="other">Wys %1$d ander kommentare op hierdie plasing</item>
+    </plurals>
+    <string name="lightbox_comments">Kommentare</string>
 </resources>

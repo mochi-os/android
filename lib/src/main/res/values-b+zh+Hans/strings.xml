@@ -320,4 +320,14 @@
     <string name="about_check_background">在后台继续</string>
     <string name="notifications_category_unassigned">未分配</string>
     <string name="notifications_change_category">更改通知分类</string>
+    <string name="lightbox_comments_none">这张图片还没有评论。</string>
+    <string name="lightbox_comments_only">仅显示这张图片的评论</string>
+    <string name="lightbox_comment_placeholder">评论这张图片…</string>
+    <string name="comment_anchor_open">查看此评论所指的图片</string>
+    <string name="comment_anchor_default">关于这张图片</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">显示此帖子的另 %1$d 条评论</item>
+        <item quantity="other">显示此帖子的另 %1$d 条评论</item>
+    </plurals>
+    <string name="lightbox_comments">评论</string>
 </resources>

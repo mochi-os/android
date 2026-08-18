@@ -300,4 +300,5 @@
     <plurals name="forums_new_posts">
         <item quantity="other">%d 篇新帖</item>
     </plurals>
+    <string name="forums_moderation_on_image">關於圖片：%1$s</string>
 </resources>

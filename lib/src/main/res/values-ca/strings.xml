@@ -323,4 +323,14 @@
     <string name="about_check_background">Continua en segon pla</string>
     <string name="notifications_category_unassigned">Sense assignar</string>
     <string name="notifications_change_category">Canvia la categoria de notificació</string>
+    <string name="lightbox_comments_none">Encara no hi ha comentaris a aquesta imatge.</string>
+    <string name="lightbox_comments_only">Mostra només els comentaris d\'aquesta imatge</string>
+    <string name="lightbox_comment_placeholder">Comenta aquesta imatge…</string>
+    <string name="comment_anchor_open">Mostra la imatge a què es refereix aquest comentari</string>
+    <string name="comment_anchor_default">En aquesta imatge</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Mostra %1$d altre comentari d\'aquesta publicació</item>
+        <item quantity="other">Mostra %1$d altres comentaris d\'aquesta publicació</item>
+    </plurals>
+    <string name="lightbox_comments">Comentaris</string>
 </resources>

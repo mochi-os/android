@@ -320,4 +320,14 @@
     <string name="about_check_background">在背景繼續</string>
     <string name="notifications_category_unassigned">未指派</string>
     <string name="notifications_change_category">變更通知類別</string>
+    <string name="lightbox_comments_none">這張圖片還沒有評論。</string>
+    <string name="lightbox_comments_only">僅顯示這張圖片的評論</string>
+    <string name="lightbox_comment_placeholder">評論這張圖片…</string>
+    <string name="comment_anchor_open">查看此評論所指的圖片</string>
+    <string name="comment_anchor_default">關於這張圖片</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">顯示此貼文的另 %1$d 則評論</item>
+        <item quantity="other">顯示此貼文的另 %1$d 則評論</item>
+    </plurals>
+    <string name="lightbox_comments">留言</string>
 </resources>

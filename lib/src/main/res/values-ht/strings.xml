@@ -321,4 +321,14 @@
     <string name="about_check_background">Kontinye an aryè plan</string>
     <string name="notifications_category_unassigned">Pa asiyen</string>
     <string name="notifications_change_category">Chanje kategori notifikasyon</string>
+    <string name="lightbox_comments_none">Poko gen kòmantè sou imaj sa a.</string>
+    <string name="lightbox_comments_only">Montre sèlman kòmantè sou imaj sa a</string>
+    <string name="lightbox_comment_placeholder">Kòmante imaj sa a…</string>
+    <string name="comment_anchor_open">Wè imaj kòmantè sa a pale de li a</string>
+    <string name="comment_anchor_default">Sou imaj sa a</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Montre %1$d lòt kòmantè sou piblikasyon sa a</item>
+        <item quantity="other">Montre %1$d lòt kòmantè sou piblikasyon sa a</item>
+    </plurals>
+    <string name="lightbox_comments">Kòmantè</string>
 </resources>

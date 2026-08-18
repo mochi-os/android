@@ -595,13 +595,19 @@ class FeedsRepository @Inject constructor(
 
     // --- Comments ---
 
+    /**
+     * [attachment] anchors a top-level comment to one of the post's own
+     * attachments (its id); the server refuses any other id. A reply inherits
+     * its parent's context and takes no anchor.
+     */
     suspend fun createComment(
         feedId: String,
         postId: String,
         body: String,
         parent: String? = null,
         files: List<Uri>,
-        context: Context
+        context: Context,
+        attachment: String? = null,
     ): Comment {
         val cachedFiles = fileStore.cacheFiles(files)
         return try {
@@ -612,6 +618,8 @@ class FeedsRepository @Inject constructor(
                 .addFormDataPart("body", body)
             if (parent != null) {
                 builder.addFormDataPart("parent", parent)
+            } else if (!attachment.isNullOrEmpty()) {
+                builder.addFormDataPart("attachment", attachment)
             }
             for (file in cachedFiles) {
                 builder.addPart(fileStore.filePart("files", file))

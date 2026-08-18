@@ -321,4 +321,14 @@
     <string name="about_check_background">Tenonde hapykuépe</string>
     <string name="notifications_category_unassigned">Mavevenoĩva</string>
     <string name="notifications_change_category">Emoambue ñehenói categoría</string>
+    <string name="lightbox_comments_none">Ne\'ĩra gueteri temiandu ko ta\'angáre.</string>
+    <string name="lightbox_comments_only">Ehechauka ko ta\'anga rehegua temiandu añónte</string>
+    <string name="lightbox_comment_placeholder">Emoĩ ne remiandu ko ta\'angáre…</string>
+    <string name="comment_anchor_open">Ehecha ta\'anga ko temiandu oñe\'ẽha</string>
+    <string name="comment_anchor_default">Ko ta\'angáre</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Ehechauka %1$d ambue temiandu ko jehaipyrére</item>
+        <item quantity="other">Ehechauka %1$d ambue temiandu ko jehaipyrére</item>
+    </plurals>
+    <string name="lightbox_comments">Comentariokuéra</string>
 </resources>

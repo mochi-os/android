@@ -320,4 +320,14 @@
     <string name="about_check_background">ສືບຕໍ່ໃນພື້ນຫຼັງ</string>
     <string name="notifications_category_unassigned">ບໍ່ໄດ້ມອບໝາຍ</string>
     <string name="notifications_change_category">ປ່ຽນໝວດໝູ່ການແຈ້ງເຕືອນ</string>
+    <string name="lightbox_comments_none">ຍັງບໍ່ມີຄວາມເຫັນຕໍ່ຮູບນີ້.</string>
+    <string name="lightbox_comments_only">ສະແດງສະເພາະຄວາມເຫັນຕໍ່ຮູບນີ້</string>
+    <string name="lightbox_comment_placeholder">ສະແດງຄວາມເຫັນຕໍ່ຮູບນີ້…</string>
+    <string name="comment_anchor_open">ເບິ່ງຮູບທີ່ຄວາມເຫັນນີ້ກ່າວເຖິງ</string>
+    <string name="comment_anchor_default">ຕໍ່ຮູບນີ້</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">ສະແດງອີກ %1$d ຄວາມເຫັນຕໍ່ໂພສນີ້</item>
+        <item quantity="other">ສະແດງອີກ %1$d ຄວາມເຫັນຕໍ່ໂພສນີ້</item>
+    </plurals>
+    <string name="lightbox_comments">ຄຳເຫັນ</string>
 </resources>

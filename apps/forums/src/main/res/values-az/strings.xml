@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL ilə tapıldı</string>
     <string name="forums_moderation_pending_posts">Gözləyən paylaşımlar (%1$d)</string>
     <string name="forums_moderation_pending_comments">Gözləyən şərhlər (%1$d)</string>
+    <string name="forums_moderation_on_image">Şəkildə: %1$s</string>
 </resources>

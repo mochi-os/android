@@ -321,4 +321,14 @@
     <string name="about_check_background">पार्श्वभूमीत सुरू ठेवा</string>
     <string name="notifications_category_unassigned">नियुक्त न केलेले</string>
     <string name="notifications_change_category">नोटिफिकेशन श्रेणी बदला</string>
+    <string name="lightbox_comments_none">या प्रतिमेवर अजून कोणतीही टिप्पणी नाही.</string>
+    <string name="lightbox_comments_only">फक्त या प्रतिमेच्या टिप्पण्या दाखवा</string>
+    <string name="lightbox_comment_placeholder">या प्रतिमेवर टिप्पणी करा…</string>
+    <string name="comment_anchor_open">ही टिप्पणी ज्या प्रतिमेबद्दल आहे ती पहा</string>
+    <string name="comment_anchor_default">या प्रतिमेवर</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">या पोस्टवरील आणखी %1$d टिप्पणी दाखवा</item>
+        <item quantity="other">या पोस्टवरील आणखी %1$d टिप्पण्या दाखवा</item>
+    </plurals>
+    <string name="lightbox_comments">टिप्पण्या</string>
 </resources>

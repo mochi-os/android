@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Trovato tramite URL</string>
     <string name="forums_moderation_pending_posts">Post in attesa (%1$d)</string>
     <string name="forums_moderation_pending_comments">Commenti in attesa (%1$d)</string>
+    <string name="forums_moderation_on_image">Sull\'immagine: %1$s</string>
 </resources>

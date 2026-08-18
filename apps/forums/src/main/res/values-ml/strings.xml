@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL വഴി കണ്ടെത്തി</string>
     <string name="forums_moderation_pending_posts">തീർപ്പാക്കാത്ത പോസ്റ്റുകൾ (%1$d)</string>
     <string name="forums_moderation_pending_comments">തീർപ്പാക്കാത്ത അഭിപ്രായങ്ങൾ (%1$d)</string>
+    <string name="forums_moderation_on_image">ചിത്രത്തിൽ: %1$s</string>
 </resources>

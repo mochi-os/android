@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL बाट भेटियो</string>
     <string name="forums_moderation_pending_posts">बाँकी पोस्टहरू (%1$d)</string>
     <string name="forums_moderation_pending_comments">बाँकी टिप्पणीहरू (%1$d)</string>
+    <string name="forums_moderation_on_image">तस्बिरमा: %1$s</string>
 </resources>

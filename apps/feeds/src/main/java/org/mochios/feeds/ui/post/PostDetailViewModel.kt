@@ -143,7 +143,11 @@ class PostDetailViewModel @Inject constructor(
         _replyingTo.value = commentId
     }
 
-    fun sendComment() {
+    /**
+     * Sends the draft. From the lightbox's comments panel, [anchor] is the
+     * image the comment is about; a reply keeps its parent's context instead.
+     */
+    fun sendComment(anchor: String? = null) {
         val body = _commentText.value.trim()
         if (body.isEmpty()) return
 
@@ -157,7 +161,8 @@ class PostDetailViewModel @Inject constructor(
                     body = body,
                     parent = _replyingTo.value,
                     files = _commentAttachments.value,
-                    context = application
+                    context = application,
+                    attachment = anchor,
                 )
                 _commentText.value = ""
                 _commentAttachments.value = emptyList()

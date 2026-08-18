@@ -321,4 +321,14 @@
     <string name="about_check_background">Дар замина идома додан</string>
     <string name="notifications_category_unassigned">Таъин нашудааст</string>
     <string name="notifications_change_category">Тағйири категорияи огоҳинома</string>
+    <string name="lightbox_comments_none">Ба ин тасвир ҳоло шарҳе нест.</string>
+    <string name="lightbox_comments_only">Танҳо шарҳҳои ин тасвирро нишон додан</string>
+    <string name="lightbox_comment_placeholder">Ба ин тасвир шарҳ нависед…</string>
+    <string name="comment_anchor_open">Тасвиреро, ки ин шарҳ дар бораи он аст, бинед</string>
+    <string name="comment_anchor_default">Ба ин тасвир</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Боз %1$d шарҳи дигарро ба ин навишта нишон додан</item>
+        <item quantity="other">Боз %1$d шарҳи дигарро ба ин навишта нишон додан</item>
+    </plurals>
+    <string name="lightbox_comments">Шарҳҳо</string>
 </resources>

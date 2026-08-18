@@ -301,4 +301,5 @@
     <string name="forums_share_link_title">Fóro juajuha</string>
     <string name="forums_moderation_pending_posts">Jehaipy oha\'ãrõva (%1$d)</string>
     <string name="forums_moderation_pending_comments">Ñe\'ẽ oha\'ãrõva (%1$d)</string>
+    <string name="forums_moderation_on_image">Ta\'angáre: %1$s</string>
 </resources>

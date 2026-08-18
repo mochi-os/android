@@ -264,6 +264,7 @@ class ForumsRepository @Inject constructor(
             post = postId.toRequestBody(text),
             body = body.toRequestBody(text),
             parent = parent?.toRequestBody(text),
+            attachment = null,
             files = parts
         ).unwrap()
     }
@@ -296,6 +297,11 @@ class ForumsRepository @Inject constructor(
      * Create a comment whose attachments come from content-provider [uris] (the
      * system file picker) rather than files on disk.
      */
+    /**
+     * [attachment] anchors a top-level comment to one of the post's own
+     * attachments (its id); the server refuses any other id. A reply inherits
+     * its parent's context and takes no anchor.
+     */
     suspend fun createCommentFromUris(
         forumId: String,
         postId: String,
@@ -303,6 +309,7 @@ class ForumsRepository @Inject constructor(
         parent: String? = null,
         uris: List<android.net.Uri>,
         context: android.content.Context,
+        attachment: String? = null,
     ): CreateCommentResponse {
         val files = fileStore.cacheFiles(uris)
         try {
@@ -314,6 +321,7 @@ class ForumsRepository @Inject constructor(
                 post = postId.toRequestBody(text),
                 body = body.toRequestBody(text),
                 parent = parent?.toRequestBody(text),
+                attachment = if (parent == null) attachment?.takeIf { it.isNotEmpty() }?.toRequestBody(text) else null,
                 files = parts,
             ).unwrap()
         } finally {

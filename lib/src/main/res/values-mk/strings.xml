@@ -321,4 +321,14 @@
     <string name="about_check_background">Продолжи во заднина</string>
     <string name="notifications_category_unassigned">Недоделено</string>
     <string name="notifications_change_category">Промени категорија на известување</string>
+    <string name="lightbox_comments_none">Сè уште нема коментари на оваа слика.</string>
+    <string name="lightbox_comments_only">Прикажи само коментари на оваа слика</string>
+    <string name="lightbox_comment_placeholder">Коментирајте ја оваа слика…</string>
+    <string name="comment_anchor_open">Погледнете ја сликата на која се однесува овој коментар</string>
+    <string name="comment_anchor_default">На оваа слика</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Прикажи уште %1$d коментар на оваа објава</item>
+        <item quantity="other">Прикажи уште %1$d коментари на оваа објава</item>
+    </plurals>
+    <string name="lightbox_comments">Коментари</string>
 </resources>

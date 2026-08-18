@@ -303,4 +303,5 @@
     <string name="forums_find_found_by_url">נמצא לפי כתובת URL</string>
     <string name="forums_moderation_pending_posts">פוסטים ממתינים (%1$d)</string>
     <string name="forums_moderation_pending_comments">תגובות ממתינות (%1$d)</string>
+    <string name="forums_moderation_on_image">על התמונה: %1$s</string>
 </resources>

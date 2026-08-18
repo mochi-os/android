@@ -78,7 +78,9 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
+import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
+import org.mochios.android.ui.components.AttachmentLightbox
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
@@ -316,6 +318,11 @@ internal fun PostDetailContent(
     val currentUserId by viewModel.currentUserId.collectAsState()
     val tags by viewModel.tags.collectAsState()
 
+    // A comment's chip opens the lightbox on the image it is about, comments
+    // showing. Hosted here rather than in the gallery, whose lazy item may
+    // have scrolled out of composition by the time a chip far down is tapped.
+    var openAttachment by remember { mutableStateOf<String?>(null) }
+
     when {
         isLoading && post == null -> {
             Box(modifier = modifier, contentAlignment = Alignment.Center) {
@@ -370,7 +377,17 @@ internal fun PostDetailContent(
                                 direction
                             )
                         },
-                        showBody = showBody
+                        showBody = showBody,
+                        commentCount = { att -> anchoredCommentCount(currentPost.comments, att.id) },
+                        comments = { att ->
+                            AttachmentComments(
+                                post = currentPost,
+                                attachmentId = att.id,
+                                viewModel = viewModel,
+                                canComment = permissions.comment,
+                                onDeleteComment = showDeleteCommentDialog,
+                            )
+                        },
                     )
                 }
 
@@ -413,9 +430,33 @@ internal fun PostDetailContent(
                             },
                             canManage = permissions.manage,
                             isMine = currentUserId != null && comment.authorId == currentUserId,
+                            onOpenAttachment = { openAttachment = it },
                         )
                     }
                 }
+            }
+
+            val images = currentPost.attachments.filter { it.isImage }
+            val openIndex = images.indexOfFirst { it.id == openAttachment }
+            if (openIndex >= 0) {
+                val attachmentFeed = currentPost.feed.ifEmpty { viewModel.feedId }
+                AttachmentLightbox(
+                    images = images,
+                    urlBuilder = { att -> att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}" },
+                    initialIndex = openIndex,
+                    onDismiss = { openAttachment = null },
+                    commentCount = { att -> anchoredCommentCount(currentPost.comments, att.id) },
+                    comments = { att ->
+                        AttachmentComments(
+                            post = currentPost,
+                            attachmentId = att.id,
+                            viewModel = viewModel,
+                            canComment = permissions.comment,
+                            onDeleteComment = showDeleteCommentDialog,
+                        )
+                    },
+                    commentsInitiallyOpen = true,
+                )
             }
         }
     }
@@ -433,7 +474,10 @@ private fun PostContent(
     onAddTag: (String) -> Unit,
     onRemoveTag: (String) -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
-    showBody: Boolean = true
+    showBody: Boolean = true,
+    // The lightbox comments slot, per image attachment.
+    commentCount: ((Attachment) -> Int)? = null,
+    comments: (@Composable (Attachment) -> Unit)? = null,
 ) {
     val context = LocalContext.current
 
@@ -596,7 +640,9 @@ private fun PostContent(
                     att.previewUrl
                         ?: att.thumbnailUrl
                         ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
-                }
+                },
+                commentCount = commentCount,
+                comments = comments,
             )
         }
 
@@ -723,7 +769,9 @@ internal fun CommentInputBar(
     isSending: Boolean,
     replyingTo: String?,
     onCancelReply: () -> Unit,
-    onSearchMembers: suspend (String) -> List<MentionSuggestion>
+    onSearchMembers: suspend (String) -> List<MentionSuggestion>,
+    // The lightbox's comments panel names the image the comment is about.
+    placeholder: String = stringResource(R.string.feeds_write_a_comment),
 ) {
     Surface(
         shadowElevation = 8.dp,
@@ -804,7 +852,7 @@ internal fun CommentInputBar(
                     modifier = Modifier
                         .weight(1f)
                         .padding(horizontal = 4.dp),
-                    placeholder = { Text(stringResource(R.string.feeds_write_a_comment)) },
+                    placeholder = { Text(placeholder) },
                     maxLines = 4
                 )
                 IconButton(

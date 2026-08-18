@@ -321,4 +321,14 @@
     <string name="about_check_background">ادامه در پس‌زمینه</string>
     <string name="notifications_category_unassigned">بدون اختصاص</string>
     <string name="notifications_change_category">تغییر دسته اعلان</string>
+    <string name="lightbox_comments_none">هنوز نظری دربارهٔ این تصویر نیست.</string>
+    <string name="lightbox_comments_only">فقط نظرهای این تصویر را نشان بده</string>
+    <string name="lightbox_comment_placeholder">دربارهٔ این تصویر نظر بدهید…</string>
+    <string name="comment_anchor_open">تصویری را که این نظر دربارهٔ آن است ببینید</string>
+    <string name="comment_anchor_default">دربارهٔ این تصویر</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">%1$d نظر دیگر دربارهٔ این پست را نشان بده</item>
+        <item quantity="other">%1$d نظر دیگر دربارهٔ این پست را نشان بده</item>
+    </plurals>
+    <string name="lightbox_comments">نظرها</string>
 </resources>

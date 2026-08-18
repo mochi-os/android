@@ -173,7 +173,11 @@ class PostViewModel @Inject constructor(
         _commentAttachments.value = _commentAttachments.value.filterNot { it == uri }
     }
 
-    fun submitComment(body: String) {
+    /**
+     * Sends the draft. From the lightbox's comments panel, [anchor] is the
+     * image the comment is about; a reply keeps its parent's context instead.
+     */
+    fun submitComment(body: String, anchor: String? = null) {
         val trimmed = body.trim()
         // The server rejects an empty body with 400, even when files are attached.
         if (trimmed.isEmpty()) return
@@ -188,6 +192,7 @@ class PostViewModel @Inject constructor(
                     parent = parent,
                     uris = _commentAttachments.value,
                     context = application,
+                    attachment = anchor,
                 )
                 _commentAttachments.value = emptyList()
                 _uiState.value = _uiState.value.copy(replyTo = null)

@@ -323,4 +323,16 @@
     <string name="about_check_background">Pokračovat na pozadí</string>
     <string name="notifications_category_unassigned">Nepřiřazeno</string>
     <string name="notifications_change_category">Změnit kategorii oznámení</string>
+    <string name="lightbox_comments_none">K tomuto obrázku zatím nejsou žádné komentáře.</string>
+    <string name="lightbox_comments_only">Zobrazit jen komentáře k tomuto obrázku</string>
+    <string name="lightbox_comment_placeholder">Okomentovat tento obrázek…</string>
+    <string name="comment_anchor_open">Zobrazit obrázek, kterého se tento komentář týká</string>
+    <string name="comment_anchor_default">K tomuto obrázku</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Zobrazit %1$d další komentář k tomuto příspěvku</item>
+        <item quantity="few">Zobrazit %1$d další komentáře k tomuto příspěvku</item>
+        <item quantity="many">Zobrazit %1$d dalšího komentáře k tomuto příspěvku</item>
+        <item quantity="other">Zobrazit %1$d dalších komentářů k tomuto příspěvku</item>
+    </plurals>
+    <string name="lightbox_comments">Komentáře</string>
 </resources>

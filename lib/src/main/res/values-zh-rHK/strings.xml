@@ -306,4 +306,5 @@
     <string name="about_check_background">在背景繼續</string>
     <string name="notifications_category_unassigned">未指派</string>
     <string name="notifications_change_category">更改通知類別</string>
+    <string name="lightbox_comments">留言</string>
 </resources>

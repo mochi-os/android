@@ -303,4 +303,5 @@
     <string name="forums_find_found_by_url">Найдено по URL</string>
     <string name="forums_moderation_pending_posts">Ожидающие публикации (%1$d)</string>
     <string name="forums_moderation_pending_comments">Ожидающие комментарии (%1$d)</string>
+    <string name="forums_moderation_on_image">К изображению: %1$s</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL orqali topildi</string>
     <string name="forums_moderation_pending_posts">Kutilayotgan postlar (%1$d)</string>
     <string name="forums_moderation_pending_comments">Kutilayotgan izohlar (%1$d)</string>
+    <string name="forums_moderation_on_image">Rasmda: %1$s</string>
 </resources>

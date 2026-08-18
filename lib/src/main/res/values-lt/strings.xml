@@ -323,4 +323,16 @@
     <string name="about_check_background">Tęsti fone</string>
     <string name="notifications_category_unassigned">Nepriskirta</string>
     <string name="notifications_change_category">Keisti pranešimo kategoriją</string>
+    <string name="lightbox_comments_none">Šis vaizdas dar neturi komentarų.</string>
+    <string name="lightbox_comments_only">Rodyti tik šio vaizdo komentarus</string>
+    <string name="lightbox_comment_placeholder">Komentuoti šį vaizdą…</string>
+    <string name="comment_anchor_open">Peržiūrėti vaizdą, apie kurį šis komentaras</string>
+    <string name="comment_anchor_default">Prie šio vaizdo</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Rodyti dar %1$d šio įrašo komentarą</item>
+        <item quantity="few">Rodyti dar %1$d šio įrašo komentarus</item>
+        <item quantity="many">Rodyti dar %1$d šio įrašo komentaro</item>
+        <item quantity="other">Rodyti dar %1$d šio įrašo komentarų</item>
+    </plurals>
+    <string name="lightbox_comments">Komentarai</string>
 </resources>

@@ -75,6 +75,8 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -103,7 +105,9 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
+import org.mochios.android.ui.components.AttachmentLightbox
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
@@ -111,6 +115,7 @@ import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
+import org.mochios.forums.model.countComments
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.model.Tag
@@ -159,6 +164,60 @@ fun PostScreen(
 
     LaunchedEffect(uiState.deleted) {
         if (uiState.deleted) onBack()
+    }
+
+    // A comment's chip opens the lightbox on the image it is about, comments
+    // showing. Hosted at screen level rather than in the gallery, whose lazy
+    // item may have scrolled out of composition by the time a chip is tapped.
+    var openAttachment by remember { mutableStateOf<String?>(null) }
+
+    // The per-comment actions, shared by the thread below the post and by the
+    // lightbox panel, so a comment behaves the same wherever it is drawn.
+    val commentActions = CommentActions(
+        onVote = viewModel::voteComment,
+        onReply = { comment ->
+            viewModel.setReplyTo(comment)
+            focusComposer()
+        },
+        onEdit = { editingComment = it },
+        onDelete = { commentToDelete = it },
+        onApprove = { viewModel.approveComment(it.id) },
+        onRemove = { viewModel.removeComment(it.id) },
+        onRestore = { viewModel.restoreComment(it.id) },
+        onReport = { reportingComment = it },
+        // Quoting cites a comment; it does not thread under it. Only Reply sets
+        // the parent, so the viewer can reply to one comment while quoting
+        // another. Cite the author's own words, not the quote they were
+        // themselves replying to.
+        onQuote = { comment -> quoteIntoDraft(withoutQuote(comment.body)) },
+        onOpenAttachment = { openAttachment = it },
+    )
+    val attachmentPanel: @Composable (Attachment) -> Unit = { att ->
+        AttachmentComments(
+            attachmentId = att.id,
+            comments = uiState.comments,
+            forumId = viewModel.forumId,
+            currentIdentity = uiState.identity,
+            canModerate = uiState.canModerate,
+            actions = commentActions,
+            canComment = uiState.canComment && !uiState.post.locked,
+            replyTo = uiState.replyTo,
+            onClearReply = { viewModel.setReplyTo(null) },
+            draft = draft,
+            onDraftChange = { value -> draft = value },
+            isSending = uiState.isSending,
+            attachments = commentAttachments,
+            onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
+            onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
+            resolveFileName = viewModel::fileName,
+            onSend = {
+                viewModel.submitComment(draft.text, anchor = att.id)
+                draft = TextFieldValue("")
+            },
+        )
+    }
+    val attachmentCommentCount: (Attachment) -> Int = { att ->
+        countComments(uiState.comments.filter { it.anchor == att.id })
     }
 
     Scaffold(
@@ -291,6 +350,8 @@ fun PostScreen(
                                 onAddTag = { label -> viewModel.addPostTag(label) },
                                 onRemoveTag = { tagId -> viewModel.removePostTag(tagId) },
                                 onTagInterest = { qid, direction -> viewModel.adjustTagInterest(qid, direction) },
+                                commentCount = attachmentCommentCount,
+                                comments = attachmentPanel,
                             )
                         }
                         // Separates the post from the conversation below it.
@@ -313,25 +374,7 @@ fun PostScreen(
                                 forumId = viewModel.forumId,
                                 currentIdentity = uiState.identity,
                                 canModerate = uiState.canModerate,
-                                onVote = viewModel::voteComment,
-                                onReply = { comment ->
-                                    viewModel.setReplyTo(comment)
-                                    focusComposer()
-                                },
-                                onEdit = { editingComment = it },
-                                onDelete = { commentToDelete = it },
-                                onApprove = { viewModel.approveComment(it.id) },
-                                onRemove = { viewModel.removeComment(it.id) },
-                                onRestore = { viewModel.restoreComment(it.id) },
-                                onReport = { reportingComment = it },
-                                // Quoting cites a comment; it does not thread under
-                                // it. Only Reply sets the parent, so the viewer can
-                                // reply to one comment while quoting another. Cite
-                                // the author's own words, not the quote they were
-                                // themselves replying to.
-                                onQuote = { comment ->
-                                    quoteIntoDraft(withoutQuote(comment.body))
-                                },
+                                actions = commentActions,
                             )
                         }
                     }
@@ -356,6 +399,20 @@ fun PostScreen(
                 }
             }
         }
+    }
+
+    val images = uiState.post.attachments.filter { it.isImage }
+    val openIndex = images.indexOfFirst { it.id == openAttachment }
+    if (openIndex >= 0) {
+        AttachmentLightbox(
+            images = images,
+            urlBuilder = { att -> att.url ?: "/forums/${viewModel.forumId}/-/attachments/${att.id}" },
+            initialIndex = openIndex,
+            onDismiss = { openAttachment = null },
+            commentCount = attachmentCommentCount,
+            comments = attachmentPanel,
+            commentsInitiallyOpen = true,
+        )
     }
 
     if (showDeletePostConfirm) {
@@ -767,6 +824,9 @@ private fun PostHeader(
     onAddTag: (String) -> Unit,
     onRemoveTag: (String) -> Unit,
     onTagInterest: (qid: String, direction: String) -> Unit,
+    // The lightbox comments slot, per image attachment.
+    commentCount: ((Attachment) -> Int)? = null,
+    comments: (@Composable (Attachment) -> Unit)? = null,
 ) {
     val format = LocalFormat.current
     Column(
@@ -794,7 +854,9 @@ private fun PostHeader(
                     att.previewUrl
                         ?: att.thumbnailUrl
                         ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
-                }
+                },
+                commentCount = commentCount,
+                comments = comments,
             )
             Spacer(Modifier.height(6.dp))
         }
@@ -900,21 +962,27 @@ private fun PostHeader(
 
 
 
+/** What a comment can do, wherever it is drawn: the thread and the lightbox panel share one set. */
+private class CommentActions(
+    val onVote: (String, String) -> Unit,
+    val onReply: (ForumComment) -> Unit,
+    val onEdit: (ForumComment) -> Unit,
+    val onDelete: (ForumComment) -> Unit,
+    val onApprove: (ForumComment) -> Unit,
+    val onRemove: (ForumComment) -> Unit,
+    val onRestore: (ForumComment) -> Unit,
+    val onReport: (ForumComment) -> Unit,
+    val onQuote: (ForumComment) -> Unit,
+    val onOpenAttachment: (String) -> Unit,
+)
+
 private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
     comments: List<ForumComment>,
     forumId: String,
     currentIdentity: String,
     canModerate: Boolean,
+    actions: CommentActions,
     depth: Int = 0,
-    onVote: (String, String) -> Unit,
-    onReply: (ForumComment) -> Unit,
-    onEdit: (ForumComment) -> Unit,
-    onDelete: (ForumComment) -> Unit,
-    onApprove: (ForumComment) -> Unit,
-    onRemove: (ForumComment) -> Unit,
-    onRestore: (ForumComment) -> Unit,
-    onReport: (ForumComment) -> Unit,
-    onQuote: (ForumComment) -> Unit,
 ) {
     comments.forEach { c ->
         item(key = c.id) {
@@ -927,19 +995,111 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
                 canEdit = canEditThis,
                 canModerate = canModerate,
                 isAuthor = isAuthor,
-                onVote = { vote -> onVote(c.id, vote) },
-                onReply = { onReply(c) },
-                onEdit = { onEdit(c) },
-                onDelete = { onDelete(c) },
-                onApprove = { onApprove(c) },
-                onRemove = { onRemove(c) },
-                onRestore = { onRestore(c) },
-                onReport = { onReport(c) },
-                onQuote = { onQuote(c) },
+                onVote = { vote -> actions.onVote(c.id, vote) },
+                onReply = { actions.onReply(c) },
+                onEdit = { actions.onEdit(c) },
+                onDelete = { actions.onDelete(c) },
+                onApprove = { actions.onApprove(c) },
+                onRemove = { actions.onRemove(c) },
+                onRestore = { actions.onRestore(c) },
+                onReport = { actions.onReport(c) },
+                onQuote = { actions.onQuote(c) },
+                onOpenAttachment = actions.onOpenAttachment,
             )
         }
         if (c.children.isNotEmpty()) {
-            commentsItems(c.children, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport, onQuote)
+            commentsItems(c.children, forumId, currentIdentity, canModerate, actions, depth + 1)
+        }
+    }
+}
+
+/**
+ * The comment thread for one image, shown in the lightbox's comments panel.
+ *
+ * Comments are one thread per post; a comment may be ANCHORED to one of the
+ * post's attachments. This panel renders the post's REAL comments - the same
+ * [CommentCard] the post screen draws, with replies, votes, editing, deletion
+ * and moderation intact - filtered to the ones anchored to the image being
+ * viewed, offers the rest of the thread behind a toggle, and writes new
+ * comments in the same [ComposerBar] as the screen - attachments and all -
+ * anchored to this image without the writer having to say so.
+ */
+@Composable
+private fun AttachmentComments(
+    attachmentId: String,
+    comments: List<ForumComment>,
+    forumId: String,
+    currentIdentity: String,
+    canModerate: Boolean,
+    actions: CommentActions,
+    canComment: Boolean,
+    replyTo: ForumComment?,
+    onClearReply: () -> Unit,
+    draft: TextFieldValue,
+    onDraftChange: (TextFieldValue) -> Unit,
+    isSending: Boolean,
+    attachments: List<Uri>,
+    onAddAttachments: (List<Uri>) -> Unit,
+    onRemoveAttachment: (Uri) -> Unit,
+    resolveFileName: suspend (Uri) -> String,
+    onSend: () -> Unit,
+) {
+    var showAll by rememberSaveable(attachmentId) { mutableStateOf(false) }
+    // Anchors live on top-level comments; a reply inherits its parent's context.
+    val anchored = comments.filter { it.anchor == attachmentId }
+    val others = comments.size - anchored.size
+    val shown = if (showAll) comments else anchored
+    val composerFocus = remember { FocusRequester() }
+
+    Column(modifier = Modifier.fillMaxWidth()) {
+        LazyColumn(
+            modifier = Modifier.weight(1f, fill = false),
+            contentPadding = PaddingValues(start = 12.dp, end = 12.dp, bottom = 8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            if (shown.isEmpty()) {
+                item(key = "empty") {
+                    Text(
+                        text = stringResource(MochiR.string.lightbox_comments_none),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(vertical = 8.dp)
+                    )
+                }
+            }
+            commentsItems(
+                comments = shown,
+                forumId = forumId,
+                currentIdentity = currentIdentity,
+                canModerate = canModerate,
+                actions = actions,
+            )
+            if (others > 0) {
+                item(key = "toggle") {
+                    TextButton(onClick = { showAll = !showAll }) {
+                        Text(
+                            if (showAll) stringResource(MochiR.string.lightbox_comments_only)
+                            else pluralStringResource(MochiR.plurals.lightbox_comments_others, others, others)
+                        )
+                    }
+                }
+            }
+        }
+        if (canComment) {
+            ReplyBanner(replyTo, onClear = onClearReply)
+            ComposerBar(
+                value = draft,
+                onValueChange = onDraftChange,
+                isSending = isSending,
+                enabled = true,
+                focusRequester = composerFocus,
+                attachments = attachments,
+                onAddAttachments = onAddAttachments,
+                onRemoveAttachment = onRemoveAttachment,
+                resolveFileName = resolveFileName,
+                onSend = onSend,
+                placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+            )
         }
     }
 }
@@ -966,8 +1126,10 @@ private fun CommentCard(
     onRestore: () -> Unit,
     onReport: () -> Unit,
     onQuote: () -> Unit,
+    onOpenAttachment: (String) -> Unit,
 ) {
     var showMenu by remember { mutableStateOf(false) }
+    val anchor = comment.anchor
     CommentItem(
         name = comment.name,
         body = comment.body,
@@ -982,6 +1144,10 @@ private fun CommentCard(
             att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
         },
         horizontalPadding = 12.dp,
+        anchorThumbnailUrl = anchor.takeIf { it.isNotEmpty() }
+            ?.let { "/forums/$forumId/-/attachments/$it/thumbnail" },
+        anchorCaption = comment.attachmentCaption.orEmpty(),
+        onOpenAnchor = anchor.takeIf { it.isNotEmpty() }?.let { { onOpenAttachment(it) } },
     ) {
         // Same reaction row as the post: like · dislike, filled for the viewer's
         // own vote, tappable only with vote rights.
@@ -1165,7 +1331,9 @@ private fun ComposerBar(
     onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
     resolveFileName: suspend (Uri) -> String,
-    onSend: () -> Unit
+    onSend: () -> Unit,
+    // The lightbox's comments panel names the image the comment is about.
+    placeholder: String = stringResource(R.string.forums_write_comment),
 ) {
     val filePickerLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
@@ -1217,7 +1385,7 @@ private fun ComposerBar(
                 value = value,
                 onValueChange = onValueChange,
                 modifier = Modifier.weight(1f).focusRequester(focusRequester),
-                placeholder = { Text(stringResource(R.string.forums_write_comment)) },
+                placeholder = { Text(placeholder) },
                 enabled = enabled,
                 maxLines = 4
             )

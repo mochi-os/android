@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">بە URL دۆزرایەوە</string>
     <string name="forums_moderation_pending_posts">بابەتە چاوەڕوانەکان (%1$d)</string>
     <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$d)</string>
+    <string name="forums_moderation_on_image">لەسەر وێنە: %1$s</string>
 </resources>

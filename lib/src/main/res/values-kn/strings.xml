@@ -321,4 +321,14 @@
     <string name="about_check_background">ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಮುಂದುವರಿಸಿ</string>
     <string name="notifications_category_unassigned">ನಿಯೋಜಿಸದ</string>
     <string name="notifications_change_category">ನೋಟಿಫಿಕೇಶನ್ ವರ್ಗ ಬದಲಾಯಿಸಿ</string>
+    <string name="lightbox_comments_none">ಈ ಚಿತ್ರದ ಮೇಲೆ ಇನ್ನೂ ಯಾವುದೇ ಕಾಮೆಂಟ್‌ಗಳಿಲ್ಲ.</string>
+    <string name="lightbox_comments_only">ಈ ಚಿತ್ರದ ಕಾಮೆಂಟ್‌ಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸಿ</string>
+    <string name="lightbox_comment_placeholder">ಈ ಚಿತ್ರದ ಮೇಲೆ ಕಾಮೆಂಟ್ ಮಾಡಿ…</string>
+    <string name="comment_anchor_open">ಈ ಕಾಮೆಂಟ್ ಯಾವ ಚಿತ್ರದ ಬಗ್ಗೆ ಇದೆಯೋ ಅದನ್ನು ನೋಡಿ</string>
+    <string name="comment_anchor_default">ಈ ಚಿತ್ರದ ಮೇಲೆ</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">ಈ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ %1$d ಕಾಮೆಂಟ್ ತೋರಿಸಿ</item>
+        <item quantity="other">ಈ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ %1$d ಕಾಮೆಂಟ್‌ಗಳನ್ನು ತೋರಿಸಿ</item>
+    </plurals>
+    <string name="lightbox_comments">ಕಾಮೆಂಟ್‌ಗಳು</string>
 </resources>

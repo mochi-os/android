@@ -300,4 +300,5 @@
     <string name="forums_find_found_by_url">พบผ่าน URL</string>
     <string name="forums_moderation_pending_posts">โพสต์ที่รอดำเนินการ (%1$d)</string>
     <string name="forums_moderation_pending_comments">ความคิดเห็นที่รอดำเนินการ (%1$d)</string>
+    <string name="forums_moderation_on_image">ต่อรูป: %1$s</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL bidez aurkituta</string>
     <string name="forums_moderation_pending_posts">Zain dauden argitalpenak (%1$d)</string>
     <string name="forums_moderation_pending_comments">Zain dauden iruzkinak (%1$d)</string>
+    <string name="forums_moderation_on_image">Irudian: %1$s</string>
 </resources>

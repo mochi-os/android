@@ -321,4 +321,14 @@
     <string name="about_check_background">Συνέχεια στο παρασκήνιο</string>
     <string name="notifications_category_unassigned">Χωρίς ανάθεση</string>
     <string name="notifications_change_category">Αλλαγή κατηγορίας ειδοποίησης</string>
+    <string name="lightbox_comments_none">Δεν υπάρχουν ακόμη σχόλια σε αυτή την εικόνα.</string>
+    <string name="lightbox_comments_only">Εμφάνιση μόνο των σχολίων αυτής της εικόνας</string>
+    <string name="lightbox_comment_placeholder">Σχολιάστε αυτή την εικόνα…</string>
+    <string name="comment_anchor_open">Δείτε την εικόνα στην οποία αναφέρεται αυτό το σχόλιο</string>
+    <string name="comment_anchor_default">Σε αυτή την εικόνα</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Εμφάνιση %1$d ακόμη σχολίου σε αυτή την ανάρτηση</item>
+        <item quantity="other">Εμφάνιση %1$d ακόμη σχολίων σε αυτή την ανάρτηση</item>
+    </plurals>
+    <string name="lightbox_comments">Σχόλια</string>
 </resources>

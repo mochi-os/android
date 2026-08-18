@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL से मिला</string>
     <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$d)</string>
     <string name="forums_moderation_pending_comments">लंबित टिप्पणियाँ (%1$d)</string>
+    <string name="forums_moderation_on_image">छवि पर: %1$s</string>
 </resources>

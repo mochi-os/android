@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL аркылуу табылды</string>
     <string name="forums_moderation_pending_posts">Күтүүдөгү жазуулар (%1$d)</string>
     <string name="forums_moderation_pending_comments">Күтүүдөгү пикирлер (%1$d)</string>
+    <string name="forums_moderation_on_image">Сүрөттө: %1$s</string>
 </resources>

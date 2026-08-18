@@ -320,4 +320,14 @@
     <string name="about_check_background">နောက်ခံတွင် ဆက်လုပ်ရန်</string>
     <string name="notifications_category_unassigned">မသတ်မှတ်ထား</string>
     <string name="notifications_change_category">အသိပေးချက် အမျိုးအစား ပြောင်းရန်</string>
+    <string name="lightbox_comments_none">ဤပုံအပေါ် မှတ်ချက် မရှိသေးပါ။</string>
+    <string name="lightbox_comments_only">ဤပုံအပေါ် မှတ်ချက်များကိုသာ ပြရန်</string>
+    <string name="lightbox_comment_placeholder">ဤပုံအပေါ် မှတ်ချက်ပေးရန်…</string>
+    <string name="comment_anchor_open">ဤမှတ်ချက် ဆိုင်သောပုံကို ကြည့်ရန်</string>
+    <string name="comment_anchor_default">ဤပုံအပေါ်</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">ဤပို့စ်အပေါ် အခြားမှတ်ချက် %1$d ခုကို ပြရန်</item>
+        <item quantity="other">ဤပို့စ်အပေါ် အခြားမှတ်ချက် %1$d ခုကို ပြရန်</item>
+    </plurals>
+    <string name="lightbox_comments">မှတ်ချက်များ</string>
 </resources>

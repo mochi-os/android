@@ -321,4 +321,14 @@
     <string name="about_check_background">Teruskan di latar belakang</string>
     <string name="notifications_category_unassigned">Tidak diberikan</string>
     <string name="notifications_change_category">Tukar kategori pemberitahuan</string>
+    <string name="lightbox_comments_none">Belum ada komen tentang imej ini.</string>
+    <string name="lightbox_comments_only">Tunjukkan komen tentang imej ini sahaja</string>
+    <string name="lightbox_comment_placeholder">Komen tentang imej ini…</string>
+    <string name="comment_anchor_open">Lihat imej yang dimaksudkan komen ini</string>
+    <string name="comment_anchor_default">Pada imej ini</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Tunjukkan %1$d komen lain pada kiriman ini</item>
+        <item quantity="other">Tunjukkan %1$d komen lain pada kiriman ini</item>
+    </plurals>
+    <string name="lightbox_comments">Komen</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">یافت‌شده با نشانی اینترنتی</string>
     <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$d)</string>
     <string name="forums_moderation_pending_comments">نظرات در انتظار (%1$d)</string>
+    <string name="forums_moderation_on_image">دربارهٔ تصویر: %1$s</string>
 </resources>

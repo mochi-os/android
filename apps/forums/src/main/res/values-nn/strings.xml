@@ -301,4 +301,5 @@
         <item quantity="one">%d nytt innlegg</item>
         <item quantity="other">%d nye innlegg</item>
     </plurals>
+    <string name="forums_moderation_on_image">Til bilete: %1$s</string>
 </resources>

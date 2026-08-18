@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Kapanggih ngaliwatan URL</string>
     <string name="forums_moderation_pending_posts">Kiriman nungguan (%1$d)</string>
     <string name="forums_moderation_pending_comments">Koméntar nungguan (%1$d)</string>
+    <string name="forums_moderation_on_image">Dina gambar: %1$s</string>
 </resources>

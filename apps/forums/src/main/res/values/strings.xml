@@ -210,6 +210,7 @@
     <string name="forums_moderation_queue_empty_subtitle">All posts and comments have been reviewed</string>
     <string name="forums_moderation_pending_posts">Pending posts (%1$d)</string>
     <string name="forums_moderation_pending_comments">Pending comments (%1$d)</string>
+    <string name="forums_moderation_on_image">On image: %1$s</string>
     <string name="forums_moderation_reject">Reject</string>
     <string name="forums_moderation_mute_title">Mute %1$s?</string>
     <string name="forums_moderation_mute_message">They stay in the forum but cannot post or comment until you remove the restriction.</string>

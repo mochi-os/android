@@ -326,4 +326,18 @@
     <string name="about_check_background">Parhau yn y cefndir</string>
     <string name="notifications_category_unassigned">Heb ei neilltuo</string>
     <string name="notifications_change_category">Newid categori hysbysu</string>
+    <string name="lightbox_comments_none">Dim sylwadau ar y ddelwedd hon eto.</string>
+    <string name="lightbox_comments_only">Dangos sylwadau ar y ddelwedd hon yn unig</string>
+    <string name="lightbox_comment_placeholder">Rhowch sylw ar y ddelwedd hon…</string>
+    <string name="comment_anchor_open">Gweld y ddelwedd y mae\'r sylw hwn amdani</string>
+    <string name="comment_anchor_default">Ar y ddelwedd hon</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="zero">Dangos %1$d sylwadau eraill ar y post hwn</item>
+        <item quantity="one">Dangos %1$d sylw arall ar y post hwn</item>
+        <item quantity="two">Dangos %1$d sylw arall ar y post hwn</item>
+        <item quantity="few">Dangos %1$d sylw arall ar y post hwn</item>
+        <item quantity="many">Dangos %1$d sylw arall ar y post hwn</item>
+        <item quantity="other">Dangos %1$d sylw arall ar y post hwn</item>
+    </plurals>
+    <string name="lightbox_comments">Sylwadau</string>
 </resources>

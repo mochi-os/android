@@ -303,4 +303,5 @@
     <string name="forums_find_found_by_url">Nájdené podľa URL</string>
     <string name="forums_moderation_pending_posts">Čakajúce príspevky (%1$d)</string>
     <string name="forums_moderation_pending_comments">Čakajúce komentáre (%1$d)</string>
+    <string name="forums_moderation_on_image">K obrázku: %1$s</string>
 </resources>

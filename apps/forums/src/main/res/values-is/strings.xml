@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Fannst með veffangi</string>
     <string name="forums_moderation_pending_posts">Færslur í bið (%1$d)</string>
     <string name="forums_moderation_pending_comments">Athugasemdir í bið (%1$d)</string>
+    <string name="forums_moderation_on_image">Við mynd: %1$s</string>
 </resources>

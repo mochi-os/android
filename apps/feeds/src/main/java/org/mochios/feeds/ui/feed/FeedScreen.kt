@@ -165,6 +165,7 @@ import org.mochios.feeds.ui.component.PostBody
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.rssDisplayTitle
+import org.mochios.feeds.ui.component.countComments
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
@@ -172,6 +173,7 @@ import org.mochios.feeds.ui.post.CommentInputBar
 import org.mochios.feeds.ui.post.PostTagsButton
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
+import org.mochios.android.model.Comment
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -1246,6 +1248,9 @@ private data class LightboxRequest(
     val urls: List<String>,
     val captions: List<String>,
     val index: Int,
+    // The post attachment behind each image, aligned with `urls`; empty for
+    // an article's hero or an RSS image, which carry no comments slot.
+    val attachmentIds: List<String> = emptyList(),
 )
 
 // Mosaic tiles shown before the last one collapses into a "+N" overlay.
@@ -1676,6 +1681,7 @@ private fun PostCard(
         att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}"
     }
     val attachmentImageCaptions = attachmentImages.map { it.caption }
+    val attachmentImageIds = attachmentImages.map { it.id }
     val rssImageUrl = upgradedRssImage?.takeIf { it.isNotEmpty() }
         ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
@@ -1710,7 +1716,7 @@ private fun PostCard(
                 fallbackFeedId = fallbackFeedId,
                 onOpenImage = { imageIndex ->
                     lightboxState = LightboxRequest(
-                        attachmentImageUrls, attachmentImageCaptions, imageIndex
+                        attachmentImageUrls, attachmentImageCaptions, imageIndex, attachmentImageIds
                     )
                 },
                 onPlayVideo = { url -> playingVideoUrl = url },
@@ -1760,7 +1766,7 @@ private fun PostCard(
                 modifier = heroModifier,
                 onClick = {
                     lightboxState = if (heroFromAttachment) {
-                        LightboxRequest(attachmentImageUrls, attachmentImageCaptions, 0)
+                        LightboxRequest(attachmentImageUrls, attachmentImageCaptions, 0, attachmentImageIds)
                     } else {
                         LightboxRequest(listOf(heroUrl), emptyList(), 0)
                     }
@@ -1865,7 +1871,8 @@ private fun PostCard(
                                 lightboxState = LightboxRequest(
                                     attachmentImageUrls,
                                     attachmentImageCaptions,
-                                    index + gridStartIndex
+                                    index + gridStartIndex,
+                                    attachmentImageIds
                                 )
                             }
                         )
@@ -1912,51 +1919,19 @@ private fun PostCard(
                         val commentFeedId = post.feedFingerprint
                             .ifEmpty { post.feed }
                             .ifEmpty { fallbackFeedId }
-                        val anonymous = stringResource(R.string.feeds_anonymous)
                         Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                             for (comment in previewed) {
-                                val displayName = comment.name.ifEmpty { anonymous }
-                                Row(
-                                    // Tapping a comment opens the post (detail or the
-                                    // source article) with its comments expanded — no
-                                    // ripple, matching the title and body.
+                                // Tapping a comment opens the post (detail or the
+                                // source article) with its comments expanded — no
+                                // ripple, matching the title and body.
+                                CommentPreviewRow(
+                                    comment = comment,
+                                    commentFeedId = commentFeedId,
+                                    postId = post.id,
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .noRippleClickable(onViewComments),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    EntityAvatar(
-                                        name = displayName,
-                                        src = "/feeds/$commentFeedId/-/${post.id}/${comment.id}/asset/avatar",
-                                        seed = comment.authorId.ifEmpty { displayName },
-                                        size = 20.dp,
-                                    )
-                                    Spacer(modifier = Modifier.width(6.dp))
-                                    Text(
-                                        text = displayName,
-                                        style = MaterialTheme.typography.labelSmall,
-                                        fontWeight = FontWeight.SemiBold,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                    Spacer(modifier = Modifier.width(6.dp))
-                                    Text(
-                                        text = stripHtml(comment.body),
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = MaterialTheme.colorScheme.onSurface,
-                                        modifier = Modifier.weight(1f),
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                    Spacer(modifier = Modifier.width(6.dp))
-                                    Text(
-                                        text = LocalFormat.current
-                                            .formatRelativeTime(comment.created),
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                                    )
-                                }
+                                )
                             }
                             if (remaining > 0) {
                                 Text(
@@ -1998,11 +1973,34 @@ private fun PostCard(
     }
 
     lightboxState?.let { request ->
+        // The list card previews comments rather than hosting the thread, so
+        // the lightbox panel previews the image's comments the same way and
+        // hands off to the post for the rest - reading, replying, writing.
+        val slot = request.attachmentIds.isNotEmpty()
         LightboxScreen(
             images = request.urls,
             initialIndex = request.index,
             onDismiss = { lightboxState = null },
             captions = request.captions,
+            commentCount = if (slot) { { index ->
+                request.attachmentIds.getOrNull(index)?.let { id ->
+                    countComments(post.comments.filter { it.anchor == id })
+                } ?: 0
+            } } else null,
+            comments = if (slot) { { index ->
+                val id = request.attachmentIds.getOrNull(index)
+                if (id != null) {
+                    LightboxCommentsPreview(
+                        post = post,
+                        attachmentId = id,
+                        commentFeedId = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { fallbackFeedId },
+                        onViewPost = {
+                            lightboxState = null
+                            onViewComments()
+                        },
+                    )
+                }
+            } } else null,
         )
     }
 
@@ -2196,4 +2194,104 @@ private fun shareLink(context: Context, link: String, title: String) {
     val chooser = Intent.createChooser(intent, title)
     chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     context.startActivity(chooser)
+}
+
+/**
+ * One compact comment line - avatar, name, an anchored comment's image, the
+ * message (taking the free width), then the time. The list card previews the
+ * thread with these; the lightbox panel previews one image's comments.
+ */
+@Composable
+private fun CommentPreviewRow(
+    comment: Comment,
+    commentFeedId: String,
+    postId: String,
+    modifier: Modifier = Modifier,
+) {
+    val anonymous = stringResource(R.string.feeds_anonymous)
+    val displayName = comment.name.ifEmpty { anonymous }
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+        EntityAvatar(
+            name = displayName,
+            src = "/feeds/$commentFeedId/-/$postId/${comment.id}/asset/avatar",
+            seed = comment.authorId.ifEmpty { displayName },
+            size = 20.dp,
+        )
+        Spacer(modifier = Modifier.width(6.dp))
+        Text(
+            text = displayName,
+            style = MaterialTheme.typography.labelSmall,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        if (comment.anchor.isNotEmpty()) {
+            // The image this comment is about, small, so the preview says so.
+            Spacer(modifier = Modifier.width(6.dp))
+            AsyncImage(
+                model = "/feeds/$commentFeedId/-/attachments/${comment.anchor}/thumbnail",
+                contentDescription = stringResource(MochiR.string.comment_anchor_default),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(16.dp)
+                    .clip(RoundedCornerShape(3.dp))
+            )
+        }
+        Spacer(modifier = Modifier.width(6.dp))
+        Text(
+            text = stripHtml(comment.body),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurface,
+            modifier = Modifier.weight(1f),
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        Spacer(modifier = Modifier.width(6.dp))
+        Text(
+            text = LocalFormat.current.formatRelativeTime(comment.created),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+/**
+ * The lightbox comments panel for a list card: the image's comments, previewed
+ * the way the card previews the thread, and a way into the post for the rest
+ * (reading replies, reacting, writing).
+ */
+@Composable
+private fun LightboxCommentsPreview(
+    post: Post,
+    attachmentId: String,
+    commentFeedId: String,
+    onViewPost: () -> Unit,
+) {
+    val anchored = post.comments.filter { it.anchor == attachmentId }
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        if (anchored.isEmpty()) {
+            Text(
+                text = stringResource(MochiR.string.lightbox_comments_none),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        for (comment in anchored.take(3)) {
+            CommentPreviewRow(
+                comment = comment,
+                commentFeedId = commentFeedId,
+                postId = post.id,
+                modifier = Modifier.fillMaxWidth().noRippleClickable(onViewPost),
+            )
+        }
+        TextButton(onClick = onViewPost) {
+            Text(stringResource(R.string.feeds_view_post))
+        }
+    }
 }

@@ -322,4 +322,15 @@
     <string name="about_check_background">Continuă în fundal</string>
     <string name="notifications_category_unassigned">Neatribuit</string>
     <string name="notifications_change_category">Schimbă categoria notificării</string>
+    <string name="lightbox_comments_none">Încă nu există comentarii la această imagine.</string>
+    <string name="lightbox_comments_only">Arată doar comentariile la această imagine</string>
+    <string name="lightbox_comment_placeholder">Comentează această imagine…</string>
+    <string name="comment_anchor_open">Vezi imaginea la care se referă acest comentariu</string>
+    <string name="comment_anchor_default">La această imagine</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Arată încă %1$d comentariu la această postare</item>
+        <item quantity="few">Arată încă %1$d comentarii la această postare</item>
+        <item quantity="other">Arată încă %1$d de comentarii la această postare</item>
+    </plurals>
+    <string name="lightbox_comments">Comentarii</string>
 </resources>
