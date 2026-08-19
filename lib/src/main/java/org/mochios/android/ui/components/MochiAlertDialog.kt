@@ -157,7 +157,18 @@ fun MochiAlertDialog(
         modifier = modifier,
         dismissButton = dismissText?.let {
             {
-                TextButton(onClick = onDismiss, enabled = dismissEnabled) {
+                TextButton(
+                    onClick = onDismiss,
+                    enabled = dismissEnabled,
+                    // Neutral on purpose. TextButton's default content colour is
+                    // the primary, which put the safe way out in the same tinted
+                    // weight as the confirm beside it - and beside a destructive
+                    // confirm, two saturated labels say nothing about which one
+                    // is which.
+                    colors = ButtonDefaults.textButtonColors(
+                        contentColor = MaterialTheme.colorScheme.onSurfaceVariant
+                    ),
+                ) {
                     Text(it)
                 }
             }
