@@ -158,7 +158,7 @@ private fun InitialsPlaceholder(
     contentColor: Color,
     modifier: Modifier = Modifier,
 ) {
-    val bg = containerColor ?: colourFromSeed(seed)
+    val bg = containerColor ?: seededEntityColor(seed)
     val initials = initialsOf(name)
     // Text size scales with the circle (~40% of diameter keeps initials snug).
     val fontSize = (size.value * 0.4f).coerceIn(8f, 28f).sp
@@ -182,30 +182,6 @@ private fun initialsOf(name: String): String {
         parts.size >= 2 -> "${parts[0].first()}${parts[1].first()}".uppercase()
         else -> parts[0].take(2).uppercase()
     }
-}
-
-// Deterministic HSV → RGB colour from a string seed. Same seed → same colour.
-private fun colourFromSeed(seed: String): Color {
-    var h = 0
-    for (c in seed) h = h * 31 + c.code
-    val hue = ((h and 0x7fffffff) % 360).toFloat()
-    return hsvToColor(hue, 0.55f, 0.70f)
-}
-
-private fun hsvToColor(h: Float, s: Float, v: Float): Color {
-    val c = v * s
-    val hp = h / 60f
-    val x = c * (1f - kotlin.math.abs(hp % 2f - 1f))
-    val (r1, g1, b1) = when (hp.toInt()) {
-        0 -> Triple(c, x, 0f)
-        1 -> Triple(x, c, 0f)
-        2 -> Triple(0f, c, x)
-        3 -> Triple(0f, x, c)
-        4 -> Triple(x, 0f, c)
-        else -> Triple(c, 0f, x)
-    }
-    val m = v - c
-    return Color(r1 + m, g1 + m, b1 + m)
 }
 
 private fun parseHexColour(hex: String): Color? {

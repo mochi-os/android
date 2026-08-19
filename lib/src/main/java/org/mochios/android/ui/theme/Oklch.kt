@@ -104,3 +104,42 @@ private fun gammaEncode(linear: Double): Float {
     }
     return encoded.coerceIn(0.0, 1.0).toFloat()
 }
+
+/**
+ * The OKLCH coordinates of an sRGB colour — the inverse of [oklch].
+ *
+ * Used to read a hue back out of a colour scheme whose anchors we do not
+ * hold: dynamic colour derives its palette from the wallpaper and a fallback
+ * scheme is hard-coded, so [org.mochios.android.ui.theme.LocalSeedPalette]
+ * recovers the accent hue from `colorScheme.primary` rather than requiring
+ * every caller to carry the server's theme anchors around.
+ *
+ * @return lightness (0..1), chroma, and hue in degrees (0..360).
+ */
+fun oklchOf(color: Color): Triple<Float, Float, Float> {
+    val red = gammaDecode(color.red)
+    val green = gammaDecode(color.green)
+    val blue = gammaDecode(color.blue)
+
+    val lCone = 0.4122214708 * red + 0.5363325363 * green + 0.0514459929 * blue
+    val mCone = 0.2119034982 * red + 0.6806995451 * green + 0.1073969566 * blue
+    val sCone = 0.0883024619 * red + 0.2817188376 * green + 0.6299787005 * blue
+
+    val lRoot = Math.cbrt(lCone)
+    val mRoot = Math.cbrt(mCone)
+    val sRoot = Math.cbrt(sCone)
+
+    val lightness = 0.2104542553 * lRoot + 0.7936177850 * mRoot - 0.0040720468 * sRoot
+    val a = 1.9779984951 * lRoot - 2.4285922050 * mRoot + 0.4505937099 * sRoot
+    val b = 0.0259040371 * lRoot + 0.7827717662 * mRoot - 0.8086757660 * sRoot
+
+    val chroma = kotlin.math.sqrt(a * a + b * b)
+    val hue = Math.toDegrees(kotlin.math.atan2(b, a)).mod(360.0)
+    return Triple(lightness.toFloat(), chroma.toFloat(), hue.toFloat())
+}
+
+/** The sRGB transfer curve back to linear light; inverse of [gammaEncode]. */
+private fun gammaDecode(encoded: Float): Double {
+    val value = encoded.toDouble().coerceIn(0.0, 1.0)
+    return if (value <= 0.04045) value / 12.92 else ((value + 0.055) / 1.055).pow(2.4)
+}
