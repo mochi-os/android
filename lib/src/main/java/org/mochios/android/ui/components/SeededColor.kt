@@ -37,15 +37,27 @@ import org.mochios.android.ui.theme.oklch
  *    so holding lightness fixed while swinging that way turns the far slots
  *    to olive and brown. Swinging the other way, into magenta and violet,
  *    costs nothing perceptually and stays inside the palette.
- *  - **The tiers sit lower**, since the white glyph drawn on these circles
- *    was down to 3.6:1 at the old light tier — over the 3.0 that non-text
- *    contrast asks for, but the thinnest margin in the set. It is 4.1:1 now.
+ *  - **Four lightness tiers, not two.** Eight hues by two tiers gave sixteen
+ *    colours, and sixteen is too few to go round: a fifteen-row list draws
+ *    about ten distinct colours from that set, so five pairs of unrelated
+ *    entities match. Doubling through lightness rather than through hue buys
+ *    the room without pushing hues back under the JND or reaching for a
+ *    muddy one. It halves the expected collisions; it cannot end them, and
+ *    no palette that still looks like one family would. A seeded colour is
+ *    for recognising the same entity across screens, not for telling two
+ *    apart within a list.
+ *
+ * [TIERS] tops out at 0.62 because of the cool themes, not the warm ones.
+ * White on teal is the weakest pairing the system can produce — at hue 190
+ * a 0.63 tier measures 3.03:1 against the 3.0 that non-text contrast asks
+ * for, and 0.64 fails outright. Pinned here the worst case is 3.15:1 on a
+ * cool theme and 3.75:1 on a warm one, so raise this only with the teal
+ * measured again.
  */
 private const val SLOTS = 8
 private const val ARC_START = -75f
 private const val ARC_END = 30f
-private const val LIGHT_TIER = 0.60f
-private const val DARK_TIER = 0.48f
+private val TIERS = floatArrayOf(0.62f, 0.56f, 0.50f, 0.44f)
 
 @Composable
 fun seededEntityColor(seed: String): Color {
@@ -63,9 +75,9 @@ internal fun seededColor(seed: String, palette: SeedPalette): Color {
     val offset = ARC_START + (ARC_END - ARC_START) * (slot.toFloat() / (SLOTS - 1))
     val hue = (palette.hue + offset).mod(360f)
 
-    // Two lightness steps, alternating independently of the hue slot, so two
-    // entities landing on neighbouring hues still separate.
-    val lightness = if ((n / SLOTS) % 2 == 0) LIGHT_TIER else DARK_TIER
+    // Lightness cycles independently of the hue slot, so two entities landing
+    // on neighbouring hues still separate.
+    val lightness = TIERS[(n / SLOTS) % TIERS.size]
 
     return oklch(lightness, palette.chroma, hue)
 }
