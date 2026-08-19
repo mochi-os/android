@@ -79,8 +79,11 @@ data class FeatureDrawerItem(
  * detail screen.
  *
  * Drawer layout (top → bottom):
- *   - Header slot (optional: feature title, account picker, etc.)
- *   - Optional "All" pinned item rendered first when [allItem] is non-null.
+ *   - Header slot (optional: feature title, account picker, etc.), with the
+ *     optional "All" pinned item beneath it when [allItem] is non-null. The
+ *     aggregate row belongs with the headline rather than at the head of the
+ *     list: it stays put while the list scrolls, and the divider below it
+ *     separates "everything" from the individual entries.
  *   - Scrollable [items] list, divider above it.
  *   - Bottom [actions] slot for feature-level actions (Find, Add, Logout,
  *     Settings, RSS export, ...). Stays visible regardless of scroll.
@@ -108,8 +111,16 @@ fun FeatureListDrawer(
         drawerContent = {
             ModalDrawerSheet {
                 Column(modifier = Modifier.fillMaxHeight()) {
-                    if (header != null) {
-                        header()
+                    if (header != null || allItem != null) {
+                        header?.invoke()
+                        if (allItem != null) {
+                            DrawerItemRow(
+                                item = allItem,
+                                isSelected = selectedId == allItem.id,
+                                onClick = { onItemClick(allItem) },
+                                pinned = true,
+                            )
+                        }
                         HorizontalDivider()
                     }
 
@@ -119,16 +130,6 @@ fun FeatureListDrawer(
                             .weight(1f),
                         contentPadding = PaddingValues(vertical = 4.dp),
                     ) {
-                        if (allItem != null) {
-                            item(key = "__all__") {
-                                DrawerItemRow(
-                                    item = allItem,
-                                    isSelected = selectedId == allItem.id,
-                                    onClick = { onItemClick(allItem) },
-                                    pinned = true,
-                                )
-                            }
-                        }
                         items(items, key = { it.id }) { it ->
                             DrawerItemRow(
                                 item = it,
