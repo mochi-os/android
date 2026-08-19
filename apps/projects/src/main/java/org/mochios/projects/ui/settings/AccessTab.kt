@@ -27,13 +27,10 @@ import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
@@ -55,6 +52,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.AccessRule
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
@@ -272,30 +270,13 @@ private fun AccessRuleRow(
 
         if (!rule.isOwner) {
             var expanded by remember { mutableStateOf(false) }
-            ExposedDropdownMenuBox(
+            MochiDropdownField(
+                value = accessLevelLabel(rule.operation),
                 expanded = expanded,
-                onExpandedChange = { open -> expanded = open },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 8.dp)
+                onExpandedChange = { expanded = it },
+                label = stringResource(R.string.projects_access_select_role),
+                modifier = Modifier.fillMaxWidth(),
             ) {
-                MochiTextField(
-                    value = accessLevelLabel(rule.operation),
-                    onValueChange = { },
-                    readOnly = true,
-                    singleLine = true,
-                    label = { Text(stringResource(R.string.projects_access_select_role)) },
-                    trailingIcon = {
-                        ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
-                    },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .menuAnchor(MenuAnchorType.PrimaryNotEditable)
-                )
-                ExposedDropdownMenu(
-                    expanded = expanded,
-                    onDismissRequest = { expanded = false }
-                ) {
                     levels.forEach { level ->
                         MochiDropdownMenuItem(
                             text = { Text(accessLevelLabel(level)) },
@@ -305,7 +286,6 @@ private fun AccessRuleRow(
                             },
                         )
                     }
-                }
             }
         }
     }
@@ -507,27 +487,13 @@ private fun AddAccessDialog(
                         style = MaterialTheme.typography.bodyMedium
                     )
                     Spacer(Modifier.height(8.dp))
-                    ExposedDropdownMenuBox(
+                    MochiDropdownField(
+                        value = accessLevelLabel(level),
                         expanded = levelExpanded,
-                        onExpandedChange = { open -> levelExpanded = open }
+                        onExpandedChange = { levelExpanded = it },
+                        label = stringResource(R.string.projects_access_select_role),
+                        modifier = Modifier.fillMaxWidth(),
                     ) {
-                        MochiTextField(
-                            value = accessLevelLabel(level),
-                            onValueChange = { },
-                            readOnly = true,
-                            singleLine = true,
-                            label = { Text(stringResource(R.string.projects_access_select_role)) },
-                            trailingIcon = {
-                                ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded)
-                            },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
-                        )
-                        ExposedDropdownMenu(
-                            expanded = levelExpanded,
-                            onDismissRequest = { levelExpanded = false }
-                        ) {
                             ACCESS_LEVEL_CHANGE_KEYS.forEach { code ->
                                 MochiDropdownMenuItem(
                                     text = { Text(accessLevelLabel(code)) },
@@ -537,7 +503,6 @@ private fun AddAccessDialog(
                                     },
                                 )
                             }
-                        }
                     }
                 }
             }

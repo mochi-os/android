@@ -25,13 +25,10 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
@@ -53,6 +50,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
@@ -196,28 +194,13 @@ private fun AccessSubjectCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             } else {
-                ExposedDropdownMenuBox(
+                MochiDropdownField(
+                    value = wikiAccessLevelLabel(subject.level),
                     expanded = levelExpanded,
                     onExpandedChange = { levelExpanded = it },
-                    modifier = Modifier.width(170.dp),
+                    label = stringResource(R.string.wikis_access_change_level),
+                    modifier = Modifier.fillMaxWidth(),
                 ) {
-                    MochiTextField(
-                        value = wikiAccessLevelLabel(subject.level),
-                        onValueChange = {},
-                        readOnly = true,
-                        singleLine = true,
-                        label = { Text(stringResource(R.string.wikis_access_change_level)) },
-                        trailingIcon = {
-                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded)
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .menuAnchor(MenuAnchorType.PrimaryNotEditable),
-                    )
-                    ExposedDropdownMenu(
-                        expanded = levelExpanded,
-                        onDismissRequest = { levelExpanded = false },
-                    ) {
                         levels.forEach { lvl ->
                             MochiDropdownMenuItem(
                                 text = { Text(wikiAccessLevelLabel(lvl)) },
@@ -227,7 +210,6 @@ private fun AccessSubjectCard(
                                 },
                             )
                         }
-                    }
                 }
                 IconButton(onClick = onRevoke) {
                     Icon(
@@ -399,26 +381,13 @@ private fun AddAccessDialog(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                ExposedDropdownMenuBox(
+                MochiDropdownField(
+                    value = wikiAccessLevelLabel(level),
                     expanded = levelExpanded,
                     onExpandedChange = { levelExpanded = it },
+                    label = stringResource(R.string.wikis_access_level_label),
+                    modifier = Modifier.fillMaxWidth(),
                 ) {
-                    MochiTextField(
-                        value = wikiAccessLevelLabel(level),
-                        onValueChange = {},
-                        readOnly = true,
-                        label = { Text(stringResource(R.string.wikis_access_level_label)) },
-                        trailingIcon = {
-                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded)
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .menuAnchor(MenuAnchorType.PrimaryNotEditable),
-                    )
-                    ExposedDropdownMenu(
-                        expanded = levelExpanded,
-                        onDismissRequest = { levelExpanded = false },
-                    ) {
                         levels.forEach { lvl ->
                             MochiDropdownMenuItem(
                                 text = { Text(wikiAccessLevelLabel(lvl)) },
@@ -428,7 +397,6 @@ private fun AddAccessDialog(
                                 },
                             )
                         }
-                    }
                 }
             }
         },
