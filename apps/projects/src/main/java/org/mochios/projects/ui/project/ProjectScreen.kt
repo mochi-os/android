@@ -52,8 +52,6 @@ import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.outlined.ViewColumn
-import androidx.compose.material3.Badge
-import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -677,20 +675,6 @@ private fun ProjectContent(
                                 contentDescription = stringResource(R.string.projects_search)
                             )
                         }
-                        IconButton(onClick = { showFilters = !showFilters }) {
-                            BadgedBox(
-                                badge = {
-                                    if (filtersActive) {
-                                        Badge(modifier = Modifier.size(6.dp))
-                                    }
-                                }
-                            ) {
-                                Icon(
-                                    Icons.Default.FilterList,
-                                    contentDescription = stringResource(R.string.projects_filter)
-                                )
-                            }
-                        }
                         Box {
                             IconButton(onClick = { showOverflow = true }) {
                                 Icon(
@@ -702,6 +686,22 @@ private fun ProjectContent(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
+                                // Filter and sort used to be a fifth control
+                                // in the bar. It opens a sheet either way, so it
+                                // costs one tap more from in here and gives the
+                                // bar back to the actions that act in place.
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_filter)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        showFilters = true
+                                    },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.FilterList, contentDescription = null)
+                                    },
+                                    selected = filtersActive,
+                                )
+                                MochiDropdownMenuDivider()
                                 // Views the project defines, checked one at a
                                 // time. Listed even when there is only one, so
                                 // the menu always says which view is on screen
