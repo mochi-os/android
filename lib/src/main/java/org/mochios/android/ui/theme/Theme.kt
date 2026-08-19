@@ -52,7 +52,14 @@ private val LightColorScheme = lightColorScheme(
     surfaceVariant = Neutral95,
     onSurfaceVariant = NeutralVariant30,
     outline = NeutralVariant50,
-    outlineVariant = NeutralVariant80
+    outlineVariant = NeutralVariant80,
+    surfaceContainerLowest = Neutral100,
+    surfaceContainerLow = Neutral98,
+    surfaceContainer = Neutral96,
+    surfaceContainerHigh = Neutral94,
+    surfaceContainerHighest = Neutral92,
+    surfaceBright = Neutral99,
+    surfaceDim = Neutral87
 )
 
 private val DarkColorScheme = darkColorScheme(
@@ -79,7 +86,14 @@ private val DarkColorScheme = darkColorScheme(
     surfaceVariant = Neutral20,
     onSurfaceVariant = NeutralVariant80,
     outline = NeutralVariant60,
-    outlineVariant = NeutralVariant30
+    outlineVariant = NeutralVariant30,
+    surfaceContainerLowest = Neutral10,
+    surfaceContainerLow = Neutral12,
+    surfaceContainer = Neutral17,
+    surfaceContainerHigh = Neutral22,
+    surfaceContainerHighest = Neutral24,
+    surfaceBright = Neutral24,
+    surfaceDim = Neutral10
 )
 
 /** Per-user corner radius (dp) for cards/buttons/dialogs. Themed surfaces
@@ -162,10 +176,14 @@ private fun applyFontPreferences(
         // fallback (clearer letterforms than Serif in most system fonts).
         FontPref.DYSLEXIA -> FontFamily.SansSerif
         FontPref.SERIF -> FontFamily.Serif
-        FontPref.SYSTEM, FontPref.THEME, null -> FontFamily.Default
+        // SYSTEM means the reader asked for their device font, so it has to
+        // opt out of Inter rather than collapse into it the way it used to
+        // when both branches returned Default.
+        FontPref.SYSTEM -> FontFamily.Default
+        FontPref.THEME, null -> InterFontFamily
     }
     val scale = fontSize?.scale ?: 1.0f
-    if (family == FontFamily.Default && scale == 1.0f) return base
+    if (family == InterFontFamily && scale == 1.0f) return base
     return Typography(
         displayLarge = base.displayLarge.copy(fontFamily = family, fontSize = base.displayLarge.fontSize * scale, lineHeight = base.displayLarge.lineHeight * scale),
         displayMedium = base.displayMedium.copy(fontFamily = family, fontSize = base.displayMedium.fontSize * scale, lineHeight = base.displayMedium.lineHeight * scale),
