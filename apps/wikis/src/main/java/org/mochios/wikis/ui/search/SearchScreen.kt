@@ -29,7 +29,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -58,6 +57,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.SearchResult
 import org.mochios.wikis.navigation.WikisApp
@@ -107,7 +107,7 @@ fun SearchScreen(
                 .padding(padding),
         ) {
             // Search field
-            OutlinedTextField(
+            MochiTextField(
                 value = state.query,
                 onValueChange = viewModel::updateQuery,
                 placeholder = { Text(stringResource(R.string.wikis_search_pages_placeholder)) },

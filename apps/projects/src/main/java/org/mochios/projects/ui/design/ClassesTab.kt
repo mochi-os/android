@@ -24,7 +24,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -37,6 +36,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectClass
 import org.mochios.android.R as MochiR
@@ -101,7 +101,7 @@ fun ClassesTab(
             onDismissRequest = { showAddDialog = false },
             title = stringResource(R.string.projects_classes_add_dialog_title),
             content = {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { name = it },
                     label = { Text(stringResource(R.string.projects_class_name)) },

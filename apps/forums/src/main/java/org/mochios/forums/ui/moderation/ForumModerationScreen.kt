@@ -29,6 +29,7 @@ import androidx.compose.material.icons.outlined.Group
 import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -40,8 +41,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
@@ -73,6 +72,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.forums.R
@@ -199,9 +199,9 @@ fun ForumModerationScreen(
  */
 @Composable
 private fun ModerationCard(content: @Composable ColumnScope.() -> Unit) {
-    OutlinedCard(
+    Card(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
+        colors = CardDefaults.cardColors(containerColor = Color.Transparent),
         content = content,
     )
 }
@@ -901,7 +901,7 @@ private fun AddRestrictionDialog(
         title = stringResource(R.string.forums_moderation_restriction_add),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = user,
                     onValueChange = { user = it },
                     label = { Text(stringResource(R.string.forums_moderation_restriction_user)) },
@@ -913,7 +913,7 @@ private fun AddRestrictionDialog(
                     expanded = typeExpanded,
                     onExpandedChange = { typeExpanded = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = typeLabel,
                         onValueChange = {},
                         readOnly = true,
@@ -937,7 +937,7 @@ private fun AddRestrictionDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = reason,
                     onValueChange = { reason = it },
                     label = { Text(stringResource(R.string.forums_report_details)) },
@@ -946,7 +946,7 @@ private fun AddRestrictionDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = duration,
                     onValueChange = { duration = it.filter { c -> c.isDigit() } },
                     label = { Text(stringResource(R.string.forums_moderation_restriction_duration_seconds)) },

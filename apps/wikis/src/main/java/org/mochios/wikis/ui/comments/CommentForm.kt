@@ -30,7 +30,6 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -52,6 +51,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import java.io.File
 
@@ -131,7 +131,7 @@ fun CommentForm(
     }
 
     Column(modifier = Modifier.fillMaxWidth()) {
-        OutlinedTextField(
+        MochiTextField(
             value = body,
             onValueChange = {
                 body = it

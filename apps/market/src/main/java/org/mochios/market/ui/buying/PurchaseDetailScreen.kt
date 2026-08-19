@@ -214,7 +214,7 @@ fun PurchaseDetailScreen(
 private fun OrderSummaryCard(order: Order, listing: Listing) {
     val format = LocalFormat.current
     val currency = order.currency ?: Currency.GBP
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -295,7 +295,7 @@ private fun SummaryRow(label: String, value: String, emphasised: Boolean = false
 @Composable
 private fun TrackingCard(order: Order) {
     val context = LocalContext.current
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Row(
             Modifier.padding(16.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -331,7 +331,7 @@ private fun TrackingCard(order: Order) {
 
 @Composable
 private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (String) -> Unit) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 stringResource(R.string.market_purchase_download_section),
@@ -379,7 +379,7 @@ private fun PrimaryActionsCard(
         order.status != OrderStatus.DISPUTED &&
         order.refunded < order.total
 
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             if (showConfirm) {
                 Button(
@@ -412,7 +412,7 @@ private fun PrimaryActionsCard(
 private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) {
     val isChargeback = dispute.opener == "stripe"
     val reasonLabel = chargebackLabel(dispute.reason)
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -475,7 +475,7 @@ private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) 
 
 @Composable
 private fun PeerReviewCard(review: Review) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 stringResource(
@@ -498,7 +498,7 @@ private fun AuditCollapsible(
     onToggle: () -> Unit,
 ) {
     if (events.isEmpty()) return
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(Modifier.padding(8.dp)) {
             Row(
                 modifier = Modifier.fillMaxWidth().padding(8.dp),

@@ -54,6 +54,7 @@ import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.outlined.ViewColumn
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
+import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -63,8 +64,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -114,6 +113,7 @@ import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
@@ -472,7 +472,7 @@ private fun ProjectRow(
     val cancelLabel = stringResource(MochiR.string.common_cancel)
     val description = project.description.takeIf { it.isNotBlank() }
 
-    OutlinedCard(
+    Card(
         modifier = Modifier
             .fillMaxWidth()
             .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
@@ -970,7 +970,7 @@ private fun AddColumnDialog(
             // body scrolls. Its saturation field consumes its own drags, so
             // dragging inside it doesn't scroll the dialog out from under it.
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.projects_field_name)) },

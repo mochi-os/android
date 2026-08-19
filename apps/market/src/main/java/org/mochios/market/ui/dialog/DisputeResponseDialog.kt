@@ -32,7 +32,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -52,6 +51,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.DisputeEvidence
 import org.mochios.market.ui.components.StatusBadge
@@ -109,7 +109,7 @@ fun DisputeResponseDialog(
                     SubmittedEvidenceSection(evidence = fileEvidence)
                     Spacer(Modifier.height(12.dp))
                 }
-                OutlinedTextField(
+                MochiTextField(
                     value = response,
                     onValueChange = { response = it },
                     label = { Text(stringResource(R.string.market_dispute_dialog_response_label)) },
@@ -178,7 +178,7 @@ private fun SubmittedEvidenceSection(evidence: List<DisputeEvidence>) {
         fontWeight = FontWeight.SemiBold,
     )
     Spacer(Modifier.height(8.dp))
-    Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+    Card(colors = CardDefaults.cardColors(), modifier = Modifier.fillMaxWidth()) {
         Column {
             evidence.forEachIndexed { index, item ->
                 if (index > 0) HorizontalDivider()

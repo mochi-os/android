@@ -31,7 +31,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
@@ -52,6 +51,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_JSON
 import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.android.R as MochiR
 
@@ -166,7 +166,7 @@ fun CreateCrmScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = name,
                 onValueChange = { value -> name = value },
                 label = { Text(stringResource(R.string.crm_create_name)) },

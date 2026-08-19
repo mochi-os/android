@@ -134,7 +134,7 @@ private fun ReplicaCard(
 
     Card(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
+        colors = CardDefaults.cardColors(),
     ) {
         Row(
             modifier = Modifier

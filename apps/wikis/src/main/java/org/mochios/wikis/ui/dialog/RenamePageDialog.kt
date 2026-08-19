@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -38,6 +37,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.repository.WikisRepository
 
@@ -93,7 +93,7 @@ fun RenamePageDialog(
         title = stringResource(R.string.wikis_rename_page_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = newSlug,
                     onValueChange = { newSlug = it },
                     label = { Text(stringResource(R.string.wikis_rename_page_label)) },

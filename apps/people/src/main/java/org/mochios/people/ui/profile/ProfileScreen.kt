@@ -47,11 +47,9 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -90,6 +88,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.ui.components.PeopleSidebar
@@ -555,7 +554,7 @@ private fun EditNameDialog(
         onDismissRequest = { if (!isSaving) onDismiss() },
         title = stringResource(R.string.people_profile_edit_name),
         content = {
-            OutlinedTextField(
+            MochiTextField(
                 value = name,
                 onValueChange = { value -> name = value },
                 singleLine = true,
@@ -594,17 +593,13 @@ private fun BioSection(
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        OutlinedTextField(
+        MochiTextField(
             value = state.bioDraft,
             onValueChange = viewModel::setBioDraft,
             placeholder = { Text(stringResource(R.string.people_profile_markdown_supported)) },
             minLines = 4,
             maxLines = 10,
             isError = tooLong,
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
-                unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
-            ),
             modifier = Modifier.fillMaxWidth(),
         )
         // Bottom row: inline progress track (left, flexible) + character count

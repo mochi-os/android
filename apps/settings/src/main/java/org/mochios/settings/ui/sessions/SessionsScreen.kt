@@ -126,7 +126,7 @@ fun SessionsScreen(
 private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Unit) {
     val format = LocalFormat.current
     var confirm by remember(session.id) { mutableStateOf(false) }
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {

@@ -24,7 +24,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -41,6 +40,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
@@ -129,7 +129,7 @@ fun CreateGroupScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = name,
                 onValueChange = { value -> name = value },
                 label = { Text(stringResource(R.string.people_group_name)) },
@@ -144,7 +144,7 @@ fun CreateGroupScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(16.dp))
-            OutlinedTextField(
+            MochiTextField(
                 value = description,
                 onValueChange = { value -> description = value },
                 label = { Text(stringResource(R.string.people_group_description_optional)) },

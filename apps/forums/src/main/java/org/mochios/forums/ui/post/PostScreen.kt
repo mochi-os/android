@@ -20,6 +20,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.PostTagsButton
 import androidx.compose.material.icons.automirrored.outlined.Reply
@@ -71,7 +72,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -447,7 +447,7 @@ private fun EditCommentDialog(
         title = stringResource(R.string.forums_comment_edit_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = body,
                     onValueChange = { body = it },
                     label = { Text(stringResource(R.string.forums_comment_edit_body_field)) },
@@ -554,7 +554,7 @@ private fun ReportDialog(
                     expanded = reasonExpanded,
                     onExpandedChange = { reasonExpanded = it }
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = selectedLabel,
                         onValueChange = {},
                         readOnly = true,
@@ -582,7 +582,7 @@ private fun ReportDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = details,
                     onValueChange = { details = it },
                     label = { Text(stringResource(R.string.forums_report_details)) },
@@ -1193,7 +1193,7 @@ private fun ComposerBar(
                     contentDescription = stringResource(R.string.forums_post_attach)
                 )
             }
-            OutlinedTextField(
+            MochiTextField(
                 value = value,
                 onValueChange = onValueChange,
                 modifier = Modifier.weight(1f).focusRequester(focusRequester),

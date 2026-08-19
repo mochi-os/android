@@ -35,7 +35,6 @@ import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
@@ -57,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.board.PagedZoomableBoard
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
@@ -427,7 +427,7 @@ private fun BoardColumn(
                         onDismissRequest = { showRenameDialog = false },
                         title = stringResource(R.string.projects_board_rename_column),
                         content = {
-                            OutlinedTextField(
+                            MochiTextField(
                                 value = newName,
                                 onValueChange = { newName = it },
                                 singleLine = true,

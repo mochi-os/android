@@ -34,7 +34,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
@@ -57,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.theme.interestColor
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -155,7 +155,7 @@ private fun SummaryCard(
     isRegenerating: Boolean,
     onRegenerate: () -> Unit,
 ) {
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -199,7 +199,7 @@ private fun SearchSection(
     onSelect: (InterestSearchResult) -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
-        OutlinedTextField(
+        MochiTextField(
             value = query,
             onValueChange = onQueryChange,
             modifier = Modifier.fillMaxWidth(),
@@ -222,7 +222,7 @@ private fun SearchSection(
         }
         if (results.isNotEmpty()) {
             Spacer(Modifier.height(8.dp))
-            Card(colors = CardDefaults.outlinedCardColors()) {
+            Card(colors = CardDefaults.cardColors()) {
                 Column(modifier = Modifier.fillMaxWidth()) {
                     results.forEach { result ->
                         Column(
@@ -260,7 +260,7 @@ private fun InterestRow(
     onRemove: () -> Unit,
 ) {
     val weightColor = interestColor(interest.weight.toDouble())
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(

@@ -32,7 +32,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
@@ -55,6 +54,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.android.R as MochiR
 
@@ -201,7 +201,7 @@ private fun AccessSubjectCard(
                     onExpandedChange = { levelExpanded = it },
                     modifier = Modifier.width(170.dp),
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = wikiAccessLevelLabel(subject.level),
                         onValueChange = {},
                         readOnly = true,
@@ -316,7 +316,7 @@ private fun AddAccessDialog(
                 Spacer(modifier = Modifier.height(12.dp))
 
                 if (selectedTab == 0) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = if (selectedName.isNotEmpty()) selectedName else userQuery,
                         onValueChange = {
                             userQuery = it
@@ -403,7 +403,7 @@ private fun AddAccessDialog(
                     expanded = levelExpanded,
                     onExpandedChange = { levelExpanded = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = wikiAccessLevelLabel(level),
                         onValueChange = {},
                         readOnly = true,

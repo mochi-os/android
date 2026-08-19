@@ -28,7 +28,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -43,6 +42,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.feeds.R
@@ -92,7 +92,7 @@ fun GeneralTab(
             Column(modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = bannerDraft,
                     onValueChange = { value -> bannerDraft = value },
                     placeholder = { Text(stringResource(R.string.feeds_banner_hint)) },
@@ -250,7 +250,7 @@ private fun NameEditor(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(4.dp),
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = editValue,
                 onValueChange = { value -> editValue = value },
                 singleLine = true,

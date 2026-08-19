@@ -31,7 +31,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -57,6 +56,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Redirect
 import org.mochios.android.R as MochiR
@@ -305,7 +305,7 @@ private fun AddRedirectDialog(
         title = stringResource(R.string.wikis_redirect_create_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = source,
                     onValueChange = { source = it },
                     label = { Text(stringResource(R.string.wikis_redirect_source_label)) },
@@ -313,7 +313,7 @@ private fun AddRedirectDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = target,
                     onValueChange = { target = it },
                     label = { Text(stringResource(R.string.wikis_redirect_target_label)) },

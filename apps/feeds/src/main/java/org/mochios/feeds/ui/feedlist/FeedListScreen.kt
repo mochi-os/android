@@ -42,7 +42,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -82,6 +81,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.ui.find.FindFeedsContent
@@ -297,7 +297,7 @@ private fun GlobalRssExportDialog(
                 }
                 Spacer(modifier = Modifier.height(12.dp))
                 if (globalRssUrl != null) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = globalRssUrl!!,
                         onValueChange = {},
                         readOnly = true,

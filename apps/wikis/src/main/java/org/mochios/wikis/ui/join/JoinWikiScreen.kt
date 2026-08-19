@@ -34,7 +34,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -53,6 +52,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.android.R as MochiR
 
@@ -176,7 +176,7 @@ fun JoinWikiScreen(
                     }
 
                     // Entity-id form
-                    OutlinedTextField(
+                    MochiTextField(
                         value = uiState.target,
                         onValueChange = viewModel::updateTarget,
                         label = { Text(stringResource(R.string.wikis_join_id_label)) },

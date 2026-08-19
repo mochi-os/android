@@ -25,7 +25,6 @@ import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -200,7 +199,7 @@ fun PlacePicker(
 
     Column(modifier = modifier) {
         Box(modifier = Modifier.fillMaxWidth()) {
-            OutlinedTextField(
+            MochiTextField(
                 value = nameText,
                 onValueChange = { newName ->
                     nameText = newName

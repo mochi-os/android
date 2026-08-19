@@ -35,7 +35,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
@@ -59,6 +58,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.Delegation
@@ -188,7 +188,7 @@ private fun DomainCard(
     var editRoute by remember { mutableStateOf<Route?>(null) }
     var showAddDelegation by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(modifier = Modifier.weight(1f)) {
@@ -393,7 +393,7 @@ private fun DomainCard(
 
 @Composable
 private fun VerificationBlock(domain: Domain, onVerify: () -> Unit) {
-    Card(colors = CardDefaults.outlinedCardColors()) {
+    Card(colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.padding(8.dp)) {
             Text(
                 text = stringResource(R.string.domain_dns_hint),
@@ -524,7 +524,7 @@ private fun AddDomainDialog(onConfirm: (String) -> Unit, onDismiss: () -> Unit) 
         onDismissRequest = onDismiss,
         title = stringResource(R.string.domain_add_title),
         content = {
-            OutlinedTextField(
+            MochiTextField(
                 value = name,
                 onValueChange = { name = it },
                 singleLine = true,
@@ -559,7 +559,7 @@ private fun RouteDialog(
         title = stringResource(if (editing) R.string.route_edit_title else R.string.route_add_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = path,
                     onValueChange = { path = it },
                     singleLine = true,
@@ -586,7 +586,7 @@ private fun RouteDialog(
                         options = entities.map { it.id to it.name },
                         onSelect = { target = it },
                     )
-                    else -> OutlinedTextField(
+                    else -> MochiTextField(
                         value = target,
                         onValueChange = { target = it },
                         singleLine = true,
@@ -595,7 +595,7 @@ private fun RouteDialog(
                     )
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = priority,
                     onValueChange = { priority = it.filter(Char::isDigit) },
                     singleLine = true,
@@ -706,7 +706,7 @@ private fun DelegationDialog(
         title = stringResource(R.string.domain_delegation_add_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = query,
                     onValueChange = {
                         query = it
@@ -736,7 +736,7 @@ private fun DelegationDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = path,
                     onValueChange = { path = it },
                     singleLine = true,

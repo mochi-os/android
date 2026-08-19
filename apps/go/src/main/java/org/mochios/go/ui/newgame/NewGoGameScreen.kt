@@ -32,7 +32,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -54,6 +53,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.go.R
 import org.mochios.go.model.NewGameFriend
 import org.mochios.android.R as MochiR
@@ -262,7 +262,7 @@ fun NewGoGameScreen(
                 onSelect = { preset -> komiText = preset },
             )
             Spacer(modifier = Modifier.height(8.dp))
-            OutlinedTextField(
+            MochiTextField(
                 value = komiText,
                 onValueChange = { value -> komiText = value },
                 label = { Text(stringResource(R.string.go_new_game_komi_field_label)) },

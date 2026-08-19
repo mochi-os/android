@@ -40,7 +40,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.SuggestionChipDefaults
 import androidx.compose.material3.Text
@@ -63,6 +62,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Branch
 import org.mochios.projects.model.MergeCheck
@@ -416,7 +416,7 @@ private fun MergeDialog(
         title = stringResource(R.string.projects_request_merge_dialog_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = message,
                     onValueChange = { message = it },
                     label = { Text(stringResource(R.string.projects_request_commit_message)) },
@@ -512,7 +512,7 @@ private fun CreateRequestDialog(
                     onSelect = { selectedTarget = it }
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = title,
                     onValueChange = { title = it },
                     label = { Text(stringResource(R.string.projects_request_field_title)) },
@@ -520,7 +520,7 @@ private fun CreateRequestDialog(
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = description,
                     onValueChange = { description = it },
                     label = { Text(stringResource(R.string.projects_request_field_description)) },
@@ -569,7 +569,7 @@ private fun RepositoryDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it }
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = selected?.name ?: "",
             onValueChange = {},
             readOnly = true,
@@ -612,7 +612,7 @@ private fun BranchDropdown(
         expanded = expanded && enabled,
         onExpandedChange = { if (enabled) expanded = it }
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = selected?.name ?: "",
             onValueChange = {},
             readOnly = true,

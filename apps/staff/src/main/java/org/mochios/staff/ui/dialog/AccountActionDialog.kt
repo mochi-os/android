@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -25,6 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountActionType
 import org.mochios.staff.ui.accounts.PendingAccountAction
@@ -89,7 +89,7 @@ fun AccountActionDialog(
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = reason,
                     onValueChange = { reason = it },
                     label = {
@@ -106,7 +106,7 @@ fun AccountActionDialog(
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = notes,
                     onValueChange = { notes = it },
                     label = { Text(stringResource(R.string.staff_accounts_notes_label)) },

@@ -39,7 +39,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -70,6 +69,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.chat.R
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatStatus
@@ -161,7 +161,7 @@ fun ChatListScreen(
         ) {
             Column(modifier = Modifier.fillMaxSize()) {
                 if (uiState.showSearch) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = uiState.searchQuery,
                         onValueChange = viewModel::updateSearchQuery,
                         placeholder = { Text(stringResource(R.string.chat_list_search_placeholder)) },

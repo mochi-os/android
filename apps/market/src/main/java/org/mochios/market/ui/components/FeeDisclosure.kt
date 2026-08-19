@@ -39,7 +39,7 @@ fun FeeDisclosure(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
+        colors = CardDefaults.cardColors(),
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(

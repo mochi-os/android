@@ -23,7 +23,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -36,6 +35,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiTextField
 
 @Composable
 fun IdentityScreen(
@@ -70,7 +70,7 @@ fun IdentityScreen(
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        OutlinedTextField(
+        MochiTextField(
             value = uiState.identityName,
             onValueChange = onUpdateName,
             label = { Text(stringResource(R.string.auth_name)) },

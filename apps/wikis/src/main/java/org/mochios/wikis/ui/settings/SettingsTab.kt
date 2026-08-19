@@ -31,7 +31,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -51,6 +50,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.FieldRow
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
@@ -177,7 +177,7 @@ private fun IdentitySection(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = editValue,
                             onValueChange = {
                                 editValue = it
@@ -316,7 +316,7 @@ private fun HomePageSection(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             Spacer(modifier = Modifier.height(8.dp))
-            OutlinedTextField(
+            MochiTextField(
                 value = value,
                 onValueChange = { value = it },
                 singleLine = true,

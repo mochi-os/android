@@ -39,7 +39,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -65,6 +64,7 @@ import coil3.request.crossfade
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.RelationshipStatus
@@ -190,7 +190,7 @@ private fun SearchBody(
             .fillMaxSize()
             .padding(horizontal = 16.dp, vertical = 16.dp),
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.searchQuery,
             onValueChange = onQueryChange,
             placeholder = { Text(stringResource(R.string.people_add_friend_search_placeholder)) },

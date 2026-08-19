@@ -21,7 +21,6 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -38,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -124,7 +124,7 @@ fun IssueRefundDialog(
                     expanded = reasonOpen,
                     onExpandedChange = { reasonOpen = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = stringResource(reasonLabel),
                         onValueChange = {},
                         readOnly = true,
@@ -153,7 +153,7 @@ fun IssueRefundDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = amountInput,
                     onValueChange = { amountInput = it },
                     label = { Text(stringResource(R.string.market_refund_dialog_amount_label)) },
@@ -166,7 +166,7 @@ fun IssueRefundDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = description,
                     onValueChange = { description = it },
                     label = {
@@ -216,7 +216,7 @@ private fun PriorRefundsSection(refunds: List<Refund>, currency: Currency) {
         fontWeight = FontWeight.SemiBold,
     )
     Spacer(Modifier.height(8.dp))
-    Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+    Card(colors = CardDefaults.cardColors(), modifier = Modifier.fillMaxWidth()) {
         Column {
             refunds.forEachIndexed { index, refund ->
                 if (index > 0) HorizontalDivider()

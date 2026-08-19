@@ -39,7 +39,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -65,6 +64,7 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingStatus
@@ -330,7 +330,7 @@ private fun FilterRow(
             onExpandedChange = { open = it },
             modifier = Modifier.weight(0.4f),
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = stringResource(labelRes),
                 onValueChange = {},
                 readOnly = true,
@@ -356,7 +356,7 @@ private fun FilterRow(
                 }
             }
         }
-        OutlinedTextField(
+        MochiTextField(
             value = searchQuery,
             onValueChange = onSearchChange,
             placeholder = {

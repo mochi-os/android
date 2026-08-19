@@ -23,7 +23,6 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -40,6 +39,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.android.format.formatPrice
 import org.mochios.staff.model.Dispute
@@ -124,7 +124,7 @@ fun DisputeReviewDialog(
                         // refund (total minus anything already refunded), matching
                         // web's `remaining` and the clamp in the view model.
                         val remaining = (dispute.total - dispute.orderRefunded).coerceAtLeast(0)
-                        OutlinedTextField(
+                        MochiTextField(
                             value = refundInput,
                             onValueChange = { refundInput = it },
                             label = {
@@ -151,7 +151,7 @@ fun DisputeReviewDialog(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
-                    OutlinedTextField(
+                    MochiTextField(
                         value = notes,
                         onValueChange = { notes = it },
                         label = { Text(stringResource(R.string.staff_disputes_notes_label)) },

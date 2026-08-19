@@ -246,7 +246,7 @@ fun SystemStatusScreen(
 
 @Composable
 private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             PeerName(peer.name)
             Text(

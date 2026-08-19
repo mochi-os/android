@@ -26,7 +26,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -43,6 +42,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -242,7 +242,7 @@ private fun ZoneDialog(
                     expanded = regionExpanded,
                     onExpandedChange = { regionExpanded = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = regionLabel,
                         onValueChange = {},
                         readOnly = true,
@@ -267,7 +267,7 @@ private fun ZoneDialog(
                         }
                     }
                 }
-                OutlinedTextField(
+                MochiTextField(
                     value = priceText,
                     onValueChange = { priceText = it },
                     label = { Text(stringResource(R.string.market_editor_zone_price)) },
@@ -278,7 +278,7 @@ private fun ZoneDialog(
                     ),
                     modifier = Modifier.fillMaxWidth(),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = daysText,
                     onValueChange = { daysText = it },
                     label = { Text(stringResource(R.string.market_editor_zone_days)) },
@@ -286,7 +286,7 @@ private fun ZoneDialog(
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = notesText,
                     onValueChange = { notesText = it },
                     label = { Text(stringResource(R.string.market_editor_zone_notes)) },

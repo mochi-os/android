@@ -32,7 +32,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -59,6 +58,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemDocument
@@ -242,7 +242,7 @@ private fun LanguagePicker(
             expanded = expanded,
             onExpandedChange = { expanded = it },
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = selected?.let { languageDisplayName(it) } ?: "",
                 onValueChange = {},
                 readOnly = true,
@@ -316,7 +316,7 @@ private fun DocumentEditor(
         }
     }
 
-    OutlinedTextField(
+    MochiTextField(
         value = body,
         onValueChange = { body = it },
         modifier = Modifier.fillMaxWidth(),

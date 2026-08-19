@@ -44,8 +44,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
@@ -70,6 +68,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Source
 import org.mochios.android.i18n.LocalFormat
@@ -261,7 +260,7 @@ private fun PermissionRequestDialog(
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-                OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+                Card(modifier = Modifier.fillMaxWidth()) {
                     Text(
                         text = permissionName,
                         style = MaterialTheme.typography.bodyLarge,
@@ -477,7 +476,7 @@ private fun AddSourceDialog(
         content = {
             Column {
                 if (urlRequired) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = url,
                         onValueChange = { newUrl ->
                             url = newUrl
@@ -502,7 +501,7 @@ private fun AddSourceDialog(
                     expanded = typeExpanded,
                     onExpandedChange = { typeExpanded = it }
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = typeLabel,
                         onValueChange = {},
                         readOnly = true,
@@ -558,7 +557,7 @@ private fun EditSourceDialog(
         title = stringResource(R.string.feeds_edit_source),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { name = it },
                     label = { Text(stringResource(R.string.feeds_name)) },
@@ -606,7 +605,7 @@ private fun EditSourceDialog(
                 }
                 if (!isMemories) {
                     Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedTextField(
+                    MochiTextField(
                         value = transform,
                         onValueChange = { transform = it },
                         label = { Text(stringResource(R.string.feeds_source_transform)) },

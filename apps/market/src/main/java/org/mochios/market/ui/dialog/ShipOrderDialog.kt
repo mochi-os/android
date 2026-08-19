@@ -14,7 +14,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -27,6 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.COMMON_CARRIERS
 
@@ -76,7 +76,7 @@ fun ShipOrderDialog(
                     expanded = carrierMenuOpen,
                     onExpandedChange = { carrierMenuOpen = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = carrier.ifBlank { otherLabel },
                         onValueChange = {},
                         readOnly = true,
@@ -113,7 +113,7 @@ fun ShipOrderDialog(
                 }
                 if (carrier.isBlank()) {
                     Spacer(Modifier.height(8.dp))
-                    OutlinedTextField(
+                    MochiTextField(
                         value = customCarrier,
                         onValueChange = { customCarrier = it },
                         label = {
@@ -125,7 +125,7 @@ fun ShipOrderDialog(
                     )
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = tracking,
                     onValueChange = { tracking = it },
                     label = { Text(stringResource(R.string.market_sale_tracking_label)) },
@@ -134,7 +134,7 @@ fun ShipOrderDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = url,
                     onValueChange = { url = it },
                     label = { Text(stringResource(R.string.market_sale_tracking_url_label)) },

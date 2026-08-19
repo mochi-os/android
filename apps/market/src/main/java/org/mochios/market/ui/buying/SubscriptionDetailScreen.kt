@@ -205,7 +205,7 @@ private fun SummaryCard(
     val thumbUrl = listing?.photo?.id?.takeIf { it.isNotBlank() }
         ?.let { "$baseUrl/market/-/photo/$it" }
 
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 ListingThumbnail(thumbnailUrl = thumbUrl)
@@ -295,7 +295,7 @@ private fun SummaryCard(
 private fun BillingInfoCard(subscription: Subscription) {
     val format = LocalFormat.current
     val currency = subscription.currency ?: Currency.GBP
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_subscription_detail_billing_info),
@@ -356,7 +356,7 @@ private fun BillingHistorySection(@Suppress("UNUSED_PARAMETER") subscription: Su
     // `subscription.payments` on the wire today. We render the section
     // shell so the user understands where this content will appear once
     // the server side lands, and the layout doesn't shift when it does.
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_subscription_detail_billing_history),

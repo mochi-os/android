@@ -26,7 +26,6 @@ import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -141,7 +140,7 @@ fun PostTagsButton(
                     open = false
                 }
             }
-            OutlinedTextField(
+            MochiTextField(
                 value = newLabel,
                 onValueChange = { value -> newLabel = value },
                 label = { Text(stringResource(R.string.tags_add)) },

@@ -32,7 +32,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -47,6 +46,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 
 /**
@@ -141,7 +141,7 @@ fun FilterSheet(
 
             SectionLabel(stringResource(R.string.market_filter_price_range))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.filters[Filter.PRICE_MIN].orEmpty(),
                     onValueChange = { onUpdate(Filter.PRICE_MIN, it.ifBlank { null }) },
                     label = { Text(stringResource(R.string.market_filter_price_min)) },
@@ -149,7 +149,7 @@ fun FilterSheet(
                     singleLine = true,
                     modifier = Modifier.weight(1f),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = state.filters[Filter.PRICE_MAX].orEmpty(),
                     onValueChange = { onUpdate(Filter.PRICE_MAX, it.ifBlank { null }) },
                     label = { Text(stringResource(R.string.market_filter_price_max)) },
@@ -245,7 +245,7 @@ private fun CategoryDropdown(
             expanded = expanded,
             onExpandedChange = { expanded = it },
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = selectedLabel,
                 onValueChange = {},
                 readOnly = true,
@@ -302,7 +302,7 @@ private fun SortDropdown(
             expanded = expanded,
             onExpandedChange = { expanded = it },
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = selectedLabel,
                 onValueChange = {},
                 readOnly = true,

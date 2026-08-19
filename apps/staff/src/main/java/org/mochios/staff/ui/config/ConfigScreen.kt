@@ -28,7 +28,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -49,6 +48,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 
 /**
@@ -240,7 +240,7 @@ private fun NumberField(
         onSave = onSave,
         suffix = suffix,
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.local[key].orEmpty(),
             onValueChange = { v -> onLocalChange(key, v.filter { it.isDigit() || it == '-' || it == '.' }) },
             singleLine = true,
@@ -264,7 +264,7 @@ private fun TextField(
         state = state,
         onSave = onSave,
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.local[key].orEmpty(),
             onValueChange = { v -> onLocalChange(key, v) },
             singleLine = true,
@@ -287,7 +287,7 @@ private fun SecretField(
         state = state,
         onSave = onSave,
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.local[key].orEmpty(),
             onValueChange = { v -> onLocalChange(key, v) },
             singleLine = true,

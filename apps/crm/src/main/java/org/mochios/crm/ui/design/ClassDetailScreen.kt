@@ -39,7 +39,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -55,6 +54,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmField
@@ -129,7 +129,7 @@ fun ClassDetailScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         // Name
-        OutlinedTextField(
+        MochiTextField(
             value = editName,
             onValueChange = { editName = it },
             label = { Text(stringResource(R.string.crm_class_name)) },
@@ -161,7 +161,7 @@ fun ClassDetailScreen(
             onExpandedChange = { titleExpanded = it }
         ) {
             val titleFieldName = fields.find { it.id == titleFieldId }?.name ?: defaultReadableLabel
-            OutlinedTextField(
+            MochiTextField(
                 value = titleFieldName,
                 onValueChange = {},
                 readOnly = true,
@@ -366,7 +366,7 @@ private fun AddFieldDialog(
         title = stringResource(R.string.crm_field_add_field_dialog_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { name = it },
                     label = { Text(stringResource(R.string.crm_field_name)) },
@@ -378,7 +378,7 @@ private fun AddFieldDialog(
                     expanded = typeExpanded,
                     onExpandedChange = { typeExpanded = it }
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = fieldTypeLabel(fieldtype),
                         onValueChange = {},
                         readOnly = true,

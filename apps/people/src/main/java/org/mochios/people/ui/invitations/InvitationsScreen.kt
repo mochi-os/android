@@ -39,7 +39,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -69,6 +68,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.ui.components.PeopleSidebar
@@ -175,7 +175,7 @@ fun InvitationsScreen(
         ) {
             // Search bar — always visible to mirror the web, which keeps the
             // input pinned to the page header.
-            OutlinedTextField(
+            MochiTextField(
                 value = uiState.searchQuery,
                 onValueChange = viewModel::setSearchQuery,
                 placeholder = { Text(stringResource(R.string.people_friends_search_placeholder)) },

@@ -18,7 +18,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -32,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 import org.mochios.android.R as MochiR
@@ -94,7 +94,7 @@ fun CreateListingScreen(navController: NavController) {
                 .padding(padding)
                 .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = title,
                 onValueChange = { value -> title = value },
                 label = { Text(stringResource(R.string.market_editor_title)) },

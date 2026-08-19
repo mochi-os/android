@@ -37,7 +37,6 @@ import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -68,6 +67,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.ConnectedAccount
@@ -242,7 +242,7 @@ private fun AccountRow(
     val notifyCapable = provider?.capabilities?.contains("notify") == true
     var menu by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -363,7 +363,7 @@ private fun AddAccountDialog(
                 }
                 Spacer(Modifier.height(8.dp))
                 when (selectedType) {
-                    "email" -> OutlinedTextField(
+                    "email" -> MochiTextField(
                         value = address,
                         onValueChange = { address = it },
                         label = { Text(stringResource(R.string.accounts_field_email)) },
@@ -371,7 +371,7 @@ private fun AddAccountDialog(
                         modifier = Modifier.fillMaxWidth(),
                     )
                     "openai", "claude" -> {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = apiKey,
                             onValueChange = { apiKey = it },
                             label = { Text(stringResource(R.string.accounts_field_api_key)) },
@@ -382,7 +382,7 @@ private fun AddAccountDialog(
                             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                             modifier = Modifier.fillMaxWidth(),
                         )
-                        OutlinedTextField(
+                        MochiTextField(
                             value = model,
                             onValueChange = { model = it },
                             label = { Text(stringResource(R.string.accounts_field_model)) },
@@ -390,7 +390,7 @@ private fun AddAccountDialog(
                             modifier = Modifier.fillMaxWidth(),
                         )
                     }
-                    "mcp" -> OutlinedTextField(
+                    "mcp" -> MochiTextField(
                         value = url,
                         onValueChange = { url = it },
                         label = { Text(stringResource(R.string.accounts_field_url)) },
@@ -440,7 +440,7 @@ private fun VerifyDialog(
                     stringResource(R.string.accounts_verify_hint, account.identifier.ifBlank { account.label }),
                     style = MaterialTheme.typography.bodyMedium,
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = code,
                     onValueChange = { code = it },
                     label = { Text(stringResource(R.string.accounts_verify_code)) },
@@ -478,7 +478,7 @@ private fun AccountSettingsDialog(
         title = stringResource(R.string.accounts_settings),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { name = it },
                     label = { Text(stringResource(R.string.accounts_field_name)) },
@@ -486,7 +486,7 @@ private fun AccountSettingsDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 if (isAi) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = model,
                         onValueChange = { model = it },
                         label = { Text(stringResource(R.string.accounts_field_model)) },

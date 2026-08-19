@@ -27,7 +27,6 @@ import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -196,7 +195,7 @@ private fun CommentItem(
         }
 
         if (showEditField) {
-            OutlinedTextField(
+            MochiTextField(
                 value = editText,
                 onValueChange = { editText = it },
                 modifier = Modifier.fillMaxWidth(),
@@ -274,7 +273,7 @@ private fun CommentItem(
                     .fillMaxWidth()
                     .padding(top = 4.dp)
             ) {
-                OutlinedTextField(
+                MochiTextField(
                     value = replyText,
                     onValueChange = { replyText = it },
                     modifier = Modifier.weight(1f),

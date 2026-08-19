@@ -41,7 +41,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
@@ -60,6 +59,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmDetails
@@ -381,7 +381,7 @@ private fun ViewDialog(
                     Spacer(modifier = Modifier.height(12.dp))
                 }
                 // Name
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { name = it },
                     label = { Text(stringResource(R.string.crm_class_name)) },
@@ -454,7 +454,7 @@ private fun ViewDialog(
                 Spacer(modifier = Modifier.height(8.dp))
 
                 // Filter (stored on the view; not yet applied to listings).
-                OutlinedTextField(
+                MochiTextField(
                     value = filterField,
                     onValueChange = { filterField = it },
                     label = { Text(stringResource(R.string.crm_views_filter)) },
@@ -568,7 +568,7 @@ private fun FieldDropdown(
         expanded = expanded,
         onExpandedChange = onExpandedChange
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = selectedName,
             onValueChange = {},
             readOnly = true,

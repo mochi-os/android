@@ -22,7 +22,6 @@ import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -38,6 +37,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
 import org.mochios.staff.ui.categories.CategoryDialogMode
@@ -87,14 +87,14 @@ fun CategoryEditDialog(
                     .heightIn(min = 0.dp, max = 480.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                OutlinedTextField(
+                MochiTextField(
                     value = form.name,
                     onValueChange = { onFormChange(form.copy(name = it)) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_name)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = form.slug,
                     onValueChange = { onFormChange(form.copy(slug = it)) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_slug)) },
@@ -107,14 +107,14 @@ fun CategoryEditDialog(
                     excludeId = editingId,
                     onChange = { onFormChange(form.copy(parent = it)) },
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = form.icon,
                     onValueChange = { onFormChange(form.copy(icon = it)) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_icon)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = form.position,
                     onValueChange = { v -> onFormChange(form.copy(position = v.filter { it.isDigit() || it == '-' })) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_position)) },

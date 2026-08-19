@@ -40,7 +40,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberDatePickerState
@@ -61,6 +60,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.mochios.android.model.User
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PersonPicker
 import org.mochios.crm.R
 import org.mochios.android.i18n.LocalFormat
@@ -287,7 +287,7 @@ private fun ParentPicker(
         expanded = expanded,
         onExpandedChange = { expanded = it }
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = displayText,
             onValueChange = {},
             readOnly = true,
@@ -305,7 +305,7 @@ private fun ParentPicker(
             }
         ) {
             // Search filter
-            OutlinedTextField(
+            MochiTextField(
                 value = query,
                 onValueChange = { query = it },
                 placeholder = { Text(stringResource(R.string.crm_parent_search_placeholder)) },
@@ -380,7 +380,7 @@ internal fun FieldEditor(
                 if (readOnly) {
                     ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
                 } else {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = stringValue,
                         onValueChange = onValueChange,
                         label = fieldLabel,
@@ -397,7 +397,7 @@ internal fun FieldEditor(
                 if (readOnly) {
                     ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
                 } else {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = stringValue,
                         onValueChange = { newVal ->
                             if (newVal.isEmpty() || newVal.toDoubleOrNull() != null) {
@@ -466,7 +466,7 @@ internal fun FieldEditor(
                             expanded = expanded,
                             onExpandedChange = { expanded = it }
                         ) {
-                            OutlinedTextField(
+                            MochiTextField(
                                 value = selectedOption?.name ?: "",
                                 onValueChange = {},
                                 readOnly = true,
@@ -560,7 +560,7 @@ internal fun FieldEditor(
                     // A read-only text field swallows taps, so an overlay on top
                     // makes the whole box (not just the icon) open the picker.
                     Box(modifier = Modifier.fillMaxWidth()) {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = displayDate,
                             onValueChange = {},
                             readOnly = true,
@@ -678,7 +678,7 @@ internal fun FieldEditor(
                 if (readOnly) {
                     ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
                 } else {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = stringValue,
                         onValueChange = onValueChange,
                         label = fieldLabel,
@@ -807,10 +807,10 @@ private fun ChecklistEditor(
                     },
                     enabled = !isReadonly
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = item.text,
                     onValueChange = { text ->
-                        if (isReadonly) return@OutlinedTextField
+                        if (isReadonly) return@MochiTextField
                         val updated = items.toMutableList()
                         updated[index] = item.copy(text = text)
                         updateItems(updated)

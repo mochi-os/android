@@ -23,7 +23,6 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -46,6 +45,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -238,7 +238,7 @@ fun WikiCommentThread(
                     // text. Compose's Text preserves whitespace so newlines in
                     // raw `body` render the same as web's `whitespace-pre-wrap`.
                     if (editing) {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = editBody,
                             onValueChange = { editBody = it },
                             modifier = Modifier.fillMaxWidth(),

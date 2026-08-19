@@ -21,10 +21,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -185,9 +185,9 @@ fun ModerationTab(
             // sits inside that toggle's section rather than standing on its own.
             if (moderationNew) {
                 Spacer(Modifier.height(12.dp))
-                OutlinedCard(
+                Card(
                     modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.outlinedCardColors(
+                    colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.surfaceVariant,
                     ),
                 ) {
@@ -303,7 +303,7 @@ private fun NumberField(
     value: String,
     onValueChange: (String) -> Unit,
 ) {
-    // A plain OutlinedTextField can't go under its 56.dp minimum without
+    // A plain MochiTextField can't go under its 56.dp minimum without
     // clipping its own padding, so this is a BasicTextField wearing the same
     // outline — the only way to a box this small that still centres its digits.
     val shape = RoundedCornerShape(8.dp)

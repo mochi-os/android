@@ -46,7 +46,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -76,6 +75,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUser
@@ -145,7 +145,7 @@ fun SystemUsersScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             Column(modifier = Modifier.fillMaxSize()) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.search,
                     onValueChange = viewModel::setSearch,
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
@@ -388,7 +388,7 @@ private fun UserCard(
     val isSuspended = user.status == "suspended"
     var menu by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Row(
             modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -515,7 +515,7 @@ private fun UserDialog(
         title = title,
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = username,
                     onValueChange = { username = it },
                     label = { Text(stringResource(R.string.system_users_email_label)) },
@@ -547,7 +547,7 @@ private fun RoleDropdown(role: String, onChange: (String) -> Unit) {
         )
         Spacer(Modifier.height(4.dp))
         ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }) {
-            OutlinedTextField(
+            MochiTextField(
                 value = current,
                 onValueChange = {},
                 readOnly = true,
@@ -710,7 +710,7 @@ private fun PaginationBar(
 private fun PageSizeDropdown(limit: Int, onChange: (Int) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }) {
-        OutlinedTextField(
+        MochiTextField(
             value = limit.toString(),
             onValueChange = {},
             readOnly = true,

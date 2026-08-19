@@ -41,7 +41,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -67,6 +66,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
@@ -348,7 +348,7 @@ private fun PasskeysSection(
                         style = MaterialTheme.typography.bodySmall,
                     )
                     Spacer(Modifier.height(8.dp))
-                    OutlinedTextField(
+                    MochiTextField(
                         value = draft,
                         onValueChange = { draft = it },
                         label = { Text(stringResource(R.string.account_passkey_name_label)) },
@@ -377,14 +377,14 @@ private fun PasskeyRow(
     var draft by remember { mutableStateOf(passkey.name) }
     var confirmDelete by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 if (renaming) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = draft,
                         onValueChange = { draft = it },
                         singleLine = true,
@@ -516,7 +516,7 @@ private fun TotpSetupDialog(
                 Spacer(Modifier.height(8.dp))
                 Text(stringResource(R.string.account_totp_setup_step2))
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = code,
                     onValueChange = { code = it.filter { c -> c.isDigit() }.take(6) },
                     label = { Text(stringResource(R.string.account_totp_code)) },
@@ -623,7 +623,7 @@ private fun OAuthSection(
     } else {
         identities.forEach { id ->
             var confirm by remember(id.provider) { mutableStateOf(false) }
-            Card(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), colors = CardDefaults.outlinedCardColors()) {
+            Card(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), colors = CardDefaults.cardColors()) {
                 Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(modifier = Modifier.weight(1f)) {
                         Text(oauthProviderLabel(id.provider), fontWeight = FontWeight.SemiBold)

@@ -41,7 +41,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -75,6 +74,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
@@ -480,7 +480,7 @@ private fun EmptyWikis(
         }
 
         item("search") {
-            OutlinedTextField(
+            MochiTextField(
                 value = state.searchQuery,
                 onValueChange = onQueryChange,
                 placeholder = { Text(stringResource(R.string.wikis_search_placeholder)) },

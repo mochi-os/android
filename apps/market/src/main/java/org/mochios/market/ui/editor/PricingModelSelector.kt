@@ -26,7 +26,6 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -49,6 +48,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -196,7 +196,7 @@ private fun CurrencyDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = currency.name,
             onValueChange = {},
             readOnly = true,
@@ -239,7 +239,7 @@ private fun IntervalDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = label,
             onValueChange = {},
             readOnly = true,
@@ -278,7 +278,7 @@ private fun DurationDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = stringResource(R.string.market_editor_days, days),
             onValueChange = {},
             readOnly = true,
@@ -321,7 +321,7 @@ private fun PriceField(
         )
     } else null
     Column(modifier = Modifier.fillMaxWidth()) {
-        OutlinedTextField(
+        MochiTextField(
             value = value,
             onValueChange = onChange,
             label = { Text(label) },
@@ -369,7 +369,7 @@ private fun StartTimeField(
     } ?: ""
 
     Column(modifier = Modifier.fillMaxWidth()) {
-        OutlinedTextField(
+        MochiTextField(
             value = display,
             onValueChange = {},
             readOnly = true,

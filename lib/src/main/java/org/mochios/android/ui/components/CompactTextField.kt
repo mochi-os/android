@@ -14,7 +14,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -24,11 +24,12 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 
 /**
- * A slim single-line outlined text field for inline edit rows.
+ * A slim single-line text field for inline edit rows.
  *
- * Unlike [androidx.compose.material3.OutlinedTextField], this omits the 56 dp minimum
- * height and the wide default content padding, so it sits flush with an adjacent label
- * and action buttons in a [androidx.compose.foundation.layout.Row].
+ * Unlike [MochiTextField], this omits the 56 dp minimum height and the wide default
+ * content padding, so it sits flush with an adjacent label and action buttons in a
+ * [androidx.compose.foundation.layout.Row]. It borrows [mochiTextFieldColors] so the
+ * inline row reads as the same tonal, borderless field as a full-size one.
  *
  * @param value current text.
  * @param onValueChange invoked when the user edits the text.
@@ -65,13 +66,14 @@ fun CompactTextField(
         cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
         interactionSource = interactionSource,
         decorationBox = { innerTextField ->
-            OutlinedTextFieldDefaults.DecorationBox(
+            TextFieldDefaults.DecorationBox(
                 value = value,
                 innerTextField = innerTextField,
                 enabled = enabled,
                 singleLine = true,
                 visualTransformation = VisualTransformation.None,
                 interactionSource = interactionSource,
+                colors = mochiTextFieldColors(),
                 placeholder = placeholder?.let { text ->
                     {
                         Text(

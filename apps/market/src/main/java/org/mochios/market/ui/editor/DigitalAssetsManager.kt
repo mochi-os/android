@@ -35,7 +35,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -52,6 +51,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Asset
 
@@ -259,21 +259,21 @@ private fun ExternalAssetForm(
             text = stringResource(R.string.market_editor_asset_external),
             style = MaterialTheme.typography.titleSmall,
         )
-        OutlinedTextField(
+        MochiTextField(
             value = filename,
             onValueChange = { filename = it },
             label = { Text(stringResource(R.string.market_editor_asset_external_filename)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = mime,
             onValueChange = { mime = it },
             label = { Text(stringResource(R.string.market_editor_asset_external_mime)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = reference,
             onValueChange = { reference = it },
             label = { Text(stringResource(R.string.market_editor_asset_external_url)) },

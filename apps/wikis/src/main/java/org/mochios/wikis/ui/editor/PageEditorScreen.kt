@@ -37,7 +37,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -61,6 +60,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -384,7 +384,7 @@ private fun EditFields(
     onBodyFieldChange: (TextFieldValue) -> Unit,
 ) {
     if (isNew) {
-        OutlinedTextField(
+        MochiTextField(
             value = slug,
             onValueChange = onSlugChange,
             label = { Text(stringResource(R.string.wikis_editor_slug_label)) },
@@ -395,7 +395,7 @@ private fun EditFields(
         Spacer(Modifier.height(12.dp))
     }
 
-    OutlinedTextField(
+    MochiTextField(
         value = title,
         onValueChange = onTitleChange,
         label = { Text(stringResource(R.string.wikis_editor_title_label)) },
@@ -404,7 +404,7 @@ private fun EditFields(
     )
     Spacer(Modifier.height(12.dp))
 
-    OutlinedTextField(
+    MochiTextField(
         value = bodyField,
         onValueChange = onBodyFieldChange,
         label = { Text(stringResource(R.string.wikis_editor_content_label)) },
@@ -417,7 +417,7 @@ private fun EditFields(
 
     if (!isNew) {
         Spacer(Modifier.height(12.dp))
-        OutlinedTextField(
+        MochiTextField(
             value = comment,
             onValueChange = onCommentChange,
             label = { Text(stringResource(R.string.wikis_editor_summary_label)) },

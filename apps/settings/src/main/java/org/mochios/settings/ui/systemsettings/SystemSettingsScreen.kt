@@ -35,7 +35,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
@@ -61,6 +60,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.SecretField
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
@@ -69,7 +69,7 @@ import org.mochios.settings.api.SystemSetting
 // Mirrors apps/settings/web/src/features/system/settings.tsx. Each row renders
 // per-pattern: a Switch for booleans, a segmented control for the
 // required/allowed/disabled enum family, a dropdown for other enums, a chip
-// for read-only values, and an OutlinedTextField for everything else. File
+// for read-only values, and a MochiTextField for everything else. File
 // upload (pattern == "text") is not yet supported on Android — the row
 // degrades to a multi-line text field.
 
@@ -384,7 +384,7 @@ private fun SettingRow(
                 },
             )
             isFileUpload(setting) -> Row(verticalAlignment = Alignment.CenterVertically) {
-                OutlinedTextField(
+                MochiTextField(
                     value = if (localValue.isBlank()) ""
                             else stringResource(R.string.system_settings_configured),
                     onValueChange = {},
@@ -405,7 +405,7 @@ private fun SettingRow(
                 }
             }
             else -> Row(verticalAlignment = Alignment.CenterVertically) {
-                OutlinedTextField(
+                MochiTextField(
                     value = localValue,
                     onValueChange = { localValue = it },
                     enabled = !isSaving,
@@ -509,7 +509,7 @@ private fun EnumDropdown(
         expanded = expanded,
         onExpandedChange = { if (!disabled) expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = value,
             onValueChange = {},
             readOnly = true,

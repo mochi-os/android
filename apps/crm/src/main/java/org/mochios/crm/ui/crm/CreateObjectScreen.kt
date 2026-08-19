@@ -38,7 +38,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -63,6 +62,7 @@ import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.ui.`object`.FieldEditor
@@ -355,7 +355,7 @@ fun CreateObjectScreen(
                                 expanded = classExpanded,
                                 onExpandedChange = { expanded -> classExpanded = expanded }
                             ) {
-                                OutlinedTextField(
+                                MochiTextField(
                                     value = classes.find { cls -> cls.id == selectedClassId }
                                         ?.name
                                         .orEmpty(),
@@ -411,7 +411,7 @@ fun CreateObjectScreen(
                                 expanded = parentExpanded,
                                 onExpandedChange = { expanded -> parentExpanded = expanded }
                             ) {
-                                OutlinedTextField(
+                                MochiTextField(
                                     value = selectedParentLabel,
                                     onValueChange = {},
                                     readOnly = true,

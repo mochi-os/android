@@ -24,7 +24,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -37,6 +36,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Review
 
@@ -71,7 +71,7 @@ fun WriteReviewForm(
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
+        colors = CardDefaults.cardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -87,7 +87,7 @@ fun WriteReviewForm(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             StarSelector(rating = rating, onRating = { rating = it })
-            OutlinedTextField(
+            MochiTextField(
                 value = body,
                 onValueChange = { body = it },
                 label = { Text(stringResource(R.string.market_purchase_review_body)) },
@@ -132,7 +132,7 @@ private fun StarSelector(rating: Int, onRating: (Int) -> Unit) {
 private fun SubmittedReviewCard(review: Review, modifier: Modifier) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
+        colors = CardDefaults.cardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),

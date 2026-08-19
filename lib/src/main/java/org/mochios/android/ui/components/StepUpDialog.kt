@@ -15,7 +15,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -202,7 +201,7 @@ fun StepUpDialog(
                 } else {
                     if (remaining.contains("email")) {
                         if (sent) {
-                            OutlinedTextField(
+                            MochiTextField(
                                 value = emailCode,
                                 onValueChange = { emailCode = it },
                                 label = { Text(stringResource(R.string.stepup_email_label)) },
@@ -238,7 +237,7 @@ fun StepUpDialog(
                         }
                     }
                     if (remaining.contains("totp")) {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = totpCode,
                             onValueChange = { totpCode = it.filter { c -> c.isDigit() }.take(6) },
                             label = { Text(stringResource(R.string.stepup_totp_label)) },

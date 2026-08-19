@@ -32,7 +32,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -58,6 +57,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ws.GameWsEvent
 import org.mochios.android.ws.rememberGameWebSocket
 import org.mochios.market.R
@@ -76,7 +76,7 @@ import org.mochios.market.navigation.MarketApp
  *  - LazyColumn (reverseLayout = true) renders messages with the latest at
  *    the bottom. My messages right-aligned in the primary tone, others left
  *    in the surfaceVariant tone.
- *  - Compose row at the bottom holds an OutlinedTextField + Send button.
+ *  - Compose row at the bottom holds a MochiTextField + Send button.
  *
  * The WebSocket subscription uses lib's [rememberGameWebSocket] — the
  * helper is keyed by topic, so we pass `market-thread-<id>` as the key and
@@ -318,7 +318,7 @@ private fun ComposeRow(
                 .padding(horizontal = 8.dp, vertical = 8.dp),
             verticalAlignment = Alignment.Bottom,
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = draft,
                 onValueChange = onDraftChange,
                 placeholder = {

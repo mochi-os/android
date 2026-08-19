@@ -35,7 +35,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -55,6 +54,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.GroupMemberType
 import org.mochios.android.R as MochiR
@@ -190,7 +190,7 @@ private fun SearchStep(
     onSelect: (AddMemberViewModel.SearchResult) -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.searchQuery,
             onValueChange = onSearch,
             placeholder = { Text(stringResource(R.string.people_member_search_placeholder)) },

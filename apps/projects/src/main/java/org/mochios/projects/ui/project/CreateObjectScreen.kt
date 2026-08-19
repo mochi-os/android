@@ -28,7 +28,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -48,6 +47,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.android.R as MochiR
 
@@ -243,7 +243,7 @@ fun CreateObjectScreen(
                             .verticalScroll(rememberScrollState())
                             .padding(horizontal = 16.dp, vertical = 16.dp)
                     ) {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = title,
                             onValueChange = { value -> title = value },
                             label = {
@@ -264,7 +264,7 @@ fun CreateObjectScreen(
                                 expanded = classExpanded,
                                 onExpandedChange = { expanded -> classExpanded = expanded }
                             ) {
-                                OutlinedTextField(
+                                MochiTextField(
                                     value = classes.find { cls -> cls.id == selectedClassId }
                                         ?.name
                                         .orEmpty(),
@@ -319,7 +319,7 @@ fun CreateObjectScreen(
                                 expanded = parentExpanded,
                                 onExpandedChange = { expanded -> parentExpanded = expanded }
                             ) {
-                                OutlinedTextField(
+                                MochiTextField(
                                     value = selectedParentLabel,
                                     onValueChange = {},
                                     readOnly = true,

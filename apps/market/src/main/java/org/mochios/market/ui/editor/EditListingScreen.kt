@@ -37,7 +37,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -68,6 +67,7 @@ import org.mochios.android.model.PlaceData
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.Section
 import org.mochios.market.R
@@ -179,7 +179,7 @@ fun EditListingScreen(
 
             // ---- Basic info ----
             Section(title = stringResource(R.string.market_editor_section_basic)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.title,
                     onValueChange = viewModel::setTitle,
                     label = { Text(stringResource(R.string.market_editor_title)) },
@@ -187,7 +187,7 @@ fun EditListingScreen(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.padding(top = 8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = state.description,
                     onValueChange = viewModel::setDescription,
                     label = { Text(stringResource(R.string.market_editor_description)) },
@@ -209,7 +209,7 @@ fun EditListingScreen(
                 // sell a single unit). Unlimited toggle maps to quantity 0.
                 if (state.pricing != PricingModel.AUCTION) {
                     Spacer(Modifier.padding(top = 8.dp))
-                    OutlinedTextField(
+                    MochiTextField(
                         value = if (state.unlimitedStock) "" else state.quantityText,
                         onValueChange = viewModel::setQuantity,
                         label = { Text(stringResource(R.string.market_editor_stock)) },
@@ -338,7 +338,7 @@ fun EditListingScreen(
 
             // ---- Tags ----
             Section(title = stringResource(R.string.market_editor_section_tags)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.tagsText,
                     onValueChange = viewModel::setTagsText,
                     label = { Text(stringResource(R.string.market_editor_tags_field)) },
@@ -425,7 +425,7 @@ fun EditListingScreen(
             onDismissRequest = { showAppealDialog = false },
             title = stringResource(R.string.market_editor_appeal),
             content = {
-                OutlinedTextField(
+                MochiTextField(
                     value = reason,
                     onValueChange = { reason = it },
                     label = { Text(stringResource(R.string.market_editor_appeal_reason)) },
@@ -493,7 +493,7 @@ private fun CategoryDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = label,
             onValueChange = {},
             readOnly = true,

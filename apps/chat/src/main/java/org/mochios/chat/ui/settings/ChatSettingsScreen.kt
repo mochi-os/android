@@ -38,7 +38,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -65,6 +64,7 @@ import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Truncate
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
@@ -376,7 +376,7 @@ private fun AddMemberDialog(
         title = stringResource(R.string.chat_settings_add_member),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = query,
                     onValueChange = { query = it },
                     placeholder = { Text(stringResource(R.string.chat_settings_add_member_search)) },

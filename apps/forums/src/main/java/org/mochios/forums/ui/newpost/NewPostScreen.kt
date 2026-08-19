@@ -38,7 +38,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -62,6 +61,7 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
@@ -156,7 +156,7 @@ fun NewPostScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp)
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = title,
                 onValueChange = { value -> viewModel.setTitle(value) },
                 label = { Text(stringResource(R.string.forums_post_title_field)) },

@@ -31,7 +31,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -60,6 +59,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -179,7 +179,7 @@ private fun ListingsBody(
             onStatusChange = onStatusChange,
             onModerationChange = onModerationChange,
         )
-        OutlinedTextField(
+        MochiTextField(
             value = searchInput,
             onValueChange = onSearchInput,
             placeholder = { Text(stringResource(R.string.staff_listings_search_placeholder)) },

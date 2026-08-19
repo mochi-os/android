@@ -12,7 +12,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -24,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 
 /**
@@ -79,7 +79,7 @@ fun RequestRefundDialog(
                     expanded = reasonExpanded,
                     onExpandedChange = { reasonExpanded = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = reasonLabel,
                         onValueChange = {},
                         readOnly = true,
@@ -107,7 +107,7 @@ fun RequestRefundDialog(
                         }
                     }
                 }
-                OutlinedTextField(
+                MochiTextField(
                     value = description,
                     onValueChange = { description = it },
                     label = { Text(stringResource(R.string.market_refund_details_label)) },

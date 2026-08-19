@@ -62,6 +62,24 @@ object ColorSchemeGenerator {
         onSurfaceVariant = oklch(0.45f, chroma * 0.08f, hueBg),
         outline = oklch(0.62f, chroma * 0.06f, hueBg),
         outlineVariant = oklch(0.87f, chroma * 0.04f, hueBg),
+        // Container ramp. Left unset these fell back to Material's own
+        // baseline greys, which are struck from a violet neutral - that is
+        // why menus and sheets used to read lavender inside an otherwise
+        // warm theme. Deriving them from hueBg like every other neutral
+        // keeps one hue across the whole surface stack, and gives cards a
+        // tone to separate against now that they carry no border.
+        surfaceContainerLowest = oklch(1.0f, 0f, hueBg),
+        surfaceContainerLow = oklch(0.972f, chroma * 0.03f, hueBg),
+        surfaceContainer = oklch(0.958f, chroma * 0.04f, hueBg),
+        surfaceContainerHigh = oklch(0.941f, chroma * 0.05f, hueBg),
+        surfaceContainerHighest = oklch(0.925f, chroma * 0.06f, hueBg),
+        surfaceBright = oklch(0.985f, chroma * 0.02f, hueBg),
+        surfaceDim = oklch(0.895f, chroma * 0.05f, hueBg),
+        inverseSurface = oklch(0.27f, chroma * 0.04f, hueBg),
+        inverseOnSurface = oklch(0.96f, chroma * 0.02f, hueBg),
+        inversePrimary = oklch(0.78f, chroma * 0.75f, hue),
+        scrim = Color.Black,
+        surfaceTint = oklch(0.52f, chroma, hue),
     )
 
     private fun darkScheme(hue: Float, hueBg: Float, chroma: Float): ColorScheme = darkColorScheme(
@@ -89,5 +107,19 @@ object ColorSchemeGenerator {
         onSurfaceVariant = oklch(0.78f, chroma * 0.04f, hueBg),
         outline = oklch(0.55f, chroma * 0.04f, hueBg),
         outlineVariant = oklch(0.32f, chroma * 0.03f, hueBg),
+        // See the light scheme: the ramp climbs away from the background
+        // instead of down, which is how a dark surface reads as raised.
+        surfaceContainerLowest = oklch(0.105f, chroma * 0.02f, hueBg),
+        surfaceContainerLow = oklch(0.175f, chroma * 0.025f, hueBg),
+        surfaceContainer = oklch(0.205f, chroma * 0.03f, hueBg),
+        surfaceContainerHigh = oklch(0.245f, chroma * 0.03f, hueBg),
+        surfaceContainerHighest = oklch(0.29f, chroma * 0.035f, hueBg),
+        surfaceBright = oklch(0.33f, chroma * 0.035f, hueBg),
+        surfaceDim = oklch(0.145f, chroma * 0.02f, hueBg),
+        inverseSurface = oklch(0.92f, chroma * 0.03f, hueBg),
+        inverseOnSurface = oklch(0.22f, chroma * 0.03f, hueBg),
+        inversePrimary = oklch(0.52f, chroma, hue),
+        scrim = Color.Black,
+        surfaceTint = oklch(0.78f, chroma * 0.75f, hue),
     )
 }

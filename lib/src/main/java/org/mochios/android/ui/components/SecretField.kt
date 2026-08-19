@@ -14,7 +14,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -62,7 +61,7 @@ fun SecretField(
     var value by remember { mutableStateOf("") }
 
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
-        OutlinedTextField(
+        MochiTextField(
             value = value,
             onValueChange = { value = it },
             singleLine = true,

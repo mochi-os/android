@@ -17,7 +17,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,6 +27,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiTextField
 
 @Composable
 fun ServerSetupScreen(
@@ -59,7 +59,7 @@ fun ServerSetupScreen(
 
         Spacer(modifier = Modifier.height(48.dp))
 
-        OutlinedTextField(
+        MochiTextField(
             value = uiState.serverUrl,
             onValueChange = onUpdateUrl,
             label = { Text(stringResource(R.string.auth_server_url)) },

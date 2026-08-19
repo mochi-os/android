@@ -7,7 +7,6 @@ package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -45,7 +44,7 @@ fun AttachmentCaptionDialog(
         onDismissRequest = onDismiss,
         title = stringResource(R.string.attachment_caption),
         content = {
-            OutlinedTextField(
+            MochiTextField(
                 value = value,
                 onValueChange = { value = it.take(CAPTION_MAXIMUM) },
                 label = { Text(name) },

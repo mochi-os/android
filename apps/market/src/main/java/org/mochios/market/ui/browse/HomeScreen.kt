@@ -49,7 +49,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -77,6 +76,7 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
@@ -263,7 +263,7 @@ private fun HomeContent(
                 onDismiss = onDismissOnboarding,
             )
         }
-        OutlinedTextField(
+        MochiTextField(
             value = searchInput,
             onValueChange = onSearchInput,
             placeholder = { Text(stringResource(R.string.market_search_placeholder)) },

@@ -34,7 +34,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -52,6 +51,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CodeInputBoxes
+import org.mochios.android.ui.components.MochiTextField
 
 /**
  * Email-entry step of the sign-in flow (the "begin" screen).
@@ -241,7 +241,7 @@ private fun InitialMethods(
         .sorted()
 
     if (showEmail) {
-        OutlinedTextField(
+        MochiTextField(
             value = uiState.email,
             onValueChange = onUpdateEmail,
             label = { Text(stringResource(R.string.auth_email)) },
@@ -345,7 +345,7 @@ private fun AccountMethods(
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Spacer(modifier = Modifier.height(12.dp))
-            OutlinedTextField(
+            MochiTextField(
                 value = uiState.code,
                 onValueChange = onUpdateCode,
                 label = { Text(stringResource(R.string.auth_verification_code)) },
@@ -448,7 +448,7 @@ private fun MfaSection(uiState: AuthUiState) {
 
     val remaining = uiState.mfaRemaining
     if (remaining.contains("email")) {
-        OutlinedTextField(
+        MochiTextField(
             value = uiState.mfaEmailCode,
             onValueChange = { /* handled through parent */ },
             label = { Text(stringResource(R.string.auth_email_code)) },
@@ -458,7 +458,7 @@ private fun MfaSection(uiState: AuthUiState) {
         Spacer(modifier = Modifier.height(12.dp))
     }
     if (remaining.contains("totp")) {
-        OutlinedTextField(
+        MochiTextField(
             value = uiState.mfaTotpCode,
             onValueChange = { /* handled through parent */ },
             label = { Text(stringResource(R.string.auth_authenticator_code)) },
@@ -477,7 +477,7 @@ private fun RecoverySection(
     onUpdateCode: (String) -> Unit,
     onVerify: () -> Unit
 ) {
-    OutlinedTextField(
+    MochiTextField(
         value = recoveryCode,
         onValueChange = onUpdateCode,
         label = { Text(stringResource(R.string.auth_recovery_code)) },

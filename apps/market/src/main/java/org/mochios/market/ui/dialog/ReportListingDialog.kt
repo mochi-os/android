@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -26,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.ReportReason
 
@@ -93,7 +93,7 @@ fun ReportListingDialog(
                     expanded = expanded,
                     onExpandedChange = { if (!submitting) expanded = !expanded },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = stringResource(
                             REPORT_REASONS.first { it.first == selectedReason }.second,
                         ),
@@ -124,7 +124,7 @@ fun ReportListingDialog(
                     }
                 }
                 Spacer(Modifier.height(12.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = details,
                     onValueChange = { details = it },
                     label = { Text(stringResource(R.string.market_report_dialog_details_label)) },

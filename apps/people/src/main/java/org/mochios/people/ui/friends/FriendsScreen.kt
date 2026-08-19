@@ -44,7 +44,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -76,6 +75,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.Friend
 import org.mochios.people.ui.components.PeopleSidebar
@@ -230,7 +230,7 @@ fun FriendsScreen(
                     // Persistent search bar matching web (web shows it
                     // always in the header; we keep it inline below the
                     // top bar). Removed the icon toggle.
-                    OutlinedTextField(
+                    MochiTextField(
                         value = uiState.searchQuery,
                         onValueChange = viewModel::setSearchQuery,
                         placeholder = { Text(stringResource(R.string.people_friends_search_placeholder)) },

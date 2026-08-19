@@ -35,7 +35,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -53,6 +52,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmField
@@ -138,7 +138,7 @@ fun FieldDetailScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         // Name
-        OutlinedTextField(
+        MochiTextField(
             value = editName,
             onValueChange = { editName = it },
             label = { Text(stringResource(R.string.crm_field_name)) },
@@ -153,7 +153,7 @@ fun FieldDetailScreen(
             expanded = typeExpanded,
             onExpandedChange = { typeExpanded = it }
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = fieldTypeLabel(editFieldtype),
                 onValueChange = {},
                 readOnly = true,
@@ -207,7 +207,7 @@ fun FieldDetailScreen(
             expanded = posExpanded,
             onExpandedChange = { posExpanded = it }
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = positionLabel(editPosition),
                 onValueChange = {},
                 readOnly = true,
@@ -242,14 +242,14 @@ fun FieldDetailScreen(
 
         if (editFieldtype == "text") {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = editMinlength,
                     onValueChange = { editMinlength = it.filter { c -> c.isDigit() } },
                     label = { Text(stringResource(R.string.crm_field_min_length)) },
                     singleLine = true,
                     modifier = Modifier.weight(1f)
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = editMaxlength,
                     onValueChange = { editMaxlength = it.filter { c -> c.isDigit() } },
                     label = { Text(stringResource(R.string.crm_field_max_length)) },
@@ -258,7 +258,7 @@ fun FieldDetailScreen(
                 )
             }
             Spacer(modifier = Modifier.height(8.dp))
-            OutlinedTextField(
+            MochiTextField(
                 value = editPattern,
                 onValueChange = { editPattern = it },
                 label = { Text(stringResource(R.string.crm_field_pattern)) },
@@ -268,7 +268,7 @@ fun FieldDetailScreen(
             Spacer(modifier = Modifier.height(8.dp))
         }
 
-        OutlinedTextField(
+        MochiTextField(
             value = editRows,
             onValueChange = { editRows = it.filter { c -> c.isDigit() } },
             label = { Text(stringResource(R.string.crm_field_rows)) },
@@ -505,7 +505,7 @@ private fun OptionDialog(
             // body scrolls. Its saturation field consumes its own drags, so
             // dragging inside it doesn't scroll the dialog out from under it.
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.crm_field_name)) },
@@ -525,7 +525,7 @@ private fun OptionDialog(
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(stringResource(R.string.crm_option_icon), style = MaterialTheme.typography.labelMedium)
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = icon,
                     onValueChange = { icon = it },
                     placeholder = { Text(stringResource(R.string.crm_option_icon_placeholder)) },

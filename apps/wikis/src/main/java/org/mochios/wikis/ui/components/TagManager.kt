@@ -23,7 +23,6 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -54,6 +53,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
@@ -250,7 +250,7 @@ fun AddTagDialog(
         title = stringResource(R.string.wikis_tag_dialog_title),
         content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = newTag,
                     onValueChange = {
                         newTag = it

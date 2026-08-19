@@ -55,7 +55,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedIconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -601,7 +600,7 @@ private fun ListingDetailContent(
         // Primary info + actions card: title, price, location, listed date,
         // the buy CTA + secondary actions, and the seller row, grouped into one
         // card per the redesign.
-        OutlinedCard(
+        Card(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
         ) {
@@ -793,7 +792,7 @@ private fun ListingDetailContent(
         // Seller card — a "Seller" heading over the avatar/name row, with the
         // rating and sales stacked beneath it (left-aligned to the card edge),
         // per the redesign.
-        OutlinedCard(
+        Card(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
         ) {
