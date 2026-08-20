@@ -5,7 +5,6 @@
 
 package org.mochios.staff.navigation
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -17,7 +16,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -78,42 +76,42 @@ object StaffApp {
  */
 fun NavGraphBuilder.staffNavGraph(navController: NavController) {
     composable(StaffApp.HOME) {
-        StaffRoute(navController, StaffApp.HOME, R.string.staff_sidebar_dashboard) {
+        StaffLayout(navController, StaffApp.HOME, R.string.staff_sidebar_dashboard) {
             DashboardScreen(navController = navController)
         }
     }
     composable(StaffApp.ACCOUNTS) {
-        StaffRoute(navController, StaffApp.ACCOUNTS, R.string.staff_sidebar_accounts) {
+        StaffLayout(navController, StaffApp.ACCOUNTS, R.string.staff_sidebar_accounts) {
             AccountsScreen(navController = navController)
         }
     }
     composable(StaffApp.LISTINGS) {
-        StaffRoute(navController, StaffApp.LISTINGS, R.string.staff_sidebar_listings) {
+        StaffLayout(navController, StaffApp.LISTINGS, R.string.staff_sidebar_listings) {
             ListingsScreen(navController = navController)
         }
     }
     composable(StaffApp.MODERATION) {
-        StaffRoute(navController, StaffApp.MODERATION, R.string.staff_sidebar_moderation) {
+        StaffLayout(navController, StaffApp.MODERATION, R.string.staff_sidebar_moderation) {
             ModerationLogScreen(navController = navController)
         }
     }
     composable(StaffApp.REPORTS) {
-        StaffRoute(navController, StaffApp.REPORTS, R.string.staff_sidebar_reports) {
+        StaffLayout(navController, StaffApp.REPORTS, R.string.staff_sidebar_reports) {
             ReportsScreen(navController = navController)
         }
     }
     composable(StaffApp.DISPUTES) {
-        StaffRoute(navController, StaffApp.DISPUTES, R.string.staff_sidebar_disputes) {
+        StaffLayout(navController, StaffApp.DISPUTES, R.string.staff_sidebar_disputes) {
             DisputesScreen(navController = navController)
         }
     }
     composable(StaffApp.APPEALS) {
-        StaffRoute(navController, StaffApp.APPEALS, R.string.staff_sidebar_appeals) {
+        StaffLayout(navController, StaffApp.APPEALS, R.string.staff_sidebar_appeals) {
             AppealsScreen(navController = navController)
         }
     }
     composable(StaffApp.REVIEWS) {
-        StaffRoute(navController, StaffApp.REVIEWS, R.string.staff_sidebar_reviews) {
+        StaffLayout(navController, StaffApp.REVIEWS, R.string.staff_sidebar_reviews) {
             ReviewsScreen(navController = navController)
         }
     }
@@ -124,7 +122,7 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.CATEGORIES,
-            title = stringResource(R.string.staff_sidebar_categories),
+            titleRes = R.string.staff_sidebar_categories,
             topBarActions = {
                 Button(
                     onClick = { viewModel.openCreate() },
@@ -147,7 +145,7 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
     // user still sees the staff topbar/sidebar/loading state while `me`
     // resolves.
     composable(StaffApp.CONFIG) {
-        StaffRoute(navController, StaffApp.CONFIG, R.string.staff_sidebar_config) {
+        StaffLayout(navController, StaffApp.CONFIG, R.string.staff_sidebar_config) {
             val me = LocalStaffMe.current
             when {
                 me == null -> {
@@ -172,7 +170,7 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
         StaffLayout(
             navController = navController,
             currentRoute = StaffApp.TEAM,
-            title = stringResource(R.string.staff_sidebar_team),
+            titleRes = R.string.staff_sidebar_team,
             topBarActions = {
                 val isAdmin = LocalStaffMe.current?.role == "admin"
                 if (isAdmin) {
@@ -207,26 +205,4 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
             },
         )
     }
-}
-
-/**
- * Helper that resolves the title string resource against the current
- * locale and forwards everything to [StaffLayout]. Screens that need to
- * inject top-bar action buttons (e.g. Team's "Add member" or Categories'
- * "Add") still need bespoke wiring — but most just need the boilerplate
- * absorbed here.
- */
-@Composable
-private fun StaffRoute(
-    navController: NavController,
-    currentRoute: String,
-    @StringRes titleRes: Int,
-    content: @Composable () -> Unit,
-) {
-    StaffLayout(
-        navController = navController,
-        currentRoute = currentRoute,
-        title = stringResource(titleRes),
-        content = content,
-    )
 }

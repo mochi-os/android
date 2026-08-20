@@ -5,6 +5,7 @@
 
 package org.mochios.staff.ui.components
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxSize
@@ -45,7 +46,6 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.LoadingState
@@ -135,13 +135,18 @@ class StaffLayoutViewModel @Inject constructor(
  * it renders [ErrorState] with a retry button. The drawer + topbar are
  * still mounted in those states so the user can navigate away from a
  * stuck screen.
+ *
+ * @param titleRes the top-bar title, as a string resource rather than a
+ *   resolved String: every caller is a route in
+ *   [org.mochios.staff.navigation.staffNavGraph] naming a static label, so
+ *   resolving it here keeps each of those routes a single line.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun StaffLayout(
     navController: NavController,
     currentRoute: String,
-    title: String,
+    @StringRes titleRes: Int,
     topBarActions: @Composable RowScope.() -> Unit = {},
     layoutViewModel: StaffLayoutViewModel = hiltViewModel(),
     content: @Composable () -> Unit,
@@ -166,7 +171,6 @@ fun StaffLayout(
     CompositionLocalProvider(LocalStaffMe provides me) {
         MochiListDrawer(
             drawerState = drawerState,
-            header = { DrawerTitle(stringResource(R.string.staff_dashboard_title)) },
             items = staffDrawerItems(userRole = me?.role),
             selectedId = currentRoute,
             onItemClick = { item ->
@@ -187,7 +191,7 @@ fun StaffLayout(
             Scaffold(
                 topBar = {
                     TopAppBar(
-                        title = { Text(title) },
+                        title = { Text(stringResource(titleRes)) },
                         navigationIcon = {
                             IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                                 Icon(
