@@ -53,6 +53,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.RatingStars
@@ -82,11 +83,11 @@ fun ReviewsScreen(
         }
     }
 
-    Scaffold(
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.REVIEWS,
+        titleRes = R.string.market_reviews_title,
         snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.market_reviews_title)) })
-        },
     ) { padding ->
         Column(
             modifier = Modifier

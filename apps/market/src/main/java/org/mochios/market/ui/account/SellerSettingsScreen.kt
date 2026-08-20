@@ -61,6 +61,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.market.R
+import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.FeeDisclosure
 import org.mochios.market.ui.components.formatPercent
 
@@ -101,21 +103,11 @@ fun SellerSettingsScreen(
         R.string.market_seller_become_title
     }
 
-    Scaffold(
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.SELLER_SETTINGS,
+        titleRes = titleRes,
         snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(titleRes)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
-                        )
-                    }
-                },
-            )
-        },
     ) { padding ->
         when {
             state.isLoading && state.account == null -> {

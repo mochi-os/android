@@ -53,8 +53,8 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
@@ -92,9 +92,10 @@ fun MySubscriptionsScreen(
 
     var pendingCancel by remember { mutableStateOf<Subscription?>(null) }
 
-    MochiScaffold(
-        title = stringResource(R.string.market_subscriptions_title),
-        onBack = { navController.popBackStack() },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.SUBSCRIPTIONS,
+        titleRes = R.string.market_subscriptions_title,
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             SnackbarHost(snackbar, modifier = Modifier.align(Alignment.BottomCenter))

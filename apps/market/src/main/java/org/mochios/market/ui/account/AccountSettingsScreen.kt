@@ -64,6 +64,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.navigation.MarketApp
 
 /**
@@ -104,21 +105,11 @@ fun AccountSettingsScreen(
         }
     }
 
-    Scaffold(
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.ACCOUNT,
+        titleRes = R.string.market_account_title,
         snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.market_account_title)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
-                        )
-                    }
-                },
-            )
-        },
     ) { padding ->
         when {
             state.isLoading -> {

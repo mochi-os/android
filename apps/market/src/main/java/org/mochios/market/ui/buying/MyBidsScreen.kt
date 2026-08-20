@@ -51,8 +51,8 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
-import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
@@ -76,9 +76,10 @@ fun MyBidsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
 
-    MochiScaffold(
-        title = stringResource(R.string.market_bids_title),
-        onBack = { navController.popBackStack() },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.BIDS,
+        titleRes = R.string.market_bids_title,
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
             BidsTabRow(active = state.filter, onSelected = { viewModel.setFilter(it) })

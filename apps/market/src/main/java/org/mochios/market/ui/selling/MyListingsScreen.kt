@@ -66,6 +66,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingStatus
 import org.mochios.market.navigation.MarketApp
@@ -133,10 +134,10 @@ fun MyListingsScreen(
         }
     }
 
-    Scaffold(
-        topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.market_listings_title)) })
-        },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.LISTINGS,
+        titleRes = R.string.market_listings_title,
         floatingActionButton = {
             // Only sellers fully connected to Stripe can create listings.
             val stripe = state.stripeStatus

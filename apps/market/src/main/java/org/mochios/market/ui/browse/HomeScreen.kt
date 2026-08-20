@@ -32,17 +32,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Storefront
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
@@ -53,8 +50,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -62,7 +57,6 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -74,19 +68,13 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.marketDrawerItems
-import org.mochios.android.R as MochiR
+import org.mochios.market.ui.components.MarketLayout
 
 // The "Browse categories" grid is hidden for now: with few listings it takes a
 // lot of vertical space for little value. Flip to `true` to bring it back once
@@ -97,7 +85,7 @@ private const val SHOW_CATEGORY_BROWSER = false
  * Market landing / browse screen. Mirrors
  * `apps/market/web/src/routes/_authenticated/index.tsx` `BrowsePage`:
  *
- *  - TopAppBar with hamburger (opens the market drawer) and a filter
+ *  - Top bar with hamburger (opens the market drawer) and a filter
  *    icon (opens [FilterSheet]).
  *  - Debounced search field below the bar.
  *  - Horizontal pill row of filter axes — tapping any pill opens the filter
@@ -115,8 +103,6 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
-    val drawerState = rememberDrawerState(DrawerValue.Closed)
-    val drawerScope = rememberCoroutineScope()
 
     // Confirm each save/unsave with a short toast.
     val context = LocalContext.current
@@ -143,80 +129,44 @@ fun HomeScreen(
         if (searchInput != state.query) viewModel.setQuery(searchInput)
     }
 
-    var showAbout by remember { mutableStateOf(false) }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
-
-    MochiListDrawer(
-        drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.market_title)) },
-        items = marketDrawerItems(isSeller = state.isSeller),
-        selectedId = MarketApp.HOME,
-        onItemClick = { item ->
-            drawerScope.launch { drawerState.close() }
-            if (item.id != MarketApp.HOME) navController.navigate(item.id)
-        },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.HOME,
+        titleRes = R.string.market_title,
         actions = {
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
-        },
-    ) {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    title = { Text(stringResource(R.string.market_title)) },
-                    navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = stringResource(R.string.market_open_sidebar),
-                            )
-                        }
-                    },
-                    actions = {
-                        IconButton(onClick = { viewModel.openFilterSheet() }) {
-                            Icon(
-                                Icons.Default.FilterList,
-                                contentDescription = stringResource(R.string.market_filter_open),
-                            )
-                        }
-                    },
+            IconButton(onClick = { viewModel.openFilterSheet() }) {
+                Icon(
+                    Icons.Default.FilterList,
+                    contentDescription = stringResource(R.string.market_filter_open),
                 )
+            }
+        },
+    ) { padding ->
+        HomeContent(
+            padding = padding,
+            state = state,
+            searchInput = searchInput,
+            onSearchInput = { searchInput = it },
+            onClearSearch = {
+                searchInput = ""
+                viewModel.setQuery("")
             },
-        ) { padding ->
-            HomeContent(
-                padding = padding,
-                state = state,
-                searchInput = searchInput,
-                onSearchInput = { searchInput = it },
-                onClearSearch = {
-                    searchInput = ""
-                    viewModel.setQuery("")
-                },
-                onOpenFilter = { viewModel.openFilterSheet(it) },
-                onRemoveFilter = { viewModel.setFilter(it, null) },
-                onClearAll = { viewModel.clearFilters() },
-                onLoadMore = viewModel::loadMore,
-                onListingClick = { listing ->
-                    viewModel.viewListing(listing)
-                    navController.navigate(MarketApp.listingDetail(listing.id.toString()))
-                },
-                onToggleSave = viewModel::toggleSave,
-                onCategoryClick = { category ->
-                    viewModel.setFilter(Filter.CATEGORY, category.id.toString())
-                },
-                onActivateAccount = viewModel::activateAccount,
-                onDismissOnboarding = viewModel::dismissOnboarding,
-                onClearRecent = viewModel::clearRecentlyViewed,
-            )
-        }
+            onOpenFilter = { viewModel.openFilterSheet(it) },
+            onRemoveFilter = { viewModel.setFilter(it, null) },
+            onClearAll = { viewModel.clearFilters() },
+            onLoadMore = viewModel::loadMore,
+            onListingClick = { listing ->
+                viewModel.viewListing(listing)
+                navController.navigate(MarketApp.listingDetail(listing.id.toString()))
+            },
+            onToggleSave = viewModel::toggleSave,
+            onCategoryClick = { category ->
+                viewModel.setFilter(Filter.CATEGORY, category.id.toString())
+            },
+            onActivateAccount = viewModel::activateAccount,
+            onDismissOnboarding = viewModel::dismissOnboarding,
+            onClearRecent = viewModel::clearRecentlyViewed,
+        )
     }
 
     if (state.filterSheetOpen) {

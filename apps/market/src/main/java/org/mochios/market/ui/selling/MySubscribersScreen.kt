@@ -42,6 +42,7 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
@@ -63,10 +64,10 @@ fun MySubscribersScreen(
 ) {
     val state by viewModel.state.collectAsState()
 
-    Scaffold(
-        topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.market_subscribers_title)) })
-        },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.SUBSCRIBERS,
+        titleRes = R.string.market_subscribers_title,
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
