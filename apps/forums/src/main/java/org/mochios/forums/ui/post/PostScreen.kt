@@ -206,17 +206,12 @@ fun PostScreen(
             canComment = uiState.canComment && !uiState.post.locked,
             replyTo = uiState.replyTo,
             onClearReply = { viewModel.setReplyTo(null) },
-            draft = draft,
-            onDraftChange = { value -> draft = value },
             isSending = uiState.isSending,
             attachments = commentAttachments,
             onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
             onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
             resolveFileName = viewModel::fileName,
-            onSend = {
-                viewModel.submitComment(draft.text, anchor = att.id)
-                draft = TextFieldValue("")
-            },
+            onSend = { text -> viewModel.submitComment(text, anchor = att.id) },
         )
     }
     val attachmentCommentCount: (Attachment) -> Int = { att ->
@@ -955,7 +950,7 @@ private fun PostHeader(
 }
 
 /** What a comment can do, wherever it is drawn: the thread and the lightbox panel share one set. */
-private class CommentActions(
+private data class CommentActions(
     val onVote: (String, String) -> Unit,
     val onReply: (ForumComment) -> Unit,
     val onEdit: (ForumComment) -> Unit,
@@ -1027,21 +1022,34 @@ private fun AttachmentComments(
     canComment: Boolean,
     replyTo: ForumComment?,
     onClearReply: () -> Unit,
-    draft: TextFieldValue,
-    onDraftChange: (TextFieldValue) -> Unit,
     isSending: Boolean,
     attachments: List<Uri>,
     onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
     resolveFileName: suspend (Uri) -> String,
-    onSend: () -> Unit,
+    onSend: (String) -> Unit,
 ) {
     var showAll by rememberSaveable(attachmentId) { mutableStateOf(false) }
+    // The panel keeps its own draft. It used to share the post screen's, so a
+    // half-typed comment below the post reappeared in the lightbox and the two
+    // fields fought over one string. Keyed on the attachment: moving to another
+    // image starts a new comment, which is what the anchor means.
+    var draft by remember(attachmentId) { mutableStateOf(TextFieldValue("")) }
     // Anchors live on top-level comments; a reply inherits its parent's context.
     val anchored = comments.filter { it.anchor == attachmentId }
     val others = comments.size - anchored.size
     val shown = if (showAll) comments else anchored
     val composerFocus = remember { FocusRequester() }
+    // Everything else a comment can do is the same here as below the post;
+    // only Quote differs, because it writes into a draft and this panel's is
+    // no longer the post screen's.
+    val panelActions = actions.copy(
+        onQuote = { comment ->
+            val text = quoteText(withoutQuote(comment.body), draft.text)
+            draft = TextFieldValue(text = text, selection = TextRange(text.length))
+            composerFocus.requestFocus()
+        },
+    )
 
     Column(modifier = Modifier.fillMaxWidth()) {
         LazyColumn(
@@ -1064,7 +1072,7 @@ private fun AttachmentComments(
                 forumId = forumId,
                 currentIdentity = currentIdentity,
                 canModerate = canModerate,
-                actions = actions,
+                actions = panelActions,
             )
             if (others > 0) {
                 item(key = "toggle") {
@@ -1081,8 +1089,11 @@ private fun AttachmentComments(
             ReplyBanner(replyTo, onClear = onClearReply)
             ComposeBar(
                 value = draft,
-                onValueChange = onDraftChange,
-                onSend = onSend,
+                onValueChange = { draft = it },
+                onSend = {
+                    onSend(draft.text)
+                    draft = TextFieldValue("")
+                },
                 placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
                 isSending = isSending,
                 sendLabel = stringResource(R.string.forums_comment_send),
