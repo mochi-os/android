@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Encontrado por URL</string>
     <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$d)</string>
     <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$d)</string>
+    <string name="forums_moderation_on_image">En la imagen: %1$s</string>
 </resources>

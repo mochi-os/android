@@ -11,7 +11,6 @@ import okhttp3.Request
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
-import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
 import java.util.UUID
 import java.util.concurrent.ConcurrentHashMap
@@ -23,13 +22,16 @@ import kotlin.math.min
 @Singleton
 class MochiWebSocket @Inject constructor(
     private val okHttpClient: OkHttpClient,
-    private val sessionManager: SessionManager,
     private val gson: Gson
 ) {
     private val sockets = ConcurrentHashMap<String, WebSocket>()
     private val subscribers = ConcurrentHashMap<String, MutableMap<String, (WebSocketEvent) -> Unit>>()
     private val reconnecting = ConcurrentHashMap<String, Boolean>()
     private val backoffAttempts = ConcurrentHashMap<String, Int>()
+    // Bumped by reconnectNow(); a sleeping backoff thread that wakes to a
+    // newer generation stands down, so a foreground return does not race a
+    // timer into opening a second socket for the same key.
+    private val generation = ConcurrentHashMap<String, Int>()
 
     // Derived client with WebSocket ping keepalive. The injected
     // OkHttpClient is shared with regular HTTP requests where pings
@@ -96,6 +98,28 @@ class MochiWebSocket @Inject constructor(
         sockets.clear()
         subscribers.clear()
         reconnecting.clear()
+    }
+
+    /**
+     * Reconnects every subscribed key whose socket is down, right now. A socket
+     * that dropped while the app was in the background reconnects only through
+     * its backoff timer - up to five minutes out, and Doze stretches the wait
+     * further - so on returning to the foreground the app could sit with a
+     * dead socket and miss every event until the timer fired. Call this from
+     * onResume; it is a no-op for keys whose socket is already up.
+     */
+    fun reconnectNow() {
+        for ((key, callbacks) in subscribers) {
+            if (callbacks.isEmpty() || sockets.containsKey(key)) continue
+            val parts = key.split("::", limit = 2)
+            if (parts.size != 2) continue
+            val (serverUrl, fingerprint) = parts
+            // Supersede any backoff wait in flight and start the ladder over:
+            // a foreground return is a fresh attempt, not a retry.
+            generation.compute(key) { _, prev -> (prev ?: 0) + 1 }
+            backoffAttempts.remove(key)
+            connect(serverUrl, fingerprint)
+        }
     }
 
     private val tokens = ConcurrentHashMap<String, String>()
@@ -191,6 +215,7 @@ class MochiWebSocket @Inject constructor(
         val baseMs = min(1000L shl (attempt - 1).coerceIn(0, 8), 300_000L)
         val jitterMs = (baseMs * (Math.random() * 0.4 - 0.2)).toLong()
         val delayMs = baseMs + jitterMs
+        val scheduledGeneration = generation[key] ?: 0
 
         Thread {
             try {
@@ -198,6 +223,9 @@ class MochiWebSocket @Inject constructor(
             } catch (e: InterruptedException) {
                 return@Thread
             }
+            // A reconnectNow() while this slept has already connected (or is
+            // about to); this timer belongs to a superseded generation.
+            if ((generation[key] ?: 0) != scheduledGeneration) return@Thread
             if (reconnecting[key] == true && !subscribers[key].isNullOrEmpty()) {
                 connect(serverUrl, fingerprint)
             }

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Gevind via URL</string>
     <string name="forums_moderation_pending_posts">Hangende plasings (%1$d)</string>
     <string name="forums_moderation_pending_comments">Hangende kommentare (%1$d)</string>
+    <string name="forums_moderation_on_image">Op beeld: %1$s</string>
 </resources>

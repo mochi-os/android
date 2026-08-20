@@ -321,4 +321,14 @@
     <string name="about_check_background">ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਜਾਰੀ ਰੱਖੋ</string>
     <string name="notifications_category_unassigned">ਨਾ ਨਿਰਧਾਰਤ</string>
     <string name="notifications_change_category">ਨੋਟੀਫਿਕੇਸ਼ਨ ਸ਼੍ਰੇਣੀ ਬਦਲੋ</string>
+    <string name="lightbox_comments_none">ਇਸ ਤਸਵੀਰ \'ਤੇ ਹਾਲੇ ਕੋਈ ਟਿੱਪਣੀ ਨਹੀਂ।</string>
+    <string name="lightbox_comments_only">ਸਿਰਫ਼ ਇਸ ਤਸਵੀਰ ਦੀਆਂ ਟਿੱਪਣੀਆਂ ਦਿਖਾਓ</string>
+    <string name="lightbox_comment_placeholder">ਇਸ ਤਸਵੀਰ \'ਤੇ ਟਿੱਪਣੀ ਕਰੋ…</string>
+    <string name="comment_anchor_open">ਉਹ ਤਸਵੀਰ ਦੇਖੋ ਜਿਸ ਬਾਰੇ ਇਹ ਟਿੱਪਣੀ ਹੈ</string>
+    <string name="comment_anchor_default">ਇਸ ਤਸਵੀਰ \'ਤੇ</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">ਇਸ ਪੋਸਟ \'ਤੇ %1$d ਹੋਰ ਟਿੱਪਣੀ ਦਿਖਾਓ</item>
+        <item quantity="other">ਇਸ ਪੋਸਟ \'ਤੇ %1$d ਹੋਰ ਟਿੱਪਣੀਆਂ ਦਿਖਾਓ</item>
+    </plurals>
+    <string name="lightbox_comments">ਟਿੱਪਣੀਆਂ</string>
 </resources>

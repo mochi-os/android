@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL-аар олдсон</string>
     <string name="forums_moderation_pending_posts">Хүлээгдэж буй нийтлэлүүд (%1$d)</string>
     <string name="forums_moderation_pending_comments">Хүлээгдэж буй сэтгэгдлүүд (%1$d)</string>
+    <string name="forums_moderation_on_image">Зураг дээр: %1$s</string>
 </resources>

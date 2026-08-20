@@ -321,4 +321,14 @@
     <string name="about_check_background">பின்னணியில் தொடரவும்</string>
     <string name="notifications_category_unassigned">ஒதுக்கப்படாதது</string>
     <string name="notifications_change_category">அறிவிப்பு வகையை மாற்று</string>
+    <string name="lightbox_comments_none">இந்தப் படத்தில் இன்னும் கருத்துகள் இல்லை.</string>
+    <string name="lightbox_comments_only">இந்தப் படத்தின் கருத்துகளை மட்டும் காட்டு</string>
+    <string name="lightbox_comment_placeholder">இந்தப் படத்தில் கருத்திடவும்…</string>
+    <string name="comment_anchor_open">இந்தக் கருத்து எந்தப் படத்தைப் பற்றியதோ அதைப் பார்க்கவும்</string>
+    <string name="comment_anchor_default">இந்தப் படத்தில்</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">இந்தப் பதிவில் மேலும் %1$d கருத்தைக் காட்டு</item>
+        <item quantity="other">இந்தப் பதிவில் மேலும் %1$d கருத்துகளைக் காட்டு</item>
+    </plurals>
+    <string name="lightbox_comments">கருத்துகள்</string>
 </resources>

@@ -321,4 +321,14 @@
     <string name="about_check_background">پس منظر ۾ جاري رکو</string>
     <string name="notifications_category_unassigned">غير تفويض ٿيل</string>
     <string name="notifications_change_category">اطلاع جو زمرو تبديل ڪريو</string>
+    <string name="lightbox_comments_none">هن تصوير تي اڃا ڪو تبصرو ناهي.</string>
+    <string name="lightbox_comments_only">صرف هن تصوير جا تبصرا ڏيکاريو</string>
+    <string name="lightbox_comment_placeholder">هن تصوير تي تبصرو ڪريو…</string>
+    <string name="comment_anchor_open">اها تصوير ڏسو جنهن بابت هي تبصرو آهي</string>
+    <string name="comment_anchor_default">هن تصوير تي</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">هن پوسٽ تي %1$d ٻيو تبصرو ڏيکاريو</item>
+        <item quantity="other">هن پوسٽ تي %1$d ٻيا تبصرا ڏيکاريو</item>
+    </plurals>
+    <string name="lightbox_comments">تبصرا</string>
 </resources>

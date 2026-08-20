@@ -321,4 +321,14 @@
     <string name="about_check_background">Arka planda devam et</string>
     <string name="notifications_category_unassigned">Atanmamış</string>
     <string name="notifications_change_category">Bildirim kategorisini değiştir</string>
+    <string name="lightbox_comments_none">Bu görselde henüz yorum yok.</string>
+    <string name="lightbox_comments_only">Yalnızca bu görselin yorumlarını göster</string>
+    <string name="lightbox_comment_placeholder">Bu görsele yorum yapın…</string>
+    <string name="comment_anchor_open">Bu yorumun ilgili olduğu görseli görüntüle</string>
+    <string name="comment_anchor_default">Bu görselde</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Bu gönderideki %1$d yorumu daha göster</item>
+        <item quantity="other">Bu gönderideki %1$d yorumu daha göster</item>
+    </plurals>
+    <string name="lightbox_comments">Yorumlar</string>
 </resources>

@@ -305,4 +305,5 @@
     <string name="forums_find_found_by_url">Wedi\'i ganfod drwy URL</string>
     <string name="forums_moderation_pending_posts">Postiadau\'n aros (%1$d)</string>
     <string name="forums_moderation_pending_comments">Sylwadau\'n aros (%1$d)</string>
+    <string name="forums_moderation_on_image">Ar ddelwedd: %1$s</string>
 </resources>

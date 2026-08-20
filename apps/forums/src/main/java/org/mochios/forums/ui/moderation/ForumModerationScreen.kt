@@ -275,6 +275,19 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
                 ModerationCard {
                     Column(modifier = Modifier.padding(12.dp)) {
                         Text(c.body, style = MaterialTheme.typography.bodyMedium)
+                        // An anchored comment says which image it is about, so
+                        // the moderator judges it with its context.
+                        val anchorName = c.attachmentName.orEmpty()
+                        if (c.anchor.isNotEmpty() && anchorName.isNotEmpty()) {
+                            Spacer(Modifier.height(4.dp))
+                            Text(
+                                text = stringResource(R.string.forums_moderation_on_image, anchorName),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
                         Spacer(Modifier.height(8.dp))
                         QueueByline(
                             name = c.name,

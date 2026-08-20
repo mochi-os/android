@@ -300,4 +300,5 @@
     <string name="forums_find_found_by_url">URL ဖြင့် တွေ့ရှိသည်</string>
     <string name="forums_moderation_pending_posts">စောင့်ဆိုင်းနေသော ပို့စ်များ (%1$d)</string>
     <string name="forums_moderation_pending_comments">စောင့်ဆိုင်းနေသော မှတ်ချက်များ (%1$d)</string>
+    <string name="forums_moderation_on_image">ပုံအပေါ်- %1$s</string>
 </resources>

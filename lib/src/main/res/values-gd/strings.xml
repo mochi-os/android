@@ -323,4 +323,16 @@
     <string name="about_check_background">Lean air adhart sa chùl-raon</string>
     <string name="notifications_category_unassigned">Gun shònrachadh</string>
     <string name="notifications_change_category">Atharraich roinn-seòrsa nam brathan</string>
+    <string name="lightbox_comments_none">Chan eil beachd sam bith air an dealbh seo fhathast.</string>
+    <string name="lightbox_comments_only">Na seall ach beachdan air an dealbh seo</string>
+    <string name="lightbox_comment_placeholder">Thoir beachd air an dealbh seo…</string>
+    <string name="comment_anchor_open">Seall an dealbh air a bheil am beachd seo</string>
+    <string name="comment_anchor_default">Air an dealbh seo</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Seall %1$d bheachd eile air a\' phost seo</item>
+        <item quantity="two">Seall %1$d bheachd eile air a\' phost seo</item>
+        <item quantity="few">Seall %1$d beachdan eile air a\' phost seo</item>
+        <item quantity="other">Seall %1$d beachd eile air a\' phost seo</item>
+    </plurals>
+    <string name="lightbox_comments">Beachdan</string>
 </resources>

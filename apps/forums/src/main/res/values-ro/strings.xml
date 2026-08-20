@@ -302,4 +302,5 @@
     <string name="forums_find_found_by_url">Găsit după URL</string>
     <string name="forums_moderation_pending_posts">Postări în așteptare (%1$d)</string>
     <string name="forums_moderation_pending_comments">Comentarii în așteptare (%1$d)</string>
+    <string name="forums_moderation_on_image">La imaginea: %1$s</string>
 </resources>

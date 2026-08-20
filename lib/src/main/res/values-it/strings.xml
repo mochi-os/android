@@ -321,4 +321,15 @@
     <string name="about_check_background">Continua in background</string>
     <string name="notifications_category_unassigned">Non assegnato</string>
     <string name="notifications_change_category">Modifica categoria di notifica</string>
+    <string name="lightbox_comments_none">Ancora nessun commento su questa immagine.</string>
+    <string name="lightbox_comments_only">Mostra solo i commenti su questa immagine</string>
+    <string name="lightbox_comment_placeholder">Commenta questa immagine…</string>
+    <string name="comment_anchor_open">Vedi l\'immagine a cui si riferisce questo commento</string>
+    <string name="comment_anchor_default">Su questa immagine</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Mostra %1$d altro commento su questo post</item>
+        <item quantity="many">Mostra altri %1$d commenti su questo post</item>
+        <item quantity="other">Mostra altri %1$d commenti su questo post</item>
+    </plurals>
+    <string name="lightbox_comments">Commenti</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">געפֿונען דורך URL</string>
     <string name="forums_moderation_pending_posts">ווארטנדיקע פּאָסטן (%1$d)</string>
     <string name="forums_moderation_pending_comments">ווארטנדיקע באַמערקונגען (%1$d)</string>
+    <string name="forums_moderation_on_image">אויפֿן בילד: %1$s</string>
 </resources>

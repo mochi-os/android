@@ -321,4 +321,14 @@
     <string name="about_check_background">Fortsätt i bakgrunden</string>
     <string name="notifications_category_unassigned">Otilldelad</string>
     <string name="notifications_change_category">Ändra aviseringskategori</string>
+    <string name="lightbox_comments_none">Inga kommentarer på den här bilden än.</string>
+    <string name="lightbox_comments_only">Visa bara kommentarer på den här bilden</string>
+    <string name="lightbox_comment_placeholder">Kommentera den här bilden…</string>
+    <string name="comment_anchor_open">Visa bilden som den här kommentaren handlar om</string>
+    <string name="comment_anchor_default">På den här bilden</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Visa %1$d annan kommentar på det här inlägget</item>
+        <item quantity="other">Visa %1$d andra kommentarer på det här inlägget</item>
+    </plurals>
+    <string name="lightbox_comments">Kommentarer</string>
 </resources>

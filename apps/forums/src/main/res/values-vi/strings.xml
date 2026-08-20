@@ -300,4 +300,5 @@
     <string name="forums_find_found_by_url">Tìm thấy qua URL</string>
     <string name="forums_moderation_pending_posts">Bài đăng đang chờ (%1$d)</string>
     <string name="forums_moderation_pending_comments">Bình luận đang chờ (%1$d)</string>
+    <string name="forums_moderation_on_image">Về hình ảnh: %1$s</string>
 </resources>

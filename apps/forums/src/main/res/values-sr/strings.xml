@@ -302,4 +302,5 @@
     <string name="forums_find_found_by_url">Пронађено преко URL-а</string>
     <string name="forums_moderation_pending_posts">Објаве на чекању (%1$d)</string>
     <string name="forums_moderation_pending_comments">Коментари на чекању (%1$d)</string>
+    <string name="forums_moderation_on_image">На слици: %1$s</string>
 </resources>

@@ -321,4 +321,14 @@
     <string name="about_check_background">Продължи във фонов режим</string>
     <string name="notifications_category_unassigned">Неприсвоено</string>
     <string name="notifications_change_category">Промяна на категорията на известието</string>
+    <string name="lightbox_comments_none">Все още няма коментари към това изображение.</string>
+    <string name="lightbox_comments_only">Показвай само коментарите към това изображение</string>
+    <string name="lightbox_comment_placeholder">Коментирайте това изображение…</string>
+    <string name="comment_anchor_open">Вижте изображението, за което е този коментар</string>
+    <string name="comment_anchor_default">Към това изображение</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Покажи още %1$d коментар към тази публикация</item>
+        <item quantity="other">Покажи още %1$d коментара към тази публикация</item>
+    </plurals>
+    <string name="lightbox_comments">Коментари</string>
 </resources>

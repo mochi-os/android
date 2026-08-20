@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL દ્વારા મળ્યું</string>
     <string name="forums_moderation_pending_posts">બાકી પોસ્ટ્સ (%1$d)</string>
     <string name="forums_moderation_pending_comments">બાકી ટિપ્પણીઓ (%1$d)</string>
+    <string name="forums_moderation_on_image">છબી પર: %1$s</string>
 </resources>

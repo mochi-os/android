@@ -324,4 +324,17 @@
     <string name="about_check_background">Lean ar aghaidh sa chúlra</string>
     <string name="notifications_category_unassigned">Gan sannadh</string>
     <string name="notifications_change_category">Athraigh catagóir na bhfógraí</string>
+    <string name="lightbox_comments_none">Níl aon tuairimí ar an íomhá seo fós.</string>
+    <string name="lightbox_comments_only">Ná taispeáin ach tuairimí ar an íomhá seo</string>
+    <string name="lightbox_comment_placeholder">Déan trácht ar an íomhá seo…</string>
+    <string name="comment_anchor_open">Féach ar an íomhá a bhfuil an trácht seo fúithi</string>
+    <string name="comment_anchor_default">Ar an íomhá seo</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Taispeáin %1$d trácht eile ar an bpostáil seo</item>
+        <item quantity="two">Taispeáin %1$d thrácht eile ar an bpostáil seo</item>
+        <item quantity="few">Taispeáin %1$d thrácht eile ar an bpostáil seo</item>
+        <item quantity="many">Taispeáin %1$d dtrácht eile ar an bpostáil seo</item>
+        <item quantity="other">Taispeáin %1$d trácht eile ar an bpostáil seo</item>
+    </plurals>
+    <string name="lightbox_comments">Nótaí tráchta</string>
 </resources>

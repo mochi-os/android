@@ -321,4 +321,14 @@
     <string name="about_check_background">నేపథ్యంలో కొనసాగించండి</string>
     <string name="notifications_category_unassigned">కేటాయించబడలేదు</string>
     <string name="notifications_change_category">నోటిఫికేషన్ విభాగాన్ని మార్చండి</string>
+    <string name="lightbox_comments_none">ఈ చిత్రంపై ఇంకా వ్యాఖ్యలు లేవు.</string>
+    <string name="lightbox_comments_only">ఈ చిత్రంపై వ్యాఖ్యలను మాత్రమే చూపించు</string>
+    <string name="lightbox_comment_placeholder">ఈ చిత్రంపై వ్యాఖ్యానించండి…</string>
+    <string name="comment_anchor_open">ఈ వ్యాఖ్య ఏ చిత్రం గురించో దాన్ని చూడండి</string>
+    <string name="comment_anchor_default">ఈ చిత్రంపై</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">ఈ పోస్ట్‌పై మరో %1$d వ్యాఖ్యను చూపించు</item>
+        <item quantity="other">ఈ పోస్ట్‌పై మరో %1$d వ్యాఖ్యలను చూపించు</item>
+    </plurals>
+    <string name="lightbox_comments">వ్యాఖ్యలు</string>
 </resources>

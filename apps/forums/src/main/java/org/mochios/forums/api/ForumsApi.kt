@@ -336,8 +336,8 @@ interface ForumsApi {
         @Part("forum") forum: RequestBody,
         @Part("title") title: RequestBody,
         @Part("body") body: RequestBody,
-        @Part attachments: List<MultipartBody.Part>,
-        // JSON array of per-file captions aligned with `attachments`
+        @Part files: List<MultipartBody.Part>,
+        // JSON array of per-file captions aligned with `files`
         @Part("captions") captions: RequestBody? = null
     ): Response<ApiResponse<CreatePostResponse>>
 
@@ -363,7 +363,7 @@ interface ForumsApi {
         @Part("title") title: RequestBody,
         @Part("body") body: RequestBody,
         @Part("order") order: RequestBody?,
-        @Part attachments: List<MultipartBody.Part>,
+        @Part files: List<MultipartBody.Part>,
         // JSON object of caption edits keyed by attachment id or "new:N"
         @Part("captions") captions: RequestBody? = null
     ): Response<ApiResponse<SuccessResponse>>
@@ -445,6 +445,8 @@ interface ForumsApi {
         @Part("post") post: RequestBody,
         @Part("body") body: RequestBody,
         @Part("parent") parent: RequestBody?,
+        // Anchors a top-level comment to one of the post's own attachments.
+        @Part("attachment") attachment: RequestBody?,
         @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<CreateCommentResponse>>
 

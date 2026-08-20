@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Fundet via URL</string>
     <string name="forums_moderation_pending_posts">Afventende opslag (%1$d)</string>
     <string name="forums_moderation_pending_comments">Afventende kommentarer (%1$d)</string>
+    <string name="forums_moderation_on_image">Til billede: %1$s</string>
 </resources>

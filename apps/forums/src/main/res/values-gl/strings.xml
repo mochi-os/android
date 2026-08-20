@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Atopado por URL</string>
     <string name="forums_moderation_pending_posts">Publicacións pendentes (%1$d)</string>
     <string name="forums_moderation_pending_comments">Comentarios pendentes (%1$d)</string>
+    <string name="forums_moderation_on_image">Na imaxe: %1$s</string>
 </resources>

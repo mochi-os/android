@@ -322,4 +322,15 @@
     <string name="about_check_background">Nastavi u pozadini</string>
     <string name="notifications_category_unassigned">Nedodijeljeno</string>
     <string name="notifications_change_category">Promijeni kategoriju obavijesti</string>
+    <string name="lightbox_comments_none">Još nema komentara na ovu sliku.</string>
+    <string name="lightbox_comments_only">Prikaži samo komentare na ovu sliku</string>
+    <string name="lightbox_comment_placeholder">Komentiraj ovu sliku…</string>
+    <string name="comment_anchor_open">Pogledaj sliku na koju se ovaj komentar odnosi</string>
+    <string name="comment_anchor_default">Na ovoj slici</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Prikaži još %1$d komentar na ovoj objavi</item>
+        <item quantity="few">Prikaži još %1$d komentara na ovoj objavi</item>
+        <item quantity="other">Prikaži još %1$d komentara na ovoj objavi</item>
+    </plurals>
+    <string name="lightbox_comments">Komentari</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Funnet via URL</string>
     <string name="forums_moderation_pending_posts">Ventende innlegg (%1$d)</string>
     <string name="forums_moderation_pending_comments">Ventende kommentarer (%1$d)</string>
+    <string name="forums_moderation_on_image">Til bilde: %1$s</string>
 </resources>

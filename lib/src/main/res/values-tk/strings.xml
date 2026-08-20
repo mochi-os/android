@@ -321,4 +321,14 @@
     <string name="about_check_background">Arkaplanda dowam etmek</string>
     <string name="notifications_category_unassigned">Bellenilmedik</string>
     <string name="notifications_change_category">Bildiriş kategoriýasyny üýtget</string>
+    <string name="lightbox_comments_none">Bu surata entek teswir ýok.</string>
+    <string name="lightbox_comments_only">Diňe bu suratyň teswirlerini görkez</string>
+    <string name="lightbox_comment_placeholder">Bu surata teswir ýazyň…</string>
+    <string name="comment_anchor_open">Bu teswiriň degişli suratyny görüň</string>
+    <string name="comment_anchor_default">Bu suratda</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Bu ýazgydaky ýene %1$d teswiri görkez</item>
+        <item quantity="other">Bu ýazgydaky ýene %1$d teswiri görkez</item>
+    </plurals>
+    <string name="lightbox_comments">Teswirler</string>
 </resources>

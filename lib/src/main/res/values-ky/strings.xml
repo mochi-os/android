@@ -321,4 +321,14 @@
     <string name="about_check_background">Фондо улантуу</string>
     <string name="notifications_category_unassigned">Дайындалган эмес</string>
     <string name="notifications_change_category">Билдирме категориясын өзгөртүү</string>
+    <string name="lightbox_comments_none">Бул сүрөттө азырынча пикирлер жок.</string>
+    <string name="lightbox_comments_only">Ушул сүрөттүн пикирлерин гана көрсөтүү</string>
+    <string name="lightbox_comment_placeholder">Бул сүрөткө пикир жазыңыз…</string>
+    <string name="comment_anchor_open">Бул пикир кайсы сүрөт тууралуу экенин көрүү</string>
+    <string name="comment_anchor_default">Бул сүрөттө</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Бул жазуудагы дагы %1$d пикирди көрсөтүү</item>
+        <item quantity="other">Бул жазуудагы дагы %1$d пикирди көрсөтүү</item>
+    </plurals>
+    <string name="lightbox_comments">Комментарийлер</string>
 </resources>

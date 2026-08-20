@@ -300,4 +300,5 @@
     <string name="forums_find_found_by_url">URL로 찾음</string>
     <string name="forums_moderation_pending_posts">대기 중인 게시물 (%1$d)</string>
     <string name="forums_moderation_pending_comments">대기 중인 댓글 (%1$d)</string>
+    <string name="forums_moderation_on_image">이미지에 대해: %1$s</string>
 </resources>

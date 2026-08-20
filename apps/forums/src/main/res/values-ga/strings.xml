@@ -304,4 +304,5 @@
     <string name="forums_find_found_by_url">Aimsithe de réir URL</string>
     <string name="forums_moderation_pending_posts">Postálacha ar feitheamh (%1$d)</string>
     <string name="forums_moderation_pending_comments">Tráchtanna ar feitheamh (%1$d)</string>
+    <string name="forums_moderation_on_image">Ar an íomhá: %1$s</string>
 </resources>

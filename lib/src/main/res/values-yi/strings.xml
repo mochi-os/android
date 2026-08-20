@@ -321,4 +321,14 @@
     <string name="about_check_background">ממשיך אין הינטערגרונט</string>
     <string name="notifications_category_unassigned">אומצוגעטיילט</string>
     <string name="notifications_change_category">טוישט די מעלדונג־קאַטעגאָריע</string>
+    <string name="lightbox_comments_none">נאָך קיין קאָמענטאַרן אויף דעם בילד.</string>
+    <string name="lightbox_comments_only">ווײַזן נאָר קאָמענטאַרן אויף דעם בילד</string>
+    <string name="lightbox_comment_placeholder">קאָמענטירן אויף דעם בילד…</string>
+    <string name="comment_anchor_open">זען דאָס בילד וועגן וועלכן דער קאָמענטאַר איז</string>
+    <string name="comment_anchor_default">אויף דעם בילד</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">ווײַזן נאָך %1$d קאָמענטאַר אויף דעם פּאָסט</item>
+        <item quantity="other">ווײַזן נאָך %1$d קאָמענטאַרן אויף דעם פּאָסט</item>
+    </plurals>
+    <string name="lightbox_comments">קאָמענטאַרן</string>
 </resources>

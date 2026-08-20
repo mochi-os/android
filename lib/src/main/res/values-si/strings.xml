@@ -321,4 +321,14 @@
     <string name="about_check_background">පසුබිමෙහි ඉදිරියට</string>
     <string name="notifications_category_unassigned">පවරා නැත</string>
     <string name="notifications_change_category">දැනුම්දීම් කාණ්ඩය වෙනස් කරන්න</string>
+    <string name="lightbox_comments_none">මෙම රූපයට තවම අදහස් නැත.</string>
+    <string name="lightbox_comments_only">මෙම රූපයේ අදහස් පමණක් පෙන්වන්න</string>
+    <string name="lightbox_comment_placeholder">මෙම රූපයට අදහස් දක්වන්න…</string>
+    <string name="comment_anchor_open">මෙම අදහස අදාළ රූපය බලන්න</string>
+    <string name="comment_anchor_default">මෙම රූපය මත</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">මෙම පළ කිරීමේ තවත් අදහස් %1$d පෙන්වන්න</item>
+        <item quantity="other">මෙම පළ කිරීමේ තවත් අදහස් %1$d පෙන්වන්න</item>
+    </plurals>
+    <string name="lightbox_comments">අදහස්</string>
 </resources>

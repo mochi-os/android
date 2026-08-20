@@ -300,4 +300,5 @@
     <string name="forums_find_found_by_url">ພົບຜ່ານ URL</string>
     <string name="forums_moderation_pending_posts">ໂພສທີ່ລໍຖ້າ (%1$d)</string>
     <string name="forums_moderation_pending_comments">ຄຳເຫັນທີ່ລໍຖ້າ (%1$d)</string>
+    <string name="forums_moderation_on_image">ຕໍ່ຮູບ: %1$s</string>
 </resources>

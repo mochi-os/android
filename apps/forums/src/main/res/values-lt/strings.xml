@@ -303,4 +303,5 @@
     <string name="forums_find_found_by_url">Rasta pagal URL</string>
     <string name="forums_moderation_pending_posts">Laukiantys įrašai (%1$d)</string>
     <string name="forums_moderation_pending_comments">Laukiantys komentarai (%1$d)</string>
+    <string name="forums_moderation_on_image">Prie vaizdo: %1$s</string>
 </resources>

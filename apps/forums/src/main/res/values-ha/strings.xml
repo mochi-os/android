@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">An samu ta URL</string>
     <string name="forums_moderation_pending_posts">Sakonnin da ke jira (%1$d)</string>
     <string name="forums_moderation_pending_comments">Sharhin da ke jira (%1$d)</string>
+    <string name="forums_moderation_on_image">Kan hoto: %1$s</string>
 </resources>

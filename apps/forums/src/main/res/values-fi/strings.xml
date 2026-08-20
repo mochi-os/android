@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Löytyi URL-osoitteella</string>
     <string name="forums_moderation_pending_posts">Odottavat julkaisut (%1$d)</string>
     <string name="forums_moderation_pending_comments">Odottavat kommentit (%1$d)</string>
+    <string name="forums_moderation_on_image">Kuvassa: %1$s</string>
 </resources>

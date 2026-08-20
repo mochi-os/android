@@ -320,4 +320,14 @@
     <string name="about_check_background">バックグラウンドで続行</string>
     <string name="notifications_category_unassigned">未割り当て</string>
     <string name="notifications_change_category">通知カテゴリを変更</string>
+    <string name="lightbox_comments_none">この画像へのコメントはまだありません。</string>
+    <string name="lightbox_comments_only">この画像へのコメントのみ表示</string>
+    <string name="lightbox_comment_placeholder">この画像にコメント…</string>
+    <string name="comment_anchor_open">このコメントの対象の画像を表示</string>
+    <string name="comment_anchor_default">この画像について</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">この投稿の他のコメント %1$d 件を表示</item>
+        <item quantity="other">この投稿の他のコメント %1$d 件を表示</item>
+    </plurals>
+    <string name="lightbox_comments">コメント</string>
 </resources>

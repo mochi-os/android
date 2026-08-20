@@ -188,6 +188,16 @@
 
     <!-- Lightbox -->
     <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_comments">Comments</string>
+    <string name="lightbox_comments_none">No comments on this image yet.</string>
+    <string name="lightbox_comments_only">Show only comments on this image</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Show %1$d other comment on this post</item>
+        <item quantity="other">Show %1$d other comments on this post</item>
+    </plurals>
+    <string name="lightbox_comment_placeholder">Comment on this image…</string>
+    <string name="comment_anchor_open">View the image this comment is about</string>
+    <string name="comment_anchor_default">On this image</string>
 
     <!-- Attachment captions -->
     <string name="attachment_caption">Caption</string>

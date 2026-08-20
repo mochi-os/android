@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL द्वारे सापडले</string>
     <string name="forums_moderation_pending_posts">प्रलंबित पोस्ट (%1$d)</string>
     <string name="forums_moderation_pending_comments">प्रलंबित टिप्पण्या (%1$d)</string>
+    <string name="forums_moderation_on_image">प्रतिमेवर: %1$s</string>
 </resources>

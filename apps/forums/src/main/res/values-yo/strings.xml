@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">A rí i nípasẹ̀ URL</string>
     <string name="forums_moderation_pending_posts">Àwọn ìfìwéránṣẹ́ tí ń dúró (%1$d)</string>
     <string name="forums_moderation_pending_comments">Àwọn àsọyé tí ń dúró (%1$d)</string>
+    <string name="forums_moderation_on_image">Lórí àwòrán: %1$s</string>
 </resources>

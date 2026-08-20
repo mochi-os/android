@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL ద్వారా కనుగొనబడింది</string>
     <string name="forums_moderation_pending_posts">పెండింగ్ పోస్ట్‌లు (%1$d)</string>
     <string name="forums_moderation_pending_comments">పెండింగ్ వ్యాఖ్యలు (%1$d)</string>
+    <string name="forums_moderation_on_image">చిత్రంపై: %1$s</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL ile bulundu</string>
     <string name="forums_moderation_pending_posts">Bekleyen gönderiler (%1$d)</string>
     <string name="forums_moderation_pending_comments">Bekleyen yorumlar (%1$d)</string>
+    <string name="forums_moderation_on_image">Görselde: %1$s</string>
 </resources>

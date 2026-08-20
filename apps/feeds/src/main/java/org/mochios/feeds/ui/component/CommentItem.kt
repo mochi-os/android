@@ -52,7 +52,11 @@ internal fun CommentItem(
     canManage: Boolean,
     isMine: Boolean = false,
     horizontalPadding: Dp = 16.dp,
+    // Opens the lightbox on the image an anchored comment is about, comments
+    // showing; null hides the chip's tap (the chip itself still shows).
+    onOpenAttachment: ((String) -> Unit)? = null,
 ) {
+    val anchor = comment.anchor
     SharedCommentItem(
         name = comment.name,
         body = comment.body,
@@ -72,6 +76,10 @@ internal fun CommentItem(
         onSaveEdit = onSaveEdit,
         onCancelEdit = onCancelEdit,
         horizontalPadding = horizontalPadding,
+        anchorThumbnailUrl = anchor.takeIf { it.isNotEmpty() }
+            ?.let { "/feeds/$feedId/-/attachments/$it/thumbnail" },
+        anchorCaption = comment.attachmentCaption.orEmpty(),
+        onOpenAnchor = onOpenAttachment?.let { open -> { open(anchor) } },
     ) {
         // Reactions and the action icons share one row: the ReactionBar
         // (pills + add) followed by reply, and edit/delete when the viewer
@@ -142,3 +150,7 @@ internal fun stripHtml(html: String): String {
         .replace("&nbsp;", " ")
         .trim()
 }
+
+/** Every comment in the trees, replies included - what a lightbox comments count shows. */
+internal fun countComments(comments: List<Comment>): Int =
+    comments.sumOf { 1 + countComments(it.children) }

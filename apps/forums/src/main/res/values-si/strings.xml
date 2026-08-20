@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL මගින් සොයාගන්නා ලදී</string>
     <string name="forums_moderation_pending_posts">පොරොත්තු පළ කිරීම් (%1$d)</string>
     <string name="forums_moderation_pending_comments">පොරොත්තු අදහස් (%1$d)</string>
+    <string name="forums_moderation_on_image">රූපය මත: %1$s</string>
 </resources>

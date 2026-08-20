@@ -303,4 +303,5 @@
     <string name="forums_find_found_by_url">Znaleziono po adresie URL</string>
     <string name="forums_moderation_pending_posts">Oczekujące wpisy (%1$d)</string>
     <string name="forums_moderation_pending_comments">Oczekujące komentarze (%1$d)</string>
+    <string name="forums_moderation_on_image">Do obrazu: %1$s</string>
 </resources>

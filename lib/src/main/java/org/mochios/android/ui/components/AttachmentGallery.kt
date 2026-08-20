@@ -76,7 +76,11 @@ fun AttachmentGallery(
     previewUrlBuilder: ((Attachment) -> String)? = null,
     compact: Boolean = false,
     onDelete: ((Attachment) -> Unit)? = null,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    // The lightbox comments slot, per image attachment: the count on the
+    // button and the panel's content (the app's own thread and composer).
+    commentCount: ((Attachment) -> Int)? = null,
+    comments: (@Composable (Attachment) -> Unit)? = null,
 ) {
     if (attachments.isEmpty()) return
 
@@ -226,11 +230,13 @@ fun AttachmentGallery(
     }
 
     if (showViewer && images.isNotEmpty()) {
-        LightboxScreen(
-            images = images.map { resolvedUrl(it) },
+        AttachmentLightbox(
+            images = images,
+            urlBuilder = urlBuilder,
             initialIndex = viewerIndex,
             onDismiss = { showViewer = false },
-            captions = images.map { it.caption }
+            commentCount = commentCount,
+            comments = comments,
         )
     }
 
@@ -425,4 +431,34 @@ private fun resolveAttachmentUrl(serverUrl: String, path: String): String {
     if (path.startsWith("http://") || path.startsWith("https://")) return path
     val base = serverUrl.trimEnd('/')
     return if (path.startsWith("/")) "$base$path" else "$base/$path"
+}
+
+/**
+ * The lightbox over a post's image attachments, with the comments slot.
+ * [AttachmentGallery] shows it when a tile is tapped; a screen shows it
+ * itself to open on one attachment from elsewhere - a comment's chip - since
+ * the gallery may live in a lazy item that has scrolled out of composition.
+ * [images] are the image attachments only, in gallery order; [urlBuilder] is
+ * the same (possibly relative) URL builder the gallery takes.
+ */
+@Composable
+fun AttachmentLightbox(
+    images: List<Attachment>,
+    urlBuilder: (Attachment) -> String,
+    initialIndex: Int,
+    onDismiss: () -> Unit,
+    commentCount: ((Attachment) -> Int)? = null,
+    comments: (@Composable (Attachment) -> Unit)? = null,
+    commentsInitiallyOpen: Boolean = false,
+) {
+    val serverUrl = rememberServerUrl()
+    LightboxScreen(
+        images = images.map { resolveAttachmentUrl(serverUrl, urlBuilder(it)) },
+        initialIndex = initialIndex.coerceIn(0, (images.size - 1).coerceAtLeast(0)),
+        onDismiss = onDismiss,
+        captions = images.map { it.caption },
+        commentCount = commentCount?.let { count -> { index -> images.getOrNull(index)?.let(count) ?: 0 } },
+        comments = comments?.let { slot -> { index -> images.getOrNull(index)?.let { slot(it) } } },
+        commentsInitiallyOpen = commentsInitiallyOpen,
+    )
 }

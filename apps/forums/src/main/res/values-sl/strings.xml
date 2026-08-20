@@ -303,4 +303,5 @@
     <string name="forums_find_found_by_url">Najdeno prek URL-ja</string>
     <string name="forums_moderation_pending_posts">Čakajoče objave (%1$d)</string>
     <string name="forums_moderation_pending_comments">Čakajoči komentarji (%1$d)</string>
+    <string name="forums_moderation_on_image">Pri sliki: %1$s</string>
 </resources>

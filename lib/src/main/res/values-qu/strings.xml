@@ -321,4 +321,14 @@
     <string name="about_check_background">Qhipanchaypi qatiy</string>
     <string name="notifications_category_unassigned">Mana akllasqa</string>
     <string name="notifications_change_category">Notificacion categoríata hukchay</string>
+    <string name="lightbox_comments_none">Kay siq\'imanta manaraq ima rimaykunapas kanchu.</string>
+    <string name="lightbox_comments_only">Kay siq\'imanta rimaykunallata rikuchiy</string>
+    <string name="lightbox_comment_placeholder">Kay siq\'imanta rimay…</string>
+    <string name="comment_anchor_open">Kay rimay ima siq\'imantachus chayta qhaway</string>
+    <string name="comment_anchor_default">Kay siq\'imanta</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Kay qillqasqamanta %1$d huk rimayta rikuchiy</item>
+        <item quantity="other">Kay qillqasqamanta %1$d huk rimaykunata rikuchiy</item>
+    </plurals>
+    <string name="lightbox_comments">Comentarios</string>
 </resources>

@@ -302,4 +302,5 @@
     <string name="forums_find_found_by_url">Atrasts pēc URL</string>
     <string name="forums_moderation_pending_posts">Gaidošie ieraksti (%1$d)</string>
     <string name="forums_moderation_pending_comments">Gaidošie komentāri (%1$d)</string>
+    <string name="forums_moderation_on_image">Pie attēla: %1$s</string>
 </resources>

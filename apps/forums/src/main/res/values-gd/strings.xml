@@ -303,4 +303,5 @@
     <string name="forums_find_found_by_url">Air a lorg le URL</string>
     <string name="forums_moderation_pending_posts">Puist rin dèiligeadh (%1$d)</string>
     <string name="forums_moderation_pending_comments">Beachdan rin dèiligeadh (%1$d)</string>
+    <string name="forums_moderation_on_image">Air dealbh: %1$s</string>
 </resources>

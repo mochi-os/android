@@ -321,4 +321,14 @@
     <string name="about_check_background">Magpatuloy sa background</string>
     <string name="notifications_category_unassigned">Walang nakatalaga</string>
     <string name="notifications_change_category">Baguhin ang category ng notification</string>
+    <string name="lightbox_comments_none">Wala pang komento sa larawang ito.</string>
+    <string name="lightbox_comments_only">Ipakita lang ang mga komento sa larawang ito</string>
+    <string name="lightbox_comment_placeholder">Magkomento sa larawang ito…</string>
+    <string name="comment_anchor_open">Tingnan ang larawang tinutukoy ng komentong ito</string>
+    <string name="comment_anchor_default">Sa larawang ito</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Ipakita ang %1$d pang komento sa post na ito</item>
+        <item quantity="other">Ipakita ang %1$d pang komento sa post na ito</item>
+    </plurals>
+    <string name="lightbox_comments">Mga komento</string>
 </resources>

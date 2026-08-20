@@ -301,4 +301,5 @@
     <string name="forums_share_link_title">फोरम लिंक</string>
     <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$d)</string>
     <string name="forums_moderation_pending_comments">लंबित टिप्पणी (%1$d)</string>
+    <string name="forums_moderation_on_image">तस्वीर पर: %1$s</string>
 </resources>

@@ -325,4 +325,18 @@
     <string name="about_check_background">المتابعة في الخلفية</string>
     <string name="notifications_category_unassigned">غير معين</string>
     <string name="notifications_change_category">تغيير فئة الإشعار</string>
+    <string name="lightbox_comments_none">لا توجد تعليقات على هذه الصورة بعد.</string>
+    <string name="lightbox_comments_only">إظهار التعليقات على هذه الصورة فقط</string>
+    <string name="lightbox_comment_placeholder">علّق على هذه الصورة…</string>
+    <string name="comment_anchor_open">عرض الصورة التي يدور حولها هذا التعليق</string>
+    <string name="comment_anchor_default">على هذه الصورة</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="zero">لا تعليقات أخرى على هذا المنشور</item>
+        <item quantity="one">إظهار تعليق آخر واحد على هذا المنشور</item>
+        <item quantity="two">إظهار تعليقين آخرين على هذا المنشور</item>
+        <item quantity="few">إظهار %1$d تعليقات أخرى على هذا المنشور</item>
+        <item quantity="many">إظهار %1$d تعليقًا آخر على هذا المنشور</item>
+        <item quantity="other">إظهار %1$d تعليقات أخرى على هذا المنشور</item>
+    </plurals>
+    <string name="lightbox_comments">التعليقات</string>
 </resources>

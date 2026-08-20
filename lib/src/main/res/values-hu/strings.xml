@@ -321,4 +321,14 @@
     <string name="about_check_background">Folytatás a háttérben</string>
     <string name="notifications_category_unassigned">Hozzárendelés nélküli</string>
     <string name="notifications_change_category">Értesítési kategória módosítása</string>
+    <string name="lightbox_comments_none">Ehhez a képhez még nincs hozzászólás.</string>
+    <string name="lightbox_comments_only">Csak ennek a képnek a hozzászólásai</string>
+    <string name="lightbox_comment_placeholder">Hozzászólás ehhez a képhez…</string>
+    <string name="comment_anchor_open">Annak a képnek a megtekintése, amelyről ez a hozzászólás szól</string>
+    <string name="comment_anchor_default">Ehhez a képhez</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">%1$d további hozzászólás mutatása ehhez a bejegyzéshez</item>
+        <item quantity="other">%1$d további hozzászólás mutatása ehhez a bejegyzéshez</item>
+    </plurals>
+    <string name="lightbox_comments">Megjegyzések</string>
 </resources>

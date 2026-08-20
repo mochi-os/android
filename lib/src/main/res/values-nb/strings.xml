@@ -321,4 +321,14 @@
     <string name="about_check_background">Fortsett i bakgrunnen</string>
     <string name="notifications_category_unassigned">Ikke tilordnet</string>
     <string name="notifications_change_category">Endre varselkategori</string>
+    <string name="lightbox_comments_none">Ingen kommentarer til dette bildet ennå.</string>
+    <string name="lightbox_comments_only">Vis bare kommentarer til dette bildet</string>
+    <string name="lightbox_comment_placeholder">Kommenter dette bildet …</string>
+    <string name="comment_anchor_open">Se bildet denne kommentaren handler om</string>
+    <string name="comment_anchor_default">Til dette bildet</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Vis %1$d annen kommentar til dette innlegget</item>
+        <item quantity="other">Vis %1$d andre kommentarer til dette innlegget</item>
+    </plurals>
+    <string name="lightbox_comments">Kommentarer</string>
 </resources>

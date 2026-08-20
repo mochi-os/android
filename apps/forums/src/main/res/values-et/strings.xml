@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">Leitud URL-i järgi</string>
     <string name="forums_moderation_pending_posts">Ootel postitused (%1$d)</string>
     <string name="forums_moderation_pending_comments">Ootel kommentaarid (%1$d)</string>
+    <string name="forums_moderation_on_image">Pildil: %1$s</string>
 </resources>

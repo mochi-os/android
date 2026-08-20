@@ -168,12 +168,12 @@ class ForumsRepository @Inject constructor(
     }
 
     suspend fun createPost(forumId: String, title: String, body: String, files: List<File> = emptyList()): CreatePostResponse {
-        val parts = fileStore.fileParts("attachments", files)
+        val parts = fileStore.fileParts("files", files)
         val response = api.createPost(
             forum = forumId.toRequestBody(text),
             title = title.toRequestBody(text),
             body = body.toRequestBody(text),
-            attachments = parts
+            files = parts
         ).unwrap()
         _postCreated.tryEmit(forumId)
         return response
@@ -195,14 +195,14 @@ class ForumsRepository @Inject constructor(
     ): CreatePostResponse {
         val files = fileStore.cacheFiles(uris)
         try {
-            val parts = fileStore.fileParts("attachments", files)
+            val parts = fileStore.fileParts("files", files)
             val captionsJson = captions.takeIf { list -> list.any { it.isNotEmpty() } }
                 ?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
             val response = api.createPost(
                 forum = forumId.toRequestBody(text),
                 title = title.toRequestBody(text),
                 body = body.toRequestBody(text),
-                attachments = parts,
+                files = parts,
                 captions = captionsJson,
             ).unwrap()
             _postCreated.tryEmit(forumId)
@@ -233,7 +233,7 @@ class ForumsRepository @Inject constructor(
     ) {
         val files = fileStore.cacheFiles(newFileUris)
         try {
-            val newParts = fileStore.fileParts("attachments", files)
+            val newParts = fileStore.fileParts("files", files)
             val order: List<String>? = when {
                 keptAttachmentIds == null && files.isEmpty() -> null
                 else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
@@ -247,7 +247,7 @@ class ForumsRepository @Inject constructor(
                 title = title.toRequestBody(text),
                 body = body.toRequestBody(text),
                 order = orderJson,
-                attachments = newParts,
+                files = newParts,
                 captions = captionsJson,
             ).unwrap()
         } finally {
@@ -264,6 +264,7 @@ class ForumsRepository @Inject constructor(
             post = postId.toRequestBody(text),
             body = body.toRequestBody(text),
             parent = parent?.toRequestBody(text),
+            attachment = null,
             files = parts
         ).unwrap()
     }
@@ -296,6 +297,11 @@ class ForumsRepository @Inject constructor(
      * Create a comment whose attachments come from content-provider [uris] (the
      * system file picker) rather than files on disk.
      */
+    /**
+     * [attachment] anchors a top-level comment to one of the post's own
+     * attachments (its id); the server refuses any other id. A reply inherits
+     * its parent's context and takes no anchor.
+     */
     suspend fun createCommentFromUris(
         forumId: String,
         postId: String,
@@ -303,6 +309,7 @@ class ForumsRepository @Inject constructor(
         parent: String? = null,
         uris: List<android.net.Uri>,
         context: android.content.Context,
+        attachment: String? = null,
     ): CreateCommentResponse {
         val files = fileStore.cacheFiles(uris)
         try {
@@ -314,6 +321,7 @@ class ForumsRepository @Inject constructor(
                 post = postId.toRequestBody(text),
                 body = body.toRequestBody(text),
                 parent = parent?.toRequestBody(text),
+                attachment = if (parent == null) attachment?.takeIf { it.isNotEmpty() }?.toRequestBody(text) else null,
                 files = parts,
             ).unwrap()
         } finally {

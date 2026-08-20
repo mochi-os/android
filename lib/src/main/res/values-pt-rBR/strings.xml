@@ -312,4 +312,15 @@
     <string name="attachment_caption_add">Adicionar legenda</string>
     <string name="attachment_caption_edit">Editar legenda</string>
     <string name="notifications_category_unassigned">Não atribuído</string>
+    <string name="lightbox_comments_none">Ainda não há comentários nesta imagem.</string>
+    <string name="lightbox_comments_only">Mostrar apenas os comentários desta imagem</string>
+    <string name="lightbox_comment_placeholder">Comentar esta imagem…</string>
+    <string name="comment_anchor_open">Ver a imagem à qual este comentário se refere</string>
+    <string name="comment_anchor_default">Nesta imagem</string>
+    <plurals name="lightbox_comments_others">
+        <item quantity="one">Mostrar mais %1$d comentário nesta publicação</item>
+        <item quantity="many">Mostrar mais %1$d comentários nesta publicação</item>
+        <item quantity="other">Mostrar mais %1$d comentários nesta publicação</item>
+    </plurals>
+    <string name="lightbox_comments">Comentários</string>
 </resources>

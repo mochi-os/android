@@ -95,6 +95,7 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var preferencesManager: PreferencesManager
     @Inject lateinit var okHttpClient: okhttp3.OkHttpClient
     @Inject lateinit var notificationsRepository: org.mochios.android.notifications.NotificationsRepository
+    @Inject lateinit var webSocket: org.mochios.android.websocket.MochiWebSocket
 
     // Latest alias / shortcut hint resolved from the launching intent.
     // Updated on every onNewIntent so swapping launcher icons (e.g.
@@ -420,6 +421,11 @@ class MainActivity : ComponentActivity() {
         // confirmation dialog; we can't suppress that, but pre-downloading
         // means the user never sees the browser/file-picker chain.
         UpdateInstaller.promptIfPending(this)
+
+        // A socket that dropped in the background reconnects only through its
+        // backoff timer; bring every subscribed one back now rather than
+        // waiting out a delay the user is no longer absent for.
+        webSocket.reconnectNow()
 
         // Re-run the push-transport setup on every resume. The LaunchedEffect
         // in setContent only fires on isAuthenticated transitions (cold-start

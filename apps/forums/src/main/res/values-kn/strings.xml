@@ -301,4 +301,5 @@
     <string name="forums_find_found_by_url">URL ಮೂಲಕ ಕಂಡುಬಂದಿದೆ</string>
     <string name="forums_moderation_pending_posts">ಬಾಕಿ ಪೋಸ್ಟ್‌ಗಳು (%1$d)</string>
     <string name="forums_moderation_pending_comments">ಬಾಕಿ ಕಾಮೆಂಟ್‌ಗಳು (%1$d)</string>
+    <string name="forums_moderation_on_image">ಚಿತ್ರದ ಮೇಲೆ: %1$s</string>
 </resources>
