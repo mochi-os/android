@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Info
@@ -31,7 +32,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -63,14 +63,18 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.go.R
 import org.mochios.go.model.Game
 import org.mochios.go.navigation.GoApp
-import org.mochios.go.ui.components.GoSidebar
 import org.mochios.go.ui.components.GoSidebarFilter
+import org.mochios.go.ui.components.goDrawerFilter
+import org.mochios.go.ui.components.goDrawerItems
 import org.mochios.android.R as MochiR
 
 /**
@@ -131,16 +135,20 @@ fun GoGameListScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            GoSidebar(
-                currentFilter = currentFilter,
-                onSelectFilter = { filter ->
-                    drawerScope.launch { drawerState.close() }
-                    currentFilter = filter
-                },
-                onNewGame = {
+        header = { DrawerTitle(stringResource(R.string.go_app_title)) },
+        items = goDrawerItems(),
+        selectedId = currentFilter.name,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            currentFilter = goDrawerFilter(item.id)
+        },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(R.string.go_sidebar_new_game),
+                icon = Icons.Default.Add,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(GoApp.NEW_GAME)
                 },

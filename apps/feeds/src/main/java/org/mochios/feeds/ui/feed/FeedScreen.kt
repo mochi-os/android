@@ -138,8 +138,8 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.FlipBook
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
@@ -438,7 +438,7 @@ fun FeedScreen(
     val allLabel = stringResource(R.string.feeds_all_feeds)
     val drawerItems = remember(drawerFeeds) {
         drawerFeeds.map { feed ->
-            FeatureDrawerItem(
+            DrawerItem(
                 id = feed.fingerprint.ifEmpty { feed.id },
                 title = feed.name,
                 unread = feed.unread,
@@ -446,7 +446,7 @@ fun FeedScreen(
             )
         }
     }
-    val drawerAll = FeatureDrawerItem(
+    val drawerAll = DrawerItem(
         id = allId,
         title = allLabel,
         unread = totalUnread,
@@ -454,7 +454,7 @@ fun FeedScreen(
     )
     val currentDrawerId = if (viewModel.feedId == allId) allId else viewModel.feedId
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.feeds_title)) },
         items = drawerItems,

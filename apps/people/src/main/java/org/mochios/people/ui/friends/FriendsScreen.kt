@@ -43,7 +43,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -70,16 +69,19 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.Friend
-import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.components.peopleDrawerItems
+import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.android.R as MochiR
 
 /**
@@ -146,16 +148,15 @@ fun FriendsScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            PeopleSidebar(
-                current = PeopleSidebarSection.FRIENDS,
-                onSelect = { section ->
-                    drawerScope.launch { drawerState.close() }
-                    if (section != PeopleSidebarSection.FRIENDS) onSwitchSection(section)
-                },
-            )
+        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
+        items = peopleDrawerItems(),
+        selectedId = PeopleSidebarSection.FRIENDS.name,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            val section = peopleDrawerSection(item.id)
+            if (section != PeopleSidebarSection.FRIENDS) onSwitchSection(section)
         },
     ) {
         Scaffold(

@@ -5,13 +5,6 @@
 
 package org.mochios.staff.ui.components
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Category
 import androidx.compose.material.icons.filled.Flag
@@ -24,194 +17,131 @@ import androidx.compose.material.icons.filled.Report
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.SpaceDashboard
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalDrawerSheet
-import androidx.compose.material3.NavigationDrawerItem
-import androidx.compose.material3.NavigationDrawerItemDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import org.mochios.android.R as MochiR
-import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerItem
 import org.mochios.staff.R
 import org.mochios.staff.navigation.StaffApp
 
 /**
- * Drawer body for the staff app's left rail. Mirrors the market sidebar
- * pattern — top-level staff screens wrap their body in
- * [androidx.compose.material3.ModalNavigationDrawer] with this composable as
- * the drawer content so the hamburger opens the same navigation choices
- * everywhere.
+ * The staff-console destinations as drawer rows, grouped by
+ * [DrawerItem.section].
  *
  * Sections (top → bottom):
- *   - Overview    : Dashboard
- *   - Market      : Listings, Appeals, Reports, Disputes, Reviews,
- *                   Moderation log, Categories
- *   - Management  : Accounts, Team
- *   - Settings    : Configuration (admin only)
+ *   - Overview   : Dashboard
+ *   - Market     : Listings, Appeals, Reports, Disputes, Reviews,
+ *                  Moderation log, Categories
+ *   - Management : Accounts, Team
+ *   - Settings   : Configuration
  *
- * The Settings section is hidden when [userRole] is anything other than
+ * The Settings section is omitted when [userRole] is anything other than
  * `"admin"`; moderators and support staff never see the configuration entry.
  *
- * Active row is highlighted by matching the rendered route against
- * [currentRoute]. Navigation requests are emitted via [onNavigate] which the
- * host screen wires to a `NavController.navigate(route)` call; the
- * [navController] parameter is kept on the signature for callers that prefer
- * to route directly through it in later passes.
+ * [StaffLayout] wraps its body in
+ * [org.mochios.android.ui.components.MochiListDrawer] and passes this list,
+ * so staff's drawer matches every other app's. "About" is not here — it
+ * opens a dialog rather than navigating, so it belongs in the drawer's
+ * bottom actions slot.
+ *
+ * Item ids are route strings, so the host passes its own route as
+ * `selectedId` and navigates straight to `item.id`.
  */
 @Composable
-fun StaffSidebar(
-    currentRoute: String?,
-    userRole: String?,
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
-    onNavigate: (String) -> Unit,
-) {
-    var showAbout by remember { mutableStateOf(false) }
-    ModalDrawerSheet(modifier = Modifier.fillMaxHeight()) {
-        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-            // Overview
-            SectionHeader(R.string.staff_sidebar_overview)
-            SidebarRow(
-                route = StaffApp.HOME,
-                currentRoute = currentRoute,
+fun staffDrawerItems(userRole: String?): List<DrawerItem> {
+    val overview = stringResource(R.string.staff_sidebar_overview)
+    val market = stringResource(R.string.staff_sidebar_market)
+    val management = stringResource(R.string.staff_sidebar_management)
+    val settings = stringResource(R.string.staff_sidebar_settings)
+    return buildList {
+        add(
+            DrawerItem(
+                id = StaffApp.HOME,
+                title = stringResource(R.string.staff_sidebar_dashboard),
                 icon = Icons.Default.SpaceDashboard,
-                labelRes = R.string.staff_sidebar_dashboard,
-                onClick = { onNavigate(StaffApp.HOME) },
+                section = overview,
             )
-
-            // Market
-            HorizontalDivider()
-            SectionHeader(R.string.staff_sidebar_market)
-            SidebarRow(
-                route = StaffApp.LISTINGS,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.LISTINGS,
+                title = stringResource(R.string.staff_sidebar_listings),
                 icon = Icons.Default.Inventory,
-                labelRes = R.string.staff_sidebar_listings,
-                onClick = { onNavigate(StaffApp.LISTINGS) },
+                section = market,
             )
-            SidebarRow(
-                route = StaffApp.APPEALS,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.APPEALS,
+                title = stringResource(R.string.staff_sidebar_appeals),
                 icon = Icons.Default.Gavel,
-                labelRes = R.string.staff_sidebar_appeals,
-                onClick = { onNavigate(StaffApp.APPEALS) },
+                section = market,
             )
-            SidebarRow(
-                route = StaffApp.REPORTS,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.REPORTS,
+                title = stringResource(R.string.staff_sidebar_reports),
                 icon = Icons.Default.Flag,
-                labelRes = R.string.staff_sidebar_reports,
-                onClick = { onNavigate(StaffApp.REPORTS) },
+                section = market,
             )
-            SidebarRow(
-                route = StaffApp.DISPUTES,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.DISPUTES,
+                title = stringResource(R.string.staff_sidebar_disputes),
                 icon = Icons.Default.Report,
-                labelRes = R.string.staff_sidebar_disputes,
-                onClick = { onNavigate(StaffApp.DISPUTES) },
+                section = market,
             )
-            SidebarRow(
-                route = StaffApp.REVIEWS,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.REVIEWS,
+                title = stringResource(R.string.staff_sidebar_reviews),
                 icon = Icons.Default.Star,
-                labelRes = R.string.staff_sidebar_reviews,
-                onClick = { onNavigate(StaffApp.REVIEWS) },
+                section = market,
             )
-            SidebarRow(
-                route = StaffApp.MODERATION,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.MODERATION,
+                title = stringResource(R.string.staff_sidebar_moderation),
                 icon = Icons.Default.History,
-                labelRes = R.string.staff_sidebar_moderation,
-                onClick = { onNavigate(StaffApp.MODERATION) },
+                section = market,
             )
-            SidebarRow(
-                route = StaffApp.CATEGORIES,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.CATEGORIES,
+                title = stringResource(R.string.staff_sidebar_categories),
                 icon = Icons.Default.Category,
-                labelRes = R.string.staff_sidebar_categories,
-                onClick = { onNavigate(StaffApp.CATEGORIES) },
+                section = market,
             )
-
-            // Management
-            HorizontalDivider()
-            SectionHeader(R.string.staff_sidebar_management)
-            SidebarRow(
-                route = StaffApp.ACCOUNTS,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.ACCOUNTS,
+                title = stringResource(R.string.staff_sidebar_accounts),
                 icon = Icons.Default.People,
-                labelRes = R.string.staff_sidebar_accounts,
-                onClick = { onNavigate(StaffApp.ACCOUNTS) },
+                section = management,
             )
-            SidebarRow(
-                route = StaffApp.TEAM,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.TEAM,
+                title = stringResource(R.string.staff_sidebar_team),
                 icon = Icons.Default.Group,
-                labelRes = R.string.staff_sidebar_team,
-                onClick = { onNavigate(StaffApp.TEAM) },
+                section = management,
             )
-
-            // Settings — admin only.
-            if (userRole == "admin") {
-                HorizontalDivider()
-                SectionHeader(R.string.staff_sidebar_settings)
-                SidebarRow(
-                    route = StaffApp.CONFIG,
-                    currentRoute = currentRoute,
+        )
+        if (userRole == "admin") {
+            add(
+                DrawerItem(
+                    id = StaffApp.CONFIG,
+                    title = stringResource(R.string.staff_sidebar_config),
                     icon = Icons.Default.Settings,
-                    labelRes = R.string.staff_sidebar_config,
-                    onClick = { onNavigate(StaffApp.CONFIG) },
+                    section = settings,
                 )
-            }
-
-            SidebarRow(
-                route = null,
-                currentRoute = currentRoute,
-                icon = Icons.Outlined.Info,
-                labelRes = MochiR.string.about_label,
-                onClick = { showAbout = true },
             )
-            Spacer(modifier = Modifier.height(12.dp))
         }
     }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
-}
-
-@Composable
-private fun SectionHeader(labelRes: Int) {
-    Text(
-        text = stringResource(labelRes),
-        style = MaterialTheme.typography.titleSmall,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.padding(start = 28.dp, top = 20.dp, bottom = 8.dp),
-    )
-}
-
-@Composable
-private fun SidebarRow(
-    route: String?,
-    currentRoute: String?,
-    icon: ImageVector,
-    labelRes: Int,
-    onClick: () -> Unit,
-) {
-    NavigationDrawerItem(
-        icon = { Icon(icon, contentDescription = null) },
-        label = { Text(stringResource(labelRes)) },
-        selected = route != null && route == currentRoute,
-        onClick = onClick,
-        modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding),
-    )
 }

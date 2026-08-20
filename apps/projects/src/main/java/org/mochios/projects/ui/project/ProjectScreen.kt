@@ -106,8 +106,8 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -162,20 +162,20 @@ fun ProjectScreen(
 
     val drawerItems = remember(listUiState.projects) {
         listViewModel.filteredProjects().map { project ->
-            FeatureDrawerItem(
+            DrawerItem(
                 id = project.fingerprint.ifEmpty { project.id },
                 title = project.name,
                 icon = Icons.Default.FolderOpen,
             )
         }
     }
-    val drawerAll = FeatureDrawerItem(
+    val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.projects_all_projects),
         icon = Icons.Default.FolderOpen,
     )
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.projects_list_title)) },
         items = drawerItems,

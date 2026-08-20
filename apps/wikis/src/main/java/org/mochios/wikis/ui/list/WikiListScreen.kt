@@ -39,7 +39,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -71,6 +70,10 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -80,14 +83,13 @@ import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
-import org.mochios.wikis.ui.components.WikisSidebar
 import org.mochios.android.R as MochiR
 
 /**
  * Wikis app landing list — the surface the launcher icon opens. Mirrors
  * `apps/wikis/web/src/routes/_authenticated/index.tsx` `WikisListPage`:
  *
- *  - Top bar: hamburger opens the [WikisSidebar] drawer, RSS-feed overflow
+ *  - Top bar: hamburger opens the wikis drawer, RSS-feed overflow
  *    submenu copies a class-level RSS URL to the clipboard.
  *  - Card grid of owned + subscribed wikis, sorted naturally by name. Each
  *    card uses the [Icons.Default.Book] icon for owned wikis and
@@ -136,18 +138,30 @@ fun WikiListScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            WikisSidebar(
-                currentRoute = WikisApp.HOME,
-                onNavigate = { route ->
+        header = { DrawerTitle(stringResource(R.string.wikis_sidebar_header)) },
+        items = emptyList(),
+        allItem = DrawerItem(
+            id = WikisApp.HOME,
+            title = stringResource(R.string.wikis_sidebar_all),
+            icon = Icons.Default.Book,
+        ),
+        selectedId = WikisApp.HOME,
+        onItemClick = { drawerScope.launch { drawerState.close() } },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(R.string.wikis_sidebar_find),
+                icon = Icons.Default.Search,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
-                    if (route != WikisApp.HOME) {
-                        navController.navigate(route)
-                    }
+                    navController.navigate(WikisApp.FIND)
                 },
-                onCreateWiki = {
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.wikis_sidebar_create),
+                icon = Icons.Default.Add,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(WikisApp.CREATE)
                 },

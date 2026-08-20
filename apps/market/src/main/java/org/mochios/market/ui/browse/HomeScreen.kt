@@ -36,6 +36,7 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Storefront
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Button
@@ -47,7 +48,6 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -75,13 +75,18 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.MarketSidebar
+import org.mochios.market.ui.components.marketDrawerItems
+import org.mochios.android.R as MochiR
 
 // The "Browse categories" grid is hidden for now: with few listings it takes a
 // lot of vertical space for little value. Flip to `true` to bring it back once
@@ -92,7 +97,7 @@ private const val SHOW_CATEGORY_BROWSER = false
  * Market landing / browse screen. Mirrors
  * `apps/market/web/src/routes/_authenticated/index.tsx` `BrowsePage`:
  *
- *  - TopAppBar with hamburger (opens [MarketSidebar] drawer) and a filter
+ *  - TopAppBar with hamburger (opens the market drawer) and a filter
  *    icon (opens [FilterSheet]).
  *  - Debounced search field below the bar.
  *  - Horizontal pill row of filter axes — tapping any pill opens the filter
@@ -138,16 +143,27 @@ fun HomeScreen(
         if (searchInput != state.query) viewModel.setQuery(searchInput)
     }
 
-    ModalNavigationDrawer(
+    var showAbout by remember { mutableStateOf(false) }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
+    }
+
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            MarketSidebar(
-                currentRoute = MarketApp.HOME,
-                navController = navController,
-                isSeller = state.isSeller,
-                onNavigate = { route ->
+        header = { DrawerTitle(stringResource(R.string.market_title)) },
+        items = marketDrawerItems(isSeller = state.isSeller),
+        selectedId = MarketApp.HOME,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            if (item.id != MarketApp.HOME) navController.navigate(item.id)
+        },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Outlined.Info,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
-                    if (route != MarketApp.HOME) navController.navigate(route)
+                    showAbout = true
                 },
             )
         },

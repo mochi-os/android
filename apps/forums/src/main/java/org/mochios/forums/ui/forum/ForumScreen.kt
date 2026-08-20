@@ -107,8 +107,8 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -147,7 +147,7 @@ private val SORT_OPTIONS = listOf(
 )
 
 /**
- * Forum detail screen wrapped in a [FeatureListDrawer]. The drawer holds
+ * Forum detail screen wrapped in a [MochiListDrawer]. The drawer holds
  * the user's forum list (so swiping in from the left switches forums
  * directly without an intervening list page) plus actions (Find forums,
  * Logout). When [forumId] is empty (first launch with no recorded
@@ -186,20 +186,20 @@ fun ForumScreen(
 
     val drawerItems = remember(listUiState.forums) {
         listViewModel.filteredForums().map { forum ->
-            FeatureDrawerItem(
+            DrawerItem(
                 id = forum.fingerprint.ifEmpty { forum.id },
                 title = forum.name,
                 icon = Icons.Default.Forum,
             )
         }
     }
-    val drawerAll = FeatureDrawerItem(
+    val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.forums_all_forums),
         icon = Icons.Default.Forum,
     )
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.forums_list_title)) },
         items = drawerItems,

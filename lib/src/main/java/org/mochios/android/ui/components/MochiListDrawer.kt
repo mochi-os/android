@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Badge
 import androidx.compose.material3.DrawerState
@@ -44,24 +43,35 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
 /**
- * Universal entry for an item rendered inside the feature drawer.
+ * Universal entry for one row of a [MochiListDrawer].
  *
- * Feature modules adapt their domain row type (Feed, Chat, Forum, Project)
- * into this shape so a single [FeatureListDrawer] composable can render every
- * feature's drawer. Keeps icon + unread badge + secondary subtitle as common
- * columns.
+ * Every app adapts whatever it lists — an entity (feed, chat, forum,
+ * project), a fixed console destination (market's Purchases, staff's
+ * Accounts), or a game — into this shape, so a single composable renders
+ * every app's drawer. Keeps icon + unread badge + secondary subtitle as
+ * common columns.
  *
- * Leading slot resolution: [avatarUrl] wins (async avatar image), else a
- * colour-seeded [EntityIconCircle] when both [seed] and [icon] are set, else
- * the plain [icon]. Features that don't set [avatarUrl]/[seed] keep the plain
- * icon look unchanged.
+ * Leading slot resolution, first match wins:
+ *   - [avatarUrl] set        → async avatar image, initials on load failure.
+ *   - [seed], no [icon]      → seeded initials circle, for a person-shaped
+ *                              row whose avatar path can't be built.
+ *   - [seed] and [icon]      → colour-seeded [EntityIconCircle].
+ *   - [icon] alone           → the plain icon.
+ *   - none of the above      → no leading slot; the title starts the row.
  *
  * @property avatarUrl optional avatar asset path (e.g. "/people/<id>/-/avatar");
  *   rendered as a circular image, falling back to initials on load failure.
  * @property seed stable id used to colour-seed the leading circle so the entity
  *   reads the same here as in its list row / top bar.
+ * @property section optional group heading. Consecutive items sharing a
+ *   section render under one heading; the heading is drawn when the section
+ *   changes from the previous item. Leave null (the default) for a flat list
+ *   — that is what the entity-list features (chat, feeds, forums, projects)
+ *   want, since their rows are all one kind of thing. The console features
+ *   (market, staff) set it to group fixed destinations under Browse /
+ *   Buying / Management / ... headings.
  */
-data class FeatureDrawerItem(
+data class DrawerItem(
     val id: String,
     val title: String,
     val subtitle: String? = null,
@@ -70,6 +80,7 @@ data class FeatureDrawerItem(
     val trailingIcon: ImageVector? = null,
     val avatarUrl: String? = null,
     val seed: String? = null,
+    val section: String? = null,
 )
 
 /**
@@ -84,9 +95,14 @@ data class FeatureDrawerItem(
  *     aggregate row belongs with the headline rather than at the head of the
  *     list: it stays put while the list scrolls, and the divider below it
  *     separates "everything" from the individual entries.
- *   - Scrollable [items] list, divider above it.
+ *   - Scrollable [items] list, divider above it. Items carrying a
+ *     [DrawerItem.section] are grouped under that heading.
  *   - Bottom [actions] slot for feature-level actions (Find, Add, Logout,
  *     Settings, RSS export, ...). Stays visible regardless of scroll.
+ *
+ * [emptyState] replaces the list when [items] is empty — for features that
+ * would rather say "no games yet" than show a blank panel. Features that
+ * leave it null keep the blank panel.
  *
  * The caller owns the [drawerState] so the host screen can also wire the
  * hamburger button in its TopAppBar:
@@ -96,14 +112,15 @@ data class FeatureDrawerItem(
  *   IconButton(onClick = { scope.launch { drawerState.open() } }) { ... }
  */
 @Composable
-fun FeatureListDrawer(
+fun MochiListDrawer(
     drawerState: DrawerState,
-    items: List<FeatureDrawerItem>,
+    items: List<DrawerItem>,
     selectedId: String?,
-    onItemClick: (FeatureDrawerItem) -> Unit,
+    onItemClick: (DrawerItem) -> Unit,
     header: (@Composable () -> Unit)? = null,
-    allItem: FeatureDrawerItem? = null,
+    allItem: DrawerItem? = null,
     actions: (@Composable () -> Unit)? = null,
+    emptyState: (@Composable () -> Unit)? = null,
     content: @Composable () -> Unit,
 ) {
     ModalNavigationDrawer(
@@ -130,12 +147,44 @@ fun FeatureListDrawer(
                             .weight(1f),
                         contentPadding = PaddingValues(vertical = 4.dp),
                     ) {
-                        items(items, key = { it.id }) { it ->
-                            DrawerItemRow(
-                                item = it,
-                                isSelected = selectedId == it.id,
-                                onClick = { onItemClick(it) },
-                            )
+                        if (items.isEmpty() && emptyState != null) {
+                            item(key = "empty") { emptyState() }
+                        }
+                        // Section headings are emitted inline rather than
+                        // taking a separate grouped-items parameter, so a
+                        // flat list (section == null throughout) stays a
+                        // plain run of rows with no extra nesting.
+                        var previousSection: String? = null
+                        var isFirstRow = true
+                        for (entry in items) {
+                            val section = entry.section
+                            if (section != null && section != previousSection) {
+                                // Snapshot into a val: `item {}` bodies run at
+                                // composition time, long after this loop has
+                                // finished, so reading the `isFirstRow` var
+                                // inside one would see its final value and
+                                // draw a divider above every heading.
+                                val showDivider = !isFirstRow
+                                item(key = "section:$section") {
+                                    DrawerSectionHeader(
+                                        title = section,
+                                        // The divider separates this group
+                                        // from the one above, so the topmost
+                                        // heading doesn't get one — the
+                                        // header slot already drew it.
+                                        showDivider = showDivider,
+                                    )
+                                }
+                            }
+                            previousSection = section
+                            isFirstRow = false
+                            item(key = entry.id) {
+                                DrawerItemRow(
+                                    item = entry,
+                                    isSelected = selectedId == entry.id,
+                                    onClick = { onItemClick(entry) },
+                                )
+                            }
                         }
                     }
 
@@ -153,7 +202,7 @@ fun FeatureListDrawer(
 }
 
 /**
- * Compact action row for the drawer's bottom [FeatureListDrawer.actions] slot
+ * Compact action row for the drawer's bottom [MochiListDrawer.actions] slot
  * (Find, Create, Logout, ...). Unlike Material's [androidx.compose.material3.ListItem]
  * it carries no enforced min-height or wide content padding, so the actions sit
  * tight together and align with the drawer items above.
@@ -171,6 +220,25 @@ fun DrawerTitle(title: String) {
         style = MaterialTheme.typography.titleSmall,
         color = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 12.dp),
+    )
+}
+
+/**
+ * Group heading inside the drawer's item list, drawn when a run of
+ * [DrawerItem.section] values changes. Quieter than [DrawerTitle] —
+ * the app-title headline stays the loudest thing in the drawer — and indented to
+ * the same 24dp as the rows it introduces.
+ */
+@Composable
+private fun DrawerSectionHeader(title: String, showDivider: Boolean) {
+    if (showDivider) {
+        HorizontalDivider(modifier = Modifier.padding(top = 8.dp))
+    }
+    Text(
+        text = title,
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 16.dp, bottom = 4.dp),
     )
 }
 
@@ -204,7 +272,7 @@ fun DrawerActionRow(
 
 @Composable
 private fun DrawerItemRow(
-    item: FeatureDrawerItem,
+    item: DrawerItem,
     isSelected: Boolean,
     onClick: () -> Unit,
     pinned: Boolean = false,
@@ -247,6 +315,20 @@ private fun DrawerItemRow(
                     name = item.title,
                     src = item.avatarUrl,
                     seed = item.seed ?: item.id,
+                    size = 32.dp,
+                )
+                Spacer(modifier = Modifier.size(12.dp))
+            }
+
+            // A seed with no icon and no avatar URL still gets a circle:
+            // EntityAvatar falls back to seeded initials, which is what a
+            // person-shaped row (a chess opponent, say) wants when the
+            // avatar asset path can't be built.
+            item.seed != null && item.icon == null -> {
+                EntityAvatar(
+                    name = item.title,
+                    src = null,
+                    seed = item.seed,
                     size = 32.dp,
                 )
                 Spacer(modifier = Modifier.size(12.dp))

@@ -110,8 +110,8 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
@@ -162,20 +162,20 @@ fun CrmScreen(
 
     val drawerItems = remember(listUiState.crm) {
         listViewModel.filteredCrm().map { crm ->
-            FeatureDrawerItem(
+            DrawerItem(
                 id = crm.fingerprint.ifEmpty { crm.id },
                 title = crm.name,
                 icon = Icons.Default.FolderOpen,
             )
         }
     }
-    val drawerAll = FeatureDrawerItem(
+    val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.crm_all_crms),
         icon = Icons.Default.FolderOpen,
     )
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.crm_list_title)) },
         items = drawerItems,

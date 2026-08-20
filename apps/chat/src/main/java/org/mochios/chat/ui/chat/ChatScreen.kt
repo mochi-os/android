@@ -110,8 +110,8 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
@@ -137,7 +137,7 @@ import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
- * Chat detail screen wrapped in a [FeatureListDrawer]. The drawer holds
+ * Chat detail screen wrapped in a [MochiListDrawer]. The drawer holds
  * the user's chat list (so swiping in from the left switches chats
  * directly without an intervening list page) plus actions (New chat,
  * Logout). When [chatId] is empty (first launch with no recorded
@@ -183,7 +183,7 @@ fun ChatScreen(
         listViewModel.filteredChats().map { chat ->
             val key = chat.fingerprint.ifEmpty { chat.id }
             val isDirect = chat.members == 2 && chat.other.isNotBlank()
-            FeatureDrawerItem(
+            DrawerItem(
                 id = key,
                 title = chat.name,
                 icon = if (chat.members > 2) Icons.Default.Groups else Icons.Default.ChatBubbleOutline,
@@ -194,7 +194,7 @@ fun ChatScreen(
         }
     }
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.chat_list_title)) },
         items = drawerItems,

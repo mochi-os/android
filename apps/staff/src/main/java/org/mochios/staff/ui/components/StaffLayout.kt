@@ -11,11 +11,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -25,7 +25,10 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -40,13 +43,18 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.staff.R
 import org.mochios.staff.model.Me
 import org.mochios.staff.repository.StaffRepository
 import org.mochios.staff.ws.StaffEventsBus
 import org.mochios.staff.ws.rememberStaffEventsSubscription
+import org.mochios.android.R as MochiR
 
 /**
  * CompositionLocal exposing the caller's [Me] record to every staff
@@ -113,7 +121,7 @@ class StaffLayoutViewModel @Inject constructor(
 /**
  * Common shell for every staff screen.
  *
- * Wires the [ModalNavigationDrawer] containing [StaffSidebar] (role-aware),
+ * Wires the [MochiListDrawer] carrying [staffDrawerItems] (role-aware),
  * the [TopAppBar] (title + hamburger + caller-supplied [topBarActions]),
  * and the staff-events WebSocket subscription. The current screen's body
  * is the [content] slot.
@@ -150,17 +158,28 @@ fun StaffLayout(
     val drawerScope = rememberCoroutineScope()
     val me: Me? = (state as? StaffLayoutUiState.Ready)?.me
 
+    var showAbout by remember { mutableStateOf(false) }
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
+    }
+
     CompositionLocalProvider(LocalStaffMe provides me) {
-        ModalNavigationDrawer(
+        MochiListDrawer(
             drawerState = drawerState,
-            drawerContent = {
-                StaffSidebar(
-                    currentRoute = currentRoute,
-                    userRole = me?.role,
-                    navController = navController,
-                    onNavigate = { route ->
+            header = { DrawerTitle(stringResource(R.string.staff_dashboard_title)) },
+            items = staffDrawerItems(userRole = me?.role),
+            selectedId = currentRoute,
+            onItemClick = { item ->
+                drawerScope.launch { drawerState.close() }
+                if (item.id != currentRoute) navController.navigate(item.id)
+            },
+            actions = {
+                DrawerActionRow(
+                    title = stringResource(MochiR.string.about_label),
+                    icon = Icons.Outlined.Info,
+                    onClick = {
                         drawerScope.launch { drawerState.close() }
-                        if (route != currentRoute) navController.navigate(route)
+                        showAbout = true
                     },
                 )
             },

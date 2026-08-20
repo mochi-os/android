@@ -36,7 +36,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -68,20 +67,23 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
-import org.mochios.chess.ui.components.ChessSidebar
 import org.mochios.chess.ui.components.ChessSidebarGame
+import org.mochios.chess.ui.components.chessDrawerItems
 import org.mochios.android.R as MochiR
 
 /**
  * Chess app landing screen. Mirrors the web's `ChessLayout` + the empty-state
  * branch of `ChessGame` (`apps/chess/web/src/features/chess/index.tsx`):
  *
- *  - Top bar with hamburger that opens [ChessSidebar] and a notifications
+ *  - Top bar with hamburger that opens the chess drawer and a notifications
  *    icon (host-wired to the lib inbox).
  *  - Pull-to-refresh card list grouped by Active / Completed. Each card
  *    carries the opponent's avatar, name, and the lower-cased status
@@ -134,24 +136,26 @@ fun ChessGameListScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            ChessSidebar(
-                activeGames = uiState.activeSidebar,
-                completedGames = uiState.completedSidebar,
-                onOpenGame = { gameId ->
-                    drawerScope.launch { drawerState.close() }
-                    navController.navigate(ChessApp.gameDetail(gameId))
-                },
-                onOpenNewGame = {
+        header = { DrawerTitle(stringResource(R.string.chess_sidebar_header)) },
+        items = chessDrawerItems(
+            activeGames = uiState.activeSidebar,
+            completedGames = uiState.completedSidebar,
+        ),
+        selectedId = null,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            navController.navigate(ChessApp.gameDetail(item.id))
+        },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(R.string.chess_sidebar_new_game),
+                icon = Icons.Default.Add,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(ChessApp.NEW_GAME)
                 },
-                // websocketStatusLabel is null here — only the detail screen
-                // (a parallel agent's work) has an open WS to report on.
-                websocketStatusLabel = null,
-                websocketStatusColor = null,
             )
         },
     ) {
