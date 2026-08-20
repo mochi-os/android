@@ -214,7 +214,6 @@ fun MessageThreadScreen(
                 sendLabel = stringResource(R.string.market_messages_send),
                 windowInsets = ComposeBarDefaults.WindowInsets,
                 maxLines = 5,
-                tonalElevation = 2.dp,
             )
         }
     }

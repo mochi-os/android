@@ -614,7 +614,6 @@ private fun PostSourceSheet(
                 // A comment needs a body; attachments alone will not do.
                 requireText = true,
                 onSearchMentions = onSearchMembers,
-                shadowElevation = 8.dp,
                 // BottomSheetScaffold does not lift its sheet content for the
                 // keyboard the way ModalBottomSheet does, so this bar has to
                 // consume the inset itself - without it the keyboard covers

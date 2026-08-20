@@ -1069,7 +1069,6 @@ fun FeedScreen(
                         // A comment needs a body; attachments alone will not do.
                         requireText = true,
                         onSearchMentions = { query -> viewModel.searchMembers(query) },
-                        shadowElevation = 8.dp,
                         windowInsets = ComposeBarDefaults.NoWindowInsets,
                         banner = feedsReplyBanner(null, { viewModel.closeCommentComposer() }),
                     )

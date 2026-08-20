@@ -19,8 +19,10 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.union
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.text.KeyboardActions
@@ -67,11 +69,20 @@ object ComposeBarDefaults {
 
     /**
      * For a bar sitting directly in a `Scaffold` — in its `bottomBar` slot or
-     * as the last child of its content. Nothing above it consumes the IME
-     * inset, so the bar consumes it itself. This is the default.
+     * as the last child of its content. This is the default.
+     *
+     * Both insets, because the bar is the bottom-most thing on screen and owes
+     * whichever is taller: the keyboard when it is up, the navigation bar when
+     * it is not. Taking only the keyboard left the field sitting on the gesture
+     * bar at rest, which is what made the `bottomBar` hosts look cramped next to
+     * the ones whose Scaffold content padding happened to cover it.
+     *
+     * A host that already pads its content with the Scaffold's `PaddingValues`
+     * must also `consumeWindowInsets` them, or the navigation bar is counted
+     * twice — that is the contract Scaffold documents.
      */
     val WindowInsets: WindowInsets
-        @Composable get() = androidx.compose.foundation.layout.WindowInsets.ime
+        @Composable get() = imeAndNavigationBars
 
     /**
      * For a bar inside a `MochiBottomSheet`, `BottomSheetScaffold`, or the
@@ -80,6 +91,14 @@ object ComposeBarDefaults {
      */
     val NoWindowInsets: WindowInsets = WindowInsets(0)
 }
+
+/**
+ * Whichever of the keyboard and the navigation bar is taller. Lives outside
+ * [ComposeBarDefaults] because the object's own `WindowInsets` property would
+ * shadow the type these extensions hang off.
+ */
+private val imeAndNavigationBars: WindowInsets
+    @Composable get() = WindowInsets.ime.union(WindowInsets.navigationBars)
 
 /**
  * Everything the attachment row needs, travelling together so that enabling
@@ -182,7 +201,7 @@ fun ComposeBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .windowInsetsPadding(windowInsets)
-                .padding(horizontal = 8.dp, vertical = 4.dp),
+                .padding(horizontal = 8.dp, vertical = 8.dp),
         ) {
             banner?.invoke()
 

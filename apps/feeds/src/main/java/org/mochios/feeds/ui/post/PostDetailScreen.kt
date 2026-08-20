@@ -226,7 +226,6 @@ fun PostDetailScreen(
                     // A comment needs a body; attachments alone will not do.
                     requireText = true,
                     onSearchMentions = { viewModel.searchMembers(it) },
-                    shadowElevation = 8.dp,
                     banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
                 )
             }

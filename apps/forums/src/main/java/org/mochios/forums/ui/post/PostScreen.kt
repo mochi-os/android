@@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -308,7 +309,15 @@ fun PostScreen(
             )
         }
     ) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding)) {
+        // Consume as well as pad: the composer at the foot of this Column
+        // consumes the navigation-bar inset itself, and would double it if
+        // this padding did not mark it spent.
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .consumeWindowInsets(padding)
+                .padding(padding),
+        ) {
             when {
                 uiState.isLoading && uiState.post.id.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
