@@ -615,7 +615,11 @@ private fun PostSourceSheet(
                 requireText = true,
                 onSearchMentions = onSearchMembers,
                 shadowElevation = 8.dp,
-                windowInsets = ComposeBarDefaults.NoWindowInsets,
+                // BottomSheetScaffold does not lift its sheet content for the
+                // keyboard the way ModalBottomSheet does, so this bar has to
+                // consume the inset itself - without it the keyboard covers
+                // the field completely.
+                windowInsets = ComposeBarDefaults.WindowInsets,
                 banner = feedsReplyBanner(replyingTo, onCancelReply),
             )
         }
