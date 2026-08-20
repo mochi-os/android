@@ -26,6 +26,9 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Comment
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.flattenComments
@@ -40,7 +43,7 @@ import org.mochios.android.R as MochiR
  * [CommentItem] the post screen draws, with replies, reactions, editing and
  * deletion intact - filtered to the comments anchored to the image being
  * viewed, offers the rest of the thread behind a toggle, and writes new
- * comments in the same [CommentInputBar] as the screen - attachments and all
+ * comments through the same shared composer as the screen - attachments and all
  * - anchored to this image without the writer having to say so. The draft is
  * the ViewModel's, so it is one draft whether written here or below the post.
  */
@@ -67,10 +70,6 @@ internal fun AttachmentComments(
     val anchored = post.comments.filter { it.anchor == attachmentId }
     val others = post.comments.size - anchored.size
     val shown = flattenComments(if (showAll) post.comments else anchored, 0)
-
-    val filePicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris -> uris.forEach { viewModel.addCommentAttachment(it) } }
 
     Column(modifier = Modifier.fillMaxWidth()) {
         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
@@ -119,21 +118,25 @@ internal fun AttachmentComments(
             }
         }
         if (canComment) {
-            CommentInputBar(
-                text = commentText,
-                onTextChange = { viewModel.setCommentText(it) },
-                attachments = commentAttachments,
-                onAddAttachment = { filePicker.launch("*/*") },
-                onRemoveAttachment = { viewModel.removeCommentAttachment(it) },
-                resolveFileName = viewModel::fileName,
-                // A reply keeps its parent's context; only a fresh comment is
-                // anchored to the image.
+            ComposeBar(
+                value = commentText,
+                onValueChange = { viewModel.setCommentText(it) },
                 onSend = { viewModel.sendComment(anchor = attachmentId) },
-                isSending = isSendingComment,
-                replyingTo = replyingTo,
-                onCancelReply = { viewModel.setReplyingTo(null) },
-                onSearchMembers = { viewModel.searchMembers(it) },
                 placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+                isSending = isSendingComment,
+                sendLabel = stringResource(R.string.feeds_send),
+                attachments = feedsCommentAttachments(
+                    attachments = commentAttachments,
+                    onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                    onRemove = { viewModel.removeCommentAttachment(it) },
+                    resolveFileName = viewModel::fileName,
+                ),
+                // A comment needs a body; attachments alone will not do.
+                requireText = true,
+                onSearchMentions = { viewModel.searchMembers(it) },
+                shadowElevation = 8.dp,
+                windowInsets = ComposeBarDefaults.NoWindowInsets,
+                banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
             )
         }
     }

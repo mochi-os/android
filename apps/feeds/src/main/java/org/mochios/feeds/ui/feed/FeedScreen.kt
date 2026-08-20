@@ -6,8 +6,8 @@
 package org.mochios.feeds.ui.feed
 
 import android.content.ClipData
-import android.content.Intent
 import android.content.Context
+import android.content.Intent
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -131,15 +131,17 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
+import org.mochios.android.model.Comment
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentCaptionScrim
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.DrawerItem
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.FlipBook
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
@@ -151,29 +153,30 @@ import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.VideoFrame
-import org.mochios.android.ui.components.VideoPlayer
-import org.mochios.android.ui.components.rememberServerUrl
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.VideoFrame
+import org.mochios.android.ui.components.VideoPlayer
+import org.mochios.android.ui.components.rememberServerUrl
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.feeds.ui.component.PostTitle
+import org.mochios.feeds.ui.component.countComments
 import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.rssDisplayTitle
-import org.mochios.feeds.ui.component.countComments
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
-import org.mochios.feeds.ui.post.CommentInputBar
 import org.mochios.feeds.ui.post.PostTagsButton
+import org.mochios.feeds.ui.post.feedsCommentAttachments
+import org.mochios.feeds.ui.post.feedsReplyBanner
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
-import org.mochios.android.model.Comment
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -301,12 +304,6 @@ fun FeedScreen(
     val commentDraft by viewModel.commentDraft.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
-    val commentFilePicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris ->
-        uris.forEach { uri -> viewModel.addCommentAttachment(uri) }
-    }
-
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showAbout by remember { mutableStateOf(false) }
@@ -1057,18 +1054,24 @@ fun FeedScreen(
                     // Reuse the post detail's comment input (text + attach + send,
                     // with @-mentions). The reply context is shown above, so the
                     // input bar's own indicator is suppressed.
-                    CommentInputBar(
-                        text = commentDraft,
-                        onTextChange = { value -> viewModel.setCommentDraft(value) },
-                        attachments = commentAttachments,
-                        onAddAttachment = { commentFilePicker.launch("*/*") },
-                        onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
-                        resolveFileName = viewModel::fileName,
+                    ComposeBar(
+                        value = commentDraft,
+                        onValueChange = { value -> viewModel.setCommentDraft(value) },
                         onSend = { viewModel.sendComment() },
                         isSending = isSendingComment,
-                        replyingTo = null,
-                        onCancelReply = { viewModel.closeCommentComposer() },
-                        onSearchMembers = { query -> viewModel.searchMembers(query) },
+                        sendLabel = stringResource(R.string.feeds_send),
+                        attachments = feedsCommentAttachments(
+                            attachments = commentAttachments,
+                            onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                            onRemove = { uri -> viewModel.removeCommentAttachment(uri) },
+                            resolveFileName = viewModel::fileName,
+                        ),
+                        // A comment needs a body; attachments alone will not do.
+                        requireText = true,
+                        onSearchMentions = { query -> viewModel.searchMembers(query) },
+                        shadowElevation = 8.dp,
+                        windowInsets = ComposeBarDefaults.NoWindowInsets,
+                        banner = feedsReplyBanner(null, { viewModel.closeCommentComposer() }),
                     )
                 }
             }
@@ -1129,7 +1132,6 @@ private fun CommentReplyPreview(
         }
     }
 }
-
 
 // A click with no ripple / press indication. The post card's title and body
 // open detail (or the source article) on tap, but shouldn't flash a highlight
@@ -1884,7 +1886,6 @@ private fun PostCard(
                         )
                     }
 
-
                     // Inline comments preview (top-level only, newest first).
                     // Each is a single compact line — avatar, name, message text
                     // (taking the free width), then the time — capped at 3.
@@ -2107,7 +2108,6 @@ private fun PostActionBar(
         }
     }
 }
-
 
 private fun bannerContentHash(content: String): String {
     var hash = 5381

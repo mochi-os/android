@@ -34,12 +34,10 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Forward
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.Reply
-import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.automirrored.outlined.Forward
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
@@ -47,8 +45,6 @@ import androidx.compose.material.icons.outlined.CheckBox
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.PushPin
-import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -106,29 +102,31 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.model.ReactionCount
+import org.mochios.android.model.ReactionType
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.AttachmentGallery
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarAttachments
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
-import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerItem
-import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.EntityIconCircle
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.model.ReactionCount
-import org.mochios.android.model.ReactionType
-import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.ui.components.EntityAvatar
-import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
-import org.mochios.android.files.rememberFileLabel
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
@@ -616,27 +614,38 @@ private fun ChatContent(
                 }
             }
 
-            uiState.replyingTo?.let { replied ->
-                ReplyComposerPreview(
-                    replied = replied,
-                    onCancel = { viewModel.cancelReply() },
-                )
-            }
-
-            ComposerBar(
+            ComposeBar(
                 value = draft,
                 onValueChange = { draft = it },
-                isSending = uiState.isSending,
-                enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
-                pendingAttachments = uiState.pendingAttachments,
-                onAddAttachments = { viewModel.addAttachments(it) },
-                onRemoveAttachment = { viewModel.removeAttachment(it) },
-                onMoveAttachment = { uri, dir -> viewModel.moveAttachment(uri, dir) },
-                resolveFileName = viewModel::fileName,
                 onSend = {
                     viewModel.sendMessage(draft)
                     draft = ""
-                }
+                },
+                placeholder = stringResource(R.string.chat_message_placeholder),
+                enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
+                isSending = uiState.isSending,
+                sendLabel = stringResource(R.string.chat_message_send),
+                windowInsets = ComposeBarDefaults.WindowInsets,
+                attachments = ComposeBarAttachments(
+                    pending = uiState.pendingAttachments,
+                    onAdd = { viewModel.addAttachments(it) },
+                    onRemove = { viewModel.removeAttachment(it) },
+                    resolveFileName = viewModel::fileName,
+                    addLabel = stringResource(R.string.chat_attachment_add),
+                    fallbackLabel = stringResource(R.string.chat_attachment_label),
+                    removeLabel = stringResource(R.string.chat_attachment_remove),
+                    onMove = { uri, dir -> viewModel.moveAttachment(uri, dir) },
+                    moveUpLabel = stringResource(R.string.chat_attachment_move_up),
+                    moveDownLabel = stringResource(R.string.chat_attachment_move_down),
+                ),
+                banner = uiState.replyingTo?.let { replied ->
+                    {
+                        ReplyComposerPreview(
+                            replied = replied,
+                            onCancel = { viewModel.cancelReply() },
+                        )
+                    }
+                },
             )
 
             if (uiState.forwardMessageIds.isNotEmpty()) {
@@ -1393,117 +1402,3 @@ private fun DateSeparator(epochSeconds: Long) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
-@Composable
-private fun ComposerBar(
-    value: String,
-    onValueChange: (String) -> Unit,
-    isSending: Boolean,
-    enabled: Boolean,
-    pendingAttachments: List<android.net.Uri>,
-    onAddAttachments: (List<android.net.Uri>) -> Unit,
-    onRemoveAttachment: (android.net.Uri) -> Unit,
-    onMoveAttachment: (android.net.Uri, Int) -> Unit,
-    resolveFileName: suspend (android.net.Uri) -> String,
-    onSend: () -> Unit,
-) {
-    val attachmentFallback = stringResource(R.string.chat_attachment_label)
-    val filePickerLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
-        contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
-    ) { uris ->
-        onAddAttachments(uris)
-    }
-
-    Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp)) {
-        if (pendingAttachments.isNotEmpty()) {
-            androidx.compose.foundation.layout.FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                pendingAttachments.forEachIndexed { index, uri ->
-                    val label = rememberFileLabel(uri, resolveFileName, attachmentFallback)
-                    androidx.compose.material3.AssistChip(
-                        onClick = { onRemoveAttachment(uri) },
-                        label = {
-                            Text(
-                                label,
-                                style = MaterialTheme.typography.labelSmall,
-                            )
-                        },
-                        leadingIcon = if (pendingAttachments.size > 1) {
-                            {
-                                Row {
-                                    if (index > 0) {
-                                        IconButton(
-                                            onClick = { onMoveAttachment(uri, -1) },
-                                            modifier = Modifier.width(20.dp).height(20.dp),
-                                        ) {
-                                            Icon(
-                                                Icons.Default.ExpandLess,
-                                                contentDescription = stringResource(R.string.chat_attachment_move_up),
-                                                modifier = Modifier.width(14.dp).height(14.dp),
-                                            )
-                                        }
-                                    }
-                                    if (index < pendingAttachments.lastIndex) {
-                                        IconButton(
-                                            onClick = { onMoveAttachment(uri, 1) },
-                                            modifier = Modifier.width(20.dp).height(20.dp),
-                                        ) {
-                                            Icon(
-                                                Icons.Default.ExpandMore,
-                                                contentDescription = stringResource(R.string.chat_attachment_move_down),
-                                                modifier = Modifier.width(14.dp).height(14.dp),
-                                            )
-                                        }
-                                    }
-                                }
-                            }
-                        } else null,
-                        trailingIcon = {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(R.string.chat_attachment_remove),
-                                modifier = Modifier.width(14.dp).height(14.dp),
-                            )
-                        },
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(4.dp))
-        }
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            IconButton(
-                onClick = { filePickerLauncher.launch("*/*") },
-                enabled = enabled,
-            ) {
-                Icon(
-                    Icons.Default.AttachFile,
-                    contentDescription = stringResource(R.string.chat_attachment_add),
-                )
-            }
-            MochiTextField(
-                value = value,
-                onValueChange = onValueChange,
-                modifier = Modifier.weight(1f),
-                placeholder = { Text(stringResource(R.string.chat_message_placeholder)) },
-                enabled = enabled,
-                maxLines = 4,
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            IconButton(
-                onClick = onSend,
-                enabled = enabled && !isSending && (value.isNotBlank() || pendingAttachments.isNotEmpty()),
-            ) {
-                if (isSending) {
-                    CircularProgressIndicator(modifier = Modifier.padding(4.dp))
-                } else {
-                    Icon(
-                        Icons.AutoMirrored.Filled.Send,
-                        contentDescription = stringResource(R.string.chat_message_send),
-                    )
-                }
-            }
-        }
-    }
-}

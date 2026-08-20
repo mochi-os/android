@@ -65,8 +65,9 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
@@ -414,9 +415,13 @@ fun GoGameDetailScreen(
                                     onRetry = { viewModel.loadMessages() },
                                     modifier = Modifier.weight(1f),
                                 )
-                                GameChatInput(
-                                    text = composer.value,
-                                    onTextChange = { composer.value = it },
+                                ComposeBar(
+                                    // The wide-layout side panel sits in the
+                                    // screen body, not the sheet, so this one
+                                    // consumes the keyboard inset itself.
+                                    windowInsets = ComposeBarDefaults.WindowInsets,
+                                    value = composer.value,
+                                    onValueChange = { composer.value = it },
                                     onSend = {
                                         val body = composer.value
                                         if (body.isNotBlank()) {
@@ -425,6 +430,12 @@ fun GoGameDetailScreen(
                                         }
                                     },
                                     isSending = state.isSendingMessage,
+                                    placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+                                    sendLabel = stringResource(MochiR.string.game_chat_send),
+                                    // One line, and the keyboard's action key sends: a game chat
+                                    // message is a sentence, not a comment body.
+                                    maxLines = 1,
+                                    sendOnImeAction = true,
                                 )
                             }
                         }
@@ -505,9 +516,9 @@ fun GoGameDetailScreen(
                                 onRetry = { viewModel.loadMessages() },
                                 modifier = Modifier.weight(1f),
                             )
-                            GameChatInput(
-                                text = composer.value,
-                                onTextChange = { composer.value = it },
+                            ComposeBar(
+                                value = composer.value,
+                                onValueChange = { composer.value = it },
                                 onSend = {
                                     val body = composer.value
                                     if (body.isNotBlank()) {
@@ -516,6 +527,13 @@ fun GoGameDetailScreen(
                                     }
                                 },
                                 isSending = state.isSendingMessage,
+                                placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+                                sendLabel = stringResource(MochiR.string.game_chat_send),
+                                // One line, and the keyboard's action key sends: a game chat
+                                // message is a sentence, not a comment body.
+                                maxLines = 1,
+                                sendOnImeAction = true,
+                                windowInsets = ComposeBarDefaults.NoWindowInsets,
                             )
                         }
                     }

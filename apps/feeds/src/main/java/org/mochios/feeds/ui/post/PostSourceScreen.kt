@@ -18,6 +18,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,7 +26,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -37,17 +37,16 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material.icons.outlined.Link
-import androidx.compose.material.icons.outlined.OpenInBrowser
-import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.OpenInBrowser
 import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -74,6 +73,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
@@ -86,6 +86,8 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -141,12 +143,6 @@ fun PostSourceScreen(
     )
     val scaffoldState = rememberBottomSheetScaffoldState(bottomSheetState = sheetState)
     val coroutineScope = rememberCoroutineScope()
-
-    val filePickerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris ->
-        uris.forEach { viewModel.addCommentAttachment(it) }
-    }
 
     LaunchedEffect(actionError) {
         actionError?.let {
@@ -289,7 +285,7 @@ fun PostSourceScreen(
                 commentText = commentText,
                 onCommentTextChange = { viewModel.setCommentText(it) },
                 commentAttachments = commentAttachments,
-                onAddAttachment = { filePickerLauncher.launch("*/*") },
+                onAddAttachments = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
                 onRemoveAttachment = { viewModel.removeCommentAttachment(it) },
                 onSendComment = { viewModel.sendComment() },
                 isSendingComment = isSendingComment,
@@ -527,7 +523,7 @@ private fun PostSourceSheet(
     commentText: String,
     onCommentTextChange: (String) -> Unit,
     commentAttachments: List<android.net.Uri>,
-    onAddAttachment: () -> Unit,
+    onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (android.net.Uri) -> Unit,
     onSendComment: () -> Unit,
     isSendingComment: Boolean,
@@ -603,18 +599,24 @@ private fun PostSourceSheet(
         }
 
         if (permissions.comment) {
-            CommentInputBar(
-                text = commentText,
-                onTextChange = onCommentTextChange,
-                attachments = commentAttachments,
-                onAddAttachment = onAddAttachment,
-                onRemoveAttachment = onRemoveAttachment,
-                resolveFileName = resolveFileName,
+            ComposeBar(
+                value = commentText,
+                onValueChange = onCommentTextChange,
                 onSend = onSendComment,
                 isSending = isSendingComment,
-                replyingTo = replyingTo,
-                onCancelReply = onCancelReply,
-                onSearchMembers = onSearchMembers
+                sendLabel = stringResource(R.string.feeds_send),
+                attachments = feedsCommentAttachments(
+                    attachments = commentAttachments,
+                    onAdd = onAddAttachments,
+                    onRemove = onRemoveAttachment,
+                    resolveFileName = resolveFileName,
+                ),
+                // A comment needs a body; attachments alone will not do.
+                requireText = true,
+                onSearchMentions = onSearchMembers,
+                shadowElevation = 8.dp,
+                windowInsets = ComposeBarDefaults.NoWindowInsets,
+                banner = feedsReplyBanner(replyingTo, onCancelReply),
             )
         }
     }

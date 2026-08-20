@@ -72,7 +72,8 @@ import com.github.bhlangonijr.chesslib.Side
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.GameChatInput
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
@@ -709,9 +710,9 @@ private fun ChatPanel(
             systemMessageRenderer = { msg -> { ChessSystemRow(msg) } },
         )
         HorizontalDivider()
-        GameChatInput(
-            text = draft,
-            onTextChange = { draft = it },
+        ComposeBar(
+            value = draft,
+            onValueChange = { draft = it },
             onSend = {
                 val toSend = draft.trim()
                 if (toSend.isNotEmpty()) {
@@ -720,6 +721,13 @@ private fun ChatPanel(
                 }
             },
             isSending = state.isSendingChat,
+            placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+            sendLabel = stringResource(MochiR.string.game_chat_send),
+            // One line, and the keyboard's action key sends: a game chat
+            // message is a sentence, not a comment body.
+            maxLines = 1,
+            sendOnImeAction = true,
+            windowInsets = ComposeBarDefaults.NoWindowInsets,
         )
     }
 }

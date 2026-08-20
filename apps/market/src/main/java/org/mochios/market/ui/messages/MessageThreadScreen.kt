@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -26,7 +25,6 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -56,8 +54,9 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ws.GameWsEvent
 import org.mochios.android.ws.rememberGameWebSocket
 import org.mochios.market.R
@@ -76,7 +75,7 @@ import org.mochios.market.navigation.MarketApp
  *  - LazyColumn (reverseLayout = true) renders messages with the latest at
  *    the bottom. My messages right-aligned in the primary tone, others left
  *    in the surfaceVariant tone.
- *  - Compose row at the bottom holds a MochiTextField + Send button.
+ *  - ComposeBar at the bottom: message field + Send button.
  *
  * The WebSocket subscription uses lib's [rememberGameWebSocket] — the
  * helper is keyed by topic, so we pass `market-thread-<id>` as the key and
@@ -206,11 +205,16 @@ fun MessageThreadScreen(
                 }
             }
 
-            ComposeRow(
-                draft = state.draft,
-                isSending = state.isSending,
-                onDraftChange = viewModel::updateDraft,
+            ComposeBar(
+                value = state.draft,
+                onValueChange = viewModel::updateDraft,
                 onSend = viewModel::sendMessage,
+                placeholder = stringResource(R.string.market_messages_compose_placeholder),
+                isSending = state.isSending,
+                sendLabel = stringResource(R.string.market_messages_send),
+                windowInsets = ComposeBarDefaults.WindowInsets,
+                maxLines = 5,
+                tonalElevation = 2.dp,
             )
         }
     }
@@ -295,48 +299,6 @@ private fun Bubble(message: Message, isMine: Boolean) {
                     text = format.formatRelativeTime(message.created),
                     color = fg.copy(alpha = 0.7f),
                     style = MaterialTheme.typography.labelSmall,
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun ComposeRow(
-    draft: String,
-    isSending: Boolean,
-    onDraftChange: (String) -> Unit,
-    onSend: () -> Unit,
-) {
-    Surface(
-        tonalElevation = 2.dp,
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 8.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.Bottom,
-        ) {
-            MochiTextField(
-                value = draft,
-                onValueChange = onDraftChange,
-                placeholder = {
-                    Text(stringResource(R.string.market_messages_compose_placeholder))
-                },
-                maxLines = 5,
-                modifier = Modifier
-                    .weight(1f)
-                    .heightIn(min = 56.dp),
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            IconButton(
-                onClick = onSend,
-                enabled = draft.isNotBlank() && !isSending,
-            ) {
-                Icon(
-                    Icons.AutoMirrored.Filled.Send,
-                    contentDescription = stringResource(R.string.market_messages_send),
                 )
             }
         }

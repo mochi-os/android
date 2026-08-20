@@ -17,9 +17,11 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -80,6 +82,9 @@ import org.mochios.android.model.Comment
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarAttachments
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
@@ -87,9 +92,9 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotFoundState
-import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.PostTagsButton as SharedPostTagsButton
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.files.rememberFileLabel
@@ -132,12 +137,6 @@ fun PostDetailScreen(
     var showOverflowMenu by remember { mutableStateOf(false) }
 
     val snackbarHostState = remember { SnackbarHostState() }
-
-    val filePickerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris ->
-        uris.forEach { viewModel.addCommentAttachment(it) }
-    }
 
     LaunchedEffect(actionError) {
         actionError?.let {
@@ -211,18 +210,24 @@ fun PostDetailScreen(
         },
         bottomBar = {
             if (permissions.comment) {
-                CommentInputBar(
-                    text = commentText,
-                    onTextChange = { viewModel.setCommentText(it) },
-                    attachments = commentAttachments,
-                    onAddAttachment = { filePickerLauncher.launch("*/*") },
-                    onRemoveAttachment = { viewModel.removeCommentAttachment(it) },
-                    resolveFileName = viewModel::fileName,
+                ComposeBar(
+                    value = commentText,
+                    onValueChange = { viewModel.setCommentText(it) },
                     onSend = { viewModel.sendComment() },
                     isSending = isSendingComment,
-                    replyingTo = replyingTo,
-                    onCancelReply = { viewModel.setReplyingTo(null) },
-                    onSearchMembers = { viewModel.searchMembers(it) }
+                    sendLabel = stringResource(R.string.feeds_send),
+                    windowInsets = ComposeBarDefaults.WindowInsets,
+                    attachments = feedsCommentAttachments(
+                        attachments = commentAttachments,
+                        onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                        onRemove = { viewModel.removeCommentAttachment(it) },
+                        resolveFileName = viewModel::fileName,
+                    ),
+                    // A comment needs a body; attachments alone will not do.
+                    requireText = true,
+                    onSearchMentions = { viewModel.searchMembers(it) },
+                    shadowElevation = 8.dp,
+                    banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
                 )
             }
         }
@@ -734,125 +739,4 @@ internal fun PostTagsButton(
         iconSize = iconSize,
     )
 }
-
-@Composable
-internal fun CommentInputBar(
-    text: String,
-    onTextChange: (String) -> Unit,
-    attachments: List<Uri>,
-    onAddAttachment: () -> Unit,
-    onRemoveAttachment: (Uri) -> Unit,
-    resolveFileName: suspend (Uri) -> String,
-    onSend: () -> Unit,
-    isSending: Boolean,
-    replyingTo: String?,
-    onCancelReply: () -> Unit,
-    onSearchMembers: suspend (String) -> List<MentionSuggestion>,
-    // The lightbox's comments panel names the image the comment is about.
-    placeholder: String = stringResource(R.string.feeds_write_a_comment),
-) {
-    Surface(
-        shadowElevation = 8.dp,
-        color = MaterialTheme.colorScheme.surface
-    ) {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            if (replyingTo != null) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 4.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = stringResource(R.string.feeds_replying_to_comment),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.weight(1f)
-                    )
-                    IconButton(
-                        onClick = onCancelReply,
-                        modifier = Modifier.size(24.dp)
-                    ) {
-                        Icon(
-                            Icons.Default.Close,
-                            contentDescription = stringResource(R.string.feeds_cancel_reply),
-                            modifier = Modifier.size(16.dp)
-                        )
-                    }
-                }
-            }
-
-            if (attachments.isNotEmpty()) {
-                val fileLabel = stringResource(R.string.feeds_file)
-                val removeLabel = stringResource(R.string.feeds_remove)
-                LazyRow(
-                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 4.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(attachments) { uri ->
-                        val label = rememberFileLabel(uri, resolveFileName, fileLabel)
-                        AssistChip(
-                            onClick = { onRemoveAttachment(uri) },
-                            label = {
-                                Text(
-                                    label,
-                                    style = MaterialTheme.typography.labelSmall
-                                )
-                            },
-                            trailingIcon = {
-                                Icon(
-                                    Icons.Default.Close,
-                                    contentDescription = removeLabel,
-                                    modifier = Modifier.size(14.dp)
-                                )
-                            }
-                        )
-                    }
-                }
-            }
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 8.dp, vertical = 8.dp),
-                verticalAlignment = Alignment.Bottom
-            ) {
-                IconButton(onClick = onAddAttachment) {
-                    Icon(
-                        Icons.Default.AttachFile,
-                        contentDescription = stringResource(R.string.feeds_attach_file)
-                    )
-                }
-                MentionTextField(
-                    value = text,
-                    onValueChange = onTextChange,
-                    onSearch = onSearchMembers,
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(horizontal = 4.dp),
-                    placeholder = { Text(placeholder) },
-                    maxLines = 4
-                )
-                IconButton(
-                    onClick = onSend,
-                    enabled = text.isNotBlank() && !isSending
-                ) {
-                    if (isSending) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(20.dp),
-                            strokeWidth = 2.dp
-                        )
-                    } else {
-                        Icon(
-                            Icons.AutoMirrored.Filled.Send,
-                            contentDescription = stringResource(R.string.feeds_send)
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
-
 

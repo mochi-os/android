@@ -78,8 +78,9 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlin.math.roundToInt
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
@@ -874,9 +875,9 @@ private fun GameChatColumn(
                 modifier = Modifier.fillMaxSize(),
             )
         }
-        GameChatInput(
-            text = chatDraft,
-            onTextChange = { chatDraft = it },
+        ComposeBar(
+            value = chatDraft,
+            onValueChange = { chatDraft = it },
             onSend = {
                 // Clear only once the send has actually succeeded. Clearing
                 // here used to happen before the coroutine started, so a failed
@@ -891,6 +892,13 @@ private fun GameChatColumn(
                 }
             },
             isSending = isSending,
+            placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+            sendLabel = stringResource(MochiR.string.game_chat_send),
+            // One line, and the keyboard's action key sends: a game chat
+            // message is a sentence, not a comment body.
+            maxLines = 1,
+            sendOnImeAction = true,
+            windowInsets = ComposeBarDefaults.NoWindowInsets,
         )
     }
 }
