@@ -92,7 +92,7 @@ fun MochiDropdownField(
                 )
                 .background(
                     if (expanded) {
-                        MaterialTheme.colorScheme.surfaceContainerHigh
+                        mochiFieldFocusedContainer()
                     } else {
                         MaterialTheme.colorScheme.surfaceContainerHighest
                     }

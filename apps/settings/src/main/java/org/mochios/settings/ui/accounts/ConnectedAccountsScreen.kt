@@ -29,7 +29,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.MonitorHeart
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.VerifiedUser
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -65,6 +64,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
@@ -242,7 +242,7 @@ private fun AccountRow(
     val notifyCapable = provider?.capabilities?.contains("notify") == true
     var menu by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -509,7 +509,7 @@ private fun SnackBanner(message: String, onDismiss: () -> Unit) {
         onDismiss()
     }
     Box(modifier = Modifier.fillMaxWidth().padding(16.dp), contentAlignment = Alignment.BottomCenter) {
-        Card(colors = CardDefaults.elevatedCardColors()) {
+        MochiCard(colors = CardDefaults.elevatedCardColors()) {
             Text(message, modifier = Modifier.padding(12.dp))
         }
     }

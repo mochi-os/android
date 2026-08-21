@@ -24,7 +24,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -58,6 +57,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
@@ -131,7 +131,7 @@ fun PageRevertScreen(
                 .padding(24.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
-            Card(
+            MochiCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 16.dp),

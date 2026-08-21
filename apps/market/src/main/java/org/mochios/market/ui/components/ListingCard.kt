@@ -27,8 +27,6 @@ import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.ImageNotSupported
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.outlined.BookmarkBorder
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -53,6 +51,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.theme.LocalEntityRadius
 import org.mochios.market.R
 import org.mochios.market.lib.ratingStars
@@ -112,12 +111,11 @@ fun ListingCard(
     onClick: (Listing) -> Unit = {},
     onToggleSave: (Listing) -> Unit = {},
 ) {
-    Card(
+    MochiCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick(listing) },
         shape = RoundedCornerShape(LocalEntityRadius.current),
-        colors = CardDefaults.cardColors(),
     ) {
         Box(
             modifier = Modifier

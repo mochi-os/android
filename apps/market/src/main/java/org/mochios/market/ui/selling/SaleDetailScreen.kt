@@ -27,8 +27,6 @@ import androidx.compose.material.icons.filled.LocalShipping
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -64,6 +62,7 @@ import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -252,7 +251,7 @@ private fun SaleDetailBody(
     ) {
         // ---- Summary ----
         item("summary") {
-            Card(colors = CardDefaults.cardColors(), modifier = Modifier.fillMaxWidth()) {
+            MochiCard(modifier = Modifier.fillMaxWidth()) {
                 Row(
                     modifier = Modifier.padding(12.dp),
                     verticalAlignment = Alignment.CenterVertically,
@@ -333,8 +332,7 @@ private fun SaleDetailBody(
             (order.status == OrderStatus.PENDING || order.status == OrderStatus.PAID)
         ) {
             item("shipping-actions") {
-                Card(
-                    colors = CardDefaults.cardColors(),
+                MochiCard(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
@@ -370,8 +368,7 @@ private fun SaleDetailBody(
             order.status == OrderStatus.DISPUTED
         ) {
             item("refund-action") {
-                Card(
-                    colors = CardDefaults.cardColors(),
+                MochiCard(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
@@ -461,7 +458,7 @@ private fun SaleDetailBody(
 
 @Composable
 private fun FeeBreakdownPanel(order: Order, currency: Currency) {
-    Card(colors = CardDefaults.cardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_sale_section_fees),
@@ -518,7 +515,7 @@ private fun FeeRow(label: String, value: String, emphasised: Boolean = false) {
 
 @Composable
 private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
-    Card(colors = CardDefaults.cardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -588,7 +585,7 @@ private fun ReviewPanel(
     errorMessage: String?,
     onRespond: (String) -> Unit,
 ) {
-    Card(colors = CardDefaults.cardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_sale_section_review),

@@ -27,8 +27,6 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -69,6 +67,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -205,7 +204,7 @@ private fun SummaryCard(
     val thumbUrl = listing?.photo?.id?.takeIf { it.isNotBlank() }
         ?.let { "$baseUrl/market/-/photo/$it" }
 
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 ListingThumbnail(thumbnailUrl = thumbUrl)
@@ -295,7 +294,7 @@ private fun SummaryCard(
 private fun BillingInfoCard(subscription: Subscription) {
     val format = LocalFormat.current
     val currency = subscription.currency ?: Currency.GBP
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_subscription_detail_billing_info),
@@ -356,7 +355,7 @@ private fun BillingHistorySection(@Suppress("UNUSED_PARAMETER") subscription: Su
     // `subscription.payments` on the wire today. We render the section
     // shell so the user understands where this content will appear once
     // the server side lands, and the layout doesn't shift when it does.
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_subscription_detail_billing_history),

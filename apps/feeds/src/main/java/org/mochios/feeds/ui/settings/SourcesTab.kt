@@ -32,7 +32,6 @@ import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Shield
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
@@ -67,8 +66,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.mochiDialogCardColors
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Source
 import org.mochios.android.i18n.LocalFormat
@@ -260,7 +261,7 @@ private fun PermissionRequestDialog(
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-                Card(modifier = Modifier.fillMaxWidth()) {
+                MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                     Text(
                         text = permissionName,
                         style = MaterialTheme.typography.bodyLarge,
@@ -361,7 +362,7 @@ private fun SourceCard(
     } else {
         null
     }
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),

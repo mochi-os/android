@@ -48,7 +48,6 @@ import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -100,6 +99,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -600,7 +600,7 @@ private fun ListingDetailContent(
         // Primary info + actions card: title, price, location, listed date,
         // the buy CTA + secondary actions, and the seller row, grouped into one
         // card per the redesign.
-        Card(
+        MochiCard(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
         ) {
@@ -792,7 +792,7 @@ private fun ListingDetailContent(
         // Seller card — a "Seller" heading over the avatar/name row, with the
         // rating and sales stacked beneath it (left-aligned to the card edge),
         // per the redesign.
-        Card(
+        MochiCard(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
         ) {
@@ -1068,7 +1068,7 @@ private fun SellerStatusBanner(status: String) {
         if (status == "banned") R.string.market_listing_detail_seller_banned_banner
         else R.string.market_listing_detail_seller_suspended_banner,
     )
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(

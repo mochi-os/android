@@ -26,7 +26,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.outlined.LocalOffer
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -56,6 +55,7 @@ import coil3.compose.AsyncImage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.model.SavedItem
@@ -165,7 +165,7 @@ private fun SavedPostCard(
         ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val previewBody = post.bodyHtml.ifBlank { post.body }
 
-    Card(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
+    MochiCard(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
         Column(modifier = Modifier.padding(12.dp)) {
             if (displayTitle != null) {
                 PostTitle(

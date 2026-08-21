@@ -20,8 +20,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -50,6 +48,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.settings.R
 import org.mochios.settings.api.Session
 import org.mochios.android.R as MochiR
@@ -126,7 +125,7 @@ fun SessionsScreen(
 private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Unit) {
     val format = LocalFormat.current
     var confirm by remember(session.id) { mutableStateOf(false) }
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {

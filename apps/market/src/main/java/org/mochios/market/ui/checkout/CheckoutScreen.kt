@@ -27,8 +27,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -59,6 +57,7 @@ import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextField
@@ -171,7 +170,7 @@ private fun SubscriptionBody(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
+        MochiCard(shape = RoundedCornerShape(10.dp)) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
                     stringResource(R.string.market_checkout_subscribe_intro),
@@ -333,7 +332,7 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
 
 @Composable
 private fun ListingSummaryCard(listing: Listing, itemPrice: Long, currency: Currency) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -590,7 +589,7 @@ private fun PricingSummary(
     currency: Currency,
     deliveryIsShipping: Boolean,
 ) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.cardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 stringResource(R.string.market_checkout_summary),

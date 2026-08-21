@@ -29,7 +29,6 @@ import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.RadioButtonChecked
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -53,6 +52,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.chess.R
 import org.mochios.chess.model.NewGameFriend
 import org.mochios.android.R as MochiR
@@ -267,7 +267,7 @@ private fun FriendRow(
     } else {
         MaterialTheme.colorScheme.outlineVariant
     }
-    Card(
+    MochiCard(
         onClick = onClick,
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(

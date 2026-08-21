@@ -25,7 +25,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
@@ -61,6 +60,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
@@ -258,7 +258,7 @@ private fun CategoryCard(
     onTest: () -> Unit,
     onToggleDest: (DestinationRow, Boolean) -> Unit,
 ) {
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -367,7 +367,7 @@ private fun TopicRow(
     onRemove: (NotifTopic) -> Unit,
 ) {
     var menu by remember { mutableStateOf(false) }
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -499,7 +499,7 @@ private fun SnackBanner(message: String, onDismiss: () -> Unit) {
         onDismiss()
     }
     Box(modifier = Modifier.fillMaxWidth().padding(16.dp), contentAlignment = Alignment.BottomCenter) {
-        Card(colors = CardDefaults.elevatedCardColors()) {
+        MochiCard(colors = CardDefaults.elevatedCardColors()) {
             Text(message, modifier = Modifier.padding(12.dp))
         }
     }

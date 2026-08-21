@@ -29,7 +29,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DriveFileMove
-import androidx.compose.material3.Card
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -55,6 +54,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.dnd.DragEdge
@@ -179,7 +179,7 @@ fun TreeRow(
             metaOrder.indexOf(field.fieldtype).takeIf { rank -> rank >= 0 } ?: metaOrder.size
         }
 
-    Card(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(start = indent, top = 3.dp, bottom = 3.dp)

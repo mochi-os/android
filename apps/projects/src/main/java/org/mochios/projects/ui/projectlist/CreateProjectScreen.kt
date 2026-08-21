@@ -39,7 +39,6 @@ import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.GridView
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -70,6 +69,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_JSON
 import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
@@ -412,7 +412,7 @@ private fun TemplateCard(
     // Selection reads as a filled tone rather than a stroke: the chosen
     // template takes the primary container, the rest sit on the plain card
     // tone. A 1 dp outline was the only thing separating the two states.
-    Card(
+    MochiCard(
         colors = CardDefaults.cardColors(
             containerColor = if (selected) {
                 MaterialTheme.colorScheme.primaryContainer

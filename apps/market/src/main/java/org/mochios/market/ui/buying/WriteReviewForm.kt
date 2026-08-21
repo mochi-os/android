@@ -20,8 +20,6 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -36,6 +34,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Review
@@ -69,9 +68,8 @@ fun WriteReviewForm(
     var rating by remember { mutableIntStateOf(5) }
     var body by remember { mutableStateOf("") }
 
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -130,9 +128,8 @@ private fun StarSelector(rating: Int, onRating: (Int) -> Unit) {
 
 @Composable
 private fun SubmittedReviewCard(review: Review, modifier: Modifier) {
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),

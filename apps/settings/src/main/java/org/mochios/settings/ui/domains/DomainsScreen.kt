@@ -26,8 +26,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -56,6 +54,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
@@ -188,7 +187,7 @@ private fun DomainCard(
     var editRoute by remember { mutableStateOf<Route?>(null) }
     var showAddDelegation by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(modifier = Modifier.weight(1f)) {
@@ -393,7 +392,7 @@ private fun DomainCard(
 
 @Composable
 private fun VerificationBlock(domain: Domain, onVerify: () -> Unit) {
-    Card(colors = CardDefaults.cardColors()) {
+    MochiCard {
         Column(modifier = Modifier.padding(8.dp)) {
             Text(
                 text = stringResource(R.string.domain_dns_hint),

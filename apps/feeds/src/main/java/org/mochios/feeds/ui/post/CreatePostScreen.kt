@@ -37,7 +37,6 @@ import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -81,6 +80,7 @@ import org.mochios.android.ui.components.LocationPreviewMap
 import org.mochios.android.ui.components.MapMarkerPoint
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
@@ -589,7 +589,7 @@ private fun LocationPreviewCard(
     connectRoute: Boolean,
     onClear: () -> Unit
 ) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(

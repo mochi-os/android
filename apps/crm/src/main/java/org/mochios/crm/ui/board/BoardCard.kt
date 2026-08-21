@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.foundation.border
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.outlined.SwapHoriz
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -54,6 +53,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.dnd.DragEdge
@@ -187,7 +187,7 @@ fun BoardCard(
             .alpha(0.9f)
     } else Modifier
 
-    Card(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .then(dragModifier)

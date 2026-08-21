@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.RadioButtonUnchecked
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -60,6 +59,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.MarketLayout
@@ -189,7 +189,7 @@ fun SellerSettingsScreen(
 
 @Composable
 private fun FutureControlsCard() {
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant,
@@ -240,7 +240,7 @@ private fun StatusSummary(
         )
     } ?: stringResource(R.string.market_seller_fee_loading)
 
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -309,7 +309,7 @@ private fun SetupCard(
         else -> R.string.market_seller_setup_desc_connect
     }
 
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),

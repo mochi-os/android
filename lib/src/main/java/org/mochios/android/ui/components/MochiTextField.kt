@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
@@ -27,15 +28,32 @@ import org.mochios.android.ui.theme.LocalEntityRadius
 /** The borderless, tonal colour set behind [MochiTextField]. */
 @Composable
 fun mochiTextFieldColors(): TextFieldColors = TextFieldDefaults.colors(
-    focusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
+    focusedContainerColor = mochiFieldFocusedContainer(),
     unfocusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHighest,
-    disabledContainerColor = MaterialTheme.colorScheme.surfaceContainer,
+    disabledContainerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
     errorContainerColor = MaterialTheme.colorScheme.errorContainer,
     focusedIndicatorColor = Color.Transparent,
     unfocusedIndicatorColor = Color.Transparent,
     disabledIndicatorColor = Color.Transparent,
     errorIndicatorColor = Color.Transparent,
 )
+
+/**
+ * The container an active field carries: the resting tone, tinted toward
+ * primary.
+ *
+ * Focus cannot be another step of the neutral ramp. A field rests on
+ * `surfaceContainerHighest`, which is already the far end of that ramp in both
+ * themes — the darkest step in light, the lightest in dark — so there is no
+ * further step in the direction that reads as deepening, and the step that
+ * does exist goes back toward the card the field sits on. A tint carries the
+ * state instead, and carries it the same way in either theme.
+ */
+@Composable
+fun mochiFieldFocusedContainer(): Color =
+    MaterialTheme.colorScheme.primary
+        .copy(alpha = 0.10f)
+        .compositeOver(MaterialTheme.colorScheme.surfaceContainerHighest)
 
 /**
  * The app's text field: a tonal box, no border, no underline.
@@ -49,9 +67,9 @@ fun mochiTextFieldColors(): TextFieldColors = TextFieldDefaults.colors(
  *
  * Material's own filled field still draws an indicator line under the text,
  * which is the same 2014 idiom one edge at a time, so all four indicator
- * colours are cleared here. Focus reads through the container tone lifting to
- * `surfaceContainerHigh`, and an error through the container going to
- * `errorContainer` — no stroke in either case.
+ * colours are cleared here. Focus reads through the container taking a tint of
+ * primary (see [mochiFieldFocusedContainer]), and an error through the
+ * container going to `errorContainer` — no stroke in either case.
  *
  * The corner follows [LocalEntityRadius] so the field honours the reader's
  * radius preference alongside cards and dialogs, with the bottom corners

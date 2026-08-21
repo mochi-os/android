@@ -54,8 +54,6 @@ import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.outlined.Whatshot
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -107,6 +105,7 @@ import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
@@ -707,16 +706,12 @@ private fun PostCard(
     showForumName: Boolean = false,
 ) {
     val format = LocalFormat.current
-    Card(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = MaterialTheme.shapes.medium,
-        // A tone, not a border. One step up from surfaceContainerLow: against a
-        // full screen of posts the low step is too faint to group a card's rows.
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainer,
-        ),
+        // A tone, not a border, and the same tone every other card carries.
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             // In the aggregate "All forums" view, label which forum each post
@@ -929,7 +924,7 @@ private fun ForumBanner(banner: String, forumId: String) {
     }
     if (dismissed) return
 
-    Card(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp),

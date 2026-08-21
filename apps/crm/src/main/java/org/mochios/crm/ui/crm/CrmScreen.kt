@@ -54,7 +54,6 @@ import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.TableChart
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.outlined.ViewColumn
-import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -111,6 +110,7 @@ import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -467,10 +467,10 @@ private fun CrmRow(
     val cancelLabel = stringResource(MochiR.string.common_cancel)
     val description = crm.description.takeIf { text -> text.isNotBlank() }
 
-    Card(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
+            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true }),
     ) {
         Row(
             modifier = Modifier.padding(16.dp),

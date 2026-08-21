@@ -21,7 +21,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -44,6 +43,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.delay
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.Section
 import org.mochios.forums.R
 import org.mochios.forums.model.ModerationSettings
@@ -185,7 +185,7 @@ fun ModerationTab(
             // sits inside that toggle's section rather than standing on its own.
             if (moderationNew) {
                 Spacer(Modifier.height(12.dp))
-                Card(
+                MochiCard(
                     modifier = Modifier.fillMaxWidth(),
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.surfaceVariant,

@@ -20,8 +20,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -45,6 +43,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Replica
@@ -132,9 +131,8 @@ private fun ReplicaCard(
         stringResource(R.string.wikis_replicas_never_synced)
     }
 
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(),
     ) {
         Row(
             modifier = Modifier

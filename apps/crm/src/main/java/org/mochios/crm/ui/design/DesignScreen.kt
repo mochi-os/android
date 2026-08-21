@@ -30,7 +30,6 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.Upload
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -67,6 +66,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.crm.R
@@ -366,7 +366,7 @@ private fun ImportDesignDialog(
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         items(templates) { template ->
-                            Card(
+                            MochiCard(
                                 modifier = Modifier.fillMaxWidth(),
                                 shape = RoundedCornerShape(8.dp),
                                 colors = CardDefaults.cardColors(

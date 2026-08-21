@@ -31,8 +31,6 @@ import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -57,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUpdateInfo
@@ -246,7 +245,7 @@ fun SystemStatusScreen(
 
 @Composable
 private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             PeerName(peer.name)
             Text(

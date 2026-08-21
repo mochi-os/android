@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.SportsKabaddi
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -70,6 +69,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -369,7 +369,7 @@ private fun GameCard(
         "/people/${game.opponentId}/-/avatar"
     } else null
 
-    Card(
+    MochiCard(
         onClick = onClick,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(

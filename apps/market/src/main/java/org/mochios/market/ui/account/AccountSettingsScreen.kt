@@ -29,7 +29,6 @@ import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -61,6 +60,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
@@ -268,7 +268,7 @@ private fun SuspensionWarning(status: String, reason: String) {
     } else {
         R.string.market_account_status_suspended_title
     }
-    Card(
+    MochiCard(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.errorContainer,
         ),
@@ -333,7 +333,7 @@ private fun ProfileCard(
     isSaving: Boolean,
     onSave: () -> Unit,
 ) {
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
@@ -453,7 +453,7 @@ private fun SellerStatusCard(
             R.string.market_account_seller_card_continue,
         )
     }
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.padding(16.dp),
             verticalAlignment = Alignment.Top,
@@ -545,7 +545,7 @@ private fun StripeCard(
     onDashboard: () -> Unit,
     onRefresh: () -> Unit,
 ) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),

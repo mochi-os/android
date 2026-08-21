@@ -29,7 +29,6 @@ import androidx.compose.material.icons.outlined.Group
 import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -69,6 +68,7 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
@@ -197,7 +197,7 @@ fun ForumModerationScreen(
  */
 @Composable
 private fun ModerationCard(content: @Composable ColumnScope.() -> Unit) {
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         content = content,
     )

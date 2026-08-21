@@ -22,8 +22,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -48,6 +46,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 
@@ -206,9 +205,8 @@ private fun ConfigBody(
 
 @Composable
 private fun ConfigCard(title: String, content: @Composable () -> Unit) {
-    Card(
+    MochiCard(
         shape = androidx.compose.foundation.shape.RoundedCornerShape(10.dp),
-        colors = CardDefaults.cardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),

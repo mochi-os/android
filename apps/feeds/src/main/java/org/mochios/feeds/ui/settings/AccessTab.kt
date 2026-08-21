@@ -25,7 +25,6 @@ import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -53,10 +52,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.AccessRule
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
+import org.mochios.android.ui.components.mochiDialogCardColors
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -414,7 +415,7 @@ private fun AddAccessDialog(
                         )
                         if (searchResults.isNotEmpty()) {
                             Spacer(modifier = Modifier.height(8.dp))
-                            Card(modifier = Modifier.fillMaxWidth()) {
+                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                                 searchResults.take(6).forEach { user ->
                                     val subject = user.id
                                     SubjectOption(
@@ -446,7 +447,7 @@ private fun AddAccessDialog(
                                 modifier = Modifier.padding(vertical = 8.dp),
                             )
                         } else {
-                            Card(modifier = Modifier.fillMaxWidth()) {
+                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                                 groups.forEach { group ->
                                     val subject = "@${group.id}"
                                     SubjectOption(
@@ -470,7 +471,7 @@ private fun AddAccessDialog(
                             style = MaterialTheme.typography.labelLarge,
                         )
                         Spacer(modifier = Modifier.height(8.dp))
-                        Card(modifier = Modifier.fillMaxWidth()) {
+                        MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                             SubjectOption(
                                 icon = Icons.Default.Group,
                                 title = authenticatedName,

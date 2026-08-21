@@ -24,7 +24,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.outlined.LocalOffer
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -53,6 +52,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.forums.R
 import org.mochios.forums.model.SavedItem
 import org.mochios.android.R as MochiR
@@ -148,7 +148,7 @@ private fun SavedPostCard(
     onUnsave: () -> Unit,
 ) {
     val post = item.post
-    Card(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
+    MochiCard(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
         Column(modifier = Modifier.padding(12.dp)) {
             if (post.forumName.isNotBlank()) {
                 Text(

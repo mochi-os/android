@@ -24,7 +24,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -65,6 +64,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -303,7 +303,7 @@ private fun GameList(games: List<Game>, myIdentity: String, onOpen: (Game) -> Un
 
 @Composable
 private fun GameCard(game: Game, myIdentity: String, onOpen: () -> Unit) {
-    Card(
+    MochiCard(
         onClick = onOpen,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(

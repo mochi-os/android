@@ -34,7 +34,6 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -73,6 +72,7 @@ import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -329,7 +329,7 @@ fun FriendsScreen(
 
 @Composable
 private fun WelcomeBanner(onDismiss: () -> Unit) {
-    Card(
+    MochiCard(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer,
@@ -436,7 +436,7 @@ private fun FriendRow(
 ) {
     val avatarUrl = "/people/${friend.id}/-/avatar"
 
-    Card(
+    MochiCard(
         onClick = onTap,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
