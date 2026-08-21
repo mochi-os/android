@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
@@ -39,7 +38,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -226,10 +224,10 @@ fun PlacePicker(
             Surface(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .heightIn(max = 220.dp)
-                    .clip(RoundedCornerShape(8.dp)),
-                tonalElevation = 2.dp,
-                color = MaterialTheme.colorScheme.surface
+                    .heightIn(max = 220.dp),
+                shape = mochiPopupShape(),
+                color = mochiPopupContainerColor(),
+                shadowElevation = MochiPopupElevation,
             ) {
                 Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                     suggestions.forEach { s ->

@@ -223,9 +223,9 @@ fun PersonPicker(
                 properties = PopupProperties(focusable = true)
             ) {
                 Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    tonalElevation = 3.dp,
-                    shadowElevation = 8.dp,
+                    shape = mochiPopupShape(),
+                    color = mochiPopupContainerColor(),
+                    shadowElevation = MochiPopupElevation,
                     modifier = Modifier
                         .width(with(density) { anchorWidth.toDp() })
                         .heightIn(max = maxPopupHeight)

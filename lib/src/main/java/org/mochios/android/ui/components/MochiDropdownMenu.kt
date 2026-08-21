@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.DropdownMenu
@@ -26,34 +25,31 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.PopupProperties
-import org.mochios.android.ui.theme.LocalEntityRadius
 
 /** Narrowest a menu may be, so short labels still read as a panel rather than a chip. */
 private val MenuMinWidth = 200.dp
-
-/** Menus round harder than list entities do, but still follow the user's radius setting. */
-private val MenuMinRadius = 16.dp
 
 /** Roomier than [MenuDefaults.DropdownMenuItemContentPadding], which leaves rows cramped. */
 private val ItemPadding = PaddingValues(horizontal = 16.dp, vertical = 6.dp)
 
 
 /**
- * A [DropdownMenu] with the rounded, tinted, shadowless container the rest of the app
- * uses. Corners follow [LocalEntityRadius] so the user's radius preference still applies,
- * floored at [MenuMinRadius] because the Material default of 4dp reads as a square panel.
+ * A [DropdownMenu] wearing what every floating surface in the app wears — see
+ * [mochiPopupContainerColor], [mochiPopupShape] and [MochiPopupElevation].
  *
- * Four values here depart from `MenuTokens` on purpose, so leave them be rather than
+ * Two values here depart from `MenuTokens` on purpose, so leave them be rather than
  * restoring the Material defaults:
  *
- *  - **Container** `surfaceContainerHigh`, a step above the spec's `SurfaceContainer`,
- *    to hold the menu apart from the surfaces it opens over now that it casts no shadow.
- *  - **Elevation** 0dp against the spec's 3dp — the app draws floating surfaces flat and
- *    leans on tone for separation. Change both this and the container together or the
- *    menu loses every cue that it sits above the page.
- *  - **Corners** floored at [MenuMinRadius] against the spec's 4dp, per the note above.
+ *  - **Container** `surfaceContainerHigh`, a step above the spec's `SurfaceContainer`.
+ *    A menu opens over whatever is behind it, and cards now hold `surfaceContainer`
+ *    themselves, so the step keeps a menu from landing on its own background.
  *  - **Row padding** 16dp against the spec's 12dp, see [ItemPadding]. The vertical 6dp
  *    sits inside Material's 48dp minimum row height, so a single-line row is unaffected.
+ *
+ * The shadow is the spec's own. It used to be 0, on the reasoning that the app separates
+ * surfaces by tone alone — but tone alone cannot say which of two surfaces is in front,
+ * and a menu that opened over a chat read as a patch of the page rather than something
+ * on top of it.
  *
  * @param expanded Whether the menu is showing.
  * @param onDismissRequest Called when the user taps away or presses back.
@@ -73,7 +69,6 @@ fun MochiDropdownMenu(
     properties: PopupProperties = PopupProperties(focusable = true),
     content: @Composable ColumnScope.() -> Unit
 ) {
-    val radius = LocalEntityRadius.current.coerceAtLeast(MenuMinRadius)
     DropdownMenu(
         expanded = expanded,
         onDismissRequest = onDismissRequest,
@@ -81,9 +76,9 @@ fun MochiDropdownMenu(
         offset = offset,
         scrollState = scrollState,
         properties = properties,
-        shape = RoundedCornerShape(radius),
-        containerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
-        shadowElevation = 0.dp,
+        shape = mochiPopupShape(),
+        containerColor = mochiPopupContainerColor(),
+        shadowElevation = MochiPopupElevation,
         content = content
     )
 }
