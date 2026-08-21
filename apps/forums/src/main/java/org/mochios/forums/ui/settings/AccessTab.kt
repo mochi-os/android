@@ -100,8 +100,8 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
             title = stringResource(R.string.forums_access_management),
             headerAlignment = Alignment.CenterVertically,
             action = {
-                // Outlined, primary-tinted — the same shape as the delete action
-                // on the General tab, which tints itself error instead.
+                // Outlined — the same shape as the delete action on the General
+                // tab, which tints itself error instead.
                 OutlinedButton(onClick = { showAdd = true }) {
                     // The shared "Add rule" label; the dialog keeps the longer
                     // "Add access rule" as its title.

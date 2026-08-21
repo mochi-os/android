@@ -159,7 +159,7 @@ private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Uni
                 Icon(
                     Icons.AutoMirrored.Filled.Logout,
                     contentDescription = stringResource(R.string.sessions_revoke),
-                    tint = MaterialTheme.colorScheme.error,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
         }

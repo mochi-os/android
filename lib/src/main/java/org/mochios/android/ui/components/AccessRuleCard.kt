@@ -137,7 +137,7 @@ fun AccessRuleCard(
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(R.string.access_revoke),
-                        tint = MaterialTheme.colorScheme.error,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }

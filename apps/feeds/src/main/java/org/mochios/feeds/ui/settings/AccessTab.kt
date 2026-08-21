@@ -110,8 +110,8 @@ fun AccessTab(
             title = stringResource(R.string.feeds_access_management),
             headerAlignment = Alignment.CenterVertically,
             action = {
-                // Outlined, primary-tinted — the same shape as the delete action
-                // on the General tab, which tints itself error instead.
+                // Outlined — the same shape as the delete action on the General
+                // tab, which tints itself error instead.
                 OutlinedButton(onClick = { showAddDialog = true }) {
                     Text(stringResource(MochiR.string.access_add_rule))
                 }
