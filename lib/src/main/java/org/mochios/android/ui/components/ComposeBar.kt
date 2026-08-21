@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.exclude
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.ime
 import androidx.compose.foundation.layout.navigationBars
@@ -48,6 +49,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.ImeAction
@@ -185,6 +187,16 @@ fun ComposeBar(
             contract = ActivityResultContracts.GetMultipleContents(),
         ) { uris -> config.onAdd(uris) }
     }
+    // The keyboard is this bar's to answer for only while the bar's own field
+    // holds it open. A search field in the top bar raises the same keyboard,
+    // and lifting for that one parked the composer halfway up the screen,
+    // above a keyboard it had nothing to do with. Unfocused, the bar keeps
+    // whatever the host asked for minus the keyboard, and the keyboard covers
+    // it where it sits.
+    var fieldFocused by remember { mutableStateOf(false) }
+    val appliedInsets =
+        if (fieldFocused) windowInsets else windowInsets.exclude(WindowInsets.ime)
+
     val pending = attachments?.pending.orEmpty()
     val hasContent =
         if (requireText) value.text.isNotBlank() else value.text.isNotBlank() || pending.isNotEmpty()
@@ -199,7 +211,7 @@ fun ComposeBar(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .windowInsetsPadding(windowInsets)
+                .windowInsetsPadding(appliedInsets)
                 .padding(horizontal = 8.dp, vertical = 8.dp),
         ) {
             banner?.invoke()
@@ -242,6 +254,9 @@ fun ComposeBar(
 
                 val fieldModifier = Modifier
                     .weight(1f)
+                    // hasFocus, not isFocused: the mention field puts the focus
+                    // on a child of what this modifier is applied to.
+                    .onFocusChanged { fieldFocused = it.hasFocus }
                     .then(focusRequester?.let { Modifier.focusRequester(it) } ?: Modifier)
                 val placeholderSlot: (@Composable () -> Unit)? =
                     placeholder?.let { { Text(it) } }
