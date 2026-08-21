@@ -66,7 +66,6 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.ui.components.MochiTonalButton
 import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
@@ -330,7 +329,7 @@ private fun PasskeysSection(
         }
     }
     Spacer(Modifier.height(8.dp))
-    MochiTonalButton(onClick = { showRegister = true }) {
+    MochiOutlinedButton(onClick = { showRegister = true }) {
         Icon(Icons.Default.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
         Spacer(Modifier.width(ButtonDefaults.IconSpacing))
         Text(stringResource(R.string.account_passkey_register))
@@ -457,7 +456,7 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
             }
         }
     } else {
-        MochiTonalButton(onClick = onSetup) {
+        MochiOutlinedButton(onClick = onSetup) {
             Icon(Icons.Default.Lock, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
             Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.account_totp_setup))
@@ -544,7 +543,7 @@ private fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
     )
     Spacer(Modifier.height(6.dp))
-    MochiTonalButton(onClick = {
+    MochiOutlinedButton(onClick = {
         if (count > 0) confirm = true else onGenerate()
     }) {
         Text(
@@ -661,7 +660,7 @@ private fun OAuthSection(
     val available = providers.filter { it !in linkedProviders }
     if (available.isNotEmpty()) {
         var showLink by remember { mutableStateOf(false) }
-        MochiTonalButton(onClick = { showLink = true }) {
+        MochiOutlinedButton(onClick = { showLink = true }) {
             Icon(Icons.Default.Add, contentDescription = null)
             Spacer(Modifier.height(0.dp))
             Text(stringResource(R.string.account_oauth_link))

@@ -13,7 +13,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonElevation
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonColors
 import androidx.compose.material3.IconButtonDefaults
@@ -179,55 +178,6 @@ fun MochiIconButton(
         colors = colors ?: iconColors(tone),
         interactionSource = interactionSource,
         content = content,
-    )
-}
-
-/**
- * The app's tonal button: the middle weight, for a section's own action on a
- * screen where several sections each have one and none of them is the screen's
- * main action.
- *
- * Drop-in for [androidx.compose.material3.FilledTonalButton], with [tone]
- * added.
- */
-@Composable
-fun MochiTonalButton(
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    tone: MochiButtonTone = MochiButtonTone.Primary,
-    shape: Shape = ButtonDefaults.filledTonalShape,
-    colors: ButtonColors? = null,
-    elevation: ButtonElevation? = ButtonDefaults.filledTonalButtonElevation(),
-    border: BorderStroke? = null,
-    contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
-    interactionSource: MutableInteractionSource? = null,
-    content: @Composable RowScope.() -> Unit,
-) {
-    FilledTonalButton(
-        onClick = onClick,
-        modifier = modifier,
-        enabled = enabled,
-        shape = shape,
-        colors = colors ?: tonalColors(tone),
-        elevation = elevation,
-        border = border,
-        contentPadding = contentPadding,
-        interactionSource = interactionSource,
-        content = content,
-    )
-}
-
-@Composable
-private fun tonalColors(tone: MochiButtonTone): ButtonColors = when (tone) {
-    MochiButtonTone.Primary -> ButtonDefaults.filledTonalButtonColors()
-    MochiButtonTone.Neutral -> ButtonDefaults.filledTonalButtonColors(
-        containerColor = MaterialTheme.colorScheme.surfaceContainerHighest,
-        contentColor = MaterialTheme.colorScheme.onSurface,
-    )
-    MochiButtonTone.Destructive -> ButtonDefaults.filledTonalButtonColors(
-        containerColor = MaterialTheme.colorScheme.errorContainer,
-        contentColor = MaterialTheme.colorScheme.onErrorContainer,
     )
 }
 

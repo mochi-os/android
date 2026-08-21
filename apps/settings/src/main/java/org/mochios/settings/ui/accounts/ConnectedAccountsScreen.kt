@@ -32,7 +32,6 @@ import androidx.compose.material.icons.outlined.VerifiedUser
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
@@ -68,6 +67,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.ConnectedAccount
@@ -138,7 +138,7 @@ fun ConnectedAccountsScreen(
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     item("add") {
-                        FilledTonalButton(onClick = { adding = true }, modifier = Modifier.fillMaxWidth()) {
+                        MochiOutlinedButton(onClick = { adding = true }, modifier = Modifier.fillMaxWidth()) {
                             Icon(Icons.Default.Add, contentDescription = null)
                             Spacer(Modifier.size(8.dp))
                             Text(stringResource(R.string.accounts_add))

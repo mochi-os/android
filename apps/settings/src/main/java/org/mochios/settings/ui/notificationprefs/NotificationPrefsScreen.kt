@@ -29,7 +29,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -230,7 +229,7 @@ private fun CategoriesList(
         modifier = Modifier.fillMaxSize(),
     ) {
         item("add") {
-            FilledTonalButton(onClick = onAdd, modifier = Modifier.fillMaxWidth()) {
+            MochiOutlinedButton(onClick = onAdd, modifier = Modifier.fillMaxWidth()) {
                 Icon(Icons.Default.Add, contentDescription = null)
                 Spacer(Modifier.size(8.dp))
                 Text(stringResource(R.string.notifprefs_add_category))
