@@ -167,9 +167,10 @@ object AttachmentOpener {
      * server and is interpolated into a path that is written to before the
      * FileProvider call that would reject an escaping one, so a `../`-bearing
      * id would be an arbitrary write inside the app sandbox. Mochi's own server
-     * cannot emit one — mochi.attachment.store gates a peer-supplied id against
-     * ^[0-9a-z]{32}$ — but the user can point this app at any server, so the
-     * client should not be relying on that.
+     * cannot emit one — the attachments library's attachment_store gates a
+     * peer-supplied id against ^[0-9a-f]{32}$ (attachment_identifier) — but the
+     * user can point this app at any server, so the client should not be
+     * relying on that.
      */
     private fun cacheName(attachment: Attachment): String {
         val safe = attachment.name.ifBlank { attachment.id }

@@ -39,9 +39,10 @@ private val SAFE_TYPES = setOf(
 /**
  * Reduce [candidate] to a type that is safe to view.
  *
- * The MIME of an attachment is attacker-controlled end to end: core reads it
- * from the multipart `Content-Type` header with no allowlist, and
- * `mochi.attachment.store` copies it from the peer unvalidated, so a file
+ * The MIME of an attachment is attacker-controlled end to end: the server's
+ * attachments library reads it from the multipart `Content-Type` header with
+ * no allowlist, and its `attachment_store` copies it from the peer
+ * length-bounded but type-unvalidated, so a file
  * shared into a chat, forum, feed, project or CRM board arrives carrying
  * whatever type its sender chose. Handed straight to `ACTION_VIEW`,
  * `application/vnd.android.package-archive` resolves to the system package

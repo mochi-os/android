@@ -214,7 +214,7 @@ fun SaleDetailScreen(
                 errorMessage = state.disputeError,
                 onSubmit = { response, _ ->
                     // The API uses a single body string; evidence uploads are
-                    // wired through `mochi.attachment.*` on the comptroller
+                    // wired through the attachments library on the comptroller
                     // when the staff-side surface lands. For the seller's
                     // first-pass response we forward the text only and
                     // surface evidence count as future work — the dialog

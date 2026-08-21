@@ -241,7 +241,7 @@ class CrmsRepository @Inject constructor(
     suspend fun createComment(crmId: String, objectId: String, content: String, parent: String? = null, files: List<File> = emptyList()): Comment {
         val contentBody = content.toRequestBody("text/plain".toMediaTypeOrNull())
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
-        // The server reads the multipart field "files" (mochi.attachment.save);
+        // The server reads the multipart field "files" (attachment_save);
         // parts named anything else are silently dropped.
         val fileParts = fileStore.fileParts("files", files)
         return api.createComment(crmId, objectId, contentBody, parentBody, fileParts).unwrap().comment
