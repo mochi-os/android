@@ -340,4 +340,7 @@
         <item quantity="other">Dangos %1$d sylw arall ar y post hwn</item>
     </plurals>
     <string name="lightbox_comments">Sylwadau</string>
+    <string name="common_attachment_unavailable">Atodiad ddim ar gael dros dro</string>
+    <string name="common_unavailable">Ddim ar gael</string>
+    <string name="common_not_found">Heb ei ganfod</string>
 </resources>

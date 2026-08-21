@@ -330,4 +330,7 @@
         <item quantity="other">この投稿の他のコメント %1$d 件を表示</item>
     </plurals>
     <string name="lightbox_comments">コメント</string>
+    <string name="common_attachment_unavailable">添付ファイルは一時的に利用できません</string>
+    <string name="common_unavailable">利用不可</string>
+    <string name="common_not_found">見つかりません</string>
 </resources>

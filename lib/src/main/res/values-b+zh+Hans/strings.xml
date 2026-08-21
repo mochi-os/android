@@ -330,4 +330,7 @@
         <item quantity="other">显示此帖子的另 %1$d 条评论</item>
     </plurals>
     <string name="lightbox_comments">评论</string>
+    <string name="common_attachment_unavailable">附件暂时不可用</string>
+    <string name="common_unavailable">不可用</string>
+    <string name="common_not_found">未找到</string>
 </resources>

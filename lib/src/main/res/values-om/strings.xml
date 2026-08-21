@@ -331,4 +331,7 @@
         <item quantity="other">Yaadota biraa %1$d maxxansa kana irratti agarsiisi</item>
     </plurals>
     <string name="lightbox_comments">Yaadawwan</string>
+    <string name="common_attachment_unavailable">Miiltoon yeroof hin argamu</string>
+    <string name="common_unavailable">Hin argamu</string>
+    <string name="common_not_found">Hin argamne</string>
 </resources>

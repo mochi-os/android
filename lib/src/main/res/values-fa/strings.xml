@@ -331,4 +331,7 @@
         <item quantity="other">%1$d نظر دیگر دربارهٔ این پست را نشان بده</item>
     </plurals>
     <string name="lightbox_comments">نظرها</string>
+    <string name="common_attachment_unavailable">پیوست موقتاً در دسترس نیست</string>
+    <string name="common_unavailable">در دسترس نیست</string>
+    <string name="common_not_found">یافت نشد</string>
 </resources>

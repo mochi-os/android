@@ -333,4 +333,7 @@
         <item quantity="other">Rādīt vēl %1$d šī ieraksta komentārus</item>
     </plurals>
     <string name="lightbox_comments">Komentāri</string>
+    <string name="common_attachment_unavailable">Pielikums īslaicīgi nav pieejams</string>
+    <string name="common_unavailable">Nav pieejams</string>
+    <string name="common_not_found">Nav atrasts</string>
 </resources>

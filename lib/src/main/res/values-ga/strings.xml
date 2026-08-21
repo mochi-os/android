@@ -337,4 +337,7 @@
         <item quantity="other">Taispeáin %1$d trácht eile ar an bpostáil seo</item>
     </plurals>
     <string name="lightbox_comments">Nótaí tráchta</string>
+    <string name="common_attachment_unavailable">Ceangaltán níl ar fáil go sealadach</string>
+    <string name="common_unavailable">Níl ar fáil</string>
+    <string name="common_not_found">Gan aimsiú</string>
 </resources>

@@ -335,4 +335,7 @@
         <item quantity="other">הצגת %1$d תגובות נוספות לפוסט זה</item>
     </plurals>
     <string name="lightbox_comments">תגובות</string>
+    <string name="common_attachment_unavailable">הקובץ המצורף אינו זמין באופן זמני</string>
+    <string name="common_unavailable">לא זמין</string>
+    <string name="common_not_found">לא נמצא</string>
 </resources>

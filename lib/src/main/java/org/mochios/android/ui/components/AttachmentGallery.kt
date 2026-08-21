@@ -125,7 +125,7 @@ fun AttachmentGallery(
                 ) {
                     images.forEachIndexed { index, image ->
                         Box {
-                            AsyncImage(
+                            AttachmentImage(
                                 model = resolvedThumb?.let { tb -> tb(image) } ?: resolvedUrl(image),
                                 contentDescription = image.caption.ifEmpty { image.name },
                                 // Fixed height; width follows the image's aspect ratio.
@@ -210,6 +210,9 @@ fun AttachmentGallery(
 
                                         AttachmentOpener.OpenResult.FAILED ->
                                             R.string.common_file_open_failed
+
+                                        AttachmentOpener.OpenResult.UNAVAILABLE ->
+                                            R.string.common_attachment_unavailable
 
                                         AttachmentOpener.OpenResult.OPENED -> null
                                     }
@@ -421,11 +424,9 @@ private fun fileKindTint(kind: FileKind): Color = when (kind) {
 }
 
 /**
- * Resolves a possibly-relative attachment path against [serverUrl] to an
- * absolute URL. Coil's [RelativeAssetUrlMapper] handles relative paths for
- * image requests, but the gallery's video frame decoder, ExoPlayer and the file
- * downloader aren't Coil, so this resolves once for every consumer. Absolute
- * URLs pass through unchanged.
+ * Resolve a possibly-relative attachment path against [serverUrl]. Coil maps
+ * relative image URLs itself, but the video decoder, ExoPlayer and downloader
+ * do not.
  */
 private fun resolveAttachmentUrl(serverUrl: String, path: String): String {
     if (path.startsWith("http://") || path.startsWith("https://")) return path
@@ -434,12 +435,9 @@ private fun resolveAttachmentUrl(serverUrl: String, path: String): String {
 }
 
 /**
- * The lightbox over a post's image attachments, with the comments slot.
- * [AttachmentGallery] shows it when a tile is tapped; a screen shows it
- * itself to open on one attachment from elsewhere - a comment's chip - since
- * the gallery may live in a lazy item that has scrolled out of composition.
- * [images] are the image attachments only, in gallery order; [urlBuilder] is
- * the same (possibly relative) URL builder the gallery takes.
+ * Lightbox over a post's image attachments. A screen can show it directly to
+ * open on one attachment, since the gallery may sit in a lazy item that has
+ * scrolled out of composition.
  */
 @Composable
 fun AttachmentLightbox(

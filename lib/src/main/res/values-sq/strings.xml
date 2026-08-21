@@ -331,4 +331,7 @@
         <item quantity="other">Shfaq %1$d komente të tjera për këtë postim</item>
     </plurals>
     <string name="lightbox_comments">Komentet</string>
+    <string name="common_attachment_unavailable">Bashkëngjitja është përkohësisht e padisponueshme</string>
+    <string name="common_unavailable">I padisponueshëm</string>
+    <string name="common_not_found">Nuk u gjet</string>
 </resources>

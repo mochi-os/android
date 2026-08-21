@@ -331,4 +331,7 @@
         <item quantity="other">پر دې پوسټ %1$d نورې تبصرې وښایاست</item>
     </plurals>
     <string name="lightbox_comments">تبصرې</string>
+    <string name="common_attachment_unavailable">ضمیمه د لنډ وخت لپاره نشته</string>
+    <string name="common_unavailable">نه شته</string>
+    <string name="common_not_found">ونه موندل شو</string>
 </resources>

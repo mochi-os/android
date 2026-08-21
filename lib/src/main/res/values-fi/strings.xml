@@ -331,4 +331,7 @@
         <item quantity="other">Näytä %1$d muuta kommenttia tähän julkaisuun</item>
     </plurals>
     <string name="lightbox_comments">Kommentit</string>
+    <string name="common_attachment_unavailable">Liite ei ole tilapäisesti saatavilla</string>
+    <string name="common_unavailable">Ei saatavilla</string>
+    <string name="common_not_found">Ei löytynyt</string>
 </resources>

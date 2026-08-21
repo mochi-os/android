@@ -331,4 +331,7 @@
         <item quantity="other">Ipakita ang %1$d pang komento sa post na ito</item>
     </plurals>
     <string name="lightbox_comments">Mga komento</string>
+    <string name="common_attachment_unavailable">Pansamantalang hindi magagamit ang kalakip</string>
+    <string name="common_unavailable">Hindi available</string>
+    <string name="common_not_found">Hindi natagpuan</string>
 </resources>

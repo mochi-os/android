@@ -331,4 +331,7 @@
         <item quantity="other">Боз %1$d шарҳи дигарро ба ин навишта нишон додан</item>
     </plurals>
     <string name="lightbox_comments">Шарҳҳо</string>
+    <string name="common_attachment_unavailable">Замима муваққатан дастрас нест</string>
+    <string name="common_unavailable">Дастрас нест</string>
+    <string name="common_not_found">Ёфт нашуд</string>
 </resources>

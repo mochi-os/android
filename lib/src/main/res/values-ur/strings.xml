@@ -331,4 +331,7 @@
         <item quantity="other">اس پوسٹ پر %1$d اور تبصرے دکھائیں</item>
     </plurals>
     <string name="lightbox_comments">تبصرے</string>
+    <string name="common_attachment_unavailable">منسلکہ عارضی طور پر دستیاب نہیں</string>
+    <string name="common_unavailable">ناقابل رسائی</string>
+    <string name="common_not_found">نہیں ملا</string>
 </resources>

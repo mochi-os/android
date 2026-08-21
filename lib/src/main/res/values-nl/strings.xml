@@ -331,4 +331,7 @@
         <item quantity="other">%1$d andere reacties op dit bericht tonen</item>
     </plurals>
     <string name="lightbox_comments">Reacties</string>
+    <string name="common_attachment_unavailable">Bijlage tijdelijk niet beschikbaar</string>
+    <string name="common_unavailable">Niet beschikbaar</string>
+    <string name="common_not_found">Niet gevonden</string>
 </resources>

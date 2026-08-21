@@ -331,4 +331,7 @@
         <item quantity="other">%1$d weitere Kommentare zu diesem Beitrag anzeigen</item>
     </plurals>
     <string name="lightbox_comments">Kommentare</string>
+    <string name="common_attachment_unavailable">Anhang vorübergehend nicht verfügbar</string>
+    <string name="common_unavailable">Nicht verfügbar</string>
+    <string name="common_not_found">Nicht gefunden</string>
 </resources>

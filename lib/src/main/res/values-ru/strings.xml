@@ -335,4 +335,7 @@
         <item quantity="other">Показать ещё %1$d комментария к этой публикации</item>
     </plurals>
     <string name="lightbox_comments">Комментарии</string>
+    <string name="common_attachment_unavailable">Вложение временно недоступно</string>
+    <string name="common_unavailable">Недоступно</string>
+    <string name="common_not_found">Не найдено</string>
 </resources>

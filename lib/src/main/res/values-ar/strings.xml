@@ -339,4 +339,7 @@
         <item quantity="other">إظهار %1$d تعليقات أخرى على هذا المنشور</item>
     </plurals>
     <string name="lightbox_comments">التعليقات</string>
+    <string name="common_attachment_unavailable">المرفق غير متاح مؤقتاً</string>
+    <string name="common_unavailable">غير متاح</string>
+    <string name="common_not_found">غير موجود</string>
 </resources>

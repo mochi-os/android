@@ -331,4 +331,7 @@
         <item quantity="other">Aka publicación tuqit %1$d yaqha arst\'äwinaka uñachayaña</item>
     </plurals>
     <string name="lightbox_comments">Comentarionaka</string>
+    <string name="common_attachment_unavailable">Chimpu jan jichhakama utjkiti</string>
+    <string name="common_unavailable">Banx apaqaña</string>
+    <string name="common_not_found">Janiw jikxatasiti</string>
 </resources>

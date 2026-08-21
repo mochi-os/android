@@ -331,4 +331,7 @@
         <item quantity="other">Mostrar %1$d comentarios más de esta publicación</item>
     </plurals>
     <string name="lightbox_comments">Comentarios</string>
+    <string name="common_attachment_unavailable">Adjunto temporalmente no disponible</string>
+    <string name="common_unavailable">No disponible</string>
+    <string name="common_not_found">No encontrado</string>
 </resources>

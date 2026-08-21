@@ -308,4 +308,5 @@
     <string name="person_picker_clear">Effacer la sélection</string>
     <string name="notifications_category_unassigned">Non assigné</string>
     <string name="lightbox_comments">Commentaires</string>
+    <string name="common_not_found">Introuvable</string>
 </resources>

@@ -331,4 +331,7 @@
         <item quantity="other">Näita veel %1$d kommentaari sellele postitusele</item>
     </plurals>
     <string name="lightbox_comments">Kommentaarid</string>
+    <string name="common_attachment_unavailable">Manus pole ajutiselt saadaval</string>
+    <string name="common_unavailable">Pole saadaval</string>
+    <string name="common_not_found">Ei leitud</string>
 </resources>

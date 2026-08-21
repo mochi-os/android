@@ -332,4 +332,7 @@
         <item quantity="other">Осы жазбада тағы %1$d пікірді көрсету</item>
     </plurals>
     <string name="lightbox_comments">Пікірлер</string>
+    <string name="common_attachment_unavailable">Тіркеме уақытша қолжетімсіз</string>
+    <string name="common_unavailable">Қолжетімсіз</string>
+    <string name="common_not_found">Табылмады</string>
 </resources>

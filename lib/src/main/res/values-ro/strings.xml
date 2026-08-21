@@ -333,4 +333,7 @@
         <item quantity="other">Arată încă %1$d de comentarii la această postare</item>
     </plurals>
     <string name="lightbox_comments">Comentarii</string>
+    <string name="common_attachment_unavailable">Atașamentul este temporar indisponibil</string>
+    <string name="common_unavailable">Indisponibil</string>
+    <string name="common_not_found">Nu a fost găsit</string>
 </resources>

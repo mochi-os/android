@@ -307,4 +307,7 @@
     <string name="notifications_category_unassigned">未指派</string>
     <string name="notifications_change_category">更改通知類別</string>
     <string name="lightbox_comments">留言</string>
+    <string name="common_not_found">找不到</string>
+    <string name="profile_save_name">儲存名稱</string>
+    <string name="profile_fingerprint">指紋</string>
 </resources>

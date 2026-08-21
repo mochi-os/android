@@ -335,4 +335,7 @@
         <item quantity="other">Паказаць яшчэ %1$d каментарыяў да гэтага допісу</item>
     </plurals>
     <string name="lightbox_comments">Каментарыі</string>
+    <string name="common_attachment_unavailable">Далучэнне часова недаступнае</string>
+    <string name="common_unavailable">Недаступна</string>
+    <string name="common_not_found">Не знойдзена</string>
 </resources>

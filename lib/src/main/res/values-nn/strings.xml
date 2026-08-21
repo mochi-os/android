@@ -331,4 +331,7 @@
         <item quantity="other">Vis %1$d andre kommentarar til dette innlegget</item>
     </plurals>
     <string name="lightbox_comments">Kommentarar</string>
+    <string name="common_attachment_unavailable">Vedlegg er mellombels utilgjengeleg</string>
+    <string name="common_unavailable">Ikkje tilgjengeleg</string>
+    <string name="common_not_found">Ikkje funnen</string>
 </resources>

@@ -331,4 +331,7 @@
         <item quantity="other">Bonisa okunye okuphawuliwe oku-%1$d kulokhu okuthunyelwe</item>
     </plurals>
     <string name="lightbox_comments">Imibono</string>
+    <string name="common_attachment_unavailable">Isinamathiselo asitholakali okwesikhashana</string>
+    <string name="common_unavailable">Akutholakali</string>
+    <string name="common_not_found">Akutholakali</string>
 </resources>

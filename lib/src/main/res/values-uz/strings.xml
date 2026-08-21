@@ -332,4 +332,7 @@
         <item quantity="other">Bu postdagi yana %1$d izohni koʻrsatish</item>
     </plurals>
     <string name="lightbox_comments">Izohlar</string>
+    <string name="common_attachment_unavailable">Biriktirma vaqtincha mavjud emas</string>
+    <string name="common_unavailable">Mavjud emas</string>
+    <string name="common_not_found">Topilmadi</string>
 </resources>

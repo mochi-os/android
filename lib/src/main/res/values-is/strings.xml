@@ -331,4 +331,7 @@
         <item quantity="other">Sýna %1$d aðrar athugasemdir við þessa færslu</item>
     </plurals>
     <string name="lightbox_comments">Athugasemdir</string>
+    <string name="common_attachment_unavailable">Viðhengi er tímabundið ófáanlegt</string>
+    <string name="common_unavailable">Ekki tiltækt</string>
+    <string name="common_not_found">Fannst ekki</string>
 </resources>

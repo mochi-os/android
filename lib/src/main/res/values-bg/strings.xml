@@ -331,4 +331,7 @@
         <item quantity="other">Покажи още %1$d коментара към тази публикация</item>
     </plurals>
     <string name="lightbox_comments">Коментари</string>
+    <string name="common_attachment_unavailable">Прикаченият файл временно не е достъпен</string>
+    <string name="common_unavailable">Недостъпно</string>
+    <string name="common_not_found">Не е намерено</string>
 </resources>

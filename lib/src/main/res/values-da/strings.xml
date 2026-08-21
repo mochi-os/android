@@ -333,4 +333,7 @@
         <item quantity="other">Vis %1$d andre kommentarer til dette opslag</item>
     </plurals>
     <string name="lightbox_comments">Kommentarer</string>
+    <string name="common_attachment_unavailable">Vedhæftning er midlertidigt utilgængelig</string>
+    <string name="common_unavailable">Ikke tilgængelig</string>
+    <string name="common_not_found">Ikke fundet</string>
 </resources>

@@ -330,4 +330,7 @@
         <item quantity="one">顯示此貼文的另 %1$d 則評論</item>
         <item quantity="other">顯示此貼文的另 %1$d 則評論</item>
     </plurals>
+    <string name="common_attachment_unavailable">附件暫時用唔到</string>
+    <string name="common_unavailable">暫時用唔到</string>
+    <string name="common_not_found">搵唔到</string>
 </resources>

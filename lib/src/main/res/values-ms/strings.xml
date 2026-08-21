@@ -331,4 +331,7 @@
         <item quantity="other">Tunjukkan %1$d komen lain pada kiriman ini</item>
     </plurals>
     <string name="lightbox_comments">Komen</string>
+    <string name="common_attachment_unavailable">Lampiran tidak tersedia buat sementara</string>
+    <string name="common_unavailable">Tidak tersedia</string>
+    <string name="common_not_found">Tidak dijumpai</string>
 </resources>

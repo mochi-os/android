@@ -331,4 +331,7 @@
         <item quantity="other">Bu gönderideki %1$d yorumu daha göster</item>
     </plurals>
     <string name="lightbox_comments">Yorumlar</string>
+    <string name="common_attachment_unavailable">Ek geçici olarak kullanılamıyor</string>
+    <string name="common_unavailable">Kullanılamıyor</string>
+    <string name="common_not_found">Bulunamadı</string>
 </resources>

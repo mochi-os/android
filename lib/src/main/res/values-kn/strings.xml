@@ -331,4 +331,7 @@
         <item quantity="other">ಈ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ %1$d ಕಾಮೆಂಟ್‌ಗಳನ್ನು ತೋರಿಸಿ</item>
     </plurals>
     <string name="lightbox_comments">ಕಾಮೆಂಟ್‌ಗಳು</string>
+    <string name="common_attachment_unavailable">ಲಗತ್ತು ತಾತ್ಕಾಲಿಕವಾಗಿ ಲಭ್ಯವಿಲ್ಲ</string>
+    <string name="common_unavailable">ಲಭ್ಯವಿಲ್ಲ</string>
+    <string name="common_not_found">ಕಂಡುಬಂದಿಲ್ಲ</string>
 </resources>

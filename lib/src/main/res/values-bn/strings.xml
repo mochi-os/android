@@ -331,4 +331,7 @@
         <item quantity="other">এই পোস্টের আরও %1$d মন্তব্য দেখান</item>
     </plurals>
     <string name="lightbox_comments">মন্তব্য</string>
+    <string name="common_attachment_unavailable">সংযুক্তি সাময়িকভাবে অনুপলব্ধ</string>
+    <string name="common_unavailable">অনুপলব্ধ</string>
+    <string name="common_not_found">পাওয়া যায়নি</string>
 </resources>

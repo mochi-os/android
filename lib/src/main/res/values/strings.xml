@@ -107,6 +107,9 @@
     <string name="common_opening_file">Opening file…</string>
     <string name="common_no_app_for_file">No app can open this file</string>
     <string name="common_file_open_failed">Couldn\'t open file</string>
+    <string name="common_attachment_unavailable">Attachment temporarily unavailable</string>
+    <string name="common_unavailable">Unavailable</string>
+    <string name="common_not_found">Not found</string>
     <string name="common_copy">Copy</string>
     <string name="common_copied">Copied to clipboard</string>
 

@@ -331,4 +331,7 @@
         <item quantity="other">በዚህ ልጥፍ ላይ %1$d ሌሎች አስተያየቶችን አሳይ</item>
     </plurals>
     <string name="lightbox_comments">አስተያየቶች</string>
+    <string name="common_attachment_unavailable">ዓባሪ ለጊዜው አይገኝም</string>
+    <string name="common_unavailable">የማይገኝ</string>
+    <string name="common_not_found">አልተገኘም</string>
 </resources>

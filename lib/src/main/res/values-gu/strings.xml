@@ -331,4 +331,7 @@
         <item quantity="other">આ પોસ્ટ પર %1$d બીજી ટિપ્પણીઓ બતાવો</item>
     </plurals>
     <string name="lightbox_comments">ટિપ્પણીઓ</string>
+    <string name="common_attachment_unavailable">જોડાણ અસ્થાયી રૂપે અનુપલબ્ધ છે</string>
+    <string name="common_unavailable">અનુપલબ્ધ</string>
+    <string name="common_not_found">મળ્યું નથી</string>
 </resources>

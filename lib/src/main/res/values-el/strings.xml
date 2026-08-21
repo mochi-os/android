@@ -331,4 +331,7 @@
         <item quantity="other">Εμφάνιση %1$d ακόμη σχολίων σε αυτή την ανάρτηση</item>
     </plurals>
     <string name="lightbox_comments">Σχόλια</string>
+    <string name="common_attachment_unavailable">Το συνημμένο δεν είναι προσωρινά διαθέσιμο</string>
+    <string name="common_unavailable">Μη διαθέσιμο</string>
+    <string name="common_not_found">Δεν βρέθηκε</string>
 </resources>

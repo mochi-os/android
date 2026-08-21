@@ -331,4 +331,7 @@
         <item quantity="other">Tampilkeun %1$d koméntar séjén dina kiriman ieu</item>
     </plurals>
     <string name="lightbox_comments">Koméntar</string>
+    <string name="common_attachment_unavailable">Lampiran samentawis teu sayogi</string>
+    <string name="common_unavailable">Teu sayogi</string>
+    <string name="common_not_found">Teu kapendak</string>
 </resources>

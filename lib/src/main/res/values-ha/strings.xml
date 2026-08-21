@@ -331,4 +331,7 @@
         <item quantity="other">Nuna wasu sharhi %1$d kan wannan saƙon</item>
     </plurals>
     <string name="lightbox_comments">Sharhi</string>
+    <string name="common_attachment_unavailable">Abin haɗe ba ya samuwa na ɗan lokaci</string>
+    <string name="common_unavailable">Ba ya samuwa</string>
+    <string name="common_not_found">Ba a samu ba</string>
 </resources>

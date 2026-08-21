@@ -331,4 +331,7 @@
         <item quantity="other">ਇਸ ਪੋਸਟ \'ਤੇ %1$d ਹੋਰ ਟਿੱਪਣੀਆਂ ਦਿਖਾਓ</item>
     </plurals>
     <string name="lightbox_comments">ਟਿੱਪਣੀਆਂ</string>
+    <string name="common_attachment_unavailable">ਅਟੈਚਮੈਂਟ ਅਸਥਾਈ ਤੌਰ \'ਤੇ ਉਪਲਬਧ ਨਹੀਂ</string>
+    <string name="common_unavailable">ਅਣਉਪਲਬਧ</string>
+    <string name="common_not_found">ਨਹੀਂ ਮਿਲਿਆ</string>
 </resources>

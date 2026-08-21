@@ -22,11 +22,9 @@ import org.mochios.android.api.AssetHttpEntryPoint
 import org.mochios.android.model.Attachment
 
 /**
- * Downloads a session-gated chat / feed attachment to the app cache and hands it
- * to the system viewer via [AttachmentFileProvider]. Images and videos already
- * have dedicated in-app viewers; everything else (PDF, plain text, office
- * documents, archives, …) is opened with whichever installed app claims the
- * file's MIME type.
+ * Downloads a session-gated attachment to the app cache and hands it to the
+ * system viewer via [AttachmentFileProvider]. Images and videos have in-app
+ * viewers; this is for everything else.
  */
 object AttachmentOpener {
 
@@ -37,22 +35,35 @@ object AttachmentOpener {
     private const val CACHE_DIR = "attachments"
 
     /** Outcome of an [open] attempt, so the caller can surface the right message. */
-    enum class OpenResult { OPENED, NO_APP, FAILED }
+    enum class OpenResult { OPENED, NO_APP, FAILED, UNAVAILABLE }
+
+    /** A download the server answered with a non-success status, kept so [open] can classify it. */
+    private class StatusException(val status: Int) : IOException("HTTP " + status)
 
     /**
-     * Fetches [url] through the authenticated asset client, caches it under
-     * `cacheDir/attachments/`, and launches an `ACTION_VIEW` for [attachment].
-     *
-     * Safe to call from the main thread — the network and disk work runs on
-     * [Dispatchers.IO]; only the activity launch happens on the caller's context.
-     *
-     * @return [OpenResult.OPENED] when a viewer was launched,
-     *   [OpenResult.NO_APP] when no installed app handles the MIME type, or
-     *   [OpenResult.FAILED] when the download itself failed.
+     * Fetch [url] through the authenticated asset client, cache it, and launch
+     * an `ACTION_VIEW`. Safe to call from the main thread; the network and disk
+     * work runs on [Dispatchers.IO].
      */
     suspend fun open(context: Context, url: String, attachment: Attachment): OpenResult {
         val file = try {
             withContext(Dispatchers.IO) { download(context, url, attachment) }
+        } catch (e: StatusException) {
+            Log.w(TAG, "Failed to download ${attachment.name}: ${e.message}")
+            // The server's failure class, as the web gallery reads it: its
+            // source being unreachable (502/503/504, retried server-side
+            // after a backoff) is worth telling apart from bytes that are
+            // gone - a later attempt may simply work.
+            return if (attachmentFailure(e.status) == AttachmentFailure.UNAVAILABLE) {
+                OpenResult.UNAVAILABLE
+            } else {
+                OpenResult.FAILED
+            }
+        } catch (e: IOException) {
+            // Never reached the server, or the transfer broke off: the
+            // unavailable class, not a verdict about the bytes.
+            Log.w(TAG, "Failed to download ${attachment.name}: ${e.message}")
+            return OpenResult.UNAVAILABLE
         } catch (e: Exception) {
             Log.w(TAG, "Failed to download ${attachment.name}: ${e.message}")
             return OpenResult.FAILED
@@ -62,16 +73,10 @@ object AttachmentOpener {
     }
 
     /**
-     * Cache [body] under [fileName] and open it, for callers that already hold
-     * the bytes rather than a URL.
-     *
-     * The market's purchased-asset download needs this: its endpoint answers
-     * either a JSON envelope or the file itself depending on where the seller
-     * hosts it, so the caller has to make the request, read the content type
-     * and only then decide what to do — by which point the bytes are in hand.
-     *
-     * [mime] is coerced the same way as for an attachment, so a hostile or
-     * absent type cannot turn into something the viewer will execute.
+     * Cache [body] under [fileName] and open it, for a caller that already
+     * holds the bytes rather than a URL. [mime] is coerced as for an
+     * attachment, so a hostile or absent type cannot become something the
+     * viewer will execute.
      */
     suspend fun openBytes(
         context: Context,
@@ -90,9 +95,7 @@ object AttachmentOpener {
 
     /**
      * Write [body] into the attachment cache under a sanitised [fileName] and
-     * return the file, for a caller that wants to save now and open later.
-     *
-     * Blocking: call it off the main thread.
+     * return the file. Blocking: call it off the main thread.
      */
     fun cacheBytes(context: Context, fileName: String, body: ResponseBody): File {
         val dir = File(context.cacheDir, CACHE_DIR).apply { mkdirs() }
@@ -105,9 +108,8 @@ object AttachmentOpener {
     }
 
     /**
-     * Open a file already written by [cacheBytes]. [mime] is coerced the same
-     * way as for an attachment, so an absent or hostile type cannot become
-     * something the viewer will execute.
+     * Open a file already written by [cacheBytes]. [mime] is coerced, so a
+     * hostile or absent type cannot become something the viewer will execute.
      */
     fun openCached(context: Context, fileName: String, mime: String?): OpenResult {
         val file = File(File(context.cacheDir, CACHE_DIR), fileName)
@@ -151,7 +153,7 @@ object AttachmentOpener {
             .assetHttpClient()
         client.newCall(Request.Builder().url(url).build()).execute().use { response ->
             if (!response.isSuccessful) {
-                throw IOException("HTTP ${response.code}")
+                throw StatusException(response.code)
             }
             val body = response.body ?: throw IOException("Empty response body")
             target.outputStream().use { out -> body.byteStream().copyTo(out) }
@@ -160,17 +162,10 @@ object AttachmentOpener {
     }
 
     /**
-     * Stable per-attachment cache filename, prefixed with the id to avoid
-     * collisions.
-     *
-     * The id is sanitised on the same terms as the name. It arrives from the
-     * server and is interpolated into a path that is written to before the
-     * FileProvider call that would reject an escaping one, so a `../`-bearing
-     * id would be an arbitrary write inside the app sandbox. Mochi's own server
-     * cannot emit one — the attachments library's attachment_store gates a
-     * peer-supplied id against ^[0-9a-f]{32}$ (attachment_identifier) — but the
-     * user can point this app at any server, so the client should not be
-     * relying on that.
+     * Stable per-attachment cache filename, id-prefixed to avoid collisions.
+     * The id is server-supplied and lands in a path written before any
+     * FileProvider check, so it is sanitised like the name - a `../` would
+     * escape the cache directory.
      */
     private fun cacheName(attachment: Attachment): String {
         val safe = attachment.name.ifBlank { attachment.id }
@@ -181,10 +176,9 @@ object AttachmentOpener {
     }
 
     /**
-     * The server MIME type when present, otherwise inferred from the filename —
-     * either way reduced to something safe to view. Both branches are
-     * attacker-controlled: the type comes from the peer unvalidated, and so
-     * does the filename the extension is read from. See [coerceMimeType].
+     * The server MIME type, else one inferred from the filename, coerced to
+     * something safe to view. Both inputs are peer-controlled; see
+     * [coerceMimeType].
      */
     private fun mimeType(attachment: Attachment): String {
         val stated = attachment.type.ifBlank {

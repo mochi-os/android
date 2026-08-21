@@ -331,4 +331,7 @@
         <item quantity="other">Bu paylaşımda %1$d başqa şərhi göstər</item>
     </plurals>
     <string name="lightbox_comments">Şərhlər</string>
+    <string name="common_attachment_unavailable">Qoşma müvəqqəti əlçatan deyil</string>
+    <string name="common_unavailable">Hesabın banını götür</string>
+    <string name="common_not_found">Tapılmadı</string>
 </resources>

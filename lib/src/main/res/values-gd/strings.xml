@@ -335,4 +335,7 @@
         <item quantity="other">Seall %1$d beachd eile air a\' phost seo</item>
     </plurals>
     <string name="lightbox_comments">Beachdan</string>
+    <string name="common_attachment_unavailable">Ceanglachan nach eil ri fhaighinn an-dràsta</string>
+    <string name="common_unavailable">Cha eil ri làimh</string>
+    <string name="common_not_found">Cha deach a lorg</string>
 </resources>

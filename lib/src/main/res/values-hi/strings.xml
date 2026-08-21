@@ -331,4 +331,7 @@
         <item quantity="other">इस पोस्ट पर %1$d अन्य टिप्पणियाँ दिखाएँ</item>
     </plurals>
     <string name="lightbox_comments">टिप्पणियाँ</string>
+    <string name="common_attachment_unavailable">अनुलग्नक अस्थायी रूप से अनुपलब्ध है</string>
+    <string name="common_unavailable">उपलब्ध नहीं</string>
+    <string name="common_not_found">नहीं मिला</string>
 </resources>

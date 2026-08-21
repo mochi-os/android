@@ -330,4 +330,7 @@
         <item quantity="other">បង្ហាញមតិផ្សេងទៀត %1$d លើការបង្ហោះនេះ</item>
     </plurals>
     <string name="lightbox_comments">មតិយោបល់</string>
+    <string name="common_attachment_unavailable">ឯកសារភ្ជាប់មិនអាចប្រើបានបណ្ដោះអាសន្ន</string>
+    <string name="common_unavailable">មិនអាចប្រើបាន</string>
+    <string name="common_not_found">រកមិនឃើញ</string>
 </resources>

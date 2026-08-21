@@ -331,4 +331,7 @@
         <item quantity="other">ई पोस्ट पर %1$d अउरी टिप्पणी देखाईं</item>
     </plurals>
     <string name="lightbox_comments">टिप्पणी</string>
+    <string name="common_attachment_unavailable">अटैचमेंट अभी उपलब्ध नइखे</string>
+    <string name="common_unavailable">अनुपलब्ध</string>
+    <string name="common_not_found">ना मिलल</string>
 </resources>

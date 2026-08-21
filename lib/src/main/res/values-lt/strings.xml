@@ -335,4 +335,7 @@
         <item quantity="other">Rodyti dar %1$d šio įrašo komentarų</item>
     </plurals>
     <string name="lightbox_comments">Komentarai</string>
+    <string name="common_attachment_unavailable">Priedas laikinai nepasiekiamas</string>
+    <string name="common_unavailable">Neprieinama</string>
+    <string name="common_not_found">Nerasta</string>
 </resources>

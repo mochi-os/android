@@ -331,4 +331,7 @@
         <item quantity="other">Bonisa ezinye izimvo %1$d kwesi sithuba</item>
     </plurals>
     <string name="lightbox_comments">Izimvo</string>
+    <string name="common_attachment_unavailable">Isincamathiselo asifumaneki okwethutyana</string>
+    <string name="common_unavailable">Ayifumaneki</string>
+    <string name="common_not_found">Akufumanekanga</string>
 </resources>

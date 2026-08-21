@@ -331,4 +331,7 @@
         <item quantity="other">Бул жазуудагы дагы %1$d пикирди көрсөтүү</item>
     </plurals>
     <string name="lightbox_comments">Комментарийлер</string>
+    <string name="common_attachment_unavailable">Тиркеме убактылуу жеткиликсиз</string>
+    <string name="common_unavailable">Жеткиликсиз</string>
+    <string name="common_not_found">Табылган жок</string>
 </resources>

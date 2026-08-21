@@ -331,4 +331,7 @@
         <item quantity="other">ווײַזן נאָך %1$d קאָמענטאַרן אויף דעם פּאָסט</item>
     </plurals>
     <string name="lightbox_comments">קאָמענטאַרן</string>
+    <string name="common_attachment_unavailable">צוגאב איז דערווייל נישט פאראן</string>
+    <string name="common_unavailable">נישט פֿאַראַן</string>
+    <string name="common_not_found">ניט געפֿונען</string>
 </resources>

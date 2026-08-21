@@ -333,4 +333,7 @@
         <item quantity="other">Wys %1$d ander kommentare op hierdie plasing</item>
     </plurals>
     <string name="lightbox_comments">Kommentare</string>
+    <string name="common_attachment_unavailable">Aanhegsel tydelik nie beskikbaar nie</string>
+    <string name="common_unavailable">Nie beskikbaar nie</string>
+    <string name="common_not_found">Nie gevind nie</string>
 </resources>

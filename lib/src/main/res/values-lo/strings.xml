@@ -330,4 +330,7 @@
         <item quantity="other">ສະແດງອີກ %1$d ຄວາມເຫັນຕໍ່ໂພສນີ້</item>
     </plurals>
     <string name="lightbox_comments">ຄຳເຫັນ</string>
+    <string name="common_attachment_unavailable">ໄຟລ໌ແນບບໍ່ສາມາດໃຊ້ໄດ້ຊົ່ວຄາວ</string>
+    <string name="common_unavailable">ບໍ່ມີໃຫ້ບໍລິການ</string>
+    <string name="common_not_found">ບໍ່ພົບ</string>
 </resources>

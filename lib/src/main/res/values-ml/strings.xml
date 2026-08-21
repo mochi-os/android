@@ -331,4 +331,7 @@
         <item quantity="other">ഈ പോസ്റ്റിലെ മറ്റ് %1$d അഭിപ്രായങ്ങൾ കാണിക്കുക</item>
     </plurals>
     <string name="lightbox_comments">അഭിപ്രായങ്ങൾ</string>
+    <string name="common_attachment_unavailable">അറ്റാച്ച്മെന്റ് താൽക്കാലികമായി ലഭ്യമല്ല</string>
+    <string name="common_unavailable">ലഭ്യമല്ല</string>
+    <string name="common_not_found">കണ്ടെത്തിയില്ല</string>
 </resources>

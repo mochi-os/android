@@ -331,4 +331,7 @@
         <item quantity="other">%1$d további hozzászólás mutatása ehhez a bejegyzéshez</item>
     </plurals>
     <string name="lightbox_comments">Megjegyzések</string>
+    <string name="common_attachment_unavailable">A melléklet átmenetileg nem érhető el</string>
+    <string name="common_unavailable">Nem elérhető</string>
+    <string name="common_not_found">Nem található</string>
 </resources>

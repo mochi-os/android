@@ -331,4 +331,7 @@
         <item quantity="other">Kay qillqasqamanta %1$d huk rimaykunata rikuchiy</item>
     </plurals>
     <string name="lightbox_comments">Comentarios</string>
+    <string name="common_attachment_unavailable">Ratapasqa kunanpaq mana tarikunchu</string>
+    <string name="common_unavailable">Mana atikuq</string>
+    <string name="common_not_found">Mana tarisqachu</string>
 </resources>

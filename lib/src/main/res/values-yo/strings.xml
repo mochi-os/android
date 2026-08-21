@@ -331,4 +331,7 @@
         <item quantity="other">Fi àwọn ọ̀rọ̀ %1$d mìíràn lórí ìfiránṣẹ́ yìí hàn</item>
     </plurals>
     <string name="lightbox_comments">Àwọn àlàyé</string>
+    <string name="common_attachment_unavailable">Àmúso kò sí fún ìgbà díẹ̀</string>
+    <string name="common_unavailable">Kò sí</string>
+    <string name="common_not_found">Kò sí</string>
 </resources>

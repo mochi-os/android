@@ -331,4 +331,7 @@
         <item quantity="other">%1$d سەرنجی دیکە لەسەر ئەم بڵاوکراوەیە پیشان بدە</item>
     </plurals>
     <string name="lightbox_comments">لێدوانەکان</string>
+    <string name="common_attachment_unavailable">هاوپێچ بۆ ماوەیەک بەردەست نییە</string>
+    <string name="common_unavailable">بەردەست نییە</string>
+    <string name="common_not_found">نەدۆزرایەوە</string>
 </resources>

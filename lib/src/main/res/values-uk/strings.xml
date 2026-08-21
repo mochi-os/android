@@ -335,4 +335,7 @@
         <item quantity="other">Показати ще %1$d коментаря до цього допису</item>
     </plurals>
     <string name="lightbox_comments">Коментарі</string>
+    <string name="common_attachment_unavailable">Вкладення тимчасово недоступне</string>
+    <string name="common_unavailable">Недоступно</string>
+    <string name="common_not_found">Не знайдено</string>
 </resources>

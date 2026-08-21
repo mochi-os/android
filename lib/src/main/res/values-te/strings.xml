@@ -331,4 +331,7 @@
         <item quantity="other">ఈ పోస్ట్‌పై మరో %1$d వ్యాఖ్యలను చూపించు</item>
     </plurals>
     <string name="lightbox_comments">వ్యాఖ్యలు</string>
+    <string name="common_attachment_unavailable">జోడింపు తాత్కాలికంగా అందుబాటులో లేదు</string>
+    <string name="common_unavailable">అందుబాటులో లేదు</string>
+    <string name="common_not_found">కనుగొనబడలేదు</string>
 </resources>

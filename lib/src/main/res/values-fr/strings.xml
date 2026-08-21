@@ -332,4 +332,7 @@
         <item quantity="other">Afficher %1$d autres commentaires sur cette publication</item>
     </plurals>
     <string name="lightbox_comments">Commentaires</string>
+    <string name="common_attachment_unavailable">Pièce jointe temporairement indisponible</string>
+    <string name="common_unavailable">Indisponible</string>
+    <string name="common_not_found">Introuvable</string>
 </resources>

@@ -331,4 +331,7 @@
         <item quantity="other">Tampilake %1$d komentar liyane ing kiriman iki</item>
     </plurals>
     <string name="lightbox_comments">Komentar</string>
+    <string name="common_attachment_unavailable">Lampiran sauntara ora kasedhiya</string>
+    <string name="common_unavailable">Ora kasedhiya</string>
+    <string name="common_not_found">Ora ketemu</string>
 </resources>

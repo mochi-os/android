@@ -331,4 +331,7 @@
         <item quantity="other">Erakutsi argitalpen honetako beste %1$d iruzkin</item>
     </plurals>
     <string name="lightbox_comments">Iruzkinak</string>
+    <string name="common_attachment_unavailable">Eranskina aldi baterako ez dago erabilgarri</string>
+    <string name="common_unavailable">Ez dago erabilgarri</string>
+    <string name="common_not_found">Ez da aurkitu</string>
 </resources>

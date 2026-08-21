@@ -305,4 +305,6 @@
     <string name="person_picker_clear">Auswahl aufheben</string>
     <string name="notifications_category_unassigned">Nicht zugewiesen</string>
     <string name="lightbox_comments">Kommentare</string>
+    <string name="common_not_found">Nicht gefunden</string>
+    <string name="profile_save_name">Namen speichern</string>
 </resources>

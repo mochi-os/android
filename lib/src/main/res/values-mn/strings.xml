@@ -331,4 +331,7 @@
         <item quantity="other">Энэ нийтлэлийн өөр %1$d сэтгэгдлийг харуулах</item>
     </plurals>
     <string name="lightbox_comments">Сэтгэгдэлүүд</string>
+    <string name="common_attachment_unavailable">Хавсралт түр хугацаанд боломжгүй байна</string>
+    <string name="common_unavailable">Боломжгүй</string>
+    <string name="common_not_found">Олдсонгүй</string>
 </resources>

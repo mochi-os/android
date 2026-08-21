@@ -331,4 +331,7 @@
         <item quantity="other">Ցուցադրել այս գրառման ևս %1$d մեկնաբանություն</item>
     </plurals>
     <string name="lightbox_comments">Մեկնաբանություններ</string>
+    <string name="common_attachment_unavailable">Կցորդը ժամանակավորապես հասանելի չէ</string>
+    <string name="common_unavailable">Անհասանելի</string>
+    <string name="common_not_found">Չի գտնվել</string>
 </resources>

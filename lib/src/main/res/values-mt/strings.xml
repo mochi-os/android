@@ -338,4 +338,7 @@
         <item quantity="other">Uri %1$d kummenti oħra fuq dan il-post</item>
     </plurals>
     <string name="lightbox_comments">Kummenti</string>
+    <string name="common_attachment_unavailable">Anness mhux disponibbli temporanjament</string>
+    <string name="common_unavailable">Mhux disponibbli</string>
+    <string name="common_not_found">Ma nstabx</string>
 </resources>

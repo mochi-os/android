@@ -331,4 +331,7 @@
         <item quantity="other">Onyesha maoni %1$d mengine kwenye chapisho hili</item>
     </plurals>
     <string name="lightbox_comments">Maoni</string>
+    <string name="common_attachment_unavailable">Kiambatisho hakipatikani kwa muda</string>
+    <string name="common_unavailable">Haipatikani</string>
+    <string name="common_not_found">Haikupatikana</string>
 </resources>

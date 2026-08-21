@@ -331,4 +331,7 @@
         <item quantity="other">Visa %1$d andra kommentarer på det här inlägget</item>
     </plurals>
     <string name="lightbox_comments">Kommentarer</string>
+    <string name="common_attachment_unavailable">Bilagan är tillfälligt otillgänglig</string>
+    <string name="common_unavailable">Otillgänglig</string>
+    <string name="common_not_found">Hittades inte</string>
 </resources>

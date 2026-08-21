@@ -331,4 +331,7 @@
         <item quantity="other">%1$d şîroveyên din ên li ser vê şandiyê nîşan bide</item>
     </plurals>
     <string name="lightbox_comments">Şîrove</string>
+    <string name="common_attachment_unavailable">Pêvek demkî ne berdest e</string>
+    <string name="common_unavailable">Ne berdest</string>
+    <string name="common_not_found">Nehat dîtin</string>
 </resources>

@@ -335,4 +335,7 @@
         <item quantity="other">Pokaži še %1$d komentarjev k tej objavi</item>
     </plurals>
     <string name="lightbox_comments">Komentarji</string>
+    <string name="common_attachment_unavailable">Priloga je začasno nedosegljiva</string>
+    <string name="common_unavailable">Ni na voljo</string>
+    <string name="common_not_found">Ni najdeno</string>
 </resources>

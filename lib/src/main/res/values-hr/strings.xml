@@ -333,4 +333,7 @@
         <item quantity="other">Prikaži još %1$d komentara na ovoj objavi</item>
     </plurals>
     <string name="lightbox_comments">Komentari</string>
+    <string name="common_attachment_unavailable">Privitak je privremeno nedostupan</string>
+    <string name="common_unavailable">Nedostupno</string>
+    <string name="common_not_found">Nije pronađeno</string>
 </resources>

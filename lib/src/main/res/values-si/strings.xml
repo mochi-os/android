@@ -331,4 +331,7 @@
         <item quantity="other">මෙම පළ කිරීමේ තවත් අදහස් %1$d පෙන්වන්න</item>
     </plurals>
     <string name="lightbox_comments">අදහස්</string>
+    <string name="common_attachment_unavailable">ඇමුණුම තාවකාලිකව නොමැත</string>
+    <string name="common_unavailable">ලබා ගත නොහැක</string>
+    <string name="common_not_found">හමු නොවීය</string>
 </resources>

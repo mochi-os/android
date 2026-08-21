@@ -335,4 +335,7 @@
         <item quantity="other">Zobrazit %1$d dalších komentářů k tomuto příspěvku</item>
     </plurals>
     <string name="lightbox_comments">Komentáře</string>
+    <string name="common_attachment_unavailable">Příloha je dočasně nedostupná</string>
+    <string name="common_unavailable">Nedostupné</string>
+    <string name="common_not_found">Nenalezeno</string>
 </resources>

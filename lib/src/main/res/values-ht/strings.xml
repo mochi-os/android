@@ -331,4 +331,7 @@
         <item quantity="other">Montre %1$d lòt kòmantè sou piblikasyon sa a</item>
     </plurals>
     <string name="lightbox_comments">Kòmantè</string>
+    <string name="common_attachment_unavailable">Atachman pa disponib pou kounye a</string>
+    <string name="common_unavailable">Pa disponib</string>
+    <string name="common_not_found">Pa jwenn</string>
 </resources>

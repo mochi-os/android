@@ -330,4 +330,7 @@
         <item quantity="other">ဤပို့စ်အပေါ် အခြားမှတ်ချက် %1$d ခုကို ပြရန်</item>
     </plurals>
     <string name="lightbox_comments">မှတ်ချက်များ</string>
+    <string name="common_attachment_unavailable">ပူးတွဲဖိုင် ယာယီမရနိုင်ပါ</string>
+    <string name="common_unavailable">မရရှိနိုင်ပါ</string>
+    <string name="common_not_found">မတွေ့ပါ</string>
 </resources>

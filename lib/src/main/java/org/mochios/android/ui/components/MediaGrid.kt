@@ -28,23 +28,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import org.mochios.android.R
 
 /**
- * Grid of image attachments using the conventional Mochi layout:
- *  - 1 image: full-width, 200dp tall, fillCrop, rounded.
- *  - 2 images: side-by-side, weight 1f each, 160dp tall.
- *  - 3+ images: large image on top (160dp), remaining capped at `maxDisplay`
- *    laid out in a row of equal-weight cells (100dp tall) below; if there are
- *    more than `maxDisplay` images, the bottom-right cell shows a "+N" overlay.
- *
- * `urls` is the list of fully-resolved image URLs (already authenticated).
- * Optionally pass `thumbnailUrls` (same length / order as `urls`) to use
- * lower-resolution images for the grid; falls back to `urls` if `null`.
- *
- * `onClick` receives the index into `urls` of the tapped image (useful for
- * driving a lightbox).
+ * Grid of image attachments in the conventional Mochi layout: one full-width,
+ * two side by side, or a large image over a row of up to `maxDisplay` cells
+ * with a "+N" overlay. `thumbnailUrls` (same order as `urls`) is used when
+ * present.
  */
 @Composable
 fun MediaGrid(
@@ -77,7 +67,7 @@ fun MediaGrid(
                     .clip(shape)
                     .clickable { onClick(0) }
             ) {
-                AsyncImage(
+                AttachmentImage(
                     model = thumbOrUrl(0),
                     contentDescription = describe(0),
                     contentScale = ContentScale.Crop,
@@ -99,7 +89,7 @@ fun MediaGrid(
                             .clip(shape)
                             .clickable { onClick(i) }
                     ) {
-                        AsyncImage(
+                        AttachmentImage(
                             model = thumbOrUrl(i),
                             contentDescription = describe(i),
                             contentScale = ContentScale.Crop,
@@ -122,7 +112,7 @@ fun MediaGrid(
                         .clip(shape)
                         .clickable { onClick(0) }
                 ) {
-                    AsyncImage(
+                    AttachmentImage(
                         model = thumbOrUrl(0),
                         contentDescription = describe(0),
                         contentScale = ContentScale.Crop,
@@ -142,7 +132,7 @@ fun MediaGrid(
                                 .clip(shape)
                                 .clickable { onClick(i) }
                         ) {
-                            AsyncImage(
+                            AttachmentImage(
                                 model = thumbOrUrl(i),
                                 contentDescription = describe(i),
                                 contentScale = ContentScale.Crop,
@@ -179,9 +169,8 @@ fun MediaGrid(
 }
 
 /**
- * The caption drawn over a media cell's bottom edge, on a fading scrim.
- * Public so the app modules' own tile layouts (the feeds mosaic, the wikis
- * attachments grid) draw the same treatment as [MediaGrid].
+ * The caption drawn over a media cell's bottom edge, on a fading scrim. Public
+ * so app modules' own tile layouts render it identically.
  */
 @Composable
 fun AttachmentCaptionScrim(caption: String, modifier: Modifier = Modifier) {
